@@ -8,6 +8,7 @@ from pathlib import Path
 import sys
 import subprocess
 import tempfile
+import types
 import unittest
 import zipfile
 from unittest import mock
@@ -1346,6 +1347,365 @@ run_cmd do
         receipt = self.r.execute_suite(self.suite, self.sources, self.root, self.base / 'hole', tools, {}, reviews=self.reviews)
         self.assertEqual((receipt['outcome'], receipt['exit_code']), ('FAILED', 1))
         self.assertEqual(receipt['replay_evidence']['target_audits'], [])
+
+
+class AuditContinuationExecutorTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("audit_continuation_under_test", SCRIPT)
+        cls.r = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.r)
+
+    def setUp(self):
+        self.assertTrue(hasattr(self.r, "_execute_audit_continuation"), "Continuation executor is absent")
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.base = Path(self.tmp.name)
+        self.source = self.base / 'source'; self.source.mkdir()
+        self.prior = self.base / 'prior'; self.prior.mkdir()
+
+    def test_fresh_output_must_be_disjoint_from_every_consumed_input(self):
+        good = self.base / 'new'
+        self.assertEqual(self.r._ac_exec_output(good, [self.source, self.prior], self.r), good)
+        self.assertFalse(good.exists())
+        for bad in [self.source, self.prior, self.source / 'generated', self.prior / 'audit', self.base]:
+            with self.subTest(path=bad), self.assertRaises(ValueError):
+                self.r._ac_exec_output(bad, [self.source, self.prior], self.r)
+        alias = self.base / 'alias'; alias.symlink_to(self.prior, target_is_directory=True)
+        with self.assertRaises(ValueError): self.r._ac_exec_output(alias / 'new', [self.source, self.prior], self.r)
+
+    def test_inventory_binds_every_retained_file_and_refuses_symlink_alias(self):
+        (self.prior / 'a').write_bytes(b'first')
+        (self.prior / 'sub').mkdir(); (self.prior / 'sub/b').write_bytes(b'second')
+        rows, digest = self.r._ac_exec_inventory(self.prior, self.r)
+        self.assertEqual(rows, {'a': self.r.sha(b'first'), 'sub/b': self.r.sha(b'second')})
+        self.assertEqual(digest, self.r._file_hashes(self.prior))
+        (self.prior / 'sub/b').write_bytes(b'changed')
+        self.assertNotEqual(self.r._ac_exec_inventory(self.prior, self.r)[1], digest)
+        (self.prior / 'alias').symlink_to(self.prior / 'a')
+        with self.assertRaises(ValueError): self.r._ac_exec_inventory(self.prior, self.r)
+
+    def test_custom_objects_require_exact_original_producer_census_and_bytes(self):
+        path = self.prior / 'original/runtime/build/A.olean'; path.parent.mkdir(parents=True); path.write_bytes(b'fresh-original')
+        relative = path.relative_to(self.prior).as_posix()
+        expected = {relative: self.r.sha(path.read_bytes())}
+        self.assertEqual(self.r._ac_exec_objects(self.prior, expected, ['original/runtime/build'], self.r), expected)
+        extra = path.with_name('foreign.olean'); extra.write_bytes(b'not-produced')
+        with self.assertRaises(ValueError): self.r._ac_exec_objects(self.prior, expected, ['original/runtime/build'], self.r)
+        extra.unlink(); path.write_bytes(b'stale-object')
+        with self.assertRaises(ValueError): self.r._ac_exec_objects(self.prior, expected, ['original/runtime/build'], self.r)
+
+    def test_absent_unimported_cli_cache_is_not_fabricated_or_generalized(self):
+        lean = self.base / 'lean'; lean.mkdir(); (lean / 'Init.olean').write_bytes(b'official fixture')
+        cli = self.base / 'Cli-absent'
+        plan = {'packages': {'Cli': {}}, 'official': {}}
+        rows, inventories = self.r._ac_exec_caches({'lean': lean, 'Cli': cli}, plan, self.r)
+        by_name = {row['root_id']: row for row in rows}
+        self.assertEqual(by_name['Cli']['file_count'], 0)
+        self.assertEqual(by_name['Cli']['tree_before_sha256'], self.r.canonical({}))
+        self.assertNotEqual(by_name['Cli']['cache_policy'], by_name['lean']['cache_policy'])
+        self.assertEqual(inventories['Cli'], {})
+        self.assertFalse(cli.exists())
+        plan['official'] = {'Cli': {'package': 'Cli'}}
+        with self.assertRaises(ValueError): self.r._ac_exec_caches({'lean': lean, 'Cli': cli}, plan, self.r)
+        plan = {'packages': {'Batteries': {}}, 'official': {}}
+        with self.assertRaises(ValueError): self.r._ac_exec_caches({'lean': lean, 'Batteries': cli}, plan, self.r)
+
+    def test_generated_auditor_is_fixed_and_written_only_once(self):
+        out = self.base / 'new'; out.mkdir()
+        plan = {'targets': {'a': {'name': 'Fixture.ok', 'module': 'Fixture', 'target_id': 'a'}}}
+        expected = self.r.sha(self.r._audit_source(list(plan['targets'].values())).encode())
+        with mock.patch.object(self.r, 'AC_AUDIT_SOURCE', expected, create=True):
+            target = self.r._ac_exec_generate(out, plan, self.r)
+            self.assertEqual(self.r.sha(target.read_bytes()), expected)
+            with self.assertRaises(ValueError): self.r._ac_exec_generate(out, plan, self.r)
+        other = self.base / 'other'; other.mkdir()
+        with mock.patch.object(self.r, 'AC_AUDIT_SOURCE', '0' * 64, create=True):
+            with self.assertRaises(ValueError): self.r._ac_exec_generate(other, plan, self.r)
+        self.assertFalse((other / 'generated').exists())
+
+    def test_resource_or_parser_failure_cannot_become_complete_audit(self):
+        target = {'target_id': 'a', 'module': 'Fixture', 'name': 'Fixture.ok'}
+        good = "V5_BEGIN Fixture.ok\nFixture.ok : True\n'Fixture.ok' does not depend on any axioms\nV5_OWNER Fixture.ok Fixture\nV5_SAFE Fixture.ok 1 []\nV5_END Fixture.ok\n"
+        for terminal, code, outcome in [('TIMEOUT', None, 'RESOURCE_INCONCLUSIVE'), ('INTERRUPTED', None, 'RESOURCE_INCONCLUSIVE'), ('COMPLETED', 1, 'FAILED')]:
+            observed, audits = self.r._ac_exec_result({'terminal': terminal, 'exit_code': code}, good, [target], self.r)
+            self.assertEqual((observed, audits), (outcome, {}))
+        outcome, audits = self.r._ac_exec_result({'terminal': 'COMPLETED', 'exit_code': 0}, good, [target], self.r)
+        self.assertEqual(outcome, 'QUALIFIED_DECLARED_SUITE'); self.assertEqual(set(audits), {'a'})
+        for run, text in [({'terminal': 'COMPLETED', 'exit_code': 0}, ''), ({'terminal': 'COMPLETED', 'exit_code': 124}, good), ({'terminal': 'TIMEOUT', 'exit_code': 1}, good)]:
+            with self.assertRaises(ValueError): self.r._ac_exec_result(run, text, [target], self.r)
+
+    def execution_fixture(self):
+        a = types.SimpleNamespace(**vars(self.r))
+        a.AC_PRIOR = {'receipt_sha256': '', 'receipt_canonical_sha256': '', 'receipt_bytes': 0,
+                      'failed_audit_source_sha256': self.r.sha(b'old audit'), 'failed_audit_log_sha256': self.r.sha(b'old log'),
+                      'failure_record_sha256': self.r.sha(b'old failure'), 'original_result_sha256': self.r.sha(b'old result'),
+                      'physical_trace_sha256': 'a' * 64}
+        a.AC_ACCOUNTING = {'new_source_owned_physical_runs': 0, 'new_child_compilations': 0,
+                          'new_custom_objects': 0, 'new_target_audit_processes': 1, 'independent_evidence_increment': 0}
+        a.AC_SCHEMA = 'test-continuation'; a.AC_CACHE_POLICY = 'test-retained-cache-policy'
+        suite = {'id': 'd06-core-runtime', 'source_ids': ['source'], 'review_ids': ['review'], 'targets': [
+            {'id': 'a', 'source_id': 'source', 'target_sha256': 'b' * 64}],
+            'replay': {'build_roots': ['original/build'], 'external_inputs': [{'expected_sha256': 'c' * 64}]}}
+        body = b'namespace Fixture\ntheorem ok : True := True.intro\nend Fixture\n'
+        plan = {'targets': {'a': {'target_id': 'a', 'module': 'Fixture', 'name': 'Fixture.ok'}},
+                'files': {'source': {'path': 'Fixture.lean'}}, 'contents': {'source': body}, 'packages': {}, 'official': {}}
+        a.AC_AUDIT_SOURCE = self.r.sha(self.r._audit_source(list(plan['targets'].values())).encode())
+        project = self.prior / 'project'; project.mkdir(); (project / 'Fixture.lean').write_bytes(body)
+        artifact = self.prior / 'original/build/Fixture.olean'; artifact.parent.mkdir(parents=True); artifact.write_bytes(b'producer object')
+        objects = {'original/build/Fixture.olean': self.r.sha(artifact.read_bytes())}
+        for path, data in [('generated/V5SuccessorReadback.lean', b'old audit'), ('logs/target-audit.log', b'old log'),
+                           ('FAILURE.json', b'old failure'), ('original/RESULT.json', b'old result')]:
+            p = self.prior / path; p.parent.mkdir(parents=True, exist_ok=True); p.write_bytes(data)
+        evidence = {'descriptor_sha256': self.r.canonical(suite['replay']), 'closure_sha256': 'e' * 64, 'source_hashes_before': {'source': self.r.sha(body)},
+                    'source_hashes_after': {'source': self.r.sha(body)}, 'import_fingerprints': {},
+                    'tool_fingerprints': {'lean': {'executable_sha256': 'f' * 64}}, 'dependency_checks': {},
+                    'child_observations': [], 'driver_invocations': []}
+        prior = {'id': 'old', 'suite_id': 'fixture', 'family': 'fixture', 'suite_sha256': '1' * 64,
+                 'source_hashes': {'source': self.r.sha(body)}, 'review_hashes': {'review': '2' * 64}, 'toolchain_sha256': '3' * 64,
+                 'outcome': 'FAILED', 'proof_scope': 'NONE', 'exit_code': 1, 'controls': [], 'replay_evidence': evidence,
+                 'ended_at': '2020-01-01T00:00:00Z'}
+        encoded = json.dumps(prior).encode(); (self.prior / 'RECEIPT.json').write_bytes(encoded)
+        a.AC_PRIOR.update(receipt_sha256=self.r.sha(encoded), receipt_canonical_sha256=self.r.canonical(prior), receipt_bytes=len(encoded))
+        a.AC_RETAINED_TREE = self.r._ac_exec_inventory(self.prior, self.r)[1]
+        a.AC_SUITE_SHA256 = self.r.canonical(suite); a.AC_APPROVAL = 'a' * 64
+        a.APPROVED_DECLARED_SUITES = {'d06-core-runtime': a.AC_APPROVAL}
+        a.AC_PROJECT_TREE = self.r._ac_exec_inventory(project, self.r)[1]
+        a.AC_PRIOR_KEYS = {'receipt_sha256', 'receipt_canonical_sha256', 'receipt_bytes', 'receipt', 'failed_audit_source_sha256', 'failed_audit_log_sha256', 'failure_record_sha256'}
+        a.validate_suite = mock.Mock(return_value=plan)
+        a.public_bytes = mock.Mock(return_value=body)
+        a._ac_eligible_prior = mock.Mock(return_value=(prior, evidence, {'_prerequisites': {}, 'original-driver': {}, '_target_audit': {}}, objects))
+        a.validate_audit_continuation = mock.Mock(return_value={'outcome': 'QUALIFIED_DECLARED_SUITE'})
+        a.import_fingerprints = mock.Mock(return_value={})
+        a.closure_fingerprint = mock.Mock(return_value='e' * 64)
+        tool = self.base / 'tool/bin/lean'; tool.parent.mkdir(parents=True); tool.write_bytes(b'exact executable')
+        cache = tool.parent.parent / 'lib/lean'; cache.mkdir(parents=True); (cache / 'Init.olean').write_bytes(b'official fixture')
+        fingerprints = {'lean': {'executable_sha256': self.r.sha(tool.read_bytes())}}
+        evidence['tool_fingerprints'] = fingerprints
+        # Seal fixture after its actual declared tool fingerprint is known.
+        encoded = json.dumps(prior).encode(); (self.prior / 'RECEIPT.json').write_bytes(encoded)
+        a.AC_PRIOR.update(receipt_sha256=self.r.sha(encoded), receipt_canonical_sha256=self.r.canonical(prior), receipt_bytes=len(encoded))
+        a.AC_RETAINED_TREE = self.r._ac_exec_inventory(self.prior, self.r)[1]
+        a._verify_environment = mock.Mock(return_value=({'lean': tool}, fingerprints, {}, {'LEAN_PATH': str(cache)}, {}))
+        a.run_process = mock.Mock()
+        def audit(argv, cwd, env, log, timeout):
+            self.assertEqual(argv, [tool, '-j1', self.base / 'new/generated/V5SuccessorReadback.lean'])
+            self.assertEqual(cwd, project); self.assertEqual(timeout, 300)
+            self.assertEqual(env['LEAN_PATH'].split(os.pathsep), [str(self.prior / 'original/build'), str(cache)])
+            text = "V5_BEGIN Fixture.ok\nFixture.ok : True\n'Fixture.ok' does not depend on any axioms\nV5_OWNER Fixture.ok Fixture\nV5_SAFE Fixture.ok 1 []\nV5_END Fixture.ok\n"
+            Path(log).write_text(text)
+            return {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': self.r.utc(), 'ended_at': self.r.utc(), 'log_sha256': self.r.sha(text.encode())}
+        a.run_process.side_effect = audit
+        return a, suite, plan, {'source': {'public_sha256': self.r.sha(body)}}, {'review': {'review_sha256': '2' * 64}}, artifact
+
+    def execute_fixture(self, data):
+        a, suite, plan, sources, reviews, _ = data
+        self.assertTrue(hasattr(self.r, '_execute_audit_continuation'), 'Full audit-only executor is absent')
+        return self.r._execute_audit_continuation(suite, sources, self.source, self.prior, self.base / 'new', {}, {}, reviews=reviews, adapter=a)
+
+    def test_full_executor_runs_only_the_missing_audit_and_preserves_prior(self):
+        data = self.execution_fixture(); a = data[0]
+        before = self.r._ac_exec_inventory(self.prior, self.r)
+        receipt = self.execute_fixture(data)
+        self.assertEqual(receipt['outcome'], 'QUALIFIED_DECLARED_SUITE')
+        self.assertEqual(a.run_process.call_count, 1)
+        self.assertEqual(a._verify_environment.call_count, 2)
+        self.assertEqual(self.r._ac_exec_inventory(self.prior, self.r), before)
+        self.assertEqual(receipt['replay_evidence']['prior']['receipt']['outcome'], 'FAILED')
+        self.assertEqual([row['id'] for row in receipt['stages']], ['_prerequisites', '_target_audit'])
+        self.assertEqual(receipt['replay_evidence']['accounting']['new_child_compilations'], 0)
+        self.assertEqual(set(receipt['replay_evidence']['output_hashes']), {'generated/V5SuccessorReadback.lean'})
+        self.assertTrue((self.base / 'new/RECEIPT.json').is_file())
+        self.assertFalse((self.base / 'new/project').exists())
+
+    def test_stale_retained_input_refuses_before_any_audit(self):
+        data = self.execution_fixture(); data[-1].write_bytes(b'changed before invocation')
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        data[0].run_process.assert_not_called()
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+
+    def test_foreign_suite_and_reused_output_cannot_start_an_audit(self):
+        data = self.execution_fixture(); data[1]['id'] = 'foreign'
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        data[0].run_process.assert_not_called()
+        self.assertFalse((self.base / 'new').exists())
+        data[1]['id'] = 'd06-core-runtime'; (self.base / 'new').mkdir()
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        data[0].run_process.assert_not_called()
+
+    def test_absent_prior_is_a_missing_prerequisite(self):
+        a, suite, _, sources, reviews, _ = self.execution_fixture()
+        with self.assertRaises(self.r.MissingInput):
+            self.r._execute_audit_continuation(suite, sources, self.source, self.base / 'absent-prior', self.base / 'new',
+                                              {}, {}, reviews=reviews, adapter=a)
+        a.run_process.assert_not_called()
+        self.assertFalse((self.base / 'new').exists())
+
+    def test_post_audit_retained_change_cannot_be_saved_as_success(self):
+        data = self.execution_fixture(); original = data[0].run_process.side_effect
+        def changed(*args):
+            result = original(*args); data[-1].write_bytes(b'changed during audit'); return result
+        data[0].run_process.side_effect = changed
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        self.assertEqual(data[0].run_process.call_count, 1)
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+        refusal = self.r.read_json(self.base / 'new/REFUSAL.json')
+        self.assertEqual(refusal['audit_process']['exit_code'], 0)
+        self.assertEqual(refusal['status'], 'CONTINUATION_REFUSED')
+
+    def test_post_audit_cache_change_or_prerequisite_refusal_has_no_receipt(self):
+        data = self.execution_fixture(); original = data[0].run_process.side_effect
+        def changed(*args):
+            result = original(*args)
+            (self.base / 'tool/lib/lean/Init.olean').write_bytes(b'changed official object')
+            return result
+        data[0].run_process.side_effect = changed
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+        self.assertEqual(self.r.read_json(self.base / 'new/REFUSAL.json')['audit_process']['exit_code'], 0)
+
+    def test_continuation_runner_cannot_change_after_process_start(self):
+        data = self.execution_fixture(); a = data[0]
+        runner = self.base / 'frozen-runner.py'; runner.write_bytes(b'synthetic reviewed runner')
+        a.__file__ = str(runner); original = a.run_process.side_effect
+        def changed(*args):
+            result = original(*args); runner.write_bytes(b'changed while audit ran'); return result
+        a.run_process.side_effect = changed
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+        self.assertEqual(self.r.read_json(self.base / 'new/REFUSAL.json')['audit_process']['exit_code'], 0)
+
+    def test_changed_tool_readback_refuses_before_audit(self):
+        data = self.execution_fixture(); value = list(data[0]._verify_environment.return_value)
+        value[1] = {'lean': {'executable_sha256': 'f' * 64}}
+        data[0]._verify_environment.return_value = tuple(value)
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        data[0].run_process.assert_not_called()
+        self.assertIsNone(self.r.read_json(self.base / 'new/REFUSAL.json')['audit_process'])
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+
+    @unittest.skipUnless(os.environ.get('V5_REPLAY_TEST_LEAN'), 'Explicit official Lean test binding required')
+    def test_official_lean_continuation_reads_retained_object_without_recompilation(self):
+        data = self.execution_fixture(); a, _, _, _, _, artifact = data
+        lean = Path(os.environ['V5_REPLAY_TEST_LEAN'])
+        self.assertEqual(self.r.sha(lean.read_bytes()), LEAN_SHA)
+        env = dict(os.environ); env['LEAN_PATH'] = str(lean.parent.parent / 'lib/lean')
+        build = self.r.run_process([lean, '-j1', '-o', artifact, self.prior / 'project/Fixture.lean'],
+                              self.prior / 'project', env, self.base / 'fixture-compile.log', 60)
+        self.assertEqual((build['terminal'], build['exit_code']), ('COMPLETED', 0))
+        a._ac_eligible_prior.return_value[-1]['original/build/Fixture.olean'] = self.r.sha(artifact.read_bytes())
+        prior = a._ac_eligible_prior.return_value[0]
+        fingerprints = {'lean': {'executable_sha256': self.r.sha(lean.read_bytes())}}
+        prior['replay_evidence']['tool_fingerprints'] = fingerprints
+        encoded = json.dumps(prior).encode(); (self.prior / 'RECEIPT.json').write_bytes(encoded)
+        a.AC_PRIOR.update(receipt_sha256=self.r.sha(encoded), receipt_canonical_sha256=self.r.canonical(prior), receipt_bytes=len(encoded))
+        a.AC_RETAINED_TREE = self.r._ac_exec_inventory(self.prior, self.r)[1]
+        before = self.r._ac_exec_inventory(self.prior, self.r)
+        a._verify_environment.return_value = ({'lean': lean}, fingerprints, {}, env, {})
+        a.run_process.side_effect = self.r.run_process
+        result = self.execute_fixture(data)
+        self.assertEqual(result['outcome'], 'QUALIFIED_DECLARED_SUITE')
+        self.assertEqual(a.run_process.call_count, 1)
+        self.assertEqual(self.r._ac_exec_inventory(self.prior, self.r), before)
+        self.assertGreater(result['replay_evidence']['target_audits'][0]['checked_declarations'], 0)
+
+    def test_zero_exit_with_unparseable_audit_keeps_actual_zero_in_refusal(self):
+        data = self.execution_fixture(); original = data[0].run_process.side_effect
+        def wrong(*args):
+            result = original(*args); Path(args[3]).write_bytes(b'unrelated output\n')
+            result['log_sha256'] = self.r.sha(Path(args[3]).read_bytes()); return result
+        data[0].run_process.side_effect = wrong
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+        self.assertEqual(self.r.read_json(self.base / 'new/REFUSAL.json')['audit_process']['exit_code'], 0)
+
+    def test_completed_audit_failure_and_resource_terminal_do_not_gain_targets(self):
+        for terminal, code, outcome in [('COMPLETED', 1, 'FAILED'), ('TIMEOUT', None, 'RESOURCE_INCONCLUSIVE')]:
+            with self.subTest(terminal=terminal), tempfile.TemporaryDirectory() as directory:
+                previous_base, previous_prior, previous_source = self.base, self.prior, self.source
+                self.base = Path(directory); self.prior = self.base / 'prior'; self.prior.mkdir(); self.source = self.base / 'source'; self.source.mkdir()
+                try:
+                    data = self.execution_fixture(); original = data[0].run_process.side_effect
+                    def failure(*args):
+                        result = original(*args); result.update(terminal=terminal, exit_code=code); return result
+                    data[0].run_process.side_effect = failure
+                    receipt = self.execute_fixture(data)
+                    self.assertEqual(receipt['outcome'], outcome); self.assertEqual(receipt['proof_scope'], 'NONE')
+                    self.assertEqual(receipt['target_readbacks'], []); self.assertEqual(receipt['replay_evidence']['target_audits'], [])
+                finally:
+                    self.base, self.prior, self.source = previous_base, previous_prior, previous_source
+
+    def test_receipt_dispatch_uses_only_the_explicit_continuation_schema(self):
+        marker = {'status': 'synthetic dispatch fixture'}
+        with mock.patch.object(self.r, 'validate_audit_continuation', return_value=marker) as validation:
+            self.assertEqual(self.r.validate_receipt({'replay_evidence': {'schema': self.r.AC_SCHEMA}}, {}, {}, self.base), marker)
+        self.assertEqual(validation.call_count, 1)
+        self.assertEqual(validation.call_args.kwargs['adapter'].__file__, self.r.__file__)
+
+
+class AuditContinuationValidationTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('continuation_validation_under_test', SCRIPT)
+        cls.r = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.r)
+
+    def test_actual_prior_anchor_and_canonical_value_are_not_caller_resealable(self):
+        r = self.r
+        binding = {key: {} if key == 'receipt' else r.AC_PRIOR[key] for key in r.AC_PRIOR_KEYS}
+        binding['receipt_sha256'] = 'f' * 64
+        with self.assertRaisesRegex(ValueError, 'Changed prior trust anchor'):
+            r._ac_eligible_prior({'prior': binding}, {}, {}, Path('.'), r, {})
+        binding['receipt_sha256'] = r.AC_PRIOR['receipt_sha256']
+        binding['receipt'] = {key: None for key in r.AC_RECEIPT_KEYS}
+        with self.assertRaisesRegex(ValueError, 'Substituted original receipt'):
+            r._ac_eligible_prior({'prior': binding}, {}, {}, Path('.'), r, {})
+
+    def test_pure_eligibility_rejects_missing_ledger_after_ordinary_receipt_validation(self):
+        r = self.r
+        prior = {key: None for key in r.AC_RECEIPT_KEYS}
+        prior.update(outcome='FAILED', proof_scope='NONE', exit_code=1,
+                     replay_evidence={'schema': 'orthemology-v5-replay-evidence-v2',
+                                      'runner_sha256': r.AC_PRIOR['runner_sha256'], 'stage_results': []})
+        anchor = {**r.AC_PRIOR, 'receipt_canonical_sha256': r.canonical(prior)}
+        binding = {key: prior if key == 'receipt' else anchor[key] for key in r.AC_PRIOR_KEYS}
+        adapter = types.SimpleNamespace(**vars(r)); adapter.validate_receipt = mock.Mock()
+        with mock.patch.object(r, 'AC_PRIOR', anchor), self.assertRaisesRegex(ValueError, 'Incomplete original stage set/order'):
+            r._ac_eligible_prior({'prior': binding}, {}, {}, Path('.'), adapter, {'stages': {}})
+        adapter.validate_receipt.assert_called_once_with(prior, {}, {}, Path('.'))
+
+    def test_pure_continuation_validator_rejects_runner_accounting_auditor_and_policy_changes(self):
+        r = self.r
+        # Isolate the new envelope gates from delegated ordinary source checks
+        # and filesystem collection. Those are tested by the executor fixtures.
+        suite = {'id': 'd06-core-runtime'}; plan = {'targets': {}}
+        adapter = types.SimpleNamespace(**vars(r)); adapter.validate_suite = mock.Mock(return_value=plan)
+        adapter.APPROVED_DECLARED_SUITES = {suite['id']: r.AC_APPROVAL}
+        generated = r.sha(r._audit_source([]).encode())
+        prior = {key: {} for key in ('suite_id', 'family', 'suite_sha256', 'source_hashes', 'review_hashes', 'toolchain_sha256')}
+        prior.update(id='original-failed', controls=[])
+        old = {key: {} for key in ('descriptor_sha256', 'closure_sha256', 'source_hashes_before', 'source_hashes_after',
+                                   'import_fingerprints', 'tool_fingerprints', 'dependency_checks')}
+        record = {key: None for key in r.AC_RECEIPT_KEYS}
+        record.update({key: prior[key] for key in ('suite_id', 'family', 'suite_sha256', 'source_hashes', 'review_hashes', 'toolchain_sha256')})
+        record.update(id='d06-core-runtime-audit-continuation-SYNTHETIC', controls=[], outcome='FAILED', proof_scope='NONE', exit_code=1,
+                      target_readbacks=[], axioms=[], invocation=['replay_v5_successors.py', '--audit-continuation', '--suite', suite['id'], '--prior', '{prior}', '--out', '{out}'])
+        evidence = {key: None for key in r.AC_EVIDENCE_KEYS}; evidence.update(old)
+        evidence.update(schema=r.AC_SCHEMA, cache_policy=r.AC_CACHE_POLICY, runner_sha256=r.sha(SCRIPT.read_bytes()),
+                        accounting=dict(r.AC_ACCOUNTING), output_hashes={'generated/V5SuccessorReadback.lean': generated}, target_audits=[],
+                        fresh_audit={'recipe': 'checked-closure-deduplicated-enqueue-v1', 'generated_source_sha256': generated,
+                            'resolved_invocation_sha256': 'd' * 64, 'argv_provenance': 'RESOLVED_FROM_BOUND_INPUTS', 'traversal_bound': 1000000,
+                            'distinct_declaration_accounting': 'ENQUEUE_ONCE_NO_DEPENDENCY_DROPPED', 'fresh_custom_objects': 0})
+        record['replay_evidence'] = evidence
+        with mock.patch.object(r, 'AC_SUITE_SHA256', r.canonical(suite)), mock.patch.object(r, 'AC_AUDIT_SOURCE', generated), \
+             mock.patch.object(r, '_ac_eligible_prior', return_value=(prior, old, {}, {})), \
+             mock.patch.object(r, '_ac_retained_inputs'), mock.patch.object(r, '_ac_fresh_stages', return_value={'terminal': 'COMPLETED', 'exit_code': 1}):
+            self.assertEqual(r.validate_audit_continuation(record, suite, {}, Path('.'), adapter=adapter)['outcome'], 'FAILED')
+            for change, message in [({'runner_sha256': 'f' * 64}, 'Wrong executing continuation runner'),
+                                    ({'cache_policy': 'CALLER_TRUSTED_CACHE'}, 'Unknown continuation schema/policy'),
+                                    ({'accounting': {**r.AC_ACCOUNTING, 'new_custom_objects': 1}}, 'Duplicate or invented execution/build credit'),
+                                    ({'accounting': {**r.AC_ACCOUNTING, 'new_custom_objects': False}}, 'Duplicate or invented execution/build credit'),
+                                    ({'fresh_audit': {**evidence['fresh_audit'], 'generated_source_sha256': 'f' * 64}}, 'Changed auditor recipe/bound')]:
+                with self.subTest(change=change), self.assertRaisesRegex(ValueError, message):
+                    altered = copy.deepcopy(record); altered['replay_evidence'].update(change)
+                    r.validate_audit_continuation(altered, suite, {}, Path('.'), adapter=adapter)
 
 
 if __name__ == '__main__':

@@ -14,6 +14,7 @@ import json
 import math
 import os
 from pathlib import Path, PurePosixPath
+from types import SimpleNamespace
 import re
 import runpy
 import shutil
@@ -2501,7 +2502,505 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
     return receipt
 
 
+AC_SCHEMA = 'orthemology-v5-audit-continuation-v1'
+AC_CACHE_POLICY = 'PINNED_OFFICIAL_CACHES_REUSED_CAMPAIGN_CUSTOM_OBJECTS_FRESH_AUDIT'
+AC_SUITE_SHA256 = 'a775764e1ba9d626f9eebaf6642428769a1016f9d779c1832d1f0b3814722128'
+AC_APPROVAL = '2c0c433ba860bc33862a87dff2e4c22f3ec1d584b580a0605a1ffc8163844f8b'
+AC_AUDIT_SOURCE = 'ab2b1c9265ec5dbd1d3a24f4a664b5bbcd3da1e9ece871119499a1cb8b3bd4d8'
+# Add only independently reviewed executor bytes; receipt fields cannot add trust.
+# Every entry remains subject to the exact auditor, suite and source checks below.
+AC_REVIEWED_EXECUTOR_HASHES = frozenset()
+AC_PRIOR = {
+    'receipt_sha256': '71306bdd74347b64600cff1eb99cddcc21970f8ff9e82345e91e06666c57ad8e',
+    'receipt_canonical_sha256': 'a83603f4b746920aab44f8c7a599298c49a7750327811a81773fef641254166c',
+    'receipt_bytes': 509311,
+    'runner_sha256': '18b4e09215cd521361058cd54160a5587803bc7ce79b044a730a2d670e8e9ee0',
+    'failed_audit_source_sha256': 'b02b41837b2b617bd3bcb8d399a866cc5aa95b077fea5e45c2d986674fcc92fc',
+    'failed_audit_log_sha256': '26f349531c72aadcdb91c72df3746b46567811c77699c2fa1811dfda61098ae6',
+    'failure_record_sha256': '544f32f8a7d2e79c456a68081c9b5f1d6570a7eaf92feb8a547dbe0cbb0821a3',
+    'physical_trace_sha256': '76719061dcee7c07eac0a76f72e184de2fb945d63a1136d1ad704894f265284e',
+    'original_result_sha256': '260dd5a450a9d1874562aa7fbc696a8567a7f62e9c16c03d56433c772a116958',
+}
+# Assessment-time retained inputs, using the adapter's existing _file_hashes
+# algorithm (canonical relative-path -> SHA256 map), not historical measurements.
+AC_RETAINED_TREE = '748a5d8d993637c120afc3b0998bf0109b5c6658c7f2de0ff29f426859a524a8'
+AC_PROJECT_TREE = '814e0bc51656238428d09176456b50199ac00363b7f78ff8d7fdc9625db5c510'
+AC_RECEIPT_KEYS = set('id suite_id family suite_sha256 source_hashes review_hashes toolchain_sha256 outcome target_readbacks controls stages invocation started_at ended_at exit_code log_sha256 axioms proof_scope replay_evidence'.split())
+AC_EVIDENCE_KEYS = set('schema descriptor_sha256 closure_sha256 runner_sha256 source_hashes_before source_hashes_after import_fingerprints tool_fingerprints dependency_checks stage_results target_audits output_hashes cache_policy prior retained_input_checks fresh_audit accounting'.split())
+AC_PRIOR_KEYS = set('receipt_sha256 receipt_canonical_sha256 receipt_bytes receipt failed_audit_source_sha256 failed_audit_log_sha256 failure_record_sha256'.split())
+AC_RETAINED_KEYS = set('mode stage_ids physical_trace_sha256 original_result_sha256 child_ledger_sha256 driver_invocations_sha256 archive_sha256 retained_tree_before_sha256 retained_tree_after_sha256 project_sources_before_sha256 project_sources_after_sha256 custom_objects_before custom_objects_after official_cache_measurements'.split())
+AC_FRESH_KEYS = set('recipe generated_source_sha256 resolved_invocation_sha256 argv_provenance traversal_bound distinct_declaration_accounting fresh_custom_objects'.split())
+AC_STAGE_KEYS = set('id argv cwd budget_seconds started_at ended_at terminal exit_code log_sha256 output_hashes'.split())
+AC_AUDIT_KEYS = set('target_id name type_sha256 axioms closure_status checked_declarations stage_id log_sha256'.split())
+AC_ACCOUNTING = {'reused_source_owned_physical_runs': 1, 'reused_child_executions': 168,
+    'reused_custom_objects': 167, 'reused_original_readbacks': 13, 'new_source_owned_physical_runs': 0,
+    'new_child_compilations': 0, 'new_custom_objects': 0, 'new_target_audit_processes': 1,
+    'independent_evidence_increment': 0}
+
+
+def _ac_require(value, message):
+    if not value:
+        raise ValueError(message)
+
+
+def _ac_keys(value, expected):
+    _ac_require(isinstance(value, dict) and set(value) == expected, 'Unknown or missing continuation fields')
+
+
+def _ac_time(value):
+    _ac_require(isinstance(value, str) and value.endswith('Z'), 'Continuation timestamp is not UTC')
+    return datetime.fromisoformat(value[:-1] + '+00:00')
+
+
+def _ac_eligible_prior(evidence, suite, sources, root, adapter, plan):
+    binding = evidence['prior']; _ac_keys(binding, AC_PRIOR_KEYS)
+    _ac_require(type(binding['receipt_bytes']) is int, 'Invalid original byte count')
+    _ac_require(all(binding[key] == AC_PRIOR[key] for key in AC_PRIOR_KEYS - {'receipt'}), 'Changed prior trust anchor')
+    prior = binding['receipt']; _ac_keys(prior, AC_RECEIPT_KEYS)
+    _ac_require(adapter.canonical(prior) == AC_PRIOR['receipt_canonical_sha256'], 'Substituted original receipt')
+    old = prior['replay_evidence']
+    _ac_require(old['schema'] == 'orthemology-v5-replay-evidence-v2'
+             and old['runner_sha256'] == AC_PRIOR['runner_sha256']
+             and prior['outcome'] == 'FAILED' and prior['proof_scope'] == 'NONE'
+             and type(prior['exit_code']) is int and prior['exit_code'] == 1,
+             'Original failed receipt semantics changed')
+    # Never make a fake successful copy to reuse the old validator.
+    adapter.validate_receipt(prior, suite, sources, root)
+    stages = adapter.indexed(old['stage_results'])
+    _ac_require(list(stages) == ['_prerequisites', *plan['stages'], '_target_audit'], 'Incomplete original stage set/order')
+    audit = stages['_target_audit']
+    _ac_require(audit['terminal'] == 'COMPLETED' and type(audit['exit_code']) is int and audit['exit_code'] == 1
+             and audit['log_sha256'] == AC_PRIOR['failed_audit_log_sha256']
+             and old['target_audits'] == [] and prior['target_readbacks'] == [], 'Ineligible original audit failure')
+    prerequisite = stages['_prerequisites']
+    _ac_require(prerequisite['terminal'] == 'COMPLETED' and type(prerequisite['exit_code']) is int
+             and prerequisite['exit_code'] == 0, 'Original prerequisite was not fulfilled')
+    completed = {'_prerequisites'}
+    for sid, declared in plan['stages'].items():
+        actual = stages[sid]
+        _ac_require(actual['terminal'] == 'COMPLETED' and type(actual['exit_code']) is int
+                 and actual['exit_code'] in declared['expected_exit_codes']
+                 and set(declared['depends_on']) <= completed
+                 and set(actual['output_hashes']) == set(declared['output_paths']), 'Unfulfilled original source-owned stage')
+        completed.add(sid)
+    adapter.validate_child_evidence(old, plan, stages, True)
+    launches = old['driver_invocations']
+    _ac_require(len(launches) == 1 and launches[0]['trace_sha256'] == AC_PRIOR['physical_trace_sha256']
+             and launches[0]['child_count'] == 168 and len(old['child_observations']) == 168,
+             'Wrong retained physical-run identity/census')
+    controls = adapter.indexed(prior['controls']); expected_controls = adapter.indexed(suite['controls'])
+    diagnostics = adapter.indexed(old['control_diagnostics'], 'control_id')
+    _ac_require(set(controls) == set(diagnostics) == set(expected_controls), 'Incomplete original controls')
+    for cid, expected in expected_controls.items():
+        actual = controls[cid]; diagnostic = diagnostics[cid]; stage = stages[diagnostic['stage_id']]
+        _ac_require(all(actual[key] == expected[key] for key in ('source_id', 'target_id', 'role', 'expected_outcome_sha256'))
+                 and actual['actual_outcome'] == expected['expected_outcome']
+                 and actual['actual_outcome_sha256'] == adapter.sha(expected['expected_outcome'].encode())
+                 and diagnostic['match'] == 'MATCHED' and actual['terminal'] == stage['terminal'] == 'COMPLETED'
+                 and type(actual['exit_code']) is int and actual['exit_code'] == stage['exit_code']
+                 and actual['log_sha256'] == stage['log_sha256'], 'Unfulfilled original control/diagnostic')
+    objects = {}
+    for child in old['child_observations']:
+        for path, digest in child['output_hashes'].items():
+            _ac_require(path not in objects, 'Duplicate physical custom-object producer')
+            objects[path] = digest
+    expected_paths = {suite['replay']['build_roots'][0] + '/' + name.replace('.', '/') + '.olean'
+                      for name in suite['replay']['module_order']}
+    _ac_require(len(objects) == 167 and set(objects) == expected_paths
+             and objects == {name: value for name, value in old['output_hashes'].items() if name.endswith('.olean')},
+             'Missing or unproduced transitive custom object')
+    return prior, old, stages, objects
+
+
+def _ac_retained_inputs(checks, prior, old, stages, objects, suite, adapter, plan):
+    _ac_keys(checks, AC_RETAINED_KEYS)
+    _ac_require(checks['mode'] == 'REUSED_CAMPAIGN_EXECUTION'
+             and checks['stage_ids'] == [sid for sid in stages if sid != '_target_audit'], 'Retained stages misclassified')
+    expected = {'physical_trace_sha256': AC_PRIOR['physical_trace_sha256'], 'original_result_sha256': AC_PRIOR['original_result_sha256'],
+        'child_ledger_sha256': adapter.canonical(old['child_observations']),
+        'driver_invocations_sha256': adapter.canonical(old['driver_invocations']),
+        'archive_sha256': suite['replay']['external_inputs'][0]['expected_sha256'],
+        'retained_tree_before_sha256': AC_RETAINED_TREE, 'retained_tree_after_sha256': AC_RETAINED_TREE,
+        'project_sources_before_sha256': AC_PROJECT_TREE, 'project_sources_after_sha256': AC_PROJECT_TREE,
+        'custom_objects_before': objects, 'custom_objects_after': objects}
+    _ac_require(all(checks[key] == value for key, value in expected.items()), 'Changed retained inputs or producer association')
+    caches = adapter.indexed(checks['official_cache_measurements'], 'root_id')
+    _ac_require(set(caches) == {'lean'} | set(plan['packages']), 'Missing or foreign official cache root')
+    for row in caches.values():
+        _ac_keys(row, set('root_id measurement_phase tree_before_sha256 tree_after_sha256 file_count cache_policy'.split()))
+        _ac_require(row['measurement_phase'] == 'CONTINUATION_ONLY'
+                 and type(row['file_count']) is int, 'Cache measurement has wrong time/scope')
+        if row['cache_policy'] == 'ABSENT_UNIMPORTED_PINNED_PACKAGE_CACHE':
+            # The exact suite/source validation already binds all nine package
+            # revisions and manifests, including this unimported Cli package.
+            _ac_require(row['root_id'] == 'Cli' and row['file_count'] == 0
+                     and row['tree_before_sha256'] == adapter.canonical({})
+                     and not any(item['package'] == 'Cli' for item in plan['official'].values()),
+                     'Absent cache is not the exact unimported pinned Cli package')
+        else:
+            _ac_require(row['cache_policy'] == 'TRUSTED_PINNED_OFFICIAL_CACHE'
+                     and row['file_count'] > 0, 'Cache measurement has wrong time/scope')
+        adapter.digest(row['tree_before_sha256']); adapter.digest(row['tree_after_sha256'])
+        _ac_require(row['tree_before_sha256'] == row['tree_after_sha256'], 'Official cache changed during continuation')
+
+
+def _ac_fresh_stages(receipt, evidence, prior, adapter):
+    stages = adapter.indexed(evidence['stage_results'])
+    _ac_require(list(stages) == ['_prerequisites', '_target_audit'], 'Fresh ledger contains reused or missing stages')
+    start, end = _ac_time(receipt['started_at']), _ac_time(receipt['ended_at'])
+    _ac_require(_ac_time(prior['ended_at']) < start <= end, 'Continuation reused original or reversed times')
+    last = start
+    for sid, row in stages.items():
+        _ac_keys(row, AC_STAGE_KEYS)
+        argv = ['{builtin:prerequisites}'] if sid == '_prerequisites' else ['{tool:lean}', '-j1', '{out}/generated/V5SuccessorReadback.lean']
+        _ac_require(row['argv'] == argv and row['cwd'] == '.' and type(row['budget_seconds']) is int
+                 and row['budget_seconds'] == (30 if sid == '_prerequisites' else 300), 'Changed continuation invocation/budget')
+        row_start, row_end = _ac_time(row['started_at']), _ac_time(row['ended_at'])
+        _ac_require(last <= row_start <= row_end <= end, 'Invalid fresh stage interval/order')
+        last = row_end
+        _ac_require(row['terminal'] in {'COMPLETED', 'TIMEOUT', 'INTERRUPTED'}, 'Unexecuted fresh audit is not a composite')
+        if row['terminal'] == 'COMPLETED':
+            _ac_require(type(row['exit_code']) is int and 0 <= row['exit_code'] < 124, 'Invalid fresh completed exit')
+        else:
+            _ac_require(row['exit_code'] is None, 'Resource failure has concrete process credit')
+        adapter.digest(row['log_sha256']); _ac_require(row['output_hashes'] == {}, 'Fresh stage relabels outputs')
+    pre = stages['_prerequisites']
+    _ac_require(pre['terminal'] == 'COMPLETED' and pre['exit_code'] == 0, 'Continuation prerequisites not established')
+    _ac_require(receipt['stages'] == [{key: row[key] for key in ('id', 'terminal', 'exit_code', 'log_sha256')}
+                                  for row in evidence['stage_results']], 'Top/fresh stage association differs')
+    _ac_require(receipt['log_sha256'] == adapter.canonical({sid: row['log_sha256'] for sid, row in stages.items()}),
+             'Fresh log map differs')
+    return stages['_target_audit']
+
+
+def _ac_validate(receipt, suite, sources, root, adapter):
+    # Also reject nonfinite numeric values in otherwise opaque bound subobjects.
+    json.dumps(receipt, ensure_ascii=False, allow_nan=False)
+    _ac_keys(receipt, AC_RECEIPT_KEYS)
+    _ac_require(suite['id'] == 'd06-core-runtime' and adapter.canonical(suite) == AC_SUITE_SHA256
+             and adapter.APPROVED_DECLARED_SUITES.get(suite['id']) == AC_APPROVAL, 'Unapproved continuation suite')
+    plan = adapter.validate_suite(suite, sources, root)
+    evidence = receipt['replay_evidence']; _ac_keys(evidence, AC_EVIDENCE_KEYS)
+    _ac_require(evidence['schema'] == AC_SCHEMA and evidence['cache_policy'] == AC_CACHE_POLICY, 'Unknown continuation schema/policy')
+    prior, old, stages, objects = _ac_eligible_prior(evidence, suite, sources, root, adapter, plan)
+    _ac_require(isinstance(receipt['id'], str) and receipt['id'].startswith('d06-core-runtime-audit-continuation-')
+             and len(receipt['id']) > len('d06-core-runtime-audit-continuation-') and receipt['id'] != prior['id'], 'Continuation needs a new identity')
+    for key in ('suite_id', 'family', 'suite_sha256', 'source_hashes', 'review_hashes', 'toolchain_sha256'):
+        _ac_require(receipt[key] == prior[key], 'Changed continuation suite/source/review/toolchain binding')
+    _ac_require(receipt['invocation'] == ['replay_v5_successors.py', '--audit-continuation', '--suite', suite['id'],
+                                      '--prior', '{prior}', '--out', '{out}'], 'Not an audit-only invocation')
+    for key in ('descriptor_sha256', 'closure_sha256', 'source_hashes_before', 'source_hashes_after',
+                'import_fingerprints', 'tool_fingerprints', 'dependency_checks'):
+        _ac_require(evidence[key] == old[key], 'Stale continuation source/import/tool/dependency evidence')
+    adapter.digest(evidence['runner_sha256'])
+    _ac_require((evidence['runner_sha256'] == adapter.sha(Path(adapter.__file__).read_bytes())
+                 or evidence['runner_sha256'] in AC_REVIEWED_EXECUTOR_HASHES)
+             and evidence['runner_sha256'] != AC_PRIOR['runner_sha256'], 'Wrong executing continuation runner')
+    _ac_retained_inputs(evidence['retained_input_checks'], prior, old, stages, objects, suite, adapter, plan)
+    _ac_keys(evidence['accounting'], set(AC_ACCOUNTING))
+    _ac_require(all(type(evidence['accounting'][key]) is int and evidence['accounting'][key] == value
+                 for key, value in AC_ACCOUNTING.items()), 'Duplicate or invented execution/build credit')
+    fresh = evidence['fresh_audit']; _ac_keys(fresh, AC_FRESH_KEYS)
+    generated = adapter.sha(adapter._audit_source(list(plan['targets'].values())).encode())
+    _ac_require(generated == AC_AUDIT_SOURCE and fresh['recipe'] == 'checked-closure-deduplicated-enqueue-v1'
+             and fresh['generated_source_sha256'] == generated
+             and fresh['argv_provenance'] == 'RESOLVED_FROM_BOUND_INPUTS'
+             and type(fresh['traversal_bound']) is int and fresh['traversal_bound'] == 1000000
+             and fresh['distinct_declaration_accounting'] == 'ENQUEUE_ONCE_NO_DEPENDENCY_DROPPED'
+             and type(fresh['fresh_custom_objects']) is int and fresh['fresh_custom_objects'] == 0,
+             'Changed auditor recipe/bound or false fresh builds')
+    adapter.digest(fresh['resolved_invocation_sha256'])
+    _ac_require(evidence['output_hashes'] == {'generated/V5SuccessorReadback.lean': generated}, 'Wrong genuinely new audit artifacts')
+    audit = _ac_fresh_stages(receipt, evidence, prior, adapter)
+    _ac_require(receipt['controls'] == prior['controls'], 'Original controls changed or relabeled fresh')
+    successful = receipt['outcome'] == 'QUALIFIED_DECLARED_SUITE'
+    if not successful:
+        expected = 'FAILED' if audit['terminal'] == 'COMPLETED' else 'RESOURCE_INCONCLUSIVE'
+        _ac_require(receipt['outcome'] == expected and receipt['proof_scope'] == 'NONE'
+                 and type(receipt['exit_code']) is int and receipt['exit_code'] == 1
+                 and (audit['terminal'] != 'COMPLETED' or audit['exit_code'] > 0)
+                 and receipt['target_readbacks'] == [] and evidence['target_audits'] == [] and receipt['axioms'] == [],
+                 'Failed audit acquired success/partial target credit')
+    else:
+        _ac_require(receipt['proof_scope'] == 'DECLARED_SUITE' and type(receipt['exit_code']) is int
+                 and receipt['exit_code'] == 0 and audit['terminal'] == 'COMPLETED' and audit['exit_code'] == 0,
+                 'Continuation lacks complete successful fresh audit')
+        audits = adapter.indexed(evidence['target_audits'], 'target_id')
+        _ac_require(set(audits) == set(plan['targets']), 'Incomplete or foreign safe target audits')
+        axes = set()
+        for tid, row in audits.items():
+            _ac_keys(row, AC_AUDIT_KEYS)
+            _ac_require(row['name'] == plan['targets'][tid]['name'] and row['closure_status'] == 'CHECKED_SAFE'
+                     and type(row['checked_declarations']) is int and row['checked_declarations'] > 0
+                     and row['stage_id'] == '_target_audit' and row['log_sha256'] == audit['log_sha256'],
+                     'Changed target/log/safe-closure binding')
+            adapter.digest(row['type_sha256'])
+            _ac_require(isinstance(row['axioms'], list) and len(set(row['axioms'])) == len(row['axioms'])
+                     and set(row['axioms']) <= adapter.AXIOMS, 'Unapproved or duplicated axiom')
+            axes.update(row['axioms'])
+        expected_readbacks = [{'target_id': row['id'], 'source_id': row['source_id'],
+            'target_sha256': row['target_sha256'], 'outcome': 'CHECKED'} for row in suite['targets']]
+        _ac_require(receipt['target_readbacks'] == expected_readbacks and receipt['axioms'] == sorted(axes),
+                 'Fresh readback/source/axiom summary differs')
+    return {'suite_id': suite['id'], 'outcome': receipt['outcome'],
+            'scope': 'CONTINUATION_ENVELOPE_AND_PRIOR_ELIGIBILITY_ONLY'}
+
+
+def validate_audit_continuation(receipt, suite, sources, root, *, adapter):
+    """Validate one bounded composition without processes, writes or resealing."""
+    try:
+        return _ac_validate(receipt, suite, sources, root, adapter)
+    except (TypeError, KeyError, IndexError, OverflowError) as error:
+        raise ValueError('Malformed continuation envelope') from error
+
+
+def _ac_exec_output(output, protected, adapter):
+    output = adapter.no_symlinks(output).absolute()
+    adapter.require(not output.exists(), 'Continuation output must be absent')
+    for original in protected:
+        original = Path(original).resolve()
+        adapter.require(not output.is_relative_to(original) and not original.is_relative_to(output),
+                        'Continuation output overlaps a consumed input')
+    return output
+
+
+def _ac_exec_inventory(root, adapter):
+    root = adapter.no_symlinks(root)
+    adapter.require(root.is_dir(), 'Retained input tree is absent')
+    rows = {}
+    for path in sorted(root.rglob('*')):
+        adapter.no_symlinks(path)
+        if path.is_file():
+            rows[path.relative_to(root).as_posix()] = adapter.sha(path.read_bytes())
+        else:
+            adapter.require(path.is_dir(), 'Nonregular retained input')
+    return rows, adapter.canonical(rows)
+
+
+def _ac_exec_objects(prior, expected, build_roots, adapter):
+    adapter.require(isinstance(expected, dict) and expected, 'Missing retained producer objects')
+    actual = {}
+    for name in expected:
+        adapter.require(name.endswith('.olean'), 'Retained custom artifact is not an object')
+        path = adapter.path_in(prior, name)
+        adapter.require(path.is_file(), 'Retained custom object is missing')
+        actual[name] = adapter.sha(path.read_bytes())
+    adapter.require(actual == expected, 'Retained object differs from original producer')
+    census = set()
+    for root in build_roots:
+        build = adapter.path_in(prior, root)
+        adapter.require(build.is_dir(), 'Retained build root is absent')
+        for path in build.rglob('*.olean'):
+            adapter.no_symlinks(path)
+            adapter.require(path.is_file(), 'Retained object is not a regular file')
+            census.add(path.relative_to(prior).as_posix())
+    adapter.require(census == set(expected), 'Foreign or missing retained custom object')
+    return actual
+
+
+def _ac_exec_caches(roots, plan, adapter):
+    adapter.require(set(roots) == {'lean'} | set(plan['packages']), 'Missing or foreign official cache root')
+    rows = []; inventories = {}
+    for name, path in sorted(roots.items()):
+        path = adapter.no_symlinks(path)
+        if path.is_dir():
+            inventory, digest = _ac_exec_inventory(path, adapter)
+            adapter.require(inventory, 'Declared official cache is empty')
+            policy = 'TRUSTED_PINNED_OFFICIAL_CACHE'
+        else:
+            adapter.require(not path.exists() and name == 'Cli' and not any(row['package'] == name for row in plan['official'].values()),
+                            'Imported or unreviewed official cache is missing')
+            inventory = {}; digest = adapter.canonical(inventory)
+            policy = 'ABSENT_UNIMPORTED_PINNED_PACKAGE_CACHE'
+        inventories[name] = inventory
+        rows.append({'root_id': name, 'measurement_phase': 'CONTINUATION_ONLY',
+                     'tree_before_sha256': digest, 'tree_after_sha256': digest,
+                     'file_count': len(inventory), 'cache_policy': policy})
+    return rows, inventories
+
+
+def _ac_exec_generate(output, plan, adapter):
+    body = adapter._audit_source(list(plan['targets'].values())).encode('utf-8')
+    adapter.require(adapter.sha(body) == adapter.AC_AUDIT_SOURCE, 'Changed continuation audit generator')
+    folder = adapter.path_in(output, 'generated')
+    adapter.require(not folder.exists(), 'Generated audit output must be fresh')
+    folder.mkdir()
+    path = folder / 'V5SuccessorReadback.lean'
+    with path.open('xb') as stream:
+        stream.write(body)
+    adapter.require(adapter.sha(path.read_bytes()) == adapter.AC_AUDIT_SOURCE, 'Generated audit readback mismatch')
+    return path
+
+
+def _ac_exec_result(run, text, targets, adapter):
+    if run['terminal'] in {'TIMEOUT', 'INTERRUPTED'}:
+        adapter.require(run['exit_code'] is None, 'Resource terminal has concrete process credit')
+        return 'RESOURCE_INCONCLUSIVE', {}
+    adapter.require(run['terminal'] == 'COMPLETED' and type(run['exit_code']) is int and 0 <= run['exit_code'] < 124,
+                    'Unexecuted or invalid continuation terminal')
+    if run['exit_code']:
+        return 'FAILED', {}
+    return 'QUALIFIED_DECLARED_SUITE', adapter.parse_readbacks(text, targets)
+
+
+def _ac_exec_prior(prior, adapter):
+    data = adapter.path_in(prior, 'RECEIPT.json').read_bytes()
+    adapter.require(len(data) == adapter.AC_PRIOR['receipt_bytes'] and adapter.sha(data) == adapter.AC_PRIOR['receipt_sha256'],
+                    'Wrong original receipt bytes')
+    record = json.loads(data)
+    adapter.require(adapter.canonical(record) == adapter.AC_PRIOR['receipt_canonical_sha256'], 'Wrong original receipt value')
+    for name, key in [('generated/V5SuccessorReadback.lean', 'failed_audit_source_sha256'),
+                      ('logs/target-audit.log', 'failed_audit_log_sha256'), ('FAILURE.json', 'failure_record_sha256'),
+                      ('original/RESULT.json', 'original_result_sha256')]:
+        adapter.require(adapter.sha(adapter.path_in(prior, name).read_bytes()) == adapter.AC_PRIOR[key],
+                        'Original failure or source-owned result changed')
+    return {key: record if key == 'receipt' else adapter.AC_PRIOR[key] for key in adapter.AC_PRIOR_KEYS}
+
+
+def _ac_exec_retained(prior, plan, objects, suite, adapter):
+    _, tree = _ac_exec_inventory(prior, adapter)
+    adapter.require(tree == adapter.AC_RETAINED_TREE, 'Retained original run changed')
+    project = adapter.path_in(prior, 'project')
+    _, project_tree = _ac_exec_inventory(project, adapter)
+    adapter.require(project_tree == adapter.AC_PROJECT_TREE, 'Retained projected source tree changed')
+    for sid, row in plan['files'].items():
+        adapter.require(adapter.path_in(project, row['path']).read_bytes() == plan['contents'][sid],
+                        'Retained projected source differs from the current source binding')
+    measured = _ac_exec_objects(prior, objects, suite['replay']['build_roots'], adapter)
+    return tree, project_tree, measured
+
+
+def _ac_exec_cache_roots(resolved, tools, plan, adapter):
+    distribution = Path(resolved['lean']).resolve().parent.parent
+    roots = {'lean': distribution / 'lib/lean'}
+    libraries = []
+    for name, row in plan['packages'].items():
+        adapter.require(row['kind'] == 'GIT' and 'mathlib' in tools, 'Unreviewed continuation package kind')
+        library = adapter.path_in(tools['mathlib'], row['path'], dot=True) / '.lake/build/lib/lean'
+        roots[name] = library
+        libraries.extend(adapter.package_library(name, library, plan['official']))
+    libraries.append(roots['lean'])
+    return roots, libraries
+
+
+def _execute_audit_continuation(suite, sources, root, prior, output, tools, inputs, *, reviews, adapter):
+    """Reuse the one pinned completed producer and execute only its missing audit.
+
+    A prerequisite or post-processing refusal is a separate private artifact,
+    never a replacement process exit or a successful clone of the failed run.
+    """
+    a = adapter
+    a.require(suite['id'] == 'd06-core-runtime' and a.canonical(suite) == a.AC_SUITE_SHA256
+              and a.APPROVED_DECLARED_SUITES.get(suite['id']) == a.AC_APPROVAL, 'Unapproved audit-continuation suite')
+    a.require(isinstance(reviews, dict) and set(suite['review_ids']) <= set(reviews), 'Missing current review identities')
+    plan = a.validate_suite(suite, sources, root)
+    prior = a.no_symlinks(prior).absolute()
+    if not prior.is_dir(): raise a.MissingInput('Original run is unavailable')
+    protected = [root, prior, *inputs.values()]
+    if 'mathlib' in tools: protected.append(tools['mathlib'])
+    for name, path in tools.items():
+        if name != 'mathlib': protected.append(Path(path).resolve().parent.parent)
+    output = _ac_exec_output(output, protected, a)
+    started = a.utc(); run = None; runner_sha256 = a.sha(Path(a.__file__).read_bytes())
+    output.mkdir(parents=True, exist_ok=False); (output / 'logs').mkdir()
+    try:
+        binding = _ac_exec_prior(prior, a)
+        old_receipt, old, original_stages, objects = a._ac_eligible_prior({'prior': binding}, suite, sources, root, a, plan)
+        a.require({rid: reviews[rid]['review_sha256'] for rid in suite['review_ids']} == old_receipt['review_hashes'],
+                  'Current review identities differ from the original')
+        hashes = {sid: a.sha(a.public_bytes(root, sources[sid])) for sid in suite['source_ids']}
+        a.require(hashes == old_receipt['source_hashes'] == old['source_hashes_before'] == old['source_hashes_after']
+                  and a.canonical(suite['replay']) == old['descriptor_sha256']
+                  and a.closure_fingerprint(suite, sources) == old['closure_sha256']
+                  and a.import_fingerprints(suite, sources) == old['import_fingerprints'], 'Current source/import binding changed')
+        tree_before, project_before, objects_before = _ac_exec_retained(prior, plan, objects, suite, a)
+        before = output / 'prerequisites-before'; before.mkdir()
+        pre_start = a.utc()
+        resolved, fingerprints, dependencies, env, input_hashes = a._verify_environment(suite, plan, tools, inputs, before)
+        a.require(fingerprints == old['tool_fingerprints'] and dependencies == old['dependency_checks'],
+                  'Current tool/dependency readback differs from the original binding')
+        cache_roots, libraries = _ac_exec_cache_roots(resolved, tools, plan, a)
+        cache_rows, cache_inventories = _ac_exec_caches(cache_roots, plan, a)
+        env['LEAN_PATH'] = os.pathsep.join(str(p) for p in [*[a.path_in(prior, name) for name in suite['replay']['build_roots']], *libraries])
+        pre_log = output / 'logs/prerequisites.log'
+        pre_log.write_text('Current source, retained producer, custom objects, exact tools and dependency pins verified.\n'
+                           'Official caches measured at continuation time; no historical cache measurement or fresh cache build claimed.\n', encoding='utf-8')
+        pre = {'id': '_prerequisites', 'argv': ['{builtin:prerequisites}'], 'cwd': '.', 'budget_seconds': 30,
+               'started_at': pre_start, 'ended_at': a.utc(), 'terminal': 'COMPLETED', 'exit_code': 0,
+               'log_sha256': a.sha(pre_log.read_bytes()), 'output_hashes': {}}
+        audit = _ac_exec_generate(output, plan, a)
+        argv = [resolved['lean'], '-j1', audit]; cwd = a.path_in(prior, 'project')
+        invocation = output / 'RESOLVED_AUDIT_INVOCATION.json'
+        a.write_json(invocation, {'argv': [str(arg) for arg in argv], 'cwd': str(cwd), 'timeout_seconds': 300,
+                                 'lean_path': env['LEAN_PATH'].split(os.pathsep), 'runner_sha256': runner_sha256,
+                                 'generated_source_sha256': a.AC_AUDIT_SOURCE,
+                                 'scope': 'ONE_FRESH_TARGET_AUDIT_REUSING_PINNED_CAMPAIGN_OBJECTS'})
+        audit_log = output / 'logs/target-audit.log'
+        run = a.run_process(argv, cwd, env, audit_log, 300)
+        a.require(a.sha(audit_log.read_bytes()) == run['log_sha256'], 'Fresh audit log differs from its actual process')
+        outcome, audits = _ac_exec_result(run, audit_log.read_text(encoding='utf-8'), list(plan['targets'].values()), a)
+        after = output / 'prerequisites-after'; after.mkdir()
+        checked_resolved, checked_fingerprints, checked_dependencies, _, checked_inputs = a._verify_environment(suite, plan, tools, inputs, after)
+        a.require(checked_resolved == resolved and checked_fingerprints == fingerprints and checked_dependencies == dependencies
+                  and checked_inputs == input_hashes, 'Consumed tool, dependency or external input changed during continuation')
+        after_roots, after_libraries = _ac_exec_cache_roots(checked_resolved, tools, plan, a)
+        a.require(after_roots == cache_roots and after_libraries == libraries, 'Official search roots changed')
+        after_rows, after_inventories = _ac_exec_caches(after_roots, plan, a)
+        a.require(after_rows == cache_rows and after_inventories == cache_inventories, 'Official cache changed during continuation')
+        tree_after, project_after, objects_after = _ac_exec_retained(prior, plan, objects, suite, a)
+        a.require(_ac_exec_prior(prior, a) == binding, 'Original receipt or failure artifacts changed during continuation')
+        a.require({sid: a.sha(a.public_bytes(root, sources[sid])) for sid in suite['source_ids']} == hashes,
+                  'Public source binding changed during continuation')
+        a.require(a.sha(audit.read_bytes()) == a.AC_AUDIT_SOURCE, 'Generated auditor changed during continuation')
+        a.require(a.sha(Path(a.__file__).read_bytes()) == runner_sha256, 'Executing adapter changed during continuation')
+        audit_stage = {'id': '_target_audit', 'argv': ['{tool:lean}', '-j1', '{out}/generated/V5SuccessorReadback.lean'],
+                       'cwd': '.', 'budget_seconds': 300, **run, 'output_hashes': {}}
+        evidence = {key: old[key] for key in ('descriptor_sha256', 'closure_sha256', 'source_hashes_before', 'source_hashes_after',
+                    'import_fingerprints', 'tool_fingerprints', 'dependency_checks')}
+        evidence.update(schema=a.AC_SCHEMA, runner_sha256=runner_sha256, cache_policy=a.AC_CACHE_POLICY,
+            prior=binding, stage_results=[pre, audit_stage],
+            target_audits=[{'target_id': tid, **value, 'stage_id': '_target_audit', 'log_sha256': run['log_sha256']} for tid, value in audits.items()],
+            output_hashes={'generated/V5SuccessorReadback.lean': a.AC_AUDIT_SOURCE},
+            retained_input_checks={'mode': 'REUSED_CAMPAIGN_EXECUTION', 'stage_ids': [sid for sid in original_stages if sid != '_target_audit'],
+                'physical_trace_sha256': a.AC_PRIOR['physical_trace_sha256'], 'original_result_sha256': a.AC_PRIOR['original_result_sha256'],
+                'child_ledger_sha256': a.canonical(old['child_observations']), 'driver_invocations_sha256': a.canonical(old['driver_invocations']),
+                'archive_sha256': suite['replay']['external_inputs'][0]['expected_sha256'],
+                'retained_tree_before_sha256': tree_before, 'retained_tree_after_sha256': tree_after,
+                'project_sources_before_sha256': project_before, 'project_sources_after_sha256': project_after,
+                'custom_objects_before': objects_before, 'custom_objects_after': objects_after, 'official_cache_measurements': cache_rows},
+            fresh_audit={'recipe': 'checked-closure-deduplicated-enqueue-v1', 'generated_source_sha256': a.AC_AUDIT_SOURCE,
+                'resolved_invocation_sha256': a.sha(invocation.read_bytes()), 'argv_provenance': 'RESOLVED_FROM_BOUND_INPUTS',
+                'traversal_bound': 1000000, 'distinct_declaration_accounting': 'ENQUEUE_ONCE_NO_DEPENDENCY_DROPPED', 'fresh_custom_objects': 0},
+            accounting=dict(a.AC_ACCOUNTING))
+        receipt = {key: old_receipt[key] for key in ('suite_id', 'family', 'suite_sha256', 'source_hashes', 'review_hashes', 'toolchain_sha256', 'controls')}
+        successful = outcome == 'QUALIFIED_DECLARED_SUITE'
+        receipt.update(id=suite['id'] + '-audit-continuation-' + a.sha((started + a.sha(invocation.read_bytes())).encode())[:16],
+            invocation=['replay_v5_successors.py', '--audit-continuation', '--suite', suite['id'], '--prior', '{prior}', '--out', '{out}'],
+            outcome=outcome, proof_scope='DECLARED_SUITE' if successful else 'NONE', exit_code=0 if successful else 1,
+            started_at=started, ended_at=a.utc(), replay_evidence=evidence,
+            stages=[{key: row[key] for key in ('id', 'terminal', 'exit_code', 'log_sha256')} for row in [pre, audit_stage]],
+            log_sha256=a.canonical({row['id']: row['log_sha256'] for row in [pre, audit_stage]}),
+            target_readbacks=[{'target_id': row['id'], 'source_id': row['source_id'], 'target_sha256': row['target_sha256'], 'outcome': 'CHECKED'} for row in suite['targets']] if successful else [],
+            axioms=sorted({axiom for value in audits.values() for axiom in value['axioms']}))
+        a.validate_audit_continuation(receipt, suite, sources, root, adapter=a)
+        a.write_json(output / 'RECEIPT.json', receipt)
+        return receipt
+    except (ValueError, OSError, KeyError, TypeError, KeyboardInterrupt) as error:
+        a.write_json(output / 'REFUSAL.json', {'status': 'CONTINUATION_REFUSED', 'started_at': started, 'ended_at': a.utc(),
+                                             'audit_process': run, 'error': type(error).__name__ + ': ' + str(error),
+                                             'prior_receipt_sha256': a.AC_PRIOR['receipt_sha256'], 'qualified_receipt_written': False})
+        raise
+
+
+def execute_audit_continuation(suite, sources, root, prior, output, tools, inputs, *, reviews=None):
+    return _execute_audit_continuation(suite, sources, root, prior, output, tools, inputs,
+                                      reviews=reviews, adapter=SimpleNamespace(**globals()))
+
+
+
 def validate_receipt(receipt, suite, sources, root):
+    if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == AC_SCHEMA:
+        return validate_audit_continuation(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     plan = validate_suite(suite, sources, root); evidence = receipt['replay_evidence']
     has_children = any(row['argv'][:1] == ['{builtin:observe-child}'] for row in plan['stages'].values())
     keys(evidence, EVIDENCE_KEYS | ({'child_observations', 'driver_invocations'} if has_children else set()))
@@ -2879,8 +3378,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     mode = parser.add_mutually_exclusive_group(required=True)
-    for name in ('list', 'check', 'project', 'execute'): mode.add_argument('--' + name, action='store_true')
-    parser.add_argument('--suite'); parser.add_argument('--out', type=Path)
+    for name in ('list', 'check', 'project', 'execute', 'audit-continuation'): mode.add_argument('--' + name, action='store_true')
+    parser.add_argument('--suite'); parser.add_argument('--out', type=Path); parser.add_argument('--prior', type=Path)
     parser.add_argument('--tool', action='append', default=[]); parser.add_argument('--input', action='append', default=[])
     parser.add_argument('--lean-bin', type=Path); parser.add_argument('--mathlib', type=Path); parser.add_argument('--python', type=Path)
     args = parser.parse_args()
@@ -2906,8 +3405,16 @@ def main():
         if args.lean_bin: require('lean' not in tools, 'Duplicate Lean binding'); tools['lean'] = args.lean_bin / ('lean.exe' if os.name == 'nt' else 'lean')
         if args.mathlib: require('mathlib' not in tools, 'Duplicate Mathlib binding'); tools['mathlib'] = args.mathlib
         if args.python: require('python' not in tools, 'Duplicate Python binding'); tools['python'] = args.python
-        receipt = execute_suite(suite, sources, args.root, args.out, tools, inputs, reviews={r['id']: r for r in bundle['reviews']})
+        reviews = {r['id']: r for r in bundle['reviews']}
+        if args.audit_continuation:
+            require(args.prior is not None, 'Audit continuation requires the exact retained --prior run directory')
+            receipt = execute_audit_continuation(suite, sources, args.root, args.prior, args.out, tools, inputs, reviews=reviews)
+        else:
+            require(args.prior is None, '--prior is only valid for audit continuation')
+            receipt = execute_suite(suite, sources, args.root, args.out, tools, inputs, reviews=reviews)
         print(json.dumps({key: receipt[key] for key in ('suite_id', 'outcome', 'proof_scope', 'exit_code')})); return receipt['exit_code']
+    except (MissingTool, MissingInput) as error:
+        print('Replay prerequisites unavailable: ' + str(error), file=sys.stderr); return 2
     except (ValueError, OSError, KeyError) as error:
         print('Replay refused: ' + str(error), file=sys.stderr); return 1
 
