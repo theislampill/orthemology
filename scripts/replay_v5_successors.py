@@ -1511,6 +1511,7 @@ def permitted : Array Name := #[`propext, `Classical.choice, `Quot.sound]
 def audit (root : Name) : CommandElabM (Nat × Array Name) := do
   let env ← getEnv
   let mut todo := [root]
+  let mut scheduled : NameSet := ({} : NameSet).insert root
   let mut seen : NameSet := {}
   let mut axes : Array Name := #[]
   let mut count := 0
@@ -1527,13 +1528,17 @@ def audit (root : Name) : CommandElabM (Nat × Array Name) := do
         if info.isAxiom then
           unless permitted.contains n do throwError "UNAPPROVED_AXIOM {n}"
           axes := axes.push n
-        todo := info.type.getUsedConstants.toList ++ todo
-        if let some value := info.value? true then todo := value.getUsedConstants.toList ++ todo
+        let mut dependencies := info.type.getUsedConstants.toList
+        if let some value := info.value? true then dependencies := value.getUsedConstants.toList ++ dependencies
         match info with
-        | .inductInfo value => todo := value.ctors ++ todo
+        | .inductInfo value => dependencies := value.ctors ++ dependencies
         | .recInfo value =>
-          for rule in value.rules do todo := rule.rhs.getUsedConstants.toList ++ todo
+          for rule in value.rules do dependencies := rule.rhs.getUsedConstants.toList ++ dependencies
         | _ => pure ()
+        for dependency in dependencies do
+          unless scheduled.contains dependency do
+            scheduled := scheduled.insert dependency
+            todo := dependency :: todo
   unless todo.isEmpty do throwError "INCOMPLETE_PROOF_CLOSURE"
   return (count, axes)
 end V5SuccessorCheckedAudit

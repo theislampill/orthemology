@@ -862,6 +862,39 @@ class SuccessorReplayTests(unittest.TestCase):
             with self.assertRaises(ValueError): self.r.read_json(path)
 
     @unittest.skipUnless(os.environ.get('V5_REPLAY_TEST_LEAN'), 'Explicit official Lean test binding required')
+    def test_official_lean_shared_dependency_graph_uses_unique_declaration_budget(self):
+        # Forty declarations share an increasingly dense predecessor graph.
+        # Its distinct closure fits 128 visits, while repeated edges do not.
+        declarations = ['namespace SharedFixture', 'theorem leaf : True := True.intro',
+                        'def choose (left : True) (_right : True) : True := left']
+        for index in range(40):
+            value = 'leaf'
+            for predecessor in range(index):
+                value = f'choose node{predecessor} ({value})'
+            declarations.append(f'theorem node{index} : True := {value}')
+        declarations.append('end SharedFixture')
+        check = '''run_cmd do
+  let (count, _) ← V5SuccessorCheckedAudit.audit `SharedFixture.node39
+  unless count < 128 do throwError "Fixture distinct closure exceeds its test budget"
+  logInfo "SHARED_CLOSURE_CHECKED"
+'''
+        header = self.r._audit_source([])
+        for label, budget, extra, expected in [
+                ('shared', 128, '', 'SHARED_CLOSURE_CHECKED'),
+                ('bounded', 2, '', 'INCOMPLETE_PROOF_CLOSURE'),
+                ('forged', 128, 'axiom forged : True\n', 'UNAPPROVED_AXIOM')]:
+            body = '\n'.join(declarations)
+            if extra: body = extra + body.replace('theorem leaf : True := True.intro', 'theorem leaf : True := forged')
+            source = self.base / (label + '.lean')
+            source.write_text(header.replace('[:1000000]', f'[:{budget}]') + body + '\n' + check, encoding='utf8')
+            log = self.base / (label + '.log')
+            result = self.r.run_process([os.environ['V5_REPLAY_TEST_LEAN'], '-j1', source], self.base, dict(os.environ), log, 60)
+            text = log.read_text(encoding='utf8')
+            self.assertEqual(result['terminal'], 'COMPLETED', text)
+            self.assertEqual(result['exit_code'], 0 if label == 'shared' else 1, text)
+            self.assertIn(expected, text)
+
+    @unittest.skipUnless(os.environ.get('V5_REPLAY_TEST_LEAN'), 'Explicit official Lean test binding required')
     def test_official_lean_t14_audit_message_format(self):
         body = '''import Lean
 namespace P01AC
