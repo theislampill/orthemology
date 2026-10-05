@@ -1,0 +1,56 @@
+{
+  "record_type": "bibliographic and capture metadata; no source exposition or replicated source prose",
+  "sources": [
+    {
+      "id": "english_1920",
+      "title": "The “Summa Theologica” of St. Thomas Aquinas",
+      "part": "Part I, QQ. I–XXVI",
+      "catalogue_volume": "1",
+      "edition_statement": "Second and Revised Edition",
+      "translator_credit": "Fathers of the English Dominican Province",
+      "imprint": "London: Burns Oates & Washbourne Ltd.",
+      "title_page_year": 1920,
+      "catalogue_url": "https://oll.libertyfund.org/titles/province-the-summa-theologica-of-st-thomas-aquinas-part-i-qq-i-xxvi-vol-1",
+      "pdf_url": "https://oll-resources.s3.us-east-2.amazonaws.com/oll3/store/titles/1979/0961-01_Bk.pdf",
+      "pdf_bytes": 23746031,
+      "pdf_sha256": "4663fc270d3dbbcfc0a80d2dd14025dce8e484bd8f9c3fffbf97fd0adcd95aff",
+      "pdf_page_count": 412,
+      "one_based_title_page": 3,
+      "printed_target_page": 20,
+      "one_based_target_pdf_page": 66,
+      "zero_based_target_pdf_page_index": 65
+    },
+    {
+      "id": "latin_1888",
+      "title": "Sancti Thomae Aquinatis Doctoris Angelici Opera omnia iussu impensaque Leonis XIII P. M. edita",
+      "volume": "Tomus quartus",
+      "part": "Pars prima Summae Theologiae, quaestiones I–XLIX",
+      "imprint": "Romae: Ex Typographia Polyglotta S. C. de Propaganda Fide",
+      "title_page_year": 1888,
+      "catalogue_url": "https://archive.org/details/operaomniaiussui04thom",
+      "edition_bibliography_url": "https://www.corpusthomisticum.org/repedleo.html",
+      "contributor": "Robarts–University of Toronto",
+      "archive_identifier": "operaomniaiussui04thom",
+      "ark": "ark:/13960/t9g459k26",
+      "pdf_url": "https://archive.org/download/operaomniaiussui04thom/operaomniaiussui04thom.pdf",
+      "pdf_bytes": 50128370,
+      "pdf_sha256": "13c5497631563814f3573fe81b63f17470b5e06ff669a48607125951cbaf85ce",
+      "pdf_page_count": 532,
+      "one_based_title_page": 7,
+      "printed_target_page": 27,
+      "one_based_target_pdf_page": 45,
+      "zero_based_target_pdf_page_index": 44,
+      "apparatus_note": "μ",
+      "one_based_sigla_pdf_page": 18
+    },
+    {
+      "id": "archived_new_advent",
+      "title": "Summa Theologica, Prima Pars, Question 2",
+      "replay_url": "https://web.archive.org/web/20061213123742/http://www.newadvent.org:80/summa/1002.htm",
+      "wayback_capture_utc": "2006-12-13T12:37:42Z",
+      "replay_bytes": 42955,
+      "replay_sha256": "0a0e84211baf2961f52e226f4d221adc376b55a22e93aee4253e72e6fdd0f2e3",
+      "locator": "Article 1, Objection 3"
+    }
+  ]
+}

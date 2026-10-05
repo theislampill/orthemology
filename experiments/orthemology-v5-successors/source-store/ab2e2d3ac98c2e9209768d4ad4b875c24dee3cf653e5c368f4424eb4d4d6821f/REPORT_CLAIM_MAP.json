@@ -1,0 +1,2268 @@
+{
+  "schema": "tenth-report-public-claim-map-v1",
+  "report": {
+    "filename": "Orthemology_Tenth_Research_Report_v1_20261003.docx",
+    "sha256": "72d732325f48c720633f32be9b9fd76ef80a47369a3e1df69b08581acaa969fb",
+    "bytes": 64632
+  },
+  "distribution": "Report identity and claim/evidence mapping only; no full report prose or report copy",
+  "reviewed_source_identity": {
+    "sha256": "7456f9664506bed6415a5f8b7f0623014180287d033e2e5ff8d9d1d249236974",
+    "bytes": 68576,
+    "distribution": "authoring_source_not_in_public_archive"
+  },
+  "locator_rule": "Body blocks are zero-based in document.xml, excluding the terminal section properties; table counts as one block. The native DOCX is the separate reading deliverable.",
+  "evidence_keys": {
+    "B0": {
+      "title": "Accepted Ninth programme and original avenue map",
+      "evidence_kind": "inherited accepted report and identity receipt",
+      "claim_ceiling": "No claim of fresh replay of every predecessor; twelve-avenue and eighteen-milestone numbering stay distinct.",
+      "ownership": "Prior programme and accepted Ninth report",
+      "status": "inherited",
+      "sources": [
+        {
+          "source_filename": "REPORT_SOURCE.md",
+          "source_version": "final-candidate",
+          "sha256": "b28eb372ccaf87ead5ff0eb0ecb95c65c7583db0f81db3edc240914f016ea776",
+          "bytes": 69818,
+          "sections": "The original programme and the research boundary; The twelve avenues after this investigation",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        },
+        {
+          "source_filename": "Orthemology_Ninth_Research_Final_v1_20261003.docx",
+          "source_version": "delivery",
+          "sha256": "e375dfdf3bba5825dd26bc076740256c9e5e707835853230c7d84e8226839964",
+          "bytes": 63435,
+          "sections": "Accepted reading deliverable",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        },
+        {
+          "source_filename": "PUBLIC_START_RECEIPT.json",
+          "source_version": "verification",
+          "sha256": "a32d06b340d1224a9276b99a613c27cabe0eecaa711cfe020168d4fd0e44d7f7",
+          "bytes": 3425,
+          "sections": "Exact inherited delivery identities",
+          "status": "identity_only_not_redistributed"
+        }
+      ],
+      "acceptance": []
+    },
+    "B1": {
+      "title": "Inherited necessity integrity and rational warrant",
+      "evidence_kind": "accepted predecessor arguments and review",
+      "claim_ceiling": "Conditional source grants and positive prima-facie support do not establish all actual or essential conclusions; mere unproved exception is not a defeater.",
+      "ownership": "Sixth Seventh and Ninth; Tenth does not claim their positive source arguments or basic-warrant standard as new",
+      "status": "inherited",
+      "sources": [
+        {
+          "source_filename": "ARGUMENT.md",
+          "source_version": "Ninth_Necessity_Source_v2",
+          "sha256": "c27582d4685a50fe28dd17502e38dbacb3f84b61aca735f8c2f5f40e4020a1e5",
+          "bytes": 32250,
+          "sections": "Exact origin fact bridge; premise relocation; direct warrant",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        },
+        {
+          "source_filename": "SOURCE_INTEGRITY_WARRANT.md",
+          "source_version": "Ninth_Integrity_Warrant_v3_Review",
+          "sha256": "db13534ffd5446b81eb82353f6d5761701d77a3987f4c7dfd2ec390f8f84ccdc",
+          "bytes": 16669,
+          "sections": "Relational exercise; Complete-profile local dominance; Remaining warrant",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        },
+        {
+          "source_filename": "LOGICAL_APPENDIX.md",
+          "source_version": "Ninth_Integrity_Warrant_v3_Review",
+          "sha256": "f6c2e9326b71333e27c1156667a95c62a9b18e587740ccdda8461959f6478967",
+          "bytes": 12270,
+          "sections": "R_G R_P N; same-bearer scope",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        },
+        {
+          "source_filename": "PREMISE_UNION_AND_TARGET_LEDGER.md",
+          "source_version": "Ninth_Integrated_Rival_Public_Source_v3",
+          "sha256": "cb3f00678575bf5f5e7d5a2bca329ccfc02fe130d452585f3e36610c70254804",
+          "bytes": 15974,
+          "sections": "P1 P2 N2 N3 PT T0 D1 D2 R5",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        },
+        {
+          "source_filename": "ASSESSMENT.md",
+          "source_version": "warrant-standard",
+          "sha256": "b272c08cba5e24245f2f1d295b1aeaba1f321e843ffd0a9d0eeea5b6e52d757c",
+          "bytes": 22264,
+          "sections": "Sections 2 3 5 6",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        }
+      ],
+      "acceptance": [
+        {
+          "source_filename": "PUBLIC_ACCEPTANCE.md",
+          "source_version": "Ninth_Necessity_v2_Independent_Acceptance",
+          "sha256": "d6b4ce180daa9746755633193e914843aada3e5c0dc507cc802287f7dc33cb4e",
+          "bytes": 6162,
+          "sections": "Whole accepted scope",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        },
+        {
+          "source_filename": "PUBLIC_ACCEPTANCE.md",
+          "source_version": "Ninth_Integrity_Warrant_v3_Independent_Acceptance",
+          "sha256": "a9f1e7565232c07b60dbb31449e5410ad4f75931c29a51ce319230cbea026f3b",
+          "bytes": 3230,
+          "sections": "Whole accepted scope",
+          "status": "identity_only_not_redistributed",
+          "predecessor_identity_index": "NINTH_IDENTITIES.json"
+        }
+      ]
+    },
+    "E1": {
+      "title": "Existential supply and non-well-founded explanation",
+      "evidence_kind": "ordinary mathematics and bounded philosophical assessment",
+      "claim_ceiling": "Null-admitting full represented constraint result is not empty-world possibility or exclusion of every actual E explanation.",
+      "ownership": "Ninth same-E and joint-scope; elementary mathematics; targeted Tenth law-only application",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/existential-explanation/freeze-v1/EXISTENTIAL_EXPLANATION_PAPER.md",
+          "sha256": "862647d884a5fd610a81379dddca917ba9eacae41267e85b12450e77e81170fc",
+          "bytes": 27758,
+          "sections": "Sections 1 3–9",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/existential-explanation/freeze-v1/CLAIM_AND_PREMISE_LEDGER.md",
+          "sha256": "c94139741b684150d53afd497e1eadd0c0266d21aae8ae78f20ff697b4749718",
+          "bytes": 10037,
+          "sections": "EE10-1–7 and L/A/C premises",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/existential-explanation/freeze-v1/SOURCE_LOCATORS.md",
+          "sha256": "b27f0e00a534f42c8746f6305f54a2c723cf526f62eedbe889a22cd596d9be30",
+          "bytes": 6422,
+          "sections": "OBERLE_2024; BILLON_2023_RECIPE",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/existential-completion/REVISION_ACCEPTANCE.md",
+          "sha256": "aa5e85d45661b8ad133b31d8321c7491f41404b65fc15e2df28c66764e7ea8fe",
+          "bytes": 2256,
+          "sections": "Current scope and mathematical-correction separation",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "E2": {
+      "title": "Kind priority and existential nonemptiness",
+      "evidence_kind": "bounded rational judgement and inference assessment",
+      "claim_ceiling": "Fixed actual Q; local availability norm does not establish same-E transfer, joint exclusion, actual necessary participant or every-contributor necessity.",
+      "ownership": "Prior source route and Ninth; Tenth reduced target common-basis test and local supply assessment",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/existential-explanation/kind-priority-freeze-v1/KIND_PRIORITY_PAPER.md",
+          "sha256": "364049cd984b87375073d7f6c9217bb35e25a0651c8e6eada52f4b514b5ec770",
+          "bytes": 21115,
+          "sections": "Sections 2–8",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/existential-explanation/kind-priority-freeze-v1/SOURCE_AND_CLAIM_LEDGER.md",
+          "sha256": "1a51b281ec396994c61df273d9df0fb98834b865eef362263a109ea24f2b4c5e",
+          "bytes": 11155,
+          "sections": "KP10-1–7; A C K M T P W J",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/kind-priority/ACCEPTANCE.md",
+          "sha256": "56d3b61c9749fdffacecdd3026e4f4b25de10ab7207ec85510b36fb95469dad0",
+          "bytes": 2974,
+          "sections": "Exact accepted conclusions",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/kind-priority/ACCEPTANCE_RECEIPT.json",
+          "sha256": "4638c549c8ae5c758434c813a9626d8ae0c93ecea9d189f09a56c939acb85871",
+          "bytes": 2040,
+          "sections": "Byte binding",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "E3": {
+      "title": "Warrant for explaining existential availability",
+      "evidence_kind": "bounded philosophical argument and conditional modal analysis",
+      "claim_ceiling": "Prima-facie answerability and valid q_A conditional do not yield actual transfer or source existence.",
+      "ownership": "Ninth F1 qualified-fact contradiction and inherited original-possession reason; targeted Tenth extension",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/existential-explanation/transfer-warrant/freeze-v1/TRANSFER_WARRANT_PAPER.md",
+          "sha256": "3440e70623c3495870aa70ef3753c4885bf34216f9e547b67a12096ec2a771a5",
+          "bytes": 33150,
+          "sections": "Sections 1–8",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/existential-explanation/transfer-warrant/freeze-v1/CLAIM_AND_PREMISE_LEDGER.md",
+          "sha256": "bfbe3a9b6bfe348d0a099714619cead90c867a7b0ee19efa82e9c69da0b25b5c",
+          "bytes": 9779,
+          "sections": "TW10 claims",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/existential-explanation/transfer-warrant/freeze-v1/SOURCE_LOCATORS.md",
+          "sha256": "d871a589364039ed4941efba99dfd2b53ccc9bfb2c546b526154c82b628120a0",
+          "bytes": 3803,
+          "sections": "Primary identity and exact locators",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/research/existential-explanation/transfer-warrant/freeze-v1/review/REVIEW_BINDING.json",
+          "sha256": "36fecbac023dba84fb32ad6327434436b292c865dd79c447cf18c810a3c4b748",
+          "bytes": 1788,
+          "sections": "Accepted-at-stated-bounded-philosophical-scope",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/existential-explanation/transfer-warrant/freeze-v1/review/INDEPENDENT_REVIEW_v1.md",
+          "sha256": "090de82a7c61c7538d355d6c3a3ac429b58c571661e157398ba9a8bdbc0cbf22",
+          "bytes": 12254,
+          "sections": "Substantive rationale and limits",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "E4": {
+      "title": "Actual powers alternative prehistory and essential grounding",
+      "evidence_kind": "independently accepted source-level philosophical assessment",
+      "claim_ceiling": "Positive local finite resource-complete generation and occurrence retention; conditional richer intrinsic-ground credit; no POS-S universal historical transport exhaustive-removal concrete-ground-type or actual necessary-particular result.",
+      "ownership": "Ninth qualified-achievement method and prior primary acquisition; Tenth kind transfer and joint route retain their ownership; this is new source-level warrant scrutiny",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/actual-powers-source-level-study/candidate-v1/ACTUAL_POWERS_AND_HISTORY.md",
+          "sha256": "72babb9ad740dfdaf4446cd435d8a0e6eeddfc7566b5a9f1189d070f60033705",
+          "bytes": 25428,
+          "sections": "Sections 2–7; AP10-1–6",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/actual-powers-source-level-study/candidate-v1/CLAIM_AND_PREMISE_LEDGER.md",
+          "sha256": "656bf644efff53ba7d67c16c180a5d712e07f735f395a686c206e1a4f90fceca",
+          "bytes": 7810,
+          "sections": "AP10-1–6 and terminal scope",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/actual-powers-source-level-study/candidate-v1/SOURCE_LOCATORS.md",
+          "sha256": "c963dc4af5ccc39cbf92c18406503799ae3a630a7ecf7dd2e11de96cd2d99704",
+          "bytes": 2629,
+          "sections": "Exact published witness and H loci",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/actual-powers-source-level-study/candidate-v1/MANIFEST.sha256",
+          "sha256": "17c48b65f5e23c30488783ca53df69c433704b9503025b6e98a966880515825f",
+          "bytes": 611,
+          "sections": "Seven-file author identity",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/actual-powers-theory/ACCEPTANCE_v1.md",
+          "sha256": "6d1289c04a1e351f05d93f49822ee850d513f0c256b8eb151481b900e2636249",
+          "bytes": 10631,
+          "sections": "Exact positive bounded acceptance",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/actual-powers-theory/ACCEPTED_INPUTS_v1.sha256",
+          "sha256": "127e7a4bd4b89bc9009e103ed767a9809eaae3d195b883c617f6775795c335e1",
+          "bytes": 1213,
+          "sections": "Exact accepted input binding",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/actual-powers-theory/VERIFICATION_v1.json",
+          "sha256": "8b61a68aac99e20015d9bede407dab173614ac1c7375719749d885279c84bcfe",
+          "bytes": 5954,
+          "sections": "Independent verification",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/actual-powers-theory/REVIEW_MANIFEST_v1.sha256",
+          "sha256": "435d857215f9bdae83e36813bb3a288d04915fa3385aef4e5ee4e02b7faf89a4",
+          "bytes": 542,
+          "sections": "Six public review members",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "J1": {
+      "title": "Joint existential coverage",
+      "evidence_kind": "accepted philosophical contribution and inference controls",
+      "claim_ceiling": "no certified rootless cosmos or global E_A exclusion.",
+      "ownership": "Generic agglomeration/parity objections preserve primary-source ownership; fixed-route application distinct from upstream completion",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/joint-existential-coverage/candidate-v2/JOINT_EXISTENTIAL_COVERAGE.md",
+          "sha256": "38c7069030f02d68a0e8d4c03d0d06c93634f6bbe1a797a9d8660aacafabc14e",
+          "bytes": 20329,
+          "sections": "Sections 3–8",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/joint-existential-coverage/candidate-v2/CLAIM_AND_PREMISE_LEDGER.md",
+          "sha256": "42588a35fb8bc1fd2ea442e5d4327f06ebbe3668fba9db11fabfb60ac8300cfd",
+          "bytes": 10465,
+          "sections": "JC10 claims",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/joint-existential-coverage/candidate-v2/SOURCE_LOCATORS.md",
+          "sha256": "eab9187ef61ab3f17432aaf15eaeba142d5ddc3d08abfa4fd0cdfcf5136cd9a0",
+          "bytes": 5293,
+          "sections": "K7 O25 OP-D E21",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/joint-existential-coverage/ACCEPTANCE_v2.md",
+          "sha256": "3283a5954c5aca18e2ce627c3e3cf619bcd34ef637f50bbd920ba59cf5c1e60e",
+          "bytes": 11991,
+          "sections": "Exact v2 bounded acceptance",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/joint-existential-coverage/REVISION_VERIFICATION_v2.json",
+          "sha256": "c69de56b84df60b055445ef8fe9d2a16ab7b2dac22437380e664c38590d943d9",
+          "bytes": 4686,
+          "sections": "Exact input and revision checks",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "J2": {
+      "title": "Ancestry-qualified actual-power route",
+      "evidence_kind": "accepted typed conditional inference",
+      "claim_ceiling": "Possible S plus complete RP and domain-matched coverage needed; resource is not power bearer without supplied type condition; no actual exercise or new necessary particular. Both RP5 alternatives retain relevant actual availability and, if selected actual x is F, its relevant actual F-instantiation at that occurrence or a positively relevant earlier support stage. A later non-F occurrence cannot screen off relevant earlier F availability. Actual identity or base membership alone does not establish retention.",
+      "ownership": "Ninth qualified-achievement proof pattern; Tenth target relevance classification transport and resource-domain controls",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/joint-existential-coverage/candidate-v2/ACTUAL_POWER_ROUTE.md",
+          "sha256": "5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7",
+          "bytes": 18749,
+          "sections": "Sections 1–7",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/joint-existential-coverage/retention-clarification-v2/RP5_RETENTION_CLARIFICATION.md",
+          "sha256": "ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e",
+          "bytes": 3442,
+          "sections": "Both-branch actual-occurrence and F-instantiation retention, including already-actual background s; scope and clarified requirement.",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/joint-existential-coverage/ACCEPTANCE_v2.md",
+          "sha256": "3283a5954c5aca18e2ce627c3e3cf619bcd34ef637f50bbd920ba59cf5c1e60e",
+          "bytes": 11991,
+          "sections": "Two typed conditional consequences",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/joint-existential-coverage/GLOBAL_EXCLUSION_SEPARATION_ADDENDUM.md",
+          "sha256": "35364d4c5eef555d11ad4d98da81bb132ed866c5731ab6608fa7805cad4e4f19",
+          "bytes": 891,
+          "sections": "Separate whole-history adequacy question",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/joint-existential-coverage/retention-clarification-review-v1/ACCEPTANCE.md",
+          "sha256": "6b1e03be3d7b9111acfc000f87300f75c1e5537236d2f9d64115312c440ee034",
+          "bytes": 7431,
+          "sections": "Controlling v2 retention clarification; unchanged two-tier conditional and remaining warrant limits.",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/report-substantive/RP5_REPORT_INTEGRATION_ACCEPTANCE_v2.md",
+          "sha256": "c6535660b2fdc0f7fbb20accc7781da4f8731d15173738cb57311179ed8b02a6",
+          "bytes": 4726,
+          "sections": "Exact report disposition; unchanged report source, native document and all 115 claim placements.",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "PR1": {
+      "title": "Original governance and due care",
+      "evidence_kind": "conditional defended normative principle",
+      "claim_ceiling": "Active organisation legitimate bounded reliance control and balance required; no strict liability guaranteed outcome jurisdiction predicted compliance or essential integrity.",
+      "ownership": "Sixth recipient-good and Seventh assurance rationale; Tenth antecedent persisting care and release application",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/practical-authority/research-v3/ORIGINAL_GOVERNANCE_AND_RELIANCE.md",
+          "sha256": "5b7a727360f14084796c836d3e6131379873ba10c0d70660fe61382dee3b0c6f",
+          "bytes": 34773,
+          "sections": "Sections 2–5 8–9",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/practical-authority/research-v3/CLAIM_AND_PREMISE_LEDGER.md",
+          "sha256": "6b1f78e24a5f0fcbd23172d65cd536b334c5a445f345664d0a2e3c1eaf4231af",
+          "bytes": 9322,
+          "sections": "P0 P2–P9; C1–C8",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/practical-authority/research-v3/SOURCE_MAP.md",
+          "sha256": "db7627b10f3a44abce373e2ccbb12ab49b3af79404d5ea8dbdb3293e046e3616",
+          "bytes": 5772,
+          "sections": "Primary source identities",
+          "status": "selected_public_evidence",
+          "historical_original": {
+            "sha256": "a58a5df2759fb9dfab273cefff70d12b097989d31ace465d1a96066e38ac699a",
+            "bytes": 5770,
+            "source_filename": "SOURCE_MAP.md",
+            "status": "identity_only_not_redistributed"
+          },
+          "representation": "bound_public_metadata_projection",
+          "projection_binding": {
+            "archive_member": "tranche10/reviews/cross-component/public-projection-v9/PROJECTION_BINDING.json",
+            "sha256": "8eaa7651d27bbbe812e9ebf9fe3a6e8a61ce167db3f588be9bbf274abc273924",
+            "bytes": 14225
+          }
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/organised-reliance/FINAL_DISPOSITION_v3.md",
+          "sha256": "1f7a799e53f6adfe131d0b0ae6590c98b0905282808c2adf521b0aabc44ae4d0",
+          "bytes": 3066,
+          "sections": "Final accepted scope",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "G1": {
+      "title": "Care coordination and limits of authority",
+      "evidence_kind": "bounded normative application and alternatives control",
+      "claim_ceiling": "Fair formation actual interdependence warranted access and balance required; no general command authority. Selection-time wrong can coexist with later third-party reasons.",
+      "ownership": "Organised care owns G planning responsibility; enacted arrangement grounds R reason; new application-level bridge and limit",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/governance-authority-bridge/research-v2/CARE_COORDINATION_AND_AUTHORITY.md",
+          "sha256": "4a469a17838d4de3628d6b32c357e6c660f91e5f03906eb171703c41fb1b8ba6",
+          "bytes": 31095,
+          "sections": "Sections 2–6 8–9",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/governance-authority-bridge/research-v2/PREMISE_AND_NOVELTY_LEDGER.md",
+          "sha256": "4c0f6b17e2a7fae25ba9330a5112add9e1ddbfee0cc8d413766a624425928369",
+          "bytes": 10366,
+          "sections": "C1–C4 N1–N2 L1–L2 R1–R6a",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/governance-authority-bridge/ACCEPTANCE_v2.md",
+          "sha256": "7de21865096e6390da71fc3590ac92c4836476429ac0a167c7f573af57e0e181",
+          "bytes": 6654,
+          "sections": "Exact v2 acceptance",
+          "status": "selected_public_evidence",
+          "historical_original": {
+            "sha256": "81be5befa9d5461d66173b87871765afb2462372a649434764c67571c329dd43",
+            "bytes": 6659,
+            "source_filename": "ACCEPTANCE_v2.md",
+            "status": "identity_only_not_redistributed"
+          },
+          "representation": "bound_public_metadata_projection",
+          "projection_binding": {
+            "archive_member": "tranche10/reviews/cross-component/public-projection-v9/PROJECTION_BINDING.json",
+            "sha256": "8eaa7651d27bbbe812e9ebf9fe3a6e8a61ce167db3f588be9bbf274abc273924",
+            "bytes": 14225
+          }
+        },
+        {
+          "archive_member": "tranche10/reviews/governance-authority-bridge/VERIFICATION_RECEIPT.json",
+          "sha256": "219706030f4342a646b860d9777c209f15a50f07242603745ea0a4d8af564b74",
+          "bytes": 1220,
+          "sections": "Input checks",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "PR2": {
+      "title": "Original practical perfection and eligible repair",
+      "evidence_kind": "accepted positive-warrant assessment and repair application",
+      "claim_ceiling": "no newly established actual or essential N, R_G/R_P, source identification or defective-source possibility; positive inherited N support retained.",
+      "ownership": "Sixth Seventh original giving/integration; Ninth complete-profile repair and warrant standard; new two-loss comparison application",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/practical-perfection-warrant/research-v2/ORIGINAL_PRACTICAL_PERFECTION.md",
+          "sha256": "2fbc076a5699cd2b459626d213c77b1a5ac561d0e58187812159679e60db8cfc",
+          "bytes": 35367,
+          "sections": "Sections 3–8",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/practical-perfection-warrant/research-v2/PREMISE_AND_NOVELTY_LEDGER.md",
+          "sha256": "ec799eb91d310ac6344c4c5fd6e7b11a59c2cd1e8c6a114f53d0b91ebdeb0aca",
+          "bytes": 6158,
+          "sections": "Affirmative warrant; bounded comparison; conditions; ownership",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/practical-perfection-warrant/INDEPENDENT_REVIEW.md",
+          "sha256": "c94ed9168e136824eaaedefc1b6591d2be1652fc52da4d44cd9b43c43e729b68",
+          "bytes": 20359,
+          "sections": "Exact bounded acceptance and positive N calibration",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/practical-perfection-warrant/REVIEW_RECEIPT.json",
+          "sha256": "550ba7413ce164d0d4f1e537f546b14910869764e1e1732d94dca7a836e02083",
+          "bytes": 2620,
+          "sections": "Review and source binding",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "C1": {
+      "title": "Open-context continuation and source-ordered reacquisition",
+      "evidence_kind": "ordinary proof and bounded independently executed Python model controls",
+      "claim_ceiling": "All-positive star full-response locality fixed bindings complete total decision adequate disclosure and real access required; no natural-language correctness source authentication general identity theorem or copying-induced hardness.",
+      "ownership": "Conventional parser/effect/cover methods; Deep CN/SPA-R10 exact static cover; H-MOAT next capacity; P15 binding; Sixth copied-support conservation",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/occurrence-continuation/release-candidate-v1/ARTICLE.md",
+          "sha256": "221a50045570edb56a62012eff862df258f9af0ae51d74d116ff224e5c5498e7",
+          "bytes": 22309,
+          "sections": "Sections 1–8",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/occurrence-continuation/release-candidate-v1/EXACT_EFFECT_ALGEBRA.md",
+          "sha256": "b824c43b4f4fad672bb96e930241787b8d07d36a69d49f20ea9d85d2d51b43d2",
+          "bytes": 4428,
+          "sections": "Normal form; composition; keyed exits",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/occurrence-continuation/release-candidate-v1/ORACLE_AND_FORCE_PRECISIONS.md",
+          "sha256": "a282ebf891d26ca2e55fc93bdb73fa3159f60a6388545b930076c17fd73c7571",
+          "bytes": 11935,
+          "sections": "Sections 1–7",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/occurrence-checker/INDEPENDENT_REVIEW_v1.md",
+          "sha256": "1dff5f73b342b3685837468887215898a1754786cf22127497587c99c3622fb5",
+          "bytes": 9066,
+          "sections": "Accepted scope",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/occurrence-checker/FINAL_EXECUTION_RECORD.json",
+          "sha256": "0748d78e938b178963f833decf2cafba3584b4262c534b6083168d59a0a1b3d6",
+          "bytes": 6964,
+          "sections": "Exact checked groups",
+          "status": "selected_public_evidence",
+          "representation": "bound_public_metadata_projection",
+          "historical_original": {
+            "sha256": "3be0200bee7074c690a73f9d42c4c5adf08b1d849f14692c620e5dc55dddde75",
+            "bytes": 6981,
+            "source_filename": "FINAL_EXECUTION_RECORD.json",
+            "status": "identity_only_not_redistributed"
+          },
+          "projection_binding": {
+            "archive_member": "tranche10/reviews/cross-component/public-projection-v4/PROJECTION_BINDING.json",
+            "sha256": "872045b1a1cd0c3596b2fd2b7faf002e77b2b5547b8e00920ca5103182988960",
+            "bytes": 8760
+          }
+        },
+        {
+          "archive_member": "tranche10/reviews/occurrence-checker/FINAL_CANDIDATE_RECONCILIATION.json",
+          "sha256": "29ed3d1e8cbf757c18dc1ac08cc2b243fd05ad4bb7ebac1f10206ae1966b69b3",
+          "bytes": 1124,
+          "sections": "Final source binding",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "C2": {
+      "title": "Bounded release for a source attribution task",
+      "evidence_kind": "conditional cross-programme decision and finite model controls",
+      "claim_ceiling": "Fixed policy selector; endpoint vs middle at one-request budget; no actual retirement unique mandated format new hardness or duty from cost alone.",
+      "ownership": "PR1 duty plus C1 interface; Ninth general next-task evidence and access principles",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/practical-authority/cross-application-v1/BOUNDED_RELEASE_DECISION.md",
+          "sha256": "a25c4464f85c4b9a8f920b2e208e35164cf821ef69f352d341b4c86046b434a4",
+          "bytes": 18258,
+          "sections": "Sections 1–6",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/practical-authority/cross-application-v1/PREMISE_AND_ALTERNATIVE_LEDGER.md",
+          "sha256": "68d885c2cec1f9551dc9899bac224c17ddb3ebd0f9e2858b7989fea19c12c9dc",
+          "bytes": 8423,
+          "sections": "N1–N5 O1–O8 J1–J5; controls 1–17",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/bounded-release-application/INDEPENDENT_REVIEW_v1.md",
+          "sha256": "61deeb33635687c7206fe0b70bf0160d4ed42ad72200f42ef7214bcc2ecb839c",
+          "bytes": 7843,
+          "sections": "Exact scope",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/bounded-release-application/FINAL_VERIFICATION.json",
+          "sha256": "8bd39a07b3b62269f0891a2cff58844f298689dfc05915f186422e3281911c5e",
+          "bytes": 2763,
+          "sections": "Finite execution binding",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "M1": {
+      "title": "Uniform infinite-completion correction",
+      "evidence_kind": "ordinary proofs with selected independent Lean implementation verification",
+      "claim_ceiling": "Compactness continuity nonempty carrier retained; Control C contraction and eventual compactness not mechanised; declared domain not metaphysical actuality.",
+      "ownership": "Standard mathematics; ordinary-derivation author independently reviewed implementation not independent discovery",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/reviews/existential-completion/INVERSE_LIMIT_AND_CONVERGENCE_CORRECTION.md",
+          "sha256": "9ef042d82a12e7aadb8219e41741a21297172dcef72bea3102916eef84f960ad",
+          "bytes": 17237,
+          "sections": "Sections 1–8",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/law-completion-correction/CHECKED_SCOPE.md",
+          "sha256": "9b3a728681a2a4f46db0bd1a8c9cf9de5f2c885ab4ab8b6eb6b68b4ffb4d5f62",
+          "bytes": 6965,
+          "sections": "Checked general algebra controls A/B compact continuous repair; ordinary-only frontier",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/existential-completion/formal-review-20261003T1229Z/INDEPENDENT_FORMAL_REVIEW.md",
+          "sha256": "a8b92f471092ab492f9e608f1e9cd1f4619134d65fcfb71434191c0d10f3d3e4",
+          "bytes": 6115,
+          "sections": "Exact implementation/interface acceptance",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/existential-completion/formal-review-20261003T1229Z/REVIEW_VALIDATION.json",
+          "sha256": "4db5b0b7376ded52142aea83d3fb686c45a3a4440c64d5b2cda85be42cf999b0",
+          "bytes": 4123,
+          "sections": "Rebuild and axiom scope",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "M2": {
+      "title": "Nonuniform compact completion",
+      "evidence_kind": "independently rebuilt dependent-family Lean interfaces",
+      "claim_ceiling": "Varying nonempty compact Hausdorff or metric spaces; fixed horizon before threshold stage; no uniform all-starting-time bound or effective numerical rate.",
+      "ownership": "Standard inverse-limit mathematics at precise new project interface; derivative design review relationship disclosed",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/law-completion-correction/nonuniform/CHECKED_SCOPE.md",
+          "sha256": "10e2a4de40dd7a6a2c3fe1e7bc86683fc85f10d0ac236520ce37b7441fbedee0",
+          "bytes": 7518,
+          "sections": "Projection all-coordinate uniqueness fixed-coordinate diameter fixed-finite-horizon equivalences; frontier",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/existential-completion/nonuniform-formal-review-20261003T1259Z/INDEPENDENT_NONUNIFORM_ACCEPTANCE.md",
+          "sha256": "4c9e8a08260d26b8b1821c190c715518d0b763ee1327d396aefd2bbe903dc87a",
+          "bytes": 8472,
+          "sections": "Exact acceptance",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/existential-completion/nonuniform-formal-review-20261003T1259Z/REVIEW_VALIDATION.json",
+          "sha256": "5e384206a6f53aed90aad9a90ff51bda66a7cfc6e54540d43ddae46fe8c23c81",
+          "bytes": 5129,
+          "sections": "Rebuild and readbacks",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "F1": {
+      "title": "From compact completion to finite recipient warrant",
+      "evidence_kind": "independently accepted ordinary mathematical addendum",
+      "claim_ceiling": "Ambient-open query and effective representation distinct; global individual equality proofs allowed; no uniformly complete c.e. zero verifier across admitted family; no new code.",
+      "ownership": "P02 C2-01–07 particularly C2-06 rational shift and Q8; historical V5; Ninth finite-rational certificates",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/reviews/finite-limit-certificates/MINIMAL_ADDENDUM.md",
+          "sha256": "94a47f2ed5926fcef2e178544640eb7f713af3d33b49dd55d0a45445c8769320",
+          "bytes": 6129,
+          "sections": "Sections 1–4 and ownership",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/finite-limit-certificates/MATHEMATICAL_CONTROLS.md",
+          "sha256": "2f9f3b008b1afeac4ef9e3786835e811c95a9ad84d96c30c90dcda93f7b50b53",
+          "bytes": 14102,
+          "sections": "P02 grammar admission and exact expected controls",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/finite-limit-certificates/REVIEW.md",
+          "sha256": "efb057ac25c9abdb28da8208830f102f18fe225146325a507231605345515747",
+          "bytes": 16505,
+          "sections": "R1–R4; mathematical audit A–F; endpoint",
+          "status": "selected_public_evidence"
+        },
+        {
+          "source_filename": "SOURCE_ACCOUNTING.md",
+          "source_version": "finite-limit-warrants",
+          "sha256": "49983608f0010f8cd2251f60871d17868e8818241a563c9dd798bf4333f08a2c",
+          "bytes": 4697,
+          "sections": "PAULY16 BDP12 bibliographic metadata only; capsules not redistributed",
+          "status": "identity_only_not_redistributed"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/finite-limit-certificates/REVIEW_RECEIPT.json",
+          "sha256": "e84f15943737e2a8e9abd5a3fa218498a8ffae1e11880bc63a98e71fa931a25b",
+          "bytes": 2471,
+          "sections": "Accepted ordinary scope",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "S1": {
+      "title": "Printed source collation",
+      "evidence_kind": "bounded witness-relative source inspection",
+      "claim_ceiling": "No translators actual Latin base culpability equal endorsement whole-edition assurance or general preservation conclusion.",
+      "ownership": "New print comparison supersedes only prior unperformed-inspection limit",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/research/printed-source-collation/public/COLLATION_ADDENDUM.md",
+          "sha256": "cb9aa16dc764ad0aa193ca464e2335a8474b782084a573ab1ede1420eda228ff",
+          "bytes": 659,
+          "sections": "Sole bounded finding",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/research/printed-source-collation/public/SOURCE_IDENTITIES.json",
+          "sha256": "6e963f40255715052c776b40a8ec48240433969ca4bc566a09da4313ef5f83d8",
+          "bytes": 2624,
+          "sections": "English1920 Latin1888 archived NewAdvent metadata",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": [
+        {
+          "archive_member": "tranche10/reviews/printed-source-collation/public/REVIEW_RECEIPT.md",
+          "sha256": "05f00f5678a39cc0e608b3ded1184321a2a42112150b7c1841a9a345ad701fbf",
+          "bytes": 986,
+          "sections": "Independent public scope",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "tranche10/reviews/printed-source-collation/public/ACCEPTANCE.json",
+          "sha256": "9b7bc71bcdc7497efd5a0d11ddbb7d5ae4f3134e2c58f687d20f5dab375e52f0",
+          "bytes": 2060,
+          "sections": "Witness hashes and acceptance",
+          "status": "selected_public_evidence"
+        }
+      ]
+    },
+    "S2": {
+      "title": "Explanatory source version verification",
+      "evidence_kind": "bounded bibliographic and custody check",
+      "claim_ceiling": "Proof-marked publisher-hosted witness; finality unresolved; no located correction is not absence proof; no unacquired PDF hash.",
+      "ownership": "Version-specific inspection separate from mathematical application",
+      "status": "accepted",
+      "sources": [
+        {
+          "archive_member": "tranche10/reviews/explanation-source-version/VERIFICATION_NOTE.md",
+          "sha256": "cdff07e133a38347c1a0f5b31787af914c50f3023e6690a42a356ec97ab4e74e",
+          "bytes": 4831,
+          "sections": "Disposition records bounded checks and access limitations",
+          "status": "selected_public_evidence"
+        }
+      ],
+      "acceptance": []
+    },
+    "V1": {
+      "title": "Public evidence and reproducibility",
+      "evidence_kind": "selected component acceptance integrity provenance and replay prerequisites",
+      "claim_ceiling": "No final archive acceptance; public supplied-model replay distinct from historical private-source wrapper; no hermetic Lean/runtime bootstrap or source authentication by hashes.",
+      "ownership": "Component scope and historical receipts retained without count aggregation",
+      "status": "manifest_governed_public_record",
+      "sources": [
+        {
+          "archive_index": "COMPONENT_ACCEPTANCE.json",
+          "sections": "Current selected accepted components and pending exclusions",
+          "integrity_authority": "Final archive selection manifest; index not recursively hashed in this claim map"
+        },
+        {
+          "archive_member": "REPRODUCIBILITY.md",
+          "sha256": "e203c1b497da4db352d8d26fb17d835d7c89104ca8b5382da7c2c70ade9053e4",
+          "bytes": 6918,
+          "sections": "Sections 1–4",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_member": "TOOLCHAIN_REQUIREMENTS.json",
+          "sha256": "a774b663b6f6c6dfe81f7b6272cc57b8059a5bbfc7428ca4d0c41e0ba0fd88f2",
+          "bytes": 1930,
+          "sections": "Pinned trusted external environment",
+          "status": "selected_public_evidence"
+        },
+        {
+          "archive_index": "PROVENANCE_MAP.json",
+          "sections": "Selected historical and current-byte identities",
+          "integrity_authority": "Final archive selection manifest; index not recursively hashed in this claim map"
+        }
+      ],
+      "acceptance": []
+    }
+  },
+  "claims": [
+    {
+      "id": "T10-R001",
+      "section": "What the Tenth research changes",
+      "docx_body_block_index_zero_based": 4,
+      "source_block_sha256": "c40eabda51163a73c5362915a71a6012185cd2e5de80e210d821de06c02663c2",
+      "evidence_keys": [
+        "E1",
+        "E2",
+        "E3",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R002",
+      "section": "What the Tenth research changes",
+      "docx_body_block_index_zero_based": 5,
+      "source_block_sha256": "2a1e979b237f8f844acb084d678baf74547f2c4b09991f0b5d74e9f737c59b1d",
+      "evidence_keys": [
+        "PR1",
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R003",
+      "section": "What the Tenth research changes",
+      "docx_body_block_index_zero_based": 6,
+      "source_block_sha256": "86d4cd86fd3702b577f3f10994c2cccc6d35b9dff34a2db1e9736f0e36f22035",
+      "evidence_keys": [
+        "C1",
+        "C2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R004",
+      "section": "What the Tenth research changes",
+      "docx_body_block_index_zero_based": 7,
+      "source_block_sha256": "c80e348e5ec4ce2a856d484f27e808cd9077724aca15994a948a42b1404b77c8",
+      "evidence_keys": [
+        "M1",
+        "M2",
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R005",
+      "section": "What the Tenth research changes",
+      "docx_body_block_index_zero_based": 8,
+      "source_block_sha256": "85d3b457bf432889a76df70c383bfea3320cef2abcaa28eb4ee2e5d1579fbddf",
+      "evidence_keys": [
+        "J1",
+        "J2",
+        "E4",
+        "PR2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R006",
+      "section": "ELI5",
+      "docx_body_block_index_zero_based": 10,
+      "source_block_sha256": "64f4982b47c071f310a0012f6a8b0380c0a9edf415184dbc9b65ec2606c1030d",
+      "evidence_keys": [
+        "PR1",
+        "C2",
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R007",
+      "section": "ELI14",
+      "docx_body_block_index_zero_based": 12,
+      "source_block_sha256": "0727250a05bd7c749a31641049ad7503fb81a16200236d5fb09f8a95b966bcdc",
+      "evidence_keys": [
+        "E1",
+        "E2",
+        "E3",
+        "PR1",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R008",
+      "section": "ELI14",
+      "docx_body_block_index_zero_based": 13,
+      "source_block_sha256": "3c5b058f8723146dbdc1138b17a16d24597ccb4959256bdc4b93af3680595387",
+      "evidence_keys": [
+        "C1",
+        "C2",
+        "M1",
+        "M2",
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R009",
+      "section": "The original programme and its present allocation",
+      "docx_body_block_index_zero_based": 15,
+      "source_block_sha256": "6263c41c8ff1300cbd2a01b059d71a8d2cc4220f24532227cf1ac422ec081966",
+      "evidence_keys": [
+        "B0",
+        "E1",
+        "E2",
+        "E3",
+        "PR1",
+        "G1",
+        "C1",
+        "C2",
+        "M1",
+        "M2",
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R010",
+      "section": "The original programme and its present allocation",
+      "docx_body_block_index_zero_based": 16,
+      "source_block_sha256": "501af8ecde0547b865284a15ec3d43c9db7d6a9fb68dec0a042a35ccf55ff2de",
+      "evidence_keys": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "J1",
+        "J2",
+        "PR1",
+        "PR2",
+        "B1",
+        "G1",
+        "B0",
+        "C1",
+        "C2",
+        "F1",
+        "M1",
+        "M2",
+        "V1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "table"
+    },
+    {
+      "id": "T10-R011",
+      "section": "The inherited position remains in force",
+      "docx_body_block_index_zero_based": 18,
+      "source_block_sha256": "0c3952f2c66c55f2fbb4b71e2340b3b40e836840573b118c7d020673b56f4e93",
+      "evidence_keys": [
+        "B0",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R012",
+      "section": "The inherited position remains in force",
+      "docx_body_block_index_zero_based": 19,
+      "source_block_sha256": "da7a1ede6f5917c13e8f83d38ae6601c301eac9dd78f4fcc8589af446c7ee237",
+      "evidence_keys": [
+        "B0",
+        "B1",
+        "E2",
+        "E3"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R013",
+      "section": "The inherited position remains in force",
+      "docx_body_block_index_zero_based": 20,
+      "source_block_sha256": "8f06c0bf4c9dbd78e01cc85091907813704e5a46858d68af4217701e733b09c0",
+      "evidence_keys": [
+        "B1",
+        "E1",
+        "E2",
+        "E3",
+        "PR1",
+        "PR2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R014",
+      "section": "A smaller target changes both the opportunity and the burden",
+      "docx_body_block_index_zero_based": 23,
+      "source_block_sha256": "6ddf4f494a8fee18f82827b0bec749101594dde47dc2f6c7f1b9b2f825712f56",
+      "evidence_keys": [
+        "E2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R015",
+      "section": "A smaller target changes both the opportunity and the burden",
+      "docx_body_block_index_zero_based": 24,
+      "source_block_sha256": "5b882ca6e11c615d218cf42399c3a872bd9a8e7dace6660c6288ba234b18a3fe",
+      "evidence_keys": [
+        "E2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R016",
+      "section": "A smaller target changes both the opportunity and the burden",
+      "docx_body_block_index_zero_based": 25,
+      "source_block_sha256": "640d7f797e5ff7ffb33d1891e65a3092cc656c2f5a023e0b6779e37331a50d2c",
+      "evidence_keys": [
+        "E2",
+        "E3"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R017",
+      "section": "The local affirmative judgement earns real credit",
+      "docx_body_block_index_zero_based": 27,
+      "source_block_sha256": "1a5198d14bf57565ff6b68f498b61871991314b94be9f4b4ddd40d4e01bd3c96",
+      "evidence_keys": [
+        "E2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R018",
+      "section": "The local affirmative judgement earns real credit",
+      "docx_body_block_index_zero_based": 28,
+      "source_block_sha256": "fb001afb7cc22172972e814bbe8c58f80fbdf699ec54e5029362d0c451ca70fa",
+      "evidence_keys": [
+        "E1",
+        "E2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R019",
+      "section": "The local affirmative judgement earns real credit",
+      "docx_body_block_index_zero_based": 29,
+      "source_block_sha256": "4284cdb28f85dcd31b3845fa3ecaae51680994ad2f6609dd10b61fe19671588f",
+      "evidence_keys": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R020",
+      "section": "Why the availability question has prima facie support",
+      "docx_body_block_index_zero_based": 31,
+      "source_block_sha256": "f6b6d4fd19d443e629de91e7077320e31322b3b875fae77710ee1f4b6ca57fa8",
+      "evidence_keys": [
+        "E3",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R021",
+      "section": "Why the availability question has prima facie support",
+      "docx_body_block_index_zero_based": 32,
+      "source_block_sha256": "e922d881fcae143fc1355d34058cb04a67957b31e278d8c392b50b7db0f9e059",
+      "evidence_keys": [
+        "E3"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R022",
+      "section": "Why the availability question has prima facie support",
+      "docx_body_block_index_zero_based": 33,
+      "source_block_sha256": "25b5b88f51c7d0df2df27ccf91cc2311894b4306f31e4feb6383477a65a47813",
+      "evidence_keys": [
+        "E3"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R023",
+      "section": "Why the availability question has prima facie support",
+      "docx_body_block_index_zero_based": 34,
+      "source_block_sha256": "43dcc2fdc806348447794a5788e847b870089061142fe7c67712bbb6417801c5",
+      "evidence_keys": [
+        "E3",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R024",
+      "section": "What uniqueness from laws can and cannot supply",
+      "docx_body_block_index_zero_based": 36,
+      "source_block_sha256": "7c008369d230be17388a3fbe2983e4bfe3dd1ee538cbb071af025acf0335c68d",
+      "evidence_keys": [
+        "E1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R025",
+      "section": "What uniqueness from laws can and cannot supply",
+      "docx_body_block_index_zero_based": 37,
+      "source_block_sha256": "d3d4796a49d9461525759d04a869849105664f397e317e17eae242ed1887596d",
+      "evidence_keys": [
+        "E1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R026",
+      "section": "What uniqueness from laws can and cannot supply",
+      "docx_body_block_index_zero_based": 38,
+      "source_block_sha256": "c612da92e839f4b58c76a1f06f3cb58cd193177dc539f9e3d57742a9709630d5",
+      "evidence_keys": [
+        "E1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R027",
+      "section": "What uniqueness from laws can and cannot supply",
+      "docx_body_block_index_zero_based": 39,
+      "source_block_sha256": "b956c79a529916ec357ba653644b83e18399c8dd516917e7a83fef0ca8c3a394",
+      "evidence_keys": [
+        "E1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R028",
+      "section": "Joint coverage and the qualified modal route",
+      "docx_body_block_index_zero_based": 41,
+      "source_block_sha256": "c3e21e46481209cf0ba7ec341d9655d253e8f516c0154244311362b7049cd191",
+      "evidence_keys": [
+        "J1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R029",
+      "section": "Joint coverage and the qualified modal route",
+      "docx_body_block_index_zero_based": 42,
+      "source_block_sha256": "86180374553c6f66fc79ff7e862b0c8a0d47cad58fde14eb99dae45587c44b92",
+      "evidence_keys": [
+        "J1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R030",
+      "section": "Joint coverage and the qualified modal route",
+      "docx_body_block_index_zero_based": 43,
+      "source_block_sha256": "c0189d82716c4b0eabbb53ce5e62a153b08b260397e7837d3b4ded3b1d32d731",
+      "evidence_keys": [
+        "J1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R031",
+      "section": "Joint coverage and the qualified modal route",
+      "docx_body_block_index_zero_based": 44,
+      "source_block_sha256": "cb284ec194fed364795a652a9269e80ad106eed14e0ed055e6839a847e154dc5",
+      "evidence_keys": [
+        "J1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R032",
+      "section": "Joint coverage and the qualified modal route",
+      "docx_body_block_index_zero_based": 45,
+      "source_block_sha256": "4b4897cf853e2ff5af33833080b89b570a411717c5e638a7a043352e861b34b2",
+      "evidence_keys": [
+        "J2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R033",
+      "section": "Joint coverage and the qualified modal route",
+      "docx_body_block_index_zero_based": 46,
+      "source_block_sha256": "366854167e904d61d93e1dafdaeb124625395d737fbb463a8e10c4a64c761d17",
+      "evidence_keys": [
+        "J2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R034",
+      "section": "Joint coverage and the qualified modal route",
+      "docx_body_block_index_zero_based": 47,
+      "source_block_sha256": "d1419e62f7d96dac747373a074cd1de62e3d83ec2639f1f340e752679f5b5b91",
+      "evidence_keys": [
+        "J2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R035",
+      "section": "Joint coverage and the qualified modal route",
+      "docx_body_block_index_zero_based": 48,
+      "source_block_sha256": "be25c8bf88458f3faad528d66ae5caddd3d0b5fcc302b17b958979497c64777d",
+      "evidence_keys": [
+        "J1",
+        "J2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R036",
+      "section": "Actual powers can support alternative prehistory",
+      "docx_body_block_index_zero_based": 50,
+      "source_block_sha256": "2b37ef5a873edee19699a7f21e7a2d0393705f9b36dc34a9bc361facb10e1d46",
+      "evidence_keys": [
+        "E4"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R037",
+      "section": "Actual powers can support alternative prehistory",
+      "docx_body_block_index_zero_based": 51,
+      "source_block_sha256": "07202dbfe1ff43933e92c18cb0a9a0c5f9e5f620fc801ffbbac4dab8828df37a",
+      "evidence_keys": [
+        "E4"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R038",
+      "section": "Actual powers can support alternative prehistory",
+      "docx_body_block_index_zero_based": 52,
+      "source_block_sha256": "68819315ecc4528986a70ad6aa99da243fef36a04a91f50d0be03253c3c9d325",
+      "evidence_keys": [
+        "E4"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R039",
+      "section": "Actual powers can support alternative prehistory",
+      "docx_body_block_index_zero_based": 53,
+      "source_block_sha256": "f463becbd18ba6348fc4c7c501e3c4fa2abcdae5a0099d501764c8bde81dd9cc",
+      "evidence_keys": [
+        "E4"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R040",
+      "section": "Actual powers can support alternative prehistory",
+      "docx_body_block_index_zero_based": 54,
+      "source_block_sha256": "22451d0ea5a5d380ae21dabad61a525e7e97446b002faca52d1950ad33eb3948",
+      "evidence_keys": [
+        "E4",
+        "J2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R041",
+      "section": "Actual powers can support alternative prehistory",
+      "docx_body_block_index_zero_based": 55,
+      "source_block_sha256": "d35ebcce2d595a07538e3bf0fe061cc2441027813f3e04daa6acb6b39fe479ca",
+      "evidence_keys": [
+        "E4"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R042",
+      "section": "Actual powers can support alternative prehistory",
+      "docx_body_block_index_zero_based": 56,
+      "source_block_sha256": "43d3234f43c2b38b3ce243cdefe938c8ac668d44b392afda2e57ac6c73b02cdd",
+      "evidence_keys": [
+        "E4"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R043",
+      "section": "Actual powers can support alternative prehistory",
+      "docx_body_block_index_zero_based": 57,
+      "source_block_sha256": "6801dcaf0ab4b8c1fb2cb481576ced06177ccc676911d8c262098d7c5361af19",
+      "evidence_keys": [
+        "E4",
+        "J2",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R044",
+      "section": "Deliberately organised reliance gives a special reason for care",
+      "docx_body_block_index_zero_based": 60,
+      "source_block_sha256": "e535a29d6732ee373ac185d33ed7b6a7193853709d246b7ec203dccad7302bca",
+      "evidence_keys": [
+        "PR1",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R045",
+      "section": "Deliberately organised reliance gives a special reason for care",
+      "docx_body_block_index_zero_based": 61,
+      "source_block_sha256": "3d243f35c66dcba491e4229f416934766dbf88a3808899cb1d6ab9ad3eb5bd8c",
+      "evidence_keys": [
+        "PR1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R046",
+      "section": "Deliberately organised reliance gives a special reason for care",
+      "docx_body_block_index_zero_based": 62,
+      "source_block_sha256": "baf9b92c5351e4b341677be1e026ef6afdd492d1ce430068eae5d19f1f631fbd",
+      "evidence_keys": [
+        "PR1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R047",
+      "section": "Deliberately organised reliance gives a special reason for care",
+      "docx_body_block_index_zero_based": 63,
+      "source_block_sha256": "0063335e2e0767454d077b746ca01d286916b058da6c03db72c0aef57d648d49",
+      "evidence_keys": [
+        "PR1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R048",
+      "section": "Deliberately organised reliance gives a special reason for care",
+      "docx_body_block_index_zero_based": 64,
+      "source_block_sha256": "095a0f5e008f4338a3b17bcddbf9a75bd5a8b46cc91180d734c0f4b1e9cf91b8",
+      "evidence_keys": [
+        "PR1",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R049",
+      "section": "A fair arrangement can change the recipient decision",
+      "docx_body_block_index_zero_based": 66,
+      "source_block_sha256": "958f8aef993d446bbf2f5ea672ad3dccd1876e78e9977fcb7b53aac1b61be906",
+      "evidence_keys": [
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R050",
+      "section": "A fair arrangement can change the recipient decision",
+      "docx_body_block_index_zero_based": 67,
+      "source_block_sha256": "7856f10a410e10f5ac9f0d972d9b5bb3e2358215deb7b566126e8e2b2d2d8532",
+      "evidence_keys": [
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R051",
+      "section": "A fair arrangement can change the recipient decision",
+      "docx_body_block_index_zero_based": 68,
+      "source_block_sha256": "2e7b95bc121e3d15371ae74a35be1a38cd8175cd9602b57c6dfe7abcee354e16",
+      "evidence_keys": [
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R052",
+      "section": "The source alternatives must be assessed at both times",
+      "docx_body_block_index_zero_based": 70,
+      "source_block_sha256": "c0a8b9b8b08028e485d417e79ff736e801c95df4c751f1a09c3bde5baf0d07b6",
+      "evidence_keys": [
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R053",
+      "section": "The source alternatives must be assessed at both times",
+      "docx_body_block_index_zero_based": 71,
+      "source_block_sha256": "8a25aa7cf129308a2642f886e69cf53cdf8eb61ecb12edcd58ff110cc953c206",
+      "evidence_keys": [
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R054",
+      "section": "The source alternatives must be assessed at both times",
+      "docx_body_block_index_zero_based": 72,
+      "source_block_sha256": "44469449bb4a75ef709caa65bad7a486a633e5eeaf8e2c131fb4f4c72ef0f0dd",
+      "evidence_keys": [
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R055",
+      "section": "The strongest original giver argument remains positive",
+      "docx_body_block_index_zero_based": 74,
+      "source_block_sha256": "d3a8d925c3b793a2dfd1eaa276231c42ad85bb4cb0aaa92156a8312cc660e6b0",
+      "evidence_keys": [
+        "PR2",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R056",
+      "section": "The strongest original giver argument remains positive",
+      "docx_body_block_index_zero_based": 75,
+      "source_block_sha256": "1a5f2901d943ea74a23a795841f2cbbca070436fcd7ee44b853a127af684bc62",
+      "evidence_keys": [
+        "PR2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R057",
+      "section": "The strongest original giver argument remains positive",
+      "docx_body_block_index_zero_based": 76,
+      "source_block_sha256": "a2ea80f9484a78bd8e6115be2444f69d163ebdb7b38bfca6c4473ab5ea688d5e",
+      "evidence_keys": [
+        "PR2",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R058",
+      "section": "The strongest original giver argument remains positive",
+      "docx_body_block_index_zero_based": 77,
+      "source_block_sha256": "e39d1870d1680fddc188adef73f04e6bbfcc8f646d302d620ffb35295dfeedfc",
+      "evidence_keys": [
+        "PR2",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R059",
+      "section": "Two alleged costs of faithful repair can be removed",
+      "docx_body_block_index_zero_based": 79,
+      "source_block_sha256": "76fa7b14052ce9d91605757b65a59101d2cadd459e9e2b7c216347dabb5ec62c",
+      "evidence_keys": [
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R060",
+      "section": "Two alleged costs of faithful repair can be removed",
+      "docx_body_block_index_zero_based": 80,
+      "source_block_sha256": "c7167f209e3d3b8ad3f8510e215ffe0ac785f3ce6da6695ccf0856de8bef1195",
+      "evidence_keys": [
+        "PR2",
+        "PR1",
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R061",
+      "section": "Two alleged costs of faithful repair can be removed",
+      "docx_body_block_index_zero_based": 81,
+      "source_block_sha256": "26bc83ebf0548557fbac125925401bb46858af21d9c3d1335f2a7a5017bf3f9b",
+      "evidence_keys": [
+        "PR2",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R062",
+      "section": "Original context and current force are different relations",
+      "docx_body_block_index_zero_based": 84,
+      "source_block_sha256": "828179277d66844b8597c9ec2e9e5e74d89cfe035ac78e47e079ff9fb3e4f548",
+      "evidence_keys": [
+        "C1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R063",
+      "section": "Original context and current force are different relations",
+      "docx_body_block_index_zero_based": 85,
+      "source_block_sha256": "3a98ed769fddaa12799b25b8b4aab5ec92ac0b6837ded72af8466e3e4f594b38",
+      "evidence_keys": [
+        "C1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R064",
+      "section": "Original context and current force are different relations",
+      "docx_body_block_index_zero_based": 86,
+      "source_block_sha256": "c01ee918da53e1ce583382509d8ac6671cbad2ecb7641d2f315c474d8a94d504",
+      "evidence_keys": [
+        "C1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R065",
+      "section": "Exact read cost depends on the entire observation contract",
+      "docx_body_block_index_zero_based": 88,
+      "source_block_sha256": "9ddc89df5adc269003b169c98e2b256ee311d721f2c92f88bd0504a54398970a",
+      "evidence_keys": [
+        "C1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R066",
+      "section": "Exact read cost depends on the entire observation contract",
+      "docx_body_block_index_zero_based": 89,
+      "source_block_sha256": "c17823b8b1fa71ce951dd5707dc7c2cfdaa404bdb311e185fffd684a0cbda194",
+      "evidence_keys": [
+        "C1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R067",
+      "section": "Exact read cost depends on the entire observation contract",
+      "docx_body_block_index_zero_based": 90,
+      "source_block_sha256": "a28b122540f8578c28830457cbaeddc75a91749554137a9cacf98030e033bb39",
+      "evidence_keys": [
+        "C1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R068",
+      "section": "Copying does not destroy source interval structure",
+      "docx_body_block_index_zero_based": 92,
+      "source_block_sha256": "57cb8437e9df22b4638a303346f85bab1d0a00354fd8ec68f466f94a1faaa520",
+      "evidence_keys": [
+        "C1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R069",
+      "section": "Copying does not destroy source interval structure",
+      "docx_body_block_index_zero_based": 93,
+      "source_block_sha256": "c24a4cd34b200b2833a432fe6a337a9d0a0bee53892d638dcd6d9fb9805b26cc",
+      "evidence_keys": [
+        "C1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R070",
+      "section": "The two card decision",
+      "docx_body_block_index_zero_based": 95,
+      "source_block_sha256": "c8cf12044b5de43a75ce1081df3fcbf06d7da98af0f16e97b170b87c5d18f1d3",
+      "evidence_keys": [
+        "C2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R071",
+      "section": "The two card decision",
+      "docx_body_block_index_zero_based": 96,
+      "source_block_sha256": "69c072e45372f179198b3900493ae431e003eb7384dbbf9aa7e8e37a33e7c166",
+      "evidence_keys": [
+        "C2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R072",
+      "section": "The two card decision",
+      "docx_body_block_index_zero_based": 97,
+      "source_block_sha256": "8e4481f52f99209b6dc30b4cb95822b088635dd2618bbfd8070391eeb6522937",
+      "evidence_keys": [
+        "C2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "table"
+    },
+    {
+      "id": "T10-R073",
+      "section": "The two card decision",
+      "docx_body_block_index_zero_based": 98,
+      "source_block_sha256": "abfeea66f97ec6474eae8882bf74b88065ad306cba92f73c06f75fe60e1a5fb4",
+      "evidence_keys": [
+        "C2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R074",
+      "section": "The two card decision",
+      "docx_body_block_index_zero_based": 99,
+      "source_block_sha256": "0ec9d4528e60cfae1f68f1a00eddbd78990d633f4624da3246b90fa9a836bcd7",
+      "evidence_keys": [
+        "C2",
+        "PR1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R075",
+      "section": "The two card decision",
+      "docx_body_block_index_zero_based": 100,
+      "source_block_sha256": "58bf12bb3c78cc5eb08e3c1aa3e612e74578e681077979379c2a0259a7250d17",
+      "evidence_keys": [
+        "C2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R076",
+      "section": "The printed source finding has a narrower significance",
+      "docx_body_block_index_zero_based": 102,
+      "source_block_sha256": "35ef7c93f2e187000747e9a1ca567eb7274a529dca6c4d2d7da97a878241f70c",
+      "evidence_keys": [
+        "S1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R077",
+      "section": "The printed source finding has a narrower significance",
+      "docx_body_block_index_zero_based": 103,
+      "source_block_sha256": "b754bf65f2bf9f7cc97409cc7ea377e403ad311489b4cd3fcf3dcbabdd5eabed",
+      "evidence_keys": [
+        "S1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R078",
+      "section": "The printed source finding has a narrower significance",
+      "docx_body_block_index_zero_based": 104,
+      "source_block_sha256": "9ed6d47d7a6b8876f66b760f6643c585e214d060a68a23b12318e42d0df64cb7",
+      "evidence_keys": [
+        "S1",
+        "C1",
+        "V1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R079",
+      "section": "Three different questions must remain separate",
+      "docx_body_block_index_zero_based": 107,
+      "source_block_sha256": "3b7b55365a633136f65d9623223686bacf1f96bd7f2ea5385d016534f46ad5a7",
+      "evidence_keys": [
+        "M1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R080",
+      "section": "Three different questions must remain separate",
+      "docx_body_block_index_zero_based": 108,
+      "source_block_sha256": "e6d0673262544da4c2eac7977ea3e6838b726dfaff094d68fc9c9a57c5517c91",
+      "evidence_keys": [
+        "M1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R081",
+      "section": "Three different questions must remain separate",
+      "docx_body_block_index_zero_based": 109,
+      "source_block_sha256": "652735280d602335d0de53404a2f14404327d485668963a17e197a0b27165a6b",
+      "evidence_keys": [
+        "M1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R082",
+      "section": "Three different questions must remain separate",
+      "docx_body_block_index_zero_based": 110,
+      "source_block_sha256": "00a8647ea629c24e6568fab8c53fb6bb74a408456b865586ef076caddeb8220b",
+      "evidence_keys": [
+        "M1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R083",
+      "section": "Compactness and continuity supply a positive repair",
+      "docx_body_block_index_zero_based": 112,
+      "source_block_sha256": "884c50ff4d0471e45ad30fde3869281a0eb50a80671929083090998512172db2",
+      "evidence_keys": [
+        "M1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R084",
+      "section": "Compactness and continuity supply a positive repair",
+      "docx_body_block_index_zero_based": 113,
+      "source_block_sha256": "73f48d3a68985c34298c3020739c60e7911ba6eb2a1fad879041124f9c504fae",
+      "evidence_keys": [
+        "M1",
+        "E1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R085",
+      "section": "The varying system result is genuinely nonuniform",
+      "docx_body_block_index_zero_based": 115,
+      "source_block_sha256": "ada19cca493a5bd013d9c741fca14ae39d9fa6347c68a7202cfba5e0830b1cd8",
+      "evidence_keys": [
+        "M2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R086",
+      "section": "The varying system result is genuinely nonuniform",
+      "docx_body_block_index_zero_based": 116,
+      "source_block_sha256": "7b40088086a0a3b42daccfc533e5ee897e2a6e72da0df316ae64d1d1c8dea315",
+      "evidence_keys": [
+        "M2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R087",
+      "section": "The varying system result is genuinely nonuniform",
+      "docx_body_block_index_zero_based": 117,
+      "source_block_sha256": "fc996e6c432fce8dd52e8f59b60f4e03d96d964404a11c874ca1ed33faa16953",
+      "evidence_keys": [
+        "M2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R088",
+      "section": "What was checked and what the source comparison permits",
+      "docx_body_block_index_zero_based": 119,
+      "source_block_sha256": "7da4a34bc06e6d5f482127d0244dba7a226a1e2de03c66c896bb577d83dc0425",
+      "evidence_keys": [
+        "M1",
+        "M2",
+        "V1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R089",
+      "section": "What was checked and what the source comparison permits",
+      "docx_body_block_index_zero_based": 120,
+      "source_block_sha256": "b378d0d658c3c4e92231a5b7e68321a598ba47084135138b325146f719eb465f",
+      "evidence_keys": [
+        "S2",
+        "M1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R090",
+      "section": "Finite evidence for a uniquely determined limit",
+      "docx_body_block_index_zero_based": 122,
+      "source_block_sha256": "be596dea3e6dffee894018cf3548c5d247b593c72c6f1f2dbbb7783b8f71bffa",
+      "evidence_keys": [
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R091",
+      "section": "Finite evidence for a uniquely determined limit",
+      "docx_body_block_index_zero_based": 123,
+      "source_block_sha256": "c8943af5363217eb4671075a9c715a12bd7b55781254a0073aecb0d04cef870e",
+      "evidence_keys": [
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R092",
+      "section": "Finite evidence for a uniquely determined limit",
+      "docx_body_block_index_zero_based": 124,
+      "source_block_sha256": "3f68c0025030fdc83fdd654406e6ed2b38affa9642d97bdebd4d1511c79042af",
+      "evidence_keys": [
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R093",
+      "section": "Finite evidence for a uniquely determined limit",
+      "docx_body_block_index_zero_based": 125,
+      "source_block_sha256": "5d08a30e41c8f03c413aa20d066fbf4793a0976a4e8808a15813438a1d5628ea",
+      "evidence_keys": [
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R094",
+      "section": "Finite evidence for a uniquely determined limit",
+      "docx_body_block_index_zero_based": 126,
+      "source_block_sha256": "e90cbe197f6c8f78928f54ea093c2a53d13b4f8bc51eb5671ccfcc4d1326ab44",
+      "evidence_keys": [
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R095",
+      "section": "The evidence kinds support different claims",
+      "docx_body_block_index_zero_based": 129,
+      "source_block_sha256": "2cf8dd333ff3beabaf844f93112ba6f2b5df90563867e3dda6a06917b91fee1f",
+      "evidence_keys": [
+        "V1",
+        "M1",
+        "M2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R096",
+      "section": "The evidence kinds support different claims",
+      "docx_body_block_index_zero_based": 130,
+      "source_block_sha256": "29dc93c03b96e385349aac925a2015d95d3a743b8c7ae4007c00d70453902647",
+      "evidence_keys": [
+        "C1",
+        "C2",
+        "F1",
+        "S1",
+        "V1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R097",
+      "section": "The evidence kinds support different claims",
+      "docx_body_block_index_zero_based": 131,
+      "source_block_sha256": "3441a52c31617c164a27f473b3e3f49630b883650b72416e051add1505c1a026",
+      "evidence_keys": [
+        "V1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R098",
+      "section": "The evidence kinds support different claims",
+      "docx_body_block_index_zero_based": 132,
+      "source_block_sha256": "438fb42c47143f0a15f545003b189dd724c0a450bbad23386432871515ee8255",
+      "evidence_keys": [
+        "V1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R099",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 154,
+      "source_block_sha256": "9aee8ace06565d9afd283c9383dab2369c7f7fa87a7f5303416a5f9a1bf25ccf",
+      "evidence_keys": [
+        "S1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R100",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 155,
+      "source_block_sha256": "c9a9caab11bcfb921833031524837bb2b45bfebc53d7435b30cc20a0a1c09493",
+      "evidence_keys": [
+        "E1",
+        "M1",
+        "S2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R101",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 156,
+      "source_block_sha256": "e5ab13fe447f5a4e68da2eef2f3a869775b62c04cabfe3cab044fbbffc16803a",
+      "evidence_keys": [
+        "E1",
+        "J1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R102",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 157,
+      "source_block_sha256": "992ffb2049295cd8ec10f494228f413b0717de923f252acb773760e99ca8d5aa",
+      "evidence_keys": [
+        "E4"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R103",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 158,
+      "source_block_sha256": "8bafc942d4d7a221dd26cde3ea5d84541511c464b468fa59c195f7d95fe6f1b2",
+      "evidence_keys": [
+        "E2",
+        "E3"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R104",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 159,
+      "source_block_sha256": "bd2c3974e45ec1376bc7b2f50531f03cfc27c08b30f8867538e0f947e77a3e85",
+      "evidence_keys": [
+        "J1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R105",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 160,
+      "source_block_sha256": "822d24089f923537e3319bc31f8e9c9326aa2a5c9f564c84966d96b69d2436b7",
+      "evidence_keys": [
+        "J1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R106",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 161,
+      "source_block_sha256": "88aba664301d974b597c102c8d491c7f052d1295ea02212fb6d3f8b8044f06a9",
+      "evidence_keys": [
+        "J1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R107",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 162,
+      "source_block_sha256": "68c43feeffc8db3e44d979cafa9bf4e2b9f44bc312ad930f4c25c535750d4c8b",
+      "evidence_keys": [
+        "PR1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R108",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 163,
+      "source_block_sha256": "500f66292049f1aa78af0b36d766dd6f2c5513452a22e89cbe9a25888f8f8450",
+      "evidence_keys": [
+        "PR1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R109",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 164,
+      "source_block_sha256": "7b9bcdd3a46d507a2b5a2702ee0a21c2ff62fb808a6f45161c7dd5840dfe1757",
+      "evidence_keys": [
+        "G1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R110",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 165,
+      "source_block_sha256": "5a4f5243a04fe6173e8c0ca45739abcdd07249f5f870b21e7bc5204c84f1d3b8",
+      "evidence_keys": [
+        "PR2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R111",
+      "section": "Selected primary references",
+      "docx_body_block_index_zero_based": 166,
+      "source_block_sha256": "b0cccd14aec0f6db9dcca5d7a48a9585c4ec55d1890398fbce063d6fd1e52d32",
+      "evidence_keys": [
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R112",
+      "section": "The evidence that would change the remaining judgement",
+      "docx_body_block_index_zero_based": 168,
+      "source_block_sha256": "ee16ea05e89bb5ac82437d83776840396162e44439ef72d1b0b6ddd1e5e553b6",
+      "evidence_keys": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "J1",
+        "J2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R113",
+      "section": "The evidence that would change the remaining judgement",
+      "docx_body_block_index_zero_based": 169,
+      "source_block_sha256": "9ac66da76e169332290eef72fe5f31b8ae97036c8d36646e44810d0b259ba545",
+      "evidence_keys": [
+        "PR2",
+        "B1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R114",
+      "section": "The evidence that would change the remaining judgement",
+      "docx_body_block_index_zero_based": 170,
+      "source_block_sha256": "3795bcb3f61c8cc0661d2c4f277e97d8c980b057c560ec2e848a368116c6ee9a",
+      "evidence_keys": [
+        "C1",
+        "C2"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    },
+    {
+      "id": "T10-R115",
+      "section": "The evidence that would change the remaining judgement",
+      "docx_body_block_index_zero_based": 171,
+      "source_block_sha256": "29b9e0bec5984de5c5c46eef1052cfca6edc131ea374f673a2f2ca0857246aca",
+      "evidence_keys": [
+        "B0",
+        "B1",
+        "V1",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "PR1",
+        "G1",
+        "C1",
+        "C2",
+        "M1",
+        "M2",
+        "F1"
+      ],
+      "status": "accepted_or_inherited_at_stated_scope",
+      "text_kind": "paragraph"
+    }
+  ],
+  "scope": "Scientific and source acceptance have their stated ceilings. Report production and this map do not assert canonical adoption, external specialist validation or a new inquiry authorisation.",
+  "metadata_projection": {
+    "predecessor_map_identity": {
+      "sha256": "49e5aac10549e526169fc2b6c1cfa35a8f8dd097db8842229e112c1996c21d20",
+      "bytes": 88631
+    },
+    "change_scope": "Two evidence identities are rebound to actor-neutral public metadata projections. The report and authoring-source identities, all 115 claims, every evidence scope and the accepted occurrence-execution and occurrence-retention additions are unchanged.",
+    "projection_binding_locator": "tranche10/reviews/cross-component/public-projection-v10/PROJECTION_BINDING.json"
+  },
+  "metadata_projection_history": [
+    {
+      "predecessor_map_identity": {
+        "sha256": "77204ae1a669b3fe33b7554eb9b389428cb02a8862182a4d6c832917d2ef2e95",
+        "bytes": 88507
+      },
+      "change_scope": "The final paragraph removes one obsolete inquiry-authorisation sentence. Report and source identities and the hash of T10-R115 are rebound; all scientific claims, evidence records including C1 execution and J2 clarification additions, and all 115 claim placements are preserved.",
+      "predecessor_projection_binding_locator": "tranche10/reviews/cross-component/public-projection-v6/PROJECTION_BINDING.json"
+    }
+  ]
+}

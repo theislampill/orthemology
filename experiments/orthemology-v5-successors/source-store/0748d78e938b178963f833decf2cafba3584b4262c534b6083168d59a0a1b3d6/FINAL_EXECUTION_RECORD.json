@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-03T12:36:24.403560+00:00",
+  "completed_utc": "2026-10-03T12:37:19.837054+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "candidate_path": "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1/checker",
+  "candidate_file_hashes": {
+    "CASE_TRACEABILITY.json": "d43b730b8ada0ceba61bda31cae36e662547c7a883ccf643901d5c061e824a6b",
+    "README.md": "08d2b29597f4ee32240d7c54ed0fa70b1aa6d1e35d6d16253fd3fde078ddb04d",
+    "context_effects.py": "0f65f172926e61ff7280ec2e13fd36b4ff287ea530ebbfa00c9dce831f3355fa",
+    "exhaustive_validation.py": "7614ed0a2d9eca6c2e07c74ee0e02c902cff4956b07347ee9b1b47e70edd8ee2",
+    "fixtures/source_roles.json": "8d821ec871977ba5c22ff00d8cc27841c32aab682aae0c0d2cf99cb6f695169c",
+    "read_cover.py": "808a9297d27b903722b4fc04ad9a526d3cfc3e371b14e5047e1d33d1c6e3e79f",
+    "semantic_mutations.py": "090c48a908c2780f5eccce07c7b211e3970f0f24ea1188d3528a5195fafe8130",
+    "source_and_release_validation.py": "d286e1099431a64390a14c9533d96cdd7aebc673f68ea74953c9c4852e5e24db",
+    "tests/test_contract.py": "af8ae17bd3881ab703fc773bf91bffad9859a4fa8f9cb3559d39ed43b4696bf8"
+  },
+  "candidate_unchanged_during_review": true,
+  "commands": [
+    {
+      "name": "independent-reference-selftest",
+      "command": [
+        "python",
+        "tranche10/reviews/occurrence-checker/independent_models.py"
+      ],
+      "cwd": "tranche10/reviews/occurrence-checker",
+      "exit": 0,
+      "seconds": 0.0335,
+      "log": "independent-reference-selftest.log",
+      "log_sha256": "ca91039fbffe59dce42348e725bbaa8fe19f9310271246694b4cf26f5f4656db"
+    },
+    {
+      "name": "candidate-unit-normal",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1/checker",
+      "exit": 0,
+      "seconds": 0.1031,
+      "log": "candidate-unit-normal.log",
+      "log_sha256": "64391bc723a912893558535a96ca41183c4522d734ce62e0d865b33123fd7b6a"
+    },
+    {
+      "name": "candidate-unit-optimized",
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1/checker",
+      "exit": 0,
+      "seconds": 0.2863,
+      "log": "candidate-unit-optimized.log",
+      "log_sha256": "18a9a74a8517967376a5075aeccc84f7ffb359bf49bda0d378d844a5c57e038f"
+    },
+    {
+      "name": "independent-normal",
+      "command": [
+        "python",
+        "tranche10/reviews/occurrence-checker/run_independent_review.py",
+        "--candidate",
+        "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1/checker",
+        "--output",
+        "tranche10/reviews/occurrence-checker/INDEPENDENT_RESULTS.json"
+      ],
+      "cwd": "tranche10/reviews/occurrence-checker",
+      "exit": 0,
+      "seconds": 7.4109,
+      "log": "independent-normal.log",
+      "log_sha256": "d39df425676f1ddbe20ce4ae50b4523c8aecca8aa430abc516cfb18ffc0594eb"
+    },
+    {
+      "name": "independent-optimized",
+      "command": [
+        "python",
+        "-O",
+        "tranche10/reviews/occurrence-checker/run_independent_review.py",
+        "--candidate",
+        "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1/checker",
+        "--output",
+        "tranche10/reviews/occurrence-checker/INDEPENDENT_RESULTS_OPTIMIZED.json"
+      ],
+      "cwd": "tranche10/reviews/occurrence-checker",
+      "exit": 0,
+      "seconds": 7.4152,
+      "log": "independent-optimized.log",
+      "log_sha256": "ff52c37f754d925cef456396ec7c91225b63bde8fbdf8ca60858cf4485a926b2"
+    },
+    {
+      "name": "source-fixture-normal",
+      "command": [
+        "python",
+        "tranche10/reviews/occurrence-checker/run_source_fixture_review.py",
+        "--candidate",
+        "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1/checker",
+        "--output",
+        "tranche10/reviews/occurrence-checker/INDEPENDENT_SOURCE_FIXTURE.json"
+      ],
+      "cwd": "tranche10/reviews/occurrence-checker",
+      "exit": 0,
+      "seconds": 0.0837,
+      "log": "source-fixture-normal.log",
+      "log_sha256": "9b8e254b5c772f4a3e849ab32acac6ddd4c957f291565fb41143d49af7fa39d5"
+    },
+    {
+      "name": "source-fixture-optimized",
+      "command": [
+        "python",
+        "-O",
+        "tranche10/reviews/occurrence-checker/run_source_fixture_review.py",
+        "--candidate",
+        "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1/checker",
+        "--output",
+        "tranche10/reviews/occurrence-checker/INDEPENDENT_SOURCE_FIXTURE_OPTIMIZED.json"
+      ],
+      "cwd": "tranche10/reviews/occurrence-checker",
+      "exit": 0,
+      "seconds": 0.2771,
+      "log": "source-fixture-optimized.log",
+      "log_sha256": "81802a1702198ca2365ba0bab7ef69b2ed6306a148d8f47ce859b6043f95b9ee"
+    },
+    {
+      "name": "independent-mutations",
+      "command": [
+        "python",
+        "tranche10/reviews/occurrence-checker/run_independent_mutations.py",
+        "--candidate",
+        "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1/checker",
+        "--directory",
+        "tranche10/reviews/occurrence-checker/mutation-copies-final"
+      ],
+      "cwd": "tranche10/reviews/occurrence-checker",
+      "exit": 0,
+      "seconds": 39.8196,
+      "log": "independent-mutations.log",
+      "log_sha256": "af8ee6aef1b52328cf9463baf86e80090b14a3de1f4b8016d7aebd06544ce842"
+    }
+  ],
+  "public_projection": {
+    "predecessor": {
+      "path": "tranche10/reviews/occurrence-checker/FINAL_EXECUTION_RECORD.json",
+      "sha256": "3be0200bee7074c690a73f9d42c4c5adf08b1d849f14692c620e5dc55dddde75",
+      "bytes": 6981
+    },
+    "binding": "tranche10/reviews/cross-component/public-projection-v4/PROJECTION_BINDING.json",
+    "path_notation": "Historical command paths are described relative to the archive root; interpreter is normalized to python. These arrays preserve argument order and values modulo path normalization and are not standalone replay shell lines.",
+    "executable_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "historical_executable_sha256_recorded": false,
+    "hash_scope": "All recorded candidate and log digests are unchanged. The original receipt did not bind a Python executable digest; none is inferred.",
+    "historical_reviewer_input_copy_distributed": false,
+    "identical_selected_candidate": "tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+    "identical_candidate_files_verified": 9,
+    "public_replay_owner": "REPRODUCIBILITY.md",
+    "scope": "Historical eight-group run, including source-dependent groups. Public supplied-model replay and its omitted source dependencies remain separately declared."
+  }
+}

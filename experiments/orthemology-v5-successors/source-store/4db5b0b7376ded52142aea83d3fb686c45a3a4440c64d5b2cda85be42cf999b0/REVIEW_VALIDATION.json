@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "relationship": "Reviewer authored ordinary mathematical argument but not the Lean implementation; this is independent implementation and scope review, not independent discovery of the argument.",
+  "admitted_manifest_sha256": "5d7b52d653a818641b2fd818a95fc3a13a159dd89cd75bb597435b818f0a55d4",
+  "manifest_files_verified": 33,
+  "fresh_source_only_copy": true,
+  "author_olean_reuse": false,
+  "compiler_threads": 1,
+  "wall_cap_seconds": 180,
+  "heartbeats": "default",
+  "readbacks": [
+    {
+      "source": "AuthorReadback.lean",
+      "log": "AuthorReadback.log",
+      "readbacks": 51,
+      "without_axioms": 1,
+      "allowed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "source": "ReviewerControls.lean",
+      "log": "ReviewerControls-final.log",
+      "readbacks": 5,
+      "without_axioms": 0,
+      "allowed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "AuthorReadback.lean",
+      "sha256": "9bf48905487c241b2188be553a3e5656dc879493e9fcc4e85c53feab1e61e4b3",
+      "bytes": 5822
+    },
+    {
+      "path": "INPUT_IDENTITIES.sha256",
+      "sha256": "2e38b1171a7fbeaf37cc55a159ebf1d892020921c2410c8fccb17649eeaefd98",
+      "bytes": 931
+    },
+    {
+      "path": "ReviewerControls.lean",
+      "sha256": "44c033325bf422ab2b15a6cd58753fa4b6ab8f7dac04eb004bf9062bc6060f11",
+      "bytes": 2600
+    },
+    {
+      "path": "logs/AuthorReadback.log",
+      "sha256": "3443d5842791c061efdc7e5241182f87cc48a2a7f80c5b2dfefec540ec24ccb6",
+      "bytes": 18144
+    },
+    {
+      "path": "logs/LawCompletionBranches.log",
+      "sha256": "2fb5cc04da1e5a0794fd398f1337d78cc15922100f8bfd14a76cfa2d34c86d07",
+      "bytes": 116
+    },
+    {
+      "path": "logs/LawCompletionCompact.log",
+      "sha256": "91941267590a829e405fb89312a7dc3110dfbdc05ccef541d381f580f4025a93",
+      "bytes": 114
+    },
+    {
+      "path": "logs/LawCompletionCore.log",
+      "sha256": "aa8fbe9dbcc1ba49c78a5c426d76e9d046a770a680d56c5d72d5595812f9fa8c",
+      "bytes": 108
+    },
+    {
+      "path": "logs/LawCompletionCounterexample.log",
+      "sha256": "ed9ce7810369070db67a9f0c791628d470189fcf5d00e9e947b9d2b637c619c8",
+      "bytes": 128
+    },
+    {
+      "path": "logs/ReviewerControls-01.log",
+      "sha256": "a73fa10b3ccf1ff699bf3e384f9e0aa7f2cfd0bd934e23869b50cd7f4b525539",
+      "bytes": 1630
+    },
+    {
+      "path": "logs/ReviewerControls-final.log",
+      "sha256": "03c9655ac4cc6cd8e05a2299cea178d2ca8cad1483bc700fd31d36e34303c205",
+      "bytes": 1341
+    },
+    {
+      "path": "logs/environment.txt",
+      "sha256": "6de3eff0e355204de8b196c11d26583eec01a60407b59899753bc79c9ddf6f01",
+      "bytes": 1640
+    },
+    {
+      "path": "src/LawCompletionBranches.lean",
+      "sha256": "096e4c454af036875c6b9f95a2a1a37724708b7ebab741044f38335de3d67e7d",
+      "bytes": 6215
+    },
+    {
+      "path": "src/LawCompletionBranches.olean",
+      "sha256": "6ce3b817988eca577ca4e546b1d4b29af74644da3d45a64ed6632c8e6bf35de4",
+      "bytes": 413216
+    },
+    {
+      "path": "src/LawCompletionCompact.lean",
+      "sha256": "57d4fc28db2387c3024b94db3323341b566ac28825b085c6739ba437249759e3",
+      "bytes": 6105
+    },
+    {
+      "path": "src/LawCompletionCompact.olean",
+      "sha256": "0c8484ceba3c2fae739201c867e44b23e13c9283b94b27a7ca0716c3cd52ac63",
+      "bytes": 144224
+    },
+    {
+      "path": "src/LawCompletionCore.lean",
+      "sha256": "47024061e3167e1600b75e7c73f524b034c44790bbc4ed105ad3f09e9f79ee30",
+      "bytes": 4157
+    },
+    {
+      "path": "src/LawCompletionCore.olean",
+      "sha256": "d02b9bfe699c9766f9bc0b69735e9798da8284b2d929e4da9deb1bf7ad64ea82",
+      "bytes": 149736
+    },
+    {
+      "path": "src/LawCompletionCounterexample.lean",
+      "sha256": "edf93ff8b4991533032505662ff8347ddc1f0d99be6b0e1e00b56f09d1aba198",
+      "bytes": 5334
+    },
+    {
+      "path": "src/LawCompletionCounterexample.olean",
+      "sha256": "c79c8b08b35ba3a2a429e6fbcda46ea637ddd129e4b3e166a1d08849b0c88b6e",
+      "bytes": 230904
+    }
+  ]
+}

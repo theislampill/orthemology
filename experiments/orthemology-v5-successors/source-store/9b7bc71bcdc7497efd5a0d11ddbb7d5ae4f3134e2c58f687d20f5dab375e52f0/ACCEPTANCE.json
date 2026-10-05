@@ -1,0 +1,58 @@
+{
+  "verdict": "accepted_with_scope_limits",
+  "reviewed_utc": "2026-10-03T13:08:05.183093+00:00",
+  "review_kind": "independent internal model-assisted source inspection",
+  "candidate_manifest": {
+    "path": "CANDIDATE_MANIFEST.json",
+    "bytes": 6610,
+    "sha256": "bcba47fa0cfb429aeaabad069aac9ab41a7d200a733fbfb09e37dba4e1aec07f"
+  },
+  "accepted_public_files": [
+    {
+      "path": "public/COLLATION_ADDENDUM.md",
+      "bytes": 659,
+      "sha256": "cb9aa16dc764ad0aa193ca464e2335a8474b782084a573ab1ede1420eda228ff"
+    },
+    {
+      "path": "public/SOURCE_IDENTITIES.json",
+      "bytes": 2624,
+      "sha256": "6e963f40255715052c776b40a8ec48240433969ca4bc566a09da4313ef5f83d8"
+    }
+  ],
+  "verified_categories": [
+    "public addendum scope",
+    "bibliographic identities",
+    "official provenance links",
+    "title and imprint images",
+    "printed/PDF page mapping",
+    "full-page rendering byte identity",
+    "selected-clause reading",
+    "complete local apparatus entry",
+    "qualified sigla segmentation",
+    "archived replay attestation",
+    "capture-byte identities",
+    "bounded access disclosures",
+    "public projection and shared exposition budget"
+  ],
+  "qualification": "Acceptance is confined to the stated witness-relative local inspection; see the accepted addendum. No full-edition/stemma collation, human specialist validation, translation certification, or canonical release is claimed.",
+  "mechanical_checks": {
+    "candidate_manifest_entries": 32,
+    "capture_manifest_entries": 21,
+    "hash_checks_passed": 53,
+    "independent_full_page_renders_byte_identical": 10
+  },
+  "budget": {
+    "existing_capsule_words": 140,
+    "accepted_addendum_words": 37,
+    "total_source_exposition_words": 177,
+    "review_new_historical_synopsis_words": 0,
+    "review_direct_quote_words": 0,
+    "shared_report_reserve_used": 0,
+    "shared_report_reserve_remaining": 20
+  },
+  "projection": {
+    "raw_captures_included": false,
+    "private_research_notes_included": false,
+    "canonical_files_changed": false
+  }
+}

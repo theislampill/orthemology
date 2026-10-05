@@ -1,0 +1,83 @@
+import IndexedCompletionDiameter
+set_option autoImplicit false
+set_option pp.universes true
+
+#print IndexedCompletion.Bonding
+#print IndexedCompletion.transport
+#print IndexedCompletion.Compatible
+#print IndexedCompletion.Survives
+#print IndexedCompletion.AllSingleton
+#print IndexedCompletion.UniqueRealization
+#print IndexedCompletion.extensionRange
+#print IndexedCompletion.CoordinateForgetting
+#print IndexedCompletion.HorizonForgetting
+#print IndexedCompletion.CoordinateAttraction
+#print IndexedCompletion.HorizonAttraction
+#print IndexedCompletion.DiameterShrinking
+
+#check IndexedCompletion.partial_closed
+#print axioms IndexedCompletion.partial_closed
+#check IndexedCompletion.partial_decreasing
+#print axioms IndexedCompletion.partial_decreasing
+#check IndexedCompletion.partial_nonempty
+#print axioms IndexedCompletion.partial_nonempty
+#check IndexedCompletion.realization_exists
+#print axioms IndexedCompletion.realization_exists
+#check IndexedCompletion.survivor_realized
+#print axioms IndexedCompletion.survivor_realized
+#check IndexedCompletion.survival_iff_projection
+#print axioms IndexedCompletion.survival_iff_projection
+#check IndexedCompletion.survivor_exists
+#print axioms IndexedCompletion.survivor_exists
+#check IndexedCompletion.all_singleton_iff_unique
+#print axioms IndexedCompletion.all_singleton_iff_unique
+#check IndexedCompletion.transport_self
+#print axioms IndexedCompletion.transport_self
+#check IndexedCompletion.transport_succ
+#print axioms IndexedCompletion.transport_succ
+#check IndexedCompletion.transport_one
+#print axioms IndexedCompletion.transport_one
+#check IndexedCompletion.transport_comp
+#print axioms IndexedCompletion.transport_comp
+#check IndexedCompletion.transport_left
+#print axioms IndexedCompletion.transport_left
+#check IndexedCompletion.compatible_transport
+#print axioms IndexedCompletion.compatible_transport
+#check IndexedCompletion.compatible_survives
+#print axioms IndexedCompletion.compatible_survives
+#check IndexedCompletion.finitePath_at
+#print axioms IndexedCompletion.finitePath_at
+#check IndexedCompletion.finitePath_compatible
+#print axioms IndexedCompletion.finitePath_compatible
+#check IndexedCompletion.transport_continuous
+#print axioms IndexedCompletion.transport_continuous
+#check IndexedCompletion.coordinate_forgetting_iff_diameter
+#print axioms IndexedCompletion.coordinate_forgetting_iff_diameter
+#check IndexedCompletion.nonuniform_four_way
+#print axioms IndexedCompletion.nonuniform_four_way
+#check IndexedCompletion.extensionRange_of_le
+#print axioms IndexedCompletion.extensionRange_of_le
+#check IndexedCompletion.range_step
+#print axioms IndexedCompletion.range_step
+#check IndexedCompletion.ranges_antitone
+#print axioms IndexedCompletion.ranges_antitone
+#check IndexedCompletion.extensionRange_closed
+#print axioms IndexedCompletion.extensionRange_closed
+#check IndexedCompletion.survival_iff_all_ranges
+#print axioms IndexedCompletion.survival_iff_all_ranges
+#check IndexedCompletion.singleton_coordinate_attraction
+#print axioms IndexedCompletion.singleton_coordinate_attraction
+#check IndexedCompletion.all_singleton_attraction
+#print axioms IndexedCompletion.all_singleton_attraction
+#check IndexedCompletion.attraction_implies_forgetting
+#print axioms IndexedCompletion.attraction_implies_forgetting
+#check IndexedCompletion.forgetting_implies_all_singleton
+#print axioms IndexedCompletion.forgetting_implies_all_singleton
+#check IndexedCompletion.coordinate_iff_horizon_forgetting
+#print axioms IndexedCompletion.coordinate_iff_horizon_forgetting
+#check IndexedCompletion.coordinate_iff_horizon_attraction
+#print axioms IndexedCompletion.coordinate_iff_horizon_attraction
+#check IndexedCompletion.nonuniform_completion_equivalences
+#print axioms IndexedCompletion.nonuniform_completion_equivalences
+#check IndexedCompletion.unique_iff_horizon_attraction
+#print axioms IndexedCompletion.unique_iff_horizon_attraction

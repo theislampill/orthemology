@@ -1,0 +1,60 @@
+{
+  "status": "source-linked analytical extraction, not independently adjudicated gold",
+  "primary_capsule": "../../SOURCE_CAPSULE.md",
+  "latin_url": "https://www.corpusthomisticum.org/sth1002.html",
+  "latin_body_sha256": "e5bc216a594116fa5e0c238012de9963990b07fafaea1cf40bfc0064366fdf67",
+  "latin_locus": "28302",
+  "paired_rendered_sha256": "6297d19569d8728d3bb14b49055303b4e2f9a45b4f9b1a1cf2704057a9a7b94f",
+  "scope_keys": {
+    "a": "28302:context-0",
+    "p": "28302:context-1",
+    "f": "28302:context-2"
+  },
+  "proposed_original_role_values": {
+    "a": true,
+    "p": false,
+    "f": false
+  },
+  "first_fragment": [
+    [
+      "enter",
+      "p"
+    ],
+    [
+      "enter",
+      "f"
+    ],
+    [
+      "emit",
+      "inner-output"
+    ]
+  ],
+  "second_fragment": [
+    [
+      "exit",
+      "f"
+    ],
+    [
+      "exit",
+      "p"
+    ],
+    [
+      "emit",
+      "return-output"
+    ]
+  ],
+  "missing_boundary": {
+    "0": "f",
+    "1": "p"
+  },
+  "acquired_boundary": {
+    "0": "f",
+    "1": "p",
+    "2": "a"
+  },
+  "current_carrier_force": "report",
+  "original_role_query_only": true,
+  "bilingual_proposition_preservation": "not certified; electronic-witness control discrepancy separately recorded",
+  "actual_full_page_alternative": true,
+  "historical_retirement_or_read_budget": "none claimed"
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "tenth-external-toolchain-requirements-v1",
+  "bundled_runtime": false,
+  "hermetic_replay_claimed": false,
+  "lean": {
+    "version": "4.19.0",
+    "compiler_commit_display": "6caaee842e94",
+    "historical_binary_identity": {
+      "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+      "bytes": 8880
+    }
+  },
+  "mathlib": {
+    "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "historical_source_archive_sha256": "9fce64f31ba5612df46871eee8b4581c81c120604deb08cc35fa9f0fb543a425",
+    "entrypoint_identity": {
+      "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a",
+      "bytes": 289659
+    },
+    "toolchain_version_file": {
+      "public_path": "dependencies/lean-toolchain",
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+      "bytes": 25
+    },
+    "dependency_lock": {
+      "public_path": "dependencies/mathlib-lake-manifest.json",
+      "sha256": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752",
+      "bytes": 2786
+    }
+  },
+  "historical_environment_script_identity": {
+    "sha256": "1ff5b5d46f1e67ee0c007e658ef2cffb7270425f581237d76a5a64a645090129",
+    "bytes": 1225
+  },
+  "reconstruction_contract": {
+    "required_relative_path": "toolchain-restored/environment.sh",
+    "exports": [
+      "LEAN_ROOT",
+      "MATHLIB_ROOT",
+      "PATH",
+      "LEAN_PATH"
+    ],
+    "content": "Configure recipient-local paths as described in REPRODUCIBILITY.md; original absolute paths are not portable."
+  },
+  "trust": [
+    "Lean compiler and kernel",
+    "Mathlib and pinned dependencies with compatible compiled outputs",
+    "standard axioms propext, Classical.choice, Quot.sound",
+    "host OS and file-reading tools"
+  ],
+  "execution_limits": {
+    "compiler_threads": 1,
+    "module_wall_cap_seconds": 180,
+    "heartbeats": "default",
+    "sequential_packets": true
+  }
+}

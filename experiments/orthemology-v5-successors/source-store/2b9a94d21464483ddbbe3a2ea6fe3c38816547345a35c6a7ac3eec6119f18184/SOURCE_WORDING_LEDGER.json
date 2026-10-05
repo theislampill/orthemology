@@ -1,0 +1,88 @@
+{
+  "schema": "occurrence-public-source-accounting-v2",
+  "underlying_work": "Aquinas, Summa theologiae I q.2 a.1",
+  "work_level_cap": 200,
+  "direct_quotation_words": 0,
+  "compact_capsule": {
+    "path": "tranche10/reviews/cross-component/public-projection-v2/occurrence/SOURCE_CAPSULE.md",
+    "sha256": "e25a4892f50eabf427b9eafce002744aeed9e5ffecc2b5f8896a8992ed7f28f1",
+    "bytes": 1701,
+    "charged_words": 28
+  },
+  "collation_addendum": {
+    "path": "tranche10/research/printed-source-collation/public/COLLATION_ADDENDUM.md",
+    "sha256": "cb9aa16dc764ad0aa193ca464e2335a8474b782084a573ab1ede1420eda228ff",
+    "bytes": 659,
+    "charged_words": 37
+  },
+  "unchanged_fixture": {
+    "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/fixtures/source_roles.json",
+    "sha256": "8d821ec871977ba5c22ff00d8cc27841c32aab682aae0c0d2cf99cb6f695169c",
+    "bytes": 1325,
+    "charged_fields": [
+      {
+        "json_pointer": "/proposed_original_role_values",
+        "canonical_value_sha256": "ea61a411e27a02cc19f8b5e07413754b784e56d2802b0cedbcbf46431a01c2c6",
+        "charged_lexical_words": 7
+      },
+      {
+        "json_pointer": "/first_fragment",
+        "canonical_value_sha256": "b8300c434bdb51d4033ca1d110b9429fe1815ebfc9e014552c6d9282f900d7f2",
+        "charged_lexical_words": 7
+      },
+      {
+        "json_pointer": "/second_fragment",
+        "canonical_value_sha256": "2f3274743bb28b01b29f7fe869f65d32d0843df03a868b2d3cf43ddd928bc17e",
+        "charged_lexical_words": 7
+      },
+      {
+        "json_pointer": "/bilingual_proposition_preservation",
+        "canonical_value_sha256": "2707aa209c7b6324a3d3d277fe51475a8c6c9faa71cec57a680362638c8033a6",
+        "charged_lexical_words": 8
+      }
+    ],
+    "charged_words": 29,
+    "method": "Conservative lexical accounting counts relevant JSON field names and scalar keys/values by whitespace, excluding JSON punctuation. Source identities are locators; the remaining boundary map and test results are original analytical construction."
+  },
+  "extra_conservative_source_associated_spans": [
+    {
+      "path": "tranche10/research/occurrence-continuation/release-candidate-v1/EXACT_EFFECT_ALGEBRA.md",
+      "document_sha256": "b824c43b4f4fad672bb96e930241787b8d07d36a69d49f20ea9d85d2d51b43d2",
+      "start_character": 3922,
+      "end_character": 4024,
+      "span_sha256": "cfee2472e2aeae010af7fe8e6b7df5ff373411d29c781572886177ded7dbbee2",
+      "conservative_whitespace_words": 15
+    },
+    {
+      "path": "tranche10/research/occurrence-continuation/release-candidate-v1/ORACLE_AND_FORCE_PRECISIONS.md",
+      "document_sha256": "a282ebf891d26ca2e55fc93bdb73fa3159f60a6388545b930076c17fd73c7571",
+      "start_character": 7665,
+      "end_character": 7829,
+      "span_sha256": "47a186624a575967de4a134a648a7c019733cfa2901008b67668f096f61690a4",
+      "conservative_whitespace_words": 19
+    }
+  ],
+  "total_charged_words": 166,
+  "original_capsule_redistributed": false,
+  "original_source_inspection_findings_redistributed": false,
+  "original_source_budget_ledger_redistributed": false,
+  "remaining_words": 34,
+  "delivered_chat": {
+    "channel": "chatgpt",
+    "message_id": "Sentinel_885c1cf810588191bf04460efbaf6b11",
+    "delivered_utc": "2026-10-03T13:14:52Z",
+    "paragraph": 2,
+    "charged_words": 38,
+    "span_sha256": "491d9bb36c1ec2e52343513f085c1f70d12ea641e3352d8428dc80492582579c",
+    "text_reproduced_in_this_ledger": false,
+    "classification": "Conservative charge for the complete Aquinas-derived paragraph, including introductory framing."
+  },
+  "previous_public_projection": {
+    "path": "tranche10/reviews/cross-component/public-projection-v1/occurrence/SOURCE_CAPSULE.md",
+    "sha256": "b822321099c1e6406f0a544cb2d29b9d9ceb90058966d40424ba4fc5b0c4bd15",
+    "bytes": 2188,
+    "redistributed_in_current_selection": false
+  },
+  "scope": "Current public selection plus delivered Tenth chat; no separate file, message, translation or archive budget.",
+  "report_final_message_reserve_words": 34
+}

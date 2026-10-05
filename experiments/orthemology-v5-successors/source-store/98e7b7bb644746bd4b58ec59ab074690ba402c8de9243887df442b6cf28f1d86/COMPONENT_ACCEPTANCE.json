@@ -1,0 +1,426 @@
+{
+  "schema": "tenth-component-acceptance-map-v2",
+  "status": "FINAL",
+  "components": [
+    {
+      "id": "null-distribution",
+      "roots": [
+        "tranche10/research/existential-explanation/freeze-v1"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/existential-completion/REVISION_ACCEPTANCE.md",
+          "sha256": "aa5e85d45661b8ad133b31d8321c7491f41404b65fc15e2df28c66764e7ea8fe",
+          "bytes": 2256
+        },
+        {
+          "path": "tranche10/reviews/existential-completion/REVIEW_SCOPE_AND_ACCOUNTING.json",
+          "sha256": "545a363c0bba2c23d49bf5f79cc8dc33f0e61f1ba8afba7afb378e699bc68cca",
+          "bytes": 3967
+        }
+      ],
+      "evidence_kind": "Ordinary mathematical implication and bounded philosophical assessment; no actual-source closure",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "kind-priority",
+      "roots": [
+        "tranche10/research/existential-explanation/kind-priority-freeze-v1"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/kind-priority/ACCEPTANCE.md",
+          "sha256": "56d3b61c9749fdffacecdd3026e4f4b25de10ab7207ec85510b36fb95469dad0",
+          "bytes": 2974
+        },
+        {
+          "path": "tranche10/reviews/kind-priority/ACCEPTANCE_RECEIPT.json",
+          "sha256": "4638c549c8ae5c758434c813a9626d8ae0c93ecea9d189f09a56c939acb85871",
+          "bytes": 2040
+        }
+      ],
+      "evidence_kind": "Bounded relevance/inference assessment and conditional necessary-contributor consequence",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "transfer-warrant",
+      "roots": [
+        "tranche10/research/existential-explanation/transfer-warrant/freeze-v1"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/research/existential-explanation/transfer-warrant/freeze-v1/MANIFEST.json",
+          "sha256": "7e14e75a4171a8c839e028b08207aaa5a43b67c3acce41f1e8698c30429520eb",
+          "bytes": 1800
+        },
+        {
+          "path": "tranche10/research/existential-explanation/transfer-warrant/freeze-v1/review/REVIEW_BINDING.json",
+          "sha256": "36fecbac023dba84fb32ad6327434436b292c865dd79c447cf18c810a3c4b748",
+          "bytes": 1788
+        }
+      ],
+      "evidence_kind": "Bounded philosophical argument; actual target, modal and joint-scope premises remain separate",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "organised-reliance",
+      "roots": [
+        "tranche10/research/practical-authority/research-v3"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/organised-reliance/FINAL_DISPOSITION_v3.md",
+          "sha256": "1f7a799e53f6adfe131d0b0ae6590c98b0905282808c2adf521b0aabc44ae4d0",
+          "bytes": 3066
+        },
+        {
+          "path": "tranche10/reviews/organised-reliance/REVIEW_V3_INPUT_IDENTITIES.json",
+          "sha256": "a902f11a6e6f8a2bad9e73323f1f16bd6f60c880a95c4d77682664b25448cb4c",
+          "bytes": 1736
+        }
+      ],
+      "evidence_kind": "Conditional pro-tanto care/transition responsibility; no recipient jurisdiction",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "bounded-release-join",
+      "roots": [
+        "tranche10/research/practical-authority/cross-application-v1"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/bounded-release-application/INDEPENDENT_REVIEW_v1.md",
+          "sha256": "61deeb33635687c7206fe0b70bf0160d4ed42ad72200f42ef7214bcc2ecb839c",
+          "bytes": 7843
+        },
+        {
+          "path": "tranche10/reviews/bounded-release-application/FINAL_VERIFICATION.json",
+          "sha256": "8bd39a07b3b62269f0891a2cff58844f298689dfc05915f186422e3281911c5e",
+          "bytes": 2763
+        }
+      ],
+      "evidence_kind": "Conditional application plus independent finite model checks; no moral inference from test counts",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "occurrence",
+      "roots": [
+        "tranche10/research/occurrence-continuation/release-candidate-v1"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/occurrence-checker/INDEPENDENT_REVIEW_v1.md",
+          "sha256": "1dff5f73b342b3685837468887215898a1754786cf22127497587c99c3622fb5",
+          "bytes": 9066
+        },
+        {
+          "path": "tranche10/reviews/occurrence-checker/FINAL_CANDIDATE_RECONCILIATION.json",
+          "sha256": "29ed3d1e8cbf757c18dc1ac08cc2b243fd05ad4bb7ebac1f10206ae1966b69b3",
+          "bytes": 1124
+        },
+        {
+          "path": "tranche10/reviews/occurrence-checker/FINAL_EXECUTION_RECORD.json",
+          "sha256": "0748d78e938b178963f833decf2cafba3584b4262c534b6083168d59a0a1b3d6",
+          "bytes": 6964,
+          "representation": "approved_public_projection",
+          "historical_accepted_identity": {
+            "path": "tranche10/reviews/occurrence-checker/FINAL_EXECUTION_RECORD.json",
+            "sha256": "3be0200bee7074c690a73f9d42c4c5adf08b1d849f14692c620e5dc55dddde75",
+            "bytes": 6981
+          }
+        }
+      ],
+      "evidence_kind": "Restricted ordinary derivations and bounded implementation checks; no source authentication or full public source-byte replay",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "law-uniform-review",
+      "roots": [
+        "tranche10/research/law-completion-correction"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/existential-completion/formal-review-20261003T1229Z/INDEPENDENT_FORMAL_REVIEW.md",
+          "sha256": "a8b92f471092ab492f9e608f1e9cd1f4619134d65fcfb71434191c0d10f3d3e4",
+          "bytes": 6115
+        },
+        {
+          "path": "tranche10/reviews/existential-completion/formal-review-20261003T1229Z/REVIEW_VALIDATION.json",
+          "sha256": "4db5b0b7376ded52142aea83d3fb686c45a3a4440c64d5b2cda85be42cf999b0",
+          "bytes": 4123
+        }
+      ],
+      "evidence_kind": "Exact Lean implementation/interface verification; reviewer authored ordinary derivation; trusted external Lean/Mathlib environment",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "law-nonuniform-review",
+      "roots": [
+        "tranche10/research/law-completion-correction/nonuniform"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/existential-completion/nonuniform-formal-review-20261003T1259Z/INDEPENDENT_NONUNIFORM_ACCEPTANCE.md",
+          "sha256": "4c9e8a08260d26b8b1821c190c715518d0b763ee1327d396aefd2bbe903dc87a",
+          "bytes": 8472
+        },
+        {
+          "path": "tranche10/reviews/existential-completion/nonuniform-formal-review-20261003T1259Z/REVIEW_VALIDATION.json",
+          "sha256": "5e384206a6f53aed90aad9a90ff51bda66a7cfc6e54540d43ddae46fe8c23c81",
+          "bytes": 5129
+        }
+      ],
+      "evidence_kind": "Exact Lean implementation/interface verification; reviewer authored ordinary derivation; trusted external Lean/Mathlib environment",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "printed-collation",
+      "roots": [
+        "tranche10/research/printed-source-collation/public"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/printed-source-collation/public/ACCEPTANCE.json",
+          "sha256": "9b7bc71bcdc7497efd5a0d11ddbb7d5ae4f3134e2c58f687d20f5dab375e52f0",
+          "bytes": 2060
+        },
+        {
+          "path": "tranche10/reviews/printed-source-collation/public/REVIEW_RECEIPT.md",
+          "sha256": "05f00f5678a39cc0e608b3ded1184321a2a42112150b7c1841a9a345ad701fbf",
+          "bytes": 986
+        }
+      ],
+      "evidence_kind": "Witness-relative local collation; no translation-base or whole-edition claim",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "source-version",
+      "roots": [
+        "tranche10/reviews/explanation-source-version"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/explanation-source-version/VERIFICATION_NOTE.md",
+          "sha256": "cdff07e133a38347c1a0f5b31787af914c50f3023e6690a42a356ec97ab4e74e",
+          "bytes": 4831
+        }
+      ],
+      "evidence_kind": "Narrow bibliographic/version verification with unresolved proof-witness finality",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "finite-limit",
+      "roots": [
+        "tranche10/reviews/finite-limit-certificates"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/finite-limit-certificates/REVIEW_RECEIPT.json",
+          "sha256": "e84f15943737e2a8e9abd5a3fa218498a8ffae1e11880bc63a98e71fa931a25b",
+          "bytes": 2471
+        }
+      ],
+      "evidence_kind": "Ordinary mathematical boundary and expected-outcome controls; no executed/new checker",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "governance-authority",
+      "roots": [
+        "tranche10/research/governance-authority-bridge/research-v2"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/governance-authority-bridge/ACCEPTANCE_v2.md",
+          "sha256": "7de21865096e6390da71fc3590ac92c4836476429ac0a167c7f573af57e0e181",
+          "bytes": 6654,
+          "representation": "approved_public_projection",
+          "historical_accepted_identity": {
+            "path": "tranche10/reviews/governance-authority-bridge/ACCEPTANCE_v2.md",
+            "sha256": "81be5befa9d5461d66173b87871765afb2462372a649434764c67571c329dd43",
+            "bytes": 6659
+          }
+        },
+        {
+          "path": "tranche10/reviews/governance-authority-bridge/REVIEW_MANIFEST.json",
+          "sha256": "0fb217ba1a72b8fa7b4305032170ecb8b160a70ef4007900299c1bc73a64cb54",
+          "bytes": 1833
+        },
+        {
+          "path": "tranche10/reviews/governance-authority-bridge/VERIFICATION_RECEIPT.json",
+          "sha256": "219706030f4342a646b860d9777c209f15a50f07242603745ea0a4d8af564b74",
+          "bytes": 1220
+        }
+      ],
+      "evidence_kind": "Bounded fair-arrangement cooperation and two-time feasible-alternatives assessment; manufactured dependence may give urgent third-party reasons without legitimating prior choice, waiving fitting remedy, or granting command power",
+      "status": "accepted_at_stated_scope",
+      "source_use": {
+        "work": "Raz2006",
+        "author_words": 184,
+        "review_synopsis_words": 0,
+        "quotation_words": 0,
+        "remaining_work_level_words": 16,
+        "prior_author_version_distribution": "identity-only manifest, no v1 prose"
+      }
+    },
+    {
+      "id": "joint-existential-coverage",
+      "roots": [
+        "tranche10/research/joint-existential-coverage/candidate-v2"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/joint-existential-coverage/ACCEPTANCE_v2.md",
+          "sha256": "3283a5954c5aca18e2ce627c3e3cf619bcd34ef637f50bbd920ba59cf5c1e60e",
+          "bytes": 11991
+        },
+        {
+          "path": "tranche10/reviews/joint-existential-coverage/ACCEPTED_INPUTS_v2.sha256",
+          "sha256": "6becf65cc530098095fb4ba89789e73071b399f9c338a06e698e6da97950120b",
+          "bytes": 1313
+        },
+        {
+          "path": "tranche10/reviews/joint-existential-coverage/REVISION_VERIFICATION_v2.json",
+          "sha256": "c69de56b84df60b055445ef8fe9d2a16ab7b2dac22437380e664c38590d943d9",
+          "bytes": 4686
+        }
+      ],
+      "evidence_kind": "Bounded philosophical contribution: typed conditional actual necessary concrete resource; supplying-power condition separately earns capacity-bearer consequence. Positive local warrant is retained; no actual necessary particular or actual exercise established.",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "practical-perfection",
+      "roots": [
+        "tranche10/research/practical-perfection-warrant/research-v2"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/practical-perfection-warrant/REVIEW_RECEIPT.json",
+          "sha256": "550ba7413ce164d0d4f1e537f546b14910869764e1e1732d94dca7a836e02083",
+          "bytes": 2620
+        },
+        {
+          "path": "tranche10/reviews/practical-perfection-warrant/REVIEW_MANIFEST.json",
+          "sha256": "ce0f96506977ef5e6ccddcce44eb0bbfc235fea1fd2af0601c78a3079ef328f7",
+          "bytes": 1354
+        },
+        {
+          "path": "tranche10/reviews/practical-perfection-warrant/INDEPENDENT_REVIEW.md",
+          "sha256": "c94ed9168e136824eaaedefc1b6591d2be1652fc52da4d44cd9b43c43e729b68",
+          "bytes": 20359
+        }
+      ],
+      "evidence_kind": "Accepted bounded argument and primary-attribution scope. Inherited prima-facie support for comprehensive practical integration is retained; excluding two comparison objections does not establish complete repair, actual or essential N.",
+      "status": "accepted_at_stated_scope",
+      "source_use": {
+        "MF_volume6": 110,
+        "Asfahani": 87,
+        "Nubuwwat": 120,
+        "review_new_historical_exposition_words": 0,
+        "review_quote_words": 0,
+        "superseded27_word_JSON_duplicate_included": false
+      }
+    },
+    {
+      "id": "actual-powers-source-level",
+      "roots": [
+        "tranche10/research/actual-powers-source-level-study/candidate-v1"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/actual-powers-theory/ACCEPTANCE_v1.md",
+          "sha256": "6d1289c04a1e351f05d93f49822ee850d513f0c256b8eb151481b900e2636249",
+          "bytes": 10631
+        },
+        {
+          "path": "tranche10/reviews/actual-powers-theory/REVIEW_MANIFEST_v1.sha256",
+          "sha256": "435d857215f9bdae83e36813bb3a288d04915fa3385aef4e5ee4e02b7faf89a4",
+          "bytes": 542
+        },
+        {
+          "path": "tranche10/reviews/actual-powers-theory/VERIFICATION_v1.json",
+          "sha256": "8b61a68aac99e20015d9bede407dab173614ac1c7375719749d885279c84bcfe",
+          "bytes": 5954
+        }
+      ],
+      "evidence_kind": "Accepted bounded source-level philosophical assessment, rational support and inference criticism. Positive local generative warrant and exact stronger-premise consequences are retained; no unconditional actual necessary resource or capacity-bearer conclusion.",
+      "status": "accepted_at_stated_scope",
+      "source_use": {
+        "work": "Hamri2022",
+        "author_charged_words": 129,
+        "review_new_primary_synopsis_words": 0,
+        "quotation_words": 0,
+        "shared_review_report_cap": 60,
+        "pre_draft_and_working_versions": "identity only, full prose excluded"
+      }
+    },
+    {
+      "id": "rp5-retention-clarification",
+      "roots": [
+        "tranche10/research/joint-existential-coverage/retention-clarification-v2"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/joint-existential-coverage/retention-clarification-review-v1/ACCEPTANCE.md",
+          "sha256": "6b1e03be3d7b9111acfc000f87300f75c1e5537236d2f9d64115312c440ee034",
+          "bytes": 7431
+        },
+        {
+          "path": "tranche10/reviews/joint-existential-coverage/retention-clarification-review-v1/VERIFICATION.json",
+          "sha256": "91831e5ca249cf1ac98f755e93ca7c63e59329d63b792a8ee97759240daf2bbb",
+          "bytes": 3676
+        },
+        {
+          "path": "tranche10/reviews/report-substantive/RP5_REPORT_INTEGRATION_ACCEPTANCE_v2.md",
+          "sha256": "c6535660b2fdc0f7fbb20accc7781da4f8731d15173738cb57311179ed8b02a6",
+          "bytes": 4726
+        }
+      ],
+      "evidence_kind": "Accepted controlling premise clarification for both RP5 alternatives; historical occurrence retention and actual coverage remain separate. No new theorem, source exposition or actual modal warrant; report prose and native bytes unchanged.",
+      "status": "accepted_at_stated_scope"
+    },
+    {
+      "id": "native-report-preservation",
+      "roots": [
+        "tranche10/report/public"
+      ],
+      "current_receipts": [
+        {
+          "path": "tranche10/reviews/report-substantive/NATIVE_ACCEPTANCE_v1.md",
+          "sha256": "b41250c4528000408263b1493bc45cb0508986606901820df5966cd1806a616e",
+          "bytes": 4609
+        },
+        {
+          "path": "tranche10/reviews/report-references/FINAL_REFERENCE_ACCEPTANCE_v2.json",
+          "sha256": "556b833ad677860ecfda07d0cd3861bbb7a70b5b083da1189a94c28522dd5f6c",
+          "bytes": 3512
+        },
+        {
+          "path": "tranche10/reviews/cross-component/REPORT_V10_SOURCE_DISTRIBUTION_ACCEPTANCE_v1.json",
+          "sha256": "e56cc8d2c11ee851c031a61275983cac8c7d5dbfa2811d3121f84802ab422395",
+          "bytes": 7600
+        },
+        {
+          "path": "tranche10/reviews/report-permission-delta/NATIVE_DELTA_ACCEPTANCE_v1.json",
+          "sha256": "8f3a68af6c5b14c4b296c9356fc6ed1db9dfb0becc9581481503ccbaa0658dd8",
+          "bytes": 1610
+        },
+        {
+          "path": "tranche10/reviews/report-visual/REBOUND_VISUAL_QA_RECEIPT_v4.json",
+          "sha256": "f9eb05e600e1fdc5d86b6e46feaddfa77bbc9138db4a3836c11e19a9bd877152",
+          "bytes": 13185
+        }
+      ],
+      "evidence_kind": "Separate native report preservation, public claim mapping, reference and source-distribution checks; report prose is delivered separately and excluded from the evidence payload",
+      "status": "accepted_at_stated_scope"
+    }
+  ],
+  "pending": [],
+  "report_prose_in_payload": false,
+  "separate_report_identity": {
+    "filename": "Orthemology_Tenth_Research_Report_v1_20261003.docx",
+    "sha256": "72d732325f48c720633f32be9b9fd76ef80a47369a3e1df69b08581acaa969fb",
+    "bytes": 64632
+  },
+  "report_binding_path": "tranche10/report/public/REPORT_BINDING.json",
+  "chronology": "Controlling component receipts and the current report binding identify the accepted scopes. Earlier integration records are dated companions. Approved public replacements and intermediate identities are recorded in PROVENANCE_MAP.json. The separate native report is represented by its exact identity and current claim map."
+}

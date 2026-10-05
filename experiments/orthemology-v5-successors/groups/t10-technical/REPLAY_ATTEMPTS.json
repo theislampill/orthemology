@@ -1,0 +1,112 @@
+{
+  "schema": "orthemology-t10-attempt-association-v1",
+  "scope": "Exact runtime-to-registry receipt association; only attempt IDs are disambiguated.",
+  "attempts": [
+    {
+      "published_receipt_id": "T10-UNIFORM-COMPLETION-attempt1",
+      "runtime_receipt_id": "T10-UNIFORM-COMPLETION-replay",
+      "runtime_file_sha256": "97cf4aef01637fd57a4b783f993fb11a35e413bc1eca092e5e5bcecce7e36d07",
+      "runtime_canonical_sha256": "d51db16561d1447ad1a3ff1198d801d3cb08fcfb0f6a22526e3ea3da2409f3a3",
+      "published_canonical_sha256": "18dc0eb81876c8627e67bf097a22b5e103a98ae239bc019e492c4092ed0c8eed",
+      "unchanged_non_id_fields_sha256": "24cc17cb3bc8fe0718598412cb1fb3aa28e27d9c81f09cd2a92d49fec54eaa1b",
+      "changed_fields": [
+        "id"
+      ],
+      "suite_id": "T10-UNIFORM-COMPLETION",
+      "suite_sha256": "a28b96a2bbe00326932ceadfd613d11f74304d010c707456806117f2865ae1dd",
+      "runner_sha256": "46624445c5c71706a015e6a44ee38f0fa2c3d657537dc2429f4037f9d1f04568",
+      "outcome": "FAILED",
+      "proof_scope": "NONE",
+      "started_at": "2026-10-05T19:55:31.338004Z",
+      "ended_at": "2026-10-05T19:56:54.621909Z",
+      "exit_code": 1,
+      "target_readbacks": 0,
+      "independent_evidence_increment": 0
+    },
+    {
+      "published_receipt_id": "T10-UNIFORM-COMPLETION-attempt2",
+      "runtime_receipt_id": "T10-UNIFORM-COMPLETION-replay",
+      "runtime_file_sha256": "32ca6392ba71f1b7774bdbd6471858b9186d03c3c1e39b67dabf3a86c1b62cfb",
+      "runtime_canonical_sha256": "100a6498795cd7302a29b464eb8e9b0428fd95f8621c3a3ce2efda5e45c6d4c0",
+      "published_canonical_sha256": "8d98fff847abc1c8a34e8fdf5604f8847e5000e8ebdbd1a21d3f19a66a46a690",
+      "unchanged_non_id_fields_sha256": "f09b5cffdd72a1d94a563f7500b43e91dbfe63809b407571dd0d6aa0a581776c",
+      "changed_fields": [
+        "id"
+      ],
+      "suite_id": "T10-UNIFORM-COMPLETION",
+      "suite_sha256": "a28b96a2bbe00326932ceadfd613d11f74304d010c707456806117f2865ae1dd",
+      "runner_sha256": "3f7c33cbe96d101d67c35511aa33e1691b33f992312fc9d53a7b5764a4772baa",
+      "outcome": "FRESH_KERNEL_COMPONENTS",
+      "proof_scope": "COMPONENTS",
+      "started_at": "2026-10-05T20:09:37.521104Z",
+      "ended_at": "2026-10-05T20:11:28.999917Z",
+      "exit_code": 0,
+      "target_readbacks": 56,
+      "independent_evidence_increment": 0
+    },
+    {
+      "published_receipt_id": "T10-NONUNIFORM-COMPLETION-replay",
+      "runtime_receipt_id": "T10-NONUNIFORM-COMPLETION-replay",
+      "runtime_file_sha256": "8797e18d4bff7a0918bcaf614c43b4674f3af6083543da3316be2a96797bf91a",
+      "runtime_canonical_sha256": "8834d82bdd6c3a05272d1c66eaa7b7fae3696cbc901d249854e1560a27a9ec3c",
+      "published_canonical_sha256": "8834d82bdd6c3a05272d1c66eaa7b7fae3696cbc901d249854e1560a27a9ec3c",
+      "unchanged_non_id_fields_sha256": "fb15a48a6bb9296f88cf2dc88d6fc26e992f945c95c9de1d6b2ad8f300405fdb",
+      "changed_fields": [],
+      "suite_id": "T10-NONUNIFORM-COMPLETION",
+      "suite_sha256": "b4961d8a11d334e67c5d05aa1834fb8e4b277cfbd54886804b28580d89e03975",
+      "runner_sha256": "46624445c5c71706a015e6a44ee38f0fa2c3d657537dc2429f4037f9d1f04568",
+      "outcome": "FRESH_KERNEL_COMPONENTS",
+      "proof_scope": "COMPONENTS",
+      "started_at": "2026-10-05T19:58:32.386341Z",
+      "ended_at": "2026-10-05T19:59:56.347493Z",
+      "exit_code": 0,
+      "target_readbacks": 43,
+      "independent_evidence_increment": 0
+    },
+    {
+      "published_receipt_id": "T10-MODEL-CHECKER-replay",
+      "runtime_receipt_id": "T10-MODEL-CHECKER-replay",
+      "runtime_file_sha256": "42d750d0a590eae422aa0a8c612072a202d8f1026159b5a273469af69043d23f",
+      "runtime_canonical_sha256": "1ab8beb0d322c1529a23fa2bda42afd424ad1d320af2d017dc6440c05ab2153a",
+      "published_canonical_sha256": "1ab8beb0d322c1529a23fa2bda42afd424ad1d320af2d017dc6440c05ab2153a",
+      "unchanged_non_id_fields_sha256": "19eb46f7e591fec9d3f3de4e4d91807ce9dc5f84d11a3107e3ce78a2ff03ff7c",
+      "changed_fields": [],
+      "suite_id": "T10-MODEL-CHECKER",
+      "suite_sha256": "cfa27f3f87308b729ffa374814f2ad3724f5de44bb8ce2bf67f6c2cdf47e7c3e",
+      "runner_sha256": "703bbf48d030b306d45334c6da094b9c042d75df8da2fae6a67194c3583f4729",
+      "outcome": "FINITE_ONLY",
+      "proof_scope": "FINITE",
+      "started_at": "2026-10-05T20:48:47.842246Z",
+      "ended_at": "2026-10-05T20:49:41.654850Z",
+      "exit_code": 0,
+      "target_readbacks": 17,
+      "independent_evidence_increment": 0
+    }
+  ],
+  "uniform_retry": {
+    "original_attempt": "T10-UNIFORM-COMPLETION-attempt1",
+    "fresh_retry": "T10-UNIFORM-COMPLETION-attempt2",
+    "reason": "The first adapter compared short source names inside LawCompletion.IndependentReview with qualified Lean output names. Original compilation and author readbacks completed; the generated target audit was skipped. The first attempt remains FAILED with no kernel credit.",
+    "repair": "Exact lexical namespace resolution was reviewed with regression tests before the one fresh retry. No proof source, stage command, target inventory, tool or dependency was substituted.",
+    "equal_receipt_fields": [
+      "suite_sha256",
+      "source_hashes",
+      "review_hashes",
+      "toolchain_sha256"
+    ],
+    "equal_evidence_fields": [
+      "descriptor_sha256",
+      "closure_sha256",
+      "source_hashes_before",
+      "source_hashes_after",
+      "import_fingerprints",
+      "tool_fingerprints",
+      "dependency_checks",
+      "driver_hashes",
+      "cache_policy"
+    ],
+    "equal_stage_argv_cwd_budget_sha256": "26c81de76f2adc5b30529aeeb42fdb1df0a1fce0945017ba34f813272a41abc9",
+    "independent_evidence_increment": 0
+  },
+  "nonuniform": "The first successful nonuniform physical run is retained unchanged; it was not repeated."
+}
