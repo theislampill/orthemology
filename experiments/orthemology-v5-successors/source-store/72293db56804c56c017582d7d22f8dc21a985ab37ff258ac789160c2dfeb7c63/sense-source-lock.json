@@ -1,0 +1,72 @@
+{
+  "format": "sense-scope-supplemental-source-lock-v1",
+  "repository": "https://github.com/theislampill/fusha",
+  "commit": "c8b5db593d88311e5a020607dba70ff838ab61c5",
+  "tree": "a5bd2b045bc36c78047b5d3f7e9c2807fbf4153c",
+  "scope": "Nine additional source identities used by the accepted sense-scope assessment. Byte bindings only; no source contents or new semantic checks. Separate from the original 70-file occurrence replay.",
+  "files": [
+    {
+      "blob_sha1": "aab6271cb94982f3a82132e2da5ab1da92acb89e",
+      "bytes": 6158,
+      "path": "docs/certification-policy.md",
+      "sha256": "431b6410794b4984015550f6245cdbb465519585a31d1063cd6cb51e8aeaa653",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/certification-policy.md"
+    },
+    {
+      "blob_sha1": "8c0be7220dd594d3669f2d63f227a220e6dfee73",
+      "bytes": 42383,
+      "path": "nahw/SKILL.md",
+      "sha256": "6bc6eb1b0520ccea6cec8053525b2eb309323bb2bf0c524aa09fbbcf71ca86a5",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/nahw/SKILL.md"
+    },
+    {
+      "blob_sha1": "47010e433950fdacec83a8814df3f95f4a048cab",
+      "bytes": 5855,
+      "path": "nahw/procedures/particle-function-decision.md",
+      "sha256": "6dcc6c6552d4eba816383c4149001c7e26b419648e2ada2e8c3ea73a3bdca9a4",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/nahw/procedures/particle-function-decision.md"
+    },
+    {
+      "blob_sha1": "bfbd1932a4d72b89e036ec3a41febc42b4638fe2",
+      "bytes": 2230,
+      "path": "qamus/data/current/NOTICE.md",
+      "sha256": "053d61d5fa03b6cdabe6e78e6f62c81188227b15837d01cfbafdf9599f1370f2",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/data/current/NOTICE.md"
+    },
+    {
+      "blob_sha1": "4c716a27c4bbeda1beec4646c942ba5d2f61e5be",
+      "bytes": 4848,
+      "path": "qamus/data/current/README.md",
+      "sha256": "5d101c4ca9907d12686057408cc450d178bb35e15d308b6aa4cff38f8cf3c348",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/data/current/README.md"
+    },
+    {
+      "blob_sha1": "44b6ec64d37f3ff24753ff0b0da0af859505d47b",
+      "bytes": 4830755,
+      "path": "qamus/data/current/entries.jsonl",
+      "sha256": "b742fde5a8c1a6f04cdf104e0e12fb374ed0d5349eb6a3ace7e34ba2f9e1c15d",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/data/current/entries.jsonl"
+    },
+    {
+      "blob_sha1": "c2f214f9eeaec94fe1823453a706188cd6e36f7a",
+      "bytes": 3449,
+      "path": "qamus/schemas/qamus-entry-public.schema.json",
+      "sha256": "0048115aa7b56b46898da0e48c04f0b6c3d1dafd03487d83e18a71a892b5ac94",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/schemas/qamus-entry-public.schema.json"
+    },
+    {
+      "blob_sha1": "eaef37a94aee0eab78e6e5bea875aeb8b740d129",
+      "bytes": 8455,
+      "path": "qamus/skills/particle-function-registry.jsonl",
+      "sha256": "fe46a6f57d16dfe5b5116bd55190533eb3d055b73711bd985c163754cfdd56fe",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/skills/particle-function-registry.jsonl"
+    },
+    {
+      "blob_sha1": "a303e1a812a4426a98f15d0efec7ff32f2fe7cdd",
+      "bytes": 57884,
+      "path": "sarf/SKILL.md",
+      "sha256": "23827fd83b27a4f5ede165eb845ad61ee942f4c345c1a7225a62c93d4eec01b7",
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/sarf/SKILL.md"
+    }
+  ]
+}

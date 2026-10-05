@@ -1,0 +1,499 @@
+{
+  "format": "occurrence-correspondence-source-lock-v1",
+  "repository": "https://github.com/theislampill/fusha",
+  "commit": "c8b5db593d88311e5a020607dba70ff838ab61c5",
+  "tree": "a5bd2b045bc36c78047b5d3f7e9c2807fbf4153c",
+  "scope": "Exact 70-file held source closure. Entries bind bytes; they do not redistribute those bytes or certify the full repository.",
+  "files": [
+    {
+      "path": "qamus/examples/p007-li-pilot/vn-unlock.json",
+      "blob_sha1": "133bce6000df78783127c5b20df0ec58b67569f9",
+      "sha256": "0b03c22d13ab88b291a14cfdcb6b6c84bbd79252bf58f790fa9870488b160a57",
+      "bytes": 1772,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/vn-unlock.json"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/migration-provenance.json",
+      "blob_sha1": "be739c92bf55505d34b764cba020a46b694a8fdb",
+      "sha256": "317c3d238f708119ff2074c968cec33606de559d374d8df630f5618f5db54295",
+      "bytes": 2726,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/migration-provenance.json"
+    },
+    {
+      "path": "qamus/schemas/typed-claim-contract.schema.json",
+      "blob_sha1": "d9dec7555b60e4e0dd2b328ee733ba596d49a6f2",
+      "sha256": "7508771ced0eea503b6e02c99a03f8aa8a9f82f34fa541bb3b2d0f0f5568ea60",
+      "bytes": 13758,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/schemas/typed-claim-contract.schema.json"
+    },
+    {
+      "path": "tools/typed_claim_contract.py",
+      "blob_sha1": "d61e51d6e73dd02c1eaa26932d9b3729b19fba36",
+      "sha256": "87a65432b1fd3014574f5cadda30bf9ae610b289ae193c45d8d7a1a1c23b8619",
+      "bytes": 19643,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/typed_claim_contract.py"
+    },
+    {
+      "path": "tools/validate_p007_pilot.py",
+      "blob_sha1": "1432698d9abc421a032786b023d2d92b076537fd",
+      "sha256": "0b09882f12f0ce72736039b6dfa509f3d2b7ba61318c29ae7801d65c6a90219e",
+      "bytes": 37984,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/validate_p007_pilot.py"
+    },
+    {
+      "path": "tools/validate_particle_projection_parity.py",
+      "blob_sha1": "52af81f2b846dba0dec7b8ece9a109731a5c29ae",
+      "sha256": "e83924f512b2bda1ac12b3f9428c774c3be2e1863b80e732c1c80aa25c1b0bc1",
+      "bytes": 33036,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/validate_particle_projection_parity.py"
+    },
+    {
+      "path": "tools/validate_website_payload.py",
+      "blob_sha1": "536749b8de69e2b372a7ecbc9c099a3858450f42",
+      "sha256": "5432487aee8293861d23db23252d419937d1d4599ab2fd1e17a3ea75c4734612",
+      "bytes": 45873,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/validate_website_payload.py"
+    },
+    {
+      "path": "tools/build_p007_li_pilot.py",
+      "blob_sha1": "f49ea0abbc1e73481a8c59a73b7065afd6677242",
+      "sha256": "d4133d20e270c2a6a66115218b25b159921c20e1b5ade904f3c8f3a357fc2e41",
+      "bytes": 26886,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/build_p007_li_pilot.py"
+    },
+    {
+      "path": "tools/certify_typed_fact.py",
+      "blob_sha1": "a7eb1f1589535fa91b128fa8f02db19e30009f25",
+      "sha256": "0716d9a80a21c3bc6f2348012e60db62628d419448fec7edda287805ac409ef1",
+      "bytes": 94382,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/certify_typed_fact.py"
+    },
+    {
+      "path": "tools/fact_ledger.py",
+      "blob_sha1": "c0d52f6c3beaae5584d494195ad61bb2047d974f",
+      "sha256": "bb9f94c8746257cd4f3f832e206d48aec59a1d0d85ab87604e659f71e15ab258",
+      "bytes": 24941,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/fact_ledger.py"
+    },
+    {
+      "path": "qamus/skills/reason-key-registry.jsonl",
+      "blob_sha1": "8738f921edc1ecaa71c7b61f48facbc7fb28bf9b",
+      "sha256": "6da40a7c83ffe6a167255ce1ee9bbd82fedfae095a41841aa91ca4f2b2c749e0",
+      "bytes": 6560,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/skills/reason-key-registry.jsonl"
+    },
+    {
+      "path": "qamus/schemas/two-vote-artifact.schema.json",
+      "blob_sha1": "ef991b8d3564070542e237d493bb9acc7d935c01",
+      "sha256": "51c10869771e90acc20a40e04fff1d608511dd626b29568b130508ecc4430bbf",
+      "bytes": 12881,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/schemas/two-vote-artifact.schema.json"
+    },
+    {
+      "path": "qamus/lattice/registered-projectors.json",
+      "blob_sha1": "92f7b4f7286cfbc6ba97845aab3f933077962b3e",
+      "sha256": "0239a26a09d6f721bdda88badff411f56e7305b055b6550dd40bb218cff320eb",
+      "bytes": 21298,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/lattice/registered-projectors.json"
+    },
+    {
+      "path": "tools/build_p007_website_payloads.py",
+      "blob_sha1": "ca9c81e0f42ecb68d22ac8c00b144c0029925e2c",
+      "sha256": "63af022801ccf56fe7e01d6f0547a554c3bd71a012a338b58222c652bb37ef77",
+      "bytes": 9382,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/build_p007_website_payloads.py"
+    },
+    {
+      "path": "qamus/examples/website-payloads/p007_li_adam_clean.payload.json",
+      "blob_sha1": "e60ffe22c665506f13f2d3fc55f8a714e627a9dc",
+      "sha256": "cf471fc2cd2e0994c3c0b10a168a191021434dbd9bae5b19f69748a4b9447f61",
+      "bytes": 7133,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/website-payloads/p007_li_adam_clean.payload.json"
+    },
+    {
+      "path": "qamus/examples/website-payloads/p007_lillahi_fused.payload.json",
+      "blob_sha1": "c46b318ebf858bf3999e84ad0d6cbc73822c8861",
+      "sha256": "2ab0b486e70260d812c69fb3e632be12842afe9a7d4956448399c6ad1575f52a",
+      "bytes": 7790,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/website-payloads/p007_lillahi_fused.payload.json"
+    },
+    {
+      "path": "docs/qamus/website-handoff/WEBSITE-AGENT-HANDOFF-CONTRACT-2026-07-29.md",
+      "blob_sha1": "c05fd9bc40da951072c06606de32484e1aa0016b",
+      "sha256": "c6fc1943057bc2a9f00b794950fc5c2dafce46d92b5f98ba3c4979ebb7371a0a",
+      "bytes": 19050,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/qamus/website-handoff/WEBSITE-AGENT-HANDOFF-CONTRACT-2026-07-29.md"
+    },
+    {
+      "path": "qamus/indexes/largelexicon/qamus-qword-crosswalk.manifest.json",
+      "blob_sha1": "1f796c5e2a887b1626dd8d395aa8da640601750b",
+      "sha256": "9efe385fb3f8c3b6c0c8be9407a81322261bfc07996a55a83d8a8d4b2b84bc43",
+      "bytes": 108399,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/indexes/largelexicon/qamus-qword-crosswalk.manifest.json"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/certification/events.jsonl",
+      "blob_sha1": "0df972bb6b5d6c6601b382fb08d1fa4d1f493d7d",
+      "sha256": "ae58eb6502c451ee1969fd51b144b32b7db25600532a6dd3e85e7e40c4f023f7",
+      "bytes": 424154,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/certification/events.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/certification/claim-binding-migration.json",
+      "blob_sha1": "5b21625a5dbfee91aaa5d969762ccb95100d65d4",
+      "sha256": "c1cbb115875a10f554d81d7ba583818fe25d8488fabc44936fdf0cdf1bb50153",
+      "bytes": 21874,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/certification/claim-binding-migration.json"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/locations.json",
+      "blob_sha1": "4e9c00c3a5375c8a561ea36ebd36a9e201e82a72",
+      "sha256": "07a85ae342ab9a63a87ef44d1b07c14a899773adcb7555dcc9c07bfe72d51fbc",
+      "bytes": 27537,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/locations.json"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/parity-report.json",
+      "blob_sha1": "ef260e5b8429b4a58c1ae3f996f3a3b6cf18a08a",
+      "sha256": "5ac1f10e807aba6ffbada7c25c9cf519ce5fa34cb167eae914b0a428c3bb4670",
+      "bytes": 13736,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/parity-report.json"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/entry-reverse-index.json",
+      "blob_sha1": "cd94e3fb3766ed5161cb093be482612d10652d74",
+      "sha256": "1a7b4b3fbda650e01c84918402e70f6e97e47fa62ff47b61b946fd5968de477d",
+      "bytes": 5755,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/entry-reverse-index.json"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/production-difference.json",
+      "blob_sha1": "a30e722782740fcd013e61ab38abfc853798919f",
+      "sha256": "1374a96d221776e517b675434635e41883d5c05c25911dcbffaf7f4f809b08ed",
+      "bytes": 19098,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/production-difference.json"
+    },
+    {
+      "path": "qamus/examples/website-payloads/multi_entry_liqawmihi_61_5_4.payload.json",
+      "blob_sha1": "dd02f1d2468f9eb3cd6389e755ac19cfce6d2ce5",
+      "sha256": "5f27ced1dd998e1874a2c2b4b468ca899f9147a2a20c1179af7a4bd81d479518",
+      "bytes": 8524,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/website-payloads/multi_entry_liqawmihi_61_5_4.payload.json"
+    },
+    {
+      "path": "qamus/schemas/particle-edge-ontology.schema.json",
+      "blob_sha1": "751d5b42ab82f51dc51051c40f15e894655a9cd3",
+      "sha256": "d315768b06675b29fcccf07cefd41e623b0a80295d83c0f9d6db4fa0541ae7ce",
+      "bytes": 20515,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/schemas/particle-edge-ontology.schema.json"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/votes-b-mcp-calls.jsonl",
+      "blob_sha1": "b30f8803bf8ecd14abf1a873c29539c90d6d7ece",
+      "sha256": "0b578bb218993fc54088025a86b6a9c83ac5d25acdc4974b1dc7f40fe687e225",
+      "bytes": 18203,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/votes-b-mcp-calls.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/reviewer-b-worklist.json",
+      "blob_sha1": "4216f9616f09576d23091408069370640d5135d9",
+      "sha256": "e286460ab65ffe67a2c3b3cac93014f70d7bb161a09e7618cd07e3a30b615fdc",
+      "bytes": 6082,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/reviewer-b-worklist.json"
+    },
+    {
+      "path": "tools/build_largelexicon_qword_crosswalk.py",
+      "blob_sha1": "ddf76be26e8ad203e3d2fbd8c845d55c00a5b4f6",
+      "sha256": "520ef1c4af553532248523a652178aee77b4bdf8fc5e937ceb527e6019368878",
+      "bytes": 6691,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/build_largelexicon_qword_crosswalk.py"
+    },
+    {
+      "path": "tools/largelexicon_common.py",
+      "blob_sha1": "4f62cbe1bf77831dfccdb80ae2b0ce44a43b0eca",
+      "sha256": "9d788e98f2a387e4d917cee6f1be24434680a73ffb7ddbbeb33198444be61133",
+      "bytes": 56764,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/largelexicon_common.py"
+    },
+    {
+      "path": "tools/largelexicon_table_reader.py",
+      "blob_sha1": "6ce12324039f42a7224eec3690a86bb8943d916a",
+      "sha256": "d394dc22002fc1f7f59985ce234c3fe56da910edf2cd2bf32c178cd48fd70cf0",
+      "bytes": 8973,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/largelexicon_table_reader.py"
+    },
+    {
+      "path": "tools/fact_projectors.py",
+      "blob_sha1": "0cdf15b614bdc8cace464bd63f0b11b98a99b881",
+      "sha256": "617856b3dee467bd0a67197d503c9dcd3935312571b73bbf8a8cd5f4356242b7",
+      "bytes": 63401,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/fact_projectors.py"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/reverse-trace.json",
+      "blob_sha1": "7c9b690595c64439ffc36c39d77c74eb64fc0539",
+      "sha256": "e8be592b2f030358ca0aa96ec1e9f57dc644d42381fd7bf0884cba8d13aa164c",
+      "bytes": 10554,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/reverse-trace.json"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/two-vote-artifacts.v1_1.jsonl",
+      "blob_sha1": "68048bb88b3071f421fa73d0306f44db36b0fb03",
+      "sha256": "b1f74ed09a7781af678aa730b142b492da4128879ba90fc80fbcde39f13564a8",
+      "bytes": 48685,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/two-vote-artifacts.v1_1.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/two-vote-artifacts.v1.jsonl",
+      "blob_sha1": "209365d86d001d482ad7fdd9a5cd396557983b9f",
+      "sha256": "9d0bb73255f2feb3dd2b9f6ddddef89183c5fb113a3ceecf8f7a442e45477348",
+      "bytes": 48120,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/two-vote-artifacts.v1.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/votes-a.jsonl",
+      "blob_sha1": "b9511b9223c9e7e4cf6a645d20800fa080f7489b",
+      "sha256": "e41b09b18f0c4a161d59036d8fe2038865aaba294d8c3e0fe180f24dd936c6bb",
+      "bytes": 18569,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/votes-a.jsonl"
+    },
+    {
+      "path": "tools/normalize_ar.py",
+      "blob_sha1": "6b0a7e0aba76c99e453b2ca3854bc778e409011c",
+      "sha256": "62ede9ad1da617c3dee9a83d546019529dd738df68522e31f77ddf7c641e7c03",
+      "bytes": 6447,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/normalize_ar.py"
+    },
+    {
+      "path": "qamus/schemas/projector-record.schema.json",
+      "blob_sha1": "8bdbeff79b2f543f5a912c9b47d359e2695d1cdb",
+      "sha256": "846324c1cca2ea2d54cb25b004dc08fbc8887ba7e7a95cf68c402f593ee14657",
+      "bytes": 5857,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/schemas/projector-record.schema.json"
+    },
+    {
+      "path": "qamus/schemas/fact-ledger-row.schema.json",
+      "blob_sha1": "d0dc98259504913b3d4770a4a133b84261020860",
+      "sha256": "2ae591a8fd747a1095b3f6f91d3f18c7f1acefd8e420bd399116699fed814074",
+      "bytes": 12242,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/schemas/fact-ledger-row.schema.json"
+    },
+    {
+      "path": "nahw/evals/grammar-decision-gates.json",
+      "blob_sha1": "4a86f8ce2645f7bc7ebec7bbbd85ba4885f12193",
+      "sha256": "ccc18bed9af049013cc7aa69b9eb1b27b4639f06c5afd90070a6bc406dd20c5f",
+      "bytes": 2566,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/nahw/evals/grammar-decision-gates.json"
+    },
+    {
+      "path": "START-HERE-FOR-CONTINUATION.md",
+      "blob_sha1": "62a7d208400d421f517d2a35574359c2038df20e",
+      "sha256": "b4890af12522e3e961c6177186446ac518b8c5803a36621599737a2252bba5f4",
+      "bytes": 13108,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/START-HERE-FOR-CONTINUATION.md"
+    },
+    {
+      "path": "provenance/source-boundaries.md",
+      "blob_sha1": "d4f5f99a99a4c59bffefdabef9c35af629e082a6",
+      "sha256": "00387365d06727fbaa86933216e54ab6768335994937a4bcb5dc36e830942938",
+      "bytes": 8845,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/provenance/source-boundaries.md"
+    },
+    {
+      "path": "docs/INDEX.md",
+      "blob_sha1": "ee87907242f3d0ce1cf3f286a802bb8491f34edb",
+      "sha256": "bed14d167b0ac7371b17eccba9bc699fc66c8c827cfff8ff998978833c37580b",
+      "bytes": 21331,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/INDEX.md"
+    },
+    {
+      "path": "docs/architecture/transclusion-graph.md",
+      "blob_sha1": "624145426b6524e00863fbfb258caec26e1d6c7e",
+      "sha256": "07e7b506843a611064434973919889c7daa04b762a59cefbe64104011b8819e6",
+      "bytes": 13867,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/architecture/transclusion-graph.md"
+    },
+    {
+      "path": "docs/parser/meta-transclusive-lattice-projection.md",
+      "blob_sha1": "70264d30559e727d5e4b441ae80498dceec47a1e",
+      "sha256": "2d0129b14ba69ea1b9977a4837d3bc8a794fb71826b9a01715e69a0ed5d20ab4",
+      "bytes": 3738,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/parser/meta-transclusive-lattice-projection.md"
+    },
+    {
+      "path": "provenance/public-runnability.md",
+      "blob_sha1": "629d1409625038f47618ab4743a59a6ee62a6132",
+      "sha256": "bfa4e6b98e17fcaff6facacbb54b6dec9ac581c3a0e8da8ccdd701f34ea85a3b",
+      "bytes": 5185,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/provenance/public-runnability.md"
+    },
+    {
+      "path": "tools/validate_meta_transclusion_projection.py",
+      "blob_sha1": "4287a3ff4357b9585b47a26176c778782af5303c",
+      "sha256": "f092c529023a9e101dc4fea3146456452b1f7df54d83c67d003f7d72a2423694",
+      "bytes": 14216,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/validate_meta_transclusion_projection.py"
+    },
+    {
+      "path": "docs/current-state.yaml",
+      "blob_sha1": "ece8c5f8910c8a208ea06cc9006746c5ca500445",
+      "sha256": "58c8254e77d28bd2b1de5eb472e29fac00263336ecea1733812915ebbf99ab72",
+      "bytes": 2117,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/current-state.yaml"
+    },
+    {
+      "path": "docs/golden-commands.md",
+      "blob_sha1": "aff783658617a4969b6cb00791b5d7da11936db9",
+      "sha256": "4ba62dab852dd7ae9108b37c6bc541148521a1b5ed14016bc0b0c4e01b9ece71",
+      "bytes": 13618,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/golden-commands.md"
+    },
+    {
+      "path": "AGENTS.md",
+      "blob_sha1": "a292a5e1ce595de31583aff1ec09619373b94613",
+      "sha256": "b6d6a664b61204bc9cf4d792e34e2086403817ddece590816c4c1f595b238105",
+      "bytes": 8457,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/AGENTS.md"
+    },
+    {
+      "path": "docs/architecture/meta-transclusive-projection.md",
+      "blob_sha1": "efa5e9fc4a06af81d3e79eb98e611d8c64a86dee",
+      "sha256": "0ed9fd37c51ae70e54fb0a455c1c3857e48754c80c56864f9eebd498791fba08",
+      "bytes": 12200,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/architecture/meta-transclusive-projection.md"
+    },
+    {
+      "path": "docs/architecture/translation-projection.md",
+      "blob_sha1": "d784388a225740f08517ddbd710b08e8807e1018",
+      "sha256": "750628cadc5b03b2c51c3de5c155a098970ddf48a0c813f85c795ce0bb4f91e6",
+      "bytes": 6326,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/architecture/translation-projection.md"
+    },
+    {
+      "path": "docs/certification-authority.md",
+      "blob_sha1": "e7f9a5ab04d9773aee27b7417f2ae0ada57d678b",
+      "sha256": "ee0fa7b69b957717d9ab71232741d564fa1a007dffa0d04492ddec89438376ed",
+      "bytes": 14749,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/certification-authority.md"
+    },
+    {
+      "path": "docs/parser/TRANSCLUSION.md",
+      "blob_sha1": "1baf7db53399d2d6bd7467580af047948d55ffdf",
+      "sha256": "3023c2c910be4018914e722047ca9c3a3b3e56ce6635112f6b3b53508164166f",
+      "bytes": 4380,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/parser/TRANSCLUSION.md"
+    },
+    {
+      "path": "docs/qamus/particle-projection-contract.md",
+      "blob_sha1": "fee60c3ff17068882b210d0ded050b63c24a70be",
+      "sha256": "472d9b955cf3763c2f500fb82d6b57e54107e28b8abf2f960d28c1c185628c7a",
+      "bytes": 12494,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/qamus/particle-projection-contract.md"
+    },
+    {
+      "path": "docs/decision-ledger.md",
+      "blob_sha1": "b916a4a6101f17536a09e117c1f90ed7bb762175",
+      "sha256": "cfd00180537daa14f577f357a649787e95c0c264ca515f2ebb0e8901cd81bf73",
+      "bytes": 9984,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/docs/decision-ledger.md"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/README.md",
+      "blob_sha1": "da07f9413e8ec9f0e7cd81eaaeb47e665eeecdb7",
+      "sha256": "7672992aa7ae693e555cf8a6982b3bf4aa868d33f4c90d34589b0a5a177b141c",
+      "bytes": 6584,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/README.md"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/candidate-lattice.jsonl",
+      "blob_sha1": "06841d96a6874d7c11547df216fe4ffaf190c8a2",
+      "sha256": "b7570b4a83abae08e28fbcbd64302e6dde88cead35a1b22e5f5970e7eec4cd7b",
+      "bytes": 13647,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/candidate-lattice.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/morpheme-occurrences.jsonl",
+      "blob_sha1": "bf71e6c5e84f46b9844f375de3a2f53a5de9af8a",
+      "sha256": "b83fc472928ecde4f8b208574894377d81fc25238efd31f6dff929204112f385",
+      "bytes": 3106,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/morpheme-occurrences.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/typed-facts.jsonl",
+      "blob_sha1": "970da51d174b192ad61a13bc97fb75811403f43c",
+      "sha256": "57dfa089efbcf15b7d903ab3947a9ed394989bc298c015e5f949b86153084163",
+      "bytes": 117627,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/typed-facts.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/transclusion-edges.jsonl",
+      "blob_sha1": "00a2e1a98e210e74ebbbc793e823700f82ea73e6",
+      "sha256": "2988a66bb8263c4cb22bf91586843a24aebc1187c95158eeb379e7bc19b6ba3c",
+      "bytes": 53814,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/transclusion-edges.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/projections.jsonl",
+      "blob_sha1": "e90ec19949a76aa854b8474136257cf1d4a7edb5",
+      "sha256": "cdc9d956cf711512f92c4919a27f68fd2578d05d6e6d42ca428740c0788843e6",
+      "bytes": 35007,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/projections.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/votes-b.jsonl",
+      "blob_sha1": "6f5ead87dd9bd45a021ff28050f9b02400173156",
+      "sha256": "f94b1eac1a26007c107c142f02cb8a5350cce80c04d2a0f772028674a494ed63",
+      "bytes": 21911,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/votes-b.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/mcp-evidence.jsonl",
+      "blob_sha1": "2f5e070d90334862b73b1919aebf759fd52a82ab",
+      "sha256": "ec9ccd497c1e547aa39c3fdbbbea45bd0dd7cc0f6d196e23964a11f5c0f946d7",
+      "bytes": 22455,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/mcp-evidence.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/live-rows.jsonl",
+      "blob_sha1": "b3ee2aa800050c89174b57c3a1e7b5ffbb42b861",
+      "sha256": "f4d1c5125bf9ae3d0109e81442a71ff00cf6172e037d7e4afafbc5f433925765",
+      "bytes": 20360,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/live-rows.jsonl"
+    },
+    {
+      "path": "qamus/examples/p007-li-pilot/family-selection.json",
+      "blob_sha1": "1a77f0c733ec6313abec7d888cfba944390c8512",
+      "sha256": "319ecead2d216b7436db155588be2e000e273b066191b7e553b4bcf42ce587f2",
+      "bytes": 10736,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/examples/p007-li-pilot/family-selection.json"
+    },
+    {
+      "path": "tools/validate_two_vote_artifacts.py",
+      "blob_sha1": "25dd897ff955765d1364c2e2019b5d9da93da546",
+      "sha256": "f0bb0b10c76538730ff27c073f27ba03d1a19ac25fad069e5514d9f7f7006fc1",
+      "bytes": 46449,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/validate_two_vote_artifacts.py"
+    },
+    {
+      "path": "tools/migrate_p007_claim_binding.py",
+      "blob_sha1": "3d660e370911cc80a5cb06e26029a4b882ef34aa",
+      "sha256": "afabbb001bfb635ccc54d87699e018cabddb51c37153be496df82522e2cf0d36",
+      "bytes": 21034,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/migrate_p007_claim_binding.py"
+    },
+    {
+      "path": "tools/validate_largelexicon_qword_crosswalk.py",
+      "blob_sha1": "e0aea79b171c32315bdb0c4fdc57b16e878881c5",
+      "sha256": "f8363718b30391aee2e9edbbb9ec251c34099e3515102cd16bf345ce84546c85",
+      "bytes": 13233,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/tools/validate_largelexicon_qword_crosswalk.py"
+    },
+    {
+      "path": "qamus/schemas/largelexicon-qword-crosswalk.schema.json",
+      "blob_sha1": "6c91e73f64594d0fb9e7183d1ee7d1088fa65b85",
+      "sha256": "0bb7a010ce118b2d3a827ec09ae4d6b7e0636d1fd3199967d01eb5f70461305d",
+      "bytes": 4037,
+      "url": "https://github.com/theislampill/fusha/blob/c8b5db593d88311e5a020607dba70ff838ab61c5/qamus/schemas/largelexicon-qword-crosswalk.schema.json"
+    }
+  ]
+}
