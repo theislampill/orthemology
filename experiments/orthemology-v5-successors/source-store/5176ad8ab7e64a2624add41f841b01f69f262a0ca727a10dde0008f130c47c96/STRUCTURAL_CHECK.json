@@ -1,0 +1,321 @@
+{
+  "schema": "ninth-public-projection-independent-check-v1",
+  "checks_use_active_conditions_under_optimization": true,
+  "scientific_replays_executed": false,
+  "components": [
+    {
+      "archive": "Ninth_Foundational_Nexus_Public_Source_v1.zip",
+      "sha256": "8b6605ba3ce5b3a6f3f03c31031463a1b5736a72b9c505c7eecf3f3bf4d5aebb",
+      "members": 10,
+      "manifest_sha256": "77007f0cefd6c3b66f6fc3ca5ae58aac647dc842f3dfe2f87d9699bf5fb1c1f5",
+      "original_manifest_sha256": "78a9a0f40738b925421536a243acdfdcfdf9ec6bfe6d0dbd7b111cc972e0bafe",
+      "entry_counts": {
+        "exact": 6,
+        "omitted": 1
+      },
+      "map_exhaustive": true,
+      "all_original_entries_rehashed": true,
+      "changes": []
+    },
+    {
+      "archive": "Ninth_Integrated_Rival_Public_Source_v3.zip",
+      "sha256": "02d34bd39b152a984cc25d9dd1d2deebb6452d128e37623adbffda814296f789",
+      "members": 8,
+      "manifest_sha256": "3d109b22d172d7c4e2f46bbcc9d7b2cf54fe84822d13af001f13bdeade149677",
+      "original_manifest_sha256": "55ff8b684773542e796e4d372f7313389c15c0102f7d77eecdb5a1dca823fa08",
+      "entry_counts": {
+        "omitted": 1,
+        "exact": 4
+      },
+      "map_exhaustive": true,
+      "all_original_entries_rehashed": true,
+      "changes": []
+    },
+    {
+      "archive": "Ninth_Continuation_Synthesis_Public_Source_v1.zip",
+      "sha256": "944ed67d6740fb514e3db64fa837178806b7bb103c0e354a62fa3481517e5af3",
+      "members": 10,
+      "manifest_sha256": "233f3106fedc07f0920b303552cea34c77a242466e7e5545b691e9ee2ab2d41c",
+      "original_manifest_sha256": "a0b801296afe672efa7dcb7ed178fad9015e6bfc4d00fe2dd341769ebced0888",
+      "entry_counts": {
+        "projected": 2,
+        "exact": 4
+      },
+      "map_exhaustive": true,
+      "all_original_entries_rehashed": true,
+      "changes": [
+        {
+          "path": "CANDIDATE_RELATION_AND_SCOPE.md",
+          "original_sha256": "a8b3cfce6f1c6401869689a6279af0ab58a5fcc86674c63398b8e60b9a77cc6c",
+          "public_sha256": "1847d9defcef9bf83a4aa5caf8f7658d468ef497d45548514c5a66dcc99cd247",
+          "unchanged_prefix_bytes": 5691,
+          "unchanged_suffix_bytes": 17340,
+          "removed_bytes": 152,
+          "replacement_bytes": 123,
+          "removed_sha256": "0961c921299ed49b71b8e4ab11c2ed31070acfd88e31f1f375eaf733e966bcd7",
+          "replacement_sha256": "5fdb147c7d6507e762d4284dbab8cc3d1a7c665d662c7b30cf67fe428fed88ad",
+          "public_replacement": "but the exact H-MOAT-E3 main file and six observed includes were subsequently recovered from the verified repository commit"
+        },
+        {
+          "path": "PRIOR_ART_AND_SOURCE_BUDGETS.json",
+          "original_sha256": "ddb4d9601fa7b3cc46138e74d8412c0936e6c9941985d603232be452a9257933",
+          "public_sha256": "6675e477b8be31d86e9c21f1ffc9f5b8d66762f398ac96f7de41ae76bb120867",
+          "unchanged_prefix_bytes": 3832,
+          "unchanged_suffix_bytes": 319,
+          "removed_bytes": 151,
+          "replacement_bytes": 117,
+          "removed_sha256": "206ddb1af6ee1f572530604f8d17d1d53db55be9bc0c8fdcbae8a3c48ab63a5c",
+          "replacement_sha256": "a50a004f1145f501421b5e132cebb7273f316648f0ab28f4a535b0b98907ab1b",
+          "public_replacement": "Not pursued as main research; established Byzantine/quorum and k-exclusion ancestry. No such formal code was written."
+        }
+      ]
+    }
+  ],
+  "original_acceptance_bindings": [
+    {
+      "archive": "Foundational_Nexus_Independent_Acceptance_v1.zip",
+      "sha256": "f7b7be250697579460135c1cbf6f9a66fe1cd379d22b816f743520b3b1f80fc3",
+      "manifest_sha256": "a16787a593ec12b7e9b2bb78c4cfc5cb60e065a714181a8b5ac6fbadb8371bf0"
+    },
+    {
+      "archive": "Ninth_Continuation_Synthesis_Independent_Acceptance_v1.zip",
+      "sha256": "fd1badc28e987854c99afd9aea05c00ac74484620486a9c425b7dae7cd8cea08",
+      "manifest_sha256": "71bfe4b0c4df0c6c883d36f7b1b446fe761e86ecd98a6c555ebc783db01c5a05"
+    }
+  ],
+  "paused_custody": {
+    "archive": "Ninth_Paused_Unreviewed_Source_Archive_v1.zip",
+    "sha256": "722d36f5ba32b495f4753edca57517ead22c23d84ff0a592d51e9ec45f59d191",
+    "manifest_sha256": "f76f9851a1b52c4b933e6524c675a9cff0856775d5a41244dbcc444513a326d6",
+    "members": 108,
+    "original_entries": 125,
+    "retained_entries": 101,
+    "counts": {
+      "omitted": 24,
+      "projected": 42,
+      "exact": 59
+    },
+    "added_records": [
+      "MANIFEST.json",
+      "PROJECTION_MAP.json",
+      "PUBLIC_STATUS.json",
+      "README.txt",
+      "native-runtime/original_manifests/STOP_MANIFEST.json",
+      "python-statements/original_manifests/MANIFEST.json",
+      "reachable-entry/original_manifests/UNFINISHED_CHECKPOINT.json"
+    ],
+    "groups": [
+      {
+        "id": "native-runtime",
+        "manifest_sha256": "0a33b4a90893fc970ebd0956a1ca9ffed7388dd887da0681a33b8b58ce668e01",
+        "entries": 47,
+        "counts": {
+          "omitted": 16,
+          "projected": 14,
+          "exact": 17
+        },
+        "all_source_entries_rehashed": true
+      },
+      {
+        "id": "python-statements",
+        "manifest_sha256": "973560c70555906fabc0499352d368abf26062f14e9cf68925af10473d632052",
+        "entries": 56,
+        "counts": {
+          "projected": 21,
+          "exact": 34,
+          "omitted": 1
+        },
+        "all_source_entries_rehashed": true
+      },
+      {
+        "id": "reachable-entry",
+        "manifest_sha256": "1fd572e86b0491916aed65b7c81cdd5073a937ba6143d81d86224715bb7acae2",
+        "entries": 22,
+        "counts": {
+          "omitted": 7,
+          "exact": 8,
+          "projected": 7
+        },
+        "all_source_entries_rehashed": true
+      }
+    ],
+    "exact_lean_source_entries": 41,
+    "status_changes": [
+      {
+        "group": "native-runtime",
+        "path": "STOP_STATUS.json",
+        "scientific_fields_unchanged": true,
+        "original_sha256": "c5daa692d4f7498f1c027c07f7458d5de1b1ae28d0772bf10304d9c5b542adbc",
+        "public_sha256": "7f6105932adb22b42a7b7c746b7f2209bdfc446a9cdef01a270cf37fbe91d8c5"
+      },
+      {
+        "group": "python-statements",
+        "path": "PAUSED_STATUS.json",
+        "scientific_fields_unchanged": true,
+        "original_sha256": "7d27ea43bf41648ee5dc9a6b5f70766bc5f7cf8b265a9ffcd2d4f439f7da38b3",
+        "public_sha256": "0bc5898ec876ac4e2cecdba3bd1187d629f05100250100e450fa93c1ebda76cf"
+      }
+    ],
+    "all_path_changes_reconstructed": true,
+    "all_status_changes_limited_to_recorded_nonscientific_fields": true
+  },
+  "selector_identity": {
+    "archive": "Ninth_Selector_Family_Source_Acceptance_v1.zip",
+    "sha256": "e2c40bb8b2612db8898cdea0db2c984c91edaa15122dd23cbfb16f33d3e98255",
+    "members": 83,
+    "manifest_sha256": "138833be8349d7d7a1f5cc2790f9af1f920d52ed2e18d1103726f1e944ac9847",
+    "original_identities": {
+      "A1_source": {
+        "path": "originals/A1/SOURCE_MANIFEST.json",
+        "sha256": "923206fcb0d870806b6e77ca259f99e0604876ac872d97c0bf70c100fb460bd3"
+      },
+      "A1_review": {
+        "path": "originals/A1/REVIEW_MANIFEST.json",
+        "sha256": "f08ef43ebd11b8dd0632564d618181cc187fbe860147a6f9996afc1a6049625a"
+      },
+      "A1_receipt": {
+        "path": "acceptance/A1_ORIGINAL_REVIEW_RECEIPT.json",
+        "sha256": "35461135ce61a1b4b217fc1981d782795e2fbd10ceb35210cc50793e7db3ba5f"
+      },
+      "A2_source": {
+        "path": "originals/A2/SOURCE_MANIFEST.json",
+        "sha256": "83f7bef7b6c6b354aca11cd0ebb9b7603b541d960f8b0f2eb57d8c4c4117f7f1"
+      },
+      "A2_review": {
+        "path": "originals/A2/REVIEW_MANIFEST.json",
+        "sha256": "da4448348e02d5ae906e986ef57be756b07b7a7c6e4d991365289ed8691aa554"
+      },
+      "A2_receipt": {
+        "path": "acceptance/A2_ORIGINAL_REVIEW_RECEIPT.json",
+        "sha256": "862df64aff61f32f62f5fa4bd8eb4027a1101466c60372e5188226e9a0b813e9"
+      },
+      "A3_source": {
+        "path": "originals/A3/SOURCE_MANIFEST.json",
+        "sha256": "066c70a168d100051910999f9596a856f4e1964d7c3c8c16e0afeb601cd92f00"
+      },
+      "A3_review": {
+        "path": "originals/A3/REVIEW_MANIFEST.json",
+        "sha256": "d8fa16f8a08ab87e8ffa4d67b50ae86c17799712d87f97a73ab5b8f990f3a79c"
+      },
+      "A3_receipt": {
+        "path": "acceptance/A3_ORIGINAL_REVIEW_RECEIPT.json",
+        "sha256": "54800ed5d4d4928d0cd876e56772a4916f5f94e2c1ec83c9e278e3da5c404bae"
+      }
+    },
+    "exhaustive_maps": [
+      {
+        "map": "A1_SOURCE_MAP.json",
+        "entries": 8,
+        "counts": {
+          "PRESERVED_EXACT": 4,
+          "OMITTED": 4
+        }
+      },
+      {
+        "map": "A1_REVIEW_MAP.json",
+        "entries": 218,
+        "counts": {
+          "OMITTED": 204,
+          "PRESERVED_EXACT": 14
+        }
+      },
+      {
+        "map": "A2_SOURCE_MAP.json",
+        "entries": 9,
+        "counts": {
+          "OMITTED": 3,
+          "PRESERVED_EXACT": 6
+        }
+      },
+      {
+        "map": "A2_REVIEW_MAP.json",
+        "entries": 43,
+        "counts": {
+          "OMITTED": 24,
+          "PRESERVED_EXACT": 19
+        }
+      },
+      {
+        "map": "A3_SOURCE_MAP.json",
+        "entries": 9,
+        "counts": {
+          "OMITTED": 3,
+          "PRESERVED_EXACT": 6
+        }
+      },
+      {
+        "map": "A3_REVIEW_MAP.json",
+        "entries": 41,
+        "counts": {
+          "OMITTED": 25,
+          "PRESERVED_EXACT": 16
+        }
+      }
+    ],
+    "scientific_replay_repeated": false
+  },
+  "python_identity": {
+    "archive": "P1_Expression_Source_and_Acceptance_v1.zip",
+    "sha256": "c3088bcc0c75a84754bf70beaac5efca88264cdb53bae771e206459bdb6b6e2d",
+    "members": 46,
+    "manifest_sha256": "f50c3e223cbc2f8de3bc1f7fc2fed35fc34bd1e37ff3a95487e56af81e54defc",
+    "source_manifest_sha256": "d0177de1ebeb8de4ff71898dbccc729ca420c70a50c307f1bacccd6d2c38d43d",
+    "review_receipt_sha256": "c55e4f5ae6dba9ce0f517c2b6ab242fdfbad7e4f8951e856cb7487e7fd1c15a0",
+    "exhaustive_maps": [
+      {
+        "map": "accepted_source",
+        "entries": 118,
+        "counts": {
+          "derived": 5,
+          "preserved": 23,
+          "omitted": 90
+        }
+      },
+      {
+        "map": "accepted_review",
+        "entries": 309,
+        "counts": {
+          "preserved": 57,
+          "omitted": 249,
+          "derived": 3
+        }
+      }
+    ],
+    "scientific_replay_repeated": false
+  },
+  "component_path_scan": [
+    {
+      "archive": "Ninth_Foundational_Nexus_Public_Source_v1.zip",
+      "absolute_host_path_members": []
+    },
+    {
+      "archive": "Ninth_Integrated_Rival_Public_Source_v3.zip",
+      "absolute_host_path_members": []
+    },
+    {
+      "archive": "Ninth_Continuation_Synthesis_Public_Source_v1.zip",
+      "absolute_host_path_members": []
+    },
+    {
+      "archive": "Foundational_Nexus_Independent_Acceptance_v1.zip",
+      "absolute_host_path_members": []
+    },
+    {
+      "archive": "Ninth_Continuation_Synthesis_Independent_Acceptance_v1.zip",
+      "absolute_host_path_members": []
+    },
+    {
+      "archive": "Ninth_Paused_Unreviewed_Source_Archive_v1.zip",
+      "absolute_host_path_members": []
+    },
+    {
+      "archive": "Ninth_Selector_Family_Source_Acceptance_v1.zip",
+      "absolute_host_path_members": []
+    },
+    {
+      "archive": "P1_Expression_Source_and_Acceptance_v1.zip",
+      "absolute_host_path_members": []
+    }
+  ],
+  "status": "PASS_INDEPENDENT_IDENTITY_AND_PROJECTION_CUSTODY"
+}

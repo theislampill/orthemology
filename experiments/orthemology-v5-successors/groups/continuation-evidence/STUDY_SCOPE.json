@@ -1,0 +1,1014 @@
+{
+  "schema": "orthemology-v5-continuation-study-scope-v1",
+  "reading_scope": "Source-use assessments inherited from the exact supplied reports. New integration reads and binds those reports; no new literature campaign, participant experiment or specialist review.",
+  "independence_rule": "Do not combine different cohorts, tasks, carriers or support histories into one end-to-end witness; duplicated roots and consecutive generations do not create independence.",
+  "studies": [
+    {
+      "id": "T12-ZYKOV",
+      "tranche": 12,
+      "source_id": "T12-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "e9a2954f2abac6401023a95a644b5c818aa633157f5b0502ef98fe3086fcdaeb",
+      "projected_report_sha256": "88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264",
+      "report_locus": "A supported generating faculty",
+      "source_evidence_keys": [
+        "Zykov 2005"
+      ],
+      "carrier": "Modular robot assemblies",
+      "cohort": "Published constructed assembly and subsequent construction sequence",
+      "task": "Construct another assembly able to continue the generating task",
+      "support": "Supplied modules, external power, platform and replenishment",
+      "observation_history": "The reported constructed assembly performs further construction after the original complete assembly is removed.",
+      "supported_claim": "Finite supported continuation of a generating faculty is credited.",
+      "limitations": [
+        "The record does not show all former components disappearing, copied controller contents, rich retained personal state or indefinite renewal."
+      ],
+      "source_version_and_read_scope": "Article and original supplement as assessed in the supplied report.",
+      "dependence": "Supplement images and movie observations belong to the same experiment; they are not replications.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T12-LEWIS-2007",
+      "tranche": 12,
+      "source_id": "T12-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "e9a2954f2abac6401023a95a644b5c818aa633157f5b0502ef98fe3086fcdaeb",
+      "projected_report_sha256": "88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264",
+      "report_locus": "Membership change and collective performance",
+      "source_evidence_keys": [
+        "Lewis 2007"
+      ],
+      "carrier": "Human work groups",
+      "cohort": "90 groups in the reported randomized membership-change comparison; 11 later reflection groups",
+      "task": "Remember specialised roles and complete complex task steps after a membership transition",
+      "support": "Role specialisation, retained members and task setting",
+      "observation_history": "Randomised membership change is assessed separately from a later, nonconcurrent reflection comparison.",
+      "supported_claim": "The study supplies a bounded performance contrast after one personnel change.",
+      "limitations": [
+        "The later reflection groups are not the same concurrent randomised contrast.",
+        "A second transition and endogenous selection of a repair intervention were not established."
+      ],
+      "source_version_and_read_scope": "Study conditions and reported denominators retained at the report reading scope.",
+      "dependence": "Remembered roles and completed steps are different outcomes within one study, not independent continuity witnesses.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T12-HANSEN-MIGRATION",
+      "tranche": 12,
+      "source_id": "T12-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "e9a2954f2abac6401023a95a644b5c818aa633157f5b0502ef98fe3086fcdaeb",
+      "projected_report_sha256": "88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264",
+      "report_locus": "Stateful migration and a retained faculty",
+      "source_evidence_keys": [
+        "Hansen and Jul 2004",
+        "Clark benchmark",
+        "later 16-node run"
+      ],
+      "carrier": "Stateful software processes",
+      "cohort": "Architecture, separate benchmark, and later 16-node exercise",
+      "task": "Move state and retain ability to initiate a further migration",
+      "support": "Re-entry conditions, external services and a retained parent/driver",
+      "observation_history": "The architecture makes next migration conditional on re-entry and support. A separate repeated benchmark is not self-migration. The later exercise checkpoints again from arrived intermediate processes while the parent remains.",
+      "supported_claim": "Intermediate arrivals in the later exercise retain a finite stateful checkpointing faculty.",
+      "limitations": [
+        "Terminal arrivals were not restarted after driver exit.",
+        "No repeated destroy-source migration or complete certification of external state is shown."
+      ],
+      "source_version_and_read_scope": "Report distinguishes architecture, benchmark and later exercise instead of treating them as one run.",
+      "dependence": "The distinct records cannot be concatenated into one fully witnessed destroy-source chain.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T12-CRATER-HANDOFF",
+      "tranche": 12,
+      "source_id": "T12-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "e9a2954f2abac6401023a95a644b5c818aa633157f5b0502ef98fe3086fcdaeb",
+      "projected_report_sha256": "88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264",
+      "report_locus": "A documented diagnostic function handoff",
+      "source_evidence_keys": [
+        "Columbia",
+        "Crater"
+      ],
+      "carrier": "Boeing/NASA diagnostic organisation",
+      "cohort": "Huntington Beach to Houston function transfer before Columbia",
+      "task": "Interpret the foam-strike damage model and obtain appropriate information",
+      "support": "Retained tools, training and earlier thermal evidence; consultation and imagery routes",
+      "observation_history": "The assessment records incomplete mitigation, nonconsultation, extrapolation, uncertain impact location and a failed imagery request despite retained institutional resources.",
+      "supported_claim": "Possession of tools and records is distinguishable from warranted uptake in the actual diagnostic episode.",
+      "limitations": [
+        "The report does not establish that handoff caused the cancellation, that no capacity existed, or what the former team would have done."
+      ],
+      "source_version_and_read_scope": "Historical inquiry evidence assessed at the report loci.",
+      "dependence": "Later general statements about NASA/USA compensation do not establish compensation in the Crater-linked episode.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-NASA-SANDIA-TRANSFER",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Processing roles and checks",
+      "source_evidence_keys": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "carrier": "NASA processing team with Sandia sensor expertise",
+      "cohort": "STS-120 processing transfer and STS-131 checks",
+      "task": "Process LDRI diagnostic observations under a changed allocation of work",
+      "support": "New NASA suite plus continued Sandia lead, sensor checks, review and expertise",
+      "observation_history": "Most processing moves to NASA while Sandia retains complementary roles. STS-131 adds AVI transmission checks.",
+      "supported_claim": "A supported diagnostic work transfer is credited with its continuing specialist dependencies.",
+      "limitations": [
+        "Earlier 24-hour download plus four-hour processing and later 18-hour totals have different clock origins and cannot be directly subtracted."
+      ],
+      "source_version_and_read_scope": "Separate source identifiers and histories are retained from the supplied report.",
+      "dependence": "Overlapping NASA/Sandia reports have common observational roots, not independent qualification runs.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-STS131-TRANSMISSION",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Transmission constraints and permission",
+      "source_evidence_keys": [
+        "M1",
+        "M2",
+        "M5"
+      ],
+      "carrier": "Shuttle/ISS data transfer and mission assessment organisation",
+      "cohort": "STS-131 Ku-band failure and late inspection episode",
+      "task": "Transmit inspection data, analyse damage and obtain applicable entry clearance",
+      "support": "ISS transfer route, segmented large files, extended docked period and arm exception",
+      "observation_history": "The report distinguishes the completed analysis and entry-clearance report from unrecovered ordering relative to undocking. A planned post-undocking service differs from the revised actual arrangement.",
+      "supported_claim": "The observed organisation recovered a supported route for the recorded analysis and clearance.",
+      "limitations": [
+        "A contradictory page does not establish event ordering.",
+        "Restricted WLEIDS and a missing neighbouring observation prevent one assessment.",
+        "Clearance is bounded permission, not zero risk or demonstrated unchanged-contract performance."
+      ],
+      "source_version_and_read_scope": "Source-version and chronology conflicts remain explicit.",
+      "dependence": "JAXA/NASA attributions may share source roots; agreement in retellings is not independence.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-NASA-COMPENSATION",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Competence and compensation",
+      "source_evidence_keys": [
+        "C1",
+        "C2"
+      ],
+      "carrier": "NASA/USA expertise and training organisation",
+      "cohort": "General retrospective statement and pre-accident ASAP 2002 assessment",
+      "task": "Compensate for staffing/knowledge changes",
+      "support": "Organisational expertise and training arrangements",
+      "observation_history": "Dittemore supplies an aggregate compensation assertion; ASAP is broadly positive while identifying training concerns.",
+      "supported_claim": "These records can support narrower organisational competence testimony.",
+      "limitations": [
+        "Neither record establishes compensation in the particular Crater episode.",
+        "A pre-accident general assessment does not resolve the later case-specific uptake history."
+      ],
+      "source_version_and_read_scope": "Pre-accident and retrospective timings are not collapsed.",
+      "dependence": "These are complementary testimony scopes, not a second observation of the same successful handoff.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-NESC-INTERFACES",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Interfaces and assessment",
+      "source_evidence_keys": [
+        "N1",
+        "N2",
+        "N3",
+        "M3"
+      ],
+      "carrier": "Model developers, assessment analysts and mission managers",
+      "cohort": "STS-114 and related 2005/2007 technical records",
+      "task": "Apply qualified damage models and distinguish assessment from operational decision",
+      "support": "Developer restrictions, coordination, manual coordinate checks and experienced interpretation",
+      "observation_history": "Models are judged suitable within restrictions. Focused observations flow to analysts; clearance, intervention and further tests have different responsible bearers.",
+      "supported_claim": "The report supports bounded model-assisted assessment rather than an autonomous deciding tool.",
+      "limitations": [
+        "Uncertainty calibration is incomplete.",
+        "Tile repair is excluded from the particular assessment.",
+        "Grouped status does not prove item-specific RCC completion."
+      ],
+      "source_version_and_read_scope": "2005 and 2007 revisions belong to one technical lineage; their date difference is not itself a new measured state.",
+      "dependence": "Analyst assessment and mission management authorisation are separate acts, not two replications.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-SENSOR-APPLICABILITY",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Observation and numerical applicability",
+      "source_evidence_keys": [
+        "M4",
+        "T1",
+        "S4",
+        "R1",
+        "R2"
+      ],
+      "carrier": "Shuttle inspection instruments, entry models and trained staff",
+      "cohort": "STS-116 episode; 2005/2007 training records; NASA 2016 table",
+      "task": "Assess whether a reported detectable defect is below the applicable critical defect",
+      "support": "Sensor, geometry, defect class, configuration, entry envelope and applicable model revision",
+      "observation_history": "A later credible impact prompts reassessment after an earlier survey. Coarse imagery/risk assessment and later LDRI baseline are separated. The 2016 table concerns exposed substrate panels 19–22, zones 3–4 under the named ISS heavyweight forward-CG trajectory.",
+      "supported_claim": "Numerical adequacy can be considered only with the stated configuration and observation conditions bound together.",
+      "limitations": [
+        "Reported 0.125 detection versus 0.160 critical size does not establish complete coverage or calibration.",
+        "The original table revision, morphology match and transfer were not reconstructed.",
+        "LCS 0.125-inch, IDC 0.08-inch and LDRI are not interchangeable measurements.",
+        "Later image improvements and later training implementation do not backdate qualification."
+      ],
+      "source_version_and_read_scope": "June 2005 observed training cutoff, 2007 implementation and later technical tables remain dated.",
+      "dependence": "Revisions and later improvements do not supply independent earlier-episode qualification.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-GREITEMEYER",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Testing delivered information",
+      "source_evidence_keys": [
+        "E1"
+      ],
+      "carrier": "Individual human decision makers with a fictitious group protocol",
+      "cohort": "Experiment 2: 49 analysed participants; one excluded",
+      "task": "Choose an optimal alternative after delivered decision information",
+      "support": "Prior information and prior choice bundled; complete fictitious protocol removed before final choice",
+      "observation_history": "Reported optimal choices are 5/26 and 14/23 in the contrasted conditions.",
+      "supported_claim": "The report retains this performance contrast under the actual manipulation.",
+      "limitations": [
+        "Participants worked individually with fictitious partners.",
+        "The manipulation does not isolate final access, group interaction, or information from prior choice."
+      ],
+      "source_version_and_read_scope": "Experiment 2 assessment in the supplied report.",
+      "dependence": "Do not attach another study’s retained documents or group interaction to this cohort.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-MOJZISCH",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Retained information and real group interaction",
+      "source_evidence_keys": [
+        "E2"
+      ],
+      "carrier": "Individual participants and separate real triads",
+      "cohort": "Experiment 1 and Experiment 4 are separate cohorts",
+      "task": "Use distributed information for an optimal decision",
+      "support": "Experiment 1 retains external material; Experiment 4 removes individual sheets before real group interaction",
+      "observation_history": "Experiment 4 reports 6/15 versus 1/15 optimal decisions; the conclusion is sensitive to the statistical test.",
+      "supported_claim": "The report credits each experiment’s actual observation at its own access and interaction scope.",
+      "limitations": [
+        "Random allocation was unreported in the assessed source.",
+        "Retained material from Experiment 1 cannot be combined with real-group interaction from Experiment 4 as one witness."
+      ],
+      "source_version_and_read_scope": "Experiment-specific source reading preserved.",
+      "dependence": "Distinct experiments do not jointly witness one episode containing both properties.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-REIMER",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Retained information and real group interaction",
+      "source_evidence_keys": [
+        "E4"
+      ],
+      "carrier": "Human triads",
+      "cohort": "112 randomised triads",
+      "task": "Select the correct alternative with distributed cues",
+      "support": "Own sheets retained; reading others’ sheets, exchange and notes prohibited; processing and time conditions bundled",
+      "observation_history": "The report records 70 successful and 42 unsuccessful groups, with a naive common-cue subset of 28/28.",
+      "supported_claim": "Retained personal information can coexist with the reported group performance contrast.",
+      "limitations": [
+        "Cue commonality is not identical to shared possession.",
+        "The manipulation does not isolate access from processing, cue and time conditions."
+      ],
+      "source_version_and_read_scope": "Study denominator and restrictions retained from the report.",
+      "dependence": "Successful subsets and the full cohort are overlapping evidence, not independent replications.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-ROTHMUND",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Representing a criterion and pooling a record",
+      "source_evidence_keys": [
+        "E3"
+      ],
+      "carrier": "Human evaluators",
+      "cohort": "Reported criterion-framing study",
+      "task": "Evaluate alternatives and make a final choice under the same task scoring",
+      "support": "Criterion frame introduced before preference formation",
+      "observation_history": "The report identifies a conditional evaluation interaction without a final-choice benefit.",
+      "supported_claim": "A criterion representation can affect a bounded intermediate evaluation measure.",
+      "limitations": [
+        "Randomisation and retention conditions were not reported in the assessed text.",
+        "The manuscript contains numerical inconsistencies; no repaired dataset or stronger final-choice effect is invented."
+      ],
+      "source_version_and_read_scope": "Assessed manuscript version, with discrepancies preserved.",
+      "dependence": "An evaluation interaction and final decision are different outcomes of the same study.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-CORDES",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Representing a criterion and pooling a record",
+      "source_evidence_keys": [
+        "E5"
+      ],
+      "carrier": "Human teams pooling records",
+      "cohort": "Reported team decision study",
+      "task": "Pool relevant information and make a decision",
+      "support": "Pooling instructions and documents checked after the trial",
+      "observation_history": "Post-trial document inspection and use checks support instructed pooling; the sharing measure follows decision importance ratings.",
+      "supported_claim": "The report credits evidence that participants followed a pooling procedure at the checked scope.",
+      "limitations": [
+        "Post-trial checks do not establish every recipient’s access at the moment of decision.",
+        "Team unit and accuracy figures were unreconciled, so no quantitative rate is promoted."
+      ],
+      "source_version_and_read_scope": "Unreconciled source reporting retained.",
+      "dependence": "Post-decision measurements cannot independently establish earlier access or causal mediation.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-ZERCHER",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Human and AI support configurations",
+      "source_evidence_keys": [
+        "E6"
+      ],
+      "carrier": "Human teams and AI-supported configurations",
+      "cohort": "After AI technical exclusions: 19/28, 7/25 and 8/28",
+      "task": "Solve the distributed-information decision task",
+      "support": "Three humans plus fully informed AI; human-only group; or replacement with profile-Z AI",
+      "observation_history": "The reported contrasts change headcount, role and information package: the central AI receives all 40 items while the profile-Z replacement does not.",
+      "supported_claim": "The report retains bounded differences among the actual support configurations.",
+      "limitations": [
+        "The package comparison does not isolate a unique cognitive mechanism or evidence-possession relation.",
+        "Hidden prompts were unread and Figure G1 process discrepancies remain open."
+      ],
+      "source_version_and_read_scope": "Technical exclusions and accessible source scope remain explicit.",
+      "dependence": "The three configurations are separate treatments, not observations of one group progressively acquiring all capacities.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-SUMMERS",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "A longitudinal handoff comparison",
+      "source_evidence_keys": [
+        "E7"
+      ],
+      "carrier": "Human teams with role-member replacement",
+      "cohort": "108 teams over later task runs",
+      "task": "Continue team performance after member replacement",
+      "support": "Retained colleagues; randomised permission for notes/verbal handoff versus no such permission",
+      "observation_history": "Adjusted performance favours the handoff-permission condition; content and actual uptake were not measured by the opportunity check.",
+      "supported_claim": "Permission for a handoff route supports a bounded longitudinal performance contrast.",
+      "limitations": [
+        "The contrast does not establish restoration to every team’s prior level.",
+        "Role responsibility, interface and redundancy are bundled.",
+        "No novel problem or second handoff was established."
+      ],
+      "source_version_and_read_scope": "Reported longitudinal comparison, not an experiment run by this integration.",
+      "dependence": "Later runs share teams and ancestry; repeated observations are not new independent cohorts.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-IDENTITY-SOURCES",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "Conditions for organisational identity",
+      "source_evidence_keys": [
+        "Ritchie 2013",
+        "Ritchie 2020",
+        "Fine 2020",
+        "Epstein 2017"
+      ],
+      "carrier": "Theoretical organisations, committees and groups",
+      "cohort": "Source arguments and kind-specific examples",
+      "task": "Distinguish continuing realisation, another instance and identity conditions",
+      "support": "Formation history, roles, consent, institutional rules and non-dissolution where stipulated",
+      "observation_history": "Ritchie distinguishes ongoing realisation from another instance and allows structurally similar different groups; Fine requires consent to this committee in the example; Epstein separates formation, existence, constitution and identity.",
+      "supported_claim": "The report preserves conditional, kind-specific identity conditions without demanding performance perfection.",
+      "limitations": [
+        "These conditions are not a universal identity criterion.",
+        "They do not certify actual group knowledge, a split decision, a formation event or present competence."
+      ],
+      "source_version_and_read_scope": "Assessed published/manuscript versions stay separate.",
+      "dependence": "Theoretical examples are not empirical cohorts or a jointly observed institutional history.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T13-INSTITUTIONAL-ACTS",
+      "tranche": 13,
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "projected_report_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "report_locus": "An actual institutional continuation",
+      "source_evidence_keys": [
+        "Tufts bylaws",
+        "PCAST orders"
+      ],
+      "carrier": "Formal university body and presidential advisory council",
+      "cohort": "Dated bylaws and 2021/2025 orders",
+      "task": "Establish, amend, abolish or continue an institution under applicable rules",
+      "support": "Authoritative rule acts and formation conditions",
+      "observation_history": "Current Tufts bylaws are not backdated to 2017. The PCAST record separates 2021 establishment/amendment, January 2025 revocation/abolition and establishment, and September 2025 continuation of the new order to September 30, 2027.",
+      "supported_claim": "The report credits the dated institutional acts at their legal-rule scope.",
+      "limitations": [
+        "A rule witness is not evidence that a particular earlier formation event occurred.",
+        "These acts do not by themselves establish a numerical identity theory or empirical performance."
+      ],
+      "source_version_and_read_scope": "Dates and distinct order objects retained from the supplied assessment; no fresh legal research.",
+      "dependence": "Consecutive orders are related authoritative events, not independent experiments.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-BRINKMANN",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "The capacity and its support",
+      "source_evidence_keys": [
+        "Brinkmann 2026"
+      ],
+      "carrier": "Machine demonstrator followed by four human generations",
+      "cohort": "Reported AI-to-human game transmission chains",
+      "task": "Use and pass on a game strategy",
+      "support": "Prepared fallible demonstration routes, human selection and subsequent demonstrations",
+      "observation_history": "An AI-derived loss strategy can fail while selected features of machine ancestry persist through later human demonstrations; generation four has no observed next recipient.",
+      "supported_claim": "The report credits finite supported transmission of selected task features.",
+      "limitations": [
+        "Outcome-selected existence does not estimate a transmission rate.",
+        "All-max-mean/positive coding and selected figure links do not provide complete raw training provenance.",
+        "No transfer of the whole AI or general expertise is shown."
+      ],
+      "source_version_and_read_scope": "Source data/figure links at the assessed reading scope.",
+      "dependence": "Linked generations share a lineage and do not multiply independent evidence.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-HORNER",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Complementary routes of transmission",
+      "source_evidence_keys": [
+        "Horner 2006"
+      ],
+      "carrier": "Chimpanzee learners and later demonstrators",
+      "cohort": "Named chain GG to SK to KT to RI",
+      "task": "Maintain a demonstrated task technique along a social chain",
+      "support": "Observation opportunities and task apparatus",
+      "observation_history": "SK observes GG, performs the technique, and later models it for KT, followed by RI.",
+      "supported_claim": "The report credits the observed actor-specific social maintenance chain.",
+      "limitations": [
+        "Controls allow individual discovery.",
+        "One technique chain per species does not isolate imitation as the unique mechanism.",
+        "Supplementary tables/movies were outside the main-text reading scope."
+      ],
+      "source_version_and_read_scope": "Main article assessed; unread support remains unread.",
+      "dependence": "Named actor transitions are connected observations of one chain.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-CALDWELL-2008",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Complementary routes of transmission",
+      "source_evidence_keys": [
+        "Caldwell and Millen 2008"
+      ],
+      "carrier": "Human builders and their products",
+      "cohort": "Paper-plane and tower transmission chains",
+      "task": "Build task products using earlier products and information",
+      "support": "Products, labels, multiple available examples and conversation",
+      "observation_history": "Within-chain resemblance is stronger for planes; the report credits observed product-mediated continuation.",
+      "supported_claim": "A finite supported task tradition is evidenced at the reported chain scope.",
+      "limitations": [
+        "Exact donor-to-feature genealogy is not established.",
+        "The accepted-manuscript supplement was unread."
+      ],
+      "source_version_and_read_scope": "Accepted manuscript reading, not an independently checked final edition.",
+      "dependence": "Multiple products and conversation within a chain are combined support, not separable causal replications.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-CALDWELL-2009",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Complementary routes of transmission",
+      "source_evidence_keys": [
+        "Caldwell and Millen 2009"
+      ],
+      "carrier": "Human paper-plane builders",
+      "cohort": "Reported transmission conditions",
+      "task": "Improve planes using available predecessors’ products and outcomes",
+      "support": "Planes, distances and observed flights remain available when construction watching/verbal teaching are absent",
+      "observation_history": "The condition removes some routes while retaining a richer product/outcome bundle.",
+      "supported_claim": "The report preserves the bounded result that this retained bundle can support performance.",
+      "limitations": [
+        "It is not an artefact-only or action-information-free condition.",
+        "There is no no-information arm.",
+        "Nonsignificance does not establish equivalence."
+      ],
+      "source_version_and_read_scope": "In-press source; final-version identity not verified.",
+      "dependence": "Treatment bundles cannot be split into independently witnessed sufficient channels.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-LEWIS-TRANSFER",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Learning across changed tasks and bodies",
+      "source_evidence_keys": [
+        "Lewis, Lange and Gillis"
+      ],
+      "carrier": "Experienced human team members recombined into teams",
+      "cohort": "Related-task transfer study",
+      "task": "Use experience on a related collective task",
+      "support": "Retained expertise and recombined membership",
+      "observation_history": "The report distinguishes the observed task sequence from an unsupported planned stereo transfer, exploratory post-performance expertise stability, and a written stapler strategy that was not assembled.",
+      "supported_claim": "The reported related-task performance sequence receives bounded credit.",
+      "limitations": [
+        "Two printed probability/statistic mismatches are preserved.",
+        "Unperformed transfers and written plans do not count as completed tasks."
+      ],
+      "source_version_and_read_scope": "Actual versus planned conditions separated in the source assessment.",
+      "dependence": "Exploratory associations after performance do not independently identify a causal mechanism.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-BONGARD",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Learning across changed tasks and bodies",
+      "source_evidence_keys": [
+        "Bongard 2006"
+      ],
+      "carrier": "Robot with learned model and changed body",
+      "cohort": "Published leg-loss episode and model comparisons",
+      "task": "Select informative actions and compensate locomotion after damage",
+      "support": "Model search with fixed topology and variable dimensions; external computation/orchestration not fully recovered",
+      "observation_history": "Informative disagreement among models guides action, and a selected model supports compensatory gait after leg loss.",
+      "supported_claim": "The report credits functional compensation in the observed changed-body task.",
+      "limitations": [
+        "The robot did not rebuild the limb.",
+        "Model comparisons, gait tests and damage observations have distinct histories.",
+        "Compute placement, orchestration and repair trigger were unresolved; supplement unread."
+      ],
+      "source_version_and_read_scope": "Main article reading only at the stated scope.",
+      "dependence": "Different task phases are related evidence, not a fully autonomous repair cycle.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-KWIATKOWSKI",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Learning across changed tasks and bodies",
+      "source_evidence_keys": [
+        "Kwiatkowski and Lipson 2019"
+      ],
+      "carrier": "Robot arm and self-model",
+      "cohort": "Pre-replacement tasks and post-replacement adaptation",
+      "task": "Pick and place, with a separate handwriting demonstration",
+      "support": "Learned model; joint feedback and geometry-deformation formula in static publication code",
+      "observation_history": "Pick-and-place and handwriting precede arm replacement; adapted pick-and-place follows it.",
+      "supported_claim": "The report credits the observed post-change pick-and-place adaptation.",
+      "limitations": [
+        "Post-change handwriting and mechanical self-repair were not shown.",
+        "Static code is not historical execution evidence or a geometry-free method.",
+        "Supplementary video and checkpoint histories were unresolved."
+      ],
+      "source_version_and_read_scope": "Publication code was inspected statically at the reported scope.",
+      "dependence": "Pre-change breadth does not become post-change retained breadth without observation.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-EDMONDS",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Learning across changed tasks and bodies",
+      "source_evidence_keys": [
+        "Edmonds OpenLock"
+      ],
+      "carrier": "Human learners, with a separate machine comparison",
+      "cohort": "Small-to-large task transfer among analysed participants",
+      "task": "Solve matching or nonmatching larger causal tasks after training",
+      "support": "Prior small tasks and feedback for up to 30 attempts",
+      "observation_history": "Matching transfer requires fewer attempts in the reported comparison; 15 outcome-based exclusions are retained in scope.",
+      "supported_claim": "The report credits bounded transfer performance under the actual training and feedback regime.",
+      "limitations": [
+        "No uniquely identified mental mechanism or untrained comparison follows.",
+        "Human and machine budgets differ.",
+        "This is not a social transmission chain."
+      ],
+      "source_version_and_read_scope": "Reported analysis population and exclusions, not a fresh raw-data reanalysis.",
+      "dependence": "Within-person task transfer is distinct from cross-person continuation.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-DEREX",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Performance understanding and correction",
+      "source_evidence_keys": [
+        "Derex 2019"
+      ],
+      "carrier": "Human learners in technology chains",
+      "cohort": "Wheel-configuration transmission conditions",
+      "task": "Improve technological performance and assess understanding",
+      "support": "Earlier configurations; additional theory channel in one condition",
+      "observation_history": "Configuration-only chains improve technology without growth on the ten-item understanding probe; the theory channel shows a positive understanding trend without faster optimisation.",
+      "supported_claim": "Performance improvement and the measured understanding outcome are separable.",
+      "limitations": [
+        "The probe result is not absence of all cognition or understanding.",
+        "Theory content was not randomly assigned as an independent mediator."
+      ],
+      "source_version_and_read_scope": "Outcome and condition scopes retained from report reading.",
+      "dependence": "Performance and understanding measures share participants and cannot count as independent confirmations.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-SARAL",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Performance understanding and correction",
+      "source_evidence_keys": [
+        "Saral 2026"
+      ],
+      "carrier": "Human learners receiving framed technological tasks",
+      "cohort": "Experiment 1 later shuffle cohort and Experiment 2 reported randomisation",
+      "task": "Learn under changed payoff relationships",
+      "support": "Frame supplied initially, with no aggregate payoff; exact configurations can repeat",
+      "observation_history": "Structural knowledge has a qualified performance advantage, not a larger learning slope; payoff relations are shuffled across conditions.",
+      "supported_claim": "The report credits the bounded structural-knowledge contrast.",
+      "limitations": [
+        "It does not show the same learners adapting to a rule reversal.",
+        "Experiment 1 shuffle is a later cohort.",
+        "Experiment 2 registration was unavailable."
+      ],
+      "source_version_and_read_scope": "Available article/registration scope retained.",
+      "dependence": "Different cohorts are not one learner’s observed before/after reversal history.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-NICHOLSON",
+      "tranche": 14,
+      "source_id": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+      "source_input_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+      "projected_report_sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+      "report_locus": "Performance understanding and correction",
+      "source_evidence_keys": [
+        "Nicholson study 1",
+        "Nicholson study 2"
+      ],
+      "carrier": "Human learners discussing corrective tasks",
+      "cohort": "Study 2 initially wrong: 10/33 corrected versus 0/26; five initially correct intervention outcomes missing",
+      "task": "Correct an initially mistaken answer while retaining correct answers",
+      "support": "The study-specific intervention package",
+      "observation_history": "The observed Study 2 correction contrast remains positive. Missing initially correct outcomes leave net gain between five and ten; terminal accuracy and harmful reversal are not identified.",
+      "supported_claim": "The report credits the robust observed correction contrast without filling missing outcomes.",
+      "limitations": [
+        "Group random formation and intervention randomisation are not interchangeable.",
+        "Study 1’s uncontrolled net loss of seven correct answers belongs to a different package.",
+        "A selected excerpt does not establish Study 2’s mechanism."
+      ],
+      "source_version_and_read_scope": "Printed counts and missing outcomes retained; no repaired dataset.",
+      "dependence": "The two studies cannot be combined into one controlled mechanism witness.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-CHIMENTO",
+      "tranche": 14,
+      "source_id": "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+      "source_input_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+      "projected_report_sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+      "report_locus": "Chimento and colleagues",
+      "source_evidence_keys": [
+        "Chimento 2021"
+      ],
+      "carrier": "Great tits adopting puzzle-box techniques",
+      "cohort": "Identified resident female non-tutor and immigrant/resident population history",
+      "task": "Adopt a more efficient technique while an older one remains possible",
+      "support": "Apparatus permits both techniques and social exposure",
+      "observation_history": "The focal bird learns an inefficient technique, then makes five unblocked efficient solves while retaining the former option. Static figure code reconciles caption day 11 with plotted day 16.",
+      "supported_claim": "The report credits a bounded individual innovation/adoption history and group diffusion.",
+      "limitations": [
+        "The history does not isolate a unique teacher-recipient edge.",
+        "Solver thresholds can omit intermediary behaviour.",
+        "Occasional innovation is not a failed-policy repair or general qualification."
+      ],
+      "source_version_and_read_scope": "Main/STAR figures read; selected deposit-v2 data and static R inspected without execution; supplementary PDF unread.",
+      "dependence": "Individual, population and figure-code records share the same study roots.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-APLIN",
+      "tranche": 14,
+      "source_id": "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+      "source_input_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+      "projected_report_sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+      "report_locus": "Aplin and colleagues",
+      "source_evidence_keys": [
+        "Aplin 2017"
+      ],
+      "carrier": "Identified great tits",
+      "cohort": "Reported population learning episode; 49 percent changed preference over 14 days",
+      "task": "Prefer the better-rewarded technique after a reward change",
+      "support": "Both old and new techniques available, personal reinforcement and social information",
+      "observation_history": "Many identified individuals shift preference while the old technique continues to work.",
+      "supported_claim": "The report credits bounded adaptive performance after changed payoffs.",
+      "limitations": [
+        "Group information does not establish an exact recipient chain or unique cognitive mechanism.",
+        "Door widening and a population’s year gap/re-exposure remain part of the history."
+      ],
+      "source_version_and_read_scope": "Main article and selected visuals/code at the stated publication pin; no fresh execution.",
+      "dependence": "Related reinforcement and social-model observations do not independently identify the mechanism.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-VOGEL",
+      "tranche": 14,
+      "source_id": "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+      "source_input_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+      "projected_report_sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+      "report_locus": "Vogel and Dussutour",
+      "source_evidence_keys": [
+        "Vogel and Dussutour"
+      ],
+      "carrier": "Physarum fragments fusing then separating",
+      "cohort": "Salt-trained/untrained pair comparison at one- and three-hour fusion",
+      "task": "Cross an aversive salt condition after fusion with a trained fragment",
+      "support": "Physical fusion and salt-training history",
+      "observation_history": "After three-hour fusion, separated recipient fragments show reduced aversion relative to untrained pairs; the one-hour condition does not show the same pattern.",
+      "supported_claim": "The report credits the finite post-fusion behavioural transfer effect.",
+      "limitations": [
+        "Delayed retention and onward relay were not shown.",
+        "Physical carryover remains possible.",
+        "Nonsignificance is not equivalence; raw download was inaccessible."
+      ],
+      "source_version_and_read_scope": "Available paper and support at the recorded reading scope; inaccessible raw input remains unavailable.",
+      "dependence": "Timing conditions and recipient behaviour belong to one study, not independent onward generations.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-BOUSSARD",
+      "tranche": 14,
+      "source_id": "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+      "source_input_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+      "projected_report_sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+      "report_locus": "Boussard and colleagues",
+      "source_evidence_keys": [
+        "Boussard 2019"
+      ],
+      "carrier": "Physarum entering and leaving dormant sclerotia",
+      "cohort": "Six-day training followed by roughly one month dormancy and reactivation",
+      "task": "Retain reduced salt aversion through a dormant stage",
+      "support": "Salt-training and dormancy/reactivation conditions",
+      "observation_history": "Reduced aversion persists even after water-drying conditions; two-hour sodium loading improves expansion but not latency.",
+      "supported_claim": "The report credits bounded behavioural retention through the observed dormant interval.",
+      "limitations": [
+        "Sodium enrichment does not identify particular retained ions or a uniquely necessary/sufficient carrier.",
+        "One-year mortality prevents the proposed longer retention extension.",
+        "Expansion and latency effects are distinct."
+      ],
+      "source_version_and_read_scope": "Thirteen support files were parsed at the recorded scope; not all raw histories were reconstructible.",
+      "dependence": "Correlated physiological and behavioural observations do not isolate a unique storage mechanism.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T14-KRIEGMAN",
+      "tranche": 14,
+      "source_id": "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+      "source_input_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+      "projected_report_sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+      "report_locus": "Kriegman and colleagues",
+      "source_evidence_keys": [
+        "Kriegman 2021"
+      ],
+      "carrier": "Frog-cell constructs and offspring swarms",
+      "cohort": "Eight seeded trials, including one fungal stop",
+      "task": "Gather supplied cells into further motile constructs",
+      "support": "Culture, selection and fresh donor cells; spherical or shaped initial constructs",
+      "observation_history": "Spherical founders yield one to two reported generations and C-shaped founders two to four. Figure 4 witnesses three offspring-swarm steps after the founder but no onward act by the last observed generation. Three cell-only controls produce no motile offspring.",
+      "supported_claim": "The report credits finite supported collective construction through the observed generations.",
+      "limitations": [
+        "C-shape itself is not copied; size and yield decline.",
+        "This is not AI-software reproduction, personal identity or indefinite renewal.",
+        "The microcircuit utility is simulated."
+      ],
+      "source_version_and_read_scope": "Main article, 33-page supplement and selected movie contacts inspected; not every movie frame. Main-branch code is static and lacks a publication pin.",
+      "dependence": "A chain’s successive generations and its movie/stills share one history; controls remain distinct trials.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T15-PAN",
+      "tranche": 15,
+      "source_id": "T15-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "19aa086ae362153c48b34de0ab00bd52996faa9229c508c7068da35f758b0169",
+      "projected_report_sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+      "report_locus": "Pan and colleagues",
+      "source_evidence_keys": [
+        "Pan arXiv:2412.12140v1"
+      ],
+      "carrier": "Tool-using software agents and successor instances",
+      "cohort": "Author-reported finite creation sequence",
+      "task": "Build a functioning successor that can create another instance",
+      "support": "Scaffold, language models, tools, hardware and execution support",
+      "observation_history": "The paper reports a successor and a further running instance. The assessed public baseline log ends before final startup; Figure 6 instructions and Section 3.3/Figure 5 completion reports have different evidential roles.",
+      "supported_claim": "The report credits the author-reported finite supported construction faculty at its evidence scope.",
+      "limitations": [
+        "It does not establish transfer of conversations, commitments, support independence, indefinite renewal or personal identity.",
+        "An incomplete public log does not independently verify the whole reported sequence."
+      ],
+      "source_version_and_read_scope": "Version 1 assessed; byte-identical PDF copies are not separate sources of observation.",
+      "dependence": "Duplicate files and multiple paper loci do not make independent replications.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    },
+    {
+      "id": "T15-REPLIBENCH",
+      "tranche": 15,
+      "source_id": "T15-REPORT-DERIVED-MARKDOWN",
+      "source_input_sha256": "19aa086ae362153c48b34de0ab00bd52996faa9229c508c7068da35f758b0169",
+      "projected_report_sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+      "report_locus": "RepliBench",
+      "source_evidence_keys": [
+        "RepliBench arXiv:2504.18565v2"
+      ],
+      "carrier": "Agents and later successor processes",
+      "cohort": "Reported benchmark sequences with three operation checks",
+      "task": "Create a working successor, request onward construction, and check the final successor operates",
+      "support": "Benchmark scaffold, tools and shared inference support",
+      "observation_history": "The three checks cover first-successor operation, second target script after the onward request, and final-successor operation. Figure 5 and 26 matching cells disagree in the assessed and earlier edition.",
+      "supported_claim": "The report retains a qualitative reference-assistance advantage and finite reported constructive continuation.",
+      "limitations": [
+        "Discrepant figures leave exact rates and some no-reference-positive claims unresolved.",
+        "The tests do not establish complete causal provenance or a further unobserved generation.",
+        "Local-model routing to shared inference does not show support independence."
+      ],
+      "source_version_and_read_scope": "Version 2 and the relevant earlier-edition discrepancy, not a fresh benchmark run.",
+      "dependence": "This is not an experimental replication of Pan; multiple checks belong to the same sequence.",
+      "integration_activity": "SOURCE_ASSESSMENT_OF_SUPPLIED_REPORT",
+      "new_primary_research": false,
+      "experiment_status": "NOT_RUN",
+      "specialist_review_status": "NOT_RUN"
+    }
+  ]
+}

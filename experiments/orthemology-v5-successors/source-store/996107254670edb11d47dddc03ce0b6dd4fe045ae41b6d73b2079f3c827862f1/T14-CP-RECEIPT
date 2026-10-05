@@ -1,0 +1,45 @@
+{
+  "title": "Fourteenth Orthemology research checkpoint verification",
+  "status": "REVIEWED_CHECKPOINT_NOT_COMPLETED_TRANCHE",
+  "programme": "Same v5",
+  "files": [
+    {
+      "file": "Orthemology_Fourteenth_Research_Checkpoint_v1_20261005.docx",
+      "bytes": 56299,
+      "sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac"
+    },
+    {
+      "file": "Orthemology_Fourteenth_Research_Checkpoint_Evidence_v1_20261005.zip",
+      "bytes": 175389,
+      "sha256": "bd690973f8188291213f372b6650d1650cc2f83e5f63090ef061c671626f1ddb"
+    }
+  ],
+  "integrity": {
+    "archive_members": 60,
+    "payload_records": 59,
+    "crc": "PASS",
+    "all_payload_byte_counts_and_sha256": "PASS"
+  },
+  "document": {
+    "pages_visually_reviewed": 13,
+    "native_equation_specifications": 10,
+    "native_equation_lines": 20,
+    "prose_and_hyperlink_preservation": "PASS",
+    "mathematical_render_readback": "PASS"
+  },
+  "research_status": {
+    "new_mathematics": "Ordinary written proofs; independently reviewed against the specified definitions",
+    "new_Lean_verification": false,
+    "new_experiments": false,
+    "canonical_repository_changed": false
+  },
+  "timing": {
+    "started_utc": "2026-10-04T12:54:58.018817+00:00",
+    "approval_pause_started_utc": "2026-10-04T16:09:33+00:00",
+    "original_ceiling_utc": "2026-10-05T00:54:58.018817+00:00",
+    "six_active_hour_minimum_met": false,
+    "waiting_counted_as_research": false,
+    "extension_authorised": false
+  },
+  "scope": "The report and evidence preserve the reviewed written results. They are a checkpoint, not a claim that the requested active-work minimum or proposed mechanisation was completed. External source bodies and private review records are not included."
+}
