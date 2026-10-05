@@ -94,11 +94,15 @@ def check_public_text(text):
                 return candidate
         except ValueError:
             return candidate
-        path = re.sub(r'/(?:mnt/(?:data|c/(?:Users|workspace))|home/(?:oai|agent)|tmp)(?=/|$)',
+        path = re.sub(r'/(?:mnt/(?:data|c/(?:Users|workspace))|home/(?:oai|agent)|tmp|workspace)(?=/|$)',
                       '/public-url-path', parsed.path)
         return urlunsplit((parsed.scheme, parsed.netloc, path, parsed.query, parsed.fragment))
     inspected = re.sub(r'https?://[^\s<>"\']+', public_url, text, flags=re.IGNORECASE)
     _legacy.check_public_text(inspected)
+    # Historical provenance can use this additional absolute execution root.
+    # Keep relative paths and valid public URL paths distinct from local locators.
+    require(not re.search(r'(?:(?<![\w./-])|(?<=://))/workspace(?=[/\\]|\Z|[\s\'"`<>])', inspected),
+            'Private workspace locator in public content')
 
 
 def _finite(value):

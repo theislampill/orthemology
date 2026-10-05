@@ -528,6 +528,30 @@ class SuccessorTests(unittest.TestCase):
         self.bundle['results'][0]['limitations'] = ['Loaded from C:\\Users\\private\\session.json']
         self.reject('Private|private', reseal=True)
 
+    def test_workspace_locator_rejected_in_decoded_status(self):
+        for text in ['/' + 'workspace/scratch/case/source.lean',
+                     'file://' + '/workspace/scratch/case/source.lean',
+                     'https://' + '/workspace/scratch/case/source.lean',
+                     'https://example.org/paper?local=' + '/workspace/scratch/case/source.lean']:
+            with self.subTest(text=text):
+                self.bundle['results'][0]['limitations'] = [text]
+                self.reject('Private|private', reseal=True)
+
+    def test_workspace_locator_rejected_in_exact_json_payload(self):
+        raw = json.dumps({'recorded_member': {'path': '/' + 'workspace/scratch/case/source.lean'}}).encode()
+        for encoded in [raw, raw.replace(b'/', b'\\u002f')]:
+            with self.subTest(encoded=encoded):
+                row = source(self.root, 'workspace-metadata', encoded, 'provenance.json')
+                with self.assertRaisesRegex(ValueError, 'Private|private'):
+                    self.v._sources({'sources': [row], 'reviews': [], 'projection_reviews': []}, self.root)
+
+    def test_public_workspace_url_and_relative_path_remain_valid(self):
+        self.bundle['results'][0]['limitations'] = [
+            'https://example.org/workspace/published-source.lean',
+            'docs/workspace/source.lean', 'workspace/source.lean']
+        rebind(self.bundle)
+        self.assertEqual(self.validate()['results'], 1)
+
     def test_public_http_citation_path_is_not_a_private_filesystem_path(self):
         self.bundle['results'][0]['limitations'] = [
             'Reference: https://anggtwu.net/tmp/hindley_seldin__lambda-calculus_and_combinators_an_introduction.pdf',
