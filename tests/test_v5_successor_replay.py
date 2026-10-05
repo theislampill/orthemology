@@ -318,6 +318,143 @@ class SuccessorReplayTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             another(argv, cwd=self.base, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 
+    def test_history_capture_preserves_separate_streams_and_source_bytes(self):
+        r = self.r; trace = self.base / 'history-capture'; trace.mkdir()
+        script = self.base / 'child.py'
+        script.write_text('import sys\nprint("stdout")\nprint("stderr", file=sys.stderr)\n')
+        argv = [sys.executable, str(script)]; original = script.read_bytes()
+        invoke = r.trace_reviewed_commands(subprocess.run, trace, [argv], [[sys.executable, '--version']], None,
+            capture_output=True, record_outputs=True, source_hashes={str(script): sha(original)})
+        self.assertIn('Python', invoke([sys.executable, '--version'], capture_output=True, text=True, check=True).stdout)
+        with self.assertRaises(ValueError): invoke(argv, capture_output=True, text=True, timeout=30)
+        script.write_bytes(original + b'# changed\n')
+        with self.assertRaises(ValueError): invoke(argv, capture_output=True, text=True)
+        self.assertEqual(list(trace.iterdir()), [])
+        script.write_bytes(original)
+        result = invoke(argv, capture_output=True, text=True)
+        row = r.read_json(trace / '0000.json')
+        self.assertEqual((result.stdout, result.stderr), ('stdout\n', 'stderr\n'))
+        self.assertEqual((trace / '0000.log').read_bytes(), b'stdout\nstderr\n')
+        self.assertEqual((trace / '0000.stdout.log').read_bytes(), b'stdout\n')
+        self.assertEqual((trace / '0000.stderr.log').read_bytes(), b'stderr\n')
+        self.assertEqual(row['source_sha256'], sha(original))
+        self.assertEqual(row['stdout_sha256'], sha(result.stdout))
+        self.assertEqual(row['stderr_sha256'], sha(result.stderr))
+        with self.assertRaises(ValueError): invoke(argv, capture_output=True, text=True)
+
+    def test_history_generated_claim_bytes_are_source_owned(self):
+        r = self.r
+        body = r.history_claim_source('revocation_omission_is_safe')
+        self.assertEqual(body, ('import NegativeControls\nopen InterlockHistory InterlockHistory.Controls\n'
+            'example : ¬ BrokenLands revoked NoRevocation command 11 := by decide\n').encode())
+        with self.assertRaises(ValueError): r.history_claim_source('unreviewed')
+        source = {'projection': 'CUSTODY_ONLY', 'public_sha256': None,
+            'original_sha256': r.HISTORY_CONTRACT['driver_sha256'], 'original_bytes': r.HISTORY_CONTRACT['driver_bytes'],
+            'origin_archive_sha256': r.HISTORY_CONTRACT['archive_sha256'], 'member_chain': ['history.zip', 'replay.py']}
+        r.check_custody_driver(source, r.HISTORY_CONTRACT)
+        with self.assertRaises(ValueError): r.check_custody_driver({**source, 'member_chain': ['history.zip', '/replay.py']}, r.HISTORY_CONTRACT)
+
+    def test_history_timeout_keeps_both_partial_streams_without_rejection_code(self):
+        r = self.r; trace = self.base / 'history-timeout'; trace.mkdir()
+        call = r.traced_run(subprocess.run, trace, capture_output=True)
+        argv = [sys.executable, '-c', 'import sys,time; print("partial out",flush=True); print("partial err",file=sys.stderr,flush=True); time.sleep(2)']
+        with self.assertRaises(subprocess.TimeoutExpired): call(argv, capture_output=True, text=True, timeout=0.3)
+        row = r.read_json(trace / '0000.json')
+        self.assertEqual((row['terminal'], row['exit_code']), ('TIMEOUT', None))
+        stdout = (trace / '0000.stdout.log').read_bytes(); stderr = (trace / '0000.stderr.log').read_bytes()
+        self.assertIn(b'partial out', stdout); self.assertIn(b'partial err', stderr)
+        self.assertEqual((trace / '0000.log').read_bytes(), stdout + stderr)
+        self.assertEqual(row['log_sha256'], sha(stdout + stderr))
+        self.assertTrue(r.trace_resource_inconclusive(trace))
+
+    def test_history_scenarios_require_actual_exact_cases_and_source(self):
+        r = self.r; source = self.base / 'dynamic_interlock.py'
+        value = {'status': 'PASS', 'scope': 'bounded source correspondence corroboration only',
+                 'source': str(source), 'cases': copy.deepcopy(r.HISTORY_CASES)}
+        r.check_history_scenarios(value, str(source))
+        for changed in [dict(value, source='different.py'), dict(value, cases=value['cases'][:-1]), dict(value, status='FAIL')]:
+            with self.assertRaises(ValueError): r.check_history_scenarios(changed, str(source))
+        changed = copy.deepcopy(value); changed['cases'][2]['reprepare'] = 0
+        with self.assertRaises(ValueError): r.check_history_scenarios(changed, str(source))
+
+    def test_history_collector_binds_original_order_streams_claims_and_objects(self):
+        r = self.r; out = self.base / 'history'; trace = out / 'traces/original'; trace.mkdir(parents=True)
+        driver = {'id': 'driver', 'recipe': r.HISTORY_RECIPE, 'sha256': r.HISTORY_CONTRACT['driver_sha256']}
+        stage = {'id': 'original', 'driver_id': 'driver', 'argv': ['{tool:python}', '-B', '{driver:driver}',
+                 '--lean', '{tool:lean}', '--mathlib', '{dependency:mathlib}', '--output', '{out}/original']}
+        parent = {'id': 'original', 'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-10-05T00:00:00Z',
+                  'ended_at': '2026-10-05T00:00:03Z', 'log_sha256': sha('parent')}
+        plan = {'drivers': {'driver': driver}, 'modules': {n: {'source_id': n} for n, _, _ in r.HISTORY_PATHS},
+                'file_paths': {'control-source/check_controls.py': {'source_id': 'claims'},
+                               'control-source/source_replay.py': {'source_id': 'scenarios'}},
+                'targets': {}, 'contents': {'claims': b'# exact fixture claims', 'scenarios': b'# exact fixture scenario'}, 'stages': {'original': stage}}
+        plan['history_children'] = r.history_specs('archive', plan)
+        archive = self.base / 'archive'
+        mappings = {'out': out, 'project': out / 'project', 'tool:lean': self.base / 'lean',
+                    'tool:python': self.base / 'python', 'archive:archive': archive}
+        specs = list(plan['history_children'].values()); rows = []; negatives = []; stages = {'original': parent}
+        scenarios = {'status': 'PASS', 'source': str(archive / r.HISTORY_DYNAMIC),
+            'scope': 'bounded source correspondence corroboration only', 'cases': r.HISTORY_CASES}
+        for index, spec in enumerate(specs):
+            name = spec['id']; negative = bool(spec['exit_code']); scenario = name == 'source-replay'
+            source = r.history_claim_source(name) if negative else plan['contents']['scenarios'] if scenario else ('-- ' + name).encode()
+            if not negative and not scenario: plan['contents'][name] = source
+            path = Path(r._expand(spec['argv'][-1], mappings)); path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(source)
+            stdout = json.dumps(scenarios) + '\n' if scenario else 'checked\n' if not negative else 'fixture: error: ' + r.HISTORY_DIAGNOSTICS[0] + '\n'
+            stderr = r.HISTORY_DIAGNOSTICS[1] + '\n' if negative else ''
+            text = stdout + stderr; log = out / spec['log']; log.parent.mkdir(parents=True, exist_ok=True); log.write_bytes(text.encode())
+            if scenario:
+                (out / 'original/logs/source-replay.json').write_bytes(stdout.encode())
+                (out / 'original/logs/source-replay.stderr').write_bytes(stderr.encode())
+            for suffix, data in [('log', text), ('stdout.log', stdout), ('stderr.log', stderr)]:
+                (trace / f'{index:04}.{suffix}').write_bytes(data.encode())
+            outputs = {}
+            if spec['output_path']:
+                obj = out / spec['output_path']; obj.parent.mkdir(parents=True, exist_ok=True); obj.write_bytes(('fresh ' + name).encode()); outputs[str(obj)] = sha(obj.read_bytes())
+            argv = [r._expand(a, mappings) for a in spec['argv']]
+            r.write_json(trace / f'{index:04}.json', {'index': index, 'argv': argv, 'cwd': str(out / 'project'),
+                'started_at': '2026-10-05T00:00:01Z', 'ended_at': '2026-10-05T00:00:02Z', 'terminal': 'COMPLETED',
+                'exit_code': spec['exit_code'], 'log_sha256': sha(text), 'stdout_sha256': sha(stdout), 'stderr_sha256': sha(stderr),
+                'source_sha256': sha(source), 'output_hashes': outputs})
+            if negative: negatives.append({'control': name, 'exit_code': 1, 'expected_false_claim_rejected': True})
+            elif not scenario: rows.append({'stage': name, 'exit_code': 0, 'command': argv})
+            sid = 'observe-' + name; plan['stages'][sid] = {'id': sid, 'driver_id': 'driver', 'argv': ['{builtin:observe-child}', 'original', name]}
+            stages[sid] = {'id': sid, 'terminal': 'COMPLETED', 'exit_code': spec['exit_code'], 'log_sha256': sha(text),
+                          'started_at': '2026-10-05T00:00:04Z', 'ended_at': '2026-10-05T00:00:05Z'}
+        r.write_json(out / 'original/controls/RESULTS.json', negatives)
+        version = 'Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)'
+        (out / 'original/logs/toolchain.log').write_text(version + '\n' + LEAN_SHA + '\n')
+        result = {'status': 'PASS_PORTABLE_SOURCE_REPLAY', 'completed_utc': '2026-10-05T00:00:02+00:00',
+            'public_manifest_sha256': r.HISTORY_FILES['PUBLIC_MANIFEST.json'], 'original_to_public_sha256': r.HISTORY_FILES['ORIGINAL_TO_PUBLIC.json'],
+            'source_archive_sha256': r.HISTORY_ORIGIN_SHA, 'scientific_candidate_snapshot_sha256': r.HISTORY_FILES[r.HISTORY_KERNEL + 'REVIEW_SNAPSHOT_V2.json'],
+            'scientific_review_receipt_sha256': r.HISTORY_FILES[r.HISTORY_KERNEL + 'independent-review-v2/RECEIPT.json'],
+            'compiler_sha256': LEAN_SHA, 'compiler_version': version, 'mathlib_commit': 'c44e0c8ee63ca166450922a373c7409c5d26b00b',
+            'mathlib_source_files_verified': 6816, 'compiled_cache_used_read_only': True, 'independent_cache_rebuild_claimed': False,
+            'compiled_stages': rows, 'false_claim_rejections': 7, 'accepted_source_scenarios': 7, 'archive_executable_modes_required': False,
+            'shell_scripts_executed': [], 'all_projected_inputs_unchanged': True, 'claim_ceiling': r.HISTORY_CEILING}
+        r.write_json(out / 'original/REPLAY_RECEIPT.json', result)
+        text = '\n'.join(r.HISTORY_TERMINAL + ['Receipt: ' + str(out / 'original/REPLAY_RECEIPT.json')]) + '\n'
+        def collect(): return r.history_collect_children(stage, parent, text, plan, out, mappings)
+        children, invocation, objects = collect()
+        self.assertEqual((len(children), len(objects), invocation['child_count']), (17, 5, 17))
+        evidence = {'driver_invocations': [invocation], 'child_observations': [dict(c, stage_id='observe-' + c['source_child_id'], observed_at='2026-10-05T00:00:05Z') for c in children.values()],
+                    'output_hashes': objects, 'runner_sha256': invocation['runner_sha256']}
+        r.validate_child_evidence(evidence, plan, stages, True)
+        bad = copy.deepcopy(evidence); bad['child_observations'][7]['generated_source_sha256'] = '0' * 64
+        with self.assertRaises(ValueError): r.validate_child_evidence(bad, plan, stages, True)
+        for field, value in [('terminal', 'TIMEOUT'), ('exit_code', 124), ('argv', ['foreign']), ('source_sha256', '0' * 64)]:
+            row = r.read_json(trace / '0007.json'); r.write_json(trace / '0007.json', dict(row, **{field: value}))
+            with self.subTest(field=field), self.assertRaises(ValueError): collect()
+            r.write_json(trace / '0007.json', row)
+        mutated = out / 'original/controls/revocation_omission_is_safe.lean'; original = mutated.read_bytes(); mutated.write_bytes(original + b'-- later edit')
+        with self.assertRaises(ValueError): collect()
+        mutated.write_bytes(original)
+        stream = trace / '0007.stderr.log'; original = stream.read_bytes(); stream.write_bytes(b'replaced diagnostic')
+        with self.assertRaises(ValueError): collect()
+        stream.write_bytes(original)
+        obj = out / 'original/build/HistoryModel.olean'; obj.write_bytes(b'late object replacement')
+        with self.assertRaises(ValueError): collect()
+
     def test_attribution_collector_binds_every_original_child_and_immediate_object(self):
         r = self.r; out = self.base / 'attribution'; trace = out / 'traces/original'; trace.mkdir(parents=True)
         driver = {'id': 'driver', 'recipe': r.ATTR_RECIPE, 'sha256': r.ATTR_CONTRACT['driver_sha256']}

@@ -61,6 +61,7 @@ APPROVED_DECLARED_SUITES = {
     't14-identity': 'c065f772862ca55a9d7ac6ceb29c11439aa1574bf8dd8e37918a65dc77e9abdf',
     'd06-core-runtime': '2c0c433ba860bc33862a87dff2e4c22f3ec1d584b580a0605a1ffc8163844f8b',
     'D04-T07-ATTRIBUTION-ORIGINAL': '7888e370d7f65783731bd93783041e9c35648db96d27e6e9d059894003731d15',
+    'D04-T07-HISTORY-ORIGINAL': 'a0e55482d8bf7f6d9b5b77ee37d99ce54a5b27945cd7d816f9d00cb6d61711df',
 }
 EMPIRICAL_RECIPES = {
     't15-empirical-integrity-v1': '9ab3df6e096f8158f755ea31408786248d04547d0bd7c38785770d7e9964e41e',
@@ -135,6 +136,50 @@ ATTR_MANIFESTS = {'PUBLIC_MANIFEST.json': 'c68835c56e26dfb2749b8bf3ec895aaa36abc
     'sources/controls-v1/MANIFEST.json': 'f29de5f526216178d1925281eef35a8f8558dc15810b6f7e40428324963f93e4',
     'review/REVIEW_RECEIPT.json': '59b6578ab2d25b7a5f00ba8cefc1777c23c4b59de95f9ba631c1109c80468de3',
     'ORIGINAL_TO_PUBLIC.json': '91bba08917dba9215cff4208e65b3ba4484b84e2f92fcfe8fb5938aa1689adaa'}
+HISTORY_RECIPE = 't07-history-original-v1'
+HISTORY_CONTRACT = {
+    'driver_sha256': 'c664ea7c1398e81359bd5684b25104caaea1991598e16d3476ce555e405ee06a',
+    'driver_bytes': 10192, 'archive_sha256': 'ac825ff194e83f8ddd50da3a48e0739d320517374e66f19b129c386188c09aa0',
+    'archive_bytes': 654716, 'root': '', 'driver_path': 'replay.py',
+}
+HISTORY_KERNEL = 'tranche7-restart/formal/interlock-history-kernel/'
+HISTORY_DYNAMIC = 'tranche7-restart/delivery/unknown-root-attribution-accepted-v1/base-v2/dynamic_interlock.py'
+HISTORY_ORIGIN_SHA = 'df8f13aa634a7c00256d7dc253bcc997bea13ab53000af9b00130a24698546fb'
+HISTORY_FILES = {
+    'PUBLIC_MANIFEST.json': 'a07397914c4703fbb1f89b939abaf9e592b720f0a5c77908e900c8b71e87f319',
+    'ORIGINAL_TO_PUBLIC.json': 'f6d265bcfaf79357fb9869c106cde85047cc3337072932c85101094c1c1b916f',
+    'MATHLIB_SOURCE_PIN.json': 'c01c0b3cf6bed3a960794e7da55231e446c7622f9c953b5c0e82092d026bb431',
+    HISTORY_KERNEL + 'SOURCE_BINDING.json': '91bd8ca31da36f6d575431cedd16312727728ebf3adb2eaab4fd9d2c2ee5f6b1',
+    HISTORY_KERNEL + 'REVIEW_SNAPSHOT_V2.json': 'e253a2b1a537826094db7ede00768b561360ce25e3a6907354592a320a2de278',
+    HISTORY_KERNEL + 'independent-review-v2/RECEIPT.json': 'e1432fdadf2bcaad8ce4c9cbfe62b3ef0d6905ebc94afbfb6e11ec018a4c4b36',
+    HISTORY_KERNEL + 'check_controls.py': '90162a106383eedfb2f7be6a31236c42a81c78d563500d21090b1fb4e2fd3745',
+    HISTORY_KERNEL + 'source_replay.py': 'cada8edbe323dcb7d3ca352103afc0e3e8a30622b0ed08687643672e4e13c6ba',
+    HISTORY_DYNAMIC: 'd67b95645512d78c51cab469cc71fc4fc5fd622a7c379481f1ee178e1031052a',
+}
+HISTORY_PATHS = [(n, HISTORY_KERNEL + n + '.lean', True) for n in ['HistoryModel', 'HistoryInvariant', 'HistorySafety', 'HistoryTrace', 'NegativeControls']]
+HISTORY_PATHS += [(n, HISTORY_KERNEL + 'tests/' + n + '.lean', False) for n in ['Targets', 'MultiEpoch']]
+HISTORY_PATHS += [(n, HISTORY_KERNEL + 'independent-review-v2/' + n + '.lean', False) for n in ['ReviewChallenges', 'ReservationDomain']]
+HISTORY_CLAIMS = {
+    'revocation_omission_is_safe': '¬ BrokenLands revoked NoRevocation command 11',
+    'target_only_checks_preserve_permission': '¬ BrokenLands delivered TargetOnly command 11',
+    'cancellation_guard_is_redundant': '¬ BrokenLands cancelled NoCancellation command 11',
+    'B_replies_are_enough': '¬ Lands cfg falselyClosed command 11',
+    'mediation_is_redundant': '(bypass revoked).damaged = false',
+    'approved_label_binds_substituted_bytes': '(land cfg prepared substituted 11).damaged = false',
+    'old_action_still_authorized': 'Authorized command (cfg.source revoked.epoch)',
+}
+HISTORY_DIAGNOSTICS = ["tactic 'decide' proved that the proposition", 'is false']
+HISTORY_CASES = [
+    {'case': 'stale_local_after_revocation', 'baseline': 'NO_EFFECT', 'cached_votes': 'UNSAFE'},
+    {'case': 'permission_only_epoch', 'baseline': 'NO_EFFECT', 'target_only': 'UNSAFE'},
+    {'case': 'durable_cancellation', 'late': 'NO_EFFECT', 'reprepare': False, 'fresh_nonce': 'APPLIED'},
+    {'case': 'too_small_cancel_threshold', 'late': 'APPLIED'}, {'case': 'same_budget_bypass', 'unsafe': True},
+    {'case': 'same_command_binding', 'baseline': 'NO_EFFECT', 'substitution': 'UNSAFE'},
+    {'case': 'two_epochs_reordered_delivery', 'final_epoch': 2, 'landing': 'APPLIED'},
+]
+HISTORY_CEILING = 'Original dynamic V2 conditional finite-history safety, durable cancellation, and stable-epoch goal preservation only.'
+HISTORY_TERMINAL = ['PASS: 5 modules, 2 fixtures, 7 false-claim controls, 7 original-source scenarios, and both V2 reviewer check files.',
+                    'All projected scientific bytes unchanged. No archive executable permissions used.']
 
 
 def require(condition, message):
@@ -353,6 +398,9 @@ def _validate_argv(stage, plan):
             return
         if recipe == ATTR_RECIPE:
             validate_attribution_argv(stage, driver, plan)
+            return
+        if recipe == HISTORY_RECIPE:
+            validate_history_argv(stage, driver, plan)
             return
         if recipe in T10_FINITE_RECIPES:
             validate_t10_argv(stage, driver, plan)
@@ -622,14 +670,187 @@ def trace_attribution_driver(driver, trace, arguments):
     return 0
 
 
-def traced_run(original_run, trace):
+def history_claim_source(name):
+    require(name in HISTORY_CLAIMS, 'Unreviewed history false claim')
+    return ('import NegativeControls\nopen InterlockHistory InterlockHistory.Controls\n'
+            'example : ' + HISTORY_CLAIMS[name] + ' := by decide\n').encode()
+
+
+def history_specs(archive_id, plan=None):
+    result = {}; base = '{archive:' + archive_id + '}'
+    def add(name, source, emits=False, negative=False, scenario=False):
+        output = 'original/build/' + name + '.olean' if emits else None
+        actual_source = '{out}/original/controls/' + name + '.lean' if negative else base + '/' + source
+        argv = ['{tool:python}', actual_source] if scenario else ['{tool:lean}', '-j1'] + (['-o', '{out}/' + output] if output else []) + [actual_source]
+        sid = None
+        if plan:
+            sid = plan['file_paths']['control-source/' + ('check_controls.py' if negative else 'source_replay.py')]['source_id'] if negative or scenario else plan['modules'][name]['source_id']
+        result[name] = {'id': name, 'source_id': sid, 'source_path': source, 'output_path': output, 'argv': argv,
+                        'cwd': '{project}', 'log': 'original/' + ('controls/' if negative else 'logs/') + name + ('.json' if scenario else '.log'), 'exit_code': 1 if negative else 0}
+    for name, path, emits in HISTORY_PATHS[:7]: add(name, path, emits)
+    for name in HISTORY_CLAIMS: add(name, HISTORY_KERNEL + 'check_controls.py', negative=True)
+    add('source-replay', HISTORY_KERNEL + 'source_replay.py', scenario=True)
+    for name, path, emits in HISTORY_PATHS[7:]: add(name, path, emits)
+    return result
+
+
+def validate_history_package(suite, plan):
+    require(len(plan['drivers']) == len(plan['inputs']) == 1 and not plan['fixtures'], 'History needs one original archive/driver')
+    driver = next(iter(plan['drivers'].values())); iid = driver['external_input_id']; archive = plan['inputs'][iid]
+    require(archive['kind'] == 'FILE' and archive['expected_sha256'] == HISTORY_CONTRACT['archive_sha256'] and archive['expected_bytes'] == HISTORY_CONTRACT['archive_bytes'], 'Wrong original history archive')
+    require(set(plan['modules']) == {n for n, _, _ in HISTORY_PATHS} and suite['replay']['module_order'] == ['HistoryModel', 'HistoryInvariant', 'HistorySafety', 'HistoryTrace'] and plan['build_roots'] == ['original/build'], 'History target/import namespace changed')
+    for name in ['check_controls.py', 'source_replay.py']:
+        require(sha(plan['contents'][plan['file_paths']['control-source/' + name]['source_id']]) == HISTORY_FILES[HISTORY_KERNEL + name], 'Original history helper changed')
+    plan['history_children'] = history_specs(iid, plan); stages = list(plan['stages'].values())
+    require(len(stages) == 18 and stages[0]['kind'] == 'DRIVER' and stages[0]['timeout_seconds'] == 3600, 'History parent contract changed')
+    require([s['argv'][2] for s in stages[1:]] == list(plan['history_children']) and
+            all(s['argv'][1] == stages[0]['id'] and s['driver_id'] == driver['id'] and stages[0]['id'] in s['depends_on'] for s in stages[1:]), 'History physical observation order changed')
+
+
+def validate_history_argv(stage, driver, plan):
+    require(stage['cwd'] == '.', 'History working directory changed')
+    if stage['argv'][:1] == ['{builtin:observe-child}']:
+        require(len(stage['argv']) == 3 and stage['argv'][2] in plan['history_children'] and not stage['output_paths'] and stage['timeout_seconds'] == 30, 'Wrong history observation')
+        negative = stage['argv'][2] in HISTORY_CLAIMS
+        require(stage['expected_exit_codes'] == ([1] if negative else [0]), 'History child exit changed')
+        require(stage['kind'] == ('NEGATIVE_CONTROL' if negative else 'POSITIVE_CONTROL'), 'History child role changed')
+        expected = [{'source_id': driver['source_id'], 'literal': value, 'sha256': sha(value.encode())} for value in HISTORY_DIAGNOSTICS] if negative else []
+        require(stage['expected_diagnostics'] == expected, 'History source diagnostic changed')
+    else:
+        require(stage['kind'] == 'DRIVER' and stage['output_paths'] == ['original'] and stage['expected_exit_codes'] == [0] and not stage['expected_diagnostics'] and stage['argv'] ==
+            ['{tool:python}', '-B', '{driver:' + driver['id'] + '}', '--lean', '{tool:lean}', '--mathlib', '{dependency:mathlib}', '--output', '{out}/original'], 'Unreviewed history invocation')
+
+
+def history_source_check(root, plan=None):
+    require(sha(path_in(root, 'replay.py').read_bytes()) == HISTORY_CONTRACT['driver_sha256'] and
+            {p.name for p in root.glob('*.py')} == {'replay.py'}, 'Unreviewed history driver/import source')
+    for path, value in HISTORY_FILES.items(): require(sha(path_in(root, path).read_bytes()) == value, 'Original history source/manifest changed')
+    manifest = read_json(root / 'PUBLIC_MANIFEST.json'); require(len(manifest['files']) == 168, 'History source census changed')
+    require(len([p for p in root.rglob('*') if p.is_file()]) == 213, 'History archive file census changed')
+    names = set()
+    for row in manifest['files']:
+        name = relative(row['path']); require(name not in names, 'Duplicate history source'); names.add(name)
+        data = path_in(root, name).read_bytes(); require(len(data) == row['size'] and sha(data) == row['sha256'], 'History projected source changed')
+    require(read_json(root / 'ORIGINAL_TO_PUBLIC.json')['source_archive_sha256'] == HISTORY_ORIGIN_SHA, 'Original history custody changed')
+    tree = ast.parse(path_in(root, HISTORY_KERNEL + 'check_controls.py').read_text(encoding='utf-8'))
+    claims = [ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'claims' for t in n.targets)]
+    require(claims == [HISTORY_CLAIMS], 'Original history claim table changed')
+    if plan:
+        for spec in history_specs('original', plan).values():
+            require(path_in(root, spec['source_path']).read_bytes() == plan['contents'][spec['source_id']], 'History archive/projected source differs')
+
+
+def verify_history_dependencies(source_root, mathlib):
+    path = path_in(source_root, 'MATHLIB_SOURCE_PIN.json')
+    require(sha(path.read_bytes()) == HISTORY_FILES['MATHLIB_SOURCE_PIN.json'], 'History dependency manifest changed')
+    rows = read_json(path)['files']; require(len(rows) == 6816, 'History dependency source census changed')
+    for row in rows:
+        data = path_in(mathlib, row['path']).read_bytes()
+        require(len(data) == row['size'] and sha(data) == row['sha256'], 'History dependency source changed')
+
+
+def history_tracer_argv(stage):
+    return ['{tool:python}', '-B', '{adapter}', '--trace-history', stage['argv'][2], '{out}/traces/' + stage['id'], *stage['argv'][3:]]
+
+
+def trace_history_driver(driver, trace, arguments):
+    require(len(arguments) == 6 and arguments[::2] == ['--lean', '--mathlib', '--output'], 'Unreviewed history arguments')
+    driver = no_symlinks(driver); root = driver.parent; history_source_check(root)
+    lean = no_symlinks(arguments[1]).resolve(); output = no_symlinks(arguments[5])
+    require(sha(lean.read_bytes()) == LEAN_SHA and not output.exists() and output.name == 'original', 'Wrong compiler or reused history output')
+    trace = no_symlinks(trace); require(not trace.exists(), 'Trace output must be absent'); trace.mkdir(parents=True)
+    mappings = {'tool:lean': lean, 'tool:python': Path(sys.executable), 'archive:original': root, 'out': output.parent}
+    specs = list(history_specs('original').values()); commands = [[_expand(a, mappings) for a in spec['argv']] for spec in specs]
+    hashes = {argv[-1]: sha(history_claim_source(spec['id']) if spec['id'] in HISTORY_CLAIMS else path_in(root, spec['source_path']).read_bytes()) for spec, argv in zip(specs, commands)}
+    old_run = subprocess.run; old_argv = sys.argv; old_path = sys.path[:]
+    try:
+        subprocess.run = trace_reviewed_commands(old_run, trace, commands, [[str(lean), '--version']], None,
+                                                  capture_output=True, source_hashes=hashes, record_outputs=True)
+        sys.argv = [str(driver), *arguments]; sys.path[0] = str(root)
+        runpy.run_path(str(driver), run_name='__main__')
+    finally:
+        subprocess.run = old_run; sys.argv = old_argv; sys.path[:] = old_path
+    return 0
+
+
+def check_history_scenarios(value, source):
+    keys(value, {'status', 'source', 'cases', 'scope'})
+    require(value['status'] == 'PASS' and value['source'] == source and value['scope'] == 'bounded source correspondence corroboration only' and
+            canonical(value['cases']) == canonical(HISTORY_CASES), 'Original history source scenarios changed')
+
+
+def history_collect_children(stage, parent, text, plan, output, mappings):
+    result = read_json(path_in(output, 'original/REPLAY_RECEIPT.json'))
+    require(result['status'] == 'PASS_PORTABLE_SOURCE_REPLAY' and result['compiler_sha256'] == LEAN_SHA and
+            result['mathlib_commit'] == 'c44e0c8ee63ca166450922a373c7409c5d26b00b' and result['claim_ceiling'] == HISTORY_CEILING, 'Original history terminal or scope changed')
+    for key, expected in {'public_manifest_sha256': HISTORY_FILES['PUBLIC_MANIFEST.json'], 'original_to_public_sha256': HISTORY_FILES['ORIGINAL_TO_PUBLIC.json'],
+        'source_archive_sha256': HISTORY_ORIGIN_SHA, 'scientific_candidate_snapshot_sha256': HISTORY_FILES[HISTORY_KERNEL + 'REVIEW_SNAPSHOT_V2.json'],
+        'scientific_review_receipt_sha256': HISTORY_FILES[HISTORY_KERNEL + 'independent-review-v2/RECEIPT.json']}.items():
+        require(result[key] == expected, 'Original history receipt source changed')
+    require(result['mathlib_source_files_verified'] == 6816 and result['false_claim_rejections'] == result['accepted_source_scenarios'] == 7 and
+            result['compiled_cache_used_read_only'] is True and result['independent_cache_rebuild_claimed'] is False and
+            result['archive_executable_modes_required'] is False and result['shell_scripts_executed'] == [] and result['all_projected_inputs_unchanged'] is True, 'History census/trust boundary changed')
+    version = result['compiler_version']; require('version 4.19.0' in version and '6caaee842e94' in version and
+        path_in(output, 'original/logs/toolchain.log').read_text(encoding='utf-8') == version + '\n' + LEAN_SHA + '\n', 'Original compiler readback changed')
+    require(text.splitlines() == HISTORY_TERMINAL + ['Receipt: ' + str(path_in(output, 'original/REPLAY_RECEIPT.json'))], 'History parent terminal changed')
+    rows = indexed(result['compiled_stages'], 'stage'); negatives = indexed(read_json(path_in(output, 'original/controls/RESULTS.json')), 'control')
+    require(list(rows) == [n for n, _, _ in HISTORY_PATHS] and list(negatives) == list(HISTORY_CLAIMS), 'Original history child census/order changed')
+    trace = path_in(output, 'traces/' + stage['id'])
+    require({p.name for p in trace.iterdir()} == {f'{i:04}.{suffix}' for i in range(17) for suffix in ('json', 'log', 'stdout.log', 'stderr.log')}, 'History captured child census differs')
+    trace_hash = _file_hashes(trace); children = {}; objects = {}; seen = set(); driver = plan['drivers'][stage['driver_id']]
+    for index, spec in enumerate(plan['history_children'].values()):
+        name = spec['id']; negative = name in HISTORY_CLAIMS; scenario = name == 'source-replay'
+        captured = read_json(trace / f'{index:04}.json')
+        keys(captured, {'index', 'argv', 'cwd', 'started_at', 'ended_at', 'terminal', 'exit_code', 'log_sha256', 'stdout_sha256', 'stderr_sha256', 'source_sha256', 'output_hashes'})
+        require(captured['index'] == index and captured['cwd'] == _expand('{project}', mappings), 'History physical child launch changed')
+        stdout = (trace / f'{index:04}.stdout.log').read_bytes(); stderr = (trace / f'{index:04}.stderr.log').read_bytes(); data = stdout + stderr
+        require(sha(stdout) == captured['stdout_sha256'] and sha(stderr) == captured['stderr_sha256'] and data == (trace / f'{index:04}.log').read_bytes() and sha(data) == captured['log_sha256'], 'History captured streams changed')
+        actual_argv = [_expand(a, mappings) for a in spec['argv']]
+        check_child_terminal({**captured, 'source_child_id': name, 'parent_stage_id': stage['id']}, parent, name, actual_argv, seen, spec['exit_code'])
+        owner = plan['contents'][spec['source_id']]; source = history_claim_source(name) if negative else owner
+        require(captured['source_sha256'] == sha(source) and no_symlinks(actual_argv[-1]).read_bytes() == source, 'History physical source/claim changed')
+        if scenario:
+            require(path_in(output, 'original/logs/source-replay.json').read_bytes() == stdout and path_in(output, 'original/logs/source-replay.stderr').read_bytes() == stderr and not stderr, 'Original history scenario stream differs')
+            row = read_json(path_in(output, 'original/logs/source-replay.json'))
+            archive_key = next(k for k in mappings if k.startswith('archive:'))
+            check_history_scenarios(row, str(Path(mappings[archive_key]) / HISTORY_DYNAMIC))
+        else:
+            require(path_in(output, spec['log']).read_bytes() == data, 'History original and captured log differ')
+            row = negatives[name] if negative else rows[name]
+            require(type(row['exit_code']) is int and row['exit_code'] == captured['exit_code'], 'Contradictory history child terminal')
+            if negative:
+                keys(row, {'control', 'exit_code', 'expected_false_claim_rejected'})
+                require(row['expected_false_claim_rejected'] is True, 'Original history claim was not rejected')
+                assess_stage({'expected_exit_codes': [1], 'kind': 'NEGATIVE_CONTROL', 'depends_on': [],
+                              'expected_diagnostics': [{'literal': value} for value in HISTORY_DIAGNOSTICS]}, captured, data.decode(), {})
+            else:
+                keys(row, {'stage', 'exit_code', 'command'}); require(row['command'] == actual_argv and not re.search(rb'sorryAx|warning:|error:', data), 'Original history positive child changed')
+                names = source_readback_names(source.decode(), plan['targets'].values())
+                if names: check_original_readbacks(data.decode(), names)
+        hashes = {}
+        if spec['output_path']:
+            path = path_in(output, spec['output_path']); hashes[spec['output_path']] = sha(path.read_bytes())
+            require(captured['output_hashes'] == {str(path): hashes[spec['output_path']]}, 'History object changed after producer child'); objects.update(hashes)
+        else: require(captured['output_hashes'] == {}, 'Unexpected history check-only object')
+        children[(stage['id'], name)] = {'source_child_id': name, 'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'],
+            'parser_id': HISTORY_RECIPE, 'mode': 'NONEXECUTING_OBSERVATION', 'argv_provenance': 'CAPTURED', 'argv': spec['argv'], 'cwd': '{project}',
+            'started_at': captured['started_at'], 'ended_at': captured['ended_at'], 'physical_run_sha256': trace_hash, 'parent_log_sha256': parent['log_sha256'],
+            'terminal': 'COMPLETED', 'exit_code': spec['exit_code'], 'actual_outcome': 'REJECT' if negative else 'ACCEPT', 'log_sha256': captured['log_sha256'],
+            'source_id': spec['source_id'], 'source_sha256': sha(owner), 'generated_source_sha256': sha(source) if negative else None, 'log_assembly': 'STDOUT_THEN_STDERR',
+            'output_hashes': hashes, 'result_record_sha256': canonical(row)}
+    require({p.relative_to(output).as_posix() for p in path_in(output, 'original/build').rglob('*.olean')} == set(objects), 'History fresh object census differs')
+    invocation = {'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'], 'source_argv': stage['argv'], 'launch_argv': history_tracer_argv(stage),
+                  'runner_sha256': sha(Path(__file__).read_bytes()), 'trace_sha256': trace_hash, 'parent_log_sha256': parent['log_sha256'], 'child_count': 17}
+    return children, invocation, objects
+
+
+def traced_run(original_run, trace, *, capture_output=False):
     """Capture actual subprocess.run calls without changing their return values."""
     count = 0
     def invoke(argv, *args, **kwargs):
         nonlocal count
-        require(isinstance(argv, list) and argv and not args and not kwargs.get('shell') and
-                kwargs.get('text') is True and kwargs.get('stdout') == subprocess.PIPE and
-                kwargs.get('stderr') == subprocess.STDOUT, 'Unreviewed traced subprocess form')
+        streams = (kwargs.get('capture_output') is True and 'stdout' not in kwargs and 'stderr' not in kwargs) if capture_output else (kwargs.get('stdout') == subprocess.PIPE and kwargs.get('stderr') == subprocess.STDOUT and 'capture_output' not in kwargs)
+        require(isinstance(argv, list) and argv and not args and not kwargs.get('shell') and kwargs.get('text') is True and streams, 'Unreviewed traced subprocess form')
         index = count; count += 1
         record = {'index': index, 'argv': [str(a) for a in argv], 'cwd': str(Path(kwargs.get('cwd', Path.cwd())).absolute()),
                   'started_at': utc(), 'ended_at': None, 'terminal': 'RUNNING', 'exit_code': None, 'log_sha256': None}
@@ -640,13 +861,24 @@ def traced_run(original_run, trace):
         except (subprocess.TimeoutExpired, KeyboardInterrupt) as error:
             data = getattr(error, 'stdout', None) or b''
             if isinstance(data, str): data = data.encode('utf-8')
+            if capture_output:
+                stderr = getattr(error, 'stderr', None) or b''
+                if isinstance(stderr, str): stderr = stderr.encode('utf-8')
+                path_in(trace, f'{index:04}.stdout.log').write_bytes(data); path_in(trace, f'{index:04}.stderr.log').write_bytes(stderr)
+                record.update(stdout_sha256=sha(data), stderr_sha256=sha(stderr)); data += stderr
             log = path_in(trace, f'{index:04}.log'); log.write_bytes(data)
             record.update(ended_at=utc(), terminal='TIMEOUT' if isinstance(error, subprocess.TimeoutExpired) else 'INTERRUPTED',
                           log_sha256=sha(data))
             write_json(destination, record)
             raise
         require(isinstance(result.stdout, str), 'Traced subprocess omitted its captured stdout')
-        log = path_in(trace, f'{index:04}.log'); log.write_bytes(result.stdout.encode('utf-8'))
+        data = result.stdout.encode('utf-8')
+        if capture_output:
+            require(isinstance(result.stderr, str), 'Traced subprocess omitted its captured stderr')
+            stderr = result.stderr.encode('utf-8')
+            path_in(trace, f'{index:04}.stdout.log').write_bytes(data); path_in(trace, f'{index:04}.stderr.log').write_bytes(stderr)
+            record.update(stdout_sha256=sha(data), stderr_sha256=sha(stderr)); data += stderr
+        log = path_in(trace, f'{index:04}.log'); log.write_bytes(data)
         completed = type(result.returncode) is int and 0 <= result.returncode < 124
         record.update(ended_at=utc(), terminal='COMPLETED' if completed else 'INTERRUPTED',
                       exit_code=result.returncode if completed else None, log_sha256=sha(log.read_bytes()))
@@ -655,21 +887,24 @@ def traced_run(original_run, trace):
     return invoke
 
 
-def trace_reviewed_commands(original_run, trace, commands, read_only_commands, seconds, *, working_directories=None, record_outputs=False):
+def trace_reviewed_commands(original_run, trace, commands, read_only_commands, seconds, *, working_directories=None, record_outputs=False, capture_output=False, source_hashes=None):
     """Only reviewed physical commands enter the child ledger, in source order."""
-    capture = traced_run(original_run, trace); position = 0
+    capture = traced_run(original_run, trace, capture_output=capture_output); position = 0
     def invoke(argv, *args, **kwargs):
         nonlocal position
         require(isinstance(argv, list) and all(isinstance(a, str) for a in argv) and not args and not kwargs.get('shell'), 'Unreviewed original subprocess form')
         if argv in read_only_commands:
-            require(set(kwargs) <= {'stdout', 'check', 'text', 'timeout'} and kwargs.get('timeout') is None and kwargs.get('stdout') == subprocess.PIPE and kwargs.get('check') is True, 'Changed read-only original command')
+            valid = kwargs == {'capture_output': True, 'text': True, 'check': True} if capture_output else (set(kwargs) <= {'stdout', 'check', 'text', 'timeout'} and kwargs.get('timeout') is None and kwargs.get('stdout') == subprocess.PIPE and kwargs.get('check') is True)
+            require(valid, 'Changed read-only original command')
             return original_run(argv, **kwargs)
         require(position < len(commands) and argv == commands[position], 'Unreviewed or repeated original physical command')
-        allowed = {'env', 'stdout', 'stderr', 'text', 'timeout'} | ({'cwd'} if working_directories is not None else set())
+        allowed = {'env', 'text', 'timeout'} | ({'capture_output'} if capture_output else {'stdout', 'stderr'}) | ({'cwd'} if working_directories is not None else set())
         require(set(kwargs) <= allowed and kwargs.get('timeout') == seconds, 'Original child budget or subprocess contract changed')
         if working_directories is not None:
             require(kwargs.get('cwd') == working_directories[position], 'Original child working directory changed')
         if '-o' in argv: require(not no_symlinks(argv[argv.index('-o') + 1]).exists(), 'Original child output already exists')
+        if source_hashes is not None:
+            require(argv[-1] in source_hashes and sha(no_symlinks(argv[-1]).read_bytes()) == source_hashes[argv[-1]], 'Original physical child source changed')
         position += 1
         result = capture(argv, **kwargs)
         if record_outputs:
@@ -678,6 +913,10 @@ def trace_reviewed_commands(original_run, trace, commands, read_only_commands, s
                 path = no_symlinks(argv[argv.index('-o') + 1])
                 if path.is_file(): hashes[str(path)] = sha(path.read_bytes())
             row['output_hashes'] = hashes; write_json(record, row)
+        if source_hashes is not None:
+            require(sha(no_symlinks(argv[-1]).read_bytes()) == source_hashes[argv[-1]], 'Original physical child source changed during execution')
+            record = path_in(trace, f'{position - 1:04}.json'); row = read_json(record)
+            row['source_sha256'] = source_hashes[argv[-1]]; write_json(record, row)
         return result
     return invoke
 
@@ -686,7 +925,7 @@ def check_custody_driver(source, contract):
     require(source['projection'] == 'CUSTODY_ONLY' and source['public_sha256'] is None, 'Archive-only driver source role changed')
     require(source['original_sha256'] == contract['driver_sha256'] and source['original_bytes'] == contract['driver_bytes'], 'Original driver bytes differ')
     require(isinstance(source['member_chain'], list) and source['member_chain'] and source['origin_archive_sha256'] == contract['archive_sha256'] and source['member_chain'][-1] ==
-            contract['root'] + '/' + contract['driver_path'], 'Original driver archive member differs')
+            (contract['root'] + '/' if contract['root'] else '') + contract['driver_path'], 'Original driver archive member differs')
 
 
 def trace_resource_inconclusive(trace):
@@ -1107,11 +1346,12 @@ def validate_suite(suite, sources, root):
             keys(row, {'id', 'source_id', 'recipe', 'sha256', 'argument_meanings', 'external_input_id'})
             source = sources[row['source_id']]; digest(row['sha256'])
             require(row['sha256'] == (source['public_sha256'] or source['original_sha256']), 'Wrong driver hash')
-            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE}:
+            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE}:
                 require(row['external_input_id'] in inputs, 'Original core archive is undeclared')
             else: require(row['external_input_id'] is None, 'Archive recipe is not approved by this adapter version')
             admitted_role = 'LOCK' if row['recipe'] == 't15-empirical-integrity-v1' else 'DRIVER'
             if row['recipe'] == ATTR_RECIPE: check_custody_driver(source, ATTR_CONTRACT)
+            elif row['recipe'] == HISTORY_RECIPE: check_custody_driver(source, HISTORY_CONTRACT)
             else: require(row['source_id'] in contents and files[row['source_id']]['role'] == admitted_role, 'Driver is not an exact projected source')
             if row['recipe'] in LANGUAGE_RECIPES:
                 recipe = LANGUAGE_RECIPES[row['recipe']]
@@ -1131,6 +1371,9 @@ def validate_suite(suite, sources, root):
             elif row['recipe'] == ATTR_RECIPE:
                 require(row['sha256'] == ATTR_CONTRACT['driver_sha256'] and row['argument_meanings'] ==
                         {'--lean': 'LEAN_EXECUTABLE', '--mathlib': 'MATHLIB_ROOT', '--output': 'FRESH_OUTPUT_DIRECTORY'}, 'Changed original attribution recipe')
+            elif row['recipe'] == HISTORY_RECIPE:
+                require(row['sha256'] == HISTORY_CONTRACT['driver_sha256'] and row['argument_meanings'] ==
+                        {'--lean': 'LEAN_EXECUTABLE', '--mathlib': 'MATHLIB_ROOT', '--output': 'FRESH_OUTPUT_DIRECTORY'}, 'Changed original history recipe')
             elif row['recipe'] in T10_FINITE_RECIPES:
                 expected_path, expected_hash = T10_FINITE_RECIPES[row['recipe']]
                 require(row['sha256'] == expected_hash and files[row['source_id']]['path'] == expected_path, 'Changed original written finite recipe')
@@ -1152,6 +1395,7 @@ def validate_suite(suite, sources, root):
         if any(row['recipe'] in T10_FINITE_RECIPES for row in drivers.values()): validate_t10_package(suite, plan)
         if any(row['recipe'] == CORE_RECIPE for row in drivers.values()): validate_core_package(suite, plan)
         if any(row['recipe'] == ATTR_RECIPE for row in drivers.values()): validate_attribution_package(suite, plan)
+        if any(row['recipe'] == HISTORY_RECIPE for row in drivers.values()): validate_history_package(suite, plan)
         if any(row['recipe'] in EMPIRICAL_RECIPES for row in drivers.values()):
             _empirical_package(plan)
             require(replay['scope'] == 'FINITE' and toolchain['kind'] == 'PYTHON' and toolchain['version'].startswith('3.12.'), 'Empirical execution is source-prescribed Python 3.12 finite scope')
@@ -1180,6 +1424,7 @@ def validate_suite(suite, sources, root):
                 require(isinstance(diagnostic['literal'], str) and diagnostic['literal'] and diagnostic['sha256'] == sha(diagnostic['literal'].encode()), 'Malformed source diagnostic')
                 driver = drivers.get(stage['driver_id'], {})
                 custody_literal = driver.get('recipe') == ATTR_RECIPE and diagnostic['source_id'] == driver['source_id'] and diagnostic['literal'] in ATTR_DIAGNOSTICS.values()
+                custody_literal = custody_literal or (driver.get('recipe') == HISTORY_RECIPE and diagnostic['source_id'] == driver['source_id'] and diagnostic['literal'] in HISTORY_DIAGNOSTICS)
                 require(custody_literal or (diagnostic['source_id'] in contents and diagnostic['literal'].encode() in contents[diagnostic['source_id']]), 'Diagnostic differs from source contract')
             for cid in string_list(stage['control_ids']):
                 require(cid in controls and cid not in covered, 'Missing/duplicate control association'); covered.append(cid)
@@ -1524,7 +1769,7 @@ def _verify_environment(suite, plan, tools, inputs, output):
         if iid not in inputs: raise MissingInput('Required explicit external input is unavailable: ' + iid)
         input_hashes[iid] = _input_inventory(row, inputs[iid], plan)
     build_roots = [path_in(output, p) for p in suite['replay']['build_roots']]
-    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE} for row in plan['drivers'].values())
+    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE} for row in plan['drivers'].values())
     for path in build_roots:
         if not original_owned: path.mkdir(parents=True, exist_ok=True)
     if 'lean' in resolved:
@@ -1813,15 +2058,17 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
         mappings.update({'input:' + name: Path(path) for name, path in inputs.items()})
         mappings.update({'driver:' + name: path_in(project, plan['files'][d['source_id']]['path']) for name, d in plan['drivers'].items() if d['source_id'] in plan['files']})
         for name, driver in plan['drivers'].items():
-            if driver['recipe'] in {CORE_RECIPE, ATTR_RECIPE}:
+            if driver['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE}:
                 iid = driver['external_input_id']; archive = path_in(output, 'archives/' + iid)
                 inventory = extract_source_zip(inputs[iid], archive)
                 archive_hashes[iid] = (archive, inventory)
                 if driver['recipe'] == CORE_RECIPE:
                     require(core_source_order(archive, plan) == suite['replay']['module_order'], 'Original/declared runtime compile order differs')
                     source_root = archive
-                else:
+                elif driver['recipe'] == ATTR_RECIPE:
                     source_root = path_in(archive, ATTR_CONTRACT['root']); attribution_source_check(source_root, plan)
+                else:
+                    source_root = archive; history_source_check(source_root, plan)
                 mappings['archive:' + iid] = source_root; mappings['driver:' + name] = source_root / 'replay.py'
         for sid, stage in plan['stages'].items():
             current = results[sid]; current['started_at'] = utc(); log = logs / (sid + '.log')
@@ -1841,7 +2088,8 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                 parent_id, child_id = stage['argv'][1:]
                 observed = captured_children[(parent_id, child_id)]
                 child_log = path_in(output, plan['core_children'][child_id]['log'] if recipe == CORE_RECIPE else
-                                   plan['attribution_children'][child_id]['log'] if recipe == ATTR_RECIPE else 'mutation-copies/' + child_id + '/run.log')
+                                   plan['attribution_children'][child_id]['log'] if recipe == ATTR_RECIPE else
+                                   plan['history_children'][child_id]['log'] if recipe == HISTORY_RECIPE else 'mutation-copies/' + child_id + '/run.log')
                 require(sha(child_log.read_bytes()) == observed['log_sha256'], 'Captured child log changed before observation')
                 log.write_bytes(child_log.read_bytes())
                 # This interval measures observation only. Actual child times are
@@ -1850,16 +2098,16 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                        'ended_at': utc(), 'log_sha256': observed['log_sha256']}
                 evidence['child_observations'].append({**observed, 'stage_id': sid, 'observed_at': run['ended_at']})
             else:
-                launch = (attribution_tracer_argv(stage) if recipe == ATTR_RECIPE else core_tracer_argv(stage) if recipe == CORE_RECIPE else
+                launch = (history_tracer_argv(stage) if recipe == HISTORY_RECIPE else attribution_tracer_argv(stage) if recipe == ATTR_RECIPE else core_tracer_argv(stage) if recipe == CORE_RECIPE else
                           t10_tracer_argv(stage) if recipe == 't10-independent-mutations-v1' else stage['argv'])
-                if recipe in {CORE_RECIPE, ATTR_RECIPE, 't10-independent-mutations-v1'}:
+                if recipe in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, 't10-independent-mutations-v1'}:
                     evidence['driver_invocations'].append({'parent_stage_id': sid, 'driver_sha256': driver['sha256'],
                         'source_argv': stage['argv'], 'launch_argv': launch, 'runner_sha256': evidence['runner_sha256'],
                         'trace_sha256': None, 'parent_log_sha256': sha(b''), 'child_count': 0})
                 argv = [_expand(a, mappings) for a in launch]
                 run = run_process(argv, path_in(project, stage['cwd'], dot=True), stage_environment(stage, plan, output, env), log, stage['timeout_seconds'])
             current.update(run); text = log.read_text(encoding='utf-8', errors='replace')
-            if recipe in {CORE_RECIPE, ATTR_RECIPE, 't10-independent-mutations-v1'} and stage['kind'] == 'DRIVER':
+            if recipe in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, 't10-independent-mutations-v1'} and stage['kind'] == 'DRIVER':
                 trace = path_in(output, 'traces/' + sid)
                 evidence['driver_invocations'][-1].update(parent_log_sha256=run['log_sha256'],
                     trace_sha256=_file_hashes(trace) if trace.exists() else None,
@@ -1882,8 +2130,8 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                     children, invocation = t10_collect_children(stage, current, text, plan, output, mappings)
                     captured_children.update(children)
                     require(evidence['driver_invocations'][-1] == invocation, 'Instrumented parent trace changed during parsing')
-            if recipe in {CORE_RECIPE, ATTR_RECIPE} and stage['kind'] == 'DRIVER':
-                collector = core_collect_children if recipe == CORE_RECIPE else attribution_collect_children
+            if recipe in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE} and stage['kind'] == 'DRIVER':
+                collector = core_collect_children if recipe == CORE_RECIPE else attribution_collect_children if recipe == ATTR_RECIPE else history_collect_children
                 children, invocation, objects = collector(stage, current, text, plan, output, mappings)
                 captured_children.update(children)
                 require(evidence['driver_invocations'][-1] == invocation, 'Instrumented core parent trace changed during parsing')
@@ -1919,8 +2167,9 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
             evidence['target_audits'] = [{'target_id': tid, **value, 'stage_id': '_target_audit', 'log_sha256': run['log_sha256']} for tid, value in audits.items()]
             receipt['axioms'] = sorted({a for value in audits.values() for a in value['axioms']})
         for driver in plan['drivers'].values():
-            if driver['recipe'] == ATTR_RECIPE:
-                verify_attribution_dependencies(mappings['archive:' + driver['external_input_id']], mappings['dependency:mathlib'])
+            if driver['recipe'] in {ATTR_RECIPE, HISTORY_RECIPE}:
+                verifier = verify_attribution_dependencies if driver['recipe'] == ATTR_RECIPE else verify_history_dependencies
+                verifier(mappings['archive:' + driver['external_input_id']], mappings['dependency:mathlib'])
                 for name, path in resolved.items():
                     require(sha(path.read_bytes()) == fingerprints[name]['executable_sha256'], 'Attribution execution tool changed during replay')
         for iid, row in plan['inputs'].items(): require(_input_inventory(row, inputs[iid], plan) == input_hashes[iid], 'External input changed during replay')
@@ -2048,10 +2297,10 @@ def validate_child_evidence(evidence, plan, stages, successful):
     for pid, row in launches.items():
         keys(row, {'parent_stage_id', 'driver_sha256', 'source_argv', 'launch_argv', 'runner_sha256', 'trace_sha256', 'parent_log_sha256', 'child_count'})
         stage = plan['stages'][pid]; driver = plan['drivers'][stage['driver_id']]
-        is_core = driver['recipe'] == CORE_RECIPE; is_attribution = driver['recipe'] == ATTR_RECIPE
-        require(driver['recipe'] in {CORE_RECIPE, ATTR_RECIPE, 't10-independent-mutations-v1'}, 'Unapproved observed original recipe')
-        launch = attribution_tracer_argv(stage) if is_attribution else core_tracer_argv(stage) if is_core else t10_tracer_argv(stage)
-        count = 21 if is_attribution else 168 if is_core else 9
+        is_core = driver['recipe'] == CORE_RECIPE; is_attribution = driver['recipe'] == ATTR_RECIPE; is_history = driver['recipe'] == HISTORY_RECIPE
+        require(driver['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, 't10-independent-mutations-v1'}, 'Unapproved observed original recipe')
+        launch = history_tracer_argv(stage) if is_history else attribution_tracer_argv(stage) if is_attribution else core_tracer_argv(stage) if is_core else t10_tracer_argv(stage)
+        count = 17 if is_history else 21 if is_attribution else 168 if is_core else 9
         require(row['driver_sha256'] == driver['sha256'] and row['source_argv'] == stage['argv'] and row['launch_argv'] == launch, 'Changed instrumented parent invocation')
         require(row['runner_sha256'] == evidence['runner_sha256'] and row['parent_log_sha256'] == stages[pid]['log_sha256'], 'Wrong parent execution/log binding')
         require(type(row['child_count']) is int and 0 <= row['child_count'] <= count, 'Invalid actual child census')
@@ -2061,16 +2310,17 @@ def validate_child_evidence(evidence, plan, stages, successful):
     seen = set()
     for sid, row in observed.items():
         stage = declared[sid]; pid, child = stage['argv'][1:]; driver = plan['drivers'][stage['driver_id']]
-        is_core = driver['recipe'] == CORE_RECIPE; is_attribution = driver['recipe'] == ATTR_RECIPE
-        is_original = is_core or is_attribution
+        is_core = driver['recipe'] == CORE_RECIPE; is_attribution = driver['recipe'] == ATTR_RECIPE; is_history = driver['recipe'] == HISTORY_RECIPE
+        is_original = is_core or is_attribution or is_history
         fields = {'source_id', 'source_sha256', 'output_hashes'} if is_original else {'mutated_source_sha256', 'matched_source_literals'}
+        if is_history: fields.update({'generated_source_sha256', 'log_assembly'})
         keys(row, fields | {'stage_id', 'source_child_id', 'parent_stage_id', 'driver_sha256', 'parser_id', 'mode', 'argv_provenance',
                    'argv', 'cwd', 'started_at', 'ended_at', 'observed_at', 'physical_run_sha256', 'parent_log_sha256',
                    'terminal', 'exit_code', 'actual_outcome', 'log_sha256', 'result_record_sha256'})
         require(pid in launches and row['physical_run_sha256'] == launches[pid]['trace_sha256'] and row['parent_log_sha256'] == stages[pid]['log_sha256'], 'Observation belongs to another physical run')
         require(row['driver_sha256'] == driver['sha256'] and row['parser_id'] == driver['recipe'], 'Wrong original parser authority')
-        spec = plan['attribution_children'][child] if is_attribution else plan['core_children'][child] if is_core else None
-        expected_code = spec['exit_code'] if is_attribution else 0 if is_core else 1
+        spec = plan['history_children'][child] if is_history else plan['attribution_children'][child] if is_attribution else plan['core_children'][child] if is_core else None
+        expected_code = spec['exit_code'] if is_attribution or is_history else 0 if is_core else 1
         require(row['mode'] == 'NONEXECUTING_OBSERVATION' and row['argv_provenance'] == 'CAPTURED' and row['cwd'] == (spec['cwd'] if is_attribution else '{project}'), 'Derived command or duplicate execution credited as observation')
         check_child_terminal(row, stages[pid], child, spec['argv'] if is_original else t10_child_argv(child), seen, expected_code)
         require(row['actual_outcome'] == ('ACCEPT' if expected_code == 0 else 'REJECT') and row['terminal'] == stages[sid]['terminal'] and row['exit_code'] == stages[sid]['exit_code'] and row['log_sha256'] == stages[sid]['log_sha256'], 'Contradictory observation stage summary')
@@ -2078,6 +2328,9 @@ def validate_child_evidence(evidence, plan, stages, successful):
                 stages[pid]['ended_at'] <= stages[sid]['started_at'] <= row['observed_at'] <= stages[sid]['ended_at'], 'Observation time is not its actual parsing interval')
         if is_original:
             require(row['source_id'] == spec['source_id'] and row['source_sha256'] == sha(plan['contents'][spec['source_id']]), 'Wrong observed source identity')
+            if is_history:
+                require(row['generated_source_sha256'] == (sha(history_claim_source(child)) if child in HISTORY_CLAIMS else None), 'History generated claim differs from reviewed source')
+                require(row['log_assembly'] == 'STDOUT_THEN_STDERR', 'History log stream order changed')
             outputs = row['output_hashes']; expected = {spec['output_path']} if spec['output_path'] else set()
             require(isinstance(outputs, dict) and set(outputs) == expected, 'Wrong observed object identity')
             for path, value in outputs.items():
@@ -2297,6 +2550,9 @@ T10_GROUPS = {'exhaustive': ['all_boolean_menu_adaptive_cover_cases',
 
 
 def main():
+    if sys.argv[1:2] == ['--trace-history']:
+        require(len(sys.argv) == 10, 'Malformed internal history trace invocation')
+        return trace_history_driver(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4:])
     if sys.argv[1:2] == ['--trace-attribution']:
         require(len(sys.argv) == 10, 'Malformed internal attribution trace invocation')
         return trace_attribution_driver(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4:])
