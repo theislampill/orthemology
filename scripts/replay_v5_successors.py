@@ -41,10 +41,19 @@ SOURCE_RECIPES = {
     't10-uniform-completion-v1': 'a67f3ae196aa45d895f881b02787ec04db4a97c344b73a7aa7e126a0d6ded5c7',
     't10-nonuniform-completion-v1': '10d15cd1df71ca909c3598e98d090df25cdcd745861d8bbc9cea9ea9d513be13',
 }
+NORMAL_SOURCE_RECIPES = {
+    't11-substitution-source-check-v1': '0998ba1ff76bd6620707f38035612431fa94f9e16e1a5105b5f527d12eef21ab',
+    't11-normalization-source-check-v1': '59dfb863bd8f583993d9497f961db96d009343d805abb81fd4f67e5516600a23',
+}
 # Full-suite promotion requires review of its complete original stage contract.
 # Generic serial compilation is supported at COMPONENTS scope. Values here are
-# code-reviewed canonical replay descriptor digests, never producer approvals.
-APPROVED_DECLARED_SUITES = {}
+# code-reviewed suite and source-byte bindings, never producer approvals.
+APPROVED_DECLARED_SUITES = {
+    't11-dependent-all': 'b87aca15fb03afe740abc50aa8dfc00d5a9dbf59de7f0b61591123163f47ec8b',
+    't11-normalization': '4653066edcd7df7c05addf7c81aa48ee9680c36f58a216ccd5c55d04d5763da6',
+    't11-nucleus': 'f8d2057ed34df1260efafe16a2227400a9f9f5b2d9cc13b3d86105bf7d269160',
+    't11-substitution': '39e05def1e6370039143ff47862774fc6dd1c4f9865f9b39827cdff43186f090',
+}
 EMPIRICAL_RECIPES = {
     't15-empirical-integrity-v1': '9ab3df6e096f8158f755ea31408786248d04547d0bd7c38785770d7e9964e41e',
     't15-empirical-tests-v1': 'afb1ba14ecbbf193f07ac81f985be30535abf9771387813e9dbd0bbbfc72fb50',
@@ -73,6 +82,10 @@ def digest(value):
 
 def canonical(value):
     return sha(json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode())
+
+
+def declared_suite_fingerprint(suite, sources):
+    return canonical({'suite': suite, 'sources': {sid: sources[sid]['public_sha256'] for sid in suite['source_ids']}})
 
 
 def read_json(path):
@@ -241,6 +254,11 @@ def _validate_argv(stage, plan):
         if recipe in SOURCE_RECIPES:
             require(stage['kind'] == 'SOURCE_CHECK' and argv == ['{builtin:source-check}'], 'Wrong source-check translation')
             return
+        if recipe in NORMAL_SOURCE_RECIPES:
+            original = ['{tool:python}', '{project}/' + plan['files'][driver['source_id']]['path']] if 'files' in plan else None
+            require(stage['kind'] == 'SOURCE_CHECK' and stage['cwd'] == '.' and not stage['output_paths'] and
+                    argv in [original, ['{tool:python}', '-B', '{driver:' + driver['id'] + '}']], 'Original assertion-bearing checker requires exact normal-mode arguments')
+            return
         if recipe in EMPIRICAL_RECIPES:
             require(stage['cwd'] == '.', 'Empirical package must keep its reviewed working directory')
             if recipe == 't15-empirical-integrity-v1':
@@ -288,6 +306,7 @@ def _validate_argv(stage, plan):
         require(row['role'] != 'NEGATIVE', 'Negative fixture cannot produce an accepted custom object')
         module = next((m for m in plan['modules'].values() if m['source_id'] == row['source_id']), None)
         require(module and any(object_rel == root + '/' + module['name'].replace('.', '/') + '.olean' for root in plan['build_roots']), 'Object module identity mismatch')
+        lean_name(module['name'])
     else:
         require(stage['output_paths'] == [], 'Interpretation stage has undeclared outputs')
     require((row['role'] == 'NEGATIVE') == (stage['kind'] == 'NEGATIVE_CONTROL'), 'Negative source/stage role mismatch')
@@ -300,7 +319,7 @@ def validate_suite(suite, sources, root):
         require(replay['schema'] == 'orthemology-v5-replay-v1', 'Unknown replay schema')
         require(replay['scope'] in {'COMPONENTS', 'DECLARED_SUITE', 'FINITE'}, 'Unknown replay scope')
         if replay['scope'] == 'DECLARED_SUITE':
-            require(APPROVED_DECLARED_SUITES.get(suite['id']) == canonical(replay), 'Complete original suite recipe has not been approved')
+            require(APPROVED_DECLARED_SUITES.get(suite['id']) == declared_suite_fingerprint(suite, sources), 'Complete original suite recipe has not been approved')
         identifier(suite['id']); string_list(suite['source_ids'])
         require(suite['source_ids'], 'No suite sources')
         contents = {sid: public_bytes(root, sources[sid]) for sid in suite['source_ids']}
@@ -322,13 +341,14 @@ def validate_suite(suite, sources, root):
         for name, row in modules.items():
             keys(row, {'name', 'source_id', 'imports'})
             sid = row['source_id']; require(sid in files and sid not in module_sources, 'Module source identity collision'); module_sources.add(sid)
-            if files[sid]['role'] != 'NEGATIVE': lean_name(name)
+            if files[sid]['role'] not in {'NEGATIVE', 'AUDIT'}: lean_name(name)
             require(files[sid]['path'].endswith(name.replace('.', '/') + '.lean'), 'Module/project path mismatch')
             require(files[sid]['role'] in {'PROOF', 'AUDIT', 'NEGATIVE', 'RUNTIME'}, 'Nonmodule source role')
             require(string_list(row['imports']) == imports(contents[sid].decode('utf-8')), 'Declared imports differ from source')
             require(set(row['imports']) <= set(modules) | set(official), 'Missing import dependency')
         order = string_list(replay['module_order']); require(set(order) <= set(modules), 'Unknown ordered module')
         for index, name in enumerate(order):
+            lean_name(name)
             require(files[modules[name]['source_id']]['role'] != 'NEGATIVE', 'Negative module in build order')
             require(set(modules[name]['imports']) & set(modules) <= set(order[:index]), 'Module order is not dependency complete')
         for field, role in [('positive_roots', 'PROOF'), ('audit_roots', 'AUDIT'), ('negative_roots', 'NEGATIVE'), ('runtime_roots', 'RUNTIME')]:
@@ -423,6 +443,8 @@ def validate_suite(suite, sources, root):
                 meanings = {} if row['recipe'] in {'t15-empirical-integrity-v1', 't15-empirical-tests-v1'} else {'--decisions-zip': 'INPUT_FILE', '--summary-xlsx': 'INPUT_FILE'}
                 if row['recipe'] == 't15-empirical-reanalyse-v1': meanings['--output'] = 'FRESH_OUTPUT_FILE'
                 require(row['argument_meanings'] == meanings, 'Changed empirical argument meaning')
+            elif row['recipe'] in NORMAL_SOURCE_RECIPES:
+                require(NORMAL_SOURCE_RECIPES[row['recipe']] == row['sha256'] and row['argument_meanings'] == {}, 'Changed original source-check recipe')
             else:
                 require(SOURCE_RECIPES.get(row['recipe']) == row['sha256'], 'Unknown/unreviewed driver recipe')
         stages = indexed(replay['stages']); require(stages and not (set(stages) & RESERVED), 'Missing stages or reserved stage ID')
@@ -432,6 +454,8 @@ def validate_suite(suite, sources, root):
                 'stages': stages, 'targets': names, 'packages': packages, 'build_roots': string_list(replay['build_roots'])}
         for name in plan['build_roots']:
             relative(name); require(name != 'project' and not name.startswith('project/'), 'Build root overlaps projected sources')
+        for driver in drivers.values():
+            if driver['recipe'] in NORMAL_SOURCE_RECIPES: source_checker_inputs(driver, plan)
         if any(row['recipe'] in EMPIRICAL_RECIPES for row in drivers.values()):
             _empirical_package(plan)
             require(replay['scope'] == 'FINITE' and toolchain['kind'] == 'PYTHON' and toolchain['version'].startswith('3.12.'), 'Empirical execution is source-prescribed Python 3.12 finite scope')
@@ -578,6 +602,53 @@ def package_library(name, library, official):
 def _clean_environment():
     return {key: value for key, value in os.environ.items()
             if not key.startswith(('LEAN_', 'PYTHON')) and key not in {'LD_PRELOAD', 'DYLD_INSERT_LIBRARIES'}}
+
+
+def stage_environment(stage, plan, output, env):
+    """Only declared fresh prerequisites may precede the canonical custom roots."""
+    preferred = []
+    rows = [stage] + [plan['stages'][name] for name in stage['depends_on']]
+    for row in rows:
+        for name in row['output_paths']:
+            if not name.endswith('.olean'): continue
+            for root in plan['build_roots']:
+                if name.startswith(root + '/'):
+                    preferred.append(str(path_in(output, root)))
+    result = dict(env)
+    if preferred:
+        result['LEAN_PATH'] = os.pathsep.join(dict.fromkeys(preferred + env.get('LEAN_PATH', '').split(os.pathsep)))
+    return result
+
+
+def source_checker_inputs(driver, plan):
+    """Prevalidate producer manifest paths before executing the exact checker."""
+    driver_path = plan['files'][driver['source_id']]['path']
+    require(not any(name.startswith('scripts/') and name.endswith('.py') and name != driver_path
+                    for name in plan['file_paths']), 'Unreviewed adjacent Python import source')
+    def data(name):
+        require(name in plan['file_paths'], 'Original source checker input is absent')
+        return plan['contents'][plan['file_paths'][name]['source_id']]
+    def check(rows, field):
+        require(isinstance(rows, list) and rows, 'Original source inventory is absent')
+        seen = set()
+        for row in rows:
+            name = relative(row[field]); require(name not in seen, 'Duplicate original source path'); seen.add(name)
+            value = data(name)
+            require(type(row['bytes']) is int and len(value) == row['bytes'] and sha(value) == row['sha256'], 'Original source-check input changed')
+    if driver['recipe'] == 't11-substitution-source-check-v1':
+        require(plan['files'][driver['source_id']]['path'] == 'scripts/verify-inputs.py', 'Original checker location changed')
+        raw = data('INPUT_SOURCE_MANIFEST.json'); inputs = json.loads(raw)
+        candidate = json.loads(data('CANDIDATE_v1.json'))
+        require(sha(raw) == candidate['input_manifest_sha256'], 'Original input manifest changed')
+        check(inputs, 'local_path'); check(candidate['modules'], 'path')
+        review = json.loads(data('review/VERIFICATION.json'))
+        require(sha(data('review/sources/IndependentControls.lean')) == review['independent_controls_sha256'], 'Original independent control bytes changed')
+    elif driver['recipe'] == 't11-normalization-source-check-v1':
+        require(plan['files'][driver['source_id']]['path'] == 'scripts/verify-sources.py', 'Original checker location changed')
+        check(json.loads(data('SOURCE_IDENTITIES.json'))['sources'], 'path')
+        check(json.loads(data('ACCEPTED_INPUTS.json'))['sources'], 'path')
+        for name in data('dependency-order.txt').decode().splitlines(): lean_name(name)
+    else: raise ValueError('Unapproved normal source checker')
 
 
 def _input_inventory(row, path, plan):
@@ -958,7 +1029,7 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                 run = {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': current['started_at'], 'ended_at': utc(), 'log_sha256': sha(log.read_bytes())}
             else:
                 argv = [_expand(a, mappings) for a in stage['argv']]
-                run = run_process(argv, path_in(project, stage['cwd'], dot=True), env, log, stage['timeout_seconds'])
+                run = run_process(argv, path_in(project, stage['cwd'], dot=True), stage_environment(stage, plan, output, env), log, stage['timeout_seconds'])
             current.update(run); text = log.read_text(encoding='utf-8', errors='replace')
             if run['terminal'] != 'COMPLETED':
                 receipt.update(outcome='RESOURCE_INCONCLUSIVE', exit_code=1)
@@ -968,7 +1039,7 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                 _language_result(plan['drivers'][stage['driver_id']], stage, text, plan)
             if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in EMPIRICAL_RECIPES:
                 _empirical_result(plan['drivers'][stage['driver_id']], stage, text, plan, output)
-            if any(row['recipe'] in SOURCE_RECIPES for row in plan['drivers'].values()) and stage['argv'][-1].startswith('{project}/'):
+            if (suite['id'] in APPROVED_DECLARED_SUITES or any(row['recipe'] in SOURCE_RECIPES for row in plan['drivers'].values())) and stage['argv'][-1].startswith('{project}/'):
                 path = stage['argv'][-1][len('{project}/'):]
                 if path.endswith('.lean'):
                     body = plan['contents'][plan['file_paths'][path]['source_id']].decode()

@@ -132,6 +132,21 @@ class SuccessorReplayTests(unittest.TestCase):
         self.suite['replay']['scope'] = 'DECLARED_SUITE'
         with self.assertRaises(ValueError): self.validate()
 
+    def test_reviewed_suite_approval_binds_sources_targets_and_control_roles(self):
+        self.suite['replay']['scope'] = 'DECLARED_SUITE'
+        approved = self.r.declared_suite_fingerprint(self.suite, self.sources)
+        with mock.patch.dict(self.r.APPROVED_DECLARED_SUITES, {self.suite['id']: approved}):
+            self.validate()
+            original = copy.deepcopy(self.suite)
+            self.suite['targets'][0]['target_sha256'] = 'f' * 64
+            with self.assertRaises(ValueError): self.validate()
+            self.suite = copy.deepcopy(original)
+            self.suite['controls'][0]['role'] = 'COUNTEREXAMPLE_PROOF'
+            with self.assertRaises(ValueError): self.validate()
+            self.suite = original
+            self.sources[self.suite['source_ids'][0]]['public_sha256'] = 'e' * 64
+            self.assertNotEqual(approved, self.r.declared_suite_fingerprint(self.suite, self.sources))
+
     def test_module_alias_or_unequal_namespace_collision_fails(self):
         self.suite['replay']['modules'][1]['name'] = 'Proof'
         with self.assertRaises(ValueError): self.validate()
@@ -142,6 +157,38 @@ class SuccessorReplayTests(unittest.TestCase):
         self.suite['replay']['negative_roots'] = ['verification.negative-controls.BadProof']
         self.suite['replay']['stages'][1]['argv'][-1] = '{project}/verification/negative-controls/BadProof.lean'
         self.validate()
+
+    def test_standalone_positive_fixture_path_cannot_become_an_import_or_object(self):
+        self.suite['replay']['files'][1]['path'] = 'verification/positive-controls/BadProof.lean'
+        self.suite['replay']['files'][1]['role'] = 'AUDIT'
+        self.suite['replay']['modules'][1]['name'] = 'verification.positive-controls.BadProof'
+        self.suite['replay']['negative_roots'] = []
+        self.suite['replay']['audit_roots'] = ['verification.positive-controls.BadProof']
+        stage = self.suite['replay']['stages'][1]
+        stage['kind'] = 'POSITIVE_CONTROL'; stage['expected_exit_codes'] = [0]; stage['expected_diagnostics'] = []
+        stage['argv'][-1] = '{project}/verification/positive-controls/BadProof.lean'
+        self.suite['controls'][1].update(role='POSITIVE', expected_outcome='ACCEPT', expected_outcome_sha256=sha('ACCEPT'))
+        self.validate()
+        self.suite['replay']['module_order'].append('verification.positive-controls.BadProof')
+        with self.assertRaises(ValueError): self.validate()
+
+    def test_original_assert_source_checker_cannot_run_optimized_or_arbitrary_args(self):
+        driver = {'id': 'source-check', 'recipe': 't11-substitution-source-check-v1'}
+        plan = {'drivers': {'source-check': driver}}
+        stage = {'kind': 'SOURCE_CHECK', 'driver_id': 'source-check', 'cwd': '.', 'output_paths': [],
+                 'argv': ['{tool:python}', '-B', '{driver:source-check}']}
+        self.r._validate_argv(stage, plan)
+        for args in [['{tool:python}', '-O', '{driver:source-check}'], stage['argv'] + ['--unchecked']]:
+            with self.assertRaises(ValueError): self.r._validate_argv({**stage, 'argv': args}, plan)
+
+    def test_isolated_control_objects_take_precedence_only_from_declared_outputs(self):
+        plan = {'build_roots': ['build', 'control'], 'stages': {
+            'prerequisite': {'output_paths': ['control/KernelAudit.olean']}}}
+        stage = {'output_paths': [], 'depends_on': ['prerequisite']}
+        env = {'LEAN_PATH': os.pathsep.join([str(self.base/'build'), str(self.base/'official')])}
+        result = self.r.stage_environment(stage, plan, self.base, env)
+        self.assertEqual(result['LEAN_PATH'].split(os.pathsep)[0], str(self.base/'control'))
+        self.assertEqual(env['LEAN_PATH'].split(os.pathsep)[0], str(self.base/'build'))
 
     def test_fresh_control_build_root_is_explicit_and_cannot_alias_sources(self):
         stage = self.suite['replay']['stages'][0]
