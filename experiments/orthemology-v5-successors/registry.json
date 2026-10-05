@@ -1,0 +1,19 @@
+{
+  "schema": "orthemology-v5-successors-v1",
+  "programme": "Orthemology v5",
+  "cutoff": "fifteenth-final",
+  "baseline_commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
+  "baseline_tree": "08a6452e50e8e4791d02410d1c1732875e520f2e",
+  "records": {
+    "BASELINE_BINDING": {
+      "path": "docs/provenance/v5-successors/BASELINE_BINDING.json",
+      "sha256": "c3c9ba367ba6444a46d5108309166a2d788063fb42f2518eb630245f47b1e2d5"
+    },
+    "PRESERVATION": {
+      "path": "docs/provenance/v5-successors/PRESERVATION.json",
+      "sha256": "31957307d495133b054302a6cd28d9fa1d5a33d00ca62e713794dcc8342a366a"
+    }
+  },
+  "suite_ids": [],
+  "result_ids": []
+}
