@@ -10,6 +10,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
 import os
 from pathlib import Path, PurePosixPath
 import re
@@ -44,6 +45,12 @@ SOURCE_RECIPES = {
 # Generic serial compilation is supported at COMPONENTS scope. Values here are
 # code-reviewed canonical replay descriptor digests, never producer approvals.
 APPROVED_DECLARED_SUITES = {}
+EMPIRICAL_RECIPES = {
+    't15-empirical-integrity-v1': '9ab3df6e096f8158f755ea31408786248d04547d0bd7c38785770d7e9964e41e',
+    't15-empirical-tests-v1': 'afb1ba14ecbbf193f07ac81f985be30535abf9771387813e9dbd0bbbfc72fb50',
+    't15-empirical-reanalyse-v1': '20110e73fd822e21651064578946cdf910edc493c973953b2c7d1bb74481dd94',
+    't15-empirical-validate-v1': '7d9a4c8d071e2591c8d4568c88c277ab61834e52df21500a1367efb2ac7e060a',
+}
 
 
 def require(condition, message):
@@ -234,6 +241,29 @@ def _validate_argv(stage, plan):
         if recipe in SOURCE_RECIPES:
             require(stage['kind'] == 'SOURCE_CHECK' and argv == ['{builtin:source-check}'], 'Wrong source-check translation')
             return
+        if recipe in EMPIRICAL_RECIPES:
+            require(stage['cwd'] == '.', 'Empirical package must keep its reviewed working directory')
+            if recipe == 't15-empirical-integrity-v1':
+                require(stage['kind'] == 'SOURCE_CHECK' and argv == ['{builtin:source-check}'] and not stage['output_paths'], 'Wrong empirical checksum recipe')
+                return
+            if recipe == 't15-empirical-tests-v1':
+                require(stage['kind'] == 'REFERENCE_TESTS' and argv == ['{tool:python}', '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-v'] and not stage['output_paths'], 'Wrong empirical unittest recipe')
+                return
+            prefix = ['{tool:python}', '-B', '{driver:' + driver['id'] + '}', '--decisions-zip']
+            require(argv[:4] == prefix and len(argv) in {7, 9} and argv[5:7] == ['--summary-xlsx', '{input:summary_xlsx}'], 'Wrong empirical driver arguments')
+            require({'decisions_zip', 'summary_xlsx'} <= set(plan['inputs']), 'Missing empirical exact inputs')
+            if stage['kind'] == 'NEGATIVE_CONTROL':
+                match = re.fullmatch(r'\{fixture:([^{}]+)\}', argv[4])
+                require(recipe == 't15-empirical-reanalyse-v1' and len(argv) == 7 and match and match.group(1) in plan['fixtures'], 'Wrong empirical negative fixture')
+                fixture = plan['fixtures'][match.group(1)]
+                require(fixture['input_id'] == 'decisions_zip' and fixture['operation'] == 'APPEND_CHANGED_BYTES' and fixture['path'] is None and not stage['output_paths'], 'Empirical fixture changes a different input')
+            else:
+                require(stage['kind'] == 'REFERENCE_TESTS' and argv[4] == '{input:decisions_zip}', 'Wrong empirical positive input')
+                if recipe == 't15-empirical-reanalyse-v1':
+                    require(len(argv) == 9 and argv[7] == '--output' and argv[8].startswith('{out}/'), 'Empirical output must be fresh and explicit')
+                    require(stage['output_paths'] == [relative(argv[8][len('{out}/'):])], 'Empirical aggregate output not declared exactly')
+                else: require(len(argv) == 7 and not stage['output_paths'], 'Unexpected validation output')
+            return
         raise ValueError('Unapproved source-specific recipe')
     require(stage['driver_id'] is None, 'Unknown driver')
     require(argv[0] == '{tool:lean}' and argv[1:2] == ['-j1'], 'Undeclared executable or compiler options')
@@ -381,12 +411,18 @@ def validate_suite(suite, sources, root):
             source = sources[row['source_id']]; digest(row['sha256'])
             require(row['sha256'] == (source['public_sha256'] or source['original_sha256']), 'Wrong driver hash')
             require(row['external_input_id'] is None, 'Archive recipe is not approved by this adapter version')
-            require(row['source_id'] in contents and files[row['source_id']]['role'] == 'DRIVER', 'Driver is not an exact projected source')
+            admitted_role = 'LOCK' if row['recipe'] == 't15-empirical-integrity-v1' else 'DRIVER'
+            require(row['source_id'] in contents and files[row['source_id']]['role'] == admitted_role, 'Driver is not an exact projected source')
             if row['recipe'] in LANGUAGE_RECIPES:
                 recipe = LANGUAGE_RECIPES[row['recipe']]
                 require(row['sha256'] == recipe['sha256'] and row['argument_meanings'] == {'source_dir': 'INPUT_TREE'}, 'Wrong approved language recipe')
                 adjacent = str(PurePosixPath(files[row['source_id']]['path']).with_name(recipe['lock_name']))
                 require(adjacent in file_paths and sha(contents[file_paths[adjacent]['source_id']]) == recipe['lock'], 'Changed adjacent driver lock')
+            elif row['recipe'] in EMPIRICAL_RECIPES:
+                require(EMPIRICAL_RECIPES[row['recipe']] == row['sha256'], 'Changed original empirical driver')
+                meanings = {} if row['recipe'] in {'t15-empirical-integrity-v1', 't15-empirical-tests-v1'} else {'--decisions-zip': 'INPUT_FILE', '--summary-xlsx': 'INPUT_FILE'}
+                if row['recipe'] == 't15-empirical-reanalyse-v1': meanings['--output'] = 'FRESH_OUTPUT_FILE'
+                require(row['argument_meanings'] == meanings, 'Changed empirical argument meaning')
             else:
                 require(SOURCE_RECIPES.get(row['recipe']) == row['sha256'], 'Unknown/unreviewed driver recipe')
         stages = indexed(replay['stages']); require(stages and not (set(stages) & RESERVED), 'Missing stages or reserved stage ID')
@@ -396,6 +432,17 @@ def validate_suite(suite, sources, root):
                 'stages': stages, 'targets': names, 'packages': packages, 'build_roots': string_list(replay['build_roots'])}
         for name in plan['build_roots']:
             relative(name); require(name != 'project' and not name.startswith('project/'), 'Build root overlaps projected sources')
+        if any(row['recipe'] in EMPIRICAL_RECIPES for row in drivers.values()):
+            _empirical_package(plan)
+            require(replay['scope'] == 'FINITE' and toolchain['kind'] == 'PYTHON' and toolchain['version'].startswith('3.12.'), 'Empirical execution is source-prescribed Python 3.12 finite scope')
+            requirements_id = file_paths['requirements.txt']['source_id']
+            required_packages = _manifest_pins(contents[requirements_id])
+            require({name: pin['revision'] for name, pin in pins.items()} == required_packages and len(required_packages) == 4,
+                    'Empirical runtime must check every original pinned distribution')
+            require(all(row['kind'] == 'PYTHON_DISTRIBUTION' and row['manifest_source_id'] == requirements_id for row in packages.values()), 'Empirical dependency manifest/type changed')
+            require({row['recipe'] for row in drivers.values()} == set(EMPIRICAL_RECIPES), 'Incomplete original empirical driver inventory')
+            require([drivers[stage['driver_id']]['recipe'] for stage in stages.values()] ==
+                    ['t15-empirical-integrity-v1', 't15-empirical-tests-v1', 't15-empirical-reanalyse-v1', 't15-empirical-validate-v1', 't15-empirical-reanalyse-v1'], 'Original empirical stage inventory/order changed')
         for sid, stage in stages.items():
             keys(stage, STAGE_KEYS); require(stage['kind'] in KINDS, 'Unknown stage kind')
             relative(stage['cwd'], dot=True)
@@ -519,6 +566,15 @@ class MissingInput(FileNotFoundError):
     pass
 
 
+def package_library(name, library, official):
+    if library.is_dir(): return [library]
+    if any(row['package'] == name for row in official.values()):
+        raise MissingTool('Required imported package cache is unavailable: ' + name)
+    # Cli is a pinned Lake/tool dependency without a proof-library cache.
+    # Its Git revision and clean tree are still checked by the caller.
+    return []
+
+
 def _clean_environment():
     return {key: value for key, value in os.environ.items()
             if not key.startswith(('LEAN_', 'PYTHON')) and key not in {'LD_PRELOAD', 'DYLD_INSERT_LIBRARIES'}}
@@ -589,8 +645,7 @@ def _verify_environment(suite, plan, tools, inputs, output):
         require(head['exit_code'] == 0 and head_log.read_text().strip() == pin['revision'], 'Wrong dependency revision: ' + name)
         require(clean['exit_code'] == 0 and not clean_log.read_text().strip(), 'Dirty pinned dependency: ' + name)
         library = path_in(repo, '.lake/build/lib/lean')
-        if not library.is_dir(): raise MissingTool('Pinned official cache is unavailable: ' + name)
-        libraries.append(library); repositories[name] = repo
+        libraries.extend(package_library(name, library, plan['official'])); repositories[name] = repo
         dependencies[name] = {'kind': 'GIT', 'revision': pin['revision'], 'manifest_sha256': sha(plan['contents'][row['manifest_source_id']]),
                               'tracked_clean': True, 'cache_policy': 'TRUSTED_PINNED_OFFICIAL_CACHE', 'head_log_sha256': head['log_sha256'], 'status_log_sha256': clean['log_sha256']}
     if 'lean' in resolved:
@@ -681,7 +736,63 @@ def _language_result(driver, stage, text, plan):
         else: require(value.get('source_files_checked') == 9 and value.get('occurrence_data_checks') == 0, 'Supplemental source/occurrence scope changed')
 
 
-def _source_checks(plan):
+def _empirical_package(plan):
+    require('SHA256SUMS' in plan['file_paths'], 'Missing original empirical checksum manifest')
+    data = plan['contents'][plan['file_paths']['SHA256SUMS']['source_id']]
+    require(sha(data) == EMPIRICAL_RECIPES['t15-empirical-integrity-v1'], 'Empirical checksum manifest changed')
+    names = set()
+    for line in data.decode().splitlines():
+        match = re.fullmatch(r'([0-9a-f]{64})  (.+)', line)
+        require(match is not None, 'Malformed original checksum row')
+        expected, name = match.groups(); relative(name)
+        require(name not in names and name in plan['file_paths'], 'Missing/duplicate original empirical file')
+        names.add(name)
+        require(sha(plan['contents'][plan['file_paths'][name]['source_id']]) == expected, 'Original empirical dependency source changed')
+    require(len(names) == 11 and set(plan['file_paths']) == names | {'SHA256SUMS'}, 'Empirical package inventory changed')
+    return names
+
+
+def check_unittest_log(text, names):
+    actual = re.findall(r'(?m)^(test_\w+) \([^\n]+\) \.\.\. ok\s*$', text)
+    require(len(actual) == len(names) and set(actual) == set(names), 'Original unittest success inventory incomplete')
+    require(re.search(r'(?m)^Ran ' + str(len(names)) + r' tests? in ', text) and text.rstrip().endswith('\nOK'), 'Original unittest terminal/count changed')
+
+
+def check_original_readbacks(text, names):
+    rows = re.findall(r"'([^']+)' (?:does not depend on any axioms|depends on axioms:\s*\[([^\]]*)\])", text)
+    require(len(rows) == len(names) and {name for name, _ in rows} == set(names), 'Original axiom readback inventory changed')
+    for _, axes in rows:
+        require({a.strip() for a in axes.split(',') if a.strip()} <= AXIOMS, 'Original readback contains an unapproved axiom')
+
+
+def _empirical_result(driver, stage, text, plan, output):
+    recipe = driver['recipe']
+    if recipe == 't15-empirical-tests-v1':
+        body = plan['contents'][driver['source_id']].decode()
+        names = re.findall(r'^    def (test_\w+)\(', body, re.M)
+        require(len(names) == 13 and set(stage['control_ids']) == set(names), 'Original empirical unit control identity changed')
+        check_unittest_log(text, names)
+    elif recipe == 't15-empirical-reanalyse-v1':
+        if stage['kind'] == 'NEGATIVE_CONTROL':
+            require(text.strip() == 'Analysis failed: Source SHA-256 mismatch' and stage['expected_exit_codes'] == [2], 'Different empirical input failure')
+        else:
+            actual = read_json(path_in(output, stage['output_paths'][0]))
+            expected = json.loads(plan['contents'][plan['file_paths']['AGGREGATE.json']['source_id']])
+            def compare(a, b):
+                if isinstance(b, bool): return a is b
+                if isinstance(b, list): return isinstance(a, list) and len(a) == len(b) and all(compare(x, y) for x, y in zip(a, b))
+                return type(a) in {int, float} and math.isfinite(a) and math.isclose(a, b, abs_tol=1e-7, rel_tol=0)
+            require(isinstance(actual, dict) and set(actual) == set(expected) and all(compare(actual[k], v) for k, v in expected.items()), 'Original aggregate/reference contract failed')
+    elif recipe == 't15-empirical-validate-v1':
+        value = json.loads(text)
+        require(set(value) == {'status', 'max_abs_sensitivity_difference', 'aggregate_reference'} and value['status'] == 'pass' and value['aggregate_reference'] == 'pass', 'Original numerical/reference validation failed')
+        difference = value['max_abs_sensitivity_difference']
+        require(type(difference) in {int, float} and math.isfinite(difference) and 0 <= difference < 1e-6, 'Original numerical agreement tolerance failed')
+
+
+def _source_checks(plan, driver=None):
+    if driver and driver['recipe'] == 't15-empirical-integrity-v1':
+        return json.dumps({'status': 'PASS', 'checked_files': len(_empirical_package(plan))}) + '\n'
     checked = []
     for sid, row in plan['files'].items():
         if row['role'] in {'PROOF', 'AUDIT'} and row['path'].endswith('.lean'):
@@ -806,7 +917,7 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
             for name in stage['output_paths']:
                 path = path_in(output, name); require(not path.exists(), 'Declared output already exists'); path.parent.mkdir(parents=True, exist_ok=True)
             if stage['argv'] == ['{builtin:source-check}']:
-                log.write_text(_source_checks(plan), encoding='utf-8')
+                log.write_text(_source_checks(plan, plan['drivers'][stage['driver_id']]), encoding='utf-8')
                 run = {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': current['started_at'], 'ended_at': utc(), 'log_sha256': sha(log.read_bytes())}
             else:
                 argv = [_expand(a, mappings) for a in stage['argv']]
@@ -818,6 +929,14 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
             assess_stage(stage, run, text, completed)
             if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in LANGUAGE_RECIPES:
                 _language_result(plan['drivers'][stage['driver_id']], stage, text, plan)
+            if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in EMPIRICAL_RECIPES:
+                _empirical_result(plan['drivers'][stage['driver_id']], stage, text, plan, output)
+            if any(row['recipe'] in SOURCE_RECIPES for row in plan['drivers'].values()) and stage['argv'][-1].startswith('{project}/'):
+                path = stage['argv'][-1][len('{project}/'):]
+                if path.endswith('.lean'):
+                    body = plan['contents'][plan['file_paths'][path]['source_id']].decode()
+                    names = re.findall(r'^#print axioms\s+(\S+)\s*$', body, re.M)
+                    if names: check_original_readbacks(text, names)
             current['output_hashes'] = {name: _file_hashes(path_in(output, name)) for name in stage['output_paths']}
             evidence['output_hashes'].update(current['output_hashes'])
             completed[sid] = {**run, 'matched': True}

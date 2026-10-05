@@ -164,6 +164,36 @@ class SuccessorReplayTests(unittest.TestCase):
         self.assertEqual(changed.read_bytes(), b'exact original data\nchanged-byte-control\n')
         with self.assertRaises(ValueError): self.r._make_fixture(row, plan, {'data': original}, out)
 
+    def test_reviewed_empirical_argv_cannot_redirect_input_or_add_python_code(self):
+        driver = {'id': 'analysis', 'recipe': 't15-empirical-reanalyse-v1'}
+        plan = {'drivers': {'analysis': driver}, 'inputs': {'decisions_zip': {'kind': 'FILE'}, 'summary_xlsx': {'kind': 'FILE'}}, 'fixtures': {}}
+        stage = {'kind': 'REFERENCE_TESTS', 'driver_id': 'analysis', 'cwd': '.', 'output_paths': ['aggregate.json'],
+                 'argv': ['{tool:python}', '-B', '{driver:analysis}', '--decisions-zip', '{input:decisions_zip}',
+                          '--summary-xlsx', '{input:summary_xlsx}', '--output', '{out}/aggregate.json']}
+        self.r._validate_argv(stage, plan)
+        for argv in [stage['argv'] + ['-c', 'print(1)'], stage['argv'][:-1] + ['{input:decisions_zip}']]:
+            with self.assertRaises(ValueError): self.r._validate_argv({**stage, 'argv': argv}, plan)
+
+    def test_empirical_verbose_tests_require_actual_complete_successes(self):
+        names = ['test_a', 'test_b']
+        good = 'test_a (test_package.PackageTests.test_a) ... ok\ntest_b (test_package.PackageTests.test_b) ... ok\nRan 2 tests in 0.2s\n\nOK\n'
+        self.r.check_unittest_log(good, names)
+        for log in [good.replace('test_b (test_package.PackageTests.test_b) ... ok\n', ''),
+                    good.replace('... ok', '... skipped reason', 1), good.replace('Ran 2', 'Ran 1')]:
+            with self.assertRaises(ValueError): self.r.check_unittest_log(log, names)
+
+    def test_original_readbacks_require_exact_inventory_and_allowed_axioms(self):
+        good = "'First.a' does not depend on any axioms\n'Second.b' depends on axioms: [propext, Classical.choice]\n"
+        self.r.check_original_readbacks(good, ['First.a', 'Second.b'])
+        for bad in [good.splitlines()[0], good + good, good.replace('Second.b', 'Other.b'), good.replace('propext', 'sorryAx')]:
+            with self.assertRaises(ValueError): self.r.check_original_readbacks(bad, ['First.a', 'Second.b'])
+
+    def test_unused_tool_dependency_needs_pin_but_not_a_nonexistent_library(self):
+        library = self.base / 'no-cli-library'
+        self.assertEqual(self.r.package_library('Cli', library, {}), [])
+        with self.assertRaises(self.r.MissingTool):
+            self.r.package_library('Cli', library, {'Cli': {'package': 'Cli'}})
+
     def test_case_insensitive_projection_collision_fails(self):
         self.suite['replay']['files'][1]['path'] = 'proof.lean'
         with self.assertRaises(ValueError): self.validate()
