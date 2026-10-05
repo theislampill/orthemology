@@ -138,6 +138,7 @@ ATTR_MANIFESTS = {'PUBLIC_MANIFEST.json': 'c68835c56e26dfb2749b8bf3ec895aaa36abc
     'review/REVIEW_RECEIPT.json': '59b6578ab2d25b7a5f00ba8cefc1777c23c4b59de95f9ba631c1109c80468de3',
     'ORIGINAL_TO_PUBLIC.json': '91bba08917dba9215cff4208e65b3ba4484b84e2f92fcfe8fb5938aa1689adaa'}
 HISTORY_RECIPE = 't07-history-original-v1'
+HISTORY_LEGACY_FAILED_RUNNER = '3342453bdd846fd1b28956736899137ca43b7fe8ad9af114bff91eb495ddcfd6'
 HISTORY_CONTRACT = {
     'driver_sha256': 'c664ea7c1398e81359bd5684b25104caaea1991598e16d3476ce555e405ee06a',
     'driver_bytes': 10192, 'archive_sha256': 'ac825ff194e83f8ddd50da3a48e0739d320517374e66f19b129c386188c09aa0',
@@ -1032,9 +1033,16 @@ def history_tracer_argv(stage):
     return ['{tool:python}', '-B', '{adapter}', '--trace-history', stage['argv'][2], '{out}/traces/' + stage['id'], *stage['argv'][3:]]
 
 
+def history_launch_cwd(driver):
+    require(driver['recipe'] == HISTORY_RECIPE, 'Unreviewed archive working directory')
+    identifier(driver['external_input_id'])
+    return '{archive:' + driver['external_input_id'] + '}'
+
+
 def trace_history_driver(driver, trace, arguments):
     require(len(arguments) == 6 and arguments[::2] == ['--lean', '--mathlib', '--output'], 'Unreviewed history arguments')
     driver = no_symlinks(driver); root = driver.parent; history_source_check(root)
+    require(Path.cwd().resolve() == root.resolve(), 'History wrapper must launch from its exact archive root')
     lean = no_symlinks(arguments[1]).resolve(); output = no_symlinks(arguments[5])
     require(sha(lean.read_bytes()) == LEAN_SHA and not output.exists() and output.name == 'original', 'Wrong compiler or reused history output')
     trace = no_symlinks(trace); require(not trace.exists(), 'Trace output must be absent'); trace.mkdir(parents=True)
@@ -1081,7 +1089,7 @@ def history_collect_children(stage, parent, text, plan, output, mappings):
         name = spec['id']; negative = name in HISTORY_CLAIMS; scenario = name == 'source-replay'
         captured = read_json(trace / f'{index:04}.json')
         keys(captured, {'index', 'argv', 'cwd', 'started_at', 'ended_at', 'terminal', 'exit_code', 'log_sha256', 'stdout_sha256', 'stderr_sha256', 'source_sha256', 'output_hashes'})
-        require(captured['index'] == index and captured['cwd'] == _expand('{project}', mappings), 'History physical child launch changed')
+        require(captured['index'] == index and captured['cwd'] == _expand(history_launch_cwd(driver), mappings), 'History physical child launch changed')
         stdout = (trace / f'{index:04}.stdout.log').read_bytes(); stderr = (trace / f'{index:04}.stderr.log').read_bytes(); data = stdout + stderr
         require(sha(stdout) == captured['stdout_sha256'] and sha(stderr) == captured['stderr_sha256'] and data == (trace / f'{index:04}.log').read_bytes() and sha(data) == captured['log_sha256'], 'History captured streams changed')
         actual_argv = [_expand(a, mappings) for a in spec['argv']]
@@ -1112,13 +1120,13 @@ def history_collect_children(stage, parent, text, plan, output, mappings):
             require(captured['output_hashes'] == {str(path): hashes[spec['output_path']]}, 'History object changed after producer child'); objects.update(hashes)
         else: require(captured['output_hashes'] == {}, 'Unexpected history check-only object')
         children[(stage['id'], name)] = {'source_child_id': name, 'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'],
-            'parser_id': HISTORY_RECIPE, 'mode': 'NONEXECUTING_OBSERVATION', 'argv_provenance': 'CAPTURED', 'argv': spec['argv'], 'cwd': '{project}',
+            'parser_id': HISTORY_RECIPE, 'mode': 'NONEXECUTING_OBSERVATION', 'argv_provenance': 'CAPTURED', 'argv': spec['argv'], 'cwd': history_launch_cwd(driver),
             'started_at': captured['started_at'], 'ended_at': captured['ended_at'], 'physical_run_sha256': trace_hash, 'parent_log_sha256': parent['log_sha256'],
             'terminal': 'COMPLETED', 'exit_code': spec['exit_code'], 'actual_outcome': 'REJECT' if negative else 'ACCEPT', 'log_sha256': captured['log_sha256'],
             'source_id': spec['source_id'], 'source_sha256': sha(owner), 'generated_source_sha256': sha(source) if negative else None, 'log_assembly': 'STDOUT_THEN_STDERR',
             'output_hashes': hashes, 'result_record_sha256': canonical(row)}
     require({p.relative_to(output).as_posix() for p in path_in(output, 'original/build').rglob('*.olean')} == set(objects), 'History fresh object census differs')
-    invocation = {'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'], 'source_argv': stage['argv'], 'launch_argv': history_tracer_argv(stage),
+    invocation = {'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'], 'source_argv': stage['argv'], 'launch_argv': history_tracer_argv(stage), 'launch_cwd': history_launch_cwd(driver),
                   'runner_sha256': sha(Path(__file__).read_bytes()), 'trace_sha256': trace_hash, 'parent_log_sha256': parent['log_sha256'], 'child_count': 17}
     return children, invocation, objects
 
@@ -2387,8 +2395,10 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                     evidence['driver_invocations'].append({'parent_stage_id': sid, 'driver_sha256': driver['sha256'],
                         'source_argv': stage['argv'], 'launch_argv': launch, 'runner_sha256': evidence['runner_sha256'],
                         'trace_sha256': None, 'parent_log_sha256': sha(b''), 'child_count': 0})
+                    if recipe == HISTORY_RECIPE: evidence['driver_invocations'][-1]['launch_cwd'] = history_launch_cwd(driver)
                 argv = [_expand(a, mappings) for a in launch]
-                run = run_process(argv, path_in(project, stage['cwd'], dot=True), stage_environment(stage, plan, output, env), log, stage['timeout_seconds'])
+                launch_cwd = Path(_expand(history_launch_cwd(driver), mappings)) if recipe == HISTORY_RECIPE else path_in(project, stage['cwd'], dot=True)
+                run = run_process(argv, launch_cwd, stage_environment(stage, plan, output, env), log, stage['timeout_seconds'])
             current.update(run); text = log.read_text(encoding='utf-8', errors='replace')
             if recipe in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, 't10-independent-mutations-v1'} and stage['kind'] == 'DRIVER':
                 trace = path_in(output, 'traces/' + sid)
@@ -2579,9 +2589,21 @@ def validate_child_evidence(evidence, plan, stages, successful):
     if successful: require(set(launches) == parents and set(observed) == set(declared), 'Missing actual parent/child trace evidence')
     physical_runs = set()
     for pid, row in launches.items():
-        keys(row, {'parent_stage_id', 'driver_sha256', 'source_argv', 'launch_argv', 'runner_sha256', 'trace_sha256', 'parent_log_sha256', 'child_count'})
         stage = plan['stages'][pid]; driver = plan['drivers'][stage['driver_id']]
         is_core = driver['recipe'] == CORE_RECIPE; is_attribution = driver['recipe'] == ATTR_RECIPE; is_history = driver['recipe'] == HISTORY_RECIPE
+        fields = {'parent_stage_id', 'driver_sha256', 'source_argv', 'launch_argv', 'runner_sha256', 'trace_sha256', 'parent_log_sha256', 'child_count'}
+        if is_history:
+            if 'launch_cwd' in row:
+                fields.add('launch_cwd')
+                require(row['launch_cwd'] == history_launch_cwd(driver), 'Changed history archive launch directory')
+            else:
+                # The sole earlier history launcher failed on its first child,
+                # before objects or controls. Preserve that historical failure
+                # without admitting its implicit cwd for any current execution.
+                require(not successful and not observed and evidence['runner_sha256'] == HISTORY_LEGACY_FAILED_RUNNER
+                        and row['child_count'] in (0, 1) and stages[pid]['terminal'] == 'COMPLETED'
+                        and stages[pid]['exit_code'] == 1, 'Missing actual history launch directory')
+        keys(row, fields)
         require(driver['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, 't10-independent-mutations-v1'}, 'Unapproved observed original recipe')
         launch = history_tracer_argv(stage) if is_history else attribution_tracer_argv(stage) if is_attribution else core_tracer_argv(stage) if is_core else t10_tracer_argv(stage)
         count = 17 if is_history else 21 if is_attribution else 168 if is_core else 9
@@ -2605,7 +2627,7 @@ def validate_child_evidence(evidence, plan, stages, successful):
         require(row['driver_sha256'] == driver['sha256'] and row['parser_id'] == driver['recipe'], 'Wrong original parser authority')
         spec = plan['history_children'][child] if is_history else plan['attribution_children'][child] if is_attribution else plan['core_children'][child] if is_core else None
         expected_code = spec['exit_code'] if is_attribution or is_history else 0 if is_core else 1
-        require(row['mode'] == 'NONEXECUTING_OBSERVATION' and row['argv_provenance'] == 'CAPTURED' and row['cwd'] == (spec['cwd'] if is_attribution else '{project}'), 'Derived command or duplicate execution credited as observation')
+        require(row['mode'] == 'NONEXECUTING_OBSERVATION' and row['argv_provenance'] == 'CAPTURED' and row['cwd'] == (history_launch_cwd(driver) if is_history else spec['cwd'] if is_attribution else '{project}'), 'Derived command or duplicate execution credited as observation')
         check_child_terminal(row, stages[pid], child, spec['argv'] if is_original else t10_child_argv(child), seen, expected_code)
         require(row['actual_outcome'] == ('ACCEPT' if expected_code == 0 else 'REJECT') and row['terminal'] == stages[sid]['terminal'] and row['exit_code'] == stages[sid]['exit_code'] and row['log_sha256'] == stages[sid]['log_sha256'], 'Contradictory observation stage summary')
         require(isinstance(row['observed_at'], str) and row['observed_at'].endswith('Z') and

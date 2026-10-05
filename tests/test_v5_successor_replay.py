@@ -456,9 +456,59 @@ class SuccessorReplayTests(unittest.TestCase):
         changed = copy.deepcopy(value); changed['cases'][2]['reprepare'] = 0
         with self.assertRaises(ValueError): r.check_history_scenarios(changed, str(source))
 
+    @unittest.skipUnless(os.environ.get('V5_REPLAY_TEST_LEAN'), 'Explicit official Lean test binding required')
+    def test_history_archive_cwd_compiles_nested_source_and_checks_external_control(self):
+        r = self.r
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            project = out / 'project'; project.mkdir()
+            archive = out / 'archives/source'; archive.mkdir(parents=True)
+            source = archive / 'nested/CwdFixture.lean'; source.parent.mkdir()
+            source.write_text('theorem cwd_ok : True := True.intro\n')
+            build = out / 'original/build'; build.mkdir(parents=True)
+            control = out / 'original/Control.lean'
+            control.write_text('import CwdFixture\nexample : True := cwd_ok\nexample : (1 : Nat) = 2 := by decide\n')
+            driver = {'recipe': r.HISTORY_RECIPE, 'external_input_id': 'source'}
+            mappings = {'archive:source': archive, 'project': project}
+            symbol = r.history_launch_cwd(driver)
+            cwd = Path(r._expand(symbol, mappings))
+            lean = Path(os.environ['V5_REPLAY_TEST_LEAN'])
+            self.assertEqual(r.sha(lean.read_bytes()), r.LEAN_SHA)
+            env = r._clean_environment(); env['LEAN_PATH'] = str(build)
+            result = r.run_process([lean, '-j1', '-o', build / 'CwdFixture.olean', source], cwd, env, out / 'compile.log', 30)
+            self.assertEqual((result['terminal'], result['exit_code']), ('COMPLETED', 0), (out / 'compile.log').read_text())
+            self.assertTrue((build / 'CwdFixture.olean').is_file())
+            result = r.run_process([lean, '-j1', control], cwd, env, out / 'control.log', 30)
+            self.assertEqual((result['terminal'], result['exit_code']), ('COMPLETED', 1))
+            for literal in r.HISTORY_DIAGNOSTICS:
+                self.assertIn(literal, (out / 'control.log').read_text())
+            self.assertNotIn('unknown', (out / 'control.log').read_text().lower())
+
+
+    def test_history_launch_cwd_and_failed_legacy_binding_are_strict(self):
+        r = self.r
+        driver = {'id': 'driver', 'recipe': r.HISTORY_RECIPE, 'external_input_id': 'source', 'sha256': r.HISTORY_CONTRACT['driver_sha256']}
+        stage = {'id': 'original', 'driver_id': 'driver', 'cwd': '.', 'argv': ['{tool:python}', '-B', '{driver:driver}', '--lean', '{tool:lean}', '--mathlib', '{dependency:mathlib}', '--output', '{out}/original']}
+        plan = {'drivers': {'driver': driver}, 'stages': {'original': stage, 'observe': {'id': 'observe', 'driver_id': 'driver', 'argv': ['{builtin:observe-child}', 'original', 'HistoryModel']}}}
+        parent = {'id': 'original', 'terminal': 'COMPLETED', 'exit_code': 1, 'log_sha256': r.sha(b'failed')}
+        launch = {'parent_stage_id': 'original', 'driver_sha256': driver['sha256'], 'source_argv': stage['argv'], 'launch_argv': r.history_tracer_argv(stage), 'runner_sha256': r.HISTORY_LEGACY_FAILED_RUNNER, 'trace_sha256': r.sha(b'trace'), 'parent_log_sha256': parent['log_sha256'], 'child_count': 1}
+        evidence = {'driver_invocations': [launch], 'child_observations': [], 'runner_sha256': r.HISTORY_LEGACY_FAILED_RUNNER, 'output_hashes': {}}
+        r.validate_child_evidence(evidence, plan, {'original': parent}, False)
+        changed = copy.deepcopy(evidence)
+        changed['runner_sha256'] = changed['driver_invocations'][0]['runner_sha256'] = 'a' * 64
+        with self.assertRaises(ValueError):
+            r.validate_child_evidence(changed, plan, {'original': parent}, False)
+        changed['driver_invocations'][0]['launch_cwd'] = '{archive:source}'
+        r.validate_child_evidence(changed, plan, {'original': parent}, False)
+        for value in ['{project}', '{archive:foreign}', '.', None]:
+            bad = copy.deepcopy(changed); bad['driver_invocations'][0]['launch_cwd'] = value
+            with self.subTest(cwd=value), self.assertRaises(ValueError):
+                r.validate_child_evidence(bad, plan, {'original': parent}, False)
+
+
     def test_history_collector_binds_original_order_streams_claims_and_objects(self):
         r = self.r; out = self.base / 'history'; trace = out / 'traces/original'; trace.mkdir(parents=True)
-        driver = {'id': 'driver', 'recipe': r.HISTORY_RECIPE, 'sha256': r.HISTORY_CONTRACT['driver_sha256']}
+        driver = {'id': 'driver', 'recipe': r.HISTORY_RECIPE, 'external_input_id': 'archive', 'sha256': r.HISTORY_CONTRACT['driver_sha256']}
         stage = {'id': 'original', 'driver_id': 'driver', 'argv': ['{tool:python}', '-B', '{driver:driver}',
                  '--lean', '{tool:lean}', '--mathlib', '{dependency:mathlib}', '--output', '{out}/original']}
         parent = {'id': 'original', 'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-10-05T00:00:00Z',
@@ -491,7 +541,7 @@ class SuccessorReplayTests(unittest.TestCase):
             if spec['output_path']:
                 obj = out / spec['output_path']; obj.parent.mkdir(parents=True, exist_ok=True); obj.write_bytes(('fresh ' + name).encode()); outputs[str(obj)] = sha(obj.read_bytes())
             argv = [r._expand(a, mappings) for a in spec['argv']]
-            r.write_json(trace / f'{index:04}.json', {'index': index, 'argv': argv, 'cwd': str(out / 'project'),
+            r.write_json(trace / f'{index:04}.json', {'index': index, 'argv': argv, 'cwd': str(archive),
                 'started_at': '2026-10-05T00:00:01Z', 'ended_at': '2026-10-05T00:00:02Z', 'terminal': 'COMPLETED',
                 'exit_code': spec['exit_code'], 'log_sha256': sha(text), 'stdout_sha256': sha(stdout), 'stderr_sha256': sha(stderr),
                 'source_sha256': sha(source), 'output_hashes': outputs})
