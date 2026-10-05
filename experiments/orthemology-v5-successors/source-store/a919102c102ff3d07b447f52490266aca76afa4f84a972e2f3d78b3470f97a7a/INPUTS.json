@@ -1,0 +1,100 @@
+{
+  "source_identity": {
+    "authors": "Hertz and colleagues",
+    "doi": "10.1037/xhp0000145",
+    "supplements_index": "https://supp.apa.org/psycarticles/supplemental/xhp0000145/xhp0000145_supp.html"
+  },
+  "acquisition": "Obtain inputs separately from the official links; this software has no download function.",
+  "required_inputs": {
+    "decisions_zip": {
+      "name": "xhp-XHP-2015-0360-DecisionsData.zip",
+      "url": "https://supp.apa.org/psycarticles/supplemental/xhp0000145/xhp-XHP-2015-0360-DecisionsData.zip",
+      "sha256": "f29d479d75a49670a2be061631dd43efb2927e907b2e93c356d2d4bf861b598c",
+      "bytes": 141808
+    },
+    "summary_xlsx": {
+      "name": "xhp-XHP-2015-0360-SupplementaryDataExp2.xlsx",
+      "url": "https://supp.apa.org/psycarticles/supplemental/xhp0000145/xhp-XHP-2015-0360-SupplementaryDataExp2.xlsx",
+      "sha256": "c6cf4aef16b7cabf1822bdad21dd3ef45cb46c1a565253701ff7064e03989505",
+      "bytes": 10168
+    }
+  },
+  "context_reference": {
+    "name": "xhp-XHP-2015-0360-Supplementary.doc",
+    "url": "https://supp.apa.org/psycarticles/supplemental/xhp0000145/xhp-XHP-2015-0360-Supplementary.doc",
+    "sha256": "6037e5ddc2562c21fca2c152f726cbda1e380d4549c3f93a344a827c4570f92f",
+    "bytes": 169984
+  },
+  "runtime_read_scope": {
+    "archive_member": {
+      "name": "Data/Experiment2Data.mat",
+      "sha256": "d31dd230066f464d10e4ae23b5acb079b5a6b926764353a30895c43f8ddf7227"
+    },
+    "workbook_sheet": "Experiment 2",
+    "workbook_range": "A1:I17",
+    "workbook_data_range": "A3:I17",
+    "auxiliary_sheet_check": "Sheet3 empty",
+    "mat_variables": [
+      "DataIND",
+      "DataINF"
+    ],
+    "structure_count_per_condition": 15,
+    "IND_matrix_shape": [
+      128,
+      19
+    ],
+    "INF_matrix_shape": [
+      128,
+      11
+    ],
+    "columns_one_based": {
+      "target_interval": 4,
+      "contrast_magnitude": 5,
+      "IND_signed_responses": [
+        8,
+        11,
+        14
+      ],
+      "IND_interval_responses": [
+        10,
+        13,
+        16
+      ],
+      "IND_correctness": [
+        9,
+        12,
+        15
+      ],
+      "IND_collective_time": 19,
+      "INF_signed_response": 8,
+      "INF_interval_response": 10,
+      "INF_correctness": 9
+    },
+    "workbook_columns": [
+      "lower_private_IND",
+      "lower_joint_IND",
+      "lower_joint_INF",
+      "higher_private_IND",
+      "higher_joint_IND",
+      "higher_joint_INF",
+      "joint_IND",
+      "joint_INF",
+      "disagreement_count"
+    ]
+  },
+  "prior_method_review_scope": {
+    "supplement": "Full converted text read; original DOC hash verified; conversion not independently reconstructed; graphical panels not verified",
+    "archive_text_members": [
+      {
+        "name": "Data/Experiment2Data.m",
+        "sha256": "76ea2abb78c2502697c38c52f54341996f3162d86b5a571cc62a719370664820"
+      },
+      {
+        "name": "Data/ReadMe.txt",
+        "sha256": "be91a4f28ab7f11d8b06b4bc10c7519ae7480256d8193f11dbc3ac5d92412715"
+      }
+    ],
+    "author_code_execution": false,
+    "experiment_1_use": false
+  }
+}

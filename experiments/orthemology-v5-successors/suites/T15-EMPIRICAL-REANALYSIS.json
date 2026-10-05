@@ -1,0 +1,533 @@
+{
+  "id": "T15-EMPIRICAL-REANALYSIS",
+  "family": "t15-empirical-reanalysis",
+  "result_families": [
+    "d18-t15-empirical"
+  ],
+  "origin_archive_sha256": "ac5213e252eca1b17cd885e6b86dbc55a2a15304c915f76f34edc58aac024bd7",
+  "source_ids": [
+    "T15-EMPIRICAL-AGGREGATE",
+    "T15-EMPIRICAL-BINDING",
+    "T15-EMPIRICAL-INPUTS",
+    "T15-EMPIRICAL-README",
+    "T15-EMPIRICAL-CHECKSUMS",
+    "T15-EMPIRICAL-VALIDATION",
+    "T15-EMPIRICAL-FIT-BFGS",
+    "T15-EMPIRICAL-FIT-CHECKED",
+    "T15-EMPIRICAL-REANALYSE",
+    "T15-EMPIRICAL-REQUIREMENTS",
+    "T15-EMPIRICAL-TESTS",
+    "T15-EMPIRICAL-VALIDATE"
+  ],
+  "review_ids": [
+    "D18-T15-EMPIRICAL-INHERITED-REVIEW"
+  ],
+  "targets": [
+    {
+      "id": "synthetic-package",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "declaration": "class PackageTests(unittest.TestCase):",
+      "target_sha256": "6ad3cc7a8d3171211f042e72277c0cd9ddc9fbbd49737021325a83225726eabc",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "official-reanalysis",
+      "source_id": "T15-EMPIRICAL-REANALYSE",
+      "declaration": "def run(decisions_zip, summary_xlsx):",
+      "target_sha256": "447e1613a5af40019f29cfa8f3029d9845c463431ea7a8d579912a75fe398dd1",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "aggregate-validation",
+      "source_id": "T15-EMPIRICAL-VALIDATE",
+      "declaration": "def main():",
+      "target_sha256": "2c4c5b0ebed3de9b574a3757903571ebf0dcaec6764f9f8d245ce0740a619321",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [
+    {
+      "id": "test_derivatives",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_both_slope_signs_and_balanced_weighting",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_unequal_bin_counts_do_not_change_default_weighting",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_paired_direction_and_unit",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_missing_timing_preserves_all_choices",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_missing_or_invalid_selected_response_is_rejected",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_wrong_timing_missingness_rejected",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_bad_fit_inputs_rejected",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_manifest_mismatch_rejected",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_cli_help_has_only_local_input_and_aggregate_output",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_aggregate_contract_rejects_record_output",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_output_cannot_overwrite_input",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "test_output_hardlink_cannot_overwrite_input",
+      "source_id": "T15-EMPIRICAL-TESTS",
+      "target_id": "synthetic-package",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "official-aggregate",
+      "source_id": "T15-EMPIRICAL-REANALYSE",
+      "target_id": "official-reanalysis",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "numerical-reference",
+      "source_id": "T15-EMPIRICAL-VALIDATE",
+      "target_id": "aggregate-validation",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "corrupt-decisions-rejected",
+      "source_id": "T15-EMPIRICAL-REANALYSE",
+      "target_id": "official-reanalysis",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    }
+  ],
+  "toolchain": {
+    "kind": "PYTHON",
+    "version": "3.12.3",
+    "platform": "linux-x86_64",
+    "executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+    "packages": [
+      {
+        "name": "numpy",
+        "revision": "2.3.5",
+        "sha256": "bbf0aadfc830a7dab2506a06a1b60a3719aa1e36f400e8d2b8e188401f9c0ee8"
+      },
+      {
+        "name": "openpyxl",
+        "revision": "3.1.5",
+        "sha256": "2f22a2edea4f5cf80f186bd68868b40243dc6d216045f7dffd72fc4f225723ca"
+      },
+      {
+        "name": "pandas",
+        "revision": "2.2.3",
+        "sha256": "bd080a9c1d506f6ce456c8cf9d4b74977e195b3efc2e992dd3786291edde5f6f"
+      },
+      {
+        "name": "scipy",
+        "revision": "1.17.0",
+        "sha256": "8c0a0781fac286294674e2ebfcd0ed7f2a7cd6a90be2992c4f051de1d98d367e"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "FINITE",
+    "files": [
+      {
+        "source_id": "T15-EMPIRICAL-AGGREGATE",
+        "path": "AGGREGATE.json",
+        "role": "DATA"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-BINDING",
+        "path": "BINDING.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-INPUTS",
+        "path": "INPUTS.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-README",
+        "path": "README.md",
+        "role": "DATA"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-CHECKSUMS",
+        "path": "SHA256SUMS",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-VALIDATION",
+        "path": "VALIDATION.json",
+        "role": "DATA"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-FIT-BFGS",
+        "path": "fit_bfgs.py",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-FIT-CHECKED",
+        "path": "fit_checked.py",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-REANALYSE",
+        "path": "reanalyse.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-REQUIREMENTS",
+        "path": "requirements.txt",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-TESTS",
+        "path": "tests/test_package.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T15-EMPIRICAL-VALIDATE",
+        "path": "validate.py",
+        "role": "DRIVER"
+      }
+    ],
+    "modules": [],
+    "module_order": [],
+    "positive_roots": [],
+    "audit_roots": [],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [],
+    "target_names": [],
+    "package_manifest_source_id": "T15-EMPIRICAL-REQUIREMENTS",
+    "packages": [
+      {
+        "name": "numpy",
+        "kind": "PYTHON_DISTRIBUTION",
+        "path": ".",
+        "manifest_source_id": "T15-EMPIRICAL-REQUIREMENTS"
+      },
+      {
+        "name": "openpyxl",
+        "kind": "PYTHON_DISTRIBUTION",
+        "path": ".",
+        "manifest_source_id": "T15-EMPIRICAL-REQUIREMENTS"
+      },
+      {
+        "name": "pandas",
+        "kind": "PYTHON_DISTRIBUTION",
+        "path": ".",
+        "manifest_source_id": "T15-EMPIRICAL-REQUIREMENTS"
+      },
+      {
+        "name": "scipy",
+        "kind": "PYTHON_DISTRIBUTION",
+        "path": ".",
+        "manifest_source_id": "T15-EMPIRICAL-REQUIREMENTS"
+      }
+    ],
+    "tools": [],
+    "external_inputs": [
+      {
+        "id": "decisions_zip",
+        "source_id": null,
+        "kind": "FILE",
+        "manifest_source_id": "T15-EMPIRICAL-INPUTS",
+        "manifest_key": "/required_inputs/decisions_zip",
+        "expected_sha256": "f29d479d75a49670a2be061631dd43efb2927e907b2e93c356d2d4bf861b598c",
+        "expected_bytes": 141808,
+        "role": "INPUT"
+      },
+      {
+        "id": "summary_xlsx",
+        "source_id": null,
+        "kind": "FILE",
+        "manifest_source_id": "T15-EMPIRICAL-INPUTS",
+        "manifest_key": "/required_inputs/summary_xlsx",
+        "expected_sha256": "c6cf4aef16b7cabf1822bdad21dd3ef45cb46c1a565253701ff7064e03989505",
+        "expected_bytes": 10168,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [
+      {
+        "id": "decisions-corrupt",
+        "input_id": "decisions_zip",
+        "operation": "APPEND_CHANGED_BYTES",
+        "path": null
+      }
+    ],
+    "drivers": [
+      {
+        "id": "empirical-integrity",
+        "source_id": "T15-EMPIRICAL-CHECKSUMS",
+        "recipe": "t15-empirical-integrity-v1",
+        "sha256": "9ab3df6e096f8158f755ea31408786248d04547d0bd7c38785770d7e9964e41e",
+        "argument_meanings": {},
+        "external_input_id": null
+      },
+      {
+        "id": "empirical-tests",
+        "source_id": "T15-EMPIRICAL-TESTS",
+        "recipe": "t15-empirical-tests-v1",
+        "sha256": "afb1ba14ecbbf193f07ac81f985be30535abf9771387813e9dbd0bbbfc72fb50",
+        "argument_meanings": {},
+        "external_input_id": null
+      },
+      {
+        "id": "empirical-reanalyse",
+        "source_id": "T15-EMPIRICAL-REANALYSE",
+        "recipe": "t15-empirical-reanalyse-v1",
+        "sha256": "20110e73fd822e21651064578946cdf910edc493c973953b2c7d1bb74481dd94",
+        "argument_meanings": {
+          "--decisions-zip": "INPUT_FILE",
+          "--summary-xlsx": "INPUT_FILE",
+          "--output": "FRESH_OUTPUT_FILE"
+        },
+        "external_input_id": null
+      },
+      {
+        "id": "empirical-validate",
+        "source_id": "T15-EMPIRICAL-VALIDATE",
+        "recipe": "t15-empirical-validate-v1",
+        "sha256": "7d9a4c8d071e2591c8d4568c88c277ab61834e52df21500a1367efb2ac7e060a",
+        "argument_meanings": {
+          "--decisions-zip": "INPUT_FILE",
+          "--summary-xlsx": "INPUT_FILE"
+        },
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "package-integrity",
+        "kind": "SOURCE_CHECK",
+        "driver_id": "empirical-integrity",
+        "argv": [
+          "{builtin:source-check}"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "synthetic",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "empirical-tests",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "package-integrity"
+        ],
+        "timeout_seconds": 120,
+        "output_paths": [],
+        "control_ids": [
+          "test_derivatives",
+          "test_both_slope_signs_and_balanced_weighting",
+          "test_unequal_bin_counts_do_not_change_default_weighting",
+          "test_paired_direction_and_unit",
+          "test_missing_timing_preserves_all_choices",
+          "test_missing_or_invalid_selected_response_is_rejected",
+          "test_wrong_timing_missingness_rejected",
+          "test_bad_fit_inputs_rejected",
+          "test_manifest_mismatch_rejected",
+          "test_cli_help_has_only_local_input_and_aggregate_output",
+          "test_aggregate_contract_rejects_record_output",
+          "test_output_cannot_overwrite_input",
+          "test_output_hardlink_cannot_overwrite_input"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "reanalysis",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "empirical-reanalyse",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:empirical-reanalyse}",
+          "--decisions-zip",
+          "{input:decisions_zip}",
+          "--summary-xlsx",
+          "{input:summary_xlsx}",
+          "--output",
+          "{out}/aggregate.json"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "synthetic"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "aggregate.json"
+        ],
+        "control_ids": [
+          "official-aggregate"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "numerical-validation",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "empirical-validate",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:empirical-validate}",
+          "--decisions-zip",
+          "{input:decisions_zip}",
+          "--summary-xlsx",
+          "{input:summary_xlsx}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "reanalysis"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [],
+        "control_ids": [
+          "numerical-reference"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "hash-rejection",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "empirical-reanalyse",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:empirical-reanalyse}",
+          "--decisions-zip",
+          "{fixture:decisions-corrupt}",
+          "--summary-xlsx",
+          "{input:summary_xlsx}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "numerical-validation"
+        ],
+        "timeout_seconds": 120,
+        "output_paths": [],
+        "control_ids": [
+          "corrupt-decisions-rejected"
+        ],
+        "expected_exit_codes": [
+          2
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T15-EMPIRICAL-REANALYSE",
+            "literal": "Source SHA-256 mismatch",
+            "sha256": "99a85a476b68849257a78a16c51b2e6f2e38b926e869f6daed3fb45ddd4789ed"
+          }
+        ]
+      }
+    ],
+    "build_roots": []
+  }
+}
