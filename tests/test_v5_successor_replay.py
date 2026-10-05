@@ -188,6 +188,15 @@ class SuccessorReplayTests(unittest.TestCase):
         for bad in [good.splitlines()[0], good + good, good.replace('Second.b', 'Other.b'), good.replace('propext', 'sorryAx')]:
             with self.assertRaises(ValueError): self.r.check_original_readbacks(bad, ['First.a', 'Second.b'])
 
+    def test_original_readback_resolves_exact_source_namespace_not_suffix(self):
+        source = 'namespace Outer.Review\nmutual\ndef value : Nat := 1\nend\nsection\n#print axioms witness\nend\nend Outer.Review\n#print axioms Global.witness\n'
+        known = [{'name': 'Outer.Review.witness'}, {'name': 'Other.witness'}, {'name': 'Global.witness'}]
+        names = self.r.source_readback_names(source, known)
+        self.assertEqual(names, ['Outer.Review.witness', 'Global.witness'])
+        good = "'Outer.Review.witness' does not depend on any axioms\n'Global.witness' depends on axioms: [propext]\n"
+        self.r.check_original_readbacks(good, names)
+        with self.assertRaises(ValueError): self.r.check_original_readbacks(good.replace('Outer.Review.witness', 'Other.witness'), names)
+
     def test_unused_tool_dependency_needs_pin_but_not_a_nonexistent_library(self):
         library = self.base / 'no-cli-library'
         self.assertEqual(self.r.package_library('Cli', library, {}), [])

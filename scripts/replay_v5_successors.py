@@ -765,6 +765,43 @@ def check_original_readbacks(text, names):
         require({a.strip() for a in axes.split(',') if a.strip()} <= AXIOMS, 'Original readback contains an unapproved axiom')
 
 
+def source_readback_names(text, targets):
+    """Resolve literal readbacks through their exact lexical namespace frames.
+
+    The source-selected target map disambiguates existing qualified constants.
+    No suffix match to an arbitrary log declaration is accepted.
+    """
+    known = {row['name'] for row in targets}; frames = []; current = ''; names = []
+    stripped = strip_lean(text)
+    if not re.search(r'(?m)^\s*#print\s+axioms\s+', stripped): return []
+    for line in stripped.splitlines():
+        line = line.strip()
+        found = re.fullmatch(r'namespace\s+([^\s]+)', line)
+        if found:
+            name = found.group(1); lean_name(name)
+            frames.append(current)
+            current = (current + '.' if current else '') + name
+        elif line == 'mutual' or re.fullmatch(r'(?:noncomputable\s+)?section(?:\s+[^\s]+)?', line):
+            frames.append(current)
+        elif re.fullmatch(r'end(?:\s+[^\s]+)?', line):
+            require(frames, 'Unmatched namespace/section end')
+            current = frames.pop()
+        else:
+            found = re.fullmatch(r'#print\s+axioms\s+([^\s]+)', line)
+            if not found: continue
+            literal = found.group(1); lean_name(literal)
+            if literal.startswith('_root_.'):
+                names.append(literal[len('_root_.'):]); continue
+            prefixes = current.split('.') if current else []
+            candidates = ['.'.join(prefixes[:i] + [literal]) for i in range(len(prefixes), -1, -1)]
+            resolved = next((name for name in candidates if name in known), None)
+            # Fully qualified literals outside a namespace and local lexical
+            # names are source identities even when only a subset is targeted.
+            if resolved is None: resolved = literal if '.' in literal or not current else current + '.' + literal
+            names.append(resolved)
+    return names
+
+
 def _empirical_result(driver, stage, text, plan, output):
     recipe = driver['recipe']
     if recipe == 't15-empirical-tests-v1':
@@ -935,7 +972,7 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                 path = stage['argv'][-1][len('{project}/'):]
                 if path.endswith('.lean'):
                     body = plan['contents'][plan['file_paths'][path]['source_id']].decode()
-                    names = re.findall(r'^#print axioms\s+(\S+)\s*$', body, re.M)
+                    names = source_readback_names(body, plan['targets'].values())
                     if names: check_original_readbacks(text, names)
             current['output_hashes'] = {name: _file_hashes(path_in(output, name)) for name in stage['output_paths']}
             evidence['output_hashes'].update(current['output_hashes'])
