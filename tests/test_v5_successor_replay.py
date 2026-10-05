@@ -473,6 +473,12 @@ class SuccessorReplayTests(unittest.TestCase):
                     self.transcript().replace('V5_SAFE Fixture.ok 11 []', 'V5_SAFE Fixture.ok 0 []')]:
             with self.assertRaises(ValueError): self.r.parse_readbacks(bad, targets)
 
+    def test_readback_markers_match_complete_names_not_shared_prefixes(self):
+        second = self.transcript().replace('Fixture.ok', 'Fixture.ok_type')
+        targets = self.suite['replay']['target_names'] + [{'target_id': 'second', 'name': 'Fixture.ok_type', 'module': 'Proof'}]
+        parsed = self.r.parse_readbacks(self.transcript() + second, targets)
+        self.assertEqual(set(parsed), {'main', 'second'})
+
     def test_duplicate_json_keys_and_nonfinite_numbers_fail(self):
         for content in ['{"id":1,"id":2}', '{"budget":NaN}']:
             path = self.base / 'bad.json'

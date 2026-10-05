@@ -563,8 +563,10 @@ def parse_readbacks(text, targets):
     result = {}
     for row in targets:
         name = row['name']; start = 'V5_BEGIN ' + name; end = 'V5_END ' + name
-        require(text.count(start + '\n') == 1 and text.count(end) == 1, 'Missing/duplicate target readback')
-        block = text.split(start + '\n', 1)[1].split(end, 1)[0]
+        starts = list(re.finditer(r'(?m)^' + re.escape(start) + r'\r?$', text))
+        ends = list(re.finditer(r'(?m)^' + re.escape(end) + r'\r?$', text))
+        require(len(starts) == len(ends) == 1 and starts[0].end() < ends[0].start(), 'Missing/duplicate target readback')
+        block = text[starts[0].end():ends[0].start()].lstrip('\r\n')
         axiom_rows = re.findall(r"'" + re.escape(name) + r"' (does not depend on any axioms|depends on axioms: \[([^\]]*)\])", block)
         require(len(axiom_rows) == 1, 'Missing/duplicate exact axiom readback')
         axes = sorted(x.strip() for x in axiom_rows[0][1].split(',') if x.strip())
