@@ -1,0 +1,101 @@
+{
+  "schema": "tenth-joint-existential-coverage-input-binding-v2",
+  "date_utc": "2026-10-03",
+  "status": "research_candidate_v2_pending_revision_verification",
+  "revision_inputs": [
+    {"selector": "candidate-v1::MANIFEST.sha256", "sha256": "b57e02b476848377364f230512490561f791d44def9256f5a2194ae877fb5667", "scope": "Prior candidate preserved unchanged."},
+    {"selector": "joint-existential-coverage-review::INDEPENDENT_REVIEW_v1.md", "sha256": "bccc9a336353c340cb83c40e1d9497f5a1b9eebd8b5c7409e22a5f834368fcfe", "scope": "Bounded control/preservation acceptance; R1-R3, branch coverage precision and graded rational-support assessment included before candidate-v2 binding."}
+  ],
+  "inherited_inputs": [
+    {
+      "key": "N9_F1",
+      "selector": "Ninth_Necessity_Source_v2::ARGUMENT.md",
+      "sha256": "c27582d4685a50fe28dd17502e38dbacb3f84b61aca735f8c2f5f40e4020a1e5",
+      "bytes": 32250,
+      "role": "Accepted qualified-achievement technique and modal productive-coverage relocation; no re-credit as a new proof technique."
+    },
+    {
+      "key": "N9_F3",
+      "selector": "Ninth_Foundational_Nexus_Public_Source_v1::RESEARCH_NOTE.md",
+      "sha256": "a7246a9f23a039adb3ec153dcd83064f7bde9d8329e493f3afd7115cf30bc951",
+      "bytes": 27148,
+      "role": "Accepted same-E requirement and actual-source inquiry."
+    },
+    {
+      "key": "N9_F4",
+      "selector": "Ninth_Integrated_Rival_Public_Source_v3::JOINT_ARCHITECTURE_AND_FAILURE_ASSESSMENT.md",
+      "sha256": "93a31ad11ea5e2ac4d47c8cc38fdb77563f3999bcc219a14622b1cdc64ae37b2",
+      "bytes": 17674,
+      "role": "Accepted genuinely active received-efficacy rival and remaining collective target."
+    },
+    {
+      "key": "N9_CE",
+      "selector": "Ninth_Foundational_Supplementary_Reviews_v1::collective-efficacy/COLLECTIVE_EFFICACY_REVIEW.md",
+      "sha256": "2666c411eedec78db201b0fb147f24e5b26bd3aee43bbdee2b35ee29b32167cb",
+      "bytes": 14707,
+      "role": "Scoped late collective-efficacy assessment, not external specialist validation."
+    },
+    {
+      "key": "N9_WS",
+      "selector": "Ninth_Foundational_Supplementary_Reviews_v1::warrant-standard/ASSESSMENT.md",
+      "sha256": "b272c08cba5e24245f2f1d295b1aeaba1f321e843ffd0a9d0eeea5b6e52d757c",
+      "bytes": 22264,
+      "role": "Basic warrant, prima-facie support and exact content/application standards."
+    },
+    {
+      "key": "T10_KIND",
+      "selector": "existential-explanation/kind-priority-freeze-v1::KIND_PRIORITY_PAPER.md",
+      "sha256": "364049cd984b87375073d7f6c9217bb35e25a0651c8e6eada52f4b514b5ec770",
+      "bytes": 21115,
+      "role": "Accepted smaller target, actual kind priority and common-basis limitation."
+    },
+    {
+      "key": "T10_TRANSFER",
+      "selector": "existential-explanation/transfer-warrant/freeze-v1::TRANSFER_WARRANT_PAPER.md",
+      "sha256": "3440e70623c3495870aa70ef3753c4885bf34216f9e547b67a12096ec2a771a5",
+      "bytes": 33150,
+      "role": "Accepted transfer/powers study; its author supplied a scoped comparison, not the fresh independent review of this whole candidate."
+    },
+    {
+      "key": "T10_NULL",
+      "selector": "existential-explanation/freeze-v1::EXISTENTIAL_EXPLANATION_PAPER.md",
+      "sha256": "862647d884a5fd610a81379dddca917ba9eacae41267e85b12450e77e81170fc",
+      "role": "Accepted law-only null/distribution analysis; not an exclusion of the actual productive history."
+    }
+  ],
+  "new_primary_witnesses": [
+    {
+      "key": "K7_O25",
+      "url": "https://catalogimages.wiley.com/images/db/pdf/9781119028451.excerpt.pdf",
+      "sha256": "1c4af32eee55cf9d0728d50221ec95c13027d9d577ad561a9cc060153c1ee30e",
+      "bytes": 630527,
+      "pages": 26,
+      "inspected_selected_printed_pages": [7,25],
+      "visual_check": "Downloaded PDF pages7 and25 rendered and inspected; surrounding selected text also read.",
+      "public_redistribution": false
+    },
+    {
+      "key": "OP_D",
+      "doi": "10.1017/S0034412524000623",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CC826C9C720378B2D74A5B5B06C9335D/S0034412524000623a.pdf/can-pantheism-explain-the-existence-of-the-universe.pdf",
+      "sha256": "18c25b66104e0bde8e35240f6b80d35b08c39b462cd70086b640c6a34feff747",
+      "bytes": 358051,
+      "pages": 15,
+      "inspected_selected_printed_range": "17-22",
+      "visual_check": "Printed21 rendered and inspected; selected argument and scope text read in downloaded extraction and publisher page.",
+      "public_redistribution": false
+    },
+    {
+      "key": "E21",
+      "url": "https://samelgin.com/wp-content/uploads/2026/02/Public.pdf",
+      "sha256": "80f4d333ea950a42288cec2d44a126d56ed11764f6e4f7ffa04075deabab6d41",
+      "bytes": 858133,
+      "pages": 31,
+      "inspected_selected_printed_range": "20-22",
+      "visual_check": "Printed20 and21 rendered and inspected. Live PDF governs; cached differently paginated extraction is a distinct witness.",
+      "version_limit": "Author-hosted manuscript; no claim of newest PhilArchive version or peer-reviewed final publication.",
+      "public_redistribution": false
+    }
+  ],
+  "authority_limits": "Isolated research only. No canonical adoption, actual modality certificate, source redistribution, publication or external contact."
+}

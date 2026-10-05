@@ -1,0 +1,110 @@
+{
+  "schema": "orthemology-fifteenth-final-verification-v1",
+  "programme": "Orthemology v5",
+  "tranche": "Fifteenth",
+  "status": "PASS local deliverable seal and independent research verification",
+  "research_start_utc": "2026-10-05T04:53:57.266014+00:00",
+  "sealed_at_utc": "2026-10-05T10:54:20.389853+00:00",
+  "elapsed_seconds_at_seal": 21623.123839,
+  "artifacts": [
+    {
+      "role": "main_report",
+      "file": "Orthemology_Fifteenth_Research_Final_v1_20261005.docx",
+      "bytes": 59428,
+      "sha256": "19aa086ae362153c48b34de0ab00bd52996faa9229c508c7068da35f758b0169",
+      "container_crc": "pass",
+      "rendered_pages": 16
+    },
+    {
+      "role": "mathematical_compendium",
+      "file": "Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.docx",
+      "bytes": 161350,
+      "sha256": "06622a9ab290a76993e0864b96b39a78bec725b5a3e59d226d5a8902e552eaca",
+      "container_crc": "pass",
+      "rendered_pages": 90
+    },
+    {
+      "role": "source_evidence",
+      "file": "Orthemology_Fifteenth_Source_Evidence_v2_20261005.zip",
+      "bytes": 482806,
+      "sha256": "ac5213e252eca1b17cd885e6b86dbc55a2a15304c915f76f34edc58aac024bd7",
+      "container_crc": "pass",
+      "members": 261
+    }
+  ],
+  "document_checks": {
+    "main_reader_blocks": 182,
+    "main_native_displays": 7,
+    "main_native_inline_equations": 26,
+    "main_verified_links": 9,
+    "compendium_papers": 6,
+    "compendium_native_equations": 1549,
+    "compendium_displays": 346,
+    "compendium_paper_local_labels": 181,
+    "all_106_rendered_pages_reviewed_at_original_resolution": true,
+    "source_projection_and_rendered_token_checks": "pass",
+    "private_source_media_and_internal_path_checks": "pass"
+  },
+  "proof_checks": {
+    "lean": "4.19.0",
+    "project_roots": 88,
+    "third_party_import_closure_modules_built_from_pinned_sources": 1360,
+    "theorem_roots_audited": 2750,
+    "checked_reachable_declarations": 12311,
+    "declaration_inventory_rows": 6713,
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "unsafe_or_partial_proof_dependencies": 0,
+    "source_mutation_rejections": 15,
+    "lean_negative_fixture_rejections": 80,
+    "compiler_and_standard_toolchain_reused": true,
+    "compiler_bootstrapped": false,
+    "canonical_adoption": false
+  },
+  "reference_checks": {
+    "restricted_python_tests": 22,
+    "univariate_python_tests": 15,
+    "empirical_package_tests": 13,
+    "total_python_unit_tests": 50,
+    "hash_pinned_local_input_replay": "pass",
+    "runtime_pairs": 720,
+    "runtime_boolean_results": 2160,
+    "runtime_direct_expression_evaluations": 87360,
+    "runtime_negative_witnesses": 174,
+    "formal_python_refinement": false
+  },
+  "archive_checks": {
+    "proof_predecessor_sha256": "d4893c478cc6621ecaef386dad4ddd692f9f639b6389649f841461c5f717f4b8",
+    "predecessor_payload_entries_preserved": 232,
+    "final_outer_payload_checksums": 260,
+    "exact_v1_outer_execution": "pass",
+    "v1_to_v2_changes": "Navigation and corresponding integrity files only; all scientific and code payloads unchanged",
+    "documented_v2_subshell_test": "pass",
+    "source_only": true,
+    "raw_primary_documents_or_datasets_distributed": false
+  },
+  "verification_boundaries": [
+    "The restricted typed Lean checker and positive certificate system have kernel correctness/completeness theorems at their stated source grammar.",
+    "Global arithmetical classifications, univariate comparison proof, Gaussian probability arguments and sequential guarantees retain their explicit written-mathematics scope.",
+    "No whole-theorem hierarchy formalisation, serialized parser refinement, arbitrary-endpoint recogniser or current-Has identity-inhabitation completeness is claimed.",
+    "The sequential rule is mathematical; no verified numerical sequential classifier is supplied.",
+    "No new participant experiment, external human-specialist endorsement, causal identification of an actual group or canonical repository adoption is asserted.",
+    "The cold build covers the required third-party Lean imports; the official compiler, standard toolchain and build-tool distributions remain reused infrastructure."
+  ],
+  "supporting_receipt_digests": {
+    "scientific_consistency": "0545d358867e078f715790ecd2953aa387a6b48747ce96f00d8f00057e7d1946",
+    "main_all_page_visual": "a8eb5a1606b56c507920e39a96c074349e6a176b9837699cec991d235bf4a7df",
+    "main_source_clearance": "1dfce107d380a4646ddf6806ef1d6441dbe69f2314ad6211676754c8aefc332c",
+    "compendium_binding": "5f0e88f6b2430d1583a4dec72690c99dea7038727a1516a584e08b43d5c1f866",
+    "compendium_supplemental_visual_navigation": "f3827adcb335c78e77f004fe97968308009747aff1f8ea75e1bbb8fe1f7a4150",
+    "compendium_source_clearance": "b77cf8a618ec31920a6755a8d470c3e6e2952b6764fc04293db409a95eb3ed10",
+    "independent_cold_replay": "07fad6c241a0c326f313f5e7de19b0b81433b43890ec48452bf4c4f8049442b6",
+    "outer_exact_execution": "c4ceb0829daabca8235eadcd1234bed1268839cc059569050cd2ef894a2ff4fe",
+    "outer_navigation_only_successor": "f727199260cea2d3f5f36bacd218be35dd792718cbe005d2afe532732b6e10d5",
+    "post_retry_dependency_integrity": "6964727c7e14e256d4f655d5569fa2340e200b6c12fdfd8ce4ae9e312b7d7d31"
+  },
+  "transport_scope": "This seal binds local artifact bytes. Exact Library readback is a separate delivery check."
+}

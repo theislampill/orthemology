@@ -1,0 +1,122 @@
+{
+  "schema": "eleventh-explicability-source-and-scope-audit-v1",
+  "as_of_utc": "2026-10-03T20:30:19.735423+00:00",
+  "status": "SOURCE_SCOPE_CLEARED_EXACT_PROSPECTIVE_PAIR",
+  "selection": [
+    {
+      "path": "tranche11/research/explicability-warrant/NON_ADMISSION_v2.md",
+      "sha256": "d7e37b5a1fb5c009effd18d8fcb3f7fe6bac7836f48f769b6a26d97d14de8bba",
+      "bytes": 3829
+    },
+    {
+      "path": "tranche11/research/explicability-warrant/SOURCE_BINDING_v2.json",
+      "sha256": "5ce61cb7790899f5864bb89ade4760492f252a8a7d2619169db1a5f1efd3a616",
+      "bytes": 2105
+    }
+  ],
+  "source_id": "DELLA_ROCCA_PSR2010",
+  "counting": {
+    "whole_body_read": true,
+    "marked_capsule_words": 55,
+    "outside_capsule_source_associated_words": 35,
+    "conservative_author_debit": 90,
+    "selected_companion_additional_synopsis_words": 0,
+    "quote_words": 0,
+    "author_reservation": 100,
+    "shared_review_report_chat_reservation": 100,
+    "shared_pool_debit_in_this_pair": 0,
+    "unused_author_reservation_not_reallocated": 10,
+    "charged_spans": [
+      {
+        "role": "capsule",
+        "byte_start": 477,
+        "byte_end_exclusive": 882,
+        "span_sha256": "8b76bebb4b9c707ebe1a7317b8b99e1cb8fee9551462fe519a5c3478951099b2",
+        "whitespace_words": 55
+      },
+      {
+        "role": "mixed_setup",
+        "byte_start": 1331,
+        "byte_end_exclusive": 1486,
+        "span_sha256": "e9e7e8cd6081560a7bbc5c2f2ab4ac851329fefb433bd8161b331f5e081a37d0",
+        "whitespace_words": 21
+      },
+      {
+        "role": "mixed_assessment",
+        "byte_start": 2263,
+        "byte_end_exclusive": 2356,
+        "span_sha256": "eb5e42176d2e2d0ddead7dcc4d2cda89b577caf7f88b3955e8081c609dea743d",
+        "whitespace_words": 14
+      }
+    ]
+  },
+  "primary_support": {
+    "actual_inspected_text_url": "https://www.academia.edu/3607091/PSR",
+    "author_profile_url": "https://yale.academia.edu/MichaelDellaRocca",
+    "official_metadata_url": "https://quod.lib.umich.edu/cgi/t/text/idx/p/phimp/3521354.0010.007/--psr?view=toc",
+    "publication_permalink": "http://hdl.handle.net/2027/spo.3521354.0010.007",
+    "first_window": {
+      "sha256": "beaa1f35df2c87d89a11be2b2153352b62df0870132edb31f59753d27d34992c",
+      "bytes": 36266,
+      "extracted_line_range": [
+        0,
+        86
+      ]
+    },
+    "second_window": {
+      "sha256": "544f6c9c2bd6e4e93355f599dc694f02dbbeac4ca7cf68e5533a3bd77a66de92",
+      "bytes": 36186,
+      "extracted_line_range": [
+        50,
+        135
+      ]
+    },
+    "metadata_author_link_capture": {
+      "sha256": "463bb49578bf506f624a4ff4a1e636e6da6be8dacaed53b1092aa287bd3eed10",
+      "bytes": 12058
+    },
+    "capture_identities_independently_verified": true,
+    "combined_returned_lines_0_through_135_present": true,
+    "relevant_loci_read": [
+      "printed pp.5\u20137, extracted lines38\u201372",
+      "printed pp.7\u20138, extracted lines70\u201385",
+      "printed pp.12\u201313, extracted lines130\u2013134"
+    ],
+    "column_interleaving_disclosed": true,
+    "official_pdf_byte_identity_claimed": false,
+    "complete_visual_collation_claimed": false,
+    "capture_hash_is_publication_hash": false,
+    "raw_primary_captures_selected": false
+  },
+  "claim_scope": {
+    "disposition": "Candidate-specific non-admission, preserving the inherited affirmative rational warrant.",
+    "positive_primary_attribution_fidelity": "The final capsule preserves the affirmative rational-warrant claim and its acknowledged reservation.",
+    "inherited_owner": {
+      "path": "tranche11/baseline/tenth-delivered/tranche10/research/existential-explanation/transfer-warrant/freeze-v1/TRANSFER_WARRANT_PAPER.md",
+      "sha256": "3440e70623c3495870aa70ef3753c4885bf34216f9e547b67a12096ec2a771a5",
+      "bytes": 33150
+    },
+    "inherited_owner_loci": [
+      "\u00a73.1",
+      "\u00a78"
+    ],
+    "credit": "A newly inspected comparison and source-bound allocation assessment; no new existential/productive warrant admitted.",
+    "exclusions": [
+      "No general PSR refutation",
+      "No certified metaphysically possible brute or rootless rival",
+      "No inference that rational or basic warrant is generally inadmissible",
+      "No new actual complete source, particular bearer or necessary participant"
+    ]
+  },
+  "public_boundary": {
+    "actor_neutral_pair": true,
+    "private_capture_paths_or_request_parameters_in_prospective_binding": false,
+    "exploratory_v1_and_primary_captures_excluded": true,
+    "earlier_records_preserved": true
+  },
+  "limits": [
+    "This is a source and report-scope audit, not an independent scientific acceptance record.",
+    "Later review/report/chat source-derived wording shares the remaining 100-word pool.",
+    "The exact selection and its source charge must be rebound if prose changes."
+  ]
+}

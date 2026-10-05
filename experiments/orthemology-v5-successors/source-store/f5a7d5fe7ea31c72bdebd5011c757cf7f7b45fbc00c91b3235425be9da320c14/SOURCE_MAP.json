@@ -1,0 +1,99 @@
+{
+  "schema": "ninth-integrity-source-map-v3",
+  "paper": "SOURCE_INTEGRITY_WARRANT.md",
+  "primary_sources": [
+    {
+      "id": "S1",
+      "author": "Ibn Taymiyya",
+      "work": "Majmūʿ al-fatāwā",
+      "volume": 6,
+      "treatise": "Tafṣīl al-ijmāl fīmā yajibu li-llāh min ṣifāt al-kamāl (al-Akmaliyya)",
+      "newly_examined_electronic_page_markers": [
+        "107–108",
+        "137–140"
+      ],
+      "url": "https://quranislam.github.io/fatwa/ibn-taymiyyah/fatwa81.html",
+      "inspection": "Electronic transcription read, including its printed-page markers; no new print collation or independent manuscript witness claimed",
+      "capture_identity": {
+        "url": "https://quranislam.github.io/fatwa/ibn-taymiyyah/fatwa81.html",
+        "retrieved_utc": "2026-10-03T04:30:33.542722+00:00",
+        "bytes": 233015,
+        "sha256": "f489831c45ae9b53a2e6aadc03eba25cdfb37cdf455d041013262354647e28aa",
+        "distribution": "Private retrieval. No full text in final bundle."
+      },
+      "public_capsule_location": "SOURCE_INTEGRITY_WARRANT.md, Primary-text control, first paragraph",
+      "original_argument_location": "Sections Relational exercise need not mean borrowed perfection onward",
+      "scope": "Historical source interpretation is distinguished from the modern complete-profile model and its use in the fixed safety case"
+    },
+    {
+      "id": "S2",
+      "title": "A Commentary on the Creed of Asfahani",
+      "source_kind": "Supplied modern English translation",
+      "printed_pages": [
+        "7–8",
+        "109–111"
+      ],
+      "pdf_pages": [
+        "14–15",
+        "116–118"
+      ],
+      "input_basename": "A-Commentary-on-the-Creed-of-Asfahani-v2.3(2).pdf",
+      "sha256": "bed5565280dcb71b96fc3437cf2f9c07cdc75e6fe6e3798e24fe6bf886cad6ad",
+      "inspection": "Read supplied extracted text with PDF and printed-page locators; no new Arabic collation claimed",
+      "public_capsule_location": "SOURCE_INTEGRITY_WARRANT.md, Primary-text control, second paragraph"
+    }
+  ],
+  "accepted_boundaries": [
+    {
+      "id": "B1.report",
+      "title": "Eighth Orthemology Research",
+      "basename": "Eighth_Orthemology_Research.docx",
+      "sha256": "103548297755d3f74db9e8088cf300e4f742e090318c4707362c544f18139913"
+    },
+    {
+      "id": "B1.reader",
+      "title": "Eighth Foundation Reader Projection v2, truthful paper",
+      "basename": "SOURCE_INTEGRITY_ARGUMENT.md",
+      "sha256": "e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac"
+    },
+    {
+      "id": "B1.accepted-original",
+      "title": "Eighth truthful-agency public v2, controlling original paper",
+      "basename": "SOURCE_INTEGRITY_ARGUMENT.md",
+      "sha256": "e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d"
+    }
+  ],
+  "source_to_claim_map": [
+    {
+      "claim": "Relative-perfection comparison; affirmative goodness and praiseworthiness of all divine reports, words and acts",
+      "source": "S1",
+      "locator": "MF6:137–140, with the affirmative conduct conclusion at 6:138",
+      "kind": "Historical précis"
+    },
+    {
+      "claim": "Occurrence and omission may be appropriate without simultaneous eternal acts",
+      "source": "S1",
+      "locator": "MF6:107–108",
+      "kind": "Historical précis"
+    },
+    {
+      "claim": "General speech and willing versus praised species; direct and a-fortiori routes",
+      "source": "S2",
+      "locator": "Asfahani printed pp.7–8,109–111",
+      "kind": "Historical précis"
+    },
+    {
+      "claim": "Role-parametric extraction of fidelity",
+      "kind": "New analytical reconstruction, informed by S1–S2 but not attributed verbatim to their author"
+    },
+    {
+      "claim": "Complete-profile exclusion lemma",
+      "kind": "New application of an elementary abstract order argument; no source attribution or mathematical-novelty claim"
+    },
+    {
+      "claim": "Finite and infinite controls",
+      "kind": "New explicitly interpreted mathematical examples, not metaphysical possibility proofs"
+    }
+  ],
+  "distribution_rule": "No full PDFs, raster scans, full transcriptions, raw captures, or private working notes are included."
+}

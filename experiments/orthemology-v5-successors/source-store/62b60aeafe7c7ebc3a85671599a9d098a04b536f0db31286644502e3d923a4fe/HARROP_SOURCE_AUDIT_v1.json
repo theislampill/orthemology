@@ -1,0 +1,161 @@
+{
+  "schema": "eleventh-harrop-source-and-scope-audit-v1",
+  "as_of_utc": "2026-10-03T20:45:02.889402+00:00",
+  "status": "SOURCE_SCOPE_CLEARED_EXACT_ACCEPTED_SELECTION",
+  "source_id": "HARROP_SUFFICIENT_REASON",
+  "source_alias": "HARROP_SRV_2025_2026",
+  "doi": "10.1111/phib.12377",
+  "selection": [
+    {
+      "path": "tranche11/research/requisite-completion/HARROP_ASSESSMENT_v3.md",
+      "sha256": "9bbe8104f677cce33316a5def6569408e95f1d0ba276d079f7215d9588ff2dfe",
+      "bytes": 7508
+    },
+    {
+      "path": "tranche11/research/requisite-completion/HARROP_PUBLIC_BINDING_v3.json",
+      "sha256": "9dfe702caedfa7fdb450757442e583a8b65d96eae170c029499d8eb7aec46962",
+      "bytes": 1412
+    },
+    {
+      "path": "tranche11/reviews/requisite-completion/ACCEPTANCE_v1.md",
+      "sha256": "5a52712b2e30191d4d7b204b3923b829238cf4fa57c46ae83509ad7f290f5b5d",
+      "bytes": 4909
+    },
+    {
+      "path": "tranche11/reviews/requisite-completion/REVIEW_RECEIPT_v1.json",
+      "sha256": "dbe3253c764b8f44279c409cd5136faac3d6e67ded54a65bda502ab2b5c231b4",
+      "bytes": 1497
+    }
+  ],
+  "accounting": {
+    "author_marked_words": 77,
+    "author_outside_capsule_words": 14,
+    "author_total": 91,
+    "review_marked_words": 30,
+    "review_outside_capsule_words": 13,
+    "review_total": 43,
+    "combined_selected_total": 134,
+    "quotation_words": 0,
+    "author_reservation": 100,
+    "author_reservation_unspent_not_reallocated": 9,
+    "shared_review_report_chat_reservation": 100,
+    "shared_review_report_chat_remaining": 57,
+    "author_spans": [
+      {
+        "role": "capsule",
+        "byte_start": 504,
+        "byte_end_exclusive": 717,
+        "span_sha256": "706d72085102e17ba3ac91bd3740f3a0106f137d865fe530321c131559831cd6",
+        "whitespace_words": 23
+      },
+      {
+        "role": "application",
+        "byte_start": 1780,
+        "byte_end_exclusive": 2109,
+        "span_sha256": "9fdd7d4bea980aca29abe988ce4e99e0618e45971b052fbcb9da01cdee3dca2f",
+        "whitespace_words": 40
+      },
+      {
+        "role": "verdict",
+        "byte_start": 5716,
+        "byte_end_exclusive": 5813,
+        "span_sha256": "03673e88b24e8d84f4ec8a054487d940ea6d5e8cd254b7863ac5cd07b152eb83",
+        "whitespace_words": 14
+      },
+      {
+        "role": "mixed_finding",
+        "byte_start": 224,
+        "byte_end_exclusive": 298,
+        "span_sha256": "7031fcabbbba7bc8e0b3fd3b1e99a534e81f13b0118c5e3462495692a99fccee",
+        "whitespace_words": 10
+      },
+      {
+        "role": "mixed_removability",
+        "byte_start": 1281,
+        "byte_end_exclusive": 1320,
+        "span_sha256": "5fabebbd42493d953dfb88917f18d1c3c74d74e1cf83b8ff205566c683c9500a",
+        "whitespace_words": 4
+      }
+    ],
+    "review_spans": [
+      {
+        "role": "review",
+        "byte_start": 1168,
+        "byte_end_exclusive": 1425,
+        "span_sha256": "c33a8bf4673947235a69bdc3fe870133bfdb330ff26da5edba7e31eaf1c2600f",
+        "whitespace_words": 30
+      },
+      {
+        "role": "mixed_application",
+        "byte_start": 2688,
+        "byte_end_exclusive": 2785,
+        "span_sha256": "599f9e4d700d08533cb5672c7b3c6d89f2fd9a08f99b6a92abfd9db6b0355ea4",
+        "whitespace_words": 13
+      }
+    ],
+    "companion_additional_historical_synopsis_words": 0,
+    "whole_text_read": true,
+    "original_analysis_limit": "The independently demonstrated logical case-split and exhaustive-remainder arguments, repair proposals and inherited programme application are original analysis, not a second historical synopsis. The source-specific premises and mixed attributions are charged in the bound spans."
+  },
+  "primary_support": {
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/phib.12377",
+    "witness": "Official publisher HTML extraction in two overlapping windows, covering the article body and endnotes.",
+    "captures": [
+      {
+        "sha256": "3015742547cf6c5cf0e4dbaad4c4a84164d4259014c0e4f16f676599446128f9",
+        "bytes": 31702,
+        "returned_line_range": [
+          0,
+          264
+        ]
+      },
+      {
+        "sha256": "1255b107c9311eceb4f83ce3e99226430e0588851a5aefc6a6cbef31aa43b115",
+        "bytes": 30399,
+        "returned_line_range": [
+          177,
+          517
+        ]
+      }
+    ],
+    "capture_identities_checked": true,
+    "controlling_loci": [
+      "\u00a72, extracted lines97\u2013126",
+      "\u00a74, lines186\u2013207",
+      "\u00a75.1, lines210\u2013215",
+      "\u00a76, lines252\u2013289",
+      "endnote8, lines304\u2013305"
+    ],
+    "metadata": "First online21July2025; final Analytic Philosophy67(3),September2026,276\u2013282.",
+    "publication_pdf_byte_identity_claimed": false,
+    "visual_layout_collation_claimed": false,
+    "raw_captures_selected": false
+  },
+  "claim_scope": {
+    "credit": "A bounded application of elementary quantified case coverage to the inspected proposal, with a charitable exhaustive-deletion repair and a separate actual-supply assessment.",
+    "positive_force_preserved": true,
+    "exhaustive_deletion_offered_strategy_acknowledged": true,
+    "uniform_common_requisite_not_claimed_only_possible_repair": true,
+    "no_novelty_claim_for_elementary_logic": true,
+    "limits": [
+      "No general refutation of the published paper",
+      "No metaphysical countermodel or certified brute rival",
+      "No established actual E_A supply",
+      "No necessary concrete participant or particular bearer",
+      "No P1/P2 or N2/N3 closure",
+      "No substitute indirect assessment of inaccessible Della Rocca2023",
+      "No Zarepour exposition in this selection"
+    ]
+  },
+  "public_boundary": {
+    "actor_neutral_selected_records": true,
+    "private_capture_paths_in_selected_bindings": false,
+    "unselected_drafts_and_detailed_private_bindings_excluded": true,
+    "accepted_bytes_unchanged": true
+  },
+  "limits": [
+    "The exact independent philosophical acceptance controls argument scope. This audit verifies source use and report boundaries, not a fresh independent scientific proof.",
+    "Further report or delivered chat synopsis shares the remaining57words.",
+    "Source identity follows the DOI and work, despite the two internal source keys."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "orthemology-completion-verification-v1",
+  "programme": "Orthemology same v5",
+  "tranche": "Fourteenth",
+  "status": "VERIFIED_LOCAL_DELIVERABLES",
+  "files": [
+    {
+      "name": "Orthemology_Fourteenth_Research_Completion_Supplement_v1_20261005.docx",
+      "bytes": 47187,
+      "sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065"
+    },
+    {
+      "name": "Orthemology_Fourteenth_Research_Completion_Evidence_v1_20261005.zip",
+      "bytes": 231840,
+      "sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e"
+    }
+  ],
+  "report_verification": {
+    "rendered_pages": 9,
+    "editable_equations": 8,
+    "source_hyperlinks": 13,
+    "all_pages_visually_inspected": true,
+    "exact_content_projection_checked": true
+  },
+  "review_scope": "Independent internal automated reviews and executable checks. No external human-specialist validation is claimed.",
+  "evidence_boundaries": [
+    "The original calculus and canonical repository were not amended.",
+    "The typed extensional repair is an unadopted candidate in a separately named judgement.",
+    "Lean kernel results, empirical assessments and philosophical assessments have distinct evidential status.",
+    "Language replay concerns pinned records, not general Arabic correctness, the full repository or live deployment."
+  ],
+  "predecessor_checkpoint": {
+    "report_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+    "evidence_sha256": "bd690973f8188291213f372b6650d1650cc2f83e5f63090ef061c671626f1ddb",
+    "preserved": true,
+    "reissued": false
+  },
+  "archive_replay": {
+    "status": "PASS",
+    "member_count": 104,
+    "uncompressed_bytes": 758588,
+    "crc_and_all_member_hashes": "PASS",
+    "lean_build_exit_code": 0,
+    "delivered_verification_script_exit_code": 0,
+    "fresh_project_modules": 65,
+    "total_fresh_compilation_markers": 119,
+    "inherited_warning_lines": 22,
+    "dependency_repositories": 9,
+    "dependency_acquisition": "Verified exact pinned repositories locally cloned for this replay, without copied build outputs. The earlier clean-network bootstrap is separate evidence.",
+    "theorem_axiom_and_safety_checks": "PASS",
+    "intended_negative_type_controls": 9,
+    "language_occurrence": "70 source identities and 12 occurrence-data assertions passed; exact retained output reproduced.",
+    "language_sense_supplement": "Nine separate source identities passed; no additional linguistic or occurrence-data tests.",
+    "language_input_rejection_controls": 6,
+    "source_inventories_unchanged": true,
+    "internal_replay_receipt_sha256": "c7008ed5872e3dd7d824194dc9e1b9270fee6fcf2938024619a4779bfeb9b9aa"
+  },
+  "tranche_timing_claim": false,
+  "verified_utc": "2026-10-05T04:48:30.829693+00:00",
+  "source_catalogue": {
+    "archive_member": "research/source-catalogue.json",
+    "families": 7,
+    "retained_witness_identities": 26,
+    "contains_primary_publications": false
+  },
+  "custody": "These hashes identify local verified deliverables before Library transfer. A later exact Library readback is recorded separately."
+}

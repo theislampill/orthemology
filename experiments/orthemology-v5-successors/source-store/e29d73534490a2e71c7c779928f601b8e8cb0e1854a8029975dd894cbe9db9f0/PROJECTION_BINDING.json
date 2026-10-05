@@ -1,0 +1,21 @@
+{
+  "schema": "eighth-foundation-reader-projection-v1",
+  "source_argument": {
+    "name": "ARGUMENT.md",
+    "sha256": "9cec9196587fd67cb9f3aaf9b929c1d56d51f77128eaaac40a0c85941037f3e0",
+    "bytes": 22802
+  },
+  "reader_argument": {
+    "name": "ARGUMENT.md",
+    "sha256": "40fe0b86b19f0806f886d332b1111a4e900cc47168d557d618bdd5ab93f130ae",
+    "bytes": 10231
+  },
+  "transformation": "Condense repeated primary-derived exposition while preserving the affirmative proposal, developed criticism, exact inherited target and unresolved conclusions. Bibliographic source maps and original identities remain explicit.",
+  "exact_review_diff_sha256": "5c551c04584e79bbe88656327eceaaeda523656dd55a60f5a8158848b2127dc5",
+  "scientific_conclusion_changed": false,
+  "original_files_modified": false,
+  "original_zip": {
+    "name": "Eighth_Necessary_Source_v1_source-only.zip",
+    "sha256": "b65125a24966d4768ec395eba93e7b6f6f57976e225badc5b45ab43dbebabc59"
+  }
+}

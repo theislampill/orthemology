@@ -1,0 +1,27 @@
+# Primary source map
+
+Historical exposition is centralised in the marked source paragraphs of the article. The locators below identify the inspected material and its limits; they do not add historical synopses. Mirrors and translations of one work are treated as the same work for wording accounting. No whole primary scan or long primary transcription belongs in the publication candidate.
+
+## Newly inspected loci
+
+N9P1. Ibn Taymiyya, al-Ṣafadiyya 2:168–173, with particular attention to 169 and 172, and 2:186–192. [Paginated electronic text](https://islamhouse.com/read/ar/الصفدية-272837); [second electronic transcription](https://www.islamicbook.ws/amma/alsfdit-003.html). Electronic page markers were checked directly. The 168–173 argument is authorial; hypothetical interlocutors are distinguished from the author's conclusion. At 186–192, quoted Ibn Sīnā and the author's replies are separately marked. No independently collated printed edition or manuscript witness is claimed.
+
+N9P2. Ibn Taymiyya, al-Nubuwwāt, [external-possibility discussion](https://www.islamicbook.ws/amma/alnbwat-001.html), beginning وأيضا فالدليل الذي احتج به كثير من الناس على أن كل حادث and ending before وهؤلاء وأمثالهم غلطوا فيما جاء به الشرع. The author's resolution begins والتحقيق. Direct electronic text and the same site's generated PDF page 36 were checked. Reported al-Ṭuwayyān pagination 1:327–328 is a locator aid only; its printed page was not independently verified. The generated PDF is not an independent witness.
+
+N9P3. Ibn Taymiyya, Minhāj al-sunna 2:289–293, [section 180](https://www.islamweb.net/ar/library/content/108/180/). The opening begins before the visible 289 marker; 288 is not claimed as a separately checked page. The section was read through its conclusion before the vocalised duplicate. The author's reply and reported opposing positions are distinguished. The vocalised repetition is not a second witness.
+
+N9P4. Ibn Taymiyya, Jāmiʿ al-masāʾil 6:205–210, especially 206–207. [Section 687](https://www.islamweb.net/ar/library/content/416/687/), [section 688](https://www.islamweb.net/ar/library/content/416/688/). The electronic page markers and continuation were directly checked. Reported extinction theories are distinguished from the account subsequently developed and commended by the author. No print or manuscript collation is claimed.
+
+N9P5. John Duns Scotus, De primo principio, chapter III, introduction and conclusions 2–5; numbered English paragraphs III.3, III.7–22. [English transcription](https://catholiclibrary.org/library/view?chunk.id=00000009&docId=%2FMedieval-EN%2FXCT.049.html); [Latin introduction and first conclusion](https://catholiclibrary.org/library/view?docId=/Medieval-OR/JoannisDunsScotusBDePrimoRerumOmniumPrincipio.00000238.la.html&chunk.id=00000025); [Latin second conclusion](https://catholiclibrary.org/library/view?docId=/Medieval-OR/JoannisDunsScotusBDePrimoRerumOmniumPrincipio.00000238.la.html&chunk.id=00000027); [Latin third through sixth conclusions](https://catholiclibrary.org/library/view?docId=/Medieval-OR/JoannisDunsScotusBDePrimoRerumOmniumPrincipio.00000238.la.html&chunk.id=00000029). The Latin witness includes editorial scholia before the authorial conclusions. The article's attribution uses the authorial text, excluding those scholia, and checks it against the numbered English transcription. Electronic transcription is not a critical-edition collation. The article's modal lemmas are new reconstructions, not a claim that their notation or exact premises occur in the historical text.
+
+N9P6. Immanuel Kant, Der einzig mögliche Beweisgrund zu einer Demonstration des Daseyns Gottes, Königsberg: Johann Jakob Kanter, 1763, printed pp16–34, especially 18–21 and 29–33. [ETH-Bibliothek Zürich, Rar 6373, persistent record](https://doi.org/10.3931/e-rara-24732); [original-edition digitisation](https://www.e-rara.ch/zut/content/titleinfo/7761588). All nineteen page images, their printed page numbers and the German text were visually inspected, with OCR used as an aid. The modern English transcription was consulted for comparison, not substituted for the inspected original pages. No manuscript collation or claim about Kant's entire later philosophy is made.
+
+N9P7. Soufiane Hamri, “Causal fundamentality”, Synthese 200, article 19 (2022), sections 2, 4.2 and 5. [Publisher's complete open-access article](https://doi.org/10.1007/s11229-022-03583-4). The article itself, including its definitions, supporting discussion and notes, was read directly. No reliance on a third-party abstract or book review supplies the attributed position. The present comparison does not assess every step of Hamri's separate causal-foundation argument.
+
+## Inherited source controls
+
+The accepted Eighth foundation reader and its source map remain the controls for the inherited determination argument. Their identities are bound in the predecessor record. This article does not reproduce their primary synopses. Rechecking those controls is not claimed as new Ninth source evidence.
+
+## Scope of the evidence
+
+The source checks establish what the identified electronic witnesses and page images contain. They do not establish the metaphysical truth of an author's premise. The written proofs establish consequences under explicitly stated modal and explanatory assumptions. The finite controls test entailment in specified interpretations; neither their construction nor a successful script establishes that an interpretation is metaphysically possible.

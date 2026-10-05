@@ -1,0 +1,175 @@
+{
+  "schema": "eighth-truthful-agency-public-source-map-v1",
+  "paper": "SOURCE_INTEGRITY_ARGUMENT.md",
+  "reading_key": {
+    "source_statement": "The bounded primary-text précis in the paper is the historical claim.",
+    "reconstruction": "Application to the controlled false-assurance case is the present argument, not a translated source assertion.",
+    "image_verification": "Verification identifies the inspected witness and pages; it does not establish metaphysical truth."
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "A Commentary on the Creed of Asfahani",
+      "basis": "Supplied modern translation; inherited Seventh interpretation",
+      "printed_pages": [
+        127,
+        128,
+        129
+      ],
+      "pdf_pages": [
+        134,
+        135,
+        136
+      ],
+      "sha256": "bed5565280dcb71b96fc3437cf2f9c07cdc75e6fe6e3798e24fe6bf886cad6ad",
+      "statement_location": "The primary-text increment, first paragraph",
+      "inspection": "Supplied print images inspected; no new Arabic collation claimed",
+      "reuse": "No extended predecessor exposition reproduced"
+    },
+    {
+      "id": "S2",
+      "author": "Ibn Taymiyya",
+      "title": "Majmūʿ al-fatāwā",
+      "volume": 6,
+      "pages": [
+        "76–79",
+        "129–130"
+      ],
+      "url": "https://quranislam.github.io/fatwa/ibn-taymiyyah/fatwa81.html",
+      "basis": "Inherited primary electronic loci, reread for this continuation",
+      "statement_location": "The primary-text increment, first paragraph; normative premise in The strongest original-giver reply",
+      "inspection": "Electronic text; no fresh print collation claimed"
+    },
+    {
+      "id": "S3",
+      "author": "Ibn Taymiyya",
+      "work": "Jāmiʿ al-rasāʾil",
+      "volume": "1",
+      "treatise": "Risāla fī maʿnā kawn al-rabb ʿādilan wa-fī tanazzuhihi ʿan al-ẓulm",
+      "editor": "Muhammad Rashad Salim",
+      "publisher": "Dar al-Ata",
+      "edition": "First Dar al-Ata edition, 1422 AH / 2001 CE",
+      "metadata_evidence": "Downloaded frontmatter PDF pages1–2 visually inspected, not inferred from an unrelated edition listing.",
+      "urls": {
+        "scan": "https://www.emaanlibrary.com/wp-content/uploads/2019/12/01_%D8%AC%D8%A7%D9%85%D8%B9-%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D8%A6%D9%84-%D9%84%D8%A7%D8%A8%D9%86-%D8%AA%D9%8A%D9%85%D9%8A%D8%A9.pdf",
+        "frontmatter": "https://www.emaanlibrary.com/wp-content/uploads/2019/12/01_%D8%AC%D8%A7%D9%85%D8%B9-%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D8%A6%D9%84-%D9%84%D8%A7%D8%A8%D9%86-%D8%AA%D9%8A%D9%85%D9%8A%D8%A9p.pdf",
+        "electronic": "https://ar.wikisource.org/wiki/جامع_الرسائل/رسالة_في_معنى_كون_الرب_عادلا_وفي_تنزهه_عن_الظلم",
+        "electronic_catalogue": "https://shamela.ws/book/22653"
+      },
+      "main_scan": {
+        "bytes": 6419763,
+        "pages": 388,
+        "sha256": "8c17041638dcf59c4adfecb01e0bebaf0b5f96a3ac0ad5f74c60c081d1bde12f"
+      },
+      "front_matter": {
+        "bytes": 554636,
+        "pages": 16,
+        "sha256": "57092c42a534614bc31287ca78378b8b7376c39eb896722318694033f8d01ef0"
+      },
+      "statement_location": "The primary-text increment, second paragraph",
+      "image_verification": {
+        "front_matter_pdf_pages": [
+          1,
+          2
+        ],
+        "load_bearing_printed_pages": [
+          129,
+          130,
+          141,
+          142
+        ],
+        "non_load_bearing_printed_page": 136,
+        "printed_pdf_page_alignment": "The listed main-volume printed pages correspond to the same numbered PDF pages.",
+        "limits": [
+          "The difficult wording on printed page 136 is left unemended and non-load-bearing.",
+          "No independent manuscript collation or full critical-edition audit is claimed.",
+          "The modern determinate-betrayal application is a reconstruction."
+        ]
+      },
+      "distribution": "Only locators and identities are supplied here; scans, raster pages and raw captures are not included."
+    },
+    {
+      "id": "S4",
+      "author": "Ibn Taymiyya",
+      "title": "Nubuwwat",
+      "section": 9,
+      "hosted_paragraphs": [
+        105,
+        106
+      ],
+      "url": "https://ar.wikisource.org/wiki/النبوات/9",
+      "basis": "Accepted Seventh source scope",
+      "statement_location": "The primary-text increment, third paragraph",
+      "inspection": "Inherited primary electronic reading; no fresh print collation claimed"
+    }
+  ],
+  "reconstruction_map": [
+    {
+      "paper_sections": [
+        "The controlled comparison",
+        "What the improvement establishes"
+      ],
+      "kind": "Analytical application",
+      "limit": "Productive and communicative capacity does not grant compatibility with the complete essential profile."
+    },
+    {
+      "paper_sections": [
+        "The strongest original-giver reply",
+        "Same bearer, joint character and necessity"
+      ],
+      "kind": "Developed affirmative reply",
+      "limit": "Direct attribution avoids a mandatory better-counterpart construction but still owes the comprehensive practical priority law."
+    },
+    {
+      "paper_section": "Same bearer, joint character and necessity",
+      "kind": "Scope clarification",
+      "claims_kept_distinct": [
+        "Locally fitting response retaining positive capacities",
+        "Response compatible with this bearer’s complete essence",
+        "One jointly eligible standing character",
+        "Actual possession",
+        "Necessary governance of in-scope attestations if they occur"
+      ]
+    },
+    {
+      "paper_section": "The remaining warrant and its use by a recipient",
+      "kind": "Inherited implication and elementary application control",
+      "limit": "No actual token antecedents, action binding or unsafe-source metaphysical possibility is inferred."
+    }
+  ],
+  "predecessors": [
+    {
+      "id": "P6",
+      "title": "Sixth: Motivation, value and the malicious-source challenge",
+      "file": "MOTIVATION_VALUE_AND_MALICIOUS_SOURCE.md",
+      "bytes": 30146,
+      "sha256": "35948a68123422a445887dfb62c50b1e43642fbdb325760c980e7cefa1d2cb82",
+      "use": "Sections 3 and 7; inherited distinctions and direct-route option"
+    },
+    {
+      "id": "P7",
+      "title": "Seventh: Source truthfulness warrant",
+      "file": "SOURCE_TRUTHFULNESS_WARRANT.md",
+      "bytes": 37331,
+      "sha256": "c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed",
+      "use": "Accepted controlling argument"
+    },
+    {
+      "id": "P7A",
+      "title": "Seventh: Positive route and pressure tests",
+      "file": "POSITIVE_ROUTE_AND_PRESSURE_TESTS.md",
+      "bytes": 16609,
+      "sha256": "f6b918dbd4291f747da4804b77434f45cbc2b90e188b72c122a8b1eeedc3d5a2",
+      "use": "Accepted stronger reply and conditional-on-attesting scope"
+    },
+    {
+      "id": "P7B",
+      "title": "Seventh: Purpose linkage erratum",
+      "file": "PURPOSE_LINKAGE_ERRATUM.md",
+      "bytes": 2694,
+      "sha256": "bb42c3c60363ec5e2905e41d501bcb58efef3e8d7c1043e736118f1937f0b3cc",
+      "use": "Exact token-purpose antecedents"
+    }
+  ],
+  "status": "New primary-source control and targeted analytical development; no new T0, D1, D2, N2 or R5 conclusion."
+}
