@@ -60,6 +60,7 @@ APPROVED_DECLARED_SUITES = {
     't11-substitution': '39e05def1e6370039143ff47862774fc6dd1c4f9865f9b39827cdff43186f090',
     't14-identity': 'c065f772862ca55a9d7ac6ceb29c11439aa1574bf8dd8e37918a65dc77e9abdf',
     'd06-core-runtime': '2c0c433ba860bc33862a87dff2e4c22f3ec1d584b580a0605a1ffc8163844f8b',
+    'D04-T07-ATTRIBUTION-ORIGINAL': '7888e370d7f65783731bd93783041e9c35648db96d27e6e9d059894003731d15',
 }
 EMPIRICAL_RECIPES = {
     't15-empirical-integrity-v1': '9ab3df6e096f8158f755ea31408786248d04547d0bd7c38785770d7e9964e41e',
@@ -112,6 +113,28 @@ CORE_FILES = {
     'DEPENDENCY_PINS.json': '9eaffaa788991447cf64938183de0e982b467d333dd9a369f11c0c99a0be595c',
     'MATHLIB_ARCHIVE_INVENTORY.json': '1c4d1fa63acf416d7b965ed519d16faea965022cb8eb8d74725d59d801db16f0',
 }
+ATTR_RECIPE = 't07-attribution-original-v1'
+ATTR_CONTRACT = {
+    'driver_sha256': 'fad631436eecb9b71bdf0360f78503bb8c863a5ebd23b0999e17ca059781b113',
+    'driver_bytes': 9807, 'archive_sha256': '8c4c7e34347dc66e2cd05d8b106f0c7401fa28fde53675aec336ef8808cf019a',
+    'archive_bytes': 554694, 'root': 'unknown-root-attribution-kernel-accepted-v1', 'driver_path': 'replay.py',
+}
+ATTR_DIAGNOSTICS = {'count_labels_as_roots': 'error: unsolved goals',
+                    'drop_positive_class_size': 'error: omega could not prove the goal',
+                    'drop_positive_fault_budget': 'error: omega could not prove the goal'}
+ATTR_PATHS = [(name, 'sources/central-v1/legacy/' + name + '.lean', True) for name in ['DynamicInterlock', 'CoveringCore', 'UnknownRootAttribution']]
+ATTR_PATHS += [(name, 'sources/central-v1/' + name + '.lean', True) for name in ['RootImage', 'Availability', 'FixedFamilies', 'Correspondence', 'ImageMinima', 'MapTransport']]
+ATTR_PATHS += [(name, 'sources/central-v1/tests/' + name + '.lean', False) for name in ['TargetA', 'TargetB', 'TargetC', 'Regression']]
+ATTR_PATHS += [('RootCosts', 'sources/controls-v1/RootCosts.lean', True), ('FamilyDeletionControls', 'sources/controls-v1/tests/FamilyDeletionControls.lean', False)]
+ATTR_PATHS += [(name, 'review/' + name + '.lean', False) for name in ['IndependentChecks', 'DeletionControls', 'AxiomAudit']]
+ATTR_PATHS += [(name, 'sources/controls-v1/mutation-controls/' + name + '.lean', False) for name in ATTR_DIAGNOSTICS]
+ATTR_MANIFESTS = {'PUBLIC_MANIFEST.json': 'c68835c56e26dfb2749b8bf3ec895aaa36abc596e7cbecad4ba58cd035d347f2',
+    'DEPENDENCIES.json': '4c6d10a5d818dda9b5f68b8c8bdd6d9ec8a053e584e6aaa70e8c014cb49fbb14',
+    'dependencies/SOURCE_MANIFEST.json': 'b0f8592a23304950e2f4294404df242228ea78b5ebd60622d227a2623ba6d618',
+    'sources/central-v1/MANIFEST.json': '2830c05f25dcda6f05617e6da58bac50eb3ea86cc9671f5b8301417bf2a1d295',
+    'sources/controls-v1/MANIFEST.json': 'f29de5f526216178d1925281eef35a8f8558dc15810b6f7e40428324963f93e4',
+    'review/REVIEW_RECEIPT.json': '59b6578ab2d25b7a5f00ba8cefc1777c23c4b59de95f9ba631c1109c80468de3',
+    'ORIGINAL_TO_PUBLIC.json': '91bba08917dba9215cff4208e65b3ba4484b84e2f92fcfe8fb5938aa1689adaa'}
 
 
 def require(condition, message):
@@ -328,6 +351,9 @@ def _validate_argv(stage, plan):
         if recipe == CORE_RECIPE:
             validate_core_argv(stage, driver, plan)
             return
+        if recipe == ATTR_RECIPE:
+            validate_attribution_argv(stage, driver, plan)
+            return
         if recipe in T10_FINITE_RECIPES:
             validate_t10_argv(stage, driver, plan)
             return
@@ -505,6 +531,97 @@ def validate_core_argv(stage, driver, plan):
                 ['{tool:python}', '-B', '{driver:' + driver['id'] + '}', '--lean-bin', '{tool:lean-bin}', '--mathlib', '{dependency:mathlib}', '--out', '{out}/original', '--mode', 'runtime'], 'Unreviewed original runtime invocation')
 
 
+def attribution_specs(archive_id, plan=None):
+    result = {}; base = '{archive:' + archive_id + '}'
+    for name, source, emits in ATTR_PATHS:
+        output = 'original/build/' + name + '.olean' if emits else None
+        argv = ['{tool:lean}', '-j1'] + (['-o', '{out}/' + output] if output else []) + [base + '/' + source]
+        result[name] = {'id': name, 'source_id': plan['modules'][name]['source_id'] if plan else None,
+            'source_path': source, 'output_path': output, 'argv': argv,
+            'cwd': base + '/' + str(PurePosixPath(source).parent),
+            'log': 'original/' + ('mutants/' if name in ATTR_DIAGNOSTICS else 'logs/') + name + '.log',
+            'exit_code': 1 if name in ATTR_DIAGNOSTICS else 0}
+    return result
+
+
+def validate_attribution_package(suite, plan):
+    require(len(plan['drivers']) == len(plan['inputs']) == 1 and not plan['fixtures'], 'Attribution needs its one original archive/driver')
+    driver = next(iter(plan['drivers'].values())); iid = driver['external_input_id']; archive = plan['inputs'][iid]
+    require(archive['kind'] == 'FILE' and archive['expected_sha256'] == ATTR_CONTRACT['archive_sha256'] and archive['expected_bytes'] == ATTR_CONTRACT['archive_bytes'], 'Wrong attribution source archive')
+    require(set(plan['modules']) == {row[0] for row in ATTR_PATHS} and suite['replay']['module_order'] == ['RootImage', 'Availability', 'FixedFamilies'] and plan['build_roots'] == ['original/build'], 'Original attribution module/target namespace changed')
+    plan['attribution_children'] = attribution_specs(iid, plan)
+    stages = list(plan['stages'].values())
+    require(len(stages) == 22 and stages[0]['kind'] == 'DRIVER' and stages[0]['timeout_seconds'] == 3600, 'Original attribution parent contract changed')
+    require([s['argv'][2] for s in stages[1:]] == list(plan['attribution_children']) and
+            all(s['argv'][1] == stages[0]['id'] and s['driver_id'] == driver['id'] and stages[0]['id'] in s['depends_on'] for s in stages[1:]), 'Original attribution observation inventory changed')
+
+
+def validate_attribution_argv(stage, driver, plan):
+    require(stage['cwd'] == '.', 'Attribution wrapper/observation working directory changed')
+    if stage['argv'][:1] == ['{builtin:observe-child}']:
+        require(len(stage['argv']) == 3 and stage['argv'][2] in plan['attribution_children'] and not stage['output_paths'] and stage['timeout_seconds'] == 30, 'Wrong attribution observation')
+        name = stage['argv'][2]; expected = ATTR_DIAGNOSTICS.get(name)
+        require(stage['expected_exit_codes'] == ([1] if expected else [0]), 'Changed original attribution child exit')
+        if expected:
+            require(stage['kind'] == 'NEGATIVE_CONTROL' and stage['expected_diagnostics'] ==
+                    [{'source_id': driver['source_id'], 'literal': expected, 'sha256': sha(expected.encode())}], 'Changed original attribution diagnostic')
+        else: require(stage['kind'] in {'POSITIVE_CONTROL', 'LEAN_AUDIT'} and not stage['expected_diagnostics'], 'Changed original positive attribution role')
+    else:
+        require(stage['kind'] == 'DRIVER' and stage['output_paths'] == ['original'] and stage['expected_exit_codes'] == [0] and not stage['expected_diagnostics'] and stage['argv'] ==
+            ['{tool:python}', '-B', '{driver:' + driver['id'] + '}', '--lean', '{tool:lean}', '--mathlib', '{dependency:mathlib}', '--output', '{out}/original'], 'Unreviewed attribution original invocation')
+
+
+def attribution_source_check(root, plan=None):
+    require(sha(path_in(root, 'replay.py').read_bytes()) == ATTR_CONTRACT['driver_sha256'] and
+            {p.name for p in root.glob('*.py')} == {'replay.py'}, 'Unreviewed attribution driver/import source')
+    for name, value in ATTR_MANIFESTS.items(): require(sha(path_in(root, name).read_bytes()) == value, 'Original attribution manifest changed')
+    manifest = read_json(root / 'PUBLIC_MANIFEST.json')
+    require(len(manifest['files']) == 125, 'Original attribution file census changed')
+    names = set()
+    for row in manifest['files']:
+        name = relative(row['path']); require(name not in names, 'Duplicate original packet file'); names.add(name)
+        data = path_in(root, name).read_bytes(); require(len(data) == row['size'] and sha(data) == row['sha256'], 'Original attribution packet bytes changed')
+    require(names | {'PUBLIC_MANIFEST.json'} == {p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file()}, 'Original attribution packet file census differs')
+    for row in read_json(root / 'dependencies/SOURCE_MANIFEST.json')['files']: relative(row['path'])
+    if plan:
+        for name, source, emits in ATTR_PATHS:
+            sid = plan['modules'][name]['source_id']
+            require(path_in(root, source).read_bytes() == plan['contents'][sid], 'Archive/projected attribution scientific source differs')
+
+
+def attribution_tracer_argv(stage):
+    return ['{tool:python}', '-B', '{adapter}', '--trace-attribution', stage['argv'][2],
+            '{out}/traces/' + stage['id'], *stage['argv'][3:]]
+
+
+def verify_attribution_dependencies(source_root, mathlib):
+    manifest = path_in(source_root, 'dependencies/SOURCE_MANIFEST.json')
+    require(sha(manifest.read_bytes()) == ATTR_MANIFESTS['dependencies/SOURCE_MANIFEST.json'], 'Original dependency manifest changed')
+    for row in read_json(manifest)['files']:
+        data = path_in(mathlib, row['path']).read_bytes()
+        require(len(data) == row['size'] and sha(data) == row['sha256'], 'Original attribution dependency source changed')
+
+
+def trace_attribution_driver(driver, trace, arguments):
+    require(len(arguments) == 6 and arguments[::2] == ['--lean', '--mathlib', '--output'], 'Unreviewed attribution arguments')
+    driver = no_symlinks(driver); root = driver.parent; attribution_source_check(root)
+    lean = no_symlinks(arguments[1]).resolve(); output = no_symlinks(arguments[5])
+    require(sha(lean.read_bytes()) == LEAN_SHA and not output.exists() and output.name == 'original', 'Wrong compiler or reused original output')
+    trace = no_symlinks(trace); require(not trace.exists(), 'Trace output must be absent'); trace.mkdir(parents=True)
+    mappings = {'tool:lean': lean, 'archive:original': root, 'out': output.parent}
+    specs = list(attribution_specs('original').values())
+    commands = [[_expand(a, mappings) for a in spec['argv']] for spec in specs]
+    directories = [Path(_expand(spec['cwd'], mappings)) for spec in specs]
+    old_run = subprocess.run; old_argv = sys.argv; old_path = sys.path[:]
+    try:
+        subprocess.run = trace_reviewed_commands(old_run, trace, commands, [[str(lean), '--version']], None, working_directories=directories, record_outputs=True)
+        sys.argv = [str(driver), *arguments]; sys.path[0] = str(root)
+        runpy.run_path(str(driver), run_name='__main__')
+    finally:
+        subprocess.run = old_run; sys.argv = old_argv; sys.path[:] = old_path
+    return 0
+
+
 def traced_run(original_run, trace):
     """Capture actual subprocess.run calls without changing their return values."""
     count = 0
@@ -538,7 +655,7 @@ def traced_run(original_run, trace):
     return invoke
 
 
-def trace_reviewed_commands(original_run, trace, commands, read_only_commands, seconds):
+def trace_reviewed_commands(original_run, trace, commands, read_only_commands, seconds, *, working_directories=None, record_outputs=False):
     """Only reviewed physical commands enter the child ledger, in source order."""
     capture = traced_run(original_run, trace); position = 0
     def invoke(argv, *args, **kwargs):
@@ -548,11 +665,28 @@ def trace_reviewed_commands(original_run, trace, commands, read_only_commands, s
             require(set(kwargs) <= {'stdout', 'check', 'text', 'timeout'} and kwargs.get('timeout') is None and kwargs.get('stdout') == subprocess.PIPE and kwargs.get('check') is True, 'Changed read-only original command')
             return original_run(argv, **kwargs)
         require(position < len(commands) and argv == commands[position], 'Unreviewed or repeated original physical command')
-        require(set(kwargs) <= {'env', 'stdout', 'stderr', 'text', 'timeout'} and kwargs.get('timeout') == seconds, 'Original child budget or subprocess contract changed')
+        allowed = {'env', 'stdout', 'stderr', 'text', 'timeout'} | ({'cwd'} if working_directories is not None else set())
+        require(set(kwargs) <= allowed and kwargs.get('timeout') == seconds, 'Original child budget or subprocess contract changed')
+        if working_directories is not None:
+            require(kwargs.get('cwd') == working_directories[position], 'Original child working directory changed')
         if '-o' in argv: require(not no_symlinks(argv[argv.index('-o') + 1]).exists(), 'Original child output already exists')
         position += 1
-        return capture(argv, **kwargs)
+        result = capture(argv, **kwargs)
+        if record_outputs:
+            record = path_in(trace, f'{position - 1:04}.json'); row = read_json(record); hashes = {}
+            if '-o' in argv:
+                path = no_symlinks(argv[argv.index('-o') + 1])
+                if path.is_file(): hashes[str(path)] = sha(path.read_bytes())
+            row['output_hashes'] = hashes; write_json(record, row)
+        return result
     return invoke
+
+
+def check_custody_driver(source, contract):
+    require(source['projection'] == 'CUSTODY_ONLY' and source['public_sha256'] is None, 'Archive-only driver source role changed')
+    require(source['original_sha256'] == contract['driver_sha256'] and source['original_bytes'] == contract['driver_bytes'], 'Original driver bytes differ')
+    require(isinstance(source['member_chain'], list) and source['member_chain'] and source['origin_archive_sha256'] == contract['archive_sha256'] and source['member_chain'][-1] ==
+            contract['root'] + '/' + contract['driver_path'], 'Original driver archive member differs')
 
 
 def trace_resource_inconclusive(trace):
@@ -715,6 +849,64 @@ def check_core_child(spec, row, captured, parent, text, actual_argv):
     require(row['log_sha256'] == captured['log_sha256'] == sha(text.encode()) and row['has_resource_diagnostic'] is False, 'Original/captured runtime log differs or is inconclusive')
     require(not re.search(r'error:|\b(sorry|admit|timeout)\b|declaration uses|WALL_CLOCK_LIMIT|maximum number of heartbeats|maximum recursion depth', text, re.I), 'Runtime child is not a clean positive')
     require(type(row['elapsed_seconds']) in {int, float} and math.isfinite(row['elapsed_seconds']) and row['elapsed_seconds'] >= 0, 'Invalid original measured duration')
+
+
+def check_attribution_child(spec, row, captured, text, source_sha256):
+    require(row['name'] == spec['id'] and row['source'] == spec['source_path'] and row['source_sha256'] == source_sha256 and row['log'] == spec['log'].removeprefix('original/'), 'Wrong original attribution child/source')
+    require(type(row['exit_code']) is int and row['exit_code'] == spec['exit_code'] == captured['exit_code'] and captured['terminal'] == 'COMPLETED' and captured['log_sha256'] == sha(text.encode()), 'Contradictory original/captured attribution child')
+    negative = spec['id'] in ATTR_DIAGNOSTICS
+    require(row['status'] == ('EXPECTED_REJECTION' if negative else 'PASS'), 'Wrong original attribution disposition')
+    if negative:
+        assess_stage({'expected_exit_codes': [1], 'kind': 'NEGATIVE_CONTROL', 'depends_on': [],
+                      'expected_diagnostics': [{'literal': ATTR_DIAGNOSTICS[spec['id']]}]}, captured, text, {})
+    else: require(not re.search(r'sorryAx|warning:|error:', text), 'Unclean original positive attribution child')
+
+
+def attribution_collect_children(stage, parent, text, plan, output, mappings):
+    result = read_json(path_in(output, 'original/REPLAY_RECEIPT.json'))
+    require(result['status'] == 'PASS' and result['lean_sha256'] == LEAN_SHA and result['mathlib_revision'] == 'c44e0c8ee63ca166450922a373c7409c5d26b00b', 'Original attribution driver did not complete')
+    require(result['public_manifest_sha256'] == ATTR_MANIFESTS['PUBLIC_MANIFEST.json'] and
+            result['central_manifest_sha256'] == ATTR_MANIFESTS['sources/central-v1/MANIFEST.json'] and
+            result['controls_manifest_sha256'] == ATTR_MANIFESTS['sources/controls-v1/MANIFEST.json'] and
+            result['independent_acceptance_sha256'] == ATTR_MANIFESTS['review/REVIEW_RECEIPT.json'], 'Original attribution input identity changed')
+    require(result['public_entries'] == 125 and result['external_source_files_verified'] == 7506 and
+            result['fresh_build'] is True and result['custom_oleans_reused'] is False and result['external_compiled_cache_trusted'] is True and
+            result['successful_stages'] == 18 and result['expected_rejected_mutants'] == 3 and result['central_theorems_axiom_audited'] == 50, 'Original attribution census/trust boundary changed')
+    specs = list(plan['attribution_children'].values()); rows = result['steps']; trace = path_in(output, 'traces/' + stage['id'])
+    require(len(rows) == 21 and [r['name'] for r in rows] == list(plan['attribution_children']), 'Original attribution child census changed')
+    expected_lines = [('EXPECTED_REJECTION: ' if spec['exit_code'] else 'PASS: ') + spec['id'] for spec in specs]
+    expected_lines += ['PASS: exact central targets, Regression, supplement, independent proofs, axiom audit, and three expected mutant diagnostics']
+    require(text.splitlines() == expected_lines, 'Original attribution progress/terminal changed')
+    require({p.name for p in trace.iterdir()} == {f'{i:04}.{suffix}' for i in range(21) for suffix in ('json', 'log')}, 'Original attribution trace census differs')
+    trace_hash = _file_hashes(trace); children = {}; objects = {}; seen = set(); driver = plan['drivers'][stage['driver_id']]
+    for index, (spec, row) in enumerate(zip(specs, rows)):
+        captured = read_json(trace / f'{index:04}.json')
+        keys(captured, {'index', 'argv', 'cwd', 'started_at', 'ended_at', 'terminal', 'exit_code', 'log_sha256', 'output_hashes'})
+        require(captured['index'] == index and captured['cwd'] == _expand(spec['cwd'], mappings), 'Attribution child launch identity changed')
+        log = path_in(output, spec['log']); data = log.read_bytes()
+        require(data == (trace / f'{index:04}.log').read_bytes(), 'Original attribution log differs from captured bytes')
+        check_child_terminal({**captured, 'source_child_id': spec['id'], 'parent_stage_id': stage['id']}, parent, spec['id'],
+                             [_expand(a, mappings) for a in spec['argv']], seen, spec['exit_code'])
+        source = plan['contents'][spec['source_id']]; check_attribution_child(spec, row, captured, data.decode(), sha(source))
+        hashes = {}
+        if spec['output_path']:
+            path = path_in(output, spec['output_path']); hashes[spec['output_path']] = sha(path.read_bytes())
+            require(captured['output_hashes'] == {str(path): hashes[spec['output_path']]}, 'Original object changed after its physical child'); objects.update(hashes)
+        else: require(captured['output_hashes'] == {}, 'Unexpected output credited to check-only child')
+        if not spec['exit_code']:
+            names = source_readback_names(source.decode(), plan['targets'].values())
+            if names: check_original_readbacks(data.decode(), names)
+            if spec['id'] == 'AxiomAudit': require(len(names) == 50, 'Original 50-theorem readback census changed')
+        children[(stage['id'], spec['id'])] = {'source_child_id': spec['id'], 'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'],
+            'parser_id': ATTR_RECIPE, 'mode': 'NONEXECUTING_OBSERVATION', 'argv_provenance': 'CAPTURED', 'argv': spec['argv'], 'cwd': spec['cwd'],
+            'started_at': captured['started_at'], 'ended_at': captured['ended_at'], 'physical_run_sha256': trace_hash, 'parent_log_sha256': parent['log_sha256'],
+            'terminal': 'COMPLETED', 'exit_code': spec['exit_code'], 'actual_outcome': 'REJECT' if spec['exit_code'] else 'ACCEPT',
+            'log_sha256': captured['log_sha256'], 'source_id': spec['source_id'], 'source_sha256': sha(source), 'output_hashes': hashes, 'result_record_sha256': canonical(row)}
+    require({p.relative_to(output).as_posix() for p in path_in(output, 'original/build').rglob('*.olean')} == set(objects), 'Attribution fresh object census differs')
+    invocation = {'parent_stage_id': stage['id'], 'driver_sha256': driver['sha256'], 'source_argv': stage['argv'],
+        'launch_argv': attribution_tracer_argv(stage), 'runner_sha256': sha(Path(__file__).read_bytes()), 'trace_sha256': trace_hash,
+        'parent_log_sha256': parent['log_sha256'], 'child_count': 21}
+    return children, invocation, objects
 
 
 def core_collect_children(stage, parent, text, plan, output, mappings):
@@ -915,11 +1107,12 @@ def validate_suite(suite, sources, root):
             keys(row, {'id', 'source_id', 'recipe', 'sha256', 'argument_meanings', 'external_input_id'})
             source = sources[row['source_id']]; digest(row['sha256'])
             require(row['sha256'] == (source['public_sha256'] or source['original_sha256']), 'Wrong driver hash')
-            if row['recipe'] == CORE_RECIPE:
+            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE}:
                 require(row['external_input_id'] in inputs, 'Original core archive is undeclared')
             else: require(row['external_input_id'] is None, 'Archive recipe is not approved by this adapter version')
             admitted_role = 'LOCK' if row['recipe'] == 't15-empirical-integrity-v1' else 'DRIVER'
-            require(row['source_id'] in contents and files[row['source_id']]['role'] == admitted_role, 'Driver is not an exact projected source')
+            if row['recipe'] == ATTR_RECIPE: check_custody_driver(source, ATTR_CONTRACT)
+            else: require(row['source_id'] in contents and files[row['source_id']]['role'] == admitted_role, 'Driver is not an exact projected source')
             if row['recipe'] in LANGUAGE_RECIPES:
                 recipe = LANGUAGE_RECIPES[row['recipe']]
                 require(row['sha256'] == recipe['sha256'] and row['argument_meanings'] == {'source_dir': 'INPUT_TREE'}, 'Wrong approved language recipe')
@@ -935,6 +1128,9 @@ def validate_suite(suite, sources, root):
             elif row['recipe'] == CORE_RECIPE:
                 require(row['sha256'] == CORE_FILES['replay.py'] and row['argument_meanings'] ==
                         {'--lean-bin': 'LEAN_BIN_DIRECTORY', '--mathlib': 'MATHLIB_ROOT', '--out': 'OUTPUT_DIRECTORY', '--mode': 'LITERAL'}, 'Changed original core recipe')
+            elif row['recipe'] == ATTR_RECIPE:
+                require(row['sha256'] == ATTR_CONTRACT['driver_sha256'] and row['argument_meanings'] ==
+                        {'--lean': 'LEAN_EXECUTABLE', '--mathlib': 'MATHLIB_ROOT', '--output': 'FRESH_OUTPUT_DIRECTORY'}, 'Changed original attribution recipe')
             elif row['recipe'] in T10_FINITE_RECIPES:
                 expected_path, expected_hash = T10_FINITE_RECIPES[row['recipe']]
                 require(row['sha256'] == expected_hash and files[row['source_id']]['path'] == expected_path, 'Changed original written finite recipe')
@@ -955,6 +1151,7 @@ def validate_suite(suite, sources, root):
             if driver['recipe'] == 't14-identity-verify_sources-v1': check_checksum_manifest(plan, 90)
         if any(row['recipe'] in T10_FINITE_RECIPES for row in drivers.values()): validate_t10_package(suite, plan)
         if any(row['recipe'] == CORE_RECIPE for row in drivers.values()): validate_core_package(suite, plan)
+        if any(row['recipe'] == ATTR_RECIPE for row in drivers.values()): validate_attribution_package(suite, plan)
         if any(row['recipe'] in EMPIRICAL_RECIPES for row in drivers.values()):
             _empirical_package(plan)
             require(replay['scope'] == 'FINITE' and toolchain['kind'] == 'PYTHON' and toolchain['version'].startswith('3.12.'), 'Empirical execution is source-prescribed Python 3.12 finite scope')
@@ -980,8 +1177,10 @@ def validate_suite(suite, sources, root):
             require(isinstance(codes, list) and codes and len(codes) == len(set(codes)) and all(type(c) is int and 0 <= c < 124 for c in codes), 'Nonsemantic/invalid expected exit code')
             for diagnostic in stage['expected_diagnostics']:
                 keys(diagnostic, {'source_id', 'literal', 'sha256'})
-                require(diagnostic['source_id'] in contents and isinstance(diagnostic['literal'], str) and diagnostic['literal'], 'Unowned diagnostic')
-                require(diagnostic['literal'].encode() in contents[diagnostic['source_id']] and diagnostic['sha256'] == sha(diagnostic['literal'].encode()), 'Diagnostic differs from source contract')
+                require(isinstance(diagnostic['literal'], str) and diagnostic['literal'] and diagnostic['sha256'] == sha(diagnostic['literal'].encode()), 'Malformed source diagnostic')
+                driver = drivers.get(stage['driver_id'], {})
+                custody_literal = driver.get('recipe') == ATTR_RECIPE and diagnostic['source_id'] == driver['source_id'] and diagnostic['literal'] in ATTR_DIAGNOSTICS.values()
+                require(custody_literal or (diagnostic['source_id'] in contents and diagnostic['literal'].encode() in contents[diagnostic['source_id']]), 'Diagnostic differs from source contract')
             for cid in string_list(stage['control_ids']):
                 require(cid in controls and cid not in covered, 'Missing/duplicate control association'); covered.append(cid)
                 expected = controls[cid]
@@ -1325,7 +1524,7 @@ def _verify_environment(suite, plan, tools, inputs, output):
         if iid not in inputs: raise MissingInput('Required explicit external input is unavailable: ' + iid)
         input_hashes[iid] = _input_inventory(row, inputs[iid], plan)
     build_roots = [path_in(output, p) for p in suite['replay']['build_roots']]
-    original_owned = any(row['recipe'] == CORE_RECIPE for row in plan['drivers'].values())
+    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE} for row in plan['drivers'].values())
     for path in build_roots:
         if not original_owned: path.mkdir(parents=True, exist_ok=True)
     if 'lean' in resolved:
@@ -1612,14 +1811,18 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
         mappings.update({'tool:' + name: tool_argument(definitions[name], path) for name, path in resolved.items()})
         if 'mathlib' in tools: mappings['dependency:mathlib'] = Path(tools['mathlib']).resolve()
         mappings.update({'input:' + name: Path(path) for name, path in inputs.items()})
-        mappings.update({'driver:' + name: path_in(project, plan['files'][d['source_id']]['path']) for name, d in plan['drivers'].items()})
+        mappings.update({'driver:' + name: path_in(project, plan['files'][d['source_id']]['path']) for name, d in plan['drivers'].items() if d['source_id'] in plan['files']})
         for name, driver in plan['drivers'].items():
-            if driver['recipe'] == CORE_RECIPE:
+            if driver['recipe'] in {CORE_RECIPE, ATTR_RECIPE}:
                 iid = driver['external_input_id']; archive = path_in(output, 'archives/' + iid)
                 inventory = extract_source_zip(inputs[iid], archive)
-                require(core_source_order(archive, plan) == suite['replay']['module_order'], 'Original/declared runtime compile order differs')
-                archive_hashes[iid] = inventory
-                mappings['archive:' + iid] = archive; mappings['driver:' + name] = archive / 'replay.py'
+                archive_hashes[iid] = (archive, inventory)
+                if driver['recipe'] == CORE_RECIPE:
+                    require(core_source_order(archive, plan) == suite['replay']['module_order'], 'Original/declared runtime compile order differs')
+                    source_root = archive
+                else:
+                    source_root = path_in(archive, ATTR_CONTRACT['root']); attribution_source_check(source_root, plan)
+                mappings['archive:' + iid] = source_root; mappings['driver:' + name] = source_root / 'replay.py'
         for sid, stage in plan['stages'].items():
             current = results[sid]; current['started_at'] = utc(); log = logs / (sid + '.log')
             driver = plan['drivers'].get(stage['driver_id']); recipe = driver['recipe'] if driver else None
@@ -1637,7 +1840,8 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
             elif stage['argv'][:1] == ['{builtin:observe-child}']:
                 parent_id, child_id = stage['argv'][1:]
                 observed = captured_children[(parent_id, child_id)]
-                child_log = path_in(output, plan['core_children'][child_id]['log'] if recipe == CORE_RECIPE else 'mutation-copies/' + child_id + '/run.log')
+                child_log = path_in(output, plan['core_children'][child_id]['log'] if recipe == CORE_RECIPE else
+                                   plan['attribution_children'][child_id]['log'] if recipe == ATTR_RECIPE else 'mutation-copies/' + child_id + '/run.log')
                 require(sha(child_log.read_bytes()) == observed['log_sha256'], 'Captured child log changed before observation')
                 log.write_bytes(child_log.read_bytes())
                 # This interval measures observation only. Actual child times are
@@ -1646,16 +1850,16 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                        'ended_at': utc(), 'log_sha256': observed['log_sha256']}
                 evidence['child_observations'].append({**observed, 'stage_id': sid, 'observed_at': run['ended_at']})
             else:
-                launch = (core_tracer_argv(stage) if recipe == CORE_RECIPE else
+                launch = (attribution_tracer_argv(stage) if recipe == ATTR_RECIPE else core_tracer_argv(stage) if recipe == CORE_RECIPE else
                           t10_tracer_argv(stage) if recipe == 't10-independent-mutations-v1' else stage['argv'])
-                if recipe in {CORE_RECIPE, 't10-independent-mutations-v1'}:
+                if recipe in {CORE_RECIPE, ATTR_RECIPE, 't10-independent-mutations-v1'}:
                     evidence['driver_invocations'].append({'parent_stage_id': sid, 'driver_sha256': driver['sha256'],
                         'source_argv': stage['argv'], 'launch_argv': launch, 'runner_sha256': evidence['runner_sha256'],
                         'trace_sha256': None, 'parent_log_sha256': sha(b''), 'child_count': 0})
                 argv = [_expand(a, mappings) for a in launch]
                 run = run_process(argv, path_in(project, stage['cwd'], dot=True), stage_environment(stage, plan, output, env), log, stage['timeout_seconds'])
             current.update(run); text = log.read_text(encoding='utf-8', errors='replace')
-            if recipe in {CORE_RECIPE, 't10-independent-mutations-v1'} and stage['kind'] == 'DRIVER':
+            if recipe in {CORE_RECIPE, ATTR_RECIPE, 't10-independent-mutations-v1'} and stage['kind'] == 'DRIVER':
                 trace = path_in(output, 'traces/' + sid)
                 evidence['driver_invocations'][-1].update(parent_log_sha256=run['log_sha256'],
                     trace_sha256=_file_hashes(trace) if trace.exists() else None,
@@ -1678,8 +1882,9 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                     children, invocation = t10_collect_children(stage, current, text, plan, output, mappings)
                     captured_children.update(children)
                     require(evidence['driver_invocations'][-1] == invocation, 'Instrumented parent trace changed during parsing')
-            if recipe == CORE_RECIPE and stage['kind'] == 'DRIVER':
-                children, invocation, objects = core_collect_children(stage, current, text, plan, output, mappings)
+            if recipe in {CORE_RECIPE, ATTR_RECIPE} and stage['kind'] == 'DRIVER':
+                collector = core_collect_children if recipe == CORE_RECIPE else attribution_collect_children
+                children, invocation, objects = collector(stage, current, text, plan, output, mappings)
                 captured_children.update(children)
                 require(evidence['driver_invocations'][-1] == invocation, 'Instrumented core parent trace changed during parsing')
                 evidence['output_hashes'].update(objects)
@@ -1713,9 +1918,13 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
             audits = parse_readbacks(log.read_text(encoding='utf-8'), list(plan['targets'].values()))
             evidence['target_audits'] = [{'target_id': tid, **value, 'stage_id': '_target_audit', 'log_sha256': run['log_sha256']} for tid, value in audits.items()]
             receipt['axioms'] = sorted({a for value in audits.values() for a in value['axioms']})
+        for driver in plan['drivers'].values():
+            if driver['recipe'] == ATTR_RECIPE:
+                verify_attribution_dependencies(mappings['archive:' + driver['external_input_id']], mappings['dependency:mathlib'])
+                for name, path in resolved.items():
+                    require(sha(path.read_bytes()) == fingerprints[name]['executable_sha256'], 'Attribution execution tool changed during replay')
         for iid, row in plan['inputs'].items(): require(_input_inventory(row, inputs[iid], plan) == input_hashes[iid], 'External input changed during replay')
-        for iid, inventory in archive_hashes.items():
-            archive = mappings['archive:' + iid]
+        for iid, (archive, inventory) in archive_hashes.items():
             actual = {p.relative_to(archive).as_posix(): sha(no_symlinks(p).read_bytes()) for p in archive.rglob('*') if p.is_file()}
             require(actual == inventory, 'Original extracted source/input bytes changed during replay')
         for sid, row in plan['files'].items(): require(path_in(project, row['path']).read_bytes() == plan['contents'][sid], 'Projected source changed during replay')
@@ -1839,10 +2048,10 @@ def validate_child_evidence(evidence, plan, stages, successful):
     for pid, row in launches.items():
         keys(row, {'parent_stage_id', 'driver_sha256', 'source_argv', 'launch_argv', 'runner_sha256', 'trace_sha256', 'parent_log_sha256', 'child_count'})
         stage = plan['stages'][pid]; driver = plan['drivers'][stage['driver_id']]
-        is_core = driver['recipe'] == CORE_RECIPE
-        require(driver['recipe'] in {CORE_RECIPE, 't10-independent-mutations-v1'}, 'Unapproved observed original recipe')
-        launch = core_tracer_argv(stage) if is_core else t10_tracer_argv(stage)
-        count = 168 if is_core else 9
+        is_core = driver['recipe'] == CORE_RECIPE; is_attribution = driver['recipe'] == ATTR_RECIPE
+        require(driver['recipe'] in {CORE_RECIPE, ATTR_RECIPE, 't10-independent-mutations-v1'}, 'Unapproved observed original recipe')
+        launch = attribution_tracer_argv(stage) if is_attribution else core_tracer_argv(stage) if is_core else t10_tracer_argv(stage)
+        count = 21 if is_attribution else 168 if is_core else 9
         require(row['driver_sha256'] == driver['sha256'] and row['source_argv'] == stage['argv'] and row['launch_argv'] == launch, 'Changed instrumented parent invocation')
         require(row['runner_sha256'] == evidence['runner_sha256'] and row['parent_log_sha256'] == stages[pid]['log_sha256'], 'Wrong parent execution/log binding')
         require(type(row['child_count']) is int and 0 <= row['child_count'] <= count, 'Invalid actual child census')
@@ -1852,20 +2061,22 @@ def validate_child_evidence(evidence, plan, stages, successful):
     seen = set()
     for sid, row in observed.items():
         stage = declared[sid]; pid, child = stage['argv'][1:]; driver = plan['drivers'][stage['driver_id']]
-        is_core = driver['recipe'] == CORE_RECIPE
-        fields = {'source_id', 'source_sha256', 'output_hashes'} if is_core else {'mutated_source_sha256', 'matched_source_literals'}
+        is_core = driver['recipe'] == CORE_RECIPE; is_attribution = driver['recipe'] == ATTR_RECIPE
+        is_original = is_core or is_attribution
+        fields = {'source_id', 'source_sha256', 'output_hashes'} if is_original else {'mutated_source_sha256', 'matched_source_literals'}
         keys(row, fields | {'stage_id', 'source_child_id', 'parent_stage_id', 'driver_sha256', 'parser_id', 'mode', 'argv_provenance',
                    'argv', 'cwd', 'started_at', 'ended_at', 'observed_at', 'physical_run_sha256', 'parent_log_sha256',
                    'terminal', 'exit_code', 'actual_outcome', 'log_sha256', 'result_record_sha256'})
         require(pid in launches and row['physical_run_sha256'] == launches[pid]['trace_sha256'] and row['parent_log_sha256'] == stages[pid]['log_sha256'], 'Observation belongs to another physical run')
         require(row['driver_sha256'] == driver['sha256'] and row['parser_id'] == driver['recipe'], 'Wrong original parser authority')
-        require(row['mode'] == 'NONEXECUTING_OBSERVATION' and row['argv_provenance'] == 'CAPTURED' and row['cwd'] == '{project}', 'Derived command or duplicate execution credited as observation')
-        spec = plan['core_children'][child] if is_core else None
-        check_child_terminal(row, stages[pid], child, spec['argv'] if is_core else t10_child_argv(child), seen, 0 if is_core else 1)
-        require(row['actual_outcome'] == ('ACCEPT' if is_core else 'REJECT') and row['terminal'] == stages[sid]['terminal'] and row['exit_code'] == stages[sid]['exit_code'] and row['log_sha256'] == stages[sid]['log_sha256'], 'Contradictory observation stage summary')
+        spec = plan['attribution_children'][child] if is_attribution else plan['core_children'][child] if is_core else None
+        expected_code = spec['exit_code'] if is_attribution else 0 if is_core else 1
+        require(row['mode'] == 'NONEXECUTING_OBSERVATION' and row['argv_provenance'] == 'CAPTURED' and row['cwd'] == (spec['cwd'] if is_attribution else '{project}'), 'Derived command or duplicate execution credited as observation')
+        check_child_terminal(row, stages[pid], child, spec['argv'] if is_original else t10_child_argv(child), seen, expected_code)
+        require(row['actual_outcome'] == ('ACCEPT' if expected_code == 0 else 'REJECT') and row['terminal'] == stages[sid]['terminal'] and row['exit_code'] == stages[sid]['exit_code'] and row['log_sha256'] == stages[sid]['log_sha256'], 'Contradictory observation stage summary')
         require(isinstance(row['observed_at'], str) and row['observed_at'].endswith('Z') and
                 stages[pid]['ended_at'] <= stages[sid]['started_at'] <= row['observed_at'] <= stages[sid]['ended_at'], 'Observation time is not its actual parsing interval')
-        if is_core:
+        if is_original:
             require(row['source_id'] == spec['source_id'] and row['source_sha256'] == sha(plan['contents'][spec['source_id']]), 'Wrong observed source identity')
             outputs = row['output_hashes']; expected = {spec['output_path']} if spec['output_path'] else set()
             require(isinstance(outputs, dict) and set(outputs) == expected, 'Wrong observed object identity')
@@ -2086,6 +2297,9 @@ T10_GROUPS = {'exhaustive': ['all_boolean_menu_adaptive_cover_cases',
 
 
 def main():
+    if sys.argv[1:2] == ['--trace-attribution']:
+        require(len(sys.argv) == 10, 'Malformed internal attribution trace invocation')
+        return trace_attribution_driver(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4:])
     if sys.argv[1:2] == ['--trace-core-runtime']:
         require(len(sys.argv) == 12, 'Malformed internal core trace invocation')
         return trace_core_runtime(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4:])

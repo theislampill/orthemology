@@ -279,6 +279,132 @@ class SuccessorReplayTests(unittest.TestCase):
         self.assertEqual(list(trace.iterdir()), [])
         with self.assertRaises(ValueError): invoke(argv, stdout=subprocess.PIPE, check=True, timeout=1)
 
+    def test_source_owned_cwd_and_absent_child_timeout_are_preserved(self):
+        trace = self.base / 'cwd-trace'; trace.mkdir()
+        argv = [sys.executable, '-c', 'print("original cwd child")']
+        invoke = self.r.trace_reviewed_commands(subprocess.run, trace, [argv], [], None,
+                                               working_directories=[self.base], record_outputs=True)
+        kwargs = {'cwd': self.base, 'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT, 'text': True}
+        with self.assertRaises(ValueError): invoke(argv, **{**kwargs, 'cwd': trace})
+        with self.assertRaises(ValueError): invoke(argv, **{**kwargs, 'timeout': 30})
+        self.assertEqual(invoke(argv, **kwargs).returncode, 0)
+        row = self.r.read_json(trace / '0000.json')
+        self.assertEqual((row['cwd'], row['output_hashes']), (str(self.base), {}))
+
+    def test_custody_driver_requires_exact_archive_member_and_original_digest(self):
+        source = {'projection': 'CUSTODY_ONLY', 'public_sha256': None,
+            'original_sha256': 'a' * 64, 'original_bytes': 99, 'origin_archive_sha256': 'b' * 64,
+            'member_chain': ['component.zip', 'root/replay.py']}
+        contract = {'driver_sha256': 'a' * 64, 'driver_bytes': 99, 'archive_sha256': 'b' * 64,
+                    'root': 'root', 'driver_path': 'replay.py'}
+        self.r.check_custody_driver(source, contract)
+        for change in [{'original_sha256': 'c' * 64}, {'origin_archive_sha256': 'd' * 64},
+                       {'member_chain': ['component.zip', 'other/replay.py']}, {'original_bytes': 100},
+                       {'projection': 'DERIVED'}, {'public_sha256': 'e' * 64}]:
+            with self.assertRaises(ValueError): self.r.check_custody_driver({**source, **change}, contract)
+
+    def test_original_child_output_hash_is_captured_at_completion(self):
+        trace = self.base / 'object-trace'; trace.mkdir(); output = self.base / 'Fresh.olean'
+        argv = [sys.executable, '-c', 'from pathlib import Path; import sys; Path(sys.argv[-1]).write_bytes(b"fresh object")', '-o', str(output)]
+        call = self.r.trace_reviewed_commands(subprocess.run, trace, [argv], [], None,
+                                             working_directories=[self.base], record_outputs=True)
+        call(argv, cwd=self.base, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        row = self.r.read_json(trace / '0000.json')
+        self.assertEqual(row['output_hashes'], {str(output): sha('fresh object')})
+        output.write_bytes(b'later replacement')
+        self.assertNotEqual(row['output_hashes'][str(output)], sha(output.read_bytes()))
+        another = self.r.trace_reviewed_commands(subprocess.run, trace, [argv], [], None,
+                                                 working_directories=[self.base], record_outputs=True)
+        with self.assertRaises(ValueError):
+            another(argv, cwd=self.base, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+
+    def test_attribution_collector_binds_every_original_child_and_immediate_object(self):
+        r = self.r; out = self.base / 'attribution'; trace = out / 'traces/original'; trace.mkdir(parents=True)
+        driver = {'id': 'driver', 'recipe': r.ATTR_RECIPE, 'sha256': r.ATTR_CONTRACT['driver_sha256']}
+        stage = {'id': 'original', 'driver_id': 'driver', 'argv': ['{tool:python}', '-B', '{driver:driver}',
+                 '--lean', '{tool:lean}', '--mathlib', '{dependency:mathlib}', '--output', '{out}/original']}
+        parent = {'id': 'original', 'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-10-05T00:00:00Z',
+                  'ended_at': '2026-10-05T00:00:03Z', 'log_sha256': sha('parent')}
+        plan = {'drivers': {'driver': driver}, 'modules': {n: {'source_id': n} for n, _, _ in r.ATTR_PATHS},
+                'targets': {}, 'contents': {}, 'stages': {'original': stage}}
+        plan['attribution_children'] = r.attribution_specs('archive', plan)
+        mappings = {'out': out, 'tool:lean': self.base / 'lean', 'archive:archive': self.base / 'archive'}
+        rows = []; lines = []; stages = {'original': parent}
+        for index, spec in enumerate(plan['attribution_children'].values()):
+            name = spec['id']; negative = spec['exit_code'] == 1
+            names = ['Fixture.check' + str(i) for i in range(50)] if name == 'AxiomAudit' else []
+            source = ''.join('#print axioms ' + n + '\n' for n in names).encode() or ('-- ' + name).encode()
+            plan['contents'][name] = source
+            text = r.ATTR_DIAGNOSTICS[name] + '\nFalse\n' if negative else ''.join("'" + n + "' does not depend on any axioms\n" for n in names)
+            log = out / spec['log']; log.parent.mkdir(parents=True, exist_ok=True); log.write_bytes(text.encode())
+            (trace / f'{index:04}.log').write_bytes(text.encode())
+            outputs = {}
+            if spec['output_path']:
+                object_path = out / spec['output_path']; object_path.parent.mkdir(parents=True, exist_ok=True)
+                object_path.write_bytes(('fresh ' + name).encode()); outputs[str(object_path)] = sha(object_path.read_bytes())
+            r.write_json(trace / f'{index:04}.json', {'index': index, 'argv': [r._expand(a, mappings) for a in spec['argv']],
+                'cwd': r._expand(spec['cwd'], mappings), 'started_at': '2026-10-05T00:00:01Z', 'ended_at': '2026-10-05T00:00:02Z',
+                'terminal': 'COMPLETED', 'exit_code': spec['exit_code'], 'log_sha256': sha(text), 'output_hashes': outputs})
+            rows.append({'name': name, 'source': spec['source_path'], 'source_sha256': sha(source), 'exit_code': spec['exit_code'],
+                         'status': 'EXPECTED_REJECTION' if negative else 'PASS', 'log': spec['log'].removeprefix('original/')})
+            lines.append(('EXPECTED_REJECTION: ' if negative else 'PASS: ') + name)
+            sid = 'observe-' + name
+            plan['stages'][sid] = {'id': sid, 'driver_id': 'driver', 'argv': ['{builtin:observe-child}', 'original', name]}
+            stages[sid] = {'id': sid, 'terminal': 'COMPLETED', 'exit_code': spec['exit_code'], 'log_sha256': sha(text),
+                           'started_at': '2026-10-05T00:00:04Z', 'ended_at': '2026-10-05T00:00:05Z'}
+        lines.append('PASS: exact central targets, Regression, supplement, independent proofs, axiom audit, and three expected mutant diagnostics')
+        result = {'status': 'PASS', 'lean_sha256': LEAN_SHA, 'mathlib_revision': 'c44e0c8ee63ca166450922a373c7409c5d26b00b',
+            'public_manifest_sha256': r.ATTR_MANIFESTS['PUBLIC_MANIFEST.json'], 'central_manifest_sha256': r.ATTR_MANIFESTS['sources/central-v1/MANIFEST.json'],
+            'controls_manifest_sha256': r.ATTR_MANIFESTS['sources/controls-v1/MANIFEST.json'], 'independent_acceptance_sha256': r.ATTR_MANIFESTS['review/REVIEW_RECEIPT.json'],
+            'public_entries': 125, 'external_source_files_verified': 7506, 'fresh_build': True, 'custom_oleans_reused': False,
+            'external_compiled_cache_trusted': True, 'successful_stages': 18, 'expected_rejected_mutants': 3, 'central_theorems_axiom_audited': 50, 'steps': rows}
+        r.write_json(out / 'original/REPLAY_RECEIPT.json', result)
+        def collect(): return r.attribution_collect_children(stage, parent, '\n'.join(lines) + '\n', plan, out, mappings)
+        children, invocation, objects = collect()
+        self.assertEqual((len(children), invocation['child_count'], len(objects)), (21, 21, 10))
+        evidence = {'runner_sha256': invocation['runner_sha256'], 'driver_invocations': [invocation], 'output_hashes': objects,
+                    'child_observations': [{**row, 'stage_id': 'observe-' + name, 'observed_at': '2026-10-05T00:00:05Z'} for (_, name), row in children.items()]}
+        r.validate_child_evidence(evidence, plan, stages, True)
+        for change in [{'cwd': '{project}'}, {'exit_code': 0}, {'actual_outcome': 'ACCEPT'}, {'source_id': 'RootImage'}]:
+            bad = copy.deepcopy(evidence); bad['child_observations'][-1].update(change)
+            with self.subTest(change=change), self.assertRaises(ValueError): r.validate_child_evidence(bad, plan, stages, True)
+        object_path = out / 'original/build/RootImage.olean'; saved = object_path.read_bytes(); object_path.write_bytes(b'substituted')
+        with self.assertRaises(ValueError): collect()
+        object_path.write_bytes(saved)
+        saved = (trace / '0018.json').read_bytes(); bad = r.read_json(trace / '0018.json'); bad['exit_code'] = 0
+        r.write_json(trace / '0018.json', bad)
+        with self.assertRaises(ValueError): collect()
+        (trace / '0018.json').write_bytes(saved)
+        result['steps'][-1]['status'] = 'PASS'; r.write_json(out / 'original/REPLAY_RECEIPT.json', result)
+        with self.assertRaises(ValueError): collect()
+
+    def test_attribution_negative_needs_its_exact_child_and_concrete_diagnostic(self):
+        r = self.r; name = 'count_labels_as_roots'; spec = r.attribution_specs('input')[name]
+        row = {'name': name, 'source': spec['source_path'], 'source_sha256': sha('source'),
+               'exit_code': 1, 'status': 'EXPECTED_REJECTION', 'log': spec['log'].removeprefix('original/')}
+        text = 'fixture.lean:1:0: error: unsolved goals\nFalse'
+        captured = {'terminal': 'COMPLETED', 'exit_code': 1, 'log_sha256': sha(text)}
+        r.check_attribution_child(spec, row, captured, text, sha('source'))
+        for change in [{'exit_code': 0}, {'exit_code': 124}, {'source_sha256': sha('other')}, {'name': 'foreign'}]:
+            with self.assertRaises(ValueError): r.check_attribution_child(spec, {**row, **change}, captured, text, sha('source'))
+        with self.assertRaises(ValueError): r.check_attribution_child(spec, row, {**captured, 'terminal': 'TIMEOUT'}, text, sha('source'))
+        for suffix in ['\nunknown module Mathlib', '\nmaximum recursion depth exceeded']:
+            wrong = text + suffix
+            with self.assertRaises(ValueError): r.check_attribution_child(spec, row, {**captured, 'log_sha256': sha(wrong)}, wrong, sha('source'))
+
+    def test_attribution_external_sources_are_rechecked_against_original_manifest(self):
+        r = self.r; archive = self.base / 'archive'; (archive / 'dependencies').mkdir(parents=True)
+        external = self.base / 'mathlib'; external.mkdir(); source = external / 'Pinned.lean'; source.write_bytes(b'exact source')
+        rows = {'files': [{'path': 'Pinned.lean', 'size': 12, 'sha256': sha(b'exact source')}]}
+        manifest = archive / 'dependencies/SOURCE_MANIFEST.json'; r.write_json(manifest, rows)
+        with mock.patch.dict(r.ATTR_MANIFESTS, {'dependencies/SOURCE_MANIFEST.json': sha(manifest.read_bytes())}):
+            r.verify_attribution_dependencies(archive, external)
+            source.write_bytes(b'changed bytes')
+            with self.assertRaises(ValueError): r.verify_attribution_dependencies(archive, external)
+        source.write_bytes(b'exact source'); rows['files'][0]['path'] = '../mathlib/Pinned.lean'; r.write_json(manifest, rows)
+        with mock.patch.dict(r.ATTR_MANIFESTS, {'dependencies/SOURCE_MANIFEST.json': sha(manifest.read_bytes())}):
+            with self.assertRaises(ValueError): r.verify_attribution_dependencies(archive, external)
+
     def test_original_owned_build_parent_stays_absent_until_driver_runs(self):
         output = self.base / 'deferred-build'; (output / 'logs').mkdir(parents=True)
         suite = {'toolchain': {'kind': 'PYTHON', 'version': '.'.join(map(str, sys.version_info[:3])),
