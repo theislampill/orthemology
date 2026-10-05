@@ -54,6 +54,7 @@ NORMAL_SOURCE_RECIPES = {
 # Generic serial compilation is supported at COMPONENTS scope. Values here are
 # code-reviewed suite and source-byte bindings, never producer approvals.
 APPROVED_DECLARED_SUITES = {
+    't15-identity': 'd71ae53e2219c144dbd4b22d83d34a96e0ba61e7f13036bd364025619e5539f3',
     't11-dependent-all': 'b87aca15fb03afe740abc50aa8dfc00d5a9dbf59de7f0b61591123163f47ec8b',
     't11-normalization': '4653066edcd7df7c05addf7c81aa48ee9680c36f58a216ccd5c55d04d5763da6',
     't11-nucleus': 'f8d2057ed34df1260efafe16a2227400a9f9f5b2d9cc13b3d86105bf7d269160',
@@ -387,6 +388,281 @@ def _json_pointer(value, pointer):
     return value
 
 
+# Exact Fifteenth formal source, control, audit and export contracts.
+T15_FORMAL_APPROVAL='d71ae53e2219c144dbd4b22d83d34a96e0ba61e7f13036bd364025619e5539f3'
+T15_PYTHON_SHA='e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f'
+T15_SOURCE_RECIPES={
+    't15-identity-verify_sources-v1':('verification/verify_sources.py','112baf13e9cee7a5bcbaf96ef4034b6a2ac82f46f29b7f430777abaef3a5828d','SOURCE_CHECK'),
+    't15-identity-test_source_checks-v1':('verification/test_source_checks.py','ae6199af29a58180ef19f56ffa08adad84793adef1baa211ea3e46a2b374d10c','DRIVER'),
+}
+T15_PYTHON_INPUTS={
+    'verification/verify_sources.py':'112baf13e9cee7a5bcbaf96ef4034b6a2ac82f46f29b7f430777abaef3a5828d',
+    'verification/test_source_checks.py':'ae6199af29a58180ef19f56ffa08adad84793adef1baa211ea3e46a2b374d10c',
+    'verification/check_inherited_negative_controls.py':'3b1401e00271b8ac00df4993f3f81ac409ed03341ad4efbeb82d6a2334cc3521',
+    'verification/check_new_negative_controls.py':'ff989b2cdc32b4bf7a61d56de4256c9f92e44412a9195c9f6a9d8c40afa7f36e',
+    'verification/check_complexity_negative_controls.py':'58e8663e8e625fb8648f3859373d8fa690c5377c42d1dd19afdb9c223ad25e00',
+    'verification/check_boolean_negative_controls.py':'094ed316e0a75c9cbbcd4a409670c275e43266df0fccbb4c291e12f55c6f608e',
+    'verification/check_restricted_negative_controls.py':'03e8621dd94ce6949e90bebbbfbc1234782b6346d1862dd9cffeff8e2f1bd6cd',
+    'verification/check_polynomial_test_controls.py':'1581e22b5b9041e1ad23bd6d810054dcb4489adaeadd84877da9ba8fe8e32bbc',
+    'verification/reuse_dependencies.py':'20999a8810e2835e66c48602340447dfc6fc3c55b7055f49ba54ea1fd310191e',
+    'verification/verify_dependencies.py':'a7bd1dc419b6dd2b514df0d6d0ef43fa3ed855960b22d016079f83319acc4da6',
+}
+T15_LOCK_INPUTS={
+    'verification/source-lock.json':'bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c',
+    'verification/preserved-module-lock.json':'7dc06e97812b481caac84ca86cc685c2fb255fdc119f650b83cc6851dc085e61',
+    'MODULES.json':'5ca88d5793fb2283badb16c8d722b777e0e9eb49198043b9335a198d572060c7',
+    'verification/historical/raw-v2-receipt.json':'24db3eb238d712fa242cb5c71a5c074d70a4a52434d34b41ada2f3d731327082',
+    'verification/historical/unified-v3-receipt.json':'53cd30a370c0f94db9fc211d2005637af204cc5197e88f30c7edcbfed6a52a27',
+    'verification/historical/unified-v4-receipt.json':'3ab3b08b87aef587b2b6dd3964f6a884fb90c3b547511157b73275ebe4f7d637',
+    'verification/run_checks.sh':'f9e84ab28e27c5789dc0464d6c05ee91c3b03e3ce8c0bf4d02df970c65f7575b',
+}
+T15_EXPORT_SOURCE='verification/ExportDeclarationInventory.lean'
+T15_EXPORT_SHA='d8cc868cfb48b5db265771fcccf9ff4b0fd902d35ac50be24800133d01dbe048'
+T15_EXPORT_OUTPUT='project/.verification-results/declaration-inventory.json'
+T15_AXES={'propext','Quot.sound','Classical.choice'}
+
+def _t15_require(value,message):
+    if not value:raise ValueError(message)
+
+def _t15_data(plan,path):
+    _t15_require(path in plan['file_paths'],'T15 source input is absent: '+path)
+    sid=plan['file_paths'][path]['source_id']
+    _t15_require(sid in plan['contents'],'T15 source bytes are absent')
+    return plan['contents'][sid]
+
+def _t15_path(value):
+    _t15_require(isinstance(value,str)and value and '\\'not in value and '\x00'not in value,'Invalid T15 manifest path')
+    p=PurePosixPath(value)
+    _t15_require(not p.is_absolute()and not any(x in {'','.', '..'}for x in value.split('/'))and ':'not in value,'Unsafe T15 manifest path')
+    return value
+
+def _t15_array(plan,path,name):
+    source=_t15_data(plan,path).decode()
+    marker='def '+name+' : Array Name := #['
+    _t15_require(source.count(marker)==1,'Changed T15 source-owned declaration array')
+    raw=source.split(marker,1)[1].split(']',1)[0]
+    values=re.findall(r'`([\w.]+)',raw)
+    _t15_require(values and len(values)==len(set(values)),'Invalid T15 authored declaration inventory')
+    return values
+
+def source_checker_inputs_t15(plan):
+    """Validate every original lock path before normal Python can read it."""
+    for path,expected in (T15_PYTHON_INPUTS|T15_LOCK_INPUTS).items():
+        _t15_require(hashlib.sha256(_t15_data(plan,path)).hexdigest()==expected,'Changed reviewed T15 input: '+path)
+    actual_python={p for p in plan['file_paths']if p.endswith('.py')}
+    _t15_require(actual_python==set(T15_PYTHON_INPUTS),'Unreviewed adjacent T15 Python import source')
+    lock=json.loads(_t15_data(plan,'verification/source-lock.json'))
+    _t15_require(set(lock)=={'new_modules','files','dependency_revisions'},'Wrong T15 lock schema')
+    def check(rows,keys,count):
+        _t15_require(isinstance(rows,list)and len(rows)==count,'Changed T15 lock census')
+        seen=set()
+        for row in rows:
+            _t15_require(isinstance(row,dict)and set(row)==keys,'Wrong T15 lock row')
+            path=_t15_path(row['path']);_t15_require(path not in seen,'Duplicate T15 lock path');seen.add(path)
+            _t15_require(hashlib.sha256(_t15_data(plan,path)).hexdigest()==row['sha256'],'Changed T15 locked source: '+path)
+        return seen
+    check(lock['files'],{'path','sha256'},203)
+    preserved=json.loads(_t15_data(plan,'verification/preserved-module-lock.json'))
+    roots=check(preserved,{'path','sha256','source'},88)
+    _t15_require(sum(r['source']=='unified-v3'for r in preserved)==76,'Changed T15 preserved predecessor census')
+    modules=json.loads(_t15_data(plan,'MODULES.json'))
+    _t15_require(isinstance(modules,list)and len(modules)==len(set(modules))==88 and
+        all(isinstance(n,str)and re.fullmatch(r'[A-Za-z][A-Za-z0-9_]*',n)for n in modules),'Changed T15 module inventory')
+    expected={name+'.lean'for name in modules}
+    actual={p for p in plan['file_paths']if '/'not in p and p.endswith('.lean')and p!='lakefile.lean'}
+    _t15_require(roots==expected==actual,'T15 root coverage changed')
+    new=lock['new_modules']
+    _t15_require(isinstance(new,list)and len(new)==len(set(new))==22 and set(new)<=set(modules),'Changed T15 new-source inventory')
+    for name in new:_t15_path(name+'.lean')
+    manifest=json.loads(_t15_data(plan,'lake-manifest.json'))
+    _t15_require({p['name']:p['rev']for p in manifest['packages']}==lock['dependency_revisions']and len(manifest['packages'])==9,'Changed T15 dependency closure')
+    _t15_require(_t15_data(plan,'lean-toolchain').decode().strip()=='leanprover/lean4:v4.19.0','Changed T15 Lean toolchain')
+    for path in ['verification/AllProjectProofAudit.lean',T15_EXPORT_SOURCE]:
+        _t15_require(set(_t15_array(plan,path,'modules'))==set(modules),'Changed T15 complete audit module coverage')
+
+def validate_t15_driver(driver,plan):
+    _t15_require(driver['recipe']in T15_SOURCE_RECIPES,'Unknown T15 driver recipe')
+    path,expected,_=T15_SOURCE_RECIPES[driver['recipe']]
+    _t15_require(driver['sha256']==expected and driver['argument_meanings']=={}and driver['external_input_id']is None,
+        'Changed T15 original driver binding')
+    _t15_require(plan['files'][driver['source_id']]['path']==path and hashlib.sha256(_t15_data(plan,path)).hexdigest()==expected,'Changed T15 driver source/location')
+
+def validate_t15_argv(stage,driver,plan):
+    validate_t15_driver(driver,plan)
+    path,_,kind=T15_SOURCE_RECIPES[driver['recipe']]
+    _t15_require(stage['kind']==kind and stage['cwd']=='.'and stage['argv']==['{tool:python}','{project}/'+path]
+        and stage['output_paths']==[]and stage['expected_exit_codes']==[0]and stage['control_ids']==[],
+        'T15 original assertion-bearing driver requires exact normal-mode invocation')
+
+def t15_export_stage(stage,plan):
+    """Only this source-bound final exporter may create this fresh project child."""
+    if not(stage['id']=='original-audit-verification-ExportDeclarationInventory'and stage['kind']=='LEAN_AUDIT'
+        and stage['driver_id']is None and stage['cwd']=='.'and stage['argv']==['{tool:lean}','-j1','{project}/'+T15_EXPORT_SOURCE]
+        and stage['output_paths']==[T15_EXPORT_OUTPUT]and stage['expected_exit_codes']==[0]):return False
+    if T15_EXPORT_SOURCE not in plan['file_paths']or hashlib.sha256(_t15_data(plan,T15_EXPORT_SOURCE)).hexdigest()!=T15_EXPORT_SHA:return False
+    target=T15_EXPORT_OUTPUT.removeprefix('project/')
+    if any(p==target or p.startswith(target+'/')or target.startswith(p+'/')for p in plan['file_paths']):return False
+    return True
+
+def validate_t15_package(suite,plan):
+    source_checker_inputs_t15(plan)
+    _t15_require({d['recipe']for d in suite['replay']['drivers']}==set(T15_SOURCE_RECIPES),'Incomplete T15 original driver inventory')
+    _t15_require('verification.ExportDeclarationInventory'not in suite['replay']['module_order'],'Exporter would create an undeclared earlier output')
+    writers=[s for s in suite['replay']['stages']if s['argv'][-1]=='{project}/'+T15_EXPORT_SOURCE]
+    _t15_require(len(writers)==1 and writers[0]==suite['replay']['stages'][-1]
+        and t15_export_stage(writers[0],plan),'T15 exporter must execute once at its original final stage')
+
+def verify_t15_python3(resolved,env):
+    """Bind the source driver's literal child executable to the declared Python."""
+    _t15_require('python'in resolved and isinstance(env.get('PATH'),str)and env['PATH'],'Missing T15 Python environment')
+    actual=shutil.which('python3',path=env['PATH'])
+    _t15_require(actual is not None,'T15 original child python3 is unavailable')
+    selected=Path(resolved['python']);child=Path(actual)
+    _t15_require(selected.resolve()==child.resolve()and hashlib.sha256(selected.read_bytes()).hexdigest()==T15_PYTHON_SHA
+        and hashlib.sha256(child.read_bytes()).hexdigest()==T15_PYTHON_SHA,'Ambient python3 differs from the exact declared T15 interpreter')
+    _t15_require(not any(k in env for k in ['PYTHONOPTIMIZE','PYTHONPATH','PYTHONHOME']),'T15 assertion-bearing Python environment is contaminated')
+    return 'T15_AMBIENT_PYTHON3_BINDING_PASS executable_sha256='+T15_PYTHON_SHA
+
+def _t15_one(text,pattern):
+    rows=list(re.finditer('^'+pattern+'$',text,re.M))
+    _t15_require(len(rows)==1,'Original T15 audit terminal is absent or duplicated')
+    return rows[0]
+
+def _t15_axes(raw,allowed=T15_AXES):
+    values=[x.strip()for x in raw.split(',')if x.strip()]
+    _t15_require(len(values)==len(set(values))and set(values)<=allowed,'Unapproved or duplicate T15 axiom readback')
+    return set(values)
+
+def _t15_summary(text,prefix,fields):
+    patterns=[re.escape(k)+('=\\[([^\\]]*)\\]'if k=='axioms'else'=(\\d+)')for k in fields]
+    row=_t15_one(text,re.escape(prefix)+'; '.join(patterns))
+    result={k:(_t15_axes(v)if k=='axioms'else int(v))for k,v in zip(fields,row.groups())}
+    for k in ['unsafeOrPartialDependencies','unsafeOrPartial']:
+        if k in result:_t15_require(result[k]==0,'Unsafe/partial T15 proof dependency')
+    return result
+
+def _t15_safe_readbacks(path,text,plan,prefix='SAFE_CLOSURE_PASS',command='audit_safe_closure'):
+    names=re.findall(r'^#'+command+r' ([\w.]+)$',_t15_data(plan,path).decode(),re.M)
+    rows=re.findall(r'^'+prefix+r' ([^ ;\n]+); declarations=(\d+); axioms=\[([^\]]*)\]$',text,re.M)
+    _t15_require([r[0]for r in rows]==names,'Missing, duplicate or foreign T15 safe-closure readback')
+    for _,count,axes in rows:
+        _t15_require(int(count)>0,'Empty T15 checked closure');_t15_axes(axes)
+
+def _t15_namespace_rows(text,prefix,owners):
+    rows=re.findall(r'^'+prefix+r'COMPILED_DECLARATION ([^ ;\n]+); theorem=(true|false); axioms=\[([^\]]*)\]$',text,re.M)
+    aux=re.findall(r'^'+prefix+r'NONPROOF_RUNTIME_AUXILIARY ([^ ;\n]+); unsafe=(true|false); partial=(true|false)$',text,re.M)
+    _t15_require(rows and len(rows)==len({r[0]for r in rows})and len(aux)==len({r[0]for r in aux}),'Duplicate/absent T15 namespace census')
+    _t15_require(not({r[0]for r in rows}&{r[0]for r in aux}),'Compiler auxiliary counted as a safe proof root')
+    for name,_,axes in rows:
+        _t15_require(any(name.startswith(owner+'.')for owner in owners),'Unexpected T15 declaration owner');_t15_axes(axes)
+    for name,unsafe,partial in aux:
+        _t15_require(any(name.startswith(owner+'.')for owner in owners)and'true'in(unsafe,partial),'Invalid T15 compiler auxiliary role')
+    return rows,aux
+
+def _t15_census(info,rows,aux):
+    _t15_require(info['safeRoots']==len(rows)and info['namespaceDeclarations']==len(rows)+len(aux)
+        and info['namespaceTheorems']==sum(r[1]=='true'for r in rows)and info['nonproofRuntimeAuxiliaries']==len(aux)
+        and info['reachableCheckedDeclarations']>=len(rows),'Inconsistent T15 declaration/closure census')
+
+def _t15_export_result(stage,text,plan,output):
+    _t15_require(t15_export_stage(stage,plan)and output is not None,'Unapproved T15 export stage')
+    counts=_t15_summary(text,'DECLARATION_INVENTORY_PASS ',['modules','declarations'])
+    path=Path(output)/T15_EXPORT_OUTPUT
+    _t15_require(path.is_file()and not path.is_symlink(),'Missing fresh T15 declaration inventory')
+    # The core path_in/fresh-output gates also check ancestor symlinks and collisions.
+    rows=json.loads(path.read_text());modules=set(json.loads(_t15_data(plan,'MODULES.json')))
+    _t15_require(isinstance(rows,list)and rows and counts['modules']==len(modules)==88 and counts['declarations']==len(rows),'T15 declaration export census mismatch')
+    names=set()
+    for row in rows:
+        _t15_require(isinstance(row,dict)and set(row)=={'module','name','theorem','unsafe','partial'},'Wrong T15 declaration inventory row')
+        _t15_require(isinstance(row['module'],str)and row['module']in modules and isinstance(row['name'],str)and row['name']and row['name']not in names,'Wrong T15 declaration inventory identity')
+        names.add(row['name'])
+        _t15_require(all(type(row[k])is bool for k in ['theorem','unsafe','partial']),'Non-Boolean T15 declaration metadata')
+
+def check_t15_stage(stage,text,plan,output=None,inherited_checker=None):
+    """Read original completion contracts; never synthesize child executions."""
+    path=stage['argv'][-1].removeprefix('{project}/')
+    if stage['kind']=='SOURCE_CHECK':
+        _t15_require(text.strip()=='SOURCE_IDENTITY_PASS: 88 roots; 86 preserved v4 modules; 2 exact polynomial-test support modules; nine exact dependency pins','Original T15 source verification did not complete')
+        return
+    if path=='verification/test_source_checks.py':
+        labels=re.findall(r"^run_mutation\('([^']+)'",_t15_data(plan,path).decode(),re.M)
+        observed=re.findall(r'^EXPECTED_SOURCE_REJECTION: (.+)$',text,re.M)
+        _t15_require(len(labels)==15 and observed==labels,'Original fifteen source mutations did not complete exactly')
+        _t15_one(text,'SOURCE_CONTROL_MUTATIONS_PASS: fifteen deliberate invalid successors rejected')
+        _t15_require(text.splitlines()==['EXPECTED_SOURCE_REJECTION: '+s for s in labels]+['SOURCE_CONTROL_MUTATIONS_PASS: fifteen deliberate invalid successors rejected'],'Unexpected source-mutation driver output')
+        return
+    if stage['kind']=='NEGATIVE_CONTROL':
+        if '/inherited/negative-controls/'in path:
+            errors=[line for line in text.splitlines()if': error:'in line]
+            _t15_require(len(errors)==1 and re.search(r': error: (?:application )?type mismatch',errors[0]),'Original inherited control requires one intended type error')
+        return
+    if stage['id'].startswith(('complexity-positive-','boolean-positive-')):
+        _t15_require(not re.search(r'warning:|error:',text),'Original fresh positive prerequisite emitted a warning/error')
+    if path.startswith('verification/inherited/')or path=='ExtensionalRepairAudit.lean':
+        _t15_require(inherited_checker is not None,'Missing reviewed inherited T14 parser')
+        translated=dict(stage);translated['argv']=list(stage['argv']);translated['argv'][-1]=stage['argv'][-1].replace('/inherited/','/')
+        aliases=dict(plan['file_paths'])
+        aliases.update({p.replace('/inherited/','/'):r for p,r in plan['file_paths'].items()if p.startswith('verification/inherited/')})
+        inherited_checker(translated,text,{**plan,'file_paths':aliases})
+        return
+    if path==T15_EXPORT_SOURCE:
+        _t15_export_result(stage,text,plan,output);return
+    if path=='CheckerControls.lean':
+        _t15_require(re.findall(r'^(true|false)$',text,re.M)==['true','false','true','false','true'],'Original checker evaluation readback changed')
+        return
+    if path=='verification/KernelAudit.lean':
+        rows,aux=_t15_namespace_rows(text,'',['P01AC.EffectiveCompleteness'])
+        info=_t15_summary(text,'EFFECTIVE_KERNEL_AUDIT_PASS: ',['namespaceDeclarations','namespaceTheorems','authoredDeclarations','authoredTheorems','safeRoots','nonproofRuntimeAuxiliaries','reachableCheckedDeclarations','axioms','unsafeOrPartialDependencies'])
+        _t15_census(info,rows,aux)
+        authored=_t15_array(plan,path,'authored');theorems=_t15_array(plan,path,'authoredTheorems')
+        _t15_require(info['authoredDeclarations']==len(authored)and info['authoredTheorems']==len(theorems)
+            and set(authored)<={n for n,_,_ in rows}and set(theorems)<={n for n,t,_ in rows if t=='true'},'Changed T15 authored declaration/theorem census')
+        _t15_safe_readbacks(path,text,plan);return
+    if path in ['verification/ComplexityKernelAudit.lean','verification/BooleanKernelAudit.lean']:
+        boolean='Boolean'in path;prefix='BOOLEAN'if boolean else'COMPLEXITY'
+        owners=['P01AC.BooleanIdentity','P01AC.BooleanPrimitive','P01AC.BooleanControls']if boolean else['P01AC.EffectiveCompleteness','P01AC.IdentityComplexity']
+        _t15_require(re.findall(r'^'+prefix+r'_NAMESPACE_AUDIT_PASS ([^;]+);',text,re.M)==owners,'Changed T15 namespace audit inventory')
+        rows,aux=_t15_namespace_rows(text,prefix+'_',owners)
+        for owner in owners:
+            info=_t15_summary(text,prefix+'_NAMESPACE_AUDIT_PASS '+owner+'; ',['namespaceDeclarations','namespaceTheorems','safeRoots','nonproofRuntimeAuxiliaries','reachableCheckedDeclarations','axioms','unsafeOrPartialDependencies'])
+            _t15_census(info,[r for r in rows if r[0].startswith(owner+'.')],[r for r in aux if r[0].startswith(owner+'.')])
+        if boolean:
+            info=_t15_summary(text,'BOOLEAN_KERNEL_AUDIT_PASS: ',['authoredDeclarations','authoredTheorems','safeRoots','reachableCheckedDeclarations','axioms','unsafeOrPartialDependencies'])
+            authored=_t15_array(plan,path,'authoredBoolean');theorems=_t15_array(plan,path,'authoredBooleanTheorems')
+            _t15_require(info['authoredDeclarations']==len(authored)and info['authoredTheorems']==len(theorems),'Changed Boolean authored census')
+            roots=info['safeRoots']
+        else:
+            info=_t15_summary(text,'COMPLEXITY_KERNEL_AUDIT_PASS: ',['successorAuthoredDeclarations','successorAuthoredTheorems','predecessorAuthoredDeclarations','predecessorAuthoredTheorems','combinedSafeRoots','reachableCheckedDeclarations','axioms','unsafeOrPartialDependencies'])
+            authored=_t15_array(plan,path,'successorAuthored');theorems=_t15_array(plan,path,'successorTheorems')
+            prior=_t15_array(plan,'verification/KernelAudit.lean','authored');prior_theorems=_t15_array(plan,'verification/KernelAudit.lean','authoredTheorems')
+            _t15_require(info['successorAuthoredDeclarations']==len(authored)and info['successorAuthoredTheorems']==len(theorems)
+                and info['predecessorAuthoredDeclarations']==len(prior)and info['predecessorAuthoredTheorems']==len(prior_theorems),'Changed complexity authored census')
+            authored+=prior;theorems+=prior_theorems;roots=info['combinedSafeRoots']
+        _t15_require(roots==len(rows)and info['reachableCheckedDeclarations']>=roots
+            and set(authored)<={n for n,_,_ in rows}and set(theorems)<={n for n,t,_ in rows if t=='true'},'Incomplete T15 combined closure/authored census')
+        _t15_safe_readbacks(path,text,plan,prefix+'_SAFE_CLOSURE_PASS','audit_'+prefix.lower()+'_safe_closure');return
+    simple={'verification/RestrictedKernelAudit.lean':('RESTRICTED','theorems'),
+        'CheckerKernelAudit.lean':('V2','namespaceTheorems'),'PolynomialTestAudit.lean':('POLYNOMIAL_TEST','theorems')}
+    if path in simple:
+        prefix,theorems=simple[path]
+        info=_t15_summary(text,prefix+'_KERNEL_AUDIT_PASS ',['safeRoots',theorems,'nonproofRuntimeAuxiliaries','reachableCheckedDeclarations','axioms','unsafeOrPartialDependencies'])
+        aux=re.findall(r'^'+prefix+r'_NONPROOF_RUNTIME_AUXILIARY ([^ ;\n]+); unsafe=(true|false); partial=(true|false)$',text,re.M)
+        owner=re.findall(r'let ns := `([\w.]+)',_t15_data(plan,path).decode())
+        _t15_require(len(owner)==1 and all(name.startswith(owner[0]+'.')for name,_,_ in aux),'Foreign T15 compiler auxiliary owner')
+        _t15_require(info['safeRoots']>0 and 0<info[theorems]<=info['safeRoots']<=info['reachableCheckedDeclarations']
+            and info['nonproofRuntimeAuxiliaries']==len(aux)==len({r[0]for r in aux})and all('true'in r[1:]for r in aux),'Invalid T15 restricted/compiler auxiliary census')
+        _t15_safe_readbacks(path,text,plan);return
+    if path=='verification/RestrictedComputationalAudit.lean':
+        count=int(_t15_one(text,r'INDEPENDENT_COMPUTABLE_CLOSURE_PASS declarations=(\d+); no classical choice or abstract polynomial dependency').group(1))
+        row=_t15_summary(text,'INDEPENDENT_CHECKER_SAFE_CLOSURE ',['declarations','axioms'])
+        _t15_require(count==row['declarations']and count>0 and'Classical.choice'not in row['axioms'],'Invalid T15 executable proof-closure readback')
+        _t15_safe_readbacks(path,text,plan);return
+    if path=='verification/AllProjectProofAudit.lean':
+        row=_t15_summary(text,'INDEPENDENT_ALL_PROJECT_PROOF_AUDIT_PASS ',['modules','theoremRoots','checkedClosure','axioms','unsafeOrPartial'])
+        _t15_require(row['modules']==len(_t15_array(plan,path,'modules'))==88 and 0<row['theoremRoots']<=row['checkedClosure'],'Incomplete T15 all-project proof census')
+
+
 def _validate_argv(stage, plan):
     argv = stage['argv']
     require(isinstance(argv, list) and argv and all(isinstance(a, str) and a and '\x00' not in a for a in argv), 'Missing explicit argument vector')
@@ -413,6 +689,9 @@ def _validate_argv(stage, plan):
             return
         if recipe in SOURCE_RECIPES:
             require(stage['kind'] == 'SOURCE_CHECK' and argv == ['{builtin:source-check}'], 'Wrong source-check translation')
+            return
+        if recipe in T15_SOURCE_RECIPES:
+            validate_t15_argv(stage, driver, plan)
             return
         if recipe in NORMAL_SOURCE_RECIPES:
             original = ['{tool:python}', '{project}/' + plan['files'][driver['source_id']]['path']] if 'files' in plan else None
@@ -468,7 +747,7 @@ def _validate_argv(stage, plan):
         require(module and any(object_rel == root + '/' + module['name'].replace('.', '/') + '.olean' for root in plan['build_roots']), 'Object module identity mismatch')
         lean_name(module['name'])
     else:
-        require(stage['output_paths'] == [], 'Interpretation stage has undeclared outputs')
+        require(stage['output_paths'] == [] or t15_export_stage(stage, plan), 'Interpretation stage has undeclared outputs')
     require((row['role'] == 'NEGATIVE') == (stage['kind'] == 'NEGATIVE_CONTROL'), 'Negative source/stage role mismatch')
 
 
@@ -1363,6 +1642,8 @@ def validate_suite(suite, sources, root):
                 meanings = {} if row['recipe'] in {'t15-empirical-integrity-v1', 't15-empirical-tests-v1'} else {'--decisions-zip': 'INPUT_FILE', '--summary-xlsx': 'INPUT_FILE'}
                 if row['recipe'] == 't15-empirical-reanalyse-v1': meanings['--output'] = 'FRESH_OUTPUT_FILE'
                 require(row['argument_meanings'] == meanings, 'Changed empirical argument meaning')
+            elif row['recipe'] in T15_SOURCE_RECIPES:
+                validate_t15_driver(row, {'files': files, 'file_paths': file_paths, 'contents': contents})
             elif row['recipe'] in NORMAL_SOURCE_RECIPES:
                 require(NORMAL_SOURCE_RECIPES[row['recipe']] == row['sha256'] and row['argument_meanings'] == {}, 'Changed original source-check recipe')
             elif row['recipe'] == CORE_RECIPE:
@@ -1392,6 +1673,7 @@ def validate_suite(suite, sources, root):
         for driver in drivers.values():
             if driver['recipe'] in NORMAL_SOURCE_RECIPES: source_checker_inputs(driver, plan)
             if driver['recipe'] == 't14-identity-verify_sources-v1': check_checksum_manifest(plan, 90)
+        if any(row['recipe'] in T15_SOURCE_RECIPES for row in drivers.values()): validate_t15_package(suite, plan)
         if any(row['recipe'] in T10_FINITE_RECIPES for row in drivers.values()): validate_t10_package(suite, plan)
         if any(row['recipe'] == CORE_RECIPE for row in drivers.values()): validate_core_package(suite, plan)
         if any(row['recipe'] == ATTR_RECIPE for row in drivers.values()): validate_attribution_package(suite, plan)
@@ -1415,7 +1697,7 @@ def validate_suite(suite, sources, root):
             for output in string_list(stage['output_paths']):
                 relative(output)
                 recipe = drivers.get(stage['driver_id'], {}).get('recipe')
-                admitted_child = output in T10_OUTPUTS.get(recipe, []) and output.removeprefix('project/') not in file_paths
+                admitted_child = (output in T10_OUTPUTS.get(recipe, []) and output.removeprefix('project/') not in file_paths) or (output == T15_EXPORT_OUTPUT and t15_export_stage(stage, plan))
                 require(output not in produced and (not output.startswith('project/') or admitted_child), 'Output collision or source overwrite'); produced.add(output)
             codes = stage['expected_exit_codes']
             require(isinstance(codes, list) and codes and len(codes) == len(set(codes)) and all(type(c) is int and 0 <= c < 124 for c in codes), 'Nonsemantic/invalid expected exit code')
@@ -2048,7 +2330,8 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
     try:
         resolved, fingerprints, dependencies, env, input_hashes = _verify_environment(suite, plan, tools, inputs, output)
         evidence['tool_fingerprints'] = fingerprints; evidence['dependency_checks'] = dependencies
-        prerequisite_log.write_text('Exact tool, package, official import and external input prerequisites verified.\n')
+        t15_note = verify_t15_python3(resolved, env) + '\n' if any(row['recipe'] in T15_SOURCE_RECIPES for row in plan['drivers'].values()) else ''
+        prerequisite_log.write_text('Exact tool, package, official import and external input prerequisites verified.\n' + t15_note)
         current.update(terminal='COMPLETED', exit_code=0, ended_at=utc(), log_sha256=sha(prerequisite_log.read_bytes()))
         mappings = {'project': project, 'out': output, 'build': output / 'build', 'adapter': Path(__file__).resolve()}
         main_name = 'lean' if suite['toolchain']['kind'] == 'LEAN' else 'python'
@@ -2120,6 +2403,7 @@ def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, re
                 raise ValueError('Resource-inconclusive stage')
             assess_stage(stage, run, text, completed)
             if suite['id'] == 't14-identity': check_t14_stage(stage, text, plan)
+            if suite['id'] == 't15-identity': check_t15_stage(stage, text, plan, output, check_t14_stage)
             if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in LANGUAGE_RECIPES:
                 _language_result(plan['drivers'][stage['driver_id']], stage, text, plan)
             if stage['driver_id'] in plan['drivers'] and plan['drivers'][stage['driver_id']]['recipe'] in EMPIRICAL_RECIPES:

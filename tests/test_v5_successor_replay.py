@@ -318,6 +318,85 @@ class SuccessorReplayTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             another(argv, cwd=self.base, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 
+    def test_t15_original_assertion_driver_requires_exact_normal_arguments(self):
+        r = self.r; body = b'assert True\n'; path = 'verification/verify_sources.py'; recipe = 't15-identity-verify_sources-v1'
+        driver = {'id': 'source', 'source_id': 'source', 'recipe': recipe, 'sha256': sha(body), 'argument_meanings': {}, 'external_input_id': None}
+        row = {'source_id': 'source', 'path': path, 'role': 'DRIVER'}
+        plan = {'files': {'source': row}, 'file_paths': {path: row}, 'contents': {'source': body}}
+        stage = {'id': 'source-check', 'kind': 'SOURCE_CHECK', 'driver_id': 'source', 'cwd': '.', 'argv': ['{tool:python}', '{project}/' + path],
+                 'output_paths': [], 'expected_exit_codes': [0], 'control_ids': []}
+        with mock.patch.dict(r.T15_SOURCE_RECIPES, {recipe: (path, sha(body), 'SOURCE_CHECK')}):
+            r.validate_t15_argv(stage, driver, plan)
+            for option in ['-O', '-OO', '--help']:
+                bad = copy.deepcopy(stage); bad['argv'].insert(1, option)
+                with self.assertRaises(ValueError): r.validate_t15_argv(bad, driver, plan)
+            with self.assertRaises(ValueError): r.validate_t15_driver({**driver, 'sha256': '0' * 64}, plan)
+
+    def test_t15_ambient_child_python_is_bound_without_import_execution(self):
+        r = self.r; binary = self.base / 'python3'; binary.write_bytes(b'synthetic interpreter identity')
+        with mock.patch.object(r, 'T15_PYTHON_SHA', sha(binary.read_bytes())), mock.patch.object(r.shutil, 'which', return_value=str(binary)):
+            self.assertIn('T15_AMBIENT_PYTHON3_BINDING_PASS', r.verify_t15_python3({'python': binary}, {'PATH': str(self.base)}))
+            with self.assertRaises(ValueError): r.verify_t15_python3({'python': binary}, {'PATH': str(self.base), 'PYTHONOPTIMIZE': '1'})
+            wrong = self.base / 'other-python'; wrong.write_bytes(binary.read_bytes())
+            with self.assertRaises(ValueError): r.verify_t15_python3({'python': wrong}, {'PATH': str(self.base)})
+
+    def test_t15_safe_closure_readback_keeps_names_axioms_and_auxiliary_roles(self):
+        r = self.r; path = 'verification/RestrictedKernelAudit.lean'
+        source = b'let ns := `Fixture\n#audit_safe_closure Fixture.proof\n'
+        plan = {'file_paths': {path: {'source_id': 'audit'}}, 'contents': {'audit': source}}
+        stage = {'id': 'restricted', 'kind': 'LEAN_AUDIT', 'argv': ['{tool:lean}', '-j1', '{project}/' + path]}
+        text = ('RESTRICTED_NONPROOF_RUNTIME_AUXILIARY Fixture.compiler; unsafe=true; partial=false\n'
+                'RESTRICTED_KERNEL_AUDIT_PASS safeRoots=2; theorems=1; nonproofRuntimeAuxiliaries=1; reachableCheckedDeclarations=3; axioms=[propext,\n Quot.sound]; unsafeOrPartialDependencies=0\n'
+                'SAFE_CLOSURE_PASS Fixture.proof; declarations=3; axioms=[propext]\n')
+        r.check_t15_stage(stage, text, plan)
+        for changed in [text.replace('Fixture.compiler', 'Foreign.compiler'), text.replace('axioms=[propext]', 'axioms=[sorryAx]'),
+                        text.replace('unsafeOrPartialDependencies=0', 'unsafeOrPartialDependencies=1'),
+                        text.replace('SAFE_CLOSURE_PASS Fixture.proof', 'SAFE_CLOSURE_PASS Fixture.other'), text + text.splitlines()[-1] + '\n']:
+            with self.assertRaises(ValueError): r.check_t15_stage(stage, changed, plan)
+
+    def test_t15_original_fifteen_source_mutations_remain_aggregate_only(self):
+        r = self.r; path = 'verification/test_source_checks.py'; labels = ['fixture_' + str(n) for n in range(15)]
+        source = ''.join("run_mutation('" + name + "', lambda root: None)\n" for name in labels).encode()
+        plan = {'file_paths': {path: {'source_id': 'driver'}}, 'contents': {'driver': source}}
+        stage = {'id': 'mutations', 'kind': 'DRIVER', 'argv': ['{tool:python}', '{project}/' + path], 'control_ids': []}
+        text = ''.join('EXPECTED_SOURCE_REJECTION: ' + name + '\n' for name in labels) + 'SOURCE_CONTROL_MUTATIONS_PASS: fifteen deliberate invalid successors rejected\n'
+        r.check_t15_stage(stage, text, plan)
+        self.assertEqual(stage['control_ids'], [])
+        self.assertNotIn('child_observations', plan)
+        for changed in [text.split('\n', 1)[1], text + 'EXPECTED_SOURCE_REJECTION: fixture_0\n', text.replace('fixture_0', 'foreign', 1)]:
+            with self.assertRaises(ValueError): r.check_t15_stage(stage, changed, plan)
+
+    def test_t15_exporter_is_single_final_and_cannot_overlap_sources(self):
+        r = self.r; source = b'-- synthetic exact exporter\n'; path = r.T15_EXPORT_SOURCE
+        plan = {'file_paths': {path: {'source_id': 'exporter'}}, 'contents': {'exporter': source}}
+        stage = {'id': 'original-audit-verification-ExportDeclarationInventory', 'kind': 'LEAN_AUDIT', 'driver_id': None, 'cwd': '.',
+                 'argv': ['{tool:lean}', '-j1', '{project}/' + path], 'output_paths': [r.T15_EXPORT_OUTPUT], 'expected_exit_codes': [0]}
+        suite = {'replay': {'drivers': [{'recipe': name} for name in r.T15_SOURCE_RECIPES], 'module_order': [], 'stages': [stage]}}
+        with mock.patch.object(r, 'T15_EXPORT_SHA', sha(source)), mock.patch.object(r, 'source_checker_inputs_t15'):
+            self.assertTrue(r.t15_export_stage(stage, plan)); r.validate_t15_package(suite, plan)
+            bad = copy.deepcopy(suite); bad['replay']['stages'].append({'argv': ['other']})
+            with self.assertRaises(ValueError): r.validate_t15_package(bad, plan)
+            bad = copy.deepcopy(suite); bad['replay']['module_order'] = ['verification.ExportDeclarationInventory']
+            with self.assertRaises(ValueError): r.validate_t15_package(bad, plan)
+            plan['file_paths']['.verification-results'] = {'source_id': 'collision'}
+            self.assertFalse(r.t15_export_stage(stage, plan))
+
+    def test_t15_export_inventory_preserves_boolean_metadata_and_exact_census(self):
+        r = self.r; source = b'-- synthetic exact exporter\n'; path = r.T15_EXPORT_SOURCE
+        plan = {'file_paths': {path: {'source_id': 'exporter'}, 'MODULES.json': {'source_id': 'modules'}},
+                'contents': {'exporter': source, 'modules': json.dumps(['Module' + str(n) for n in range(88)]).encode()}}
+        stage = {'id': 'original-audit-verification-ExportDeclarationInventory', 'kind': 'LEAN_AUDIT', 'driver_id': None, 'cwd': '.',
+                 'argv': ['{tool:lean}', '-j1', '{project}/' + path], 'output_paths': [r.T15_EXPORT_OUTPUT], 'expected_exit_codes': [0]}
+        rows = [{'module': 'Module0', 'name': 'Fixture.proof', 'theorem': True, 'unsafe': False, 'partial': False},
+                {'module': 'Module0', 'name': 'Fixture.compiler', 'theorem': False, 'unsafe': True, 'partial': False}]
+        output = self.base / 'export'; destination = output / r.T15_EXPORT_OUTPUT; destination.parent.mkdir(parents=True)
+        text = 'DECLARATION_INVENTORY_PASS modules=88; declarations=2\n'
+        with mock.patch.object(r, 'T15_EXPORT_SHA', sha(source)):
+            r.write_json(destination, rows); r.check_t15_stage(stage, text, plan, output)
+            with self.assertRaises(ValueError): r.check_t15_stage(stage, text.replace('declarations=2', 'declarations=3'), plan, output)
+            rows[1]['theorem'] = 0; r.write_json(destination, rows)
+            with self.assertRaises(ValueError): r.check_t15_stage(stage, text, plan, output)
+
     def test_history_capture_preserves_separate_streams_and_source_bytes(self):
         r = self.r; trace = self.base / 'history-capture'; trace.mkdir()
         script = self.base / 'child.py'
