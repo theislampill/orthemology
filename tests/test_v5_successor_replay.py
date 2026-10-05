@@ -9,6 +9,7 @@ import sys
 import subprocess
 import tempfile
 import unittest
+import zipfile
 from unittest import mock
 
 
@@ -233,6 +234,178 @@ class SuccessorReplayTests(unittest.TestCase):
             with self.assertRaises(ValueError): self.r.check_checksum_manifest(bad, 2)
         bad = copy.deepcopy(plan); bad['contents']['README.md'] += b'changed'
         with self.assertRaises(ValueError): self.r.check_checksum_manifest(bad, 2)
+
+    def test_tool_directory_arguments_preserve_their_declared_meaning(self):
+        exe = self.base / 'distribution/bin/lean'
+        for kind, expected in [('EXECUTABLE', exe), ('BIN_DIRECTORY', exe.parent), ('DISTRIBUTION_ROOT', exe.parent.parent)]:
+            self.assertEqual(self.r.tool_argument({'path_kind': kind}, exe), expected)
+        with self.assertRaises(ValueError): self.r.tool_argument({'path_kind': 'UNCHECKED'}, exe)
+
+    def test_archive_projection_rejects_escape_symlink_collision_and_custom_objects(self):
+        def archive(label, rows):
+            path = self.base / (label + '.zip')
+            with zipfile.ZipFile(path, 'w') as stream:
+                for name, data in rows: stream.writestr(name, data)
+            return path
+        path = archive('valid', [('runtime/src/Proof.lean', b'theorem ok : True := True.intro\n')])
+        actual = self.r.extract_source_zip(path, self.base / 'valid-source')
+        self.assertEqual(actual, {'runtime/src/Proof.lean': sha(b'theorem ok : True := True.intro\n')})
+        with self.assertRaises(ValueError): self.r.extract_source_zip(path, self.base / 'valid-source')
+        link = zipfile.ZipInfo('link.lean'); link.create_system = 3; link.external_attr = 0o120777 << 16
+        for label, rows in [('escape', [('../Proof.lean', b'')]), ('absolute', [('/Proof.lean', b'')]),
+                            ('collision', [('A.lean', b'a'), ('a.lean', b'b')]),
+                            ('link', [(link, b'elsewhere')]), ('object', [('Proof.olean', b'old object')])]:
+            with self.subTest(label=label), self.assertRaises(ValueError):
+                self.r.extract_source_zip(archive(label, rows), self.base / ('out-' + label))
+
+    def test_original_driver_trace_only_admits_reviewed_vectors_and_budget(self):
+        trace = self.base / 'original-trace'; trace.mkdir()
+        argv = [sys.executable, '-c', 'print("measured child")']
+        invoke = self.r.trace_reviewed_commands(subprocess.run, trace, [argv], [], 180)
+        kwargs = {'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT, 'text': True, 'timeout': 180}
+        with self.assertRaises(ValueError): invoke(argv + ['--unreviewed'], **kwargs)
+        with self.assertRaises(ValueError): invoke(argv, **{**kwargs, 'timeout': None})
+        result = invoke(argv, **kwargs); self.assertEqual(result.returncode, 0)
+        row = self.r.read_json(trace / '0000.json')
+        self.assertEqual((row['argv'], row['terminal'], row['exit_code']), (argv, 'COMPLETED', 0))
+        with self.assertRaises(ValueError): invoke(argv, **kwargs)
+
+    def test_original_read_only_check_output_preserves_its_python_call_contract(self):
+        trace = self.base / 'read-only-trace'; trace.mkdir()
+        argv = [sys.executable, '--version']; original = subprocess.run
+        invoke = self.r.trace_reviewed_commands(original, trace, [], [argv], 180)
+        with mock.patch.object(subprocess, 'run', invoke):
+            self.assertIn('Python', subprocess.check_output(argv, text=True))
+        self.assertEqual(list(trace.iterdir()), [])
+        with self.assertRaises(ValueError): invoke(argv, stdout=subprocess.PIPE, check=True, timeout=1)
+
+    def test_original_owned_build_parent_stays_absent_until_driver_runs(self):
+        output = self.base / 'deferred-build'; (output / 'logs').mkdir(parents=True)
+        suite = {'toolchain': {'kind': 'PYTHON', 'version': '.'.join(map(str, sys.version_info[:3])),
+                  'platform': 'test', 'executable_sha256': sha(Path(sys.executable).read_bytes()), 'packages': []},
+                 'replay': {'tools': [], 'build_roots': ['original/runtime/build']}}
+        plan = {'packages': {}, 'inputs': {}, 'drivers': {'core': {'recipe': self.r.CORE_RECIPE}}}
+        self.r._verify_environment(suite, plan, {'python': sys.executable}, {}, output)
+        self.assertFalse((output / 'original').exists())
+
+    def test_core_observations_bind_real_terminals_sources_and_fresh_objects(self):
+        r = self.r; driver = {'id': 'core', 'recipe': r.CORE_RECIPE, 'sha256': r.CORE_FILES['replay.py']}
+        parent = {'id': 'original', 'driver_id': 'core', 'argv': ['{tool:python}', '-B', '{driver:core}',
+                  '--lean-bin', '{tool:lean-bin}', '--mathlib', '{dependency:mathlib}', '--out', '{out}/original', '--mode', 'runtime']}
+        plan = {'drivers': {'core': driver}, 'stages': {'original': parent}, 'contents': {}, 'core_children': {}}
+        stages = {'original': {'id': 'original', 'terminal': 'COMPLETED', 'exit_code': 0,
+                  'started_at': '2026-10-05T00:00:00Z', 'ended_at': '2026-10-05T00:00:03Z', 'log_sha256': sha('parent')}}
+        launch = {'parent_stage_id': 'original', 'driver_sha256': driver['sha256'], 'source_argv': parent['argv'],
+                  'launch_argv': r.core_tracer_argv(parent), 'runner_sha256': sha('runner'), 'trace_sha256': sha('trace'),
+                  'parent_log_sha256': sha('parent'), 'child_count': 168}
+        evidence = {'runner_sha256': sha('runner'), 'driver_invocations': [launch], 'child_observations': [], 'output_hashes': {}}
+        for index in range(168):
+            name = 'RuntimeReadback' if index == 167 else 'Module' + str(index)
+            child = 'runtime/' + name; sid = 'observe-' + name
+            spec = r.core_child_spec(child, name, 'runtime/src/' + name + '.lean', 'archive')
+            plan['core_children'][child] = spec; plan['contents'][name] = b'exact source'
+            plan['stages'][sid] = {'id': sid, 'driver_id': 'core', 'argv': ['{builtin:observe-child}', 'original', child]}
+            stages[sid] = {'id': sid, 'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-10-05T00:00:04Z',
+                           'ended_at': '2026-10-05T00:00:05Z', 'log_sha256': sha(child)}
+            objects = {spec['output_path']: sha(name)} if spec['output_path'] else {}
+            evidence['output_hashes'].update(objects)
+            evidence['child_observations'].append({'stage_id': sid, 'source_child_id': child, 'parent_stage_id': 'original',
+                'driver_sha256': driver['sha256'], 'parser_id': r.CORE_RECIPE, 'mode': 'NONEXECUTING_OBSERVATION',
+                'argv_provenance': 'CAPTURED', 'argv': spec['argv'], 'cwd': '{project}', 'started_at': '2026-10-05T00:00:01Z',
+                'ended_at': '2026-10-05T00:00:02Z', 'observed_at': '2026-10-05T00:00:05Z', 'physical_run_sha256': sha('trace'),
+                'parent_log_sha256': sha('parent'), 'terminal': 'COMPLETED', 'exit_code': 0, 'actual_outcome': 'ACCEPT',
+                'log_sha256': sha(child), 'source_id': name, 'source_sha256': sha(b'exact source'),
+                'output_hashes': objects, 'result_record_sha256': sha('original record')})
+        r.validate_child_evidence(evidence, plan, stages, True)
+        changes = [{'source_child_id': 'foreign'}, {'parent_stage_id': 'foreign'}, {'terminal': 'TIMEOUT'},
+                   {'exit_code': None}, {'exit_code': True}, {'exit_code': 124}, {'actual_outcome': 'REJECT'},
+                   {'argv': ['derived']}, {'source_id': 'Module1'}, {'source_sha256': sha('different')},
+                   {'output_hashes': {'original/runtime/build/Module0.olean': sha('old object')}}]
+        for change in changes:
+            bad = copy.deepcopy(evidence); bad['child_observations'][0].update(change)
+            with self.subTest(change=change), self.assertRaises(ValueError): r.validate_child_evidence(bad, plan, stages, True)
+        for change in [{'child_count': 167}, {'launch_argv': parent['argv']}, {'parent_log_sha256': sha('wrong')}]:
+            bad = copy.deepcopy(evidence); bad['driver_invocations'][0].update(change)
+            with self.subTest(change=change), self.assertRaises(ValueError): r.validate_child_evidence(bad, plan, stages, True)
+        bad = copy.deepcopy(evidence); bad['child_observations'].pop()
+        with self.assertRaises(ValueError): r.validate_child_evidence(bad, plan, stages, True)
+        bad = copy.deepcopy(evidence); bad['child_observations'].append(bad['child_observations'][0])
+        with self.assertRaises(ValueError): r.validate_child_evidence(bad, plan, stages, True)
+        bad_stages = copy.deepcopy(stages); bad_stages['original']['exit_code'] = 1
+        with self.assertRaises(ValueError): r.validate_child_evidence(evidence, plan, bad_stages, True)
+
+    def test_original_core_summary_cannot_override_captured_child_failure(self):
+        r = self.r; spec = r.core_child_spec('runtime/Proof', 'proof', 'runtime/src/Proof.lean', 'archive')
+        parent = {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-10-05T00:00:00Z', 'ended_at': '2026-10-05T00:00:03Z'}
+        captured = {'terminal': 'COMPLETED', 'exit_code': 0, 'argv': ['actual'], 'started_at': '2026-10-05T00:00:01Z',
+                    'ended_at': '2026-10-05T00:00:02Z', 'log_sha256': sha(b'')}
+        row = {'suite': 'runtime', 'module': 'Proof', 'exit_code': 0, 'command': ['actual'],
+               'log_sha256': sha(b''), 'has_resource_diagnostic': False, 'elapsed_seconds': 0.1}
+        r.check_core_child(spec, row, captured, parent, '', ['actual'])
+        for change in [{'terminal': 'TIMEOUT'}, {'exit_code': None}, {'exit_code': 1}, {'argv': ['unrecorded']},
+                       {'log_sha256': sha('changed')}, {'ended_at': '2026-10-05T00:00:04Z'}]:
+            with self.assertRaises(ValueError): r.check_core_child(spec, row, {**captured, **change}, parent, '', ['actual'])
+
+    def test_original_child_compiler_resource_diagnostic_is_inconclusive(self):
+        trace = self.base / 'resource-trace'; trace.mkdir()
+        for terminal, code, text, expected in [('COMPLETED', 1, 'error: (deterministic) timeout at whnf', True),
+                ('COMPLETED', 1, 'error: application type mismatch', False), ('TIMEOUT', None, '', True),
+                ('INTERRUPTED', None, '', True), ('COMPLETED', 0, 'timeout_definition : True', False)]:
+            (trace / '0000.log').write_bytes(text.encode())
+            self.r.write_json(trace / '0000.json', {'terminal': terminal, 'exit_code': code, 'log_sha256': sha(text)})
+            self.assertEqual(self.r.trace_resource_inconclusive(trace), expected)
+
+    def test_core_collector_requires_original_logs_complete_census_and_emitted_objects(self):
+        r = self.r; output = self.base / 'core-collector'; trace = output / 'traces/original'; trace.mkdir(parents=True)
+        stage = {'id': 'original', 'driver_id': 'core', 'argv': ['{tool:python}', '-B', '{driver:core}',
+                 '--lean-bin', '{tool:lean-bin}', '--mathlib', '{dependency:mathlib}', '--out', '{out}/original', '--mode', 'runtime']}
+        parent = {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-10-05T00:00:00Z',
+                  'ended_at': '2026-10-05T00:00:03Z', 'log_sha256': sha('parent')}
+        pin = {'name': 'mathlib', 'revision': 'a' * 40}
+        plan = {'core_children': {}, 'contents': {'pins': json.dumps({'packages': [pin]}).encode()},
+                'file_paths': {'DEPENDENCY_PINS.json': {'source_id': 'pins'}}, 'targets': {}}
+        mappings = {'out': output, 'archive:archive': output / 'source', 'tool:lean': self.base / 'lean'}
+        rows = []; progress = []
+        for i in range(168):
+            name = 'RuntimeReadback' if i == 167 else 'Module' + str(i)
+            spec = r.core_child_spec('runtime/' + name, name, 'runtime/src/' + name + '.lean', 'archive')
+            plan['core_children'][spec['id']] = spec
+            source = b'theorem fixture : True := True.intro\n'; text = ''
+            if i == 167:
+                source = ''.join('#print axioms Test.t' + str(n) + '\n' for n in range(13)).encode()
+                text = ''.join("'Test.t" + str(n) + "' depends on axioms: [propext]\n" for n in range(13))
+            plan['contents'][name] = source
+            actual = [r.core_expand(arg, mappings) for arg in spec['argv']]
+            log = output / spec['log']; log.parent.mkdir(parents=True, exist_ok=True); log.write_bytes(text.encode())
+            (trace / f'{i:04}.log').write_bytes(log.read_bytes())
+            r.write_json(trace / f'{i:04}.json', {'index': i, 'argv': actual, 'cwd': str(output / 'project'),
+                'started_at': '2026-10-05T00:00:01Z', 'ended_at': '2026-10-05T00:00:02Z',
+                'terminal': 'COMPLETED', 'exit_code': 0, 'log_sha256': sha(log.read_bytes())})
+            row = {'suite': 'runtime', 'module': name, 'command': actual, 'source_sha256': sha(source),
+                   'exit_code': 0, 'elapsed_seconds': 0.1, 'log': spec['log'].removeprefix('original/'),
+                   'log_sha256': sha(log.read_bytes()), 'has_resource_diagnostic': False}
+            if spec['output_path']:
+                obj = output / spec['output_path']; obj.parent.mkdir(parents=True, exist_ok=True); obj.write_bytes(name.encode())
+                row['object_sha256'] = sha(obj.read_bytes())
+            rows.append(row); progress.append('runtime ' + name + ' 0')
+        value = {'status': 'COMPLETED_FRESH_REPLAY', 'mode': 'runtime', 'source_manifest_sha256': r.CORE_FILES['SOURCE_MANIFEST.json'],
+            'official_dependency_cache_trusted': True, 'custom_objects_reused': False, 'heartbeat_flags_added': False,
+            'original_runtime_mutant_retried': False, 'historical_statuses_unchanged': True, 'parallel_processes': 1,
+            'wall_clock_per_module_seconds': 180, 'runtime': {'status': 'FRESH_EXACT_CLOSURE_AND_AXIOM_READBACK_PASS',
+                'custom_modules': 167, 'axiom_readbacks': 13, 'semantic_result': 'EXACT_MUTATED_UNIVERSAL_STATEMENT_FALSE_BY_POSITIVE_MEASURE_COUNTEREXAMPLE',
+                'selector_kind': 'KERNEL_CERTIFIED_CLASSICAL_EXISTENTIAL_NOT_EVALUATED_NATIVE_NUMERALS'},
+            'dependency_identity': {'dependency_writes': False, 'official_cache_objects_trusted': True,
+                'mathlib': {**pin, 'mode': 'CLEAN_EXACT_GIT', 'tracked_clean': True, 'unexpected_lean_sources': False}, 'packages': []}, 'runs': rows}
+        result = output / 'original/RESULT.json'; r.write_json(result, value)
+        children, invocation, objects = r.core_collect_children(stage, parent, '\n'.join(progress), plan, output, mappings)
+        self.assertEqual((len(children), invocation['child_count'], len(objects)), (168, 168, 167))
+        for field, wrong in [('source_sha256', sha('foreign')), ('object_sha256', sha('old object')), ('exit_code', 1), ('module', 'Foreign')]:
+            bad = copy.deepcopy(value); bad['runs'][0][field] = wrong; r.write_json(result, bad)
+            with self.subTest(field=field), self.assertRaises(ValueError): r.core_collect_children(stage, parent, '\n'.join(progress), plan, output, mappings)
+        bad = copy.deepcopy(value); bad['runs'].pop(); r.write_json(result, bad)
+        with self.assertRaises(ValueError): r.core_collect_children(stage, parent, '\n'.join(progress), plan, output, mappings)
+        r.write_json(result, value); (trace / '0000.log').write_bytes(b'contradictory actual log')
+        with self.assertRaises(ValueError): r.core_collect_children(stage, parent, '\n'.join(progress), plan, output, mappings)
 
     def test_t14_dynamic_audit_census_does_not_count_compiler_auxiliaries_as_safe_roots(self):
         stage = {'kind': 'LEAN_AUDIT', 'argv': ['{tool:lean}', '-j1', '{project}/verification/IndependentKernelChecks.lean']}
