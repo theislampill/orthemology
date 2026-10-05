@@ -1,0 +1,165 @@
+{
+  "recorded_utc": "2026-10-05T02:19:47.230292+00:00",
+  "status": "PASS_BOUNDED_COMBINED_CANDIDATE_NOT_ADOPTED",
+  "source_project_modules": 65,
+  "fresh_project_compile_markers": 65,
+  "fresh_dependency_compile_markers": 54,
+  "all_source_and_configuration_bytes_unchanged": true,
+  "manifest_unchanged": true,
+  "no_seeded_dependencies_or_build_outputs": true,
+  "nine_dependencies_automatically_fetched": [
+    {
+      "name": "mathlib",
+      "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "official_origin": "https://github.com/leanprover-community/mathlib4.git",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    },
+    {
+      "name": "plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "official_origin": "https://github.com/leanprover-community/plausible",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "official_origin": "https://github.com/leanprover-community/LeanSearchClient",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    },
+    {
+      "name": "importGraph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "official_origin": "https://github.com/leanprover-community/import-graph",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    },
+    {
+      "name": "proofwidgets",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904",
+      "official_origin": "https://github.com/leanprover-community/ProofWidgets4",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    },
+    {
+      "name": "aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "official_origin": "https://github.com/leanprover-community/aesop",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    },
+    {
+      "name": "Qq",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "official_origin": "https://github.com/leanprover-community/quote4",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    },
+    {
+      "name": "batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "official_origin": "https://github.com/leanprover-community/batteries",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    },
+    {
+      "name": "Cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "official_origin": "https://github.com/leanprover/lean4-cli",
+      "tracked_sources_clean": true,
+      "no_alternate_object_store": true
+    }
+  ],
+  "build_exit_code": 0,
+  "inherited_warning_count": 22,
+  "intensional_warning_count": 0,
+  "extensional_warning_count": 0,
+  "configured_git_url_rewrite_count": 0,
+  "official_toolchain_reused": {
+    "recorded_utc_system_clock": "2026-10-05T01:04:23.499600+00:00",
+    "release_page": "https://github.com/leanprover/lean4/releases/tag/v4.19.0",
+    "tag": "v4.19.0",
+    "asset_url": "https://github.com/leanprover/lean4/releases/download/v4.19.0/lean-4.19.0-linux.tar.zst",
+    "asset_size": 343842845,
+    "download_bytes": 343842845,
+    "archive_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+    "vendor_digest": null,
+    "vendor_digest_note": "Release API supplies no digest; local SHA256 records downloaded official HTTPS artifact, not independent vendor checksum verification.",
+    "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "lake_version": "Lake version 5.0.0-6caaee8 (Lean version 4.19.0)",
+    "mathlib_remote": "https://github.com/leanprover-community/mathlib4.git",
+    "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "mathlib_tag": "v4.19.0",
+    "mathlib_toolchain": "leanprover/lean4:v4.19.0"
+  },
+  "transport_caveat": "Official HTTPS Git URLs were used through the execution environment ordinary Git/network path. This is not independently authenticated direct vendor-network transport.",
+  "toolchain_caveat": "The recorded official release archive SHA-256 is a local digest; no independent vendor checksum was available.",
+  "checks_exit_code": 0,
+  "source_lock_sha256": "28daa5deacd7358a75f1ccf7b2beededd4b323218dfd3c0dcde37c64415117e7",
+  "checks": {
+    "old_public_theorem_declarations_axiom_checked": 101,
+    "extensional_namespace_constants_axiom_checked": 156,
+    "extensional_actual_theorem_declarations": 58,
+    "decisive_names_confirmed_theorems": 11,
+    "exact_retained_compiled_constructor_comparisons": 54,
+    "exact_new_compiled_schema_comparisons": 2,
+    "safe_namespace_roots": 140,
+    "logical_dependency_closure": 2368,
+    "unsafe_or_partial_logical_dependencies": 0,
+    "compiler_executable_auxiliaries_not_in_logical_closure": 16,
+    "expected_type_rejection_controls": 9,
+    "negative_controls_meaning": "Interface type rejection, not logical independence.",
+    "source_guard_mutation_rejections": 5,
+    "allowed_transitive_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "custom_axioms_or_sorryAx": false
+  },
+  "review_bindings": {
+    "author_freeze_sha256": "e8d33e0bfcb0fd3007ae64a84040e610c81678d86ced3050e09d8c6ba07e02c4",
+    "author_frozen_entries_checksum_checked": 22,
+    "author_verification_receipt_sha256": "7c6a464ccc6a8f6a0cfd1df122b14401e83f68bd94a417fa31ca0fef5dc92723",
+    "independent_semantic_kernel_review_sha256": "130aa4996ceab6c13b3eda2f618687b274d9077d05d0df67789b0ed05d5b17d1",
+    "independent_semantic_review_evidence_manifest_sha256": "4e4615e769410d418135eb1b9476b9b3ab9f288bdc917f702eae9734af8d588c",
+    "independent_semantic_review_disposition": "PASS for the bounded candidate; separate from adoption and portability."
+  },
+  "execution": {
+    "build_command": "MATHLIB_NO_CACHE_ON_UPDATE=1 lake build",
+    "checks_command": "bash verification/run_checks.sh",
+    "manual_lean_path": false,
+    "fresh_cache": true,
+    "dependency_cache_fetch_command_used": false,
+    "toolchain_download_repeated": false,
+    "source_and_build_configuration_unchanged_since_clean_bootstrap": true,
+    "final_verification_sources_match_tested_bytes": true
+  },
+  "verification_sources_sha256": {
+    "verification/AxiomAudit.lean": "eb7b45593a3248d8166f47dbf4d7f30f51218d92bc91264c322e6ebaa53a2173",
+    "verification/CheckCombined.lean": "fce8c1ed518885ee18a4f21894a6dab922c163743ace680af28d1fa9346cd51d",
+    "verification/CheckTheorems.lean": "f059e36ba58df9d975b8d50909134a385f388177657d4d317a88624e6b728b5a",
+    "verification/CombinedAxiomAudit.lean": "b89fb44ce3c9029c708889ad58df13142edfbc6ca4c9b61635a4d14aef0939a5",
+    "verification/IndependentKernelChecks.lean": "29efba63a8bb81d82a0a3c8fb2bbab68cab27036be5c550adf3b1c87c588b9f0",
+    "verification/check_negative_controls.py": "1cb604255f2dbee1ba0281a5deb405a17474da143d766278b5fd472ecb02335c",
+    "verification/negative-controls/CurrentHasIsNotHasPlus.lean": "408404c9324ff3a1ddabcb93a9f22ca317eb893ccf9ec988c89d4300294b7b66",
+    "verification/negative-controls/ExtensionalIsNotCurrent.lean": "c1ba98538103ef2eecd62b0e309d7d494e77689c3967d81325e5088dd90eb655",
+    "verification/negative-controls/ExtensionalIsNotPlus.lean": "29fc33ef662ca851e9500f91687cd8aec478d4a891a3267c2043eed12f582167",
+    "verification/negative-controls/MissingAllScope.lean": "9ce227a5337b05e70ce8da58ad0f0a290f07c72beae27f8386e45cd0e755ae25",
+    "verification/negative-controls/MissingClosure.lean": "edd2deb3c8b864834088992bc05115df35e6d623296b785f0fb6807f0a7a055b",
+    "verification/negative-controls/MissingPiScope.lean": "67c1570b7e6b6d3b49dac0c664dab8a2a3f4ad432753295ddba233a2e387e662",
+    "verification/negative-controls/NoninhabitationPolarity.lean": "f163f5fd43ebeff925eac33802eb06c300cf8979d34465f1765e5d7fb42878c4",
+    "verification/negative-controls/PositiveCarrierIsNotRaw.lean": "352707bb164385cbac4212b278115a1c8e7da96a86ba57659527f94ed52f2bd4",
+    "verification/negative-controls/RawNoninhabitationPolarity.lean": "dd787629ff2128b1c61136a1578034cb76eb90e6f40ca60af1d17fca8c6f0967",
+    "verification/run_checks.sh": "9bf7ccae2eebada4030fa219fa74cfc2cac93f72d861a477ac8a95aaa9d73be1",
+    "verification/verify_sources.py": "5830996846ad5dfb951ad742c5904bb3d2d80e1940cf6c9c4d04789189ee3bb6"
+  },
+  "evidence_fingerprints": {
+    "clean_build_log_sha256": "95070442f75a65db164b19f0e6f88b5b3dc8792884efc98df44651d8709bca26",
+    "final_checks_log_sha256": "c1d41e489264210aa2b11200c804035b7a3ef12fc55f81866869146be00700fb",
+    "independent_reviewer_checker_sha256": "29efba63a8bb81d82a0a3c8fb2bbab68cab27036be5c550adf3b1c87c588b9f0"
+  },
+  "distribution": "Source and concise public reproduction metadata only. Full raw review reports and build logs are excluded."
+}
