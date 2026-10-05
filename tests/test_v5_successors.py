@@ -50,6 +50,115 @@ class SuccessorTests(unittest.TestCase):
         add_suite(self.root, self.bundle)
         self.assertEqual(self.validate()['fresh_qualified_results'], 1)
 
+    def mixed_component_scope(self):
+        self.bundle['results'][0].update(math_form='MIXED', claim_scope='COMPONENT')
+        self.bundle['statuses'][0].update(inherited_evidence='MIXED_SCOPED',
+            fresh_evidence='FRESH_KERNEL_COMPONENTS', implementation_reach='FORMAL_COMPONENT')
+
+    def test_qualified_receipt_supports_scoped_component_evidence(self):
+        for math_form in ['FORMAL', 'MIXED']:
+            with self.subTest(math_form=math_form):
+                self.bundle, self.anchor = make_bundle(self.root)
+                suite, receipt = add_suite(self.root, self.bundle)
+                original_receipt = deepcopy(receipt)
+                self.mixed_component_scope()
+                self.bundle['results'][0]['math_form'] = math_form
+                rebind(self.bundle)
+                self.assertEqual(self.validate()['fresh_qualified_results'], 0)
+                self.assertEqual(self.bundle['receipts'], [original_receipt])
+                self.assertEqual(self.bundle['statuses'][0]['fresh_evidence'], 'FRESH_KERNEL_COMPONENTS')
+
+    def test_one_qualified_receipt_supports_formal_and_mixed_results(self):
+        suite, receipt = add_suite(self.root, self.bundle)
+        component = deepcopy(self.bundle['results'][0])
+        component.update(id='T09-MIXED-COMPONENT', family='mixed-fixture-family',
+                         math_form='MIXED', claim_scope='COMPONENT')
+        status = deepcopy(self.bundle['statuses'][0])
+        status.update(id=component['id'], inherited_evidence='MIXED_SCOPED',
+                      fresh_evidence='FRESH_KERNEL_COMPONENTS', implementation_reach='FORMAL_COMPONENT')
+        self.bundle['results'].append(component)
+        self.bundle['statuses'].append(status)
+        calculus = deepcopy(self.bundle['calculus'][0])
+        calculus['id'] = component['id']
+        self.bundle['calculus'].append(calculus)
+        self.bundle['avenues'][0]['result_ids'].append(component['id'])
+        self.bundle['selectors'].append({'family': component['family'], 'result_id': component['id'],
+                                         'statement_sha256': digest(component)})
+        suite['result_families'].append(component['family'])
+        receipt['suite_sha256'] = digest(suite)
+        original_receipt = deepcopy(receipt)
+        rebind(self.bundle)
+        summary = self.validate()
+        self.assertEqual(summary['results'], 2)
+        self.assertEqual(summary['fresh_qualified_results'], 1)
+        self.assertEqual(self.bundle['receipts'], [original_receipt])
+        self.assertEqual(status['receipt_ids'], self.bundle['statuses'][0]['receipt_ids'])
+        self.assertEqual(status['fresh_evidence'], 'FRESH_KERNEL_COMPONENTS')
+
+    def test_component_receipt_still_supports_component_evidence(self):
+        suite, receipt = add_suite(self.root, self.bundle)
+        self.mixed_component_scope()
+        receipt.update(outcome='FRESH_KERNEL_COMPONENTS', proof_scope='COMPONENTS')
+        rebind(self.bundle)
+        self.assertEqual(self.validate()['fresh_qualified_results'], 0)
+
+    def test_qualified_receipt_cannot_promote_mixed_scope(self):
+        for field, value in [('claim_scope', 'WHOLE_RESULT'), ('claim_scope', 'DECLARED_SUITE'),
+                             ('fresh_evidence', 'QUALIFIED_DECLARED_SUITE'),
+                             ('inherited_evidence', 'KERNEL_DECLARED_SUITE')]:
+            with self.subTest(field=field, value=value):
+                self.bundle, self.anchor = make_bundle(self.root)
+                add_suite(self.root, self.bundle)
+                self.mixed_component_scope()
+                record = self.bundle['results'][0] if field == 'claim_scope' else self.bundle['statuses'][0]
+                record[field] = value
+                self.reject('Mixed written result requires component kernel scope', reseal=True)
+
+    def test_qualified_receipt_cannot_make_ordinary_component_formal(self):
+        add_suite(self.root, self.bundle)
+        self.mixed_component_scope()
+        self.bundle['results'][0]['math_form'] = 'ORDINARY'
+        self.reject('Written result cannot acquire whole kernel/formal status', reseal=True)
+
+    def test_component_evidence_rejects_receipt_from_unbound_suite(self):
+        suite, receipt = add_suite(self.root, self.bundle)
+        self.mixed_component_scope()
+        other_suite = deepcopy(suite)
+        other_suite['id'] = 'other-suite'
+        self.bundle['suites'].append(other_suite)
+        receipt.update(suite_id=other_suite['id'], suite_sha256=digest(other_suite))
+        self.reject('Cross-family receipt outside result suites', reseal=True)
+
+    def test_component_evidence_requires_exact_source_domain_calculus(self):
+        for field, value in [('source_ids', ['source-review']), ('domain', 'BARE_INPUT'),
+                             ('calculus', 'OTHER')]:
+            with self.subTest(field=field):
+                self.bundle, self.anchor = make_bundle(self.root)
+                add_suite(self.root, self.bundle)
+                self.mixed_component_scope()
+                self.bundle['results'][0][field] = value
+                if field == 'source_ids':
+                    self.bundle['reviews'][0]['reviewed_source_ids'] = value
+                rebind(self.bundle)
+                self.bundle['bindings'][0]['suite_targets'][0]['target_ids'] = ['target-ok']
+                self.reject('Result target source/domain/calculus mismatch')
+
+    def test_finite_or_failed_receipt_cannot_support_component_evidence(self):
+        for outcome, proof_scope in [('FINITE_ONLY', 'FINITE'), ('FAILED', 'NONE'),
+                                     ('RESOURCE_INCONCLUSIVE', 'NONE')]:
+            with self.subTest(outcome=outcome):
+                self.bundle, self.anchor = make_bundle(self.root)
+                suite, receipt = add_suite(self.root, self.bundle)
+                self.mixed_component_scope()
+                receipt.update(outcome=outcome, proof_scope=proof_scope)
+                if outcome == 'FAILED':
+                    receipt['exit_code'] = 1
+                    receipt['stages'][0]['exit_code'] = 1
+                elif outcome == 'RESOURCE_INCONCLUSIVE':
+                    receipt['exit_code'] = None
+                    receipt['stages'][0].update(terminal='TIMEOUT', exit_code=None)
+                self.reject('Fresh evidence does not match receipt outcome', reseal=True)
+
     def test_deleted_frozen_file_rejected(self):
         (self.root / OLD / 'registry.json').unlink()
         self.reject('Frozen|preserv')

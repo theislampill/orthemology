@@ -626,7 +626,10 @@ def _results(bundle, sources, reviews, projections, suites, receipts):
         if fresh == 'QUALIFIED_DECLARED_SUITE':
             require(set(rec['suite_id'] for rec in own_receipts) == set(row['suite_ids']) and row['suite_ids']
                     and all(rec['outcome'] == fresh for rec in own_receipts), 'Incomplete declared suite qualification')
-        elif fresh in {'FINITE_ONLY', 'FRESH_KERNEL_COMPONENTS'}:
+        elif fresh == 'FRESH_KERNEL_COMPONENTS':
+            require(any(rec['outcome'] in {'FRESH_KERNEL_COMPONENTS', 'QUALIFIED_DECLARED_SUITE'}
+                        for rec in own_receipts), 'Fresh evidence does not match receipt outcome')
+        elif fresh == 'FINITE_ONLY':
             require(any(rec['outcome'] == fresh for rec in own_receipts), 'Fresh evidence does not match receipt outcome')
         if fresh in {'BLOCKED_EXTERNAL_INPUT', 'BLOCKED_TOOLCHAIN', 'RESOURCE_INCONCLUSIVE', 'FAILED'} and own_receipts:
             require(any(rec['outcome'] == fresh for rec in own_receipts), 'Failure/block disposition lacks matching receipt')
