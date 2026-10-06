@@ -1,0 +1,187 @@
+[
+  {
+    "name": "P02.PythonExpr.cost_positive",
+    "source": "src/PythonExprBounds.lean",
+    "line": 21
+  },
+  {
+    "name": "P02.PythonExpr.tick_of_room",
+    "source": "src/PythonExprBounds.lean",
+    "line": 24
+  },
+  {
+    "name": "P02.PythonExpr.check_of_width",
+    "source": "src/PythonExprBounds.lean",
+    "line": 28
+  },
+  {
+    "name": "P02.PythonExpr.power_of_width",
+    "source": "src/PythonExprBounds.lean",
+    "line": 31
+  },
+  {
+    "name": "P02.PythonExpr.reference_bounded",
+    "source": "src/PythonExprBounds.lean",
+    "line": 36
+  },
+  {
+    "name": "P02.PythonExpr.expression_bounded",
+    "source": "src/PythonExprBounds.lean",
+    "line": 128
+  },
+  {
+    "name": "P02.PythonExpr.expression_complete_finite",
+    "source": "src/PythonExprBounds.lean",
+    "line": 136
+  },
+  {
+    "name": "P02.PythonExpr.dictionary_read_write",
+    "source": "src/PythonExprCore.lean",
+    "line": 34
+  },
+  {
+    "name": "P02.PythonExpr.dictionary_read_missing",
+    "source": "src/PythonExprCore.lean",
+    "line": 43
+  },
+  {
+    "name": "P02.PythonExpr.lower_ofLean",
+    "source": "src/PythonExprCore.lean",
+    "line": 100
+  },
+  {
+    "name": "P02.PythonExpr.binaryValue_correct",
+    "source": "src/PythonExprCore.lean",
+    "line": 109
+  },
+  {
+    "name": "P02.PythonExpr.value_correct",
+    "source": "src/PythonExprCore.lean",
+    "line": 116
+  },
+  {
+    "name": "P02.PythonExpr.result_bind_ok",
+    "source": "src/PythonExprCore.lean",
+    "line": 146
+  },
+  {
+    "name": "P02.PythonExpr.result_bind_error",
+    "source": "src/PythonExprCore.lean",
+    "line": 148
+  },
+  {
+    "name": "P02.PythonExpr.result_pure",
+    "source": "src/PythonExprCore.lean",
+    "line": 150
+  },
+  {
+    "name": "P02.PythonExpr.tick_ok_iff",
+    "source": "src/PythonExprCore.lean",
+    "line": 195
+  },
+  {
+    "name": "P02.PythonExpr.check_ok_iff",
+    "source": "src/PythonExprCore.lean",
+    "line": 205
+  },
+  {
+    "name": "P02.PythonExpr.power_ok_iff",
+    "source": "src/PythonExprCore.lean",
+    "line": 212
+  },
+  {
+    "name": "P02.PythonExpr.power_width",
+    "source": "src/PythonExprCore.lean",
+    "line": 221
+  },
+  {
+    "name": "P02.PythonExpr.reference_spec",
+    "source": "src/PythonExprCore.lean",
+    "line": 223
+  },
+  {
+    "name": "P02.PythonExpr.reference_unbounded",
+    "source": "src/PythonExprCore.lean",
+    "line": 301
+  },
+  {
+    "name": "P02.PythonExpr.runSteps_zero",
+    "source": "src/PythonExprMachine.lean",
+    "line": 49
+  },
+  {
+    "name": "P02.PythonExpr.runSteps_one",
+    "source": "src/PythonExprMachine.lean",
+    "line": 51
+  },
+  {
+    "name": "P02.PythonExpr.runSteps_add",
+    "source": "src/PythonExprMachine.lean",
+    "line": 56
+  },
+  {
+    "name": "P02.PythonExpr.expression_stack_exact",
+    "source": "src/PythonExprMachine.lean",
+    "line": 70
+  },
+  {
+    "name": "P02.PythonExpr.expression_eq_reference",
+    "source": "src/PythonExprMachine.lean",
+    "line": 136
+  },
+  {
+    "name": "P02.PythonExpr.expression_success_sound",
+    "source": "src/PythonExprMachine.lean",
+    "line": 144
+  },
+  {
+    "name": "P02.PythonExpr.expression_success_ticks",
+    "source": "src/PythonExprMachine.lean",
+    "line": 150
+  },
+  {
+    "name": "P02.PythonExpr.expression_complete_unbounded",
+    "source": "src/PythonExprMachine.lean",
+    "line": 155
+  },
+  {
+    "name": "P02.PythonExpr.onlyResource_bind",
+    "source": "src/PythonExprSafety.lean",
+    "line": 12
+  },
+  {
+    "name": "P02.PythonExpr.tick_only_resource",
+    "source": "src/PythonExprSafety.lean",
+    "line": 18
+  },
+  {
+    "name": "P02.PythonExpr.check_only_resource",
+    "source": "src/PythonExprSafety.lean",
+    "line": 22
+  },
+  {
+    "name": "P02.PythonExpr.power_only_resource",
+    "source": "src/PythonExprSafety.lean",
+    "line": 26
+  },
+  {
+    "name": "P02.PythonExpr.reference_only_resource",
+    "source": "src/PythonExprSafety.lean",
+    "line": 30
+  },
+  {
+    "name": "P02.PythonExpr.expression_failure_is_resource",
+    "source": "src/PythonExprSafety.lean",
+    "line": 68
+  },
+  {
+    "name": "P02.PythonExpr.expression_no_stack_failure",
+    "source": "src/PythonExprSafety.lean",
+    "line": 74
+  },
+  {
+    "name": "P02.PythonExpr.expression_success_values_agree",
+    "source": "src/PythonExprSafety.lean",
+    "line": 82
+  }
+]

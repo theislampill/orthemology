@@ -1,0 +1,45 @@
+{
+  "scope": "Exactly five cache-utility trace metadata files; proof object bytes remain exact. Existing restored path prefixes are parameterized only for in-memory comparison. No dependency bytes are written.",
+  "original_cache_manifest_sha256": "7dc08ad35391b67f1fb930b1315432ec17321dc6ecfad13b4689f32ade95d2f9",
+  "allowed_paths": [
+    ".lake/build/lib/lean/Cache/Hashing.trace",
+    ".lake/build/lib/lean/Cache/IO.trace",
+    ".lake/build/lib/lean/Cache/Lean.trace",
+    ".lake/build/lib/lean/Cache/Main.trace",
+    ".lake/build/lib/lean/Cache/Requests.trace"
+  ],
+  "files": [
+    {
+      "path": ".lake/build/lib/lean/Cache/Hashing.trace",
+      "original_pin_sha256": "5b7cc67542b8d40d72d19868798a0fe6afe550e95b8465e59a710961b84883ce",
+      "original_pin_bytes": 765,
+      "replacement_count": 1
+    },
+    {
+      "path": ".lake/build/lib/lean/Cache/IO.trace",
+      "original_pin_sha256": "a08403b6de761b0bbebc7743948bf7e3f0fe10ca5428f98773ee646fe4da8a4a",
+      "original_pin_bytes": 744,
+      "replacement_count": 1
+    },
+    {
+      "path": ".lake/build/lib/lean/Cache/Lean.trace",
+      "original_pin_sha256": "a8a27c9a2dea5b33267486bd7821c94185268c422425ce891aaf0660d9df25be",
+      "original_pin_bytes": 752,
+      "replacement_count": 1
+    },
+    {
+      "path": ".lake/build/lib/lean/Cache/Main.trace",
+      "original_pin_sha256": "13bd6eebac8c5b65fb02fff5a0b70085ec3c326986edec6d93cadfdfe182a17b",
+      "original_pin_bytes": 753,
+      "replacement_count": 1
+    },
+    {
+      "path": ".lake/build/lib/lean/Cache/Requests.trace",
+      "original_pin_sha256": "c003754807f5a96235aba0fb8e1cb391aee998de06ba3b65d0f506a07f5e9d26",
+      "original_pin_bytes": 769,
+      "replacement_count": 1
+    }
+  ],
+  "original_relocation_record_sha256": "d14ffdea106264773d5b708b765a078e1a8a3f529bd909c08dcc806c3d4c446b",
+  "comparison_rule": "Either match the original pinned trace exactly, or replace exactly one supplied restore prefix by the separately supplied reference prefix and obtain the original pinned bytes, size and hash. Prefix values are external environment arguments, never bundled host paths. No normalized file is saved."
+}

@@ -1,0 +1,141 @@
+{
+  "schema": "independent-orthemic-existence-certificate-acceptance-v2",
+  "status": "PASS_BOUNDED_TYPED_AST_EXISTENCE_CHECKER_AND_CHECKED_COMPOSITION",
+  "accepted_utc": "2026-10-03T08:58:21.846921+00:00",
+  "scope": "Exact finite rational typed input/AST; acceptance soundness, finite-certificate existence completeness, same-input checked body union, separate checked parent extension, actual structured input envelope",
+  "full_endpoint_verified": true,
+  "author_packet": {
+    "version": "v4",
+    "source_manifest_sha256": "5a5e4e8a129b70fe713e76f7b24a97823751264fe4bd67a280682b09a407979f",
+    "public_manifest_sha256": "9d8675b5d180d35651ee3a95aec28b3a977f52c0a46b7e9831ca88366736cfbd",
+    "zip_sha256": "7879f8f4011a7596109760d7d113d3bea5a59253df885e39f39f4956992d318a",
+    "zip_bytes": 636293
+  },
+  "source_identity": {
+    "production_modules_new": 8,
+    "production_modules_inherited": 87,
+    "all_scientific_control_mutant_source_files": 108,
+    "new_sources": [
+      {
+        "path": "src/CertificateData.lean",
+        "sha256": "e05d663571ba1cdf8e2ad04f19442721d4f03ee5bca46c0ad185e5d2c2f0e0c6",
+        "bytes": 4576,
+        "group": "own",
+        "module": "CertificateData"
+      },
+      {
+        "path": "src/CertificateOrder.lean",
+        "sha256": "11975a5518aa70a8b3cb264a07b155611dfc84992a75fc4fe2a417e46813bb0e",
+        "bytes": 2179,
+        "group": "own",
+        "module": "CertificateOrder"
+      },
+      {
+        "path": "src/CertificatePath.lean",
+        "sha256": "d8e26f21fa37cd8ddf250ab9b440a1b25da481d201e66f3913ce822620e799f8",
+        "bytes": 9295,
+        "group": "own",
+        "module": "CertificatePath"
+      },
+      {
+        "path": "src/CertificateSyntax.lean",
+        "sha256": "e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a",
+        "bytes": 6113,
+        "group": "own",
+        "module": "CertificateSyntax"
+      },
+      {
+        "path": "src/CertificateSoundness.lean",
+        "sha256": "399829e271d3b6db65cfd077a68c15ad9a2e2f4d59d3957a2f30b6f2cd37a4ba",
+        "bytes": 7316,
+        "group": "own",
+        "module": "CertificateSoundness"
+      },
+      {
+        "path": "src/CertificateCompleteness.lean",
+        "sha256": "94ad1e2f7d6e7ef106b108a79459a4b5103b15867711bebb7daea76005934953",
+        "bytes": 11356,
+        "group": "own",
+        "module": "CertificateCompleteness"
+      },
+      {
+        "path": "src/CertificateComposition.lean",
+        "sha256": "7ef0cb1db2fffa67642c361520560fffc53cc0d8b39530bec92f56070a999c0e",
+        "bytes": 17387,
+        "group": "own",
+        "module": "CertificateComposition"
+      },
+      {
+        "path": "src/CertificateBinding.lean",
+        "sha256": "206f1197ac41521668bfbb2939d6c817bfe1d114e7f32066e679ce038e999a82",
+        "bytes": 1195,
+        "group": "own",
+        "module": "CertificateBinding"
+      }
+    ]
+  },
+  "execution": {
+    "first_independent_custom_cold_rebuild_modules": 87,
+    "all_new_modules_cold_replayed": true,
+    "portable_full_replay_version": "v2",
+    "portable_commands": 120,
+    "portable_expected_guard_rejections": 4,
+    "portable_raw_receipt_sha256": "c32254bb36cc6ffd033e5ea8ad55b302c3c347eee359bbcf2dda95033e226ad1",
+    "independent_companion_commands": 15,
+    "independent_additional_mutations_detected": 5,
+    "independent_companion_raw_receipt_sha256": "506a8c4f0f09974fff9a49451c10fd6281eecdb4390eab9048259d7aaf4d0458",
+    "author_or_historical_custom_objects_credited": false,
+    "qualified_consumer_local_cold_objects_used_for_companion": true,
+    "jobs_per_lane": 1,
+    "module_wall_seconds": 180,
+    "added_heartbeat_overrides": false,
+    "new_modules_default_heartbeats": true,
+    "unchanged_inherited_heartbeat_settings": {
+      "FiniteChainTrajectory": 800000,
+      "GeneratedParitySuccess": 800000
+    },
+    "v4_bridge": "Scientific/control source bytes unchanged; documentary changes and one replay-result metadata literal change; reversing that literal yields byte-identical v2 replay.py. No fresh full execution of v4 wrapper bytes claimed.",
+    "v4_bridge_sha256": "48a0cd175c4afbcbddb628a2c377bc325280d0732394c7d8cfe6595c1b135970"
+  },
+  "verification": {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "full_executable_definition_opaque_implemented_by_closure_count": 1068,
+    "forbidden_solver_semantic_choice_powerset_dependencies": [],
+    "codegeneration_modules": 6,
+    "linked_standalone_execution_claimed": false,
+    "portable_refusal_controls": 5,
+    "source_neutral_report_sha256": "cdad7bcf0ae847fa3319f164eb7a755a25a51a053982372664b68b92e8beb8a7",
+    "review_source_manifest_sha256": "4ece3b647e8ed7d3e8824d942efb3b2cba667ce9d2b6a1b0ec53aba72d434ffd",
+    "exact_final_author_packet_source_only_verification": true
+  },
+  "submission_boundary": "Finite typed AST data. No permission to execute arbitrary producer Lean/Python. Trusted construction/decoding enforcing Fin/index/AST conditions is still required.",
+  "untrusted_admission_apis": [
+    "bodyCheck",
+    "check",
+    "checkedMerge",
+    "checkedLinkParent",
+    "boundCheck"
+  ],
+  "raw_canonicalizers_are_not_untrusted_admission": [
+    "merge",
+    "sortBody",
+    "linkParent"
+  ],
+  "exclusions": [
+    "raw-byte parser/upload service",
+    "direct certified controller execution",
+    "finite-state policy guarantee",
+    "negative-complete certification",
+    "general real-valued transition inputs without a bridge",
+    "formal Lean or binary complexity result",
+    "polynomial witness-size claim",
+    "source bootstrap of trusted compiler/library",
+    "physical/source/normative authority",
+    "foundational or historical PCC novelty",
+    "publication or deployment approval"
+  ]
+}

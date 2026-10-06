@@ -1,0 +1,7 @@
+import PythonExprMachine
+open P02.PythonExpr
+#check dictionary_read_write
+#check expression_stack_exact
+#check expression_success_sound
+#check expression_success_ticks
+#check expression_complete_unbounded

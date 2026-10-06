@@ -1,0 +1,212 @@
+{
+  "status": "PASS_INDEPENDENT_P1_SCOPED_REVIEW",
+  "finished_utc": "2026-10-03T06:18:09.999785+00:00",
+  "scope": "Exact source-shaped expression algorithm correspondence with reviewed Python binding; no verified frontend, CPython, complete runner/parser or tranche closure claim.",
+  "accepted_source_manifest_sha256": "d0177de1ebeb8de4ff71898dbccc729ca420c70a50c307f1bacccd6d2c38d43d",
+  "cold_compiled_v2_manifest_sha256": "1894a3290568101edb498df6f359be7abbaaedf7a0e864d0afc113a17c240a66",
+  "pinned_python_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+  "scientific_modules": 4,
+  "public_theorems": 37,
+  "private_dictionary_lemmas": 1,
+  "author_lean_controls": 21,
+  "reviewer_universal_consumers": 4,
+  "reviewer_lean_controls": 28,
+  "python_differential_cases": 266760,
+  "python_seeded_boundary_cases": 1593,
+  "python_behavior_mutations_detected": 18,
+  "author_python_edge_cases": 26,
+  "author_source_mutations_rejected": 5,
+  "machine_mutations_rejected": 4,
+  "valid_domain_executable_lines_observed": 28,
+  "standard_axioms_only": true,
+  "fresh_local_dependency": true,
+  "author_custom_objects_reused": false,
+  "official_dependency_cache_trusted": true,
+  "live_dependency_bytes_revalidated": true,
+  "dependency_git_clean_claim": "Historical only; current restored archive bytes verified instead",
+  "historical_timeout_probes_retried": false,
+  "timeout_negative_control_credit": false,
+  "new_resource_inconclusive_runs": false,
+  "source_unchanged": true,
+  "unexpected_custom_objects": false,
+  "custom_object_symlinks": false,
+  "mathematical_gaps": [],
+  "records": [
+    {
+      "module": "P02A2.ObserverCore",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T060849294413Z-P02A2.ObserverCore/RESULT.json",
+      "receipt_sha256": "242b6b42ba739438aa790e45d106e7aee0b158f6547fc5b7aa89fa924c0f7d93",
+      "source_sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+      "exit_code": 0,
+      "elapsed_seconds": 5.388330046000192
+    },
+    {
+      "module": "PythonExprCore",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T060854730925Z-PythonExprCore/RESULT.json",
+      "receipt_sha256": "03e7ea7d8bdffa6601c1e6e8ed9ae300233e339de49f880d2d25f08a0f8ecb5f",
+      "source_sha256": "9a120790a308a57f7fa0e8d0480cf80b517197ddd429960244ea2d5f73c66867",
+      "exit_code": 0,
+      "elapsed_seconds": 6.949252111007809
+    },
+    {
+      "module": "PythonExprMachine",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T060901731888Z-PythonExprMachine/RESULT.json",
+      "receipt_sha256": "db22bf9da3b26cfb84ea36b31e0497258ad48241c238f12ca815b5929d3c34cd",
+      "source_sha256": "22d97f7d120194c258791867028edddc5921b8d3ea65d35f73723336019a1077",
+      "exit_code": 0,
+      "elapsed_seconds": 4.413932280993322
+    },
+    {
+      "module": "PythonExprBounds",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T060906192988Z-PythonExprBounds/RESULT.json",
+      "receipt_sha256": "4a104158c2b06cfd385033a904208a57d5fb59076a780331705104bd392cc5ed",
+      "source_sha256": "f3a73c94456e1380a0272eb66b3403db803c0c0f37a9941631eb477847a07999",
+      "exit_code": 0,
+      "elapsed_seconds": 4.178206732001854
+    },
+    {
+      "module": "PythonExprSafety",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T060910417428Z-PythonExprSafety/RESULT.json",
+      "receipt_sha256": "c9b7766aa8460855d1683b1c0f9deb5445a6b92f5f7f316fc3a5a6e719ce6ca2",
+      "source_sha256": "3f962df5e2b98f0b294ee2726b10b0c10e2fdfc11cdecee8b22f965c7ab05a25",
+      "exit_code": 0,
+      "elapsed_seconds": 3.8386672210035613
+    },
+    {
+      "module": "P1Required",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T060914299575Z-P1Required/RESULT.json",
+      "receipt_sha256": "f4433952fb3b16036cc4753de32e5c130053b10a7bb776942afde16e713ffc52",
+      "source_sha256": "a158e5c07e7f52ab29d5f242553855edf14a1d4071b2027dffe223944b5bdf3f",
+      "exit_code": 0,
+      "elapsed_seconds": 3.568421649004449
+    },
+    {
+      "module": "P1Controls",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T060917916070Z-P1Controls/RESULT.json",
+      "receipt_sha256": "c83fa49b290abb4c7193cec7670ed8297329352b5dbd9f456b5c4952cac01dd6",
+      "source_sha256": "d3b13285aafcaa5bae0d1a466365433f246f8ae385b2a29afe31983689220a46",
+      "exit_code": 0,
+      "elapsed_seconds": 5.767665446008323
+    },
+    {
+      "module": "P1Axioms",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T060923728682Z-P1Axioms/RESULT.json",
+      "receipt_sha256": "b38a65410c2b3458f44847da16110144afdfeceb60a5fb2612219ae38a9b9acb",
+      "source_sha256": "5dfc2517640304ef2d5a08ee5ca78bf3795da8a620f3f13f2fb75ef22b4e9992",
+      "exit_code": 0,
+      "elapsed_seconds": 4.022174355995958
+    },
+    {
+      "module": "ReviewerContract",
+      "expectation": "ACCEPT",
+      "receipt": "evidence/replay-attempts/20261003T061323213795Z-ReviewerContract/RESULT.json",
+      "receipt_sha256": "a4c921b0315904e30821b857010369a24683be4df3c7bb7c18c549b0861d1352",
+      "source_sha256": "44afb191c7a8d17e7b561a8d9629ed4094a247110e3b44f0bf8041c2e2fd7de8",
+      "exit_code": 0,
+      "elapsed_seconds": 9.186629495990928
+    },
+    {
+      "module": "OperandOrderMutant",
+      "expectation": "REJECT",
+      "receipt": "evidence/replay-attempts/20261003T061047697126Z-OperandOrderMutant/RESULT.json",
+      "receipt_sha256": "1b233fea66e5f59a9478a6ffbd8ba01767d0d49cbde359af16875492e73b200b",
+      "source_sha256": "dfa201676d9e775063a90767470fdf022007ed6554b349589335d4733ddbca7c",
+      "exit_code": 1,
+      "elapsed_seconds": 4.402081755994004
+    },
+    {
+      "module": "ReadyTickMutant",
+      "expectation": "REJECT",
+      "receipt": "evidence/replay-attempts/20261003T061052143906Z-ReadyTickMutant/RESULT.json",
+      "receipt_sha256": "07f370a7cd9d65cdb48580d59d914d83368d9fb5d7577f55d84ef4f35e7b1cf2",
+      "source_sha256": "4457b5564e7cec234f3515899fc5b67dbce32a9b233ba3c19249bd5f9f9745ba",
+      "exit_code": 1,
+      "elapsed_seconds": 4.583001060993411
+    },
+    {
+      "module": "RegisterWidthMutant",
+      "expectation": "REJECT",
+      "receipt": "evidence/replay-attempts/20261003T061056772805Z-RegisterWidthMutant/RESULT.json",
+      "receipt_sha256": "59bb101f96bf12e43d80cd7000fe8a890bd787fbeabfc336bd5ea7ad863ffc8e",
+      "source_sha256": "dab91418c44075d35146fe54e714fdaa612bed7489a47c2a020a97dd5c7c10cb",
+      "exit_code": 1,
+      "elapsed_seconds": 4.336571210005786
+    },
+    {
+      "module": "PowerFaultMutant",
+      "expectation": "REJECT",
+      "receipt": "evidence/replay-attempts/20261003T061101159090Z-PowerFaultMutant/RESULT.json",
+      "receipt_sha256": "fb895f0d1df4a4298a411e486be211763ae571215446975d6645ddd12d25048a",
+      "source_sha256": "1f8bbfa5aae143f4ade726c4dc56c1390814c20bf0cce54b6cb5007b6fd8f554",
+      "exit_code": 1,
+      "elapsed_seconds": 4.4624924499948975
+    }
+  ],
+  "supporting_evidence": [
+    {
+      "path": "evidence/AUTHOR_PYTHON_EDGES_REPLAY.json",
+      "sha256": "40d94e808ff114348ad5207a62ae3867701dc162cdce4316170972186742a990"
+    },
+    {
+      "path": "evidence/AUTHOR_SOURCE_CONTRACT_REPLAY.log",
+      "sha256": "d1276a2d9d79b9ed0a61446aa751886a8b573a45c52c4fe838159bc8be061837"
+    },
+    {
+      "path": "evidence/AUTHOR_SOURCE_SHAPE_REPLAY.json",
+      "sha256": "eaccc4770da4680b465dc2bd3536a8b88063eefd38702e96c12467e8ec7df2de"
+    },
+    {
+      "path": "evidence/DECLARATION_CENSUS.json",
+      "sha256": "a63def4c45ad4ee131fcb1b86f521c440391d6d65aa73faec06ecdebb89acced"
+    },
+    {
+      "path": "evidence/DEPENDENCY_REVALIDATION.json",
+      "sha256": "4db94f826c9cd9ca8d903ead7c502bc4b7fcfc7bdde250093fa4ed8ca85399a2"
+    },
+    {
+      "path": "evidence/INDEPENDENT_SOURCE_CONTROLS.json",
+      "sha256": "75b44c793619ccc4e6cf00e97aeff4f6cb7ba3b4e72d8a750bbe88e85738d2d2"
+    },
+    {
+      "path": "evidence/INTAKE_RECEIPT.json",
+      "sha256": "59527cd16808b21b5a36760e06c8d2442c57438eb63c3093a00bfdae1f7c6ebd"
+    },
+    {
+      "path": "evidence/V3_DELTA_RECEIPT.json",
+      "sha256": "df2ecb58ec634b9a971af34644c13796ca2891f72b7f6df235f5e12334f1b131"
+    }
+  ],
+  "reviewer_development_failures": [
+    {
+      "receipt": "evidence/replay-attempts/20261003T060927801225Z-ReviewerContract/RESULT.json",
+      "receipt_sha256": "0068c1473d7bf87cac4236f41fdc74a9bee587d226dadef05ec8497629ab5444",
+      "classification": "reviewer-only proof-tactic development; not scientific or negative-control credit"
+    },
+    {
+      "receipt": "evidence/replay-attempts/20261003T061042669729Z-ReviewerContract/RESULT.json",
+      "receipt_sha256": "2b340674cf65e29f69e8d0b346e99d8f8628c7bd3e0a8d623501146ea79b0509",
+      "classification": "reviewer-only proof-tactic development; not scientific or negative-control credit"
+    }
+  ],
+  "source_review_sha256": "3ae1e9e04da476f9960d7d51b617dfaff77168fdc3571e9eaf723aa1cbdb24e2",
+  "acceptance_sha256": "c31578f82921ea6e25f3c338bebf0e78b2f91ab248c9fc707f86503a2c0ec0b5",
+  "residual_endpoints": [
+    "Tuple/frontend translation",
+    "Python built-in primitive semantics and CPython",
+    "Physical allocation, time and OS failures",
+    "Parser/serializer",
+    "Statements and repeat tasks",
+    "Complete run, trace and wrapper behavior",
+    "Malformed direct ASTs",
+    "Single fixed finite all-input budget",
+    "Continued-success monotonicity under budget changes"
+  ]
+}

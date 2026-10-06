@@ -1,0 +1,18 @@
+{
+  "status": "PASS_DOCUMENTATION_ONLY_V3_DELTA",
+  "accepted_manifest_sha256": "d0177de1ebeb8de4ff71898dbccc729ca420c70a50c307f1bacccd6d2c38d43d",
+  "cold_compiled_v2_manifest_sha256": "1894a3290568101edb498df6f359be7abbaaedf7a0e864d0afc113a17c240a66",
+  "payload_count": 118,
+  "changed": [
+    "README.md"
+  ],
+  "added": [
+    "spec/CACHE_METADATA_RELOCATION.json",
+    "spec/RESTORATION_RECEIPT.json",
+    "spec/RESTORED_DEPENDENCY_CONTEXT.md"
+  ],
+  "removed": [],
+  "all_lean_python_reference_control_source_bytes_identical": true,
+  "copied_restoration_receipts_match_existing_bytes": true,
+  "created_utc": "2026-10-03T06:14:50.065849+00:00"
+}
