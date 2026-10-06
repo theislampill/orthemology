@@ -81,7 +81,8 @@ def _original_driver_members(src, text):
              ('tests', 'semantic_controls.py')]),
         'scripts/v5_d04_recipes.json': (
             '11541cb7ca6fe3355f4f0994f5dff642122b146c1fee7998c1d52bdd58cc09b5',
-            [('tests', 'EXPECTED_PASS_LINES.json')]),
+            [('tests', 'EXPECTED_PASS_LINES.json'), ('tests', 'test_criterion_model.py'),
+             ('tests', 'test_replay.py'), ('tests', 'test_rule_installation.py')]),
         'docs/provenance/v5-successors/EVIDENCE_BINDINGS.json': (
             '5482d2ecfacd83efccc46d3baa2544a80bcaf682c46f43ab3c2b2b08cc00e172',
             [('tests', 'test_criterion_model.py'), ('tests', 'test_replay.py'),
@@ -96,6 +97,10 @@ def _original_driver_members(src, text):
         'experiments/orthemology-v5-successors/source-store/'
         '5d18a239e9c359aad9bd665e9cceef31c87831561e85c236e1afa10c446e8436/COPY_CUSTODY.json': (
             '5d18a239e9c359aad9bd665e9cceef31c87831561e85c236e1afa10c446e8436',
+            [('tests', 'test_wrapper.py')]),
+        'experiments/orthemology-v5-successors/source-store/'
+        '768ed23d656626cca7e0c8a15708d0ac0b7d572b47ee2ac6f1f0f74afac83b2b/PACKAGE_MANIFEST.json': (
+            '768ed23d656626cca7e0c8a15708d0ac0b7d572b47ee2ac6f1f0f74afac83b2b',
             [('tests', 'test_wrapper.py')]),
     }
     pin = pins.get(src)
