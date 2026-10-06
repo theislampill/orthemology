@@ -1,4 +1,4 @@
-# Seventh–Fifteenth source and evidence index
+# Seventh–Sixteenth source and evidence index
 
 Current addition: [Sixteenth source and evidence guide](../../../experiments/orthemology-v5-successors/groups/t16-successor/README.md). Earlier tranche records retain their original cutoff and status.
 

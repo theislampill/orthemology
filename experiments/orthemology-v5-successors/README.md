@@ -1,8 +1,8 @@
-# Orthemology v5 research successors: Seventh–Fifteenth
+# Orthemology v5 research successors: Seventh–Sixteenth
 
 Current addition: [Sixteenth source and evidence guide](groups/t16-successor/README.md). Earlier tranche records retain their original cutoff and status.
 
-This is the source and replay layer for the Seventh through final Fifteenth
+This is the source and replay layer for the Seventh through final Sixteenth
 research returns. It continues Orthemology v5 and preserves the
 [final-Sixth layer](../orthemology-v5-continuations/README.md). Inclusion records
 what a source and its exact review establish; it does not complete the research

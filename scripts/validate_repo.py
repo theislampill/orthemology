@@ -10,9 +10,27 @@ import posixpath
 import re
 import subprocess
 import sys
+from markdown_it import MarkdownIt
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FAILS = []
+_MARKDOWN_PARSER = MarkdownIt('commonmark')
+
+
+def strip_markdown_math(text):
+    """Mask complete equation spans while retaining line boundaries."""
+    pattern = re.compile(r'\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?<!\\)\$(?!\$)(?:\\.|[^$\n])*?(?<!\\)\$')
+    return pattern.sub(lambda match: ''.join('\n' if c == '\n' else ' ' for c in match[0]), text)
+
+
+def markdown_link_targets(text):
+    """Read actual Markdown destinations, including angle URLs and fragments."""
+    for block in _MARKDOWN_PARSER.parse(strip_markdown_math(text)):
+        for token in block.children or ():
+            if token.type == 'link_open':
+                yield token.attrGet('href')
+            elif token.type == 'image':
+                yield token.attrGet('src')
 
 
 def check(name, ok, detail=""):
@@ -292,7 +310,23 @@ def _execution_hash_key(document, owners, sources, root):
 
 
 def _locked_external_files(document, owner):
-    """Recognise the two exact-source Fusha lock formats, without fetching them."""
+    """Recognise exact external-source inventories without fetching them."""
+    # Source-owned Mathlib archive inventories describe the pinned dependency,
+    # not this repository's docs directory. Require the complete exact document
+    # as well as its source digest; arbitrary rows cannot borrow the exception.
+    mathlib = {
+        '1c4d1fa63acf416d7b965ed519d16faea965022cb8eb8d74725d59d801db16f0':
+            'b681baebe9cc29157374228e49f24b6ba177a2dfb50ce78a053512c305c1e065',
+        'c01c0b3cf6bed3a960794e7da55231e446c7622f9c953b5c0e82092d026bb431':
+            '1f98b610f3d37455c3fa2c18c58461bcbd7d033a7590ad15b26f23862ffc8292',
+    }
+    expected = mathlib.get(owner.get('original_sha256'))
+    if expected is not None:
+        observed = hashlib.sha256(json.dumps(document, sort_keys=True, ensure_ascii=False,
+            separators=(',', ':'), allow_nan=False).encode()).hexdigest()
+        if owner.get('public_sha256') != owner.get('original_sha256') or observed != expected:
+            return None
+        return {row['path']: row for row in document['files']}
     members = {'occurrence-correspondence-source-lock-v1': 'language/source-lock.json',
                'sense-scope-supplemental-source-lock-v1': 'language/sense-source-lock.json'}
     if (not isinstance(document, dict) or set(document) != {'format', 'repository', 'commit', 'tree', 'scope', 'files'}
@@ -715,15 +749,14 @@ def main():
     broken = []
     packet_locators = []
     successor_locators = []
-    link_re = re.compile(r"\]\(([^)#\s]+)(#[^)\s]*)?\)")
     for p in files:
         if not p.endswith(".md"):
             continue
         c = open(p, encoding="utf-8").read()
-        for m in link_re.finditer(c):
-            tgt = m.group(1)
-            if tgt.startswith('<') and tgt.endswith('>'):
-                tgt = tgt[1:-1]
+        for target in markdown_link_targets(c):
+            tgt = target.split('#', 1)[0]
+            if not tgt:
+                continue
             if tgt.startswith(("http://", "https://", "mailto:")):
                 continue
             full = os.path.normpath(os.path.join(os.path.dirname(p), tgt))

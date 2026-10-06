@@ -1,17 +1,17 @@
 {
   "allowlist": [
     {
-      "bytes": 5863,
+      "bytes": 5788,
       "kind": "AUTHORED",
       "path": "docs/provenance/v5-successors/README.md",
-      "sha256": "33f2cd70825ff2ba62a3f6036c8e27a1b13490ad59860fa56998c108af482ce0",
+      "sha256": "c1d3b35bc3162c5c7f24d69a00801e0f2e7f0b52e6136db7e847c742bdedb9e9",
       "source_ids": []
     },
     {
       "bytes": 6015,
       "kind": "AUTHORED",
       "path": "experiments/orthemology-v5-successors/README.md",
-      "sha256": "cf6ec7e9432e31cea068f5ec7c1fbf6bc1284d16c2df828f99a81c1a2de47ffe",
+      "sha256": "71b6bb6dd561236d3b481135abcc0c605f9c6b903643b175a022b64f66e4862a",
       "source_ids": []
     },
     {

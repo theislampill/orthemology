@@ -6,7 +6,7 @@
   "records": {
     "BASELINE_BINDING": {
       "path": "docs/provenance/v5-successors/BASELINE_BINDING.json",
-      "sha256": "4c34ec1e13c095caa186ab0250daf5386e911957367b7e4f53aa900b5e405c63"
+      "sha256": "41b788ac9b2d1daeee19e8b1503f66113083c751cd230d766a58f06c29e1a6cf"
     },
     "CALCULUS_MAP": {
       "path": "docs/provenance/v5-successors/CALCULUS_MAP.json",
@@ -42,11 +42,11 @@
     },
     "PRESERVATION": {
       "path": "docs/provenance/v5-successors/PRESERVATION.json",
-      "sha256": "930b7561b0f55e395bcafcc9d5289c63e7a78abfa9264767b0d9b43314686373"
+      "sha256": "cd81d3b80d5183c1c01b637207d0afefd2b143ce4ee346808ca473a15eea6c4a"
     },
     "PUBLIC_PROJECTION": {
       "path": "docs/provenance/v5-successors/PUBLIC_PROJECTION.json",
-      "sha256": "746eb2621612b7ff372bbc2510e0e4b286a2a44eb91e27f0fda7d91093d0d182"
+      "sha256": "ae8a16bb9c494569f6275fba1ddf6638944a8a35f4f21cc6881ce897cb247e81"
     },
     "RESULT_STATUS": {
       "path": "docs/provenance/v5-successors/RESULT_STATUS.json",

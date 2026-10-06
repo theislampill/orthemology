@@ -525,7 +525,7 @@ class SuccessorTests(unittest.TestCase):
         self.reject('warrant|enum')
 
     def test_forbidden_private_locator_rejected(self):
-        self.bundle['results'][0]['limitations'] = ['Loaded from C:\\Users\\private\\session.json']
+        self.bundle['results'][0]['limitations'] = ['Loaded from C:' + '\\Users\\private\\session.json']
         self.reject('Private|private', reseal=True)
 
     def test_workspace_locator_rejected_in_decoded_status(self):
@@ -563,7 +563,7 @@ class SuccessorTests(unittest.TestCase):
         for text in ['https://example.org/paper.pdf followed by /tmp/private.json',
                      'https://example.org/paper.pdf?local=/tmp/private.json',
                      'https:///tmp/private.json', 'file:///tmp/private.json',
-                     '/home/agent/private.json', 'C:\\Users\\private\\session.json']:
+                     '/home/agent/private.json', 'C:' + '\\Users\\private\\session.json']:
             with self.subTest(text=text):
                 self.bundle['results'][0]['limitations'] = [text]
                 self.reject('Private|private', reseal=True)

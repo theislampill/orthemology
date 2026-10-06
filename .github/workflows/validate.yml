@@ -192,7 +192,7 @@ jobs:
           git diff --exit-code docs/provenance/RELEASE-MANIFEST.sha256
       - name: PDF clean rebuild, byte-equality with committed artifacts, text-structure QA
         run: python scripts/build_pdfs.py --check
-      - name: Seventh-Fifteenth successor source and status integrity
+      - name: Seventh-Sixteenth successor source and status integrity
         run: |
           python -B tests/test_v5_successors.py
           python -B -O tests/test_v5_successors.py
@@ -228,3 +228,5 @@ jobs:
           python -O tests/test_v5_g1_membership.py
           python -B tests/test_v5_sixteenth_boundary.py
           python -B -O tests/test_v5_sixteenth_boundary.py
+          python -B tests/test_v5_repository_scope.py
+          python -B -O tests/test_v5_repository_scope.py

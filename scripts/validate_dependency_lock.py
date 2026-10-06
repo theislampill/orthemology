@@ -15,8 +15,10 @@ Checks, deterministically and offline:
 """
 import ast
 import glob
+import hashlib
 import io
 import os
+from pathlib import Path
 import re
 import sys
 
@@ -44,10 +46,59 @@ POPPLER_SHA256 = (
     "a45c9c35808c44d817209af859d2e9d90b89c72f8cd8fcea20163ee774583ed8"
 )
 
+# These exact research payloads use their own Python 3.12 environments. They
+# are inspected source, not imports of the Python 3.11 repository CI runtime.
+# New bytes or an unrelated import cannot borrow this separate lock scope.
+RESEARCH_SOURCE_LOCKS = {
+    '41b4c6a14166306b9f593728df115892a3f0a64aa4c153741b9579c14b74270d': {
+        'fit_bfgs.py': 'cd6f203e2e79f6113de3cef2e4d98926c3f75fe374ca04b3ea73aeee02301a02',
+        'fit_checked.py': 'ebefc609d09bf68296e5a1c5392064effaf4c4d462b82cbb451b1e93340ec376',
+        'reanalyse.py': '20110e73fd822e21651064578946cdf910edc493c973953b2c7d1bb74481dd94',
+        'test_package.py': 'afb1ba14ecbbf193f07ac81f985be30535abf9771387813e9dbd0bbbfc72fb50',
+        'validate.py': '7d9a4c8d071e2591c8d4568c88c277ab61834e52df21500a1367efb2ac7e060a',
+    },
+    '65b97f7db87e4cdcb0f4157240cfece5b48363b3e6a18fdccf72d6528ebcbf85': {
+        'analysis_core.py': '84d819256b564b4acc8def4602d6882cebfd15417f44e8f9c3b5005d459f8875',
+        'run_reanalysis.py': '86bc29fab24a54e5a09efce1a7696b9491f28b95cd23ed4ecee89e076e524baf',
+        'estimate_contrasts.py': 'f9b3153dcad9a21842796a09df7966b26c1348f0785f3863e09177b28f6a3aa3',
+        'batch_sensitivity.py': '0e17bc10f0e52c199fece92cd649c6006e7e7b5b9c94dce834b6410d288ab8d0',
+        'manipulation_checks.py': 'a67a96c885051d5639869b7fe01d5f07a00a8269f50ee9f48f9ec06e8b55a288',
+        'test_analysis_core.py': 'a1be6c6b5a84eeb7d3417fdc8713fcd0d7982d7358ddf0cc78079b2f0ba60a6a',
+    },
+}
+
+
+def separately_pinned_research(root):
+    store = Path(root) / 'experiments/orthemology-v5-successors/source-store'
+    owned = {}
+    for lock_hash, sources in RESEARCH_SOURCE_LOCKS.items():
+        lock = store / lock_hash / 'requirements.txt'
+        paths = {store / digest / name: digest for name, digest in sources.items()}
+        if not lock.exists() and not any(path.exists() for path in paths):
+            continue
+        try:
+            data = lock.read_bytes()
+            if hashlib.sha256(data).hexdigest() != lock_hash:
+                raise ValueError('Changed separate research dependency lock')
+            pins = set()
+            for line in data.decode('utf-8').splitlines():
+                match = re.fullmatch(r'([A-Za-z0-9_]+)==([0-9][A-Za-z0-9.]+)', line)
+                if not match:
+                    raise ValueError('Research dependency is not exactly pinned')
+                pins.add(match[1])
+            for path, digest in paths.items():
+                if path.is_symlink() or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+                    raise ValueError('Changed separately pinned research source')
+                owned[os.path.normpath(str(path))] = pins
+        except OSError as error:
+            raise ValueError('Missing separately pinned research source or lock') from error
+    return owned
+
 
 def scan_repository_imports(root):
     """Return top-level imports from the repository trees governed by the lock."""
     used = set()
+    research = separately_pinned_research(root)
     for tree in ("scripts", "experiments", "terminology"):
         for base, dirs, fns in os.walk(os.path.join(root, tree)):
             dirs[:] = [d for d in dirs if d != "__pycache__"]
@@ -58,11 +109,13 @@ def scan_repository_imports(root):
                     src = stream.read()
                 # Generated foreign-language source inside strings is not a
                 # Python dependency. Parse errors must remain failures.
+                file_imports = set()
                 for node in ast.walk(ast.parse(src, filename=os.path.join(base, fn))):
                     if isinstance(node, ast.Import):
-                        used.update(alias.name.split(".")[0] for alias in node.names)
+                        file_imports.update(alias.name.split(".")[0] for alias in node.names)
                     elif isinstance(node, ast.ImportFrom) and node.level == 0 and node.module:
-                        used.add(node.module.split(".")[0])
+                        file_imports.add(node.module.split(".")[0])
+                used.update(file_imports - research.get(os.path.normpath(os.path.join(base, fn)), set()))
     return used
 
 
