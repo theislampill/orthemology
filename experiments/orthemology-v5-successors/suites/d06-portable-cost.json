@@ -1,0 +1,6142 @@
+{
+  "controls": [
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "D06-01-supporting-generated_stack_badCount_affine_tail_of_margin-cost-CostReadback",
+      "role": "POSITIVE",
+      "source_id": "s0715-fdc34c4557f9a376767e",
+      "target_id": "D06-01-supporting-generated_stack_badCount_affine_tail_of_margin"
+    },
+    {
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+      "id": "D06-01-supporting-generated_stack_badCount_affine_tail_of_margin-cost-ExactInheritedCostMutant",
+      "role": "MUTATION_REJECTION",
+      "source_id": "s0715-456e8b6a2d89eaed9688",
+      "target_id": "D06-01-supporting-generated_stack_badCount_affine_tail_of_margin"
+    }
+  ],
+  "family": "portable-cost",
+  "id": "d06-portable-cost",
+  "origin_archive_sha256": "54e5e68673fd1ab35921144c6c5df958217da3a96de7a060b0bbb34f0ba6637e",
+  "replay": {
+    "audit_roots": [
+      "audit.CostReadback"
+    ],
+    "build_roots": [
+      "original/core/cost/build"
+    ],
+    "drivers": [
+      {
+        "argument_meanings": {
+          "--lean-bin": "LEAN_BIN_DIRECTORY",
+          "--mathlib": "MATHLIB_ROOT",
+          "--out": "FRESH_OUTPUT_DIRECTORY",
+          "--review-zip": "INPUT_FILE"
+        },
+        "external_input_id": "portable-archive",
+        "id": "portable",
+        "recipe": "t08-semantic-portable-family-v1",
+        "sha256": "3f2bcdbac6726d5924aa193b250a43c91474bca3f1cd1a22568f760f224169a3",
+        "source_id": "s0715-7bcaa4f74021136a05d8"
+      }
+    ],
+    "external_inputs": [
+      {
+        "expected_bytes": 242937,
+        "expected_sha256": "54e5e68673fd1ab35921144c6c5df958217da3a96de7a060b0bbb34f0ba6637e",
+        "id": "portable-archive",
+        "kind": "FILE",
+        "manifest_key": null,
+        "manifest_source_id": null,
+        "role": "INPUT",
+        "source_id": "s0715-39ebad53465fc1e7027e"
+      },
+      {
+        "expected_bytes": 1520801,
+        "expected_sha256": "a7dac7ac8fe8e867b4581ebcd2757067371985eb728a66fc83720e33389c8f9b",
+        "id": "core-review-archive",
+        "kind": "FILE",
+        "manifest_key": null,
+        "manifest_source_id": null,
+        "role": "INPUT",
+        "source_id": "s0715-1ef0b030d2a13d3a7da8"
+      }
+    ],
+    "files": [
+      {
+        "path": "src/GenericFiniteQueryLocality.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3fc0290264fe5fb17b2b"
+      },
+      {
+        "path": "src/GenericFiniteQueryMeasure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-93e6e381a5b4d2106d8d"
+      },
+      {
+        "path": "src/PolicyRowEvaluator.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4e788419e134fedf684d"
+      },
+      {
+        "path": "src/PolicyTranscriptFiber.lean",
+        "role": "PROOF",
+        "source_id": "s0715-93e6bb413a370a705428"
+      },
+      {
+        "path": "src/FeedbackRequests.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bd6fe8cd9f0249a2e6ee"
+      },
+      {
+        "path": "src/ProductObservationLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-440df2a070e86a000fc9"
+      },
+      {
+        "path": "src/IndependentProductFamilies.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1d11dd44d236c5ba8fa7"
+      },
+      {
+        "path": "src/GenericQueryReference.lean",
+        "role": "PROOF",
+        "source_id": "s0715-aff01ebe950eeab99a4b"
+      },
+      {
+        "path": "src/PolicyRowLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8d35cde2128aa509d95f"
+      },
+      {
+        "path": "src/FeedbackFiberProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-5dba567c60149abe7feb"
+      },
+      {
+        "path": "src/PolicyCylinderProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-db08a2bb9da779f1c11d"
+      },
+      {
+        "path": "src/HistoryPathConsistency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b6cae665bf3bf9dbff8a"
+      },
+      {
+        "path": "src/PolicyObservedLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-60e5670c456acad567f2"
+      },
+      {
+        "path": "src/PolicyTraceBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ad4d340f4213b5ee1eff"
+      },
+      {
+        "path": "src/StackActionLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ceb195befaa6648975b1"
+      },
+      {
+        "path": "src/RecurrentSupport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c55ed4730bb168838eaf"
+      },
+      {
+        "path": "src/RawTapeRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-72d5ed23a94f9e461799"
+      },
+      {
+        "path": "src/SequentialTapeConsumption.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d9f4d9377a307e47ae88"
+      },
+      {
+        "path": "src/PruningKernel.lean",
+        "role": "PROOF",
+        "source_id": "s0715-33e8f54e1257196bc891"
+      },
+      {
+        "path": "src/EndComponents.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b3288cc6defc19e0223e"
+      },
+      {
+        "path": "src/RecurrentGraph.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1ffdb05a2f76015b6880"
+      },
+      {
+        "path": "src/KilledQueryLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-51f5da85c3744a05d661"
+      },
+      {
+        "path": "src/KilledAdaptiveHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1e5e2e63da601ec7c270"
+      },
+      {
+        "path": "src/KilledRecurrentTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-503a8f2a170f3452d5cc"
+      },
+      {
+        "path": "src/FiniteReachability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0b5251cf06cc2434e14d"
+      },
+      {
+        "path": "src/ExecutablePruning.lean",
+        "role": "PROOF",
+        "source_id": "s0715-66adc7685bda6580e69f"
+      },
+      {
+        "path": "src/MarkovSupportAdapter.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9d019f7154a4595f4b3f"
+      },
+      {
+        "path": "src/MarkovKilledBridge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fe251fbe2f5446cbb1ca"
+      },
+      {
+        "path": "src/AdaptiveMarkovRecurrentGraph.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ca77708a62cac8faad34"
+      },
+      {
+        "path": "src/RoundRobinSchedule.lean",
+        "role": "PROOF",
+        "source_id": "s0715-44f245e886151b6cbcff"
+      },
+      {
+        "path": "src/PolicyTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3033e6b4475a10d3bc2d"
+      },
+      {
+        "path": "src/RelativeTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fb7d7c33bf40d54cf926"
+      },
+      {
+        "path": "src/SafeSetTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1b95d40a9e0f6e5cc38b"
+      },
+      {
+        "path": "src/SelfVerifyingSupport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0ce996245d62fdcef846"
+      },
+      {
+        "path": "src/SeededPolicyNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e9d8c15cad7edaec635d"
+      },
+      {
+        "path": "src/FiniteChainAvoidance.lean",
+        "role": "PROOF",
+        "source_id": "s0715-86babcc99ff9a2cc5ae8"
+      },
+      {
+        "path": "src/dependencies/StatisticalRepair.lean",
+        "role": "PROOF",
+        "source_id": "s0715-97c5b2327960677d2055"
+      },
+      {
+        "path": "src/HellingerTree.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4428df5f41cf8be7f993"
+      },
+      {
+        "path": "src/SubprobHellinger.lean",
+        "role": "PROOF",
+        "source_id": "s0715-85547add6644b299b01d"
+      },
+      {
+        "path": "src/DependentHellinger.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d2af98a9559d195443b8"
+      },
+      {
+        "path": "src/ResetBudget.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4c78ab57b52bcf727809"
+      },
+      {
+        "path": "src/ResetLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-677690e852f452ff4f13"
+      },
+      {
+        "path": "src/ResetTrajectory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a00b5032639b43253963"
+      },
+      {
+        "path": "src/MarkovCharge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4a78a689692c8780567a"
+      },
+      {
+        "path": "src/FiniteChainTrajectory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d894a6cb4e9eb23f8d59"
+      },
+      {
+        "path": "src/InfiniteRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ce5d1a83da888c1edbc6"
+      },
+      {
+        "path": "src/StationaryPairChain.lean",
+        "role": "PROOF",
+        "source_id": "s0715-cb1947dfd43b981467d4"
+      },
+      {
+        "path": "src/FairComponentParity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d31e96ed52b59f9bfcff"
+      },
+      {
+        "path": "src/CheckedTargetOperation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c0d432dfca0735aeadd8"
+      },
+      {
+        "path": "src/StableSupportParityNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b72c623b5b664b54258a"
+      },
+      {
+        "path": "src/StageTargetOrExit.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3307e65f7e8860ce34ed"
+      },
+      {
+        "path": "src/ResidualSeedPosterior.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7f0a69edc67cb52808d4"
+      },
+      {
+        "path": "src/ConditionalPrefix.lean",
+        "role": "PROOF",
+        "source_id": "s0715-aa21f0645d28a982e5ae"
+      },
+      {
+        "path": "src/ConditionalContinuationLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-665522e9cf903111ba21"
+      },
+      {
+        "path": "src/PosteriorFeedbackProduct.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e57b8966228121588c4a"
+      },
+      {
+        "path": "src/MarkovSeedPosterior.lean",
+        "role": "PROOF",
+        "source_id": "s0715-253875897e296ca988a2"
+      },
+      {
+        "path": "src/ConditionalKilledContinuation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6b418dbfe1902b514498"
+      },
+      {
+        "path": "src/LawfulRestart.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ad469ff822ec7cc97b0a"
+      },
+      {
+        "path": "src/LawfulProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a1645e129f8ac58a9ebe"
+      },
+      {
+        "path": "src/ParityTailInvariance.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a1c98d6e05eefc30700d"
+      },
+      {
+        "path": "src/ConditionalAlmostSure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-eb55cf5c4081ed754374"
+      },
+      {
+        "path": "src/SemanticWinning.lean",
+        "role": "PROOF",
+        "source_id": "s0715-12dca0611d0ccced9909"
+      },
+      {
+        "path": "src/SemanticSafeActions.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1c74eee64faa3f8b8c7d"
+      },
+      {
+        "path": "src/HistoryStageSafety.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7aadc013f636933e355e"
+      },
+      {
+        "path": "src/RoundRobinPolicy.lean",
+        "role": "PROOF",
+        "source_id": "s0715-34b9774452081b0196b5"
+      },
+      {
+        "path": "src/RoundRobinRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-28172fca56d8deb31238"
+      },
+      {
+        "path": "src/RegionAlgorithm.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e16782ec62a6852b39f8"
+      },
+      {
+        "path": "src/GlobalParityNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d11ea9203c1df12717fa"
+      },
+      {
+        "path": "src/ActualTargetPolicy.lean",
+        "role": "PROOF",
+        "source_id": "s0715-070f11296610a9be50ee"
+      },
+      {
+        "path": "src/StageAvailability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d66dd3cdfe15bd0bb36d"
+      },
+      {
+        "path": "src/FairStageNavigation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9bedb4cd1009fcca1560"
+      },
+      {
+        "path": "src/EventualCycling.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8a99dfba8dc3a72022c3"
+      },
+      {
+        "path": "src/ObservedPhaseController.lean",
+        "role": "PROOF",
+        "source_id": "s0715-137d3d6c75c16d2d3bd4"
+      },
+      {
+        "path": "src/GeneratedPolicySafety.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9ffc84b819b4c4926fb4"
+      },
+      {
+        "path": "src/StackPathRegularity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4d7c21a9c37619416590"
+      },
+      {
+        "path": "src/GeneratedRun.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6121d0e6567c9ffd00b1"
+      },
+      {
+        "path": "src/MemoryTransitions.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bda9a714d3da3674de13"
+      },
+      {
+        "path": "src/GeneratedPhaseDynamics.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7bdc2f7a3c5fe99c7837"
+      },
+      {
+        "path": "src/RawEmpiricalRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bb7288a2864889c68fb3"
+      },
+      {
+        "path": "src/EmpiricalTailBounds.lean",
+        "role": "PROOF",
+        "source_id": "s0715-52091dff0386f733ec0c"
+      },
+      {
+        "path": "src/ObservedEmpiricalRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0ecd5d00002cea953240"
+      },
+      {
+        "path": "src/ObservedRowTest.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1eb2134a4b027daf4c3a"
+      },
+      {
+        "path": "src/EmpiricalTestLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-aab786402c48fde3ab3a"
+      },
+      {
+        "path": "src/PhaseStabilization.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c045f612cd9cf2974e56"
+      },
+      {
+        "path": "src/GeneratedPhaseStability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0caa5bde3107b203fab2"
+      },
+      {
+        "path": "src/GeneratedParitySuccess.lean",
+        "role": "PROOF",
+        "source_id": "s0715-08601de4fd24b5141946"
+      },
+      {
+        "path": "src/GlobalParitySufficiency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e7518e548c5adca092b0"
+      },
+      {
+        "path": "src/QuantitativeEmpiricalGate.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e70b667028995d487301"
+      },
+      {
+        "path": "src/GlobalCountBudget.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1bb75456d9e998c034c8"
+      },
+      {
+        "path": "src/SegmentEnumeration.lean",
+        "role": "PROOF",
+        "source_id": "s0715-546493577987262ef6e1"
+      },
+      {
+        "path": "src/GeneratedChargeBudget.lean",
+        "role": "PROOF",
+        "source_id": "s0715-18f3276a9a7b37f15860"
+      },
+      {
+        "path": "src/ChronologicalIntervals.lean",
+        "role": "PROOF",
+        "source_id": "s0715-895820e89040b805b887"
+      },
+      {
+        "path": "src/FiniteChainHitting.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d174f07f0ea26c9a29f7"
+      },
+      {
+        "path": "src/FiniteChainLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3c3dc6e58491080e6aa4"
+      },
+      {
+        "path": "src/FiniteHistoryPMF.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b8a93e5cdd3e0312a2d0"
+      },
+      {
+        "path": "src/FinitePushforwardRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-cdb2f8574ac456f370a8"
+      },
+      {
+        "path": "src/FiniteMemoryLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-31cf4d32feb465a831cd"
+      },
+      {
+        "path": "src/MonitoredHistoryDomination.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4a8709e1b45cc4ffbb2a"
+      },
+      {
+        "path": "src/FinitePathBound.lean",
+        "role": "PROOF",
+        "source_id": "s0715-80d042104242dd838316"
+      },
+      {
+        "path": "src/FiniteClosedClass.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7f797a799ffe699b404f"
+      },
+      {
+        "path": "src/FiniteRotorCoverage.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d0a7904b827753f12869"
+      },
+      {
+        "path": "src/RotorClosedClass.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fe8d9afc0ce66d5aa399"
+      },
+      {
+        "path": "src/RotorProjection.lean",
+        "role": "PROOF",
+        "source_id": "s0715-540bb0f9933994aab74a"
+      },
+      {
+        "path": "src/FrozenRotorKernel.lean",
+        "role": "PROOF",
+        "source_id": "s0715-14d46f42325053b22b9d"
+      },
+      {
+        "path": "src/FrozenRotorProgress.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4b4f0dc23c7190c5d311"
+      },
+      {
+        "path": "src/FrozenRotorHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4519c67e759bc86ac180"
+      },
+      {
+        "path": "src/ConditionalRotorHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6f643ebacc8593dc33df"
+      },
+      {
+        "path": "src/RotorHistorySnapshot.lean",
+        "role": "PROOF",
+        "source_id": "s0715-53723cb035a8ef1196a8"
+      },
+      {
+        "path": "src/GeneratedSliceAlignment.lean",
+        "role": "PROOF",
+        "source_id": "s0715-08d00262a38a7c3e7283"
+      },
+      {
+        "path": "src/SupportedConditionalHistories.lean",
+        "role": "PROOF",
+        "source_id": "s0715-50c2f0e3ad984eeb36f1"
+      },
+      {
+        "path": "src/ActualGeneratedSliceTail.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3e053dfd8a18ed0cdda1"
+      },
+      {
+        "path": "src/CountableHistoryTower.lean",
+        "role": "PROOF",
+        "source_id": "s0715-93bd57e0d72206840f91"
+      },
+      {
+        "path": "src/GeometricIntervalMoment.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6774b00230bac85c4c77"
+      },
+      {
+        "path": "src/ChronologicalDurations.lean",
+        "role": "PROOF",
+        "source_id": "s0715-cad59107aaced5447b78"
+      },
+      {
+        "path": "src/StoppingHistoryUnion.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d42bdb6b94d52f2552ac"
+      },
+      {
+        "path": "src/GeneratedIntervalHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-dc01ead42f29f105b09b"
+      },
+      {
+        "path": "src/GeneratedIntervalSlices.lean",
+        "role": "PROOF",
+        "source_id": "s0715-302183186a9b3ba3fe2b"
+      },
+      {
+        "path": "src/PositiveHistorySlices.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9b17951cbc1090406ab0"
+      },
+      {
+        "path": "src/CoBuchiTargetCost.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f1c5032b061c39c96405"
+      },
+      {
+        "path": "src/ActualBadCount.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3fd66f1d813970a7e24d"
+      },
+      {
+        "path": "src/ActualIntervalCoverage.lean",
+        "role": "PROOF",
+        "source_id": "s0715-aa186607fe7f1d65693e"
+      },
+      {
+        "path": "src/ActualSliceUnionBound.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7bfd7d84c8f049837d86"
+      },
+      {
+        "path": "src/GeneratedSlotLengths.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c06c9d1c2c95afcc19a6"
+      },
+      {
+        "path": "src/GeneratedSlotMoment.lean",
+        "role": "PROOF",
+        "source_id": "s0715-145629d8ea764015cb2f"
+      },
+      {
+        "path": "src/PrefixWeightedProduct.lean",
+        "role": "PROOF",
+        "source_id": "s0715-14066b8dd923b802635a"
+      },
+      {
+        "path": "src/GeneratedPrefixProduct.lean",
+        "role": "PROOF",
+        "source_id": "s0715-033ef199ac232befa859"
+      },
+      {
+        "path": "src/EndpointMoment.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f33d2cd98c20de618c88"
+      },
+      {
+        "path": "src/AnnularLiteral.lean",
+        "role": "PROOF",
+        "source_id": "s0715-971f7e9c8a866fe07a34"
+      },
+      {
+        "path": "src/BernoulliWord.lean",
+        "role": "PROOF",
+        "source_id": "s0715-794d1ccbcdb625fecbd5"
+      },
+      {
+        "path": "src/GrowthMoment.lean",
+        "role": "PROOF",
+        "source_id": "s0715-68b445398640e19331bf"
+      },
+      {
+        "path": "src/BayesBridge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7b4356c4a19b092c7481"
+      },
+      {
+        "path": "src/CentredBernoulli.lean",
+        "role": "PROOF",
+        "source_id": "s0715-12b90aca1258d59c9c2a"
+      },
+      {
+        "path": "src/FiniteWordDeviation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4c5931e0f676ec376620"
+      },
+      {
+        "path": "src/RawWordLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c3af90e385f5e18882bc"
+      },
+      {
+        "path": "src/EmpiricalGeometry.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c554971788deb49f91c8"
+      },
+      {
+        "path": "src/RawPrefixDeviation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-84abd32e48ac4182c128"
+      },
+      {
+        "path": "src/RawExponentialTail.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ec229c2fe77fabad7b3c"
+      },
+      {
+        "path": "src/RawUnrestrictedDeviation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1a5d70ee95ada6ec675d"
+      },
+      {
+        "path": "src/ActualTotalCostTail.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3c263dcadfb717e83570"
+      },
+      {
+        "path": "src/GeneratedExponentialTail.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9af1a4f4a8f5ea18ac44"
+      },
+      {
+        "path": "src/PolynomialTailMoments.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b53f748602058d3ced9b"
+      },
+      {
+        "path": "src/GeneratedCostLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0a37d8d3d8e30bced0e6"
+      },
+      {
+        "path": "src/ActualCostMoments.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d77327d7d4004b79cedd"
+      },
+      {
+        "path": "src/AffineTailOptimization.lean",
+        "role": "PROOF",
+        "source_id": "s0715-27a70a96226ac842f864"
+      },
+      {
+        "path": "src/TailMoments.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a88d6666d423f8e5a06c"
+      },
+      {
+        "path": "src/ActualExponentialMoments.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3c4082d28eda77de1b43"
+      },
+      {
+        "path": "audit/CostReadback.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-fdc34c4557f9a376767e"
+      },
+      {
+        "path": "negative/ExactInheritedCostMutant.lean",
+        "role": "NEGATIVE",
+        "source_id": "s0715-456e8b6a2d89eaed9688"
+      },
+      {
+        "path": "DEPENDENCY_PINS.json",
+        "role": "LOCK",
+        "source_id": "s0715-8bc1d7ed6f374d6baed3"
+      }
+    ],
+    "fixtures": [],
+    "module_order": [
+      "GenericFiniteQueryLocality",
+      "GenericFiniteQueryMeasure",
+      "PolicyRowEvaluator",
+      "PolicyTranscriptFiber",
+      "FeedbackRequests",
+      "ProductObservationLaw",
+      "IndependentProductFamilies",
+      "GenericQueryReference",
+      "PolicyRowLaw",
+      "FeedbackFiberProbability",
+      "PolicyCylinderProbability",
+      "HistoryPathConsistency",
+      "PolicyObservedLaw",
+      "PolicyTraceBinding",
+      "StackActionLaw",
+      "RecurrentSupport",
+      "RawTapeRecurrence",
+      "SequentialTapeConsumption",
+      "PruningKernel",
+      "EndComponents",
+      "RecurrentGraph",
+      "KilledQueryLaw",
+      "KilledAdaptiveHistory",
+      "KilledRecurrentTransfer",
+      "FiniteReachability",
+      "ExecutablePruning",
+      "MarkovSupportAdapter",
+      "MarkovKilledBridge",
+      "AdaptiveMarkovRecurrentGraph",
+      "RoundRobinSchedule",
+      "PolicyTailTransfer",
+      "RelativeTailTransfer",
+      "SafeSetTailTransfer",
+      "SelfVerifyingSupport",
+      "SeededPolicyNecessity",
+      "FiniteChainAvoidance",
+      "dependencies.StatisticalRepair",
+      "HellingerTree",
+      "SubprobHellinger",
+      "DependentHellinger",
+      "ResetBudget",
+      "ResetLaw",
+      "ResetTrajectory",
+      "MarkovCharge",
+      "FiniteChainTrajectory",
+      "InfiniteRecurrence",
+      "StationaryPairChain",
+      "FairComponentParity",
+      "CheckedTargetOperation",
+      "StableSupportParityNecessity",
+      "StageTargetOrExit",
+      "ResidualSeedPosterior",
+      "ConditionalPrefix",
+      "ConditionalContinuationLaw",
+      "PosteriorFeedbackProduct",
+      "MarkovSeedPosterior",
+      "ConditionalKilledContinuation",
+      "LawfulRestart",
+      "LawfulProbability",
+      "ParityTailInvariance",
+      "ConditionalAlmostSure",
+      "SemanticWinning",
+      "SemanticSafeActions",
+      "HistoryStageSafety",
+      "RoundRobinPolicy",
+      "RoundRobinRecurrence",
+      "RegionAlgorithm",
+      "GlobalParityNecessity",
+      "ActualTargetPolicy",
+      "StageAvailability",
+      "FairStageNavigation",
+      "EventualCycling",
+      "ObservedPhaseController",
+      "GeneratedPolicySafety",
+      "StackPathRegularity",
+      "GeneratedRun",
+      "MemoryTransitions",
+      "GeneratedPhaseDynamics",
+      "RawEmpiricalRows",
+      "EmpiricalTailBounds",
+      "ObservedEmpiricalRows",
+      "ObservedRowTest",
+      "EmpiricalTestLaw",
+      "PhaseStabilization",
+      "GeneratedPhaseStability",
+      "GeneratedParitySuccess",
+      "GlobalParitySufficiency",
+      "QuantitativeEmpiricalGate",
+      "GlobalCountBudget",
+      "SegmentEnumeration",
+      "GeneratedChargeBudget",
+      "ChronologicalIntervals",
+      "FiniteChainHitting",
+      "FiniteChainLaw",
+      "FiniteHistoryPMF",
+      "FinitePushforwardRows",
+      "FiniteMemoryLaw",
+      "MonitoredHistoryDomination",
+      "FinitePathBound",
+      "FiniteClosedClass",
+      "FiniteRotorCoverage",
+      "RotorClosedClass",
+      "RotorProjection",
+      "FrozenRotorKernel",
+      "FrozenRotorProgress",
+      "FrozenRotorHistory",
+      "ConditionalRotorHistory",
+      "RotorHistorySnapshot",
+      "GeneratedSliceAlignment",
+      "SupportedConditionalHistories",
+      "ActualGeneratedSliceTail",
+      "CountableHistoryTower",
+      "GeometricIntervalMoment",
+      "ChronologicalDurations",
+      "StoppingHistoryUnion",
+      "GeneratedIntervalHistory",
+      "GeneratedIntervalSlices",
+      "PositiveHistorySlices",
+      "CoBuchiTargetCost",
+      "ActualBadCount",
+      "ActualIntervalCoverage",
+      "ActualSliceUnionBound",
+      "GeneratedSlotLengths",
+      "GeneratedSlotMoment",
+      "PrefixWeightedProduct",
+      "GeneratedPrefixProduct",
+      "EndpointMoment",
+      "AnnularLiteral",
+      "BernoulliWord",
+      "GrowthMoment",
+      "BayesBridge",
+      "CentredBernoulli",
+      "FiniteWordDeviation",
+      "RawWordLaw",
+      "EmpiricalGeometry",
+      "RawPrefixDeviation",
+      "RawExponentialTail",
+      "RawUnrestrictedDeviation",
+      "ActualTotalCostTail",
+      "GeneratedExponentialTail",
+      "PolynomialTailMoments",
+      "GeneratedCostLaw",
+      "ActualCostMoments",
+      "AffineTailOptimization",
+      "TailMoments",
+      "ActualExponentialMoments"
+    ],
+    "modules": [
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "GenericFiniteQueryLocality",
+        "source_id": "s0715-3fc0290264fe5fb17b2b"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryLocality",
+          "Mathlib.Probability.ProductMeasure"
+        ],
+        "name": "GenericFiniteQueryMeasure",
+        "source_id": "s0715-93e6e381a5b4d2106d8d"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "PolicyRowEvaluator",
+        "source_id": "s0715-4e788419e134fedf684d"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyRowEvaluator"
+        ],
+        "name": "PolicyTranscriptFiber",
+        "source_id": "s0715-93e6bb413a370a705428"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTranscriptFiber"
+        ],
+        "name": "FeedbackRequests",
+        "source_id": "s0715-bd6fe8cd9f0249a2e6ee"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib",
+          "Mathlib.Probability.ProductMeasure"
+        ],
+        "name": "ProductObservationLaw",
+        "source_id": "s0715-440df2a070e86a000fc9"
+      },
+      {
+        "imports": [
+          "Init",
+          "ProductObservationLaw"
+        ],
+        "name": "IndependentProductFamilies",
+        "source_id": "s0715-1d11dd44d236c5ba8fa7"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "GenericQueryReference",
+        "source_id": "s0715-aff01ebe950eeab99a4b"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericQueryReference"
+        ],
+        "name": "PolicyRowLaw",
+        "source_id": "s0715-8d35cde2128aa509d95f"
+      },
+      {
+        "imports": [
+          "Init",
+          "FeedbackRequests",
+          "IndependentProductFamilies",
+          "PolicyRowLaw"
+        ],
+        "name": "FeedbackFiberProbability",
+        "source_id": "s0715-5dba567c60149abe7feb"
+      },
+      {
+        "imports": [
+          "Init",
+          "FeedbackFiberProbability"
+        ],
+        "name": "PolicyCylinderProbability",
+        "source_id": "s0715-db08a2bb9da779f1c11d"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTranscriptFiber",
+          "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+        ],
+        "name": "HistoryPathConsistency",
+        "source_id": "s0715-b6cae665bf3bf9dbff8a"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyCylinderProbability",
+          "HistoryPathConsistency"
+        ],
+        "name": "PolicyObservedLaw",
+        "source_id": "s0715-60e5670c456acad567f2"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyObservedLaw"
+        ],
+        "name": "PolicyTraceBinding",
+        "source_id": "s0715-ad4d340f4213b5ee1eff"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding"
+        ],
+        "name": "StackActionLaw",
+        "source_id": "s0715-ceb195befaa6648975b1"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "RecurrentSupport",
+        "source_id": "s0715-c55ed4730bb168838eaf"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "RecurrentSupport",
+          "Mathlib.Probability.BorelCantelli"
+        ],
+        "name": "RawTapeRecurrence",
+        "source_id": "s0715-72d5ed23a94f9e461799"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "RecurrentSupport"
+        ],
+        "name": "SequentialTapeConsumption",
+        "source_id": "s0715-d9f4d9377a307e47ae88"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "PruningKernel",
+        "source_id": "s0715-33e8f54e1257196bc891"
+      },
+      {
+        "imports": [
+          "Init",
+          "PruningKernel"
+        ],
+        "name": "EndComponents",
+        "source_id": "s0715-b3288cc6defc19e0223e"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "RecurrentSupport"
+        ],
+        "name": "RecurrentGraph",
+        "source_id": "s0715-1ffdb05a2f76015b6880"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "KilledQueryLaw",
+        "source_id": "s0715-51f5da85c3744a05d661"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledQueryLaw",
+          "PolicyTraceBinding"
+        ],
+        "name": "KilledAdaptiveHistory",
+        "source_id": "s0715-1e5e2e63da601ec7c270"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledAdaptiveHistory",
+          "RecurrentSupport",
+          "PruningKernel"
+        ],
+        "name": "KilledRecurrentTransfer",
+        "source_id": "s0715-503a8f2a170f3452d5cc"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteReachability",
+        "source_id": "s0715-0b5251cf06cc2434e14d"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "FiniteReachability"
+        ],
+        "name": "ExecutablePruning",
+        "source_id": "s0715-66adc7685bda6580e69f"
+      },
+      {
+        "imports": [
+          "Init",
+          "ExecutablePruning"
+        ],
+        "name": "MarkovSupportAdapter",
+        "source_id": "s0715-9d019f7154a4595f4b3f"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledRecurrentTransfer",
+          "MarkovSupportAdapter"
+        ],
+        "name": "MarkovKilledBridge",
+        "source_id": "s0715-fe251fbe2f5446cbb1ca"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawTapeRecurrence",
+          "SequentialTapeConsumption",
+          "RecurrentGraph",
+          "MarkovKilledBridge"
+        ],
+        "name": "AdaptiveMarkovRecurrentGraph",
+        "source_id": "s0715-ca77708a62cac8faad34"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveMarkovRecurrentGraph"
+        ],
+        "name": "RoundRobinSchedule",
+        "source_id": "s0715-44f245e886151b6cbcff"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding",
+          "RecurrentSupport"
+        ],
+        "name": "PolicyTailTransfer",
+        "source_id": "s0715-3033e6b4475a10d3bc2d"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTailTransfer"
+        ],
+        "name": "RelativeTailTransfer",
+        "source_id": "s0715-fb7d7c33bf40d54cf926"
+      },
+      {
+        "imports": [
+          "Init",
+          "RelativeTailTransfer"
+        ],
+        "name": "SafeSetTailTransfer",
+        "source_id": "s0715-1b95d40a9e0f6e5cc38b"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Powerset",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ],
+        "name": "SelfVerifyingSupport",
+        "source_id": "s0715-0ce996245d62fdcef846"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTailTransfer",
+          "SelfVerifyingSupport"
+        ],
+        "name": "SeededPolicyNecessity",
+        "source_id": "s0715-e9d8c15cad7edaec635d"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteChainAvoidance",
+        "source_id": "s0715-86babcc99ff9a2cc5ae8"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Real.Sqrt",
+          "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+          "Mathlib.Tactic"
+        ],
+        "name": "dependencies.StatisticalRepair",
+        "source_id": "s0715-97c5b2327960677d2055"
+      },
+      {
+        "imports": [
+          "Init",
+          "dependencies.StatisticalRepair",
+          "Mathlib.Topology.Instances.ENNReal.Lemmas"
+        ],
+        "name": "HellingerTree",
+        "source_id": "s0715-4428df5f41cf8be7f993"
+      },
+      {
+        "imports": [
+          "Init",
+          "HellingerTree"
+        ],
+        "name": "SubprobHellinger",
+        "source_id": "s0715-85547add6644b299b01d"
+      },
+      {
+        "imports": [
+          "Init",
+          "SubprobHellinger"
+        ],
+        "name": "DependentHellinger",
+        "source_id": "s0715-d2af98a9559d195443b8"
+      },
+      {
+        "imports": [
+          "Init",
+          "DependentHellinger"
+        ],
+        "name": "ResetBudget",
+        "source_id": "s0715-4c78ab57b52bcf727809"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetBudget"
+        ],
+        "name": "ResetLaw",
+        "source_id": "s0715-677690e852f452ff4f13"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetLaw",
+          "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+          "Mathlib.Probability.ProbabilityMassFunction.Integrals"
+        ],
+        "name": "ResetTrajectory",
+        "source_id": "s0715-a00b5032639b43253963"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetTrajectory"
+        ],
+        "name": "MarkovCharge",
+        "source_id": "s0715-4a78a689692c8780567a"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainAvoidance",
+          "MarkovCharge"
+        ],
+        "name": "FiniteChainTrajectory",
+        "source_id": "s0715-d894a6cb4e9eb23f8d59"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainTrajectory",
+          "RecurrentSupport"
+        ],
+        "name": "InfiniteRecurrence",
+        "source_id": "s0715-ce5d1a83da888c1edbc6"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainAvoidance",
+          "EndComponents"
+        ],
+        "name": "StationaryPairChain",
+        "source_id": "s0715-cb1947dfd43b981467d4"
+      },
+      {
+        "imports": [
+          "Init",
+          "InfiniteRecurrence",
+          "StationaryPairChain",
+          "PruningKernel"
+        ],
+        "name": "FairComponentParity",
+        "source_id": "s0715-d31e96ed52b59f9bfcff"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairComponentParity",
+          "MarkovSupportAdapter"
+        ],
+        "name": "CheckedTargetOperation",
+        "source_id": "s0715-c0d432dfca0735aeadd8"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveMarkovRecurrentGraph",
+          "SafeSetTailTransfer",
+          "SeededPolicyNecessity",
+          "CheckedTargetOperation"
+        ],
+        "name": "StableSupportParityNecessity",
+        "source_id": "s0715-b72c623b5b664b54258a"
+      },
+      {
+        "imports": [
+          "Init",
+          "StableSupportParityNecessity"
+        ],
+        "name": "StageTargetOrExit",
+        "source_id": "s0715-3307e65f7e8860ce34ed"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding"
+        ],
+        "name": "ResidualSeedPosterior",
+        "source_id": "s0715-7f0a69edc67cb52808d4"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResidualSeedPosterior"
+        ],
+        "name": "ConditionalPrefix",
+        "source_id": "s0715-aa21f0645d28a982e5ae"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalPrefix"
+        ],
+        "name": "ConditionalContinuationLaw",
+        "source_id": "s0715-665522e9cf903111ba21"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResidualSeedPosterior"
+        ],
+        "name": "PosteriorFeedbackProduct",
+        "source_id": "s0715-e57b8966228121588c4a"
+      },
+      {
+        "imports": [
+          "Init",
+          "PosteriorFeedbackProduct",
+          "MarkovKilledBridge"
+        ],
+        "name": "MarkovSeedPosterior",
+        "source_id": "s0715-253875897e296ca988a2"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalContinuationLaw",
+          "KilledRecurrentTransfer",
+          "MarkovSeedPosterior"
+        ],
+        "name": "ConditionalKilledContinuation",
+        "source_id": "s0715-6b418dbfe1902b514498"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageTargetOrExit",
+          "ConditionalKilledContinuation"
+        ],
+        "name": "LawfulRestart",
+        "source_id": "s0715-ad469ff822ec7cc97b0a"
+      },
+      {
+        "imports": [
+          "Init",
+          "LawfulRestart"
+        ],
+        "name": "LawfulProbability",
+        "source_id": "s0715-a1645e129f8ac58a9ebe"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledRecurrentTransfer"
+        ],
+        "name": "ParityTailInvariance",
+        "source_id": "s0715-a1c98d6e05eefc30700d"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalKilledContinuation",
+          "ParityTailInvariance"
+        ],
+        "name": "ConditionalAlmostSure",
+        "source_id": "s0715-eb55cf5c4081ed754374"
+      },
+      {
+        "imports": [
+          "Init",
+          "LawfulProbability",
+          "ConditionalAlmostSure"
+        ],
+        "name": "SemanticWinning",
+        "source_id": "s0715-12dca0611d0ccced9909"
+      },
+      {
+        "imports": [
+          "Init",
+          "SemanticWinning"
+        ],
+        "name": "SemanticSafeActions",
+        "source_id": "s0715-1c74eee64faa3f8b8c7d"
+      },
+      {
+        "imports": [
+          "Init",
+          "SemanticSafeActions"
+        ],
+        "name": "HistoryStageSafety",
+        "source_id": "s0715-7aadc013f636933e355e"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinSchedule",
+          "HistoryStageSafety"
+        ],
+        "name": "RoundRobinPolicy",
+        "source_id": "s0715-34b9774452081b0196b5"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinPolicy"
+        ],
+        "name": "RoundRobinRecurrence",
+        "source_id": "s0715-28172fca56d8deb31238"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageTargetOrExit"
+        ],
+        "name": "RegionAlgorithm",
+        "source_id": "s0715-e16782ec62a6852b39f8"
+      },
+      {
+        "imports": [
+          "Init",
+          "HistoryStageSafety",
+          "RegionAlgorithm"
+        ],
+        "name": "GlobalParityNecessity",
+        "source_id": "s0715-d11ea9203c1df12717fa"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinRecurrence",
+          "CheckedTargetOperation",
+          "GlobalParityNecessity"
+        ],
+        "name": "ActualTargetPolicy",
+        "source_id": "s0715-070f11296610a9be50ee"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy"
+        ],
+        "name": "StageAvailability",
+        "source_id": "s0715-d66dd3cdfe15bd0bb36d"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy"
+        ],
+        "name": "FairStageNavigation",
+        "source_id": "s0715-9bedb4cd1009fcca1560"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairStageNavigation"
+        ],
+        "name": "EventualCycling",
+        "source_id": "s0715-8a99dfba8dc3a72022c3"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageAvailability",
+          "EventualCycling"
+        ],
+        "name": "ObservedPhaseController",
+        "source_id": "s0715-137d3d6c75c16d2d3bd4"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController"
+        ],
+        "name": "GeneratedPolicySafety",
+        "source_id": "s0715-9ffc84b819b4c4926fb4"
+      },
+      {
+        "imports": [
+          "Init",
+          "EventualCycling"
+        ],
+        "name": "StackPathRegularity",
+        "source_id": "s0715-4d7c21a9c37619416590"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPolicySafety",
+          "StackPathRegularity"
+        ],
+        "name": "GeneratedRun",
+        "source_id": "s0715-6121d0e6567c9ffd00b1"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController"
+        ],
+        "name": "MemoryTransitions",
+        "source_id": "s0715-bda9a714d3da3674de13"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedRun",
+          "MemoryTransitions"
+        ],
+        "name": "GeneratedPhaseDynamics",
+        "source_id": "s0715-7bdc2f7a3c5fe99c7837"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "Mathlib.Probability.StrongLaw"
+        ],
+        "name": "RawEmpiricalRows",
+        "source_id": "s0715-bb7288a2864889c68fb3"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawEmpiricalRows"
+        ],
+        "name": "EmpiricalTailBounds",
+        "source_id": "s0715-52091dff0386f733ec0c"
+      },
+      {
+        "imports": [
+          "Init",
+          "EmpiricalTailBounds",
+          "SequentialTapeConsumption"
+        ],
+        "name": "ObservedEmpiricalRows",
+        "source_id": "s0715-0ecd5d00002cea953240"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy",
+          "ObservedEmpiricalRows"
+        ],
+        "name": "ObservedRowTest",
+        "source_id": "s0715-1eb2134a4b027daf4c3a"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedRowTest"
+        ],
+        "name": "EmpiricalTestLaw",
+        "source_id": "s0715-aab786402c48fde3ab3a"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinSchedule"
+        ],
+        "name": "PhaseStabilization",
+        "source_id": "s0715-c045f612cd9cf2974e56"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPhaseDynamics",
+          "EmpiricalTestLaw",
+          "PhaseStabilization"
+        ],
+        "name": "GeneratedPhaseStability",
+        "source_id": "s0715-0caa5bde3107b203fab2"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPhaseStability"
+        ],
+        "name": "GeneratedParitySuccess",
+        "source_id": "s0715-08601de4fd24b5141946"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedParitySuccess"
+        ],
+        "name": "GlobalParitySufficiency",
+        "source_id": "s0715-e7518e548c5adca092b0"
+      },
+      {
+        "imports": [
+          "Init",
+          "GlobalParitySufficiency"
+        ],
+        "name": "QuantitativeEmpiricalGate",
+        "source_id": "s0715-e70b667028995d487301"
+      },
+      {
+        "imports": [
+          "Init",
+          "QuantitativeEmpiricalGate"
+        ],
+        "name": "GlobalCountBudget",
+        "source_id": "s0715-1bb75456d9e998c034c8"
+      },
+      {
+        "imports": [
+          "Init",
+          "GlobalCountBudget"
+        ],
+        "name": "SegmentEnumeration",
+        "source_id": "s0715-546493577987262ef6e1"
+      },
+      {
+        "imports": [
+          "Init",
+          "SegmentEnumeration"
+        ],
+        "name": "GeneratedChargeBudget",
+        "source_id": "s0715-18f3276a9a7b37f15860"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedChargeBudget"
+        ],
+        "name": "ChronologicalIntervals",
+        "source_id": "s0715-895820e89040b805b887"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteReachability"
+        ],
+        "name": "FiniteChainHitting",
+        "source_id": "s0715-d174f07f0ea26c9a29f7"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainHitting"
+        ],
+        "name": "FiniteChainLaw",
+        "source_id": "s0715-3c3dc6e58491080e6aa4"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalContinuationLaw",
+          "FiniteChainLaw"
+        ],
+        "name": "FiniteHistoryPMF",
+        "source_id": "s0715-b8a93e5cdd3e0312a2d0"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainHitting"
+        ],
+        "name": "FinitePushforwardRows",
+        "source_id": "s0715-cdb2f8574ac456f370a8"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteHistoryPMF",
+          "FinitePushforwardRows"
+        ],
+        "name": "FiniteMemoryLaw",
+        "source_id": "s0715-31cf4d32feb465a831cd"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteMemoryLaw"
+        ],
+        "name": "MonitoredHistoryDomination",
+        "source_id": "s0715-4a8709e1b45cc4ffbb2a"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainLaw"
+        ],
+        "name": "FinitePathBound",
+        "source_id": "s0715-80d042104242dd838316"
+      },
+      {
+        "imports": [
+          "Init",
+          "FinitePathBound"
+        ],
+        "name": "FiniteClosedClass",
+        "source_id": "s0715-7f797a799ffe699b404f"
+      },
+      {
+        "imports": [
+          "Init",
+          "GlobalCountBudget"
+        ],
+        "name": "FiniteRotorCoverage",
+        "source_id": "s0715-d0a7904b827753f12869"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteClosedClass",
+          "FiniteRotorCoverage"
+        ],
+        "name": "RotorClosedClass",
+        "source_id": "s0715-fe8d9afc0ce66d5aa399"
+      },
+      {
+        "imports": [
+          "Init",
+          "RotorClosedClass"
+        ],
+        "name": "RotorProjection",
+        "source_id": "s0715-540bb0f9933994aab74a"
+      },
+      {
+        "imports": [
+          "Init",
+          "RotorProjection",
+          "FinitePushforwardRows"
+        ],
+        "name": "FrozenRotorKernel",
+        "source_id": "s0715-14d46f42325053b22b9d"
+      },
+      {
+        "imports": [
+          "Init",
+          "FrozenRotorKernel"
+        ],
+        "name": "FrozenRotorProgress",
+        "source_id": "s0715-4b4f0dc23c7190c5d311"
+      },
+      {
+        "imports": [
+          "Init",
+          "MonitoredHistoryDomination",
+          "FrozenRotorProgress"
+        ],
+        "name": "FrozenRotorHistory",
+        "source_id": "s0715-4519c67e759bc86ac180"
+      },
+      {
+        "imports": [
+          "Init",
+          "FrozenRotorHistory"
+        ],
+        "name": "ConditionalRotorHistory",
+        "source_id": "s0715-6f643ebacc8593dc33df"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalRotorHistory"
+        ],
+        "name": "RotorHistorySnapshot",
+        "source_id": "s0715-53723cb035a8ef1196a8"
+      },
+      {
+        "imports": [
+          "Init",
+          "RotorHistorySnapshot"
+        ],
+        "name": "GeneratedSliceAlignment",
+        "source_id": "s0715-08d00262a38a7c3e7283"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedSliceAlignment"
+        ],
+        "name": "SupportedConditionalHistories",
+        "source_id": "s0715-50c2f0e3ad984eeb36f1"
+      },
+      {
+        "imports": [
+          "Init",
+          "SupportedConditionalHistories"
+        ],
+        "name": "ActualGeneratedSliceTail",
+        "source_id": "s0715-3e053dfd8a18ed0cdda1"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualGeneratedSliceTail",
+          "Mathlib.MeasureTheory.Integral.Lebesgue.Add"
+        ],
+        "name": "CountableHistoryTower",
+        "source_id": "s0715-93bd57e0d72206840f91"
+      },
+      {
+        "imports": [
+          "Init",
+          "CountableHistoryTower",
+          "Mathlib.MeasureTheory.Integral.Lebesgue.Add",
+          "Mathlib.Algebra.Order.Floor.Div"
+        ],
+        "name": "GeometricIntervalMoment",
+        "source_id": "s0715-6774b00230bac85c4c77"
+      },
+      {
+        "imports": [
+          "Init",
+          "ChronologicalIntervals",
+          "GeometricIntervalMoment"
+        ],
+        "name": "ChronologicalDurations",
+        "source_id": "s0715-cad59107aaced5447b78"
+      },
+      {
+        "imports": [
+          "Init",
+          "CountableHistoryTower"
+        ],
+        "name": "StoppingHistoryUnion",
+        "source_id": "s0715-d42bdb6b94d52f2552ac"
+      },
+      {
+        "imports": [
+          "Init",
+          "ChronologicalIntervals",
+          "StoppingHistoryUnion"
+        ],
+        "name": "GeneratedIntervalHistory",
+        "source_id": "s0715-dc01ead42f29f105b09b"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedIntervalHistory"
+        ],
+        "name": "GeneratedIntervalSlices",
+        "source_id": "s0715-302183186a9b3ba3fe2b"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedIntervalSlices"
+        ],
+        "name": "PositiveHistorySlices",
+        "source_id": "s0715-9b17951cbc1090406ab0"
+      },
+      {
+        "imports": [
+          "Init",
+          "GlobalParitySufficiency"
+        ],
+        "name": "CoBuchiTargetCost",
+        "source_id": "s0715-f1c5032b061c39c96405"
+      },
+      {
+        "imports": [
+          "Init",
+          "CoBuchiTargetCost"
+        ],
+        "name": "ActualBadCount",
+        "source_id": "s0715-3fd66f1d813970a7e24d"
+      },
+      {
+        "imports": [
+          "Init",
+          "PositiveHistorySlices",
+          "ActualBadCount"
+        ],
+        "name": "ActualIntervalCoverage",
+        "source_id": "s0715-aa186607fe7f1d65693e"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualIntervalCoverage"
+        ],
+        "name": "ActualSliceUnionBound",
+        "source_id": "s0715-7bfd7d84c8f049837d86"
+      },
+      {
+        "imports": [
+          "Init",
+          "ChronologicalDurations",
+          "ActualSliceUnionBound"
+        ],
+        "name": "GeneratedSlotLengths",
+        "source_id": "s0715-c06c9d1c2c95afcc19a6"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedSlotLengths"
+        ],
+        "name": "GeneratedSlotMoment",
+        "source_id": "s0715-145629d8ea764015cb2f"
+      },
+      {
+        "imports": [
+          "Init",
+          "CountableHistoryTower"
+        ],
+        "name": "PrefixWeightedProduct",
+        "source_id": "s0715-14066b8dd923b802635a"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedSlotMoment",
+          "PrefixWeightedProduct"
+        ],
+        "name": "GeneratedPrefixProduct",
+        "source_id": "s0715-033ef199ac232befa859"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "EndpointMoment",
+        "source_id": "s0715-f33d2cd98c20de618c88"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndpointMoment"
+        ],
+        "name": "AnnularLiteral",
+        "source_id": "s0715-971f7e9c8a866fe07a34"
+      },
+      {
+        "imports": [
+          "Init",
+          "AnnularLiteral"
+        ],
+        "name": "BernoulliWord",
+        "source_id": "s0715-794d1ccbcdb625fecbd5"
+      },
+      {
+        "imports": [
+          "Init",
+          "BernoulliWord"
+        ],
+        "name": "GrowthMoment",
+        "source_id": "s0715-68b445398640e19331bf"
+      },
+      {
+        "imports": [
+          "Init",
+          "GrowthMoment"
+        ],
+        "name": "BayesBridge",
+        "source_id": "s0715-7b4356c4a19b092c7481"
+      },
+      {
+        "imports": [
+          "Init",
+          "BayesBridge"
+        ],
+        "name": "CentredBernoulli",
+        "source_id": "s0715-12b90aca1258d59c9c2a"
+      },
+      {
+        "imports": [
+          "Init",
+          "CentredBernoulli"
+        ],
+        "name": "FiniteWordDeviation",
+        "source_id": "s0715-4c5931e0f676ec376620"
+      },
+      {
+        "imports": [
+          "Init",
+          "EmpiricalTailBounds",
+          "FiniteWordDeviation"
+        ],
+        "name": "RawWordLaw",
+        "source_id": "s0715-c3af90e385f5e18882bc"
+      },
+      {
+        "imports": [
+          "Init",
+          "CentredBernoulli"
+        ],
+        "name": "EmpiricalGeometry",
+        "source_id": "s0715-c554971788deb49f91c8"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawWordLaw",
+          "EmpiricalGeometry"
+        ],
+        "name": "RawPrefixDeviation",
+        "source_id": "s0715-84abd32e48ac4182c128"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawPrefixDeviation"
+        ],
+        "name": "RawExponentialTail",
+        "source_id": "s0715-ec229c2fe77fabad7b3c"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawExponentialTail"
+        ],
+        "name": "RawUnrestrictedDeviation",
+        "source_id": "s0715-1a5d70ee95ada6ec675d"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualSliceUnionBound",
+          "RawUnrestrictedDeviation"
+        ],
+        "name": "ActualTotalCostTail",
+        "source_id": "s0715-3c263dcadfb717e83570"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPrefixProduct",
+          "ActualTotalCostTail",
+          "Mathlib.MeasureTheory.Integral.Lebesgue.Markov"
+        ],
+        "name": "GeneratedExponentialTail",
+        "source_id": "s0715-9af1a4f4a8f5ea18ac44"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.MeasureTheory.Integral.Lebesgue.Basic",
+          "Mathlib.Analysis.SpecificLimits.Normed",
+          "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+          "Mathlib.Tactic"
+        ],
+        "name": "PolynomialTailMoments",
+        "source_id": "s0715-b53f748602058d3ced9b"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualBadCount"
+        ],
+        "name": "GeneratedCostLaw",
+        "source_id": "s0715-0a37d8d3d8e30bced0e6"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTotalCostTail",
+          "PolynomialTailMoments",
+          "GeneratedCostLaw"
+        ],
+        "name": "ActualCostMoments",
+        "source_id": "s0715-d77327d7d4004b79cedd"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.ENNReal.Real",
+          "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+          "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+          "Mathlib.Tactic"
+        ],
+        "name": "AffineTailOptimization",
+        "source_id": "s0715-27a70a96226ac842f864"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.MeasureTheory.Integral.Lebesgue.Basic",
+          "Mathlib.Analysis.SpecificLimits.Normed",
+          "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+          "Mathlib.Tactic"
+        ],
+        "name": "TailMoments",
+        "source_id": "s0715-a88d6666d423f8e5a06c"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedExponentialTail",
+          "ActualCostMoments",
+          "AffineTailOptimization",
+          "TailMoments"
+        ],
+        "name": "ActualExponentialMoments",
+        "source_id": "s0715-3c4082d28eda77de1b43"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualExponentialMoments"
+        ],
+        "name": "audit.CostReadback",
+        "source_id": "s0715-fdc34c4557f9a376767e"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedExponentialTail",
+          "ActualCostMoments",
+          "AffineTailOptimization",
+          "TailMoments"
+        ],
+        "name": "negative.ExactInheritedCostMutant",
+        "source_id": "s0715-456e8b6a2d89eaed9688"
+      }
+    ],
+    "negative_roots": [
+      "negative.ExactInheritedCostMutant"
+    ],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      },
+      {
+        "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+        "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+      },
+      {
+        "module": "Mathlib.Algebra.Order.Floor.Div",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/Order/Floor/Div.lean",
+        "sha256": "fd4289183e52fdb360bb30243272ae11479d1b23e8bcc53c314e7dba26ed0dd5"
+      },
+      {
+        "module": "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+        "package": "mathlib",
+        "path": "Mathlib/Analysis/SpecialFunctions/ExpDeriv.lean",
+        "sha256": "e74050736957c4265287333e2f13fc925d352923f7812b3a6f1dc7196912c08b"
+      },
+      {
+        "module": "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+        "sha256": "7a9330163b97b280680288661e2657652e863d8f53869c897d0fd250fd479898"
+      },
+      {
+        "module": "Mathlib.Analysis.SpecificLimits.Normed",
+        "package": "mathlib",
+        "path": "Mathlib/Analysis/SpecificLimits/Normed.lean",
+        "sha256": "1bda6b3e35b165d8c986e285d65bc3b841dd5473788b132d3ec6e554aa83bc1d"
+      },
+      {
+        "module": "Mathlib.Data.ENNReal.Real",
+        "package": "mathlib",
+        "path": "Mathlib/Data/ENNReal/Real.lean",
+        "sha256": "21de423dfbd3b4c178c506a245eb5b5301790ca0ca78852eba21658d38f41748"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Card.lean",
+        "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Powerset",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Powerset.lean",
+        "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+      },
+      {
+        "module": "Mathlib.Data.Real.Sqrt",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Real/Sqrt.lean",
+        "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Integral.Lebesgue.Add",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Integral/Lebesgue/Add.lean",
+        "sha256": "eee4032e5814e52c87cec5d1dd67fa17527aae8d0ae6d97a8fc7e65857b5062f"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Integral.Lebesgue.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Integral/Lebesgue/Basic.lean",
+        "sha256": "eea61da3ded5ea0eff001f4ef9093b850d5e14ff3407ca42ea4a873aebf6ea50"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Integral.Lebesgue.Markov",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Integral/Lebesgue/Markov.lean",
+        "sha256": "519d1f42d6afcc487a19aec687f509010af2e7c7a6ae32320f6eb7619bd7918d"
+      },
+      {
+        "module": "Mathlib.Probability.BorelCantelli",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/BorelCantelli.lean",
+        "sha256": "033046517cdc893d6c849aa77f04b039e9e12cabc83eb46cfb8130cc5f6020ea"
+      },
+      {
+        "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+        "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+      },
+      {
+        "module": "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProbabilityMassFunction/Integrals.lean",
+        "sha256": "412763e5ad86cc96721b1bbb1bfaccb5fa15919a2d5afb7af9da419cc2290292"
+      },
+      {
+        "module": "Mathlib.Probability.ProductMeasure",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProductMeasure.lean",
+        "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+      },
+      {
+        "module": "Mathlib.Probability.StrongLaw",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+      },
+      {
+        "module": "Mathlib.Tactic",
+        "package": "mathlib",
+        "path": "Mathlib/Tactic.lean",
+        "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+      },
+      {
+        "module": "Mathlib.Topology.Instances.ENNReal.Lemmas",
+        "package": "mathlib",
+        "path": "Mathlib/Topology/Instances/ENNReal/Lemmas.lean",
+        "sha256": "5b078eb5f8aeae72ee8c7348f2cfcc02c36e0ff01e9f72205c2c06187ee04c82"
+      }
+    ],
+    "package_manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+    "packages": [
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "mathlib",
+        "path": "."
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "plausible",
+        "path": ".lake/packages/plausible"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "LeanSearchClient",
+        "path": ".lake/packages/LeanSearchClient"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "importGraph",
+        "path": ".lake/packages/importGraph"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "proofwidgets",
+        "path": ".lake/packages/proofwidgets"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "aesop",
+        "path": ".lake/packages/aesop"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "Qq",
+        "path": ".lake/packages/Qq"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "batteries",
+        "path": ".lake/packages/batteries"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "Cli",
+        "path": ".lake/packages/Cli"
+      }
+    ],
+    "positive_roots": [
+      "ActualExponentialMoments"
+    ],
+    "runtime_roots": [],
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "stages": [
+      {
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:portable}",
+          "--review-zip",
+          "{input:core-review-archive}",
+          "--lean-bin",
+          "{tool:lean-bin}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--out",
+          "{out}/original"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "original-portable",
+        "kind": "DRIVER",
+        "output_paths": [
+          "original"
+        ],
+        "timeout_seconds": 64800
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GenericFiniteQueryLocality"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GenericFiniteQueryLocality",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GenericFiniteQueryMeasure"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GenericFiniteQueryLocality"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GenericFiniteQueryMeasure",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PolicyRowEvaluator"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GenericFiniteQueryMeasure"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyRowEvaluator",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PolicyTranscriptFiber"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PolicyRowEvaluator"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyTranscriptFiber",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FeedbackRequests"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PolicyTranscriptFiber"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FeedbackRequests",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ProductObservationLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FeedbackRequests"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ProductObservationLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/IndependentProductFamilies"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ProductObservationLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-IndependentProductFamilies",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GenericQueryReference"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-IndependentProductFamilies"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GenericQueryReference",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PolicyRowLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GenericQueryReference"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyRowLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FeedbackFiberProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PolicyRowLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FeedbackFiberProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PolicyCylinderProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FeedbackFiberProbability"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyCylinderProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/HistoryPathConsistency"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PolicyCylinderProbability"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-HistoryPathConsistency",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PolicyObservedLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-HistoryPathConsistency"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyObservedLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PolicyTraceBinding"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PolicyObservedLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyTraceBinding",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/StackActionLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PolicyTraceBinding"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StackActionLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RecurrentSupport"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-StackActionLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RecurrentSupport",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RawTapeRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RecurrentSupport"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RawTapeRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SequentialTapeConsumption"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RawTapeRecurrence"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SequentialTapeConsumption",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PruningKernel"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SequentialTapeConsumption"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PruningKernel",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/EndComponents"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PruningKernel"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EndComponents",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RecurrentGraph"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-EndComponents"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RecurrentGraph",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/KilledQueryLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RecurrentGraph"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-KilledQueryLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/KilledAdaptiveHistory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-KilledQueryLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-KilledAdaptiveHistory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/KilledRecurrentTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-KilledAdaptiveHistory"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-KilledRecurrentTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteReachability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-KilledRecurrentTransfer"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteReachability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ExecutablePruning"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteReachability"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ExecutablePruning",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/MarkovSupportAdapter"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ExecutablePruning"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MarkovSupportAdapter",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/MarkovKilledBridge"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-MarkovSupportAdapter"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MarkovKilledBridge",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/AdaptiveMarkovRecurrentGraph"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-MarkovKilledBridge"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-AdaptiveMarkovRecurrentGraph",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RoundRobinSchedule"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-AdaptiveMarkovRecurrentGraph"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RoundRobinSchedule",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PolicyTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RoundRobinSchedule"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RelativeTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PolicyTailTransfer"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RelativeTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SafeSetTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RelativeTailTransfer"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SafeSetTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SelfVerifyingSupport"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SafeSetTailTransfer"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SelfVerifyingSupport",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SeededPolicyNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SelfVerifyingSupport"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SeededPolicyNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteChainAvoidance"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SeededPolicyNecessity"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteChainAvoidance",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/dependencies.StatisticalRepair"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteChainAvoidance"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-dependencies.StatisticalRepair",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/HellingerTree"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-dependencies.StatisticalRepair"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-HellingerTree",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SubprobHellinger"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-HellingerTree"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SubprobHellinger",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/DependentHellinger"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SubprobHellinger"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-DependentHellinger",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ResetBudget"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-DependentHellinger"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ResetBudget",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ResetLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ResetBudget"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ResetLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ResetTrajectory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ResetLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ResetTrajectory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/MarkovCharge"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ResetTrajectory"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MarkovCharge",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteChainTrajectory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-MarkovCharge"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteChainTrajectory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/InfiniteRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteChainTrajectory"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-InfiniteRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/StationaryPairChain"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-InfiniteRecurrence"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StationaryPairChain",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FairComponentParity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-StationaryPairChain"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FairComponentParity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/CheckedTargetOperation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FairComponentParity"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-CheckedTargetOperation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/StableSupportParityNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-CheckedTargetOperation"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StableSupportParityNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/StageTargetOrExit"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-StableSupportParityNecessity"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StageTargetOrExit",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ResidualSeedPosterior"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-StageTargetOrExit"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ResidualSeedPosterior",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ConditionalPrefix"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ResidualSeedPosterior"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalPrefix",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ConditionalContinuationLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ConditionalPrefix"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalContinuationLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PosteriorFeedbackProduct"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ConditionalContinuationLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PosteriorFeedbackProduct",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/MarkovSeedPosterior"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PosteriorFeedbackProduct"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MarkovSeedPosterior",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ConditionalKilledContinuation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-MarkovSeedPosterior"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalKilledContinuation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/LawfulRestart"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ConditionalKilledContinuation"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-LawfulRestart",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/LawfulProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-LawfulRestart"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-LawfulProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ParityTailInvariance"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-LawfulProbability"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ParityTailInvariance",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ConditionalAlmostSure"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ParityTailInvariance"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalAlmostSure",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SemanticWinning"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ConditionalAlmostSure"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SemanticWinning",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SemanticSafeActions"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SemanticWinning"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SemanticSafeActions",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/HistoryStageSafety"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SemanticSafeActions"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-HistoryStageSafety",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RoundRobinPolicy"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-HistoryStageSafety"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RoundRobinPolicy",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RoundRobinRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RoundRobinPolicy"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RoundRobinRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RegionAlgorithm"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RoundRobinRecurrence"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RegionAlgorithm",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GlobalParityNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RegionAlgorithm"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GlobalParityNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ActualTargetPolicy"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GlobalParityNecessity"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualTargetPolicy",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/StageAvailability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ActualTargetPolicy"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StageAvailability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FairStageNavigation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-StageAvailability"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FairStageNavigation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/EventualCycling"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FairStageNavigation"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EventualCycling",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ObservedPhaseController"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-EventualCycling"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ObservedPhaseController",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedPolicySafety"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ObservedPhaseController"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedPolicySafety",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/StackPathRegularity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedPolicySafety"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StackPathRegularity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedRun"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-StackPathRegularity"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedRun",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/MemoryTransitions"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedRun"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MemoryTransitions",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedPhaseDynamics"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-MemoryTransitions"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedPhaseDynamics",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RawEmpiricalRows"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedPhaseDynamics"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RawEmpiricalRows",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/EmpiricalTailBounds"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RawEmpiricalRows"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EmpiricalTailBounds",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ObservedEmpiricalRows"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-EmpiricalTailBounds"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ObservedEmpiricalRows",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ObservedRowTest"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ObservedEmpiricalRows"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ObservedRowTest",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/EmpiricalTestLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ObservedRowTest"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EmpiricalTestLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PhaseStabilization"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-EmpiricalTestLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PhaseStabilization",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedPhaseStability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PhaseStabilization"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedPhaseStability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedParitySuccess"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedPhaseStability"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedParitySuccess",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GlobalParitySufficiency"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedParitySuccess"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GlobalParitySufficiency",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/QuantitativeEmpiricalGate"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GlobalParitySufficiency"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-QuantitativeEmpiricalGate",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GlobalCountBudget"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-QuantitativeEmpiricalGate"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GlobalCountBudget",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SegmentEnumeration"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GlobalCountBudget"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SegmentEnumeration",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedChargeBudget"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SegmentEnumeration"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedChargeBudget",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ChronologicalIntervals"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedChargeBudget"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ChronologicalIntervals",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteChainHitting"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ChronologicalIntervals"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteChainHitting",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteChainLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteChainHitting"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteChainLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteHistoryPMF"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteChainLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteHistoryPMF",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FinitePushforwardRows"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteHistoryPMF"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FinitePushforwardRows",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteMemoryLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FinitePushforwardRows"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteMemoryLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/MonitoredHistoryDomination"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteMemoryLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MonitoredHistoryDomination",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FinitePathBound"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-MonitoredHistoryDomination"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FinitePathBound",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteClosedClass"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FinitePathBound"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteClosedClass",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteRotorCoverage"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteClosedClass"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteRotorCoverage",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RotorClosedClass"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteRotorCoverage"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RotorClosedClass",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RotorProjection"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RotorClosedClass"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RotorProjection",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FrozenRotorKernel"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RotorProjection"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FrozenRotorKernel",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FrozenRotorProgress"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FrozenRotorKernel"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FrozenRotorProgress",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FrozenRotorHistory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FrozenRotorProgress"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FrozenRotorHistory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ConditionalRotorHistory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FrozenRotorHistory"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalRotorHistory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RotorHistorySnapshot"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ConditionalRotorHistory"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RotorHistorySnapshot",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedSliceAlignment"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RotorHistorySnapshot"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedSliceAlignment",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/SupportedConditionalHistories"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedSliceAlignment"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SupportedConditionalHistories",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ActualGeneratedSliceTail"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-SupportedConditionalHistories"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualGeneratedSliceTail",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/CountableHistoryTower"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ActualGeneratedSliceTail"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-CountableHistoryTower",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeometricIntervalMoment"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-CountableHistoryTower"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeometricIntervalMoment",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ChronologicalDurations"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeometricIntervalMoment"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ChronologicalDurations",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/StoppingHistoryUnion"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ChronologicalDurations"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StoppingHistoryUnion",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedIntervalHistory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-StoppingHistoryUnion"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedIntervalHistory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedIntervalSlices"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedIntervalHistory"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedIntervalSlices",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PositiveHistorySlices"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedIntervalSlices"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PositiveHistorySlices",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/CoBuchiTargetCost"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PositiveHistorySlices"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-CoBuchiTargetCost",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ActualBadCount"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-CoBuchiTargetCost"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualBadCount",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ActualIntervalCoverage"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ActualBadCount"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualIntervalCoverage",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ActualSliceUnionBound"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ActualIntervalCoverage"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualSliceUnionBound",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedSlotLengths"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ActualSliceUnionBound"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedSlotLengths",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedSlotMoment"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedSlotLengths"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedSlotMoment",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PrefixWeightedProduct"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedSlotMoment"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PrefixWeightedProduct",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedPrefixProduct"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PrefixWeightedProduct"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedPrefixProduct",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/EndpointMoment"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedPrefixProduct"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EndpointMoment",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/AnnularLiteral"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-EndpointMoment"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-AnnularLiteral",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/BernoulliWord"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-AnnularLiteral"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-BernoulliWord",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GrowthMoment"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-BernoulliWord"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GrowthMoment",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/BayesBridge"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GrowthMoment"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-BayesBridge",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/CentredBernoulli"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-BayesBridge"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-CentredBernoulli",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/FiniteWordDeviation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-CentredBernoulli"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteWordDeviation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RawWordLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-FiniteWordDeviation"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RawWordLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/EmpiricalGeometry"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RawWordLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EmpiricalGeometry",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RawPrefixDeviation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-EmpiricalGeometry"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RawPrefixDeviation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RawExponentialTail"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RawPrefixDeviation"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RawExponentialTail",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/RawUnrestrictedDeviation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RawExponentialTail"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RawUnrestrictedDeviation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ActualTotalCostTail"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-RawUnrestrictedDeviation"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualTotalCostTail",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedExponentialTail"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ActualTotalCostTail"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedExponentialTail",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/PolynomialTailMoments"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedExponentialTail"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolynomialTailMoments",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/GeneratedCostLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-PolynomialTailMoments"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedCostLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ActualCostMoments"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GeneratedCostLaw"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualCostMoments",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/AffineTailOptimization"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ActualCostMoments"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-AffineTailOptimization",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/TailMoments"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-AffineTailOptimization"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-TailMoments",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ActualExponentialMoments"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-TailMoments"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualExponentialMoments",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/CostReadback"
+        ],
+        "control_ids": [
+          "D06-01-supporting-generated_stack_badCount_affine_tail_of_margin-cost-CostReadback"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-ActualExponentialMoments"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-CostReadback",
+        "kind": "LEAN_AUDIT",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-portable",
+          "cost/ExactInheritedCostMutant"
+        ],
+        "control_ids": [
+          "D06-01-supporting-generated_stack_badCount_affine_tail_of_margin-cost-ExactInheritedCostMutant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-portable",
+          "observe-cost-GenericFiniteQueryLocality",
+          "observe-cost-GenericFiniteQueryMeasure",
+          "observe-cost-PolicyRowEvaluator",
+          "observe-cost-PolicyTranscriptFiber",
+          "observe-cost-FeedbackRequests",
+          "observe-cost-ProductObservationLaw",
+          "observe-cost-IndependentProductFamilies",
+          "observe-cost-GenericQueryReference",
+          "observe-cost-PolicyRowLaw",
+          "observe-cost-FeedbackFiberProbability",
+          "observe-cost-PolicyCylinderProbability",
+          "observe-cost-HistoryPathConsistency",
+          "observe-cost-PolicyObservedLaw",
+          "observe-cost-PolicyTraceBinding",
+          "observe-cost-StackActionLaw",
+          "observe-cost-RecurrentSupport",
+          "observe-cost-RawTapeRecurrence",
+          "observe-cost-SequentialTapeConsumption",
+          "observe-cost-PruningKernel",
+          "observe-cost-EndComponents",
+          "observe-cost-RecurrentGraph",
+          "observe-cost-KilledQueryLaw",
+          "observe-cost-KilledAdaptiveHistory",
+          "observe-cost-KilledRecurrentTransfer",
+          "observe-cost-FiniteReachability",
+          "observe-cost-ExecutablePruning",
+          "observe-cost-MarkovSupportAdapter",
+          "observe-cost-MarkovKilledBridge",
+          "observe-cost-AdaptiveMarkovRecurrentGraph",
+          "observe-cost-RoundRobinSchedule",
+          "observe-cost-PolicyTailTransfer",
+          "observe-cost-RelativeTailTransfer",
+          "observe-cost-SafeSetTailTransfer",
+          "observe-cost-SelfVerifyingSupport",
+          "observe-cost-SeededPolicyNecessity",
+          "observe-cost-FiniteChainAvoidance",
+          "observe-cost-dependencies.StatisticalRepair",
+          "observe-cost-HellingerTree",
+          "observe-cost-SubprobHellinger",
+          "observe-cost-DependentHellinger",
+          "observe-cost-ResetBudget",
+          "observe-cost-ResetLaw",
+          "observe-cost-ResetTrajectory",
+          "observe-cost-MarkovCharge",
+          "observe-cost-FiniteChainTrajectory",
+          "observe-cost-InfiniteRecurrence",
+          "observe-cost-StationaryPairChain",
+          "observe-cost-FairComponentParity",
+          "observe-cost-CheckedTargetOperation",
+          "observe-cost-StableSupportParityNecessity",
+          "observe-cost-StageTargetOrExit",
+          "observe-cost-ResidualSeedPosterior",
+          "observe-cost-ConditionalPrefix",
+          "observe-cost-ConditionalContinuationLaw",
+          "observe-cost-PosteriorFeedbackProduct",
+          "observe-cost-MarkovSeedPosterior",
+          "observe-cost-ConditionalKilledContinuation",
+          "observe-cost-LawfulRestart",
+          "observe-cost-LawfulProbability",
+          "observe-cost-ParityTailInvariance",
+          "observe-cost-ConditionalAlmostSure",
+          "observe-cost-SemanticWinning",
+          "observe-cost-SemanticSafeActions",
+          "observe-cost-HistoryStageSafety",
+          "observe-cost-RoundRobinPolicy",
+          "observe-cost-RoundRobinRecurrence",
+          "observe-cost-RegionAlgorithm",
+          "observe-cost-GlobalParityNecessity",
+          "observe-cost-ActualTargetPolicy",
+          "observe-cost-StageAvailability",
+          "observe-cost-FairStageNavigation",
+          "observe-cost-EventualCycling",
+          "observe-cost-ObservedPhaseController",
+          "observe-cost-GeneratedPolicySafety",
+          "observe-cost-StackPathRegularity",
+          "observe-cost-GeneratedRun",
+          "observe-cost-MemoryTransitions",
+          "observe-cost-GeneratedPhaseDynamics",
+          "observe-cost-RawEmpiricalRows",
+          "observe-cost-EmpiricalTailBounds",
+          "observe-cost-ObservedEmpiricalRows",
+          "observe-cost-ObservedRowTest",
+          "observe-cost-EmpiricalTestLaw",
+          "observe-cost-PhaseStabilization",
+          "observe-cost-GeneratedPhaseStability",
+          "observe-cost-GeneratedParitySuccess",
+          "observe-cost-GlobalParitySufficiency",
+          "observe-cost-QuantitativeEmpiricalGate",
+          "observe-cost-GlobalCountBudget",
+          "observe-cost-SegmentEnumeration",
+          "observe-cost-GeneratedChargeBudget",
+          "observe-cost-ChronologicalIntervals",
+          "observe-cost-FiniteChainHitting",
+          "observe-cost-FiniteChainLaw",
+          "observe-cost-FiniteHistoryPMF",
+          "observe-cost-FinitePushforwardRows",
+          "observe-cost-FiniteMemoryLaw",
+          "observe-cost-MonitoredHistoryDomination",
+          "observe-cost-FinitePathBound",
+          "observe-cost-FiniteClosedClass",
+          "observe-cost-FiniteRotorCoverage",
+          "observe-cost-RotorClosedClass",
+          "observe-cost-RotorProjection",
+          "observe-cost-FrozenRotorKernel",
+          "observe-cost-FrozenRotorProgress",
+          "observe-cost-FrozenRotorHistory",
+          "observe-cost-ConditionalRotorHistory",
+          "observe-cost-RotorHistorySnapshot",
+          "observe-cost-GeneratedSliceAlignment",
+          "observe-cost-SupportedConditionalHistories",
+          "observe-cost-ActualGeneratedSliceTail",
+          "observe-cost-CountableHistoryTower",
+          "observe-cost-GeometricIntervalMoment",
+          "observe-cost-ChronologicalDurations",
+          "observe-cost-StoppingHistoryUnion",
+          "observe-cost-GeneratedIntervalHistory",
+          "observe-cost-GeneratedIntervalSlices",
+          "observe-cost-PositiveHistorySlices",
+          "observe-cost-CoBuchiTargetCost",
+          "observe-cost-ActualBadCount",
+          "observe-cost-ActualIntervalCoverage",
+          "observe-cost-ActualSliceUnionBound",
+          "observe-cost-GeneratedSlotLengths",
+          "observe-cost-GeneratedSlotMoment",
+          "observe-cost-PrefixWeightedProduct",
+          "observe-cost-GeneratedPrefixProduct",
+          "observe-cost-EndpointMoment",
+          "observe-cost-AnnularLiteral",
+          "observe-cost-BernoulliWord",
+          "observe-cost-GrowthMoment",
+          "observe-cost-BayesBridge",
+          "observe-cost-CentredBernoulli",
+          "observe-cost-FiniteWordDeviation",
+          "observe-cost-RawWordLaw",
+          "observe-cost-EmpiricalGeometry",
+          "observe-cost-RawPrefixDeviation",
+          "observe-cost-RawExponentialTail",
+          "observe-cost-RawUnrestrictedDeviation",
+          "observe-cost-ActualTotalCostTail",
+          "observe-cost-GeneratedExponentialTail",
+          "observe-cost-PolynomialTailMoments",
+          "observe-cost-GeneratedCostLaw",
+          "observe-cost-ActualCostMoments",
+          "observe-cost-AffineTailOptimization",
+          "observe-cost-TailMoments",
+          "observe-cost-ActualExponentialMoments",
+          "observe-cost-CostReadback"
+        ],
+        "driver_id": "portable",
+        "expected_diagnostics": [
+          {
+            "literal": "error: application type mismatch",
+            "sha256": "9eeb5974506a449b8cc403d626c34f1a7f027c9948e9db863a512b6f947bfaae",
+            "source_id": "s0715-606a3c95829731e5a0d6"
+          },
+          {
+            "literal": "η ≤ ε : Prop",
+            "sha256": "3e1dd3eea8e33c3e40e9322bf4c42bc49ec1d379691cb3e48f2e650a33b5dcde",
+            "source_id": "s0715-606a3c95829731e5a0d6"
+          },
+          {
+            "literal": "η ≤ ε / 2 : Prop",
+            "sha256": "2099a625b77e65db873f84c712566a121a3b2b86e19dab6c1ba785c31d739df0",
+            "source_id": "s0715-606a3c95829731e5a0d6"
+          }
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "id": "observe-cost-ExactInheritedCostMutant",
+        "kind": "NEGATIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      }
+    ],
+    "target_names": [
+      {
+        "module": "ActualExponentialMoments",
+        "name": "HiddenParity.Cost.generated_stack_badCount_affine_tail_of_margin",
+        "target_id": "D06-01-supporting-generated_stack_badCount_affine_tail_of_margin"
+      }
+    ],
+    "tools": [
+      {
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "kind": "PYTHON",
+        "name": "python",
+        "path_kind": "EXECUTABLE",
+        "platform": "linux-x86_64",
+        "version": "3.11.9"
+      },
+      {
+        "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+        "kind": "LEAN",
+        "name": "lean-bin",
+        "path_kind": "BIN_DIRECTORY",
+        "platform": "linux-x86_64",
+        "version": "4.19.0"
+      }
+    ]
+  },
+  "result_families": [
+    "semantic-cost-control"
+  ],
+  "review_ids": [
+    "D06-01-review-1"
+  ],
+  "source_ids": [
+    "s0715-3fc0290264fe5fb17b2b",
+    "s0715-93e6e381a5b4d2106d8d",
+    "s0715-4e788419e134fedf684d",
+    "s0715-93e6bb413a370a705428",
+    "s0715-bd6fe8cd9f0249a2e6ee",
+    "s0715-440df2a070e86a000fc9",
+    "s0715-1d11dd44d236c5ba8fa7",
+    "s0715-aff01ebe950eeab99a4b",
+    "s0715-8d35cde2128aa509d95f",
+    "s0715-5dba567c60149abe7feb",
+    "s0715-db08a2bb9da779f1c11d",
+    "s0715-b6cae665bf3bf9dbff8a",
+    "s0715-60e5670c456acad567f2",
+    "s0715-ad4d340f4213b5ee1eff",
+    "s0715-ceb195befaa6648975b1",
+    "s0715-c55ed4730bb168838eaf",
+    "s0715-72d5ed23a94f9e461799",
+    "s0715-d9f4d9377a307e47ae88",
+    "s0715-33e8f54e1257196bc891",
+    "s0715-b3288cc6defc19e0223e",
+    "s0715-1ffdb05a2f76015b6880",
+    "s0715-51f5da85c3744a05d661",
+    "s0715-1e5e2e63da601ec7c270",
+    "s0715-503a8f2a170f3452d5cc",
+    "s0715-0b5251cf06cc2434e14d",
+    "s0715-66adc7685bda6580e69f",
+    "s0715-9d019f7154a4595f4b3f",
+    "s0715-fe251fbe2f5446cbb1ca",
+    "s0715-ca77708a62cac8faad34",
+    "s0715-44f245e886151b6cbcff",
+    "s0715-3033e6b4475a10d3bc2d",
+    "s0715-fb7d7c33bf40d54cf926",
+    "s0715-1b95d40a9e0f6e5cc38b",
+    "s0715-0ce996245d62fdcef846",
+    "s0715-e9d8c15cad7edaec635d",
+    "s0715-86babcc99ff9a2cc5ae8",
+    "s0715-97c5b2327960677d2055",
+    "s0715-4428df5f41cf8be7f993",
+    "s0715-85547add6644b299b01d",
+    "s0715-d2af98a9559d195443b8",
+    "s0715-4c78ab57b52bcf727809",
+    "s0715-677690e852f452ff4f13",
+    "s0715-a00b5032639b43253963",
+    "s0715-4a78a689692c8780567a",
+    "s0715-d894a6cb4e9eb23f8d59",
+    "s0715-ce5d1a83da888c1edbc6",
+    "s0715-cb1947dfd43b981467d4",
+    "s0715-d31e96ed52b59f9bfcff",
+    "s0715-c0d432dfca0735aeadd8",
+    "s0715-b72c623b5b664b54258a",
+    "s0715-3307e65f7e8860ce34ed",
+    "s0715-7f0a69edc67cb52808d4",
+    "s0715-aa21f0645d28a982e5ae",
+    "s0715-665522e9cf903111ba21",
+    "s0715-e57b8966228121588c4a",
+    "s0715-253875897e296ca988a2",
+    "s0715-6b418dbfe1902b514498",
+    "s0715-ad469ff822ec7cc97b0a",
+    "s0715-a1645e129f8ac58a9ebe",
+    "s0715-a1c98d6e05eefc30700d",
+    "s0715-eb55cf5c4081ed754374",
+    "s0715-12dca0611d0ccced9909",
+    "s0715-1c74eee64faa3f8b8c7d",
+    "s0715-7aadc013f636933e355e",
+    "s0715-34b9774452081b0196b5",
+    "s0715-28172fca56d8deb31238",
+    "s0715-e16782ec62a6852b39f8",
+    "s0715-d11ea9203c1df12717fa",
+    "s0715-070f11296610a9be50ee",
+    "s0715-d66dd3cdfe15bd0bb36d",
+    "s0715-9bedb4cd1009fcca1560",
+    "s0715-8a99dfba8dc3a72022c3",
+    "s0715-137d3d6c75c16d2d3bd4",
+    "s0715-9ffc84b819b4c4926fb4",
+    "s0715-4d7c21a9c37619416590",
+    "s0715-6121d0e6567c9ffd00b1",
+    "s0715-bda9a714d3da3674de13",
+    "s0715-7bdc2f7a3c5fe99c7837",
+    "s0715-bb7288a2864889c68fb3",
+    "s0715-52091dff0386f733ec0c",
+    "s0715-0ecd5d00002cea953240",
+    "s0715-1eb2134a4b027daf4c3a",
+    "s0715-aab786402c48fde3ab3a",
+    "s0715-c045f612cd9cf2974e56",
+    "s0715-0caa5bde3107b203fab2",
+    "s0715-08601de4fd24b5141946",
+    "s0715-e7518e548c5adca092b0",
+    "s0715-e70b667028995d487301",
+    "s0715-1bb75456d9e998c034c8",
+    "s0715-546493577987262ef6e1",
+    "s0715-18f3276a9a7b37f15860",
+    "s0715-895820e89040b805b887",
+    "s0715-d174f07f0ea26c9a29f7",
+    "s0715-3c3dc6e58491080e6aa4",
+    "s0715-b8a93e5cdd3e0312a2d0",
+    "s0715-cdb2f8574ac456f370a8",
+    "s0715-31cf4d32feb465a831cd",
+    "s0715-4a8709e1b45cc4ffbb2a",
+    "s0715-80d042104242dd838316",
+    "s0715-7f797a799ffe699b404f",
+    "s0715-d0a7904b827753f12869",
+    "s0715-fe8d9afc0ce66d5aa399",
+    "s0715-540bb0f9933994aab74a",
+    "s0715-14d46f42325053b22b9d",
+    "s0715-4b4f0dc23c7190c5d311",
+    "s0715-4519c67e759bc86ac180",
+    "s0715-6f643ebacc8593dc33df",
+    "s0715-53723cb035a8ef1196a8",
+    "s0715-08d00262a38a7c3e7283",
+    "s0715-50c2f0e3ad984eeb36f1",
+    "s0715-3e053dfd8a18ed0cdda1",
+    "s0715-93bd57e0d72206840f91",
+    "s0715-6774b00230bac85c4c77",
+    "s0715-cad59107aaced5447b78",
+    "s0715-d42bdb6b94d52f2552ac",
+    "s0715-dc01ead42f29f105b09b",
+    "s0715-302183186a9b3ba3fe2b",
+    "s0715-9b17951cbc1090406ab0",
+    "s0715-f1c5032b061c39c96405",
+    "s0715-3fd66f1d813970a7e24d",
+    "s0715-aa186607fe7f1d65693e",
+    "s0715-7bfd7d84c8f049837d86",
+    "s0715-c06c9d1c2c95afcc19a6",
+    "s0715-145629d8ea764015cb2f",
+    "s0715-14066b8dd923b802635a",
+    "s0715-033ef199ac232befa859",
+    "s0715-f33d2cd98c20de618c88",
+    "s0715-971f7e9c8a866fe07a34",
+    "s0715-794d1ccbcdb625fecbd5",
+    "s0715-68b445398640e19331bf",
+    "s0715-7b4356c4a19b092c7481",
+    "s0715-12b90aca1258d59c9c2a",
+    "s0715-4c5931e0f676ec376620",
+    "s0715-c3af90e385f5e18882bc",
+    "s0715-c554971788deb49f91c8",
+    "s0715-84abd32e48ac4182c128",
+    "s0715-ec229c2fe77fabad7b3c",
+    "s0715-1a5d70ee95ada6ec675d",
+    "s0715-3c263dcadfb717e83570",
+    "s0715-9af1a4f4a8f5ea18ac44",
+    "s0715-b53f748602058d3ced9b",
+    "s0715-0a37d8d3d8e30bced0e6",
+    "s0715-d77327d7d4004b79cedd",
+    "s0715-27a70a96226ac842f864",
+    "s0715-a88d6666d423f8e5a06c",
+    "s0715-3c4082d28eda77de1b43",
+    "s0715-fdc34c4557f9a376767e",
+    "s0715-456e8b6a2d89eaed9688",
+    "s0715-8bc1d7ed6f374d6baed3"
+  ],
+  "targets": [
+    {
+      "calculus": "NONE",
+      "declaration": "theorem generated_stack_badCount_affine_tail_of_margin\n    (bad : Model → (State × Action) → Prop) [∀ σ,DecidablePred (bad σ)]\n    (hpriority : priority=fun σ => coBuchiPriority (bad σ))\n    (hs₀ : s₀ ∈ winningRegion P menu priority B₀) (σ : Model) (hσ : σ ∈ B₀)\n    (η : ℝ) (hηpos : 0 < η) (hη : η ≤ ε)\n    (hSep : ∀ θ ∈ B₀,∀ e,P.row θ e ≠ P.row σ e → ∃ y,ε+η ≤ |realRows P σ e y-realRows P θ e y|) :\n    ∃ B V : ℝ,0 < V ∧ ∀ u : ℝ,0 ≤ u →\n      ((Measure.dirac ()).prod (stackMeasure (realRows P σ) (realRows_nonnegative P σ)\n        (realRows_normalized P σ))) {z | ENNReal.ofReal (B+V*u) < badCount (bad σ) (x z)} ≤\n        ENNReal.ofReal (Real.exp (-u))",
+      "domain": "SOURCE_TEXT",
+      "id": "D06-01-supporting-generated_stack_badCount_affine_tail_of_margin",
+      "source_id": "s0715-3c4082d28eda77de1b43",
+      "target_sha256": "d22415c1a434cb3fa83a8f0755c1605a870de13b20032f8cb84a28f08deabf61"
+    }
+  ],
+  "toolchain": {
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "kind": "LEAN",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ],
+    "platform": "linux-x86_64",
+    "version": "4.19.0"
+  }
+}

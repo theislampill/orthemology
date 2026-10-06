@@ -1,0 +1,3937 @@
+{
+  "controls": [
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-0-D06-04-certificate_iff_exact_normalForm",
+      "role": "POSITIVE",
+      "source_id": "s0715-fb0b6ae862bdee73f903",
+      "target_id": "D06-04-certificate_iff_exact_normalForm"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-0-D06-04-certificate_iff_literal_plus_high",
+      "role": "POSITIVE",
+      "source_id": "s0715-fb0b6ae862bdee73f903",
+      "target_id": "D06-04-certificate_iff_literal_plus_high"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-0-D06-04-control-sameCells_but_malformed_input_differs",
+      "role": "POSITIVE",
+      "source_id": "s0715-fb0b6ae862bdee73f903",
+      "target_id": "D06-04-control-sameCells_but_malformed_input_differs"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-1-D06-05-normalization_with_derived_domains",
+      "role": "POSITIVE",
+      "source_id": "s0715-b2e184ba403224c4cfe2",
+      "target_id": "D06-05-normalization_with_derived_domains"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-1-D06-05-normalized_mixed_decoded_law",
+      "role": "POSITIVE",
+      "source_id": "s0715-b2e184ba403224c4cfe2",
+      "target_id": "D06-05-normalized_mixed_decoded_law"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-1-D06-05-normalized_old_computed_failure_event",
+      "role": "POSITIVE",
+      "source_id": "s0715-b2e184ba403224c4cfe2",
+      "target_id": "D06-05-normalized_old_computed_failure_event"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-2-D06-06-certified_supplied_failure",
+      "role": "POSITIVE",
+      "source_id": "s0715-348329f27800a9a8e039",
+      "target_id": "D06-06-certified_supplied_failure"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-3-D06-04-certificate_iff_exact_normalForm",
+      "role": "POSITIVE",
+      "source_id": "s0715-b504e2b59dc762fe16b4",
+      "target_id": "D06-04-certificate_iff_exact_normalForm"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-3-D06-04-certificate_iff_literal_plus_high",
+      "role": "POSITIVE",
+      "source_id": "s0715-b504e2b59dc762fe16b4",
+      "target_id": "D06-04-certificate_iff_literal_plus_high"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-3-D06-04-control-sameCells_but_malformed_input_differs",
+      "role": "POSITIVE",
+      "source_id": "s0715-b504e2b59dc762fe16b4",
+      "target_id": "D06-04-control-sameCells_but_malformed_input_differs"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-4-D06-04-certificate_iff_exact_normalForm",
+      "role": "POSITIVE",
+      "source_id": "s0715-740a60a2026dd7ad31a7",
+      "target_id": "D06-04-certificate_iff_exact_normalForm"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-4-D06-04-certificate_iff_literal_plus_high",
+      "role": "POSITIVE",
+      "source_id": "s0715-740a60a2026dd7ad31a7",
+      "target_id": "D06-04-certificate_iff_literal_plus_high"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-4-D06-04-control-sameCells_but_malformed_input_differs",
+      "role": "POSITIVE",
+      "source_id": "s0715-740a60a2026dd7ad31a7",
+      "target_id": "D06-04-control-sameCells_but_malformed_input_differs"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-5-D06-05-normalization_with_derived_domains",
+      "role": "POSITIVE",
+      "source_id": "s0715-babbe4d6d2e2803b71bc",
+      "target_id": "D06-05-normalization_with_derived_domains"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-5-D06-05-normalized_mixed_decoded_law",
+      "role": "POSITIVE",
+      "source_id": "s0715-babbe4d6d2e2803b71bc",
+      "target_id": "D06-05-normalized_mixed_decoded_law"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-5-D06-05-normalized_old_computed_failure_event",
+      "role": "POSITIVE",
+      "source_id": "s0715-babbe4d6d2e2803b71bc",
+      "target_id": "D06-05-normalized_old_computed_failure_event"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-6-D06-06-certified_supplied_failure",
+      "role": "POSITIVE",
+      "source_id": "s0715-6efee7b278890fe87606",
+      "target_id": "D06-06-certified_supplied_failure"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d06-selector-control-7-D06-04-control-sameCells_but_malformed_input_differs",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "source_id": "s0715-d3c325ad4e6c953c082d",
+      "target_id": "D06-04-control-sameCells_but_malformed_input_differs"
+    }
+  ],
+  "family": "selector-family-source-acceptance",
+  "id": "d06-selector",
+  "origin_archive_sha256": "e2c40bb8b2612db8898cdea0db2c984c91edaa15122dd23cbfb16f33d3e98255",
+  "replay": {
+    "audit_roots": [],
+    "build_roots": [
+      "original/build"
+    ],
+    "drivers": [
+      {
+        "argument_meanings": {
+          "--core-output": "QUALIFIED_CURRENT_CORE_OUTPUT",
+          "--core-zip": "INPUT_FILE",
+          "--expected-manifest-sha256": "LITERAL",
+          "--lean-bin": "LEAN_BIN_DIRECTORY",
+          "--literal-zip": "INPUT_FILE",
+          "--mathlib": "MATHLIB_ROOT",
+          "--out": "FRESH_OUTPUT_DIRECTORY"
+        },
+        "external_input_id": "selector-archive",
+        "id": "selector",
+        "recipe": "t09-selector-original-v2",
+        "sha256": "a02ac9ee8c6108bd247c64c8a5fdfd66741dfdc24370600b90fe1ae15c2c6946",
+        "source_id": "s0715-83f2698c9bab515d882c"
+      }
+    ],
+    "external_inputs": [
+      {
+        "expected_bytes": 173265,
+        "expected_sha256": "e2c40bb8b2612db8898cdea0db2c984c91edaa15122dd23cbfb16f33d3e98255",
+        "id": "selector-archive",
+        "kind": "FILE",
+        "manifest_key": null,
+        "manifest_source_id": null,
+        "role": "INPUT",
+        "source_id": "s0715-b02a7fd9924eb9ec6d7a"
+      },
+      {
+        "expected_bytes": 1286198,
+        "expected_sha256": "bca5b48fbcbb65f032fb5b92f1cb9dec1e3bc3e340f424d0a2c6c2df54530da2",
+        "id": "core-archive",
+        "kind": "FILE",
+        "manifest_key": null,
+        "manifest_source_id": null,
+        "role": "INPUT",
+        "source_id": "s0715-441b26e596211f81e97b"
+      },
+      {
+        "expected_bytes": 61707,
+        "expected_sha256": "b9c56f8b5cf7af600a4ce37903264808928f9490209d0fd4672c6f340d729f91",
+        "id": "literal-archive",
+        "kind": "FILE",
+        "manifest_key": null,
+        "manifest_source_id": null,
+        "role": "INPUT",
+        "source_id": "s0715-708c7284441cfde9e00e"
+      }
+    ],
+    "files": [
+      {
+        "path": "src/GenericFiniteQueryLocality.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c12515de8fe1286763ff"
+      },
+      {
+        "path": "src/GenericFiniteQueryMeasure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-08fd0652cb06805e2dd1"
+      },
+      {
+        "path": "src/PolicyRowEvaluator.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7d6e322009b3589d091e"
+      },
+      {
+        "path": "src/PolicyTranscriptFiber.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0534b6b9e480b8d88406"
+      },
+      {
+        "path": "src/FeedbackRequests.lean",
+        "role": "PROOF",
+        "source_id": "s0715-15fe800e116a2b8ef576"
+      },
+      {
+        "path": "src/ProductObservationLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-eaa3e6b04038d344b480"
+      },
+      {
+        "path": "src/IndependentProductFamilies.lean",
+        "role": "PROOF",
+        "source_id": "s0715-67e6855e6a8066b25173"
+      },
+      {
+        "path": "src/GenericQueryReference.lean",
+        "role": "PROOF",
+        "source_id": "s0715-49a6c1663e6db331d4a8"
+      },
+      {
+        "path": "src/PolicyRowLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f99b1705e2300bfb5240"
+      },
+      {
+        "path": "src/FeedbackFiberProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4fcfa6f7f4bd6ca3efee"
+      },
+      {
+        "path": "src/PolicyCylinderProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2e863f9fe8c302f731a3"
+      },
+      {
+        "path": "src/HistoryPathConsistency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d0d477645e4bc8f8f470"
+      },
+      {
+        "path": "src/PolicyObservedLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8da48315f100a84313df"
+      },
+      {
+        "path": "src/PolicyTraceBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b1b33c3fa3d092eb7739"
+      },
+      {
+        "path": "src/StackActionLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6d672b25f198422b2f08"
+      },
+      {
+        "path": "src/RecurrentSupport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4df2c39facda8c2b1f4d"
+      },
+      {
+        "path": "src/RawTapeRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6c9dec618d619af853db"
+      },
+      {
+        "path": "src/SequentialTapeConsumption.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8ecf1285a65d98f2bca6"
+      },
+      {
+        "path": "src/PruningKernel.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9b1936d3ab51a8e82dd0"
+      },
+      {
+        "path": "src/EndComponents.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1fbfc6b0cb415742eb9b"
+      },
+      {
+        "path": "src/RecurrentGraph.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d2fb82fddd033bd6f1d0"
+      },
+      {
+        "path": "src/KilledQueryLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-491eb82fac6d5602d610"
+      },
+      {
+        "path": "src/KilledAdaptiveHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-21f5bea1282104655b11"
+      },
+      {
+        "path": "src/KilledRecurrentTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b6435293c3c2a888ded1"
+      },
+      {
+        "path": "src/FiniteReachability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-19da27ece4c7e0e2d5ef"
+      },
+      {
+        "path": "src/ExecutablePruning.lean",
+        "role": "PROOF",
+        "source_id": "s0715-475bad8d267c4da15b22"
+      },
+      {
+        "path": "src/MarkovSupportAdapter.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9baf4b40352bc4a6d8c6"
+      },
+      {
+        "path": "src/MarkovKilledBridge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d69f0f000b13d0581841"
+      },
+      {
+        "path": "src/AdaptiveMarkovRecurrentGraph.lean",
+        "role": "PROOF",
+        "source_id": "s0715-884d968849308ea8312d"
+      },
+      {
+        "path": "src/RoundRobinSchedule.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0d5a581f9427acc3eb2f"
+      },
+      {
+        "path": "src/PolicyTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d9459689b27c975f6a3f"
+      },
+      {
+        "path": "src/RelativeTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bc9a626603204fd03cba"
+      },
+      {
+        "path": "src/SafeSetTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d4f3d5fae5dabc343005"
+      },
+      {
+        "path": "src/SelfVerifyingSupport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3486a71106f355757cb4"
+      },
+      {
+        "path": "src/SeededPolicyNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9d72c5622c5f7379bc65"
+      },
+      {
+        "path": "src/FiniteChainAvoidance.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bf7af1fd3fa9b648ae01"
+      },
+      {
+        "path": "src/dependencies/StatisticalRepair.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6c2b04f71a2120255362"
+      },
+      {
+        "path": "src/HellingerTree.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f3591e2a1967612c1a47"
+      },
+      {
+        "path": "src/SubprobHellinger.lean",
+        "role": "PROOF",
+        "source_id": "s0715-79becc64e535b30c3975"
+      },
+      {
+        "path": "src/DependentHellinger.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4fcf7023c58cbbab3e55"
+      },
+      {
+        "path": "src/ResetBudget.lean",
+        "role": "PROOF",
+        "source_id": "s0715-faa5f5cc4cd2f43687da"
+      },
+      {
+        "path": "src/ResetLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d347dbe63c8982112e87"
+      },
+      {
+        "path": "src/ResetTrajectory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a6aa353104e6fb1d6daa"
+      },
+      {
+        "path": "src/MarkovCharge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-dbcdcdd3b7b89078f102"
+      },
+      {
+        "path": "src/FiniteChainTrajectory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7f8a766f682784209c70"
+      },
+      {
+        "path": "src/InfiniteRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0b5754aa9ff57b00c651"
+      },
+      {
+        "path": "src/StationaryPairChain.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8b66e1aeb699b7934554"
+      },
+      {
+        "path": "src/FairComponentParity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-80bc9f18875450c1f26b"
+      },
+      {
+        "path": "src/CheckedTargetOperation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f7d699fd92280e6e4847"
+      },
+      {
+        "path": "src/StableSupportParityNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4cd2f75420d833de0a66"
+      },
+      {
+        "path": "src/StageTargetOrExit.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8e25fc25a153503a5c89"
+      },
+      {
+        "path": "src/ResidualSeedPosterior.lean",
+        "role": "PROOF",
+        "source_id": "s0715-40c573271495c7604d9a"
+      },
+      {
+        "path": "src/ConditionalPrefix.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fcd39d0c7d3a9bce44c7"
+      },
+      {
+        "path": "src/ConditionalContinuationLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3de7752f25787da36c6b"
+      },
+      {
+        "path": "src/PosteriorFeedbackProduct.lean",
+        "role": "PROOF",
+        "source_id": "s0715-cab1ad759b4f50f4dc9c"
+      },
+      {
+        "path": "src/MarkovSeedPosterior.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8e902060fa1e83a05e9c"
+      },
+      {
+        "path": "src/ConditionalKilledContinuation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8a8273d659e2e28fe564"
+      },
+      {
+        "path": "src/LawfulRestart.lean",
+        "role": "PROOF",
+        "source_id": "s0715-82bd32faf098ac69c8b6"
+      },
+      {
+        "path": "src/LawfulProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b01d7d24896108245ae8"
+      },
+      {
+        "path": "src/ParityTailInvariance.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e8a9fe585fd1feeb8684"
+      },
+      {
+        "path": "src/ConditionalAlmostSure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7cc04f80b3a3c8b70805"
+      },
+      {
+        "path": "src/SemanticWinning.lean",
+        "role": "PROOF",
+        "source_id": "s0715-445043856774ecbe72a2"
+      },
+      {
+        "path": "src/SemanticSafeActions.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e665b80bc5c9d400edda"
+      },
+      {
+        "path": "src/HistoryStageSafety.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0e3a4255f94f0b97127a"
+      },
+      {
+        "path": "src/RoundRobinPolicy.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2b98cf6a04704683a696"
+      },
+      {
+        "path": "src/RoundRobinRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d499f256494d06a16c86"
+      },
+      {
+        "path": "src/RegionAlgorithm.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e831f07f134f64bef530"
+      },
+      {
+        "path": "src/GlobalParityNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-22c9bddffbbda032f4bc"
+      },
+      {
+        "path": "src/ActualTargetPolicy.lean",
+        "role": "PROOF",
+        "source_id": "s0715-668d23831fe19a15bcef"
+      },
+      {
+        "path": "src/StageAvailability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9b7e26714e3bc7f016f1"
+      },
+      {
+        "path": "src/FairStageNavigation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-474c33f620d82fcf2d20"
+      },
+      {
+        "path": "src/EventualCycling.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e4bf792884e6546168b7"
+      },
+      {
+        "path": "src/ObservedPhaseController.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b990640ad378d18f28e4"
+      },
+      {
+        "path": "src/CodecVarint.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f825ea69fd043890f970"
+      },
+      {
+        "path": "src/P02A2/ObserverCore.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6e741f7d04185e7c107c"
+      },
+      {
+        "path": "src/CodecExpr.lean",
+        "role": "PROOF",
+        "source_id": "s0715-15ab457a5f9158384108"
+      },
+      {
+        "path": "src/CodecStmt.lean",
+        "role": "PROOF",
+        "source_id": "s0715-492dadacd48cb0705a40"
+      },
+      {
+        "path": "src/CodecNumeric.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6322a3039b3e519b9efb"
+      },
+      {
+        "path": "src/LoopRenaming.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fd256d33bd7ac85336ea"
+      },
+      {
+        "path": "src/LoopPrimrec.lean",
+        "role": "PROOF",
+        "source_id": "s0715-776a3e4c90ec8970f9a4"
+      },
+      {
+        "path": "src/PRProgram.lean",
+        "role": "PROOF",
+        "source_id": "s0715-cf18c8dbb73e71551aab"
+      },
+      {
+        "path": "src/PRComposition.lean",
+        "role": "PROOF",
+        "source_id": "s0715-caa593d23be7fe6f2499"
+      },
+      {
+        "path": "src/PRRecursion.lean",
+        "role": "PROOF",
+        "source_id": "s0715-38a62b72eeaa81967fe4"
+      },
+      {
+        "path": "src/PRHeadRecursion.lean",
+        "role": "PROOF",
+        "source_id": "s0715-30dcd68a150b0cfc6397"
+      },
+      {
+        "path": "src/PRDerivation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4ec1cb2530ad7af038b7"
+      },
+      {
+        "path": "src/PRCoverage.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7ded6d92d835a7585c08"
+      },
+      {
+        "path": "src/PRSpecialize.lean",
+        "role": "PROOF",
+        "source_id": "s0715-5cd26153cc48e8f0b875"
+      },
+      {
+        "path": "src/CodecProgram.lean",
+        "role": "PROOF",
+        "source_id": "s0715-52500b84343255ff0fd9"
+      },
+      {
+        "path": "src/PhaseAdvanceSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e8474c50ccf0bb8b3b32"
+      },
+      {
+        "path": "src/FiniteSelectorSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d05ff0e5e182d0435b20"
+      },
+      {
+        "path": "src/SelectorCertificateConstruction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f7785004eedbf61aba88"
+      },
+      {
+        "path": "src/PERRefinement.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6eec1658c5d68ee7d16b"
+      },
+      {
+        "path": "src/MealyRefinement.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f38b2e8e8660e4392266"
+      },
+      {
+        "path": "src/BlockMismatch.lean",
+        "role": "PROOF",
+        "source_id": "s0715-5a168c48e918e4ccbacd"
+      },
+      {
+        "path": "src/P02A2/MeasureCore.lean",
+        "role": "PROOF",
+        "source_id": "s0715-63a0ad78be3cc33bd792"
+      },
+      {
+        "path": "src/Q8Measure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3b261fbf5d5218198594"
+      },
+      {
+        "path": "src/MealyMeasure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7bd69b0f499c881b9f72"
+      },
+      {
+        "path": "src/MealyHitting.lean",
+        "role": "PROOF",
+        "source_id": "s0715-db2d04b585dc77348af0"
+      },
+      {
+        "path": "src/MealyRational.lean",
+        "role": "PROOF",
+        "source_id": "s0715-45118b9e7696ed5b2d35"
+      },
+      {
+        "path": "src/MealySolver.lean",
+        "role": "PROOF",
+        "source_id": "s0715-58af40c0a045a0125444"
+      },
+      {
+        "path": "src/TotalVariation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-72e58f1ff77d2b546417"
+      },
+      {
+        "path": "src/ObserverAbstraction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a00d2364db191e8e9b89"
+      },
+      {
+        "path": "src/GuardedObserver.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8031c1761a0b45f9af82"
+      },
+      {
+        "path": "src/CodecPrimrec.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ba9269d5e6055f62df71"
+      },
+      {
+        "path": "src/UniformComputabilityNumeric.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f8538ef3a24a57c221ad"
+      },
+      {
+        "path": "src/UniformComputabilityMachine.lean",
+        "role": "PROOF",
+        "source_id": "s0715-45a5243134e9c5594983"
+      },
+      {
+        "path": "src/Q8Machine.lean",
+        "role": "PROOF",
+        "source_id": "s0715-29f82145549eefcde960"
+      },
+      {
+        "path": "src/Q8Compiler.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9063b0e0af759207d9a7"
+      },
+      {
+        "path": "src/IndexedObserver.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ab2549d18b77d758c050"
+      },
+      {
+        "path": "src/MealyAtoms.lean",
+        "role": "PROOF",
+        "source_id": "s0715-35a76d326fe595c8dfe9"
+      },
+      {
+        "path": "src/MealyMeasureFixtures.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1dd8f58564df50d83d0c"
+      },
+      {
+        "path": "src/Q8ObserverAbstraction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8aed800ed86f9da14c3c"
+      },
+      {
+        "path": "src/ParsedObserverAbstraction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8224f431cbcccac8c487"
+      },
+      {
+        "path": "src/UniformRuntimeTrace.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bcb5223633a607dfd2db"
+      },
+      {
+        "path": "src/IndexedRuntime.lean",
+        "role": "PROOF",
+        "source_id": "s0715-5ae94389ea29e6e1461b"
+      },
+      {
+        "path": "src/FiniteMealyCompiler.lean",
+        "role": "PROOF",
+        "source_id": "s0715-657518786e2c79f53bd8"
+      },
+      {
+        "path": "src/NaturalStateCompiler.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6306c669a9b3b92eeecc"
+      },
+      {
+        "path": "src/HistoryPolicyRuntime.lean",
+        "role": "PROOF",
+        "source_id": "s0715-666ea948b2ce5a09d3e3"
+      },
+      {
+        "path": "src/RawEmpiricalRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-477a8af41c893eb37ad8"
+      },
+      {
+        "path": "src/EmpiricalTailBounds.lean",
+        "role": "PROOF",
+        "source_id": "s0715-aaa403197adcf1b77113"
+      },
+      {
+        "path": "src/ObservedEmpiricalRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6e56c88d8eec50730704"
+      },
+      {
+        "path": "src/ObservedRowTest.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c5c14be5b4bf86dadf03"
+      },
+      {
+        "path": "src/RationalEmpiricalGate.lean",
+        "role": "PROOF",
+        "source_id": "s0715-08d24ccae59ba8433230"
+      },
+      {
+        "path": "src/GeneratedPolicySafety.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d05ab24857f36f70efeb"
+      },
+      {
+        "path": "src/StackPathRegularity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9ff088f648943a502116"
+      },
+      {
+        "path": "src/GeneratedRun.lean",
+        "role": "PROOF",
+        "source_id": "s0715-effab451a653ed1f1164"
+      },
+      {
+        "path": "src/MemoryTransitions.lean",
+        "role": "PROOF",
+        "source_id": "s0715-26b44a1ad0b42bf7413a"
+      },
+      {
+        "path": "src/GeneratedPhaseDynamics.lean",
+        "role": "PROOF",
+        "source_id": "s0715-504305c876bf855cdfb8"
+      },
+      {
+        "path": "src/EmpiricalTestLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-85fc0a181d26a94d0aca"
+      },
+      {
+        "path": "src/PhaseStabilization.lean",
+        "role": "PROOF",
+        "source_id": "s0715-179a29b309f46405321b"
+      },
+      {
+        "path": "src/GeneratedPhaseStability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bb51fccd03e4a80456c4"
+      },
+      {
+        "path": "src/GeneratedParitySuccess.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9f548c7aeb9c3fe8e8b3"
+      },
+      {
+        "path": "src/GlobalParitySufficiency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c4ff0a3d24098255771b"
+      },
+      {
+        "path": "src/SingletonControllerSpecialization.lean",
+        "role": "PROOF",
+        "source_id": "s0715-473d323e8085afffc08c"
+      },
+      {
+        "path": "src/AcceptedFixtureController.lean",
+        "role": "PROOF",
+        "source_id": "s0715-dcb32b2567242b064165"
+      },
+      {
+        "path": "src/EncodedPolicyHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6ffdfe286275af5c94d0"
+      },
+      {
+        "path": "src/SupportUpdateSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d86654d36080f22c6f8c"
+      },
+      {
+        "path": "src/StatisticUpdateSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-30d7187e05b4ffaa38bb"
+      },
+      {
+        "path": "src/EmpiricalGateSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7f18a3f06ab6e4fa7cc8"
+      },
+      {
+        "path": "src/CompleteEmpiricalSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ede8a21ed8da76a4d04b"
+      },
+      {
+        "path": "src/PhaseSourceFixtures.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a63b820d20615ee6454c"
+      },
+      {
+        "path": "src/CallableSourceRuntime.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fbe0726a77ed8b635516"
+      },
+      {
+        "path": "src/EncodedHistoryFoldSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9c6798aae9ea7ce31d89"
+      },
+      {
+        "path": "src/ParallelHistorySource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e0d71b044675e144abe6"
+      },
+      {
+        "path": "src/FullControllerSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e9c633af0e8f3269cb00"
+      },
+      {
+        "path": "src/ObservationChannels.lean",
+        "role": "PROOF",
+        "source_id": "s0715-93ec1c0d05173ef4f678"
+      },
+      {
+        "path": "src/FourBitFraming.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c32f1c622f548ab2f889"
+      },
+      {
+        "path": "src/HistoryRuntimeFraming.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8f5d8b28ac351462f4c0"
+      },
+      {
+        "path": "src/HistorySamplingSemantics.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a9d2d552d672cb024d30"
+      },
+      {
+        "path": "src/FullControllerRuntime.lean",
+        "role": "PROOF",
+        "source_id": "s0715-686a4f875bc55706da5f"
+      },
+      {
+        "path": "src/FairBlockConstraints.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4d417ddcd5a94e778881"
+      },
+      {
+        "path": "src/RationalRejectionLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-47d9f96c45bcfe1b1d79"
+      },
+      {
+        "path": "src/AdaptiveRationalCylinders.lean",
+        "role": "PROOF",
+        "source_id": "s0715-aca7b4ea2ab6004854e0"
+      },
+      {
+        "path": "src/LiteralSamplerExecution.lean",
+        "role": "PROOF",
+        "source_id": "s0715-accda060b79557733999"
+      },
+      {
+        "path": "src/FairBitSubsequence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7544519d2038c0ab3298"
+      },
+      {
+        "path": "src/RuntimeRationalBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-27de94e4d0f09d7d63f5"
+      },
+      {
+        "path": "src/ReceiptPathDecoder.lean",
+        "role": "PROOF",
+        "source_id": "s0715-babbe99e5887a2df087c"
+      },
+      {
+        "path": "src/RuntimeReceiptPath.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ecfdc5162bca720de79b"
+      },
+      {
+        "path": "src/FullControllerReceiptLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0b9afb1052f420eb3e9c"
+      },
+      {
+        "path": "src/RationalGateSufficiency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2958c936c85bda6c6518"
+      },
+      {
+        "path": "src/ComputedToleranceSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-75e8f7b701f3c6926a29"
+      },
+      {
+        "path": "src/CanonicalHistoryBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2eadecdccfb31214bcf7"
+      },
+      {
+        "path": "src/FullControllerCanonicalLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-117a05b98f335df42fc1"
+      },
+      {
+        "path": "src/NontrivialFixture.lean",
+        "role": "PROOF",
+        "source_id": "s0715-69097ada11e978388be1"
+      },
+      {
+        "path": "src/OppositeTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e2d626a41344bd2c89be"
+      },
+      {
+        "path": "src/MixedReceiptLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-905744668930a647931b"
+      },
+      {
+        "path": "src/ExactRuntimeCounterexample.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c38b7cbba6bdf790649c"
+      },
+      {
+        "path": "src/LiteralSelectorObstruction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-62d289dfb7524266ba5a"
+      },
+      {
+        "path": "src/LiteralSelectorFamily.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ecbc46e7e19f5767fb49"
+      },
+      {
+        "path": "src/FiniteRadixNormalForm.lean",
+        "role": "PROOF",
+        "source_id": "s0715-17c778dacfc10b932676"
+      },
+      {
+        "path": "src/SelectorTableNormalForm.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d3c325ad4e6c953c082d"
+      },
+      {
+        "path": "src/A1AxiomReadback.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-fb0b6ae862bdee73f903"
+      },
+      {
+        "path": "src/SelectorCallDomains.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f7cb12eb932db3043b4d"
+      },
+      {
+        "path": "src/SelectorSemanticTransport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f9251d1289edc8026223"
+      },
+      {
+        "path": "src/A2AxiomReadback.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-b2e184ba403224c4cfe2"
+      },
+      {
+        "path": "src/LiteralRuntimeCounterexample.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7c3bc6367e892b228478"
+      },
+      {
+        "path": "src/CertifiedSelectorFamily.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e363f08ebaea3afa316b"
+      },
+      {
+        "path": "src/A3AxiomReadback.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-348329f27800a9a8e039"
+      },
+      {
+        "path": "src/ReviewerRawContract.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-b504e2b59dc762fe16b4"
+      },
+      {
+        "path": "src/ReviewerPaddingBoundary.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-740a60a2026dd7ad31a7"
+      },
+      {
+        "path": "src/ReviewerTransportBoundaries.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-babbe4d6d2e2803b71bc"
+      },
+      {
+        "path": "src/ReviewerSuppliedConsumer.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-6efee7b278890fe87606"
+      },
+      {
+        "path": "locks/DEPENDENCY_PINS.json",
+        "role": "LOCK",
+        "source_id": "s0715-8bc1d7ed6f374d6baed3"
+      }
+    ],
+    "fixtures": [],
+    "module_order": [
+      "GenericFiniteQueryLocality",
+      "GenericFiniteQueryMeasure",
+      "PolicyRowEvaluator",
+      "PolicyTranscriptFiber",
+      "FeedbackRequests",
+      "ProductObservationLaw",
+      "IndependentProductFamilies",
+      "GenericQueryReference",
+      "PolicyRowLaw",
+      "FeedbackFiberProbability",
+      "PolicyCylinderProbability",
+      "HistoryPathConsistency",
+      "PolicyObservedLaw",
+      "PolicyTraceBinding",
+      "StackActionLaw",
+      "RecurrentSupport",
+      "RawTapeRecurrence",
+      "SequentialTapeConsumption",
+      "PruningKernel",
+      "EndComponents",
+      "RecurrentGraph",
+      "KilledQueryLaw",
+      "KilledAdaptiveHistory",
+      "KilledRecurrentTransfer",
+      "FiniteReachability",
+      "ExecutablePruning",
+      "MarkovSupportAdapter",
+      "MarkovKilledBridge",
+      "AdaptiveMarkovRecurrentGraph",
+      "RoundRobinSchedule",
+      "PolicyTailTransfer",
+      "RelativeTailTransfer",
+      "SafeSetTailTransfer",
+      "SelfVerifyingSupport",
+      "SeededPolicyNecessity",
+      "FiniteChainAvoidance",
+      "dependencies.StatisticalRepair",
+      "HellingerTree",
+      "SubprobHellinger",
+      "DependentHellinger",
+      "ResetBudget",
+      "ResetLaw",
+      "ResetTrajectory",
+      "MarkovCharge",
+      "FiniteChainTrajectory",
+      "InfiniteRecurrence",
+      "StationaryPairChain",
+      "FairComponentParity",
+      "CheckedTargetOperation",
+      "StableSupportParityNecessity",
+      "StageTargetOrExit",
+      "ResidualSeedPosterior",
+      "ConditionalPrefix",
+      "ConditionalContinuationLaw",
+      "PosteriorFeedbackProduct",
+      "MarkovSeedPosterior",
+      "ConditionalKilledContinuation",
+      "LawfulRestart",
+      "LawfulProbability",
+      "ParityTailInvariance",
+      "ConditionalAlmostSure",
+      "SemanticWinning",
+      "SemanticSafeActions",
+      "HistoryStageSafety",
+      "RoundRobinPolicy",
+      "RoundRobinRecurrence",
+      "RegionAlgorithm",
+      "GlobalParityNecessity",
+      "ActualTargetPolicy",
+      "StageAvailability",
+      "FairStageNavigation",
+      "EventualCycling",
+      "ObservedPhaseController",
+      "CodecVarint",
+      "P02A2.ObserverCore",
+      "CodecExpr",
+      "CodecStmt",
+      "CodecNumeric",
+      "LoopRenaming",
+      "LoopPrimrec",
+      "PRProgram",
+      "PRComposition",
+      "PRRecursion",
+      "PRHeadRecursion",
+      "PRDerivation",
+      "PRCoverage",
+      "PRSpecialize",
+      "CodecProgram",
+      "PhaseAdvanceSource",
+      "FiniteSelectorSource",
+      "SelectorCertificateConstruction",
+      "PERRefinement",
+      "MealyRefinement",
+      "BlockMismatch",
+      "P02A2.MeasureCore",
+      "Q8Measure",
+      "MealyMeasure",
+      "MealyHitting",
+      "MealyRational",
+      "MealySolver",
+      "TotalVariation",
+      "ObserverAbstraction",
+      "GuardedObserver",
+      "CodecPrimrec",
+      "UniformComputabilityNumeric",
+      "UniformComputabilityMachine",
+      "Q8Machine",
+      "Q8Compiler",
+      "IndexedObserver",
+      "MealyAtoms",
+      "MealyMeasureFixtures",
+      "Q8ObserverAbstraction",
+      "ParsedObserverAbstraction",
+      "UniformRuntimeTrace",
+      "IndexedRuntime",
+      "FiniteMealyCompiler",
+      "NaturalStateCompiler",
+      "HistoryPolicyRuntime",
+      "RawEmpiricalRows",
+      "EmpiricalTailBounds",
+      "ObservedEmpiricalRows",
+      "ObservedRowTest",
+      "RationalEmpiricalGate",
+      "GeneratedPolicySafety",
+      "StackPathRegularity",
+      "GeneratedRun",
+      "MemoryTransitions",
+      "GeneratedPhaseDynamics",
+      "EmpiricalTestLaw",
+      "PhaseStabilization",
+      "GeneratedPhaseStability",
+      "GeneratedParitySuccess",
+      "GlobalParitySufficiency",
+      "SingletonControllerSpecialization",
+      "AcceptedFixtureController",
+      "EncodedPolicyHistory",
+      "SupportUpdateSource",
+      "StatisticUpdateSource",
+      "EmpiricalGateSource",
+      "CompleteEmpiricalSource",
+      "PhaseSourceFixtures",
+      "CallableSourceRuntime",
+      "EncodedHistoryFoldSource",
+      "ParallelHistorySource",
+      "FullControllerSource",
+      "ObservationChannels",
+      "FourBitFraming",
+      "HistoryRuntimeFraming",
+      "HistorySamplingSemantics",
+      "FullControllerRuntime",
+      "FairBlockConstraints",
+      "RationalRejectionLaw",
+      "AdaptiveRationalCylinders",
+      "LiteralSamplerExecution",
+      "FairBitSubsequence",
+      "RuntimeRationalBinding",
+      "ReceiptPathDecoder",
+      "RuntimeReceiptPath",
+      "FullControllerReceiptLaw",
+      "RationalGateSufficiency",
+      "ComputedToleranceSource",
+      "CanonicalHistoryBinding",
+      "FullControllerCanonicalLaw",
+      "NontrivialFixture",
+      "OppositeTailTransfer",
+      "MixedReceiptLaw",
+      "ExactRuntimeCounterexample",
+      "LiteralSelectorObstruction",
+      "LiteralSelectorFamily",
+      "FiniteRadixNormalForm",
+      "SelectorTableNormalForm",
+      "A1AxiomReadback",
+      "SelectorCallDomains",
+      "SelectorSemanticTransport",
+      "A2AxiomReadback",
+      "LiteralRuntimeCounterexample",
+      "CertifiedSelectorFamily",
+      "A3AxiomReadback",
+      "ReviewerRawContract",
+      "ReviewerPaddingBoundary",
+      "ReviewerTransportBoundaries",
+      "ReviewerSuppliedConsumer"
+    ],
+    "modules": [
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "GenericFiniteQueryLocality",
+        "source_id": "s0715-c12515de8fe1286763ff"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryLocality",
+          "Mathlib.Probability.ProductMeasure"
+        ],
+        "name": "GenericFiniteQueryMeasure",
+        "source_id": "s0715-08fd0652cb06805e2dd1"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "PolicyRowEvaluator",
+        "source_id": "s0715-7d6e322009b3589d091e"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyRowEvaluator"
+        ],
+        "name": "PolicyTranscriptFiber",
+        "source_id": "s0715-0534b6b9e480b8d88406"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTranscriptFiber"
+        ],
+        "name": "FeedbackRequests",
+        "source_id": "s0715-15fe800e116a2b8ef576"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib",
+          "Mathlib.Probability.ProductMeasure"
+        ],
+        "name": "ProductObservationLaw",
+        "source_id": "s0715-eaa3e6b04038d344b480"
+      },
+      {
+        "imports": [
+          "Init",
+          "ProductObservationLaw"
+        ],
+        "name": "IndependentProductFamilies",
+        "source_id": "s0715-67e6855e6a8066b25173"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "GenericQueryReference",
+        "source_id": "s0715-49a6c1663e6db331d4a8"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericQueryReference"
+        ],
+        "name": "PolicyRowLaw",
+        "source_id": "s0715-f99b1705e2300bfb5240"
+      },
+      {
+        "imports": [
+          "Init",
+          "FeedbackRequests",
+          "IndependentProductFamilies",
+          "PolicyRowLaw"
+        ],
+        "name": "FeedbackFiberProbability",
+        "source_id": "s0715-4fcfa6f7f4bd6ca3efee"
+      },
+      {
+        "imports": [
+          "Init",
+          "FeedbackFiberProbability"
+        ],
+        "name": "PolicyCylinderProbability",
+        "source_id": "s0715-2e863f9fe8c302f731a3"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTranscriptFiber",
+          "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+        ],
+        "name": "HistoryPathConsistency",
+        "source_id": "s0715-d0d477645e4bc8f8f470"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyCylinderProbability",
+          "HistoryPathConsistency"
+        ],
+        "name": "PolicyObservedLaw",
+        "source_id": "s0715-8da48315f100a84313df"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyObservedLaw"
+        ],
+        "name": "PolicyTraceBinding",
+        "source_id": "s0715-b1b33c3fa3d092eb7739"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding"
+        ],
+        "name": "StackActionLaw",
+        "source_id": "s0715-6d672b25f198422b2f08"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "RecurrentSupport",
+        "source_id": "s0715-4df2c39facda8c2b1f4d"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "RecurrentSupport",
+          "Mathlib.Probability.BorelCantelli"
+        ],
+        "name": "RawTapeRecurrence",
+        "source_id": "s0715-6c9dec618d619af853db"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "RecurrentSupport"
+        ],
+        "name": "SequentialTapeConsumption",
+        "source_id": "s0715-8ecf1285a65d98f2bca6"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "PruningKernel",
+        "source_id": "s0715-9b1936d3ab51a8e82dd0"
+      },
+      {
+        "imports": [
+          "Init",
+          "PruningKernel"
+        ],
+        "name": "EndComponents",
+        "source_id": "s0715-1fbfc6b0cb415742eb9b"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "RecurrentSupport"
+        ],
+        "name": "RecurrentGraph",
+        "source_id": "s0715-d2fb82fddd033bd6f1d0"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "KilledQueryLaw",
+        "source_id": "s0715-491eb82fac6d5602d610"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledQueryLaw",
+          "PolicyTraceBinding"
+        ],
+        "name": "KilledAdaptiveHistory",
+        "source_id": "s0715-21f5bea1282104655b11"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledAdaptiveHistory",
+          "RecurrentSupport",
+          "PruningKernel"
+        ],
+        "name": "KilledRecurrentTransfer",
+        "source_id": "s0715-b6435293c3c2a888ded1"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteReachability",
+        "source_id": "s0715-19da27ece4c7e0e2d5ef"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "FiniteReachability"
+        ],
+        "name": "ExecutablePruning",
+        "source_id": "s0715-475bad8d267c4da15b22"
+      },
+      {
+        "imports": [
+          "Init",
+          "ExecutablePruning"
+        ],
+        "name": "MarkovSupportAdapter",
+        "source_id": "s0715-9baf4b40352bc4a6d8c6"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledRecurrentTransfer",
+          "MarkovSupportAdapter"
+        ],
+        "name": "MarkovKilledBridge",
+        "source_id": "s0715-d69f0f000b13d0581841"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawTapeRecurrence",
+          "SequentialTapeConsumption",
+          "RecurrentGraph",
+          "MarkovKilledBridge"
+        ],
+        "name": "AdaptiveMarkovRecurrentGraph",
+        "source_id": "s0715-884d968849308ea8312d"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveMarkovRecurrentGraph"
+        ],
+        "name": "RoundRobinSchedule",
+        "source_id": "s0715-0d5a581f9427acc3eb2f"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding",
+          "RecurrentSupport"
+        ],
+        "name": "PolicyTailTransfer",
+        "source_id": "s0715-d9459689b27c975f6a3f"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTailTransfer"
+        ],
+        "name": "RelativeTailTransfer",
+        "source_id": "s0715-bc9a626603204fd03cba"
+      },
+      {
+        "imports": [
+          "Init",
+          "RelativeTailTransfer"
+        ],
+        "name": "SafeSetTailTransfer",
+        "source_id": "s0715-d4f3d5fae5dabc343005"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Powerset",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ],
+        "name": "SelfVerifyingSupport",
+        "source_id": "s0715-3486a71106f355757cb4"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTailTransfer",
+          "SelfVerifyingSupport"
+        ],
+        "name": "SeededPolicyNecessity",
+        "source_id": "s0715-9d72c5622c5f7379bc65"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteChainAvoidance",
+        "source_id": "s0715-bf7af1fd3fa9b648ae01"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Real.Sqrt",
+          "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+          "Mathlib.Tactic"
+        ],
+        "name": "dependencies.StatisticalRepair",
+        "source_id": "s0715-6c2b04f71a2120255362"
+      },
+      {
+        "imports": [
+          "Init",
+          "dependencies.StatisticalRepair",
+          "Mathlib.Topology.Instances.ENNReal.Lemmas"
+        ],
+        "name": "HellingerTree",
+        "source_id": "s0715-f3591e2a1967612c1a47"
+      },
+      {
+        "imports": [
+          "Init",
+          "HellingerTree"
+        ],
+        "name": "SubprobHellinger",
+        "source_id": "s0715-79becc64e535b30c3975"
+      },
+      {
+        "imports": [
+          "Init",
+          "SubprobHellinger"
+        ],
+        "name": "DependentHellinger",
+        "source_id": "s0715-4fcf7023c58cbbab3e55"
+      },
+      {
+        "imports": [
+          "Init",
+          "DependentHellinger"
+        ],
+        "name": "ResetBudget",
+        "source_id": "s0715-faa5f5cc4cd2f43687da"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetBudget"
+        ],
+        "name": "ResetLaw",
+        "source_id": "s0715-d347dbe63c8982112e87"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetLaw",
+          "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+          "Mathlib.Probability.ProbabilityMassFunction.Integrals"
+        ],
+        "name": "ResetTrajectory",
+        "source_id": "s0715-a6aa353104e6fb1d6daa"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetTrajectory"
+        ],
+        "name": "MarkovCharge",
+        "source_id": "s0715-dbcdcdd3b7b89078f102"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainAvoidance",
+          "MarkovCharge"
+        ],
+        "name": "FiniteChainTrajectory",
+        "source_id": "s0715-7f8a766f682784209c70"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainTrajectory",
+          "RecurrentSupport"
+        ],
+        "name": "InfiniteRecurrence",
+        "source_id": "s0715-0b5754aa9ff57b00c651"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainAvoidance",
+          "EndComponents"
+        ],
+        "name": "StationaryPairChain",
+        "source_id": "s0715-8b66e1aeb699b7934554"
+      },
+      {
+        "imports": [
+          "Init",
+          "InfiniteRecurrence",
+          "StationaryPairChain",
+          "PruningKernel"
+        ],
+        "name": "FairComponentParity",
+        "source_id": "s0715-80bc9f18875450c1f26b"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairComponentParity",
+          "MarkovSupportAdapter"
+        ],
+        "name": "CheckedTargetOperation",
+        "source_id": "s0715-f7d699fd92280e6e4847"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveMarkovRecurrentGraph",
+          "SafeSetTailTransfer",
+          "SeededPolicyNecessity",
+          "CheckedTargetOperation"
+        ],
+        "name": "StableSupportParityNecessity",
+        "source_id": "s0715-4cd2f75420d833de0a66"
+      },
+      {
+        "imports": [
+          "Init",
+          "StableSupportParityNecessity"
+        ],
+        "name": "StageTargetOrExit",
+        "source_id": "s0715-8e25fc25a153503a5c89"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding"
+        ],
+        "name": "ResidualSeedPosterior",
+        "source_id": "s0715-40c573271495c7604d9a"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResidualSeedPosterior"
+        ],
+        "name": "ConditionalPrefix",
+        "source_id": "s0715-fcd39d0c7d3a9bce44c7"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalPrefix"
+        ],
+        "name": "ConditionalContinuationLaw",
+        "source_id": "s0715-3de7752f25787da36c6b"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResidualSeedPosterior"
+        ],
+        "name": "PosteriorFeedbackProduct",
+        "source_id": "s0715-cab1ad759b4f50f4dc9c"
+      },
+      {
+        "imports": [
+          "Init",
+          "PosteriorFeedbackProduct",
+          "MarkovKilledBridge"
+        ],
+        "name": "MarkovSeedPosterior",
+        "source_id": "s0715-8e902060fa1e83a05e9c"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalContinuationLaw",
+          "KilledRecurrentTransfer",
+          "MarkovSeedPosterior"
+        ],
+        "name": "ConditionalKilledContinuation",
+        "source_id": "s0715-8a8273d659e2e28fe564"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageTargetOrExit",
+          "ConditionalKilledContinuation"
+        ],
+        "name": "LawfulRestart",
+        "source_id": "s0715-82bd32faf098ac69c8b6"
+      },
+      {
+        "imports": [
+          "Init",
+          "LawfulRestart"
+        ],
+        "name": "LawfulProbability",
+        "source_id": "s0715-b01d7d24896108245ae8"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledRecurrentTransfer"
+        ],
+        "name": "ParityTailInvariance",
+        "source_id": "s0715-e8a9fe585fd1feeb8684"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalKilledContinuation",
+          "ParityTailInvariance"
+        ],
+        "name": "ConditionalAlmostSure",
+        "source_id": "s0715-7cc04f80b3a3c8b70805"
+      },
+      {
+        "imports": [
+          "Init",
+          "LawfulProbability",
+          "ConditionalAlmostSure"
+        ],
+        "name": "SemanticWinning",
+        "source_id": "s0715-445043856774ecbe72a2"
+      },
+      {
+        "imports": [
+          "Init",
+          "SemanticWinning"
+        ],
+        "name": "SemanticSafeActions",
+        "source_id": "s0715-e665b80bc5c9d400edda"
+      },
+      {
+        "imports": [
+          "Init",
+          "SemanticSafeActions"
+        ],
+        "name": "HistoryStageSafety",
+        "source_id": "s0715-0e3a4255f94f0b97127a"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinSchedule",
+          "HistoryStageSafety"
+        ],
+        "name": "RoundRobinPolicy",
+        "source_id": "s0715-2b98cf6a04704683a696"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinPolicy"
+        ],
+        "name": "RoundRobinRecurrence",
+        "source_id": "s0715-d499f256494d06a16c86"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageTargetOrExit"
+        ],
+        "name": "RegionAlgorithm",
+        "source_id": "s0715-e831f07f134f64bef530"
+      },
+      {
+        "imports": [
+          "Init",
+          "HistoryStageSafety",
+          "RegionAlgorithm"
+        ],
+        "name": "GlobalParityNecessity",
+        "source_id": "s0715-22c9bddffbbda032f4bc"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinRecurrence",
+          "CheckedTargetOperation",
+          "GlobalParityNecessity"
+        ],
+        "name": "ActualTargetPolicy",
+        "source_id": "s0715-668d23831fe19a15bcef"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy"
+        ],
+        "name": "StageAvailability",
+        "source_id": "s0715-9b7e26714e3bc7f016f1"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy"
+        ],
+        "name": "FairStageNavigation",
+        "source_id": "s0715-474c33f620d82fcf2d20"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairStageNavigation"
+        ],
+        "name": "EventualCycling",
+        "source_id": "s0715-e4bf792884e6546168b7"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageAvailability",
+          "EventualCycling"
+        ],
+        "name": "ObservedPhaseController",
+        "source_id": "s0715-b990640ad378d18f28e4"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Nat.Bitwise",
+          "Mathlib.Tactic"
+        ],
+        "name": "CodecVarint",
+        "source_id": "s0715-f825ea69fd043890f970"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "P02A2.ObserverCore",
+        "source_id": "s0715-6e741f7d04185e7c107c"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecVarint",
+          "P02A2.ObserverCore"
+        ],
+        "name": "CodecExpr",
+        "source_id": "s0715-15ab457a5f9158384108"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecExpr"
+        ],
+        "name": "CodecStmt",
+        "source_id": "s0715-492dadacd48cb0705a40"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecVarint"
+        ],
+        "name": "CodecNumeric",
+        "source_id": "s0715-6322a3039b3e519b9efb"
+      },
+      {
+        "imports": [
+          "Init",
+          "P02A2.ObserverCore"
+        ],
+        "name": "LoopRenaming",
+        "source_id": "s0715-fd256d33bd7ac85336ea"
+      },
+      {
+        "imports": [
+          "Init",
+          "LoopRenaming",
+          "Mathlib.Computability.Primrec"
+        ],
+        "name": "LoopPrimrec",
+        "source_id": "s0715-776a3e4c90ec8970f9a4"
+      },
+      {
+        "imports": [
+          "Init",
+          "LoopPrimrec"
+        ],
+        "name": "PRProgram",
+        "source_id": "s0715-cf18c8dbb73e71551aab"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRProgram"
+        ],
+        "name": "PRComposition",
+        "source_id": "s0715-caa593d23be7fe6f2499"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRComposition"
+        ],
+        "name": "PRRecursion",
+        "source_id": "s0715-38a62b72eeaa81967fe4"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRRecursion"
+        ],
+        "name": "PRHeadRecursion",
+        "source_id": "s0715-30dcd68a150b0cfc6397"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRHeadRecursion",
+          "Mathlib.Computability.Primrec"
+        ],
+        "name": "PRDerivation",
+        "source_id": "s0715-4ec1cb2530ad7af038b7"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRDerivation"
+        ],
+        "name": "PRCoverage",
+        "source_id": "s0715-7ded6d92d835a7585c08"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRCoverage"
+        ],
+        "name": "PRSpecialize",
+        "source_id": "s0715-5cd26153cc48e8f0b875"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecStmt",
+          "CodecNumeric",
+          "PRSpecialize"
+        ],
+        "name": "CodecProgram",
+        "source_id": "s0715-52500b84343255ff0fd9"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController",
+          "CodecProgram"
+        ],
+        "name": "PhaseAdvanceSource",
+        "source_id": "s0715-e8474c50ccf0bb8b3b32"
+      },
+      {
+        "imports": [
+          "Init",
+          "PhaseAdvanceSource"
+        ],
+        "name": "FiniteSelectorSource",
+        "source_id": "s0715-d05ff0e5e182d0435b20"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteSelectorSource",
+          "Mathlib.Data.Nat.Digits"
+        ],
+        "name": "SelectorCertificateConstruction",
+        "source_id": "s0715-f7785004eedbf61aba88"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.SetTheory.Cardinal.Finite",
+          "Mathlib.Data.Fintype.EquivFin",
+          "Mathlib.Tactic"
+        ],
+        "name": "PERRefinement",
+        "source_id": "s0715-6eec1658c5d68ee7d16b"
+      },
+      {
+        "imports": [
+          "Init",
+          "PERRefinement"
+        ],
+        "name": "MealyRefinement",
+        "source_id": "s0715-f38b2e8e8660e4392266"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyRefinement",
+          "Mathlib.Data.List.OfFn",
+          "Mathlib.Data.Finset.Sigma"
+        ],
+        "name": "BlockMismatch",
+        "source_id": "s0715-5a168c48e918e4ccbacd"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+          "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+          "Mathlib.MeasureTheory.Measure.Map",
+          "Mathlib.MeasureTheory.Measure.Restrict",
+          "Mathlib.Tactic"
+        ],
+        "name": "P02A2.MeasureCore",
+        "source_id": "s0715-63a0ad78be3cc33bd792"
+      },
+      {
+        "imports": [
+          "Init",
+          "P02A2.MeasureCore",
+          "Mathlib.Probability.ProductMeasure",
+          "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+          "Mathlib.Analysis.SpecificLimits.Basic"
+        ],
+        "name": "Q8Measure",
+        "source_id": "s0715-3b261fbf5d5218198594"
+      },
+      {
+        "imports": [
+          "Init",
+          "BlockMismatch",
+          "Q8Measure"
+        ],
+        "name": "MealyMeasure",
+        "source_id": "s0715-7bd69b0f499c881b9f72"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyMeasure"
+        ],
+        "name": "MealyHitting",
+        "source_id": "s0715-db2d04b585dc77348af0"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyHitting",
+          "Mathlib.LinearAlgebra.FiniteDimensional.Basic"
+        ],
+        "name": "MealyRational",
+        "source_id": "s0715-45118b9e7696ed5b2d35"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyRational",
+          "Mathlib.LinearAlgebra.Determinant"
+        ],
+        "name": "MealySolver",
+        "source_id": "s0715-58af40c0a045a0125444"
+      },
+      {
+        "imports": [
+          "Init",
+          "P02A2.MeasureCore",
+          "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+        ],
+        "name": "TotalVariation",
+        "source_id": "s0715-72e58f1ff77d2b546417"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealySolver",
+          "TotalVariation"
+        ],
+        "name": "ObserverAbstraction",
+        "source_id": "s0715-a00d2364db191e8e9b89"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObserverAbstraction"
+        ],
+        "name": "GuardedObserver",
+        "source_id": "s0715-8031c1761a0b45f9af82"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecNumeric",
+          "Mathlib.Computability.Primrec"
+        ],
+        "name": "CodecPrimrec",
+        "source_id": "s0715-ba9269d5e6055f62df71"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecPrimrec",
+          "Mathlib.Computability.Partrec"
+        ],
+        "name": "UniformComputabilityNumeric",
+        "source_id": "s0715-f8538ef3a24a57c221ad"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecProgram",
+          "UniformComputabilityNumeric"
+        ],
+        "name": "UniformComputabilityMachine",
+        "source_id": "s0715-45a5243134e9c5594983"
+      },
+      {
+        "imports": [
+          "Init",
+          "Q8Measure"
+        ],
+        "name": "Q8Machine",
+        "source_id": "s0715-29f82145549eefcde960"
+      },
+      {
+        "imports": [
+          "Init",
+          "Q8Machine",
+          "P02A2.ObserverCore"
+        ],
+        "name": "Q8Compiler",
+        "source_id": "s0715-9063b0e0af759207d9a7"
+      },
+      {
+        "imports": [
+          "Init",
+          "GuardedObserver",
+          "UniformComputabilityMachine",
+          "Q8Compiler"
+        ],
+        "name": "IndexedObserver",
+        "source_id": "s0715-ab2549d18b77d758c050"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyHitting"
+        ],
+        "name": "MealyAtoms",
+        "source_id": "s0715-35a76d326fe595c8dfe9"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyAtoms",
+          "MealyRational"
+        ],
+        "name": "MealyMeasureFixtures",
+        "source_id": "s0715-1dd8f58564df50d83d0c"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObserverAbstraction",
+          "Q8Compiler",
+          "MealyMeasureFixtures"
+        ],
+        "name": "Q8ObserverAbstraction",
+        "source_id": "s0715-8aed800ed86f9da14c3c"
+      },
+      {
+        "imports": [
+          "Init",
+          "Q8ObserverAbstraction",
+          "UniformComputabilityMachine"
+        ],
+        "name": "ParsedObserverAbstraction",
+        "source_id": "s0715-8224f431cbcccac8c487"
+      },
+      {
+        "imports": [
+          "Init",
+          "ParsedObserverAbstraction"
+        ],
+        "name": "UniformRuntimeTrace",
+        "source_id": "s0715-bcb5223633a607dfd2db"
+      },
+      {
+        "imports": [
+          "Init",
+          "IndexedObserver",
+          "UniformRuntimeTrace"
+        ],
+        "name": "IndexedRuntime",
+        "source_id": "s0715-5ae94389ea29e6e1461b"
+      },
+      {
+        "imports": [
+          "Init",
+          "IndexedRuntime"
+        ],
+        "name": "FiniteMealyCompiler",
+        "source_id": "s0715-657518786e2c79f53bd8"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteMealyCompiler"
+        ],
+        "name": "NaturalStateCompiler",
+        "source_id": "s0715-6306c669a9b3b92eeecc"
+      },
+      {
+        "imports": [
+          "Init",
+          "NaturalStateCompiler"
+        ],
+        "name": "HistoryPolicyRuntime",
+        "source_id": "s0715-666ea948b2ce5a09d3e3"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "Mathlib.Probability.StrongLaw"
+        ],
+        "name": "RawEmpiricalRows",
+        "source_id": "s0715-477a8af41c893eb37ad8"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawEmpiricalRows"
+        ],
+        "name": "EmpiricalTailBounds",
+        "source_id": "s0715-aaa403197adcf1b77113"
+      },
+      {
+        "imports": [
+          "Init",
+          "EmpiricalTailBounds",
+          "SequentialTapeConsumption"
+        ],
+        "name": "ObservedEmpiricalRows",
+        "source_id": "s0715-6e56c88d8eec50730704"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy",
+          "ObservedEmpiricalRows"
+        ],
+        "name": "ObservedRowTest",
+        "source_id": "s0715-c5c14be5b4bf86dadf03"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedRowTest"
+        ],
+        "name": "RationalEmpiricalGate",
+        "source_id": "s0715-08d24ccae59ba8433230"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController"
+        ],
+        "name": "GeneratedPolicySafety",
+        "source_id": "s0715-d05ab24857f36f70efeb"
+      },
+      {
+        "imports": [
+          "Init",
+          "EventualCycling"
+        ],
+        "name": "StackPathRegularity",
+        "source_id": "s0715-9ff088f648943a502116"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPolicySafety",
+          "StackPathRegularity"
+        ],
+        "name": "GeneratedRun",
+        "source_id": "s0715-effab451a653ed1f1164"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController"
+        ],
+        "name": "MemoryTransitions",
+        "source_id": "s0715-26b44a1ad0b42bf7413a"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedRun",
+          "MemoryTransitions"
+        ],
+        "name": "GeneratedPhaseDynamics",
+        "source_id": "s0715-504305c876bf855cdfb8"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedRowTest"
+        ],
+        "name": "EmpiricalTestLaw",
+        "source_id": "s0715-85fc0a181d26a94d0aca"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinSchedule"
+        ],
+        "name": "PhaseStabilization",
+        "source_id": "s0715-179a29b309f46405321b"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPhaseDynamics",
+          "EmpiricalTestLaw",
+          "PhaseStabilization"
+        ],
+        "name": "GeneratedPhaseStability",
+        "source_id": "s0715-bb51fccd03e4a80456c4"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPhaseStability"
+        ],
+        "name": "GeneratedParitySuccess",
+        "source_id": "s0715-9f548c7aeb9c3fe8e8b3"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedParitySuccess"
+        ],
+        "name": "GlobalParitySufficiency",
+        "source_id": "s0715-c4ff0a3d24098255771b"
+      },
+      {
+        "imports": [
+          "Init",
+          "GlobalParitySufficiency"
+        ],
+        "name": "SingletonControllerSpecialization",
+        "source_id": "s0715-473d323e8085afffc08c"
+      },
+      {
+        "imports": [
+          "Init",
+          "SingletonControllerSpecialization"
+        ],
+        "name": "AcceptedFixtureController",
+        "source_id": "s0715-dcb32b2567242b064165"
+      },
+      {
+        "imports": [
+          "Init",
+          "HistoryPolicyRuntime",
+          "RationalEmpiricalGate",
+          "AcceptedFixtureController"
+        ],
+        "name": "EncodedPolicyHistory",
+        "source_id": "s0715-6ffdfe286275af5c94d0"
+      },
+      {
+        "imports": [
+          "Init",
+          "PhaseAdvanceSource"
+        ],
+        "name": "SupportUpdateSource",
+        "source_id": "s0715-d86654d36080f22c6f8c"
+      },
+      {
+        "imports": [
+          "Init",
+          "PhaseAdvanceSource",
+          "RationalEmpiricalGate"
+        ],
+        "name": "StatisticUpdateSource",
+        "source_id": "s0715-30d7187e05b4ffaa38bb"
+      },
+      {
+        "imports": [
+          "Init",
+          "StatisticUpdateSource"
+        ],
+        "name": "EmpiricalGateSource",
+        "source_id": "s0715-7f18a3f06ab6e4fa7cc8"
+      },
+      {
+        "imports": [
+          "Init",
+          "EmpiricalGateSource"
+        ],
+        "name": "CompleteEmpiricalSource",
+        "source_id": "s0715-ede8a21ed8da76a4d04b"
+      },
+      {
+        "imports": [
+          "Init",
+          "SupportUpdateSource",
+          "CompleteEmpiricalSource",
+          "AcceptedFixtureController"
+        ],
+        "name": "PhaseSourceFixtures",
+        "source_id": "s0715-a63b820d20615ee6454c"
+      },
+      {
+        "imports": [
+          "Init",
+          "PhaseSourceFixtures",
+          "UniformComputabilityMachine"
+        ],
+        "name": "CallableSourceRuntime",
+        "source_id": "s0715-fbe0726a77ed8b635516"
+      },
+      {
+        "imports": [
+          "Init",
+          "EncodedPolicyHistory",
+          "CallableSourceRuntime"
+        ],
+        "name": "EncodedHistoryFoldSource",
+        "source_id": "s0715-9c6798aae9ea7ce31d89"
+      },
+      {
+        "imports": [
+          "Init",
+          "EncodedHistoryFoldSource"
+        ],
+        "name": "ParallelHistorySource",
+        "source_id": "s0715-e0d71b044675e144abe6"
+      },
+      {
+        "imports": [
+          "Init",
+          "ParallelHistorySource",
+          "FiniteSelectorSource",
+          "CompleteEmpiricalSource"
+        ],
+        "name": "FullControllerSource",
+        "source_id": "s0715-e9c633af0e8f3269cb00"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteMealyCompiler"
+        ],
+        "name": "ObservationChannels",
+        "source_id": "s0715-93ec1c0d05173ef4f678"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservationChannels"
+        ],
+        "name": "FourBitFraming",
+        "source_id": "s0715-c32f1c622f548ab2f889"
+      },
+      {
+        "imports": [
+          "Init",
+          "EncodedPolicyHistory",
+          "FourBitFraming"
+        ],
+        "name": "HistoryRuntimeFraming",
+        "source_id": "s0715-8f5d8b28ac351462f4c0"
+      },
+      {
+        "imports": [
+          "Init",
+          "HistoryRuntimeFraming"
+        ],
+        "name": "HistorySamplingSemantics",
+        "source_id": "s0715-a9d2d552d672cb024d30"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerSource",
+          "HistorySamplingSemantics"
+        ],
+        "name": "FullControllerRuntime",
+        "source_id": "s0715-686a4f875bc55706da5f"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyMeasure",
+          "Mathlib.Algebra.BigOperators.Fin"
+        ],
+        "name": "FairBlockConstraints",
+        "source_id": "s0715-4d417ddcd5a94e778881"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairBlockConstraints"
+        ],
+        "name": "RationalRejectionLaw",
+        "source_id": "s0715-47d9f96c45bcfe1b1d79"
+      },
+      {
+        "imports": [
+          "Init",
+          "RationalRejectionLaw"
+        ],
+        "name": "AdaptiveRationalCylinders",
+        "source_id": "s0715-aca7b4ea2ab6004854e0"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveRationalCylinders"
+        ],
+        "name": "LiteralSamplerExecution",
+        "source_id": "s0715-accda060b79557733999"
+      },
+      {
+        "imports": [
+          "Init",
+          "ProductObservationLaw",
+          "FourBitFraming"
+        ],
+        "name": "FairBitSubsequence",
+        "source_id": "s0715-7544519d2038c0ab3298"
+      },
+      {
+        "imports": [
+          "Init",
+          "LiteralSamplerExecution",
+          "FairBitSubsequence",
+          "HistorySamplingSemantics",
+          "AcceptedFixtureController"
+        ],
+        "name": "RuntimeRationalBinding",
+        "source_id": "s0715-27de94e4d0f09d7d63f5"
+      },
+      {
+        "imports": [
+          "Init",
+          "LiteralSamplerExecution",
+          "HistoryPathConsistency"
+        ],
+        "name": "ReceiptPathDecoder",
+        "source_id": "s0715-babbe99e5887a2df087c"
+      },
+      {
+        "imports": [
+          "Init",
+          "RuntimeRationalBinding",
+          "ReceiptPathDecoder"
+        ],
+        "name": "RuntimeReceiptPath",
+        "source_id": "s0715-ecfdc5162bca720de79b"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerRuntime",
+          "RuntimeReceiptPath"
+        ],
+        "name": "FullControllerReceiptLaw",
+        "source_id": "s0715-0b9afb1052f420eb3e9c"
+      },
+      {
+        "imports": [
+          "Init",
+          "RationalEmpiricalGate",
+          "GlobalParitySufficiency",
+          "AcceptedFixtureController"
+        ],
+        "name": "RationalGateSufficiency",
+        "source_id": "s0715-2958c936c85bda6c6518"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerSource",
+          "RationalGateSufficiency"
+        ],
+        "name": "ComputedToleranceSource",
+        "source_id": "s0715-75e8f7b701f3c6926a29"
+      },
+      {
+        "imports": [
+          "Init",
+          "RuntimeReceiptPath",
+          "MarkovSeedPosterior",
+          "ConditionalPrefix",
+          "PolicyObservedLaw"
+        ],
+        "name": "CanonicalHistoryBinding",
+        "source_id": "s0715-2eadecdccfb31214bcf7"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerReceiptLaw",
+          "ComputedToleranceSource",
+          "CanonicalHistoryBinding"
+        ],
+        "name": "FullControllerCanonicalLaw",
+        "source_id": "s0715-117a05b98f335df42fc1"
+      },
+      {
+        "imports": [
+          "Init",
+          "SelectorCertificateConstruction",
+          "FullControllerCanonicalLaw"
+        ],
+        "name": "NontrivialFixture",
+        "source_id": "s0715-69097ada11e978388be1"
+      },
+      {
+        "imports": [
+          "Init",
+          "NontrivialFixture"
+        ],
+        "name": "OppositeTailTransfer",
+        "source_id": "s0715-e2d626a41344bd2c89be"
+      },
+      {
+        "imports": [
+          "Init",
+          "CanonicalHistoryBinding"
+        ],
+        "name": "MixedReceiptLaw",
+        "source_id": "s0715-905744668930a647931b"
+      },
+      {
+        "imports": [
+          "Init",
+          "OppositeTailTransfer",
+          "MixedReceiptLaw"
+        ],
+        "name": "ExactRuntimeCounterexample",
+        "source_id": "s0715-c38b7cbba6bdf790649c"
+      },
+      {
+        "imports": [
+          "Init",
+          "NontrivialFixture"
+        ],
+        "name": "LiteralSelectorObstruction",
+        "source_id": "s0715-62d289dfb7524266ba5a"
+      },
+      {
+        "imports": [
+          "Init",
+          "LiteralSelectorObstruction"
+        ],
+        "name": "LiteralSelectorFamily",
+        "source_id": "s0715-ecbc46e7e19f5767fb49"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteRadixNormalForm",
+        "source_id": "s0715-17c778dacfc10b932676"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteRadixNormalForm",
+          "LiteralSelectorFamily"
+        ],
+        "name": "SelectorTableNormalForm",
+        "source_id": "s0715-d3c325ad4e6c953c082d"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteRadixNormalForm",
+          "SelectorTableNormalForm"
+        ],
+        "name": "A1AxiomReadback",
+        "source_id": "s0715-fb0b6ae862bdee73f903"
+      },
+      {
+        "imports": [
+          "Init",
+          "SelectorTableNormalForm"
+        ],
+        "name": "SelectorCallDomains",
+        "source_id": "s0715-f7cb12eb932db3043b4d"
+      },
+      {
+        "imports": [
+          "Init",
+          "SelectorCallDomains"
+        ],
+        "name": "SelectorSemanticTransport",
+        "source_id": "s0715-f9251d1289edc8026223"
+      },
+      {
+        "imports": [
+          "Init",
+          "SelectorSemanticTransport"
+        ],
+        "name": "A2AxiomReadback",
+        "source_id": "s0715-b2e184ba403224c4cfe2"
+      },
+      {
+        "imports": [
+          "Init",
+          "LiteralSelectorFamily",
+          "ExactRuntimeCounterexample"
+        ],
+        "name": "LiteralRuntimeCounterexample",
+        "source_id": "s0715-7c3bc6367e892b228478"
+      },
+      {
+        "imports": [
+          "Init",
+          "SelectorSemanticTransport",
+          "LiteralRuntimeCounterexample"
+        ],
+        "name": "CertifiedSelectorFamily",
+        "source_id": "s0715-e363f08ebaea3afa316b"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertifiedSelectorFamily"
+        ],
+        "name": "A3AxiomReadback",
+        "source_id": "s0715-348329f27800a9a8e039"
+      },
+      {
+        "imports": [
+          "Init",
+          "SelectorTableNormalForm"
+        ],
+        "name": "ReviewerRawContract",
+        "source_id": "s0715-b504e2b59dc762fe16b4"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerSource"
+        ],
+        "name": "ReviewerPaddingBoundary",
+        "source_id": "s0715-740a60a2026dd7ad31a7"
+      },
+      {
+        "imports": [
+          "Init",
+          "SelectorSemanticTransport",
+          "ExactRuntimeCounterexample"
+        ],
+        "name": "ReviewerTransportBoundaries",
+        "source_id": "s0715-babbe4d6d2e2803b71bc"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertifiedSelectorFamily"
+        ],
+        "name": "ReviewerSuppliedConsumer",
+        "source_id": "s0715-6efee7b278890fe87606"
+      }
+    ],
+    "negative_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      },
+      {
+        "module": "Mathlib.Algebra.BigOperators.Fin",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/BigOperators/Fin.lean",
+        "sha256": "2f199c1f08a34c3dfb2a7e247ddbfae56197441e3fac4a8817b1eb141189059c"
+      },
+      {
+        "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+        "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+      },
+      {
+        "module": "Mathlib.Analysis.SpecificLimits.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+        "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+      },
+      {
+        "module": "Mathlib.Computability.Partrec",
+        "package": "mathlib",
+        "path": "Mathlib/Computability/Partrec.lean",
+        "sha256": "e8435a76ce5b2f4b22892d82b3e1e3e2835c8038011a68ca37a7efff797929d1"
+      },
+      {
+        "module": "Mathlib.Computability.Primrec",
+        "package": "mathlib",
+        "path": "Mathlib/Computability/Primrec.lean",
+        "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Card.lean",
+        "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Powerset",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Powerset.lean",
+        "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Sigma",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Sigma.lean",
+        "sha256": "fff03be1b7cc1debfb34cb668f7c0a3d92f7f6031896a3eff65b7e33ec16da8e"
+      },
+      {
+        "module": "Mathlib.Data.Fintype.EquivFin",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Fintype/EquivFin.lean",
+        "sha256": "e0842e47c8ba3cc9ef6b9fdd78432beac04b613851220973fca283dab71448e9"
+      },
+      {
+        "module": "Mathlib.Data.List.OfFn",
+        "package": "mathlib",
+        "path": "Mathlib/Data/List/OfFn.lean",
+        "sha256": "7ed0d919af0879458511e8ca33f62bc73952a7c520371467514dc4669fd68d32"
+      },
+      {
+        "module": "Mathlib.Data.Nat.Bitwise",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Nat/Bitwise.lean",
+        "sha256": "e987a9f57489a80d8e2de33b7ad8662516b85fe745d611c0fe9e6c965fb6f5b7"
+      },
+      {
+        "module": "Mathlib.Data.Nat.Digits",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Nat/Digits.lean",
+        "sha256": "eda826fa0b43df9498b9c1111bc3da1901a44b63eab0786f3e699c51db5adb75"
+      },
+      {
+        "module": "Mathlib.Data.Real.Sqrt",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Real/Sqrt.lean",
+        "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+      },
+      {
+        "module": "Mathlib.LinearAlgebra.Determinant",
+        "package": "mathlib",
+        "path": "Mathlib/LinearAlgebra/Determinant.lean",
+        "sha256": "3514c23630a2e872c8bd403d2ffa84f4170aeb870497627475e8573c6feae4b9"
+      },
+      {
+        "module": "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/LinearAlgebra/FiniteDimensional/Basic.lean",
+        "sha256": "0d51bff219c4945969805570370bdfc14ada71990c1f65b89a8b6a19ff4f01cc"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Map",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Map.lean",
+        "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Restrict",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+        "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean",
+        "sha256": "f840a5341797290644d0bae0b916c866e7f98a6d25b3894de87341ff4c1cfdb7"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+        "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+        "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+      },
+      {
+        "module": "Mathlib.Probability.BorelCantelli",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/BorelCantelli.lean",
+        "sha256": "033046517cdc893d6c849aa77f04b039e9e12cabc83eb46cfb8130cc5f6020ea"
+      },
+      {
+        "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+        "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+      },
+      {
+        "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+        "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+      },
+      {
+        "module": "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProbabilityMassFunction/Integrals.lean",
+        "sha256": "412763e5ad86cc96721b1bbb1bfaccb5fa15919a2d5afb7af9da419cc2290292"
+      },
+      {
+        "module": "Mathlib.Probability.ProductMeasure",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProductMeasure.lean",
+        "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+      },
+      {
+        "module": "Mathlib.Probability.StrongLaw",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+      },
+      {
+        "module": "Mathlib.SetTheory.Cardinal.Finite",
+        "package": "mathlib",
+        "path": "Mathlib/SetTheory/Cardinal/Finite.lean",
+        "sha256": "57a20638e916d020a1f6eda323560bc56b338aa4fb5b7f4d8236202ee195c471"
+      },
+      {
+        "module": "Mathlib.Tactic",
+        "package": "mathlib",
+        "path": "Mathlib/Tactic.lean",
+        "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+      },
+      {
+        "module": "Mathlib.Topology.Instances.ENNReal.Lemmas",
+        "package": "mathlib",
+        "path": "Mathlib/Topology/Instances/ENNReal/Lemmas.lean",
+        "sha256": "5b078eb5f8aeae72ee8c7348f2cfcc02c36e0ff01e9f72205c2c06187ee04c82"
+      }
+    ],
+    "package_manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+    "packages": [
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "mathlib",
+        "path": "."
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "plausible",
+        "path": ".lake/packages/plausible"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "LeanSearchClient",
+        "path": ".lake/packages/LeanSearchClient"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "importGraph",
+        "path": ".lake/packages/importGraph"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "proofwidgets",
+        "path": ".lake/packages/proofwidgets"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "aesop",
+        "path": ".lake/packages/aesop"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "Qq",
+        "path": ".lake/packages/Qq"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "batteries",
+        "path": ".lake/packages/batteries"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "Cli",
+        "path": ".lake/packages/Cli"
+      }
+    ],
+    "positive_roots": [
+      "SelectorTableNormalForm",
+      "SelectorSemanticTransport",
+      "CertifiedSelectorFamily"
+    ],
+    "runtime_roots": [],
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "stages": [
+      {
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:selector}",
+          "--core-zip",
+          "{input:core-archive}",
+          "--literal-zip",
+          "{input:literal-archive}",
+          "--expected-manifest-sha256",
+          "138833be8349d7d7a1f5cc2790f9af1f920d52ed2e18d1103726f1e944ac9847",
+          "--core-output",
+          "{dependency-run}/original",
+          "--lean-bin",
+          "{tool:lean-bin}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--out",
+          "{out}/original"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "original-selector",
+        "kind": "DRIVER",
+        "output_paths": [
+          "original"
+        ],
+        "timeout_seconds": 6000
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "LiteralSelectorObstruction"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-LiteralSelectorObstruction",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "LiteralSelectorFamily"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-LiteralSelectorFamily",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "FiniteRadixNormalForm"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-FiniteRadixNormalForm",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "SelectorTableNormalForm"
+        ],
+        "control_ids": [
+          "d06-selector-control-7-D06-04-control-sameCells_but_malformed_input_differs"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-SelectorTableNormalForm",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "A1AxiomReadback"
+        ],
+        "control_ids": [
+          "d06-selector-control-0-D06-04-certificate_iff_exact_normalForm",
+          "d06-selector-control-0-D06-04-certificate_iff_literal_plus_high",
+          "d06-selector-control-0-D06-04-control-sameCells_but_malformed_input_differs"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-A1AxiomReadback",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "SelectorCallDomains"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-SelectorCallDomains",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "SelectorSemanticTransport"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-SelectorSemanticTransport",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "A2AxiomReadback"
+        ],
+        "control_ids": [
+          "d06-selector-control-1-D06-05-normalization_with_derived_domains",
+          "d06-selector-control-1-D06-05-normalized_mixed_decoded_law",
+          "d06-selector-control-1-D06-05-normalized_old_computed_failure_event"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-A2AxiomReadback",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "LiteralRuntimeCounterexample"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-LiteralRuntimeCounterexample",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "CertifiedSelectorFamily"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertifiedSelectorFamily",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "A3AxiomReadback"
+        ],
+        "control_ids": [
+          "d06-selector-control-2-D06-06-certified_supplied_failure"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-A3AxiomReadback",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "ReviewerRawContract"
+        ],
+        "control_ids": [
+          "d06-selector-control-3-D06-04-certificate_iff_exact_normalForm",
+          "d06-selector-control-3-D06-04-certificate_iff_literal_plus_high",
+          "d06-selector-control-3-D06-04-control-sameCells_but_malformed_input_differs"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-ReviewerRawContract",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "ReviewerPaddingBoundary"
+        ],
+        "control_ids": [
+          "d06-selector-control-4-D06-04-certificate_iff_exact_normalForm",
+          "d06-selector-control-4-D06-04-certificate_iff_literal_plus_high",
+          "d06-selector-control-4-D06-04-control-sameCells_but_malformed_input_differs"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-ReviewerPaddingBoundary",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "ReviewerTransportBoundaries"
+        ],
+        "control_ids": [
+          "d06-selector-control-5-D06-05-normalization_with_derived_domains",
+          "d06-selector-control-5-D06-05-normalized_mixed_decoded_law",
+          "d06-selector-control-5-D06-05-normalized_old_computed_failure_event"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-ReviewerTransportBoundaries",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "ReviewerSuppliedConsumer"
+        ],
+        "control_ids": [
+          "d06-selector-control-6-D06-06-certified_supplied_failure"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-ReviewerSuppliedConsumer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "finite-controls"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-finite-controls",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 60
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-selector",
+          "original-census-controls"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-selector"
+        ],
+        "driver_id": "selector",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-original-census-controls",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 30
+      }
+    ],
+    "target_names": [
+      {
+        "module": "SelectorTableNormalForm",
+        "name": "Orthemology.Ninth.SelectorExtraction.certificate_iff_exact_normalForm",
+        "target_id": "D06-04-certificate_iff_exact_normalForm"
+      },
+      {
+        "module": "SelectorTableNormalForm",
+        "name": "Orthemology.Ninth.SelectorExtraction.certificate_iff_literal_plus_high",
+        "target_id": "D06-04-certificate_iff_literal_plus_high"
+      },
+      {
+        "module": "SelectorSemanticTransport",
+        "name": "Orthemology.Ninth.SelectorTransport.normalization_with_derived_domains",
+        "target_id": "D06-05-normalization_with_derived_domains"
+      },
+      {
+        "module": "SelectorSemanticTransport",
+        "name": "Orthemology.Ninth.SelectorTransport.normalized_mixed_decoded_law",
+        "target_id": "D06-05-normalized_mixed_decoded_law"
+      },
+      {
+        "module": "SelectorSemanticTransport",
+        "name": "Orthemology.Ninth.SelectorTransport.normalized_old_computed_failure_event",
+        "target_id": "D06-05-normalized_old_computed_failure_event"
+      },
+      {
+        "module": "CertifiedSelectorFamily",
+        "name": "Orthemology.Ninth.CertifiedSelectorFamily.certified_supplied_failure",
+        "target_id": "D06-06-certified_supplied_failure"
+      },
+      {
+        "module": "SelectorTableNormalForm",
+        "name": "Orthemology.Ninth.SelectorExtraction.sameCells_but_malformed_input_differs",
+        "target_id": "D06-04-control-sameCells_but_malformed_input_differs"
+      }
+    ],
+    "tools": [
+      {
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "kind": "PYTHON",
+        "name": "python",
+        "path_kind": "EXECUTABLE",
+        "platform": "linux-x86_64",
+        "version": "3.11.9"
+      },
+      {
+        "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+        "kind": "LEAN",
+        "name": "lean-bin",
+        "path_kind": "BIN_DIRECTORY",
+        "platform": "linux-x86_64",
+        "version": "4.19.0"
+      }
+    ]
+  },
+  "result_families": [
+    "selector-normal-form",
+    "selector-call-domain-transport",
+    "selector-certified-failure"
+  ],
+  "review_ids": [
+    "D06-04-review-1",
+    "D06-05-review-1",
+    "D06-06-review-1"
+  ],
+  "source_ids": [
+    "s0715-c12515de8fe1286763ff",
+    "s0715-08fd0652cb06805e2dd1",
+    "s0715-7d6e322009b3589d091e",
+    "s0715-0534b6b9e480b8d88406",
+    "s0715-15fe800e116a2b8ef576",
+    "s0715-eaa3e6b04038d344b480",
+    "s0715-67e6855e6a8066b25173",
+    "s0715-49a6c1663e6db331d4a8",
+    "s0715-f99b1705e2300bfb5240",
+    "s0715-4fcfa6f7f4bd6ca3efee",
+    "s0715-2e863f9fe8c302f731a3",
+    "s0715-d0d477645e4bc8f8f470",
+    "s0715-8da48315f100a84313df",
+    "s0715-b1b33c3fa3d092eb7739",
+    "s0715-6d672b25f198422b2f08",
+    "s0715-4df2c39facda8c2b1f4d",
+    "s0715-6c9dec618d619af853db",
+    "s0715-8ecf1285a65d98f2bca6",
+    "s0715-9b1936d3ab51a8e82dd0",
+    "s0715-1fbfc6b0cb415742eb9b",
+    "s0715-d2fb82fddd033bd6f1d0",
+    "s0715-491eb82fac6d5602d610",
+    "s0715-21f5bea1282104655b11",
+    "s0715-b6435293c3c2a888ded1",
+    "s0715-19da27ece4c7e0e2d5ef",
+    "s0715-475bad8d267c4da15b22",
+    "s0715-9baf4b40352bc4a6d8c6",
+    "s0715-d69f0f000b13d0581841",
+    "s0715-884d968849308ea8312d",
+    "s0715-0d5a581f9427acc3eb2f",
+    "s0715-d9459689b27c975f6a3f",
+    "s0715-bc9a626603204fd03cba",
+    "s0715-d4f3d5fae5dabc343005",
+    "s0715-3486a71106f355757cb4",
+    "s0715-9d72c5622c5f7379bc65",
+    "s0715-bf7af1fd3fa9b648ae01",
+    "s0715-6c2b04f71a2120255362",
+    "s0715-f3591e2a1967612c1a47",
+    "s0715-79becc64e535b30c3975",
+    "s0715-4fcf7023c58cbbab3e55",
+    "s0715-faa5f5cc4cd2f43687da",
+    "s0715-d347dbe63c8982112e87",
+    "s0715-a6aa353104e6fb1d6daa",
+    "s0715-dbcdcdd3b7b89078f102",
+    "s0715-7f8a766f682784209c70",
+    "s0715-0b5754aa9ff57b00c651",
+    "s0715-8b66e1aeb699b7934554",
+    "s0715-80bc9f18875450c1f26b",
+    "s0715-f7d699fd92280e6e4847",
+    "s0715-4cd2f75420d833de0a66",
+    "s0715-8e25fc25a153503a5c89",
+    "s0715-40c573271495c7604d9a",
+    "s0715-fcd39d0c7d3a9bce44c7",
+    "s0715-3de7752f25787da36c6b",
+    "s0715-cab1ad759b4f50f4dc9c",
+    "s0715-8e902060fa1e83a05e9c",
+    "s0715-8a8273d659e2e28fe564",
+    "s0715-82bd32faf098ac69c8b6",
+    "s0715-b01d7d24896108245ae8",
+    "s0715-e8a9fe585fd1feeb8684",
+    "s0715-7cc04f80b3a3c8b70805",
+    "s0715-445043856774ecbe72a2",
+    "s0715-e665b80bc5c9d400edda",
+    "s0715-0e3a4255f94f0b97127a",
+    "s0715-2b98cf6a04704683a696",
+    "s0715-d499f256494d06a16c86",
+    "s0715-e831f07f134f64bef530",
+    "s0715-22c9bddffbbda032f4bc",
+    "s0715-668d23831fe19a15bcef",
+    "s0715-9b7e26714e3bc7f016f1",
+    "s0715-474c33f620d82fcf2d20",
+    "s0715-e4bf792884e6546168b7",
+    "s0715-b990640ad378d18f28e4",
+    "s0715-f825ea69fd043890f970",
+    "s0715-6e741f7d04185e7c107c",
+    "s0715-15ab457a5f9158384108",
+    "s0715-492dadacd48cb0705a40",
+    "s0715-6322a3039b3e519b9efb",
+    "s0715-fd256d33bd7ac85336ea",
+    "s0715-776a3e4c90ec8970f9a4",
+    "s0715-cf18c8dbb73e71551aab",
+    "s0715-caa593d23be7fe6f2499",
+    "s0715-38a62b72eeaa81967fe4",
+    "s0715-30dcd68a150b0cfc6397",
+    "s0715-4ec1cb2530ad7af038b7",
+    "s0715-7ded6d92d835a7585c08",
+    "s0715-5cd26153cc48e8f0b875",
+    "s0715-52500b84343255ff0fd9",
+    "s0715-e8474c50ccf0bb8b3b32",
+    "s0715-d05ff0e5e182d0435b20",
+    "s0715-f7785004eedbf61aba88",
+    "s0715-6eec1658c5d68ee7d16b",
+    "s0715-f38b2e8e8660e4392266",
+    "s0715-5a168c48e918e4ccbacd",
+    "s0715-63a0ad78be3cc33bd792",
+    "s0715-3b261fbf5d5218198594",
+    "s0715-7bd69b0f499c881b9f72",
+    "s0715-db2d04b585dc77348af0",
+    "s0715-45118b9e7696ed5b2d35",
+    "s0715-58af40c0a045a0125444",
+    "s0715-72e58f1ff77d2b546417",
+    "s0715-a00d2364db191e8e9b89",
+    "s0715-8031c1761a0b45f9af82",
+    "s0715-ba9269d5e6055f62df71",
+    "s0715-f8538ef3a24a57c221ad",
+    "s0715-45a5243134e9c5594983",
+    "s0715-29f82145549eefcde960",
+    "s0715-9063b0e0af759207d9a7",
+    "s0715-ab2549d18b77d758c050",
+    "s0715-35a76d326fe595c8dfe9",
+    "s0715-1dd8f58564df50d83d0c",
+    "s0715-8aed800ed86f9da14c3c",
+    "s0715-8224f431cbcccac8c487",
+    "s0715-bcb5223633a607dfd2db",
+    "s0715-5ae94389ea29e6e1461b",
+    "s0715-657518786e2c79f53bd8",
+    "s0715-6306c669a9b3b92eeecc",
+    "s0715-666ea948b2ce5a09d3e3",
+    "s0715-477a8af41c893eb37ad8",
+    "s0715-aaa403197adcf1b77113",
+    "s0715-6e56c88d8eec50730704",
+    "s0715-c5c14be5b4bf86dadf03",
+    "s0715-08d24ccae59ba8433230",
+    "s0715-d05ab24857f36f70efeb",
+    "s0715-9ff088f648943a502116",
+    "s0715-effab451a653ed1f1164",
+    "s0715-26b44a1ad0b42bf7413a",
+    "s0715-504305c876bf855cdfb8",
+    "s0715-85fc0a181d26a94d0aca",
+    "s0715-179a29b309f46405321b",
+    "s0715-bb51fccd03e4a80456c4",
+    "s0715-9f548c7aeb9c3fe8e8b3",
+    "s0715-c4ff0a3d24098255771b",
+    "s0715-473d323e8085afffc08c",
+    "s0715-dcb32b2567242b064165",
+    "s0715-6ffdfe286275af5c94d0",
+    "s0715-d86654d36080f22c6f8c",
+    "s0715-30d7187e05b4ffaa38bb",
+    "s0715-7f18a3f06ab6e4fa7cc8",
+    "s0715-ede8a21ed8da76a4d04b",
+    "s0715-a63b820d20615ee6454c",
+    "s0715-fbe0726a77ed8b635516",
+    "s0715-9c6798aae9ea7ce31d89",
+    "s0715-e0d71b044675e144abe6",
+    "s0715-e9c633af0e8f3269cb00",
+    "s0715-93ec1c0d05173ef4f678",
+    "s0715-c32f1c622f548ab2f889",
+    "s0715-8f5d8b28ac351462f4c0",
+    "s0715-a9d2d552d672cb024d30",
+    "s0715-686a4f875bc55706da5f",
+    "s0715-4d417ddcd5a94e778881",
+    "s0715-47d9f96c45bcfe1b1d79",
+    "s0715-aca7b4ea2ab6004854e0",
+    "s0715-accda060b79557733999",
+    "s0715-7544519d2038c0ab3298",
+    "s0715-27de94e4d0f09d7d63f5",
+    "s0715-babbe99e5887a2df087c",
+    "s0715-ecfdc5162bca720de79b",
+    "s0715-0b9afb1052f420eb3e9c",
+    "s0715-2958c936c85bda6c6518",
+    "s0715-75e8f7b701f3c6926a29",
+    "s0715-2eadecdccfb31214bcf7",
+    "s0715-117a05b98f335df42fc1",
+    "s0715-69097ada11e978388be1",
+    "s0715-e2d626a41344bd2c89be",
+    "s0715-905744668930a647931b",
+    "s0715-c38b7cbba6bdf790649c",
+    "s0715-62d289dfb7524266ba5a",
+    "s0715-ecbc46e7e19f5767fb49",
+    "s0715-17c778dacfc10b932676",
+    "s0715-d3c325ad4e6c953c082d",
+    "s0715-fb0b6ae862bdee73f903",
+    "s0715-f7cb12eb932db3043b4d",
+    "s0715-f9251d1289edc8026223",
+    "s0715-b2e184ba403224c4cfe2",
+    "s0715-7c3bc6367e892b228478",
+    "s0715-e363f08ebaea3afa316b",
+    "s0715-348329f27800a9a8e039",
+    "s0715-b504e2b59dc762fe16b4",
+    "s0715-740a60a2026dd7ad31a7",
+    "s0715-babbe4d6d2e2803b71bc",
+    "s0715-6efee7b278890fe87606",
+    "s0715-8bc1d7ed6f374d6baed3"
+  ],
+  "targets": [
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem certificate_iff_exact_normalForm (d : Data) :\n    Certificate d fixtureKernel sparseMenu actionPriority ↔\n      normalizeData d = literalData initialCandidate",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D06-04-certificate_iff_exact_normalForm",
+      "source_id": "s0715-d3c325ad4e6c953c082d",
+      "target_sha256": "f069994f5e581983db1a72ef4c5fc9aac0d067b95966f78eb4019a95745b60e4"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem certificate_iff_literal_plus_high (d : Data) :\n    Certificate d fixtureKernel sparseMenu actionPriority ↔\n      ∃ c t s : ℕ, d = addHighDigits (literalData initialCandidate) c t s",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D06-04-certificate_iff_literal_plus_high",
+      "source_id": "s0715-d3c325ad4e6c953c082d",
+      "target_sha256": "a00498c15fc02f5ec26893a745f6c56b6ba55620b8d0737944ac6df3161d1bc0"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem normalization_with_derived_domains (c : Config)\n    (menu : Finset Bool → Bool → Finset Bool) (priority : Bool → (Bool × Bool) → ℕ)\n    (hc : Certificate c menu priority) :\n    CompiledCallDomains c ∧ CompiledCallDomains (normalizeConfig c) ∧\n    (∀ h : HistoryFold.History,\n      sourcePolicy (normalizeConfig c) (encodeHistory h) = sourcePolicy c (encodeHistory h)) ∧\n    (∀ σ : Bool, Indexed.runtimeOutput (runtimeIndex (policyProgram (normalizeConfig c)) σ) =\n      Indexed.runtimeOutput (runtimeIndex (policyProgram c) σ))",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D06-05-normalization_with_derived_domains",
+      "source_id": "s0715-f9251d1289edc8026223",
+      "target_sha256": "02e6ce6621b12019dfe0fadc2b84f6d69ebb1cbf66c3a3760593a7a01de4f676"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem normalized_mixed_decoded_law\n    (executed decoder : Config)\n    (executedMenu decoderMenu : Finset Bool → Bool → Finset Bool)\n    (executedPriority decoderPriority : Bool → (Bool × Bool) → ℕ)\n    (he : Certificate executed executedMenu executedPriority)\n    (hd : Certificate decoder decoderMenu decoderPriority) (σ : Bool) (μ : Measure Cantor) :\n    μ.map (decodedHistory (policyProgram (normalizeConfig executed))\n      (sourcePolicy (normalizeConfig decoder)) σ) =\n    μ.map (decodedHistory (policyProgram executed) (sourcePolicy decoder) σ)",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D06-05-normalized_mixed_decoded_law",
+      "source_id": "s0715-f9251d1289edc8026223",
+      "target_sha256": "584c9a81e7fc5acde92859725074fe9cd834cb2ce0763b5653c18ddd4c90d264"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem normalized_old_computed_failure_event (c : Config)\n    (menu : Finset Bool → Bool → Finset Bool) (priority : Bool → (Bool × Bool) → ℕ)\n    (hc : Certificate c menu priority) (σ : Bool) (d : Bool × Bool) :\n    {x : Cantor | ¬HiddenParity.Stochastic.ParitySuccess (priority σ) (historyAction d\n      (decodedHistory (policyProgram (normalizeConfig c))\n        (sourcePolicy (withComputedTolerance (normalizeConfig c))) σ x))} =\n    {x : Cantor | ¬HiddenParity.Stochastic.ParitySuccess (priority σ) (historyAction d\n      (decodedHistory (policyProgram c) (sourcePolicy (withComputedTolerance c)) σ x))}",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D06-05-normalized_old_computed_failure_event",
+      "source_id": "s0715-f9251d1289edc8026223",
+      "target_sha256": "babf578be74d15f2f1b9d50a6f7739a074e0c7bdca089ca3a118f21a0ea7d40a"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem certified_supplied_failure (d : FiniteSelectorSource.Data)\n    (hc : FiniteSelectorSource.Certificate d fixtureKernel sparseMenu actionPriority) :\n    CertifiedSuppliedFailure d",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D06-06-certified_supplied_failure",
+      "source_id": "s0715-e363f08ebaea3afa316b",
+      "target_sha256": "811cef4835b6bb52237ea721da60c94c27d847c89bc4cd6dcdce9bcf05677fdf"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem sameCells_but_malformed_input_differs (o : Bool) :\n    SameCells (literalData o) (addHighDigits (literalData o) 1 0 0) ∧\n    P02A2.PRProgram.denote (cycleProgram (literalData o)) ![4,0,0] ≠\n      P02A2.PRProgram.denote (cycleProgram (addHighDigits (literalData o) 1 0 0)) ![4,0,0]",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D06-04-control-sameCells_but_malformed_input_differs",
+      "source_id": "s0715-d3c325ad4e6c953c082d",
+      "target_sha256": "9887577f07fd7c12b509dc6a3ee191307cf34fa37928de9dd15a335bf31e7a8d"
+    }
+  ],
+  "toolchain": {
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "kind": "LEAN",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ],
+    "platform": "linux-x86_64",
+    "version": "4.19.0"
+  }
+}

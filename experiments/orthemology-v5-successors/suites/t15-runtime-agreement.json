@@ -1,0 +1,3481 @@
+{
+  "id": "t15-runtime-agreement",
+  "family": "t15-runtime-agreement",
+  "result_families": [
+    "T15-RUNTIME-AGREEMENT"
+  ],
+  "origin_archive_sha256": "ac5213e252eca1b17cd885e6b86dbc55a2a15304c915f76f34edc58aac024bd7",
+  "source_ids": [
+    "identity-src-49d220113600858e4689",
+    "identity-src-7d91ab3caab541222940",
+    "identity-src-134ce7af3018c5a4eca6",
+    "identity-src-9102c8693f2324aa2c0f",
+    "identity-src-7cc0b704b3cfe4a8509c",
+    "identity-src-36ac99f0b446a05f4a38",
+    "identity-src-d5004fb07b8c9c48494f",
+    "identity-src-304f84dfaae3236ae271",
+    "identity-src-3fd9b6906eec53f5e930",
+    "identity-src-942ea9392b26e4844487",
+    "identity-src-2e39da371904b0fcf1be",
+    "identity-src-d1dd9698dd0375e1e2ee",
+    "identity-src-f320f96a7bf9b0b36fe2",
+    "identity-src-ccedc5af0c83b932ad0a",
+    "identity-src-d3960c34ab3f39a0ed84",
+    "identity-src-b24771bec0ba402982be",
+    "identity-src-19ddccaf14b868bf26c1",
+    "identity-src-98c606448a5697e76cd0",
+    "identity-src-48b7bf5992673905f119",
+    "identity-src-5ef6acacf14a1c6bb2f2",
+    "identity-src-3b8682ee420a279c3992",
+    "identity-src-92948bf66c93810196d1",
+    "identity-src-79eaba2d7d4380a155aa",
+    "identity-src-1e080c973c3696bac7dc",
+    "identity-src-558e2ef7f2b602323f5d",
+    "identity-src-4afc921717bb980487bc",
+    "identity-src-8b4dcea683beb3d45820",
+    "identity-src-2aa6136f89852c93866b",
+    "identity-src-b5c9bebf483be7f43fa7",
+    "identity-src-d95293e2d986c0799892",
+    "identity-src-75652d183d2c0ac1371b",
+    "identity-src-c13c75363412604214c3",
+    "identity-src-b6cc88d1cb9ba7445d79",
+    "identity-src-bdeb500a7685884bd9b4",
+    "identity-src-997fc818afa6f8eae487",
+    "identity-src-6d608797d2c4fed3dd8c",
+    "identity-src-ea0df8b8a8fb428e7011",
+    "identity-src-9007b2fae249fe0b8cd0",
+    "identity-src-31e7347e7ed4d2eb81e2",
+    "identity-src-636edcb1501b122dbf45",
+    "identity-src-35018a0d9984a5159fd8",
+    "identity-src-625b17f7c4d9eafaaab4",
+    "identity-src-7401a62a87c0527cbfe7",
+    "identity-src-7301a2334f4212a8dd35",
+    "identity-src-731657498ac5ecb7017e",
+    "identity-src-7967d9a0b3a41504b193",
+    "identity-src-6534a35655d8d6fd5d0c",
+    "identity-src-74505ab25fb08d2860bb",
+    "identity-src-608e4c7c663b5d567f12",
+    "identity-src-c0488a9615987e1c7748",
+    "identity-src-6104bef1775c18b38ef7",
+    "identity-src-e7879bc44a0f0283ad31",
+    "identity-src-a434ea3263b74febcbd2",
+    "identity-src-cb7295779649c3f30335",
+    "identity-src-8a9c100187d2a5f80f40",
+    "identity-src-bac1790c6ee5c6a5034f",
+    "identity-src-48f6de5c7ad4c0534553",
+    "identity-src-c94b2987cf67da2ccae9",
+    "identity-src-7e6d85b99831145136d9",
+    "identity-src-20d49fe52978429af0e3",
+    "identity-src-deb586bf6b7fa08076b9",
+    "identity-src-b77a11cec52de3bfd2a2",
+    "identity-src-faaa52b448b153d3aee1",
+    "identity-src-b7ae7142846ea0cd7ccd",
+    "identity-src-d5313fabd5ee2dae9d30",
+    "identity-src-61a4c680d37068136d8c",
+    "identity-src-2b5e3fc7a908734787c8",
+    "identity-src-ebf991ab221b193d5096",
+    "identity-src-e45e3e9b5ce895498940",
+    "identity-src-7e4ad6d0e40bf93513cf",
+    "identity-src-3b513fc12bb215aea859",
+    "identity-src-e69ebce9542ccc152e1e",
+    "identity-src-01f62ae6eeef1a80c013",
+    "identity-src-313419cc4c43af12d8a6",
+    "identity-src-c5f15be6b8e1f62c005c",
+    "identity-src-63702cd9040f69c50767",
+    "identity-src-3ef69ec0388c759d402a",
+    "identity-src-6db4df81814f44506b7f",
+    "identity-src-b0f2fb5507f61dff4817",
+    "identity-src-46f2d6c37a767b14efc5",
+    "identity-src-1d4977dcdc21c5bdec74",
+    "identity-src-1aa9645373f3d9070add",
+    "identity-src-74e785e78f3252fc3f51"
+  ],
+  "review_ids": [
+    "T15-RUNTIME-AGREEMENT-inherited-review"
+  ],
+  "targets": [
+    {
+      "id": "t15-runtime-agreement-generate",
+      "source_id": "identity-src-74e785e78f3252fc3f51",
+      "declaration": "def generate(rng, r, depth):\n    if depth == 0 or rng.randrange(4) == 0:\n        if r and rng.randrange(2): return ['v', rng.randrange(r)]\n        return ['c', rng.choice([0, 0, 1, 2, 3, 7, 17])]\n    tag = rng.choice(['add', 'mul', 'if0', 'if0'])\n    return [tag] + [generate(rng, r, depth-1) for _ in range(3 if tag == 'if0' else 2)]",
+      "target_sha256": "2812a0ce941cbe74321ba5e58a2512df8d49354a9a645c2b44c571271bd6d11b",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-runtime-agreement-main",
+      "source_id": "identity-src-74e785e78f3252fc3f51",
+      "declaration": "def main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('checker', type=Path)\n    parser.add_argument('output', type=Path)\n    parser.add_argument('--verify-lean', action='store_true')\n    args = parser.parse_args()\n    args.output.mkdir(parents=True, exist_ok=True)\n    spec = importlib.util.spec_from_file_location('reference', args.checker)\n    reference = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(reference)\n    rng = random.Random(SEED)\n    cases = []\n    evaluated = 0\n    for r in range(6):\n        for i in range(120):\n            a, b, c = [generate(rng,r,3) for _ in range(3)]\n            kind = i % 8\n            if kind == 0: e,f = a,['add',a,['c',0]]\n            elif kind == 1: e,f = a,['mul',['c',1],a]\n            elif kind == 2: e,f = ['add',a,b],['add',b,a]\n            elif kind == 3: e,f = ['mul',a,['add',b,c]],['add',['mul',a,b],['mul',a,c]]\n            elif kind == 4: e,f = ['if0',['mul',a,['c',0]],b,c],b\n            elif kind == 5: e,f = ['if0',['add',a,['c',1]],b,c],c\n            elif kind == 6: e,f = a,b\n            else: e,f = ['if0',a,b,c],['if0',a,c,b]\n            result = reference.equivalent(r,e,f)\n            if kind < 6: assert result, (r,i,'manufactured identity')\n            witness = reference.distinguish(r,e,f)\n            assert (witness is None) == result\n            if witness is not None:\n                assert reference.evaluate(e,witness) != reference.evaluate(f,witness)\n            if result:\n                assert reference.verify_positive(reference.certify(r,e,f))\n            # Direct values independently exercise normalisation on small tuples.\n            for v in itertools.product(range(3), repeat=r):\n                s = tuple(x != 0 for x in v)\n                for expr in (e,f):\n                    assert reference.evaluate(expr,v) == reference.eval_poly(reference.normalise(r,expr,s),v)\n                    evaluated += 1\n                if result: assert reference.evaluate(e,v) == reference.evaluate(f,v)\n            cases.append({'r':r,'left':e,'right':f,'equal':result,'witness':witness})\n    header = ('import IdentityChecker\\nopen P01AC.RestrictedIdentity P01AC.RestrictedIdentityV2\\n'\n              'set_option maxRecDepth 100000\\nset_option maxHeartbeats 0\\n')\n    source = [header]\n    for n,case in enumerate(cases):\n        r,e,f = case['r'],lean(case['left']),lean(case['right'])\n        source.append(f'def e{n} : Expr {r} := {e}\\ndef f{n} : Expr {r} := {f}\\n')\n        source.append(f'#eval [identityCheck e{n} f{n}, verifyCertificate e{n} f{n} (makeCertificate e{n}), verifyCertificate e{n} e{n} (makeCertificate e{n})]\\n')\n    source = ''.join(source)\n    source_path = args.output/'RuntimeAgreement.lean'\n    if args.verify_lean:\n        assert source_path.read_text() == source, 'generated source changed'\n        rows = [json.loads(line) for line in (args.output/'lean-output.txt').read_text().splitlines() if line.startswith('[')]\n        assert len(rows) == len(cases), (len(rows),len(cases))\n        for n,(row,case) in enumerate(zip(rows,cases)):\n            assert row == [case['equal'],case['equal'],True], (n,row,case)\n    else:\n        source_path.write_text(source)\n        (args.output/'cases.json').write_text(json.dumps(cases,indent=2)+'\\n')\n    receipt = {\n        'seed':SEED,'arities':list(range(6)),'expression_pairs':len(cases),\n        'equal_pairs':sum(c['equal'] for c in cases),'unequal_pairs':sum(not c['equal'] for c in cases),\n        'direct_expression_evaluations':evaluated,\n        'negative_witnesses_checked':sum(c['witness'] is not None for c in cases),\n        'checker_sha256':hashlib.sha256(args.checker.read_bytes()).hexdigest(),\n        'lean_source_sha256':hashlib.sha256(source.encode()).hexdigest(),\n        'lean_runtime_rows_verified':len(cases) if args.verify_lean else 0,\n        'formal_refinement_claim':False,\n        'scope':'Bounded runtime agreement on deterministic generated well-formed AST pairs; no parser or wire-format correspondence theorem.'}\n    (args.output/('VERIFIED_RESULT.json' if args.verify_lean else 'PREPARED_CASES.json')).write_text(json.dumps(receipt,indent=2)+'\\n')\n    print(json.dumps(receipt,indent=2))",
+      "target_sha256": "7545e344b56a2140eff4f281270f3d8fc59dc0f7fdc9e69bc23b8b020d1c3771",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [],
+  "toolchain": {
+    "kind": "PYTHON",
+    "version": "3.12.3",
+    "platform": "linux-x86_64",
+    "executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "FINITE",
+    "files": [
+      {
+        "source_id": "identity-src-49d220113600858e4689",
+        "path": "AllBaseLaws.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7d91ab3caab541222940",
+        "path": "AllBinderLaws.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-134ce7af3018c5a4eca6",
+        "path": "AllConstants.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-9102c8693f2324aa2c0f",
+        "path": "AllFiniteComparison.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7cc0b704b3cfe4a8509c",
+        "path": "AllInheritedPositiveControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "identity-src-36ac99f0b446a05f4a38",
+        "path": "AllInstantiation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-d5004fb07b8c9c48494f",
+        "path": "AllMixedAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-304f84dfaae3236ae271",
+        "path": "AllNucleusSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-3fd9b6906eec53f5e930",
+        "path": "AllPiLaws.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-942ea9392b26e4844487",
+        "path": "AllPredicates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-2e39da371904b0fcf1be",
+        "path": "AllRawRenaming.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-d1dd9698dd0375e1e2ee",
+        "path": "AllRawSubstitution.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-f320f96a7bf9b0b36fe2",
+        "path": "AllSemanticSubstitution.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-ccedc5af0c83b932ad0a",
+        "path": "AllSigmaLaws.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-d3960c34ab3f39a0ed84",
+        "path": "AllSoundness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-b24771bec0ba402982be",
+        "path": "AllStructural.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-19ddccaf14b868bf26c1",
+        "path": "AllStructuralBase.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-98c606448a5697e76cd0",
+        "path": "AllStructuralRename.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-48b7bf5992673905f119",
+        "path": "AllSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-5ef6acacf14a1c6bb2f2",
+        "path": "AllTermAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-3b8682ee420a279c3992",
+        "path": "AllTermLemmas.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-92948bf66c93810196d1",
+        "path": "BoundaryResults.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-79eaba2d7d4380a155aa",
+        "path": "ComputablePrelude.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-1e080c973c3696bac7dc",
+        "path": "EffectiveBooleanCertificates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-558e2ef7f2b602323f5d",
+        "path": "EffectiveBooleanStandardness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-4afc921717bb980487bc",
+        "path": "EffectiveCanonicalTests.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-8b4dcea683beb3d45820",
+        "path": "EffectiveObserver.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-2aa6136f89852c93866b",
+        "path": "EffectivePrimitiveRecursion.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-b5c9bebf483be7f43fa7",
+        "path": "EffectiveReduction.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-d95293e2d986c0799892",
+        "path": "EffectiveRuleBoundary.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-75652d183d2c0ac1371b",
+        "path": "EffectiveStandardness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-c13c75363412604214c3",
+        "path": "EffectsAndDependence.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-b6cc88d1cb9ba7445d79",
+        "path": "ExtensionalRepairLemmas.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-bdeb500a7685884bd9b4",
+        "path": "ExtensionalRepairSoundness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-997fc818afa6f8eae487",
+        "path": "ExtensionalRepairSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-6d608797d2c4fed3dd8c",
+        "path": "ExtensionalRepairTheorems.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-ea0df8b8a8fb428e7011",
+        "path": "ExtensionalRepairWitness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-9007b2fae249fe0b8cd0",
+        "path": "FiniteBridge.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-31e7347e7ed4d2eb81e2",
+        "path": "IdentityChecker.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-636edcb1501b122dbf45",
+        "path": "IntensionalIdentityBridge.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-35018a0d9984a5159fd8",
+        "path": "IntensionalIdentityModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-625b17f7c4d9eafaaab4",
+        "path": "IntensionalIdentityRelations.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7401a62a87c0527cbfe7",
+        "path": "IntensionalIdentitySoundness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7301a2334f4212a8dd35",
+        "path": "IntensionalIdentityTheorems.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-731657498ac5ecb7017e",
+        "path": "IntensionalIdentityWitness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7967d9a0b3a41504b193",
+        "path": "InternalPolymorphism.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-6534a35655d8d6fd5d0c",
+        "path": "MaskNormalisation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-74505ab25fb08d2860bb",
+        "path": "NormalisationAndNumerals.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-608e4c7c663b5d567f12",
+        "path": "P01Candidates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-c0488a9615987e1c7748",
+        "path": "P01Certificates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-6104bef1775c18b38ef7",
+        "path": "P01Confluence.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-e7879bc44a0f0283ad31",
+        "path": "P01ContextualJ.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-a434ea3263b74febcbd2",
+        "path": "P01CurryParametricity.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-cb7295779649c3f30335",
+        "path": "P01DependentControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "identity-src-8a9c100187d2a5f80f40",
+        "path": "P01DependentCore.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-bac1790c6ee5c6a5034f",
+        "path": "P01DependentFundamental.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-48f6de5c7ad4c0534553",
+        "path": "P01DependentModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-c94b2987cf67da2ccae9",
+        "path": "P01DependentSubstitution.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7e6d85b99831145136d9",
+        "path": "P01Examples.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-20d49fe52978429af0e3",
+        "path": "P01LambdaSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-deb586bf6b7fa08076b9",
+        "path": "P01ModelWitnesses.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-b77a11cec52de3bfd2a2",
+        "path": "P01Omega.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-faaa52b448b153d3aee1",
+        "path": "P01PER.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-b7ae7142846ea0cd7ccd",
+        "path": "P01Polynomials.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-d5313fabd5ee2dae9d30",
+        "path": "P01RecursiveModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-61a4c680d37068136d8c",
+        "path": "P01SNReflection.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-2b5e3fc7a908734787c8",
+        "path": "P01SystemF.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-ebf991ab221b193d5096",
+        "path": "P01Translation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-e45e3e9b5ce895498940",
+        "path": "P01TypeAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7e4ad6d0e40bf93513cf",
+        "path": "PositiveSeparation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-3b513fc12bb215aea859",
+        "path": "RestrictedCompiler.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-e69ebce9542ccc152e1e",
+        "path": "SparsePolynomial.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-01f62ae6eeef1a80c013",
+        "path": "SubstitutionSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-313419cc4c43af12d8a6",
+        "path": "TypedAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-c5f15be6b8e1f62c005c",
+        "path": "TypedStructural.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-63702cd9040f69c50767",
+        "path": "TypedSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-3ef69ec0388c759d402a",
+        "path": "lake-manifest.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-6db4df81814f44506b7f",
+        "path": "python-reference/certificate_checker.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-b0f2fb5507f61dff4817",
+        "path": "restricted-runtime/README.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-46f2d6c37a767b14efc5",
+        "path": "restricted-runtime/BINDING.json",
+        "role": "DATA"
+      },
+      {
+        "source_id": "identity-src-1d4977dcdc21c5bdec74",
+        "path": "restricted-runtime/SHA256SUMS",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "identity-src-1aa9645373f3d9070add",
+        "path": "restricted-runtime/VERIFIED_RESULT.json",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-74e785e78f3252fc3f51",
+        "path": "restricted-runtime/check_runtime_agreement.py",
+        "role": "DRIVER"
+      }
+    ],
+    "modules": [
+      {
+        "name": "InternalPolymorphism",
+        "source_id": "identity-src-7967d9a0b3a41504b193",
+        "imports": [
+          "Init"
+        ]
+      },
+      {
+        "name": "FiniteBridge",
+        "source_id": "identity-src-9007b2fae249fe0b8cd0",
+        "imports": [
+          "Init",
+          "InternalPolymorphism"
+        ]
+      },
+      {
+        "name": "P01TypeAlgebra",
+        "source_id": "identity-src-e45e3e9b5ce895498940",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Bool.Basic",
+          "FiniteBridge"
+        ]
+      },
+      {
+        "name": "P01SNReflection",
+        "source_id": "identity-src-61a4c680d37068136d8c",
+        "imports": [
+          "Init"
+        ]
+      },
+      {
+        "name": "BoundaryResults",
+        "source_id": "identity-src-92948bf66c93810196d1",
+        "imports": [
+          "Init",
+          "FiniteBridge"
+        ]
+      },
+      {
+        "name": "P01Candidates",
+        "source_id": "identity-src-608e4c7c663b5d567f12",
+        "imports": [
+          "Init",
+          "P01TypeAlgebra",
+          "P01SNReflection",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "P01Confluence",
+        "source_id": "identity-src-6104bef1775c18b38ef7",
+        "imports": [
+          "Init",
+          "P01Candidates"
+        ]
+      },
+      {
+        "name": "EffectsAndDependence",
+        "source_id": "identity-src-c13c75363412604214c3",
+        "imports": [
+          "Init",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "NormalisationAndNumerals",
+        "source_id": "identity-src-74505ab25fb08d2860bb",
+        "imports": [
+          "Init",
+          "EffectsAndDependence"
+        ]
+      },
+      {
+        "name": "P01Omega",
+        "source_id": "identity-src-b77a11cec52de3bfd2a2",
+        "imports": [
+          "Init",
+          "P01Confluence",
+          "NormalisationAndNumerals"
+        ]
+      },
+      {
+        "name": "P01Polynomials",
+        "source_id": "identity-src-b7ae7142846ea0cd7ccd",
+        "imports": [
+          "Init",
+          "P01Omega"
+        ]
+      },
+      {
+        "name": "P01PER",
+        "source_id": "identity-src-faaa52b448b153d3aee1",
+        "imports": [
+          "Init",
+          "P01Polynomials"
+        ]
+      },
+      {
+        "name": "P01DependentCore",
+        "source_id": "identity-src-8a9c100187d2a5f80f40",
+        "imports": [
+          "Init",
+          "P01PER"
+        ]
+      },
+      {
+        "name": "P01ContextualJ",
+        "source_id": "identity-src-e7879bc44a0f0283ad31",
+        "imports": [
+          "Init",
+          "P01DependentCore"
+        ]
+      },
+      {
+        "name": "P01Certificates",
+        "source_id": "identity-src-c0488a9615987e1c7748",
+        "imports": [
+          "Init",
+          "P01ContextualJ"
+        ]
+      },
+      {
+        "name": "P01Examples",
+        "source_id": "identity-src-7e6d85b99831145136d9",
+        "imports": [
+          "Init",
+          "P01Certificates"
+        ]
+      },
+      {
+        "name": "P01RecursiveModel",
+        "source_id": "identity-src-d5313fabd5ee2dae9d30",
+        "imports": [
+          "Init",
+          "P01Examples"
+        ]
+      },
+      {
+        "name": "P01LambdaSyntax",
+        "source_id": "identity-src-20d49fe52978429af0e3",
+        "imports": [
+          "Init",
+          "P01TypeAlgebra",
+          "P01SNReflection"
+        ]
+      },
+      {
+        "name": "P01SystemF",
+        "source_id": "identity-src-2b5e3fc7a908734787c8",
+        "imports": [
+          "Init",
+          "P01LambdaSyntax"
+        ]
+      },
+      {
+        "name": "P01CurryParametricity",
+        "source_id": "identity-src-a434ea3263b74febcbd2",
+        "imports": [
+          "Init",
+          "P01RecursiveModel",
+          "P01SystemF"
+        ]
+      },
+      {
+        "name": "P01Translation",
+        "source_id": "identity-src-ebf991ab221b193d5096",
+        "imports": [
+          "Init",
+          "P01SystemF",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "P01ModelWitnesses",
+        "source_id": "identity-src-deb586bf6b7fa08076b9",
+        "imports": [
+          "Init",
+          "P01CurryParametricity",
+          "P01Translation"
+        ]
+      },
+      {
+        "name": "P01DependentModel",
+        "source_id": "identity-src-48f6de5c7ad4c0534553",
+        "imports": [
+          "Init",
+          "P01RecursiveModel",
+          "P01ModelWitnesses"
+        ]
+      },
+      {
+        "name": "P01DependentSubstitution",
+        "source_id": "identity-src-c94b2987cf67da2ccae9",
+        "imports": [
+          "Init",
+          "P01DependentModel"
+        ]
+      },
+      {
+        "name": "P01DependentFundamental",
+        "source_id": "identity-src-bac1790c6ee5c6a5034f",
+        "imports": [
+          "Init",
+          "P01DependentSubstitution"
+        ]
+      },
+      {
+        "name": "SubstitutionSyntax",
+        "source_id": "identity-src-01f62ae6eeef1a80c013",
+        "imports": [
+          "Init",
+          "P01DependentFundamental"
+        ]
+      },
+      {
+        "name": "AllSyntax",
+        "source_id": "identity-src-48b7bf5992673905f119",
+        "imports": [
+          "Init",
+          "SubstitutionSyntax"
+        ]
+      },
+      {
+        "name": "AllTermAlgebra",
+        "source_id": "identity-src-5ef6acacf14a1c6bb2f2",
+        "imports": [
+          "Init",
+          "AllSyntax"
+        ]
+      },
+      {
+        "name": "AllMixedAlgebra",
+        "source_id": "identity-src-d5004fb07b8c9c48494f",
+        "imports": [
+          "Init",
+          "AllTermAlgebra"
+        ]
+      },
+      {
+        "name": "AllStructuralBase",
+        "source_id": "identity-src-19ddccaf14b868bf26c1",
+        "imports": [
+          "Init",
+          "AllMixedAlgebra"
+        ]
+      },
+      {
+        "name": "AllStructuralRename",
+        "source_id": "identity-src-98c606448a5697e76cd0",
+        "imports": [
+          "Init",
+          "AllStructuralBase"
+        ]
+      },
+      {
+        "name": "AllStructural",
+        "source_id": "identity-src-b24771bec0ba402982be",
+        "imports": [
+          "Init",
+          "AllStructuralRename"
+        ]
+      },
+      {
+        "name": "AllPredicates",
+        "source_id": "identity-src-942ea9392b26e4844487",
+        "imports": [
+          "Init",
+          "AllSyntax"
+        ]
+      },
+      {
+        "name": "AllRawSubstitution",
+        "source_id": "identity-src-d1dd9698dd0375e1e2ee",
+        "imports": [
+          "Init",
+          "AllPredicates"
+        ]
+      },
+      {
+        "name": "AllRawRenaming",
+        "source_id": "identity-src-2e39da371904b0fcf1be",
+        "imports": [
+          "Init",
+          "AllRawSubstitution"
+        ]
+      },
+      {
+        "name": "AllBaseLaws",
+        "source_id": "identity-src-49d220113600858e4689",
+        "imports": [
+          "Init",
+          "AllRawRenaming"
+        ]
+      },
+      {
+        "name": "AllPiLaws",
+        "source_id": "identity-src-3fd9b6906eec53f5e930",
+        "imports": [
+          "Init",
+          "AllBaseLaws"
+        ]
+      },
+      {
+        "name": "AllSigmaLaws",
+        "source_id": "identity-src-ccedc5af0c83b932ad0a",
+        "imports": [
+          "Init",
+          "AllPiLaws"
+        ]
+      },
+      {
+        "name": "AllTermLemmas",
+        "source_id": "identity-src-3b8682ee420a279c3992",
+        "imports": [
+          "Init",
+          "AllSigmaLaws"
+        ]
+      },
+      {
+        "name": "AllBinderLaws",
+        "source_id": "identity-src-7d91ab3caab541222940",
+        "imports": [
+          "Init",
+          "AllTermLemmas"
+        ]
+      },
+      {
+        "name": "AllConstants",
+        "source_id": "identity-src-134ce7af3018c5a4eca6",
+        "imports": [
+          "Init",
+          "AllBinderLaws"
+        ]
+      },
+      {
+        "name": "AllFiniteComparison",
+        "source_id": "identity-src-9102c8693f2324aa2c0f",
+        "imports": [
+          "Init",
+          "AllConstants"
+        ]
+      },
+      {
+        "name": "AllSemanticSubstitution",
+        "source_id": "identity-src-f320f96a7bf9b0b36fe2",
+        "imports": [
+          "Init",
+          "AllRawRenaming"
+        ]
+      },
+      {
+        "name": "AllInstantiation",
+        "source_id": "identity-src-36ac99f0b446a05f4a38",
+        "imports": [
+          "Init",
+          "AllFiniteComparison",
+          "AllSemanticSubstitution"
+        ]
+      },
+      {
+        "name": "AllSoundness",
+        "source_id": "identity-src-d3960c34ab3f39a0ed84",
+        "imports": [
+          "Init",
+          "AllInstantiation"
+        ]
+      },
+      {
+        "name": "P01DependentControls",
+        "source_id": "identity-src-cb7295779649c3f30335",
+        "imports": [
+          "Init",
+          "P01DependentFundamental"
+        ]
+      },
+      {
+        "name": "AllInheritedPositiveControls",
+        "source_id": "identity-src-7cc0b704b3cfe4a8509c",
+        "imports": [
+          "Init",
+          "AllStructural",
+          "AllSoundness",
+          "P01DependentControls"
+        ]
+      },
+      {
+        "name": "EffectiveStandardness",
+        "source_id": "identity-src-75652d183d2c0ac1371b",
+        "imports": [
+          "Init",
+          "AllInheritedPositiveControls"
+        ]
+      },
+      {
+        "name": "TypedSyntax",
+        "source_id": "identity-src-63702cd9040f69c50767",
+        "imports": [
+          "Init",
+          "SubstitutionSyntax"
+        ]
+      },
+      {
+        "name": "TypedAlgebra",
+        "source_id": "identity-src-313419cc4c43af12d8a6",
+        "imports": [
+          "Init",
+          "TypedSyntax"
+        ]
+      },
+      {
+        "name": "TypedStructural",
+        "source_id": "identity-src-c5f15be6b8e1f62c005c",
+        "imports": [
+          "Init",
+          "TypedAlgebra"
+        ]
+      },
+      {
+        "name": "AllNucleusSyntax",
+        "source_id": "identity-src-304f84dfaae3236ae271",
+        "imports": [
+          "Init",
+          "AllStructuralRename",
+          "TypedStructural"
+        ]
+      },
+      {
+        "name": "EffectiveObserver",
+        "source_id": "identity-src-8b4dcea683beb3d45820",
+        "imports": [
+          "Init",
+          "EffectiveStandardness",
+          "AllNucleusSyntax"
+        ]
+      },
+      {
+        "name": "EffectiveReduction",
+        "source_id": "identity-src-b5c9bebf483be7f43fa7",
+        "imports": [
+          "Init",
+          "EffectiveObserver"
+        ]
+      },
+      {
+        "name": "IntensionalIdentityBridge",
+        "source_id": "identity-src-636edcb1501b122dbf45",
+        "imports": [
+          "Init",
+          "AllPredicates"
+        ]
+      },
+      {
+        "name": "ExtensionalRepairSyntax",
+        "source_id": "identity-src-997fc818afa6f8eae487",
+        "imports": [
+          "Init",
+          "IntensionalIdentityBridge"
+        ]
+      },
+      {
+        "name": "ExtensionalRepairLemmas",
+        "source_id": "identity-src-b6cc88d1cb9ba7445d79",
+        "imports": [
+          "Init",
+          "ExtensionalRepairSyntax",
+          "AllTermAlgebra"
+        ]
+      },
+      {
+        "name": "ExtensionalRepairSoundness",
+        "source_id": "identity-src-bdeb500a7685884bd9b4",
+        "imports": [
+          "Init",
+          "ExtensionalRepairSyntax",
+          "AllSoundness"
+        ]
+      },
+      {
+        "name": "IntensionalIdentityWitness",
+        "source_id": "identity-src-731657498ac5ecb7017e",
+        "imports": [
+          "Init",
+          "AllNucleusSyntax",
+          "AllFiniteComparison",
+          "P01ModelWitnesses"
+        ]
+      },
+      {
+        "name": "ExtensionalRepairWitness",
+        "source_id": "identity-src-ea0df8b8a8fb428e7011",
+        "imports": [
+          "Init",
+          "ExtensionalRepairSyntax",
+          "IntensionalIdentityWitness"
+        ]
+      },
+      {
+        "name": "IntensionalIdentityModel",
+        "source_id": "identity-src-35018a0d9984a5159fd8",
+        "imports": [
+          "Init",
+          "AllPredicates"
+        ]
+      },
+      {
+        "name": "IntensionalIdentitySoundness",
+        "source_id": "identity-src-7401a62a87c0527cbfe7",
+        "imports": [
+          "Init",
+          "IntensionalIdentityModel",
+          "IntensionalIdentityBridge"
+        ]
+      },
+      {
+        "name": "IntensionalIdentityRelations",
+        "source_id": "identity-src-625b17f7c4d9eafaaab4",
+        "imports": [
+          "Init",
+          "IntensionalIdentitySoundness"
+        ]
+      },
+      {
+        "name": "IntensionalIdentityTheorems",
+        "source_id": "identity-src-7301a2334f4212a8dd35",
+        "imports": [
+          "Init",
+          "IntensionalIdentityRelations",
+          "IntensionalIdentityWitness"
+        ]
+      },
+      {
+        "name": "ExtensionalRepairTheorems",
+        "source_id": "identity-src-6d608797d2c4fed3dd8c",
+        "imports": [
+          "Init",
+          "ExtensionalRepairLemmas",
+          "ExtensionalRepairSoundness",
+          "ExtensionalRepairWitness",
+          "IntensionalIdentityTheorems"
+        ]
+      },
+      {
+        "name": "EffectiveRuleBoundary",
+        "source_id": "identity-src-d95293e2d986c0799892",
+        "imports": [
+          "Init",
+          "EffectiveReduction",
+          "ExtensionalRepairTheorems"
+        ]
+      },
+      {
+        "name": "EffectiveCanonicalTests",
+        "source_id": "identity-src-4afc921717bb980487bc",
+        "imports": [
+          "Init",
+          "EffectiveRuleBoundary"
+        ]
+      },
+      {
+        "name": "EffectiveBooleanStandardness",
+        "source_id": "identity-src-558e2ef7f2b602323f5d",
+        "imports": [
+          "Init",
+          "EffectiveCanonicalTests"
+        ]
+      },
+      {
+        "name": "EffectiveBooleanCertificates",
+        "source_id": "identity-src-1e080c973c3696bac7dc",
+        "imports": [
+          "Init",
+          "EffectiveBooleanStandardness"
+        ]
+      },
+      {
+        "name": "EffectivePrimitiveRecursion",
+        "source_id": "identity-src-2aa6136f89852c93866b",
+        "imports": [
+          "Init",
+          "EffectiveBooleanCertificates"
+        ]
+      },
+      {
+        "name": "RestrictedCompiler",
+        "source_id": "identity-src-3b513fc12bb215aea859",
+        "imports": [
+          "Init",
+          "EffectivePrimitiveRecursion"
+        ]
+      },
+      {
+        "name": "ComputablePrelude",
+        "source_id": "identity-src-79eaba2d7d4380a155aa",
+        "imports": [
+          "Init",
+          "RestrictedCompiler"
+        ]
+      },
+      {
+        "name": "SparsePolynomial",
+        "source_id": "identity-src-e69ebce9542ccc152e1e",
+        "imports": [
+          "Init",
+          "ComputablePrelude",
+          "Mathlib.Algebra.MvPolynomial.Funext",
+          "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+          "Mathlib.Algebra.BigOperators.Fin"
+        ]
+      },
+      {
+        "name": "PositiveSeparation",
+        "source_id": "identity-src-7e4ad6d0e40bf93513cf",
+        "imports": [
+          "Init",
+          "Mathlib.Algebra.MvPolynomial.Funext"
+        ]
+      },
+      {
+        "name": "MaskNormalisation",
+        "source_id": "identity-src-6534a35655d8d6fd5d0c",
+        "imports": [
+          "Init",
+          "SparsePolynomial",
+          "PositiveSeparation"
+        ]
+      },
+      {
+        "name": "IdentityChecker",
+        "source_id": "identity-src-31e7347e7ed4d2eb81e2",
+        "imports": [
+          "Init",
+          "MaskNormalisation"
+        ]
+      }
+    ],
+    "module_order": [
+      "InternalPolymorphism",
+      "FiniteBridge",
+      "P01TypeAlgebra",
+      "P01SNReflection",
+      "BoundaryResults",
+      "P01Candidates",
+      "P01Confluence",
+      "EffectsAndDependence",
+      "NormalisationAndNumerals",
+      "P01Omega",
+      "P01Polynomials",
+      "P01PER",
+      "P01DependentCore",
+      "P01ContextualJ",
+      "P01Certificates",
+      "P01Examples",
+      "P01RecursiveModel",
+      "P01LambdaSyntax",
+      "P01SystemF",
+      "P01CurryParametricity",
+      "P01Translation",
+      "P01ModelWitnesses",
+      "P01DependentModel",
+      "P01DependentSubstitution",
+      "P01DependentFundamental",
+      "SubstitutionSyntax",
+      "AllSyntax",
+      "AllTermAlgebra",
+      "AllMixedAlgebra",
+      "AllStructuralBase",
+      "AllStructuralRename",
+      "AllStructural",
+      "AllPredicates",
+      "AllRawSubstitution",
+      "AllRawRenaming",
+      "AllBaseLaws",
+      "AllPiLaws",
+      "AllSigmaLaws",
+      "AllTermLemmas",
+      "AllBinderLaws",
+      "AllConstants",
+      "AllFiniteComparison",
+      "AllSemanticSubstitution",
+      "AllInstantiation",
+      "AllSoundness",
+      "P01DependentControls",
+      "AllInheritedPositiveControls",
+      "EffectiveStandardness",
+      "TypedSyntax",
+      "TypedAlgebra",
+      "TypedStructural",
+      "AllNucleusSyntax",
+      "EffectiveObserver",
+      "EffectiveReduction",
+      "IntensionalIdentityBridge",
+      "ExtensionalRepairSyntax",
+      "ExtensionalRepairLemmas",
+      "ExtensionalRepairSoundness",
+      "IntensionalIdentityWitness",
+      "ExtensionalRepairWitness",
+      "IntensionalIdentityModel",
+      "IntensionalIdentitySoundness",
+      "IntensionalIdentityRelations",
+      "IntensionalIdentityTheorems",
+      "ExtensionalRepairTheorems",
+      "EffectiveRuleBoundary",
+      "EffectiveCanonicalTests",
+      "EffectiveBooleanStandardness",
+      "EffectiveBooleanCertificates",
+      "EffectivePrimitiveRecursion",
+      "RestrictedCompiler",
+      "ComputablePrelude",
+      "SparsePolynomial",
+      "PositiveSeparation",
+      "MaskNormalisation",
+      "IdentityChecker"
+    ],
+    "positive_roots": [
+      "InternalPolymorphism",
+      "FiniteBridge",
+      "P01TypeAlgebra",
+      "P01SNReflection",
+      "BoundaryResults",
+      "P01Candidates",
+      "P01Confluence",
+      "EffectsAndDependence",
+      "NormalisationAndNumerals",
+      "P01Omega",
+      "P01Polynomials",
+      "P01PER",
+      "P01DependentCore",
+      "P01ContextualJ",
+      "P01Certificates",
+      "P01Examples",
+      "P01RecursiveModel",
+      "P01LambdaSyntax",
+      "P01SystemF",
+      "P01CurryParametricity",
+      "P01Translation",
+      "P01ModelWitnesses",
+      "P01DependentModel",
+      "P01DependentSubstitution",
+      "P01DependentFundamental",
+      "SubstitutionSyntax",
+      "AllSyntax",
+      "AllTermAlgebra",
+      "AllMixedAlgebra",
+      "AllStructuralBase",
+      "AllStructuralRename",
+      "AllStructural",
+      "AllPredicates",
+      "AllRawSubstitution",
+      "AllRawRenaming",
+      "AllBaseLaws",
+      "AllPiLaws",
+      "AllSigmaLaws",
+      "AllTermLemmas",
+      "AllBinderLaws",
+      "AllConstants",
+      "AllFiniteComparison",
+      "AllSemanticSubstitution",
+      "AllInstantiation",
+      "AllSoundness",
+      "EffectiveStandardness",
+      "TypedSyntax",
+      "TypedAlgebra",
+      "TypedStructural",
+      "AllNucleusSyntax",
+      "EffectiveObserver",
+      "EffectiveReduction",
+      "IntensionalIdentityBridge",
+      "ExtensionalRepairSyntax",
+      "ExtensionalRepairLemmas",
+      "ExtensionalRepairSoundness",
+      "IntensionalIdentityWitness",
+      "ExtensionalRepairWitness",
+      "IntensionalIdentityModel",
+      "IntensionalIdentitySoundness",
+      "IntensionalIdentityRelations",
+      "IntensionalIdentityTheorems",
+      "ExtensionalRepairTheorems",
+      "EffectiveRuleBoundary",
+      "EffectiveCanonicalTests",
+      "EffectiveBooleanStandardness",
+      "EffectiveBooleanCertificates",
+      "EffectivePrimitiveRecursion",
+      "RestrictedCompiler",
+      "ComputablePrelude",
+      "SparsePolynomial",
+      "PositiveSeparation",
+      "MaskNormalisation",
+      "IdentityChecker"
+    ],
+    "audit_roots": [
+      "P01DependentControls",
+      "AllInheritedPositiveControls"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Mathlib.Algebra.BigOperators.Fin",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/BigOperators/Fin.lean",
+        "sha256": "2f199c1f08a34c3dfb2a7e247ddbfae56197441e3fac4a8817b1eb141189059c"
+      },
+      {
+        "module": "Mathlib.Algebra.MvPolynomial.Funext",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/MvPolynomial/Funext.lean",
+        "sha256": "e0c21a4980f975a8ecc171abf0f06c1d3e72d50edc21ca685a3c2ec52561d537"
+      },
+      {
+        "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/Order/BigOperators/Group/Finset.lean",
+        "sha256": "b5f6e00176a4e6d7796c8badf94326ca39af0a83fd41d8808369fbe4f9aaed18"
+      },
+      {
+        "module": "Mathlib.Data.Bool.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Bool/Basic.lean",
+        "sha256": "fb20d50c3aed15cdf7c5b7f1bc92db8ab850444f158199bfa8cb2f09ac3a5e55"
+      }
+    ],
+    "target_names": [],
+    "package_manifest_source_id": "identity-src-3ef69ec0388c759d402a",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "identity-src-3ef69ec0388c759d402a"
+      }
+    ],
+    "tools": [
+      {
+        "name": "lean",
+        "kind": "LEAN",
+        "version": "4.19.0",
+        "platform": "linux-x86_64",
+        "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "runtime-agreement",
+        "source_id": "identity-src-74e785e78f3252fc3f51",
+        "recipe": "t15-restricted-runtime-agreement-v1",
+        "sha256": "dd69712d1a7b79bdb5fcb55c855c4c13a00725dda1cd8f4dfcdc4544afcbe8fd",
+        "argument_meanings": {
+          "checker": "SOURCE_FILE",
+          "output": "OUTPUT_DIRECTORY",
+          "--verify-lean": "LITERAL"
+        },
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "compile-InternalPolymorphism",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/InternalPolymorphism.olean",
+          "{project}/InternalPolymorphism.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/InternalPolymorphism.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-FiniteBridge",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/FiniteBridge.olean",
+          "{project}/FiniteBridge.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-InternalPolymorphism"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/FiniteBridge.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01TypeAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01TypeAlgebra.olean",
+          "{project}/P01TypeAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-FiniteBridge"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01TypeAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01SNReflection",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01SNReflection.olean",
+          "{project}/P01SNReflection.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01TypeAlgebra"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01SNReflection.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-BoundaryResults",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/BoundaryResults.olean",
+          "{project}/BoundaryResults.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01SNReflection"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/BoundaryResults.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Candidates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01Candidates.olean",
+          "{project}/P01Candidates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-BoundaryResults"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01Candidates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Confluence",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01Confluence.olean",
+          "{project}/P01Confluence.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Candidates"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01Confluence.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectsAndDependence",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectsAndDependence.olean",
+          "{project}/EffectsAndDependence.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Confluence"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectsAndDependence.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-NormalisationAndNumerals",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/NormalisationAndNumerals.olean",
+          "{project}/NormalisationAndNumerals.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectsAndDependence"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/NormalisationAndNumerals.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Omega",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01Omega.olean",
+          "{project}/P01Omega.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-NormalisationAndNumerals"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01Omega.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Polynomials",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01Polynomials.olean",
+          "{project}/P01Polynomials.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Omega"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01Polynomials.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01PER",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01PER.olean",
+          "{project}/P01PER.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Polynomials"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01PER.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentCore",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01DependentCore.olean",
+          "{project}/P01DependentCore.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01PER"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01DependentCore.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01ContextualJ",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01ContextualJ.olean",
+          "{project}/P01ContextualJ.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentCore"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01ContextualJ.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Certificates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01Certificates.olean",
+          "{project}/P01Certificates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01ContextualJ"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01Certificates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Examples",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01Examples.olean",
+          "{project}/P01Examples.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Certificates"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01Examples.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01RecursiveModel",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01RecursiveModel.olean",
+          "{project}/P01RecursiveModel.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Examples"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01RecursiveModel.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01LambdaSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01LambdaSyntax.olean",
+          "{project}/P01LambdaSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01RecursiveModel"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01LambdaSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01SystemF",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01SystemF.olean",
+          "{project}/P01SystemF.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01LambdaSyntax"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01SystemF.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01CurryParametricity",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01CurryParametricity.olean",
+          "{project}/P01CurryParametricity.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01SystemF"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01CurryParametricity.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Translation",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01Translation.olean",
+          "{project}/P01Translation.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01CurryParametricity"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01Translation.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01ModelWitnesses",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01ModelWitnesses.olean",
+          "{project}/P01ModelWitnesses.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Translation"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01ModelWitnesses.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentModel",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01DependentModel.olean",
+          "{project}/P01DependentModel.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01ModelWitnesses"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01DependentModel.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentSubstitution",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01DependentSubstitution.olean",
+          "{project}/P01DependentSubstitution.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentModel"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01DependentSubstitution.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentFundamental",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01DependentFundamental.olean",
+          "{project}/P01DependentFundamental.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentSubstitution"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01DependentFundamental.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-SubstitutionSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/SubstitutionSyntax.olean",
+          "{project}/SubstitutionSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentFundamental"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/SubstitutionSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllSyntax.olean",
+          "{project}/AllSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-SubstitutionSyntax"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllTermAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllTermAlgebra.olean",
+          "{project}/AllTermAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllSyntax"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllTermAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllMixedAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllMixedAlgebra.olean",
+          "{project}/AllMixedAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllTermAlgebra"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllMixedAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllStructuralBase",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllStructuralBase.olean",
+          "{project}/AllStructuralBase.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllMixedAlgebra"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllStructuralBase.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllStructuralRename",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllStructuralRename.olean",
+          "{project}/AllStructuralRename.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllStructuralBase"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllStructuralRename.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllStructural",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllStructural.olean",
+          "{project}/AllStructural.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllStructuralRename"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllStructural.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllPredicates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllPredicates.olean",
+          "{project}/AllPredicates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllStructural"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllPredicates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllRawSubstitution",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllRawSubstitution.olean",
+          "{project}/AllRawSubstitution.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllPredicates"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllRawSubstitution.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllRawRenaming",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllRawRenaming.olean",
+          "{project}/AllRawRenaming.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllRawSubstitution"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllRawRenaming.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllBaseLaws",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllBaseLaws.olean",
+          "{project}/AllBaseLaws.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllRawRenaming"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllBaseLaws.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllPiLaws",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllPiLaws.olean",
+          "{project}/AllPiLaws.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllBaseLaws"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllPiLaws.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllSigmaLaws",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllSigmaLaws.olean",
+          "{project}/AllSigmaLaws.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllPiLaws"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllSigmaLaws.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllTermLemmas",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllTermLemmas.olean",
+          "{project}/AllTermLemmas.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllSigmaLaws"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllTermLemmas.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllBinderLaws",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllBinderLaws.olean",
+          "{project}/AllBinderLaws.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllTermLemmas"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllBinderLaws.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllConstants",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllConstants.olean",
+          "{project}/AllConstants.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllBinderLaws"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllConstants.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllFiniteComparison",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllFiniteComparison.olean",
+          "{project}/AllFiniteComparison.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllConstants"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllFiniteComparison.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllSemanticSubstitution",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllSemanticSubstitution.olean",
+          "{project}/AllSemanticSubstitution.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllFiniteComparison"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllSemanticSubstitution.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllInstantiation",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllInstantiation.olean",
+          "{project}/AllInstantiation.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllSemanticSubstitution"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllInstantiation.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllSoundness",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllSoundness.olean",
+          "{project}/AllSoundness.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllInstantiation"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllSoundness.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentControls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/P01DependentControls.olean",
+          "{project}/P01DependentControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllSoundness"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/P01DependentControls.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllInheritedPositiveControls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllInheritedPositiveControls.olean",
+          "{project}/AllInheritedPositiveControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentControls"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllInheritedPositiveControls.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectiveStandardness",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectiveStandardness.olean",
+          "{project}/EffectiveStandardness.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllInheritedPositiveControls"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectiveStandardness.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/TypedSyntax.olean",
+          "{project}/TypedSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectiveStandardness"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/TypedSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/TypedAlgebra.olean",
+          "{project}/TypedAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedSyntax"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/TypedAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedStructural",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/TypedStructural.olean",
+          "{project}/TypedStructural.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedAlgebra"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/TypedStructural.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllNucleusSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/AllNucleusSyntax.olean",
+          "{project}/AllNucleusSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedStructural"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/AllNucleusSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectiveObserver",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectiveObserver.olean",
+          "{project}/EffectiveObserver.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllNucleusSyntax"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectiveObserver.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectiveReduction",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectiveReduction.olean",
+          "{project}/EffectiveReduction.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectiveObserver"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectiveReduction.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IntensionalIdentityBridge",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/IntensionalIdentityBridge.olean",
+          "{project}/IntensionalIdentityBridge.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectiveReduction"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/IntensionalIdentityBridge.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-ExtensionalRepairSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/ExtensionalRepairSyntax.olean",
+          "{project}/ExtensionalRepairSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IntensionalIdentityBridge"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/ExtensionalRepairSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-ExtensionalRepairLemmas",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/ExtensionalRepairLemmas.olean",
+          "{project}/ExtensionalRepairLemmas.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-ExtensionalRepairSyntax"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/ExtensionalRepairLemmas.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-ExtensionalRepairSoundness",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/ExtensionalRepairSoundness.olean",
+          "{project}/ExtensionalRepairSoundness.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-ExtensionalRepairLemmas"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/ExtensionalRepairSoundness.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IntensionalIdentityWitness",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/IntensionalIdentityWitness.olean",
+          "{project}/IntensionalIdentityWitness.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-ExtensionalRepairSoundness"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/IntensionalIdentityWitness.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-ExtensionalRepairWitness",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/ExtensionalRepairWitness.olean",
+          "{project}/ExtensionalRepairWitness.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IntensionalIdentityWitness"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/ExtensionalRepairWitness.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IntensionalIdentityModel",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/IntensionalIdentityModel.olean",
+          "{project}/IntensionalIdentityModel.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-ExtensionalRepairWitness"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/IntensionalIdentityModel.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IntensionalIdentitySoundness",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/IntensionalIdentitySoundness.olean",
+          "{project}/IntensionalIdentitySoundness.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IntensionalIdentityModel"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/IntensionalIdentitySoundness.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IntensionalIdentityRelations",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/IntensionalIdentityRelations.olean",
+          "{project}/IntensionalIdentityRelations.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IntensionalIdentitySoundness"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/IntensionalIdentityRelations.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IntensionalIdentityTheorems",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/IntensionalIdentityTheorems.olean",
+          "{project}/IntensionalIdentityTheorems.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IntensionalIdentityRelations"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/IntensionalIdentityTheorems.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-ExtensionalRepairTheorems",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/ExtensionalRepairTheorems.olean",
+          "{project}/ExtensionalRepairTheorems.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IntensionalIdentityTheorems"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/ExtensionalRepairTheorems.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectiveRuleBoundary",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectiveRuleBoundary.olean",
+          "{project}/EffectiveRuleBoundary.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-ExtensionalRepairTheorems"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectiveRuleBoundary.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectiveCanonicalTests",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectiveCanonicalTests.olean",
+          "{project}/EffectiveCanonicalTests.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectiveRuleBoundary"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectiveCanonicalTests.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectiveBooleanStandardness",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectiveBooleanStandardness.olean",
+          "{project}/EffectiveBooleanStandardness.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectiveCanonicalTests"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectiveBooleanStandardness.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectiveBooleanCertificates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectiveBooleanCertificates.olean",
+          "{project}/EffectiveBooleanCertificates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectiveBooleanStandardness"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectiveBooleanCertificates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectivePrimitiveRecursion",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/EffectivePrimitiveRecursion.olean",
+          "{project}/EffectivePrimitiveRecursion.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectiveBooleanCertificates"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/EffectivePrimitiveRecursion.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-RestrictedCompiler",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/RestrictedCompiler.olean",
+          "{project}/RestrictedCompiler.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectivePrimitiveRecursion"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/RestrictedCompiler.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-ComputablePrelude",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/ComputablePrelude.olean",
+          "{project}/ComputablePrelude.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-RestrictedCompiler"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/ComputablePrelude.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-SparsePolynomial",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/SparsePolynomial.olean",
+          "{project}/SparsePolynomial.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-ComputablePrelude"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/SparsePolynomial.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-PositiveSeparation",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/PositiveSeparation.olean",
+          "{project}/PositiveSeparation.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-SparsePolynomial"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/PositiveSeparation.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-MaskNormalisation",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/MaskNormalisation.olean",
+          "{project}/MaskNormalisation.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-PositiveSeparation"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/MaskNormalisation.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IdentityChecker",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{out}/build/IdentityChecker.olean",
+          "{project}/IdentityChecker.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-MaskNormalisation"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/IdentityChecker.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "runtime-prepare",
+        "kind": "DRIVER",
+        "driver_id": "runtime-agreement",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "restricted-runtime/check_runtime_agreement.py",
+          "python-reference/certificate_checker.py",
+          "{out}/runtime"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IdentityChecker"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "runtime/RuntimeAgreement.lean",
+          "runtime/cases.json",
+          "runtime/PREPARED_CASES.json"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "runtime-lean",
+        "kind": "DRIVER",
+        "driver_id": "runtime-agreement",
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "{out}/runtime/RuntimeAgreement.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "runtime-prepare"
+        ],
+        "timeout_seconds": 1800,
+        "output_paths": [
+          "runtime/lean-output.txt"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "runtime-verify",
+        "kind": "DRIVER",
+        "driver_id": "runtime-agreement",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "restricted-runtime/check_runtime_agreement.py",
+          "python-reference/certificate_checker.py",
+          "{out}/runtime",
+          "--verify-lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "runtime-lean"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "runtime/VERIFIED_RESULT.json"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "build"
+    ]
+  }
+}

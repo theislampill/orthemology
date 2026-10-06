@@ -1,0 +1,211 @@
+{
+  "id": "d17-t14-sense-finite",
+  "family": "language-supplemental-source-identities",
+  "result_families": [
+    "language-supplemental-source-identities"
+  ],
+  "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+  "source_ids": [
+    "D17-T14-SENSE-VERIFIER",
+    "D17-T14-SENSE-LOCK"
+  ],
+  "review_ids": [
+    "D17-REVIEW-T14-SENSE-IDENTITIES"
+  ],
+  "targets": [
+    {
+      "id": "sense-9",
+      "source_id": "D17-T14-SENSE-VERIFIER",
+      "declaration": "Verify nine supplemental source identities without printing source content.",
+      "target_sha256": "3bfa06bfed88ca134c4858911fb3ec2d64ae68b7b4abc8d949b6b9391ada5ebb",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [
+    {
+      "id": "sense-positive",
+      "source_id": "D17-T14-SENSE-VERIFIER",
+      "target_id": "sense-9",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "sense-missing-file",
+      "source_id": "D17-T14-SENSE-VERIFIER",
+      "target_id": "sense-9",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "sense-changed-file",
+      "source_id": "D17-T14-SENSE-VERIFIER",
+      "target_id": "sense-9",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    }
+  ],
+  "toolchain": {
+    "kind": "PYTHON",
+    "version": "3.11.9",
+    "platform": "linux-x86_64",
+    "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+    "packages": []
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "FINITE",
+    "files": [
+      {
+        "source_id": "D17-T14-SENSE-VERIFIER",
+        "path": "language/verify_sense_sources.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "D17-T14-SENSE-LOCK",
+        "path": "language/sense-source-lock.json",
+        "role": "LOCK"
+      }
+    ],
+    "modules": [],
+    "module_order": [],
+    "positive_roots": [],
+    "audit_roots": [],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [],
+    "target_names": [],
+    "package_manifest_source_id": null,
+    "packages": [],
+    "tools": [],
+    "external_inputs": [
+      {
+        "id": "fusha-selected",
+        "source_id": null,
+        "kind": "TREE",
+        "manifest_source_id": "D17-T14-SENSE-LOCK",
+        "manifest_key": "files",
+        "expected_sha256": null,
+        "expected_bytes": null,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [
+      {
+        "id": "sense-missing-file",
+        "input_id": "fusha-selected",
+        "operation": "OMIT",
+        "path": "docs/certification-policy.md"
+      },
+      {
+        "id": "sense-changed-file",
+        "input_id": "fusha-selected",
+        "operation": "APPEND_CHANGED_BYTES",
+        "path": "docs/certification-policy.md"
+      }
+    ],
+    "drivers": [
+      {
+        "id": "sense",
+        "source_id": "D17-T14-SENSE-VERIFIER",
+        "recipe": "t14-sense-v1",
+        "sha256": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d",
+        "argument_meanings": {
+          "source_dir": "INPUT_TREE"
+        },
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "sense-positive",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "sense",
+        "argv": [
+          "{tool:python}",
+          "-I",
+          "-B",
+          "{driver:sense}",
+          "{input:fusha-selected}"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [
+          "sense-positive"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "sense-missing-file",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "sense",
+        "argv": [
+          "{tool:python}",
+          "-I",
+          "-B",
+          "{driver:sense}",
+          "{fixture:sense-missing-file}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "sense-positive"
+        ],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [
+          "sense-missing-file"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D17-T14-SENSE-VERIFIER",
+            "literal": "missing or unreadable locked file: ",
+            "sha256": "2c12cc9f7a495151e05c002a0af01d9fde0e26e5d41b2dc33edb36e9426afb74"
+          }
+        ]
+      },
+      {
+        "id": "sense-changed-file",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "sense",
+        "argv": [
+          "{tool:python}",
+          "-I",
+          "-B",
+          "{driver:sense}",
+          "{fixture:sense-changed-file}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "sense-positive"
+        ],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [
+          "sense-changed-file"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D17-T14-SENSE-VERIFIER",
+            "literal": "source identity mismatch: ",
+            "sha256": "47e513ba7d5e27bed04f5410aa0ae27071fef2ff8394dd7c3e1bde18db888014"
+          }
+        ]
+      }
+    ],
+    "build_roots": []
+  }
+}

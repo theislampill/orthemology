@@ -1,0 +1,2538 @@
+{
+  "id": "t11-substitution",
+  "family": "t11-substitution",
+  "result_families": [
+    "T11-RAW-INDEX-SUBSTITUTION"
+  ],
+  "origin_archive_sha256": "0017f0b08ca7231a3b5928d7c6e1a5db1acfc636ad3664c8524180c482e2015b",
+  "source_ids": [
+    "identity-src-812be4cd57020df2dda2",
+    "identity-src-7e1356713a2e40209b0b",
+    "identity-src-db1e24bbc42e41ce33ac",
+    "identity-src-6f4172796eb04894f177",
+    "identity-src-cd9196f31acf59c1f322",
+    "identity-src-221980e671cfbab5f7df",
+    "identity-src-9e41a838dcd889871db3",
+    "identity-src-acd458e1b4bf9875d03e",
+    "identity-src-078b4d813390f8a2229b",
+    "identity-src-a3d5203d47fe021d06a7",
+    "identity-src-885cd69d0db6b0536076",
+    "identity-src-2a431391591e8c3012ec",
+    "identity-src-4c16f8d5656a3aee41e5",
+    "identity-src-8222c4d9b6718153ba78",
+    "identity-src-7a971c9aea5a6bd3c451",
+    "identity-src-0151c47d8c3ec8aa51e6",
+    "identity-src-9e0f90d4821dac7a884e",
+    "identity-src-ef5997c5a527815b2b8e",
+    "identity-src-770fa8d5196d12c2bb6e",
+    "identity-src-d8d940e1206a3c7c64dc",
+    "identity-src-4cee17433fb011bb80aa",
+    "identity-src-33bf27b5644fcadb1d37",
+    "identity-src-1fa064d84a4fe2c11bf8",
+    "identity-src-9914217096be7f90c468",
+    "identity-src-e9043768ccd581477579",
+    "identity-src-f08cc1e452af13fd991f",
+    "identity-src-bff775c312a0aabf2f49",
+    "identity-src-7ad473e707ad77ac047f",
+    "identity-src-bcdc9e77224b86a9ded8",
+    "identity-src-a77f3d6225c9471e5d79",
+    "identity-src-dad36cb0f31587f0dea6",
+    "identity-src-c3d68bac8d3793e97e6f",
+    "identity-src-7189dcb9cbaebcf51afc",
+    "identity-src-cc116c2981f1e1169776",
+    "identity-src-ab2216cbb7886a88d573",
+    "identity-src-31f037f9ba07e911ec7a",
+    "identity-src-a4b5acc841608a859b56",
+    "identity-src-8f469f55082dccd0293e",
+    "identity-src-b1cde3ae2da954afa420",
+    "identity-src-8624233fa90012f4cb68",
+    "identity-src-132e86a7dca24e28715b",
+    "identity-src-81f318907528526a08f6",
+    "identity-src-7b5062c8cd6aa8b04534",
+    "identity-src-e6e15a8701fde5fceff9",
+    "identity-src-097eb2f92b64c52db966",
+    "identity-src-290dd58c97d6bf8274b4",
+    "identity-src-a98425ad937dd6d142dc",
+    "identity-src-ecd6ed8ea60f0be5977a",
+    "identity-src-bacfe8275363364809f1",
+    "identity-src-2ccaa10104f817f54cf5",
+    "identity-src-3b10be3008d56197fab8",
+    "identity-src-0d9bf215e3f6c16b1938",
+    "identity-src-6ecf91435f6c7e45b369",
+    "identity-src-8d33c711929c52a65938",
+    "identity-src-75a60db349c64e493278"
+  ],
+  "review_ids": [
+    "T11-RAW-INDEX-SUBSTITUTION-inherited-review"
+  ],
+  "targets": [
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_index_substitution",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": " theorem has_index_substitution {p : Poly} {A : Ty} (h : Has p A) (σ : Nat → Poly) :\n    Has (psub σ p) (substIndex σ A)",
+      "target_sha256": "9a85473ca9931345d10778d10fafae1e517c7890bd08c13d4a36d8ff81df3281",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_type_substitution",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": " theorem has_type_substitution {p : Poly} {A : Ty} (h : Has p A) (τ : Nat → Ty) :\n    Has p (substType τ A)",
+      "target_sha256": "d727e06a11cf11904858f456f4bf2061875e9b1de28f01fc4fac55527abc97ad",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-nested_j_coordinates_are_not_exchangeable",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem nested_j_coordinates_are_not_exchangeable :\n  motiveAt nestedMotive (.atom .s) (.atom .k) ≠\n    motiveAt nestedMotive (.atom .k) (.atom .s)",
+      "target_sha256": "bd9cf0b2062b77fbeec5a5ffeef5b710073d50aa8b2f601c41c5cffaf064b253",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-nested_image_preserves_internal_binders",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem nested_image_preserves_internal_binders :\n  substType (fun _ => imageWithBinders) (.all (.pi (.sigma (.param 1)))) =\n    .all (.pi (.sigma (.all (.sigma (.arrow (.param 0)\n      (.arrow (.param 3) (.identity (.var 0) (.var 3))))))))",
+      "target_sha256": "f5e0b65bfbb7293cb9ed3bf899d2e9258e7d42a9155979b1fa776d81662c6c1f",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-inserted_image_free_index_cannot_be_captured",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem inserted_image_free_index_cannot_be_captured :\n  substType (fun _ => imageWithBinders) (.all (.pi (.sigma (.param 1)))) ≠\n    .all (.pi (.sigma (.all (.sigma (.arrow (.param 0)\n      (.arrow (.param 3) (.identity (.var 0) (.var 1))))))))",
+      "target_sha256": "2482bc98e79013a3f871bd97b7a900f15a21844604b260336cea058feae6c0ca",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-alternating_binders_keep_both_raw_coordinates",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem alternating_binders_keep_both_raw_coordinates :\n  substIndex (fun n => .app (.var (n+2)) (.var 0))\n    (.all (.pi (.sigma (.identity (.var 0) (.app (.var 1) (.var 2)))))) =\n    .all (.pi (.sigma (.identity (.var 0)\n      (.app (.var 1) (.app (.var 4) (.var 2))))))",
+      "target_sha256": "3ee4810aeea055a81f79dfb6263ecd6585d59288378114dd0cd1a2b71af888dc",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-sparse_certificate",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem sparse_certificate :\n  Has (.atom .k) (.arrow imageWithBinders (.arrow .raw imageWithBinders))",
+      "target_sha256": "ef07a3e2d60f8214c3964e7d1d9ce03a5916c389ed1ec36f29736e366b0ef7b3",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-sparse_bound_is_not_number_of_occurrences",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem sparse_bound_is_not_number_of_occurrences :\n  freeTypeBound (.arrow (.all (.param 8)) (.pi (.param 2))) = 8",
+      "target_sha256": "ef989a8863eea4dbcc63fcfb546a99ff30e42c17fd62ef66e17db239d7e3f408",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-premature_prefix_is_discriminated",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem premature_prefix_is_discriminated :\n  substType (finitePrefix 7 sparseImages) (.param 7) ≠ substType sparseImages (.param 7)",
+      "target_sha256": "3409daa1318a4320d3c528b4e53d676e97cc8f0bfbc8118840b9f2480b6309d8",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-sufficient_sparse_prefix",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem sufficient_sparse_prefix :\n  substType (finitePrefix 8 sparseImages) (.param 7) = substType sparseImages (.param 7)",
+      "target_sha256": "a24d37dda1aec54dd57bad929091388aa94a517b1fa926d4bfee2447ebe9359c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-type_composition_order_certificate",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem type_composition_order_certificate :\n  Has (.atom .k) (.arrow .raw (.arrow .bottom .raw))",
+      "target_sha256": "66ee0ed45f53ebc9cd1383f278dffdfc297b93127cae4ea7d4d8c35956513bc2",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-reversed_type_composition_is_different",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem reversed_type_composition_is_different :\n  substType distinguishEight (substType advanceTypes (.param 7)) ≠\n    substType advanceTypes (substType distinguishEight (.param 7))",
+      "target_sha256": "19f4f4be0792708207aaf157d5885eb6f461f900d90d16c833e7053f7ba59599",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-nested_j_coordinate_equation",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "declaration": "theorem nested_j_coordinate_equation :\n  substIndex (fun _ => .app (.var 0) (.var 1))\n    (motiveAt nestedMotive (.atom .s) (.atom .k)) =\n    .pi (.arrow (.identity (.atom .k) (.atom .s))\n      (.identity (.var 0) (.app (.var 1) (.var 2))))",
+      "target_sha256": "2626316cfd23e48af6b4b7b84f3216151705f778af6a84aadd4ab2bdbbd8ed5a",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_composition",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "declaration": "theorem index_composition (A : Ty) (σ τ : Nat → Poly) :\n    substIndex τ (substIndex σ A) = substIndex (fun n => psub τ (σ n)) A",
+      "target_sha256": "106c7fa128784465777b580c590efc667ec12a6cfdfd39343f614edea89d7926",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-type_composition",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "declaration": "theorem type_composition (A : Ty) (σ τ : Nat → Ty) :\n    substType τ (substType σ A) = substType (fun n => substType τ (σ n)) A",
+      "target_sha256": "2a1579c9649cb7cd76638705f886ec8f430121cc10bc7b1aff0abdf7309ae491",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_type_interchange",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "declaration": "theorem index_type_interchange (A : Ty) (σ : Nat → Poly) (τ : Nat → Ty) :\n    substIndex σ (substType τ A) =\n      substType (fun n => substIndex σ (τ n)) (substIndex σ A)",
+      "target_sha256": "e26ee6ecfea7e74c4729f969f7698b0efa42c9c0ffa7143032ca865814527a1d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_instantiate",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "declaration": "theorem index_instantiate (B : Ty) (a : Poly) (σ : Nat → Poly) :\n    substIndex σ (instantiate B a) =\n      instantiate (substIndex (pup σ) B) (psub σ a)",
+      "target_sha256": "efd216328d654e5ee6f5a9ed21cb88a7cc0aa33a21af59cef13c99f16a459486",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_instantiateType",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "declaration": "theorem index_instantiateType (B A : Ty) (σ : Nat → Poly) :\n    substIndex σ (instantiateType B A) =\n      instantiateType (substIndex σ B) (substIndex σ A)",
+      "target_sha256": "5681e161c4e80edcf2edcec4943a0669dacab7c539233d8ddcdd64e8dbe0507d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_motiveAt",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "declaration": "theorem index_motiveAt (B : Ty) (y p : Poly) (σ : Nat → Poly) :\n    substIndex σ (motiveAt B y p) =\n      motiveAt (substIndex (pup (pup σ)) B) (psub σ y) (psub σ p)",
+      "target_sha256": "a2e899a39e47450e0d8399da5d94aa29b426a3dc6df6e721e483f6db52051a28",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-finite_prefix_elimination",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": "theorem finite_prefix_elimination (A : Ty) (n : Nat) (τ : Nat → Ty) :\n    instantiateType (substType (liftTypes (finitePrefix n (fun k => τ (k+1)))) A) (τ 0) =\n      substType (finitePrefix (n+1) τ) A",
+      "target_sha256": "be37a844fdb338791d398010dadb7244932868ef418f292128809845cf739d0b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_prefix_substitution",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": "theorem has_prefix_substitution {p : Poly} {A : Ty} (h : Has p A)\n    (n : Nat) (τ : Nat → Ty) : Has p (substType (finitePrefix n τ) A)",
+      "target_sha256": "4585e81b711271d46e7080c6ede25a3a9d04f746e582d8fa0443134063715217",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-type_substitution_agreement",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": "theorem type_substitution_agreement (A : Ty) (σ τ : Nat → Ty)\n    (h : ∀ k, k < freeTypeBound A → σ k = τ k) : substType σ A = substType τ A",
+      "target_sha256": "97c0719340b17b08d3a61b47fb5c0be1c930ccf0632003bffe2ed36f032e1e4a",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-finite_prefix_complete",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": "theorem finite_prefix_complete (A : Ty) (τ : Nat → Ty) :\n    substType (finitePrefix (freeTypeBound A) τ) A = substType τ A",
+      "target_sha256": "fc3aff558fdf56d01d801037994a06b9142a2aa1aed3a2886aa6f0975157fb26",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_index_composition",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": "theorem has_index_composition {p : Poly} {A : Ty} (h : Has p A)\n    (σ τ : Nat → Poly) :\n    Has (psub (fun n => psub τ (σ n)) p)\n      (substIndex (fun n => psub τ (σ n)) A)",
+      "target_sha256": "12651b52d358dc576811118b56666f8ced5016778b4e6681866d546ae0ffc6e9",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_type_composition",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": "theorem has_type_composition {p : Poly} {A : Ty} (h : Has p A)\n    (σ τ : Nat → Ty) : Has p (substType (fun n => substType τ (σ n)) A)",
+      "target_sha256": "ab300c3c74c08dabbe987ee390d8494ff7d94ef379aa1fe3bbdf08d368f07627",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_mixed_substitution",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "declaration": "theorem has_mixed_substitution {p : Poly} {A : Ty} (h : Has p A)\n    (σ : Nat → Poly) (τ : Nat → Ty) :\n    Has (psub σ p) (substType (fun n => substIndex σ (τ n)) (substIndex σ A))",
+      "target_sha256": "dfb709d354df784a5b90c3619ca3675e71efbde07ea66b7f193320a20cac29b5",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_index_certificate",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem open_two_sort_index_certificate :\n    Has (abstract (.atom .k))\n      (.all (.pi (.arrow (.param 1)\n        (.arrow (.identity (.var 0) (.app (.var 2) (.var 1))) (.param 1)))))",
+      "target_sha256": "fec930c066a694ac0031732617d0bb311299fc738862081e3f8eeba1b2d00daa",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_type_certificate",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem open_two_sort_type_certificate :\n    Has (abstract (.atom .k))\n      (.all (.pi (.arrow insertedTwoSort\n        (.arrow (.identity (.var 0) (.var 1)) insertedTwoSort))))",
+      "target_sha256": "db7ec60b8c29def9996109010610f216e51a956741008a33bdf35d5d2c4d49f2",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-earlier_image_survives_later_elimination",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem earlier_image_survives_later_elimination :\n    instantiateType\n      (substType (liftTypes (finitePrefix 1 (fun k => captureImages (k+1))))\n        (.arrow (.param 0) (.param 1)))\n      (captureImages 0) = .arrow .raw (.param 0)",
+      "target_sha256": "cf960eb7afb39f853d4bfad8180ffd14949147f2c04b2c7de59eb57ca641f9de",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-three_coordinate_j_substitution",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem three_coordinate_j_substitution (σ : Nat → Poly) :\n    Has (jPoly (psub σ jBase) (psub σ jEndpoint) (psub σ jProof))\n      (motiveAt (substIndex (pup (pup σ)) threeCoordinateMotive)\n        (psub σ jEndpoint) (psub σ jProof))",
+      "target_sha256": "a1479bb2fc08f0d191a6ad114304d0318776e34e61e54aeb4bf4c78d936f54df",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-source_changing_sigma_certificate",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem source_changing_sigma_certificate (σ : Nat → Poly) :\n    Has (pairPoly (σ 0) (.atom .i))\n      (.sigma (.identity (.var 0) (pren Nat.succ (σ 0))))",
+      "target_sha256": "dbbfc2cb1a55650102ca2ca59b39a13d2654a14b92681711e5f512d5f1840172",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-opaque_finite_dependent_certificate",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem opaque_finite_dependent_certificate :\n    Has (.atom P01R.skk)\n      (.arrow (.arrow openSigma dependentPolyType) (.arrow openSigma dependentPolyType))",
+      "target_sha256": "1095746cb17b2cd0f8777df10b108638cb7f5ac01d538e6d3d954b8d6068cd6f",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-composed_substituted_certificate",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem composed_substituted_certificate (σ : Nat → Poly) :\n    Has (psub σ composedProgram) dependentPolyType",
+      "target_sha256": "f580f4dfdbf1c628ed01f23844e990cf6695d869d06b977be68dbdd52e2f3b84",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-envelope_keeps_substituted_source",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem envelope_keeps_substituted_source (σ : Nat → Poly) (ρ : OEnv) :\n    (candidateEnvelope (has_index_substitution composed_certificate σ) ρ).checked.code =\n      psub σ composedProgram",
+      "target_sha256": "683b4068cf89f65772ed8ab009ed1a27751fb4203d6de84050bb89976c55c845",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-sigma_reuses_scoped_canonical_admission",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "declaration": "theorem sigma_reuses_scoped_canonical_admission (σ : Nat → Poly) (ρ : OEnv) (η : Env) :\n    (dependentSigma Code.top\n      (projectedBody ρ η (.identity (.var 0) (pren Nat.succ (σ 0))))).accepts\n      (eval (pairPoly (σ 0) (.atom .i)) η)",
+      "target_sha256": "dd5048ab734886dd8149b9677ba22480f9c8633b43e1497730297d9835c6da44",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_index_substitution-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-has_index_substitution",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_type_substitution-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-has_type_substitution",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-nested_j_coordinates_are_not_exchangeable-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-nested_j_coordinates_are_not_exchangeable",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-nested_image_preserves_internal_binders-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-nested_image_preserves_internal_binders",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-inserted_image_free_index_cannot_be_captured-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-inserted_image_free_index_cannot_be_captured",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-alternating_binders_keep_both_raw_coordinates-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-alternating_binders_keep_both_raw_coordinates",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-sparse_certificate-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-sparse_certificate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-sparse_bound_is_not_number_of_occurrences-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-sparse_bound_is_not_number_of_occurrences",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-premature_prefix_is_discriminated-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-premature_prefix_is_discriminated",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-sufficient_sparse_prefix-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-sufficient_sparse_prefix",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-type_composition_order_certificate-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-type_composition_order_certificate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-reversed_type_composition_is_different-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-reversed_type_composition_is_different",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-IndependentSubstitutionReview-nested_j_coordinate_equation-control",
+      "source_id": "identity-src-ef5997c5a527815b2b8e",
+      "target_id": "t11-substitution-IndependentSubstitutionReview-nested_j_coordinate_equation",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_composition-control",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "target_id": "t11-substitution-P01DF-Syntactic-index_composition",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-type_composition-control",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "target_id": "t11-substitution-P01DF-Syntactic-type_composition",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_type_interchange-control",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "target_id": "t11-substitution-P01DF-Syntactic-index_type_interchange",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_instantiate-control",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "target_id": "t11-substitution-P01DF-Syntactic-index_instantiate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_instantiateType-control",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "target_id": "t11-substitution-P01DF-Syntactic-index_instantiateType",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-index_motiveAt-control",
+      "source_id": "identity-src-8d33c711929c52a65938",
+      "target_id": "t11-substitution-P01DF-Syntactic-index_motiveAt",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-finite_prefix_elimination-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-finite_prefix_elimination",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_prefix_substitution-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-has_prefix_substitution",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-type_substitution_agreement-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-type_substitution_agreement",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-finite_prefix_complete-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-finite_prefix_complete",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_index_composition-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-has_index_composition",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_type_composition-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-has_type_composition",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-has_mixed_substitution-control",
+      "source_id": "identity-src-3b10be3008d56197fab8",
+      "target_id": "t11-substitution-P01DF-Syntactic-has_mixed_substitution",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_index_certificate-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_index_certificate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_type_certificate-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_type_certificate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-earlier_image_survives_later_elimination-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-earlier_image_survives_later_elimination",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-three_coordinate_j_substitution-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-three_coordinate_j_substitution",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-source_changing_sigma_certificate-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-source_changing_sigma_certificate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-opaque_finite_dependent_certificate-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-opaque_finite_dependent_certificate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-composed_substituted_certificate-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-composed_substituted_certificate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-envelope_keeps_substituted_source-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-envelope_keeps_substituted_source",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-substitution-P01DF-Syntactic-Controls-sigma_reuses_scoped_canonical_admission-control",
+      "source_id": "identity-src-0d9bf215e3f6c16b1938",
+      "target_id": "t11-substitution-P01DF-Syntactic-Controls-sigma_reuses_scoped_canonical_admission",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "identity-src-812be4cd57020df2dda2",
+        "path": "CANDIDATE_v1.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-7e1356713a2e40209b0b",
+        "path": "CHECKED_SCOPE.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-db1e24bbc42e41ce33ac",
+        "path": "ENVIRONMENT_AND_DESIGN_INPUTS.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-6f4172796eb04894f177",
+        "path": "FINAL_DISPOSITION.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-cd9196f31acf59c1f322",
+        "path": "INPUT_SOURCE_MANIFEST.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-221980e671cfbab5f7df",
+        "path": "MANIFEST.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-9e41a838dcd889871db3",
+        "path": "PACKAGE_VERIFICATION.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-acd458e1b4bf9875d03e",
+        "path": "PORTABILITY_VERIFICATION.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-078b4d813390f8a2229b",
+        "path": "PUBLIC_PROJECTION.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-a3d5203d47fe021d06a7",
+        "path": "README.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-885cd69d0db6b0536076",
+        "path": "SOURCE_CUSTODY.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-2a431391591e8c3012ec",
+        "path": "VERIFICATION_v1.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-4c16f8d5656a3aee41e5",
+        "path": "dependency-order.txt",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-8222c4d9b6718153ba78",
+        "path": "review/CANDIDATE_IDENTITIES.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-7a971c9aea5a6bd3c451",
+        "path": "review/INPUT_IDENTITIES.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-0151c47d8c3ec8aa51e6",
+        "path": "review/REVIEW.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-9e0f90d4821dac7a884e",
+        "path": "review/VERIFICATION.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-ef5997c5a527815b2b8e",
+        "path": "review/sources/IndependentControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "identity-src-770fa8d5196d12c2bb6e",
+        "path": "scripts/check-module.sh",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-d8d940e1206a3c7c64dc",
+        "path": "scripts/verify-inputs.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-4cee17433fb011bb80aa",
+        "path": "scripts/verify.sh",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-33bf27b5644fcadb1d37",
+        "path": "sources/AdmissibilityContract.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "identity-src-1fa064d84a4fe2c11bf8",
+        "path": "sources/BoundaryResults.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-9914217096be7f90c468",
+        "path": "sources/EffectsAndDependence.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-e9043768ccd581477579",
+        "path": "sources/FiniteBridge.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-f08cc1e452af13fd991f",
+        "path": "sources/InternalPolymorphism.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-bff775c312a0aabf2f49",
+        "path": "sources/NormalisationAndNumerals.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7ad473e707ad77ac047f",
+        "path": "sources/P01Candidates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-bcdc9e77224b86a9ded8",
+        "path": "sources/P01CanonicalCarrierProjection.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-a77f3d6225c9471e5d79",
+        "path": "sources/P01Certificates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-dad36cb0f31587f0dea6",
+        "path": "sources/P01Confluence.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-c3d68bac8d3793e97e6f",
+        "path": "sources/P01ContextualJ.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7189dcb9cbaebcf51afc",
+        "path": "sources/P01CurryParametricity.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-cc116c2981f1e1169776",
+        "path": "sources/P01DependentControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-ab2216cbb7886a88d573",
+        "path": "sources/P01DependentCore.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-31f037f9ba07e911ec7a",
+        "path": "sources/P01DependentFundamental.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-a4b5acc841608a859b56",
+        "path": "sources/P01DependentModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-8f469f55082dccd0293e",
+        "path": "sources/P01DependentRepresentation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-b1cde3ae2da954afa420",
+        "path": "sources/P01DependentSubstitution.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-8624233fa90012f4cb68",
+        "path": "sources/P01Examples.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-132e86a7dca24e28715b",
+        "path": "sources/P01LambdaSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-81f318907528526a08f6",
+        "path": "sources/P01ModelWitnesses.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7b5062c8cd6aa8b04534",
+        "path": "sources/P01Omega.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-e6e15a8701fde5fceff9",
+        "path": "sources/P01PER.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-097eb2f92b64c52db966",
+        "path": "sources/P01Polynomials.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-290dd58c97d6bf8274b4",
+        "path": "sources/P01RecursiveModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-a98425ad937dd6d142dc",
+        "path": "sources/P01SNReflection.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-ecd6ed8ea60f0be5977a",
+        "path": "sources/P01SystemF.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-bacfe8275363364809f1",
+        "path": "sources/P01Translation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-2ccaa10104f817f54cf5",
+        "path": "sources/P01TypeAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-3b10be3008d56197fab8",
+        "path": "sources/SubstitutionAdmissibility.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-0d9bf215e3f6c16b1938",
+        "path": "sources/SubstitutionControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-6ecf91435f6c7e45b369",
+        "path": "sources/SubstitutionReadback.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "identity-src-8d33c711929c52a65938",
+        "path": "sources/SubstitutionSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-75a60db349c64e493278",
+        "path": "configuration/lake-manifest.json",
+        "role": "CONFIG"
+      }
+    ],
+    "modules": [
+      {
+        "name": "IndependentControls",
+        "source_id": "identity-src-ef5997c5a527815b2b8e",
+        "imports": [
+          "Init",
+          "SubstitutionAdmissibility"
+        ]
+      },
+      {
+        "name": "AdmissibilityContract",
+        "source_id": "identity-src-33bf27b5644fcadb1d37",
+        "imports": [
+          "Init",
+          "SubstitutionAdmissibility"
+        ]
+      },
+      {
+        "name": "BoundaryResults",
+        "source_id": "identity-src-1fa064d84a4fe2c11bf8",
+        "imports": [
+          "Init",
+          "FiniteBridge"
+        ]
+      },
+      {
+        "name": "EffectsAndDependence",
+        "source_id": "identity-src-9914217096be7f90c468",
+        "imports": [
+          "Init",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "FiniteBridge",
+        "source_id": "identity-src-e9043768ccd581477579",
+        "imports": [
+          "Init",
+          "InternalPolymorphism"
+        ]
+      },
+      {
+        "name": "InternalPolymorphism",
+        "source_id": "identity-src-f08cc1e452af13fd991f",
+        "imports": [
+          "Init"
+        ]
+      },
+      {
+        "name": "NormalisationAndNumerals",
+        "source_id": "identity-src-bff775c312a0aabf2f49",
+        "imports": [
+          "Init",
+          "EffectsAndDependence"
+        ]
+      },
+      {
+        "name": "P01Candidates",
+        "source_id": "identity-src-7ad473e707ad77ac047f",
+        "imports": [
+          "Init",
+          "P01TypeAlgebra",
+          "P01SNReflection",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "P01CanonicalCarrierProjection",
+        "source_id": "identity-src-bcdc9e77224b86a9ded8",
+        "imports": [
+          "Init",
+          "P01DependentRepresentation"
+        ]
+      },
+      {
+        "name": "P01Certificates",
+        "source_id": "identity-src-a77f3d6225c9471e5d79",
+        "imports": [
+          "Init",
+          "P01ContextualJ"
+        ]
+      },
+      {
+        "name": "P01Confluence",
+        "source_id": "identity-src-dad36cb0f31587f0dea6",
+        "imports": [
+          "Init",
+          "P01Candidates"
+        ]
+      },
+      {
+        "name": "P01ContextualJ",
+        "source_id": "identity-src-c3d68bac8d3793e97e6f",
+        "imports": [
+          "Init",
+          "P01DependentCore"
+        ]
+      },
+      {
+        "name": "P01CurryParametricity",
+        "source_id": "identity-src-7189dcb9cbaebcf51afc",
+        "imports": [
+          "Init",
+          "P01RecursiveModel",
+          "P01SystemF"
+        ]
+      },
+      {
+        "name": "P01DependentControls",
+        "source_id": "identity-src-cc116c2981f1e1169776",
+        "imports": [
+          "Init",
+          "P01DependentFundamental"
+        ]
+      },
+      {
+        "name": "P01DependentCore",
+        "source_id": "identity-src-ab2216cbb7886a88d573",
+        "imports": [
+          "Init",
+          "P01PER"
+        ]
+      },
+      {
+        "name": "P01DependentFundamental",
+        "source_id": "identity-src-31f037f9ba07e911ec7a",
+        "imports": [
+          "Init",
+          "P01DependentSubstitution"
+        ]
+      },
+      {
+        "name": "P01DependentModel",
+        "source_id": "identity-src-a4b5acc841608a859b56",
+        "imports": [
+          "Init",
+          "P01RecursiveModel",
+          "P01ModelWitnesses"
+        ]
+      },
+      {
+        "name": "P01DependentRepresentation",
+        "source_id": "identity-src-8f469f55082dccd0293e",
+        "imports": [
+          "Init",
+          "P01DependentControls"
+        ]
+      },
+      {
+        "name": "P01DependentSubstitution",
+        "source_id": "identity-src-b1cde3ae2da954afa420",
+        "imports": [
+          "Init",
+          "P01DependentModel"
+        ]
+      },
+      {
+        "name": "P01Examples",
+        "source_id": "identity-src-8624233fa90012f4cb68",
+        "imports": [
+          "Init",
+          "P01Certificates"
+        ]
+      },
+      {
+        "name": "P01LambdaSyntax",
+        "source_id": "identity-src-132e86a7dca24e28715b",
+        "imports": [
+          "Init",
+          "P01TypeAlgebra",
+          "P01SNReflection"
+        ]
+      },
+      {
+        "name": "P01ModelWitnesses",
+        "source_id": "identity-src-81f318907528526a08f6",
+        "imports": [
+          "Init",
+          "P01CurryParametricity",
+          "P01Translation"
+        ]
+      },
+      {
+        "name": "P01Omega",
+        "source_id": "identity-src-7b5062c8cd6aa8b04534",
+        "imports": [
+          "Init",
+          "P01Confluence",
+          "NormalisationAndNumerals"
+        ]
+      },
+      {
+        "name": "P01PER",
+        "source_id": "identity-src-e6e15a8701fde5fceff9",
+        "imports": [
+          "Init",
+          "P01Polynomials"
+        ]
+      },
+      {
+        "name": "P01Polynomials",
+        "source_id": "identity-src-097eb2f92b64c52db966",
+        "imports": [
+          "Init",
+          "P01Omega"
+        ]
+      },
+      {
+        "name": "P01RecursiveModel",
+        "source_id": "identity-src-290dd58c97d6bf8274b4",
+        "imports": [
+          "Init",
+          "P01Examples"
+        ]
+      },
+      {
+        "name": "P01SNReflection",
+        "source_id": "identity-src-a98425ad937dd6d142dc",
+        "imports": [
+          "Init"
+        ]
+      },
+      {
+        "name": "P01SystemF",
+        "source_id": "identity-src-ecd6ed8ea60f0be5977a",
+        "imports": [
+          "Init",
+          "P01LambdaSyntax"
+        ]
+      },
+      {
+        "name": "P01Translation",
+        "source_id": "identity-src-bacfe8275363364809f1",
+        "imports": [
+          "Init",
+          "P01SystemF",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "P01TypeAlgebra",
+        "source_id": "identity-src-2ccaa10104f817f54cf5",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Bool.Basic",
+          "FiniteBridge"
+        ]
+      },
+      {
+        "name": "SubstitutionAdmissibility",
+        "source_id": "identity-src-3b10be3008d56197fab8",
+        "imports": [
+          "Init",
+          "SubstitutionSyntax"
+        ]
+      },
+      {
+        "name": "SubstitutionControls",
+        "source_id": "identity-src-0d9bf215e3f6c16b1938",
+        "imports": [
+          "Init",
+          "SubstitutionAdmissibility",
+          "P01CanonicalCarrierProjection"
+        ]
+      },
+      {
+        "name": "SubstitutionReadback",
+        "source_id": "identity-src-6ecf91435f6c7e45b369",
+        "imports": [
+          "Init",
+          "SubstitutionControls"
+        ]
+      },
+      {
+        "name": "SubstitutionSyntax",
+        "source_id": "identity-src-8d33c711929c52a65938",
+        "imports": [
+          "Init",
+          "P01DependentFundamental"
+        ]
+      }
+    ],
+    "module_order": [
+      "InternalPolymorphism",
+      "FiniteBridge",
+      "P01TypeAlgebra",
+      "P01SNReflection",
+      "BoundaryResults",
+      "P01Candidates",
+      "P01Confluence",
+      "EffectsAndDependence",
+      "NormalisationAndNumerals",
+      "P01Omega",
+      "P01Polynomials",
+      "P01PER",
+      "P01DependentCore",
+      "P01ContextualJ",
+      "P01Certificates",
+      "P01Examples",
+      "P01RecursiveModel",
+      "P01LambdaSyntax",
+      "P01SystemF",
+      "P01CurryParametricity",
+      "P01Translation",
+      "P01ModelWitnesses",
+      "P01DependentModel",
+      "P01DependentSubstitution",
+      "P01DependentFundamental",
+      "P01DependentControls",
+      "P01DependentRepresentation",
+      "P01CanonicalCarrierProjection",
+      "SubstitutionSyntax",
+      "SubstitutionAdmissibility",
+      "SubstitutionControls",
+      "AdmissibilityContract",
+      "SubstitutionReadback",
+      "IndependentControls"
+    ],
+    "positive_roots": [
+      "BoundaryResults",
+      "EffectsAndDependence",
+      "FiniteBridge",
+      "InternalPolymorphism",
+      "NormalisationAndNumerals",
+      "P01Candidates",
+      "P01CanonicalCarrierProjection",
+      "P01Certificates",
+      "P01Confluence",
+      "P01ContextualJ",
+      "P01CurryParametricity",
+      "P01DependentControls",
+      "P01DependentCore",
+      "P01DependentFundamental",
+      "P01DependentModel",
+      "P01DependentRepresentation",
+      "P01DependentSubstitution",
+      "P01Examples",
+      "P01LambdaSyntax",
+      "P01ModelWitnesses",
+      "P01Omega",
+      "P01PER",
+      "P01Polynomials",
+      "P01RecursiveModel",
+      "P01SNReflection",
+      "P01SystemF",
+      "P01Translation",
+      "P01TypeAlgebra",
+      "SubstitutionAdmissibility",
+      "SubstitutionControls",
+      "SubstitutionSyntax"
+    ],
+    "audit_roots": [
+      "IndependentControls",
+      "AdmissibilityContract",
+      "SubstitutionReadback"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib.Data.Bool.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Bool/Basic.lean",
+        "sha256": "fb20d50c3aed15cdf7c5b7f1bc92db8ab850444f158199bfa8cb2f09ac3a5e55"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-has_index_substitution",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.has_index_substitution"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-has_type_substitution",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.has_type_substitution"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-nested_j_coordinates_are_not_exchangeable",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.nested_j_coordinates_are_not_exchangeable"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-nested_image_preserves_internal_binders",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.nested_image_preserves_internal_binders"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-inserted_image_free_index_cannot_be_captured",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.inserted_image_free_index_cannot_be_captured"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-alternating_binders_keep_both_raw_coordinates",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.alternating_binders_keep_both_raw_coordinates"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-sparse_certificate",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.sparse_certificate"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-sparse_bound_is_not_number_of_occurrences",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.sparse_bound_is_not_number_of_occurrences"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-premature_prefix_is_discriminated",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.premature_prefix_is_discriminated"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-sufficient_sparse_prefix",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.sufficient_sparse_prefix"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-type_composition_order_certificate",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.type_composition_order_certificate"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-reversed_type_composition_is_different",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.reversed_type_composition_is_different"
+      },
+      {
+        "target_id": "t11-substitution-IndependentSubstitutionReview-nested_j_coordinate_equation",
+        "module": "IndependentControls",
+        "name": "IndependentSubstitutionReview.nested_j_coordinate_equation"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-index_composition",
+        "module": "SubstitutionSyntax",
+        "name": "P01DF.Syntactic.index_composition"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-type_composition",
+        "module": "SubstitutionSyntax",
+        "name": "P01DF.Syntactic.type_composition"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-index_type_interchange",
+        "module": "SubstitutionSyntax",
+        "name": "P01DF.Syntactic.index_type_interchange"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-index_instantiate",
+        "module": "SubstitutionSyntax",
+        "name": "P01DF.Syntactic.index_instantiate"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-index_instantiateType",
+        "module": "SubstitutionSyntax",
+        "name": "P01DF.Syntactic.index_instantiateType"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-index_motiveAt",
+        "module": "SubstitutionSyntax",
+        "name": "P01DF.Syntactic.index_motiveAt"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-finite_prefix_elimination",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.finite_prefix_elimination"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-has_prefix_substitution",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.has_prefix_substitution"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-type_substitution_agreement",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.type_substitution_agreement"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-finite_prefix_complete",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.finite_prefix_complete"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-has_index_composition",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.has_index_composition"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-has_type_composition",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.has_type_composition"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-has_mixed_substitution",
+        "module": "SubstitutionAdmissibility",
+        "name": "P01DF.Syntactic.has_mixed_substitution"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_index_certificate",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.open_two_sort_index_certificate"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_type_certificate",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.open_two_sort_type_certificate"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-earlier_image_survives_later_elimination",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.earlier_image_survives_later_elimination"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-three_coordinate_j_substitution",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.three_coordinate_j_substitution"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-source_changing_sigma_certificate",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.source_changing_sigma_certificate"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-opaque_finite_dependent_certificate",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.opaque_finite_dependent_certificate"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-composed_substituted_certificate",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.composed_substituted_certificate"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-envelope_keeps_substituted_source",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.envelope_keeps_substituted_source"
+      },
+      {
+        "target_id": "t11-substitution-P01DF-Syntactic-Controls-sigma_reuses_scoped_canonical_admission",
+        "module": "SubstitutionControls",
+        "name": "P01DF.Syntactic.Controls.sigma_reuses_scoped_canonical_admission"
+      }
+    ],
+    "package_manifest_source_id": "identity-src-75a60db349c64e493278",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      }
+    ],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "t11-substitution-source-check",
+        "source_id": "identity-src-d8d940e1206a3c7c64dc",
+        "recipe": "t11-substitution-source-check-v1",
+        "sha256": "0998ba1ff76bd6620707f38035612431fa94f9e16e1a5105b5f527d12eef21ab",
+        "argument_meanings": {},
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "source-check-before",
+        "kind": "SOURCE_CHECK",
+        "driver_id": "t11-substitution-source-check",
+        "argv": [
+          "{tool:python}",
+          "{project}/scripts/verify-inputs.py"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 120,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-InternalPolymorphism",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/InternalPolymorphism.olean",
+          "{project}/sources/InternalPolymorphism.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "source-check-before"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/InternalPolymorphism.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-FiniteBridge",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/FiniteBridge.olean",
+          "{project}/sources/FiniteBridge.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-InternalPolymorphism"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/FiniteBridge.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01TypeAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01TypeAlgebra.olean",
+          "{project}/sources/P01TypeAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-FiniteBridge"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01TypeAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01SNReflection",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01SNReflection.olean",
+          "{project}/sources/P01SNReflection.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01TypeAlgebra"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01SNReflection.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-BoundaryResults",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/BoundaryResults.olean",
+          "{project}/sources/BoundaryResults.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01SNReflection"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/BoundaryResults.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Candidates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Candidates.olean",
+          "{project}/sources/P01Candidates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-BoundaryResults"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Candidates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Confluence",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Confluence.olean",
+          "{project}/sources/P01Confluence.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Candidates"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Confluence.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectsAndDependence",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/EffectsAndDependence.olean",
+          "{project}/sources/EffectsAndDependence.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Confluence"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/EffectsAndDependence.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-NormalisationAndNumerals",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/NormalisationAndNumerals.olean",
+          "{project}/sources/NormalisationAndNumerals.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectsAndDependence"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/NormalisationAndNumerals.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Omega",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Omega.olean",
+          "{project}/sources/P01Omega.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-NormalisationAndNumerals"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Omega.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Polynomials",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Polynomials.olean",
+          "{project}/sources/P01Polynomials.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Omega"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Polynomials.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01PER",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01PER.olean",
+          "{project}/sources/P01PER.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Polynomials"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01PER.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentCore",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentCore.olean",
+          "{project}/sources/P01DependentCore.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01PER"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentCore.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01ContextualJ",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01ContextualJ.olean",
+          "{project}/sources/P01ContextualJ.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentCore"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01ContextualJ.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Certificates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Certificates.olean",
+          "{project}/sources/P01Certificates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01ContextualJ"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Certificates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Examples",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Examples.olean",
+          "{project}/sources/P01Examples.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Certificates"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Examples.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01RecursiveModel",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01RecursiveModel.olean",
+          "{project}/sources/P01RecursiveModel.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Examples"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01RecursiveModel.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01LambdaSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01LambdaSyntax.olean",
+          "{project}/sources/P01LambdaSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01RecursiveModel"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01LambdaSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01SystemF",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01SystemF.olean",
+          "{project}/sources/P01SystemF.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01LambdaSyntax"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01SystemF.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01CurryParametricity",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01CurryParametricity.olean",
+          "{project}/sources/P01CurryParametricity.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01SystemF"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01CurryParametricity.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Translation",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Translation.olean",
+          "{project}/sources/P01Translation.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01CurryParametricity"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Translation.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01ModelWitnesses",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01ModelWitnesses.olean",
+          "{project}/sources/P01ModelWitnesses.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Translation"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01ModelWitnesses.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentModel",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentModel.olean",
+          "{project}/sources/P01DependentModel.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01ModelWitnesses"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentModel.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentSubstitution",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentSubstitution.olean",
+          "{project}/sources/P01DependentSubstitution.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentModel"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentSubstitution.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentFundamental",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentFundamental.olean",
+          "{project}/sources/P01DependentFundamental.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentSubstitution"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentFundamental.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentControls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentControls.olean",
+          "{project}/sources/P01DependentControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentFundamental"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentControls.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentRepresentation",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentRepresentation.olean",
+          "{project}/sources/P01DependentRepresentation.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentControls"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentRepresentation.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01CanonicalCarrierProjection",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01CanonicalCarrierProjection.olean",
+          "{project}/sources/P01CanonicalCarrierProjection.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentRepresentation"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01CanonicalCarrierProjection.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-SubstitutionSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/SubstitutionSyntax.olean",
+          "{project}/sources/SubstitutionSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01CanonicalCarrierProjection"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/SubstitutionSyntax.olean"
+        ],
+        "control_ids": [
+          "t11-substitution-P01DF-Syntactic-index_composition-control",
+          "t11-substitution-P01DF-Syntactic-type_composition-control",
+          "t11-substitution-P01DF-Syntactic-index_type_interchange-control",
+          "t11-substitution-P01DF-Syntactic-index_instantiate-control",
+          "t11-substitution-P01DF-Syntactic-index_instantiateType-control",
+          "t11-substitution-P01DF-Syntactic-index_motiveAt-control"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-SubstitutionAdmissibility",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/SubstitutionAdmissibility.olean",
+          "{project}/sources/SubstitutionAdmissibility.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-SubstitutionSyntax"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/SubstitutionAdmissibility.olean"
+        ],
+        "control_ids": [
+          "t11-substitution-P01DF-Syntactic-has_index_substitution-control",
+          "t11-substitution-P01DF-Syntactic-has_type_substitution-control",
+          "t11-substitution-P01DF-Syntactic-finite_prefix_elimination-control",
+          "t11-substitution-P01DF-Syntactic-has_prefix_substitution-control",
+          "t11-substitution-P01DF-Syntactic-type_substitution_agreement-control",
+          "t11-substitution-P01DF-Syntactic-finite_prefix_complete-control",
+          "t11-substitution-P01DF-Syntactic-has_index_composition-control",
+          "t11-substitution-P01DF-Syntactic-has_type_composition-control",
+          "t11-substitution-P01DF-Syntactic-has_mixed_substitution-control"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-SubstitutionControls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/SubstitutionControls.olean",
+          "{project}/sources/SubstitutionControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-SubstitutionAdmissibility"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/SubstitutionControls.olean"
+        ],
+        "control_ids": [
+          "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_index_certificate-control",
+          "t11-substitution-P01DF-Syntactic-Controls-open_two_sort_type_certificate-control",
+          "t11-substitution-P01DF-Syntactic-Controls-earlier_image_survives_later_elimination-control",
+          "t11-substitution-P01DF-Syntactic-Controls-three_coordinate_j_substitution-control",
+          "t11-substitution-P01DF-Syntactic-Controls-source_changing_sigma_certificate-control",
+          "t11-substitution-P01DF-Syntactic-Controls-opaque_finite_dependent_certificate-control",
+          "t11-substitution-P01DF-Syntactic-Controls-composed_substituted_certificate-control",
+          "t11-substitution-P01DF-Syntactic-Controls-envelope_keeps_substituted_source-control",
+          "t11-substitution-P01DF-Syntactic-Controls-sigma_reuses_scoped_canonical_admission-control"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AdmissibilityContract",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AdmissibilityContract.olean",
+          "{project}/sources/AdmissibilityContract.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-SubstitutionControls"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AdmissibilityContract.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-SubstitutionReadback",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/SubstitutionReadback.olean",
+          "{project}/sources/SubstitutionReadback.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AdmissibilityContract"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/SubstitutionReadback.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IndependentControls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/IndependentControls.olean",
+          "{project}/review/sources/IndependentControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-SubstitutionReadback"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/IndependentControls.olean"
+        ],
+        "control_ids": [
+          "t11-substitution-IndependentSubstitutionReview-nested_j_coordinates_are_not_exchangeable-control",
+          "t11-substitution-IndependentSubstitutionReview-nested_image_preserves_internal_binders-control",
+          "t11-substitution-IndependentSubstitutionReview-inserted_image_free_index_cannot_be_captured-control",
+          "t11-substitution-IndependentSubstitutionReview-alternating_binders_keep_both_raw_coordinates-control",
+          "t11-substitution-IndependentSubstitutionReview-sparse_certificate-control",
+          "t11-substitution-IndependentSubstitutionReview-sparse_bound_is_not_number_of_occurrences-control",
+          "t11-substitution-IndependentSubstitutionReview-premature_prefix_is_discriminated-control",
+          "t11-substitution-IndependentSubstitutionReview-sufficient_sparse_prefix-control",
+          "t11-substitution-IndependentSubstitutionReview-type_composition_order_certificate-control",
+          "t11-substitution-IndependentSubstitutionReview-reversed_type_composition_is_different-control",
+          "t11-substitution-IndependentSubstitutionReview-nested_j_coordinate_equation-control"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "source-check-after",
+        "kind": "SOURCE_CHECK",
+        "driver_id": "t11-substitution-source-check",
+        "argv": [
+          "{tool:python}",
+          "{project}/scripts/verify-inputs.py"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IndependentControls"
+        ],
+        "timeout_seconds": 120,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "build"
+    ]
+  }
+}

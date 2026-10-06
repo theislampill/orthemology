@@ -1,0 +1,988 @@
+{
+  "id": "D04-T07-HISTORY-ORIGINAL",
+  "family": "t07-finite-history",
+  "result_families": [
+    "t07-finite-history"
+  ],
+  "origin_archive_sha256": "ac825ff194e83f8ddd50da3a48e0739d320517374e66f19b129c386188c09aa0",
+  "source_ids": [
+    "D04-SRC-596ea9e1d49e6070d398",
+    "D04-SRC-64e471dcef8f5d467447",
+    "D04-SRC-3952d475f5f17ac9323d",
+    "D04-SRC-1742c264e034bb76f7a4",
+    "D04-SRC-a354c8d78898d976ff8c",
+    "D04-SRC-b4d935e9b8817f60f15a",
+    "D04-SRC-649b93c26313fabdf668",
+    "D04-SRC-49f370cc7c856fb64a1d",
+    "D04-SRC-051e27009acf82bbbcc6",
+    "D04-SRC-258ec137d5b4f650dd07",
+    "D04-SRC-a85d94dc414a670c7a8f",
+    "D04-SRC-be2c9366c9dcd528896a",
+    "D04-SRC-ca6737da1d4b86a81744",
+    "D04-SRC-69f7c7d31242d5c2a848"
+  ],
+  "review_ids": [
+    "T07-FINITE-HISTORY-REVIEW-1"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D04-SRC-1742c264e034bb76f7a4",
+      "declaration": "theorem finite_history_safety {n} (c : Config n) (table : Table)\n    {s : State n} {events : List (Event n)}\n    (trace : Trace c (Initial c table) events s) :\n    Consistent c s ∧ s.damaged = false ∧ AuthorizedTrace c (Initial c table) events s := by\n  have init := consistent_initial c table\n  exact ⟨consistent_trace init trace,\n    trace_safe init rfl trace, trace_writes_authorized init trace⟩\n\n/-- Direct universal form for the actual reached pre-state of any finite prefix;\n    no choice of a second trace or an existential success certificate is needed. -/",
+      "target_sha256": "7d915e227d32c6b72fea821860950aacd35e1af123863e34ab7e1484ef206419",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D04-SRC-3952d475f5f17ac9323d",
+      "declaration": "theorem no_landing_after_cancellation {n} {c : Config n} {s t : State n}\n    {as : List (Event n)} (reachable : Reachable c s) (trace : Trace c s as t)\n    (k : Command n) (requester : Nat) (closed : Cancelled c s k) :\n    ¬Lands c t k requester := by\n  exact cancelled_cannot_land (consistent_trace (reachable_consistent reachable) trace)\n    k requester (trace_cancelled trace k closed)\n\n/-- Exact payload binding is an explicit consequence, not a separate assumption. -/",
+      "target_sha256": "a6ec9a7db106a4596024d22de22959af738f23480df4be7db55770a2fbfb78d5",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D04-SRC-1742c264e034bb76f7a4",
+      "declaration": "theorem stable_trace_preserves_goal {n} {c : Config n} {s t : State n}\n    {events : List (Event n)} (h : Consistent c s) (restored : Restored c s)\n    (trace : Trace c s events t) (stable : s.epoch = t.epoch) : Restored c t := by\n  induction trace with\n  | nil => exact restored\n  | @cons s u t a as step tail ih =>\n    have su := step_epoch step\n    have ut := trace_epoch tail\n    have same : s.epoch = u.epoch := by omega\n    exact ih (consistent_step h step) (step_restored h restored step same) (by omega)",
+      "target_sha256": "c102e157e040456b73a62650751d0420856c6dc961e5dd51b6ed9d93764a8cbf",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "positive-infrastructure",
+      "source_id": "D04-SRC-596ea9e1d49e6070d398",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "mutation-revocation_omission_is_safe",
+      "source_id": "D04-SRC-258ec137d5b4f650dd07",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "mutation-target_only_checks_preserve_permission",
+      "source_id": "D04-SRC-258ec137d5b4f650dd07",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "mutation-cancellation_guard_is_redundant",
+      "source_id": "D04-SRC-258ec137d5b4f650dd07",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "mutation-B_replies_are_enough",
+      "source_id": "D04-SRC-258ec137d5b4f650dd07",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "mutation-mediation_is_redundant",
+      "source_id": "D04-SRC-258ec137d5b4f650dd07",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "mutation-approved_label_binds_substituted_bytes",
+      "source_id": "D04-SRC-258ec137d5b4f650dd07",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "mutation-old_action_still_authorized",
+      "source_id": "D04-SRC-258ec137d5b4f650dd07",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "positive-seven-source-scenarios",
+      "source_id": "D04-SRC-69f7c7d31242d5c2a848",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "D04-SRC-596ea9e1d49e6070d398",
+        "path": "HistoryModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-64e471dcef8f5d467447",
+        "path": "HistoryInvariant.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-3952d475f5f17ac9323d",
+        "path": "HistorySafety.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-1742c264e034bb76f7a4",
+        "path": "HistoryTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-a354c8d78898d976ff8c",
+        "path": "NegativeControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-b4d935e9b8817f60f15a",
+        "path": "Targets.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-649b93c26313fabdf668",
+        "path": "MultiEpoch.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-49f370cc7c856fb64a1d",
+        "path": "ReviewChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-051e27009acf82bbbcc6",
+        "path": "ReservationDomain.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-258ec137d5b4f650dd07",
+        "path": "control-source/check_controls.py",
+        "role": "DATA"
+      },
+      {
+        "source_id": "D04-SRC-a85d94dc414a670c7a8f",
+        "path": "dependency-lock/mathlib-lake-manifest.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "D04-SRC-be2c9366c9dcd528896a",
+        "path": "dependency-lock/DEPENDENCIES.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "D04-SRC-ca6737da1d4b86a81744",
+        "path": "review-documents/D04-SRC-ca6737da1d4b86a81744.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D04-SRC-69f7c7d31242d5c2a848",
+        "path": "control-source/source_replay.py",
+        "role": "DRIVER"
+      }
+    ],
+    "modules": [
+      {
+        "name": "HistoryModel",
+        "source_id": "D04-SRC-596ea9e1d49e6070d398",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ]
+      },
+      {
+        "name": "HistoryInvariant",
+        "source_id": "D04-SRC-64e471dcef8f5d467447",
+        "imports": [
+          "Init",
+          "HistoryModel"
+        ]
+      },
+      {
+        "name": "HistorySafety",
+        "source_id": "D04-SRC-3952d475f5f17ac9323d",
+        "imports": [
+          "Init",
+          "HistoryInvariant"
+        ]
+      },
+      {
+        "name": "HistoryTrace",
+        "source_id": "D04-SRC-1742c264e034bb76f7a4",
+        "imports": [
+          "Init",
+          "HistorySafety"
+        ]
+      },
+      {
+        "name": "NegativeControls",
+        "source_id": "D04-SRC-a354c8d78898d976ff8c",
+        "imports": [
+          "Init",
+          "HistoryTrace"
+        ]
+      },
+      {
+        "name": "Targets",
+        "source_id": "D04-SRC-b4d935e9b8817f60f15a",
+        "imports": [
+          "Init",
+          "HistoryTrace",
+          "NegativeControls"
+        ]
+      },
+      {
+        "name": "MultiEpoch",
+        "source_id": "D04-SRC-649b93c26313fabdf668",
+        "imports": [
+          "Init",
+          "NegativeControls"
+        ]
+      },
+      {
+        "name": "ReviewChallenges",
+        "source_id": "D04-SRC-49f370cc7c856fb64a1d",
+        "imports": [
+          "Init",
+          "NegativeControls"
+        ]
+      },
+      {
+        "name": "ReservationDomain",
+        "source_id": "D04-SRC-051e27009acf82bbbcc6",
+        "imports": [
+          "Init",
+          "NegativeControls"
+        ]
+      }
+    ],
+    "module_order": [
+      "HistoryModel",
+      "HistoryInvariant",
+      "HistorySafety",
+      "HistoryTrace"
+    ],
+    "positive_roots": [
+      "HistoryModel",
+      "HistoryInvariant",
+      "HistorySafety",
+      "HistoryTrace",
+      "NegativeControls"
+    ],
+    "audit_roots": [
+      "Targets",
+      "MultiEpoch",
+      "ReviewChallenges",
+      "ReservationDomain"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Card.lean",
+        "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+      },
+      {
+        "module": "Mathlib.Tactic",
+        "package": "mathlib",
+        "path": "Mathlib/Tactic.lean",
+        "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "HistoryTrace",
+        "name": "InterlockHistory.finite_history_safety"
+      },
+      {
+        "target_id": "target-2",
+        "module": "HistorySafety",
+        "name": "InterlockHistory.no_landing_after_cancellation"
+      },
+      {
+        "target_id": "target-3",
+        "module": "HistoryTrace",
+        "name": "InterlockHistory.stable_trace_preserves_goal"
+      }
+    ],
+    "package_manifest_source_id": "D04-SRC-be2c9366c9dcd528896a",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "D04-SRC-be2c9366c9dcd528896a"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      }
+    ],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-ff4a65104a70a5c88ccc",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "ac825ff194e83f8ddd50da3a48e0739d320517374e66f19b129c386188c09aa0",
+        "expected_bytes": 654716,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "original",
+        "source_id": "D04-SRC-043fabfe80f159db9406",
+        "recipe": "t07-history-original-v1",
+        "sha256": "c664ea7c1398e81359bd5684b25104caaea1991598e16d3476ce555e405ee06a",
+        "argument_meanings": {
+          "--lean": "LEAN_EXECUTABLE",
+          "--mathlib": "MATHLIB_ROOT",
+          "--output": "FRESH_OUTPUT_DIRECTORY"
+        },
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "original-driver",
+        "kind": "DRIVER",
+        "driver_id": "original",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:original}",
+          "--lean",
+          "{tool:lean}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--output",
+          "{out}/original"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 3600,
+        "output_paths": [
+          "original"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-infrastructure"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryInvariant",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryInvariant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistorySafety",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistorySafety"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-NegativeControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "NegativeControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Targets",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Targets"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-MultiEpoch",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "MultiEpoch"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-revocation_omission_is_safe",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "revocation_omission_is_safe"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-HistoryModel"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-revocation_omission_is_safe"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "tactic 'decide' proved that the proposition",
+            "sha256": "5275116a52ffe8378e2fcb531bf53d276b7b356da2be736c3264748c43f17673"
+          },
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "is false",
+            "sha256": "ed0b47ec1e832ec9536d503a578ff539ddd5c030b598d8056162a2cffa7e67b6"
+          }
+        ]
+      },
+      {
+        "id": "observe-target_only_checks_preserve_permission",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "target_only_checks_preserve_permission"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-HistoryModel"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-target_only_checks_preserve_permission"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "tactic 'decide' proved that the proposition",
+            "sha256": "5275116a52ffe8378e2fcb531bf53d276b7b356da2be736c3264748c43f17673"
+          },
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "is false",
+            "sha256": "ed0b47ec1e832ec9536d503a578ff539ddd5c030b598d8056162a2cffa7e67b6"
+          }
+        ]
+      },
+      {
+        "id": "observe-cancellation_guard_is_redundant",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "cancellation_guard_is_redundant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-HistoryModel"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-cancellation_guard_is_redundant"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "tactic 'decide' proved that the proposition",
+            "sha256": "5275116a52ffe8378e2fcb531bf53d276b7b356da2be736c3264748c43f17673"
+          },
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "is false",
+            "sha256": "ed0b47ec1e832ec9536d503a578ff539ddd5c030b598d8056162a2cffa7e67b6"
+          }
+        ]
+      },
+      {
+        "id": "observe-B_replies_are_enough",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "B_replies_are_enough"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-HistoryModel"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-B_replies_are_enough"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "tactic 'decide' proved that the proposition",
+            "sha256": "5275116a52ffe8378e2fcb531bf53d276b7b356da2be736c3264748c43f17673"
+          },
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "is false",
+            "sha256": "ed0b47ec1e832ec9536d503a578ff539ddd5c030b598d8056162a2cffa7e67b6"
+          }
+        ]
+      },
+      {
+        "id": "observe-mediation_is_redundant",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "mediation_is_redundant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-HistoryModel"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-mediation_is_redundant"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "tactic 'decide' proved that the proposition",
+            "sha256": "5275116a52ffe8378e2fcb531bf53d276b7b356da2be736c3264748c43f17673"
+          },
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "is false",
+            "sha256": "ed0b47ec1e832ec9536d503a578ff539ddd5c030b598d8056162a2cffa7e67b6"
+          }
+        ]
+      },
+      {
+        "id": "observe-approved_label_binds_substituted_bytes",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "approved_label_binds_substituted_bytes"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-HistoryModel"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-approved_label_binds_substituted_bytes"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "tactic 'decide' proved that the proposition",
+            "sha256": "5275116a52ffe8378e2fcb531bf53d276b7b356da2be736c3264748c43f17673"
+          },
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "is false",
+            "sha256": "ed0b47ec1e832ec9536d503a578ff539ddd5c030b598d8056162a2cffa7e67b6"
+          }
+        ]
+      },
+      {
+        "id": "observe-old_action_still_authorized",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "old_action_still_authorized"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-HistoryModel"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-old_action_still_authorized"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "tactic 'decide' proved that the proposition",
+            "sha256": "5275116a52ffe8378e2fcb531bf53d276b7b356da2be736c3264748c43f17673"
+          },
+          {
+            "source_id": "D04-SRC-043fabfe80f159db9406",
+            "literal": "is false",
+            "sha256": "ed0b47ec1e832ec9536d503a578ff539ddd5c030b598d8056162a2cffa7e67b6"
+          }
+        ]
+      },
+      {
+        "id": "observe-source-replay",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "source-replay"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-HistoryModel"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-seven-source-scenarios"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReviewChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReviewChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReservationDomain",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReservationDomain"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "original/build"
+    ]
+  }
+}

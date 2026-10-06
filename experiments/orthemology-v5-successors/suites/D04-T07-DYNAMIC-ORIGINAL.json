@@ -1,0 +1,556 @@
+{
+  "id": "D04-T07-DYNAMIC-ORIGINAL",
+  "family": "t07-dynamic-v2",
+  "result_families": [
+    "t07-dynamic-v2"
+  ],
+  "origin_archive_sha256": "afa343dd341aae7110333a1df7ceebfb3a3e08b6779651a7533ba2fdba263ecc",
+  "source_ids": [
+    "D04-SRC-be439a1ddb7170734631",
+    "D04-SRC-ce7cec85fbd142a92755",
+    "D04-SRC-ef731780105b61ddda8b",
+    "D04-SRC-8d1e909ad12534d1c32e",
+    "D04-SRC-4cd7701a54f0276eb124"
+  ],
+  "review_ids": [
+    "T07-DYNAMIC-V2-REVIEW-1"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D04-SRC-be439a1ddb7170734631",
+      "declaration": "theorem threshold_feasible_iff (n b : Nat) :\n    (∃ q r, ThresholdContract n b q r) ↔ 3 * b + 1 ≤ n := by\n  constructor\n  · rintro ⟨q, r, h⟩\n    exact minimum_roots h\n  · intro h\n    exact ⟨n - b, n - b, general_attainment n b (by omega)⟩",
+      "target_sha256": "54b148d8e888117abeeea7b97cd54c1e40e77ac885bfafe1a1759f5e91a44d4d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D04-SRC-be439a1ddb7170734631",
+      "declaration": "theorem charged_cancellation_blocks (n b : Nat) (l cancelSet c : Nat → Bool)\n    (gateOpen : Nat → Prop)\n    (budget : card n c ≤ b)\n    (enoughAcknowledgers : b < card n cancelSet)\n    (selectedRoots : ∀ i, i < n → cancelSet i = true → l i = true)\n    (durableCancel : ∀ i, i < n → cancelSet i = true → c i = false → ¬gateOpen i) :\n    ¬Lands n l gateOpen := by\n  obtain ⟨i, hi, hcancel, hc⟩ :=\n    honest_on_large_path n b cancelSet c budget enoughAcknowledgers\n  intro lands\n  exact durableCancel i hi hcancel hc (lands i hi (selectedRoots i hi hcancel))",
+      "target_sha256": "aae6c459082d41c7fdc9aad41613bffcbb4a3fcc5e907b563202aba4edb4a60d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D04-SRC-be439a1ddb7170734631",
+      "declaration": "theorem batch_restores (results : List Bool) (state : Plant)\n    (hs : safe state) (someSuccess : true ∈ results) :\n    batch results state = .repaired := by\n  induction results generalizing state with\n  | nil => simp at someSuccess\n  | cons hd tl ih =>\n    cases hd with\n    | false =>\n      have ht : true ∈ tl := by simpa using someSuccess\n      exact ih (trial false state) (trial_safe false state hs) ht\n    | true =>\n      cases state <;> simp_all [safe, batch, trial]\n\n/- Concrete matched counterexample controls.  `decide` proofs are kernel\nchecked computations, not calls to an external solver or a physical emulator. -/",
+      "target_sha256": "90eac9c0a6092afd5c3ca2164ec2d12c28a5906aa04f0b63e36222cab4192d15",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "positive-infrastructure",
+      "source_id": "D04-SRC-be439a1ddb7170734631",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": []
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "COMPONENTS",
+    "files": [
+      {
+        "source_id": "D04-SRC-be439a1ddb7170734631",
+        "path": "DynamicInterlock.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-ce7cec85fbd142a92755",
+        "path": "CoveringCore.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-ef731780105b61ddda8b",
+        "path": "UnknownRootAttribution.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-8d1e909ad12534d1c32e",
+        "path": "review/independent_root_image_checks.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "D04-SRC-4cd7701a54f0276eb124",
+        "path": "review-documents/D04-SRC-4cd7701a54f0276eb124.md",
+        "role": "REVIEW"
+      }
+    ],
+    "modules": [
+      {
+        "name": "DynamicInterlock",
+        "source_id": "D04-SRC-be439a1ddb7170734631",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "CoveringCore",
+        "source_id": "D04-SRC-ce7cec85fbd142a92755",
+        "imports": [
+          "Init",
+          "DynamicInterlock"
+        ]
+      },
+      {
+        "name": "UnknownRootAttribution",
+        "source_id": "D04-SRC-ef731780105b61ddda8b",
+        "imports": [
+          "Init",
+          "CoveringCore"
+        ]
+      }
+    ],
+    "module_order": [
+      "DynamicInterlock",
+      "CoveringCore",
+      "UnknownRootAttribution"
+    ],
+    "positive_roots": [
+      "DynamicInterlock",
+      "CoveringCore",
+      "UnknownRootAttribution"
+    ],
+    "audit_roots": [],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Std",
+        "package": "lean-release",
+        "path": "Std.lean",
+        "sha256": "fc1fcd5ee6968164eeedd0d1fc6f25784355e088adc8aa37c7da2d46777b145d"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "DynamicInterlock",
+        "name": "ChargedInterlock.threshold_feasible_iff"
+      },
+      {
+        "target_id": "target-2",
+        "module": "DynamicInterlock",
+        "name": "ChargedInterlock.charged_cancellation_blocks"
+      },
+      {
+        "target_id": "target-3",
+        "module": "DynamicInterlock",
+        "name": "ChargedInterlock.batch_restores"
+      }
+    ],
+    "package_manifest_source_id": null,
+    "packages": [],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-11c86cfb8c7776a4ae3b",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "afa343dd341aae7110333a1df7ceebfb3a3e08b6779651a7533ba2fdba263ecc",
+        "expected_bytes": 149135,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "base",
+        "source_id": "D04-SRC-afdce92b36a739d564a9",
+        "recipe": "t07-dynamic-base-v1",
+        "sha256": "dff1839363524835ab7fb9061e1278393e18d8fac7eeed820f692e831aef92a4",
+        "argument_meanings": {
+          "--lean": "LEAN_EXECUTABLE",
+          "--output-dir": "FRESH_OUTPUT_DIRECTORY"
+        },
+        "external_input_id": "source-archive"
+      },
+      {
+        "id": "attribution",
+        "source_id": "D04-SRC-a6973e190f44a0560e62",
+        "recipe": "t07-dynamic-attribution-v1",
+        "sha256": "37eee381df086f9c5c13cedd60390af8f8dd50b647bc10f4a5d06a719d1c5451",
+        "argument_meanings": {
+          "--lean": "LEAN_EXECUTABLE",
+          "--output-dir": "FRESH_OUTPUT_DIRECTORY"
+        },
+        "external_input_id": "source-archive"
+      },
+      {
+        "id": "independent-root-image",
+        "source_id": "D04-SRC-8d1e909ad12534d1c32e",
+        "recipe": "t07-dynamic-independent-root-image-v1",
+        "sha256": "648e72d299627c267578358b64bbaa9c227fd44fcb13bf9756a6296bdb58a851",
+        "argument_meanings": {},
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "original-base",
+        "kind": "DRIVER",
+        "driver_id": "base",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:base}",
+          "--lean",
+          "{tool:lean}",
+          "--output-dir",
+          "{out}/base"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 1800,
+        "output_paths": [
+          "base"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "original-attribution",
+        "kind": "DRIVER",
+        "driver_id": "attribution",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:attribution}",
+          "--lean",
+          "{tool:lean}",
+          "--output-dir",
+          "{out}/attribution"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-base"
+        ],
+        "timeout_seconds": 1800,
+        "output_paths": [
+          "attribution"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "independent-root-image",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "independent-root-image",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:independent-root-image}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-attribution"
+        ],
+        "timeout_seconds": 1800,
+        "output_paths": [
+          "independent-root-image/INDEPENDENT_ROOT_IMAGE_RESULTS.json"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-base-finite",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "base",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-base",
+          "finite"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-base"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-base-covering",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "base",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-base",
+          "covering"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-base"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-base-lean_interlock",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "base",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-base",
+          "lean_interlock"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-base"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-infrastructure"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-base-lean_covering",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "base",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-base",
+          "lean_covering"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-base"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-attribution-finite",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "attribution",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-attribution",
+          "finite"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-attribution"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-attribution-core_lean",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "attribution",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-attribution",
+          "core_lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-attribution"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-attribution-cover_lean",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "attribution",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-attribution",
+          "cover_lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-attribution"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-attribution-attribution_lean",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "attribution",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-attribution",
+          "attribution_lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-attribution"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "closure-compile-DynamicInterlock",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/DynamicInterlock.olean",
+          "{project}/DynamicInterlock.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "observe-attribution-attribution_lean"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/DynamicInterlock.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "closure-compile-CoveringCore",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/CoveringCore.olean",
+          "{project}/CoveringCore.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "closure-compile-DynamicInterlock"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/CoveringCore.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "closure-compile-UnknownRootAttribution",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/UnknownRootAttribution.olean",
+          "{project}/UnknownRootAttribution.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "closure-compile-CoveringCore"
+        ],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "build/UnknownRootAttribution.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "build"
+    ]
+  }
+}

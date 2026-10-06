@@ -1,0 +1,2336 @@
+{
+  "id": "D05-T08-COMMON-ORIGINAL",
+  "family": "t08-common-physical",
+  "result_families": [
+    "t08-common-history",
+    "t08-typed-history",
+    "t08-lifecycle-v4",
+    "t08-cancellation-v5",
+    "t08-monotone-clock-v6"
+  ],
+  "origin_archive_sha256": "e7b9f11be186b9e1d57b9ecdcaa4fbc0b066a74a0463cd1d3c0b65800274b2cd",
+  "source_ids": [
+    "D05-SRC-bc13a47d612783d2d5aa",
+    "D05-SRC-f2209ae26d77bb46fee2",
+    "D05-SRC-a708015206e62d62b17e",
+    "D05-SRC-fa53a4af25bc5ca4cdeb",
+    "D05-SRC-a40cab89d78ca9052aad",
+    "D05-SRC-9688680d917d46cbaf61",
+    "D05-SRC-28076274a438279955f3",
+    "D05-SRC-49b86ec98d4987a7dc48",
+    "D05-SRC-0ebd0bf36c33a2531fc1",
+    "D05-SRC-d59e6ac8a423d2ac961f",
+    "D05-SRC-f156651c93f4f1b67016",
+    "D05-SRC-3e5fae48732c778ae657",
+    "D05-SRC-1557c9370c434bccda70",
+    "D05-SRC-4efed4bf7bed429d2faf",
+    "D05-SRC-62ca1a8231e933cd2160",
+    "D05-SRC-54fec503b90aa4249d43",
+    "D05-SRC-8234c343c492a30fce5d",
+    "D05-SRC-e3d89d9f108a269cc04d",
+    "D05-SRC-ba56d77406ceb8f01ca3",
+    "D05-SRC-7e5946e1cd2badb6f963",
+    "D05-SRC-d4ff51afa4e7134fdc87",
+    "D05-SRC-dcc9389027312736cf64",
+    "D05-SRC-db37f9d58e84aada84f6",
+    "D05-SRC-6421ae8f628a95161034",
+    "D05-SRC-8b1e0def3adf113ee3f9",
+    "D05-SRC-6364dca1d6b5b898f7fe",
+    "D05-SRC-180b0530d462c4f3002a",
+    "D05-SRC-6e566df782e401a038a8",
+    "D05-SRC-5281c9b790f01189ec4f",
+    "D05-SRC-d0233a4f9df26ed3dc13",
+    "D05-SRC-529efb6a2e961c573742",
+    "D05-SRC-520501727a2182138982",
+    "D05-SRC-0d9172b9525e78310022",
+    "D05-SRC-7d8b9d447bd827e87dcb",
+    "D05-SRC-1d1b88c7ffbc7ac320f3",
+    "D05-SRC-a86d9f8dabe2c45fde74",
+    "D05-SRC-6be0ee221ea2262a5e55",
+    "D05-SRC-e169861cd37f849503f4",
+    "D05-SRC-238977d8f96163f5797b",
+    "D05-SRC-15c4c0ce1461bf9dc6e3",
+    "D05-SRC-5e371636adb8ac7d25ec",
+    "D05-SRC-c0d01e37c11033c890c0",
+    "D05-SRC-de39d6849bd88fe79704",
+    "D05-SRC-8940092bef72147cb07c",
+    "D05-SRC-395d8720fb36de2e293c",
+    "D05-SRC-61b893653ea9f79c95e4",
+    "D05-SRC-ca1df68e733b4b54cd45",
+    "D05-SRC-e5994b54a5c79f2313bc",
+    "D05-SRC-152114537bb1bd941969",
+    "D05-SRC-191a9809307eef418649",
+    "D05-SRC-5537bf9708412732ac24",
+    "D04-SRC-a85d94dc414a670c7a8f",
+    "D04-SRC-be2c9366c9dcd528896a"
+  ],
+  "review_ids": [
+    "T08-COMMON-HISTORY-REVIEW-1",
+    "T08-TYPED-HISTORY-REVIEW-1",
+    "T08-LIFECYCLE-V4-REVIEW-1",
+    "T08-CANCELLATION-V5-REVIEW-1",
+    "T08-MONOTONE-CLOCK-V6-REVIEW-1"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D05-SRC-4efed4bf7bed429d2faf",
+      "declaration": "theorem trace_iff_lift_exists {n} (c : InterlockHistory.Config n) (s t : InterlockHistory.State n)\n    (events : List (InterlockHistory.Event n)) :\n    InterlockHistory.Trace c s events t ↔\n      ∃ annotated, annotated.map lowerEvent = events ∧\n        Trace (config c) (liftState s) annotated (liftState t) := by\n  constructor\n  · intro trace\n    refine ⟨events.map (liftEvent 0), ?_, lift_trace 0 trace⟩\n    simp [List.map_map, Function.comp_def]\n  · rintro ⟨annotated, eq, trace⟩\n    have old := lower_trace trace\n    simpa [eq] using old",
+      "target_sha256": "24912f0e188cf763663ceac93e7cfe99653fbced8ff2a4df91d652517af8d1ce",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D05-SRC-1557c9370c434bccda70",
+      "declaration": "theorem finite_history_safety {n} {I : Interface n} (c : Config I) (plant : I.Plant)\n    {s : State I} {events : List (Event I)} (trace : Trace c (Initial c plant) events s) :\n    Consistent c s ∧ s.damaged = false ∧ AuthorizedTrace c (Initial c plant) events s := by\n  have init := consistent_initial c plant\n  exact ⟨consistent_trace init trace, trace_safe init rfl trace, trace_writes_authorized init trace⟩",
+      "target_sha256": "b52849092240b863e4f3496d5b26dcdb8e9ff99b5b5bcecf3ace59ccefacb2dc",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D05-SRC-62ca1a8231e933cd2160",
+      "declaration": "theorem successful_attempt_exact_effect {n} {c : Config (interface n)}\n    (w : ComposedExecution.World) (s : State (interface n))\n    (representation : RuntimeRepresents c w s) (reachable : Reachable c s)\n    (safe : s.damaged = false) (e : BoundedEnvelope n) (requester : String) (badOpen : Bool)\n    (applied : (attempt w e.val requester badOpen).2 = true) :\n    (attempt w e.val requester badOpen).1.plant =\n      (land c s w.now e requester).plant ∧\n    (land c s w.now e requester).plant = e.val.successor := by\n  have lands := successful_attempt_lands w s representation e requester badOpen applied\n  have admitted := (admitted_current_authorized (reachable_consistent reachable)\n    w.now e requester lands).2.2\n  have effect : (land c s w.now e requester).plant = e.val.successor := by\n    have noDamage : ¬(s.damaged = true ∨\n        ¬(interface n).admits s.plant w.now (c.source s.epoch) e requester) := by\n      simp only [safe, Bool.false_eq_true, false_or, not_not]\n      exact admitted\n    rw [land, if_neg noDamage]\n    rfl\n  exact ⟨(applied_attempt_exact_successor w e.val requester badOpen applied).trans effect.symm, effect⟩\n\n/-- Arbitrary finite typed histories derive current full-policy admission from\nlocal policy storage and durable certificate history, with no current oracle. -/",
+      "target_sha256": "31a3f06b066994fa688d56a862ed0b8ea94c45c89b3a8b57051b8edd91bf204d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-4",
+      "source_id": "D05-SRC-8234c343c492a30fce5d",
+      "declaration": "theorem finite_history_custody {n} (c : Config (interface n))\n    (original : ComposedExecution.Plant) {s : State (interface n)}\n    {events : List (Event (interface n))}\n    (history : Trace c (Initial c original) events s) : Custody original s.plant := by\n  apply trace_preserves (Custody original) ?_ (consistent_initial c original) rfl ?_ history\n  · intro p time policy e requester admitted custody\n    obtain ⟨source, destination, standard, unrelated⟩ :=\n      local_source_and_custody_frame p policy time e.val.action e.val.successor admitted.2\n    exact ⟨source.trans custody.1, destination.trans custody.2.1,\n      standard.trans custody.2.2.1, unrelated.trans custody.2.2.2⟩\n  · exact ⟨rfl, rfl, rfl, rfl⟩",
+      "target_sha256": "0fee8733f600af22af9100e98772834bbde208817906a64114c913810a16bb80",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-5",
+      "source_id": "D05-SRC-8234c343c492a30fce5d",
+      "declaration": "theorem fixed_action_excluded_after_continuation {n} {c : Config (interface n)}\n    (p : ComposedExecution.Plant) (policy : ComposedExecution.Policy) (time : Nat)\n    (e : BoundedEnvelope n) (accepted : localStep p policy time e.val.action = some e.val.successor)\n    {s t : State (interface n)} {events : List (Event (interface n))}\n    (same : s.plant = e.val.successor) (reachable : Reachable c s)\n    (history : Trace c s events t) (laterPolicy : ComposedExecution.Policy) (laterTime : Nat) :\n    localStep t.plant laterPolicy laterTime e.val.action = none := by\n  have counters := trace_counters (reachable_consistent reachable) (reachable_safe reachable) history\n  cases result : localStep t.plant laterPolicy laterTime e.val.action with\n  | none => rfl\n  | some next =>\n      exfalso\n      cases kind : e.val.action with\n      | install command =>\n          rw [kind] at accepted result\n          have before := local_install_expected_version p policy time command e.val.successor accepted\n          have after := local_install_expected_version t.plant laterPolicy laterTime command next result\n          have full := local_install_full_effect p policy time command e.val.successor accepted\n          rw [same, full] at counters\n          simp only at counters\n          omega\n      | repair command =>\n          rw [kind] at accepted result\n          have before := local_repair_expected_revision p policy time command e.val.successor accepted\n          have after := local_repair_expected_revision t.plant laterPolicy laterTime command next result\n          have full := local_repair_full_effect p policy time command e.val.successor accepted\n          rw [same, full] at counters\n          simp only at counters\n          omega",
+      "target_sha256": "d83bc0e7635848affc0a43cdc21bcb314a7aef289288461dd4844b2ea70774f6",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-6",
+      "source_id": "D05-SRC-d0233a4f9df26ed3dc13",
+      "declaration": "theorem runtime_trace_refines_history {base n} (a : Authority base n)\n    {w v : ComposedExecution.World} {s : State (interface base n)} {events : List (RuntimeEvent n)}\n    (aligned : Aligned a w s) (reachable : Reachable a.config s) (trace : RuntimeTrace a w events v) :\n    ∃ next primitiveEvents, Aligned a v next ∧ Trace a.config s primitiveEvents next := by\n  induction trace generalizing s with\n  | nil => exact ⟨s, [], aligned, Trace.nil s⟩\n  | cons step _ ih =>\n      obtain ⟨middle, first, alignment, history⟩ := runtime_step_refines_history a aligned reachable step\n      obtain ⟨next, rest, last, tail⟩ := ih alignment (reachable_after reachable history)\n      exact ⟨next, first ++ rest, last, trace_append history tail⟩\n\n/-- Every reached actual runtime snapshot has a genuine common history, so a\nsubsequent successful attempt is admitted under its full effective Policy. -/",
+      "target_sha256": "73089314497bae5ffca1a192257e2a8357c151992b4b1da6704943ab4974378e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-7",
+      "source_id": "D05-SRC-d0233a4f9df26ed3dc13",
+      "declaration": "theorem reached_runtime_current_admission {base n} (a : Authority base n)\n    {w v : ComposedExecution.World} {s : State (interface base n)} {events : List (RuntimeEvent n)}\n    (aligned : Aligned a w s) (reachable : Reachable a.config s) (trace : RuntimeTrace a w events v)\n    (e : BoundedEnvelope n) (requester : String) (badOpen : Bool)\n    (applied : (attempt v e.val requester badOpen).2 = true) :\n    e.val.action.epoch = v.effectivePolicy.epoch ∧\n      localStep v.plant v.effectivePolicy v.now e.val.action = some e.val.successor := by\n  obtain ⟨next, _, alignment, history⟩ := runtime_trace_refines_history a aligned reachable trace\n  exact successful_attempt_current_policy a v next alignment (reachable_after reachable history)\n    e requester badOpen applied",
+      "target_sha256": "d05aa2281fbdf4fc46696172c043d8f0ba1ec89e489ddfada8064673d45415e6",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-8",
+      "source_id": "D05-SRC-520501727a2182138982",
+      "declaration": "theorem runtime_full_final_plant : finalWorld.plant = repaired := by\n  exact applied_attempt_exact_successor repairPrepared repairEnvelope.val \"A\" false runtime_repair_lands",
+      "target_sha256": "8f18b3bc963a3e481a415d17bb55dd84d1097f4d170f5289f06e3f7fe159618b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-9",
+      "source_id": "D05-SRC-a86d9f8dabe2c45fde74",
+      "declaration": "theorem true_cancel_implies_certificate {base n} (a : Authority base n)\n    (w : ComposedExecution.World) (s : State (interface base n)) (h : Aligned a w s)\n    (e : BoundedEnvelope n) (requester : String) (acks : List Nat)\n    (valid : validPath w e.val = true) (nodup : acks.Nodup)\n    (selected : ∀ i ∈ acks, i ∈ e.val.path) (closed : (cancelWith w e.val requester acks).2 = true) :\n    let bounded := fun i hi => e.property.2 i (selected i hi)\n    Cancelled a.config (cancelMany a.config e s (cancelResponders w e requester acks bounded)) e := by\n  dsimp only\n  rw [cancelWith_exact w e.val requester acks valid nodup selected] at closed\n  have enough := of_decide_eq_true closed\n  rw [h.budget] at enough\n  let bounded := fun i hi => e.property.2 i (selected i hi)\n  let replies := cancelResponders w e requester acks bounded\n  have distinct : replies.Nodup := cancelResponders_nodup w e requester acks bounded nodup\n  have card : replies.toFinset.card =\n      (acks.filter (fun i => w.tainted i || requester == e.val.action.actor)).length := by\n    rw [List.toFinset_card_of_nodup distinct]\n    exact cancelResponders_length w e requester acks bounded\n  have sub : replies.toFinset ⊆ replies.toFinset ∪ s.cancelAcks e := Finset.subset_union_left\n  have count := Finset.card_le_card sub\n  unfold Cancelled\n  rw [cancelMany_cancelAcks, if_pos rfl]\n  change a.budget < (replies.toFinset ∪ s.cancelAcks e).card\n  omega\n\n/-- The B+1 count also forces this model's authenticated requester field to\nmatch the original actor; bad acknowledgements alone cannot produce true. -/",
+      "target_sha256": "5236ffd8bff85e4325bfc78de1d521bd59af569df7fca032e698c0473975124f",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-10",
+      "source_id": "D05-SRC-6be0ee221ea2262a5e55",
+      "declaration": "theorem true_runtime_cancel_blocks_all_continuations {base n} (a : Authority base n)\n    (w : ComposedExecution.World) (s : State (interface base n)) (aligned : Aligned a w s)\n    (reachable : Reachable a.config s) (e : BoundedEnvelope n) (owner : String) (acks : List Nat)\n    (closed : (cancelWith w e.val owner acks).2 = true)\n    {later : ComposedExecution.World} {events : List (RuntimeWithCancellationEvent n)}\n    (continuation : RuntimeWithCancellationTrace a (cancelWith w e.val owner acks).1 events later)\n    (requester : String) (badOpen : Bool) : (attempt later e.val requester badOpen).2 ≠ true := by\n  obtain ⟨valid, nodup, selected⟩ := true_cancel_outer_guards w e.val owner acks closed\n  obtain ⟨middleAligned, cancellationHistory⟩ :=\n    cancelWith_preserves_alignment a w s aligned e owner acks valid nodup selected\n  have certificate := true_cancel_implies_certificate a w s aligned e owner acks valid nodup selected closed\n  have middleReachable := reachable_after reachable cancellationHistory\n  obtain ⟨next, _, lastAligned, history⟩ :=\n    runtime_cancel_trace_refines_history a middleAligned middleReachable continuation\n  have veto := no_landing_after_cancellation middleReachable history later.now e requester certificate\n  intro applied\n  exact veto (successful_attempt_lands a later next lastAligned (reachable_after middleReachable history)\n    e requester badOpen applied)",
+      "target_sha256": "6f17cbe8e599d35995c55cbf9ee4f6ddb2965052f2eed7f9d6bcfde1d44a55ee",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-11",
+      "source_id": "D05-SRC-238977d8f96163f5797b",
+      "declaration": "theorem expired_localStep_is_none (plant : ComposedExecution.Plant) (policy : ComposedExecution.Policy)\n    (now : Nat) (action : ComposedExecution.Action) (expired : actionLeaseEnd action ≤ now) :\n    localStep plant policy now action = none := by\n  cases result : localStep plant policy now action with\n  | none => rfl\n  | some next => exact False.elim (Nat.not_lt_of_ge expired\n      (localStep_before_lease_end plant policy now action next result))",
+      "target_sha256": "1ca4f6e17c65ea4c6cf476925540dcf7b43b5ba3b811bb3f0cb7d360427b93c4",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-12",
+      "source_id": "D05-SRC-15c4c0ce1461bf9dc6e3",
+      "declaration": "theorem expired_envelope_stays_rejected {base n} (a : Authority base n)\n    {w v : ComposedExecution.World} {s : State (interface base n)}\n    {events : List (MonotoneReferenceEvent n)} (aligned : Aligned a w s)\n    (reachable : Reachable a.config s) (trace : MonotoneReferenceTrace a w events v)\n    (e : BoundedEnvelope n) (requester : String) (badOpen : Bool)\n    (expired : actionLeaseEnd e.val.action ≤ w.now) : (attempt v e.val requester badOpen).2 ≠ true := by\n  obtain ⟨next, _, last, history⟩ := monotone_reference_trace_refines_history a aligned reachable trace\n  apply expired_aligned_attempt_rejected a v next last (reachable_after reachable history) e requester badOpen\n  exact Nat.le_trans expired (monotone_reference_trace_time trace)\n\n/-- The full-envelope cancellation theorem continues to hold across reference\nclock updates, including updates passing the envelope's original lease end. -/",
+      "target_sha256": "b6701444c53a9e2b9d45fc55993eb971fb4bc24a8bfd1bed12c31e279f3211b4",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-13",
+      "source_id": "D05-SRC-15c4c0ce1461bf9dc6e3",
+      "declaration": "theorem true_cancel_blocks_monotone_reference_continuations {base n} (a : Authority base n)\n    (w : ComposedExecution.World) (s : State (interface base n)) (aligned : Aligned a w s)\n    (reachable : Reachable a.config s) (e : BoundedEnvelope n) (owner : String) (acks : List Nat)\n    (closed : (cancelWith w e.val owner acks).2 = true)\n    {later : ComposedExecution.World} {events : List (MonotoneReferenceEvent n)}\n    (continuation : MonotoneReferenceTrace a (cancelWith w e.val owner acks).1 events later)\n    (requester : String) (badOpen : Bool) : (attempt later e.val requester badOpen).2 ≠ true := by\n  obtain ⟨valid, nodup, selected⟩ := true_cancel_outer_guards w e.val owner acks closed\n  obtain ⟨middleAligned, cancellationHistory⟩ :=\n    cancelWith_preserves_alignment a w s aligned e owner acks valid nodup selected\n  have certificate := true_cancel_implies_certificate a w s aligned e owner acks valid nodup selected closed\n  have middleReachable := reachable_after reachable cancellationHistory\n  obtain ⟨next, _, lastAligned, history⟩ :=\n    monotone_reference_trace_refines_history a middleAligned middleReachable continuation\n  have veto := no_landing_after_cancellation middleReachable history later.now e requester certificate\n  intro applied\n  exact veto (successful_attempt_lands a later next lastAligned (reachable_after middleReachable history)\n    e requester badOpen applied)",
+      "target_sha256": "f7b508908016a7caee41d68903cba89b5e6008a62cf45aa2ebac8dd0f6413993",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "counterexample-1",
+      "source_id": "D05-SRC-c0d01e37c11033c890c0",
+      "declaration": "theorem path_set_equality_does_not_collapse_identity (e : ComposedExecution.Envelope) :\n    path (path01 e) = path (path10 e) ∧ path01 e ≠ path10 e := by\n  constructor\n  · ext i\n    simp [path, path01, path10, or_comm]\n  · intro eq\n    have p := congrArg (fun k : BoundedEnvelope 4 => k.val.path) eq\n    have bad : ([0, 1] : List Nat) ≠ [1, 0] := by decide\n    exact bad p\n\n/-- Source specialization really erases time at each event. -/",
+      "target_sha256": "36ff0143f60e158fab66af86b84f8cdd6d0303a92d106d4a83da60814ac9bbd0",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "proved-path_set_equality_does_not_collapse_identity",
+      "source_id": "D05-SRC-c0d01e37c11033c890c0",
+      "target_id": "counterexample-1",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "positive-infrastructure",
+      "source_id": "D05-SRC-bc13a47d612783d2d5aa",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-CoreChallenges",
+      "source_id": "D05-SRC-c0d01e37c11033c890c0",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-TypedV2Challenges",
+      "source_id": "D05-SRC-de39d6849bd88fe79704",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-RuntimeV4Challenges",
+      "source_id": "D05-SRC-8940092bef72147cb07c",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-CancellationV5Challenges",
+      "source_id": "D05-SRC-395d8720fb36de2e293c",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-ReferenceClockV6Challenges",
+      "source_id": "D05-SRC-61b893653ea9f79c95e4",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "D05-SRC-bc13a47d612783d2d5aa",
+        "path": "TypedCriterionGuard.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-f2209ae26d77bb46fee2",
+        "path": "CriterionInstallation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a708015206e62d62b17e",
+        "path": "DynamicInterlock.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-fa53a4af25bc5ca4cdeb",
+        "path": "Composition.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a40cab89d78ca9052aad",
+        "path": "HistoryModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-9688680d917d46cbaf61",
+        "path": "HistoryInvariant.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-28076274a438279955f3",
+        "path": "HistorySafety.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-49b86ec98d4987a7dc48",
+        "path": "HistoryTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-0ebd0bf36c33a2531fc1",
+        "path": "Fixtures.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-d59e6ac8a423d2ac961f",
+        "path": "JoinModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-f156651c93f4f1b67016",
+        "path": "JoinInvariant.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-3e5fae48732c778ae657",
+        "path": "JoinSafety.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-1557c9370c434bccda70",
+        "path": "JoinTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-4efed4bf7bed429d2faf",
+        "path": "OriginalTranslation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-62ca1a8231e933cd2160",
+        "path": "TypedInstantiation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-54fec503b90aa4249d43",
+        "path": "JoinOperations.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-8234c343c492a30fce5d",
+        "path": "TypedHistoryProperties.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-e3d89d9f108a269cc04d",
+        "path": "TypedExamples.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-ba56d77406ceb8f01ca3",
+        "path": "TypedFixtureHelpers.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-7e5946e1cd2badb6f963",
+        "path": "TypedControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-d4ff51afa4e7134fdc87",
+        "path": "EpochOffset.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-dcc9389027312736cf64",
+        "path": "JoinBatches.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-db37f9d58e84aada84f6",
+        "path": "LifecycleModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-6421ae8f628a95161034",
+        "path": "LifecycleCertification.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-8b1e0def3adf113ee3f9",
+        "path": "LifecycleDelivery.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-6364dca1d6b5b898f7fe",
+        "path": "LifecycleAdmission.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-180b0530d462c4f3002a",
+        "path": "JoinPreparation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-6e566df782e401a038a8",
+        "path": "LifecyclePreparation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5281c9b790f01189ec4f",
+        "path": "LifecycleAttempt.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-d0233a4f9df26ed3dc13",
+        "path": "RuntimeTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-529efb6a2e961c573742",
+        "path": "PinnedSource.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-520501727a2182138982",
+        "path": "RuntimeFixture.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-0d9172b9525e78310022",
+        "path": "OffsetHistoryProperties.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-7d8b9d447bd827e87dcb",
+        "path": "RuntimeControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-1d1b88c7ffbc7ac320f3",
+        "path": "JoinCancellation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a86d9f8dabe2c45fde74",
+        "path": "LifecycleCancellation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-6be0ee221ea2262a5e55",
+        "path": "RuntimeCancellationTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-e169861cd37f849503f4",
+        "path": "RuntimeCancellationControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-238977d8f96163f5797b",
+        "path": "ReferenceClock.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-15c4c0ce1461bf9dc6e3",
+        "path": "MonotoneReferenceTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5e371636adb8ac7d25ec",
+        "path": "ReferenceClockControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-c0d01e37c11033c890c0",
+        "path": "CoreChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-de39d6849bd88fe79704",
+        "path": "TypedV2Challenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-8940092bef72147cb07c",
+        "path": "RuntimeV4Challenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-395d8720fb36de2e293c",
+        "path": "CancellationV5Challenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-61b893653ea9f79c95e4",
+        "path": "ReferenceClockV6Challenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-ca1df68e733b4b54cd45",
+        "path": "review-documents/D05-SRC-ca1df68e733b4b54cd45.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D05-SRC-e5994b54a5c79f2313bc",
+        "path": "review-documents/D05-SRC-e5994b54a5c79f2313bc.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D05-SRC-152114537bb1bd941969",
+        "path": "review-documents/D05-SRC-152114537bb1bd941969.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D05-SRC-191a9809307eef418649",
+        "path": "review-documents/D05-SRC-191a9809307eef418649.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D05-SRC-5537bf9708412732ac24",
+        "path": "review-documents/D05-SRC-5537bf9708412732ac24.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D04-SRC-a85d94dc414a670c7a8f",
+        "path": "dependency-lock/mathlib-lake-manifest.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "D04-SRC-be2c9366c9dcd528896a",
+        "path": "dependency-lock/DEPENDENCIES.json",
+        "role": "LOCK"
+      }
+    ],
+    "modules": [
+      {
+        "name": "TypedCriterionGuard",
+        "source_id": "D05-SRC-bc13a47d612783d2d5aa",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "CriterionInstallation",
+        "source_id": "D05-SRC-f2209ae26d77bb46fee2",
+        "imports": [
+          "Init",
+          "TypedCriterionGuard"
+        ]
+      },
+      {
+        "name": "DynamicInterlock",
+        "source_id": "D05-SRC-a708015206e62d62b17e",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "Composition",
+        "source_id": "D05-SRC-fa53a4af25bc5ca4cdeb",
+        "imports": [
+          "Init",
+          "CriterionInstallation",
+          "DynamicInterlock"
+        ]
+      },
+      {
+        "name": "HistoryModel",
+        "source_id": "D05-SRC-a40cab89d78ca9052aad",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ]
+      },
+      {
+        "name": "HistoryInvariant",
+        "source_id": "D05-SRC-9688680d917d46cbaf61",
+        "imports": [
+          "Init",
+          "HistoryModel"
+        ]
+      },
+      {
+        "name": "HistorySafety",
+        "source_id": "D05-SRC-28076274a438279955f3",
+        "imports": [
+          "Init",
+          "HistoryInvariant"
+        ]
+      },
+      {
+        "name": "HistoryTrace",
+        "source_id": "D05-SRC-49b86ec98d4987a7dc48",
+        "imports": [
+          "Init",
+          "HistorySafety"
+        ]
+      },
+      {
+        "name": "Fixtures",
+        "source_id": "D05-SRC-0ebd0bf36c33a2531fc1",
+        "imports": [
+          "Init",
+          "Composition"
+        ]
+      },
+      {
+        "name": "JoinModel",
+        "source_id": "D05-SRC-d59e6ac8a423d2ac961f",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ]
+      },
+      {
+        "name": "JoinInvariant",
+        "source_id": "D05-SRC-f156651c93f4f1b67016",
+        "imports": [
+          "Init",
+          "JoinModel"
+        ]
+      },
+      {
+        "name": "JoinSafety",
+        "source_id": "D05-SRC-3e5fae48732c778ae657",
+        "imports": [
+          "Init",
+          "JoinInvariant"
+        ]
+      },
+      {
+        "name": "JoinTrace",
+        "source_id": "D05-SRC-1557c9370c434bccda70",
+        "imports": [
+          "Init",
+          "JoinSafety"
+        ]
+      },
+      {
+        "name": "OriginalTranslation",
+        "source_id": "D05-SRC-4efed4bf7bed429d2faf",
+        "imports": [
+          "Init",
+          "JoinTrace",
+          "HistoryTrace"
+        ]
+      },
+      {
+        "name": "TypedInstantiation",
+        "source_id": "D05-SRC-62ca1a8231e933cd2160",
+        "imports": [
+          "Init",
+          "JoinTrace",
+          "Composition"
+        ]
+      },
+      {
+        "name": "JoinOperations",
+        "source_id": "D05-SRC-54fec503b90aa4249d43",
+        "imports": [
+          "Init",
+          "JoinTrace"
+        ]
+      },
+      {
+        "name": "TypedHistoryProperties",
+        "source_id": "D05-SRC-8234c343c492a30fce5d",
+        "imports": [
+          "Init",
+          "TypedInstantiation"
+        ]
+      },
+      {
+        "name": "TypedExamples",
+        "source_id": "D05-SRC-e3d89d9f108a269cc04d",
+        "imports": [
+          "Init",
+          "TypedHistoryProperties",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "TypedFixtureHelpers",
+        "source_id": "D05-SRC-ba56d77406ceb8f01ca3",
+        "imports": [
+          "Init",
+          "TypedExamples"
+        ]
+      },
+      {
+        "name": "TypedControls",
+        "source_id": "D05-SRC-7e5946e1cd2badb6f963",
+        "imports": [
+          "Init",
+          "TypedFixtureHelpers",
+          "HistoryModel"
+        ]
+      },
+      {
+        "name": "EpochOffset",
+        "source_id": "D05-SRC-d4ff51afa4e7134fdc87",
+        "imports": [
+          "Init",
+          "TypedHistoryProperties",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "JoinBatches",
+        "source_id": "D05-SRC-dcc9389027312736cf64",
+        "imports": [
+          "Init",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "LifecycleModel",
+        "source_id": "D05-SRC-db37f9d58e84aada84f6",
+        "imports": [
+          "Init",
+          "EpochOffset",
+          "JoinBatches"
+        ]
+      },
+      {
+        "name": "LifecycleCertification",
+        "source_id": "D05-SRC-6421ae8f628a95161034",
+        "imports": [
+          "Init",
+          "LifecycleModel"
+        ]
+      },
+      {
+        "name": "LifecycleDelivery",
+        "source_id": "D05-SRC-8b1e0def3adf113ee3f9",
+        "imports": [
+          "Init",
+          "LifecycleCertification"
+        ]
+      },
+      {
+        "name": "LifecycleAdmission",
+        "source_id": "D05-SRC-6364dca1d6b5b898f7fe",
+        "imports": [
+          "Init",
+          "LifecycleDelivery"
+        ]
+      },
+      {
+        "name": "JoinPreparation",
+        "source_id": "D05-SRC-180b0530d462c4f3002a",
+        "imports": [
+          "Init",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "LifecyclePreparation",
+        "source_id": "D05-SRC-6e566df782e401a038a8",
+        "imports": [
+          "Init",
+          "LifecycleAdmission",
+          "JoinPreparation"
+        ]
+      },
+      {
+        "name": "LifecycleAttempt",
+        "source_id": "D05-SRC-5281c9b790f01189ec4f",
+        "imports": [
+          "Init",
+          "LifecyclePreparation"
+        ]
+      },
+      {
+        "name": "RuntimeTrace",
+        "source_id": "D05-SRC-d0233a4f9df26ed3dc13",
+        "imports": [
+          "Init",
+          "LifecycleAttempt"
+        ]
+      },
+      {
+        "name": "PinnedSource",
+        "source_id": "D05-SRC-529efb6a2e961c573742",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "RuntimeFixture",
+        "source_id": "D05-SRC-520501727a2182138982",
+        "imports": [
+          "Init",
+          "RuntimeTrace",
+          "Fixtures",
+          "PinnedSource"
+        ]
+      },
+      {
+        "name": "OffsetHistoryProperties",
+        "source_id": "D05-SRC-0d9172b9525e78310022",
+        "imports": [
+          "Init",
+          "LifecycleAttempt"
+        ]
+      },
+      {
+        "name": "RuntimeControls",
+        "source_id": "D05-SRC-7d8b9d447bd827e87dcb",
+        "imports": [
+          "Init",
+          "RuntimeFixture",
+          "OffsetHistoryProperties"
+        ]
+      },
+      {
+        "name": "JoinCancellation",
+        "source_id": "D05-SRC-1d1b88c7ffbc7ac320f3",
+        "imports": [
+          "Init",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "LifecycleCancellation",
+        "source_id": "D05-SRC-a86d9f8dabe2c45fde74",
+        "imports": [
+          "Init",
+          "RuntimeTrace",
+          "JoinCancellation"
+        ]
+      },
+      {
+        "name": "RuntimeCancellationTrace",
+        "source_id": "D05-SRC-6be0ee221ea2262a5e55",
+        "imports": [
+          "Init",
+          "LifecycleCancellation"
+        ]
+      },
+      {
+        "name": "RuntimeCancellationControls",
+        "source_id": "D05-SRC-e169861cd37f849503f4",
+        "imports": [
+          "Init",
+          "RuntimeCancellationTrace",
+          "RuntimeControls"
+        ]
+      },
+      {
+        "name": "ReferenceClock",
+        "source_id": "D05-SRC-238977d8f96163f5797b",
+        "imports": [
+          "Init",
+          "RuntimeCancellationTrace"
+        ]
+      },
+      {
+        "name": "MonotoneReferenceTrace",
+        "source_id": "D05-SRC-15c4c0ce1461bf9dc6e3",
+        "imports": [
+          "Init",
+          "ReferenceClock"
+        ]
+      },
+      {
+        "name": "ReferenceClockControls",
+        "source_id": "D05-SRC-5e371636adb8ac7d25ec",
+        "imports": [
+          "Init",
+          "MonotoneReferenceTrace",
+          "RuntimeCancellationControls"
+        ]
+      },
+      {
+        "name": "CoreChallenges",
+        "source_id": "D05-SRC-c0d01e37c11033c890c0",
+        "imports": [
+          "Init",
+          "OriginalTranslation",
+          "TypedInstantiation"
+        ]
+      },
+      {
+        "name": "TypedV2Challenges",
+        "source_id": "D05-SRC-de39d6849bd88fe79704",
+        "imports": [
+          "Init",
+          "TypedControls"
+        ]
+      },
+      {
+        "name": "RuntimeV4Challenges",
+        "source_id": "D05-SRC-8940092bef72147cb07c",
+        "imports": [
+          "Init",
+          "RuntimeControls"
+        ]
+      },
+      {
+        "name": "CancellationV5Challenges",
+        "source_id": "D05-SRC-395d8720fb36de2e293c",
+        "imports": [
+          "Init",
+          "RuntimeCancellationControls"
+        ]
+      },
+      {
+        "name": "ReferenceClockV6Challenges",
+        "source_id": "D05-SRC-61b893653ea9f79c95e4",
+        "imports": [
+          "Init",
+          "ReferenceClockControls"
+        ]
+      }
+    ],
+    "module_order": [
+      "JoinModel",
+      "JoinInvariant",
+      "JoinSafety",
+      "JoinTrace",
+      "HistoryModel",
+      "HistoryInvariant",
+      "HistorySafety",
+      "HistoryTrace",
+      "OriginalTranslation",
+      "TypedCriterionGuard",
+      "CriterionInstallation",
+      "DynamicInterlock",
+      "Composition",
+      "TypedInstantiation",
+      "TypedHistoryProperties",
+      "JoinOperations",
+      "EpochOffset",
+      "JoinBatches",
+      "LifecycleModel",
+      "LifecycleCertification",
+      "LifecycleDelivery",
+      "LifecycleAdmission",
+      "JoinPreparation",
+      "LifecyclePreparation",
+      "LifecycleAttempt",
+      "RuntimeTrace",
+      "Fixtures",
+      "PinnedSource",
+      "RuntimeFixture",
+      "JoinCancellation",
+      "LifecycleCancellation",
+      "RuntimeCancellationTrace",
+      "ReferenceClock",
+      "MonotoneReferenceTrace",
+      "CoreChallenges"
+    ],
+    "positive_roots": [
+      "TypedCriterionGuard",
+      "CriterionInstallation",
+      "DynamicInterlock",
+      "Composition",
+      "HistoryModel",
+      "HistoryInvariant",
+      "HistorySafety",
+      "HistoryTrace",
+      "Fixtures",
+      "JoinModel",
+      "JoinInvariant",
+      "JoinSafety",
+      "JoinTrace",
+      "OriginalTranslation",
+      "TypedInstantiation",
+      "JoinOperations",
+      "TypedHistoryProperties",
+      "TypedExamples",
+      "TypedFixtureHelpers",
+      "TypedControls",
+      "EpochOffset",
+      "JoinBatches",
+      "LifecycleModel",
+      "LifecycleCertification",
+      "LifecycleDelivery",
+      "LifecycleAdmission",
+      "JoinPreparation",
+      "LifecyclePreparation",
+      "LifecycleAttempt",
+      "RuntimeTrace",
+      "PinnedSource",
+      "RuntimeFixture",
+      "OffsetHistoryProperties",
+      "RuntimeControls",
+      "JoinCancellation",
+      "LifecycleCancellation",
+      "RuntimeCancellationTrace",
+      "RuntimeCancellationControls",
+      "ReferenceClock",
+      "MonotoneReferenceTrace",
+      "ReferenceClockControls"
+    ],
+    "audit_roots": [
+      "CoreChallenges",
+      "TypedV2Challenges",
+      "RuntimeV4Challenges",
+      "CancellationV5Challenges",
+      "ReferenceClockV6Challenges"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Card.lean",
+        "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+      },
+      {
+        "module": "Mathlib.Tactic",
+        "package": "mathlib",
+        "path": "Mathlib/Tactic.lean",
+        "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+      },
+      {
+        "module": "Std",
+        "package": "lean-release",
+        "path": "Std.lean",
+        "sha256": "fc1fcd5ee6968164eeedd0d1fc6f25784355e088adc8aa37c7da2d46777b145d"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "OriginalTranslation",
+        "name": "OperationalJoin.OriginalTranslation.trace_iff_lift_exists"
+      },
+      {
+        "target_id": "target-2",
+        "module": "JoinTrace",
+        "name": "OperationalJoin.finite_history_safety"
+      },
+      {
+        "target_id": "target-3",
+        "module": "TypedInstantiation",
+        "name": "OperationalJoin.Typed.successful_attempt_exact_effect"
+      },
+      {
+        "target_id": "target-4",
+        "module": "TypedHistoryProperties",
+        "name": "OperationalJoin.Typed.finite_history_custody"
+      },
+      {
+        "target_id": "target-5",
+        "module": "TypedHistoryProperties",
+        "name": "OperationalJoin.Typed.fixed_action_excluded_after_continuation"
+      },
+      {
+        "target_id": "target-6",
+        "module": "RuntimeTrace",
+        "name": "OperationalJoin.Offset.runtime_trace_refines_history"
+      },
+      {
+        "target_id": "target-7",
+        "module": "RuntimeTrace",
+        "name": "OperationalJoin.Offset.reached_runtime_current_admission"
+      },
+      {
+        "target_id": "target-8",
+        "module": "RuntimeFixture",
+        "name": "OperationalJoin.Offset.NativeFixture.runtime_full_final_plant"
+      },
+      {
+        "target_id": "target-9",
+        "module": "LifecycleCancellation",
+        "name": "OperationalJoin.Offset.true_cancel_implies_certificate"
+      },
+      {
+        "target_id": "target-10",
+        "module": "RuntimeCancellationTrace",
+        "name": "OperationalJoin.Offset.true_runtime_cancel_blocks_all_continuations"
+      },
+      {
+        "target_id": "target-11",
+        "module": "ReferenceClock",
+        "name": "OperationalJoin.Offset.expired_localStep_is_none"
+      },
+      {
+        "target_id": "target-12",
+        "module": "MonotoneReferenceTrace",
+        "name": "OperationalJoin.Offset.expired_envelope_stays_rejected"
+      },
+      {
+        "target_id": "target-13",
+        "module": "MonotoneReferenceTrace",
+        "name": "OperationalJoin.Offset.true_cancel_blocks_monotone_reference_continuations"
+      },
+      {
+        "target_id": "counterexample-1",
+        "module": "CoreChallenges",
+        "name": "CommonModelReview.path_set_equality_does_not_collapse_identity"
+      }
+    ],
+    "package_manifest_source_id": "D04-SRC-be2c9366c9dcd528896a",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "D04-SRC-be2c9366c9dcd528896a"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      }
+    ],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-6e677986f134ccdb7ec1",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "e7b9f11be186b9e1d57b9ecdcaa4fbc0b066a74a0463cd1d3c0b65800274b2cd",
+        "expected_bytes": 609505,
+        "role": "INPUT"
+      },
+      {
+        "id": "common-acceptance-archive",
+        "source_id": "OP-SRC-0857cc1df2697ffaf7be",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "98009848199c50f609821d5140a8465697512fddd6d71fef4e514f156f221d9f",
+        "expected_bytes": 35916,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "original",
+        "source_id": "D05-SRC-9ee7fa37f9e2c0c5b5ba",
+        "recipe": "t08-common-original-v1",
+        "sha256": "6fd7fb6b999e1fbabb6c7e3fccfe242e276cc0269dfbb1937ae8a51d53ceac59",
+        "argument_meanings": {
+          "--lean": "LEAN_EXECUTABLE",
+          "--mathlib": "MATHLIB_ROOT",
+          "--output": "FRESH_OUTPUT_DIRECTORY",
+          "--stage-timeout": "POSITIVE_INTEGER"
+        },
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "t08-common-helper-1",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:operational-helper}",
+          "t08-common-helper-1"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 600,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "t08-common-helper-2",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:operational-helper}",
+          "t08-common-helper-2"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 600,
+        "output_paths": [
+          "wrapper-checks/common-boundary.json"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "original-driver",
+        "kind": "DRIVER",
+        "driver_id": "original",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:original}",
+          "--lean",
+          "{tool:lean}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--output",
+          "{out}/original",
+          "--stage-timeout",
+          "300"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "t08-common-helper-1",
+          "t08-common-helper-2"
+        ],
+        "timeout_seconds": 18000,
+        "output_paths": [
+          "original"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "positive-prerequisite",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedCriterionGuard"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-infrastructure"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-CriterionInstallation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "CriterionInstallation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-DynamicInterlock",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "DynamicInterlock"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryInvariant",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryInvariant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistorySafety",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistorySafety"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinInvariant",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinInvariant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinSafety",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinSafety"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-OriginalTranslation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "OriginalTranslation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedInstantiation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedInstantiation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinOperations",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinOperations"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedHistoryProperties",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedHistoryProperties"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedExamples",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedExamples"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedFixtureHelpers",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedFixtureHelpers"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-EpochOffset",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "EpochOffset"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinBatches",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinBatches"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-LifecycleModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "LifecycleModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-LifecycleCertification",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "LifecycleCertification"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-LifecycleDelivery",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "LifecycleDelivery"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-LifecycleAdmission",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "LifecycleAdmission"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinPreparation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinPreparation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-LifecyclePreparation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "LifecyclePreparation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-LifecycleAttempt",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "LifecycleAttempt"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RuntimeTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RuntimeTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-PinnedSource",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "PinnedSource"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RuntimeFixture",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RuntimeFixture"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-OffsetHistoryProperties",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "OffsetHistoryProperties"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RuntimeControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RuntimeControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinCancellation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinCancellation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-LifecycleCancellation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "LifecycleCancellation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RuntimeCancellationTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RuntimeCancellationTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RuntimeCancellationControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RuntimeCancellationControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReferenceClock",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReferenceClock"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-MonotoneReferenceTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "MonotoneReferenceTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReferenceClockControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReferenceClockControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-CoreChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "CoreChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "proved-path_set_equality_does_not_collapse_identity",
+          "control-CoreChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedV2Challenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedV2Challenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-TypedV2Challenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RuntimeV4Challenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RuntimeV4Challenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-RuntimeV4Challenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-CancellationV5Challenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "CancellationV5Challenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-CancellationV5Challenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReferenceClockV6Challenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReferenceClockV6Challenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-ReferenceClockV6Challenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AllAxioms",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AllAxioms"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "original/build"
+    ]
+  }
+}

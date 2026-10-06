@@ -1,0 +1,2314 @@
+{
+  "id": "D05-T08-SHARED-ORIGINAL",
+  "family": "t08-shared-physical",
+  "result_families": [
+    "t08-shared-obstruction",
+    "t08-shared-typed"
+  ],
+  "origin_archive_sha256": "ebdc889de82056029b16edb65de4af5c5503b0d83f7b49977f6340cac27c950b",
+  "source_ids": [
+    "D05-SRC-4079fed310f051f622b9",
+    "D05-SRC-03c4b5c87fa8014aae3b",
+    "D05-SRC-c0339f7c1148536343f3",
+    "D05-SRC-b923e6e698283c955c4f",
+    "D05-SRC-d14df9e34998d67fe8c0",
+    "D05-SRC-3e7f25775500203ff11f",
+    "D05-SRC-4da1f58684dee6d44ab2",
+    "D05-SRC-fa33db9882f4f91ac799",
+    "D05-SRC-32aa99bc14a270b4ea38",
+    "D05-SRC-49db52e2cc7d18b73055",
+    "D05-SRC-914004b009e3d6a361e8",
+    "D05-SRC-a5c6818588de0440b0de",
+    "D05-SRC-d7bc24e68df56bdb7591",
+    "D05-SRC-7f9ba4723ab21354ab16",
+    "D05-SRC-76198970f54804de0506",
+    "D05-SRC-5aa4876366cbcbdbd21b",
+    "D05-SRC-ea1df1e56db069f81f43",
+    "D05-SRC-a94620e41df7a8f5d600",
+    "D05-SRC-5168358460519d951d54",
+    "D05-SRC-963510d61c7b00f8444e",
+    "D05-SRC-558cece952e8e2857ed5",
+    "D05-SRC-f4d5960cfa5ae622332d",
+    "D05-SRC-be239be3a5c4f761dc21",
+    "D05-SRC-be58544e8f6c25ca62bf",
+    "D05-SRC-d86e5272b128a4b18cd9",
+    "D05-SRC-27dd24e24a44457a3783",
+    "D05-SRC-def1879a6d5c54e09bdf",
+    "D05-SRC-e22bc128cc82c6f320b3",
+    "D05-SRC-9f0783e114c1744b3061",
+    "D05-SRC-fd3d24b90652ac4998ee",
+    "D05-SRC-636521563c2ddb6ac981",
+    "D05-SRC-d44e850fb983f30ead97",
+    "D05-SRC-28dfcc621300fa731486",
+    "D05-SRC-b401001254cb65560fc1",
+    "D05-SRC-c8cb1c505df0ca1ed120",
+    "D05-SRC-7379e519914b3d826f83",
+    "D05-SRC-50e672feef1cb5e0832f",
+    "D05-SRC-f3ed5f3149690d0c4c25",
+    "D05-SRC-71a48567aa1735933e4a",
+    "D05-SRC-339a69e98de974161151",
+    "D05-SRC-7e68a79017fb3fd93351",
+    "D05-SRC-ee9bca891dab83bb402a",
+    "D05-SRC-80f2daa0cf54970dc7a6",
+    "D05-SRC-6ad45acb19d4008f258c",
+    "D05-SRC-d1cdab081798c346b8ed",
+    "D05-SRC-3884c79a6e3ede74c45f",
+    "D05-SRC-7ae33852a3becf2455b4",
+    "D05-SRC-ffbf02a1fa16cfd80b28",
+    "D05-SRC-32e4ba479bdf112c23b3",
+    "D05-SRC-b7cd0789336e4860d7cd",
+    "D05-SRC-771833acbcaaa69fc2ff",
+    "D04-SRC-a85d94dc414a670c7a8f",
+    "D04-SRC-be2c9366c9dcd528896a"
+  ],
+  "review_ids": [
+    "T08-SHARED-OBSTRUCTION-REVIEW-1",
+    "T08-SHARED-OBSTRUCTION-REVIEW-2",
+    "T08-SHARED-TYPED-REVIEW-1",
+    "T08-SHARED-TYPED-REVIEW-2"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D05-SRC-d86e5272b128a4b18cd9",
+      "declaration": "theorem no_reachable_literal_prepare {m} {I : Interface m} (E : Environment I)\n    (C : State I) (i j : Fin m) (k : I.Command)\n    (same : E.rootOf j = E.rootOf i) (good : Good E.labelConfig j)\n    (unselected : j ∉ I.commandPath k) :\n    ¬∃ s : OperationalJoin.State I, OperationalJoin.Reachable E.labelConfig s ∧\n      (k ∈ (s.roots j).commitments ↔\n        k ∈ ((prepare E C i k).roots (E.rootOf j)).commitments) := by\n  rintro ⟨s, reachable, literal⟩\n  exact unselected (selected_memory_reachable reachable j good k\n    (Or.inl (literal.mpr (shared_prepare E C i j k same))))",
+      "target_sha256": "0e3540cee82252dfae0cd2d1631ea5ad316b5743dc25cb4b04e0fe7938580d89",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D05-SRC-fd3d24b90652ac4998ee",
+      "declaration": "theorem trace_simulation {m} {I : Interface m} {E : Environment I}\n    {C D : State I} {s : OperationalJoin.State I} {events : List (Event I)}\n    (h : Refines E C s) (consistent : Consistent E.labelConfig s)\n    (trace : Trace E C events D) :\n    ∃ t expanded, OperationalJoin.Trace E.labelConfig s expanded t ∧\n      Refines E D t ∧ landings expanded = landings events := by\n  induction trace generalizing s with\n  | nil => exact ⟨s, [], .nil _, h, rfl⟩\n  | @cons C D F a events step tail ih =>\n      obtain ⟨middle, firstEvents, first, related, firstLandings⟩ := step_simulation h consistent step\n      obtain ⟨last, laterEvents, rest, lastRelated, restLandings⟩ :=\n        ih related (consistent_trace consistent first)\n      refine ⟨last, firstEvents ++ laterEvents, trace_append first rest, lastRelated, ?_⟩\n      rw [landings_append, firstLandings, restLandings]\n      cases a <;> rfl",
+      "target_sha256": "e23507a171feaa652663b64f6a476bfebaea64f555624b02f4fe6b1849174cd0",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D05-SRC-d44e850fb983f30ead97",
+      "declaration": "theorem finite_history_admission {m} {E : Environment (interface m)}\n    {C : SharedAlias.State (interface m)} (reach : SharedAlias.Reachable E C)\n    (time : Nat) (k : BoundedEnvelope m) (who : String)\n    (admitted : SharedAlias.Lands E C time k who) :\n    who = k.val.action.actor ∧ k.val.action.epoch = C.epoch ∧\n      ComposedExecution.localStep C.plant (E.source C.epoch) time k.val.action = some k.val.successor := by\n  obtain ⟨recipient, epoch, _who, effect⟩ := admitted_current reach time k who admitted\n  exact ⟨recipient, epoch, effect⟩",
+      "target_sha256": "464f00438b447cd40080cbbb735c0a2bdba7aaea5c4b8bef76820a9338979735",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-4",
+      "source_id": "D05-SRC-28dfcc621300fa731486",
+      "declaration": "theorem compiled_attempt_iff {m} (E : Environment (interface m))\n    (C : SharedAlias.State (interface m)) (time : Nat) (k : BoundedEnvelope m) (who : String) :\n    (ComposedExecution.attempt (gateWorld E C time) k.val who true).2 = true ↔\n      SharedAlias.Lands E C time k who := by\n  exact OperationalJoin.Typed.open_attempt_iff_lands (gateWorld E C time) (literalSnapshot E C)\n    (gateWorld_represents E C time) k who",
+      "target_sha256": "4d051f244060f658a3c40959e25d2937d9b281e9f8937c75796655ae75289700",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-5",
+      "source_id": "D05-SRC-b401001254cb65560fc1",
+      "declaration": "theorem cancelled_compiled_attempt_rejected (time : Nat) (badOpen : Bool) :\n    (ComposedExecution.attempt (gateWorld env cancelled time) command.val \"A\" badOpen).2 ≠ true := by\n  intro success\n  have impossible := cancellation_persists cancelled_reachable (SharedAlias.Trace.nil cancelled)\n    command cancellation_certificate time \"A\"\n  exact impossible (compiled_success_lands env cancelled time command \"A\" badOpen success)",
+      "target_sha256": "860fd00e6295b50ab79b218d7780ea21ff05f21088f3a7855ea9e47f17a716e6",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "positive-infrastructure",
+      "source_id": "D05-SRC-4079fed310f051f622b9",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-ReviewerControls",
+      "source_id": "D05-SRC-7379e519914b3d826f83",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-ReviewerSimulationControls",
+      "source_id": "D05-SRC-50e672feef1cb5e0832f",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-ReviewerTypedControls",
+      "source_id": "D05-SRC-f3ed5f3149690d0c4c25",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-ModelTargets",
+      "source_id": "D05-SRC-71a48567aa1735933e4a",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-SimulationTargets",
+      "source_id": "D05-SRC-339a69e98de974161151",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-TypedTargets",
+      "source_id": "D05-SRC-7e68a79017fb3fd93351",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-SuiteAxioms",
+      "source_id": "D05-SRC-ee9bca891dab83bb402a",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "reject-mutant-actual_budget_as_label_budget",
+      "source_id": "D05-SRC-80f2daa0cf54970dc7a6",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "reject-mutant-cancel_wrong_actual_store",
+      "source_id": "D05-SRC-6ad45acb19d4008f258c",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "reject-mutant-drop_selected_commitment_mask",
+      "source_id": "D05-SRC-d1cdab081798c346b8ed",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "reject-mutant-invent_alias_acknowledgements",
+      "source_id": "D05-SRC-3884c79a6e3ede74c45f",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "reject-mutant-reverse_veto_inclusion",
+      "source_id": "D05-SRC-7ae33852a3becf2455b4",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "D05-SRC-4079fed310f051f622b9",
+        "path": "TypedCriterionGuard.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-03c4b5c87fa8014aae3b",
+        "path": "CriterionInstallation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-c0339f7c1148536343f3",
+        "path": "DynamicInterlock.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-b923e6e698283c955c4f",
+        "path": "Composition.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-d14df9e34998d67fe8c0",
+        "path": "HistoryModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-3e7f25775500203ff11f",
+        "path": "HistoryInvariant.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-4da1f58684dee6d44ab2",
+        "path": "HistorySafety.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-fa33db9882f4f91ac799",
+        "path": "HistoryTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-32aa99bc14a270b4ea38",
+        "path": "JoinModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-49db52e2cc7d18b73055",
+        "path": "JoinInvariant.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-914004b009e3d6a361e8",
+        "path": "JoinSafety.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a5c6818588de0440b0de",
+        "path": "JoinTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-d7bc24e68df56bdb7591",
+        "path": "OriginalTranslation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-7f9ba4723ab21354ab16",
+        "path": "TypedInstantiation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-76198970f54804de0506",
+        "path": "JoinOperations.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5aa4876366cbcbdbd21b",
+        "path": "TypedHistoryProperties.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-ea1df1e56db069f81f43",
+        "path": "TypedExamples.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a94620e41df7a8f5d600",
+        "path": "TypedFixtureHelpers.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5168358460519d951d54",
+        "path": "TypedControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-963510d61c7b00f8444e",
+        "path": "RootImage.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-558cece952e8e2857ed5",
+        "path": "Availability.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-f4d5960cfa5ae622332d",
+        "path": "FixedFamilies.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-be239be3a5c4f761dc21",
+        "path": "MapTransport.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-be58544e8f6c25ca62bf",
+        "path": "AliasModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-d86e5272b128a4b18cd9",
+        "path": "AliasObstruction.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-27dd24e24a44457a3783",
+        "path": "ModelControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-def1879a6d5c54e09bdf",
+        "path": "AliasRelation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-e22bc128cc82c6f320b3",
+        "path": "AliasExpansion.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-9f0783e114c1744b3061",
+        "path": "AliasPreservation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-fd3d24b90652ac4998ee",
+        "path": "AliasSimulation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-636521563c2ddb6ac981",
+        "path": "SimulationControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-d44e850fb983f30ead97",
+        "path": "AliasTyped.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-28dfcc621300fa731486",
+        "path": "AliasRuntime.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-b401001254cb65560fc1",
+        "path": "AliasTypedWitness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-c8cb1c505df0ca1ed120",
+        "path": "AliasTypedControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-7379e519914b3d826f83",
+        "path": "ReviewerControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-50e672feef1cb5e0832f",
+        "path": "ReviewerSimulationControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-f3ed5f3149690d0c4c25",
+        "path": "ReviewerTypedControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-71a48567aa1735933e4a",
+        "path": "ModelTargets.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-339a69e98de974161151",
+        "path": "SimulationTargets.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-7e68a79017fb3fd93351",
+        "path": "TypedTargets.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-ee9bca891dab83bb402a",
+        "path": "SuiteAxioms.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-80f2daa0cf54970dc7a6",
+        "path": "negative/mutant_actual_budget_as_label_budget/AliasModel.lean",
+        "role": "NEGATIVE"
+      },
+      {
+        "source_id": "D05-SRC-6ad45acb19d4008f258c",
+        "path": "negative/mutant_cancel_wrong_actual_store/AliasModel.lean",
+        "role": "NEGATIVE"
+      },
+      {
+        "source_id": "D05-SRC-d1cdab081798c346b8ed",
+        "path": "negative/mutant_drop_selected_commitment_mask/AliasRelation.lean",
+        "role": "NEGATIVE"
+      },
+      {
+        "source_id": "D05-SRC-3884c79a6e3ede74c45f",
+        "path": "negative/mutant_invent_alias_acknowledgements/AliasModel.lean",
+        "role": "NEGATIVE"
+      },
+      {
+        "source_id": "D05-SRC-7ae33852a3becf2455b4",
+        "path": "negative/mutant_reverse_veto_inclusion/AliasRelation.lean",
+        "role": "NEGATIVE"
+      },
+      {
+        "source_id": "D05-SRC-ffbf02a1fa16cfd80b28",
+        "path": "review-documents/D05-SRC-ffbf02a1fa16cfd80b28.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D05-SRC-32e4ba479bdf112c23b3",
+        "path": "review-documents/D05-SRC-32e4ba479bdf112c23b3.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D05-SRC-b7cd0789336e4860d7cd",
+        "path": "review-documents/D05-SRC-b7cd0789336e4860d7cd.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D05-SRC-771833acbcaaa69fc2ff",
+        "path": "review-documents/D05-SRC-771833acbcaaa69fc2ff.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D04-SRC-a85d94dc414a670c7a8f",
+        "path": "dependency-lock/mathlib-lake-manifest.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "D04-SRC-be2c9366c9dcd528896a",
+        "path": "dependency-lock/DEPENDENCIES.json",
+        "role": "LOCK"
+      }
+    ],
+    "modules": [
+      {
+        "name": "TypedCriterionGuard",
+        "source_id": "D05-SRC-4079fed310f051f622b9",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "CriterionInstallation",
+        "source_id": "D05-SRC-03c4b5c87fa8014aae3b",
+        "imports": [
+          "Init",
+          "TypedCriterionGuard"
+        ]
+      },
+      {
+        "name": "DynamicInterlock",
+        "source_id": "D05-SRC-c0339f7c1148536343f3",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "Composition",
+        "source_id": "D05-SRC-b923e6e698283c955c4f",
+        "imports": [
+          "Init",
+          "CriterionInstallation",
+          "DynamicInterlock"
+        ]
+      },
+      {
+        "name": "HistoryModel",
+        "source_id": "D05-SRC-d14df9e34998d67fe8c0",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ]
+      },
+      {
+        "name": "HistoryInvariant",
+        "source_id": "D05-SRC-3e7f25775500203ff11f",
+        "imports": [
+          "Init",
+          "HistoryModel"
+        ]
+      },
+      {
+        "name": "HistorySafety",
+        "source_id": "D05-SRC-4da1f58684dee6d44ab2",
+        "imports": [
+          "Init",
+          "HistoryInvariant"
+        ]
+      },
+      {
+        "name": "HistoryTrace",
+        "source_id": "D05-SRC-fa33db9882f4f91ac799",
+        "imports": [
+          "Init",
+          "HistorySafety"
+        ]
+      },
+      {
+        "name": "JoinModel",
+        "source_id": "D05-SRC-32aa99bc14a270b4ea38",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ]
+      },
+      {
+        "name": "JoinInvariant",
+        "source_id": "D05-SRC-49db52e2cc7d18b73055",
+        "imports": [
+          "Init",
+          "JoinModel"
+        ]
+      },
+      {
+        "name": "JoinSafety",
+        "source_id": "D05-SRC-914004b009e3d6a361e8",
+        "imports": [
+          "Init",
+          "JoinInvariant"
+        ]
+      },
+      {
+        "name": "JoinTrace",
+        "source_id": "D05-SRC-a5c6818588de0440b0de",
+        "imports": [
+          "Init",
+          "JoinSafety"
+        ]
+      },
+      {
+        "name": "OriginalTranslation",
+        "source_id": "D05-SRC-d7bc24e68df56bdb7591",
+        "imports": [
+          "Init",
+          "JoinTrace",
+          "HistoryTrace"
+        ]
+      },
+      {
+        "name": "TypedInstantiation",
+        "source_id": "D05-SRC-7f9ba4723ab21354ab16",
+        "imports": [
+          "Init",
+          "JoinTrace",
+          "Composition"
+        ]
+      },
+      {
+        "name": "JoinOperations",
+        "source_id": "D05-SRC-76198970f54804de0506",
+        "imports": [
+          "Init",
+          "JoinTrace"
+        ]
+      },
+      {
+        "name": "TypedHistoryProperties",
+        "source_id": "D05-SRC-5aa4876366cbcbdbd21b",
+        "imports": [
+          "Init",
+          "TypedInstantiation"
+        ]
+      },
+      {
+        "name": "TypedExamples",
+        "source_id": "D05-SRC-ea1df1e56db069f81f43",
+        "imports": [
+          "Init",
+          "TypedHistoryProperties",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "TypedFixtureHelpers",
+        "source_id": "D05-SRC-a94620e41df7a8f5d600",
+        "imports": [
+          "Init",
+          "TypedExamples"
+        ]
+      },
+      {
+        "name": "TypedControls",
+        "source_id": "D05-SRC-5168358460519d951d54",
+        "imports": [
+          "Init",
+          "TypedFixtureHelpers",
+          "HistoryModel"
+        ]
+      },
+      {
+        "name": "RootImage",
+        "source_id": "D05-SRC-963510d61c7b00f8444e",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "Availability",
+        "source_id": "D05-SRC-558cece952e8e2857ed5",
+        "imports": [
+          "Init",
+          "RootImage"
+        ]
+      },
+      {
+        "name": "FixedFamilies",
+        "source_id": "D05-SRC-f4d5960cfa5ae622332d",
+        "imports": [
+          "Init",
+          "Availability"
+        ]
+      },
+      {
+        "name": "MapTransport",
+        "source_id": "D05-SRC-be239be3a5c4f761dc21",
+        "imports": [
+          "Init",
+          "FixedFamilies"
+        ]
+      },
+      {
+        "name": "AliasModel",
+        "source_id": "D05-SRC-be58544e8f6c25ca62bf",
+        "imports": [
+          "Init",
+          "JoinOperations",
+          "MapTransport"
+        ]
+      },
+      {
+        "name": "AliasObstruction",
+        "source_id": "D05-SRC-d86e5272b128a4b18cd9",
+        "imports": [
+          "Init",
+          "AliasModel"
+        ]
+      },
+      {
+        "name": "ModelControls",
+        "source_id": "D05-SRC-27dd24e24a44457a3783",
+        "imports": [
+          "Init",
+          "AliasObstruction"
+        ]
+      },
+      {
+        "name": "AliasRelation",
+        "source_id": "D05-SRC-def1879a6d5c54e09bdf",
+        "imports": [
+          "Init",
+          "AliasModel"
+        ]
+      },
+      {
+        "name": "AliasExpansion",
+        "source_id": "D05-SRC-e22bc128cc82c6f320b3",
+        "imports": [
+          "Init",
+          "AliasRelation"
+        ]
+      },
+      {
+        "name": "AliasPreservation",
+        "source_id": "D05-SRC-9f0783e114c1744b3061",
+        "imports": [
+          "Init",
+          "AliasExpansion"
+        ]
+      },
+      {
+        "name": "AliasSimulation",
+        "source_id": "D05-SRC-fd3d24b90652ac4998ee",
+        "imports": [
+          "Init",
+          "AliasPreservation"
+        ]
+      },
+      {
+        "name": "SimulationControls",
+        "source_id": "D05-SRC-636521563c2ddb6ac981",
+        "imports": [
+          "Init",
+          "AliasSimulation",
+          "ModelControls"
+        ]
+      },
+      {
+        "name": "AliasTyped",
+        "source_id": "D05-SRC-d44e850fb983f30ead97",
+        "imports": [
+          "Init",
+          "AliasSimulation",
+          "TypedHistoryProperties"
+        ]
+      },
+      {
+        "name": "AliasRuntime",
+        "source_id": "D05-SRC-28dfcc621300fa731486",
+        "imports": [
+          "Init",
+          "AliasTyped"
+        ]
+      },
+      {
+        "name": "AliasTypedWitness",
+        "source_id": "D05-SRC-b401001254cb65560fc1",
+        "imports": [
+          "Init",
+          "AliasRuntime",
+          "TypedExamples"
+        ]
+      },
+      {
+        "name": "AliasTypedControls",
+        "source_id": "D05-SRC-c8cb1c505df0ca1ed120",
+        "imports": [
+          "Init",
+          "AliasTypedWitness"
+        ]
+      },
+      {
+        "name": "ReviewerControls",
+        "source_id": "D05-SRC-7379e519914b3d826f83",
+        "imports": [
+          "Init",
+          "ModelControls"
+        ]
+      },
+      {
+        "name": "ReviewerSimulationControls",
+        "source_id": "D05-SRC-50e672feef1cb5e0832f",
+        "imports": [
+          "Init",
+          "SimulationControls"
+        ]
+      },
+      {
+        "name": "ReviewerTypedControls",
+        "source_id": "D05-SRC-f3ed5f3149690d0c4c25",
+        "imports": [
+          "Init",
+          "AliasTypedControls",
+          "AliasObstruction"
+        ]
+      },
+      {
+        "name": "ModelTargets",
+        "source_id": "D05-SRC-71a48567aa1735933e4a",
+        "imports": [
+          "Init",
+          "AliasObstruction"
+        ]
+      },
+      {
+        "name": "SimulationTargets",
+        "source_id": "D05-SRC-339a69e98de974161151",
+        "imports": [
+          "Init",
+          "AliasSimulation"
+        ]
+      },
+      {
+        "name": "TypedTargets",
+        "source_id": "D05-SRC-7e68a79017fb3fd93351",
+        "imports": [
+          "Init",
+          "AliasRuntime"
+        ]
+      },
+      {
+        "name": "SuiteAxioms",
+        "source_id": "D05-SRC-ee9bca891dab83bb402a",
+        "imports": [
+          "Init",
+          "SimulationControls",
+          "AliasTypedControls"
+        ]
+      },
+      {
+        "name": "negative.mutant_actual_budget_as_label_budget.AliasModel",
+        "source_id": "D05-SRC-80f2daa0cf54970dc7a6",
+        "imports": [
+          "Init",
+          "JoinOperations",
+          "MapTransport"
+        ]
+      },
+      {
+        "name": "negative.mutant_cancel_wrong_actual_store.AliasModel",
+        "source_id": "D05-SRC-6ad45acb19d4008f258c",
+        "imports": [
+          "Init",
+          "JoinOperations",
+          "MapTransport"
+        ]
+      },
+      {
+        "name": "negative.mutant_drop_selected_commitment_mask.AliasRelation",
+        "source_id": "D05-SRC-d1cdab081798c346b8ed",
+        "imports": [
+          "Init",
+          "AliasModel"
+        ]
+      },
+      {
+        "name": "negative.mutant_invent_alias_acknowledgements.AliasModel",
+        "source_id": "D05-SRC-3884c79a6e3ede74c45f",
+        "imports": [
+          "Init",
+          "JoinOperations",
+          "MapTransport"
+        ]
+      },
+      {
+        "name": "negative.mutant_reverse_veto_inclusion.AliasRelation",
+        "source_id": "D05-SRC-7ae33852a3becf2455b4",
+        "imports": [
+          "Init",
+          "AliasModel"
+        ]
+      }
+    ],
+    "module_order": [
+      "JoinModel",
+      "JoinInvariant",
+      "JoinSafety",
+      "JoinTrace",
+      "JoinOperations",
+      "RootImage",
+      "Availability",
+      "FixedFamilies",
+      "MapTransport",
+      "AliasModel",
+      "AliasObstruction",
+      "AliasRelation",
+      "AliasExpansion",
+      "AliasPreservation",
+      "AliasSimulation",
+      "TypedCriterionGuard",
+      "CriterionInstallation",
+      "DynamicInterlock",
+      "Composition",
+      "TypedInstantiation",
+      "TypedHistoryProperties",
+      "AliasTyped",
+      "AliasRuntime",
+      "TypedExamples",
+      "AliasTypedWitness"
+    ],
+    "positive_roots": [
+      "TypedCriterionGuard",
+      "CriterionInstallation",
+      "DynamicInterlock",
+      "Composition",
+      "HistoryModel",
+      "HistoryInvariant",
+      "HistorySafety",
+      "HistoryTrace",
+      "JoinModel",
+      "JoinInvariant",
+      "JoinSafety",
+      "JoinTrace",
+      "OriginalTranslation",
+      "TypedInstantiation",
+      "JoinOperations",
+      "TypedHistoryProperties",
+      "TypedExamples",
+      "TypedFixtureHelpers",
+      "TypedControls",
+      "RootImage",
+      "Availability",
+      "FixedFamilies",
+      "MapTransport",
+      "AliasModel",
+      "AliasObstruction",
+      "ModelControls",
+      "AliasRelation",
+      "AliasExpansion",
+      "AliasPreservation",
+      "AliasSimulation",
+      "SimulationControls",
+      "AliasTyped",
+      "AliasRuntime",
+      "AliasTypedWitness",
+      "AliasTypedControls"
+    ],
+    "audit_roots": [
+      "ReviewerControls",
+      "ReviewerSimulationControls",
+      "ReviewerTypedControls",
+      "ModelTargets",
+      "SimulationTargets",
+      "TypedTargets",
+      "SuiteAxioms"
+    ],
+    "negative_roots": [
+      "negative.mutant_actual_budget_as_label_budget.AliasModel",
+      "negative.mutant_cancel_wrong_actual_store.AliasModel",
+      "negative.mutant_drop_selected_commitment_mask.AliasRelation",
+      "negative.mutant_invent_alias_acknowledgements.AliasModel",
+      "negative.mutant_reverse_veto_inclusion.AliasRelation"
+    ],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Card.lean",
+        "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+      },
+      {
+        "module": "Mathlib.Tactic",
+        "package": "mathlib",
+        "path": "Mathlib/Tactic.lean",
+        "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+      },
+      {
+        "module": "Std",
+        "package": "lean-release",
+        "path": "Std.lean",
+        "sha256": "fc1fcd5ee6968164eeedd0d1fc6f25784355e088adc8aa37c7da2d46777b145d"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "AliasObstruction",
+        "name": "SharedAlias.no_reachable_literal_prepare"
+      },
+      {
+        "target_id": "target-2",
+        "module": "AliasSimulation",
+        "name": "SharedAlias.trace_simulation"
+      },
+      {
+        "target_id": "target-3",
+        "module": "AliasTyped",
+        "name": "SharedAlias.Typed.finite_history_admission"
+      },
+      {
+        "target_id": "target-4",
+        "module": "AliasRuntime",
+        "name": "SharedAlias.Typed.compiled_attempt_iff"
+      },
+      {
+        "target_id": "target-5",
+        "module": "AliasTypedWitness",
+        "name": "SharedAlias.Typed.Witness.cancelled_compiled_attempt_rejected"
+      }
+    ],
+    "package_manifest_source_id": "D04-SRC-be2c9366c9dcd528896a",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "D04-SRC-be2c9366c9dcd528896a"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      }
+    ],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      },
+      {
+        "name": "lean-root",
+        "kind": "LEAN",
+        "version": "4.19.0",
+        "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+        "platform": "linux-x86_64",
+        "path_kind": "DISTRIBUTION_ROOT"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-0d32e446ffbe75764603",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "ebdc889de82056029b16edb65de4af5c5503b0d83f7b49977f6340cac27c950b",
+        "expected_bytes": 2441464,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "original",
+        "source_id": "D05-SRC-0c0d243c2660f82e5b01",
+        "recipe": "t08-shared-original-v1",
+        "sha256": "a2980b9bf5e7c835e80ae1f70538a724f06d47ce42d03f56ed01642a7a193c71",
+        "argument_meanings": {
+          "--lean-root": "LEAN_DISTRIBUTION_ROOT",
+          "--mathlib": "MATHLIB_ROOT",
+          "--output": "FRESH_OUTPUT_DIRECTORY",
+          "--stage-timeout": "POSITIVE_INTEGER"
+        },
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "t08-shared-helper-1",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:operational-helper}",
+          "t08-shared-helper-1"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 600,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "original-driver",
+        "kind": "DRIVER",
+        "driver_id": "original",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:original}",
+          "--lean-root",
+          "{tool:lean-root}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--output",
+          "{out}/original",
+          "--stage-timeout",
+          "300"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "t08-shared-helper-1"
+        ],
+        "timeout_seconds": 18000,
+        "output_paths": [
+          "original"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "positive-prerequisite",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedCriterionGuard"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-infrastructure"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compiler_version",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compiler_version"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-CriterionInstallation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "CriterionInstallation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-DynamicInterlock",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "DynamicInterlock"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryInvariant",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryInvariant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistorySafety",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistorySafety"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-HistoryTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "HistoryTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinInvariant",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinInvariant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinSafety",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinSafety"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-OriginalTranslation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "OriginalTranslation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedInstantiation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedInstantiation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-JoinOperations",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "JoinOperations"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedHistoryProperties",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedHistoryProperties"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedExamples",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedExamples"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedFixtureHelpers",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedFixtureHelpers"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RootImage",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RootImage"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Availability",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Availability"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-FixedFamilies",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "FixedFamilies"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-MapTransport",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "MapTransport"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasObstruction",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasObstruction"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ModelControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ModelControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasRelation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasRelation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasExpansion",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasExpansion"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasPreservation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasPreservation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasSimulation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasSimulation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-SimulationControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "SimulationControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasTyped",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasTyped"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasRuntime",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasRuntime"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasTypedWitness",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasTypedWitness"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AliasTypedControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AliasTypedControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReviewerControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReviewerControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-ReviewerControls"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReviewerSimulationControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReviewerSimulationControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-ReviewerSimulationControls"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReviewerTypedControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReviewerTypedControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-ReviewerTypedControls"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ModelTargets",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ModelTargets"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-ModelTargets"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-SimulationTargets",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "SimulationTargets"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-SimulationTargets"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TypedTargets",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TypedTargets"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-TypedTargets"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-SuiteAxioms",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "SuiteAxioms"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-SuiteAxioms"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-actual_budget_as_label_budget",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "mutant-actual_budget_as_label_budget"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "positive-prerequisite"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "reject-mutant-actual_budget_as_label_budget"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D05-SRC-0c0d243c2660f82e5b01",
+            "literal": "error: type mismatch",
+            "sha256": "00ac46b675214a718c5220cb54079d396c87c25a5521830ba7a5baa796b9eab7"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-cancel_wrong_actual_store",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "mutant-cancel_wrong_actual_store"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "positive-prerequisite"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "reject-mutant-cancel_wrong_actual_store"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D05-SRC-0c0d243c2660f82e5b01",
+            "literal": "error: unsolved goals",
+            "sha256": "14060a8a8682ed8c110c83eb4390d94cba07ba00385da1d50cbe149bcd22d3be"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-drop_selected_commitment_mask",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "mutant-drop_selected_commitment_mask"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "positive-prerequisite"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "reject-mutant-drop_selected_commitment_mask"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D05-SRC-0c0d243c2660f82e5b01",
+            "literal": "error: invalid constructor",
+            "sha256": "5041ba5e0296d6f179eff25cb77e57c9e654be6d0a95b8593910c6abdd00573e"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-invent_alias_acknowledgements",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "mutant-invent_alias_acknowledgements"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "positive-prerequisite"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "reject-mutant-invent_alias_acknowledgements"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D05-SRC-0c0d243c2660f82e5b01",
+            "literal": "error: type mismatch",
+            "sha256": "00ac46b675214a718c5220cb54079d396c87c25a5521830ba7a5baa796b9eab7"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-reverse_veto_inclusion",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "mutant-reverse_veto_inclusion"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "positive-prerequisite"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "reject-mutant-reverse_veto_inclusion"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D05-SRC-0c0d243c2660f82e5b01",
+            "literal": "error: application type mismatch",
+            "sha256": "9eeb5974506a449b8cc403d626c34f1a7f027c9948e9db863a512b6f947bfaae"
+          }
+        ]
+      }
+    ],
+    "build_roots": [
+      "original/build"
+    ]
+  }
+}

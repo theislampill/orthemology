@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "id": "SUCCESSOR-WHOLE-DIFF-REVIEW",
+      "result_ids": [],
+      "source_ids": [],
+      "disposition": "PENDING_EXACT_CANDIDATE_REVIEW",
+      "scope": "A separate internal reviewer must inspect the actual assembled candidate diff and relevant source scopes after candidate validation.",
+      "basis": "Per-cell source reviews, independent projection checks and adapter controls are retained with their exact scopes. None is presented as acceptance of the final whole diff. The eventual reviewed head/tree, findings, repairs and disposition are returned in the external PR review handoff.",
+      "limitations": [
+        "Internal model-assisted review is not outside human-specialist validation.",
+        "R00 is the subsequent owner-requested ChatGPT review; R01 is separately authorized owner-controlled merge.",
+        "This record retains the T07–T15 research cutoff. After its validation and closure, the owner-authorized Sixteenth successor is integrated on the same lineage before the one combined PR, which remains unmerged with auto-merge disabled."
+      ]
+    }
+  ]
+}

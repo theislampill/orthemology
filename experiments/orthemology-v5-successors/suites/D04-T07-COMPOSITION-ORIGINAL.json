@@ -1,0 +1,2504 @@
+{
+  "id": "D04-T07-COMPOSITION-ORIGINAL",
+  "family": "t07-composition-physical",
+  "result_families": [
+    "t07-compiled-composition"
+  ],
+  "origin_archive_sha256": "2ae289057d4e414d6ca5e6478369dfa64cfb4f89cdfc10c1d85a6935fb638a08",
+  "source_ids": [
+    "D04-SRC-f616a6516ff27087c06c",
+    "D04-SRC-78a3f3c121de6ea7bf98",
+    "D04-SRC-0fe76523cd1aa96ee6a8",
+    "D04-SRC-769cd2158ce0c700fd5e",
+    "D04-SRC-7356dce4dc7336a47756",
+    "D04-SRC-7a80bd7215cdad20981f",
+    "D04-SRC-a29da50d632c2b88fdbe",
+    "D04-SRC-982d92a3e8a798e38309",
+    "D04-SRC-204aff288ed4a5dee483",
+    "D04-SRC-123358661f8320772783",
+    "D04-SRC-d427825873fd3a9c0465",
+    "D04-SRC-bfdd29ed442dbd6b5feb",
+    "D04-SRC-ecc6a1f37e3987ccc1fd",
+    "D04-SRC-ce3efe1b68328363c7b3",
+    "D04-SRC-617bbffcff7c9894d1b5"
+  ],
+  "review_ids": [
+    "T07-COMPILED-COMPOSITION-REVIEW-1"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "declaration": "theorem landed_refines_effective_policy (w : World) (e : Envelope)\n    (requester : String) (badOpen : Bool)\n    (budget : ChargedInterlock.card w.n w.tainted ≤ w.budget)\n    (large : w.budget < ChargedInterlock.card w.n (fun i => decide (i ∈ e.path)))\n    (noFuturePolicy : ∀ i, i < w.n → w.tainted i = false →\n      (w.roots i).policy.epoch ≤ w.effectivePolicy.epoch)\n    (sameEpochPolicy : ∀ i, i < w.n → w.tainted i = false →\n      (w.roots i).policy.epoch = w.effectivePolicy.epoch → (w.roots i).policy = w.effectivePolicy)\n    (staleCertificate : e.action.epoch < w.effectivePolicy.epoch → ∃ ackSet : Nat → Bool,\n      w.n + w.budget < ChargedInterlock.card w.n (fun i => decide (i ∈ e.path)) +\n        ChargedInterlock.card w.n ackSet ∧\n      (∀ i, i < w.n → ackSet i = true → w.tainted i = false → e.action.epoch ∈ (w.roots i).revoked))\n    (ha : (attempt w e requester badOpen).2 = true) :\n    localStep w.plant w.effectivePolicy w.now e.action = some e.successor := by\n  obtain ⟨i, hi, hc, step⟩ := live_landing_refines_imported_step w e requester badOpen budget large\n    (attempt_applied_implies_lands w e requester badOpen ha)\n  have rootEpoch := local_action_epoch w.plant (w.roots i).policy w.now e.action e.successor step\n  have noFuture := noFuturePolicy i hi hc\n  have current : e.action.epoch = w.effectivePolicy.epoch := by\n    apply Classical.byContradiction\n    intro unequal\n    have stale : e.action.epoch < w.effectivePolicy.epoch := by omega\n    obtain ⟨ackSet, overlap, revoked⟩ := staleCertificate stale\n    exact effective_revocation_excludes_landing w e requester badOpen ackSet budget overlap revoked ha\n  have equalPolicy := sameEpochPolicy i hi hc (rootEpoch.symm.trans current)\n  simpa only [equalPolicy] using step",
+      "target_sha256": "5a8f4984f870dad981756d8b2dbc92ffabd525d19736d6f08d7944c186b2d39d",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "declaration": "theorem successor_cannot_reland_fixed_action (p : Plant) (policy : Policy) (now : Nat)\n    (e : Envelope) (step : localStep p policy now e.action = some e.successor)\n    (later : World) (samePlant : later.plant = e.successor)\n    (requester : String) (badOpen : Bool)\n    (budget : ChargedInterlock.card later.n later.tainted ≤ later.budget)\n    (large : later.budget < ChargedInterlock.card later.n (fun i => decide (i ∈ e.path))) :\n    (attempt later e requester badOpen).2 ≠ true := by\n  intro ha\n  obtain ⟨i, _, _, hs⟩ := live_landing_refines_imported_step later e requester badOpen budget large\n    (attempt_applied_implies_lands later e requester badOpen ha)\n  rw [samePlant] at hs\n  rw [fixed_action_cannot_succeed_twice p policy now e.action e.successor step\n    (later.roots i).policy later.now] at hs\n  cases hs",
+      "target_sha256": "064e1fee3137339b4ffc708bb957f6ca468900a04f0d2af32b67b522ccb760c7",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "declaration": "theorem attempted_goals_persist (w : World) (e : Envelope)\n    (requester : String) (badOpen : Bool) (goals : Goals w.plant)\n    (budget : ChargedInterlock.card w.n w.tainted ≤ w.budget)\n    (large : w.budget < ChargedInterlock.card w.n (fun i => decide (i ∈ e.path))) :\n    Goals (attempt w e requester badOpen).1.plant := by\n  cases ha : (attempt w e requester badOpen).2 with\n  | false =>\n      rw [rejected_attempt_full_identity w e requester badOpen ha]\n      exact goals\n  | true =>\n      rw [applied_attempt_exact_successor w e requester badOpen ha]\n      obtain ⟨i, _, _, hs⟩ := live_landing_refines_imported_step w e requester badOpen budget large\n        (attempt_applied_implies_lands w e requester badOpen ha)\n      exact local_goals_persist w.plant (w.roots i).policy w.now e.action e.successor hs goals\n\n\n/- Distinguish local proof validity from genuinely current policy. Serial,\nauthentic descriptor custody gives uniqueness at an epoch; certified-effective\nreservation supplies the complete old-epoch veto witness. Neither premise is\ninferred from a string or a hash. -/",
+      "target_sha256": "3497dfcd9bfe23da9a74ad5f3feb400828d187ff2db90c476e0f5147b11e75e9",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "positive-native-reference",
+      "source_id": "D04-SRC-78a3f3c121de6ea7bf98",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "runtime-mutant-ignore_compiled_successor",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "runtime-mutant-bypass_installed_rule",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "runtime-mutant-cached_commitments_only",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "runtime-mutant-omit_revocation_memory",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "runtime-mutant-omit_cancellation_memory",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "runtime-mutant-restore_actor_world_clock_oracle",
+      "source_id": "D04-SRC-f616a6516ff27087c06c",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": []
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "D04-SRC-f616a6516ff27087c06c",
+        "path": "Composition.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-78a3f3c121de6ea7bf98",
+        "path": "TestRunner.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-0fe76523cd1aa96ee6a8",
+        "path": "CriterionInstallation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-769cd2158ce0c700fd5e",
+        "path": "DynamicInterlock.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-7356dce4dc7336a47756",
+        "path": "TypedCriterionGuard.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-7a80bd7215cdad20981f",
+        "path": "IndependentTests.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-a29da50d632c2b88fdbe",
+        "path": "ReviewerMonotonicity.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-982d92a3e8a798e38309",
+        "path": "Artifacts.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-204aff288ed4a5dee483",
+        "path": "BatchTests.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-123358661f8320772783",
+        "path": "ClockTests.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-d427825873fd3a9c0465",
+        "path": "DynamicTests.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-bfdd29ed442dbd6b5feb",
+        "path": "Fixtures.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-ecc6a1f37e3987ccc1fd",
+        "path": "LocalTests.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-ce3efe1b68328363c7b3",
+        "path": "RaceTests.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-617bbffcff7c9894d1b5",
+        "path": "review-documents/D04-SRC-617bbffcff7c9894d1b5.md",
+        "role": "REVIEW"
+      }
+    ],
+    "modules": [
+      {
+        "name": "Composition",
+        "source_id": "D04-SRC-f616a6516ff27087c06c",
+        "imports": [
+          "Init",
+          "CriterionInstallation",
+          "DynamicInterlock"
+        ]
+      },
+      {
+        "name": "TestRunner",
+        "source_id": "D04-SRC-78a3f3c121de6ea7bf98",
+        "imports": [
+          "Init",
+          "LocalTests",
+          "DynamicTests",
+          "BatchTests",
+          "RaceTests",
+          "Artifacts",
+          "ClockTests"
+        ]
+      },
+      {
+        "name": "CriterionInstallation",
+        "source_id": "D04-SRC-0fe76523cd1aa96ee6a8",
+        "imports": [
+          "Init",
+          "TypedCriterionGuard"
+        ]
+      },
+      {
+        "name": "DynamicInterlock",
+        "source_id": "D04-SRC-769cd2158ce0c700fd5e",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "TypedCriterionGuard",
+        "source_id": "D04-SRC-7356dce4dc7336a47756",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "IndependentTests",
+        "source_id": "D04-SRC-7a80bd7215cdad20981f",
+        "imports": [
+          "Init",
+          "Fixtures"
+        ]
+      },
+      {
+        "name": "ReviewerMonotonicity",
+        "source_id": "D04-SRC-a29da50d632c2b88fdbe",
+        "imports": [
+          "Init",
+          "Composition"
+        ]
+      },
+      {
+        "name": "Artifacts",
+        "source_id": "D04-SRC-982d92a3e8a798e38309",
+        "imports": [
+          "Init",
+          "Fixtures",
+          "Lean.Data.Json"
+        ]
+      },
+      {
+        "name": "BatchTests",
+        "source_id": "D04-SRC-204aff288ed4a5dee483",
+        "imports": [
+          "Init",
+          "Fixtures"
+        ]
+      },
+      {
+        "name": "ClockTests",
+        "source_id": "D04-SRC-123358661f8320772783",
+        "imports": [
+          "Init",
+          "Fixtures"
+        ]
+      },
+      {
+        "name": "DynamicTests",
+        "source_id": "D04-SRC-d427825873fd3a9c0465",
+        "imports": [
+          "Init",
+          "Fixtures"
+        ]
+      },
+      {
+        "name": "Fixtures",
+        "source_id": "D04-SRC-bfdd29ed442dbd6b5feb",
+        "imports": [
+          "Init",
+          "Composition"
+        ]
+      },
+      {
+        "name": "LocalTests",
+        "source_id": "D04-SRC-ecc6a1f37e3987ccc1fd",
+        "imports": [
+          "Init",
+          "Fixtures"
+        ]
+      },
+      {
+        "name": "RaceTests",
+        "source_id": "D04-SRC-ce3efe1b68328363c7b3",
+        "imports": [
+          "Init",
+          "Fixtures"
+        ]
+      }
+    ],
+    "module_order": [
+      "TypedCriterionGuard",
+      "CriterionInstallation",
+      "DynamicInterlock",
+      "Composition"
+    ],
+    "positive_roots": [
+      "Composition",
+      "CriterionInstallation",
+      "DynamicInterlock",
+      "TypedCriterionGuard"
+    ],
+    "audit_roots": [
+      "IndependentTests",
+      "ReviewerMonotonicity"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [
+      "TestRunner",
+      "Artifacts",
+      "BatchTests",
+      "ClockTests",
+      "DynamicTests",
+      "Fixtures",
+      "LocalTests",
+      "RaceTests"
+    ],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Data.Json",
+        "package": "lean-release",
+        "path": "Lean/Data/Json.lean",
+        "sha256": "9148967fc86a97704b48662830fc4e11d6a602eaacd18cce91ce266a3cb7c130"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Std",
+        "package": "lean-release",
+        "path": "Std.lean",
+        "sha256": "fc1fcd5ee6968164eeedd0d1fc6f25784355e088adc8aa37c7da2d46777b145d"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "Composition",
+        "name": "ComposedExecution.landed_refines_effective_policy"
+      },
+      {
+        "target_id": "target-2",
+        "module": "Composition",
+        "name": "ComposedExecution.successor_cannot_reland_fixed_action"
+      },
+      {
+        "target_id": "target-3",
+        "module": "Composition",
+        "name": "ComposedExecution.attempted_goals_persist"
+      }
+    ],
+    "package_manifest_source_id": null,
+    "packages": [],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      },
+      {
+        "name": "leanc",
+        "kind": "NATIVE_COMPILER",
+        "version": "clang version 15.0.1",
+        "executable_sha256": "39a4d993906671c6b2eec9e75053aff3917fd1d4530706f32a273aa8f283ab41",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-94d9e2f9336134353041",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "2ae289057d4e414d6ca5e6478369dfa64cfb4f89cdfc10c1d85a6935fb638a08",
+        "expected_bytes": 275323,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "projection",
+        "source_id": "D04-SRC-3bae77ba0718f07c65b1",
+        "recipe": "t07-composition-projection-v1",
+        "sha256": "33643c09fee29687c966f944b4fde3d91b480ca6547f2d6cca6cb7044c2eaae0",
+        "argument_meanings": {},
+        "external_input_id": "source-archive"
+      },
+      {
+        "id": "packaging",
+        "source_id": "D04-SRC-8c0b4811aa7ecf1eda95",
+        "recipe": "t07-composition-packaging-translated-v1",
+        "sha256": "ce95f6bb2ab3353ee4360b093700b7ba85c2817d962b5efe16b2408e41e31880",
+        "argument_meanings": {
+          "--output": "FRESH_OUTPUT_DIRECTORY",
+          "--python": "PYTHON_EXECUTABLE"
+        },
+        "external_input_id": "source-archive"
+      },
+      {
+        "id": "original",
+        "source_id": "D04-SRC-f9e8e05658756bb70a45",
+        "recipe": "t07-composition-original-v1",
+        "sha256": "4656b1c925e8e50c0ef8a57906b4037b2c1c2c31a38df3be6915ebd6070d25f3",
+        "argument_meanings": {
+          "--lean": "LEAN_EXECUTABLE",
+          "--output-dir": "FRESH_OUTPUT_DIRECTORY"
+        },
+        "external_input_id": "source-archive"
+      },
+      {
+        "id": "review",
+        "source_id": "D04-SRC-a7439a1e1500dc1054b6",
+        "recipe": "t07-composition-review-translated-v1",
+        "sha256": "877c22d3527b5b43925e01e68c727b1f38ba392d96e1d43b187c6d9ada4777b1",
+        "argument_meanings": {
+          "--output": "FRESH_OUTPUT_DIRECTORY",
+          "--clean-build": "FRESH_ORIGINAL_BUILD",
+          "--lean": "LEAN_EXECUTABLE"
+        },
+        "external_input_id": "source-archive"
+      },
+      {
+        "id": "mutations",
+        "source_id": "D04-SRC-b5db1c03a8f0d1041d5a",
+        "recipe": "t07-composition-serial-mutations-v1",
+        "sha256": "b6b88d0afd88b33f489dfceb6521ccd0a44ca5781cd60e5031f8380433651b50",
+        "argument_meanings": {
+          "--output": "FRESH_OUTPUT_DIRECTORY",
+          "--clean-build": "FRESH_ORIGINAL_BUILD",
+          "--lean": "LEAN_EXECUTABLE"
+        },
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "projection-preflight",
+        "kind": "DRIVER",
+        "driver_id": "projection",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:projection}"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 120,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "packaging-driver",
+        "kind": "DRIVER",
+        "driver_id": "packaging",
+        "argv": [
+          "{builtin:source-recipe}",
+          "t07-composition-packaging-translated-v1",
+          "--output",
+          "{out}/packaging",
+          "--python",
+          "{tool:python}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "projection-preflight"
+        ],
+        "timeout_seconds": 300,
+        "output_paths": [
+          "packaging"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-packaging-unittest",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "packaging",
+        "argv": [
+          "{builtin:observe-child}",
+          "packaging-driver",
+          "packaging-unittest"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "packaging-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "original-driver",
+        "kind": "DRIVER",
+        "driver_id": "original",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:original}",
+          "--lean",
+          "{tool:lean}",
+          "--output-dir",
+          "{out}/original"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "observe-packaging-unittest"
+        ],
+        "timeout_seconds": 3600,
+        "output_paths": [
+          "original"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-toolchain-version",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "toolchain-version"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-TypedCriterionGuard",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-TypedCriterionGuard"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-CriterionInstallation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-CriterionInstallation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-DynamicInterlock",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-DynamicInterlock"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-LocalTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-LocalTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-DynamicTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-DynamicTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-BatchTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-BatchTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-RaceTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-RaceTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-Artifacts",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-Artifacts"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-ClockTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-ClockTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-compile-TestRunner",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "compile-TestRunner"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-native-link",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "native-link"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-native-run",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "native-run"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-native-reference"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-wrapper-tests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "wrapper-tests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "review-driver",
+        "kind": "DRIVER",
+        "driver_id": "review",
+        "argv": [
+          "{builtin:source-recipe}",
+          "t07-composition-review-translated-v1",
+          "--output",
+          "{out}/review",
+          "--clean-build",
+          "{out}/original/build",
+          "--lean",
+          "{tool:lean}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "observe-native-run"
+        ],
+        "timeout_seconds": 1800,
+        "output_paths": [
+          "review"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-independent-compile",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "review",
+        "argv": [
+          "{builtin:observe-child}",
+          "review-driver",
+          "independent-compile"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "review-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-independent-link",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "review",
+        "argv": [
+          "{builtin:observe-child}",
+          "review-driver",
+          "independent-link"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "review-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-independent-native",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "review",
+        "argv": [
+          "{builtin:observe-child}",
+          "review-driver",
+          "independent-native"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "review-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-reviewer-monotonicity",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "review",
+        "argv": [
+          "{builtin:observe-child}",
+          "review-driver",
+          "reviewer-monotonicity"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "review-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "mutations-driver",
+        "kind": "DRIVER",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:source-recipe}",
+          "t07-composition-serial-mutations-v1",
+          "--output",
+          "{out}/mutants",
+          "--clean-build",
+          "{out}/original/build",
+          "--lean",
+          "{tool:lean}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "observe-native-run",
+          "observe-review-reviewer-monotonicity"
+        ],
+        "timeout_seconds": 7200,
+        "output_paths": [
+          "mutants"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-LocalTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-LocalTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-DynamicTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-DynamicTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-BatchTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-BatchTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-RaceTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-RaceTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-Artifacts",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-Artifacts"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-ClockTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-ClockTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-compile-TestRunner",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/compile-TestRunner"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-link",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/link"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-ignore_compiled_successor-runtime",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "ignore_compiled_successor/runtime"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver",
+          "observe-native-run"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "runtime-mutant-ignore_compiled_successor"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-b5db1c03a8f0d1041d5a",
+            "literal": "FAIL landing stores exact Lean successor",
+            "sha256": "13bcc8cdef2244a7b52d01f53c513eaad64e9c363c2f8b9074841e493886f54d"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-LocalTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-LocalTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-DynamicTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-DynamicTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-BatchTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-BatchTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-RaceTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-RaceTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-Artifacts",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-Artifacts"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-ClockTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-ClockTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-compile-TestRunner",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/compile-TestRunner"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-link",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/link"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-bypass_installed_rule-runtime",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "bypass_installed_rule/runtime"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver",
+          "observe-native-run"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "runtime-mutant-bypass_installed_rule"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-b5db1c03a8f0d1041d5a",
+            "literal": "FAIL C1 token cannot impersonate installed exact rule",
+            "sha256": "a7f46b123a9df4888122293b6d453a8b34b2e599b493019cb6fdb5a28acf3b6d"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-LocalTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-LocalTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-DynamicTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-DynamicTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-BatchTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-BatchTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-RaceTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-RaceTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-Artifacts",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-Artifacts"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-ClockTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-ClockTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-compile-TestRunner",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/compile-TestRunner"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-link",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/link"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-cached_commitments_only-runtime",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "cached_commitments_only/runtime"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver",
+          "observe-native-run"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "runtime-mutant-cached_commitments_only"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-b5db1c03a8f0d1041d5a",
+            "literal": "FAIL replay has no second history/version effect",
+            "sha256": "bfba4fea3ae60ec3c8d0c63dac1578be1ea2cc28179d595da3c15e850167d161"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-LocalTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-LocalTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-DynamicTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-DynamicTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-BatchTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-BatchTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-RaceTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-RaceTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-Artifacts",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-Artifacts"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-ClockTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-ClockTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-compile-TestRunner",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/compile-TestRunner"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-link",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/link"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_revocation_memory-runtime",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_revocation_memory/runtime"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver",
+          "observe-native-run"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "runtime-mutant-omit_revocation_memory"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-b5db1c03a8f0d1041d5a",
+            "literal": "FAIL effective revocation blocks stale prepared install",
+            "sha256": "18b13517c9a33d53b43571c62521d9f7cf3fa09855eca530d1694a28d8e937fa"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-LocalTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-LocalTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-DynamicTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-DynamicTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-BatchTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-BatchTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-RaceTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-RaceTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-Artifacts",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-Artifacts"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-ClockTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-ClockTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-compile-TestRunner",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/compile-TestRunner"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-link",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/link"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-omit_cancellation_memory-runtime",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "omit_cancellation_memory/runtime"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver",
+          "observe-native-run"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "runtime-mutant-omit_cancellation_memory"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-b5db1c03a8f0d1041d5a",
+            "literal": "FAIL cancelled command cannot land late",
+            "sha256": "bb8869bcfbf87ec0b3febd6925d445ef4d593d051fd5d73918da3cf1bbcdc21d"
+          }
+        ]
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-LocalTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-LocalTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-DynamicTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-DynamicTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-BatchTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-BatchTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-RaceTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-RaceTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-Artifacts",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-Artifacts"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-ClockTests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-ClockTests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-compile-TestRunner",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/compile-TestRunner"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-link",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/link"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-mutant-restore_actor_world_clock_oracle-runtime",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "mutations-driver",
+          "restore_actor_world_clock_oracle/runtime"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "mutations-driver",
+          "observe-native-run"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "runtime-mutant-restore_actor_world_clock_oracle"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-617bbffcff7c9894d1b5",
+            "literal": "FAIL stale actor time still proposes without a current-time oracle",
+            "sha256": "49da205a8ee34f77d5297a673b406f6680a303c6f906019fe575cab97b34b667"
+          }
+        ]
+      }
+    ],
+    "build_roots": [
+      "review/build",
+      "original/build"
+    ]
+  }
+}

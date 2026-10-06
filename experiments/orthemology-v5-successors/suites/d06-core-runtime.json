@@ -1,0 +1,6829 @@
+{
+  "controls": [
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "D06-02-exact_runtime_mutant_positive_failure-readback-positive",
+      "role": "POSITIVE",
+      "source_id": "s0715-1748b246bd4999d122f7",
+      "target_id": "D06-02-exact_runtime_mutant_positive_failure"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "D06-02-exact_mutated_runtime_claim_false-readback-positive",
+      "role": "POSITIVE",
+      "source_id": "s0715-1748b246bd4999d122f7",
+      "target_id": "D06-02-exact_mutated_runtime_claim_false"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "D06-02-exact_mutated_runtime_claim_false-counterexample-proof",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "source_id": "s0715-c38b7cbba6bdf790649c",
+      "target_id": "D06-02-exact_mutated_runtime_claim_false"
+    }
+  ],
+  "family": "semantic-controls-core-runtime",
+  "id": "d06-core-runtime",
+  "origin_archive_sha256": "bca5b48fbcbb65f032fb5b92f1cb9dec1e3bc3e340f424d0a2c6c2df54530da2",
+  "replay": {
+    "audit_roots": [],
+    "build_roots": [
+      "original/runtime/build"
+    ],
+    "drivers": [
+      {
+        "argument_meanings": {
+          "--lean-bin": "LEAN_BIN_DIRECTORY",
+          "--mathlib": "MATHLIB_ROOT",
+          "--mode": "LITERAL",
+          "--out": "OUTPUT_DIRECTORY"
+        },
+        "external_input_id": "core-archive",
+        "id": "core",
+        "recipe": "t08-semantic-core-runtime-v1",
+        "sha256": "abef8d7017860e73b131c499357654323f0cf5f43ff0154439427ebb8a4e5dcc",
+        "source_id": "s0715-c1891c22e22fcb5b415e"
+      }
+    ],
+    "external_inputs": [
+      {
+        "expected_bytes": 1286198,
+        "expected_sha256": "bca5b48fbcbb65f032fb5b92f1cb9dec1e3bc3e340f424d0a2c6c2df54530da2",
+        "id": "core-archive",
+        "kind": "FILE",
+        "manifest_key": null,
+        "manifest_source_id": null,
+        "role": "INPUT",
+        "source_id": "s0715-441b26e596211f81e97b"
+      }
+    ],
+    "files": [
+      {
+        "path": "runtime/src/GenericFiniteQueryLocality.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c12515de8fe1286763ff"
+      },
+      {
+        "path": "runtime/src/GenericFiniteQueryMeasure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-08fd0652cb06805e2dd1"
+      },
+      {
+        "path": "runtime/src/PolicyRowEvaluator.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7d6e322009b3589d091e"
+      },
+      {
+        "path": "runtime/src/PolicyTranscriptFiber.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0534b6b9e480b8d88406"
+      },
+      {
+        "path": "runtime/src/FeedbackRequests.lean",
+        "role": "PROOF",
+        "source_id": "s0715-15fe800e116a2b8ef576"
+      },
+      {
+        "path": "runtime/src/ProductObservationLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-eaa3e6b04038d344b480"
+      },
+      {
+        "path": "runtime/src/IndependentProductFamilies.lean",
+        "role": "PROOF",
+        "source_id": "s0715-67e6855e6a8066b25173"
+      },
+      {
+        "path": "runtime/src/GenericQueryReference.lean",
+        "role": "PROOF",
+        "source_id": "s0715-49a6c1663e6db331d4a8"
+      },
+      {
+        "path": "runtime/src/PolicyRowLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f99b1705e2300bfb5240"
+      },
+      {
+        "path": "runtime/src/FeedbackFiberProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4fcfa6f7f4bd6ca3efee"
+      },
+      {
+        "path": "runtime/src/PolicyCylinderProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2e863f9fe8c302f731a3"
+      },
+      {
+        "path": "runtime/src/HistoryPathConsistency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d0d477645e4bc8f8f470"
+      },
+      {
+        "path": "runtime/src/PolicyObservedLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8da48315f100a84313df"
+      },
+      {
+        "path": "runtime/src/PolicyTraceBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b1b33c3fa3d092eb7739"
+      },
+      {
+        "path": "runtime/src/StackActionLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6d672b25f198422b2f08"
+      },
+      {
+        "path": "runtime/src/RecurrentSupport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4df2c39facda8c2b1f4d"
+      },
+      {
+        "path": "runtime/src/RawTapeRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6c9dec618d619af853db"
+      },
+      {
+        "path": "runtime/src/SequentialTapeConsumption.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8ecf1285a65d98f2bca6"
+      },
+      {
+        "path": "runtime/src/PruningKernel.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9b1936d3ab51a8e82dd0"
+      },
+      {
+        "path": "runtime/src/EndComponents.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1fbfc6b0cb415742eb9b"
+      },
+      {
+        "path": "runtime/src/RecurrentGraph.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d2fb82fddd033bd6f1d0"
+      },
+      {
+        "path": "runtime/src/KilledQueryLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-491eb82fac6d5602d610"
+      },
+      {
+        "path": "runtime/src/KilledAdaptiveHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-21f5bea1282104655b11"
+      },
+      {
+        "path": "runtime/src/KilledRecurrentTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b6435293c3c2a888ded1"
+      },
+      {
+        "path": "runtime/src/FiniteReachability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-19da27ece4c7e0e2d5ef"
+      },
+      {
+        "path": "runtime/src/ExecutablePruning.lean",
+        "role": "PROOF",
+        "source_id": "s0715-475bad8d267c4da15b22"
+      },
+      {
+        "path": "runtime/src/MarkovSupportAdapter.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9baf4b40352bc4a6d8c6"
+      },
+      {
+        "path": "runtime/src/MarkovKilledBridge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d69f0f000b13d0581841"
+      },
+      {
+        "path": "runtime/src/AdaptiveMarkovRecurrentGraph.lean",
+        "role": "PROOF",
+        "source_id": "s0715-884d968849308ea8312d"
+      },
+      {
+        "path": "runtime/src/RoundRobinSchedule.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0d5a581f9427acc3eb2f"
+      },
+      {
+        "path": "runtime/src/PolicyTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d9459689b27c975f6a3f"
+      },
+      {
+        "path": "runtime/src/RelativeTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bc9a626603204fd03cba"
+      },
+      {
+        "path": "runtime/src/SafeSetTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d4f3d5fae5dabc343005"
+      },
+      {
+        "path": "runtime/src/SelfVerifyingSupport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3486a71106f355757cb4"
+      },
+      {
+        "path": "runtime/src/SeededPolicyNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9d72c5622c5f7379bc65"
+      },
+      {
+        "path": "runtime/src/FiniteChainAvoidance.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bf7af1fd3fa9b648ae01"
+      },
+      {
+        "path": "runtime/src/dependencies/StatisticalRepair.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6c2b04f71a2120255362"
+      },
+      {
+        "path": "runtime/src/HellingerTree.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f3591e2a1967612c1a47"
+      },
+      {
+        "path": "runtime/src/SubprobHellinger.lean",
+        "role": "PROOF",
+        "source_id": "s0715-79becc64e535b30c3975"
+      },
+      {
+        "path": "runtime/src/DependentHellinger.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4fcf7023c58cbbab3e55"
+      },
+      {
+        "path": "runtime/src/ResetBudget.lean",
+        "role": "PROOF",
+        "source_id": "s0715-faa5f5cc4cd2f43687da"
+      },
+      {
+        "path": "runtime/src/ResetLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d347dbe63c8982112e87"
+      },
+      {
+        "path": "runtime/src/ResetTrajectory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a6aa353104e6fb1d6daa"
+      },
+      {
+        "path": "runtime/src/MarkovCharge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-dbcdcdd3b7b89078f102"
+      },
+      {
+        "path": "runtime/src/FiniteChainTrajectory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7f8a766f682784209c70"
+      },
+      {
+        "path": "runtime/src/InfiniteRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0b5754aa9ff57b00c651"
+      },
+      {
+        "path": "runtime/src/StationaryPairChain.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8b66e1aeb699b7934554"
+      },
+      {
+        "path": "runtime/src/FairComponentParity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-80bc9f18875450c1f26b"
+      },
+      {
+        "path": "runtime/src/CheckedTargetOperation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f7d699fd92280e6e4847"
+      },
+      {
+        "path": "runtime/src/StableSupportParityNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4cd2f75420d833de0a66"
+      },
+      {
+        "path": "runtime/src/StageTargetOrExit.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8e25fc25a153503a5c89"
+      },
+      {
+        "path": "runtime/src/ResidualSeedPosterior.lean",
+        "role": "PROOF",
+        "source_id": "s0715-40c573271495c7604d9a"
+      },
+      {
+        "path": "runtime/src/ConditionalPrefix.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fcd39d0c7d3a9bce44c7"
+      },
+      {
+        "path": "runtime/src/ConditionalContinuationLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3de7752f25787da36c6b"
+      },
+      {
+        "path": "runtime/src/PosteriorFeedbackProduct.lean",
+        "role": "PROOF",
+        "source_id": "s0715-cab1ad759b4f50f4dc9c"
+      },
+      {
+        "path": "runtime/src/MarkovSeedPosterior.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8e902060fa1e83a05e9c"
+      },
+      {
+        "path": "runtime/src/ConditionalKilledContinuation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8a8273d659e2e28fe564"
+      },
+      {
+        "path": "runtime/src/LawfulRestart.lean",
+        "role": "PROOF",
+        "source_id": "s0715-82bd32faf098ac69c8b6"
+      },
+      {
+        "path": "runtime/src/LawfulProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b01d7d24896108245ae8"
+      },
+      {
+        "path": "runtime/src/ParityTailInvariance.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e8a9fe585fd1feeb8684"
+      },
+      {
+        "path": "runtime/src/ConditionalAlmostSure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7cc04f80b3a3c8b70805"
+      },
+      {
+        "path": "runtime/src/SemanticWinning.lean",
+        "role": "PROOF",
+        "source_id": "s0715-445043856774ecbe72a2"
+      },
+      {
+        "path": "runtime/src/SemanticSafeActions.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e665b80bc5c9d400edda"
+      },
+      {
+        "path": "runtime/src/HistoryStageSafety.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0e3a4255f94f0b97127a"
+      },
+      {
+        "path": "runtime/src/RoundRobinPolicy.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2b98cf6a04704683a696"
+      },
+      {
+        "path": "runtime/src/RoundRobinRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d499f256494d06a16c86"
+      },
+      {
+        "path": "runtime/src/RegionAlgorithm.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e831f07f134f64bef530"
+      },
+      {
+        "path": "runtime/src/GlobalParityNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-22c9bddffbbda032f4bc"
+      },
+      {
+        "path": "runtime/src/ActualTargetPolicy.lean",
+        "role": "PROOF",
+        "source_id": "s0715-668d23831fe19a15bcef"
+      },
+      {
+        "path": "runtime/src/StageAvailability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9b7e26714e3bc7f016f1"
+      },
+      {
+        "path": "runtime/src/FairStageNavigation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-474c33f620d82fcf2d20"
+      },
+      {
+        "path": "runtime/src/EventualCycling.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e4bf792884e6546168b7"
+      },
+      {
+        "path": "runtime/src/ObservedPhaseController.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b990640ad378d18f28e4"
+      },
+      {
+        "path": "runtime/src/CodecVarint.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f825ea69fd043890f970"
+      },
+      {
+        "path": "runtime/src/P02A2/ObserverCore.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6e741f7d04185e7c107c"
+      },
+      {
+        "path": "runtime/src/CodecExpr.lean",
+        "role": "PROOF",
+        "source_id": "s0715-15ab457a5f9158384108"
+      },
+      {
+        "path": "runtime/src/CodecStmt.lean",
+        "role": "PROOF",
+        "source_id": "s0715-492dadacd48cb0705a40"
+      },
+      {
+        "path": "runtime/src/CodecNumeric.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6322a3039b3e519b9efb"
+      },
+      {
+        "path": "runtime/src/LoopRenaming.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fd256d33bd7ac85336ea"
+      },
+      {
+        "path": "runtime/src/LoopPrimrec.lean",
+        "role": "PROOF",
+        "source_id": "s0715-776a3e4c90ec8970f9a4"
+      },
+      {
+        "path": "runtime/src/PRProgram.lean",
+        "role": "PROOF",
+        "source_id": "s0715-cf18c8dbb73e71551aab"
+      },
+      {
+        "path": "runtime/src/PRComposition.lean",
+        "role": "PROOF",
+        "source_id": "s0715-caa593d23be7fe6f2499"
+      },
+      {
+        "path": "runtime/src/PRRecursion.lean",
+        "role": "PROOF",
+        "source_id": "s0715-38a62b72eeaa81967fe4"
+      },
+      {
+        "path": "runtime/src/PRHeadRecursion.lean",
+        "role": "PROOF",
+        "source_id": "s0715-30dcd68a150b0cfc6397"
+      },
+      {
+        "path": "runtime/src/PRDerivation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4ec1cb2530ad7af038b7"
+      },
+      {
+        "path": "runtime/src/PRCoverage.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7ded6d92d835a7585c08"
+      },
+      {
+        "path": "runtime/src/PRSpecialize.lean",
+        "role": "PROOF",
+        "source_id": "s0715-5cd26153cc48e8f0b875"
+      },
+      {
+        "path": "runtime/src/CodecProgram.lean",
+        "role": "PROOF",
+        "source_id": "s0715-52500b84343255ff0fd9"
+      },
+      {
+        "path": "runtime/src/PhaseAdvanceSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e8474c50ccf0bb8b3b32"
+      },
+      {
+        "path": "runtime/src/FiniteSelectorSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d05ff0e5e182d0435b20"
+      },
+      {
+        "path": "runtime/src/SelectorCertificateConstruction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f7785004eedbf61aba88"
+      },
+      {
+        "path": "runtime/src/PERRefinement.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6eec1658c5d68ee7d16b"
+      },
+      {
+        "path": "runtime/src/MealyRefinement.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f38b2e8e8660e4392266"
+      },
+      {
+        "path": "runtime/src/BlockMismatch.lean",
+        "role": "PROOF",
+        "source_id": "s0715-5a168c48e918e4ccbacd"
+      },
+      {
+        "path": "runtime/src/P02A2/MeasureCore.lean",
+        "role": "PROOF",
+        "source_id": "s0715-63a0ad78be3cc33bd792"
+      },
+      {
+        "path": "runtime/src/Q8Measure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3b261fbf5d5218198594"
+      },
+      {
+        "path": "runtime/src/MealyMeasure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7bd69b0f499c881b9f72"
+      },
+      {
+        "path": "runtime/src/MealyHitting.lean",
+        "role": "PROOF",
+        "source_id": "s0715-db2d04b585dc77348af0"
+      },
+      {
+        "path": "runtime/src/MealyRational.lean",
+        "role": "PROOF",
+        "source_id": "s0715-45118b9e7696ed5b2d35"
+      },
+      {
+        "path": "runtime/src/MealySolver.lean",
+        "role": "PROOF",
+        "source_id": "s0715-58af40c0a045a0125444"
+      },
+      {
+        "path": "runtime/src/TotalVariation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-72e58f1ff77d2b546417"
+      },
+      {
+        "path": "runtime/src/ObserverAbstraction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a00d2364db191e8e9b89"
+      },
+      {
+        "path": "runtime/src/GuardedObserver.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8031c1761a0b45f9af82"
+      },
+      {
+        "path": "runtime/src/CodecPrimrec.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ba9269d5e6055f62df71"
+      },
+      {
+        "path": "runtime/src/UniformComputabilityNumeric.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f8538ef3a24a57c221ad"
+      },
+      {
+        "path": "runtime/src/UniformComputabilityMachine.lean",
+        "role": "PROOF",
+        "source_id": "s0715-45a5243134e9c5594983"
+      },
+      {
+        "path": "runtime/src/Q8Machine.lean",
+        "role": "PROOF",
+        "source_id": "s0715-29f82145549eefcde960"
+      },
+      {
+        "path": "runtime/src/Q8Compiler.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9063b0e0af759207d9a7"
+      },
+      {
+        "path": "runtime/src/IndexedObserver.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ab2549d18b77d758c050"
+      },
+      {
+        "path": "runtime/src/MealyAtoms.lean",
+        "role": "PROOF",
+        "source_id": "s0715-35a76d326fe595c8dfe9"
+      },
+      {
+        "path": "runtime/src/MealyMeasureFixtures.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1dd8f58564df50d83d0c"
+      },
+      {
+        "path": "runtime/src/Q8ObserverAbstraction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8aed800ed86f9da14c3c"
+      },
+      {
+        "path": "runtime/src/ParsedObserverAbstraction.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8224f431cbcccac8c487"
+      },
+      {
+        "path": "runtime/src/UniformRuntimeTrace.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bcb5223633a607dfd2db"
+      },
+      {
+        "path": "runtime/src/IndexedRuntime.lean",
+        "role": "PROOF",
+        "source_id": "s0715-5ae94389ea29e6e1461b"
+      },
+      {
+        "path": "runtime/src/FiniteMealyCompiler.lean",
+        "role": "PROOF",
+        "source_id": "s0715-657518786e2c79f53bd8"
+      },
+      {
+        "path": "runtime/src/NaturalStateCompiler.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6306c669a9b3b92eeecc"
+      },
+      {
+        "path": "runtime/src/HistoryPolicyRuntime.lean",
+        "role": "PROOF",
+        "source_id": "s0715-666ea948b2ce5a09d3e3"
+      },
+      {
+        "path": "runtime/src/RawEmpiricalRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-477a8af41c893eb37ad8"
+      },
+      {
+        "path": "runtime/src/EmpiricalTailBounds.lean",
+        "role": "PROOF",
+        "source_id": "s0715-aaa403197adcf1b77113"
+      },
+      {
+        "path": "runtime/src/ObservedEmpiricalRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6e56c88d8eec50730704"
+      },
+      {
+        "path": "runtime/src/ObservedRowTest.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c5c14be5b4bf86dadf03"
+      },
+      {
+        "path": "runtime/src/RationalEmpiricalGate.lean",
+        "role": "PROOF",
+        "source_id": "s0715-08d24ccae59ba8433230"
+      },
+      {
+        "path": "runtime/src/GeneratedPolicySafety.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d05ab24857f36f70efeb"
+      },
+      {
+        "path": "runtime/src/StackPathRegularity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9ff088f648943a502116"
+      },
+      {
+        "path": "runtime/src/GeneratedRun.lean",
+        "role": "PROOF",
+        "source_id": "s0715-effab451a653ed1f1164"
+      },
+      {
+        "path": "runtime/src/MemoryTransitions.lean",
+        "role": "PROOF",
+        "source_id": "s0715-26b44a1ad0b42bf7413a"
+      },
+      {
+        "path": "runtime/src/GeneratedPhaseDynamics.lean",
+        "role": "PROOF",
+        "source_id": "s0715-504305c876bf855cdfb8"
+      },
+      {
+        "path": "runtime/src/EmpiricalTestLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-85fc0a181d26a94d0aca"
+      },
+      {
+        "path": "runtime/src/PhaseStabilization.lean",
+        "role": "PROOF",
+        "source_id": "s0715-179a29b309f46405321b"
+      },
+      {
+        "path": "runtime/src/GeneratedPhaseStability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bb51fccd03e4a80456c4"
+      },
+      {
+        "path": "runtime/src/GeneratedParitySuccess.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9f548c7aeb9c3fe8e8b3"
+      },
+      {
+        "path": "runtime/src/GlobalParitySufficiency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c4ff0a3d24098255771b"
+      },
+      {
+        "path": "runtime/src/SingletonControllerSpecialization.lean",
+        "role": "PROOF",
+        "source_id": "s0715-473d323e8085afffc08c"
+      },
+      {
+        "path": "runtime/src/AcceptedFixtureController.lean",
+        "role": "PROOF",
+        "source_id": "s0715-dcb32b2567242b064165"
+      },
+      {
+        "path": "runtime/src/EncodedPolicyHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6ffdfe286275af5c94d0"
+      },
+      {
+        "path": "runtime/src/SupportUpdateSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d86654d36080f22c6f8c"
+      },
+      {
+        "path": "runtime/src/StatisticUpdateSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-30d7187e05b4ffaa38bb"
+      },
+      {
+        "path": "runtime/src/EmpiricalGateSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7f18a3f06ab6e4fa7cc8"
+      },
+      {
+        "path": "runtime/src/CompleteEmpiricalSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ede8a21ed8da76a4d04b"
+      },
+      {
+        "path": "runtime/src/PhaseSourceFixtures.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a63b820d20615ee6454c"
+      },
+      {
+        "path": "runtime/src/CallableSourceRuntime.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fbe0726a77ed8b635516"
+      },
+      {
+        "path": "runtime/src/EncodedHistoryFoldSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9c6798aae9ea7ce31d89"
+      },
+      {
+        "path": "runtime/src/ParallelHistorySource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e0d71b044675e144abe6"
+      },
+      {
+        "path": "runtime/src/FullControllerSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e9c633af0e8f3269cb00"
+      },
+      {
+        "path": "runtime/src/ObservationChannels.lean",
+        "role": "PROOF",
+        "source_id": "s0715-93ec1c0d05173ef4f678"
+      },
+      {
+        "path": "runtime/src/FourBitFraming.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c32f1c622f548ab2f889"
+      },
+      {
+        "path": "runtime/src/HistoryRuntimeFraming.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8f5d8b28ac351462f4c0"
+      },
+      {
+        "path": "runtime/src/HistorySamplingSemantics.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a9d2d552d672cb024d30"
+      },
+      {
+        "path": "runtime/src/FullControllerRuntime.lean",
+        "role": "PROOF",
+        "source_id": "s0715-686a4f875bc55706da5f"
+      },
+      {
+        "path": "runtime/src/FairBlockConstraints.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4d417ddcd5a94e778881"
+      },
+      {
+        "path": "runtime/src/RationalRejectionLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-47d9f96c45bcfe1b1d79"
+      },
+      {
+        "path": "runtime/src/AdaptiveRationalCylinders.lean",
+        "role": "PROOF",
+        "source_id": "s0715-aca7b4ea2ab6004854e0"
+      },
+      {
+        "path": "runtime/src/LiteralSamplerExecution.lean",
+        "role": "PROOF",
+        "source_id": "s0715-accda060b79557733999"
+      },
+      {
+        "path": "runtime/src/FairBitSubsequence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7544519d2038c0ab3298"
+      },
+      {
+        "path": "runtime/src/RuntimeRationalBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-27de94e4d0f09d7d63f5"
+      },
+      {
+        "path": "runtime/src/ReceiptPathDecoder.lean",
+        "role": "PROOF",
+        "source_id": "s0715-babbe99e5887a2df087c"
+      },
+      {
+        "path": "runtime/src/RuntimeReceiptPath.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ecfdc5162bca720de79b"
+      },
+      {
+        "path": "runtime/src/FullControllerReceiptLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0b9afb1052f420eb3e9c"
+      },
+      {
+        "path": "runtime/src/RationalGateSufficiency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2958c936c85bda6c6518"
+      },
+      {
+        "path": "runtime/src/ComputedToleranceSource.lean",
+        "role": "PROOF",
+        "source_id": "s0715-75e8f7b701f3c6926a29"
+      },
+      {
+        "path": "runtime/src/CanonicalHistoryBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2eadecdccfb31214bcf7"
+      },
+      {
+        "path": "runtime/src/FullControllerCanonicalLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-117a05b98f335df42fc1"
+      },
+      {
+        "path": "runtime/src/NontrivialFixture.lean",
+        "role": "PROOF",
+        "source_id": "s0715-69097ada11e978388be1"
+      },
+      {
+        "path": "runtime/src/OppositeTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e2d626a41344bd2c89be"
+      },
+      {
+        "path": "runtime/src/MixedReceiptLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-905744668930a647931b"
+      },
+      {
+        "path": "runtime/src/ExactRuntimeCounterexample.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c38b7cbba6bdf790649c"
+      },
+      {
+        "path": "readbacks/RuntimeReadback.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-1748b246bd4999d122f7"
+      },
+      {
+        "path": "replay.py",
+        "role": "DRIVER",
+        "source_id": "s0715-c1891c22e22fcb5b415e"
+      },
+      {
+        "path": "verify_dependency_identity.py",
+        "role": "DRIVER",
+        "source_id": "s0715-10e90b0a0f0dcc30ab54"
+      },
+      {
+        "path": "DEPENDENCY_PINS.json",
+        "role": "LOCK",
+        "source_id": "s0715-8bc1d7ed6f374d6baed3"
+      },
+      {
+        "path": "SOURCE_MANIFEST.json",
+        "role": "LOCK",
+        "source_id": "s0715-bd1e3387b8323ac0da4c"
+      }
+    ],
+    "fixtures": [],
+    "module_order": [
+      "GenericFiniteQueryLocality",
+      "GenericFiniteQueryMeasure",
+      "PolicyRowEvaluator",
+      "PolicyTranscriptFiber",
+      "FeedbackRequests",
+      "ProductObservationLaw",
+      "IndependentProductFamilies",
+      "GenericQueryReference",
+      "PolicyRowLaw",
+      "FeedbackFiberProbability",
+      "PolicyCylinderProbability",
+      "HistoryPathConsistency",
+      "PolicyObservedLaw",
+      "PolicyTraceBinding",
+      "StackActionLaw",
+      "RecurrentSupport",
+      "RawTapeRecurrence",
+      "SequentialTapeConsumption",
+      "PruningKernel",
+      "EndComponents",
+      "RecurrentGraph",
+      "KilledQueryLaw",
+      "KilledAdaptiveHistory",
+      "KilledRecurrentTransfer",
+      "FiniteReachability",
+      "ExecutablePruning",
+      "MarkovSupportAdapter",
+      "MarkovKilledBridge",
+      "AdaptiveMarkovRecurrentGraph",
+      "RoundRobinSchedule",
+      "PolicyTailTransfer",
+      "RelativeTailTransfer",
+      "SafeSetTailTransfer",
+      "SelfVerifyingSupport",
+      "SeededPolicyNecessity",
+      "FiniteChainAvoidance",
+      "dependencies.StatisticalRepair",
+      "HellingerTree",
+      "SubprobHellinger",
+      "DependentHellinger",
+      "ResetBudget",
+      "ResetLaw",
+      "ResetTrajectory",
+      "MarkovCharge",
+      "FiniteChainTrajectory",
+      "InfiniteRecurrence",
+      "StationaryPairChain",
+      "FairComponentParity",
+      "CheckedTargetOperation",
+      "StableSupportParityNecessity",
+      "StageTargetOrExit",
+      "ResidualSeedPosterior",
+      "ConditionalPrefix",
+      "ConditionalContinuationLaw",
+      "PosteriorFeedbackProduct",
+      "MarkovSeedPosterior",
+      "ConditionalKilledContinuation",
+      "LawfulRestart",
+      "LawfulProbability",
+      "ParityTailInvariance",
+      "ConditionalAlmostSure",
+      "SemanticWinning",
+      "SemanticSafeActions",
+      "HistoryStageSafety",
+      "RoundRobinPolicy",
+      "RoundRobinRecurrence",
+      "RegionAlgorithm",
+      "GlobalParityNecessity",
+      "ActualTargetPolicy",
+      "StageAvailability",
+      "FairStageNavigation",
+      "EventualCycling",
+      "ObservedPhaseController",
+      "CodecVarint",
+      "P02A2.ObserverCore",
+      "CodecExpr",
+      "CodecStmt",
+      "CodecNumeric",
+      "LoopRenaming",
+      "LoopPrimrec",
+      "PRProgram",
+      "PRComposition",
+      "PRRecursion",
+      "PRHeadRecursion",
+      "PRDerivation",
+      "PRCoverage",
+      "PRSpecialize",
+      "CodecProgram",
+      "PhaseAdvanceSource",
+      "FiniteSelectorSource",
+      "SelectorCertificateConstruction",
+      "PERRefinement",
+      "MealyRefinement",
+      "BlockMismatch",
+      "P02A2.MeasureCore",
+      "Q8Measure",
+      "MealyMeasure",
+      "MealyHitting",
+      "MealyRational",
+      "MealySolver",
+      "TotalVariation",
+      "ObserverAbstraction",
+      "GuardedObserver",
+      "CodecPrimrec",
+      "UniformComputabilityNumeric",
+      "UniformComputabilityMachine",
+      "Q8Machine",
+      "Q8Compiler",
+      "IndexedObserver",
+      "MealyAtoms",
+      "MealyMeasureFixtures",
+      "Q8ObserverAbstraction",
+      "ParsedObserverAbstraction",
+      "UniformRuntimeTrace",
+      "IndexedRuntime",
+      "FiniteMealyCompiler",
+      "NaturalStateCompiler",
+      "HistoryPolicyRuntime",
+      "RawEmpiricalRows",
+      "EmpiricalTailBounds",
+      "ObservedEmpiricalRows",
+      "ObservedRowTest",
+      "RationalEmpiricalGate",
+      "GeneratedPolicySafety",
+      "StackPathRegularity",
+      "GeneratedRun",
+      "MemoryTransitions",
+      "GeneratedPhaseDynamics",
+      "EmpiricalTestLaw",
+      "PhaseStabilization",
+      "GeneratedPhaseStability",
+      "GeneratedParitySuccess",
+      "GlobalParitySufficiency",
+      "SingletonControllerSpecialization",
+      "AcceptedFixtureController",
+      "EncodedPolicyHistory",
+      "SupportUpdateSource",
+      "StatisticUpdateSource",
+      "EmpiricalGateSource",
+      "CompleteEmpiricalSource",
+      "PhaseSourceFixtures",
+      "CallableSourceRuntime",
+      "EncodedHistoryFoldSource",
+      "ParallelHistorySource",
+      "FullControllerSource",
+      "ObservationChannels",
+      "FourBitFraming",
+      "HistoryRuntimeFraming",
+      "HistorySamplingSemantics",
+      "FullControllerRuntime",
+      "FairBlockConstraints",
+      "RationalRejectionLaw",
+      "AdaptiveRationalCylinders",
+      "LiteralSamplerExecution",
+      "FairBitSubsequence",
+      "RuntimeRationalBinding",
+      "ReceiptPathDecoder",
+      "RuntimeReceiptPath",
+      "FullControllerReceiptLaw",
+      "RationalGateSufficiency",
+      "ComputedToleranceSource",
+      "CanonicalHistoryBinding",
+      "FullControllerCanonicalLaw",
+      "NontrivialFixture",
+      "OppositeTailTransfer",
+      "MixedReceiptLaw",
+      "ExactRuntimeCounterexample"
+    ],
+    "modules": [
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "GenericFiniteQueryLocality",
+        "source_id": "s0715-c12515de8fe1286763ff"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryLocality",
+          "Mathlib.Probability.ProductMeasure"
+        ],
+        "name": "GenericFiniteQueryMeasure",
+        "source_id": "s0715-08fd0652cb06805e2dd1"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "PolicyRowEvaluator",
+        "source_id": "s0715-7d6e322009b3589d091e"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyRowEvaluator"
+        ],
+        "name": "PolicyTranscriptFiber",
+        "source_id": "s0715-0534b6b9e480b8d88406"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTranscriptFiber"
+        ],
+        "name": "FeedbackRequests",
+        "source_id": "s0715-15fe800e116a2b8ef576"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib",
+          "Mathlib.Probability.ProductMeasure"
+        ],
+        "name": "ProductObservationLaw",
+        "source_id": "s0715-eaa3e6b04038d344b480"
+      },
+      {
+        "imports": [
+          "Init",
+          "ProductObservationLaw"
+        ],
+        "name": "IndependentProductFamilies",
+        "source_id": "s0715-67e6855e6a8066b25173"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "GenericQueryReference",
+        "source_id": "s0715-49a6c1663e6db331d4a8"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericQueryReference"
+        ],
+        "name": "PolicyRowLaw",
+        "source_id": "s0715-f99b1705e2300bfb5240"
+      },
+      {
+        "imports": [
+          "Init",
+          "FeedbackRequests",
+          "IndependentProductFamilies",
+          "PolicyRowLaw"
+        ],
+        "name": "FeedbackFiberProbability",
+        "source_id": "s0715-4fcfa6f7f4bd6ca3efee"
+      },
+      {
+        "imports": [
+          "Init",
+          "FeedbackFiberProbability"
+        ],
+        "name": "PolicyCylinderProbability",
+        "source_id": "s0715-2e863f9fe8c302f731a3"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTranscriptFiber",
+          "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+        ],
+        "name": "HistoryPathConsistency",
+        "source_id": "s0715-d0d477645e4bc8f8f470"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyCylinderProbability",
+          "HistoryPathConsistency"
+        ],
+        "name": "PolicyObservedLaw",
+        "source_id": "s0715-8da48315f100a84313df"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyObservedLaw"
+        ],
+        "name": "PolicyTraceBinding",
+        "source_id": "s0715-b1b33c3fa3d092eb7739"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding"
+        ],
+        "name": "StackActionLaw",
+        "source_id": "s0715-6d672b25f198422b2f08"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "RecurrentSupport",
+        "source_id": "s0715-4df2c39facda8c2b1f4d"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "RecurrentSupport",
+          "Mathlib.Probability.BorelCantelli"
+        ],
+        "name": "RawTapeRecurrence",
+        "source_id": "s0715-6c9dec618d619af853db"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "RecurrentSupport"
+        ],
+        "name": "SequentialTapeConsumption",
+        "source_id": "s0715-8ecf1285a65d98f2bca6"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "PruningKernel",
+        "source_id": "s0715-9b1936d3ab51a8e82dd0"
+      },
+      {
+        "imports": [
+          "Init",
+          "PruningKernel"
+        ],
+        "name": "EndComponents",
+        "source_id": "s0715-1fbfc6b0cb415742eb9b"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "RecurrentSupport"
+        ],
+        "name": "RecurrentGraph",
+        "source_id": "s0715-d2fb82fddd033bd6f1d0"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "KilledQueryLaw",
+        "source_id": "s0715-491eb82fac6d5602d610"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledQueryLaw",
+          "PolicyTraceBinding"
+        ],
+        "name": "KilledAdaptiveHistory",
+        "source_id": "s0715-21f5bea1282104655b11"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledAdaptiveHistory",
+          "RecurrentSupport",
+          "PruningKernel"
+        ],
+        "name": "KilledRecurrentTransfer",
+        "source_id": "s0715-b6435293c3c2a888ded1"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteReachability",
+        "source_id": "s0715-19da27ece4c7e0e2d5ef"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "FiniteReachability"
+        ],
+        "name": "ExecutablePruning",
+        "source_id": "s0715-475bad8d267c4da15b22"
+      },
+      {
+        "imports": [
+          "Init",
+          "ExecutablePruning"
+        ],
+        "name": "MarkovSupportAdapter",
+        "source_id": "s0715-9baf4b40352bc4a6d8c6"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledRecurrentTransfer",
+          "MarkovSupportAdapter"
+        ],
+        "name": "MarkovKilledBridge",
+        "source_id": "s0715-d69f0f000b13d0581841"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawTapeRecurrence",
+          "SequentialTapeConsumption",
+          "RecurrentGraph",
+          "MarkovKilledBridge"
+        ],
+        "name": "AdaptiveMarkovRecurrentGraph",
+        "source_id": "s0715-884d968849308ea8312d"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveMarkovRecurrentGraph"
+        ],
+        "name": "RoundRobinSchedule",
+        "source_id": "s0715-0d5a581f9427acc3eb2f"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding",
+          "RecurrentSupport"
+        ],
+        "name": "PolicyTailTransfer",
+        "source_id": "s0715-d9459689b27c975f6a3f"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTailTransfer"
+        ],
+        "name": "RelativeTailTransfer",
+        "source_id": "s0715-bc9a626603204fd03cba"
+      },
+      {
+        "imports": [
+          "Init",
+          "RelativeTailTransfer"
+        ],
+        "name": "SafeSetTailTransfer",
+        "source_id": "s0715-d4f3d5fae5dabc343005"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Powerset",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ],
+        "name": "SelfVerifyingSupport",
+        "source_id": "s0715-3486a71106f355757cb4"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTailTransfer",
+          "SelfVerifyingSupport"
+        ],
+        "name": "SeededPolicyNecessity",
+        "source_id": "s0715-9d72c5622c5f7379bc65"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteChainAvoidance",
+        "source_id": "s0715-bf7af1fd3fa9b648ae01"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Real.Sqrt",
+          "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+          "Mathlib.Tactic"
+        ],
+        "name": "dependencies.StatisticalRepair",
+        "source_id": "s0715-6c2b04f71a2120255362"
+      },
+      {
+        "imports": [
+          "Init",
+          "dependencies.StatisticalRepair",
+          "Mathlib.Topology.Instances.ENNReal.Lemmas"
+        ],
+        "name": "HellingerTree",
+        "source_id": "s0715-f3591e2a1967612c1a47"
+      },
+      {
+        "imports": [
+          "Init",
+          "HellingerTree"
+        ],
+        "name": "SubprobHellinger",
+        "source_id": "s0715-79becc64e535b30c3975"
+      },
+      {
+        "imports": [
+          "Init",
+          "SubprobHellinger"
+        ],
+        "name": "DependentHellinger",
+        "source_id": "s0715-4fcf7023c58cbbab3e55"
+      },
+      {
+        "imports": [
+          "Init",
+          "DependentHellinger"
+        ],
+        "name": "ResetBudget",
+        "source_id": "s0715-faa5f5cc4cd2f43687da"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetBudget"
+        ],
+        "name": "ResetLaw",
+        "source_id": "s0715-d347dbe63c8982112e87"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetLaw",
+          "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+          "Mathlib.Probability.ProbabilityMassFunction.Integrals"
+        ],
+        "name": "ResetTrajectory",
+        "source_id": "s0715-a6aa353104e6fb1d6daa"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetTrajectory"
+        ],
+        "name": "MarkovCharge",
+        "source_id": "s0715-dbcdcdd3b7b89078f102"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainAvoidance",
+          "MarkovCharge"
+        ],
+        "name": "FiniteChainTrajectory",
+        "source_id": "s0715-7f8a766f682784209c70"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainTrajectory",
+          "RecurrentSupport"
+        ],
+        "name": "InfiniteRecurrence",
+        "source_id": "s0715-0b5754aa9ff57b00c651"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainAvoidance",
+          "EndComponents"
+        ],
+        "name": "StationaryPairChain",
+        "source_id": "s0715-8b66e1aeb699b7934554"
+      },
+      {
+        "imports": [
+          "Init",
+          "InfiniteRecurrence",
+          "StationaryPairChain",
+          "PruningKernel"
+        ],
+        "name": "FairComponentParity",
+        "source_id": "s0715-80bc9f18875450c1f26b"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairComponentParity",
+          "MarkovSupportAdapter"
+        ],
+        "name": "CheckedTargetOperation",
+        "source_id": "s0715-f7d699fd92280e6e4847"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveMarkovRecurrentGraph",
+          "SafeSetTailTransfer",
+          "SeededPolicyNecessity",
+          "CheckedTargetOperation"
+        ],
+        "name": "StableSupportParityNecessity",
+        "source_id": "s0715-4cd2f75420d833de0a66"
+      },
+      {
+        "imports": [
+          "Init",
+          "StableSupportParityNecessity"
+        ],
+        "name": "StageTargetOrExit",
+        "source_id": "s0715-8e25fc25a153503a5c89"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding"
+        ],
+        "name": "ResidualSeedPosterior",
+        "source_id": "s0715-40c573271495c7604d9a"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResidualSeedPosterior"
+        ],
+        "name": "ConditionalPrefix",
+        "source_id": "s0715-fcd39d0c7d3a9bce44c7"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalPrefix"
+        ],
+        "name": "ConditionalContinuationLaw",
+        "source_id": "s0715-3de7752f25787da36c6b"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResidualSeedPosterior"
+        ],
+        "name": "PosteriorFeedbackProduct",
+        "source_id": "s0715-cab1ad759b4f50f4dc9c"
+      },
+      {
+        "imports": [
+          "Init",
+          "PosteriorFeedbackProduct",
+          "MarkovKilledBridge"
+        ],
+        "name": "MarkovSeedPosterior",
+        "source_id": "s0715-8e902060fa1e83a05e9c"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalContinuationLaw",
+          "KilledRecurrentTransfer",
+          "MarkovSeedPosterior"
+        ],
+        "name": "ConditionalKilledContinuation",
+        "source_id": "s0715-8a8273d659e2e28fe564"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageTargetOrExit",
+          "ConditionalKilledContinuation"
+        ],
+        "name": "LawfulRestart",
+        "source_id": "s0715-82bd32faf098ac69c8b6"
+      },
+      {
+        "imports": [
+          "Init",
+          "LawfulRestart"
+        ],
+        "name": "LawfulProbability",
+        "source_id": "s0715-b01d7d24896108245ae8"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledRecurrentTransfer"
+        ],
+        "name": "ParityTailInvariance",
+        "source_id": "s0715-e8a9fe585fd1feeb8684"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalKilledContinuation",
+          "ParityTailInvariance"
+        ],
+        "name": "ConditionalAlmostSure",
+        "source_id": "s0715-7cc04f80b3a3c8b70805"
+      },
+      {
+        "imports": [
+          "Init",
+          "LawfulProbability",
+          "ConditionalAlmostSure"
+        ],
+        "name": "SemanticWinning",
+        "source_id": "s0715-445043856774ecbe72a2"
+      },
+      {
+        "imports": [
+          "Init",
+          "SemanticWinning"
+        ],
+        "name": "SemanticSafeActions",
+        "source_id": "s0715-e665b80bc5c9d400edda"
+      },
+      {
+        "imports": [
+          "Init",
+          "SemanticSafeActions"
+        ],
+        "name": "HistoryStageSafety",
+        "source_id": "s0715-0e3a4255f94f0b97127a"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinSchedule",
+          "HistoryStageSafety"
+        ],
+        "name": "RoundRobinPolicy",
+        "source_id": "s0715-2b98cf6a04704683a696"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinPolicy"
+        ],
+        "name": "RoundRobinRecurrence",
+        "source_id": "s0715-d499f256494d06a16c86"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageTargetOrExit"
+        ],
+        "name": "RegionAlgorithm",
+        "source_id": "s0715-e831f07f134f64bef530"
+      },
+      {
+        "imports": [
+          "Init",
+          "HistoryStageSafety",
+          "RegionAlgorithm"
+        ],
+        "name": "GlobalParityNecessity",
+        "source_id": "s0715-22c9bddffbbda032f4bc"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinRecurrence",
+          "CheckedTargetOperation",
+          "GlobalParityNecessity"
+        ],
+        "name": "ActualTargetPolicy",
+        "source_id": "s0715-668d23831fe19a15bcef"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy"
+        ],
+        "name": "StageAvailability",
+        "source_id": "s0715-9b7e26714e3bc7f016f1"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy"
+        ],
+        "name": "FairStageNavigation",
+        "source_id": "s0715-474c33f620d82fcf2d20"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairStageNavigation"
+        ],
+        "name": "EventualCycling",
+        "source_id": "s0715-e4bf792884e6546168b7"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageAvailability",
+          "EventualCycling"
+        ],
+        "name": "ObservedPhaseController",
+        "source_id": "s0715-b990640ad378d18f28e4"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Nat.Bitwise",
+          "Mathlib.Tactic"
+        ],
+        "name": "CodecVarint",
+        "source_id": "s0715-f825ea69fd043890f970"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "P02A2.ObserverCore",
+        "source_id": "s0715-6e741f7d04185e7c107c"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecVarint",
+          "P02A2.ObserverCore"
+        ],
+        "name": "CodecExpr",
+        "source_id": "s0715-15ab457a5f9158384108"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecExpr"
+        ],
+        "name": "CodecStmt",
+        "source_id": "s0715-492dadacd48cb0705a40"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecVarint"
+        ],
+        "name": "CodecNumeric",
+        "source_id": "s0715-6322a3039b3e519b9efb"
+      },
+      {
+        "imports": [
+          "Init",
+          "P02A2.ObserverCore"
+        ],
+        "name": "LoopRenaming",
+        "source_id": "s0715-fd256d33bd7ac85336ea"
+      },
+      {
+        "imports": [
+          "Init",
+          "LoopRenaming",
+          "Mathlib.Computability.Primrec"
+        ],
+        "name": "LoopPrimrec",
+        "source_id": "s0715-776a3e4c90ec8970f9a4"
+      },
+      {
+        "imports": [
+          "Init",
+          "LoopPrimrec"
+        ],
+        "name": "PRProgram",
+        "source_id": "s0715-cf18c8dbb73e71551aab"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRProgram"
+        ],
+        "name": "PRComposition",
+        "source_id": "s0715-caa593d23be7fe6f2499"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRComposition"
+        ],
+        "name": "PRRecursion",
+        "source_id": "s0715-38a62b72eeaa81967fe4"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRRecursion"
+        ],
+        "name": "PRHeadRecursion",
+        "source_id": "s0715-30dcd68a150b0cfc6397"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRHeadRecursion",
+          "Mathlib.Computability.Primrec"
+        ],
+        "name": "PRDerivation",
+        "source_id": "s0715-4ec1cb2530ad7af038b7"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRDerivation"
+        ],
+        "name": "PRCoverage",
+        "source_id": "s0715-7ded6d92d835a7585c08"
+      },
+      {
+        "imports": [
+          "Init",
+          "PRCoverage"
+        ],
+        "name": "PRSpecialize",
+        "source_id": "s0715-5cd26153cc48e8f0b875"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecStmt",
+          "CodecNumeric",
+          "PRSpecialize"
+        ],
+        "name": "CodecProgram",
+        "source_id": "s0715-52500b84343255ff0fd9"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController",
+          "CodecProgram"
+        ],
+        "name": "PhaseAdvanceSource",
+        "source_id": "s0715-e8474c50ccf0bb8b3b32"
+      },
+      {
+        "imports": [
+          "Init",
+          "PhaseAdvanceSource"
+        ],
+        "name": "FiniteSelectorSource",
+        "source_id": "s0715-d05ff0e5e182d0435b20"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteSelectorSource",
+          "Mathlib.Data.Nat.Digits"
+        ],
+        "name": "SelectorCertificateConstruction",
+        "source_id": "s0715-f7785004eedbf61aba88"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.SetTheory.Cardinal.Finite",
+          "Mathlib.Data.Fintype.EquivFin",
+          "Mathlib.Tactic"
+        ],
+        "name": "PERRefinement",
+        "source_id": "s0715-6eec1658c5d68ee7d16b"
+      },
+      {
+        "imports": [
+          "Init",
+          "PERRefinement"
+        ],
+        "name": "MealyRefinement",
+        "source_id": "s0715-f38b2e8e8660e4392266"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyRefinement",
+          "Mathlib.Data.List.OfFn",
+          "Mathlib.Data.Finset.Sigma"
+        ],
+        "name": "BlockMismatch",
+        "source_id": "s0715-5a168c48e918e4ccbacd"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+          "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+          "Mathlib.MeasureTheory.Measure.Map",
+          "Mathlib.MeasureTheory.Measure.Restrict",
+          "Mathlib.Tactic"
+        ],
+        "name": "P02A2.MeasureCore",
+        "source_id": "s0715-63a0ad78be3cc33bd792"
+      },
+      {
+        "imports": [
+          "Init",
+          "P02A2.MeasureCore",
+          "Mathlib.Probability.ProductMeasure",
+          "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+          "Mathlib.Analysis.SpecificLimits.Basic"
+        ],
+        "name": "Q8Measure",
+        "source_id": "s0715-3b261fbf5d5218198594"
+      },
+      {
+        "imports": [
+          "Init",
+          "BlockMismatch",
+          "Q8Measure"
+        ],
+        "name": "MealyMeasure",
+        "source_id": "s0715-7bd69b0f499c881b9f72"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyMeasure"
+        ],
+        "name": "MealyHitting",
+        "source_id": "s0715-db2d04b585dc77348af0"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyHitting",
+          "Mathlib.LinearAlgebra.FiniteDimensional.Basic"
+        ],
+        "name": "MealyRational",
+        "source_id": "s0715-45118b9e7696ed5b2d35"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyRational",
+          "Mathlib.LinearAlgebra.Determinant"
+        ],
+        "name": "MealySolver",
+        "source_id": "s0715-58af40c0a045a0125444"
+      },
+      {
+        "imports": [
+          "Init",
+          "P02A2.MeasureCore",
+          "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+        ],
+        "name": "TotalVariation",
+        "source_id": "s0715-72e58f1ff77d2b546417"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealySolver",
+          "TotalVariation"
+        ],
+        "name": "ObserverAbstraction",
+        "source_id": "s0715-a00d2364db191e8e9b89"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObserverAbstraction"
+        ],
+        "name": "GuardedObserver",
+        "source_id": "s0715-8031c1761a0b45f9af82"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecNumeric",
+          "Mathlib.Computability.Primrec"
+        ],
+        "name": "CodecPrimrec",
+        "source_id": "s0715-ba9269d5e6055f62df71"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecPrimrec",
+          "Mathlib.Computability.Partrec"
+        ],
+        "name": "UniformComputabilityNumeric",
+        "source_id": "s0715-f8538ef3a24a57c221ad"
+      },
+      {
+        "imports": [
+          "Init",
+          "CodecProgram",
+          "UniformComputabilityNumeric"
+        ],
+        "name": "UniformComputabilityMachine",
+        "source_id": "s0715-45a5243134e9c5594983"
+      },
+      {
+        "imports": [
+          "Init",
+          "Q8Measure"
+        ],
+        "name": "Q8Machine",
+        "source_id": "s0715-29f82145549eefcde960"
+      },
+      {
+        "imports": [
+          "Init",
+          "Q8Machine",
+          "P02A2.ObserverCore"
+        ],
+        "name": "Q8Compiler",
+        "source_id": "s0715-9063b0e0af759207d9a7"
+      },
+      {
+        "imports": [
+          "Init",
+          "GuardedObserver",
+          "UniformComputabilityMachine",
+          "Q8Compiler"
+        ],
+        "name": "IndexedObserver",
+        "source_id": "s0715-ab2549d18b77d758c050"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyHitting"
+        ],
+        "name": "MealyAtoms",
+        "source_id": "s0715-35a76d326fe595c8dfe9"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyAtoms",
+          "MealyRational"
+        ],
+        "name": "MealyMeasureFixtures",
+        "source_id": "s0715-1dd8f58564df50d83d0c"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObserverAbstraction",
+          "Q8Compiler",
+          "MealyMeasureFixtures"
+        ],
+        "name": "Q8ObserverAbstraction",
+        "source_id": "s0715-8aed800ed86f9da14c3c"
+      },
+      {
+        "imports": [
+          "Init",
+          "Q8ObserverAbstraction",
+          "UniformComputabilityMachine"
+        ],
+        "name": "ParsedObserverAbstraction",
+        "source_id": "s0715-8224f431cbcccac8c487"
+      },
+      {
+        "imports": [
+          "Init",
+          "ParsedObserverAbstraction"
+        ],
+        "name": "UniformRuntimeTrace",
+        "source_id": "s0715-bcb5223633a607dfd2db"
+      },
+      {
+        "imports": [
+          "Init",
+          "IndexedObserver",
+          "UniformRuntimeTrace"
+        ],
+        "name": "IndexedRuntime",
+        "source_id": "s0715-5ae94389ea29e6e1461b"
+      },
+      {
+        "imports": [
+          "Init",
+          "IndexedRuntime"
+        ],
+        "name": "FiniteMealyCompiler",
+        "source_id": "s0715-657518786e2c79f53bd8"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteMealyCompiler"
+        ],
+        "name": "NaturalStateCompiler",
+        "source_id": "s0715-6306c669a9b3b92eeecc"
+      },
+      {
+        "imports": [
+          "Init",
+          "NaturalStateCompiler"
+        ],
+        "name": "HistoryPolicyRuntime",
+        "source_id": "s0715-666ea948b2ce5a09d3e3"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "Mathlib.Probability.StrongLaw"
+        ],
+        "name": "RawEmpiricalRows",
+        "source_id": "s0715-477a8af41c893eb37ad8"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawEmpiricalRows"
+        ],
+        "name": "EmpiricalTailBounds",
+        "source_id": "s0715-aaa403197adcf1b77113"
+      },
+      {
+        "imports": [
+          "Init",
+          "EmpiricalTailBounds",
+          "SequentialTapeConsumption"
+        ],
+        "name": "ObservedEmpiricalRows",
+        "source_id": "s0715-6e56c88d8eec50730704"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy",
+          "ObservedEmpiricalRows"
+        ],
+        "name": "ObservedRowTest",
+        "source_id": "s0715-c5c14be5b4bf86dadf03"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedRowTest"
+        ],
+        "name": "RationalEmpiricalGate",
+        "source_id": "s0715-08d24ccae59ba8433230"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController"
+        ],
+        "name": "GeneratedPolicySafety",
+        "source_id": "s0715-d05ab24857f36f70efeb"
+      },
+      {
+        "imports": [
+          "Init",
+          "EventualCycling"
+        ],
+        "name": "StackPathRegularity",
+        "source_id": "s0715-9ff088f648943a502116"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPolicySafety",
+          "StackPathRegularity"
+        ],
+        "name": "GeneratedRun",
+        "source_id": "s0715-effab451a653ed1f1164"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController"
+        ],
+        "name": "MemoryTransitions",
+        "source_id": "s0715-26b44a1ad0b42bf7413a"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedRun",
+          "MemoryTransitions"
+        ],
+        "name": "GeneratedPhaseDynamics",
+        "source_id": "s0715-504305c876bf855cdfb8"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedRowTest"
+        ],
+        "name": "EmpiricalTestLaw",
+        "source_id": "s0715-85fc0a181d26a94d0aca"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinSchedule"
+        ],
+        "name": "PhaseStabilization",
+        "source_id": "s0715-179a29b309f46405321b"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPhaseDynamics",
+          "EmpiricalTestLaw",
+          "PhaseStabilization"
+        ],
+        "name": "GeneratedPhaseStability",
+        "source_id": "s0715-bb51fccd03e4a80456c4"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPhaseStability"
+        ],
+        "name": "GeneratedParitySuccess",
+        "source_id": "s0715-9f548c7aeb9c3fe8e8b3"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedParitySuccess"
+        ],
+        "name": "GlobalParitySufficiency",
+        "source_id": "s0715-c4ff0a3d24098255771b"
+      },
+      {
+        "imports": [
+          "Init",
+          "GlobalParitySufficiency"
+        ],
+        "name": "SingletonControllerSpecialization",
+        "source_id": "s0715-473d323e8085afffc08c"
+      },
+      {
+        "imports": [
+          "Init",
+          "SingletonControllerSpecialization"
+        ],
+        "name": "AcceptedFixtureController",
+        "source_id": "s0715-dcb32b2567242b064165"
+      },
+      {
+        "imports": [
+          "Init",
+          "HistoryPolicyRuntime",
+          "RationalEmpiricalGate",
+          "AcceptedFixtureController"
+        ],
+        "name": "EncodedPolicyHistory",
+        "source_id": "s0715-6ffdfe286275af5c94d0"
+      },
+      {
+        "imports": [
+          "Init",
+          "PhaseAdvanceSource"
+        ],
+        "name": "SupportUpdateSource",
+        "source_id": "s0715-d86654d36080f22c6f8c"
+      },
+      {
+        "imports": [
+          "Init",
+          "PhaseAdvanceSource",
+          "RationalEmpiricalGate"
+        ],
+        "name": "StatisticUpdateSource",
+        "source_id": "s0715-30d7187e05b4ffaa38bb"
+      },
+      {
+        "imports": [
+          "Init",
+          "StatisticUpdateSource"
+        ],
+        "name": "EmpiricalGateSource",
+        "source_id": "s0715-7f18a3f06ab6e4fa7cc8"
+      },
+      {
+        "imports": [
+          "Init",
+          "EmpiricalGateSource"
+        ],
+        "name": "CompleteEmpiricalSource",
+        "source_id": "s0715-ede8a21ed8da76a4d04b"
+      },
+      {
+        "imports": [
+          "Init",
+          "SupportUpdateSource",
+          "CompleteEmpiricalSource",
+          "AcceptedFixtureController"
+        ],
+        "name": "PhaseSourceFixtures",
+        "source_id": "s0715-a63b820d20615ee6454c"
+      },
+      {
+        "imports": [
+          "Init",
+          "PhaseSourceFixtures",
+          "UniformComputabilityMachine"
+        ],
+        "name": "CallableSourceRuntime",
+        "source_id": "s0715-fbe0726a77ed8b635516"
+      },
+      {
+        "imports": [
+          "Init",
+          "EncodedPolicyHistory",
+          "CallableSourceRuntime"
+        ],
+        "name": "EncodedHistoryFoldSource",
+        "source_id": "s0715-9c6798aae9ea7ce31d89"
+      },
+      {
+        "imports": [
+          "Init",
+          "EncodedHistoryFoldSource"
+        ],
+        "name": "ParallelHistorySource",
+        "source_id": "s0715-e0d71b044675e144abe6"
+      },
+      {
+        "imports": [
+          "Init",
+          "ParallelHistorySource",
+          "FiniteSelectorSource",
+          "CompleteEmpiricalSource"
+        ],
+        "name": "FullControllerSource",
+        "source_id": "s0715-e9c633af0e8f3269cb00"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteMealyCompiler"
+        ],
+        "name": "ObservationChannels",
+        "source_id": "s0715-93ec1c0d05173ef4f678"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservationChannels"
+        ],
+        "name": "FourBitFraming",
+        "source_id": "s0715-c32f1c622f548ab2f889"
+      },
+      {
+        "imports": [
+          "Init",
+          "EncodedPolicyHistory",
+          "FourBitFraming"
+        ],
+        "name": "HistoryRuntimeFraming",
+        "source_id": "s0715-8f5d8b28ac351462f4c0"
+      },
+      {
+        "imports": [
+          "Init",
+          "HistoryRuntimeFraming"
+        ],
+        "name": "HistorySamplingSemantics",
+        "source_id": "s0715-a9d2d552d672cb024d30"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerSource",
+          "HistorySamplingSemantics"
+        ],
+        "name": "FullControllerRuntime",
+        "source_id": "s0715-686a4f875bc55706da5f"
+      },
+      {
+        "imports": [
+          "Init",
+          "MealyMeasure",
+          "Mathlib.Algebra.BigOperators.Fin"
+        ],
+        "name": "FairBlockConstraints",
+        "source_id": "s0715-4d417ddcd5a94e778881"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairBlockConstraints"
+        ],
+        "name": "RationalRejectionLaw",
+        "source_id": "s0715-47d9f96c45bcfe1b1d79"
+      },
+      {
+        "imports": [
+          "Init",
+          "RationalRejectionLaw"
+        ],
+        "name": "AdaptiveRationalCylinders",
+        "source_id": "s0715-aca7b4ea2ab6004854e0"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveRationalCylinders"
+        ],
+        "name": "LiteralSamplerExecution",
+        "source_id": "s0715-accda060b79557733999"
+      },
+      {
+        "imports": [
+          "Init",
+          "ProductObservationLaw",
+          "FourBitFraming"
+        ],
+        "name": "FairBitSubsequence",
+        "source_id": "s0715-7544519d2038c0ab3298"
+      },
+      {
+        "imports": [
+          "Init",
+          "LiteralSamplerExecution",
+          "FairBitSubsequence",
+          "HistorySamplingSemantics",
+          "AcceptedFixtureController"
+        ],
+        "name": "RuntimeRationalBinding",
+        "source_id": "s0715-27de94e4d0f09d7d63f5"
+      },
+      {
+        "imports": [
+          "Init",
+          "LiteralSamplerExecution",
+          "HistoryPathConsistency"
+        ],
+        "name": "ReceiptPathDecoder",
+        "source_id": "s0715-babbe99e5887a2df087c"
+      },
+      {
+        "imports": [
+          "Init",
+          "RuntimeRationalBinding",
+          "ReceiptPathDecoder"
+        ],
+        "name": "RuntimeReceiptPath",
+        "source_id": "s0715-ecfdc5162bca720de79b"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerRuntime",
+          "RuntimeReceiptPath"
+        ],
+        "name": "FullControllerReceiptLaw",
+        "source_id": "s0715-0b9afb1052f420eb3e9c"
+      },
+      {
+        "imports": [
+          "Init",
+          "RationalEmpiricalGate",
+          "GlobalParitySufficiency",
+          "AcceptedFixtureController"
+        ],
+        "name": "RationalGateSufficiency",
+        "source_id": "s0715-2958c936c85bda6c6518"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerSource",
+          "RationalGateSufficiency"
+        ],
+        "name": "ComputedToleranceSource",
+        "source_id": "s0715-75e8f7b701f3c6926a29"
+      },
+      {
+        "imports": [
+          "Init",
+          "RuntimeReceiptPath",
+          "MarkovSeedPosterior",
+          "ConditionalPrefix",
+          "PolicyObservedLaw"
+        ],
+        "name": "CanonicalHistoryBinding",
+        "source_id": "s0715-2eadecdccfb31214bcf7"
+      },
+      {
+        "imports": [
+          "Init",
+          "FullControllerReceiptLaw",
+          "ComputedToleranceSource",
+          "CanonicalHistoryBinding"
+        ],
+        "name": "FullControllerCanonicalLaw",
+        "source_id": "s0715-117a05b98f335df42fc1"
+      },
+      {
+        "imports": [
+          "Init",
+          "SelectorCertificateConstruction",
+          "FullControllerCanonicalLaw"
+        ],
+        "name": "NontrivialFixture",
+        "source_id": "s0715-69097ada11e978388be1"
+      },
+      {
+        "imports": [
+          "Init",
+          "NontrivialFixture"
+        ],
+        "name": "OppositeTailTransfer",
+        "source_id": "s0715-e2d626a41344bd2c89be"
+      },
+      {
+        "imports": [
+          "Init",
+          "CanonicalHistoryBinding"
+        ],
+        "name": "MixedReceiptLaw",
+        "source_id": "s0715-905744668930a647931b"
+      },
+      {
+        "imports": [
+          "Init",
+          "OppositeTailTransfer",
+          "MixedReceiptLaw"
+        ],
+        "name": "ExactRuntimeCounterexample",
+        "source_id": "s0715-c38b7cbba6bdf790649c"
+      }
+    ],
+    "negative_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      },
+      {
+        "module": "Mathlib.Algebra.BigOperators.Fin",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/BigOperators/Fin.lean",
+        "sha256": "2f199c1f08a34c3dfb2a7e247ddbfae56197441e3fac4a8817b1eb141189059c"
+      },
+      {
+        "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+        "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+      },
+      {
+        "module": "Mathlib.Analysis.SpecificLimits.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/Analysis/SpecificLimits/Basic.lean",
+        "sha256": "cbf9b6b47e6ee6b2962fb2f16ba49b7e005e9a93c0adc1244cc770c34f527315"
+      },
+      {
+        "module": "Mathlib.Computability.Partrec",
+        "package": "mathlib",
+        "path": "Mathlib/Computability/Partrec.lean",
+        "sha256": "e8435a76ce5b2f4b22892d82b3e1e3e2835c8038011a68ca37a7efff797929d1"
+      },
+      {
+        "module": "Mathlib.Computability.Primrec",
+        "package": "mathlib",
+        "path": "Mathlib/Computability/Primrec.lean",
+        "sha256": "b279a3218434a6f930970b9f43669567e99adc548c31796590f42bdc205dcc22"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Card.lean",
+        "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Powerset",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Powerset.lean",
+        "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Sigma",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Sigma.lean",
+        "sha256": "fff03be1b7cc1debfb34cb668f7c0a3d92f7f6031896a3eff65b7e33ec16da8e"
+      },
+      {
+        "module": "Mathlib.Data.Fintype.EquivFin",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Fintype/EquivFin.lean",
+        "sha256": "e0842e47c8ba3cc9ef6b9fdd78432beac04b613851220973fca283dab71448e9"
+      },
+      {
+        "module": "Mathlib.Data.List.OfFn",
+        "package": "mathlib",
+        "path": "Mathlib/Data/List/OfFn.lean",
+        "sha256": "7ed0d919af0879458511e8ca33f62bc73952a7c520371467514dc4669fd68d32"
+      },
+      {
+        "module": "Mathlib.Data.Nat.Bitwise",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Nat/Bitwise.lean",
+        "sha256": "e987a9f57489a80d8e2de33b7ad8662516b85fe745d611c0fe9e6c965fb6f5b7"
+      },
+      {
+        "module": "Mathlib.Data.Nat.Digits",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Nat/Digits.lean",
+        "sha256": "eda826fa0b43df9498b9c1111bc3da1901a44b63eab0786f3e699c51db5adb75"
+      },
+      {
+        "module": "Mathlib.Data.Real.Sqrt",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Real/Sqrt.lean",
+        "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+      },
+      {
+        "module": "Mathlib.LinearAlgebra.Determinant",
+        "package": "mathlib",
+        "path": "Mathlib/LinearAlgebra/Determinant.lean",
+        "sha256": "3514c23630a2e872c8bd403d2ffa84f4170aeb870497627475e8573c6feae4b9"
+      },
+      {
+        "module": "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/LinearAlgebra/FiniteDimensional/Basic.lean",
+        "sha256": "0d51bff219c4945969805570370bdfc14ada71990c1f65b89a8b6a19ff4f01cc"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Map",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Map.lean",
+        "sha256": "3c7fb458eece85551c9b7bd28955a517e14f4bee77934b8b001440a57b6f7f71"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Restrict",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+        "sha256": "0c0c2108a28516ae3a85dfbfc2e5d7a3afd26dcc113aa8b19c2a79adfe12e56e"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean",
+        "sha256": "f840a5341797290644d0bae0b916c866e7f98a6d25b3894de87341ff4c1cfdb7"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean",
+        "sha256": "419ec9a5612f378b8603f4adb8a0941485481c1d754e95afb8d0a4ddd35f8883"
+      },
+      {
+        "module": "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "package": "mathlib",
+        "path": "Mathlib/MeasureTheory/Measure/Typeclasses/SFinite.lean",
+        "sha256": "b9fb829526454d1f9526ed9bb21de6d661fdb4a01a9847eb6669bedf68f1f784"
+      },
+      {
+        "module": "Mathlib.Probability.BorelCantelli",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/BorelCantelli.lean",
+        "sha256": "033046517cdc893d6c849aa77f04b039e9e12cabc83eb46cfb8130cc5f6020ea"
+      },
+      {
+        "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+        "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+      },
+      {
+        "module": "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProbabilityMassFunction/Constructions.lean",
+        "sha256": "8e50bff3cd3b46107d612eed21e1648752a86f9c373d4b6b0fe10e0e22a43973"
+      },
+      {
+        "module": "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProbabilityMassFunction/Integrals.lean",
+        "sha256": "412763e5ad86cc96721b1bbb1bfaccb5fa15919a2d5afb7af9da419cc2290292"
+      },
+      {
+        "module": "Mathlib.Probability.ProductMeasure",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProductMeasure.lean",
+        "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+      },
+      {
+        "module": "Mathlib.Probability.StrongLaw",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+      },
+      {
+        "module": "Mathlib.SetTheory.Cardinal.Finite",
+        "package": "mathlib",
+        "path": "Mathlib/SetTheory/Cardinal/Finite.lean",
+        "sha256": "57a20638e916d020a1f6eda323560bc56b338aa4fb5b7f4d8236202ee195c471"
+      },
+      {
+        "module": "Mathlib.Tactic",
+        "package": "mathlib",
+        "path": "Mathlib/Tactic.lean",
+        "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+      },
+      {
+        "module": "Mathlib.Topology.Instances.ENNReal.Lemmas",
+        "package": "mathlib",
+        "path": "Mathlib/Topology/Instances/ENNReal/Lemmas.lean",
+        "sha256": "5b078eb5f8aeae72ee8c7348f2cfcc02c36e0ff01e9f72205c2c06187ee04c82"
+      }
+    ],
+    "package_manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+    "packages": [
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "mathlib",
+        "path": "."
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "plausible",
+        "path": ".lake/packages/plausible"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "LeanSearchClient",
+        "path": ".lake/packages/LeanSearchClient"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "importGraph",
+        "path": ".lake/packages/importGraph"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "proofwidgets",
+        "path": ".lake/packages/proofwidgets"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "aesop",
+        "path": ".lake/packages/aesop"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "Qq",
+        "path": ".lake/packages/Qq"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "batteries",
+        "path": ".lake/packages/batteries"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "Cli",
+        "path": ".lake/packages/Cli"
+      }
+    ],
+    "positive_roots": [
+      "ExactRuntimeCounterexample"
+    ],
+    "runtime_roots": [],
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "stages": [
+      {
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:core}",
+          "--lean-bin",
+          "{tool:lean-bin}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--out",
+          "{out}/original",
+          "--mode",
+          "runtime"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "original-core-runtime",
+        "kind": "DRIVER",
+        "output_paths": [
+          "original"
+        ],
+        "timeout_seconds": 36000
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GenericFiniteQueryLocality"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GenericFiniteQueryLocality",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GenericFiniteQueryMeasure"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GenericFiniteQueryLocality"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GenericFiniteQueryMeasure",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PolicyRowEvaluator"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GenericFiniteQueryMeasure"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PolicyRowEvaluator",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PolicyTranscriptFiber"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PolicyRowEvaluator"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PolicyTranscriptFiber",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FeedbackRequests"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PolicyTranscriptFiber"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FeedbackRequests",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ProductObservationLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FeedbackRequests"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ProductObservationLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/IndependentProductFamilies"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ProductObservationLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-IndependentProductFamilies",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GenericQueryReference"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-IndependentProductFamilies"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GenericQueryReference",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PolicyRowLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GenericQueryReference"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PolicyRowLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FeedbackFiberProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PolicyRowLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FeedbackFiberProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PolicyCylinderProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FeedbackFiberProbability"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PolicyCylinderProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/HistoryPathConsistency"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PolicyCylinderProbability"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-HistoryPathConsistency",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PolicyObservedLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-HistoryPathConsistency"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PolicyObservedLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PolicyTraceBinding"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PolicyObservedLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PolicyTraceBinding",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/StackActionLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PolicyTraceBinding"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-StackActionLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RecurrentSupport"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-StackActionLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RecurrentSupport",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RawTapeRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RecurrentSupport"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RawTapeRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SequentialTapeConsumption"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RawTapeRecurrence"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SequentialTapeConsumption",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PruningKernel"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SequentialTapeConsumption"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PruningKernel",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/EndComponents"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PruningKernel"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-EndComponents",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RecurrentGraph"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-EndComponents"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RecurrentGraph",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/KilledQueryLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RecurrentGraph"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-KilledQueryLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/KilledAdaptiveHistory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-KilledQueryLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-KilledAdaptiveHistory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/KilledRecurrentTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-KilledAdaptiveHistory"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-KilledRecurrentTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FiniteReachability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-KilledRecurrentTransfer"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FiniteReachability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ExecutablePruning"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FiniteReachability"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ExecutablePruning",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MarkovSupportAdapter"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ExecutablePruning"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MarkovSupportAdapter",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MarkovKilledBridge"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MarkovSupportAdapter"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MarkovKilledBridge",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/AdaptiveMarkovRecurrentGraph"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MarkovKilledBridge"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-AdaptiveMarkovRecurrentGraph",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RoundRobinSchedule"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-AdaptiveMarkovRecurrentGraph"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RoundRobinSchedule",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PolicyTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RoundRobinSchedule"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PolicyTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RelativeTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PolicyTailTransfer"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RelativeTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SafeSetTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RelativeTailTransfer"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SafeSetTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SelfVerifyingSupport"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SafeSetTailTransfer"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SelfVerifyingSupport",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SeededPolicyNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SelfVerifyingSupport"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SeededPolicyNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FiniteChainAvoidance"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SeededPolicyNecessity"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FiniteChainAvoidance",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/dependencies.StatisticalRepair"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FiniteChainAvoidance"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-dependencies.StatisticalRepair",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/HellingerTree"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-dependencies.StatisticalRepair"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-HellingerTree",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SubprobHellinger"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-HellingerTree"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SubprobHellinger",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/DependentHellinger"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SubprobHellinger"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-DependentHellinger",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ResetBudget"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-DependentHellinger"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ResetBudget",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ResetLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ResetBudget"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ResetLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ResetTrajectory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ResetLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ResetTrajectory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MarkovCharge"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ResetTrajectory"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MarkovCharge",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FiniteChainTrajectory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MarkovCharge"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FiniteChainTrajectory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/InfiniteRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FiniteChainTrajectory"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-InfiniteRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/StationaryPairChain"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-InfiniteRecurrence"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-StationaryPairChain",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FairComponentParity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-StationaryPairChain"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FairComponentParity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CheckedTargetOperation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FairComponentParity"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CheckedTargetOperation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/StableSupportParityNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CheckedTargetOperation"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-StableSupportParityNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/StageTargetOrExit"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-StableSupportParityNecessity"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-StageTargetOrExit",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ResidualSeedPosterior"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-StageTargetOrExit"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ResidualSeedPosterior",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ConditionalPrefix"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ResidualSeedPosterior"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ConditionalPrefix",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ConditionalContinuationLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ConditionalPrefix"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ConditionalContinuationLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PosteriorFeedbackProduct"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ConditionalContinuationLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PosteriorFeedbackProduct",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MarkovSeedPosterior"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PosteriorFeedbackProduct"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MarkovSeedPosterior",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ConditionalKilledContinuation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MarkovSeedPosterior"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ConditionalKilledContinuation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/LawfulRestart"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ConditionalKilledContinuation"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-LawfulRestart",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/LawfulProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-LawfulRestart"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-LawfulProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ParityTailInvariance"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-LawfulProbability"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ParityTailInvariance",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ConditionalAlmostSure"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ParityTailInvariance"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ConditionalAlmostSure",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SemanticWinning"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ConditionalAlmostSure"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SemanticWinning",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SemanticSafeActions"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SemanticWinning"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SemanticSafeActions",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/HistoryStageSafety"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SemanticSafeActions"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-HistoryStageSafety",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RoundRobinPolicy"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-HistoryStageSafety"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RoundRobinPolicy",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RoundRobinRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RoundRobinPolicy"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RoundRobinRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RegionAlgorithm"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RoundRobinRecurrence"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RegionAlgorithm",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GlobalParityNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RegionAlgorithm"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GlobalParityNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ActualTargetPolicy"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GlobalParityNecessity"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ActualTargetPolicy",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/StageAvailability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ActualTargetPolicy"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-StageAvailability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FairStageNavigation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-StageAvailability"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FairStageNavigation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/EventualCycling"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FairStageNavigation"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-EventualCycling",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ObservedPhaseController"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-EventualCycling"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ObservedPhaseController",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CodecVarint"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ObservedPhaseController"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CodecVarint",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/P02A2.ObserverCore"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CodecVarint"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-P02A2.ObserverCore",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CodecExpr"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-P02A2.ObserverCore"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CodecExpr",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CodecStmt"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CodecExpr"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CodecStmt",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CodecNumeric"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CodecStmt"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CodecNumeric",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/LoopRenaming"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CodecNumeric"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-LoopRenaming",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/LoopPrimrec"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-LoopRenaming"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-LoopPrimrec",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PRProgram"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-LoopPrimrec"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PRProgram",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PRComposition"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PRProgram"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PRComposition",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PRRecursion"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PRComposition"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PRRecursion",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PRHeadRecursion"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PRRecursion"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PRHeadRecursion",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PRDerivation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PRHeadRecursion"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PRDerivation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PRCoverage"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PRDerivation"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PRCoverage",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PRSpecialize"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PRCoverage"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PRSpecialize",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CodecProgram"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PRSpecialize"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CodecProgram",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PhaseAdvanceSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CodecProgram"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PhaseAdvanceSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FiniteSelectorSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PhaseAdvanceSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FiniteSelectorSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SelectorCertificateConstruction"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FiniteSelectorSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SelectorCertificateConstruction",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PERRefinement"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SelectorCertificateConstruction"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PERRefinement",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MealyRefinement"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PERRefinement"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MealyRefinement",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/BlockMismatch"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MealyRefinement"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-BlockMismatch",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/P02A2.MeasureCore"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-BlockMismatch"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-P02A2.MeasureCore",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/Q8Measure"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-P02A2.MeasureCore"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-Q8Measure",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MealyMeasure"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-Q8Measure"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MealyMeasure",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MealyHitting"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MealyMeasure"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MealyHitting",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MealyRational"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MealyHitting"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MealyRational",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MealySolver"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MealyRational"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MealySolver",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/TotalVariation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MealySolver"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-TotalVariation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ObserverAbstraction"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-TotalVariation"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ObserverAbstraction",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GuardedObserver"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ObserverAbstraction"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GuardedObserver",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CodecPrimrec"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GuardedObserver"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CodecPrimrec",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/UniformComputabilityNumeric"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CodecPrimrec"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-UniformComputabilityNumeric",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/UniformComputabilityMachine"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-UniformComputabilityNumeric"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-UniformComputabilityMachine",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/Q8Machine"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-UniformComputabilityMachine"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-Q8Machine",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/Q8Compiler"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-Q8Machine"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-Q8Compiler",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/IndexedObserver"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-Q8Compiler"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-IndexedObserver",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MealyAtoms"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-IndexedObserver"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MealyAtoms",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MealyMeasureFixtures"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MealyAtoms"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MealyMeasureFixtures",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/Q8ObserverAbstraction"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MealyMeasureFixtures"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-Q8ObserverAbstraction",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ParsedObserverAbstraction"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-Q8ObserverAbstraction"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ParsedObserverAbstraction",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/UniformRuntimeTrace"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ParsedObserverAbstraction"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-UniformRuntimeTrace",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/IndexedRuntime"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-UniformRuntimeTrace"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-IndexedRuntime",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FiniteMealyCompiler"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-IndexedRuntime"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FiniteMealyCompiler",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/NaturalStateCompiler"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FiniteMealyCompiler"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-NaturalStateCompiler",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/HistoryPolicyRuntime"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-NaturalStateCompiler"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-HistoryPolicyRuntime",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RawEmpiricalRows"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-HistoryPolicyRuntime"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RawEmpiricalRows",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/EmpiricalTailBounds"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RawEmpiricalRows"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-EmpiricalTailBounds",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ObservedEmpiricalRows"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-EmpiricalTailBounds"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ObservedEmpiricalRows",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ObservedRowTest"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ObservedEmpiricalRows"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ObservedRowTest",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RationalEmpiricalGate"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ObservedRowTest"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RationalEmpiricalGate",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GeneratedPolicySafety"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RationalEmpiricalGate"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GeneratedPolicySafety",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/StackPathRegularity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GeneratedPolicySafety"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-StackPathRegularity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GeneratedRun"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-StackPathRegularity"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GeneratedRun",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MemoryTransitions"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GeneratedRun"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MemoryTransitions",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GeneratedPhaseDynamics"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MemoryTransitions"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GeneratedPhaseDynamics",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/EmpiricalTestLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GeneratedPhaseDynamics"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-EmpiricalTestLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PhaseStabilization"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-EmpiricalTestLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PhaseStabilization",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GeneratedPhaseStability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PhaseStabilization"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GeneratedPhaseStability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GeneratedParitySuccess"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GeneratedPhaseStability"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GeneratedParitySuccess",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/GlobalParitySufficiency"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GeneratedParitySuccess"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-GlobalParitySufficiency",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SingletonControllerSpecialization"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-GlobalParitySufficiency"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SingletonControllerSpecialization",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/AcceptedFixtureController"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SingletonControllerSpecialization"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-AcceptedFixtureController",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/EncodedPolicyHistory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-AcceptedFixtureController"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-EncodedPolicyHistory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/SupportUpdateSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-EncodedPolicyHistory"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-SupportUpdateSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/StatisticUpdateSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-SupportUpdateSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-StatisticUpdateSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/EmpiricalGateSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-StatisticUpdateSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-EmpiricalGateSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CompleteEmpiricalSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-EmpiricalGateSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CompleteEmpiricalSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/PhaseSourceFixtures"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CompleteEmpiricalSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-PhaseSourceFixtures",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CallableSourceRuntime"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-PhaseSourceFixtures"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CallableSourceRuntime",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/EncodedHistoryFoldSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CallableSourceRuntime"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-EncodedHistoryFoldSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ParallelHistorySource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-EncodedHistoryFoldSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ParallelHistorySource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FullControllerSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ParallelHistorySource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FullControllerSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ObservationChannels"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FullControllerSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ObservationChannels",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FourBitFraming"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ObservationChannels"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FourBitFraming",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/HistoryRuntimeFraming"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FourBitFraming"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-HistoryRuntimeFraming",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/HistorySamplingSemantics"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-HistoryRuntimeFraming"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-HistorySamplingSemantics",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FullControllerRuntime"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-HistorySamplingSemantics"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FullControllerRuntime",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FairBlockConstraints"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FullControllerRuntime"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FairBlockConstraints",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RationalRejectionLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FairBlockConstraints"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RationalRejectionLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/AdaptiveRationalCylinders"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RationalRejectionLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-AdaptiveRationalCylinders",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/LiteralSamplerExecution"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-AdaptiveRationalCylinders"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-LiteralSamplerExecution",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FairBitSubsequence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-LiteralSamplerExecution"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FairBitSubsequence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RuntimeRationalBinding"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FairBitSubsequence"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RuntimeRationalBinding",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ReceiptPathDecoder"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RuntimeRationalBinding"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ReceiptPathDecoder",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RuntimeReceiptPath"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ReceiptPathDecoder"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RuntimeReceiptPath",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FullControllerReceiptLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RuntimeReceiptPath"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FullControllerReceiptLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RationalGateSufficiency"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FullControllerReceiptLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RationalGateSufficiency",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ComputedToleranceSource"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-RationalGateSufficiency"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ComputedToleranceSource",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/CanonicalHistoryBinding"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ComputedToleranceSource"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-CanonicalHistoryBinding",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/FullControllerCanonicalLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-CanonicalHistoryBinding"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-FullControllerCanonicalLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/NontrivialFixture"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-FullControllerCanonicalLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-NontrivialFixture",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/OppositeTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-NontrivialFixture"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-OppositeTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/MixedReceiptLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-OppositeTailTransfer"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-MixedReceiptLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/ExactRuntimeCounterexample"
+        ],
+        "control_ids": [
+          "D06-02-exact_mutated_runtime_claim_false-counterexample-proof"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-MixedReceiptLaw"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-ExactRuntimeCounterexample",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-core-runtime",
+          "runtime/RuntimeReadback"
+        ],
+        "control_ids": [
+          "D06-02-exact_runtime_mutant_positive_failure-readback-positive",
+          "D06-02-exact_mutated_runtime_claim_false-readback-positive"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-core-runtime",
+          "observe-runtime-ExactRuntimeCounterexample"
+        ],
+        "driver_id": "core",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-runtime-RuntimeReadback",
+        "kind": "LEAN_AUDIT",
+        "output_paths": [],
+        "timeout_seconds": 180
+      }
+    ],
+    "target_names": [
+      {
+        "module": "ExactRuntimeCounterexample",
+        "name": "Orthemology.Eighth.SemanticControls.exact_runtime_mutant_positive_failure",
+        "target_id": "D06-02-exact_runtime_mutant_positive_failure"
+      },
+      {
+        "module": "ExactRuntimeCounterexample",
+        "name": "Orthemology.Eighth.SemanticControls.exact_mutated_runtime_claim_false",
+        "target_id": "D06-02-exact_mutated_runtime_claim_false"
+      }
+    ],
+    "tools": [
+      {
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "kind": "PYTHON",
+        "name": "python",
+        "path_kind": "EXECUTABLE",
+        "platform": "linux-x86_64",
+        "version": "3.11.9"
+      },
+      {
+        "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+        "kind": "LEAN",
+        "name": "lean-bin",
+        "path_kind": "BIN_DIRECTORY",
+        "platform": "linux-x86_64",
+        "version": "4.19.0"
+      }
+    ]
+  },
+  "result_families": [
+    "semantic-runtime-control"
+  ],
+  "review_ids": [
+    "D06-02-review-1",
+    "D06-02-review-2"
+  ],
+  "source_ids": [
+    "s0715-c12515de8fe1286763ff",
+    "s0715-08fd0652cb06805e2dd1",
+    "s0715-7d6e322009b3589d091e",
+    "s0715-0534b6b9e480b8d88406",
+    "s0715-15fe800e116a2b8ef576",
+    "s0715-eaa3e6b04038d344b480",
+    "s0715-67e6855e6a8066b25173",
+    "s0715-49a6c1663e6db331d4a8",
+    "s0715-f99b1705e2300bfb5240",
+    "s0715-4fcfa6f7f4bd6ca3efee",
+    "s0715-2e863f9fe8c302f731a3",
+    "s0715-d0d477645e4bc8f8f470",
+    "s0715-8da48315f100a84313df",
+    "s0715-b1b33c3fa3d092eb7739",
+    "s0715-6d672b25f198422b2f08",
+    "s0715-4df2c39facda8c2b1f4d",
+    "s0715-6c9dec618d619af853db",
+    "s0715-8ecf1285a65d98f2bca6",
+    "s0715-9b1936d3ab51a8e82dd0",
+    "s0715-1fbfc6b0cb415742eb9b",
+    "s0715-d2fb82fddd033bd6f1d0",
+    "s0715-491eb82fac6d5602d610",
+    "s0715-21f5bea1282104655b11",
+    "s0715-b6435293c3c2a888ded1",
+    "s0715-19da27ece4c7e0e2d5ef",
+    "s0715-475bad8d267c4da15b22",
+    "s0715-9baf4b40352bc4a6d8c6",
+    "s0715-d69f0f000b13d0581841",
+    "s0715-884d968849308ea8312d",
+    "s0715-0d5a581f9427acc3eb2f",
+    "s0715-d9459689b27c975f6a3f",
+    "s0715-bc9a626603204fd03cba",
+    "s0715-d4f3d5fae5dabc343005",
+    "s0715-3486a71106f355757cb4",
+    "s0715-9d72c5622c5f7379bc65",
+    "s0715-bf7af1fd3fa9b648ae01",
+    "s0715-6c2b04f71a2120255362",
+    "s0715-f3591e2a1967612c1a47",
+    "s0715-79becc64e535b30c3975",
+    "s0715-4fcf7023c58cbbab3e55",
+    "s0715-faa5f5cc4cd2f43687da",
+    "s0715-d347dbe63c8982112e87",
+    "s0715-a6aa353104e6fb1d6daa",
+    "s0715-dbcdcdd3b7b89078f102",
+    "s0715-7f8a766f682784209c70",
+    "s0715-0b5754aa9ff57b00c651",
+    "s0715-8b66e1aeb699b7934554",
+    "s0715-80bc9f18875450c1f26b",
+    "s0715-f7d699fd92280e6e4847",
+    "s0715-4cd2f75420d833de0a66",
+    "s0715-8e25fc25a153503a5c89",
+    "s0715-40c573271495c7604d9a",
+    "s0715-fcd39d0c7d3a9bce44c7",
+    "s0715-3de7752f25787da36c6b",
+    "s0715-cab1ad759b4f50f4dc9c",
+    "s0715-8e902060fa1e83a05e9c",
+    "s0715-8a8273d659e2e28fe564",
+    "s0715-82bd32faf098ac69c8b6",
+    "s0715-b01d7d24896108245ae8",
+    "s0715-e8a9fe585fd1feeb8684",
+    "s0715-7cc04f80b3a3c8b70805",
+    "s0715-445043856774ecbe72a2",
+    "s0715-e665b80bc5c9d400edda",
+    "s0715-0e3a4255f94f0b97127a",
+    "s0715-2b98cf6a04704683a696",
+    "s0715-d499f256494d06a16c86",
+    "s0715-e831f07f134f64bef530",
+    "s0715-22c9bddffbbda032f4bc",
+    "s0715-668d23831fe19a15bcef",
+    "s0715-9b7e26714e3bc7f016f1",
+    "s0715-474c33f620d82fcf2d20",
+    "s0715-e4bf792884e6546168b7",
+    "s0715-b990640ad378d18f28e4",
+    "s0715-f825ea69fd043890f970",
+    "s0715-6e741f7d04185e7c107c",
+    "s0715-15ab457a5f9158384108",
+    "s0715-492dadacd48cb0705a40",
+    "s0715-6322a3039b3e519b9efb",
+    "s0715-fd256d33bd7ac85336ea",
+    "s0715-776a3e4c90ec8970f9a4",
+    "s0715-cf18c8dbb73e71551aab",
+    "s0715-caa593d23be7fe6f2499",
+    "s0715-38a62b72eeaa81967fe4",
+    "s0715-30dcd68a150b0cfc6397",
+    "s0715-4ec1cb2530ad7af038b7",
+    "s0715-7ded6d92d835a7585c08",
+    "s0715-5cd26153cc48e8f0b875",
+    "s0715-52500b84343255ff0fd9",
+    "s0715-e8474c50ccf0bb8b3b32",
+    "s0715-d05ff0e5e182d0435b20",
+    "s0715-f7785004eedbf61aba88",
+    "s0715-6eec1658c5d68ee7d16b",
+    "s0715-f38b2e8e8660e4392266",
+    "s0715-5a168c48e918e4ccbacd",
+    "s0715-63a0ad78be3cc33bd792",
+    "s0715-3b261fbf5d5218198594",
+    "s0715-7bd69b0f499c881b9f72",
+    "s0715-db2d04b585dc77348af0",
+    "s0715-45118b9e7696ed5b2d35",
+    "s0715-58af40c0a045a0125444",
+    "s0715-72e58f1ff77d2b546417",
+    "s0715-a00d2364db191e8e9b89",
+    "s0715-8031c1761a0b45f9af82",
+    "s0715-ba9269d5e6055f62df71",
+    "s0715-f8538ef3a24a57c221ad",
+    "s0715-45a5243134e9c5594983",
+    "s0715-29f82145549eefcde960",
+    "s0715-9063b0e0af759207d9a7",
+    "s0715-ab2549d18b77d758c050",
+    "s0715-35a76d326fe595c8dfe9",
+    "s0715-1dd8f58564df50d83d0c",
+    "s0715-8aed800ed86f9da14c3c",
+    "s0715-8224f431cbcccac8c487",
+    "s0715-bcb5223633a607dfd2db",
+    "s0715-5ae94389ea29e6e1461b",
+    "s0715-657518786e2c79f53bd8",
+    "s0715-6306c669a9b3b92eeecc",
+    "s0715-666ea948b2ce5a09d3e3",
+    "s0715-477a8af41c893eb37ad8",
+    "s0715-aaa403197adcf1b77113",
+    "s0715-6e56c88d8eec50730704",
+    "s0715-c5c14be5b4bf86dadf03",
+    "s0715-08d24ccae59ba8433230",
+    "s0715-d05ab24857f36f70efeb",
+    "s0715-9ff088f648943a502116",
+    "s0715-effab451a653ed1f1164",
+    "s0715-26b44a1ad0b42bf7413a",
+    "s0715-504305c876bf855cdfb8",
+    "s0715-85fc0a181d26a94d0aca",
+    "s0715-179a29b309f46405321b",
+    "s0715-bb51fccd03e4a80456c4",
+    "s0715-9f548c7aeb9c3fe8e8b3",
+    "s0715-c4ff0a3d24098255771b",
+    "s0715-473d323e8085afffc08c",
+    "s0715-dcb32b2567242b064165",
+    "s0715-6ffdfe286275af5c94d0",
+    "s0715-d86654d36080f22c6f8c",
+    "s0715-30d7187e05b4ffaa38bb",
+    "s0715-7f18a3f06ab6e4fa7cc8",
+    "s0715-ede8a21ed8da76a4d04b",
+    "s0715-a63b820d20615ee6454c",
+    "s0715-fbe0726a77ed8b635516",
+    "s0715-9c6798aae9ea7ce31d89",
+    "s0715-e0d71b044675e144abe6",
+    "s0715-e9c633af0e8f3269cb00",
+    "s0715-93ec1c0d05173ef4f678",
+    "s0715-c32f1c622f548ab2f889",
+    "s0715-8f5d8b28ac351462f4c0",
+    "s0715-a9d2d552d672cb024d30",
+    "s0715-686a4f875bc55706da5f",
+    "s0715-4d417ddcd5a94e778881",
+    "s0715-47d9f96c45bcfe1b1d79",
+    "s0715-aca7b4ea2ab6004854e0",
+    "s0715-accda060b79557733999",
+    "s0715-7544519d2038c0ab3298",
+    "s0715-27de94e4d0f09d7d63f5",
+    "s0715-babbe99e5887a2df087c",
+    "s0715-ecfdc5162bca720de79b",
+    "s0715-0b9afb1052f420eb3e9c",
+    "s0715-2958c936c85bda6c6518",
+    "s0715-75e8f7b701f3c6926a29",
+    "s0715-2eadecdccfb31214bcf7",
+    "s0715-117a05b98f335df42fc1",
+    "s0715-69097ada11e978388be1",
+    "s0715-e2d626a41344bd2c89be",
+    "s0715-905744668930a647931b",
+    "s0715-c38b7cbba6bdf790649c",
+    "s0715-1748b246bd4999d122f7",
+    "s0715-c1891c22e22fcb5b415e",
+    "s0715-10e90b0a0f0dcc30ab54",
+    "s0715-8bc1d7ed6f374d6baed3",
+    "s0715-bd1e3387b8323ac0da4c"
+  ],
+  "targets": [
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem exact_runtime_mutant_positive_failure (d : Bool × Bool) :\n    0 < fairCantor {x |\n      ¬ ParitySuccess (actionPriority initialCandidate) (historyAction d\n        (decodedHistory (policyProgram oldConfig)\n          (sourcePolicy (withComputedTolerance oldConfig)) initialCandidate x))}",
+      "domain": "FINITE_MODEL",
+      "id": "D06-02-exact_runtime_mutant_positive_failure",
+      "source_id": "s0715-c38b7cbba6bdf790649c",
+      "target_sha256": "ae26b1785ed4d2fc6288f26ed50ba6ffc394884d36358ef06ac2c80e33610eac"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem exact_mutated_runtime_claim_false : ¬ MutatedRuntimeClaim",
+      "domain": "FINITE_MODEL",
+      "id": "D06-02-exact_mutated_runtime_claim_false",
+      "source_id": "s0715-c38b7cbba6bdf790649c",
+      "target_sha256": "4732996608c695c24aa3669aff27e4da7804e2210c6c779318684937b50ccfcc"
+    }
+  ],
+  "toolchain": {
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "kind": "LEAN",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ],
+    "platform": "linux-x86_64",
+    "version": "4.19.0"
+  }
+}

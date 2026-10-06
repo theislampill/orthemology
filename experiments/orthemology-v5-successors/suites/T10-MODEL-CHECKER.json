@@ -1,0 +1,1076 @@
+{
+  "id": "T10-MODEL-CHECKER",
+  "family": "t10-model-checker-suite",
+  "result_families": [
+    "t10-model-checker"
+  ],
+  "origin_archive_sha256": "86b1924c39385655005ce8b1159f8032fe27fad7459949c9e235c1638ac15804",
+  "source_ids": [
+    "T10-SOURCE-CHECKER-CONTEXT_EFFECTS",
+    "T10-SOURCE-CHECKER-READ_COVER",
+    "T10-SOURCE-CHECKER-EXHAUSTIVE_VALIDATION",
+    "T10-SOURCE-CHECKER-SOURCE_AND_RELEASE_VALIDATION",
+    "T10-SOURCE-CHECKER-SEMANTIC_MUTATIONS",
+    "T10-SOURCE-CHECKER-TESTS-TEST_CONTRACT",
+    "T10-SOURCE-CHECKER-FIXTURES-SOURCE_ROLES",
+    "T10-SOURCE-CHECKER-CASE_TRACEABILITY",
+    "T10-SOURCE-CHECKER-README",
+    "T10-SOURCE-REVIEW-INDEPENDENT_MODELS",
+    "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+    "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+    "T10-SOURCE-CHECK-OBSERVATIONS",
+    "T10-SOURCE-REPRODUCIBILITY",
+    "T10-SOURCE-TOOLCHAIN",
+    "T10-SOURCE-OCCURRENCE-REVIEW",
+    "T10-SOURCE-TWO-CARD-REVIEW"
+  ],
+  "review_ids": [
+    "T10-REVIEW-MODEL-CHECKER",
+    "T10-REVIEW-MODEL-CHECKER-TWO-CARD"
+  ],
+  "targets": [
+    {
+      "id": "T10-FINITE-TARGET-unit",
+      "source_id": "T10-SOURCE-CHECKER-TESTS-TEST_CONTRACT",
+      "declaration": "\"\"\"Test-first contract. Synthetic source roles, never natural-language gold labels.\"\"\"",
+      "target_sha256": "7c4e8095f89407dcbba44370458d4159e72835d447ba854284e050a327bee95d",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-exhaustive",
+      "source_id": "T10-SOURCE-CHECKER-EXHAUSTIVE_VALIDATION",
+      "declaration": "\"\"\"Independent bounded controls; counts describe exactly what was executed.\"\"\"",
+      "target_sha256": "a80c0a0f087725923e28a2c1a08fd538dc71ad92e7de7ab1dc03defea68e97de",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-source-release",
+      "source_id": "T10-SOURCE-CHECKER-SOURCE_AND_RELEASE_VALIDATION",
+      "declaration": "\"\"\"Reproduce constructed source-binding and bounded-release controls.\n\nAll role maps and table observations are supplied model inputs. No natural\nlanguage parsing, real source authentication, or normative inference occurs.\n\"\"\"",
+      "target_sha256": "b38bb20736d54d39c6e0d34f6ced9d2d484d4633b00b5e88b356302403b737ca",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-semantic",
+      "source_id": "T10-SOURCE-CHECKER-SEMANTIC_MUTATIONS",
+      "declaration": "\"\"\"Executed semantic mutation controls; no source files are modified.\n\nThese are explicit wrong-interface/algorithm variants, not a claim of compiler\nmutation coverage or a comparison with the strongest conventional baseline.\n\"\"\"",
+      "target_sha256": "e197acc1a27b23ee8b17070cbcddac7cd819229433602f528dad668b4e57a4e3",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-independent-selftest",
+      "source_id": "T10-SOURCE-REVIEW-INDEPENDENT_MODELS",
+      "declaration": "\"\"\"Independent ordinary baselines. No imports from candidate implementation.\n\nRead-cost model values are synthetic; actual source witnesses are not assigned\ncounterfactual role worlds. Costs are exact Fractions or math.inf.\n\"\"\"",
+      "target_sha256": "daae576e9d7bb1773362f3bdf39ac453ef2672aed52d0afa6049f3438b83af19",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-independent-review",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+      "declaration": "\"\"\"Independent candidate differential checks; standard-library only.\n\nThe three reference mechanisms live in independent_models.py and import no\ncandidate code. Never assigns alternate worlds to the actual source capture.\n\"\"\"",
+      "target_sha256": "5fed13a75566b2733adfc4ec90db67d5cd8a72fd21d1cb6f9c2c67513dffeac6",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-independent-mutations",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "\"\"\"Reproducible semantic mutants in reviewer-owned copies only.\"\"\"",
+      "target_sha256": "61579c2e982f21ca63c7d7757ecbe81c8eff175d718568450727bcf915168b20",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-two-card",
+      "source_id": "T10-SOURCE-CHECK-OBSERVATIONS",
+      "declaration": "\"\"\"Reviewer-owned exhaustive small decision checks. No candidate imports.\n\nFinite partitions of concrete worlds certify exact answers, not authenticity,\npermissions, morality or physical metadata opacity. Checks survive python -O.\n\"\"\"",
+      "target_sha256": "270e9aa6e06ee406e457650a484408114fff187970655fdca4e68b733612a81b",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-current_only",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('current_only','context_effects.py',[(\"Ref(consumed)\",\"Ref(0)\")])",
+      "target_sha256": "787018a637aa99b7e8f695f218ae229c604b4f60741de7c4d7698efbd3586e75",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-compose_depth_abs_shift",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('compose_depth_abs_shift','context_effects.py',[(\"depth=max(f.depth,g.depth-(p-f.consumed))\",\"depth=max(f.depth,g.depth+abs(p-f.consumed))\")])",
+      "target_sha256": "4968b892e5f09868a7c04bfec9ffa3cf225bf92f882ad86ad94dfbd0970bc984",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-drop_second_constraints",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('drop_second_constraints','context_effects.py',[(\"constraints=f.constraints+tuple((subst(x),o) for x,o in g.constraints)\",\"constraints=f.constraints\")])",
+      "target_sha256": "85470638208848ab42730f941d0ec91050ab155772cdf17c79077829d91d2f51",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-snapshot_blind_equality",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('snapshot_blind_equality','context_effects.py',[(\"from dataclasses import dataclass\",\"from dataclasses import dataclass, field\"),(\"    snapshot: str\",\"    snapshot: str = field(compare=False)\")])",
+      "target_sha256": "ab11da85bd1ecc9c1c86c7581fbab67dc8239cad0b7dbc21cda108e80fba3a99",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-nonconvex_envelope",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('nonconvex_envelope','read_cover.py',[(\"if ix and ix!=list(range(ix[0],ix[-1]+1)):raise BadCoverage('justified role coverage is not convex on demanded origins')\",\"if False:raise BadCoverage('justified role coverage is not convex on demanded origins')\")])",
+      "target_sha256": "fc872acee071610d5a8577f7cee09f9b03d2687dd8733471d329e5ebaf8a92df",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-retired_service_available",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('retired_service_available','read_cover.py',[(\"if w.eligible and w.adequate\",\"if w.adequate\")])",
+      "target_sha256": "650077f752cc2724909f9d9d6e3481410f6abd26525eb5e6977cb14d4d2198ab",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-locality_ignores_response",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('locality_ignores_response','read_cover.py',[(\"if all(response(alt,w)==response(pos,w) for w in menu if o not in w.coverage):found=True;break\",\"if True:found=True;break\")])",
+      "target_sha256": "f695c8ef3a05604936f314f1e58e9559fea8975f8c02978516365f550c82cce1",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-adequacy_ignores_fibres",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('adequacy_ignores_fibres','read_cover.py',[(\"if observation in seen and seen[observation]!=values:return False\",\"if observation in seen and seen[observation]!=values:return True\")])",
+      "target_sha256": "24e487bb14c1da06d03fc2a9a947986652284e3bc696c9ede00d8362562b7c9f",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-FINITE-TARGET-mutation-replace_adaptive_with_cover",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "declaration": "('replace_adaptive_with_cover','read_cover.py',[(\"return max(solve(p) for p in parts)\",\"return cover_dp(tuple(worlds[0].keys()),menu).cost\")])",
+      "target_sha256": "781d050f6c220c1a675d6537026ec21c02bdbfcb54d5d5809de9e5eb290f60a5",
+      "domain": "FINITE_MODEL",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [
+    {
+      "id": "T10-FINITE-POSITIVE-unit-normal",
+      "source_id": "T10-SOURCE-CHECKER-TESTS-TEST_CONTRACT",
+      "target_id": "T10-FINITE-TARGET-unit",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-unit-optimized",
+      "source_id": "T10-SOURCE-CHECKER-TESTS-TEST_CONTRACT",
+      "target_id": "T10-FINITE-TARGET-unit",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-exhaustive_validation",
+      "source_id": "T10-SOURCE-CHECKER-EXHAUSTIVE_VALIDATION",
+      "target_id": "T10-FINITE-TARGET-exhaustive",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-source_and_release_validation",
+      "source_id": "T10-SOURCE-CHECKER-SOURCE_AND_RELEASE_VALIDATION",
+      "target_id": "T10-FINITE-TARGET-source-release",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-semantic_mutations",
+      "source_id": "T10-SOURCE-CHECKER-SEMANTIC_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-semantic",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-independent-selftest",
+      "source_id": "T10-SOURCE-REVIEW-INDEPENDENT_MODELS",
+      "target_id": "T10-FINITE-TARGET-independent-selftest",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-independent-normal",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+      "target_id": "T10-FINITE-TARGET-independent-review",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-independent-optimized",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+      "target_id": "T10-FINITE-TARGET-independent-review",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-independent-mutations",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-independent-mutations",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-two-card-normal",
+      "source_id": "T10-SOURCE-CHECK-OBSERVATIONS",
+      "target_id": "T10-FINITE-TARGET-two-card",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-POSITIVE-two-card-optimized",
+      "source_id": "T10-SOURCE-CHECK-OBSERVATIONS",
+      "target_id": "T10-FINITE-TARGET-two-card",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-current_only",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-current_only",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-compose_depth_abs_shift",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-compose_depth_abs_shift",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-drop_second_constraints",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-drop_second_constraints",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-snapshot_blind_equality",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-snapshot_blind_equality",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-nonconvex_envelope",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-nonconvex_envelope",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-retired_service_available",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-retired_service_available",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-locality_ignores_response",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-locality_ignores_response",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-adequacy_ignores_fibres",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-adequacy_ignores_fibres",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "T10-FINITE-REJECTION-replace_adaptive_with_cover",
+      "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+      "target_id": "T10-FINITE-TARGET-mutation-replace_adaptive_with_cover",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    }
+  ],
+  "toolchain": {
+    "kind": "PYTHON",
+    "version": "3.12.3",
+    "platform": "linux-x86_64",
+    "executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+    "packages": []
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "FINITE",
+    "files": [
+      {
+        "source_id": "T10-SOURCE-CHECKER-CONTEXT_EFFECTS",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/context_effects.py",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECKER-READ_COVER",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/read_cover.py",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECKER-EXHAUSTIVE_VALIDATION",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/exhaustive_validation.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECKER-SOURCE_AND_RELEASE_VALIDATION",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/source_and_release_validation.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECKER-SEMANTIC_MUTATIONS",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/semantic_mutations.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECKER-TESTS-TEST_CONTRACT",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/tests/test_contract.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECKER-FIXTURES-SOURCE_ROLES",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/fixtures/source_roles.json",
+        "role": "DATA"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECKER-CASE_TRACEABILITY",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/CASE_TRACEABILITY.json",
+        "role": "DATA"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECKER-README",
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/README.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "T10-SOURCE-REVIEW-INDEPENDENT_MODELS",
+        "path": "tranche10/reviews/occurrence-checker/independent_models.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+        "path": "tranche10/reviews/occurrence-checker/run_independent_review.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+        "path": "tranche10/reviews/occurrence-checker/run_independent_mutations.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-CHECK-OBSERVATIONS",
+        "path": "tranche10/reviews/bounded-release-application/check_observations.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-REPRODUCIBILITY",
+        "path": "REPRODUCIBILITY.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "T10-SOURCE-TOOLCHAIN",
+        "path": "TOOLCHAIN_REQUIREMENTS.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "T10-SOURCE-OCCURRENCE-REVIEW",
+        "path": "tranche10/reviews/occurrence-checker/INDEPENDENT_REVIEW_v1.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "T10-SOURCE-TWO-CARD-REVIEW",
+        "path": "tranche10/reviews/bounded-release-application/INDEPENDENT_REVIEW_v1.md",
+        "role": "REVIEW"
+      }
+    ],
+    "modules": [],
+    "module_order": [],
+    "positive_roots": [],
+    "audit_roots": [],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [],
+    "target_names": [],
+    "package_manifest_source_id": null,
+    "packages": [],
+    "tools": [],
+    "external_inputs": [],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "t10-unit",
+        "source_id": "T10-SOURCE-CHECKER-TESTS-TEST_CONTRACT",
+        "recipe": "t10-unit-v1",
+        "sha256": "af8ae17bd3881ab703fc773bf91bffad9859a4fa8f9cb3559d39ed43b4696bf8",
+        "argument_meanings": {},
+        "external_input_id": null
+      },
+      {
+        "id": "t10-exhaustive",
+        "source_id": "T10-SOURCE-CHECKER-EXHAUSTIVE_VALIDATION",
+        "recipe": "t10-exhaustive-v1",
+        "sha256": "7614ed0a2d9eca6c2e07c74ee0e02c902cff4956b07347ee9b1b47e70edd8ee2",
+        "argument_meanings": {},
+        "external_input_id": null
+      },
+      {
+        "id": "t10-source-release",
+        "source_id": "T10-SOURCE-CHECKER-SOURCE_AND_RELEASE_VALIDATION",
+        "recipe": "t10-source-release-v1",
+        "sha256": "d286e1099431a64390a14c9533d96cdd7aebc673f68ea74953c9c4852e5e24db",
+        "argument_meanings": {},
+        "external_input_id": null
+      },
+      {
+        "id": "t10-semantic",
+        "source_id": "T10-SOURCE-CHECKER-SEMANTIC_MUTATIONS",
+        "recipe": "t10-semantic-v1",
+        "sha256": "090c48a908c2780f5eccce07c7b211e3970f0f24ea1188d3528a5195fafe8130",
+        "argument_meanings": {},
+        "external_input_id": null
+      },
+      {
+        "id": "t10-independent-selftest",
+        "source_id": "T10-SOURCE-REVIEW-INDEPENDENT_MODELS",
+        "recipe": "t10-independent-selftest-v1",
+        "sha256": "cf9ac967668e35fc47c89214efbd9f84aa97a820ec255ffff4d48b41b1af1d3a",
+        "argument_meanings": {},
+        "external_input_id": null
+      },
+      {
+        "id": "t10-independent-review",
+        "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+        "recipe": "t10-independent-review-v1",
+        "sha256": "e1303f10bbe5da403553c2be7f2b7ff468f0567b501f63d854cfb3f908cabcf2",
+        "argument_meanings": {
+          "--candidate": "PROJECT_SOURCE_DIRECTORY",
+          "--output": "FRESH_OUTPUT_FILE"
+        },
+        "external_input_id": null
+      },
+      {
+        "id": "t10-independent-mutations",
+        "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_MUTATIONS",
+        "recipe": "t10-independent-mutations-v1",
+        "sha256": "b94b8df9b31c8b635743440afc3525fb6abff282336ef1ba9e2dd9a316f6fee4",
+        "argument_meanings": {
+          "--candidate": "PROJECT_SOURCE_DIRECTORY",
+          "--directory": "FRESH_OUTPUT_DIRECTORY"
+        },
+        "external_input_id": null
+      },
+      {
+        "id": "t10-two-card",
+        "source_id": "T10-SOURCE-CHECK-OBSERVATIONS",
+        "recipe": "t10-two-card-v1",
+        "sha256": "ba4f0fa9ed04750b629b5a504c976de589c3899c9c753742dd34cbb0cdcd644c",
+        "argument_meanings": {},
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "unit-normal",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-unit",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": "tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+        "depends_on": [],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-unit-normal"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "unit-optimized",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-unit",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "-O",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": "tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+        "depends_on": [
+          "unit-normal"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-unit-optimized"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "exhaustive_validation",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-exhaustive",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:t10-exhaustive}"
+        ],
+        "cwd": "tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+        "depends_on": [
+          "unit-optimized"
+        ],
+        "timeout_seconds": 300,
+        "output_paths": [
+          "project/tranche10/research/occurrence-continuation/release-candidate-v1/checker/logs/exhaustive_results.json"
+        ],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-exhaustive_validation"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "source_and_release_validation",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-source-release",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:t10-source-release}"
+        ],
+        "cwd": "tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+        "depends_on": [
+          "exhaustive_validation"
+        ],
+        "timeout_seconds": 300,
+        "output_paths": [
+          "project/tranche10/research/occurrence-continuation/release-candidate-v1/checker/logs/source_release_results.json"
+        ],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-source_and_release_validation"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "semantic_mutations",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-semantic",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:t10-semantic}"
+        ],
+        "cwd": "tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+        "depends_on": [
+          "source_and_release_validation"
+        ],
+        "timeout_seconds": 300,
+        "output_paths": [
+          "project/tranche10/research/occurrence-continuation/release-candidate-v1/checker/logs/semantic_mutations.json"
+        ],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-semantic_mutations"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "independent-selftest",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-independent-selftest",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:t10-independent-selftest}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "semantic_mutations"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-independent-selftest"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "independent-normal",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-independent-review",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:t10-independent-review}",
+          "--candidate",
+          "{project}/tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+          "--output",
+          "{out}/independent-normal.json"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-selftest"
+        ],
+        "timeout_seconds": 300,
+        "output_paths": [
+          "independent-normal.json"
+        ],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-independent-normal"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "independent-optimized",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-independent-review",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "-O",
+          "{driver:t10-independent-review}",
+          "--candidate",
+          "{project}/tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+          "--output",
+          "{out}/independent-optimized.json"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-normal"
+        ],
+        "timeout_seconds": 300,
+        "output_paths": [
+          "independent-optimized.json"
+        ],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-independent-optimized"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "independent-mutations",
+        "kind": "DRIVER",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:t10-independent-mutations}",
+          "--candidate",
+          "{project}/tranche10/research/occurrence-continuation/release-candidate-v1/checker",
+          "--directory",
+          "{out}/mutation-copies"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-optimized"
+        ],
+        "timeout_seconds": 900,
+        "output_paths": [
+          "mutation-copies",
+          "project/tranche10/reviews/occurrence-checker/INDEPENDENT_MUTATION_RESULTS.json"
+        ],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-independent-mutations"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "two-card-normal",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-two-card",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:t10-two-card}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-two-card-normal"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "two-card-optimized",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "t10-two-card",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "-O",
+          "{driver:t10-two-card}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "two-card-normal"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-POSITIVE-two-card-optimized"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-current_only",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "current_only"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-current_only"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      },
+      {
+        "id": "observe-compose_depth_abs_shift",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "compose_depth_abs_shift"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-compose_depth_abs_shift"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      },
+      {
+        "id": "observe-drop_second_constraints",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "drop_second_constraints"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-drop_second_constraints"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      },
+      {
+        "id": "observe-snapshot_blind_equality",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "snapshot_blind_equality"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-snapshot_blind_equality"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      },
+      {
+        "id": "observe-nonconvex_envelope",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "nonconvex_envelope"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-nonconvex_envelope"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      },
+      {
+        "id": "observe-retired_service_available",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "retired_service_available"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-retired_service_available"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      },
+      {
+        "id": "observe-locality_ignores_response",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "locality_ignores_response"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-locality_ignores_response"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      },
+      {
+        "id": "observe-adequacy_ignores_fibres",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "adequacy_ignores_fibres"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-adequacy_ignores_fibres"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      },
+      {
+        "id": "observe-replace_adaptive_with_cover",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "t10-independent-mutations",
+        "argv": [
+          "{builtin:observe-child}",
+          "independent-mutations",
+          "replace_adaptive_with_cover"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "independent-mutations",
+          "independent-normal"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "T10-FINITE-REJECTION-replace_adaptive_with_cover"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "T10-SOURCE-REVIEW-RUN_INDEPENDENT_REVIEW",
+            "literal": "AssertionError",
+            "sha256": "16b0fd395786f0b021618297cf332472a1f17c7358e1185c396e82655c08449e"
+          }
+        ]
+      }
+    ],
+    "build_roots": []
+  }
+}

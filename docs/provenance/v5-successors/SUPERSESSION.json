@@ -1,0 +1,1043 @@
+{
+  "edges": [
+    {
+      "basis_source_ids": [
+        "s0715-ccf8cc514def2fdf1de8",
+        "s0715-456e8b6a2d89eaed9688",
+        "s0715-3c4082d28eda77de1b43"
+      ],
+      "from": "07-change_controller_tolerance-ActualExponentialMoments",
+      "relation": "REFINES",
+      "retained_scope": "Original Sixth outcome and higher-heartbeat retry remain byte-identical INCONCLUSIVE. Only this exact mutant target receives the separately bound later evidence; no tranche-wide replacement or physical-controller refutation.",
+      "target": "07-change_controller_tolerance-ActualExponentialMoments: exact full-file proof application at lines 91-92; mutant SHA-256 7b639a064e5d523827750a8a9e8527b4f172b45523ca2d32e565a10ba3348318",
+      "to": "D06-01"
+    },
+    {
+      "basis_source_ids": [
+        "s0715-5e5fdc98aeddd027228a",
+        "s0715-c38b7cbba6bdf790649c",
+        "s0715-117a05b98f335df42fc1",
+        "s0715-905744668930a647931b",
+        "s0715-69097ada11e978388be1",
+        "s0715-e2d626a41344bd2c89be",
+        "s0715-f7785004eedbf61aba88"
+      ],
+      "from": "05-run_unverified_old_tolerance-FullControllerCanonicalLaw",
+      "relation": "REFINES",
+      "retained_scope": "Original Sixth outcome and higher-heartbeat retry remain byte-identical INCONCLUSIVE. Only this exact mutant target receives the separately bound later evidence; no tranche-wide replacement or physical-controller refutation.",
+      "target": "05-run_unverified_old_tolerance-FullControllerCanonicalLaw: full_phase_computed_tolerance_decoded_parity with old execution and computed decoder; mutant SHA-256 89b9823fdbc8d4106fd8e8eb449dae8079cfe180c37859d95f23d222afded9eb",
+      "to": "D06-02"
+    },
+    {
+      "from": "T13-RESIDUAL-HAS",
+      "to": "T14-I-SKK-HAS",
+      "relation": "SUPERSEDES",
+      "target": "Closed I/SKK target noninhabitation in HAS",
+      "basis_source_ids": [
+        "identity-src-13439cfa61b2dbc49571",
+        "identity-src-ae495071a75fcc65a509"
+      ],
+      "retained_scope": "Retains T13 positive formation/F/G witness and its literal pending header; later exact all-rule proof resolves only this specified noninhabitation question."
+    },
+    {
+      "from": "T13-RESIDUAL-PLUS",
+      "to": "T14-I-SKK-PLUS",
+      "relation": "SUPERSEDES",
+      "target": "Closed I/SKK target noninhabitation in PLUS",
+      "basis_source_ids": [
+        "identity-src-13439cfa61b2dbc49571",
+        "identity-src-ae495071a75fcc65a509"
+      ],
+      "retained_scope": "Retains T13 positive formation/F/G witness and its literal pending header; later exact all-rule proof resolves only this specified noninhabitation question."
+    }
+  ],
+  "selectors": [
+    {
+      "family": "t07-criterion-v3",
+      "result_id": "T07-CRITERION-V3",
+      "statement_sha256": "a528ed7fd42925e9c5528c77da6cb5b40c5887ef18196978df9e8d36114450ae"
+    },
+    {
+      "family": "t07-dynamic-v2",
+      "result_id": "T07-DYNAMIC-V2",
+      "statement_sha256": "4cc600ff2a5eb3b360bcd549ca02b0025b8a51b397ac41aa3bdecb1e1d2cc90b"
+    },
+    {
+      "family": "t07-unknown-root-abc",
+      "result_id": "T07-UNKNOWN-ROOT-ABC",
+      "statement_sha256": "d1df6738b7bed685239a54a94b0ac4c5bc58a71bcebea7cd9f3e6661207524d0"
+    },
+    {
+      "family": "t07-covering-opaque",
+      "result_id": "T07-COVERING-OPAQUE",
+      "statement_sha256": "c40d48e7dba04f14fc4354cd31a1cb6fe1209fa0887db669540a272bdbe8f5b0"
+    },
+    {
+      "family": "t07-finite-history",
+      "result_id": "T07-FINITE-HISTORY",
+      "statement_sha256": "306e46c195619f6d00ba30437f7923b3dc0fb36b6eb9298422f0b0511a552206"
+    },
+    {
+      "family": "t07-compiled-composition",
+      "result_id": "T07-COMPILED-COMPOSITION",
+      "statement_sha256": "d5d1969e242dc884be5ecea693778611b39d25028971ccb162ff1628b9791562"
+    },
+    {
+      "family": "t08-common-history",
+      "result_id": "T08-COMMON-HISTORY",
+      "statement_sha256": "cccdf4e07b3e641258b23139a356f1d25c1eb0f8cfc1bc656d581c4eab3a5ad0"
+    },
+    {
+      "family": "t08-typed-history",
+      "result_id": "T08-TYPED-HISTORY",
+      "statement_sha256": "5283dfeeae41a492b5a0adcf3ff839280b2b680ba337f7492156458f9c9c6541"
+    },
+    {
+      "family": "t08-lifecycle-v4",
+      "result_id": "T08-LIFECYCLE-V4",
+      "statement_sha256": "b8254c4539e26b70f938d060bb8b6239713d7ff6ae44227669b7ae71945d922e"
+    },
+    {
+      "family": "t08-cancellation-v5",
+      "result_id": "T08-CANCELLATION-V5",
+      "statement_sha256": "d2acd236cff35eb59c8d97d669358bebb2672d3b3dc050bed8e78744b6196d54"
+    },
+    {
+      "family": "t08-monotone-clock-v6",
+      "result_id": "T08-MONOTONE-CLOCK-V6",
+      "statement_sha256": "3bbf861b808105a714a9681042bf69a8e004f5522e9a713c532ea4931046a0f8"
+    },
+    {
+      "family": "t08-actual-batch",
+      "result_id": "T08-ACTUAL-BATCH",
+      "statement_sha256": "7a127dd920cb3038c483c9786baeddc58d49ddcc39c0bc45172235c63e8f70c7"
+    },
+    {
+      "family": "t08-native-two-batch",
+      "result_id": "T08-NATIVE-TWO-BATCH",
+      "statement_sha256": "e55b75dfde50d03c937b139c2635a581a64380f9a53abf55ed31532b944193a1"
+    },
+    {
+      "family": "t08-shared-obstruction",
+      "result_id": "T08-SHARED-OBSTRUCTION",
+      "statement_sha256": "0e7c3787918cf28f5dfa12b4736d725e3a788a7f4783d7fc04f3d471a1c7d7d3"
+    },
+    {
+      "family": "t08-shared-typed",
+      "result_id": "T08-SHARED-TYPED",
+      "statement_sha256": "63d420acd85f2d2bb22a9bde994023459db780965cda0bb28f9465a3883fb3ca"
+    },
+    {
+      "family": "t08-protected-controller",
+      "result_id": "T08-PROTECTED-CONTROLLER",
+      "statement_sha256": "9899d74eae40562d08d1c65ee2d8423b316c543e2aaf9bdd0dfb4ee91c29458c"
+    },
+    {
+      "family": "t08-attained-21st",
+      "result_id": "T08-ATTAINED-21ST",
+      "statement_sha256": "53dc9a124feb93d8a2485638268dcb968b7aec7e34e4733159322823c37e7063"
+    },
+    {
+      "family": "t08-finite-bad-store",
+      "result_id": "T08-FINITE-BAD-STORE",
+      "statement_sha256": "ede7e2ac7db8d8221d4ff82c6f4df21e1e906ce2027557c0148793f3768c702c"
+    },
+    {
+      "family": "semantic-cost-control",
+      "result_id": "D06-01",
+      "statement_sha256": "41879fc140393156585023bb35bb0a98f7fa733b975aa9ad1b7f1ae800b652c0"
+    },
+    {
+      "family": "semantic-runtime-control",
+      "result_id": "D06-02",
+      "statement_sha256": "0788002dd49cf66fd1442c22a7868537f22e7ddb05aac04b96250baf5d6516bd"
+    },
+    {
+      "family": "semantic-literal-control",
+      "result_id": "D06-03",
+      "statement_sha256": "6a503ed5632d671168324cff8792c399998cc88a108189e9cfef762542ef35fe"
+    },
+    {
+      "family": "selector-normal-form",
+      "result_id": "D06-04",
+      "statement_sha256": "f1817ca9e3671b2749fe5c87db45263aef1f6dc738575c1131bb68ea88e4c94a"
+    },
+    {
+      "family": "selector-call-domain-transport",
+      "result_id": "D06-05",
+      "statement_sha256": "f6f8cae7e58554f9234fb250500ea38ec538a0401d7598267d298687bfa95807"
+    },
+    {
+      "family": "selector-certified-failure",
+      "result_id": "D06-06",
+      "statement_sha256": "9febc80c10b3cc34f22d0b5056eaf150b63690a118b8a70dbf2604abb9d867b0"
+    },
+    {
+      "family": "t09-finite-primitives",
+      "result_id": "T09-FINITE-PRIMITIVES",
+      "statement_sha256": "c880eb78212a1c0806e52835490d2dc8e755a3c26d4be90aec3166482ef8d408"
+    },
+    {
+      "family": "t09-finite-history-rep",
+      "result_id": "T09-FINITE-HISTORY-REP",
+      "statement_sha256": "572f9290e58a1096dfce9974ef860738203463fbfff51507b7f6c3a59421305b"
+    },
+    {
+      "family": "t09-ordered-initial",
+      "result_id": "T09-ORDERED-INITIAL",
+      "statement_sha256": "d3d2d7608c65f3cfa4ae518b891820c5f0fe9820a25c33d2ddf499c4134ecd20"
+    },
+    {
+      "family": "t09-whole-command-transport",
+      "result_id": "T09-WHOLE-COMMAND-TRANSPORT",
+      "statement_sha256": "a4e1c996dcbb90129de5592ce56264354da841cc2e3c74de78a72b8d62cc1f3c"
+    },
+    {
+      "family": "t09-certificate-checker",
+      "result_id": "D08-01",
+      "statement_sha256": "87ab66b23445593f4b56960ea0b10e339aca29907dec293334ef71eb2ed6dfa1"
+    },
+    {
+      "family": "t09-certificate-existence",
+      "result_id": "D08-02",
+      "statement_sha256": "d9164462860dd8c38c9dc2e3b2370bf6721e1719c3f614af523ca0d9c6701143"
+    },
+    {
+      "family": "t09-certificate-composition",
+      "result_id": "D08-03",
+      "statement_sha256": "66fa342d2cb8b9a9df74434a60024abef90396d7df077ee5abb9137c77faab97"
+    },
+    {
+      "family": "t09-certificate-cost",
+      "result_id": "D08-04",
+      "statement_sha256": "461cbf7b49ec80285cb180fb60955c36677e3a8ef355be11ea30850903d80911"
+    },
+    {
+      "family": "t09-expression-machine",
+      "result_id": "D08-05",
+      "statement_sha256": "d93ca51196e925d78a95598a935c371ace32e72064b9a8c36f1cb99a94869bcd"
+    },
+    {
+      "family": "t09-expression-source",
+      "result_id": "D08-06",
+      "statement_sha256": "2cdddbd66c0d839f64103fd4f809dbde4fd98f9e9ac91853bcbf831230be10b2"
+    },
+    {
+      "family": "t10-occurrence-effects",
+      "result_id": "T10-OCCURRENCE-EFFECTS",
+      "statement_sha256": "5c64f4edacbfb97a7d2b7cbec4e4258f4d1b4ebbcdc13bc2024de656c2bc6f9a"
+    },
+    {
+      "family": "t10-read-cost",
+      "result_id": "T10-READ-COST",
+      "statement_sha256": "e90867fb4cd5f9f3356420ff2726724b28d8771decc9c87301f32018b264c931"
+    },
+    {
+      "family": "t10-interval-quotient",
+      "result_id": "T10-INTERVAL-QUOTIENT",
+      "statement_sha256": "f9c789d88ddc33d10572eeb88134ed1b84ac0eef467953501727dc8b8a3d0031"
+    },
+    {
+      "family": "t10-two-card-frontier",
+      "result_id": "T10-TWO-CARD-FRONTIER",
+      "statement_sha256": "1b8059b40df5245ba92e7e7b774b36b0f8b1050b4c1b130315cf47128f520c2f"
+    },
+    {
+      "family": "t10-model-checker",
+      "result_id": "T10-MODEL-CHECKER",
+      "statement_sha256": "05b7e00c826503cfc57bb795dfa0c587dfd73e4bafae3e84872c47f49334fd72"
+    },
+    {
+      "family": "t10-uniform-completion",
+      "result_id": "T10-UNIFORM-COMPLETION",
+      "statement_sha256": "d80fad7f72c6c3a161d18777b058e280109d442ce4d3e8cd53379328eb57c89f"
+    },
+    {
+      "family": "t10-nonuniform-completion",
+      "result_id": "T10-NONUNIFORM-COMPLETION",
+      "statement_sha256": "5f1b3e83ff1e50614016d60aa743ba72ad197024a4fba0ab2158ef546619d169"
+    },
+    {
+      "family": "t10-completion-written-frontier",
+      "result_id": "T10-COMPLETION-WRITTEN-FRONTIER",
+      "statement_sha256": "f647ef96a74d4528efa6b781053c872f3e3d2454debc376ead965aee96b55c29"
+    },
+    {
+      "family": "t10-robust-compact-certificates",
+      "result_id": "T10-ROBUST-COMPACT-CERTIFICATES",
+      "statement_sha256": "07c6d03dd138f0bbfd4f560e8d8891cd20ce451871823a86f43fb3791c958896"
+    },
+    {
+      "family": "t10-exact-threshold-boundary",
+      "result_id": "T10-EXACT-THRESHOLD-BOUNDARY",
+      "statement_sha256": "e4140e4954fdee0319dee1174c4b6d7f97c8edfa784ea8cdcef319809f4f80c8"
+    },
+    {
+      "family": "t10-printed-collation",
+      "result_id": "T10-PRINTED-COLLATION",
+      "statement_sha256": "6c02110e3153e6b4645729368587a5a710a5059a1c5bc8aa561901f76d37259c"
+    },
+    {
+      "family": "t10-source-version",
+      "result_id": "T10-SOURCE-VERSION",
+      "statement_sha256": "34aa56a3e852c960e707a85c9c522373dd5940295885c0cc86ce2d57c8025fc4"
+    },
+    {
+      "family": "T11-RAW-INDEX-SUBSTITUTION",
+      "result_id": "T11-RAW-INDEX-SUBSTITUTION",
+      "statement_sha256": "e50719fce4f31837932f10ab19abf21716744d16dc6be1d7435f64ee0a7b2822"
+    },
+    {
+      "family": "T11-TYPED-TELESCOPE-NUCLEUS",
+      "result_id": "T11-TYPED-TELESCOPE-NUCLEUS",
+      "statement_sha256": "22d75b0da4adec49f7a52e104f83de3bccde54ddc57da4a4e1febb3b46a68e45"
+    },
+    {
+      "family": "T11-DEPENDENT-ALL",
+      "result_id": "T11-DEPENDENT-ALL",
+      "statement_sha256": "7a2f812b70e0cb203d500f66fb13acb21acdbc49dd3d9ad71ff0d136d0b9c9ab"
+    },
+    {
+      "family": "T11-NORMALIZATION-BOUNDARY",
+      "result_id": "T11-NORMALIZATION-BOUNDARY",
+      "statement_sha256": "b5f6ba97fe1fa68b34f407c95b139a19ca46cfd36f6810fbfb93a1cdb243ab32"
+    },
+    {
+      "family": "t12-concentration",
+      "result_id": "T12-CONCENTRATION",
+      "statement_sha256": "5e4c10bb11a4577f1b06d74805fd60bc132565e1d7da2d36806cb1fbca15afc9"
+    },
+    {
+      "family": "t12-coherent-history",
+      "result_id": "T12-COHERENT-HISTORY",
+      "statement_sha256": "e283dada6b74ae6dfc7b0380c0ea5e873ac351bf3918a4076322bafa5c4755ef"
+    },
+    {
+      "family": "t12-bounded-capture",
+      "result_id": "T12-BOUNDED-CAPTURE",
+      "statement_sha256": "5f2d660dd2584db163f2f470f3835b4ec4b4a79e7821568709d4236ea30225d7"
+    },
+    {
+      "family": "t12-coordination-information",
+      "result_id": "T12-COORDINATION-INFORMATION",
+      "statement_sha256": "745a1fdd5db72b3478b44b75783e8bef10f323ea68a042b79a1002853794d79b"
+    },
+    {
+      "family": "t12-finite-mediator",
+      "result_id": "T12-FINITE-MEDIATOR",
+      "statement_sha256": "f331e72dc53e1cfc640de69db4e0491a07c977f4b63548de0e4ce68ab61fa244"
+    },
+    {
+      "family": "t12-forward-interventions",
+      "result_id": "T12-FORWARD-INTERVENTIONS",
+      "statement_sha256": "92da2333aa6ee9a6d58d8801a86c71b8a611542660946dd7d0df02886a719bff"
+    },
+    {
+      "family": "t12-observation-resource",
+      "result_id": "T12-OBSERVATION-RESOURCE",
+      "statement_sha256": "4c725629513f3daf7a08428203d699f14f1b11eb654d36dcae42dc18c5995b90"
+    },
+    {
+      "family": "t12-report-policy",
+      "result_id": "T12-REPORT-POLICY",
+      "statement_sha256": "ddb672a32ec3012cb79f552b30b2f008754df1bf844c76a41eb5ed6e754b885b"
+    },
+    {
+      "family": "t12-total-integer-report",
+      "result_id": "T12-TOTAL-INTEGER-REPORT",
+      "statement_sha256": "72f9a70327ea1352f42ebca66d99d8a5df408cd6e845d0d2ab16c2515d9fd59e"
+    },
+    {
+      "family": "T13-OPAQUE-REPRESENTATION",
+      "result_id": "T13-OPAQUE-REPRESENTATION",
+      "statement_sha256": "ccb1e4a8f9ea3ece04ef2756ada7043467a658a7626a3d2ba6fd8676d0c53dc4"
+    },
+    {
+      "family": "T13-ATOM-APPLICATION-BRIDGE",
+      "result_id": "T13-ATOM-APPLICATION-BRIDGE",
+      "statement_sha256": "1ad08ca224d2345c730ca2a9e523d4d54cceacd73164ee33ee9801521f7ff7fa"
+    },
+    {
+      "family": "closed-I-SKK-noninhabitation-HAS",
+      "result_id": "T14-I-SKK-HAS",
+      "statement_sha256": "619422404c7f306a58f05df1cc8d8a5db7d87e291d2403f48b6ad2d9ef45acdc"
+    },
+    {
+      "family": "closed-I-SKK-noninhabitation-PLUS",
+      "result_id": "T14-I-SKK-PLUS",
+      "statement_sha256": "43300bb1565f4f2932a278db3eaa06557884c5730f2c311f3bdc217d1a4dec03"
+    },
+    {
+      "family": "T14-CLOSED-PLUS-IDENTITY",
+      "result_id": "T14-CLOSED-PLUS-IDENTITY",
+      "statement_sha256": "0eca78571a63c25e85b550bb2573b67edb34e23ca60d2d3f6754698b30a2a11a"
+    },
+    {
+      "family": "T14-FINITE-CERTIFICATE-HAS",
+      "result_id": "T14-FINITE-CERTIFICATE-HAS",
+      "statement_sha256": "af1c08ba7c988d769ad2135de9b8f9363c215c73da687fd1ebae7f43bcf9ec33"
+    },
+    {
+      "family": "T14-INHABITATION-LIMIT-HAS",
+      "result_id": "T14-INHABITATION-LIMIT-HAS",
+      "statement_sha256": "e7c4004681f11202e3c7697c7a257dd6e7847f214d0dc36364db3349e2307523"
+    },
+    {
+      "family": "T14-FINITE-CERTIFICATE-PLUS",
+      "result_id": "T14-FINITE-CERTIFICATE-PLUS",
+      "statement_sha256": "36fa21cb197e8a8e9fe31e346e34b9a0f8ba8197f5b9f6dec24074648307cd5d"
+    },
+    {
+      "family": "T14-INHABITATION-LIMIT-PLUS",
+      "result_id": "T14-INHABITATION-LIMIT-PLUS",
+      "statement_sha256": "13a5a77c8187dbadfb9f600e70b81f2523f9c97de210757be752a1615957384d"
+    },
+    {
+      "family": "T14-TYPED-EXTENSION",
+      "result_id": "T14-TYPED-EXTENSION",
+      "statement_sha256": "d9d4d7838c896da8905c32bd9882a1f59745f638f6cd6c2c8eb9563998a542c3"
+    },
+    {
+      "family": "T15-RAW-BARE",
+      "result_id": "T15-RAW-BARE",
+      "statement_sha256": "429a3bcad2a13664772f6cf51163948f8a0774e2459299016d97784af1dcbab1"
+    },
+    {
+      "family": "T15-RAW-CERTIFIED",
+      "result_id": "T15-RAW-CERTIFIED",
+      "statement_sha256": "8d835c60b29e89974f497c99c1d01b043ebf8e210dc50ad955e716c44e31f050"
+    },
+    {
+      "family": "T15-BOOLEAN-ANNOTATED",
+      "result_id": "T15-BOOLEAN-ANNOTATED",
+      "statement_sha256": "4337a98ee59fff9f9d3e839a86091de14b3f57d32c2825d34879b92c4d516883"
+    },
+    {
+      "family": "T15-BOOLEAN-BARE",
+      "result_id": "T15-BOOLEAN-BARE",
+      "statement_sha256": "afb150395375f05f55efb3a28b4962476edeefe8abadd7a7ff6cf65558c9a81a"
+    },
+    {
+      "family": "T15-BOOLEAN-TYPABILITY",
+      "result_id": "T15-BOOLEAN-TYPABILITY",
+      "statement_sha256": "acd1c15136b0029fa21d69f419fa66423e1df965eec10c4068f239165de26307"
+    },
+    {
+      "family": "T15-RESTRICTED-GRID",
+      "result_id": "T15-RESTRICTED-GRID",
+      "statement_sha256": "e397175a0d68d1b7edb72708424f95b589c2ac3590ff2f82ac14dbb660855d97"
+    },
+    {
+      "family": "T15-POLYNOMIAL-BOUNDARY",
+      "result_id": "T15-POLYNOMIAL-BOUNDARY",
+      "statement_sha256": "ae6c6928953749acd2567173b0d6747688628cf572ab6d668453f497669953a8"
+    },
+    {
+      "family": "T15-UNIVARIATE-CRITERION",
+      "result_id": "T15-UNIVARIATE-CRITERION",
+      "statement_sha256": "ef8b0538f282fea7239fd63b664eb86a2ff199eece144641d61ac38773e18f72"
+    },
+    {
+      "family": "T15-RAW-KERNEL-BRIDGES",
+      "result_id": "T15-RAW-KERNEL-BRIDGES",
+      "statement_sha256": "3b5a9475e713390b0d1ff0d93622e374c7ff0d9be4db599a7ffbf813b4e2aae5"
+    },
+    {
+      "family": "T15-BOOLEAN-KERNEL-BRIDGES",
+      "result_id": "T15-BOOLEAN-KERNEL-BRIDGES",
+      "statement_sha256": "7f2a12f427cd2b6c3153600a36fc59ced606bf7726e6af39bc26790931b819f3"
+    },
+    {
+      "family": "T15-BARE-GATE-BRIDGES",
+      "result_id": "T15-BARE-GATE-BRIDGES",
+      "statement_sha256": "a210fcc669996ae4d6c6fb6e9b42c59b7cba7a57f2412a1914cba4c518981c6d"
+    },
+    {
+      "family": "T15-RESTRICTED-COMPILER",
+      "result_id": "T15-RESTRICTED-COMPILER",
+      "statement_sha256": "e2614060a5a93327edf7c418a00f10d12d9ce556877c542287a59ab579c8ddce"
+    },
+    {
+      "family": "T15-RESTRICTED-CHECKER",
+      "result_id": "T15-RESTRICTED-CHECKER",
+      "statement_sha256": "f2de16c04824781d3fd490e8ef2f820ee7b5ba5b5e8ae440629cf7c373e2ada2"
+    },
+    {
+      "family": "T15-RESTRICTED-CERTIFICATES",
+      "result_id": "T15-RESTRICTED-CERTIFICATES",
+      "statement_sha256": "88f11f0e22c26c92354b27295b6cebb71b1c80fc6667ff95fed36743631ef4ce"
+    },
+    {
+      "family": "T15-POLYNOMIAL-COMPILER",
+      "result_id": "T15-POLYNOMIAL-COMPILER",
+      "statement_sha256": "9f8da7420a2731efd29a71d7ad10763714b39b6c8642aa0e3b9192a231369251"
+    },
+    {
+      "family": "T15-PYTHON-REFERENCE",
+      "result_id": "T15-PYTHON-REFERENCE",
+      "statement_sha256": "851498e7337c8bdab008ea15d713960f9f7dbefbbcbe6897083d371d067e2b22"
+    },
+    {
+      "family": "T15-RUNTIME-AGREEMENT",
+      "result_id": "T15-RUNTIME-AGREEMENT",
+      "statement_sha256": "151993a81dba100901dd5dce53a88c73429306be86ba21efb7992eb5910989d5"
+    },
+    {
+      "family": "T15-UNIVARIATE-REFERENCE",
+      "result_id": "T15-UNIVARIATE-REFERENCE",
+      "statement_sha256": "bbcf440daf7238e94eee37c325c896d9aad2499cb7cc60a4380f53f84782aba7"
+    },
+    {
+      "family": "t07-existential-adequacy",
+      "result_id": "D15-T07-EXISTENTIAL-ADEQUACY",
+      "statement_sha256": "242cbe6b13de1ec4e4bfcb8145a3e0bfd8ed4554587081456e3f0c387931b2b0"
+    },
+    {
+      "family": "t07-concrete-modal-warrant",
+      "result_id": "D15-T07-CONCRETE-MODAL-WARRANT",
+      "statement_sha256": "5392f6043e46d3388bbb5e21ae4b3dd658646a21e4ba10d90efac93658ec6490"
+    },
+    {
+      "family": "t07-practical-originality",
+      "result_id": "D15-T07-PRACTICAL-ORIGINALITY",
+      "statement_sha256": "954d0fd229fd9182c5b8941f0be91912e03f8902525cbe9a74e57970ce97ff95"
+    },
+    {
+      "family": "t07-token-purpose",
+      "result_id": "D15-T07-TOKEN-PURPOSE",
+      "statement_sha256": "a6130d8df3ae1dd24611f595736dd754ea9ff904466894ea35df795241e3c70e"
+    },
+    {
+      "family": "t07-attestation-import",
+      "result_id": "D15-T07-ATTESTATION-IMPORT",
+      "statement_sha256": "3fa83e88a309dbef44cac542ccdefe01059e6b1a257c506b4b969dc6b726d34a"
+    },
+    {
+      "family": "t07-norm-roles",
+      "result_id": "D15-T07-NORM-ROLES",
+      "statement_sha256": "d6ee950995ec05b5856b3dfd6b3ed9951b14e982d1707a852d9fa16e9ee81cbd"
+    },
+    {
+      "family": "t08-full-determination",
+      "result_id": "D15-T08-FULL-DETERMINATION",
+      "statement_sha256": "58213cf345c7c7dc7f9472f631fe794be3f78fb9729faa98cb4bb0d7f60ce233"
+    },
+    {
+      "family": "t08-integrity-repair",
+      "result_id": "D15-T08-INTEGRITY-REPAIR",
+      "statement_sha256": "62ff8672e61a90a57675c465e761de3bfb663a7a824781b5138c5650f01794f6"
+    },
+    {
+      "family": "t09-exact-supply-target",
+      "result_id": "D15-T09-EXACT-SUPPLY-TARGET",
+      "statement_sha256": "4ccc6411a84c25078ec7fc253b3c65e21cae0dfac31df4b38fe54aa2b808e837"
+    },
+    {
+      "family": "t09-men8-joint-architecture",
+      "result_id": "D15-T09-MEN8-JOINT-ARCHITECTURE",
+      "statement_sha256": "6f9df95b656b86ac4e6304b93af76c022dbb3a8c53541355df8319aa4243f051"
+    },
+    {
+      "family": "t09-qualified-origin-modal",
+      "result_id": "D15-T09-QUALIFIED-ORIGIN-MODAL",
+      "statement_sha256": "490f99bceb4a13eb96503abe43eefdc43ceab2021e911cbfc5a5ccf66eb15cf0"
+    },
+    {
+      "family": "t09-complete-profile-integrity",
+      "result_id": "D15-T09-COMPLETE-PROFILE-INTEGRITY",
+      "statement_sha256": "0a9834d589b3cdb84c41ea43fab7559873ec57ce03ece46a58cb4157513a9f9e"
+    },
+    {
+      "family": "t09-collective-efficacy",
+      "result_id": "D15-T09-COLLECTIVE-EFFICACY",
+      "statement_sha256": "68b66d06caf7c5b18c5902778e1c4fcd7a848c36c0ef9de956b0f183f2274379"
+    },
+    {
+      "family": "t09-warrant-standard",
+      "result_id": "D15-T09-WARRANT-STANDARD",
+      "statement_sha256": "467b986c92d87f29853e5ef479fe8d3274754789604db442b1197277d8f6fb33"
+    },
+    {
+      "family": "t10-law-and-supply",
+      "result_id": "D15-T10-LAW-AND-SUPPLY",
+      "statement_sha256": "6cb4cc1c70df17f5766263790cc3980e3a5650bd0b1a67cd6985f3d475c88f68"
+    },
+    {
+      "family": "t10-kind-priority",
+      "result_id": "D15-T10-KIND-PRIORITY",
+      "statement_sha256": "42d17e1fb8dab812d7f152d49a027eb7a0c48dcc30b9314d54de532d0576c43b"
+    },
+    {
+      "family": "t10-ea-transfer",
+      "result_id": "D15-T10-EA-TRANSFER",
+      "statement_sha256": "5eecc9d4ae47e08dce17496a1c0cd68db5d32a5d2be0a51588f4d2837686b886"
+    },
+    {
+      "family": "t10-actual-powers",
+      "result_id": "D15-T10-ACTUAL-POWERS",
+      "statement_sha256": "887e8c684a18d6a302377b5476696d465efc1abac7a057e9d7d47d37af888d8d"
+    },
+    {
+      "family": "t10-joint-coverage",
+      "result_id": "D15-T10-JOINT-COVERAGE",
+      "statement_sha256": "7e8789b03330d79792dfd5589efce1c85cc7189b19a118e36ed0fce50f74349e"
+    },
+    {
+      "family": "t10-organised-care",
+      "result_id": "D15-T10-ORGANISED-CARE",
+      "statement_sha256": "5a496cfa8d7fe6bd69a70d96a187021aa649e297bc9a7adbc8ce5fd3728ecf9e"
+    },
+    {
+      "family": "t10-coordination-authority",
+      "result_id": "D15-T10-COORDINATION-AUTHORITY",
+      "statement_sha256": "6bbd05843b33bc30ed9401196d231d87b256bad7353a21a48f4a4c5739242376"
+    },
+    {
+      "family": "t10-practical-perfection",
+      "result_id": "D15-T10-PRACTICAL-PERFECTION",
+      "statement_sha256": "3f76f21a8b777be485ca9c9b25de5e20769252f9a1d46b67bcc96db2cbb7ceaa"
+    },
+    {
+      "family": "t10-bounded-release-care",
+      "result_id": "D15-T10-BOUNDED-RELEASE-CARE",
+      "statement_sha256": "b9aae14a00975589b3aa847aaf230d908c0751d1a04075f52483dfc4c6e9fe0a"
+    },
+    {
+      "family": "t11-actual-bearer",
+      "result_id": "D15-T11-ACTUAL-BEARER",
+      "statement_sha256": "7c4275156c94437478309801679d68586f7ad33fcf98d4e246cba3c0bc98828b"
+    },
+    {
+      "family": "t11-accounting-bridge",
+      "result_id": "D15-T11-ACCOUNTING-BRIDGE",
+      "statement_sha256": "20d73cd881c4d352e667a37b0a8053f9ab4bda1474942890eff95df490e8b63e"
+    },
+    {
+      "family": "t11-explicability-stop",
+      "result_id": "D15-T11-EXPLICABILITY-STOP",
+      "statement_sha256": "1bc6782e2825c357c314ddda9bf6f8a4e2f3ffb6a118786a00a7a567796fda63"
+    },
+    {
+      "family": "t11-intrinsic-prior-ownership",
+      "result_id": "D15-T11-INTRINSIC-PRIOR-OWNERSHIP",
+      "statement_sha256": "c4a819e48b01a7db649210da2afd47c3793b693bd36168fa8ce489266050f814"
+    },
+    {
+      "family": "t11-uniform-requisite",
+      "result_id": "D15-T11-UNIFORM-REQUISITE",
+      "statement_sha256": "74d3a0c8b58f9f4747c3578bc858d78a52c9586c0b92709cb4f2e30e51c10d5c"
+    },
+    {
+      "family": "t11-norm-grounding-stop",
+      "result_id": "D15-T11-NORM-GROUNDING-STOP",
+      "statement_sha256": "640856d0ad42efd2f764c9bc473efe9933c3025a8bf77ab6ee0e813d9bad5bf5"
+    },
+    {
+      "family": "t12-stochastic-support",
+      "result_id": "D15-T12-STOCHASTIC-SUPPORT",
+      "statement_sha256": "fd76bca5000e2b74597fc61c12e501461ffd02df39dae7ae7801c79314a32c49"
+    },
+    {
+      "family": "t12-local-original-participant",
+      "result_id": "D15-T12-LOCAL-ORIGINAL-PARTICIPANT",
+      "statement_sha256": "4cbda6bca66dfd42d5db3a1d04ace09a315130cf3b653678c23c30f26e84c62a"
+    },
+    {
+      "family": "t12-warrant-probability",
+      "result_id": "D15-T12-WARRANT-PROBABILITY",
+      "statement_sha256": "ec0ff3260614bda1d74a4195d12de366ecca9ce92eaecd4d4e7f7a85e006479b"
+    },
+    {
+      "family": "t12-plural-contributor",
+      "result_id": "D15-T12-PLURAL-CONTRIBUTOR",
+      "statement_sha256": "ba5f755f497e073c4c674752c465b5c233b767642536481edba7816df19bcac1"
+    },
+    {
+      "family": "t12-intrinsic-actuality",
+      "result_id": "D15-T12-INTRINSIC-ACTUALITY",
+      "statement_sha256": "8907f2c3875dd7715f3596edf2ae1139143afb404477aa0a6e96422d1e9e3c8e"
+    },
+    {
+      "family": "t12-rational-recognition",
+      "result_id": "D15-T12-RATIONAL-RECOGNITION",
+      "statement_sha256": "c685e3d792fc93f28845b61108987fdc0d18ca3dafc292d24b8b1ce583a46ec1"
+    },
+    {
+      "family": "t12-continuing-dependence",
+      "result_id": "D15-T12-CONTINUING-DEPENDENCE",
+      "statement_sha256": "a5c440f88ef9f34e2be12dc80391edef5893249329eb29209fd5d835d9360432"
+    },
+    {
+      "family": "t12-assurance-specific-integrity",
+      "result_id": "D15-T12-ASSURANCE-SPECIFIC-INTEGRITY",
+      "statement_sha256": "8259642bf3b7fa71b2e7c17c83232518a0d082b71437b34f9b61838dc76cad6a"
+    },
+    {
+      "family": "t13-eligible-incompatible",
+      "result_id": "D15-T13-ELIGIBLE-INCOMPATIBLE",
+      "statement_sha256": "3f67fa9ef7c4ba577dd1ef01f6c3b826a7aed2f325219077f986c2e87c4b04e9"
+    },
+    {
+      "family": "t13-assurance-impairment",
+      "result_id": "D15-T13-ASSURANCE-IMPAIRMENT",
+      "statement_sha256": "e1a649771aea64d5fa834ac04d5ac003923252ff798c1c3a2d947ccaa8e50b55"
+    },
+    {
+      "family": "t13-objective-norm-grounding",
+      "result_id": "D15-T13-OBJECTIVE-NORM-GROUNDING",
+      "statement_sha256": "3f1f2abe5c26b30f88734f8e285e164026b0b29d357949fc5ecacce39d90ae75"
+    },
+    {
+      "family": "t14-mental-agency-norms",
+      "result_id": "D15-T14-MENTAL-AGENCY-NORMS",
+      "statement_sha256": "7bc250133c561799360fdac0f1854dfeb5e42314e9baef1a3bc429dba128d219"
+    },
+    {
+      "family": "t14-directed-powers-intellect",
+      "result_id": "D15-T14-DIRECTED-POWERS-INTELLECT",
+      "statement_sha256": "0347129e744d247e018a3fb54d9275a98d0aacecfd2f28e5955b62d13855de8a"
+    },
+    {
+      "family": "t14-necessary-truth-bearer",
+      "result_id": "D15-T14-NECESSARY-TRUTH-BEARER",
+      "statement_sha256": "d9d3b3ebbaa84e80d29409718a44a34be2436b00182293be7539d6620e62a7ec"
+    },
+    {
+      "family": "t14-necessary-particular-mind",
+      "result_id": "D15-T14-NECESSARY-PARTICULAR-MIND",
+      "statement_sha256": "38b248cc57663e38032838d27edb3e63a1e7682ac7d2a795e1f4c7f36f7a5d87"
+    },
+    {
+      "family": "t14-clarke-subject",
+      "result_id": "D15-T14-CLARKE-SUBJECT",
+      "statement_sha256": "054e9870265c0aaf2c963116e08425a747133fe9d84e71b80138712102a70dfb"
+    },
+    {
+      "family": "t14-clarke-fidelity",
+      "result_id": "D15-T14-CLARKE-FIDELITY",
+      "statement_sha256": "e20e435b40fc72e4b61d03cd5e2b89261ccfa67a06c4e8f03962c424c7b5229c"
+    },
+    {
+      "family": "t14-descartes-content",
+      "result_id": "D15-T14-DESCARTES-CONTENT",
+      "statement_sha256": "46fd01239d312dee5df59fd4090d06ef921fab1921fed17219bb163b55fea1af"
+    },
+    {
+      "family": "t15-koons-totality",
+      "result_id": "D15-T15-KOONS-TOTALITY",
+      "statement_sha256": "b8a1fcb0019fbf43ab72a71c073f0fe394057f23f6ca9f4ccade1c226be22b12"
+    },
+    {
+      "family": "t15-local-natural-standards",
+      "result_id": "D15-T15-LOCAL-NATURAL-STANDARDS",
+      "statement_sha256": "c0af328732b56b84560ee965e17fb2a746e59f9171d87382b3bdc208ed0a2c8e"
+    },
+    {
+      "family": "d16-t12-zykov",
+      "result_id": "D16-T12-ZYKOV",
+      "statement_sha256": "b21bfdc04efbdf996e287caba8972c77adca5aab701a04a7080ed09f978a5f8c"
+    },
+    {
+      "family": "d16-t12-lewis-2007",
+      "result_id": "D16-T12-LEWIS-2007",
+      "statement_sha256": "29bc1f81bc14757fe49603e5d6d11531bf709d6a156b6e2f3f37b929ad172a17"
+    },
+    {
+      "family": "d16-t12-hansen-migration",
+      "result_id": "D16-T12-HANSEN-MIGRATION",
+      "statement_sha256": "6b9bc4a5911f742404134a90a53a7efd19303844226bc03673bb3b02d29a1d5f"
+    },
+    {
+      "family": "d16-t12-crater-handoff",
+      "result_id": "D16-T12-CRATER-HANDOFF",
+      "statement_sha256": "0298464a39189681817b6112dcdbd3b344e339c9feee25ea500e7c846c0dd3d1"
+    },
+    {
+      "family": "d16-t13-nasa-sandia-transfer",
+      "result_id": "D16-T13-NASA-SANDIA-TRANSFER",
+      "statement_sha256": "97955cd083d051bd7fd9e45b2295f537463cc063d29f1c965cbd1eb947e1e10e"
+    },
+    {
+      "family": "d16-t13-sts131-transmission",
+      "result_id": "D16-T13-STS131-TRANSMISSION",
+      "statement_sha256": "1a30dec98718595274ae2ecc38397dfa4aedd9ac8e4ac3690f0a737d5db7e27e"
+    },
+    {
+      "family": "d16-t13-nasa-compensation",
+      "result_id": "D16-T13-NASA-COMPENSATION",
+      "statement_sha256": "c5de1c079d982547d0a8de822909ed8b88ae4382a67bb8d234d099069c622d66"
+    },
+    {
+      "family": "d16-t13-nesc-interfaces",
+      "result_id": "D16-T13-NESC-INTERFACES",
+      "statement_sha256": "6a7df67cf8eb0b8b5d295e2b7a410ef1a4c210b674281613ac9cee2060006db2"
+    },
+    {
+      "family": "d16-t13-sensor-applicability",
+      "result_id": "D16-T13-SENSOR-APPLICABILITY",
+      "statement_sha256": "5125625f609ff1bafaf9458ed8db4a1c6b6cb060065fa11f24ab3a6aaa7a3b34"
+    },
+    {
+      "family": "d16-t13-greitemeyer",
+      "result_id": "D16-T13-GREITEMEYER",
+      "statement_sha256": "33790c03ac90574f071ad94f514bd2304d90124b86741c327e1fe12300a851cf"
+    },
+    {
+      "family": "d16-t13-mojzisch",
+      "result_id": "D16-T13-MOJZISCH",
+      "statement_sha256": "ebd0ad0c89de5591f12ff73165c1c05b1ac1d246923d49cd649719fa0c2e8d59"
+    },
+    {
+      "family": "d16-t13-reimer",
+      "result_id": "D16-T13-REIMER",
+      "statement_sha256": "bf4b356c1c403a4a3fb8d9b41674c07423750c649f8d1b74300053d1a58811fa"
+    },
+    {
+      "family": "d16-t13-rothmund",
+      "result_id": "D16-T13-ROTHMUND",
+      "statement_sha256": "520bea0c6347af0268acd0e669d618df5334726c3d37a9bfe0e67538d30c2190"
+    },
+    {
+      "family": "d16-t13-cordes",
+      "result_id": "D16-T13-CORDES",
+      "statement_sha256": "681adb5403fbd51d8ecffd6e08542a1c3427f6b86c49355cc648b1fa41bab27b"
+    },
+    {
+      "family": "d16-t13-zercher",
+      "result_id": "D16-T13-ZERCHER",
+      "statement_sha256": "e55ac642b5b26ecda26f604ea6841d9458873cc482822ee5a53e3236f6596b02"
+    },
+    {
+      "family": "d16-t13-summers",
+      "result_id": "D16-T13-SUMMERS",
+      "statement_sha256": "1002595299f0e8bdbede627b53ddbc5bc898a0ddb8df65f1edad5055b56bfd67"
+    },
+    {
+      "family": "d16-t13-identity-sources",
+      "result_id": "D16-T13-IDENTITY-SOURCES",
+      "statement_sha256": "210e42540376c900cfad0472a9dc1f95f790b51365395928976586c8816e6a3d"
+    },
+    {
+      "family": "d16-t13-institutional-acts",
+      "result_id": "D16-T13-INSTITUTIONAL-ACTS",
+      "statement_sha256": "d30fa01c58f2c03979de9772bfd53a798b1fdcc5a6d8f6131a865b97dfb65625"
+    },
+    {
+      "family": "d16-t14-brinkmann",
+      "result_id": "D16-T14-BRINKMANN",
+      "statement_sha256": "115af9d71dd744d23116aee291d8b4096e494b4a861998ba1db5f2526223b75d"
+    },
+    {
+      "family": "d16-t14-horner",
+      "result_id": "D16-T14-HORNER",
+      "statement_sha256": "3cfe32e716d637dfb54be6b96e2f5b57fce8af5726c78d3a0937103f2dda6102"
+    },
+    {
+      "family": "d16-t14-caldwell-2008",
+      "result_id": "D16-T14-CALDWELL-2008",
+      "statement_sha256": "7fbdf62260c65c97d6a415d5217be2e4a1df63720807b581a7a4fe8d82db9faa"
+    },
+    {
+      "family": "d16-t14-caldwell-2009",
+      "result_id": "D16-T14-CALDWELL-2009",
+      "statement_sha256": "ef6825b4e3c25227b0b6ad31db74465fbbe48188226a3a37f5a2da5581793e25"
+    },
+    {
+      "family": "d16-t14-lewis-transfer",
+      "result_id": "D16-T14-LEWIS-TRANSFER",
+      "statement_sha256": "2ca472affc2af46d5ed6fb14edc176e95a7650fa6c9c9ce4a45e8d154230bbf5"
+    },
+    {
+      "family": "d16-t14-bongard",
+      "result_id": "D16-T14-BONGARD",
+      "statement_sha256": "9775ef85b06b5ec6a0613ae4ceba0514157cd9d4d84e23c97d3921d1550d2744"
+    },
+    {
+      "family": "d16-t14-kwiatkowski",
+      "result_id": "D16-T14-KWIATKOWSKI",
+      "statement_sha256": "bff448d11df6fd65b08bf71e70395f1a996180c575eb985d7992b9da9766afe6"
+    },
+    {
+      "family": "d16-t14-edmonds",
+      "result_id": "D16-T14-EDMONDS",
+      "statement_sha256": "5b5c87b3ba52ff2675accd4a98a0aec81b42c3afcbd8507ebd020397a2ad1eb3"
+    },
+    {
+      "family": "d16-t14-derex",
+      "result_id": "D16-T14-DEREX",
+      "statement_sha256": "af51564bf39f6207326026d09ae4c0486ae79b7c18a876b3bee80ddbd1a80fd6"
+    },
+    {
+      "family": "d16-t14-saral",
+      "result_id": "D16-T14-SARAL",
+      "statement_sha256": "c0e9233b95fddfb927d6313dcffe76593a115cb7799f55430db159a61df685d7"
+    },
+    {
+      "family": "d16-t14-nicholson",
+      "result_id": "D16-T14-NICHOLSON",
+      "statement_sha256": "341e7b4b89e9134c505d41acdf3bf406c47accc4d73daa6467e26ae449899b36"
+    },
+    {
+      "family": "d16-t14-chimento",
+      "result_id": "D16-T14-CHIMENTO",
+      "statement_sha256": "1a4770d49a91e33bd3781df2d6b3a5ad6f484ebcc2cd2b3f5dd9ab7fcdcf1ed9"
+    },
+    {
+      "family": "d16-t14-aplin",
+      "result_id": "D16-T14-APLIN",
+      "statement_sha256": "d8d97c8c3672a59b4199a44618ccfd0607e00f8dbc13ac4b45c87d341636e5c6"
+    },
+    {
+      "family": "d16-t14-vogel",
+      "result_id": "D16-T14-VOGEL",
+      "statement_sha256": "462d91d0ec1d4c1a26d3caf745fe270d993d86424e35fcd449cd952ab62179a2"
+    },
+    {
+      "family": "d16-t14-boussard",
+      "result_id": "D16-T14-BOUSSARD",
+      "statement_sha256": "b6b610e617c82bb964fd1cac5f27667edc1a0f97284bba56e29a9f69bd2ffa7a"
+    },
+    {
+      "family": "d16-t14-kriegman",
+      "result_id": "D16-T14-KRIEGMAN",
+      "statement_sha256": "d00f5e3699e71ab738878d1f2485f6aa921049164c467f47fa0b70743418bae5"
+    },
+    {
+      "family": "d16-t15-pan",
+      "result_id": "D16-T15-PAN",
+      "statement_sha256": "42c8915cdd1e8d68855fff489df663eb58727f4f490d783615b3aaa1d1c676e5"
+    },
+    {
+      "family": "d16-t15-replibench",
+      "result_id": "D16-T15-REPLIBENCH",
+      "statement_sha256": "1597e69d134d3975090692334056a9f4fa72bd58986541efffd8993136ed4c75"
+    },
+    {
+      "family": "d16-t09-two-port",
+      "result_id": "D16-T09-TWO-PORT",
+      "statement_sha256": "f63259ed830d61d18f121c3d3feaa86759b798b20268f6f0f3dee4ddf8dd8b4c"
+    },
+    {
+      "family": "d16-t09-next-service",
+      "result_id": "D16-T09-NEXT-SERVICE",
+      "statement_sha256": "a996cbd93862cf26fd7376b3b1f8c57daada15b13eed6d38963c0e835d79f853"
+    },
+    {
+      "family": "d16-t13-five-state",
+      "result_id": "D16-T13-FIVE-STATE",
+      "statement_sha256": "ea6124b3a9723ea5f467ed3c4a425f810f15f4d93e21a4f9bea2a7e8258eaf3d"
+    },
+    {
+      "family": "d16-t13-probability-baseline",
+      "result_id": "D16-T13-PROBABILITY-BASELINE",
+      "statement_sha256": "9eac32357f3e773ce53d3bc70f308fef2eafd0f422b06d073b5498ec9121e9ee"
+    },
+    {
+      "family": "d16-t13-missing-outcomes",
+      "result_id": "D16-T13-MISSING-OUTCOMES",
+      "statement_sha256": "acd550247ba4dcc41016b7f8aea446edf654db37027c0e038cf910e71557dfd5"
+    },
+    {
+      "family": "d16-t13-collective-premises",
+      "result_id": "D16-T13-COLLECTIVE-PREMISES",
+      "statement_sha256": "f75211211d75b41aca09fab8801835f9f33000bbc3f3d432e51848e421636633"
+    },
+    {
+      "family": "d16-t13-prospective",
+      "result_id": "D16-T13-PROSPECTIVE",
+      "statement_sha256": "ebef36de69deb5404be0d2e984c2507503d5b24cd2cf491daac4ba2c5a1d5ab4"
+    },
+    {
+      "family": "language-attested-editorial-source",
+      "result_id": "T12-LANGUAGE-ATTESTATION",
+      "statement_sha256": "65402b6058ccc32086cbe3421aebf540da8e14679815381ee0727576ee65c52c"
+    },
+    {
+      "family": "language-source-reconstruction",
+      "result_id": "T13-LANGUAGE-RECONSTRUCTION",
+      "statement_sha256": "cc535f3bebb0bde95ec62fc0000a6e90a5a025a34d4a1386a4b5c5b5a06d03dd"
+    },
+    {
+      "family": "language-pinned-occurrence",
+      "result_id": "T14-LANGUAGE-OCCURRENCE",
+      "statement_sha256": "02fa813cda105e2b09fd1f28f7ed94c75982d02346cd40747961cac76e0c52f9"
+    },
+    {
+      "family": "language-supplemental-source-identities",
+      "result_id": "T14-LANGUAGE-SENSE-SOURCE-IDENTITIES",
+      "statement_sha256": "6d3993a1394a66b81f0aef391df8d2a3666fac8eaf5f98f99c62b0008550bd91"
+    },
+    {
+      "family": "language-candidate-sense-scope",
+      "result_id": "T14-LANGUAGE-SENSE-SCOPE",
+      "statement_sha256": "b5fc303640198965bd5f77b4e0daabb2068222e2c3ce6f1f10d42f8eacf76091"
+    },
+    {
+      "family": "language-join-parity-admission",
+      "result_id": "T15-LANGUAGE-ADMISSION-STOP",
+      "statement_sha256": "dec02ec3c1e02b5d99e2a09bd29cfa9931d20eebb96ccd59f2af70ac5cb7241f"
+    },
+    {
+      "family": "d18-t15-answer-law",
+      "result_id": "D18-T15-ANSWER-LAW",
+      "statement_sha256": "e9667052367dc16a605edcb9988fa014cfe2e3bffb885837d564ec57f3b03f21"
+    },
+    {
+      "family": "d18-t15-causal-contribution",
+      "result_id": "D18-T15-CAUSAL-CONTRIBUTION",
+      "statement_sha256": "f1eb0262cf780578317d94127d6289df37773d5d1db97bc5bb5adcc76bf3a915"
+    },
+    {
+      "family": "d18-t15-passive-link",
+      "result_id": "D18-T15-PASSIVE-LINK",
+      "statement_sha256": "70efe0cd10e4471733befe9335480c73cdc3aff3fa867548890b3ec1ef11e0c9"
+    },
+    {
+      "family": "d18-t15-recording-error",
+      "result_id": "D18-T15-RECORDING-ERROR",
+      "statement_sha256": "34c8a150f6416b2223466c2c80de5f0c0bab2b8129563d981bde5d26a23c46b0"
+    },
+    {
+      "family": "d18-t15-fixed-sample",
+      "result_id": "D18-T15-FIXED-SAMPLE",
+      "statement_sha256": "43c399bf2461ab719e07b8a707ff6a4c5fb66e5026202d434e8c62fdfdfd82c3"
+    },
+    {
+      "family": "d18-t15-sequential",
+      "result_id": "D18-T15-SEQUENTIAL",
+      "statement_sha256": "3e31b2cd8e92fa32dfea4d0471018f0f15bbd5371cbf19a613553f98720bd399"
+    },
+    {
+      "family": "d18-t15-two-answer-limit",
+      "result_id": "D18-T15-TWO-ANSWER-LIMIT",
+      "statement_sha256": "c15ede9eddbaa80251ee60c060f99fcac05cde7902d6b58d1a4606ae610cf860"
+    },
+    {
+      "family": "d18-t15-empirical",
+      "result_id": "D18-T15-EMPIRICAL",
+      "statement_sha256": "23a3de44fe647b1a4b670c14e1147be11784a983af41596b26c36bda5d93c41f"
+    }
+  ],
+  "legacy_endpoints": [
+    {
+      "calculus": "OTHER",
+      "domain": "FINITE_MODEL",
+      "id": "05-run_unverified_old_tolerance-FullControllerCanonicalLaw",
+      "json_pointer": "/checks/31/outcomes/5",
+      "owner_path": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+      "owner_sha256": "879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89",
+      "statement": "{\"diagnostic_sha256\":\"ad1528b0219a2e72611c9e1bf2bf0df3b281c07f684afe32d12398aa642eb4b9\",\"exit_code\":1,\"id\":\"05-run_unverified_old_tolerance-FullControllerCanonicalLaw\",\"source_sha256\":\"89b9823fdbc8d4106fd8e8eb449dae8079cfe180c37859d95f23d222afded9eb\",\"status\":\"INCONCLUSIVE\"}",
+      "target": "05-run_unverified_old_tolerance-FullControllerCanonicalLaw: full_phase_computed_tolerance_decoded_parity with old execution and computed decoder; mutant SHA-256 89b9823fdbc8d4106fd8e8eb449dae8079cfe180c37859d95f23d222afded9eb"
+    },
+    {
+      "calculus": "NONE",
+      "domain": "SOURCE_TEXT",
+      "id": "07-change_controller_tolerance-ActualExponentialMoments",
+      "json_pointer": "/checks/30/outcomes/7",
+      "owner_path": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+      "owner_sha256": "879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89",
+      "statement": "{\"diagnostic_sha256\":\"48d300acb1e18710d8ab2a4012a6dcc68d6211f88ac66e805477bbf442c2d39e\",\"exit_code\":1,\"id\":\"07-change_controller_tolerance-ActualExponentialMoments\",\"source_sha256\":\"7b639a064e5d523827750a8a9e8527b4f172b45523ca2d32e565a10ba3348318\",\"status\":\"INCONCLUSIVE\"}",
+      "target": "07-change_controller_tolerance-ActualExponentialMoments: exact full-file proof application at lines 91-92; mutant SHA-256 7b639a064e5d523827750a8a9e8527b4f172b45523ca2d32e565a10ba3348318"
+    }
+  ]
+}

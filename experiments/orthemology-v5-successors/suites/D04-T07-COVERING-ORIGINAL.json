@@ -1,0 +1,1632 @@
+{
+  "id": "D04-T07-COVERING-ORIGINAL",
+  "family": "t07-covering-physical",
+  "result_families": [
+    "t07-covering-opaque"
+  ],
+  "origin_archive_sha256": "50dcf231c51b56c4dadb62ac923ac75fbaab69965f4d4c17bf82decbd9a79cd5",
+  "source_ids": [
+    "D04-SRC-3a60e77657e62bc93c61",
+    "D04-SRC-2431f715522ff5c8521e",
+    "D04-SRC-f1584a17208e07bc8ece",
+    "D04-SRC-04751e4fc8655e5e4fa1",
+    "D04-SRC-c9c17502f108e1339903",
+    "D04-SRC-5de17025d3f806caa301",
+    "D04-SRC-3ab891a6b0d80056ba3b",
+    "D04-SRC-ce8c502e0267b3b3ac23",
+    "D04-SRC-707c96d4662b5e48b416",
+    "D04-SRC-01aa8f465e3da08d6c43",
+    "D04-SRC-e97ee6a071b798613cfb",
+    "D04-SRC-569bb578fd9676471311",
+    "D04-SRC-35bab04f26bacff92869",
+    "D04-SRC-b810f6af43d8e65d4b37",
+    "D04-SRC-9fb769959e1fddf5a31d",
+    "D04-SRC-7dbb64526f18f4c8fef6",
+    "D04-SRC-26884bf7f7de437c31ad",
+    "D04-SRC-ce1c45676a5f785a1b5d",
+    "D04-SRC-498037ffed184ed17e19",
+    "D04-SRC-62444a0505edc2414876",
+    "D04-SRC-a85d94dc414a670c7a8f",
+    "D04-SRC-be2c9366c9dcd528896a"
+  ],
+  "review_ids": [
+    "T07-COVERING-OPAQUE-REVIEW-1"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+      "declaration": "theorem least_portfolio_eq_coveringNumber (q k : ℕ) (hq : q ≤ Fintype.card α) :\n    leastPortfolioSize α q k = coveringNumber α (Fintype.card α-q) k := by\n  unfold leastPortfolioSize coveringNumber\n  congr 1\n  ext t\n  exact portfolio_cover_sizes_iff q k t hq\n\nomit [DecidableEq α] in",
+      "target_sha256": "9a531a877cc60cc67e774edfb1bfa7a8c5801d4fb10f574e369bc22027d3acdf",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D04-SRC-ce8c502e0267b3b3ac23",
+      "declaration": "theorem deterministic_cap_lower_bound\n    (F : Finset (Finset α)) (support : Action → Finset α)\n    (admitted : ∀ a, support a ∈ F) (π : Policy Action Obs)\n    (observe : Finset α → List (Action × Obs) → Action → Obs)\n    (failed : List (Action × Obs) → Action → Obs) (q k N : ℕ)\n    (hu : CoveringKernel.Uniform q F) (hop : Opaque support π observe failed k)\n    (hcap : ∀ T : Finset α, T.card = k → SuccessWithin support π observe T N) :\n    coveringNumber α (Fintype.card α-q) k ≤ N := by\n  have hpU : CoveringKernel.Uniform q (portfolio support π failed N) := by\n    intro P hP\n    obtain ⟨i, _, rfl⟩ := mem_image.mp hP\n    exact hu _ (admitted _)\n  have hpA : CoveringKernel.Available k (portfolio support π failed N) := by\n    intro T hT\n    exact (success_iff_portfolio support π observe failed k hop T hT N).mp (hcap T hT)\n  have hcard : (portfolio support π failed N).card ≤ N := by\n    simpa [portfolio] using card_image_le (s := range N)\n      (f := fun n => support (spine π failed n))\n  exact (coveringNumber_le_portfolio_card q k _ hpU hpA).trans hcard",
+      "target_sha256": "3b75f78c64ed476513f75fde4e1366dcdd81e52d509b3770569cbe704da43fe9",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D04-SRC-ce8c502e0267b3b3ac23",
+      "declaration": "theorem randomized_below_cover_fixed_root_world\n    (F : Finset (Finset α)) (support : Action → Finset α)\n    (admitted : ∀ a, support a ∈ F)\n    (μ : Measure Ω) [IsProbabilityMeasure μ] (π : Ω → Policy Action Obs)\n    (observe : Finset α → List (Action × Obs) → Action → Obs)\n    (failed : List (Action × Obs) → Action → Obs) (B c q N : ℕ)\n    (hB : 1 ≤ B) (hc : 1 ≤ c) (hu : CoveringKernel.Uniform q F)\n    (hop : ∀ ω, Opaque support (π ω) observe failed (B+c-1))\n    (hsmall : N < coveringNumber α (Fintype.card α-q) (B+c-1)) :\n    ∃ A : Finset α, A.card = c ∧\n      ∃ S : Finset (Option α), S ⊆ AttributionKernel.actualRoots A ∧ S.card = B ∧\n        ¬ (∀ᵐ ω ∂μ,\n          SuccessWithin support (π ω) observe (AttributionKernel.taintedLabels A S) N) := by\n  classical\n  have hbad : ∃ T : Finset α, T.card = B+c-1 ∧\n      ¬ (∀ᵐ ω ∂μ, SuccessWithin support (π ω) observe T N) := by\n    by_contra h\n    push_neg at h\n    have hl := randomized_ae_cap_lower_bound F support admitted μ π observe failed\n      q (B+c-1) N hu hop h\n    omega\n  obtain ⟨T, hT, hfail⟩ := hbad\n  obtain ⟨A, hA, S, hSr, hS, hST⟩ :=\n    AttributionKernel.maximal_taint_realizable B c hB hc T hT\n  exact ⟨A, hA, S, hSr, hS, hST ▸ hfail⟩",
+      "target_sha256": "49ce77480858f4957a6cfb3f3c4831e183442c12e5018d65c1705b06d95b1a2c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-4",
+      "source_id": "D04-SRC-569bb578fd9676471311",
+      "declaration": "theorem correct_start_already_done (hit : ℕ → Prop) [DecidablePred hit] :\n    after true hit 0 = true := rfl",
+      "target_sha256": "0ab441156cf203ee9865d02365ba65d6d39ce3a0e2e390aac5e1d3021a8fa818",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "positive-infrastructure",
+      "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "author-wrong_complement",
+      "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "author-wrong_portfolio_card",
+      "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "author-missing_opacity",
+      "source_id": "D04-SRC-707c96d4662b5e48b416",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "author-strict_attempt_bound",
+      "source_id": "D04-SRC-707c96d4662b5e48b416",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "author-zero_measure_allowed",
+      "source_id": "D04-SRC-e97ee6a071b798613cfb",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "author-one_too_small",
+      "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "primary-full_action_opacity_deleted",
+      "source_id": "D04-SRC-ce8c502e0267b3b3ac23",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "primary-full_action_probability_deleted",
+      "source_id": "D04-SRC-ce8c502e0267b3b3ac23",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "primary-full_action_cover_cap_decreased",
+      "source_id": "D04-SRC-ce8c502e0267b3b3ac23",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "primary-nonce_reuse_upper",
+      "source_id": "D04-SRC-5de17025d3f806caa301",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "primary-maximal_world_omitted",
+      "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "primary-minimum_block_uniformity_deleted",
+      "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "D04-SRC-3a60e77657e62bc93c61",
+        "path": "AllAxioms.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-2431f715522ff5c8521e",
+        "path": "IndependentChecks.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-f1584a17208e07bc8ece",
+        "path": "CanonicalReplies.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+        "path": "CoveringPortfolio.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-c9c17502f108e1339903",
+        "path": "ExactCap.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-5de17025d3f806caa301",
+        "path": "FullCommandInterface.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-3ab891a6b0d80056ba3b",
+        "path": "LabelTransport.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-ce8c502e0267b3b3ac23",
+        "path": "OpaqueActions.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-707c96d4662b5e48b416",
+        "path": "OpaqueSearch.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-01aa8f465e3da08d6c43",
+        "path": "RandomizedFinite.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-e97ee6a071b798613cfb",
+        "path": "RandomizedSearch.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-569bb578fd9676471311",
+        "path": "RepairStateBridge.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-35bab04f26bacff92869",
+        "path": "SourceCorrespondence.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-b810f6af43d8e65d4b37",
+        "path": "Availability.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-9fb769959e1fddf5a31d",
+        "path": "RootImage.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-7dbb64526f18f4c8fef6",
+        "path": "Check.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-26884bf7f7de437c31ad",
+        "path": "NegativeControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-ce1c45676a5f785a1b5d",
+        "path": "TargetCovering.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-498037ffed184ed17e19",
+        "path": "TargetSearch.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-62444a0505edc2414876",
+        "path": "review-documents/D04-SRC-62444a0505edc2414876.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D04-SRC-a85d94dc414a670c7a8f",
+        "path": "dependency-lock/mathlib-lake-manifest.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "D04-SRC-be2c9366c9dcd528896a",
+        "path": "dependency-lock/DEPENDENCIES.json",
+        "role": "LOCK"
+      }
+    ],
+    "modules": [
+      {
+        "name": "AllAxioms",
+        "source_id": "D04-SRC-3a60e77657e62bc93c61",
+        "imports": [
+          "Init",
+          "FullCommandInterface",
+          "ExactCap",
+          "RepairStateBridge"
+        ]
+      },
+      {
+        "name": "IndependentChecks",
+        "source_id": "D04-SRC-2431f715522ff5c8521e",
+        "imports": [
+          "Init",
+          "FullCommandInterface",
+          "ExactCap",
+          "RepairStateBridge"
+        ]
+      },
+      {
+        "name": "CanonicalReplies",
+        "source_id": "D04-SRC-f1584a17208e07bc8ece",
+        "imports": [
+          "Init",
+          "OpaqueSearch"
+        ]
+      },
+      {
+        "name": "CoveringPortfolio",
+        "source_id": "D04-SRC-04751e4fc8655e5e4fa1",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "ExactCap",
+        "source_id": "D04-SRC-c9c17502f108e1339903",
+        "imports": [
+          "Init",
+          "CanonicalReplies",
+          "LabelTransport"
+        ]
+      },
+      {
+        "name": "FullCommandInterface",
+        "source_id": "D04-SRC-5de17025d3f806caa301",
+        "imports": [
+          "Init",
+          "OpaqueActions",
+          "SourceCorrespondence",
+          "CanonicalReplies"
+        ]
+      },
+      {
+        "name": "LabelTransport",
+        "source_id": "D04-SRC-3ab891a6b0d80056ba3b",
+        "imports": [
+          "Init",
+          "CoveringPortfolio"
+        ]
+      },
+      {
+        "name": "OpaqueActions",
+        "source_id": "D04-SRC-ce8c502e0267b3b3ac23",
+        "imports": [
+          "Init",
+          "OpaqueSearch",
+          "RandomizedFinite",
+          "Availability"
+        ]
+      },
+      {
+        "name": "OpaqueSearch",
+        "source_id": "D04-SRC-707c96d4662b5e48b416",
+        "imports": [
+          "Init",
+          "CoveringPortfolio"
+        ]
+      },
+      {
+        "name": "RandomizedFinite",
+        "source_id": "D04-SRC-01aa8f465e3da08d6c43",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "RandomizedSearch",
+        "source_id": "D04-SRC-e97ee6a071b798613cfb",
+        "imports": [
+          "Init",
+          "OpaqueSearch",
+          "RandomizedFinite"
+        ]
+      },
+      {
+        "name": "RepairStateBridge",
+        "source_id": "D04-SRC-569bb578fd9676471311",
+        "imports": [
+          "Init",
+          "OpaqueActions"
+        ]
+      },
+      {
+        "name": "SourceCorrespondence",
+        "source_id": "D04-SRC-35bab04f26bacff92869",
+        "imports": [
+          "Init",
+          "RandomizedSearch",
+          "Availability"
+        ]
+      },
+      {
+        "name": "Availability",
+        "source_id": "D04-SRC-b810f6af43d8e65d4b37",
+        "imports": [
+          "Init",
+          "RootImage"
+        ]
+      },
+      {
+        "name": "RootImage",
+        "source_id": "D04-SRC-9fb769959e1fddf5a31d",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "Check",
+        "source_id": "D04-SRC-7dbb64526f18f4c8fef6",
+        "imports": [
+          "Init",
+          "RepairStateBridge",
+          "ExactCap",
+          "FullCommandInterface"
+        ]
+      },
+      {
+        "name": "NegativeControls",
+        "source_id": "D04-SRC-26884bf7f7de437c31ad",
+        "imports": [
+          "Init",
+          "CanonicalReplies",
+          "RandomizedSearch"
+        ]
+      },
+      {
+        "name": "TargetCovering",
+        "source_id": "D04-SRC-ce1c45676a5f785a1b5d",
+        "imports": [
+          "Init",
+          "CoveringPortfolio"
+        ]
+      },
+      {
+        "name": "TargetSearch",
+        "source_id": "D04-SRC-498037ffed184ed17e19",
+        "imports": [
+          "Init",
+          "OpaqueSearch"
+        ]
+      }
+    ],
+    "module_order": [
+      "CoveringPortfolio",
+      "OpaqueSearch",
+      "RandomizedFinite",
+      "RootImage",
+      "Availability",
+      "OpaqueActions",
+      "RepairStateBridge"
+    ],
+    "positive_roots": [
+      "CanonicalReplies",
+      "CoveringPortfolio",
+      "ExactCap",
+      "FullCommandInterface",
+      "LabelTransport",
+      "OpaqueActions",
+      "OpaqueSearch",
+      "RandomizedFinite",
+      "RandomizedSearch",
+      "RepairStateBridge",
+      "SourceCorrespondence",
+      "Availability",
+      "RootImage"
+    ],
+    "audit_roots": [
+      "AllAxioms",
+      "IndependentChecks",
+      "Check",
+      "NegativeControls",
+      "TargetCovering",
+      "TargetSearch"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "CoveringPortfolio",
+        "name": "CoveringKernel.least_portfolio_eq_coveringNumber"
+      },
+      {
+        "target_id": "target-2",
+        "module": "OpaqueActions",
+        "name": "CoveringKernel.Actions.deterministic_cap_lower_bound"
+      },
+      {
+        "target_id": "target-3",
+        "module": "OpaqueActions",
+        "name": "CoveringKernel.Actions.randomized_below_cover_fixed_root_world"
+      },
+      {
+        "target_id": "target-4",
+        "module": "RepairStateBridge",
+        "name": "CoveringKernel.RepairState.correct_start_already_done"
+      }
+    ],
+    "package_manifest_source_id": "D04-SRC-be2c9366c9dcd528896a",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "D04-SRC-be2c9366c9dcd528896a"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      }
+    ],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-2f3e46ab106b6f9e5565",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "50dcf231c51b56c4dadb62ac923ac75fbaab69965f4d4c17bf82decbd9a79cd5",
+        "expected_bytes": 568367,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "original",
+        "source_id": "D04-SRC-35a2ad7903b60225bf6c",
+        "recipe": "t07-covering-translated-v1",
+        "sha256": "e9e76dc61e99b298c47d4a3a139916111ef5b04be42fb729d0ebc60be770e970",
+        "argument_meanings": {
+          "--output": "FRESH_OUTPUT_DIRECTORY",
+          "--lean": "LEAN_EXECUTABLE",
+          "--mathlib": "MATHLIB_ROOT"
+        },
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "original-driver",
+        "kind": "DRIVER",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:source-recipe}",
+          "t07-covering-translated-v1",
+          "--output",
+          "{out}/original",
+          "--lean",
+          "{tool:lean}",
+          "--mathlib",
+          "{dependency:mathlib}"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 5400,
+        "output_paths": [
+          "original"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-lean-version",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "lean-version"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-verify-inputs-before",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "verify-inputs-before"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RootImage",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RootImage"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Availability",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Availability"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-CoveringPortfolio",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "CoveringPortfolio"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-infrastructure"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-LabelTransport",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "LabelTransport"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-OpaqueSearch",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "OpaqueSearch"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-CanonicalReplies",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "CanonicalReplies"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RandomizedFinite",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RandomizedFinite"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RandomizedSearch",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RandomizedSearch"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-SourceCorrespondence",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "SourceCorrespondence"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ExactCap",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ExactCap"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-OpaqueActions",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "OpaqueActions"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-FullCommandInterface",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "FullCommandInterface"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RepairStateBridge",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RepairStateBridge"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TargetCovering",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TargetCovering"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TargetSearch",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TargetSearch"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-NegativeControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "NegativeControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Check",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Check"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-author-semantics",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "author-semantics"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-author-semantics_OPTIMIZED",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "author-semantics_OPTIMIZED"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-author-wrong_complement",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "author-wrong_complement"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "author-wrong_complement"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-bb416dfc1fb55c35650d",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-author-wrong_portfolio_card",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "author-wrong_portfolio_card"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "author-wrong_portfolio_card"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-bb416dfc1fb55c35650d",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-author-missing_opacity",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "author-missing_opacity"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "author-missing_opacity"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-bb416dfc1fb55c35650d",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          },
+          {
+            "source_id": "D04-SRC-bb416dfc1fb55c35650d",
+            "literal": "application type mismatch",
+            "sha256": "0de3953512b6084ff98ba670955438dd7eb047ba41d9b5dc138cadcb57408fa3"
+          }
+        ]
+      },
+      {
+        "id": "observe-author-strict_attempt_bound",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "author-strict_attempt_bound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "author-strict_attempt_bound"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-bb416dfc1fb55c35650d",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-author-zero_measure_allowed",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "author-zero_measure_allowed"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "author-zero_measure_allowed"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-bb416dfc1fb55c35650d",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-author-one_too_small",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "author-one_too_small"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "author-one_too_small"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-bb416dfc1fb55c35650d",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-verify-inputs-after",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "verify-inputs-after"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-independent-proofs",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "independent-proofs"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-all-author-axioms",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "all-author-axioms"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-primary-full_action_opacity_deleted",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "primary-full_action_opacity_deleted"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "primary-full_action_opacity_deleted"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-f7b9b3cff409e6da7824",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-primary-full_action_probability_deleted",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "primary-full_action_probability_deleted"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "primary-full_action_probability_deleted"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-f7b9b3cff409e6da7824",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-primary-full_action_cover_cap_decreased",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "primary-full_action_cover_cap_decreased"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "primary-full_action_cover_cap_decreased"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-f7b9b3cff409e6da7824",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-primary-nonce_reuse_upper",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "primary-nonce_reuse_upper"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "primary-nonce_reuse_upper"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-f7b9b3cff409e6da7824",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-primary-maximal_world_omitted",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "primary-maximal_world_omitted"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "primary-maximal_world_omitted"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-f7b9b3cff409e6da7824",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-primary-minimum_block_uniformity_deleted",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "primary-minimum_block_uniformity_deleted"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-CoveringPortfolio"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "primary-minimum_block_uniformity_deleted"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-f7b9b3cff409e6da7824",
+            "literal": "error:",
+            "sha256": "5917a7dbc2c315b7b477dd24dfaa60d2d32f6f01a61d490e697ab2947d6d3e3d"
+          }
+        ]
+      },
+      {
+        "id": "observe-review-semantics",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-semantics"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-semantics_OPTIMIZED",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-semantics_OPTIMIZED"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "original/kernel"
+    ]
+  }
+}
