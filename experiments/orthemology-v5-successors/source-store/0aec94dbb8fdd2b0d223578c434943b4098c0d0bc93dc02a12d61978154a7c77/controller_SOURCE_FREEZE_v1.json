@@ -1,0 +1,137 @@
+{
+  "utc": "2026-10-05T15:06:34.844489+00:00",
+  "ninth_source_manifest_sha256": "5a5e4e8a129b70fe713e76f7b24a97823751264fe4bd67a280682b09a407979f",
+  "ninth_replay_result_sha256": "0c594e2270a4aa6d505eff576f634a7b01917d891dcbdac58e2262f89d8a73f0",
+  "files": [
+    {
+      "path": "derive_mutations.py",
+      "sha256": "64b0e67aeee09bbb27dffac097523d6425caf0a72e8cab141f5b84f188bc57fe",
+      "bytes": 3820
+    },
+    {
+      "path": "mutations/CounterReset.lean",
+      "sha256": "a770f7c822785c7243dc5f7c39e693c80af8fde51ca23b68d17fc3826b41e467",
+      "bytes": 4954
+    },
+    {
+      "path": "mutations/DERIVATION.json",
+      "sha256": "629c6c2739f60481d4bb3249f38474cf5aa5072fbd557f0046183b1a8a5736d1",
+      "bytes": 1692
+    },
+    {
+      "path": "mutations/EmpiricalHistoryTruncated.lean",
+      "sha256": "35633954b024de762d61783ba20b80c238b71a1a764e15bf2411ea5ab9ae3aa0",
+      "bytes": 1135
+    },
+    {
+      "path": "mutations/NonStrictCountGuard.lean",
+      "sha256": "dbd8599528a4b659e245a4cb2d9fd26515b739b416e700dad0e187f6a53b40a8",
+      "bytes": 1099
+    },
+    {
+      "path": "mutations/WitnessIgnored.lean",
+      "sha256": "4aa9a911439acdf900e47ad2cd66ce555ab3e6beb6dd1736404ee7eb0204266f",
+      "bytes": 1523
+    },
+    {
+      "path": "replay.py",
+      "sha256": "50cd7300a0836767a078a4eefc796eaf6fdadc9e995be66bd63d70b371c9aba4",
+      "bytes": 6269
+    },
+    {
+      "path": "src/DirectActualLaw.lean",
+      "sha256": "77b0a80d2da8405f22591a7a8c2d94c0bce331ffb75c86b4f1690aa8b42e2958",
+      "bytes": 3251
+    },
+    {
+      "path": "src/DirectController.lean",
+      "sha256": "c68605b22b1c74bdacaec0c586e35f19e80a7154d3d31b3c2edac05feda0f5a5",
+      "bytes": 8752
+    },
+    {
+      "path": "src/DirectCycling.lean",
+      "sha256": "d262dda33bda02d989f65753e312e58cf451fafe1ed70fbc32b7d66184f72dd0",
+      "bytes": 8075
+    },
+    {
+      "path": "src/DirectDynamics.lean",
+      "sha256": "9292534e7bad1c144b5ae374c8de7e768268cbd865a56a1eb277d0e68fef3525",
+      "bytes": 5613
+    },
+    {
+      "path": "src/DirectEndpoint.lean",
+      "sha256": "20af8b9ff9911bcfb4839e8456363cd707d13c19df4269ffd21335dab817cd1f",
+      "bytes": 3454
+    },
+    {
+      "path": "src/DirectMemoryTransitions.lean",
+      "sha256": "50d307ed8779173aca3840673cc0e7e0d676ef7719080ad71fd1afa01d6f4a31",
+      "bytes": 1523
+    },
+    {
+      "path": "src/DirectParity.lean",
+      "sha256": "403d3369cafa7d7285d68bd2b7559d83c20c85e152ce9ef99e63b77ecc8d8d0f",
+      "bytes": 7546
+    },
+    {
+      "path": "src/DirectRun.lean",
+      "sha256": "0d7903e07dec34ff6706a0579b4b59cc911f98240ddc9585be4eb23710542bbf",
+      "bytes": 6964
+    },
+    {
+      "path": "src/DirectSafety.lean",
+      "sha256": "2a763523bd55662c8bc93aa71cd614a5c193739d15c15fb51bbd6add40e1460d",
+      "bytes": 6491
+    },
+    {
+      "path": "src/DirectStability.lean",
+      "sha256": "106c15b37e7b54d132d367687d7a8f3b9b881fdc5f2336059527ab612fdcb7b0",
+      "bytes": 4117
+    },
+    {
+      "path": "src/OrderedCycle.lean",
+      "sha256": "d9d8d6acb612c51d2fb4c8a93013304ca8452f4de40edccfc23083e0208d82ea",
+      "bytes": 1942
+    },
+    {
+      "path": "src/RationalTest.lean",
+      "sha256": "87cfb72769c42a459d47eb0c7e3468882ba196abcb709f79fd5febbc34b8d2dc",
+      "bytes": 4963
+    },
+    {
+      "path": "src/StageFamily.lean",
+      "sha256": "71a3ace147651ccf67befba32bcdd2d10da98dbf662cc61c548b9fe86214e89e",
+      "bytes": 4124
+    },
+    {
+      "path": "src/SubmittedFamily.lean",
+      "sha256": "a890544e5a83d3e31472203b9c772fd582167f7119c2aaf24856eeb9bc5dc859",
+      "bytes": 9084
+    },
+    {
+      "path": "tests/ControllerDependencies.lean",
+      "sha256": "b52a407efc7796c1dc5ff22b1672e5ade1ce38b029cab4ea37468a522fac2f23",
+      "bytes": 2269
+    },
+    {
+      "path": "tests/DirectInterfaceControls.lean",
+      "sha256": "783bcc174e1bb2a2cfa4ecfe55a71f55371df2a044da613d8ca3a51d98e602c4",
+      "bytes": 332
+    },
+    {
+      "path": "tests/NativeControllerControls.lean",
+      "sha256": "d3849ee6707a7de3c1cfd99c9c8ce7fe0e1e64c78976aa8eb02cfc066794300b",
+      "bytes": 3330
+    },
+    {
+      "path": "tests/OrderedCycleControls.lean",
+      "sha256": "de24ef4fe6af288cdf6c1358f662b7795848a63b3e083c9d943de5924f435155",
+      "bytes": 492
+    },
+    {
+      "path": "tests/OrderedCycleRED.lean",
+      "sha256": "87237cd1e186077fb22e45c6a7963b41359d809c7df088467bc5c021d3bda768",
+      "bytes": 183
+    }
+  ]
+}

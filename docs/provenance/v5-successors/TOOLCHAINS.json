@@ -1,77 +1,95 @@
 {
   "entries": [
     {
-      "id": "D18-FRESH-PYTHON-AND-PACKAGES",
-      "result_ids": [
-        "D18-T15-EMPIRICAL"
-      ],
-      "source_ids": [
-        "T15-EMPIRICAL-README",
-        "T15-EMPIRICAL-REQUIREMENTS",
-        "T15-EMPIRICAL-BINDING"
-      ],
-      "disposition": "EXACT_SOURCE_PRESCRIBED_ENVIRONMENT",
-      "scope": "Fresh Python 3.12.3 is distinct from historical 3.12.14; four original pinned scientific dependencies.",
       "basis": "Interpreter SHA-256 e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f. Post-run readback confirmed 10 installed distributions and 9,372 recorded files unchanged. Public ENVIRONMENT.json retains actual wheel and installed-inventory digests.",
+      "disposition": "EXACT_SOURCE_PRESCRIBED_ENVIRONMENT",
+      "id": "D18-FRESH-PYTHON-AND-PACKAGES",
       "limitations": [
         "Installed-distribution and wheel hashes are not Git revisions.",
         "Environment identity and finite numerical replay do not supply an experimental replication."
-      ]
-    },
-    {
-      "id": "D18-PYTHON-PROVENANCE",
+      ],
       "result_ids": [
         "D18-T15-EMPIRICAL"
       ],
+      "scope": "Fresh Python 3.12.3 is distinct from historical 3.12.14; four original pinned scientific dependencies.",
       "source_ids": [
         "T15-EMPIRICAL-README",
         "T15-EMPIRICAL-REQUIREMENTS",
         "T15-EMPIRICAL-BINDING"
-      ],
-      "disposition": "SOURCE_PRESCRIBED_ISOLATED_ENVIRONMENT",
-      "scope": "Fresh Python 3.12.3; historical BINDING Python 3.12.14 remains distinct.",
-      "basis": "Original README requires Python 3.12. Fresh interpreter SHA-256 e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f; exact required pins numpy 2.3.5, scipy 1.17.0, pandas 2.2.3, openpyxl 3.1.5. Acquisition wheel hashes and actual distribution inventory are retained privately.",
-      "limitations": [
-        "Environment provisioning alone is not scientific execution.",
-        "A wheel acquisition hash is not a Git dependency revision or a hash of every installed byte."
       ]
     },
     {
-      "id": "SUCCESSOR-FORMAL-ENVIRONMENT",
-      "result_ids": [],
-      "source_ids": [],
-      "disposition": "EXACT_SUITE_SPECIFIC_PINS",
-      "scope": "Official Lean 4.19.0 with Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b and each original suite's dependency pins, namespace and import map.",
+      "basis": "Original README requires Python 3.12. Fresh interpreter SHA-256 e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f; exact required pins numpy 2.3.5, scipy 1.17.0, pandas 2.2.3, openpyxl 3.1.5. Acquisition wheel hashes and actual distribution inventory are retained privately.",
+      "disposition": "SOURCE_PRESCRIBED_ISOLATED_ENVIRONMENT",
+      "id": "D18-PYTHON-PROVENANCE",
+      "limitations": [
+        "Environment provisioning alone is not scientific execution.",
+        "A wheel acquisition hash is not a Git dependency revision or a hash of every installed byte."
+      ],
+      "result_ids": [
+        "D18-T15-EMPIRICAL"
+      ],
+      "scope": "Fresh Python 3.12.3; historical BINDING Python 3.12.14 remains distinct.",
+      "source_ids": [
+        "T15-EMPIRICAL-README",
+        "T15-EMPIRICAL-REQUIREMENTS",
+        "T15-EMPIRICAL-BINDING"
+      ]
+    },
+    {
       "basis": "The checked Linux Lean executable has SHA-256 92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023. Each descriptor and terminal receipt binds actual tools, selected sources, dependency identities, object provenance and target readbacks. Unequal modules with the same name remain isolated.",
+      "disposition": "EXACT_SUITE_SPECIFIC_PINS",
+      "id": "SUCCESSOR-FORMAL-ENVIRONMENT",
       "limitations": [
         "Official external dependency caches are disclosed trusted inputs; their use is not a fresh cache rebuild.",
         "Fresh custom builds, source/object-qualified same-run dependencies and audit-only continuation have distinct receipt provenance.",
         "Module, declaration and repeated readback counts are correlated coverage measures, not independent theorem or review counts."
-      ]
+      ],
+      "result_ids": [],
+      "scope": "Official Lean 4.19.0 with Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b and each original suite's dependency pins, namespace and import map.",
+      "source_ids": []
     },
     {
-      "id": "SUCCESSOR-PYTHON-SOURCE-CONTRACTS",
-      "result_ids": [],
-      "source_ids": [],
-      "disposition": "SOURCE_PRESCRIBED_ENVIRONMENTS_SEPARATED",
-      "scope": "Original scientific drivers retain their source-prescribed Python arguments and assertion behavior; normal and optimized runs apply to the new validation and adapter tests. Fifteenth empirical replay uses its separate Python 3.12 environment and exact package versions. P1 source-shape and finite checks require the original Python 3.12-compatible AST contract, separately from repository orchestration.",
       "basis": "Actual Python versions and executable hashes are carried by the relevant suite receipts. Fourteenth and Fifteenth formal source documentation requires Python 3; choosing an available pinned 3.12.3 interpreter does not turn that choice into a source-mandated minor-version requirement. The first P1 attempt under Python 3.11.9 failed its source-shape check; static diagnosis under pinned Python 3.12.3 matched all seven original AST fingerprints and ranges. This diagnostic does not itself establish a successful finite replay. The separately bound P1 finish then completed the remaining Python 3.12.3 source control and 41-target Lean audit. Three successful finite observations and nine source/object-qualified products were reused, with no new builds or original-wrapper replay.",
+      "disposition": "SOURCE_PRESCRIBED_ENVIRONMENTS_SEPARATED",
+      "id": "SUCCESSOR-PYTHON-SOURCE-CONTRACTS",
       "limitations": [
         "Assertions in original scientific code are not silently disabled to reproduce optimized validator tests.",
         "The empirical environment does not replace the repository's Python 3.11.9 lock.",
         "Both failed P1 attempts remain recorded. The successful finish establishes expression algorithm-model components and a correlated finite view only; frontend, CPython, host, full runner and P2/P3 claims remain residual."
-      ]
+      ],
+      "result_ids": [],
+      "scope": "Original scientific drivers retain their source-prescribed Python arguments and assertion behavior; normal and optimized runs apply to the new validation and adapter tests. Fifteenth empirical replay uses its separate Python 3.12 environment and exact package versions. P1 source-shape and finite checks require the original Python 3.12-compatible AST contract, separately from repository orchestration.",
+      "source_ids": []
     },
     {
-      "id": "SUCCESSOR-REPOSITORY-ENVIRONMENT",
-      "result_ids": [],
-      "source_ids": [],
-      "disposition": "PINNED_REPOSITORY_CONTRACT",
-      "scope": "Repository validators and candidate workflow use Python 3.11.9 and unchanged requirements-ci.lock.txt; the original publication toolchain contract remains in force.",
       "basis": "The base environment and all 67 original workflow run blocks were checked at accepted main 19de267cd41d2a5eeeb3eaf0b91562f706e2a916. Candidate-head execution and GitHub CI are separately reported in the external PR review handoff.",
+      "disposition": "PINNED_REPOSITORY_CONTRACT",
+      "id": "SUCCESSOR-REPOSITORY-ENVIRONMENT",
       "limitations": [
         "A baseline workflow result is not a candidate-head result.",
         "Remote optional-test skips do not establish actual Lean execution; the local final runner binds the installed official compiler explicitly."
+      ],
+      "result_ids": [],
+      "scope": "Repository validators and candidate workflow use Python 3.11.9 and unchanged requirements-ci.lock.txt; the original publication toolchain contract remains in force.",
+      "source_ids": []
+    },
+    {
+      "basis": "Official Lean4.19.0 and Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b; core MODULE_LANES/DEPENDENCY_CLOSURE and signed manifests bind exact imports. Empirical source lock retains its Python3.12 environment.",
+      "disposition": "INHERITED_PINNED_NO_NEW_EXECUTION",
+      "id": "T16-ORIGINAL-REPLAY-CONTRACTS",
+      "limitations": [
+        "No toolchain upgrade, shared custom object namespace, author-object reuse or T16 fresh acceptance."
+      ],
+      "result_ids": [
+        "T16-CORE-ASSURANCE",
+        "T16-SIGNED-SERVICE",
+        "T16-EMPIRICAL"
+      ],
+      "scope": "Core expects a Lean executable; signed expects a Lean bin directory; package dependency pins and import lanes remain authoritative.",
+      "source_ids": [
+        "T16-SRC-54c9b7cdb23f0619c297",
+        "T16-SRC-51216652dcb9e72375b6"
       ]
     }
   ]

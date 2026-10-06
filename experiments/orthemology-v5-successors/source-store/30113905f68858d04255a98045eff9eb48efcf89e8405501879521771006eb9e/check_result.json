@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "claim_records": 7,
+  "complete_claim_records": 6,
+  "voice_and_attribution_contracts_checked": 7,
+  "complete_attested_rows_under_supplied_interpretation": [
+    [
+      "G",
+      "G",
+      "G"
+    ],
+    [
+      "M",
+      "M",
+      "G"
+    ]
+  ],
+  "independent_coordinate_product": [
+    [
+      "G",
+      "G",
+      "G"
+    ],
+    [
+      "G",
+      "M",
+      "G"
+    ],
+    [
+      "M",
+      "G",
+      "G"
+    ],
+    [
+      "M",
+      "M",
+      "G"
+    ]
+  ],
+  "extra_rows": [
+    [
+      "G",
+      "M",
+      "G"
+    ],
+    [
+      "M",
+      "G",
+      "G"
+    ]
+  ],
+  "complete_row_count": 2,
+  "partial_record_count": 1,
+  "interpretation_validation": "not performed by this calculation"
+}

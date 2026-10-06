@@ -1,0 +1,35 @@
+{
+  "format": 1,
+  "status": "PASS_AUTHOR_AND_INDEPENDENT_EXACT_SOURCE_ARCHIVE",
+  "utc": "2026-10-05T16:15:20.545699+00:00",
+  "source_archive": {
+    "path": "candidate-v2.zip",
+    "sha256": "264aadbd43d3f8cf449b04c7631fa5e53236ea911d2bb6dcc86f696af625c805",
+    "bytes": 1245173,
+    "files": 201
+  },
+  "verification_archive": {
+    "path": "Orthemic_Signed_Controller_Service_v1_verification.zip",
+    "sha256": "5d64afd29cb57f2eccafc694d1e83ab2f2c8a3b71bee46a036b24747569ee1ce",
+    "bytes": 675144,
+    "files": 557,
+    "manifest_sha256": "921b6557390f190c0c199dd3b934745cf81c375da3a4f506a1e8318918a85dfa"
+  },
+  "author_result_sha256": "c9bf80329f459377ba67a5a4ef2d1afbbb3f7a845fce6ffa5d918245a835dc4a",
+  "independent_result_sha256": "1cbb95b30e2fd367d233906bc0426db7b7b8e6df4b870e717c6c3d45959cae60",
+  "independent_acceptance_sha256": "1a1c911f94db3a9b60e682ac12a82ef645c84ddf1ab0941ed66a990db8903ffc",
+  "independent_review_sha256": "b542590c75903c3ccc8ac677843af21c0993883fd7252f13d67c122cca18ee34",
+  "production_modules": {
+    "predecessor": 95,
+    "new": 21,
+    "total": 116
+  },
+  "lean_calls_each_full_run": 172,
+  "safe_declarations_audited": 1309,
+  "runtime_dependency_entries": 1467,
+  "external_dependency_objects_verified": 6646,
+  "dependency_cold_build": false,
+  "prior_interrupted_evidence_preserved": true,
+  "source_archive_unchanged": true,
+  "canonical_adoption": false
+}

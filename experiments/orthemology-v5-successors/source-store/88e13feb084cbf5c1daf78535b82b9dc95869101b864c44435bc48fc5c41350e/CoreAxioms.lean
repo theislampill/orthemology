@@ -1,0 +1,12 @@
+import RenewalContract
+import PrunedWitness
+#print axioms EffectiveRenewal.committed_path_extraction
+#print axioms EffectiveRenewal.no_effective_committed_renewal
+#print axioms EffectiveRenewal.Contract.finite_plan_whole_run
+#print axioms EffectiveRenewal.Contract.run_preserves_contract
+#print axioms EffectiveRenewal.Contract.predecessor_token_excluded
+#print axioms EffectiveRenewal.Contract.no_supported_zero_input_renewal
+#print axioms EffectiveRenewal.Contract.no_uniform_supported_renewal
+#print axioms EffectiveRenewal.Pruning.enumerable_pruned_extracts_path
+#print axioms EffectiveRenewal.Pruning.computable_path_iff_decidable_pruned
+#print axioms EffectiveRenewal.Pruning.computable_path_iff_enumerable_pruned

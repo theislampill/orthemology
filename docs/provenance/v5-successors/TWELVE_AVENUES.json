@@ -1,6 +1,7 @@
 {
   "avenues": [
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 1,
       "result_ids": [
         "D15-T07-CONCRETE-MODAL-WARRANT",
@@ -36,12 +37,14 @@
         "D15-T14-MENTAL-AGENCY-NORMS",
         "D15-T14-NECESSARY-PARTICULAR-MIND",
         "D15-T14-NECESSARY-TRUTH-BEARER",
-        "D15-T15-KOONS-TOTALITY"
+        "D15-T15-KOONS-TOTALITY",
+        "T16-TEMPORAL",
+        "T16-SOURCE-ASSESSMENT"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Orthability to necessary being. Route from orthability and understood correction to actual original productive sourcehood and necessary particular being; whole-origin completion, identification of the same bearer and the modal warrant remain distinct targets."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 2,
       "result_ids": [
         "D15-T07-ATTESTATION-IMPORT",
@@ -64,12 +67,14 @@
         "D15-T14-CLARKE-FIDELITY",
         "D15-T14-DESCARTES-CONTENT",
         "D15-T14-DIRECTED-POWERS-INTELLECT",
-        "D15-T14-NECESSARY-PARTICULAR-MIND"
+        "D15-T14-NECESSARY-PARTICULAR-MIND",
+        "T16-TEMPORAL",
+        "T16-SOURCE-ASSESSMENT"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Source and attribute ascent. Ascent from established sourcehood to source-specific cognitive, intrinsic and practical attributes, including standing Knowledge, integrity, authoritative attestation, disclosure and recipient warrant."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 3,
       "result_ids": [
         "D15-T07-ATTESTATION-IMPORT",
@@ -91,12 +96,13 @@
         "D15-T13-OBJECTIVE-NORM-GROUNDING",
         "D15-T14-CLARKE-FIDELITY",
         "D15-T14-MENTAL-AGENCY-NORMS",
-        "D15-T15-LOCAL-NATURAL-STANDARDS"
+        "D15-T15-LOCAL-NATURAL-STANDARDS",
+        "T16-SOURCE-ASSESSMENT"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Objective norm-fixing. The warrant and grounding of objective standards, distinguishing local correctness, a supplied standard, constitutive or functional success, truth and practical authority."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 4,
       "result_ids": [
         "D15-T07-ATTESTATION-IMPORT",
@@ -122,12 +128,17 @@
         "T08-TYPED-HISTORY",
         "T09-FINITE-HISTORY-REP",
         "T09-FINITE-PRIMITIVES",
-        "T09-ORDERED-INITIAL"
+        "T09-ORDERED-INITIAL",
+        "T16-RENEWAL",
+        "T16-COMPETENCE",
+        "T16-LOOKAHEAD",
+        "T16-SIGNED-SERVICE",
+        "T16-DIRECT-CONTROLLER"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Unknown-structure restoration. Restoration of a specified capacity across an explicitly declared family of unfamiliar structures or changes, accounting for model coverage, interventions, failures and continuing resources."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 5,
       "result_ids": [
         "D15-T07-ATTESTATION-IMPORT",
@@ -160,12 +171,13 @@
         "T10-INTERVAL-QUOTIENT",
         "T10-MODEL-CHECKER",
         "T10-OCCURRENCE-EFFECTS",
-        "T10-READ-COST"
+        "T10-READ-COST",
+        "T16-CORE-ASSURANCE"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Provenance-resilient restoration. Preservation or recovery of usable content or capacity across provenance loss or change, with the claimed historical source, warrant, operating role, authority and continuing support separately specified."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 6,
       "result_ids": [
         "D08-01",
@@ -185,12 +197,14 @@
         "T10-EXACT-THRESHOLD-BOUNDARY",
         "T10-MODEL-CHECKER",
         "T10-ROBUST-COMPACT-CERTIFICATES",
-        "T10-TWO-CARD-FRONTIER"
+        "T10-TWO-CARD-FRONTIER",
+        "T16-POPULATION",
+        "T16-EMPIRICAL"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Warranted collective diagnosis. Warranted collective diagnosis, joint interpretation and attribution of contributions, distinguishing competent group outputs from identification of faults or mechanisms and from lawful pooled action."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 7,
       "result_ids": [
         "D16-T09-NEXT-SERVICE",
@@ -199,12 +213,20 @@
         "T10-MODEL-CHECKER",
         "T10-OCCURRENCE-EFFECTS",
         "T10-READ-COST",
-        "T10-TWO-CARD-FRONTIER"
+        "T10-TWO-CARD-FRONTIER",
+        "T16-RENEWAL",
+        "T16-RANDOMISED-ZERO",
+        "T16-POPULATION",
+        "T16-COMPETENCE",
+        "T16-LOOKAHEAD",
+        "T16-SYNTHESIS-REDUCTION",
+        "T16-SYNTHESIS-CLASSIFICATIONS",
+        "T16-ALMOST-SURE"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Copying synchronisation and identity. Copying, synchronisation and changed-substrate organisational continuation: preservation or reacquisition of specified roles, consequential state, support, authority and future capacities, distinct from semantic equality, causal lineage and numerical personal identity."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 8,
       "result_ids": [
         "D06-01",
@@ -261,12 +283,20 @@
         "T15-RESTRICTED-GRID",
         "T15-RUNTIME-AGREEMENT",
         "T15-UNIVARIATE-CRITERION",
-        "T15-UNIVARIATE-REFERENCE"
+        "T15-UNIVARIATE-REFERENCE",
+        "T16-UNARY-CHECKER",
+        "T16-CURRENT-HAS",
+        "T16-BRIDGE-HASPLUS",
+        "T16-HASC-SOUND",
+        "T16-HASC-CLOSED",
+        "T16-SIGNED-SERVICE",
+        "T16-DIRECT-CONTROLLER",
+        "T16-CORE-ASSURANCE"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Specification and semantic fidelity. Exact specification and semantic fidelity across statements, source identities, input domains, interpretations, proofs, code, projections and execution; each form of evidence must match the intended claim."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 9,
       "result_ids": [
         "D06-04",
@@ -306,12 +336,18 @@
         "T15-RESTRICTED-GRID",
         "T15-RUNTIME-AGREEMENT",
         "T15-UNIVARIATE-CRITERION",
-        "T15-UNIVARIATE-REFERENCE"
+        "T15-UNIVARIATE-REFERENCE",
+        "T16-UNARY-CHECKER",
+        "T16-UNARY-SPARSE",
+        "T16-CURRENT-HAS",
+        "T16-BRIDGE-HASPLUS",
+        "T16-HASC-SOUND",
+        "T16-HASC-CLOSED"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Type-theoretic completion. Type-theoretic completion, including typed and dependent contexts, substitution, stronger universes, soundness and completeness questions; the exact original or candidate calculus must remain identified."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 10,
       "result_ids": [
         "D06-02",
@@ -351,12 +387,23 @@
         "T15-RESTRICTED-GRID",
         "T15-RUNTIME-AGREEMENT",
         "T15-UNIVARIATE-CRITERION",
-        "T15-UNIVARIATE-REFERENCE"
+        "T15-UNIVARIATE-REFERENCE",
+        "T16-RENEWAL",
+        "T16-RANDOMISED-ZERO",
+        "T16-POPULATION",
+        "T16-LOOKAHEAD",
+        "T16-SYNTHESIS-REDUCTION",
+        "T16-SYNTHESIS-CLASSIFICATIONS",
+        "T16-UNARY-CHECKER",
+        "T16-UNARY-SPARSE",
+        "T16-ALMOST-SURE",
+        "T16-SIGNED-SERVICE",
+        "T16-DIRECT-CONTROLLER"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Measure and computability. Measure and computability questions for the declared models, representations and observation contracts, distinguishing finite checking, enumeration, search, decision and effective extraction."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 11,
       "result_ids": [
         "D15-T10-BOUNDED-RELEASE-CARE",
@@ -369,12 +416,13 @@
         "T14-LANGUAGE-OCCURRENCE",
         "T14-LANGUAGE-SENSE-SCOPE",
         "T14-LANGUAGE-SENSE-SOURCE-IDENTITIES",
-        "T15-LANGUAGE-ADMISSION-STOP"
+        "T15-LANGUAGE-ADMISSION-STOP",
+        "T16-OCCURRENCE"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Occurrence-sensitive language. Occurrence-sensitive language and composition: source, quotation, assertion or force, version and bearer bindings, translation or transclusion, joint readings and the warrant for a specific composed claim."
     },
     {
+      "disposition": "SCOPED_SUCCESSORS",
       "number": 12,
       "result_ids": [
         "D16-T12-CRATER-HANDOFF",
@@ -428,9 +476,10 @@
         "T09-ORDERED-INITIAL",
         "T09-WHOLE-COMMAND-TRANSPORT",
         "T10-PRINTED-COLLATION",
-        "T10-SOURCE-VERSION"
+        "T10-SOURCE-VERSION",
+        "T16-COMPETENCE",
+        "T16-EMPIRICAL"
       ],
-      "disposition": "SCOPED_SUCCESSORS",
       "scope": "Empirical and specialist validation. Empirical and specialist validation at a declared scope, distinguishing source reading, reported experiments, direct trace inspection, mathematical review, independent empirical reproduction and qualified external assessment."
     }
   ]

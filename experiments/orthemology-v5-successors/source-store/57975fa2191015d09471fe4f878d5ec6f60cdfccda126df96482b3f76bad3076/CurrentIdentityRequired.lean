@@ -1,0 +1,5 @@
+import UnaryCurrentIdentityBoundary
+#check P01AC.UnaryIdentity.IntensionalBoundary.normalCheck_sound
+#check P01AC.UnaryIdentity.IntensionalBoundary.endpoints_not_convertible
+#check P01AC.UnaryIdentity.IntensionalBoundary.no_current_identity
+#check P01AC.UnaryIdentity.IntensionalBoundary.old_fragment_counterexample

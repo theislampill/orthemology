@@ -1,0 +1,7 @@
+import EffectiveTree
+
+#check EffectiveRenewal.diagonalTree_prefix_closed
+#check EffectiveRenewal.finitePlan_primrec
+#check EffectiveRenewal.finitePlan_admitted
+#check EffectiveRenewal.exists_mathematical_path
+#check EffectiveRenewal.no_computable_path

@@ -29,26 +29,48 @@
       "to": "D06-02"
     },
     {
-      "from": "T13-RESIDUAL-HAS",
-      "to": "T14-I-SKK-HAS",
-      "relation": "SUPERSEDES",
-      "target": "Closed I/SKK target noninhabitation in HAS",
       "basis_source_ids": [
         "identity-src-13439cfa61b2dbc49571",
         "identity-src-ae495071a75fcc65a509"
       ],
-      "retained_scope": "Retains T13 positive formation/F/G witness and its literal pending header; later exact all-rule proof resolves only this specified noninhabitation question."
+      "from": "T13-RESIDUAL-HAS",
+      "relation": "SUPERSEDES",
+      "retained_scope": "Retains T13 positive formation/F/G witness and its literal pending header; later exact all-rule proof resolves only this specified noninhabitation question.",
+      "target": "Closed I/SKK target noninhabitation in HAS",
+      "to": "T14-I-SKK-HAS"
     },
     {
-      "from": "T13-RESIDUAL-PLUS",
-      "to": "T14-I-SKK-PLUS",
-      "relation": "SUPERSEDES",
-      "target": "Closed I/SKK target noninhabitation in PLUS",
       "basis_source_ids": [
         "identity-src-13439cfa61b2dbc49571",
         "identity-src-ae495071a75fcc65a509"
       ],
-      "retained_scope": "Retains T13 positive formation/F/G witness and its literal pending header; later exact all-rule proof resolves only this specified noninhabitation question."
+      "from": "T13-RESIDUAL-PLUS",
+      "relation": "SUPERSEDES",
+      "retained_scope": "Retains T13 positive formation/F/G witness and its literal pending header; later exact all-rule proof resolves only this specified noninhabitation question.",
+      "target": "Closed I/SKK target noninhabitation in PLUS",
+      "to": "T14-I-SKK-PLUS"
+    }
+  ],
+  "legacy_endpoints": [
+    {
+      "calculus": "OTHER",
+      "domain": "FINITE_MODEL",
+      "id": "05-run_unverified_old_tolerance-FullControllerCanonicalLaw",
+      "json_pointer": "/checks/31/outcomes/5",
+      "owner_path": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+      "owner_sha256": "879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89",
+      "statement": "{\"diagnostic_sha256\":\"ad1528b0219a2e72611c9e1bf2bf0df3b281c07f684afe32d12398aa642eb4b9\",\"exit_code\":1,\"id\":\"05-run_unverified_old_tolerance-FullControllerCanonicalLaw\",\"source_sha256\":\"89b9823fdbc8d4106fd8e8eb449dae8079cfe180c37859d95f23d222afded9eb\",\"status\":\"INCONCLUSIVE\"}",
+      "target": "05-run_unverified_old_tolerance-FullControllerCanonicalLaw: full_phase_computed_tolerance_decoded_parity with old execution and computed decoder; mutant SHA-256 89b9823fdbc8d4106fd8e8eb449dae8079cfe180c37859d95f23d222afded9eb"
+    },
+    {
+      "calculus": "NONE",
+      "domain": "SOURCE_TEXT",
+      "id": "07-change_controller_tolerance-ActualExponentialMoments",
+      "json_pointer": "/checks/30/outcomes/7",
+      "owner_path": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+      "owner_sha256": "879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89",
+      "statement": "{\"diagnostic_sha256\":\"48d300acb1e18710d8ab2a4012a6dcc68d6211f88ac66e805477bbf442c2d39e\",\"exit_code\":1,\"id\":\"07-change_controller_tolerance-ActualExponentialMoments\",\"source_sha256\":\"7b639a064e5d523827750a8a9e8527b4f172b45523ca2d32e565a10ba3348318\",\"status\":\"INCONCLUSIVE\"}",
+      "target": "07-change_controller_tolerance-ActualExponentialMoments: exact full-file proof application at lines 91-92; mutant SHA-256 7b639a064e5d523827750a8a9e8527b4f172b45523ca2d32e565a10ba3348318"
     }
   ],
   "selectors": [
@@ -1016,28 +1038,111 @@
       "family": "d18-t15-empirical",
       "result_id": "D18-T15-EMPIRICAL",
       "statement_sha256": "23a3de44fe647b1a4b670c14e1147be11784a983af41596b26c36bda5d93c41f"
-    }
-  ],
-  "legacy_endpoints": [
-    {
-      "calculus": "OTHER",
-      "domain": "FINITE_MODEL",
-      "id": "05-run_unverified_old_tolerance-FullControllerCanonicalLaw",
-      "json_pointer": "/checks/31/outcomes/5",
-      "owner_path": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
-      "owner_sha256": "879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89",
-      "statement": "{\"diagnostic_sha256\":\"ad1528b0219a2e72611c9e1bf2bf0df3b281c07f684afe32d12398aa642eb4b9\",\"exit_code\":1,\"id\":\"05-run_unverified_old_tolerance-FullControllerCanonicalLaw\",\"source_sha256\":\"89b9823fdbc8d4106fd8e8eb449dae8079cfe180c37859d95f23d222afded9eb\",\"status\":\"INCONCLUSIVE\"}",
-      "target": "05-run_unverified_old_tolerance-FullControllerCanonicalLaw: full_phase_computed_tolerance_decoded_parity with old execution and computed decoder; mutant SHA-256 89b9823fdbc8d4106fd8e8eb449dae8079cfe180c37859d95f23d222afded9eb"
     },
     {
-      "calculus": "NONE",
-      "domain": "SOURCE_TEXT",
-      "id": "07-change_controller_tolerance-ActualExponentialMoments",
-      "json_pointer": "/checks/30/outcomes/7",
-      "owner_path": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
-      "owner_sha256": "879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89",
-      "statement": "{\"diagnostic_sha256\":\"48d300acb1e18710d8ab2a4012a6dcc68d6211f88ac66e805477bbf442c2d39e\",\"exit_code\":1,\"id\":\"07-change_controller_tolerance-ActualExponentialMoments\",\"source_sha256\":\"7b639a064e5d523827750a8a9e8527b4f172b45523ca2d32e565a10ba3348318\",\"status\":\"INCONCLUSIVE\"}",
-      "target": "07-change_controller_tolerance-ActualExponentialMoments: exact full-file proof application at lines 91-92; mutant SHA-256 7b639a064e5d523827750a8a9e8527b4f172b45523ca2d32e565a10ba3348318"
+      "family": "t16-renewal",
+      "result_id": "T16-RENEWAL",
+      "statement_sha256": "e5e2ee883b1a5cdd9a603ba5e08f66f9d53648998f206b1c7e16f4b4e4cd33c7"
+    },
+    {
+      "family": "t16-randomised-zero",
+      "result_id": "T16-RANDOMISED-ZERO",
+      "statement_sha256": "190df8e90eee9adc5089184dc43eeab5c845f9cb30039ae6f6cc9142455a7d20"
+    },
+    {
+      "family": "t16-population",
+      "result_id": "T16-POPULATION",
+      "statement_sha256": "e3605e3253f5ca261298f02295d71b744178474a9e55bd0fcce75944f1166eb9"
+    },
+    {
+      "family": "t16-competence",
+      "result_id": "T16-COMPETENCE",
+      "statement_sha256": "e6751fccc622a976c6501cba2ab7113e6d9e0359b2a67dc1428ef56736c369ea"
+    },
+    {
+      "family": "t16-lookahead",
+      "result_id": "T16-LOOKAHEAD",
+      "statement_sha256": "bc8ab631cb7426b8e2a4723d44dfbd70c5055f38ec05252f0e5855a0e64e232b"
+    },
+    {
+      "family": "t16-synthesis-reduction",
+      "result_id": "T16-SYNTHESIS-REDUCTION",
+      "statement_sha256": "85fbf51d9129489e218340142445c0d55ab931afafaad2a3614d2e38c93b0967"
+    },
+    {
+      "family": "t16-synthesis-classifications",
+      "result_id": "T16-SYNTHESIS-CLASSIFICATIONS",
+      "statement_sha256": "fa686410128a0f4cc305c2b97e3bc78b7fb92a00689e2af515ef396ec10d0ea9"
+    },
+    {
+      "family": "t16-unary-checker",
+      "result_id": "T16-UNARY-CHECKER",
+      "statement_sha256": "185ed55b3c97fb9c7d078a0e2e3aadfd00f0115a6bad6db0b5f2f86ddd53c207"
+    },
+    {
+      "family": "t16-unary-sparse",
+      "result_id": "T16-UNARY-SPARSE",
+      "statement_sha256": "3b2c98352463bf8b0254c4b56dcce900248eb3253c0ed36db9c6955e5fc009c3"
+    },
+    {
+      "family": "t16-current-has",
+      "result_id": "T16-CURRENT-HAS",
+      "statement_sha256": "96c75dbbaa9037a92b28f60e8199b13ce8a7741ccc8fd7e6029b0666e8a92846"
+    },
+    {
+      "family": "t16-bridge-hasplus",
+      "result_id": "T16-BRIDGE-HASPLUS",
+      "statement_sha256": "78f6613572a46aff6588744f85adee5e1a8c3f21110f865125afde5da907fb7f"
+    },
+    {
+      "family": "t16-hasc-sound",
+      "result_id": "T16-HASC-SOUND",
+      "statement_sha256": "9b003c024491e898c407ef3201bd500bfe438acb59e570ff883f2eb38d0ea837"
+    },
+    {
+      "family": "t16-hasc-closed",
+      "result_id": "T16-HASC-CLOSED",
+      "statement_sha256": "9d3a0d3511b53a2e468202a020a38f8e8dd884c1a6b709f44d0c680111f04cf9"
+    },
+    {
+      "family": "t16-temporal",
+      "result_id": "T16-TEMPORAL",
+      "statement_sha256": "339854ccd1e935a1cc403ee8c0eea6e723b5d797a2a2fb3838e19e7ba13edad8"
+    },
+    {
+      "family": "t16-almost-sure",
+      "result_id": "T16-ALMOST-SURE",
+      "statement_sha256": "bc00cf65b506dea6fd41cb1ec1e386aebc02bd740d217acf8973fb52b0a1f204"
+    },
+    {
+      "family": "t16-signed-service",
+      "result_id": "T16-SIGNED-SERVICE",
+      "statement_sha256": "85ba750c62081dbf4c380caf24d4b14c32cb633eabfb52ae4c3c0c5904f9955b"
+    },
+    {
+      "family": "t16-direct-controller",
+      "result_id": "T16-DIRECT-CONTROLLER",
+      "statement_sha256": "a97782f84fa9d1b6779ecb5d9fae68b5b15e38ae03feeab911d6e23dcdcf0042"
+    },
+    {
+      "family": "t16-source-assessment",
+      "result_id": "T16-SOURCE-ASSESSMENT",
+      "statement_sha256": "369f7231f9bc53e8eb7f2328cae784a8b2b26ba49853e16f035465113c94cbbc"
+    },
+    {
+      "family": "t16-occurrence",
+      "result_id": "T16-OCCURRENCE",
+      "statement_sha256": "d471338aef84278cd45c751a1b6408dfc81ef085111e8804bd5febe739813d5a"
+    },
+    {
+      "family": "t16-empirical",
+      "result_id": "T16-EMPIRICAL",
+      "statement_sha256": "ff1c5cbb66ca214496b33fb56566cf84af66903d02137a1824152e446c4f0a0f"
+    },
+    {
+      "family": "t16-core-assurance",
+      "result_id": "T16-CORE-ASSURANCE",
+      "statement_sha256": "4476a8641f9346bd40fd9aa5520751f7a3ad509ddba8b61e80f7faf389684a55"
     }
   ]
 }

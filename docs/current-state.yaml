@@ -2,6 +2,27 @@ schema: orthemology-current-state-v1
 note: GENERATED derived block — edit only the authored block, then run scripts/generate_current_state.py.
   CI checks for drift.
 authored:
+  v5_research_successors:
+    programme: Orthemology v5
+    research_cutoff: sixteenth-final
+    status: proposed-candidate
+    preserved_predecessor: v5_research_continuations
+    architecture: docs/architecture/V5-RESEARCH-SUCCESSORS-07-15.md
+    registry: experiments/orthemology-v5-successors/registry.json
+    source_review_index: docs/provenance/v5-successors/README.md
+    result_status: docs/provenance/v5-successors/RESULT_STATUS.json
+    evidence_bindings: docs/provenance/v5-successors/EVIDENCE_BINDINGS.json
+    original_obligations: docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json
+    twelve_avenues: docs/provenance/v5-successors/TWELVE_AVENUES.json
+    calculus_map: docs/provenance/v5-successors/CALCULUS_MAP.json
+    verification: docs/provenance/v5-successors/INTEGRATION_VERIFICATION.json
+    sixteenth_guide: experiments/orthemology-v5-successors/groups/t16-successor/README.md
+    sixteenth_fresh_scientific_execution: NOT_RUN
+    canonical_judgement_adoption: NOT_ADOPTED
+    external_chatgpt_review: PENDING_R00
+    merge: OWNER_CONTROLLED_R01
+    scope_note: Source cutoff and scoped evidence accounting; not completion of every avenue or adoption
+      of a replacement calculus.
   v5_research_continuations:
     status: SOURCE_REGISTERED_RESEARCH_CANDIDATE
     cutoff: sixth-tranche-final
@@ -126,9 +147,9 @@ authored:
     meniscus: MENISCUS_NOT_REACHED
     natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: 1fd320ab2b41b2015f2466e896fb214d23f7eb97235b756abc02590675116124
+  source_tree_digest: 45223a372cc30e096f7536ee9e164591cdecd544eb27ba205c6fded545627078
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 4906
+  tracked_files: 6646
   decision_ids:
   - '0001'
   - '0002'
@@ -168,7 +189,8 @@ derived:
   - '0036'
   - '0037'
   - 0038
-  decision_count: 38
+  - 0039
+  decision_count: 39
   schemas:
   - activation-contract-fixtures.schema.json
   - activation-contract.schema.json
@@ -266,8 +288,9 @@ derived:
   - validate_state_convergence.py
   - validate_terminology_etymology.py
   - validate_type_token_semantics.py
+  - validate_v5_successors.py
   - validate_verdict_semantics.py
-  validator_count: 63
+  validator_count: 64
   fixture_counts:
     verdict: 7
     reason: 8

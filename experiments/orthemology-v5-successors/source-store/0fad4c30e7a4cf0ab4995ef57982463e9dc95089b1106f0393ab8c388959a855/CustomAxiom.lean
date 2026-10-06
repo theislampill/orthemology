@@ -1,0 +1,3 @@
+import KernelAudit
+axiom counterfeitPolicyProof : False
+#audit_policy_closure counterfeitPolicyProof

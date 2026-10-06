@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "scope": "Exact copy of the public v5 mathematical map under the stable final-map filename. Its internal DOCX basename is already final; no map contents are changed. The v5 assurance update changes one front-matter paragraph; all fourteen per-paper readers and their equation bindings are unchanged.",
+  "original_map_filename": "PUBLIC_SOURCE_MATH_MAP_v5.json",
+  "original_map_sha256": "0fb3d04bf3b4e835a415680d75eace2170c64d65913a3822ab28494949fc7d6b",
+  "public_map_filename": "PUBLIC_SOURCE_MATH_MAP_Final_v1.json",
+  "public_map_sha256": "0fb3d04bf3b4e835a415680d75eace2170c64d65913a3822ab28494949fc7d6b",
+  "map_bytes_identical": true,
+  "changed_map_fields_during_copy": [],
+  "docx_filename": "Orthemology_Sixteenth_Mathematical_Companion_Final_v1_20261005.docx",
+  "docx_sha256": "99f6eb226504f67526ce0935a89c9e817d9cb30dce898019960bc01aa470e460",
+  "docx_bytes": 138818,
+  "docx_delivery": "separate; not included in this evidence bundle",
+  "predecessor_public_map_sha256": "c1782da883bb48be3bc185a3343d8917d818e24b2070a5097247fbb20ef99e9a",
+  "historical_raw_input_files_redistributed": false
+}

@@ -26,7 +26,9 @@ Deterministic; offline.
 import io
 import json
 
-from validate_repo import load_source_map, original_packet_locator
+from validate_repo import (load_source_map, original_packet_locator,
+                           load_successor_source_map, successor_packet_locator,
+                           successor_origin_document)
 import os
 import re
 import subprocess
@@ -137,9 +139,10 @@ def _resolves(src, cited):
         directory = os.path.dirname(directory)
 
 
-def _citation_occurrences(src, text):
+def _citation_occurrences(src, text, *, root=None, successor_sources=None):
     # source_path in this typed map is an origin selector, not a checkout path.
     # Destination paths and every other field remain ordinary references.
+    text = successor_origin_document(src, text, sources=successor_sources, root=ROOT if root is None else root)
     selectors = set()
     continuation_members = set()
     if src == "/".join(("docs", "provenance", "v5-research-continuations", "SOURCE_MAP.json")):
@@ -167,6 +170,8 @@ def _citation_occurrences(src, text):
             yield cited.replace("\\", "/"), line
         if src.endswith(".md"):
             for target in LINK_RE.findall(line):
+                if target.startswith('<') and target.endswith('>'):
+                    target = target[1:-1]
                 if target.startswith(("http://", "https://", "mailto:")):
                     continue
                 yield (
@@ -213,7 +218,9 @@ def main():
     corpus = _corpus_files()
     committed_plans = _committed_plans()
     sources = load_source_map(ROOT)
+    successor_sources = load_successor_source_map(ROOT)
     packet_locators = set()
+    successor_locators = set()
     missing = {}
     corpus_text = {}
     for src in corpus:
@@ -222,7 +229,7 @@ def main():
         except (UnicodeDecodeError, OSError):
             continue
         corpus_text[src] = text
-        for cited, line in _citation_occurrences(src, text):
+        for cited, line in _citation_occurrences(src, text, root=ROOT, successor_sources=successor_sources):
             if cited in exempt:
                 continue
             if cited.startswith(".."):
@@ -239,6 +246,10 @@ def main():
                     or original_packet_locator(path, cited, sources, ROOT, from_packet_root=True)):
                 packet_locators.add((src, cited))
                 continue
+            if (successor_packet_locator(path, relative, successor_sources, ROOT)
+                    or successor_packet_locator(path, cited, successor_sources, ROOT, from_packet_root=True)):
+                successor_locators.add((src, cited))
+                continue
             if _is_planned_output_occurrence(src, cited, line, committed_plans):
                 # Exemption is occurrence-local: only this exact inventory line
                 # in a plan present in HEAD may name a not-yet-created output.
@@ -246,6 +257,7 @@ def main():
             missing.setdefault(cited, set()).add(src)
 
     print("[INFO] %d digest-bound original-packet references; external custody, public retrieval unconfirmed" % len(packet_locators))
+    print('[INFO] %d digest-bound successor original-member references; projection/custody scope remains explicit' % len(successor_locators))
     check("every repository path cited in the corpus resolves (or is a declared exemption)",
           not missing,
           "; ".join("%s <- %s" % (p, sorted(s)[:2]) for p, s in sorted(missing.items())[:6]))

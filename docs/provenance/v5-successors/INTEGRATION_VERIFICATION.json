@@ -1,10 +1,17 @@
 {
   "entries": [
     {
+      "basis": "Approved suite 3489ac5e52d55dc722b8d08666ccf94cb16fccdda434c7ecc415bf541a1a02b9; adapter 46624445c5c71706a015e6a44ee38f0fa2c3d657537dc2429f4037f9d1f04568; actual receipt 66e820c88804eb3203c40bc7ed4722b448d7ad2e9abaca83671b88452bfecf3b. Thirteen tests, aggregate/reference positives and the intended exit-2 rejection completed.",
+      "disposition": "FINITE_ONLY",
       "id": "D18-FINITE-EXECUTION",
+      "limitations": [
+        "Counts are finite checks, not independent experiments or kernel declarations.",
+        "Full logs and data remain private."
+      ],
       "result_ids": [
         "D18-T15-EMPIRICAL"
       ],
+      "scope": "One original five-stage empirical replay plus prerequisites; source-excerpt targets only.",
       "source_ids": [
         "T15-EMPIRICAL-AGGREGATE",
         "T15-EMPIRICAL-BINDING",
@@ -18,90 +25,89 @@
         "T15-EMPIRICAL-REQUIREMENTS",
         "T15-EMPIRICAL-TESTS",
         "T15-EMPIRICAL-VALIDATE"
-      ],
-      "disposition": "FINITE_ONLY",
-      "scope": "One original five-stage empirical replay plus prerequisites; source-excerpt targets only.",
-      "basis": "Approved suite 3489ac5e52d55dc722b8d08666ccf94cb16fccdda434c7ecc415bf541a1a02b9; adapter 46624445c5c71706a015e6a44ee38f0fa2c3d657537dc2429f4037f9d1f04568; actual receipt 66e820c88804eb3203c40bc7ed4722b448d7ad2e9abaca83671b88452bfecf3b. Thirteen tests, aggregate/reference positives and the intended exit-2 rejection completed.",
-      "limitations": [
-        "Counts are finite checks, not independent experiments or kernel declarations.",
-        "Full logs and data remain private."
       ]
     },
     {
-      "id": "SUCCESSOR-BASELINE-AND-PRESERVATION",
-      "result_ids": [],
-      "source_ids": [],
-      "disposition": "SEPARATE_BASELINE_AND_CANDIDATE_GATES",
-      "scope": "The accepted final-Sixth baseline, immutable old evidence trees, original repository gates and current successor source/status validation have separate owners.",
       "basis": "BASELINE_BINDING and PRESERVATION bind the original accepted commit/tree and complete 1,200-file Sixth member census. The successor validator checks actual member sets, sizes and hashes. Candidate workflow, unchanged native-v5 replay and actual GitHub CI are bound to external exact-head receipts.",
+      "disposition": "SEPARATE_BASELINE_AND_CANDIDATE_GATES",
+      "id": "SUCCESSOR-BASELINE-AND-PRESERVATION",
       "limitations": [
         "This record does not substitute for a terminal workflow receipt on the returned PR head.",
         "Integration does not change the historical construction base of the old v5 source manifest."
-      ]
+      ],
+      "result_ids": [],
+      "scope": "The accepted final-Sixth baseline, immutable old evidence trees, original repository gates and current successor source/status validation have separate owners.",
+      "source_ids": []
     },
     {
-      "id": "SUCCESSOR-DOCUMENT-PROJECTION-BOUNDARY",
-      "result_ids": [],
-      "source_ids": [],
-      "disposition": "DERIVED_SCIENTIFIC_CONTENT_REVIEW",
-      "scope": "DOCX-derived reports preserve source text, tables and native equation structure through recorded original-to-derived maps and reviewed conversion.",
       "basis": "Public projection records bind each original DOCX identity, derived bytes, transformation and review. Original mathematical Markdown or TeX remains exact where supplied. The private conversion check covers 11 reports, 3,694 paragraphs, six tables and 1,707 OMML equations, with damage controls and sampled equation readback.",
+      "disposition": "DERIVED_SCIENTIFIC_CONTENT_REVIEW",
+      "id": "SUCCESSOR-DOCUMENT-PROJECTION-BOUNDARY",
       "limitations": [
         "Native Word or TeX page-layout rendering was not verified for these converted reports.",
         "Conversion review preserves scientific content; it is not a new independent review of the mathematical or philosophical arguments."
-      ]
+      ],
+      "result_ids": [],
+      "scope": "DOCX-derived reports preserve source text, tables and native equation structure through recorded original-to-derived maps and reviewed conversion.",
+      "source_ids": []
     },
     {
+      "basis": "The retained author run consumed both controls directly from its exact source archive. The earlier 107-entry declared source list omitted them. The corrected metadata descriptor lists 109 sources, while its unchanged replay still projects 107 files and the original measured archive inventories still contain 127 members. The derived receipt embeds the complete unchanged original receipt (canonical SHA-256 da3e904d18f5656add78cf079f4d7879e7f7ab06b7089a50eb03cb3800ccb46d) and links the two source identities to the actual rejection children, observations and controls. The separate reviewer still binds the original author evidence.",
+      "disposition": "RETAINED_EXECUTION_MEMBERSHIP_CORRECTION",
       "id": "SUCCESSOR-G1-MEMBERSHIP-CORRECTION",
+      "limitations": [
+        "The correction adds zero processes, builds, audits or independent evidence. The top source map is derived declared membership, not a replacement for the original measured source maps.",
+        "The corrected view is retained-evidence-only. Projection and execution entry points refuse it before effects; the unchanged original catalogue/driver API remains a separate replay route.",
+        "Only the exact retained author receipt is admitted by this correction. A later original run would require its own scoped evidence review."
+      ],
       "result_ids": [
         "D08-01",
         "D08-02",
         "D08-03"
       ],
+      "scope": "Exact original G1 mutation controls and their retained author execution; no change to claim or reviewer scope.",
       "source_ids": [
         "s0715-913c79014b9d7f98aafe",
         "s0715-dbfd2596f3b7b49f66c9"
-      ],
-      "disposition": "RETAINED_EXECUTION_MEMBERSHIP_CORRECTION",
-      "scope": "Exact original G1 mutation controls and their retained author execution; no change to claim or reviewer scope.",
-      "basis": "The retained author run consumed both controls directly from its exact source archive. The earlier 107-entry declared source list omitted them. The corrected metadata descriptor lists 109 sources, while its unchanged replay still projects 107 files and the original measured archive inventories still contain 127 members. The derived receipt embeds the complete unchanged original receipt (canonical SHA-256 da3e904d18f5656add78cf079f4d7879e7f7ab06b7089a50eb03cb3800ccb46d) and links the two source identities to the actual rejection children, observations and controls. The separate reviewer still binds the original author evidence.",
-      "limitations": [
-        "The correction adds zero processes, builds, audits or independent evidence. The top source map is derived declared membership, not a replacement for the original measured source maps.",
-        "The corrected view is retained-evidence-only. Projection and execution entry points refuse it before effects; the unchanged original catalogue/driver API remains a separate replay route.",
-        "Only the exact retained author receipt is admitted by this correction. A later original run would require its own scoped evidence review."
       ]
     },
     {
-      "id": "SUCCESSOR-P1-ATTEMPT-AND-VIEW-ACCOUNTING",
-      "result_ids": [
-        "D08-05",
-        "D08-06"
-      ],
-      "source_ids": [],
-      "disposition": "COMPONENT_COMPLETION_WITH_CORRELATED_FINITE_VIEW",
-      "scope": "P1 source-expression COMPONENTS and FINITE_ONLY source correspondence at the declared domain.",
       "basis": "The original attempt produced nine Lean objects and four intended rfl rejections before its Python 3.11.9 source-shape failure. The first Python 3.12.3 tail completed three finite checks before an output-directory report-write failure. The finish supplied the original output-only prerequisite, ran the remaining source control and audited all 41 declarations. Both FAILED receipts remain unchanged. The finite view reads that same completion without another process.",
+      "disposition": "COMPONENT_COMPLETION_WITH_CORRELATED_FINITE_VIEW",
+      "id": "SUCCESSOR-P1-ATTEMPT-AND-VIEW-ACCOUNTING",
       "limitations": [
         "The 18 internal behavioral mutations and five source-text mutations are finite comparisons, not additional rejecting subprocesses.",
         "Nineteen source-child observations across attempts represent 17 original child identities and two failed observations; repeated observations and the finite view add no independent evidence.",
         "Frontend, CPython, host, parser/statement/full-runner and P2/P3 claims remain residual."
-      ]
+      ],
+      "result_ids": [
+        "D08-05",
+        "D08-06"
+      ],
+      "scope": "P1 source-expression COMPONENTS and FINITE_ONLY source correspondence at the declared domain.",
+      "source_ids": []
     },
     {
-      "id": "SUCCESSOR-SCIENTIFIC-RECEIPT-BOUNDARY",
-      "result_ids": [],
-      "source_ids": [],
-      "disposition": "SOURCE_AND_SCOPE_BOUND_EVIDENCE",
-      "scope": "RESULT_STATUS and EVIDENCE_BINDINGS retain exact result assumptions, current source/review selectors and the fresh outcome of each declared suite.",
       "basis": "A scientific receipt records actual source and dependency identities, original command semantics, terminal exits, control diagnostics, target readbacks and proof-closure scope. Failed attempts and resource-inconclusive controls remain distinguishable from successful results; joining a record performs no new scientific execution.",
+      "disposition": "SOURCE_AND_SCOPE_BOUND_EVIDENCE",
+      "id": "SUCCESSOR-SCIENTIFIC-RECEIPT-BOUNDARY",
       "limitations": [
         "A completed wrapper, an archive hash or an inherited review is insufficient for a fresh-kernel claim.",
         "A timeout never earns rejection credit.",
         "Written classifications, philosophical premises, implementation reach and external warrants remain separate from formal components and finite controls."
-      ]
+      ],
+      "result_ids": [],
+      "scope": "RESULT_STATUS and EVIDENCE_BINDINGS retain exact result assumptions, current source/review selectors and the fresh outcome of each declared suite.",
+      "source_ids": []
     },
     {
+      "basis": "The cost control exhausted its deterministic reduction limit and earns no rejection credit. Runtime/literal, core and selector evidence retain their separate completed checks. The selector continuation audited seven declarations from retained source/object-qualified products; it did not rerun source producers.",
+      "disposition": "COMPONENTS_AND_RESOURCE_LIMIT_DISTINGUISHED",
       "id": "SUCCESSOR-SEMANTIC-CONTROLS-LIMITS",
+      "limitations": [
+        "General policy construction, wall-clock bounds and real sensor/governing-framework guarantees are not established.",
+        "Earlier failed core and selector attempts remain explicit; continuation is correlated evidence with no independence increment."
+      ],
       "result_ids": [
         "D06-01",
         "D06-02",
@@ -110,14 +116,41 @@
         "D06-05",
         "D06-06"
       ],
-      "source_ids": [],
-      "disposition": "COMPONENTS_AND_RESOURCE_LIMIT_DISTINGUISHED",
       "scope": "The cost attempt remains RESOURCE_INCONCLUSIVE; the other five results retain their exact component/supplied-certificate claim scopes.",
-      "basis": "The cost control exhausted its deterministic reduction limit and earns no rejection credit. Runtime/literal, core and selector evidence retain their separate completed checks. The selector continuation audited seven declarations from retained source/object-qualified products; it did not rerun source producers.",
+      "source_ids": []
+    },
+    {
+      "basis": "Owner authorized a scoped Sixteenth successor before one final candidate validation/review. No unchanged scientific run repeated.",
+      "disposition": "SOURCE_IDENTITY_AND_SCOPE_REGISTERED",
+      "id": "T16-INHERITED-SCOPES",
       "limitations": [
-        "General policy construction, wall-clock bounds and real sensor/governing-framework guarantees are not established.",
-        "Earlier failed core and selector attempts remain explicit; continuation is correlated evidence with no independence increment."
-      ]
+        "T16 fresh scientific execution NOT_RUN. Final repository/native validation is a different evidence field."
+      ],
+      "result_ids": [
+        "T16-RENEWAL",
+        "T16-RANDOMISED-ZERO",
+        "T16-POPULATION",
+        "T16-COMPETENCE",
+        "T16-LOOKAHEAD",
+        "T16-SYNTHESIS-REDUCTION",
+        "T16-SYNTHESIS-CLASSIFICATIONS",
+        "T16-UNARY-CHECKER",
+        "T16-UNARY-SPARSE",
+        "T16-CURRENT-HAS",
+        "T16-BRIDGE-HASPLUS",
+        "T16-HASC-SOUND",
+        "T16-HASC-CLOSED",
+        "T16-TEMPORAL",
+        "T16-ALMOST-SURE",
+        "T16-SIGNED-SERVICE",
+        "T16-DIRECT-CONTROLLER",
+        "T16-SOURCE-ASSESSMENT",
+        "T16-OCCURRENCE",
+        "T16-EMPIRICAL",
+        "T16-CORE-ASSURANCE"
+      ],
+      "scope": "T16 source projection and inherited evidence only; existing T07-T15 result/receipt/suite bindings unchanged.",
+      "source_ids": []
     }
   ]
 }

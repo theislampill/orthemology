@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "status": "PASS_INDEPENDENT_COMPLETE_REPLAY",
+  "source_archive_sha256": "73a6cdde7cba705f283df52085210592f851cd70f3163f78c42950aa45bfa0ef",
+  "input_sha256": [
+    "dc49a4248a193b47df08f419f108f4070e0c0c07422fdbda31537c1d33aa6f5c",
+    "c43ba9293db5c1657f7829de1033e0985bb4dc46508ea253a669449207dbd317"
+  ],
+  "fresh_source_extraction": true,
+  "fresh_output_directory": true,
+  "source_bytes_unchanged_after_replay": true,
+  "author_replay_receipt_sha256": "da767f330245f3572a3125f5ddcbb8ef0c696499f8e929a32535712d80fdea43",
+  "independent_replay_receipt_sha256": "19aaa724973d11d14fa31b86907d5e08ebaf7a57b509f678070eb7509f964e1f",
+  "independent_comparison_acceptance_sha256": "eab0f3b46443c8b1f5922d9d0b18c75505eac1e9e0b6eda5654f8b5631aec9d8",
+  "all_fresh_report_bytes_equal_author_run": true,
+  "accepted_historical_digest_comparison": "PASS_AFTER_PREVIOUSLY_APPROVED_NARRATIVE_METADATA_REVERSAL_ONLY",
+  "computed_numerical_or_statistical_fields_changed_for_comparison": false,
+  "historical_comparison_receipt_sha256": "2b3d5ec30c54c68920d058ee6360bb786db2166fd7af695d4182f352278a7890",
+  "projection": "Digest and status evidence only; source and data outputs are not reproduced.",
+  "new_experiment_or_independent_participant_sample": false,
+  "publication_version_identity_established": false
+}

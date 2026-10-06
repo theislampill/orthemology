@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed T07--T15 successor integrity; validation does not adopt research.
+"""Fail-closed T07--T16 successor integrity; validation does not adopt research.
 
 Production CLI anchors the frozen predecessor to an accepted Git object and an
 independently pinned inventory. Programmatic fixture anchors never affect CLI.
@@ -54,7 +54,8 @@ INHERITED = {'NONE', 'WRITTEN_MATHEMATICS', 'CONDITIONAL_PHILOSOPHY', 'SOURCE_AS
              'MIXED_SCOPED', 'STOPPED_UNREVIEWED'}
 FORMS = {'FORMAL', 'ORDINARY', 'MIXED', 'CONDITIONAL', 'IMPLEMENTATION', 'PROPOSAL', 'SOURCE_ASSESSMENT'}
 CALCULI = {'P01DF', 'P01AC.Has', 'P01AC.Intensional.Plus.HasPlus',
-           'P01AC.ExtensionalRepair.HasE', 'OTHER', 'NONE'}
+           'P01AC.ExtensionalRepair.HasE', 'P01AC.UnaryCertificate.HasC', 'OTHER', 'NONE'}
+CUTOFF_TRANCHES = {'fifteenth-final': 15, 'sixteenth-final': 16}
 DOMAINS = {'BARE_INPUT', 'SUPPLIED_CERTIFICATE', 'FINITE_MODEL', 'UNBOUNDED_MODEL',
            'SOURCE_TEXT', 'REFERENCE_EXECUTION'}
 REACH = {'NONE', 'WRITTEN_ONLY', 'FORMAL_COMPONENT', 'DECLARED_FORMAL_SUITE',
@@ -183,7 +184,7 @@ def _record_files(bundle, root):
     keys(registry, {'schema', 'programme', 'cutoff', 'baseline_commit', 'baseline_tree',
                     'records', 'suite_ids', 'result_ids'})
     require(registry['schema'] == 'orthemology-v5-successors-v1', 'Unknown registry schema')
-    require(registry['programme'] == 'Orthemology v5' and registry['cutoff'] == 'fifteenth-final',
+    require(registry['programme'] == 'Orthemology v5' and registry['cutoff'] in CUTOFF_TRANCHES,
             'Wrong programme or cutoff')
     require(isinstance(bundle['supplementary'], dict)
             and set(bundle['supplementary']) <= SUPPLEMENTARY, 'Unknown supplementary record')
@@ -551,7 +552,11 @@ def _results(bundle, sources, reviews, projections, suites, receipts):
         for field in ['title', 'family', 'target', 'input_contract', 'conclusion', 'operational_model',
                       'origin_status', 'residual_scope']:
             nonempty(row[field])
-        require(type(row['tranche']) is int and 7 <= row['tranche'] <= 15, 'Out-of-scope tranche')
+        cutoff = bundle.get('registry', {}).get('cutoff', 'fifteenth-final')
+        require(cutoff in CUTOFF_TRANCHES and type(row['tranche']) is int
+                and 7 <= row['tranche'] <= CUTOFF_TRANCHES[cutoff], 'Out-of-scope tranche')
+        require(row['calculus'] != 'P01AC.UnaryCertificate.HasC' or row['tranche'] == 16,
+                'HasC belongs to the separate Sixteenth successor')
         require(isinstance(row['original_avenues'], list) and len(row['original_avenues']) == len(set(row['original_avenues']))
                 and all(type(n) is int and 1 <= n <= 12 for n in row['original_avenues']), 'Invalid original avenue')
         string_list(row['assumptions']); string_list(row['limitations'], empty=False)

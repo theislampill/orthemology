@@ -1,77 +1,76 @@
 {
-  "schema": "orthemology-v5-successors-v1",
-  "programme": "Orthemology v5",
-  "cutoff": "fifteenth-final",
   "baseline_commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
   "baseline_tree": "08a6452e50e8e4791d02410d1c1732875e520f2e",
+  "cutoff": "sixteenth-final",
+  "programme": "Orthemology v5",
   "records": {
     "BASELINE_BINDING": {
       "path": "docs/provenance/v5-successors/BASELINE_BINDING.json",
-      "sha256": "41b788ac9b2d1daeee19e8b1503f66113083c751cd230d766a58f06c29e1a6cf"
+      "sha256": "4c34ec1e13c095caa186ab0250daf5386e911957367b7e4f53aa900b5e405c63"
     },
     "CALCULUS_MAP": {
       "path": "docs/provenance/v5-successors/CALCULUS_MAP.json",
-      "sha256": "1e8c0e19d4ef60e75b783430fa221a539013ee5a40ab4942476b60c10db5f7eb"
+      "sha256": "e8ae4dfd07d0decd507850db4efc988087ef69eb9a0ae7327c7566f833979556"
     },
     "CONTROL_DISPOSITIONS": {
       "path": "docs/provenance/v5-successors/CONTROL_DISPOSITIONS.json",
-      "sha256": "a233582ce8603fc8e33070d7bbda2510157b236aca55f964629e544e015e9e63"
+      "sha256": "8a0b6e305baf333647d92d2a6cab4132bcd646fffa8bb38b0af83d37db7f434d"
     },
     "EMPIRICAL_SCOPE": {
       "path": "docs/provenance/v5-successors/EMPIRICAL_SCOPE.json",
-      "sha256": "9f12feaa1155e9fd742aac38fe901186d06f014f657e686567ed36df10be33ca"
+      "sha256": "18e995158833f812ce0a1dadd23c4e7ac62dca1a928e01dee044d1a9770b1948"
     },
     "EVIDENCE_BINDINGS": {
       "path": "docs/provenance/v5-successors/EVIDENCE_BINDINGS.json",
-      "sha256": "48dadc38d535878a66f25363b6e3616144e55c1b5d8f4122a9198f7fbb364936"
+      "sha256": "5482d2ecfacd83efccc46d3baa2544a80bcaf682c46f43ab3c2b2b08cc00e172"
     },
     "FOUNDATIONAL_FRONTIER": {
       "path": "docs/provenance/v5-successors/FOUNDATIONAL_FRONTIER.json",
-      "sha256": "70ab8980f861073b8a2f5f2d6093393681458f131dcc81f74d9c4b7eb111c75c"
+      "sha256": "61d5720a0497359f9ab4e1804c08b4a0490845cb6a6112e2ae521b007f570a99"
     },
     "INTEGRATION_VERIFICATION": {
       "path": "docs/provenance/v5-successors/INTEGRATION_VERIFICATION.json",
-      "sha256": "8d87252a89c683640dfc2cd1badc08f79c527892d323cbf495ed45067cdd9756"
+      "sha256": "13e91c6ba844a2eb1fcc8b91d81fc92fae7fdf757653ed5598d381393986dfc1"
     },
     "INTERNAL_REVIEW_DISPOSITION": {
       "path": "docs/provenance/v5-successors/INTERNAL_REVIEW_DISPOSITION.json",
-      "sha256": "fb1465c8f0e560668186496a49513bbe3550c12a4897d9b9bb999bdd8ae9ea7d"
+      "sha256": "d58118eec057632984767601946cd28ab3d5406ed39c142bcae8a04a252d94a9"
     },
     "OBLIGATION_CROSSWALK": {
       "path": "docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json",
-      "sha256": "649b65670344a4c24b5b5ebc2d7a21e7f302f32fa1137295767ecf7141c8fac8"
+      "sha256": "a30df89c1a0a2d40a2efd8ed48c91b660c034d0ef127a9f16020a887c6675e83"
     },
     "PRESERVATION": {
       "path": "docs/provenance/v5-successors/PRESERVATION.json",
-      "sha256": "cd81d3b80d5183c1c01b637207d0afefd2b143ce4ee346808ca473a15eea6c4a"
+      "sha256": "930b7561b0f55e395bcafcc9d5289c63e7a78abfa9264767b0d9b43314686373"
     },
     "PUBLIC_PROJECTION": {
       "path": "docs/provenance/v5-successors/PUBLIC_PROJECTION.json",
-      "sha256": "9bf98d9b9da46e1f5100a6fe70c89c189a9c399f07f568f832af9c803149807e"
+      "sha256": "746eb2621612b7ff372bbc2510e0e4b286a2a44eb91e27f0fda7d91093d0d182"
     },
     "RESULT_STATUS": {
       "path": "docs/provenance/v5-successors/RESULT_STATUS.json",
-      "sha256": "9befd5c697fa2e1a837143305bd69d85d83cd1257a3d72964f9fcf1096fa6d72"
+      "sha256": "347cbfd17993c12f874787a15836ce6e65f6a79bb9ef6a73309c48004b8c1907"
     },
     "SOURCE_MAP": {
       "path": "docs/provenance/v5-successors/SOURCE_MAP.json",
-      "sha256": "2f71c3120b499f8fdeb77487c92c32906dd497c71a51b0932b5be428e85a8e0e"
+      "sha256": "9a66b59016cdee4fb1bc34df19af426b32220169d4fc78a4817aaf8aeb55ad69"
     },
     "SOURCE_USE": {
       "path": "docs/provenance/v5-successors/SOURCE_USE.json",
-      "sha256": "3492094e56600e43081ffdeff7322bcbfb541108f10a86d269ab4bd5c068f2af"
+      "sha256": "012d195e6df093bce4b97f5a648faea1432ee825a29bb2179580337bdf2b3d13"
     },
     "SUPERSESSION": {
       "path": "docs/provenance/v5-successors/SUPERSESSION.json",
-      "sha256": "117017da84965be7c96dd3368555c505bcb999bd77554d1000994c94c37f0624"
+      "sha256": "39a5632257fd1e24e2851686a7a7d6279aa2f03117b605ebc8142edcbe0e04af"
     },
     "TOOLCHAINS": {
       "path": "docs/provenance/v5-successors/TOOLCHAINS.json",
-      "sha256": "6964b99b6b32180841ce6a81025ddbf8534c7d671fb2d1d5b185053eccef1323"
+      "sha256": "d2cacb1cf75b98eb4b23b21af1676f06db1ad41225c86548186d42b9db0ba581"
     },
     "TWELVE_AVENUES": {
       "path": "docs/provenance/v5-successors/TWELVE_AVENUES.json",
-      "sha256": "43d8259f854f6237ddaecf4d49514c0a27cd3077b86b31dc344c6a9113e2ee7d"
+      "sha256": "1f02ae0f1684aed008c7ecb0c88abd958520e2105f167ba1356e40f57fc4aed3"
     },
     "suite:D04-T07-ATTRIBUTION-ORIGINAL": {
       "path": "experiments/orthemology-v5-successors/suites/D04-T07-ATTRIBUTION-ORIGINAL.json",
@@ -222,45 +221,6 @@
       "sha256": "c0abbabb75b473bd1248d7a970c254e75c01785ffa7b9c785b583eb37cf4a21d"
     }
   },
-  "suite_ids": [
-    "D04-T07-ATTRIBUTION-ORIGINAL",
-    "D04-T07-COMPOSITION-ORIGINAL",
-    "D04-T07-COVERING-ORIGINAL",
-    "D04-T07-CRITERION-ORIGINAL",
-    "D04-T07-DYNAMIC-ORIGINAL",
-    "D04-T07-HISTORY-ORIGINAL",
-    "D05-T08-BATCH-ORIGINAL",
-    "D05-T08-COMMON-ORIGINAL",
-    "D05-T08-CONTROLLER-ORIGINAL",
-    "D05-T08-SHARED-ORIGINAL",
-    "D07-T09-CONTROLLER-ORIGINAL",
-    "D07-T09-TRANSPORT-ORIGINAL",
-    "T10-MODEL-CHECKER",
-    "T10-NONUNIFORM-COMPLETION",
-    "T10-UNIFORM-COMPLETION",
-    "T15-EMPIRICAL-REANALYSIS",
-    "d06-core-runtime",
-    "d06-portable-cost",
-    "d06-portable-runtime-literal",
-    "d06-selector",
-    "d08-g1",
-    "d08-g1-review",
-    "d08-p1",
-    "d08-p1-tail-audit-01",
-    "d08-p1-tail-finish-01",
-    "d08-p1-tail-finish-reference-01",
-    "d17-t14-occurrence-finite",
-    "d17-t14-sense-finite",
-    "t11-dependent-all",
-    "t11-normalization",
-    "t11-nucleus",
-    "t11-substitution",
-    "t14-identity",
-    "t15-identity",
-    "t15-json-reference",
-    "t15-runtime-agreement",
-    "t15-univariate-reference"
-  ],
   "result_ids": [
     "D06-01",
     "D06-02",
@@ -456,6 +416,67 @@
     "T15-RESTRICTED-GRID",
     "T15-RUNTIME-AGREEMENT",
     "T15-UNIVARIATE-CRITERION",
-    "T15-UNIVARIATE-REFERENCE"
+    "T15-UNIVARIATE-REFERENCE",
+    "T16-RENEWAL",
+    "T16-RANDOMISED-ZERO",
+    "T16-POPULATION",
+    "T16-COMPETENCE",
+    "T16-LOOKAHEAD",
+    "T16-SYNTHESIS-REDUCTION",
+    "T16-SYNTHESIS-CLASSIFICATIONS",
+    "T16-UNARY-CHECKER",
+    "T16-UNARY-SPARSE",
+    "T16-CURRENT-HAS",
+    "T16-BRIDGE-HASPLUS",
+    "T16-HASC-SOUND",
+    "T16-HASC-CLOSED",
+    "T16-TEMPORAL",
+    "T16-ALMOST-SURE",
+    "T16-SIGNED-SERVICE",
+    "T16-DIRECT-CONTROLLER",
+    "T16-SOURCE-ASSESSMENT",
+    "T16-OCCURRENCE",
+    "T16-EMPIRICAL",
+    "T16-CORE-ASSURANCE"
+  ],
+  "schema": "orthemology-v5-successors-v1",
+  "suite_ids": [
+    "D04-T07-ATTRIBUTION-ORIGINAL",
+    "D04-T07-COMPOSITION-ORIGINAL",
+    "D04-T07-COVERING-ORIGINAL",
+    "D04-T07-CRITERION-ORIGINAL",
+    "D04-T07-DYNAMIC-ORIGINAL",
+    "D04-T07-HISTORY-ORIGINAL",
+    "D05-T08-BATCH-ORIGINAL",
+    "D05-T08-COMMON-ORIGINAL",
+    "D05-T08-CONTROLLER-ORIGINAL",
+    "D05-T08-SHARED-ORIGINAL",
+    "D07-T09-CONTROLLER-ORIGINAL",
+    "D07-T09-TRANSPORT-ORIGINAL",
+    "T10-MODEL-CHECKER",
+    "T10-NONUNIFORM-COMPLETION",
+    "T10-UNIFORM-COMPLETION",
+    "T15-EMPIRICAL-REANALYSIS",
+    "d06-core-runtime",
+    "d06-portable-cost",
+    "d06-portable-runtime-literal",
+    "d06-selector",
+    "d08-g1",
+    "d08-g1-review",
+    "d08-p1",
+    "d08-p1-tail-audit-01",
+    "d08-p1-tail-finish-01",
+    "d08-p1-tail-finish-reference-01",
+    "d17-t14-occurrence-finite",
+    "d17-t14-sense-finite",
+    "t11-dependent-all",
+    "t11-normalization",
+    "t11-nucleus",
+    "t11-substitution",
+    "t14-identity",
+    "t15-identity",
+    "t15-json-reference",
+    "t15-runtime-agreement",
+    "t15-univariate-reference"
   ]
 }

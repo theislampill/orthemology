@@ -1,0 +1,128 @@
+{
+  "status": "ACCEPTED: author and independent exact-archive fresh replays passed",
+  "source_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+  "source_archive_bytes": 643341,
+  "source_archive_regular_files": 376,
+  "fresh_mathematical_roots_each_replay": 111,
+  "main_fixtures_each_replay": {
+    "support": 12,
+    "positive": 63,
+    "expected_rejection": 145,
+    "total": 220
+  },
+  "new_integration_controls": 4,
+  "python_reference_tests": 22,
+  "declarations": 8289,
+  "theorem_roots": 3485,
+  "complete_theorem_root_set_and_acceptance_scope_match": true,
+  "logical_closure_declarations": 14492,
+  "nonproof_auxiliary_exclusions": 2446,
+  "logical_opaque_inventory_entries": 6,
+  "packaged_hasc_constructor_retention": {
+    "Ctx": 2,
+    "Form": 7,
+    "Has": 18
+  },
+  "source_only_member_checks_passed": true,
+  "spaced_paths_unrelated_cwd_and_fresh_output_checks_passed": true,
+  "caller_lean_path_isolated": true,
+  "author_and_independent_inventories_byte_identical": true,
+  "canonical_adoption_or_public_transfer": false,
+  "independent_acceptance_sha256": "91a59b5b12b4a01b91429b1d492922fd03c5981fd40a8875d289a1548d0c0796",
+  "historical_control_provenance": {
+    "exact_historical_hash_matches": 167,
+    "complete_payload_without_retained_historical_hash": 52,
+    "new_regenerated_fixture_independently_checked": 1
+  },
+  "bounded_limitations": [
+    "This is a new recovered integration; exact restoration is claimed for all 111 mathematical sources, not for the interrupted wrappers or all 220 historical fixture bytes.",
+    "The 6,713 inherited declaration names and flags are preserved; 23 generated equation lemmas have different module attribution wholly within inherited88. Historical module/name-row and proof-term-byte equality are not claimed.",
+    "Aggregate closure is logical; strict computational and HasC opaque gates are separate. Native compiler, FFI and standard implementation overrides remain explicit trust boundaries.",
+    "Pinned official dependency objects were reused after exact source/revision/provenance checks; no new dependency cold build is claimed.",
+    "Historical acceptance records remain separately scoped; unavailable historical serialized bodies were not recreated or fabricated.",
+    "Written hierarchy normal forms, randomised/population arguments, sparse-normalisation variants, empirical/model applications and other exclusions remain outside the kernel acceptance map.",
+    "The separately developed signed-controller extension is not part of this immutable 111-root library."
+  ],
+  "artifacts": [
+    {
+      "path": "Sixteenth_Orthemology_Proof_Source_Recovered_v1.zip",
+      "sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "bytes": 643341
+    },
+    {
+      "path": "Sixteenth_Orthemology_Proof_Source_Recovered_v1.custody.json",
+      "sha256": "c525b8a86b496807317558c9f3651e21bc6efea3a962fb16bb7d0df82fe8a059",
+      "bytes": 587
+    },
+    {
+      "path": "Sixteenth_Orthemology_Recovered_v1_Author_Verification.json",
+      "sha256": "e4db957a1483d156582eea7a06c47a3c03a23d907e5fc38aaeb379572da133ba",
+      "bytes": 2610
+    },
+    {
+      "path": "verification/Archive_Interface_Regression_Checks.json",
+      "sha256": "cb286433f795e9b9e89103807aad960d3fb3040bf10a4bc677967b517d11ea7c",
+      "bytes": 1773
+    },
+    {
+      "path": "verification/Archive_Member_Verification.json",
+      "sha256": "5cb7426f02bc128bafd82387d6305bd3a130c49eaa4647c7cb469534da996b5b",
+      "bytes": 86840
+    },
+    {
+      "path": "verification/Author_Full_Replay_Receipt.json",
+      "sha256": "9a6fc81f07f533e720ab4e5ef0d04ef227d38daaa9650dccb162d9a5349726cc",
+      "bytes": 161504
+    },
+    {
+      "path": "verification/Author_Independent_Inventory_Comparison.json",
+      "sha256": "dd12e280787d416307751d69929db21ea6087c1bb9f0f8cfdda34cc821f4d791",
+      "bytes": 5886
+    },
+    {
+      "path": "verification/Historical_Inherited_Inventory_Comparison.json",
+      "sha256": "672f627345833e7b606baad0345d72a575d5aeae3e0f4966eb25312844a425d4",
+      "bytes": 4190
+    },
+    {
+      "path": "verification/Independent_Archive_Acceptance.json",
+      "sha256": "91a59b5b12b4a01b91429b1d492922fd03c5981fd40a8875d289a1548d0c0796",
+      "bytes": 5980
+    },
+    {
+      "path": "verification/Independent_Full_Replay_Receipt.json",
+      "sha256": "5a5e9a8587f03197dcd665a91491e40a42506d43f0ecf37bacb6a7d7c94bd6cf",
+      "bytes": 161504
+    },
+    {
+      "path": "verification/Regenerated_Fixture_Verification.json",
+      "sha256": "66b8f85f673faa6547b4a01a8a351bd19dad870bcaa73bcbf468863fe8b1071d",
+      "bytes": 882
+    },
+    {
+      "path": "verification/declaration-inventory.json",
+      "sha256": "1b02871331f5fe8ed47f8ab96281fba1decc72cf2b9337201292a5457be52e9b",
+      "bytes": 1221410
+    },
+    {
+      "path": "verification/logical-opaque-inventory.json",
+      "sha256": "03ebd0d29094434a93b58aa7ae90b182a209b378829ba82a6d3501955359a563",
+      "bytes": 1310
+    },
+    {
+      "path": "verification/module-inventory.json",
+      "sha256": "ddd756b551caa3d1fd10fa21cd580909ed6425b75d5f10c6a86b39ed480c1b29",
+      "bytes": 2575
+    },
+    {
+      "path": "verification/nonproof-auxiliary-exclusions.json",
+      "sha256": "05b3c973e260739205464cd67bda153b75a8c6910b5984e44d4069a71d593c56",
+      "bytes": 464185
+    },
+    {
+      "path": "verification/proof-roots.json",
+      "sha256": "4137ad16799a789af898da9a405441afcb20742e1308e6779dac2a42121e0a20",
+      "bytes": 156708
+    }
+  ]
+}

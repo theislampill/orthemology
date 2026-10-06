@@ -2068,10 +2068,18 @@
       ]
     },
     {
+      "basis": "Receipt t11-dependent-all-replay qualifies t11-dependent-all with 46 positive controls and 28 accepted counterexample proofs. All 74 exact targets have CHECKED_SAFE proof closure. The original inventory contains 1587 literal axiom readbacks and 1220 silent audit commands; every declared stage completed. Suite digest 1bda9de6c2ef174c3c711a3ef750c1655224a6e6b8cf31e1fc699089bdd8465a.",
+      "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
       "id": "D10-controls-t11-dependent-all",
+      "limitations": [
+        "Counterexample proofs are successful ACCEPT controls, not invented process rejections.",
+        "Repeated targets, inherited closures and the parser-repair retry do not add independence.",
+        "Qualification covers only the exact source grammar, declarations, hypotheses and candidate scope."
+      ],
       "result_ids": [
         "T11-DEPENDENT-ALL"
       ],
+      "scope": "Successful positive and counterexample theorem checks; literal source readbacks and silent source audit commands retained.",
       "source_ids": [
         "identity-src-991d98a6ed6f03a3bd42",
         "identity-src-16031bc87eab7e4233a0",
@@ -2090,39 +2098,39 @@
         "identity-src-df82d58c19af18d407f5",
         "identity-src-8bff6929b396569f830e",
         "identity-src-5ffebc0a0b9593df11b1"
-      ],
+      ]
+    },
+    {
+      "basis": "Receipt t11-normalization-replay qualifies t11-normalization with 20 positive controls and 4 accepted counterexample proofs. All 24 exact targets have CHECKED_SAFE proof closure. The original inventory contains 58 literal axiom readbacks and 24 silent audit commands; every declared stage completed. Suite digest 06d8b79a92ad02e074b996d1836701dea8b979a35519bdd9d5fa6e6a1f0f241d.",
       "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "Successful positive and counterexample theorem checks; literal source readbacks and silent source audit commands retained.",
-      "basis": "Receipt t11-dependent-all-replay qualifies t11-dependent-all with 46 positive controls and 28 accepted counterexample proofs. All 74 exact targets have CHECKED_SAFE proof closure. The original inventory contains 1587 literal axiom readbacks and 1220 silent audit commands; every declared stage completed. Suite digest 1bda9de6c2ef174c3c711a3ef750c1655224a6e6b8cf31e1fc699089bdd8465a.",
+      "id": "D10-controls-t11-normalization",
       "limitations": [
         "Counterexample proofs are successful ACCEPT controls, not invented process rejections.",
         "Repeated targets, inherited closures and the parser-repair retry do not add independence.",
         "Qualification covers only the exact source grammar, declarations, hypotheses and candidate scope."
-      ]
-    },
-    {
-      "id": "D10-controls-t11-normalization",
+      ],
       "result_ids": [
         "T11-NORMALIZATION-BOUNDARY"
       ],
+      "scope": "Successful positive and counterexample theorem checks; literal source readbacks and silent source audit commands retained.",
       "source_ids": [
         "identity-src-0cffb5ab1936e586f4df",
         "identity-src-259156fbe396bf9c3fb9"
-      ],
+      ]
+    },
+    {
+      "basis": "Receipt t11-nucleus-replay qualifies t11-nucleus with 23 positive controls and 24 accepted counterexample proofs. All 47 exact targets have CHECKED_SAFE proof closure. The original inventory contains 376 literal axiom readbacks and 300 silent audit commands; every declared stage completed. Suite digest f173f4161b3432cd679ff47169d2bd5046815a7259317d2420b26c17427a87d2.",
       "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "Successful positive and counterexample theorem checks; literal source readbacks and silent source audit commands retained.",
-      "basis": "Receipt t11-normalization-replay qualifies t11-normalization with 20 positive controls and 4 accepted counterexample proofs. All 24 exact targets have CHECKED_SAFE proof closure. The original inventory contains 58 literal axiom readbacks and 24 silent audit commands; every declared stage completed. Suite digest 06d8b79a92ad02e074b996d1836701dea8b979a35519bdd9d5fa6e6a1f0f241d.",
+      "id": "D10-controls-t11-nucleus",
       "limitations": [
         "Counterexample proofs are successful ACCEPT controls, not invented process rejections.",
         "Repeated targets, inherited closures and the parser-repair retry do not add independence.",
         "Qualification covers only the exact source grammar, declarations, hypotheses and candidate scope."
-      ]
-    },
-    {
-      "id": "D10-controls-t11-nucleus",
+      ],
       "result_ids": [
         "T11-TYPED-TELESCOPE-NUCLEUS"
       ],
+      "scope": "Successful positive and counterexample theorem checks; literal source readbacks and silent source audit commands retained.",
       "source_ids": [
         "identity-src-150b61a5c71245458578",
         "identity-src-beaf020de6513e8ab217",
@@ -2133,63 +2141,65 @@
         "identity-src-17bb367a7ab9ee26d589",
         "identity-src-8d138d70f5afc42d6273",
         "identity-src-eee5c45be8cb2e4f2053"
-      ],
+      ]
+    },
+    {
+      "basis": "Receipt t11-substitution-replay qualifies t11-substitution with 31 positive controls and 4 accepted counterexample proofs. All 35 exact targets have CHECKED_SAFE proof closure. The original inventory contains 63 literal axiom readbacks and 0 silent audit commands; every declared stage completed. Suite digest 798660a676f68c0053f47890a04d6cf8786fa8c9170b315215ee97c39af6e78d.",
       "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "Successful positive and counterexample theorem checks; literal source readbacks and silent source audit commands retained.",
-      "basis": "Receipt t11-nucleus-replay qualifies t11-nucleus with 23 positive controls and 24 accepted counterexample proofs. All 47 exact targets have CHECKED_SAFE proof closure. The original inventory contains 376 literal axiom readbacks and 300 silent audit commands; every declared stage completed. Suite digest f173f4161b3432cd679ff47169d2bd5046815a7259317d2420b26c17427a87d2.",
+      "id": "D10-controls-t11-substitution",
       "limitations": [
         "Counterexample proofs are successful ACCEPT controls, not invented process rejections.",
         "Repeated targets, inherited closures and the parser-repair retry do not add independence.",
         "Qualification covers only the exact source grammar, declarations, hypotheses and candidate scope."
-      ]
-    },
-    {
-      "id": "D10-controls-t11-substitution",
+      ],
       "result_ids": [
         "T11-RAW-INDEX-SUBSTITUTION"
       ],
+      "scope": "Successful positive and counterexample theorem checks; literal source readbacks and silent source audit commands retained.",
       "source_ids": [
         "identity-src-8d33c711929c52a65938",
         "identity-src-3b10be3008d56197fab8",
         "identity-src-0d9bf215e3f6c16b1938",
         "identity-src-ef5997c5a527815b2b8e"
-      ],
-      "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "Successful positive and counterexample theorem checks; literal source readbacks and silent source audit commands retained.",
-      "basis": "Receipt t11-substitution-replay qualifies t11-substitution with 31 positive controls and 4 accepted counterexample proofs. All 35 exact targets have CHECKED_SAFE proof closure. The original inventory contains 63 literal axiom readbacks and 0 silent audit commands; every declared stage completed. Suite digest 798660a676f68c0053f47890a04d6cf8786fa8c9170b315215ee97c39af6e78d.",
-      "limitations": [
-        "Counterexample proofs are successful ACCEPT controls, not invented process rejections.",
-        "Repeated targets, inherited closures and the parser-repair retry do not add independence.",
-        "Qualification covers only the exact source grammar, declarations, hypotheses and candidate scope."
       ]
     },
     {
+      "basis": "Published attempt t11-substitution-replay-attempt01-failed changes only the original receipt id. Its original compiler/source-check stages and generated Lean target audit completed exit 0, but an unanchored end-marker count confused index_instantiate with index_instantiate_type. The exact-line parser regression was repaired and reviewed; the single fresh retry supplies qualification. The original private receipt and original-to-published digest mapping remain retained.",
+      "disposition": "FAILED_ADAPTER_ATTEMPT_RETAINED_WITH_SINGLE_BOUNDED_FRESH_RETRY",
       "id": "D10-substitution-parser-repair-attempt",
+      "limitations": [
+        "FAILED remains FAILED; no manual promotion of its scientific or terminal fields.",
+        "The repeat is parser-repair qualification and adds no independent scientific evidence."
+      ],
       "result_ids": [
         "T11-RAW-INDEX-SUBSTITUTION"
       ],
+      "scope": "Adapter readback parsing, not scientific nonderivability or rejected mathematical control.",
       "source_ids": [
         "identity-src-3b10be3008d56197fab8",
         "identity-src-ef5997c5a527815b2b8e",
         "identity-src-8d33c711929c52a65938",
         "identity-src-0d9bf215e3f6c16b1938"
-      ],
-      "disposition": "FAILED_ADAPTER_ATTEMPT_RETAINED_WITH_SINGLE_BOUNDED_FRESH_RETRY",
-      "scope": "Adapter readback parsing, not scientific nonderivability or rejected mathematical control.",
-      "basis": "Published attempt t11-substitution-replay-attempt01-failed changes only the original receipt id. Its original compiler/source-check stages and generated Lean target audit completed exit 0, but an unanchored end-marker count confused index_instantiate with index_instantiate_type. The exact-line parser regression was repaired and reviewed; the single fresh retry supplies qualification. The original private receipt and original-to-published digest mapping remain retained.",
-      "limitations": [
-        "FAILED remains FAILED; no manual promotion of its scientific or terminal fields.",
-        "The repeat is parser-repair qualification and adds no independent scientific evidence."
       ]
     },
     {
+      "basis": "Receipt t14-identity-replay qualifies the exact suite 7770ddcad11b7037788aa6fba4cdb80eb4234abe541e3e093f500c421ec8e1c7. All 89 recorded stages completed: 87 source-prescribed descriptor stages plus the prerequisite and exact-target audit. Five exact targets have checked type/axiom readbacks and CHECKED_SAFE proof closures. Two positive controls and three named counterexample proofs were ACCEPT with exit 0; nine fixtures were REJECT with exit 1 and the original single-type-mismatch diagnostic contract. No retry occurred. The original audit terminal lines are: INDEPENDENT_AXIOM_PASS 156 declarations; 16 compiler auxiliaries; no new axioms | LOGICAL_SAFETY_CLOSURE_PASS 140 safe namespace roots; 2368 total reachable declarations; no unsafe or partial dependencies | WITNESS_FINITE_SYNTACTIC_CONSTRUCTION_PASS PiExt=[P01AC.ExtensionalRepair.arrow_identity_has] AllExt=[P01AC.ExtensionalRepair.separation_has]",
+      "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
       "id": "D13-controls-t14-identity",
+      "limitations": [
+        "Accepted counterexample theorems are successful proofs, not failed-process rejection evidence.",
+        "Compiler-generated executable auxiliaries outside the actual logical dependency closure are not automatically logical axioms; the original audit distinguishes their role.",
+        "The original historical five source-guard mutation checks are retained history, not claimed as freshly executed by this supplied suite.",
+        "The four written finite-certificate/computability records retain NOT_RUN; qualification does not formalize those whole arguments or adopt HasPlus or HasE.",
+        "Shared inherited proof closures and multiple readbacks do not add independent evidence."
+      ],
       "result_ids": [
         "T14-I-SKK-HAS",
         "T14-I-SKK-PLUS",
         "T14-CLOSED-PLUS-IDENTITY",
         "T14-TYPED-EXTENSION"
       ],
+      "scope": "The single fresh T14 run, with original checksum/source checks, 65 default roots, six original audits and all nine source-bound type-error fixtures.",
       "source_ids": [
         "identity-src-13439cfa61b2dbc49571",
         "identity-src-e366ee5163344e2c5e44",
@@ -2202,20 +2212,18 @@
         "identity-src-7df588915b7435c4338f",
         "identity-src-b693ff9c214b712080e5",
         "identity-src-c307c2e3beed7f9b52f3"
-      ],
-      "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "The single fresh T14 run, with original checksum/source checks, 65 default roots, six original audits and all nine source-bound type-error fixtures.",
-      "basis": "Receipt t14-identity-replay qualifies the exact suite 7770ddcad11b7037788aa6fba4cdb80eb4234abe541e3e093f500c421ec8e1c7. All 89 recorded stages completed: 87 source-prescribed descriptor stages plus the prerequisite and exact-target audit. Five exact targets have checked type/axiom readbacks and CHECKED_SAFE proof closures. Two positive controls and three named counterexample proofs were ACCEPT with exit 0; nine fixtures were REJECT with exit 1 and the original single-type-mismatch diagnostic contract. No retry occurred. The original audit terminal lines are: INDEPENDENT_AXIOM_PASS 156 declarations; 16 compiler auxiliaries; no new axioms | LOGICAL_SAFETY_CLOSURE_PASS 140 safe namespace roots; 2368 total reachable declarations; no unsafe or partial dependencies | WITNESS_FINITE_SYNTACTIC_CONSTRUCTION_PASS PiExt=[P01AC.ExtensionalRepair.arrow_identity_has] AllExt=[P01AC.ExtensionalRepair.separation_has]",
-      "limitations": [
-        "Accepted counterexample theorems are successful proofs, not failed-process rejection evidence.",
-        "Compiler-generated executable auxiliaries outside the actual logical dependency closure are not automatically logical axioms; the original audit distinguishes their role.",
-        "The original historical five source-guard mutation checks are retained history, not claimed as freshly executed by this supplied suite.",
-        "The four written finite-certificate/computability records retain NOT_RUN; qualification does not formalize those whole arguments or adopt HasPlus or HasE.",
-        "Shared inherited proof closures and multiple readbacks do not add independent evidence."
       ]
     },
     {
+      "basis": "Receipt t15-identity-replay qualifies the exact source-prescribed suite after 223 recorded stages (221 source stages plus prerequisites and final target audit). Its 18 target readbacks are CHECKED_SAFE; 21 controls ACCEPT with exit 0 and 80 exact compiler controls REJECT with exit 1. The normal-mode source-mutation driver separately completed its original 15-case aggregate contract. The project-wide audit reports 2750 theorem roots, 12311 reachable declarations and zero unsafe/partial declarations in those proof closures. The fresh exporter reports 6713 declarations across 88 root modules.",
+      "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
       "id": "D14-controls-t15-identity",
+      "limitations": [
+        "The original 15 source-mutation outcomes are aggregate driver evidence, not invented child exit codes or additional compiler rejection controls.",
+        "Attempts 01 and02 retain FAILED status; their published projections change only id. Successful 03 alone supplies fresh status; neither retry creates independence.",
+        "Whole written hierarchy classifications, source representation hypotheses and global completeness reductions are not promoted to kernel proofs.",
+        "Unsafe/partial executable auxiliaries outside the actual checked logical closure are not automatically logical axioms."
+      ],
       "result_ids": [
         "T15-RAW-KERNEL-BRIDGES",
         "T15-BOOLEAN-KERNEL-BRIDGES",
@@ -2225,6 +2233,7 @@
         "T15-RESTRICTED-CERTIFICATES",
         "T15-POLYNOMIAL-COMPILER"
       ],
+      "scope": "The unchanged formal descriptor: 88 project roots, all original source/driver audits and exact positive/negative fixtures, plus explicit target readback.",
       "source_ids": [
         "identity-src-003725d58866c59f3d52",
         "identity-src-007d865cd2cc1c2845f1",
@@ -2329,158 +2338,149 @@
         "identity-src-f8565b8374b0b0375478",
         "identity-src-fe009085de37dec7431d",
         "identity-src-fef6ef331a9876754bf8"
-      ],
-      "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "The unchanged formal descriptor: 88 project roots, all original source/driver audits and exact positive/negative fixtures, plus explicit target readback.",
-      "basis": "Receipt t15-identity-replay qualifies the exact source-prescribed suite after 223 recorded stages (221 source stages plus prerequisites and final target audit). Its 18 target readbacks are CHECKED_SAFE; 21 controls ACCEPT with exit 0 and 80 exact compiler controls REJECT with exit 1. The normal-mode source-mutation driver separately completed its original 15-case aggregate contract. The project-wide audit reports 2750 theorem roots, 12311 reachable declarations and zero unsafe/partial declarations in those proof closures. The fresh exporter reports 6713 declarations across 88 root modules.",
-      "limitations": [
-        "The original 15 source-mutation outcomes are aggregate driver evidence, not invented child exit codes or additional compiler rejection controls.",
-        "Attempts 01 and02 retain FAILED status; their published projections change only id. Successful 03 alone supplies fresh status; neither retry creates independence.",
-        "Whole written hierarchy classifications, source representation hypotheses and global completeness reductions are not promoted to kernel proofs.",
-        "Unsafe/partial executable auxiliaries outside the actual checked logical closure are not automatically logical axioms."
       ]
     },
     {
+      "basis": "The exact normal-mode original unit inventory completed 22 methods (10 author plus 12 independent), and both prescribed stdin CLI examples returned the exact successful Boolean JSON result. The output/receipt scope is FINITE_ONLY.",
+      "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
       "id": "D14-controls-t15-json-reference",
+      "limitations": [
+        "Finite implementation evidence does not prove parser correspondence, implementation refinement, whole-fragment completeness or global complexity classifications.",
+        "The strict decoded-object Python structure and standard JSON decoding are separate boundaries; duplicate input-key rejection is not claimed.",
+        "Inherited suites and common supporting Lean closures do not add independent evidence."
+      ],
       "result_ids": [
         "T15-PYTHON-REFERENCE"
       ],
+      "scope": "The exact separately represented finite reference implementation and original driver contract.",
       "source_ids": [
         "identity-src-535a107f1a126871a452",
         "identity-src-6db4df81814f44506b7f",
         "identity-src-fe8e52ab794092cd05af"
-      ],
+      ]
+    },
+    {
+      "basis": "The original preparation, generated Lean execution and verification completed after 76 fresh supporting modules. Actual generated counts: 720 pairs, 546 equal and 174 unequal, 720 verified Lean rows and 2160 Boolean observations, 87360 direct evaluations, and 174 distinguishing witnesses. Seed 151005, arities0–5. formal_refinement_claim is false; the receipt is FINITE_ONLY.",
       "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "The exact separately represented finite reference implementation and original driver contract.",
-      "basis": "The exact normal-mode original unit inventory completed 22 methods (10 author plus 12 independent), and both prescribed stdin CLI examples returned the exact successful Boolean JSON result. The output/receipt scope is FINITE_ONLY.",
+      "id": "D14-controls-t15-runtime-agreement",
       "limitations": [
         "Finite implementation evidence does not prove parser correspondence, implementation refinement, whole-fragment completeness or global complexity classifications.",
         "The strict decoded-object Python structure and standard JSON decoding are separate boundaries; duplicate input-key rejection is not claimed.",
         "Inherited suites and common supporting Lean closures do not add independent evidence."
-      ]
-    },
-    {
-      "id": "D14-controls-t15-runtime-agreement",
+      ],
       "result_ids": [
         "T15-RUNTIME-AGREEMENT"
       ],
+      "scope": "The exact separately represented finite reference implementation and original driver contract.",
       "source_ids": [
         "identity-src-6db4df81814f44506b7f",
         "identity-src-74e785e78f3252fc3f51"
-      ],
+      ]
+    },
+    {
+      "basis": "The exact normal-mode original unit inventory completed 15 methods (8 author plus 7 independent), with the original source-owned adjacent Python dependency path. The output/receipt scope is FINITE_ONLY.",
       "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "The exact separately represented finite reference implementation and original driver contract.",
-      "basis": "The original preparation, generated Lean execution and verification completed after 76 fresh supporting modules. Actual generated counts: 720 pairs, 546 equal and 174 unequal, 720 verified Lean rows and 2160 Boolean observations, 87360 direct evaluations, and 174 distinguishing witnesses. Seed 151005, arities0–5. formal_refinement_claim is false; the receipt is FINITE_ONLY.",
+      "id": "D14-controls-t15-univariate-reference",
       "limitations": [
         "Finite implementation evidence does not prove parser correspondence, implementation refinement, whole-fragment completeness or global complexity classifications.",
         "The strict decoded-object Python structure and standard JSON decoding are separate boundaries; duplicate input-key rejection is not claimed.",
         "Inherited suites and common supporting Lean closures do not add independent evidence."
-      ]
-    },
-    {
-      "id": "D14-controls-t15-univariate-reference",
+      ],
       "result_ids": [
         "T15-UNIVARIATE-REFERENCE"
       ],
+      "scope": "The exact separately represented finite reference implementation and original driver contract.",
       "source_ids": [
         "identity-src-166908a0faefae1aed18",
         "identity-src-2c1183a4725481f50cfc",
         "identity-src-6db4df81814f44506b7f",
         "identity-src-836c3aaef2d32f0749a0"
-      ],
-      "disposition": "COMPLETE_SOURCE_PRESCRIBED_CONTROLS_AT_EXACT_SUITE_SCOPE",
-      "scope": "The exact separately represented finite reference implementation and original driver contract.",
-      "basis": "The exact normal-mode original unit inventory completed 15 methods (8 author plus 7 independent), with the original source-owned adjacent Python dependency path. The output/receipt scope is FINITE_ONLY.",
-      "limitations": [
-        "Finite implementation evidence does not prove parser correspondence, implementation refinement, whole-fragment completeness or global complexity classifications.",
-        "The strict decoded-object Python structure and standard JSON decoding are separate boundaries; duplicate input-key rejection is not claimed.",
-        "Inherited suites and common supporting Lean closures do not add independent evidence."
       ]
     },
     {
+      "basis": "65,808 nonempty profile sets and 525,348 actual assignments through four contexts; zero conditional violations. Local eligibility and repair without nondomination controls remain distinct; nonlying does not supply knowledge. Process exit 0; combined-log SHA-256 719bb66e640b9733fce24a6eb3ddd09029395a9aa1154b1f5ebc25f1cb103c21; private command-receipt SHA-256 3f90ea82df5546242926ebb0db28f9dbc5c334e33b9b2b94e0ac02349805366f.",
+      "disposition": "COMPLETED_FINITE_OBSERVATION_NOT_WHOLE_ARGUMENT_STATUS",
       "id": "D15-FINITE-INTEGRITY-PROFILE",
+      "limitations": [
+        "Finite logical interpretation only; not a general proof or metaphysical realisation.",
+        "No kernel, actual-world, normative, empirical replication, specialist, novelty or adoption credit.",
+        "Original independent-checker authorship is inherited. Re-executing its bytes adds no newly independent reviewer. Written philosophical result status remains NOT_RUN."
+      ],
       "result_ids": [
         "D15-T09-COMPLETE-PROFILE-INTEGRITY"
       ],
+      "scope": "Original source-prescribed Python script, unchanged, with assertions enabled; 120-second bound; Python 3.11.9 in the retained Linux environment.",
       "source_ids": [
         "D15-SRC-T09-CONTROL-PROFILE"
-      ],
+      ]
+    },
+    {
+      "basis": "65,808 profile sets and 525,348 assignments; 4,096 irreflexive relations, 219 strict partial orders, 61,440 space/relation pairs and 131,072 assignments; zero recorded conditional violations. Generic repair without Pareto repair and actual/essential scope controls pass. Process exit 0; combined-log SHA-256 3601bb55c69ba088b5c1fa898de77c42bad032f8ecb2a67bfdfda3038a941218; private command-receipt SHA-256 f3a328eb3e60e2c85b2b6d6d9d15f9d3e2a9cb2bb136db660307f74998b465f2.",
       "disposition": "COMPLETED_FINITE_OBSERVATION_NOT_WHOLE_ARGUMENT_STATUS",
-      "scope": "Original source-prescribed Python script, unchanged, with assertions enabled; 120-second bound; Python 3.11.9 in the retained Linux environment.",
-      "basis": "65,808 nonempty profile sets and 525,348 actual assignments through four contexts; zero conditional violations. Local eligibility and repair without nondomination controls remain distinct; nonlying does not supply knowledge. Process exit 0; combined-log SHA-256 719bb66e640b9733fce24a6eb3ddd09029395a9aa1154b1f5ebc25f1cb103c21; private command-receipt SHA-256 3f90ea82df5546242926ebb0db28f9dbc5c334e33b9b2b94e0ac02349805366f.",
+      "id": "D15-FINITE-INTEGRITY-RELATION",
       "limitations": [
         "Finite logical interpretation only; not a general proof or metaphysical realisation.",
         "No kernel, actual-world, normative, empirical replication, specialist, novelty or adoption credit.",
         "Original independent-checker authorship is inherited. Re-executing its bytes adds no newly independent reviewer. Written philosophical result status remains NOT_RUN."
-      ]
-    },
-    {
-      "id": "D15-FINITE-INTEGRITY-RELATION",
+      ],
       "result_ids": [
         "D15-T09-COMPLETE-PROFILE-INTEGRITY"
       ],
+      "scope": "Original source-prescribed Python script, unchanged, with assertions enabled; 120-second bound; Python 3.11.9 in the retained Linux environment.",
       "source_ids": [
         "D15-SRC-T09-CONTROL-RELATION"
-      ],
+      ]
+    },
+    {
+      "basis": "4,658 frames/valuations; 4,046 actual-unreceived/absence-coverage cases and 1,292 object-bridge cases. Four deletion controls and rotating-role control pass. Process exit 0; combined-log SHA-256 3685ef174165ff6d65ab9b352c713b820d2a4b248b36a1d6e2b76d790b060fd3; private command-receipt SHA-256 332f7b2bf6eee79278f2c0570e469db807a863c8fa9f6ce46f6a5d960f22a336.",
       "disposition": "COMPLETED_FINITE_OBSERVATION_NOT_WHOLE_ARGUMENT_STATUS",
-      "scope": "Original source-prescribed Python script, unchanged, with assertions enabled; 120-second bound; Python 3.11.9 in the retained Linux environment.",
-      "basis": "65,808 profile sets and 525,348 assignments; 4,096 irreflexive relations, 219 strict partial orders, 61,440 space/relation pairs and 131,072 assignments; zero recorded conditional violations. Generic repair without Pareto repair and actual/essential scope controls pass. Process exit 0; combined-log SHA-256 3601bb55c69ba088b5c1fa898de77c42bad032f8ecb2a67bfdfda3038a941218; private command-receipt SHA-256 f3a328eb3e60e2c85b2b6d6d9d15f9d3e2a9cb2bb136db660307f74998b465f2.",
+      "id": "D15-FINITE-NECESSITY-MODAL",
       "limitations": [
         "Finite logical interpretation only; not a general proof or metaphysical realisation.",
         "No kernel, actual-world, normative, empirical replication, specialist, novelty or adoption credit.",
         "Original independent-checker authorship is inherited. Re-executing its bytes adds no newly independent reviewer. Written philosophical result status remains NOT_RUN."
-      ]
-    },
-    {
-      "id": "D15-FINITE-NECESSITY-MODAL",
+      ],
       "result_ids": [
         "D15-T09-QUALIFIED-ORIGIN-MODAL"
       ],
+      "scope": "Original source-prescribed Python script, unchanged, with assertions enabled; 120-second bound; Python 3.11.9 in the retained Linux environment.",
       "source_ids": [
         "D15-SRC-T09-CONTROL-MODAL"
-      ],
+      ]
+    },
+    {
+      "basis": "4,658 frames/states, 1,249,860 faithful realisation interpretations, 3,748,996 pointwise and 1,207,092 coverage checks, 355,652 object applications; zero recorded violations. Fidelity/coverage deletions and fixed-bearer controls pass. Process exit 0; combined-log SHA-256 b4fa382d9f729759fda798dbf1c7f02b37ccf04df38039d6225bf8a36f1381a3; private command-receipt SHA-256 a6f6b86b13be0aad1f00ffbc4d4309ef876b9592ba32781203275c4542275bb9.",
       "disposition": "COMPLETED_FINITE_OBSERVATION_NOT_WHOLE_ARGUMENT_STATUS",
-      "scope": "Original source-prescribed Python script, unchanged, with assertions enabled; 120-second bound; Python 3.11.9 in the retained Linux environment.",
-      "basis": "4,658 frames/valuations; 4,046 actual-unreceived/absence-coverage cases and 1,292 object-bridge cases. Four deletion controls and rotating-role control pass. Process exit 0; combined-log SHA-256 3685ef174165ff6d65ab9b352c713b820d2a4b248b36a1d6e2b76d790b060fd3; private command-receipt SHA-256 332f7b2bf6eee79278f2c0570e469db807a863c8fa9f6ce46f6a5d960f22a336.",
+      "id": "D15-FINITE-NECESSITY-REALISATION",
       "limitations": [
         "Finite logical interpretation only; not a general proof or metaphysical realisation.",
         "No kernel, actual-world, normative, empirical replication, specialist, novelty or adoption credit.",
         "Original independent-checker authorship is inherited. Re-executing its bytes adds no newly independent reviewer. Written philosophical result status remains NOT_RUN."
-      ]
-    },
-    {
-      "id": "D15-FINITE-NECESSITY-REALISATION",
+      ],
       "result_ids": [
         "D15-T09-QUALIFIED-ORIGIN-MODAL"
       ],
+      "scope": "Original source-prescribed Python script, unchanged, with assertions enabled; 120-second bound; Python 3.11.9 in the retained Linux environment.",
       "source_ids": [
         "D15-SRC-T09-CONTROL-REALISATION"
-      ],
-      "disposition": "COMPLETED_FINITE_OBSERVATION_NOT_WHOLE_ARGUMENT_STATUS",
-      "scope": "Original source-prescribed Python script, unchanged, with assertions enabled; 120-second bound; Python 3.11.9 in the retained Linux environment.",
-      "basis": "4,658 frames/states, 1,249,860 faithful realisation interpretations, 3,748,996 pointwise and 1,207,092 coverage checks, 355,652 object applications; zero recorded violations. Fidelity/coverage deletions and fixed-bearer controls pass. Process exit 0; combined-log SHA-256 b4fa382d9f729759fda798dbf1c7f02b37ccf04df38039d6225bf8a36f1381a3; private command-receipt SHA-256 a6f6b86b13be0aad1f00ffbc4d4309ef876b9592ba32781203275c4542275bb9.",
-      "limitations": [
-        "Finite logical interpretation only; not a general proof or metaphysical realisation.",
-        "No kernel, actual-world, normative, empirical replication, specialist, novelty or adoption credit.",
-        "Original independent-checker authorship is inherited. Re-executing its bytes adds no newly independent reviewer. Written philosophical result status remains NOT_RUN."
       ]
     },
     {
+      "basis": "The thirteen unittest methods returned actual OK entries and process exit 0. Original assertRaises cases are ACCEPT controls. The separate disposable corrupted ZIP was rejected before parsing, with exit 2 and exact diagnostic; originals remained unchanged.",
+      "disposition": "ACTUAL_TERMINALS_RETAINED",
       "id": "D18-CONTROL-BOUNDARIES",
+      "limitations": [
+        "A nonzero infrastructure/resource failure would not earn rejection credit.",
+        "Repeated numerical use of the same observations does not increase experimental independence."
+      ],
       "result_ids": [
         "D18-T15-EMPIRICAL"
       ],
+      "scope": "Fifteen successful controls and one real subprocess rejection.",
       "source_ids": [
         "T15-EMPIRICAL-TESTS",
         "T15-EMPIRICAL-REANALYSE",
         "T15-EMPIRICAL-VALIDATE"
-      ],
-      "disposition": "ACTUAL_TERMINALS_RETAINED",
-      "scope": "Fifteen successful controls and one real subprocess rejection.",
-      "basis": "The thirteen unittest methods returned actual OK entries and process exit 0. Original assertRaises cases are ACCEPT controls. The separate disposable corrupted ZIP was rejected before parsing, with exit 2 and exact diagnostic; originals remained unchanged.",
-      "limitations": [
-        "A nonzero infrastructure/resource failure would not earn rejection credit.",
-        "Repeated numerical use of the same observations does not increase experimental independence."
       ]
     },
     {
@@ -2996,6 +2996,23 @@
         "D07-SRC-ade7474316b6aecccf71",
         "D07-SRC-f31853390b245d2925eb",
         "D07-SRC-9781453ea6cf575c31d8"
+      ]
+    },
+    {
+      "basis": "Original 220 core controls, 4 integration controls and 22 Python tests; signed172 invocations and12 guard rejections are inherited. Package maps preserve positive, negative and audit roles.",
+      "disposition": "INHERITED_EXACT_SCOPE",
+      "id": "T16-RECOVERY-AND-TRUST",
+      "limitations": [
+        "Core fixture restoration classes remain distinct. Fourteen dependency byte differences unexplained. Original signed interruption and audit-harness diagnostic remain historical, not semantic rejection credit."
+      ],
+      "result_ids": [
+        "T16-CORE-ASSURANCE"
+      ],
+      "scope": "111-root core and separate 116-root signed closure; no aggregate independent module count.",
+      "source_ids": [
+        "T16-SRC-62b0736b8d4ec58bc81d",
+        "T16-SRC-904ea7a8d427e7c3cde5",
+        "T16-SRC-80cf08cc2fcea10027ac"
       ]
     }
   ]

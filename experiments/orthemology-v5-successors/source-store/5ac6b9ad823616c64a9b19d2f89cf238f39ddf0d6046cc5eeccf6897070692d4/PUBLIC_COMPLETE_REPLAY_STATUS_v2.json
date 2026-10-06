@@ -1,0 +1,39 @@
+{
+  "status": "PASS_COMPLETE_REPLAY",
+  "comparison_status": "ALL_ACCEPTED_RESULT_BODY_DIGESTS_MATCH",
+  "comparison_procedure": "Reverse only the previously approved narrative metadata substitutions, serialize the full report bodies identically, and compare SHA-256 with the accepted historical bindings. No numerical value or statistical field is changed.",
+  "source_archive_sha256": "73a6cdde7cba705f283df52085210592f851cd70f3163f78c42950aa45bfa0ef",
+  "input_sha256": [
+    "dc49a4248a193b47df08f419f108f4070e0c0c07422fdbda31537c1d33aa6f5c",
+    "c43ba9293db5c1657f7829de1033e0985bb4dc46508ea253a669449207dbd317"
+  ],
+  "result_digest_bindings": [
+    {
+      "fresh_sha256": "9b4fdc6fd3ba661046593cfbfdf2500650d775ba5b901320dc63ec40a57f7ef1",
+      "normalized_sha256": "9b4fdc6fd3ba661046593cfbfdf2500650d775ba5b901320dc63ec40a57f7ef1",
+      "accepted_sha256": "9b4fdc6fd3ba661046593cfbfdf2500650d775ba5b901320dc63ec40a57f7ef1",
+      "exact_match": true
+    },
+    {
+      "fresh_sha256": "e70cd7607e46d716fd1f24bebfce7d619a71d0fc2d821c7718bc412798a12daa",
+      "normalized_sha256": "47e22af12ea69863512b9bd18753b7b1f0b02458160da0ca62a7c627d3e23ebf",
+      "accepted_sha256": "47e22af12ea69863512b9bd18753b7b1f0b02458160da0ca62a7c627d3e23ebf",
+      "exact_match": true
+    },
+    {
+      "fresh_sha256": "14770995dfa633024bb8d602537f091ecd5b24585bdce5f15f2a0006597ea129",
+      "normalized_sha256": "d38249abec0e5a3b7254170aef234559e99e3fd768132bfe4cd579d33a97f065",
+      "accepted_sha256": "d38249abec0e5a3b7254170aef234559e99e3fd768132bfe4cd579d33a97f065",
+      "exact_match": true
+    },
+    {
+      "fresh_sha256": "7eb4b09d7698cf93d5545cd68318d866b8a8fadb107dc7139cfa3e4d4f463bef",
+      "normalized_sha256": "4504495bc1e18a229221313eb9319ad2de75f4d8015ab326c073435e123f321d",
+      "accepted_sha256": "4504495bc1e18a229221313eb9319ad2de75f4d8015ab326c073435e123f321d",
+      "exact_match": true
+    }
+  ],
+  "verification_receipt_sha256": "da767f330245f3572a3125f5ddcbb8ef0c696499f8e929a32535712d80fdea43",
+  "comparison_record_sha256": "2b3d5ec30c54c68920d058ee6360bb786db2166fd7af695d4182f352278a7890",
+  "verified_utc": "2026-10-05T16:40:11.037919+00:00"
+}

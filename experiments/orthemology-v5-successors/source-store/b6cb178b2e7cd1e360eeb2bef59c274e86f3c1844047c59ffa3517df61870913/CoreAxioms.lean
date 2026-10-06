@@ -1,0 +1,11 @@
+import PolicySynthesisReduction
+#print axioms PolicySynthesis.progressCut_primrec
+#print axioms PolicySynthesis.rowTotal_iff_unbounded_cuts
+#print axioms PolicySynthesis.component_computablePath_iff
+#print axioms PolicySynthesis.synthesisCheck_primrec
+#print axioms PolicySynthesis.synthesis_computablePath_iff
+#print axioms PolicySynthesis.synthesis_mathematical_path
+#print axioms PolicySynthesis.computable_matrix_reduction
+#print axioms PolicySynthesis.policy_synthesis_reduction
+#print axioms PolicySynthesis.total_checker_code_family
+#print axioms PolicySynthesis.checker_code_valid

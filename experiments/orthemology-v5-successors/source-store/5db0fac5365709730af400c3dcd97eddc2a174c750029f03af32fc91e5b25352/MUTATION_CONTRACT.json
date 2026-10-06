@@ -1,0 +1,30 @@
+{
+  "frozen_controller_mutants": "Four literal production-definition extractions with exact regenerated hash matching; see service/controller/mutations/DERIVATION.json",
+  "frozen_negative_mutants": "Two hand-written weakened-wrapper probes, not production-source mutations",
+  "source_derived_negative": [
+    {
+      "name": "DerivedCoverageOmission",
+      "namespace": "DerivedCoverageOmission",
+      "source": "service/negative/src/IndexedCoverage.lean",
+      "source_sha256": "21ce74039d33a3d5573422374a857d3ac3a5945403982efbf68aee66e0698b33",
+      "anchor": "| _, _, _ => false",
+      "replacement": "| _, _, _ => true",
+      "guard": "#guard !(indexedCheck (fun (_ : Nat) _ => true) 0 [1,2] [])",
+      "derived_sha256": "83e27b920f5ba5694d3406b34fde303b89ced9b0cfadb66e2cec8a764d2267d4",
+      "expected_exit": 1,
+      "expected_failure": "single native guard expression did not evaluate to true"
+    },
+    {
+      "name": "DerivedIndexUnchecked",
+      "namespace": "DerivedIndexUnchecked",
+      "source": "service/negative/src/IndexedCoverage.lean",
+      "source_sha256": "21ce74039d33a3d5573422374a857d3ac3a5945403982efbf68aee66e0698b33",
+      "anchor": "decide (j = i) && accept x r",
+      "replacement": "accept x r",
+      "guard": "#guard !(indexedCheck (fun (_ : Nat) _ => true) 0 [1,2] [(0,.leaf),(0,.leaf)])",
+      "derived_sha256": "a014707100ce718bc1b2ea1c4db8b631b26809fae9af06b9ae13343a53806c54",
+      "expected_exit": 1,
+      "expected_failure": "single native guard expression did not evaluate to true"
+    }
+  ]
+}

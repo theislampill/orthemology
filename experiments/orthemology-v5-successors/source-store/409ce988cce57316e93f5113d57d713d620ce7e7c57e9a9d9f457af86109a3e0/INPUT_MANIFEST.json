@@ -1,0 +1,18 @@
+{
+  "inputs": [
+    {
+      "argument": "--raw-export",
+      "name": "export_3.csv",
+      "url": "https://osf.io/download/ct2vw/",
+      "sha256": "dc49a4248a193b47df08f419f108f4070e0c0c07422fdbda31537c1d33aa6f5c"
+    },
+    {
+      "argument": "--author-responses",
+      "name": "globalPref_LM_100.csv",
+      "url": "https://osf.io/download/qcey3/",
+      "sha256": "c43ba9293db5c1657f7829de1033e0985bb4dc46508ea253a669449207dbd317"
+    }
+  ],
+  "record": "https://osf.io/x5hye/",
+  "article": "https://doi.org/10.1177/26339137251372605"
+}

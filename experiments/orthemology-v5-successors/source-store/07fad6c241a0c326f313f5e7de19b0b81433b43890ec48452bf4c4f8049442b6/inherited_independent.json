@@ -1,0 +1,281 @@
+{
+  "schema": "fifteenth-independent-pinned-source-replay-v1",
+  "status": "PASS: exact frozen v5 project and full suite replayed against its independently source-built third-party Lean dependency closure",
+  "verification_date_utc": "2026-10-05",
+  "supplement_to_archived_author_receipt": true,
+  "artifact": {
+    "filename": "Fifteenth_Unified_Proof_Source_v5.zip",
+    "sha256": "d4893c478cc6621ecaef386dad4ddd692f9f639b6389649f841461c5f717f4b8",
+    "bytes": 412279,
+    "entries": 232,
+    "source_only": true,
+    "all_entries_rechecked_unchanged_after_replay": true,
+    "source_lock_sha256": "bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c",
+    "lake_manifest_sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924",
+    "module_manifest_sha256": "5ca88d5793fb2283badb16c8d722b777e0e9eb49198043b9335a198d572060c7",
+    "preserved_v4_modules": 86,
+    "default_root_modules": 88
+  },
+  "platform_and_tools": {
+    "platform": "Linux x86_64",
+    "lean_version": "4.19.0",
+    "lean_commit": "6caaee842e9495688c1567e78c0e68dbb96942aa",
+    "lake_version": "5.0.0-6caaee8",
+    "compiler_bootstrapped": false,
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "lake_binary_sha256": "5111aee5c9434ab05d4265606475ef22e8bda69aaf3a0657b61a7eec6e550bed",
+    "python_version": "3.12.14",
+    "node_version": "24.19.0",
+    "npm_version": "11.9.0",
+    "typescript_version": "5.8.3",
+    "rollup_version": "4.39.0"
+  },
+  "dependency_sources": {
+    "repositories": [
+      {
+        "package": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "official_origin": "https://github.com/leanprover-community/mathlib4.git",
+        "tracked_file_count": 6816,
+        "tracked_source_inventory_sha256": "b110c838a91544e1fdcecec12f8db2c5ad3b43f50ecfbf1f6ce61fa5a0c4af99",
+        "fresh_proof_modules": 1126,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      },
+      {
+        "package": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "official_origin": "https://github.com/leanprover-community/plausible",
+        "tracked_file_count": 18,
+        "tracked_source_inventory_sha256": "44e2de8187ad9f633cd71fff4f6710813d4f09270dce451337429a3f0cb94059",
+        "fresh_proof_modules": 8,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      },
+      {
+        "package": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "official_origin": "https://github.com/leanprover-community/LeanSearchClient",
+        "tracked_file_count": 16,
+        "tracked_source_inventory_sha256": "de087c4d49cf124518c390e21f6dc8c242c5f7dc2bdf7bde51abb93a94be8b45",
+        "fresh_proof_modules": 4,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      },
+      {
+        "package": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "official_origin": "https://github.com/leanprover-community/import-graph",
+        "tracked_file_count": 33,
+        "tracked_source_inventory_sha256": "9769dfcd78852ca30886a185c1ef91bacf0a2e5f9f450309c86d035be7cccfe9",
+        "fresh_proof_modules": 2,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      },
+      {
+        "package": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "official_origin": "https://github.com/leanprover-community/ProofWidgets4",
+        "tracked_file_count": 76,
+        "tracked_source_inventory_sha256": "3ab89edf40289c491e0bef9cd0551d30a2bb5333133979d5dfc6d662f0547ff6",
+        "fresh_proof_modules": 7,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      },
+      {
+        "package": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "official_origin": "https://github.com/leanprover-community/aesop",
+        "tracked_file_count": 249,
+        "tracked_source_inventory_sha256": "72fbb7562236d023c8d890e06a004b0fc9a30a3bbe9a2915875284b617890eb8",
+        "fresh_proof_modules": 130,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      },
+      {
+        "package": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "official_origin": "https://github.com/leanprover-community/quote4",
+        "tracked_file_count": 34,
+        "tracked_source_inventory_sha256": "84eed48857ece380cf2a9f821d19683422f6b7f3e8987e0382a2da5dac17d6c6",
+        "fresh_proof_modules": 12,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      },
+      {
+        "package": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "official_origin": "https://github.com/leanprover-community/batteries",
+        "tracked_file_count": 253,
+        "tracked_source_inventory_sha256": "52aeb0f6653783e4469ad33f6068a05a6b58bd2f08ab39151b3581db45698d26",
+        "fresh_proof_modules": 71,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      },
+      {
+        "package": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "official_origin": "https://github.com/leanprover/lean4-cli",
+        "tracked_file_count": 12,
+        "tracked_source_inventory_sha256": "ffdd13034a8ab03ddce672590478e069ef1aed3360f2443fbfc4853ef87ef0bb",
+        "fresh_proof_modules": 0,
+        "final_tracked_sources_clean": true,
+        "strict_git_object_integrity_pass": true
+      }
+    ],
+    "original_tracked_files_rechecked_unchanged": 7507,
+    "isolated_tracked_files_rechecked_identical": 7507,
+    "mathematical_source_changes": 0,
+    "package_lock_changes": 0,
+    "final_v5_import_closure_equals_cold_build_plan": true
+  },
+  "cold_dependency_build": {
+    "exit_code": 0,
+    "fresh_third_party_lean_modules": 1360,
+    "modules_by_package": {
+      "LeanSearchClient": 4,
+      "Qq": 12,
+      "aesop": 130,
+      "batteries": 71,
+      "importGraph": 2,
+      "mathlib": 1126,
+      "plausible": 8,
+      "proofwidgets": 7
+    },
+    "unexpected_dependency_proof_modules": 0,
+    "downloaded_or_preexisting_third_party_oleans_used": 0,
+    "locally_source_built_dependency_oleans_used_by_final_project": 1360,
+    "cache_get_calls": 0,
+    "lake_cache_downloads_disabled": true,
+    "mathlib_update_cache_downloads_disabled": true,
+    "command": [
+      "lake",
+      "--no-cache",
+      "--rehash",
+      "--verbose",
+      "build",
+      "+Mathlib.Algebra.BigOperators.Fin",
+      "+Mathlib.Algebra.MvPolynomial.Funext",
+      "+Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "+Mathlib.Data.Bool.Basic"
+    ],
+    "start_utc": "2026-10-05T09:30:49.532148+00:00",
+    "end_utc": "2026-10-05T09:45:04.527331+00:00",
+    "duration_seconds": 854.9951637170016,
+    "canonical_module_source_and_output_inventory_sha256": "9a36584ab7e99cf0b542f0186b47a7a0ce962c4c1a5a408bf755dff24d674379",
+    "all_1360_output_hashes_unchanged_after_project_replay": true,
+    "five_previously_recorded_key_mathlib_output_hashes_reproduced": true
+  },
+  "widget_asset_build": {
+    "fresh_assets": 19,
+    "first_standalone_build_duration_seconds": 65.77072741801385,
+    "unchanged_upstream_hook_used": true,
+    "commands": [
+      "npm clean-install",
+      "npm run build"
+    ],
+    "pinned_package_lock_sha256": "ba30505ac4dad0c299914b13eed2cf7d030d8d0eada1ca7846aa401d04723708",
+    "installed_npm_versions_matching_lock": 365,
+    "platform_optional_packages_not_installed": 19,
+    "npm_distributions_used_as_build_tools_not_source_bootstrapped": true,
+    "lean_olean_artifacts_from_npm": 0
+  },
+  "permitted_toolchain_reuse": {
+    "proof_import_oleans": 1272,
+    "proof_and_configuration_unique_oleans": 1393,
+    "by_namespace": {
+      "Init": 289,
+      "Lean": 775,
+      "Std": 208,
+      "Lake": 121
+    },
+    "canonical_toolchain_import_inventory_sha256": "00efb181fe4d5e3539cb5ea48847fbfdb302700f8ad1c870ce17a1c4178df242",
+    "compiler_lake_and_shared_library_files_rechecked_unchanged": 6,
+    "fresh_lake_configuration_oleans": 3
+  },
+  "exact_final_project_replay": {
+    "archived_replay_script_unchanged": true,
+    "execution": "bash replay.sh, with a local shell adapter adding --no-cache --rehash --verbose to its build invocation and LAKE_NO_CACHE=1 throughout",
+    "exit_code": 0,
+    "start_utc": "2026-10-05T09:54:30.220770+00:00",
+    "end_utc": "2026-10-05T09:58:09.870966+00:00",
+    "duration_seconds": 219.65017740699113,
+    "fresh_default_root_modules": 88,
+    "fresh_build_support_modules": [
+      "verification.KernelAudit"
+    ],
+    "fresh_default_build_outputs": 89,
+    "persistent_project_module_oleans_after_suite": 90,
+    "additional_suite_support_module": "verification.BooleanKernelAudit",
+    "observed_fresh_temporary_positive_audit_control_oleans": 12,
+    "preexisting_project_oleans_used": 0,
+    "canonical_project_source_and_output_inventory_sha256": "94587f88063ca82f892fc5915fe43d94b8dd58e6302e46d107a18af21b9c7477",
+    "inherited_linter_warnings": 22,
+    "new_polynomial_module_warnings": 0,
+    "final_source_and_dependency_pin_checks_passed": true,
+    "import_search_path_contains_only_this_isolated_build_and_permitted_toolchain": true
+  },
+  "proof_and_computational_audits": {
+    "project_modules": 88,
+    "theorem_roots": 2750,
+    "checked_reachable_declarations": 12311,
+    "allowed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "unsafe_or_partial_proof_dependencies": 0,
+    "polynomial_test_safe_namespace_roots": 92,
+    "polynomial_test_namespace_theorems": 51,
+    "polynomial_test_reachable_declarations": 2360,
+    "polynomial_test_nonproof_runtime_auxiliaries_separately_reported": 38,
+    "checker_computational_closure_declarations": 460,
+    "checker_computational_closure_axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "checker_classical_choice_or_abstract_polynomial_dependency": false
+  },
+  "tests": {
+    "source_mutation_rejections": 15,
+    "lean_negative_fixture_rejections": 80,
+    "negative_fixture_breakdown": {
+      "inherited": 9,
+      "effective": 10,
+      "complexity": 14,
+      "boolean": 16,
+      "restricted": 23,
+      "polynomial_test": 8
+    },
+    "restricted_positive_fixtures": 2,
+    "polynomial_test_positive_fixtures": 1,
+    "polynomial_test_total_fixtures": 9,
+    "python_unit_tests": 22,
+    "full_archived_lean_suite_pass": true,
+    "all_expected_diagnostics_checked": true
+  },
+  "declaration_inventory": {
+    "entries": 6713,
+    "modules_with_declarations": 85,
+    "generated_matches_packaged_after_module_name_sort": true,
+    "duplicate_module_name_rows": 0,
+    "raw_json_bytes_equal": false,
+    "raw_difference_scope": "Ordering and formatting; exact declaration rows agree after the documented sort.",
+    "packaged_sha256": "15c92d78a7a04fb86a41d547d80e8364c9e77d04a3d7e52fea93cec3ae1c36fc",
+    "canonical_content_sha256": "eb75e41f6d75d84ee5cefbffcf769df6cf3cfafa4a78374e8f57aa141f0cd6e8"
+  },
+  "recovered_setup_events": [
+    "The upstream standalone widget manifest temporarily selected an older Batteries revision in an isolated source clone. No dependency proof artifact was built from that revision; the exact required root-manifest pin was restored before proof compilation.",
+    "The upstream widget repository tracks generated package-lock hash/trace metadata. A real rehash refreshed its stale hash and caused an additional fresh asset build, whose asset hashes reproduced exactly. Generated metadata was recorded and restored to pinned bytes for final cleanliness. No mathematical source or package-lock content changed.",
+    "Historical npm-install output replayed from tracked upstream build metadata was distinguished from the actual fresh npm clean-install and build commands."
+  ],
+  "limits": [
+    "This is the complete required third-party Lean import closure, not an irrelevant full-library rebuild or Lean/Std/compiler bootstrap.",
+    "The official Lean 4.19.0 compiler, Lake, Init/Lean/Std/Lake artifacts, operating-system runtime, and JavaScript build-tool distributions remain explicitly reused trusted infrastructure.",
+    "The new receipt supplements the exact archived author receipt without changing the frozen archive or extending its mathematical claims.",
+    "Negative fixtures verify rejection of the tested uses; they are not general independence or impossibility proofs.",
+    "Python tests do not constitute a Lean refinement theorem for the Python checker or a serialized parser.",
+    "The polynomial-test semantic bridge and typing support are kernel checked; the hierarchy classification, a machine-to-polynomial reducer, and a numerical fixed witness arity are not supplied by this replay."
+  ],
+  "receipt_content": "Metadata and hashes only; private filesystem paths and raw diagnostics excluded."
+}

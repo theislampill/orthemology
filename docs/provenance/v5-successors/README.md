@@ -1,6 +1,8 @@
 # Seventh–Fifteenth source and evidence index
 
-These records describe the research sources through the final Fifteenth return
+Current addition: [Sixteenth source and evidence guide](../../../experiments/orthemology-v5-successors/groups/t16-successor/README.md). Earlier tranche records retain their original cutoff and status.
+
+These records describe the research sources through the final Sixteenth return
 within Orthemology v5. The [scientific source guide](../../../experiments/orthemology-v5-successors/README.md)
 leads to the actual papers, definitions, implementations and exact reviews.
 The [architecture](../../architecture/V5-RESEARCH-SUCCESSORS-07-15.md) explains
@@ -70,8 +72,4 @@ warrant or adopting a candidate identity judgement. The exact PR head, tree,
 local workflow receipts and actual GitHub CI state are returned in the PR review
 handoff. The tracked registry contains no self-referential final-HEAD digest.
 
-The owner requires this layer's closure first, then integration of the received
-Sixteenth return as a scoped successor on the same lineage. These records retain
-their final-Fifteenth cutoff. One combined PR through Sixteenth is left unmerged
-for subsequent ChatGPT review (R00); no PR is opened at Fifteenth. Owner-controlled
-merge (R01), auto-merge and Seventeenth or later integration are not authorized.
+The current index includes the [Sixteenth successor](../../../experiments/orthemology-v5-successors/groups/t16-successor/README.md), with 216 results, 2,648 source identities, 37 existing replay descriptors and 44 retained execution receipts. All 21 Sixteenth results retain `NOT_RUN` fresh-science fields; supplied scientific assurance is inherited. No new independence is inferred from overlapping modules or archives. The T07–T15 receipts remain historically true. One combined PR is left unmerged for ChatGPT review (R00); merge (R01), auto-merge and Seventeenth integration are not authorized.

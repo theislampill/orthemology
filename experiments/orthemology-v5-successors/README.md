@@ -1,5 +1,7 @@
 # Orthemology v5 research successors: Seventh–Fifteenth
 
+Current addition: [Sixteenth source and evidence guide](groups/t16-successor/README.md). Earlier tranche records retain their original cutoff and status.
+
 This is the source and replay layer for the Seventh through final Fifteenth
 research returns. It continues Orthemology v5 and preserves the
 [final-Sixth layer](../orthemology-v5-continuations/README.md). Inclusion records
@@ -78,8 +80,4 @@ objects and full execution logs remain outside Git. The
 [public projection record](../../docs/provenance/v5-successors/PUBLIC_PROJECTION.json)
 bind original identities to the exact public text and reviewed derivations.
 
-This layer's cutoff is final Fifteenth. After its validation and internal review,
-the owner-authorized Sixteenth return is integrated as a scoped successor with
-separate evidence, preserving these receipts. The single combined PR through
-Sixteenth is then left unmerged for ChatGPT review. No PR is opened at Fifteenth;
-merge and adoption remain separate decisions.
+The current cutoff is final Sixteenth. The [Sixteenth guide](groups/t16-successor/README.md) binds the scoped addition, original package interfaces and inherited assurance. The committed T07–T15 scientific receipts remain unchanged. One combined PR is left unmerged for ChatGPT review; merge, auto-merge and later tranches are not authorized.

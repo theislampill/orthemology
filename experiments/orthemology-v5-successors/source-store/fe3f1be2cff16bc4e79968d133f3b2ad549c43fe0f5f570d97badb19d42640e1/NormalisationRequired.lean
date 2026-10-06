@@ -1,0 +1,6 @@
+import UnaryNormalForm
+#check P01AC.UnaryIdentity.tailData_correct
+#check P01AC.UnaryIdentity.normalise_correct
+#check P01AC.UnaryIdentity.normalise_eq_iff_denote
+#check P01AC.UnaryIdentity.identityCheck_iff_valid
+#check P01AC.UnaryIdentity.finite_certificate_complete

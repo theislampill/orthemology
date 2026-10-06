@@ -1,0 +1,180 @@
+{
+  "format": 1,
+  "active_positive_fixture_control_audit_modules": 23,
+  "active_expected_failure_probes": 8,
+  "historical_excluded_controls": 1,
+  "production_modules_new": 21,
+  "new_lean_invocations": 52,
+  "ninth_lean_invocations": 120,
+  "total_lean_invocations": 172,
+  "roles": [
+    {
+      "path": "service/controller/tests/ControllerDependencies.lean",
+      "role": "active positive fixture/control/audit",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/controller/tests/DirectInterfaceControls.lean",
+      "role": "active positive fixture/control/audit",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/controller/tests/NativeControllerControls.lean",
+      "role": "active positive fixture/control/audit",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/controller/tests/OrderedCycleControls.lean",
+      "role": "active positive fixture/control/audit",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/controller/tests/OrderedCycleRED.lean",
+      "role": "historical absent-interface control, excluded from active replay",
+      "expected_exit": null
+    },
+    {
+      "path": "service/negative/tests/CompiledServiceDependencies.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/EnumerationControls.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/EnumerationRed.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/FiniteListsControls.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/FormulaBranchControls.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/IndexedCoverageControls.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/IndexedCoverageRed.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/PositiveFormulaRed.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/RefutationControls.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/RefutationRed.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/SignedAxioms.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/SignedControllerControls.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/SignedControllerRed.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/SignedControls.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/SignedDependencies.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/SignedServiceRed.lean",
+      "role": "active positive interface/control/audit, including Red names",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/negative/tests/SmallFixtures.lean",
+      "role": "fixture compiled first",
+      "expected_exit": 0
+    },
+    {
+      "path": "review/DeclarationAudit.lean",
+      "role": "active independent control or all-declaration audit",
+      "expected_exit": 0
+    },
+    {
+      "path": "review/IndependentControls.lean",
+      "role": "active independent control or all-declaration audit",
+      "expected_exit": 0
+    },
+    {
+      "path": "service/controller/mutations/CounterReset.lean",
+      "role": "source-derived production-definition fault",
+      "expected_exit": 1,
+      "required_failure": "single native guard expression did not evaluate to true"
+    },
+    {
+      "path": "service/controller/mutations/EmpiricalHistoryTruncated.lean",
+      "role": "source-derived production-definition fault",
+      "expected_exit": 1,
+      "required_failure": "single native guard expression did not evaluate to true"
+    },
+    {
+      "path": "service/controller/mutations/NonStrictCountGuard.lean",
+      "role": "source-derived production-definition fault",
+      "expected_exit": 1,
+      "required_failure": "single native guard expression did not evaluate to true"
+    },
+    {
+      "path": "service/controller/mutations/WitnessIgnored.lean",
+      "role": "source-derived production-definition fault",
+      "expected_exit": 1,
+      "required_failure": "single native guard expression did not evaluate to true"
+    },
+    {
+      "path": "service/negative/mutations/OmittedCoverageMutant.lean",
+      "role": "hand-written weakened-wrapper fault probe",
+      "expected_exit": 1,
+      "required_failure": "single native guard expression did not evaluate to true"
+    },
+    {
+      "path": "service/negative/mutations/SkippedIndexMutant.lean",
+      "role": "hand-written weakened-wrapper fault probe",
+      "expected_exit": 1,
+      "required_failure": "single native guard expression did not evaluate to true"
+    },
+    {
+      "path": "<output>/derived-negative/DerivedCoverageOmission.lean",
+      "role": "exact production indexedCheck definition mutation",
+      "expected_exit": 1,
+      "required_failure": "single native guard expression did not evaluate to true"
+    },
+    {
+      "path": "<output>/derived-negative/DerivedIndexUnchecked.lean",
+      "role": "exact production indexedCheck definition mutation",
+      "expected_exit": 1,
+      "required_failure": "single native guard expression did not evaluate to true"
+    }
+  ]
+}
