@@ -4056,7 +4056,7 @@ def execute_history_audit_continuation(suite, sources, root, prior, output, tool
 
 
 
-COVERING_REVIEWED_EXECUTOR_HASHES = frozenset()
+COVERING_REVIEWED_EXECUTOR_HASHES = frozenset({'f77e456b0b99b7b932013e84bacf105ebc07508e30384b5ca96bbeb4e23f17a4'})
 
 
 def covering_continuation_load():
@@ -5625,8 +5625,8 @@ p1_load_assets()
 
 # Hash-bound selector/G1 assets. This does not admit a descriptor or run.
 SELECTOR_G1_FAMILY_ASSET = 'replay_v5_successor_assets/selector_g1/replay_selector_g1.py'
-SELECTOR_G1_FAMILY_SHA256 = 'f2704f521f5c55cd3a0866b4e3f98d520dd57daa782e1f052b972d7de8b05d87'
-SELECTOR_G1_FAMILY_BYTES = 89309
+SELECTOR_G1_FAMILY_SHA256 = '03a541e1df9b6766b0e1ce980005cc82f15f7201478ebad48c1db56b15cf5a20'
+SELECTOR_G1_FAMILY_BYTES = 89698
 SELECTOR_G1_RECIPES = {'t09-selector-original-v2':'selector','t09-g1-author-original-v2':'g1','t09-g1-review-original-v2':'g1-review'}
 SELECTOR_G1_IDS = {'d06-selector':'selector','d08-g1':'g1','d08-g1-review':'g1-review'}
 
