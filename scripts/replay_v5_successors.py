@@ -1066,6 +1066,9 @@ def _validate_argv(stage, plan):
     driver = plan['drivers'].get(stage['driver_id'])
     if driver is not None:
         recipe = driver['recipe']
+        if recipe in D04_RECIPES:
+            d04_validate_argv(stage, driver, plan)
+            return
         if recipe == CORE_RECIPE:
             validate_core_argv(stage, driver, plan)
             return
@@ -1924,7 +1927,7 @@ def validate_suite(suite, sources, root):
         require(replay['schema'] == 'orthemology-v5-replay-v1', 'Unknown replay schema')
         require(replay['scope'] in {'COMPONENTS', 'DECLARED_SUITE', 'FINITE'}, 'Unknown replay scope')
         if replay['scope'] == 'DECLARED_SUITE':
-            require(APPROVED_DECLARED_SUITES.get(suite['id']) == declared_suite_fingerprint(suite, sources), 'Complete original suite recipe has not been approved')
+            require(APPROVED_DECLARED_SUITES.get(suite['id']) == declared_suite_fingerprint(suite, sources) or d04_declared_admitted(suite, sources), 'Complete original suite recipe has not been approved')
         identifier(suite['id']); string_list(suite['source_ids'])
         require(suite['source_ids'], 'No suite sources')
         contents = {sid: public_bytes(root, sources[sid]) for sid in suite['source_ids']}
@@ -2035,14 +2038,17 @@ def validate_suite(suite, sources, root):
             keys(row, {'id', 'source_id', 'recipe', 'sha256', 'argument_meanings', 'external_input_id'})
             source = sources[row['source_id']]; digest(row['sha256'])
             require(row['sha256'] == (source['public_sha256'] or source['original_sha256']), 'Wrong driver hash')
-            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE}:
+            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE} | D04_RECIPES:
                 require(row['external_input_id'] in inputs, 'Original core archive is undeclared')
             else: require(row['external_input_id'] is None, 'Archive recipe is not approved by this adapter version')
             admitted_role = 'LOCK' if row['recipe'] == 't15-empirical-integrity-v1' else 'DRIVER'
-            if row['recipe'] == ATTR_RECIPE: check_custody_driver(source, ATTR_CONTRACT)
+            if row['recipe'] in D04_RECIPES: d04_check_driver_source(row['recipe'], source)
+            elif row['recipe'] == ATTR_RECIPE: check_custody_driver(source, ATTR_CONTRACT)
             elif row['recipe'] == HISTORY_RECIPE: check_custody_driver(source, HISTORY_CONTRACT)
             else: require(row['source_id'] in contents and files[row['source_id']]['role'] == admitted_role, 'Driver is not an exact projected source')
-            if row['recipe'] in LANGUAGE_RECIPES:
+            if row['recipe'] in D04_RECIPES:
+                d04_validate_driver(row, sources)
+            elif row['recipe'] in LANGUAGE_RECIPES:
                 recipe = LANGUAGE_RECIPES[row['recipe']]
                 require(row['sha256'] == recipe['sha256'] and row['argument_meanings'] == {'source_dir': 'INPUT_TREE'}, 'Wrong approved language recipe')
                 adjacent = str(PurePosixPath(files[row['source_id']]['path']).with_name(recipe['lock_name']))
@@ -2087,6 +2093,7 @@ def validate_suite(suite, sources, root):
         for driver in drivers.values():
             if driver['recipe'] in NORMAL_SOURCE_RECIPES: source_checker_inputs(driver, plan)
             if driver['recipe'] == 't14-identity-verify_sources-v1': check_checksum_manifest(plan, 90)
+        if any(row['recipe'] in D04_RECIPES for row in drivers.values()): d04_validate_package(suite, plan, sources)
         if any(row['recipe'] in T15_SOURCE_RECIPES for row in drivers.values()): validate_t15_package(suite, plan)
         if any(row['recipe'] in T15_REFERENCE_RECIPES for row in drivers.values()): validate_t15_reference_package(suite, plan, sources)
         if any(row['recipe'] == T15_RUNTIME_RECIPE for row in drivers.values()): validate_t15_runtime_package(suite, plan, sources)
@@ -2123,6 +2130,7 @@ def validate_suite(suite, sources, root):
                 driver = drivers.get(stage['driver_id'], {})
                 custody_literal = driver.get('recipe') == ATTR_RECIPE and diagnostic['source_id'] == driver['source_id'] and diagnostic['literal'] in ATTR_DIAGNOSTICS.values()
                 custody_literal = custody_literal or (driver.get('recipe') == HISTORY_RECIPE and diagnostic['source_id'] == driver['source_id'] and diagnostic['literal'] in HISTORY_DIAGNOSTICS)
+                custody_literal = custody_literal or d04_diagnostic_allowed(driver, diagnostic)
                 require(custody_literal or (diagnostic['source_id'] in contents and diagnostic['literal'].encode() in contents[diagnostic['source_id']]), 'Diagnostic differs from source contract')
             for cid in string_list(stage['control_ids']):
                 require(cid in controls and cid not in covered, 'Missing/duplicate control association'); covered.append(cid)
@@ -2467,7 +2475,7 @@ def _verify_environment(suite, plan, tools, inputs, output):
         if iid not in inputs: raise MissingInput('Required explicit external input is unavailable: ' + iid)
         input_hashes[iid] = _input_inventory(row, inputs[iid], plan)
     build_roots = [path_in(output, p) for p in suite['replay']['build_roots']]
-    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE} for row in plan['drivers'].values())
+    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE} | D04_RECIPES for row in plan['drivers'].values())
     for path in build_roots:
         if not original_owned: path.mkdir(parents=True, exist_ok=True)
     if 'lean' in resolved:
@@ -2831,6 +2839,7 @@ def _initial_receipt(suite, sources, reviews):
 
 
 def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, reviews=None):
+    if d04_is_suite(suite): return d04_execute_suite(suite, sources, root, output, tools, inputs, scope, reviews=reviews)
     require(scope is None or scope == suite['replay']['scope'], 'Execute the exact declared scope; use a separately scoped descriptor for components')
     require(isinstance(reviews, dict) and set(suite['review_ids']) <= set(reviews), 'Missing source-bound review identities')
     plan = validate_suite(suite, sources, root)
@@ -3518,7 +3527,7 @@ HC_AUDIT_SOURCE = '3911f7c0b3238a647879f7598042837beee62a71d337c38a921c2ec6b0af9
 # Exact complete offline collection, reconciled to the retained source/captures.
 HC_COLLECTION_SHA256 = 'e4106e2948e59f7b4c99e4f383919f62d7f5255d189adb18c47d5081f287b810'
 HC_SOURCE_AUDIT_SHA256 = 'b1490cd37087246e724db545da4d8f567993ba0f78d4bd82d7c56b90803e839e'
-HC_REVIEWED_EXECUTOR_HASHES = frozenset()
+HC_REVIEWED_EXECUTOR_HASHES = frozenset({'8da2b65123a442cf6ccc2f97702b9b899c5ce4d7ca738260061ac5213121a239'})
 HC_CACHE_POLICY = 'PINNED_OFFICIAL_CACHES_REUSED_CAMPAIGN_EXECUTION_FRESH_COLLECTION_AND_AUDIT'
 HC_PRIOR = {
     'receipt_sha256': 'd7d6637266cef987c04138390571bfd854151d4d1c8e05e681986b635018a53a',
@@ -4101,6 +4110,7 @@ def validate_receipt(receipt, suite, sources, root):
 
 
 def validate_child_evidence(evidence, plan, stages, successful):
+    if 'd04_family' in plan: return d04_validate_child_evidence(evidence, plan, stages, successful)
     declared = {sid: row for sid, row in plan['stages'].items() if row['argv'][:1] == ['{builtin:observe-child}']}
     parents = {row['argv'][1] for row in declared.values()}
     launches = indexed(evidence['driver_invocations'], 'parent_stage_id')
@@ -4375,7 +4385,1049 @@ T10_GROUPS = {'exhaustive': ['all_boolean_menu_adaptive_cover_cases',
               'one_request_bounded_error_policy_worst_success']}
 
 
+# Private D03 splice proposal. This fragment plans/checks; it never runs science.
+D04_DATA_SHA256 = '11541cb7ca6fe3355f4f0994f5dff642122b146c1fee7998c1d52bdd58cc09b5'
+D04_RECIPES = {
+    't07-criterion-translated-v1', 't07-covering-translated-v1',
+    't07-composition-projection-v1', 't07-composition-packaging-translated-v1',
+    't07-composition-original-v1', 't07-composition-review-translated-v1',
+    't07-composition-serial-mutations-v1', 't07-dynamic-base-v1',
+    't07-dynamic-attribution-v1', 't07-dynamic-independent-root-image-v1',
+}
+
+
+def d04_contracts():
+    path = Path(__file__).with_name('v5_d04_recipes.json')
+    require(sha(no_symlinks(path).read_bytes()) == D04_DATA_SHA256, 'D04 reviewed contract data changed')
+    data = read_json(path)
+    require(data['schema'] == 'orthemology-private-d04-contracts-v1' and set(data['recipes']) == D04_RECIPES, 'D04 recipe inventory changed')
+    return data
+
+
+def d04_check_descriptor(suite):
+    families = d04_contracts()['families']
+    matches = [(family, row) for family, row in families.items() if row['suite_id'] == suite.get('id')]
+    require(len(matches) == 1, 'Unknown D04 suite')
+    family, contract = matches[0]
+    require(canonical(suite) == contract['descriptor_sha256'], 'D04 descriptor differs from reviewed source contracts')
+    return family
+
+
+def d04_validate_argv(stage, driver, plan):
+    suite = plan.get('d04_suite')
+    require(isinstance(suite, dict), 'D04 exact suite binding missing')
+    d04_check_descriptor(suite)
+    original = next((row for row in suite['replay']['stages'] if row['id'] == stage.get('id')), None)
+    declared_driver = next((row for row in suite['replay']['drivers'] if row['id'] == driver.get('id')), None)
+    require(original is not None and canonical(stage) == canonical(original), 'D04 stage vector/cwd/budget/meaning changed')
+    require(declared_driver is not None and canonical(driver) == canonical(declared_driver), 'D04 driver binding changed')
+
+
+def d04_check_driver_source(recipe, source):
+    data = d04_contracts(); row = data['recipes'][recipe]; family = data['families'][row['family']]
+    member = '/'.join(part for part in [family['archive_root'], row['source_member']] if part)
+    require(source['id'] == row['source_id'] and source['original_sha256'] == row['source_sha256'] and
+            type(source['original_bytes']) is int and source['original_bytes'] == row['source_bytes'], 'D04 original driver identity changed')
+    require(source['origin_archive_sha256'] == family['archive_sha256'] and source['member_chain'][-1] == member, 'D04 driver archive member changed')
+    require(source['projection'] in {'EXACT', 'CUSTODY_ONLY'} and source['public_sha256'] in {None, row['source_sha256']}, 'D04 original driver cannot be a changed projection')
+
+
+def d04_source_inventory(recipe, source_root):
+    data = d04_contracts(); contract = data['families'][data['recipes'][recipe]['family']]
+    root = no_symlinks(source_root).resolve(); require(root.is_dir(), 'D04 source root missing')
+    inventory = {}
+    for path in sorted(root.rglob('*')):
+        no_symlinks(path)
+        if path.is_file(): inventory[path.relative_to(root).as_posix()] = sha(path.read_bytes())
+    require(len(inventory) == contract['source_files'] and canonical(inventory) == contract['source_inventory_sha256'], 'D04 complete source inventory differs')
+    return inventory
+
+
+def d04_command_plan(recipe, source_root):
+    require(recipe in D04_RECIPES, 'Unreviewed D04 recipe')
+    d04_source_inventory(recipe, source_root)
+    return d04_contracts()['recipes'][recipe]
+
+
+def d04_resolve_child(recipe, child_id, source_root, bindings):
+    row = d04_command_plan(recipe, source_root)
+    children = [child for child in row['children'] if child['id'] == child_id]
+    require(len(children) == 1, 'Unknown D04 physical child')
+    maps = {**bindings, 'source': no_symlinks(source_root).resolve()}
+    def expand(value):
+        if isinstance(value, str):
+            result = re.sub(r'\{([^{}]+)\}', lambda m: str(maps[m.group(1)]), value)
+            require(not re.search(r'[{}]', result), 'Unresolved D04 path token')
+            return result
+        if isinstance(value, list): return [expand(x) for x in value]
+        if isinstance(value, dict): return {k: expand(v) for k, v in value.items()}
+        return value
+    return expand(children[0])
+
+
+def d04_bind_temporary_cwd(recipe, actual_cwd, output, bindings):
+    contract = d04_contracts()['recipes'][recipe].get('temporary_cwd_binding')
+    require(contract is not None, 'Recipe has no original temporary cwd')
+    token = contract['token'][1:-1]
+    actual = no_symlinks(actual_cwd).resolve(); tmp = no_symlinks(Path(output) / 'tmp').resolve()
+    require(actual.is_dir() and actual != tmp and actual.is_relative_to(tmp), 'D04 temporary cwd escapes the fresh replay')
+    prefix = 'dynamic-interlock-replay-' if recipe == 't07-dynamic-base-v1' else 'root-attribution-replay-'
+    require(actual.name.startswith(prefix), 'D04 temporary cwd differs from original construction')
+    require(token not in bindings or Path(bindings[token]).resolve() == actual, 'D04 original temporary cwd rebound')
+    return {**bindings, token: actual}
+
+
+def d04_check_invocation(spec, argv, cwd, *, timeout_seconds, capture, stdin):
+    require(argv == spec['argv'] and all(isinstance(x, str) for x in argv), 'D04 actual argv differs')
+    require(str(cwd) == spec['cwd'], 'D04 actual cwd differs; project cwd cannot substitute for source/build cwd')
+    require((timeout_seconds is None and spec['timeout_seconds'] is None) or
+            (type(timeout_seconds) is int and timeout_seconds == spec['timeout_seconds']), 'D04 child timeout differs')
+    require(capture == spec['capture'], 'D04 capture mode differs from original source')
+    require(stdin == {'mode': 'INHERITED_NO_INPUT', 'data_sha256': None}, 'D04 original child has no supplied stdin')
+    if '-o' in argv and argv[-1].endswith('.lean'):
+        source = Path(argv[-1]); source = source if source.is_absolute() else Path(cwd) / source
+        require(source.resolve().is_relative_to(Path(cwd).resolve()), 'Lean output source lies outside its reviewed module root')
+
+
+def d04_producer_hash(binding, recipe, producers, replay_id):
+    owner = binding.get('producer_recipe') or recipe
+    path = binding.get('predecessor_path', binding['path'])
+    key = (owner, binding['producer'], path)
+    require(key in producers, 'D04 fresh predecessor producer is missing')
+    row = producers[key]
+    require(row['replay_id'] == replay_id and row['recipe'] == owner and row['child_id'] == binding['producer'] and row['path'] == path,
+            'D04 predecessor belongs to another replay/producer/path')
+    require(row['terminal'] == 'COMPLETED' and type(row['exit_code']) is int and row['exit_code'] == 0, 'D04 predecessor was not successfully produced')
+    digest(row['sha256']); digest(row['producer_record_sha256'])
+    require(isinstance(row['source_hashes'], dict) and row['source_hashes'], 'D04 predecessor lacks source identity')
+    for value in row['source_hashes'].values(): digest(value)
+    captured = row.get('producer_record')
+    require(isinstance(captured, dict) and canonical(captured) == row['producer_record_sha256'], 'D04 predecessor record digest is not bound to captured facts')
+    require(all(captured.get(name) == row[name] for name in ['replay_id', 'recipe', 'child_id', 'terminal', 'exit_code', 'source_hashes']),
+            'D04 predecessor summary differs from captured producer')
+    require(isinstance(captured.get('output_hashes'), dict) and captured['output_hashes'].get(path) == row['sha256'],
+            'D04 predecessor output hash differs from captured producer')
+    if owner == 't07-composition-original-v1' and binding['producer'].startswith('compile-'):
+        original = next(child for child in d04_contracts()['recipes'][owner]['children'] if child['id'] == binding['producer'])
+        expected_hashes = {source['member']: source['sha256'] for source in original['sources'] if source['kind'] == 'ORIGINAL_SOURCE'}
+        require(all(row['source_hashes'].get(name) == value for name, value in expected_hashes.items()), 'D04 fresh predecessor source binding changed')
+    return row['sha256']
+
+
+def d04_check_launch_files(recipe, spec, producers, replay_id):
+    """Called before the actual child by D03; no execution or overwrite occurs."""
+    actual_inputs = {}
+    for binding in spec['sources']:
+        if binding['kind'] == 'TOOL_PROBE': continue
+        if binding['kind'] == 'ORIGINAL_SOURCE': expected = binding['sha256']
+        else:
+            require(binding['kind'] == 'GENERATED_BY_ORIGINAL', 'Unknown D04 source binding class')
+            expected = binding['expected_sha256'] or d04_producer_hash(binding, recipe, producers, replay_id)
+        path = no_symlinks(binding['path']); require(path.is_file(), 'D04 actual child input missing')
+        actual = sha(path.read_bytes()); require(actual == expected, 'D04 actual child input bytes differ')
+        actual_inputs[str(path)] = actual
+    replacements = {row['path']: row for row in spec['replace_fresh_predecessor']}
+    require(set(replacements) <= set(spec['outputs']), 'D04 replacement is not an exact declared output')
+    for name in spec['outputs']:
+        path = no_symlinks(name)
+        if name in replacements:
+            require(path.is_file() and sha(path.read_bytes()) == d04_producer_hash(replacements[name], recipe, producers, replay_id),
+                    'D04 replacement lacks exact fresh predecessor object bytes')
+        else: require(not path.exists(), 'D04 output already exists outside the exact replacement contract')
+    return actual_inputs
+
+
+def d04_assess_captured_child(spec, row, log_bytes, parent):
+    """Validate captured facts; parent spans never invent child terminal/time."""
+    d04_check_invocation(spec, row['argv'], row['cwd'], timeout_seconds=row['timeout_seconds'], capture=row['capture'], stdin=row['stdin'])
+    require(row['id'] == spec['id'] and row['log_sha256'] == sha(log_bytes), 'D04 child/log association changed')
+    def instant(value):
+        require(isinstance(value, str) and (value.endswith('Z') or value.endswith('+00:00')), 'D04 measured UTC child interval missing')
+        return datetime.fromisoformat(value.replace('Z', '+00:00'))
+    require(instant(parent['started_at']) <= instant(row['started_at']) <= instant(row['ended_at']) <= instant(parent['ended_at']), 'D04 child interval does not belong to its physical parent')
+    text = log_bytes.decode('utf-8')
+    if row['terminal'] in {'TIMEOUT','INTERRUPTED','LAUNCH_ERROR','RUNNING'}:
+        require(row['exit_code'] is None, 'D04 unknown terminal cannot carry a fabricated semantic exit')
+        return {'outcome':'RESOURCE_INCONCLUSIVE', 'rejection_credit':False}
+    require(row['terminal'] == 'COMPLETED' and type(row['exit_code']) is int, 'Unknown D04 terminal')
+    if re.search(r'timed out|out of memory|maximum (?:number of heartbeats|recursion depth)|deterministic timeout|WALL_CLOCK_LIMIT', text, re.I):
+        return {'outcome':'RESOURCE_INCONCLUSIVE', 'rejection_credit':False}
+    require(row['exit_code'] == spec['expected_exit_code'], 'D04 child exit differs from source contract')
+    require(isinstance(row['output_hashes'], dict) and set(row['output_hashes']) == set(spec['outputs']), 'D04 actual output inventory incomplete')
+    for value in row['output_hashes'].values(): digest(value)
+    require(all(x in text for x in spec['required_diagnostics']) and all(x not in text for x in spec['forbidden_diagnostics']), 'D04 intended control diagnostic differs')
+    require('sorryAx' not in text, 'D04 child reported a proof hole')
+    if row['exit_code']:
+        require(not re.search(r'unknown (?:module|constant|identifier|namespace)|no such file|file not found|failed to read file|object file|must be contained in root directory', text, re.I), 'D04 infrastructure failure is not semantic rejection')
+    outcome = 'ACCEPT' if row['exit_code'] == 0 else 'REJECT'
+    return {'outcome':outcome, 'rejection_credit':outcome == 'REJECT'}
+
+
+def d04_check_complete_child_order(recipe, rows):
+    expected = [child['id'] for child in d04_contracts()['recipes'][recipe]['children']]
+    require([row['id'] for row in rows] == expected, 'D04 original physical child omitted, duplicated or reordered')
+
+
+def d04_translation_binding(recipe, translation):
+    row = d04_contracts()['recipes'][recipe]
+    require(row['translation_sha256'] is not None and sha(no_symlinks(translation).read_bytes()) == row['translation_sha256'], 'D04 adapter translation differs from reviewed bytes')
+    return {'original_source_sha256':row['source_sha256'], 'translation_sha256':row['translation_sha256'], 'source_argv':row['parent_stage']['argv']}
+
+
+# D04-only dispatch and admission; all generic frozen validation remains active.
+def d04_is_suite(suite):
+    return suite.get('id') in {row['suite_id'] for row in d04_contracts()['families'].values()}
+
+
+def d04_admit_sources(suite, sources):
+    family = d04_check_descriptor(suite)
+    expected = d04_contracts()['families'][family]['sources']
+    require(all(sid in sources and canonical(sources[sid]) == canonical(row) for sid, row in expected.items()), 'D04 selected or custody source record changed')
+    return family
+
+
+def d04_declared_admitted(suite, sources):
+    if not d04_is_suite(suite): return False
+    family = d04_admit_sources(suite, sources)
+    require(family != 'dynamic' and suite['replay']['scope'] == 'DECLARED_SUITE', 'D04 dynamic scope cannot be promoted')
+    return True
+
+
+def d04_validate_driver(driver, sources):
+    recipe = driver['recipe']; data = d04_contracts(); contract = data['recipes'][recipe]
+    expected = next(row for row in data['families'][contract['family']]['suite']['replay']['drivers'] if row['id'] == driver['id'])
+    require(driver == expected, 'D04 exact driver or argument meaning changed')
+    d04_check_driver_source(recipe, sources[driver['source_id']])
+
+
+def d04_validate_package(suite, plan, sources):
+    family = d04_admit_sources(suite, sources); data = d04_contracts(); contract = data['families'][family]
+    plan.update(d04_family=family, d04_suite=suite, d04_sources={sid:sources[sid] for sid in contract['sources']})
+    recipes = {r['recipe'] for r in plan['drivers'].values()}
+    require(recipes == {rid for rid,r in data['recipes'].items() if r['family'] == family}, 'D04 original recipe inventory incomplete')
+    require(list(plan['inputs']) == ['source-archive'], 'D04 archive inventory changed')
+    require(plan['inputs']['source-archive'] == contract['suite']['replay']['external_inputs'][0], 'D04 original archive input changed')
+    declared = {(s['argv'][1],s['argv'][2]) for s in suite['replay']['stages'] if s['argv'][0] == '{builtin:observe-child}'}
+    expected = {(r['parent_stage']['id'],child['id']) for rid,r in data['recipes'].items() if rid in recipes for child in r['children']}
+    require(declared == expected, 'D04 physical child observation census differs')
+    for sid,body in plan['contents'].items():
+        require(sha(body) == sources[sid]['public_sha256'], 'D04 exact public source changed')
+
+
+def d04_diagnostic_allowed(driver, diagnostic):
+    if driver.get('recipe') not in D04_RECIPES: return False
+    row = d04_contracts()['recipes'][driver['recipe']]
+    stages = d04_contracts()['families'][row['family']]['suite']['replay']['stages']
+    return any(diagnostic in stage['expected_diagnostics'] for stage in stages if stage['driver_id'] == driver['id'])
+
+
+def d04_expand(value, bindings):
+    if isinstance(value, str):
+        return re.sub(r'\{([^{}]+)\}', lambda match: str(bindings[match.group(1)]), value)
+    if isinstance(value, list): return [d04_expand(item, bindings) for item in value]
+    if isinstance(value, dict): return {key:d04_expand(item, bindings) for key,item in value.items()}
+    return value
+
+
+def d04_asset(name):
+    row = d04_contracts()['adapter_assets'][name]
+    path = no_symlinks(Path(__file__).with_name('v5_d04_assets') / name)
+    require(path.is_file() and sha(path.read_bytes()) == row['sha256'], 'D04 adapter-owned helper changed')
+    return path
+
+
+def d04_child_environment(recipe, spec, base, bindings):
+    if spec['environment_policy'] == 'SYNTHETIC_TEST_ONLY': return dict(base)
+    env = dict(base)
+    if recipe in {'t07-criterion-translated-v1','t07-covering-translated-v1','t07-composition-review-translated-v1','t07-composition-packaging-translated-v1'}:
+        env = {k:v for k,v in env.items() if not k.startswith(('LEAN_','PYTHON','LD_')) and k != 'DYLD_INSERT_LIBRARIES'}
+        paths = []
+        if recipe != 't07-composition-packaging-translated-v1': paths.append(str(Path(bindings['tool:lean']).parent))
+        if recipe in {'t07-criterion-translated-v1','t07-covering-translated-v1','t07-composition-packaging-translated-v1'}:
+            key = 'tool:python312' if recipe == 't07-criterion-translated-v1' else 'tool:python'
+            paths.append(str(Path(bindings[key]).parent))
+        env.update(PYTHONDONTWRITEBYTECODE='1', PATH=os.pathsep.join(paths + [os.defpath]))
+    for key,value in spec['source_environment_overrides'].items():
+        expanded = d04_expand(value, bindings)
+        env[key] = os.pathsep.join(expanded) if isinstance(expanded, list) else expanded
+    return env
+
+
+def d04_replacement_evidence(recipe, spec, producers, replay_id):
+    rows=[]
+    for binding in spec['replace_fresh_predecessor']:
+        value=d04_producer_hash(binding,recipe,producers,replay_id)
+        key=(binding.get('producer_recipe')or recipe,binding['producer'],binding.get('predecessor_path',binding['path']))
+        require(sha(no_symlinks(binding['path']).read_bytes())==value,'D04 copied predecessor changed before replacement')
+        rows.append({**binding,'actual_sha256':value,'producer_capture_sha256':producers[key]['producer_record']['capture_record_sha256']})
+    return rows
+
+
+class D04CaptureSession:
+    """Capture exact physical Popen calls while preserving source return values.
+
+    The only CLI caller supplies a code-owned contract after source/tool checks.
+    Tests may construct explicit synthetic contracts; there is no CLI recipe for
+    them. One physical child may be active at a time, including serial mutants.
+    """
+    def __init__(self, context, contract, base_env, producers):
+        import threading
+        self.context = context; self.contract = contract; self.base_env = dict(base_env)
+        self.recipe = context['recipe']; self.trace = no_symlinks(context['trace'])
+        self.bindings = dict(context['bindings'], source=context['source_root'], out=context['output'], trace=context['trace'])
+        self.producers = dict(producers); self.position = 0; self.probes = 0
+        self.active = []; self.lock = threading.RLock(); self.original_popen = subprocess.Popen
+
+    def next_spec(self, argv, cwd):
+        probes = self.contract.get('tool_probes', [])
+        if self.probes < len(probes) and argv == d04_expand(probes[self.probes]['argv'], self.bindings):
+            source = d04_contracts()['recipes'][self.recipe]
+            row = {**probes[self.probes], 'id':'probe-' + str(self.probes), 'sources':[{'kind':'TOOL_PROBE'}],
+                   'outputs':[], 'replace_fresh_predecessor':[], 'source_environment_overrides':{},
+                   'environment_policy':'SANITIZED_PARENT_WITH_EXACT_SOURCE_OVERRIDES',
+                   'source_binding':{'kind':'TOOL_PROBE','tool_name':'lean','executable_sha256':LEAN_SHA,'driver_sha256':source['source_sha256']}}
+            return d04_expand(row,self.bindings), True
+        require(self.probes == len(probes), 'D04 original tool probe missing or reordered')
+        require(self.position < len(self.contract['children']), 'Extra D04 physical child')
+        if self.contract.get('temporary_cwd_binding'):
+            self.bindings = d04_bind_temporary_cwd(self.recipe,cwd,self.context['output'],self.bindings)
+        return d04_expand(self.contract['children'][self.position],self.bindings), False
+
+    def prepare(self, argv, positional, kwargs):
+        require(not positional and isinstance(argv,list) and all(isinstance(x,str) for x in argv), 'D04 unreviewed process argv form')
+        allowed = {'cwd','env','stdout','stderr','text','universal_newlines','start_new_session','shell','stdin'}
+        require(set(kwargs) <= allowed and kwargs.get('shell',False) is False and kwargs.get('stdin') is None, 'D04 process options or supplied stdin changed')
+        cwd = str(Path(kwargs.get('cwd',Path.cwd())).absolute())
+        spec, probe = self.next_spec(argv,cwd)
+        require(argv == spec['argv'] and cwd == spec['cwd'], 'D04 actual argv/cwd differs from original recipe')
+        capture = spec['capture']; text = kwargs.get('text',kwargs.get('universal_newlines',False))
+        stdout = kwargs.get('stdout'); stderr = kwargs.get('stderr')
+        if capture == 'FILE_MERGED_BYTES':
+            require(text is False and hasattr(stdout,'name') and str(Path(stdout.name).absolute()) == spec['log'] and stderr == subprocess.STDOUT, 'D04 original file stream contract changed')
+        else:
+            expected = {'MERGED_BYTES':(False,subprocess.STDOUT),'MERGED_TEXT':(True,subprocess.STDOUT),
+                        'SEPARATE_BYTES':(False,subprocess.PIPE),'STDOUT_TEXT':(True,None)}
+            require(capture in expected and stdout == subprocess.PIPE and (text,stderr) == expected[capture], 'D04 original pipe stream contract changed')
+        expected_env = d04_child_environment(self.recipe,spec,self.base_env,self.bindings)
+        require(kwargs.get('env',self.base_env) == expected_env, 'D04 actual child environment differs')
+        session = self.recipe in {'t07-covering-translated-v1','t07-composition-review-translated-v1'}
+        require(kwargs.get('start_new_session',False) is session, 'D04 original process-session contract changed')
+        require(not any(p.poll() is None for p in self.active), 'Concurrent D04 child is not an admitted serial recipe')
+        actual = d04_check_launch_files(self.recipe,spec,self.producers,self.context['replay_id'])
+        inputs = []; source_hashes = {}
+        for item in spec['sources']:
+            if item['kind'] == 'TOOL_PROBE': continue
+            digest_value = actual[item['path']]
+            inputs.append({**item,'actual_sha256':digest_value})
+            source_hashes[item.get('member') or item.get('origin_member') or item['path']] = digest_value
+        binding = dict(spec['source_binding'])
+        if binding['kind'] == 'GENERATED_BY_ORIGINAL': binding['generated_sha256'] = inputs[0]['actual_sha256']
+        index = self.probes if probe else self.position
+        name = ('probe-' if probe else '') + f'{index:04}'
+        record = {'id':spec['id'],'index':index,'probe':probe,'recipe':self.recipe,'replay_id':self.context['replay_id'],
+                  'parent_stage_id':self.context['parent_stage_id'],'argv':argv,'cwd':cwd,'timeout_seconds':spec['timeout_seconds'],
+                  'capture':capture,'stdin':{'mode':'INHERITED_NO_INPUT','data_sha256':None},
+                  'environment_sha256':canonical(expected_env),'source_binding':binding,'input_bindings':inputs,'source_hashes':source_hashes,
+                  'replacement_bindings':d04_replacement_evidence(self.recipe,spec,self.producers,self.context['replay_id']),
+                  'started_at':utc(),'ended_at':None,'terminal':'RUNNING','exit_code':None,'log_sha256':None,
+                  'stream_hashes':{},'output_hashes':{},'log_file':name+'.log'}
+        destination = path_in(self.trace,name+'.json'); require(not destination.exists(), 'D04 capture collision')
+        write_json(destination,record)
+        if probe: self.probes += 1
+        else: self.position += 1
+        return spec,record,destination
+
+    def finish(self, process, terminal, stdout=b'', stderr=b''):
+        if process.d04_record['terminal'] != 'RUNNING': return
+        spec = process.d04_spec; row = process.d04_record
+        def data(value): return value.encode('utf-8') if isinstance(value,str) else value or b''
+        if spec['capture'] == 'FILE_MERGED_BYTES':
+            stdout = no_symlinks(spec['log']).read_bytes() if Path(spec['log']).exists() else b''
+        stdout,stderr = data(stdout),data(stderr); log = stdout + stderr
+        if spec['capture'] == 'SEPARATE_BYTES':
+            prefix = process.d04_destination.stem
+            for name,value in [('stdout',stdout),('stderr',stderr)]:
+                path_in(self.trace,prefix+'.'+name+'.log').write_bytes(value)
+            row['stream_hashes'] = {'stdout':sha(stdout),'stderr':sha(stderr)}
+        path_in(self.trace,row['log_file']).write_bytes(log)
+        row.update(terminal=terminal,ended_at=utc(),exit_code=process.returncode if terminal == 'COMPLETED' else None,log_sha256=sha(log))
+        for path in spec['outputs']:
+            if no_symlinks(path).is_file(): row['output_hashes'][path] = sha(Path(path).read_bytes())
+        write_json(process.d04_destination,row)
+        # Bind pre/post source bytes; failure cannot erase the physical terminal.
+        for item in row['input_bindings']:
+            require(sha(no_symlinks(item['path']).read_bytes()) == item['actual_sha256'], 'D04 child input changed while running')
+        if terminal == 'COMPLETED' and row['exit_code'] == 0:
+            for path,digest_value in row['output_hashes'].items():
+                producer = {'replay_id':row['replay_id'],'recipe':self.recipe,'child_id':row['id'],'terminal':'COMPLETED',
+                            'exit_code':0,'source_hashes':row['source_hashes'],'output_hashes':row['output_hashes'],
+                            'capture_record_sha256':canonical(row)}
+                self.producers[(self.recipe,row['id'],path)] = {**producer,'path':path,'sha256':digest_value,
+                    'producer_record':producer,'producer_record_sha256':canonical(producer)}
+
+    def popen_type(self):
+        owner = self; original = self.original_popen
+        class CapturedPopen(original):
+            def __init__(self, argv, *args, **kwargs):
+                with owner.lock:
+                    self.d04_spec,self.d04_record,self.d04_destination = owner.prepare(argv,args,kwargs)
+                    self.d04_communicating = False
+                    try: super().__init__(argv,**kwargs)
+                    except OSError as error:
+                        self.returncode = None; owner.finish(self,'LAUNCH_ERROR',str(error).encode()); raise
+                    owner.active.append(self)
+
+            def communicate(self, input=None, timeout=None):
+                if self.d04_record['terminal'] != 'RUNNING': return super().communicate(input=input,timeout=timeout)
+                require(input is None, 'D04 original process has no supplied stdin')
+                expected = self.d04_spec['timeout_seconds']
+                require((timeout is None and expected is None) or (type(timeout) is int and timeout == expected), 'D04 source child timeout changed')
+                self.d04_communicating = True
+                try:
+                    out,err = super().communicate(input=input,timeout=timeout)
+                except subprocess.TimeoutExpired as error:
+                    owner.finish(self,'TIMEOUT',error.output,error.stderr); raise
+                except (KeyboardInterrupt,SystemExit):
+                    owner.stop(); raise
+                finally: self.d04_communicating = False
+                terminal = 'COMPLETED' if type(self.returncode) is int and 0 <= self.returncode < 124 else 'INTERRUPTED'
+                owner.finish(self,terminal,out,err)
+                return out,err
+
+            def wait(self, timeout=None):
+                if self.d04_communicating or self.d04_record['terminal'] != 'RUNNING': return super().wait(timeout=timeout)
+                expected = self.d04_spec['timeout_seconds']
+                require((timeout is None and expected is None) or (type(timeout) is int and timeout == expected), 'D04 source child timeout changed')
+                try: code = super().wait(timeout=timeout)
+                except subprocess.TimeoutExpired:
+                    owner.finish(self,'TIMEOUT'); raise
+                except (KeyboardInterrupt,SystemExit):
+                    owner.stop(); raise
+                terminal = 'COMPLETED' if type(code) is int and 0 <= code < 124 else 'INTERRUPTED'
+                owner.finish(self,terminal)
+                return code
+        return CapturedPopen
+
+    def stop(self):
+        for process in self.active:
+            if process.poll() is None:
+                try:
+                    if self.recipe in {'t07-covering-translated-v1','t07-composition-review-translated-v1'}: os.killpg(process.pid,signal.SIGTERM)
+                    else: process.terminate()
+                    self.original_popen.wait(process,timeout=2)
+                except (ProcessLookupError,subprocess.TimeoutExpired):
+                    try: process.kill(); self.original_popen.wait(process,timeout=2)
+                    except ProcessLookupError: pass
+            if process.d04_record['terminal']!='RUNNING':continue
+            out=err=b''
+            if process.d04_spec['capture']!='FILE_MERGED_BYTES':
+                communicating=process.d04_communicating;process.d04_communicating=True
+                try:out,err=self.original_popen.communicate(process,timeout=2)
+                except subprocess.TimeoutExpired as error:out,err=error.output,error.stderr
+                finally:process.d04_communicating=communicating
+            self.finish(process,'INTERRUPTED',out,err)
+
+
+def d04_launch_description(recipe, bindings):
+    row = d04_contracts()['recipes'][recipe]
+    root = PurePosixPath(bindings['source'])
+    source = root/row['source_member']
+    if row['asset']:
+        helper = PurePosixPath(bindings['adapter']).parent/'v5_d04_assets'/row['asset']; arguments = d04_expand(row['parent_stage']['argv'][2:],bindings)
+        if recipe == 't07-composition-serial-mutations-v1': arguments = ['--output-dir' if arg == '--output' else arg for arg in arguments]
+        return helper, ['--source-root',str(root),*arguments], root
+    if recipe == 't07-dynamic-independent-root-image-v1':
+        destination = PurePosixPath(bindings['out'])/'independent-root-image/independent_root_image_checks.py'
+        return destination, [], destination.parent
+    return source, d04_expand(row['parent_stage']['argv'][3:],bindings), source.parent
+
+
+def d04_check_bindings(recipe, bindings, output):
+    family=d04_contracts()['families'][d04_contracts()['recipes'][recipe]['family']]
+    names={'lean'}|{row['name']for row in family['suite']['replay']['tools']}
+    expected={'out','project','build','adapter','source'}|{'tool:'+name for name in names}
+    if family['suite']['replay']['packages']:expected|={'dependency:mathlib','locked:mathlib-package-libraries'}
+    keys(bindings,expected)
+    require(all(bindings[key]==str(PurePosixPath(output)/suffix)for key,suffix in [('out','.'),('project','project'),('build','build')]),'D04 fixed replay output binding changed')
+    require(bindings['source']==str(PurePosixPath(output)/'archives/source-archive'/family['archive_root']),'D04 archive root binding changed')
+    for key,value in bindings.items():
+        if key=='locked:mathlib-package-libraries':continue
+        require(isinstance(value,str)and PurePosixPath(value).is_absolute()and '..'not in PurePosixPath(value).parts,'D04 absolute typed path binding required')
+
+
+def d04_trace_entry(context_path):
+    import tempfile
+    context = read_json(no_symlinks(context_path))
+    keys(context,{'recipe','parent_stage_id','source_root','output','trace','bindings','replay_id','launch_cwd','producers'})
+    recipe = context['recipe']; require(recipe in D04_RECIPES,'Unreviewed D04 internal recipe')
+    contract = d04_command_plan(recipe,context['source_root'])
+    require(context['parent_stage_id'] == contract['parent_stage']['id'],'D04 parent identity changed')
+    output = no_symlinks(context['output']).resolve(); trace = no_symlinks(context['trace']).resolve()
+    require(trace == path_in(output,'traces/'+context['parent_stage_id']).resolve(),'D04 trace escaped replay root')
+    require(no_symlinks(context_path).resolve() == path_in(output,'contexts/'+context['parent_stage_id']+'.json').resolve(),'D04 context escaped replay root')
+    source = no_symlinks(context['source_root']).resolve(); require(not output.is_relative_to(source),'D04 output overlaps original sources')
+    bindings = dict(context['bindings'],source=str(source),out=str(output),trace=str(trace))
+    family = d04_contracts()['families'][contract['family']]
+    d04_check_bindings(recipe,context['bindings'],str(output))
+    require(source==path_in(output,str(PurePosixPath('archives/source-archive')/family['archive_root'])).resolve(),'D04 internal source root is not its fresh archive extraction')
+    require(context['bindings']['adapter']==str(Path(__file__).resolve()),'D04 internal runner path changed')
+    definitions = {'lean':family['suite']['toolchain'],**{r['name']:r for r in family['suite']['replay']['tools']}}
+    for name,row in definitions.items():
+        require(sha(Path(bindings['tool:'+name]).read_bytes()) == row['executable_sha256'],'D04 internal execution tool changed')
+    require(Path(bindings['tool:python']).resolve() == Path(sys.executable).resolve(),'D04 original interpreter changed')
+    if 'tool:leanc' in bindings: require(Path(bindings['tool:lean']).with_name('leanc').resolve() == Path(bindings['tool:leanc']).resolve(),'Original leanc sibling differs')
+    helper,arguments,cwd = d04_launch_description(recipe,bindings)
+    helper=Path(helper);cwd=Path(cwd)
+    if contract['asset']:require(helper==d04_asset(contract['asset']),'D04 helper is not the hash-checked adapter asset')
+    require(str(cwd) == context['launch_cwd'],'D04 original launch cwd changed')
+    if recipe == 't07-dynamic-independent-root-image-v1':
+        require(not helper.exists(),'Root-image disposable script exists'); helper.parent.mkdir(parents=True,exist_ok=True)
+        helper.write_bytes(path_in(source,contract['source_member']).read_bytes())
+    producers = {(r['recipe'],r['child_id'],r['path']):r for r in context['producers']}
+    require(len(producers) == len(context['producers']),'Duplicate fresh producer binding')
+    trace.mkdir(parents=True,exist_ok=False)
+    write_json(trace/'LAUNCH.json',{'recipe':recipe,'parent_stage_id':context['parent_stage_id'],
+        'context_sha256':sha(Path(context_path).read_bytes()),'runner_sha256':sha(Path(__file__).read_bytes()),
+        'original_source_sha256':contract['source_sha256'],'helper_sha256':sha(helper.read_bytes()),
+        'helper_argv':[str(helper),*arguments],'helper_cwd':str(cwd),'mechanism':'RUNPY_IN_TRACER'})
+    (output/'tmp').mkdir(exist_ok=True)
+    os.environ['TMPDIR'] = str(output/'tmp'); tempfile.tempdir = None
+    session = D04CaptureSession(context,contract,dict(os.environ),producers)
+    original_popen = subprocess.Popen; old_argv = sys.argv; old_path = list(sys.path); old_cwd = Path.cwd()
+    old_handlers = {sig:signal.getsignal(sig) for sig in [signal.SIGTERM,signal.SIGINT]}
+    def interrupted(signum,frame): session.stop(); raise SystemExit(128+signum)
+    code = 0
+    try:
+        for sig in old_handlers: signal.signal(sig,interrupted)
+        subprocess.Popen = session.popen_type(); sys.argv = [str(helper),*arguments]
+        sys.path.insert(0,str(helper.parent)); os.chdir(cwd)
+        try: runpy.run_path(str(helper),run_name='__main__')
+        except SystemExit as error:
+            code = error.code if type(error.code) is int else 0 if error.code is None else 1
+            if code: raise
+        require(session.position == len(contract['children']) and session.probes == len(contract.get('tool_probes',[])),'D04 original physical child census incomplete')
+        d04_source_inventory(recipe,source)
+    finally:
+        session.stop(); subprocess.Popen = original_popen; sys.argv = old_argv; sys.path[:] = old_path; os.chdir(old_cwd)
+        for sig,handler in old_handlers.items(): signal.signal(sig,handler)
+    return code
+
+
+def d04_parent_paths(recipe, output):
+    names = {'t07-criterion-translated-v1':'original','t07-covering-translated-v1':'original',
+        't07-composition-original-v1':'original','t07-composition-packaging-translated-v1':'packaging',
+        't07-composition-review-translated-v1':'review','t07-composition-serial-mutations-v1':'mutants',
+        't07-dynamic-base-v1':'base','t07-dynamic-attribution-v1':'attribution',
+        't07-dynamic-independent-root-image-v1':'independent-root-image'}
+    return path_in(output,names[recipe]) if recipe in names else Path(output)
+
+
+def d04_runtime_bindings(plan, mappings):
+    bindings = {key:str(value) for key,value in mappings.items() if key.startswith(('tool:','dependency:')) or key in {'out','project','build','adapter'}}
+    if 'dependency:mathlib' in bindings:
+        root = Path(bindings['dependency:mathlib'])
+        actual=sorted(no_symlinks(path) for path in (root/'.lake/packages').glob('*/.lake/build/lib/lean'))
+        expected=set()
+        for name,row in plan['packages'].items():
+            if row['kind']=='GIT' and row['path'].startswith('.lake/packages/'):
+                library=path_in(root,row['path']+'/.lake/build/lib/lean')
+                expected.update(package_library(name,library,plan['official']))
+        require(set(actual)==expected,'D04 original package-library glob differs from exact declared pinned packages')
+        bindings['locked:mathlib-package-libraries'] = os.pathsep.join(str(p) for p in actual)
+    return bindings
+
+
+def d04_run_parent(stage, driver, plan, output, mappings, env, log, replay_id, producers):
+    recipe = driver['recipe']; contract = d04_contracts()['recipes'][recipe]
+    root = Path(mappings['archive:'+driver['external_input_id']]); bindings = d04_runtime_bindings(plan,mappings)
+    bindings['source'] = str(root)
+    helper,arguments,cwd = d04_launch_description(recipe,bindings)
+    context_path = path_in(output,'contexts/'+stage['id']+'.json'); context_path.parent.mkdir(exist_ok=True)
+    require(not context_path.exists(),'D04 context already exists')
+    trace = path_in(output,'traces/'+stage['id'])
+    context = {'recipe':recipe,'parent_stage_id':stage['id'],'source_root':str(root),'output':str(output),'trace':str(trace),
+        'bindings':bindings,'replay_id':replay_id,'launch_cwd':str(cwd),'producers':list(producers.values())}
+    write_json(context_path,context)
+    launch = ['{tool:python}','-B','{adapter}','--trace-d04','{out}/contexts/'+stage['id']+'.json']
+    actual = [_expand(arg,mappings) for arg in launch]
+    parent_env = dict(env,TMPDIR=str(path_in(output,'tmp')))
+    invocation = {'parent_stage_id':stage['id'],'recipe':recipe,'driver_sha256':driver['sha256'],
+        'source_argv':stage['argv'],'launch_argv':launch,'actual_launch_argv':actual,'launch_cwd':str(cwd),
+        'helper_argv':[str(helper),*arguments],'helper_sha256':contract['translation_sha256'] or contract['source_sha256'],
+        'runner_sha256':sha(Path(__file__).read_bytes()),'contract_data_sha256':D04_DATA_SHA256,
+        'context_sha256':sha(context_path.read_bytes()),'source_root':str(root),'output_root':str(output),
+        'bindings':bindings,'replay_id':replay_id,'trace_sha256':None,'trace_manifest':{},'trace_launch':None,
+        'parent_log_sha256':sha(b''),'child_count':0,'probe_count':0,'capture_records':[],
+        'normalization':None,'normalization_sha256':None,'qualified_objects':{},'capture_error':None,'raw_capture_files':{}}
+    # Actual parent cwd is source-owned; descriptor cwd remains its symbolic identity.
+    run = run_process(actual,cwd,parent_env,log,stage['timeout_seconds'])
+    invocation['parent_log_sha256'] = run['log_sha256']
+    try:
+        d04_collect_capture(invocation,contract,trace,run,plan)
+    except (ValueError,OSError,KeyError,TypeError) as error:
+        invocation['capture_error']=type(error).__name__+': '+str(error)
+        if trace.exists():
+            invocation['raw_capture_files']={p.relative_to(trace).as_posix():p.read_bytes().hex() for p in sorted(trace.rglob('*')) if p.is_file() and not p.is_symlink()}
+            invocation['trace_manifest']={name:sha(bytes.fromhex(value)) for name,value in invocation['raw_capture_files'].items()}
+            invocation['trace_sha256']=canonical(invocation['trace_manifest']) if invocation['trace_manifest'] else None
+    return run,invocation
+
+
+def d04_object_outputs(plan, recipe, invocation):
+    objects=d04_expected_objects(plan,invocation)
+    for name,value in objects.items():
+        path=path_in(invocation['output_root'],name)
+        require(path.is_file() and sha(path.read_bytes())==value,'D04 target object changed after original producer')
+    return objects
+
+
+def d04_execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, reviews=None):
+    require(scope is None or scope==suite['replay']['scope'],'Execute only the exact D04 descriptor scope')
+    require(isinstance(reviews,dict) and set(suite['review_ids'])<=set(reviews),'Missing source-bound D04 reviews')
+    plan = validate_suite(suite,sources,root); project_suite(suite,sources,root,output)
+    output = Path(output).absolute(); project = output/'project'; logs = output/'logs'; logs.mkdir()
+    receipt = _initial_receipt(suite,sources,reviews); evidence = receipt['replay_evidence']
+    results = {row['id']:row for row in evidence['stage_results']}; completed = {}; captured = {}; producers = {}
+    replay_id = canonical({'suite':canonical(suite),'output':str(output),'started_at':receipt['started_at'],'runner':evidence['runner_sha256']})
+    current = results['_prerequisites']; current['started_at'] = utc(); prerequisite_log = logs/'prerequisites.log'
+    controls = indexed(suite['controls']); archive = None; archive_inventory = None
+    def save():
+        receipt['stages'] = [{key:row[key] for key in ('id','terminal','exit_code','log_sha256')} for row in evidence['stage_results']]
+        receipt['log_sha256'] = canonical({row['id']:row['log_sha256'] for row in evidence['stage_results']})
+        write_json(output/'RECEIPT.json',receipt)
+    save()
+    try:
+        resolved,fingerprints,dependencies,env,input_hashes = _verify_environment(suite,plan,tools,inputs,output)
+        evidence['tool_fingerprints']=fingerprints; evidence['dependency_checks']=dependencies
+        family = d04_contracts()['families'][plan['d04_family']]
+        archive = path_in(output,'archives/source-archive'); archive_inventory = extract_source_zip(inputs['source-archive'],archive)
+        source_root = path_in(archive,family['archive_root'],dot=True) if family['archive_root'] else archive
+        for driver in plan['drivers'].values(): d04_source_inventory(driver['recipe'],source_root)
+        prerequisite_log.write_text('Exact D04 tools, dependencies, archive and original source inventory verified.\n')
+        current.update(terminal='COMPLETED',exit_code=0,ended_at=utc(),log_sha256=sha(prerequisite_log.read_bytes()))
+        mappings = {'project':project,'out':output,'build':output/'build','adapter':Path(__file__).resolve(),'archive:source-archive':source_root}
+        mappings.update({'tool:'+name:path.resolve() for name,path in resolved.items()})
+        if 'mathlib' in tools:mappings['dependency:mathlib']=Path(tools['mathlib']).resolve()
+        for did,driver in plan['drivers'].items():mappings['driver:'+did]=path_in(source_root,d04_contracts()['recipes'][driver['recipe']]['source_member'])
+        for sid,stage in plan['stages'].items():
+            current=results[sid];current['started_at']=utc();log=logs/(sid+'.log');driver=plan['drivers'].get(stage['driver_id'])
+            for parent in stage['depends_on']:require(completed.get(parent,{}).get('matched')is True,'D04 prior stage did not satisfy its contract')
+            for name in stage['output_paths']:
+                path=path_in(output,name);require(not path.exists(),'D04 declared output already exists');path.parent.mkdir(parents=True,exist_ok=True)
+            if stage['argv'][:1]==['{builtin:observe-child}']:
+                pid,child=stage['argv'][1:];observed=captured[(pid,child)]
+                child_log=path_in(output,observed['captured_log_path']);require(sha(child_log.read_bytes())==observed['log_sha256'],'D04 captured child log changed before observation')
+                log.write_bytes(child_log.read_bytes())
+                run={'terminal':observed['terminal'],'exit_code':observed['exit_code'],'started_at':current['started_at'],'ended_at':utc(),'log_sha256':observed['log_sha256']}
+                evidence['child_observations'].append({**observed,'stage_id':sid,'observed_at':run['ended_at']})
+            elif driver:
+                run,invocation=d04_run_parent(stage,driver,plan,output,mappings,env,log,replay_id,producers)
+                evidence['driver_invocations'].append(invocation);current.update(run);save()
+                resource=(run['terminal']!='COMPLETED' or any(row['record']['terminal']in{'TIMEOUT','INTERRUPTED','RUNNING'} or
+                    re.search(r'timed out|out of memory|maximum (?:number of heartbeats|recursion depth)|deterministic timeout|WALL_CLOCK_LIMIT',
+                        bytes.fromhex(row['log_hex']or'').decode('utf-8',errors='replace'),re.I) for row in invocation['capture_records']))
+                if resource:receipt.update(outcome='RESOURCE_INCONCLUSIVE',exit_code=1)
+                require(invocation['capture_error'] is None,'D04 physical capture could not be parsed: '+str(invocation['capture_error']))
+                require(not resource,'Resource-inconclusive D04 physical parent/child')
+                require(run['exit_code']==0,'D04 original/translated physical parent failed')
+                d04_validate_captured_invocation(invocation,plan,current,True)
+                normalization=d04_normalize(driver['recipe'],source_root,d04_parent_paths(driver['recipe'],output),run,log.read_text(encoding='utf-8'))
+                qualified={**invocation,'normalization':normalization,'normalization_sha256':canonical(normalization)}
+                d04_bind_normalization(qualified)
+                qualified['qualified_objects']=d04_object_outputs(plan,driver['recipe'],qualified)
+                children,new_producers=d04_observations(qualified,plan,current)
+                invocation.update(qualified)
+                evidence['output_hashes'].update(invocation['qualified_objects'])
+                captured.update(children);producers.update(new_producers)
+            else:
+                argv=[_expand(arg,mappings)for arg in stage['argv']]
+                run=run_process(argv,path_in(project,stage['cwd'],dot=True),stage_environment(stage,plan,output,env),log,stage['timeout_seconds'])
+            current.update(run);text=log.read_text(encoding='utf-8',errors='replace')
+            if run['terminal']!='COMPLETED':receipt.update(outcome='RESOURCE_INCONCLUSIVE',exit_code=1);raise ValueError('Resource-inconclusive D04 stage')
+            assess_stage(stage,run,text,completed)
+            if driver is None and stage['argv'][-1].startswith('{project}/'):
+                name=stage['argv'][-1][len('{project}/'):]
+                names=source_readback_names_in_plan(plan['file_paths'][name]['source_id'],plan)
+                if names:check_original_readbacks(text,names)
+            current['output_hashes']={name:_file_hashes(path_in(output,name))for name in stage['output_paths']}
+            evidence['output_hashes'].update(current['output_hashes']);completed[sid]={**run,'matched':True}
+            for cid in stage['control_ids']:
+                control=controls[cid];actual=control['expected_outcome']
+                receipt['controls'].append({key:control[key]for key in('id','source_id','target_id','role','expected_outcome_sha256')}|{
+                    'actual_outcome':actual,'actual_outcome_sha256':sha(actual.encode()),'terminal':run['terminal'],'exit_code':run['exit_code'],'log_sha256':run['log_sha256']})
+                evidence['control_diagnostics'].append({'control_id':cid,'stage_id':sid,'prerequisite_stage_ids':stage['depends_on'],
+                    'expected':stage['expected_diagnostics'],'observed_log_sha256':run['log_sha256'],'match':'MATCHED'})
+            save()
+        if plan['targets']:
+            d04_verify_target_objects(plan,evidence,output)
+            generated=output/'generated';generated.mkdir();audit=generated/'V5SuccessorReadback.lean'
+            audit.write_text(_audit_source(list(plan['targets'].values())),encoding='utf-8')
+            current=results['_target_audit'];log=logs/'target-audit.log'
+            run=run_process([resolved['lean'],'-j1',audit],project,env,log,current['budget_seconds']);current.update(run)
+            if run['terminal']!='COMPLETED':receipt.update(outcome='RESOURCE_INCONCLUSIVE',exit_code=1)
+            require(run['terminal']=='COMPLETED'and run['exit_code']==0,'D04 target proof-closure audit failed')
+            audits=parse_readbacks(log.read_text(encoding='utf-8'),list(plan['targets'].values()))
+            evidence['target_audits']=[{'target_id':tid,**value,'stage_id':'_target_audit','log_sha256':run['log_sha256']}for tid,value in audits.items()]
+            receipt['axioms']=sorted({a for value in audits.values()for a in value['axioms']})
+        for name,path in resolved.items():require(sha(path.read_bytes())==fingerprints[name]['executable_sha256'],'D04 tool changed during execution')
+        for iid,row in plan['inputs'].items():require(_input_inventory(row,inputs[iid],plan)==input_hashes[iid],'D04 external archive changed')
+        actual={p.relative_to(archive).as_posix():sha(no_symlinks(p).read_bytes())for p in archive.rglob('*')if p.is_file()}
+        require(actual==archive_inventory,'D04 original extracted source bytes changed')
+        for sid,row in plan['files'].items():require(path_in(project,row['path']).read_bytes()==plan['contents'][sid],'D04 public projection changed')
+        evidence['source_hashes_after']={sid:sha(public_bytes(root,sources[sid]))for sid in suite['source_ids']}
+        receipt['target_readbacks']=[{key:target[key]for key in('source_id','target_sha256')}|{'target_id':target['id'],'outcome':'CHECKED'}for target in suite['targets']]
+        selected=suite['replay']['scope'];receipt.update(outcome={'COMPONENTS':'FRESH_KERNEL_COMPONENTS','DECLARED_SUITE':'QUALIFIED_DECLARED_SUITE'}[selected],exit_code=0,proof_scope=selected)
+    except (FileNotFoundError,ValueError,OSError,KeyError,TypeError,subprocess.SubprocessError) as error:
+        write_json(output/'FAILURE.json',{'stage_id':current['id'],'observed_at':utc(),'error':type(error).__name__+': '+str(error)})
+        if isinstance(error,MissingInput):receipt.update(outcome='BLOCKED_EXTERNAL_INPUT',exit_code=2)
+        elif isinstance(error,MissingTool):receipt.update(outcome='BLOCKED_TOOLCHAIN',exit_code=2)
+        elif receipt['outcome']!='RESOURCE_INCONCLUSIVE':receipt.update(outcome='FAILED',exit_code=1)
+        receipt['proof_scope']='NONE'
+        if current['terminal']=='SKIPPED':
+            failure=logs/(current['id']+'-failure.log');failure.write_text(type(error).__name__+': '+str(error)+'\n')
+            current.update(terminal='MISSING'if isinstance(error,FileNotFoundError)else'COMPLETED',exit_code=None if isinstance(error,FileNotFoundError)else 1,ended_at=utc(),log_sha256=sha(failure.read_bytes()))
+    receipt['ended_at']=utc();save();validate_receipt(receipt,suite,sources,root)
+    return receipt
+
+
+def d04_record_bytes(value):
+    return (json.dumps(value,ensure_ascii=False,sort_keys=True,indent=2,allow_nan=False)+'\n').encode('utf-8')
+
+
+def d04_collect_capture(invocation, contract, trace, parent, plan):
+    if not trace.exists(): return
+    manifest = {p.relative_to(trace).as_posix():sha(no_symlinks(p).read_bytes()) for p in sorted(trace.rglob('*')) if p.is_file()}
+    invocation['trace_manifest']=manifest;invocation['trace_sha256']=canonical(manifest)
+    launch=trace/'LAUNCH.json'
+    if launch.is_file():invocation['trace_launch']=read_json(launch)
+    paths=sorted(trace.glob('[0-9][0-9][0-9][0-9].json'))+sorted(trace.glob('probe-[0-9][0-9][0-9][0-9].json'))
+    for path in paths:
+        row=read_json(path);log=path_in(trace,row['log_file'])
+        streams={}
+        if row['capture']=='SEPARATE_BYTES':
+            for stream in ['stdout','stderr']:
+                p=trace/(path.stem+'.'+stream+'.log')
+                if p.is_file():streams[stream]=p.read_bytes().hex()
+        invocation['capture_records'].append({'record':row,'record_file':path.name,'record_file_sha256':sha(path.read_bytes()),
+            'log_hex':log.read_bytes().hex()if log.is_file()else None,'stream_hex':streams})
+    invocation['child_count']=sum(not row['record']['probe'] for row in invocation['capture_records'])
+    invocation['probe_count']=sum(row['record']['probe'] for row in invocation['capture_records'])
+
+
+def d04_normalizer_module(name):
+    import importlib.util
+    path=d04_asset(name+'.py');spec=importlib.util.spec_from_file_location(name,path)
+    module=importlib.util.module_from_spec(spec);sys.modules[name]=module;spec.loader.exec_module(module)
+    return module
+
+
+def d04_normalize(recipe, source_root, output, physical, parent_text):
+    base=d04_normalizer_module('v5_d04_normalizers_base');translated=d04_normalizer_module('v5_d04_normalizers_translated')
+    if recipe=='t07-criterion-translated-v1':result=translated.criterion(source_root,output,physical)
+    elif recipe=='t07-covering-translated-v1':result=translated.covering(source_root,output,physical)
+    elif recipe=='t07-composition-projection-v1':result=translated.composition_projection(source_root,physical,parent_text)
+    elif recipe=='t07-composition-packaging-translated-v1':result=translated.composition_packaging(source_root,output,physical)
+    elif recipe=='t07-composition-original-v1':result=translated.composition_main(source_root,output,physical)
+    elif recipe=='t07-composition-review-translated-v1':result=translated.composition_review(source_root,output,physical)
+    elif recipe=='t07-composition-serial-mutations-v1':result=translated.composition_mutations(source_root,output,physical,d04_asset('check_mutations_serial.py'))
+    elif recipe in {'t07-dynamic-base-v1','t07-dynamic-attribution-v1'}:
+        children,summary,sources=base.dynamic(recipe.removesuffix('-v1'),source_root,output)
+        result={'children':children,'summary':summary,'source_hashes_read_back':sources}
+    elif recipe=='t07-dynamic-independent-root-image-v1':
+        require(physical['terminal']=='COMPLETED' and physical['exit_code']==0,'Independent root-image physical parent failed')
+        detail=base.read_json(output,'INDEPENDENT_ROOT_IMAGE_RESULTS.json')
+        require(detail['status']=='PASS_REVIEWER_ROOT_IMAGE_CHECKS' and detail['m_min']==2 and detail['m_max']==7 and detail['B0_forced_bridge_exception_confirmed']is True and detail['author_code_imported']is False,'Incomplete independent finite root-image controls')
+        for key in ['explicit_partition_pair_cases','robust_safety_equivalences_B_ge_1','actual_fault_world_instantiations','canonical_maximal_world_realizations','arbitrary_family_obstruction_parameter_cases']:
+            require(type(detail[key])is int and detail[key]>0,'Missing original finite root-image counter')
+        result={'children':[],'summary':detail}
+    else:raise ValueError('No D04 normalizer fallback')
+    return {'recipe':recipe,'normalizer_assets':{name:row['sha256']for name,row in d04_contracts()['adapter_assets'].items()if name.startswith('v5_d04_normalizers_')},'result':result}
+
+
+def d04_fixed_summary(recipe):
+    return d04_contracts()['recipes'][recipe].get('fixed_summary')
+
+
+def d04_bind_normalization(invocation):
+    normalization=invocation['normalization'];require(normalization is not None and canonical(normalization)==invocation['normalization_sha256'],'Missing/mutated D04 normalization')
+    keys(normalization,{'recipe','normalizer_assets','result'})
+    require(normalization['recipe']==invocation['recipe'],'D04 normalization belongs to another recipe')
+    require(normalization['normalizer_assets']=={name:row['sha256']for name,row in d04_contracts()['adapter_assets'].items()if name.startswith('v5_d04_normalizers_')},'D04 normalizer identity changed')
+    captures={row['record']['id']:row['record']for row in invocation['capture_records']if not row['record']['probe']}
+    result=normalization['result'];children=result.get('children',[])
+    expected=set(captures)
+    if invocation['recipe']=='t07-composition-serial-mutations-v1':expected={name for name in expected if name.endswith('/runtime')}
+    require({row['id']for row in children}==expected and len(children)==len(expected),'D04 normalized original child census differs')
+    for row in children:
+        captured=captures[row['id']]
+        require(row['log_sha256']==captured['log_sha256'],'D04 normalizer attached another child log')
+        if 'exit_code'in row:require(row['exit_code']==captured['exit_code'],'D04 normalized child exit differs from actual capture')
+        if 'terminal'in row:require(row['terminal']==captured['terminal'],'D04 normalized child terminal differs from actual capture')
+        for key in ['argv','actual_argv']:
+            if key in row:require(row[key]==captured['argv'],'D04 source journal argv differs from physical capture')
+        if 'cwd'in row:require(row['cwd']==captured['cwd'],'D04 source journal cwd differs from physical capture')
+        if 'started_at'in row:require(row['started_at']<=captured['started_at']<=captured['ended_at']<=row['ended_at'],'D04 source journal does not enclose actual physical child')
+    summary=result['summary'];recipe=invocation['recipe']
+    if recipe in {'t07-criterion-translated-v1','t07-covering-translated-v1','t07-composition-original-v1','t07-composition-review-translated-v1'}:
+        actual_objects={Path(path).stem:value for row in captures.values()for path,value in row['output_hashes'].items()if path.endswith('.olean')and row['exit_code']==0}
+        require(result.get('objects')==actual_objects,'D04 normalizer objects differ from actual captured producer outputs')
+    if recipe in {'t07-dynamic-base-v1','t07-dynamic-attribution-v1'}:
+        require(result.get('source_hashes_read_back')==d04_contracts()['recipes'][recipe]['normalized_source_hashes'],'D04 original source readback inventory differs')
+    fixed=d04_fixed_summary(recipe)
+    if fixed is not None:require(summary==fixed,'D04 exact source-owned finite summary changed')
+    expected_summary={
+        't07-criterion-translated-v1':{'tests':44,'repair_cases':393216,'installation_cases':4096,'source_bytes':3013},
+        't07-composition-packaging-translated-v1':{'packaging_tests':4},
+        't07-composition-original-v1':{'native_assertions':88,'wrapper_tests':7,'finite_cases':{'revocation':80,'cancellation':60,'open_withheld':20,'two_batch_taint_sets':5,'macro_attempts':40},'source_bytes':3013},
+        't07-composition-review-translated-v1':{'native_assertions':25,'monotonicity_readbacks':3},
+        't07-composition-serial-mutations-v1':{'runtime_mutants':6,'actual_driver_processes':66}}
+    if recipe in expected_summary:require(summary==expected_summary[recipe],'D04 source-specific normalized result meaning changed')
+    elif recipe=='t07-covering-translated-v1':
+        require(summary['status']=='PASS'and summary['author_mutations_rejected']==6 and summary['independent_primary_mutations_rejected']==6 and summary['lean_sha256']==LEAN_SHA and summary['mathlib_revision']=='c44e0c8ee63ca166450922a373c7409c5d26b00b','D04 covering result meaning changed')
+        require(all(summary[key]is True for key in ['normal_and_optimized_semantic_results_match_archived_evidence','immutable_payload_before_after','successful_compiler_logs_clean']),'D04 covering result condition omitted')
+    elif recipe=='t07-composition-projection-v1':
+        require(summary['status']=='PASS'and summary['scope']=='Explicit public projection; no claim of full original-packet inclusion','D04 projection claim changed')
+        require(all(type(summary[key])is int and summary[key]>=0 for key in ['retained','independent_review','added','excluded']),'D04 projection census invalid')
+    elif recipe=='t07-dynamic-independent-root-image-v1':
+        require(summary['status']=='PASS_REVIEWER_ROOT_IMAGE_CHECKS'and summary['m_min']==2 and summary['m_max']==7 and summary['B0_forced_bridge_exception_confirmed']is True and summary['author_code_imported']is False,'D04 root-image claim changed')
+    elif recipe in {'t07-dynamic-base-v1','t07-dynamic-attribution-v1'}:
+        require(isinstance(summary['finite_counts'],dict)and summary['finite_counts'],'D04 finite source census omitted')
+        if recipe=='t07-dynamic-base-v1':
+            require(summary['finite_adverse_outcomes']=={'cached_votes':'UNSAFE','mutable_payload':'UNSAFE','current_authorization_deleted':'UNSAFE','common_downstream_writer':'UNSAFE','common_selector_omitted':'SAFE_BUT_NEVER_RESTORED','two_B_plus_one_failed_candidate':'UNSAFE','immediate_external_revocation':'UNSAFE','instantaneous_budget_failed_candidate':'FAILS_LIFETIME_PREMISE','perpetual_version_change_prefix':'SAFE_NONPERSISTENT_PREFIX','too_small_cancellation_certificate':'LATE_WRITE_AFTER_FALSE_CANCELLATION'},'D04 finite adverse outcomes changed')
+        else:require(set(summary['finite_counterexamples'])=={'five_labels_four_gate_liveness_failure','five_labels_stale_landing','two_cancel_labels_not_two_roots','forced_alias_bridge'},'D04 fixed-map counterexample census changed')
+
+
+def d04_capture_specs(invocation):
+    contract=d04_contracts()['recipes'][invocation['recipe']];bindings=dict(invocation['bindings'],source=invocation['source_root'],out=invocation['output_root'],trace=invocation['output_root']+'/traces/'+invocation['parent_stage_id'])
+    if contract.get('temporary_cwd_binding'):
+        children=[item['record']for item in invocation['capture_records']if not item['record']['probe']]
+        if children:
+            cwd=PurePosixPath(children[0]['cwd']);tmp=PurePosixPath(invocation['output_root'])/'tmp'
+            prefix='dynamic-interlock-replay-'if invocation['recipe']=='t07-dynamic-base-v1'else'root-attribution-replay-'
+            require(cwd.parent==tmp and cwd.name.startswith(prefix),'D04 captured temporary module root escaped fresh output')
+            bindings[contract['temporary_cwd_binding']['token'][1:-1]]=str(cwd)
+    return contract,bindings
+
+
+def d04_validate_captured_invocation(invocation, plan, parent, require_complete):
+    keys(invocation,{'parent_stage_id','recipe','driver_sha256','source_argv','launch_argv','actual_launch_argv','launch_cwd','helper_argv','helper_sha256',
+        'runner_sha256','contract_data_sha256','context_sha256','source_root','output_root','bindings','replay_id','trace_sha256','trace_manifest',
+        'trace_launch','parent_log_sha256','child_count','probe_count','capture_records','normalization','normalization_sha256','qualified_objects','capture_error','raw_capture_files'})
+    recipe=invocation['recipe'];contract,bindings=d04_capture_specs(invocation)
+    family=d04_contracts()['families'][contract['family']]
+    require(family['suite_id']==plan['d04_suite']['id'] and invocation['parent_stage_id']==contract['parent_stage']['id'],'D04 captured recipe/parent mismatch')
+    require(invocation['source_argv']==contract['parent_stage']['argv'] and invocation['driver_sha256']==contract['source_sha256'],'D04 source-facing invocation changed')
+    require(invocation['contract_data_sha256']==D04_DATA_SHA256,'D04 execution contract data differs')
+    output=PurePosixPath(invocation['output_root']);require(output.is_absolute(),'D04 replay output identity is not absolute')
+    d04_check_bindings(recipe,invocation['bindings'],str(output))
+    expected_source=output/'archives/source-archive'/family['archive_root']
+    require(invocation['source_root']==str(expected_source),'D04 original archive root differs')
+    require(invocation['bindings']['out']==str(output),'D04 replay binding changed')
+    launch=['{tool:python}','-B','{adapter}','--trace-d04','{out}/contexts/'+invocation['parent_stage_id']+'.json']
+    require(invocation['launch_argv']==launch and invocation['actual_launch_argv']==d04_expand(launch,bindings),'D04 actual tracer launch differs')
+    helper,args,cwd=d04_launch_description(recipe,bindings)
+    require(invocation['helper_argv']==[str(helper),*args]and invocation['launch_cwd']==str(cwd),'D04 actual helper argv/cwd differs')
+    require(invocation['helper_sha256']==(contract['translation_sha256']or contract['source_sha256']),'D04 actual helper identity differs')
+    require(invocation['parent_log_sha256']==parent['log_sha256'],'D04 physical parent/log association differs')
+    digest(invocation['runner_sha256']);digest(invocation['context_sha256']);digest(invocation['replay_id'])
+    if invocation['capture_error'] is not None:
+        require(not require_complete and invocation['normalization'] is None and invocation['normalization_sha256'] is None and invocation['qualified_objects']=={},'D04 unparsed capture acquired qualification')
+        require(isinstance(invocation['capture_error'],str) and invocation['capture_error'],'D04 malformed capture error')
+        manifest={}
+        for name,payload in invocation['raw_capture_files'].items():
+            relative(name);manifest[name]=sha(bytes.fromhex(payload))
+        require(manifest==invocation['trace_manifest'] and invocation['trace_sha256']==(canonical(manifest) if manifest else None),'D04 failed raw capture custody differs')
+        return
+    require(invocation['raw_capture_files']=={},'D04 successful parser has unexplained raw capture fallback')
+    manifest={};raw_launch=invocation['trace_launch']
+    if raw_launch is not None:
+        require(raw_launch=={'recipe':recipe,'parent_stage_id':invocation['parent_stage_id'],'context_sha256':invocation['context_sha256'],
+            'runner_sha256':invocation['runner_sha256'],'original_source_sha256':contract['source_sha256'],
+            'helper_sha256':invocation['helper_sha256'],'helper_argv':invocation['helper_argv'],'helper_cwd':invocation['launch_cwd'],'mechanism':'RUNPY_IN_TRACER'},'D04 traced helper launch changed')
+        manifest['LAUNCH.json']=sha(d04_record_bytes(raw_launch))
+    rows=[item for item in invocation['capture_records']if not item['record']['probe']]
+    probes=[item for item in invocation['capture_records']if item['record']['probe']]
+    require(invocation['child_count']==len(rows)<=len(contract['children'])and invocation['probe_count']==len(probes)<=len(contract.get('tool_probes',[])),'D04 physical child census invalid')
+    require([item['record']['id']for item in rows]==[row['id']for row in contract['children'][:len(rows)]],'D04 omitted/reordered/repeated child')
+    require([item['record']['index']for item in probes]==list(range(len(probes))),'D04 omitted/reordered/repeated tool probe')
+    if require_complete:require(len(rows)==len(contract['children'])and len(probes)==len(contract.get('tool_probes',[]))and raw_launch is not None,'D04 successful parent lacks complete physical capture')
+    last=parent['started_at']
+    for item in [*probes,*rows]:
+        row=item['record']
+        require(last is not None and last<=row['started_at'],'D04 original serial physical intervals overlap or reorder')
+        last=row['ended_at']
+    for item in invocation['capture_records']:
+        keys(item,{'record','record_file','record_file_sha256','log_hex','stream_hex'})
+        row=item['record'];probe=row['probe'];index=row['index'];require(type(index)is int and index>=0 and type(probe)is bool,'D04 capture index malformed')
+        keys(row,{'id','index','probe','recipe','replay_id','parent_stage_id','argv','cwd','timeout_seconds','capture','stdin','environment_sha256',
+            'source_binding','input_bindings','source_hashes','replacement_bindings','started_at','ended_at','terminal','exit_code','log_sha256','stream_hashes','output_hashes','log_file'})
+        name=('probe-'if probe else'')+f'{index:04}'
+        require(item['record_file']==name+'.json'and row['log_file']==name+'.log','D04 capture/log filename association differs')
+        require(sha(d04_record_bytes(row))==item['record_file_sha256'],'D04 physical record digest differs')
+        manifest[name+'.json']=item['record_file_sha256']
+        require(row['recipe']==recipe and row['parent_stage_id']==invocation['parent_stage_id']and row['replay_id']==invocation['replay_id'],'D04 capture belongs to another physical run')
+        if probe:
+            require(index<len(contract.get('tool_probes',[])),'D04 foreign tool probe')
+            spec=d04_expand(contract['tool_probes'][index],bindings)
+            require(row['id']=='probe-'+str(index)and row['argv']==spec['argv']and row['cwd']==spec['cwd']and row['timeout_seconds']is None and row['capture']==spec['capture'],'D04 original probe contract differs')
+            require(row['source_binding']=={'kind':'TOOL_PROBE','tool_name':'lean','executable_sha256':LEAN_SHA,'driver_sha256':contract['source_sha256']}and row['input_bindings']==[]and row['source_hashes']=={}and row['output_hashes']=={},'D04 tool probe acquired scientific identity')
+            require(row['replacement_bindings']==[],'D04 tool probe acquired replacement authority')
+        else:
+            require(index<len(contract['children'])and contract['children'][index]['id']==row['id'],'D04 original child index differs')
+            spec=d04_expand(contract['children'][index],bindings)
+            d04_check_invocation(spec,row['argv'],row['cwd'],timeout_seconds=row['timeout_seconds'],capture=row['capture'],stdin=row['stdin'])
+            expected_inputs=[binding for binding in spec['sources']if binding['kind']!='TOOL_PROBE']
+            require(len(row['input_bindings'])==len(expected_inputs),'D04 captured source inventory differs')
+            expected_hashes={}
+            for actual,expected in zip(row['input_bindings'],expected_inputs):
+                require({k:v for k,v in actual.items()if k!='actual_sha256'}==expected,'D04 child actual source binding differs')
+                digest(actual['actual_sha256'])
+                expected_digest=expected.get('sha256')or expected.get('expected_sha256')
+                if expected_digest is not None:require(actual['actual_sha256']==expected_digest,'D04 child used changed source bytes')
+                expected_hashes[expected.get('member')or expected.get('origin_member')or expected['path']]=actual['actual_sha256']
+            require(row['source_hashes']==expected_hashes,'D04 source hash summary differs from actual inputs')
+            binding=dict(spec['source_binding'])
+            if binding['kind']=='GENERATED_BY_ORIGINAL':binding['generated_sha256']=row['input_bindings'][0]['actual_sha256']
+            require(row['source_binding']==binding,'D04 executed source classification/identity differs')
+            require(set(row['output_hashes'])<=set(spec['outputs']),'D04 captured foreign output')
+            require(len(row['replacement_bindings'])==len(spec['replace_fresh_predecessor']),'D04 exact fresh replacement evidence omitted')
+            for actual,expected in zip(row['replacement_bindings'],spec['replace_fresh_predecessor']):
+                require({k:v for k,v in actual.items()if k not in{'actual_sha256','producer_capture_sha256'}}==expected,'D04 changed replacement contract')
+                digest(actual['actual_sha256']);digest(actual['producer_capture_sha256'])
+        digest(row['environment_sha256'])
+        require(row['stdin']=={'mode':'INHERITED_NO_INPUT','data_sha256':None},'D04 original stdin contract changed')
+        for value in row['output_hashes'].values():digest(value)
+        require(isinstance(row['started_at'],str)and row['started_at'].endswith('Z')and parent['started_at']<=row['started_at']<=parent['ended_at'],'D04 child start outside actual parent interval')
+        if row['terminal']=='RUNNING':
+            require(not require_complete and row['ended_at']is None and row['exit_code']is None and item['log_hex']is None and row['log_sha256']is None and row['output_hashes']=={} and row['stream_hashes']=={} and item['stream_hex']=={},'D04 running child has fabricated terminal credit')
+            continue
+        require(row['terminal']in{'COMPLETED','TIMEOUT','INTERRUPTED','LAUNCH_ERROR'}and isinstance(row['ended_at'],str)and row['started_at']<=row['ended_at']<=parent['ended_at'],'D04 actual child terminal/interval differs')
+        if row['terminal']=='COMPLETED':require(type(row['exit_code'])is int and 0<=row['exit_code']<124,'D04 invalid completed exit')
+        else:require(row['exit_code']is None,'D04 incomplete child has fabricated exit')
+        log=bytes.fromhex(item['log_hex']);require(sha(log)==row['log_sha256'],'D04 actual child log changed')
+        manifest[name+'.log']=row['log_sha256']
+        if row['capture']=='SEPARATE_BYTES':
+            require(set(item['stream_hex'])==set(row['stream_hashes'])=={'stdout','stderr'},'D04 separate streams missing')
+            streams={key:bytes.fromhex(value)for key,value in item['stream_hex'].items()}
+            require(log==streams['stdout']+streams['stderr'],'D04 original byte-stream assembly differs')
+            for key,value in streams.items():require(sha(value)==row['stream_hashes'][key],'D04 stream digest differs');manifest[name+'.'+key+'.log']=sha(value)
+        else:require(item['stream_hex']=={}and row['stream_hashes']=={},'D04 unexpected separate stream evidence')
+        if require_complete:
+            if probe:require(row['terminal']=='COMPLETED'and row['exit_code']==0,'D04 original tool probe failed')
+            else:require(d04_assess_captured_child(spec,row,log,parent)['outcome']in{'ACCEPT','REJECT'},'D04 resource-limited child cannot qualify')
+    require(manifest==invocation['trace_manifest'],'D04 trace manifest differs from captured files')
+    require(invocation['trace_sha256']==(canonical(manifest)if manifest else None),'D04 physical trace digest differs')
+
+
+def d04_observations(invocation, plan, parent):
+    recipe=invocation['recipe'];contract,bindings=d04_capture_specs(invocation);children={};producers={}
+    for item in invocation['capture_records']:
+        row=item['record']
+        if row['probe']:continue
+        spec=d04_expand(contract['children'][row['index']],bindings)
+        outcome=d04_assess_captured_child(spec,row,bytes.fromhex(item['log_hex']),parent)['outcome']
+        observation={'source_child_id':row['id'],'parent_stage_id':invocation['parent_stage_id'],'driver_sha256':invocation['driver_sha256'],
+            'parser_id':recipe,'mode':'NONEXECUTING_OBSERVATION','argv_provenance':'CAPTURED','source_binding':row['source_binding'],
+            'argv':row['argv'],'cwd':row['cwd'],'started_at':row['started_at'],'ended_at':row['ended_at'],
+            'physical_run_sha256':invocation['trace_sha256'],'parent_log_sha256':invocation['parent_log_sha256'],
+            'terminal':row['terminal'],'exit_code':row['exit_code'],'actual_outcome':outcome,'log_sha256':row['log_sha256'],
+            'result_record_sha256':canonical(row),'output_hashes':row['output_hashes'],
+            'captured_log_path':'traces/'+invocation['parent_stage_id']+'/'+row['log_file']}
+        children[(invocation['parent_stage_id'],row['id'])]=observation
+        if row['exit_code']==0:
+            for path,value in row['output_hashes'].items():
+                captured={'replay_id':row['replay_id'],'recipe':recipe,'child_id':row['id'],'terminal':'COMPLETED','exit_code':0,
+                    'source_hashes':row['source_hashes'],'output_hashes':row['output_hashes'],'capture_record_sha256':canonical(row)}
+                producers[(recipe,row['id'],path)]={**captured,'path':path,'sha256':value,'producer_record':captured,'producer_record_sha256':canonical(captured)}
+    return children,producers
+
+
+def d04_verify_target_objects(plan, evidence, output):
+    definitions=d04_contracts()['families'][plan['d04_family']]['object_producers']
+    stages=indexed(evidence['stage_results']);launches=indexed(evidence['driver_invocations'],'parent_stage_id')
+    for module,producer in definitions.items():
+        path=d04_expand(producer['path'],{'out':str(output)});relative_path=Path(path).relative_to(output).as_posix()
+        require(Path(path).is_file()and sha(no_symlinks(path).read_bytes())==evidence['output_hashes'].get(relative_path),'D04 target/import object is absent or not its exact fresh output')
+        if 'stage_id'in producer:
+            row=stages[producer['stage_id']];require(row['terminal']=='COMPLETED'and row['exit_code']==0 and row['output_hashes'].get(relative_path)==evidence['output_hashes'][relative_path],'D04 target object lacks its explicit closure compiler stage')
+        else:
+            pid=d04_contracts()['recipes'][producer['recipe']]['parent_stage']['id'];invocation=launches[pid]
+            require(invocation['qualified_objects'].get(relative_path)==evidence['output_hashes'][relative_path],'D04 target object is not qualified from its original producer')
+
+
+def d04_expected_objects(plan, invocation):
+    definitions=d04_contracts()['families'][plan['d04_family']]['object_producers']
+    rows={item['record']['id']:item['record']for item in invocation['capture_records']if not item['record']['probe']};objects={}
+    for module,producer in definitions.items():
+        if producer.get('recipe')!=invocation['recipe']:continue
+        row=rows[producer['child_id']];path=d04_expand(producer['path'],invocation['bindings'])
+        source_id=plan['modules'][module]['source_id'];expected=sha(plan['contents'][source_id])
+        require(any(item['actual_sha256']==expected and (item.get('sha256')or item.get('expected_sha256'))==expected for item in row['input_bindings']),'D04 target producer source differs from exact selected module')
+        require(row['terminal']=='COMPLETED' and row['exit_code']==0 and path in row['output_hashes'],'D04 target lacks successful physical object producer')
+        objects[producer['path'].removeprefix('{out}/')]=row['output_hashes'][path]
+    return objects
+
+
+def d04_validate_child_evidence(evidence, plan, stages, successful):
+    parents={s['id']:s for s in plan['stages'].values()if s['driver_id']and s['argv'][0]!='{builtin:observe-child}'}
+    declared={s['id']:s for s in plan['stages'].values()if s['argv'][0]=='{builtin:observe-child}'}
+    launches=indexed(evidence['driver_invocations'],'parent_stage_id');observed=indexed(evidence['child_observations'],'stage_id')
+    require(set(launches)<=set(parents)and set(observed)<=set(declared),'D04 foreign parent/child evidence')
+    require(list(launches)==list(parents)[:len(launches)],'D04 physical parent launch order differs from source-owned stages')
+    previous=None
+    for sid in plan['stages']:
+        row=stages.get(sid)
+        if row is None or row.get('terminal')=='SKIPPED':continue
+        require(previous is None or previous<=row['started_at'],'D04 actual sequential stage intervals overlap or reorder')
+        previous=row['ended_at']
+    if successful:require(set(launches)==set(parents)and set(observed)==set(declared),'D04 mandatory packaging/reviewer/original/child evidence omitted')
+    expected_children={};qualified={};runs=set();producer_hashes={}
+    for pid,invocation in launches.items():
+        parent=stages[pid];require(invocation['runner_sha256']==evidence['runner_sha256'],'D04 child runner identity differs')
+        complete=invocation['normalization']is not None
+        if successful:require(complete and parent['terminal']=='COMPLETED'and parent['exit_code']==0,'D04 successful suite has an unqualified parent')
+        d04_validate_captured_invocation(invocation,plan,parent,complete)
+        if invocation['trace_sha256']is not None:
+            require(invocation['trace_sha256']not in runs,'D04 duplicate physical trace credit');runs.add(invocation['trace_sha256'])
+        if complete:
+            require(parent['terminal']=='COMPLETED'and parent['exit_code']==0,'D04 failed parent cannot supply qualification')
+            d04_bind_normalization(invocation)
+            children,producers=d04_observations(invocation,plan,parent);expected_children.update(children)
+            # Every generated input is tied to this run's prior successful producer.
+            for item in invocation['capture_records']:
+                row=item['record']
+                for source in row['input_bindings']:
+                    if source['kind']!='GENERATED_BY_ORIGINAL'or source.get('expected_sha256')is not None:continue
+                    owner=source.get('producer_recipe')or invocation['recipe'];path=source.get('predecessor_path',source['path'])
+                    key=(owner,source['producer'],path)
+                    require(key in producer_hashes and producer_hashes[key]['sha256']==source['actual_sha256'],'D04 generated input has no exact earlier physical producer')
+                for source in row['replacement_bindings']:
+                    key=(source.get('producer_recipe')or invocation['recipe'],source['producer'],source.get('predecessor_path',source['path']))
+                    require(key in producer_hashes and producer_hashes[key]=={'sha256':source['actual_sha256'],'record':source['producer_capture_sha256']},'D04 replacement lacks its exact fresh source/object/producer binding')
+                if row['terminal']=='COMPLETED'and row['exit_code']==0:
+                    for path,value in row['output_hashes'].items():producer_hashes[(invocation['recipe'],row['id'],path)]={'sha256':value,'record':canonical(row)}
+            for path,value in invocation['qualified_objects'].items():
+                require(path not in qualified and evidence['output_hashes'].get(path)==value,'D04 qualified object association changed');qualified[path]=value
+            require(invocation['qualified_objects']==d04_expected_objects(plan,invocation),'D04 target object differs from its exact physical producer')
+        else:require(invocation['normalization_sha256']is None and invocation['qualified_objects']=={},'D04 incomplete parent acquired normalized/object credit')
+    for sid,row in observed.items():
+        stage=declared[sid];key=tuple(stage['argv'][1:]);require(key in expected_children,'D04 observation lacks a qualified captured child')
+        expected=expected_children[key]
+        require({k:v for k,v in row.items()if k not in{'stage_id','observed_at'}}==expected,'D04 observation changed actual child facts')
+        require(row['terminal']==stages[sid]['terminal']and row['exit_code']==stages[sid]['exit_code']and row['log_sha256']==stages[sid]['log_sha256'],'D04 observation stage differs from physical child')
+        require(stages[key[0]]['ended_at']<=stages[sid]['started_at']<=row['observed_at']<=stages[sid]['ended_at'],'D04 observation time is not its actual parsing interval')
+    expected_outputs=dict(qualified)
+    for stage in stages.values():
+        for name,value in stage.get('output_hashes',{}).items():
+            require(name not in expected_outputs or expected_outputs[name]==value,'D04 stage/object output association differs')
+            expected_outputs[name]=value
+    require(evidence['output_hashes']==expected_outputs,'D04 output ledger differs from actual stage/qualified-object identities')
+
+
 def main():
+    if sys.argv[1:2] == ['--trace-d04']:
+        require(len(sys.argv) == 3, 'Malformed D04 internal trace invocation')
+        return d04_trace_entry(Path(sys.argv[2]))
     if sys.argv[1:2] == ['--trace-history']:
         require(len(sys.argv) == 10, 'Malformed internal history trace invocation')
         return trace_history_driver(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4:])
