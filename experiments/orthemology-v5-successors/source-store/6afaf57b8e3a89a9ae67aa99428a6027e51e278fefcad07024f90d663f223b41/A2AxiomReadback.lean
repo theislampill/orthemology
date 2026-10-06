@@ -1,0 +1,84 @@
+import SelectorSemanticTransport
+set_option autoImplicit false
+
+#print axioms Orthemology.Ninth.SelectorTransport.StateDomain
+#print axioms Orthemology.Ninth.SelectorTransport.StepDomain
+#print axioms Orthemology.Ninth.SelectorTransport.stateData_domain
+#print axioms Orthemology.Ninth.SelectorTransport.inputs_domain
+#print axioms Orthemology.Ninth.SelectorTransport.represented_state_domain
+#print axioms Orthemology.Ninth.SelectorTransport.represented_step_domain
+#print axioms Orthemology.Ninth.SelectorTransport.dataView
+#print axioms Orthemology.Ninth.SelectorTransport.matched_state_domain
+#print axioms Orthemology.Ninth.SelectorTransport.actual_step_arguments_domain
+#print axioms Orthemology.Ninth.SelectorTransport.reversePrefix
+#print axioms Orthemology.Ninth.SelectorTransport.reverse_prefix_registers
+#print axioms Orthemology.Ninth.SelectorTransport.foldStart
+#print axioms Orthemology.Ninth.SelectorTransport.controllerStep
+#print axioms Orthemology.Ninth.SelectorTransport.foldStart_matches
+#print axioms Orthemology.Ninth.SelectorTransport.controllerStep_implements
+#print axioms Orthemology.Ninth.SelectorTransport.actual_fold_iteration_matches
+#print axioms Orthemology.Ninth.SelectorTransport.actual_fold_iteration_domain
+#print axioms Orthemology.Ninth.SelectorTransport.actual_fold_call_arguments_domain
+#print axioms Orthemology.Ninth.SelectorTransport.empty_fold_body_noop
+#print axioms Orthemology.Ninth.SelectorTransport.actual_fold_padding_noop
+#print axioms Orthemology.Ninth.SelectorTransport.cycleAddress
+#print axioms Orthemology.Ninth.SelectorTransport.targetAddress
+#print axioms Orthemology.Ninth.SelectorTransport.cycle_address_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.target_address_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.action_menu_code_exact
+#print axioms Orthemology.Ninth.SelectorTransport.action_menu_code_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.source_candidate_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.source_normalize_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.source_active_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.source_action_menu_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.DerivedCallDomains
+#print axioms Orthemology.Ninth.SelectorTransport.derived_call_domains
+#print axioms Orthemology.Ninth.SelectorTransport.actual_readout_arguments_exact
+#print axioms Orthemology.Ninth.SelectorTransport.actual_readout_arguments_domain
+#print axioms Orthemology.Ninth.SelectorTransport.source_target_address_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.source_action_address_in_domain
+#print axioms Orthemology.Ninth.SelectorTransport.matches_loop_index_update
+#print axioms Orthemology.Ninth.SelectorTransport.actual_body_entry_arguments_domain
+#print axioms Orthemology.Ninth.SelectorTransport.actual_body_entry_padding_noop
+#print axioms Orthemology.Ninth.SelectorTransport.parallel_prefix_arguments_domain
+#print axioms Orthemology.Ninth.SelectorTransport.actual_body_parallel_prefix_domain
+#print axioms Orthemology.Ninth.SelectorTransport.actual_ordered_component_domain
+#print axioms Orthemology.Ninth.SelectorTransport.CompiledCallDomains
+#print axioms Orthemology.Ninth.SelectorTransport.compiled_call_domains
+#print axioms Orthemology.Ninth.SelectorTransport.normalizeConfig
+#print axioms Orthemology.Ninth.SelectorTransport.normalizeConfig_certificate
+#print axioms Orthemology.Ninth.SelectorTransport.normalizeConfig_idempotent
+#print axioms Orthemology.Ninth.SelectorTransport.normalizeConfig_policy
+#print axioms Orthemology.Ninth.SelectorTransport.normalizeConfig_rep
+#print axioms Orthemology.Ninth.SelectorTransport.normalizeConfig_computed_commute
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_raw_policy_history
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_policyProgram_history
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_source_history
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_historyPolicy
+#print axioms Orthemology.Ninth.SelectorTransport.historyStep_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.historyObservation_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.runtime_frames_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.runtime_output_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_runtime_frames
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_runtime_output
+#print axioms Orthemology.Ninth.SelectorTransport.pairSelector_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.pairUpdate_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.generatedHistory_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.canonicalHistoryDecoder_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.mixed_decodedHistory_of_historyPolicy_eq
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_mixed_decodedHistory
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_old_computed_decodedHistory
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_mixed_decoded_law
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_old_computed_event
+#print axioms Orthemology.Ninth.SelectorTransport.normalization_with_derived_domains
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_old_computed_failure_event
+#print axioms Orthemology.Ninth.SelectorTransport.normalized_old_computed_positive_failure_iff
+#check Orthemology.Ninth.SelectorTransport.compiled_call_domains
+#check Orthemology.Ninth.SelectorTransport.actual_ordered_component_domain
+#check Orthemology.Ninth.SelectorTransport.actual_readout_arguments_exact
+#check Orthemology.Ninth.SelectorTransport.source_action_address_in_domain
+#check Orthemology.Ninth.SelectorTransport.normalization_with_derived_domains
+#check Orthemology.Ninth.SelectorTransport.runtime_output_of_historyPolicy_eq
+#check Orthemology.Ninth.SelectorTransport.mixed_decodedHistory_of_historyPolicy_eq
+#check Orthemology.Ninth.SelectorTransport.normalized_old_computed_decodedHistory
+#check Orthemology.Ninth.SelectorTransport.normalized_old_computed_positive_failure_iff

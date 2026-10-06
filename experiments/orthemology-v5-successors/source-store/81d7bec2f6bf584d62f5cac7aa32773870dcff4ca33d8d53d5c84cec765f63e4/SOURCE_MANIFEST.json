@@ -1,0 +1,49 @@
+{
+  "schema": "eighth-explicit-literal-family-source-freeze-v1",
+  "core_source_manifest_sha256": "8981fe18fb0d182dfbab01142f250354846dfb691c873d8d1ced71d3f1df3f4c",
+  "claim": "Explicit two-orientation disjunction of fully certified literal Config counterexamples, with exact full-support policy preservation",
+  "orientation_was_evaluated": false,
+  "both_literal_code_candidates_evaluated": true,
+  "files": [
+    {
+      "path": "check_literal_native.py",
+      "sha256": "15ad3c3ef916810047f18dad43e465b6194276e0272f98063bfe3d63862a1b95",
+      "bytes": 3348
+    },
+    {
+      "path": "prcodec.py",
+      "sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+      "bytes": 15928
+    },
+    {
+      "path": "readbacks/LiteralAxiomReadback.lean",
+      "sha256": "d5666b594249969d4eaef4ce8cce10af70ea2cf8b3a3a27a5520b62129dde1c2",
+      "bytes": 1121
+    },
+    {
+      "path": "readbacks/LiteralCodeReadback.lean",
+      "sha256": "8c1819835ab2fc00f6d98c49b5e08db1f211af70b08e3bd5596911e05fd8c2cc",
+      "bytes": 631
+    },
+    {
+      "path": "readbacks/SelectorNumeralReadback.lean",
+      "sha256": "37d53080341b25b5f98dff79325cc21e5e0649dab055fd1012780e557ed601b4",
+      "bytes": 255
+    },
+    {
+      "path": "src/LiteralRuntimeCounterexample.lean",
+      "sha256": "ae7f5c17fdd085bca7f8fac8eb6ebc350e8b5137f0993292366a2d474a8536e2",
+      "bytes": 10279
+    },
+    {
+      "path": "src/LiteralSelectorFamily.lean",
+      "sha256": "7b6463aef59aebd51c26e5f81734217de144bc3a80c3d1f257824dc0efdb96c6",
+      "bytes": 10922
+    },
+    {
+      "path": "src/LiteralSelectorObstruction.lean",
+      "sha256": "5e7146fe77b2e68c2f879e442f0e61116d5ae0c21537eb1ec4d3f5fc9f02bf05",
+      "bytes": 3438
+    }
+  ]
+}

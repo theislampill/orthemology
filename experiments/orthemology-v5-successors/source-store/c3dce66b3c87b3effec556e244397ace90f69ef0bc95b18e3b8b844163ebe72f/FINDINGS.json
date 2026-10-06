@@ -1,0 +1,92 @@
+{
+  "schema": "eighth-semantic-control-findings-v1",
+  "checked_utc": "2026-10-02T20:15:07.700727+00:00",
+  "acceptance": "INDEPENDENT_CORE_AND_LITERAL_REVIEW_PASS_WITH_EXPLICIT_AUXILIARY_LIMITATIONS",
+  "previous_delivery_sha256": "f56dab60b87068ce9be4f3b13aa8dc6958bc3d2962467beb580fcd2cd352b553",
+  "historical_control_statuses_unchanged": true,
+  "cost": {
+    "historical_status": "INCONCLUSIVE",
+    "exact_mutant_sha256": "7b639a064e5d523827750a8a9e8527b4f172b45523ca2d32e565a10ba3348318",
+    "new_result": "CONCRETE_INVALID_PROOF_APPLICATION_ON_FRESH_FULL_TARGET_CLOSURE",
+    "fresh_custom_modules": 146,
+    "concrete_mismatch_precedes_resource_diagnostic": true,
+    "additional_resource_timeout_counted_as_rejection": false,
+    "unchanged_positive_theorem_refuted": false,
+    "receipt": "evidence/cost-author/RESULT.json"
+  },
+  "runtime": {
+    "historical_execution_status": "INCONCLUSIVE_TIMEOUT_ONLY",
+    "exact_mutant_sha256": "89b9823fdbc8d4106fd8e8eb449dae8079cfe180c37859d95f23d222afded9eb",
+    "original_mutant_retried": false,
+    "new_result": "EXACT_UNIVERSAL_MIXED_STATEMENT_FALSE_BY_POSITIVE_MEASURE_COUNTEREXAMPLE",
+    "fresh_custom_modules": 167,
+    "selected_type_axiom_readbacks": 13,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "selector_kind": "CLASSICAL_KERNEL_CERTIFIED_EXISTENTIAL_ENCODING",
+    "exact_endpoint": "Orthemology.Eighth.SemanticControls.exact_mutated_runtime_claim_false",
+    "source": "runtime/src/ExactRuntimeCounterexample.lean",
+    "source_sha256": "559a1c37b6db9899fc1bdb46e5b7d2136fc9ddb56004df3616e668398da7d1b0",
+    "positive_control_same_fixture": true,
+    "actual_model_fixed_outside_tape_quantifiers": true,
+    "old_executed_action_equals_actual_model": true,
+    "not_raw_output_parity_claim": true,
+    "receipt": "evidence/runtime-author/RESULT.json"
+  },
+  "literal_addendum": {
+    "separately_frozen": true,
+    "source_manifest_sha256": "81d7bec2f6bf584d62f5cac7aa32773870dcff4ca33d8d53d5c84cec765f63e4",
+    "new_result": "EXPLICIT_TWO_LITERAL_CONFIG_DISJUNCTION_WITH_FULL_CERTIFICATE_AND_POSITIVE_FAILURE",
+    "one_opaque_retained_orientation_evaluated": false,
+    "all_certificate_cells_bound": true,
+    "full_support_complete_history_policy_preserved": true,
+    "literal_record_count": 2,
+    "new_proof_modules": 3,
+    "selected_axiom_readbacks": 7,
+    "policy_encoding_count": 4,
+    "bytes_per_policy_encoding": 48389,
+    "parsed_finite_history_cases": 340,
+    "max_checked_history_length": 3,
+    "native_full_physical_wrapper_execution_claimed": false,
+    "finite_checks_substitute_for_infinite_proof": false,
+    "exploratory_direct_denotation_status": "RESOURCE_INCONCLUSIVE_EXIT_130",
+    "receipt": "Separate literal packet evidence/author/RESULT.json"
+  },
+  "canonical_repository_edits": false,
+  "publication": false,
+  "independent_core_review": {
+    "status": "PASS_CORE_WITH_EXPLICIT_AUXILIARY_LIMITATIONS",
+    "receipt_original_sha256": "1c43a319e1619f23c09a3fa4387c080d5736ee66a016d1ce8b442c3161982049",
+    "fresh_runtime_modules": 167,
+    "fresh_cost_modules": 146,
+    "all_new_declarations_audited": 80,
+    "new_theorems_audited": 59,
+    "exact_header_definitional_correspondence": true,
+    "final_failure_event_measurability": true,
+    "computed_tolerance_exact": "1/6",
+    "old_old_positive_control": "EVERY_TAPE",
+    "six_negative_proof_dependency_exclusions": true,
+    "optional_wrong_old_old_rfl": "INCONCLUSIVE_TIMEOUT_UNCREDITED_NOT_RETRIED",
+    "wrong_computed_computed_rfl": "NOT_RUN_SOURCE_SHAPE_ONLY"
+  },
+  "independent_literal_review": {
+    "status": "PASS_INDEPENDENT_LITERAL_ADDENDUM",
+    "receipt_original_sha256": "72f8aaabf7a1299047cfa1f84f1e5da47e6353a814ac1c103a9e347a92591930",
+    "own_fresh_core_objects_verified": 167,
+    "new_proof_modules": 3,
+    "all_new_declarations_audited": 56,
+    "new_theorems_audited": 47,
+    "exact_inherited_target_refutation": true,
+    "four_policy_byte_identities_reemitted": true,
+    "parsed_history_cases": 340
+  },
+  "independent_review_archive": {
+    "file": "Semantic_Control_Independent_Review_20261002.zip",
+    "sha256": "a7dac7ac8fe8e867b4581ebcd2757067371985eb728a66fc83720e33389c8f9b",
+    "bytes": 1520801,
+    "manifest_sha256": "94b983318333e8bd79f08ba2e43f72add2f561629b3b54b05a37faed42d70abf"
+  }
+}

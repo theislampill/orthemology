@@ -1,0 +1,16 @@
+{
+  "seventh_controls_manifest_sha256": "f2eae35e8dfc35f630f1ef8228700517520b777aa451ad47fa2ec7e8c4198064",
+  "cost_source_custody_sha256": "7c44047ae20b0303f7cb3ef095db7eb1a07359377f6a8beeac8c99cbbf864e20",
+  "runtime_baseline_modules": 162,
+  "new_runtime_modules": 5,
+  "selector_evidence_kind": "KERNEL_CERTIFIED_CLASSICAL_EXISTENTIAL_ENCODING_NOT_EVALUATED_NATIVE_NUMERALS",
+  "historical_runtime_mutant_not_retried": true,
+  "canonical_repository_edits": false,
+  "new_module_hashes": {
+    "SelectorCertificateConstruction": "a98dd426230e649153162c405065e69fad46c538b56cb5dd73064f59532a3efc",
+    "NontrivialFixture": "e655233c8119f0f41b897f230ca2bca528955237e040d9f391f0f955aac83dcc",
+    "OppositeTailTransfer": "2fd8b8bed21278e6b3f005325f4980b44619d7f2074b800e6c7300fe65b68f74",
+    "MixedReceiptLaw": "e8d177b38fd63681f5402805f7ee237e113cbea9e75d2d7b58bb693f1570e5c1",
+    "ExactRuntimeCounterexample": "559a1c37b6db9899fc1bdb46e5b7d2136fc9ddb56004df3616e668398da7d1b0"
+  }
+}

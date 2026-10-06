@@ -1,0 +1,28 @@
+import ExactRuntimeCounterexample
+#print Orthemology.Eighth.SemanticControls.MutatedRuntimeClaim
+#check @Orthemology.Eighth.SemanticControls.certifiedData_certificate
+#print axioms Orthemology.Eighth.SemanticControls.certifiedData_certificate
+#check @Orthemology.Eighth.SemanticControls.fixture_chooseTarget
+#print axioms Orthemology.Eighth.SemanticControls.fixture_chooseTarget
+#check @Orthemology.Eighth.SemanticControls.oldConfig_certificate
+#print axioms Orthemology.Eighth.SemanticControls.oldConfig_certificate
+#check @Orthemology.Eighth.SemanticControls.oldConfig_winning
+#print axioms Orthemology.Eighth.SemanticControls.oldConfig_winning
+#check @Orthemology.Eighth.SemanticControls.old_source_constant
+#print axioms Orthemology.Eighth.SemanticControls.old_source_constant
+#check @Orthemology.Eighth.SemanticControls.computedDecoder_wins
+#print axioms Orthemology.Eighth.SemanticControls.computedDecoder_wins
+#check @Orthemology.Eighth.SemanticControls.positive_opposite_failure
+#print axioms Orthemology.Eighth.SemanticControls.positive_opposite_failure
+#check @Orthemology.Eighth.SemanticControls.mixed_runtime_blind_history_law
+#print axioms Orthemology.Eighth.SemanticControls.mixed_runtime_blind_history_law
+#check @Orthemology.Eighth.SemanticControls.mixed_physical_runtime_blind_history_law
+#print axioms Orthemology.Eighth.SemanticControls.mixed_physical_runtime_blind_history_law
+#check @Orthemology.Eighth.SemanticControls.exact_runtime_mutant_positive_failure
+#print axioms Orthemology.Eighth.SemanticControls.exact_runtime_mutant_positive_failure
+#check @Orthemology.Eighth.SemanticControls.exact_runtime_mutant_not_ae
+#print axioms Orthemology.Eighth.SemanticControls.exact_runtime_mutant_not_ae
+#check @Orthemology.Eighth.SemanticControls.exact_runtime_positive_control
+#print axioms Orthemology.Eighth.SemanticControls.exact_runtime_positive_control
+#check @Orthemology.Eighth.SemanticControls.exact_mutated_runtime_claim_false
+#print axioms Orthemology.Eighth.SemanticControls.exact_mutated_runtime_claim_false
