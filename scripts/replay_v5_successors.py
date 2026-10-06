@@ -4082,6 +4082,33 @@ def execute_covering_audit_continuation(suite, sources, root, prior, output, too
                                                reviews=reviews, adapter=SimpleNamespace(**globals()))
 
 
+SELECTOR_CONTINUATION_REVIEWED_EXECUTORS = frozenset()
+SELECTOR_CONTINUATION_ASSETS = {'v5_selector_continuation.py': '439e07450f1c3ce2a7cea2442ee9ebddf48453beecb6fcad4711409c90f9e8bf', 'v5_selector_executor.py': 'c3d24b36478ea25835fc92242747eab4f023c8b99548c93a9d36a132f6b4dff3'}
+
+
+def selector_continuation_load():
+    """Verify both code-owned selector modules before executing either."""
+    checked = []
+    for name, digest in SELECTOR_CONTINUATION_ASSETS.items():
+        path = no_symlinks(Path(__file__).with_name(name)); raw = path.read_bytes()
+        require(sha(raw) == digest, 'Unreviewed selector continuation asset')
+        checked.append((path, raw))
+    modules = []
+    for path, raw in checked:
+        namespace = {'__file__': str(path), '__name__': path.stem}
+        exec(compile(raw, str(path), 'exec'), namespace)
+        if path.name == 'v5_selector_continuation.py':
+            namespace['SC_REVIEWED_EXECUTORS'] = SELECTOR_CONTINUATION_REVIEWED_EXECUTORS
+        modules.append(SimpleNamespace(**namespace))
+    return tuple(modules)
+
+
+def execute_selector_audit_continuation(suite, sources, root, prior, output, tools, inputs, *, reviews=None):
+    helper, executor = selector_continuation_load()
+    return executor.execute(suite, sources, root, prior, output, tools, inputs,
+                            reviews=reviews, api=SimpleNamespace(**globals()), helper=helper)
+
+
 D04_PUBLIC_HELPER_SHA256 = '77d12f0b4c9bf40ea0f75ab735ec2f25af46083e918a37d32ce57e928e645b35'
 
 
@@ -4096,6 +4123,9 @@ def d04_public_receipt_load():
 
 def validate_receipt(receipt, suite, sources, root):
     if p1_tail_handles(suite): return p1_tail_validate_receipt(p1_api(), receipt, suite, sources, root)
+    if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == 'orthemology-v5-selector-audit-continuation-v1':
+        helper, _ = selector_continuation_load()
+        return helper.validate_selector_continuation(receipt, suite, sources, root, api=SimpleNamespace(**globals()))
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == 'orthemology-v5-covering-audit-continuation-v1':
         return covering_continuation_load().validate_receipt(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     if selector_g1_handles(suite):
@@ -5732,7 +5762,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     mode = parser.add_mutually_exclusive_group(required=True)
-    for name in ('list', 'check', 'project', 'execute', 'audit-continuation', 'history-audit-continuation', 'covering-audit-continuation'): mode.add_argument('--' + name, action='store_true')
+    for name in ('list', 'check', 'project', 'execute', 'audit-continuation', 'history-audit-continuation', 'covering-audit-continuation', 'selector-audit-continuation'): mode.add_argument('--' + name, action='store_true')
     parser.add_argument('--suite'); parser.add_argument('--out', type=Path); parser.add_argument('--prior', type=Path)
     parser.add_argument('--tool', action='append', default=[]); parser.add_argument('--input', action='append', default=[])
     parser.add_argument('--lean-bin', type=Path); parser.add_argument('--mathlib', type=Path); parser.add_argument('--python', type=Path)
@@ -5760,7 +5790,10 @@ def main():
         if args.mathlib: require('mathlib' not in tools, 'Duplicate Mathlib binding'); tools['mathlib'] = args.mathlib
         if args.python: require('python' not in tools, 'Duplicate Python binding'); tools['python'] = args.python
         reviews = {r['id']: r for r in bundle['reviews']}
-        if args.covering_audit_continuation:
+        if args.selector_audit_continuation:
+            require(args.prior is not None, 'Selector continuation requires the exact retained --prior run directory')
+            receipt = execute_selector_audit_continuation(suite, sources, args.root, args.prior, args.out, tools, inputs, reviews=reviews)
+        elif args.covering_audit_continuation:
             require(args.prior is not None, 'Covering continuation requires the exact retained --prior run directory')
             receipt = execute_covering_audit_continuation(suite, sources, args.root, args.prior, args.out, tools, inputs, reviews=reviews)
         elif args.history_audit_continuation:
