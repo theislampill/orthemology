@@ -1923,6 +1923,8 @@ def validate_suite(suite, sources, root):
     if p1_tail_finish_handles(suite): return p1_tail_finish_validate_suite(p1_api(), suite, sources, root)
     if p1_tail_handles(suite): return p1_tail_validate_suite(p1_api(), suite, sources, root)
     """Offline checks only. Neither a descriptor nor a review Boolean authorises code."""
+    if g1_membership_is_suite(suite):
+        return g1_membership_load().validate_suite(suite, sources, root, adapter=SimpleNamespace(**globals()))
     if selector_g1_handles(suite):
         family = selector_g1_load_family()
         return family.selector_g1_validate_suite(family.selector_g1_adapter_view(globals()), suite, sources, root)
@@ -2176,6 +2178,7 @@ def import_fingerprints(suite, sources):
 
 
 def project_suite(suite, sources, root, output):
+    require(not g1_membership_is_suite(suite), 'G1 membership descriptor is a retained-evidence-only view; use the unchanged original catalogue replay API')
     if isinstance(suite, dict) and isinstance(suite.get('replay'), dict) and suite['replay'].get('schema') == p1_schema:
         return p1_project_suite(p1_api(), suite, sources, root, output)
     plan = validate_suite(suite, sources, root)
@@ -2873,6 +2876,7 @@ def _initial_receipt(suite, sources, reviews):
 def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, reviews=None):
     if p1_tail_finish_handles(suite): return p1_tail_finish_execute_suite(p1_api(), suite, sources, root, output, tools, inputs, scope=scope, reviews=reviews)
     if p1_tail_handles(suite): return p1_tail_execute_suite(p1_api(), suite, sources, root, output, tools, inputs, scope=scope, reviews=reviews)
+    require(not g1_membership_is_suite(suite), 'G1 membership descriptor is a retained-evidence-only view; use the unchanged original catalogue replay API')
     if selector_g1_handles(suite):
         family = selector_g1_load_family()
         return family.selector_g1_execute(family.selector_g1_adapter_view(globals()), suite, sources, root, output, tools, inputs, scope, reviews=reviews)
@@ -4131,6 +4135,8 @@ def validate_receipt(receipt, suite, sources, root):
         return helper.validate_selector_continuation(receipt, suite, sources, root, api=SimpleNamespace(**globals()))
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == 'orthemology-v5-covering-audit-continuation-v1':
         return covering_continuation_load().validate_receipt(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
+    if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == G1_MEMBERSHIP_SCHEMA:
+        return g1_membership_load().validate_receipt(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     if selector_g1_handles(suite):
         family = selector_g1_load_family()
         return family.selector_g1_validate_receipt(family.selector_g1_adapter_view(globals()), receipt, suite, sources, root)
@@ -5746,6 +5752,38 @@ def selector_g1_load_family():
     # stale bytecode, import-path search, module caching or global registration.
     exec(compile(raw,str(path),'exec'),module.__dict__)
     require(module.SELECTOR_G1_RECIPES==SELECTOR_G1_RECIPES and module.SELECTOR_G1_IDS==SELECTOR_G1_IDS,'Changed family dispatch ownership')
+    return module
+
+
+# The accepted finish receipts retain this exact earlier runner/asset tuple.
+p1_tail_finish_accepted_predecessors = {
+    '687efdd22dc0e34ca76ec1322b797ad709ab1400b3fd72ab25cf54bd31224361': {
+        'v5_p1_tail_finish_recipes.json': {
+            'sha256': '3e2252f43e8a1746f85cf84d4574a349004bcdad22f12d587ae769c3a15abfbc', 'bytes': 5643},
+        'v5_p1_tail_finish_assets/p1_tail_finish_recipe.py': {
+            'sha256': 'ec4f73806de730cc5d06493c32893dee3ec8ea43fc53e51823db5a26bde875b6', 'bytes': 39293}}}
+
+G1_MEMBERSHIP_SCHEMA = 'orthemology-v5-g1-membership-metadata-v1'
+G1_MEMBERSHIP_SUITE_SHA256 = '7a902f6333972b3a25d551aa464ea4b07cd41bfdc48e7b5601d6e0b09e7f7c04'
+G1_MEMBERSHIP_HELPER_SHA256 = '4a92f7e657513cc6f7ba0f532c7d10be199bacfd7d6c09cbe3ec2715aed2763f'
+
+
+def g1_membership_is_suite(suite):
+    if not isinstance(suite, dict) or suite.get('id') != 'd08-g1': return False
+    try: return canonical(suite) == G1_MEMBERSHIP_SUITE_SHA256
+    except (TypeError, ValueError, OverflowError): return False
+
+
+def g1_membership_load():
+    import importlib.util
+    path = no_symlinks(Path(__file__).absolute().with_name('v5_g1_membership.py'))
+    raw = path.read_bytes()
+    require(sha(raw) == G1_MEMBERSHIP_HELPER_SHA256, 'Changed G1 membership helper')
+    spec = importlib.util.spec_from_file_location('_v5_g1_membership', path)
+    module = importlib.util.module_from_spec(spec)
+    exec(compile(raw, str(path), 'exec'), module.__dict__)
+    require(module.SCHEMA == G1_MEMBERSHIP_SCHEMA and module.NEW_SUITE == G1_MEMBERSHIP_SUITE_SHA256,
+            'Changed G1 membership dispatch ownership')
     return module
 
 
