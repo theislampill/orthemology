@@ -1,0 +1,17 @@
+{
+  "lean": {
+    "version": "4.19.0",
+    "release_commit": "6caaee842e94",
+    "tested_platform": "linux x86_64",
+    "binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "release_url": "https://github.com/leanprover/lean4/releases/tag/v4.19.0"
+  },
+  "mathlib": {
+    "commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "source_url": "https://github.com/leanprover-community/mathlib4/tree/c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "archive_sha256": "9fce64f31ba5612df46871eee8b4581c81c120604deb08cc35fa9f0fb543a425",
+    "lake_manifest_sha256": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752",
+    "source_manifest": "dependencies/SOURCE_MANIFEST.json"
+  },
+  "cache_policy": "External compiled Mathlib/dependency libraries are trusted inputs, as in independent review. No compiled custom source or external cache is included in this ZIP."
+}
