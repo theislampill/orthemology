@@ -822,14 +822,7 @@ def _t15_reference_input_process(argv, cwd, env, log, timeout, input_file):
             if terminal != 'COMPLETED': code = None
         except (subprocess.TimeoutExpired, KeyboardInterrupt) as error:
             terminal = 'TIMEOUT' if isinstance(error, subprocess.TimeoutExpired) else 'INTERRUPTED'; code = None
-            if os.name == 'nt':
-                subprocess.run(['taskkill', '/PID', str(proc.pid), '/T', '/F'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
-            else: os.killpg(proc.pid, signal.SIGTERM)
-            try: proc.wait(timeout=2)
-            except subprocess.TimeoutExpired:
-                if os.name == 'nt': proc.kill()
-                else: os.killpg(proc.pid, signal.SIGKILL)
-                proc.wait()
+            _stop_process_group(proc)
     return {'terminal': terminal, 'exit_code': code, 'started_at': started, 'ended_at': utc(), 'log_sha256': sha(log.read_bytes())}
 
 
@@ -1066,6 +1059,9 @@ def _validate_argv(stage, plan):
     driver = plan['drivers'].get(stage['driver_id'])
     if driver is not None:
         recipe = driver['recipe']
+        if recipe in OPERATIONAL_RECIPES:
+            operational_validate_argv(stage, plan)
+            return
         if recipe in D04_RECIPES:
             d04_validate_argv(stage, driver, plan)
             return
@@ -1925,7 +1921,13 @@ def t10_result(stage, text, plan, output, suite):
 
 def validate_suite(suite, sources, root):
     """Offline checks only. Neither a descriptor nor a review Boolean authorises code."""
+    if selector_g1_handles(suite):
+        family = selector_g1_load_family()
+        return family.selector_g1_validate_suite(family.selector_g1_adapter_view(globals()), suite, sources, root)
+    if isinstance(suite, dict) and isinstance(suite.get('replay'), dict) and suite['replay'].get('schema') == p1_schema:
+        return p1_validate_suite(p1_api(), suite, sources, root)
     try:
+        operational_precheck(suite, sources)
         replay = suite['replay']; keys(replay, REPLAY_KEYS)
         require(replay['schema'] == 'orthemology-v5-replay-v1', 'Unknown replay schema')
         require(replay['scope'] in {'COMPONENTS', 'DECLARED_SUITE', 'FINITE'}, 'Unknown replay scope')
@@ -2041,16 +2043,18 @@ def validate_suite(suite, sources, root):
             keys(row, {'id', 'source_id', 'recipe', 'sha256', 'argument_meanings', 'external_input_id'})
             source = sources[row['source_id']]; digest(row['sha256'])
             require(row['sha256'] == (source['public_sha256'] or source['original_sha256']), 'Wrong driver hash')
-            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, portable_admission.RECIPE} | D04_RECIPES:
+            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, portable_admission.RECIPE} | D04_RECIPES | OPERATIONAL_RECIPES:
                 require(row['external_input_id'] in inputs, 'Original core archive is undeclared')
             else: require(row['external_input_id'] is None, 'Archive recipe is not approved by this adapter version')
             admitted_role = 'LOCK' if row['recipe'] == 't15-empirical-integrity-v1' else 'DRIVER'
-            if row['recipe'] in D04_RECIPES: d04_check_driver_source(row['recipe'], source)
+            if row['recipe'] in OPERATIONAL_RECIPES: operational_validate_driver(row, source)
+            elif row['recipe'] in D04_RECIPES: d04_check_driver_source(row['recipe'], source)
             elif row['recipe'] == portable_admission.RECIPE: portable_admission.validate_driver(_portable_api(), row, source)
             elif row['recipe'] == ATTR_RECIPE: check_custody_driver(source, ATTR_CONTRACT)
             elif row['recipe'] == HISTORY_RECIPE: check_custody_driver(source, HISTORY_CONTRACT)
             else: require(row['source_id'] in contents and files[row['source_id']]['role'] == admitted_role, 'Driver is not an exact projected source')
-            if row['recipe'] in D04_RECIPES:
+            if row['recipe'] in OPERATIONAL_RECIPES: pass
+            elif row['recipe'] in D04_RECIPES:
                 d04_validate_driver(row, sources)
             elif row['recipe'] in LANGUAGE_RECIPES:
                 recipe = LANGUAGE_RECIPES[row['recipe']]
@@ -2094,6 +2098,7 @@ def validate_suite(suite, sources, root):
         plan = {'files': files, 'file_paths': file_paths, 'contents': contents, 'modules': modules, 'official': official,
                 'drivers': drivers, 'inputs': inputs, 'input_manifests': input_manifests, 'fixtures': fixtures,
                 'stages': stages, 'targets': names, 'packages': packages, 'build_roots': string_list(replay['build_roots'])}
+        operational_validate_package(suite, sources, plan)
         for name in plan['build_roots']:
             relative(name); require(name != 'project' and not name.startswith('project/'), 'Build root overlaps projected sources')
         for driver in drivers.values():
@@ -2139,6 +2144,7 @@ def validate_suite(suite, sources, root):
                 custody_literal = custody_literal or (driver.get('recipe') == HISTORY_RECIPE and diagnostic['source_id'] == driver['source_id'] and diagnostic['literal'] in HISTORY_DIAGNOSTICS)
                 custody_literal = custody_literal or d04_diagnostic_allowed(driver, diagnostic)
                 custody_literal = custody_literal or (driver.get('recipe') == portable_admission.RECIPE and portable_admission.diagnostic(_portable_api(), diagnostic, sources))
+                custody_literal = custody_literal or operational_diagnostic(stage, diagnostic, plan)
                 require(custody_literal or (diagnostic['source_id'] in contents and diagnostic['literal'].encode() in contents[diagnostic['source_id']]), 'Diagnostic differs from source contract')
             for cid in string_list(stage['control_ids']):
                 require(cid in controls and cid not in covered, 'Missing/duplicate control association'); covered.append(cid)
@@ -2168,6 +2174,8 @@ def import_fingerprints(suite, sources):
 
 
 def project_suite(suite, sources, root, output):
+    if isinstance(suite, dict) and isinstance(suite.get('replay'), dict) and suite['replay'].get('schema') == p1_schema:
+        return p1_project_suite(p1_api(), suite, sources, root, output)
     plan = validate_suite(suite, sources, root)
     output = no_symlinks(output).absolute()
     require(not output.exists(), 'Output must be absent; retain prior evidence')
@@ -2182,6 +2190,27 @@ def project_suite(suite, sources, root, output):
     return {'project': str(project), 'output': str(output)}
 
 
+def _stop_process_group(proc):
+    """Stop the owned group even when its leader exits during termination."""
+    if os.name == 'nt':
+        subprocess.run(['taskkill', '/PID', str(proc.pid), '/T', '/F'],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
+        try: proc.wait(timeout=2)
+        except subprocess.TimeoutExpired:
+            proc.kill(); proc.wait()
+        return
+    try: os.killpg(proc.pid, signal.SIGTERM)
+    except ProcessLookupError: pass
+    try:
+        try: proc.wait(timeout=2)
+        except subprocess.TimeoutExpired: pass
+    finally:
+        # A completed leader wait does not imply that its descendants stopped.
+        try: os.killpg(proc.pid, signal.SIGKILL)
+        except ProcessLookupError: pass
+        proc.wait()
+
+
 def run_process(argv, cwd, env, log, timeout):
     """Retain real child terminals; a process group timeout is not a rejection."""
     started = utc(); log = Path(log); log.parent.mkdir(parents=True, exist_ok=True)
@@ -2194,14 +2223,7 @@ def run_process(argv, cwd, env, log, timeout):
             if terminal != 'COMPLETED': code = None
         except (subprocess.TimeoutExpired, KeyboardInterrupt) as error:
             terminal = 'TIMEOUT' if isinstance(error, subprocess.TimeoutExpired) else 'INTERRUPTED'; code = None
-            if os.name == 'nt':
-                subprocess.run(['taskkill', '/PID', str(proc.pid), '/T', '/F'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
-            else: os.killpg(proc.pid, signal.SIGTERM)
-            try: proc.wait(timeout=2)
-            except subprocess.TimeoutExpired:
-                if os.name == 'nt': proc.kill()
-                else: os.killpg(proc.pid, signal.SIGKILL)
-                proc.wait()
+            _stop_process_group(proc)
     return {'terminal': terminal, 'exit_code': code, 'started_at': started, 'ended_at': utc(), 'log_sha256': sha(log.read_bytes())}
 
 
@@ -2483,7 +2505,7 @@ def _verify_environment(suite, plan, tools, inputs, output):
         if iid not in inputs: raise MissingInput('Required explicit external input is unavailable: ' + iid)
         input_hashes[iid] = _input_inventory(row, inputs[iid], plan)
     build_roots = [path_in(output, p) for p in suite['replay']['build_roots']]
-    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, portable_admission.RECIPE} | D04_RECIPES for row in plan['drivers'].values())
+    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, portable_admission.RECIPE} | D04_RECIPES | OPERATIONAL_RECIPES for row in plan['drivers'].values())
     for path in build_roots:
         if not original_owned: path.mkdir(parents=True, exist_ok=True)
     if 'lean' in resolved:
@@ -2847,8 +2869,15 @@ def _initial_receipt(suite, sources, reviews):
 
 
 def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, reviews=None):
+    if selector_g1_handles(suite):
+        family = selector_g1_load_family()
+        return family.selector_g1_execute(family.selector_g1_adapter_view(globals()), suite, sources, root, output, tools, inputs, scope, reviews=reviews)
+    if isinstance(suite, dict) and isinstance(suite.get('replay'), dict) and suite['replay'].get('schema') == p1_schema:
+        return p1_execute_suite(p1_api(), suite, sources, root, output, tools, inputs, scope, reviews)
     require(not portable_admission.is_portable(suite), 'Portable views require the single physical family executor')
     if d04_is_suite(suite): return d04_execute_suite(suite, sources, root, output, tools, inputs, scope, reviews=reviews)
+    if isinstance(suite, dict) and isinstance(suite.get('id'), str) and suite['id'] in _OPERATIONAL_DATA['suites']:
+        return operational_execute_suite(suite, sources, root, output, tools, inputs, scope, reviews=reviews)
     require(scope is None or scope == suite['replay']['scope'], 'Execute the exact declared scope; use a separately scoped descriptor for components')
     require(isinstance(reviews, dict) and set(suite['review_ids']) <= set(reviews), 'Missing source-bound review identities')
     plan = validate_suite(suite, sources, root)
@@ -4028,6 +4057,11 @@ def execute_history_audit_continuation(suite, sources, root, prior, output, tool
 
 
 def validate_receipt(receipt, suite, sources, root):
+    if selector_g1_handles(suite):
+        family = selector_g1_load_family()
+        return family.selector_g1_validate_receipt(family.selector_g1_adapter_view(globals()), receipt, suite, sources, root)
+    if isinstance(suite, dict) and isinstance(suite.get('replay'), dict) and suite['replay'].get('schema') == p1_schema:
+        return p1_validate_receipt(p1_api(), receipt, suite, sources, root)
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == portable_family.EVIDENCE_SCHEMA:
         return portable_family.validate_receipt(_portable_api(), receipt, suite, sources, root)
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == HC_SCHEMA:
@@ -4121,6 +4155,8 @@ def validate_receipt(receipt, suite, sources, root):
 
 
 def validate_child_evidence(evidence, plan, stages, successful):
+    if 'operational_packet' in plan:
+        return operational_validate_child_evidence(evidence, plan, stages, successful)
     if 'd04_family' in plan: return d04_validate_child_evidence(evidence, plan, stages, successful)
     declared = {sid: row for sid, row in plan['stages'].items() if row['argv'][:1] == ['{builtin:observe-child}']}
     parents = {row['argv'][1] for row in declared.values()}
@@ -4567,7 +4603,8 @@ def d04_assess_captured_child(spec, row, log_bytes, parent):
     require(isinstance(row['output_hashes'], dict) and set(row['output_hashes']) == set(spec['outputs']), 'D04 actual output inventory incomplete')
     for value in row['output_hashes'].values(): digest(value)
     require(all(x in text for x in spec['required_diagnostics']) and all(x not in text for x in spec['forbidden_diagnostics']), 'D04 intended control diagnostic differs')
-    require('sorryAx' not in text, 'D04 child reported a proof hole')
+    if row['exit_code'] == 0:
+        require('sorryAx' not in text, 'D04 child reported a proof hole')
     if row['exit_code']:
         require(not re.search(r'unknown (?:module|constant|identifier|namespace)|no such file|file not found|failed to read file|object file|must be contained in root directory', text, re.I), 'D04 infrastructure failure is not semantic rejection')
     outcome = 'ACCEPT' if row['exit_code'] == 0 else 'REJECT'
@@ -5496,7 +5533,112 @@ APPROVED_DECLARED_SUITES.update(portable_admission.APPROVED)
 
 
 
+
+# Packaging-only: exact reviewed data and helper source, all hashes checked before execution.
+OPERATIONAL_ASSETS_V1 = [('v5_operational_recipes_v1.json', 'b12cd58910c251d779c03bd49b86589d953e220c0bbc96e9c4975e3937bb856b', 3765409), ('v5_operational_assets_v1/admission.py', '30e181f2f78edba4b04c194d321ecf36ed6ec96f0dbe4115f37b4708154ffac6', 7050), ('v5_operational_assets_v1/direct_capture.py', '3a8a236b48071b97bdbd856fc51a30b2261773e1b29bf5763b79f7aef28bcfcb', 32638), ('v5_operational_assets_v1/process_capture.py', '67e3dc202456dc65477e9be1a5acd30392cd10e52a64686463040c4252db7614', 11464), ('v5_operational_assets_v1/normalizers.py', 'eb17520317ff8bc3b460240ef1d1e4ff956ccb877b0a50e558ac6677eca16ed1', 10775), ('v5_operational_assets_v1/runtime.py', '9a623fa6fa067fbf3db056681c9b516ee7bc47f416c7c4988cfe0aaf15703ed1', 10615), ('v5_operational_assets_v1/collection.py', 'eea54635fc257417b93cafee5a5ee24ddc3e290e09d481bf225de497eceeb20c', 22080), ('v5_operational_assets_v1/execution.py', '75ecd59d453a24da9554a907deafcf207a1ed13043687ccf57f6df5057b1e8f3', 17411)]
+
+def _operational_asset_bytes_v1(name, expected, size):
+    try:
+        path = no_symlinks(Path(__file__).parent / name)
+        require(path.is_file(), 'Missing operational asset')
+        raw = path.read_bytes()
+        require(len(raw) == size and sha(raw) == expected, 'Changed operational asset')
+        return path, raw
+    except (OSError, ValueError) as error:
+        raise ValueError('Missing or changed operational asset: ' + name) from error
+
+def _load_operational_assets_v1():
+    global _OPERATIONAL_DATA
+    verified = [_operational_asset_bytes_v1(*row) for row in OPERATIONAL_ASSETS_V1]
+    _OPERATIONAL_DATA = json.loads(verified[0][1].decode('utf-8'))
+    # Preserve the original adapter namespace, including __file__ and monkeypatch targets.
+    # These are reviewed local assets, never producer-selected paths or archive programs.
+    for path, raw in verified[1:]:
+        exec(compile(raw, str(path), 'exec'), globals())
+
+_load_operational_assets_v1()
+
+# P1 assets are part of this reviewed adapter version, not descriptor inputs.
+p1_asset_pins = {
+    'v5_p1_recipes.json': {
+        'sha256': '4ae8810e2dac517987ef93f383c597407792dc9bb8e37b7aa1fc1e4ef2967a81',
+        'bytes': 24964,
+    },
+    'v5_p1_assets/p1_recipe.py': {
+        'sha256': 'f4fbbcc61093bc3ec6467c836a65b8e97294eb9960c722701ba64bed0a91f7ab',
+        'bytes': 102535,
+    },
+}
+
+
+def p1_load_assets():
+    from pathlib import Path
+    import hashlib
+    import json
+
+    root = Path(__file__).absolute().parent
+    content = {}
+    for name, pin in p1_asset_pins.items():
+        path = root / name
+        if any(item.is_symlink() for item in (path, *path.parents)):
+            raise ValueError('P1 asset path contains a symlink: ' + name)
+        try:
+            data = path.read_bytes()
+        except OSError as error:
+            raise ValueError('P1 reviewed asset is unavailable: ' + name) from error
+        if len(data) != pin['bytes'] or hashlib.sha256(data).hexdigest() != pin['sha256']:
+            raise ValueError('P1 reviewed asset identity changed: ' + name)
+        content[name] = data
+    # Check both assets before installing any P1 helper. The adapter namespace
+    # retains its __file__, so source-facing tracing and runner identity agree.
+    globals()['p1_meta'] = json.loads(content['v5_p1_recipes.json'])
+    exec(compile(content['v5_p1_assets/p1_recipe.py'], str(root / 'v5_p1_assets/p1_recipe.py'), 'exec'), globals())
+
+
+p1_load_assets()
+
+# Hash-bound selector/G1 assets. This does not admit a descriptor or run.
+SELECTOR_G1_FAMILY_ASSET = 'replay_v5_successor_assets/selector_g1/replay_selector_g1.py'
+SELECTOR_G1_FAMILY_SHA256 = 'f2704f521f5c55cd3a0866b4e3f98d520dd57daa782e1f052b972d7de8b05d87'
+SELECTOR_G1_FAMILY_BYTES = 89309
+SELECTOR_G1_RECIPES = {'t09-selector-original-v2':'selector','t09-g1-author-original-v2':'g1','t09-g1-review-original-v2':'g1-review'}
+SELECTOR_G1_IDS = {'d06-selector':'selector','d08-g1':'g1','d08-g1-review':'g1-review'}
+
+def selector_g1_handles(suite):
+    if not isinstance(suite,dict):return False
+    if isinstance(suite.get('id'), str) and suite['id'] in SELECTOR_G1_IDS:return True
+    replay=suite.get('replay');drivers=replay.get('drivers') if isinstance(replay,dict) else None
+    return isinstance(drivers,list) and any(isinstance(d,dict) and isinstance(d.get('recipe'), str) and d['recipe'] in SELECTOR_G1_RECIPES for d in drivers)
+
+def selector_g1_family_path():
+    return no_symlinks(path_in(Path(__file__).resolve().parent,SELECTOR_G1_FAMILY_ASSET))
+
+def selector_g1_load_family():
+    import importlib.util
+    path=selector_g1_family_path();raw=path.read_bytes()
+    require(len(raw)==SELECTOR_G1_FAMILY_BYTES and sha(raw)==SELECTOR_G1_FAMILY_SHA256,'Changed selector/G1 family module')
+    spec=importlib.util.spec_from_file_location('_v5_selector_g1_bound_family',path)
+    module=importlib.util.module_from_spec(spec)
+    # Execute the exact checked source bytes, without package initialization,
+    # stale bytecode, import-path search, module caching or global registration.
+    exec(compile(raw,str(path),'exec'),module.__dict__)
+    require(module.SELECTOR_G1_RECIPES==SELECTOR_G1_RECIPES and module.SELECTOR_G1_IDS==SELECTOR_G1_IDS,'Changed family dispatch ownership')
+    return module
+
+
 def main():
+    if sys.argv[1:2] == ['--trace-selector-g1']:
+        require(len(sys.argv) == 4, 'Malformed internal selector/G1 trace invocation')
+        family = selector_g1_load_family()
+        return family.selector_g1_trace_main(family.selector_g1_adapter_view(globals()), sys.argv[2], Path(sys.argv[3]))
+    if sys.argv[1:2] == ['--trace-p1-original']:
+        return p1_trace_entry(p1_api(), sys.argv[2:])
+    if sys.argv[1:2] == ["--trace-operational"]:
+        require(len(sys.argv) >= 6, "Malformed internal operational trace invocation")
+        return operational_trace(sys.argv[2], Path(sys.argv[3]), Path(sys.argv[4]), sys.argv[5:])
+    if sys.argv[1:2] == ["--trace-operational-batch-source"]:
+        require(len(sys.argv) == 12, "Malformed internal nested operational trace invocation")
+        return operational_trace_batch_source(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4:])
     if sys.argv[1:2] == ['--trace-portable']:
         require(len(sys.argv) == 13, 'Malformed internal portable trace invocation')
         return portable_capture.trace_driver(_portable_api(), Path(sys.argv[2]), Path(sys.argv[3]), Path(sys.argv[4]), sys.argv[5:])

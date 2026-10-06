@@ -19,6 +19,14 @@ LEAN_SHA = '92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023'
 AREA = 'experiments/orthemology-v5-successors/source-store'
 
 
+
+def copy_replay_scripts(destination):
+    """Packaging fixtures include the complete eagerly loaded adapter closure."""
+    import shutil
+    shutil.copytree(SCRIPT.parent, destination, dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+
+
 def sha(value):
     return hashlib.sha256(value.encode() if isinstance(value, str) else value).hexdigest()
 
@@ -2137,9 +2145,7 @@ class PortableReplayIntegrationTests(unittest.TestCase):
     def layout(self):
         folder = self.base / 'scripts'
         folder.mkdir()
-        for name in ('replay_v5_successors.py', 'portable_bindings_v2.json',
-                     *(name + '.py' for name in self.names)):
-            (folder / name).write_bytes((SCRIPT.parent / name).read_bytes())
+        copy_replay_scripts(folder)
         return folder / 'replay_v5_successors.py'
 
     def test_portable_dynamic_file_loader_needs_no_module_registration(self):
@@ -2393,6 +2399,1021 @@ class PortableReplayIntegrationTests(unittest.TestCase):
         self.assertEqual(consume.call_count, 2)
         self.assertEqual(result['physical_execution_count'], 0)
         self.assertTrue(all(row['outcome'] == 'BLOCKED_TOOLCHAIN' for row in result['views'].values()))
+
+
+# P1 synthetic adapter controls: no original source, archive, driver or producer is executed.
+class P1SourceBoundAdapterTests(unittest.TestCase):
+
+    def setUp(self):
+        spec = importlib.util.spec_from_file_location('p1_synthetic_adapter_under_test', SCRIPT)
+        self.r = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.r)
+        self.temp = tempfile.TemporaryDirectory(prefix='p1-adapter-fixture-')
+        self.addCleanup(self.temp.cleanup)
+        self.base = Path(self.temp.name)
+
+    def event(self, name='Positive', expected=0, finite=False):
+        source = self.base / (name + '.py' if finite else name + '.lean')
+        source.write_text('SYNTHETIC NONSCIENTIFIC FIXTURE\n')
+        obj = None if finite else self.base / 'original/build' / (name + '.olean')
+        argv = [sys.executable, '-B', str(source)] if finite else ['/fixture/lean', '-j1', '--root=' + str(self.base), '-o', str(obj), str(source)]
+        return {'id': name, 'argv': argv, 'cwd': str(self.base / 'original'), 'profile': 'PYTHON_PIPE' if finite else 'LEAN_PIPE', 'source_path': str(source), 'source_sha256': self.r.sha(source.read_bytes()), 'object_path': str(obj) if obj else None, 'expected_exit': expected, 'positive_prerequisites': ['Positive'] if expected else [], 'lean_path': '/fixture/build:/fixture/cache', 'lean_bin': '/fixture', 'timeout': 180, 'finite': finite, 'axiom_count': None, 'log': str(self.base / 'original/logs' / (name + '.log')), 'required_copies': {}}
+
+    def plan(self, events):
+        return {'children': events, 'events': events, 'replacements': [(str(self.base), '$PACKET'), (str(self.base / 'original'), '$OUTPUT'), ('/fixture', '$LEAN_ROOT'), ('/cache', '$MATHLIB_ROOT'), (sys.executable, '$PYTHON')], 'derivations': {}, 'generated_bytes': {}, 'driver_sha256': self.r.p1_driver, 'plan_sha256': self.r.canonical([e['id'] for e in events]), 'preflight': None}
+
+    def kwargs(self, event, parent=None):
+        parent = parent or {'PATH': '/fixture/bin', 'KEPT': 'value'}
+        env = {k: v for k, v in parent.items() if not k.startswith(('LEAN', 'LD_'))}
+        env.update(LEAN_PATH=event['lean_path'], PYTHONDONTWRITEBYTECODE='1', PATH=event['lean_bin'] + os.pathsep + env.get('PATH', ''))
+        return {'cwd': Path(event['cwd']), 'env': env, 'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT, 'text': True, 'timeout': 180}
+
+    def observed(self, plan, event, raw, code=0, terminal='COMPLETED', returned=True):
+        capture = {'index': 0, 'argv': event['argv'], 'cwd': event['cwd'], 'started_at': '2026-10-05T00:00:01Z', 'ended_at': '2026-10-05T00:00:02Z', 'terminal': terminal, 'exit_code': code if terminal == 'COMPLETED' else None, 'returned_exit_code': code if returned else None, 'returned': returned, 'log_sha256': self.r.sha(raw), 'source_sha256': event['source_sha256'], 'output_hashes': {}, 'input_receipt_sha256': None}
+        clean = self.r.p1_neutralize(self.r, raw, plan['replacements'], terminal == 'TIMEOUT')['derived_bytes']
+        row = None if not returned else {'name': event['id'], 'expectation': 'REJECT' if event['expected_exit'] else 'ACCEPT', 'exit_code': code, 'elapsed_seconds': 0.1, 'command': [self.r.p1_neutralize(self.r, x.encode(), plan['replacements'])['derived_bytes'].decode() for x in event['argv']], 'source_sha256': event['source_sha256'], 'raw_diagnostic_sha256': self.r.sha(raw), 'path_neutral_log_sha256': self.r.sha(clean), 'diagnostic_path_substitution_only': True, 'wall_limit_seconds': 180}
+        return (capture, clean, row)
+
+    def test_private_pair_refuses_unpaired_unknown_and_arbitrary(self):
+        for v in [{'trace_prefix': 'x', 'pinned_trace_prefix': ''}, {'trace_prefix': 'x', 'pinned_trace_prefix': 'y'}, {'trace_prefix': '', 'pinned_trace_prefix': '', 'extra': 1}]:
+            with self.assertRaises(ValueError):
+                self.r.p1_private_parameters(self.r, v, self.base)
+
+    def test_source_binding_variants_are_exact_and_typed(self):
+        h = 'a' * 64
+        sources = {'owner': {'original_sha256': h}, 'archive': {'original_sha256': 'b' * 64}}
+        rows = [{'kind': 'ORIGINAL_SOURCE', 'source_id': 'owner', 'source_sha256': h}, {'kind': 'ARCHIVE_MEMBER', 'archive_source_id': 'archive', 'archive_sha256': 'b' * 64, 'member': 'safe/source.py', 'source_sha256': h}, {'kind': 'GENERATED_BY_ORIGINAL', 'source_id': 'owner', 'source_sha256': h, 'generated_sha256': h, 'derivation_id': 'copied-exact'}, {'kind': 'TOOL_PROBE', 'tool_name': 'python', 'executable_sha256': self.r.p1_python, 'driver_sha256': self.r.p1_driver}]
+        for row in rows:
+            self.assertEqual(self.r.p1_source_binding(self.r, row, sources, h), row)
+            with self.assertRaises(ValueError):
+                self.r.p1_source_binding(self.r, dict(row, extra=True), sources, h)
+
+    def test_actual_capture_preserves_returned_signal_code(self):
+        event = self.event()
+        plan = self.plan([event])
+        trace = self.base / 'trace'
+        trace.mkdir()
+        fn = self.r.p1_capture_run(self.r, lambda *a, **k: subprocess.CompletedProcess(a[0], -9, 'partial\n'), plan, trace, {'PATH': '/fixture/bin', 'KEPT': 'value'})
+        result = fn(event['argv'], **self.kwargs(event))
+        row = self.r.read_json(trace / '0000.json')
+        self.assertEqual(result.returncode, -9)
+        self.assertEqual(row['returned_exit_code'], -9)
+        self.assertEqual(row['terminal'], 'INTERRUPTED')
+        self.assertIsNone(row['exit_code'])
+
+    def test_capture_refuses_changed_call_before_effect(self):
+        event = self.event()
+        trace = self.base / 'trace'
+        trace.mkdir()
+        calls = []
+        fn = self.r.p1_capture_run(self.r, lambda *a, **k: calls.append(a), self.plan([event]), trace, {'PATH': '/fixture/bin', 'KEPT': 'value'})
+        with self.assertRaises(ValueError):
+            fn(event['argv'], **dict(self.kwargs(event), timeout=181))
+        self.assertEqual(calls, [])
+        self.assertEqual(list(trace.iterdir()), [])
+
+    def test_timeout_capture_preserves_raw_bytes_and_raises_original_exception(self):
+        event = self.event()
+        trace = self.base / 'trace'
+        trace.mkdir()
+        error = subprocess.TimeoutExpired(event['argv'], 180, output=b'partial\xff')
+
+        def timeout(*a, **k):
+            raise error
+        fn = self.r.p1_capture_run(self.r, timeout, self.plan([event]), trace, {'PATH': '/fixture/bin', 'KEPT': 'value'})
+        with self.assertRaises(subprocess.TimeoutExpired) as got:
+            fn(event['argv'], **self.kwargs(event))
+        self.assertIs(got.exception, error)
+        row = self.r.read_json(trace / '0000.json')
+        self.assertFalse(row['returned'])
+        self.assertEqual((trace / '0000.log').read_bytes(), b'partial\xff')
+        self.assertEqual(row['terminal'], 'TIMEOUT')
+
+    def test_dispatch_restores_process_globals_on_exception(self):
+        old_run = subprocess.run
+        old_argv = sys.argv
+        old_path = sys.path[:]
+        cwd = Path.cwd()
+        driver = self.base / 'replay.py'
+        driver.write_text('SYNTHETIC')
+
+        def runner(*a, **k):
+            raise RuntimeError('synthetic stop')
+        with mock.patch.object(self.r, 'p1_check_driver', return_value=None, create=True):
+            with self.assertRaisesRegex(RuntimeError, 'synthetic stop'):
+                self.r.p1_run_original(self.r, driver, [], self.plan([]), self.base / 'trace', runner=runner)
+        self.assertIs(subprocess.run, old_run)
+        self.assertIs(sys.argv, old_argv)
+        self.assertEqual(sys.path, old_path)
+        self.assertEqual(Path.cwd(), cwd)
+
+    def test_returned_signal_joins_original_row_without_rejection(self):
+        e = self.event('Mutant', 1)
+        p = self.plan([e])
+        raw = b"error: tactic 'rfl' failed\n"
+        cap, log, row = self.observed(p, e, raw, -9, 'INTERRUPTED')
+        got = self.r.p1_classify(self.r, p, e, cap, raw, log, row, {'Positive'})
+        self.assertEqual(got['outcome'], 'RESOURCE_INCONCLUSIVE')
+        self.assertEqual(got['rejecting_subprocesses'], 0)
+
+    def test_resource_diagnostic_dominates_concrete_mismatch(self):
+        e = self.event('Mutant', 1)
+        p = self.plan([e])
+        raw = b"error: tactic 'rfl' failed\nmaximum number of heartbeats exceeded\n"
+        cap, log, row = self.observed(p, e, raw, 1)
+        self.assertEqual(self.r.p1_classify(self.r, p, e, cap, raw, log, row, {'Positive'})['outcome'], 'RESOURCE_INCONCLUSIVE')
+
+    def test_rejection_requires_positives_and_absent_object(self):
+        e = self.event('Mutant', 1)
+        p = self.plan([e])
+        raw = b"error: tactic 'rfl' failed\n"
+        cap, log, row = self.observed(p, e, raw, 1)
+        with self.assertRaises(ValueError):
+            self.r.p1_classify(self.r, p, e, cap, raw, log, row, set())
+        obj = Path(e['object_path'])
+        obj.parent.mkdir(parents=True)
+        obj.write_bytes(b'fixture')
+        with self.assertRaises(ValueError):
+            self.r.p1_classify(self.r, p, e, cap, raw, log, row, {'Positive'})
+
+    def test_log_and_command_hash_join_rejects_mutation(self):
+        e = self.event('Mutant', 1)
+        p = self.plan([e])
+        raw = b"error: tactic 'rfl' failed\n"
+        cap, log, row = self.observed(p, e, raw, 1)
+        row['raw_diagnostic_sha256'] = '0' * 64
+        with self.assertRaises(ValueError):
+            self.r.p1_classify(self.r, p, e, cap, raw, log, row, {'Positive'})
+
+    def test_inventory_checks_complete_census_hashes_and_symlinks(self):
+        root = self.base / 'deps'
+        root.mkdir()
+        (root / 'x').write_bytes(b'one')
+        pin = {'roots': [''], 'entries': [{'path': 'x', 'kind': 'file', 'bytes': 3, 'sha256': self.r.sha(b'one')}]}
+        result = self.r.p1_inventory(self.r, root, pin)
+        self.assertEqual(result['entries'], 1)
+        (root / 'extra').write_bytes(b'x')
+        with self.assertRaises(ValueError):
+            self.r.p1_inventory(self.r, root, pin)
+
+    def test_audit_source_uses_fresh_namespace_and_exact_root_names(self):
+        targets = [{'target_id': 'x', 'module': 'Fixture', 'name': 'Alpha.exact'}]
+        text = self.r.p1_audit_source(self.r, targets)
+        self.assertIn('#check @Alpha.exact', text)
+        self.assertNotIn('namespace V5SuccessorCheckedAudit', text)
+        self.assertIn('env.checked.get.find?', text)
+        self.assertIn('info.type.getUsedConstants', text)
+
+    def test_whole_collector_refuses_empty_success_assertion(self):
+        out = self.base / 'original'
+        out.mkdir()
+        trace = self.base / 'trace'
+        trace.mkdir()
+        self.r.write_json(out / 'REPLAY_RECEIPT.json', {'status': 'PASS_PORTABLE_P1_REPLAY'})
+        with self.assertRaises(ValueError):
+            self.r.p1_collect(self.r, self.plan([]), out, trace, {'exit_code': 0}, b'')
+
+    def test_views_require_all_original_children_and_safe_targets(self):
+        with self.assertRaises(ValueError):
+            self.r.p1_views(self.r, {'children': []}, [])
+
+    def test_real_synthetic_python_child_is_captured_once(self):
+        e = self.event('TinyPython', finite=True)
+        Path(e['source_path']).write_text("print('SYNTHETIC CHILD')\n")
+        e['source_sha256'] = self.r.sha(Path(e['source_path']).read_bytes())
+        Path(e['cwd']).mkdir()
+        trace = self.base / 'actual-trace'
+        trace.mkdir()
+        parent = {'PATH': os.defpath}
+        call = self.r.p1_capture_run(self.r, subprocess.run, self.plan([e]), trace, parent)
+        result = call(e['argv'], **self.kwargs(e, parent))
+        self.assertEqual(result.returncode, 0)
+        row = self.r.read_json(trace / '0000.json')
+        self.assertEqual(row['returned_exit_code'], 0)
+        self.assertEqual((trace / '0000.log').read_bytes(), b'SYNTHETIC CHILD\n')
+        with self.assertRaises(ValueError):
+            call(e['argv'], **self.kwargs(e, parent))
+
+
+
+# Exact P1 external asset packaging checks; no scientific producer executes.
+class P1PackagingTests(unittest.TestCase):
+
+    def setUp(self):
+        import shutil
+        self.temp = tempfile.TemporaryDirectory(prefix='p1-packaging-fixture-')
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.script = self.root / SCRIPT.name
+        copy_replay_scripts(self.root)
+        self.catalog = self.root / 'v5_p1_recipes.json'
+        self.helper = self.root / 'v5_p1_assets/p1_recipe.py'
+
+    def load(self):
+        spec = importlib.util.spec_from_file_location('p1_packaging_fixture', self.script)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def test_external_assets_are_exactly_pinned(self):
+        module = self.load()
+        self.assertEqual(set(module.p1_asset_pins), {'v5_p1_recipes.json', 'v5_p1_assets/p1_recipe.py'})
+        for name, row in module.p1_asset_pins.items():
+            data = (self.root / name).read_bytes()
+            self.assertEqual(row, {'sha256': hashlib.sha256(data).hexdigest(), 'bytes': len(data)})
+        self.assertEqual(module.p1_meta, json.loads(self.catalog.read_bytes()))
+        self.assertEqual(module.p1_recipe, 't09-p1-original-v1')
+        self.assertEqual(module.p1_api().__file__, str(self.script))
+
+    def test_missing_catalog_refused(self):
+        self.catalog.unlink()
+        with self.assertRaises(ValueError):
+            self.load()
+
+    def test_changed_catalog_bytes_refused(self):
+        self.catalog.write_bytes(self.catalog.read_bytes() + b'\n')
+        with self.assertRaises(ValueError):
+            self.load()
+
+    def test_missing_helper_refused(self):
+        self.helper.unlink()
+        with self.assertRaises(ValueError):
+            self.load()
+
+    def test_changed_helper_refused_before_execution(self):
+        marker = self.root / 'MUST_NOT_EXIST'
+        self.helper.write_text('from pathlib import Path\nPath(' + repr(str(marker)) + ').write_text("wrong")\n')
+        with self.assertRaises(ValueError):
+            self.load()
+        self.assertFalse(marker.exists())
+
+    def test_catalog_symlink_refused(self):
+        other = self.root / 'other.json'
+        self.catalog.rename(other)
+        self.catalog.symlink_to(other)
+        with self.assertRaises(ValueError):
+            self.load()
+
+    def test_helper_directory_symlink_refused(self):
+        directory = self.helper.parent
+        other = self.root / 'other-assets'
+        directory.rename(other)
+        directory.symlink_to(other, target_is_directory=True)
+        with self.assertRaises(ValueError):
+            self.load()
+
+
+# Packaged selector/G1 offline boundary tests; no original science.
+import ast
+import shutil
+
+class SelectorG1PackagingTests(unittest.TestCase):
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix='selector-g1-packaging-')
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+
+    def test_changed_family_module_rejected_before_compile(self):
+        r = self.adapter()
+        path = r.selector_g1_family_path()
+        path.write_bytes(path.read_bytes() + b'\nraise RuntimeError("must not execute")\n')
+        with self.assertRaisesRegex(ValueError, 'Changed selector/G1 family module'):
+            r.selector_g1_load_family()
+
+    def test_missing_family_module_is_closed(self):
+        r = self.adapter()
+        path = r.selector_g1_family_path()
+        path.rename(path.with_suffix('.held'))
+        with self.assertRaises((OSError, ValueError)):
+            r.selector_g1_load_family()
+
+    def test_changed_json_is_rejected(self):
+        r = self.adapter()
+        f = r.selector_g1_load_family()
+        p = Path(f.__file__).with_name('replay_selector_g1_catalog.json')
+        p.write_bytes(p.read_bytes() + b' ')
+        with self.assertRaisesRegex(ValueError, 'Changed code-owned'):
+            f.selector_g1_catalog(r)
+
+    def test_changed_helper_is_rejected_and_module_state_restored(self):
+        r = self.adapter()
+        f = r.selector_g1_load_family()
+        name = list(f.SELECTOR_G1_HELPERS)[1]
+        p = Path(f.__file__).with_name(name + '.py')
+        p.write_bytes(p.read_bytes() + b'\nraise RuntimeError("must not execute")\n')
+        before = {n: sys.modules.get(n) for n in f.SELECTOR_G1_HELPERS}
+        with self.assertRaisesRegex(ValueError, 'Changed reviewed family helper'):
+            with f.selector_g1_helpers(r):
+                pass
+        self.assertEqual(before, {n: sys.modules.get(n) for n in before})
+
+    def test_preimported_poison_cannot_replace_bound_helper(self):
+        r = self.adapter()
+        f = r.selector_g1_load_family()
+        sentinel = object()
+        name = next(iter(f.SELECTOR_G1_HELPERS))
+        before = sys.modules.get(name)
+        sys.modules[name] = sentinel
+        try:
+            with f.selector_g1_helpers(r) as helpers:
+                self.assertIsNot(helpers['selector'], sentinel)
+            self.assertIs(sys.modules[name], sentinel)
+        finally:
+            if before is None:
+                sys.modules.pop(name, None)
+            else:
+                sys.modules[name] = before
+
+    def test_stale_bytecode_and_unreviewed_package_init_are_unused(self):
+        r = self.adapter()
+        p = r.selector_g1_family_path()
+        (p.parent / '__init__.py').write_text('raise RuntimeError("unreviewed package init")\n')
+        (p.parent / '__pycache__').mkdir()
+        (p.parent / '__pycache__/replay_selector_g1.cpython-311.pyc').write_bytes(b'INVALID BYTECODE')
+        self.assertEqual(r.selector_g1_load_family().SELECTOR_G1_CATALOG_SHA256, '1c04885e6a997afd24e831315a1bd313fbaef693c2d682402db0637407b55344')
+
+    def test_symlinked_asset_is_rejected(self):
+        r = self.adapter()
+        p = r.selector_g1_family_path()
+        held = p.with_suffix('.held')
+        p.rename(held)
+        try:
+            p.symlink_to(held)
+        except OSError as error:
+            self.skipTest(str(error))
+        with self.assertRaises(ValueError):
+            r.selector_g1_load_family()
+
+    def test_public_dispatch_uses_packaged_family_and_main_globals(self):
+        r = self.adapter()
+        f = r.selector_g1_load_family()
+        cat = f.selector_g1_catalog(r)
+        for definition in cat['families'].values():
+            suite = definition['suite']
+            for entry, hook, args in [('validate_suite', 'selector_g1_validate_suite', (suite, {}, self.root)), ('validate_receipt', 'selector_g1_validate_receipt', ({}, suite, {}, self.root)), ('execute_suite', 'selector_g1_execute', (suite, {}, self.root, self.root / 'out', {}, {}))]:
+                with self.subTest(entry=entry, suite=suite['id']), mock.patch.object(r, 'selector_g1_load_family', return_value=f), mock.patch.object(f, hook, return_value='BOUND') as checked:
+                    self.assertEqual(getattr(r, entry)(*args), 'BOUND')
+                    self.assertIs(checked.call_args.args[0].run_process, r.run_process)
+        with mock.patch.object(r, 'selector_g1_load_family', side_effect=AssertionError('legacy loaded new assets')):
+            with self.assertRaises(ValueError):
+                r.validate_suite({}, {}, self.root)
+
+    def test_exact_checked_module_bytes_are_the_executed_bytes(self):
+        r = self.adapter()
+        p = r.selector_g1_family_path()
+        original = Path.read_bytes
+        reads = []
+
+        def capture(path):
+            if path == p:
+                reads.append(path)
+            return original(path)
+        with mock.patch.object(Path, 'read_bytes', capture):
+            r.selector_g1_load_family()
+        self.assertEqual(reads, [p])
+
+    def test_catalogue_and_helpers_read_each_payload_once(self):
+        r = self.adapter()
+        f = r.selector_g1_load_family()
+        original = Path.read_bytes
+        seen = []
+
+        def capture(path):
+            seen.append(path)
+            return original(path)
+        with mock.patch.object(Path, 'read_bytes', capture):
+            f.selector_g1_catalog(r)
+            with f.selector_g1_helpers(r):
+                pass
+        expected = [Path(f.__file__).with_name('replay_selector_g1_catalog.json'), *[Path(f.__file__).with_name(n + '.py') for n in f.SELECTOR_G1_HELPERS]]
+        self.assertEqual(seen, expected)
+
+    def adapter(self):
+        (self.root / 'scripts').mkdir()
+        source = SCRIPT
+        copy_replay_scripts(self.root / 'scripts')
+        spec = importlib.util.spec_from_file_location('selector_g1_packaging_fixture', self.root / 'scripts/replay_v5_successors.py')
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def test_valid_packaging_loads_exact_catalogue_and_helpers(self):
+        r = self.adapter()
+        family = r.selector_g1_load_family()
+        catalog = family.selector_g1_catalog(r)
+        self.assertEqual(set(catalog['families']), {'selector', 'g1', 'g1-review'})
+        self.assertEqual(family.SELECTOR_G1_CATALOG_SHA256, '1c04885e6a997afd24e831315a1bd313fbaef693c2d682402db0637407b55344')
+        before = {name: sys.modules.get(name) for name in family.SELECTOR_G1_HELPERS}
+        with family.selector_g1_helpers(r) as helpers:
+            self.assertEqual(set(helpers), {'selector', 'g1', 'normalizers'})
+        self.assertEqual(before, {name: sys.modules.get(name) for name in before})
+
+class SelectorG1CacheBoundaryTests(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('selector_g1_public_packaged_tests', SCRIPT)
+        cls.adapter = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.adapter)
+        cls.family = cls.adapter.selector_g1_load_family()
+        cls.catalog = cls.family.selector_g1_catalog(cls.adapter)
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix='selector-g1-cache-SYNTHETIC-')
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        suite = self.catalog['families']['g1']['suite']
+        self.suite = suite
+        self.plan = {'packages': self.adapter.indexed(suite['replay']['packages'], 'name'), 'official': self.adapter.indexed(suite['replay']['official_imports'], 'module')}
+        self.tools = {'lean': self.root / 'lean/bin/lean', 'mathlib': self.root / 'mathlib'}
+        self.tools['lean'].parent.mkdir(parents=True)
+        self.tools['lean'].write_bytes(b'SYNTHETIC NO EXECUTION')
+        self.libraries = {'lean': self.root / 'lean/lib/lean'}
+        self.libraries.update({name: self.adapter.path_in(self.tools['mathlib'], row['path'], dot=True) / '.lake/build/lib/lean' for name, row in self.plan['packages'].items()})
+        for name, path in self.libraries.items():
+            if name == 'Cli':
+                continue
+            path.mkdir(parents=True)
+            (path / 'Synthetic.olean').write_bytes(b'NONEXECUTABLE SYNTHETIC CACHE')
+
+    def extra(self):
+        p = self.tools['mathlib'] / '.lake/packages/Undeclared/.lake/build/lib/lean'
+        p.mkdir(parents=True)
+        (p / 'Synthetic.olean').write_bytes(b'NONEXECUTABLE FOREIGN CACHE')
+        return p
+
+    def test_declared_available_libraries_allow_only_unimported_absent_cli(self):
+        result = self.family.selector_g1_cache_measurements(self.adapter, self.plan, self.tools)
+        self.assertEqual(result['Cli'], {'files': 0, 'tree_sha256': self.adapter.canonical({})})
+        self.assertEqual(set(result), set(self.libraries))
+
+    def test_new_extra_sibling_is_rejected_in_post_run_readback(self):
+        self.family.selector_g1_cache_measurements(self.adapter, self.plan, self.tools)
+        self.extra()
+        with self.assertRaisesRegex(ValueError, 'Unreviewed extra original import cache'):
+            self.family.selector_g1_cache_measurements(self.adapter, self.plan, self.tools)
+
+    def test_imported_missing_library_is_rejected(self):
+        name = next((name for name in self.plan['packages'] if name not in {'mathlib', 'Cli'}))
+        self.plan['official']['SyntheticRequiredCache'] = {'package': name}
+        p = self.libraries[name]
+        p.rename(p.with_name('held-cache'))
+        with self.assertRaises((ValueError, self.adapter.MissingTool)):
+            self.family.selector_g1_cache_measurements(self.adapter, self.plan, self.tools)
+
+    def test_missing_non_cli_is_not_silently_allowed_when_unimported(self):
+        name = next((name for name in self.plan['packages'] if name not in {'mathlib', 'Cli'}))
+        self.plan['official'] = {k: r for k, r in self.plan['official'].items() if r['package'] != name}
+        p = self.libraries[name]
+        p.rename(p.with_name('held-cache'))
+        with self.assertRaises((ValueError, self.adapter.MissingTool)):
+            self.family.selector_g1_cache_measurements(self.adapter, self.plan, self.tools)
+
+    def test_imported_cli_cannot_use_absent_exception(self):
+        self.plan['official']['SyntheticCli'] = {'package': 'Cli'}
+        with self.assertRaises((ValueError, self.adapter.MissingTool)):
+            self.family.selector_g1_cache_measurements(self.adapter, self.plan, self.tools)
+
+    def test_present_non_directory_cli_is_rejected(self):
+        p = self.libraries['Cli']
+        p.parent.mkdir(parents=True)
+        p.write_bytes(b'NOT A LIBRARY')
+        with self.assertRaises((ValueError, self.adapter.MissingTool)):
+            self.family.selector_g1_cache_measurements(self.adapter, self.plan, self.tools)
+
+    def test_target_audit_branch_rejects_new_sibling_before_launch(self):
+        self.family.selector_g1_cache_measurements(self.adapter, self.plan, self.tools)
+        self.extra()
+        tree = ast.parse(Path(self.family.__file__).read_text())
+        fn = next((n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'selector_g1_execute'))
+        tried = next((n for n in fn.body if isinstance(n, ast.Try)))
+        begin = next((i for i, n in enumerate(tried.body) if isinstance(n, ast.Assign) and any((isinstance(t, ast.Name) and t.id == 'libs' for t in n.targets))))
+        end = next((i for i, n in enumerate(tried.body[begin:], begin) if isinstance(n, ast.Assign) and any((isinstance(t, ast.Name) and t.id == 'audit_run' for t in n.targets))))
+        branch = ast.Module(body=tried.body[begin:end + 1], type_ignores=[])
+        ast.fix_missing_locations(branch)
+        context = dict(self.family.__dict__)
+        context.update(api=self.adapter, output=self.root / 'out', plan=self.plan, tools=self.tools, family='g1', suite=self.suite, inputs={}, resolved={'lean': self.tools['lean']}, env={}, audit=self.root / 'Audit.lean', project=self.root, logs=self.root)
+        with mock.patch.object(self.adapter, 'run_process', return_value={'terminal': 'COMPLETED', 'exit_code': 0}) as launch:
+            with self.assertRaisesRegex(ValueError, 'Unreviewed extra original import cache'):
+                exec(compile(branch, '<exact-target-audit-branch>', 'exec'), context)
+            launch.assert_not_called()
+
+class SelectorG1OriginalContractPortableTests(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('selector_g1_public_packaged_tests', SCRIPT)
+        cls.adapter = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.adapter)
+        cls.family = cls.adapter.selector_g1_load_family()
+        cls.catalog = cls.family.selector_g1_catalog(cls.adapter)
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix='selector-g1-offline-')
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+
+    def hook(self, name):
+        self.assertIsNotNone(self.family, 'Complete family integration is absent')
+        self.assertTrue(callable(getattr(self.family, name, None)), name + ' is absent')
+        return getattr(self.family, name)
+
+    def test_exact_catalog_is_code_owned(self):
+        self.catalog = self.hook('selector_g1_catalog')(self.adapter)
+        self.assertEqual(set(self.catalog['families']), {'selector', 'g1', 'g1-review'})
+        self.assertEqual([len(self.catalog['families'][f]['contract']['stages']) for f in ('selector', 'g1', 'g1-review')], [15, 120, 15])
+
+    def test_variant_source_binding_refuses_invented_original_owner(self):
+        check = self.hook('selector_g1_check_binding')
+        owner = {'owner': {'original_sha256': 'a' * 64, 'public_sha256': 'a' * 64}}
+        check(self.adapter, {'kind': 'ORIGINAL_SOURCE', 'source_id': 'owner', 'source_sha256': 'a' * 64}, owner)
+        with self.assertRaises(ValueError):
+            check(self.adapter, {'kind': 'ORIGINAL_SOURCE', 'source_id': 'invented', 'source_sha256': 'a' * 64}, owner)
+
+    def test_variant_generated_binding_keeps_owner_and_generated_digest_separate(self):
+        check = self.hook('selector_g1_check_binding')
+        owner = {'owner': {'original_sha256': 'a' * 64, 'public_sha256': 'a' * 64}}
+        value = {'kind': 'GENERATED_BY_ORIGINAL', 'source_id': 'owner', 'source_sha256': 'a' * 64, 'generated_sha256': 'b' * 64, 'derivation_id': 'AllReceiptsRemoved-CertificateSyntax'}
+        check(self.adapter, value, owner)
+        bad = dict(value, source_sha256='b' * 64)
+        with self.assertRaises(ValueError):
+            check(self.adapter, bad, owner)
+
+    def test_binding_unknown_fields_fail_closed(self):
+        check = self.hook('selector_g1_check_binding')
+        with self.assertRaises(ValueError):
+            check(self.adapter, {'kind': 'TOOL_PROBE', 'tool_name': 'lean', 'executable_sha256': 'a' * 64, 'driver_sha256': 'b' * 64, 'formal_credit': True}, {})
+
+    def test_inherited_stdout_has_terminal_without_fabricated_child_log(self):
+        capture = self.hook('selector_g1_capture_call')
+        trace = self.root / 'trace'
+        trace.mkdir()
+        event = {'id': 'preflight', 'profile': 'INHERITED_STDOUT_CHECK', 'readonly': True, 'source_binding': {'kind': 'ORIGINAL_SOURCE', 'source_id': 'driver', 'source_sha256': 'a' * 64}}
+        argv = [sys.executable, '--version']
+        calls = []
+
+        def original(given, **kw):
+            calls.append((given, kw))
+            return subprocess.CompletedProcess(given, 0, None, None)
+        result = capture(self.adapter, original, trace, 0, event, argv, {'check': True})
+        self.assertEqual(calls, [(argv, {'check': True})])
+        self.assertEqual(result.returncode, 0)
+        row = self.adapter.read_json(trace / '0000.json')
+        self.assertEqual(row['terminal'], 'COMPLETED')
+        self.assertIsNone(row['log_sha256'])
+        self.assertEqual(row['capture_kind'], 'INHERITED_PARENT_STDOUT')
+        self.assertFalse((trace / '0000.log').exists())
+
+    def test_preflight_failure_is_captured_and_reraised(self):
+        capture = self.hook('selector_g1_capture_call')
+        trace = self.root / 'trace'
+        trace.mkdir()
+        event = {'id': 'preflight', 'profile': 'INHERITED_STDOUT_CHECK', 'readonly': True, 'source_binding': {'kind': 'ORIGINAL_SOURCE', 'source_id': 'driver', 'source_sha256': 'a' * 64}}
+
+        def original(argv, **kw):
+            raise subprocess.CalledProcessError(1, argv)
+        with self.assertRaises(subprocess.CalledProcessError):
+            capture(self.adapter, original, trace, 0, event, ['python', '--verify-only'], {'check': True})
+        self.assertEqual(self.adapter.read_json(trace / '0000.json')['exit_code'], 1)
+        self.assertFalse((trace / '0000.log').exists())
+
+    def test_file_capture_preserves_original_handle_and_return(self):
+        capture = self.hook('selector_g1_capture_call')
+        trace = self.root / 'trace'
+        trace.mkdir()
+        event = {'id': 'finite', 'capture': 'FILE', 'readonly': False, 'source_binding': {'kind': 'ORIGINAL_SOURCE', 'source_id': 'finite', 'source_sha256': 'a' * 64}}
+        with (self.root / 'source.log').open('w') as stream:
+
+            def original(argv, **kw):
+                self.assertIs(kw['stdout'], stream)
+                stream.write('original finite output\n')
+                return subprocess.CompletedProcess(argv, 0, None, None)
+            result = capture(self.adapter, original, trace, 0, event, ['python', 'finite.py'], {'stdout': stream, 'stderr': subprocess.STDOUT, 'timeout': 60})
+            self.assertIsNone(result.stdout)
+        self.assertEqual((trace / '0000.log').read_bytes(), b'original finite output\n')
+
+    def test_timeout_remains_inconclusive_and_partial_log_is_retained(self):
+        capture = self.hook('selector_g1_capture_call')
+        trace = self.root / 'trace'
+        trace.mkdir()
+        event = {'id': 'compile', 'profile': 'LEAN_PIPE', 'readonly': False, 'source_binding': {'kind': 'ORIGINAL_SOURCE', 'source_id': 'proof', 'source_sha256': 'a' * 64}}
+
+        def original(argv, **kw):
+            raise subprocess.TimeoutExpired(argv, 180, output=b'partial')
+        with self.assertRaises(subprocess.TimeoutExpired):
+            capture(self.adapter, original, trace, 0, event, ['lean', 'proof.lean'], {'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT, 'text': True, 'timeout': 180})
+        row = self.adapter.read_json(trace / '0000.json')
+        self.assertEqual(row['terminal'], 'TIMEOUT')
+        self.assertIsNone(row['exit_code'])
+        self.assertEqual((trace / '0000.log').read_bytes(), b'partial')
+
+    def test_boolean_exit_is_not_a_successful_terminal(self):
+        capture = self.hook('selector_g1_capture_call')
+        trace = self.root / 'trace'
+        trace.mkdir()
+        event = {'id': 'compile', 'profile': 'LEAN_PIPE', 'readonly': False, 'source_binding': {'kind': 'ORIGINAL_SOURCE', 'source_id': 'proof', 'source_sha256': 'a' * 64}}
+
+        def original(argv, **kw):
+            return subprocess.CompletedProcess(argv, False, '')
+        with self.assertRaises(ValueError):
+            capture(self.adapter, original, trace, 0, event, ['lean'], {'stdout': subprocess.PIPE, 'text': True})
+
+    def test_actual_synthetic_child_keeps_argv_terminal_and_raw_stdout(self):
+        capture = self.hook('selector_g1_capture_call')
+        trace = self.root / 'trace'
+        trace.mkdir()
+        event = {'id': 'fixture-child', 'profile': 'LEAN_PIPE', 'readonly': False, 'source_binding': {'kind': 'ORIGINAL_SOURCE', 'source_id': 'fixture', 'source_sha256': 'a' * 64}}
+        argv = [sys.executable, '-I', '-S', '-B', '-c', 'print("synthetic real child")']
+        result = capture(self.adapter, subprocess.run, trace, 0, event, argv, {'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT, 'text': True, 'timeout': 5})
+        row = self.adapter.read_json(trace / '0000.json')
+        self.assertEqual(result.returncode, 0)
+        self.assertEqual(row['argv'], argv)
+        self.assertEqual(row['exit_code'], 0)
+        self.assertEqual((trace / '0000.log').read_text(), 'synthetic real child\n')
+
+    def test_actual_inherited_stdout_child_failure_keeps_no_separate_log(self):
+        capture = self.hook('selector_g1_capture_call')
+        trace = self.root / 'trace'
+        trace.mkdir()
+        event = {'id': 'fixture-preflight', 'profile': 'INHERITED_STDOUT_CHECK', 'readonly': True, 'source_binding': {'kind': 'ORIGINAL_SOURCE', 'source_id': 'fixture', 'source_sha256': 'a' * 64}}
+        argv = [sys.executable, '-I', '-S', '-B', '-c', 'raise SystemExit(7)']
+        with self.assertRaises(subprocess.CalledProcessError):
+            capture(self.adapter, subprocess.run, trace, 0, event, argv, {'check': True})
+        self.assertEqual(self.adapter.read_json(trace / '0000.json')['exit_code'], 7)
+        self.assertFalse((trace / '0000.log').exists())
+
+    def test_audit_target_names_are_root_qualified(self):
+        body = self.hook('selector_g1_audit_source')(self.adapter, [{'target_id': 't', 'module': 'M', 'name': 'OrthemicCertificate.check_sound'}])
+        self.assertIn('#check @_root_.OrthemicCertificate.check_sound', body)
+        self.assertIn('`OrthemicCertificate.check_sound', body)
+        self.assertNotIn('`_root_.OrthemicCertificate.check_sound', body)
+        self.assertIn('scheduled', body)
+
+    def test_historical_v2_g1_cannot_satisfy_reuse_gate(self):
+        gate = self.hook('selector_g1_dependency_identity')
+        with self.assertRaises(ValueError):
+            gate(self.adapter, 'g1-review', {'outcome': 'QUALIFIED_DECLARED_SUITE', 'replay_evidence': {'schema': 'orthemology-v5-replay-evidence-v2'}}, {}, {}, self.root)
+
+    def test_failed_only_core_cannot_satisfy_selector_gate(self):
+        gate = self.hook('selector_g1_dependency_identity')
+        with self.assertRaises(ValueError):
+            gate(self.adapter, 'selector', {'outcome': 'FAILED', 'replay_evidence': {}}, {}, {}, self.root)
+
+    def test_all_three_families_have_execution_and_receipt_dispatch(self):
+        for name in ('selector_g1_validate_suite', 'selector_g1_execute', 'selector_g1_validate_receipt', 'selector_g1_trace_main', 'selector_g1_collect'):
+            self.hook(name)
+
+
+def operational_evidence_fixture(a, packet):
+    owner = a._OPERATIONAL_DATA['packets'][packet]
+    suite = a._OPERATIONAL_DATA['descriptors'][owner['suite_id']]
+    stages = {r['id']: copy.deepcopy(r) for r in suite['replay']['stages']}
+    base = datetime(2026, 10, 5, tzinfo=timezone.utc)
+    def tm(second): return (base + timedelta(seconds=second)).isoformat().replace('+00:00', 'Z')
+    parent = {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': tm(100), 'ended_at': tm(1000), 'log_sha256': 'a' * 64}
+    executed = {'original-driver': parent}; ledger = []; outputs = {}; observations = []
+    for index, spec in enumerate(a.operational_physical_specs(packet)):
+        start, end = 110 + index * 2, 111 + index * 2
+        if spec['id'] == 'source-component': end = 240
+        if packet == 't08-batch' and spec['parent_process_id'] is None and spec['id'] != 'source-component':
+            start, end = 250 + index * 2, 251 + index * 2
+        hashes = {name.removeprefix('{out}/'): a.sha(('synthetic-' + name).encode()) for name in spec['output_paths']}
+        row = {'physical_id': spec['id'], 'source_binding': spec['source_binding'], 'source_argv': spec['source_argv'],
+            'argv': spec['argv'], 'cwd': spec['cwd'], 'started_at': tm(start), 'ended_at': tm(end), 'terminal': 'COMPLETED',
+            'exit_code': spec['expected_exit'], 'log_sha256': a.sha(('synthetic-' + spec['id']).encode()), 'output_hashes': hashes,
+            'capture_sha256': a.sha(('synthetic-capture-' + spec['id']).encode()), 'log_assembly': spec['log_assembly'], 'parent_process_id': spec['parent_process_id']}
+        ledger.append(row); outputs.update(hashes)
+    helpers = []
+    for index, hid in enumerate(owner['helper_ids']):
+        hashes = {name: 'b' * 64 for name in stages[hid]['output_paths']}
+        actual = {'started_at': tm(index * 2), 'ended_at': tm(index * 2 + 1), 'terminal': 'COMPLETED', 'exit_code': 0,
+            'log_sha256': 'c' * 64, 'output_hashes': hashes}
+        executed[hid] = actual; outputs.update(hashes)
+        helpers.append({**a.operational_helper_spec(hid), **actual})
+    invocation = {'parent_stage_id': 'original-driver', 'driver_sha256': owner['driver']['sha256'],
+        'source_argv': stages['original-driver']['argv'], 'launch_argv': a.operational_tracer_argv(stages['original-driver'], packet),
+        'launch_cwd': '{archive:source-archive}', 'runner_sha256': 'd' * 64, 'trace_sha256': 'e' * 64,
+        'parent_log_sha256': parent['log_sha256'], 'child_count': len(ledger), 'physical_children': ledger,
+        'helper_invocations': helpers, 'original_receipt_sha256': 'f' * 64}
+    for index, (sid, stage) in enumerate(stages.items()):
+        if stage['argv'][0] != '{builtin:observe-child}': continue
+        row = next(r for r in ledger if r['physical_id'] == stage['argv'][2])
+        executed[sid] = {'terminal': row['terminal'], 'exit_code': row['exit_code'], 'log_sha256': row['log_sha256'],
+            'started_at': tm(1010 + index), 'ended_at': tm(1011 + index)}
+        observations.append({'stage_id': sid, 'source_child_id': row['physical_id'], 'parent_stage_id': 'original-driver',
+            'driver_sha256': owner['driver']['sha256'], 'parser_id': owner['recipe'], 'mode': 'NONEXECUTING_OBSERVATION',
+            'argv_provenance': 'CAPTURED', **{k: row[k] for k in ('argv', 'cwd', 'started_at', 'ended_at', 'terminal', 'exit_code',
+                'log_sha256', 'source_binding', 'output_hashes', 'log_assembly')}, 'observed_at': tm(1011 + index),
+            'physical_run_sha256': 'e' * 64, 'parent_log_sha256': parent['log_sha256'], 'actual_outcome': 'ACCEPT' if row['exit_code'] == 0 else 'REJECT',
+            'result_record_sha256': 'a' * 64, 'physical_record_sha256': a.canonical(row)})
+    evidence = {'driver_invocations': [invocation], 'child_observations': observations, 'runner_sha256': 'd' * 64, 'output_hashes': outputs}
+    return evidence, {'operational_packet': packet, 'stages': stages, 'drivers': {'original': suite['replay']['drivers'][0]}}, executed
+
+
+import signal
+import time
+from datetime import datetime, timedelta, timezone
+
+class SharedProcessCleanupTests(unittest.TestCase):
+    """A stopped leader cannot conceal a still-running process-group child."""
+    CHILD = "import json,os,pathlib,signal,sys,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); pathlib.Path(sys.argv[1]).write_text(json.dumps({'pid':os.getpid(),'pgid':os.getpgrp()})); time.sleep(60)"
+    LEADER = "import subprocess,sys,time; subprocess.Popen([sys.executable,'-I','-S','-B','-c',sys.argv[1],sys.argv[2]]); time.sleep(60)"
+    INVOKER = '''import importlib.util,json,os,pathlib,signal,sys
+def stop(signum,frame): raise KeyboardInterrupt('Synthetic outer interruption')
+signal.signal(signal.SIGTERM,stop)
+spec=importlib.util.spec_from_file_location('cleanup_fixture_adapter',sys.argv[1]);api=importlib.util.module_from_spec(spec);spec.loader.exec_module(api)
+out=pathlib.Path(sys.argv[2])
+argv=[sys.executable,'-I','-S','-B','-c',sys.argv[3],sys.argv[4],str(out/'child.json')]
+result=api.run_process(argv,out,dict(os.environ),out/'stage.log',60)
+(out/'result.json').write_text(json.dumps(result))
+'''
+
+    def setUp(self):
+        if os.name != 'posix' or not Path('/proc').is_dir():
+            self.skipTest('Actual POSIX process-group fixture requires /proc')
+        self.tmp = tempfile.TemporaryDirectory(prefix='shared-cleanup-fixture-')
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        spec = importlib.util.spec_from_file_location('shared_cleanup_tests', SCRIPT)
+        self.r = importlib.util.module_from_spec(spec); spec.loader.exec_module(self.r)
+
+    def live(self, pid):
+        try: value = (Path('/proc') / str(pid) / 'stat').read_text()
+        except FileNotFoundError: return False
+        return value[value.rfind(')') + 2:].split()[0] not in {'Z', 'X'}
+
+    def gone(self, pid, seconds=1):
+        deadline = time.monotonic() + seconds
+        while self.live(pid) and time.monotonic() < deadline: time.sleep(.01)
+        return not self.live(pid)
+
+    def cleanup(self, child):
+        if child is not None and self.live(child['pid']):
+            try: os.killpg(child['pgid'], signal.SIGKILL)
+            except ProcessLookupError: pass
+            self.assertTrue(self.gone(child['pid'], 3), 'Fixture-owned cleanup failed')
+
+    def test_timeout_stops_term_ignoring_descendant_after_leader_exits(self):
+        child = None
+        try:
+            result = self.r.run_process([sys.executable, '-I', '-S', '-B', '-c', self.LEADER, self.CHILD, str(self.root/'child.json')], self.root, dict(os.environ), self.root/'stage.log', .6)
+            child = json.loads((self.root/'child.json').read_bytes())
+            self.assertEqual(result['terminal'], 'TIMEOUT'); self.assertIsNone(result['exit_code'])
+            self.assertTrue(self.gone(child['pid']), 'TERM-ignoring descendant survived timeout cleanup')
+        finally: self.cleanup(child)
+
+    def test_outer_interrupt_stops_descendant_before_invoker_terminal(self):
+        proc = None; child = None
+        try:
+            proc = subprocess.Popen([sys.executable, *(['-O'] if sys.flags.optimize else []), '-I', '-S', '-B', '-c', self.INVOKER, str(SCRIPT), str(self.root), self.LEADER, self.CHILD], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, start_new_session=True)
+            deadline = time.monotonic() + 8
+            while not (self.root/'child.json').exists() and proc.poll() is None and time.monotonic() < deadline: time.sleep(.02)
+            self.assertTrue((self.root/'child.json').exists(), 'Synthetic child did not become ready')
+            child = json.loads((self.root/'child.json').read_bytes()); started = time.monotonic()
+            os.killpg(proc.pid, signal.SIGTERM)
+            text, _ = proc.communicate(timeout=5)
+            self.assertEqual(proc.returncode, 0, text.decode(errors='replace'))
+            result = json.loads((self.root/'result.json').read_bytes())
+            self.assertEqual(result['terminal'], 'INTERRUPTED'); self.assertIsNone(result['exit_code'])
+            self.assertLess(time.monotonic()-started, 5)
+            self.assertTrue(self.gone(child['pid']), 'TERM-ignoring descendant survived invoker terminal')
+        finally:
+            if proc is not None and proc.poll() is None:
+                os.killpg(proc.pid, signal.SIGKILL); proc.communicate(timeout=3)
+            self.cleanup(child)
+
+    def test_completed_child_keeps_real_terminal_and_output(self):
+        result = self.r.run_process([sys.executable, '-I', '-S', '-B', '-c', 'print("completed fixture")'], self.root, dict(os.environ), self.root/'stage.log', 3)
+        self.assertEqual(result['terminal'], 'COMPLETED'); self.assertEqual(result['exit_code'], 0)
+        self.assertEqual((self.root/'stage.log').read_text(), 'completed fixture\n')
+
+    def test_stdin_timeout_stops_term_ignoring_descendant(self):
+        child = None
+        stdin = self.root/'input.txt'; stdin.write_text('synthetic input\n')
+        try:
+            result = self.r._t15_reference_input_process([sys.executable, '-I', '-S', '-B', '-c', self.LEADER, self.CHILD, str(self.root/'child.json')], self.root, dict(os.environ), self.root/'stage.log', .6, stdin)
+            child = json.loads((self.root/'child.json').read_bytes())
+            self.assertEqual(result['terminal'], 'TIMEOUT'); self.assertIsNone(result['exit_code'])
+            self.assertTrue(self.gone(child['pid']), 'TERM-ignoring descendant survived stdin timeout cleanup')
+        finally: self.cleanup(child)
+
+class D04NegativeProofHoleDiagnosticsTests(unittest.TestCase):
+    def setUp(self):
+        spec = importlib.util.spec_from_file_location('d04_negative_diagnostic_tests', SCRIPT)
+        self.r = importlib.util.module_from_spec(spec); spec.loader.exec_module(self.r)
+        self.spec = {'id':'synthetic-negative', 'argv':['lean','Control.lean'], 'cwd':'/synthetic',
+            'timeout_seconds':180, 'capture':'MERGED_TEXT', 'stdin':'INHERITED_NO_INPUT',
+            'outputs':[], 'expected_exit_code':1, 'required_diagnostics':['type mismatch'], 'forbidden_diagnostics':[]}
+        self.log = b"error: type mismatch\n'Fixture.rejected' depends on axioms: [sorryAx]\n"
+        self.parent = {'started_at':'2026-10-05T00:00:00Z','ended_at':'2026-10-05T00:00:04Z'}
+        self.row = {'id':self.spec['id'], 'argv':self.spec['argv'], 'cwd':self.spec['cwd'],
+            'timeout_seconds':180,'capture':'MERGED_TEXT','stdin':{'mode':'INHERITED_NO_INPUT','data_sha256':None},
+            'started_at':'2026-10-05T00:00:01Z','ended_at':'2026-10-05T00:00:02Z',
+            'terminal':'COMPLETED','exit_code':1,'log_sha256':self.r.sha(self.log),'output_hashes':{}}
+
+    def assess(self, log=None):
+        log = self.log if log is None else log
+        self.row['log_sha256'] = self.r.sha(log)
+        return self.r.d04_assess_captured_child(self.spec,self.row,log,self.parent)
+
+    def test_failed_compiler_fixture_keeps_intended_rejection(self):
+        self.assertEqual(self.assess(), {'outcome':'REJECT','rejection_credit':True})
+
+    def test_successful_child_cannot_claim_proof_with_sorry_axiom(self):
+        self.spec.update(expected_exit_code=0,required_diagnostics=[]); self.row['exit_code']=0
+        with self.assertRaisesRegex(ValueError,'proof hole'): self.assess()
+
+    def test_hole_literal_does_not_replace_required_rejection_diagnostic(self):
+        with self.assertRaisesRegex(ValueError,'intended control diagnostic'): self.assess(b"'Fixture.rejected' depends on axioms: [sorryAx]\n")
+
+    def test_negative_infrastructure_failure_is_still_refused(self):
+        with self.assertRaisesRegex(ValueError,'infrastructure failure'): self.assess(self.log+b'unknown constant Fixture.missing\n')
+
+    def test_resource_output_never_becomes_rejection(self):
+        self.assertEqual(self.assess(self.log+b'out of memory\n'), {'outcome':'RESOURCE_INCONCLUSIVE','rejection_credit':False})
+
+class RemainingDispatchBoundaryTests(unittest.TestCase):
+    def setUp(self):
+        spec = importlib.util.spec_from_file_location('remaining_dispatch_tests', SCRIPT)
+        self.r = importlib.util.module_from_spec(spec); spec.loader.exec_module(self.r)
+
+    def test_malformed_suite_is_rejected_by_schema_gate(self):
+        for suite in (None, [], 1, 'invalid', {'replay':None}, {'replay':[]}, {'replay':1}):
+            with self.subTest(suite=suite), self.assertRaises(ValueError):
+                self.r.validate_suite(suite, {}, Path('.'))
+
+    def test_malformed_receipt_does_not_enter_new_families(self):
+        for receipt in (None, [], 1, {'replay_evidence':None}, {'replay_evidence':[]}):
+            with self.subTest(receipt=receipt), self.assertRaises(ValueError):
+                self.r.validate_receipt(receipt, {}, {}, Path('.'))
+
+class OperationalProtocolTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('operational_public_controls', SCRIPT)
+        cls.r = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.r)
+
+    def test_complete_physical_plans_keep_noncredit_children(self):
+        expected = {'t08-common': 48, 't08-batch': 74, 't08-shared': 48,
+                    't08-controller': 40, 't09-controller': 70, 't09-transport': 38}
+        for packet, count in expected.items():
+            with self.subTest(packet=packet):
+                rows = self.r.operational_physical_specs(packet)
+                self.assertEqual(len(rows), count)
+                self.assertEqual(len({r['id'] for r in rows}), count)
+                self.assertTrue(any(r['source_binding']['kind'] == 'TOOL_PROBE' for r in rows))
+
+    def test_batch_generated_audit_binds_nested_generator(self):
+        rows = self.r.operational_physical_specs('t08-batch')
+        row = next(r for r in rows if r['id'] == 'fresh science/AllNamedDeclarations')
+        self.assertEqual(row['source_binding']['kind'], 'GENERATED_BY_ORIGINAL')
+        self.assertEqual(row['source_binding']['source_sha256'], '276a9b4f7d8b304b4c553a28a029dfb006c6b0475b7a316a77467897d37b8731')
+        owner = next(r for r in rows if r['id'] == 'source-component')
+        self.assertEqual(owner['source_binding']['kind'], 'ARCHIVE_MEMBER')
+
+    def test_t09_keeps_inherited_cwd_and_no_j1(self):
+        rows = self.r.operational_physical_specs('t09-controller')
+        for row in rows:
+            self.assertNotIn('-j1', row['source_argv'])
+            self.assertEqual(row['cwd'], '{archive:source-archive}')
+
+    def test_changed_bound_source_rejected(self):
+        row = copy.deepcopy(self.r.operational_physical_specs('t08-common')[1])
+        row['source_binding']['source_sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'binding'):
+            self.r.operational_validate_source_binding('t08-common', row['id'], row['source_binding'])
+
+    def test_helper_partial_unittest_is_rejected(self):
+        config = self.r._OPERATIONAL_DATA['helpers']['t08-common-helper-1']
+        text = '\n'.join(name + ' (__main__.Probe) ... ok' for name in config['unittest_names'][:-1])
+        text += '\nRan 11 tests in 0.1s\n\nOK\n'
+        with self.assertRaises(ValueError):
+            self.r.operational_check_helper('t08-common-helper-1', text, None, None)
+
+    def test_helper_complete_source_owned_unittest_names(self):
+        config = self.r._OPERATIONAL_DATA['helpers']['t08-common-helper-1']
+        text = '\n'.join(name + ' (__main__.Probe) ... ok' for name in config['unittest_names'])
+        text += '\nRan 12 tests in 0.1s\n\nOK\n'
+        self.r.operational_check_helper('t08-common-helper-1', text, None, None)
+
+    def test_helper_probe_does_not_gain_mutation_credit(self):
+        config = self.r._OPERATIONAL_DATA['helpers']['t08-controller-helper-1']
+        self.assertEqual(config['stage']['control_ids'], [])
+        self.assertEqual(config['max_compiler_processes'], 0)
+
+class OperationalCaptureBindingTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('operational_public_controls', SCRIPT)
+        cls.r = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.r)
+
+    def setUp(self):
+        self.packet = 't09-controller'
+        self.spec = self.r.operational_physical_specs(self.packet)[1]
+        self.parent = {'started_at': '2026-10-05T01:00:00Z', 'ended_at': '2026-10-05T01:01:00Z', 'terminal': 'COMPLETED', 'exit_code': 0}
+        self.row = {'physical_id': self.spec['id'], 'source_binding': self.spec['source_binding'],
+            'source_argv': self.spec['source_argv'], 'argv': self.spec['argv'], 'cwd': self.spec['cwd'],
+            'started_at': '2026-10-05T01:00:01Z', 'ended_at': '2026-10-05T01:00:02Z',
+            'terminal': 'COMPLETED', 'exit_code': 0, 'log_sha256': self.r.sha(b''),
+            'output_hashes': {p.removeprefix('{out}/'): 'a' * 64 for p in self.spec['output_paths']},
+            'capture_sha256': 'b' * 64, 'log_assembly': self.spec['log_assembly'],
+            'parent_process_id': self.spec['parent_process_id']}
+
+    def test_exact_measured_child_is_accepted(self):
+        self.r.operational_validate_physical_row(self.packet, self.row, self.parent, True)
+
+    def test_fabricated_time_is_rejected(self):
+        self.row['started_at'] = self.parent['ended_at']
+        with self.assertRaises(ValueError): self.r.operational_validate_physical_row(self.packet, self.row, self.parent, True)
+
+    def test_original_cwd_is_not_project_cwd(self):
+        self.row['cwd'] = '{project}'
+        with self.assertRaises(ValueError): self.r.operational_validate_physical_row(self.packet, self.row, self.parent, True)
+
+    def test_missing_capture_hash_is_not_physical_evidence(self):
+        self.row['capture_sha256'] = None
+        with self.assertRaises(ValueError): self.r.operational_validate_physical_row(self.packet, self.row, self.parent, True)
+
+    def test_changed_object_census_is_rejected(self):
+        self.row['output_hashes'] = {}
+        with self.assertRaises(ValueError): self.r.operational_validate_physical_row(self.packet, self.row, self.parent, True)
+
+    def test_timeout_retained_but_never_completed_credit(self):
+        self.row.update(terminal='TIMEOUT', exit_code=None, output_hashes={})
+        self.r.operational_validate_physical_row(self.packet, self.row, self.parent, False)
+        with self.assertRaises(ValueError): self.r.operational_validate_physical_row(self.packet, self.row, self.parent, True)
+
+    def test_probe_cannot_emit_custom_object(self):
+        spec = self.r.operational_physical_specs(self.packet)[0]
+        self.row.update(physical_id=spec['id'], source_binding=spec['source_binding'], source_argv=spec['source_argv'], argv=spec['argv'])
+        with self.assertRaises(ValueError): self.r.operational_validate_physical_row(self.packet, self.row, self.parent, True)
+
+    def test_parent_failure_cannot_qualify_observations(self):
+        self.parent['exit_code'] = 1
+        with self.assertRaises(ValueError): self.r.operational_validate_physical_row(self.packet, self.row, self.parent, True)
+
+class OperationalEvidenceTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('operational_public_controls', SCRIPT)
+        cls.r = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.r)
+
+    def test_complete_synthetic_receipt_grammar_all_six(self):
+        for packet in self.r._OPERATIONAL_DATA['packets']:
+            with self.subTest(packet=packet): self.r.operational_validate_child_evidence(*operational_evidence_fixture(self.r, packet), True)
+    def test_missing_version_probe_rejected(self):
+        e, p, s = operational_evidence_fixture(self.r, 't09-controller'); e['driver_invocations'][0]['physical_children'].pop(0); e['driver_invocations'][0]['child_count'] -= 1
+        with self.assertRaises(ValueError): self.r.operational_validate_child_evidence(e, p, s, True)
+    def test_helper_cannot_be_omitted(self):
+        e, p, s = operational_evidence_fixture(self.r, 't08-common'); e['driver_invocations'][0]['helper_invocations'].pop()
+        with self.assertRaises(ValueError): self.r.operational_validate_child_evidence(e, p, s, True)
+    def test_helper_later_than_parent_rejected(self):
+        e, p, s = operational_evidence_fixture(self.r, 't08-controller'); h = e['driver_invocations'][0]['helper_invocations'][0]
+        h['ended_at'] = s[h['stage_id']]['ended_at'] = s['original-driver']['ended_at']
+        with self.assertRaises(ValueError): self.r.operational_validate_child_evidence(e, p, s, True)
+    def test_same_child_cannot_supply_two_observers(self):
+        e, p, s = operational_evidence_fixture(self.r, 't08-common'); e['child_observations'][1]['source_child_id'] = e['child_observations'][0]['source_child_id']
+        with self.assertRaises(ValueError): self.r.operational_validate_child_evidence(e, p, s, True)
+    def test_nested_parent_is_not_an_extra_scientific_observer(self):
+        e, p, s = operational_evidence_fixture(self.r, 't08-batch'); e['child_observations'][0]['source_child_id'] = 'source-component'
+        with self.assertRaises(ValueError): self.r.operational_validate_child_evidence(e, p, s, True)
+    def test_wrong_record_link_is_rejected(self):
+        e, p, s = operational_evidence_fixture(self.r, 't08-shared'); e['child_observations'][-1]['physical_record_sha256'] = '0' * 64
+        with self.assertRaises(ValueError): self.r.operational_validate_child_evidence(e, p, s, True)
+    def test_old_controller_wrapper_count_cannot_be_minted(self):
+        e, p, s = operational_evidence_fixture(self.r, 't08-controller'); e['driver_invocations'][0]['inherited_wrapper_tests_replayed'] = 23
+        with self.assertRaises(ValueError): self.r.operational_validate_child_evidence(e, p, s, True)
+    def test_serial_children_cannot_overlap(self):
+        e, p, s = operational_evidence_fixture(self.r, 't09-transport'); rows = e['driver_invocations'][0]['physical_children']
+        rows[1]['started_at'] = rows[0]['started_at']
+        observed = next(r for r in e['child_observations'] if r['source_child_id'] == rows[1]['physical_id'])
+        observed['started_at'] = rows[1]['started_at']; observed['physical_record_sha256'] = self.r.canonical(rows[1])
+        with self.assertRaises(ValueError): self.r.operational_validate_child_evidence(e, p, s, True)
+
+
+class RemainingReviewedDispatchTests(unittest.TestCase):
+    def setUp(self):
+        spec = importlib.util.spec_from_file_location('reviewed_dispatch', SCRIPT)
+        self.r = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.r)
+
+    def test_unhashable_suite_identity_reaches_schema_gate(self):
+        for identity in ([], {}):
+            with self.subTest(identity=identity), self.assertRaises(ValueError):
+                self.r.validate_suite({'id': identity, 'replay': {}}, {}, Path('.'))
+
+    def test_unhashable_driver_recipe_reaches_schema_gate(self):
+        for recipe in ([], {}):
+            with self.subTest(recipe=recipe), self.assertRaises(ValueError):
+                self.r.validate_suite({'id': 'fixture', 'replay': {'drivers': [{'recipe': recipe}]}}, {}, Path('.'))
+
+    def test_missing_operational_identity_does_not_bypass_schema_refusal(self):
+        with self.assertRaises(ValueError):
+            self.r.execute_suite({'replay': {'drivers': []}}, {}, Path('.'), Path('uncreated-output'), {}, {})
 
 
 if __name__ == '__main__':
