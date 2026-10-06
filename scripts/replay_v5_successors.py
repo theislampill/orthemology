@@ -1920,6 +1920,7 @@ def t10_result(stage, text, plan, output, suite):
 
 
 def validate_suite(suite, sources, root):
+    if p1_tail_finish_handles(suite): return p1_tail_finish_validate_suite(p1_api(), suite, sources, root)
     if p1_tail_handles(suite): return p1_tail_validate_suite(p1_api(), suite, sources, root)
     """Offline checks only. Neither a descriptor nor a review Boolean authorises code."""
     if selector_g1_handles(suite):
@@ -2870,6 +2871,7 @@ def _initial_receipt(suite, sources, reviews):
 
 
 def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, reviews=None):
+    if p1_tail_finish_handles(suite): return p1_tail_finish_execute_suite(p1_api(), suite, sources, root, output, tools, inputs, scope=scope, reviews=reviews)
     if p1_tail_handles(suite): return p1_tail_execute_suite(p1_api(), suite, sources, root, output, tools, inputs, scope=scope, reviews=reviews)
     if selector_g1_handles(suite):
         family = selector_g1_load_family()
@@ -4082,7 +4084,7 @@ def execute_covering_audit_continuation(suite, sources, root, prior, output, too
                                                reviews=reviews, adapter=SimpleNamespace(**globals()))
 
 
-SELECTOR_CONTINUATION_REVIEWED_EXECUTORS = frozenset()
+SELECTOR_CONTINUATION_REVIEWED_EXECUTORS = frozenset({'46136526f8107b702873c82fed6fa9cdb23c061526acaeefd638e56917c57bef'})
 SELECTOR_CONTINUATION_ASSETS = {'v5_selector_continuation.py': '439e07450f1c3ce2a7cea2442ee9ebddf48453beecb6fcad4711409c90f9e8bf', 'v5_selector_executor.py': 'c3d24b36478ea25835fc92242747eab4f023c8b99548c93a9d36a132f6b4dff3'}
 
 
@@ -4122,6 +4124,7 @@ def d04_public_receipt_load():
     return SimpleNamespace(**namespace)
 
 def validate_receipt(receipt, suite, sources, root):
+    if p1_tail_finish_handles(suite): return p1_tail_finish_validate_receipt(p1_api(), receipt, suite, sources, root)
     if p1_tail_handles(suite): return p1_tail_validate_receipt(p1_api(), receipt, suite, sources, root)
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == 'orthemology-v5-selector-audit-continuation-v1':
         helper, _ = selector_continuation_load()
@@ -5694,6 +5697,26 @@ def p1_tail_load_assets():
 
 
 p1_tail_load_assets()
+
+
+# Accepted failed-tail receipts remain readable through this unrelated additive family.
+p1_tail_accepted_predecessors = {**globals().get('p1_tail_accepted_predecessors', {}),
+    'adf77b78db8b4d0cfb234f40aba6945b62de05972dc1e449a07e47ac6aed8ee1': p1_tail_clone(p1_tail_asset_pins)}
+p1_tail_finish_asset_pins = {'v5_p1_tail_finish_recipes.json': {'sha256': '3e2252f43e8a1746f85cf84d4574a349004bcdad22f12d587ae769c3a15abfbc', 'bytes': 5643}, 'v5_p1_tail_finish_assets/p1_tail_finish_recipe.py': {'sha256': 'ec4f73806de730cc5d06493c32893dee3ec8ea43fc53e51823db5a26bde875b6', 'bytes': 39293}}
+
+def p1_tail_finish_load_assets():
+    base = Path(__file__).resolve().parent
+    content = {}
+    for name, pin in p1_tail_finish_asset_pins.items():
+        raw = no_symlinks(path_in(base, name)).read_bytes()
+        require(len(raw) == pin['bytes'] and sha(raw) == pin['sha256'], 'P1 finish reviewed asset identity changed: ' + name)
+        content[name] = raw
+    globals()['p1_tail_finish_meta'] = json.loads(content['v5_p1_tail_finish_recipes.json'])
+    name = 'v5_p1_tail_finish_assets/p1_tail_finish_recipe.py'
+    exec(compile(content[name], str(base / name), 'exec'), globals())
+
+p1_tail_finish_load_assets()
+
 
 
 
