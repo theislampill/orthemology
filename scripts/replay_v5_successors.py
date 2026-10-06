@@ -4056,7 +4056,33 @@ def execute_history_audit_continuation(suite, sources, root, prior, output, tool
 
 
 
+COVERING_REVIEWED_EXECUTOR_HASHES = frozenset()
+
+
+def covering_continuation_load():
+    """Load the exact covering continuation helper and its retained-data pins."""
+    path = no_symlinks(Path(__file__).with_name('v5_covering_continuation.py'))
+    raw = path.read_bytes()
+    require(sha(raw) == 'ebed39c4cf80983b9ef667a656d519decfc449585004245395eec578948adba7',
+            'Unreviewed covering continuation helper')
+    namespace = {'__file__': str(path), '__name__': 'v5_covering_continuation'}
+    exec(compile(raw, str(path), 'exec'), namespace)
+    # Executor compatibility belongs to the adapter, so the reviewed helper and
+    # its data remain byte-identical when a later adapter admits an earlier run.
+    namespace['REVIEWED_EXECUTOR_HASHES'] = COVERING_REVIEWED_EXECUTOR_HASHES
+    helper = SimpleNamespace(**namespace)
+    helper.data(SimpleNamespace(**globals()))
+    return helper
+
+
+def execute_covering_audit_continuation(suite, sources, root, prior, output, tools, inputs, *, reviews=None):
+    return covering_continuation_load().execute(suite, sources, root, prior, output, tools, inputs,
+                                               reviews=reviews, adapter=SimpleNamespace(**globals()))
+
+
 def validate_receipt(receipt, suite, sources, root):
+    if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == 'orthemology-v5-covering-audit-continuation-v1':
+        return covering_continuation_load().validate_receipt(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     if selector_g1_handles(suite):
         family = selector_g1_load_family()
         return family.selector_g1_validate_receipt(family.selector_g1_adapter_view(globals()), receipt, suite, sources, root)
@@ -5662,7 +5688,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     mode = parser.add_mutually_exclusive_group(required=True)
-    for name in ('list', 'check', 'project', 'execute', 'audit-continuation', 'history-audit-continuation'): mode.add_argument('--' + name, action='store_true')
+    for name in ('list', 'check', 'project', 'execute', 'audit-continuation', 'history-audit-continuation', 'covering-audit-continuation'): mode.add_argument('--' + name, action='store_true')
     parser.add_argument('--suite'); parser.add_argument('--out', type=Path); parser.add_argument('--prior', type=Path)
     parser.add_argument('--tool', action='append', default=[]); parser.add_argument('--input', action='append', default=[])
     parser.add_argument('--lean-bin', type=Path); parser.add_argument('--mathlib', type=Path); parser.add_argument('--python', type=Path)
@@ -5690,7 +5716,10 @@ def main():
         if args.mathlib: require('mathlib' not in tools, 'Duplicate Mathlib binding'); tools['mathlib'] = args.mathlib
         if args.python: require('python' not in tools, 'Duplicate Python binding'); tools['python'] = args.python
         reviews = {r['id']: r for r in bundle['reviews']}
-        if args.history_audit_continuation:
+        if args.covering_audit_continuation:
+            require(args.prior is not None, 'Covering continuation requires the exact retained --prior run directory')
+            receipt = execute_covering_audit_continuation(suite, sources, args.root, args.prior, args.out, tools, inputs, reviews=reviews)
+        elif args.history_audit_continuation:
             require(args.prior is not None, 'History continuation requires the exact retained --prior run directory')
             receipt = execute_history_audit_continuation(suite, sources, args.root, args.prior, args.out, tools, inputs, reviews=reviews)
         elif args.audit_continuation:
