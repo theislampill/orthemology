@@ -1815,6 +1815,234 @@ class AuditContinuationExecutorTests(unittest.TestCase):
         self.assertEqual(validation.call_args.kwargs['adapter'].__file__, self.r.__file__)
 
 
+class HistoryContinuationTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('history_continuation_under_test', SCRIPT)
+        cls.r = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.r)
+
+    def setUp(self):
+        self.assertTrue(hasattr(self.r, '_execute_history_audit_continuation'), 'History audit-only executor is absent')
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.base = Path(self.tmp.name)
+        self.source = self.base / 'source'; self.source.mkdir()
+        self.prior = self.base / 'prior'; self.prior.mkdir()
+
+    def execution_fixture(self):
+        data = AuditContinuationExecutorTests.execution_fixture(self)
+        a, suite, plan, sources, reviews, artifact = data
+        prior = a._ac_eligible_prior.return_value[0]; old = prior['replay_evidence']
+        suite['id'] = a.HC_SUITE
+        suite['controls'] = [{'id': 'observed-positive', 'source_id': 'source', 'target_id': 'a', 'role': 'POSITIVE',
+                              'expected_outcome': 'ACCEPT', 'expected_outcome_sha256': self.r.sha(b'ACCEPT')}]
+        plan['stages'] = {'original-driver': {'id': 'original-driver'}, 'observe-positive': {
+            'id': 'observe-positive', 'control_ids': ['observed-positive']}}
+        prior.update(suite_id=suite['id'], controls=[])
+        old.update(driver_invocations=[{'parent_stage_id': 'original-driver', 'runner_sha256': '0' * 64}],
+                   stage_results=[{'id': '_prerequisites'}, {'id': 'original-driver'}])
+        audit = {'scope': 'SYNTHETIC SOURCE/LOG ASSOCIATION', 'names': ['Fixture.ok']}
+        collection = {'parser_id': 'fixture', 'parser_revision': 'fixture', 'collector_runner_sha256': self.r.sha(Path(a.__file__).read_bytes()),
+            'observed_at': self.r.utc(), 'driver_invocations': old['driver_invocations'], 'child_observations': [],
+            'stage_results': [{'id': 'observe-positive', 'terminal': 'COMPLETED', 'exit_code': 0, 'log_sha256': 'a' * 64}],
+            'control_diagnostics': [], 'output_hashes': {'original/build/Fixture.olean': self.r.sha(artifact.read_bytes())},
+            'source_audit_sha256': self.r.canonical(audit)}
+        a.HC_OBJECTS = dict(collection['output_hashes'])
+        a.HC_SOURCE_AUDIT_SHA256 = self.r.canonical(audit)
+        a.HC_COLLECTION_SHA256 = self.r._hc_collection_digest(collection, a)
+        a.HC_SUITE_SHA256 = self.r.canonical(suite)
+        a.HC_APPROVAL = 'a' * 64; a.APPROVED_DECLARED_SUITES = {suite['id']: a.HC_APPROVAL}
+        a.HC_AUDIT_SOURCE = a.AC_AUDIT_SOURCE
+        a.HC_PROJECT_TREE = a.AC_PROJECT_TREE
+        original = json.dumps({'status': 'SYNTHETIC PRODUCER RESULT'}).encode()
+        (self.prior / 'original/REPLAY_RECEIPT.json').write_bytes(original)
+        encoded = json.dumps(prior).encode(); (self.prior / 'RECEIPT.json').write_bytes(encoded)
+        a.HC_PRIOR = {'receipt_sha256': self.r.sha(encoded), 'receipt_canonical_sha256': self.r.canonical(prior),
+                     'receipt_bytes': len(encoded), 'failure_record_sha256': self.r.sha(b'old failure'),
+                     'original_receipt_sha256': self.r.sha(original), 'original_receipt_canonical_sha256': self.r.canonical(json.loads(original)),
+                     'original_receipt_bytes': len(original)}
+        a.HC_RETAINED_TREE = self.r._ac_exec_inventory(self.prior, a)[1]
+        a._hc_prior = mock.Mock(return_value=(prior, old, {row['id']: row for row in old['stage_results']}))
+        a._hc_exec_collection = mock.Mock(return_value=(collection, audit))
+        a.validate_history_continuation = mock.Mock(return_value={'outcome': 'QUALIFIED_DECLARED_SUITE'})
+        return data
+
+    def execute_fixture(self, data):
+        a, suite, _, sources, reviews, _ = data
+        return self.r._execute_history_audit_continuation(suite, sources, self.source, self.prior,
+            self.base / 'new', {}, {}, reviews=reviews, adapter=a)
+
+    def test_history_continuation_collects_old_children_and_runs_only_missing_audit(self):
+        data = self.execution_fixture(); a = data[0]
+        before = self.r._ac_exec_inventory(self.prior, a)
+        receipt = self.execute_fixture(data)
+        self.assertEqual(receipt['outcome'], 'QUALIFIED_DECLARED_SUITE')
+        self.assertEqual(a.run_process.call_count, 1)
+        self.assertEqual(a._verify_environment.call_count, 2)
+        self.assertEqual(a._hc_exec_collection.call_count, 1)
+        self.assertEqual(self.r._ac_exec_inventory(self.prior, a), before)
+        self.assertEqual([row['id'] for row in receipt['stages']], ['_prerequisites', '_target_audit'])
+        self.assertEqual(receipt['replay_evidence']['prior']['receipt']['outcome'], 'FAILED')
+        self.assertEqual(receipt['controls'][0]['exit_code'], 0)
+        self.assertEqual(receipt['replay_evidence']['accounting']['new_child_compilations'], 0)
+        self.assertFalse((self.base / 'new/project').exists())
+
+    def test_history_continuation_changed_retained_object_stops_before_audit(self):
+        data = self.execution_fixture(); data[-1].write_bytes(b'changed object')
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        data[0].run_process.assert_not_called()
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+
+    def test_history_continuation_collection_and_source_audit_are_independently_pinned(self):
+        data = self.execution_fixture(); a = data[0]
+        collection, audit = a._hc_exec_collection.return_value
+        collection['output_hashes']['original/build/Fixture.olean'] = 'f' * 64
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        a.run_process.assert_not_called()
+        self.assertIsNone(self.r.read_json(self.base / 'new/REFUSAL.json')['audit_process'])
+
+    def test_history_continuation_rejects_changed_source_audit_even_when_collection_is_resealed(self):
+        data = self.execution_fixture(); a = data[0]
+        collection, audit = a._hc_exec_collection.return_value
+        audit['names'] = ['Foreign.name']
+        collection['source_audit_sha256'] = self.r.canonical(audit)
+        a.HC_COLLECTION_SHA256 = self.r._hc_collection_digest(collection, a)
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        a.run_process.assert_not_called()
+
+    def test_history_continuation_changed_tool_binding_stops_before_collection(self):
+        data = self.execution_fixture(); a = data[0]
+        values = list(a._verify_environment.return_value); values[1] = {'lean': {'executable_sha256': 'f' * 64}}
+        a._verify_environment.return_value = tuple(values)
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        a._hc_exec_collection.assert_not_called(); a.run_process.assert_not_called()
+
+    def test_history_continuation_post_audit_changes_preserve_actual_zero_as_refusal(self):
+        data = self.execution_fixture(); original = data[0].run_process.side_effect
+        def changed(*args):
+            run = original(*args); data[-1].write_bytes(b'changed after audit'); return run
+        data[0].run_process.side_effect = changed
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        self.assertEqual(self.r.read_json(self.base / 'new/REFUSAL.json')['audit_process']['exit_code'], 0)
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+
+    def test_history_continuation_resource_keeps_retained_controls_without_new_target_credit(self):
+        data = self.execution_fixture(); original = data[0].run_process.side_effect
+        def timeout(*args):
+            return {**original(*args), 'terminal': 'TIMEOUT', 'exit_code': None}
+        data[0].run_process.side_effect = timeout
+        receipt = self.execute_fixture(data)
+        self.assertEqual((receipt['outcome'], receipt['proof_scope']), ('RESOURCE_INCONCLUSIVE', 'NONE'))
+        self.assertEqual(receipt['target_readbacks'], [])
+        self.assertEqual(receipt['replay_evidence']['target_audits'], [])
+        self.assertEqual(receipt['controls'][0]['actual_outcome'], 'ACCEPT')
+        self.assertIsNone(receipt['stages'][-1]['exit_code'])
+
+    def test_history_continuation_parser_error_does_not_invent_a_process_failure(self):
+        data = self.execution_fixture()
+        def malformed(argv, cwd, env, log, timeout):
+            Path(log).write_bytes(b'no target readback')
+            return {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': self.r.utc(), 'ended_at': self.r.utc(),
+                    'log_sha256': self.r.sha(Path(log).read_bytes())}
+        data[0].run_process.side_effect = malformed
+        with self.assertRaises(ValueError): self.execute_fixture(data)
+        self.assertEqual(self.r.read_json(self.base / 'new/REFUSAL.json')['audit_process']['exit_code'], 0)
+        self.assertFalse((self.base / 'new/RECEIPT.json').exists())
+
+    def test_history_continuation_collection_digest_excludes_only_new_parser_attribution(self):
+        data = self.execution_fixture(); collection = data[0]._hc_exec_collection.return_value[0]
+        original = self.r._hc_collection_digest(collection, self.r)
+        changed = copy.deepcopy(collection); changed['collector_runner_sha256'] = 'f' * 64
+        changed['observed_at'] = '2030-01-01T00:00:00Z'
+        self.assertEqual(self.r._hc_collection_digest(changed, self.r), original)
+        changed['driver_invocations'][0]['runner_sha256'] = 'e' * 64
+        self.assertNotEqual(self.r._hc_collection_digest(changed, self.r), original)
+
+    def test_history_continuation_prior_bytes_canonical_and_failure_anchors_are_not_resealable(self):
+        data = self.execution_fixture(); a = data[0]
+        self.r._hc_exec_prior(self.prior, a)
+        path = self.prior / 'RECEIPT.json'; original = path.read_bytes()
+        path.write_bytes(original + b'\n')
+        with self.assertRaises(ValueError): self.r._hc_exec_prior(self.prior, a)
+        a.HC_PRIOR['receipt_bytes'] += 1; a.HC_PRIOR['receipt_sha256'] = self.r.sha(path.read_bytes())
+        (self.prior / 'FAILURE.json').write_bytes(b'forged failure')
+        with self.assertRaises(ValueError): self.r._hc_exec_prior(self.prior, a)
+
+    def test_history_continuation_dispatch_and_prior_trust_anchor_remain_explicit(self):
+        with mock.patch.object(self.r, 'validate_history_continuation', return_value={'checked': True}) as validate:
+            value = self.r.validate_receipt({'replay_evidence': {'schema': self.r.HC_SCHEMA}}, {}, {}, self.source)
+        self.assertEqual(value, {'checked': True}); validate.assert_called_once()
+        bad = {**self.r.HC_PRIOR, 'receipt': {}, 'receipt_sha256': '0' * 64}
+        with self.assertRaises(ValueError): self.r._hc_prior({'prior': bad}, {}, {}, self.source, self.r, {})
+
+    def test_history_pure_fresh_ledger_refuses_replayed_children_and_resource_credit(self):
+        r = self.r
+        stages = [{'id': sid, 'argv': argv, 'cwd': '.', 'budget_seconds': budget,
+                   'started_at': '2026-01-01T00:00:01Z', 'ended_at': '2026-01-01T00:00:02Z',
+                   'terminal': 'COMPLETED', 'exit_code': 0, 'log_sha256': 'a' * 64, 'output_hashes': {}}
+                  for sid, argv, budget in [('_prerequisites', ['{builtin:prerequisites}'], 30),
+                      ('_target_audit', ['{tool:lean}', '-j1', '{out}/generated/V5SuccessorReadback.lean'], 300)]]
+        stages[1]['started_at'] = '2026-01-01T00:00:02Z'
+        def check(rows):
+            receipt = {'started_at': '2026-01-01T00:00:00Z', 'ended_at': '2026-01-01T00:00:03Z',
+                'stages': [{key: row[key] for key in ('id', 'terminal', 'exit_code', 'log_sha256')} for row in rows],
+                'log_sha256': r.canonical({row['id']: row['log_sha256'] for row in rows})}
+            return r._hc_fresh(receipt, {'stage_results': rows}, {'ended_at': '2025-01-01T00:00:00Z'}, r)
+        self.assertEqual(check(stages)['id'], '_target_audit')
+        for change in [dict(stages[1], id='original-driver'), dict(stages[1], terminal='TIMEOUT', exit_code=1),
+                       dict(stages[1], exit_code=False), dict(stages[1], budget_seconds=301),
+                       dict(stages[1], output_hashes={'Fresh.olean': 'b' * 64})]:
+            with self.subTest(change=change), self.assertRaises(ValueError): check([stages[0], change])
+
+    def test_history_pure_retained_checks_require_exact_tree_objects_and_cache_policy(self):
+        r = self.r; collection = {'child_observations': [], 'driver_invocations': []}
+        suite = {'replay': {'external_inputs': [{'expected_sha256': 'a' * 64}]}}
+        plan = {'packages': {'Cli': {}}, 'official': {}}
+        checks = {'mode': 'REUSED_CAMPAIGN_EXECUTION', 'stage_ids': ['_prerequisites', 'original-driver'],
+            'physical_trace_sha256': r.HC_TRACE, 'original_result_sha256': r.HC_PRIOR['original_receipt_sha256'],
+            'child_ledger_sha256': r.canonical([]), 'driver_invocations_sha256': r.canonical([]),
+            'archive_sha256': 'a' * 64, 'retained_tree_before_sha256': r.HC_RETAINED_TREE,
+            'retained_tree_after_sha256': r.HC_RETAINED_TREE, 'project_sources_before_sha256': r.HC_PROJECT_TREE,
+            'project_sources_after_sha256': r.HC_PROJECT_TREE, 'custom_objects_before': dict(r.HC_OBJECTS),
+            'custom_objects_after': dict(r.HC_OBJECTS), 'official_cache_measurements': [
+                {'root_id': 'lean', 'measurement_phase': 'CONTINUATION_ONLY', 'tree_before_sha256': 'b' * 64,
+                 'tree_after_sha256': 'b' * 64, 'file_count': 1, 'cache_policy': 'TRUSTED_PINNED_OFFICIAL_CACHE'},
+                {'root_id': 'Cli', 'measurement_phase': 'CONTINUATION_ONLY', 'tree_before_sha256': r.canonical({}),
+                 'tree_after_sha256': r.canonical({}), 'file_count': 0, 'cache_policy': 'ABSENT_UNIMPORTED_PINNED_PACKAGE_CACHE'}]}
+        r._hc_retained(checks, collection, suite, plan, r)
+        for key, value in [('retained_tree_after_sha256', 'f' * 64), ('custom_objects_after', {}),
+                           ('physical_trace_sha256', 'f' * 64), ('stage_ids', ['_prerequisites']),
+                           ('official_cache_measurements', checks['official_cache_measurements'][:1])]:
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                r._hc_retained({**checks, key: value}, collection, suite, plan, r)
+        plan['official'] = {'Cli': {'package': 'Cli'}}
+        with self.assertRaises(ValueError): r._hc_retained(checks, collection, suite, plan, r)
+
+    @unittest.skipUnless(os.environ.get('V5_REPLAY_TEST_LEAN'), 'Explicit official Lean test binding required')
+    def test_official_lean_history_continuation_uses_retained_object_without_rebuilding(self):
+        data = self.execution_fixture(); a, _, plan, _, _, artifact = data
+        lean = Path(os.environ['V5_REPLAY_TEST_LEAN']); self.assertEqual(self.r.sha(lean.read_bytes()), LEAN_SHA)
+        env = dict(os.environ); env['LEAN_PATH'] = str(lean.parent.parent / 'lib/lean')
+        run = self.r.run_process([lean, '-j1', '-o', artifact, self.prior / 'project/Fixture.lean'],
+                                self.prior / 'project', env, self.base / 'initial-object.log', 60)
+        self.assertEqual((run['terminal'], run['exit_code']), ('COMPLETED', 0))
+        a.HC_OBJECTS['original/build/Fixture.olean'] = self.r.sha(artifact.read_bytes())
+        collection = a._hc_exec_collection.return_value[0]; collection['output_hashes'] = dict(a.HC_OBJECTS)
+        a.HC_COLLECTION_SHA256 = self.r._hc_collection_digest(collection, a)
+        prior = a._hc_prior.return_value[0]
+        fingerprints = {'lean': {'executable_sha256': self.r.sha(lean.read_bytes())}}
+        prior['replay_evidence']['tool_fingerprints'] = fingerprints
+        raw = json.dumps(prior).encode(); (self.prior / 'RECEIPT.json').write_bytes(raw)
+        a.HC_PRIOR.update(receipt_sha256=self.r.sha(raw), receipt_bytes=len(raw), receipt_canonical_sha256=self.r.canonical(prior))
+        a.HC_RETAINED_TREE = self.r._ac_exec_inventory(self.prior, a)[1]
+        before = self.r._ac_exec_inventory(self.prior, a)
+        a._verify_environment.return_value = ({'lean': lean}, fingerprints, {}, env, {})
+        a.run_process.side_effect = self.r.run_process
+        receipt = self.execute_fixture(data)
+        self.assertEqual(receipt['outcome'], 'QUALIFIED_DECLARED_SUITE')
+        self.assertEqual(a.run_process.call_count, 1)
+        self.assertEqual(self.r._ac_exec_inventory(self.prior, a), before)
+
+
 class AuditContinuationValidationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

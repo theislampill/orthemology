@@ -3506,7 +3506,512 @@ def execute_audit_continuation(suite, sources, root, prior, output, tools, input
 
 
 
+HC_SCHEMA = 'orthemology-v5-history-audit-continuation-v1'
+HC_SUITE = 'D04-T07-HISTORY-ORIGINAL'
+HC_SUITE_SHA256 = 'c5a8b9fd56f2ba8c53866902ac7b3c484613678e0679a5d2f2447df0b1983d1f'
+HC_APPROVAL = 'a0e55482d8bf7f6d9b5b77ee37d99ce54a5b27945cd7d816f9d00cb6d61711df'
+HC_ORIGINAL_RUNNER = 'd0abd261c37cc8dee4c34a8c5b74be6f8079237680bf518ddc0c2d0b51a1d65c'
+HC_TRACE = '9826bd11df643d8b89b07668c2d10f4d58164b95e3cadd5271f673d43725d9eb'
+HC_RETAINED_TREE = 'ad701f3907e168ba62774e276796242ae64bf75508d75d54a650b4b3a2e88a19'
+HC_PROJECT_TREE = '56ed0c004dcb31d2548cc4da1fd18d931752991532a3a58d448daa77cb2cb47b'
+HC_AUDIT_SOURCE = '3911f7c0b3238a647879f7598042837beee62a71d337c38a921c2ec6b0af9300'
+# Exact complete offline collection, reconciled to the retained source/captures.
+HC_COLLECTION_SHA256 = 'e4106e2948e59f7b4c99e4f383919f62d7f5255d189adb18c47d5081f287b810'
+HC_SOURCE_AUDIT_SHA256 = 'b1490cd37087246e724db545da4d8f567993ba0f78d4bd82d7c56b90803e839e'
+HC_REVIEWED_EXECUTOR_HASHES = frozenset()
+HC_CACHE_POLICY = 'PINNED_OFFICIAL_CACHES_REUSED_CAMPAIGN_EXECUTION_FRESH_COLLECTION_AND_AUDIT'
+HC_PRIOR = {
+    'receipt_sha256': 'd7d6637266cef987c04138390571bfd854151d4d1c8e05e681986b635018a53a',
+    'receipt_canonical_sha256': 'b5b425d462f87f378a6d3fffd4e28b93d1a41e2cf8e4bae9e32d22249081ff4b',
+    'receipt_bytes': 27543,
+    'failure_record_sha256': 'c5f860f06173146b224c1ea6318479c3aabe54b85a76561ceb336a0c418e2886',
+    'original_receipt_sha256': '843c7cacb88fabb73fc9edee61ca560a7bbf456b7037968d8f21cd76ecc48d95',
+    'original_receipt_canonical_sha256': 'f9365626bc5d339f3674d1dbac6075e73c32f6c10dc6962f658f696db47dc36a',
+    'original_receipt_bytes': 5585,
+}
+HC_OBJECTS = {
+    'original/build/HistoryInvariant.olean': '98e4fb02229c9ba201a0c146d473e24dad3c387f8e30ea98033986746d6dc6b6',
+    'original/build/HistoryModel.olean': '49edb6394209cf07c7c2603ef1e016a7b188d0e266a178130723d5557c3f33f0',
+    'original/build/HistorySafety.olean': '811a4b785d2b95c9cc98423cf1e277cfa0fe4d0f81b0c0fc17d0e15790f362bd',
+    'original/build/HistoryTrace.olean': '13490150fffe6c6689c467dac2c62baf0752d8ea49c07dd0f00d816976d52713',
+    'original/build/NegativeControls.olean': 'e08485587d16ce4b89820c6100dd968b15f712583dbe3db6c1bf611742aaeaf2',
+}
+HC_RECEIPT_KEYS = set('id suite_id family suite_sha256 source_hashes review_hashes toolchain_sha256 outcome target_readbacks controls stages invocation started_at ended_at exit_code log_sha256 axioms proof_scope replay_evidence'.split())
+HC_EVIDENCE_KEYS = set('schema descriptor_sha256 closure_sha256 runner_sha256 source_hashes_before source_hashes_after import_fingerprints tool_fingerprints dependency_checks stage_results target_audits output_hashes cache_policy prior retained_input_checks fresh_audit accounting retained_collection'.split())
+HC_COLLECTION_KEYS = set('parser_id parser_revision collector_runner_sha256 observed_at driver_invocations child_observations stage_results control_diagnostics output_hashes source_audit_sha256'.split())
+HC_RETAINED_KEYS = set('mode stage_ids physical_trace_sha256 original_result_sha256 child_ledger_sha256 driver_invocations_sha256 archive_sha256 retained_tree_before_sha256 retained_tree_after_sha256 project_sources_before_sha256 project_sources_after_sha256 custom_objects_before custom_objects_after official_cache_measurements'.split())
+HC_STAGE_KEYS = set('id argv cwd budget_seconds started_at ended_at terminal exit_code log_sha256 output_hashes'.split())
+HC_FRESH_KEYS = set('recipe generated_source_sha256 resolved_invocation_sha256 argv_provenance traversal_bound distinct_declaration_accounting fresh_custom_objects'.split())
+HC_AUDIT_KEYS = set('target_id name type_sha256 axioms closure_status checked_declarations stage_id log_sha256'.split())
+HC_ACCOUNTING = {'reused_source_owned_physical_runs': 1, 'reused_child_executions': 17, 'reused_custom_objects': 5,
+    'reused_source_scenarios': 7, 'new_source_owned_physical_runs': 0, 'new_child_compilations': 0,
+    'new_custom_objects': 0, 'new_target_audit_processes': 1, 'independent_evidence_increment': 0}
+
+
+def _hc_require(value, message):
+    if not value: raise ValueError(message)
+
+
+def _hc_keys(value, expected):
+    _hc_require(isinstance(value, dict) and set(value) == expected, 'Unknown or missing history continuation fields')
+
+
+def _hc_time(value):
+    _hc_require(isinstance(value, str) and value.endswith('Z'), 'History continuation time is not UTC')
+    return datetime.fromisoformat(value[:-1] + '+00:00')
+
+
+def _hc_collection_digest(collection, adapter):
+    # Capture times and the original physical runner remain included. Only new
+    # parser attribution/times vary when exact original bytes are read again.
+    content = {key: value for key, value in collection.items() if key not in {'collector_runner_sha256', 'observed_at'}}
+    content['child_observations'] = [{k: v for k, v in row.items() if k != 'observed_at'} for row in collection['child_observations']]
+    content['stage_results'] = [{k: v for k, v in row.items() if k not in {'started_at', 'ended_at'}} for row in collection['stage_results']]
+    return adapter.canonical(content)
+
+
+def _hc_prior(evidence, suite, sources, root, adapter, plan):
+    binding = evidence['prior']; _hc_keys(binding, set(HC_PRIOR) | {'receipt'})
+    _hc_require(type(binding['receipt_bytes']) is int and type(binding['original_receipt_bytes']) is int
+             and all(binding[key] == value for key, value in HC_PRIOR.items()), 'Changed history prior trust anchor')
+    prior = binding['receipt']; _hc_keys(prior, HC_RECEIPT_KEYS)
+    _hc_require(adapter.canonical(prior) == HC_PRIOR['receipt_canonical_sha256'], 'Changed original failed history receipt')
+    old = prior['replay_evidence']
+    _hc_require(prior['outcome'] == 'FAILED' and prior['proof_scope'] == 'NONE'
+             and type(prior['exit_code']) is int and prior['exit_code'] == 1
+             and old['schema'] == 'orthemology-v5-replay-evidence-v2'
+             and old['runner_sha256'] == HC_ORIGINAL_RUNNER, 'Original failed history semantics changed')
+    # Only the unchanged FAILED original is sent through the ordinary v2 branch.
+    adapter.validate_receipt(prior, suite, sources, root)
+    stages = adapter.indexed(old['stage_results'])
+    _hc_require(list(stages) == ['_prerequisites', *plan['stages'], '_target_audit'], 'Changed original history stage inventory')
+    for sid, row in stages.items():
+        executed = sid in {'_prerequisites', 'original-driver'}
+        _hc_require((row['terminal'] == 'COMPLETED' and type(row['exit_code']) is int and row['exit_code'] == 0)
+                 if executed else (row['terminal'] == 'SKIPPED' and row['exit_code'] is None
+                                   and row['log_sha256'] == adapter.sha(b'')), 'Ineligible original history stage')
+        _hc_require(row['output_hashes'] == {}, 'Original collection already claimed outputs')
+    _hc_require(all(old[key] == [] for key in ('child_observations', 'control_diagnostics', 'target_audits'))
+             and old['output_hashes'] == {} and prior['controls'] == []
+             and prior['target_readbacks'] == [] and prior['axioms'] == [], 'Partial original collection cannot be generalized')
+    launches = old['driver_invocations']
+    _hc_require(len(launches) == 1 and launches[0]['trace_sha256'] == HC_TRACE
+             and type(launches[0]['child_count']) is int and launches[0]['child_count'] == 17,
+             'Original history physical capture differs')
+    return prior, old, stages
+
+
+def _hc_collection(receipt, evidence, prior, old, old_stages, plan, suite, adapter):
+    collection = evidence['retained_collection']; _hc_keys(collection, HC_COLLECTION_KEYS)
+    _hc_require(collection['parser_id'] == 't07-history-original-v1'
+             and collection['parser_revision'] == 'history-source-bound-import-readbacks-v2'
+             and collection['collector_runner_sha256'] == evidence['runner_sha256'], 'Unreviewed history collector identity')
+    _hc_require(HC_COLLECTION_SHA256 is not None and HC_SOURCE_AUDIT_SHA256 is not None,
+             'Actual D03 collection/source-readback pins are not installed')
+    _hc_require(collection['source_audit_sha256'] == HC_SOURCE_AUDIT_SHA256
+             and _hc_collection_digest(collection, adapter) == HC_COLLECTION_SHA256, 'Changed complete history capture/source collection')
+    _hc_require(collection['driver_invocations'] == old['driver_invocations'], 'Old physical runner relabelled as collector')
+    observed = adapter.indexed(collection['stage_results'])
+    declared = {sid: row for sid, row in plan['stages'].items() if sid != 'original-driver'}
+    _hc_require(list(observed) == list(declared), 'Missing or reordered history collection stages')
+    start, end = _hc_time(receipt['started_at']), _hc_time(receipt['ended_at'])
+    parsed = _hc_time(collection['observed_at'])
+    audit_start = _hc_time(adapter.indexed(evidence['stage_results'])['_target_audit']['started_at'])
+    _hc_require(_hc_time(prior['ended_at']) < start <= parsed <= audit_start <= end, 'Collection is not a new pre-audit observation')
+    assembled = {sid: old_stages[sid] for sid in ('_prerequisites', 'original-driver')}
+    for sid, row in observed.items():
+        _hc_keys(row, HC_STAGE_KEYS); expected = declared[sid]
+        _hc_require(row['argv'] == expected['argv'] and row['cwd'] == expected['cwd']
+                 and type(row['budget_seconds']) is int and row['budget_seconds'] == expected['timeout_seconds']
+                 and row['terminal'] == 'COMPLETED' and type(row['exit_code']) is int
+                 and row['exit_code'] in expected['expected_exit_codes'] and row['output_hashes'] == {}
+                 and set(expected['depends_on']) <= set(assembled), 'Unfulfilled or executing history collection stage')
+        _hc_require(parsed <= _hc_time(row['started_at']) <= _hc_time(row['ended_at']) <= audit_start,
+                 'History observation interval outside fresh collection')
+        adapter.digest(row['log_sha256']); assembled[sid] = row
+    children = adapter.indexed(collection['child_observations'], 'stage_id')
+    _hc_require(list(children) == list(declared), 'Missing or reordered physical history children')
+    # A separate NONEXECUTING collection view uses the old physical runner. It is
+    # never a rewritten receipt and is never passed as a successful v2 receipt.
+    view = {'runner_sha256': old['runner_sha256'], 'driver_invocations': collection['driver_invocations'],
+        'child_observations': collection['child_observations'], 'output_hashes': collection['output_hashes']}
+    adapter.validate_child_evidence(view, plan, assembled, True)
+    objects = {}
+    for child in children.values():
+        _hc_require(parsed <= _hc_time(child['observed_at']) <= audit_start, 'History child uses an old/new execution time as observation')
+        for path, digest in child['output_hashes'].items():
+            _hc_require(path not in objects, 'Duplicate history object producer'); objects[path] = digest
+    _hc_require(objects == collection['output_hashes'] == HC_OBJECTS, 'Changed retained five-object producer union')
+    diagnostics = adapter.indexed(collection['control_diagnostics'], 'control_id')
+    controls = adapter.indexed(suite['controls'])
+    _hc_require(set(diagnostics) == set(controls), 'Incomplete retained history control diagnostics')
+    expected_controls = {}
+    for sid, stage in declared.items():
+        for cid in stage['control_ids']:
+            row = diagnostics[cid]; actual = observed[sid]; expected = controls[cid]
+            _hc_keys(row, set('control_id stage_id prerequisite_stage_ids expected observed_log_sha256 match'.split()))
+            _hc_require(row == {'control_id': cid, 'stage_id': sid, 'prerequisite_stage_ids': stage['depends_on'],
+                'expected': stage['expected_diagnostics'], 'observed_log_sha256': actual['log_sha256'], 'match': 'MATCHED'},
+                'Wrong retained history diagnostic/source association')
+            expected_controls[cid] = {key: expected[key] for key in ('id', 'source_id', 'target_id', 'role', 'expected_outcome_sha256')} | {
+                'actual_outcome': expected['expected_outcome'], 'actual_outcome_sha256': adapter.sha(expected['expected_outcome'].encode()),
+                'terminal': actual['terminal'], 'exit_code': actual['exit_code'], 'log_sha256': actual['log_sha256']}
+    _hc_require(receipt['controls'] == [expected_controls[row['id']] for row in suite['controls']]
+             and all(type(row['exit_code']) is int for row in receipt['controls']), 'History controls lack exact retained child evidence')
+    return collection
+
+
+def _hc_retained(checks, collection, suite, plan, adapter):
+    _hc_keys(checks, HC_RETAINED_KEYS)
+    expected = {'mode': 'REUSED_CAMPAIGN_EXECUTION', 'stage_ids': ['_prerequisites', 'original-driver'],
+        'physical_trace_sha256': HC_TRACE, 'original_result_sha256': HC_PRIOR['original_receipt_sha256'],
+        'child_ledger_sha256': adapter.canonical(collection['child_observations']),
+        'driver_invocations_sha256': adapter.canonical(collection['driver_invocations']),
+        'archive_sha256': suite['replay']['external_inputs'][0]['expected_sha256'],
+        'retained_tree_before_sha256': HC_RETAINED_TREE, 'retained_tree_after_sha256': HC_RETAINED_TREE,
+        'project_sources_before_sha256': HC_PROJECT_TREE, 'project_sources_after_sha256': HC_PROJECT_TREE,
+        'custom_objects_before': HC_OBJECTS, 'custom_objects_after': HC_OBJECTS}
+    _hc_require(all(checks[key] == value for key, value in expected.items()), 'Changed retained history inputs')
+    caches = adapter.indexed(checks['official_cache_measurements'], 'root_id')
+    _hc_require(set(caches) == {'lean'} | set(plan['packages']), 'Missing/foreign history official cache root')
+    for row in caches.values():
+        _hc_keys(row, set('root_id measurement_phase tree_before_sha256 tree_after_sha256 file_count cache_policy'.split()))
+        _hc_require(row['measurement_phase'] == 'CONTINUATION_ONLY' and type(row['file_count']) is int, 'Cache time/count differs')
+        if row['cache_policy'] == 'ABSENT_UNIMPORTED_PINNED_PACKAGE_CACHE':
+            _hc_require(row['root_id'] == 'Cli' and row['file_count'] == 0 and row['tree_before_sha256'] == adapter.canonical({})
+                     and not any(item['package'] == 'Cli' for item in plan['official'].values()), 'Wrong absent history package cache')
+        else:
+            _hc_require(row['cache_policy'] == 'TRUSTED_PINNED_OFFICIAL_CACHE' and row['file_count'] > 0, 'Wrong history official cache policy')
+        adapter.digest(row['tree_before_sha256']); adapter.digest(row['tree_after_sha256'])
+        _hc_require(row['tree_before_sha256'] == row['tree_after_sha256'], 'Official history cache changed')
+
+
+def _hc_fresh(receipt, evidence, prior, adapter):
+    stages = adapter.indexed(evidence['stage_results'])
+    _hc_require(list(stages) == ['_prerequisites', '_target_audit'], 'Fresh history ledger relabels or reruns original work')
+    start, end = _hc_time(receipt['started_at']), _hc_time(receipt['ended_at'])
+    _hc_require(_hc_time(prior['ended_at']) < start <= end, 'Old or reversed history continuation interval')
+    last = start
+    for sid, row in stages.items():
+        _hc_keys(row, HC_STAGE_KEYS)
+        argv = ['{builtin:prerequisites}'] if sid == '_prerequisites' else ['{tool:lean}', '-j1', '{out}/generated/V5SuccessorReadback.lean']
+        _hc_require(row['argv'] == argv and row['cwd'] == '.' and type(row['budget_seconds']) is int
+                 and row['budget_seconds'] == (30 if sid == '_prerequisites' else 300), 'Changed fresh history invocation/budget')
+        rs, re = _hc_time(row['started_at']), _hc_time(row['ended_at'])
+        _hc_require(last <= rs <= re <= end, 'Invalid fresh history stage interval'); last = re
+        _hc_require(row['terminal'] in {'COMPLETED', 'TIMEOUT', 'INTERRUPTED'}, 'Missing actual history audit process')
+        if row['terminal'] == 'COMPLETED':
+            _hc_require(type(row['exit_code']) is int and 0 <= row['exit_code'] < 124, 'Invalid fresh history exit')
+        else: _hc_require(row['exit_code'] is None, 'Resource failure receives concrete exit credit')
+        adapter.digest(row['log_sha256']); _hc_require(row['output_hashes'] == {}, 'New history custom object falsely claimed')
+    pre = stages['_prerequisites']
+    _hc_require(pre['terminal'] == 'COMPLETED' and pre['exit_code'] == 0, 'New history prerequisites not established')
+    _hc_require(receipt['stages'] == [{key: row[key] for key in ('id', 'terminal', 'exit_code', 'log_sha256')}
+                                  for row in evidence['stage_results']]
+             and receipt['log_sha256'] == adapter.canonical({sid: row['log_sha256'] for sid, row in stages.items()}),
+             'Top/fresh history stage or log association differs')
+    return stages['_target_audit']
+
+
+def _hc_validate(receipt, suite, sources, root, adapter):
+    json.dumps(receipt, ensure_ascii=False, allow_nan=False)
+    _hc_keys(receipt, HC_RECEIPT_KEYS)
+    _hc_require(suite['id'] == HC_SUITE and adapter.canonical(suite) == HC_SUITE_SHA256
+             and adapter.APPROVED_DECLARED_SUITES.get(HC_SUITE) == HC_APPROVAL, 'Wrong approved history suite')
+    plan = adapter.validate_suite(suite, sources, root)
+    evidence = receipt['replay_evidence']; _hc_keys(evidence, HC_EVIDENCE_KEYS)
+    _hc_require(evidence['schema'] == HC_SCHEMA and evidence['cache_policy'] == HC_CACHE_POLICY, 'Wrong history continuation schema/policy')
+    prior, old, old_stages = _hc_prior(evidence, suite, sources, root, adapter, plan)
+    _hc_require(isinstance(receipt['id'], str) and receipt['id'].startswith(HC_SUITE + '-audit-continuation-')
+             and len(receipt['id']) > len(HC_SUITE + '-audit-continuation-') and receipt['id'] != prior['id'], 'History continuation needs a new identity')
+    _hc_require(receipt['invocation'] == ['replay_v5_successors.py', '--history-audit-continuation', '--suite', HC_SUITE,
+                                        '--prior', '{prior}', '--out', '{out}'], 'Not the audit-only history invocation')
+    for key in ('suite_id', 'family', 'suite_sha256', 'source_hashes', 'review_hashes', 'toolchain_sha256'):
+        _hc_require(receipt[key] == prior[key], 'Changed history suite/source/review/toolchain binding')
+    for key in ('descriptor_sha256', 'closure_sha256', 'source_hashes_before', 'source_hashes_after',
+                'import_fingerprints', 'tool_fingerprints', 'dependency_checks'):
+        _hc_require(evidence[key] == old[key], 'Changed history source/import/tool/dependency identity')
+    adapter.digest(evidence['runner_sha256'])
+    _hc_require((evidence['runner_sha256'] == adapter.sha(Path(adapter.__file__).read_bytes())
+                 or evidence['runner_sha256'] in HC_REVIEWED_EXECUTOR_HASHES)
+             and evidence['runner_sha256'] != HC_ORIGINAL_RUNNER, 'Unreviewed history continuation executor')
+    audit = _hc_fresh(receipt, evidence, prior, adapter)
+    collection = _hc_collection(receipt, evidence, prior, old, old_stages, plan, suite, adapter)
+    _hc_retained(evidence['retained_input_checks'], collection, suite, plan, adapter)
+    _hc_keys(evidence['accounting'], set(HC_ACCOUNTING))
+    _hc_require(all(type(evidence['accounting'][key]) is int and evidence['accounting'][key] == value
+                 for key, value in HC_ACCOUNTING.items()), 'Invented history build/run/independence credit')
+    fresh = evidence['fresh_audit']; _hc_keys(fresh, HC_FRESH_KEYS)
+    generated = adapter.sha(adapter._audit_source(list(plan['targets'].values())).encode())
+    _hc_require(generated == HC_AUDIT_SOURCE and fresh['generated_source_sha256'] == generated
+             and fresh['recipe'] == 'history-retained-closure-audit-v1' and fresh['argv_provenance'] == 'RESOLVED_FROM_BOUND_INPUTS'
+             and type(fresh['traversal_bound']) is int and fresh['traversal_bound'] == 1000000
+             and fresh['distinct_declaration_accounting'] == 'ENQUEUE_ONCE_NO_DEPENDENCY_DROPPED'
+             and type(fresh['fresh_custom_objects']) is int and fresh['fresh_custom_objects'] == 0,
+             'Changed history auditor or false fresh custom builds')
+    adapter.digest(fresh['resolved_invocation_sha256'])
+    _hc_require(evidence['output_hashes'] == {'generated/V5SuccessorReadback.lean': generated}, 'Wrong new history audit outputs')
+    successful = receipt['outcome'] == 'QUALIFIED_DECLARED_SUITE'
+    if not successful:
+        expected = 'FAILED' if audit['terminal'] == 'COMPLETED' else 'RESOURCE_INCONCLUSIVE'
+        _hc_require(receipt['outcome'] == expected and receipt['proof_scope'] == 'NONE'
+                 and type(receipt['exit_code']) is int and receipt['exit_code'] == 1
+                 and (audit['terminal'] != 'COMPLETED' or audit['exit_code'] > 0)
+                 and receipt['target_readbacks'] == [] and evidence['target_audits'] == [] and receipt['axioms'] == [],
+                 'Failed history audit acquired qualification/partial target credit')
+    else:
+        _hc_require(receipt['proof_scope'] == 'DECLARED_SUITE' and type(receipt['exit_code']) is int
+                 and receipt['exit_code'] == 0 and audit['terminal'] == 'COMPLETED' and audit['exit_code'] == 0,
+                 'History audit not fully successful')
+        audits = adapter.indexed(evidence['target_audits'], 'target_id')
+        _hc_require(set(audits) == set(plan['targets']), 'Missing or foreign history target audit')
+        axes = set()
+        for tid, row in audits.items():
+            _hc_keys(row, HC_AUDIT_KEYS)
+            _hc_require(row['name'] == plan['targets'][tid]['name'] and row['closure_status'] == 'CHECKED_SAFE'
+                     and type(row['checked_declarations']) is int and row['checked_declarations'] > 0
+                     and row['stage_id'] == '_target_audit' and row['log_sha256'] == audit['log_sha256'], 'Wrong history target/log/safe-closure association')
+            adapter.digest(row['type_sha256'])
+            _hc_require(isinstance(row['axioms'], list) and len(set(row['axioms'])) == len(row['axioms'])
+                     and set(row['axioms']) <= adapter.AXIOMS, 'Unapproved or repeated history target axiom')
+            axes.update(row['axioms'])
+        expected = [{'target_id': row['id'], 'source_id': row['source_id'], 'target_sha256': row['target_sha256'], 'outcome': 'CHECKED'} for row in suite['targets']]
+        _hc_require(receipt['target_readbacks'] == expected and receipt['axioms'] == sorted(axes), 'Wrong history source/readback/axiom summary')
+    return {'suite_id': HC_SUITE, 'outcome': receipt['outcome'], 'scope': 'HISTORY_CONTINUATION_ENVELOPE_AND_PRIOR_ELIGIBILITY_ONLY'}
+
+
+def validate_history_continuation(receipt, suite, sources, root, *, adapter):
+    """Validate the exact history02 composition, without running or rewriting it."""
+    try:
+        return _hc_validate(receipt, suite, sources, root, adapter)
+    except (TypeError, KeyError, IndexError, OverflowError) as error:
+        raise ValueError('Malformed history continuation envelope') from error
+
+
+def _hc_exec_prior(prior, adapter):
+    a = adapter; raw = a.path_in(prior, 'RECEIPT.json').read_bytes()
+    a.require(len(raw) == a.HC_PRIOR['receipt_bytes'] and a.sha(raw) == a.HC_PRIOR['receipt_sha256'], 'Wrong original history receipt bytes')
+    receipt = json.loads(raw)
+    a.require(a.canonical(receipt) == a.HC_PRIOR['receipt_canonical_sha256'], 'Wrong original history receipt value')
+    original = a.path_in(prior, 'original/REPLAY_RECEIPT.json').read_bytes()
+    a.require(len(original) == a.HC_PRIOR['original_receipt_bytes'] and a.sha(original) == a.HC_PRIOR['original_receipt_sha256']
+              and a.canonical(json.loads(original)) == a.HC_PRIOR['original_receipt_canonical_sha256'], 'Changed source-owned history terminal')
+    a.require(a.sha(a.path_in(prior, 'FAILURE.json').read_bytes()) == a.HC_PRIOR['failure_record_sha256'], 'Changed history collection failure')
+    return {**a.HC_PRIOR, 'receipt': receipt}
+
+
+def _hc_exec_retained(prior, plan, suite, adapter):
+    a = adapter; _, tree = _ac_exec_inventory(prior, a)
+    a.require(tree == a.HC_RETAINED_TREE, 'Retained history run changed')
+    project = a.path_in(prior, 'project'); _, projected = _ac_exec_inventory(project, a)
+    a.require(projected == a.HC_PROJECT_TREE, 'Retained history projection changed')
+    for sid, row in plan['files'].items():
+        a.require(a.path_in(project, row['path']).read_bytes() == plan['contents'][sid], 'Retained history selected source changed')
+    objects = _ac_exec_objects(prior, a.HC_OBJECTS, suite['replay']['build_roots'], a)
+    return tree, projected, objects
+
+
+def _hc_exec_generate(output, plan, adapter):
+    a = adapter; raw = a._audit_source(list(plan['targets'].values())).encode('utf-8')
+    a.require(a.sha(raw) == a.HC_AUDIT_SOURCE, 'Changed history audit generator')
+    folder = a.path_in(output, 'generated'); a.require(not folder.exists(), 'History generated audit must be fresh')
+    folder.mkdir(); path = folder / 'V5SuccessorReadback.lean'
+    with path.open('xb') as stream: stream.write(raw)
+    a.require(a.sha(path.read_bytes()) == a.HC_AUDIT_SOURCE, 'History audit source readback changed')
+    return path
+
+
+def _hc_exec_source_audit(suite, plan, prior, old, adapter):
+    a = adapter; rows = []
+    for name, spec in plan['history_children'].items():
+        if name in a.HISTORY_CLAIMS or name == 'source-replay': continue
+        sid = spec['source_id']; body = plan['contents'][sid]
+        names = a.source_readback_names_in_plan(sid, plan)
+        log = a.path_in(prior, spec['log']); a.check_original_readbacks(log.read_text(), names)
+        closure = set(); queue = [name]
+        while queue:
+            current = queue.pop()
+            if current in closure or current not in plan['modules']: continue
+            closure.add(current); queue.extend(plan['modules'][current]['imports'])
+        owners = {}
+        for owner in sorted(closure):
+            owner_id = plan['modules'][owner]['source_id']
+            declarations, _ = a._readback_source_symbols(plan['contents'][owner_id].decode())
+            for declared, line in declarations:
+                if declared in names:
+                    owners.setdefault(declared, []).append({'module': owner, 'source_id': owner_id,
+                        'source_sha256': a.sha(plan['contents'][owner_id]), 'line': line + 1})
+        a.require(set(owners) == set(names) and all(len(value) == 1 for value in owners.values()), 'History readback declaration owner is not unique')
+        rows.append({'module': name, 'source_id': sid, 'source_sha256': a.sha(body), 'expected_names': names,
+            'declaration_owners': owners, 'log_sha256': a.sha(log.read_bytes()), 'axioms_checked': True,
+            'import_closure': [{'module': n, 'source_sha256': a.sha(plan['contents'][plan['modules'][n]['source_id']]),
+                               'imports': plan['modules'][n]['imports']} for n in sorted(closure)]})
+    return {'schema': 'history-source-bound-readback-audit-v1', 'parser_revision': 'history-source-bound-import-readbacks-v2',
+        'suite_sha256': a.canonical(suite), 'original_receipt_sha256': a.sha(a.path_in(prior, 'original/REPLAY_RECEIPT.json').read_bytes()),
+        'readbacks': rows, 'literal_print_count': sum(len(row['expected_names']) for row in rows),
+        'source_hashes': old['source_hashes_before'], 'scope': 'OFFLINE_SOURCE_AND_RETAINED_LOG_ASSOCIATION_NO_NEW_EXECUTION'}
+
+
+def _hc_exec_collection(suite, plan, prior, old, resolved, tools, adapter):
+    a = adapter; observed_at = a.utc(); driver = next(iter(plan['drivers'].values())); iid = driver['external_input_id']
+    archive = a.path_in(prior, 'archives/' + iid); a.history_source_check(archive, plan)
+    stages = a.indexed(old['stage_results']); stage = plan['stages']['original-driver']; parent = stages['original-driver']
+    mappings = {'project': prior / 'project', 'out': prior, 'build': prior / 'build', 'archive:' + iid: archive,
+        'driver:' + driver['id']: archive / 'replay.py', 'tool:lean': resolved['lean'], 'tool:python': resolved['python'],
+        'dependency:mathlib': tools['mathlib']}
+    parent_log = a.path_in(prior, 'logs/original-driver.log')
+    a.require(a.sha(parent_log.read_bytes()) == parent['log_sha256'], 'Retained history parent log changed')
+    children, invocation, objects = a.history_collect_children(stage, parent, parent_log.read_text(), plan, prior, mappings)
+    physical = old['driver_invocations'][0]
+    a.require({**invocation, 'runner_sha256': physical['runner_sha256']} == physical, 'Physical history invocation cannot be relabelled')
+    source_audit = _hc_exec_source_audit(suite, plan, prior, old, a)
+    collection = {'parser_id': a.HISTORY_RECIPE, 'parser_revision': 'history-source-bound-import-readbacks-v2',
+        'collector_runner_sha256': a.sha(Path(a.__file__).read_bytes()), 'observed_at': observed_at,
+        'driver_invocations': [physical], 'child_observations': [], 'stage_results': [], 'control_diagnostics': [],
+        'output_hashes': objects, 'source_audit_sha256': a.canonical(source_audit)}
+    completed = {sid: {**row, 'matched': True} for sid, row in stages.items() if row['terminal'] == 'COMPLETED'}
+    for sid, spec in list(plan['stages'].items())[1:]:
+        started = a.utc(); observed = children[tuple(spec['argv'][1:])]
+        log = a.path_in(prior, plan['history_children'][spec['argv'][2]]['log'])
+        a.require(a.sha(log.read_bytes()) == observed['log_sha256'], 'Retained history child log changed')
+        run = {'terminal': observed['terminal'], 'exit_code': observed['exit_code'], 'started_at': started,
+               'ended_at': a.utc(), 'log_sha256': observed['log_sha256']}
+        a.assess_stage(spec, run, log.read_text(), completed)
+        collection['child_observations'].append({**observed, 'stage_id': sid, 'observed_at': run['ended_at']})
+        collection['stage_results'].append({**stages[sid], **run})
+        completed[sid] = {**run, 'matched': True}
+        for cid in spec['control_ids']:
+            collection['control_diagnostics'].append({'control_id': cid, 'stage_id': sid, 'prerequisite_stage_ids': spec['depends_on'],
+                'expected': spec['expected_diagnostics'], 'observed_log_sha256': run['log_sha256'], 'match': 'MATCHED'})
+    a.require(a.canonical(source_audit) == a.HC_SOURCE_AUDIT_SHA256 and a._hc_collection_digest(collection, a) == a.HC_COLLECTION_SHA256,
+              'Complete source-bound history collection changed')
+    return collection, source_audit
+
+
+def _hc_exec_controls(suite, plan, collection, adapter):
+    a = adapter; stages = a.indexed(collection['stage_results']); controls = {}
+    for sid, stage in plan['stages'].items():
+        if sid not in stages: continue
+        for cid in stage['control_ids']:
+            a.require(cid not in controls, 'Duplicate retained history control')
+            controls[cid] = stages[sid]
+    a.require(set(controls) == {row['id'] for row in suite['controls']}, 'Incomplete collected history controls')
+    return [{key: row[key] for key in ('id', 'source_id', 'target_id', 'role', 'expected_outcome_sha256')} | {
+        'actual_outcome': row['expected_outcome'], 'actual_outcome_sha256': a.sha(row['expected_outcome'].encode()),
+        'terminal': controls[row['id']]['terminal'], 'exit_code': controls[row['id']]['exit_code'],
+        'log_sha256': controls[row['id']]['log_sha256']} for row in suite['controls']]
+
+
+def _execute_history_audit_continuation(suite, sources, root, prior, output, tools, inputs, *, reviews, adapter):
+    """Recollect the pinned completed history producer and run its missing audit."""
+    a = adapter
+    a.require(suite['id'] == a.HC_SUITE and a.canonical(suite) == a.HC_SUITE_SHA256
+              and a.APPROVED_DECLARED_SUITES.get(suite['id']) == a.HC_APPROVAL, 'Unapproved history continuation suite')
+    a.require(isinstance(reviews, dict) and set(suite['review_ids']) <= set(reviews), 'Missing current history review identities')
+    plan = a.validate_suite(suite, sources, root); prior = a.no_symlinks(prior).absolute()
+    if not prior.is_dir(): raise a.MissingInput('Original history run is unavailable')
+    protected = [root, prior, *inputs.values()]
+    if 'mathlib' in tools: protected.append(tools['mathlib'])
+    protected.extend(Path(path).resolve().parent.parent for name, path in tools.items() if name != 'mathlib')
+    output = _ac_exec_output(output, protected, a)
+    started = a.utc(); run = None; runner = a.sha(Path(a.__file__).read_bytes())
+    output.mkdir(parents=True, exist_ok=False); (output / 'logs').mkdir()
+    try:
+        binding = _hc_exec_prior(prior, a)
+        original, old, old_stages = a._hc_prior({'prior': binding}, suite, sources, root, a, plan)
+        a.require({rid: reviews[rid]['review_sha256'] for rid in suite['review_ids']} == original['review_hashes'], 'History review identity changed')
+        hashes = {sid: a.sha(a.public_bytes(root, sources[sid])) for sid in suite['source_ids']}
+        a.require(hashes == original['source_hashes'] == old['source_hashes_before'] == old['source_hashes_after']
+                  and a.canonical(suite['replay']) == old['descriptor_sha256'] and a.closure_fingerprint(suite, sources) == old['closure_sha256']
+                  and a.import_fingerprints(suite, sources) == old['import_fingerprints'], 'History source/import binding changed')
+        tree_before, project_before, objects_before = _hc_exec_retained(prior, plan, suite, a)
+        before = output / 'prerequisites-before'; before.mkdir(); pre_start = a.utc()
+        resolved, fingerprints, dependencies, env, input_hashes = a._verify_environment(suite, plan, tools, inputs, before)
+        a.require(fingerprints == old['tool_fingerprints'] and dependencies == old['dependency_checks'], 'History tool/dependency binding changed')
+        roots, libraries = _ac_exec_cache_roots(resolved, tools, plan, a)
+        cache_rows, inventories = _ac_exec_caches(roots, plan, a)
+        env['LEAN_PATH'] = os.pathsep.join(str(p) for p in [*[a.path_in(prior, name) for name in suite['replay']['build_roots']], *libraries])
+        collection, source_audit = a._hc_exec_collection(suite, plan, prior, old, resolved, tools, a)
+        a.require(a.canonical(source_audit) == a.HC_SOURCE_AUDIT_SHA256
+                  and collection['source_audit_sha256'] == a.HC_SOURCE_AUDIT_SHA256
+                  and a._hc_collection_digest(collection, a) == a.HC_COLLECTION_SHA256, 'History collection/source-audit pin changed')
+        controls = _hc_exec_controls(suite, plan, collection, a)
+        a.write_json(output / 'RETAINED_COLLECTION.json', collection); a.write_json(output / 'SOURCE_READBACK_AUDIT.json', source_audit)
+        pre_log = output / 'logs/prerequisites.log'
+        pre_log.write_text('Current history source, complete retained physical collection, custom objects, tools and dependency pins verified.\n'
+                           'Official caches measured only now; no new producer, object or independent evidence is claimed.\n', encoding='utf-8')
+        pre = {'id': '_prerequisites', 'argv': ['{builtin:prerequisites}'], 'cwd': '.', 'budget_seconds': 30,
+               'started_at': pre_start, 'ended_at': a.utc(), 'terminal': 'COMPLETED', 'exit_code': 0,
+               'log_sha256': a.sha(pre_log.read_bytes()), 'output_hashes': {}}
+        audit = _hc_exec_generate(output, plan, a)
+        argv = [resolved['lean'], '-j1', audit]; cwd = a.path_in(prior, 'project')
+        invocation = output / 'RESOLVED_AUDIT_INVOCATION.json'
+        a.write_json(invocation, {'argv': [str(arg) for arg in argv], 'cwd': str(cwd), 'timeout_seconds': 300,
+            'lean_path': env['LEAN_PATH'].split(os.pathsep), 'runner_sha256': runner, 'generated_source_sha256': a.HC_AUDIT_SOURCE,
+            'scope': 'ONE_FRESH_HISTORY_TARGET_AUDIT_REUSING_PINNED_CAMPAIGN_OBJECTS'})
+        log = output / 'logs/target-audit.log'; run = a.run_process(argv, cwd, env, log, 300)
+        a.require(a.sha(log.read_bytes()) == run['log_sha256'], 'History audit log differs from its actual process')
+        outcome, audits = _ac_exec_result(run, log.read_text(encoding='utf-8'), list(plan['targets'].values()), a)
+        after = output / 'prerequisites-after'; after.mkdir()
+        checked, fingerprints_after, dependencies_after, _, inputs_after = a._verify_environment(suite, plan, tools, inputs, after)
+        a.require(checked == resolved and fingerprints_after == fingerprints and dependencies_after == dependencies
+                  and inputs_after == input_hashes, 'History tool/dependency/input changed during audit')
+        roots_after, libraries_after = _ac_exec_cache_roots(checked, tools, plan, a)
+        rows_after, inventories_after = _ac_exec_caches(roots_after, plan, a)
+        a.require(roots_after == roots and libraries_after == libraries and rows_after == cache_rows and inventories_after == inventories,
+                  'History official cache changed during audit')
+        tree_after, project_after, objects_after = _hc_exec_retained(prior, plan, suite, a)
+        a.require(_hc_exec_prior(prior, a) == binding, 'History prior failure/source-owned receipt changed')
+        a.require({sid: a.sha(a.public_bytes(root, sources[sid])) for sid in suite['source_ids']} == hashes, 'History public source changed')
+        a.require(a.sha(audit.read_bytes()) == a.HC_AUDIT_SOURCE and a.sha(Path(a.__file__).read_bytes()) == runner, 'History auditor/runner changed')
+        audit_stage = {'id': '_target_audit', 'argv': ['{tool:lean}', '-j1', '{out}/generated/V5SuccessorReadback.lean'],
+                       'cwd': '.', 'budget_seconds': 300, **run, 'output_hashes': {}}
+        evidence = {key: old[key] for key in ('descriptor_sha256', 'closure_sha256', 'source_hashes_before', 'source_hashes_after',
+                    'import_fingerprints', 'tool_fingerprints', 'dependency_checks')}
+        evidence.update(schema=a.HC_SCHEMA, runner_sha256=runner, cache_policy=a.HC_CACHE_POLICY, prior=binding,
+            stage_results=[pre, audit_stage], retained_collection=collection,
+            target_audits=[{'target_id': tid, **row, 'stage_id': '_target_audit', 'log_sha256': run['log_sha256']} for tid, row in audits.items()],
+            output_hashes={'generated/V5SuccessorReadback.lean': a.HC_AUDIT_SOURCE},
+            retained_input_checks={'mode': 'REUSED_CAMPAIGN_EXECUTION', 'stage_ids': ['_prerequisites', 'original-driver'],
+                'physical_trace_sha256': a.HC_TRACE, 'original_result_sha256': a.HC_PRIOR['original_receipt_sha256'],
+                'child_ledger_sha256': a.canonical(collection['child_observations']), 'driver_invocations_sha256': a.canonical(collection['driver_invocations']),
+                'archive_sha256': suite['replay']['external_inputs'][0]['expected_sha256'],
+                'retained_tree_before_sha256': tree_before, 'retained_tree_after_sha256': tree_after,
+                'project_sources_before_sha256': project_before, 'project_sources_after_sha256': project_after,
+                'custom_objects_before': objects_before, 'custom_objects_after': objects_after, 'official_cache_measurements': cache_rows},
+            fresh_audit={'recipe': 'history-retained-closure-audit-v1', 'generated_source_sha256': a.HC_AUDIT_SOURCE,
+                'resolved_invocation_sha256': a.sha(invocation.read_bytes()), 'argv_provenance': 'RESOLVED_FROM_BOUND_INPUTS',
+                'traversal_bound': 1000000, 'distinct_declaration_accounting': 'ENQUEUE_ONCE_NO_DEPENDENCY_DROPPED', 'fresh_custom_objects': 0},
+            accounting=dict(a.HC_ACCOUNTING))
+        receipt = {key: original[key] for key in ('suite_id', 'family', 'suite_sha256', 'source_hashes', 'review_hashes', 'toolchain_sha256')}
+        success = outcome == 'QUALIFIED_DECLARED_SUITE'
+        receipt.update(id=suite['id'] + '-audit-continuation-' + a.sha((started + a.sha(invocation.read_bytes())).encode())[:16],
+            invocation=['replay_v5_successors.py', '--history-audit-continuation', '--suite', suite['id'], '--prior', '{prior}', '--out', '{out}'],
+            outcome=outcome, proof_scope='DECLARED_SUITE' if success else 'NONE', exit_code=0 if success else 1,
+            started_at=started, ended_at=a.utc(), replay_evidence=evidence, controls=controls,
+            stages=[{key: row[key] for key in ('id', 'terminal', 'exit_code', 'log_sha256')} for row in [pre, audit_stage]],
+            log_sha256=a.canonical({row['id']: row['log_sha256'] for row in [pre, audit_stage]}),
+            target_readbacks=[{'target_id': row['id'], 'source_id': row['source_id'], 'target_sha256': row['target_sha256'], 'outcome': 'CHECKED'} for row in suite['targets']] if success else [],
+            axioms=sorted({axiom for value in audits.values() for axiom in value['axioms']}))
+        a.validate_history_continuation(receipt, suite, sources, root, adapter=a)
+        a.write_json(output / 'RECEIPT.json', receipt)
+        return receipt
+    except (ValueError, OSError, KeyError, TypeError, KeyboardInterrupt) as error:
+        a.write_json(output / 'REFUSAL.json', {'status': 'HISTORY_CONTINUATION_REFUSED', 'started_at': started, 'ended_at': a.utc(),
+            'audit_process': run, 'error': type(error).__name__ + ': ' + str(error),
+            'prior_receipt_sha256': a.HC_PRIOR['receipt_sha256'], 'qualified_receipt_written': False})
+        raise
+
+
+def execute_history_audit_continuation(suite, sources, root, prior, output, tools, inputs, *, reviews=None):
+    return _execute_history_audit_continuation(suite, sources, root, prior, output, tools, inputs,
+                                             reviews=reviews, adapter=SimpleNamespace(**globals()))
+
+
+
 def validate_receipt(receipt, suite, sources, root):
+    if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == HC_SCHEMA:
+        return validate_history_continuation(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == AC_SCHEMA:
         return validate_audit_continuation(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     plan = validate_suite(suite, sources, root); evidence = receipt['replay_evidence']
@@ -3886,7 +4391,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     mode = parser.add_mutually_exclusive_group(required=True)
-    for name in ('list', 'check', 'project', 'execute', 'audit-continuation'): mode.add_argument('--' + name, action='store_true')
+    for name in ('list', 'check', 'project', 'execute', 'audit-continuation', 'history-audit-continuation'): mode.add_argument('--' + name, action='store_true')
     parser.add_argument('--suite'); parser.add_argument('--out', type=Path); parser.add_argument('--prior', type=Path)
     parser.add_argument('--tool', action='append', default=[]); parser.add_argument('--input', action='append', default=[])
     parser.add_argument('--lean-bin', type=Path); parser.add_argument('--mathlib', type=Path); parser.add_argument('--python', type=Path)
@@ -3914,7 +4419,10 @@ def main():
         if args.mathlib: require('mathlib' not in tools, 'Duplicate Mathlib binding'); tools['mathlib'] = args.mathlib
         if args.python: require('python' not in tools, 'Duplicate Python binding'); tools['python'] = args.python
         reviews = {r['id']: r for r in bundle['reviews']}
-        if args.audit_continuation:
+        if args.history_audit_continuation:
+            require(args.prior is not None, 'History continuation requires the exact retained --prior run directory')
+            receipt = execute_history_audit_continuation(suite, sources, args.root, args.prior, args.out, tools, inputs, reviews=reviews)
+        elif args.audit_continuation:
             require(args.prior is not None, 'Audit continuation requires the exact retained --prior run directory')
             receipt = execute_audit_continuation(suite, sources, args.root, args.prior, args.out, tools, inputs, reviews=reviews)
         else:
