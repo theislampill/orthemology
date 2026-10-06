@@ -1069,6 +1069,9 @@ def _validate_argv(stage, plan):
         if recipe in D04_RECIPES:
             d04_validate_argv(stage, driver, plan)
             return
+        if recipe == portable_admission.RECIPE:
+            portable_admission.validate_argv(_portable_api(), stage, driver, plan)
+            return
         if recipe == CORE_RECIPE:
             validate_core_argv(stage, driver, plan)
             return
@@ -2038,11 +2041,12 @@ def validate_suite(suite, sources, root):
             keys(row, {'id', 'source_id', 'recipe', 'sha256', 'argument_meanings', 'external_input_id'})
             source = sources[row['source_id']]; digest(row['sha256'])
             require(row['sha256'] == (source['public_sha256'] or source['original_sha256']), 'Wrong driver hash')
-            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE} | D04_RECIPES:
+            if row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, portable_admission.RECIPE} | D04_RECIPES:
                 require(row['external_input_id'] in inputs, 'Original core archive is undeclared')
             else: require(row['external_input_id'] is None, 'Archive recipe is not approved by this adapter version')
             admitted_role = 'LOCK' if row['recipe'] == 't15-empirical-integrity-v1' else 'DRIVER'
             if row['recipe'] in D04_RECIPES: d04_check_driver_source(row['recipe'], source)
+            elif row['recipe'] == portable_admission.RECIPE: portable_admission.validate_driver(_portable_api(), row, source)
             elif row['recipe'] == ATTR_RECIPE: check_custody_driver(source, ATTR_CONTRACT)
             elif row['recipe'] == HISTORY_RECIPE: check_custody_driver(source, HISTORY_CONTRACT)
             else: require(row['source_id'] in contents and files[row['source_id']]['role'] == admitted_role, 'Driver is not an exact projected source')
@@ -2066,6 +2070,8 @@ def validate_suite(suite, sources, root):
                 validate_t15_runtime_driver(row, {'files': files, 'file_paths': file_paths, 'contents': contents})
             elif row['recipe'] in NORMAL_SOURCE_RECIPES:
                 require(NORMAL_SOURCE_RECIPES[row['recipe']] == row['sha256'] and row['argument_meanings'] == {}, 'Changed original source-check recipe')
+            elif row['recipe'] == portable_admission.RECIPE:
+                portable_admission.validate_driver(_portable_api(), row, source)
             elif row['recipe'] == CORE_RECIPE:
                 require(row['sha256'] == CORE_FILES['replay.py'] and row['argument_meanings'] ==
                         {'--lean-bin': 'LEAN_BIN_DIRECTORY', '--mathlib': 'MATHLIB_ROOT', '--out': 'OUTPUT_DIRECTORY', '--mode': 'LITERAL'}, 'Changed original core recipe')
@@ -2101,6 +2107,7 @@ def validate_suite(suite, sources, root):
         if any(row['recipe'] == CORE_RECIPE for row in drivers.values()): validate_core_package(suite, plan)
         if any(row['recipe'] == ATTR_RECIPE for row in drivers.values()): validate_attribution_package(suite, plan)
         if any(row['recipe'] == HISTORY_RECIPE for row in drivers.values()): validate_history_package(suite, plan)
+        if any(row['recipe'] == portable_admission.RECIPE for row in drivers.values()): portable_admission.validate_package(_portable_api(), suite, plan)
         if any(row['recipe'] in EMPIRICAL_RECIPES for row in drivers.values()):
             _empirical_package(plan)
             require(replay['scope'] == 'FINITE' and toolchain['kind'] == 'PYTHON' and toolchain['version'].startswith('3.12.'), 'Empirical execution is source-prescribed Python 3.12 finite scope')
@@ -2131,6 +2138,7 @@ def validate_suite(suite, sources, root):
                 custody_literal = driver.get('recipe') == ATTR_RECIPE and diagnostic['source_id'] == driver['source_id'] and diagnostic['literal'] in ATTR_DIAGNOSTICS.values()
                 custody_literal = custody_literal or (driver.get('recipe') == HISTORY_RECIPE and diagnostic['source_id'] == driver['source_id'] and diagnostic['literal'] in HISTORY_DIAGNOSTICS)
                 custody_literal = custody_literal or d04_diagnostic_allowed(driver, diagnostic)
+                custody_literal = custody_literal or (driver.get('recipe') == portable_admission.RECIPE and portable_admission.diagnostic(_portable_api(), diagnostic, sources))
                 require(custody_literal or (diagnostic['source_id'] in contents and diagnostic['literal'].encode() in contents[diagnostic['source_id']]), 'Diagnostic differs from source contract')
             for cid in string_list(stage['control_ids']):
                 require(cid in controls and cid not in covered, 'Missing/duplicate control association'); covered.append(cid)
@@ -2475,7 +2483,7 @@ def _verify_environment(suite, plan, tools, inputs, output):
         if iid not in inputs: raise MissingInput('Required explicit external input is unavailable: ' + iid)
         input_hashes[iid] = _input_inventory(row, inputs[iid], plan)
     build_roots = [path_in(output, p) for p in suite['replay']['build_roots']]
-    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE} | D04_RECIPES for row in plan['drivers'].values())
+    original_owned = any(row['recipe'] in {CORE_RECIPE, ATTR_RECIPE, HISTORY_RECIPE, portable_admission.RECIPE} | D04_RECIPES for row in plan['drivers'].values())
     for path in build_roots:
         if not original_owned: path.mkdir(parents=True, exist_ok=True)
     if 'lean' in resolved:
@@ -2839,6 +2847,7 @@ def _initial_receipt(suite, sources, reviews):
 
 
 def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, reviews=None):
+    require(not portable_admission.is_portable(suite), 'Portable views require the single physical family executor')
     if d04_is_suite(suite): return d04_execute_suite(suite, sources, root, output, tools, inputs, scope, reviews=reviews)
     require(scope is None or scope == suite['replay']['scope'], 'Execute the exact declared scope; use a separately scoped descriptor for components')
     require(isinstance(reviews, dict) and set(suite['review_ids']) <= set(reviews), 'Missing source-bound review identities')
@@ -4019,6 +4028,8 @@ def execute_history_audit_continuation(suite, sources, root, prior, output, tool
 
 
 def validate_receipt(receipt, suite, sources, root):
+    if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == portable_family.EVIDENCE_SCHEMA:
+        return portable_family.validate_receipt(_portable_api(), receipt, suite, sources, root)
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == HC_SCHEMA:
         return validate_history_continuation(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == AC_SCHEMA:
@@ -5424,7 +5435,73 @@ def d04_validate_child_evidence(evidence, plan, stages, successful):
     require(evidence['output_hashes']==expected_outputs,'D04 output ledger differs from actual stage/qualified-object identities')
 
 
+# Exact sibling helpers are loaded from verified source bytes. This adapter is
+# also imported by file path without an entry in sys.modules or sys.path.
+PORTABLE_HELPER_HASHES = {
+    'portable_admission': '792f1256e5ebf0347ce6ea98092a5010fa5d3bdc7ba34801543763b331b3ce41',
+    'portable_source': '51660284c5373639bab1e2ddf815295d29f94d753984c556738ffcf10111c3e5',
+    'portable_collector': 'e28f3e2a4129b8834c3326d7810f460f38a524b92d6e1f099da71b34d9df78fc',
+    'portable_capture': '362882a0e923d88bedf5266f52ccf3e685f4fd0fa0d57a8efb4538816fcf98a9',
+    'portable_family': 'd4ad85333af8f8f90c9304873f574d5263b753661c40dadee0beecb0a7acfe7b',
+}
+PORTABLE_BINDINGS_SHA = '6eb339e70f570056a9bc7b110ae5d8652956646e749cce6062ccfd5b0fff8468'
+
+
+def _portable_asset_bytes():
+    directory = Path(__file__).resolve().parent
+    payloads = {}
+    for name, expected in PORTABLE_HELPER_HASHES.items():
+        path = no_symlinks(directory / (name + '.py'))
+        require(path.is_file(), 'Portable helper is unavailable: ' + name)
+        data = path.read_bytes()
+        require(sha(data) == expected, 'Portable helper bytes changed: ' + name)
+        payloads[name] = (path, data)
+    binding = no_symlinks(directory / 'portable_bindings_v2.json')
+    require(binding.is_file() and sha(binding.read_bytes()) == PORTABLE_BINDINGS_SHA,
+            'Portable binding bytes changed')
+    return payloads
+
+
+def _load_portable_components():
+    from types import ModuleType
+    payloads = _portable_asset_bytes()
+    prior = {name: sys.modules[name] for name in payloads if name in sys.modules}
+    loaded = {}
+    try:
+        for name, (path, data) in payloads.items():
+            module = ModuleType(name)
+            module.__file__ = str(path)
+            module.__package__ = ''
+            sys.modules[name] = module
+            exec(compile(data, str(path), 'exec'), module.__dict__)
+            loaded[name] = module
+    finally:
+        for name in payloads:
+            if name in prior:
+                sys.modules[name] = prior[name]
+            else:
+                sys.modules.pop(name, None)
+    return tuple(loaded[name] for name in PORTABLE_HELPER_HASHES)
+
+
+def _portable_api():
+    _portable_asset_bytes()
+    return SimpleNamespace(**globals())
+
+
+(portable_admission, portable_source, portable_collector,
+ portable_capture, portable_family) = _load_portable_components()
+APPROVED_DECLARED_SUITES.update(portable_admission.APPROVED)
+
+
+
+
 def main():
+    if sys.argv[1:2] == ['--trace-portable']:
+        require(len(sys.argv) == 13, 'Malformed internal portable trace invocation')
+        return portable_capture.trace_driver(_portable_api(), Path(sys.argv[2]), Path(sys.argv[3]), Path(sys.argv[4]), sys.argv[5:])
+    if sys.argv[1:2] == ['--portable-family']:
+        return portable_family.command_line(_portable_api(), sys.argv[2:])
     if sys.argv[1:2] == ['--trace-d04']:
         require(len(sys.argv) == 3, 'Malformed D04 internal trace invocation')
         return d04_trace_entry(Path(sys.argv[2]))

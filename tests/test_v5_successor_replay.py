@@ -2115,5 +2115,285 @@ class AuditContinuationValidationTests(unittest.TestCase):
                     r.validate_audit_continuation(altered, suite, {}, Path('.'), adapter=adapter)
 
 
+class PortableReplayIntegrationTests(unittest.TestCase):
+    """Portable loader and terminal boundaries use disposable synthetic files."""
+    names = ('portable_admission', 'portable_source', 'portable_collector',
+             'portable_capture', 'portable_family')
+
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.base = Path(self.temporary.name)
+
+    def load(self, script=SCRIPT):
+        name = 'portable_adapter_dynamic_fixture'
+        self.assertNotIn(name, sys.modules)
+        spec = importlib.util.spec_from_file_location(name, script)
+        result = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(result)
+        self.assertNotIn(name, sys.modules)
+        return result
+
+    def layout(self):
+        folder = self.base / 'scripts'
+        folder.mkdir()
+        for name in ('replay_v5_successors.py', 'portable_bindings_v2.json',
+                     *(name + '.py' for name in self.names)):
+            (folder / name).write_bytes((SCRIPT.parent / name).read_bytes())
+        return folder / 'replay_v5_successors.py'
+
+    def test_portable_dynamic_file_loader_needs_no_module_registration(self):
+        before = sys.path[:]
+        r = self.load()
+        self.assertEqual(r.portable_family.NAMES,
+                         ('d06-portable-cost', 'd06-portable-runtime-literal'))
+        self.assertEqual(sys.path, before)
+        self.assertTrue(set(r.portable_admission.APPROVED) <= set(r.APPROVED_DECLARED_SUITES))
+
+    def test_portable_dynamic_loader_ignores_and_restores_ambient_modules(self):
+        ambient = {name: types.ModuleType(name) for name in self.names}
+        with mock.patch.dict(sys.modules, ambient):
+            r = self.load()
+            for name in self.names:
+                self.assertIs(sys.modules[name], ambient[name])
+                self.assertIsNot(getattr(r, name), ambient[name])
+            self.assertIs(r.portable_family.collector, r.portable_collector)
+            self.assertIs(r.portable_capture.source, r.portable_source)
+
+    def test_portable_helper_tampering_is_refused_before_execution(self):
+        script = self.layout()
+        path = script.with_name('portable_family.py')
+        path.write_bytes(b"raise AssertionError('UNVERIFIED HELPER EXECUTED')\n" + path.read_bytes())
+        with self.assertRaisesRegex(ValueError, 'Portable helper bytes changed'):
+            self.load(script)
+
+    def test_portable_missing_helper_is_refused_before_import(self):
+        script = self.layout()
+        script.with_name('portable_source.py').unlink()
+        with self.assertRaisesRegex(ValueError, 'Portable helper is unavailable'):
+            self.load(script)
+
+    def test_portable_catalog_tampering_is_refused_before_import(self):
+        script = self.layout()
+        script.with_name('portable_bindings_v2.json').write_bytes(b'{}\n')
+        with self.assertRaisesRegex(ValueError, 'Portable binding bytes changed'):
+            self.load(script)
+
+    def test_portable_loader_cleans_ambient_state_after_refusal(self):
+        script = self.layout()
+        path = script.with_name('portable_capture.py')
+        path.write_bytes(path.read_bytes() + b'\n# altered\n')
+        ambient = {name: types.ModuleType(name) for name in self.names}
+        with mock.patch.dict(sys.modules, ambient):
+            with self.assertRaises(ValueError):
+                self.load(script)
+            for name in self.names:
+                self.assertIs(sys.modules[name], ambient[name])
+
+    def test_portable_dispatch_passes_dynamic_adapter_api(self):
+        r = self.load()
+        captured = []
+        def validate(api, receipt, suite, sources, root):
+            captured.append(api)
+            self.assertIs(api.require, r.require)
+            return {'fixture': True}
+        with mock.patch.object(r.portable_family, 'validate_receipt', side_effect=validate):
+            result = r.validate_receipt({'replay_evidence': {'schema': r.portable_family.EVIDENCE_SCHEMA}}, {}, {}, self.base)
+        self.assertEqual(result, {'fixture': True})
+        self.assertEqual(len(captured), 1)
+
+    def test_portable_dispatch_defers_malformed_outer_receipt_to_schema_gate(self):
+        r = self.load()
+        for receipt in (None, [], 1, 'invalid'):
+            with self.subTest(receipt=receipt), self.assertRaises(ValueError):
+                r.validate_receipt(receipt, {}, {}, self.base)
+
+    def test_portable_dispatch_defers_malformed_nested_evidence_to_schema_gate(self):
+        r = self.load()
+        for evidence in (None, [], 1, 'invalid'):
+            with self.subTest(evidence=evidence), self.assertRaises(ValueError):
+                r.validate_receipt({'replay_evidence': evidence}, {}, {}, self.base)
+
+    def test_portable_cli_dispatch_does_not_require_ambient_module(self):
+        r = self.load()
+        with mock.patch.object(sys, 'argv', ['fixture', '--portable-family', '--help']), \
+             mock.patch.object(r.portable_family, 'command_line', return_value=0) as command:
+            self.assertEqual(r.main(), 0)
+        self.assertIs(command.call_args.args[0].require, r.require)
+        self.assertEqual(command.call_args.args[1], ['--help'])
+
+    def test_portable_generic_execution_refuses_before_any_output(self):
+        r = self.load()
+        suite = {'replay': {'drivers': [{'recipe': r.portable_admission.RECIPE}]}}
+        output = self.base / 'out'
+        with self.assertRaisesRegex(ValueError, 'single physical family executor'):
+            r.execute_suite(suite, {}, self.base, output, {}, {})
+        self.assertFalse(output.exists())
+
+    def event(self, r, body="print('portable fixture')", timeout=1):
+        path = self.base / 'tiny.py'
+        path.write_text(body + '\n')
+        event = {'readonly': False, 'id': 'literal/native',
+                 'argv': [sys.executable, '-B', str(path)], 'cwd': str(self.base),
+                 'timeout': timeout, 'source_path': str(path), 'source_sha256': r.sha(path.read_bytes()),
+                 'member': 'tiny.py', 'object_path': None, 'lean_path': None, 'expected_exit': 0,
+                 'original_log': 'native.log', 'timeout_marker': None}
+        plan = {'events': [event], 'children': [event], 'event_plan_sha256': r.canonical([event])}
+        trace = self.base / 'trace'
+        trace.mkdir()
+        return event, plan, trace
+
+    def invoke(self, callback, event):
+        return callback(event['argv'], cwd=self.base, stdout=subprocess.PIPE,
+                        stderr=subprocess.STDOUT, text=True, timeout=event['timeout'])
+
+    def test_portable_actual_python_capture_records_source_and_terminal(self):
+        r = self.load()
+        event, plan, trace = self.event(r)
+        callback = r.portable_capture.capture_calls(r, subprocess.run, trace, plan, self.base / 'state.json')
+        self.assertEqual(self.invoke(callback, event).returncode, 0)
+        self.assertTrue(callback.finish()['complete'])
+        row = r.read_json(trace / '0000.json')
+        self.assertEqual(row['argv'], event['argv'])
+        self.assertEqual(row['terminal'], 'COMPLETED')
+        self.assertEqual(row['raw_returncode'], 0)
+        self.assertEqual(row['source_sha256_before'], row['source_sha256_after'])
+        self.assertEqual(row['output_hashes_after'], {})
+        with self.assertRaisesRegex(ValueError, 'Extra portable original call'):
+            self.invoke(callback, event)
+        self.assertFalse((trace / '0001.json').exists())
+
+    def test_portable_actual_timeout_retains_no_invented_rejection(self):
+        r = self.load()
+        event, plan, trace = self.event(r, 'import time; time.sleep(3)')
+        callback = r.portable_capture.capture_calls(r, subprocess.run, trace, plan, self.base / 'state.json')
+        with self.assertRaises(subprocess.TimeoutExpired):
+            self.invoke(callback, event)
+        callback.finish()
+        row = r.read_json(trace / '0000.json')
+        self.assertEqual(row['terminal'], 'TIMEOUT')
+        self.assertIsNone(row['raw_returncode'])
+        self.assertIsNone(row['exit_code'])
+
+    def test_portable_signal_code_is_retained_without_semantic_credit(self):
+        r = self.load()
+        event, plan, trace = self.event(r)
+        fake = lambda argv, **kwargs: subprocess.CompletedProcess(argv, -9, 'synthetic signal\n')
+        callback = r.portable_capture.capture_calls(r, fake, trace, plan, self.base / 'state.json')
+        self.invoke(callback, event)
+        callback.finish()
+        row = r.read_json(trace / '0000.json')
+        self.assertEqual(row['terminal'], 'INTERRUPTED')
+        self.assertEqual(row['raw_returncode'], -9)
+        self.assertIsNone(row['exit_code'])
+
+    def test_portable_capture_refuses_source_changed_during_process(self):
+        r = self.load()
+        event, plan, trace = self.event(r)
+        def changed(argv, **kwargs):
+            Path(event['source_path']).write_bytes(b'changed fixture\n')
+            return subprocess.CompletedProcess(argv, 0, '')
+        callback = r.portable_capture.capture_calls(r, changed, trace, plan, self.base / 'state.json')
+        with self.assertRaisesRegex(ValueError, 'source changed during child'):
+            self.invoke(callback, event)
+        row = r.read_json(trace / '0000.json')
+        self.assertNotEqual(row['source_sha256_before'], row['source_sha256_after'])
+
+    def test_portable_cost_resource_dominates_concrete_application_mismatch(self):
+        r = self.load()
+        event = {'id': 'cost/ExactInheritedCostMutant', 'argv': ['lean', 'Fixture.lean'],
+                 'cwd': '.', 'source_sha256': '1' * 64, 'expected_exit': 1,
+                 'timeout_marker': '\nWALL_TIMEOUT_180\n'}
+        text = '\n'.join(r.portable_source.MISMATCH) + '\nmaximum number of heartbeats\n'
+        log = text.encode()
+        captured = {'argv': event['argv'], 'cwd': '.', 'log_sha256': r.sha(log),
+                    'exit_code': 1, 'terminal': 'COMPLETED'}
+        original = {'source_sha256': event['source_sha256'], 'command': event['argv'],
+                    'exit_code': 1, 'log_sha256': r.sha(log), 'resource_diagnostic': True}
+        row = r.portable_source.classify_child(r, event, original, captured, log, log)
+        self.assertTrue(row['concrete_application_mismatch'])
+        self.assertTrue(row['mismatch_precedes_resource'])
+        self.assertEqual(row['outcome'], 'RESOURCE_INCONCLUSIVE')
+        self.assertIsNone(row['semantic_outcome'])
+        self.assertFalse(row['unchanged_theorem_refuted'])
+
+    def cache(self):
+        root = self.base / 'mathlib'
+        (root / '.lake/build/lib/lean').mkdir(parents=True)
+        (root / '.lake/packages/Cli').mkdir(parents=True)
+        plan = {'packages': {'mathlib': {'kind': 'GIT', 'path': '.'},
+                             'Cli': {'kind': 'GIT', 'path': '.lake/packages/Cli'}},
+                'official': {'Mathlib.Fixture': {'package': 'mathlib'}}}
+        return root, plan
+
+    def test_portable_cache_allows_only_absent_unimported_cli(self):
+        r = self.load()
+        root, plan = self.cache()
+        r.portable_family._verify_original_libraries(r, plan, root)
+        plan['official']['Cli.Fixture'] = {'package': 'Cli'}
+        with self.assertRaisesRegex(r.MissingTool, 'Required imported package cache'):
+            r.portable_family._verify_original_libraries(r, plan, root)
+
+    def test_portable_cache_rejects_extra_search_root(self):
+        r = self.load()
+        root, plan = self.cache()
+        (root / '.lake/packages/unlisted/.lake/build/lib/lean').mkdir(parents=True)
+        with self.assertRaisesRegex(ValueError, 'library search differs'):
+            r.portable_family._verify_original_libraries(r, plan, root)
+
+    def test_portable_wrong_physical_recipe_cannot_be_resealed(self):
+        r = self.load()
+        with self.assertRaisesRegex(ValueError, 'Unknown portable physical recipe'):
+            r.portable_family._physical(r, {'schema': r.portable_family.PHYSICAL_SCHEMA,
+                                            'recipe': 'foreign-recipe'})
+
+    def test_portable_parent_terminal_requires_exact_nonresource_exit(self):
+        r = self.load()
+        row = {'terminal': 'COMPLETED', 'exit_code': 0, 'started_at': '2026-01-01T00:00:00Z',
+               'ended_at': '2026-01-01T00:00:01Z', 'log_sha256': '1' * 64}
+        r.portable_family._parent_run(r, row)
+        for terminal, code in [('COMPLETED', True), ('COMPLETED', -9), ('COMPLETED', 124), ('TIMEOUT', 1)]:
+            with self.subTest(terminal=terminal, code=code), self.assertRaises(ValueError):
+                r.portable_family._parent_run(r, {**row, 'terminal': terminal, 'exit_code': code})
+        r.portable_family._parent_run(r, {**row, 'terminal': 'TIMEOUT', 'exit_code': None})
+
+    def test_portable_audit_rejects_changed_owner_axiom_and_object_binding(self):
+        r = self.load()
+        target = {'target_id': 'main', 'name': 'Fixture.safe', 'module': 'Fixture'}
+        plan = {'targets': {'main': target}}
+        row = {'target_id': 'main', 'name': 'Fixture.safe', 'stage_id': '_target_audit',
+               'log_sha256': '1' * 64, 'type_sha256': '2' * 64, 'closure_status': 'CHECKED_SAFE',
+               'checked_declarations': 1, 'axioms': []}
+        audit = {'run': {'terminal': 'COMPLETED', 'exit_code': 0,
+                         'started_at': '2026-01-01T00:00:00Z', 'ended_at': '2026-01-01T00:00:01Z',
+                         'log_sha256': '1' * 64}, 'source_sha256': r.sha(r._audit_source([target]).encode()),
+                 'object_provenance_sha256': r.canonical([]), 'target_audits': [row],
+                 'status': 'COMPLETE', 'resource_diagnostic': False}
+        self.assertTrue(r.portable_family._audit_valid(r, {}, plan, audit, [], True))
+        changes = [{'name': 'Foreign.safe'}, {'axioms': ['Foreign.axiom']},
+                   {'checked_declarations': True}, {'closure_status': 'NOT_CHECKED'}]
+        for change in changes:
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                r.portable_family._audit_valid(r, {}, plan, {**audit, 'target_audits': [{**row, **change}]}, [], True)
+        with self.assertRaisesRegex(ValueError, 'namespace object mapping differs'):
+            r.portable_family._audit_valid(r, {}, plan, audit, [{'changed': True}], True)
+
+    def test_portable_missing_tools_yield_two_views_without_producer(self):
+        r = self.load()
+        plans = {name: {} for name in r.portable_family.NAMES}
+        suites = [{'id': name, 'review_ids': []} for name in r.portable_family.NAMES]
+        failure = {'run_id': '1' * 64, 'physical_execution_count': 0}
+        receipt = {'outcome': 'BLOCKED_TOOLCHAIN', 'proof_scope': 'NONE'}
+        with mock.patch.object(r.portable_family, 'validate_family', return_value=plans), \
+             mock.patch.object(r.portable_family, '_produce', return_value=(failure, {}, {})) as produce, \
+             mock.patch.object(r.portable_family, 'consume_view', return_value=receipt) as consume:
+            result = r.portable_family.execute_family(r, suites, {}, self.base / 'sources',
+                                                     self.base / 'out', {}, {}, reviews={})
+        self.assertEqual(produce.call_count, 1)
+        self.assertEqual(consume.call_count, 2)
+        self.assertEqual(result['physical_execution_count'], 0)
+        self.assertTrue(all(row['outcome'] == 'BLOCKED_TOOLCHAIN' for row in result['views'].values()))
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
