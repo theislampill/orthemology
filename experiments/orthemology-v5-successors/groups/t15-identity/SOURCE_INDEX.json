@@ -1,0 +1,2402 @@
+{
+  "cell": "D14",
+  "scope": "Exact selected scientific text/source and historical review identities; no fresh replay asserted by this index.",
+  "sources": [
+    {
+      "id": "T15-COMPENDIUM-DERIVED-MARKDOWN",
+      "origin_input_id": "T15-COMPENDIUM",
+      "member_chain": [],
+      "original_sha256": "06622a9ab290a76993e0864b96b39a78bec725b5a3e59d226d5a8902e552eaca",
+      "public_path": "experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md",
+      "public_sha256": "34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2"
+    },
+    {
+      "id": "identity-src-003725d58866c59f3d52",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/RejectCustomAxiom.lean"
+      ],
+      "original_sha256": "359de6231a4b1393e537f7760d4f05c883ab24c7cd48fc654ffbb4fdaecc5eab",
+      "public_path": "experiments/orthemology-v5-successors/source-store/359de6231a4b1393e537f7760d4f05c883ab24c7cd48fc654ffbb4fdaecc5eab/RejectCustomAxiom.lean",
+      "public_sha256": "359de6231a4b1393e537f7760d4f05c883ab24c7cd48fc654ffbb4fdaecc5eab"
+    },
+    {
+      "id": "identity-src-007d865cd2cc1c2845f1",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/RawNoninhabitationPolarity.lean"
+      ],
+      "original_sha256": "dd787629ff2128b1c61136a1578034cb76eb90e6f40ca60af1d17fca8c6f0967",
+      "public_path": "experiments/orthemology-v5-successors/source-store/dd787629ff2128b1c61136a1578034cb76eb90e6f40ca60af1d17fca8c6f0967/RawNoninhabitationPolarity.lean",
+      "public_sha256": "dd787629ff2128b1c61136a1578034cb76eb90e6f40ca60af1d17fca8c6f0967"
+    },
+    {
+      "id": "identity-src-01f62ae6eeef1a80c013",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/SubstitutionSyntax.lean"
+      ],
+      "original_sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649/SubstitutionSyntax.lean",
+      "public_sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649"
+    },
+    {
+      "id": "identity-src-02356981ac7b7d866ee4",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/FiniteBudgetIsNotAllTests.lean"
+      ],
+      "original_sha256": "1b784056a804d4de0c5012dedd87744bcff93ae5699eb2cc5ba571f02d6c5d66",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1b784056a804d4de0c5012dedd87744bcff93ae5699eb2cc5ba571f02d6c5d66/FiniteBudgetIsNotAllTests.lean",
+      "public_sha256": "1b784056a804d4de0c5012dedd87744bcff93ae5699eb2cc5ba571f02d6c5d66"
+    },
+    {
+      "id": "identity-src-02fabdb680b2b5f41f48",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/AllProjectProofAudit.lean"
+      ],
+      "original_sha256": "4354990c11644d1df339494be74a63ec016ec0f432ae07fd4dfd7cc07fa9c58f",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4354990c11644d1df339494be74a63ec016ec0f432ae07fd4dfd7cc07fa9c58f/AllProjectProofAudit.lean",
+      "public_sha256": "4354990c11644d1df339494be74a63ec016ec0f432ae07fd4dfd7cc07fa9c58f"
+    },
+    {
+      "id": "identity-src-05be4ed10088dc3691b9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/MissingLeftMembership.lean"
+      ],
+      "original_sha256": "7ca6eff78f6863c24e7ec6a27d26af4be5c9a84a253f1f022ae738d49a6e3786",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7ca6eff78f6863c24e7ec6a27d26af4be5c9a84a253f1f022ae738d49a6e3786/MissingLeftMembership.lean",
+      "public_sha256": "7ca6eff78f6863c24e7ec6a27d26af4be5c9a84a253f1f022ae738d49a6e3786"
+    },
+    {
+      "id": "identity-src-079df6f45f30ecfd404c",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/AuditorRejectsUnsafe.lean"
+      ],
+      "original_sha256": "68eb911de33a8b5609ad32c74d0f7f167652560624284bdb2f45734d61960d56",
+      "public_path": "experiments/orthemology-v5-successors/source-store/68eb911de33a8b5609ad32c74d0f7f167652560624284bdb2f45734d61960d56/AuditorRejectsUnsafe.lean",
+      "public_sha256": "68eb911de33a8b5609ad32c74d0f7f167652560624284bdb2f45734d61960d56"
+    },
+    {
+      "id": "identity-src-08576944de90803bb44f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/RestrictedComputationalAudit.lean"
+      ],
+      "original_sha256": "b7d9414161ba3faa975b5c8719691d6039762fc0832e19efda152f3b893ff325",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b7d9414161ba3faa975b5c8719691d6039762fc0832e19efda152f3b893ff325/RestrictedComputationalAudit.lean",
+      "public_sha256": "b7d9414161ba3faa975b5c8719691d6039762fc0832e19efda152f3b893ff325"
+    },
+    {
+      "id": "identity-src-0972f860ae5f2ecee848",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/receipt.json"
+      ],
+      "original_sha256": "c8dfb1379ecac019d17baf6e66069d0bf292f825e331f64ab0bd902d300dab8c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c8dfb1379ecac019d17baf6e66069d0bf292f825e331f64ab0bd902d300dab8c/receipt.json",
+      "public_sha256": "c8dfb1379ecac019d17baf6e66069d0bf292f825e331f64ab0bd902d300dab8c"
+    },
+    {
+      "id": "identity-src-0a24e649719d4ee1582b",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/WrongParameterOrder.lean"
+      ],
+      "original_sha256": "7e2248e768100c13d842ffe4ad8593e2cf6702de0396b3e84f16c7249921b397",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7e2248e768100c13d842ffe4ad8593e2cf6702de0396b3e84f16c7249921b397/WrongParameterOrder.lean",
+      "public_sha256": "7e2248e768100c13d842ffe4ad8593e2cf6702de0396b3e84f16c7249921b397"
+    },
+    {
+      "id": "identity-src-0e3be3231ea1b86e4f3d",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/AuditorRejectsPartial.lean"
+      ],
+      "original_sha256": "1de016f96f7f084ab621a08b9c2636a451ca0b32586c911030a7b11cbd4b0b85",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1de016f96f7f084ab621a08b9c2636a451ca0b32586c911030a7b11cbd4b0b85/AuditorRejectsPartial.lean",
+      "public_sha256": "1de016f96f7f084ab621a08b9c2636a451ca0b32586c911030a7b11cbd4b0b85"
+    },
+    {
+      "id": "identity-src-0e59bd48fe91d4eb3dcf",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/lean-toolchain"
+      ],
+      "original_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+      "public_path": "experiments/orthemology-v5-successors/source-store/55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea/lean-toolchain",
+      "public_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "id": "identity-src-134ce7af3018c5a4eca6",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllConstants.lean"
+      ],
+      "original_sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041/AllConstants.lean",
+      "public_sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041"
+    },
+    {
+      "id": "identity-src-178052337762b1e32a06",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/ExportDeclarationInventory.lean"
+      ],
+      "original_sha256": "d8cc868cfb48b5db265771fcccf9ff4b0fd902d35ac50be24800133d01dbe048",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d8cc868cfb48b5db265771fcccf9ff4b0fd902d35ac50be24800133d01dbe048/ExportDeclarationInventory.lean",
+      "public_sha256": "d8cc868cfb48b5db265771fcccf9ff4b0fd902d35ac50be24800133d01dbe048"
+    },
+    {
+      "id": "identity-src-19ddccaf14b868bf26c1",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllStructuralBase.lean"
+      ],
+      "original_sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d/AllStructuralBase.lean",
+      "public_sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d"
+    },
+    {
+      "id": "identity-src-1b9c9bc6737b79583d1d",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/SemanticExistenceIsNotCurrentTyping.lean"
+      ],
+      "original_sha256": "9880810bb76f711fad57c1dc2643b4bffc6dba02365266492545447c8004d71b",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9880810bb76f711fad57c1dc2643b4bffc6dba02365266492545447c8004d71b/SemanticExistenceIsNotCurrentTyping.lean",
+      "public_sha256": "9880810bb76f711fad57c1dc2643b4bffc6dba02365266492545447c8004d71b"
+    },
+    {
+      "id": "identity-src-1c32a612dfcb56647a09",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/WrongZeroConditional.lean"
+      ],
+      "original_sha256": "766c81b2d9d614adfe1b92c4dad3c04b69dd6ca2d730f9a4ee2668a394086c8f",
+      "public_path": "experiments/orthemology-v5-successors/source-store/766c81b2d9d614adfe1b92c4dad3c04b69dd6ca2d730f9a4ee2668a394086c8f/WrongZeroConditional.lean",
+      "public_sha256": "766c81b2d9d614adfe1b92c4dad3c04b69dd6ca2d730f9a4ee2668a394086c8f"
+    },
+    {
+      "id": "identity-src-1e080c973c3696bac7dc",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveBooleanCertificates.lean"
+      ],
+      "original_sha256": "c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354/EffectiveBooleanCertificates.lean",
+      "public_sha256": "c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354"
+    },
+    {
+      "id": "identity-src-1ef7c9248d76317bbb45",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/unified-v3-source-lock.json"
+      ],
+      "original_sha256": "0326d252d6ca4ddbbe0e9f7c962573e1a35f3cd85977ac5a92ef47553091ebf0",
+      "public_path": "experiments/orthemology-v5-successors/source-store/0326d252d6ca4ddbbe0e9f7c962573e1a35f3cd85977ac5a92ef47553091ebf0/unified-v3-source-lock.json",
+      "public_sha256": "0326d252d6ca4ddbbe0e9f7c962573e1a35f3cd85977ac5a92ef47553091ebf0"
+    },
+    {
+      "id": "identity-src-1fcaf563b6a5a2615091",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/RejectAdmittedProof.lean"
+      ],
+      "original_sha256": "4ff27ff7b95e1ff14f44ec02a6be4a0f6e3fbf66565ed76fc51383e7009976a0",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4ff27ff7b95e1ff14f44ec02a6be4a0f6e3fbf66565ed76fc51383e7009976a0/RejectAdmittedProof.lean",
+      "public_sha256": "4ff27ff7b95e1ff14f44ec02a6be4a0f6e3fbf66565ed76fc51383e7009976a0"
+    },
+    {
+      "id": "identity-src-20d49fe52978429af0e3",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01LambdaSyntax.lean"
+      ],
+      "original_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21/P01LambdaSyntax.lean",
+      "public_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21"
+    },
+    {
+      "id": "identity-src-24de6f6a833913175352",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/MissingClosure.lean"
+      ],
+      "original_sha256": "edd2deb3c8b864834088992bc05115df35e6d623296b785f0fb6807f0a7a055b",
+      "public_path": "experiments/orthemology-v5-successors/source-store/edd2deb3c8b864834088992bc05115df35e6d623296b785f0fb6807f0a7a055b/MissingClosure.lean",
+      "public_sha256": "edd2deb3c8b864834088992bc05115df35e6d623296b785f0fb6807f0a7a055b"
+    },
+    {
+      "id": "identity-src-26686be658b981c46880",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/AuditorRejectsCustomAxiom.lean"
+      ],
+      "original_sha256": "25eee1be267c97ef0e48e6915e0c8672bd152cca4241b4335425fbf6f3930968",
+      "public_path": "experiments/orthemology-v5-successors/source-store/25eee1be267c97ef0e48e6915e0c8672bd152cca4241b4335425fbf6f3930968/AuditorRejectsCustomAxiom.lean",
+      "public_sha256": "25eee1be267c97ef0e48e6915e0c8672bd152cca4241b4335425fbf6f3930968"
+    },
+    {
+      "id": "identity-src-27af00f0eb08a1a692fd",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectivePartialObserver.lean"
+      ],
+      "original_sha256": "3a2c534f00f0d5c4e8a2bde6c8bf057078d03a8c37338eeea2a90f14c8d994aa",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3a2c534f00f0d5c4e8a2bde6c8bf057078d03a8c37338eeea2a90f14c8d994aa/EffectivePartialObserver.lean",
+      "public_sha256": "3a2c534f00f0d5c4e8a2bde6c8bf057078d03a8c37338eeea2a90f14c8d994aa"
+    },
+    {
+      "id": "identity-src-27cb531a3c8c7196a383",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v1-controls/WrongZeroBranch.lean"
+      ],
+      "original_sha256": "fadb9286161236fa503b7730b98a857ad539e5eea2b683d4c783dfc8b2852016",
+      "public_path": "experiments/orthemology-v5-successors/source-store/fadb9286161236fa503b7730b98a857ad539e5eea2b683d4c783dfc8b2852016/WrongZeroBranch.lean",
+      "public_sha256": "fadb9286161236fa503b7730b98a857ad539e5eea2b683d4c783dfc8b2852016"
+    },
+    {
+      "id": "identity-src-2a7224adc32c89055551",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/DECLARATION_INVENTORY.json"
+      ],
+      "original_sha256": "15c92d78a7a04fb86a41d547d80e8364c9e77d04a3d7e52fea93cec3ae1c36fc",
+      "public_path": "experiments/orthemology-v5-successors/source-store/15c92d78a7a04fb86a41d547d80e8364c9e77d04a3d7e52fea93cec3ae1c36fc/DECLARATION_INVENTORY.json",
+      "public_sha256": "15c92d78a7a04fb86a41d547d80e8364c9e77d04a3d7e52fea93cec3ae1c36fc"
+    },
+    {
+      "id": "identity-src-2aa6136f89852c93866b",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectivePrimitiveRecursion.lean"
+      ],
+      "original_sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba",
+      "public_path": "experiments/orthemology-v5-successors/source-store/52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba/EffectivePrimitiveRecursion.lean",
+      "public_sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba"
+    },
+    {
+      "id": "identity-src-2ad2bd7a3599cfeb350e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/CanonicalTestsAreNotRawEndpointConversion.lean"
+      ],
+      "original_sha256": "510480d0260c7edafec3120d7b479d18cc09f7cad0b5592930e649a9737957b1",
+      "public_path": "experiments/orthemology-v5-successors/source-store/510480d0260c7edafec3120d7b479d18cc09f7cad0b5592930e649a9737957b1/CanonicalTestsAreNotRawEndpointConversion.lean",
+      "public_sha256": "510480d0260c7edafec3120d7b479d18cc09f7cad0b5592930e649a9737957b1"
+    },
+    {
+      "id": "identity-src-2b5e3fc7a908734787c8",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01SystemF.lean"
+      ],
+      "original_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a/P01SystemF.lean",
+      "public_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a"
+    },
+    {
+      "id": "identity-src-2c1183a4725481f50cfc",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/univariate-reference/root_extension_checker.py"
+      ],
+      "original_sha256": "bd796dc6d0157d0b8a125cc3b394a866812567f12ce132ee11d2fa3844e081d9",
+      "public_path": "experiments/orthemology-v5-successors/source-store/bd796dc6d0157d0b8a125cc3b394a866812567f12ce132ee11d2fa3844e081d9/root_extension_checker.py",
+      "public_sha256": "bd796dc6d0157d0b8a125cc3b394a866812567f12ce132ee11d2fa3844e081d9"
+    },
+    {
+      "id": "identity-src-2d820162c8cacd40bfe3",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/AuditorRejectsSorry.lean"
+      ],
+      "original_sha256": "859103cb468274bc02b2a036c99bb8bfd8c4c5d3a29b2f4307209c9f8a5eb9b4",
+      "public_path": "experiments/orthemology-v5-successors/source-store/859103cb468274bc02b2a036c99bb8bfd8c4c5d3a29b2f4307209c9f8a5eb9b4/AuditorRejectsSorry.lean",
+      "public_sha256": "859103cb468274bc02b2a036c99bb8bfd8c4c5d3a29b2f4307209c9f8a5eb9b4"
+    },
+    {
+      "id": "identity-src-2dd61356bfe8107d2f68",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/MissingSemanticInput.lean"
+      ],
+      "original_sha256": "3f6c905cf2363c713795aa75a1edd21fd6b3cc3c312572ca2fd8d9949b596254",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3f6c905cf2363c713795aa75a1edd21fd6b3cc3c312572ca2fd8d9949b596254/MissingSemanticInput.lean",
+      "public_sha256": "3f6c905cf2363c713795aa75a1edd21fd6b3cc3c312572ca2fd8d9949b596254"
+    },
+    {
+      "id": "identity-src-2e39da371904b0fcf1be",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllRawRenaming.lean"
+      ],
+      "original_sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f",
+      "public_path": "experiments/orthemology-v5-successors/source-store/5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f/AllRawRenaming.lean",
+      "public_sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f"
+    },
+    {
+      "id": "identity-src-304f84dfaae3236ae271",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllNucleusSyntax.lean"
+      ],
+      "original_sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e/AllNucleusSyntax.lean",
+      "public_sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e"
+    },
+    {
+      "id": "identity-src-3067f3722cda451abd37",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/check_boolean_negative_controls.py"
+      ],
+      "original_sha256": "094ed316e0a75c9cbbcd4a409670c275e43266df0fccbb4c291e12f55c6f608e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/094ed316e0a75c9cbbcd4a409670c275e43266df0fccbb4c291e12f55c6f608e/check_boolean_negative_controls.py",
+      "public_sha256": "094ed316e0a75c9cbbcd4a409670c275e43266df0fccbb4c291e12f55c6f608e"
+    },
+    {
+      "id": "identity-src-30c88c3bd16de04c0176",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/NoSyntacticIdentityCompleteness.lean"
+      ],
+      "original_sha256": "bbb5c7372c2adfeea611779da933708b28450177d759bc7e0381f3c7655965f6",
+      "public_path": "experiments/orthemology-v5-successors/source-store/bbb5c7372c2adfeea611779da933708b28450177d759bc7e0381f3c7655965f6/NoSyntacticIdentityCompleteness.lean",
+      "public_sha256": "bbb5c7372c2adfeea611779da933708b28450177d759bc7e0381f3c7655965f6"
+    },
+    {
+      "id": "identity-src-313419cc4c43af12d8a6",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/TypedAlgebra.lean"
+      ],
+      "original_sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc/TypedAlgebra.lean",
+      "public_sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc"
+    },
+    {
+      "id": "identity-src-31e7347e7ed4d2eb81e2",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/IdentityChecker.lean"
+      ],
+      "original_sha256": "989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02",
+      "public_path": "experiments/orthemology-v5-successors/source-store/989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02/IdentityChecker.lean",
+      "public_sha256": "989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02"
+    },
+    {
+      "id": "identity-src-330d520881369832faa0",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v1-controls/SemanticValidityIsNotHas.lean"
+      ],
+      "original_sha256": "f1dd3d10a9a9efa09d57afc1d2b251094a058bf0a8e4fce7b83f2028deac9721",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f1dd3d10a9a9efa09d57afc1d2b251094a058bf0a8e4fce7b83f2028deac9721/SemanticValidityIsNotHas.lean",
+      "public_sha256": "f1dd3d10a9a9efa09d57afc1d2b251094a058bf0a8e4fce7b83f2028deac9721"
+    },
+    {
+      "id": "identity-src-33f0f659d22c8a7ddef6",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/README.md"
+      ],
+      "original_sha256": "f022fc8af3e30393185e34e04217f3b5c32c36e83dd038fcc404eed645c413b6",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f022fc8af3e30393185e34e04217f3b5c32c36e83dd038fcc404eed645c413b6/README.md",
+      "public_sha256": "f022fc8af3e30393185e34e04217f3b5c32c36e83dd038fcc404eed645c413b6"
+    },
+    {
+      "id": "identity-src-35018a0d9984a5159fd8",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/IntensionalIdentityModel.lean"
+      ],
+      "original_sha256": "64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4",
+      "public_path": "experiments/orthemology-v5-successors/source-store/64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4/IntensionalIdentityModel.lean",
+      "public_sha256": "64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4"
+    },
+    {
+      "id": "identity-src-36ac99f0b446a05f4a38",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllInstantiation.lean"
+      ],
+      "original_sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606/AllInstantiation.lean",
+      "public_sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606"
+    },
+    {
+      "id": "identity-src-3a2664c4478dd86fd8c5",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/RawToBoolCast.lean"
+      ],
+      "original_sha256": "c785cfeb9ed9024ee425e6de10729f95f868c2ccf340122c0048e10e1776cb56",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c785cfeb9ed9024ee425e6de10729f95f868c2ccf340122c0048e10e1776cb56/RawToBoolCast.lean",
+      "public_sha256": "c785cfeb9ed9024ee425e6de10729f95f868c2ccf340122c0048e10e1776cb56"
+    },
+    {
+      "id": "identity-src-3b1421f721b77f68a18f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-independent-controls/INDEPENDENT_MissingPositivity.lean"
+      ],
+      "original_sha256": "1e20d933f325cddddab82ecbb6d4050c0474f67f5474891832eff17767bdbf2a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1e20d933f325cddddab82ecbb6d4050c0474f67f5474891832eff17767bdbf2a/INDEPENDENT_MissingPositivity.lean",
+      "public_sha256": "1e20d933f325cddddab82ecbb6d4050c0474f67f5474891832eff17767bdbf2a"
+    },
+    {
+      "id": "identity-src-3b513fc12bb215aea859",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/RestrictedCompiler.lean"
+      ],
+      "original_sha256": "7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30/RestrictedCompiler.lean",
+      "public_sha256": "7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30"
+    },
+    {
+      "id": "identity-src-3b8682ee420a279c3992",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllTermLemmas.lean"
+      ],
+      "original_sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e/AllTermLemmas.lean",
+      "public_sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e"
+    },
+    {
+      "id": "identity-src-3ba2d23b8c7207a1324d",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/inherited-source-lock.json"
+      ],
+      "original_sha256": "69f8934b8730b02d5bc0648e434b561f6619876f71c05b68873e813e71364823",
+      "public_path": "experiments/orthemology-v5-successors/source-store/69f8934b8730b02d5bc0648e434b561f6619876f71c05b68873e813e71364823/inherited-source-lock.json",
+      "public_sha256": "69f8934b8730b02d5bc0648e434b561f6619876f71c05b68873e813e71364823"
+    },
+    {
+      "id": "identity-src-3ce3e5fede533b0b7fe0",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/MissingDefinedRepresentation.lean"
+      ],
+      "original_sha256": "d933e5c2043ee2a09905eefafd6cbda3c608da94fd45e0b254c89400f7b1b0fd",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d933e5c2043ee2a09905eefafd6cbda3c608da94fd45e0b254c89400f7b1b0fd/MissingDefinedRepresentation.lean",
+      "public_sha256": "d933e5c2043ee2a09905eefafd6cbda3c608da94fd45e0b254c89400f7b1b0fd"
+    },
+    {
+      "id": "identity-src-3ef02d3cde99f48578ff",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/CombinedAxiomAudit.lean"
+      ],
+      "original_sha256": "b89fb44ce3c9029c708889ad58df13142edfbc6ca4c9b61635a4d14aef0939a5",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b89fb44ce3c9029c708889ad58df13142edfbc6ca4c9b61635a4d14aef0939a5/CombinedAxiomAudit.lean",
+      "public_sha256": "b89fb44ce3c9029c708889ad58df13142edfbc6ca4c9b61635a4d14aef0939a5"
+    },
+    {
+      "id": "identity-src-3ef69ec0388c759d402a",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/lake-manifest.json"
+      ],
+      "original_sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924",
+      "public_path": "experiments/orthemology-v5-successors/source-store/59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924/lake-manifest.json",
+      "public_sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924"
+    },
+    {
+      "id": "identity-src-3fd9b6906eec53f5e930",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllPiLaws.lean"
+      ],
+      "original_sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f",
+      "public_path": "experiments/orthemology-v5-successors/source-store/8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f/AllPiLaws.lean",
+      "public_sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f"
+    },
+    {
+      "id": "identity-src-469d0bdbd4c5ee657bb9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/lakefile.lean"
+      ],
+      "original_sha256": "9bb04ac19ce7da416b40a14961ccc95e12359e5063ddfe4506fca46aa1353291",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9bb04ac19ce7da416b40a14961ccc95e12359e5063ddfe4506fca46aa1353291/lakefile.lean",
+      "public_sha256": "9bb04ac19ce7da416b40a14961ccc95e12359e5063ddfe4506fca46aa1353291"
+    },
+    {
+      "id": "identity-src-46ab02c88db48ad3016b",
+      "origin_input_id": "T15-RECEIPT",
+      "member_chain": [],
+      "original_sha256": "9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27/Orthemology_Fifteenth_Final_Verification_v1_20261005.json",
+      "public_sha256": "9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27"
+    },
+    {
+      "id": "identity-src-475755cd1832a669aef0",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/ZeroAtZeroIsNotZeroMap.lean"
+      ],
+      "original_sha256": "89da87d537047b1be2ce42efe8ea3a6f451d52ca24c3dd2b97d6d6e566976529",
+      "public_path": "experiments/orthemology-v5-successors/source-store/89da87d537047b1be2ce42efe8ea3a6f451d52ca24c3dd2b97d6d6e566976529/ZeroAtZeroIsNotZeroMap.lean",
+      "public_sha256": "89da87d537047b1be2ce42efe8ea3a6f451d52ca24c3dd2b97d6d6e566976529"
+    },
+    {
+      "id": "identity-src-48a32be8139b7afad6ed",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/MissingLeftTyping.lean"
+      ],
+      "original_sha256": "c6b2853424b12b8370fa0666f187c68720a15e758cd54348efb71621f1b2409e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c6b2853424b12b8370fa0666f187c68720a15e758cd54348efb71621f1b2409e/MissingLeftTyping.lean",
+      "public_sha256": "c6b2853424b12b8370fa0666f187c68720a15e758cd54348efb71621f1b2409e"
+    },
+    {
+      "id": "identity-src-48b7bf5992673905f119",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllSyntax.lean"
+      ],
+      "original_sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "public_path": "experiments/orthemology-v5-successors/source-store/633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46/AllSyntax.lean",
+      "public_sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46"
+    },
+    {
+      "id": "identity-src-48f6de5c7ad4c0534553",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01DependentModel.lean"
+      ],
+      "original_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59/P01DependentModel.lean",
+      "public_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59"
+    },
+    {
+      "id": "identity-src-4909f7a50d853ef2ed53",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/inherited-checks-lock.json"
+      ],
+      "original_sha256": "78adbe64887062f30049dd177cbae4e4bfef32517d2e4637ae08fd924c78359d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/78adbe64887062f30049dd177cbae4e4bfef32517d2e4637ae08fd924c78359d/inherited-checks-lock.json",
+      "public_sha256": "78adbe64887062f30049dd177cbae4e4bfef32517d2e4637ae08fd924c78359d"
+    },
+    {
+      "id": "identity-src-4920e1da7e512a8fe84e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/CheckGateInterfaces.lean"
+      ],
+      "original_sha256": "66c18675d2bd703dd1afe8535840fd3bf2d71b4d9075216b9d45eff0c62adb4a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/66c18675d2bd703dd1afe8535840fd3bf2d71b4d9075216b9d45eff0c62adb4a/CheckGateInterfaces.lean",
+      "public_sha256": "66c18675d2bd703dd1afe8535840fd3bf2d71b4d9075216b9d45eff0c62adb4a"
+    },
+    {
+      "id": "identity-src-49b59467b7ebc2d7e425",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/NoninhabitationPolarity.lean"
+      ],
+      "original_sha256": "f163f5fd43ebeff925eac33802eb06c300cf8979d34465f1765e5d7fb42878c4",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f163f5fd43ebeff925eac33802eb06c300cf8979d34465f1765e5d7fb42878c4/NoninhabitationPolarity.lean",
+      "public_sha256": "f163f5fd43ebeff925eac33802eb06c300cf8979d34465f1765e5d7fb42878c4"
+    },
+    {
+      "id": "identity-src-49d220113600858e4689",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllBaseLaws.lean"
+      ],
+      "original_sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984",
+      "public_path": "experiments/orthemology-v5-successors/source-store/df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984/AllBaseLaws.lean",
+      "public_sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984"
+    },
+    {
+      "id": "identity-src-49f833c5a708bd36ba47",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-independent-controls/INDEPENDENT_DuplicateRowsCannotCoverMasks.lean"
+      ],
+      "original_sha256": "62a85803b72e56ae6ce845639b61f66de6e2f6fb87a075cb95d1d56ebf0f4e71",
+      "public_path": "experiments/orthemology-v5-successors/source-store/62a85803b72e56ae6ce845639b61f66de6e2f6fb87a075cb95d1d56ebf0f4e71/INDEPENDENT_DuplicateRowsCannotCoverMasks.lean",
+      "public_sha256": "62a85803b72e56ae6ce845639b61f66de6e2f6fb87a075cb95d1d56ebf0f4e71"
+    },
+    {
+      "id": "identity-src-4afc921717bb980487bc",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveCanonicalTests.lean"
+      ],
+      "original_sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9",
+      "public_path": "experiments/orthemology-v5-successors/source-store/5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9/EffectiveCanonicalTests.lean",
+      "public_sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9"
+    },
+    {
+      "id": "identity-src-4c16d2abe8b2b4b8c51f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v1-controls/MissingEndpointMembership.lean"
+      ],
+      "original_sha256": "e350c8dc3b37779e71a85a1a36821ffb67ba2104abfac763e324522f1adcba22",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e350c8dc3b37779e71a85a1a36821ffb67ba2104abfac763e324522f1adcba22/MissingEndpointMembership.lean",
+      "public_sha256": "e350c8dc3b37779e71a85a1a36821ffb67ba2104abfac763e324522f1adcba22"
+    },
+    {
+      "id": "identity-src-52199d1a5a447edaa5c5",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/PositiveExactInterface.lean"
+      ],
+      "original_sha256": "75849ab9245fd8b2065d46de472ce068a8564e10d0babbe9b4dade9b58b374e3",
+      "public_path": "experiments/orthemology-v5-successors/source-store/75849ab9245fd8b2065d46de472ce068a8564e10d0babbe9b4dade9b58b374e3/PositiveExactInterface.lean",
+      "public_sha256": "75849ab9245fd8b2065d46de472ce068a8564e10d0babbe9b4dade9b58b374e3"
+    },
+    {
+      "id": "identity-src-558e2ef7f2b602323f5d",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveBooleanStandardness.lean"
+      ],
+      "original_sha256": "5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd",
+      "public_path": "experiments/orthemology-v5-successors/source-store/5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd/EffectiveBooleanStandardness.lean",
+      "public_sha256": "5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd"
+    },
+    {
+      "id": "identity-src-57135809d886edbb36ac",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/RejectCustomAxiom.lean"
+      ],
+      "original_sha256": "be94aa2c9267283d67a1976cf8b1f2bd531691ad674ff4c93cc67652ed8fe7ab",
+      "public_path": "experiments/orthemology-v5-successors/source-store/be94aa2c9267283d67a1976cf8b1f2bd531691ad674ff4c93cc67652ed8fe7ab/RejectCustomAxiom.lean",
+      "public_sha256": "be94aa2c9267283d67a1976cf8b1f2bd531691ad674ff4c93cc67652ed8fe7ab"
+    },
+    {
+      "id": "identity-src-5a7b60faa4ab52103d83",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/AuditorRejectsSorry.lean"
+      ],
+      "original_sha256": "42fa7a899fe0ed22831d4799c49f96d4848c902464654ca198bc7715b1781fb1",
+      "public_path": "experiments/orthemology-v5-successors/source-store/42fa7a899fe0ed22831d4799c49f96d4848c902464654ca198bc7715b1781fb1/AuditorRejectsSorry.lean",
+      "public_sha256": "42fa7a899fe0ed22831d4799c49f96d4848c902464654ca198bc7715b1781fb1"
+    },
+    {
+      "id": "identity-src-5bad32c787eaf7a0fdc3",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/WrongIdentityCarrier.lean"
+      ],
+      "original_sha256": "e40f4272b334ab0b6dfe255b2745c4cce85bce7c22e88f508e343a89f93930fe",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e40f4272b334ab0b6dfe255b2745c4cce85bce7c22e88f508e343a89f93930fe/WrongIdentityCarrier.lean",
+      "public_sha256": "e40f4272b334ab0b6dfe255b2745c4cce85bce7c22e88f508e343a89f93930fe"
+    },
+    {
+      "id": "identity-src-5c6cec97594b89d6e3f9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/MODULES.json"
+      ],
+      "original_sha256": "5ca88d5793fb2283badb16c8d722b777e0e9eb49198043b9335a198d572060c7",
+      "public_path": "experiments/orthemology-v5-successors/source-store/5ca88d5793fb2283badb16c8d722b777e0e9eb49198043b9335a198d572060c7/MODULES.json",
+      "public_sha256": "5ca88d5793fb2283badb16c8d722b777e0e9eb49198043b9335a198d572060c7"
+    },
+    {
+      "id": "identity-src-5ef6acacf14a1c6bb2f2",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllTermAlgebra.lean"
+      ],
+      "original_sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906/AllTermAlgebra.lean",
+      "public_sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906"
+    },
+    {
+      "id": "identity-src-608e4c7c663b5d567f12",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01Candidates.lean"
+      ],
+      "original_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e/P01Candidates.lean",
+      "public_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e"
+    },
+    {
+      "id": "identity-src-608f31320833bf69edc6",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/CheckRestrictedInterfaces.lean"
+      ],
+      "original_sha256": "cb9ceffe348b298ff4d46883a731597440a428ac92394c4775d78624002c4efa",
+      "public_path": "experiments/orthemology-v5-successors/source-store/cb9ceffe348b298ff4d46883a731597440a428ac92394c4775d78624002c4efa/CheckRestrictedInterfaces.lean",
+      "public_sha256": "cb9ceffe348b298ff4d46883a731597440a428ac92394c4775d78624002c4efa"
+    },
+    {
+      "id": "identity-src-6104bef1775c18b38ef7",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01Confluence.lean"
+      ],
+      "original_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e/P01Confluence.lean",
+      "public_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e"
+    },
+    {
+      "id": "identity-src-612e731827d114afedb9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/WrongRawEndpointRelation.lean"
+      ],
+      "original_sha256": "410a9a8ecea276190996a85380f2eb49ee387a5ceff9373e2802c33fb02712b3",
+      "public_path": "experiments/orthemology-v5-successors/source-store/410a9a8ecea276190996a85380f2eb49ee387a5ceff9373e2802c33fb02712b3/WrongRawEndpointRelation.lean",
+      "public_sha256": "410a9a8ecea276190996a85380f2eb49ee387a5ceff9373e2802c33fb02712b3"
+    },
+    {
+      "id": "identity-src-61a4c680d37068136d8c",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01SNReflection.lean"
+      ],
+      "original_sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "public_path": "experiments/orthemology-v5-successors/source-store/017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86/P01SNReflection.lean",
+      "public_sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86"
+    },
+    {
+      "id": "identity-src-61bb5a3a93c573be345b",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/BooleanKernelAudit.lean"
+      ],
+      "original_sha256": "1ed43a78a52fb5e570d06ddd9f53484c90d4e25892ebbb310480708009fdbafd",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1ed43a78a52fb5e570d06ddd9f53484c90d4e25892ebbb310480708009fdbafd/BooleanKernelAudit.lean",
+      "public_sha256": "1ed43a78a52fb5e570d06ddd9f53484c90d4e25892ebbb310480708009fdbafd"
+    },
+    {
+      "id": "identity-src-625b17f7c4d9eafaaab4",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/IntensionalIdentityRelations.lean"
+      ],
+      "original_sha256": "009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d/IntensionalIdentityRelations.lean",
+      "public_sha256": "009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d"
+    },
+    {
+      "id": "identity-src-636edcb1501b122dbf45",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/IntensionalIdentityBridge.lean"
+      ],
+      "original_sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333",
+      "public_path": "experiments/orthemology-v5-successors/source-store/37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333/IntensionalIdentityBridge.lean",
+      "public_sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333"
+    },
+    {
+      "id": "identity-src-63702cd9040f69c50767",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/TypedSyntax.lean"
+      ],
+      "original_sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c/TypedSyntax.lean",
+      "public_sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c"
+    },
+    {
+      "id": "identity-src-6534a35655d8d6fd5d0c",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/MaskNormalisation.lean"
+      ],
+      "original_sha256": "d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4/MaskNormalisation.lean",
+      "public_sha256": "d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4"
+    },
+    {
+      "id": "identity-src-6746acde96d527ce8392",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v1-controls/RejectCustomAxiom.lean"
+      ],
+      "original_sha256": "d621920877c5fad870a4127fded89b191d8b48c7d2e8bf6919fef77bad314d10",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d621920877c5fad870a4127fded89b191d8b48c7d2e8bf6919fef77bad314d10/RejectCustomAxiom.lean",
+      "public_sha256": "d621920877c5fad870a4127fded89b191d8b48c7d2e8bf6919fef77bad314d10"
+    },
+    {
+      "id": "identity-src-67af56fa3a66967a14d4",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveBooleanInterfaces.lean"
+      ],
+      "original_sha256": "af2ba9817f751195f965fc44569cefc7b9f57908dc1222bfa696a411631196dc",
+      "public_path": "experiments/orthemology-v5-successors/source-store/af2ba9817f751195f965fc44569cefc7b9f57908dc1222bfa696a411631196dc/EffectiveBooleanInterfaces.lean",
+      "public_sha256": "af2ba9817f751195f965fc44569cefc7b9f57908dc1222bfa696a411631196dc"
+    },
+    {
+      "id": "identity-src-69275ee499e0b3bee9bd",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/WrongIdentityCarrier.lean"
+      ],
+      "original_sha256": "9c4370694cbed952e2864f12a24e357da92c1ca66dc830b454bc8db2f701cb7d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9c4370694cbed952e2864f12a24e357da92c1ca66dc830b454bc8db2f701cb7d/WrongIdentityCarrier.lean",
+      "public_sha256": "9c4370694cbed952e2864f12a24e357da92c1ca66dc830b454bc8db2f701cb7d"
+    },
+    {
+      "id": "identity-src-6c2d42b8d1fe0ea5d9a9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/MissingUndefinedRepresentation.lean"
+      ],
+      "original_sha256": "ae9e4ce3d93c93b700b72ebffee7314705bb1769275bf2a55f90e62d5759c079",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ae9e4ce3d93c93b700b72ebffee7314705bb1769275bf2a55f90e62d5759c079/MissingUndefinedRepresentation.lean",
+      "public_sha256": "ae9e4ce3d93c93b700b72ebffee7314705bb1769275bf2a55f90e62d5759c079"
+    },
+    {
+      "id": "identity-src-6d45f4b1039fca6e2e70",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-independent-controls/INDEPENDENT_CustomAxiom.lean"
+      ],
+      "original_sha256": "685bfb3cb2cd60d6f65831cf1dbe0888b7be15e0328d38bb45c64793e8d2ff51",
+      "public_path": "experiments/orthemology-v5-successors/source-store/685bfb3cb2cd60d6f65831cf1dbe0888b7be15e0328d38bb45c64793e8d2ff51/INDEPENDENT_CustomAxiom.lean",
+      "public_sha256": "685bfb3cb2cd60d6f65831cf1dbe0888b7be15e0328d38bb45c64793e8d2ff51"
+    },
+    {
+      "id": "identity-src-6d608797d2c4fed3dd8c",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/ExtensionalRepairTheorems.lean"
+      ],
+      "original_sha256": "4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean",
+      "public_sha256": "4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51"
+    },
+    {
+      "id": "identity-src-6db4df81814f44506b7f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/python-reference/certificate_checker.py"
+      ],
+      "original_sha256": "8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef",
+      "public_path": "experiments/orthemology-v5-successors/source-store/8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef/certificate_checker.py",
+      "public_sha256": "8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef"
+    },
+    {
+      "id": "identity-src-6e1b0da90f4afc34a67f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/MissingRightTyping.lean"
+      ],
+      "original_sha256": "6016928922c0cdaba1750d99b79de0ab1239741d565686ac7801440c2578af38",
+      "public_path": "experiments/orthemology-v5-successors/source-store/6016928922c0cdaba1750d99b79de0ab1239741d565686ac7801440c2578af38/MissingRightTyping.lean",
+      "public_sha256": "6016928922c0cdaba1750d99b79de0ab1239741d565686ac7801440c2578af38"
+    },
+    {
+      "id": "identity-src-6ececa95657001947569",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/CheckInterfaces.lean"
+      ],
+      "original_sha256": "7c1db6a42f3167db0d5b56589b8371bca64439ba24f9640f038cbe4dbf574c2c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7c1db6a42f3167db0d5b56589b8371bca64439ba24f9640f038cbe4dbf574c2c/CheckInterfaces.lean",
+      "public_sha256": "7c1db6a42f3167db0d5b56589b8371bca64439ba24f9640f038cbe4dbf574c2c"
+    },
+    {
+      "id": "identity-src-6ee982ad963c85804683",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/verify_sources.py"
+      ],
+      "original_sha256": "112baf13e9cee7a5bcbaf96ef4034b6a2ac82f46f29b7f430777abaef3a5828d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/112baf13e9cee7a5bcbaf96ef4034b6a2ac82f46f29b7f430777abaef3a5828d/verify_sources.py",
+      "public_sha256": "112baf13e9cee7a5bcbaf96ef4034b6a2ac82f46f29b7f430777abaef3a5828d"
+    },
+    {
+      "id": "identity-src-6eec94abd5682befe171",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/WrongSubtractionOrder.lean"
+      ],
+      "original_sha256": "3212592033b944ca2fc633e88ac834fd6a35b4d7a6ae377cdd78c25461ae269d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3212592033b944ca2fc633e88ac834fd6a35b4d7a6ae377cdd78c25461ae269d/WrongSubtractionOrder.lean",
+      "public_sha256": "3212592033b944ca2fc633e88ac834fd6a35b4d7a6ae377cdd78c25461ae269d"
+    },
+    {
+      "id": "identity-src-7167f5bb29663a73e290",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/predecessor-source-lock.json"
+      ],
+      "original_sha256": "0948b1976311ff57d2bbf287499fa575ec9706e28d7b5919b66ef19974d9dbe1",
+      "public_path": "experiments/orthemology-v5-successors/source-store/0948b1976311ff57d2bbf287499fa575ec9706e28d7b5919b66ef19974d9dbe1/predecessor-source-lock.json",
+      "public_sha256": "0948b1976311ff57d2bbf287499fa575ec9706e28d7b5919b66ef19974d9dbe1"
+    },
+    {
+      "id": "identity-src-7301a2334f4212a8dd35",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/IntensionalIdentityTheorems.lean"
+      ],
+      "original_sha256": "48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean",
+      "public_sha256": "48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c"
+    },
+    {
+      "id": "identity-src-731657498ac5ecb7017e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/IntensionalIdentityWitness.lean"
+      ],
+      "original_sha256": "6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74",
+      "public_path": "experiments/orthemology-v5-successors/source-store/6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74/IntensionalIdentityWitness.lean",
+      "public_sha256": "6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74"
+    },
+    {
+      "id": "identity-src-7401a62a87c0527cbfe7",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/IntensionalIdentitySoundness.lean"
+      ],
+      "original_sha256": "011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984",
+      "public_path": "experiments/orthemology-v5-successors/source-store/011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984/IntensionalIdentitySoundness.lean",
+      "public_sha256": "011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984"
+    },
+    {
+      "id": "identity-src-7416114783b2d559b6e9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/RejectAdmittedProof.lean"
+      ],
+      "original_sha256": "035488a9c3f940f49a253424cfb66abd33a2573b632563bef64128304ad73b06",
+      "public_path": "experiments/orthemology-v5-successors/source-store/035488a9c3f940f49a253424cfb66abd33a2573b632563bef64128304ad73b06/RejectAdmittedProof.lean",
+      "public_sha256": "035488a9c3f940f49a253424cfb66abd33a2573b632563bef64128304ad73b06"
+    },
+    {
+      "id": "identity-src-74505ab25fb08d2860bb",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/NormalisationAndNumerals.lean"
+      ],
+      "original_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "public_path": "experiments/orthemology-v5-successors/source-store/13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2/NormalisationAndNumerals.lean",
+      "public_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2"
+    },
+    {
+      "id": "identity-src-74e785e78f3252fc3f51",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/restricted-runtime/check_runtime_agreement.py"
+      ],
+      "original_sha256": "dd69712d1a7b79bdb5fcb55c855c4c13a00725dda1cd8f4dfcdc4544afcbe8fd",
+      "public_path": "experiments/orthemology-v5-successors/source-store/dd69712d1a7b79bdb5fcb55c855c4c13a00725dda1cd8f4dfcdc4544afcbe8fd/check_runtime_agreement.py",
+      "public_sha256": "dd69712d1a7b79bdb5fcb55c855c4c13a00725dda1cd8f4dfcdc4544afcbe8fd"
+    },
+    {
+      "id": "identity-src-75652d183d2c0ac1371b",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveStandardness.lean"
+      ],
+      "original_sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428/EffectiveStandardness.lean",
+      "public_sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428"
+    },
+    {
+      "id": "identity-src-762b538842c37da97dc8",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/CheckComplexityInterfaces.lean"
+      ],
+      "original_sha256": "3e62bef5fdeec0239669961fdc5144bc54b4764cd58fc55b125890f2e4e881cf",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3e62bef5fdeec0239669961fdc5144bc54b4764cd58fc55b125890f2e4e881cf/CheckComplexityInterfaces.lean",
+      "public_sha256": "3e62bef5fdeec0239669961fdc5144bc54b4764cd58fc55b125890f2e4e881cf"
+    },
+    {
+      "id": "identity-src-77af2c505b61a5d70d1f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/run_checks.sh"
+      ],
+      "original_sha256": "f9e84ab28e27c5789dc0464d6c05ee91c3b03e3ce8c0bf4d02df970c65f7575b",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f9e84ab28e27c5789dc0464d6c05ee91c3b03e3ce8c0bf4d02df970c65f7575b/run_checks.sh",
+      "public_sha256": "f9e84ab28e27c5789dc0464d6c05ee91c3b03e3ce8c0bf4d02df970c65f7575b"
+    },
+    {
+      "id": "identity-src-77c8936659dda0fd15a1",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-independent-controls/INDEPENDENT_Admission.lean"
+      ],
+      "original_sha256": "3ac0153ee816a8d41afa96b630bd06ed54e5be0db2e51567407f399ff2e4e17c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3ac0153ee816a8d41afa96b630bd06ed54e5be0db2e51567407f399ff2e4e17c/INDEPENDENT_Admission.lean",
+      "public_sha256": "3ac0153ee816a8d41afa96b630bd06ed54e5be0db2e51567407f399ff2e4e17c"
+    },
+    {
+      "id": "identity-src-7967d9a0b3a41504b193",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/InternalPolymorphism.lean"
+      ],
+      "original_sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee/InternalPolymorphism.lean",
+      "public_sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee"
+    },
+    {
+      "id": "identity-src-79940cae87a3661068fb",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-independent-controls/INDEPENDENT_ExternalPairMismatch.lean"
+      ],
+      "original_sha256": "8028ba1ddd151269dcf555a48b97706dfef424453e51f01ecf3e96ede14e210c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/8028ba1ddd151269dcf555a48b97706dfef424453e51f01ecf3e96ede14e210c/INDEPENDENT_ExternalPairMismatch.lean",
+      "public_sha256": "8028ba1ddd151269dcf555a48b97706dfef424453e51f01ecf3e96ede14e210c"
+    },
+    {
+      "id": "identity-src-79eaba2d7d4380a155aa",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/ComputablePrelude.lean"
+      ],
+      "original_sha256": "b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292/ComputablePrelude.lean",
+      "public_sha256": "b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292"
+    },
+    {
+      "id": "identity-src-7cc0b704b3cfe4a8509c",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllInheritedPositiveControls.lean"
+      ],
+      "original_sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37",
+      "public_path": "experiments/orthemology-v5-successors/source-store/86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37/AllInheritedPositiveControls.lean",
+      "public_sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37"
+    },
+    {
+      "id": "identity-src-7d0d8986197639da0c44",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v1-controls/ArityZeroIsNotOneArrow.lean"
+      ],
+      "original_sha256": "61abd0f56649898ae7b3ed894a6ab77cede1f37a698bb57661b893154c5d25fe",
+      "public_path": "experiments/orthemology-v5-successors/source-store/61abd0f56649898ae7b3ed894a6ab77cede1f37a698bb57661b893154c5d25fe/ArityZeroIsNotOneArrow.lean",
+      "public_sha256": "61abd0f56649898ae7b3ed894a6ab77cede1f37a698bb57661b893154c5d25fe"
+    },
+    {
+      "id": "identity-src-7d91ab3caab541222940",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllBinderLaws.lean"
+      ],
+      "original_sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9",
+      "public_path": "experiments/orthemology-v5-successors/source-store/fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9/AllBinderLaws.lean",
+      "public_sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9"
+    },
+    {
+      "id": "identity-src-7e4ad6d0e40bf93513cf",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/PositiveSeparation.lean"
+      ],
+      "original_sha256": "8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8",
+      "public_path": "experiments/orthemology-v5-successors/source-store/8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8/PositiveSeparation.lean",
+      "public_sha256": "8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8"
+    },
+    {
+      "id": "identity-src-7e6d85b99831145136d9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01Examples.lean"
+      ],
+      "original_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82/P01Examples.lean",
+      "public_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82"
+    },
+    {
+      "id": "identity-src-7fd312a5474a34e5e9de",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/MissingAllScope.lean"
+      ],
+      "original_sha256": "9ce227a5337b05e70ce8da58ad0f0a290f07c72beae27f8386e45cd0e755ae25",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9ce227a5337b05e70ce8da58ad0f0a290f07c72beae27f8386e45cd0e755ae25/MissingAllScope.lean",
+      "public_sha256": "9ce227a5337b05e70ce8da58ad0f0a290f07c72beae27f8386e45cd0e755ae25"
+    },
+    {
+      "id": "identity-src-812530323a6395082a93",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/unified-v4-receipt.json"
+      ],
+      "original_sha256": "3ab3b08b87aef587b2b6dd3964f6a884fb90c3b547511157b73275ebe4f7d637",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3ab3b08b87aef587b2b6dd3964f6a884fb90c3b547511157b73275ebe4f7d637/unified-v4-receipt.json",
+      "public_sha256": "3ab3b08b87aef587b2b6dd3964f6a884fb90c3b547511157b73275ebe4f7d637"
+    },
+    {
+      "id": "identity-src-824b46042374bf67fea3",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/NoNestedRootTests.lean"
+      ],
+      "original_sha256": "ac8a4574f086ba75f6dff34d91c672eb409e39fa01610b5323485229f8a614ba",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ac8a4574f086ba75f6dff34d91c672eb409e39fa01610b5323485229f8a614ba/NoNestedRootTests.lean",
+      "public_sha256": "ac8a4574f086ba75f6dff34d91c672eb409e39fa01610b5323485229f8a614ba"
+    },
+    {
+      "id": "identity-src-83e1372ad16004a77707",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/RestrictedKernelAudit.lean"
+      ],
+      "original_sha256": "8946929b92c08c02390452296effaef33efd6e5eb84dba6302093061967977c9",
+      "public_path": "experiments/orthemology-v5-successors/source-store/8946929b92c08c02390452296effaef33efd6e5eb84dba6302093061967977c9/RestrictedKernelAudit.lean",
+      "public_sha256": "8946929b92c08c02390452296effaef33efd6e5eb84dba6302093061967977c9"
+    },
+    {
+      "id": "identity-src-83ee0e14bb905c7b1fcb",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-independent-controls/INDEPENDENT_SinglePositivePoint.lean"
+      ],
+      "original_sha256": "8240d1854a30fa0f1e64c32a6f7ea6b88d8c006233c80738ee2aa3a42306ffdb",
+      "public_path": "experiments/orthemology-v5-successors/source-store/8240d1854a30fa0f1e64c32a6f7ea6b88d8c006233c80738ee2aa3a42306ffdb/INDEPENDENT_SinglePositivePoint.lean",
+      "public_sha256": "8240d1854a30fa0f1e64c32a6f7ea6b88d8c006233c80738ee2aa3a42306ffdb"
+    },
+    {
+      "id": "identity-src-8704a403936804775e4d",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/PolynomialTestAudit.lean"
+      ],
+      "original_sha256": "dc023592bde318b10ef03b71d3ba952f51c573b05b021ee35f3cff4bedddd365",
+      "public_path": "experiments/orthemology-v5-successors/source-store/dc023592bde318b10ef03b71d3ba952f51c573b05b021ee35f3cff4bedddd365/PolynomialTestAudit.lean",
+      "public_sha256": "dc023592bde318b10ef03b71d3ba952f51c573b05b021ee35f3cff4bedddd365"
+    },
+    {
+      "id": "identity-src-8a1feaac43dbbd80d25f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/AuditorRejectsCustomAxiom.lean"
+      ],
+      "original_sha256": "d261ce390b1e548e45dc7313d3866fad816bd296f9670392bf3287ec1dd0a5c0",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d261ce390b1e548e45dc7313d3866fad816bd296f9670392bf3287ec1dd0a5c0/AuditorRejectsCustomAxiom.lean",
+      "public_sha256": "d261ce390b1e548e45dc7313d3866fad816bd296f9670392bf3287ec1dd0a5c0"
+    },
+    {
+      "id": "identity-src-8a9c100187d2a5f80f40",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01DependentCore.lean"
+      ],
+      "original_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498/P01DependentCore.lean",
+      "public_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498"
+    },
+    {
+      "id": "identity-src-8b09aadb4745cb0053c8",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/ComplexityKernelAudit.lean"
+      ],
+      "original_sha256": "891130121cb6e9eb6c7223d7e2b829fedd9dced84158885d6c4e9ad40b7f9da7",
+      "public_path": "experiments/orthemology-v5-successors/source-store/891130121cb6e9eb6c7223d7e2b829fedd9dced84158885d6c4e9ad40b7f9da7/ComplexityKernelAudit.lean",
+      "public_sha256": "891130121cb6e9eb6c7223d7e2b829fedd9dced84158885d6c4e9ad40b7f9da7"
+    },
+    {
+      "id": "identity-src-8b4dcea683beb3d45820",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveObserver.lean"
+      ],
+      "original_sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f/EffectiveObserver.lean",
+      "public_sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f"
+    },
+    {
+      "id": "identity-src-8ba4a9ab8466928ff574",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/CheckBooleanInterfaces.lean"
+      ],
+      "original_sha256": "41593f408c8f8f6543f1b9824d24c5ea3e3340e1c8d7adc3ce0cd6aa0c2de618",
+      "public_path": "experiments/orthemology-v5-successors/source-store/41593f408c8f8f6543f1b9824d24c5ea3e3340e1c8d7adc3ce0cd6aa0c2de618/CheckBooleanInterfaces.lean",
+      "public_sha256": "41593f408c8f8f6543f1b9824d24c5ea3e3340e1c8d7adc3ce0cd6aa0c2de618"
+    },
+    {
+      "id": "identity-src-9007b2fae249fe0b8cd0",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/FiniteBridge.lean"
+      ],
+      "original_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042/FiniteBridge.lean",
+      "public_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042"
+    },
+    {
+      "id": "identity-src-9102c8693f2324aa2c0f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllFiniteComparison.lean"
+      ],
+      "original_sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a/AllFiniteComparison.lean",
+      "public_sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a"
+    },
+    {
+      "id": "identity-src-92948bf66c93810196d1",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/BoundaryResults.lean"
+      ],
+      "original_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c/BoundaryResults.lean",
+      "public_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
+    },
+    {
+      "id": "identity-src-92f7886837b80c84e918",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01DependentRepresentation.lean"
+      ],
+      "original_sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737/P01DependentRepresentation.lean",
+      "public_sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737"
+    },
+    {
+      "id": "identity-src-942ea9392b26e4844487",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllPredicates.lean"
+      ],
+      "original_sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3",
+      "public_path": "experiments/orthemology-v5-successors/source-store/8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3/AllPredicates.lean",
+      "public_sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3"
+    },
+    {
+      "id": "identity-src-97450330593f83daae2e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/INPUT_ANCHORS.json"
+      ],
+      "original_sha256": "ae7c4b18dd647f1f29f69786e87f12580bf9a7c629a99ac1c2d574086b6a8a62",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ae7c4b18dd647f1f29f69786e87f12580bf9a7c629a99ac1c2d574086b6a8a62/INPUT_ANCHORS.json",
+      "public_sha256": "ae7c4b18dd647f1f29f69786e87f12580bf9a7c629a99ac1c2d574086b6a8a62"
+    },
+    {
+      "id": "identity-src-98c606448a5697e76cd0",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllStructuralRename.lean"
+      ],
+      "original_sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0",
+      "public_path": "experiments/orthemology-v5-successors/source-store/cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0/AllStructuralRename.lean",
+      "public_sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0"
+    },
+    {
+      "id": "identity-src-997fc818afa6f8eae487",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/ExtensionalRepairSyntax.lean"
+      ],
+      "original_sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f",
+      "public_path": "experiments/orthemology-v5-successors/source-store/dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f/ExtensionalRepairSyntax.lean",
+      "public_sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f"
+    },
+    {
+      "id": "identity-src-9c9be016ac2077db28b4",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/NoSyntacticIdentityCast.lean"
+      ],
+      "original_sha256": "5c30e740462459126a9293905c14d84b5579c3dfeaf26ed2fd602195adcaaa8a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/5c30e740462459126a9293905c14d84b5579c3dfeaf26ed2fd602195adcaaa8a/NoSyntacticIdentityCast.lean",
+      "public_sha256": "5c30e740462459126a9293905c14d84b5579c3dfeaf26ed2fd602195adcaaa8a"
+    },
+    {
+      "id": "identity-src-9cee8abfafe81d2d5fca",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/check_restricted_negative_controls.py"
+      ],
+      "original_sha256": "03e8621dd94ce6949e90bebbbfbc1234782b6346d1862dd9cffeff8e2f1bd6cd",
+      "public_path": "experiments/orthemology-v5-successors/source-store/03e8621dd94ce6949e90bebbbfbc1234782b6346d1862dd9cffeff8e2f1bd6cd/check_restricted_negative_controls.py",
+      "public_sha256": "03e8621dd94ce6949e90bebbbfbc1234782b6346d1862dd9cffeff8e2f1bd6cd"
+    },
+    {
+      "id": "identity-src-9e53f1393541e2d494fb",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveBooleanControls.lean"
+      ],
+      "original_sha256": "cf1ba0fa94881b4481e3c11c9bbf90522b6ab39672cd3eebbdef40e3e62df1d0",
+      "public_path": "experiments/orthemology-v5-successors/source-store/cf1ba0fa94881b4481e3c11c9bbf90522b6ab39672cd3eebbdef40e3e62df1d0/EffectiveBooleanControls.lean",
+      "public_sha256": "cf1ba0fa94881b4481e3c11c9bbf90522b6ab39672cd3eebbdef40e3e62df1d0"
+    },
+    {
+      "id": "identity-src-a1b5ebce72a6902f516e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/WrongRecursionArity.lean"
+      ],
+      "original_sha256": "48e800c108395ab53677b9a26de738c508b1fe9e273b1a72fe12c6c999b6cd25",
+      "public_path": "experiments/orthemology-v5-successors/source-store/48e800c108395ab53677b9a26de738c508b1fe9e273b1a72fe12c6c999b6cd25/WrongRecursionArity.lean",
+      "public_sha256": "48e800c108395ab53677b9a26de738c508b1fe9e273b1a72fe12c6c999b6cd25"
+    },
+    {
+      "id": "identity-src-a2d53da2c907930291c5",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/MissingObserverRepresentation.lean"
+      ],
+      "original_sha256": "c244f5b686b5d7a9048cc67178042f22474f8229c396a203f1f2ab91553ba907",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c244f5b686b5d7a9048cc67178042f22474f8229c396a203f1f2ab91553ba907/MissingObserverRepresentation.lean",
+      "public_sha256": "c244f5b686b5d7a9048cc67178042f22474f8229c396a203f1f2ab91553ba907"
+    },
+    {
+      "id": "identity-src-a3c75acc60c34366e933",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/PositiveCarrierIsNotRaw.lean"
+      ],
+      "original_sha256": "352707bb164385cbac4212b278115a1c8e7da96a86ba57659527f94ed52f2bd4",
+      "public_path": "experiments/orthemology-v5-successors/source-store/352707bb164385cbac4212b278115a1c8e7da96a86ba57659527f94ed52f2bd4/PositiveCarrierIsNotRaw.lean",
+      "public_sha256": "352707bb164385cbac4212b278115a1c8e7da96a86ba57659527f94ed52f2bd4"
+    },
+    {
+      "id": "identity-src-a434ea3263b74febcbd2",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01CurryParametricity.lean"
+      ],
+      "original_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a/P01CurryParametricity.lean",
+      "public_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a"
+    },
+    {
+      "id": "identity-src-a56140ac46f5698f97a4",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/check_inherited_negative_controls.py"
+      ],
+      "original_sha256": "3b1401e00271b8ac00df4993f3f81ac409ed03341ad4efbeb82d6a2334cc3521",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3b1401e00271b8ac00df4993f3f81ac409ed03341ad4efbeb82d6a2334cc3521/check_inherited_negative_controls.py",
+      "public_sha256": "3b1401e00271b8ac00df4993f3f81ac409ed03341ad4efbeb82d6a2334cc3521"
+    },
+    {
+      "id": "identity-src-a62e1772e28b6ec7ca50",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/MissingRightMembership.lean"
+      ],
+      "original_sha256": "38f0cafee5502b9a8e5d569cee3c15c86a03c968607bfd1a617bc3e10ade098a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/38f0cafee5502b9a8e5d569cee3c15c86a03c968607bfd1a617bc3e10ade098a/MissingRightMembership.lean",
+      "public_sha256": "38f0cafee5502b9a8e5d569cee3c15c86a03c968607bfd1a617bc3e10ade098a"
+    },
+    {
+      "id": "identity-src-a7ddcb5acfd40d86993b",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/AuditorRejectsPartial.lean"
+      ],
+      "original_sha256": "1ab5ef3f02f0160c5a10cb729039f13eff5595d6a4292438223e2c2e1c27a45e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1ab5ef3f02f0160c5a10cb729039f13eff5595d6a4292438223e2c2e1c27a45e/AuditorRejectsPartial.lean",
+      "public_sha256": "1ab5ef3f02f0160c5a10cb729039f13eff5595d6a4292438223e2c2e1c27a45e"
+    },
+    {
+      "id": "identity-src-a8ab53919dfc695bd61d",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/ExtensionalRepairAudit.lean"
+      ],
+      "original_sha256": "a2b12f0df76d8ca0973ea4d6c34cc6892324e0a0fdb89f414c6628e40974651a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/a2b12f0df76d8ca0973ea4d6c34cc6892324e0a0fdb89f414c6628e40974651a/ExtensionalRepairAudit.lean",
+      "public_sha256": "a2b12f0df76d8ca0973ea4d6c34cc6892324e0a0fdb89f414c6628e40974651a"
+    },
+    {
+      "id": "identity-src-ad7fe3d1813b4b0a51df",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v1-controls/WrongProjectionBound.lean"
+      ],
+      "original_sha256": "34c2d6d13a3633e6fb05aa33dfee1800a5eca3ae18f5b190b18592e41fdc7958",
+      "public_path": "experiments/orthemology-v5-successors/source-store/34c2d6d13a3633e6fb05aa33dfee1800a5eca3ae18f5b190b18592e41fdc7958/WrongProjectionBound.lean",
+      "public_sha256": "34c2d6d13a3633e6fb05aa33dfee1800a5eca3ae18f5b190b18592e41fdc7958"
+    },
+    {
+      "id": "identity-src-b24771bec0ba402982be",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllStructural.lean"
+      ],
+      "original_sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1/AllStructural.lean",
+      "public_sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1"
+    },
+    {
+      "id": "identity-src-b30590801c4b4005bb31",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/DECLARATION_CLAIM_MAP.md"
+      ],
+      "original_sha256": "3f6e138825d599075b6f920f0079ccc2ca8b7d6c24c8bba0940af4f62d68de1a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3f6e138825d599075b6f920f0079ccc2ca8b7d6c24c8bba0940af4f62d68de1a/DECLARATION_CLAIM_MAP.md",
+      "public_sha256": "3f6e138825d599075b6f920f0079ccc2ca8b7d6c24c8bba0940af4f62d68de1a"
+    },
+    {
+      "id": "identity-src-b34c9dcf36330c873abb",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/raw-v2-source-lock.json"
+      ],
+      "original_sha256": "6fa58ce99d57465d7ddc2a59cb0edaceb66461bf20eba5df75c4fcac013db51c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/6fa58ce99d57465d7ddc2a59cb0edaceb66461bf20eba5df75c4fcac013db51c/raw-v2-source-lock.json",
+      "public_sha256": "6fa58ce99d57465d7ddc2a59cb0edaceb66461bf20eba5df75c4fcac013db51c"
+    },
+    {
+      "id": "identity-src-b3d07702c61dd2f8fadd",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/AuditorRejectsPartial.lean"
+      ],
+      "original_sha256": "4a9f0409363c396cbd7b020f49ef47497065d23631fd13b67b1f210f390a469d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4a9f0409363c396cbd7b020f49ef47497065d23631fd13b67b1f210f390a469d/AuditorRejectsPartial.lean",
+      "public_sha256": "4a9f0409363c396cbd7b020f49ef47497065d23631fd13b67b1f210f390a469d"
+    },
+    {
+      "id": "identity-src-b4929983d0796ad9f523",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/CheckCombined.lean"
+      ],
+      "original_sha256": "fce8c1ed518885ee18a4f21894a6dab922c163743ace680af28d1fa9346cd51d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/fce8c1ed518885ee18a4f21894a6dab922c163743ace680af28d1fa9346cd51d/CheckCombined.lean",
+      "public_sha256": "fce8c1ed518885ee18a4f21894a6dab922c163743ace680af28d1fa9346cd51d"
+    },
+    {
+      "id": "identity-src-b596b649363e49b897d8",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/MissingPiScope.lean"
+      ],
+      "original_sha256": "67c1570b7e6b6d3b49dac0c664dab8a2a3f4ad432753295ddba233a2e387e662",
+      "public_path": "experiments/orthemology-v5-successors/source-store/67c1570b7e6b6d3b49dac0c664dab8a2a3f4ad432753295ddba233a2e387e662/MissingPiScope.lean",
+      "public_sha256": "67c1570b7e6b6d3b49dac0c664dab8a2a3f4ad432753295ddba233a2e387e662"
+    },
+    {
+      "id": "identity-src-b5c9bebf483be7f43fa7",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveReduction.lean"
+      ],
+      "original_sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d/EffectiveReduction.lean",
+      "public_sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d"
+    },
+    {
+      "id": "identity-src-b6cc88d1cb9ba7445d79",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/ExtensionalRepairLemmas.lean"
+      ],
+      "original_sha256": "00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac",
+      "public_path": "experiments/orthemology-v5-successors/source-store/00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac/ExtensionalRepairLemmas.lean",
+      "public_sha256": "00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac"
+    },
+    {
+      "id": "identity-src-b763b35779466b17a2f3",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/CheckerControls.lean"
+      ],
+      "original_sha256": "e6d5b8b58cd4b7d2444d2b34f3f8ce585f6455068d5fa5ee1dc75529952fa537",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e6d5b8b58cd4b7d2444d2b34f3f8ce585f6455068d5fa5ee1dc75529952fa537/CheckerControls.lean",
+      "public_sha256": "e6d5b8b58cd4b7d2444d2b34f3f8ce585f6455068d5fa5ee1dc75529952fa537"
+    },
+    {
+      "id": "identity-src-b77a11cec52de3bfd2a2",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01Omega.lean"
+      ],
+      "original_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "public_path": "experiments/orthemology-v5-successors/source-store/df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88/P01Omega.lean",
+      "public_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88"
+    },
+    {
+      "id": "identity-src-b7ae7142846ea0cd7ccd",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01Polynomials.lean"
+      ],
+      "original_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "public_path": "experiments/orthemology-v5-successors/source-store/57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8/P01Polynomials.lean",
+      "public_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8"
+    },
+    {
+      "id": "identity-src-b7e0abd7f66996a1ddfc",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/MissingLeftMembership.lean"
+      ],
+      "original_sha256": "d82b1cad79811a63ea4c9ec540911d8dc80764192c4b5f7f58acddb6a995dd04",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d82b1cad79811a63ea4c9ec540911d8dc80764192c4b5f7f58acddb6a995dd04/MissingLeftMembership.lean",
+      "public_sha256": "d82b1cad79811a63ea4c9ec540911d8dc80764192c4b5f7f58acddb6a995dd04"
+    },
+    {
+      "id": "identity-src-ba0b3dda83e8ec98026b",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/CheckerKernelAudit.lean"
+      ],
+      "original_sha256": "987c8dc902a4ffd41ed8542a20ef35f22789f245927958e01863a8f10cf2a975",
+      "public_path": "experiments/orthemology-v5-successors/source-store/987c8dc902a4ffd41ed8542a20ef35f22789f245927958e01863a8f10cf2a975/CheckerKernelAudit.lean",
+      "public_sha256": "987c8dc902a4ffd41ed8542a20ef35f22789f245927958e01863a8f10cf2a975"
+    },
+    {
+      "id": "identity-src-bac1790c6ee5c6a5034f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01DependentFundamental.lean"
+      ],
+      "original_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "public_path": "experiments/orthemology-v5-successors/source-store/82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa/P01DependentFundamental.lean",
+      "public_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa"
+    },
+    {
+      "id": "identity-src-bd09e9752b5f1252ccc5",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/reuse_dependencies.py"
+      ],
+      "original_sha256": "20999a8810e2835e66c48602340447dfc6fc3c55b7055f49ba54ea1fd310191e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/20999a8810e2835e66c48602340447dfc6fc3c55b7055f49ba54ea1fd310191e/reuse_dependencies.py",
+      "public_sha256": "20999a8810e2835e66c48602340447dfc6fc3c55b7055f49ba54ea1fd310191e"
+    },
+    {
+      "id": "identity-src-bd97290cc4cd8670cb2c",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/WrongEqualityPolarity.lean"
+      ],
+      "original_sha256": "d3a5016428e5ef4896834f74e969c6b1a12668ee9243421b0fa1ff79f0b7bdb8",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d3a5016428e5ef4896834f74e969c6b1a12668ee9243421b0fa1ff79f0b7bdb8/WrongEqualityPolarity.lean",
+      "public_sha256": "d3a5016428e5ef4896834f74e969c6b1a12668ee9243421b0fa1ff79f0b7bdb8"
+    },
+    {
+      "id": "identity-src-bdeb500a7685884bd9b4",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/ExtensionalRepairSoundness.lean"
+      ],
+      "original_sha256": "b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5/ExtensionalRepairSoundness.lean",
+      "public_sha256": "b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5"
+    },
+    {
+      "id": "identity-src-be30f3ed9b5e5354fd48",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/check_new_negative_controls.py"
+      ],
+      "original_sha256": "ff989b2cdc32b4bf7a61d56de4256c9f92e44412a9195c9f6a9d8c40afa7f36e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ff989b2cdc32b4bf7a61d56de4256c9f92e44412a9195c9f6a9d8c40afa7f36e/check_new_negative_controls.py",
+      "public_sha256": "ff989b2cdc32b4bf7a61d56de4256c9f92e44412a9195c9f6a9d8c40afa7f36e"
+    },
+    {
+      "id": "identity-src-be46fbb813c3d15f6036",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/check_complexity_negative_controls.py"
+      ],
+      "original_sha256": "58e8663e8e625fb8648f3859373d8fa690c5377c42d1dd19afdb9c223ad25e00",
+      "public_path": "experiments/orthemology-v5-successors/source-store/58e8663e8e625fb8648f3859373d8fa690c5377c42d1dd19afdb9c223ad25e00/check_complexity_negative_controls.py",
+      "public_sha256": "58e8663e8e625fb8648f3859373d8fa690c5377c42d1dd19afdb9c223ad25e00"
+    },
+    {
+      "id": "identity-src-be846b99efb7d282dbb2",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/MissingStepRepresentation.lean"
+      ],
+      "original_sha256": "3e9cff8a2e5a338230bde4a074595cb50672756682ae6f90f12835fd868021d4",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3e9cff8a2e5a338230bde4a074595cb50672756682ae6f90f12835fd868021d4/MissingStepRepresentation.lean",
+      "public_sha256": "3e9cff8a2e5a338230bde4a074595cb50672756682ae6f90f12835fd868021d4"
+    },
+    {
+      "id": "identity-src-c00115cfcfe7bd0bf185",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/SemanticValidityIsNotCurrentHas.lean"
+      ],
+      "original_sha256": "e903723748364f133065501fbacbe6d8b85283e12710e8e9d5aad4ec1c9f7302",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e903723748364f133065501fbacbe6d8b85283e12710e8e9d5aad4ec1c9f7302/SemanticValidityIsNotCurrentHas.lean",
+      "public_sha256": "e903723748364f133065501fbacbe6d8b85283e12710e8e9d5aad4ec1c9f7302"
+    },
+    {
+      "id": "identity-src-c0488a9615987e1c7748",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01Certificates.lean"
+      ],
+      "original_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "public_path": "experiments/orthemology-v5-successors/source-store/5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6/P01Certificates.lean",
+      "public_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6"
+    },
+    {
+      "id": "identity-src-c13c75363412604214c3",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectsAndDependence.lean"
+      ],
+      "original_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "public_path": "experiments/orthemology-v5-successors/source-store/0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2/EffectsAndDependence.lean",
+      "public_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2"
+    },
+    {
+      "id": "identity-src-c1cae7d7579c3738b6d9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/WrongIdentityCarrier.lean"
+      ],
+      "original_sha256": "4ced59f136b8311e7f0c2f776e014f837a8a121db1651c88106ff23d8b27b065",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4ced59f136b8311e7f0c2f776e014f837a8a121db1651c88106ff23d8b27b065/WrongIdentityCarrier.lean",
+      "public_sha256": "4ced59f136b8311e7f0c2f776e014f837a8a121db1651c88106ff23d8b27b065"
+    },
+    {
+      "id": "identity-src-c36bbd275734633b0144",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/predecessor-receipt.json"
+      ],
+      "original_sha256": "e5ea90c042a844214a8d07efb10b5b1b1782e8906dca6736f2941889447ccda0",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e5ea90c042a844214a8d07efb10b5b1b1782e8906dca6736f2941889447ccda0/predecessor-receipt.json",
+      "public_sha256": "e5ea90c042a844214a8d07efb10b5b1b1782e8906dca6736f2941889447ccda0"
+    },
+    {
+      "id": "identity-src-c40aacc58a68e14242c2",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/EmptyZeroArityCertificate.lean"
+      ],
+      "original_sha256": "7571f83ef0c48cc705337cf3c661169f39739748c1c1a99c0fbc4d9b9a493693",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7571f83ef0c48cc705337cf3c661169f39739748c1c1a99c0fbc4d9b9a493693/EmptyZeroArityCertificate.lean",
+      "public_sha256": "7571f83ef0c48cc705337cf3c661169f39739748c1c1a99c0fbc4d9b9a493693"
+    },
+    {
+      "id": "identity-src-c4858872c9347e98553c",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v1-controls/RejectAdmittedProof.lean"
+      ],
+      "original_sha256": "286da8e4766b9f20526b1fb99aa15ad9354a46b3972436cf3c639460c533dcbc",
+      "public_path": "experiments/orthemology-v5-successors/source-store/286da8e4766b9f20526b1fb99aa15ad9354a46b3972436cf3c639460c533dcbc/RejectAdmittedProof.lean",
+      "public_sha256": "286da8e4766b9f20526b1fb99aa15ad9354a46b3972436cf3c639460c533dcbc"
+    },
+    {
+      "id": "identity-src-c4ba8f36484af4cc9745",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/NoPureZeroTests.lean"
+      ],
+      "original_sha256": "e8797ee367c6695f405df193e270668acf8aae5059c7f981265dc760d1470f95",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e8797ee367c6695f405df193e270668acf8aae5059c7f981265dc760d1470f95/NoPureZeroTests.lean",
+      "public_sha256": "e8797ee367c6695f405df193e270668acf8aae5059c7f981265dc760d1470f95"
+    },
+    {
+      "id": "identity-src-c5f15be6b8e1f62c005c",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/TypedStructural.lean"
+      ],
+      "original_sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf",
+      "public_path": "experiments/orthemology-v5-successors/source-store/881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf/TypedStructural.lean",
+      "public_sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf"
+    },
+    {
+      "id": "identity-src-c63782e96c9efdaff7e0",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/BareBooleanGatePositive.lean"
+      ],
+      "original_sha256": "42727d6803bc6c8f42102dd56b5473036d83b6aa1b8746b94995db2b7c559033",
+      "public_path": "experiments/orthemology-v5-successors/source-store/42727d6803bc6c8f42102dd56b5473036d83b6aa1b8746b94995db2b7c559033/BareBooleanGatePositive.lean",
+      "public_sha256": "42727d6803bc6c8f42102dd56b5473036d83b6aa1b8746b94995db2b7c559033"
+    },
+    {
+      "id": "identity-src-c94b2987cf67da2ccae9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01DependentSubstitution.lean"
+      ],
+      "original_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "public_path": "experiments/orthemology-v5-successors/source-store/74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610/P01DependentSubstitution.lean",
+      "public_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610"
+    },
+    {
+      "id": "identity-src-ca5fb2b6684530cadffa",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/EmptyArityIsNotVacuous.lean"
+      ],
+      "original_sha256": "5b2697880020f84e5974a58970e875ecd3711abf605345b75c2a1eb2ef81a444",
+      "public_path": "experiments/orthemology-v5-successors/source-store/5b2697880020f84e5974a58970e875ecd3711abf605345b75c2a1eb2ef81a444/EmptyArityIsNotVacuous.lean",
+      "public_sha256": "5b2697880020f84e5974a58970e875ecd3711abf605345b75c2a1eb2ef81a444"
+    },
+    {
+      "id": "identity-src-cb7295779649c3f30335",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01DependentControls.lean"
+      ],
+      "original_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c/P01DependentControls.lean",
+      "public_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c"
+    },
+    {
+      "id": "identity-src-ccedc5af0c83b932ad0a",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllSigmaLaws.lean"
+      ],
+      "original_sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d/AllSigmaLaws.lean",
+      "public_sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d"
+    },
+    {
+      "id": "identity-src-ce57f498489abd8d5f54",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/BareBooleanGateSyntax.lean"
+      ],
+      "original_sha256": "b6201af0d80822607665139f8bf5d4194ba82104ef2ae55002686cfe1e58bed6",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b6201af0d80822607665139f8bf5d4194ba82104ef2ae55002686cfe1e58bed6/BareBooleanGateSyntax.lean",
+      "public_sha256": "b6201af0d80822607665139f8bf5d4194ba82104ef2ae55002686cfe1e58bed6"
+    },
+    {
+      "id": "identity-src-cef6dba7b19408cac240",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/ExtensionalIsNotCurrent.lean"
+      ],
+      "original_sha256": "c1ba98538103ef2eecd62b0e309d7d494e77689c3967d81325e5088dd90eb655",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c1ba98538103ef2eecd62b0e309d7d494e77689c3967d81325e5088dd90eb655/ExtensionalIsNotCurrent.lean",
+      "public_sha256": "c1ba98538103ef2eecd62b0e309d7d494e77689c3967d81325e5088dd90eb655"
+    },
+    {
+      "id": "identity-src-d1dd9698dd0375e1e2ee",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllRawSubstitution.lean"
+      ],
+      "original_sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66/AllRawSubstitution.lean",
+      "public_sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66"
+    },
+    {
+      "id": "identity-src-d381b9f2fde1cce2856e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/test_source_checks.py"
+      ],
+      "original_sha256": "ae6199af29a58180ef19f56ffa08adad84793adef1baa211ea3e46a2b374d10c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ae6199af29a58180ef19f56ffa08adad84793adef1baa211ea3e46a2b374d10c/test_source_checks.py",
+      "public_sha256": "ae6199af29a58180ef19f56ffa08adad84793adef1baa211ea3e46a2b374d10c"
+    },
+    {
+      "id": "identity-src-d3960c34ab3f39a0ed84",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllSoundness.lean"
+      ],
+      "original_sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7/AllSoundness.lean",
+      "public_sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7"
+    },
+    {
+      "id": "identity-src-d48d4dcbc8e333b228c8",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/CheckTheorems.lean"
+      ],
+      "original_sha256": "f059e36ba58df9d975b8d50909134a385f388177657d4d317a88624e6b728b5a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f059e36ba58df9d975b8d50909134a385f388177657d4d317a88624e6b728b5a/CheckTheorems.lean",
+      "public_sha256": "f059e36ba58df9d975b8d50909134a385f388177657d4d317a88624e6b728b5a"
+    },
+    {
+      "id": "identity-src-d5004fb07b8c9c48494f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllMixedAlgebra.lean"
+      ],
+      "original_sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367",
+      "public_path": "experiments/orthemology-v5-successors/source-store/327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367/AllMixedAlgebra.lean",
+      "public_sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367"
+    },
+    {
+      "id": "identity-src-d5313fabd5ee2dae9d30",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01RecursiveModel.lean"
+      ],
+      "original_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "public_path": "experiments/orthemology-v5-successors/source-store/a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9/P01RecursiveModel.lean",
+      "public_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9"
+    },
+    {
+      "id": "identity-src-d746661854c16e952dbe",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/MissingRightTyping.lean"
+      ],
+      "original_sha256": "0f4ffb7dc60be26f65ed1bb8a3935d0aa2dc0337293fcb35926b1e453e380c7d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/0f4ffb7dc60be26f65ed1bb8a3935d0aa2dc0337293fcb35926b1e453e380c7d/MissingRightTyping.lean",
+      "public_sha256": "0f4ffb7dc60be26f65ed1bb8a3935d0aa2dc0337293fcb35926b1e453e380c7d"
+    },
+    {
+      "id": "identity-src-d8fabad1f4db4d52f7cd",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/ForgedCoefficient.lean"
+      ],
+      "original_sha256": "9a33b4258625be160bacfee4163903681799d3c678b57b1fb11ea91ae478eb91",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9a33b4258625be160bacfee4163903681799d3c678b57b1fb11ea91ae478eb91/ForgedCoefficient.lean",
+      "public_sha256": "9a33b4258625be160bacfee4163903681799d3c678b57b1fb11ea91ae478eb91"
+    },
+    {
+      "id": "identity-src-d95293e2d986c0799892",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/EffectiveRuleBoundary.lean"
+      ],
+      "original_sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c/EffectiveRuleBoundary.lean",
+      "public_sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c"
+    },
+    {
+      "id": "identity-src-db7415140b5f195c0375",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01CanonicalCarrierProjection.lean"
+      ],
+      "original_sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e/P01CanonicalCarrierProjection.lean",
+      "public_sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e"
+    },
+    {
+      "id": "identity-src-dc6aae4221951c88a52f",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/MissingArgumentObservation.lean"
+      ],
+      "original_sha256": "952a4e5f9843c4f6e1e22c25aa3bd4a2b53a731170d4214a45933669dda07281",
+      "public_path": "experiments/orthemology-v5-successors/source-store/952a4e5f9843c4f6e1e22c25aa3bd4a2b53a731170d4214a45933669dda07281/MissingArgumentObservation.lean",
+      "public_sha256": "952a4e5f9843c4f6e1e22c25aa3bd4a2b53a731170d4214a45933669dda07281"
+    },
+    {
+      "id": "identity-src-deb586bf6b7fa08076b9",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01ModelWitnesses.lean"
+      ],
+      "original_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f/P01ModelWitnesses.lean",
+      "public_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f"
+    },
+    {
+      "id": "identity-src-df625fa5b3b35410b52b",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/KernelAudit.lean"
+      ],
+      "original_sha256": "cd31c9d6321bbfd35eea813b6648b74d36ddddc8314d599f912dd718a94cb8e1",
+      "public_path": "experiments/orthemology-v5-successors/source-store/cd31c9d6321bbfd35eea813b6648b74d36ddddc8314d599f912dd718a94cb8e1/KernelAudit.lean",
+      "public_sha256": "cd31c9d6321bbfd35eea813b6648b74d36ddddc8314d599f912dd718a94cb8e1"
+    },
+    {
+      "id": "identity-src-e15ec4619b57d7f7ee34",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/PointwiseIsNotCrossArgument.lean"
+      ],
+      "original_sha256": "4493327fb512ac8184def34bf332f3e6be5504ee2b199e8c4c940ff796224e74",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4493327fb512ac8184def34bf332f3e6be5504ee2b199e8c4c940ff796224e74/PointwiseIsNotCrossArgument.lean",
+      "public_sha256": "4493327fb512ac8184def34bf332f3e6be5504ee2b199e8c4c940ff796224e74"
+    },
+    {
+      "id": "identity-src-e1602b24715b67be2212",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/check_polynomial_test_controls.py"
+      ],
+      "original_sha256": "1581e22b5b9041e1ad23bd6d810054dcb4489adaeadd84877da9ba8fe8e32bbc",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1581e22b5b9041e1ad23bd6d810054dcb4489adaeadd84877da9ba8fe8e32bbc/check_polynomial_test_controls.py",
+      "public_sha256": "1581e22b5b9041e1ad23bd6d810054dcb4489adaeadd84877da9ba8fe8e32bbc"
+    },
+    {
+      "id": "identity-src-e21cf32f3f26c319089b",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/ExtensionalIsNotPlus.lean"
+      ],
+      "original_sha256": "29fc33ef662ca851e9500f91687cd8aec478d4a891a3267c2043eed12f582167",
+      "public_path": "experiments/orthemology-v5-successors/source-store/29fc33ef662ca851e9500f91687cd8aec478d4a891a3267c2043eed12f582167/ExtensionalIsNotPlus.lean",
+      "public_sha256": "29fc33ef662ca851e9500f91687cd8aec478d4a891a3267c2043eed12f582167"
+    },
+    {
+      "id": "identity-src-e296f02b77396c428215",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v1-controls/PositiveInterface.lean"
+      ],
+      "original_sha256": "9369477b55dad4c2fc11bb8d554d343d91057c443ac81fc3a7ef3f45bc5b8859",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9369477b55dad4c2fc11bb8d554d343d91057c443ac81fc3a7ef3f45bc5b8859/PositiveInterface.lean",
+      "public_sha256": "9369477b55dad4c2fc11bb8d554d343d91057c443ac81fc3a7ef3f45bc5b8859"
+    },
+    {
+      "id": "identity-src-e3d04ac06e92716b85bf",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/verify_dependencies.py"
+      ],
+      "original_sha256": "a7bd1dc419b6dd2b514df0d6d0ef43fa3ed855960b22d016079f83319acc4da6",
+      "public_path": "experiments/orthemology-v5-successors/source-store/a7bd1dc419b6dd2b514df0d6d0ef43fa3ed855960b22d016079f83319acc4da6/verify_dependencies.py",
+      "public_sha256": "a7bd1dc419b6dd2b514df0d6d0ef43fa3ed855960b22d016079f83319acc4da6"
+    },
+    {
+      "id": "identity-src-e3f891ec3bd84eced09a",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/InvalidVariableIndex.lean"
+      ],
+      "original_sha256": "ea29fb0d4fba7068615951c0f8421b3627304aed933801a6943e4a475d2f5a73",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ea29fb0d4fba7068615951c0f8421b3627304aed933801a6943e4a475d2f5a73/InvalidVariableIndex.lean",
+      "public_sha256": "ea29fb0d4fba7068615951c0f8421b3627304aed933801a6943e4a475d2f5a73"
+    },
+    {
+      "id": "identity-src-e45e3e9b5ce895498940",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01TypeAlgebra.lean"
+      ],
+      "original_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "public_path": "experiments/orthemology-v5-successors/source-store/222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188/P01TypeAlgebra.lean",
+      "public_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188"
+    },
+    {
+      "id": "identity-src-e64f8d792c096bf49c34",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/negative-controls/AuditorRejectsUnsafe.lean"
+      ],
+      "original_sha256": "03088e5132be807c660b49e3123ce77d0c623e809049b708187ad8b4df94ad16",
+      "public_path": "experiments/orthemology-v5-successors/source-store/03088e5132be807c660b49e3123ce77d0c623e809049b708187ad8b4df94ad16/AuditorRejectsUnsafe.lean",
+      "public_sha256": "03088e5132be807c660b49e3123ce77d0c623e809049b708187ad8b4df94ad16"
+    },
+    {
+      "id": "identity-src-e65c85ca6a1b8374fbcb",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/unified-v3-receipt.json"
+      ],
+      "original_sha256": "53cd30a370c0f94db9fc211d2005637af204cc5197e88f30c7edcbfed6a52a27",
+      "public_path": "experiments/orthemology-v5-successors/source-store/53cd30a370c0f94db9fc211d2005637af204cc5197e88f30c7edcbfed6a52a27/unified-v3-receipt.json",
+      "public_sha256": "53cd30a370c0f94db9fc211d2005637af204cc5197e88f30c7edcbfed6a52a27"
+    },
+    {
+      "id": "identity-src-e69ebce9542ccc152e1e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/SparsePolynomial.lean"
+      ],
+      "original_sha256": "2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a/SparsePolynomial.lean",
+      "public_sha256": "2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a"
+    },
+    {
+      "id": "identity-src-e7802771a9e34fc6f1e0",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-v2-controls/PositiveOrthantRequired.lean"
+      ],
+      "original_sha256": "4b77955757f2cebcdc213b46e1b5a0a349b359abc9d681b87c0937c7b008b18c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4b77955757f2cebcdc213b46e1b5a0a349b359abc9d681b87c0937c7b008b18c/PositiveOrthantRequired.lean",
+      "public_sha256": "4b77955757f2cebcdc213b46e1b5a0a349b359abc9d681b87c0937c7b008b18c"
+    },
+    {
+      "id": "identity-src-e7879bc44a0f0283ad31",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01ContextualJ.lean"
+      ],
+      "original_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c/P01ContextualJ.lean",
+      "public_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c"
+    },
+    {
+      "id": "identity-src-e8f1823fde3f95960fcb",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/MissingLeftTyping.lean"
+      ],
+      "original_sha256": "504f18f494d7055a153cf8a31f27a2482c1ee399f890aecf79a627824128c881",
+      "public_path": "experiments/orthemology-v5-successors/source-store/504f18f494d7055a153cf8a31f27a2482c1ee399f890aecf79a627824128c881/MissingLeftTyping.lean",
+      "public_sha256": "504f18f494d7055a153cf8a31f27a2482c1ee399f890aecf79a627824128c881"
+    },
+    {
+      "id": "identity-src-e91812020823607ace34",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/AxiomAudit.lean"
+      ],
+      "original_sha256": "eb7b45593a3248d8166f47dbf4d7f30f51218d92bc91264c322e6ebaa53a2173",
+      "public_path": "experiments/orthemology-v5-successors/source-store/eb7b45593a3248d8166f47dbf4d7f30f51218d92bc91264c322e6ebaa53a2173/AxiomAudit.lean",
+      "public_sha256": "eb7b45593a3248d8166f47dbf4d7f30f51218d92bc91264c322e6ebaa53a2173"
+    },
+    {
+      "id": "identity-src-ea0df8b8a8fb428e7011",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/ExtensionalRepairWitness.lean"
+      ],
+      "original_sha256": "0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29",
+      "public_path": "experiments/orthemology-v5-successors/source-store/0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29/ExtensionalRepairWitness.lean",
+      "public_sha256": "0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29"
+    },
+    {
+      "id": "identity-src-ea4b483dc9072f00bd92",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/AuditorRejectsUnsafe.lean"
+      ],
+      "original_sha256": "e1eb7af1e827678ec8265f497c9ed2b6422cf405b88aec70fd29276f2e1491ed",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e1eb7af1e827678ec8265f497c9ed2b6422cf405b88aec70fd29276f2e1491ed/AuditorRejectsUnsafe.lean",
+      "public_sha256": "e1eb7af1e827678ec8265f497c9ed2b6422cf405b88aec70fd29276f2e1491ed"
+    },
+    {
+      "id": "identity-src-ebf70f2de94fe91002aa",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/polynomial-test-controls/PositiveInterfaces.lean"
+      ],
+      "original_sha256": "b1ee5ec477e24dea065e997a5749483e24ae7f11514b99bca1765e99ef9d1132",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b1ee5ec477e24dea065e997a5749483e24ae7f11514b99bca1765e99ef9d1132/PositiveInterfaces.lean",
+      "public_sha256": "b1ee5ec477e24dea065e997a5749483e24ae7f11514b99bca1765e99ef9d1132"
+    },
+    {
+      "id": "identity-src-ebf991ab221b193d5096",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01Translation.lean"
+      ],
+      "original_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "public_path": "experiments/orthemology-v5-successors/source-store/538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d/P01Translation.lean",
+      "public_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d"
+    },
+    {
+      "id": "identity-src-efbde0904c9b06c56486",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/IndependentKernelChecks.lean"
+      ],
+      "original_sha256": "29efba63a8bb81d82a0a3c8fb2bbab68cab27036be5c550adf3b1c87c588b9f0",
+      "public_path": "experiments/orthemology-v5-successors/source-store/29efba63a8bb81d82a0a3c8fb2bbab68cab27036be5c550adf3b1c87c588b9f0/IndependentKernelChecks.lean",
+      "public_sha256": "29efba63a8bb81d82a0a3c8fb2bbab68cab27036be5c550adf3b1c87c588b9f0"
+    },
+    {
+      "id": "identity-src-f19ff2443f6f1a363342",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/WrongDiscriminatorOrientation.lean"
+      ],
+      "original_sha256": "f883051869b9385d2b0cf2047fdfe3972cf2272921e72eb3122ec09d7f96c753",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f883051869b9385d2b0cf2047fdfe3972cf2272921e72eb3122ec09d7f96c753/WrongDiscriminatorOrientation.lean",
+      "public_sha256": "f883051869b9385d2b0cf2047fdfe3972cf2272921e72eb3122ec09d7f96c753"
+    },
+    {
+      "id": "identity-src-f1d5f5b9ee2a2feeb0e4",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/inherited/negative-controls/CurrentHasIsNotHasPlus.lean"
+      ],
+      "original_sha256": "408404c9324ff3a1ddabcb93a9f22ca317eb893ccf9ec988c89d4300294b7b66",
+      "public_path": "experiments/orthemology-v5-successors/source-store/408404c9324ff3a1ddabcb93a9f22ca317eb893ccf9ec988c89d4300294b7b66/CurrentHasIsNotHasPlus.lean",
+      "public_sha256": "408404c9324ff3a1ddabcb93a9f22ca317eb893ccf9ec988c89d4300294b7b66"
+    },
+    {
+      "id": "identity-src-f2a59020c27fea697692",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/PolynomialTestBoundary.lean"
+      ],
+      "original_sha256": "1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82/PolynomialTestBoundary.lean",
+      "public_sha256": "1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82"
+    },
+    {
+      "id": "identity-src-f320f96a7bf9b0b36fe2",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/AllSemanticSubstitution.lean"
+      ],
+      "original_sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09",
+      "public_path": "experiments/orthemology-v5-successors/source-store/352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09/AllSemanticSubstitution.lean",
+      "public_sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09"
+    },
+    {
+      "id": "identity-src-f3e8adafdeeb908eabb8",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/DEPENDENCY_PROVENANCE.json"
+      ],
+      "original_sha256": "09f0ad6b1381b77f1e2ce6cfddba52aef3b2ee27e3ee5d0b3f15a6de09bf69c3",
+      "public_path": "experiments/orthemology-v5-successors/source-store/09f0ad6b1381b77f1e2ce6cfddba52aef3b2ee27e3ee5d0b3f15a6de09bf69c3/DEPENDENCY_PROVENANCE.json",
+      "public_sha256": "09f0ad6b1381b77f1e2ce6cfddba52aef3b2ee27e3ee5d0b3f15a6de09bf69c3"
+    },
+    {
+      "id": "identity-src-f4c90edd34238691ab85",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/MissingRightMembership.lean"
+      ],
+      "original_sha256": "ed0be2516055f20bc6f616e5ed2b38b9048eb17652c57347feead88c7b52c4ee",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ed0be2516055f20bc6f616e5ed2b38b9048eb17652c57347feead88c7b52c4ee/MissingRightMembership.lean",
+      "public_sha256": "ed0be2516055f20bc6f616e5ed2b38b9048eb17652c57347feead88c7b52c4ee"
+    },
+    {
+      "id": "identity-src-f745060ce85b5e6ac5b2",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/AuditorRejectsCustomAxiom.lean"
+      ],
+      "original_sha256": "c16fbb7788cb655e99575b3dfccb6e31b38ec0d6f4bc7993e6f2d83ee44c2d2b",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c16fbb7788cb655e99575b3dfccb6e31b38ec0d6f4bc7993e6f2d83ee44c2d2b/AuditorRejectsCustomAxiom.lean",
+      "public_sha256": "c16fbb7788cb655e99575b3dfccb6e31b38ec0d6f4bc7993e6f2d83ee44c2d2b"
+    },
+    {
+      "id": "identity-src-f76bd800c9ca61417210",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/source-lock.json"
+      ],
+      "original_sha256": "bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c/source-lock.json",
+      "public_sha256": "bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c"
+    },
+    {
+      "id": "identity-src-f8565b8374b0b0375478",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/restricted-independent-controls/INDEPENDENT_DeadExponentForgery.lean"
+      ],
+      "original_sha256": "678a22f1dede68b426d32212cd547063bd126fb8e9b8c5b0529118f19e3c1355",
+      "public_path": "experiments/orthemology-v5-successors/source-store/678a22f1dede68b426d32212cd547063bd126fb8e9b8c5b0529118f19e3c1355/INDEPENDENT_DeadExponentForgery.lean",
+      "public_sha256": "678a22f1dede68b426d32212cd547063bd126fb8e9b8c5b0529118f19e3c1355"
+    },
+    {
+      "id": "identity-src-faaa52b448b153d3aee1",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/P01PER.lean"
+      ],
+      "original_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e/P01PER.lean",
+      "public_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e"
+    },
+    {
+      "id": "identity-src-fb9af2514b33df318b61",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/historical/raw-v2-receipt.json"
+      ],
+      "original_sha256": "24db3eb238d712fa242cb5c71a5c074d70a4a52434d34b41ada2f3d731327082",
+      "public_path": "experiments/orthemology-v5-successors/source-store/24db3eb238d712fa242cb5c71a5c074d70a4a52434d34b41ada2f3d731327082/raw-v2-receipt.json",
+      "public_sha256": "24db3eb238d712fa242cb5c71a5c074d70a4a52434d34b41ada2f3d731327082"
+    },
+    {
+      "id": "identity-src-fc97dc05921345d7812e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/preserved-module-lock.json"
+      ],
+      "original_sha256": "7dc06e97812b481caac84ca86cc685c2fb255fdc119f650b83cc6851dc085e61",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7dc06e97812b481caac84ca86cc685c2fb255fdc119f650b83cc6851dc085e61/preserved-module-lock.json",
+      "public_sha256": "7dc06e97812b481caac84ca86cc685c2fb255fdc119f650b83cc6851dc085e61"
+    },
+    {
+      "id": "identity-src-fe009085de37dec7431d",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/complexity-negative-controls/OneEnvironmentIsNotEndpointValidity.lean"
+      ],
+      "original_sha256": "1f2385be631a4330db9df6c1f23aadf61798eb0331c25d209a50460698adcaa2",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1f2385be631a4330db9df6c1f23aadf61798eb0331c25d209a50460698adcaa2/OneEnvironmentIsNotEndpointValidity.lean",
+      "public_sha256": "1f2385be631a4330db9df6c1f23aadf61798eb0331c25d209a50460698adcaa2"
+    },
+    {
+      "id": "identity-src-fef6ef331a9876754bf8",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/lean/verification/boolean-negative-controls/AuditorRejectsSorry.lean"
+      ],
+      "original_sha256": "2d9e7402c87fa7e111673fe5dc9d57966a373fd6bcd72412ce95ff81121e2462",
+      "public_path": "experiments/orthemology-v5-successors/source-store/2d9e7402c87fa7e111673fe5dc9d57966a373fd6bcd72412ce95ff81121e2462/AuditorRejectsSorry.lean",
+      "public_sha256": "2d9e7402c87fa7e111673fe5dc9d57966a373fd6bcd72412ce95ff81121e2462"
+    },
+    {
+      "id": "identity-src-1240d1dc0a2c0cfe550e",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/univariate-reference/README.md"
+      ],
+      "original_sha256": "92cb36221687dd71453d9df1f6b04061d2838956e410fb2e92e29d05ca98e7bb",
+      "public_path": "experiments/orthemology-v5-successors/source-store/92cb36221687dd71453d9df1f6b04061d2838956e410fb2e92e29d05ca98e7bb/README.md",
+      "public_sha256": "92cb36221687dd71453d9df1f6b04061d2838956e410fb2e92e29d05ca98e7bb"
+    },
+    {
+      "id": "identity-src-166908a0faefae1aed18",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/univariate-reference/test_independent_adversarial.py"
+      ],
+      "original_sha256": "24daa53895fbc95f6387a3de7b758356972edc2febf56243c26768547fe9223e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/24daa53895fbc95f6387a3de7b758356972edc2febf56243c26768547fe9223e/test_independent_adversarial.py",
+      "public_sha256": "24daa53895fbc95f6387a3de7b758356972edc2febf56243c26768547fe9223e"
+    },
+    {
+      "id": "identity-src-1aa9645373f3d9070add",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/restricted-runtime/VERIFIED_RESULT.json"
+      ],
+      "original_sha256": "41a3a344e492deb878d274ff56bcf76a999baef234465202fed66b1e29c9a668",
+      "public_path": "experiments/orthemology-v5-successors/source-store/41a3a344e492deb878d274ff56bcf76a999baef234465202fed66b1e29c9a668/VERIFIED_RESULT.json",
+      "public_sha256": "41a3a344e492deb878d274ff56bcf76a999baef234465202fed66b1e29c9a668"
+    },
+    {
+      "id": "identity-src-1c4b694e76a97ff0a4f3",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/python-reference/SOURCE_LOCK.json"
+      ],
+      "original_sha256": "f7bda53cf932963883223c7f14f305b1354b35207d2a50da3c0dfcc2e3813eec",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f7bda53cf932963883223c7f14f305b1354b35207d2a50da3c0dfcc2e3813eec/SOURCE_LOCK.json",
+      "public_sha256": "f7bda53cf932963883223c7f14f305b1354b35207d2a50da3c0dfcc2e3813eec"
+    },
+    {
+      "id": "identity-src-1d4977dcdc21c5bdec74",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/restricted-runtime/SHA256SUMS"
+      ],
+      "original_sha256": "18f002a663dc517f2380cc9f776d7817d4e5bb0988ab4cf88c7b1191134a102c",
+      "public_path": "experiments/orthemology-v5-successors/source-store/18f002a663dc517f2380cc9f776d7817d4e5bb0988ab4cf88c7b1191134a102c/SHA256SUMS",
+      "public_sha256": "18f002a663dc517f2380cc9f776d7817d4e5bb0988ab4cf88c7b1191134a102c"
+    },
+    {
+      "id": "identity-src-2486a5ef2cae27e7f599",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/python-reference/README.md"
+      ],
+      "original_sha256": "373659d652481787fc1e9499261ee931b2e9150d003e640f9ae035258f6722fe",
+      "public_path": "experiments/orthemology-v5-successors/source-store/373659d652481787fc1e9499261ee931b2e9150d003e640f9ae035258f6722fe/README.md",
+      "public_sha256": "373659d652481787fc1e9499261ee931b2e9150d003e640f9ae035258f6722fe"
+    },
+    {
+      "id": "identity-src-46f2d6c37a767b14efc5",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/restricted-runtime/BINDING.json"
+      ],
+      "original_sha256": "3f4f57a24a27e3992d2f8836624b882fdbac3916dfabd56c2b3261be1b410f77",
+      "public_path": "experiments/orthemology-v5-successors/source-store/3f4f57a24a27e3992d2f8836624b882fdbac3916dfabd56c2b3261be1b410f77/BINDING.json",
+      "public_sha256": "3f4f57a24a27e3992d2f8836624b882fdbac3916dfabd56c2b3261be1b410f77"
+    },
+    {
+      "id": "identity-src-535a107f1a126871a452",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/python-reference/verification/test_independent_checker.py"
+      ],
+      "original_sha256": "27c5e18f459c5a6103a35f2fe0570ee2c229832490a02aa4f62064c8c6d25416",
+      "public_path": "experiments/orthemology-v5-successors/source-store/27c5e18f459c5a6103a35f2fe0570ee2c229832490a02aa4f62064c8c6d25416/test_independent_checker.py",
+      "public_sha256": "27c5e18f459c5a6103a35f2fe0570ee2c229832490a02aa4f62064c8c6d25416"
+    },
+    {
+      "id": "identity-src-6b450d668340fbf13b73",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/python-reference/examples/piecewise_instance.json"
+      ],
+      "original_sha256": "f2e38784e8358d65961a89cfc5faf38eadec97fd31a6ac10b68c199a00e7c781",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f2e38784e8358d65961a89cfc5faf38eadec97fd31a6ac10b68c199a00e7c781/piecewise_instance.json",
+      "public_sha256": "f2e38784e8358d65961a89cfc5faf38eadec97fd31a6ac10b68c199a00e7c781"
+    },
+    {
+      "id": "identity-src-7ace94ebaebb37c3d603",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/python-reference/examples/unequal_instance.json"
+      ],
+      "original_sha256": "f7807e76268ca56274e671d6ff2bf1753cd54b81f169ae4c2a3d25a2cbad0fa2",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f7807e76268ca56274e671d6ff2bf1753cd54b81f169ae4c2a3d25a2cbad0fa2/unequal_instance.json",
+      "public_sha256": "f7807e76268ca56274e671d6ff2bf1753cd54b81f169ae4c2a3d25a2cbad0fa2"
+    },
+    {
+      "id": "identity-src-836c3aaef2d32f0749a0",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/univariate-reference/test_root_extension_checker.py"
+      ],
+      "original_sha256": "23e55bf11880011ec5ae47c464e971d02b3e9af5e8541fcbaa7cc73b8d7f73e0",
+      "public_path": "experiments/orthemology-v5-successors/source-store/23e55bf11880011ec5ae47c464e971d02b3e9af5e8541fcbaa7cc73b8d7f73e0/test_root_extension_checker.py",
+      "public_sha256": "23e55bf11880011ec5ae47c464e971d02b3e9af5e8541fcbaa7cc73b8d7f73e0"
+    },
+    {
+      "id": "identity-src-85433aeba7b693a8a759",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/univariate-reference/SOURCE_ONLY_v1.sha256"
+      ],
+      "original_sha256": "f281d34cfdf3731f8c91244625146828c72a60acd7eacab60b51915caba1e644",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f281d34cfdf3731f8c91244625146828c72a60acd7eacab60b51915caba1e644/SOURCE_ONLY_v1.sha256",
+      "public_sha256": "f281d34cfdf3731f8c91244625146828c72a60acd7eacab60b51915caba1e644"
+    },
+    {
+      "id": "identity-src-9eedd9b685ac33604961",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/python-reference/examples/piecewise_certificate.json"
+      ],
+      "original_sha256": "d5326efbbe8ab9412afa98c91340df574ba4beedafcfbbaebfe542edb67f219a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d5326efbbe8ab9412afa98c91340df574ba4beedafcfbbaebfe542edb67f219a/piecewise_certificate.json",
+      "public_sha256": "d5326efbbe8ab9412afa98c91340df574ba4beedafcfbbaebfe542edb67f219a"
+    },
+    {
+      "id": "identity-src-b0f2fb5507f61dff4817",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/restricted-runtime/README.md"
+      ],
+      "original_sha256": "02d23d9ee77fd60764c12d5f0412aa2e4c7d532c17209cbbf1ba595f19b69714",
+      "public_path": "experiments/orthemology-v5-successors/source-store/02d23d9ee77fd60764c12d5f0412aa2e4c7d532c17209cbbf1ba595f19b69714/README.md",
+      "public_sha256": "02d23d9ee77fd60764c12d5f0412aa2e4c7d532c17209cbbf1ba595f19b69714"
+    },
+    {
+      "id": "identity-src-fe8e52ab794092cd05af",
+      "origin_input_id": "T15-EVIDENCE",
+      "member_chain": [
+        "Orthemology_Fifteenth_Source_Evidence/python-reference/verification/test_certificate_checker.py"
+      ],
+      "original_sha256": "f2689d00865ed2964fa6dc4337d67da5017f23c34a870e5dad183ccc6ccd6bb9",
+      "public_path": "experiments/orthemology-v5-successors/source-store/f2689d00865ed2964fa6dc4337d67da5017f23c34a870e5dad183ccc6ccd6bb9/test_certificate_checker.py",
+      "public_sha256": "f2689d00865ed2964fa6dc4337d67da5017f23c34a870e5dad183ccc6ccd6bb9"
+    }
+  ]
+}

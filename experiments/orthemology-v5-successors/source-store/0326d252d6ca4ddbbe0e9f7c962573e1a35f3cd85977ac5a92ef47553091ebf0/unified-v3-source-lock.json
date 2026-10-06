@@ -1,0 +1,296 @@
+{
+  "new_modules": [
+    "EffectiveStandardness",
+    "EffectiveObserver",
+    "EffectiveReduction",
+    "EffectiveRuleBoundary",
+    "EffectiveCanonicalTests",
+    "EffectivePartialObserver",
+    "EffectiveBooleanStandardness",
+    "EffectiveBooleanCertificates",
+    "EffectivePrimitiveRecursion",
+    "EffectiveBooleanInterfaces",
+    "EffectiveBooleanControls"
+  ],
+  "files": [
+    {
+      "path": "EffectiveStandardness.lean",
+      "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428"
+    },
+    {
+      "path": "EffectiveObserver.lean",
+      "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f"
+    },
+    {
+      "path": "EffectiveReduction.lean",
+      "sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d"
+    },
+    {
+      "path": "EffectiveRuleBoundary.lean",
+      "sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c"
+    },
+    {
+      "path": "EffectiveCanonicalTests.lean",
+      "sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9"
+    },
+    {
+      "path": "EffectivePartialObserver.lean",
+      "sha256": "3a2c534f00f0d5c4e8a2bde6c8bf057078d03a8c37338eeea2a90f14c8d994aa"
+    },
+    {
+      "path": "EffectiveBooleanStandardness.lean",
+      "sha256": "5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd"
+    },
+    {
+      "path": "EffectiveBooleanCertificates.lean",
+      "sha256": "c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354"
+    },
+    {
+      "path": "EffectivePrimitiveRecursion.lean",
+      "sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba"
+    },
+    {
+      "path": "EffectiveBooleanInterfaces.lean",
+      "sha256": "af2ba9817f751195f965fc44569cefc7b9f57908dc1222bfa696a411631196dc"
+    },
+    {
+      "path": "EffectiveBooleanControls.lean",
+      "sha256": "cf1ba0fa94881b4481e3c11c9bbf90522b6ab39672cd3eebbdef40e3e62df1d0"
+    },
+    {
+      "path": "lakefile.lean",
+      "sha256": "e1efbc0c05cd4729b4aac5c53c67f0d2151bb5982a57d42a5c0bd8b8ceb779e7"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "path": "verification/BooleanKernelAudit.lean",
+      "sha256": "1ed43a78a52fb5e570d06ddd9f53484c90d4e25892ebbb310480708009fdbafd"
+    },
+    {
+      "path": "verification/CheckBooleanInterfaces.lean",
+      "sha256": "41593f408c8f8f6543f1b9824d24c5ea3e3340e1c8d7adc3ce0cd6aa0c2de618"
+    },
+    {
+      "path": "verification/CheckComplexityInterfaces.lean",
+      "sha256": "3e62bef5fdeec0239669961fdc5144bc54b4764cd58fc55b125890f2e4e881cf"
+    },
+    {
+      "path": "verification/CheckInterfaces.lean",
+      "sha256": "7c1db6a42f3167db0d5b56589b8371bca64439ba24f9640f038cbe4dbf574c2c"
+    },
+    {
+      "path": "verification/ComplexityKernelAudit.lean",
+      "sha256": "891130121cb6e9eb6c7223d7e2b829fedd9dced84158885d6c4e9ad40b7f9da7"
+    },
+    {
+      "path": "verification/KernelAudit.lean",
+      "sha256": "cd31c9d6321bbfd35eea813b6648b74d36ddddc8314d599f912dd718a94cb8e1"
+    },
+    {
+      "path": "verification/boolean-negative-controls/AuditorRejectsCustomAxiom.lean",
+      "sha256": "d261ce390b1e548e45dc7313d3866fad816bd296f9670392bf3287ec1dd0a5c0"
+    },
+    {
+      "path": "verification/boolean-negative-controls/AuditorRejectsPartial.lean",
+      "sha256": "4a9f0409363c396cbd7b020f49ef47497065d23631fd13b67b1f210f390a469d"
+    },
+    {
+      "path": "verification/boolean-negative-controls/AuditorRejectsSorry.lean",
+      "sha256": "2d9e7402c87fa7e111673fe5dc9d57966a373fd6bcd72412ce95ff81121e2462"
+    },
+    {
+      "path": "verification/boolean-negative-controls/AuditorRejectsUnsafe.lean",
+      "sha256": "68eb911de33a8b5609ad32c74d0f7f167652560624284bdb2f45734d61960d56"
+    },
+    {
+      "path": "verification/boolean-negative-controls/FiniteBudgetIsNotAllTests.lean",
+      "sha256": "1b784056a804d4de0c5012dedd87744bcff93ae5699eb2cc5ba571f02d6c5d66"
+    },
+    {
+      "path": "verification/boolean-negative-controls/MissingArgumentObservation.lean",
+      "sha256": "952a4e5f9843c4f6e1e22c25aa3bd4a2b53a731170d4214a45933669dda07281"
+    },
+    {
+      "path": "verification/boolean-negative-controls/MissingLeftMembership.lean",
+      "sha256": "d82b1cad79811a63ea4c9ec540911d8dc80764192c4b5f7f58acddb6a995dd04"
+    },
+    {
+      "path": "verification/boolean-negative-controls/MissingLeftTyping.lean",
+      "sha256": "504f18f494d7055a153cf8a31f27a2482c1ee399f890aecf79a627824128c881"
+    },
+    {
+      "path": "verification/boolean-negative-controls/MissingRightMembership.lean",
+      "sha256": "38f0cafee5502b9a8e5d569cee3c15c86a03c968607bfd1a617bc3e10ade098a"
+    },
+    {
+      "path": "verification/boolean-negative-controls/MissingRightTyping.lean",
+      "sha256": "6016928922c0cdaba1750d99b79de0ab1239741d565686ac7801440c2578af38"
+    },
+    {
+      "path": "verification/boolean-negative-controls/RawToBoolCast.lean",
+      "sha256": "c785cfeb9ed9024ee425e6de10729f95f868c2ccf340122c0048e10e1776cb56"
+    },
+    {
+      "path": "verification/boolean-negative-controls/SemanticValidityIsNotCurrentHas.lean",
+      "sha256": "e903723748364f133065501fbacbe6d8b85283e12710e8e9d5aad4ec1c9f7302"
+    },
+    {
+      "path": "verification/boolean-negative-controls/WrongDiscriminatorOrientation.lean",
+      "sha256": "f883051869b9385d2b0cf2047fdfe3972cf2272921e72eb3122ec09d7f96c753"
+    },
+    {
+      "path": "verification/boolean-negative-controls/WrongIdentityCarrier.lean",
+      "sha256": "9c4370694cbed952e2864f12a24e357da92c1ca66dc830b454bc8db2f701cb7d"
+    },
+    {
+      "path": "verification/boolean-negative-controls/WrongParameterOrder.lean",
+      "sha256": "7e2248e768100c13d842ffe4ad8593e2cf6702de0396b3e84f16c7249921b397"
+    },
+    {
+      "path": "verification/boolean-negative-controls/WrongRecursionArity.lean",
+      "sha256": "48e800c108395ab53677b9a26de738c508b1fe9e273b1a72fe12c6c999b6cd25"
+    },
+    {
+      "path": "verification/check_boolean_negative_controls.py",
+      "sha256": "094ed316e0a75c9cbbcd4a409670c275e43266df0fccbb4c291e12f55c6f608e"
+    },
+    {
+      "path": "verification/check_complexity_negative_controls.py",
+      "sha256": "58e8663e8e625fb8648f3859373d8fa690c5377c42d1dd19afdb9c223ad25e00"
+    },
+    {
+      "path": "verification/check_inherited_negative_controls.py",
+      "sha256": "3b1401e00271b8ac00df4993f3f81ac409ed03341ad4efbeb82d6a2334cc3521"
+    },
+    {
+      "path": "verification/check_new_negative_controls.py",
+      "sha256": "ff989b2cdc32b4bf7a61d56de4256c9f92e44412a9195c9f6a9d8c40afa7f36e"
+    },
+    {
+      "path": "verification/complexity-negative-controls/AuditorRejectsCustomAxiom.lean",
+      "sha256": "c16fbb7788cb655e99575b3dfccb6e31b38ec0d6f4bc7993e6f2d83ee44c2d2b"
+    },
+    {
+      "path": "verification/complexity-negative-controls/AuditorRejectsPartial.lean",
+      "sha256": "1ab5ef3f02f0160c5a10cb729039f13eff5595d6a4292438223e2c2e1c27a45e"
+    },
+    {
+      "path": "verification/complexity-negative-controls/AuditorRejectsSorry.lean",
+      "sha256": "42fa7a899fe0ed22831d4799c49f96d4848c902464654ca198bc7715b1781fb1"
+    },
+    {
+      "path": "verification/complexity-negative-controls/AuditorRejectsUnsafe.lean",
+      "sha256": "e1eb7af1e827678ec8265f497c9ed2b6422cf405b88aec70fd29276f2e1491ed"
+    },
+    {
+      "path": "verification/complexity-negative-controls/CanonicalTestsAreNotRawEndpointConversion.lean",
+      "sha256": "510480d0260c7edafec3120d7b479d18cc09f7cad0b5592930e649a9737957b1"
+    },
+    {
+      "path": "verification/complexity-negative-controls/MissingDefinedRepresentation.lean",
+      "sha256": "d933e5c2043ee2a09905eefafd6cbda3c608da94fd45e0b254c89400f7b1b0fd"
+    },
+    {
+      "path": "verification/complexity-negative-controls/MissingLeftMembership.lean",
+      "sha256": "7ca6eff78f6863c24e7ec6a27d26af4be5c9a84a253f1f022ae738d49a6e3786"
+    },
+    {
+      "path": "verification/complexity-negative-controls/MissingLeftTyping.lean",
+      "sha256": "c6b2853424b12b8370fa0666f187c68720a15e758cd54348efb71621f1b2409e"
+    },
+    {
+      "path": "verification/complexity-negative-controls/MissingRightMembership.lean",
+      "sha256": "ed0be2516055f20bc6f616e5ed2b38b9048eb17652c57347feead88c7b52c4ee"
+    },
+    {
+      "path": "verification/complexity-negative-controls/MissingRightTyping.lean",
+      "sha256": "0f4ffb7dc60be26f65ed1bb8a3935d0aa2dc0337293fcb35926b1e453e380c7d"
+    },
+    {
+      "path": "verification/complexity-negative-controls/MissingUndefinedRepresentation.lean",
+      "sha256": "ae9e4ce3d93c93b700b72ebffee7314705bb1769275bf2a55f90e62d5759c079"
+    },
+    {
+      "path": "verification/complexity-negative-controls/OneEnvironmentIsNotEndpointValidity.lean",
+      "sha256": "1f2385be631a4330db9df6c1f23aadf61798eb0331c25d209a50460698adcaa2"
+    },
+    {
+      "path": "verification/complexity-negative-controls/PointwiseIsNotCrossArgument.lean",
+      "sha256": "4493327fb512ac8184def34bf332f3e6be5504ee2b199e8c4c940ff796224e74"
+    },
+    {
+      "path": "verification/complexity-negative-controls/WrongIdentityCarrier.lean",
+      "sha256": "e40f4272b334ab0b6dfe255b2745c4cce85bce7c22e88f508e343a89f93930fe"
+    },
+    {
+      "path": "verification/negative-controls/AuditorRejectsCustomAxiom.lean",
+      "sha256": "25eee1be267c97ef0e48e6915e0c8672bd152cca4241b4335425fbf6f3930968"
+    },
+    {
+      "path": "verification/negative-controls/AuditorRejectsPartial.lean",
+      "sha256": "1de016f96f7f084ab621a08b9c2636a451ca0b32586c911030a7b11cbd4b0b85"
+    },
+    {
+      "path": "verification/negative-controls/AuditorRejectsSorry.lean",
+      "sha256": "859103cb468274bc02b2a036c99bb8bfd8c4c5d3a29b2f4307209c9f8a5eb9b4"
+    },
+    {
+      "path": "verification/negative-controls/AuditorRejectsUnsafe.lean",
+      "sha256": "03088e5132be807c660b49e3123ce77d0c623e809049b708187ad8b4df94ad16"
+    },
+    {
+      "path": "verification/negative-controls/MissingObserverRepresentation.lean",
+      "sha256": "c244f5b686b5d7a9048cc67178042f22474f8229c396a203f1f2ab91553ba907"
+    },
+    {
+      "path": "verification/negative-controls/MissingSemanticInput.lean",
+      "sha256": "3f6c905cf2363c713795aa75a1edd21fd6b3cc3c312572ca2fd8d9949b596254"
+    },
+    {
+      "path": "verification/negative-controls/MissingStepRepresentation.lean",
+      "sha256": "3e9cff8a2e5a338230bde4a074595cb50672756682ae6f90f12835fd868021d4"
+    },
+    {
+      "path": "verification/negative-controls/SemanticExistenceIsNotCurrentTyping.lean",
+      "sha256": "9880810bb76f711fad57c1dc2643b4bffc6dba02365266492545447c8004d71b"
+    },
+    {
+      "path": "verification/negative-controls/WrongIdentityCarrier.lean",
+      "sha256": "4ced59f136b8311e7f0c2f776e014f837a8a121db1651c88106ff23d8b27b065"
+    },
+    {
+      "path": "verification/negative-controls/WrongRawEndpointRelation.lean",
+      "sha256": "410a9a8ecea276190996a85380f2eb49ee387a5ceff9373e2802c33fb02712b3"
+    },
+    {
+      "path": "verification/run_checks.sh",
+      "sha256": "92d98353cf25516d38583f8cd9daa63186d849d702ed623d3023f545cea5b4bf"
+    },
+    {
+      "path": "verification/test_source_checks.py",
+      "sha256": "adad867e3f5ff5b9222a023a3011f6e7d105f2bf28fe3277a24f7db57c28f78c"
+    },
+    {
+      "path": "verification/verify_sources.py",
+      "sha256": "854fdd6435b56d1433c3654d52eb491c6bbb5f486e6e17c2cbb8401abe2660ee"
+    }
+  ],
+  "dependency_revisions": {
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "plausible": "77e08eddc486491d7b9e470926b3dbe50319451a",
+    "LeanSearchClient": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+    "importGraph": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+    "proofwidgets": "c4919189477c3221e6a204008998b0d724f49904",
+    "aesop": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+    "Qq": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+    "batteries": "f5d04a9c4973d401c8c92500711518f7c656f034",
+    "Cli": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+  }
+}

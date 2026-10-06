@@ -1,0 +1,133 @@
+{
+  "schema": "semantic-reduction-checks-v1",
+  "verified_at_utc": "2026-10-05T06:48:38Z",
+  "main_theorem": "P01AC.EffectiveCompleteness.original_identity_iff_run_zero",
+  "status": "all build and verification commands passed",
+  "whole_nonre_theorem_kernel_verified": false,
+  "representation_existence_kernel_verified": false,
+  "main_theorem_has_explicit_representation_hypotheses": true,
+  "build": {
+    "build": "fresh project compilation; reused exact dependency checkouts and caches",
+    "project_modules_compiled": 69,
+    "inherited_modules": 65,
+    "new_modules": 4,
+    "warnings_inherited": 22,
+    "warnings_new": 0,
+    "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "expected_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "matches": true
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "expected_revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "matches": true
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "expected_revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "matches": true
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "expected_revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "matches": true
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "expected_revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "matches": true
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "expected_revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "matches": true
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "expected_revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "matches": true
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "expected_revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "matches": true
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "expected_revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "matches": true
+      }
+    ],
+    "fresh_dependency_bootstrap": false,
+    "downloaded_new_dependencies": false
+  },
+  "axiom_report": {
+    "authored_declarations": 59,
+    "authored_theorems": 42,
+    "namespace_declarations": 121,
+    "namespace_theorems": 52,
+    "safe_roots": 74,
+    "reachable_checked_declarations": 2147,
+    "compiler_runtime_auxiliaries_outside_closure": 47,
+    "unsafe_or_partial_dependencies": 0,
+    "allowed_transitive_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
+  },
+  "checks": {
+    "exact_interface_examples": 43,
+    "new_interface_rejections": 6,
+    "auditor_poison_rejections": 4,
+    "source_mutation_rejections": 6,
+    "inherited_interface_rejections": 9,
+    "inherited_assertion_axiom_constructor_replays": true,
+    "full_check_command_exit": 0
+  },
+  "author_sources": [
+    {
+      "path": "EffectiveObserver.lean",
+      "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f"
+    },
+    {
+      "path": "EffectiveReduction.lean",
+      "sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d"
+    },
+    {
+      "path": "EffectiveRuleBoundary.lean",
+      "sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c"
+    },
+    {
+      "path": "EffectiveStandardness.lean",
+      "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428"
+    }
+  ],
+  "log_bindings": [
+    {
+      "file": "LAKE_BUILD_v1.log",
+      "sha256": "d8db51373ce98d1dc8b7644d1c4af73d1db930e5372b963486d7c5194cadcbde"
+    },
+    {
+      "file": "FULL_CHECKS_v1.log",
+      "sha256": "9d88ea0e79a5f1abfe60cd9885464bd18b3c23169ba6441f1323e41ee524ab86"
+    },
+    {
+      "file": "SOURCE_CHECK_MUTATIONS_v1.log",
+      "sha256": "1b84847695cec1b3e2b1a69dd9e19012395cfa272be64d2e5d126e1c9fa80e1e"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "new_modules": [
+    "EffectiveStandardness",
+    "EffectiveObserver",
+    "EffectiveReduction",
+    "EffectiveRuleBoundary",
+    "EffectiveCanonicalTests",
+    "EffectivePartialObserver"
+  ],
+  "files": [
+    {
+      "path": "EffectiveStandardness.lean",
+      "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428"
+    },
+    {
+      "path": "EffectiveObserver.lean",
+      "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f"
+    },
+    {
+      "path": "EffectiveReduction.lean",
+      "sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d"
+    },
+    {
+      "path": "EffectiveRuleBoundary.lean",
+      "sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c"
+    },
+    {
+      "path": "EffectiveCanonicalTests.lean",
+      "sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9"
+    },
+    {
+      "path": "EffectivePartialObserver.lean",
+      "sha256": "3a2c534f00f0d5c4e8a2bde6c8bf057078d03a8c37338eeea2a90f14c8d994aa"
+    },
+    {
+      "path": "lakefile.lean",
+      "sha256": "367616ad809b755e73564b6faad5f85459c410cdc91edddb122e67761a28a4b7"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    }
+  ],
+  "dependency_revisions": {
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "plausible": "77e08eddc486491d7b9e470926b3dbe50319451a",
+    "LeanSearchClient": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+    "importGraph": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+    "proofwidgets": "c4919189477c3221e6a204008998b0d724f49904",
+    "aesop": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+    "Qq": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+    "batteries": "f5d04a9c4973d401c8c92500711518f7c656f034",
+    "Cli": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+  }
+}
