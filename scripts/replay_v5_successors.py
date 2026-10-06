@@ -1920,6 +1920,7 @@ def t10_result(stage, text, plan, output, suite):
 
 
 def validate_suite(suite, sources, root):
+    if p1_tail_handles(suite): return p1_tail_validate_suite(p1_api(), suite, sources, root)
     """Offline checks only. Neither a descriptor nor a review Boolean authorises code."""
     if selector_g1_handles(suite):
         family = selector_g1_load_family()
@@ -2869,6 +2870,7 @@ def _initial_receipt(suite, sources, reviews):
 
 
 def execute_suite(suite, sources, root, output, tools, inputs, scope=None, *, reviews=None):
+    if p1_tail_handles(suite): return p1_tail_execute_suite(p1_api(), suite, sources, root, output, tools, inputs, scope=scope, reviews=reviews)
     if selector_g1_handles(suite):
         family = selector_g1_load_family()
         return family.selector_g1_execute(family.selector_g1_adapter_view(globals()), suite, sources, root, output, tools, inputs, scope, reviews=reviews)
@@ -4080,7 +4082,20 @@ def execute_covering_audit_continuation(suite, sources, root, prior, output, too
                                                reviews=reviews, adapter=SimpleNamespace(**globals()))
 
 
+D04_PUBLIC_HELPER_SHA256 = '77d12f0b4c9bf40ea0f75ab735ec2f25af46083e918a37d32ce57e928e645b35'
+
+
+def d04_public_receipt_load():
+    """Load the sealed public-summary helper from verified non-symlink bytes."""
+    path = no_symlinks(Path(__file__).with_name('v5_d04_public_receipt.py'))
+    raw = path.read_bytes()
+    require(sha(raw) == D04_PUBLIC_HELPER_SHA256, 'Unreviewed D04 public receipt helper')
+    namespace = {'__file__': str(path), '__name__': 'v5_d04_public_receipt'}
+    exec(compile(raw, str(path), 'exec'), namespace)
+    return SimpleNamespace(**namespace)
+
 def validate_receipt(receipt, suite, sources, root):
+    if p1_tail_handles(suite): return p1_tail_validate_receipt(p1_api(), receipt, suite, sources, root)
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == 'orthemology-v5-covering-audit-continuation-v1':
         return covering_continuation_load().validate_receipt(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     if selector_g1_handles(suite):
@@ -4094,10 +4109,16 @@ def validate_receipt(receipt, suite, sources, root):
         return validate_history_continuation(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and receipt['replay_evidence'].get('schema') == AC_SCHEMA:
         return validate_audit_continuation(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
+    if isinstance(receipt, dict) and isinstance(receipt.get('replay_evidence'), dict) and isinstance(receipt['replay_evidence'].get('schema'), str) and receipt['replay_evidence']['schema'] in {'orthemology-v5-d04-public-receipt-v1', 'orthemology-v5-d04-public-covering-continuation-v1'}:
+        return d04_public_receipt_load().validate_receipt(receipt, suite, sources, root, adapter=SimpleNamespace(**globals()))
     plan = validate_suite(suite, sources, root); evidence = receipt['replay_evidence']
     has_children = any(row['argv'][:1] == ['{builtin:observe-child}'] for row in plan['stages'].values())
     keys(evidence, EVIDENCE_KEYS | ({'child_observations', 'driver_invocations'} if has_children else set()))
     require(evidence['schema'] == ('orthemology-v5-replay-evidence-v2' if has_children else 'orthemology-v5-replay-evidence-v1') and evidence['cache_policy'] == CACHE_POLICY, 'Unknown replay evidence/cache policy')
+    return _validate_receipt_body(receipt, suite, sources, root, plan, evidence, has_children, validate_child_evidence)
+
+
+def _validate_receipt_body(receipt, suite, sources, root, plan, evidence, has_children, child_validator):
     require(receipt['suite_sha256'] == canonical(suite) and receipt['toolchain_sha256'] == canonical(suite['toolchain']), 'Stale suite/toolchain receipt')
     hashes = {sid: sources[sid]['public_sha256'] for sid in suite['source_ids']}
     require(receipt['source_hashes'] == hashes and evidence['source_hashes_before'] == hashes and evidence['source_hashes_after'] == hashes, 'Stale source receipt')
@@ -4130,7 +4151,7 @@ def validate_receipt(receipt, suite, sources, root):
         for value in row['output_hashes'].values(): digest(value)
         if row['terminal'] == 'COMPLETED': completed[sid] = row
     require(receipt['log_sha256'] == canonical({row['id']: row['log_sha256'] for row in evidence['stage_results']}), 'Receipt log identity mismatch')
-    if has_children: validate_child_evidence(evidence, plan, stages, successful)
+    if has_children: child_validator(evidence, plan, stages, successful)
     observations = indexed(evidence['control_diagnostics'], 'control_id'); controls = indexed(receipt['controls'])
     if successful: require(set(observations) == set(controls) == set(indexed(suite['controls'])), 'Incomplete successful control coverage')
     for cid, row in observations.items():
@@ -5623,10 +5644,33 @@ def p1_load_assets():
 
 p1_load_assets()
 
+# Exact, separately reviewed P1 tail continuation assets.
+p1_tail_asset_pins = {'v5_p1_tail_recipes.json': {'sha256': '6efa11d4de88866abfaedb180d6c7a91ff6bd6a6bbe22d942ece3b52f4265d40', 'bytes': 200673}, 'v5_p1_tail_assets/p1_tail_recipe.py': {'sha256': '9892182cc5b2be498c146c35cd0dad1ab44aeb952e0fb601058c40438ae896be', 'bytes': 62081}}
+
+
+def p1_tail_load_assets():
+    content = {}
+    base = Path(__file__).absolute().parent
+    for name, pin in p1_tail_asset_pins.items():
+        path = no_symlinks(base / name)
+        try:
+            data = path.read_bytes()
+        except OSError as error:
+            raise ValueError('P1 tail reviewed asset missing: ' + name) from error
+        require(len(data) == pin['bytes'] and sha(data) == pin['sha256'], 'P1 tail reviewed asset identity changed: ' + name)
+        content[name] = data
+    globals()['p1_tail_meta'] = json.loads(content['v5_p1_tail_recipes.json'])
+    exec(compile(content['v5_p1_tail_assets/p1_tail_recipe.py'], str(base / 'v5_p1_tail_assets/p1_tail_recipe.py'), 'exec'), globals())
+
+
+p1_tail_load_assets()
+
+
+
 # Hash-bound selector/G1 assets. This does not admit a descriptor or run.
 SELECTOR_G1_FAMILY_ASSET = 'replay_v5_successor_assets/selector_g1/replay_selector_g1.py'
-SELECTOR_G1_FAMILY_SHA256 = '03a541e1df9b6766b0e1ce980005cc82f15f7201478ebad48c1db56b15cf5a20'
-SELECTOR_G1_FAMILY_BYTES = 89698
+SELECTOR_G1_FAMILY_SHA256 = '5d1d68841a1b9c7bccf1f3ac0918935ca4b25276c9c37e4171be7430d5b69c77'
+SELECTOR_G1_FAMILY_BYTES = 89836
 SELECTOR_G1_RECIPES = {'t09-selector-original-v2':'selector','t09-g1-author-original-v2':'g1','t09-g1-review-original-v2':'g1-review'}
 SELECTOR_G1_IDS = {'d06-selector':'selector','d08-g1':'g1','d08-g1-review':'g1-review'}
 

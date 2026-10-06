@@ -33,7 +33,7 @@ SELECTOR_G1_CORE_RETAINED_TREE_SHA256 = '748a5d8d993637c120afc3b0998bf0109b5c665
 # admission/execution. No descriptor, receipt field, path or CLI flag can add it.
 # canonical receipt digest -> exact receipt-file and retained whole-run digests.
 SELECTOR_G1_CURRENT_AUTHOR_RECEIPTS = {'da3e904d18f5656add78cf079f4d7879e7f7ab06b7089a50eb03cb3800ccb46d': {'receipt_file_sha256': '1b39b168f89d8b7575131a27a0697ec22b2c1d4bc333b506f1a6f3516a01b152', 'retained_tree_sha256': '3bf5bbe70c697b581aecc7dee47f25e758afdca8bbed243b1ca84594e4819b29'}}
-SELECTOR_G1_REVIEWED_EXECUTORS = frozenset({('ab06a34e10487b396cf83b3e07eba135ad821dab1e91b25cad0780e1b444a8f0', 'f2704f521f5c55cd3a0866b4e3f98d520dd57daa782e1f052b972d7de8b05d87')})
+SELECTOR_G1_REVIEWED_EXECUTORS = frozenset({('ab06a34e10487b396cf83b3e07eba135ad821dab1e91b25cad0780e1b444a8f0', 'f2704f521f5c55cd3a0866b4e3f98d520dd57daa782e1f052b972d7de8b05d87'), ('7d24005ce92adde4057b28a205be5363e61ed3de9559e016dda4013d7c4d5aaa', '03a541e1df9b6766b0e1ce980005cc82f15f7201478ebad48c1db56b15cf5a20')})
 SELECTOR_G1_SCHEMA = 'orthemology-v5-replay-evidence-v2'
 SELECTOR_G1_POLICY = 'EXACT_ORIGINAL_COLD_OR_EXPLICIT_CURRENT_DEPENDENCY_REUSE'
 SELECTOR_G1_HELPERS = {
