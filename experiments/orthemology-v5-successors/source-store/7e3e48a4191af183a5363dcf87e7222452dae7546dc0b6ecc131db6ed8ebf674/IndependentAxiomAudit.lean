@@ -1,0 +1,22 @@
+import IndependentSortingWitness
+
+#print axioms TransportIndependentReview.no_complete_key_collision
+#print axioms TransportIndependentReview.same_support_does_not_collapse
+#print axioms TransportIndependentReview.sortCommand
+#print axioms TransportIndependentReview.sorting_collapses_a_nonfixed_pair
+#print axioms TransportIndependentReview.sorting_not_injective_if_nonfixed
+#print axioms TransportIndependentReview.full_unchanged_fields
+#print axioms TransportIndependentReview.full_root_fields
+#print axioms TransportIndependentReview.effect_exact
+#print axioms TransportIndependentReview.traces_keep_positions
+#print axioms TransportIndependentReview.corrupt_payload_and_order
+#print axioms TransportIndependentReview.close_iff_key_quorum
+#print axioms TransportIndependentReview.unchanged_state_close_failure
+#print axioms TransportIndependentReview.withholding_preserved
+#print axioms TransportIndependentReview.opening_preserved
+#print axioms TransportIndependentReview.ascending
+#print axioms TransportIndependentReview.descending
+#print axioms TransportIndependentReview.opposite_paths_same_support
+#print axioms TransportIndependentReview.opposite_complete_commands_differ
+#print axioms TransportIndependentReview.explicit_sorting_collision
+#print axioms TransportIndependentReview.sorting_is_not_bijection

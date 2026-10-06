@@ -1,0 +1,123 @@
+[
+  {
+    "name": "baseline/OrderedIdentityControls",
+    "path": "controls/baseline/OrderedIdentityControls.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "c86686b73f0a9d2d4692957cf6349cc1ca25f6334bb6c930a0816eb8166ea66a"
+  },
+  {
+    "name": "baseline/OpaqueCertificateObstruction",
+    "path": "controls/baseline/OpaqueCertificateObstruction.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "e8ef76829420d9565984b5de124e59e74b25071556a59090bd172c573a72cb43"
+  },
+  {
+    "name": "baseline/PredecessorCallableFailure",
+    "path": "controls/baseline/PredecessorCallableFailure.lean",
+    "expected_exit": 1,
+    "required_output": [
+      "which has no executable code"
+    ],
+    "source_sha256": "ae0d5b1e2e0bb5c4bfb7a07c54aa77ea787d07ef3e60fb671751a6bb225a12c1"
+  },
+  {
+    "name": "primitives/Diagnostic_fresh_nonce_has_no_receipt",
+    "path": "controls/primitives/Diagnostic_fresh_nonce_has_no_receipt.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "3993e78269f82b3bdf9df60e456ca5cec31bb9589a4ecb57d6341ceb2a9a46fa"
+  },
+  {
+    "name": "primitives/Diagnostic_changed_action_has_no_receipt",
+    "path": "controls/primitives/Diagnostic_changed_action_has_no_receipt.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "29ea2310e781b1854a06965507c04f4eab3833c1152d1b7d79795abd31571563"
+  },
+  {
+    "name": "primitives/Diagnostic_repeat_label_not_new_receipt",
+    "path": "controls/primitives/Diagnostic_repeat_label_not_new_receipt.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "abdd47825b5158f06b070f433126062f26028d03bdd5e64ca28c53c1de7ae191"
+  },
+  {
+    "name": "primitives/Diagnostic_unselected_sibling_does_not_ack",
+    "path": "controls/primitives/Diagnostic_unselected_sibling_does_not_ack.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "a9d757eeccc81d64affd1f4a7128ac8d938e50cd098157038b0b4f7f23dcf443"
+  },
+  {
+    "name": "primitives/Diagnostic_cancel_frames_nonroot_controls",
+    "path": "controls/primitives/Diagnostic_cancel_frames_nonroot_controls.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "ee8a60d289f180af0abb9ed4a7d77bad435c8b027c736b6f57439b93bfa60992"
+  },
+  {
+    "name": "primitives/Diagnostic_snapshot_does_not_authenticate_epoch",
+    "path": "controls/primitives/Diagnostic_snapshot_does_not_authenticate_epoch.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "7a23da5d8cb3357168886b2ea8307d3ecc9306b963743b7345776c62f466a0af"
+  },
+  {
+    "name": "primitives/Diagnostic_fixture_direct_source_step",
+    "path": "controls/primitives/Diagnostic_fixture_direct_source_step.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "58ff61080f8beb02191d16c22451fb0048b605684c41db092309ed67d8afd04d"
+  },
+  {
+    "name": "primitives/Diagnostic_prepare_preserves_certificates",
+    "path": "controls/primitives/Diagnostic_prepare_preserves_certificates.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "c34696bf1c48fd3195755c534d94bbf1b80b517d03f080cdfeee8b981dd516cc"
+  },
+  {
+    "name": "history/HistorySampleControls",
+    "path": "controls/history/HistorySampleControls.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "ea5436e722bc37e8aa5d3bfb20b0c5a5d5773b9cda3a083dc21f5baf3dac913b"
+  },
+  {
+    "name": "history/HistoryLegalityControls",
+    "path": "controls/history/HistoryLegalityControls.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "b2aee3c38de8d0fb71269dd0ea0acdbf90e0d59fa02ba190fb63479a4fe010b4"
+  },
+  {
+    "name": "history/OwnerHistoryTrace",
+    "path": "controls/history/OwnerHistoryTrace.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "62a04befdbf1c55debb6cf61aea90011dee645c564648696799bb2c20b5f5be9"
+  },
+  {
+    "name": "ordered/ServiceOrderControls",
+    "path": "controls/ordered/ServiceOrderControls.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "d40af4e098a319b49c27168ac93b5a63fc4eb180989f6a43f4eedfe10c9fc686"
+  },
+  {
+    "name": "ordered/OrderedContractControls",
+    "path": "controls/ordered/OrderedContractControls.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "2cc7c155bb04a2180ed1294dc12c9551bcf4400745b097b66d6bb9d0914f4307"
+  },
+  {
+    "name": "ordered/OrderedExecutionControls",
+    "path": "controls/ordered/OrderedExecutionControls.lean",
+    "expected_exit": 0,
+    "required_output": [],
+    "source_sha256": "c866a0dbe33b1b866d7faae97b315434fdff3d65dde1f4fd73520f2551544246"
+  }
+]
