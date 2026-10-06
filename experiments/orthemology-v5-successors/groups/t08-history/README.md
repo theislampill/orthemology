@@ -79,7 +79,7 @@ Scientific narrative: [LIFECYCLE_ARGUMENT.md](../../source-store/50367da2d04f4e8
 
 Original scoped review: [CORE_V1_REVIEW.md](../../source-store/a27cb1d8dd4ca6e8f2f5da7e93ba88ef7a5f62c0f1b9ef84a9758262dbfdae15/CORE_V1_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `J1`, `J2`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -116,7 +116,7 @@ Scientific narrative: [LIFECYCLE_ARGUMENT.md](../../source-store/50367da2d04f4e8
 
 Original scoped review: [TYPED_V2_REVIEW.md](../../source-store/e799f81c3d3a8f2adf7bb89d1390f67c9ad127ddc1bea53e2663af3a03fa4469/TYPED_V2_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `J2`, `J3`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -154,7 +154,7 @@ Scientific narrative: [LIFECYCLE_ARGUMENT.md](../../source-store/50367da2d04f4e8
 
 Original scoped review: [RUNTIME_V4_REVIEW_CORRECTED_V1.md](../../source-store/6de1ccd720711735bb998dbd26262d2a13533a65696295ea2ac2b08799939052/RUNTIME_V4_REVIEW_CORRECTED_V1.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `J4`, `J5`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -190,7 +190,7 @@ Scientific narrative: [CANCELLATION_ARGUMENT.md](../../source-store/485083cfa8c0
 
 Original scoped review: [CANCELLATION_V5_REVIEW.md](../../source-store/724ecc632703905871bfd0810d45897ee08b6e4ecda9fac59a9814f5ae1bd720/CANCELLATION_V5_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `J6`, `J7`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -228,7 +228,7 @@ Scientific narrative: [REFERENCE_CLOCK_ARGUMENT.md](../../source-store/26ec16efd
 
 Original scoped review: [REFERENCE_CLOCK_V6_REVIEW.md](../../source-store/17187ce22497bf218d70e47f8d98a156a45746b72eeb2635155cce38ca370151/REFERENCE_CLOCK_V6_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `J8`, `J9`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -265,7 +265,7 @@ Scientific narrative: [BATCH_ARGUMENT.md](../../source-store/18c76e8f23d2e55bf1a
 
 Original scoped review: [ACTUAL_BATCH_V4_REVIEW.md](../../source-store/75545ad5a0a409bf607ef418138dc8355c3a9ea53f186feff80e823ceb704bd4/ACTUAL_BATCH_V4_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `J12`, `J13`, `J16`, `J17`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -302,7 +302,7 @@ Scientific narrative: [BATCH_SUCCESSOR_ARGUMENT.md](../../source-store/94cee25cf
 
 Original scoped review: [ACTUAL_BATCH_V3_REVIEW.md](../../source-store/3671d870e7ee39d73563891c584d5bb3346edb32329b7f1647629c98405aa234/ACTUAL_BATCH_V3_REVIEW.md), [ACTUAL_BATCH_V4_REVIEW.md](../../source-store/75545ad5a0a409bf607ef418138dc8355c3a9ea53f186feff80e823ceb704bd4/ACTUAL_BATCH_V4_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `J14`, `J15`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -339,7 +339,7 @@ Scientific narrative: [RESULTS.md](../../source-store/0ca71bec66a49f143354ad9107
 
 Original scoped review: [MODEL_V1_REVIEW.md](../../source-store/b80ee984272f34b9956797f5418242f434aa0d286d13ba075a9924400c97e5a5/MODEL_V1_REVIEW.md), [SIMULATION_V1_REVIEW.md](../../source-store/4d05b715f32722fe75cf0479ff8b77dab048fe2d3818291e706e0c6e5e29bb4a/SIMULATION_V1_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `A1`, `A2`, `A3`, `A4`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -376,7 +376,7 @@ Scientific narrative: [RESULTS.md](../../source-store/0ca71bec66a49f143354ad9107
 
 Original scoped review: [TYPED_V1_REVIEW.md](../../source-store/a59f02cfc93afbf8655b4345a72d0d2102f3be6f013b8ffbe9a44421ad68f1c4/TYPED_V1_REVIEW.md), [PUBLIC_ACCEPTANCE.md](../../source-store/8d0d5c3934128136fbd69b70b8a0669fe055e5eb005797e25269a69157361657/PUBLIC_ACCEPTANCE.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `A5`, `A6`, `A7`, `A8`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -413,7 +413,7 @@ Scientific narrative: [ARGUMENT.md](../../source-store/b10874ca3f4e19c151944b91e
 
 Original scoped review: [CORE_V1_REVIEW.md](../../source-store/38372d1f743fe0c4fa3ef4d214ee776e828b62aeea9b13d6d6769fe0b9f9a1bf/CORE_V1_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `A9`, `A10`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -448,7 +448,7 @@ Scientific narrative: [ARGUMENT.md](../../source-store/b10874ca3f4e19c151944b91e
 
 Original scoped review: [SHARPNESS_V1_REVIEW.md](../../source-store/35c2fd015a6b1bd5dd4e886f628be990b934151683074f2c19c66077d7072d1d/SHARPNESS_V1_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `A11`, `A12`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
@@ -485,7 +485,7 @@ Scientific narrative: [ARGUMENT.md](../../source-store/b10874ca3f4e19c151944b91e
 
 Original scoped review: [CORRUPTION_V1_REVIEW.md](../../source-store/dc86cb946b650981969da124d5b7b5e902da39c924b174cb4da843d309922e7e/CORRUPTION_V1_REVIEW.md). These links identify the original review objects; this guide performs no new independent correctness review.
 
-Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **NOT_RUN**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
+Recorded evidence: inherited **KERNEL_DECLARED_SUITE**; fresh **QUALIFIED_DECLARED_SUITE**; claim scope **DECLARED_SUITE**; research disposition **CANDIDATE**. The external actual-world, normative, replication, specialist, novelty and terminology-adoption warrants are not established.
 
 Original report evidence keys: `A13`, `A14`. Authored avenue crosswalk: 4, 5, 8. Authored crosswalk to the original twelve-avenue definitions:4 unknown-structure restoration,5 provenance-resilient restoration,8 specification/semantic fidelity. Seventh and Eighth evidence keys are not avenue numbers; the reports do not literally assign these numbers.
 
