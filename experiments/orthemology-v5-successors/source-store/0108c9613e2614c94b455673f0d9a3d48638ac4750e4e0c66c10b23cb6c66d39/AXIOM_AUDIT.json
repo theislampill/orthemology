@@ -1,0 +1,83 @@
+[
+  {
+    "name": "IndependentAnchoredReview.qualification_is_not_dispensed_with",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "IndependentAnchoredReview.valid_graph_does_not_certify_real_occurrences",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "IndependentAnchoredReview.coverage_and_visibility_do_not_fill_an_omitted_requisite",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "IndependentAnchoredReview.participation_variant_needs_a_visible_anchor",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "IndependentAnchoredReview.extending_scope_requires_new_certificates",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "IndependentAnchoredReview.qualification_does_not_connect_two_components",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "IndependentAnchoredReview.alternative_witnesses_really_are_exclusive",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "IndependentAnchoredReview.infinite_field_principal_application",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "IndependentAnchoredReview.labels_unique_with_positive_anchor",
+    "axioms": []
+  },
+  {
+    "name": "IndependentAnchoredReview.common_source_actually_participates_everywhere",
+    "axioms": []
+  },
+  {
+    "name": "IndependentAnchoredReview.empty_field_neither_anchors_nor_uniquely_identifies",
+    "axioms": []
+  },
+  {
+    "name": "IndependentAnchoredReview.no_source_witness_no_existence",
+    "axioms": []
+  },
+  {
+    "name": "IndependentAnchoredReview.path_append",
+    "axioms": []
+  },
+  {
+    "name": "IndependentAnchoredReview.infinite_chain_connected",
+    "axioms": []
+  }
+]

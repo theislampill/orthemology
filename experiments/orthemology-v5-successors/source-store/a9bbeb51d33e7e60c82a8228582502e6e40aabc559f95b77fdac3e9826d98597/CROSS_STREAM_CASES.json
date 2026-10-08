@@ -1,0 +1,952 @@
+{
+  "schema_version": "1.0",
+  "title": "Arabic and formal research feedback cases",
+  "as_of_utc": "2026-10-07T16:05:32.050763+00:00",
+  "reading_index": {
+    "original": {
+      "kind": "original_reading_index_custody_identity",
+      "record_id": "ARABIC-READING-INDEX-ORIGINAL",
+      "sha256": "490bdd577b6e3f17e7ee2912da00fe1cfbf71ac296ba5d85f7f08996bf728b18",
+      "bytes": 972895,
+      "body_included_in_this_supplement": false
+    },
+    "owner_projection": {
+      "archive_alias": "t20/reading/READING_INDEX.json",
+      "sha256": "95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998",
+      "bytes": 1029129
+    },
+    "reference_rule": "Work IDs, return-point IDs and evidence IDs are stable references to these exact indexes. JSON pointers refer to the original bound index. The owner projection retains the scientific content while redacting private custody locators.",
+    "availability": "The separately hashed reading-index projection belongs to the existing reading archive. An original identity does not select its body."
+  },
+  "cases": [
+    {
+      "id": "AR-X01",
+      "title": "Keep the same original bearer through A B and C",
+      "topic_ids": [
+        "AR-T01",
+        "AR-T02",
+        "AR-T12"
+      ],
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-04",
+              "index_pointer": "/works/0/major_argument_return_points/3"
+            }
+          ]
+        },
+        {
+          "work_id": "AKMALIYYA",
+          "index_pointer": "/works/1",
+          "return_points": []
+        },
+        {
+          "work_id": "SAFADIYYA",
+          "index_pointer": "/works/12",
+          "return_points": [
+            {
+              "id": "SF03",
+              "index_pointer": "/works/12/major_argument_return_points/2"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "INTRINSIC-READ",
+        "SF-ADDITIONAL"
+      ],
+      "relationship_class": "DOCUMENTED_PREMISE_FORMALISATION_WITH_RETROSPECTIVE_ARABIC_ALIGNMENT",
+      "source_basis": "Concrete self and intrinsic qualification are distinguished from external assembly and an abstract common description.",
+      "premise_formulation": "Completion → actual original resource → bearer; whole-bearer receipt transports to that resource; nonnecessity implies need; constitution supplies the modal step.",
+      "formalisation_or_model": "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion, essential_nonreceipt_of_actual_original and abc_same_witness; the inherited B/C endpoints remain Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root, uniform_of_necessary_actual_root and local_transfer_iff_uniform. JointFinite.J01_canonical_identity and canonical_abc_same_g retain the same designated bearer.",
+      "result": "The modern interfaces make same-witness transport explicit; neither A–C nor a common name alone proves complete common coverage or uniqueness.",
+      "source_return": "The intrinsic-necessity inquiry and later Safadiyya return check the distinction between a necessary bearer and identified Maker. These are contextual checks, not a newly proved A–C theorem.",
+      "chronology_control": "The formal source map explicitly reconstructs inherited T17 paragraphs. Do not claim that the later Safadiyya reading caused the earlier bridge.",
+      "interpretative_effect": "Discovered dependency: resource/bearer identity and representation adapters cannot silently change across steps.",
+      "residual": "Completion, contingency-as-need, constitution and actual interpretation remain substantive premises.",
+      "binding_ids": [
+        "F-ORIGINAL-MAP",
+        "F-JOINT-MAP",
+        "F-FINAL-MAP",
+        "R-INTRINSIC-ASSESSMENT",
+        "F-ORIGINAL-SOURCE",
+        "F-INHERITED-SOURCE"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "DOCUMENTED_INHERITED_REPORT_RECONSTRUCTION; ARABIC_ALIGNMENT_RETROSPECTIVE"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "DOCUMENTED_FORMALISATION"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "POST_RESULT_CONTEXTUAL_CHECK"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "INTERPRETATIVE_REFINEMENT_NO_THEOREM_CHANGE"
+        }
+      ],
+      "formal_endpoints": [
+        {
+          "declaration": "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion",
+          "binding_id": "F-ORIGINAL-SOURCE",
+          "ownership": "T20 typed bridge or conditional re-expression of inherited reasoning"
+        },
+        {
+          "declaration": "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original",
+          "binding_id": "F-ORIGINAL-SOURCE",
+          "ownership": "T20 typed bridge or conditional re-expression of inherited reasoning"
+        },
+        {
+          "declaration": "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness",
+          "binding_id": "F-ORIGINAL-SOURCE",
+          "ownership": "T20 typed bridge or conditional re-expression of inherited reasoning"
+        },
+        {
+          "declaration": "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+          "binding_id": "F-INHERITED-SOURCE",
+          "ownership": "Inherited B/C; no new inference ownership"
+        },
+        {
+          "declaration": "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+          "binding_id": "F-INHERITED-SOURCE",
+          "ownership": "Inherited B/C; no new inference ownership"
+        },
+        {
+          "declaration": "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform",
+          "binding_id": "F-INHERITED-SOURCE",
+          "ownership": "Inherited B/C; no new inference ownership"
+        }
+      ]
+    },
+    {
+      "id": "AR-X02",
+      "title": "Test a productive CND route to essential independence",
+      "topic_ids": [
+        "AR-T01",
+        "AR-T02",
+        "AR-T03"
+      ],
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-04",
+              "index_pointer": "/works/0/major_argument_return_points/3"
+            }
+          ]
+        },
+        {
+          "work_id": "AKMALIYYA",
+          "index_pointer": "/works/1",
+          "return_points": []
+        }
+      ],
+      "evidence_ids": [
+        "INTRINSIC-READ"
+      ],
+      "relationship_class": "DOCUMENTED_QUESTION_SOURCE_FORMAL_FEEDBACK",
+      "source_basis": "The continuous main 47–107 Asbahani images and full Akmaliyya answer separate concomitance, intrinsic qualification and production.",
+      "premise_formulation": "CND plus original-role retention in each relevant alternative plus complete matching attribution from any whole supplier.",
+      "formalisation_or_model": "CNDModalScope.original_role_excludes_reception and receipt_excludes_original_role; a two-alternative finite assignment with standing power but changed original provenance.",
+      "result": "The conditional is valid without self-production. CND and necessary existence with standing power do not supply role retention. The strong role premise already carries the modal burden under accepted support transport.",
+      "source_return": "The assessment returns to Akmaliyya and Asbahani to reject self-production and weak participation substitutions. It records an interpretative return; no extra post-proof primary receipt is invented.",
+      "chronology_control": "The research specification says the question was selected during the inquiry, not before every reading. Source-to-candidate analysis and the model test are documented; an exact full chronological loop is not reconstructed from file dates.",
+      "interpretative_effect": "Premise refinement and adversarial test; the proposed extra route adds no presently independent warrant over the accepted constitutive route.",
+      "residual": "The assignment omits that accepted constitutive premise and is not a possible rival universe or a refutation of the full T17 profile.",
+      "binding_ids": [
+        "R-INTRINSIC-SPEC",
+        "R-INTRINSIC-ASSESSMENT",
+        "F-CND"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "DOCUMENTED_SOURCE_GUIDED_CANDIDATE"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "DOCUMENTED_FORMALISATION"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "DOCUMENTED_ASSESSMENT_RETURN; NO_NEW_POST_PROOF_PRIMARY_RECEIPT"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "NO_ADDITIONAL_INDEPENDENT_WARRANT"
+        }
+      ]
+    },
+    {
+      "id": "AR-X03",
+      "title": "Separate source mode coverage and uniqueness",
+      "topic_ids": [
+        "AR-T02",
+        "AR-T03",
+        "AR-T04"
+      ],
+      "index_refs": [
+        {
+          "work_id": "DAR",
+          "index_pointer": "/works/5",
+          "return_points": [
+            {
+              "id": "D03",
+              "index_pointer": "/works/5/major_argument_return_points/2"
+            },
+            {
+              "id": "D04",
+              "index_pointer": "/works/5/major_argument_return_points/3"
+            }
+          ]
+        },
+        {
+          "work_id": "MINHAJ",
+          "index_pointer": "/works/6",
+          "return_points": [
+            {
+              "id": "M02",
+              "index_pointer": "/works/6/major_argument_return_points/1"
+            },
+            {
+              "id": "M03",
+              "index_pointer": "/works/6/major_argument_return_points/2"
+            }
+          ]
+        },
+        {
+          "work_id": "SAWAIQ",
+          "index_pointer": "/works/7",
+          "return_points": [
+            {
+              "id": "S01",
+              "index_pointer": "/works/7/major_argument_return_points/0"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "DAR-REFLECT",
+        "INDEPENDENT-TEXT",
+        "INDEPENDENT-IMAGES",
+        "ACTUAL-ORDER-TEXT",
+        "THRESHOLD-AUDIT",
+        "COMPARATIVE-READ"
+      ],
+      "relationship_class": "DOCUMENTED_FORMAL_DEPENDENCY_AUDIT_AND_POST_RESULT_CONTEXTUAL_CHECK",
+      "source_basis": "The source argues positively from effective capacity, maker/preserver superiority and ordered products; harmony is addressed rather than ignored.",
+      "premise_formulation": "F: qualification/classification/conformance. G: actual original use and applicable role. H: actual anchor, genuine shared-requisite connectedness, admissibility and complete operative inventory.",
+      "formalisation_or_model": "AnchoredSourceBridge coverage before FieldCND; missing_source_mode, missing_classification, missing_conformance, missing_visibility and outside_duplication_preserves_field_uniqueness controls.",
+      "result": "Coverage and uniqueness have distinct hypotheses. Field uniqueness does not imply global CND or exclude an outside original. A graph cannot certify that its vertices are real and its inventory exhaustive.",
+      "source_return": "The completed contextual reassessments test the product-to-producer move and the strongest actual-order alternative. The final 14:34 assessment accepts actual common provision provisionally while withholding universal SourceMode.",
+      "chronology_control": "The bridge’s source map documents inherited source/report→premise design. Later direct returns reassess warrant without changing the theorem. The actual-order shift is a separately dated assessment, not an automatic theorem output.",
+      "interpretative_effect": "Narrowed scope and stronger positive source fidelity; rejects both dismissing the source as mere conflict rhetoric and treating formal sufficiency as independent warrant.",
+      "residual": "Principled intrinsic harmony remains the strongest rival considered; no independent probability measure or complete actual-world source census is delivered.",
+      "binding_ids": [
+        "F-ANCHORED-MAP",
+        "F-ANCHORED-REVIEW",
+        "F-FINAL-MAP",
+        "R-SOURCEMODE",
+        "R-CURRENT"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "DOCUMENTED_INHERITED_REPORT_RECONSTRUCTION"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "DOCUMENTED_FORMALISATION"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "DOCUMENTED_POST_RESULT_PRIMARY_CHECK"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "DATED_WARRANT_REASSESSMENT_NO_THEOREM_CHANGE"
+        }
+      ]
+    },
+    {
+      "id": "AR-X04",
+      "title": "Preserve genuine created action and fitting conditions",
+      "topic_ids": [
+        "AR-T04",
+        "AR-T05",
+        "AR-T06"
+      ],
+      "index_refs": [
+        {
+          "work_id": "JAMI6",
+          "index_pointer": "/works/9",
+          "return_points": [
+            {
+              "id": "J01",
+              "index_pointer": "/works/9/major_argument_return_points/0"
+            },
+            {
+              "id": "J02",
+              "index_pointer": "/works/9/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "SHIFA",
+          "index_pointer": "/works/8",
+          "return_points": [
+            {
+              "id": "H01",
+              "index_pointer": "/works/8/major_argument_return_points/0"
+            },
+            {
+              "id": "H03",
+              "index_pointer": "/works/8/major_argument_return_points/2"
+            }
+          ]
+        },
+        {
+          "work_id": "MIFTAH",
+          "index_pointer": "/works/10",
+          "return_points": [
+            {
+              "id": "MF03",
+              "index_pointer": "/works/10/major_argument_return_points/2"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "JAMI-MIDDLE-TEXT",
+        "JAMI-ADDITIONAL-87",
+        "JAMI-ADDITIONAL-93",
+        "SHIFA-ANALYTICAL",
+        "MIFTAH-ADDITIONAL"
+      ],
+      "relationship_class": "POST_RESULT_CONTEXTUAL_CHECK_WITH_RETROSPECTIVE_MODEL_ALIGNMENT",
+      "source_basis": "Jamiʿ distinguishes productive circularity from reciprocal concomitant conditions, and intrinsic powers from jointly attained ends. Shifaʾ and Miftah preserve real created means and wisely timed acts.",
+      "premise_formulation": "Dependence of an attained composite end must not be silently transferred to receipt of the agent’s existence or intrinsic power. A required source-created condition is not an external donor.",
+      "formalisation_or_model": "JointFinite.mixed_occurrence_real, reception_and_direct_support_distinct, J12_support_not_ownership and field_coverage_without_cnd.",
+      "result": "A single finite interpretation combines an original bearer, received acting agent, differentiated contributions and a supported false assertion without shifting its ownership.",
+      "source_return": "Later readings improve interpretation of the already built typed models and test the stronger premise. They do not create a new joint-model theorem or prove actual source-mode fittingness.",
+      "chronology_control": "The whole Jamiʿ collection was not yet complete during every local return; those windows cannot be relabelled as post-whole-work reflection. Relation to the earlier model is retrospective/contextual.",
+      "interpretative_effect": "Correction of an equivocation; preserved agency and recovery of the legal causal-classification setting.",
+      "residual": "Compatibility is not actual-world identification, and wise conditions do not by themselves establish unrestricted source coverage.",
+      "binding_ids": [
+        "F-JOINT-MAP",
+        "F-JOINT-REVIEW",
+        "F-FINAL-MAP"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "RETROSPECTIVE_ALIGNMENT"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "EXISTING_MODEL_NOT_CAUSED_BY_LATER_READ"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "DOCUMENTED_POST_RESULT_CONTEXTUAL_CHECK"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "INTERPRETATIVE_REFINEMENT_NO_THEOREM_CHANGE"
+        }
+      ]
+    },
+    {
+      "id": "AR-X05",
+      "title": "Use signs and delegated acts at their actual scope",
+      "topic_ids": [
+        "AR-T08",
+        "AR-T09"
+      ],
+      "index_refs": [
+        {
+          "work_id": "MIFTAH",
+          "index_pointer": "/works/10",
+          "return_points": [
+            {
+              "id": "MF01",
+              "index_pointer": "/works/10/major_argument_return_points/0"
+            },
+            {
+              "id": "MF02",
+              "index_pointer": "/works/10/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "NUBUWWAT",
+          "index_pointer": "/works/11",
+          "return_points": [
+            {
+              "id": "NB02",
+              "index_pointer": "/works/11/major_argument_return_points/1"
+            },
+            {
+              "id": "NB03",
+              "index_pointer": "/works/11/major_argument_return_points/2"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "MIFTAH-ADDITIONAL",
+        "NB-ADDITIONAL",
+        "THRESHOLD-AUDIT"
+      ],
+      "relationship_class": "POST_RESULT_CONTEXTUAL_CHECK_AND_UNIMPLEMENTED_SPECIAL_TRANSFER",
+      "source_basis": "Miftah 246–247 uses a pragmatic sign premise beyond converse implication; 460–462 limits a delegated act’s title. Nubuwwat’s private-token example includes custody, purpose and strong alternatives.",
+      "premise_formulation": "A token’s origin, intentional adoption, certified mission, proposition content and continuing scope require distinct bridges.",
+      "formalisation_or_model": "The existing grounded-attestation system can represent guarded applications. No new special Miftah/Nubuwwat token theorem was implemented or replayed in this audit.",
+      "result": "The contextual check supports narrower premise formulation. It neither authenticates an episode nor supplies a general converse from outcome to intention.",
+      "source_return": "The additional Miftah and Nubuwwat receipts and later threshold return are actual primary checks. Their interpretation is brought back to the authority and ownership interfaces.",
+      "chronology_control": "This is a genuine source-return check after earlier formal work; the proposed specialised formal transfer remains unimplemented. A complete source→new theorem→source cycle is not claimed.",
+      "interpretative_effect": "Discovered pragmatic dependency and mission/content distinction; possible future formal target retained without inflating completed results.",
+      "residual": "A strong custody or purpose alternative can remain undefeated. Real attribution and all purported message content require independent evidence.",
+      "binding_ids": [
+        "F-GROUNDED-MAP",
+        "R-THRESHOLD",
+        "R-COMPARATIVE"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "DOCUMENTED_SOURCE_INTERPRETATION"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "SPECIALISED_TRANSFER_NOT_IMPLEMENTED"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "NO_NEW_SPECIAL_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "DOCUMENTED_PRIMARY_CHECK_OF_EXISTING_INTERFACES"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "NARROWER_APPLICATION_PREMISES"
+        }
+      ]
+    },
+    {
+      "id": "AR-X06",
+      "title": "Repeated traces do not identify their source or occurrence",
+      "topic_ids": [
+        "AR-T11",
+        "AR-T12"
+      ],
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-05",
+              "index_pointer": "/works/0/major_argument_return_points/4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "TESTIMONY-READ"
+      ],
+      "relationship_class": "RETROSPECTIVE_ALIGNMENT_WITH_INDEPENDENT_LOCAL_MATHEMATICS",
+      "source_basis": "The speech/carrier distinction is an interpretative counterpart, not an Arabic derivation of a statistical theorem.",
+      "premise_formulation": "Copying one realised noisy observation is different from taking fresh independent samples; content, source label and mask history are different targets.",
+      "formalisation_or_model": "TraceControls.duplicate_tv, duplicate_randomized_success_bound, same_content_source_law, distinct_sources_same_law and known_word_mask_ambiguity.",
+      "result": "In the exact two-word retention model, copied-trace total variation is 1/4 for positive copy counts and equal-prior success for an arbitrary randomised decision is at most 5/8. The law omits the source label by definition; even known content need not reveal its retention mask.",
+      "source_return": "The result returns to the interpretation of transmission: recovered content cannot alone certify source attribution or occurrence history. No new Arabic reread is assigned to this return.",
+      "chronology_control": "The mathematical corpus supplied a research lead aligned with inherited H-ICS/T9 principles. This is a separately developed local finite model, not a transfer or replay of the upstream decoder or lower-bound theorem.",
+      "interpretative_effect": "Adversarial check against counting duplicates as independent evidence; target-specific recovery sharpened.",
+      "residual": "Fresh-sampling calculations have their own written scope. The finite observation channel does not prove that authorship is impossible to establish from richer evidence.",
+      "binding_ids": [
+        "F-TRACE",
+        "F-TRACE-REVIEW",
+        "M-LEDGER"
+      ],
+      "math_ledger_ids": [
+        "MATH-122-APPLICATION"
+      ],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "RETROSPECTIVE_ARABIC_ALIGNMENT; MATHEMATICAL_LEAD_SEPARATE"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "INDEPENDENT_LOCAL_MODEL"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "INTERPRETATIVE_RETURN_ONLY_NO_NEW_ARABIC_READ"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "TARGET_SPECIFIC_INFORMATION_LIMIT"
+        }
+      ]
+    },
+    {
+      "id": "AR-X07",
+      "title": "Locate the veracity objection in the fittingness premise",
+      "topic_ids": [
+        "AR-T06",
+        "AR-T07"
+      ],
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-02",
+              "index_pointer": "/works/0/major_argument_return_points/1"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "ASBAHANI-ACTS"
+      ],
+      "relationship_class": "RETROSPECTIVE_ARABIC_ALIGNMENT_WITH_DOCUMENTED_FORMAL_PREMISE_AUDIT",
+      "source_basis": "Asbahani 411–419, 422–423, 430–431 and 444–450 distinguishes reported Muʿtazilite reasoning, al-Razi’s criticism and Ibn Taymiyya’s reply.",
+      "premise_formulation": "D marks declarative shortcoming; N excludes a fitting exercise containing it; P says actual practical exercises conform. K, ownership and awareness cannot be silently erased.",
+      "formalisation_or_model": "VeracityBoundary.controlled_token_true and veracity_of_coverage; Controls.deletion_N and truthful_not_conforming.",
+      "result": "Deleting N while retaining D and P admits a known controlled false assertion whose exercise is both deficient and fitting. Truthful speech alone does not imply practical perfection in all acts.",
+      "source_return": "The source context locates a rescue or overriding-good objection at N, rather than ignorance, inability or an assumed truthful substitute for every good end. The modern signature is not put into the author’s mouth.",
+      "chronology_control": "The formal audit primarily reconstructs sealed T17/T19 premises. The available record does not establish that the Asbahani return caused this exact decomposition; this edge is explicitly retrospective.",
+      "interpretative_effect": "Better premise formulation and source-voice correction, with the strongest package preserved where required.",
+      "residual": "N remains a substantive normative premise. A control lacking A/C does not refute the strong all-owned-token coverage theorem.",
+      "binding_ids": [
+        "F-VERACITY-MAP",
+        "F-VERACITY-THEOREMS",
+        "F-VERACITY-REVIEW",
+        "F-VERACITY-ERRATUM"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "RETROSPECTIVE_ARABIC_ALIGNMENT; INHERITED_REPORT_PREMISES_DOCUMENTED"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "DOCUMENTED_FORMAL_AUDIT"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "INTERPRETATIVE_RETURN_ONLY_NO_NEW_ARABIC_READ"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "NORMATIVE_DEPENDENCY_EXPOSED"
+        }
+      ]
+    },
+    {
+      "id": "AR-X08",
+      "title": "Separate a truthful duty report from current jurisdiction",
+      "topic_ids": [
+        "AR-T08",
+        "AR-T09",
+        "AR-T10"
+      ],
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-05",
+              "index_pointer": "/works/0/major_argument_return_points/4"
+            }
+          ]
+        },
+        {
+          "work_id": "MIFTAH",
+          "index_pointer": "/works/10",
+          "return_points": [
+            {
+              "id": "MF02",
+              "index_pointer": "/works/10/major_argument_return_points/1"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "TESTIMONY-READ",
+        "MIFTAH-ADDITIONAL"
+      ],
+      "relationship_class": "DOCUMENTED_SOURCE_GUIDED_FORMALISATION_WITH_LATER_CONTEXTUAL_ALIGNMENT",
+      "source_basis": "Asbahani 608–615 and 725–728 distinguish learning a truth through testimony; the al-Ghazali quotation ends inside the earlier context. Miftah later supplies a scoped delegation comparison.",
+      "premise_formulation": "An owned truthful proposition about an actual duty differs from a constitutive command. Past duty, prospective power, present applicability and practical readiness are separate facts.",
+      "formalisation_or_model": "T20Grounded.Controls.testimony_needs_no_second_jurisdiction, old_duty_survives_prospective_revocation, prospective_power_is_lost, past_duty_does_not_supply_current_applicability and duty_still_derives_when_current_applicability_is_absent.",
+      "result": "The truthful duty can remain derivable after prospective authority is revoked; action may still fail its present-applicability guard. Removing that guard produces an unsupported extension.",
+      "source_return": "The explanatory return preserves the source/report distinction. The later Miftah context constrains interpretation but is not the historical origin of the earlier theorem.",
+      "chronology_control": "Targeted Arabic inspection precedes the documented grounded-attestation design. The normative insight was already owned by T19; its present encoding is not a new philosophical discovery.",
+      "interpretative_effect": "Narrowed authority scope while preserving legitimate testimonial learning.",
+      "residual": "Actual source attribution, commission content and applicable circumstances are not certified by the model.",
+      "binding_ids": [
+        "F-GROUNDED-MAP",
+        "F-GROUNDED-REVIEW",
+        "R-TESTIMONY-RETURN",
+        "F-GROUNDED-DESIGN"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "DOCUMENTED_SOURCE_GUIDED_DESIGN; NORMATIVE_INSIGHT_INHERITED"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "DOCUMENTED_FORMALISATION"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "LATER_MIFTAH_CONTEXTUAL_ALIGNMENT"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "AUTHORITY_SCOPE_REFINED"
+        }
+      ]
+    },
+    {
+      "id": "AR-X09",
+      "title": "Archive all minimal cuts before collapsing carrier aliases",
+      "topic_ids": [
+        "AR-T10",
+        "AR-T11"
+      ],
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-05",
+              "index_pointer": "/works/0/major_argument_return_points/4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "TESTIMONY-READ"
+      ],
+      "relationship_class": "DOCUMENTED_SOURCE_GUIDED_FORMALISATION_AND_MATHEMATICAL_REFINEMENT",
+      "source_basis": "Asbahani 389–391 distinguishes original speech attribution from carrier voice and movement.",
+      "premise_formulation": "An origin equivalence map must preserve real independent channels; then support and withdrawal costs can be calculated at the correct root level.",
+      "formalisation_or_model": "T20Grounded.quotient_derivable_iff and minimal_root_support_lifts; T20Grounded.minimal_root_iff_minimal_archived_image; four_unique_cheapest_label_cut and four_discarded_cut_recovers_root_optimum.",
+      "result": "For supports {a1}, {a2,b}, {a3,b}, with all ai aliases of a, a cheapest two-label cut maps to two roots, while another inclusion-minimal three-label cut maps to the single optimal root. Archive every inclusion-minimal cut before quotient optimisation.",
+      "source_return": "The source interpretation is checked against the distinction between content source and carrier evidence. There is no separate post-proof primary rereading receipt.",
+      "chronology_control": "The source-guided design and new finite refinement are documented. Existing review checked 2,589 antichain/partition cases; no enumeration or proof replay is newly claimed here.",
+      "interpretative_effect": "An operational correction: cheapest-before-quotient can lose the true optimum. Repeated labels are not independent origins.",
+      "residual": "The actual origin map and shared-failure relations require evidence. Equal content alone must not collapse genuinely independent channels.",
+      "binding_ids": [
+        "F-GROUNDED-MAP",
+        "F-GROUNDED-REVIEW",
+        "F-GROUNDED-DESIGN"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "DOCUMENTED_SOURCE_GUIDED_DESIGN"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "DOCUMENTED_FORMALISATION"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "INTERPRETATIVE_RETURN_ONLY_NO_NEW_ARABIC_READ"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "ALGORITHM_ORDER_CORRECTED"
+        }
+      ]
+    },
+    {
+      "id": "AR-X10",
+      "title": "Carry the claim and its operative conditions forward",
+      "topic_ids": [
+        "AR-T10",
+        "AR-T12"
+      ],
+      "index_refs": [
+        {
+          "work_id": "ALDA",
+          "index_pointer": "/works/2",
+          "return_points": []
+        },
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-05",
+              "index_pointer": "/works/0/major_argument_return_points/4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "TESTIMONY-READ"
+      ],
+      "relationship_class": "DOCUMENTED_SOURCE_GUIDED_RETRACTION_WITH_RETROSPECTIVE_FORMAL_CONTINUATION_ALIGNMENT",
+      "source_basis": "Al-Daʾ 24–27 includes narrative, the author’s comparison of conditions and a reported decree objection; the objection is not his final rejection of means.",
+      "premise_formulation": "Hold claim meaning and rules fixed when modelling availability retraction. A changed domain or claim is a different transport question.",
+      "formalisation_or_model": "T20Grounded.derivable_after_retraction_iff and survives_disjoint_support; the written continuation memorandum compares inherited Has/HasPlus/HasC scopes.",
+      "result": "A surviving support avoids retracted evidence. Separately, Has/HasPlus noninhabitation for x/x+0 is compatible with a HasC positive certificate; empty-context completeness does not become arbitrary-context completeness.",
+      "source_return": "The source return checks conditions of successful practice and imitation. The inherited T16 assumed-0=1 counterexample remains a guard against extending a theorem’s context.",
+      "chronology_control": "Source-guided retraction is documented; the older formal comparison is retrospective and no fresh replay of those older components occurred in this lane.",
+      "interpretative_effect": "Correction of scope transport and preservation of genuine earlier warrant at its actual domain.",
+      "residual": "Historical bytes alone cannot establish unchanged meaning, environment or applicability. No general identity theorem or empirical reliability rate is supplied.",
+      "binding_ids": [
+        "F-GROUNDED-MAP",
+        "R-TESTIMONY-RETURN",
+        "F-GROUNDED-DESIGN"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "DOCUMENTED_SOURCE_GUIDED_RETRACTION; OLDER_CONTINUATION_ALIGNMENT_RETROSPECTIVE"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "DOCUMENTED_FORMALISATION"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "INTERPRETATIVE_RETURN_ONLY_NO_NEW_ARABIC_READ"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "CONTEXT_SCOPE_PRESERVED"
+        }
+      ]
+    },
+    {
+      "id": "AR-X11",
+      "title": "Original productive support does not own every assertion",
+      "topic_ids": [
+        "AR-T05",
+        "AR-T07",
+        "AR-T08"
+      ],
+      "index_refs": [
+        {
+          "work_id": "ALDA",
+          "index_pointer": "/works/2",
+          "return_points": []
+        },
+        {
+          "work_id": "MIFTAH",
+          "index_pointer": "/works/10",
+          "return_points": [
+            {
+              "id": "MF02",
+              "index_pointer": "/works/10/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "NUBUWWAT",
+          "index_pointer": "/works/11",
+          "return_points": [
+            {
+              "id": "NB02",
+              "index_pointer": "/works/11/major_argument_return_points/1"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "TESTIMONY-READ",
+        "MIFTAH-ADDITIONAL",
+        "NB-ADDITIONAL"
+      ],
+      "relationship_class": "DOCUMENTED_DESIGN_AND_RETROSPECTIVE_CROSS_COMPONENT_ALIGNMENT",
+      "source_basis": "Al-Daʾ 474–476, especially 475, separates direct act, generated effect and credit. Later Miftah and Nubuwwat contexts preserve consequence and intentional-sign distinctions.",
+      "premise_formulation": "Productive support and assertion ownership are different relations. ExerciseBridge connects an already owned assertion with exercise; it does not create ownership.",
+      "formalisation_or_model": "VeracityBoundary.Controls.created_false_is_not_source_owned; T20Grounded.Controls.no_owned_truth_from_authorship_alone and authorship_only_mutation_creates_unsupported_duty; JointFinite.J12_support_not_ownership.",
+      "result": "A source satisfying the displayed veracity package can support a created false speaker without owning that false assertion or transferring its own veracity package to that speaker.",
+      "source_return": "The later intentional-sign and attribution contexts test the application boundary. Generic common creation cannot substitute for adopted communicative content.",
+      "chronology_control": "Al-Daʾ is explicitly used in the grounded design. The veracity distinction also inherits T19; combining these components now is not a claim of a newly originated philosophical distinction.",
+      "interpretative_effect": "Adversarial ownership test and improved attribution premise.",
+      "residual": "Intentional adoption, source awareness, certification and scope must be evidenced for each actual proposed attestation.",
+      "binding_ids": [
+        "F-VERACITY-THEOREMS",
+        "F-VERACITY-REVIEW",
+        "F-GROUNDED-MAP",
+        "F-JOINT-MAP",
+        "F-GROUNDED-DESIGN"
+      ],
+      "math_ledger_ids": [],
+      "new_primary_reading": false,
+      "new_kernel_replay": false,
+      "feedback_edges": [
+        {
+          "from": "source",
+          "to": "premise",
+          "evidence_status": "DOCUMENTED_GROUNDED_DESIGN; VERACITY_PREMISE_INHERITED"
+        },
+        {
+          "from": "premise",
+          "to": "formalisation",
+          "evidence_status": "DOCUMENTED_COMPONENTS; CROSS_COMPONENT_ALIGNMENT_RETROSPECTIVE"
+        },
+        {
+          "from": "formalisation",
+          "to": "result",
+          "evidence_status": "RECORDED_RESULT"
+        },
+        {
+          "from": "result_or_question",
+          "to": "source_return",
+          "evidence_status": "LATER_MIFTAH_NUBUWWAT_CONTEXTUAL_CHECK"
+        },
+        {
+          "from": "source_return",
+          "to": "assessment",
+          "evidence_status": "OWNERSHIP_APPLICATION_RESTRICTED"
+        }
+      ]
+    }
+  ],
+  "chronology_rule": "Each edge must be explicitly documented or labelled contextual/retrospective. A source passage relevant to a theorem does not establish that it caused its discovery. No missing source return is invented.",
+  "source_binding_file": "SOURCE_BINDINGS.json",
+  "proof_credit": "Existing result and review receipts retain all proof credit. Declaration names are navigational endpoints; this audit does not rerun or independently certify their kernel checks.",
+  "result_ledger_join": "Use case IDs AR-X01 through AR-X11 and topic IDs AR-T01 through AR-T12. A pure mathematical result may have Arabic NOT_APPLICABLE. AR-X06 is an interpretative cross-link to MATH-122-APPLICATION, not an Arabic premise of its theorem."
+}

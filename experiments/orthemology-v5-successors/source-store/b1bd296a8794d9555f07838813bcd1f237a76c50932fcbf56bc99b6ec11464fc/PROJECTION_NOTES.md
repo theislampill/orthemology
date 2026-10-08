@@ -1,0 +1,3 @@
+# Selection boundary
+
+Only the finite SOURCE_PACKAGE.json members are selected. The whole corpus/inventory, upstream source tree, manuscript bodies and complete abstract corpus are excluded. CORPUS_AND_TRANSFER_SCOPE.md is a new concise authored synthesis with exact contributing study identities; its original-to-derived diff is private curation evidence. AVENUE_SYNTHESIS.md retains the unadopted catalogue-era status, while the separately reviewed math122 package records later elementary application evidence. FAMILY245_TRANSFER_DECISION.json remains a written negative applicability result, not a kernel proof, theorem refutation or closure of HasE. No new source reading, proof replay, licensing clearance or philosophical adoption follows from packaging.

@@ -1,0 +1,44 @@
+{
+  "schema": "t20-finite-source-package-v1",
+  "component": "foundational-prior-formal-reuse",
+  "status": "LOCAL_SOURCE_ONLY_CANDIDATE",
+  "historical_seals": {},
+  "scope": "Finite public selection, separate from original sealed evidence. No implicit raw-body/cache/object distribution and no new scientific replay.",
+  "files": [
+    {
+      "path": "PRIOR_FORMAL_REUSE.json",
+      "sha256": "992fe4cd09f8f45f441093ed02ca64d619f94d699044bb699eece622481359d1",
+      "bytes": 180516
+    },
+    {
+      "path": "REUSE_AND_NEW_BRIDGES.json",
+      "sha256": "5294984b11900429f942dba675ac74a68d9b3edc67ae777391284c4ff190f2ae",
+      "bytes": 17165
+    },
+    {
+      "path": "REUSE_MAP.md",
+      "sha256": "a5d770b8880481cdc60205131bc0a5c11ee95ca101628de8e1169acd55c6ce42",
+      "bytes": 20458
+    },
+    {
+      "path": "READ_ONLY_VALIDATION.json",
+      "sha256": "816733ded4434e444cb176d9375d27f2324ee5ca594c47ab6a93acc342ea6f09",
+      "bytes": 596
+    },
+    {
+      "path": "PROJECTION_NOTES.md",
+      "sha256": "b8f9fbef3967b031833f681292e3d60e09b5b12f98372702ef3566820c90ea19",
+      "bytes": 2832
+    },
+    {
+      "path": "README.md",
+      "sha256": "cced042c17127037864e6041eff099f5063ef98a4b2bb4558cced57bd756ddb8",
+      "bytes": 483
+    },
+    {
+      "path": "PROJECTION_MAP.json",
+      "sha256": "bfb15506d146415fc16950303d0095b17cd38f1dabb1958d12bee0aa3fd94311",
+      "bytes": 4142
+    }
+  ]
+}

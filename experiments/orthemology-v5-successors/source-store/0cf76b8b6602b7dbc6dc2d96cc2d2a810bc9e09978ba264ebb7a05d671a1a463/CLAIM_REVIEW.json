@@ -1,0 +1,158 @@
+{
+  "schema": "t20-anchored-source-claim-review-v1",
+  "disposition": "PASS",
+  "scope": "Sealed conditional mathematics and explicit interpreted controls; no metaphysical, release, or lifecycle authority.",
+  "source_manifest_sha256": "305ab6251e9f28b45894c4f5f5270a88de7a10020b87d929b4173577eb9b3de7",
+  "author_receipt_sha256": "9e0d17a182cb66e2c48cd7cafeff07c3d201b0d03bc50355965b298592194c3c",
+  "blocking_defects": [],
+  "claims": [
+    {
+      "id": "ASB-R01",
+      "claim": "Separated typed primitives and nonexclusive pre-CND supply",
+      "disposition": "PASS",
+      "evidence": "src/AnchoredSourceBridge.lean Account; Controls.missing_cnd",
+      "boundary": "Qualified and ModeDefect are independent primitives; separate type parameters are roles, not a requirement that arbitrary instantiations be unequal types."
+    },
+    {
+      "id": "ASB-R02",
+      "claim": "Classification versus actual conformance",
+      "disposition": "PASS",
+      "evidence": "mode_satisfaction_of_classification_conformance; missing_classification; missing_conformance; qualification_is_not_dispensed_with",
+      "boundary": "Classical implication only; no derivation of the governing evaluation or perfect actual exercise from standing capacity."
+    },
+    {
+      "id": "ASB-R03",
+      "claim": "Coverage without CND",
+      "disposition": "PASS",
+      "evidence": "global_coverage_of_anchor; complete_along_path; missing_cnd",
+      "boundary": "Source mode, anchor, use/role links and connected overlap remain substantive assumptions."
+    },
+    {
+      "id": "ASB-R04",
+      "claim": "Field-restricted rival exclusion",
+      "disposition": "PASS",
+      "evidence": "represented_rivals_equal; actual_rivals_equal; principal_application_with_outside_duplication",
+      "boundary": "Actual exclusion additionally needs visibility; rival qualification is unused."
+    },
+    {
+      "id": "ASB-R05",
+      "claim": "Global versus field CND",
+      "disposition": "PASS",
+      "evidence": "outside_duplication_preserves_field_uniqueness; extending_scope_requires_new_certificates",
+      "boundary": "No nonduplication required outside the certified field; field enlargement requires fresh certificates."
+    },
+    {
+      "id": "ASB-R06",
+      "claim": "Empty-inventory and empty-field guards",
+      "disposition": "PASS",
+      "evidence": "empty_inventory_singleton; empty_field_neither_anchors_nor_uniquely_identifies; no_source_witness_no_existence",
+      "boundary": "Coverage is a possibly vacuous universal; existence and uniqueness must retain their separate hypotheses."
+    },
+    {
+      "id": "ASB-R07",
+      "claim": "Positive complete-label uniqueness",
+      "disposition": "PASS",
+      "evidence": "complete_providers_equal_at_positive; labels_unique_with_positive_anchor",
+      "boundary": "Full visibility is one sufficient positivity route, not a minimal requirement for this narrower conclusion."
+    },
+    {
+      "id": "ASB-R08",
+      "claim": "Use, mode applicability and visibility",
+      "disposition": "PASS",
+      "evidence": "missing_original_use; missing_mode_role; missing_visibility; participation_variant_needs_a_visible_anchor",
+      "boundary": "Visibility is an explicit strong contributor-representability assumption."
+    },
+    {
+      "id": "ASB-R09",
+      "claim": "Occurrence and inventory obligations",
+      "disposition": "PASS",
+      "evidence": "arbitrary_bundle_rejected; valid_graph_does_not_certify_real_occurrences; coverage_and_visibility_do_not_fill_an_omitted_requisite",
+      "boundary": "Semantic certificates are assumptions passed through; the index type itself still needs external adequacy."
+    },
+    {
+      "id": "ASB-R10",
+      "claim": "Mixed occurrence and directed mediation",
+      "disposition": "PASS",
+      "evidence": "mixed_occurrence_positive; mixed_occurrence_adverse; faithful_derived_agency_and_mediation",
+      "boundary": "Undirected overlap paths do not reverse MediateUse or identify transformed outputs with original input tokens."
+    },
+    {
+      "id": "ASB-R11",
+      "claim": "Interpreted finite ability",
+      "disposition": "PASS",
+      "evidence": "intact_finite_power_differentiated_actual_production; actual_partial_fixture_mapping; alternative_witnesses_really_are_exclusive",
+      "boundary": "Finite source-neutral targets and supplied histories only; no unrestricted omnipotence, modal possibility, or freedom under fixed complete grounds proved."
+    },
+    {
+      "id": "ASB-R12",
+      "claim": "Unbounded field scope",
+      "disposition": "PASS",
+      "evidence": "universe-polymorphic core; infinite_chain_connected; infinite_field_principal_application",
+      "boundary": "General proof has no finite-field hypothesis; an explicit countably infinite instance is additional nonvacuity evidence."
+    },
+    {
+      "id": "ASB-R13",
+      "claim": "Historical ownership and Sixth boundary",
+      "disposition": "PASS",
+      "evidence": "SOURCE_AND_PREMISE_MAP.md; README Sixth reuse boundary; T19 P94-P97",
+      "boundary": "No independent strict-ancestry/LocalCover refinement is claimed; that work remains OPEN."
+    },
+    {
+      "id": "ASB-R14",
+      "claim": "Outside-field and assertion-ownership scope",
+      "disposition": "PASS",
+      "evidence": "outside_field_necessary_original; assertion_ownership_separate; qualification_does_not_connect_two_components",
+      "boundary": "No all-necessary-reality identity or revelation authentication follows."
+    },
+    {
+      "id": "ASB-R15",
+      "claim": "Exact compiled sources, axioms and false rejections",
+      "disposition": "PASS",
+      "evidence": "trust-zero-build/INDEPENDENT_BUILD_MANIFEST.json; boundary-build-v1/BOUNDARY_BUILD_MANIFEST.json",
+      "boundary": "Pinned official compiler, explicit trust zero, fresh outputs; no author compiled module reused."
+    },
+    {
+      "id": "ASB-R16",
+      "claim": "Report-to-premise faithfulness",
+      "disposition": "PASS",
+      "evidence": "SOURCE_BINDING_RECEIPT.json; approved design and owner spec; T19 P60-P97/P146-P148",
+      "boundary": "Report attestation only; T19 affirmative warrant and current coordinating assessment withholding remain distinct."
+    }
+  ],
+  "nonblocking_observations": [
+    {
+      "id": "ASB-N01",
+      "observation": "Author replay uses default import trust level.",
+      "disposition": "VERIFIED_BY_INDEPENDENT_TRUST_ZERO_REPLAY"
+    },
+    {
+      "id": "ASB-N02",
+      "observation": "API-red artifact is a declaration-absence check rather than a reusable semantic regression.",
+      "disposition": "ACCURATELY_DISCLOSED_NO_REVISION_NEEDED"
+    },
+    {
+      "id": "ASB-N03",
+      "observation": "Complete-label uniqueness can replace full visibility/actual anchoring with independently established positive anchoring.",
+      "disposition": "INDEPENDENT_REFINEMENT_NO_CANDIDATE_DEFECT"
+    }
+  ],
+  "retained_open": [
+    {
+      "claim": "Faithful refinement into independent Sixth strict ancestry/all-ancestor LocalCover",
+      "status": "OPEN"
+    },
+    {
+      "claim": "Real occurrence and inventory/index adequacy, actual use and normative scope",
+      "status": "APPLICATION_WARRANT_REQUIRED"
+    },
+    {
+      "claim": "CND and source-mode truth or philosophical warrant",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "claim": "Unrestricted metaphysical ability, all-necessary-reality uniqueness, authenticated actual revelation",
+      "status": "NOT_ATTEMPTED"
+    }
+  ],
+  "independence": "Separate AI reviewer without authoring context; not external human validation."
+}

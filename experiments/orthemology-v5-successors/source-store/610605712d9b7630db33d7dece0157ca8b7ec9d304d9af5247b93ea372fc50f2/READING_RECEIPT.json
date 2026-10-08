@@ -1,0 +1,128 @@
+{
+  "utc": "2026-10-07T12:36:39.905856+00:00",
+  "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752",
+  "ranges": [
+    {
+      "range": [
+        229,
+        243
+      ],
+      "positions": 15,
+      "words": 3104,
+      "selection_sha256": "76add87ad92e781f20cbed166f4b9a6bfcc557563b43eb6e33a20cdb4d2c61b2",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        244,
+        254
+      ],
+      "positions": 11,
+      "words": 2442,
+      "selection_sha256": "f6ca1241ed691bd2c647d4e6a1fbfbc5107902dbce5ed72291db9d1919be9189",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        255,
+        268
+      ],
+      "positions": 14,
+      "words": 2996,
+      "selection_sha256": "576fc45127f868deb760bb5e0bbe470d62e76ec1ce9ba0568d0092d3f589e2d8",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        269,
+        278
+      ],
+      "positions": 10,
+      "words": 1999,
+      "selection_sha256": "b28b8020264f4a4c9059b551188e48da2aa2de05098cc8f41c0a883d0646e41e",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        455,
+        467
+      ],
+      "positions": 13,
+      "words": 2924,
+      "selection_sha256": "d7d56390a888a49aba5342a89c871084518cb636c2d880a9202f871351f37aa2",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        496,
+        507
+      ],
+      "positions": 12,
+      "words": 2502,
+      "selection_sha256": "e9ce6b300ff8d92c31c8d8fbd93af628f352d94c3cca6b90f5e2e71b097e1f39",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        508,
+        513
+      ],
+      "positions": 6,
+      "words": 1237,
+      "selection_sha256": "2ba8d7aab8b23d09bf2ed9bac53836674f98c84cca5238a3427b9c8ac6112e90",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        892,
+        901
+      ],
+      "positions": 10,
+      "words": 2016,
+      "selection_sha256": "7c463e38737af8f946381bf455c90fff3f2d18b9a1440515e73f16b363071401",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        907,
+        910
+      ],
+      "positions": 4,
+      "words": 777,
+      "selection_sha256": "d3953e47164ded73e5166662699afb6dc759b9fcc99dcdf4caa583ce86c30a43",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    },
+    {
+      "range": [
+        902,
+        906
+      ],
+      "positions": 5,
+      "words": 1054,
+      "selection_sha256": "5f310e60710fc53187c8a33852587d373bb9b56ef21e92a5639df2cb8661cb78",
+      "scope": "Bounded direct reinspection of the electronic text and supplied notes. No scan collation, additional first-pass coverage or full second traversal."
+    }
+  ],
+  "distinct_electronic_positions": 100,
+  "display_order_note": "The final contextual group was displayed as 892–901, 907–910, then 902–906; the union covers 892–910 but this is not a sequential-display claim.",
+  "source_word_url": "https://ibnelqayem.com/ar/media/download/86",
+  "outside_original_study_checksum_seal": true,
+  "consolidated_ranges": [
+    [
+      229,
+      278
+    ],
+    [
+      455,
+      467
+    ],
+    [
+      496,
+      513
+    ],
+    [
+      892,
+      910
+    ]
+  ]
+}

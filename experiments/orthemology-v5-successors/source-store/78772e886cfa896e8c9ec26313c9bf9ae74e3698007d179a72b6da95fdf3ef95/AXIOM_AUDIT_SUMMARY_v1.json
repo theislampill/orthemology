@@ -1,0 +1,16 @@
+{
+  "schema": "t20-existential-ground-axiom-summary-v1",
+  "theorem_count": 77,
+  "axiom_free_count": 73,
+  "axiom_using_count": 4,
+  "transitive_axiom_union": [
+    "Quot.sound",
+    "propext"
+  ],
+  "no_Classical_choice": true,
+  "no_sorryAx": true,
+  "no_custom_axioms": true,
+  "raw_audit_sha256": "8f73879ebcc841741da825dace080cb5ce38e46d6d310117824807eb0b6f0b24",
+  "audit_source_sha256": "783bd18886a8a2d417534931146e788eb4ee7f12eff3c202e377279b865373ad",
+  "inventory_sha256": "9aad536d5bca935d380f207e0f9516029b0c47eae5ab02abb2486937b99575e2"
+}

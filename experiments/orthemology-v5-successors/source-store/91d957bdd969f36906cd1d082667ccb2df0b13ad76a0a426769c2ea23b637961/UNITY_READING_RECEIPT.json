@@ -1,0 +1,104 @@
+{
+  "read_at_utc": "2026-10-07T14:29:18Z",
+  "scope": "Selected complete received electronic paragraphs, directly displayed without truncation; no new scan reading.",
+  "source_sha256": "5505f29f0578540d5fb2f808ccf10fcd0524bd08dfa792f51fd286dd0c3e0390",
+  "paragraphs": [
+    {
+      "id": "SF-S003-L0198",
+      "sha256": "a8bda130667148c06afc4618f0988add8ce2df211574b3007f005e04e56ce18f"
+    },
+    {
+      "id": "SF-S003-L0199",
+      "sha256": "2ec5a7da6fab8b6af80dda36c71b9324676496f326ba9e348fdc472fe33d5df0"
+    },
+    {
+      "id": "SF-S003-L0200",
+      "sha256": "0f0554f51a2de59d552bad5927f1dc5e570ffbdcfedc8238519d6b59639c06ba"
+    },
+    {
+      "id": "SF-S003-L0201",
+      "sha256": "5c114cfa5c9ae4d7da9cc3eb9e57e5ca25ca640250113b02346fca432a35d020"
+    },
+    {
+      "id": "SF-S003-L0202",
+      "sha256": "b4c64d3e9dc8919875921c2d507abe4f5ce5200d7e929fe1d2753072ea79ec63"
+    },
+    {
+      "id": "SF-S003-L0203",
+      "sha256": "4c865c6735d0d9e2b94d564e0901b8b81d3d7d637f20e1b5c5443c1c05818f3c"
+    },
+    {
+      "id": "SF-S003-L0204",
+      "sha256": "92fe2d181f89606dafea5085a48f006760ded26bececc5a9b9cfe4c5132f8c2f"
+    },
+    {
+      "id": "SF-S003-L0205",
+      "sha256": "2dd52f749899e2e47cf056e1c809ce5a7d3e0ff4a3f5bf74182fdf4669b0a85a"
+    },
+    {
+      "id": "SF-S003-L0206",
+      "sha256": "6d4234bf1121ed9af295f68a264b32f57bc4679477428cae5877ed0ad4c4ffdd"
+    },
+    {
+      "id": "SF-S003-L0207",
+      "sha256": "a7006f683acb302fd80cda34792ef3ec7fdedee325fb8453cc7614a0be2e1df0"
+    },
+    {
+      "id": "SF-S003-L0208",
+      "sha256": "949c225dd788802d8660f51c9ee8140b9f39d72774d465d00747714ff27ef286"
+    },
+    {
+      "id": "SF-S003-L0362",
+      "sha256": "514560c40f63040b3e742a7fa8d09c3cb3e639031f0d60cf0ae3e974bc80f577"
+    },
+    {
+      "id": "SF-S003-L0363",
+      "sha256": "78bcacbef6196a1572ebfb975058f6ef62fcbe921e51c7dbde12173f70fe69fc"
+    },
+    {
+      "id": "SF-S003-L0364",
+      "sha256": "76d9ef9f8edb390999a973f1eaf5c97e9ec60fc829f82c458e7ca704a9230aca"
+    },
+    {
+      "id": "SF-S003-L0365",
+      "sha256": "e40a082b03c0ef178031c272760c74399d503ad61b9a24de540c557da522d614"
+    },
+    {
+      "id": "SF-S003-L0366",
+      "sha256": "b92813df64d7d84240e3eb35b7cf5ae58b4153305480746195538684a7ef52e8"
+    },
+    {
+      "id": "SF-S003-L0367",
+      "sha256": "433fa90462781aac570b7c48b5c6900062db06a3ff6f305a2c8517bb4708a0b8"
+    },
+    {
+      "id": "SF-S003-L0368",
+      "sha256": "f0a5c78142a5fcce62f5c4f0c50747cb6e607a02d628a43f053749d2ca14d67a"
+    },
+    {
+      "id": "SF-S003-L0369",
+      "sha256": "6e8216e91cb0d265d5ab8b92afa93d04825f563bc4b402eb310c985356d83155"
+    },
+    {
+      "id": "SF-S003-L0370",
+      "sha256": "2caf7bc7fab3be576ea8c4e126b3a43f11394df4f1b5b4c76c2cf33038212bd5"
+    },
+    {
+      "id": "SF-S003-L0371",
+      "sha256": "4d95ce761a4f96497ebc7119bccf64da044c55f2044ef12b9c66999bed8562e7"
+    },
+    {
+      "id": "SF-S003-L0372",
+      "sha256": "7c40cd96b4bfab077043c0ce012d40d8bb9d43e6981114f2357ac83f42949c0d"
+    },
+    {
+      "id": "SF-S003-L0373",
+      "sha256": "1dc9fdf7faafda66efe7cdbc646822fbf74066aadc4acf657a4a565e80574bd6"
+    }
+  ],
+  "paragraph_count": 23,
+  "inside_original_study_seal": false,
+  "additional_unique_first_pass_lines": 0,
+  "additional_scan_pages": 0,
+  "scope_qualification": "Separate bounded rereading of already-covered paragraphs; no full-volume reread credit."
+}

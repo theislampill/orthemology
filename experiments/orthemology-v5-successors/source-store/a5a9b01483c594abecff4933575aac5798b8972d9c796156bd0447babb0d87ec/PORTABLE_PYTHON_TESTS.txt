@@ -1,0 +1,12 @@
+test_four_label_fixture_is_cheaper_after_root_identification (test_grounded_support.CutSearchTests.test_four_label_fixture_is_cheaper_after_root_identification) ... ok
+test_all_small_positive_systems (test_grounded_support.GroundedSupportTests.test_all_small_positive_systems) ... ok
+test_axiom_and_underivable (test_grounded_support.GroundedSupportTests.test_axiom_and_underivable) ... ok
+test_four_label_cut_order (test_grounded_support.GroundedSupportTests.test_four_label_cut_order) ... ok
+test_k32_cut_order (test_grounded_support.GroundedSupportTests.test_k32_cut_order) ... ok
+test_testimony_and_prospective_authority_are_different (test_grounded_support.GroundedSupportTests.test_testimony_and_prospective_authority_are_different) ... ok
+test_unanchored_cycle_empty_anchor_propagates (test_grounded_support.GroundedSupportTests.test_unanchored_cycle_empty_anchor_propagates) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.078s
+
+OK

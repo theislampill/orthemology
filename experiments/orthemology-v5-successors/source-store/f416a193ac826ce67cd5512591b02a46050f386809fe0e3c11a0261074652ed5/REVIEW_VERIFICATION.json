@@ -1,0 +1,199 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-07T10:39:10.422639+00:00",
+  "seals": {
+    "PACKAGE_MANIFEST.json": "4a0ac2b37856a66bffe0f0787e5def8f629c059aa376816f1ab213072367098d",
+    "SHA256SUMS": "4266bec9b670d098f3241f4e5809638676e5c5a36cfe283f82e776e9f853c6f5",
+    "verification-final-v2/VERIFICATION.json": "f9560adb9775de825340963a5abfd6401ad14700c5925d4f04a5420ef4ddad21"
+  },
+  "manifest_files": 97,
+  "snapshot_files": 99,
+  "inputs": 21,
+  "declarations": 88,
+  "theorems": 56,
+  "proof_definition_bodies": 38,
+  "semantic_rejections": [
+    "tactic 'decide' proved that the proposition\n  B.g = B.h\nis false",
+    "tactic 'decide' proved that the proposition\n  ∀ (w : W), B.x = B.g ∨ B.x = B.h ∨ (w = W.w0 ∨ w = W.w1) ∧ (True ∨ B.x = B.l ∨ B.x = B.r ∨ B.x = B.m ∨ B.x = B.z)\nis false",
+    "tactic 'decide' proved that the proposition\n  (True ∨ W.w0 = W.w1) ∧ (True ∧ Token.v = Token.u ∧ Content.absent = Content.present ∨ B.g = B.x ∧ True ∧ True)\nis false",
+    "tactic 'decide' proved that the proposition\n  ∀ (c : C),\n    E.o = E.a ∧ (c = C.cx ∨ c = C.cl) ∨\n        E.o = E.b ∧ c = C.cr ∨ E.o = E.k ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ True ∧ c = C.cz →\n      True ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ B.g = B.h ∧ c = C.cz\nis false"
+  ],
+  "objects": {
+    "SourceIdentityDerived.olean": "ee38c90885c817b7ef9f424fcb3e9c7e2ea2978f311dcdfdb99fa4fca21f795f",
+    "JointFiniteInterpretation.olean": "51c44726c3d28f1a7b7e2e0c809758c052bfe62e21ee74a62ba94a20c38c0a6f",
+    "AnchoredSourceBridge.olean": "3aae9182c4fb74d65e776863e6a2e80f3eb6c84f8438764b3032bc4e2ceba30b",
+    "OriginalBearerBridge.olean": "fd1d83e5f07251eafca49e75aafa98daa37016451ff1e79734b5f5bcf2f2454d",
+    "VeracityBoundary.olean": "8f9c81f4f4ab7f0817cd6344433e787d6135306eeb3a26f9212d44d543aa5310"
+  },
+  "imports": 1801,
+  "cached_imports": 1796,
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "trust": 0,
+  "candidate_unchanged": true,
+  "commands": [
+    {
+      "label": "compiler-version",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "--version"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "seconds": 0.031,
+      "exit": 0,
+      "log_sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+    },
+    {
+      "label": "SourceIdentityDerived",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/original-bearer-bridge",
+        "-o",
+        "tranche20/foundational-audit/joint-model-independent-review/fresh-trust0-v1/objects/SourceIdentityDerived.olean",
+        "tranche20/foundational-audit/original-bearer-bridge/SourceIdentityDerived.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/original-bearer-bridge",
+      "seconds": 1.113,
+      "exit": 0,
+      "log_sha256": "5da7cc7b59d2191904c64c7d49429da7b0cc1d015eba0af5087d6fe99154d1dd"
+    },
+    {
+      "label": "OriginalBearerBridge",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/original-bearer-bridge",
+        "-o",
+        "tranche20/foundational-audit/joint-model-independent-review/fresh-trust0-v1/objects/OriginalBearerBridge.olean",
+        "tranche20/foundational-audit/original-bearer-bridge/OriginalBearerBridge.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/original-bearer-bridge",
+      "seconds": 0.93,
+      "exit": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "AnchoredSourceBridge",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/anchored-source-bridge/src",
+        "-o",
+        "tranche20/foundational-audit/joint-model-independent-review/fresh-trust0-v1/objects/AnchoredSourceBridge.olean",
+        "tranche20/foundational-audit/anchored-source-bridge/src/AnchoredSourceBridge.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/anchored-source-bridge/src",
+      "seconds": 0.326,
+      "exit": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "VeracityBoundary",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/veracity-boundary/src",
+        "-o",
+        "tranche20/foundational-audit/joint-model-independent-review/fresh-trust0-v1/objects/VeracityBoundary.olean",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityBoundary.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/veracity-boundary/src",
+      "seconds": 0.283,
+      "exit": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "JointFiniteInterpretation",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model/src",
+        "-o",
+        "tranche20/foundational-audit/joint-model-independent-review/fresh-trust0-v1/objects/JointFiniteInterpretation.olean",
+        "tranche20/foundational-audit/joint-model/src/JointFiniteInterpretation.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model/src",
+      "seconds": 9.707,
+      "exit": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "Acceptance",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/tests/Acceptance.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "seconds": 0.783,
+      "exit": 0,
+      "log_sha256": "b25cf5403882937e23f35950e9071f43727d56ef734d125871e98e93c6c33f56"
+    },
+    {
+      "label": "ReadbackAudit",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/ReadbackAudit.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "seconds": 11.4,
+      "exit": 0,
+      "log_sha256": "02f41392bb097b07ca91371eabc7a578c382004ee8903297db52ad473ed62456"
+    },
+    {
+      "label": "ProofReadback",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/ProofReadback.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "seconds": 4.952,
+      "exit": 0,
+      "log_sha256": "c2bfc966636617e0ac29dc19ff3d7119246d044358bb03ab42b8d672bf139845"
+    },
+    {
+      "label": "ImportClosure",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/ImportClosure.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "seconds": 0.754,
+      "exit": 0,
+      "log_sha256": "3be403bf04a0d31a69f32a31664d98e812f729e29e6f847b2c6cf5b55cbc950b"
+    },
+    {
+      "label": "RejectedClaims",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/tests/RejectedClaims.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "seconds": 0.767,
+      "exit": 1,
+      "log_sha256": "a39d245966db50d04c170fbad77f076de3bbf25c0884119339c6c57f8e6bb904"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "status": "PASS_WITH_EXPLICIT_REPRESENTATION_AND_ATTRIBUTION_LIMITS",
+  "created_utc": "2026-10-07T16:28:02.331256+00:00",
+  "author_final_manifest_sha256": "bd12a5bf5d0ceb9c800232fa1dc39a015c0ea63d89020c1ebcb5c241a10ef655",
+  "frozen_author_files_checked": [
+    {
+      "sha256": "4ee0f896358f59752991b8ab72edbdd588d0b0db07c022f5b8fa1b2f61a18284",
+      "matches": true,
+      "original_filename": "AUDIT.md"
+    },
+    {
+      "sha256": "860fedbc5552868e0d47877e6e6af7f4ccff49b4cefa4b9e5843ac11bb2332af",
+      "matches": true,
+      "original_filename": "DEFINITION_BINDINGS.json"
+    },
+    {
+      "sha256": "3d128af9ccc9de78b222ea576d919a9df0475300956bba16a84dbabb92e4cdd3",
+      "matches": true,
+      "original_filename": "SOURCE_BINDINGS.json"
+    },
+    {
+      "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+      "matches": true,
+      "original_filename": "OriginationTypeControl.lean"
+    },
+    {
+      "sha256": "6dfd3ab5400bad336045e449400bb50f5066c003cf10c9413b447b8d36d09c60",
+      "matches": true,
+      "original_filename": "OverreachRejected.lean"
+    },
+    {
+      "sha256": "007e59894032e608dd1693fa1aaa7e92154db838b7ee55ce4d700f1542babbb6",
+      "matches": true,
+      "original_filename": "replay.py"
+    },
+    {
+      "sha256": "84e99dd8e31b93f9a49a7269844c220105e1541ae9c9294552d5acb37ce327c3",
+      "matches": true,
+      "original_filename": "EXECUTION_RECEIPT.json"
+    },
+    {
+      "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b",
+      "matches": true,
+      "original_filename": "lean-version.log"
+    },
+    {
+      "sha256": "0750a2bfc39c460f25e6f33b18f117712ec0052c5ac747008c71c3d4ed2cbeed",
+      "matches": true,
+      "original_filename": "direct-imports.log"
+    },
+    {
+      "sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+      "matches": true,
+      "original_filename": "final-check.log"
+    },
+    {
+      "sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+      "matches": true,
+      "original_filename": "overreach-rejection.log"
+    },
+    {
+      "sha256": "7d551a8bed8a04c435a8c0e9da8d0ae895bc193bd428ea9bab1221468da55dc2",
+      "matches": true,
+      "original_filename": "first-check.log"
+    },
+    {
+      "sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+      "matches": true,
+      "original_filename": "second-check.log"
+    },
+    {
+      "sha256": "092f1d91d2decfae9fd4f4c5f794835c8f1f42a20f52e18c92614c97aa79d406",
+      "matches": true,
+      "original_filename": "METADATA_CORRECTION.json"
+    },
+    {
+      "sha256": "b790f73a1b03704eeffcb3ad431ebeb6399f642cd376d0fbe25f90e1bdf514a5",
+      "matches": true,
+      "original_filename": "SPAN_VALIDATION.json"
+    },
+    {
+      "sha256": "f6774c18a7ae3a65fcb77dd9e619059bba113e68134c995b8e3f29a782d71d18",
+      "matches": true,
+      "original_filename": "correction-history/initial-seal/MANIFEST.json"
+    },
+    {
+      "sha256": "8266a68ab3f691eae640d4ceee701b0e2597ff7b52b9b3c536a955d0ea36a8f0",
+      "matches": true,
+      "original_filename": "correction-history/initial-seal/DEFINITION_BINDINGS.json"
+    },
+    {
+      "sha256": "888e7d12f140b93541597f14617744baf9038998f952dcd7d7ba89e444dfcee0",
+      "matches": true,
+      "original_filename": "correction-history/initial-seal/SHA256SUMS"
+    }
+  ],
+  "author_source_sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+  "author_execution_receipt_sha256": "84e99dd8e31b93f9a49a7269844c220105e1541ae9c9294552d5acb37ce327c3",
+  "author_source_bindings_sha256": "3d128af9ccc9de78b222ea576d919a9df0475300956bba16a84dbabb92e4cdd3",
+  "reviewer_execution_status": "PASS",
+  "source_narrative_model_correspondence": "PASS_WITH_STATED_SCOPE",
+  "blocking_findings": [],
+  "resolved_findings": [
+    {
+      "id": "OTC-REVIEW-01",
+      "severity": "metadata",
+      "target": "DEFINITION_BINDINGS.json OTC-D7",
+      "finding": "Span195–221 exceeded219-line file",
+      "resolution": "Author corrected endpoint219; initial seal preserved."
+    },
+    {
+      "id": "OTC-REVIEW-02",
+      "severity": "metadata",
+      "target": "DEFINITION_BINDINGS.json OTC-D9",
+      "finding": "Span1–62 exceeded51-line file",
+      "resolution": "Author corrected endpoint51; initial seal preserved."
+    }
+  ],
+  "required_interpretation_limits": [
+    "ExternalReceipt=Created is a local extension assignment, not a general identity.",
+    "Emergent is a kind predicate; actual novelty is separately witnessed.",
+    "Power and ground existence are inputs and do not explain or follow from R.",
+    "Fresh act owner/power probe is representational, not a causal derivation.",
+    "Necessary-object uniqueness is restricted to this Obj signature.",
+    "Other-kind actual cessation is vacuous because otherOn is always false on actual; G-act/effect cessation is nonvacuous.",
+    "All-empty model states and temporal gaps are not attributed to Ibn Taymiyya.",
+    "Dar017 is bounded first reading of already acquired volume10, not completed volume8–9 coverage.",
+    "Typed bearer conditional remains valid; applying it to every act requires a separate domain/receipt argument.",
+    "No denial of every intrinsic or constitutive dependence; no frozen-state conclusion from the disputed implication alone."
+  ],
+  "execution_scope": "Small new control and reviewer probes only; existing official Lean4.19.0 with trust0; no older package replay or new dependency installation.",
+  "bound_review_files": [
+    {
+      "original_identity": {
+        "filename": "REVIEW.md",
+        "sha256": "f7aa8cf6ee30f9e6844aa2db1ea987efc8bffe201fcc6e30911d1c971e84a520",
+        "bytes": 11507
+      },
+      "selected_projection": {
+        "alias": "t20/ontology-type-control/review/REVIEW.md",
+        "sha256": "3afc19f45c2b17f175acb36672352c64ef8623b4179af095c4fb3aadf9033a86",
+        "bytes": 11713,
+        "classification": "DERIVED"
+      }
+    },
+    {
+      "original_identity": {
+        "filename": "EXECUTION_RECEIPT.json",
+        "sha256": "1a3aabaf62f70358a7921fe80f7fc8a56303ca03d23d69b1c8757215feef0167",
+        "bytes": 5314
+      },
+      "selected_projection": {
+        "alias": "t20/ontology-type-control/review/EXECUTION_RECEIPT.json",
+        "sha256": "8b3627450a5d90bc3d2e093425894fc785f816721ded33ebed532755a6faffff",
+        "bytes": 5806,
+        "classification": "DERIVED"
+      }
+    },
+    {
+      "original_identity": {
+        "filename": "SOURCE_BINDINGS.json",
+        "sha256": "673d53a472cceb05c184f46da8ac49ae0d8459a3ff6d041f2d899b3f9d05c774",
+        "bytes": 10980
+      },
+      "selected_projection": {
+        "alias": "t20/ontology-type-control/review/SOURCE_BINDINGS.json",
+        "sha256": "16ee01f25a93117b0dd893bfb06b2f73a974594ef794650aada7e1231266b6d3",
+        "bytes": 17192,
+        "classification": "DERIVED"
+      }
+    },
+    {
+      "original_identity": {
+        "filename": "DEFINITION_BINDINGS.json",
+        "sha256": "7295f9e0e61406a2b97a49f2d10777833db44bb82aad786840de3951fdcceb17",
+        "bytes": 9619
+      },
+      "selection": "EXCLUDED_HISTORICAL_IDENTITY_ONLY"
+    },
+    {
+      "original_identity": {
+        "filename": "SEPARATE_PARENT_BINDING.json",
+        "sha256": "cf85e4e37e2e362c31b150fe7611daa64b44a19f5d1fe739f2e9f5c19b896bb4",
+        "bytes": 867
+      },
+      "selection": "EXCLUDED_HISTORICAL_IDENTITY_ONLY"
+    },
+    {
+      "original_identity": {
+        "filename": "TESTED_RECIPE.md",
+        "sha256": "2c22b821908cb35cbe20a7302e0682a7835cfac6b9137d175ffca38f6bef9e37",
+        "bytes": 2986
+      },
+      "selected_projection": {
+        "alias": "t20/ontology-type-control/REPRODUCE.md",
+        "sha256": "91fffcff6c40dfe9d25979f2f295636afa7927fd6f6e989b99fdbe06fa2621cf",
+        "bytes": 6587,
+        "classification": "DERIVED"
+      }
+    },
+    {
+      "original_identity": {
+        "filename": "run_review.py",
+        "sha256": "2dc111107d886982781798721be227606743bfffb9c865c6dde13fdfbe84c403",
+        "bytes": 3289
+      },
+      "selection": "EXCLUDED_HISTORICAL_IDENTITY_ONLY"
+    },
+    {
+      "original_identity": {
+        "filename": "ReviewerProbes.lean",
+        "sha256": "f176d255baf686b29e4516dfd5796907ed3345befa0370d9812f57faeab826b7",
+        "bytes": 3027
+      },
+      "selected_projection": {
+        "alias": "t20/ontology-type-control/review/ReviewerProbes.lean",
+        "sha256": "f176d255baf686b29e4516dfd5796907ed3345befa0370d9812f57faeab826b7",
+        "bytes": 3027,
+        "classification": "EXACT"
+      }
+    }
+  ],
+  "no_author_source_edits": true,
+  "no_publication": true,
+  "original_review_identity": {
+    "filename": "REVIEW.json",
+    "sha256": "2852cc25b4b97d24d0ea559bb0a1319c1ea7c1e4d56224677a7ea0d496789c66",
+    "bytes": 7430
+  },
+  "separate_context_binding": {
+    "status": "INTEGRITY_VERIFIED_SEPARATE_PARENT_RECORD",
+    "paragraphs_checked": 13,
+    "content_sha256_matches": true,
+    "author_manifest_membership": false,
+    "independent_historical_witness_credit": 0,
+    "reading_credit": "Reviewer actually read S002-L0519–0534; separate contextual record covers521–533. Integrity check adds no extra source reading or scan credit.",
+    "original_receipt_identity": {
+      "filename": "ACT_PRODUCT_CONTEXT.json",
+      "sha256": "d4a044355a94fe4f228a6d56f17de4ebe16d9423e79cae7203d5071d092ab806"
+    },
+    "selected_alias": "t20/ontology-type-control/ACT_PRODUCT_CONTEXT.json",
+    "source_identity": {
+      "filename": "lines.json",
+      "bytes": 1464867,
+      "sha256": "5505f29f0578540d5fb2f808ccf10fcd0524bd08dfa792f51fd286dd0c3e0390",
+      "availability": "EXCLUDED_CUSTODY_IDENTITY_ONLY"
+    },
+    "body_identity": {
+      "filename": "body.txt",
+      "bytes": 1153740,
+      "sha256": "ce1fd61095b012e8012c1539d8e9be0b7aa6cfe2b70afc7ca8829a839724185b",
+      "availability": "EXCLUDED_CUSTODY_IDENTITY_ONLY"
+    }
+  },
+  "curation_scope": "Historical scientific PASS is retained only for the digest-bound reviewed sources and interpretation. Curation verifies projection identities and adds no scientific replay or source-reading credit."
+}

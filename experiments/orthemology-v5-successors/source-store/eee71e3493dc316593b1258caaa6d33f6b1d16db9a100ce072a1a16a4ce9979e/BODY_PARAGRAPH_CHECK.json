@@ -1,0 +1,86 @@
+{
+  "schema": "t20-veracity-paragraph-index-erratum-check-v1",
+  "utc": "2026-10-07T09:49:27.916551+00:00",
+  "status": "PASS",
+  "inspection": "Direct DOCX body-paragraph extraction; comparison to exact already-bound sealed paragraph IDs. No proof execution.",
+  "documents": [
+    {
+      "source": "T17R",
+      "docx_sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "body_paragraph_count": 198,
+      "empty_body_paragraph_indices": [],
+      "first_body_paragraph_index": 0,
+      "first_body_paragraph_text": "Orthemology Seventeenth research report",
+      "matched_sealed_zero_based_ids": [
+        "T17R:P00063",
+        "T17R:P00064",
+        "T17R:P00065",
+        "T17R:P00066",
+        "T17R:P00067",
+        "T17R:P00068",
+        "T17R:P00085",
+        "T17R:P00086",
+        "T17R:P00087",
+        "T17R:P00088",
+        "T17R:P00089",
+        "T17R:P00090",
+        "T17R:P00092",
+        "T17R:P00093",
+        "T17R:P00094",
+        "T17R:P00095",
+        "T17R:P00096",
+        "T17R:P00097",
+        "T17R:P00098"
+      ]
+    },
+    {
+      "source": "T17G",
+      "docx_sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9",
+      "body_paragraph_count": 179,
+      "empty_body_paragraph_indices": [],
+      "first_body_paragraph_index": 0,
+      "first_body_paragraph_text": "A guide to the six foundational sources",
+      "matched_sealed_zero_based_ids": [
+        "T17G:P00089",
+        "T17G:P00090",
+        "T17G:P00099",
+        "T17G:P00100",
+        "T17G:P00101",
+        "T17G:P00107",
+        "T17G:P00108",
+        "T17G:P00109",
+        "T17G:P00111",
+        "T17G:P00112",
+        "T17G:P00113"
+      ]
+    },
+    {
+      "source": "T19R",
+      "docx_sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "body_paragraph_count": 191,
+      "empty_body_paragraph_indices": [],
+      "first_body_paragraph_index": 0,
+      "first_body_paragraph_text": "Orthemology Nineteenth research report",
+      "matched_sealed_zero_based_ids": [
+        "T19R:P00081",
+        "T19R:P00082",
+        "T19R:P00083",
+        "T19R:P00084",
+        "T19R:P00085",
+        "T19R:P00132",
+        "T19R:P00133",
+        "T19R:P00134",
+        "T19R:P00135",
+        "T19R:P00155",
+        "T19R:P00156",
+        "T19R:P00157",
+        "T19R:P00158",
+        "T19R:P00164",
+        "T19R:P00165",
+        "T19R:P00167",
+        "T19R:P00168"
+      ]
+    }
+  ],
+  "total_bound_paragraphs_matched": 47
+}

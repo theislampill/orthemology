@@ -1,0 +1,37 @@
+{
+  "allowed_pair_subsets_per_input": 256,
+  "anchor_children": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "anchor_initial_states_asserted": 4,
+  "anchor_nontrivial_children_per_mode": 2,
+  "anchor_winning_initial_states": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "distinct_inputs": 32,
+  "fixed_templates": 8,
+  "isolated_odd_block_losing_initial_states": [
+    0,
+    1
+  ],
+  "k_w_region_combinations_per_input": 256,
+  "matched_and_revealing_exits": true,
+  "numerical_equality_and_same_support_inequality": true,
+  "random_inputs": 0,
+  "separately_attained_even_minima": [
+    2,
+    4
+  ],
+  "sparse_bridge_removal": true,
+  "state_action_relabellings": 0
+}

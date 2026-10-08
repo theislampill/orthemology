@@ -1,0 +1,21 @@
+{
+  "scope": "Whole selected Arabic electronic volume 3, not print/apparatus certification",
+  "utc": "2026-10-07T10:01:24.783832+00:00",
+  "line_count": 424,
+  "word_count": 67886,
+  "first_id": "V03L0001",
+  "last_id": "V03L0424",
+  "covered_line_count": 424,
+  "receipt_words": 67886,
+  "missing": [],
+  "duplicates": [],
+  "all_interval_hashes_match": true,
+  "ordered_exact_coverage": true,
+  "body_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+  "lines_sha256": "d980da9dd559d21d2c3254ed776f30d53ba4364dc4f202bd63860193889450bc",
+  "reading_receipts_not_independent_comprehension_proof": true,
+  "first_pass_range": [
+    1,
+    424
+  ]
+}

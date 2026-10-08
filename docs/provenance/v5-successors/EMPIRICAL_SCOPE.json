@@ -710,6 +710,29 @@
       "limitations": [
         "Inherited reported replay, not a new local execution or participant experiment. Equal-size estimate +1.62 percentage points, interval -1.66 to 5.00; five 15-person games receive one-third weight. No causal mediation, verified 2025 SI identity or human-specialist validation."
       ]
+    },
+    {
+      "activity": "REFERENCE_COMPUTATION",
+      "data_scope": "232 exported roster members; 11136 opportunities; Fixed opportunity weights 1/(75 × roster size × 48); Frozen grid 1,1.1,1.25,1.5,2,3,5,10 and unrestricted; Maintained design-model assumptions; Tyurin nonidentically distributed Berry–Esseen Theorem 7, constant weakened to one",
+      "id": "T17-CLOSED-PLACEMENT-CHECK",
+      "limitations": [
+        "Lower bound concerns family suprema, not every individual admissible law.",
+        "No invariance, equivalence, mediation, historical assignment mechanism or deployed rendering claim.",
+        "Public package verifies supplied aggregates and synthetic arithmetic, not omitted raw rows.",
+        "Closed inquiry: do not reopen subgroup or alternative-statistic search.",
+        "Original reference/aggregate results inherited; integration scientific replay NOT_RUN and no participant-level data admitted."
+      ]
+    },
+    {
+      "activity": "REFERENCE_COMPUTATION",
+      "data_scope": "Unchanged delivered Python implementations and exact source bindings; 20183 reference models; 20686 efficient models overlap; Revision-2 supplement: 30 positive, 2 negative outcomes",
+      "id": "T18-IMPLEMENTATION-QUALIFICATION",
+      "limitations": [
+        "Finite implementation tests do not prove the theorem or Python/Lean correspondence.",
+        "32 starts are not 32 graph structures or an exhaustive four-state census.",
+        "Independent base replay is a qualified recovered composite, not an uninterrupted full-runner execution.",
+        "Original reference/aggregate results inherited; integration scientific replay NOT_RUN and no participant-level data admitted."
+      ]
     }
   ]
 }

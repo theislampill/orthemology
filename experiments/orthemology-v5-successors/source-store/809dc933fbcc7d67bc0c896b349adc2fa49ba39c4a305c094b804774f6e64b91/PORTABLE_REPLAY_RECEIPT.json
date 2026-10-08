@@ -1,0 +1,213 @@
+{
+  "status": "PASS_PORTABLE_SOURCE_REPLAY",
+  "source_manifest_sha256": "edf38a86f2fe1e3693a447d1c1083443f65921ed1931eff4ecae245dcda46e5d",
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "candidate_modules_fresh": [
+    "GroundedSupport",
+    "GroundedQuotient",
+    "AliasCuts",
+    "OccurrenceControls",
+    "CutControls",
+    "MutationControls"
+  ],
+  "independent_control_module_fresh": true,
+  "author_readback_identical": true,
+  "checks": [
+    {
+      "check": "lean-version",
+      "exit_code": 0
+    },
+    {
+      "check": "build-GroundedSupport",
+      "exit_code": 0
+    },
+    {
+      "check": "deps-GroundedSupport",
+      "exit_code": 0
+    },
+    {
+      "check": "build-GroundedQuotient",
+      "exit_code": 0
+    },
+    {
+      "check": "deps-GroundedQuotient",
+      "exit_code": 0
+    },
+    {
+      "check": "build-AliasCuts",
+      "exit_code": 0
+    },
+    {
+      "check": "deps-AliasCuts",
+      "exit_code": 0
+    },
+    {
+      "check": "build-OccurrenceControls",
+      "exit_code": 0
+    },
+    {
+      "check": "deps-OccurrenceControls",
+      "exit_code": 0
+    },
+    {
+      "check": "build-CutControls",
+      "exit_code": 0
+    },
+    {
+      "check": "deps-CutControls",
+      "exit_code": 0
+    },
+    {
+      "check": "build-MutationControls",
+      "exit_code": 0
+    },
+    {
+      "check": "deps-MutationControls",
+      "exit_code": 0
+    },
+    {
+      "check": "type-and-axiom-readback",
+      "exit_code": 0
+    },
+    {
+      "check": "independent-lean-controls",
+      "exit_code": 0
+    },
+    {
+      "check": "python-tests",
+      "exit_code": 0
+    },
+    {
+      "check": "alias-search",
+      "exit_code": 0
+    },
+    {
+      "check": "independent-finite-checks",
+      "exit_code": 0
+    }
+  ],
+  "direct_import_bindings": [
+    {
+      "module": "GroundedSupport",
+      "object_name": "Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "GroundedSupport",
+      "object_name": "Card.olean",
+      "bytes": 1141888,
+      "sha256": "4c8d7058ba4178a0bf633e4dba61804aca377e9f8e3b4270b49178cbaa38d8b9"
+    },
+    {
+      "module": "GroundedSupport",
+      "object_name": "BooleanAlgebra.olean",
+      "bytes": 308128,
+      "sha256": "1606cd293e0a96a6714ed5e67d8f85180619799e3fbbf0406fc55a34c233e6f9"
+    },
+    {
+      "module": "GroundedQuotient",
+      "object_name": "Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "GroundedQuotient",
+      "object_name": "GroundedSupport.olean",
+      "bytes": 131584,
+      "sha256": "7f38eb76a97225ea20804fbad0717129ad6e657a4fdf73e8107c347916dce70b"
+    },
+    {
+      "module": "GroundedQuotient",
+      "object_name": "Image.olean",
+      "bytes": 1001112,
+      "sha256": "8c3403a30278872a4c6aaa075870e84f3410793f0030ed76036a715c58a7744c"
+    },
+    {
+      "module": "AliasCuts",
+      "object_name": "Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "AliasCuts",
+      "object_name": "GroundedSupport.olean",
+      "bytes": 131584,
+      "sha256": "7f38eb76a97225ea20804fbad0717129ad6e657a4fdf73e8107c347916dce70b"
+    },
+    {
+      "module": "AliasCuts",
+      "object_name": "Image.olean",
+      "bytes": 1001112,
+      "sha256": "8c3403a30278872a4c6aaa075870e84f3410793f0030ed76036a715c58a7744c"
+    },
+    {
+      "module": "OccurrenceControls",
+      "object_name": "Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "OccurrenceControls",
+      "object_name": "GroundedSupport.olean",
+      "bytes": 131584,
+      "sha256": "7f38eb76a97225ea20804fbad0717129ad6e657a4fdf73e8107c347916dce70b"
+    },
+    {
+      "module": "OccurrenceControls",
+      "object_name": "AliasCuts.olean",
+      "bytes": 146056,
+      "sha256": "1029b97a631c431b3ed35f375e7216c9954555c1f807f3d558cd4d535d7b74ec"
+    },
+    {
+      "module": "OccurrenceControls",
+      "object_name": "Powerset.olean",
+      "bytes": 95488,
+      "sha256": "f727465c47c595731b848e9c8c5f86bf66b400c9fc44054e54e4cd2823ca8c6e"
+    },
+    {
+      "module": "OccurrenceControls",
+      "object_name": "Fin.olean",
+      "bytes": 147264,
+      "sha256": "92516f774ace34e6dce214ed3ece02da1efcd1870ef9cfed6807b34479433712"
+    },
+    {
+      "module": "CutControls",
+      "object_name": "Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "CutControls",
+      "object_name": "AliasCuts.olean",
+      "bytes": 146056,
+      "sha256": "1029b97a631c431b3ed35f375e7216c9954555c1f807f3d558cd4d535d7b74ec"
+    },
+    {
+      "module": "CutControls",
+      "object_name": "Powerset.olean",
+      "bytes": 95488,
+      "sha256": "f727465c47c595731b848e9c8c5f86bf66b400c9fc44054e54e4cd2823ca8c6e"
+    },
+    {
+      "module": "CutControls",
+      "object_name": "Fin.olean",
+      "bytes": 147264,
+      "sha256": "92516f774ace34e6dce214ed3ece02da1efcd1870ef9cfed6807b34479433712"
+    },
+    {
+      "module": "MutationControls",
+      "object_name": "Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "MutationControls",
+      "object_name": "OccurrenceControls.olean",
+      "bytes": 340048,
+      "sha256": "92880dd10c994f644114090fd241cce1955c6de3ad5bd196cc7d0000b26a5d00"
+    }
+  ],
+  "scope": "Fresh supplied source; prepared dependency objects reused. No cold dependency rebuild, general Python refinement or actual-world authority claim."
+}

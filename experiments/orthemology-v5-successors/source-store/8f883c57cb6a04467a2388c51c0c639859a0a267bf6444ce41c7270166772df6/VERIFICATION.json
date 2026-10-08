@@ -1,0 +1,583 @@
+{
+  "schema": "t20-joint-finite-verification-v1",
+  "status": "PASS",
+  "finished_utc": "2026-10-07T10:15:50.039391+00:00",
+  "scope": "Relative finite-model verification of the selected formal signature. Reviewed cores rebuilt unchanged; cached official imports remain trusted. No metaphysical actuality, premise warrant, revelation, or general Sixth-refinement claim.",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "compiler_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "trust_level": 0,
+  "frozen_inputs": [
+    {
+      "path": "tranche20/foundational-audit/original-bearer-bridge/MANIFEST.json",
+      "sha256": "ac92a3ff320ee3c754e8e0e9b9b37fb2460aab56336614f9a8be81d61d27304e",
+      "bytes": 9144
+    },
+    {
+      "path": "tranche20/foundational-audit/anchored-source-bridge/SOURCE_MANIFEST.json",
+      "sha256": "305ab6251e9f28b45894c4f5f5270a88de7a10020b87d929b4173577eb9b3de7",
+      "bytes": 7298
+    },
+    {
+      "path": "tranche20/foundational-audit/veracity-boundary/SHA256SUMS",
+      "sha256": "161989fec72e5cc231547378db4c7890f8b4e49e6fe77f220a81d97904eed1b2",
+      "bytes": 10240
+    },
+    {
+      "path": "tranche20/foundational-audit/original-bearer-bridge/inherited/SourceIdentity.original.lean",
+      "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "bytes": 7357
+    },
+    {
+      "path": "tranche20/hase-positive-research/toolchain-preparation/PREPARATION_RECEIPT.json",
+      "sha256": "4b1c06c026eb6a7e15e6699e67b7322f8514f36fadba9c58e9975e5b0d0dfcf7",
+      "bytes": 1970
+    },
+    {
+      "path": "tranche20/foundational-audit/dependency-dag/MANIFEST.json",
+      "sha256": "796856c7de6d50d284a241a066ea9bdd6fb84409174329de6b81a16eb4572bb8",
+      "bytes": 2486
+    },
+    {
+      "path": "tranche20/foundational-audit/original-bearer-bridge/SourceIdentityDerived.lean",
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "bytes": 7438
+    },
+    {
+      "path": "tranche20/foundational-audit/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940
+    },
+    {
+      "path": "tranche20/foundational-audit/anchored-source-bridge/src/AnchoredSourceBridge.lean",
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "bytes": 10743
+    },
+    {
+      "path": "tranche20/foundational-audit/veracity-boundary/src/VeracityBoundary.lean",
+      "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "bytes": 5975
+    },
+    {
+      "path": "tranche20/foundational-audit/joint-model/DESIGN.md",
+      "sha256": "608fe6ff3eff57c1a1a218737ccc59ff2495ce6708d2997be4c728589b8c8b87",
+      "bytes": 13674
+    },
+    {
+      "path": "tranche20/foundational-audit/joint-model/MAPPING_AND_COMPATIBILITY.md",
+      "sha256": "8f8a25c2f0a8c7d8e91a46ff06df2d7e6fed16d9175bef2906ad596c0279a904",
+      "bytes": 13508
+    },
+    {
+      "path": "tranche20/foundational-audit/original-bearer-independent-review/REVIEW.md",
+      "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+      "bytes": 12754
+    },
+    {
+      "path": "tranche20/foundational-audit/original-bearer-independent-review/MANIFEST.json",
+      "sha256": "89589976d53785275ad19d64ba34291eecf20e027831236f4c64e7fec8e24853",
+      "bytes": 6171
+    },
+    {
+      "path": "tranche20/foundational-audit/anchored-source-independent-review/REVIEW.md",
+      "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+      "bytes": 14415
+    },
+    {
+      "path": "tranche20/foundational-audit/anchored-source-independent-review/REVIEW_MANIFEST.json",
+      "sha256": "7edcf7a940b6314cdb30820167990ec39aa121d511170d56961c8f4a29dbc466",
+      "bytes": 12580
+    },
+    {
+      "path": "tranche20/foundational-audit/veracity-independent-review/REVIEW_REPORT.md",
+      "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+      "bytes": 13471
+    },
+    {
+      "path": "tranche20/foundational-audit/veracity-independent-review/REVIEW_MANIFEST.json",
+      "sha256": "0c535f013e82b208a83746e13bf74aa14e45404317454cba6e3dccfbbefab868",
+      "bytes": 11137
+    },
+    {
+      "path": "tranche20/foundational-audit/original-bearer-bridge/verification-final/VERIFICATION.json",
+      "sha256": "48e4eb6fa23111096616151ba3a97aa3e1756835589a1c78c94d0db6dfa31f7c",
+      "bytes": 11038
+    },
+    {
+      "path": "tranche20/foundational-audit/original-bearer-bridge/verification-final/IMPORT_CLOSURES.json",
+      "sha256": "223cd8232d4845f4e72aa08996643a23cb474f951fd8b989039cfa37385b9a90",
+      "bytes": 1251255
+    },
+    {
+      "path": "tranche20/hase-positive-research/toolchain-preparation/TOOLCHAIN_RECEIPT.json",
+      "sha256": "c9f08292bc4f7876b8fa4a6599322beb279ab7c3497b84faff6174e3a7a4a167",
+      "bytes": 1591
+    }
+  ],
+  "local_sources": {
+    "src/JointFiniteInterpretation.lean": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+    "tests/Acceptance.lean": "452c2ba9f52f3c1868c530aba55d9ca6cf5ebb2911f0dd526a0ca40138621b64",
+    "tests/RejectedClaims.lean": "1f02206c0fe4740d8b459c6eca1a6e7ba7d329f18a5b3eb66b78b0765c011b3d",
+    "ReadbackAudit.lean": "13ee75ddf64ec213665d3b97a3b2375626c11a7b707c155cf72d9b9ee30bbc31",
+    "ProofReadback.lean": "15d5d11887a21d94547257fbec89396214c1a34d6afba5641819b6eea57c238b",
+    "ImportClosure.lean": "ae48b48fa73ad70f54ea9c0929474063de527891262e00e44575f8432bcda426",
+    "DECLARATIONS.json": "137f149d87d6adceb7b67fb90cba00358cd1f3fccd0a73235919dcb0345c8bd9",
+    "THEOREMS.json": "a0d07af4f8b13de752ae38ff322f970c790c2a90fbfbbb9b52cd5400f7c9957a",
+    "INPUT_BINDINGS.json": "201b39c5d96193dc69bcdcb3873d572c136b4d26842d934481f0685a38ae5ddd",
+    "reproduce.py": "57c0582dd14022fa71c97c5028751ce36c0dcec83edd9e8f67c3b9e703dc626b",
+    "harness/test_reproduce.py": "2a2214cd210b294f49a84b74dda69b57b5aff9bbc0a76debedeabe8d0f17b6b3"
+  },
+  "named_inventory": {
+    "joint_named_source_declarations": [
+      "JointFinite.W",
+      "JointFinite.B",
+      "JointFinite.R",
+      "JointFinite.E",
+      "JointFinite.C",
+      "JointFinite.Token",
+      "JointFinite.Content",
+      "JointFinite.Exercise",
+      "JointFinite.live",
+      "JointFinite.receivedBeing",
+      "JointFinite.framework",
+      "JointFinite.account",
+      "JointFinite.producedAt",
+      "JointFinite.occursAt",
+      "JointFinite.contributionBearer",
+      "JointFinite.contributionResource",
+      "JointFinite.originalResourceUsed",
+      "JointFinite.directSupport",
+      "JointFinite.supportAncestor",
+      "JointFinite.derivedAct",
+      "JointFinite.derivedUses",
+      "JointFinite.mediateUse",
+      "JointFinite.tokenOccurrence",
+      "JointFinite.tokenBearer",
+      "JointFinite.modeExercise",
+      "JointFinite.productivelySupportsToken",
+      "JointFinite.authenticated",
+      "JointFinite.speech",
+      "JointFinite.abc_full",
+      "JointFinite.J01_canonical_identity",
+      "JointFinite.canonical_original_via_component",
+      "JointFinite.canonical_root_via_component",
+      "JointFinite.canonical_necessary_via_inherited",
+      "JointFinite.canonical_uniform_via_inherited",
+      "JointFinite.canonical_abc_same_g",
+      "JointFinite.generic_abc_via_component",
+      "JointFinite.abc_live_receipt_and_transport",
+      "JointFinite.field_admissible",
+      "JointFinite.field_req_sound",
+      "JointFinite.field_req_exhaustive",
+      "JointFinite.field_qualified",
+      "JointFinite.field_classification",
+      "JointFinite.field_conformance",
+      "JointFinite.field_use_sound",
+      "JointFinite.field_role",
+      "JointFinite.field_visible",
+      "JointFinite.field_anchor",
+      "JointFinite.field_cnd",
+      "JointFinite.field_connected",
+      "JointFinite.field_coverage_without_cnd",
+      "JointFinite.field_guarded",
+      "JointFinite.field_positive",
+      "JointFinite.complete_provider_exists_and_unique",
+      "JointFinite.mixed_occurrence_real",
+      "JointFinite.veracity_package",
+      "JointFinite.veracity_factive",
+      "JointFinite.veracity_via_component",
+      "JointFinite.honesty_equivalence_via_component",
+      "JointFinite.created_speaker_normative_boundary",
+      "JointFinite.source_live_knowledge_and_nonspeech_conformance",
+      "JointFinite.PositiveReach",
+      "JointFinite.ancestor_transitive",
+      "JointFinite.direct_is_ancestor",
+      "JointFinite.ancestor_decomposition",
+      "JointFinite.reach_is_ancestor",
+      "JointFinite.ancestor_is_reach",
+      "JointFinite.J02_original_resource_provision",
+      "JointFinite.J03_concrete_receipt",
+      "JointFinite.J04_field_target_link",
+      "JointFinite.J05_positive_reachability",
+      "JointFinite.J05_live_productive_support",
+      "JointFinite.reception_and_direct_support_distinct",
+      "JointFinite.J06_complete_incoming_inventory",
+      "JointFinite.J07_no_incoming_outside_source",
+      "JointFinite.J08_actual_mode_realization",
+      "JointFinite.J09_fitting_source_realization",
+      "JointFinite.J10_truth_grounding",
+      "JointFinite.J11_token_support_grounding",
+      "JointFinite.J12_support_not_ownership",
+      "JointFinite.J13_genuine_agent_identity",
+      "JointFinite.J14_outside_boundary",
+      "JointFinite.J15_strong_ownership_extension",
+      "JointFinite.selectedSupport",
+      "JointFinite.below",
+      "JointFinite.localCover",
+      "JointFinite.finite_ancestry_compatibility",
+      "JointFinite.no_source_or_created_authentication",
+      "JointFinite.good_source_antecedent_boundary"
+    ],
+    "joint_named_source_theorems": [
+      "JointFinite.abc_full",
+      "JointFinite.J01_canonical_identity",
+      "JointFinite.canonical_original_via_component",
+      "JointFinite.canonical_root_via_component",
+      "JointFinite.canonical_necessary_via_inherited",
+      "JointFinite.canonical_uniform_via_inherited",
+      "JointFinite.canonical_abc_same_g",
+      "JointFinite.generic_abc_via_component",
+      "JointFinite.abc_live_receipt_and_transport",
+      "JointFinite.field_admissible",
+      "JointFinite.field_req_sound",
+      "JointFinite.field_req_exhaustive",
+      "JointFinite.field_qualified",
+      "JointFinite.field_classification",
+      "JointFinite.field_conformance",
+      "JointFinite.field_use_sound",
+      "JointFinite.field_role",
+      "JointFinite.field_visible",
+      "JointFinite.field_anchor",
+      "JointFinite.field_cnd",
+      "JointFinite.field_connected",
+      "JointFinite.field_coverage_without_cnd",
+      "JointFinite.field_guarded",
+      "JointFinite.field_positive",
+      "JointFinite.complete_provider_exists_and_unique",
+      "JointFinite.mixed_occurrence_real",
+      "JointFinite.veracity_package",
+      "JointFinite.veracity_factive",
+      "JointFinite.veracity_via_component",
+      "JointFinite.honesty_equivalence_via_component",
+      "JointFinite.created_speaker_normative_boundary",
+      "JointFinite.source_live_knowledge_and_nonspeech_conformance",
+      "JointFinite.ancestor_transitive",
+      "JointFinite.direct_is_ancestor",
+      "JointFinite.ancestor_decomposition",
+      "JointFinite.reach_is_ancestor",
+      "JointFinite.ancestor_is_reach",
+      "JointFinite.J02_original_resource_provision",
+      "JointFinite.J03_concrete_receipt",
+      "JointFinite.J04_field_target_link",
+      "JointFinite.J05_positive_reachability",
+      "JointFinite.J05_live_productive_support",
+      "JointFinite.reception_and_direct_support_distinct",
+      "JointFinite.J06_complete_incoming_inventory",
+      "JointFinite.J07_no_incoming_outside_source",
+      "JointFinite.J08_actual_mode_realization",
+      "JointFinite.J09_fitting_source_realization",
+      "JointFinite.J10_truth_grounding",
+      "JointFinite.J11_token_support_grounding",
+      "JointFinite.J12_support_not_ownership",
+      "JointFinite.J13_genuine_agent_identity",
+      "JointFinite.J14_outside_boundary",
+      "JointFinite.J15_strong_ownership_extension",
+      "JointFinite.finite_ancestry_compatibility",
+      "JointFinite.no_source_or_created_authentication",
+      "JointFinite.good_source_antecedent_boundary"
+    ]
+  },
+  "declarations_read_back": 88,
+  "theorems_axiom_audited": 56,
+  "declaration_bodies_read_back": 38,
+  "theorem_bodies_read_back": 15,
+  "definition_bodies_read_back": 23,
+  "required_component_calls": {
+    "AnchoredSourceBridge.every_field_positive": [
+      "JointFinite.field_positive"
+    ],
+    "AnchoredSourceBridge.global_coverage_of_qualified_anchor": [
+      "JointFinite.field_coverage_without_cnd"
+    ],
+    "AnchoredSourceBridge.guarded_common_original_provider": [
+      "JointFinite.field_guarded"
+    ],
+    "AnchoredSourceBridge.unique_complete_provider": [
+      "JointFinite.complete_provider_exists_and_unique"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness": [
+      "JointFinite.generic_abc_via_component"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited": [
+      "JointFinite.canonical_uniform_via_inherited"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original": [
+      "JointFinite.canonical_abc_same_g"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited": [
+      "JointFinite.canonical_necessary_via_inherited"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion": [
+      "JointFinite.canonical_original_via_component"
+    ],
+    "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root": [
+      "JointFinite.canonical_necessary_via_inherited"
+    ],
+    "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root": [
+      "JointFinite.canonical_uniform_via_inherited"
+    ],
+    "VeracityBoundary.veracity_iff_no_counterfeit": [
+      "JointFinite.honesty_equivalence_via_component"
+    ],
+    "VeracityBoundary.veracity_of_coverage": [
+      "JointFinite.veracity_via_component"
+    ]
+  },
+  "false_claims_rejected": 4,
+  "fresh_objects": {
+    "SourceIdentityDerived.olean": "ee38c90885c817b7ef9f424fcb3e9c7e2ea2978f311dcdfdb99fa4fca21f795f",
+    "JointFiniteInterpretation.olean": "51c44726c3d28f1a7b7e2e0c809758c052bfe62e21ee74a62ba94a20c38c0a6f",
+    "AnchoredSourceBridge.olean": "3aae9182c4fb74d65e776863e6a2e80f3eb6c84f8438764b3032bc4e2ceba30b",
+    "OriginalBearerBridge.olean": "fd1d83e5f07251eafca49e75aafa98daa37016451ff1e79734b5f5bcf2f2454d",
+    "VeracityBoundary.olean": "8f9c81f4f4ab7f0817cd6344433e787d6135306eeb3a26f9212d44d543aa5310"
+  },
+  "imported_objects": 1801,
+  "official_dependency_packages": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+    }
+  ],
+  "lean_path": "tranche20/foundational-audit/joint-model/verification-final-v2/objects:tranche20/hase-positive-research/toolchain-preparation/dependencies/mathlib/.lake/build/lib/lean:tranche20/hase-positive-research/toolchain-preparation/dependencies/plausible/.lake/build/lib/lean:tranche20/hase-positive-research/toolchain-preparation/dependencies/LeanSearchClient/.lake/build/lib/lean:tranche20/hase-positive-research/toolchain-preparation/dependencies/importGraph/.lake/build/lib/lean:tranche20/hase-positive-research/toolchain-preparation/dependencies/proofwidgets/.lake/build/lib/lean:tranche20/hase-positive-research/toolchain-preparation/dependencies/aesop/.lake/build/lib/lean:tranche20/hase-positive-research/toolchain-preparation/dependencies/Qq/.lake/build/lib/lean:tranche20/hase-positive-research/toolchain-preparation/dependencies/batteries/.lake/build/lib/lean:tranche20/hase-positive-research/toolchain-preparation/dependencies/Cli/.lake/build/lib/lean",
+  "commands": [
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "--version"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "started_utc": "2026-10-07T10:15:17.117073+00:00",
+      "elapsed_seconds": 0.028,
+      "exit_code": 0,
+      "log": "compiler-version.log",
+      "log_sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/original-bearer-bridge",
+        "-o",
+        "tranche20/foundational-audit/joint-model/verification-final-v2/objects/SourceIdentityDerived.olean",
+        "tranche20/foundational-audit/original-bearer-bridge/SourceIdentityDerived.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/original-bearer-bridge",
+      "started_utc": "2026-10-07T10:15:17.145236+00:00",
+      "elapsed_seconds": 1.091,
+      "exit_code": 0,
+      "log": "SourceIdentityDerived.log",
+      "log_sha256": "5da7cc7b59d2191904c64c7d49429da7b0cc1d015eba0af5087d6fe99154d1dd"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/original-bearer-bridge",
+        "-o",
+        "tranche20/foundational-audit/joint-model/verification-final-v2/objects/OriginalBearerBridge.olean",
+        "tranche20/foundational-audit/original-bearer-bridge/OriginalBearerBridge.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/original-bearer-bridge",
+      "started_utc": "2026-10-07T10:15:18.236896+00:00",
+      "elapsed_seconds": 0.96,
+      "exit_code": 0,
+      "log": "OriginalBearerBridge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/anchored-source-bridge/src",
+        "-o",
+        "tranche20/foundational-audit/joint-model/verification-final-v2/objects/AnchoredSourceBridge.olean",
+        "tranche20/foundational-audit/anchored-source-bridge/src/AnchoredSourceBridge.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/anchored-source-bridge/src",
+      "started_utc": "2026-10-07T10:15:19.197536+00:00",
+      "elapsed_seconds": 0.369,
+      "exit_code": 0,
+      "log": "AnchoredSourceBridge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/veracity-boundary/src",
+        "-o",
+        "tranche20/foundational-audit/joint-model/verification-final-v2/objects/VeracityBoundary.olean",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityBoundary.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/veracity-boundary/src",
+      "started_utc": "2026-10-07T10:15:19.567308+00:00",
+      "elapsed_seconds": 0.267,
+      "exit_code": 0,
+      "log": "VeracityBoundary.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model/src",
+        "-o",
+        "tranche20/foundational-audit/joint-model/verification-final-v2/objects/JointFiniteInterpretation.olean",
+        "tranche20/foundational-audit/joint-model/src/JointFiniteInterpretation.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model/src",
+      "started_utc": "2026-10-07T10:15:19.834235+00:00",
+      "elapsed_seconds": 10.044,
+      "exit_code": 0,
+      "log": "JointFiniteInterpretation.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/tests/Acceptance.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "started_utc": "2026-10-07T10:15:29.878626+00:00",
+      "elapsed_seconds": 0.827,
+      "exit_code": 0,
+      "log": "Acceptance.log",
+      "log_sha256": "b25cf5403882937e23f35950e9071f43727d56ef734d125871e98e93c6c33f56"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/tests/RejectedClaims.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "started_utc": "2026-10-07T10:15:30.706604+00:00",
+      "elapsed_seconds": 0.772,
+      "exit_code": 1,
+      "log": "RejectedClaims.log",
+      "log_sha256": "a39d245966db50d04c170fbad77f076de3bbf25c0884119339c6c57f8e6bb904"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/ReadbackAudit.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "started_utc": "2026-10-07T10:15:31.479654+00:00",
+      "elapsed_seconds": 10.507,
+      "exit_code": 0,
+      "log": "ReadbackAudit.log",
+      "log_sha256": "02f41392bb097b07ca91371eabc7a578c382004ee8903297db52ad473ed62456"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/ProofReadback.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "started_utc": "2026-10-07T10:15:42.020324+00:00",
+      "elapsed_seconds": 4.925,
+      "exit_code": 0,
+      "log": "ProofReadback.log",
+      "log_sha256": "c2bfc966636617e0ac29dc19ff3d7119246d044358bb03ab42b8d672bf139845"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model",
+        "tranche20/foundational-audit/joint-model/ImportClosure.lean"
+      ],
+      "cwd": "tranche20/foundational-audit/joint-model",
+      "started_utc": "2026-10-07T10:15:46.964331+00:00",
+      "elapsed_seconds": 0.75,
+      "exit_code": 0,
+      "log": "ImportClosure.log",
+      "log_sha256": "3be403bf04a0d31a69f32a31664d98e812f729e29e6f847b2c6cf5b55cbc950b"
+    }
+  ],
+  "source_or_dependency_mutations": "NONE",
+  "network_or_installation": "NONE",
+  "evidence_hashes": {
+    "AXIOM_AUDIT.json": "a6d92b3dbe9df0378dac0e8e5167e89424be4d337e0ff5773724332de732be4a",
+    "Acceptance.log": "b25cf5403882937e23f35950e9071f43727d56ef734d125871e98e93c6c33f56",
+    "AnchoredSourceBridge.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CACHED_OBJECTS_BEFORE.json": "988a249d0fdce07fdf2bfb3bb110206b8b95d53824504214dbf609907770d977",
+    "COMMANDS.json": "686ff86a504360613f6637467d219fc224fd899ebe8c00ec162731d8cf6c78a0",
+    "IMPORT_CLOSURE.json": "b7c848640f8739510d5e8f2df44d0697c898ec5951e48d67f4e7ff86ff27d282",
+    "ImportClosure.log": "3be403bf04a0d31a69f32a31664d98e812f729e29e6f847b2c6cf5b55cbc950b",
+    "JointFiniteInterpretation.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "OriginalBearerBridge.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PROOF_READBACKS.json": "890ae20a8b3689baf6893247c45b30873af17a9f5d987fda169b93e8d38d09fb",
+    "ProofReadback.log": "c2bfc966636617e0ac29dc19ff3d7119246d044358bb03ab42b8d672bf139845",
+    "READBACKS.json": "fbde59362f6734f63a2d0639ac56ee04736a5376572407043ae3b43799a30b15",
+    "REJECTIONS.json": "0d5c3c1274b2ff54d2cf2d558d4a16b0dd232469ba5ea1bb7c9d48bca4d8c82b",
+    "ReadbackAudit.log": "02f41392bb097b07ca91371eabc7a578c382004ee8903297db52ad473ed62456",
+    "RejectedClaims.log": "a39d245966db50d04c170fbad77f076de3bbf25c0884119339c6c57f8e6bb904",
+    "SOURCE_BINDING_AFTER.json": "9518969780af10fb6f89fda92591b667da199057d929d3b6bc26b2c3812cd136",
+    "SOURCE_BINDING_BEFORE.json": "b368f3cf0ef9cf4922564e52534eb8e0b69bb8295473c2c5ecdf6e7c4df210d4",
+    "SourceIdentityDerived.log": "5da7cc7b59d2191904c64c7d49429da7b0cc1d015eba0af5087d6fe99154d1dd",
+    "VeracityBoundary.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiler-version.log": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+  }
+}

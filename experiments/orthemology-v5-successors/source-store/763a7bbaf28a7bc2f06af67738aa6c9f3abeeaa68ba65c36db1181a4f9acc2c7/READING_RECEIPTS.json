@@ -1,0 +1,164 @@
+{
+  "schema": "targeted-context-reading-receipts/1",
+  "author": "محمد بن صالح العثيمين",
+  "reading_date_utc": "2026-10-07",
+  "session_start_utc": "2026-10-07T17:47:14Z",
+  "reading_status": "new_targeted_reading",
+  "prior_exact_receipt": null,
+  "medium": "official_site_arabic_lecture_transcription",
+  "publisher_site": "الموقع الرسمي لفضيلة الشيخ محمد بن صالح بن عثيمين",
+  "edition": "Official old.binothaimeen.net web transcription; print edition not established",
+  "print_edition_verified": false,
+  "print_pages": null,
+  "audio_listened": false,
+  "timing_precision": "Website section boundaries only; not exact spoken-locus timestamps",
+  "line_number_scope": "Rendered web-tool snapshot; line numbers can change with site layout",
+  "receipts": [
+    {
+      "id": "U1",
+      "work": "تفسير سورة النساء - 6",
+      "verse": "4:15",
+      "url": "https://old.binothaimeen.net/content/13876",
+      "read_lines": [
+        322,
+        341
+      ],
+      "core_lines": [
+        336,
+        340
+      ],
+      "section_start": "00:35:06",
+      "next_section_start": "01:21:06",
+      "reading_status": "new_targeted_reading",
+      "complete_relevant_argument_read": true,
+      "print_page": null,
+      "exact_spoken_locus_timestamp": null
+    },
+    {
+      "id": "U2",
+      "work": "تفسير سورة النساء - 26",
+      "verse": "4:87",
+      "url": "https://old.binothaimeen.net/content/13896",
+      "read_lines": [
+        307,
+        399
+      ],
+      "core_lines": [
+        [
+          341,
+          364
+        ],
+        [
+          392,
+          399
+        ]
+      ],
+      "section_start": "00:48:14",
+      "next_section_start": "01:11:32",
+      "reading_status": "new_targeted_reading",
+      "complete_relevant_argument_read": true,
+      "print_page": null,
+      "exact_spoken_locus_timestamp": null
+    },
+    {
+      "id": "U3",
+      "work": "تفسير سورة النساء - 33",
+      "verse": "4:114",
+      "url": "https://old.binothaimeen.net/content/13904",
+      "read_lines": [
+        380,
+        427
+      ],
+      "core_lines": [
+        405,
+        413
+      ],
+      "section_start": "00:53:48",
+      "next_section_start": "01:24:28",
+      "reading_status": "new_targeted_reading",
+      "complete_relevant_argument_read": true,
+      "print_page": null,
+      "exact_spoken_locus_timestamp": null
+    },
+    {
+      "id": "U4",
+      "work": "تفسير سورة الشورى - 6",
+      "verse": "digression between 42:17 and 42:18",
+      "url": "https://old.binothaimeen.net/content/14192",
+      "read_lines": [
+        228,
+        247
+      ],
+      "core_lines": [
+        234,
+        236
+      ],
+      "section_start": "00:00:03",
+      "next_section_start": "00:57:35",
+      "reading_status": "new_targeted_reading",
+      "complete_relevant_argument_read": true,
+      "print_page": null,
+      "exact_spoken_locus_timestamp": null
+    },
+    {
+      "id": "U5",
+      "work": "تفسير سورة غافر - 2",
+      "verse": "40:6",
+      "url": "https://old.binothaimeen.net/content/14157",
+      "read_lines": [
+        273,
+        293
+      ],
+      "core_lines": [
+        283,
+        287
+      ],
+      "section_start": "01:03:02",
+      "next_section_start": "01:11:15",
+      "reading_status": "new_targeted_reading",
+      "complete_relevant_argument_read": true,
+      "print_page": null,
+      "exact_spoken_locus_timestamp": null
+    },
+    {
+      "id": "U6",
+      "work": "تفسير سورة المائدة - 24",
+      "verse": "5:73 explaining 21:22 and 23:91",
+      "url": "https://old.binothaimeen.net/content/13941",
+      "read_lines": [
+        408,
+        434
+      ],
+      "core_lines": [
+        426,
+        433
+      ],
+      "section_start": "01:19:01",
+      "next_section_start": null,
+      "reading_status": "new_targeted_reading",
+      "complete_relevant_argument_read": true,
+      "print_page": null,
+      "exact_spoken_locus_timestamp": null
+    }
+  ],
+  "failed_or_unavailable_routes": [
+    {
+      "source": "https://tafsir.app/ibn-uthaymeen/23/91",
+      "result": "inaccessible via web tool",
+      "inference_limit": "No negative existence claim"
+    },
+    {
+      "source": "https://tafsir.app/ibn-uthaymeen/21/22",
+      "result": "inaccessible via web tool",
+      "inference_limit": "No negative existence claim"
+    },
+    {
+      "source": "https://tafsir.app/ibn-uthaymeen/42/1",
+      "result": "shell request HTTP 403; no bypass attempted"
+    },
+    {
+      "source": "connected Tafsir plugin source registry",
+      "result": "28 sources listed; Ibn Uthaymin absent"
+    }
+  ]
+}

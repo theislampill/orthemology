@@ -1,0 +1,192 @@
+INDEPENDENT_BEGIN IndependentOriginalBearerReview.broad_abc_without_representation
+@IndependentOriginalBearerReview.broad_abc_without_representation.{u_1, u_2, u_3,
+    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}
+  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T),
+  (∃ t, @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{u_1, u_2, u_3, u_4} W B R T s t) →
+    @Orthemology.Tranche20.OriginalBearerBridge.Completion.{u_1, u_2, u_3, u_4} W B R T s →
+      @Orthemology.Tranche20.OriginalBearerBridge.Realisation.{u_1, u_2, u_3, u_4} W B R T s →
+        @Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{u_1, u_2, u_3, u_4} W B R T s →
+          @Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{u_1, u_2, u_3, u_4} W B R T s →
+            @Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{u_1, u_2, u_3, u_4} W B R T s →
+              ∃ t r g,
+                And (@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{u_1, u_2, u_3, u_4} W B R T s t r g)
+                  (And
+                    (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W B
+                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s) g)
+                    (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{u_1, u_2, u_3, u_4} W B R T s g))
+'IndependentOriginalBearerReview.broad_abc_without_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+INDEPENDENT_END IndependentOriginalBearerReview.broad_abc_without_representation
+INDEPENDENT_BEGIN IndependentOriginalBearerReview.representation_is_needed_for_binary_uniform_target
+IndependentOriginalBearerReview.representation_is_needed_for_binary_uniform_target : And
+  (∃ t,
+    @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Bool Bool Bool Unit
+      IndependentOriginalBearerReview.representationMismatch t)
+  (And
+    (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Bool Bool Bool Unit
+      IndependentOriginalBearerReview.representationMismatch)
+    (And
+      (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Bool Bool Bool Unit
+        IndependentOriginalBearerReview.representationMismatch)
+      (And
+        (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Bool Bool Bool Unit
+          IndependentOriginalBearerReview.representationMismatch)
+        (And
+          (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Bool Bool Bool Unit
+            IndependentOriginalBearerReview.representationMismatch)
+          (And
+            (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Bool Bool Bool Unit
+              IndependentOriginalBearerReview.representationMismatch)
+            (And
+              (Not
+                (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Bool Bool Bool Unit
+                  IndependentOriginalBearerReview.representationMismatch))
+              (And
+                (∃ g,
+                  And
+                    (@Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Bool Bool Bool Unit
+                      IndependentOriginalBearerReview.representationMismatch g)
+                    (And
+                      (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Bool
+                        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit
+                          IndependentOriginalBearerReview.representationMismatch)
+                        g)
+                      (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{0, 0, 0, 0} Bool Bool Bool Unit
+                        IndependentOriginalBearerReview.representationMismatch g)))
+                (And
+                  (∀ (w x : Bool),
+                    Not
+                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit
+                        IndependentOriginalBearerReview.representationMismatch w x x))
+                  (And
+                    (∀ (w y x : Bool),
+                      @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit
+                          IndependentOriginalBearerReview.representationMismatch w y x →
+                        And
+                          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool
+                            Unit IndependentOriginalBearerReview.representationMismatch w y)
+                          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool
+                            Unit IndependentOriginalBearerReview.representationMismatch w x))
+                    (Not
+                      (∃ g,
+                        @Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool Bool
+                          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool
+                            Unit IndependentOriginalBearerReview.representationMismatch)
+                          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit
+                            IndependentOriginalBearerReview.representationMismatch)
+                          g)))))))))))
+'IndependentOriginalBearerReview.representation_is_needed_for_binary_uniform_target' depends on axioms: [propext,
+ Quot.sound]
+INDEPENDENT_END IndependentOriginalBearerReview.representation_is_needed_for_binary_uniform_target
+INDEPENDENT_BEGIN IndependentOriginalBearerReview.plural_full
+IndependentOriginalBearerReview.plural_full : @Orthemology.Tranche20.OriginalBearerBridge.FullPremises.{0, 0, 0, 0} Bool
+  (Prod.{0, 0} Bool Bool) (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural
+'IndependentOriginalBearerReview.plural_full' depends on axioms: [propext, Quot.sound]
+INDEPENDENT_END IndependentOriginalBearerReview.plural_full
+INDEPENDENT_BEGIN IndependentOriginalBearerReview.plural_nonvacuous_and_no_common_bearer
+IndependentOriginalBearerReview.plural_nonvacuous_and_no_common_bearer : And
+  (@Ne.{1} (Prod.{0, 0} Bool Bool) (@Prod.mk.{0, 0} Bool Bool false false) (@Prod.mk.{0, 0} Bool Bool true false))
+  (And
+    (∀ (field : Bool),
+      And
+        (@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)
+          (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural field
+          (@Prod.mk.{0, 0} Bool Bool field false) (@Prod.mk.{0, 0} Bool Bool field false))
+        (And
+          (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool (Prod.{0, 0} Bool Bool)
+            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)
+              (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural)
+            (@Prod.mk.{0, 0} Bool Bool field false))
+          (And
+            (@Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool (Prod.{0, 0} Bool Bool)
+              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)
+                (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural)
+              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)
+                (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural)
+              (@Prod.mk.{0, 0} Bool Bool field false))
+            (And
+              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{0, 0, 0, 0} Bool
+                (Prod.{0, 0} Bool Bool) (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural false
+                (@Prod.mk.{0, 0} Bool Bool field true))
+              (And
+                (Not
+                  (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool (Prod.{0, 0} Bool Bool)
+                    (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool
+                      (Prod.{0, 0} Bool Bool) (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural)
+                    (@Prod.mk.{0, 0} Bool Bool field true)))
+                (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)
+                  (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural false
+                  (@Prod.mk.{0, 0} Bool Bool field false) (@Prod.mk.{0, 0} Bool Bool field true)))))))
+    (Not
+      (∃ g,
+        ∀ (t : Bool),
+          ∃ r,
+            @Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)
+              (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural t r g)))
+'IndependentOriginalBearerReview.plural_nonvacuous_and_no_common_bearer' depends on axioms: [propext, Quot.sound]
+INDEPENDENT_END IndependentOriginalBearerReview.plural_nonvacuous_and_no_common_bearer
+INDEPENDENT_BEGIN IndependentOriginalBearerReview.witness_local_sufficiency
+@IndependentOriginalBearerReview.witness_local_sufficiency.{u_1, u_2, u_3,
+    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}
+  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T) (t : T) (r : R) (g : B),
+  @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{u_1, u_2, u_3, u_4} W B R T s t →
+    @Orthemology.Tranche20.OriginalBearerBridge.Framework.relevant.{u_1, u_2, u_3, u_4} W B R T s r t →
+      @Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource.{u_1, u_2, u_3, u_4} W B R T s r →
+        @Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s
+            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g →
+          @Orthemology.Tranche20.OriginalBearerBridge.Framework.intrinsic.{u_1, u_2, u_3, u_4} W B R T s g r →
+            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{u_1, u_2, u_3, u_4} W B R T s
+                  (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g →
+                @Orthemology.Tranche20.OriginalBearerBridge.Framework.resourceReceived.{u_1, u_2, u_3, u_4} W B R T s
+                  r) →
+              (Not
+                    (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W B
+                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s)
+                      g) →
+                  @Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{u_1, u_2, u_3, u_4} W B R T s
+                    (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g) →
+                ((∃ w,
+                      @Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{u_1, u_2, u_3, u_4} W B R T s
+                        w g) →
+                    @Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{u_1, u_2, u_3, u_4} W B R T s
+                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g) →
+                  And (@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{u_1, u_2, u_3, u_4} W B R T s t r g)
+                    (And
+                      (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W B
+                        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s)
+                        g)
+                      (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{u_1, u_2, u_3, u_4} W B R T s
+                        g))
+'IndependentOriginalBearerReview.witness_local_sufficiency' depends on axioms: [propext, Classical.choice, Quot.sound]
+INDEPENDENT_END IndependentOriginalBearerReview.witness_local_sufficiency
+INDEPENDENT_BEGIN IndependentOriginalBearerReview.occurrence_is_not_free
+IndependentOriginalBearerReview.occurrence_is_not_free : And
+  (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Unit Nat Unit Unit
+    IndependentOriginalBearerReview.noOccurrence)
+  (And
+    (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Unit Nat Unit Unit
+      IndependentOriginalBearerReview.noOccurrence)
+    (And
+      (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Unit Nat Unit Unit
+        IndependentOriginalBearerReview.noOccurrence)
+      (And
+        (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Unit Nat Unit Unit
+          IndependentOriginalBearerReview.noOccurrence)
+        (And
+          (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Unit Nat Unit Unit
+            IndependentOriginalBearerReview.noOccurrence)
+          (And
+            (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Unit Nat Unit Unit
+              IndependentOriginalBearerReview.noOccurrence)
+            (And
+              (Not
+                (∃ t,
+                  @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Unit Nat Unit Unit
+                    IndependentOriginalBearerReview.noOccurrence t))
+              (Not
+                (∃ g,
+                  @Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Unit Nat Unit Unit
+                    IndependentOriginalBearerReview.noOccurrence g))))))))
+'IndependentOriginalBearerReview.occurrence_is_not_free' does not depend on any axioms
+INDEPENDENT_END IndependentOriginalBearerReview.occurrence_is_not_free

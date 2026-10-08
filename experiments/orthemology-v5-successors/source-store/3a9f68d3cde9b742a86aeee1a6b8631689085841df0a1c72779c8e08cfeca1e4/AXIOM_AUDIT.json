@@ -1,0 +1,391 @@
+[
+  {
+    "name": "AnchoredSourceBridge.mode_satisfaction_of_classification_conformance",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.global_coverage_of_qualified_anchor",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.guarded_common_original_provider",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.guarded_common_original_provider_of_global_cnd",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.split_signature",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.split_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.duplicate_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.unanchored_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.hidden_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.defective_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.empty_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_use_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_role_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.full_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.outside_duplicate_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.adverse_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.aggregate_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_source_mode",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_cnd",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_anchor",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.separated_complete_only_at_e",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.separated_not_connected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_connectedness",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.arbitrary_graph_not_faithful",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_original_use",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_mode_role",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_visibility",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.coarse_effect_not_full_account",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.mixed_occurrence_positive",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.mixed_occurrence_adverse",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.faithful_derived_agency_and_mediation",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.outside_field_necessary_original",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.assertion_ownership_separate",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.arbitrary_bundle_rejected",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_classification",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.missing_conformance",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.empty_inventory_singleton",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.full_nonvacuous_model",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.outside_duplication_preserves_field_uniqueness",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.principal_application_with_outside_duplication",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.ModalAbility.both_have_interpreted_finite_ability",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.ModalAbility.intact_finite_power_differentiated_actual_production",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.ModalAbility.actual_partial_fixture_mapping",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.ModalAbility.finite_ability_does_not_supply_source_mode",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  {
+    "name": "AnchoredSourceBridge.overlap_symmetric",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.source_mode_of_mode_satisfaction",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.represented_across_overlap",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.complete_along_path",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.global_coverage_of_anchor",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.field_cnd_of_global_cnd",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.represented_rivals_equal",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.actual_rivals_equal",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.mode_satisfaction_iff_global_coverage",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.source_mode_iff_global_coverage",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.positive_along_path",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.every_field_positive",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.complete_providers_equal_at_positive",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.complete_provider_exists",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.unique_complete_provider",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.finite_quantifiers",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.singleton_connected",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.hub_connected",
+    "axioms": []
+  },
+  {
+    "name": "AnchoredSourceBridge.Controls.ModalAbility.matching_outcome_is_not_same_token",
+    "axioms": []
+  }
+]

@@ -1,0 +1,216 @@
+{
+  "status": "ALL_BOUND_DEFINITION_AND_SOURCE_SPANS_VALID",
+  "checked_utc": "2026-10-07T16:24:29.241990+00:00",
+  "checks": [
+    {
+      "id": "OTC-D1",
+      "line_count": 141,
+      "ranges": [
+        [
+          16,
+          25
+        ],
+        [
+          41,
+          60
+        ],
+        [
+          126,
+          139
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-D2",
+      "line_count": 165,
+      "ranges": [
+        [
+          18,
+          33
+        ],
+        [
+          43,
+          61
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-D3",
+      "line_count": 121,
+      "ranges": [
+        [
+          1,
+          43
+        ],
+        [
+          49,
+          62
+        ],
+        [
+          99,
+          113
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-D4",
+      "line_count": 91,
+      "ranges": [
+        [
+          41,
+          75
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-D5",
+      "line_count": 361,
+      "ranges": [
+        [
+          21,
+          45
+        ],
+        [
+          174,
+          183
+        ],
+        [
+          242,
+          266
+        ],
+        [
+          306,
+          359
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-D6",
+      "line_count": 145,
+      "ranges": [
+        [
+          12,
+          30
+        ],
+        [
+          79,
+          101
+        ],
+        [
+          132,
+          143
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-D7",
+      "line_count": 219,
+      "ranges": [
+        [
+          8,
+          71
+        ],
+        [
+          195,
+          219
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-D8",
+      "line_count": 376,
+      "ranges": [
+        [
+          14,
+          22
+        ],
+        [
+          34,
+          104
+        ],
+        [
+          279,
+          290
+        ],
+        [
+          320,
+          348
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-D9",
+      "line_count": 51,
+      "ranges": [
+        [
+          1,
+          51
+        ]
+      ],
+      "hash_and_ranges_valid": true
+    },
+    {
+      "id": "OTC-R1",
+      "line_count": 1947,
+      "all_spans_present_once_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p165",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p166",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p167",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p168",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p196",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p197",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p198",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p199",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p203",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R2-p204",
+      "image_exists_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R3",
+      "line_count": 982,
+      "all_spans_present_once_and_hash_valid": true
+    },
+    {
+      "id": "OTC-R4",
+      "line_count": 1087,
+      "all_spans_present_once_and_hash_valid": true
+    }
+  ]
+}

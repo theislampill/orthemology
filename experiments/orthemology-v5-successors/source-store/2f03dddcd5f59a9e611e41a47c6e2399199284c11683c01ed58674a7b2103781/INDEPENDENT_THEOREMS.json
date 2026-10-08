@@ -1,0 +1,22 @@
+[
+  "canonical_witness_exact",
+  "all_original_witnesses_exact",
+  "resources_are_not_provider_relabels",
+  "detached_component_witnesses_do_not_join",
+  "switched_is_connected",
+  "omitted_h_edge_is_live",
+  "omitted_h_breaks_stored_reachability",
+  "omitted_h_breaks_joining_inventory",
+  "original_h_has_no_positive_path_inside",
+  "enlarged_basic_guards_survive",
+  "enlarged_outside_partition",
+  "enlarged_paths_preserve_partition",
+  "enlarged_is_not_connected",
+  "enlarged_has_no_common_provider",
+  "contextual_truth_does_not_create_ownership",
+  "every_owned_assertion_has_existing_owner_and_token_event",
+  "absent_creatures_have_no_world_indexed_activity",
+  "static_production_is_properly_world_gated",
+  "received_capacity_and_false_exercise_do_not_transfer",
+  "abc_does_not_force_added_premises"
+]

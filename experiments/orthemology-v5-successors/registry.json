@@ -1,7 +1,7 @@
 {
   "baseline_commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
   "baseline_tree": "08a6452e50e8e4791d02410d1c1732875e520f2e",
-  "cutoff": "sixteenth-final",
+  "cutoff": "twentieth-final",
   "programme": "Orthemology v5",
   "records": {
     "BASELINE_BINDING": {
@@ -10,7 +10,7 @@
     },
     "CALCULUS_MAP": {
       "path": "docs/provenance/v5-successors/CALCULUS_MAP.json",
-      "sha256": "e8ae4dfd07d0decd507850db4efc988087ef69eb9a0ae7327c7566f833979556"
+      "sha256": "d0644ef40458d17ac19710e4d1ecdc2cc974a54d73b4053641979f9ce1f74759"
     },
     "CONTROL_DISPOSITIONS": {
       "path": "docs/provenance/v5-successors/CONTROL_DISPOSITIONS.json",
@@ -18,27 +18,27 @@
     },
     "EMPIRICAL_SCOPE": {
       "path": "docs/provenance/v5-successors/EMPIRICAL_SCOPE.json",
-      "sha256": "18e995158833f812ce0a1dadd23c4e7ac62dca1a928e01dee044d1a9770b1948"
+      "sha256": "8cdbb2c057934246b3d7904a05f9085122d744342d7f56a857a6bdf739e7d4ae"
     },
     "EVIDENCE_BINDINGS": {
       "path": "docs/provenance/v5-successors/EVIDENCE_BINDINGS.json",
-      "sha256": "5482d2ecfacd83efccc46d3baa2544a80bcaf682c46f43ab3c2b2b08cc00e172"
+      "sha256": "5da3fc5207ad200f6677f7b12306655c3a6d1388c533a343cb1e3d0718a89673"
     },
     "FOUNDATIONAL_FRONTIER": {
       "path": "docs/provenance/v5-successors/FOUNDATIONAL_FRONTIER.json",
-      "sha256": "61d5720a0497359f9ab4e1804c08b4a0490845cb6a6112e2ae521b007f570a99"
+      "sha256": "b4d5194f909ebedf73af5c2cf49b59151a0b1498abc9dad8bcbb0f9872c11fef"
     },
     "INTEGRATION_VERIFICATION": {
       "path": "docs/provenance/v5-successors/INTEGRATION_VERIFICATION.json",
-      "sha256": "13e91c6ba844a2eb1fcc8b91d81fc92fae7fdf757653ed5598d381393986dfc1"
+      "sha256": "21b607ae6f57b98f3f95d93d61841240f4e73a4621879a1325e9abeb98b78c05"
     },
     "INTERNAL_REVIEW_DISPOSITION": {
       "path": "docs/provenance/v5-successors/INTERNAL_REVIEW_DISPOSITION.json",
-      "sha256": "d58118eec057632984767601946cd28ab3d5406ed39c142bcae8a04a252d94a9"
+      "sha256": "02b7f8958172b44360c656674cad1ae76d6d4be5a21fd1986ea14256013aaf97"
     },
     "OBLIGATION_CROSSWALK": {
       "path": "docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json",
-      "sha256": "a30df89c1a0a2d40a2efd8ed48c91b660c034d0ef127a9f16020a887c6675e83"
+      "sha256": "d70d348ef8410f3be637fb5e1f65099620cd79fa1322b70cd07eda5354a85fe2"
     },
     "PRESERVATION": {
       "path": "docs/provenance/v5-successors/PRESERVATION.json",
@@ -46,23 +46,23 @@
     },
     "PUBLIC_PROJECTION": {
       "path": "docs/provenance/v5-successors/PUBLIC_PROJECTION.json",
-      "sha256": "ae8a16bb9c494569f6275fba1ddf6638944a8a35f4f21cc6881ce897cb247e81"
+      "sha256": "9a81a328687c931548cd4d1deb3beb7ba9428380917f95b26689b43c04b8bf13"
     },
     "RESULT_STATUS": {
       "path": "docs/provenance/v5-successors/RESULT_STATUS.json",
-      "sha256": "347cbfd17993c12f874787a15836ce6e65f6a79bb9ef6a73309c48004b8c1907"
+      "sha256": "3e5917699c40b50fbd22ee4120b365b70bc32123b27d6ff9dac8eee9b1c5192e"
     },
     "SOURCE_MAP": {
       "path": "docs/provenance/v5-successors/SOURCE_MAP.json",
-      "sha256": "9a66b59016cdee4fb1bc34df19af426b32220169d4fc78a4817aaf8aeb55ad69"
+      "sha256": "db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883"
     },
     "SOURCE_USE": {
       "path": "docs/provenance/v5-successors/SOURCE_USE.json",
-      "sha256": "012d195e6df093bce4b97f5a648faea1432ee825a29bb2179580337bdf2b3d13"
+      "sha256": "7aa507592da5732522b3155356de424557de046ba4a6647e29d30f842c766e01"
     },
     "SUPERSESSION": {
       "path": "docs/provenance/v5-successors/SUPERSESSION.json",
-      "sha256": "39a5632257fd1e24e2851686a7a7d6279aa2f03117b605ebc8142edcbe0e04af"
+      "sha256": "7e7d1a9a652b6b4cc9da542353225855b9e35a70480729065b376ee2736cd7db"
     },
     "TOOLCHAINS": {
       "path": "docs/provenance/v5-successors/TOOLCHAINS.json",
@@ -70,7 +70,7 @@
     },
     "TWELVE_AVENUES": {
       "path": "docs/provenance/v5-successors/TWELVE_AVENUES.json",
-      "sha256": "1f02ae0f1684aed008c7ecb0c88abd958520e2105f167ba1356e40f57fc4aed3"
+      "sha256": "6845070a5ef402bf5cf2a8ac2358a7238edfc0308cb70e49124543e8e1638733"
     },
     "suite:D04-T07-ATTRIBUTION-ORIGINAL": {
       "path": "experiments/orthemology-v5-successors/suites/D04-T07-ATTRIBUTION-ORIGINAL.json",
@@ -437,7 +437,53 @@
     "T16-SOURCE-ASSESSMENT",
     "T16-OCCURRENCE",
     "T16-EMPIRICAL",
-    "T16-CORE-ASSURANCE"
+    "T16-CORE-ASSURANCE",
+    "T17-ORIGINAL-COMPLETION",
+    "T17-NECESSARY-BEARER",
+    "T17-ESSENTIAL-INDEPENDENCE",
+    "T17-ELIGIBLE-STANDING-POWER",
+    "T17-OWNED-VERACITY",
+    "T17-WISE-VOLUNTARY-DETERMINATION",
+    "T17-ORDINARY-TESTIMONIAL-WARRANT",
+    "T17-FITTINGNESS-LOCAL-AUTHORITY",
+    "T17-ASSIGNMENT-UNCERTAINTY",
+    "T17-BLOCK-ORBIT-CONTRACT",
+    "T17-CLOSED-PLACEMENT-CHECK",
+    "T18-ONE-CHANGE-CRITERION",
+    "T18-RATIONAL-LEAN-ENDPOINT",
+    "T18-RATIONAL-P-COMPLETE",
+    "T18-REAL-NONUNIFORM",
+    "T18-CAUCHY-DECISION-OBSTRUCTION",
+    "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS",
+    "T18-HIDDEN-PRIORITY-CALIBRATION",
+    "T18-HASE-U-DOMAIN-CONTROL",
+    "T18-HASE-INHABITED-J-CONTROL",
+    "T18-IMPLEMENTATION-QUALIFICATION",
+    "T18-NONCAUSAL-EXTENSION-STOP",
+    "T19-CND",
+    "T19-SOURCE-MODE",
+    "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+    "T19-COMMON-CONNECTED-SOURCE",
+    "T19-ATTESTATION-DISCRIMINATION",
+    "T19-WALID-RECEPTION-SCOPE",
+    "T19-ASSERTED-OBLIGATION-TRANSFER",
+    "T19-SOURCE-OCCURRENCE-CONTROLS",
+    "T20-CHURCH-RAW-PROBE",
+    "T20-CND-ESSENTIALITY-SCOPE",
+    "T20-SCALAR-FUSION-IFF",
+    "T20-MODAL-CROSSING-COMPLETENESS",
+    "T20-ORIGINAL-GROUND-ROBUSTNESS",
+    "T20-GROUNDED-CONTINUATION-SUPPORT",
+    "T20-HASE-FURTHER-FAILED-ROUTES",
+    "T20-TYPED-ORIGINAL-BEARER-ABC",
+    "T20-ANCHORED-FIELD-SOURCE",
+    "T20-VERACITY-DEPENDENCY-AUDIT",
+    "T20-PTS-NORMALIZATION-TRANSFER",
+    "T20-TRACE-OBSERVATION-COPYING",
+    "T20-JOINT-SAME-BEARER-MODEL",
+    "T20-CONTROLLER-COMPLETENESS-TRANSFER",
+    "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+    "T20-EMERGENCE-TYPE-CONTROL"
   ],
   "schema": "orthemology-v5-successors-v1",
   "suite_ids": [

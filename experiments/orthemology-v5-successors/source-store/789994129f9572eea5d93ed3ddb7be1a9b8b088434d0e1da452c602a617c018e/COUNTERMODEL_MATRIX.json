@@ -1,0 +1,142 @@
+{
+  "schema": "t20-abc-premise-removal-matrix-v1",
+  "controls": [
+    {
+      "id": "A-REMOVE-COMPLETION",
+      "removed": "Completion",
+      "retained": [
+        "Occurrence",
+        "Realisation",
+        "SupportTransport",
+        "ReceiptRepresentation",
+        "ContingencyNeed",
+        "ConstitutiveReception"
+      ],
+      "removed_premise_proved_false": true,
+      "target_failure": "exists actual whole-original bearer",
+      "theorem": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_completion",
+      "model": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion",
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "domain": "Unit world; genuinely infinite Nat bearers; Unit resources/target",
+      "cyclicity": "Each world irreflexive and transitive; no self-edges or nonempty directed cycles",
+      "infinite_control_theorems": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_carrier_genuinely_infinite",
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_ancestry_strict_and_everywhere_supplied"
+      ],
+      "claim_boundary": "Logical counterinterpretation; not a metaphysical possibility certificate."
+    },
+    {
+      "id": "A-REMOVE-REALISATION",
+      "removed": "Realisation",
+      "retained": [
+        "Occurrence",
+        "Completion",
+        "SupportTransport",
+        "ReceiptRepresentation",
+        "ContingencyNeed",
+        "ConstitutiveReception"
+      ],
+      "removed_premise_proved_false": true,
+      "target_failure": "exists actual whole-original bearer",
+      "theorem": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_realisation",
+      "model": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation",
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "domain": "Unit world; genuinely infinite Nat bearers; Unit resources/target",
+      "cyclicity": "Each world irreflexive and transitive; no self-edges or nonempty directed cycles",
+      "infinite_control_theorems": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_carrier_genuinely_infinite",
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_ancestry_strict_and_everywhere_supplied"
+      ],
+      "claim_boundary": "Logical counterinterpretation; not a metaphysical possibility certificate."
+    },
+    {
+      "id": "A-REMOVE-SUPPORT",
+      "removed": "SupportTransport",
+      "retained": [
+        "Occurrence",
+        "Completion",
+        "Realisation",
+        "ReceiptRepresentation",
+        "ContingencyNeed",
+        "ConstitutiveReception"
+      ],
+      "removed_premise_proved_false": true,
+      "target_failure": "exists actual whole-original bearer",
+      "theorem": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_support",
+      "model": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport",
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "domain": "Unit world; genuinely infinite Nat bearers; Unit resources/target",
+      "cyclicity": "Each world irreflexive and transitive; no self-edges or nonempty directed cycles",
+      "infinite_control_theorems": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_carrier_genuinely_infinite",
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_ancestry_strict_and_everywhere_supplied"
+      ],
+      "claim_boundary": "Logical counterinterpretation; not a metaphysical possibility certificate."
+    },
+    {
+      "id": "B-REMOVE-NEED",
+      "removed": "ContingencyNeed",
+      "retained": [
+        "Occurrence",
+        "Completion",
+        "Realisation",
+        "SupportTransport",
+        "ReceiptRepresentation",
+        "ConstitutiveReception"
+      ],
+      "removed_premise_proved_false": true,
+      "target_failure": "exists necessary bearer",
+      "theorem": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_contingency_need",
+      "model": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed",
+      "status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "domain": "Bool worlds and Bool bearers/resources",
+      "cyclicity": "Each world irreflexive and transitive; no self-edges or nonempty directed cycles",
+      "infinite_control_theorems": [],
+      "claim_boundary": "Logical counterinterpretation; not a metaphysical possibility certificate."
+    },
+    {
+      "id": "C-REMOVE-CONSTITUTION",
+      "removed": "ConstitutiveReception",
+      "retained": [
+        "Occurrence",
+        "Completion",
+        "Realisation",
+        "SupportTransport",
+        "ReceiptRepresentation",
+        "ContingencyNeed"
+      ],
+      "removed_premise_proved_false": true,
+      "target_failure": "exists uniform original bearer",
+      "theorem": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_constitutive_reception",
+      "model": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution",
+      "status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "domain": "Bool worlds and Bool bearers/resources",
+      "cyclicity": "Each world irreflexive and transitive; no self-edges or nonempty directed cycles",
+      "infinite_control_theorems": [],
+      "claim_boundary": "Logical counterinterpretation; not a metaphysical possibility certificate."
+    }
+  ],
+  "additional_controls": [
+    {
+      "theorem": "Orthemology.Tranche20.OriginalBearerBridge.Controls.conditional_nonreceipt_without_necessity",
+      "claim": "C conditional on existence survives B-need removal; Necessary fails."
+    }
+  ],
+  "not_claimed": [
+    "ReceiptRepresentation is not shown philosophically or logically indispensable to an entirely unary re-expression. It is the explicit semantic condition for using this binary inherited interface.",
+    "Universal Realisation and contingency-as-need quantifiers are not claimed minimal; only their selected witness instances are consumed.",
+    "Finite fixtures are not an exhaustive metaphysical world domain."
+  ]
+}

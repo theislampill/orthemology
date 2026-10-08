@@ -1,0 +1,311 @@
+{
+  "reader": "second-opening",
+  "scope": "V02 windows001–012; NB-S002-L0050–0138 only",
+  "method": "Actually inspected full emitted Arabic output in order; END markers observed. Emission alone earns no credit.",
+  "source_hashes": {
+    "received_body": "7939b86c685acfa36b88917bbdc474c0cb2f8590752655ec638cb416ee6cb467",
+    "received_line_index": "ae7b03d45c069d4a2fc66ceb7562ded68db1fe292d2b84749ddffb906b703053",
+    "https://www.islamicbook.ws/amma/alnbwat-002.html": "d28415a0697658e0efce3a1a2cfdeae3a260664ce417b21398a60b6885441504",
+    "https://drive.google.com/file/d/1N7PDd1uV7BsT-xluSRscUmy5ypUl4CWo/view?usp=sharing": "8a351f41452a3ec86a1819a069d8c23e88f0a36519e12016ce4e10a9e9292d93"
+  },
+  "prerequisite_reads": [
+    {
+      "included_record_alias": "START_HERE.md"
+    },
+    {
+      "included_record_alias": "SOURCE_IDENTITY_AND_LIMITS.md"
+    }
+  ],
+  "readings": [
+    {
+      "volume_unit": 2,
+      "window": 1,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0050",
+      "last_id": "NB-S002-L0057",
+      "line_ids": [
+        "NB-S002-L0050",
+        "NB-S002-L0051",
+        "NB-S002-L0052",
+        "NB-S002-L0053",
+        "NB-S002-L0054",
+        "NB-S002-L0055",
+        "NB-S002-L0056",
+        "NB-S002-L0057"
+      ],
+      "words": 1820,
+      "sha256": "416db6f0cc826e0b54bbbde49d4c0ad50f90f6ea4806f8f8dc1169db41b6ba03",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:02:40.697041+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 2,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0058",
+      "last_id": "NB-S002-L0064",
+      "line_ids": [
+        "NB-S002-L0058",
+        "NB-S002-L0059",
+        "NB-S002-L0060",
+        "NB-S002-L0061",
+        "NB-S002-L0062",
+        "NB-S002-L0063",
+        "NB-S002-L0064"
+      ],
+      "words": 2047,
+      "sha256": "553f3c8685eeb422c2dddd2bc1fc34baf809f3e42852cf2629da7cdb53674306",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:02:40.697065+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 3,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0065",
+      "last_id": "NB-S002-L0070",
+      "line_ids": [
+        "NB-S002-L0065",
+        "NB-S002-L0066",
+        "NB-S002-L0067",
+        "NB-S002-L0068",
+        "NB-S002-L0069",
+        "NB-S002-L0070"
+      ],
+      "words": 2008,
+      "sha256": "2f64f577fda5fd083202ccc0321cb2bf3e702dbeb8c4daca2a405382e81b0a69",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:02:40.697070+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 4,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0071",
+      "last_id": "NB-S002-L0078",
+      "line_ids": [
+        "NB-S002-L0071",
+        "NB-S002-L0072",
+        "NB-S002-L0073",
+        "NB-S002-L0074",
+        "NB-S002-L0075",
+        "NB-S002-L0076",
+        "NB-S002-L0077",
+        "NB-S002-L0078"
+      ],
+      "words": 2032,
+      "sha256": "ab3bf0f6ee3f04565a4604d1c276fd3d0a60aad204d32cdeddfad5ae9683a8f6",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:05:03.665725+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 5,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0079",
+      "last_id": "NB-S002-L0084",
+      "line_ids": [
+        "NB-S002-L0079",
+        "NB-S002-L0080",
+        "NB-S002-L0081",
+        "NB-S002-L0082",
+        "NB-S002-L0083",
+        "NB-S002-L0084"
+      ],
+      "words": 2026,
+      "sha256": "b1a69887e5108d521e28ffc114a141d32500305bc74ed285bf19645d3777f8f9",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:05:03.665736+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 6,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0085",
+      "last_id": "NB-S002-L0094",
+      "line_ids": [
+        "NB-S002-L0085",
+        "NB-S002-L0086",
+        "NB-S002-L0087",
+        "NB-S002-L0088",
+        "NB-S002-L0089",
+        "NB-S002-L0090",
+        "NB-S002-L0091",
+        "NB-S002-L0092",
+        "NB-S002-L0093",
+        "NB-S002-L0094"
+      ],
+      "words": 1999,
+      "sha256": "45c049f20aa1f755caf4296880b734c5b28e37f47dc67e04af330fa5c08db092",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:05:03.665740+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 7,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0095",
+      "last_id": "NB-S002-L0100",
+      "line_ids": [
+        "NB-S002-L0095",
+        "NB-S002-L0096",
+        "NB-S002-L0097",
+        "NB-S002-L0098",
+        "NB-S002-L0099",
+        "NB-S002-L0100"
+      ],
+      "words": 2020,
+      "sha256": "8c282ed08e526271fe13594b5b92727d531f73e937a3ca5bb9f9e26ea334377c",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:07:14.133553+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 8,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0101",
+      "last_id": "NB-S002-L0108",
+      "line_ids": [
+        "NB-S002-L0101",
+        "NB-S002-L0102",
+        "NB-S002-L0103",
+        "NB-S002-L0104",
+        "NB-S002-L0105",
+        "NB-S002-L0106",
+        "NB-S002-L0107",
+        "NB-S002-L0108"
+      ],
+      "words": 2006,
+      "sha256": "9793be1dee2a3224c349fc8ca51a2dcdda609e869dc35619f38963854885388f",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:07:14.133564+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 9,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0109",
+      "last_id": "NB-S002-L0117",
+      "line_ids": [
+        "NB-S002-L0109",
+        "NB-S002-L0110",
+        "NB-S002-L0111",
+        "NB-S002-L0112",
+        "NB-S002-L0113",
+        "NB-S002-L0114",
+        "NB-S002-L0115",
+        "NB-S002-L0116",
+        "NB-S002-L0117"
+      ],
+      "words": 2080,
+      "sha256": "d06b864d744f1f433810be165fbfaaac68100516807c98f03acdfce902a8969f",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:07:14.133569+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 10,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0118",
+      "last_id": "NB-S002-L0123",
+      "line_ids": [
+        "NB-S002-L0118",
+        "NB-S002-L0119",
+        "NB-S002-L0120",
+        "NB-S002-L0121",
+        "NB-S002-L0122",
+        "NB-S002-L0123"
+      ],
+      "words": 2120,
+      "sha256": "1896314a8a87dc2f58a0abf849de59bd55ccbe457cc9eb2267a13de16c1955de",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:09:14.200687+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 11,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0124",
+      "last_id": "NB-S002-L0131",
+      "line_ids": [
+        "NB-S002-L0124",
+        "NB-S002-L0125",
+        "NB-S002-L0126",
+        "NB-S002-L0127",
+        "NB-S002-L0128",
+        "NB-S002-L0129",
+        "NB-S002-L0130",
+        "NB-S002-L0131"
+      ],
+      "words": 2105,
+      "sha256": "09502c9b6c650be7c448c6bd09ca24e414df91abca054591337fd09554a5cd0d",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:09:14.200702+00:00"
+    },
+    {
+      "volume_unit": 2,
+      "window": 12,
+      "source_body_included": false,
+      "first_id": "NB-S002-L0132",
+      "last_id": "NB-S002-L0138",
+      "line_ids": [
+        "NB-S002-L0132",
+        "NB-S002-L0133",
+        "NB-S002-L0134",
+        "NB-S002-L0135",
+        "NB-S002-L0136",
+        "NB-S002-L0137",
+        "NB-S002-L0138"
+      ],
+      "words": 2018,
+      "sha256": "e1c91ba73bb1f22d0cb771b55e7cc3069feb880fa731ee0456f16d9a5e490906",
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "reading_credit": "complete_assigned_window",
+      "recorded_utc": "2026-10-07T13:09:14.200706+00:00"
+    }
+  ],
+  "completion": {
+    "continuous_assigned_electronic_portion_read": true,
+    "windows": 12,
+    "source_ids": 89,
+    "words": 24281,
+    "whole_volume_claim": false,
+    "whole_critical_edition_claim": false,
+    "completed_utc": "2026-10-07T13:09:14.200713+00:00"
+  }
+}

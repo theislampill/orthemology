@@ -1,0 +1,13 @@
+{
+  "status": "PASS_PUBLIC_PACKAGING_CONTROLS",
+  "portable_source_replay": "PASS",
+  "exact_author_readback_match": true,
+  "independent_control_and_finite_oracle_replayed": true,
+  "lakefile_parser": "PASS on pinned Lean4.19; clean network provisioning not run",
+  "tampered_source_rejected_before_output_creation": true,
+  "in_package_output_rejected": true,
+  "scientific_source_changes": false,
+  "original_reviewed_manifest_sha256": "75528460e5853d4f4265fd1e4bf06cf08cf6d041157845e37a2e7ad6482439d1",
+  "wrapper_initial_failure_preserved": "history/PORTABLE_WRAPPER_INITIAL_FAILURE.txt",
+  "scope": "Public path/output projection and portable wrapper checks only; independent scientific review remains bound to unchanged reviewed files."
+}

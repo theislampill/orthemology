@@ -1,0 +1,61 @@
+{
+  "schema": "t20-late-control-result-validation-v2",
+  "status": "PASS_DOCUMENTARY_CHECKS_WITH_FINAL_SCOPED_REVIEW",
+  "verified_utc": "2026-10-07T16:31:19.693051+00:00",
+  "original_four_files_unchanged": true,
+  "original_15_rows_equal": true,
+  "ledger_rows": 16,
+  "registered_t20_owners_at_capture": 15,
+  "late_proposed_owners": 1,
+  "late_owner_absent_from_native_registry": true,
+  "author_manifest_members_hash_verified": 18,
+  "definition_and_primary_source_identity_bindings_checked": 22,
+  "bound_late_input_files": 23,
+  "author_source_lines": 152,
+  "named_author_theorems": 9,
+  "selected_author_axiom_readbacks": 7,
+  "independent_reviewer_probes_and_readbacks": 7,
+  "substantive_rejected_overclaims": 2,
+  "existing_author_and_reviewer_log_hashes_verified": true,
+  "final_review_bound_files_verified": 8,
+  "final_review_status": "PASS_WITH_EXPLICIT_REPRESENTATION_AND_ATTRIBUTION_LIMITS",
+  "new_ledger_assembler_science_replay": false,
+  "new_ledger_assembler_primary_reading": false,
+  "native_repository_mutation": false,
+  "historical_author_outputs": [
+    {
+      "path": "RESULT_EVIDENCE_LEDGER_v2.json",
+      "sha256": "59057535b987e9abe97fa3540fef2b754cec95ef04e24d5dfc09d3b6f003effd",
+      "bytes": 233627
+    },
+    {
+      "path": "RESULT_EVIDENCE_SUCCESSOR_NOTE_v2.md",
+      "sha256": "a1c8ae6e7ae4cc8a8e4b1ebe166b2a273a5bd8842c3f56c904b863a346e5ffcd",
+      "bytes": 3587
+    },
+    {
+      "path": "SOURCE_BINDINGS_v2.json",
+      "sha256": "21bd8da73a129f4f5539f8a655adc7cbe54ac1d224a2ba989e00dcfdae48c293",
+      "bytes": 12765
+    }
+  ],
+  "public_outputs": [
+    {
+      "owner_archive_path": "t20/methodology/result-ledger/RESULT_EVIDENCE_LEDGER_v2.json",
+      "bytes": 235075,
+      "sha256": "6b1e3b7a3ce32842eda6deada3c5bad3ef740215dba77b2f7750d0de51ba333b"
+    },
+    {
+      "owner_archive_path": "t20/methodology/result-ledger/RESULT_EVIDENCE_SUCCESSOR_NOTE_v2.md",
+      "bytes": 3587,
+      "sha256": "a1c8ae6e7ae4cc8a8e4b1ebe166b2a273a5bd8842c3f56c904b863a346e5ffcd"
+    },
+    {
+      "owner_archive_path": "t20/methodology/result-ledger/SOURCE_BINDINGS_v2.json",
+      "bytes": 16681,
+      "sha256": "30019626dd1d708c0ce1e77d27311e640354e7fb983badd78d52f7cb1de614e6"
+    }
+  ],
+  "original_validation_sha256": "29f14045926fe0b0806f3aacc36845c1d9e58ce41e84b3006a472e7e6e98db3c",
+  "validation_attribution": "Historical ledger-assembly checks and captured native state. Curation checks identity, exact signatures, aliases and projection correspondence; no new science execution or primary reading."
+}

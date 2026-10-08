@@ -1,0 +1,350 @@
+{
+  "proofs": {
+    "JointFinite.live": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.live : JointFinite.W → Prop :=\nfun w => w = JointFinite.W.w0 ∨ w = JointFinite.W.w1",
+      "sha256": "b45008bffbdc2342b98b89293bdd465b3ec4b88c6414eded3bd6738060df3d5c",
+      "body": "fun w => w = JointFinite.W.w0 ∨ w = JointFinite.W.w1",
+      "body_sha256": "88d69c21b70cca4e106f822efdba16f3c720beaa2644dd9c0ffed6c07c0aaaae"
+    },
+    "JointFinite.receivedBeing": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.receivedBeing : JointFinite.B → Prop :=\nfun b => b = JointFinite.B.x ∨ b = JointFinite.B.l ∨ b = JointFinite.B.r ∨ b = JointFinite.B.m ∨ b = JointFinite.B.z",
+      "sha256": "5ec45fa0da00ba49b029a2bec79cb3c5a35807c6263e31038b01900bd6971112",
+      "body": "fun b => b = JointFinite.B.x ∨ b = JointFinite.B.l ∨ b = JointFinite.B.r ∨ b = JointFinite.B.m ∨ b = JointFinite.B.z",
+      "body_sha256": "bb14f47ca0773352efe92b6e06827e77a24207126551a1e90c2c1d308a7ac8a4"
+    },
+    "JointFinite.framework": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.framework : Orthemology.Tranche20.OriginalBearerBridge.Framework JointFinite.W JointFinite.B\n  JointFinite.R JointFinite.B :=\n{ actual := JointFinite.W.w0,\n  existsAt := fun w b => b = JointFinite.B.g ∨ b = JointFinite.B.h ∨ JointFinite.live w ∧ JointFinite.receivedBeing b,\n  wholeReceived := fun w b => JointFinite.live w ∧ JointFinite.receivedBeing b,\n  dep := fun w s b =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧ (b = JointFinite.B.x ∨ b = JointFinite.B.l ∨ b = JointFinite.B.r ∨ b = JointFinite.B.m) ∨\n        s = JointFinite.B.h ∧ b = JointFinite.B.z),\n  resourceActual := fun x => True,\n  resourceReceived := fun q =>\n    q = JointFinite.R.rx ∨ q = JointFinite.R.rl ∨ q = JointFinite.R.rr ∨ q = JointFinite.R.rm ∨ q = JointFinite.R.rz,\n  intrinsic := fun b q =>\n    b = JointFinite.B.g ∧ q = JointFinite.R.rg ∨\n      b = JointFinite.B.h ∧ q = JointFinite.R.rh ∨\n        b = JointFinite.B.x ∧ q = JointFinite.R.rx ∨\n          b = JointFinite.B.l ∧ q = JointFinite.R.rl ∨\n            b = JointFinite.B.r ∧ q = JointFinite.R.rr ∨\n              b = JointFinite.B.m ∧ q = JointFinite.R.rm ∨ b = JointFinite.B.z ∧ q = JointFinite.R.rz,\n  targetReceived := JointFinite.receivedBeing,\n  relevant := fun q t =>\n    q = JointFinite.R.rg ∧ (t = JointFinite.B.x ∨ t = JointFinite.B.l ∨ t = JointFinite.B.r ∨ t = JointFinite.B.m) ∨\n      q = JointFinite.R.rh ∧ t = JointFinite.B.z ∨\n        (q = JointFinite.R.rx ∨ q = JointFinite.R.rl ∨ q = JointFinite.R.rr) ∧ t = JointFinite.B.m }",
+      "sha256": "619cdfc5784ffb094754ad00539bc1e94c5da00c3a9330e263ee14ab5a6e41c8",
+      "body": "{ actual := JointFinite.W.w0,\n  existsAt := fun w b => b = JointFinite.B.g ∨ b = JointFinite.B.h ∨ JointFinite.live w ∧ JointFinite.receivedBeing b,\n  wholeReceived := fun w b => JointFinite.live w ∧ JointFinite.receivedBeing b,\n  dep := fun w s b =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧ (b = JointFinite.B.x ∨ b = JointFinite.B.l ∨ b = JointFinite.B.r ∨ b = JointFinite.B.m) ∨\n        s = JointFinite.B.h ∧ b = JointFinite.B.z),\n  resourceActual := fun x => True,\n  resourceReceived := fun q =>\n    q = JointFinite.R.rx ∨ q = JointFinite.R.rl ∨ q = JointFinite.R.rr ∨ q = JointFinite.R.rm ∨ q = JointFinite.R.rz,\n  intrinsic := fun b q =>\n    b = JointFinite.B.g ∧ q = JointFinite.R.rg ∨\n      b = JointFinite.B.h ∧ q = JointFinite.R.rh ∨\n        b = JointFinite.B.x ∧ q = JointFinite.R.rx ∨\n          b = JointFinite.B.l ∧ q = JointFinite.R.rl ∨\n            b = JointFinite.B.r ∧ q = JointFinite.R.rr ∨\n              b = JointFinite.B.m ∧ q = JointFinite.R.rm ∨ b = JointFinite.B.z ∧ q = JointFinite.R.rz,\n  targetReceived := JointFinite.receivedBeing,\n  relevant := fun q t =>\n    q = JointFinite.R.rg ∧ (t = JointFinite.B.x ∨ t = JointFinite.B.l ∨ t = JointFinite.B.r ∨ t = JointFinite.B.m) ∨\n      q = JointFinite.R.rh ∧ t = JointFinite.B.z ∨\n        (q = JointFinite.R.rx ∨ q = JointFinite.R.rl ∨ q = JointFinite.R.rr) ∧ t = JointFinite.B.m }",
+      "body_sha256": "8b7faf2ecae29a776bb11679036fb2c41341211b68d3a6a4d1662b72992ebd54"
+    },
+    "JointFinite.account": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.account : AnchoredSourceBridge.Account JointFinite.B JointFinite.E JointFinite.C :=\n{ Field := fun e => e = JointFinite.E.a ∨ e = JointFinite.E.b ∨ e = JointFinite.E.k, ActualOccurrence := fun x => True,\n  Req := fun e c =>\n    e = JointFinite.E.a ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl) ∨\n      e = JointFinite.E.b ∧ c = JointFinite.C.cr ∨\n        e = JointFinite.E.k ∧\n            (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr ∨ c = JointFinite.C.cm) ∨\n          e = JointFinite.E.o ∧ c = JointFinite.C.cz,\n  Operative := fun e c =>\n    e = JointFinite.E.a ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl) ∨\n      e = JointFinite.E.b ∧ c = JointFinite.C.cr ∨\n        e = JointFinite.E.k ∧\n            (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr ∨ c = JointFinite.C.cm) ∨\n          e = JointFinite.E.o ∧ c = JointFinite.C.cz,\n  EntireOrig := fun s c =>\n    s = JointFinite.B.g ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr ∨ c = JointFinite.C.cm) ∨\n      s = JointFinite.B.h ∧ c = JointFinite.C.cz,\n  ActualOriginal := fun s e =>\n    s = JointFinite.B.g ∧ (e = JointFinite.E.a ∨ e = JointFinite.E.b ∨ e = JointFinite.E.k) ∨\n      s = JointFinite.B.h ∧ e = JointFinite.E.o,\n  ModeRole := fun s e =>\n    s = JointFinite.B.g ∧ (e = JointFinite.E.a ∨ e = JointFinite.E.b ∨ e = JointFinite.E.k) ∨\n      s = JointFinite.B.h ∧ e = JointFinite.E.o,\n  Qualified := fun s => s = JointFinite.B.g, ModeDefect := fun x x => False }",
+      "sha256": "11f351a32f2484c09322596659bc51c2eadeb88d1459d252e25cdb036053f95e",
+      "body": "{ Field := fun e => e = JointFinite.E.a ∨ e = JointFinite.E.b ∨ e = JointFinite.E.k, ActualOccurrence := fun x => True,\n  Req := fun e c =>\n    e = JointFinite.E.a ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl) ∨\n      e = JointFinite.E.b ∧ c = JointFinite.C.cr ∨\n        e = JointFinite.E.k ∧\n            (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr ∨ c = JointFinite.C.cm) ∨\n          e = JointFinite.E.o ∧ c = JointFinite.C.cz,\n  Operative := fun e c =>\n    e = JointFinite.E.a ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl) ∨\n      e = JointFinite.E.b ∧ c = JointFinite.C.cr ∨\n        e = JointFinite.E.k ∧\n            (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr ∨ c = JointFinite.C.cm) ∨\n          e = JointFinite.E.o ∧ c = JointFinite.C.cz,\n  EntireOrig := fun s c =>\n    s = JointFinite.B.g ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr ∨ c = JointFinite.C.cm) ∨\n      s = JointFinite.B.h ∧ c = JointFinite.C.cz,\n  ActualOriginal := fun s e =>\n    s = JointFinite.B.g ∧ (e = JointFinite.E.a ∨ e = JointFinite.E.b ∨ e = JointFinite.E.k) ∨\n      s = JointFinite.B.h ∧ e = JointFinite.E.o,\n  ModeRole := fun s e =>\n    s = JointFinite.B.g ∧ (e = JointFinite.E.a ∨ e = JointFinite.E.b ∨ e = JointFinite.E.k) ∨\n      s = JointFinite.B.h ∧ e = JointFinite.E.o,\n  Qualified := fun s => s = JointFinite.B.g, ModeDefect := fun x x => False }",
+      "body_sha256": "be714996ff58ee93865ef5277ad9c7bbe8b219ed020fe0a1193bfae862a7aa09"
+    },
+    "JointFinite.producedAt": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.producedAt : JointFinite.B → JointFinite.E → Prop :=\nfun b e =>\n  (b = JointFinite.B.x ∨ b = JointFinite.B.l) ∧ e = JointFinite.E.a ∨\n    b = JointFinite.B.r ∧ e = JointFinite.E.b ∨\n      b = JointFinite.B.m ∧ e = JointFinite.E.k ∨ b = JointFinite.B.z ∧ e = JointFinite.E.o",
+      "sha256": "ea13e4ddcf0920d381f91e332e7fe865102119a78752ef312b0168614305c4df",
+      "body": "fun b e =>\n  (b = JointFinite.B.x ∨ b = JointFinite.B.l) ∧ e = JointFinite.E.a ∨\n    b = JointFinite.B.r ∧ e = JointFinite.E.b ∨\n      b = JointFinite.B.m ∧ e = JointFinite.E.k ∨ b = JointFinite.B.z ∧ e = JointFinite.E.o",
+      "body_sha256": "03a9d2f5bd4df233572a179353d210b96c220641d9b684ae5ba9e4f48bc4e778"
+    },
+    "JointFinite.occursAt": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.occursAt : JointFinite.W → JointFinite.E → Prop :=\nfun w x => JointFinite.live w",
+      "sha256": "49e941cb8ebe7f39825df7a4b4ba64e474c4b4f0efcac85a3ff30ffef7b44ab4",
+      "body": "fun w x => JointFinite.live w",
+      "body_sha256": "dc3dde7f00d16221c79e1e759f8e0423b4c443728b845cbf14a3074125711ae5"
+    },
+    "JointFinite.contributionBearer": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.contributionBearer : JointFinite.C → JointFinite.B :=\nfun x =>\n  match x with\n  | JointFinite.C.cx => JointFinite.B.x\n  | JointFinite.C.cl => JointFinite.B.l\n  | JointFinite.C.cr => JointFinite.B.r\n  | JointFinite.C.cm => JointFinite.B.m\n  | JointFinite.C.cz => JointFinite.B.z",
+      "sha256": "a9bc190d8a043a5aecf8cd2de7410d3ae85b954d1053f18c93ee5c3156881fd1",
+      "body": "fun x =>\n  match x with\n  | JointFinite.C.cx => JointFinite.B.x\n  | JointFinite.C.cl => JointFinite.B.l\n  | JointFinite.C.cr => JointFinite.B.r\n  | JointFinite.C.cm => JointFinite.B.m\n  | JointFinite.C.cz => JointFinite.B.z",
+      "body_sha256": "94abc40dd3ea4c74e02f983beeba05e5aa8a05683beb4b8b044d42e7ee0b3e7e"
+    },
+    "JointFinite.contributionResource": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.contributionResource : JointFinite.C → JointFinite.R :=\nfun x =>\n  match x with\n  | JointFinite.C.cx => JointFinite.R.rx\n  | JointFinite.C.cl => JointFinite.R.rl\n  | JointFinite.C.cr => JointFinite.R.rr\n  | JointFinite.C.cm => JointFinite.R.rm\n  | JointFinite.C.cz => JointFinite.R.rz",
+      "sha256": "347c4b7fcf590c1890f7cedb4e673d2675648b93d752e011c952fbdd17e68e88",
+      "body": "fun x =>\n  match x with\n  | JointFinite.C.cx => JointFinite.R.rx\n  | JointFinite.C.cl => JointFinite.R.rl\n  | JointFinite.C.cr => JointFinite.R.rr\n  | JointFinite.C.cm => JointFinite.R.rm\n  | JointFinite.C.cz => JointFinite.R.rz",
+      "body_sha256": "fc43912bcb71b020c1a0062d7e6f093d0409568dd032486c3f350c7fbf494937"
+    },
+    "JointFinite.originalResourceUsed": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.originalResourceUsed : JointFinite.R → JointFinite.C → Prop :=\nfun q c =>\n  q = JointFinite.R.rg ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr ∨ c = JointFinite.C.cm) ∨\n    q = JointFinite.R.rh ∧ c = JointFinite.C.cz",
+      "sha256": "0352fe8f8e42a9fed5308a6bd36aa4185fbad67c0f42b3066d1afbd3dcee2559",
+      "body": "fun q c =>\n  q = JointFinite.R.rg ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr ∨ c = JointFinite.C.cm) ∨\n    q = JointFinite.R.rh ∧ c = JointFinite.C.cz",
+      "body_sha256": "4c872f7058004052a4139db28ad08ecfae29170375c25b8aefc66d68660461dd"
+    },
+    "JointFinite.directSupport": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.directSupport : JointFinite.B → JointFinite.B → Prop :=\nfun s t =>\n  s = JointFinite.B.g ∧ (t = JointFinite.B.x ∨ t = JointFinite.B.l ∨ t = JointFinite.B.r) ∨\n    (s = JointFinite.B.x ∨ s = JointFinite.B.l ∨ s = JointFinite.B.r) ∧ t = JointFinite.B.m ∨\n      s = JointFinite.B.h ∧ t = JointFinite.B.z",
+      "sha256": "df4fb896d2ec68c2a816748d3ae967d139df35376ba1d5ce059557e01f8c6df3",
+      "body": "fun s t =>\n  s = JointFinite.B.g ∧ (t = JointFinite.B.x ∨ t = JointFinite.B.l ∨ t = JointFinite.B.r) ∨\n    (s = JointFinite.B.x ∨ s = JointFinite.B.l ∨ s = JointFinite.B.r) ∧ t = JointFinite.B.m ∨\n      s = JointFinite.B.h ∧ t = JointFinite.B.z",
+      "body_sha256": "b9f1103c2bcbe507eaa7c1738a6376fc6621a5e7371f273dd88305059331fe0c"
+    },
+    "JointFinite.supportAncestor": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.supportAncestor : JointFinite.B → JointFinite.B → Prop :=\nfun s t =>\n  s = JointFinite.B.g ∧ (t = JointFinite.B.x ∨ t = JointFinite.B.l ∨ t = JointFinite.B.r ∨ t = JointFinite.B.m) ∨\n    (s = JointFinite.B.x ∨ s = JointFinite.B.l ∨ s = JointFinite.B.r) ∧ t = JointFinite.B.m ∨\n      s = JointFinite.B.h ∧ t = JointFinite.B.z",
+      "sha256": "e02700548e011bbd7558168181b3758bc9ec508fa43bc5d5b94c643ffa6d84ce",
+      "body": "fun s t =>\n  s = JointFinite.B.g ∧ (t = JointFinite.B.x ∨ t = JointFinite.B.l ∨ t = JointFinite.B.r ∨ t = JointFinite.B.m) ∨\n    (s = JointFinite.B.x ∨ s = JointFinite.B.l ∨ s = JointFinite.B.r) ∧ t = JointFinite.B.m ∨\n      s = JointFinite.B.h ∧ t = JointFinite.B.z",
+      "body_sha256": "0acf8ca665246cb97515c2dca0e7d7cae292538e4d2ff91b8de916da4c719c86"
+    },
+    "JointFinite.derivedAct": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.derivedAct : JointFinite.B → JointFinite.E → Prop :=\nfun s e => s = JointFinite.B.x ∧ e = JointFinite.E.k",
+      "sha256": "c93fe2f64e60baacb10eb392b96073fa6929e122a1a929ffc7fc50feb1ca8b38",
+      "body": "fun s e => s = JointFinite.B.x ∧ e = JointFinite.E.k",
+      "body_sha256": "fbf7caf56075383c50cf88d85ec79055c0fbe1765458a29243f896ec155dcb99"
+    },
+    "JointFinite.derivedUses": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.derivedUses : JointFinite.B → JointFinite.E → JointFinite.C → Prop :=\nfun s e c =>\n  s = JointFinite.B.x ∧ e = JointFinite.E.k ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr)",
+      "sha256": "932c7f21c5d0e9e1af369b9b1a5a66dd7044ae443279ebed750a24c961a5f9e3",
+      "body": "fun s e c =>\n  s = JointFinite.B.x ∧ e = JointFinite.E.k ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl ∨ c = JointFinite.C.cr)",
+      "body_sha256": "5ff6b4f9a51942f4ebaa4ba619efde448b4a6259c92fb6837dcc01c229a66ca8"
+    },
+    "JointFinite.mediateUse": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.mediateUse : JointFinite.E → JointFinite.E → JointFinite.C → Prop :=\nfun e f c =>\n  e = JointFinite.E.a ∧ f = JointFinite.E.k ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl) ∨\n    e = JointFinite.E.b ∧ f = JointFinite.E.k ∧ c = JointFinite.C.cr",
+      "sha256": "3711ed73c6bdb21b32d2f22d27fd6713bd02119326b59186394f3e66275c64e0",
+      "body": "fun e f c =>\n  e = JointFinite.E.a ∧ f = JointFinite.E.k ∧ (c = JointFinite.C.cx ∨ c = JointFinite.C.cl) ∨\n    e = JointFinite.E.b ∧ f = JointFinite.E.k ∧ c = JointFinite.C.cr",
+      "body_sha256": "eac8a0886f320421f04c374c2fe0a09d74123fbcef456340365073839f8743bb"
+    },
+    "JointFinite.tokenOccurrence": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.tokenOccurrence : JointFinite.Token → JointFinite.E :=\nfun x =>\n  match x with\n  | JointFinite.Token.u => JointFinite.E.b\n  | JointFinite.Token.v => JointFinite.E.k",
+      "sha256": "33b09c1321a8a7ece1a5291000e7491f91847502112e6105fee31b39c82e0554",
+      "body": "fun x =>\n  match x with\n  | JointFinite.Token.u => JointFinite.E.b\n  | JointFinite.Token.v => JointFinite.E.k",
+      "body_sha256": "7bf5db76ba6315da305fa2dcc66480d33663fe3061bbda23ab5009fb9519024c"
+    },
+    "JointFinite.tokenBearer": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.tokenBearer : JointFinite.Token → JointFinite.B :=\nfun x =>\n  match x with\n  | JointFinite.Token.u => JointFinite.B.r\n  | JointFinite.Token.v => JointFinite.B.m",
+      "sha256": "93e69cda8d62323c4b26fee1d915b0154e8be6c9e2856e7313bdddb373b802e6",
+      "body": "fun x =>\n  match x with\n  | JointFinite.Token.u => JointFinite.B.r\n  | JointFinite.Token.v => JointFinite.B.m",
+      "body_sha256": "e0afaa6fc8480106a2b792c32842f8ed0e78cc35d785c5b2b96556e675da1541"
+    },
+    "JointFinite.modeExercise": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.modeExercise : JointFinite.E → JointFinite.Exercise :=\nfun x =>\n  match x with\n  | JointFinite.E.a => JointFinite.Exercise.provideA\n  | JointFinite.E.b => JointFinite.Exercise.provideB\n  | JointFinite.E.k => JointFinite.Exercise.provideK\n  | JointFinite.E.o => JointFinite.Exercise.provideO",
+      "sha256": "2dc229906aaa9ee0bf90938686aa98ce815e15aca4daf155707b15924c89307d",
+      "body": "fun x =>\n  match x with\n  | JointFinite.E.a => JointFinite.Exercise.provideA\n  | JointFinite.E.b => JointFinite.Exercise.provideB\n  | JointFinite.E.k => JointFinite.Exercise.provideK\n  | JointFinite.E.o => JointFinite.Exercise.provideO",
+      "body_sha256": "6e32b5aae83ccab98efe0bab87a04dbd2f909cf32edba02dd36a9f897e09e3e9"
+    },
+    "JointFinite.productivelySupportsToken": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.productivelySupportsToken : JointFinite.B → JointFinite.Token → Prop :=\nfun s x => s = JointFinite.B.g",
+      "sha256": "6daed65fb4946cd0963bf77a43d808a534d3450aeab2bdfceffdcc274b8f2ca9",
+      "body": "fun s x => s = JointFinite.B.g",
+      "body_sha256": "ca1e4aec4353a9682ce26067cdde4f55457e850528f1f50ba548e0e74ef8bb3f"
+    },
+    "JointFinite.authenticated": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.authenticated : JointFinite.Token → Prop :=\nfun x => False",
+      "sha256": "4d3ceb222e09997cd8d748657a6dc52a2fa4bb8974f2f5aa6ea583ec4f5d0d91",
+      "body": "fun x => False",
+      "body_sha256": "655ef00d353b59906f4de1c97d8b7ca020ae3fd391f361685f25a25170ae55fa"
+    },
+    "JointFinite.speech": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.speech : VeracityBoundary.Model JointFinite.B JointFinite.W JointFinite.Token JointFinite.Content\n  JointFinite.Exercise :=\n{\n  asserts := fun w s t q =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧ t = JointFinite.Token.u ∧ q = JointFinite.Content.present ∨\n        s = JointFinite.B.x ∧ t = JointFinite.Token.v ∧ q = JointFinite.Content.absent),\n  trueAt := fun w q =>\n    JointFinite.live w ∧ q = JointFinite.Content.present ∨ w = JointFinite.W.w2 ∧ q = JointFinite.Content.absent,\n  knowsFalse := fun w s q =>\n    s = JointFinite.B.g ∧\n        (JointFinite.live w ∧ q = JointFinite.Content.absent ∨ w = JointFinite.W.w2 ∧ q = JointFinite.Content.present) ∨\n      s = JointFinite.B.x ∧ JointFinite.live w ∧ q = JointFinite.Content.absent,\n  aware := fun w s t q =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧ t = JointFinite.Token.u ∧ q = JointFinite.Content.present ∨\n        s = JointFinite.B.x ∧ t = JointFinite.Token.v ∧ q = JointFinite.Content.absent),\n  deliberate := fun w s t =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧ t = JointFinite.Token.u ∨ s = JointFinite.B.x ∧ t = JointFinite.Token.v),\n  exercise := fun t =>\n    match t with\n    | JointFinite.Token.u => JointFinite.Exercise.sayG\n    | JointFinite.Token.v => JointFinite.Exercise.sayX,\n  actual := fun w s e =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧\n          (e = JointFinite.Exercise.sayG ∨\n            e = JointFinite.Exercise.provideA ∨ e = JointFinite.Exercise.provideB ∨ e = JointFinite.Exercise.provideK) ∨\n        s = JointFinite.B.h ∧ e = JointFinite.Exercise.provideO ∨\n          s = JointFinite.B.x ∧ (e = JointFinite.Exercise.sayX ∨ e = JointFinite.Exercise.actX)),\n  fitting := fun w s e =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧\n          (e = JointFinite.Exercise.sayG ∨\n            e = JointFinite.Exercise.provideA ∨ e = JointFinite.Exercise.provideB ∨ e = JointFinite.Exercise.provideK) ∨\n        s = JointFinite.B.h ∧ e = JointFinite.Exercise.provideO ∨ s = JointFinite.B.x ∧ e = JointFinite.Exercise.actX),\n  shortcoming := fun w s e => JointFinite.live w ∧ s = JointFinite.B.x ∧ e = JointFinite.Exercise.sayX }",
+      "sha256": "abdcdef9699820bfb074d0e9f88b9b9e3c91ec74972296abd33681ceeb5da145",
+      "body": "{\n  asserts := fun w s t q =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧ t = JointFinite.Token.u ∧ q = JointFinite.Content.present ∨\n        s = JointFinite.B.x ∧ t = JointFinite.Token.v ∧ q = JointFinite.Content.absent),\n  trueAt := fun w q =>\n    JointFinite.live w ∧ q = JointFinite.Content.present ∨ w = JointFinite.W.w2 ∧ q = JointFinite.Content.absent,\n  knowsFalse := fun w s q =>\n    s = JointFinite.B.g ∧\n        (JointFinite.live w ∧ q = JointFinite.Content.absent ∨ w = JointFinite.W.w2 ∧ q = JointFinite.Content.present) ∨\n      s = JointFinite.B.x ∧ JointFinite.live w ∧ q = JointFinite.Content.absent,\n  aware := fun w s t q =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧ t = JointFinite.Token.u ∧ q = JointFinite.Content.present ∨\n        s = JointFinite.B.x ∧ t = JointFinite.Token.v ∧ q = JointFinite.Content.absent),\n  deliberate := fun w s t =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧ t = JointFinite.Token.u ∨ s = JointFinite.B.x ∧ t = JointFinite.Token.v),\n  exercise := fun t =>\n    match t with\n    | JointFinite.Token.u => JointFinite.Exercise.sayG\n    | JointFinite.Token.v => JointFinite.Exercise.sayX,\n  actual := fun w s e =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧\n          (e = JointFinite.Exercise.sayG ∨\n            e = JointFinite.Exercise.provideA ∨ e = JointFinite.Exercise.provideB ∨ e = JointFinite.Exercise.provideK) ∨\n        s = JointFinite.B.h ∧ e = JointFinite.Exercise.provideO ∨\n          s = JointFinite.B.x ∧ (e = JointFinite.Exercise.sayX ∨ e = JointFinite.Exercise.actX)),\n  fitting := fun w s e =>\n    JointFinite.live w ∧\n      (s = JointFinite.B.g ∧\n          (e = JointFinite.Exercise.sayG ∨\n            e = JointFinite.Exercise.provideA ∨ e = JointFinite.Exercise.provideB ∨ e = JointFinite.Exercise.provideK) ∨\n        s = JointFinite.B.h ∧ e = JointFinite.Exercise.provideO ∨ s = JointFinite.B.x ∧ e = JointFinite.Exercise.actX),\n  shortcoming := fun w s e => JointFinite.live w ∧ s = JointFinite.B.x ∧ e = JointFinite.Exercise.sayX }",
+      "body_sha256": "62595f9d18900037bd6c83ddd3a6fb4b5f057b330f7776f77b0db90c81a48b66"
+    },
+    "JointFinite.selectedSupport": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.selectedSupport : JointFinite.B → Prop :=\nfun s => s = JointFinite.B.g ∨ s = JointFinite.B.x ∨ s = JointFinite.B.l ∨ s = JointFinite.B.r ∨ s = JointFinite.B.m",
+      "sha256": "b139f44d189840afbe59a3803d92d5efb0a2aef15e793ab673635874b6080c1c",
+      "body": "fun s => s = JointFinite.B.g ∨ s = JointFinite.B.x ∨ s = JointFinite.B.l ∨ s = JointFinite.B.r ∨ s = JointFinite.B.m",
+      "body_sha256": "0ae3dc30f62804041c8bcb0fa28257f66ae50513fd1acbd3d1aef30ee271f0b6"
+    },
+    "JointFinite.below": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.below : JointFinite.B → JointFinite.B → Prop :=\nfun s t => s = t ∨ JointFinite.supportAncestor s t",
+      "sha256": "13c51f5b9b70b048aede93ca53766282fcd7d6a7118bbf90220f21166cf4d44d",
+      "body": "fun s t => s = t ∨ JointFinite.supportAncestor s t",
+      "body_sha256": "0e94961d144b4af4ba285310dc9823b0f9306c970e4049b9902dda47d4318a89"
+    },
+    "JointFinite.localCover": {
+      "declaration_kind": "def",
+      "declaration_and_body": "def JointFinite.localCover : JointFinite.B → JointFinite.B → Prop :=\nfun s t => JointFinite.below s t ∧ ∀ (y : JointFinite.B), JointFinite.below y t → JointFinite.below s y",
+      "sha256": "439bd6d826201693d74558262168fd83efbf95d8286f9a6b5f82023f1d0a0a19",
+      "body": "fun s t => JointFinite.below s t ∧ ∀ (y : JointFinite.B), JointFinite.below y t → JointFinite.below s y",
+      "body_sha256": "bde8361e2eef469c89cfaa54a293bdfcf96290b13c9fc314a646292cb47a9755"
+    },
+    "JointFinite.canonical_original_via_component": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.canonical_original_via_component : Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness\n  JointFinite.framework JointFinite.B.x JointFinite.R.rg JointFinite.B.g :=\nExists.casesOn\n  (Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion JointFinite.framework JointFinite.B.x\n    (Eq.mpr\n      (id\n        (congrArg\n          (fun x =>\n            x ∨\n              JointFinite.B.x = JointFinite.B.l ∨\n                JointFinite.B.x = JointFinite.B.r ∨\n                  JointFinite.B.x = JointFinite.B.m ∨ JointFinite.B.x = JointFinite.B.z)\n          (eq_self JointFinite.B.x)))\n      (of_decide_eq_true (id (Eq.refl Bool.true))))\n    JointFinite.abc_full.completion JointFinite.abc_full.realisation JointFinite.abc_full.support)\n  fun q h =>\n  Exists.casesOn h fun s witness =>\n    And.casesOn (JointFinite.J01_canonical_identity q s witness) fun hq hs =>\n      Eq.ndrec (motive := fun q =>\n        Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x q s →\n          Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x\n            JointFinite.R.rg JointFinite.B.g)\n        (fun witness =>\n          Eq.ndrec (motive := fun s =>\n            Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x\n                JointFinite.R.rg s →\n              Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x\n                JointFinite.R.rg JointFinite.B.g)\n            (fun witness => witness) (Eq.symm hs) witness)\n        (Eq.symm hq) witness",
+      "sha256": "25965b7b265f0442e7c6f7da9f2119a003efff4af1f16b1fafd8866d752fa183",
+      "body": "Exists.casesOn\n  (Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion JointFinite.framework JointFinite.B.x\n    (Eq.mpr\n      (id\n        (congrArg\n          (fun x =>\n            x ∨\n              JointFinite.B.x = JointFinite.B.l ∨\n                JointFinite.B.x = JointFinite.B.r ∨\n                  JointFinite.B.x = JointFinite.B.m ∨ JointFinite.B.x = JointFinite.B.z)\n          (eq_self JointFinite.B.x)))\n      (of_decide_eq_true (id (Eq.refl Bool.true))))\n    JointFinite.abc_full.completion JointFinite.abc_full.realisation JointFinite.abc_full.support)\n  fun q h =>\n  Exists.casesOn h fun s witness =>\n    And.casesOn (JointFinite.J01_canonical_identity q s witness) fun hq hs =>\n      Eq.ndrec (motive := fun q =>\n        Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x q s →\n          Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x\n            JointFinite.R.rg JointFinite.B.g)\n        (fun witness =>\n          Eq.ndrec (motive := fun s =>\n            Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x\n                JointFinite.R.rg s →\n              Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x\n                JointFinite.R.rg JointFinite.B.g)\n            (fun witness => witness) (Eq.symm hs) witness)\n        (Eq.symm hq) witness",
+      "body_sha256": "1bd90ec6241dbe4bf0750caed3aa21579ef90a48aef7da59909f58cd94ebe004"
+    },
+    "JointFinite.canonical_root_via_component": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.canonical_root_via_component : Orthemology.Tranche3.SourceIdentity.Root\n  JointFinite.framework.existsAt JointFinite.framework.dep JointFinite.W.w0 JointFinite.B.g :=\nOrthemology.Tranche20.OriginalBearerBridge.root_to_inherited JointFinite.framework JointFinite.abc_full.representation\n  JointFinite.B.g JointFinite.canonical_original_via_component.right.right.right.right",
+      "sha256": "7c5e7e2e7d2d3c529fecf3603938f500c5d6e5ef8a68a3682b49c8a16cec2af2",
+      "body": "Orthemology.Tranche20.OriginalBearerBridge.root_to_inherited JointFinite.framework JointFinite.abc_full.representation\n  JointFinite.B.g JointFinite.canonical_original_via_component.right.right.right.right",
+      "body_sha256": "24b9e6b73de6949fc4a04811e4ee2a708738109e4dc4b930b34b8d0ba4e8e931"
+    },
+    "JointFinite.canonical_necessary_via_inherited": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.canonical_necessary_via_inherited : Orthemology.Tranche3.SourceIdentity.Necessary\n  JointFinite.framework.existsAt JointFinite.B.g :=\nOrthemology.Tranche3.SourceIdentity.necessary_of_actual_root JointFinite.framework.existsAt JointFinite.framework.dep\n  JointFinite.W.w0 JointFinite.B.g JointFinite.canonical_root_via_component\n  (Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited JointFinite.framework\n    JointFinite.abc_full.representation JointFinite.abc_full.need)",
+      "sha256": "405a572beced86ab5d90eba4124d0c1bd4ea8ccbe8c508a859bda9b5784dd73f",
+      "body": "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root JointFinite.framework.existsAt JointFinite.framework.dep\n  JointFinite.W.w0 JointFinite.B.g JointFinite.canonical_root_via_component\n  (Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited JointFinite.framework\n    JointFinite.abc_full.representation JointFinite.abc_full.need)",
+      "body_sha256": "6bf7f224eb480fd08306c6f28832981a756b707c285380ce4b2444b77b47a316"
+    },
+    "JointFinite.canonical_uniform_via_inherited": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.canonical_uniform_via_inherited : Orthemology.Tranche3.SourceIdentity.UniformRoot\n  JointFinite.framework.existsAt JointFinite.framework.dep JointFinite.B.g :=\nOrthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root JointFinite.framework.existsAt\n  JointFinite.framework.dep JointFinite.W.w0 JointFinite.B.g JointFinite.canonical_root_via_component\n  JointFinite.canonical_necessary_via_inherited\n  (Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited JointFinite.framework\n    JointFinite.abc_full.representation JointFinite.abc_full.constitution)",
+      "sha256": "0e61956554d5973caf23da15f9bf94313618e9e74b4e579ff21eef04b43fdd1e",
+      "body": "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root JointFinite.framework.existsAt\n  JointFinite.framework.dep JointFinite.W.w0 JointFinite.B.g JointFinite.canonical_root_via_component\n  JointFinite.canonical_necessary_via_inherited\n  (Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited JointFinite.framework\n    JointFinite.abc_full.representation JointFinite.abc_full.constitution)",
+      "body_sha256": "f70ea0d6bab78c8174caa1447b2ec66312722d093e19b99bd2195fbe5221130a"
+    },
+    "JointFinite.canonical_abc_same_g": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.canonical_abc_same_g : Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness\n    JointFinite.framework JointFinite.B.x JointFinite.R.rg JointFinite.B.g ∧\n  Orthemology.Tranche3.SourceIdentity.Necessary JointFinite.framework.existsAt JointFinite.B.g ∧\n    Orthemology.Tranche3.SourceIdentity.UniformRoot JointFinite.framework.existsAt JointFinite.framework.dep\n        JointFinite.B.g ∧\n      Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt JointFinite.framework JointFinite.B.g :=\n⟨JointFinite.canonical_original_via_component,\n  ⟨JointFinite.canonical_necessary_via_inherited,\n    ⟨JointFinite.canonical_uniform_via_inherited,\n      Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original JointFinite.framework\n        JointFinite.B.g JointFinite.canonical_original_via_component.right.right.right.right\n        JointFinite.abc_full.constitution⟩⟩⟩",
+      "sha256": "35fcc7712edd1f405b7d9c7f73e01d1ec55d0d1b29a83e635b23bc661e5d464b",
+      "body": "⟨JointFinite.canonical_original_via_component,\n  ⟨JointFinite.canonical_necessary_via_inherited,\n    ⟨JointFinite.canonical_uniform_via_inherited,\n      Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original JointFinite.framework\n        JointFinite.B.g JointFinite.canonical_original_via_component.right.right.right.right\n        JointFinite.abc_full.constitution⟩⟩⟩",
+      "body_sha256": "ad8388521e4c44dad9e94c34549e25e64d9497935a1646bd1c774db22003ecba"
+    },
+    "JointFinite.generic_abc_via_component": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.generic_abc_via_component : ∃ t q s,\n  Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework t q s ∧\n    Orthemology.Tranche3.SourceIdentity.Necessary JointFinite.framework.existsAt s ∧\n      Orthemology.Tranche3.SourceIdentity.UniformRoot JointFinite.framework.existsAt JointFinite.framework.dep s ∧\n        Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt JointFinite.framework s :=\nOrthemology.Tranche20.OriginalBearerBridge.abc_same_witness JointFinite.framework JointFinite.abc_full",
+      "sha256": "63f4f1e998c01185e7e2ff558b4026f0f07642013752089149613279e78437b2",
+      "body": "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness JointFinite.framework JointFinite.abc_full",
+      "body_sha256": "bd605410aebe824bcfb63664a236a11710925b25bf3f375493fcefbeb6f3d0ed"
+    },
+    "JointFinite.field_coverage_without_cnd": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.field_coverage_without_cnd : AnchoredSourceBridge.GlobalCoverage JointFinite.account\n  JointFinite.B.g :=\nAnchoredSourceBridge.global_coverage_of_qualified_anchor JointFinite.account JointFinite.B.g JointFinite.E.a\n  JointFinite.field_qualified JointFinite.field_classification JointFinite.field_conformance JointFinite.field_use_sound\n  JointFinite.field_role JointFinite.field_anchor JointFinite.field_connected",
+      "sha256": "f1d51bd55a7ed6434a73b825e16fc415ab2bf873893296991a0abd2d70565f82",
+      "body": "AnchoredSourceBridge.global_coverage_of_qualified_anchor JointFinite.account JointFinite.B.g JointFinite.E.a\n  JointFinite.field_qualified JointFinite.field_classification JointFinite.field_conformance JointFinite.field_use_sound\n  JointFinite.field_role JointFinite.field_anchor JointFinite.field_connected",
+      "body_sha256": "a77b0cd703e1c0089e6af667d25f1cc58972abbcbbdfbd121e8fc91bd90f1c53"
+    },
+    "JointFinite.field_guarded": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.field_guarded : AnchoredSourceBridge.Admissible JointFinite.account ∧\n  AnchoredSourceBridge.RequisiteSound JointFinite.account ∧\n    AnchoredSourceBridge.RequisiteExhaustive JointFinite.account ∧\n      AnchoredSourceBridge.GlobalCoverage JointFinite.account JointFinite.B.g ∧\n        AnchoredSourceBridge.ActualUnique JointFinite.account JointFinite.B.g ∧\n          ∀ (e : JointFinite.E),\n            JointFinite.account.Field e →\n              ∀ (s : JointFinite.B), AnchoredSourceBridge.Complete JointFinite.account s e → s = JointFinite.B.g :=\nAnchoredSourceBridge.guarded_common_original_provider JointFinite.account JointFinite.B.g JointFinite.E.a\n  JointFinite.field_admissible JointFinite.field_req_sound JointFinite.field_req_exhaustive JointFinite.field_qualified\n  JointFinite.field_classification JointFinite.field_conformance JointFinite.field_use_sound JointFinite.field_role\n  JointFinite.field_visible JointFinite.field_anchor JointFinite.field_connected JointFinite.field_cnd",
+      "sha256": "c0e3265ced6e19cf838b66d2c0f2a42dee438618a3bfe4973a836ebc7f15c265",
+      "body": "AnchoredSourceBridge.guarded_common_original_provider JointFinite.account JointFinite.B.g JointFinite.E.a\n  JointFinite.field_admissible JointFinite.field_req_sound JointFinite.field_req_exhaustive JointFinite.field_qualified\n  JointFinite.field_classification JointFinite.field_conformance JointFinite.field_use_sound JointFinite.field_role\n  JointFinite.field_visible JointFinite.field_anchor JointFinite.field_connected JointFinite.field_cnd",
+      "body_sha256": "973feeb0b9573689c7b969d7dff1720d714b514a801a6434c8fcb10b83afe35c"
+    },
+    "JointFinite.field_positive": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.field_positive : ∀ (e : JointFinite.E),\n  JointFinite.account.Field e → AnchoredSourceBridge.Positive JointFinite.account e :=\nAnchoredSourceBridge.every_field_positive JointFinite.account JointFinite.B.g JointFinite.E.a JointFinite.field_visible\n  JointFinite.field_anchor JointFinite.field_connected",
+      "sha256": "796e5876812cd7304c4d79e76d44547b9dbe90b9e55b84dfcaca42a43a35640e",
+      "body": "AnchoredSourceBridge.every_field_positive JointFinite.account JointFinite.B.g JointFinite.E.a JointFinite.field_visible\n  JointFinite.field_anchor JointFinite.field_connected",
+      "body_sha256": "48c0ad88df9e2c6605690e05b98cb3201fd9d209b6bb5068bbfe88dcce41b5c5"
+    },
+    "JointFinite.complete_provider_exists_and_unique": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.complete_provider_exists_and_unique : (∃ s,\n    AnchoredSourceBridge.GlobalCoverage JointFinite.account s) ∧\n  ∀ (e : JointFinite.E),\n    JointFinite.account.Field e →\n      ∀ (s : JointFinite.B), AnchoredSourceBridge.Complete JointFinite.account s e → s = JointFinite.B.g :=\nAnchoredSourceBridge.unique_complete_provider JointFinite.account JointFinite.B.g JointFinite.E.a\n  JointFinite.field_coverage_without_cnd JointFinite.field_cnd JointFinite.field_visible JointFinite.field_anchor\n  JointFinite.field_connected",
+      "sha256": "f54c1decb025005e6034127f43335acb76744befed9c258802a0988fd873a69b",
+      "body": "AnchoredSourceBridge.unique_complete_provider JointFinite.account JointFinite.B.g JointFinite.E.a\n  JointFinite.field_coverage_without_cnd JointFinite.field_cnd JointFinite.field_visible JointFinite.field_anchor\n  JointFinite.field_connected",
+      "body_sha256": "8e9725cd723cdd1a93863d778b06dc5811ffe458f9ad3959f9eaa2e674d70b24"
+    },
+    "JointFinite.veracity_via_component": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.veracity_via_component : VeracityBoundary.Veracity JointFinite.speech JointFinite.B.g :=\nVeracityBoundary.veracity_of_coverage JointFinite.speech JointFinite.B.g JointFinite.veracity_package.left\n  JointFinite.veracity_package.right.left JointFinite.veracity_package.right.right.left\n  JointFinite.veracity_package.right.right.right.left JointFinite.veracity_package.right.right.right.right.left\n  JointFinite.veracity_package.right.right.right.right.right.left\n  JointFinite.veracity_package.right.right.right.right.right.right",
+      "sha256": "482417ac539c3a257613101f1515101075dbf3c56cbe6172692b7a41df419b86",
+      "body": "VeracityBoundary.veracity_of_coverage JointFinite.speech JointFinite.B.g JointFinite.veracity_package.left\n  JointFinite.veracity_package.right.left JointFinite.veracity_package.right.right.left\n  JointFinite.veracity_package.right.right.right.left JointFinite.veracity_package.right.right.right.right.left\n  JointFinite.veracity_package.right.right.right.right.right.left\n  JointFinite.veracity_package.right.right.right.right.right.right",
+      "body_sha256": "d80652964b4076c1267366280d2359875d48012bdcf47affe0ecca3103b49ac4"
+    },
+    "JointFinite.honesty_equivalence_via_component": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.honesty_equivalence_via_component : VeracityBoundary.Veracity JointFinite.speech JointFinite.B.g ↔\n  VeracityBoundary.NoCounterfeit JointFinite.speech JointFinite.B.g :=\nVeracityBoundary.veracity_iff_no_counterfeit JointFinite.speech JointFinite.B.g JointFinite.veracity_package.left\n  JointFinite.veracity_package.right.left JointFinite.veracity_package.right.right.left JointFinite.veracity_factive",
+      "sha256": "9991cdb23142fd40f9c59a4ef786e79c8e3e043b6544809c6fabdb867585fa1e",
+      "body": "VeracityBoundary.veracity_iff_no_counterfeit JointFinite.speech JointFinite.B.g JointFinite.veracity_package.left\n  JointFinite.veracity_package.right.left JointFinite.veracity_package.right.right.left JointFinite.veracity_factive",
+      "body_sha256": "a242bfab1252ce2544ce20381895d9c3c9847bdf7fd6387e209f35d896d2f300"
+    },
+    "JointFinite.J05_positive_reachability": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.J05_positive_reachability : ∀ (s t : JointFinite.B),\n  JointFinite.supportAncestor s t ↔ JointFinite.PositiveReach s t :=\nfun x x_1 => { mp := JointFinite.ancestor_is_reach, mpr := JointFinite.reach_is_ancestor }",
+      "sha256": "fd2c8e8df90618d866e2131e3f0eb056e71a58ed698c779a8ca6e03231759864",
+      "body": "fun x x_1 => { mp := JointFinite.ancestor_is_reach, mpr := JointFinite.reach_is_ancestor }",
+      "body_sha256": "d39b6a1d6784443371a73e2841e2381848351833e9aa38d23a7968c58f4db73f"
+    },
+    "JointFinite.ancestor_is_reach": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.ancestor_is_reach : ∀ {s t : JointFinite.B},\n  JointFinite.supportAncestor s t → JointFinite.PositiveReach s t :=\nfun {s t} h =>\n  Or.casesOn (motive := fun t_1 => JointFinite.ancestor_decomposition s t h = t_1 → JointFinite.PositiveReach s t)\n    (JointFinite.ancestor_decomposition s t h) (fun hd h => JointFinite.PositiveReach.edge hd)\n    (fun special h_1 =>\n      And.casesOn special fun hs ht =>\n        Eq.ndrec (motive := fun {s} => JointFinite.supportAncestor s t → JointFinite.PositiveReach s t)\n          (fun h =>\n            Eq.ndrec (motive := fun {t} =>\n              JointFinite.supportAncestor JointFinite.B.g t → JointFinite.PositiveReach JointFinite.B.g t)\n              (fun h =>\n                JointFinite.PositiveReach.trans\n                  (JointFinite.PositiveReach.edge\n                    (let_fun this :=\n                      Eq.mpr\n                        (id\n                          (congrArg\n                            (fun x =>\n                              x ∨\n                                (JointFinite.B.g = JointFinite.B.x ∨\n                                      JointFinite.B.g = JointFinite.B.l ∨ JointFinite.B.g = JointFinite.B.r) ∧\n                                    JointFinite.B.x = JointFinite.B.m ∨\n                                  JointFinite.B.g = JointFinite.B.h ∧ JointFinite.B.x = JointFinite.B.z)\n                            (congr (congrArg And (eq_self JointFinite.B.g))\n                              (congrArg\n                                (fun x => x ∨ JointFinite.B.x = JointFinite.B.l ∨ JointFinite.B.x = JointFinite.B.r)\n                                (eq_self JointFinite.B.x)))))\n                        (of_decide_eq_true (id (Eq.refl Bool.true)));\n                    this))\n                  (JointFinite.PositiveReach.edge\n                    (let_fun this :=\n                      Eq.mpr\n                        (id\n                          (congrArg\n                            (fun x =>\n                              JointFinite.B.x = JointFinite.B.g ∧\n                                  (JointFinite.B.m = JointFinite.B.x ∨\n                                    JointFinite.B.m = JointFinite.B.l ∨ JointFinite.B.m = JointFinite.B.r) ∨\n                                x ∨ JointFinite.B.x = JointFinite.B.h ∧ JointFinite.B.m = JointFinite.B.z)\n                            (congr\n                              (congrArg\n                                (fun x =>\n                                  And (x ∨ JointFinite.B.x = JointFinite.B.l ∨ JointFinite.B.x = JointFinite.B.r))\n                                (eq_self JointFinite.B.x))\n                              (eq_self JointFinite.B.m))))\n                        (of_decide_eq_true (id (Eq.refl Bool.true)));\n                    this)))\n              (Eq.symm ht) h)\n          (Eq.symm hs) h)\n    (Eq.refl (JointFinite.ancestor_decomposition s t h))",
+      "sha256": "bb4311f65f1c664526c9db92441268ae7a4f5e41fa5195277d4154978415e661",
+      "body": "fun {s t} h =>\n  Or.casesOn (motive := fun t_1 => JointFinite.ancestor_decomposition s t h = t_1 → JointFinite.PositiveReach s t)\n    (JointFinite.ancestor_decomposition s t h) (fun hd h => JointFinite.PositiveReach.edge hd)\n    (fun special h_1 =>\n      And.casesOn special fun hs ht =>\n        Eq.ndrec (motive := fun {s} => JointFinite.supportAncestor s t → JointFinite.PositiveReach s t)\n          (fun h =>\n            Eq.ndrec (motive := fun {t} =>\n              JointFinite.supportAncestor JointFinite.B.g t → JointFinite.PositiveReach JointFinite.B.g t)\n              (fun h =>\n                JointFinite.PositiveReach.trans\n                  (JointFinite.PositiveReach.edge\n                    (let_fun this :=\n                      Eq.mpr\n                        (id\n                          (congrArg\n                            (fun x =>\n                              x ∨\n                                (JointFinite.B.g = JointFinite.B.x ∨\n                                      JointFinite.B.g = JointFinite.B.l ∨ JointFinite.B.g = JointFinite.B.r) ∧\n                                    JointFinite.B.x = JointFinite.B.m ∨\n                                  JointFinite.B.g = JointFinite.B.h ∧ JointFinite.B.x = JointFinite.B.z)\n                            (congr (congrArg And (eq_self JointFinite.B.g))\n                              (congrArg\n                                (fun x => x ∨ JointFinite.B.x = JointFinite.B.l ∨ JointFinite.B.x = JointFinite.B.r)\n                                (eq_self JointFinite.B.x)))))\n                        (of_decide_eq_true (id (Eq.refl Bool.true)));\n                    this))\n                  (JointFinite.PositiveReach.edge\n                    (let_fun this :=\n                      Eq.mpr\n                        (id\n                          (congrArg\n                            (fun x =>\n                              JointFinite.B.x = JointFinite.B.g ∧\n                                  (JointFinite.B.m = JointFinite.B.x ∨\n                                    JointFinite.B.m = JointFinite.B.l ∨ JointFinite.B.m = JointFinite.B.r) ∨\n                                x ∨ JointFinite.B.x = JointFinite.B.h ∧ JointFinite.B.m = JointFinite.B.z)\n                            (congr\n                              (congrArg\n                                (fun x =>\n                                  And (x ∨ JointFinite.B.x = JointFinite.B.l ∨ JointFinite.B.x = JointFinite.B.r))\n                                (eq_self JointFinite.B.x))\n                              (eq_self JointFinite.B.m))))\n                        (of_decide_eq_true (id (Eq.refl Bool.true)));\n                    this)))\n              (Eq.symm ht) h)\n          (Eq.symm hs) h)\n    (Eq.refl (JointFinite.ancestor_decomposition s t h))",
+      "body_sha256": "59218555417323c0266e199684b8e9bd6eda0782a48e934c253d6300ab377180"
+    },
+    "JointFinite.reach_is_ancestor": {
+      "declaration_kind": "theorem",
+      "declaration_and_body": "theorem JointFinite.reach_is_ancestor : ∀ {s t : JointFinite.B},\n  JointFinite.PositiveReach s t → JointFinite.supportAncestor s t :=\nfun {s t} h =>\n  JointFinite.PositiveReach.rec (fun {s t} h => JointFinite.direct_is_ancestor s t h)\n    (fun {s t u} a a ih1 ih2 => JointFinite.ancestor_transitive s t u ih1 ih2) h",
+      "sha256": "5a7497b16d405b3a6510b6b6246374f77a1deb321a2610e42db61dbb98b7909d",
+      "body": "fun {s t} h =>\n  JointFinite.PositiveReach.rec (fun {s t} h => JointFinite.direct_is_ancestor s t h)\n    (fun {s t u} a a ih1 ih2 => JointFinite.ancestor_transitive s t u ih1 ih2) h",
+      "body_sha256": "057d56512907a7818858ce03574cc423dfca9a22a11b27df869ba0170c14c041"
+    }
+  },
+  "component_uses": {
+    "AnchoredSourceBridge.every_field_positive": [
+      "JointFinite.field_positive"
+    ],
+    "AnchoredSourceBridge.global_coverage_of_qualified_anchor": [
+      "JointFinite.field_coverage_without_cnd"
+    ],
+    "AnchoredSourceBridge.guarded_common_original_provider": [
+      "JointFinite.field_guarded"
+    ],
+    "AnchoredSourceBridge.unique_complete_provider": [
+      "JointFinite.complete_provider_exists_and_unique"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness": [
+      "JointFinite.generic_abc_via_component"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited": [
+      "JointFinite.canonical_uniform_via_inherited"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original": [
+      "JointFinite.canonical_abc_same_g"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited": [
+      "JointFinite.canonical_necessary_via_inherited"
+    ],
+    "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion": [
+      "JointFinite.canonical_original_via_component"
+    ],
+    "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root": [
+      "JointFinite.canonical_necessary_via_inherited"
+    ],
+    "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root": [
+      "JointFinite.canonical_uniform_via_inherited"
+    ],
+    "VeracityBoundary.veracity_iff_no_counterfeit": [
+      "JointFinite.honesty_equivalence_via_component"
+    ],
+    "VeracityBoundary.veracity_of_coverage": [
+      "JointFinite.veracity_via_component"
+    ]
+  },
+  "scope": "Exact elaborated definition/theorem body readbacks and term-body constant occurrences, not an axiom-dependency inference. The proofs map contains both kinds, labeled by declaration_kind.",
+  "required_proof_map": {
+    "JointFinite.canonical_original_via_component": [
+      "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion"
+    ],
+    "JointFinite.canonical_necessary_via_inherited": [
+      "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+      "Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited"
+    ],
+    "JointFinite.canonical_uniform_via_inherited": [
+      "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+      "Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited"
+    ],
+    "JointFinite.canonical_abc_same_g": [
+      "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original"
+    ],
+    "JointFinite.generic_abc_via_component": [
+      "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness"
+    ],
+    "JointFinite.field_coverage_without_cnd": [
+      "AnchoredSourceBridge.global_coverage_of_qualified_anchor"
+    ],
+    "JointFinite.field_guarded": [
+      "AnchoredSourceBridge.guarded_common_original_provider"
+    ],
+    "JointFinite.field_positive": [
+      "AnchoredSourceBridge.every_field_positive"
+    ],
+    "JointFinite.complete_provider_exists_and_unique": [
+      "AnchoredSourceBridge.unique_complete_provider"
+    ],
+    "JointFinite.veracity_via_component": [
+      "VeracityBoundary.veracity_of_coverage"
+    ],
+    "JointFinite.honesty_equivalence_via_component": [
+      "VeracityBoundary.veracity_iff_no_counterfeit"
+    ],
+    "JointFinite.J05_positive_reachability": []
+  }
+}

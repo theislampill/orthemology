@@ -1,0 +1,82 @@
+{
+  "schema": "orthemology-t20-math-ledger-validation-v1",
+  "status": "PASS_RETROSPECTIVE_LEDGER_CHECKS",
+  "checked_at_utc": "2026-10-07T15:50:59.131516+00:00",
+  "scope": "Syntax,coverage arithmetic,exact catalogue title/path matching,component status separation,source/receipt hashes and prepared-owner-alias existence. No new source proof certification,corpus reading or scientific replay.",
+  "checks": {
+    "components": 53,
+    "priority_families": 18,
+    "exact_manuscripts": 52,
+    "local_applications": 1,
+    "full_proof_read_manuscripts": 7,
+    "targeted_body_read_manuscripts": 2,
+    "abstract_only_priority_manuscripts": 43,
+    "body_uncredited_corpus_manuscripts": 713,
+    "all_722_abstracts_receipt_bound": true,
+    "all_372_families_receipt_bound": true,
+    "upstream_replay_status_count": {
+      "NOT_RUN": 53
+    },
+    "replayed_upstream_manuscripts": 0,
+    "transfer_proved_upstream_manuscripts": 0,
+    "all_components_in_readable_view": true,
+    "owner_aliases_checked": 18,
+    "all104reading_records_rehashed": 107,
+    "frozen122files_rehashed": 16,
+    "independent122artifacts_rehashed": 8,
+    "no_workspace_paths_or_raw_corpus_bodies_in_outputs": true,
+    "upstream_material_blobs_rehashed_against_pinned_inventory": 43,
+    "direct_upstream_theorem_transfers": 0,
+    "explicit_seven_step_local122_application_chain": true,
+    "exact_reviewer_namespace_inventory": true,
+    "unperformed_reading_is_not_integration_closure_task": true
+  },
+  "remaining_gaps": [
+    "GAP-MATH-01",
+    "GAP-MATH-02",
+    "GAP-MATH-03",
+    "GAP-MATH-04",
+    "GAP-MATH-05",
+    "GAP-MATH-06"
+  ],
+  "new_deep_reading_credit": 0,
+  "new_scientific_replay": false,
+  "source_files_changed": false,
+  "publication_or_final_archive_inclusion": "NOT_ASSERTED",
+  "historical_author_outputs": [
+    {
+      "path": "MATH_UTILISATION.json",
+      "sha256": "fa8a662b5a899cc4070a61f54dbf43d14a752bf8df84cdc4b6aa94935e5d15af",
+      "bytes": 216437
+    },
+    {
+      "path": "MATH_UTILISATION.md",
+      "sha256": "fd16c7ddcbb724e2170b5682414f476cf6e71e7ffb82c49d2ddbcb52d4068cfd",
+      "bytes": 24120
+    },
+    {
+      "path": "MATH_SOURCE_BINDINGS.json",
+      "sha256": "00941ff25ab3b83c568ad8cd0ba95417f7f15596c5fb1b4dea7a93655e7354c2",
+      "bytes": 69618
+    }
+  ],
+  "public_outputs": [
+    {
+      "path": "MATH_UTILISATION.md",
+      "sha256": "fd16c7ddcbb724e2170b5682414f476cf6e71e7ffb82c49d2ddbcb52d4068cfd",
+      "bytes": 24120
+    },
+    {
+      "path": "MATH_UTILISATION.json",
+      "sha256": "d0e73b80d86fd9367c434e7711cb1bb40d5e0f61821db03392b5cd2590b61ff5",
+      "bytes": 216733
+    },
+    {
+      "path": "MATH_SOURCE_BINDINGS.json",
+      "sha256": "182307031547748730ab7ca741e07edbc64f9d4422258d536b969c5d87e7d651",
+      "bytes": 69896
+    }
+  ],
+  "original_validation_sha256": "59e52b1a535dc69513062b4cf5e14920fab3258bd81c4849659fca9d04a28c1e",
+  "validation_attribution": "Scoped original retrospective-ledger validation, preserved as historical evidence. Curation only verifies identities, the explicit wording correction and finite aliases; no upstream or scientific replay is performed."
+}

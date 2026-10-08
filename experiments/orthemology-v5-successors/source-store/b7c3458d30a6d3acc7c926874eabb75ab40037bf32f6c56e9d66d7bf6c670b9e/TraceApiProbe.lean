@@ -1,0 +1,13 @@
+import HiddenChangeCertificate
+#check List.dropLast_append
+#check List.dropLast_append_cons
+#check List.getLast?_append
+#check List.getLast?_cons_cons
+#check List.Chain.cons
+#check List.chain'_cons
+#check List.Chain'.right_of_append
+#check List.chain_cons
+#check List.getLast?_eq_some_iff
+#check List.mem_of_getLast?_eq_some
+#check List.dropLast_concat
+#check List.getLast?_concat

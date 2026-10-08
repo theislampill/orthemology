@@ -1,0 +1,185 @@
+{
+  "schema": "t20-original-ground-independent-review-v1",
+  "created_utc": "2026-10-07T08:30:01.217654+00:00",
+  "verdict": "PASS_SCOPED",
+  "blocking_findings": [],
+  "candidate_manifest": "CANDIDATE_MANIFEST_v1.json",
+  "candidate_manifest_sha256": "50c787b40cf0afa51f39bcba5a520a7718a48daeabc3fe495fafc1d610a4fee6",
+  "candidate_entries_verified": 47,
+  "candidate_unchanged_at_final_readback": true,
+  "report": "INDEPENDENT_REVIEW_v1.md",
+  "report_sha256": "4682ac642288b8b58d025c5b7d68063f0db452445e4b750b6aeb9a2840f0215d",
+  "author_theorems_independently_compiled_and_axiom_audited": 77,
+  "author_theorems_type_readback": 77,
+  "author_axiom_free": 73,
+  "author_axiom_using": 4,
+  "transitive_axiom_union": [
+    "Quot.sound",
+    "propext"
+  ],
+  "supplemental_review_theorems": 5,
+  "supplemental_axioms": [],
+  "executable_arbitrary_root_cases": 4165,
+  "executable_coverage_positive_cases": 1116,
+  "executable_endpoint_typed_cases": 592,
+  "inherited_source_identities_reverified": 11,
+  "retained_primary_images_visually_checked": 14,
+  "observed_compiler_or_checker_failures": [],
+  "author_source_mutations": false,
+  "author_objects_used": false,
+  "broad_old_suite_replay": false,
+  "new_primary_acquisition": false,
+  "metaphysical_possibility_certified": false,
+  "full_metaphysical_package_countermodel_claimed": false,
+  "later_dependency_audit_started": false,
+  "external_human_validation": false,
+  "evidence": [
+    {
+      "path": "INDEPENDENT_CHECKS_RECEIPT_v1.json",
+      "bytes": 15356,
+      "sha256": "c5a57688e57d8bc96d0827899401b707357053733ad09ebce800252f4b85888d"
+    },
+    {
+      "path": "INDEPENDENT_REVIEW_v1.md",
+      "bytes": 14761,
+      "sha256": "4682ac642288b8b58d025c5b7d68063f0db452445e4b750b6aeb9a2840f0215d"
+    },
+    {
+      "path": "ReviewBoundaryChecks.lean",
+      "bytes": 2925,
+      "sha256": "c009346ddd13345f74a690391d9ad201b74725dfcffb268bd14a547ac5dc88dd"
+    },
+    {
+      "path": "ReviewBoundaryChecks.olean",
+      "bytes": 66096,
+      "sha256": "c591042ec84617b749b38cbb4d346495b18cead2db2f6e3b175268e7459d1f97"
+    },
+    {
+      "path": "ReviewBoundaryChecks.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ReviewBoundaryChecks.stdout.log",
+      "bytes": 457,
+      "sha256": "ff3f21c42ac7274bb68807a38257f9788a731e2f6db34a69051611ccc4135804"
+    },
+    {
+      "path": "TypeReadback.lean",
+      "bytes": 4463,
+      "sha256": "86849e60a6a09be173971a139cbf5b91ba940a7845831dfdb3034309d29a6334"
+    },
+    {
+      "path": "TypeReadback.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TypeReadback.stdout.log",
+      "bytes": 25448,
+      "sha256": "99ef70c508d0e0f874c33addba7dfb8740f1e2a4233232453a9868cdca75e8e8"
+    },
+    {
+      "path": "check_candidate.py",
+      "bytes": 9209,
+      "sha256": "74d83b1dd892afcbc6ee0646839d76729b9c698c32af36d937cfd75eeb411ffd"
+    },
+    {
+      "path": "check_candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "check_candidate.stdout.log",
+      "bytes": 54,
+      "sha256": "01ab6ac25812956d841bd281c7b050ffba26ec5e0d0045a4d604fd93a581df87"
+    },
+    {
+      "path": "replay-v1/AxiomAudit.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "replay-v1/AxiomAudit.stdout.log",
+      "bytes": 6302,
+      "sha256": "8f73879ebcc841741da825dace080cb5ce38e46d6d310117824807eb0b6f0b24"
+    },
+    {
+      "path": "replay-v1/GroundExtension.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "replay-v1/GroundExtension.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "replay-v1/GroundExtensionControls.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "replay-v1/GroundExtensionControls.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "replay-v1/ModalCapacityControl.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "replay-v1/ModalCapacityControl.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "replay-v1/REPLAY_RECEIPT.json",
+      "bytes": 4713,
+      "sha256": "7b68ec91fcae1e7185b89f1aa43d8bf3b1762b68165d2f0096c9804ce8fe1f0a"
+    },
+    {
+      "path": "replay-v1/inputs/AxiomAudit.lean",
+      "bytes": 5017,
+      "sha256": "783bd18886a8a2d417534931146e788eb4ee7f12eff3c202e377279b865373ad"
+    },
+    {
+      "path": "replay-v1/inputs/GroundExtension.lean",
+      "bytes": 13399,
+      "sha256": "828a7541174e85f84ff1d79f00f455bcdd3ec115d86498c9ee8959f07d2bbfc5"
+    },
+    {
+      "path": "replay-v1/inputs/GroundExtensionControls.lean",
+      "bytes": 8757,
+      "sha256": "41e7b7c620913edd5aff0ba04be3638ac721e4bc8e67479cdf9c038f2975bac9"
+    },
+    {
+      "path": "replay-v1/inputs/ModalCapacityControl.lean",
+      "bytes": 4607,
+      "sha256": "899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e"
+    },
+    {
+      "path": "replay-v1/objects/AxiomAudit.olean",
+      "bytes": 17256,
+      "sha256": "29803af601b5a52e28af7a00ed10664294b988f8495a396b49dfae8ca93d6c06"
+    },
+    {
+      "path": "replay-v1/objects/GroundExtension.olean",
+      "bytes": 249336,
+      "sha256": "538b93c780d99cfe146492bf237690a7b16aedb98d43a8a23b65cf78e00ce50e"
+    },
+    {
+      "path": "replay-v1/objects/GroundExtensionControls.olean",
+      "bytes": 111632,
+      "sha256": "baf1ec9a348ee061bba6245b978962696860f0b3fcea8e399e6a1f10e09b7cf4"
+    },
+    {
+      "path": "replay-v1/objects/ModalCapacityControl.olean",
+      "bytes": 209056,
+      "sha256": "a87ff8ea15682dc7dbf084cf05c2759bcaece491a1c388285fecaac4558f8f39"
+    }
+  ],
+  "original_review_receipt_sha256": "7fd5672af799517f3ed2780290fad01586daa991779398459833958fd919948d",
+  "distribution_note": "Historical original receipt evidence identities are references only. The original candidate manifest, original review report, logs and objects are not admitted by this record; selected public review uses an explicit derived mapping."
+}

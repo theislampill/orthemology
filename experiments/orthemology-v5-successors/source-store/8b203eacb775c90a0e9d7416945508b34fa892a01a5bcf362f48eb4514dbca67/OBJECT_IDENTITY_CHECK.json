@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "author_objects": [
+    {
+      "object": "VeracityBoundary.olean",
+      "sha256": "97835e7879be482735caffc59997d73146b188247708357c256a62173fec7ecd",
+      "same_as_author_final": true
+    },
+    {
+      "object": "VeracityControls.olean",
+      "sha256": "865f52caa6fda846e48e35b67ce9084bb0a0481561175104bd5fc121c7f5f659",
+      "same_as_author_final": true
+    }
+  ],
+  "Init_olean": {
+    "path": "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+    "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944",
+    "matches_author_binding": true
+  }
+}

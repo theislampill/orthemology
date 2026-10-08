@@ -1,0 +1,123 @@
+{
+  "schema": "t20-public-reading-index-validation-summary-v1",
+  "original_validation_sha256": "4f86f26fa49fe61ab3c6449edcf7fe1e690775be033c4915278c0653fe0e56b5",
+  "as_of_utc": "2026-10-07T14:49:59Z",
+  "author_recorded_checks": 6359,
+  "author_recorded_all_passed": true,
+  "author_final_consistency_checks": 392,
+  "historical_t19_sha256": "ec81c17d452291351e869c7d1a66e5a42c0b3190d3683686ddf48bda915a8026",
+  "final_summary": {
+    "source_work_entries": 13,
+    "completed_ordered_study_groups": 8,
+    "principal_return_points_in_ordered_groups": 42,
+    "broader_return_points_in_ordered_groups": 48,
+    "witness_objects": 42,
+    "original_evidence_records": 200,
+    "records_with_verified_public_aliases": 132,
+    "all_primary_reading_credit_remains_with_original_receipts": true,
+    "no_new_primary_reading_by_this_compilation": true
+  },
+  "substantive_review": {
+    "scope": "D01–D04, M01–M04, S01–S04, H01–H04 and review questions checked against original study appraisals, notes and textual controls; H05 widened with exact return points.",
+    "finding": "One definite causal-polarity wording error corrected; attribution and locator refinements incorporated.",
+    "additional_primary_credit": 0
+  },
+  "supplements": [
+    {
+      "title": "Jami sixth collection",
+      "final_verification_sha256": "e62ae651cfada7460b15b7f9c8c22b59c0f024e18c3e142f3fdbce35b9a97b0d",
+      "sealed_manifest_sha256": "8b95abc62ffcaceb233026d16dea8f81bc24a3d90643d9c1d2c1f2b373d70d2d",
+      "sealed_files_verified": 828,
+      "new_compilation_reading_credit": 0,
+      "source_appraisal_difference_preserved": true,
+      "new_checks": 551
+    },
+    {
+      "title": "Pre-Miftah actual common-Creator comparative assessment",
+      "assessment_sha256": "6f2f4c0dfadaf2d46acf9ab7f82a94d2d1df48f3430e0df7fa808517272b81da",
+      "source_receipts_verified": 22,
+      "direct_image_receipts_verified": 21,
+      "new_primary_reading_credit_by_this_compilation": 0,
+      "new_checks": 72
+    },
+    {
+      "title": "Miftah entire received work",
+      "final_verification_sha256": "088c6e2d0109e2934b36200940a886fc96d3195cc5479847f3c5f4c029a38723",
+      "source_seal_sha256": "83ae6945036c24cdc77f9292bcdb15c623bb42811ea84cfea54584ca227eba5c",
+      "sealed_files_verified": 93,
+      "new_compilation_primary_reading_credit": 0,
+      "additional_direct_reflection_positions": 100,
+      "new_checks": 1923
+    },
+    {
+      "title": "Nubuwwat complete received body",
+      "source_seal_sha256": "39d18c4ddc83342fe63759d2587e29b0f5493744e56252442bd9c0b66a8bf885",
+      "source_sealed_files": 267,
+      "new_checks": 594,
+      "new_compilation_primary_reading_credit": 0
+    },
+    {
+      "title": "Safadiyya complete received sequence",
+      "final_verification_sha256": "27c9899c9fcd627996e0de09767a320249ff2341a37bd67f0ef8b9199a33408b",
+      "manifest_sha256": "c905f5500bf86f542d8112575a4232c5e07dee6bdca5132d098774d44c81c187",
+      "new_checks": 2305,
+      "new_compilation_primary_reading_credit": 0
+    },
+    {
+      "title": "Threshold audit, comparative response and final14:34 successor",
+      "new_checks": 160,
+      "new_compilation_reading_credit": 0
+    }
+  ],
+  "original_guide_finite_source_list_sha256": "b8f579ed76a33003c4656649b53792e2588975c2494df6a629fb079c341f9ff3",
+  "source_list_body_included": false,
+  "verification_scope": "Body-free summary of reported author validation plus curation identity/reference checks. The complete check log remains a separately hashed original; no scientific replay or new primary reading is credited.",
+  "selected_documents": [
+    {
+      "owner_archive_path": "t20/reading/GUIDE.md",
+      "original_sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+      "projected_sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+      "projected_bytes": 63809
+    },
+    {
+      "owner_archive_path": "t20/reading/READING_INDEX.json",
+      "original_sha256": "490bdd577b6e3f17e7ee2912da00fe1cfbf71ac296ba5d85f7f08996bf728b18",
+      "projected_sha256": "95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998",
+      "projected_bytes": 1029129
+    },
+    {
+      "owner_archive_path": "t20/reading/SPECIALIST_REVIEW_QUESTIONS.md",
+      "original_sha256": "5b6e38a335ae31e2fe3082a36313acec9f62a9ebf78c695b61b20cb291f547fa",
+      "projected_sha256": "5b6e38a335ae31e2fe3082a36313acec9f62a9ebf78c695b61b20cb291f547fa",
+      "projected_bytes": 11525
+    }
+  ],
+  "no_source_records_modified": true,
+  "new_primary_reading_credit": 0,
+  "historical_predecessor_inputs": [
+    {
+      "title": "Earlier guide input snapshot",
+      "sha256": "f12241e7616ea11ebb8c5ccf82e385b75916e831a7357061b5fb8ded0d009eb8",
+      "body_included": false
+    },
+    {
+      "title": "Earlier specialist-question input snapshot",
+      "sha256": "68f73e6704eb1552122fa17af3b110e574185ebedbe32a0bc7adf92beb0f4e48",
+      "body_included": false
+    }
+  ],
+  "historical_supporting_records": [
+    {
+      "title": "CHANGE_RECORD.md",
+      "sha256": "cf26963d0ada051fe3dd840eb0c17d73d12cada92c8ff424917afeed9c11ee74",
+      "bytes": 9651,
+      "body_included": false
+    },
+    {
+      "title": "GUIDE_NARRATIVE_VERIFICATION.json",
+      "sha256": "5810b083f91d3211d59cbe6436b04b80406e3f750649d92e9e5c372a5420ce09",
+      "bytes": 875,
+      "body_included": false
+    }
+  ]
+}

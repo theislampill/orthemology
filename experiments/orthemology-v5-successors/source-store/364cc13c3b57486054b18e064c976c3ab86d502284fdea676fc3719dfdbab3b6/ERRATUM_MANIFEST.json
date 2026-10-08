@@ -1,0 +1,57 @@
+{
+  "schema": "t20-veracity-documentation-erratum-v1",
+  "date": "2026-10-07",
+  "status": "DOCUMENTATION_CORRECTION_ONLY_SCIENCE_UNCHANGED",
+  "original_seal": {
+    "path": "../veracity-boundary/SHA256SUMS",
+    "sha256": "161989fec72e5cc231547378db4c7890f8b4e49e6fe77f220a81d97904eed1b2",
+    "covered_files_rechecked": 95
+  },
+  "unchanged_scientific_sources": {
+    "src/VeracityBoundary.lean": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+    "src/VeracityControls.lean": "91d2717e4f9faebbed5e4f10055793a608231a33eefb7df477acdd7890a84d23"
+  },
+  "unchanged_review_identities": {
+    "../veracity-independent-review/fresh-trust0-v3/REVIEW_VERIFICATION.json": "1fea0837e024cad0dd45b423cf8063fc21907f7176d6c2af4a6fae95dc493244",
+    "../veracity-independent-review/IndependentBoundaryTests.lean": "397cfb115df42e82cc5b02ea96887fa81bf0c0b8378262df172719908159573a",
+    "../veracity-independent-review/INDEPENDENT_AXIOM_CHECK.json": "b2637640b2bff52587a2c67a197c90489fa30f47c246d4a6433656c9cb8dee1f",
+    "../veracity-independent-review/PARAGRAPH_NUMBERING_CHECK.json": "682c484603c87342d28c1baf24e741c52f6746eb7f7909a9edc99dbf56712bd3",
+    "../veracity-independent-review/review_replay.py": "f4fa71579311483119b623d805f666f46d989398eac4dacd521968ec5821252d"
+  },
+  "projections": [
+    {
+      "original_path": "../veracity-boundary/CHANGE_RECORD.md",
+      "original_sha256": "b14801f4098a1afec5de046ff85306c6c69af9e129213fa469f610ead18035f5",
+      "original_bytes": 1220,
+      "derived_path": "public-projections/CHANGE_RECORD.md",
+      "derived_sha256": "00822a42292ea71fa9369da1dbb25f473e2f98994f26010e64f8605d6b443ca4",
+      "derived_bytes": 1376,
+      "diff_path": "diffs/CHANGE_RECORD.md.diff",
+      "diff_sha256": "45633bc1c41c8e11c00ebff7ef2ab5d5c621ed2dbdc5e43338fabe6c84339978",
+      "old_sentence": "The original DOCX enumeration included an empty paragraph and shifted references by one.",
+      "corrected_sentence": "The earlier explanation that an empty DOCX paragraph caused the citation discrepancy was mistaken; the inspected bodies contain no empty paragraphs, and the active references were corrected against the sealed zero-based IDs beginning at P00000.",
+      "only_change": "Exactly one explanatory sentence; all other source bytes preserved."
+    },
+    {
+      "original_path": "../veracity-boundary/PROPOSED_DESIGN.md",
+      "original_sha256": "eab8038d41e27ba8f6a14091fc3f990516f00555ed41deb02693376381fbebb0",
+      "original_bytes": 10972,
+      "derived_path": "public-projections/PROPOSED_DESIGN.md",
+      "derived_sha256": "0ba99ebf33c527f5034b765130b1b1a5ee7abaf24c0377df20ff99f9f7f7ee18",
+      "derived_bytes": 11065,
+      "diff_path": "diffs/PROPOSED_DESIGN.md.diff",
+      "diff_sha256": "a6b63916e63c6cbc1732839c9d8b57683b8e19e9826bf2c3720c7183e2a3ab37",
+      "old_sentence": "The initial proposal counted an empty DOCX paragraph and was shifted by one; its preserved version is historical, not the active citation authority.",
+      "corrected_sentence": "The earlier empty-DOCX-paragraph explanation was mistaken; the active references were corrected against the sealed zero-based IDs beginning at P00000, while the preserved proposal remains historical rather than the active citation authority.",
+      "only_change": "Exactly one explanatory sentence; all other source bytes preserved."
+    }
+  ],
+  "body_check": {
+    "path": "BODY_PARAGRAPH_CHECK.json",
+    "sha256": "eee71e3493dc316593b1258caaa6d33f6b1d16db9a100ce072a1a16a4ce9979e",
+    "matched_paragraphs": 47,
+    "empty_paragraphs_in_each_inspected_body": 0
+  },
+  "scientific_rebuild": false,
+  "no_history_rewrite": true
+}

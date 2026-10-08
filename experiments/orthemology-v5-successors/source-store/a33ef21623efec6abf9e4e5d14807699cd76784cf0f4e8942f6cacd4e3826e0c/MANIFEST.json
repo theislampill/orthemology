@@ -1,0 +1,67 @@
+{
+  "schema": "orthemology.nineteenth.evidence.v1",
+  "authorship": "dot, an OpenAI AI assistant",
+  "prepared_utc": "2026-10-06T17:26:11.720537+00:00",
+  "programme": "Orthemology v5",
+  "tranche": "Nineteenth",
+  "package_kind": "Research synthesis and qualified source metadata; no source-book redistribution",
+  "content_members": [
+    {
+      "name": "research/source_locations_and_reading_scope.json",
+      "bytes": 17447,
+      "sha256": "7dc04bd7c34615a62769ca29313362d767af9eb0205769f20b6be1291765fbdc"
+    },
+    {
+      "name": "reviews/causal_nonduplication.json",
+      "bytes": 4170,
+      "sha256": "2f60ec3cdb8a99651d9343d8543d06c9248eef3bf175f97b97dc5be2d7889aaa"
+    },
+    {
+      "name": "reviews/source_mode_and_field.json",
+      "bytes": 5206,
+      "sha256": "92f457f800082152fa932642ed72035c3033ee729d15a1994d3edcd4477b9b90"
+    },
+    {
+      "name": "reviews/disposition_and_review_scope.json",
+      "bytes": 3084,
+      "sha256": "afc75309970b535c2713ed9d381de13e9ebaa25fd0f28e42582655c5f76a09dc"
+    },
+    {
+      "name": "metadata/repository_boundary.json",
+      "bytes": 1130,
+      "sha256": "085edbdeaf6b1dc6d1e11107ec73b27af4381d9d7cb18f76e2123d914595831e"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2780,
+      "sha256": "058c6a97743e645618a16a0a65d06325ed194804a0e4c1f4a6a6d94a642955e3"
+    },
+    {
+      "name": "reading/Arabic_Volume_Reading_Index.json",
+      "bytes": 41363,
+      "sha256": "ec81c17d452291351e869c7d1a66e5a42c0b3190d3683686ddf48bda915a8026"
+    }
+  ],
+  "separately_delivered_documents": [
+    {
+      "filename": "Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "bytes": 63700,
+      "sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "pages": 18
+    },
+    {
+      "filename": "Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.docx",
+      "bytes": 50521,
+      "sha256": "4364e1c90e8a213cde09fffb3766c5205f98b9f5c174aa447e1130114b93df91",
+      "pages": 8
+    },
+    {
+      "filename": "Arabic_Volume_Reading_Index_Final_v1_20261006.docx",
+      "bytes": 66206,
+      "sha256": "f1c136b1ef3a83ba780a129ce047866b92f41192599722672e4ee6c516f8e708",
+      "pages": 22
+    }
+  ],
+  "verification_scope": "Digests and ZIP integrity verify these bytes, not philosophical truth or repository adoption.",
+  "checksum_note": "SHA256SUMS covers the seven content members and MANIFEST.json. It does not hash itself."
+}

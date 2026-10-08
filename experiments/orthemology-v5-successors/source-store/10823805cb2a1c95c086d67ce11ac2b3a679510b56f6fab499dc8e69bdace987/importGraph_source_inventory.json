@@ -1,0 +1,134 @@
+[
+  {
+    "path": ".github/workflows/build.yml",
+    "sha256": "99c141c9387e038905c0795d07bf4183f1b4ac940dc07b0831d7fb5e39ba7081"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "7d5f92a5309a81ee29aad6ba3b1b11ada2030bc16fd68dbde90d6f61bbe2563e"
+  },
+  {
+    "path": ".gitpod.yml",
+    "sha256": "172bada463490b4cc891d9f4ac3f35cb38487d36b515cf7d255b754bb41a4ead"
+  },
+  {
+    "path": "ImportGraph.lean",
+    "sha256": "b16a47c155a70892accc0683ebea6f79463821ec826c785a0cf635a3896cd60c"
+  },
+  {
+    "path": "ImportGraph/Cli.lean",
+    "sha256": "8b355f022bc59409251f35e8123e034a61515a1ab59b975397c0724879264e7b"
+  },
+  {
+    "path": "ImportGraph/CurrentModule.lean",
+    "sha256": "103451d10b51cf5cf35e841ba1bccb5e30c8c19ffc0f05ffc1adfef62dbd23ee"
+  },
+  {
+    "path": "ImportGraph/Gexf.lean",
+    "sha256": "e8a7a6de9374e806ff5b0d9e1df431349769a5b4f0b8fc90ff25f6fc1b86cb6c"
+  },
+  {
+    "path": "ImportGraph/Imports.lean",
+    "sha256": "fc1e8e49f88d4b4844e079772fb207ec009846db6573167cfb94de52a301de35"
+  },
+  {
+    "path": "ImportGraph/Lean/Name.lean",
+    "sha256": "d83ec3bd3643bffdcb707e4d48eb42280c80738dcd1f2feedc9b44e0bce790ea"
+  },
+  {
+    "path": "ImportGraph/RequiredModules.lean",
+    "sha256": "afd09f52b275aba6ab8f9a87f97581a36fdc641c78cdaa37f4e1227b78d28d10"
+  },
+  {
+    "path": "ImportGraph/UnusedTransitiveImports.lean",
+    "sha256": "a3e49e8c0e61ce373666dd100e1c224816dd584844aa92591f6f63cc28c201dd"
+  },
+  {
+    "path": "ImportGraphTest.lean",
+    "sha256": "b1a2ab70943bd42d1001d17a9b8284d413156c1f63f6b36f9368aa2ee0d79f54"
+  },
+  {
+    "path": "ImportGraphTest/.gitignore",
+    "sha256": "dc2a788ea082c73769c1c33ab9405cefab29466019b10d32bc8192b09a6e9838"
+  },
+  {
+    "path": "ImportGraphTest/Dot.lean",
+    "sha256": "8235d9d77022af1301e0be652e180ea0828454b3d0661df2da5ac705047593b1"
+  },
+  {
+    "path": "ImportGraphTest/Imports.lean",
+    "sha256": "6b55773027b555404ce831baf70867b9b4f22b14cc447ed6a9aa77a94daeab11"
+  },
+  {
+    "path": "ImportGraphTest/Unused.lean",
+    "sha256": "92728cdd6aa3f037d6702cfa226a886924a33797604e22974f3a1ed484d6181b"
+  },
+  {
+    "path": "ImportGraphTest/Used.lean",
+    "sha256": "61b5c1d5ba4b3cf30d2dcad6f3c61dfd2b47fbd2d80d0b024c2f91063a35b717"
+  },
+  {
+    "path": "ImportGraphTest/expected.dot",
+    "sha256": "ad149714c595e15b0d6d347264c9d36079ac4bdb2a349432a8c4914830bb1f61"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "Main.lean",
+    "sha256": "173952063cb97e898559afe2c9d63248661535c9d6ffd8a9248b7614ce2cd733"
+  },
+  {
+    "path": "README.md",
+    "sha256": "dc7787ac6b6a493013e29fe7d540e44a37ed95b6d490b7881d4a698bd3c8abb5"
+  },
+  {
+    "path": "html-template/.gitignore",
+    "sha256": "b58abbc29ace84836e899f18af174c088e9a26589ef062c6eaff36c0ce74a8e5"
+  },
+  {
+    "path": "html-template/LICENSE_source",
+    "sha256": "49110e6ed9990dbd0869c66bdae2882a9e74776094a12e87f25067979e777502"
+  },
+  {
+    "path": "html-template/README.md",
+    "sha256": "f1416d39aae951b043e3178804180107f8bf5f600413af4fa7a4857e47052517"
+  },
+  {
+    "path": "html-template/index.html",
+    "sha256": "04788e18c2dcab33d0eb9cc4f2220d8a3e7113e1250e69997007eb02deccee41"
+  },
+  {
+    "path": "html-template/vendor/graphology-LICENSE",
+    "sha256": "9d396b4882c329077f32861c0d6822dcee48f2d0ff6196d8459af70844196275"
+  },
+  {
+    "path": "html-template/vendor/graphology-library.min.js",
+    "sha256": "d00f0a1696d5f26d1ebe3e5c69645fb004bf7ebf6e1863b0c25eec2e5e639472"
+  },
+  {
+    "path": "html-template/vendor/graphology.min.js",
+    "sha256": "690468cc40f6e8b060e21d92d606bacfd906b5bc839a6412176f1cd99144a0e4"
+  },
+  {
+    "path": "html-template/vendor/sigma-LICENSE",
+    "sha256": "27cbfd441bbb1b37315afdc35f8d3911b9ddfc48c8489ee2c895194808dd7568"
+  },
+  {
+    "path": "html-template/vendor/sigma.min.js",
+    "sha256": "efb96acdadb6904e4665193fc8ca0f9d99c9f0f1ef3168125b4cd55ef6ffa448"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "83156d8b1702babe40399120776566a4c058759770e8c72629182ee7d5e4281d"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "a8890914d6425f35abbf8ad8d64b2ae49b9189009a5746befc50997608d1fb8e"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+  }
+]

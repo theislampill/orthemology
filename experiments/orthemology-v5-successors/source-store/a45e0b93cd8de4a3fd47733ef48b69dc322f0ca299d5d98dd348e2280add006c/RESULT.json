@@ -1,0 +1,67 @@
+{
+  "campaign_invocations": 1,
+  "census": {
+    "elapsed_seconds": 6.450821,
+    "end_component_coverage_checks": 36496,
+    "known_operator_comparisons": 512,
+    "mec_comparisons": 16384,
+    "models": 32,
+    "name": "four_state_two_nontrivial_children",
+    "negative": 2,
+    "positive": 30,
+    "representative_soundness_checks": 8192,
+    "signed_body_checks": 32,
+    "target_union_comparisons": 24576,
+    "uncertain_operator_comparisons": 8192
+  },
+  "excluded_claims": [
+    "new theorem",
+    "arbitrary-finite proof by testing",
+    "Python/Lean correspondence",
+    "production change",
+    "broad four-state census"
+  ],
+  "features": {
+    "allowed_pair_subsets_per_input": 256,
+    "anchor_children": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "anchor_initial_states_asserted": 4,
+    "anchor_nontrivial_children_per_mode": 2,
+    "anchor_winning_initial_states": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "distinct_inputs": 32,
+    "fixed_templates": 8,
+    "isolated_odd_block_losing_initial_states": [
+      0,
+      1
+    ],
+    "k_w_region_combinations_per_input": 256,
+    "matched_and_revealing_exits": true,
+    "numerical_equality_and_same_support_inequality": true,
+    "random_inputs": 0,
+    "separately_attained_even_minima": [
+      2,
+      4
+    ],
+    "sparse_bridge_removal": true,
+    "state_action_relabellings": 0
+  },
+  "inputs_sha256": "d6d9cb01e89e30e8b2b175e8256f4aece9dfac60b23ca24541a29bd48010aad7",
+  "process_limit_seconds": 180,
+  "schema": 1,
+  "scope": "Small structured stress-control supplement; bounded implementation evidence only.",
+  "source_bindings_sha256": "22b590a1fb08de58aea1b565c7c6055a4ae7fa892d819296cfb82e558b224868",
+  "status": "passed"
+}

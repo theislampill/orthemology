@@ -1,0 +1,181 @@
+T20Grounded.derivable_mono {Root Claim : Type} {base : Root → Claim → Prop} {rule : Finset Claim → Claim → Prop}
+  {A B : Finset Root} (hAB : A ⊆ B) {c : Claim} (h : T20Grounded.Derivable base rule A c) :
+  T20Grounded.Derivable base rule B c
+'T20Grounded.derivable_mono' depends on axioms: [propext, Quot.sound]
+T20Grounded.derivable_rules_mono {Root Claim : Type} {base : Root → Claim → Prop}
+  {rule₁ rule₂ : Finset Claim → Claim → Prop} {A : Finset Root}
+  (hr : ∀ (P : Finset Claim) (c : Claim), rule₁ P c → rule₂ P c) {c : Claim}
+  (h : T20Grounded.Derivable base rule₁ A c) : T20Grounded.Derivable base rule₂ A c
+'T20Grounded.derivable_rules_mono' depends on axioms: [propext, Quot.sound]
+T20Grounded.derivable_sound {Root Claim : Type} {base : Root → Claim → Prop} {rule : Finset Claim → Claim → Prop}
+  {A : Finset Root} (meaning : Claim → Prop) (roots_sound : ∀ r ∈ A, ∀ (c : Claim), base r c → meaning c)
+  (rules_sound : ∀ (P : Finset Claim) (c : Claim), rule P c → (∀ p ∈ P, meaning p) → meaning c) {c : Claim}
+  (h : T20Grounded.Derivable base rule A c) : meaning c
+'T20Grounded.derivable_sound' depends on axioms: [propext, Quot.sound]
+T20Grounded.exists_minimal_subset {Root : Type} (P : Finset Root → Prop) (A : Finset Root) (hPA : P A) :
+  ∃ S ⊆ A, T20Grounded.MinimalFor P S
+'T20Grounded.exists_minimal_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.derivable_after_retraction_iff {Root Claim : Type} [DecidableEq Root] {base : Root → Claim → Prop}
+  {rule : Finset Claim → Claim → Prop} (U removed : Finset Root) (c : Claim) :
+  T20Grounded.Derivable base rule (U \ removed) c ↔
+    ∃ S ⊆ U, T20Grounded.MinimalFor (fun T => T20Grounded.Derivable base rule T c) S ∧ Disjoint S removed
+'T20Grounded.derivable_after_retraction_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.survives_disjoint_support {Root Claim : Type} [DecidableEq Root] {base : Root → Claim → Prop}
+  {rule : Finset Claim → Claim → Prop} {U S removed : Finset Root} {c : Claim} (h : T20Grounded.Derivable base rule S c)
+  (hSU : S ⊆ U) (hd : Disjoint S removed) : T20Grounded.Derivable base rule (U \ removed) c
+'T20Grounded.survives_disjoint_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.quotient_derivable_iff {Label Root Claim : Type} [DecidableEq Root] (origin : Label → Root)
+  (U : Finset Label) (base : Label → Claim → Prop) (rule : Finset Claim → Claim → Prop) (available : Finset Root)
+  (c : Claim) :
+  T20Grounded.Derivable (T20Grounded.QuotientBase origin U base) rule available c ↔
+    T20Grounded.Derivable base rule ({label ∈ U | origin label ∈ available}) c
+'T20Grounded.quotient_derivable_iff' depends on axioms: [propext, Quot.sound]
+T20Grounded.image_derivation {Label Root Claim : Type} [DecidableEq Root] (origin : Label → Root) (U : Finset Label)
+  (base : Label → Claim → Prop) (rule : Finset Claim → Claim → Prop) (labels : Finset Label) (hU : labels ⊆ U)
+  (c : Claim) (h : T20Grounded.Derivable base rule labels c) :
+  T20Grounded.Derivable (T20Grounded.QuotientBase origin U base) rule (Finset.image origin labels) c
+'T20Grounded.image_derivation' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.minimal_root_support_lifts {Label Root Claim : Type} [DecidableEq Root] (origin : Label → Root)
+  (U : Finset Label) (base : Label → Claim → Prop) (rule : Finset Claim → Claim → Prop) (roots : Finset Root)
+  (c : Claim)
+  (hmin :
+    T20Grounded.MinimalFor (fun A => T20Grounded.Derivable (T20Grounded.QuotientBase origin U base) rule A c) roots) :
+  ∃ labels ⊆ U,
+    T20Grounded.MinimalFor (fun A => T20Grounded.Derivable base rule A c) labels ∧ Finset.image origin labels = roots
+'T20Grounded.minimal_root_support_lifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.hits_mono {Label : Type} {family : Finset (Finset Label)} {A B : Finset Label} (hAB : A ⊆ B)
+  (hA : T20Grounded.Hits family A) : T20Grounded.Hits family B
+'T20Grounded.hits_mono' depends on axioms: [propext, Quot.sound]
+T20Grounded.image_of_cut {Label Root : Type} [DecidableEq Root] (origin : Label → Root) (family : Finset (Finset Label))
+  (cut : Finset Label) (hcut : T20Grounded.Hits family cut) :
+  T20Grounded.Hits (T20Grounded.imageFamily origin family) (Finset.image origin cut)
+'T20Grounded.image_of_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.pullback_of_cut {Label Root : Type} [DecidableEq Root] (origin : Label → Root)
+  (family : Finset (Finset Label)) (U : Finset Label) (hbounded : ∀ S ∈ family, S ⊆ U) (cut : Finset Root)
+  (hcut : T20Grounded.Hits (T20Grounded.imageFamily origin family) cut) :
+  T20Grounded.Hits family ({x ∈ U | origin x ∈ cut})
+'T20Grounded.pullback_of_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.minimal_root_cut_lifts {Label Root : Type} [DecidableEq Root] (origin : Label → Root)
+  (family : Finset (Finset Label)) (U : Finset Label) (hbounded : ∀ S ∈ family, S ⊆ U) (cut : Finset Root)
+  (hmin : T20Grounded.MinimalCut (T20Grounded.imageFamily origin family) cut) :
+  ∃ labels ⊆ U, T20Grounded.MinimalCut family labels ∧ Finset.image origin labels = cut
+'T20Grounded.minimal_root_cut_lifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.minimal_root_iff_minimal_archived_image {Label Root : Type} [DecidableEq Root] (origin : Label → Root)
+  (family : Finset (Finset Label)) (U : Finset Label) (hbounded : ∀ S ∈ family, S ⊆ U) (cut : Finset Root) :
+  T20Grounded.MinimalCut (T20Grounded.imageFamily origin family) cut ↔
+    T20Grounded.ArchivedImage origin family U cut ∧
+      ∀ (other : Finset Root), T20Grounded.ArchivedImage origin family U other → other ⊆ cut → cut ⊆ other
+'T20Grounded.minimal_root_iff_minimal_archived_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.Controls.testimony_needs_no_second_jurisdiction :
+  T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.Rule
+    {T20Grounded.Controls.Root.source, T20Grounded.Controls.Root.truth} T20Grounded.Controls.Claim.duty0
+'T20Grounded.Controls.testimony_needs_no_second_jurisdiction' depends on axioms: [propext, Quot.sound]
+T20Grounded.Controls.old_duty_survives_prospective_revocation :
+  T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.Rule
+    (T20Grounded.Controls.revokeProspective T20Grounded.Controls.allRoots) T20Grounded.Controls.Claim.duty0
+'T20Grounded.Controls.old_duty_survives_prospective_revocation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.Controls.old_duty_can_remain_currently_applicable :
+  T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.Rule
+    (T20Grounded.Controls.revokeProspective T20Grounded.Controls.allRoots) T20Grounded.Controls.Claim.actNow
+'T20Grounded.Controls.old_duty_can_remain_currently_applicable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.Controls.prospective_power_is_lost :
+  ¬T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.Rule
+      (T20Grounded.Controls.revokeProspective T20Grounded.Controls.allRoots) T20Grounded.Controls.Claim.mayIssueNext
+'T20Grounded.Controls.prospective_power_is_lost' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.Controls.past_duty_does_not_supply_current_applicability :
+  ¬T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.Rule
+      (T20Grounded.Controls.allRoots.erase T20Grounded.Controls.Root.occasion) T20Grounded.Controls.Claim.actNow
+'T20Grounded.Controls.past_duty_does_not_supply_current_applicability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.Controls.duty_still_derives_when_current_applicability_is_absent :
+  T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.Rule
+    (T20Grounded.Controls.allRoots.erase T20Grounded.Controls.Root.occasion) T20Grounded.Controls.Claim.duty0
+'T20Grounded.Controls.duty_still_derives_when_current_applicability_is_absent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.Controls.prospective_revocation_preserves_non_grant_roots (A : Finset T20Grounded.Controls.Root)
+  (r : T20Grounded.Controls.Root) (hr : r ≠ T20Grounded.Controls.Root.grantNow) :
+  r ∈ T20Grounded.Controls.revokeProspective A ↔ r ∈ A
+'T20Grounded.Controls.prospective_revocation_preserves_non_grant_roots' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.Controls.evidence_invalidation_preserves_current_grant (A bad : Finset T20Grounded.Controls.Root)
+  (h : T20Grounded.Controls.Root.grantNow ∈ A) :
+  T20Grounded.Controls.Root.grantNow ∈ T20Grounded.Controls.invalidateEvidence A bad
+'T20Grounded.Controls.evidence_invalidation_preserves_current_grant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.Controls.no_owned_truth_from_authorship_alone :
+  ¬T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.Rule {T20Grounded.Controls.Root.source}
+      T20Grounded.Controls.Claim.duty0
+'T20Grounded.Controls.no_owned_truth_from_authorship_alone' depends on axioms: [propext, Quot.sound]
+T20Grounded.Controls.unanchored_cycle_has_no_derivation (claim : Bool) :
+  ¬T20Grounded.Derivable (fun x x => False) T20Grounded.Controls.CycleRule ∅ claim
+'T20Grounded.Controls.unanchored_cycle_has_no_derivation' depends on axioms: [propext, Quot.sound]
+T20Grounded.Controls.anchor_grounds_cycle :
+  T20Grounded.Derivable (fun x c => c = false) T20Grounded.Controls.CycleRule {()} true
+'T20Grounded.Controls.anchor_grounds_cycle' depends on axioms: [propext, Quot.sound]
+T20Grounded.CutControls.four_unique_cheapest_label_cut (cut : Finset (Fin 4)) :
+  T20Grounded.CutControls.Cheapest T20Grounded.CutControls.fourFamily cut ↔ cut = {0, 3}
+'T20Grounded.CutControls.four_unique_cheapest_label_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.CutControls.four_unique_cheapest_root_cut (cut : Finset (Fin 2)) :
+  T20Grounded.CutControls.Cheapest
+      (T20Grounded.imageFamily T20Grounded.CutControls.fourOrigin T20Grounded.CutControls.fourFamily) cut ↔
+    cut = {0}
+'T20Grounded.CutControls.four_unique_cheapest_root_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.CutControls.four_cheapest_label_image_cost :
+  (Finset.image T20Grounded.CutControls.fourOrigin {0, 3}).card = 2
+'T20Grounded.CutControls.four_cheapest_label_image_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.CutControls.four_actual_root_cut_cost : {0}.card = 1
+'T20Grounded.CutControls.four_actual_root_cut_cost' depends on axioms: [propext, Quot.sound]
+T20Grounded.CutControls.four_discarded_cut_is_inclusion_minimal :
+  T20Grounded.MinimalCut T20Grounded.CutControls.fourFamily {0, 1, 2}
+'T20Grounded.CutControls.four_discarded_cut_is_inclusion_minimal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.CutControls.four_discarded_cut_recovers_root_optimum :
+  Finset.image T20Grounded.CutControls.fourOrigin {0, 1, 2} = {0}
+'T20Grounded.CutControls.four_discarded_cut_recovers_root_optimum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.CutControls.k32_unique_cheapest_label_cut (cut : Finset (Fin 5)) :
+  T20Grounded.CutControls.Cheapest T20Grounded.CutControls.k32Family cut ↔ cut = {3, 4}
+'T20Grounded.CutControls.k32_unique_cheapest_label_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.CutControls.k32_unique_cheapest_root_cut (cut : Finset (Fin 3)) :
+  T20Grounded.CutControls.Cheapest
+      (T20Grounded.imageFamily T20Grounded.CutControls.k32Origin T20Grounded.CutControls.k32Family) cut ↔
+    cut = {0}
+'T20Grounded.CutControls.k32_unique_cheapest_root_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.CutControls.k32_cheapest_label_image_cost : (Finset.image T20Grounded.CutControls.k32Origin {3, 4}).card = 2
+'T20Grounded.CutControls.k32_cheapest_label_image_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+T20Grounded.CutControls.k32_discarded_cut_is_inclusion_minimal :
+  T20Grounded.MinimalCut T20Grounded.CutControls.k32Family {0, 1, 2}
+'T20Grounded.CutControls.k32_discarded_cut_is_inclusion_minimal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.CutControls.k32_discarded_cut_recovers_root_optimum :
+  Finset.image T20Grounded.CutControls.k32Origin {0, 1, 2} = {0}
+'T20Grounded.CutControls.k32_discarded_cut_recovers_root_optimum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.Controls.authorship_only_mutation_creates_unsupported_duty :
+  T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.AuthorshipOnly {T20Grounded.Controls.Root.source}
+    T20Grounded.Controls.Claim.duty0
+'T20Grounded.Controls.authorship_only_mutation_creates_unsupported_duty' depends on axioms: [propext, Quot.sound]
+T20Grounded.Controls.time_erasure_mutation_creates_unsupported_action :
+  T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.TimeErased
+    (T20Grounded.Controls.allRoots.erase T20Grounded.Controls.Root.occasion) T20Grounded.Controls.Claim.actNow
+'T20Grounded.Controls.time_erasure_mutation_creates_unsupported_action' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+T20Grounded.Controls.grant_erasure_mutation_creates_unsupported_prospective_power :
+  T20Grounded.Derivable T20Grounded.Controls.Base T20Grounded.Controls.GrantErased
+    (T20Grounded.Controls.revokeProspective T20Grounded.Controls.allRoots) T20Grounded.Controls.Claim.mayIssueNext
+'T20Grounded.Controls.grant_erasure_mutation_creates_unsupported_prospective_power' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

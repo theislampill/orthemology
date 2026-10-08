@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "qualification_status": "PASS_AUTHOR_AND_INDEPENDENT_RECOVERED_PACKAGE_CHECKS",
+  "qualification_scope": "Exact prepared-environment custom-source and selected-control replay; dependency source-build provisioning is outside this base.",
+  "author_qualification_utc": "2026-10-06T03:52:00.733476+00:00",
+  "independent_qualification_utc": "2026-10-06T05:09:35.821713+00:00",
+  "consumer_snapshot_utc": "2026-10-06T05:15:42.675274+00:00",
+  "consumer_base_identity": "Eighteenth exact prepared-environment code evidence, immutable consumer base",
+  "qualified_code_manifest_sha256": "dedd850a7b3e2a89cfbdeaf6fd01d069be8b4e00a9e4019b59066bddb29e753c",
+  "independent_review_kind": "Recovered composite, not an uninterrupted independent full-runner pass.",
+  "author_summary": "PORTABLE_REPLAY_SUMMARY.json",
+  "independent_summary": "INDEPENDENT_PACKAGE_SUMMARY.json",
+  "ordinary_theorem_documents_included": false,
+  "source_build_route_included": false,
+  "exact_snapshot_environment_required": true,
+  "new_host_acquisition_recipe_qualified_in_this_base": false,
+  "scope_of_status": "Fixed qualification facts as of the stated timestamps; this record does not track subsequent publication, archive creation, or completion of the broader research."
+}

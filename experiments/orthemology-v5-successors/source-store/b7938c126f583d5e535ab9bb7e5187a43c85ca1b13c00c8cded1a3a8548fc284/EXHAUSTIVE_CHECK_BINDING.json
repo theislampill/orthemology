@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "files": {
+    "check_exhaustive_cnd.py": "207ac222d15a49377e382d06471c88c185e3640f8c48f138c3f270a4c5cc99da",
+    "EXHAUSTIVE_CHECK_RESULT.json": "45c50c4a83480e9a9b7ad9107b80a17b14711e353dfb6a38d66dd68b1c590322"
+  },
+  "preservation": "Earlier root review and review receipt unchanged; this supplies the executable corroboration artifact."
+}

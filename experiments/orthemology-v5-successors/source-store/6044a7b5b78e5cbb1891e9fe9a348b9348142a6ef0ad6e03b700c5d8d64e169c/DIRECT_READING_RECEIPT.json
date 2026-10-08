@@ -1,0 +1,148 @@
+{
+  "completed_at_utc": "2026-10-07T18:07:42.263603+00:00",
+  "method": "Direct primary text displays, plus existing Arabic scan images. Acquisition alone not credited.",
+  "inputs": [
+    {
+      "path_input_name": "Ibn Taymiyyah on the Oneness of Allah.pdf",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf",
+      "bytes": 783093
+    },
+    {
+      "path_input_name": "oneness.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "3279d299696883c70a6aef423b2fd6c5aa5087976058a96afa08e83fc6163e1f",
+      "bytes": 104994
+    },
+    {
+      "path_input_name": "minhaj-volume1-islamicbook002.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "7fe5ce2c3119401b9990c53fc9bd04f64638c28f4f279d2866b109d509e26b11",
+      "bytes": 373656
+    },
+    {
+      "path_input_name": "minhaj-volume1-islamicbook002.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "0425a003b44fd6d9f5f9c873fbe75a13367182a748826310ce8e7daeeb192ae6",
+      "bytes": 372983
+    },
+    {
+      "path_input_name": "islamweb-item95.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "bfd7b93e7ff8a733f28351e4f108c9d2dd6ded1846c4ebb996017f73fc7c5373",
+      "bytes": 212019
+    },
+    {
+      "path_input_name": "islamweb-vol1.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "7305c57a1b94d1fe8e5f48c77065693fdfb91d82adb555e125653242df5b8086",
+      "bytes": 235494
+    },
+    {
+      "path_input_name": "islamweb-vol2.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "60f1c67da78298c302d4da19cfc1387df13492a4381c56bcd83287c9ba15c43c",
+      "bytes": 336844
+    },
+    {
+      "path_input_name": "islamweb-item157.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "d50e33b6a28a4e077422e03c1266723ab1bbc78fbe642f84e8ff42d62aab8bec",
+      "bytes": 230866
+    },
+    {
+      "path_input_name": "islamweb-item158.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "e9c673a29c298429ddc06fe54622742229e7018926c27a70396d96f65fedf775",
+      "bytes": 326388
+    },
+    {
+      "path_input_name": "islamweb-item364.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "dac2fd6823987e01316eef3b1c3c510d35bc00b832cefaab8636d452373435bb",
+      "bytes": 328415
+    },
+    {
+      "path_input_name": "islamweb-item365.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "081c5255fc92bf7b80b9ca8ae6f0c8a9dd2201f97e25797ec9f9027041f2cec1",
+      "bytes": 268064
+    },
+    {
+      "path_input_name": "islamweb-vol3.html",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "b52c7d273292909b5b52bde6427d532f6b0762996f5b3ceecf892fedaa3bdb07",
+      "bytes": 407975
+    },
+    {
+      "path_input_name": "mf_extended.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "29e24a56c0b9e16822dd26fe1975767d81563325be48a256a1b5bae9a00a535b",
+      "bytes": 32433
+    }
+  ],
+  "read_scopes": [
+    {
+      "source": "Supplied Oneness55-page PDF extraction",
+      "type": "rereading",
+      "scope": "All1812 extracted lines in four untruncated displays:1–450,451–900,901–1330,1331–1812. Includes preface, main1–42, notes19/32,43closing and appendix captions.",
+      "limits": "No new full-page English visual traversal; diagrams themselves not newly read."
+    },
+    {
+      "source": "Asbahani received edited scan",
+      "type": "rereading",
+      "scope": "Printed134–152/PDF234–252,19 direct page images; body and visible modern apparatus distinguished.",
+      "limits": "Selected range only; no new manuscript collation."
+    },
+    {
+      "source": "Minhaj1:438–441",
+      "type": "NEW_TARGETED_FIRST_READING",
+      "scope": "Islamicbook002 locally labelledL146–154 continuous contextual interval; targetL149–152. Independently read page-labelled Islamweb108/95–96 main body plus all22 local apparatus notes.",
+      "limits": "Volume1 previously absent from completed volume2–3 reading; no whole-volume1 credit. Page438 also viewed onShamela927/436 before shell403; no retry or bypass after denial."
+    },
+    {
+      "source": "Minhaj2:180–183",
+      "type": "targeted rereading of prior received body; new page-correspondence and apparatus control",
+      "scope": "RetainedV02L0111–0120 fully displayed; Islamweb108/156 body178–180,157 body180–182,158 continuation182–184 to finish terminal argument; notes156:68–83,157:1–13,158:1–5 pertinent to selected context.",
+      "limits": "Page attribution to MuhammadRashadSalim1406/1986 electronically labeled edition; no fresh printed scan check."
+    },
+    {
+      "source": "Minhaj3:304–328",
+      "type": "targeted rereading; new page-correspondence and apparatus control",
+      "scope": "RetainedV03L0248–0276 fully displayed. Islamweb108/364–366 continuous body304–329;329 finishes328sentence and final statement of two independent proofs. Read330 opening as immediate continuation. Notes364:1–92,365:1–46,366:1–101 directly displayed.",
+      "limits": "No fresh printed scan check; received editor readings and omissions recorded, not authenticated manuscripts."
+    },
+    {
+      "source": "Other bounded primary controls",
+      "type": "targeted reread",
+      "scope": "Dar9 retainedL621–650 andL700–739; Jami6E183–186.",
+      "limits": "These displays do not replace companion reader’s mandatory Dar/Safadiyya/Majmu target controls."
+    },
+    {
+      "source": "Majmu20:174–183",
+      "type": "additional direct primary-text reading of companion reader’s capture",
+      "scope": "Full authorial L906–926 continuous display, including unchanged actual determination, exclusive production, modal power union and product-to-intrinsic-act transfer.",
+      "limits": "No independent acquisition or print scan; editor apparatus not reconstructed from this capture."
+    }
+  ],
+  "source_links": {
+    "oneness_user_object": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+    "minhaj1_independent_body": "https://www.islamicbook.ws/tarekh/mnhaj-002.html",
+    "minhaj1_page_labels": [
+      "https://www.islamweb.net/ar/library/content/108/95/",
+      "https://www.islamweb.net/ar/library/content/108/96/"
+    ],
+    "minhaj2_page_labels": [
+      "https://www.islamweb.net/ar/library/content/108/156/",
+      "https://www.islamweb.net/ar/library/content/108/157/",
+      "https://www.islamweb.net/ar/library/content/108/158/"
+    ],
+    "minhaj3_page_labels": [
+      "https://www.islamweb.net/ar/library/content/108/364/",
+      "https://www.islamweb.net/ar/library/content/108/365/",
+      "https://www.islamweb.net/ar/library/content/108/366/"
+    ],
+    "edition_metadata": "https://shamela.ws/book/927"
+  },
+  "access_notes": "Shamela direct request returned403 and was not retried. Fnoor32248 inherited denial not retried. Independent public Islamicbook/Islamweb readings succeeded; no full PDF downloads and no source confidence by acquisition."
+}

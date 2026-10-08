@@ -1,0 +1,62 @@
+[
+  {
+    "volume": 3,
+    "ranges": [
+      [
+        69,
+        80
+      ],
+      [
+        101,
+        110
+      ]
+    ],
+    "mode": "independent selected reinspection after primary reader traversed the ranges",
+    "utc": "2026-10-07T09:56:34.284546+00:00",
+    "body_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+    "adds_unique_first_pass_credit": false
+  },
+  {
+    "volume": 3,
+    "ranges": [
+      [
+        236,
+        246
+      ]
+    ],
+    "mode": "independent selected reinspection after primary reader completed continuous body",
+    "utc": "2026-10-07T10:03:16.592221+00:00",
+    "body_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+    "adds_unique_first_pass_credit": false
+  },
+  {
+    "volume": 3,
+    "ranges": [
+      [
+        266,
+        276
+      ],
+      [
+        194,
+        202
+      ]
+    ],
+    "mode": "independent selected reinspection after primary reader completed continuous body",
+    "utc": "2026-10-07T10:03:16.592888+00:00",
+    "body_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+    "adds_unique_first_pass_credit": false
+  },
+  {
+    "volume": 3,
+    "ranges": [
+      [
+        410,
+        424
+      ]
+    ],
+    "mode": "independent selected reinspection after primary reader completed continuous body",
+    "utc": "2026-10-07T10:03:16.593619+00:00",
+    "body_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+    "adds_unique_first_pass_credit": false
+  }
+]

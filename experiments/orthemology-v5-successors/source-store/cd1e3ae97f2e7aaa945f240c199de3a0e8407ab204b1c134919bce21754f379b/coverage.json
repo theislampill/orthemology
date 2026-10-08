@@ -1,0 +1,33 @@
+{
+  "checkpoint_utc": "2026-10-07T09:14:00Z",
+  "selected_body_paragraphs": 1873,
+  "body_words_whitespace_count": 91341,
+  "read_ranges": [
+    [
+      1,
+      1873
+    ]
+  ],
+  "kind": "continuous first-pass Arabic electronic body",
+  "reading_complete_at_this_scope": true,
+  "physical_volume_complete": false,
+  "print_apparatus_certified": false,
+  "print_pages_certified": [],
+  "visual_pages_successfully_inspected": [],
+  "reflective_reread_ranges": [
+    [
+      396,
+      422
+    ],
+    [
+      1591,
+      1611
+    ],
+    [
+      1856,
+      1873
+    ]
+  ],
+  "body_sha256": "b3fa946a26fe7e6ea4dcd0aa5512da5b5451d5dc4168f6a2e86e60b8ef5ce649",
+  "reflective_reread_paragraph_occurrences": 66
+}

@@ -1,0 +1,296 @@
+{
+  "created_utc": "2026-10-07T12:17:34.415274+00:00",
+  "reader": "actual-common-source independent assessment",
+  "whole_book_traversal_claim": false,
+  "records": [
+    {
+      "source_sha256": "3eded28d866a8dd42af6b943071a8f077d94d9bb5b1666abf650330e957ddad4",
+      "selected_text_sha256": "63e68c2aac3fcfaa57438c00da8891217080a7614575e15e3263b2adea900540",
+      "kind": "direct_primary_text",
+      "note": "IDs are extraction paragraph numbers, not printed pages.",
+      "source_locator": "Darʾ VIII, extracted paragraph mapping; IDs are extraction coordinates, not printed pages",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-012.html",
+        "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-013.html",
+        "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html"
+      ],
+      "selection_locator": "Darʾ VIII extraction paragraphs 396–422",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "04cc1092235e0d92312ed5146f1f89c1bea866546a6c567318a77be9cf1b0963",
+      "selected_text_sha256": "c23768b84fcbfe4c4f2d3580e852a69d34678d4b3ca2467905a23f99871b3f1b",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Darʾ IX, received electronic subsection 016",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html"
+      ],
+      "selection_locator": "Darʾ IX subsection 016 lines 621–650",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "04cc1092235e0d92312ed5146f1f89c1bea866546a6c567318a77be9cf1b0963",
+      "selected_text_sha256": "6a33847172ef4c40d86b262e070bb7a1a60e12f61badaad580a47fc50c19524e",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Darʾ IX, received electronic subsection 016",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html"
+      ],
+      "selection_locator": "Darʾ IX subsection 016 lines 700–739",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "04cc1092235e0d92312ed5146f1f89c1bea866546a6c567318a77be9cf1b0963",
+      "selected_text_sha256": "ec48a30993c6e133c69fb5e3ef319fc648bbe427347be7b9492632cc9402e79e",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Darʾ IX, received electronic subsection 016",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html"
+      ],
+      "selection_locator": "Darʾ IX subsection 016 lines 740–779",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "e164225c49e37a4e94dc54ca9f56a59fd96581802b8a5beb7b27c81c7d4b8856",
+      "selected_text_sha256": "7033a49f529608433eb109ca9e4707b2199c67e466f3ce12d2f43c0b0550bc59",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Minhaj al-Sunna, volume 2, extracted body; local coordinates retain subsection-line mappings",
+      "source_urls": [
+        "https://www.islamicbook.ws/tarekh/mnhaj-003.html",
+        "https://www.islamicbook.ws/tarekh/mnhaj-004.html",
+        "https://www.islamicbook.ws/tarekh/mnhaj-005.html"
+      ],
+      "selection_locator": "Minhaj volume 2 local lines 100–110",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "e164225c49e37a4e94dc54ca9f56a59fd96581802b8a5beb7b27c81c7d4b8856",
+      "selected_text_sha256": "0208a8a0ade8b6fccfdc867c0d9355d1604f7268c556865b60345447bbe50b9c",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Minhaj al-Sunna, volume 2, extracted body; local coordinates retain subsection-line mappings",
+      "source_urls": [
+        "https://www.islamicbook.ws/tarekh/mnhaj-003.html",
+        "https://www.islamicbook.ws/tarekh/mnhaj-004.html",
+        "https://www.islamicbook.ws/tarekh/mnhaj-005.html"
+      ],
+      "selection_locator": "Minhaj volume 2 local lines 111–120",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "selected_text_sha256": "93e524a6996f42bac9cc989376563a22562fce3cb90443ec461e699f2c5efea1",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Minhaj al-Sunna, volume 3, extracted body; local coordinates retain subsection-line mappings",
+      "source_urls": [
+        "https://www.islamicbook.ws/tarekh/mnhaj-005.html",
+        "https://www.islamicbook.ws/tarekh/mnhaj-006.html"
+      ],
+      "selection_locator": "Minhaj volume 3 local lines 236–247",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "selected_text_sha256": "ac1e6f035e4ca1c43d56712001efb9f3e760d32e9442c083b9e2120cc29c0416",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Minhaj al-Sunna, volume 3, extracted body; local coordinates retain subsection-line mappings",
+      "source_urls": [
+        "https://www.islamicbook.ws/tarekh/mnhaj-005.html",
+        "https://www.islamicbook.ws/tarekh/mnhaj-006.html"
+      ],
+      "selection_locator": "Minhaj volume 3 local lines 248–258",
+      "source_body_and_selection_included": false,
+      "display_repair": "Local lines 249–250 separately displayed and read after initial truncation."
+    },
+    {
+      "source_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "selected_text_sha256": "205c6c5b6570a80e198c9b67e238cafb95351a0fe68b74e73ec83617ca7ef432",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Minhaj al-Sunna, volume 3, extracted body; local coordinates retain subsection-line mappings",
+      "source_urls": [
+        "https://www.islamicbook.ws/tarekh/mnhaj-005.html",
+        "https://www.islamicbook.ws/tarekh/mnhaj-006.html"
+      ],
+      "selection_locator": "Minhaj volume 3 local lines 259–267",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "selected_text_sha256": "4c2633ee0ca7f7f68ae8c62d946d1be812b5d72e71ae4c04a434d85cba9e47e1",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Minhaj al-Sunna, volume 3, extracted body; local coordinates retain subsection-line mappings",
+      "source_urls": [
+        "https://www.islamicbook.ws/tarekh/mnhaj-005.html",
+        "https://www.islamicbook.ws/tarekh/mnhaj-006.html"
+      ],
+      "selection_locator": "Minhaj volume 3 local lines 268–276",
+      "source_body_and_selection_included": false,
+      "display_repair": "Local line 275 separately displayed and read after initial truncation."
+    },
+    {
+      "source_sha256": "fb058f7f62ee879122699c37cd36dac9f8496f3976bc65e03bd74e63dde1cd85",
+      "selected_text_sha256": "005529f18d84b6a4536a225dc24058caa2ccd44b739d538d3422cbf94f134be9",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 002",
+      "source_urls": [
+        "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html"
+      ],
+      "selection_locator": "Sawaiq subsection 002 lines 1159–1184",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "fb058f7f62ee879122699c37cd36dac9f8496f3976bc65e03bd74e63dde1cd85",
+      "selected_text_sha256": "41ccd1194d2d32de81c1f9f295b6998cc9a082b6f20d5ef550c92659b8c4eb29",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 002",
+      "source_urls": [
+        "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html"
+      ],
+      "selection_locator": "Sawaiq subsection 002 lines 1196–1210",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "fb058f7f62ee879122699c37cd36dac9f8496f3976bc65e03bd74e63dde1cd85",
+      "selected_text_sha256": "6add653d42d731ead09460c5e9e355d87ec60c8ed66fbd0c30414beee8e7ad2e",
+      "kind": "direct_primary_text",
+      "note": "Some combined displays were truncated elsewhere; this credited selection was displayed, and identified missing selected lines were separately read. No unobserved truncated portion is credited.",
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 002",
+      "source_urls": [
+        "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html"
+      ],
+      "selection_locator": "Sawaiq subsection 002 lines 1335–1348",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "335c46d12647c325353b980e132d5539fe20106dbb68a8ec070663064d0a6cb3",
+      "selected_text_sha256": "90cda0fc835f2e975ae8a34c7f241b3bf1c4cfd6eaa52e6002553a9cb3f17dd6",
+      "kind": "direct_primary_text",
+      "note": "Received electronic page labels, not scan-certified printed pagination.",
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/shfa-alalil-001.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-002.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-004.html"
+      ],
+      "selection_locator": "Shifa electronic labels e49–e54",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "335c46d12647c325353b980e132d5539fe20106dbb68a8ec070663064d0a6cb3",
+      "selected_text_sha256": "918a47ae1ac966ad23bc782e33e33e17c669ed970bb1b2a3a0355e498437319b",
+      "kind": "direct_primary_text",
+      "note": "Received electronic page labels, not scan-certified printed pagination.",
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/shfa-alalil-001.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-002.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-004.html"
+      ],
+      "selection_locator": "Shifa electronic labels e143–e151",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "335c46d12647c325353b980e132d5539fe20106dbb68a8ec070663064d0a6cb3",
+      "selected_text_sha256": "d6b48907bd2328e147b5aa1e2565949d0c51210691fde0e45bd3df6f0cf40a6f",
+      "kind": "direct_primary_text",
+      "note": "Received electronic page labels, not scan-certified printed pagination.",
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/shfa-alalil-001.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-002.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-004.html"
+      ],
+      "selection_locator": "Shifa electronic labels e205–e209",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "335c46d12647c325353b980e132d5539fe20106dbb68a8ec070663064d0a6cb3",
+      "selected_text_sha256": "f3279932c2fd9c29a052b772e32558b18c457a2c7f28ec93d5b5aa62e7170480",
+      "kind": "direct_primary_text",
+      "note": "Received electronic page labels, not scan-certified printed pagination.",
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/shfa-alalil-001.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-002.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-004.html"
+      ],
+      "selection_locator": "Shifa electronic labels e219–e221",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "335c46d12647c325353b980e132d5539fe20106dbb68a8ec070663064d0a6cb3",
+      "selected_text_sha256": "dcd74174ed97e8e1914f286a6470e0ffd9ebce1acfbfd1a258d4857982795bdf",
+      "kind": "direct_primary_text",
+      "note": "Received electronic page labels, not scan-certified printed pagination.",
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/shfa-alalil-001.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-002.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-004.html"
+      ],
+      "selection_locator": "Shifa electronic labels e231–e234",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "335c46d12647c325353b980e132d5539fe20106dbb68a8ec070663064d0a6cb3",
+      "selected_text_sha256": "ce9ec90eb79a9c5a9951e65fcd7cf9fef6dc5938a1f9e48c4efa286d89cb05f4",
+      "kind": "direct_primary_text",
+      "note": "Received electronic page labels, not scan-certified printed pagination.",
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination",
+      "source_urls": [
+        "https://www.islamicbook.ws/amma/shfa-alalil-001.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-002.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+        "https://www.islamicbook.ws/amma/shfa-alalil-004.html"
+      ],
+      "selection_locator": "Shifa electronic labels e304–e307",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "cf054511790857fd40b6b2090be5a313139bc5ebb8912448f6073b0ec02ca3c6",
+      "selected_text_sha256": "e40857942847966b725fef86ea0cd3f351bdee0ce3166d93843843e82f7fba24",
+      "kind": "direct_primary_text",
+      "note": "E186 repaired in separate complete display. Direct scan checks also recorded separately.",
+      "source_locator": "Jami al-Masail, sixth collection, received electronic labels E001–E251",
+      "source_urls": [
+        "https://www.islamarchive.cc/ketab_content/28157"
+      ],
+      "selection_locator": "Jami sixth collection electronic labels E183–E186",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "selected_text_sha256": "0091342f9ad9afed9ea104d46970b6b9800d59486f289640c140542afa92dfdd",
+      "kind": "recovered_report_rationale",
+      "note": "Secondary philosophical report read after primary reconstruction; not treated as primary Arabic or verdict authority.",
+      "source_locator": "Orthemology Seventeenth Research, final v1, 5 October 2026; retained extracted report text",
+      "selection_locator": "T17 retained extracted report text, lines 24–99",
+      "source_body_and_selection_included": false
+    },
+    {
+      "source_sha256": "edcd0da0ccebd94ea7a8a14070d37f7212e62aeddc275e64d25cbe186e249210",
+      "selected_text_sha256": "c49a9e9570d80a42d827fc695fbb33bc245d0939347b25487420fcf7616aec37",
+      "kind": "recovered_report_rationale",
+      "note": "Secondary philosophical report read after primary reconstruction; not treated as primary Arabic or verdict authority.",
+      "source_locator": "Orthemology Nineteenth Research, final v1, 6 October 2026; retained extracted report text",
+      "selection_locator": "T19 retained extracted report text, lines 19–117",
+      "source_body_and_selection_included": false
+    }
+  ],
+  "projection_notice": "Body-free record of the original selected reading. Source and selection hashes identify retained original bytes; raw source bodies, extracts and display instrumentation are excluded. No new source reading is claimed."
+}

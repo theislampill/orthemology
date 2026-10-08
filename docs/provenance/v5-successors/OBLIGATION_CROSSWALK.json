@@ -86,7 +86,10 @@
         "D15-T14-DESCARTES-CONTENT",
         "D15-T15-KOONS-TOTALITY",
         "D15-T15-LOCAL-NATURAL-STANDARDS",
-        "T16-SOURCE-ASSESSMENT"
+        "T16-SOURCE-ASSESSMENT",
+        "T20-MODAL-CROSSING-COMPLETENESS",
+        "T20-ANCHORED-FIELD-SOURCE",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
       ],
       "statement": "Establish one non-question-begging orthability-ascent arrow surviving the strongest live rivals."
     },
@@ -146,7 +149,10 @@
         "D15-T14-DESCARTES-CONTENT",
         "D15-T15-KOONS-TOTALITY",
         "D15-T15-LOCAL-NATURAL-STANDARDS",
-        "T16-SOURCE-ASSESSMENT"
+        "T16-SOURCE-ASSESSMENT",
+        "T20-ORIGINAL-GROUND-ROBUSTNESS",
+        "T20-JOINT-SAME-BEARER-MODEL",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
       ],
       "statement": "Construct one serious integrated withholding model or prove no such model exists under minimal independently warranted premises."
     },
@@ -177,7 +183,8 @@
         "D15-T14-DIRECTED-POWERS-INTELLECT",
         "D15-T14-NECESSARY-PARTICULAR-MIND",
         "D15-T14-CLARKE-FIDELITY",
-        "D15-T14-DESCARTES-CONTENT"
+        "D15-T14-DESCARTES-CONTENT",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
       ],
       "statement": "Accepted strict conditional, noninferential in source"
     },
@@ -208,7 +215,10 @@
         "D15-T14-MENTAL-AGENCY-NORMS",
         "D15-T14-CLARKE-FIDELITY",
         "D15-T15-LOCAL-NATURAL-STANDARDS",
-        "T16-SOURCE-ASSESSMENT"
+        "T16-SOURCE-ASSESSMENT",
+        "T17-FITTINGNESS-LOCAL-AUTHORITY",
+        "T19-ASSERTED-OBLIGATION-TRANSFER",
+        "T20-VERACITY-DEPENDENCY-AUDIT"
       ],
       "statement": "Norm-fixing N1–N4 warrant local target-relative correctness, without yet supplying categorical obligation or ultimate norm constitution."
     },
@@ -254,7 +264,15 @@
         "D15-T14-DESCARTES-CONTENT",
         "D15-T15-KOONS-TOTALITY",
         "T16-TEMPORAL",
-        "T16-SOURCE-ASSESSMENT"
+        "T16-SOURCE-ASSESSMENT",
+        "T17-ORIGINAL-COMPLETION",
+        "T17-NECESSARY-BEARER",
+        "T17-ESSENTIAL-INDEPENDENCE",
+        "T19-COMMON-CONNECTED-SOURCE",
+        "T20-CND-ESSENTIALITY-SCOPE",
+        "T20-ORIGINAL-GROUND-ROBUSTNESS",
+        "T20-TYPED-ORIGINAL-BEARER-ABC",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
       ],
       "statement": "The intrinsic-necessity map distinguishes actual reception E1, productive completion P1, identification of a particular bearer P2, explanatory aptness N1, exhaustive nonbrute existential adequacy N2, and unconditional existential sufficiency N3."
     },
@@ -347,7 +365,15 @@
         "D15-T14-NECESSARY-PARTICULAR-MIND",
         "D15-T14-CLARKE-FIDELITY",
         "D15-T14-DESCARTES-CONTENT",
-        "T16-SOURCE-ASSESSMENT"
+        "T16-SOURCE-ASSESSMENT",
+        "T17-OWNED-VERACITY",
+        "T17-FITTINGNESS-LOCAL-AUTHORITY",
+        "T19-ATTESTATION-DISCRIMINATION",
+        "T19-ASSERTED-OBLIGATION-TRANSFER",
+        "T20-GROUNDED-CONTINUATION-SUPPORT",
+        "T20-VERACITY-DEPENDENCY-AUDIT",
+        "T20-JOINT-SAME-BEARER-MODEL",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
       ],
       "statement": "The attribute map distinguishes apprehending fittingness V0, responding appropriately V1, truthful authoritative attestation T0, actual address D1 and recipient warrant D2."
     },
@@ -359,7 +385,8 @@
       "residual": "Existing join/query/parity mathematics retains its owner and scoped credit; actual joint-reading input and broader avenue 11/M18 application obligations remain open.\nT16: Whole attested antecedent rows for Quran 48:9 is a scoped successor only. Candidate sense review, not certified Arabic or a critical edition. Ta/ya prefix differences are distinct from suffix-antecedent identity; Al-Qushayri identity/signature questions remain unresolved.",
       "result_ids": [
         "T15-LANGUAGE-ADMISSION-STOP",
-        "T16-OCCURRENCE"
+        "T16-OCCURRENCE",
+        "T20-TRACE-OBSERVATION-COPYING"
       ],
       "statement": "Joining all proper projections yields the full product, losing parity entirely."
     },
@@ -449,7 +476,8 @@
         "T09-FINITE-HISTORY-REP",
         "T16-UNARY-CHECKER",
         "T16-SIGNED-SERVICE",
-        "T16-DIRECT-CONTROLLER"
+        "T16-DIRECT-CONTROLLER",
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER"
       ],
       "statement": "## U03 — Whole deployed parser/checker/exporter refinement\n\nBlocker: Python/JSON behaviour and eight examples are finitely checked, not universally verified.\n\nMethod: Extract the finite checker or prove raw decode/structural validation/substitution/check/serialize refinement, including budgets and rejection paths."
     },
@@ -465,7 +493,8 @@
         "T08-LIFECYCLE-V4",
         "T08-MONOTONE-CLOCK-V6",
         "T08-SHARED-TYPED",
-        "T09-ORDERED-INITIAL"
+        "T09-ORDERED-INITIAL",
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER"
       ],
       "statement": "## U04 — Operational formal model to actual registry/lock implementation\n\nBlocker: Typed Plan model abstracts resource refusal and does not contain the full mutable issuer registry or probability grammar.\n\nMethod: State a simulation over complete Gamma/issued-record/lock states and prove successful concrete transitions refine abstract checked transitions, including failure atomicity and concurrency linearisation."
     },
@@ -485,7 +514,8 @@
         "T12-FINITE-MEDIATOR",
         "T12-FORWARD-INTERVENTIONS",
         "T12-OBSERVATION-RESOURCE",
-        "T12-REPORT-POLICY"
+        "T12-REPORT-POLICY",
+        "T20-TRACE-OBSERVATION-COPYING"
       ],
       "statement": "## U05 — Actual measure-theoretic formalisation\n\nBlocker: Q1–Q8 measure and computability arguments are ordinary proofs; preserved AlmostSureBoundary is only a logical abstraction.\n\nMethod: Pin Mathlib; define positive singleton support, countability, restrictions, pushforwards, all-event property, sums and weak limits; prove Q1–Q4/Q7 and formalise the Q8 reduction separately."
     },
@@ -542,7 +572,8 @@
       "owner_sha256": "2795cb401c807b28b3fc84c4f46986e9f12ac040d5b40d3a6594634a4c38b40f",
       "residual": "The exact base owner statement and its Sixth evidence remain unchanged. No T07-T15 whole-obligation closure is inferred. The exact historical obligation remains preserved. Listed continuation components are narrower evidence, not closure of the whole item.\nT16: Complete semantic identity for unary equality conditionals is a scoped successor only. No arbitrary Raw identity decision or native parser refinement. Signed sparse variants and their sharper bounds are separately written.",
       "result_ids": [
-        "T16-UNARY-CHECKER"
+        "T16-UNARY-CHECKER",
+        "T20-PTS-NORMALIZATION-TRANSFER"
       ],
       "statement": "## U09 — Finite-source normalisation and conversion-completeness bridges\n\nBlocker: Preserved System F translation and compatible SKI confluence/completeness arguments remain unmechanised.\n\nMethod: Mechanise translation/substitution, nonempty reduction simulation and exact modulo-conversion counterexample; keep K t Omega semantic obstruction unchanged."
     },
@@ -608,7 +639,13 @@
         "T16-CURRENT-HAS",
         "T16-BRIDGE-HASPLUS",
         "T16-HASC-SOUND",
-        "T16-HASC-CLOSED"
+        "T16-HASC-CLOSED",
+        "T18-HASE-U-DOMAIN-CONTROL",
+        "T18-HASE-INHABITED-J-CONTROL",
+        "T20-CHURCH-RAW-PROBE",
+        "T20-SCALAR-FUSION-IFF",
+        "T20-HASE-FURTHER-FAILED-ROUTES",
+        "T20-PTS-NORMALIZATION-TRANSFER"
       ],
       "statement": "Contextual dependent substitution, J and universe rules"
     },
@@ -663,7 +700,8 @@
         "T09-WHOLE-COMMAND-TRANSPORT",
         "T16-RENEWAL",
         "T16-SIGNED-SERVICE",
-        "T16-DIRECT-CONTROLLER"
+        "T16-DIRECT-CONTROLLER",
+        "T20-GROUNDED-CONTINUATION-SUPPORT"
       ],
       "statement": "## U14 — Real-world law binding and distributed authority\n\nBlocker: The host declares law models and owns local mutable state; no external authenticated law oracle or distributed revocation is implemented.\n\nMethod: Specify independent evidence provenance and an external system model; verify authentication, freshness, discovery and multi-process consistency if that deployment is pursued."
     },

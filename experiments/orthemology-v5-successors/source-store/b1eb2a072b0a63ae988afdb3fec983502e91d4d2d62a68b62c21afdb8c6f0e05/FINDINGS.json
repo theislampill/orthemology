@@ -1,0 +1,103 @@
+{
+  "schema": "t20-original-bearer-independent-review-v1",
+  "disposition": "NO_BLOCKING_DEFECT_FOUND",
+  "authority": "Bounded independent engineering/formal review only; no release or philosophical-adoption authority.",
+  "reviewer": "independent AI reviewer",
+  "candidate_manifest_sha256": "ac92a3ff320ee3c754e8e0e9b9b37fb2460aab56336614f9a8be81d61d27304e",
+  "candidate_verification_sha256": "48e4eb6fa23111096616151ba3a97aa3e1756835589a1c78c94d0db6dfa31f7c",
+  "independent_candidate_verification_sha256": "1e538eca0ce77d517da6bc4aa545922fe7f063bbe7c4d76364dce0af46c1fdc0",
+  "fresh_candidate_readbacks": 60,
+  "historical_readbacks_matched": 18,
+  "false_claim_controls_rejected_for_correct_reason": 5,
+  "additional_scope_theorems": [
+    "IndependentOriginalBearerReview.broad_abc_without_representation",
+    "IndependentOriginalBearerReview.representation_is_needed_for_binary_uniform_target",
+    "IndependentOriginalBearerReview.plural_full",
+    "IndependentOriginalBearerReview.plural_nonvacuous_and_no_common_bearer",
+    "IndependentOriginalBearerReview.witness_local_sufficiency",
+    "IndependentOriginalBearerReview.occurrence_is_not_free"
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "R-REP",
+      "finding": "Broad necessity and essential nonreceipt do not require binary representation; the inherited UniformRoot target can fail without it.",
+      "evidence": [
+        "IndependentScopeTests.lean:broad_abc_without_representation",
+        "IndependentScopeTests.lean:representation_is_needed_for_binary_uniform_target"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "integration_requirement": "Preserve representation as an explicit adopted-ontology interface, not a metaphysical theorem."
+    },
+    {
+      "id": "R-PLURAL",
+      "finding": "The full seven-premise interface admits two distinct live original sources and no common intrinsic original-resource witness for both targets.",
+      "evidence": [
+        "IndependentScopeTests.lean:plural_full",
+        "IndependentScopeTests.lean:plural_nonvacuous_and_no_common_bearer"
+      ],
+      "status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "integration_requirement": "Do not promote the result to numerical uniqueness or common-source coverage."
+    },
+    {
+      "id": "R-MIN",
+      "finding": "Witness-local instances suffice; deletion independence is not globally weakest or witness-minimal axiomatisation.",
+      "evidence": [
+        "IndependentScopeTests.lean:witness_local_sufficiency",
+        "../original-bearer-bridge/COUNTERMODEL_MATRIX.json:not_claimed"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "integration_requirement": "Retain inherited transfer-equivalence ownership and distinguish local sufficiency from independent philosophical warrant."
+    },
+    {
+      "id": "R-OCC",
+      "finding": "Occurrence is independent of the other six premises at the declared signature; omission can leave no original bearer on an infinite acyclic frame.",
+      "evidence": [
+        "IndependentScopeTests.lean:occurrence_is_not_free"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "integration_requirement": "State that this is a predicate-interpretation control, not a metaphysical possibility certificate."
+    },
+    {
+      "id": "R-TDD",
+      "finding": "The four-name RED/GREEN check is API-presence evidence, not semantic proof-shape evidence or independent historical chronology. Missing Mathlib is an environment failure.",
+      "evidence": [
+        "fresh-replay/contract-red.log",
+        "fresh-replay/contract-green.log",
+        "../original-bearer-bridge/receipts/ENVIRONMENT_MISSING_UMBRELLA.log"
+      ],
+      "status": [
+        "EXECUTABLY_CHECKED"
+      ],
+      "integration_requirement": "Give scientific credit to final checked implications and controls, not to compiler setup failures."
+    },
+    {
+      "id": "R-BUILD",
+      "finding": "Every post-import historical byte and all 18 inherited readbacks match, but only the import-adapted derivative was freshly compiled.",
+      "evidence": [
+        "INTEGRITY_VERIFICATION.json",
+        "fresh-replay/INHERITED_COMPARISON.json"
+      ],
+      "status": [
+        "EXECUTABLY_CHECKED"
+      ],
+      "integration_requirement": "Keep full-umbrella historical replay and trusted cached-import limitations explicit."
+    }
+  ],
+  "scope_boundaries": [
+    "No machine verification of philosophical premise truth or metaphysical possibility.",
+    "No generic fact-to-bearer or efficient-causal interpretation of broad receipt.",
+    "No common-source, uniqueness, perfection, veracity or revelation result.",
+    "No full historical suite or dependency source rebuild."
+  ],
+  "completed_utc": "2026-10-07T09:22:00.455479+00:00"
+}

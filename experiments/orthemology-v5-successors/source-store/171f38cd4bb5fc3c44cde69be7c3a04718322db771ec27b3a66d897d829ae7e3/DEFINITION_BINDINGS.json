@@ -1,0 +1,374 @@
+{
+  "status": "READ_AND_AUDITED_NO_HISTORICAL_MUTATION",
+  "bindings": [
+    {
+      "id": "OTC-D1",
+      "finding": "Bearer/resource/target sorts; receipt transport; modal need and constitution; preserved-witness result. Application-scope obligation, no proof defect.",
+      "original_identity": {
+        "filename": "OriginalBearerBridge.lean",
+        "bytes": 6940,
+        "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+      },
+      "original_line_ranges": [
+        [
+          16,
+          25
+        ],
+        [
+          41,
+          60
+        ],
+        [
+          126,
+          139
+        ]
+      ],
+      "public_identity": {
+        "alias": "experiments/orthemology-v5-successors/source-store/086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99/OriginalBearerBridge.lean",
+        "bytes": 6940,
+        "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+        "selection": "v5 source-only selection"
+      },
+      "public_line_ranges": [
+        [
+          16,
+          25
+        ],
+        [
+          41,
+          60
+        ],
+        [
+          126,
+          139
+        ]
+      ],
+      "line_mapping": "Line coordinates preserved; identity equality is separately stated by hashes."
+    },
+    {
+      "id": "OTC-D2",
+      "finding": "Received, Necessary, GenericReception and explicitly conditional inherited necessity.",
+      "original_identity": {
+        "filename": "SourceIdentityDerived.lean",
+        "bytes": 7438,
+        "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54"
+      },
+      "original_line_ranges": [
+        [
+          18,
+          33
+        ],
+        [
+          43,
+          61
+        ]
+      ],
+      "public_identity": {
+        "alias": "experiments/orthemology-v5-successors/source-store/51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54/SourceIdentityDerived.lean",
+        "bytes": 7438,
+        "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+        "selection": "v5 source-only selection"
+      },
+      "public_line_ranges": [
+        [
+          18,
+          33
+        ],
+        [
+          43,
+          61
+        ]
+      ],
+      "line_mapping": "Line coordinates preserved; identity equality is separately stated by hashes."
+    },
+    {
+      "id": "OTC-D3",
+      "finding": "Production, modal role, standing power and token/whole receipt distinctions.",
+      "original_identity": {
+        "filename": "CNDModalScope.lean",
+        "bytes": 5862,
+        "sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9"
+      },
+      "original_line_ranges": [
+        [
+          1,
+          43
+        ],
+        [
+          49,
+          62
+        ],
+        [
+          99,
+          113
+        ]
+      ],
+      "public_identity": {
+        "alias": "experiments/orthemology-v5-successors/source-store/4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9/CNDModalScope.lean",
+        "bytes": 5862,
+        "sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+        "selection": "v5 source-only selection"
+      },
+      "public_line_ranges": [
+        [
+          1,
+          43
+        ],
+        [
+          49,
+          62
+        ],
+        [
+          99,
+          113
+        ]
+      ],
+      "line_mapping": "Line coordinates preserved; identity equality is separately stated by hashes."
+    },
+    {
+      "id": "OTC-D4",
+      "finding": "Existing interpretation restrictions; original role is not generic activity or token reception.",
+      "original_identity": {
+        "filename": "CND_ESSENTIAL_INDEPENDENCE_ASSESSMENT_v1.md",
+        "bytes": 15678,
+        "sha256": "b30250338e5bfa601f8c6a269f84a6af04c5e504711897dfdf00071891c941c8"
+      },
+      "original_line_ranges": [
+        [
+          41,
+          75
+        ]
+      ],
+      "public_identity": {
+        "alias": "experiments/orthemology-v5-successors/source-store/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74/CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+        "bytes": 14791,
+        "sha256": "735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+        "selection": "v5 source-only selection"
+      },
+      "public_line_ranges": [
+        [
+          37,
+          71
+        ]
+      ],
+      "line_mapping": "Original lines 41–75 equal public lines 37–71 exactly; original 63 and 71 equal public 59 and 67."
+    },
+    {
+      "id": "OTC-D5",
+      "finding": "Deliberate added object; power parameter; grounding necessitation; not type reification.",
+      "original_identity": {
+        "filename": "GroundExtension.lean",
+        "bytes": 13399,
+        "sha256": "828a7541174e85f84ff1d79f00f455bcdd3ec115d86498c9ee8959f07d2bbfc5"
+      },
+      "original_line_ranges": [
+        [
+          21,
+          45
+        ],
+        [
+          174,
+          183
+        ],
+        [
+          242,
+          266
+        ],
+        [
+          306,
+          359
+        ]
+      ],
+      "public_identity": {
+        "alias": "experiments/orthemology-v5-successors/source-store/828a7541174e85f84ff1d79f00f455bcdd3ec115d86498c9ee8959f07d2bbfc5/GroundExtension.lean",
+        "bytes": 13399,
+        "sha256": "828a7541174e85f84ff1d79f00f455bcdd3ec115d86498c9ee8959f07d2bbfc5",
+        "selection": "v5 source-only selection"
+      },
+      "public_line_ranges": [
+        [
+          21,
+          45
+        ],
+        [
+          174,
+          183
+        ],
+        [
+          242,
+          266
+        ],
+        [
+          306,
+          359
+        ]
+      ],
+      "line_mapping": "Line coordinates preserved; identity equality is separately stated by hashes."
+    },
+    {
+      "id": "OTC-D6",
+      "finding": "Modal ability and actual product tables; no temporal persistence theorem.",
+      "original_identity": {
+        "filename": "ModalCapacityControl.lean",
+        "bytes": 4607,
+        "sha256": "899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e"
+      },
+      "original_line_ranges": [
+        [
+          12,
+          30
+        ],
+        [
+          79,
+          101
+        ],
+        [
+          132,
+          143
+        ]
+      ],
+      "public_identity": {
+        "alias": "experiments/orthemology-v5-successors/source-store/899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e/ModalCapacityControl.lean",
+        "bytes": 4607,
+        "sha256": "899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e",
+        "selection": "v5 source-only selection"
+      },
+      "public_line_ranges": [
+        [
+          12,
+          30
+        ],
+        [
+          79,
+          101
+        ],
+        [
+          132,
+          143
+        ]
+      ],
+      "line_mapping": "Line coordinates preserved; identity equality is separately stated by hashes."
+    },
+    {
+      "id": "OTC-D7",
+      "finding": "Actual field scope, separate sources/events/contributions and conditional classification.",
+      "original_identity": {
+        "filename": "AnchoredSourceBridge.lean",
+        "bytes": 10743,
+        "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1"
+      },
+      "original_line_ranges": [
+        [
+          8,
+          71
+        ],
+        [
+          195,
+          219
+        ]
+      ],
+      "public_identity": {
+        "alias": "experiments/orthemology-v5-successors/source-store/2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1/AnchoredSourceBridge.lean",
+        "bytes": 10743,
+        "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+        "selection": "v5 source-only selection"
+      },
+      "public_line_ranges": [
+        [
+          8,
+          71
+        ],
+        [
+          195,
+          219
+        ]
+      ],
+      "line_mapping": "Line coordinates preserved; identity equality is separately stated by hashes."
+    },
+    {
+      "id": "OTC-D8",
+      "finding": "Separate bearer/event/exercise types; selected received-product links; not a full chronology.",
+      "original_identity": {
+        "filename": "JointFiniteInterpretation.lean",
+        "bytes": 24102,
+        "sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46"
+      },
+      "original_line_ranges": [
+        [
+          14,
+          22
+        ],
+        [
+          34,
+          104
+        ],
+        [
+          279,
+          290
+        ],
+        [
+          320,
+          348
+        ]
+      ],
+      "public_identity": {
+        "alias": "experiments/orthemology-v5-successors/source-store/319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46/JointFiniteInterpretation.lean",
+        "bytes": 24102,
+        "sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+        "selection": "v5 source-only selection"
+      },
+      "public_line_ranges": [
+        [
+          14,
+          22
+        ],
+        [
+          34,
+          104
+        ],
+        [
+          279,
+          290
+        ],
+        [
+          320,
+          348
+        ]
+      ],
+      "line_mapping": "Line coordinates preserved; identity equality is separately stated by hashes."
+    },
+    {
+      "id": "OTC-D9",
+      "finding": "Existing 14:34 UTC assessment remains unchanged by this bounded audit.",
+      "original_identity": {
+        "filename": "ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+        "bytes": 9350,
+        "sha256": "65303af758c4eead3aaa7bf01ce90e2700d3f0bbe80e4590e1131953429f72cf"
+      },
+      "original_line_ranges": [
+        [
+          1,
+          51
+        ]
+      ],
+      "public_identity": {
+        "alias": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+        "bytes": 9350,
+        "sha256": "8b60a62d8956549cdd3a0e22f7101b0bbbc140840e49740cdc248e443f43af27",
+        "selection": "215-member reading/report alias map"
+      },
+      "public_line_ranges": [
+        [
+          1,
+          51
+        ]
+      ],
+      "line_mapping": "Line coordinates preserved; identity equality is separately stated by hashes."
+    }
+  ],
+  "selection_identity": {
+    "v5_sha256": "2ca55b442d41e8a70c1b550badef15c1dde403ee73e646c640b92d929558f6df",
+    "reading_report_215_sha256": "b6c057b83d8301bbb4621bf98fb5c2ce8bc52d67164bd1d44bfc8a651ca4a930"
+  },
+  "reference_scope": "Exact existing public aliases. Referenced files are prior selected material, not duplicated members of this packet. Original and public hashes have distinct roles."
+}

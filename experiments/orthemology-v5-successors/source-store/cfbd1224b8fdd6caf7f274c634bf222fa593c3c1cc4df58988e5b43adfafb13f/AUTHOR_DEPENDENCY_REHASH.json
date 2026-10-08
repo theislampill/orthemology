@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "binding_manifest_sha256": "36a363d2306ad5892338e820212aa766ea8a9721c20c21be5bdd155c2778fcdf",
+  "bound_objects_rehashed": 1365,
+  "bytes_rehashed": 806871632,
+  "mismatches": [],
+  "scope": "Reused dependency bundle; not a cold dependency build or assertion that every bound object was imported."
+}

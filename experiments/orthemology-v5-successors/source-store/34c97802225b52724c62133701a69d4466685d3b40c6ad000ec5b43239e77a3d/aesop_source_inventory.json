@@ -1,0 +1,998 @@
+[
+  {
+    "path": ".github/dependabot.yml",
+    "sha256": "669e779d00d292ded6c34673e4f4c0730cc7a8b7dd16bb3b71b513531d0086b4"
+  },
+  {
+    "path": ".github/workflows/build.yml",
+    "sha256": "12edb3011aa8922b0cf0598a0f00a24b425d999fae7d9be5360f92df96e7ae70"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "6717b4070355bac3bc0693e21a86dd09f717213b1cff18e84b9ae954b926b62e"
+  },
+  {
+    "path": "Aesop.lean",
+    "sha256": "5f8d080eff352f752abad19d2377c5a4d8a56150902facd4fa6fadcde5fa1f17"
+  },
+  {
+    "path": "Aesop/BaseM.lean",
+    "sha256": "a448e95818006e97bc9dbaeeb8172ac8f23606e8c5fad369fd31f8596d043526"
+  },
+  {
+    "path": "Aesop/Builder.lean",
+    "sha256": "188a4f0de63cdb105f7d86df349866d1aa7ef8e4ff6be0d3e7aa401e9c566392"
+  },
+  {
+    "path": "Aesop/Builder/Apply.lean",
+    "sha256": "5ef3e137f02bcb9c8acfbe37629dc127500dc775b633ff3291fbd0d85e2f8f2d"
+  },
+  {
+    "path": "Aesop/Builder/Basic.lean",
+    "sha256": "8914228f94e618ce995eff889c61d768827461f9b2796841930568f8ff80d286"
+  },
+  {
+    "path": "Aesop/Builder/Cases.lean",
+    "sha256": "9f88e493e33134fb05be2c80ce2b39e60b1e046d97722a0dba0ba75513f9cee6"
+  },
+  {
+    "path": "Aesop/Builder/Constructors.lean",
+    "sha256": "ed12db1ead57ae4c56321a53d43a8e989da69b3c0773ebe8cca2584b141ac7b9"
+  },
+  {
+    "path": "Aesop/Builder/Default.lean",
+    "sha256": "4449f6b0a685e2114f0113562df2cfed825187547482c7bf5a98c5c60264c001"
+  },
+  {
+    "path": "Aesop/Builder/Forward.lean",
+    "sha256": "49e5838a0523af2b44a25719c661282cb6f2d6e8c1dcb43b6736ff0fdc76e3e7"
+  },
+  {
+    "path": "Aesop/Builder/NormSimp.lean",
+    "sha256": "cda83ab1d733b679fee5cd5f5e6312b0515728452465176b7aba76b0c0a2b5dc"
+  },
+  {
+    "path": "Aesop/Builder/Tactic.lean",
+    "sha256": "794ed87ea82c3b26448fef50f779c10c551114f208c9edf27d433b9372939b70"
+  },
+  {
+    "path": "Aesop/Builder/Unfold.lean",
+    "sha256": "37e5c70253b7ca5863e3b8704982feb52e431699c419bc310e614444381f8e19"
+  },
+  {
+    "path": "Aesop/BuiltinRules.lean",
+    "sha256": "f95e0642edb3fe88b4b76f4732f2e662778178551426f0e3ab5ad9f94e329b28"
+  },
+  {
+    "path": "Aesop/BuiltinRules/ApplyHyps.lean",
+    "sha256": "129cff5ba4be526263f0057c955de523aba6623f2c0fe24e2decadd3f2dadce7"
+  },
+  {
+    "path": "Aesop/BuiltinRules/Assumption.lean",
+    "sha256": "acd7f30528d021b654e38d54dd61d31e3d2e919f36e48a1b9a95c68af8849169"
+  },
+  {
+    "path": "Aesop/BuiltinRules/DestructProducts.lean",
+    "sha256": "463afd79bc8c867ddf8179249d03c379fe72451b212e1c703f7942057987496d"
+  },
+  {
+    "path": "Aesop/BuiltinRules/Ext.lean",
+    "sha256": "c6d7a47378e6ae4a89a41929d0a90aa3aaf06f8e5def2d152157f91a7539d63b"
+  },
+  {
+    "path": "Aesop/BuiltinRules/Intros.lean",
+    "sha256": "6a75a6ec8467ce72024290a54560f4a5e04c0d815c04d9480b0aecb454c5bf8a"
+  },
+  {
+    "path": "Aesop/BuiltinRules/Rfl.lean",
+    "sha256": "5780b0956d7db532b490d37138f79e7cc55259813ff9f90bc4de3aa012a203a8"
+  },
+  {
+    "path": "Aesop/BuiltinRules/Split.lean",
+    "sha256": "47336baf85656bd2f72b0508f1a608a8326c1df831a468b257d2b07d9107135a"
+  },
+  {
+    "path": "Aesop/BuiltinRules/Subst.lean",
+    "sha256": "7b238aa32f2d939f7def644862e924b29f22d75c19855f77c91eb6c16c6bddec"
+  },
+  {
+    "path": "Aesop/Check.lean",
+    "sha256": "4b6cbf7f965e13521db4796145da3c228b8de588facb588349fd753377a2e448"
+  },
+  {
+    "path": "Aesop/Constants.lean",
+    "sha256": "03e7248eeb621b3751dabeb7bb9d6ffe7b2319f95d0df8670caf9ce3df06ae4f"
+  },
+  {
+    "path": "Aesop/ElabM.lean",
+    "sha256": "f9802c676d65b186714e782522f38c45a6f5f80249828d5c72de10656e02f769"
+  },
+  {
+    "path": "Aesop/Exception.lean",
+    "sha256": "df3f862a781718ffd5f15280109697b25995410d5975a27e0ce3d9d9cbf48ed7"
+  },
+  {
+    "path": "Aesop/Forward/CompleteMatchQueue.lean",
+    "sha256": "c376a00d4f4c60e4948b7a8f1a1fa955d64cb08c235d3d2930c48b9a61fc14d8"
+  },
+  {
+    "path": "Aesop/Forward/LevelIndex.lean",
+    "sha256": "c0ed25aa1a6e15ece03ba0b8f31ef9e1624a97cba3b18f92d2fae072cc66727e"
+  },
+  {
+    "path": "Aesop/Forward/Match.lean",
+    "sha256": "33c419229d95fce7d1bf068c7da1d5f668915c0e7f52ae3fc2aff74aee2549b0"
+  },
+  {
+    "path": "Aesop/Forward/Match/Types.lean",
+    "sha256": "c2f43a28e1f02035302d9d050cbca075be61cb2dabe22b6b2900dc423acbb043"
+  },
+  {
+    "path": "Aesop/Forward/PremiseIndex.lean",
+    "sha256": "7a5c7365530dd7809541d7971f5cb9c80ae7b232d1b60ba16db228373bda3c94"
+  },
+  {
+    "path": "Aesop/Forward/RuleInfo.lean",
+    "sha256": "1b2be127f327c31b092e660ccc1b5e1fd763fbbf958db52b4f646b4bff61d73a"
+  },
+  {
+    "path": "Aesop/Forward/SlotIndex.lean",
+    "sha256": "6628e40507c99cfe0ec2073e82bd2466a81196368d9d44c076d3a4cf864b80a0"
+  },
+  {
+    "path": "Aesop/Forward/State.lean",
+    "sha256": "509165ded66188f856ff91eac8b0a32dac9faf96e4fa1c61176ca11f2dc23ae9"
+  },
+  {
+    "path": "Aesop/Forward/State/ApplyGoalDiff.lean",
+    "sha256": "ccaa8f737a0b469d64407f7603e88c76c7b6a0ef1f08babc861737e0f9396228"
+  },
+  {
+    "path": "Aesop/Forward/State/Initial.lean",
+    "sha256": "cd8747325a49b231936099c6f5bd81d1bbf0f370acbb2a81adf583d8fccd170d"
+  },
+  {
+    "path": "Aesop/Forward/Substitution.lean",
+    "sha256": "50031ac324560cb89e52c89a496d7da1dd09a85054286c7fa3665a6fb17003d7"
+  },
+  {
+    "path": "Aesop/Frontend.lean",
+    "sha256": "a1b29014d163037ac109a6b9630047a0292d9bec0af39a7b21011ac0512133d7"
+  },
+  {
+    "path": "Aesop/Frontend/Attribute.lean",
+    "sha256": "4cff5629b925c9542ba397d2785ae513cf205120ab431c972bc8a29380416c62"
+  },
+  {
+    "path": "Aesop/Frontend/Basic.lean",
+    "sha256": "d02d66d4cedfdf7242f5ddfd42f32477f01c414ce96ebd26bd21e0bb2a94c02e"
+  },
+  {
+    "path": "Aesop/Frontend/Command.lean",
+    "sha256": "f458bd5d2c5c966251f3fbf321c8683258d21df18622ee074d6f888f966bb0b2"
+  },
+  {
+    "path": "Aesop/Frontend/Extension.lean",
+    "sha256": "6df112a168377397e1db52135bec894904b6f8c0e57e80c02cf78d51064440a7"
+  },
+  {
+    "path": "Aesop/Frontend/Extension/Init.lean",
+    "sha256": "9f8cce97754a7948eb4ddf8fabcff56e3e50df18c8c7ba5abf42c935610a5680"
+  },
+  {
+    "path": "Aesop/Frontend/RuleExpr.lean",
+    "sha256": "f34998e97e66b2e70b1ec0b97d7521395540a94afa0881d50e0f26059482c24c"
+  },
+  {
+    "path": "Aesop/Frontend/Saturate.lean",
+    "sha256": "7ce232b2c0efdb501d29bdec9b2097417cd8111a618007d4915b57f0a91570d4"
+  },
+  {
+    "path": "Aesop/Frontend/Tactic.lean",
+    "sha256": "14fa9864d5e098ad89855d68297ebcb8905655afa1f2806018dae9eecc6168e3"
+  },
+  {
+    "path": "Aesop/Index.lean",
+    "sha256": "6c01bf47695c8a83601cc67667d289e1e84d803ef68fbfc061a073f0b28865ea"
+  },
+  {
+    "path": "Aesop/Index/Basic.lean",
+    "sha256": "ef8acefb1e1475f5ea246e1a5df54f93d0f222aee6147fc363c3e0e15f05546c"
+  },
+  {
+    "path": "Aesop/Index/DiscrKeyConfig.lean",
+    "sha256": "ef5f590ee1ce5dcc77a3719719b91ef587655bd21e2076b2526c9509d620bbdb"
+  },
+  {
+    "path": "Aesop/Index/DiscrTreeConfig.lean",
+    "sha256": "6916b6afa279f994d1d1be21475ccfde95a67c89ed5b024490cab6e2978c0031"
+  },
+  {
+    "path": "Aesop/Index/Forward.lean",
+    "sha256": "ce0e157b70780139bad428ca4b02d1bfe4341f7dcf8bc190a3f5d1a7f4c9aee7"
+  },
+  {
+    "path": "Aesop/Index/RulePattern.lean",
+    "sha256": "f0e2f3d0001575811de4af83485430278cbc9a27d496aeaa76c8bcf8e2e93a12"
+  },
+  {
+    "path": "Aesop/Main.lean",
+    "sha256": "a9a4408796a79faec22b726aa64907fc4089a1164685e2379250af2a53ef12f9"
+  },
+  {
+    "path": "Aesop/Nanos.lean",
+    "sha256": "ac114662c9346fa5948e2947c50a18616baa663f7cb705eb51f1cc5d77483e0f"
+  },
+  {
+    "path": "Aesop/Options.lean",
+    "sha256": "fcfb6b4e85c8b763254491676216e84b799a0161a8013622b05ff060d2dd3241"
+  },
+  {
+    "path": "Aesop/Options/Internal.lean",
+    "sha256": "e29488797c7e1fd82d13702e6328e0a28d5ab01d67cb2ea6b0945da24122e5a2"
+  },
+  {
+    "path": "Aesop/Options/Public.lean",
+    "sha256": "463be8ebd1ed4a08935f8bc40483f7eacbe18eff90a5b859f7f138c441df5f28"
+  },
+  {
+    "path": "Aesop/Percent.lean",
+    "sha256": "b958a8d0bd25b39f5a3ed95ed581e2cba2e2cea2d4497bc4128d4c5f6124751d"
+  },
+  {
+    "path": "Aesop/RPINF.lean",
+    "sha256": "9d138cc80472b3bae3668427bd8edc310fd8ed5274af9a85cce488fdddbd61f1"
+  },
+  {
+    "path": "Aesop/RPINF/Basic.lean",
+    "sha256": "d996e73ac21fc2f9cb6fd8a53fd85229e2d72ccb8eccc60b162c39e883009145"
+  },
+  {
+    "path": "Aesop/Rule.lean",
+    "sha256": "9fa785a780ba1ab1b80ebc60b80d9fc9cf2035227eb25c80cc0b6be3077764dc"
+  },
+  {
+    "path": "Aesop/Rule/Basic.lean",
+    "sha256": "7f019d22b4e54f27bb1e895a85b000f9b36f1a12a0ec494098a2a8496f0c4de4"
+  },
+  {
+    "path": "Aesop/Rule/Forward.lean",
+    "sha256": "b079e2a51352de4ea65634b2d8c06f4710839263dc030256c86e4588b06547d9"
+  },
+  {
+    "path": "Aesop/Rule/Name.lean",
+    "sha256": "0562867ff42309206d3180b6cf35cce28afb4bd855167d937ea585f7b752afdb"
+  },
+  {
+    "path": "Aesop/RulePattern.lean",
+    "sha256": "e22d256a04c6bf312910528b91c332355da226f2cd5e62bd07bcc635facbcfef"
+  },
+  {
+    "path": "Aesop/RulePattern/Cache.lean",
+    "sha256": "48a1f781f236c042f45f1b5f51ed14c587cf21a6ea455655cef7b2b124b86638"
+  },
+  {
+    "path": "Aesop/RuleSet.lean",
+    "sha256": "33e90649b212b01442a822b75552c29c9357de94499d8aee8959bf70cc6bd07f"
+  },
+  {
+    "path": "Aesop/RuleSet/Filter.lean",
+    "sha256": "4e8997a778103665a931aa121fab47a8477ec0b8f53cd3bbd4b37bb1a6959d51"
+  },
+  {
+    "path": "Aesop/RuleSet/Member.lean",
+    "sha256": "360330e16cbe10dd31ceda0ec7ef22decb859adacd4d1591b95746afb07602c1"
+  },
+  {
+    "path": "Aesop/RuleSet/Name.lean",
+    "sha256": "e8908394e2825d482dd381ebbc6e4d662de1fdada901af7efe9d18316f87f74a"
+  },
+  {
+    "path": "Aesop/RuleTac.lean",
+    "sha256": "3f4af041ac2b7acaea017ec8be6e6a2d9f8c4e163089efbdc48f1ecdc3e53e0f"
+  },
+  {
+    "path": "Aesop/RuleTac/Apply.lean",
+    "sha256": "ed8a206f8136ac8f2934593788145038356f4a809c3b2320913a0bd002ed6526"
+  },
+  {
+    "path": "Aesop/RuleTac/Basic.lean",
+    "sha256": "986209cce8ae24e1c95f5dd0c0569b9249c49ab1ec339f1adaeb64d9ca1c900b"
+  },
+  {
+    "path": "Aesop/RuleTac/Cases.lean",
+    "sha256": "1f7adfc2d7cfd959ed99d2bff7bf1675abf5dfc68f011c24105957cc1756db78"
+  },
+  {
+    "path": "Aesop/RuleTac/Descr.lean",
+    "sha256": "263f6d5c4aed46b8306955e2175f35aba39e3e7cadc570e80d818ae0eff9946e"
+  },
+  {
+    "path": "Aesop/RuleTac/ElabRuleTerm.lean",
+    "sha256": "5e663af0218936eb9f0de6f156e2570012ba46a6e40effe166672bad68a70907"
+  },
+  {
+    "path": "Aesop/RuleTac/FVarIdSubst.lean",
+    "sha256": "7127ed9730663be724e7842c5e384625701cc3053021d2b6772e17e1149c174d"
+  },
+  {
+    "path": "Aesop/RuleTac/Forward.lean",
+    "sha256": "7a66ef70b6f7406afa96c936ebda224ae515dff71ad25971e1118c2e6b80406b"
+  },
+  {
+    "path": "Aesop/RuleTac/Forward/Basic.lean",
+    "sha256": "d2ecedd8f1651668583259bbd65e3bfb7e1874d16321e1ae069600836caba87f"
+  },
+  {
+    "path": "Aesop/RuleTac/GoalDiff.lean",
+    "sha256": "3d6073099669583fcefea2de692cbc934d139817d1423f6e4a2209aad337d322"
+  },
+  {
+    "path": "Aesop/RuleTac/Preprocess.lean",
+    "sha256": "e5e670db8846dab3dfe7cb7ea413886f35a995817ad6e900b9bd07687421b6ca"
+  },
+  {
+    "path": "Aesop/RuleTac/RuleTerm.lean",
+    "sha256": "90162659197eb5cdea87b9f3fb39591ff2e50b2b7e5faa7394e2a3b55d5e6872"
+  },
+  {
+    "path": "Aesop/RuleTac/Tactic.lean",
+    "sha256": "3e7b5ef568c0d8e0b45daa3993389be19e6e6e7b29e7fb17091bdb40ccebee83"
+  },
+  {
+    "path": "Aesop/Saturate.lean",
+    "sha256": "18ea994e99d5a6cc759dbf66dc892ba2d7e7139c41cf7b96752b911276205318"
+  },
+  {
+    "path": "Aesop/Script/Check.lean",
+    "sha256": "92502e8b48574f77cdbc171820046a943427c2e24ac481390e2be016fc38736a"
+  },
+  {
+    "path": "Aesop/Script/CtorNames.lean",
+    "sha256": "9e2e64de7bc0a8283b4904d53fd8b078bca536354c26f488612b316ff7867593"
+  },
+  {
+    "path": "Aesop/Script/GoalWithMVars.lean",
+    "sha256": "5acf7785a690d05edf7b900f4f017fd29ebf64e9052c801d0e8be9f607cf1af1"
+  },
+  {
+    "path": "Aesop/Script/Main.lean",
+    "sha256": "1ee177df00d4c7ccd66f1f623a2ef7c0cb99540aab4e535698a5b8d8518ba637"
+  },
+  {
+    "path": "Aesop/Script/OptimizeSyntax.lean",
+    "sha256": "1e84cdc8defbcb3e6eb5bde49d99292d0bd8a94155d1619b99625c6f79702bd1"
+  },
+  {
+    "path": "Aesop/Script/SScript.lean",
+    "sha256": "b05d34d8945e81e46012c7f6eb0aba36674a027833318e70965053fcafa9369c"
+  },
+  {
+    "path": "Aesop/Script/ScriptM.lean",
+    "sha256": "1abe7033224c509c31e7e4509aef04f726a7e296e3d60dfa0f807e9d94b0fe7f"
+  },
+  {
+    "path": "Aesop/Script/SpecificTactics.lean",
+    "sha256": "c76163af9fba057cdfb1a9d7e220934f28ba7282a29344605b2d0cb7e29e383c"
+  },
+  {
+    "path": "Aesop/Script/Step.lean",
+    "sha256": "5db3cffb21e17939ae72f1e2cd7dc0de2a6c4f88d197bf9c271432a625a01eca"
+  },
+  {
+    "path": "Aesop/Script/StructureDynamic.lean",
+    "sha256": "f84fcaa6c15d9e6c679e9ce0b13e4384d028884176296f246bdb733ee8efec07"
+  },
+  {
+    "path": "Aesop/Script/StructureStatic.lean",
+    "sha256": "92fda20c1d0336771481f59314ef669fc5f65149538339ec9c17d3e0abf39f6c"
+  },
+  {
+    "path": "Aesop/Script/Tactic.lean",
+    "sha256": "112f70fd8f5c86ad67a1a2f1ceb49feaf72b73faadeb34c90e352209bdd03669"
+  },
+  {
+    "path": "Aesop/Script/TacticState.lean",
+    "sha256": "ee306b4da684e91a4867bd397f065a39689a1fda535796267893f6ace8d476b2"
+  },
+  {
+    "path": "Aesop/Script/UScript.lean",
+    "sha256": "21a77ff7aeb38389b3b8731b4cab529727bd370808b39e044854dae1416601f8"
+  },
+  {
+    "path": "Aesop/Script/UScriptToSScript.lean",
+    "sha256": "4d5bfa6061bca4982f52abfa84a5e5128323bcd4f5eb0ab8d189529f73f108f3"
+  },
+  {
+    "path": "Aesop/Script/Util.lean",
+    "sha256": "b53936c1c34378535afa487d55bc3bcf1430b7616e6b38244e34f67dd07e8915"
+  },
+  {
+    "path": "Aesop/Search/ExpandSafePrefix.lean",
+    "sha256": "b6e89a29fde1cc085f3dbb672d4b35aac60916f0079a559b3a048bcf12bb6dcf"
+  },
+  {
+    "path": "Aesop/Search/Expansion.lean",
+    "sha256": "5cfd3324e6c96a8fdd320b59015956d51c89ac2079a84d6c2a2dc8005b75fb95"
+  },
+  {
+    "path": "Aesop/Search/Expansion/Basic.lean",
+    "sha256": "9622766e796c1b568693674fca02c12689923a2602334af85ace27891df8f20c"
+  },
+  {
+    "path": "Aesop/Search/Expansion/Norm.lean",
+    "sha256": "42cee384d294cc875f551b01635743e2e77944b84e20f239f38569ea4740fe43"
+  },
+  {
+    "path": "Aesop/Search/Expansion/Simp.lean",
+    "sha256": "c209302731f2a15cdb423e987ffb8d767614cb3ac12e717b845b1cd4e4a9ef9c"
+  },
+  {
+    "path": "Aesop/Search/Main.lean",
+    "sha256": "14f68bc7c3081ab6c51cb56a07bd9313560b285dd354c1e963e7126db474efa5"
+  },
+  {
+    "path": "Aesop/Search/Queue.lean",
+    "sha256": "b40982dcaada7f2f6f9794537ddc94576a21fb5269190d72814cedf1fd14feb0"
+  },
+  {
+    "path": "Aesop/Search/Queue/Class.lean",
+    "sha256": "f94d7955ce42510e1a6e36dcc778876a9ee692b9073fe89701e4ae088abb1cf4"
+  },
+  {
+    "path": "Aesop/Search/RuleSelection.lean",
+    "sha256": "a04376c10f3e97d5cda6ddd8841278d11d0e03b56ace00f05884d2ea9bca6a5e"
+  },
+  {
+    "path": "Aesop/Search/SearchM.lean",
+    "sha256": "ef3e48f1e824b70501cd8c8c9625e74ae1b16588ff1413e24374c4a7a1567a6a"
+  },
+  {
+    "path": "Aesop/Stats/Basic.lean",
+    "sha256": "52a4708dd59b2376bfe1f8612c1ba3a2ef47a49055831c428f55f6b9a907b95f"
+  },
+  {
+    "path": "Aesop/Stats/Extension.lean",
+    "sha256": "e3dc4771a4a363191adcb2df8d477e51b8b70962ee65ba07cf6fb2850ad956e7"
+  },
+  {
+    "path": "Aesop/Stats/Report.lean",
+    "sha256": "b7417d4b7c060c4c98de16309ec6c134db5f7adcaa919d7a15334be8928c4a7f"
+  },
+  {
+    "path": "Aesop/Tracing.lean",
+    "sha256": "76a9f3290da351ff30fbdadce62df4c7660299964ac898fce46f9f68a4e0b6f4"
+  },
+  {
+    "path": "Aesop/Tree.lean",
+    "sha256": "c56b18c8aa40e09018aa83b4a5c12f070a82fa1d172dee63ff86d14e523b3486"
+  },
+  {
+    "path": "Aesop/Tree/AddRapp.lean",
+    "sha256": "5d06bd889cdd74657ef1a9e3e930bbf90835f989262ca22667a3f6d2ba42e70a"
+  },
+  {
+    "path": "Aesop/Tree/Check.lean",
+    "sha256": "3ea0ffca18b37353da18e1a6d2b165a35a2dfd6cff308638d698589fb3b4627c"
+  },
+  {
+    "path": "Aesop/Tree/Data.lean",
+    "sha256": "c87cc97851478aaca03653b328298d7ed7e90d7c25dc8a5d6c130d1aa0b8d074"
+  },
+  {
+    "path": "Aesop/Tree/Data/ForwardRuleMatches.lean",
+    "sha256": "67d5c86ba5a27f0a7e405578b79e52806d586f61e982d2e36485c9ea0f62cb2d"
+  },
+  {
+    "path": "Aesop/Tree/ExtractProof.lean",
+    "sha256": "697efd04a5228e681064ac258e00e718642a8507ecec4bc3e63147ba8d7449eb"
+  },
+  {
+    "path": "Aesop/Tree/ExtractScript.lean",
+    "sha256": "e113d798c031d3595a115dbedf9c16f0798d6b9f89a4a7671b6f4bc3478ad443"
+  },
+  {
+    "path": "Aesop/Tree/Free.lean",
+    "sha256": "c5153f4e3e321c16d38e7b844a05d15812ff3ffa8fcae639a68118b44b1ce69e"
+  },
+  {
+    "path": "Aesop/Tree/RunMetaM.lean",
+    "sha256": "e18275605bfc78930e49337330d0a7a9a596584b7c3c42e040c5ea81b224f33d"
+  },
+  {
+    "path": "Aesop/Tree/State.lean",
+    "sha256": "c6198bf4d72a1d2c467b823b84b54be5e72268759d25b36adadcb606c5386070"
+  },
+  {
+    "path": "Aesop/Tree/Tracing.lean",
+    "sha256": "5113f6a3dade2d0f8518c91fd043ac3ea0d1cb977a81839f5d28adfb575a8414"
+  },
+  {
+    "path": "Aesop/Tree/Traversal.lean",
+    "sha256": "24548b06ff4356cd71532e51038b6e8c7ba7397604cbbfa367a0e49d0532e7c8"
+  },
+  {
+    "path": "Aesop/Tree/TreeM.lean",
+    "sha256": "6593552134cfe56ae88d4029ee906435f668cadd51380cdad10fd35adb016997"
+  },
+  {
+    "path": "Aesop/Tree/UnsafeQueue.lean",
+    "sha256": "743e7ddac967152246a3de5b027d8b0ab64e687f1d3e1dca781dba90d8f5d26d"
+  },
+  {
+    "path": "Aesop/Util/Basic.lean",
+    "sha256": "ec9c5bea4efc0bd095b83a1f670819ac0c97452640788b63a4de7d96f8bffe9a"
+  },
+  {
+    "path": "Aesop/Util/EqualUpToIds.lean",
+    "sha256": "9309ff100219891f14f9b5b213c7c042f34fd5ce9565d7dd1d6335db0bcc2fd2"
+  },
+  {
+    "path": "Aesop/Util/Tactic.lean",
+    "sha256": "771deac7c39ef32320e684adb3c9fc7295ece601581456fca418fcfc64f4a0bb"
+  },
+  {
+    "path": "Aesop/Util/Tactic/Ext.lean",
+    "sha256": "1c0b605ce3f6a3ccfc627fc5fef27b423b67690fc16598886f28626d00265167"
+  },
+  {
+    "path": "Aesop/Util/Tactic/Unfold.lean",
+    "sha256": "9004f8a25e9fa14c6a5de1c56be442a093f39790e0e92a892b8c244afc07e558"
+  },
+  {
+    "path": "Aesop/Util/UnionFind.lean",
+    "sha256": "905f0384b18e4c4f261426bd135d99b58e87e01494ec35174ad018533d2ed8d9"
+  },
+  {
+    "path": "Aesop/Util/UnorderedArraySet.lean",
+    "sha256": "0c01ab93da50b3745c308e0cc43d371a8934c8999f1abfa2615c7f7548a6102b"
+  },
+  {
+    "path": "AesopTest/10.lean",
+    "sha256": "eb8a7a3a2c7da214da445c43dcb7f8ddf0658ca8e359995dda2fcde971dd4197"
+  },
+  {
+    "path": "AesopTest/12.lean",
+    "sha256": "350d09c09004d08a056ff734c166be5b17d7178a332945891cc7e20a441b66a2"
+  },
+  {
+    "path": "AesopTest/125.lean",
+    "sha256": "429b20b521aa055f081842446bbb1c9680264ad395fb8770a2bd805c523e4c65"
+  },
+  {
+    "path": "AesopTest/126.lean",
+    "sha256": "0b65510482b8e4eefb1250b0a495f1f4a75b46d061d481b339b6b2feb0011059"
+  },
+  {
+    "path": "AesopTest/13.lean",
+    "sha256": "da29f5c709c6adff6cd21c4ccf2884b3b3f9faff640d18e21c83fb1fabe894a5"
+  },
+  {
+    "path": "AesopTest/13_2.lean",
+    "sha256": "013cf8c484697f82c24aabc3ef5c757d4204476b34075602a24b40f2651df556"
+  },
+  {
+    "path": "AesopTest/18.lean",
+    "sha256": "bab3b6c2d28c5fa5f468eb237c825a1240024ed7ce94997f54c376029ebb6cdb"
+  },
+  {
+    "path": "AesopTest/2.lean",
+    "sha256": "0d78bb8a85662c23232b554c50d5f42aca787af13b85e07b17ded203ea311050"
+  },
+  {
+    "path": "AesopTest/20.lean",
+    "sha256": "16f0ec0f85ea9d243125041f3b89ae5926014e5163dd36a0af59d11cebfe3466"
+  },
+  {
+    "path": "AesopTest/205.lean",
+    "sha256": "8929cbef07da6986e6de1e8b5c642cdd403ccaa8209d781037d29945252c530d"
+  },
+  {
+    "path": "AesopTest/207.lean",
+    "sha256": "ca70d5189e9745bc40328d1efe3d502794f9b7ca15149f2d792fc2c364e78ce7"
+  },
+  {
+    "path": "AesopTest/23.lean",
+    "sha256": "9d77103cf2859e47b8cfd02fb7ee441cf3eb8ea6f7a0e3e361f6fae190188362"
+  },
+  {
+    "path": "AesopTest/26.lean",
+    "sha256": "392c659de980da9f9664d632752fe83d05c9a0d52b1abbe1f9e2e80428f92e40"
+  },
+  {
+    "path": "AesopTest/27.lean",
+    "sha256": "21d082284aa4a42a92e0f0ca6833e4849ce1e3719529aac5b2780a3ff54eceb4"
+  },
+  {
+    "path": "AesopTest/41.lean",
+    "sha256": "557abcdd296ac5666da466a1ac98fea0dbb03aba64a70424919495df92edf737"
+  },
+  {
+    "path": "AesopTest/43.lean",
+    "sha256": "2b87d9a52c827ac7a31504d35d8ad13f615cd139c2986b333b88b81e90be84c9"
+  },
+  {
+    "path": "AesopTest/AddRulesCommand.lean",
+    "sha256": "e57152e1e1bb3c5f1b8d4b9ba8116b783ac1214e9b787aa469011c4fed4c648a"
+  },
+  {
+    "path": "AesopTest/Aesop.lean",
+    "sha256": "89e2f4c793ceb798e5f95cab2a7aafc1e304b118fa0021408df212651fd9b3ea"
+  },
+  {
+    "path": "AesopTest/AllWeaken.lean",
+    "sha256": "67d0ff9a67e3671a7f8ac82f148fe01b5d7ba0c94f47c525fb8364386861692c"
+  },
+  {
+    "path": "AesopTest/ApplyHypsTransparency.lean",
+    "sha256": "f84b42ca5e758ad19e94086e1dc2fa0023660eb0380d865b4980fdc379f39a99"
+  },
+  {
+    "path": "AesopTest/ApplyTransparency.lean",
+    "sha256": "763c68d0be92222df5dbb787167878a04a54b3da6ef509e8f026b7511e812782"
+  },
+  {
+    "path": "AesopTest/AssumptionTransparency.lean",
+    "sha256": "83d14400b2cbbe92aedfbf305e45da74467622653e6376326731cafb03892a70"
+  },
+  {
+    "path": "AesopTest/BigStep.lean",
+    "sha256": "ee6c5e6b015d08e8aad3d18b01283bb2bcf327425effea069253394e9944e187"
+  },
+  {
+    "path": "AesopTest/Cases.lean",
+    "sha256": "05b11b776ebb2900c1a1d19f8bac8720856d252a2e9c65dbeb575283327a6633"
+  },
+  {
+    "path": "AesopTest/CasesScript.lean",
+    "sha256": "60fcf15803ccdcda281d5db7321ac376e23994a35572f56559a07e3b859cf20c"
+  },
+  {
+    "path": "AesopTest/CasesTransparency.lean",
+    "sha256": "63939c2861ff79fce8158846917184fa134e14961123c2c0e0ad8010cb0c9566"
+  },
+  {
+    "path": "AesopTest/Com.lean",
+    "sha256": "2e81f8d90ec7260d5993ae5cbf3799a12c1cf276c776a48d0aceb281a183bc82"
+  },
+  {
+    "path": "AesopTest/CompositeLocalRuleTerm.lean",
+    "sha256": "9e1621ab52105985a1bbc265227d0a711dcc90d71706685bb6402abaf4bcab8a"
+  },
+  {
+    "path": "AesopTest/ConstructorEquations.lean",
+    "sha256": "ec26315b42e7d7f60890f8cf7c042aa0cafb638f2cc8874b14aed80def25d501"
+  },
+  {
+    "path": "AesopTest/Constructors.lean",
+    "sha256": "af132f02a455aa5bf0b1c9244d07df520938d4495bd8df3f6fb88f5039d4b51c"
+  },
+  {
+    "path": "AesopTest/CustomIndexing.lean",
+    "sha256": "746933776e309ad65a206c016d1f80539d805d7b39e81769de918ac8f752f5a8"
+  },
+  {
+    "path": "AesopTest/CustomTactic.lean",
+    "sha256": "2149636ecf9cd8dc88009291b7e918610543beedeec9874fb4e4a9ec1ab3e86b"
+  },
+  {
+    "path": "AesopTest/DefaultRuleSets.lean",
+    "sha256": "d5b0cd22227902c3c625623a3c7824981f52ded3efb1570b7f7df79f573a9fc0"
+  },
+  {
+    "path": "AesopTest/DefaultRuleSetsInit.lean",
+    "sha256": "c577b86ad446f78a1c5151e0273c5fba76612d1b2cba99e81fc99fd14feaa1a7"
+  },
+  {
+    "path": "AesopTest/DestructProducts.lean",
+    "sha256": "831526e6327fdc8c58aae8aaf9e5fd94530b005e66e1f68a553e7f1e5b448fd7"
+  },
+  {
+    "path": "AesopTest/DestructProductsTransparency.lean",
+    "sha256": "380951f38221913ebb9f86ee106b2b92532f9edf75244ae04e4afa4cbcdfca7d"
+  },
+  {
+    "path": "AesopTest/DocLists.lean",
+    "sha256": "ab0f22960d506c2b4233801ee09b689b2e632099f20a015360ab3267ed0a7e3b"
+  },
+  {
+    "path": "AesopTest/DroppedMVars.lean",
+    "sha256": "004d1fa7416a777a332a960c2b1f1cac85a506af0aa382a261749fd0434ae3c6"
+  },
+  {
+    "path": "AesopTest/ElabConfig.lean",
+    "sha256": "fb4a92070fc9f6762587a6440db6501099e651b33546da70e9fe5b611eb93fbc"
+  },
+  {
+    "path": "AesopTest/EnableUnfold.lean",
+    "sha256": "361adafa56a9746df9389df8ff10ab5498c749949cf453e9af2cba6cbec24d02"
+  },
+  {
+    "path": "AesopTest/Environment.lean",
+    "sha256": "e0b78461f6640f30725efec7ed04d9dc1d08e79e7e22c373ac61afb0ff965592"
+  },
+  {
+    "path": "AesopTest/EqualUpToIds.lean",
+    "sha256": "6d3b26771cec234c9da623440cb4bad2bb09b3694329e8f59bb66ee03aca01a7"
+  },
+  {
+    "path": "AesopTest/Erase.lean",
+    "sha256": "86a0b52afc419b5600a3d5230f71c9ca2a885ef56b206a79fe99738e34e7986c"
+  },
+  {
+    "path": "AesopTest/EraseSimp.lean",
+    "sha256": "99d5a912e58cd6df6d048db691f2d2d6ca5791d258efbbd0ebfb8495a3bdce0a"
+  },
+  {
+    "path": "AesopTest/EraseUnfold.lean",
+    "sha256": "5a4db0f86c23cf324c28fd430633eb4d56b72ef7a1e5221c6aeefa79c450e17f"
+  },
+  {
+    "path": "AesopTest/Ext.lean",
+    "sha256": "e9f6701732955690e1700d6b0e87d7ca488f1600a30125b9f11d3487f8aa4c47"
+  },
+  {
+    "path": "AesopTest/ExtScript.lean",
+    "sha256": "e9c4de69b731aa36f69bacd734e9786e934ea1128a9ddf06670e5a65c54ec292"
+  },
+  {
+    "path": "AesopTest/Filter.lean",
+    "sha256": "b6de0ec8de7012390dca8c247554ba256ff0eefc0cef9f77c7dbc78a415bf82c"
+  },
+  {
+    "path": "AesopTest/Forward.lean",
+    "sha256": "0038646307da6d1669bf68fe09d20cfb7046a4068ccf0b3c1f556be8a8ad670c"
+  },
+  {
+    "path": "AesopTest/ForwardConstant.lean",
+    "sha256": "ec9d67bd88a4184db95b9f224bf876f0efb5024fff4ddc8006fe9f398d4b33d9"
+  },
+  {
+    "path": "AesopTest/ForwardRedundantHypsWithMVars.lean",
+    "sha256": "5daaafc34e92e9cdaf35446c2958461e515856ff8fae91a5f6c71d49f97aa0cd"
+  },
+  {
+    "path": "AesopTest/ForwardTransparency.lean",
+    "sha256": "b78e5a7a8acfee32fa695baa90f6fdeae5dbfcd92110897ed2ae865dd694a11f"
+  },
+  {
+    "path": "AesopTest/GlobalRuleIdentErrorChecking.lean",
+    "sha256": "b69d8e0305444b03992e5cdd1071d164d55204a552c9691900995caeb60e0502"
+  },
+  {
+    "path": "AesopTest/HeartbeatLimit.lean",
+    "sha256": "2d72b7a2f43a4d857d5903ebaef7f08adc16fa3ff93f62d888df75590924de65"
+  },
+  {
+    "path": "AesopTest/IncompleteScript.lean",
+    "sha256": "bdc24e8b32f97ad62f1434e99e51c3775a18cd80135456032f4b6d5b5c87b17a"
+  },
+  {
+    "path": "AesopTest/Intros.lean",
+    "sha256": "827a5e0d6678b9dc505ef560adebb4c33c71c9ec89a49b72f612f5f8b5600a52"
+  },
+  {
+    "path": "AesopTest/IntrosAllTransparency.lean",
+    "sha256": "336c54acc44a148041a2a4b06b1103a39452e1b481d2c35764f8bb9a5e691770"
+  },
+  {
+    "path": "AesopTest/Jesse.lean",
+    "sha256": "760c98ae775e7278b4933573e804fea0e1526624bbbdf4ed3c4c99653b63c78d"
+  },
+  {
+    "path": "AesopTest/LegacyForward.lean",
+    "sha256": "ff32a524dd079549881f3ff83f916b554c717de509ec9d519ea18303a85fde80"
+  },
+  {
+    "path": "AesopTest/List.lean",
+    "sha256": "6acdf128f080b90009a813209bb3dc97d1da71538edfea27c91b01a1e6419c41"
+  },
+  {
+    "path": "AesopTest/LocalRuleSet.lean",
+    "sha256": "7514855bcdcb2a104b0aeb3e51cb88154f5cf22bb017e9f88b7c6e8d658b8b57"
+  },
+  {
+    "path": "AesopTest/LocalTactic.lean",
+    "sha256": "945afc24842001cd3b1069f9caa8e194891b618fe2324772d947878352a5e40b"
+  },
+  {
+    "path": "AesopTest/Logic.lean",
+    "sha256": "917f1b7f16242946b10fb5c4e08ccf4a772636f626fdec1d6906d70115660cd8"
+  },
+  {
+    "path": "AesopTest/MVarsInInitialGoal.lean",
+    "sha256": "08b4ef020e27bebf732fe030213650bdc9e98d678f5fee01cb4ed0183e8708c9"
+  },
+  {
+    "path": "AesopTest/Metas.lean",
+    "sha256": "7926ed6fc8712154633f913948e9e1252f0d2da6f5c75e6236b0e0ad1a327cd6"
+  },
+  {
+    "path": "AesopTest/NameResolution.lean",
+    "sha256": "774432521c0ebb868ba94050b9ca48529e28d796aebd203b26143e2afc9499bf"
+  },
+  {
+    "path": "AesopTest/NoImportClash.lean",
+    "sha256": "7846421fea65b7b4368b6b681e98718188f0bc576c733a97c3dfcb45a86e5615"
+  },
+  {
+    "path": "AesopTest/NoNormSimp.lean",
+    "sha256": "4944490d4b92298acf1b98f6493a57ee6c6f7c9dacdda4bc378bfced2c3812bc"
+  },
+  {
+    "path": "AesopTest/NoProgress.lean",
+    "sha256": "8736b50a148dcf952105bcf724438f283718fbca878989694c05f98e074575aa"
+  },
+  {
+    "path": "AesopTest/Nonterminal.lean",
+    "sha256": "32119839c6e2902507b2dea2bd294350d90c2d74f86407b7e7e887bd2d83a472"
+  },
+  {
+    "path": "AesopTest/NormSimp.lean",
+    "sha256": "017597a38cd8aaa61ef659a4ffd56ce5794b9e05d661f54e686490b845830b4f"
+  },
+  {
+    "path": "AesopTest/NormSimpUnchangedMVarAssigned.lean",
+    "sha256": "b980653d8a3659ce66f8e1aa1e76b32ffeb7646075ae9d21cb3fa1ab4dd8bd6c"
+  },
+  {
+    "path": "AesopTest/Persistence0.lean",
+    "sha256": "74ad10357f7f2ab26bbe8325bd45f1d0902ac57b18b577e9d2229083cf178c9d"
+  },
+  {
+    "path": "AesopTest/Persistence1.lean",
+    "sha256": "d053ad83b3acd53fc3387a0656cc71196fab31ed15a41d55f2eb53592499efcb"
+  },
+  {
+    "path": "AesopTest/Persistence2.lean",
+    "sha256": "969859251bc84da7b088f77725f528e8365d6497b849a4d7149909476d533bcd"
+  },
+  {
+    "path": "AesopTest/Persistence3.lean",
+    "sha256": "967855bbe5d05ccb2cd84248fef1298bf8f5f080031a46521f17c09039fc1c85"
+  },
+  {
+    "path": "AesopTest/PostponeSafeRules.lean",
+    "sha256": "d5642969d7aaa37edf5c7a0199750cedd7e29bc23acea1d82301d4113b7ca56e"
+  },
+  {
+    "path": "AesopTest/RecursiveUnfoldRule.lean",
+    "sha256": "f0fa3f3d1f57f980634218af1074c043732aabc8e11f0e6464a6eadf63c5bb3b"
+  },
+  {
+    "path": "AesopTest/RulePattern.lean",
+    "sha256": "28ffdea5710368657ee9dbe5152ddba43bcb5f26f852e129606db26f1415ed33"
+  },
+  {
+    "path": "AesopTest/RulePatternLooseBVar.lean",
+    "sha256": "de0b8004b7624a2247a32063b1a3d50f887af0d0ada0e4ce0194cdb8f806ae13"
+  },
+  {
+    "path": "AesopTest/RulePatternUniverseBug.lean",
+    "sha256": "06747ee7fb7e5b15de02455de09bee27d4caa26808c4e5938d2cb230ea2b3d02"
+  },
+  {
+    "path": "AesopTest/RuleSetNameHygiene0.lean",
+    "sha256": "be90bae107cd8fdf48026d72ee0e9351953b345b7c84feb52c9888b0c212998e"
+  },
+  {
+    "path": "AesopTest/RuleSetNameHygiene1.lean",
+    "sha256": "8dd19e9c7fb67ee8d7775f0f29cf1032f26f6c3374b097ec2c804d1035425958"
+  },
+  {
+    "path": "AesopTest/RuleSets0.lean",
+    "sha256": "fb23713e7d99e2065b40153fd76b1ee3a343aae0a8cac7c53c4aa645a19e9734"
+  },
+  {
+    "path": "AesopTest/RuleSets1.lean",
+    "sha256": "21a10525ebc9427a32860e78f1745d6193100453f80a75a9cd40927cf4a8c4f4"
+  },
+  {
+    "path": "AesopTest/Safe.lean",
+    "sha256": "588834b6427f6ec91ad8d9ab00b28687b0f6ad222a7f638d7e6a5ce47c420a71"
+  },
+  {
+    "path": "AesopTest/SafeExtractionCopyIntroducedMVars.lean",
+    "sha256": "b334cc0821766f6535bee10f71f13ae0fce97ff18de06dcc27332ec03e60a34a"
+  },
+  {
+    "path": "AesopTest/SafePrefixExpansionRappLimit.lean",
+    "sha256": "7a43df6fdea6931bb3bbfb70624c4e3e9b4b832ed3436ba85205dd32e01c8163"
+  },
+  {
+    "path": "AesopTest/SafePrefixInTerminalError.lean",
+    "sha256": "fc0881f7202c445e746d19edb61944e47edc3c2198c63929bc154536570c5de5"
+  },
+  {
+    "path": "AesopTest/SaturatePerformance.lean",
+    "sha256": "ee240881c2deff10952b4a7485429c6f73855809f0c2555515f1edd32dd7bbe0"
+  },
+  {
+    "path": "AesopTest/ScriptWithOptions.lean",
+    "sha256": "99e0d2aab1b74a2e1d4076254f350f80f4a7c4ec41daeb596691aff1cf23b768"
+  },
+  {
+    "path": "AesopTest/SeqCalcProver.lean",
+    "sha256": "3e097baaa72f89935c51f364e670bb88494116d26952af324ac721b7c235a1bb"
+  },
+  {
+    "path": "AesopTest/SimpLetHypotheses.lean",
+    "sha256": "3e664ff6c3c8105a2fbc299dd80b33b9329473562f26f63a942e0be619dd6815"
+  },
+  {
+    "path": "AesopTest/Simprocs.lean",
+    "sha256": "35c4a5ac19df111a195d58c560d539e816a0f4f96954cc5ad3a718da00741071"
+  },
+  {
+    "path": "AesopTest/Split.lean",
+    "sha256": "5372116abbecdcd75ecca07300c528108796553a9e343e5ad3c6360dbd63001b"
+  },
+  {
+    "path": "AesopTest/SplitScript.lean",
+    "sha256": "f844ab6f501ba3049e1d33c8fe2b9e06fa74740b9b53e0faf966f89d4233b1ce"
+  },
+  {
+    "path": "AesopTest/Strategy.lean",
+    "sha256": "a62657063bbfa98e203e7f0739421a75628d3a803443bf82bd7827ccf609cc0e"
+  },
+  {
+    "path": "AesopTest/Subst.lean",
+    "sha256": "5cf10bb9dbedcb7ab6c44724e65e4299c43913c368723d50e37a0b1cfbea41cb"
+  },
+  {
+    "path": "AesopTest/TacGen.lean",
+    "sha256": "3b06829b92ee2800d14dbf91f5b40ae38bd8c94440460e1e43ced565fdf81135"
+  },
+  {
+    "path": "AesopTest/TacticConfig.lean",
+    "sha256": "744d391fd3a1f074a7a4669c1f04f3158e3e655a6b4358572a349d76880b4ec9"
+  },
+  {
+    "path": "AesopTest/Tauto.lean",
+    "sha256": "e09e25afe558f2aab3f450034c674ebb462696cf1de3c05f0b04ac5e87cb88f7"
+  },
+  {
+    "path": "AesopTest/TerminalError.lean",
+    "sha256": "e46b0c5ca3be8a825c7fa566a20a81a696665b8fa3c5bddb0b79b62b24ba44b3"
+  },
+  {
+    "path": "AesopTest/TraceProof.lean",
+    "sha256": "bb6a7e0884ef48592b0eeb93aa2e5104b015e8369a1aaf801b0cd6a35a09dd9a"
+  },
+  {
+    "path": "AesopTest/TryThisIndentation.lean",
+    "sha256": "a17819e465699408537e93217908c99e62085ffc58100cfae51bed2518d125dd"
+  },
+  {
+    "path": "AesopTest/Unfold.lean",
+    "sha256": "ba1e1a545af9555cc0735274403e2166b55135dc115ca38140b3c950fbe246e4"
+  },
+  {
+    "path": "AesopTest/UnreachableTacticLinter.lean",
+    "sha256": "2ec88260a56fc5a7bbb6d4a4b886c57f20a9d06818cac9f95efe3dd3b7837d2d"
+  },
+  {
+    "path": "AesopTest/WarnApplyIff.lean",
+    "sha256": "b943f1fabf7ec2448d6671b6fef4b58fc79cc8f20464fca65b778eb0d5503531"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "README.md",
+    "sha256": "b092a9fd20cdaf59d719bfdcd9ef3a6cf7dde43bbb4095d730a12e61dc320bf5"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "935ccf886b516437b5963cf7718b8f79541716c050ebbb9fdf31a54872756cd4"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "f083f1f7561717e61c62074294ea6048a9e3cca44d5e3f4109a59d74a5b69eec"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+  }
+]

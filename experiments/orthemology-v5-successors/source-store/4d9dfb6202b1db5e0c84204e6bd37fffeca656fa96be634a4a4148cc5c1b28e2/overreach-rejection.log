@@ -1,0 +1,19 @@
+OverreachRejected.lean:6:2: error: tactic 'decide' proved that the proposition
+  match Obj.gAct 1 with
+  | Obj.effect id => True
+  | Obj.other id => True
+  | x => False
+is false
+OverreachRejected.lean:10:2: error: tactic 'decide' proved that the proposition
+  match Obj.effect 2 with
+  | Obj.ground => True
+  | Obj.gAct n =>
+    n = { serial := 2, gOn := 2 % 2 == 1, otherOn := false }.serial ∧
+      { serial := 2, gOn := 2 % 2 == 1, otherOn := false }.gOn = true
+  | Obj.effect n =>
+    n = { serial := 2, gOn := 2 % 2 == 1, otherOn := false }.serial ∧
+      { serial := 2, gOn := 2 % 2 == 1, otherOn := false }.gOn = true
+  | Obj.other n =>
+    n = { serial := 2, gOn := 2 % 2 == 1, otherOn := false }.serial ∧
+      { serial := 2, gOn := 2 % 2 == 1, otherOn := false }.otherOn = true
+is false

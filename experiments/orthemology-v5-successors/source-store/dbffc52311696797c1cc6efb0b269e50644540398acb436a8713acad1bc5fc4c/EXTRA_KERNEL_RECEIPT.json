@@ -1,0 +1,23 @@
+{
+  "status": "PASS_INDEPENDENT_EXTRA_KERNEL_CHECKS",
+  "finished_utc": "2026-10-07T10:14:40.123803+00:00",
+  "theorems": 12,
+  "source_sha256": "f29664167903378504944fe0284ae707a0c3461dafe876378de848d08914b3e3",
+  "object_sha256": "b42d327f1567be0e7d395723d33a282d085a0d81ef9be5268e03cdcc71002a9c",
+  "readback_sha256": "312e79bd666e200759dda04c84083e8e73cd1f217416502acf1615c28ecb2c1a",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "imports": "Only RationalFixtures and its frozen 2,157-object closure",
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "final_compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "readback_command": [
+    "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+    "-j1",
+    "--trust=0",
+    "tranche20/openai-math-study/deep/122-independent-review/ReviewerExtraReadback.lean"
+  ],
+  "attempt01": "Reviewer test authoring failures preserved. Type annotations, Fin.val reduction and conjunction-parenthesization repaired in reviewer-only test file; no frozen science-source edits."
+}

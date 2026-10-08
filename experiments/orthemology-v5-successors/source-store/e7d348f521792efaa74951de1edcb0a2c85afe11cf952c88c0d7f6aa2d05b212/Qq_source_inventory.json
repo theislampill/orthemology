@@ -1,0 +1,138 @@
+[
+  {
+    "path": ".github/workflows/build.yml",
+    "sha256": "eae20f3efbe217371530408dbc891666fa162ed05553626f6a301112eb2451ef"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "7d5d4e749f2a0d66de63a0fe6baf9bd733872f48a7ce93512f99f1ef98d5e726"
+  },
+  {
+    "path": "GNUmakefile",
+    "sha256": "4d630d015affda0b97282b8ec0274b4c26c944ac1b89d891663f6e19796eb86b"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "Qq.lean",
+    "sha256": "579ff24b0d8131a410cb3cd0ba49a067fae23c203c2ecd911d29761907ec05b9"
+  },
+  {
+    "path": "Qq/AssertInstancesCommute.lean",
+    "sha256": "64515af71a8dca624c16ed157e4e438aa5811ad20f5638efed910dc817dee3ef"
+  },
+  {
+    "path": "Qq/Delab.lean",
+    "sha256": "006b589d1d2f60308fb34b1adb06b714b2f2b3ef0dad11686575294bc782e044"
+  },
+  {
+    "path": "Qq/ForLean/Do.lean",
+    "sha256": "7f32029c888dce8822bec09f864dcef4ef47ff5f3190f307535c71481a009405"
+  },
+  {
+    "path": "Qq/ForLean/LocalContext.lean",
+    "sha256": "d468724f5632fba7c65dba92e0abdac6ebf7d821fcd3e8f9da8c676d506a4668"
+  },
+  {
+    "path": "Qq/ForLean/ReduceEval.lean",
+    "sha256": "a791e3fa8b61a66cd084a2cc5294278a26acc4bf2f75f93e0dd128a871589bcc"
+  },
+  {
+    "path": "Qq/ForLean/ToExpr.lean",
+    "sha256": "dc5130da168d3f558b9af3036edec714a4c68fabe9d2dd8e9772f6865a0f2c98"
+  },
+  {
+    "path": "Qq/Macro.lean",
+    "sha256": "cdcbcb616e178f2f25c7b20597cabf82970452c73983d8f9759627f59a426a56"
+  },
+  {
+    "path": "Qq/Match.lean",
+    "sha256": "f5660257014a24cd29b33f682d868535997b4fce04befda9cb266a58b83336df"
+  },
+  {
+    "path": "Qq/MetaM.lean",
+    "sha256": "bb7f564540399c10843f16cfef5b5df185354e8edc8878fe6c625ad58bff0d86"
+  },
+  {
+    "path": "Qq/Simp.lean",
+    "sha256": "98102b2ec067309bbf390647d094b7a88ec8400c357026c9d62d0a5fe82d0649"
+  },
+  {
+    "path": "Qq/SortLocalDecls.lean",
+    "sha256": "430c6c7211fbe47c08504f93f20033c11a45540d7f6cac035203650f7c0fba65"
+  },
+  {
+    "path": "Qq/Typ.lean",
+    "sha256": "f5ea2fd824eb4ebdd923bd4d8eed85c5bea4a6045924dc597af37381d043818e"
+  },
+  {
+    "path": "README.md",
+    "sha256": "d1061351f1ba15a7850b63d417c3ad075ade4d77692f81d217874b8bab575be1"
+  },
+  {
+    "path": "examples/betterApp.lean",
+    "sha256": "018c2bf611b09bdd25128ca058c97e535274dfece4514214b4d74e327f5c44e2"
+  },
+  {
+    "path": "examples/clauseConvertProp.lean",
+    "sha256": "4f16f403d22545aec3c00597655089a110377af3d476b59ec7b6fba23082b748"
+  },
+  {
+    "path": "examples/clauseConvertType.lean",
+    "sha256": "279b4b8b8340173c38ff04ac3c110c119b8353edd663cab316deea137c76823f"
+  },
+  {
+    "path": "examples/conjs.lean",
+    "sha256": "aee93167ad3fb16c8eda31353639c93c02862fd2a0547572923e59a79f757b47"
+  },
+  {
+    "path": "examples/defeqs.lean",
+    "sha256": "be559c22ce88d0ff075709bcdb360adc15437fdd22deb0758fcb6da75995f61c"
+  },
+  {
+    "path": "examples/hoMatching.lean",
+    "sha256": "e6bd047c3383aeb7e9532d21506731b06abe0be54cc180f37439fdca77f3703f"
+  },
+  {
+    "path": "examples/introQ.lean",
+    "sha256": "892c252c9006cade6e503fe368553952f81dbc41d261aa50f9c2a4dc067525f1"
+  },
+  {
+    "path": "examples/matchMotive.lean",
+    "sha256": "eb5658ada6acc7cc215ab92a8bf7e111f5102666c71e09c1bb8c08ef5e64d18b"
+  },
+  {
+    "path": "examples/matching.lean",
+    "sha256": "824064de8dcfd814535b32948d42b0c22b365fcd3636fe9e0385458c3c70c145"
+  },
+  {
+    "path": "examples/misc.lean",
+    "sha256": "bbd95481fc5eff63d248d017272b0cba9525d70364f7874c91cc9a628ca0a16c"
+  },
+  {
+    "path": "examples/mkPairwiseEquality.lean",
+    "sha256": "bbe7219b77bb0595e97fbbbfa4a670999c9417c9a7e044516017775c95b0ae0a"
+  },
+  {
+    "path": "examples/strengthenInstance.lean",
+    "sha256": "5d00677d6d6348a05a2cc7e433d05848a5a9b8fa1ac2bac74f3d1d84c2784c48"
+  },
+  {
+    "path": "examples/typeclass.lean",
+    "sha256": "f5bf2d0e1e126ed1537b6ea747281f0406af4bb44ae9d9fe7dfdfea5390f4734"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "460e7ce76c58edfd8ba59428f23e908c5860e8bbca8883ff6c1262980e364d30"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "9b322d4df5a654d424cc32d6fa6f1e49257cf2b9800180e35d74ef7ecd374688"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+  }
+]

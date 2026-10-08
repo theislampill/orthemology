@@ -1,0 +1,40 @@
+{
+  "scope": "Darʾ volume 9 electronic body; not printed-edition or modern apparatus certification",
+  "opened_start": "https://shamela.ws/book/21506/3283, labeled 9:3; matched to 014:940–941",
+  "opened_following_volume": "https://shamela.ws/book/21506/3715, labeled 10:3; matched to 017:20–21",
+  "end_page_attempt": "https://shamela.ws/book/21506/3714 returned web-tool Internal Error; no page-number inference",
+  "spans": [
+    {
+      "body_first_line": 940,
+      "body_last_line": 956,
+      "body_words": 996,
+      "sha256": "5983b6c8296f7e2f6a61f26b2fb6ac7bc3d99b84c063df6f6ade5250b98c7679",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html",
+      "hash_representation": "derived UTF-8 transcription"
+    },
+    {
+      "body_first_line": 20,
+      "body_last_line": 802,
+      "body_words": 40229,
+      "sha256": "48c5bc3b1c12f39a81e07b3eca6db2eb2fb7d58aa721cc8305605821208922ec",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-015.html",
+      "hash_representation": "derived UTF-8 transcription"
+    },
+    {
+      "body_first_line": 20,
+      "body_last_line": 1092,
+      "body_words": 41486,
+      "sha256": "04cc1092235e0d92312ed5146f1f89c1bea866546a6c567318a77be9cf1b0963",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "hash_representation": "derived UTF-8 transcription"
+    }
+  ],
+  "end_page_additional_attempt": "https://shamela.ws/book/21506/3713 returned web-tool Internal Error / Cache miss. No printed final-page certification.",
+  "first_pass_complete": {
+    "body_words_whitespace_count": 82711,
+    "electronic_body_lines": 1873,
+    "scope": "all assigned electronic body between independently matched volume9 opening and volume10 opening",
+    "print_apparatus_certified": false,
+    "second_exhaustive_reading": false
+  }
+}

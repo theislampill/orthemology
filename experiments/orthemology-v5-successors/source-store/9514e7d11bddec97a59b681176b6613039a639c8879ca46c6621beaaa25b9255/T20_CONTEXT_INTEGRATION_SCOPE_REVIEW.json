@@ -1,0 +1,60 @@
+{
+  "history_record": "docs/provenance/v5-successors/T20_CONTEXT_REAPPRAISAL_HISTORY.json",
+  "independent_projection_review_sha256": "4af22a0fd76244c6dd1f0e17dbfb9abd5a5fb9db9e8d411e38269b4ed6ce54ea",
+  "link_correction_scope": "Only CONTEXT_SCOPE Markdown URLs, with no prose, model, philosophical or resolver-behavior change.",
+  "native_science": "NOT_RUN",
+  "new_independent_evidence_count": 0,
+  "new_results": 0,
+  "prior_candidate_tree": "fadbecadf440641d117d9eabb44faf2fae2ceab4",
+  "results": {
+    "T20-EMERGENCE-TYPE-CONTROL": {
+      "reviewed_source_ids": [
+        "T20-CONTEXT-e88685ee1012d5b3360a",
+        "T20-CONTEXT-5915bc19300dd1405533",
+        "T20-CONTEXT-cd9be81b37d908520486",
+        "T20-CONTEXT-d1bcdd9a7d28cd39fb84",
+        "T20-CONTEXT-492877437f2af7bd3275",
+        "T20-CONTEXT-6ed0e70acef4dd26af49",
+        "T20-CONTEXT-5252be35bc2e08fa4f4f",
+        "T20-CONTEXT-fd74f33e8d683d1e9455",
+        "T20-CONTEXT-1e286551fffa954fdcae",
+        "T20-CONTEXT-a78c9a2f04d599a31495",
+        "T20-CONTEXT-2d7713c6089558e29f83",
+        "T20-CONTEXT-3383f4a2c2f0b5b22796",
+        "T20-CONTEXT-8fe32dc31fccd0ad4749"
+      ],
+      "statement_sha256": "57708c0cd8da24f68e91f32156a8d5f0c01a97d3202253866861c8902083fd3c"
+    },
+    "T20-FOUNDATIONAL-PREMISE-SYNTHESIS": {
+      "reviewed_source_ids": [
+        "T20-CONTEXT-3a1ea08707761cbd8136",
+        "T20-CONTEXT-c78d082c3509e008a538",
+        "T20-CONTEXT-964b2be656dbaa48bde2",
+        "T20-CONTEXT-bbb68d9fd0f6d9a6b8dc",
+        "T20-CONTEXT-f598e574387edb8b86a2",
+        "T20-CONTEXT-e88685ee1012d5b3360a",
+        "T20-CONTEXT-5915bc19300dd1405533",
+        "T20-CONTEXT-cd9be81b37d908520486",
+        "T20-CONTEXT-d1bcdd9a7d28cd39fb84",
+        "T20-CONTEXT-492877437f2af7bd3275",
+        "T20-CONTEXT-6ed0e70acef4dd26af49",
+        "T20-CONTEXT-5252be35bc2e08fa4f4f",
+        "T20-CONTEXT-fd74f33e8d683d1e9455",
+        "T20-CONTEXT-1e286551fffa954fdcae",
+        "T20-CONTEXT-a78c9a2f04d599a31495",
+        "T20-CONTEXT-2d7713c6089558e29f83",
+        "T20-CONTEXT-3383f4a2c2f0b5b22796",
+        "T20-CONTEXT-abca79f07e511a509cf0",
+        "T20-CONTEXT-5009f0d284bc26e8b8fd",
+        "T20-CONTEXT-db07ac98c02f41dbb149",
+        "T20-CONTEXT-8fe32dc31fccd0ad4749"
+      ],
+      "statement_sha256": "d1dcf111c624ce388a261bbb66531c9139f9c997152decd981127d05bbe4699b"
+    }
+  },
+  "schema": "bounded-t20-context-source-scope-review-v1",
+  "scope": "Finite receiving source/statement/context correspondence for two existing owners. Original proof conclusions and statuses are unchanged; independently authored warrant and projection reviews retain only their supplied scopes. No new scientific execution or independence credit.",
+  "seal_sha256": "a7ae4e586fddfeba904bb1e53dc933d7d24d87f74afd81819db904d8f713ee6f",
+  "selection_sha256": "00bf802818563d942f047401fe6d9eed8b2c2cf1ea9f91a03c576783aa45adc4",
+  "superseded_initial_selection_sha256": "b88816b7149ba1c1928695a3b27e84801ef11ee52b238d8694d1925c99061866"
+}

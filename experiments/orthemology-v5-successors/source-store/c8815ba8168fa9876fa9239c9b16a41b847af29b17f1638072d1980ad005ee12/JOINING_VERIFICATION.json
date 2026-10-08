@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-07T10:44:14.816798+00:00",
+  "independent_theorems": 20,
+  "axioms": {
+    "canonical_witness_exact": [
+      "Quot.sound",
+      "propext"
+    ],
+    "all_original_witnesses_exact": [
+      "Quot.sound",
+      "propext"
+    ],
+    "resources_are_not_provider_relabels": [
+      "propext"
+    ],
+    "detached_component_witnesses_do_not_join": [
+      "Quot.sound",
+      "propext"
+    ],
+    "switched_is_connected": [
+      "Quot.sound",
+      "propext"
+    ],
+    "omitted_h_edge_is_live": [],
+    "omitted_h_breaks_stored_reachability": [
+      "propext"
+    ],
+    "omitted_h_breaks_joining_inventory": [
+      "Quot.sound",
+      "propext"
+    ],
+    "original_h_has_no_positive_path_inside": [
+      "Quot.sound",
+      "propext"
+    ],
+    "enlarged_basic_guards_survive": [
+      "Quot.sound",
+      "propext"
+    ],
+    "enlarged_outside_partition": [
+      "Quot.sound",
+      "propext"
+    ],
+    "enlarged_paths_preserve_partition": [
+      "Quot.sound",
+      "propext"
+    ],
+    "enlarged_is_not_connected": [
+      "Quot.sound",
+      "propext"
+    ],
+    "enlarged_has_no_common_provider": [
+      "Quot.sound",
+      "propext"
+    ],
+    "contextual_truth_does_not_create_ownership": [
+      "Quot.sound",
+      "propext"
+    ],
+    "every_owned_assertion_has_existing_owner_and_token_event": [
+      "Quot.sound",
+      "propext"
+    ],
+    "absent_creatures_have_no_world_indexed_activity": [
+      "Quot.sound",
+      "propext"
+    ],
+    "static_production_is_properly_world_gated": [
+      "Quot.sound",
+      "propext"
+    ],
+    "received_capacity_and_false_exercise_do_not_transfer": [
+      "propext"
+    ],
+    "abc_does_not_force_added_premises": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "six_semantic_rejections": [
+    "tactic 'decide' proved that the proposition\n  ∀ (e : E),\n    e = E.a ∨ e = E.b ∨ e = E.k →\n      ∀ (c : C),\n        e = E.a ∧ (c = C.cx ∨ c = C.cl) ∨\n            e = E.b ∧ c = C.cr ∨ e = E.k ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ e = E.o ∧ c = C.cz →\n          B.h = B.g ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ True ∧ c = C.cz\nis false",
+    "tactic 'decide' proved that the proposition\n  ∃ c,\n    (E.k = E.a ∧ (c = C.cx ∨ c = C.cl) ∨\n        E.k = E.b ∧ c = C.cr ∨ True ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ E.k = E.o ∧ c = C.cz) ∧\n      (match c with\n        | C.cx => B.x\n        | C.cl => B.l\n        | C.cr => B.r\n        | C.cm => B.m\n        | C.cz => B.z) =\n        B.h\nis false",
+    "tactic 'decide' proved that the proposition\n  ∃ s,\n    ∀ (e : E),\n      True →\n        ∀ (c : C),\n          e = E.a ∧ (c = C.cx ∨ c = C.cl) ∨\n              e = E.b ∧ c = C.cr ∨ e = E.k ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ e = E.o ∧ c = C.cz →\n            s = B.g ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ s = B.h ∧ c = C.cz\nis false",
+    "tactic 'decide' proved that the proposition\n  (W.w2 = W.w0 ∨ W.w2 = W.w1) ∧\n    (B.x = B.g ∧\n        (Exercise.actX = Exercise.sayG ∨\n          Exercise.actX = Exercise.provideA ∨ Exercise.actX = Exercise.provideB ∨ Exercise.actX = Exercise.provideK) ∨\n      B.x = B.h ∧ Exercise.actX = Exercise.provideO ∨ True ∧ (Exercise.actX = Exercise.sayX ∨ True))\nis false",
+    "tactic 'decide' proved that the proposition\n  (W.w2 = W.w0 ∨ W.w2 = W.w1) ∧ Content.absent = Content.present ∨ True ∧ True →\n    (W.w2 = W.w0 ∨ W.w2 = W.w1) ∧\n      (B.x = B.g ∧ Token.v = Token.u ∧ Content.absent = Content.present ∨ True ∧ True ∧ True)\nis false",
+    "tactic 'decide' proved that the proposition\n  True ∧ R.rx = R.rg ∨\n    B.g = B.h ∧ R.rx = R.rh ∨\n      B.g = B.x ∧ True ∨\n        B.g = B.l ∧ R.rx = R.rl ∨ B.g = B.r ∧ R.rx = R.rr ∨ B.g = B.m ∧ R.rx = R.rm ∨ B.g = B.z ∧ R.rx = R.rz\nis false"
+  ],
+  "commands": [
+    {
+      "label": "IndependentJoiningTests",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model-independent-review",
+        "-o",
+        "tranche20/foundational-audit/joint-model-independent-review/joining-tests-final/objects/IndependentJoiningTests.olean",
+        "tranche20/foundational-audit/joint-model-independent-review/IndependentJoiningTests.lean"
+      ],
+      "exit": 0,
+      "seconds": 6.576,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "IndependentReadback",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model-independent-review",
+        "tranche20/foundational-audit/joint-model-independent-review/IndependentReadback.lean"
+      ],
+      "exit": 0,
+      "seconds": 0.849,
+      "log_sha256": "ff2f2a2219212a41f8d851a52b4e3c79d99ccf4dba4ed966331e2ef3b1d4dce0"
+    },
+    {
+      "label": "IndependentRejectedClaims",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/joint-model-independent-review",
+        "tranche20/foundational-audit/joint-model-independent-review/IndependentRejectedClaims.lean"
+      ],
+      "exit": 1,
+      "seconds": 0.999,
+      "log_sha256": "e21cb2bde1f6a2d218d82daddee6aef0c08665ab4ea8b91e87e12221e1395c07"
+    }
+  ],
+  "candidate_unchanged": true,
+  "sources": {
+    "IndependentJoiningTests.lean": "3047c2ad1ec477ef12ed5cc25857cbf556128a436130dce23512ce2194aa3b75",
+    "IndependentRejectedClaims.lean": "4121dad5720f9e7bfbfda760a18c0f76d5647738b0234442251424aa98f6910b",
+    "IndependentReadback.lean": "2b58232056bb4778d00ce6b5c0ee03f65969c0a846a099b23f983af3ccaad07e",
+    "INDEPENDENT_THEOREMS.json": "2f03dddcd5f59a9e611e41a47c6e2399199284c11683c01ed58674a7b2103781",
+    "run_joining_tests.py": "2e296d1dbeddfc7684567248f719e1557a1dd08eeeffe146cf87cd2dfc3b653e"
+  },
+  "fresh_independent_object": "06a87168b8383f0b7e943b69ed2824112c3121bee622b417885a70cf52aceaa4"
+}

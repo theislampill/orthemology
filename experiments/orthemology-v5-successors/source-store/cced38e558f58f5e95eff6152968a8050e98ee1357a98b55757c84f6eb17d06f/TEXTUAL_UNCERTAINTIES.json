@@ -1,0 +1,158 @@
+{
+  "scope": "Local textual controls, not exhaustive collation",
+  "items": [
+    {
+      "locus": "main15",
+      "issue": "Authorial gloss invokes wisdom after quoted merciful wording; editor flags slip.",
+      "evidence": "Electronic supplied apparatus",
+      "treatment": "No silent repair"
+    },
+    {
+      "locus": "main257",
+      "issue": "Miswar/AbuJahl narration chronology challenged; alternative route disconnected.",
+      "evidence": "Electronic apparatus",
+      "treatment": "No independent historical authentication"
+    },
+    {
+      "locus": "main355",
+      "issue": "Marginal conjecture entered body in transmission.",
+      "evidence": "Electronic apparatus",
+      "treatment": "Preserve editorial diagnosis"
+    },
+    {
+      "locus": "main422",
+      "issue": "Unresolved page ... cross-reference.",
+      "evidence": "Electronic apparatus",
+      "treatment": "Locator remains unresolved"
+    },
+    {
+      "locus": "main427",
+      "issue": "Poem allegedly addressed to Abu Bakr reassigned to Abd al-Malik.",
+      "evidence": "Electronic apparatus",
+      "treatment": "Attribution correction belongs to editor"
+    },
+    {
+      "locus": "main435",
+      "issue": "Nonexistent conflated Quranic wording openly replaced by editor.",
+      "evidence": "Electronic apparatus",
+      "treatment": "Edited text not unanimous original wording"
+    },
+    {
+      "locus": "main587",
+      "issue": "Closing analogy sentence absent in T/Q/N, explained as eyeskip.",
+      "evidence": "Electronic apparatus directly re-read",
+      "treatment": "Supplied text not unanimous witness reading"
+    },
+    {
+      "locus": "main679",
+      "issue": "Source quotation abridged in a way apparatus expands from parallels.",
+      "evidence": "Middle-section continuous reading",
+      "treatment": "Inherited abbreviation, not extraction loss"
+    },
+    {
+      "locus": "main811/PDF920",
+      "issue": "One-word blank after من retained; T/D/Q blank; H reads مر; N has alternative wording.",
+      "evidence": "First-section reader directly read printed page and notes",
+      "treatment": "Inherited lacuna verified; not filled"
+    },
+    {
+      "locus": "main966",
+      "issue": "Original-third-principle sentence reconstructed from another edition with modification.",
+      "evidence": "Middle-section apparatus",
+      "treatment": "Conjectural/secondary restoration labelled"
+    },
+    {
+      "locus": "main993",
+      "issue": "Ninth numbered consequence absent in D/Q; T renumbering with another omission.",
+      "evidence": "Middle-section apparatus",
+      "treatment": "Do not invent missing argument"
+    },
+    {
+      "locus": "main1017",
+      "issue": "Numerical example inverted in opponent report.",
+      "evidence": "Middle-section apparatus",
+      "treatment": "Preserve correction layer"
+    },
+    {
+      "locus": "main1026",
+      "issue": "Bracketed دون supplied by electronic/editorial layer.",
+      "evidence": "First-section reader direct rereading",
+      "treatment": "Not silently promoted to unanimous received author wording"
+    },
+    {
+      "locus": "main1058",
+      "issue": "Hud statement attributed to Shuayb.",
+      "evidence": "Middle-section apparatus",
+      "treatment": "Misattribution retained as defect"
+    },
+    {
+      "locus": "main1122",
+      "issue": "Negation/affirmation correction matters to argument.",
+      "evidence": "Middle-section apparatus",
+      "treatment": "Use with supplied correction identified"
+    },
+    {
+      "locus": "main1262/1266",
+      "issue": "Textual disturbance/supplemented wording.",
+      "evidence": "Final-section apparatus",
+      "treatment": "No silent reconstruction"
+    },
+    {
+      "locus": "main1284",
+      "issue": "Possible skipped tidal-ebb stage supplied from Sirr Maktum parallel in footnote.",
+      "evidence": "Final-section apparatus",
+      "treatment": "Parallel read as apparatus, not restored original certainty"
+    },
+    {
+      "locus": "main1394/1410",
+      "issue": "Phrases concerning mental realities and eclipse variation need quotation caution.",
+      "evidence": "Final-section appraisal",
+      "treatment": "Unresolved; no intuitive repair"
+    },
+    {
+      "locus": "main1447",
+      "issue": "Author objection to Shafii grandson direct meeting corrected: report through father.",
+      "evidence": "Final-section apparatus and reflection",
+      "treatment": "Counterevidence retained; no fresh endorsement of astrology"
+    },
+    {
+      "locus": "main1595/PDF1704",
+      "issue": "D has a 2.5-line blank; editor conjectures space intended for more hadiths, explaining plural these reports.",
+      "evidence": "First-section reader visually read whole printed page",
+      "treatment": "Inherited incomplete text verified; no restoration"
+    },
+    {
+      "locus": "main1599/PDF1708",
+      "issue": "وأن يتعرض العبد لأسباب البلاء printed without apparent expected negation.",
+      "evidence": "First-section reader visually read whole printed page",
+      "treatment": "Print and electronic agree; contextual defect remains open; لا not supplied"
+    },
+    {
+      "locus": "intro I23–28 / authorial end 1603",
+      "issue": "Promised conceptual will section not fully realised, though received work closes explicitly.",
+      "evidence": "Complete electronic introduction and closing, selected scans",
+      "treatment": "Complete received work, not completed historical programme"
+    },
+    {
+      "locus": "introI40/PDF41–42",
+      "issue": "Electronic single long note spans printed 41–42.",
+      "evidence": "First-section reader scan confirmation",
+      "treatment": "Missing labels do not mean missing prose"
+    },
+    {
+      "locus": "introPDF82/84",
+      "issue": "Blank pages absent as electronic markers.",
+      "evidence": "First-section reader visual inspection",
+      "treatment": "No omitted prose"
+    },
+    {
+      "locus": "introPDF85–105",
+      "issue": "21 manuscript plates omitted as images from Word/caption layer.",
+      "evidence": "All 21 directly visually inspected",
+      "treatment": "Only partial decipherment; no every-glyph or complete manuscript claim"
+    }
+  ],
+  "source_word_url": "https://ibnelqayem.com/ar/media/download/86",
+  "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65",
+  "source_pdf_sha256": "2f12843b0c252fe097bbf602178a798f8a6a2f446a11238376eabe65e953a6b3"
+}

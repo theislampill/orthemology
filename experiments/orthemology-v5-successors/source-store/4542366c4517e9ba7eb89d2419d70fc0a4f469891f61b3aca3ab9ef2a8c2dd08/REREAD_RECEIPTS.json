@@ -1,0 +1,328 @@
+{
+  "scope": "Bounded contextual rereads after complete assigned first pass",
+  "planned_ranges": [
+    {
+      "id": "RR1",
+      "first_id": "NB-S002-L0073",
+      "last_id": "NB-S002-L0078",
+      "purpose": "Creation/teaching, ability, wisdom, mercy, attestation and distinction of prophetic/general inspiration."
+    },
+    {
+      "id": "RR2",
+      "first_id": "NB-S002-L0086",
+      "last_id": "NB-S002-L0089",
+      "purpose": "General providence versus normative commission; entailment and transmission requirements."
+    },
+    {
+      "id": "RR3",
+      "first_id": "NB-S002-L0103",
+      "last_id": "NB-S002-L0114",
+      "purpose": "Human intentional-token inference with its defeaters, then full transition into prophetic application."
+    },
+    {
+      "id": "RR4",
+      "first_id": "NB-S002-L0120",
+      "last_id": "NB-S002-L0128",
+      "purpose": "Exclusivity by kind/degree, follower evidence, independent signs, report truth and responsible assertion."
+    }
+  ],
+  "readings": [
+    {
+      "id": "RR1",
+      "first_id": "NB-S002-L0073",
+      "last_id": "NB-S002-L0078",
+      "purpose": "Creation/teaching, ability, wisdom, mercy, attestation and distinction of prophetic/general inspiration.",
+      "source_body_included": false,
+      "sha256": "9fe0de401251896c2b8bc9b1586946dc0a237c4f3f340cb449efc57760c6bc2b",
+      "line_ids": [
+        "NB-S002-L0073",
+        "NB-S002-L0074",
+        "NB-S002-L0075",
+        "NB-S002-L0076",
+        "NB-S002-L0077",
+        "NB-S002-L0078"
+      ],
+      "line_hashes": {
+        "NB-S002-L0073": "8198afbc18675e91926e7a23c933ed35b2e75bd62c0d434088e409c708acd1ed",
+        "NB-S002-L0074": "e49a918df8744ce50be9d7c32225363fa5bc36247058a7afb16925a29d1ac65e",
+        "NB-S002-L0075": "0a22467f41aa9050da1d359b2836a50b0e719bc6e604970c3ce9378effbcd112",
+        "NB-S002-L0076": "0f27eccac99e94373d9f604261535d12c0af4027c18cefcb1deb661af10debd1",
+        "NB-S002-L0077": "5eca2efc7b59f2f47e3bfba0d00759e0d55ac9e1daf67369271a5c20eb5f2cef",
+        "NB-S002-L0078": "716ef74a8a1e92fb533dc5d0a9ff5b176004a2a00a1b50fe6fb5ea1738ff6f35"
+      },
+      "source_windows": [
+        {
+          "source_body_included": false,
+          "sha256": "ab3bf0f6ee3f04565a4604d1c276fd3d0a60aad204d32cdeddfad5ae9683a8f6"
+        }
+      ],
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "recorded_utc": "2026-10-07T13:16:10.425215+00:00"
+    },
+    {
+      "id": "RR2",
+      "first_id": "NB-S002-L0086",
+      "last_id": "NB-S002-L0089",
+      "purpose": "General providence versus normative commission; entailment and transmission requirements.",
+      "source_body_included": false,
+      "sha256": "fcfe799e0b9ea9649ea7264b917a56082881f0bc8d9cc9446cc608b70227a0c6",
+      "line_ids": [
+        "NB-S002-L0086",
+        "NB-S002-L0087",
+        "NB-S002-L0088",
+        "NB-S002-L0089"
+      ],
+      "line_hashes": {
+        "NB-S002-L0086": "eab85858ffc9beace5b5d99ed92ee7ccd38b98e36141c425a850f7f052ed00ef",
+        "NB-S002-L0087": "2b8f2223beeeda866495c8080f6daa308064a9effd12cb2ef6351d6225ffb028",
+        "NB-S002-L0088": "7ddad044e456f3e5c944147f8e4ef9022c2aa8d42bd81e76dc277bffb06b9d0d",
+        "NB-S002-L0089": "c23d64cfb11bbd3ff786afc33974a329418405634a81e25631c6d842c4ac2a93"
+      },
+      "source_windows": [
+        {
+          "source_body_included": false,
+          "sha256": "45c049f20aa1f755caf4296880b734c5b28e37f47dc67e04af330fa5c08db092"
+        }
+      ],
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "recorded_utc": "2026-10-07T13:16:10.425454+00:00"
+    },
+    {
+      "id": "RR3",
+      "first_id": "NB-S002-L0103",
+      "last_id": "NB-S002-L0114",
+      "purpose": "Human intentional-token inference with its defeaters, then full transition into prophetic application.",
+      "source_body_included": false,
+      "sha256": "35b7836c188b5dcff70ee6ed121fe911c0d261816d4490cf35dec2584d0cadfb",
+      "line_ids": [
+        "NB-S002-L0103",
+        "NB-S002-L0104",
+        "NB-S002-L0105",
+        "NB-S002-L0106",
+        "NB-S002-L0107",
+        "NB-S002-L0108",
+        "NB-S002-L0109",
+        "NB-S002-L0110",
+        "NB-S002-L0111",
+        "NB-S002-L0112",
+        "NB-S002-L0113",
+        "NB-S002-L0114"
+      ],
+      "line_hashes": {
+        "NB-S002-L0103": "ed2be7f1d24796165efc69192ce49ba3fa5eff520b2e681f26de6dc545ef682f",
+        "NB-S002-L0104": "2a20104801e2886ae0dbb3f0b15b80fe7e84762e1846dbf225a4d2e72799331a",
+        "NB-S002-L0105": "47f38e504b307fa7a6962925a850aa3710690f13df81c0979df7bb46c08a293b",
+        "NB-S002-L0106": "3f477c41380adc962e6c3d6bf850ef89afcb4e3bfc8bff20980f8214437a712a",
+        "NB-S002-L0107": "0fb0e37ed59a831b308d235cb4026ff3af3f6139273deb09f94ab3483b44293b",
+        "NB-S002-L0108": "e319ab716a721121d7ded977a45664e3672357fdd5887ca4e29bd366894408b9",
+        "NB-S002-L0109": "0764d1253543b56b0a9668f7ef6eb12b2d83c7e05c37644bff5b142e408d7ec7",
+        "NB-S002-L0110": "5027c26f0853daa8da7f2cd1d7f405a779fc8165e8bda1bd9c278f4f67a95626",
+        "NB-S002-L0111": "786699c45250d275ecf428c38937b2b006bcd9a8f593eb600295c2f60e0ddcb3",
+        "NB-S002-L0112": "712f768fc5026cff43efbf2514f1c6b0bfe1f37d3174de5fd4c0402ef9c1e744",
+        "NB-S002-L0113": "009c3553bd9e89e51f1f26c064333106c0a2c3b6334a6eafb30e83c7ab7fe16f",
+        "NB-S002-L0114": "026ac40a96494f48cfac0233b0d288db230076dc7d394f1b12ce1e6d77a33f5d"
+      },
+      "source_windows": [
+        {
+          "source_body_included": false,
+          "sha256": "9793be1dee2a3224c349fc8ca51a2dcdda609e869dc35619f38963854885388f"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "d06b864d744f1f433810be165fbfaaac68100516807c98f03acdfce902a8969f"
+        }
+      ],
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "recorded_utc": "2026-10-07T13:16:10.425630+00:00"
+    },
+    {
+      "id": "RR4",
+      "first_id": "NB-S002-L0120",
+      "last_id": "NB-S002-L0128",
+      "purpose": "Exclusivity by kind/degree, follower evidence, independent signs, report truth and responsible assertion.",
+      "source_body_included": false,
+      "sha256": "eb2298b603a1ab56ef4f154bbed82645808e065138d4ffb9a76f72001d0b8179",
+      "line_ids": [
+        "NB-S002-L0120",
+        "NB-S002-L0121",
+        "NB-S002-L0122",
+        "NB-S002-L0123",
+        "NB-S002-L0124",
+        "NB-S002-L0125",
+        "NB-S002-L0126",
+        "NB-S002-L0127",
+        "NB-S002-L0128"
+      ],
+      "line_hashes": {
+        "NB-S002-L0120": "001f2c5a705d7d9a33b94ddf9e4fec9c3ccd1f6a3abeae421be34d6aad01abe8",
+        "NB-S002-L0121": "ee75d7dc0dbec45a67707a0e8a9e5ab745c00df2789d32fbbe4c1dda3767955e",
+        "NB-S002-L0122": "8ab2fba54800ea5b5dfe5a81fe147be0aec448b4c951cf3cf141d0470875e822",
+        "NB-S002-L0123": "17c8c73bd337a31b0d27532edaff93bea0d86233a250572464fe2ddd3f4a47e0",
+        "NB-S002-L0124": "d38805e027557054b7bc2f8bff361128eafc6413e4081b0c833bb7f3918f1408",
+        "NB-S002-L0125": "e5ffb9aeb57a0ab8607fbf25adbf0d2b26bd3caeb4c3bde374cac789efa40c96",
+        "NB-S002-L0126": "0f8e456d662a9ba79395722cff569c59b5dcc95ee4f4f313c33044014da646bb",
+        "NB-S002-L0127": "68bd0cd24ff40872d7e4d953b8fdef50abd1fe830abed4882003254799597ee5",
+        "NB-S002-L0128": "c9229f69d52b5e4c7bb5c0285583d27e5a2f8dae21b01f9afa27ceb28064f98c"
+      },
+      "source_windows": [
+        {
+          "source_body_included": false,
+          "sha256": "1896314a8a87dc2f58a0abf849de59bd55ccbe457cc9eb2267a13de16c1955de"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "09502c9b6c650be7c448c6bd09ca24e414df91abca054591337fd09554a5cd0d"
+        }
+      ],
+      "all_lines_actually_inspected": true,
+      "end_marker_seen": true,
+      "truncation": false,
+      "recorded_utc": "2026-10-07T13:16:10.425813+00:00"
+    }
+  ],
+  "scan_controls": [
+    {
+      "id": "garden",
+      "source_body_included": false,
+      "pdf_sha256": "8a351f41452a3ec86a1819a069d8c23e88f0a36519e12016ce4e10a9e9292d93",
+      "pdf_positions": [
+        704,
+        705,
+        706,
+        707,
+        708,
+        709
+      ],
+      "printed_page_labels_visually_checked": true,
+      "main_text_and_apparatus_read": true,
+      "images": [
+        {
+          "source_body_included": false,
+          "sha256": "4344986f97b7c3a83fef05210707aa412fbb9dc0c1c15e2f1979705d49eecddd"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "6fd223aeec961714843033f7360e6a329ebf431f90cb256bd24d2727945e38e0"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "958f80dbbfe9c0185aaeda500380c287f0d4fb03086458f8cfcad77a93419add"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "9e0e8698b91bca6c37a8f91aeb7aa86363ae1b6f9985bfef86429e28175915ff"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "f27f6ba1dfa7571dcdee393b08837d1888370dc5725aadea9c45136430ca019c"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "2a43372f8cd093a0036f47e5b8604481a16904df9d7ffb9c17049a2959cd9e63"
+        }
+      ]
+    },
+    {
+      "id": "locating_page",
+      "source_body_included": false,
+      "pdf_sha256": "8a351f41452a3ec86a1819a069d8c23e88f0a36519e12016ce4e10a9e9292d93",
+      "pdf_positions": [
+        761
+      ],
+      "printed_page_labels_visually_checked": true,
+      "main_text_and_apparatus_read": true,
+      "images": [
+        {
+          "source_body_included": false,
+          "sha256": "ee4dce0ceb195d9162343063ceadcabaa8d73c4d83714b40f3f63e0a094e6306"
+        }
+      ]
+    },
+    {
+      "id": "human_attestation",
+      "source_body_included": false,
+      "pdf_sha256": "8a351f41452a3ec86a1819a069d8c23e88f0a36519e12016ce4e10a9e9292d93",
+      "pdf_positions": [
+        767,
+        768,
+        769,
+        770,
+        771,
+        772
+      ],
+      "printed_page_labels_visually_checked": true,
+      "main_text_and_apparatus_read": true,
+      "images": [
+        {
+          "source_body_included": false,
+          "sha256": "b568269215d92e407686df0ec609a8c5d675094ba91d6a5b552da1252d02c136"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "bdb396ecb928512d320c6fd91698d5236487f82a6159b413ae610a9c87a7bd2c"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "e860a615333fa28d0987a5ec08380e9854bdec89f991559bcbfe5c297f942dcd"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "d97b6dd50d76b3b3f84ad7af4fe4eefb6be2e23467064d3162152d7c05ffa0e2"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "c890d353660ad99c00540c2b718c5c863248d926f872b56060dbeb4572b997ff"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "32438ed62178cb919d9fae0a92082ef8fe6a4dae5163fd81e667915e65263083"
+        }
+      ]
+    },
+    {
+      "id": "divine_application",
+      "source_body_included": false,
+      "pdf_sha256": "8a351f41452a3ec86a1819a069d8c23e88f0a36519e12016ce4e10a9e9292d93",
+      "pdf_positions": [
+        777,
+        778,
+        779,
+        780,
+        781
+      ],
+      "printed_page_labels_visually_checked": true,
+      "main_text_and_apparatus_read": true,
+      "images": [
+        {
+          "source_body_included": false,
+          "sha256": "018a991f0f7fd010309239c36d449a0d5b6155b402788268c16941f7f3eceeff"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "df8cd1c7ffaa799c38b11049a5cd4ba8cc3f4515be4efd20bf8196c92336810c"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "14cdc7fa8112a99c69fa1d42a34cc64c26b71b2adcffc422f7a3acc4583789fd"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "bc954cdde18e3b738b2265aa8495e745cfd715716683a8770f4300aa4bac6417"
+        },
+        {
+          "source_body_included": false,
+          "sha256": "ee498fab96a8bbd3b9df2e6e22a17bd25d394c50e69ebcf325cd7dd0da540344"
+        }
+      ]
+    }
+  ],
+  "complete": true,
+  "scan_positions_actually_inspected": 18,
+  "notes_path": "SCAN_CONTROL_NOTES.md"
+}

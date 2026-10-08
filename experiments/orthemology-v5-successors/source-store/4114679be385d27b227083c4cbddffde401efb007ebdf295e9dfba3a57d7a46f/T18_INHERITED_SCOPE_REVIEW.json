@@ -1,0 +1,261 @@
+{
+  "limits": [
+    "No new kernel or empirical execution; no additional independent evidence count.",
+    "External warrants stay NOT_ESTABLISHED in this integration ledger; this is not a retraction of the original explicitly conditional/defeasible affirmative appraisal.",
+    "Three earlier missing review bodies remain reported and uninspected. Original source holds remain."
+  ],
+  "outcome": "LIMITED",
+  "results": [
+    {
+      "evidence_keys": [
+        "T18-REPORT:P00019-P00045",
+        "T18-COMPANION:P00011-P00157"
+      ],
+      "id": "T18-ONE-CHANGE-CRITERION",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "WRITTEN_MATHEMATICS",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "New law family and persistent future-change safety with late-switch transport; retains stationary phase and witness machinery.",
+        "retain_prior_result_ids": [
+          "T16-SIGNED-SERVICE",
+          "T16-DIRECT-CONTROLLER"
+        ]
+      },
+      "reviewed_source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "a6a3f71ccd8f44da97b47b9c0c545fb9a0e985105171e861f4d47f1e3fac72d6",
+      "target": "t18-one-change-criterion"
+    },
+    {
+      "evidence_keys": [
+        "T18-REPORT:P00079-P00083",
+        "T18-EVIDENCE:code-evidence/lean/hidden-change/sources/HiddenChangeSemanticEndpoint.lean",
+        "T18-EVIDENCE:code-evidence/COMPONENT_STATUS.json"
+      ],
+      "id": "T18-RATIONAL-LEAN-ENDPOINT",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "KERNEL_DECLARED_SUITE",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "New combined exact operational semantic endpoint beyond fixed-model T16.",
+        "retain_prior_result_ids": [
+          "T16-DIRECT-CONTROLLER"
+        ]
+      },
+      "reviewed_source_ids": [
+        "T18-SRC-f2712855135f589e7d7c",
+        "T18-SRC-32280fe4c1b8f3ad95ad",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "7fda0ac19d7242a0fab759a1ba3c8d6b088cb53b7d4f36f927ee39911be58a84",
+      "target": "t18-rational-lean-endpoint"
+    },
+    {
+      "evidence_keys": [
+        "T18-COMPANION:P00158-P00200",
+        "T18-REPORT:P00053-P00060"
+      ],
+      "id": "T18-RATIONAL-P-COMPLETE",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "WRITTEN_MATHEMATICS",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "New two-layer polynomial criterion and self-contained classification.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "7a639ddb3f8e6c8ce8172a2cc8eabb20170725bf51ef1f9471fc29d8eccc2b15",
+      "target": "t18-rational-p-complete"
+    },
+    {
+      "evidence_keys": [
+        "T18-COMPANION:P00201-P00209"
+      ],
+      "id": "T18-REAL-NONUNIFORM",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "WRITTEN_MATHEMATICS",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Separates per-instance effective existence from uniform representation-sensitive synthesis.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "2d6b9614ccee168810f71e8093261c9e9623fdcaa1cdd1466fb1f6e9ce50e082",
+      "target": "t18-real-nonuniform"
+    },
+    {
+      "evidence_keys": [
+        "T18-COMPANION:P00210-P00214"
+      ],
+      "id": "T18-CAUCHY-DECISION-OBSTRUCTION",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "WRITTEN_MATHEMATICS",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "New representation boundary for the real-kernel extension.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "e2b9001b070117882ee3573947dcc797f23d538f10bcc15f93f365ba0823d9af",
+      "target": "t18-cauchy-decision-obstruction"
+    },
+    {
+      "evidence_keys": [
+        "T18-COMPANION:P00215-P00231"
+      ],
+      "id": "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "WRITTEN_MATHEMATICS",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Stronger uniform quantifier order enabled by common priorities.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "e8b16a5fdc803ab853f788fd1a6e812aaf88f07a13bdab8ff3e4c2ee2e088ffb",
+      "target": "t18-common-priority-support-synthesis"
+    },
+    {
+      "evidence_keys": [
+        "T18-COMPANION:P00232-P00236"
+      ],
+      "id": "T18-HIDDEN-PRIORITY-CALIBRATION",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "WRITTEN_MATHEMATICS",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "New synthesis-versus-decision separator; complements rather than retracts support-only common-priority theorem.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "7bef0f09140fb067e3ea6db579e5002b5b6f3ab8e687cde7867c07015f20cdd3",
+      "target": "t18-hidden-priority-calibration"
+    },
+    {
+      "evidence_keys": [
+        "T18-REPORT:P00084-P00087",
+        "T18-EVIDENCE:code-evidence/VERIFICATION_SUMMARY.md"
+      ],
+      "id": "T18-HASE-U-DOMAIN-CONTROL",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "MIXED_SCOPED",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "New checked countercontrol against one negative proof method.",
+        "retain_prior_result_ids": [
+          "T16-CURRENT-HAS",
+          "T16-BRIDGE-HASPLUS",
+          "T16-HASC-CLOSED"
+        ]
+      },
+      "reviewed_source_ids": [
+        "T18-SRC-718d531f4b0325c8a8c8",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "06b7523604533fa09f5091d8edfaf4546ba3572fdde300bc8ce6739e9a19d3d3",
+      "target": "t18-hase-u-domain-control"
+    },
+    {
+      "evidence_keys": [
+        "T18-REPORT:P00088-P00092",
+        "T18-EVIDENCE:code-evidence/lean/hase/sources/InhabitedEndpointControl.lean"
+      ],
+      "id": "T18-HASE-INHABITED-J-CONTROL",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "MIXED_SCOPED",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "New narrower adverse control plus a precise remaining iteration-fusion target.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T18-SRC-bcb245a6581fd9ff7c12",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "287bd1bc9b78517a81a040ebc5e69a8a17a0b18b0eea1a9aba45533993ddc575",
+      "target": "t18-hase-inhabited-j-control"
+    },
+    {
+      "evidence_keys": [
+        "T18-REPORT:P00075-P00083",
+        "T18-VERIFICATION:qualification",
+        "T18-EVIDENCE:README.md"
+      ],
+      "id": "T18-IMPLEMENTATION-QUALIFICATION",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "FINITE_REFERENCE_EXECUTION",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Bounded corroboration and packaging/replay extension; no additional theorem novelty from counts.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T18-SRC-e85fd90497fdb62368ff",
+        "T18-REPORT-DERIVED-MARKDOWN",
+        "T18-VERIFICATION"
+      ],
+      "statement_sha256": "b65e72cc47666945fabb09804c547cd7dc97c1b4741b3dff1c41c78ac433f7a4",
+      "target": "t18-implementation-qualification"
+    },
+    {
+      "evidence_keys": [
+        "T18-REPORT:P00011-P00018",
+        "T18-SOURCE-GUIDE:P00022-P00025"
+      ],
+      "id": "T18-NONCAUSAL-EXTENSION-STOP",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "SOURCE_ASSESSMENT",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Bounded stop decision clarifies domain rather than reopening accepted productive-framework results.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T18-REPORT-DERIVED-MARKDOWN",
+        "T18-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "a88e4504bb7d9767409dd809bac1e2e854fc3c1a46f3c1de971f9060be9410c5",
+      "target": "t18-noncausal-extension-stop"
+    }
+  ],
+  "schema": "bounded-inherited-source-scope-review-v1",
+  "scope": "Integration fidelity/record confirmation against the supplied final research and prepared source-to-claim map. Original scientific or philosophical appraisal is inherited; this document does not independently re-adjudicate it.",
+  "source_review_authority": "AI integration source/scope review; no external human-specialist endorsement",
+  "tranche": 18
+}

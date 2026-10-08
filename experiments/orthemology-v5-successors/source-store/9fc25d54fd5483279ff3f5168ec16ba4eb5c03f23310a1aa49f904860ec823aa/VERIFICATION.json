@@ -1,0 +1,288 @@
+{
+  "verified_utc": "2026-10-07T11:21:38.561886+00:00",
+  "scope": "Saved artifact and source/read-receipt integrity only; no kernel or metaphysical warrant verification",
+  "text_windows": 36,
+  "primary_arabic_unique_units_by_source": {
+    "Minhaj al-Sunna, volume 2, extracted line mapping; local coordinates retain subsection-line mappings": 21,
+    "Minhaj al-Sunna, volume 3, extracted line mapping; local coordinates retain subsection-line mappings": 30,
+    "Darʾ VIII, extracted paragraph mapping; IDs are extraction coordinates, not printed pages": 27,
+    "Darʾ IX, received electronic subsection 016": 110,
+    "Al-Sawaiq al-mursala, received original electronic subsection 002": 61,
+    "Al-Sawaiq al-mursala, received original electronic subsection 003": 41,
+    "Al-Sawaiq al-mursala, received original electronic subsection 004": 40,
+    "Al-Sawaiq al-mursala, received original electronic subsection 001": 19,
+    "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination": 33
+  },
+  "text_checks": [
+    {
+      "start": 100,
+      "end": 109,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Minhaj al-Sunna, volume 2, extracted line mapping; local coordinates retain subsection-line mappings"
+    },
+    {
+      "start": 110,
+      "end": 120,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Minhaj al-Sunna, volume 2, extracted line mapping; local coordinates retain subsection-line mappings"
+    },
+    {
+      "start": 236,
+      "end": 246,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Minhaj al-Sunna, volume 3, extracted line mapping; local coordinates retain subsection-line mappings"
+    },
+    {
+      "start": 258,
+      "end": 267,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Minhaj al-Sunna, volume 3, extracted line mapping; local coordinates retain subsection-line mappings"
+    },
+    {
+      "start": 268,
+      "end": 276,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Minhaj al-Sunna, volume 3, extracted line mapping; local coordinates retain subsection-line mappings"
+    },
+    {
+      "start": 396,
+      "end": 422,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Darʾ VIII, extracted paragraph mapping; IDs are extraction coordinates, not printed pages"
+    },
+    {
+      "start": 621,
+      "end": 650,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Darʾ IX, received electronic subsection 016"
+    },
+    {
+      "start": 700,
+      "end": 740,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Darʾ IX, received electronic subsection 016"
+    },
+    {
+      "start": 741,
+      "end": 779,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Darʾ IX, received electronic subsection 016"
+    },
+    {
+      "start": 1159,
+      "end": 1184,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 002"
+    },
+    {
+      "start": 1196,
+      "end": 1210,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 002"
+    },
+    {
+      "start": 1335,
+      "end": 1348,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 002"
+    },
+    {
+      "start": 1152,
+      "end": 1184,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 003"
+    },
+    {
+      "start": 1185,
+      "end": 1192,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 003"
+    },
+    {
+      "start": 16,
+      "end": 36,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 004"
+    },
+    {
+      "start": 338,
+      "end": 344,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 004"
+    },
+    {
+      "start": 894,
+      "end": 912,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 001"
+    },
+    {
+      "start": 1066,
+      "end": 1071,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 002"
+    },
+    {
+      "start": 148,
+      "end": 159,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original electronic subsection 004"
+    },
+    {
+      "start": 31,
+      "end": 100,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Orthemology Seventeenth Research, final v1, 5 October 2026; retained extracted report text"
+    },
+    {
+      "start": 68,
+      "end": 90,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Orthemology Seventeenth Research, final v1, 5 October 2026; retained extracted report text"
+    },
+    {
+      "start": 49,
+      "end": 51,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 52,
+      "end": 53,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 102,
+      "end": 103,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 204,
+      "end": 206,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 303,
+      "end": 306,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 1,
+      "end": 26,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Sixth historical LocalCover definitions, retained modern formal source",
+      "source_sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea"
+    },
+    {
+      "start": 1,
+      "end": 64,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Anchored Source Bridge, retained modern formal interface"
+    },
+    {
+      "start": 218,
+      "end": 220,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 230,
+      "end": 231,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 232,
+      "end": 233,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 142,
+      "end": 146,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 212,
+      "end": 213,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 277,
+      "end": 278,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 149,
+      "end": 150,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    },
+    {
+      "start": 177,
+      "end": 177,
+      "source_hash_matches": true,
+      "read_text_hash_matches": true,
+      "source_locator": "Shifa al-Alil, received electronic page mapping; labels are not certified print pagination"
+    }
+  ],
+  "image_count": 5,
+  "all_image_hashes_match": true,
+  "context_count": 16,
+  "all_context_hashes_match": true,
+  "t17_binding_match": true,
+  "truncated_text_presentation_repaired": {
+    "source": "T17 selected lines31–100",
+    "repair": "lines68–90 reread separately"
+  },
+  "all_text_hashes_match": true,
+  "principal_verdict": "SUFFICIENT_WARRANT_WITHHELD",
+  "shifa_control_scope": "33 selected electronic labels and all three completed portion appraisals",
+  "context_snapshot_count": 16,
+  "all_context_read_snapshots_match": true,
+  "live_context_sources_match_at_check": true,
+  "context_snapshots_notice": "Exact historical read snapshots remain in original custody and are excluded from this public projection. Live study appraisals may subsequently change; no later source revision is silently substituted into these receipts.",
+  "projection_notice": "This preserves the original historical verification results. The present publication check verifies original seals and projection consistency only; it does not rerun source authoring tools, reread primary bodies or replay proofs."
+}

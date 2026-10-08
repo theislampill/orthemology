@@ -84,7 +84,7 @@ def _original_driver_members(src, text):
             [('tests', 'EXPECTED_PASS_LINES.json'), ('tests', 'test_criterion_model.py'),
              ('tests', 'test_replay.py'), ('tests', 'test_rule_installation.py')]),
         'docs/provenance/v5-successors/EVIDENCE_BINDINGS.json': (
-            '5482d2ecfacd83efccc46d3baa2544a80bcaf682c46f43ab3c2b2b08cc00e172',
+            '5da3fc5207ad200f6677f7b12306655c3a6d1388c533a343cb1e3d0718a89673',
             [('tests', 'test_criterion_model.py'), ('tests', 'test_replay.py'),
              ('tests', 'test_rule_installation.py')]),
         'docs/provenance/v5-successors/fragments/D04.json': (
@@ -314,7 +314,7 @@ def main():
             missing.setdefault(cited, set()).add(src)
 
     print("[INFO] %d digest-bound original-packet references; external custody, public retrieval unconfirmed" % len(packet_locators))
-    print('[INFO] %d digest-bound successor original-member references; projection/custody scope remains explicit' % len(successor_locators))
+    print('[INFO] %d digest-bound successor source-context references; original-member custody and finite reader reconstruction remain distinct' % len(successor_locators))
     check("every repository path cited in the corpus resolves (or is a declared exemption)",
           not missing,
           "; ".join("%s <- %s" % (p, sorted(s)[:2]) for p, s in sorted(missing.items())[:6]))

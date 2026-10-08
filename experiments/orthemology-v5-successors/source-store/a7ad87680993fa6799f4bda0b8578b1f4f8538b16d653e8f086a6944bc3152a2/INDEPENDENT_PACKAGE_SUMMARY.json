@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "status": "PASS_INDEPENDENT_RECOVERED_PACKAGE_QUALIFICATION",
+  "candidate_code_manifest_sha256": "dedd850a7b3e2a89cfbdeaf6fd01d069be8b4e00a9e4019b59066bddb29e753c",
+  "accepted_prior_metadata_manifest_sha256": "a3e77f2c617662c3c7c6a92f2b97ba288216d1562674a270e3eeef7d241ce0e7",
+  "runner_sha256": "4b1522dbe651ac97bece149b2fd21c8fc0688a87ac7bbd10e1f761bcf80d9adc",
+  "review_receipt_sha256": "bab96fcfb1c36adfa72dc0a6b2cba30eb651abd37dfa957a55de06c9b6fd6002",
+  "qualification_kind": "Recovered composite: individually verified retained compilation evidence plus separately completed remaining checks.",
+  "uninterrupted_independent_full_runner_pass_claimed": false,
+  "interrupted_original_receipts_preserved_unchanged_and_nonterminal": true,
+  "retained_preinterruption_units_verified": 187,
+  "retained_custom_objects_individually_verified_before_reuse": 159,
+  "new_hidden_change_control_compilations": 2,
+  "new_fresh_hase_compilations": 92,
+  "lanes": {
+    "hidden-change": {
+      "custom_modules": 125,
+      "selected_controls": 64,
+      "positive_controls": 36,
+      "qualified_negative_controls": 28,
+      "fresh_successful_objects": 161,
+      "audit_rows": 446,
+      "distinct_audited_names": 324,
+      "completion": "187 verified interrupted units plus two separately fresh controls"
+    },
+    "hase": {
+      "custom_modules": 84,
+      "selected_controls": 8,
+      "positive_controls": 4,
+      "qualified_negative_controls": 4,
+      "fresh_successful_objects": 88,
+      "audit_rows": 9,
+      "distinct_audited_names": 9,
+      "completion": "Fresh complete unchanged-runner HasE invocation"
+    }
+  },
+  "python_commands": 11,
+  "python_suite_counts": {
+    "reference-author": 52,
+    "efficient-author": 40,
+    "reference-independent": 26,
+    "efficient-independent": 12,
+    "efficient-protected-paths": 2,
+    "efficient-prior-controls": 26,
+    "reference-census": null,
+    "reference-extended-census": null,
+    "efficient-census": null,
+    "efficient-extra-end-to-end": null,
+    "efficient-forged-negatives": null
+  },
+  "identity_checks": {
+    "source_checks": 281,
+    "log_checks": 292,
+    "fresh_successful_objects": 249,
+    "python_copy_checks": 40
+  },
+  "author_contract_tests": 11,
+  "independent_contract_tests": 6,
+  "qualification_receipt_digests": [
+    "c4ad165e75c1d33f0886f11b55829cfc786727e47254475109dd5ff2e5626fd3",
+    "a9cf5603c6ec0c9e14d0c8bfc9255af4cc6a529b8dec4d2837bc0699367c5ace",
+    "ea9761fa2da632e0135dbac11ca5cc885305aeb43a5d466c4e4cdd1d2e41736f",
+    "4ed138793b8d4558346c8012b95c86c9b666573ee73cf8dbcb9ac5f637e08af9",
+    "d090bbf6aea4d2def399259d96b6ca322b859f143bd9d4df117370e198745a3b",
+    "e267b6bacbbd17294660a3bd94444893b60131a49ffd1026355cbd6dabb72d4a",
+    "be22da21d8f5f31eacd50c9c0b8b38c3e55059fec8f9414c7aaccbc893dbedab"
+  ],
+  "environment_limit": "Exact separately provisioned 6646/1369 external snapshots required; no qualified new-host acquisition path in this package. Separate source-build route remains outside this acceptance.",
+  "scientific_limits": "Standard compiler/runtime/cache trust retained; no Python/Lean correspondence, arbitrary-real effectivity, finite-memory/learning guarantee, or literal compiler x/x+0 HasE closure.",
+  "source_build_route_included": false,
+  "qualification_utc": "2026-10-06T05:09:35.821713+00:00",
+  "scope_of_status": "Independent qualification snapshot at qualification_utc; this record does not determine subsequent publication, archive creation, or completion of the broader research."
+}

@@ -1,0 +1,158 @@
+{
+  "schema": "t20-abc-formal-philosophical-boundary-v1",
+  "premises": [
+    {
+      "premise": "Actual target occurrence",
+      "dag_nodes": [
+        "A01"
+      ],
+      "report_paragraphs": [
+        "P00040",
+        "P00048"
+      ],
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "machine_proved_as_true_of_reality": false,
+      "source_reading": "SOURCE_ATTESTED through actual T17 report; primary books not freshly reread in this formal subtask",
+      "residual": "Model truth does not establish actual-world occurrence."
+    },
+    {
+      "premise": "Whole original completion",
+      "dag_nodes": [
+        "A03"
+      ],
+      "report_paragraphs": [
+        "P00041",
+        "P00042",
+        "P00043",
+        "P00048"
+      ],
+      "status": [
+        "PHILOSOPHICALLY_ACCEPTED_PREMISE"
+      ],
+      "machine_proved_as_true_of_reality": false,
+      "source_reading": "SOURCE_ATTESTED through actual T17 report; primary books not freshly reread in this formal subtask",
+      "residual": "Accepted in T17; initial completion objection was corrected, not retained as current dissent."
+    },
+    {
+      "premise": "Resource bearer realization",
+      "dag_nodes": [
+        "A05"
+      ],
+      "report_paragraphs": [
+        "P00045",
+        "P00049",
+        "P00052"
+      ],
+      "status": [
+        "PHILOSOPHICALLY_ACCEPTED_PREMISE",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "machine_proved_as_true_of_reality": false,
+      "source_reading": "SOURCE_ATTESTED through actual T17 report; primary books not freshly reread in this formal subtask",
+      "residual": "Restricted concrete productive-resource ontology, not every possible explanation."
+    },
+    {
+      "premise": "Same-respect existential support transport",
+      "dag_nodes": [
+        "A06"
+      ],
+      "report_paragraphs": [
+        "P00050",
+        "P00051"
+      ],
+      "status": [
+        "PHILOSOPHICALLY_ACCEPTED_PREMISE",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "machine_proved_as_true_of_reality": false,
+      "source_reading": "SOURCE_ATTESTED through actual T17 report; primary books not freshly reread in this formal subtask",
+      "residual": "Ontological support, not mere concurrence or an efficient-production edge."
+    },
+    {
+      "premise": "Binary receipt representation",
+      "dag_nodes": [
+        "D01",
+        "X01"
+      ],
+      "report_paragraphs": [
+        "P00044",
+        "P00051",
+        "P00052",
+        "P00061"
+      ],
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "machine_proved_as_true_of_reality": false,
+      "source_reading": "SOURCE_ATTESTED through actual T17 report; primary books not freshly reread in this formal subtask",
+      "residual": "Explicit interpretation contract; no global fact-to-bearer principle supplied."
+    },
+    {
+      "premise": "Contingency-as-need",
+      "dag_nodes": [
+        "B01",
+        "X02"
+      ],
+      "report_paragraphs": [
+        "P00053",
+        "P00054"
+      ],
+      "status": [
+        "PHILOSOPHICALLY_ACCEPTED_PREMISE",
+        "PHILOSOPHICALLY_DISPUTED_PREMISE"
+      ],
+      "machine_proved_as_true_of_reality": false,
+      "source_reading": "SOURCE_ATTESTED through actual T17 report; primary books not freshly reread in this formal subtask",
+      "residual": "T17 affirmative appraisal and continuing critic are different voices. Root provisional acceptance retained."
+    },
+    {
+      "premise": "Generic constitutive reception",
+      "dag_nodes": [
+        "C00",
+        "C01",
+        "X03"
+      ],
+      "report_paragraphs": [
+        "P00056",
+        "P00058",
+        "P00059",
+        "P00060",
+        "P00061"
+      ],
+      "status": [
+        "PHILOSOPHICALLY_ACCEPTED_PREMISE",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "machine_proved_as_true_of_reality": false,
+      "source_reading": "SOURCE_ATTESTED through actual T17 report; primary books not freshly reread in this formal subtask",
+      "residual": "Same-individual elsewhere-received objection remains; no universal identity theory proved."
+    },
+    {
+      "premise": "World domain adequacy",
+      "dag_nodes": [
+        "D03"
+      ],
+      "report_paragraphs": [
+        "P00053",
+        "P00054"
+      ],
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "machine_proved_as_true_of_reality": false,
+      "source_reading": "SOURCE_ATTESTED through actual T17 report; primary books not freshly reread in this formal subtask",
+      "residual": "Worlds must represent intended alternatives; actual point gives inhabitation; inherited B uses classical contradiction."
+    }
+  ],
+  "formal_result_status": "KERNEL_PROVED only for the explicitly quantified conditional and model facts",
+  "not_attempted": [
+    "global noncausal fact-to-bearer realization",
+    "source-mode or CND warrant",
+    "common-source unity",
+    "attributes or veracity",
+    "empirical authentication of revelation"
+  ],
+  "axiom_boundary": "Metaphysical premises are function arguments/structure fields, not Lean axiom declarations; only ordinary logical foundations appear in dependency audits."
+}

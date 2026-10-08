@@ -1,0 +1,18 @@
+{
+  "cause": "Sibling directory shares a textual prefix with the source directory; startswith falsely classified own outputs as author objects.",
+  "checks": [
+    {
+      "path": "tranche20/testimony-continuation/grounded-attestation-independent-review/objects/GroundedSupport.olean",
+      "incorrect_string_prefix_result": true,
+      "directory_containment_result": false,
+      "expected_containment": false
+    },
+    {
+      "path": "tranche20/testimony-continuation/grounded-attestation/validation/clean-objects/GroundedSupport.olean",
+      "incorrect_string_prefix_result": true,
+      "directory_containment_result": true,
+      "expected_containment": true
+    }
+  ],
+  "source_packet_failure": false
+}

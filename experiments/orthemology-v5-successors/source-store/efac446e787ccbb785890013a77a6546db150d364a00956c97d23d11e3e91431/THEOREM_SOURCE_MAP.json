@@ -1,0 +1,635 @@
+{
+  "schema": "t20-abc-theorem-to-source-and-integration-map-v1",
+  "results": [
+    {
+      "id": "T20-ABC-A",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_resource",
+        "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion"
+      ],
+      "ownership": "NEW_KERNEL_FORMALISATION_OF_T17_REASONING; not a new philosophical argument",
+      "dag_nodes": [
+        "A01",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "report_paragraphs": [
+        "P00040",
+        "P00041",
+        "P00042",
+        "P00043",
+        "P00044",
+        "P00045",
+        "P00046",
+        "P00048",
+        "P00049",
+        "P00050",
+        "P00051",
+        "P00052"
+      ],
+      "formal_dependencies": [
+        "Completion",
+        "Realisation",
+        "SupportTransport",
+        "ActualOriginalResource",
+        "actual target occurrence"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "novelty": "Resource and bearer types remain separate; original resource nonreceipt plus support transport earns bearer nonreceipt.",
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "source_lean": "OriginalBearerBridge.lean",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion section ABC",
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "reusable_existing_verification": [
+        "18 exact inherited type/axiom matches",
+        "historical full-import SourceIdentity source-bound receipt"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established."
+    },
+    {
+      "id": "T20-ABC-REPRESENTATION",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.root_to_inherited",
+        "Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited",
+        "Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited"
+      ],
+      "ownership": "NEW_TYPED_INTERFACE; elementary logical conversions",
+      "dag_nodes": [
+        "D01",
+        "A07",
+        "B01",
+        "C00",
+        "X01"
+      ],
+      "report_paragraphs": [
+        "P00044",
+        "P00049",
+        "P00050",
+        "P00051",
+        "P00052",
+        "P00060",
+        "P00061"
+      ],
+      "formal_dependencies": [
+        "ReceiptRepresentation"
+      ],
+      "status": [
+        "KERNEL_PROVED",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "novelty": "Explicitly exposes the adopted binary representation. Does not establish global noncausal fact-to-bearer realization.",
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "source_lean": "OriginalBearerBridge.lean",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion section ABC",
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "reusable_existing_verification": [
+        "18 exact inherited type/axiom matches",
+        "historical full-import SourceIdentity source-bound receipt"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established."
+    },
+    {
+      "id": "T20-ABC-B-INHERITED",
+      "declarations": [
+        "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root"
+      ],
+      "ownership": "INHERITED_THIRD/SIXTH; no new inference credit",
+      "dag_nodes": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "M01"
+      ],
+      "report_paragraphs": [
+        "P00053",
+        "P00054"
+      ],
+      "formal_dependencies": [
+        "actual Root",
+        "general actual nonnecessity-to-receipt premise"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "novelty": "NONE; exact retained theorem called, declaration body preserved and type/axiom readback matched.",
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "source_lean": "SourceIdentityDerived.lean",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion section ABC",
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "reusable_existing_verification": [
+        "18 exact inherited type/axiom matches",
+        "historical full-import SourceIdentity source-bound receipt"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established."
+    },
+    {
+      "id": "T20-ABC-C-INHERITED",
+      "declarations": [
+        "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+        "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform"
+      ],
+      "ownership": "INHERITED_THIRD/SIXTH; no new inference credit",
+      "dag_nodes": [
+        "C00",
+        "C01",
+        "C02",
+        "C03",
+        "M02",
+        "M03"
+      ],
+      "report_paragraphs": [
+        "P00056",
+        "P00057",
+        "P00058",
+        "P00059",
+        "P00060",
+        "P00061"
+      ],
+      "formal_dependencies": [
+        "actual Root",
+        "Necessary",
+        "GenericReception"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "novelty": "NONE; exact retained C called. The specialised transfer equivalence blocks invented independent warrant.",
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "source_lean": "SourceIdentityDerived.lean",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion section ABC",
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "reusable_existing_verification": [
+        "18 exact inherited type/axiom matches",
+        "historical full-import SourceIdentity source-bound receipt"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established."
+    },
+    {
+      "id": "T20-ABC-CONDITIONAL-NONRECEIPT",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original",
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.conditional_nonreceipt_without_necessity"
+      ],
+      "ownership": "NEW_EXPLICIT_PREMISE-MINIMALITY_CHECK; inherited elementary reasoning",
+      "dag_nodes": [
+        "C02",
+        "C03"
+      ],
+      "report_paragraphs": [
+        "P00056",
+        "P00060",
+        "P00061"
+      ],
+      "formal_dependencies": [
+        "ActualWholeOriginal",
+        "ConstitutiveReception"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "novelty": "Necessary is not needed for nonreceipt conditional on existence. It remains needed for the compound necessary/uniform conclusion.",
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "source_lean": "OriginalBearerBridge.lean",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion section ABC",
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "reusable_existing_verification": [
+        "18 exact inherited type/axiom matches",
+        "historical full-import SourceIdentity source-bound receipt"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established."
+    },
+    {
+      "id": "T20-ABC-COMPOSITION",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness"
+      ],
+      "ownership": "NEW_SOURCE-BOUND_COMPOSITION; B/C inherited",
+      "dag_nodes": [
+        "A01",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "B01",
+        "B04",
+        "C00",
+        "C02",
+        "C03"
+      ],
+      "report_paragraphs": [
+        "P00048",
+        "P00049",
+        "P00050",
+        "P00051",
+        "P00052",
+        "P00053",
+        "P00054",
+        "P00056",
+        "P00060",
+        "P00061"
+      ],
+      "formal_dependencies": [
+        "FullPremises (seven exposed fields)",
+        "T20-ABC-A",
+        "T20-ABC-REPRESENTATION",
+        "T20-ABC-B-INHERITED",
+        "T20-ABC-C-INHERITED"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "novelty": "Retains target, same original resource and same bearer from actual completion through necessity and essential nonreceipt.",
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "source_lean": "OriginalBearerBridge.lean",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion section ABC",
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "reusable_existing_verification": [
+        "18 exact inherited type/axiom matches",
+        "historical full-import SourceIdentity source-bound receipt"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established."
+    },
+    {
+      "id": "T20-ABC-POSITIVE",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_full",
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_nonvacuous",
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_same_witness"
+      ],
+      "ownership": "NEW_MODEL_FOR_THIS_SIGNATURE",
+      "dag_nodes": [
+        "A07",
+        "B04",
+        "C03"
+      ],
+      "report_paragraphs": [],
+      "formal_dependencies": [
+        "explicit two-world Bool fixture"
+      ],
+      "status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "novelty": "Joint model has a necessary original source and a contingent received effect/resource, so need and transport are nonvacuous.",
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "source_lean": "BridgeControls.lean",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion section ABC",
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "reusable_existing_verification": [
+        "18 exact inherited type/axiom matches",
+        "historical full-import SourceIdentity source-bound receipt"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established.",
+      "issue_ids": [
+        "N-T1"
+      ]
+    },
+    {
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established.",
+      "id": "T20-ABC-A-REMOVE-COMPLETION",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_completion"
+      ],
+      "ownership": "NEW_CONTROL_IN_EXPLICIT_A/ABC_SIGNATURE; modal logical pattern inherited",
+      "dag_nodes": [
+        "A01",
+        "A03",
+        "A04",
+        "A07"
+      ],
+      "issue_ids": [
+        "A-T4"
+      ],
+      "report_paragraphs": [
+        "P00041",
+        "P00042",
+        "P00043",
+        "P00048"
+      ],
+      "formal_dependencies": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "novelty": "Retains all other major assumptions and disproves both the omitted premise and the claimed target. Infinite acyclic all-received ancestry.",
+      "source_lean": "BridgeControls.lean",
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion control matrix",
+      "reusable_existing_verification": []
+    },
+    {
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established.",
+      "id": "T20-ABC-A-REMOVE-REALISATION",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_realisation"
+      ],
+      "ownership": "NEW_CONTROL_IN_EXPLICIT_A/ABC_SIGNATURE; modal logical pattern inherited",
+      "dag_nodes": [
+        "A04",
+        "A05",
+        "A07"
+      ],
+      "issue_ids": [
+        "A-T1"
+      ],
+      "report_paragraphs": [
+        "P00045",
+        "P00049",
+        "P00052"
+      ],
+      "formal_dependencies": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "novelty": "Retains all other major assumptions and disproves both the omitted premise and the claimed target. Infinite acyclic all-received ancestry.",
+      "source_lean": "BridgeControls.lean",
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion control matrix",
+      "reusable_existing_verification": []
+    },
+    {
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established.",
+      "id": "T20-ABC-A-REMOVE-SUPPORT",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_support"
+      ],
+      "ownership": "NEW_CONTROL_IN_EXPLICIT_A/ABC_SIGNATURE; modal logical pattern inherited",
+      "dag_nodes": [
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "issue_ids": [
+        "A-T2"
+      ],
+      "report_paragraphs": [
+        "P00049",
+        "P00050",
+        "P00051"
+      ],
+      "formal_dependencies": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport"
+      ],
+      "status": [
+        "KERNEL_PROVED"
+      ],
+      "novelty": "Retains all other major assumptions and disproves both the omitted premise and the claimed target. Infinite acyclic all-received ancestry.",
+      "source_lean": "BridgeControls.lean",
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion control matrix",
+      "reusable_existing_verification": []
+    },
+    {
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established.",
+      "id": "T20-ABC-B-REMOVE-NEED",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_contingency_need"
+      ],
+      "ownership": "NEW_CONTROL_IN_EXPLICIT_A/ABC_SIGNATURE; modal logical pattern inherited",
+      "dag_nodes": [
+        "B01",
+        "B04"
+      ],
+      "issue_ids": [
+        "B-T1"
+      ],
+      "report_paragraphs": [
+        "P00053",
+        "P00054"
+      ],
+      "formal_dependencies": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed"
+      ],
+      "status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "novelty": "Retains all other major assumptions and disproves both the omitted premise and the claimed target. Finite worldwise acyclic modal fixture.",
+      "source_lean": "BridgeControls.lean",
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion control matrix",
+      "reusable_existing_verification": [
+        "Historical SourceIdentity B/C deletion patterns"
+      ]
+    },
+    {
+      "tranche": "T20",
+      "source_report": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "source_report_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "verification": "verification-final/VERIFICATION.json",
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical theorem ownership",
+        "T17 philosophical warrant assessment",
+        "dated provisional Necessary Being acceptance",
+        "separate source-mode appraisal"
+      ],
+      "required_integration_verification": [
+        "verify package manifest",
+        "run bounded replay with pinned official toolchain/cache",
+        "retain explicit assumption and representation scopes"
+      ],
+      "unresolved_residual": "Metaphysical truth/warrant of assumptions and adequacy of ontology/world-domain interpretation are not machine established.",
+      "id": "T20-ABC-C-REMOVE-CONSTITUTION",
+      "declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_constitutive_reception"
+      ],
+      "ownership": "NEW_CONTROL_IN_EXPLICIT_A/ABC_SIGNATURE; modal logical pattern inherited",
+      "dag_nodes": [
+        "C00",
+        "C01",
+        "C03"
+      ],
+      "issue_ids": [
+        "C-T1"
+      ],
+      "report_paragraphs": [
+        "P00056",
+        "P00059",
+        "P00060",
+        "P00061"
+      ],
+      "formal_dependencies": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution"
+      ],
+      "status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "novelty": "Retains all other major assumptions and disproves both the omitted premise and the claimed target. Finite worldwise acyclic modal fixture.",
+      "source_lean": "BridgeControls.lean",
+      "public_candidate_projection": "NOT_PUBLISHED; proposed T20 mathematical companion control matrix",
+      "reusable_existing_verification": [
+        "Historical SourceIdentity B/C deletion patterns"
+      ]
+    }
+  ]
+}

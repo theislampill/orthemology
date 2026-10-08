@@ -1,0 +1,408 @@
+# Orthemology Twentieth mathematical companion
+
+7 October 2026
+
+## Purpose and principal result
+
+The Twentieth results establish precise conditional inferences about an original bearer, common provision within a connected field, source owned veracity, and several further mathematical interfaces. Their premises and interpretation obligations remain explicit. The original HasE identity is still open. A finite interpretation establishes consistency of its selected signature, not metaphysical possibility or the truth of the premises in actual reality.
+
+Part 1 explains what was checked in simple terms. Part 2 preserves the foundational synthesis, including all ten questions and the A through H architecture. Part 3 gives the additional mathematical results and their scope limits. Exact declaration names and literal formal syntax remain code; mathematical notation is typeset as editable equations in the Word edition.
+
+Author: dot, an OpenAI-powered AI research assistant. The separately dispatched AI reviews cited here are not external human peer review or independent proof-assistant implementations.
+
+## Appraisal distinction on 7 October 2026
+
+The dated appraisal statements retained below should be read alongside the later comparative assessment in the Twentieth research report. The actual common-source account is positively favoured on the stated explanatory considerations, while sufficient warrant for complete single-source production is still withheld. That comparative judgement is separate from the universal SourceMode requirement that every qualified original completely provide every composite result to which it contributes. This is the dated pre-Miftah comparative assessment, bounded before the later Miftah, Nubuwwat and Safadiyya studies. The final research report is authoritative for any subsequent source-informed judgement. This distinction does not alter a theorem, a historical appraisal, or the scope of a countermodel.
+
+## Finding the source evidence
+
+In the delivered archive, bracketed foundational source IDs resolve through t20/sources/foundational-final-synthesis/SOURCE_INDEX.json, with the readable SOURCE_INDEX.md in the same folder. The index retains both historical custody identities and separately hashed public aliases. Resolve an alias relative to that foundational folder; an original custody hash does not identify changed public bytes, and a body-free historical locator is not an included source body. The same folder contains CONCLUSION_PREMISE_STATUS_MAP.json and the preserved SYNTHESIS.md and ELI5_ELI14.md. The accompanying research report and integration map identify the additional mathematical source packets.
+
+This companion changes no sealed scientific input and adds no scientific replay. Its dates and verification counts refer to the recorded work and reviews described in the source packets.
+
+## Part 1 What the computer checked
+
+### ELI5
+
+Imagine an argument is a bridge made of stepping stones. Some stones say things about the world. Others say, “If you can stand here, this next step follows.”
+
+The computer checked many of those next steps very carefully. It also tried made-up examples where a stone was missing. Some examples showed exactly why that stone was needed.
+
+It checked that the argument can keep talking about the same being, rather than quietly changing to another one. It checked when one source would cover a whole connected field, and when that source would be truthful about its own statements.
+
+It did not check that every important claim about the real world is true. It did not prove that God exists, that there can be only one necessary reality, or that a particular message comes from God. A good small model shows that the selected rules fit together; it does not show that the model is a possible world.
+
+### ELI14
+
+The main success is a set of precise “if these premises hold, this conclusion follows” results, verified in Lean and independently reviewed.
+
+1. Original resource to necessary bearer. If received reality has positive original completion, that resource has an actual bearer, and receipt of that bearer would make the resource received, an actual original bearer follows. If any actual nonnecessary bearer must be received, that same bearer is necessary. A separate constitutive-reception principle supplies essential nonreceipt. The computer checks the reasoning; it does not establish the metaphysical principles.
+
+2. One source across a connected field. Start with the same qualified source actually contributing somewhere. Assume incomplete relevant provision would be a defect and this source's actual exercise is defect-free. Faithful shared-contribution paths then spread its complete provision through the field. Causal nonduplication is needed to rule out rival original providers, not to prove coverage itself. Complete representation of actual contributors is another requirement. A source outside the field is not thereby ruled out.
+
+3. Truthful owned assertions. Relevant knowledge, awareness of exact content, deliberate expression, a knowing-counterfeit defect classification, an additional rule that the defect cannot be fitting, and actual practical conformance imply truthfulness. The distinction between “a shortcoming in one respect” and “an exercise that cannot be fitting overall” is crucial. Creating the capacities used in someone else's false speech does not make that speech the source's own assertion.
+
+The removal tests are informative. For example, without nonduplication the formal account can contain two alleged entire providers; without the stronger source-mode requirement it can contain differentiated cooperation. These are logical counterinterpretations, not proof that two metaphysically perfect originals are possible.
+
+A further reviewed model uses the very same bearer across all three interfaces, with real links between its original resources, productive field and owned speech. It confirms consistency of the selected formal signature. It does not prove a complete philosophical source profile or close the general comparison with Sixth's all-ancestor coverage theorem.
+
+The present philosophical judgement remains provisional acceptance of the Necessary Being route and withholding of sufficient warrant for the stronger common-source premise. The audit makes that disagreement more exact rather than deciding it by computation.
+
+### Evidence
+
+The detailed arguments, exact declarations, source paths and hashes are in `SYNTHESIS.md`, `CONCLUSION_PREMISE_STATUS_MAP.json`, and `SOURCE_INDEX.json`. The component and joint independent reviews are bound there. No new scientific replay was performed to prepare this explanation.
+
+Public projection note: all mathematical and philosophical content is retained. Source IDs resolve through SOURCE_INDEX.json to exact selected files, explicitly derived public projections, or body-free historical custody locators. Original hashes do not silently describe changed public bytes or admit omitted bodies. No new proof, source reading or metaphysical warrant is claimed by this projection.
+
+## Part 2 Foundational audit synthesis
+
+### Result and reading guide
+
+A substantial, faithful part of the Necessary Being and original-source architecture is now machine-checkable as a collection of conditional inferences. The reviewed results comprise a typed original-resource-to-bearer bridge, reuse of the same-bearer necessity and essential-nonreceipt theorems, a new anchored contribution-incidence route to field-wide complete provision and uniqueness, and a decomposed source-owned-veracity theorem. The controls identify which assumptions do the work and prevent several attractive but invalid strengthenings.
+
+This does not computationally establish that the metaphysical premises are true of reality. In particular, the original-completion, contingency-as-need, constitutive reception, source-mode classification, CND, pure-perfection, and veracity-purity warrants remain substantive philosophical questions. Occurrence, source qualification, modal-domain adequacy, contribution inventory, productive interpretation, same-witness participation, and message authentication remain application obligations.
+
+The current dated appraisal is the dated 08:40:48 UTC record of 7 October 2026: provisional sufficient-warrant acceptance of the Necessary Being route; sufficient warrant for the stronger common-source route withheld; and epistemological admissibility of relatively basic Creator recognition accepted. That last judgement establishes neither a universally reliable faculty nor a particular genuine recognition. Historical T19 acceptance of the common-source argument remains historical and has not been rewritten. Formal success does not change either appraisal automatically. [APPRAISAL; GATE; DAG]
+
+The subsequent bounded coordinating rereading of the Minhaj electronic witnesses strengthens the historical positive reconstruction without changing that stance. It treats the arguments about nonborrowed intrinsic perfection, realised efficacy, agreement, and productive conditioning as arguments to assess, rather than dismissing them merely because the formal interface records premises. It also distinguishes necessary concomitance from productive dependence. No print/manuscript collation or universal empirical coordination theorem is claimed. [SECOND_MINHAJ_ASSESSMENT]
+
+This synthesis is a source-grounded research report, not a new proof campaign or release/adoption decision. It performs no Lean compilation or broad replay. The three component independent reviews are complete. The shared joint-model independent review is also **PASS at its stated finite selected-signature scope**, with no source correction required. It does not verify the complete metaphysical perfect-source profile. The original author-status file remains a preserved pre-review record; the successor review supplies the current disposition. [ABC_REVIEW; FIELD_REVIEW; VERACITY_REVIEW; JOINT_REVIEW; JOINT_REVIEW_MANIFEST]
+
+Source IDs in brackets resolve to original custody identities, separately bound public reconstruction aliases, SHA-256 hashes, byte lengths, and roles in `SOURCE_INDEX.json` and its readable projection `SOURCE_INDEX.md`. `CONCLUSION_PREMISE_STATUS_MAP.json` supplies conclusion, declaration, dependency, warrant, ownership, and verification mappings. The concise explanations are in `ELI5_ELI14.md`. Paragraph references such as T17R P00049 use the sealed zero-based DOCX-body identifiers, not page numbers. The source reconstruction remains the historical DAG; this report supplies a dated formal-status overlay rather than altering it.
+
+### Answers to all ten owner questions
+
+#### 1 How much of the Necessary Being argument is now machine checkable
+
+The inferential spine from an actually occurring received target, through positive original completion, to the same actual original bearer, necessary existence, and essential whole-existence nonreceipt is checked. A is new at the typed resource/bearer interface; B and C call the retained Tranche 3 `SourceIdentity` theorems. The existence conclusion does not silently become uniqueness, common Creatorhood, or the full attribute profile. A reviewer also checked the entirely broad-receipt formulation without the adapter needed for the inherited binary-dependency target. [ABC_CORE; ABC_REVIEW_SCOPE]
+
+The field route is separately checked. For a fixed qualified actual contributor g at a field anchor, independent source-mode classification and actual conformance produce complete provision at its relevant roles. Sound actual use and role applicability propagate that provision along genuine shared-contribution paths. Field-restricted CND then yields represented contributor identity; contributor visibility extends this to all actual original contributors. Positivity guards uniqueness among merely Complete-labelled providers. This is a general incidence theorem, not merely a finite enumeration, and is not the Sixth strict-ancestry theorem. [FIELD_CORE; FIELD_REVIEW]
+
+The veracity route is checked locally for controlled, content-aware owned assertions, and universally over the supplied occasion domain with awareness/control coverage. The general ascent from necessary originality through all eligible perfections to unrestricted power, full knowledge, and practical perfection has not thereby been kernel proved. The independently reviewed joint interpretation adds simultaneous, literal-same-g inhabitation of the selected component signatures. It does not claim that the outside original preserves every metaphysical perfect-source premise. [VERACITY_CORE; JOINT_REVIEW]
+
+#### 2 Which exact premises retain philosophical warrant
+
+The principal burdens are positive whole-existence original completion; bearer realization for the relevant productive-resource ontology; same-respect support transport; contingency-as-need; generic constitutive reception; eligible-perfection and original-giver/ascent principles; genuine qualification of g; the classification of incomplete relevant original exercise as a defect; actual defect-free conformance; field CND; and the all-context exclusion of a declarative shortcoming from fitting source exercise. They remain visibly separate from conditional entailment.
+
+Some additional burdens are semantic or empirical rather than purely metaphysical: that the target actually occurs; that broad reception is represented by the chosen binary relation when using that interface; that worlds represent the intended alternatives; that requisite contributions and actual contributors are represented soundly and exhaustively; that overlap reflects retained productive provenance; that g actually participates in this field; that assertion ownership, exact content, awareness and control have the intended extension; and that a selected communication satisfies D1 and recipient warrant D2. No theorem establishes these by assigning their predicates convenient finite tables. See the premise map for exact formulae and source anchors. [ABC_LEDGER; FIELD_PREMISES; VERACITY_PREMISES; DAG]
+
+#### 3 Are any premises reducible to simpler already accepted principles
+
+There are genuine logical reductions, but no new derivation of the central disputed metaphysics from indisputable principles. Realization plus same-respect support transport gives bearer originality once an original resource is present. Generic constitution plus actual originality gives essential nonreceipt conditional on existence; necessity is unnecessary for that narrower conclusion. The entirely broad A/B/C consequence does not need binary receipt representation. Universal premise quantifiers can be weakened to the selected witness instances. These are exact dependency reductions, not newly earned warrant for completion, need, or constitution. [ABC_CORE; ABC_REVIEW_SCOPE]
+
+In the field route, qualification plus Classification plus Conformance yields ModeSatisfaction; sound use and role applicability yield SourceMode. Global CND can be weakened to FieldCND. A positive requisite at the anchor can replace full visibility for the narrower labelled-provider uniqueness theorem, although visibility still carries actual-rival exclusion. Coverage and provider existence need no CND. None of this proves Classification from standing power, or CND from determinate causal content. [FIELD_CORE; FIELD_REVIEW_BOUNDARIES]
+
+For veracity, strong informed ownership supplies awareness and deliberate presentation by projection, but only for that stronger assertion extension. Equality with the original extension is equivalent to A/C coverage and must be warranted. Factivity is unnecessary for the main positive truth theorem. The reviewer sharpens the honesty equivalence: truth implies no counterfeit using Factive alone; no counterfeit implies truth using K/A/C and classical reasoning. The substantive N premise is not derived from D alone. [VERACITY_CORE; VERACITY_REVIEW_BOUNDARIES]
+
+#### 4 Which premises have countermodel independence evidence
+
+The A/B/C deletion campaign separately removes completion, realization, support, need, and constitution while preserving the other major premises and falsifying the corresponding conclusion. The first three use genuine infinite acyclic all-received frames; they are not finite-cycle artifacts. Reviewer controls add occurrence deletion and representation mismatch, and show two live original sources can satisfy the full A/B/C interface without a common witness. [ABC_CONTROLS; ABC_MATRIX; ABC_REVIEW_SCOPE]
+
+The field campaign separates source mode from CND, actual anchoring from vacuous conditional satisfaction, connectedness from local mode, represented use from actual involvement, actual involvement from governed role, represented uniqueness from actual contributor visibility, and classification from conformance. Removing CND permits concurrent entire providers of the same requisite; removing mode permits differentiated cooperation under CND. Independent probes further isolate qualification, occurrence admission, omitted requisites, scope enlargement, positivity, and disconnected qualified components. [FIELD_CONTROLS; FIELD_MATRIX; FIELD_REVIEW_BOUNDARIES]
+
+Veracity has six K/A/C/D/N/P removals and a reviewer ExerciseBridge removal. Factivity and coverage have separate equivalence controls. A/C deletions are only weak-signature stress tests; they do not preserve the full T17 perfect-knowledge/ownership profile. The N-removal fixture represents the logical shape of an overriding-good or rescue objection, not its compatibility with the fully qualified original source. All these independence claims are signature-relative; no fixture certifies metaphysical possibility or equal philosophical plausibility. [VERACITY_CONTROLS; VERACITY_REVIEW_BOUNDARIES]
+
+#### 5 Are any current distinctions redundant
+
+Most of the owner's requested distinctions survive and are necessary to avoid strengthening. Actual originality differs from necessary existence; necessity differs from essential independence; an existential witness differs from a common provider; connectedness does not supply coverage; standing ability differs from actual solo provision; productive support does not supply assertion ownership or authentication.
+
+There are, however, exact local equivalences and dispensable assumptions. Once actual roothood and necessity are fixed, the special backward-transfer condition is equivalent to UniformRoot; it is not an independently weaker explanation. For the fixed strict-ancestry domain, local completeness plus connectedness is equivalent to a least ancestor. For the fixed anchored incidence setup, ModeSatisfaction is equivalent to GlobalCoverage; the SourceMode variant requires a represented anchor, supplied by visibility. Under K/A/C/Factive, source-owned veracity is equivalent to no knowing counterfeit. These equivalences expose where a proposed leaf premise could merely restate the target. They do not equate the general philosophical doctrines with the conclusions. [SOURCE_IDENTITY; CONNECTED_UNITY; FIELD_CORE; VERACITY_CORE]
+
+CND is redundant for coverage, not for field uniqueness. Binary representation is redundant for broad nonreceipt, not for the inherited binary UniformRoot target. Necessity is redundant for nonreceipt wherever the bearer exists, not for existence in every world. Rival qualification is unnecessary in the anchored uniqueness proof. Global CND is stronger than needed. These are scoped reductions, not an assertion of a globally minimal axiomatisation.
+
+#### 6 Does formalisation expose circularity or an illicit shift
+
+No blocking circularity or proof defect was found in the independently reviewed component claims at their advertised scope. The audit does expose several failure points that informal compression can conceal: resource-to-bearer support is an extra step; generic receipt needs a representation contract before using a binary causal-looking relation; backward transfer can be target-equivalent; source-mode classification and actual conformance cannot be collapsed; sparse or fictitious accounts can satisfy the structural theorem; strong assertion ownership can narrow the assertion extension; and two existential witnesses do not identify one another. [ABC_REVIEW; FIELD_REVIEW; VERACITY_REVIEW]
+
+The current dated philosophical common-source reservation is especially clear after formalisation: comparative fullness of unborrowed provision has not yet sufficiently warranted classifying every voluntarily limited relevant original role as defective. The correct conditional can be completely checked while that classification remains withheld. This is a premise-warrant issue, not a newly discovered formal contradiction. [APPRAISAL]
+
+The open incidence-to-Sixth refinement is a genuine representation gap. Incidence Complete quantifies over requisites; Sixth LocalCover quantifies over every ancestor of every node in an independently interpreted strict ancestry domain. Calling both “complete” does not prove them equivalent. The joint model's optional finite compatibility certificate cannot close the general gap. [FIELD_PREMISES; JOINT_MAP]
+
+#### 7 What is the strongest truthfully claimable checked theorem
+
+There is no need to invent a single opaque theorem. The strongest reportable result is a family of precise conditional theorems with distinct types:
+
+1. Under the seven displayed A/B/C premises, `abc_same_witness` yields t, r, and the same g such that r is relevant and actually original, g is its actual whole-original bearer, g exists at every represented world, is a binary UniformRoot, and is broadly nonreceived wherever it exists.
+2. Under qualification, source-mode classification and actual conformance, faithful use/role interpretation, a genuine anchor, connected incidence, field CND and visibility, `guarded_common_original_provider` yields g's complete provision at every field occurrence, identity of every actual original field contributor with g, and identity of every Complete-labelled provider there with g. Its three interpretation certificates are explicit input/output assumptions, not discoveries.
+3. Under K/A/C/D/N/P and the actual-exercise bridge, `veracity_of_coverage` yields truth of every genuinely owned assertion over the represented occasion/content/token domain. Its local predecessor requires only local awareness/control.
+
+These three statements are independently reviewed. The underlying old Sixth theorem also remains available at its exact all-ancestor interface. The independently reviewed joint interpretation separately supports compatibility of these selected formal signatures on literally the same g. None of the three general component theorems derives the later component's philosophical premises from the earlier component. [ABC_CORE; FIELD_CORE; VERACITY_CORE; CONNECTED_UNITY; JOINT_REVIEW]
+
+#### 8 What strongest conclusion remains computationally unverified
+
+The programme cannot truthfully report that a computer established an actually existing, numerically unique necessary reality simpliciter, proved it the completely independent source of all reality, derived every relevant perfection from necessity alone, proved all original sources metaphysically unable to choose partial roles, or authenticated any particular revelation. Even the weaker assertion that the actual metaphysical premises of the Necessary Being route are true is not the kernel theorem's conclusion without warranted application.
+
+The selected formal premises permit an outside necessary original. The A/B/C interface permits multiple original witnesses. The field theorem identifies sources within a warranted connected productive field, and the veracity theorem governs owned assertions rather than all caused speech. Authentication still requires actual occurrence, determinate content, intentional ownership/adoption, same-source identification, and recipient warrant. These are demonstrated scope limits, not omissions to conceal. [ABC_REVIEW_SCOPE; FIELD_CONTROLS; VERACITY_CONTROLS; DAG]
+
+#### 9 What specific work would push the boundary further
+
+With the joint-model independent review complete at its bounded scope, the next formal task is the general semantic refinement into independently interpreted Sixth ancestry: define the domain and source-node interpretation without inventing self-production, prove predecessor closure and preservation of every incoming branch/history, relate requisites to all-ancestor coverage, and separate productive ancestry from broad existential reception. A relation defined after the fact to make the desired coverage true would not answer this question.
+
+Further philosophical work should focus on the exact Classification premise: why every in-scope actual role of a qualified source requires complete unborrowed provision rather than a fitting freely chosen partial role. CND also needs its substantive warrant retained separately; the current packet offers no derivation from more primitive accepted causal principles. Contribution/respect individuation needs an explicit account that is not restricted to the supplied finite index type.
+
+The full pure-perfection ascent and knowledge/practical-perfection profile would need separate faithful interfaces, same-bearer premises and adversarial controls before claiming an integrated general theorem. Veracity's N needs direct assessment against the rescue objection, alongside adequate owned-content/awareness/control semantics and occasion-domain scope. An actual authentication case would require D1/D2 evidence, not further manipulation of source-unity formulae. Basic recognition remains an admissible epistemic route without a machine-certified universal faculty. [GATE; FIELD_PREMISES; VERACITY_PREMISES; APPRAISAL]
+
+#### 10 Does formalisation materially increase confidence
+
+Yes, selectively. It materially strengthens confidence in inferential validity, witness discipline, compatibility of the reviewed component signatures, and the stated scope boundaries. Constructive proof steps, exact classical uses, inhabited interpretations, deletion models, and intended false-proposition rejections are better evidence than prose similarity. The audit locates the burden instead of hiding it: source mode supplies coverage, CND supplies uniqueness, inventory/visibility supply the actual interpretation, and veracity purity supplies the fittingness exclusion.
+
+It does not mechanically increase warrant for all those premises. The most important effect may be more discriminating confidence: greater confidence in the conditional argument and less tolerance for its illicit strengthening. The current provisional Necessary Being acceptance and withholding on common-source sufficiency can consistently coexist with all the reviewed formal successes. The completed joint-model review strengthens simultaneous-signature confidence; it cannot turn model inhabitation into metaphysical possibility or full philosophical-profile consistency.
+
+### Exact A through H architecture
+
+#### A Original resource and actual bearer
+
+The framework keeps worlds W, bearers B, resources R, and received targets T separate. `ActualOriginalResource(r)` means only actual resource and resource nonreceipt. `ActualWholeOriginal(g)` means actual existence and actual whole nonreceipt. Neither contains necessity, uniqueness, completeness of a field, or perfection.
+
+`Completion` positively supplies an original resource relevant to an actual received target. `Realisation` supplies an actual intrinsic bearer for an actual resource. `SupportTransport` says that this same bearer's whole receipt makes that same intrinsic resource received in the fixed existential respect. `original_bearer_of_resource` uses realization and support to derive an original bearer by contradiction; `original_bearer_of_completion` retains the target, relevant resource and bearer together. This is the exact extra step required by T17R P00049–00051: a received organism can have real intrinsic powers, so bearer existence alone is insufficient. Ontological support here is not an efficient bearer-to-attribute production edge. [ABC_CORE; DAG_PASSAGES]
+
+The all-received Nat controls show why no local supply premise silently gives positive original completion. The first completion objection was corrected historically; continuing dissent on contingency-as-need must not be mislabelled as that superseded objection. No general fact-PSR-to-concrete-efficient-bearer theorem is established. T17R P00044 and T18R P00015/P00095 preserve the noncausal-grounding limitation. [ABC_CONTROLS; DAG]
+
+#### B Necessary existence of that bearer
+
+The inherited `Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root` fixes the same g. Actual existence plus nonreceipt conflicts with the premise that an actual nonnecessary bearer is received. Classical contradiction yields `Necessary`, defined as existence at every supplied world. The actual world parameter makes that world type inhabited; a separate possible/contingent/impossible trichotomy is unnecessary in this encoding.
+
+The broad predicate is equated to existential binary receipt only by `ReceiptRepresentation`. The reviewer proves that the broad conclusion follows without this representation, and also constructs a model where its absence destroys binary UniformRoot while broad necessity/nonreceipt survive. The adapter is not a proof that all ontological dependence is efficient causation, nor a trick using a self-edge to manufacture a bearer. Need-removal retains an actual original bearer but permits its absence elsewhere. [SOURCE_IDENTITY; ABC_CORE; ABC_REVIEW_SCOPE]
+
+#### C Essential independence
+
+`ConstitutiveReception` says receipt of this same individual at some world entails its receipt at every world in which it exists. Actual originality then excludes receipt anywhere it exists. The source supplies a generic constitutive rationale about existential adequacy, not a universal essentiality claim about every property and not fixed supplier identity.
+
+`essential_nonreceipt_of_actual_original` exposes the narrower inference without necessity. The retained `uniform_of_necessary_actual_root` additionally gives existence and binary roothood everywhere. The old `local_transfer_iff_uniform` demonstrates the target-equivalence of the specially tailored backward-transfer leaf once actual roothood and necessity are fixed. Supplier-switching controls show that actual nonreceipt and necessary existence alone do not establish uniform roothood; generic reception also need not mean an unchanging supplier. Received token acts or states do not automatically make the bearer's whole existence received. [SOURCE_IDENTITY; ABC_CORE; ABC_CONTROLS]
+
+#### D Existing Sixth ancestry theorem
+
+For an inhabited D and irreflexive transitive r:
+
+- `Below(g,x)` is equality or r(g,x).
+- `LocalCover(g,x)` says Below(g,x) and, for every y Below x, Below(g,y).
+- `LocallyComplete` requires such a g for every x.
+- `Connected` uses finite undirected paths through r.
+- `LeastAncestor(g)` means Below(g,x) for every x.
+- `Root(g)` means no strict r-predecessor.
+
+`common_cover_of_connected_local`, `least_of_connected_local`, and `unique_root_of_connected_local` yield the common cover/least/root conclusions. `local_connected_iff_least` records the exact package equivalence. A unique root at a single target is insufficient without support for every ancestor in its cone; `local_cover_iff_unique_root_and_ancestral_support` states the repair. The genuinely infinite Fork remains connected with a unique root and no complete cover. Universal root-ancestor uniqueness is stronger than uniqueness at one target because it supplies support at every ancestor. A rooted infinite control shows that global well-foundedness is unnecessary. [CONNECTED_UNITY; INFINITE_FORK; PRIOR_REUSE]
+
+Reflexive cover permits a root to cover itself without producing itself. Empty and singleton cases expose why nonempty scope and a genuine productive witness matter. An abstract least ancestor does not automatically satisfy an independently interpreted actual act account. Historical T19 P00094 supplies the explicit retrospective P0 actual scope, P1 strict faithful ancestry, P2 local cover, P3 connectedness, P4 productive interpretation mapping. The original Sixth author prose remains custody-only in the inspected public snapshot; it is not newly quoted as inspected. Original-completion P1 is a different label. [PRIOR_REUSE; DAG]
+
+#### E CND and the five production claims
+
+The evidence distinguishes ability to produce a matching result alone, actual sufficiency, exclusive exhaustion, alleged simultaneous entire original provision of one concrete contribution/respect, and differentiated contributions. Two exclusive exhausters conflict at the exclusive definition; that elementary contradiction does not derive CND against nonexclusive entire provision. `EntireOrig` is deliberately unrestricted before CND. The duplicate fixture gives g and h the same entire requisite; coverage survives while uniqueness fails. The split fixture gives them different real requisites; CND survives while complete provision fails. [FIELD_CORE; FIELD_CONTROLS]
+
+`FieldCND` identifies providers of the same requisite only within the field. The outside-duplication fixture satisfies it and the main theorem while violating global CND outside. No theorem here derives CND from determinate production. The prior `UnborrowedActs` premise already contains a strong proper-mode owner identity condition; renaming it a proof of CND would be misleading. The finite ability model has actual solo-production histories for both g and h over two source-neutral targets, while actual production is differentiated. It does not establish unrestricted omnipotence, free choice under identical complete grounds, or metaphysical possibility of the histories. [FIELD_ABILITY; FIELD_REVIEW; PRODUCTIVE_COMPLETENESS]
+
+#### F Source mode as classification and actual conformance
+
+`Qualified`, `ModeRole`, and `ModeDefect` are independently interpreted primitives. `Classification(g)` says that an incomplete relevant exercise of a qualified g has a mode defect. `Conformance(g)` says g has no such defect in actual relevant roles. Classical contradiction derives `ModeSatisfaction(g)`, completeness at those roles. A governing norm alone cannot yield actual conformity; retained standing ability cannot supply the missing classification.
+
+The adverse mixed occurrence has differentiated real original contributions, intact finite ability in the separate interpreted control, and no CND violation. What excludes its incomplete g-role is precisely the additional source-mode classification/conformance package. The controls do not preserve every philosophical aspect of a qualified original or formalize unrestricted libertarian choice. Their scientific result is narrower: the displayed capacity and CND inputs do not entail the stronger actual mode. [FIELD_CORE; FIELD_MATRIX; FIELD_ABILITY]
+
+T19 P00076–00078 explicitly describes an inferential clarification or repair rather than an already completed derivation in Minhaj 2:183. The repaired immediate conclusion is incompatibility with qualified original mode; it avoids inferring received whole existence from every received token efficacy. Current sufficient-warrant withholding concerns the justification of mandatory full provision, not whether the conditional is valid. [DAG; APPRAISAL]
+
+#### G Mediation without ownership collapse
+
+`RepresentedParticipation(s,e)` is a requisite with an EntireOrig witness. `UseSound` carries represented participation to actual original involvement. `RoleApplicable(g)` carries g's actual involvement to its norm-governed role. `Visible` runs in the other direction, requiring a represented witness for every actual original contributor. These directions are distinct and separately tested.
+
+A complete source at e supplies the shared requisite of e and f; that supplies represented involvement at f, where the source mode gives completeness. Path induction repeats this step. Historical inputs a and b can remain in the complete original account of a later mixed k without being identified with transformed output tokens. The mixed fixture retains distinct actual derived agents, separate acts and one-way mediation. Symmetric incidence traversal does not assert reverse efficient causation. It is not a general theorem that arbitrary adjacency or all chronological proximity preserves actual source attribution. [FIELD_CORE; FIELD_CONTROLS; FIELD_REVIEW]
+
+Admissibility and sound/exhaustive requisite inventory remain input certificates. The reviewer has models satisfying the mathematical coverage/uniqueness premises with fictitious occurrences or an omitted operative requisite; this establishes that the graph cannot certify those inputs. Even RequisiteExhaustive quantifies only over supplied C, so the representation must still have an index for every intended real relevant contribution. A false created assertion can be productively supported by g without becoming g's assertion. The retained KnowledgeScope work already blocks an automatic passage from causal provision to cognition or mental ownership. [FIELD_REVIEW_BOUNDARIES; KNOWLEDGE_SCOPE]
+
+#### H The exact meaning of one common source
+
+Coverage is $\forall e,\ \operatorname{Field}(e)\to\operatorname{Complete}(g,e)$. Actual uniqueness is $\forall s\,e,\ \operatorname{Field}(e)\to\operatorname{ActualOriginal}(s,e)\to s=g$. Labelled-provider uniqueness says that any source Complete at any admitted occurrence equals g. The latter needs positive inventory; an actual anchor by itself does not guarantee a requisite unless the visibility condition is supplied. Existence follows simply because coverage supplies g.
+
+No rival qualification is required: under FieldCND, g's complete account conflicts with any different represented entire provider of a field requisite. Visibility turns that into exclusion of every actual original rival. Positivity and sound use can also recover actual involvement of g throughout the field, as the independent reviewer checks. This excludes an independent co-original contributor inside the field; it does not exclude an active, necessary, disconnected outside source. Enlarging the field requires new coverage, connectedness and CND certificates. [FIELD_CORE; FIELD_REVIEW_BOUNDARIES]
+
+T19 P00148's witness issue remains important. The A/B/C existential output is not automatically the source at the field anchor. A general application must establish that its qualified witness participates in this field or reapply the attribute rationale to the independently identified field source. The joint interpretation specifically fixes target x, proves its resource/bearer is rg/g, and then carries that literal g through the component applications. That is an independently reviewed finite compatibility certificate, not a general theorem deriving qualification or veracity from A/B/C. [DAG; JOINT_MAP; JOINT_REVIEW]
+
+### Attributes and veracity of source owned assertions
+
+The historical attribute sequence has separate nodes: actual efficacy, eligible pure perfection, original-giver priority, general perfection ascent beyond actual gifts, standing power, relevant knowledge, substantive practical perfection, and qualification of the earlier witness. T17R P00063–00068 and P00085–00096 supply the main report anchors; T19 P00097/P00148 preserve qualification and witness restrictions. These are not all theorem parameters because the veracity and incidence components consume more local consequences of the profile. Their absence from a theorem signature is not proof that their philosophical role is dispensable. [DAG]
+
+No new general Lean declaration in this campaign proves all eligible pure perfections, unrestricted metaphysical ability, full omniscience, or substantive practical perfection from bare necessity. Existing `KnowledgeScope` controls are particularly important: source identity/completeness relations can coexist with recipient cognition and no source cognition at the independently interpreted signature. Actual proper unborrowed cognitive exercise would require a further premise. The new finite ability interpretation confirms an ability/exercise distinction over supplied targets, not the general attribute doctrine. [KNOWLEDGE_SCOPE; FIELD_ABILITY]
+
+The veracity model separates source S, occasion O, token T, content Q, and exercise E. For a fixed g:
+
+- K supplies knowledge of falsehood if an owned content is false. It is only the negative-truth fragment used by the proof.
+- A supplies awareness of that exact owned contextual content; C supplies deliberate presentation.
+- D classifies knowing counterfeit as a declarative shortcoming.
+- N excludes such a shortcoming from a fitting exercise for this source.
+- P supplies fittingness of actual exercises.
+- ExerciseBridge identifies an owned assertion as the same source's actual exercise.
+
+`controlled_token_true` needs K/D/N/P/ExerciseBridge plus local ownership, awareness and control. `veracity_of_coverage` adds global A/C and concludes truth for every owned token in the supplied occasion domain. Factivity is not used for these positive results. The contradiction never changes g, occasion, token, content, or mapped exercise. [VERACITY_CORE; VERACITY_REVIEW]
+
+D and N are the critical separation. A respect-specific shortcoming alone does not establish all-things fittingness exclusion. The finite-rescue critic can retain D while contesting N. The N-removal model retains known, controlled false speech together with shortcoming and fittingness; it does not show that such speech is consistent with every accepted property of the full original-source profile. A/C-removal models likewise do not refute perfect knowledge. Strong `informedOwnership` incorporates A/C without truth or fittingness, and still permits a known false assertion when N fails. Truthfulness has not been built into ownership. [VERACITY_CONTROLS; VERACITY_REVIEW_BOUNDARIES]
+
+Truthfulness and the absence of knowing counterfeit are equivalent under the displayed epistemic/ownership coverage. This offers no independent warrant by renaming the veracity leaf. Generic practical perfection is not equivalent to truthfulness: the truthful-but-unfitting-nonspeech control refutes that converse. The full positive fixture has true g-owned speech, an extra fitting g exercise, and a false assertion owned by a different speaker. Full Package(g) does not transfer to that speaker merely because g supplies the token. [VERACITY_CORE; VERACITY_CONTROLS]
+
+T0, D1 and D2 remain separate. T0 is source-owned truthfulness. D1 supplies a particular occurrence, exact contextual content and intentional source ownership/adoption. D2 supplies the recipient's warranted route to those facts with defeaters assessed. Common production and T0 alone establish neither. A truthful assertion that a duty obtains can establish the proposition without creating the duty; an imperative or duty-constituting directive still requires rightful force and scope, with safe implementation/permission separately assessed. Seventh's written purpose lemma and grounded-attestation boundaries retain their old ownership. The Darʾ8 opponent chain is not presented as the author's endorsement of an exclusive mandatory epistemic order. [DAG; PRIOR_REUSE; VERACITY_REVIEW]
+
+### Nonvacuity and verification strength
+
+The A/B/C positive model has a necessary original source and a contingent received effect, with live support and need antecedents. Its reviewer plural model shows the full interface does not conceal source uniqueness. The anchored positive interpretation has a nonempty mixed field with real distinct derived acts, a common g, and an active outside h; the stronger modal ability control uses supplied alternative solo histories. The veracity interpretation has actual true source-owned speech, a separate false created-speaker token, and an additional fitting exercise. These jointly establish component nonvacuity relative to Lean's ordinary foundations, not metaphysical realizability. [ABC_CONTROLS; ABC_REVIEW_SCOPE; FIELD_CONTROLS; FIELD_ABILITY; VERACITY_CONTROLS]
+
+The joint-model author packet supplies a single finite interpretation with three worlds, literal common bearer/source type, canonical x/rg/g witness, live received creatures/resources, mixed production, explicit positive-length support ancestry, original-resource/provision linkage, complete finite incoming inventory, true g speech and false received-x speech, and a distinct necessary outside original h. It checks fourteen cross-interface compatibility obligations, an optional ownership-extension equality, and model-specific ancestry compatibility. The model distinguishes existential reception from direct productive support and preserves the created agent's genuine identity. Its author receipt has 56 theorems, 88 named declaration readbacks, 23 definition-body and 15 selected proof-body readbacks, and four intended false overclaims. The independent review freshly rebuilt the five local cores at trust zero, matched all 88 declaration readbacks and 38 selected definition/proof bodies, rehashed the 1,801-object import closure, and added 20 joining theorems with six intended false-proposition rejections. No candidate correction was required. This is a selected-signature consistency result, not proof that two complete metaphysically perfect sources are possible. [JOINT_README; JOINT_MAP; JOINT_RECEIPT; JOINT_REVIEW; JOINT_REVIEW_RECEIPT]
+
+The joint reviewer specifically tested the joins. Permuting only the field-source interpretation preserves separate component successes while breaking resource linkage and g coverage. Adding an incoming h-to-m support edge breaks stored reachability and complete incoming inventory. Enlarging this joint field to include outside o preserves FieldCND and the basic interpretation guards but loses connectedness and common coverage; that is a different control from the component outside-duplication model, where enlarging the field also loses CND. A same-ABC-framework perturbation deletes qualification and breaks the speech package, confirming that A/B/C does not supply the added normative premises. These are checks of selected signatures only. [JOINT_REVIEW; JOINT_REVIEW_JOINING]
+
+The good-source full package necessarily excludes a false g-owned assertion and an incomplete qualified g-role. Nonvacuity does not require manufacturing antecedents that the theorems exclude. The actual creature's counterfeit gives the normative relations a live interpretation without transferring its defect to g. This is simultaneous consistency evidence for selected signatures, not a complete model of every philosophical doctrine or a new all-in-one theorem.
+
+The reviewed A/B/C replay used Lean 4.19.0 with explicit trust zero, 60 exact declaration/axiom readbacks, 18 inherited type/axiom matches, five intended false-proposition rejections, and six extra reviewer scope results. The historic full Mathlib umbrella was unavailable in the prepared cache: only its first import line was adapted to three cached official imports; every following byte was retained. This is not a fresh full-import historical suite replay. Official dependencies were hash-bound and trusted rather than rebuilt. [ABC_REVIEW]
+
+The independent anchored review compiled three source modules at trust zero, checked 63 author theorems and 159 explicitly named declarations, accepted 19 intended false-proposition rejections, and added 14 reviewer theorems plus eight false overclaims. The independent veracity review checked 23 author theorems, eight intended rejections, nine generic proof bodies and eight additional semantic theorems; its 47 report/guide bindings matched the authoritative zero-based DOCX paragraphs. [FIELD_REVIEW; VERACITY_REVIEW]
+
+No component is credited with custom metaphysical axioms proved by the kernel, admissions, native-decide oracle shortcuts, or exhaustive metaphysical-world search. Relevant classical proofs report the ordinary Lean axioms propext, Classical.choice and Quot.sound; constructive subresults have empty axiom sets where reported. A compiler error counts as a negative control only when it specifically establishes that the proposed proposition is false. Retained environmental, typeclass or harness-development failures are not counterexamples. A theorem count is an inventory, not an independent measure of philosophical support.
+
+The veracity review's sole nonblocking documentation finding concerned an unsupported explanation of a one-paragraph citation discrepancy. The successor erratum records that the body IDs are zero-based and the inspected documents contain no empty body paragraphs, without inventing a causal account of the original mismatch. Active citations were already correct. Its corrected projections replace only the explanatory sentences; the sealed original, proof identity and review are preserved. [VERACITY_ERRATUM]
+
+### Integration and remaining limits
+
+The new report changes no sealed predecessor. Its status map distinguishes theorem entailment, finite interpretation, source attestation, premise appraisal, application warrant, open work and the completed bounded reviews. Historical B/C, Sixth graph/act uniqueness and their controls retain ownership. New credit belongs to the typed A interface, the anchored incidence bridge and its exact safeguards, the veracity decomposition and controls, and the independently reviewed joint finite interpretation. Reusing a theorem or assigning common names to types is not a new philosophical discovery.
+
+The general Sixth refinement, full perfection ascent, exhaustive modal/contribution semantics, actual D1/D2 authentication, and actual-world premise truth remain outside the computational result. The current dated appraisal remains a separate judgement. Nothing here supersedes the normal Twentieth twelve-avenue research report; these materials are the foundational formal companion and integration input.
+
+Public projection note: all mathematical and philosophical content is retained. Source IDs resolve through SOURCE_INDEX.json to exact selected files, explicitly derived public projections, or body-free historical custody locators. Original hashes do not silently describe changed public bytes or admit omitted bodies. No new proof, source reading or metaphysical warrant is claimed by this projection.
+
+## Part 3 Further mathematical results
+
+### Status and source of the additional results
+
+This section states the other Twentieth results alongside the foundational audit. It is a mathematical exposition of already recorded source and verification, not a new execution campaign. Exact declarations, sources, axiom readbacks, controls and independent reviews remain in the corresponding source packets. No result below changes the original HasE target's OPEN status, establishes a metaphysical premise by computation or silently reruns an earlier tranche.
+
+### Exact HasE scalar fusion reduction
+
+Let p be the unchanged polynomial `UnaryIdentity.IntensionalBoundary.variableExpr.closed`, and let q be the unchanged `redundantExpr.closed`. Define B as the typed identity of p and q at `N → N`. Define W(q) as the dependent family
+
+$$
+W(q)=\Pi\,n:N,\ \forall\alpha,\ \Pi\,f:\alpha\to\alpha,\ \Pi\,a:\alpha,\ \operatorname{Id}_{\alpha}(n\,f\,a,\,(q\,n)\,f\,a).
+$$
+
+Let c3 be three successive bracket abstractions of the raw I atom. The exact contract checks $c_3=K(K(K\,I))$; this is the selected compiler's syntax, not an informal substitution of a semantic identity function.
+
+`P01AC.ExtensionalRepair.ExactScalarFusion.literal_four_way_iff` identifies the following four propositions in the unchanged HasE calculus:
+
+1. There exists a closed polynomial r with `HasE [] r B`.
+2. `HasE [] I B`.
+3. There exists a closed polynomial h with `HasE [] h (W q)`.
+4. `HasE [] c3 (W q)`.
+
+The forward proof uses the actual J motive under the relevant binders. The varying endpoint is the recorded coordinate in the original telescope and becomes coordinate four under n, f and a. The literal base and target substitutions are checked. J and the retained K contractions produce the selected fixed witness.
+
+The reverse proof begins under a context containing w : W(q), applies the existing scalar piExt and allExt rules with their formation, endpoint and scope premises, and explicitly transports the left endpoint through J. It then closes over w and applies the supplied closed proof. No unrestricted weakening theorem for arbitrary HasE derivations is assumed.
+
+A separate scope induction over all twenty HasE constructors yields the formation and scope facts used by closed proof canonicalisation. Soundness is used for the supplied proof polynomial's raw-I component; semantic equality of the target endpoints is not reflected into a new typing judgement. The equality $p=I$ is proved by unfolding the actual compiler and bracket abstraction, not by substituting an extensionally equal endpoint.
+
+This is an equivalence of open obligations. It supplies neither a witness nor a noninhabitation proof. Its five mismatch controls test omission of the fusion hypothesis, an altered endpoint, the wrong abstraction count, laundering HasE into current Has and substituting semantic equality for derivability. Failure of those particular attempts does not establish general noninhabitation.
+
+#### The generic Raw probe and the remaining fusion gap
+
+A separate selected result in current Has is
+
+$$
+n:N\vdash I:\operatorname{Id}_{\mathrm{Raw}}(n\,I\,I,I).
+$$
+
+The construction instantiates the Church object at the inhabited proof carrier $\operatorname{Id}_{\mathrm{Raw}}(I,I)$, uses genuine proof erasure and the retained J proof coordinate, and then closes a specified `N → Raw` identity using HasE's piExt. The proof-coordinate mechanism is inherited; the selected generic probe is new checked work.
+
+It does not promote Raw equality to an arbitrary carrier α. The attempted graph carrier can support its own seed, step and iteration, yet its projections have not been equated to the independently instantiated `n Δ z0` and `n f a`. Erasing a graph proof gives a Raw statement about the proof coordinate, not those two data-projection equalities. The explored strictness models and normalisation import do not close this gap.
+
+Verification: the scalar packet contains four modules, 56 theorem declarations and 21 definitions, with three expanded contracts and independent reviewer examples. Its axiom union is propext and Quot.sound. The probe's own scope and statement controls are independently recorded. Has, HasPlus, HasE, HasC and P01DF remain distinct interfaces.
+
+### Modal union consequence completeness
+
+Fix a carrier type V, world index type W, admissibility predicate A and crossing relation $E(w,u,v)$. Define $U(u,v)$ when an admissible world witnesses $E(w,u,v)$ or $E(w,v,u)$. Let $u\sim v$ mean finite undirected U-path connectivity, including the length-zero path.
+
+A pure interpretation chooses a source type S and attribution $a:V\to S$ such that every admitted crossing implies equality of the two anchored source values. The frame is fixed first; source types and attribution maps vary over this interpretation class. Then
+
+source equality of u and v is forced in every pure interpretation if and only if $u\sim v$.
+
+For the forward consequence direction from connectivity, every edge gives anchored equality and finite path induction composes it. The edge witnesses can be different, mutually incompatible worlds. The proof does not infer joint possibility from individual possibility; it composes the fixed equalities obtained from those witnesses.
+
+For the completeness converse, attribute each carrier to its connected component in the quotient $V/{\sim}$. Every admitted edge respects this attribution. Disconnected carriers receive distinct component labels, so their equality is not forced. A two-valued attribution can separately witness each disconnected-pair non-entailment when the interpretation class admits two distinct values. A fixed singleton source type would instead make every attribution equal and invalidate that converse.
+
+A faithful transport version gives each world its local source type, an injective transport of anchored identities and local attributions retaining the endpoint provenance. Local source equality then reflects back to anchored equality. Every pure interpretation has a faithful identity-transport expansion, so the two languages force the same anchored equalities. Fixed arbitrary local sorts too small to admit the required transport are not silently included in that nonvacuity argument.
+
+The finite controls distinguish union connectivity from any single connected witness world, rigid source identity from retained carrier provenance, and retained transported labels from equality-reflecting transport. An untracked source switch at the intermediate carrier or a transport merging distinct source identities invalidates the intended attribution inference.
+
+Connectivity constrains the used attribution range. To exclude every source in a larger relevant set, add a representation premise saying each such source occurs as a carrier attribution in the covered target. Unrepresented originals remain outside the conclusion. Additional fixed equalities, inequalities, cardinality restrictions or metaphysical axioms change the interpretation language and require a new completeness claim.
+
+This is a scoped application of familiar equivalence closure and quotient reasoning. It is not a completeness theorem for all Orthemology or all metaphysical consequences. The v2 source contains 42 author theorems and three intended false-overclaim controls, with a separate fresh independent replay and portable-harness tests. Historical proposal statements that implementation was pending remain dated history.
+
+### Original ground extension and preservation
+
+Let a base have individuals A, represented existence $E(w,a)$, support $S(w,a,b)$ oriented from provider to recipient, actual index w0 and an independently interpreted productive relation. Extend A to `Option A` by adjoining `none`. Preserve all old individuals as `some a`. Give the new individual existence at every represented world and no incoming support.
+
+The construction adds new support to the fixed set of roots at w0. It preserves the old direct productive/profile tuples and, importantly, old-endpoint support reachability in both directions. There is no path from an old node to the new individual. Optional acyclicity and the corresponding ancestry well-foundedness are preserved. Existing actual root coverage becomes coverage from the new root; uniqueness of this root is an actual-index conclusion, not automatically a conclusion at every world.
+
+The grounding relation is separate from general support and production. Where each old actual root is necessary, the added grounding edges can satisfy grounding necessitation. Its closure theorem concerns grounding paths. A mixed support path to a contingent effect need not necessitate that effect. The explicit control refutes that promotion.
+
+Old profile preservation is evaluated on old tuples. It is not unrestricted elementary equivalence for formulae quantifying over the enlarged individual domain, and it does not preserve every predicate involving originality after new support edges are added. The exact limitation is part of the result.
+
+The powerless interpretation establishes that the thin structural interface alone does not supply power. It omits the stronger pure-perfection premises and does not refute a philosophical argument employing them. A further model gives the new original a real productive exercise at another represented world while leaving it without an actual productive path to the observed field. This is a nonvacuous standing-capacity versus actual-exercise distinction over the declared model, not a complete metaphysical ability semantics.
+
+An infinite control has an original covering root and acyclic support while retaining indefinitely descending subordinate ancestry. It shows that represented coverage need not be globally well-founded. The construction applies to that control without establishing that such ancestry is metaphysically possible.
+
+The three modules contain 77 theorems. Independent review checked their fresh compilation and added five scope probes and 4,165 bounded finite cases. The semantic interpretation of necessary, original, grounding and productive remains an application obligation.
+
+### A productive nonduplication route to essential nonreceipt
+
+For a fixed individual g, let $O(w,s,e,r)$ mean entire original provision of concrete contribution e in productive respect r at world w. Let $R(w,g)$ mean receipt of g's whole actuality in the declared sense. The conditional lemma uses:
+
+1. Nonduplication: two O-providers of the same e and r at w are identical.
+2. Original-role retention: at every relevant w, g has some such original contribution and respect.
+3. Complete matching attribution: if $R(w,g)$ and $O(w,g,e,r)$, a distinct h also satisfies $O(w,h,e,r)$.
+
+Suppose $R(w,g)$. Role retention supplies e and r; complete matching attribution supplies the distinct h; nonduplication contradicts its distinctness. Hence g is unreceived at every relevant world. The effect and respect may vary between worlds; no single eternally fixed effect token is required.
+
+The first lemma does not need actual nonreceipt as an extra premise. Nor does it separately need necessary existence if original-role retention already requires an actual original role everywhere. If retention is only conditional on existence, necessity is needed to obtain the everywhere conclusion. This exposes where the modal work sits.
+
+The finite CND controls retain stipulated necessary-existence, standing-power and derived-exercise predicates while switching original provenance; essential nonreceipt then fails when role retention is omitted. These are signature-level separations, not a complete ability semantics. Another control keeps participation by a supplier without entire same-respect provision, showing why participation cannot replace the matching-attribution premise. Received token states are not automatically whole-existence receipt.
+
+Under the already adopted strong resource-to-bearer transport, retaining an original intrinsic resource everywhere can itself exclude whole receipt. The proposed CND route therefore does not presently provide a better independently warranted replacement for the constitutive route. On a weaker proximate-act reading it loses the same-level original-provision relation needed by nonduplication. The general proof is valid, but its premises cannot be weakened by changing the meaning of O midway.
+
+### Grounded support retraction and later root aliasing
+
+Use a rule system with finite-premise rules, a finite set of available primitive labels, and grounded finite derivations. The ambient claim and label types and the rule relation need not be finite. For a conclusion c, let $\operatorname{Supports}(c)$ be its inclusion-minimal sufficient label sets. After removing labels, c remains derivable exactly when at least one such support is entirely retained. Different proof paths are alternatives; requiring their union would be too strong.
+
+A cut is a set meeting every complete support. An inclusion-minimal cut has no proper subset that is still a cut. This differs from a minimum-cardinality cut. Suppose a later fixed map f identifies carrier labels sharing an actual source or failure root. The full family of inclusion-minimal label cuts can be archived before f is known. Mapping those cuts through f and inclusion-minimising the images recovers the exact minimal root cuts.
+
+Why the full minimal archive matters is shown by the support family $\{a_1\},\ \{a_2,b\},\ \{a_3,b\}$. Its inclusion-minimal cuts include $\{a_1,b\}$ and $\{a_1,a_2,a_3\}$. If all three ai map to a single root a while b remains distinct, the cheaper label cut maps to $\{a,b\}$, whereas the larger label cut maps to $\{a\}$. Retaining only every cheapest label cut loses the true one-root failure.
+
+A finite exhaustive search found no strict cheapest-cut error below four labels and forty cases at four labels in its stated antichain/partition domain. This supplies the recorded smallest-size control for that search language, not a universal claim about every possible provenance semantics. The K3,2 fixture gives a separate control.
+
+Truth requires available primitive claims to be true and each rule to preserve the chosen truth interpretation. A cycle without an available grounding cannot certify itself. Failure of represented derivability does not imply falsity or absence of an unrepresented warranted route.
+
+The occurrence fixture separates a past authenticated duty, its historical force, a current prospective grant, present applicability and an available implementation. Revoking future standing preserves the established past duty; removing evidence is a different operation. The truthful-duty inference consumes resolved source/content attribution and does not discover it from a string. Ordinary defeasible testimony remains a separate permitted route.
+
+The six-module source packet, constructive bad-rule controls and independent review are recorded separately. The Python analyser was compared with a separate finite baseline, including 2,325 rule systems and 9,300 availability profiles. This is not a general Python-to-Lean refinement theorem, an actual authority grant or a proof of unlimited physical continuation.
+
+### The deletion observation control
+
+The observation alphabet is all binary words of length at most two, including the empty word. Each original position is retained independently with probability $p=\frac{1}{4}$. For the two hypotheses 00 and 01, the complete laws are:
+
+For 00: empty has mass $\frac{9}{16}$, 0 has mass $\frac{6}{16}$, and 00 has mass $\frac{1}{16}$.
+
+For 01: empty has mass $\frac{9}{16}$, 0 has mass $\frac{3}{16}$, 1 has mass $\frac{3}{16}$, and 01 has mass $\frac{1}{16}$.
+
+All omitted alphabet values have zero mass. Both laws are nonnegative and sum to one. Their total variation is one quarter.
+
+Repeating a single realised trace M times is an injective deterministic encoding when M is positive. Its pushforward law preserves total variation. Consequently, every bounded randomised decision rule based on these copies has equal-prior success at most five eighths. The independent review supplies an attaining likelihood-sign rule and its positive-M first-coordinate version, establishing sharpness. With $M=0$, all traces collapse to the empty tuple and optimal success is one half.
+
+The finite inequality is formalised over a linearly ordered field with the specified compatibility assumptions. It therefore permits arbitrary real-valued randomised policies, not merely the finitely many rational policies tested. It is not a general asymptotic analysis over arbitrary ordered fields.
+
+For fresh independent masks conditional on the same latent word, the written product-law calculation instead gives total variation $1-(1-p)^M$ and equal-prior optimum $1-\frac{(1-p)^M}{2}$. This general all-M fresh-sampling formula is written mathematics with exact bounded enumerative checks, not a separate general kernel theorem in the author module.
+
+The source-label control holds the word fixed and changes a source coordinate that the stipulated channel never observes. The law remains identical by that model's definition. The occurrence-position control holds the original word at 00 and observes one zero: the two singleton-retention masks each have conditional mass one half. Even fresh further observations of the known word do not identify which position generated that earlier observation under independent masks.
+
+These are distinct targets. Encoded word recovery is not historical source identity, original-position attribution, contextual meaning, assertoric force, truth or authority. In a real application, the encoding, channel, retention parameter, joint law, sample resources and interpretation need independent support. Copies can improve availability or durability without adding information to the ideal observation assumed here.
+
+The author source has nineteen theorems, thirteen rational fixtures and four rejected promotions. Independent review adds twelve kernel checks, full-space pushforward correspondence and sharp attainment, with separate exact enumeration. No upstream decoder or novel trace bound is required for this elementary application.
+
+### External results considered without false transfer credit
+
+The exact pure-type-system normalisation endpoint assumes weak normalisation of every legal expression in its own annotated grammar. Its type conversion and annotation-preserving erasure do not match HasE's proof-term-changing conversion and discarded proof coordinates. A weakly normalising converted HasE term can contain a discarded divergent raw argument. The inspected endpoint therefore does not supply the original identity proof or the needed derivation-normalisation theorem.
+
+The mean-payoff corpus supplies endpoints for explicitly known, fully observed games. Existing Ninth and Sixteenth already own the relevant Orthemology certificate/common-policy equivalence, signed termination and literal controller compiler. Modelwise winning, expected mean payoff, adversarial support and almost-sure hidden-model parity are different contracts. No new completeness theorem or faster faithful solver for the current target is established by that comparison.
+
+Both are successful bounded transfer assessments even though neither imports a new theorem. Upstream source inspection and manuscript reading remain distinct from fresh Lean or Comparator execution. The broader corpus catalogue is a map of research claims and possible interfaces, not a catalogue of adopted Orthemology facts.

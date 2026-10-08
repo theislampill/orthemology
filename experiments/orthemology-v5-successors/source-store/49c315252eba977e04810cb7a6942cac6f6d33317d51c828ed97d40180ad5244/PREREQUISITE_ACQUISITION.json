@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "official_source_preparation": {
+    "status": "PASS",
+    "as_of_utc": "2026-10-06T05:21:19.219337+00:00",
+    "scope": "Fresh-directory anonymous official-URL preparation on the recorded existing Linux x86-64 host with the already verified official Lean 4.19.0 toolchain.",
+    "repositories": 9,
+    "tracked_files": 7507,
+    "source_seed_used": false,
+    "npm_cache_seed_used": false,
+    "proof_objects_after": 0,
+    "node_modules_after": 0,
+    "npm_registry_acquisition_tested_in_this_phase": false,
+    "compiler_or_toolchain_installation_test": false,
+    "new_host_installation_test": false,
+    "verification_receipt_sha256": "9c18f8a06dd74762e5aeee773ac4d9e9621747c6d58e9dad8cd3e4311e1858ad",
+    "independent_review_receipt_sha256": "4bb68e5611c1ff32ea318c84ad58229def162653c8b6d0f1a83fb3ab36bf7e83",
+    "public_sources": [
+      {
+        "package": "mathlib",
+        "url": "https://github.com/leanprover-community/mathlib4.git",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "tracked_files": 6816,
+        "source_inventory_sha256": "f461e480570d88a8b438fc332b6f3327216df187dedd09c979d47bedbaaa3bba"
+      },
+      {
+        "package": "plausible",
+        "url": "https://github.com/leanprover-community/plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "tracked_files": 18,
+        "source_inventory_sha256": "fecd31abb1a75550a130fb9cbc6f56b4328a98a0b4983626587165cf47c9a03b"
+      },
+      {
+        "package": "LeanSearchClient",
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "tracked_files": 16,
+        "source_inventory_sha256": "d505079aad033cf61fabeaec0800a005da7bc4b48ce7e9471853b39013735231"
+      },
+      {
+        "package": "importGraph",
+        "url": "https://github.com/leanprover-community/import-graph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "tracked_files": 33,
+        "source_inventory_sha256": "10823805cb2a1c95c086d67ce11ac2b3a679510b56f6fab499dc8e69bdace987"
+      },
+      {
+        "package": "proofwidgets",
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "tracked_files": 76,
+        "source_inventory_sha256": "074154889520fb2274dab098ebe07670bc21540977bfffce57b5a06047519aec"
+      },
+      {
+        "package": "aesop",
+        "url": "https://github.com/leanprover-community/aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "tracked_files": 249,
+        "source_inventory_sha256": "34c97802225b52724c62133701a69d4466685d3b40c6ad000ec5b43239e77a3d"
+      },
+      {
+        "package": "Qq",
+        "url": "https://github.com/leanprover-community/quote4",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "tracked_files": 34,
+        "source_inventory_sha256": "e7d348f521792efaa74951de1edcb0a2c85afe11cf952c88c0d7f6aa2d05b212"
+      },
+      {
+        "package": "batteries",
+        "url": "https://github.com/leanprover-community/batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "tracked_files": 253,
+        "source_inventory_sha256": "8e121ae7ace129ad9270db82ab6682609f5fec12a0d2de4fe567cf8898d6f039"
+      },
+      {
+        "package": "Cli",
+        "url": "https://github.com/leanprover/lean4-cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "tracked_files": 12,
+        "source_inventory_sha256": "f285d6513abb5f3211ec38cf305b9644d2cf2f9a78cda7966e6f450bcf644f19"
+      }
+    ]
+  },
+  "all_online_recipe_in_one_uninterrupted_run_claim": false,
+  "separate_online_widget": {
+    "status": "UNQUALIFIED_INTERRUPTED_ONLINE_WIDGET_ATTEMPT",
+    "single_widget_target_attempts": 1,
+    "empty_npm_cache_verified_before_launch": true,
+    "anonymous_process_configuration": true,
+    "official_registry_only": true,
+    "cached_seed_used": false,
+    "alternate_mirror_or_fallback_used": false,
+    "terminal_exit_receipt_available": false,
+    "widget_asset_count": 0,
+    "lock_bound_installed_distribution_verification": "NOT_RUN",
+    "online_offline_asset_comparison": "NOT_AVAILABLE_NO_ONLINE_ASSETS",
+    "source_files_reverified": 7507,
+    "dependency_library_proof_object_count": 0,
+    "existing_offline_widget_qualification_unchanged": true,
+    "original_acquisition_only_receipts_unchanged": true,
+    "online_npm_provisioning_qualified": false,
+    "registry_unavailability_inferred": false,
+    "fresh_os_bootstrap_claim": false,
+    "uninterrupted_all_online_recipe_claim": false,
+    "interpretation": "One online npm/ProofWidgets prerequisite attempt was interrupted before a verified terminal result. No online assets were available for validation or comparison. This is incomplete operational evidence, not a mathematical negative result or a registry-availability verdict.",
+    "raw_interruption_custody_sha256": "4d7c655aec6a66b96497611498774a7d9cbe27b146d4ee8b3637eab08856e72a",
+    "independent_interruption_review_sha256": "d12b9608d5a53124b0cb638493e31fb697d846e906816d75a0dd3497f0a288da",
+    "independent_review_disposition": "ACCEPTED_AS_UNQUALIFIED_NO_TERMINAL_BUILD_RESULT",
+    "source_status_summary_sha256": "42c744eaa2effe90fb7bded4a67480be1eb9d77b7d11b63b136506b8e7736c6a",
+    "projection_note": "Path-free public outcome summary. Full original execution evidence remains unchanged."
+  }
+}

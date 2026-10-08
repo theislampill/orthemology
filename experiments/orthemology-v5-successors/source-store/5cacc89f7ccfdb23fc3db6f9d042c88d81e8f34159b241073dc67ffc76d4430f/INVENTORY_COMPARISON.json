@@ -1,0 +1,95 @@
+{
+  "status": "PASS_INVENTORY_COMPARISON",
+  "hidden_change_objects": 6646,
+  "hase_objects": 1369,
+  "same_hash_common_objects": 1355,
+  "different_hash_common_objects": 14,
+  "hase_names_missing_from_hidden_change": [],
+  "differences": [
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Algebra/Module/Submodule/Map.olean",
+      "hidden_change_sha256": "a271176a6a7cf41ad1484fea4d67384a794c372ef13a7ddec3444c660cfdc52e",
+      "hase_sha256": "3284d14f3b801311d319261fed5342cddf7dd21045499241423c118895b06af9"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Algebra/MvPolynomial/Rename.olean",
+      "hidden_change_sha256": "f77740fce2fa5b3c7f804629bf19d3b370a29be8a1550e06de477e319d0230f2",
+      "hase_sha256": "fc426240fde3bfbed5fe4ee85561e5d2109396777d3e4e202ef63368f61c2f25"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Algebra/Polynomial/Coeff.olean",
+      "hidden_change_sha256": "bce771148238453855c245260ec0d1155eac22e45181b178d792866b74356436",
+      "hase_sha256": "4ea10f5479fc57378dca4e9d94c4aac6b5eeb420fefab814c0932bea6a2a6d12"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Computability/PartrecCode.olean",
+      "hidden_change_sha256": "618bf98b00392d372f9fd1f1667f7e8974547149f65b2ba68bb84e21319a5a87",
+      "hase_sha256": "6bbda4228220c6e3a6ea1db22c737fa5a8236762c1432db08b30b74f70b2b3b9"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Data/Finset/NoncommProd.olean",
+      "hidden_change_sha256": "d4e8530514341abdaf898faaa348779a139a5fca8a55b956636f08feb00adb9f",
+      "hase_sha256": "a66ca9184d4a5db7f4fa56bfa20c2efa80f90ba1ddc5d4bf41f5cfae4488abda"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Data/List/Basic.olean",
+      "hidden_change_sha256": "1816330722e548eeb1a186bfd081c8e47b282690d28b7779af633f5d65a7d9cb",
+      "hase_sha256": "8bdd5e5a716b8b52feaa414289bfd66369427772c97b96ada516280a9ae09da7"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Data/List/Sublists.olean",
+      "hidden_change_sha256": "1e693fbef1510f365d38f44cb6835b60e58a9fb325194f65c904cc03dd93de6b",
+      "hase_sha256": "bb1c60ef5eaa78a0ed47cb461f75fe113cba82556433fc163fb3d4b7a4d897c9"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Data/Nat/Bits.olean",
+      "hidden_change_sha256": "266990863c90a2de95f0d8e8cfe609ad42cea253e2f14b658d06534ca2eb1863",
+      "hase_sha256": "61d0e1f69521468f4c6311dbcd7df0a915f0b70949a790bf8b5bc3cb1990ad5c"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Data/Nat/Pairing.olean",
+      "hidden_change_sha256": "0919f4dc324ec9ac8bb0ccbd4d6819cc3609f635ab92f32553348c25a85ff593",
+      "hase_sha256": "e89908095f8bbf1b33d0c2768b3aad0951c4763ad7b74ed8f43c0d7a5a9679f7"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Logic/Equiv/Set.olean",
+      "hidden_change_sha256": "b6d2897fab02ac7b0935c23363b2f47f77213013cb7b3d3a6c2c17136b977795",
+      "hase_sha256": "4ce3c58a5ce5666f49013799789326c517fedde751bd52821b4f88ba4fd0a073"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Order/Hom/Set.olean",
+      "hidden_change_sha256": "927a2e3272ddaea077c3ad9b460b94bd0493ed053eae77a5b2c361c6b8d97428",
+      "hase_sha256": "8b58ffb23919036d39930c641cf479de4966e9c1dad962fcebe7426413a3c438"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/Order/InitialSeg.olean",
+      "hidden_change_sha256": "9bd0689c77d654e5a1159912f02809d95369742ba3c806fbf66be0762c7bc1d5",
+      "hase_sha256": "bb5e8e107ee684da9446df747d1d03f8da32756b433f71c43e965b0b895e77bf"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/SetTheory/Cardinal/Pigeonhole.olean",
+      "hidden_change_sha256": "c11d4cb624c096bb478afd6fadeaaf5d7717e2d30062215870cbe256770e0412",
+      "hase_sha256": "c8fa001a081f0af479759a87319df8ac68ad5ab7db06ea82f869ae84d6b4571e"
+    },
+    {
+      "package": "mathlib",
+      "path": "Mathlib/SetTheory/Ordinal/Arithmetic.olean",
+      "hidden_change_sha256": "d23c65aca7dd59772a6315cb6736bc2367eb45ffcd27c15fc8ab07b627126940",
+      "hase_sha256": "f417ed7e901aad11b29c1027ca83c6a8a3c1d44e7587f5d12f90531215b26993"
+    }
+  ],
+  "interpretation": "Byte-level difference only. This comparison does not determine its cause or constitute a new cold build."
+}

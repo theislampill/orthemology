@@ -1,0 +1,280 @@
+{
+  "historical_receipt": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+  "historical_receipt_sha256": "73dd81be434394a11406a045949151129ee43f71bb8c7b151ec40e801ed96950",
+  "declarations": [
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Received",
+      "historical": {
+        "type_sha256": "6935e5d287507f1a9a9c46a0a82a934c6639e6ef7aa4a867b579d40759b170cd",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "6935e5d287507f1a9a9c46a0a82a934c6639e6ef7aa4a867b579d40759b170cd",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Root",
+      "historical": {
+        "type_sha256": "83b044c96f2f14e9237a1052bfc10fe7499d8aec4efebd577cbabbc50ccf057b",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "83b044c96f2f14e9237a1052bfc10fe7499d8aec4efebd577cbabbc50ccf057b",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Necessary",
+      "historical": {
+        "type_sha256": "1beba629d24c5e937df9ee3ddb9bba25d5915bb6550b3da374adf5a62eb90c76",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "1beba629d24c5e937df9ee3ddb9bba25d5915bb6550b3da374adf5a62eb90c76",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.UniformRoot",
+      "historical": {
+        "type_sha256": "67acd0561fa5d9f0afa5009c6d37230550d4d6df1a5e1420f88cb5c55b5f5a40",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "67acd0561fa5d9f0afa5009c6d37230550d4d6df1a5e1420f88cb5c55b5f5a40",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.GenericReception",
+      "historical": {
+        "type_sha256": "1c303343e84885c98f49a44e70280bef99542f88df12903a8d8583781d23ca1b",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "1c303343e84885c98f49a44e70280bef99542f88df12903a8d8583781d23ca1b",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.ActualReceptionPreservation",
+      "historical": {
+        "type_sha256": "4c26e94a966686fabd232b84ebbbef276604c80533923d8ec11bd2a20da14a83",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "4c26e94a966686fabd232b84ebbbef276604c80533923d8ec11bd2a20da14a83",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+      "historical": {
+        "type_sha256": "6689a2796f2a353c8522819d3b0e0710529618a427d8541e3daccad40f3c4ee0",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "6689a2796f2a353c8522819d3b0e0710529618a427d8541e3daccad40f3c4ee0",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+      "historical": {
+        "type_sha256": "b2e06edf1a7e3532770f5aee1c5339907932d7b0e46faafb1683fb74e81b4fac",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "b2e06edf1a7e3532770f5aee1c5339907932d7b0e46faafb1683fb74e81b4fac",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception",
+      "historical": {
+        "type_sha256": "e1da8c54925d7141ca9ea567fffd100e8efa0bb2763798552b02eefd8159ea88",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "e1da8c54925d7141ca9ea567fffd100e8efa0bb2763798552b02eefd8159ea88",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform",
+      "historical": {
+        "type_sha256": "39b784e48b1c9015f92eb7f3881c5d1b5dd68d0b2c07c69eaa4105e0cb78d2ed",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "39b784e48b1c9015f92eb7f3881c5d1b5dd68d0b2c07c69eaa4105e0cb78d2ed",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.generic_of_fixed_origin",
+      "historical": {
+        "type_sha256": "ad1f2f3771fc42eebf8d66602ad393fc3fc8d65913b23bc1ba7777c46ed5c1de",
+        "axioms": []
+      },
+      "current": {
+        "type_sha256": "ad1f2f3771fc42eebf8d66602ad393fc3fc8d65913b23bc1ba7777c46ed5c1de",
+        "axioms": []
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.changingDep",
+      "historical": {
+        "type_sha256": "a8397fdec9d344d83e1f8f77e3ed96d631752002f74fd7d7c062b6c846cc4d37",
+        "axioms": [
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "a8397fdec9d344d83e1f8f77e3ed96d631752002f74fd7d7c062b6c846cc4d37",
+        "axioms": [
+          "propext"
+        ]
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.actual_preservation_does_not_give_uniform",
+      "historical": {
+        "type_sha256": "37e46cff22b8c47c3900105c6c420d7738b205096c4206bb9c4e5d3d1f0f2e60",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "37e46cff22b8c47c3900105c6c420d7738b205096c4206bb9c4e5d3d1f0f2e60",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin",
+      "historical": {
+        "type_sha256": "171376898862858223cf2ee4055ed7dc0b0d42feb93ee0af4d3ed84d2aa58827",
+        "axioms": [
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "171376898862858223cf2ee4055ed7dc0b0d42feb93ee0af4d3ed84d2aa58827",
+        "axioms": [
+          "propext"
+        ]
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.generic_not_fixed_origin",
+      "historical": {
+        "type_sha256": "645270f1d93465cf03c90eb0d533d8915c374c953553a2d8d916568e2e8382be",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "645270f1d93465cf03c90eb0d533d8915c374c953553a2d8d916568e2e8382be",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder",
+      "historical": {
+        "type_sha256": "7250267f85b38e1873e5478b49092952eedda65e3789ff516d8d339006300547",
+        "axioms": [
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "7250267f85b38e1873e5478b49092952eedda65e3789ff516d8d339006300547",
+        "axioms": [
+          "propext"
+        ]
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.generic_allows_modal_cycle",
+      "historical": {
+        "type_sha256": "60ba2e7d077dca9d3cbc122e5d027ff6606698cd0bed033db6f1fdd1fe391137",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "60ba2e7d077dca9d3cbc122e5d027ff6606698cd0bed033db6f1fdd1fe391137",
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "match": true
+    },
+    {
+      "name": "Orthemology.Tranche3.SourceIdentity.Controls.reception_alone_does_not_give_necessary",
+      "historical": {
+        "type_sha256": "6fbb8f8129557c7a2e2c0f4d069658779b349968aef3e9b2b60ad5cc4b78bdd0",
+        "axioms": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "current": {
+        "type_sha256": "6fbb8f8129557c7a2e2c0f4d069658779b349968aef3e9b2b60ad5cc4b78bdd0",
+        "axioms": [
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "match": true
+    }
+  ]
+}

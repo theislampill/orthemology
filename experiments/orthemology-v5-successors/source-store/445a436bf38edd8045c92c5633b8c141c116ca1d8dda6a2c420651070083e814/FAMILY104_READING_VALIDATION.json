@@ -1,0 +1,34 @@
+{
+  "kind": "STATIC_DELIVERABLE_AND_SOURCE_IDENTITY_CHECK",
+  "scope": "Artifact syntax, selected source identities, declared reading ranges and manuscript section coverage only; not mathematical verification or scientific replay.",
+  "result": "PASS",
+  "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "target_commit": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+  "source_records_rebound": 107,
+  "reading_level_counts": {
+    "FULL_TEXT_READ": 65,
+    "SELECTED_RANGES_READ": 8,
+    "DECLARATION_SCAN_ONLY": 4,
+    "ACQUIRED_NOT_READ": 13,
+    "STRUCTURED_SEARCH": 9,
+    "SELECTED_SECTION_READ": 1,
+    "STRUCTURED_RECORD_READ": 2,
+    "SELECTED_RECORDS_READ": 1,
+    "FORMAT_AND_SELECTED_RECORD_READ": 1,
+    "HEADING_AND_BINDING_SCAN": 1,
+    "SELECTED_PASSAGES_READ": 2
+  },
+  "manuscript_section_files_read": {
+    "Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026": 9,
+    "Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026": 6,
+    "Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026": 10,
+    "Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026": 4
+  },
+  "source_files_modified": false,
+  "lake_or_lean_executed": false,
+  "experiments_executed": false,
+  "formal_replay": "NOT_RUN",
+  "transitive_dependency_audit": "NOT_RUN",
+  "new_formalisation": "NONE",
+  "reading_note": "All four substantive manuscript bodies read. Only selected Lean bodies/ranges and declared metadata/registry records read; acquired-only files are distinguished."
+}

@@ -1,0 +1,101 @@
+{
+  "utc": "2026-10-07T14:34:04.715539+00:00",
+  "selections": [
+    {
+      "scope": "Full argument; final paragraph repaired; sections2–5 repeated",
+      "original_sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+      "included_record_alias": "t20/reading/warrant-threshold-audit/AUDIT.md",
+      "included_record_sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+      "included_record_relation": "Public projection of the historically read original; changed public bytes are separately identified."
+    },
+    {
+      "scope": "Full source/limits statement",
+      "original_sha256": "453ab0a58bedab86b156960c96dcce4c90d457b5f0174dc0d71db510552baa39",
+      "included_record_alias": "t20/reading/warrant-threshold-audit/SOURCES_AND_LIMITS.md",
+      "included_record_sha256": "e180a55591a501f753b0b53e4de7f76013499640ff72bc9c907224203d61cc6c",
+      "included_record_relation": "Public projection of the historically read original; changed public bytes are separately identified."
+    },
+    {
+      "scope": "Earlier full assessment, combined displays with opening repair",
+      "original_sha256": "6f2f4c0dfadaf2d46acf9ab7f82a94d2d1df48f3430e0df7fa808517272b81da",
+      "included_record_alias": "t20/reading/actual-common-source-assessment/ASSESSMENT.md",
+      "included_record_sha256": "61e2b4f9651068961090b2991408596670599f57b4b48c1823b6fe5173de4129",
+      "included_record_relation": "Public projection of the historically read original; changed public bytes are separately identified."
+    },
+    {
+      "scope": "P40–74",
+      "sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "selected_text_sha256": "fb99134336d0a9593a7d6c7b8d78018a23dd0b6e375dd277dee5e77153791642",
+      "historical_object_description": "Seventeenth report retained text extraction, 5 October 2026",
+      "body_included": false
+    },
+    {
+      "scope": "P60–78",
+      "sha256": "edcd0da0ccebd94ea7a8a14070d37f7212e62aeddc275e64d25cbe186e249210",
+      "selected_text_sha256": "7ae7ad534add063fe642ad606b4c28a65ee06781b7120468f94026af0ef2809a",
+      "historical_object_description": "Nineteenth report retained text extraction, 6 October 2026",
+      "body_included": false
+    },
+    {
+      "scope": [
+        "M0583",
+        "M0584",
+        "M0585",
+        "M0586",
+        "M0587",
+        "M0588",
+        "M0589",
+        "M0590"
+      ],
+      "sha256": "3d8eb7969da34586aa09fc61e3a49f1d5c38ba4015689d984b54d9c01f560116",
+      "selected_text_sha256": "e50b8b71a94413e7f46065444c8a894180d17ba3acb939881d9ff68d172856e4",
+      "historical_object_description": "Miftah received electronic index",
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "body_included": false
+    },
+    {
+      "scope": [
+        "SF-S001-L0031",
+        "SF-S001-L0032",
+        "SF-S001-L0033",
+        "SF-S001-L0034"
+      ],
+      "sha256": "5505f29f0578540d5fb2f808ccf10fcd0524bd08dfa792f51fd286dd0c3e0390",
+      "selected_text_sha256": "9e3495ca929ff981d7558d1d88579805b4f0a37d329174cdd329228a346dd049",
+      "historical_object_description": "Safadiyya received electronic index",
+      "source_url": "https://www.islamicbook.ws/amma/alsfdit-001.html",
+      "body_included": false
+    },
+    {
+      "scope": "Complete saved excerpt",
+      "sha256": "e40857942847966b725fef86ea0cd3f351bdee0ce3166d93843843e82f7fba24",
+      "historical_object_description": "Jami VI saved electronic selection E183–E186",
+      "body_included": false
+    },
+    {
+      "scope": "Complete replacement excerpt",
+      "sha256": "0208a8a0ade8b6fccfdc867c0d9355d1604f7268c556865b60345447bbe50b9c",
+      "historical_object_description": "Minhaj II saved electronic selection V02L0111–0120",
+      "body_included": false
+    },
+    {
+      "scope": "NB-S003-L0014–0018 retained from my earlier complete final-division reading; not fresh credit",
+      "sha256": "ae7b03d45c069d4a2fc66ceb7562ded68db1fe292d2b84749ddffb906b703053",
+      "historical_object_description": "Nubuwwat received electronic index",
+      "source_url": "https://www.islamicbook.ws/amma/alnbwat-003.html",
+      "body_included": false
+    },
+    {
+      "scope": "Prior reading provenance V2windows16–17",
+      "original_sha256": "4b546c683b58f7fdb17253feccd2189f80fef3c0aef8034b35c1c0ff83cfa9e5",
+      "included_record_alias": "t20/reading/nubuwwat/final-body/READ_RECEIPTS.json",
+      "included_record_sha256": "e85edd2424fe5137d2c3a606ce319e17b9900d6874267137ff878f8fd9825cd3",
+      "included_record_relation": "Public projection of the historically read original; changed public bytes are separately identified."
+    }
+  ],
+  "new_whole_book_claim": false,
+  "new_image_views": 0,
+  "prior_assessment_seal_entries": 30,
+  "prior_assessment_seal_unchanged": true,
+  "display_history": "Initial earlier-assessment display and initial Minhaj display truncated; complete repairs described in SOURCES_AND_LIMITS.md. Raw execution identifiers are excluded."
+}

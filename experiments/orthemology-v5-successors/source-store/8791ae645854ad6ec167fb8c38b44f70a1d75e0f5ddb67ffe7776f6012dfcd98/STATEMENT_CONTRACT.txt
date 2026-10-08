@@ -1,0 +1,105 @@
+MODAL UNION SOURCE CERTIFICATES
+Exact statement contract and verification boundary
+Lean 4.19.0; core only; 7 October 2026
+
+Implemented target
+
+For one fixed frame of carriers, worlds, admissibility and crossing edges,
+source equality is forced by the pure local equality language exactly when
+the carrier vertices lie in the same component of the undirected union of
+admitted crossing edges.
+
+The kernel-checked main declarations are:
+- connected_equal: anchored local equalities propagate through finite closure.
+- edgeLaw_of_faithful_transport: local source unity plus retained endpoint
+  provenance and equality-reflecting transport gives the anchored edge law.
+- forcedEqual_iff_connected: exact consequence theorem using component sources.
+- expandedForced_iff_connected: the same theorem for varying faithful world
+  transports and local source attributions over a fixed crossing frame.
+- targetForced_iff_connected: exact anchored-target consequence boundary.
+- source_unique_of_covered_connected: represented relevant originals are equal
+  when their carriers connect to the anchor; coverage is a separate hypothesis.
+
+Connected is the inductively generated finite reflexive/symmetric/transitive
+closure of the undirected union relation. This is ordinary finite-path
+connectivity, with no transfinite limiting connection.
+
+Universe and interpretation discipline
+
+V : Type u. ForcedEqual quantifies over S' : Type u and maps V -> S'. Therefore
+Quotient(componentSetoid F), also Type u, is genuinely among the source sorts
+quantified over. The converse does not quantify only over a fixed small source
+sort. A higher-universe ULift control compiles as well.
+
+FaithfulInterpretation keeps F fixed while varying its Source : Type u,
+Local : W -> Type u, source maps and transports. Its transports reflect equality
+for every pair of source identities; its provenance retention is required only
+at admitted crossing endpoints. Local source maps are total formal functions,
+but their values away from retained crossings play no role. Finite controls
+separately verify endpoint availability.
+
+The direct transport-to-edge-law and propagation lemmas permit independent
+source and local-source universes. The forcing definitions use the carrier
+universe to guarantee an adequately large canonical interpretation.
+
+The component quotient constructs an abstract interpretation of unknown
+carrier source labels. It does not identify distinct actual originals,
+quotient a supplied real source assignment, or enact a history transformation.
+The fixed-attribution converse 'same actual source implies connectivity' is
+not asserted. Extra source equalities, inequalities, cardinality restrictions,
+global plenitude, or substantive metaphysical axioms change the premise
+language and are outside this exact-completeness claim.
+
+Finite kernel-checked controls
+
+1. Three carriers and three worlds: the two chain edges occur in different
+   worlds. Union endpoints connect; neither a common witness world for both
+   edges nor a world-local endpoint path exists. Edge endpoints are available.
+2. Rigid Bool source identities with a changed middle carrier's provenance:
+   local unity holds, union endpoints connect, anchored sources differ, and
+   retention fails. No contradiction is inferred from the incomplete bridge.
+3. Noninjective transport with transported provenance retained: local unity
+   holds and union endpoints connect, but two anchored identities coalesce.
+4. Empty crossing frame: a two-color law-respecting assignment separates the
+   endpoints, proving nonconnectivity and absence of forced equality in both
+   the pure and faithful-transport languages.
+5. Singleton-source restriction: every Unit-valued attribution is equal on
+   disconnected endpoints. This blocks an improperly restricted converse.
+6. An unused source value remains outside the attribution range, making the
+   coverage limitation explicit. No metaphysical possibility is inferred.
+
+Rejected-claim controls
+
+negative-controls/RejectedClaims.lean intentionally asks decide to prove three
+false finite claims: the failed retention equality, injectivity of the
+collapsing transport, and an absent edge in a selected world. Replay requires
+exactly three semantic decide rejections and nonzero exit. This file is not
+one of the three green modules.
+
+Trust and scope
+
+The proof package verifies conditional mathematical statements. Admissibility,
+source unity, faithful provenance, and actual coverage remain supplied
+premises. The code does not prove any crossing metaphysically possible, settle
+the Akmaliyya perfection dispute, authenticate source testimony, or demonstrate
+physical execution. These finite formal controls are not a new concolic
+execution campaign or an exhaustive enumeration of metaphysical worlds.
+
+No Mathlib, custom axioms, admitted goals, native_decide, solver oracle, or
+external proof checker is used. Standard Lean axiom dependencies are recorded
+separately rather than hidden. No inspected canonical repository code was
+changed by this work. Sources and records are isolated in this research folder.
+
+Frozen written inputs remain unchanged:
+T20_modal_union_component_theorem_v1.txt
+SHA256 96388b02a6b12c3ac1cd5fa12d78bd2ecfdcaa544efa914877ab08bfe6e7c59b
+T20_modal_union_completeness_and_ownership_v1.txt
+SHA256 a0b66179fac32162462d91b1b346ebdd797d46746207e88aaf452f64a4d181ac
+
+V2 portable recipe
+
+The mathematical source files are unchanged from v1. Before any writes, the
+v2 harness rejects existing output paths and canonical paths equal to or inside
+its input tree. A fresh output requires an existing parent and is atomically
+created. All new Lean module and rejected-claim invocations explicitly select
+--trust=0. This recipe is newly verified for v2, not attributed to the v1 run.

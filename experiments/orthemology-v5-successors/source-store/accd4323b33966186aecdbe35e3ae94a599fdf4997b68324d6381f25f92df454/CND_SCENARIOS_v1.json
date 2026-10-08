@@ -1,0 +1,66 @@
+{
+  "status": "six specified formula diagnostics passed",
+  "scope": "These assignments do not certify metaphysical possibility or T17 fidelity.",
+  "cases": [
+    {
+      "name": "role_switch",
+      "CND": true,
+      "PRI": false,
+      "SUP": true,
+      "weak_participation": true,
+      "actual_nonreceipt": true,
+      "essential_nonreceipt": false,
+      "production_in_every_world": true
+    },
+    {
+      "name": "participation_only",
+      "CND": true,
+      "PRI": true,
+      "SUP": false,
+      "weak_participation": true,
+      "actual_nonreceipt": true,
+      "essential_nonreceipt": false,
+      "production_in_every_world": true
+    },
+    {
+      "name": "different_respect",
+      "CND": true,
+      "PRI": true,
+      "SUP": false,
+      "weak_participation": false,
+      "actual_nonreceipt": true,
+      "essential_nonreceipt": false,
+      "production_in_every_world": true
+    },
+    {
+      "name": "different_effect",
+      "CND": true,
+      "PRI": true,
+      "SUP": false,
+      "weak_participation": false,
+      "actual_nonreceipt": true,
+      "essential_nonreceipt": false,
+      "production_in_every_world": true
+    },
+    {
+      "name": "duplicate_same_respect",
+      "CND": false,
+      "PRI": true,
+      "SUP": true,
+      "weak_participation": true,
+      "actual_nonreceipt": true,
+      "essential_nonreceipt": false,
+      "production_in_every_world": true
+    },
+    {
+      "name": "positive_antecedent",
+      "CND": true,
+      "PRI": true,
+      "SUP": true,
+      "weak_participation": true,
+      "actual_nonreceipt": true,
+      "essential_nonreceipt": true,
+      "production_in_every_world": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+'T20IndependentReview.archive_before_origin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T20IndependentReview.empty_support_has_no_cut' depends on axioms: [propext, Quot.sound]
+'T20IndependentReview.empty_family_minimal_cut' depends on axioms: [propext, Quot.sound]
+'T20IndependentReview.explicit_axiom_has_empty_support' depends on axioms: [propext, Quot.sound]
+'T20IndependentReview.underivable_can_have_true_meaning' depends on axioms: [propext, Quot.sound]

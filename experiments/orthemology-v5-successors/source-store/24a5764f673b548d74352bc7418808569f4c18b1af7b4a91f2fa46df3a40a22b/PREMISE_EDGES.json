@@ -1,0 +1,96 @@
+{
+  "edges": [
+    {
+      "id": "C1",
+      "antecedent": "actual sole production of x",
+      "consequent": "another actual sole producer of the same x excluded",
+      "kind": "logical once sole-production sense is fixed",
+      "source": "MF175–177;Dar016L627–629"
+    },
+    {
+      "id": "C2",
+      "antecedent": "genuine contribution to a joint effect",
+      "consequent": "each contributor needs the other for that joint effect",
+      "kind": "causal/constitutive",
+      "source": "MF175–178;Dar016L629–649"
+    },
+    {
+      "id": "C3",
+      "antecedent": "powers borne separately by two",
+      "consequent": "possible united bearer preserves or increases total power",
+      "kind": "additional metaphysical coalescence premise",
+      "source": "MF179–180"
+    },
+    {
+      "id": "C4",
+      "antecedent": "possible higher independent efficacy + cannot perfect itself",
+      "consequent": "deficient cooperator is not self-necessary/self-sufficient",
+      "kind": "perfection and causal bridge,not bare noncontradiction",
+      "source": "MF180–181"
+    },
+    {
+      "id": "C5",
+      "antecedent": "necessary self is sufficient in essence,attributes,acts",
+      "consequent": "external co-enabling of its act defeats complete independence",
+      "kind": "metaphysical scope of intrinsic necessity",
+      "source": "MF180–183;Dar016L721–739"
+    },
+    {
+      "id": "C6",
+      "antecedent": "actual world has interconnected effects",
+      "consequent": "independent unconnected maker-domains fail for this world",
+      "kind": "empirical/metaphysical common-source bridge",
+      "source": "Dar016L710–711,L738–739;Wiki12L227"
+    },
+    {
+      "id": "C7",
+      "antecedent": "reciprocal receipt of the capacity to enable",
+      "consequent": "vicious prior efficient circle",
+      "kind": "causal-priority contradiction",
+      "source": "Saf001L134–141;Wiki12L211–215"
+    },
+    {
+      "id": "C8",
+      "antecedent": "third cause enables both correlates",
+      "consequent": "concomitance possible,but correlates are not independent originals",
+      "kind": "explicit source distinction",
+      "source": "Salim2:172,IslamHouseL2421–2423;Wiki12L228–229;Dar016L715–720"
+    },
+    {
+      "id": "A1",
+      "antecedent": "intrinsic enduring power",
+      "consequent": "enduring possibility of the relevant act",
+      "kind": "modal;not by itself actual eternal tokens",
+      "source": "Saf001L94;Wiki12L228–232"
+    },
+    {
+      "id": "A2",
+      "antecedent": "particular divine act emerges successively",
+      "consequent": "not thereby separated creature,external receipt,or newly acquired essential perfection",
+      "kind": "source-ontology distinction",
+      "source": "Saf001L93–103;Saf002L577–603;Adwa100,107,368–373"
+    },
+    {
+      "id": "A3",
+      "antecedent": "complete absence of all successive voluntary matters at a time + later novelty",
+      "consequent": "later novelty lacks contemporaneous sufficient causal difference",
+      "kind": "additional causal argument against total stripping/global inactivity",
+      "source": "Salim2:142,IslamHouseL2254–2257;Wiki11L229–239;Saf003L079–088;Adwa413–415"
+    },
+    {
+      "id": "A4",
+      "antecedent": "successive voluntary matters inseparable from agent",
+      "consequent": "one eternally fixed particular act cannot account for successive effects",
+      "kind": "metaphysical temporal/act-kind distinction",
+      "source": "Salim2:143–149;Wiki11L233–243;Wiki12L93–117;Adwa414–418"
+    },
+    {
+      "id": "A5",
+      "antecedent": "kind/type endures",
+      "consequent": "neither a particular eternal act nor every kind continuously token-active follows",
+      "kind": "quantifier/type discipline",
+      "source": "Wiki11L207–215,L223–225;Wiki12L97–117,L230–233"
+    }
+  ],
+  "formalisation_status": "Source reconstruction only;no new Lean proof or premise-preserving countermodel certification."
+}

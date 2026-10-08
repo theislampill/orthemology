@@ -1,0 +1,125 @@
+{
+  "work": "كتاب النبوات",
+  "author": "أحمد بن عبد الحليم ابن تيمية",
+  "scope": "Historical acquisition and bibliographic preparation, with subsequent completed traversal described in FINAL_VERIFICATION.json",
+  "prepared_utc": "2026-10-07T12:46:26.658680+00:00",
+  "primary_scan": {
+    "source_body_included": false,
+    "sha256": "8a351f41452a3ec86a1819a069d8c23e88f0a36519e12016ce4e10a9e9292d93",
+    "bytes": 15879923,
+    "pdf_positions": 1198,
+    "text_layer_words": 0,
+    "public_listing": "https://arabicpdfs.com/كتاب-النبوات-pdf/",
+    "public_file": "https://drive.google.com/file/d/1N7PDd1uV7BsT-xluSRscUmy5ypUl4CWo/view?usp=sharing",
+    "editor": "عبد العزيز بن صالح الطويان",
+    "publisher": "أضواء السلف، الرياض",
+    "edition": "الأولى",
+    "date": "1420 AH / 2000 CE",
+    "imprint_verified_pdf": [
+      1,
+      2
+    ],
+    "publisher_volumes": 2,
+    "volume_boundary": "Shamela11817 starts volume2 at printed613; merged PDF is continuous612/613 with no separate volume2 title. No unseen volume2 cover claim.",
+    "authorial_body": {
+      "volume1_print_pdf": [
+        129,
+        612
+      ],
+      "volume2_print_pdf": [
+        613,
+        1103
+      ],
+      "total_scan_positions": 975
+    },
+    "front_matter": {
+      "title_imprint": [
+        1,
+        2
+      ],
+      "university_foreword": [
+        3,
+        4
+      ],
+      "editorial_study": [
+        5,
+        119
+      ],
+      "blank": [
+        120
+      ],
+      "manuscript_plates": [
+        121,
+        125
+      ],
+      "earlier_print_plates": [
+        126,
+        128
+      ]
+    },
+    "end_matter": {
+      "blank": [
+        1104,
+        1106
+      ],
+      "indices_divider": [
+        1105
+      ],
+      "indices_body": [
+        1107,
+        1198
+      ],
+      "indices_present": [
+        "Quran1107",
+        "Hadith1153",
+        "Athar1165",
+        "Subjects1169"
+      ],
+      "announced_indices": 10,
+      "observed_indices": 4,
+      "limit": "Difference concerns modern editorial backmatter, not missing authorial chapters. Not a page-by-page all-scan quality certification."
+    },
+    "historical_completeness": "Editor argues received work complete at93–96; reports earlier doubts; one manuscript with reported intact before/after contexts. No independent authentication or complete manuscript collation."
+  },
+  "electronic": {
+    "host": "Islamicbook",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "lines": 436,
+    "words": 101419,
+    "body_sha256": "7939b86c685acfa36b88917bbdc474c0cb2f8590752655ec638cb416ee6cb467",
+    "section_volumes_equivalent": false,
+    "volume2_anchor": "NB-S002-L0050",
+    "edition_attribution": "Uncertified older electronic witness; not a diplomatic Tuwayyan transcription.",
+    "correspondence": "Opening, volume2 anchor, ending match subject/text; explicit local differences and omitted apparatus.",
+    "source_urls": [
+      "https://www.islamicbook.ws/amma/alnbwat-001.html",
+      "https://www.islamicbook.ws/amma/alnbwat-002.html",
+      "https://www.islamicbook.ws/amma/alnbwat-003.html"
+    ]
+  },
+  "auxiliary_candidate": {
+    "source_body_included": false,
+    "sha256": "6fd97bc73a2ecc222620d8c253b3fcb72a6d90d5b30b84afc9ca10b1e5e87645",
+    "source": "https://saaid.org/book/20/13342.pdf",
+    "pdf_positions": 471,
+    "title": "النبوات عند الإمام ابن تيمية، ضبط وتحقيق أشرف عبد الرافع الدرفيلي",
+    "status": "Acquired candidate, excluded from selected primary reading scope; no whole correspondence or independent manuscript status verified."
+  },
+  "denied_held_objects": [
+    {
+      "url": "https://archive.org/download/FPnbwat/nbwat.pdf",
+      "outcome": "web403",
+      "disposition": "held; no retry or alternate Archive route"
+    },
+    {
+      "url": "https://islamhouse.com/ar/books/272842/",
+      "outcome": "web429",
+      "disposition": "held; no retry"
+    }
+  ],
+  "earlier_task": "Completed actual-common-source assessment not changed."
+}

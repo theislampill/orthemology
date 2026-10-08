@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-07T09:52:10.712881+00:00",
+  "volumes": {
+    "2": {
+      "lines": 437,
+      "words": 85369,
+      "source_line_mismatches": [],
+      "body_exactly_matches_mapping": true,
+      "body_sha256": "e164225c49e37a4e94dc54ca9f56a59fd96581802b8a5beb7b27c81c7d4b8856",
+      "first": {
+        "source_section": "003",
+        "source_line": 26,
+        "id": "V02L0001"
+      }
+    },
+    "3": {
+      "lines": 424,
+      "words": 67886,
+      "source_line_mismatches": [],
+      "body_exactly_matches_mapping": true,
+      "body_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "first": {
+        "source_section": "005",
+        "source_line": 64,
+        "id": "V03L0001"
+      }
+    }
+  },
+  "status": "PASS"
+}

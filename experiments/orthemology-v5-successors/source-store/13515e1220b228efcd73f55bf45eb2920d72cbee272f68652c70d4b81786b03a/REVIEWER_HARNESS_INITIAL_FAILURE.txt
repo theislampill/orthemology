@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<execution-workspace>/tranche20/testimony-continuation/grounded-attestation-independent-review/verify_evidence.py", line 52, in <module>
+    assert not str(p).startswith(str(src)),line
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: <execution-workspace>/tranche20/testimony-continuation/grounded-attestation-independent-review/objects/GroundedSupport.olean

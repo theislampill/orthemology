@@ -1,0 +1,30 @@
+{
+  "scope": "Kernel check of explicit formula consequence and finite assignments; no metaphysical premise verification",
+  "lean_executable": {
+    "bytes": 8880,
+    "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "identity": "Official Lean 4.19.0 Linux x86_64 executable; exact binary hash retained"
+  },
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "lean_input": {
+    "path": "CNDModalScope.lean",
+    "bytes": 5862,
+    "sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9"
+  },
+  "exit_code": 0,
+  "contains_sorry_admit_or_axiom_declaration": false,
+  "scenario_input": {
+    "path": "check_cnd_scenarios.py",
+    "bytes": 2581,
+    "sha256": "674472fdd85bfdd4518a4a7a6d44782137457a5d75b8dc6699daf8ab599c91e5"
+  },
+  "scenario_result": {
+    "path": "CND_SCENARIOS_v1.json",
+    "bytes": 1666,
+    "sha256": "accd4323b33966186aecdbe35e3ae94a599fdf4997b68324d6381f25f92df454"
+  },
+  "general_lemma_dependencies": "No axioms, as printed in CND_AUTHOR_AXIOM_SUMMARY_PUBLIC.txt",
+  "finite_proof_dependencies": "switch_overlap uses propext and Quot.sound through simplification; no sorryAx. Other printed finite CND check has no axioms.",
+  "original_author_receipt_sha256": "8356b040d22b59fcb9f9abd512ae0dbbcdd75e5f0ebbcc78aeb376a60bc128f8",
+  "projection_scope": "Portable identity fields only; author verification is not the independent root review."
+}

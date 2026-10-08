@@ -39,7 +39,24 @@
         "D15-T14-NECESSARY-TRUTH-BEARER",
         "D15-T15-KOONS-TOTALITY",
         "T16-TEMPORAL",
-        "T16-SOURCE-ASSESSMENT"
+        "T16-SOURCE-ASSESSMENT",
+        "T17-ORIGINAL-COMPLETION",
+        "T17-NECESSARY-BEARER",
+        "T17-ESSENTIAL-INDEPENDENCE",
+        "T17-WISE-VOLUNTARY-DETERMINATION",
+        "T18-NONCAUSAL-EXTENSION-STOP",
+        "T19-CND",
+        "T19-SOURCE-MODE",
+        "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+        "T19-COMMON-CONNECTED-SOURCE",
+        "T20-CND-ESSENTIALITY-SCOPE",
+        "T20-MODAL-CROSSING-COMPLETENESS",
+        "T20-ORIGINAL-GROUND-ROBUSTNESS",
+        "T20-TYPED-ORIGINAL-BEARER-ABC",
+        "T20-ANCHORED-FIELD-SOURCE",
+        "T20-JOINT-SAME-BEARER-MODEL",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+        "T20-EMERGENCE-TYPE-CONTROL"
       ],
       "scope": "Orthability to necessary being. Route from orthability and understood correction to actual original productive sourcehood and necessary particular being; whole-origin completion, identification of the same bearer and the modal warrant remain distinct targets."
     },
@@ -69,7 +86,27 @@
         "D15-T14-DIRECTED-POWERS-INTELLECT",
         "D15-T14-NECESSARY-PARTICULAR-MIND",
         "T16-TEMPORAL",
-        "T16-SOURCE-ASSESSMENT"
+        "T16-SOURCE-ASSESSMENT",
+        "T17-ESSENTIAL-INDEPENDENCE",
+        "T17-ELIGIBLE-STANDING-POWER",
+        "T17-OWNED-VERACITY",
+        "T17-WISE-VOLUNTARY-DETERMINATION",
+        "T19-CND",
+        "T19-SOURCE-MODE",
+        "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+        "T19-COMMON-CONNECTED-SOURCE",
+        "T19-ATTESTATION-DISCRIMINATION",
+        "T19-WALID-RECEPTION-SCOPE",
+        "T19-ASSERTED-OBLIGATION-TRANSFER",
+        "T20-CND-ESSENTIALITY-SCOPE",
+        "T20-MODAL-CROSSING-COMPLETENESS",
+        "T20-ORIGINAL-GROUND-ROBUSTNESS",
+        "T20-TYPED-ORIGINAL-BEARER-ABC",
+        "T20-ANCHORED-FIELD-SOURCE",
+        "T20-VERACITY-DEPENDENCY-AUDIT",
+        "T20-JOINT-SAME-BEARER-MODEL",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+        "T20-EMERGENCE-TYPE-CONTROL"
       ],
       "scope": "Source and attribute ascent. Ascent from established sourcehood to source-specific cognitive, intrinsic and practical attributes, including standing Knowledge, integrity, authoritative attestation, disclosure and recipient warrant."
     },
@@ -97,7 +134,14 @@
         "D15-T14-CLARKE-FIDELITY",
         "D15-T14-MENTAL-AGENCY-NORMS",
         "D15-T15-LOCAL-NATURAL-STANDARDS",
-        "T16-SOURCE-ASSESSMENT"
+        "T16-SOURCE-ASSESSMENT",
+        "T17-ORDINARY-TESTIMONIAL-WARRANT",
+        "T17-FITTINGNESS-LOCAL-AUTHORITY",
+        "T19-COMMON-CONNECTED-SOURCE",
+        "T19-ASSERTED-OBLIGATION-TRANSFER",
+        "T20-VERACITY-DEPENDENCY-AUDIT",
+        "T20-JOINT-SAME-BEARER-MODEL",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
       ],
       "scope": "Objective norm-fixing. The warrant and grounding of objective standards, distinguishing local correctness, a supplied standard, constitutive or functional success, truth and practical authority."
     },
@@ -133,7 +177,15 @@
         "T16-COMPETENCE",
         "T16-LOOKAHEAD",
         "T16-SIGNED-SERVICE",
-        "T16-DIRECT-CONTROLLER"
+        "T16-DIRECT-CONTROLLER",
+        "T18-ONE-CHANGE-CRITERION",
+        "T18-RATIONAL-LEAN-ENDPOINT",
+        "T18-RATIONAL-P-COMPLETE",
+        "T18-REAL-NONUNIFORM",
+        "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS",
+        "T18-HIDDEN-PRIORITY-CALIBRATION",
+        "T20-GROUNDED-CONTINUATION-SUPPORT",
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER"
       ],
       "scope": "Unknown-structure restoration. Restoration of a specified capacity across an explicitly declared family of unfamiliar structures or changes, accounting for model coverage, interventions, failures and continuing resources."
     },
@@ -172,7 +224,9 @@
         "T10-MODEL-CHECKER",
         "T10-OCCURRENCE-EFFECTS",
         "T10-READ-COST",
-        "T16-CORE-ASSURANCE"
+        "T16-CORE-ASSURANCE",
+        "T20-GROUNDED-CONTINUATION-SUPPORT",
+        "T20-TRACE-OBSERVATION-COPYING"
       ],
       "scope": "Provenance-resilient restoration. Preservation or recovery of usable content or capacity across provenance loss or change, with the claimed historical source, warrant, operating role, authority and continuing support separately specified."
     },
@@ -199,7 +253,16 @@
         "T10-ROBUST-COMPACT-CERTIFICATES",
         "T10-TWO-CARD-FRONTIER",
         "T16-POPULATION",
-        "T16-EMPIRICAL"
+        "T16-EMPIRICAL",
+        "T17-ORDINARY-TESTIMONIAL-WARRANT",
+        "T17-ASSIGNMENT-UNCERTAINTY",
+        "T17-BLOCK-ORBIT-CONTRACT",
+        "T17-CLOSED-PLACEMENT-CHECK",
+        "T19-ATTESTATION-DISCRIMINATION",
+        "T19-WALID-RECEPTION-SCOPE",
+        "T19-SOURCE-OCCURRENCE-CONTROLS",
+        "T20-GROUNDED-CONTINUATION-SUPPORT",
+        "T20-TRACE-OBSERVATION-COPYING"
       ],
       "scope": "Warranted collective diagnosis. Warranted collective diagnosis, joint interpretation and attribution of contributions, distinguishing competent group outputs from identification of faults or mechanisms and from lawful pooled action."
     },
@@ -221,7 +284,10 @@
         "T16-LOOKAHEAD",
         "T16-SYNTHESIS-REDUCTION",
         "T16-SYNTHESIS-CLASSIFICATIONS",
-        "T16-ALMOST-SURE"
+        "T16-ALMOST-SURE",
+        "T19-SOURCE-OCCURRENCE-CONTROLS",
+        "T20-GROUNDED-CONTINUATION-SUPPORT",
+        "T20-TRACE-OBSERVATION-COPYING"
       ],
       "scope": "Copying synchronisation and identity. Copying, synchronisation and changed-substrate organisational continuation: preservation or reacquisition of specified roles, consequential state, support, authority and future capacities, distinct from semantic equality, causal lineage and numerical personal identity."
     },
@@ -291,7 +357,25 @@
         "T16-HASC-CLOSED",
         "T16-SIGNED-SERVICE",
         "T16-DIRECT-CONTROLLER",
-        "T16-CORE-ASSURANCE"
+        "T16-CORE-ASSURANCE",
+        "T18-RATIONAL-LEAN-ENDPOINT",
+        "T18-IMPLEMENTATION-QUALIFICATION",
+        "T20-CHURCH-RAW-PROBE",
+        "T20-CND-ESSENTIALITY-SCOPE",
+        "T20-SCALAR-FUSION-IFF",
+        "T20-MODAL-CROSSING-COMPLETENESS",
+        "T20-ORIGINAL-GROUND-ROBUSTNESS",
+        "T20-GROUNDED-CONTINUATION-SUPPORT",
+        "T20-HASE-FURTHER-FAILED-ROUTES",
+        "T20-TYPED-ORIGINAL-BEARER-ABC",
+        "T20-ANCHORED-FIELD-SOURCE",
+        "T20-VERACITY-DEPENDENCY-AUDIT",
+        "T20-PTS-NORMALIZATION-TRANSFER",
+        "T20-TRACE-OBSERVATION-COPYING",
+        "T20-JOINT-SAME-BEARER-MODEL",
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+        "T20-EMERGENCE-TYPE-CONTROL"
       ],
       "scope": "Specification and semantic fidelity. Exact specification and semantic fidelity across statements, source identities, input domains, interpretations, proofs, code, projections and execution; each form of evidence must match the intended claim."
     },
@@ -342,7 +426,13 @@
         "T16-CURRENT-HAS",
         "T16-BRIDGE-HASPLUS",
         "T16-HASC-SOUND",
-        "T16-HASC-CLOSED"
+        "T16-HASC-CLOSED",
+        "T18-HASE-U-DOMAIN-CONTROL",
+        "T18-HASE-INHABITED-J-CONTROL",
+        "T20-CHURCH-RAW-PROBE",
+        "T20-SCALAR-FUSION-IFF",
+        "T20-HASE-FURTHER-FAILED-ROUTES",
+        "T20-PTS-NORMALIZATION-TRANSFER"
       ],
       "scope": "Type-theoretic completion. Type-theoretic completion, including typed and dependent contexts, substitution, stronger universes, soundness and completeness questions; the exact original or candidate calculus must remain identified."
     },
@@ -398,7 +488,18 @@
         "T16-UNARY-SPARSE",
         "T16-ALMOST-SURE",
         "T16-SIGNED-SERVICE",
-        "T16-DIRECT-CONTROLLER"
+        "T16-DIRECT-CONTROLLER",
+        "T17-ASSIGNMENT-UNCERTAINTY",
+        "T17-BLOCK-ORBIT-CONTRACT",
+        "T18-ONE-CHANGE-CRITERION",
+        "T18-RATIONAL-LEAN-ENDPOINT",
+        "T18-RATIONAL-P-COMPLETE",
+        "T18-REAL-NONUNIFORM",
+        "T18-CAUCHY-DECISION-OBSTRUCTION",
+        "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS",
+        "T18-HIDDEN-PRIORITY-CALIBRATION",
+        "T20-TRACE-OBSERVATION-COPYING",
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER"
       ],
       "scope": "Measure and computability. Measure and computability questions for the declared models, representations and observation contracts, distinguishing finite checking, enumeration, search, decision and effective extraction."
     },
@@ -417,7 +518,18 @@
         "T14-LANGUAGE-SENSE-SCOPE",
         "T14-LANGUAGE-SENSE-SOURCE-IDENTITIES",
         "T15-LANGUAGE-ADMISSION-STOP",
-        "T16-OCCURRENCE"
+        "T16-OCCURRENCE",
+        "T17-OWNED-VERACITY",
+        "T17-ORDINARY-TESTIMONIAL-WARRANT",
+        "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+        "T19-ATTESTATION-DISCRIMINATION",
+        "T19-WALID-RECEPTION-SCOPE",
+        "T19-ASSERTED-OBLIGATION-TRANSFER",
+        "T19-SOURCE-OCCURRENCE-CONTROLS",
+        "T20-GROUNDED-CONTINUATION-SUPPORT",
+        "T20-VERACITY-DEPENDENCY-AUDIT",
+        "T20-JOINT-SAME-BEARER-MODEL",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
       ],
       "scope": "Occurrence-sensitive language. Occurrence-sensitive language and composition: source, quotation, assertion or force, version and bearer bindings, translation or transclusion, joint readings and the warrant for a specific composed claim."
     },
@@ -478,7 +590,8 @@
         "T10-PRINTED-COLLATION",
         "T10-SOURCE-VERSION",
         "T16-COMPETENCE",
-        "T16-EMPIRICAL"
+        "T16-EMPIRICAL",
+        "T17-CLOSED-PLACEMENT-CHECK"
       ],
       "scope": "Empirical and specialist validation. Empirical and specialist validation at a declared scope, distinguishing source reading, reported experiments, direct trace inspection, mathematical review, independent empirical reproduction and qualified external assessment."
     }

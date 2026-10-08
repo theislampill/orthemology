@@ -1,0 +1,259 @@
+{
+  "schema": "t20-anchored-source-independent-boundaries-v1",
+  "status": "PASS",
+  "failure": null,
+  "utc": "2026-10-07T09:38:14.487946+00:00",
+  "explicit_trust_level": 0,
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "independent_candidate_build_manifest_sha256": "aac69a75dd4660d4b24069cc48d608abe96a10744e808232eeafe6309d5795be",
+  "boundary_source_sha256": "aff90d7deb39a50d3818341e61d19e0a656aa238f23c9b80dde5d6a8e696a565",
+  "runner_sha256": "85ebf6bc458204fdd62c91c4b0be333237f94fb16fded35a18ff17d42748ecd4",
+  "theorems": [
+    "labels_unique_with_positive_anchor",
+    "common_source_actually_participates_everywhere",
+    "qualification_is_not_dispensed_with",
+    "valid_graph_does_not_certify_real_occurrences",
+    "coverage_and_visibility_do_not_fill_an_omitted_requisite",
+    "participation_variant_needs_a_visible_anchor",
+    "extending_scope_requires_new_certificates",
+    "empty_field_neither_anchors_nor_uniquely_identifies",
+    "qualification_does_not_connect_two_components",
+    "no_source_witness_no_existence",
+    "alternative_witnesses_really_are_exclusive",
+    "path_append",
+    "infinite_chain_connected",
+    "infinite_field_principal_application"
+  ],
+  "steps": [
+    {
+      "label": "BoundaryChecks",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "-o",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/BoundaryChecks.olean",
+        "tranche20/foundational-audit/anchored-source-independent-review/BoundaryChecks.lean"
+      ],
+      "exit_code": 0,
+      "checked": true,
+      "expected": "success",
+      "log": "BoundaryChecks.log"
+    },
+    {
+      "label": "BoundaryReadback",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/BoundaryReadback.lean"
+      ],
+      "exit_code": 0,
+      "checked": true,
+      "expected": "success",
+      "log": "BoundaryReadback.log"
+    },
+    {
+      "label": "01-unqualified-coverage",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/01-unqualified-coverage.lean"
+      ],
+      "exit_code": 1,
+      "checked": true,
+      "expected": "false-proposition rejection",
+      "log": "01-unqualified-coverage.log"
+    },
+    {
+      "label": "02-graph-certifies-admissibility",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/02-graph-certifies-admissibility.lean"
+      ],
+      "exit_code": 1,
+      "checked": true,
+      "expected": "false-proposition rejection",
+      "log": "02-graph-certifies-admissibility.log"
+    },
+    {
+      "label": "03-coverage-certifies-inventory",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/03-coverage-certifies-inventory.lean"
+      ],
+      "exit_code": 1,
+      "checked": true,
+      "expected": "false-proposition rejection",
+      "log": "03-coverage-certifies-inventory.log"
+    },
+    {
+      "label": "04-invisible-anchor-suffices",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/04-invisible-anchor-suffices.lean"
+      ],
+      "exit_code": 1,
+      "checked": true,
+      "expected": "false-proposition rejection",
+      "log": "04-invisible-anchor-suffices.log"
+    },
+    {
+      "label": "05-field-enlargement-preserves-cnd",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/05-field-enlargement-preserves-cnd.lean"
+      ],
+      "exit_code": 1,
+      "checked": true,
+      "expected": "false-proposition rejection",
+      "log": "05-field-enlargement-preserves-cnd.log"
+    },
+    {
+      "label": "06-empty-field-global-uniqueness",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/06-empty-field-global-uniqueness.lean"
+      ],
+      "exit_code": 1,
+      "checked": true,
+      "expected": "false-proposition rejection",
+      "log": "06-empty-field-global-uniqueness.log"
+    },
+    {
+      "label": "07-two-qualified-components-common-source",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/07-two-qualified-components-common-source.lean"
+      ],
+      "exit_code": 1,
+      "checked": true,
+      "expected": "false-proposition rejection",
+      "log": "07-two-qualified-components-common-source.log"
+    },
+    {
+      "label": "08-ability-is-uninterpreted-universal",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/anchored-source-independent-review/boundary-build-v1/08-ability-is-uninterpreted-universal.lean"
+      ],
+      "exit_code": 1,
+      "checked": true,
+      "expected": "false-proposition rejection",
+      "log": "08-ability-is-uninterpreted-universal.log"
+    }
+  ],
+  "candidate_source_unchanged": true,
+  "outputs": [
+    {
+      "path": "01-unqualified-coverage.lean",
+      "sha256": "0c31bf4b234d7f45d22450501442fc76276b41af77ba58a2d88dfae73b3e4d2c",
+      "bytes": 217
+    },
+    {
+      "path": "01-unqualified-coverage.log",
+      "sha256": "a929973b05d359fdc77e74e821a3fa2ba0db461693c9ca9b882f1efe819650e6",
+      "bytes": 330
+    },
+    {
+      "path": "02-graph-certifies-admissibility.lean",
+      "sha256": "e7ae3acca14803815ecc1b7b9416a3c849478ae8c038a7d0c9b4e4ff9ce60660",
+      "bytes": 209
+    },
+    {
+      "path": "02-graph-certifies-admissibility.log",
+      "sha256": "3a1666e4e1d3390d852dd499a247efcfa3c8a3d025781d3a1cd776fe1a1480d3",
+      "bytes": 253
+    },
+    {
+      "path": "03-coverage-certifies-inventory.lean",
+      "sha256": "5f33e21014ceac003d0cbcb6a3ba0ae2aba533fd3135ff62581cac21c64fd8ea",
+      "bytes": 224
+    },
+    {
+      "path": "03-coverage-certifies-inventory.log",
+      "sha256": "c2e8154f5e11199cf97162ebe1c25967d724cfd2d312fae75d49835c3fe13969",
+      "bytes": 310
+    },
+    {
+      "path": "04-invisible-anchor-suffices.lean",
+      "sha256": "7354ce75cf35d5b52782044fd66c80bdfc18450f32270abc1395d233c56c32eb",
+      "bytes": 221
+    },
+    {
+      "path": "04-invisible-anchor-suffices.log",
+      "sha256": "00cedc334f634e934dd1c2e047f9537ec1bcbdf500b9a71d156b237c405d78e4",
+      "bytes": 340
+    },
+    {
+      "path": "05-field-enlargement-preserves-cnd.lean",
+      "sha256": "8fe8de563b5e5bc2da064800553ecc81889cc3ebc3875e5f80521829fa3ba1b1",
+      "bytes": 205
+    },
+    {
+      "path": "05-field-enlargement-preserves-cnd.log",
+      "sha256": "7d263fbcba864785775c6d0f2715560f755cea07cb1b28f409eec6b6507c67db",
+      "bytes": 575
+    },
+    {
+      "path": "06-empty-field-global-uniqueness.lean",
+      "sha256": "061664e7e0503428c8c6548b6a3ce66fb3c01e2a672c01f0a4092792e3c6ff03",
+      "bytes": 231
+    },
+    {
+      "path": "06-empty-field-global-uniqueness.log",
+      "sha256": "d88af4510e79f9cc8561ca04eafe45068075c16dd17217af16c7e06a40fe7dcf",
+      "bytes": 341
+    },
+    {
+      "path": "07-two-qualified-components-common-source.lean",
+      "sha256": "f88f342ab555835088d7c593c65615a6e68a962b03742db31b65bcdbc4b2138f",
+      "bytes": 230
+    },
+    {
+      "path": "07-two-qualified-components-common-source.log",
+      "sha256": "e1e29f7548037d838dc275034cac589f547bb6a33f312b7fe3b522e225314893",
+      "bytes": 388
+    },
+    {
+      "path": "08-ability-is-uninterpreted-universal.lean",
+      "sha256": "17a9e2144c663ef43c4f0e1d4bf402a5b87614f0f9ff054bbf56a26b8bd75705",
+      "bytes": 241
+    },
+    {
+      "path": "08-ability-is-uninterpreted-universal.log",
+      "sha256": "b3d742fa33d0f6cc0094513692b997608cc69f98b234c0cf4af149839aaadeac",
+      "bytes": 454
+    },
+    {
+      "path": "AXIOM_AUDIT.json",
+      "sha256": "0108c9613e2614c94b455673f0d9a3d48638ac4750e4e0c66c10b23cb6c66d39",
+      "bytes": 1849
+    },
+    {
+      "path": "BoundaryChecks.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "BoundaryChecks.olean",
+      "sha256": "857fd6bc338c92b2c3c666f2370bb84f49d03be5dc62e11878c618d5759163b0",
+      "bytes": 850256
+    },
+    {
+      "path": "BoundaryReadback.lean",
+      "sha256": "41da9de5f1dc3b766e9b030244ebb907a740c9b5ea6f5d22288a16b07d5a3604",
+      "bytes": 2236
+    },
+    {
+      "path": "BoundaryReadback.log",
+      "sha256": "99202f2119fb3f01ae911d6dc07bbb9d1dbeb7053faac436fa7f009895656463",
+      "bytes": 15471
+    }
+  ]
+}

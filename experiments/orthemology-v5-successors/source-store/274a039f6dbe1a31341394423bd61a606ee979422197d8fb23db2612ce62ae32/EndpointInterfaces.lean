@@ -1,0 +1,10 @@
+import HiddenChangeSemanticEndpoint
+open HiddenChange
+#check @policyLawful_iff_allHistoryLawful
+#check @positive_iff_deterministic_winner
+#check @bound_positive_iff_deterministic_winner
+#check @bound_negative_iff_no_deterministic_winner
+#check @bound_positive_compiled_semantics
+#check @bound_negative_excludes_seeded_winner
+#check @seeded_winner_has_bound_positive
+#check @signed_semantic_alternatives

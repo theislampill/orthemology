@@ -1,0 +1,507 @@
+{
+  "schema": "seventeenth-independent-aggregate-certificate-v1",
+  "evidence_kind": "Derivative of the historical independent computational reconstruction of the same archive; not an independent experiment and not rerun here.",
+  "raw_dataset_replay_in_this_package": false,
+  "source_record_sha256": "c53828e37e7a1d2b30a48718dacb702cb0d867f9ddab40496cd87b5ac0c037bb",
+  "original_aggregate_sha256": "2845086d63ede9765162cf30744968c6b6d25fb10ef4a976a1ba1347fc40d2b6",
+  "independent_exact_description": {
+    "games": 75,
+    "roster_members": 232,
+    "overall": {
+      "opportunities": 11136,
+      "valid": 9712,
+      "absent": 1424,
+      "exactly_50": 0
+    },
+    "disagreement": {
+      "opportunities": 4918,
+      "valid": 4264,
+      "absent": 654,
+      "exactly_50": 0
+    },
+    "S": {
+      "numerator": "250499",
+      "denominator": "50400000"
+    },
+    "T": {
+      "numerator": "250499",
+      "denominator": "50400000"
+    },
+    "H": {
+      "numerator": "683089",
+      "denominator": "1512000"
+    },
+    "sum_abs_a": {
+      "numerator": "5888779",
+      "denominator": "30240000"
+    },
+    "V": {
+      "numerator": "491181166337",
+      "denominator": "22861440000000000"
+    },
+    "sides": {
+      "local_left": {
+        "M": {
+          "numerator": "68059",
+          "denominator": "302400"
+        },
+        "V": {
+          "numerator": "298793",
+          "denominator": "1512000"
+        },
+        "Q": {
+          "numerator": "122699",
+          "denominator": "37800000"
+        },
+        "opportunities": 2475,
+        "valid": 2141,
+        "availability_rate": {
+          "numerator": "298793",
+          "denominator": "340295"
+        }
+      },
+      "global_left": {
+        "M": {
+          "numerator": "171397",
+          "denominator": "756000"
+        },
+        "V": {
+          "numerator": "14407",
+          "denominator": "72000"
+        },
+        "Q": {
+          "numerator": "-37243",
+          "denominator": "21600000"
+        },
+        "opportunities": 2443,
+        "valid": 2123,
+        "availability_rate": {
+          "numerator": "302547",
+          "denominator": "342794"
+        }
+      }
+    },
+    "S_R": {
+      "numerator": "-1877",
+      "denominator": "756000"
+    },
+    "availability_rate_difference": {
+      "numerator": "-530783723",
+      "denominator": "116651084230"
+    },
+    "support_status": "directional_support",
+    "crosscheck_S_equals_Qplus_minus_Qminus": true
+  },
+  "count_agreement": {
+    "games": 75,
+    "distinct_player_ids": 232,
+    "game_player_pairs": 232,
+    "game_rounds": 3600,
+    "opportunities": 11136,
+    "stage_rows": 33408,
+    "valid_forecasts": 9712,
+    "absent_forecasts": 1424,
+    "exactly_50_forecasts": 0,
+    "valid_forecasts_missing_correctness": 374
+  },
+  "grid_certification": [
+    {
+      "Gamma": {
+        "numerator": "1",
+        "denominator": "1"
+      },
+      "rho": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "D": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "nonnegative_exponent_magnitude": {
+        "numerator": "564747741009",
+        "denominator": "982362332674"
+      },
+      "independent_exp_interval_512_bits": [
+        {
+          "numerator": "7545488270982820737125397173952201191081699106890931785638618903425861714802718338065695635301441829549582976524751333699145755836246801875774118975946007",
+          "denominator": "13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096"
+        },
+        {
+          "numerator": "943186033872852592140674646744025148885212388361366473204827362928232714350339792258211954412680228693697872065593916712393219479530850234471764871993251",
+          "denominator": "1675975991242824637446753124775730765934920727574049172215445180465220503759193372100234287270862928461253982273310756356719235351493321243304206125760512"
+        }
+      ],
+      "independent_closed_bound_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "author_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "agreement": true
+    },
+    {
+      "Gamma": {
+        "numerator": "11",
+        "denominator": "10"
+      },
+      "rho": {
+        "numerator": "1",
+        "denominator": "21"
+      },
+      "D": {
+        "numerator": "5888779",
+        "denominator": "635040000"
+      },
+      "nonnegative_exponent_magnitude": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "independent_exp_interval_512_bits": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "independent_closed_bound_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "author_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "agreement": true
+    },
+    {
+      "Gamma": {
+        "numerator": "5",
+        "denominator": "4"
+      },
+      "rho": {
+        "numerator": "1",
+        "denominator": "9"
+      },
+      "D": {
+        "numerator": "5888779",
+        "denominator": "272160000"
+      },
+      "nonnegative_exponent_magnitude": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "independent_exp_interval_512_bits": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "independent_closed_bound_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "author_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "agreement": true
+    },
+    {
+      "Gamma": {
+        "numerator": "3",
+        "denominator": "2"
+      },
+      "rho": {
+        "numerator": "1",
+        "denominator": "5"
+      },
+      "D": {
+        "numerator": "5888779",
+        "denominator": "151200000"
+      },
+      "nonnegative_exponent_magnitude": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "independent_exp_interval_512_bits": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "independent_closed_bound_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "author_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "agreement": true
+    },
+    {
+      "Gamma": {
+        "numerator": "2",
+        "denominator": "1"
+      },
+      "rho": {
+        "numerator": "1",
+        "denominator": "3"
+      },
+      "D": {
+        "numerator": "5888779",
+        "denominator": "90720000"
+      },
+      "nonnegative_exponent_magnitude": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "independent_exp_interval_512_bits": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "independent_closed_bound_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "author_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "agreement": true
+    },
+    {
+      "Gamma": {
+        "numerator": "3",
+        "denominator": "1"
+      },
+      "rho": {
+        "numerator": "1",
+        "denominator": "2"
+      },
+      "D": {
+        "numerator": "5888779",
+        "denominator": "60480000"
+      },
+      "nonnegative_exponent_magnitude": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "independent_exp_interval_512_bits": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "independent_closed_bound_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "author_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "agreement": true
+    },
+    {
+      "Gamma": {
+        "numerator": "5",
+        "denominator": "1"
+      },
+      "rho": {
+        "numerator": "2",
+        "denominator": "3"
+      },
+      "D": {
+        "numerator": "5888779",
+        "denominator": "45360000"
+      },
+      "nonnegative_exponent_magnitude": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "independent_exp_interval_512_bits": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "independent_closed_bound_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "author_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "agreement": true
+    },
+    {
+      "Gamma": {
+        "numerator": "10",
+        "denominator": "1"
+      },
+      "rho": {
+        "numerator": "9",
+        "denominator": "11"
+      },
+      "D": {
+        "numerator": "5888779",
+        "denominator": "36960000"
+      },
+      "nonnegative_exponent_magnitude": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "independent_exp_interval_512_bits": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "independent_closed_bound_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "author_interval": [
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        }
+      ],
+      "agreement": true
+    }
+  ],
+  "unrestricted_endpoint": {
+    "numerator": "1",
+    "denominator": "1"
+  },
+  "all_grid_rows_verified": 9,
+  "complete_author_aggregate_agreement": true
+}

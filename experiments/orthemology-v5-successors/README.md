@@ -1,8 +1,8 @@
-# Orthemology v5 research successors: Seventh–Sixteenth
+# Orthemology v5 research successors: Seventh–Twentieth
 
-Current addition: [Sixteenth source and evidence guide](groups/t16-successor/README.md). Earlier tranche records retain their original cutoff and status.
+Current addition: [Twentieth research and final reader guide](groups/t20-successor/README.md). Earlier tranche records retain their original cutoff and status.
 
-This is the source and replay layer for the Seventh through final Sixteenth
+This is the source and replay layer for the Seventh through final Twentieth
 research returns. It continues Orthemology v5 and preserves the
 [final-Sixth layer](../orthemology-v5-continuations/README.md). Inclusion records
 what a source and its exact review establish; it does not complete the research
@@ -35,6 +35,11 @@ supersession and suite records. The group names below are navigation aids.
 | Pinned occurrence-sensitive language work | [Occurrence and language](groups/occurrence-language/README.md) |
 | Fifteenth collective attribution mathematics | [Collective attribution](groups/t15-attribution/README.md) |
 | Fifteenth reanalysis of existing observations | [Empirical reanalysis](groups/t15-reanalysis/README.md) |
+| Sixteenth formal/reference and source qualifications | [Sixteenth sources](groups/t16-successor/README.md) |
+| Seventeenth source and philosophical research | [Seventeenth sources](groups/t17-successor/README.md) |
+| Eighteenth qualification and identity work | [Eighteenth sources](groups/t18-successor/README.md) |
+| Nineteenth source, attestation and occurrence research | [Nineteenth sources](groups/t19-successor/README.md) |
+| Twentieth scoped mathematics and final reader addendum | [Twentieth guide](groups/t20-successor/README.md) |
 | Converted research reports and companions | [Report projections](groups/research-reports/README.md) |
 
 Public P01DF, research P01AC.Has, bridge-only HasPlus and candidate HasE keep
@@ -80,4 +85,10 @@ objects and full execution logs remain outside Git. The
 [public projection record](../../docs/provenance/v5-successors/PUBLIC_PROJECTION.json)
 bind original identities to the exact public text and reviewed derivations.
 
-The current cutoff is final Sixteenth. The [Sixteenth guide](groups/t16-successor/README.md) binds the scoped addition, original package interfaces and inherited assurance. The committed T07–T15 scientific receipts remain unchanged. One combined PR is left unmerged for ChatGPT review; merge, auto-merge and later tranches are not authorized.
+The current cutoff is final Twentieth. The result ledger has 262 scoped results; 3,828 sources include the separately sealed final reader addendum. No new reading/packaging results, native receipts or independent-evidence counts were created. All new receiving science remains NOT_RUN; original proof/review receipts keep their stated evidence credit. The old native suite descriptors and scientific history remain unchanged.
+
+The owner handoff supplies the local patch and exact-tree verification results. No remote action is authorized. The mandatory fresh exact-environment PDF rebuild remains locally blocked. Follow the Twentieth guide for archive-context reader links: verified logical aliases are distinct from clickable native source-store URLs.
+
+The final separately sealed methodological/control/document successor adds 53 public texts and one integration-only scope record. Exactly one new source-bound result, T20-EMERGENCE-TYPE-CONTROL, describes a chosen unbounded indexed interpretation; all 261 prior result/status records are preserved. Retrospective reading/methodology and packaging receive no new result or native scientific-execution credit. Current document roles and historical predecessors are linked from the Twentieth guide.
+
+The separately dated source-context successor adds 21 selected public records and one receiving-scope record, for 262 results / 3,828 sources. The existing foundational-synthesis and emergence-control owners bind the new reconstruction and application limits, with exact prior statements retained. All statuses, old sources, proof conclusions, 37 suites and 44 receipts remain unchanged. The Twentieth guide links the current reassessment and the preserved report/guide history.

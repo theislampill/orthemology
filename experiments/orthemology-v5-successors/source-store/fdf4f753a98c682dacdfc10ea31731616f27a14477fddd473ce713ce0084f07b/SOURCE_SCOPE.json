@@ -1,0 +1,221 @@
+{
+  "status": "PASS_BOUNDED_SOURCE_SCOPE_CHECK",
+  "finished_utc": "2026-10-07T10:15:37.372560+00:00",
+  "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "source_files_hash_and_git_blob_verified": [
+    {
+      "path": "preprints/quantitative-lower-bounds-for-trace-reconstruction-September-24-2026/README.md",
+      "sha256": "d14a203c7dbacee2e181a9eea55b8433a7e25977343a03f4a42722f7a81ba852",
+      "git_blob": "cabba52402e4ab410a883cb24e7612cdce01e988"
+    },
+    {
+      "path": "preprints/quantitative-lower-bounds-for-trace-reconstruction-September-24-2026/paper.pdf",
+      "sha256": "6b28f84fe939dfe5b740403156413f1d807d1ddad70c38b0f50f12e486dc7596",
+      "git_blob": "6ebe96a5be9a10dc3f8b32c4137638e90218d4bb"
+    },
+    {
+      "path": "preprints/Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026/uniform-trace-reconstruction.pdf",
+      "sha256": "cca17cd8900b5eda0252af1126a8423f96a771065d0ccf35b5da500a238915d3",
+      "git_blob": "d47b37222a6a49e3b680a6158e6a6d3fa8c05ee0"
+    },
+    {
+      "path": "preprints/Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026/README.md",
+      "sha256": "91f9494a27616c482af9fe4a78b9beaffeed0648ec92112c4bbbc9b0663eb8c8",
+      "git_blob": "656133965e57478b22577c91dc1ce4865b86a911"
+    },
+    {
+      "path": "lean/docs/122.md",
+      "sha256": "4bd3067e31390bc08d91e69ce143afd1460fed929fa8ce70d450add0a7b50ff3",
+      "git_blob": "75fee8107664cb88751893f163388ce2b05c5cfb"
+    },
+    {
+      "path": "lean/ComparatorChallenges/TraceReconstruction.json",
+      "sha256": "551a93a8bcf750ecfae7257ec91c36de8ae6fabd1b4d2f0bd43edfad67cf276b",
+      "git_blob": "734fb3a2e226775e1f9145f0e6f37bb121a1ba32"
+    },
+    {
+      "path": "lean/ComparatorChallenges/TraceReconstruction.lean",
+      "sha256": "68df708f0b20b524cbc8fd02164731245982749eba0b2e8e0e1a520c85b0e70d",
+      "git_blob": "10db783ba141d7754767bc00c211986979f0eecb"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction.lean",
+      "sha256": "e74413607c5181f58bebe218cdafef3dc527a45ebfb00c55f1695b0b4477c12d",
+      "git_blob": "a4f3f0f32540d93a4267678de4330fdacb8e6978"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Amplification.lean",
+      "sha256": "b85842192f0c1b9cdd323c0052f57ee3888c6616155129872402f7a0f21a2eaf",
+      "git_blob": "a85f2d14c9b837bbc4dc5bb74a0683db18f61c6e"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Scales.lean",
+      "sha256": "8a591b979219d6ec975739114549f03930ff2a963b0955ed2eb2127a8b7486e8",
+      "git_blob": "86c9ae03ff5e160bdbc440d4af4cb7feaa0ab0a1"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/InitialMoments.lean",
+      "sha256": "574f937d0c2ec6349e33fb38d6665ef8aec0dbd909232ecfbc39ed38890c976a",
+      "git_blob": "2dab9878f760774cdaf4d296c8f75fe00be29bfe"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Model.lean",
+      "sha256": "a0d4c43bd31a46e28f4da4d17ab5ea4ccf2a6b5afc88f3d66fc668dbff7a1c7a",
+      "git_blob": "b662bc6c2de055afe95d8158682b1a43d08cac45"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/FiniteLaw.lean",
+      "sha256": "7569ccb13a5b04ade84ef56c9adf5f75fd74d3c6c0c87568cdd4dc18e05e1194",
+      "git_blob": "65f9f6cd47cc1db19506300b64ef52704e89d392"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/ErrorRates.lean",
+      "sha256": "8b2d160ccfe8114bff2548ba8d12babbf59889d7a07a8400e723cc33941ca58c",
+      "git_blob": "fc5a6bb40d3468bb1a2882a6f04f9db4494b81a3"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Anchors.lean",
+      "sha256": "a2fad3de3cf84bbe005217dab5811cb2383fa8dbb27890589401c145f4549a9a",
+      "git_blob": "0dd20dc0b673d40694df52a8ec2f642dca04d522"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Simulation.lean",
+      "sha256": "111e60ddba1899e1651fecb249d366a3dfa6aee2f3a7e69cb7e16167f70b1ff6",
+      "git_blob": "bfd3bdeb940d7e3e2576540977f404c21919c136"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Oracles.lean",
+      "sha256": "0eaa0c315244e2b2e14d014498e6880059b4609615b47abdd78834046890885a",
+      "git_blob": "43bbd5da98fde82637d496ac7c7e7abb7374e30e"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Testing.lean",
+      "sha256": "329e785751e2f46c83e2f82ea6df3596971764b10944e7a98c0fc30bcf0820c6",
+      "git_blob": "5166ccc4f48105ca59d8855a92ba21a176d160cb"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/InitialOverlap.lean",
+      "sha256": "ef7697fe394dc45ca0372c271c3ab7c22dd575b4af5741ab4859ce404c77958a",
+      "git_blob": "ff1ee5a198893e23960fa5261604fbb0bf2cdb4a"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/LeafOracle.lean",
+      "sha256": "80d908b2f8e91155326a18c96c2f576029f47bbc2ed276fefc5213a73322fa73",
+      "git_blob": "578f82b24f9c7faa75cdc7cc869506acd24d2573"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/InitialRates.lean",
+      "sha256": "671d3d68eef14f1630c159ad6f24885e5f0d078c40d3e48f4ce8bcf19d5f2027",
+      "git_blob": "a9b55b0cbf27702ac1eabc9e94e51db1729eace9"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Kernels.lean",
+      "sha256": "c6fa27862d40381eff54e73358ed76fac3211b224f82c94d0227d78a068a4279",
+      "git_blob": "cd6d91896749232dd8ff0650db60905059493d3b"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Energy.lean",
+      "sha256": "9dab8330c60b4f9f7b0637fb0fff5b2b104eedc2b904f91f15dd0d49856d15d9",
+      "git_blob": "d9e5fdc1443974446846b430df0ec47cd311e7f0"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Layout.lean",
+      "sha256": "a4f89095842426a184cb583b65a1387618d48521e536b2184b22797e1d8b6022",
+      "git_blob": "1026e5d69cd3de097079dc6e5e6384a759243f5b"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/InitialDensity.lean",
+      "sha256": "786793c884f85cc997975a7f2df95477118cd5e974e54e60a02a046dac710597",
+      "git_blob": "d539477dc41182ecab2f550d1cf9000f2f7d091f"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/InitialOracle.lean",
+      "sha256": "19b035e0b36a1a2769d9381c4ad6bd36a35ebbdd213c6ca7e7d6a3472169da3e",
+      "git_blob": "53ce412c20a6de6bcebbeae30e74d2e88d5abbb7"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Propagation.lean",
+      "sha256": "9aa1197baf3f5ef1fb017ce64facf9379fdcbf319f0a1dfbee5ea1b82582315d",
+      "git_blob": "76775335e646014c55d721c0b14a36c10b52238c"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Patterns.lean",
+      "sha256": "b5786c30f88b72a6916a7ef3c713befa6465e73a614e3c6f5faea74b787747da",
+      "git_blob": "95cf0a4dc37cf945734e5d8af638a1703bc1a2bb"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Differences.lean",
+      "sha256": "99aeec971d4a2025e47a9fe9d4f015d97b510844e2d2936164e1c88acaac4337",
+      "git_blob": "f405c02734a7fd98aa9701bbe01582ae8fcbfffb"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Restoration.lean",
+      "sha256": "d7b6a4e6da9bc9e1828ff4868ab75faae3b7ab03ec2746ffd2cd1ad8344052d5",
+      "git_blob": "7b80a78c81e10d0007989a166cab6bfc39f4cfcd"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/SourceOracle.lean",
+      "sha256": "3e9370b6bf08abc714a745e45bf54f9e60aeea45def269e5125eefb4c09b12cd",
+      "git_blob": "adbd0bb7f52562fe02ff2d5a81814b12b23a2edd"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Parity.lean",
+      "sha256": "fb8bea9f0cdbbcd359c63417a3681f0332975dc007be486935d5fe86db1a6391",
+      "git_blob": "300b49cea1dccbbf1424da422e9a3d3cbcac64a5"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/LayoutRates.lean",
+      "sha256": "b1858122a121bc29b7fedb31d27236ba6ad20b282edae570bea9dc63de89fd33",
+      "git_blob": "333929b85252786fc6a6198bdce281eb00b7e29e"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Ranks.lean",
+      "sha256": "187b5d3a5c7a078458d174171864b8b3b2f87191dde8edc2b5b0ce665f3f92a0",
+      "git_blob": "1a6a98c3d27679a17682ff83967dbc147d8a548a"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Induction.lean",
+      "sha256": "8f3eeecd903f4adf3e97680cc34834c6006b9ec1c8d489f4e642df44d040102f",
+      "git_blob": "933f46fdee0b606ec611e3c92a631077d7dd1d18"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Shapes.lean",
+      "sha256": "ae2c11d064676847a79e8e3e6a882fa5acddce7b44308b05dfa0797aa8281118",
+      "git_blob": "e887035fcb83288396403fc993ef70563f3f1386"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Binomial.lean",
+      "sha256": "f6da7b04c2cea59c7d95533795cc35a898bd433b3369bb429d644fe02020bedf",
+      "git_blob": "3ef5f8270e8d705982e78fdcd87a883251b74e1a"
+    },
+    {
+      "path": "lean/OAI/Probability/TraceReconstruction/Metadata.lean",
+      "sha256": "fc842be2e2c4067d5dfcf94b150bea6c5f0d0b716cc7a2d0eba7f6741cc3d909",
+      "git_blob": "d97dfcfd9de594612e39823b52bfc478b31ebd50"
+    }
+  ],
+  "formal_family_endpoints": [
+    "OAI.TraceReconstruction.quantitative_sample_lower_bound",
+    "OAI.TraceReconstruction.superpolynomial_one_trace",
+    "OAI.TraceReconstruction.superpolynomial_sample_complexity"
+  ],
+  "family_scope": "Only lower-bound manuscript and three lower-bound endpoints; no October5 decoder endpoint.",
+  "formal_challenge_placeholders": "Comparator challenge file has deliberate sorry placeholders; it is a statement specification, not checked proof evidence.",
+  "upstream_execution": "None. No upstream Lake, 4.34 compiler, source module replay, or Comparator run.",
+  "manuscript_review": "Selected opening theorem/observation/resource statements read for each manuscript; not a fresh full proof audit.",
+  "ownership": [
+    {
+      "path": "predecessor/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "anchors": "record-fibre factorisation; feasible-support output determination; observation congruence"
+    },
+    {
+      "path": "predecessor/experiments/orthemology-v5-successors/source-store/795f017eff4ad15d4d05752ccdd1dbfc7c49fbae771262948cfd6da48bed8c60/Orthemology_Ninth_Research_Final_v1_20261003.md",
+      "sha256": "795f017eff4ad15d4d05752ccdd1dbfc7c49fbae771262948cfd6da48bed8c60",
+      "anchors": "What the existing sources already establish; One missing bit; Forks merges and occurrences"
+    }
+  ],
+  "semantic_scope": "Recovered object is the encoded binary word. Contextual proposition or illocutionary content needs an independently warranted lossless encoding/interpretation bridge. Source-label equality is conditional on the explicitly content-only word channel.",
+  "nonarchimedean_limit": "Finite algebraic statements only; no Archimedean assumption or convergence conclusion.",
+  "new_credit": "Selected elementary Orthemology application and bounded checks, not a novel information theorem or whole-family upstream verification."
+}

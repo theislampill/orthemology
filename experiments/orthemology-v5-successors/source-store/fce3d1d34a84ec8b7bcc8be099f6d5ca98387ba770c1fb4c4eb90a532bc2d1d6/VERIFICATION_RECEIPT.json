@@ -1,0 +1,117 @@
+{
+  "schema": "independent-cooperation-warrant-review-receipt-v1",
+  "completed_utc": "2026-10-07T18:16:52.498420+00:00",
+  "status": "BOUNDED_REVIEW_COMPLETE",
+  "countermodel_verdict": "NO_FULL_UPSTREAM_PREMISE_PRESERVING_COUNTERMODEL_PRODUCED_OR_CERTIFIED",
+  "warrant_verdict": "B6 compelling under full independently sufficient original-production semantics and CND; B5 de re profile transfer and constitutive-perfection ascent remain under-warranted as universal claims.",
+  "root_note_verdict": "NO_BLOCKING_ISSUE_WITHIN_DIRECTLY_INSPECTED_COOPERATION_SCOPE",
+  "root_note_sha256": "3f049a92d1da97dcbd2b4e8126d1c566543138ad274cb9334d5e9ea759b3033c",
+  "artifacts": [
+    {
+      "path_input_name": "REVIEW.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/independent-warrant-review/REVIEW.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "bytes": 29465,
+      "sha256": "ae67eff5b0601962e5bfddfe7783b1de4564bc1934ff8ea053da23254e4be382"
+    },
+    {
+      "path_input_name": "EVIDENCE_BINDINGS.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/independent-warrant-review/EVIDENCE_BINDINGS.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "bytes": 17437,
+      "sha256": "0d8e44a13d9941f976a9cde1c306426d866edaccefc1dc7e619e72c706e741bb"
+    }
+  ],
+  "verification_checks": [
+    {
+      "check": "All 19 input byte bindings match current inspected files",
+      "passed": true
+    },
+    {
+      "check": "Every review evidence identifier resolves",
+      "passed": true
+    },
+    {
+      "check": "All seven Arabic anchors occur in bound primary evidence",
+      "passed": true
+    },
+    {
+      "check": "Required bridge, type, countermodel and philosophical-review scope distinctions are present",
+      "passed": true
+    },
+    {
+      "check": "Final source amendments exactly match the inspected P2b qualifications",
+      "passed": true
+    },
+    {
+      "check": "Bound structured audit and premise-map files parse as JSON",
+      "passed": true
+    },
+    {
+      "check": "Philosophical-assessment metadata delta is exactly the retained Necessary Being clarification; review states no independent reassessment",
+      "passed": true
+    }
+  ],
+  "reading_and_review_roles": [
+    "Primary reading supplies source content, not truth certification.",
+    "Source reconstruction maps authorial claims and bridges.",
+    "Prior model audit and selected direct definition inspection establish bounded representation limits.",
+    "This review supplies independent philosophical warrant assessment.",
+    "Philosophical-assessment review checks bounded accuracy and argument without replacing the author’s judgement."
+  ],
+  "limits": [
+    "No new Lean theorem or model constructed",
+    "No fresh Lean kernel replay",
+    "No metaphysical possibility certificate",
+    "No exhaustive model search",
+    "No new manuscript or scan collation",
+    "No independent Nisāʾ/Shūrā cessation-source or terminal Salim2:145 locator certification in this assessment",
+    "No authority to declare research-programme readiness or closure",
+    "Existing source and repository artifacts not edited by this review"
+  ],
+  "written_scope": "The three separately identified independent-warrant-review artifacts only.",
+  "stop_condition": "Requested bounded warrant assessment and final philosophical-assessment status metadata rebind complete; all current bindings verified; owned review files closed again.",
+  "necessary_being_status": "Earlier provisional sufficient-warrant acceptance retained by the philosophical assessor; not independently reviewed or newly proved by this review.",
+  "metadata_rebind": {
+    "scope": "Only final philosophical-assessment Necessary Being status clarification and corresponding review scope/hash update",
+    "supersedes_closed_artifacts": [
+      {
+        "path_input_name": "REVIEW.md",
+        "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+        "path_corresponding_public_record": {
+          "owner_alias": "t20/cooperation-reassessment/independent-warrant-review/REVIEW.md",
+          "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+        },
+        "bytes": 29108,
+        "sha256": "76940ec69bee10f22b81f626385a2b13ee9e1c6cc07edc340d6e41e13ff2f963"
+      },
+      {
+        "path_input_name": "EVIDENCE_BINDINGS.json",
+        "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+        "path_corresponding_public_record": {
+          "owner_alias": "t20/cooperation-reassessment/independent-warrant-review/EVIDENCE_BINDINGS.json",
+          "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+        },
+        "bytes": 16236,
+        "sha256": "1073e2c825896ee6175fe60dfd2fc323eb74e2a366c8ac205f189d140605bb14"
+      },
+      {
+        "path_input_name": "VERIFICATION_RECEIPT.json",
+        "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+        "path_corresponding_public_record": {
+          "owner_alias": "t20/cooperation-reassessment/independent-warrant-review/VERIFICATION_RECEIPT.json",
+          "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+        },
+        "bytes": 2997,
+        "sha256": "6332edde324fe7c46d4fe624724fd13bccc316f777ccd2b5dcee10b2d1e3dd8b"
+      }
+    ],
+    "prior_review_verdicts_unchanged": true
+  }
+}

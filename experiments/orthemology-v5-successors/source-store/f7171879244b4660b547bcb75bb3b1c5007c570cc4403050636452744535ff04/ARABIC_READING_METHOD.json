@@ -1,0 +1,1012 @@
+{
+  "schema_version": "1.0",
+  "title": "Arabic reading methodology and premise audit",
+  "as_of_utc": "2026-10-07T16:05:32.050763+00:00",
+  "status": "FINAL_BOUNDED_METHOD_AUDIT",
+  "reading_index": {
+    "original": {
+      "kind": "original_reading_index_custody_identity",
+      "record_id": "ARABIC-READING-INDEX-ORIGINAL",
+      "sha256": "490bdd577b6e3f17e7ee2912da00fe1cfbf71ac296ba5d85f7f08996bf728b18",
+      "bytes": 972895,
+      "body_included_in_this_supplement": false
+    },
+    "owner_projection": {
+      "archive_alias": "t20/reading/READING_INDEX.json",
+      "sha256": "95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998",
+      "bytes": 1029129
+    },
+    "reference_rule": "Work IDs, return-point IDs and evidence IDs are stable references to these exact indexes. JSON pointers refer to the original bound index. The owner projection retains the scientific content while redacting private custody locators.",
+    "availability": "The separately hashed reading-index projection belongs to the existing reading archive. An original identity does not select its body."
+  },
+  "stage_definitions": [
+    {
+      "id": "AR-S1",
+      "name": "Continuous first pass",
+      "criterion": "Traverse the selected received body in order, with actual textual or visual receipt boundaries. A received fragment or selected volume remains a fragment or selection.",
+      "credit": "Original first-pass receipts only. Text extraction and scan reading retain their separate scope."
+    },
+    {
+      "id": "AR-S1R",
+      "name": "Local return during the wider first pass",
+      "criterion": "Revisit a completed section or volume while the larger selected body is still being traversed.",
+      "credit": "A real bounded reread where receipted, but it does not satisfy the post-whole-structure condition of AR-S2."
+    },
+    {
+      "id": "AR-S2",
+      "name": "Reflective primary return after whole selected structure",
+      "criterion": "The record establishes that the selected body was understood as a whole before this direct primary return. Knowledge of the whole historical work is not implied.",
+      "credit": "Only the receipted return; a later synthesis of notes earns no additional primary-reading credit. If temporal ordering is uncertain, do not promote the return to this class."
+    },
+    {
+      "id": "AR-S3",
+      "name": "Question or model triggered primary return",
+      "criterion": "An existing receipt links direct primary inspection to a newly salient question, premise, model, countermodel or objection. This category can overlap AR-S1R or AR-S2.",
+      "credit": "The trigger and date must be evidenced. Mere relevance or a later juxtaposition does not establish a causal research history."
+    },
+    {
+      "id": "AR-S4",
+      "name": "Methodological synthesis and audit",
+      "criterion": "Inspect existing receipts, interpretations, dependency maps and results to describe their relationship.",
+      "credit": "Zero new primary-reading credit and zero new proof-replay credit unless a separate new receipt records such work."
+    }
+  ],
+  "selected_body_phase_controls": [
+    {
+      "index_ref": {
+        "work_id": "DAR",
+        "index_pointer": "/works/5",
+        "return_points": []
+      },
+      "evidence_ids": [
+        "DAR8-FIRST",
+        "DAR9-FIRST",
+        "DAR-REFLECT",
+        "DAR-APPRAISAL",
+        "DAR8-ADDITIONAL",
+        "DAR9-ADDITIONAL"
+      ],
+      "phase_assessment": "The reflective comparison expressly states that its six bounded ranges followed completion of both selected electronic bodies. This is a documented AR-S2 example. The separately receipted analytical returns remain separately attributed.",
+      "boundaries": "Use this work’s selected-body, first-pass, bounded-reread and overlap fields in the bound reading index; no totals are recomputed here."
+    },
+    {
+      "index_ref": {
+        "work_id": "MINHAJ",
+        "index_pointer": "/works/6",
+        "return_points": []
+      },
+      "evidence_ids": [
+        "MINHAJ2-FIRST",
+        "MINHAJ3-READ",
+        "MINHAJ2-REFLECT",
+        "MINHAJ3-ADDITIONAL",
+        "MINHAJ-ANALYTICAL",
+        "MINHAJ-APPRAISAL"
+      ],
+      "phase_assessment": "Volume 2 reflection followed that volume, while volume 3 reading was still under way. Do not classify every reflection as post-completion of the selected pair. The combined appraisal supplies structural synthesis; it is not itself a further primary traversal.",
+      "boundaries": "Use this work’s selected-body, first-pass, bounded-reread and overlap fields in the bound reading index; no totals are recomputed here."
+    },
+    {
+      "index_ref": {
+        "work_id": "SAWAIQ",
+        "index_pointer": "/works/7",
+        "return_points": []
+      },
+      "evidence_ids": [
+        "SAWAIQ1-FIRST",
+        "SAWAIQ2-FIRST",
+        "SAWAIQ1-REFLECT",
+        "SAWAIQ2-REFLECT",
+        "SAWAIQ-ADDITIONAL",
+        "SAWAIQ-RESTORATION",
+        "SAWAIQ-BOUNDARY"
+      ],
+      "phase_assessment": "The local volume reflections, later combined interpretation and textual restorations have different scopes. The complete object is the received original body, with recorded historical losses. A volume return cannot stand for a second reading of the entire historical work.",
+      "boundaries": "Use this work’s selected-body, first-pass, bounded-reread and overlap fields in the bound reading index; no totals are recomputed here."
+    },
+    {
+      "index_ref": {
+        "work_id": "SHIFA",
+        "index_pointer": "/works/8",
+        "return_points": []
+      },
+      "evidence_ids": [
+        "SHIFA-FIRST-READ",
+        "SHIFA-MIDDLE-READ",
+        "SHIFA-FINAL-READ",
+        "SHIFA-COORDINATOR-READ",
+        "SHIFA-ANALYTICAL",
+        "SHIFA-APPRAISAL"
+      ],
+      "phase_assessment": "The recorded reflections mix returns after assigned sections with analytical checks made as the wider traversal continued. The whole-body appraisal is later synthesis. The additional source-mode controls are bounded AR-S3 checks; the entire set of reflection windows is not uniformly AR-S2.",
+      "boundaries": "Use this work’s selected-body, first-pass, bounded-reread and overlap fields in the bound reading index; no totals are recomputed here."
+    },
+    {
+      "index_ref": {
+        "work_id": "JAMI6",
+        "index_pointer": "/works/9",
+        "return_points": []
+      },
+      "evidence_ids": [
+        "JAMI-EARLY-TEXT",
+        "JAMI-MIDDLE-TEXT",
+        "JAMI-LATER-IMAGES",
+        "JAMI-FINAL-IMAGES",
+        "JAMI-LATER-REREAD",
+        "JAMI-ADDITIONAL-87",
+        "JAMI-ADDITIONAL-93",
+        "JAMI-APPRAISAL",
+        "ACTUAL-ORDER-TEXT"
+      ],
+      "phase_assessment": "Reflection on the middle collection and the printed 87–98 returns took place while later scan continuation remained in progress. They are real bounded returns, not post-whole-collection returns. The later actual-order assessment used the completed selected collection as context and retains its separate receipts.",
+      "boundaries": "Use this work’s selected-body, first-pass, bounded-reread and overlap fields in the bound reading index; no totals are recomputed here."
+    },
+    {
+      "index_ref": {
+        "work_id": "MIFTAH",
+        "index_pointer": "/works/10",
+        "return_points": []
+      },
+      "evidence_ids": [
+        "MIFTAH-EARLY-READ",
+        "MIFTAH-MIDDLE-READ",
+        "MIFTAH-FINAL-READ",
+        "MIFTAH-ADDITIONAL",
+        "MIFTAH-NOTES-7",
+        "MIFTAH-NOTES-8",
+        "MIFTAH-APPRAISAL",
+        "THRESHOLD-AUDIT",
+        "COMPARATIVE-READ"
+      ],
+      "phase_assessment": "Section reflections and the additional 100-position return do not all follow completion of the whole selected body. Later threshold and comparative returns do. Their source checks clarify the sign/converse, scoped delegation and common-source issues without creating new special formal theorems.",
+      "boundaries": "Use this work’s selected-body, first-pass, bounded-reread and overlap fields in the bound reading index; no totals are recomputed here."
+    },
+    {
+      "index_ref": {
+        "work_id": "NUBUWWAT",
+        "index_pointer": "/works/11",
+        "return_points": []
+      },
+      "evidence_ids": [
+        "NB-FIRST",
+        "NB-PART1-REREAD",
+        "NB-PART2-REREAD",
+        "NB-PART3-REREAD",
+        "NB-PART4-REREAD",
+        "NB-ADDITIONAL",
+        "NB-APPRAISAL",
+        "THRESHOLD-AUDIT"
+      ],
+      "phase_assessment": "Assigned-section returns precede the completed whole-body appraisal. The later threshold check of strong alternatives is a post-completion targeted return. Mission, custody and assertion scope were tested; no historical attestation was authenticated by reading them.",
+      "boundaries": "Use this work’s selected-body, first-pass, bounded-reread and overlap fields in the bound reading index; no totals are recomputed here."
+    },
+    {
+      "index_ref": {
+        "work_id": "SAFADIYYA",
+        "index_pointer": "/works/12",
+        "return_points": []
+      },
+      "evidence_ids": [
+        "SF-PART1-READ",
+        "SF-PART2-READ",
+        "SF-PART3-READ",
+        "SF-PART4-READ",
+        "SF-PART5-READ",
+        "SF-JOIN-READ",
+        "SF-ADDITIONAL",
+        "SF-APPRAISAL",
+        "SF-CORRECTIONS"
+      ],
+      "phase_assessment": "The four joins and two further contextual windows are real primary returns. Their receipt does not independently timestamp every return after the entire first pass, so no blanket AR-S2 label is assigned. The early threshold inquiry did not yet possess the final whole-work appraisal. The later unity return remains outside the main study seal.",
+      "boundaries": "Use this work’s selected-body, first-pass, bounded-reread and overlap fields in the bound reading index; no totals are recomputed here."
+    }
+  ],
+  "earlier_bounded_contexts": {
+    "work_ids": [
+      "ASBAHANI",
+      "AKMALIYYA",
+      "ALDA"
+    ],
+    "evidence_ids": [
+      "INTRINSIC-READ",
+      "ASBAHANI-ACTS",
+      "TESTIMONY-READ"
+    ],
+    "rule": "These have their actual continuous or bounded T20 receipts and inherited scopes. They are not promoted to fresh whole-book studies by their use here. Other comparison witnesses remain bounded exactly as in the reading index."
+  },
+  "topics": [
+    {
+      "id": "AR-T01",
+      "topic": "Necessary Being",
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-04",
+              "index_pointer": "/works/0/major_argument_return_points/3"
+            }
+          ]
+        },
+        {
+          "work_id": "SAFADIYYA",
+          "index_pointer": "/works/12",
+          "return_points": [
+            {
+              "id": "SF03",
+              "index_pointer": "/works/12/major_argument_return_points/2"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "INTRINSIC-READ",
+        "SF-PART2-READ",
+        "SF-PART3-READ",
+        "SF-ADDITIONAL"
+      ],
+      "strongest_existing_context_for_this_question": "Asbahani main 47–107, especially 65–68, 96–104; Safadiyya S002L0043–0046 and the intrinsic-attribute discussion. The first context was read continuously by direct images, not inferred from a keyword hit.",
+      "interpretative_result": "The concrete bearer and its intrinsic qualifications must be distinguished from a mental common description. Necessary existence alone does not identify the complete actual Maker.",
+      "formal_dependency_or_result": "OriginalBearerBridge A/B/C map: completion, realisation, support transport and contingency-as-need remain substantive premises; the same witness is tracked.",
+      "remaining_obligation": "The conditional proof does not independently warrant contingency-as-need or constitutive mode-invariance. Current provisional Necessary Being acceptance is inherited from the dated appraisal.",
+      "case_ids": [
+        "AR-X01",
+        "AR-X02"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T02",
+      "topic": "Original sourcehood",
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-04",
+              "index_pointer": "/works/0/major_argument_return_points/3"
+            }
+          ]
+        },
+        {
+          "work_id": "AKMALIYYA",
+          "index_pointer": "/works/1",
+          "return_points": []
+        },
+        {
+          "work_id": "DAR",
+          "index_pointer": "/works/5",
+          "return_points": [
+            {
+              "id": "D03",
+              "index_pointer": "/works/5/major_argument_return_points/2"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "INTRINSIC-READ",
+        "AKMALIYYA-READ",
+        "DAR-REFLECT"
+      ],
+      "strongest_existing_context_for_this_question": "Asbahani 65–68 and 96–104; the full Akmaliyya answer, especially its concrete self and inseparable attributes discussion; Darʾ 8 P0396–P0422.",
+      "interpretative_result": "Intrinsic self-sufficiency is not efficient self-production. A qualified original resource, its bearer, a proximate act and complete common provision must retain separate types.",
+      "formal_dependency_or_result": "A original_bearer_of_completion; C essential_nonreceipt_of_actual_original; the field bridge needs further G/H premises.",
+      "remaining_obligation": "A minimally warranted original bearer does not by that fact supply every contribution or every disconnected domain.",
+      "case_ids": [
+        "AR-X01",
+        "AR-X02",
+        "AR-X03"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T03",
+      "topic": "Causal nonduplication",
+      "index_refs": [
+        {
+          "work_id": "DAR",
+          "index_pointer": "/works/5",
+          "return_points": [
+            {
+              "id": "D04",
+              "index_pointer": "/works/5/major_argument_return_points/3"
+            }
+          ]
+        },
+        {
+          "work_id": "SHIFA",
+          "index_pointer": "/works/8",
+          "return_points": [
+            {
+              "id": "H02",
+              "index_pointer": "/works/8/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "MIFTAH",
+          "index_pointer": "/works/10",
+          "return_points": [
+            {
+              "id": "MF04",
+              "index_pointer": "/works/10/major_argument_return_points/3"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "DAR9-ADDITIONAL",
+        "DAR-REFLECT",
+        "SHIFA-ANALYTICAL",
+        "MIFTAH-ADDITIONAL"
+      ],
+      "strongest_existing_context_for_this_question": "Darʾ 9 section 016:627–650 and 700–779; Shifaʾ e49–54 and e143–151; Miftah main 90–91.",
+      "interpretative_result": "The same numerical contribution, same respect, entire original production and merely having ability to act alone are not interchangeable. Type-level similarity or differentiated cooperation does not duplicate the same complete production.",
+      "formal_dependency_or_result": "CNDModalScope requires role retention and complete matching attribution; AnchoredSourceBridge obtains coverage before applying FieldCND to uniqueness.",
+      "remaining_obligation": "CND does not supply modal role retention, connectedness, source-mode perfection or exhaustive scope. Finite consistency is not metaphysical possibility.",
+      "case_ids": [
+        "AR-X02",
+        "AR-X03"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T04",
+      "topic": "Source mode perfection",
+      "index_refs": [
+        {
+          "work_id": "DAR",
+          "index_pointer": "/works/5",
+          "return_points": [
+            {
+              "id": "D03",
+              "index_pointer": "/works/5/major_argument_return_points/2"
+            },
+            {
+              "id": "D04",
+              "index_pointer": "/works/5/major_argument_return_points/3"
+            }
+          ]
+        },
+        {
+          "work_id": "MINHAJ",
+          "index_pointer": "/works/6",
+          "return_points": [
+            {
+              "id": "M02",
+              "index_pointer": "/works/6/major_argument_return_points/1"
+            },
+            {
+              "id": "M03",
+              "index_pointer": "/works/6/major_argument_return_points/2"
+            }
+          ]
+        },
+        {
+          "work_id": "SAWAIQ",
+          "index_pointer": "/works/7",
+          "return_points": [
+            {
+              "id": "S01",
+              "index_pointer": "/works/7/major_argument_return_points/0"
+            },
+            {
+              "id": "S03",
+              "index_pointer": "/works/7/major_argument_return_points/2"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "DAR-REFLECT",
+        "MINHAJ-ANALYTICAL",
+        "SAWAIQ-ANALYTICAL-IMAGES",
+        "INDEPENDENT-TEXT",
+        "INDEPENDENT-IMAGES",
+        "THRESHOLD-AUDIT",
+        "COMPARATIVE-READ"
+      ],
+      "strongest_existing_context_for_this_question": "Darʾ maker/preserver and harmony contexts; Minhaj realised efficacy and voluntary particularisation; Sawaʿiq strict supremacy and responsive acts.",
+      "interpretative_result": "The sources positively argue from effective capacity and appropriate perfection; they do not merely overlook harmony. The disputed transfer from product interdependence to producer receipt or defect is exposed rather than treated as automatic.",
+      "formal_dependency_or_result": "F separates qualification, classification and conformance; G separates use soundness and role applicability; H adds anchor and genuine connectedness. Deletion controls diagnose these dependencies.",
+      "remaining_obligation": "Universal SourceMode remains insufficiently warranted in the 14:34 assessment. Actual common original provision is provisionally accepted on separate residual integration/economy grounds, with lower confidence than Necessary Being.",
+      "case_ids": [
+        "AR-X03",
+        "AR-X04"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T05",
+      "topic": "Created agency",
+      "index_refs": [
+        {
+          "work_id": "JAMI6",
+          "index_pointer": "/works/9",
+          "return_points": [
+            {
+              "id": "J02",
+              "index_pointer": "/works/9/major_argument_return_points/1"
+            },
+            {
+              "id": "J03",
+              "index_pointer": "/works/9/major_argument_return_points/2"
+            }
+          ]
+        },
+        {
+          "work_id": "SHIFA",
+          "index_pointer": "/works/8",
+          "return_points": [
+            {
+              "id": "H01",
+              "index_pointer": "/works/8/major_argument_return_points/0"
+            },
+            {
+              "id": "H02",
+              "index_pointer": "/works/8/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "MIFTAH",
+          "index_pointer": "/works/10",
+          "return_points": [
+            {
+              "id": "MF02",
+              "index_pointer": "/works/10/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "SAFADIYYA",
+          "index_pointer": "/works/12",
+          "return_points": [
+            {
+              "id": "SF04",
+              "index_pointer": "/works/12/major_argument_return_points/3"
+            },
+            {
+              "id": "SF05",
+              "index_pointer": "/works/12/major_argument_return_points/4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "JAMI-MIDDLE-TEXT",
+        "SHIFA-ANALYTICAL",
+        "MIFTAH-ADDITIONAL",
+        "SF-PART3-READ",
+        "SF-PART4-READ"
+      ],
+      "strongest_existing_context_for_this_question": "Jamiʿ printed 179–182, E183–186; Shifaʾ genuine secondary efficacy; Miftah 501–502; Safadiyya intrinsic act, produced product and source account.",
+      "interpretative_result": "Possessing a power differs from jointly attaining an end. Original support need not erase a created agent’s own act, nor adopt that agent’s false assertion.",
+      "formal_dependency_or_result": "JointFinite mixed_occurrence_real, J12_support_not_ownership and J13_genuine_agent_identity; field contribution types preserve agency.",
+      "remaining_obligation": "The finite interpretation establishes compatibility and exposes equivocation. It does not identify the actual productive account of a particular event.",
+      "case_ids": [
+        "AR-X04",
+        "AR-X11"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T06",
+      "topic": "Wisdom",
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-02",
+              "index_pointer": "/works/0/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "SHIFA",
+          "index_pointer": "/works/8",
+          "return_points": [
+            {
+              "id": "H03",
+              "index_pointer": "/works/8/major_argument_return_points/2"
+            },
+            {
+              "id": "H04",
+              "index_pointer": "/works/8/major_argument_return_points/3"
+            }
+          ]
+        },
+        {
+          "work_id": "MIFTAH",
+          "index_pointer": "/works/10",
+          "return_points": [
+            {
+              "id": "MF03",
+              "index_pointer": "/works/10/major_argument_return_points/2"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "ASBAHANI-ACTS",
+        "SHIFA-ANALYTICAL",
+        "MIFTAH-ADDITIONAL"
+      ],
+      "strongest_existing_context_for_this_question": "Asbahani main 396–468; Shifaʾ e205–209 and e219–221; Miftah main 1024–1026 in its wider moral-value and suffering discussion.",
+      "interpretative_result": "A fitting timed response or completion of a product need not confer the maker’s intrinsic perfection from outside. Intrinsic conditions and source-created conditions are not independent donations.",
+      "formal_dependency_or_result": "The F conformance/classification split and JointFinite actual fitting nonspeech exercise retain this distinction.",
+      "remaining_obligation": "The content of an all-context fittingness norm, including whether a proposed overriding good can license a deficient assertion, remains a substantive warrant question.",
+      "case_ids": [
+        "AR-X04",
+        "AR-X07"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T07",
+      "topic": "Veracity",
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-02",
+              "index_pointer": "/works/0/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "SAWAIQ",
+          "index_pointer": "/works/7",
+          "return_points": [
+            {
+              "id": "S04",
+              "index_pointer": "/works/7/major_argument_return_points/3"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "ASBAHANI-ACTS",
+        "SAWAIQ1-FIRST"
+      ],
+      "strongest_existing_context_for_this_question": "Asbahani 411–419, 422–423, 430–431 and 444–450 distinguishes reported Muʿtazilite reasoning, al-Razi’s criticism and Ibn Taymiyya’s reply. Sawaʿiq adds broader meaning and evidence-ranking controls.",
+      "interpretative_result": "A false source-owned deliberate presentation, deficient exercise, all-context unfitness and actual practical conformance are different predicates. The rescue or overriding-good objection targets the no-fitting-shortcoming premise.",
+      "formal_dependency_or_result": "VeracityBoundary controlled_token_true and veracity_of_coverage; deletion_N and truthful_not_conforming keep the proof and converse limits explicit.",
+      "remaining_obligation": "Arabic discussion does not independently prove the entire modern K/D/N/P signature. Source knowledge/ownership coverage and N require warrant, not a kernel substitution.",
+      "case_ids": [
+        "AR-X07",
+        "AR-X11"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T08",
+      "topic": "Attestation",
+      "index_refs": [
+        {
+          "work_id": "NUBUWWAT",
+          "index_pointer": "/works/11",
+          "return_points": [
+            {
+              "id": "NB02",
+              "index_pointer": "/works/11/major_argument_return_points/1"
+            },
+            {
+              "id": "NB03",
+              "index_pointer": "/works/11/major_argument_return_points/2"
+            },
+            {
+              "id": "NB05",
+              "index_pointer": "/works/11/major_argument_return_points/4"
+            }
+          ]
+        },
+        {
+          "work_id": "SAFADIYYA",
+          "index_pointer": "/works/12",
+          "return_points": [
+            {
+              "id": "SF01",
+              "index_pointer": "/works/12/major_argument_return_points/0"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "NB-PART3-READ",
+        "NB-ADDITIONAL",
+        "THRESHOLD-AUDIT",
+        "SF-PART1-READ"
+      ],
+      "strongest_existing_context_for_this_question": "Nubuwwat S002L103–114, printed 768–772 and 777–781, especially 771 and 779, with custody and strong alternatives preserved.",
+      "interpretative_result": "An extraordinary effect, intentional sign use, immediate mission certification and the full content of later speech need separate evidential links. A strong rival explanation can justify suspension.",
+      "formal_dependency_or_result": "Grounded attestation ownership and unanchored-cycle controls; the sign-converse/scoped-delegation comparison is contextual, not a new completed token-authentication theorem.",
+      "remaining_obligation": "No historical episode, particular revelation, private token or full message content is authenticated by these model or reading records.",
+      "case_ids": [
+        "AR-X05",
+        "AR-X08",
+        "AR-X11"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T09",
+      "topic": "Authority",
+      "index_refs": [
+        {
+          "work_id": "MIFTAH",
+          "index_pointer": "/works/10",
+          "return_points": [
+            {
+              "id": "MF02",
+              "index_pointer": "/works/10/major_argument_return_points/1"
+            }
+          ]
+        },
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-05",
+              "index_pointer": "/works/0/major_argument_return_points/4"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "MIFTAH-ADDITIONAL",
+        "TESTIMONY-READ"
+      ],
+      "strongest_existing_context_for_this_question": "Miftah 460–462 distinguishes delegated acts and unrestricted titles; Asbahani 725–728 contextualises authenticated report and learning.",
+      "interpretative_result": "A truthful report of an actual duty can warrant it without a second proof of that duty. Constitutive jurisdiction, prospective power and present applicability remain separate.",
+      "formal_dependency_or_result": "T20Grounded.Controls testimony_needs_no_second_jurisdiction, prospective_power_is_lost and past_duty_does_not_supply_current_applicability.",
+      "remaining_obligation": "Actual attribution, the content and duration of a commission, and present applicability are external premises.",
+      "case_ids": [
+        "AR-X05",
+        "AR-X08"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T10",
+      "topic": "Testimony",
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-05",
+              "index_pointer": "/works/0/major_argument_return_points/4"
+            }
+          ]
+        },
+        {
+          "work_id": "NUBUWWAT",
+          "index_pointer": "/works/11",
+          "return_points": [
+            {
+              "id": "NB04",
+              "index_pointer": "/works/11/major_argument_return_points/3"
+            },
+            {
+              "id": "NB-O6",
+              "index_pointer": "/works/11/orthogonal_topic_return_points/5"
+            }
+          ]
+        },
+        {
+          "work_id": "DAR",
+          "index_pointer": "/works/5",
+          "return_points": [
+            {
+              "id": "D01",
+              "index_pointer": "/works/5/major_argument_return_points/0"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "TESTIMONY-READ",
+        "NB-FIRST",
+        "DAR-REFLECT"
+      ],
+      "strongest_existing_context_for_this_question": "Asbahani 608–615 and 676–682, including the boundary of the quoted al-Ghazali passage; Nubuwwat multiple routes and responsible assertion; Darʾ later proof versus first recognition.",
+      "interpretative_result": "An accurate later account may preserve or strengthen knowledge without being its original cause. Multiple carriers or routes need a dependency analysis before being counted as independent.",
+      "formal_dependency_or_result": "Grounded support/retraction and quotient controls; inherited ordinary undefeated-report entitlement remains separate from strong source-owned certification.",
+      "remaining_obligation": "The model does not estimate historical transmission reliability or force every ordinary report to have prior speaker certification.",
+      "case_ids": [
+        "AR-X08",
+        "AR-X09",
+        "AR-X10"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T11",
+      "topic": "Copying and transmission",
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-05",
+              "index_pointer": "/works/0/major_argument_return_points/4"
+            }
+          ]
+        },
+        {
+          "work_id": "SAFADIYYA",
+          "index_pointer": "/works/12",
+          "return_points": [
+            {
+              "id": "SF-O1",
+              "index_pointer": "/works/12/orthogonal_topic_return_points/0"
+            }
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "TESTIMONY-READ",
+        "SF-PART3-READ"
+      ],
+      "strongest_existing_context_for_this_question": "Asbahani 389–391 separates speech attribution, carrier voice and occurrence; Safadiyya’s speech/recitation discussion remains a broader return point.",
+      "interpretative_result": "Faithful content preservation does not reproduce the acoustic event, create an independent origin or identify a source from content alone. Repetition of one realised observation does not accumulate independent information.",
+      "formal_dependency_or_result": "The GroundedQuotient and AliasCuts modules preserve the appropriate root support; MATH-122-APPLICATION gives a separate finite copied-observation control.",
+      "remaining_obligation": "A real origin map and independent channel-noise evidence must be supplied. The trace model intentionally leaves source labels unobserved; it is not a theorem about all possible evidence for authorship.",
+      "case_ids": [
+        "AR-X06",
+        "AR-X09"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    },
+    {
+      "id": "AR-T12",
+      "topic": "Identity and continuation",
+      "index_refs": [
+        {
+          "work_id": "ASBAHANI",
+          "index_pointer": "/works/0",
+          "return_points": [
+            {
+              "id": "A-T20-04",
+              "index_pointer": "/works/0/major_argument_return_points/3"
+            },
+            {
+              "id": "A-T20-05",
+              "index_pointer": "/works/0/major_argument_return_points/4"
+            }
+          ]
+        },
+        {
+          "work_id": "ALDA",
+          "index_pointer": "/works/2",
+          "return_points": []
+        }
+      ],
+      "evidence_ids": [
+        "INTRINSIC-READ",
+        "TESTIMONY-READ"
+      ],
+      "strongest_existing_context_for_this_question": "Asbahani concrete bearer and speech/carrier controls; al-Daʾ 24–27 on conditions, and 474–476 on direct act and generated consequences.",
+      "interpretative_result": "Track which bearer, target, resource, claim meaning and conditions the particular continuation must preserve. A new carrier or qualified role successor can preserve a claim without being the same occurrence. Preserving bytes or an effect label alone does not preserve scope or provenance.",
+      "formal_dependency_or_result": "ABC same witness and JointFinite J01 canonical identity; derivable_after_retraction_iff; trace known_word_mask_ambiguity.",
+      "remaining_obligation": "No general theory of personal identity, historical continuity or arbitrary-context theorem transfer is established. Actual semantic transport and source identity remain obligations.",
+      "case_ids": [
+        "AR-X01",
+        "AR-X06",
+        "AR-X10"
+      ],
+      "reading_gap_decision": "EXISTING_CONTEXT_CHECKED; no newly identified decision-relevant source-context gap requiring another primary reread in this audit. This is bounded by the retained corpus and present questions, not an assertion of exhaustive literature coverage."
+    }
+  ],
+  "orthogonal_return_points": [
+    {
+      "work_id": "DAR",
+      "index_ref": {
+        "work_id": "DAR",
+        "index_pointer": "/works/5",
+        "return_points": [
+          {
+            "id": "DAR-O1",
+            "index_pointer": "/works/5/orthogonal_topic_return_points/0"
+          },
+          {
+            "id": "DAR-O4",
+            "index_pointer": "/works/5/orthogonal_topic_return_points/3"
+          },
+          {
+            "id": "DAR-O6",
+            "index_pointer": "/works/5/orthogonal_topic_return_points/5"
+          }
+        ]
+      },
+      "use_status": "Presently orthogonal to the live premise tests; retained as return points, not counted as supporting evidence for the current verdict."
+    },
+    {
+      "work_id": "MINHAJ",
+      "index_ref": {
+        "work_id": "MINHAJ",
+        "index_pointer": "/works/6",
+        "return_points": [
+          {
+            "id": "MINHAJ-O1",
+            "index_pointer": "/works/6/orthogonal_topic_return_points/0"
+          },
+          {
+            "id": "MINHAJ-O3",
+            "index_pointer": "/works/6/orthogonal_topic_return_points/2"
+          },
+          {
+            "id": "MINHAJ-O4",
+            "index_pointer": "/works/6/orthogonal_topic_return_points/3"
+          }
+        ]
+      },
+      "use_status": "Presently orthogonal to the live premise tests; retained as return points, not counted as supporting evidence for the current verdict."
+    },
+    {
+      "work_id": "SAWAIQ",
+      "index_ref": {
+        "work_id": "SAWAIQ",
+        "index_pointer": "/works/7",
+        "return_points": [
+          {
+            "id": "SAWAIQ-O3",
+            "index_pointer": "/works/7/orthogonal_topic_return_points/2"
+          },
+          {
+            "id": "SAWAIQ-O5",
+            "index_pointer": "/works/7/orthogonal_topic_return_points/4"
+          },
+          {
+            "id": "SAWAIQ-O6",
+            "index_pointer": "/works/7/orthogonal_topic_return_points/5"
+          }
+        ]
+      },
+      "use_status": "Presently orthogonal to the live premise tests; retained as return points, not counted as supporting evidence for the current verdict."
+    },
+    {
+      "work_id": "SHIFA",
+      "index_ref": {
+        "work_id": "SHIFA",
+        "index_pointer": "/works/8",
+        "return_points": [
+          {
+            "id": "SHIFA-O1",
+            "index_pointer": "/works/8/orthogonal_topic_return_points/0"
+          },
+          {
+            "id": "SHIFA-O3",
+            "index_pointer": "/works/8/orthogonal_topic_return_points/2"
+          },
+          {
+            "id": "SHIFA-O5",
+            "index_pointer": "/works/8/orthogonal_topic_return_points/4"
+          }
+        ]
+      },
+      "use_status": "Presently orthogonal to the live premise tests; retained as return points, not counted as supporting evidence for the current verdict."
+    },
+    {
+      "work_id": "JAMI6",
+      "index_ref": {
+        "work_id": "JAMI6",
+        "index_pointer": "/works/9",
+        "return_points": [
+          {
+            "id": "JAMI6-O1",
+            "index_pointer": "/works/9/orthogonal_topic_return_points/0"
+          },
+          {
+            "id": "JAMI6-O4",
+            "index_pointer": "/works/9/orthogonal_topic_return_points/3"
+          },
+          {
+            "id": "JAMI6-O6",
+            "index_pointer": "/works/9/orthogonal_topic_return_points/5"
+          }
+        ]
+      },
+      "use_status": "Presently orthogonal to the live premise tests; retained as return points, not counted as supporting evidence for the current verdict."
+    },
+    {
+      "work_id": "MIFTAH",
+      "index_ref": {
+        "work_id": "MIFTAH",
+        "index_pointer": "/works/10",
+        "return_points": [
+          {
+            "id": "MIFTAH-O1",
+            "index_pointer": "/works/10/orthogonal_topic_return_points/0"
+          },
+          {
+            "id": "MIFTAH-O3",
+            "index_pointer": "/works/10/orthogonal_topic_return_points/2"
+          },
+          {
+            "id": "MIFTAH-O5",
+            "index_pointer": "/works/10/orthogonal_topic_return_points/4"
+          }
+        ]
+      },
+      "use_status": "Presently orthogonal to the live premise tests; retained as return points, not counted as supporting evidence for the current verdict."
+    },
+    {
+      "work_id": "NUBUWWAT",
+      "index_ref": {
+        "work_id": "NUBUWWAT",
+        "index_pointer": "/works/11",
+        "return_points": [
+          {
+            "id": "NB-O1",
+            "index_pointer": "/works/11/orthogonal_topic_return_points/0"
+          },
+          {
+            "id": "NB-O3",
+            "index_pointer": "/works/11/orthogonal_topic_return_points/2"
+          },
+          {
+            "id": "NB-O4",
+            "index_pointer": "/works/11/orthogonal_topic_return_points/3"
+          }
+        ]
+      },
+      "use_status": "Presently orthogonal to the live premise tests; retained as return points, not counted as supporting evidence for the current verdict."
+    },
+    {
+      "work_id": "SAFADIYYA",
+      "index_ref": {
+        "work_id": "SAFADIYYA",
+        "index_pointer": "/works/12",
+        "return_points": [
+          {
+            "id": "SF-O3",
+            "index_pointer": "/works/12/orthogonal_topic_return_points/2"
+          },
+          {
+            "id": "SF-O4",
+            "index_pointer": "/works/12/orthogonal_topic_return_points/3"
+          },
+          {
+            "id": "SF-O5",
+            "index_pointer": "/works/12/orthogonal_topic_return_points/4"
+          }
+        ]
+      },
+      "use_status": "Presently orthogonal to the live premise tests; retained as return points, not counted as supporting evidence for the current verdict."
+    }
+  ],
+  "new_primary_reading": {
+    "performed": false,
+    "new_pages": 0,
+    "new_text_positions": 0,
+    "reason": "The audit found existing contextual checks for each currently decision-relevant premise. Remaining open questions concern warrant, actual attribution, interpretation or applicability. Repeating a passage merely to populate a three-stage label would add no independent evidence.",
+    "search_limit": "The strongest relevant basis here means within the retained read corpus and the specified live questions, not a claim to have exhausted all available scholarship."
+  },
+  "repetition_controls": [
+    "A reread can correct an interpretation or expose a premise without adding an independent witness.",
+    "Distinct readers of the same received text do not multiply manuscript testimony; agreement is not a warrant vote.",
+    "A translation, electronic transcription, scan and excerpt can represent overlapping witnesses; their custody identities and dependencies remain in the reading index.",
+    "A repeated observation is not an independent sample. A genuinely independent acquisition or channel requires evidence of that independence.",
+    "First-pass continuous coverage, bounded visual controls, editorial apparatus and historical reconstruction remain different achievements.",
+    "Study seals establish the recorded coverage and file identities, not historical truth, metaphysical possibility or philosophical warrant."
+  ],
+  "assessment_control": {
+    "binding_id": "R-CURRENT",
+    "date": "2026-10-07T14:34:00Z",
+    "changed_by_this_audit": false,
+    "statement": "dot provisionally accepts a Necessary Being and actual complete common original source, with lower confidence in the latter; universal SourceMode remains insufficiently warranted. Basic Creator-recognition epistemic admissibility is retained. Earlier differing appraisals remain historical evidence."
+  },
+  "credit": "This supplement is AR-S4 synthesis of existing records. It adds no primary reading, theorem, proof replay, independent witness or historical authentication."
+}

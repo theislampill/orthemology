@@ -311,7 +311,7 @@ def _execution_hash_key(document, owners, sources, root):
 
 def _locked_external_files(document, owner):
     """Recognise exact external-source inventories without fetching them."""
-    # Source-owned Mathlib archive inventories describe the pinned dependency,
+    # Source-owned Mathlib/Batteries inventories describe the pinned dependency,
     # not this repository's docs directory. Require the complete exact document
     # as well as its source digest; arbitrary rows cannot borrow the exception.
     mathlib = {
@@ -319,6 +319,10 @@ def _locked_external_files(document, owner):
             'b681baebe9cc29157374228e49f24b6ba177a2dfb50ce78a053512c305c1e065',
         'c01c0b3cf6bed3a960794e7da55231e446c7622f9c953b5c0e82092d026bb431':
             '1f98b610f3d37455c3fa2c18c58461bcbd7d033a7590ad15b26f23862ffc8292',
+        'f461e480570d88a8b438fc332b6f3327216df187dedd09c979d47bedbaaa3bba':
+            '38c7949b68ef4debf63ad23442182637185d17bf3b34e1a2850b3cf3ee06f6d8',
+        '8e121ae7ace129ad9270db82ab6682609f5fec12a0d2de4fe567cf8898d6f039':
+            'ebc8e528ba7c9d3d86d9184f7866768728f2770fa3ad8018fb968480e52845ca',
     }
     expected = mathlib.get(owner.get('original_sha256'))
     if expected is not None:
@@ -326,7 +330,8 @@ def _locked_external_files(document, owner):
             separators=(',', ':'), allow_nan=False).encode()).hexdigest()
         if owner.get('public_sha256') != owner.get('original_sha256') or observed != expected:
             return None
-        return {row['path']: row for row in document['files']}
+        rows = document if isinstance(document, list) else document['files']
+        return {row['path']: row for row in rows}
     members = {'occurrence-correspondence-source-lock-v1': 'language/source-lock.json',
                'sense-scope-supplemental-source-lock-v1': 'language/sense-source-lock.json'}
     if (not isinstance(document, dict) or set(document) != {'format', 'repository', 'commit', 'tree', 'scope', 'files'}
@@ -481,6 +486,13 @@ def successor_origin_document(src, text, sources=None, root=None):
     suite_owner = re.fullmatch(r'experiments/orthemology-v5-successors/suites/([A-Za-z0-9][A-Za-z0-9_-]*)\.json', src)
     try:
         document = _strict_selector_json(text)
+        if isinstance(document, list):
+            owners = _source_owners(src, document, list(sources or []), root)
+            if owners and all(_locked_external_files(document, owner) is not None for owner in owners):
+                for row in document:
+                    row['path'] = ''
+                return json.dumps(document, ensure_ascii=False, indent=2)
+            return text
         if not isinstance(document, dict):
             return text
         if src == _SUCCESSOR_NEGATIVE_INVENTORY['owner']['public_path']:
@@ -545,9 +557,80 @@ def successor_origin_document(src, text, sources=None, root=None):
     return text
 
 
+# The final T20 reader files keep their sealed owner-archive links. This one
+# finite public alias index binds the reconstruction context separately from
+# original-member custody; it does not make archive links native checkout URLs.
+_T20_READER_INDEX = (
+    'experiments/orthemology-v5-successors/'
+    'groups/t20-successor/CONTEXT_SOURCE_INDEX.json',
+    'cb2acbc6c3dc795c91ef18192a2077d7cba513761eec291a01b99c7ef178b31e',
+)
+
+
+def _t20_reader_locator(path, target, sources, root, from_packet_root=False):
+    """Resolve one sealed reader alias only while both exact source bytes match."""
+    def checked_file(relative):
+        if not _selector_path(relative):
+            return None
+        current = os.fspath(root)
+        for part in relative.split('/'):
+            current = os.path.join(current, part)
+            if os.path.islink(current):
+                return None
+        if not os.path.isfile(current):
+            return None
+        with open(current, 'rb') as stream:
+            return stream.read()
+
+    try:
+        raw = checked_file(_T20_READER_INDEX[0])
+        if raw is None or hashlib.sha256(raw).hexdigest() != _T20_READER_INDEX[1]:
+            return False
+        index = _strict_selector_json(raw.decode('utf-8'))
+        rows = index['public_sources']
+        aliases = {row['owner_archive_path']: row for row in rows}
+        if len(aliases) != len(rows):
+            return False
+        relative = os.path.relpath(path, root).replace('\\', '/')
+        owners = [row for row in rows if row['public_path'] == relative]
+        if len(owners) != 1 or not isinstance(target, str) or not target or target.startswith('/') or '\\' in target or ':' in target or '\0' in target:
+            return False
+
+        def exact_source(row):
+            matches = [source for source in sources if source.get('id') == row['id']]
+            if len(matches) != 1:
+                return False
+            source = matches[0]
+            canonical = json.dumps(source, sort_keys=True, ensure_ascii=False,
+                                   separators=(',', ':'), allow_nan=False).encode()
+            if (hashlib.sha256(canonical).hexdigest() != row['source_record_sha256']
+                    or source['public_path'] != row['public_path']
+                    or source['public_sha256'] != row['public_sha256']
+                    or source['public_bytes'] != row['public_bytes']):
+                return False
+            payload = checked_file(row['public_path'])
+            return (payload is not None and len(payload) == row['public_bytes']
+                    and hashlib.sha256(payload).hexdigest() == row['public_sha256'])
+
+        owner = owners[0]
+        if not exact_source(owner):
+            return False
+        candidates = {posixpath.normpath(posixpath.join(
+            posixpath.dirname(owner['owner_archive_path']), target))}
+        if from_packet_root:
+            candidates.add(posixpath.normpath(target))
+        matches = [aliases[name] for name in candidates
+                   if name.startswith('t20/') and _selector_path(name) and name in aliases]
+        return len(matches) == 1 and exact_source(matches[0])
+    except (OSError, UnicodeDecodeError, ValueError, TypeError, KeyError):
+        return False
+
+
 def successor_packet_locator(path, target, sources, root=None, from_packet_root=False):
-    """Resolve exact registered original-member custody, not native links."""
+    """Resolve exact original-member custody or the pinned finite reader context."""
     root = ROOT if root is None else root
+    if _t20_reader_locator(path, target, sources, root, from_packet_root):
+        return True
     relative = os.path.relpath(path, root).replace('\\', '/')
     owners = [row for row in sources if row.get('public_path') == relative]
     if (not owners or any(_public_successor_bytes(row, root) is None for row in owners)

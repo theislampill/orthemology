@@ -1,0 +1,454 @@
+{
+  "schema": "t20-source-only-projection-map-v1",
+  "historical_seals": {
+    "v4_source_manifest": "78311377123b7d555b72e7f9dd423d9e7a6c0d1768daaaa5aac36125eb4168c7"
+  },
+  "records": [
+    {
+      "path": "tests/BridgeContract.before.lean",
+      "sha256": "6491a484a1c2a7346c8b5220369f39f6254eecf7dbeeb53fddc3768ff34d7632",
+      "bytes": 499,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "BridgeContract.before.lean",
+        "sha256": "6491a484a1c2a7346c8b5220369f39f6254eecf7dbeeb53fddc3768ff34d7632",
+        "bytes": 499
+      }
+    },
+    {
+      "path": "tests/BridgeContract.lean",
+      "sha256": "abb02e1e99486b41ba17ea8a1e574b46a3b997a90312bac07ba37e2baee8c138",
+      "bytes": 496,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "BridgeContract.lean",
+        "sha256": "abb02e1e99486b41ba17ea8a1e574b46a3b997a90312bac07ba37e2baee8c138",
+        "bytes": 496
+      }
+    },
+    {
+      "path": "negative-controls/RejectedClaims.lean",
+      "sha256": "751ceb0fb12d2515b96f72d9d75ab915d68c32eb7b4f6fa23bb8c0f7c90af22e",
+      "bytes": 950,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "RejectedClaims.lean",
+        "sha256": "751ceb0fb12d2515b96f72d9d75ab915d68c32eb7b4f6fa23bb8c0f7c90af22e",
+        "bytes": 950
+      }
+    },
+    {
+      "path": "inherited/SourceIdentity.original.lean",
+      "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "bytes": 7357,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "SourceIdentity.original.lean",
+        "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+        "bytes": 7357
+      }
+    },
+    {
+      "path": "BridgeControls.lean",
+      "sha256": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8",
+      "bytes": 9487,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "BridgeControls.lean",
+        "sha256": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8",
+        "bytes": 9487
+      }
+    },
+    {
+      "path": "ImportClosure.lean",
+      "sha256": "592791295999536ae5c78e11232bb5ddd7729929c2b48bfbd2945a0c7e90679f",
+      "bytes": 142,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "ImportClosure.lean",
+        "sha256": "592791295999536ae5c78e11232bb5ddd7729929c2b48bfbd2945a0c7e90679f",
+        "bytes": 142
+      }
+    },
+    {
+      "path": "InheritedImportClosure.lean",
+      "sha256": "7b2e918998b21f0a2e2ac20deba04ebc15681b1352f74b3914ee0e37d361656f",
+      "bytes": 149,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "InheritedImportClosure.lean",
+        "sha256": "7b2e918998b21f0a2e2ac20deba04ebc15681b1352f74b3914ee0e37d361656f",
+        "bytes": 149
+      }
+    },
+    {
+      "path": "OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "OriginalBearerBridge.lean",
+        "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+        "bytes": 6940
+      }
+    },
+    {
+      "path": "ProofReadback.lean",
+      "sha256": "590cd5889cbd9c5cd77c0d0590e3f01712ca170d25c7ba22500c1a3cd0613ca2",
+      "bytes": 751,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "ProofReadback.lean",
+        "sha256": "590cd5889cbd9c5cd77c0d0590e3f01712ca170d25c7ba22500c1a3cd0613ca2",
+        "bytes": 751
+      }
+    },
+    {
+      "path": "ReadbackAudit.lean",
+      "sha256": "e89423e1188a2c9bc5abcd1f374483c47af48942fb75e9fd4ac53ad6de963a55",
+      "bytes": 21739,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "ReadbackAudit.lean",
+        "sha256": "e89423e1188a2c9bc5abcd1f374483c47af48942fb75e9fd4ac53ad6de963a55",
+        "bytes": 21739
+      }
+    },
+    {
+      "path": "SourceIdentityDerived.lean",
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "bytes": 7438,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "SourceIdentityDerived.lean",
+        "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+        "bytes": 7438
+      }
+    },
+    {
+      "path": "review/IndependentScopeTests.lean",
+      "sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284",
+      "bytes": 6771,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "IndependentScopeTests.lean",
+        "sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284",
+        "bytes": 6771
+      }
+    },
+    {
+      "path": "review/IndependentReadback.lean",
+      "sha256": "c5d21b92b79a708ffdaa89dfe55250b0adb788b92daa42b65a0d77180d7e4f2d",
+      "bytes": 2154,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "IndependentReadback.lean",
+        "sha256": "c5d21b92b79a708ffdaa89dfe55250b0adb788b92daa42b65a0d77180d7e4f2d",
+        "bytes": 2154
+      }
+    },
+    {
+      "path": "BOUNDARY_LEDGER.json",
+      "sha256": "3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8",
+      "bytes": 5190,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "BOUNDARY_LEDGER.json",
+        "sha256": "3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8",
+        "bytes": 5190
+      }
+    },
+    {
+      "path": "COUNTERMODEL_MATRIX.json",
+      "sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e",
+      "bytes": 6059,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "COUNTERMODEL_MATRIX.json",
+        "sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e",
+        "bytes": 6059
+      }
+    },
+    {
+      "path": "DECLARATIONS.json",
+      "sha256": "34c4372bb2197b59695b67febb49aaa091e97190bf0c1d036c34fedac939570d",
+      "bytes": 4278,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "DECLARATIONS.json",
+        "sha256": "34c4372bb2197b59695b67febb49aaa091e97190bf0c1d036c34fedac939570d",
+        "bytes": 4278
+      }
+    },
+    {
+      "path": "DESIGN_AND_PLAN.md",
+      "sha256": "05a520f8160b28af5c8d90f3045424288c601e585344a09f71f7dc305dffd6be",
+      "bytes": 9052,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "DESIGN_AND_PLAN.md",
+        "sha256": "05a520f8160b28af5c8d90f3045424288c601e585344a09f71f7dc305dffd6be",
+        "bytes": 9052
+      }
+    },
+    {
+      "path": "THEOREM_SOURCE_MAP.json",
+      "sha256": "efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431",
+      "bytes": 24677,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "THEOREM_SOURCE_MAP.json",
+        "sha256": "efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431",
+        "bytes": 24677
+      }
+    },
+    {
+      "path": "verification-final/READBACKS.json",
+      "sha256": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+      "bytes": 51051,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "READBACKS.json",
+        "sha256": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+        "bytes": 51051
+      }
+    },
+    {
+      "path": "verification-final/INHERITED_COMPARISON.json",
+      "sha256": "513bb5cb9f502c98aab0f7041f405dc655b16f19fa0f4b5bc7dfc8956e0c3a98",
+      "bytes": 8462,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "INHERITED_COMPARISON.json",
+        "sha256": "513bb5cb9f502c98aab0f7041f405dc655b16f19fa0f4b5bc7dfc8956e0c3a98",
+        "bytes": 8462
+      }
+    },
+    {
+      "path": "verification-final/VERIFICATION.json",
+      "sha256": "eaec3195d1c2654826e416ea34180165560d99e02c67fec84da001e498060199",
+      "bytes": 10270,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "VERIFICATION.json",
+        "sha256": "eaec3195d1c2654826e416ea34180165560d99e02c67fec84da001e498060199",
+        "bytes": 10270
+      }
+    },
+    {
+      "path": "verification-final/IMPORT_CLOSURES.json",
+      "sha256": "69a5cbb0f371b9149f13b6741572f259b3290e450d30008ae105eeab24264fa1",
+      "bytes": 1135863,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "IMPORT_CLOSURES.json",
+        "sha256": "69a5cbb0f371b9149f13b6741572f259b3290e450d30008ae105eeab24264fa1",
+        "bytes": 1135863
+      }
+    },
+    {
+      "path": "receipts/IMPORT_ONLY.diff",
+      "sha256": "d27a04de5ff4b7584a7915c03a4e73d636bea39182e4cb34e98a43653a7261f6",
+      "bytes": 452,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "IMPORT_ONLY.diff",
+        "sha256": "d27a04de5ff4b7584a7915c03a4e73d636bea39182e4cb34e98a43653a7261f6",
+        "bytes": 452
+      }
+    },
+    {
+      "path": "receipts/ENVIRONMENT_MISSING_UMBRELLA.log",
+      "sha256": "0dea92c0a5b03ce1b9a6bed2535e05bb2a2fb1cfbf24f4c0d809ea2c1099d324",
+      "bytes": 248,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "ENVIRONMENT_MISSING_UMBRELLA.log",
+        "sha256": "0dea92c0a5b03ce1b9a6bed2535e05bb2a2fb1cfbf24f4c0d809ea2c1099d324",
+        "bytes": 248
+      }
+    },
+    {
+      "path": "receipts/TDD_RED.log",
+      "sha256": "c30f7b8d7883c86e28310357b6aabac7dcdd891e5525feb4b47638aeb568bca1",
+      "bytes": 731,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "TDD_RED.log",
+        "sha256": "c30f7b8d7883c86e28310357b6aabac7dcdd891e5525feb4b47638aeb568bca1",
+        "bytes": 731
+      }
+    },
+    {
+      "path": "receipts/TDD_GREEN.log",
+      "sha256": "91b3a6206f40afc28905b16088f1d23b8b9cd46800f178b9847ddac3e07ef611",
+      "bytes": 2210,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "TDD_GREEN.log",
+        "sha256": "91b3a6206f40afc28905b16088f1d23b8b9cd46800f178b9847ddac3e07ef611",
+        "bytes": 2210
+      }
+    },
+    {
+      "path": "review/REVIEW.md",
+      "sha256": "6fc6b49f9999f78392548b0095bb865c06da4ea49d9fe00257c636e967dd53cc",
+      "bytes": 12746,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "REVIEW.md",
+        "sha256": "6fc6b49f9999f78392548b0095bb865c06da4ea49d9fe00257c636e967dd53cc",
+        "bytes": 12746
+      }
+    },
+    {
+      "path": "review/FINDINGS.json",
+      "sha256": "b1eb2a072b0a63ae988afdb3fec983502e91d4d2d62a68b62c21afdb8c6f0e05",
+      "bytes": 4839,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "FINDINGS.json",
+        "sha256": "b1eb2a072b0a63ae988afdb3fec983502e91d4d2d62a68b62c21afdb8c6f0e05",
+        "bytes": 4839
+      }
+    },
+    {
+      "path": "review/INTEGRITY_VERIFICATION.json",
+      "sha256": "82f1324fbd8b059bf2d0514698ce2d0ea1dca9ad3ecd32e917fbc6088f4060d8",
+      "bytes": 1106,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "INTEGRITY_VERIFICATION.json",
+        "sha256": "82f1324fbd8b059bf2d0514698ce2d0ea1dca9ad3ecd32e917fbc6088f4060d8",
+        "bytes": 1106
+      }
+    },
+    {
+      "path": "review/INDEPENDENT_SCOPE_VERIFICATION.json",
+      "sha256": "ab3e099392fdfde7a45cd501667c5a9107aa42030800d327a178e4e469d47c87",
+      "bytes": 15503,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "INDEPENDENT_SCOPE_VERIFICATION.json",
+        "sha256": "ab3e099392fdfde7a45cd501667c5a9107aa42030800d327a178e4e469d47c87",
+        "bytes": 15503
+      }
+    },
+    {
+      "path": "review/fresh-replay/VERIFICATION.json",
+      "sha256": "e90d43c6c7a7f5f88eae103cc7d4c1b55627d4d0f857b6f6bc8433ebb56056f7",
+      "bytes": 10288,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "VERIFICATION.json",
+        "sha256": "e90d43c6c7a7f5f88eae103cc7d4c1b55627d4d0f857b6f6bc8433ebb56056f7",
+        "bytes": 10288
+      }
+    },
+    {
+      "path": "review/fresh-replay/READBACKS.json",
+      "sha256": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+      "bytes": 51051,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "READBACKS.json",
+        "sha256": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+        "bytes": 51051
+      }
+    },
+    {
+      "path": "review/IndependentReadback.log",
+      "sha256": "93fcbf5551dfc4affac79663d7f175db6d24f41c111eb95ebf54f60b3f2bbab6",
+      "bytes": 13989,
+      "projection": "EXACT",
+      "change": "Carry exact v4 selected bytes into a guard-only successor reconstruction. Scientific source and historical evidence are unchanged; v4 remains sealed.",
+      "original": {
+        "logical_name": "IndependentReadback.log",
+        "sha256": "93fcbf5551dfc4affac79663d7f175db6d24f41c111eb95ebf54f60b3f2bbab6",
+        "bytes": 13989
+      }
+    },
+    {
+      "path": "replay.py",
+      "sha256": "c74ea6fd246fafd1b45dbaaa5d736ae7c7a12775c975065a85f360fefc04ff7a",
+      "bytes": 12124,
+      "projection": "DERIVED",
+      "change": "Guard-only successor to the exact v4 public runner: add lexical/canonical containment and reject escaping input symlinks before output creation. Scientific run/readback/control functions and compiler flags remain unchanged; original v4 bytes remain sealed.",
+      "original": {
+        "logical_name": "replay.py",
+        "sha256": "627ac26f7cdd96049c7b0254ea30ff68eeb6ea340f2968aab792077e76d2a96b",
+        "bytes": 10655
+      }
+    },
+    {
+      "path": "PROJECTION_NOTES.md",
+      "sha256": "fe9db442aaf977af1b536a04ed813df1ba67b44804063b72f29710b890211f46",
+      "bytes": 3200,
+      "projection": "DERIVED",
+      "change": "Derived from the exact sealed v4 public input: add explicit active-v5 recipe, lexical/canonical/symlink guard correction and transition notice; all scientific result and scope content retained. Original v4 bytes/seal are unchanged.",
+      "original": {
+        "logical_name": "PROJECTION_NOTES.md",
+        "sha256": "b8f9fbef3967b031833f681292e3d60e09b5b12f98372702ef3566820c90ea19",
+        "bytes": 2832
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138",
+      "bytes": 8178,
+      "projection": "DERIVED",
+      "change": "Derived from the exact sealed v4 public input: add explicit active-v5 recipe, lexical/canonical/symlink guard correction and transition notice; all scientific result and scope content retained. Original v4 bytes/seal are unchanged.",
+      "original": {
+        "logical_name": "README.md",
+        "sha256": "e5a4dac0f35f8c23d337b7974a6f07e071d5fadb250d0960a4e19ca80c5e1708",
+        "bytes": 7838
+      }
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "a7bbe55e485799e9791b700f633714ca1c5a37f76d6568ea212e0913d065e6e8",
+      "bytes": 7566,
+      "projection": "DERIVED",
+      "change": "Derived from the exact sealed v4 public input: add explicit active-v5 recipe, lexical/canonical/symlink guard correction and transition notice; all scientific result and scope content retained. Original v4 bytes/seal are unchanged.",
+      "original": {
+        "logical_name": "BUILD.md",
+        "sha256": "551fb7774a438fc4e598ea1c97959dbeaab9dafa161e54677c86bf256ae7e220",
+        "bytes": 5864
+      }
+    }
+  ],
+  "body_admission": false,
+  "new_scientific_execution": false
+}

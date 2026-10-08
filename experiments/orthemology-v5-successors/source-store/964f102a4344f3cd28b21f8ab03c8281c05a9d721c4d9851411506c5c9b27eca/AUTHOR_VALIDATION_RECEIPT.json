@@ -1,0 +1,39 @@
+{
+  "status": "AUTHOR_PASS_AWAITING_INDEPENDENT_REVIEW",
+  "date_utc": "2026-10-07T08:02:45.916104+00:00",
+  "source_manifest_sha256": "75528460e5853d4f4265fd1e4bf06cf08cf6d041157845e37a2e7ad6482439d1",
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "fresh_custom_source_modules": [
+    "GroundedSupport",
+    "GroundedQuotient",
+    "AliasCuts",
+    "OccurrenceControls",
+    "CutControls",
+    "MutationControls"
+  ],
+  "theorem_declarations_read_back": 39,
+  "declaration_count_is_not_novelty_count": true,
+  "axioms_observed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "no_sorry_or_custom_axioms": true,
+  "native_decide_used": false,
+  "dependency_mode": "Existing pinned objects reused; 1365 bound dependency objects rehashed unchanged. No cold dependency rebuild or compiler bootstrap.",
+  "python_unit_tests": 7,
+  "finite_positive_rule_systems": 2325,
+  "availability_profiles": 9300,
+  "alias_antichain_partition_cases": 2589,
+  "strict_alias_cut_order_failures_at_4_labels": 40,
+  "strict_failures_below_4_labels": 0,
+  "python_lean_general_refinement_claimed": false,
+  "fresh_external_specialist_review_claimed": false,
+  "candidate_repository_mutated_by_this_worker": false,
+  "interpretive_limits": [
+    "Derivability loss is not historical falsehood",
+    "No completeness for every true or warranted proposition",
+    "Historical evidence invalidation differs from current prospective-grant revocation",
+    "No actual source authenticity, normative standing, revelation, physical action or indefinite continuation is established"
+  ]
+}

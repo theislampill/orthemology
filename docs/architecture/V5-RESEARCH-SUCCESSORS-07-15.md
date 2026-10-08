@@ -1,6 +1,6 @@
-# Orthemology v5: Seventh–Sixteenth research successors
+# Orthemology v5: Seventh–Twentieth research successors
 
-This layer integrates research sources through the **final Sixteenth return**
+This layer integrates research sources through the **final Twentieth return**
 into the same Orthemology v5 programme. It preserves the occurrence-centred
 core and the accepted [final-Sixth layer](V5-RESEARCH-CONTINUATIONS.md). The cutoff
 describes included sources. It does not mean that every statement has a fresh
@@ -160,8 +160,11 @@ The committed Seventh–Fifteenth result statements, source identities and scien
 
 The owner subsumed separate pre-Sixteenth final validation/review into one campaign on the combined candidate. D16 in the original DAG remains the study-history cell.
 
-One combined PR through Sixteenth is returned unmerged for subsequent ChatGPT
-review (R00). No PR is opened at the Fifteenth boundary. Owner-controlled merge
-(R01), external human review, empirical validation, normative warrant, terminology
-adoption and publication remain separate acts. Seventeenth and later returns
-are outside the authorized integration scope.
+The [bounded Twentieth extension](../decisions/0040-v5-through-twentieth-bounded-extension.md) adds the prepared Seventeenth–Nineteenth material, the sealed Twentieth components and the final reading/report addendum without creating a new registry or replay framework. The [current Twentieth guide](../../experiments/orthemology-v5-successors/groups/t20-successor/README.md) distinguishes the frozen scientific selection from final reader sources. Reading and packaging add no result rows. Original research executions and later source-bound receiving integration remain separate evidence classes.
+
+The existing assessment owner incorporates the final dated actual-common-source appraisal, while retaining the exact earlier registry snapshot and source bytes. Actual-order provisional acceptance does not close universal SourceMode or erase T19's affirmative historical judgement. Conditional theorem statements retain their full scoped credit independently of premise appraisal.
+
+This return prepares a base-pinned local archive patch, with no push, PR or merge. Exact-tree gate, independent whole-diff review and fresh clean-apply outcomes are supplied separately. The mandatory exact Docker/Poppler fresh PDF rebuild is locally blocked; bounded carried-artifact checks are not a substitute. Owner-controlled merge, external human review, empirical validation, normative warrant, terminology adoption and publication remain separate acts.
+
+
+The last finite append preserves the first reader layer and adds the retrospective methodological audit plus one late typed-emergence interpretation. The latter is a distinct source-bound conditional model/control, not a defect repair to any earlier theorem and not a metaphysical possibility proof. Its original research/review receipts are affirmative at their stated scope; receiving native fresh science remains NOT_RUN. The existing finite reader-alias lookup is reused with one combined exact-bound index, preserving the earlier index and all original reader bytes.

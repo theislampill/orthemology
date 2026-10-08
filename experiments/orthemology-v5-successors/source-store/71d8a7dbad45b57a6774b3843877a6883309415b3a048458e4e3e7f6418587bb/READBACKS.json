@@ -1,0 +1,168 @@
+{
+  "TraceControls.mask_sum": {
+    "type": "@TraceControls.mask_sum.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))],\n  @Eq.{u_1 + 1} K (∑ a, @TraceControls.maskWeight.{u_1} K inst a)\n    (@OfNat.ofNat.{u_1} K 1\n      (@One.toOfNat1.{u_1} K\n        (@AddMonoidWithOne.toOne.{u_1} K\n          (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n            (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))",
+    "type_sha256": "38723fd47414477fb15669a2e6bcb277cfcd8edfb96a7147430b3f6962b13cdf",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.trace_total": {
+    "type": "@TraceControls.trace_total.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (w : TraceControls.Word),\n  @Eq.{u_1 + 1} K (∑ t, @TraceControls.mass.{u_1} K inst w t)\n    (@OfNat.ofNat.{u_1} K 1\n      (@One.toOfNat1.{u_1} K\n        (@AddMonoidWithOne.toOne.{u_1} K\n          (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n            (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))",
+    "type_sha256": "686cfbe478ba105c83921b25bc4f077550efc4c2fe153868621875a1c463805e",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.mass_nonneg": {
+    "type": "@TraceControls.mass_nonneg.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (w : TraceControls.Word) (t : TraceControls.Trace),\n  @LE.le.{u_1} K\n    (@Preorder.toLE.{u_1} K\n      (@PartialOrder.toPreorder.{u_1} K\n        (@SemilatticeInf.toPartialOrder.{u_1} K\n          (@Lattice.toSemilatticeInf.{u_1} K\n            (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))))\n    (@OfNat.ofNat.{u_1} K 0\n      (@Zero.toOfNat0.{u_1} K\n        (@MulZeroClass.toZero.{u_1} K\n          (@NonUnitalNonAssocSemiring.toMulZeroClass.{u_1} K\n            (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n              (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                  (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst)))))))))\n    (@TraceControls.mass.{u_1} K inst w t)",
+    "type_sha256": "8f414f5f6b54be86b80590d28cb603bcd5c4252369a397d35fd2d9b42b5f0715",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.complete_law00": {
+    "type": "@TraceControls.complete_law00.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (t : TraceControls.Trace),\n  @Eq.{u_1 + 1} K (@TraceControls.mass.{u_1} K inst TraceControls.word00 t) (@TraceControls.law00.{u_1} K inst t)",
+    "type_sha256": "2b101d1a77988656ea65dee644813c5922a80b968f808068b7731a5ad16cc040",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.complete_law01": {
+    "type": "@TraceControls.complete_law01.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (t : TraceControls.Trace),\n  @Eq.{u_1 + 1} K (@TraceControls.mass.{u_1} K inst TraceControls.word01 t) (@TraceControls.law01.{u_1} K inst t)",
+    "type_sha256": "301cd51990910de735a2493ddf68d9882514eec352da7c94b42d85ac3aa74289",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.one_trace_tv": {
+    "type": "@TraceControls.one_trace_tv.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))],\n  @Eq.{u_1 + 1} K\n    (@TraceControls.tv.{u_1} K inst inst_1 (@TraceControls.mass.{u_1} K inst TraceControls.word00)\n      (@TraceControls.mass.{u_1} K inst TraceControls.word01))\n    (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n      (@instHDiv.{u_1} K\n        (@DivInvMonoid.toDiv.{u_1} K (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n      (@OfNat.ofNat.{u_1} K 1\n        (@One.toOfNat1.{u_1} K\n          (@AddMonoidWithOne.toOne.{u_1} K\n            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n              (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))\n      (@OfNat.ofNat.{u_1} K 4\n        (@instOfNatAtLeastTwo.{u_1} K 4\n          (@AddMonoidWithOne.toNatCast.{u_1} K\n            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n              (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n          ⋯)))",
+    "type_sha256": "bf244310e8d1ff9a9dd08ef3d36ecaa3ccc8080a546716c579764c1c273ec60c",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.copies_injective": {
+    "type": "TraceControls.copies_injective : ∀ (m : Nat),\n  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) m →\n    @Function.Injective.{1, 1} TraceControls.Trace (Fin m → TraceControls.Trace) (TraceControls.copies m)",
+    "type_sha256": "f1bbad71d36c942661de7c37a9fc1a0c6536bf31633da7899aab82c23274f44a",
+    "axioms": []
+  },
+  "TraceControls.copyMass_at": {
+    "type": "@TraceControls.copyMass_at.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] (m : Nat),\n  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) m →\n    ∀ (w : TraceControls.Word) (t : TraceControls.Trace),\n      @Eq.{u_1 + 1} K (@TraceControls.copyMass.{u_1} K inst m w (TraceControls.copies m t))\n        (@TraceControls.mass.{u_1} K inst w t)",
+    "type_sha256": "7be5a68f163bc1ab73a292e45e1adaed7ed14bd1116dbc1588e98fde55decb81",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.duplicate_tv": {
+    "type": "@TraceControls.duplicate_tv.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (m : Nat),\n  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) m →\n    @Eq.{u_1 + 1} K (@TraceControls.copiedTV.{u_1} K inst inst_1 m)\n      (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n        (@instHDiv.{u_1} K\n          (@DivInvMonoid.toDiv.{u_1} K (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n        (@OfNat.ofNat.{u_1} K 1\n          (@One.toOfNat1.{u_1} K\n            (@AddMonoidWithOne.toOne.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K\n                  (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))\n        (@OfNat.ofNat.{u_1} K 4\n          (@instOfNatAtLeastTwo.{u_1} K 4\n            (@AddMonoidWithOne.toNatCast.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n            ⋯)))",
+    "type_sha256": "4b80f359a6ca5e88cc4fe4b2287ea3de54cc3db0ec9e7640ff956f415e8beda7",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.copies_zero_const": {
+    "type": "TraceControls.copies_zero_const : @Eq.{1}\n  (TraceControls.Trace → Fin (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) → TraceControls.Trace)\n  (TraceControls.copies (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0))) fun x x => TraceControls.empty",
+    "type_sha256": "c855c75aca7d24f74d7c5cd92acf5d372d827988601e16887f3cc3f2c98332ad",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.copyMass_zero": {
+    "type": "@TraceControls.copyMass_zero.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (w : TraceControls.Word) (z : Fin (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) → TraceControls.Trace),\n  @Eq.{u_1 + 1} K (@TraceControls.copyMass.{u_1} K inst (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) w z)\n    (@OfNat.ofNat.{u_1} K 1\n      (@One.toOfNat1.{u_1} K\n        (@AddMonoidWithOne.toOne.{u_1} K\n          (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n            (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))",
+    "type_sha256": "7c38d9514c22dfb30b86e08e1f480ebec90db851feeaf3f69d21b801ade34710",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.zero_data_tv": {
+    "type": "@TraceControls.zero_data_tv.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))],\n  @Eq.{u_1 + 1} K (@TraceControls.copiedTV.{u_1} K inst inst_1 (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)))\n    (@OfNat.ofNat.{u_1} K 0\n      (@Zero.toOfNat0.{u_1} K\n        (@MulZeroClass.toZero.{u_1} K\n          (@NonUnitalNonAssocSemiring.toMulZeroClass.{u_1} K\n            (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n              (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                  (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst)))))))))",
+    "type_sha256": "99d43ef128334dba10e20f1375bcaf89a624a4e1262ec2571d57968441ffa97d",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.success_formula": {
+    "type": "@TraceControls.success_formula.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (h : TraceControls.Trace → K),\n  @Eq.{u_1 + 1} K (@TraceControls.success.{u_1} K inst h)\n    (@HAdd.hAdd.{u_1, u_1, u_1} K K K\n      (@instHAdd.{u_1} K\n        (@Distrib.toAdd.{u_1} K\n          (@NonUnitalNonAssocSemiring.toDistrib.{u_1} K\n            (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n              (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                  (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst))))))))\n      (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n        (@instHDiv.{u_1} K\n          (@DivInvMonoid.toDiv.{u_1} K (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n        (@OfNat.ofNat.{u_1} K 1\n          (@One.toOfNat1.{u_1} K\n            (@AddMonoidWithOne.toOne.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K\n                  (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))\n        (@OfNat.ofNat.{u_1} K 2\n          (@instOfNatAtLeastTwo.{u_1} K 2\n            (@AddMonoidWithOne.toNatCast.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n            ⋯)))\n      (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n        (@instHDiv.{u_1} K\n          (@DivInvMonoid.toDiv.{u_1} K (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n        (@HAdd.hAdd.{u_1, u_1, u_1} K K K\n          (@instHAdd.{u_1} K\n            (@Distrib.toAdd.{u_1} K\n              (@NonUnitalNonAssocSemiring.toDistrib.{u_1} K\n                (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n                  (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                    (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                      (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst))))))))\n          (@HSub.hSub.{u_1, u_1, u_1} K K K\n            (@instHSub.{u_1} K\n              (@SubNegMonoid.toSub.{u_1} K\n                (@AddGroup.toSubNegMonoid.{u_1} K\n                  (@AddGroupWithOne.toAddGroup.{u_1} K\n                    (@Ring.toAddGroupWithOne.{u_1} K\n                      (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))\n            (@HAdd.hAdd.{u_1, u_1, u_1} K K K\n              (@instHAdd.{u_1} K\n                (@Distrib.toAdd.{u_1} K\n                  (@NonUnitalNonAssocSemiring.toDistrib.{u_1} K\n                    (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n                      (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                        (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                          (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst))))))))\n              (@HMul.hMul.{u_1, u_1, u_1} K K K\n                (@instHMul.{u_1} K\n                  (@Distrib.toMul.{u_1} K\n                    (@NonUnitalNonAssocSemiring.toDistrib.{u_1} K\n                      (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n                        (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                          (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                            (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst))))))))\n                (@Neg.neg.{u_1} K\n                  (@NegZeroClass.toNeg.{u_1} K\n                    (@SubNegZeroMonoid.toNegZeroClass.{u_1} K\n                      (@SubtractionMonoid.toSubNegZeroMonoid.{u_1} K\n                        (@SubtractionCommMonoid.toSubtractionMonoid.{u_1} K\n                          (@AddCommGroup.toDivisionAddCommMonoid.{u_1} K\n                            (@Ring.toAddCommGroup.{u_1} K\n                              (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))))))\n                  (@OfNat.ofNat.{u_1} K 3\n                    (@instOfNatAtLeastTwo.{u_1} K 3\n                      (@AddMonoidWithOne.toNatCast.{u_1} K\n                        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                          (@Ring.toAddGroupWithOne.{u_1} K\n                            (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n                      ⋯)))\n                (h\n                  (@OfNat.ofNat.{0} TraceControls.Trace 1\n                    (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 7 (instOfNatNat 7)) ⋯ 1))))\n              (@HMul.hMul.{u_1, u_1, u_1} K K K\n                (@instHMul.{u_1} K\n                  (@Distrib.toMul.{u_1} K\n                    (@NonUnitalNonAssocSemiring.toDistrib.{u_1} K\n                      (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n                        (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                          (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                            (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst))))))))\n                (@OfNat.ofNat.{u_1} K 3\n                  (@instOfNatAtLeastTwo.{u_1} K 3\n                    (@AddMonoidWithOne.toNatCast.{u_1} K\n                      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                        (@Ring.toAddGroupWithOne.{u_1} K\n                          (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n                    ⋯))\n                (h\n                  (@OfNat.ofNat.{0} TraceControls.Trace 2\n                    (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 7 (instOfNatNat 7)) ⋯ 2)))))\n            (h (@OfNat.ofNat.{0} TraceControls.Trace 3 (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 7 (instOfNatNat 7)) ⋯ 3))))\n          (h (@OfNat.ofNat.{0} TraceControls.Trace 4 (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 7 (instOfNatNat 7)) ⋯ 4))))\n        (@OfNat.ofNat.{u_1} K 32\n          (@instOfNatAtLeastTwo.{u_1} K 32\n            (@AddMonoidWithOne.toNatCast.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n            ⋯))))",
+    "type_sha256": "7dc10df06213396bc774343e820c762b1e47083086670db1648e755b1a64dce8",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.randomized_success_bound": {
+    "type": "@TraceControls.randomized_success_bound.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (h : TraceControls.Trace → K),\n  (∀ (t : TraceControls.Trace),\n      And\n        (@LE.le.{u_1} K\n          (@Preorder.toLE.{u_1} K\n            (@PartialOrder.toPreorder.{u_1} K\n              (@SemilatticeInf.toPartialOrder.{u_1} K\n                (@Lattice.toSemilatticeInf.{u_1} K\n                  (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))))\n          (@OfNat.ofNat.{u_1} K 0\n            (@Zero.toOfNat0.{u_1} K\n              (@MulZeroClass.toZero.{u_1} K\n                (@NonUnitalNonAssocSemiring.toMulZeroClass.{u_1} K\n                  (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n                    (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                      (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                        (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst)))))))))\n          (h t))\n        (@LE.le.{u_1} K\n          (@Preorder.toLE.{u_1} K\n            (@PartialOrder.toPreorder.{u_1} K\n              (@SemilatticeInf.toPartialOrder.{u_1} K\n                (@Lattice.toSemilatticeInf.{u_1} K\n                  (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))))\n          (h t)\n          (@OfNat.ofNat.{u_1} K 1\n            (@One.toOfNat1.{u_1} K\n              (@AddMonoidWithOne.toOne.{u_1} K\n                (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                  (@Ring.toAddGroupWithOne.{u_1} K\n                    (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))))))) →\n    @LE.le.{u_1} K\n      (@Preorder.toLE.{u_1} K\n        (@PartialOrder.toPreorder.{u_1} K\n          (@SemilatticeInf.toPartialOrder.{u_1} K\n            (@Lattice.toSemilatticeInf.{u_1} K\n              (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))))\n      (@TraceControls.success.{u_1} K inst h)\n      (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n        (@instHDiv.{u_1} K\n          (@DivInvMonoid.toDiv.{u_1} K (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n        (@OfNat.ofNat.{u_1} K 5\n          (@instOfNatAtLeastTwo.{u_1} K 5\n            (@AddMonoidWithOne.toNatCast.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n            ⋯))\n        (@OfNat.ofNat.{u_1} K 8\n          (@instOfNatAtLeastTwo.{u_1} K 8\n            (@AddMonoidWithOne.toNatCast.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n            ⋯)))",
+    "type_sha256": "fa970985b72488d4d47540ad16c2b312ae9de8a8e97d85462e84f09c53942dd5",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.duplicate_randomized_success_bound": {
+    "type": "@TraceControls.duplicate_randomized_success_bound.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]\n  [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (m : Nat) (h : (Fin m → TraceControls.Trace) → K),\n  (∀ (z : Fin m → TraceControls.Trace),\n      And\n        (@LE.le.{u_1} K\n          (@Preorder.toLE.{u_1} K\n            (@PartialOrder.toPreorder.{u_1} K\n              (@SemilatticeInf.toPartialOrder.{u_1} K\n                (@Lattice.toSemilatticeInf.{u_1} K\n                  (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))))\n          (@OfNat.ofNat.{u_1} K 0\n            (@Zero.toOfNat0.{u_1} K\n              (@MulZeroClass.toZero.{u_1} K\n                (@NonUnitalNonAssocSemiring.toMulZeroClass.{u_1} K\n                  (@NonUnitalNonAssocCommSemiring.toNonUnitalNonAssocSemiring.{u_1} K\n                    (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocCommSemiring.{u_1} K\n                      (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_1} K\n                        (@CommRing.toNonUnitalCommRing.{u_1} K (@Field.toCommRing.{u_1} K inst)))))))))\n          (h z))\n        (@LE.le.{u_1} K\n          (@Preorder.toLE.{u_1} K\n            (@PartialOrder.toPreorder.{u_1} K\n              (@SemilatticeInf.toPartialOrder.{u_1} K\n                (@Lattice.toSemilatticeInf.{u_1} K\n                  (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))))\n          (h z)\n          (@OfNat.ofNat.{u_1} K 1\n            (@One.toOfNat1.{u_1} K\n              (@AddMonoidWithOne.toOne.{u_1} K\n                (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                  (@Ring.toAddGroupWithOne.{u_1} K\n                    (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))))))) →\n    @LE.le.{u_1} K\n      (@Preorder.toLE.{u_1} K\n        (@PartialOrder.toPreorder.{u_1} K\n          (@SemilatticeInf.toPartialOrder.{u_1} K\n            (@Lattice.toSemilatticeInf.{u_1} K\n              (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))))\n      (@TraceControls.duplicateSuccess.{u_1} K inst m h)\n      (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n        (@instHDiv.{u_1} K\n          (@DivInvMonoid.toDiv.{u_1} K (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n        (@OfNat.ofNat.{u_1} K 5\n          (@instOfNatAtLeastTwo.{u_1} K 5\n            (@AddMonoidWithOne.toNatCast.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n            ⋯))\n        (@OfNat.ofNat.{u_1} K 8\n          (@instOfNatAtLeastTwo.{u_1} K 8\n            (@AddMonoidWithOne.toNatCast.{u_1} K\n              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n            ⋯)))",
+    "type_sha256": "f737a870373187b3bea7a83aa95cb663650d0d50834417d42e48d06feb5acf67",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.zero_data_success": {
+    "type": "@TraceControls.zero_data_success.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))]\n  (h : (Fin (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) → TraceControls.Trace) → K),\n  @Eq.{u_1 + 1} K (@TraceControls.duplicateSuccess.{u_1} K inst (@OfNat.ofNat.{0} Nat 0 (instOfNatNat 0)) h)\n    (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n      (@instHDiv.{u_1} K\n        (@DivInvMonoid.toDiv.{u_1} K (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n      (@OfNat.ofNat.{u_1} K 1\n        (@One.toOfNat1.{u_1} K\n          (@AddMonoidWithOne.toOne.{u_1} K\n            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n              (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))\n      (@OfNat.ofNat.{u_1} K 2\n        (@instOfNatAtLeastTwo.{u_1} K 2\n          (@AddMonoidWithOne.toNatCast.{u_1} K\n            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n              (@Ring.toAddGroupWithOne.{u_1} K (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n          ⋯)))",
+    "type_sha256": "6f004e781039bb0c57341d2fcdfbd743a621677e331b5030a96d0152bc8b6ca0",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.same_content_source_law": {
+    "type": "@TraceControls.same_content_source_law.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] (source₁ source₂ : Bool)\n  (w : TraceControls.Word),\n  @Eq.{u_1 + 1} (TraceControls.Trace → K)\n    (@TraceControls.worldMass.{u_1} K inst (@Prod.mk.{0, 0} Bool TraceControls.Word source₁ w))\n    (@TraceControls.worldMass.{u_1} K inst (@Prod.mk.{0, 0} Bool TraceControls.Word source₂ w))",
+    "type_sha256": "0593f53304240a7b0f0ad28914a35ceb07b5537c470e5bf649d0ebb4b2e0b291",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.distinct_sources_same_law": {
+    "type": "@TraceControls.distinct_sources_same_law.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K],\n  And (@Ne.{1} Bool false true)\n    (@Eq.{u_1 + 1} (TraceControls.Trace → K)\n      (@TraceControls.worldMass.{u_1} K inst (@Prod.mk.{0, 0} Bool TraceControls.Word false TraceControls.word00))\n      (@TraceControls.worldMass.{u_1} K inst (@Prod.mk.{0, 0} Bool TraceControls.Word true TraceControls.word00)))",
+    "type_sha256": "85d671b4e771a69cd138a05585422e02684668f024d6e057f17062d8f7e06620",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "TraceControls.known_word_mask_ambiguity": {
+    "type": "@TraceControls.known_word_mask_ambiguity.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : LinearOrder.{u_1} K]\n  [inst_2 :\n    @IsStrictOrderedRing.{u_1} K\n      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))\n      (@SemilatticeInf.toPartialOrder.{u_1} K\n        (@Lattice.toSemilatticeInf.{u_1} K\n          (@DistribLattice.toLattice.{u_1} K (@instDistribLatticeOfLinearOrder.{u_1} K inst_1))))],\n  And (@Ne.{1} (Prod.{0, 0} Bool Bool) (@Prod.mk.{0, 0} Bool Bool true false) (@Prod.mk.{0, 0} Bool Bool false true))\n    (And\n      (@Eq.{1} TraceControls.Trace (TraceControls.emit TraceControls.word00 (@Prod.mk.{0, 0} Bool Bool true false))\n        TraceControls.zero)\n      (And\n        (@Eq.{1} TraceControls.Trace (TraceControls.emit TraceControls.word00 (@Prod.mk.{0, 0} Bool Bool false true))\n          TraceControls.zero)\n        (And\n          (@Eq.{u_1 + 1} K (@TraceControls.conditionalMaskMass.{u_1} K inst (@Prod.mk.{0, 0} Bool Bool true false))\n            (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n              (@instHDiv.{u_1} K\n                (@DivInvMonoid.toDiv.{u_1} K\n                  (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n              (@OfNat.ofNat.{u_1} K 1\n                (@One.toOfNat1.{u_1} K\n                  (@AddMonoidWithOne.toOne.{u_1} K\n                    (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                      (@Ring.toAddGroupWithOne.{u_1} K\n                        (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))\n              (@OfNat.ofNat.{u_1} K 2\n                (@instOfNatAtLeastTwo.{u_1} K 2\n                  (@AddMonoidWithOne.toNatCast.{u_1} K\n                    (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                      (@Ring.toAddGroupWithOne.{u_1} K\n                        (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n                  ⋯))))\n          (@Eq.{u_1 + 1} K (@TraceControls.conditionalMaskMass.{u_1} K inst (@Prod.mk.{0, 0} Bool Bool false true))\n            (@HDiv.hDiv.{u_1, u_1, u_1} K K K\n              (@instHDiv.{u_1} K\n                (@DivInvMonoid.toDiv.{u_1} K\n                  (@DivisionRing.toDivInvMonoid.{u_1} K (@Field.toDivisionRing.{u_1} K inst))))\n              (@OfNat.ofNat.{u_1} K 1\n                (@One.toOfNat1.{u_1} K\n                  (@AddMonoidWithOne.toOne.{u_1} K\n                    (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                      (@Ring.toAddGroupWithOne.{u_1} K\n                        (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))))\n              (@OfNat.ofNat.{u_1} K 2\n                (@instOfNatAtLeastTwo.{u_1} K 2\n                  (@AddMonoidWithOne.toNatCast.{u_1} K\n                    (@AddGroupWithOne.toAddMonoidWithOne.{u_1} K\n                      (@Ring.toAddGroupWithOne.{u_1} K\n                        (@DivisionRing.toRing.{u_1} K (@Field.toDivisionRing.{u_1} K inst)))))\n                  ⋯)))))))",
+    "type_sha256": "03d0b8834c9bb7ffa4597095d9a0fe45f28f86c47e4838e41d221cf95b94503a",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  }
+}

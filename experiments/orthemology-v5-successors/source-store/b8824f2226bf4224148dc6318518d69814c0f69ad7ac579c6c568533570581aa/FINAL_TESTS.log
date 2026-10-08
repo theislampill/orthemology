@@ -1,0 +1,18 @@
+test_admission_scan_ignores_comments_but_rejects_terms (__main__.HarnessContract.test_admission_scan_ignores_comments_but_rejects_terms) ... ok
+test_bound_cache_rejects_changed_object (__main__.HarnessContract.test_bound_cache_rejects_changed_object) ... ok
+test_comment_stripping_handles_nested_comments (__main__.HarnessContract.test_comment_stripping_handles_nested_comments) ... ok
+test_definition_body_is_labeled_separately_from_theorem (__main__.HarnessContract.test_definition_body_is_labeled_separately_from_theorem) ... ok
+test_false_claims_require_exactly_four_semantic_failures (__main__.HarnessContract.test_false_claims_require_exactly_four_semantic_failures) ... ok
+test_import_closure_rejects_ambiguous_object (__main__.HarnessContract.test_import_closure_rejects_ambiguous_object) ... ok
+test_proof_mapping_rejects_call_in_wrong_theorem (__main__.HarnessContract.test_proof_mapping_rejects_call_in_wrong_theorem) ... ok
+test_proof_readback_requires_real_component_call (__main__.HarnessContract.test_proof_readback_requires_real_component_call) ... ok
+test_readback_exact_type_and_allowed_axioms (__main__.HarnessContract.test_readback_exact_type_and_allowed_axioms) ... ok
+test_readback_rejects_custom_axiom (__main__.HarnessContract.test_readback_rejects_custom_axiom) ... ok
+test_readback_rejects_duplicate_or_out_of_order_markers (__main__.HarnessContract.test_readback_rejects_duplicate_or_out_of_order_markers) ... ok
+test_readback_rejects_missing_axiom_audit (__main__.HarnessContract.test_readback_rejects_missing_axiom_audit) ... ok
+test_source_binding_detects_mutation (__main__.HarnessContract.test_source_binding_detects_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.012s
+
+OK

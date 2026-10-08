@@ -1,0 +1,15 @@
+test_unanchored_cycle_empty_anchor_propagates (test_grounded_support.GroundedSupportTests.test_unanchored_cycle_empty_anchor_propagates) ... FAIL
+
+======================================================================
+FAIL: test_unanchored_cycle_empty_anchor_propagates (test_grounded_support.GroundedSupportTests.test_unanchored_cycle_empty_anchor_propagates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<execution-workspace>/tranche20/testimony-continuation/grounded-attestation/test_grounded_support.py", line 21, in test_unanchored_cycle_empty_anchor_propagates
+    self.assertEqual(minimal_supports([('r','a')],rules).get('b',frozenset()),frozenset({frozenset({'r'})}))
+AssertionError: Items in the second set but not the first:
+frozenset({'r'})
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

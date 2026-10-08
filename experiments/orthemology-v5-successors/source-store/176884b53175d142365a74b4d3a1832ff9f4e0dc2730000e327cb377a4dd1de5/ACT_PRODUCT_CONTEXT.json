@@ -1,0 +1,78 @@
+{
+  "read_at_utc": "2026-10-07T16:11:57Z",
+  "scope": "New targeted return to a previously completed received electronic body; exactly 13 paragraphs displayed without truncation, no new scan claim.",
+  "trigger": "Targeted act/product distinction and the disputed inference from temporal origination to creaturehood.",
+  "source_sha256": "5505f29f0578540d5fb2f808ccf10fcd0524bd08dfa792f51fd286dd0c3e0390",
+  "paragraphs": [
+    {
+      "id": "SF-S002-L0521",
+      "sha256": "5b3d9153cbeaa416a2844b7b8a5414b9f89d249ffb7c23a2ef0399eef8b6b89d"
+    },
+    {
+      "id": "SF-S002-L0522",
+      "sha256": "1daa358d1a43e5a1b77ffe5a4c06440eb2c2a45160997c104465bfb1a085a682"
+    },
+    {
+      "id": "SF-S002-L0523",
+      "sha256": "8ec58f0a7e63f573f9180703272d9867b8a939c4d27b4c4453e4c73ccbc2c5d7"
+    },
+    {
+      "id": "SF-S002-L0524",
+      "sha256": "2e596df69b88aea2cfbf7780618f86ad19486265732114a8f656b10f905fcbf8"
+    },
+    {
+      "id": "SF-S002-L0525",
+      "sha256": "8ea2cc75a6cdc6a7edf083e567882dab07f0e743f95a5f226c919c91e3c1fb65"
+    },
+    {
+      "id": "SF-S002-L0526",
+      "sha256": "79c11707b13015123d0c9ffe74b31911ed6cafecefd4e1d21ffae05427a9b3be"
+    },
+    {
+      "id": "SF-S002-L0527",
+      "sha256": "4a55f39d0457b02801faa2e8c537c07672d94369671281dac86c92851f8069b9"
+    },
+    {
+      "id": "SF-S002-L0528",
+      "sha256": "3e0d8d99eacc7e8463dcaf8b93ccbfd9524d9412f44068078b56e42304c580f6"
+    },
+    {
+      "id": "SF-S002-L0529",
+      "sha256": "a796a9c37e709d05fe0d2fb17b9d2ca7beee5f4c0bd81a7b259833d20f892b88"
+    },
+    {
+      "id": "SF-S002-L0530",
+      "sha256": "322d2fc9d69853cbb3bf5467d2ccae742a26df8c3c59444cd2d50b005b63843f"
+    },
+    {
+      "id": "SF-S002-L0531",
+      "sha256": "d0e630f10da4e4f14084affd6f6850229b89ad8099a475c3df3341ab46f362f7"
+    },
+    {
+      "id": "SF-S002-L0532",
+      "sha256": "bf6d0258fa6ca0e5ec17d493598d4c8f318506f9e472d26a6886bd086f4447c5"
+    },
+    {
+      "id": "SF-S002-L0533",
+      "sha256": "3749952c70d3b110ed93b6d1fad68fae738d91043b286cd1da66a6074485fa7e"
+    }
+  ],
+  "interpretative_control": "The passage reports and compares several positions while explicitly distinguishing the act of creating from the created product. It does not alone establish total cessation of all emergent kinds or a complete metaphysical possibility theorem.",
+  "independent_witness_credit": 0,
+  "binding_status": "SEPARATELY_BOUND_RECEIPT_OUTSIDE_ORIGINAL_AUTHOR_SEAL",
+  "source_identity": {
+    "filename": "lines.json",
+    "bytes": 1464867,
+    "sha256": "5505f29f0578540d5fb2f808ccf10fcd0524bd08dfa792f51fd286dd0c3e0390",
+    "availability": "EXCLUDED_CUSTODY_IDENTITY_ONLY"
+  },
+  "source_urls": [
+    "https://www.islamicbook.ws/amma/alsfdit-001.html",
+    "https://www.islamicbook.ws/amma/alsfdit-002.html"
+  ],
+  "original_receipt_identity": {
+    "sha256": "d4a044355a94fe4f228a6d56f17de4ebe16d9423e79cae7203d5071d092ab806",
+    "bytes": 2390
+  },
+  "verification_scope": "Aggregate source digest and all 13 stored paragraph ID/digest pairs match the retained source index. This packaging check reads no source prose and adds no source-reading, scan or independent-witness credit."
+}

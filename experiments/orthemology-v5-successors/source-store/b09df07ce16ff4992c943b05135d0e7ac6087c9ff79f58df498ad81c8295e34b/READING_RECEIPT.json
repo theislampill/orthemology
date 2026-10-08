@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-07T11:21:46Z",
+  "method": "Separate direct continuous untruncated reading of two four-page ranges",
+  "page_unit": "Received electronic labels, not independently established printed pages",
+  "page_count": 8,
+  "source_index_sha256": "335c46d12647c325353b980e132d5539fe20106dbb68a8ec070663064d0a6cb3",
+  "pages": [
+    {
+      "id": "SH-E049",
+      "electronic_page": 49,
+      "sha256": "3fe2d1b779968ef08e81bf172b60360a63643ccbb7a6fc2fb351710b52fc977f"
+    },
+    {
+      "id": "SH-E050",
+      "electronic_page": 50,
+      "sha256": "7d18016d73122d92d22729420108c1c8f456561f6e5ea58e3618ec1dde33e71d"
+    },
+    {
+      "id": "SH-E051",
+      "electronic_page": 51,
+      "sha256": "2fbdd9f3d116e074d8c14b9f45c47518b145021901739bb759cda68d433db245"
+    },
+    {
+      "id": "SH-E052",
+      "electronic_page": 52,
+      "sha256": "241957268bcf83e51e18a9bcc1ea0ccef5d8258b39554887e942f6a35061062f"
+    },
+    {
+      "id": "SH-E205",
+      "electronic_page": 205,
+      "sha256": "4c21f9fd7f3ce57ac6cc551365863cc4ab6c1a3cf41fa83336b9a03a74e9c2e7"
+    },
+    {
+      "id": "SH-E206",
+      "electronic_page": 206,
+      "sha256": "52ab1d6e2b2222cbe6fcf419cbb4b20526d0e10d611a0c1898b320154b1ab094"
+    },
+    {
+      "id": "SH-E207",
+      "electronic_page": 207,
+      "sha256": "5f6419066dedf5d3c4641656ce9017f2f73ca29189819b7bab31888891399ec7"
+    },
+    {
+      "id": "SH-E208",
+      "electronic_page": 208,
+      "sha256": "ff52ec464d12f166e29f879604c93b0a3ae12b648de66420f08b42c62c24d133"
+    }
+  ],
+  "limits": [
+    "Bounded second pass only",
+    "No new scan or print-edition collation",
+    "Original transcription defects retained"
+  ],
+  "relation_to_original_study": "Outside the study seal and first-pass/reflection totals; adds no unique body coverage."
+}

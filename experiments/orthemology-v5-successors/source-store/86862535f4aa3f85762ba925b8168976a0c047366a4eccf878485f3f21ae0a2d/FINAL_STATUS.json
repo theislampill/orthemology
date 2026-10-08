@@ -1,0 +1,24 @@
+{
+  "schema": "t20-veracity-final-author-status-v1",
+  "status": "SEALED_CANDIDATE_PENDING_INDEPENDENT_REVIEW",
+  "utc": "2026-10-07T09:26:43.601692+00:00",
+  "verification": "validation/final/VERIFICATION.json",
+  "verification_sha256": "ddd4ee81abe5e9583298d2a812ff501aac569b4f51411b90dd789e571f0c7177",
+  "verified_steps": 17,
+  "theorem_declarations": 23,
+  "expected_rejected_strengthenings": 8,
+  "input_scope": "Init-only conditional mathematics and finite relative interpretations",
+  "philosophical_verdict_change": false,
+  "all_context_T0_warrant_proved": false,
+  "A_C_control_scope": "weak signature only; not full T17 profile",
+  "strong_ownership_scope": "A/C projections and no truth-by-definition; semantic identification remains explicit",
+  "source_bindings": {
+    "sealed_paragraphs": 47,
+    "retained_external_sources": 3
+  },
+  "independent_review": "PENDING",
+  "source_sha256": {
+    "src/VeracityBoundary.lean": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+    "src/VeracityControls.lean": "91d2717e4f9faebbed5e4f10055793a608231a33eefb7df477acdd7890a84d23"
+  }
+}

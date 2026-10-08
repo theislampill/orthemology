@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "consumer_base_manifest_sha256": "9f2a0f116f90fc4189faacc79d5b7c02116e1d36735cc2cdffe4f9117406de95",
+  "source_only": true,
+  "files": [
+    {
+      "path": "PUBLIC_SUMMARY.json",
+      "bytes": 2698,
+      "sha256": "b95f0faa0553b10ddc673874c839a390f4c4f40ef31f532339b39cc41fb4bfd8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6452,
+      "sha256": "6cb3686f8225216646c469db8e15f29aa9b9c87994aefe0ade57b4dfaa12cded"
+    },
+    {
+      "path": "recipe/QUALIFICATION_PLAN.md",
+      "bytes": 2870,
+      "sha256": "9a4255223c8c149ffb0c6dd267c8721725106e046040652a89035b3052839abe"
+    },
+    {
+      "path": "recipe/RECIPE_MANIFEST.json",
+      "bytes": 2521,
+      "sha256": "df2921321ea700cc351edd5f24a14756e2f0c04adfb702ab7c9d3e549ab12e0d"
+    },
+    {
+      "path": "recipe/inputs/pins.json",
+      "bytes": 3178,
+      "sha256": "982057a21093c223543f0f0016bd29900b8d0ef9125e65aaaf971bca77910b2f"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/Cli_source_inventory.json",
+      "bytes": 1444,
+      "sha256": "f285d6513abb5f3211ec38cf305b9644d2cf2f9a78cda7966e6f450bcf644f19"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/LeanSearchClient_source_inventory.json",
+      "bytes": 2100,
+      "sha256": "d505079aad033cf61fabeaec0800a005da7bc4b48ce7e9471853b39013735231"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/Qq_source_inventory.json",
+      "bytes": 4264,
+      "sha256": "e7d348f521792efaa74951de1edcb0a2c85afe11cf952c88c0d7f6aa2d05b212"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/aesop_source_inventory.json",
+      "bytes": 32795,
+      "sha256": "34c97802225b52724c62133701a69d4466685d3b40c6ad000ec5b43239e77a3d"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/batteries_source_inventory.json",
+      "bytes": 34319,
+      "sha256": "8e121ae7ace129ad9270db82ab6682609f5fec12a0d2de4fe567cf8898d6f039"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/importGraph_source_inventory.json",
+      "bytes": 4295,
+      "sha256": "10823805cb2a1c95c086d67ce11ac2b3a679510b56f6fab499dc8e69bdace987"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/mathlib_source_inventory.json",
+      "bytes": 1008600,
+      "sha256": "f461e480570d88a8b438fc332b6f3327216df187dedd09c979d47bedbaaa3bba"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/plausible_source_inventory.json",
+      "bytes": 2226,
+      "sha256": "fecd31abb1a75550a130fb9cbc6f56b4328a98a0b4983626587165cf47c9a03b"
+    },
+    {
+      "path": "recipe/inputs/source-inventories/proofwidgets_source_inventory.json",
+      "bytes": 10207,
+      "sha256": "074154889520fb2274dab098ebe07670bc21540977bfffce57b5a06047519aec"
+    },
+    {
+      "path": "recipe/inputs/toolchain-files.json",
+      "bytes": 883,
+      "sha256": "42fa57677cb7cabddd4f3b5eea38b3a5a8f211869e26863ac50c21b86b9eab0c"
+    },
+    {
+      "path": "recipe/provision.py",
+      "bytes": 16646,
+      "sha256": "c34a8b5c5105e4308abf7b888b9b3fce57c0906d13d93c3fdf36e4633590c8e5"
+    },
+    {
+      "path": "recipe/test_refusal_custody.py",
+      "bytes": 1633,
+      "sha256": "7b0eef9674097a729fc5e1b55cadcbac13948c4baafcc9ef6f552f044b9976df"
+    }
+  ]
+}

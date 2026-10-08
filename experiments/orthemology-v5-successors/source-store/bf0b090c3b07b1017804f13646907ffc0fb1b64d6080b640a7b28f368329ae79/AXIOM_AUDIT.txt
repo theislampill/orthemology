@@ -1,0 +1,27 @@
+Axiom audit for the modal union theorem family
+
+AxiomAudit.lean prints dependencies for every one of the 42 named theorems in
+ModalUnion.lean and FiniteControls.lean, and prints the forcing definition,
+faithful interpretation structure and closure inductive declaration.
+
+Verified dependency inventory:
+- 19 declarations: no axioms.
+- 1 declaration: Quot.sound only.
+- 12 declarations: propext only.
+- 9 declarations: propext and Quot.sound.
+- 1 declaration: propext, Classical.choice and Quot.sound.
+
+The last declaration is the optional unrestricted two-color separation lemma,
+ModalUnion.disconnected_bool_separator. Its classical component-membership
+case distinction is explicit. The main exact-consequence and expanded-world
+iff theorems use only propext and Quot.sound. Path propagation, the faithful
+transport bridge and the coverage-to-uniqueness theorem need no axioms.
+
+These are standard Lean logical foundations, not added metaphysical axioms.
+There is no sorryAx, Lean.ofReduceBool, custom axiom or unchecked native
+reduction dependency. The fully regenerated log is axioms.log in the chosen fresh replay output.
+A subsequent reviewer should rerun the audit from source rather than rely only
+on this summary or on old generated object files.
+
+V2 reruns this same audit with explicit --trust=0 for all module/check runs.
+The mathematical Lean files and expected axiom inventory are unchanged.

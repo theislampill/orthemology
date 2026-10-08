@@ -1,0 +1,180 @@
+{
+  "schema": "foundational-reuse-bridge-map-v1",
+  "entries": [
+    {
+      "objective": "A",
+      "prior_owner": "T6 original completion/P1 and bearer/P2 written architecture; qualified realization articulated T17",
+      "reusable_sources": [
+        "Sixth-upstream-review",
+        "Sixth-intrinsic-necessity",
+        "T09-premise-union",
+        "Seventeenth-current-report"
+      ],
+      "exact_prior_result": "UpstreamGround.uniform_of_complete_coverage explicitly assumes present: ex actual g and Coverage, rather than deriving a bearer from original resources. T17 report §§Actual supply and original existential completion; The actual witness and the Necessary Being conclusion, lines 81–111, supplies the resource/bearer rationale.",
+      "direct_reuse": "Reuse the separation of originality of a resource, actual bearer, and whole-existence originality. No matching resource-to-bearer Lean declaration was located in the inspected formal foundation sources.",
+      "new_bridge": "Formalize actual original existential resource -> actual bearer of that resource, plus bearer whole-existence receipt -> receipt of that intrinsic resource instantiation. Contraposition then gives whole-existence-original bearer. Do not identify the bare existence of a bearer with whole-existence originality.",
+      "remaining_warrant": "Actual original completion, productive resource ontology, bearer realization and same-respect constitutive support. No efficient bearer-to-attribute production edge follows.",
+      "status": "NOT_ATTEMPTED formal bridge; PHILOSOPHICALLY_ACCEPTED_PREMISE in T17 appraisal, disputed alternative ontologies retained"
+    },
+    {
+      "objective": "B",
+      "prior_owner": "h-modal Theorem 1 inference core; T3 SourceIdentity; reused through T6",
+      "reusable_sources": [
+        "SourceIdentity",
+        "UpstreamGround",
+        "Modal-original-owner"
+      ],
+      "declarations": [
+        "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+        "Orthemology.Tranche6.UpstreamGround.uniform_of_complete_coverage"
+      ],
+      "exact_prior_result": "Root ex dep actual g = ex actual g and not Received dep actual g; Necessary ex g = forall w, ex w g. Actual contingent_receives states forall y, ex actual y -> not Necessary ex y -> Received dep actual y. Their contradiction proves Necessary of the SAME g.",
+      "direct_reuse": "Direct existing theorem. No new proof needed. For a witness-specific version the universal contingent_receives premise can be weakened to its g-instance; this is logical specialization, not new philosophical support.",
+      "remaining_warrant": "The world domain covers the intended modality, dependency denotes the intended whole-existence reception, actual g exists, and contingency-as-need applies. Necessity alone does not encode originality or perfection.",
+      "current_report_mapping": "T17 §§Contingency and intrinsic necessity; The actual witness and the Necessary Being conclusion, especially lines 109–111.",
+      "status": "KERNEL_PROVED conditional, inherited source-bound receipt; fresh NOT_RUN"
+    },
+    {
+      "objective": "C",
+      "prior_owner": "T3 SourceIdentity; T6 essential-reception architecture; T17 constitutive rationale",
+      "reusable_sources": [
+        "SourceIdentity",
+        "Seventeenth-current-report"
+      ],
+      "declarations": [
+        "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+        "Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception",
+        "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform"
+      ],
+      "exact_prior_result": "GenericReception ex dep: for every x, receipt in some world implies receipt in every world where x exists. Together with actual roothood and Necessary it proves UniformRoot of that same x.",
+      "direct_reuse": "Direct existing essential-nonreceipt theorem. T17 lines 113–125 states the needed transfer direction explicitly and credits Sixth.",
+      "new_bridge": "Semantic/warrant correspondence of T17 constitutive source-of-existential-adequacy account to GenericReception. A specialized local backward-transfer condition is NOT a new independent principle: local_transfer_iff_uniform proves it equivalent to UniformRoot once actual root and necessity are fixed.",
+      "remaining_warrant": "Constitutive difference between whole-existence reception and intrinsic sufficiency; not general essentiality of every actual predicate, not fixed supplier identity.",
+      "status": "KERNEL_PROVED conditional and honesty equivalence; PHILOSOPHICALLY_ACCEPTED_PREMISE for T17 appraisal, continued substantive warrant burden"
+    },
+    {
+      "objective": "D",
+      "prior_owner": "T6 UpstreamGround + ConnectedUnity; T3 CoverageBoundary retained",
+      "reusable_sources": [
+        "UpstreamGround",
+        "ConnectedUnity",
+        "InfiniteRootlessBranch",
+        "ReviewerProbes",
+        "CoverageBoundary",
+        "Sixth-connected-review"
+      ],
+      "declarations": [
+        "Orthemology.Tranche6.UpstreamGround.predecessor_free_of_coverage",
+        "Orthemology.Tranche6.ConnectedUnity.local_connected_iff_least",
+        "Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local",
+        "Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local",
+        "ConnectedReview.reviewer_constructive_local_to_least",
+        "ConnectedReview.reviewer_least_unique",
+        "Orthemology.Tranche6.ConnectedUnity.local_cover_iff_unique_root_and_ancestral_support",
+        "Orthemology.Tranche6.ConnectedUnity.strict_descendant_of_nontrivial_field"
+      ],
+      "exact_prior_result": "For nonempty D and irreflexive transitive r, LocallyComplete r and Connected r iff some LeastAncestor r g. LocalCover uses equality-or-r Below; strict Coverage additionally requires r g x. Local cover implies root and local cover is unique. Unique root at one target requires root support for every ancestor in its cone to recover complete cover.",
+      "direct_reuse": "All principal graph results and major deletion controls can be reused unchanged, including constructive reviewer variant without Classical.choice.",
+      "new_bridge": "Application of same-respect productive ancestry; actual predecessor-closed field; domain restriction without losing predecessors; faithfulness of complete original account. A strict edge/nontrivial field or a separate productive witness is needed to infer actual productive participation.",
+      "remaining_warrant": "Local complete cover existence is substantive. A unique root is not a least ancestor; undirected connectedness is not directed prerequisite reachability. No incoming strict productive-ancestry edge is not automatically whole-existence ontological nonreceipt: the relation and predecessor-closed field must exhaust that respect.",
+      "current_report_mapping": "T19 §From local coverage to the connected field, lines 193–205. P0 actual scope, P1 faithful strict ancestry, P2 local cover, P3 connectedness, P4 actual productive interpretation. This label map is current T19 retrospective attribution, not a recovered exact quotation of custody-only Sixth original prose.",
+      "status": "KERNEL_PROVED inherited conditional mathematics; APPLICATION_WARRANT_REQUIRED"
+    },
+    {
+      "objective": "E",
+      "prior_owner": "T3 ProductiveCompleteness is adjacent; explicit CND appraised T19",
+      "reusable_sources": [
+        "ProductiveCompleteness",
+        "Sixth-act-ontology",
+        "Nineteenth-current-report"
+      ],
+      "declarations": [
+        "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_history_complete",
+        "Orthemology.Tranche3.ProductiveCompleteness.Controls.endpoint_sufficiency_does_not_give_history_closure"
+      ],
+      "exact_prior_result": "UnborrowedActs proper accounts means forall s t m, proper t m -> accounts s m -> s=t. It is already a strong mode-owner equality premise. It is neither the bare whole-alone contradiction nor a proof of CND from determinate content.",
+      "direct_reuse": "Retain existing mode-level uniqueness endgame and endpoint/history-closure countercontrol unchanged.",
+      "new_bridge": "Represent can-produce-alone, actual sufficiency, exclusive exhaustion, same-concrete/same-respect entire-original duplication and differentiated production as separate predicates. Derive UnborrowedActs only if exact semantic bridges from proper/accounts into entire-original production and CND are explicitly supplied and warranted.",
+      "remaining_warrant": "CND is substantive, does not analytically follow from determinate production, and remains more contestable than whole-alone contradiction. Need a primitive-double-sufficiency model when CND is dropped.",
+      "current_report_mapping": "T19 §§Causal nonduplication and the stronger local norm; The substantive dissent and the standard of warrant.",
+      "status": "NOT_ATTEMPTED new CND formalization; PHILOSOPHICALLY_ACCEPTED_PREMISE and PHILOSOPHICALLY_DISPUTED_PREMISE describe different current appraisal roles"
+    },
+    {
+      "objective": "F",
+      "prior_owner": "T6 attributes distinctions; T19 actual source-mode norm",
+      "reusable_sources": [
+        "ProductiveCompleteness",
+        "CoverageBoundary",
+        "IntegratedContingency",
+        "Sixth-attribute-dependencies",
+        "Nineteenth-current-report"
+      ],
+      "exact_prior_result": "HistoryComplete is complete actual-mode accounting, not standing capacity. CoverageBoundary computes genuine joint production by two necessary partial enablers and no individual complete source. IntegratedContingency retains necessary source and power while a token will/effect is contingent.",
+      "direct_reuse": "Reuse controls distinguishing existence/capacity, actual exercise, local sufficient role, and complete actual account. None is a refutation of T19 source-mode perfection because the additional norm is not preserved.",
+      "new_bridge": "Qualified perfect original + actual productive participation -> adequate unborrowed original provision of the relevant actual effect, with full role/target/requisite scope explicitly defended. A voluntary-partial-role rival must remain representable absent this premise even if standing power is unrestricted.",
+      "remaining_warrant": "Why fuller unborrowed original provision is required of every fitting relevant exercise, rather than merely a greater optional role. CND by itself excludes no differentiated cooperative partial role.",
+      "current_report_mapping": "T19 §§Independence and the perfection of actual exercise; The source mode reconstruction and its textual tension.",
+      "status": "NOT_ATTEMPTED exact source-mode formal bridge; current positive and adverse philosophical appraisals retained separately"
+    },
+    {
+      "objective": "G",
+      "prior_owner": "T3 ProductiveCompleteness, T5 KnowledgeScope, T19 mediate correction",
+      "reusable_sources": [
+        "ProductiveCompleteness",
+        "KnowledgeScope",
+        "Nineteenth-current-report"
+      ],
+      "declarations": [
+        "Orthemology.Tranche5.KnowledgeScope.joint_relative_interpretation",
+        "Orthemology.Tranche5.KnowledgeScope.promoting_local_activity_breaks_unborrowed",
+        "Orthemology.Tranche5.KnowledgeScope.exact_schemas_with_recipient_knowledge_without_source_knowledge",
+        "Orthemology.Tranche5.KnowledgeScope.identity_and_knowledge_of_unborrowed_exercise"
+      ],
+      "exact_prior_result": "The finite relative interpretation retains necessary uniform source, HistoryComplete, UnborrowedActs and ProductiveWitness together with recipient cognition and mental ownership, while source cognition and source mental ownership are false. Promoting derived local activity to proper unborrowed activity breaks UnborrowedActs.",
+      "direct_reuse": "Strong existing type-separation and nonvacuity controls. The positive identity/knowledge theorem needs an actual proper unborrowed exercise, not mere local cognitive ownership.",
+      "new_bridge": "Formalize occurrence-sensitive propagation of original productive provenance through genuine derived causes, while keeping proximal/moral/assertion ownership independent. Transitivity of graph ancestry alone is not the whole original-source attribution bridge.",
+      "remaining_warrant": "Actual productive ancestry, exhaustive relevant original resources and faithful complete-account interpretation. Created token assertion ownership does not transfer merely through causal provision.",
+      "current_report_mapping": "T19 §§How original provision follows through created causes; Three attributions; Shared products and later modification.",
+      "status": "KERNEL_PROVED inherited separation controls; NOT_ATTEMPTED exact T19 mediate-attribution bridge"
+    },
+    {
+      "objective": "H",
+      "prior_owner": "T6 graph result and separate T3 act-uniqueness result; T19 integrated appraisal",
+      "reusable_sources": [
+        "ConnectedUnity",
+        "ReviewerProbes",
+        "ProductiveCompleteness",
+        "Nineteenth-current-report"
+      ],
+      "declarations": [
+        "Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local",
+        "Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local",
+        "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_history_complete",
+        "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_universal_activity_scope",
+        "ConnectedReview.reviewer_graph_does_not_supply_act_bridge"
+      ],
+      "exact_prior_result": "Two independent endgames: (i) local graph cover + connectedness yields unique common least/root for declared field; (ii) history closure + unborrowed proper acts + actual productive witness identifies two complete providers of one target. Universal-activity scope gives uniqueness without connectedness, but universal coverage is then explicitly assumed.",
+      "direct_reuse": "Reuse both theorems at exact separate semantic types. Do not flatten graph and mode-accounting claims.",
+      "new_bridge": "Expose upstream source qualification + CND + source-mode + mediate attribution -> the chosen exact local cover or act-accounting predicates, then invoke old mathematics. Preserve source/effect/event types and map qualified original bearer to graph role through an explicit faithful-scope interpretation. A unique original provider per result is not yet LocalCover of every predecessor: source-mode completeness and mediate attribution must cover every relevant requisite and branch.",
+      "remaining_warrant": "If full graph LocalCover at every node is itself assumed, CND/source-mode/mediate premises are redundant to graph theorem. They carry upstream application/coverage warrant, not extra mathematical force after cover is granted. Numerical uniqueness of every necessary reality simpliciter needs additional global scope/participation premise.",
+      "current_report_mapping": "T19 §From local coverage to the connected field.",
+      "status": "KERNEL_PROVED inherited endgames; OPEN semantic bridge and wider-than-field uniqueness"
+    },
+    {
+      "objective": "Source veracity",
+      "prior_owner": "T6 attribute dependency ladder; T7 corrected purpose lemma; T17 revised source-owned veracity appraisal",
+      "reusable_sources": [
+        "Sixth-attribute-dependencies",
+        "T07-source-veracity",
+        "KnowledgeScope",
+        "Seventeenth-current-report"
+      ],
+      "exact_prior_result": "T7 written token-purpose lemma requires relevant knowledge, governing aim that this recipient know exact p through this token, actual adequate-means linkage, and exclusion of knowingly purpose-defeating means. It neither uses source unity/necessity nor proves universal essential T0. T17 accepts exceptionless source-owned assertion veracity under same-bearer perfection premises, with adverse purity-classification appraisal retained.",
+      "direct_reuse": "Written local purpose lemma, its controls for truthful silence/commands/narrow content and T0/D1/D2 separation. Formal KnowledgeScope separation prevents misusing causal production as mental/assertion ownership.",
+      "new_bridge": "If extending audit past H, distinguish assertion ownership, relevant knowledge, faithful expression as eligible pure perfection, and actual authentication. Provide source-causes-false-creature-assertion control without source-owned assertion. No matching source-owned-veracity Lean theorem found among mapped foundation modules.",
+      "remaining_warrant": "Source-owned faithful declarative integrity eligibility and essential practical perfection. Actual token occurrence/authorship/content/recipient warrant remain independent.",
+      "current_report_mapping": "T17 §§Wisdom and the positive case for truthful assertion; The remaining veracity disagreement and the revised judgement; T19 §Three attributions.",
+      "status": "WRITTEN_MATHEMATICAL_PROOF for local compatibility entailment; PHILOSOPHICALLY_ACCEPTED_PREMISE/disputed appraisal for source veracity; formal extension NOT_ATTEMPTED"
+    }
+  ]
+}

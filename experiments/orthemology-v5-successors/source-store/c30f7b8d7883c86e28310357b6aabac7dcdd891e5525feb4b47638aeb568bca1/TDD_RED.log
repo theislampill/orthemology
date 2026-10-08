@@ -1,0 +1,4 @@
+tranche20/foundational-audit/original-bearer-bridge/tests/BridgeContract.lean:5:7: error: unknown identifier 'Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_resource'
+tranche20/foundational-audit/original-bearer-bridge/tests/BridgeContract.lean:6:7: error: unknown identifier 'Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion'
+tranche20/foundational-audit/original-bearer-bridge/tests/BridgeContract.lean:7:7: error: unknown identifier 'Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness'
+tranche20/foundational-audit/original-bearer-bridge/tests/BridgeContract.lean:8:7: error: unknown identifier 'Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original'

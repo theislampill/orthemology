@@ -1,0 +1,1453 @@
+{
+  "schema": "authored-docx-public-conversion-diff-v1",
+  "original_filename": "Arabic_Volume_Reading_Index_Final_v1_20261006.docx",
+  "original_bytes": 66206,
+  "original_sha256": "f1c136b1ef3a83ba780a129ce047866b92f41192599722672e4ee6c516f8e708",
+  "document_xml_sha256": "b571ad7f9a19d7ec4801baf0e32f6f1acd0ce8f3502c4f7e43beb86cc96afdc6",
+  "public_filename": "Arabic_Volume_Reading_Index_Final_v1_20261006.md",
+  "public_bytes": 79518,
+  "public_sha256": "07f4a6cff1287c5f234c0e8a086ac14f003c4daf5228b56f5b6ae4751808b897",
+  "added_projection_notice_exact": "> **DERIVED public reading projection.** Original DOCX `Arabic_Volume_Reading_Index_Final_v1_20261006.docx`; original SHA-256 `f1c136b1ef3a83ba780a129ce047866b92f41192599722672e4ee6c516f8e708`. This projection was prepared on 7 October 2026. Original authored text order, link destinations, native mathematics, AI attribution, dates, and scope limitations are retained. Research, reading, review, and verification claims below remain the source’s dated claims, not fresh acceptance or replication. Internal page references name the original DOCX pagination; Markdown has no matching page numbers. Where present, native equations are rendered as TeX with an exact source-to-projection map and declared spacing and prime-glyph normalization. Word typography, pagination, and dynamic page-number fields are not reproduced.\n\n> Original running header: Arabic Volume Reading Index. Original running-footer credit: AI-authored by dot. These repeat the body title and attribution.\n\n",
+  "converter": "Pandoc 3.1.11.1, DOCX to AST to GFM, wrap=none; finite title/style/spacing assembly",
+  "native_counts": {
+    "w:p": 460,
+    "w:tbl": 0,
+    "m:oMath": 0,
+    "w:footnoteReference": 0,
+    "w:endnoteReference": 0,
+    "w:ins": 0,
+    "w:del": 0,
+    "w:drawing": 0,
+    "w:pict": 0,
+    "w:hyperlink": 274,
+    "w:sym": 0
+  },
+  "literal_coverage": {
+    "nonempty_source_paragraphs": 460,
+    "public_body_paragraphs": 460,
+    "native_to_pandoc_ast_whitespace_normalized_literal_and_math_positions_equal": true,
+    "gfm_round_trip_text_and_math_positions_equal_after_NFC": true,
+    "gfm_reader_canonical_unicode_normalizations": [],
+    "native_and_public_math_objects": 0,
+    "math_round_trip_equal": true,
+    "hyperlinks_in_order": 274,
+    "hyperlink_labels_and_external_targets_equal": true,
+    "public_links_match_pandoc_targets_in_order": true,
+    "internal_bookmark_remaps": [
+      {
+        "native_word_bookmark": "#section_4",
+        "public_heading_anchor": "#asbahani-commentary",
+        "label": "Asbahani commentary"
+      },
+      {
+        "native_word_bookmark": "#section_44",
+        "public_heading_anchor": "#al-da-wa-l-dawa",
+        "label": "al-Da wa-l-Dawa"
+      },
+      {
+        "native_word_bookmark": "#section_86",
+        "public_heading_anchor": "#wasitiyya-volume-1",
+        "label": "Wasitiyya volume 1"
+      },
+      {
+        "native_word_bookmark": "#section_92",
+        "public_heading_anchor": "#how-later-readings-revise-earlier-entries",
+        "label": "How later readings revise earlier entries"
+      },
+      {
+        "native_word_bookmark": "#section_10",
+        "public_heading_anchor": "#a05-when-an-outline-becomes-an-argument",
+        "label": "A05"
+      },
+      {
+        "native_word_bookmark": "#section_32",
+        "public_heading_anchor": "#a27-speech-bearer-and-voluntary-exercise",
+        "label": "A27"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_28",
+        "public_heading_anchor": "#a23-meaningful-negation-and-authorised-response",
+        "label": "A23"
+      },
+      {
+        "native_word_bookmark": "#section_33",
+        "public_heading_anchor": "#a28-meaningful-names-and-distinct-perfection-routes",
+        "label": "A28"
+      },
+      {
+        "native_word_bookmark": "#section_24",
+        "public_heading_anchor": "#a19-transmission-through-another-voice",
+        "label": "A19"
+      },
+      {
+        "native_word_bookmark": "#section_32",
+        "public_heading_anchor": "#a27-speech-bearer-and-voluntary-exercise",
+        "label": "A27"
+      },
+      {
+        "native_word_bookmark": "#section_10",
+        "public_heading_anchor": "#a05-when-an-outline-becomes-an-argument",
+        "label": "A05"
+      },
+      {
+        "native_word_bookmark": "#section_28",
+        "public_heading_anchor": "#a23-meaningful-negation-and-authorised-response",
+        "label": "A23"
+      },
+      {
+        "native_word_bookmark": "#section_69",
+        "public_heading_anchor": "#d24-false-attribution-and-mistaken-conviction",
+        "label": "D24"
+      },
+      {
+        "native_word_bookmark": "#section_37",
+        "public_heading_anchor": "#a32-qualified-guidance-and-different-paths-to-knowledge",
+        "label": "A32"
+      },
+      {
+        "native_word_bookmark": "#section_38",
+        "public_heading_anchor": "#a33-graded-faith-and-judgements-in-different-respects",
+        "label": "A33"
+      },
+      {
+        "native_word_bookmark": "#section_11",
+        "public_heading_anchor": "#a06-necessary-existence-and-persistent-dependence",
+        "label": "A06"
+      },
+      {
+        "native_word_bookmark": "#section_31",
+        "public_heading_anchor": "#a26-inferential-form-does-not-replace-premises",
+        "label": "A26"
+      },
+      {
+        "native_word_bookmark": "#section_75",
+        "public_heading_anchor": "#d30-historical-penalties-and-the-limits-of-shared-names",
+        "label": "D30"
+      },
+      {
+        "native_word_bookmark": "#section_35",
+        "public_heading_anchor": "#a30-cumulative-evidence-and-learning-from-a-guide",
+        "label": "A30"
+      },
+      {
+        "native_word_bookmark": "#section_37",
+        "public_heading_anchor": "#a32-qualified-guidance-and-different-paths-to-knowledge",
+        "label": "A32"
+      },
+      {
+        "native_word_bookmark": "#section_12",
+        "public_heading_anchor": "#a07-correlation-is-not-efficient-causation",
+        "label": "A07"
+      },
+      {
+        "native_word_bookmark": "#section_15",
+        "public_heading_anchor": "#a10-complete-production-and-a-connected-world",
+        "label": "A10"
+      },
+      {
+        "native_word_bookmark": "#section_20",
+        "public_heading_anchor": "#a15-rival-cosmologies-and-open-alternatives",
+        "label": "A15"
+      },
+      {
+        "native_word_bookmark": "#section_15",
+        "public_heading_anchor": "#a10-complete-production-and-a-connected-world",
+        "label": "A10"
+      },
+      {
+        "native_word_bookmark": "#section_31",
+        "public_heading_anchor": "#a26-inferential-form-does-not-replace-premises",
+        "label": "A26"
+      },
+      {
+        "native_word_bookmark": "#section_14",
+        "public_heading_anchor": "#a09-conflict-between-alleged-equal-creators",
+        "label": "A09"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_67",
+        "public_heading_anchor": "#d22-creator-acknowledgement-and-exclusive-worship",
+        "label": "D22"
+      },
+      {
+        "native_word_bookmark": "#section_15",
+        "public_heading_anchor": "#a10-complete-production-and-a-connected-world",
+        "label": "A10"
+      },
+      {
+        "native_word_bookmark": "#section_13",
+        "public_heading_anchor": "#a08-knowledge-worship-and-ultimate-ends",
+        "label": "A08"
+      },
+      {
+        "native_word_bookmark": "#section_12",
+        "public_heading_anchor": "#a07-correlation-is-not-efficient-causation",
+        "label": "A07"
+      },
+      {
+        "native_word_bookmark": "#section_17",
+        "public_heading_anchor": "#a12-real-causes-with-conditions-and-impediments",
+        "label": "A12"
+      },
+      {
+        "native_word_bookmark": "#section_28",
+        "public_heading_anchor": "#a23-meaningful-negation-and-authorised-response",
+        "label": "A23"
+      },
+      {
+        "native_word_bookmark": "#section_21",
+        "public_heading_anchor": "#a16-real-succession-without-simultaneous-parts",
+        "label": "A16"
+      },
+      {
+        "native_word_bookmark": "#section_22",
+        "public_heading_anchor": "#a17-perfection-at-the-appropriate-level",
+        "label": "A17"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_26",
+        "public_heading_anchor": "#a21-power-will-and-created-agency",
+        "label": "A21"
+      },
+      {
+        "native_word_bookmark": "#section_47",
+        "public_heading_anchor": "#d02-remedy-use-receptivity-and-obstruction",
+        "label": "D02"
+      },
+      {
+        "native_word_bookmark": "#section_51",
+        "public_heading_anchor": "#d06-decree-includes-means",
+        "label": "D06"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_28",
+        "public_heading_anchor": "#a23-meaningful-negation-and-authorised-response",
+        "label": "A23"
+      },
+      {
+        "native_word_bookmark": "#section_18",
+        "public_heading_anchor": "#a13-voluntary-response-and-temporal-sequence",
+        "label": "A13"
+      },
+      {
+        "native_word_bookmark": "#section_53",
+        "public_heading_anchor": "#d08-warning-narratives-and-interpersonal-rights",
+        "label": "D08"
+      },
+      {
+        "native_word_bookmark": "#section_11",
+        "public_heading_anchor": "#a06-necessary-existence-and-persistent-dependence",
+        "label": "A06"
+      },
+      {
+        "native_word_bookmark": "#section_31",
+        "public_heading_anchor": "#a26-inferential-form-does-not-replace-premises",
+        "label": "A26"
+      },
+      {
+        "native_word_bookmark": "#section_16",
+        "public_heading_anchor": "#a11-perpetual-activity-and-particular-products",
+        "label": "A11"
+      },
+      {
+        "native_word_bookmark": "#section_24",
+        "public_heading_anchor": "#a19-transmission-through-another-voice",
+        "label": "A19"
+      },
+      {
+        "native_word_bookmark": "#section_25",
+        "public_heading_anchor": "#a20-concrete-signs-and-qualified-inference",
+        "label": "A20"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_33",
+        "public_heading_anchor": "#a28-meaningful-names-and-distinct-perfection-routes",
+        "label": "A28"
+      },
+      {
+        "native_word_bookmark": "#section_9",
+        "public_heading_anchor": "#a04-reason-testimony-and-differentiated-attributes",
+        "label": "A04"
+      },
+      {
+        "native_word_bookmark": "#section_10",
+        "public_heading_anchor": "#a05-when-an-outline-becomes-an-argument",
+        "label": "A05"
+      },
+      {
+        "native_word_bookmark": "#section_8",
+        "public_heading_anchor": "#a03-speaking-and-causing-another-to-speak",
+        "label": "A03"
+      },
+      {
+        "native_word_bookmark": "#section_21",
+        "public_heading_anchor": "#a16-real-succession-without-simultaneous-parts",
+        "label": "A16"
+      },
+      {
+        "native_word_bookmark": "#section_32",
+        "public_heading_anchor": "#a27-speech-bearer-and-voluntary-exercise",
+        "label": "A27"
+      },
+      {
+        "native_word_bookmark": "#section_11",
+        "public_heading_anchor": "#a06-necessary-existence-and-persistent-dependence",
+        "label": "A06"
+      },
+      {
+        "native_word_bookmark": "#section_22",
+        "public_heading_anchor": "#a17-perfection-at-the-appropriate-level",
+        "label": "A17"
+      },
+      {
+        "native_word_bookmark": "#section_31",
+        "public_heading_anchor": "#a26-inferential-form-does-not-replace-premises",
+        "label": "A26"
+      },
+      {
+        "native_word_bookmark": "#section_17",
+        "public_heading_anchor": "#a12-real-causes-with-conditions-and-impediments",
+        "label": "A12"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_68",
+        "public_heading_anchor": "#d23-mediation-without-divine-deficiency",
+        "label": "D23"
+      },
+      {
+        "native_word_bookmark": "#section_7",
+        "public_heading_anchor": "#a02-true-predication-and-fitting-names",
+        "label": "A02"
+      },
+      {
+        "native_word_bookmark": "#section_18",
+        "public_heading_anchor": "#a13-voluntary-response-and-temporal-sequence",
+        "label": "A13"
+      },
+      {
+        "native_word_bookmark": "#section_22",
+        "public_heading_anchor": "#a17-perfection-at-the-appropriate-level",
+        "label": "A17"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_40",
+        "public_heading_anchor": "#a35-wisdom-and-the-authentication-of-messengers",
+        "label": "A35"
+      },
+      {
+        "native_word_bookmark": "#section_18",
+        "public_heading_anchor": "#a13-voluntary-response-and-temporal-sequence",
+        "label": "A13"
+      },
+      {
+        "native_word_bookmark": "#section_15",
+        "public_heading_anchor": "#a10-complete-production-and-a-connected-world",
+        "label": "A10"
+      },
+      {
+        "native_word_bookmark": "#section_68",
+        "public_heading_anchor": "#d23-mediation-without-divine-deficiency",
+        "label": "D23"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_66",
+        "public_heading_anchor": "#d21-degrees-of-wrongdoing-and-their-purposes",
+        "label": "D21"
+      },
+      {
+        "native_word_bookmark": "#section_70",
+        "public_heading_anchor": "#d25-distinct-rights-and-qualified-resemblance",
+        "label": "D25"
+      },
+      {
+        "native_word_bookmark": "#section_11",
+        "public_heading_anchor": "#a06-necessary-existence-and-persistent-dependence",
+        "label": "A06"
+      },
+      {
+        "native_word_bookmark": "#section_26",
+        "public_heading_anchor": "#a21-power-will-and-created-agency",
+        "label": "A21"
+      },
+      {
+        "native_word_bookmark": "#section_10",
+        "public_heading_anchor": "#a05-when-an-outline-becomes-an-argument",
+        "label": "A05"
+      },
+      {
+        "native_word_bookmark": "#section_12",
+        "public_heading_anchor": "#a07-correlation-is-not-efficient-causation",
+        "label": "A07"
+      },
+      {
+        "native_word_bookmark": "#section_50",
+        "public_heading_anchor": "#d05-success-does-not-isolate-its-cause",
+        "label": "D05"
+      },
+      {
+        "native_word_bookmark": "#section_70",
+        "public_heading_anchor": "#d25-distinct-rights-and-qualified-resemblance",
+        "label": "D25"
+      },
+      {
+        "native_word_bookmark": "#section_8",
+        "public_heading_anchor": "#a03-speaking-and-causing-another-to-speak",
+        "label": "A03"
+      },
+      {
+        "native_word_bookmark": "#section_24",
+        "public_heading_anchor": "#a19-transmission-through-another-voice",
+        "label": "A19"
+      },
+      {
+        "native_word_bookmark": "#section_50",
+        "public_heading_anchor": "#d05-success-does-not-isolate-its-cause",
+        "label": "D05"
+      },
+      {
+        "native_word_bookmark": "#section_33",
+        "public_heading_anchor": "#a28-meaningful-names-and-distinct-perfection-routes",
+        "label": "A28"
+      },
+      {
+        "native_word_bookmark": "#section_43",
+        "public_heading_anchor": "#a38-authority-beyond-the-initial-claim-of-office",
+        "label": "A38"
+      },
+      {
+        "native_word_bookmark": "#section_7",
+        "public_heading_anchor": "#a02-true-predication-and-fitting-names",
+        "label": "A02"
+      },
+      {
+        "native_word_bookmark": "#section_22",
+        "public_heading_anchor": "#a17-perfection-at-the-appropriate-level",
+        "label": "A17"
+      },
+      {
+        "native_word_bookmark": "#section_32",
+        "public_heading_anchor": "#a27-speech-bearer-and-voluntary-exercise",
+        "label": "A27"
+      },
+      {
+        "native_word_bookmark": "#section_35",
+        "public_heading_anchor": "#a30-cumulative-evidence-and-learning-from-a-guide",
+        "label": "A30"
+      },
+      {
+        "native_word_bookmark": "#section_39",
+        "public_heading_anchor": "#a34-testimony-character-and-independent-agreement",
+        "label": "A34"
+      },
+      {
+        "native_word_bookmark": "#section_40",
+        "public_heading_anchor": "#a35-wisdom-and-the-authentication-of-messengers",
+        "label": "A35"
+      },
+      {
+        "native_word_bookmark": "#section_10",
+        "public_heading_anchor": "#a05-when-an-outline-becomes-an-argument",
+        "label": "A05"
+      },
+      {
+        "native_word_bookmark": "#section_34",
+        "public_heading_anchor": "#a29-prophecy-and-more-than-extraordinary-events",
+        "label": "A29"
+      },
+      {
+        "native_word_bookmark": "#section_37",
+        "public_heading_anchor": "#a32-qualified-guidance-and-different-paths-to-knowledge",
+        "label": "A32"
+      },
+      {
+        "native_word_bookmark": "#section_39",
+        "public_heading_anchor": "#a34-testimony-character-and-independent-agreement",
+        "label": "A34"
+      },
+      {
+        "native_word_bookmark": "#section_34",
+        "public_heading_anchor": "#a29-prophecy-and-more-than-extraordinary-events",
+        "label": "A29"
+      },
+      {
+        "native_word_bookmark": "#section_37",
+        "public_heading_anchor": "#a32-qualified-guidance-and-different-paths-to-knowledge",
+        "label": "A32"
+      },
+      {
+        "native_word_bookmark": "#section_39",
+        "public_heading_anchor": "#a34-testimony-character-and-independent-agreement",
+        "label": "A34"
+      },
+      {
+        "native_word_bookmark": "#section_9",
+        "public_heading_anchor": "#a04-reason-testimony-and-differentiated-attributes",
+        "label": "A04"
+      },
+      {
+        "native_word_bookmark": "#section_10",
+        "public_heading_anchor": "#a05-when-an-outline-becomes-an-argument",
+        "label": "A05"
+      },
+      {
+        "native_word_bookmark": "#section_36",
+        "public_heading_anchor": "#a31-experience-description-and-fallible-disclosure",
+        "label": "A31"
+      },
+      {
+        "native_word_bookmark": "#section_38",
+        "public_heading_anchor": "#a33-graded-faith-and-judgements-in-different-respects",
+        "label": "A33"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_9",
+        "public_heading_anchor": "#a04-reason-testimony-and-differentiated-attributes",
+        "label": "A04"
+      },
+      {
+        "native_word_bookmark": "#section_26",
+        "public_heading_anchor": "#a21-power-will-and-created-agency",
+        "label": "A21"
+      },
+      {
+        "native_word_bookmark": "#section_58",
+        "public_heading_anchor": "#d13-moral-protectiveness-genuine-excuses-and-rank",
+        "label": "D13"
+      },
+      {
+        "native_word_bookmark": "#section_61",
+        "public_heading_anchor": "#d16-discerning-well-and-acting-well",
+        "label": "D16"
+      },
+      {
+        "native_word_bookmark": "#section_17",
+        "public_heading_anchor": "#a12-real-causes-with-conditions-and-impediments",
+        "label": "A12"
+      },
+      {
+        "native_word_bookmark": "#section_24",
+        "public_heading_anchor": "#a19-transmission-through-another-voice",
+        "label": "A19"
+      },
+      {
+        "native_word_bookmark": "#section_34",
+        "public_heading_anchor": "#a29-prophecy-and-more-than-extraordinary-events",
+        "label": "A29"
+      },
+      {
+        "native_word_bookmark": "#section_35",
+        "public_heading_anchor": "#a30-cumulative-evidence-and-learning-from-a-guide",
+        "label": "A30"
+      },
+      {
+        "native_word_bookmark": "#section_37",
+        "public_heading_anchor": "#a32-qualified-guidance-and-different-paths-to-knowledge",
+        "label": "A32"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_29",
+        "public_heading_anchor": "#a24-moral-qualities-and-divine-wisdom",
+        "label": "A24"
+      },
+      {
+        "native_word_bookmark": "#section_34",
+        "public_heading_anchor": "#a29-prophecy-and-more-than-extraordinary-events",
+        "label": "A29"
+      },
+      {
+        "native_word_bookmark": "#section_43",
+        "public_heading_anchor": "#a38-authority-beyond-the-initial-claim-of-office",
+        "label": "A38"
+      },
+      {
+        "native_word_bookmark": "#section_26",
+        "public_heading_anchor": "#a21-power-will-and-created-agency",
+        "label": "A21"
+      },
+      {
+        "native_word_bookmark": "#section_34",
+        "public_heading_anchor": "#a29-prophecy-and-more-than-extraordinary-events",
+        "label": "A29"
+      },
+      {
+        "native_word_bookmark": "#section_40",
+        "public_heading_anchor": "#a35-wisdom-and-the-authentication-of-messengers",
+        "label": "A35"
+      },
+      {
+        "native_word_bookmark": "#section_6",
+        "public_heading_anchor": "#a01-the-creed-and-its-commentator",
+        "label": "A01"
+      },
+      {
+        "native_word_bookmark": "#section_9",
+        "public_heading_anchor": "#a04-reason-testimony-and-differentiated-attributes",
+        "label": "A04"
+      },
+      {
+        "native_word_bookmark": "#section_43",
+        "public_heading_anchor": "#a38-authority-beyond-the-initial-claim-of-office",
+        "label": "A38"
+      },
+      {
+        "native_word_bookmark": "#section_6",
+        "public_heading_anchor": "#a01-the-creed-and-its-commentator",
+        "label": "A01"
+      },
+      {
+        "native_word_bookmark": "#section_32",
+        "public_heading_anchor": "#a27-speech-bearer-and-voluntary-exercise",
+        "label": "A27"
+      },
+      {
+        "native_word_bookmark": "#section_40",
+        "public_heading_anchor": "#a35-wisdom-and-the-authentication-of-messengers",
+        "label": "A35"
+      },
+      {
+        "native_word_bookmark": "#section_42",
+        "public_heading_anchor": "#a37-afterlife-teaching-and-shared-foundations",
+        "label": "A37"
+      },
+      {
+        "native_word_bookmark": "#section_47",
+        "public_heading_anchor": "#d02-remedy-use-receptivity-and-obstruction",
+        "label": "D02"
+      },
+      {
+        "native_word_bookmark": "#section_60",
+        "public_heading_anchor": "#d15-restoration-can-return-above-or-below",
+        "label": "D15"
+      },
+      {
+        "native_word_bookmark": "#section_76",
+        "public_heading_anchor": "#d31-the-renewed-question-and-positive-prevention",
+        "label": "D31"
+      },
+      {
+        "native_word_bookmark": "#section_48",
+        "public_heading_anchor": "#d03-mitigation-persistence-and-abandonment",
+        "label": "D03"
+      },
+      {
+        "native_word_bookmark": "#section_50",
+        "public_heading_anchor": "#d05-success-does-not-isolate-its-cause",
+        "label": "D05"
+      },
+      {
+        "native_word_bookmark": "#section_63",
+        "public_heading_anchor": "#d18-remembering-the-self-and-three-kinds-of-care",
+        "label": "D18"
+      },
+      {
+        "native_word_bookmark": "#section_17",
+        "public_heading_anchor": "#a12-real-causes-with-conditions-and-impediments",
+        "label": "A12"
+      },
+      {
+        "native_word_bookmark": "#section_50",
+        "public_heading_anchor": "#d05-success-does-not-isolate-its-cause",
+        "label": "D05"
+      },
+      {
+        "native_word_bookmark": "#section_54",
+        "public_heading_anchor": "#d09-worldly-outcomes-attention-and-hope",
+        "label": "D09"
+      },
+      {
+        "native_word_bookmark": "#section_63",
+        "public_heading_anchor": "#d18-remembering-the-self-and-three-kinds-of-care",
+        "label": "D18"
+      },
+      {
+        "native_word_bookmark": "#section_50",
+        "public_heading_anchor": "#d05-success-does-not-isolate-its-cause",
+        "label": "D05"
+      },
+      {
+        "native_word_bookmark": "#section_53",
+        "public_heading_anchor": "#d08-warning-narratives-and-interpersonal-rights",
+        "label": "D08"
+      },
+      {
+        "native_word_bookmark": "#section_47",
+        "public_heading_anchor": "#d02-remedy-use-receptivity-and-obstruction",
+        "label": "D02"
+      },
+      {
+        "native_word_bookmark": "#section_49",
+        "public_heading_anchor": "#d04-exemplary-supplication-in-its-own-setting",
+        "label": "D04"
+      },
+      {
+        "native_word_bookmark": "#section_51",
+        "public_heading_anchor": "#d06-decree-includes-means",
+        "label": "D06"
+      },
+      {
+        "native_word_bookmark": "#section_32",
+        "public_heading_anchor": "#a27-speech-bearer-and-voluntary-exercise",
+        "label": "A27"
+      },
+      {
+        "native_word_bookmark": "#section_47",
+        "public_heading_anchor": "#d02-remedy-use-receptivity-and-obstruction",
+        "label": "D02"
+      },
+      {
+        "native_word_bookmark": "#section_68",
+        "public_heading_anchor": "#d23-mediation-without-divine-deficiency",
+        "label": "D23"
+      },
+      {
+        "native_word_bookmark": "#section_17",
+        "public_heading_anchor": "#a12-real-causes-with-conditions-and-impediments",
+        "label": "A12"
+      },
+      {
+        "native_word_bookmark": "#section_54",
+        "public_heading_anchor": "#d09-worldly-outcomes-attention-and-hope",
+        "label": "D09"
+      },
+      {
+        "native_word_bookmark": "#section_60",
+        "public_heading_anchor": "#d15-restoration-can-return-above-or-below",
+        "label": "D15"
+      },
+      {
+        "native_word_bookmark": "#section_66",
+        "public_heading_anchor": "#d21-degrees-of-wrongdoing-and-their-purposes",
+        "label": "D21"
+      },
+      {
+        "native_word_bookmark": "#section_70",
+        "public_heading_anchor": "#d25-distinct-rights-and-qualified-resemblance",
+        "label": "D25"
+      },
+      {
+        "native_word_bookmark": "#section_73",
+        "public_heading_anchor": "#d28-speech-and-silence-each-have-risks",
+        "label": "D28"
+      },
+      {
+        "native_word_bookmark": "#section_48",
+        "public_heading_anchor": "#d03-mitigation-persistence-and-abandonment",
+        "label": "D03"
+      },
+      {
+        "native_word_bookmark": "#section_55",
+        "public_heading_anchor": "#d10-sin-and-narrated-social-consequences",
+        "label": "D10"
+      },
+      {
+        "native_word_bookmark": "#section_59",
+        "public_heading_anchor": "#d14-burdens-blessing-and-lived-time",
+        "label": "D14"
+      },
+      {
+        "native_word_bookmark": "#section_54",
+        "public_heading_anchor": "#d09-worldly-outcomes-attention-and-hope",
+        "label": "D09"
+      },
+      {
+        "native_word_bookmark": "#section_57",
+        "public_heading_anchor": "#d12-environmental-blessing-and-causal-language",
+        "label": "D12"
+      },
+      {
+        "native_word_bookmark": "#section_64",
+        "public_heading_anchor": "#d19-historical-penalties-and-different-kinds-of-repair",
+        "label": "D19"
+      },
+      {
+        "native_word_bookmark": "#section_60",
+        "public_heading_anchor": "#d15-restoration-can-return-above-or-below",
+        "label": "D15"
+      },
+      {
+        "native_word_bookmark": "#section_61",
+        "public_heading_anchor": "#d16-discerning-well-and-acting-well",
+        "label": "D16"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_74",
+        "public_heading_anchor": "#d29-repentance-qualifies-severe-rhetoric",
+        "label": "D29"
+      },
+      {
+        "native_word_bookmark": "#section_54",
+        "public_heading_anchor": "#d09-worldly-outcomes-attention-and-hope",
+        "label": "D09"
+      },
+      {
+        "native_word_bookmark": "#section_55",
+        "public_heading_anchor": "#d10-sin-and-narrated-social-consequences",
+        "label": "D10"
+      },
+      {
+        "native_word_bookmark": "#section_59",
+        "public_heading_anchor": "#d14-burdens-blessing-and-lived-time",
+        "label": "D14"
+      },
+      {
+        "native_word_bookmark": "#section_54",
+        "public_heading_anchor": "#d09-worldly-outcomes-attention-and-hope",
+        "label": "D09"
+      },
+      {
+        "native_word_bookmark": "#section_60",
+        "public_heading_anchor": "#d15-restoration-can-return-above-or-below",
+        "label": "D15"
+      },
+      {
+        "native_word_bookmark": "#section_74",
+        "public_heading_anchor": "#d29-repentance-qualifies-severe-rhetoric",
+        "label": "D29"
+      },
+      {
+        "native_word_bookmark": "#section_54",
+        "public_heading_anchor": "#d09-worldly-outcomes-attention-and-hope",
+        "label": "D09"
+      },
+      {
+        "native_word_bookmark": "#section_68",
+        "public_heading_anchor": "#d23-mediation-without-divine-deficiency",
+        "label": "D23"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_77",
+        "public_heading_anchor": "#d32-ultimate-love-and-ordinary-affection",
+        "label": "D32"
+      },
+      {
+        "native_word_bookmark": "#section_78",
+        "public_heading_anchor": "#d33-active-restraint-and-immediate-or-lasting-goods",
+        "label": "D33"
+      },
+      {
+        "native_word_bookmark": "#section_52",
+        "public_heading_anchor": "#d07-presumption-and-graded-repair",
+        "label": "D07"
+      },
+      {
+        "native_word_bookmark": "#section_56",
+        "public_heading_anchor": "#d11-habit-disposition-and-diminished-agency",
+        "label": "D11"
+      },
+      {
+        "native_word_bookmark": "#section_74",
+        "public_heading_anchor": "#d29-repentance-qualifies-severe-rhetoric",
+        "label": "D29"
+      },
+      {
+        "native_word_bookmark": "#section_56",
+        "public_heading_anchor": "#d11-habit-disposition-and-diminished-agency",
+        "label": "D11"
+      },
+      {
+        "native_word_bookmark": "#section_62",
+        "public_heading_anchor": "#d17-the-heart-and-its-available-supports",
+        "label": "D17"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_61",
+        "public_heading_anchor": "#d16-discerning-well-and-acting-well",
+        "label": "D16"
+      },
+      {
+        "native_word_bookmark": "#section_63",
+        "public_heading_anchor": "#d18-remembering-the-self-and-three-kinds-of-care",
+        "label": "D18"
+      },
+      {
+        "native_word_bookmark": "#section_73",
+        "public_heading_anchor": "#d28-speech-and-silence-each-have-risks",
+        "label": "D28"
+      },
+      {
+        "native_word_bookmark": "#section_47",
+        "public_heading_anchor": "#d02-remedy-use-receptivity-and-obstruction",
+        "label": "D02"
+      },
+      {
+        "native_word_bookmark": "#section_48",
+        "public_heading_anchor": "#d03-mitigation-persistence-and-abandonment",
+        "label": "D03"
+      },
+      {
+        "native_word_bookmark": "#section_62",
+        "public_heading_anchor": "#d17-the-heart-and-its-available-supports",
+        "label": "D17"
+      },
+      {
+        "native_word_bookmark": "#section_70",
+        "public_heading_anchor": "#d25-distinct-rights-and-qualified-resemblance",
+        "label": "D25"
+      },
+      {
+        "native_word_bookmark": "#section_75",
+        "public_heading_anchor": "#d30-historical-penalties-and-the-limits-of-shared-names",
+        "label": "D30"
+      },
+      {
+        "native_word_bookmark": "#section_61",
+        "public_heading_anchor": "#d16-discerning-well-and-acting-well",
+        "label": "D16"
+      },
+      {
+        "native_word_bookmark": "#section_63",
+        "public_heading_anchor": "#d18-remembering-the-self-and-three-kinds-of-care",
+        "label": "D18"
+      },
+      {
+        "native_word_bookmark": "#section_66",
+        "public_heading_anchor": "#d21-degrees-of-wrongdoing-and-their-purposes",
+        "label": "D21"
+      },
+      {
+        "native_word_bookmark": "#section_52",
+        "public_heading_anchor": "#d07-presumption-and-graded-repair",
+        "label": "D07"
+      },
+      {
+        "native_word_bookmark": "#section_69",
+        "public_heading_anchor": "#d24-false-attribution-and-mistaken-conviction",
+        "label": "D24"
+      },
+      {
+        "native_word_bookmark": "#section_70",
+        "public_heading_anchor": "#d25-distinct-rights-and-qualified-resemblance",
+        "label": "D25"
+      },
+      {
+        "native_word_bookmark": "#section_29",
+        "public_heading_anchor": "#a24-moral-qualities-and-divine-wisdom",
+        "label": "A24"
+      },
+      {
+        "native_word_bookmark": "#section_68",
+        "public_heading_anchor": "#d23-mediation-without-divine-deficiency",
+        "label": "D23"
+      },
+      {
+        "native_word_bookmark": "#section_13",
+        "public_heading_anchor": "#a08-knowledge-worship-and-ultimate-ends",
+        "label": "A08"
+      },
+      {
+        "native_word_bookmark": "#section_14",
+        "public_heading_anchor": "#a09-conflict-between-alleged-equal-creators",
+        "label": "A09"
+      },
+      {
+        "native_word_bookmark": "#section_77",
+        "public_heading_anchor": "#d32-ultimate-love-and-ordinary-affection",
+        "label": "D32"
+      },
+      {
+        "native_word_bookmark": "#section_79",
+        "public_heading_anchor": "#d34-love-cosmic-motion-and-good-order",
+        "label": "D34"
+      },
+      {
+        "native_word_bookmark": "#section_51",
+        "public_heading_anchor": "#d06-decree-includes-means",
+        "label": "D06"
+      },
+      {
+        "native_word_bookmark": "#section_59",
+        "public_heading_anchor": "#d14-burdens-blessing-and-lived-time",
+        "label": "D14"
+      },
+      {
+        "native_word_bookmark": "#section_67",
+        "public_heading_anchor": "#d22-creator-acknowledgement-and-exclusive-worship",
+        "label": "D22"
+      },
+      {
+        "native_word_bookmark": "#section_28",
+        "public_heading_anchor": "#a23-meaningful-negation-and-authorised-response",
+        "label": "A23"
+      },
+      {
+        "native_word_bookmark": "#section_61",
+        "public_heading_anchor": "#d16-discerning-well-and-acting-well",
+        "label": "D16"
+      },
+      {
+        "native_word_bookmark": "#section_66",
+        "public_heading_anchor": "#d21-degrees-of-wrongdoing-and-their-purposes",
+        "label": "D21"
+      },
+      {
+        "native_word_bookmark": "#section_9",
+        "public_heading_anchor": "#a04-reason-testimony-and-differentiated-attributes",
+        "label": "A04"
+      },
+      {
+        "native_word_bookmark": "#section_64",
+        "public_heading_anchor": "#d19-historical-penalties-and-different-kinds-of-repair",
+        "label": "D19"
+      },
+      {
+        "native_word_bookmark": "#section_66",
+        "public_heading_anchor": "#d21-degrees-of-wrongdoing-and-their-purposes",
+        "label": "D21"
+      },
+      {
+        "native_word_bookmark": "#section_31",
+        "public_heading_anchor": "#a26-inferential-form-does-not-replace-premises",
+        "label": "A26"
+      },
+      {
+        "native_word_bookmark": "#section_80",
+        "public_heading_anchor": "#d35-competing-pressures-and-the-rights-of-others",
+        "label": "D35"
+      },
+      {
+        "native_word_bookmark": "#section_62",
+        "public_heading_anchor": "#d17-the-heart-and-its-available-supports",
+        "label": "D17"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_73",
+        "public_heading_anchor": "#d28-speech-and-silence-each-have-risks",
+        "label": "D28"
+      },
+      {
+        "native_word_bookmark": "#section_56",
+        "public_heading_anchor": "#d11-habit-disposition-and-diminished-agency",
+        "label": "D11"
+      },
+      {
+        "native_word_bookmark": "#section_59",
+        "public_heading_anchor": "#d14-burdens-blessing-and-lived-time",
+        "label": "D14"
+      },
+      {
+        "native_word_bookmark": "#section_61",
+        "public_heading_anchor": "#d16-discerning-well-and-acting-well",
+        "label": "D16"
+      },
+      {
+        "native_word_bookmark": "#section_71",
+        "public_heading_anchor": "#d26-four-entrances-into-conduct",
+        "label": "D26"
+      },
+      {
+        "native_word_bookmark": "#section_27",
+        "public_heading_anchor": "#a22-wisdom-timely-goods-and-multiple-benefits",
+        "label": "A22"
+      },
+      {
+        "native_word_bookmark": "#section_84",
+        "public_heading_anchor": "#d39-involuntary-feeling-and-separate-classifications",
+        "label": "D39"
+      },
+      {
+        "native_word_bookmark": "#section_62",
+        "public_heading_anchor": "#d17-the-heart-and-its-available-supports",
+        "label": "D17"
+      },
+      {
+        "native_word_bookmark": "#section_69",
+        "public_heading_anchor": "#d24-false-attribution-and-mistaken-conviction",
+        "label": "D24"
+      },
+      {
+        "native_word_bookmark": "#section_71",
+        "public_heading_anchor": "#d26-four-entrances-into-conduct",
+        "label": "D26"
+      },
+      {
+        "native_word_bookmark": "#section_58",
+        "public_heading_anchor": "#d13-moral-protectiveness-genuine-excuses-and-rank",
+        "label": "D13"
+      },
+      {
+        "native_word_bookmark": "#section_60",
+        "public_heading_anchor": "#d15-restoration-can-return-above-or-below",
+        "label": "D15"
+      },
+      {
+        "native_word_bookmark": "#section_75",
+        "public_heading_anchor": "#d30-historical-penalties-and-the-limits-of-shared-names",
+        "label": "D30"
+      },
+      {
+        "native_word_bookmark": "#section_82",
+        "public_heading_anchor": "#d37-the-reply-distinguishes-object-conduct-and-pleasure",
+        "label": "D37"
+      },
+      {
+        "native_word_bookmark": "#section_83",
+        "public_heading_anchor": "#d38-marital-love-and-the-limits-of-intervention",
+        "label": "D38"
+      },
+      {
+        "native_word_bookmark": "#section_84",
+        "public_heading_anchor": "#d39-involuntary-feeling-and-separate-classifications",
+        "label": "D39"
+      },
+      {
+        "native_word_bookmark": "#section_64",
+        "public_heading_anchor": "#d19-historical-penalties-and-different-kinds-of-repair",
+        "label": "D19"
+      },
+      {
+        "native_word_bookmark": "#section_74",
+        "public_heading_anchor": "#d29-repentance-qualifies-severe-rhetoric",
+        "label": "D29"
+      },
+      {
+        "native_word_bookmark": "#section_10",
+        "public_heading_anchor": "#a05-when-an-outline-becomes-an-argument",
+        "label": "A05"
+      },
+      {
+        "native_word_bookmark": "#section_76",
+        "public_heading_anchor": "#d31-the-renewed-question-and-positive-prevention",
+        "label": "D31"
+      },
+      {
+        "native_word_bookmark": "#section_46",
+        "public_heading_anchor": "#d01-an-unnamed-affliction-and-a-request-for-help",
+        "label": "D01"
+      },
+      {
+        "native_word_bookmark": "#section_61",
+        "public_heading_anchor": "#d16-discerning-well-and-acting-well",
+        "label": "D16"
+      },
+      {
+        "native_word_bookmark": "#section_71",
+        "public_heading_anchor": "#d26-four-entrances-into-conduct",
+        "label": "D26"
+      },
+      {
+        "native_word_bookmark": "#section_77",
+        "public_heading_anchor": "#d32-ultimate-love-and-ordinary-affection",
+        "label": "D32"
+      },
+      {
+        "native_word_bookmark": "#section_59",
+        "public_heading_anchor": "#d14-burdens-blessing-and-lived-time",
+        "label": "D14"
+      },
+      {
+        "native_word_bookmark": "#section_67",
+        "public_heading_anchor": "#d22-creator-acknowledgement-and-exclusive-worship",
+        "label": "D22"
+      },
+      {
+        "native_word_bookmark": "#section_76",
+        "public_heading_anchor": "#d31-the-renewed-question-and-positive-prevention",
+        "label": "D31"
+      },
+      {
+        "native_word_bookmark": "#section_83",
+        "public_heading_anchor": "#d38-marital-love-and-the-limits-of-intervention",
+        "label": "D38"
+      },
+      {
+        "native_word_bookmark": "#section_84",
+        "public_heading_anchor": "#d39-involuntary-feeling-and-separate-classifications",
+        "label": "D39"
+      },
+      {
+        "native_word_bookmark": "#section_54",
+        "public_heading_anchor": "#d09-worldly-outcomes-attention-and-hope",
+        "label": "D09"
+      },
+      {
+        "native_word_bookmark": "#section_59",
+        "public_heading_anchor": "#d14-burdens-blessing-and-lived-time",
+        "label": "D14"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_77",
+        "public_heading_anchor": "#d32-ultimate-love-and-ordinary-affection",
+        "label": "D32"
+      },
+      {
+        "native_word_bookmark": "#section_82",
+        "public_heading_anchor": "#d37-the-reply-distinguishes-object-conduct-and-pleasure",
+        "label": "D37"
+      },
+      {
+        "native_word_bookmark": "#section_15",
+        "public_heading_anchor": "#a10-complete-production-and-a-connected-world",
+        "label": "A10"
+      },
+      {
+        "native_word_bookmark": "#section_67",
+        "public_heading_anchor": "#d22-creator-acknowledgement-and-exclusive-worship",
+        "label": "D22"
+      },
+      {
+        "native_word_bookmark": "#section_68",
+        "public_heading_anchor": "#d23-mediation-without-divine-deficiency",
+        "label": "D23"
+      },
+      {
+        "native_word_bookmark": "#section_77",
+        "public_heading_anchor": "#d32-ultimate-love-and-ordinary-affection",
+        "label": "D32"
+      },
+      {
+        "native_word_bookmark": "#section_70",
+        "public_heading_anchor": "#d25-distinct-rights-and-qualified-resemblance",
+        "label": "D25"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_76",
+        "public_heading_anchor": "#d31-the-renewed-question-and-positive-prevention",
+        "label": "D31"
+      },
+      {
+        "native_word_bookmark": "#section_84",
+        "public_heading_anchor": "#d39-involuntary-feeling-and-separate-classifications",
+        "label": "D39"
+      },
+      {
+        "native_word_bookmark": "#section_82",
+        "public_heading_anchor": "#d37-the-reply-distinguishes-object-conduct-and-pleasure",
+        "label": "D37"
+      },
+      {
+        "native_word_bookmark": "#section_83",
+        "public_heading_anchor": "#d38-marital-love-and-the-limits-of-intervention",
+        "label": "D38"
+      },
+      {
+        "native_word_bookmark": "#section_85",
+        "public_heading_anchor": "#d40-the-ending-tests-the-report-used-in-the-objection",
+        "label": "D40"
+      },
+      {
+        "native_word_bookmark": "#section_74",
+        "public_heading_anchor": "#d29-repentance-qualifies-severe-rhetoric",
+        "label": "D29"
+      },
+      {
+        "native_word_bookmark": "#section_77",
+        "public_heading_anchor": "#d32-ultimate-love-and-ordinary-affection",
+        "label": "D32"
+      },
+      {
+        "native_word_bookmark": "#section_78",
+        "public_heading_anchor": "#d33-active-restraint-and-immediate-or-lasting-goods",
+        "label": "D33"
+      },
+      {
+        "native_word_bookmark": "#section_81",
+        "public_heading_anchor": "#d36-the-long-affirmative-case-belongs-to-an-interlocutor",
+        "label": "D36"
+      },
+      {
+        "native_word_bookmark": "#section_83",
+        "public_heading_anchor": "#d38-marital-love-and-the-limits-of-intervention",
+        "label": "D38"
+      },
+      {
+        "native_word_bookmark": "#section_77",
+        "public_heading_anchor": "#d32-ultimate-love-and-ordinary-affection",
+        "label": "D32"
+      },
+      {
+        "native_word_bookmark": "#section_81",
+        "public_heading_anchor": "#d36-the-long-affirmative-case-belongs-to-an-interlocutor",
+        "label": "D36"
+      },
+      {
+        "native_word_bookmark": "#section_82",
+        "public_heading_anchor": "#d37-the-reply-distinguishes-object-conduct-and-pleasure",
+        "label": "D37"
+      },
+      {
+        "native_word_bookmark": "#section_84",
+        "public_heading_anchor": "#d39-involuntary-feeling-and-separate-classifications",
+        "label": "D39"
+      },
+      {
+        "native_word_bookmark": "#section_72",
+        "public_heading_anchor": "#d27-uninvited-thoughts-and-fitting-reflection",
+        "label": "D27"
+      },
+      {
+        "native_word_bookmark": "#section_77",
+        "public_heading_anchor": "#d32-ultimate-love-and-ordinary-affection",
+        "label": "D32"
+      },
+      {
+        "native_word_bookmark": "#section_80",
+        "public_heading_anchor": "#d35-competing-pressures-and-the-rights-of-others",
+        "label": "D35"
+      },
+      {
+        "native_word_bookmark": "#section_83",
+        "public_heading_anchor": "#d38-marital-love-and-the-limits-of-intervention",
+        "label": "D38"
+      },
+      {
+        "native_word_bookmark": "#section_85",
+        "public_heading_anchor": "#d40-the-ending-tests-the-report-used-in-the-objection",
+        "label": "D40"
+      },
+      {
+        "native_word_bookmark": "#section_49",
+        "public_heading_anchor": "#d04-exemplary-supplication-in-its-own-setting",
+        "label": "D04"
+      },
+      {
+        "native_word_bookmark": "#section_81",
+        "public_heading_anchor": "#d36-the-long-affirmative-case-belongs-to-an-interlocutor",
+        "label": "D36"
+      },
+      {
+        "native_word_bookmark": "#section_84",
+        "public_heading_anchor": "#d39-involuntary-feeling-and-separate-classifications",
+        "label": "D39"
+      }
+    ],
+    "source_and_public_normalized_paragraph_sequence_sha256": "a702d5c98954d07218c0c3c3c9a0216c4603c3ce83b230f4d762cca37356e67e"
+  },
+  "changes": [
+    {
+      "kind": "format",
+      "detail": "OOXML archive converted to GFM UTF-8, preserving all native body literal text and math positions in original paragraph order under whitespace normalization."
+    },
+    {
+      "kind": "restore_source_cover",
+      "detail": "Pandoc title and subtitle metadata reinserted before source body, preserving original author/date text; a title-internal line break becomes a space."
+    },
+    {
+      "kind": "typography",
+      "detail": "Direct hyperlink underline becomes ordinary Markdown hyperlink style. Other supported emphasis, bookmarks and RTL spans retained. Font, margins, pagination, line wrapping and blank-paragraph geometry not retained."
+    },
+    {
+      "kind": "added_projection_notice",
+      "detail": "A separately identified leading projection notice supplies custody, historical-credit and rendering limitations; Arabic index additionally retains substantive running header/footer text."
+    },
+    {
+      "kind": "native_math",
+      "detail": "OMML to TeX in document order; exact normalized native trees and public TeX bound in companion math map where applicable. Spacing and prime-glyph fixes are individually enumerated below."
+    }
+  ],
+  "math_conversion_repairs": [],
+  "side_parts": [
+    {
+      "part": "word/header1.xml",
+      "sha256": "55ac92ab69177212199e08d72ffdcc5f3953f5fd3991ba1b287f9e2fc1806ac5",
+      "visible_text": "Arabic Volume Reading Index",
+      "math_objects": 0,
+      "footnote_bodies": 0,
+      "comments": 0
+    },
+    {
+      "part": "word/footer1.xml",
+      "sha256": "0227a1620b4d131cea838442999dafec6ff4b83014117608635d9ca18f9d6212",
+      "visible_text": "AI-authored by dot  |  ",
+      "math_objects": 0,
+      "footnote_bodies": 0,
+      "comments": 0
+    }
+  ],
+  "omissions": {
+    "body_authored_paragraphs": 0,
+    "body_equations": 0,
+    "body_links": 0,
+    "referenced_footnotes_or_endnotes": 0,
+    "tracked_changes": 0,
+    "body_tables_or_images": 0,
+    "nonempty_comments": 0,
+    "word_pagination_and_typography": "not represented",
+    "empty_note_parts_and_page_fields": "structurally inspected; separator-only notes and dynamic/static page-number footer fields not reproduced"
+  },
+  "limits": [
+    "Conversion fidelity and public-prose suitability only; no fresh theorem acceptance, kernel verification, empirical replay, source reading or human-specialist review.",
+    "Historical research dates come from visible source prose; stale generic OOXML package timestamps are not research dates.",
+    "External source links are locators, not an assertion of public access or permission to redistribute the linked material.",
+    "Original DOCX rendering is inspected selectively; full Word-layout equivalence is neither intended nor certified."
+  ]
+}

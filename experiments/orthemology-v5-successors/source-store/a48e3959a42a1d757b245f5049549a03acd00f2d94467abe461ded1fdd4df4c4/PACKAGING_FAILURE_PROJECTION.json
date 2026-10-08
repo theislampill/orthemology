@@ -1,0 +1,9 @@
+{
+  "record_type": "public_failure_projection",
+  "source_record": "packaging initial source-root invocation failure",
+  "source_sha256": "f008c46f3f1f5846b8acbdaec9908ec9b8d36e68d7177f9750e834399914d3d8",
+  "public_path": "history/PORTABLE_WRAPPER_INITIAL_FAILURE.txt",
+  "public_sha256": "cf0ee9e7cf9e242d87d268c2a7ffc020d77fc4a3850a8f06237a702ea44337d4",
+  "transformation": "Only absolute source/output prefixes replaced with neutral placeholders; failure content unchanged",
+  "subsequent_result": "PASS after explicitly setting Lean --root; six scientific modules unchanged"
+}

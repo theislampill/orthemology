@@ -1,0 +1,414 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-07T09:44:49.713169+00:00",
+  "compiler": {
+    "path": "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+    "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "trust": 0,
+    "version_output": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)"
+  },
+  "author_seal_sha256": "161989fec72e5cc231547378db4c7890f8b4e49e6fe77f220a81d97904eed1b2",
+  "sealed_inputs_unchanged": true,
+  "source_check": {
+    "seal_sha256": "161989fec72e5cc231547378db4c7890f8b4e49e6fe77f220a81d97904eed1b2",
+    "sealed_files": 95,
+    "package_manifest_files": 94,
+    "sealed_paragraphs": 47,
+    "docx_and_xml_and_text_sources": [
+      "T17R",
+      "T17G",
+      "T19R"
+    ],
+    "external_sources": [
+      "Seventh-token-purpose",
+      "Grounded-attestation",
+      "Dar8-route-scope"
+    ],
+    "direct_docx_paragraph_comparison": "PASS",
+    "preserved_proposal_hashes": "PASS"
+  },
+  "steps": [
+    {
+      "name": "compiler-version",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "--version"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "compiler-version.log"
+    },
+    {
+      "name": "VeracityBoundary",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "-o",
+        "tranche20/foundational-audit/veracity-independent-review/fresh-trust0-v3/VeracityBoundary.olean",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityBoundary.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "VeracityBoundary.log"
+    },
+    {
+      "name": "VeracityBoundary-deps",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "--deps",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityBoundary.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "VeracityBoundary-deps.log"
+    },
+    {
+      "name": "VeracityControls",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "-o",
+        "tranche20/foundational-audit/veracity-independent-review/fresh-trust0-v3/VeracityControls.olean",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityControls.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "VeracityControls.log"
+    },
+    {
+      "name": "VeracityControls-deps",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "--deps",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityControls.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "VeracityControls-deps.log"
+    },
+    {
+      "name": "APIContract",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/APIContract.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "APIContract.log"
+    },
+    {
+      "name": "Acceptance",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/Acceptance.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "Acceptance.log"
+    },
+    {
+      "name": "exact-types-axioms",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-independent-review/fresh-trust0-v3/IndependentReadback.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "exact-types-axioms.log"
+    },
+    {
+      "name": "proof-bodies",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-independent-review/fresh-trust0-v3/IndependentProofReadback.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "proof-bodies.log"
+    },
+    {
+      "name": "rejected-false_T0_without_A",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_A.lean"
+      ],
+      "exit_code": 1,
+      "expected": "intended false proposition",
+      "log": "rejected-false_T0_without_A.log"
+    },
+    {
+      "name": "rejected-false_T0_without_C",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_C.lean"
+      ],
+      "exit_code": 1,
+      "expected": "intended false proposition",
+      "log": "rejected-false_T0_without_C.log"
+    },
+    {
+      "name": "rejected-false_T0_without_D",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_D.lean"
+      ],
+      "exit_code": 1,
+      "expected": "intended false proposition",
+      "log": "rejected-false_T0_without_D.log"
+    },
+    {
+      "name": "rejected-false_T0_without_K",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_K.lean"
+      ],
+      "exit_code": 1,
+      "expected": "intended false proposition",
+      "log": "rejected-false_T0_without_K.log"
+    },
+    {
+      "name": "rejected-false_T0_without_N",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_N.lean"
+      ],
+      "exit_code": 1,
+      "expected": "intended false proposition",
+      "log": "rejected-false_T0_without_N.log"
+    },
+    {
+      "name": "rejected-false_T0_without_P",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_P.lean"
+      ],
+      "exit_code": 1,
+      "expected": "intended false proposition",
+      "log": "rejected-false_T0_without_P.log"
+    },
+    {
+      "name": "rejected-strong_truth_implies_weak_truth",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/strong_truth_implies_weak_truth.lean"
+      ],
+      "exit_code": 1,
+      "expected": "intended false proposition",
+      "log": "rejected-strong_truth_implies_weak_truth.log"
+    },
+    {
+      "name": "rejected-truthfulness_implies_conformance",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/truthfulness_implies_conformance.lean"
+      ],
+      "exit_code": 1,
+      "expected": "intended false proposition",
+      "log": "rejected-truthfulness_implies_conformance.log"
+    },
+    {
+      "name": "independent-boundaries",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "--root=tranche20/foundational-audit/veracity-independent-review",
+        "-o",
+        "tranche20/foundational-audit/veracity-independent-review/fresh-trust0-v3/IndependentBoundaryTests.olean",
+        "tranche20/foundational-audit/veracity-independent-review/IndependentBoundaryTests.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "independent-boundaries.log"
+    },
+    {
+      "name": "independent-boundaries-readback",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--trust=0",
+        "tranche20/foundational-audit/veracity-independent-review/fresh-trust0-v3/IndependentBoundaryReadback.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "independent-boundaries-readback.log"
+    }
+  ],
+  "author_theorems": [
+    {
+      "name": "VeracityBoundary.controlled_token_true",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.veracity_of_coverage",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.counterfeit_iff_false_under_coverage",
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.veracity_iff_no_counterfeit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.false_excludes_package",
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.strong_awareness",
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.strong_control",
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.strong_veracity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.strong_equals_base_iff_coverage",
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.Controls.deletion_K",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.weak_stress_A",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.weak_stress_C",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.deletion_D",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.deletion_N",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.deletion_P",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.positive_package",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.positive_nonvacuity",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.created_false_is_not_source_owned",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.truthful_not_conforming",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.local_global_separation",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.strong_ownership_noncollapse",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.strong_ownership_not_truth_by_definition",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.positive_equivalence_instance",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "author_type_and_proof_readback_byte_match": true,
+  "author_rejections": 8,
+  "independent_semantic_theorems": [
+    "exercise_bridge_is_substantive",
+    "factivity_guards_forward_equivalence",
+    "coverage_guards_reverse_equivalence",
+    "package_does_not_transfer_to_created_speaker",
+    "other_unfitting_exercise_is_nonassertoric",
+    "strong_false_ownership_retains_D_and_P",
+    "truth_to_no_counterfeit",
+    "no_counterfeit_to_truth"
+  ],
+  "scope": "Conditional mathematics and bound-source fidelity only; no substantive T0 warrant or authentication"
+}

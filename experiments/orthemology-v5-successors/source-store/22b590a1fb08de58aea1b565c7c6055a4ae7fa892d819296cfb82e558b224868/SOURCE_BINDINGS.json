@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "source_package": "Eighteenth_Public_Code_and_Replay_Evidence_v1/code-evidence",
+  "files": [
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/certificates.py",
+      "source_path": "tranche18/research/hidden-change/reference-v1/certificates.py",
+      "sha256": "a75e325dd879bab3ab392b4a467e12b93716ee33eebec61d30ba668fbdd1e41c",
+      "bytes": 6959
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/controller.py",
+      "source_path": "tranche18/research/hidden-change/reference-v1/controller.py",
+      "sha256": "777a95bf89caa09b4c0c4c9274e4b5aa3b7371d63ea9a92c313e7bffba8be003",
+      "bytes": 6354
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/finite.py",
+      "source_path": "tranche18/research/hidden-change/reference-v1/finite.py",
+      "sha256": "50c7a6dbb1f72b9907886eacd2ad04941ff803e01703b8968ef699cfa1e8fae1",
+      "bytes": 3263
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/model.py",
+      "source_path": "tranche18/research/hidden-change/reference-v1/model.py",
+      "sha256": "81e01e552e6ebb455f381a81f2568aa08d5b233522bda53d23c8b930d023c823",
+      "bytes": 2852
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/synthesis.py",
+      "source_path": "tranche18/research/hidden-change/reference-v1/synthesis.py",
+      "sha256": "94c0445a5979171ed5eba929ac75a88f02e1685f41701ee21d809f4b628bde09",
+      "bytes": 4008
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/efficient-v1/dependencies.py",
+      "source_path": "tranche18/research/hidden-change/efficient-v1/dependencies.py",
+      "sha256": "80a239405e103d780c8328acd03347f84b9f6af26e795ae0cc562e090bff600f",
+      "bytes": 2328
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/efficient-v1/efficient.py",
+      "source_path": "tranche18/research/hidden-change/efficient-v1/efficient.py",
+      "sha256": "eaf319dd0909271ea757ec14b88efa0ad45f325ba3b652aa6a6f88f3230a157f",
+      "bytes": 6075
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/efficient-v1/mec.py",
+      "source_path": "tranche18/research/hidden-change/efficient-v1/mec.py",
+      "sha256": "22a119d827635d18fd47bccfded1fcf2735f177a5534830525a026c9dc2e40f4",
+      "bytes": 2841
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/efficient-v1/negative.py",
+      "source_path": "tranche18/research/hidden-change/efficient-v1/negative.py",
+      "sha256": "41658548a65dc6aa6bffdae1f11a692bb4d58ccec6056a6a95bd55a5817ea4a0",
+      "bytes": 1784
+    },
+    {
+      "path": "sources/tranche18/reviews/hidden-change-efficient/oracle.py",
+      "source_path": "tranche18/reviews/hidden-change-efficient/oracle.py",
+      "sha256": "57d0f7be02946ac8723cfaaac9d8e0cda0a6743ff7f382c7a26db1129121b1e2",
+      "bytes": 3222
+    },
+    {
+      "path": "sources/tranche18/reviews/hidden-change-efficient/run_campaign.py",
+      "source_path": "tranche18/reviews/hidden-change-efficient/run_campaign.py",
+      "sha256": "dfad96bc36c2d0f75fd737cf46ff0295254bfacf9f207795f060321e2707b727",
+      "bytes": 5607
+    },
+    {
+      "path": "sources/tranche18/reviews/hidden-change-reference/oracle.py",
+      "source_path": "tranche18/reviews/hidden-change-reference/oracle.py",
+      "sha256": "093b6530adab6b9c1cd022a3f3c82208088534717a9bc412673ad9a1857cbe33",
+      "bytes": 8724
+    }
+  ]
+}

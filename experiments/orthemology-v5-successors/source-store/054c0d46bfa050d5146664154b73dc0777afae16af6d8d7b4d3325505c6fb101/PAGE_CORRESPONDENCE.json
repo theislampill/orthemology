@@ -1,0 +1,142 @@
+{
+  "created_utc": "2026-10-07T18:20:00Z",
+  "records": [
+    {
+      "locus": "Darʾ9:339–362",
+      "status": "continuous text reread complete;bounded electronic page anchors verified",
+      "read_base": "DAR9-IB L600–794",
+      "requested_start": "9:339 starts L631 وهـذا في كل ما يقال...",
+      "start_evidence": "Page-labelled Islamweb indexed primary extract at https://www.islamweb.net/ar/library/content/413/1768/?idfrom=&idto=&start= ;retrieval of complete object subsequently cache-missed. This is a weaker boundary witness than the directly displayed page362.",
+      "direct_anchors": [
+        {
+          "label": "9:337",
+          "url": "https://shamela.ws/book/21506/3617",
+          "match": "L623–626"
+        },
+        {
+          "label": "9:350",
+          "url": "https://shamela.ws/book/21506/3630",
+          "match": "L682 tail–686 prefix"
+        },
+        {
+          "label": "9:362",
+          "url": "https://shamela.ws/book/21506/3642",
+          "match": "L747–750 and beginningL751"
+        }
+      ],
+      "limit": "No complete print-page collation. The new reading extends before339 and beyond362; cite those extensions by local line until separately page-bound."
+    },
+    {
+      "locus": "Majmuʿ20:175–178",
+      "status": "page-labelled electronic locus verified;continuous continuation read through183",
+      "direct_anchors": [
+        {
+          "label": "20:175",
+          "url": "https://shamela.ws/book/7289/9999"
+        },
+        {
+          "label": "20:176",
+          "url": "https://shamela.ws/book/7289/10000"
+        },
+        {
+          "label": "20:177",
+          "url": "https://shamela.ws/book/7289/10001"
+        }
+      ],
+      "additional_page_source": "MF-ISLAMWEB webL907–928,including visible178,179,180,181,182,183 markers",
+      "limit": "Electronic page witness only; no print scan."
+    },
+    {
+      "locus": "Safadiyya1:92–93 Salim",
+      "status": "DIRECT_ELECTRONIC_EDITION_PAGE_BINDING_VERIFIED",
+      "source": "https://islamhouse.com/read/ar/الصفدية-272837",
+      "metadata_line": 15,
+      "direct_boundaries": [
+        {
+          "page": "1:92",
+          "web_text_lines": [
+            423,
+            423
+          ],
+          "footer_line": 424,
+          "local": "SF-S001-L0134–0135"
+        },
+        {
+          "page": "1:93",
+          "web_text_lines": [
+            427,
+            427
+          ],
+          "footer_line": 428,
+          "local": "SF-S001-L0136"
+        },
+        {
+          "page": "1:94",
+          "web_text_lines": [
+            431,
+            431
+          ],
+          "footer_line": 432,
+          "local": "SF-S001-L0137–0140"
+        },
+        {
+          "page": "1:95",
+          "web_text_lines": [
+            435,
+            435
+          ],
+          "footer_line": 436,
+          "local": "SF-S001-L0141–0142"
+        }
+      ],
+      "continuous_read": "1:90–95 target context reread directly on the page-labelled primary text",
+      "distinct_scan_control": "Adwa122–126/PDF129–133;particularly123–125 for the central argument",
+      "qualification": "Footers label preceding text,not following text. Electronic binding is not a Salim scan certification."
+    },
+    {
+      "locus": "Wikisource/11–/12 target incipit",
+      "target": "ونفس حقيقة الفعل المعين يمتنع قدمه",
+      "status": "DIRECT_ELECTRONIC_EDITION_PAGE_BINDING_VERIFIED",
+      "local": "SF-S003-L0092",
+      "direct_Salim": {
+        "edition": "Muhammad Rashad Salim,Maktabat Ibn Taymiyya2nd1406",
+        "page": "2:145",
+        "url": "https://islamhouse.com/read/ar/الصفدية-272837",
+        "text_line": 2272,
+        "footer_line": 2273
+      },
+      "direct_scan": {
+        "edition": "SF-ADWA",
+        "printed_page": 416,
+        "pdf_position": 423
+      },
+      "direct_Salim_next_page": {
+        "page": "2:146",
+        "url": "https://shamela.ws/book/22874/477",
+        "web_lines": [
+          50,
+          55
+        ],
+        "local": "SF-S003-L0094–0097"
+      },
+      "stronger_global_inactivity_argument": {
+        "page": "2:142",
+        "url": "https://islamhouse.com/read/ar/الصفدية-272837",
+        "web_body_lines": [
+          2254,
+          2256
+        ],
+        "footer_line": 2257,
+        "local": "SF-S003-L0079–0082",
+        "distinct_scan": "Adwa414/PDF421"
+      },
+      "larger_sections": {
+        "wiki11": "begins within Salim2:111 at IslamHouseL2071/footer2072;ends within2:145 atL2271",
+        "wiki12": "begins within2:145 atL2272;ends within2:181 atL2474/footer2476",
+        "method": "Both full Wikisource sections read;exact beginning,join,and ending anchors matched to page-labelled primary text. Not full diplomatic collation of each electronic word."
+      },
+      "qualification": "No Salim scan claim;all prior direct-citation holds cleared at electronic level only."
+    }
+  ],
+  "canonical_Salim_citation_holds": []
+}

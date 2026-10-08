@@ -1,0 +1,2664 @@
+{
+  "schema": 1,
+  "policy": "Exact production, inherited and control source copies; no source rewrites. Portable orchestration is separately authored and tested.",
+  "files": [
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/certificates.py",
+      "source_sha256": "a75e325dd879bab3ab392b4a467e12b93716ee33eebec61d30ba668fbdd1e41c",
+      "source_bytes": 6959,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/reference-v1/certificates.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/controller.py",
+      "source_sha256": "777a95bf89caa09b4c0c4c9274e4b5aa3b7371d63ea9a92c313e7bffba8be003",
+      "source_bytes": 6354,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/reference-v1/controller.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/finite.py",
+      "source_sha256": "50c7a6dbb1f72b9907886eacd2ad04941ff803e01703b8968ef699cfa1e8fae1",
+      "source_bytes": 3263,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/reference-v1/finite.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/model.py",
+      "source_sha256": "81e01e552e6ebb455f381a81f2568aa08d5b233522bda53d23c8b930d023c823",
+      "source_bytes": 2852,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/reference-v1/model.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/synthesis.py",
+      "source_sha256": "94c0445a5979171ed5eba929ac75a88f02e1685f41701ee21d809f4b628bde09",
+      "source_bytes": 4008,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/reference-v1/synthesis.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/tests/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/reference-v1/tests/__init__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/tests/fixtures.py",
+      "source_sha256": "d05f7b01d3c85cb7b873ccc0fa93e0bfef3260a119a50b49a82ca9d2e57f4d53",
+      "source_bytes": 2449,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/reference-v1/tests/fixtures.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/tests/support.py",
+      "source_sha256": "d6e3287baf9864f397f962658bcd5af43c96e1b347c8aacd8e93b3d39ac25879",
+      "source_bytes": 280,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/reference-v1/tests/support.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/tests/test_certificates.py",
+      "source_sha256": "7b5282bc84c2637c44481799c9f28334114189854878a28bcf6ad9eb67cf36ca",
+      "source_bytes": 4727,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/reference-v1/tests/test_certificates.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/tests/test_controller.py",
+      "source_sha256": "a9711497756f6a0962dae8f6795c87c7cf8415945dfa7cdf903b512d7461b4eb",
+      "source_bytes": 8101,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/reference-v1/tests/test_controller.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/tests/test_finite.py",
+      "source_sha256": "685f5307b177a1a1aed10fc486dac57ea0c5b3f26d1a0fc17a4500ece091acc9",
+      "source_bytes": 2135,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/reference-v1/tests/test_finite.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/tests/test_model.py",
+      "source_sha256": "4eadeb5229787a92545139ebaff231c74ccb674a259773efcbc7ffdc4a28bf06",
+      "source_bytes": 2768,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/reference-v1/tests/test_model.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/tests/test_synthesis.py",
+      "source_sha256": "3532d000ddaaa951456e2ea8a6abb2ba1f46c076584b317940bc721c59fce5ac",
+      "source_bytes": 4327,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/reference-v1/tests/test_synthesis.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/dependencies.py",
+      "source_sha256": "80a239405e103d780c8328acd03347f84b9f6af26e795ae0cc562e090bff600f",
+      "source_bytes": 2328,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/efficient-v1/dependencies.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/efficient.py",
+      "source_sha256": "eaf319dd0909271ea757ec14b88efa0ad45f325ba3b652aa6a6f88f3230a157f",
+      "source_bytes": 6075,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/efficient-v1/efficient.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/mec.py",
+      "source_sha256": "22a119d827635d18fd47bccfded1fcf2735f177a5534830525a026c9dc2e40f4",
+      "source_bytes": 2841,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/efficient-v1/mec.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/negative.py",
+      "source_sha256": "41658548a65dc6aa6bffdae1f11a692bb4d58ccec6056a6a95bd55a5817ea4a0",
+      "source_bytes": 1784,
+      "role": "python-production",
+      "origin": "tranche18/research/hidden-change/efficient-v1/negative.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/__init__.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/fixtures.py",
+      "source_sha256": "d05f7b01d3c85cb7b873ccc0fa93e0bfef3260a119a50b49a82ca9d2e57f4d53",
+      "source_bytes": 2449,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/fixtures.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/operation_counts.py",
+      "source_sha256": "587a53b4330851962e34b896c9479addf917bc5b2ce28a1bcbfeaa35302ecef8",
+      "source_bytes": 2001,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/operation_counts.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/support.py",
+      "source_sha256": "8ec609b981f3176589a31c0907ce9e0bd02dbadec2d5568e0606630f616f4b58",
+      "source_bytes": 1801,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/support.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/test_dependencies.py",
+      "source_sha256": "e8ddcc7f0c691cfdc31c7f2da1eba91de7ae2e67782dd1e5aa648a683bc5de50",
+      "source_bytes": 1380,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/test_dependencies.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/test_mec.py",
+      "source_sha256": "197c3ddc6295de759436a1a5b14dc39aa48e501b0178333aba5177ad319e0a01",
+      "source_bytes": 3346,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/test_mec.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/test_solver.py",
+      "source_sha256": "a4837ad3e57c780866d14ee332c952b5695369180395e98dfd89f8d0d0146253",
+      "source_bytes": 9422,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/test_solver.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/test_structure.py",
+      "source_sha256": "b0d04c12037b0ff4e7ada426efbb23033339127de78b78f44f9af0b026c29cdd",
+      "source_bytes": 3219,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/test_structure.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/efficient-v1/tests/test_thresholds.py",
+      "source_sha256": "add193071ffbf84dcddae379692c2e37e9383a07da794a0b4d4f16df3671c331",
+      "source_bytes": 4880,
+      "role": "python-author-test",
+      "origin": "tranche18/research/hidden-change/efficient-v1/tests/test_thresholds.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/research/hidden-change/reference-v1/API.md",
+      "source_sha256": "5d9f384c23ee6995eb963da6bb10b3073bcc4dd856d666f4c639e1aca71288c5",
+      "source_bytes": 4549,
+      "role": "python-interface-documentation",
+      "origin": "tranche18/research/hidden-change/reference-v1/API.md",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-reference/oracle.py",
+      "source_sha256": "093b6530adab6b9c1cd022a3f3c82208088534717a9bc412673ad9a1857cbe33",
+      "source_bytes": 8724,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-reference/oracle.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-reference/run_census.py",
+      "source_sha256": "a6011a82aeabb2d82b45fb753996af1f77a2e6a343faf412c4a1cdbeb8a6421d",
+      "source_bytes": 3391,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-reference/run_census.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-reference/run_extended_census.py",
+      "source_sha256": "6a85124dc106a6387108b323375630b77b1c2aa9e06cc293a7320d4fc5dc0d54",
+      "source_bytes": 442,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-reference/run_extended_census.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-reference/test_reference_independent.py",
+      "source_sha256": "33e9e65f19f696211583e81330751a42017869f6faf723efe45f313c52018db3",
+      "source_bytes": 15464,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-reference/test_reference_independent.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/component_checks.py",
+      "source_sha256": "c9f1f091a125fc6d197772ff5b870ab10dd11317d13e3ca29edb5e39bf2a64a9",
+      "source_bytes": 2128,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/component_checks.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/oracle.py",
+      "source_sha256": "57d0f7be02946ac8723cfaaac9d8e0cda0a6743ff7f382c7a26db1129121b1e2",
+      "source_bytes": 3222,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/oracle.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/replay_previous_adversarial.py",
+      "source_sha256": "a74ef658c1e8d530b2d15bed2411e8a59f20cc2ecdc688031663a0a4514d8c04",
+      "source_bytes": 1139,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/replay_previous_adversarial.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/run_campaign.py",
+      "source_sha256": "dfad96bc36c2d0f75fd737cf46ff0295254bfacf9f207795f060321e2707b727",
+      "source_bytes": 5607,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/run_campaign.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/run_extra_campaign.py",
+      "source_sha256": "6f1428055f2db50eb8e43a3ba7e17ed1f149b999bbeb63597b386f47ce224393",
+      "source_bytes": 2181,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/run_extra_campaign.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/run_extra_end_to_end.py",
+      "source_sha256": "04e6462783fa751eb968178f6090dca06fe981ec2b8512f22a9365d58851c7f0",
+      "source_bytes": 524,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/run_extra_end_to_end.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/run_negative_campaign.py",
+      "source_sha256": "75d30ef82def50fa8e2dacc7cd60b4de2268f38cfb9f35b4794f6ec8b13d7211",
+      "source_bytes": 2140,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/run_negative_campaign.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/test_efficient_independent.py",
+      "source_sha256": "d6d18bd003ad11dee04c506b4a2e56c3d965285cb1ec2b62700dffc1be9d95af",
+      "source_bytes": 8606,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/test_efficient_independent.py",
+      "byte_identical": true
+    },
+    {
+      "path": "tranche18/reviews/hidden-change-efficient/test_production_paths.py",
+      "source_sha256": "8ca7779e47f8241b587ba4fc2b8fc37f5880513b787bdf2e1751c67b64d7ac10",
+      "source_bytes": 5219,
+      "role": "independent-python-control",
+      "origin": "tranche18/reviews/hidden-change-efficient/test_production_paths.py",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PruningKernel.lean",
+      "source_sha256": "d16d51d77c59f0538952e1401e105e699fd6d2648df3aa3db8dbf3c09888a253",
+      "source_bytes": 13589,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PruningKernel.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/EndComponents.lean",
+      "source_sha256": "f4298061653adc768b292363885e1a7b2213ccb56d17d52376762529d35b2531",
+      "source_bytes": 7828,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/EndComponents.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/FiniteReachability.lean",
+      "source_sha256": "ad50af371e175b27b62f9fe545267dd434ed256ab84b950afdc92b932dc5fd74",
+      "source_bytes": 3825,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/FiniteReachability.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ExecutablePruning.lean",
+      "source_sha256": "3098f76a8065b9a327a4e9763de88428cd4711c79232b87201b7c079ee7789db",
+      "source_bytes": 7912,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ExecutablePruning.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/MarkovSupportAdapter.lean",
+      "source_sha256": "6c281b2bc6036789a0d342a14df80b1d9c68bcbdf49a1720855d3cd03a46e499",
+      "source_bytes": 7541,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/MarkovSupportAdapter.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/CertificateData.lean",
+      "source_sha256": "e05d663571ba1cdf8e2ad04f19442721d4f03ee5bca46c0ad185e5d2c2f0e0c6",
+      "source_bytes": 4576,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/src/CertificateData.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/CertificatePath.lean",
+      "source_sha256": "d8e26f21fa37cd8ddf250ab9b440a1b25da481d201e66f3913ce822620e799f8",
+      "source_bytes": 9295,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/src/CertificatePath.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GenericFiniteQueryLocality.lean",
+      "source_sha256": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+      "source_bytes": 6244,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GenericFiniteQueryLocality.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GenericFiniteQueryMeasure.lean",
+      "source_sha256": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+      "source_bytes": 10817,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GenericFiniteQueryMeasure.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PolicyRowEvaluator.lean",
+      "source_sha256": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+      "source_bytes": 6387,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PolicyRowEvaluator.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PolicyTranscriptFiber.lean",
+      "source_sha256": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+      "source_bytes": 4179,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PolicyTranscriptFiber.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/FeedbackRequests.lean",
+      "source_sha256": "327eea767c3a2f2ad30e66b2c9c9591b4bb6a1fe7dea39c71c50623cb4b07b38",
+      "source_bytes": 5588,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/FeedbackRequests.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ProductObservationLaw.lean",
+      "source_sha256": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+      "source_bytes": 1663,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ProductObservationLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/IndependentProductFamilies.lean",
+      "source_sha256": "9abc010ebfcfabc85695acd3aef10c1ea7fd5c0527dd215320840d57546b1a3d",
+      "source_bytes": 2601,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/IndependentProductFamilies.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GenericQueryReference.lean",
+      "source_sha256": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+      "source_bytes": 3849,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GenericQueryReference.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PolicyRowLaw.lean",
+      "source_sha256": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+      "source_bytes": 4690,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PolicyRowLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/FeedbackFiberProbability.lean",
+      "source_sha256": "dbaf6f6cafc94a08bd2f00ca8ecc6c4a253f002b517b52ff58825b944475a834",
+      "source_bytes": 8467,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/FeedbackFiberProbability.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PolicyCylinderProbability.lean",
+      "source_sha256": "2fe2e33744bbd7edada29f4faab67f4b63e22efff2945381c1d367a2859c8d72",
+      "source_bytes": 4120,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PolicyCylinderProbability.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HistoryPathConsistency.lean",
+      "source_sha256": "2fc036ffd94d213ad5215c447308132dd08edaad19d5f893dd130780382cc146",
+      "source_bytes": 2398,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/HistoryPathConsistency.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PolicyObservedLaw.lean",
+      "source_sha256": "ad890909953de257c58ae2750e7f7710747489936704e0767b77aa0485f59d76",
+      "source_bytes": 4919,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PolicyObservedLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PolicyTraceBinding.lean",
+      "source_sha256": "fe8d6b84a1cd526a6b0a10770aebd52fdbf19b7ae7804f7d2447a33e133e44bf",
+      "source_bytes": 7699,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PolicyTraceBinding.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/StackActionLaw.lean",
+      "source_sha256": "6127e1c8362a4c17f8074937d88ffb13b9fdf7de7ad88d64130f8ee3d35a27fc",
+      "source_bytes": 13921,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/StackActionLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RecurrentSupport.lean",
+      "source_sha256": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899",
+      "source_bytes": 9355,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RecurrentSupport.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RawTapeRecurrence.lean",
+      "source_sha256": "d8ff5864c4b0697dbd056940503b6913fe8c3256277efc790601b0e2528f5a8e",
+      "source_bytes": 5165,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RawTapeRecurrence.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/SequentialTapeConsumption.lean",
+      "source_sha256": "c06b02171163bd00875060eb97e870673ef689d2e4b0fa6a767324899bc304cb",
+      "source_bytes": 4610,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/SequentialTapeConsumption.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RecurrentGraph.lean",
+      "source_sha256": "395d925096b881b32a46cfdf901ffbd73029cfe598a175bf667884cdc2b6436c",
+      "source_bytes": 3416,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RecurrentGraph.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/KilledQueryLaw.lean",
+      "source_sha256": "17793ba9787eb9c3fc1618d4acfc368804be8309197156f22d440508f8ad22a0",
+      "source_bytes": 6110,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/KilledQueryLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/KilledAdaptiveHistory.lean",
+      "source_sha256": "ff7c13f5212d6b5f9cfdf64979e664e51934422189528d6169b8a72c57cfff56",
+      "source_bytes": 6262,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/KilledAdaptiveHistory.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/KilledRecurrentTransfer.lean",
+      "source_sha256": "5de3075faa5e7041d31cb7c18868c0a91db7ef8d47a0630d26cb63dfcd6dd60b",
+      "source_bytes": 9584,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/KilledRecurrentTransfer.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/MarkovKilledBridge.lean",
+      "source_sha256": "7d828069e42926c9e7acb36bfb683a6b3bd8c6f46907d00ccd8c643e27555c04",
+      "source_bytes": 8890,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/MarkovKilledBridge.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/AdaptiveMarkovRecurrentGraph.lean",
+      "source_sha256": "24cf86efc439d077f7860aabf90f455d75269130094d94c46bc6734bacc2aaf9",
+      "source_bytes": 6034,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/AdaptiveMarkovRecurrentGraph.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PolicyTailTransfer.lean",
+      "source_sha256": "a42c82222bd810e4005b536d27d394a01d28b9fcbdb9ab8d53e3c5d6cdc48720",
+      "source_bytes": 5143,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PolicyTailTransfer.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RelativeTailTransfer.lean",
+      "source_sha256": "bd89640236881734ec68ed3f1bc21684b8af6c986683a5530f550a2221d4a167",
+      "source_bytes": 8473,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RelativeTailTransfer.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/SafeSetTailTransfer.lean",
+      "source_sha256": "960293c6ff358b5bcd571b1f24ad62ce43983894836ce8516a24212bb1cd5699",
+      "source_bytes": 9649,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/SafeSetTailTransfer.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/SelfVerifyingSupport.lean",
+      "source_sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "source_bytes": 8289,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/SelfVerifyingSupport.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/SeededPolicyNecessity.lean",
+      "source_sha256": "d0335e4234a9462aa5f9af7217b78717983539703835041c9a0a334040ede016",
+      "source_bytes": 3334,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/SeededPolicyNecessity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/FiniteChainAvoidance.lean",
+      "source_sha256": "f7af0f36a68359e8b20b5c85ca527e07191c43686ec345b7d08f582bb4741e24",
+      "source_bytes": 5521,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/FiniteChainAvoidance.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/dependencies/StatisticalRepair.lean",
+      "source_sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "source_bytes": 7979,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/dependencies/StatisticalRepair.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HellingerTree.lean",
+      "source_sha256": "3c5dc0288543e481971f9ccdbf811102b191fa4067ff65ed1e0e3cd8e0da06b2",
+      "source_bytes": 9727,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/HellingerTree.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/SubprobHellinger.lean",
+      "source_sha256": "3e56c01155f3f838a3d911426e10746ab4a20b00711c2c4da3a5ff2f7568c8ad",
+      "source_bytes": 5951,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/SubprobHellinger.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/DependentHellinger.lean",
+      "source_sha256": "cfcafcc7e1ebcda71370644b4b89c84a9948353e9115ed2e3a7807b78079a97e",
+      "source_bytes": 6926,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/DependentHellinger.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ResetBudget.lean",
+      "source_sha256": "d482ed24b70fa4501eefcd7878a7889af7b8f3fbf31f8c6de60b77ebffa758b1",
+      "source_bytes": 6731,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ResetBudget.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ResetLaw.lean",
+      "source_sha256": "f76f752f31565baa5262aa4aafcf21a7f3722d1f74c9681fe6d8a2a50bb02d12",
+      "source_bytes": 5437,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ResetLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ResetTrajectory.lean",
+      "source_sha256": "c1bae278764e20b67382204474b62e8bba769463f812d5adfc2086b85b303f68",
+      "source_bytes": 4486,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ResetTrajectory.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/MarkovCharge.lean",
+      "source_sha256": "97e0f881af3140b625d45642c06cecc20dbb49773528f8345dd4c948b1ddfc68",
+      "source_bytes": 5636,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/MarkovCharge.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/FiniteChainTrajectory.lean",
+      "source_sha256": "71acea2c2028a111c1e15ddc85f76f0dd59efb639f9a0372bc35a320c7f4e3ef",
+      "source_bytes": 8565,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/FiniteChainTrajectory.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/InfiniteRecurrence.lean",
+      "source_sha256": "1792831c1af1628fae2c31b821f40d6d3a67be22303595f66ca14d273223228a",
+      "source_bytes": 5601,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/InfiniteRecurrence.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/StationaryPairChain.lean",
+      "source_sha256": "5b7e23bf7aca12b0529cb77362bf1cb93d54fc1567fe5db7e9d8d000b5d50d99",
+      "source_bytes": 6498,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/StationaryPairChain.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/FairComponentParity.lean",
+      "source_sha256": "566f01a571617215b71386917896044a7dc150e84130dcd0f92f36e45038f414",
+      "source_bytes": 5156,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/FairComponentParity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/CheckedTargetOperation.lean",
+      "source_sha256": "d1751ecda2c7730b2580575391486f38a40a9ea0e585d90ad12774da9fb33ff8",
+      "source_bytes": 7621,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/CheckedTargetOperation.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/StableSupportParityNecessity.lean",
+      "source_sha256": "e7efd3c855f5adf29c0a3fce65aac3cadba994e8ccc72f32e2829bc1434f802d",
+      "source_bytes": 11102,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/StableSupportParityNecessity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/StageTargetOrExit.lean",
+      "source_sha256": "6235ac02c768a8184b5a05b9f30659b2c24cb33e8c52017ef4a61652001e125e",
+      "source_bytes": 5767,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/StageTargetOrExit.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RegionAlgorithm.lean",
+      "source_sha256": "ca456e211d02a994192809bac318ae3a75684f163daf2f9037346b84517b347a",
+      "source_bytes": 12514,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RegionAlgorithm.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeFinite.lean",
+      "source_sha256": "37211b5ded947f0b48f46b39c2f9ee81b353e24fafd8bc0944118ea74de94394",
+      "source_bytes": 8265,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/src/HiddenChangeFinite.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ResidualSeedPosterior.lean",
+      "source_sha256": "9608772a6948c3dfb69d95659d27b5f6b961aece08ccc09afc594b63cd264ba6",
+      "source_bytes": 14840,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ResidualSeedPosterior.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PosteriorFeedbackProduct.lean",
+      "source_sha256": "0f37e47723087f1ad72667012a3abac927ae29162a14625cc58dfae754346115",
+      "source_bytes": 7434,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PosteriorFeedbackProduct.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/MarkovSeedPosterior.lean",
+      "source_sha256": "adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0",
+      "source_bytes": 5670,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/MarkovSeedPosterior.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ConditionalPrefix.lean",
+      "source_sha256": "987df7f2262b0b2a5e74bd4aee521b3315d61ca97d1e308ef6b10223f20d48f2",
+      "source_bytes": 5903,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ConditionalPrefix.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeTaggedLaw.lean",
+      "source_sha256": "93af2d6a58792060dc2cd7a8bd2723f2d5f3b59c8313926666ffbb20f79fe0b2",
+      "source_bytes": 12062,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/src/HiddenChangeTaggedLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ConditionalContinuationLaw.lean",
+      "source_sha256": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3",
+      "source_bytes": 14074,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ConditionalContinuationLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ConditionalKilledContinuation.lean",
+      "source_sha256": "48f69898de357b1cce90acfa6d575cf0688fae41821c8376a4a395bea1ba04c8",
+      "source_bytes": 9364,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ConditionalKilledContinuation.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangePrefix.lean",
+      "source_sha256": "68e3fa0145d194dc4d8532eb99237af170cb8736ba964ea8ea752bc0c04736bd",
+      "source_bytes": 22746,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/src/HiddenChangePrefix.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeTailTransport.lean",
+      "source_sha256": "7ef35cb6890a6b3f721188d3fe569ea2b49faf06001403fbe89b3d4790aa333c",
+      "source_bytes": 6580,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/src/HiddenChangeTailTransport.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeCertificate.lean",
+      "source_sha256": "da30bbf05e29a8924afc6aead60e6dfde1664c30cff8994a350c31233f469c0e",
+      "source_bytes": 18506,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/src/HiddenChangeCertificate.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangePolicyRegions.lean",
+      "source_sha256": "6c0b651c0910d309529007929d34e619617b3a2af51e64007033f265ffa1f20f",
+      "source_bytes": 8655,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangePolicyRegions.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangePrefixSafety.lean",
+      "source_sha256": "850b3c60a6c6f7e44807a4e50bdae1f3789962a52b6716622fc06a08db5a14b5",
+      "source_bytes": 9197,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangePrefixSafety.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ParityTailInvariance.lean",
+      "source_sha256": "1dc8c0e40a86a205498af32bd7c4a0d96afca6020f2fbd321e21fae2beee0077",
+      "source_bytes": 1224,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ParityTailInvariance.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ConditionalAlmostSure.lean",
+      "source_sha256": "06d403f36ee3cb95094a53b4a53eea72810565fc66ac1fb0607fef9b01922a9b",
+      "source_bytes": 10995,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ConditionalAlmostSure.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeConditionalSafety.lean",
+      "source_sha256": "d4f0c77ecbdfd87f00cf225235c419dd2a3525d1f9e84eda051f69d9b09f2566",
+      "source_bytes": 8044,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangeConditionalSafety.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeParityBridge.lean",
+      "source_sha256": "464055b56abd1d1191fce18c116cb9c4c01227ceb056ba7e8d0f956d208dd5e3",
+      "source_bytes": 6719,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangeParityBridge.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeKnownProgress.lean",
+      "source_sha256": "345c6c01770f9e5169679f738183f7f5e79a4dad29ea9eb0c4216375af046fd2",
+      "source_bytes": 4948,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangeKnownProgress.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RoundRobinSchedule.lean",
+      "source_sha256": "21db947de0a6f06908487f50d6ca0038c9337aed7184cd2dc0eb929982f93e2b",
+      "source_bytes": 4158,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RoundRobinSchedule.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/LawfulRestart.lean",
+      "source_sha256": "f163f76a1fdab9b12bd96122780339901fcb76b5a3c75cdec56b8d3d505e32dd",
+      "source_bytes": 5987,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/LawfulRestart.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/LawfulProbability.lean",
+      "source_sha256": "feef9755524c9f08ad782339f0c60cbbd5c82391d992b48d59d30e191b1da17e",
+      "source_bytes": 7175,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/LawfulProbability.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/SemanticWinning.lean",
+      "source_sha256": "a759594adc211fdce0e9013a1d680fabd89983a0202885d8658b7e72477b4252",
+      "source_bytes": 5711,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/SemanticWinning.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/SemanticSafeActions.lean",
+      "source_sha256": "66b166d81fd29f864f7dd81f0af6a67f07c4c35ab709fe67eba52bd1b20bc55b",
+      "source_bytes": 6355,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/SemanticSafeActions.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HistoryStageSafety.lean",
+      "source_sha256": "2870a3c2d0dd125a59b49600e0fa0853e8d5c46a98153f27846a9f43f860bea5",
+      "source_bytes": 7400,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/HistoryStageSafety.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RoundRobinPolicy.lean",
+      "source_sha256": "210a5417479100f010c2c38954c89d551a1c1d52b0d8d784e6fa8e8c94245ea1",
+      "source_bytes": 5568,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RoundRobinPolicy.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RoundRobinRecurrence.lean",
+      "source_sha256": "94da50ee38d07888783573e1d78ece8dac5c58871f2e0c3ac5f6dea77008fc4c",
+      "source_bytes": 5775,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RoundRobinRecurrence.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GlobalParityNecessity.lean",
+      "source_sha256": "7b54bfb8cd869bbe72f7ebeb42504a616c216a1912d09a6fc0d2ab35ca9d39c3",
+      "source_bytes": 5790,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GlobalParityNecessity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ActualTargetPolicy.lean",
+      "source_sha256": "7040e104fbb268ae6dea93fbd21f1db8bccc56bd5f04910b9d43c64597d0da74",
+      "source_bytes": 8690,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ActualTargetPolicy.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RawEmpiricalRows.lean",
+      "source_sha256": "dbbc16fe32b75bfcd3d1575175cfc857b45926f48533f2317a044cb30cc95d6b",
+      "source_bytes": 5413,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/RawEmpiricalRows.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/EmpiricalTailBounds.lean",
+      "source_sha256": "76d70084a57a2beb4b41784b3c93fd248d732b7422055aba2fdafdaf7957f993",
+      "source_bytes": 8464,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/EmpiricalTailBounds.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ObservedEmpiricalRows.lean",
+      "source_sha256": "90ba0fd6a17d86323b83185acd96a639fe584407d2496dad678aed08bc74717e",
+      "source_bytes": 11876,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ObservedEmpiricalRows.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ObservedRowTest.lean",
+      "source_sha256": "e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee",
+      "source_bytes": 3409,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ObservedRowTest.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/EmpiricalTestLaw.lean",
+      "source_sha256": "81f3343152589ab4d36d10ccc487f2bbf8c251bd6a2e95cf50826d59fff88da6",
+      "source_bytes": 3077,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/EmpiricalTestLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/RationalTest.lean",
+      "source_sha256": "87cfb72769c42a459d47eb0c7e3468882ba196abcb709f79fd5febbc34b8d2dc",
+      "source_bytes": 4963,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/service/controller/src/RationalTest.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeContamination.lean",
+      "source_sha256": "395ab119cd2e4eb25902492cafad8153563a126ae81cad8a4d0bf88bb97ef6d4",
+      "source_bytes": 25734,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/src/HiddenChangeContamination.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeActualRecurrence.lean",
+      "source_sha256": "67c260c32c7d6db10fec65451d9efe09574bd1a0027c99fdb7f34965548d85b3",
+      "source_bytes": 6441,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangeActualRecurrence.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeBinding.lean",
+      "source_sha256": "35963bfdab6f60e730e76711921b358ecd0e136293c1fb98233b49155e18c428",
+      "source_bytes": 2731,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/src/HiddenChangeBinding.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/OrderedCycle.lean",
+      "source_sha256": "d9d8d6acb612c51d2fb4c8a93013304ca8452f4de40edccfc23083e0208d82ea",
+      "source_bytes": 1942,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/service/controller/src/OrderedCycle.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/StageAvailability.lean",
+      "source_sha256": "8e0df2c695b21d91c2473f200317ebd5c4cf3f8203b34f93f5ec4c77d9a9312a",
+      "source_bytes": 4519,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/StageAvailability.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/FairStageNavigation.lean",
+      "source_sha256": "c497220e36e59578dc8d1efa53bfac17014446fcc84826f3af37f270d9f6e8f3",
+      "source_bytes": 3937,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/FairStageNavigation.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/EventualCycling.lean",
+      "source_sha256": "eb29e22c35c3a366d440669da516663f9fe56601794f98ba8dbc81958ab7d5b7",
+      "source_bytes": 7632,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/EventualCycling.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/ObservedPhaseController.lean",
+      "source_sha256": "9814025d9195fe98c7df8a8839fd37b8696f0b61d3970cb3dd61cb257a0009f1",
+      "source_bytes": 10257,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/ObservedPhaseController.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeController.lean",
+      "source_sha256": "d90f24efa921a51bd0f81b81365a407f7b5d5a0e2e17d73b7d597e8d5963f994",
+      "source_bytes": 7334,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangeController.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerSafety.lean",
+      "source_sha256": "9cd9993d4c5a1087282c28a82d1fe2fa52414bebfc3aceaa207382686121b423",
+      "source_bytes": 10034,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangeControllerSafety.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/PhaseStabilization.lean",
+      "source_sha256": "b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183",
+      "source_bytes": 4741,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/PhaseStabilization.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangePhaseArithmetic.lean",
+      "source_sha256": "e2a1290ebf8beafef4356449cdf5799980068af8d38626e3960869df94177b30",
+      "source_bytes": 1509,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangePhaseArithmetic.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerDynamics.lean",
+      "source_sha256": "73b7076ec67e3a60bea1627928088c0edf8decaa53f41b96f4c782639f4c884b",
+      "source_bytes": 8311,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangeControllerDynamics.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeFixedIndex.lean",
+      "source_sha256": "3b218331b2d9f040763097702b15bac7488a2939930a7039e0682afdeedace49",
+      "source_bytes": 11464,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/src/HiddenChangeFixedIndex.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerActualLaw.lean",
+      "source_sha256": "a23216ba3eb1eb6ded572ce7068d246065bb375a260e41e3f952bb7088e17c42",
+      "source_bytes": 7255,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangeControllerActualLaw.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/CertificateOrder.lean",
+      "source_sha256": "11975a5518aa70a8b3cb264a07b155611dfc84992a75fc4fe2a417e46813bb0e",
+      "source_bytes": 2179,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/src/CertificateOrder.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/CertificateSyntax.lean",
+      "source_sha256": "e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a",
+      "source_bytes": 6113,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/src/CertificateSyntax.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GeneratedPolicySafety.lean",
+      "source_sha256": "6a52c99c8bfe581ed13dcec6a396dcb7227656e6eba937a4cf73c7e36a8f4100",
+      "source_bytes": 6252,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GeneratedPolicySafety.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/StackPathRegularity.lean",
+      "source_sha256": "fee7903917eff18207791b8d6c3679ad671e14873c025b2ff71987fe265fbaf2",
+      "source_bytes": 5195,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/StackPathRegularity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GeneratedRun.lean",
+      "source_sha256": "bdd551d8c61ae4c78332b957eba7ecab5718747747a51a91902ea55e2306aca9",
+      "source_bytes": 6791,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GeneratedRun.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/MemoryTransitions.lean",
+      "source_sha256": "3fd4a3d8e4a7a2c74343087c8f3a31714b569ff209b3d63b9764f70c2462fe25",
+      "source_bytes": 2902,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/MemoryTransitions.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GeneratedPhaseDynamics.lean",
+      "source_sha256": "3c52bf3ff7d270ef0343f1d41223b3aacc8a748df216d130a580ff338dd94174",
+      "source_bytes": 5448,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GeneratedPhaseDynamics.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GeneratedPhaseStability.lean",
+      "source_sha256": "df0a80d810a176bb32b8a5574039115e823bfbeaa588a3ed23a52a7d7aa10a91",
+      "source_bytes": 3957,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GeneratedPhaseStability.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GeneratedParitySuccess.lean",
+      "source_sha256": "db9ec6cae92ba47810fd360afa3eda2b4447327378a032b17d87afef743a67c4",
+      "source_bytes": 7402,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GeneratedParitySuccess.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/GlobalParitySufficiency.lean",
+      "source_sha256": "4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3",
+      "source_bytes": 6759,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/inherited/cost/src/GlobalParitySufficiency.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/CertificateSoundness.lean",
+      "source_sha256": "399829e271d3b6db65cfd077a68c15ad9a2e2f4d59d3957a2f30b6f2cd37a4ba",
+      "source_bytes": 7316,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/ninth/src/CertificateSoundness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/StageFamily.lean",
+      "source_sha256": "71a3ace147651ccf67befba32bcdd2d10da98dbf662cc61c548b9fe86214e89e",
+      "source_bytes": 4124,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/service/controller/src/StageFamily.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/DirectController.lean",
+      "source_sha256": "c68605b22b1c74bdacaec0c586e35f19e80a7154d3d31b3c2edac05feda0f5a5",
+      "source_bytes": 8752,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/service/controller/src/DirectController.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/DirectCycling.lean",
+      "source_sha256": "d262dda33bda02d989f65753e312e58cf451fafe1ed70fbc32b7d66184f72dd0",
+      "source_bytes": 8075,
+      "role": "lean-inherited-source",
+      "origin": "tranche16/signed-service-package/stage/Orthemic_Signed_Controller_Service_v1/service/controller/src/DirectCycling.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerGraphs.lean",
+      "source_sha256": "cd06fcf2cf79a7ba39b07f1d897f0d52c465b38ec83ea65688cb26602458ee5e",
+      "source_bytes": 14524,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangeControllerGraphs.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerStability.lean",
+      "source_sha256": "c9c82b598c3df411010cb4677544efd5c49694f21754ffb356389b7b7b0ffc7a",
+      "source_bytes": 8685,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangeControllerStability.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerParity.lean",
+      "source_sha256": "2fec13712488b3fc671d7edb0ee9f3776b6f2941ee38672c6514de308e0d0f6e",
+      "source_bytes": 8631,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangeControllerParity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerEndpoint.lean",
+      "source_sha256": "3d88b8221dfb58a4d8c35f2b2cd9ccb05405845296ea90870fa9d22578c723c9",
+      "source_bytes": 6793,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/src/HiddenChangeControllerEndpoint.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeRivalParity.lean",
+      "source_sha256": "8ee817790b80b391e4c57cbec91295214dbc3ba3de4e7dc04f66fc683397638c",
+      "source_bytes": 8346,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangeRivalParity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeUncertainPaths.lean",
+      "source_sha256": "e35c19958c148800cd38c1b7f39f898f5084e78737df1304622cc73c43375ff1",
+      "source_bytes": 5228,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangeUncertainPaths.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeUncertainProgress.lean",
+      "source_sha256": "531276ea83eec88186836c473074c54fb96527e45889b9a7c39f288fa9fe8029",
+      "source_bytes": 6288,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangeUncertainProgress.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeNecessity.lean",
+      "source_sha256": "f2a667cd51eb563fadf5068e690cc6ae0b3cb0eb5fa006f4baec0ad4f6405948",
+      "source_bytes": 3251,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-necessity-v1/src/HiddenChangeNecessity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/sources/HiddenChangeSemanticEndpoint.lean",
+      "source_sha256": "646eab76f1f39827772ed08587824d7c945ba3b2ca6504f34841b6aa73ed4540",
+      "source_bytes": 7788,
+      "role": "lean-production",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/src/HiddenChangeSemanticEndpoint.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/FiniteControls.lean",
+      "source_sha256": "8f16386b7799d3428ecd928ed9a365ce23021df0521371266000979097a3f274",
+      "source_bytes": 2926,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/tests/FiniteControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/GreatestRegionControls.lean",
+      "source_sha256": "ffb2a7a3acd1c3495a6b7c53c1bf402b0f3bcb3d4173efab691ce974551bcf37",
+      "source_bytes": 1141,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/tests/GreatestRegionControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/CertificateControls.lean",
+      "source_sha256": "f5c7559218224928217a470ffd10d27b1fcb091e063eb3d8e037d2982b24d03b",
+      "source_bytes": 3373,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/tests/CertificateControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/NegativeTraceControls.lean",
+      "source_sha256": "36f0e653ad31e4a4e7c7dd9716f66c709478a4aa2095670e9992a911228ef23e",
+      "source_bytes": 880,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/tests/NegativeTraceControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/BindingControls.lean",
+      "source_sha256": "4cd70ef0b70a85f16dfa0fa7bc68eee0542af6416aea621741f314668e820eda",
+      "source_bytes": 658,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/tests/BindingControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/EndpointAxioms.lean",
+      "source_sha256": "b173583d94c091207a3299131fa90d51309b0af7a94666e189b1866809a5ee03",
+      "source_bytes": 902,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/tests/EndpointAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/TraceApiProbe.lean",
+      "source_sha256": "b7c3458d30a6d3acc7c926874eabb75ab40037bf32f6c56e9d66d7bf6c670b9e",
+      "source_bytes": 381,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-finite-v1/tests/TraceApiProbe.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/SupplementaryControls.lean",
+      "source_sha256": "7c11c21b07e296136e93287e8017d90b8f8dc8485ed04d3286e3d8c5dbd12f92",
+      "source_bytes": 3026,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-finite-kernel/SupplementaryControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/RepresentationControls.lean",
+      "source_sha256": "ca56c7b81b8730cb0a602fea3d63ebd80e114b29b60b7f5a95fcf546f26c8cdf",
+      "source_bytes": 832,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-finite-kernel/RepresentationControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/finite/AllNewAxioms.lean",
+      "source_sha256": "02b4744e9d8bc25d6ea3bb58c6cc6e8d79e9345e0144f47a7c824e8adc25e714",
+      "source_bytes": 2198,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-finite-kernel/sources/AllNewAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/TaggedLawControls.lean",
+      "source_sha256": "cb3d94187d641c366a32c5c6e6097c4b4e660446ac74d3066e10efc46aabc22e",
+      "source_bytes": 1643,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/fresh-replay-20261006T014425Z/sources/TaggedLawControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/FixedIndexControls.lean",
+      "source_sha256": "4dd6f350a034531fad9d2753cc405503e152aed574c0e590febdf593b62b3fc4",
+      "source_bytes": 5648,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/fresh-replay-20261006T014425Z/sources/FixedIndexControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/PrefixTransportControls.lean",
+      "source_sha256": "99ed6e991f7a1e96bced15fcf85adb43106052390802ed140d2fd37fd18a500c",
+      "source_bytes": 3879,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/fresh-replay-20261006T014425Z/sources/PrefixTransportControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/ContaminationControls.lean",
+      "source_sha256": "dc3285a64fac115de96afeb74acb985a2bc47d0b6b26391dd67dec367c7d0ba9",
+      "source_bytes": 4589,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/fresh-replay-20261006T014425Z/sources/ContaminationControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/EndpointAxioms.lean",
+      "source_sha256": "5f1f208bdb9f837f69368e783e4fb5b6122927b113df8daba02392ba9474e26f",
+      "source_bytes": 1826,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/fresh-replay-20261006T014425Z/sources/EndpointAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/MutationTagPersistence.lean",
+      "source_sha256": "b687a7cb8d4f0af9ed457ebaa2d5f7f211a15cca2f7da8683452d579f95c5dac",
+      "source_bytes": 3406,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/fresh-replay-20261006T014425Z/sources/MutationTagPersistence.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/MutationSwitchTiming.lean",
+      "source_sha256": "f28864e1da49295980017ac16fef033f44118ca3891133c085db8ef33565992e",
+      "source_bytes": 12134,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/fresh-replay-20261006T014425Z/sources/MutationSwitchTiming.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/MutationPrefixReversal.lean",
+      "source_sha256": "04a7cfa782f9cb6b50a7b8b7a7b1fc3d56e903871286934c6222b5af6c883d50",
+      "source_bytes": 22731,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-laws-v1/fresh-replay-20261006T014425Z/sources/MutationPrefixReversal.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/ReviewerControls.lean",
+      "source_sha256": "49d8fdd5a54d8bb31c82801bb855a50d36ebc1d23bc56d7d8d222a45d6a0f5e4",
+      "source_bytes": 3396,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-laws/controls/ReviewerControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/laws/AllAxioms.lean",
+      "source_sha256": "ddaf736552460936cfe6bd50a26b6b85325be60c683eefb668e8d7b20c218822",
+      "source_bytes": 4562,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-laws/controls/AllAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/ControllerFixtures.lean",
+      "source_sha256": "fb4fd31e67bfe4c88fc78b6713ef9d03a6e3261d2f509cef757501c46182f9b4",
+      "source_bytes": 1245,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/fresh-replay-20261006T015900Z/sources/ControllerFixtures.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/ControllerControls.lean",
+      "source_sha256": "8f16b47f50f573c74395fc042eb60b53bdf6494e8861d2e262e30e8fbe76e162",
+      "source_bytes": 3606,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/fresh-replay-20261006T015900Z/sources/ControllerControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/PhaseArithmeticControls.lean",
+      "source_sha256": "c1101224054d587b115631a9dd2c17020430497cded524334360d6bb5e39a743",
+      "source_bytes": 2051,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/fresh-replay-20261006T015900Z/sources/PhaseArithmeticControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/ControllerAxioms.lean",
+      "source_sha256": "48d86b1dff40143d124a5074083059d321c0e22a532f480dc708a169e3b0ffb3",
+      "source_bytes": 1066,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/fresh-replay-20261006T015900Z/sources/ControllerAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/ControllerTimingRed.lean",
+      "source_sha256": "7c0f8725f69ceb644b4f18fd991d47a153f429657781920c2ec4cc7a16c08d9a",
+      "source_bytes": 291,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/fresh-replay-20261006T015900Z/sources/ControllerTimingRed.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/PhaseArithmeticExpectedFailure.lean",
+      "source_sha256": "87492a1bb30d9ec5e906289fbac128b005a6defbef99a8c79ea1a666690211fa",
+      "source_bytes": 280,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-controller-v1/fresh-replay-20261006T015900Z/sources/PhaseArithmeticExpectedFailure.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationClearsKnownFlag.lean",
+      "source_sha256": "7693bde5a031bd8b61970e495dd51d7fbd55dcf135e88064925ec57577b1ff3e",
+      "source_bytes": 4579,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationClearsKnownFlag.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationDeletesCandidateOne.lean",
+      "source_sha256": "86ad158a1fbd6a30a2fa9e64c0fb632f03aef6f9621c848d55bbe9d2b4e2c67b",
+      "source_bytes": 4565,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationDeletesCandidateOne.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationDoublePhase.lean",
+      "source_sha256": "358e0581b17182bc7e42fafa2bf5b0ee5b5843d23a8d33153b86b2390d5ce083",
+      "source_bytes": 4559,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationDoublePhase.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationDropsCountGate.lean",
+      "source_sha256": "e1ad4ed82be77786cb99b0a6dfd48c31082c070d44ccc3ba7a7afc860f4cf04c",
+      "source_bytes": 1573,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationDropsCountGate.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationDropsNewReceipt.lean",
+      "source_sha256": "0843f7c2f1bfe6f835ab5a0ff28f6ef0560961149110cc534a29af13e85fa38f",
+      "source_bytes": 5179,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationDropsNewReceipt.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationLiteralCandidate.lean",
+      "source_sha256": "ad6a7aea0a9d7e5ce528c89ae695fa8cb5e3ef6dc42c649072d75c6a62298716",
+      "source_bytes": 4244,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationLiteralCandidate.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationNonstrictCount.lean",
+      "source_sha256": "dbba5b4b5334ae56800d5d1119ade736aa2efd5f5f0179f8a137d10ee9980932",
+      "source_bytes": 1599,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationNonstrictCount.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationRejectBeforeReveal.lean",
+      "source_sha256": "4e2893243c488b572ff15d9dbf4c7053536110acac1e6cf2088e2e66bd8414dc",
+      "source_bytes": 4590,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationRejectBeforeReveal.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/MutationStrictDiscrepancy.lean",
+      "source_sha256": "622117a8996db7a4de715666764643cce316519aa8de7137c06089088109ede9",
+      "source_bytes": 1531,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/MutationStrictDiscrepancy.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/ReviewControllerControls.lean",
+      "source_sha256": "a343e82d8cf336b4e059545f43e76b17269cf943dfdac686a365f0c58f9411b3",
+      "source_bytes": 5240,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-controller/control-continuation-20261006T021640Z/sources/ReviewControllerControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/controller/ReviewAllAxioms.lean",
+      "source_sha256": "6767af52fc1cb0462631f66bd760960094643521336503dc844a12dc1e655e1a",
+      "source_bytes": 4614,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-controller/replay-20261006T020121Z/sources/ReviewAllAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/NecessityControls.lean",
+      "source_sha256": "b43c7809e91b99904102d0d82dbcc85703a232d84d8b8ddaefef69fdc6620ebe",
+      "source_bytes": 6983,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/NecessityControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/RivalParityControls.lean",
+      "source_sha256": "a04e27e0f5734b446bcd607c761aae91ea91f0cbbf70d3faa99db376c8d67d9c",
+      "source_bytes": 1479,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/RivalParityControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/ContractLawfulnessControls.lean",
+      "source_sha256": "bf366a159a49dbaf5ae4986812b1302a955403fa20663d74d3343206e373309b",
+      "source_bytes": 1508,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/ContractLawfulnessControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/MutationNoChangeOnly.lean",
+      "source_sha256": "f6209a5b043bda64d8e6a0c2d89c656b2791f3accaad219a0cd42ef61e2ee26d",
+      "source_bytes": 403,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/MutationNoChangeOnly.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/MutationStationaryPrefix.lean",
+      "source_sha256": "2991a4dd8faafbd6b0da6c159a9f5487e50f794c11a46d13fc8ab86ded643762",
+      "source_bytes": 667,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/MutationStationaryPrefix.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/MutationStrictPostSwitch.lean",
+      "source_sha256": "44c0f751657993ffc655b9362f854abd77c4cf45fce1a3adc5692b5d4852d604",
+      "source_bytes": 185,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/MutationStrictPostSwitch.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/MutationUnselectedBranch.lean",
+      "source_sha256": "daa72afcefd18dd7221acd3664a179e7b5e08cff9d03bf9db3d7a4cd2aca34f3",
+      "source_bytes": 440,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/MutationUnselectedBranch.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/ReviewSemanticControls.lean",
+      "source_sha256": "fbe81e88a1cdbc82cdbd0d9d74d176db2f0c6c9d75b65275ada0e8bcab919d85",
+      "source_bytes": 4185,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/ReviewSemanticControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/MutationChosenReceiptClosure.lean",
+      "source_sha256": "f936ca1a2e3d6fff6e59aca60e60152762f48abc4d867f534e402ea229986c46",
+      "source_bytes": 182,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/MutationChosenReceiptClosure.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/MutationParityGivesLawfulness.lean",
+      "source_sha256": "c27cfc7f57669f88fca7abc18f3c8a3fe89e44469e307ee141b39e1299ecddb1",
+      "source_bytes": 167,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/MutationParityGivesLawfulness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/MutationSupportImpliesMatching.lean",
+      "source_sha256": "23b268c2e96015781fbb2cbfe7a25457004d3846ab207ced577dd06f1c595bfc",
+      "source_bytes": 167,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/MutationSupportImpliesMatching.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/MutationUnconditionalRivalParity.lean",
+      "source_sha256": "12a83f613cea2de432415a9628c79bd245bab092e58231d9f7e021058f57a5ca",
+      "source_bytes": 156,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/controls-20261006T021401467277Z/sources/MutationUnconditionalRivalParity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/necessity/ReviewAllAxioms.lean",
+      "source_sha256": "3a65d9812276aed807382f1a7b165864a2d5ed53075313a7c32e132b455324c0",
+      "source_bytes": 3954,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-necessity/replay-20261006T020459Z/sources/ReviewAllAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/EndpointFixtures.lean",
+      "source_sha256": "8fe2870c40af338155f589c009eb6d4deab649bc5983a20e8df215f80c01c0e5",
+      "source_bytes": 1657,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/EndpointFixtures.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/EndpointControls.lean",
+      "source_sha256": "5ff601a4d001fb9db5fa49a5cb9fdae2d8a5caa76fadeb987d37b6c0f9f84563",
+      "source_bytes": 3593,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/EndpointControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/EndpointSeparator.lean",
+      "source_sha256": "6b523d00092658c68f7fb6ebb0285ce83d9bde6e6855b7b7c6c450b9da6206ef",
+      "source_bytes": 4783,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/EndpointSeparator.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/EndpointLawfulnessControls.lean",
+      "source_sha256": "1da85dc06dd0002214643fec081dcfc9392e00dc96c4e095448824b3aa59f76b",
+      "source_bytes": 3278,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/EndpointLawfulnessControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/EndpointInterfaces.lean",
+      "source_sha256": "274a039f6dbe1a31341394423bd61a606ee979422197d8fb23db2612ce62ae32",
+      "source_bytes": 403,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/EndpointInterfaces.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/SemanticEndpointAxioms.lean",
+      "source_sha256": "b87465b9413af8edededf57336d8d7f21a1a4a004af96fb7d08f396cef9e2198",
+      "source_bytes": 1469,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/SemanticEndpointAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/MutationPositiveDropsInput.lean",
+      "source_sha256": "ed99c3cbd5253c1fa6412801136653d1b94675c23afb003f80c02187cb5d5b5c",
+      "source_bytes": 1103,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/MutationPositiveDropsInput.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/MutationPositiveDropsInitial.lean",
+      "source_sha256": "2988efa498c9cd33d09a3ec4728965316d4d69a97db526676bb1433e2d62df12",
+      "source_bytes": 1098,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/MutationPositiveDropsInitial.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/MutationNegativeDropsInput.lean",
+      "source_sha256": "d1dd9952d92f0e049536dbdd97b91712fbcd052d5f8f1251df121bb11c8bb283",
+      "source_bytes": 1137,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/MutationNegativeDropsInput.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/MutationNegativeDropsInitial.lean",
+      "source_sha256": "cea3fd2651bbdddf548285daa55ae019e5071c54359ae345b78960ae742c687c",
+      "source_bytes": 1150,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/MutationNegativeDropsInitial.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/MutationWinnerDropsLawfulness.lean",
+      "source_sha256": "d4bf757adba9e2a7a756f7ef91b46af84e90d8f1f2270d99e4a243823d89adca",
+      "source_bytes": 2566,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/MutationWinnerDropsLawfulness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/MutationWinnerDropsParity.lean",
+      "source_sha256": "37ccc58c3b6aba817ff922e7e5c5782ff5a7735f8d208fca7c285c2320465c03",
+      "source_bytes": 2696,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hidden-change/lean-endpoint-v1/fresh-replay-20261006T022500Z/sources/MutationWinnerDropsParity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/ReviewEndpointControls.lean",
+      "source_sha256": "9a0ac8c22cf75b51e02a5b4e0b4bb2bc89fced80e39c35d7f59fd2ae82350c3f",
+      "source_bytes": 9969,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-endpoint/final-controls/ReviewEndpointControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hidden-change/controls/endpoint/ReviewAllAxioms.lean",
+      "source_sha256": "0466a5edff0defc5a4982ebf5b4f310b1ae2831a27b956fc4cc227c30f7c1ed4",
+      "source_bytes": 1408,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hidden-change-endpoint/final-controls/ReviewAllAxioms.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/InternalPolymorphism.lean",
+      "source_sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "source_bytes": 15288,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/InternalPolymorphism.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/FiniteBridge.lean",
+      "source_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "source_bytes": 8366,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/FiniteBridge.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01TypeAlgebra.lean",
+      "source_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "source_bytes": 4003,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01TypeAlgebra.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01SNReflection.lean",
+      "source_sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "source_bytes": 1447,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01SNReflection.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/BoundaryResults.lean",
+      "source_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "source_bytes": 8581,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/BoundaryResults.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01Candidates.lean",
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "source_bytes": 10260,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01Candidates.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01Confluence.lean",
+      "source_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "source_bytes": 9226,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01Confluence.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectsAndDependence.lean",
+      "source_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "source_bytes": 8707,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectsAndDependence.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/NormalisationAndNumerals.lean",
+      "source_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "source_bytes": 3101,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/NormalisationAndNumerals.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01Omega.lean",
+      "source_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "source_bytes": 3201,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01Omega.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01Polynomials.lean",
+      "source_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "source_bytes": 8595,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01Polynomials.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01PER.lean",
+      "source_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "source_bytes": 9388,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01PER.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01DependentCore.lean",
+      "source_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "source_bytes": 16822,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01DependentCore.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01ContextualJ.lean",
+      "source_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "source_bytes": 3535,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01ContextualJ.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01Certificates.lean",
+      "source_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "source_bytes": 5047,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01Certificates.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01Examples.lean",
+      "source_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "source_bytes": 3514,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01Examples.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01RecursiveModel.lean",
+      "source_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "source_bytes": 14821,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01RecursiveModel.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01LambdaSyntax.lean",
+      "source_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "source_bytes": 5547,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01LambdaSyntax.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01SystemF.lean",
+      "source_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "source_bytes": 6932,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01SystemF.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01CurryParametricity.lean",
+      "source_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "source_bytes": 4213,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01CurryParametricity.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01Translation.lean",
+      "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "source_bytes": 6462,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01Translation.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01ModelWitnesses.lean",
+      "source_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "source_bytes": 4276,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01ModelWitnesses.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01DependentModel.lean",
+      "source_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "source_bytes": 9892,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01DependentModel.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01DependentSubstitution.lean",
+      "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "source_bytes": 7125,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01DependentSubstitution.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01DependentFundamental.lean",
+      "source_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "source_bytes": 8990,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01DependentFundamental.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/SubstitutionSyntax.lean",
+      "source_sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "source_bytes": 9055,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/SubstitutionSyntax.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllSyntax.lean",
+      "source_sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "source_bytes": 6469,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllSyntax.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllPredicates.lean",
+      "source_sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3",
+      "source_bytes": 6228,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllPredicates.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/IntensionalIdentityBridge.lean",
+      "source_sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333",
+      "source_bytes": 13211,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/IntensionalIdentityBridge.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/ExtensionalRepairSyntax.lean",
+      "source_sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f",
+      "source_bytes": 10183,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/ExtensionalRepairSyntax.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllTermAlgebra.lean",
+      "source_sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906",
+      "source_bytes": 9867,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllTermAlgebra.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllMixedAlgebra.lean",
+      "source_sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367",
+      "source_bytes": 17017,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllMixedAlgebra.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllStructuralBase.lean",
+      "source_sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d",
+      "source_bytes": 10666,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllStructuralBase.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllStructuralRename.lean",
+      "source_sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0",
+      "source_bytes": 11526,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllStructuralRename.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllStructural.lean",
+      "source_sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1",
+      "source_bytes": 30140,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllStructural.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllRawSubstitution.lean",
+      "source_sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66",
+      "source_bytes": 3157,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllRawSubstitution.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllRawRenaming.lean",
+      "source_sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f",
+      "source_bytes": 3623,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllRawRenaming.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllBaseLaws.lean",
+      "source_sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984",
+      "source_bytes": 6947,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllBaseLaws.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllPiLaws.lean",
+      "source_sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f",
+      "source_bytes": 2971,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllPiLaws.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllSigmaLaws.lean",
+      "source_sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d",
+      "source_bytes": 4531,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllSigmaLaws.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllTermLemmas.lean",
+      "source_sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e",
+      "source_bytes": 6322,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllTermLemmas.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllBinderLaws.lean",
+      "source_sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9",
+      "source_bytes": 3942,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllBinderLaws.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllConstants.lean",
+      "source_sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041",
+      "source_bytes": 2153,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllConstants.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllFiniteComparison.lean",
+      "source_sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a",
+      "source_bytes": 1432,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllFiniteComparison.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllSemanticSubstitution.lean",
+      "source_sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09",
+      "source_bytes": 7131,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllSemanticSubstitution.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllInstantiation.lean",
+      "source_sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606",
+      "source_bytes": 4649,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllInstantiation.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllSoundness.lean",
+      "source_sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7",
+      "source_bytes": 6622,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllSoundness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/P01DependentControls.lean",
+      "source_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "source_bytes": 6388,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01DependentControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllInheritedPositiveControls.lean",
+      "source_sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37",
+      "source_bytes": 11117,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllInheritedPositiveControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectiveStandardness.lean",
+      "source_sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428",
+      "source_bytes": 2778,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectiveStandardness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/TypedSyntax.lean",
+      "source_sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c",
+      "source_bytes": 4557,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/TypedSyntax.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/TypedAlgebra.lean",
+      "source_sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc",
+      "source_bytes": 9808,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/TypedAlgebra.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/TypedStructural.lean",
+      "source_sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf",
+      "source_bytes": 33519,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/TypedStructural.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/AllNucleusSyntax.lean",
+      "source_sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e",
+      "source_bytes": 5356,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/AllNucleusSyntax.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectiveObserver.lean",
+      "source_sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f",
+      "source_bytes": 5513,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectiveObserver.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectiveReduction.lean",
+      "source_sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d",
+      "source_bytes": 6798,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectiveReduction.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/ExtensionalRepairLemmas.lean",
+      "source_sha256": "00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac",
+      "source_bytes": 2338,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/ExtensionalRepairLemmas.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/ExtensionalRepairSoundness.lean",
+      "source_sha256": "b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5",
+      "source_bytes": 9343,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/ExtensionalRepairSoundness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/IntensionalIdentityWitness.lean",
+      "source_sha256": "6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74",
+      "source_bytes": 5007,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/IntensionalIdentityWitness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/ExtensionalRepairWitness.lean",
+      "source_sha256": "0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29",
+      "source_bytes": 6809,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/ExtensionalRepairWitness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/IntensionalIdentityModel.lean",
+      "source_sha256": "64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4",
+      "source_bytes": 10589,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/IntensionalIdentityModel.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/IntensionalIdentitySoundness.lean",
+      "source_sha256": "011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984",
+      "source_bytes": 10721,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/IntensionalIdentitySoundness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/IntensionalIdentityRelations.lean",
+      "source_sha256": "009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d",
+      "source_bytes": 4946,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/IntensionalIdentityRelations.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/IntensionalIdentityTheorems.lean",
+      "source_sha256": "48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c",
+      "source_bytes": 4627,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/IntensionalIdentityTheorems.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/ExtensionalRepairTheorems.lean",
+      "source_sha256": "4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51",
+      "source_bytes": 2862,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/ExtensionalRepairTheorems.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectiveRuleBoundary.lean",
+      "source_sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c",
+      "source_bytes": 2704,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectiveRuleBoundary.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectiveCanonicalTests.lean",
+      "source_sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9",
+      "source_bytes": 4484,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectiveCanonicalTests.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectiveBooleanStandardness.lean",
+      "source_sha256": "5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd",
+      "source_bytes": 4636,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectiveBooleanStandardness.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectiveBooleanCertificates.lean",
+      "source_sha256": "c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354",
+      "source_bytes": 3356,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectiveBooleanCertificates.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/EffectivePrimitiveRecursion.lean",
+      "source_sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba",
+      "source_bytes": 21266,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/EffectivePrimitiveRecursion.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/RestrictedCompiler.lean",
+      "source_sha256": "7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30",
+      "source_bytes": 15997,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/RestrictedCompiler.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/PolynomialTestBoundary.lean",
+      "source_sha256": "1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82",
+      "source_bytes": 7563,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/PolynomialTestBoundary.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/UnaryPolynomial.lean",
+      "source_sha256": "aa716d61f011942c08532878a322c1b98978d5095bab58fe5ae1e1d5eae37cb6",
+      "source_bytes": 8219,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/UnaryPolynomial.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/UnaryFiniteDescription.lean",
+      "source_sha256": "061d8de20772e3fca5bd2a73641da266f782f2d23e8ad4843255c17d875a29d5",
+      "source_bytes": 5651,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/UnaryFiniteDescription.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/UnaryExpressions.lean",
+      "source_sha256": "9577dc7da47df9915c87b374b9bd87f534849f94ba272bf60ccd7f20313cbe56",
+      "source_bytes": 8562,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/UnaryExpressions.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/UnaryNormalForm.lean",
+      "source_sha256": "a2be40ceebd2c9293ac2be158abff27ed6093c2a82325fb946b5d2b534040d9c",
+      "source_bytes": 7746,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/UnaryNormalForm.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/ComputablePrelude.lean",
+      "source_sha256": "b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292",
+      "source_bytes": 1494,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/ComputablePrelude.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/SparsePolynomial.lean",
+      "source_sha256": "2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a",
+      "source_bytes": 5828,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/SparsePolynomial.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/PositiveSeparation.lean",
+      "source_sha256": "8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8",
+      "source_bytes": 3453,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/PositiveSeparation.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/MaskNormalisation.lean",
+      "source_sha256": "d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4",
+      "source_bytes": 5896,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/MaskNormalisation.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/IdentityChecker.lean",
+      "source_sha256": "989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02",
+      "source_bytes": 5632,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/IdentityChecker.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/UnaryCurrentIdentityBoundary.lean",
+      "source_sha256": "8e943773416edcb225d1c3ed9961938bc75f82d7cc67f0bdb1aea5a98b126eac",
+      "source_bytes": 6225,
+      "role": "lean-inherited-source",
+      "origin_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+      "origin_member": "Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/UnaryCurrentIdentityBoundary.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/UArrowAndCompilerControls.lean",
+      "source_sha256": "7fe317d5fbc4657ecd7f793808872941a8bfdf5b3a281f87a2f11b6ea70ac7a9",
+      "source_bytes": 4224,
+      "role": "lean-bounded-control-production",
+      "origin": "tranche18/research/hase-boundary/control-v1/src/UArrowAndCompilerControls.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/sources/InhabitedEndpointControl.lean",
+      "source_sha256": "57a4559c45f76bbb6b2a55b0ddc208350bb866bb7fe1be0f80fd4df8ffeef61f",
+      "source_bytes": 6450,
+      "role": "lean-bounded-control-production",
+      "origin": "tranche18/research/hase-boundary/inhabited-control-v1/src/InhabitedEndpointControl.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/controls/existing/KernelReadback.lean",
+      "source_sha256": "a5c0f490b5ad83f6a6b3f282da79b08d1cb0df04ce177cc1bea97290c7d12641",
+      "source_bytes": 667,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hase-boundary/control-v1/src/KernelReadback.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/controls/inhabited/KernelReadback.lean",
+      "source_sha256": "e957ac234c4a515ba24432eb6d286e0145bb298794bb027e647b985853d236a1",
+      "source_bytes": 1985,
+      "role": "lean-positive-control",
+      "origin": "tranche18/research/hase-boundary/inhabited-control-v1/src/KernelReadback.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/controls/inhabited/WrongEndpointReadback.lean",
+      "source_sha256": "4105a1e224403f5dc9fecada98c0e902cd391cb402ef4781936ce2e03a6bfd88",
+      "source_bytes": 383,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hase-boundary/inhabited-control-v1/negative-controls/WrongEndpointReadback.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/controls/inhabited/WrongMotiveCoordinate.lean",
+      "source_sha256": "fd720b1dd6eae50b0f505be7a0b7a50f5c19c45cadd126f3aa03c2667e13bf54",
+      "source_bytes": 297,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/research/hase-boundary/inhabited-control-v1/negative-controls/WrongMotiveCoordinate.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/controls/inhabited/ReviewerReadback.lean",
+      "source_sha256": "7ebd4056c1aece159fd00270eb1f8de5239276943659f863eda71dd0ac20e90e",
+      "source_bytes": 2111,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hase-inhabited-control/ReviewerReadback.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/controls/inhabited/WrongJudgmentCast.lean",
+      "source_sha256": "248b5ba9b09a97396153d47c9c373720afac702cc787e69ba98e88b5b6161c30",
+      "source_bytes": 286,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hase-inhabited-control/WrongJudgmentCast.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/controls/inhabited/ReflexivityCannotReplacePremise.lean",
+      "source_sha256": "0b5e02f6d3fe4c131085bd28a33dd0ffb2fb6eccfae2698318751fc285777f5d",
+      "source_bytes": 249,
+      "role": "lean-expected-failure-control",
+      "origin": "tranche18/reviews/hase-inhabited-control/ReflexivityCannotReplacePremise.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "lean/hase/controls/ordinary-diagnostic/DumpExactPolynomials.lean",
+      "source_sha256": "ed383adafd31af8ba3a823a4c63ac7a06f7e1993f3c7997380483c8f8ff4e389",
+      "source_bytes": 534,
+      "role": "lean-positive-control",
+      "origin": "tranche18/reviews/hase-inhabited-control/DumpExactPolynomials.lean",
+      "byte_identical": true
+    },
+    {
+      "path": "diagnostics/hase/check_lambda_normal_forms.py",
+      "source_sha256": "093857b23dac06e14ec7da11a3be91cc356af1a498c93fed51a6e5ab32d99504",
+      "source_bytes": 4891,
+      "role": "ordinary-normal-form-diagnostic",
+      "origin": "tranche18/reviews/hase-inhabited-control/check_lambda_normal_forms.py",
+      "byte_identical": true
+    }
+  ]
+}

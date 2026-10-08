@@ -1,0 +1,134 @@
+{
+  "status": "BOUNDED_SOURCE_RECONSTRUCTION_COMPLETE_MINHAJ_CHECKS_COMPLETE",
+  "root_personal_verdict": "Reserved to the philosophical reassessment; this is source reconstruction and bridge diagnosis.",
+  "premises": [
+    {
+      "id": "P1",
+      "claim": "Every actual agent needs power to act.",
+      "locators": "Oneness17,34; Asbahani135,147–148"
+    },
+    {
+      "id": "P2",
+      "claim": "P2 is composite: P2a original power/will are intrinsic and not efficiently received; P2b full productive completion is not obtained from a rival’s contribution or leave. The source argues for P2b, not merely P2a, using necessary intrinsic perfection and efficacy-as-perfection. A model preserving only P2a does not preserve the full intended premise.",
+      "locators": "Oneness18–22,29,31; Asbahani135–139,143,145–146"
+    },
+    {
+      "id": "M1_EFFICACY_PERFECTION",
+      "claim": "Realized productive efficacy is a perfection; dependence on another’s action for that efficacy is dependence for a perfection, incompatible with being necessary-by-itself.",
+      "locators": "Minhaj2:180–183; retainedV02L0117–0120; Islamweb108/156–158",
+      "role": "Substantive metaphysical strengthening of P2; its effect-condition to intrinsic-completion transfer remains the precise appraisal issue."
+    },
+    {
+      "id": "P3",
+      "claim": "No priority-efficient circular derivation, including a part or condition of a productive cause; no regress of original efficient sources. Concomitance is separately allowed.",
+      "locators": "Oneness18–21; MinhajV03L0259–0263,0273"
+    },
+    {
+      "id": "P4",
+      "claim": "No two distinct agents each actually produce the same numerical effect wholly alone; sole entire production excludes any actual coproductor.",
+      "locators": "Oneness17,23–24,36; Asbahani134,140–141,149; MinhajV03L0264–0265"
+    },
+    {
+      "id": "P5",
+      "claim": "For equal lords, each can produce the same target effects as the other, and the requisite original power must persist in mutual presence.",
+      "locators": "Oneness23–25; Asbahani139–143"
+    },
+    {
+      "id": "P6",
+      "claim": "Complete power together with complete determining will entails the exactly specified effect; unwilled intrinsic possibilities remain within power.",
+      "locators": "Oneness31,34; Asbahani145,147–148; MinhajV03L0238–0242"
+    },
+    {
+      "id": "P7",
+      "claim": "A possible, nonnecessary coalescence needs an efficient producer; in the proposed ultimate pair there is no independent third producer.",
+      "locators": "Oneness30; Asbahani145"
+    },
+    {
+      "id": "B1",
+      "claim": "Any cross-domain coalescence by one lord changes what the other determines and thereby influences the latter’s determining power/will; with consent it is assistance, without consent restriction.",
+      "locators": "Oneness30–32; Asbahani144–146"
+    },
+    {
+      "id": "B2",
+      "claim": "Necessary concord of two original wills/actions makes each a partial productive condition of the other, unless a third produces their concurrence; either defeats original independence.",
+      "locators": "MinhajV03L0269–0273; Oneness40 note32"
+    },
+    {
+      "id": "B3",
+      "claim": "From inability of two whole-alone actual productions, concurrent unrestricted equally-targeted original powers are excluded.",
+      "locators": "Oneness23–25; Asbahani140–141; MinhajV03L0264,0269–0273"
+    },
+    {
+      "id": "O1",
+      "claim": "Actual creation is causally/materially interconnected, including generation, air/water/soil, solar and terrestrial interactions.",
+      "locators": "Oneness32–33; Asbahani146–147; MinhajV03L0267–0268,0276"
+    },
+    {
+      "id": "C1",
+      "claim": "Plural original makers would have separate noninteracting creative domains; O1 excludes that partition of the actual world.",
+      "locators": "Oneness30–36; Asbahani144–149"
+    },
+    {
+      "id": "C2",
+      "claim": "Unequal alleged lords imply superior over inferior; the inferior requires aid or noninterference and is not an original lord.",
+      "locators": "Oneness37–40; Asbahani150–152; MinhajV03L0273–0276"
+    },
+    {
+      "id": "B5_TRANSFER",
+      "claim": "Possible concentration of two powers in one bearer; applicability to each existing partner and self-sufficiency consequence remain explicit steps.",
+      "evidence_id": "majmu20",
+      "locator": "printed178–181; web L916–921",
+      "all_current_models": "NOT_REPRESENTED",
+      "role": "Source-explicit argued bridge; philosophical warrant assessed separately."
+    },
+    {
+      "id": "B6_EXCLUSIVE_COMPLETION",
+      "claim": "Complete power plus complete will entails exclusive actual production, not only outcome truth.",
+      "evidence_id": "majmu20",
+      "locator": "printed176–177; web L912–913",
+      "all_current_models": "NOT_REPRESENTED",
+      "role": "Source-explicit argued bridge; philosophical warrant assessed separately."
+    }
+  ],
+  "bridges": {
+    "B1": "Output-coalescence to determining source power/will influence",
+    "B2": "Necessary concord to reciprocal productive conditioning or third producer",
+    "B3": "No duplicate actual sole production to no simultaneous unrestricted equal target-powers",
+    "P2b/M1": "Need for another’s contribution to an effect is received productive perfection, not mere external concomitance"
+  },
+  "premise_quantifiers": {
+    "actual_world": "Actual created things and occurrences, not all relations called SourceMode.",
+    "equal_case": "Every effect in either equal maker’s target-power domain is in the other’s corresponding domain; not a mere existential ability.",
+    "determination": "For a specified target e: complete will(A,e) and complete power(A,e) entail e; distinguishes mere power from actuality.",
+    "nonduplication": "For any one numerical e, not two distinct actual whole-alone producers of e.",
+    "conditionality": "A condition of an effect, of the producer’s intrinsic capacity, and of complete exercise are separately typed.",
+    "common_creator": "One original Creator of the connected created field; complete cosmological reach uses the asserted interconnectedness of all creation, not merely nonisolated nodes."
+  },
+  "control_status": {
+    "full_premise_countermodel": "None produced or verified in this assessment. Refer MODEL_AUDIT.md for independent model audit.",
+    "thin_models": "Harmony graphs, uncaused partial powers, noncausal ground, disconnected-domain proposals do not automatically preserve the intended P2b/P5/P6.",
+    "no_circular_success_claim": "Failure of current countermodels does not by itself prove M1/B1/B2/B3; stronger premise warrant remains separate from conditional validity."
+  },
+  "supplemental_bridges": [
+    {
+      "id": "B5_TRANSFER",
+      "claim": "Possible concentration of two powers in one bearer; applicability to each existing partner and self-sufficiency consequence remain explicit steps.",
+      "evidence_id": "majmu20",
+      "locator": "printed178–181; web L916–921",
+      "all_current_models": "NOT_REPRESENTED"
+    },
+    {
+      "id": "B6_EXCLUSIVE_COMPLETION",
+      "claim": "Complete power plus complete will entails exclusive actual production, not only outcome truth.",
+      "evidence_id": "majmu20",
+      "locator": "printed176–177; web L912–913",
+      "all_current_models": "NOT_REPRESENTED"
+    }
+  ],
+  "supplemental_B4": {
+    "claim": "Extension from pair/third efficient provider to arbitrary plurality needs its exhaustion and induction conditions.",
+    "not_same_as": "abstract common law, logical truth, or noncausal reason"
+  },
+  "fixed_background": "Preserve actual determining will, complete productive state, target numerical effect and causal contribution. Unchanged standing capacities alone are insufficient.",
+  "countermodel_test_scope": "When M1, B5_TRANSFER, B6_EXCLUSIVE_COMPLETION or another inference is offered to establish P2b, P2b is downstream of that inference. Denying P2b alone does not disqualify a countermodel to its derivation; preservation of every independently retained upstream premise is required. The complete intended source package and the upstream test package must not be conflated."
+}

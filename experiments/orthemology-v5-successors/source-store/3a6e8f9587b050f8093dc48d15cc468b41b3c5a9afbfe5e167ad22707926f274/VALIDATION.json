@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "verified_utc": "2026-10-07T16:05:32.099767+00:00",
+  "status": "PASS",
+  "checks_total": 889,
+  "passing": 889,
+  "failing": 0,
+  "counts": {
+    "topics": 12,
+    "cases": 11,
+    "input_bindings": 93,
+    "new_primary_reading": 0,
+    "new_kernel_replay": 0
+  },
+  "scope": "Identity, index/reference joins, named ABC endpoint ownership, explicit phase/chronology controls and Markdown/JSON substantive parity. This is not an independent philosophical verdict, re-reading certificate or kernel replay.",
+  "record_kind": "SCOPED_ORIGINAL_AUTHOR_VALIDATION_SUMMARY",
+  "original_validation_record": {
+    "kind": "original_validation_custody_identity",
+    "record_id": "ARABIC-METHOD-AUTHOR-VALIDATION",
+    "sha256": "9b36b15830e49c200168374db547f3cf8f3350860ea2bb6077b44ef9467ea38f",
+    "bytes": 72823,
+    "body_included_in_this_supplement": false
+  },
+  "complete_check_log_body_included": false,
+  "author_recorded_read_only_review": {
+    "scope": "Independent source/chronology review of cases AR-X06–AR-X11, all input hashes and index pointers; no new primary reading or proof replay. Additional Miftah/Nubuwwat interpretation was not independently reassessed beyond chronology consistency.",
+    "corrections_applied": [
+      "The copied-trace 5/8 bound explicitly retains equal priors.",
+      "The false-speaker control concerns the displayed veracity package, not full metaphysical qualification.",
+      "The veracity discussion rejects an assumed truthful substitute for every good end.",
+      "GroundedQuotient/AliasCuts are modules; declarations are in T20Grounded.",
+      "Continuation preservation is target-relative and allows a new carrier or qualified role successor.",
+      "The grounded design README is directly bound.",
+      "Exact A/B/C endpoint ownership is explicit in AR-X01; inherited SourceIdentity declarations remain inherited."
+    ],
+    "unresolved_blocking_findings": []
+  },
+  "original_deliverables": [
+    {
+      "filename": "ARABIC_READING_METHOD.json",
+      "sha256": "196f711088b2fc9a7d48e3e4f817c0958d47c7f81b16ac19b58bce4805d076cf",
+      "bytes": 44251
+    },
+    {
+      "filename": "ARABIC_READING_METHOD.md",
+      "sha256": "1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219",
+      "bytes": 17550
+    },
+    {
+      "filename": "CROSS_STREAM_CASES.json",
+      "sha256": "6198ce067b5f10df00de7774a10a1d8b26efc4ea503aeffab7fdb92b63ff6a57",
+      "bytes": 42316
+    },
+    {
+      "filename": "CROSS_STREAM_CASES.md",
+      "sha256": "182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8",
+      "bytes": 17763
+    },
+    {
+      "filename": "SOURCE_BINDINGS.json",
+      "sha256": "608bc7d1053a2353ecc02ccc0ed335d347d71dc75f136572729a91d9ed661db2",
+      "bytes": 38893
+    }
+  ],
+  "selected_projections": [
+    {
+      "archive_alias": "t20/methodology/arabic/ARABIC_READING_METHOD.md",
+      "sha256": "1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219",
+      "bytes": 17550
+    },
+    {
+      "archive_alias": "t20/methodology/arabic/ARABIC_READING_METHOD.json",
+      "sha256": "f7171879244b4660b547bcb75bb3b1c5007c570cc4403050636452744535ff04",
+      "bytes": 44373
+    },
+    {
+      "archive_alias": "t20/methodology/arabic/CROSS_STREAM_CASES.md",
+      "sha256": "182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8",
+      "bytes": 17763
+    },
+    {
+      "archive_alias": "t20/methodology/arabic/CROSS_STREAM_CASES.json",
+      "sha256": "a9bbeb51d33e7e60c82a8228582502e6e40aabc559f95b77fdac3e9826d98597",
+      "bytes": 42438
+    },
+    {
+      "archive_alias": "t20/methodology/arabic/SOURCE_BINDINGS.json",
+      "sha256": "c42bc9ed720bc810df050b38592d980a265e312098ba0356c77a8bea51daf062",
+      "bytes": 82375
+    }
+  ],
+  "verification_attribution": "The recorded author checks concern the bound original files and inputs. Curation checks identities, complete substantive preservation, selected aliases, exact diff round trips and native references. No original author tool or scientific replay was run in curation.",
+  "public_replay_claim": false,
+  "new_primary_reading_credit": 0,
+  "new_result_credit": 0,
+  "new_kernel_replay_credit": 0
+}

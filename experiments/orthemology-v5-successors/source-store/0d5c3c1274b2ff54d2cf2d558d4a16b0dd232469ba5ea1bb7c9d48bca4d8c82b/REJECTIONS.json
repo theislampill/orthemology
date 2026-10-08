@@ -1,0 +1,10 @@
+{
+  "count": 4,
+  "diagnostics": [
+    "tactic 'decide' proved that the proposition\n  B.g = B.h\nis false",
+    "tactic 'decide' proved that the proposition\n  ∀ (w : W), B.x = B.g ∨ B.x = B.h ∨ (w = W.w0 ∨ w = W.w1) ∧ (True ∨ B.x = B.l ∨ B.x = B.r ∨ B.x = B.m ∨ B.x = B.z)\nis false",
+    "tactic 'decide' proved that the proposition\n  (True ∨ W.w0 = W.w1) ∧ (True ∧ Token.v = Token.u ∧ Content.absent = Content.present ∨ B.g = B.x ∧ True ∧ True)\nis false",
+    "tactic 'decide' proved that the proposition\n  ∀ (c : C),\n    E.o = E.a ∧ (c = C.cx ∨ c = C.cl) ∨\n        E.o = E.b ∧ c = C.cr ∨ E.o = E.k ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ True ∧ c = C.cz →\n      True ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ B.g = B.h ∧ c = C.cz\nis false"
+  ],
+  "scope": "Four designated semantic false-overclaim tests only"
+}

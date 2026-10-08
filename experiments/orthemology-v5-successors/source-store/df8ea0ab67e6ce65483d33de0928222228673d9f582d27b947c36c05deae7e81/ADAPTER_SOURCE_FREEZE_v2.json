@@ -1,0 +1,36 @@
+{
+  "status": "CUSTODY_ONLY_SUCCESSOR",
+  "utc": "2026-10-06T05:11:55.943538+00:00",
+  "prior_freeze_sha256": "177a369d34488fffdad03dc4ee888d0f180c49d149290d2df801999f1063d9c4",
+  "files": [
+    {
+      "path": "tools/context.py",
+      "sha256": "5957e2677ef60196c5d8f59e1bf8af67bec0f42d089c2aedf5e9a30cbd0b2123"
+    },
+    {
+      "path": "tools/derive_package.py",
+      "sha256": "c9ffbf277413135fa59d194d22de14714a46c4ac9f1d9098187e7512403ffc12"
+    },
+    {
+      "path": "tools/prepare.py",
+      "sha256": "58e62b416e505cc3d1fa176caca64ee03f96dc3117cb9310867b560c4cc8768c"
+    },
+    {
+      "path": "tools/run_build.py",
+      "sha256": "e0b659e39e3681e292470aaac8f3ebd7f8fafb8dbb4f4dad6f9e137ecb09f439"
+    },
+    {
+      "path": "tools/source_closure.py",
+      "sha256": "2c2304e2a9f525f5cd893fd3bc272231ee5fa0627838e7170c6eaf06184f59c6"
+    },
+    {
+      "path": "tools/verify_cold_build.py",
+      "sha256": "b0626e8a3d985d9d27e6000a49fc044beb95f50d463f94f31ac5ec6d1b70be09"
+    },
+    {
+      "path": "tools/verify_widget.py",
+      "sha256": "14b788637e192a35cb3a92d8a68530ea8c7645b8f8b48c99b6799601786c301d"
+    }
+  ],
+  "delta": "Require originating build receipt/log equality and bind that receipt through cold acceptance and derivation. Sources, pins and build commands unchanged."
+}

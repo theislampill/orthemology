@@ -1,0 +1,148 @@
+{
+  "utc": "2026-10-07T11:24:35.821809+00:00",
+  "status": "PASS",
+  "failures": [],
+  "checks": {
+    "body_sha256": true,
+    "boundary_identity": true,
+    "exact_labels_and_ids": true,
+    "page_hashes_and_counts": true,
+    "body_reconstruction": true,
+    "words": true,
+    "raw_source_001": true,
+    "text_extraction_001": true,
+    "raw_source_002": true,
+    "text_extraction_002": true,
+    "raw_source_003": true,
+    "text_extraction_003": true,
+    "raw_source_004": true,
+    "text_extraction_004": true,
+    "all_raw_body_tokens_preserved": true,
+    "page306_continuation_and_apparatus": true,
+    "first_boundary": true,
+    "last_boundary": true,
+    "first_receipts_identity": true,
+    "first_first_pass_ordered_exact": true,
+    "first_notes_for_receipts": true,
+    "first_output_evidence": true,
+    "first_appraisal_present": true,
+    "first_verification_present": true,
+    "middle_receipts_identity": true,
+    "middle_first_pass_ordered_exact": true,
+    "middle_notes_for_receipts": true,
+    "middle_output_evidence": true,
+    "middle_appraisal_present": true,
+    "middle_verification_present": true,
+    "final_receipts_identity": true,
+    "final_first_pass_ordered_exact": true,
+    "final_notes_for_receipts": true,
+    "final_output_evidence": true,
+    "final_appraisal_present": true,
+    "final_verification_present": true,
+    "cross_range_reader_receipts_identity": true,
+    "cross_range_reader_first_pass_ordered_exact": true,
+    "cross_range_reader_notes_for_receipts": true,
+    "cross_range_reader_output_evidence": true,
+    "whole_ordered_first_pass": true,
+    "first_pass_total_words": true
+  },
+  "body_sha256": "f4128b07b3e93a66f5859552d10adb8eb8bbf1e8b03097eedec9771d098b867e",
+  "source_urls": [
+    "https://www.islamicbook.ws/amma/shfa-alalil-001.html",
+    "https://www.islamicbook.ws/amma/shfa-alalil-002.html",
+    "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+    "https://www.islamicbook.ws/amma/shfa-alalil-004.html"
+  ],
+  "source_hashes": {
+    "https://www.islamicbook.ws/amma/shfa-alalil-001.html": "d23a40a5a47859bee8a6e1723c90ca957fc289118130a98111b3b74a40332850",
+    "https://www.islamicbook.ws/amma/shfa-alalil-002.html": "eecaa056eb3faa69c0a431c5154c8ca45da50cbeb7a0406d48cce99f5990b95b",
+    "https://www.islamicbook.ws/amma/shfa-alalil-003.html": "24906a12923812d1b0e171e989cc3c941a9da501317c0a36572f20239174a674",
+    "https://www.islamicbook.ws/amma/shfa-alalil-004.html": "fa60e369c7c7287d4951875091432ec80ccb6e1b45488efbc192809e93fccd9e"
+  },
+  "selected_scope": "Entire received electronic body, labels2–307, three contiguous readers; website partitions001–004 are not volumes; print edition unverified.",
+  "pages": 306,
+  "words": 164258,
+  "first_pass_windows": 76,
+  "reader_summaries": {
+    "first": {
+      "first_pass_windows": 20,
+      "first_pass_pages": 99,
+      "first_pass_words": 54040,
+      "reflection_windows": 0,
+      "reflection_page_occurrences": 0,
+      "reflection_words": 0
+    },
+    "middle": {
+      "first_pass_windows": 34,
+      "first_pass_pages": 101,
+      "first_pass_words": 54375,
+      "reflection_windows": 5,
+      "reflection_page_occurrences": 15,
+      "reflection_words": 7914
+    },
+    "final": {
+      "first_pass_windows": 22,
+      "first_pass_pages": 106,
+      "first_pass_words": 55843,
+      "reflection_windows": 5,
+      "reflection_page_occurrences": 11,
+      "reflection_words": 5573
+    },
+    "cross_range_reflection": {
+      "first_pass_windows": 0,
+      "first_pass_pages": 0,
+      "first_pass_words": 0,
+      "reflection_windows": 17,
+      "reflection_page_occurrences": 58,
+      "reflection_words": 30701
+    }
+  },
+  "reflection_windows": 27,
+  "reflection_page_occurrences": 84,
+  "reflection_distinct_pages": 70,
+  "reflection_words": 44188,
+  "truncated_initial_html_display_excluded": true,
+  "exact_received_final_boundary_verified": true,
+  "denied_scan_held_no_retry_no_equivalence": true,
+  "text_corruptions_not_repaired": true,
+  "no_full_second_traversal_or_all_manuscript_claim": true,
+  "no_print_apparatus_or_historical_authenticity_certification": true,
+  "no_full_philosophical_closure_claim": true,
+  "verification_limit": "Mechanical identity/reconstruction and receipt interval accounting, with reader attestation. This is not independent certification of understanding, source truth, manuscript completeness or historical testimony.",
+  "original_study_seal": {
+    "sha256": "5f1537dfccdd7e70c387105b41381fcb0df1099917dada5d1941a03be35fd40b",
+    "files_verified": 43
+  },
+  "record_kind": "Body-free projection of historical author verification; checks are reported, not newly rerun.",
+  "missing_original_display_identity_history": [
+    {
+      "reader": "middle",
+      "range": [
+        119,
+        121
+      ],
+      "kind": "continuous-first-pass",
+      "status": "Complete untruncated reading was attested; original display identifier remains missing. Later complete independent rereading supplements the evidence without reconstructing the original identifier or adding first-pass credit.",
+      "later_independent_reread_range": [
+        119,
+        121
+      ],
+      "first_pass_id_not_reconstructed": true
+    },
+    {
+      "reader": "middle",
+      "range": [
+        161,
+        163
+      ],
+      "kind": "continuous-first-pass",
+      "status": "Complete untruncated reading was attested; original display identifier remains missing. Later complete independent rereading supplements the evidence without reconstructing the original identifier or adding first-pass credit.",
+      "later_independent_reread_range": [
+        161,
+        163
+      ],
+      "first_pass_id_not_reconstructed": true
+    }
+  ],
+  "excluded_separate_supplement": "The separate bounded reread at electronic 49–52 and 205–208 is outside the original study counts and checksum envelope."
+}

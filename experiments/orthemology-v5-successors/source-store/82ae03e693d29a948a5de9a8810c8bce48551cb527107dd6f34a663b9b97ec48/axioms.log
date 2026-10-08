@@ -1,0 +1,82 @@
+'ModalUnion.unionEdge_equal' does not depend on any axioms
+'ModalUnion.connected_equal' does not depend on any axioms
+'ModalUnion.component_edgeLaw' depends on axioms: [Quot.sound]
+'ModalUnion.component_equal_iff' depends on axioms: [propext, Quot.sound]
+'ModalUnion.forcedEqual_iff_connected' depends on axioms: [propext, Quot.sound]
+'ModalUnion.disconnected_component_separator' depends on axioms: [propext, Quot.sound]
+'ModalUnion.edgeLaw_of_faithful_transport' does not depend on any axioms
+'ModalUnion.FaithfulInterpretation.edgeLaw' does not depend on any axioms
+'ModalUnion.expandedForced_iff_forced' does not depend on any axioms
+'ModalUnion.expandedForced_iff_connected' depends on axioms: [propext, Quot.sound]
+'ModalUnion.target_constancy' does not depend on any axioms
+'ModalUnion.targetForced_iff_connected' depends on axioms: [propext, Quot.sound]
+'ModalUnion.source_unique_of_covered_connected' does not depend on any axioms
+'ModalUnion.disconnected_bool_separator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ModalUnion.Controls.crossing_endpoints_available' depends on axioms: [propext]
+'ModalUnion.Controls.edge01' depends on axioms: [propext]
+'ModalUnion.Controls.edge12' depends on axioms: [propext]
+'ModalUnion.Controls.union_connects_ends' depends on axioms: [propext]
+'ModalUnion.Controls.no_common_world_for_two_edges' depends on axioms: [propext]
+'ModalUnion.Controls.constant_anchor_edgeLaw' depends on axioms: [propext]
+'ModalUnion.Controls.forced_common_source' depends on axioms: [propext, Quot.sound]
+'ModalUnion.Controls.unrepresented_source' does not depend on any axioms
+'ModalUnion.Controls.switched_local_unity' depends on axioms: [propext]
+'ModalUnion.Controls.identity_transport_reflects' does not depend on any axioms
+'ModalUnion.Controls.retained_provenance_fails' depends on axioms: [propext]
+'ModalUnion.Controls.anchored_ends_differ' depends on axioms: [propext]
+'ModalUnion.Controls.switched_anchor_law_fails' depends on axioms: [propext]
+'ModalUnion.Controls.no_world_connects_ends' depends on axioms: [propext]
+'ModalUnion.Controls.collapsing_local_unity' does not depend on any axioms
+'ModalUnion.Controls.collapsing_provenance_retained' does not depend on any axioms
+'ModalUnion.Controls.reflection_fails' does not depend on any axioms
+'ModalUnion.Controls.collapse_union_connected' does not depend on any axioms
+'ModalUnion.Controls.collapse_anchor_law_fails' does not depend on any axioms
+'ModalUnion.Controls.twoColor_negative_certificate' does not depend on any axioms
+'ModalUnion.Controls.disconnected_ends' does not depend on any axioms
+'ModalUnion.Controls.disconnected_not_forced' depends on axioms: [propext, Quot.sound]
+'ModalUnion.Controls.disconnected_not_expanded_forced' depends on axioms: [propext, Quot.sound]
+'ModalUnion.Controls.singleton_source_always_equal' does not depend on any axioms
+'ModalUnion.Controls.singleton_caveat' does not depend on any axioms
+'ModalUnion.Controls.retention_drop_countermodel' depends on axioms: [propext]
+'ModalUnion.Controls.reflection_drop_countermodel' does not depend on any axioms
+'ModalUnion.Controls.higher_universe_contract' depends on axioms: [propext, Quot.sound]
+def ModalUnion.ForcedEqual.{u, w} : {V : Type u} → {W : Type w} → ModalUnion.Frame V W → V → V → Prop :=
+fun {V} {W} F x y => ∀ (S' : Type u) (a : V → S'), ModalUnion.EdgeLaw F a → a x = a y
+structure ModalUnion.FaithfulInterpretation.{u, w} {V : Type u} {W : Type w} (F : ModalUnion.Frame V W) :
+  Type (max (u + 1) w)
+number of parameters: 3
+fields:
+  ModalUnion.FaithfulInterpretation.Source : Type u
+  ModalUnion.FaithfulInterpretation.anchor : V → self.Source
+  ModalUnion.FaithfulInterpretation.Local : W → Type u
+  ModalUnion.FaithfulInterpretation.transport : (z : W) → self.Source → self.Local z
+  ModalUnion.FaithfulInterpretation.localSource : (z : W) → V → self.Local z
+  ModalUnion.FaithfulInterpretation.reflects : ∀ (z : W) (s t : self.Source),
+      self.transport z s = self.transport z t → s = t
+  ModalUnion.FaithfulInterpretation.retains : ∀ (z : W) (x y : V),
+      F.admissible z →
+        F.crossing z x y →
+          self.localSource z x = self.transport z (self.anchor x) ∧
+            self.localSource z y = self.transport z (self.anchor y)
+  ModalUnion.FaithfulInterpretation.unity : ∀ (z : W) (x y : V),
+      F.admissible z → F.crossing z x y → self.localSource z x = self.localSource z y
+constructor:
+  ModalUnion.FaithfulInterpretation.mk.{u, w} {V : Type u} {W : Type w} {F : ModalUnion.Frame V W} (Source : Type u)
+    (anchor : V → Source) (Local : W → Type u) (transport : (z : W) → Source → Local z)
+    (localSource : (z : W) → V → Local z) (reflects : ∀ (z : W) (s t : Source), transport z s = transport z t → s = t)
+    (retains :
+      ∀ (z : W) (x y : V),
+        F.admissible z →
+          F.crossing z x y → localSource z x = transport z (anchor x) ∧ localSource z y = transport z (anchor y))
+    (unity : ∀ (z : W) (x y : V), F.admissible z → F.crossing z x y → localSource z x = localSource z y) :
+    ModalUnion.FaithfulInterpretation F
+inductive ModalUnion.Connected.{u, w} : {V : Type u} → {W : Type w} → ModalUnion.Frame V W → V → V → Prop
+number of parameters: 3
+constructors:
+ModalUnion.Connected.refl : ∀ {V : Type u} {W : Type w} {F : ModalUnion.Frame V W} (x : V), ModalUnion.Connected F x x
+ModalUnion.Connected.edge : ∀ {V : Type u} {W : Type w} {F : ModalUnion.Frame V W} {x y : V},
+  ModalUnion.UnionEdge F x y → ModalUnion.Connected F x y
+ModalUnion.Connected.symm : ∀ {V : Type u} {W : Type w} {F : ModalUnion.Frame V W} {x y : V},
+  ModalUnion.Connected F x y → ModalUnion.Connected F y x
+ModalUnion.Connected.trans : ∀ {V : Type u} {W : Type w} {F : ModalUnion.Frame V W} {x y z : V},
+  ModalUnion.Connected F x y → ModalUnion.Connected F y z → ModalUnion.Connected F x z

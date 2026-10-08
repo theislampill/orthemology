@@ -1,0 +1,23 @@
+{
+  "as_of_utc": "2026-10-07T09:02:15Z",
+  "scope": "Continuous electronic body paragraphs V08-P0001 through V08-P0115, displayed fully in three nontruncated tool outputs and read; no scan or apparatus credit. This overlaps the first study lane, not new historical witnesses.",
+  "not_claimed": [
+    "full volume reread",
+    "complete apparatus",
+    "verified modern legal or empirical claims",
+    "metaphysical truth from historical attribution"
+  ],
+  "reader": "lead reader’s analytical reread",
+  "paragraph_mapping_sha256": "3eded28d866a8dd42af6b943071a8f077d94d9bb5b1666abf650330e957ddad4",
+  "ranges": [
+    {
+      "first_id": "V08-P0001",
+      "last_id": "V08-P0115",
+      "paragraph_count": 115,
+      "source_section": "012",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-012.html",
+      "first_source_character_start": 156248,
+      "last_source_character_end": 189123
+    }
+  ]
+}

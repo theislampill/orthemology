@@ -1,0 +1,53 @@
+{
+  "scope": "Bounded selected electronic reinspection, no full second traversal",
+  "coverage": [
+    {
+      "volume": 9,
+      "source": "016",
+      "ranges": [
+        [
+          621,
+          665
+        ]
+      ]
+    },
+    {
+      "volume": 9,
+      "source": "016",
+      "ranges": [
+        [
+          700,
+          779
+        ]
+      ]
+    },
+    {
+      "volume": 8,
+      "coordinate": "stable paragraph",
+      "ranges": [
+        [
+          396,
+          422
+        ],
+        [
+          1591,
+          1611
+        ],
+        [
+          1856,
+          1873
+        ]
+      ]
+    },
+    {
+      "volume": 9,
+      "source": "016",
+      "ranges": [
+        [
+          869,
+          896
+        ]
+      ]
+    }
+  ]
+}

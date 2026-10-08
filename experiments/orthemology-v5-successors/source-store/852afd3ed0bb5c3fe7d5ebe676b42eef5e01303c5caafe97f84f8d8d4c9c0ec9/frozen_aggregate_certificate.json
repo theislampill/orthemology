@@ -1,0 +1,458 @@
+{
+  "schema": "seventeenth-public-aggregate-certificate-v1",
+  "distribution_status": "staging; final exact-artifact clearance pending",
+  "evidence_kind": "Previously computed aggregate description and closed-form certificate, copied without new raw-data computation.",
+  "raw_dataset_replay_in_this_package": false,
+  "source_aggregate_sha256": "2845086d63ede9765162cf30744968c6b6d25fb10ef4a976a1ba1347fc40d2b6",
+  "scope": [
+    "final-state archived recorded-coordinate description",
+    "model-conditional sensitivity under unverified assignment assumptions"
+  ],
+  "exact_description": {
+    "games": 75,
+    "roster_members": 232,
+    "overall": {
+      "opportunities": 11136,
+      "valid": 9712,
+      "absent": 1424,
+      "exactly_50": 0
+    },
+    "disagreement": {
+      "opportunities": 4918,
+      "valid": 4264,
+      "absent": 654,
+      "exactly_50": 0
+    },
+    "S": {
+      "numerator": "250499",
+      "denominator": "50400000"
+    },
+    "T": {
+      "numerator": "250499",
+      "denominator": "50400000"
+    },
+    "H": {
+      "numerator": "683089",
+      "denominator": "1512000"
+    },
+    "sum_abs_a": {
+      "numerator": "5888779",
+      "denominator": "30240000"
+    },
+    "V": {
+      "numerator": "491181166337",
+      "denominator": "22861440000000000"
+    },
+    "sides": {
+      "local_left": {
+        "M": {
+          "numerator": "68059",
+          "denominator": "302400"
+        },
+        "V": {
+          "numerator": "298793",
+          "denominator": "1512000"
+        },
+        "Q": {
+          "numerator": "122699",
+          "denominator": "37800000"
+        },
+        "opportunities": 2475,
+        "valid": 2141,
+        "availability_rate": {
+          "numerator": "298793",
+          "denominator": "340295"
+        }
+      },
+      "global_left": {
+        "M": {
+          "numerator": "171397",
+          "denominator": "756000"
+        },
+        "V": {
+          "numerator": "14407",
+          "denominator": "72000"
+        },
+        "Q": {
+          "numerator": "-37243",
+          "denominator": "21600000"
+        },
+        "opportunities": 2443,
+        "valid": 2123,
+        "availability_rate": {
+          "numerator": "302547",
+          "denominator": "342794"
+        }
+      }
+    },
+    "S_R": {
+      "numerator": "-1877",
+      "denominator": "756000"
+    },
+    "availability_rate_difference": {
+      "numerator": "-530783723",
+      "denominator": "116651084230"
+    },
+    "support_status": "directional_support",
+    "crosscheck_S_equals_Qplus_minus_Qminus": true
+  },
+  "population_counts": {
+    "games": 75,
+    "distinct_player_ids": 232,
+    "game_player_pairs": 232,
+    "game_rounds": 3600,
+    "opportunities": 11136,
+    "stage_rows": 33408,
+    "valid_forecasts": 9712,
+    "absent_forecasts": 1424,
+    "exactly_50_forecasts": 0,
+    "valid_forecasts_missing_correctness": 374
+  },
+  "sensitivity": {
+    "formula": "min(1,2 exp(-max(t-D,0)^2/(2V))); V=0 or t=0 gives 1",
+    "reference_alpha": {
+      "numerator": "1",
+      "denominator": "20"
+    },
+    "reference_level_is_model_conditional_only": true,
+    "grid": [
+      {
+        "Gamma": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "rho": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "D": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "exponent": {
+          "numerator": "-564747741009",
+          "denominator": "982362332674"
+        },
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "precision_bits": 256,
+        "width_requirement_pass": true,
+        "reference_comparison": "bound_above_reference_not_lower_bound_on_p_star",
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "reported_upper_decimal_rounded_up_12_places": "1.000000000000",
+        "interpretation": "upper bound on the model-conditional inclusive robust tail; not exact robust probability"
+      },
+      {
+        "Gamma": {
+          "numerator": "11",
+          "denominator": "10"
+        },
+        "rho": {
+          "numerator": "1",
+          "denominator": "21"
+        },
+        "D": {
+          "numerator": "5888779",
+          "denominator": "635040000"
+        },
+        "exponent": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "precision_bits": 256,
+        "width_requirement_pass": true,
+        "reference_comparison": "bound_above_reference_not_lower_bound_on_p_star",
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "reported_upper_decimal_rounded_up_12_places": "1.000000000000",
+        "interpretation": "upper bound on the model-conditional inclusive robust tail; not exact robust probability"
+      },
+      {
+        "Gamma": {
+          "numerator": "5",
+          "denominator": "4"
+        },
+        "rho": {
+          "numerator": "1",
+          "denominator": "9"
+        },
+        "D": {
+          "numerator": "5888779",
+          "denominator": "272160000"
+        },
+        "exponent": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "precision_bits": 256,
+        "width_requirement_pass": true,
+        "reference_comparison": "bound_above_reference_not_lower_bound_on_p_star",
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "reported_upper_decimal_rounded_up_12_places": "1.000000000000",
+        "interpretation": "upper bound on the model-conditional inclusive robust tail; not exact robust probability"
+      },
+      {
+        "Gamma": {
+          "numerator": "3",
+          "denominator": "2"
+        },
+        "rho": {
+          "numerator": "1",
+          "denominator": "5"
+        },
+        "D": {
+          "numerator": "5888779",
+          "denominator": "151200000"
+        },
+        "exponent": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "precision_bits": 256,
+        "width_requirement_pass": true,
+        "reference_comparison": "bound_above_reference_not_lower_bound_on_p_star",
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "reported_upper_decimal_rounded_up_12_places": "1.000000000000",
+        "interpretation": "upper bound on the model-conditional inclusive robust tail; not exact robust probability"
+      },
+      {
+        "Gamma": {
+          "numerator": "2",
+          "denominator": "1"
+        },
+        "rho": {
+          "numerator": "1",
+          "denominator": "3"
+        },
+        "D": {
+          "numerator": "5888779",
+          "denominator": "90720000"
+        },
+        "exponent": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "precision_bits": 256,
+        "width_requirement_pass": true,
+        "reference_comparison": "bound_above_reference_not_lower_bound_on_p_star",
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "reported_upper_decimal_rounded_up_12_places": "1.000000000000",
+        "interpretation": "upper bound on the model-conditional inclusive robust tail; not exact robust probability"
+      },
+      {
+        "Gamma": {
+          "numerator": "3",
+          "denominator": "1"
+        },
+        "rho": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "D": {
+          "numerator": "5888779",
+          "denominator": "60480000"
+        },
+        "exponent": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "precision_bits": 256,
+        "width_requirement_pass": true,
+        "reference_comparison": "bound_above_reference_not_lower_bound_on_p_star",
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "reported_upper_decimal_rounded_up_12_places": "1.000000000000",
+        "interpretation": "upper bound on the model-conditional inclusive robust tail; not exact robust probability"
+      },
+      {
+        "Gamma": {
+          "numerator": "5",
+          "denominator": "1"
+        },
+        "rho": {
+          "numerator": "2",
+          "denominator": "3"
+        },
+        "D": {
+          "numerator": "5888779",
+          "denominator": "45360000"
+        },
+        "exponent": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "precision_bits": 256,
+        "width_requirement_pass": true,
+        "reference_comparison": "bound_above_reference_not_lower_bound_on_p_star",
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "reported_upper_decimal_rounded_up_12_places": "1.000000000000",
+        "interpretation": "upper bound on the model-conditional inclusive robust tail; not exact robust probability"
+      },
+      {
+        "Gamma": {
+          "numerator": "10",
+          "denominator": "1"
+        },
+        "rho": {
+          "numerator": "9",
+          "denominator": "11"
+        },
+        "D": {
+          "numerator": "5888779",
+          "denominator": "36960000"
+        },
+        "exponent": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "precision_bits": 256,
+        "width_requirement_pass": true,
+        "reference_comparison": "bound_above_reference_not_lower_bound_on_p_star",
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "reported_upper_decimal_rounded_up_12_places": "1.000000000000",
+        "interpretation": "upper bound on the model-conditional inclusive robust tail; not exact robust probability"
+      },
+      {
+        "Gamma": "unrestricted",
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "reported_conservative_upper_exact": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "interpretation": "full-cube unrestricted sharp-null sensitivity supremum is 1; not evidence of invariance"
+      }
+    ]
+  },
+  "interpretation_limits": [
+    "Numerical historical full-array assignment law and every finite Gamma remain unverified.",
+    "Fixed roster, retention, full cue schedule and fixed-world conditional-law bridge are sensitivity assumptions.",
+    "Intended recorded placement is not a verified render or attention trace.",
+    "Final-state forecasts are not certified historical scoring snapshots.",
+    "Archive identity with final 2025 analysis/deployment remains unresolved.",
+    "All-game aggregation does not establish a multiplayer or collective-reward-specific departure.",
+    "A small bound challenges the joint null and maintained assumptions; a large bound proves neither invariance nor a lower bound on p_star.",
+    "No latent reliance, source exclusion, irrationality, mediation or unqualified causal effect is identified."
+  ],
+  "lower_tail_qualification": "The upper bound alone does not settle nonrejection. See the separately labelled post-inspection lower certificate.",
+  "input_identity_metadata": {
+    "export_3.csv": {
+      "sha256": "dc49a4248a193b47df08f419f108f4070e0c0c07422fdbda31537c1d33aa6f5c",
+      "bytes": 225982424
+    },
+    "globalPref_LM_100.csv": {
+      "sha256": "c43ba9293db5c1657f7829de1033e0985bb4dc46508ea253a669449207dbd317",
+      "bytes": 1814085
+    }
+  },
+  "external_archive_project_url": "https://osf.io/x5hye/",
+  "related_publication_url": "https://journals.sagepub.com/doi/10.1177/26339137251372605"
+}

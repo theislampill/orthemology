@@ -192,7 +192,7 @@ jobs:
           git diff --exit-code docs/provenance/RELEASE-MANIFEST.sha256
       - name: PDF clean rebuild, byte-equality with committed artifacts, text-structure QA
         run: python scripts/build_pdfs.py --check
-      - name: Seventh-Sixteenth successor source and status integrity
+      - name: Seventh-Twentieth successor source and status integrity
         run: |
           python -B tests/test_v5_successors.py
           python -B -O tests/test_v5_successors.py
@@ -230,3 +230,17 @@ jobs:
           python -B -O tests/test_v5_sixteenth_boundary.py
           python -B tests/test_v5_repository_scope.py
           python -B -O tests/test_v5_repository_scope.py
+          python -B tests/test_v5_twentieth_boundary.py
+          python -B -O tests/test_v5_twentieth_boundary.py
+          python -B tests/test_v5_twentieth_data.py
+          python -B -O tests/test_v5_twentieth_data.py
+          python -B tests/test_v5_twentieth_references.py
+          python -B -O tests/test_v5_twentieth_references.py
+          python -B tests/test_v5_twentieth_selected.py
+          python -B -O tests/test_v5_twentieth_selected.py
+          python -B tests/test_v5_twentieth_addendum.py
+          python -B -O tests/test_v5_twentieth_addendum.py
+          python -B tests/test_v5_twentieth_reader_references.py
+          python -B -O tests/test_v5_twentieth_reader_references.py
+          python -B tests/test_v5_twentieth_late_append.py
+          python -B -O tests/test_v5_twentieth_late_append.py

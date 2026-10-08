@@ -1,0 +1,63 @@
+{
+  "schema": "t20-modal-union-source-only-v2",
+  "required_toolchain": "Lean 4.19.0",
+  "lean_trust_level": 0,
+  "external_packages": [],
+  "payload_inputs": [
+    {
+      "path": "ModalUnion.lean",
+      "bytes": 7265,
+      "sha256": "d7bd80283e505d2379d453ee3fe75018016a3ae737ce4f25d0d610451d00fa08"
+    },
+    {
+      "path": "FiniteControls.lean",
+      "bytes": 7753,
+      "sha256": "abc574f1e5d32dd6190be4747ad33b476c436d4e454146151834c2cde2ca1401"
+    },
+    {
+      "path": "AxiomAudit.lean",
+      "bytes": 2500,
+      "sha256": "6cf8bba9cd85ed06720bc42fd7b8e79cd4744f2a19554938d7e9e49c5d5092f6"
+    },
+    {
+      "path": "negative-controls/RejectedClaims.lean",
+      "bytes": 347,
+      "sha256": "05c6fa792315662e1b7a02f056678c6ade05d47c07432a77afba21ca452a758a"
+    },
+    {
+      "path": "replay.sh",
+      "bytes": 2417,
+      "sha256": "62da7ba93e430f154efc5d510984f6cab4fad189dab6be7c4f0d0317a498b18e"
+    },
+    {
+      "path": "test_harness.py",
+      "bytes": 4103,
+      "sha256": "c4008fd3919998a8fb7993f1015066ff8fa47fa068d06adb35630a42c0a51eb2"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 2505,
+      "sha256": "ef7c7a0a88664b435699fec71e1a01627cc086a1171c71663a610d9337b0223c"
+    },
+    {
+      "path": "STATEMENT_CONTRACT.txt",
+      "bytes": 5789,
+      "sha256": "8791ae645854ad6ec167fb8c38b44f70a1d75e0f5ddb67ffe7776f6012dfcd98"
+    },
+    {
+      "path": "AXIOM_AUDIT.txt",
+      "bytes": 1406,
+      "sha256": "bf0b090c3b07b1017804f13646907ffc0fb1b64d6080b640a7b28f368329ae79"
+    }
+  ],
+  "predecessor": {
+    "version": "v1",
+    "preserved_seals": {
+      "SOURCE_ONLY_MANIFEST.json": "6ef31ebd56379d8b2cac0957418fb48e91b480d8f7d1e5e3032b2d1b9ff5821b",
+      "modal-union-lean419-source-v1.tar.gz": "d8ddd3091ed18a117be69574f9c2d811a477ca0bb9bb38022e87ceb90837c99c",
+      "replay.sh": "c3abfafe3536f2f42ff369c5c6eb4a02a8229ae6f238e9bf11eb3590dcef4f07"
+    }
+  },
+  "change_scope": "Output refusal guards, explicit trust=0, guard tests and corresponding documentation; four Lean source files byte-identical to v1.",
+  "output_contract": "Fresh path with existing parent, outside canonical sealed input tree; refusal before writes; atomic mkdir."
+}

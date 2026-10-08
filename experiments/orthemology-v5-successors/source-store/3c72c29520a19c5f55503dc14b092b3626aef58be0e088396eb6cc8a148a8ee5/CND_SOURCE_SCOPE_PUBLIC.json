@@ -1,0 +1,85 @@
+{
+  "schema": "t20-cnd-public-source-scope-v1",
+  "original_record_sha256": "fb9a092d03f0a1a3de21f0b83ced1502ddaf5cbe183bf2769e9ccce2be15fa3e",
+  "record_status": "Metadata projection of existing reading record; no new source reading or allocation",
+  "source_records": [
+    {
+      "author": "Ibn Taymiyya",
+      "title": "Sharh al-Aqidah al-Asbahaniyyah",
+      "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+      "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+      "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+      "source_bytes": 18364577,
+      "reader_role": "CND assessment author",
+      "reading_mode": "Direct retained scan page-image reading",
+      "inclusive_printed_main_pages": [
+        47,
+        107
+      ],
+      "inclusive_one_based_pdf_pages": [
+        147,
+        207
+      ],
+      "mapping": "For this selected range, printed body page plus 100 gives one-based PDF page.",
+      "scope": "All pages of this contiguous range were displayed and read, including authorial argument and relevant apparatus. The final page begins the next chapter. The apparatus does not count as fresh inspection of the works it cites. No claim of complete volume reading or manuscript collation."
+    },
+    {
+      "author": "Ibn Taymiyya",
+      "title": "al-Risala al-Akmaliyya, in Majmu al-Fatawa, electronic volume 6",
+      "source_url": "https://islamweb.net/ar/library/content/22/591/%D9%85%D8%B3%D8%A3%D9%84%D8%A9-%D8%AA%D9%81%D8%B5%D9%8A%D9%84-%D8%A7%D9%84%D8%A5%D8%AC%D9%85%D8%A7%D9%84-%D9%81%D9%8A%D9%85%D8%A7-%D9%8A%D8%AC%D8%A8-%D9%84%D9%84%D9%87-%D9%85%D9%86-%D8%B5%D9%81%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%85%D8%A7%D9%84",
+      "capture_sha256": "4981dac54c9cf288fbb4d86000ad37d584cce719318fcf405b74b21608e94648",
+      "capture_bytes": 338989,
+      "reader_role": "CND assessment author",
+      "reading_mode": "Direct retained electronic transcription; not print or manuscript collation",
+      "inclusive_capture_lines": [
+        1942,
+        2942
+      ],
+      "inclusive_electronic_pages": [
+        71,
+        140
+      ],
+      "line_coordinate_rule": "Line positions apply only to the digest-bound fixed text capture; they are not stable live webpage lines.",
+      "scope": "Complete retained author answer read in overlapping untruncated chunks in this T20 inquiry. Question framing precedes the range. No new scan collation or authentication of cited underlying works.",
+      "textual_warning": "The repeated negation in electronic p.95 was not silently corrected or made load-bearing."
+    }
+  ],
+  "analytic_helper_reading": {
+    "role": "Independent bounded analytic helper, not assembled-packet root reviewer",
+    "source": "Akmaliyya capture identified above",
+    "inclusive_capture_lines": [
+      2250,
+      2405
+    ],
+    "exact_recheck_lines": [
+      2280,
+      2362
+    ],
+    "credit_limit": "Bounded electronic reread only; no full-answer, print-collation or kernel-acceptance credit"
+  },
+  "independent_root_review": {
+    "primary_credit": "Does not inherit author or analytic helper reading; no independent Arabic collation",
+    "review_identity": "REVIEW.md and REVIEW_RECEIPT.json in the selected CND review set"
+  },
+  "prior_ownership": "T17 already used Akmaliyya loci; no new-corpus, new historical-discovery, manuscript or cited-work inspection credit.",
+  "report_read_scope": {
+    "T17": "Physical lines1–78 and107–132; targeted rereading of P00040–P00068. Other paragraphs cited only where separately displayed.",
+    "T18": "Physical lines1–90; foundation P00011–P00018 directly read.",
+    "T19": "Complete report, physical lines1–196, in bounded chunks; targeted rereading of P00039–P00111."
+  },
+  "distribution": "No PDF, page-image inventory, OCR, transcription body or raw source excerpt included. A concise original-authored locator-to-model mapping is retained.",
+  "source_to_model_locator_map": [
+    {
+      "work": "Sharh al-Aqidah al-Asbahaniyyah",
+      "printed_main_loci": "65–68, 96–99, 104",
+      "model_relevance": "Keep intrinsic qualification distinct from productive receipt; fix the particular bearer and exact causal respect.",
+      "formal_target": "CNDModalScope.original_role_excludes_reception and the PRI/SUP typing audit"
+    },
+    {
+      "work": "al-Risala al-Akmaliyya",
+      "electronic_loci": "6:97–101; fixed-capture lines2301–2358",
+      "model_relevance": "Necessary qualification is not manufacture of the bearer; the CND modal bridge remains an analytical reconstruction.",
+      "formal_target": "CND/PRI/SUP premise separation, not new warrant for role retention"
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "schema": "t20-drive-provenance-verification-v1",
+  "checked_utc": "2026-10-07T15:50:50.092186+00:00",
+  "status": "PASS",
+  "checks_passed": 106,
+  "checks_total": 106,
+  "checks": [
+    {
+      "check": "Exactly six requested Drive IDs",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "el_tobgui_2013: supplied identity matches inherited coverage",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "el_tobgui_2013: exact full T17 range and substantive coverage contribution union",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "el_tobgui_2013: distinct T17 visual pages",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "el_tobgui_2013: bounded T18 reread and visual scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "el_tobgui_2013: source loci valid PDF coordinates",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "el_tobgui_2013: no new primary-reading credit from audit",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "asfahani_v23: supplied identity matches inherited coverage",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "asfahani_v23: exact full T17 range and substantive coverage contribution union",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "asfahani_v23: distinct T17 visual pages",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "asfahani_v23: bounded T18 reread and visual scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "asfahani_v23: source loci valid PDF coordinates",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "asfahani_v23: no new primary-reading credit from audit",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "ibn_taymiyyah_epistemology: supplied identity matches inherited coverage",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "ibn_taymiyyah_epistemology: exact full T17 range and substantive coverage contribution union",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "ibn_taymiyyah_epistemology: distinct T17 visual pages",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "ibn_taymiyyah_epistemology: bounded T18 reread and visual scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "ibn_taymiyyah_epistemology: source loci valid PDF coordinates",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "ibn_taymiyyah_epistemology: no new primary-reading credit from audit",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "oneness_allah: supplied identity matches inherited coverage",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "oneness_allah: exact full T17 range and substantive coverage contribution union",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "oneness_allah: distinct T17 visual pages",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "oneness_allah: bounded T18 reread and visual scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "oneness_allah: source loci valid PDF coordinates",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "oneness_allah: no new primary-reading credit from audit",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "attributes_god: supplied identity matches inherited coverage",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "attributes_god: exact full T17 range and substantive coverage contribution union",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "attributes_god: distinct T17 visual pages",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "attributes_god: bounded T18 reread and visual scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "attributes_god: source loci valid PDF coordinates",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "attributes_god: no new primary-reading credit from audit",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "incoherence_atheism: supplied identity matches inherited coverage",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "incoherence_atheism: exact full T17 range and substantive coverage contribution union",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "incoherence_atheism: distinct T17 visual pages",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "incoherence_atheism: bounded T18 reread and visual scope",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "incoherence_atheism: source loci valid PDF coordinates",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "incoherence_atheism: no new primary-reading credit from audit",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "T17 supplied coverage1393; visual190",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "T18 distinct supplied-page rereads188; visual22",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "T20 Oneness13 selected image positions and five diagrams",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Only Oneness has fresh T20 exact-English-object receipt",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Arabic T20 distinct-position union228",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Arabic T19 traversal qualified938 positions",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E01 (REPORT.md; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E02 (READING_INDEX.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E03 (SOURCE_AND_PREMISE_MAP.md; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E04 (THEOREM_SOURCE_MAP.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E05 (SOURCE_PREMISE_MAP.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E06 (ROOT_CURRENT_APPRAISAL_20261007_143400.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E07 (ROOT_CURRENT_APPRAISAL_20261007_143400.md; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E08 (READING_LOG.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E09 (ONENESS_READ_SCOPE.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E10 (READING_LOG.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E11 (ARCHIVE_MEMBER_INVENTORY.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E12 (INVENTORY.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E13 (ONENESS_SOURCE_IDENTITY.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E14 (RECOVERY_SUMMARY.md; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E15 (Arabic_Volume_Reading_Index.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E16 (source_locations_and_reading_scope.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E17 (six_source_coverage.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E18 (Arabic_Volume_Reading_Index_Final_v1_20261006.docx; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E19 (Orthemology_Eighteenth_Source_and_Validation_Guide_Final_v1_20261006.docx; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E20 (Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.docx; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E21 (Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E22 (Orthemology_Seventeenth_Research_Final_Evidence_v1_20261005.zip; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E23 (Orthemology_Eighteenth_Source_and_Validation_Guide_Final_v1_20261006.txt; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E24 (Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.txt; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E25 (Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.txt; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E26 (primary_inspection_receipt.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E27 (INDEPENDENT_REVIEW_RECEIPT_v1.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E28 (PHILOSOPHICAL_APPRAISAL_v2.md; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E29 (SOURCE_AND_PREMISE_BINDING_v1.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E30 (MANIFEST_v1.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E31 (SOURCE_READ_SCOPE_v1.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Evidence binding: SOURCE_BINDINGS:E32 (SOURCE_MANIFEST.json; retained original)",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Local source-byte identity: SOURCE_BINDINGS:B01 (retained source body; not included)",
+      "pass": true,
+      "details": {
+        "sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf",
+        "bytes": 783093,
+        "PDF_positions": 55,
+        "reading_credit": 0
+      }
+    },
+    {
+      "check": "Local source-byte identity: SOURCE_BINDINGS:B02 (retained source body; not included)",
+      "pass": true,
+      "details": {
+        "sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "bytes": 18364577,
+        "PDF_positions": 938,
+        "reading_credit": 0
+      }
+    },
+    {
+      "check": "Exact T17 ZIP member equals copied coverage member",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Recovery inventory identity: Arabic_Volume_Reading_Index_Final_v1_20261006.docx",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Recovery inventory identity: Orthemology_Eighteenth_Source_and_Validation_Guide_Final_v1_20261006.docx",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Recovery inventory identity: Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.docx",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Recovery inventory identity: Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Recovery inventory identity: Orthemology_Seventeenth_Research_Final_Evidence_v1_20261005.zip",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R01: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R01: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R02: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R02: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R03: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R03: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R04: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R04: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R05: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R05: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R06: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R06: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R07: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R07: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R08: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R08: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R09: outcome record exists",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "DRIVE-R09: exact source URLs retained",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "T17G: cited paragraph IDs exist",
+      "pass": true,
+      "details": {
+        "distinct_cited_paragraphs": 122
+      }
+    },
+    {
+      "check": "T18G: cited paragraph IDs exist",
+      "pass": true,
+      "details": {
+        "distinct_cited_paragraphs": 19
+      }
+    },
+    {
+      "check": "T19G: cited paragraph IDs exist",
+      "pass": true,
+      "details": {
+        "distinct_cited_paragraphs": 0
+      }
+    },
+    {
+      "check": "No remote acquisition or held denial retry",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "Body-free packet declaration",
+      "pass": true,
+      "details": null
+    }
+  ],
+  "artifacts": [
+    {
+      "filename": "DRIVE_CORPUS.json",
+      "bytes": 98391,
+      "sha256": "4a53e294a8c80e86000274a738b14c7caa9ac18d9705a2cd584c8717156bd88b"
+    },
+    {
+      "filename": "DRIVE_CORPUS.md",
+      "bytes": 32075,
+      "sha256": "8376e12c86b1ecec6d4fe31a07e48245f6e07321de334b4da72336aba370c781"
+    },
+    {
+      "filename": "SOURCE_BINDINGS.json",
+      "bytes": 12904,
+      "sha256": "cc46cf5e0c8c43c867e77cf7bb6808898d69acf5ab566c003a413cb8cee61766"
+    },
+    {
+      "filename": "T17_SIX_SOURCE_COVERAGE.json",
+      "bytes": 25752,
+      "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b"
+    },
+    {
+      "filename": "build_drive_corpus.py",
+      "bytes": 51146,
+      "sha256": "87fd8e70de121d6a57e378e52edd643766297616a28a3973ad038fcb9521f597"
+    },
+    {
+      "filename": "verify_drive_corpus.py",
+      "bytes": 7855,
+      "sha256": "2ca22472ab6aa8fd1614cf89a065e174c33d4997d1f9c4a0a326078267af62b1"
+    }
+  ],
+  "scope": "Fresh file/range/identity checks only. No fresh book-body reading, source authenticity verification, scientific calculation or Lean replay. Bibliographic and semantic map entries are inherited source-guide claims and bounded synthesis, not mechanically proved by these checks.",
+  "publication_receipt_scope": {
+    "status_meaning": "The retained PASS and 106/106 checks describe the original audit at checked_utc, not a replay of this published projection.",
+    "original_artifact_identities": "All artifact byte lengths and hashes below bind the original audit files. Projected files can differ. Original author scripts are not selected.",
+    "published_reproducibility_claimed": false,
+    "original_author_scripts_executed_during_curation": false,
+    "scope_of_curation": "Read-only original seal and file-identity checks, finite text projection, exact forward/reverse diffs, complete scope preservation and native reference scanning. No source-body reading, acquisition, empirical or Lean execution."
+  }
+}

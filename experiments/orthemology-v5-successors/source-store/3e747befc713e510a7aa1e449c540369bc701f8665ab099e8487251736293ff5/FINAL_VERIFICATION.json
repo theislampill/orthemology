@@ -1,0 +1,17 @@
+{
+  "utc_checkpoint": "2026-10-07T09:19:00Z",
+  "status": "PASS",
+  "source_hash_mismatches": [],
+  "volume8_missing_paragraphs": [],
+  "volume8_body_words": 91341,
+  "volume8_receipts": 29,
+  "volume9_verified_no_missing_body_lines": true,
+  "volume9_artifact_hashes_match": true,
+  "no_local_pdf_files": true,
+  "limitations": [
+    "Electronic body only",
+    "No print-apparatus certification",
+    "No full second traversal",
+    "No exact full-source-role philosophical closure certification"
+  ]
+}

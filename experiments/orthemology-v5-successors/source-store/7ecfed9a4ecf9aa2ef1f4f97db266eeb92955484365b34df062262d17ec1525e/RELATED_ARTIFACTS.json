@@ -1,0 +1,48 @@
+{
+  "schema": "seventeenth-publication-document-bindings-v1",
+  "status": "EXACT_NAMED_COMPANION_DOCUMENT_IDENTITIES",
+  "documents": [
+    {
+      "role": "main_report",
+      "filename": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "bytes": 65239,
+      "included_in_this_directory": false
+    },
+    {
+      "role": "source_guide",
+      "filename": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9",
+      "bytes": 56611,
+      "included_in_this_directory": false
+    },
+    {
+      "role": "mathematical_companion",
+      "filename": "Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.docx",
+      "sha256": "764c038e4cd2febb74c23e19c15cc86f6377c65f376964b3a33512a7ac83cf89",
+      "bytes": 45148,
+      "included_in_this_directory": false
+    }
+  ],
+  "companion_source": {
+    "path": "companion/Mathematical_Companion_Content_v2.md",
+    "sha256": "4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401",
+    "unchanged_from_accepted_source": true
+  },
+  "mathematical_companion_relationship": {
+    "preserved_predecessor_filename": "Orthemology_Seventeenth_Mathematical_Companion_Draft_v2.docx",
+    "preserved_predecessor_sha256": "53506955a03bf7da8357c0cbb17e4caca5addb2a53bb163907d8e443afb8477a",
+    "publication_filename": "Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.docx",
+    "publication_sha256": "764c038e4cd2febb74c23e19c15cc86f6377c65f376964b3a33512a7ac83cf89",
+    "change_scope": "Only two title-block paragraphs for disclosed AI authorship and date were added to the predecessor DOCX. Existing prose, proofs, equations, scope and formatting are unchanged.",
+    "added_front_matter": [
+      "Prepared by dot, an AI assistant powered by OpenAI",
+      "5 October 2026"
+    ],
+    "native_omml_objects_unchanged": 398,
+    "source_v2_scope": "The included source-v2 Markdown preserves the original substantive text and mathematics. It does not include the final DOCX's two added authorship/date paragraphs and is not a pagination-equivalent rendering.",
+    "new_mathematical_result": false
+  },
+  "verification_scope": "The three external DOCX files were hashed for these bindings. The files are not package members. run_checks.py tests the declared metadata values, not the absent document bytes; verify each external file separately against its listed digest.",
+  "scope_limit": "Exact byte identities are not a claim of programme closure, underlying-source truth, archive integrity or successful delivery."
+}

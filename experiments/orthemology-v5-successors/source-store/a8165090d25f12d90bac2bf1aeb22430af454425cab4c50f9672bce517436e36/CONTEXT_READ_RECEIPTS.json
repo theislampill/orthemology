@@ -1,0 +1,129 @@
+[
+  {
+    "sha256": "718441dfd9fb112afe4cf383d1f029fbe72f64956bd7731c96cbddf1971d05b2",
+    "read_scope": "full displayed document",
+    "status": "source/witness control; FINAL_BOUNDARY includes disclosed evaluative material",
+    "source_locator": "Darʾ volumes 8–9 source identity and limitations",
+    "reader_projection_path": "t20/reading/dar-8-9/acquisition/identity_and_limits.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "385af7a9f4b8d6f99bcfb7d216add1a2f4b6af34932eead030e268e9bedeeb75",
+    "read_scope": "full displayed document",
+    "status": "source/witness control; FINAL_BOUNDARY includes disclosed evaluative material",
+    "source_locator": "Minhaj volumes 2–3 source identity and limitations",
+    "reader_projection_path": "t20/reading/minhaj-2-3/acquisition/identity_and_limits.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "9fc3d604fa7d8257d6f946e407e69e9e3d575b8a85ffb43a7fc4da13cb8329df",
+    "read_scope": "full displayed document",
+    "status": "source/witness control; FINAL_BOUNDARY includes disclosed evaluative material",
+    "source_locator": "Shifa received-body boundaries and edition limits",
+    "reader_projection_path": "t20/reading/shifa/boundaries.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "1492e991eebf0211adbb4383b0831f8eb9cbf0a673b92fde35197b736ff2c5f0",
+    "read_scope": "full displayed document",
+    "status": "source/witness control; FINAL_BOUNDARY includes disclosed evaluative material",
+    "source_locator": "Shifa textual-uncertainty register",
+    "reader_projection_path": "t20/reading/shifa/TEXTUAL_UNCERTAINTIES.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "979b78532a369997a28fa38bbf492873be9455cfe9c56949a4e9a9f1dd440e75",
+    "read_scope": "full displayed document",
+    "status": "source/witness control; FINAL_BOUNDARY includes disclosed evaluative material",
+    "source_locator": "Jami sixth collection textual-control register",
+    "reader_projection_path": "t20/reading/jami-sixth/TEXTUAL_CONTROLS.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "db62a8993d18402b3591f52cc47d13fc26e950806fd42ad4720fa066e9d1f692",
+    "read_scope": "full displayed document",
+    "status": "source/witness control; FINAL_BOUNDARY includes disclosed evaluative material",
+    "source_locator": "Sawaiq source acquisition identities",
+    "reader_projection_path": "t20/reading/sawaiq/SOURCE_IDENTITIES.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "fdd1c6f54f97cd72779786164f054e67f130e4e450d21817a6f00355ff8a812c",
+    "read_scope": "full displayed document",
+    "status": "source/witness control; FINAL_BOUNDARY includes disclosed evaluative material",
+    "source_locator": "Sawaiq volume one textual controls",
+    "reader_projection_path": "t20/reading/sawaiq/TEXTUAL_CONTROLS.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "a9745fb83fe1eef3bc3c87c626903b411a4e1ea53f8773b4d168688b4ff6b30f",
+    "read_scope": "full displayed document",
+    "status": "source/witness control; FINAL_BOUNDARY includes disclosed evaluative material",
+    "source_locator": "Sawaiq combined boundary and source appraisal, including evaluative paragraphs",
+    "reader_projection_path": "t20/reading/sawaiq/SOURCE_APPRAISAL.md",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "0ec71b9c973a866757c90c05fe96c092f7a6df02dd0bd8965b4221ba4ba96b97",
+    "read_scope": "only entry V02L0101 fully credited",
+    "status": "targeted issue-register read; full earlier attempt truncated",
+    "source_locator": "Minhaj volume two textual-uncertainty register",
+    "reader_projection_path": "t20/reading/minhaj-2-3/volume02/TEXTUAL_UNCERTAINTIES.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "a1e8656da7d81796a69c4a7325287a953d9c40cfc52ad03e6f6674c9af1526ab",
+    "read_scope": "prefix first4500 characters, including work, scan and electronic scope metadata",
+    "status": "partial metadata read; not whole manifest credit",
+    "source_locator": "Jami sixth collection source identity manifest",
+    "reader_projection_path": "t20/reading/jami-sixth/SOURCE_IDENTITIES.json",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "92ad5382ffe889208b6fa09361fd971431741dced92b415e6872417ab295e49e",
+    "read_scope": "prefix first8000 characters for printed/PDF mapping",
+    "status": "prior-reader receipt metadata, not substituted reading",
+    "source_locator": "Sawaiq volume one prior-reader image-inspection metadata",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "8f716af218b90bd05cc5ac72498223c11aee71363e66ed1154820adfc59c39b8",
+    "read_scope": "full displayed document",
+    "status": "secondary appraisal read after reconstruction; not authority for verdict",
+    "source_locator": "Jami sixth collection middle reader’s source appraisal",
+    "reader_projection_path": "t20/reading/jami-sixth/MIDDLE_APPRAISAL.md",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "b317389fcbea80c605ebfb3e78e78f12a0e754891dd410c54a1b5052ea16514a",
+    "read_scope": "full displayed document",
+    "status": "secondary appraisal read after reconstruction; not authority for verdict",
+    "source_locator": "Jami sixth collection first-section reader’s source appraisal",
+    "reader_projection_path": "t20/reading/jami-sixth/FIRST_SECTION_APPRAISAL.md",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "50061e7f7074bf16471e181efa823258f8cee1bcaba480c80349fbe2df8f1431",
+    "read_scope": "full displayed document",
+    "status": "secondary appraisal read after reconstruction; not authority for verdict",
+    "source_locator": "Jami sixth collection overall source appraisal",
+    "reader_projection_path": "t20/reading/jami-sixth/SOURCE_APPRAISAL.md",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "55f891e763875d1254e97672f4020283464ef5b1afacb4e78bb8b48ada150a4e",
+    "read_scope": "full displayed document",
+    "status": "secondary appraisal read after reconstruction; not authority for verdict",
+    "source_locator": "Shifa overall source appraisal",
+    "reader_projection_path": "t20/reading/shifa/SOURCE_APPRAISAL.md",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "709e34a2ac420f06897cd338b976c21683a584bc4e594abeb2b3b20846b43728",
+    "read_scope": "substantial displayed portions in a combined display; truncation acknowledged",
+    "status": "partial secondary-appraisal read; no complete-reading credit",
+    "source_locator": "Independent source-mode reassessment, principal appraisal",
+    "reader_projection_path": "t20/reading/source-mode-reassessment/ASSESSMENT.md",
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  }
+]

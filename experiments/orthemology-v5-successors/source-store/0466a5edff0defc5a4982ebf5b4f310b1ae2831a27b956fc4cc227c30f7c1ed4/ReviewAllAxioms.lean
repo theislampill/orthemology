@@ -1,0 +1,27 @@
+import HiddenChangeSemanticEndpoint
+#print axioms HiddenChange.policyLawful_iff_allHistoryLawful
+#print axioms HiddenChange.LawfulMeasurableWinner
+#print axioms HiddenChange.DeterministicWinner
+#print axioms HiddenChange.positive_compiled_semantics
+#print axioms HiddenChange.seeded_winner_has_positive
+#print axioms HiddenChange.positive_iff_deterministic_winner
+#print axioms HiddenChange.bound_positive_compiled_semantics
+#print axioms HiddenChange.seeded_winner_has_bound_positive
+#print axioms HiddenChange.bound_positive_iff_deterministic_winner
+#print axioms HiddenChange.bound_negative_excludes_seeded_winner
+#print axioms HiddenChange.bound_negative_iff_no_deterministic_winner
+#print axioms HiddenChange.signed_semantic_alternatives
+
+set_option pp.universes true
+#check @HiddenChange.policyLawful_iff_allHistoryLawful
+#check @HiddenChange.LawfulMeasurableWinner
+#check @HiddenChange.DeterministicWinner
+#check @HiddenChange.positive_compiled_semantics
+#check @HiddenChange.seeded_winner_has_positive
+#check @HiddenChange.positive_iff_deterministic_winner
+#check @HiddenChange.bound_positive_compiled_semantics
+#check @HiddenChange.seeded_winner_has_bound_positive
+#check @HiddenChange.bound_positive_iff_deterministic_winner
+#check @HiddenChange.bound_negative_excludes_seeded_winner
+#check @HiddenChange.bound_negative_iff_no_deterministic_winner
+#check @HiddenChange.signed_semantic_alternatives

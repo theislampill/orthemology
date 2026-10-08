@@ -1,0 +1,98 @@
+[
+  {
+    "source": "001:904",
+    "scan": "printed 232/PDF 310",
+    "issue": "Electronic العبادة والإلهية versus printed الغاية والإلهية",
+    "status": "variant verified; raw witness unchanged; interpretation uses edition-specific wording",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "001:1399",
+    "scan": "printed 343/PDF 421 note 8",
+    "issue": "Electronic omits إلا after ليس موقوفا. Print inserts bracketed إلا expressly for textual sense; not manuscript certainty.",
+    "status": "editorial supplementation recorded, not silently assimilated",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:210–211",
+    "scan": "printed 418/PDF 496 note 6 continued at 419/PDF 497",
+    "issue": "Sentence breaks after صحة النقل; source manuscript marginally says something lost; editor says expected discussion denies dependence of transmission validity on this reason.",
+    "status": "underlying gap acknowledged and not repaired",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:219",
+    "scan": "printed 420/PDF 498",
+    "issue": "Electronic بأن تجدد سبب versus print بلا تجدد سبب, important causal polarity",
+    "status": "corrected reading from permitted scan; raw transcript unchanged",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:219 Yahya b.Adi paragraph",
+    "scan": "printed 420/PDF 498 notes 1,3",
+    "issue": "Print confirms manuscript loss and interrupted syntax; editor cannot determine intended sense of inherited wording",
+    "status": "underlying gap unresolved; no decisive inference from broken clause",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:225–228",
+    "scan": "printed 421–422/PDF 499–500",
+    "issue": "Printed editor rearranges displaced paragraph and reads الرائي instead of electronic الذاتي; explicit original marginal lacuna",
+    "status": "editorial ordering and wording distinguished from transcription",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:482",
+    "scan": "printed 474/PDF 552",
+    "issue": "Electronic corruption compresses separate decisive-versus-probable and probable-versus-probable cases",
+    "status": "full rule directly read in scan; reason/category distinction established",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:594",
+    "scan": "printed 500/PDF 578 note 3",
+    "issue": "Electronic lacks ليست; print bracketed ليست sourced by editor to Darʾ1:148",
+    "status": "editorial supplementation recorded, not an invisible correction",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:1008",
+    "scan": "printed 604/PDF 682",
+    "issue": "Electronic repeats وجودها where print has عدمها in contrast between functioning and absent senses",
+    "status": "scan variant controls interpretation of analogy",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:1009",
+    "scan": "printed 604/PDF 682 note 3",
+    "issue": "Electronic منادى; editionmain مبادئ, with مبايي reported from manuscript and editor preferred conjecture",
+    "status": "edition-dependent correction labelled, original unchanged",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "002:842–843",
+    "scan": "intro 29/PDF 29",
+    "issue": "47→50 jump; 48–49 possibly lost or numbering error",
+    "status": "not silently renumbered",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  },
+  {
+    "source": "intro 29",
+    "scan": "Introduction page 29, PDF position 29, high-resolution control",
+    "issue": "boundary reviewer initially misread nominal/gaps/count; highres independent reviewer verifies 242 nominal; 48–49 and 73–78 absent; 234 extant",
+    "status": "corrected reviewer records with transparent supersession",
+    "scan_source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "scan_source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+  }
+]

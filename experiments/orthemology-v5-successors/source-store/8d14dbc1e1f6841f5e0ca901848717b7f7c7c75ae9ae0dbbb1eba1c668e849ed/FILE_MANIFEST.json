@@ -1,0 +1,75 @@
+{
+  "scope": "source-only portable public candidate",
+  "files": [
+    {
+      "path": "DEPENDENCY_OBJECTS.json",
+      "sha256": "bf38aee1b94f5a489cd0271dc40ef03e0dd7f40ebc52f703ef038a59a2ab1e88",
+      "bytes": 11911
+    },
+    {
+      "path": "PREDECESSOR_CLOSURE.json",
+      "sha256": "cee078b39cc253dba315757a25d8d648beea5ed0a79b3ce398f727baf9c01514",
+      "bytes": 21397
+    },
+    {
+      "path": "PROOF_SCOPE.json",
+      "sha256": "0280d6933c790b046be81f030eee2207e81289ae7560d482497305985f6942ed",
+      "bytes": 2167
+    },
+    {
+      "path": "README.md",
+      "sha256": "ff55a678cc16fa68bee9379c9f5bc11933f53608c53437da3c00217fca23bd4c",
+      "bytes": 3656
+    },
+    {
+      "path": "REVIEW_SUMMARY.md",
+      "sha256": "ce69f96a46eda0a6cb8710396f6e50cb2b0222a56922369325e8b1671ccfda94",
+      "bytes": 1274
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924",
+      "bytes": 3530
+    },
+    {
+      "path": "replay.py",
+      "sha256": "9a8a357927c4f7134cfabe899347543a540347055b52cad0f9c00207e1c77b81",
+      "bytes": 5440
+    },
+    {
+      "path": "src/GenericIdentityCarrierProbe.lean",
+      "sha256": "43e824a746ef624e8d783e89d62d3dc95108042cb311f931cd868cbe5cf76028",
+      "bytes": 7743
+    },
+    {
+      "path": "tests/AllDeclarationAxioms.lean",
+      "sha256": "b6843fb207a90f4f84b0bac428f66e9e2ee953f796b9fdc8af686b8175174586",
+      "bytes": 3697
+    },
+    {
+      "path": "tests/BeforeImplementation.lean",
+      "sha256": "61a7fbcb6076d71bf5d2c4fd02128cc76103acab57e53ba1af59dc0a1dd2a3ee",
+      "bytes": 316
+    },
+    {
+      "path": "tests/RejectCarrierPromotion.lean",
+      "sha256": "c3f78e7e06bdfcf714937ac00bd55969abbfa67a7e7e5d1aba8b04b9d88eb265",
+      "bytes": 361
+    },
+    {
+      "path": "tests/RejectCompilerCarrier.lean",
+      "sha256": "f57b2186ccf6738771c5cc8c384f41736fa8ee87617b1a8de31024ef4941adfd",
+      "bytes": 417
+    },
+    {
+      "path": "tests/RejectCurrentLaundering.lean",
+      "sha256": "e505bb117b0cf9a9b3a58cecf28be9c5e9896e0f758c41903f2cc5f4af961fe6",
+      "bytes": 409
+    },
+    {
+      "path": "tests/StatementContract.lean",
+      "sha256": "9889aaea30cd558de1535a6f066435d2d3536c724c72b1239cf4db2c171da9ba",
+      "bytes": 967
+    }
+  ]
+}

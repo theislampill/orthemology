@@ -1,0 +1,140 @@
+{
+  "status": "PASS_EXACT_FINITE_CONTROLS",
+  "retention_probability": "1/4",
+  "deletion_probability": "3/4",
+  "word00_law": {
+    "": "9/16",
+    "0": "3/8",
+    "00": "1/16"
+  },
+  "word01_law": {
+    "": "9/16",
+    "1": "3/16",
+    "0": "3/16",
+    "01": "1/16"
+  },
+  "one_trace_total_variation": "1/4",
+  "equal_prior_optimal_binary_success": "5/8",
+  "all_deterministic_rules_enumerated": 32,
+  "replicated_observation_checks": [
+    {
+      "copies": 1,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "9/16"
+    },
+    {
+      "copies": 2,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "81/256"
+    },
+    {
+      "copies": 3,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "729/4096"
+    },
+    {
+      "copies": 4,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "6561/65536"
+    },
+    {
+      "copies": 5,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "59049/1048576"
+    },
+    {
+      "copies": 6,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "531441/16777216"
+    },
+    {
+      "copies": 7,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "4782969/268435456"
+    },
+    {
+      "copies": 8,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "43046721/4294967296"
+    },
+    {
+      "copies": 9,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "387420489/68719476736"
+    },
+    {
+      "copies": 10,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "3486784401/1099511627776"
+    },
+    {
+      "copies": 11,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "31381059609/17592186044416"
+    },
+    {
+      "copies": 12,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "282429536481/281474976710656"
+    },
+    {
+      "copies": 13,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "2541865828329/4503599627370496"
+    },
+    {
+      "copies": 14,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "22876792454961/72057594037927936"
+    },
+    {
+      "copies": 15,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "205891132094649/1152921504606846976"
+    },
+    {
+      "copies": 16,
+      "total_variation": "1/4",
+      "empty_all_probability": "9/16",
+      "independent_empty_all_probability": "1853020188851841/18446744073709551616"
+    }
+  ],
+  "known_word_occurrence_masks": [
+    {
+      "mask": [
+        false,
+        true
+      ],
+      "conditional_probability": "1/2"
+    },
+    {
+      "mask": [
+        true,
+        false
+      ],
+      "conditional_probability": "1/2"
+    }
+  ],
+  "general_all_m_proof": "For m>=1, replication z -> (z,...,z) is injective and has first-coordinate recovery. Summing its pushforward masses therefore preserves TV exactly. Finite checks are illustrative; this argument handles every m.",
+  "limitations": [
+    "No OpenAI math repository theorem or decoder was executed.",
+    "Not a Lean kernel proof.",
+    "No actual transmission, participant data, source attribution or historical event was tested.",
+    "A common latent word is intended in iid trace reconstruction; only copying the same realised trace is replaced in the negative control."
+  ]
+}

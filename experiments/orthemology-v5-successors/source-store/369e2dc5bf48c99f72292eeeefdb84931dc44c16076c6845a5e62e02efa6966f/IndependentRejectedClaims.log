@@ -1,0 +1,47 @@
+tranche20/foundational-audit/joint-model-independent-review/IndependentRejectedClaims.lean:6:36: error: tactic 'decide' proved that the proposition
+  ∀ (e : E),
+    e = E.a ∨ e = E.b ∨ e = E.k →
+      ∀ (c : C),
+        e = E.a ∧ (c = C.cx ∨ c = C.cl) ∨
+            e = E.b ∧ c = C.cr ∨ e = E.k ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ e = E.o ∧ c = C.cz →
+          B.h = B.g ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ True ∧ c = C.cz
+is false
+tranche20/foundational-audit/joint-model-independent-review/IndependentRejectedClaims.lean:7:67: error: tactic 'decide' proved that the proposition
+  ∃ c,
+    (E.k = E.a ∧ (c = C.cx ∨ c = C.cl) ∨
+        E.k = E.b ∧ c = C.cr ∨ True ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ E.k = E.o ∧ c = C.cz) ∧
+      (match c with
+        | C.cx => B.x
+        | C.cl => B.l
+        | C.cr => B.r
+        | C.cm => B.m
+        | C.cz => B.z) =
+        B.h
+is false
+tranche20/foundational-audit/joint-model-independent-review/IndependentRejectedClaims.lean:9:24: error: tactic 'decide' proved that the proposition
+  ∃ s,
+    ∀ (e : E),
+      True →
+        ∀ (c : C),
+          e = E.a ∧ (c = C.cx ∨ c = C.cl) ∨
+              e = E.b ∧ c = C.cr ∨ e = E.k ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ e = E.o ∧ c = C.cz →
+            s = B.g ∧ (c = C.cx ∨ c = C.cl ∨ c = C.cr ∨ c = C.cm) ∨ s = B.h ∧ c = C.cz
+is false
+tranche20/foundational-audit/joint-model-independent-review/IndependentRejectedClaims.lean:10:43: error: tactic 'decide' proved that the proposition
+  (W.w2 = W.w0 ∨ W.w2 = W.w1) ∧
+    (B.x = B.g ∧
+        (Exercise.actX = Exercise.sayG ∨
+          Exercise.actX = Exercise.provideA ∨ Exercise.actX = Exercise.provideB ∨ Exercise.actX = Exercise.provideK) ∨
+      B.x = B.h ∧ Exercise.actX = Exercise.provideO ∨ True ∧ (Exercise.actX = Exercise.sayX ∨ True))
+is false
+tranche20/foundational-audit/joint-model-independent-review/IndependentRejectedClaims.lean:11:77: error: tactic 'decide' proved that the proposition
+  (W.w2 = W.w0 ∨ W.w2 = W.w1) ∧ Content.absent = Content.present ∨ True ∧ True →
+    (W.w2 = W.w0 ∨ W.w2 = W.w1) ∧
+      (B.x = B.g ∧ Token.v = Token.u ∧ Content.absent = Content.present ∨ True ∧ True ∧ True)
+is false
+tranche20/foundational-audit/joint-model-independent-review/IndependentRejectedClaims.lean:12:43: error: tactic 'decide' proved that the proposition
+  True ∧ R.rx = R.rg ∨
+    B.g = B.h ∧ R.rx = R.rh ∨
+      B.g = B.x ∧ True ∨
+        B.g = B.l ∧ R.rx = R.rl ∨ B.g = B.r ∧ R.rx = R.rr ∨ B.g = B.m ∧ R.rx = R.rm ∨ B.g = B.z ∧ R.rx = R.rz
+is false

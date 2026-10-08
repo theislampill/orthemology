@@ -1,0 +1,84 @@
+{
+  "schema": "seventeenth-post-inspection-lower-certificate-v1",
+  "evidence_kind": "Previously computed two-predicate aggregate certificate; no raw observations distributed.",
+  "post_inspection": true,
+  "prospective_status_inherited": false,
+  "raw_dataset_replay_in_this_package": false,
+  "source_record_sha256": "fbfe45319fb0e2f22409db7f6815aa6849b9e875a7faf595291f9a8e8a3921a6",
+  "certificate": {
+    "K": 75,
+    "R": 48,
+    "t": {
+      "numerator": "250499",
+      "denominator": "50400000"
+    },
+    "V": {
+      "numerator": "491181166337",
+      "denominator": "22861440000000000"
+    },
+    "M": {
+      "numerator": "1",
+      "denominator": "3600"
+    },
+    "checks": {
+      "A": {
+        "left": {
+          "numerator": "62749749001",
+          "denominator": "25401600000000"
+        },
+        "right": {
+          "numerator": "59432921126777",
+          "denominator": "22861440000000000"
+        },
+        "right_minus_left": {
+          "numerator": "2958147025877",
+          "denominator": "22861440000000000"
+        },
+        "passed": true
+      },
+      "B": {
+        "left": {
+          "numerator": "25",
+          "denominator": "324"
+        },
+        "right": {
+          "numerator": "1827685119939977",
+          "denominator": "22861440000000000"
+        },
+        "right_minus_left": {
+          "numerator": "63685119939977",
+          "denominator": "22861440000000000"
+        },
+        "passed": true
+      }
+    },
+    "status": "STRICT_LOWER_CERTIFICATE_PASS",
+    "strict_lower_bound": {
+      "numerator": "167",
+      "denominator": "1500"
+    },
+    "reference_level": {
+      "numerator": "1",
+      "denominator": "20"
+    },
+    "lower_bound_above_reference_margin": {
+      "numerator": "23",
+      "denominator": "375"
+    }
+  },
+  "scope": "Same frozen statistic and complete original Gamma grid; fair-product witness lower-bounds family suprema, not every individual law.",
+  "original_result_unchanged": true,
+  "external_theorem": "Tyurin arXiv:0912.0726v1 Theorem 7, independent non-iid bound weakened to C=1; sharper-constant proof not reproduced.",
+  "external_theorem_url": "https://arxiv.org/abs/0912.0726v1",
+  "normal_cdf_comparison": {
+    "argument": {
+      "numerator": "11",
+      "denominator": "10"
+    },
+    "strict_upper": {
+      "numerator": "53",
+      "denominator": "60"
+    }
+  },
+  "interpretation_limit": "No invariance, equivalence, power, cognitive mechanism, or historical assignment-law conclusion."
+}

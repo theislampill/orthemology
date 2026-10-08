@@ -1,0 +1,50 @@
+[
+  {
+    "path": ".github/workflows/build.yml",
+    "sha256": "755cf611b5ca1a5ea3aa08c0326be61b93e48ed50342bb79a74315f12fd21688"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "402cd9adbd7d9cba72ad6335679b567edac021cb855d6cffb6e8bc0df9e8e532"
+  },
+  {
+    "path": "Cli.lean",
+    "sha256": "7e4c8aac92c49ebeeaa94582ec501600a468bf8b292df830b4e896ee2ae2aed9"
+  },
+  {
+    "path": "Cli/Basic.lean",
+    "sha256": "8f436f55d22371e7e5d8dbd19a2407c3641526c2f7930c9155808ab67c97acd9"
+  },
+  {
+    "path": "Cli/Example.lean",
+    "sha256": "c6ed41a8e18c5ad3bbccff9d386652198a0f7296c00d4a6c94139483d931e767"
+  },
+  {
+    "path": "Cli/Extensions.lean",
+    "sha256": "91cd4f1a614216994a57503c8c9f4049a7793b91b2fc3055ff20ed23438ebe04"
+  },
+  {
+    "path": "Cli/Tests.lean",
+    "sha256": "e7517c5236dee85bb7b75f71ac2bed56f76b917c3a5f69933b7996e91cf1203a"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "f7e95706807e931782b6efd9a9d2789508a52423ad67b56ee7e5e324362d4aac"
+  },
+  {
+    "path": "README.md",
+    "sha256": "c9f4f9a5ed3cdb173bccd4715cd8523ad5d24e184fb6eb10e71704defda56a98"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "f608bac5ccb22b59292584eb7fb4497c327e780a17e7afb8d584ce5d79ad0b70"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "0d1707ac3b6a1bfa97e75010dd0b5f2d48a48248d5a16a1f5bb53b82e74d47f0"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+  }
+]

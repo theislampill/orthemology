@@ -1,0 +1,116 @@
+{
+  "status": "AUTHOR_PASS_AWAITING_INDEPENDENT_REVIEW",
+  "finished_utc": "2026-10-07T10:01:41.185608+00:00",
+  "scope": "Finite ordered-field length-two deletion-channel application, with exact rational fixtures. No upstream trace theorem/decoder, real-module replay, asymptotic convergence, historical source authenticity, authority or empirical validation.",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "dependency_mode": "Existing official pinned objects trusted and hash-bound, not rebuilt; no Lake/network/install.",
+  "source_hashes": {
+    "TraceControls.lean": "0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2",
+    "RationalFixtures.lean": "5593eb52e66142b99d7f592845fd92096583a3f6cb9fe273ffa306843ddbab6b",
+    "ReadbackAudit.lean": "0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c",
+    "ImportClosure.lean": "b9cb6fbaf5600b6d719189970e7d5e9b4e9775cec97b807a99c307cc2156608b",
+    "tests/Contract.lean": "52629f9272dd0add48d3147181afa580a92c787bb1ee243d0a1b1d9fc4098a59",
+    "tests/RejectedClaims.lean": "4876dc54600a3be1aeb9d9e110215aba97ea8a89df3427575e2289886b45b2e8"
+  },
+  "object_hashes": {
+    "TraceControls.olean": "a28c05ece4b496e1c14853f61d162424c3bf4e289fec203a0b2c1b7a627be79f",
+    "RationalFixtures.olean": "75ba6e34350d669798fbee9bfcaaf842c009e7e34e4d21e97d4ab06c3e00e27a"
+  },
+  "readback_theorems": 19,
+  "negative_claims_rejected": 4,
+  "imported_objects": 2157,
+  "axioms_observed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "readback_sha256": "71d8a7dbad45b57a6774b3843877a6883309415b3a048458e4e3e7f6418587bb",
+  "bindings_sha256": "5432858f98b84760c6005aec4a768507319ba146444ff25db65e41527bbc7a01",
+  "commands": [
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--version"
+      ],
+      "exit_code": 0,
+      "log": "version.log",
+      "log_sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "-o",
+        "tranche20/openai-math-study/deep/122/formal/verification-run03/objects/TraceControls.olean",
+        "tranche20/openai-math-study/deep/122/formal/TraceControls.lean"
+      ],
+      "exit_code": 0,
+      "log": "TraceControls.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "-o",
+        "tranche20/openai-math-study/deep/122/formal/verification-run03/objects/RationalFixtures.olean",
+        "tranche20/openai-math-study/deep/122/formal/RationalFixtures.lean"
+      ],
+      "exit_code": 0,
+      "log": "RationalFixtures.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/openai-math-study/deep/122/formal/tests/Contract.lean"
+      ],
+      "exit_code": 0,
+      "log": "contract-green.log",
+      "log_sha256": "567a0720d2dea21945f314e59433aa6f823e31e836e1c8959fd27437ebc2b726"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/openai-math-study/deep/122/formal/ReadbackAudit.lean"
+      ],
+      "exit_code": 0,
+      "log": "readback.log",
+      "log_sha256": "fdb40a12c7e2131c79949f292e1191b8201db46d671cf24d5caa2a66e5e6c893"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/openai-math-study/deep/122/formal/tests/RejectedClaims.lean"
+      ],
+      "exit_code": 1,
+      "log": "rejected.log",
+      "log_sha256": "dd3b6553b1ef4137bee544ba522d9a72f0ef11db48c4cd9f3d7dc4625371ed71"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/openai-math-study/deep/122/formal/ImportClosure.lean"
+      ],
+      "exit_code": 0,
+      "log": "imports.log",
+      "log_sha256": "fe4d2be8e48a79df2d1abfd38f8f5c1e21ddcad17ac7d1305d3bb94fc7df98e8"
+    }
+  ],
+  "red_contract": "Earlier empty-module missing-endpoint red log retained in logs/contract-red.log; not a mathematical negative result.",
+  "ownership": "General information principle inherited H-ICS/T9; this is selected application evidence.",
+  "new_upstream_science_admitted": false
+}

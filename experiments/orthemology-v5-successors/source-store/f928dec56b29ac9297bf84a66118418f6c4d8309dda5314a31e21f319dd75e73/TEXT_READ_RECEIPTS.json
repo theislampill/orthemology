@@ -1,0 +1,144 @@
+{
+  "scope_rule": "Fresh2026-10-07 targeted rereading only. Earlier zero-credit methodology core and sealed historical reading claims remain unchanged. File acquisition,search hits and mechanical counts are not continuous-reading credit.",
+  "receipts": [
+    {
+      "id": "dar9",
+      "source_path_input_name": "dar-islamicbook-016.txt",
+      "source_path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "source_sha256": "04cc1092235e0d92312ed5146f1f89c1bea866546a6c567318a77be9cf1b0963",
+      "range": [
+        600,
+        794
+      ],
+      "range_sha256": "2f179125a8bc0f3112c543b3c49b0419b192e4655328ed739beed811e887e2d3",
+      "receipt_input_name": "dar9-L0600-L0794.txt",
+      "receipt_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "scope": "new targeted direct continuous reread; no earlier period credit",
+      "completed_utc": "2026-10-07T17:59:02.143079+00:00"
+    },
+    {
+      "id": "saf1",
+      "source_path_input_name": "001.txt",
+      "source_path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "source_sha256": "c22b439759b0aad722662db678c9f311184a76c7a0feb43ed359684e4bf3229e",
+      "range": [
+        69,
+        149
+      ],
+      "range_sha256": "bb93fa16fd531df843646b86821bfc38373a18a82573526d98824fc11607c7f3",
+      "receipt_input_name": "saf1-L0069-L0149.txt",
+      "receipt_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "scope": "new targeted direct continuous reread; no earlier period credit",
+      "completed_utc": "2026-10-07T17:59:02.145594+00:00"
+    },
+    {
+      "id": "saf2",
+      "source_path_input_name": "002.txt",
+      "source_path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "source_sha256": "5d3c623f5daebc8910fb8683d5ea1df8c6780942e9e976ec7da840aa1bf08bbe",
+      "range": [
+        574,
+        636
+      ],
+      "range_sha256": "35facb0cd2bb02968252f567dbf9c4e361dff7959d08209ab4470b812e3b95e6",
+      "receipt_input_name": "saf2-L0574-L0636.txt",
+      "receipt_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "scope": "new targeted direct continuous reread; no earlier period credit",
+      "completed_utc": "2026-10-07T17:59:02.147571+00:00"
+    },
+    {
+      "id": "MF",
+      "source": "MF-SHAMELA and MF-ISLAMWEB",
+      "read_scope": "20:175–183 complete electronic continuous primary body,plus preceding opening paragraph at webL906;not all20:174",
+      "source_url": "https://islamweb.net/ar/library/content/22/2032/فصل-العلتين-لا-تكونان-مستقلتين-بحكم-واحد-حال-الاجتماع",
+      "web_line_range": [
+        906,
+        928
+      ],
+      "private_read_object_sha256": "8b767ddf0ca083c9469b01987f3c020eb08a1627e8fef0e3369f677572ec69a3",
+      "read_at_utc": "2026-10-07T18:11:00Z",
+      "credit": "new targeted reading only"
+    },
+    {
+      "id": "SF-WIKI-11",
+      "source": "SF-WIKI",
+      "source_url": "https://ar.wikisource.org/wiki/الصفدية/11",
+      "web_body_lines": [
+        93,
+        243
+      ],
+      "continuity": "All displayed body lines read in overlapping bounded windows;initial tool output ended early,so later ranges explicitly reopened;no missing body line",
+      "private_read_object_sha256": "786e73b6cc9c92bf81faa0cbaf158acf2db8980db144bd4728c7925c2c73fd1c",
+      "local_alignment": "SF-S002-L0695–0740 plusSF-S003-L0001–0091",
+      "read_at_utc": "2026-10-07T18:11:00Z",
+      "credit": "new contextual reread of previously studied work,no new historical witness"
+    },
+    {
+      "id": "SF-WIKI-12",
+      "source": "SF-WIKI",
+      "source_url": "https://ar.wikisource.org/wiki/الصفدية/12",
+      "web_body_lines": [
+        93,
+        277
+      ],
+      "continuity": "All displayed body lines read in overlapping bounded windows;initial tool output ended early,so later ranges explicitly reopened;no missing body line",
+      "private_read_object_sha256": "043265a40cc7ce9b328fc4517d808802a9eb907432b06b348ea056e946d92386",
+      "local_alignment": "SF-S003-L0092–0246",
+      "read_at_utc": "2026-10-07T18:11:00Z",
+      "credit": "new contextual reread of previously studied work,no new historical witness"
+    },
+    {
+      "id": "SF-SALIM-FINAL-BINDING",
+      "source_url": "https://islamhouse.com/read/ar/الصفدية-272837",
+      "metadata_line": 15,
+      "body_read_spans": [
+        {
+          "web_lines": [
+            415,
+            436
+          ],
+          "pages": "1:90–95"
+        },
+        {
+          "web_lines": [
+            2237,
+            2301
+          ],
+          "pages": "2:139–150"
+        },
+        {
+          "web_lines": [
+            2400,
+            2429
+          ],
+          "pages": "2:168–173"
+        }
+      ],
+      "boundary_only_spans": [
+        {
+          "web_lines": [
+            2071,
+            2078
+          ],
+          "pages": "2:111–112"
+        },
+        {
+          "web_lines": [
+            2467,
+            2481
+          ],
+          "pages": "2:180–181"
+        }
+      ],
+      "read_at_utc": "2026-10-07T18:20:00Z",
+      "qualification": "The stated body ranges were each displayed/read in full. Boundary probes add no whole-section second-edition reading credit. Page numbers are footers.",
+      "private_source_response_sha256s": {
+        "salim_meta.txt": "f8dc0cfa9509746112397791c725ec1fb62d5bcc6b8400a00cc0d4f6d86ef323",
+        "salim92.txt": "4181ca727ffa8b7f4f631cf4246c08f150027bdb1c2f30eaeec1777ef11f28ff",
+        "salim145.txt": "c678899c85be765b21567f8a22f648a5f69b9913e1e7d7dbd42d3740239f45c5",
+        "salim_wiki_bounds.txt": "1ca7f657f3d307ca60fa4a120557a02c100356c4687b36b857e08364191f691d",
+        "salim147_170.txt": "6ebe3e8cef4fa60487886f173455ced72ca0871d21c7e6b1c2945b8a6aca5bd2"
+      }
+    }
+  ]
+}

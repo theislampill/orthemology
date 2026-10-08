@@ -1,0 +1,26 @@
+{
+  "scope": "Mechanical check of logged displayed-window coverage and unchanged source hashes, not an independent comprehension or print collation certificate",
+  "results": [
+    {
+      "source": "014",
+      "first_line": 940,
+      "last_line": 956,
+      "missing_lines": [],
+      "source_hash_unchanged": true
+    },
+    {
+      "source": "015",
+      "first_line": 20,
+      "last_line": 802,
+      "missing_lines": [],
+      "source_hash_unchanged": true
+    },
+    {
+      "source": "016",
+      "first_line": 20,
+      "last_line": 1092,
+      "missing_lines": [],
+      "source_hash_unchanged": true
+    }
+  ]
+}

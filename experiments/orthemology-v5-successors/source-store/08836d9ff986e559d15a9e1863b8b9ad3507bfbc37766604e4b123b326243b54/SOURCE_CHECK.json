@@ -1,0 +1,18 @@
+{
+  "seal_sha256": "161989fec72e5cc231547378db4c7890f8b4e49e6fe77f220a81d97904eed1b2",
+  "sealed_files": 95,
+  "package_manifest_files": 94,
+  "sealed_paragraphs": 47,
+  "docx_and_xml_and_text_sources": [
+    "T17R",
+    "T17G",
+    "T19R"
+  ],
+  "external_sources": [
+    "Seventh-token-purpose",
+    "Grounded-attestation",
+    "Dar8-route-scope"
+  ],
+  "direct_docx_paragraph_comparison": "PASS",
+  "preserved_proposal_hashes": "PASS"
+}

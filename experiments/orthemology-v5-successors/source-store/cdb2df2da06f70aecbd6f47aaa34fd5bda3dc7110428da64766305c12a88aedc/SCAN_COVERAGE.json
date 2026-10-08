@@ -1,0 +1,380 @@
+{
+  "pdf_sha256": "2f12843b0c252fe097bbf602178a798f8a6a2f446a11238376eabe65e953a6b3",
+  "viewed_positions": 53,
+  "manuscript_plates_partially_deciphered": 21,
+  "scope": "Selected page images were inspected in the completed study; no new image reading is claimed by this selection. This is not complete PDF reading or whole-manuscript decipherment. Rendered but unviewed PDF positions 4–7 earn no credit.",
+  "receipts": [
+    {
+      "pdf_position_onebased": 1,
+      "image_sha256": "5efc02acd8c47b335eecc2079765a7b249087028a42e3e5b73f2c1cf402cf184",
+      "mode": "direct visual printed-page inspection",
+      "note": "Title/author/editor/volume 1/publishers identity read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 2,
+      "image_sha256": "9410af3fe3bbd44718d0f4a4f57710e513afdd99d655bbe05c01c5b48134358a",
+      "mode": "direct visual printed-page inspection",
+      "note": "Printed second-edition editorial addenda read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 3,
+      "image_sha256": "4fdb28b5ceacf0cc2ec66f4d2711b7d12d1c33be10a9c5557f44116c5a3d12d1",
+      "mode": "direct visual printed-page inspection",
+      "note": "Printed second-edition editorial addenda continuation read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 41,
+      "image_sha256": "a555932453c0264359e0dcf3ce7f99c86308e6e2080cd672811033dd7d899a2d",
+      "mode": "direct visual printed-page inspection",
+      "note": "Printed note continuation present in electronic I40, not omitted prose",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 42,
+      "image_sha256": "083c5480f96c3f359e88d08a546d2b6d102c9286040d89f8742c2b1a282db9a0",
+      "mode": "direct visual printed-page inspection",
+      "note": "Printed note continuation present in electronic I40, not omitted prose",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 82,
+      "image_sha256": "3eb6f8c4f3a6e079c9a58a39087dde5804936c18d3989242e8f4de5e46793b36",
+      "mode": "blank inspection",
+      "note": "Blank",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 83,
+      "image_sha256": "5f1f4b6e1ab4e19df30f4f4db1f56fbe60b1547de0df094ed1bf8ec3bc494faa",
+      "mode": "direct visual printed-page inspection",
+      "note": "Manuscript plates heading",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 84,
+      "image_sha256": "3eb6f8c4f3a6e079c9a58a39087dde5804936c18d3989242e8f4de5e46793b36",
+      "mode": "blank inspection",
+      "note": "Blank",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 85,
+      "image_sha256": "e963c2ccf4cda529db56b1bf181311b2f477064e64e8d81a92e0b1432665266e",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "D title: damaged/stamped notes partly unclear",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 86,
+      "image_sha256": "b504687d642facfd8a0522cdb4669e76f28764eff45ad62cd8d41aef227616c9",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "D opening: familiar preface mostly legible, local glyph uncertainty",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 87,
+      "image_sha256": "face7ffd5480a0feaa1cfda16c0c4e0292fd7e14862cf291c9780ff52f50e949",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "D ending: Ibn Bardis, 19 Shaaban 766, later readings partly unclear",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 88,
+      "image_sha256": "0113b9f30e3759aa113940ae1cc24e460c89ee59ca1cc438a4478c345ab2a139",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "Q title: very faded, partial only",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 89,
+      "image_sha256": "a78d8b273096526223217ca769d8bd472bc5ad14fbea60a1ca80753cfa33a812",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "Q opening: mostly legible, local uncertainty",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 90,
+      "image_sha256": "e02c3f8ea62cf46f7b450a5ca26930d53914215aa453a80b9af21f2579a88c05",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "Q ending/collation/margins partly unclear",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 91,
+      "image_sha256": "570e23734609765aeb5740bee8aaee3122962feafa44739dbfe101c60fe36f28",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "T ornate title/stamps partly unclear",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 92,
+      "image_sha256": "d510f70e088144f02c060cf1681a7d7a7c48171910ca15384f64ec96f0387e67",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "T opening examined, not every glyph certified",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 93,
+      "image_sha256": "92fa91c6d177b0a05cecceadc8a6e8ebae1b476ca46f111a49e49130f7443a7d",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "T ending, 3 Jumada I 889, marginal uncertainty",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 94,
+      "image_sha256": "da04bc3395f5eeddf568c0a1cfbbffab0626797df3c06e13cf8107746ea0fa43",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "H inverted triangular title examined",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 95,
+      "image_sha256": "92287febc9d7567e051c80f4c2b33fcc0d3d82726dae59a35d6023a62704193f",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "H opening examined, not every glyph certified",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 96,
+      "image_sha256": "68a401ab643a38c78d8ba0e1fa2b5283e933b9a388feeda15b65758e5dd0a877",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "H hourglass first-half colophon before need for sharia, marginal uncertainty",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 97,
+      "image_sha256": "0aa5770ec631dc4be04e27d8f41f739a08670dae196dca377b3c55a3bfd55cfe",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "N title/ownership crowded/faded",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 98,
+      "image_sha256": "d2347b1b31ff025ee0d279ad7b8072d028555bd0b3d00cfe04455ca6a9637366",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "N opening examined",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 99,
+      "image_sha256": "ba849b36ee1a4b6e82b670869be6a2d80050aaba612f50e2e45de716a17a4ecf",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "N first-half ending/collation 1296, faded notes",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 100,
+      "image_sha256": "0042b329edb732b810e19354fe1c695b9c85a839c0f4a5a07a75e2557add7919",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "Y dark title, limited decipherment",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 101,
+      "image_sha256": "b58f9cd0498c0325eac82c2e20eff57f1f75ff49478bd952edbc88f01b618331",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "Y dark opening, limited decipherment",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 102,
+      "image_sha256": "958c93b5a1f75601c85461a64c288a6ee3256c42c43df2fca452862bc8c6e778",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "Y dark ending, limited decipherment",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 103,
+      "image_sha256": "eb9b5423ad1149d9f1560b8e6755ed16ef2aa6409bdf071a8ccad4ac712dc247",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "S selected abridgment title examined",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 104,
+      "image_sha256": "0e7dc21046aaa886ab990fbd4bcfe4d1b933faaeda2ff0830eb5f1577cec5132",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "S selected abridgment opening examined",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 105,
+      "image_sha256": "79d938db12cfc00e8fd9cdf8aae1b8a675e3385f1aa69364d8c394a6b71e425d",
+      "mode": "partial manuscript-plate decipherment",
+      "note": "S very faded ending, limited decipherment",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 106,
+      "image_sha256": "20ff39a653f2971959d347716ae64c3ff3c47c642f235d408f8df48d49948b14",
+      "mode": "direct visual printed-page inspection",
+      "note": "Saada 1323 printed title fully read; Iraqi Alusi / Turkish manuscript sources",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 107,
+      "image_sha256": "3a1f23dba202a51cf67e8e2e677884670af94d279569f87f6ed05eb8f69b0127",
+      "mode": "direct visual printed-page inspection",
+      "note": "Saada printed final page 289 fully read; author ending, Ahmad 841 colophon, printing 1323",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 108,
+      "image_sha256": "a0156c9f52f75c6008f6a0f358bb15e62015f49ded6022892e93415dcb4f0aed",
+      "mode": "direct visual printed-page inspection",
+      "note": "Third 1440/2019, first Ibn Hazm imprint/ISBN read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 109,
+      "image_sha256": "c79789a73702d35e55e729236a474a23e52dcfb87ab3cf2bd9d4e45c4bdb8d2f",
+      "mode": "direct visual printed-page inspection",
+      "note": "Reviewers slip read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 110,
+      "image_sha256": "c891943558cad785a6fc1e148aab76a364da447cde9f4bc5f0d1652a9c8d5121",
+      "mode": "direct visual printed-page inspection",
+      "note": "Repeated first-volume title read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 111,
+      "image_sha256": "a0156c9f52f75c6008f6a0f358bb15e62015f49ded6022892e93415dcb4f0aed",
+      "mode": "direct visual printed-page inspection",
+      "note": "Repeated imprint read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 112,
+      "image_sha256": "d9b90f6ec78b9f2d4b04664229dbd084c2742dc131fc0de83eacbd65f719cff8",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 3 opening visually checked",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 646,
+      "image_sha256": "3cddc582452d9fde849a8c17ff080235a1cbce7f44627c945584a1c238f74570",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 537 electronic volume 1 ending checked",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 647,
+      "image_sha256": "e047bec33ec94499c8a1e5cfce4ed79464546095600cb6bc63a82d9feaeb8382",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 538 next page, no inserted volume 2 cover",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 648,
+      "image_sha256": "37839c64f43bfc552419a05d1867e88b45d70638e6f584b7ae29939170746e70",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 539 continuity checked",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 649,
+      "image_sha256": "77bb21176538de4da945a26b932752aed0426a4838715c0dfad6d580e7814af5",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 540 continuity checked",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 920,
+      "image_sha256": "45d3737c1aba046355232e99d248b7082a5083766a824b571c5e50fdd155e03f",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 811 whole printed page read: one-word blank and apparatus confirm inherited uncertainty; N variant reported, not supplied",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1280,
+      "image_sha256": "1698ecce7df6af588f4ee4090e9262280cdd9d2dcd26ecba101e75c223ccd09c",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1171 continuity checked",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1281,
+      "image_sha256": "d6daa49e29e6da5740c6762d0ab419d182989a60f4e68516604bf0601765268f",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1172 electronic volume 2 ending checked",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1282,
+      "image_sha256": "278b88d84fe7088d13cd0ca20f39aa04a66e74d57cfca1d1c4df1f6615da2b2f",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1173 next page, no inserted volume 3 cover",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1283,
+      "image_sha256": "d8e8c635767e0b870f146c318c7f4fd7d3c268df9d1d73fed4d881425fd4b7a5",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1174 continuity checked",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1704,
+      "image_sha256": "b3ecd48919b85c0adf13b420df7c4aafb347a412f14cb7c69d7372fab187e9bd",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1595 whole printed page read: apparatus confirms a 2.5-line blank in D probably reserved for extra reports",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1708,
+      "image_sha256": "60d6f6cf2081a78ee15cc59a7ddbd3fa5c3b5d0f5e379813d5a506022e4dcb22",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1599 whole printed page read: print too lacks apparent negation before يتعرض; uncorrected contextual defect",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1710,
+      "image_sha256": "04d6915d75c0b2af807a22926c883de2113293ba90a3fa8776e393bb660bae1d",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1601 authorial closing read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1711,
+      "image_sha256": "5d50ccdaff45c95c02a72386e2ac82169c7d57ac65541cee8a4568cfcec8975b",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1602 authorial closing read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1712,
+      "image_sha256": "5e4eaec6d18531d1aeb3611b5e3ba70e7a470ee1c38b55b4f27f1f855bf99215",
+      "mode": "direct visual printed-page inspection",
+      "note": "Main 1603 final prayer/ending read",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1713,
+      "image_sha256": "949ac716a854ef32b91c03aa62fc275b680e64b3daff26315d743039aea5dd07",
+      "mode": "blank inspection",
+      "note": "Blank after authorial ending",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1714,
+      "image_sha256": "542f914b545fc1cbd31bc8fdbda2e1baabadb989f208ee9e7d112c4dd0f7a3aa",
+      "mode": "direct visual printed-page inspection",
+      "note": "Ancillary index title, lexical/scientific divisions; no following index reading",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    },
+    {
+      "pdf_position_onebased": 1998,
+      "image_sha256": "5bc8816228cfa9badfd8159d7fbd75610f82ce21f6f2db7c8fe005b872eafa90",
+      "mode": "direct visual printed-page inspection",
+      "note": "Final index/contents page 1889 read only for endpoint",
+      "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+    }
+  ],
+  "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65"
+}

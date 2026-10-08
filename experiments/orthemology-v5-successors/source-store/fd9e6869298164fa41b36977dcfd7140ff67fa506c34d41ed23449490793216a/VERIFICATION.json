@@ -1,0 +1,211 @@
+{
+  "utc": "2026-10-07T12:25:29.564760+00:00",
+  "status": "passed",
+  "text_selections": 22,
+  "direct_images": 21,
+  "text_checks": [
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Darʾ VIII extraction paragraphs 396–422"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Darʾ IX subsection 016 lines 621–650"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Darʾ IX subsection 016 lines 700–739"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Darʾ IX subsection 016 lines 740–779"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Minhaj volume 2 local lines 100–110"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Minhaj volume 2 local lines 111–120"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Minhaj volume 3 local lines 236–247"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Minhaj volume 3 local lines 248–258"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Minhaj volume 3 local lines 259–267"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Minhaj volume 3 local lines 268–276"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Sawaiq subsection 002 lines 1159–1184"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Sawaiq subsection 002 lines 1196–1210"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Sawaiq subsection 002 lines 1335–1348"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Shifa electronic labels e49–e54"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Shifa electronic labels e143–e151"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Shifa electronic labels e205–e209"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Shifa electronic labels e219–e221"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Shifa electronic labels e231–e234"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Shifa electronic labels e304–e307"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "Jami sixth collection electronic labels E183–E186"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "T17 retained extracted report text, lines 24–99"
+    },
+    {
+      "source_hash_matches": true,
+      "extract_hash_matches": true,
+      "selection_locator": "T19 retained extracted report text, lines 19–117"
+    }
+  ],
+  "image_checks": [
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 87"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 88"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 89"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 90"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 91"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 92"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 93"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 94"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 95"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 96"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 97"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 98"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 99"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 100"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 179"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 180"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 181"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Jami al-Masail, sixth collection, previously retained full-page image; printed page 182"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original scan, PDF position 309"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original scan, PDF position 310"
+    },
+    {
+      "image_hash_matches": true,
+      "source_locator": "Al-Sawaiq al-mursala, received original scan, PDF position 311"
+    }
+  ],
+  "scope": "Identity and saved extraction consistency only. Not philosophical validity, manuscript authenticity, full-volume reading or a proof replay.",
+  "pending_evidence": [
+    "Miftah",
+    "Nubuwwat",
+    "Safadiyya"
+  ],
+  "projection_notice": "This preserves the original historical verification results. The present publication check verifies original seals and projection consistency only; it does not rerun source authoring tools, reread primary bodies or replay proofs."
+}

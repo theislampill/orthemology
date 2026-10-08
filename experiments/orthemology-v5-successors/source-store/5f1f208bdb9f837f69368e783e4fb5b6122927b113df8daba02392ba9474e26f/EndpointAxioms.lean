@@ -1,0 +1,34 @@
+import HiddenChangeFixedIndex
+import HiddenChangeTailTransport
+import HiddenChangeContamination
+#print axioms HiddenChange.adaptivePolicy_no_leakage
+#print axioms HiddenChange.adaptivePolicy_irreversible
+#print axioms HiddenChange.fixedPolicy_measurable
+#print axioms HiddenChange.adaptivePolicy_measurable
+#print axioms HiddenChange.fixedLaw_eq_stack
+#print axioms HiddenChange.adaptiveLaw_eq_stack
+#print axioms HiddenChange.adaptive_seed_prefix_probability
+#print axioms HiddenChange.adaptive_next_receipt_factor
+#print axioms HiddenChange.actual_eq_selected_fixed
+#print axioms HiddenChange.forget_adversary_seed
+#print axioms HiddenChange.adaptive_wins_of_fixed_indices
+#print axioms HiddenChange.fixed_adversary_law
+#print axioms HiddenChange.winsAll_iff_fixed_indices
+#print axioms HiddenChange.fixed_seed_prefix_probability
+#print axioms HiddenChange.fixed_prefix_probability
+#print axioms HiddenChange.fixed_none_eq_markov
+#print axioms HiddenChange.fixed_zero_eq_markov
+#print axioms HiddenChange.fixedConditionalLaw_eq_zero
+#print axioms HiddenChange.fixedConditionalLaw_eq_restart
+#print axioms HiddenChange.fixedConditionalLaw_eq_shifted_restart
+#print axioms HiddenChange.noChange_switchAt_prefix_tail_eq
+#print axioms HiddenChange.noChange_switchAt_exact_recurrent_eq
+#print axioms HiddenChange.historyFrequency_tendsto_append
+#print axioms HiddenChange.uniform_true_gate_of_pairwise_limits
+#print axioms HiddenChange.fixed_law_true_gate
+#print axioms HiddenChange.fixed_law_frequencies_tendsto
+#print axioms HiddenChange.fixed_law_wrong_row_eventually_rejected
+#print axioms HiddenChange.fixed_law_positive_successors_recur
+#print axioms HiddenChange.fixed_law_recurrent_counts
+#print axioms HiddenChange.fixed_law_rational_wrong_row_eventually_rejected
+#print axioms HiddenChange.fixed_law_rational_true_gate

@@ -1,0 +1,4 @@
+import BoundaryChecks
+open AnchoredSourceBridge AnchoredSourceBridge.Controls
+open AnchoredSourceBridge.Controls.ModalAbility IndependentAnchoredReview
+example : Admissible fictitious := by independent_finite

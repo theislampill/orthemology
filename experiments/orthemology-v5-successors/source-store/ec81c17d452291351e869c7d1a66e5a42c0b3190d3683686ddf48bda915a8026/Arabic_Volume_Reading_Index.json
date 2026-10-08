@@ -1,0 +1,1330 @@
+{
+  "schema_version": 1,
+  "title": "Arabic Volume Reading Index",
+  "authorship": "AI-authored by dot, an OpenAI assistant",
+  "edition": "Finite reading edition 1",
+  "as_of_utc": "2026-10-06T17:05:14Z",
+  "purpose": "Retrieve the works on their own terms, preserve broader topics, and revise interpretations through later passages.",
+  "locator_convention": "PDF positions are one-based in the identified source. Printed locators name the sequence; no global offset is assumed.",
+  "research_status_legend": {
+    "Relevant": "Pertinent to the current inquiry into explanation, agency, language, normativity or repair; not necessarily an adopted result.",
+    "Presently orthogonal": "Retained for the work’s broader argument and future retrieval; no present project inference is proposed."
+  },
+  "volumes": [
+    {
+      "id": "ASFAHANI_MINHAJ_1430",
+      "short_label": "A",
+      "author": "Ibn Taymiyya",
+      "title": "Sharh al-Aqidah al-Asbahaniyyah",
+      "editor": "Muhammad b. Awdah al-Sawi",
+      "edition": "Dar al-Minhaj, first-edition notice 1430 AH; catalogue line 1428 AH",
+      "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+      "pdf_pages": 938,
+      "coverage": {
+        "recorded_pdf_range": [
+          1,
+          938
+        ],
+        "main_printed_read_range": [
+          5,
+          728
+        ],
+        "main_text_end": {
+          "pdf_page": 828,
+          "printed_page": 728
+        },
+        "back_matter_pdf_range": [
+          829,
+          938
+        ],
+        "first_traversal_complete": true,
+        "first_traversal_qualified": true,
+        "fully_read_pages": 931,
+        "blank_pages": [
+          78,
+          830
+        ],
+        "partially_read_facsimile_pages": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ],
+        "unread_pdf_range": [],
+        "all_printed_text_read": true,
+        "every_glyph_read": false,
+        "complete_second_pass": false,
+        "reflective_status": "Selected reflection complete at this boundary; not a second complete traversal.",
+        "post_traversal_reflective_receipts": 33,
+        "substantive_reflective_unique_pages": 442,
+        "substantive_reflective_page_visits": 470,
+        "post_traversal_reflective_pdf_ranges": [
+          [
+            105,
+            125
+          ],
+          [
+            134,
+            255
+          ],
+          [
+            269,
+            286
+          ],
+          [
+            496,
+            568
+          ],
+          [
+            583,
+            600
+          ],
+          [
+            631,
+            815
+          ],
+          [
+            820,
+            824
+          ]
+        ],
+        "separate_earlier_comparison_pdf_pages": [
+          4,
+          143
+        ],
+        "partial_plate_reinspection_pages": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ],
+        "complete_original_composition_recovery_asserted": false
+      },
+      "entries": [
+        {
+          "id": "A01",
+          "title": "The creed and its commentator",
+          "printed_locator": "main pp. 5–8",
+          "pdf_locator": "105–108",
+          "source_voice": "Premodern transmitting prefacer; al-Asbahani; then Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A05",
+            "A27"
+          ]
+        },
+        {
+          "id": "A02",
+          "title": "True predication and fitting names",
+          "printed_locator": "main pp. 8–11; 426–431",
+          "pdf_locator": "108–111; 526–531",
+          "source_voice": "Ibn Taymiyya, with scriptural citations",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A22",
+            "A23",
+            "A28"
+          ]
+        },
+        {
+          "id": "A03",
+          "title": "Speaking and causing another to speak",
+          "printed_locator": "main pp. 11–25",
+          "pdf_locator": "111–125",
+          "source_voice": "Ibn Taymiyya, distinguishing positions he reports",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A19",
+            "A27"
+          ]
+        },
+        {
+          "id": "A04",
+          "title": "Reason testimony and differentiated attributes",
+          "printed_locator": "main pp. 25–43",
+          "pdf_locator": "125–143",
+          "source_voice": "Ibn Taymiyya; opponents’ positions identified within his replies",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A05",
+            "A23",
+            "D24",
+            "A32",
+            "A33"
+          ]
+        },
+        {
+          "id": "A05",
+          "title": "When an outline becomes an argument",
+          "printed_locator": "main pp. 43–47; 133; 138–139; 638–639",
+          "pdf_locator": "143–147; 233; 238–239; 738–739",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A06",
+            "A26",
+            "D30",
+            "A30",
+            "A32"
+          ]
+        },
+        {
+          "id": "A06",
+          "title": "Necessary existence and persistent dependence",
+          "printed_locator": "main pp. 47–62",
+          "pdf_locator": "147–162",
+          "source_voice": "Ibn Taymiyya, examining the base creed and alternative proofs",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A07",
+            "A10",
+            "A15"
+          ]
+        },
+        {
+          "id": "A07",
+          "title": "Correlation is not efficient causation",
+          "printed_locator": "main pp. 62–107; especially 93–95 and 103–104",
+          "pdf_locator": "162–207; especially 193–195 and 203–204",
+          "source_voice": "Ibn Taymiyya, with base-text and al-Razi arguments distinguished",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A10",
+            "A26"
+          ]
+        },
+        {
+          "id": "A08",
+          "title": "Knowledge worship and ultimate ends",
+          "printed_locator": "main pp. 107–116",
+          "pdf_locator": "207–216",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A09",
+            "A22",
+            "D22"
+          ]
+        },
+        {
+          "id": "A09",
+          "title": "Conflict between alleged equal creators",
+          "printed_locator": "main pp. 116–133; especially 121–123",
+          "pdf_locator": "216–233; especially 221–223",
+          "source_voice": "Ibn Taymiyya, with attributed religious polemic",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A10",
+            "A08"
+          ]
+        },
+        {
+          "id": "A10",
+          "title": "Complete production and a connected world",
+          "printed_locator": "main pp. 134–154",
+          "pdf_locator": "234–254",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A07",
+            "A12",
+            "A23"
+          ]
+        },
+        {
+          "id": "A11",
+          "title": "Perpetual activity and particular products",
+          "printed_locator": "main pp. 154–184; 295–303",
+          "pdf_locator": "254–284; 395–403",
+          "source_voice": "Ibn Taymiyya; opposing arguments marked as such",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A16",
+            "A17",
+            "A22"
+          ]
+        },
+        {
+          "id": "A12",
+          "title": "Real causes with conditions and impediments",
+          "printed_locator": "main pp. 166–184; especially 170–179",
+          "pdf_locator": "266–284; especially 270–279",
+          "source_voice": "Ibn Taymiyya, with scriptural examples",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A21",
+            "D02",
+            "D06"
+          ]
+        },
+        {
+          "id": "A13",
+          "title": "Voluntary response and temporal sequence",
+          "printed_locator": "main pp. 201–278; especially 256–263",
+          "pdf_locator": "301–378; especially 356–363",
+          "source_voice": "Quoted early authorities, then Ibn Taymiyya’s direct argument",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A22",
+            "A23"
+          ]
+        },
+        {
+          "id": "A14",
+          "title": "Narratives within the attribute discussion",
+          "printed_locator": "main pp. 263–278",
+          "pdf_locator": "363–378",
+          "source_voice": "Reports selected and interpreted by Ibn Taymiyya",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "A13",
+            "D08"
+          ]
+        },
+        {
+          "id": "A15",
+          "title": "Rival cosmologies and open alternatives",
+          "printed_locator": "main pp. 278–294; 303–334",
+          "pdf_locator": "378–394; 403–434",
+          "source_voice": "Ibn Taymiyya, with nested reports from al-Razi and other writers",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "A06",
+            "A26"
+          ]
+        },
+        {
+          "id": "A16",
+          "title": "Real succession without simultaneous parts",
+          "printed_locator": "main pp. 334–357",
+          "pdf_locator": "434–457",
+          "source_voice": "Ibn Taymiyya, replying to an account transmitted through al-Razi",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A11",
+            "A19"
+          ]
+        },
+        {
+          "id": "A17",
+          "title": "Perfection at the appropriate level",
+          "printed_locator": "main pp. 358–361; 507–508; 532–536",
+          "pdf_locator": "458–461; 607–608; 632–636",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A20",
+            "A22",
+            "A28"
+          ]
+        },
+        {
+          "id": "A18",
+          "title": "Reasoning and fair historical judgement",
+          "printed_locator": "main pp. 361–393; especially 365 and 383–388",
+          "pdf_locator": "461–493; especially 465 and 483–488",
+          "source_voice": "Ibn Taymiyya, with quoted doctrinal and historical testimony",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "A04",
+            "A05"
+          ]
+        },
+        {
+          "id": "A19",
+          "title": "Transmission through another voice",
+          "printed_locator": "main pp. 389–391",
+          "pdf_locator": "489–491",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A03",
+            "A16",
+            "A27"
+          ]
+        },
+        {
+          "id": "A20",
+          "title": "Concrete signs and qualified inference",
+          "printed_locator": "main pp. 393–397",
+          "pdf_locator": "493–497",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A06",
+            "A17",
+            "A26"
+          ]
+        },
+        {
+          "id": "A21",
+          "title": "Power will and created agency",
+          "printed_locator": "main pp. 397–408; supplementary text at 721–722",
+          "pdf_locator": "497–508; 821–822",
+          "source_voice": "Ibn Taymiyya, separating his position from reported alternatives",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A12",
+            "A22",
+            "D23"
+          ]
+        },
+        {
+          "id": "A22",
+          "title": "Wisdom timely goods and multiple benefits",
+          "printed_locator": "main pp. 409–431",
+          "pdf_locator": "509–531",
+          "source_voice": "Al-Razi’s objections, followed by Ibn Taymiyya’s replies",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A02",
+            "A13",
+            "A17",
+            "D27",
+            "A35"
+          ]
+        },
+        {
+          "id": "A23",
+          "title": "Meaningful negation and authorised response",
+          "printed_locator": "main pp. 432–443; especially 435",
+          "pdf_locator": "532–543; especially 535",
+          "source_voice": "Ibn Taymiyya, with scriptural and transmitted examples",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A13",
+            "A10",
+            "D23"
+          ]
+        },
+        {
+          "id": "A24",
+          "title": "Moral qualities and divine wisdom",
+          "printed_locator": "main pp. 444–450",
+          "pdf_locator": "544–550",
+          "source_voice": "Reported Muʿtazili argument and al-Razi objection; Ibn Taymiyya’s reply",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A22",
+            "D21",
+            "D25"
+          ]
+        },
+        {
+          "id": "A25",
+          "title": "Life and specification",
+          "printed_locator": "main pp. 450–452",
+          "pdf_locator": "550–552",
+          "source_voice": "Base creed followed by Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A06",
+            "A21"
+          ]
+        },
+        {
+          "id": "A26",
+          "title": "Inferential form does not replace premises",
+          "printed_locator": "main pp. 453–467",
+          "pdf_locator": "553–567",
+          "source_voice": "Ibn Taymiyya, examining logical forms and emanation arguments",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A05",
+            "A07",
+            "D05",
+            "D25"
+          ]
+        },
+        {
+          "id": "A27",
+          "title": "Speech bearer and voluntary exercise",
+          "printed_locator": "main pp. 468–508",
+          "pdf_locator": "568–608",
+          "source_voice": "Ibn Taymiyya; quoted schools and early authorities distinguished",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A03",
+            "A19",
+            "D05",
+            "A28",
+            "A38"
+          ]
+        },
+        {
+          "id": "A28",
+          "title": "Meaningful names and distinct perfection routes",
+          "printed_locator": "main pp. 508–537",
+          "pdf_locator": "608–637",
+          "source_voice": "Ibn Taymiyya, distinguishing quoted alternatives from his replies",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A02",
+            "A17",
+            "A27"
+          ]
+        },
+        {
+          "id": "A29",
+          "title": "Prophecy and more than extraordinary events",
+          "printed_locator": "main pp. 537–548",
+          "pdf_locator": "637–648",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A30",
+            "A34",
+            "A35"
+          ]
+        },
+        {
+          "id": "A30",
+          "title": "Cumulative evidence and learning from a guide",
+          "printed_locator": "main pp. 549–572",
+          "pdf_locator": "649–672",
+          "source_voice": "Ibn Taymiyya, interpreting reported inquiries and historical signs",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A05",
+            "A29",
+            "A32",
+            "A34"
+          ]
+        },
+        {
+          "id": "A31",
+          "title": "Experience description and fallible disclosure",
+          "printed_locator": "main pp. 573–620",
+          "pdf_locator": "673–720",
+          "source_voice": "Al-Ghazali’s quoted autobiography, followed by Ibn Taymiyya’s qualified response",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "A29",
+            "A32",
+            "A34"
+          ]
+        },
+        {
+          "id": "A32",
+          "title": "Qualified guidance and different paths to knowledge",
+          "printed_locator": "main pp. 620–657",
+          "pdf_locator": "720–757",
+          "source_voice": "Ibn Taymiyya, with nested critics and historical reports",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A04",
+            "A05",
+            "A31",
+            "A33",
+            "D27"
+          ]
+        },
+        {
+          "id": "A33",
+          "title": "Graded faith and judgements in different respects",
+          "printed_locator": "main pp. 657–676",
+          "pdf_locator": "757–776",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A04",
+            "A21",
+            "D13",
+            "D16",
+            "A12"
+          ]
+        },
+        {
+          "id": "A34",
+          "title": "Testimony character and independent agreement",
+          "printed_locator": "main pp. 676–695",
+          "pdf_locator": "776–795",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A19",
+            "A29",
+            "A30",
+            "A32"
+          ]
+        },
+        {
+          "id": "A35",
+          "title": "Wisdom and the authentication of messengers",
+          "printed_locator": "main pp. 695–711",
+          "pdf_locator": "795–811",
+          "source_voice": "Ibn Taymiyya’s positive account and separately reported rival routes",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A22",
+            "A24",
+            "A29",
+            "A38"
+          ]
+        },
+        {
+          "id": "A36",
+          "title": "General and detailed recognition of inimitability",
+          "printed_locator": "main pp. 712–715",
+          "pdf_locator": "812–815",
+          "source_voice": "Base creed followed by Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A21",
+            "A29",
+            "A35"
+          ]
+        },
+        {
+          "id": "A37",
+          "title": "Afterlife teaching and shared foundations",
+          "printed_locator": "main pp. 716–725",
+          "pdf_locator": "816–825",
+          "source_voice": "Base creed followed by Ibn Taymiyya",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "A01",
+            "A04",
+            "A38"
+          ]
+        },
+        {
+          "id": "A38",
+          "title": "Authority beyond the initial claim of office",
+          "printed_locator": "main pp. 725–728",
+          "pdf_locator": "825–828",
+          "source_voice": "Ibn Taymiyya",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A01",
+            "A27",
+            "A35",
+            "A37"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IBNQ_ALDAA_ISLAHI_1440",
+      "short_label": "D",
+      "author": "Ibn al-Qayyim",
+      "title": "al-Da wa-l-Dawa",
+      "editor": "Muhammad Ajmal al-Islahi",
+      "edition": "Dar Ataat al-Ilm / Dar Ibn Hazm, fourth edition 1440 AH / 2019",
+      "source_url": "https://saaid.org/book/open.php?book=18175",
+      "pdf_pages": 751,
+      "coverage": {
+        "recorded_pdf_range": [
+          1,
+          751
+        ],
+        "main_printed_read_range": [
+          3,
+          573
+        ],
+        "main_text_end": {
+          "pdf_page": 646,
+          "printed_page": 573
+        },
+        "back_matter_pdf_range": [
+          647,
+          751
+        ],
+        "first_traversal_complete": true,
+        "first_traversal_qualified": true,
+        "fully_read_pages": 733,
+        "blank_pages": [
+          75,
+          647,
+          649,
+          735
+        ],
+        "partially_read_facsimile_pages": [
+          58,
+          59,
+          60,
+          61,
+          62,
+          64,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73
+        ],
+        "unread_pdf_range": [],
+        "all_printed_text_read": true,
+        "every_glyph_read": false,
+        "complete_second_pass": false,
+        "reflective_status": "Selected reflection complete at this boundary; not a second complete traversal.",
+        "substantive_reflective_unique_pages": 343,
+        "substantive_reflective_page_visits": 343,
+        "substantive_reflective_clusters": 7,
+        "separate_index_verification_unique_pages": 34,
+        "substantive_reflective_pdf_ranges": [
+          [
+            76,
+            123
+          ],
+          [
+            150,
+            177
+          ],
+          [
+            205,
+            214
+          ],
+          [
+            236,
+            287
+          ],
+          [
+            293,
+            302
+          ],
+          [
+            330,
+            345
+          ],
+          [
+            356,
+            363
+          ],
+          [
+            394,
+            400
+          ],
+          [
+            405,
+            449
+          ],
+          [
+            486,
+            498
+          ],
+          [
+            503,
+            528
+          ],
+          [
+            536,
+            560
+          ],
+          [
+            581,
+            589
+          ],
+          [
+            601,
+            646
+          ]
+        ]
+      },
+      "entries": [
+        {
+          "id": "D01",
+          "title": "An unnamed affliction and a request for help",
+          "printed_locator": "main p. 3",
+          "pdf_locator": "76",
+          "source_voice": "Anonymous questioner and transmitting introduction",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D02",
+            "D15",
+            "D31"
+          ]
+        },
+        {
+          "id": "D02",
+          "title": "Remedy use receptivity and obstruction",
+          "printed_locator": "main pp. 4–8",
+          "pdf_locator": "77–81",
+          "source_voice": "Ibn al-Qayyim, with transmitted reports and personal testimony",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D03",
+            "D05",
+            "D18",
+            "A12"
+          ]
+        },
+        {
+          "id": "D03",
+          "title": "Mitigation persistence and abandonment",
+          "printed_locator": "main pp. 9–15",
+          "pdf_locator": "82–88",
+          "source_voice": "Ibn al-Qayyim, with devotional reports",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D05",
+            "D09",
+            "D18"
+          ]
+        },
+        {
+          "id": "D04",
+          "title": "Exemplary supplication in its own setting",
+          "printed_locator": "main pp. 16–25 opening",
+          "pdf_locator": "89–98 opening",
+          "source_voice": "Ibn al-Qayyim; transmitted prayers, stories and narrator comments",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D05",
+            "D08"
+          ]
+        },
+        {
+          "id": "D05",
+          "title": "Success does not isolate its cause",
+          "printed_locator": "main pp. 25–26 opening",
+          "pdf_locator": "98–99 opening",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D02",
+            "D04",
+            "D06",
+            "A27"
+          ]
+        },
+        {
+          "id": "D06",
+          "title": "Decree includes means",
+          "printed_locator": "main pp. 26–36 opening",
+          "pdf_locator": "99–109 opening",
+          "source_voice": "Reported objections followed by Ibn al-Qayyim’s answer",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D02",
+            "D23",
+            "A12"
+          ]
+        },
+        {
+          "id": "D07",
+          "title": "Presumption and graded repair",
+          "printed_locator": "main pp. 36–50; 290",
+          "pdf_locator": "109–123; 363",
+          "source_voice": "Ibn al-Qayyim, separating rationalizations from replies",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D09",
+            "D15",
+            "D21"
+          ]
+        },
+        {
+          "id": "D08",
+          "title": "Warning narratives and interpersonal rights",
+          "printed_locator": "main pp. 51–76; 87–98 opening",
+          "pdf_locator": "124–149; 160–171 opening",
+          "source_voice": "Scriptural, prophetic, Companion and ascetic reports selected by Ibn al-Qayyim",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D25",
+            "D28"
+          ]
+        },
+        {
+          "id": "D09",
+          "title": "Worldly outcomes attention and hope",
+          "printed_locator": "main pp. 77–98 opening",
+          "pdf_locator": "150–171 opening",
+          "source_voice": "Ibn al-Qayyim, with scriptural and reported examples",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D03",
+            "D10",
+            "D14"
+          ]
+        },
+        {
+          "id": "D10",
+          "title": "Sin and narrated social consequences",
+          "printed_locator": "main pp. 98–132 opening",
+          "pdf_locator": "171–205 opening",
+          "source_voice": "Ibn al-Qayyim’s framing with scriptural history and many reported voices",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D09",
+            "D12",
+            "D19"
+          ]
+        },
+        {
+          "id": "D11",
+          "title": "Habit disposition and diminished agency",
+          "printed_locator": "main pp. 132–157 opening; 212–220 opening",
+          "pdf_locator": "205–230 opening; 285–293 opening",
+          "source_voice": "Ibn al-Qayyim, with poems and cautionary reports",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D15",
+            "D16",
+            "D27",
+            "D29"
+          ]
+        },
+        {
+          "id": "D12",
+          "title": "Environmental blessing and causal language",
+          "printed_locator": "main pp. 157–163 opening",
+          "pdf_locator": "230–236 opening",
+          "source_voice": "Ibn al-Qayyim, interpreting scripture and earlier reports",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D09",
+            "D10",
+            "D14"
+          ]
+        },
+        {
+          "id": "D13",
+          "title": "Moral protectiveness genuine excuses and rank",
+          "printed_locator": "main pp. 163–177",
+          "pdf_locator": "236–250",
+          "source_voice": "Ibn al-Qayyim; reported interpretations clearly distinguished",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D09",
+            "D15",
+            "D29"
+          ]
+        },
+        {
+          "id": "D14",
+          "title": "Burdens blessing and lived time",
+          "printed_locator": "main pp. 178–204",
+          "pdf_locator": "251–277",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D09",
+            "D23",
+            "D27",
+            "D32",
+            "D33"
+          ]
+        },
+        {
+          "id": "D15",
+          "title": "Restoration can return above or below",
+          "printed_locator": "main pp. 205–212 opening",
+          "pdf_locator": "278–285 opening",
+          "source_voice": "Ibn Taymiyya’s reported judgement followed by Ibn al-Qayyim’s explanation",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D07",
+            "D11",
+            "D29"
+          ]
+        },
+        {
+          "id": "D16",
+          "title": "Discerning well and acting well",
+          "printed_locator": "main pp. 220–224",
+          "pdf_locator": "293–297",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D11",
+            "D17",
+            "D27"
+          ]
+        },
+        {
+          "id": "D17",
+          "title": "The heart and its available supports",
+          "printed_locator": "main pp. 225–243 opening",
+          "pdf_locator": "298–316 opening",
+          "source_voice": "Ibn al-Qayyim, including extended personified adversarial speech",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D16",
+            "D18",
+            "D28"
+          ]
+        },
+        {
+          "id": "D18",
+          "title": "Remembering the self and three kinds of care",
+          "printed_locator": "main pp. 172–174; 243–258 opening",
+          "pdf_locator": "245–247; 316–331 opening",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D02",
+            "D03",
+            "D17"
+          ]
+        },
+        {
+          "id": "D19",
+          "title": "Historical penalties and different kinds of repair",
+          "printed_locator": "main pp. 258–267 opening",
+          "pdf_locator": "331–340 opening",
+          "source_voice": "Ibn al-Qayyim, with reported juristic differences",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D25",
+            "D30"
+          ]
+        },
+        {
+          "id": "D20",
+          "title": "Protection guidance and the limits of metaphor",
+          "printed_locator": "main pp. 268–286",
+          "pdf_locator": "341–359",
+          "source_voice": "Ibn al-Qayyim, with scriptural interpretations and reports",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D16",
+            "D18",
+            "D21"
+          ]
+        },
+        {
+          "id": "D21",
+          "title": "Degrees of wrongdoing and their purposes",
+          "printed_locator": "main pp. 287–296 opening",
+          "pdf_locator": "360–369 opening",
+          "source_voice": "Ibn al-Qayyim, distinguishing opposing criteria from his resolution",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D07",
+            "D24",
+            "D25",
+            "A24"
+          ]
+        },
+        {
+          "id": "D22",
+          "title": "Creator acknowledgement and exclusive worship",
+          "printed_locator": "main pp. 296–318 opening",
+          "pdf_locator": "369–391 opening",
+          "source_voice": "Ibn al-Qayyim, with reported objections and confessional classifications",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D23",
+            "A08",
+            "A09",
+            "D32",
+            "D34"
+          ]
+        },
+        {
+          "id": "D23",
+          "title": "Mediation without divine deficiency",
+          "printed_locator": "main pp. 319–329 opening; compare 28–35 and 270–271",
+          "pdf_locator": "392–402 opening; compare 101–108 and 343–344",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D06",
+            "D14",
+            "D22",
+            "A23"
+          ]
+        },
+        {
+          "id": "D24",
+          "title": "False attribution and mistaken conviction",
+          "printed_locator": "main pp. 329–332 opening",
+          "pdf_locator": "402–405 opening",
+          "source_voice": "Ibn al-Qayyim, with attributed sayings",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D16",
+            "D21",
+            "A04"
+          ]
+        },
+        {
+          "id": "D25",
+          "title": "Distinct rights and qualified resemblance",
+          "printed_locator": "main pp. 332–345 opening",
+          "pdf_locator": "405–418 opening",
+          "source_voice": "Ibn al-Qayyim; reported dispute and Ibn Taymiyya’s view distinguished",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D19",
+            "D21",
+            "A26",
+            "D35"
+          ]
+        },
+        {
+          "id": "D26",
+          "title": "Four entrances into conduct",
+          "printed_locator": "main pp. 345–353 opening; 375–376",
+          "pdf_locator": "418–426 opening; 448–449",
+          "source_voice": "Ibn al-Qayyim, with reports and poetry",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D17",
+            "D27",
+            "D28"
+          ]
+        },
+        {
+          "id": "D27",
+          "title": "Uninvited thoughts and fitting reflection",
+          "printed_locator": "main pp. 353–363 opening; especially 360–363",
+          "pdf_locator": "426–436 opening; especially 433–436",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D11",
+            "D14",
+            "D16",
+            "D26",
+            "A22",
+            "D39"
+          ]
+        },
+        {
+          "id": "D28",
+          "title": "Speech and silence each have risks",
+          "printed_locator": "main pp. 363–375",
+          "pdf_locator": "436–448",
+          "source_voice": "Ibn al-Qayyim, with transmitted admonitions",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D17",
+            "D24",
+            "D26"
+          ]
+        },
+        {
+          "id": "D29",
+          "title": "Repentance qualifies severe rhetoric",
+          "printed_locator": "main pp. 377–392 opening; especially 384–385",
+          "pdf_locator": "450–465 opening; especially 457–458",
+          "source_voice": "Ibn al-Qayyim; reported disputes and an al-Ishbili quotation",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D13",
+            "D15",
+            "D30",
+            "D37",
+            "D38",
+            "D39"
+          ]
+        },
+        {
+          "id": "D30",
+          "title": "Historical penalties and the limits of shared names",
+          "printed_locator": "main pp. 392–413 body",
+          "pdf_locator": "465–486 body",
+          "source_voice": "Three reported juristic positions; Ibn al-Qayyim’s developing replies",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D19",
+            "D29",
+            "A05",
+            "D31"
+          ]
+        },
+        {
+          "id": "D31",
+          "title": "The renewed question and positive prevention",
+          "printed_locator": "main pp. 413 end–423",
+          "pdf_locator": "486 end–496",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D01",
+            "D16",
+            "D26",
+            "D32"
+          ]
+        },
+        {
+          "id": "D32",
+          "title": "Ultimate love and ordinary affection",
+          "printed_locator": "main pp. 424–446",
+          "pdf_locator": "497–519",
+          "source_voice": "Ibn al-Qayyim, with reports and poetry",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D14",
+            "D22",
+            "D31",
+            "D38",
+            "D39"
+          ]
+        },
+        {
+          "id": "D33",
+          "title": "Active restraint and immediate or lasting goods",
+          "printed_locator": "main pp. 447–463",
+          "pdf_locator": "520–536",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D09",
+            "D14",
+            "D27",
+            "D32",
+            "D37"
+          ]
+        },
+        {
+          "id": "D34",
+          "title": "Love cosmic motion and good order",
+          "printed_locator": "main pp. 464–482",
+          "pdf_locator": "537–555",
+          "source_voice": "Ibn al-Qayyim, with a separately attributed interpretation from his teacher",
+          "research_status": "Relevant",
+          "related_entries": [
+            "A10",
+            "D22",
+            "D23",
+            "D32"
+          ]
+        },
+        {
+          "id": "D35",
+          "title": "Competing pressures and the rights of others",
+          "printed_locator": "main p. 475; pp. 482–507",
+          "pdf_locator": "548; 555–580",
+          "source_voice": "Ibn al-Qayyim, with scriptural interpretation, poetry and cautionary stories",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D25",
+            "D27",
+            "D31",
+            "D39"
+          ]
+        },
+        {
+          "id": "D36",
+          "title": "The long affirmative case belongs to an interlocutor",
+          "printed_locator": "main pp. 508–532 opening",
+          "pdf_locator": "581–605 opening",
+          "source_voice": "An explicitly introduced interlocutor, with nested literary speakers",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D37",
+            "D38",
+            "D40"
+          ]
+        },
+        {
+          "id": "D37",
+          "title": "The reply distinguishes object conduct and pleasure",
+          "printed_locator": "main pp. 532–552 opening",
+          "pdf_locator": "605–625 opening",
+          "source_voice": "Ibn al-Qayyim replying to the interlocutor",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D29",
+            "D32",
+            "D33",
+            "D36",
+            "D38"
+          ]
+        },
+        {
+          "id": "D38",
+          "title": "Marital love and the limits of intervention",
+          "printed_locator": "main pp. 552–565 opening",
+          "pdf_locator": "625–638 opening",
+          "source_voice": "Ibn al-Qayyim, with reported cases and an exegetical reply",
+          "research_status": "Presently orthogonal",
+          "related_entries": [
+            "D32",
+            "D36",
+            "D37",
+            "D39"
+          ]
+        },
+        {
+          "id": "D39",
+          "title": "Involuntary feeling and separate classifications",
+          "printed_locator": "main pp. 565–568 opening",
+          "pdf_locator": "638–641 opening",
+          "source_voice": "Ibn al-Qayyim",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D27",
+            "D32",
+            "D35",
+            "D38",
+            "D40"
+          ]
+        },
+        {
+          "id": "D40",
+          "title": "The ending tests the report used in the objection",
+          "printed_locator": "main pp. 568–573",
+          "pdf_locator": "641–646",
+          "source_voice": "Ibn al-Qayyim, citing report critics and offering his own conclusion",
+          "research_status": "Relevant",
+          "related_entries": [
+            "D04",
+            "D36",
+            "D39"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UTHAYMIN_WASITIYYA_1421_V1",
+      "short_label": "W",
+      "author": "Ibn Uthaymin",
+      "title": "Sharh al-Aqida al-Wasitiyya, volume 1",
+      "edition": "Dar Ibn al-Jawzi, sixth edition, Jumada I 1421 AH",
+      "source_url": "https://download.ilmussalaf.com/Books/Aqeedatul-Waasitiyah-Uthaimeen.pdf",
+      "pdf_pages": 896,
+      "coverage": {
+        "selected_original_pdf_range": [
+          1,
+          484
+        ],
+        "recorded_pdf_range": [
+          1,
+          484
+        ],
+        "main_text_end": {
+          "printed_page": 461,
+          "pdf_page": 464
+        },
+        "contents_pdf_range": [
+          466,
+          483
+        ],
+        "first_traversal_complete": true,
+        "first_traversal_qualified": true,
+        "fully_read_text_pages": 478,
+        "blank_pages": [
+          6,
+          19,
+          39,
+          465,
+          484
+        ],
+        "cover_with_local_uncertainty": [
+          1
+        ],
+        "unselected_volume2_pdf_range": [
+          485,
+          896
+        ],
+        "volume2_read": false,
+        "complete_second_pass": false,
+        "selected_reflective_reread_unique_pages": 343,
+        "selected_reflective_reread_receipts": 364,
+        "selected_reflective_reread_complete": true,
+        "all_work_read": false
+      },
+      "index_representation": "Bibliography and coverage only; interpretive pointers appear only in the companion DOCX."
+    }
+  ],
+  "representation": "Bibliographic metadata, reading coverage, source voices and navigable locators; prose synthesis is in the companion DOCX."
+}

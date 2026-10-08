@@ -1,0 +1,307 @@
+{
+  "schema": "t20-successor-report-document-qa-v2",
+  "created_at_utc": "2026-10-07T16:39:49.229451+00:00",
+  "disposition": "PASS_EXACT_TEXT_LINKS_NATIVE_LISTS_AND_ALL_PAGE_RENDER",
+  "source": {
+    "historical_original_identity": {
+      "record_name": "REPORT_v2.md",
+      "sha256": "067a2a085e8c4a5ec837c8d17869ade90618b8b5a4d20b562a3e3c32f6e5605e",
+      "bytes": 53358
+    },
+    "included_record": {
+      "owner_archive_path": "t20/reports/REPORT_v2.md",
+      "sha256": "067a2a085e8c4a5ec837c8d17869ade90618b8b5a4d20b562a3e3c32f6e5605e",
+      "bytes": 53358
+    },
+    "original_body_included_exactly": true,
+    "identity_relation": "Historical original and included record are explicitly distinguished; exact document/source bodies retain the same digest, while public QA projections have their own digest."
+  },
+  "document": {
+    "historical_original_identity": {
+      "record_name": "Orthemology_Twentieth_Research_Final_v2_20261007.docx",
+      "sha256": "7b10f4433974c08971f892d8ab7781aaae561e9b52b8e5b5c050feff2fc36f2f",
+      "bytes": 57198
+    },
+    "included_record": {
+      "owner_archive_path": "t20/reports/Orthemology_Twentieth_Research_Final_v2_20261007.docx",
+      "sha256": "7b10f4433974c08971f892d8ab7781aaae561e9b52b8e5b5c050feff2fc36f2f",
+      "bytes": 57198
+    },
+    "original_body_included_exactly": true,
+    "identity_relation": "Historical original and included record are explicitly distinguished; exact document/source bodies retain the same digest, while public QA projections have their own digest."
+  },
+  "source_finalisation": {
+    "historical_original_identity": {
+      "record_name": "V2_SOURCE_FINALISATION.json",
+      "sha256": "fead11ad49aa577737774262dee587f121290e75259390e732a8b1aba8217eba",
+      "bytes": 663
+    },
+    "original_body_included": false
+  },
+  "source_review": {
+    "historical_original_identity": {
+      "record_name": "REPORT_GUIDE_V2_READBACK.json",
+      "sha256": "4c25f7bea815e6bb09c5c98c942ba7e1132feec1d98b918b476277d887c30d2e",
+      "bytes": 6967
+    },
+    "included_record": {
+      "owner_archive_path": "t20/reports/REPORT_GUIDE_V2_READBACK.json",
+      "sha256": "f08aceaf869f487af3c8859cafc66c86b3653bf48454ca1fc0eda7a62e374350",
+      "bytes": 17333
+    },
+    "original_body_included_exactly": false,
+    "identity_relation": "Historical original and included record are explicitly distinguished; exact document/source bodies retain the same digest, while public QA projections have their own digest."
+  },
+  "content_qa": {
+    "historical_original_identity": {
+      "record_name": "REPORT_v2_CONTENT_QA.json",
+      "sha256": "6fad7b02f1902aff73c84a799b0ec2597ac0ca23723fd24784427bd43e50f0f4",
+      "bytes": 2180
+    },
+    "original_body_included": false
+  },
+  "build_receipt": {
+    "historical_original_identity": {
+      "record_name": "REPORT_v2_BUILD_RECEIPT.json",
+      "sha256": "ea5a86bf6f8ab47a5599077e06b4f4f4ef2aecf9af5f7a5b9d0f56e84a0f1e96",
+      "bytes": 676
+    },
+    "original_body_included": false
+  },
+  "authored_records_exact": 140,
+  "native_numbered_items": 12,
+  "relative_references_as_exact_labels_and_literal_paths": 9,
+  "pages": [
+    {
+      "page": 1,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-1.png",
+        "sha256": "984b03d2b5a7b1ffe5162651e7449401916162ed8b672d28ae77ace191a28859",
+        "bytes": 501627
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 2,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-2.png",
+        "sha256": "c5edee6068f8c3f97912a2e06f87ff5c0a6ae783b5108f8419350c269be8f95c",
+        "bytes": 483344
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 3,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-3.png",
+        "sha256": "19d6fd0ce902882973625fdc0b00d88e849cebc60775c99a1a4f2bf297c916b7",
+        "bytes": 485650
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 4,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-4.png",
+        "sha256": "03ffd30f9c8f1222f40a7e3bc3bebb0b48ada459ff1b39b46f1b53978cefc4f0",
+        "bytes": 517517
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 5,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-5.png",
+        "sha256": "0f76e1b09fcdc39851b0d9d7deac90957093b5567c6c2d231364e578e2c534a3",
+        "bytes": 557532
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 6,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-6.png",
+        "sha256": "36acb4fe0cd836d232e99670eff475f89670ffe6f97198af8dc4b7877f036dbe",
+        "bytes": 546459
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 7,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-7.png",
+        "sha256": "02c4c6d37df8cf1b069d89bf931f19ea27255132fbe363da2d68e74352415763",
+        "bytes": 496465
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 8,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-8.png",
+        "sha256": "9248677136b4ab2fe943ec86257fa6a327e2707782c91e23c3f928977522e2f6",
+        "bytes": 480090
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 9,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-9.png",
+        "sha256": "69944315adbda251f83715ff202cee3535cd105e8156788604f0ed1bf26a80a3",
+        "bytes": 506082
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 10,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-10.png",
+        "sha256": "d1a20cd3d1ace8ef417d73d4798c82bb7787cb0109eaf5d268c66c7ae671d19b",
+        "bytes": 586829
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 11,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-11.png",
+        "sha256": "6a68c5b23eadba0fe5030d30a3cc2f6330c8b766f4bcad8216cc8bc8bfbb9c97",
+        "bytes": 521696
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 12,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-12.png",
+        "sha256": "3599a13910292303be7cf14f95b9c644f377260b81cc023cef9994008b2d8bfa",
+        "bytes": 536627
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 13,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-13.png",
+        "sha256": "d6138932dc418ff6905eca754b78f8bff8dd6262c8af69dd767a89965af3949a",
+        "bytes": 539198
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 14,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-14.png",
+        "sha256": "0678abcef32e26f4bf38837220867b6a9de096c69eae570d0b864b63e951fec1",
+        "bytes": 389810
+      },
+      "original_body_included": false
+    }
+  ],
+  "page_count": 14,
+  "formatting_revision_required": false,
+  "source_edits": false,
+  "science_runs": false,
+  "historical_v1_document_retained": {
+    "historical_original_identity": {
+      "record_name": "Orthemology_Twentieth_Research_Final_v1_20261007.docx",
+      "sha256": "5bf9786c480649ff254888e1f6c94bb7306c485f9acd7f485b65049c545ab38e",
+      "bytes": 53016
+    },
+    "included_record": {
+      "owner_archive_path": "t20/reports/Orthemology_Twentieth_Research_Final_v1_20261007.docx",
+      "sha256": "5bf9786c480649ff254888e1f6c94bb7306c485f9acd7f485b65049c545ab38e",
+      "bytes": 53016
+    },
+    "original_body_included_exactly": true,
+    "identity_relation": "Historical original and included record are explicitly distinguished; exact document/source bodies retain the same digest, while public QA projections have their own digest."
+  },
+  "acceptance_scope": "Document fidelity, typography and rendering only. Does not extend scientific or publication acceptance.",
+  "original_document_record_sha256": "79afb007eedb543c412e82561de503c7007f92defc0962cccfc3238d649f3b00",
+  "qa_attribution": "Author-reported complete document fidelity and page inspection. Curation rehashes all bound inputs and final page images and scans document XML; it claims no additional visual review, source reading or science execution."
+}

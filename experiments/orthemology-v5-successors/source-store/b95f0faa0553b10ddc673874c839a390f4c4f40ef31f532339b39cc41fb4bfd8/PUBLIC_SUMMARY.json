@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "status": "PASS_INDEPENDENTLY_REVIEWED_HIDDEN_CHANGE_CACHE_PROVISIONING",
+  "qualified_utc": "2026-10-06T06:07:57.913976+00:00",
+  "scope": "Fresh isolated official-cache acquisition to the unchanged hidden-change dependency inventory, using clean local clones of the verified nine official source revisions and the already verified official Lean 4.19.0 toolchain.",
+  "consumer_base_manifest_sha256": "9f2a0f116f90fc4189faacc79d5b7c02116e1d36735cc2cdffe4f9117406de95",
+  "recipe_manifest_sha256": "df2921321ea700cc351edd5f24a14756e2f0c04adfb702ab7c9d3e549ab12e0d",
+  "independent_review_receipt_sha256": "77e77089ba276b1b306fe63fa8b4c1715a1210fa737bed4d3eee67dd1c71b29f",
+  "fresh_Cache_tooling_objects": 5,
+  "official_cached_objects": 6641,
+  "exact_original_object_names_sizes_sha256_verified": 6646,
+  "source_repositories_verified": 9,
+  "tracked_source_files_verified": 7507,
+  "toolchain_files_rechecked": 6,
+  "sole_official_cache_invocation": true,
+  "acquisition_elapsed_seconds": 719.1209217630021,
+  "acquisition_bound_seconds": 1800,
+  "completed_archives": 6641,
+  "partial_archives": 0,
+  "fresh_import_Mathlib_smoke": true,
+  "ProofWidgets_prerequisite": {
+    "tag": "v0.0.57",
+    "commit": "c4919189477c3221e6a204008998b0d724f49904",
+    "official_release_url": "https://github.com/leanprover-community/ProofWidgets4/releases/download/v0.0.57/ProofWidgets4.tar.gz",
+    "release_archive_sha256": "fc6fa33a1272b7e2ec38a2b6427ea7645557e79a9338828ace91bf7403449f8e"
+  },
+  "leantar": {
+    "version": "0.1.15",
+    "official_release_url": "https://github.com/digama0/leangz/releases/download/v0.1.15/leantar-v0.1.15-x86_64-unknown-linux-musl.tar.gz",
+    "archive_sha256": "87ea796fb4a6cc9a7b7548b392ba19e7da509324ecced9579692fe299d1516df",
+    "binary_sha256": "c3294bf820d5d1d7cc59bc3ce9bdc244b3f45cab37ea9dd649e1a388c20dbe3c"
+  },
+  "limits": {
+    "dependency_theorem_cold_build": false,
+    "toolchain_bootstrap_or_new_installation": false,
+    "new_host_or_clean_OS_test": false,
+    "new_hidden_change_125_source_64_control_replay": false,
+    "new_mathematics": false,
+    "HasE_inventory_changed": false,
+    "source_seed_free_acquisition_in_this_run": false,
+    "future_official_service_availability_guaranteed": false
+  },
+  "not_distributed": [
+    "dependency proof objects",
+    "downloaded archives",
+    "toolchain binaries",
+    "raw machine-local logs",
+    "private run paths"
+  ],
+  "qualification_basis": "Exact object identity to the original independently reviewed prepared environment, plus clean pinned sources, trusted-toolchain checks and a fresh import smoke. Original scientific sources, runner and inventory pins are unchanged."
+}

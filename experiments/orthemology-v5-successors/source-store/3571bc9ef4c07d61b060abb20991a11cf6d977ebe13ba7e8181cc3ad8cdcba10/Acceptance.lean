@@ -1,0 +1,18 @@
+import Controls
+import ModalAbilityControl
+-- GREEN acceptance contract, exact same requested declarations as initial RED.
+#check AnchoredSourceBridge.mode_satisfaction_of_classification_conformance
+#check AnchoredSourceBridge.global_coverage_of_anchor
+#check AnchoredSourceBridge.represented_rivals_equal
+#check AnchoredSourceBridge.actual_rivals_equal
+#check AnchoredSourceBridge.mode_satisfaction_iff_global_coverage
+#check AnchoredSourceBridge.source_mode_iff_global_coverage
+#check AnchoredSourceBridge.unique_complete_provider
+#check AnchoredSourceBridge.Controls.full_nonvacuous_model
+#check AnchoredSourceBridge.Controls.missing_classification
+#check AnchoredSourceBridge.Controls.missing_conformance
+#check AnchoredSourceBridge.FieldCND
+#check AnchoredSourceBridge.field_cnd_of_global_cnd
+#check AnchoredSourceBridge.guarded_common_original_provider_of_global_cnd
+#check AnchoredSourceBridge.Controls.outside_duplication_preserves_field_uniqueness
+#check AnchoredSourceBridge.Controls.principal_application_with_outside_duplication

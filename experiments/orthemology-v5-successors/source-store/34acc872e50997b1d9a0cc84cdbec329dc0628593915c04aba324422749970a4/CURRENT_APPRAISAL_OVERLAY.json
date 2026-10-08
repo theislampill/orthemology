@@ -1,0 +1,36 @@
+{
+  "schema": "current-appraisal-overlay-v1",
+  "reported_utc": "2026-10-07T08:40:48Z",
+  "source": "The coordinator reported its user-facing de novo provisional reassessment; this reconstruction preserves original T17–T19 historical verdicts unchanged.",
+  "entries": [
+    {
+      "target_nodes": [
+        "B04",
+        "W02"
+      ],
+      "current_root_appraisal": "Provisional sufficient-warrant acceptance of actual Necessary Being retained."
+    },
+    {
+      "target_nodes": [
+        "F01",
+        "W05",
+        "D15",
+        "H01",
+        "W08"
+      ],
+      "current_root_appraisal": "The current assessment now withholds sufficient warrant for the stronger common-source conclusion, because the source-mode classification requiring complete provision rather than a fitting partial role is not sufficiently warranted in this reassessment.",
+      "evidence_level": "PHILOSOPHICAL_REASSESSMENT_OF_RECORDED_REASONS",
+      "does_not_assert": [
+        "Mathematical refutation",
+        "New countermodel",
+        "Alteration of historical T19 affirmative appraisal",
+        "Cancellation of conditional formal audit"
+      ]
+    },
+    {
+      "target_nodes": [],
+      "current_root_appraisal": "Basic Creator-recognition accepted as epistemologically admissible; universal reliable faculty and particular instances not established.",
+      "scope_note": "Separate epistemological appraisal; not inserted as an unreported T17–T19 DAG premise."
+    }
+  ]
+}

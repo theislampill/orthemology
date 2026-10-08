@@ -1,0 +1,19 @@
+import HiddenChangeBinding
+#print axioms HiddenChange.evenMinimum_iff
+#print axioms HiddenChange.knownAllowed_mono
+#print axioms HiddenChange.uncertainAllowed_mono
+#print axioms HiddenChange.F1_mono
+#print axioms HiddenChange.F_mono_both
+#print axioms HiddenChange.knownRegion_fixed
+#print axioms HiddenChange.knownRegion_greatest
+#print axioms HiddenChange.uncertainRegion_fixed
+#print axioms HiddenChange.uncertainRegion_greatest
+#print axioms HiddenChange.body_known_postfixed
+#print axioms HiddenChange.body_uncertain_postfixed
+#print axioms HiddenChange.exists_region_body
+#print axioms HiddenChange.positiveCheck_iff_region
+#print axioms HiddenChange.traceTerminal_eq_descend
+#print axioms HiddenChange.negativeCheck_iff_region
+#print axioms HiddenChange.boundPositiveCheck_iff_region
+#print axioms HiddenChange.boundNegativeCheck_iff_region
+#print axioms HiddenChange.signed_finite_alternatives

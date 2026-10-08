@@ -1,0 +1,86 @@
+{
+  "schema": "t20-finite-source-package-v1",
+  "component": "foundational-dependency-dag",
+  "status": "LOCAL_SOURCE_ONLY_CANDIDATE",
+  "historical_seals": {
+    "dependency-dag/MANIFEST.json": "796856c7de6d50d284a241a066ea9bdd6fb84409174329de6b81a16eb4572bb8"
+  },
+  "scope": "Finite public selection, separate from original sealed evidence. No implicit raw-body/cache/object distribution and no new scientific replay.",
+  "files": [
+    {
+      "path": "DEPENDENCY_DAG.json",
+      "sha256": "35562fca2e81a165288f648f05b14d9a8cfd881b357fa0597c10bfd8ebb27098",
+      "bytes": 448971
+    },
+    {
+      "path": "EXISTING_FORMAL_MAP.json",
+      "sha256": "073213786dc73e5dad11ca2b0465e28ae9e93ab337644f31f072233df19b2e6b",
+      "bytes": 39549
+    },
+    {
+      "path": "EXISTING_FORMAL_MAP.md",
+      "sha256": "c43eeea4ce1b402d67d4c41a77dede0e796838485b7c6a2926e9ab0be96dfbd5",
+      "bytes": 30169
+    },
+    {
+      "path": "PREMISE_REGISTRY.md",
+      "sha256": "6b4ba4e87e46b5a284311d69d82c40df7ab608a48651dabf22003a786510dcbd",
+      "bytes": 86325
+    },
+    {
+      "path": "PRE_FORMAL_ISSUES.json",
+      "sha256": "77f72947f698aa7f0a34d34478bc08801114b4f341d572424c45b1efa1f50ec8",
+      "bytes": 27142
+    },
+    {
+      "path": "PRE_FORMAL_ISSUES.md",
+      "sha256": "74c8b4b1a47c916e39f1f78ac34d7c54a8019a84008e3ccf7f83962514b9459b",
+      "bytes": 13814
+    },
+    {
+      "path": "RECONSTRUCTION.md",
+      "sha256": "38820a6eb210e1a58b6d9e6df59dfe716a4fe338bde5afe272169f096c6607b4",
+      "bytes": 24345
+    },
+    {
+      "path": "SOURCE_BINDING_CHECK.json",
+      "sha256": "7e67f15566c6828231563aa434d9c4050f42f6351300646c224d6f99ad612343",
+      "bytes": 937
+    },
+    {
+      "path": "VALIDATION.json",
+      "sha256": "6baec9b031b508a5c4b8f4fa79af6200f3b35fcd1a6b4ad71975c758d247d35e",
+      "bytes": 1094
+    },
+    {
+      "path": "CURRENT_APPRAISAL_OVERLAY.json",
+      "sha256": "34acc872e50997b1d9a0cc84cdbec329dc0628593915c04aba324422749970a4",
+      "bytes": 1481
+    },
+    {
+      "path": "SOURCE_LOCATORS.json",
+      "sha256": "4f365005680ede0dbef993054ca64ae01b8f57bbeb7233da86b4c0fe57372d3c",
+      "bytes": 93018
+    },
+    {
+      "path": "verify.py",
+      "sha256": "8c798c3b3ad28f2307999c2fdad7f43197f0f1ecd766faf637dff4081d700476",
+      "bytes": 1866
+    },
+    {
+      "path": "PROJECTION_NOTES.md",
+      "sha256": "b8f9fbef3967b031833f681292e3d60e09b5b12f98372702ef3566820c90ea19",
+      "bytes": 2832
+    },
+    {
+      "path": "README.md",
+      "sha256": "f0b7b1b9979c39bde84512283d38d317e7a68d43f4747bee80276431c4124fc2",
+      "bytes": 787
+    },
+    {
+      "path": "PROJECTION_MAP.json",
+      "sha256": "2553df0040ec627a5a8a094757ef59f969cb87cf3ea6d8a2ad03145e7c893c46",
+      "bytes": 10481
+    }
+  ]
+}

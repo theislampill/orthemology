@@ -1,0 +1,23 @@
+{
+  "schema": "t20-foundational-synthesis-validation-v1",
+  "utc": "2026-10-07T10:53:08.004727+00:00",
+  "status": "PASS_METADATA_AND_REFERENCE_CHECKS_ONLY",
+  "source_file_identities_checked": 75,
+  "source_hashes_unchanged_during_mapping": true,
+  "conclusions": 24,
+  "premises": 34,
+  "source_exact_declaration_signatures": 103,
+  "controls": 39,
+  "owner_questions": 10,
+  "unresolved_source_references": [],
+  "joint_independent_review": "PASS_AT_STATED_FINITE_SELECTED_SIGNATURE_SCOPE",
+  "new_lean_compilation": false,
+  "new_proofs_or_model_runs": false,
+  "broad_replay": false,
+  "sealed_inputs_modified": false,
+  "scientific_validation_basis": "Existing exact component and joint receipts and independent reviews; no new scientific replay.",
+  "historical_source_hashes_match_retained_map": true,
+  "six_report_guide_original_and_text_hashes_match_dag": true,
+  "all_premise_dag_ids_and_conclusion_dependencies_resolve": true,
+  "user_facing_pending_review_and_internal_routing_phrases_absent": true
+}

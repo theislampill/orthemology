@@ -1,0 +1,357 @@
+{
+  "Orthemology.Tranche3.SourceIdentity.Received": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.Received.{u_1,\n    u_2} : {W : Type u_1} → {D : Type u_2} → (W → D → D → Prop) → W → D → Prop",
+    "type_sha256": "6935e5d287507f1a9a9c46a0a82a934c6639e6ef7aa4a867b579d40759b170cd",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.Root": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.Root.{u_1,\n    u_2} : {W : Type u_1} → {D : Type u_2} → (W → D → Prop) → (W → D → D → Prop) → W → D → Prop",
+    "type_sha256": "83b044c96f2f14e9237a1052bfc10fe7499d8aec4efebd577cbabbc50ccf057b",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.Necessary": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} : {W : Type u_1} → {D : Type u_2} → (W → D → Prop) → D → Prop",
+    "type_sha256": "1beba629d24c5e937df9ee3ddb9bba25d5915bb6550b3da374adf5a62eb90c76",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.UniformRoot": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.UniformRoot.{u_1,\n    u_2} : {W : Type u_1} → {D : Type u_2} → (W → D → Prop) → (W → D → D → Prop) → D → Prop",
+    "type_sha256": "67acd0561fa5d9f0afa5009c6d37230550d4d6df1a5e1420f88cb5c55b5f5a40",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.GenericReception": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.GenericReception.{u_1,\n    u_2} : {W : Type u_1} → {D : Type u_2} → (W → D → Prop) → (W → D → D → Prop) → Prop",
+    "type_sha256": "1c303343e84885c98f49a44e70280bef99542f88df12903a8d8583781d23ca1b",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.ActualReceptionPreservation": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.ActualReceptionPreservation.{u_1,\n    u_2} : {W : Type u_1} → {D : Type u_2} → (W → D → Prop) → (W → D → D → Prop) → W → Prop",
+    "type_sha256": "4c26e94a966686fabd232b84ebbbef276604c80533923d8ec11bd2a20da14a83",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root.{u_1,\n    u_2} : ∀ {W : Type u_1} {D : Type u_2} (ex : W → D → Prop) (dep : W → D → D → Prop) (actual : W) (x : D),\n  @Orthemology.Tranche3.SourceIdentity.Root.{u_1, u_2} W D ex dep actual x →\n    (∀ (y : D),\n        ex actual y →\n          Not (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W D ex y) →\n            @Orthemology.Tranche3.SourceIdentity.Received.{u_1, u_2} W D dep actual y) →\n      @Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W D ex x",
+    "type_sha256": "6689a2796f2a353c8522819d3b0e0710529618a427d8541e3daccad40f3c4ee0",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root.{u_1,\n    u_2} : ∀ {W : Type u_1} {D : Type u_2} (ex : W → D → Prop) (dep : W → D → D → Prop) (actual : W) (x : D),\n  @Orthemology.Tranche3.SourceIdentity.Root.{u_1, u_2} W D ex dep actual x →\n    @Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W D ex x →\n      @Orthemology.Tranche3.SourceIdentity.GenericReception.{u_1, u_2} W D ex dep →\n        @Orthemology.Tranche3.SourceIdentity.UniformRoot.{u_1, u_2} W D ex dep x",
+    "type_sha256": "b2e06edf1a7e3532770f5aee1c5339907932d7b0e46faafb1683fb74e81b4fac",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception.{u_1,\n    u_2} : ∀ {W : Type u_1} {D : Type u_2} (ex : W → D → Prop) (dep : W → D → D → Prop) (actual : W) (x : D),\n  @Orthemology.Tranche3.SourceIdentity.Root.{u_1, u_2} W D ex dep actual x →\n    (∀ (y : D),\n        ex actual y →\n          Not (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W D ex y) →\n            @Orthemology.Tranche3.SourceIdentity.Received.{u_1, u_2} W D dep actual y) →\n      @Orthemology.Tranche3.SourceIdentity.GenericReception.{u_1, u_2} W D ex dep →\n        @Orthemology.Tranche3.SourceIdentity.UniformRoot.{u_1, u_2} W D ex dep x",
+    "type_sha256": "e1da8c54925d7141ca9ea567fffd100e8efa0bb2763798552b02eefd8159ea88",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform.{u_1,\n    u_2} : ∀ {W : Type u_1} {D : Type u_2} (ex : W → D → Prop) (dep : W → D → D → Prop) (actual : W) (x : D),\n  @Orthemology.Tranche3.SourceIdentity.Root.{u_1, u_2} W D ex dep actual x →\n    @Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W D ex x →\n      Iff\n        (∀ (w : W),\n          ex w x →\n            @Orthemology.Tranche3.SourceIdentity.Received.{u_1, u_2} W D dep w x →\n              @Orthemology.Tranche3.SourceIdentity.Received.{u_1, u_2} W D dep actual x)\n        (@Orthemology.Tranche3.SourceIdentity.UniformRoot.{u_1, u_2} W D ex dep x)",
+    "type_sha256": "39b784e48b1c9015f92eb7f3881c5d1b5dd68d0b2c07c69eaa4105e0cb78d2ed",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.generic_of_fixed_origin": {
+    "type": "@Orthemology.Tranche3.SourceIdentity.generic_of_fixed_origin.{u_1,\n    u_2} : ∀ {W : Type u_1} {D : Type u_2} (ex : W → D → Prop) (dep : W → D → D → Prop),\n  (∀ (w : W) (y x : D), dep w y x → ex w x) →\n    (∀ (w v : W) (y x : D), ex w x → ex v x → dep w y x → dep v y x) →\n      @Orthemology.Tranche3.SourceIdentity.GenericReception.{u_1, u_2} W D ex dep",
+    "type_sha256": "ad1f2f3771fc42eebf8d66602ad393fc3fc8d65913b23bc1ba7777c46ed5c1de",
+    "axioms": []
+  },
+  "Orthemology.Tranche3.SourceIdentity.Controls.changingDep": {
+    "type": "Orthemology.Tranche3.SourceIdentity.Controls.changingDep : Bool →\n  Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) → Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) → Prop",
+    "type_sha256": "a8397fdec9d344d83e1f8f77e3ed96d631752002f74fd7d7c062b6c846cc4d37",
+    "axioms": [
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche3.SourceIdentity.Controls.actual_preservation_does_not_give_uniform": {
+    "type": "Orthemology.Tranche3.SourceIdentity.Controls.actual_preservation_does_not_give_uniform : And\n  (@Orthemology.Tranche3.SourceIdentity.Root.{0, 0} Bool (Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)))\n    (fun x x => True) Orthemology.Tranche3.SourceIdentity.Controls.changingDep false\n    (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2))) 0\n      (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) ⋯ 0)))\n  (And\n    (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool (Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)))\n      (fun x x => True)\n      (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2))) 0\n        (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) ⋯ 0)))\n    (And\n      (@Orthemology.Tranche3.SourceIdentity.ActualReceptionPreservation.{0, 0} Bool\n        (Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2))) (fun x x => True)\n        Orthemology.Tranche3.SourceIdentity.Controls.changingDep false)\n      (Not\n        (@Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool (Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)))\n          (fun x x => True) Orthemology.Tranche3.SourceIdentity.Controls.changingDep\n          (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2))) 0\n            (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 2 (instOfNatNat 2)) ⋯ 0))))))",
+    "type_sha256": "37e46cff22b8c47c3900105c6c420d7738b205096c4206bb9c4e5d3d1f0f2e60",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin": {
+    "type": "Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin : Bool →\n  Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) → Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) → Prop",
+    "type_sha256": "171376898862858223cf2ee4055ed7dc0b0d42feb93ee0af4d3ed84d2aa58827",
+    "axioms": [
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche3.SourceIdentity.Controls.generic_not_fixed_origin": {
+    "type": "Orthemology.Tranche3.SourceIdentity.Controls.generic_not_fixed_origin : And\n  (@Orthemology.Tranche3.SourceIdentity.GenericReception.{0, 0} Bool (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)))\n    (fun x x => True) Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin)\n  (And\n    (Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin false\n      (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 0\n        (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 0))\n      (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 2\n        (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 2)))\n    (Not\n      (Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin true\n        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 0\n          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 0))\n        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 2\n          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 2)))))",
+    "type_sha256": "645270f1d93465cf03c90eb0d533d8915c374c953553a2d8d916568e2e8382be",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder": {
+    "type": "Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder : Bool →\n  Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) → Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) → Prop",
+    "type_sha256": "7250267f85b38e1873e5478b49092952eedda65e3789ff516d8d339006300547",
+    "axioms": [
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche3.SourceIdentity.Controls.generic_allows_modal_cycle": {
+    "type": "Orthemology.Tranche3.SourceIdentity.Controls.generic_allows_modal_cycle : And\n  (@Orthemology.Tranche3.SourceIdentity.GenericReception.{0, 0} Bool (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)))\n    (fun x x => True) Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder)\n  (And\n    (@Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)))\n      (fun x x => True) Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder\n      (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 0\n        (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 0)))\n    (And\n      (Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder false\n        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 1\n          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 1))\n        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 2\n          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 2)))\n      (Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder true\n        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 2\n          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 2))\n        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3))) 1\n          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat 3 (instOfNatNat 3)) ⋯ 1)))))",
+    "type_sha256": "60ba2e7d077dca9d3cbc122e5d027ff6606698cd0bed033db6f1fdd1fe391137",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche3.SourceIdentity.Controls.reception_alone_does_not_give_necessary": {
+    "type": "Orthemology.Tranche3.SourceIdentity.Controls.reception_alone_does_not_give_necessary : And\n  (@Orthemology.Tranche3.SourceIdentity.GenericReception.{0, 0} Bool Unit (fun w x => @Eq.{1} Bool w false) fun x x x =>\n    False)\n  (And\n    (@Orthemology.Tranche3.SourceIdentity.Root.{0, 0} Bool Unit (fun w x => @Eq.{1} Bool w false) (fun x x x => False)\n      false Unit.unit)\n    (Not (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Unit (fun w x => @Eq.{1} Bool w false) Unit.unit)))",
+    "type_sha256": "6fbb8f8129557c7a2e2c0f4d069658779b349968aef3e9b2b60ad5cc4b78bdd0",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Framework": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3,\n  u_4} : Type u_1 → Type u_2 → Type u_3 → Type u_4 → Type (max (max (max u_1 u_2) u_3) u_4)",
+    "type_sha256": "f50f1891dcf587db2068baf82adbb057768c251fa68a568e1b4647d7962c1388",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → R → Prop",
+    "type_sha256": "4ed7720ba970748927714004f0e4839bb47c5f01109ddd1061ac222841a0a0b9",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → B → Prop",
+    "type_sha256": "22447699912ec0a3f419c3c8f6be54835c242bab2929af7d58fc7086e487f51b",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Completion": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.Completion.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → Prop",
+    "type_sha256": "bd761cd2e1b9667ef3777f3b42183439adc762d77eaf25bed7e7205688f6dad0",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Realisation": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → Prop",
+    "type_sha256": "d83c65cd1ccd6c3a3603f442a673df1e3413fe91b41d9d05c6bd3817b9a491b0",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.SupportTransport": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → Prop",
+    "type_sha256": "f3952b62300c8bdc931f04632e1aa4a4347c7734784e1064ee845eee74861f11",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → Prop",
+    "type_sha256": "abbc0d15e5ed23c57785d7dc038fda0a6e2e12d29bdc7bca9e7dc7811cf4c012",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → Prop",
+    "type_sha256": "d7b7ac440185ae42c0a8dbcedcc1c9bc4ef8e7eb0b2fd3ebb3506aeb338bcc86",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → Prop",
+    "type_sha256": "499402beda5a307275c492b2349d18442672ef32189952684c6845b8d0fe5c48",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → B → Prop",
+    "type_sha256": "0768b9cf3e50c2144e7ce1956b6b6d4821f798d346899e03034953ddf5ade9a5",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} →\n        Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → T → R → B → Prop",
+    "type_sha256": "27bb63914950844466f835300b7155b405962fb8732e68f5d4b766395b9dc5c9",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.FullPremises": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.FullPremises.{u_1, u_2, u_3,\n    u_4} : {W : Type u_1} →\n  {B : Type u_2} →\n    {R : Type u_3} →\n      {T : Type u_4} → Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T → Prop",
+    "type_sha256": "4e4255259a470565c5bdda993c68e6bfe05b2e775aeecbff66a48f3c8db93725",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_resource": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_resource.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T) (r : R),\n  @Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource.{u_1, u_2, u_3, u_4} W B R T s r →\n    @Orthemology.Tranche20.OriginalBearerBridge.Realisation.{u_1, u_2, u_3, u_4} W B R T s →\n      @Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{u_1, u_2, u_3, u_4} W B R T s →\n        ∃ g,\n          And (@Orthemology.Tranche20.OriginalBearerBridge.Framework.intrinsic.{u_1, u_2, u_3, u_4} W B R T s g r)\n            (@Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{u_1, u_2, u_3, u_4} W B R T s g)",
+    "type_sha256": "bec8c5a42d776c45cf4c90b42f4882057a0991dc10920a75761f053846aeabda",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T) (t : T),\n  @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{u_1, u_2, u_3, u_4} W B R T s t →\n    @Orthemology.Tranche20.OriginalBearerBridge.Completion.{u_1, u_2, u_3, u_4} W B R T s →\n      @Orthemology.Tranche20.OriginalBearerBridge.Realisation.{u_1, u_2, u_3, u_4} W B R T s →\n        @Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{u_1, u_2, u_3, u_4} W B R T s →\n          ∃ r g, @Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{u_1, u_2, u_3, u_4} W B R T s t r g",
+    "type_sha256": "3b6b7d765a3420789cd0d7b005f459ac05f22c419ed1b3e2f3f449e0315dcac7",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.root_to_inherited": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.root_to_inherited.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T),\n  @Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{u_1, u_2, u_3, u_4} W B R T s →\n    ∀ (g : B),\n      @Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{u_1, u_2, u_3, u_4} W B R T s g →\n        @Orthemology.Tranche3.SourceIdentity.Root.{u_1, u_2} W B\n          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s)\n          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{u_1, u_2, u_3, u_4} W B R T s)\n          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g",
+    "type_sha256": "527df89baec25bfa879a9c0c590754361dc9d86b5567cfb97bfee196b4afcaf9",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T),\n  @Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{u_1, u_2, u_3, u_4} W B R T s →\n    @Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{u_1, u_2, u_3, u_4} W B R T s →\n      ∀ (g : B),\n        @Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s\n            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g →\n          Not\n              (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W B\n                (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s) g) →\n            @Orthemology.Tranche3.SourceIdentity.Received.{u_1, u_2} W B\n              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{u_1, u_2, u_3, u_4} W B R T s)\n              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g",
+    "type_sha256": "b9c1aaebd60924c86fa8935d7f8f097cf65935146354728598abba490da07db1",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T),\n  @Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{u_1, u_2, u_3, u_4} W B R T s →\n    @Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{u_1, u_2, u_3, u_4} W B R T s →\n      @Orthemology.Tranche3.SourceIdentity.GenericReception.{u_1, u_2} W B\n        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s)\n        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{u_1, u_2, u_3, u_4} W B R T s)",
+    "type_sha256": "919df75bba7d48d4fc8d343640541c6867a0914bfb825a18a27644065d8be239",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T) (g : B),\n  @Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{u_1, u_2, u_3, u_4} W B R T s g →\n    @Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{u_1, u_2, u_3, u_4} W B R T s →\n      @Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{u_1, u_2, u_3, u_4} W B R T s g",
+    "type_sha256": "ddf710a865403c693c9b2b7d95ae385f96a528c5f97e115af9cb759a4ac81e4c",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness": {
+    "type": "@Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T),\n  @Orthemology.Tranche20.OriginalBearerBridge.FullPremises.{u_1, u_2, u_3, u_4} W B R T s →\n    ∃ t r g,\n      And (@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{u_1, u_2, u_3, u_4} W B R T s t r g)\n        (And\n          (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W B\n            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s) g)\n          (And\n            (@Orthemology.Tranche3.SourceIdentity.UniformRoot.{u_1, u_2} W B\n              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s)\n              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{u_1, u_2, u_3, u_4} W B R T s) g)\n            (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{u_1, u_2, u_3, u_4} W B R T s g)))",
+    "type_sha256": "44adf9ad82e204087708ed550161f321b6c24e4483be767ccf3981dccce1027f",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive : Orthemology.Tranche20.OriginalBearerBridge.Framework.{0,\n    0, 0, 0}\n  Bool Bool Bool Unit",
+    "type_sha256": "744db8e12a577b42b905d1e8211b176f6a8312588e4f5125f3eb6869c12cf711",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_full": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_full : @Orthemology.Tranche20.OriginalBearerBridge.FullPremises.{0,\n      0, 0, 0}\n  Bool Bool Bool Unit Orthemology.Tranche20.OriginalBearerBridge.Controls.positive",
+    "type_sha256": "03a6c6823f1760b5bafddd23109a3bb926527ac44788d314972d1e97793fe2e3",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_nonvacuous": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_nonvacuous : And\n  (@Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Bool Bool Bool Unit\n    Orthemology.Tranche20.OriginalBearerBridge.Controls.positive Unit.unit)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource.{0, 0, 0, 0} Bool Bool Bool Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.positive false)\n    (And\n      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.resourceActual.{0, 0, 0, 0} Bool Bool Bool Unit\n        Orthemology.Tranche20.OriginalBearerBridge.Controls.positive true)\n      (And\n        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.resourceReceived.{0, 0, 0, 0} Bool Bool Bool Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.positive true)\n        (And\n          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.intrinsic.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.positive true true)\n          (And\n            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{0, 0, 0, 0} Bool Bool Bool Unit\n              Orthemology.Tranche20.OriginalBearerBridge.Controls.positive false true)\n            (And\n              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n                Orthemology.Tranche20.OriginalBearerBridge.Controls.positive false true)\n              (And\n                (Not\n                  (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Bool\n                    (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n                      Orthemology.Tranche20.OriginalBearerBridge.Controls.positive)\n                    true))\n                (And\n                  (@Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Bool Bool Bool Unit\n                    Orthemology.Tranche20.OriginalBearerBridge.Controls.positive false)\n                  (And\n                    (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Bool\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n                        Orthemology.Tranche20.OriginalBearerBridge.Controls.positive)\n                      false)\n                    (@Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool Bool\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n                        Orthemology.Tranche20.OriginalBearerBridge.Controls.positive)\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n                        Orthemology.Tranche20.OriginalBearerBridge.Controls.positive)\n                      false))))))))))",
+    "type_sha256": "e3746be88d8bf4c164acf632450e6f0b79354456349482c2cb2ffc7da07fd675",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_same_witness": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_same_witness : ∃ t r g,\n  And\n    (@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{0, 0, 0, 0} Bool Bool Bool Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.positive t r g)\n    (And\n      (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Bool\n        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.positive)\n        g)\n      (And\n        (@Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool Bool\n          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.positive)\n          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.positive)\n          g)\n        (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{0, 0, 0, 0} Bool Bool Bool Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.positive g)))",
+    "type_sha256": "398e202e34e50f8663fa16b318fa6ed7f505e37acad368bdc52c26e89fdf4117",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame : Prop →\n  (Nat → Prop) → Orthemology.Tranche20.OriginalBearerBridge.Framework.{0, 0, 0, 0} Unit Nat Unit Unit",
+    "type_sha256": "fe3b85a3000760160586212bf858c4cbd92c3ac2d867dbfbcdcac4d0f0085946",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_representation": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_representation : ∀ (received : Prop)\n  (instantiates : Nat → Prop),\n  @Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Unit Nat Unit Unit\n    (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates)",
+    "type_sha256": "a0a76692a16713fcde559e918bf6eaec6a4ff5f57e2c64a1dcd8fc2963cb3cd9",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_need": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_need : ∀ (received : Prop) (instantiates : Nat → Prop),\n  @Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Unit Nat Unit Unit\n    (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates)",
+    "type_sha256": "bfa44ebcf46217b773545086baea4a35c055fda65dcf023fc806d40c0fff1ccb",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_constitution": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_constitution : ∀ (received : Prop) (instantiates : Nat → Prop),\n  @Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Unit Nat Unit Unit\n    (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates)",
+    "type_sha256": "304ea6a0e80b18dee9256df48121ca6c9dd44fa0f704f81b080f3d169d9e012d",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_no_original": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_no_original : ∀ (received : Prop) (instantiates : Nat → Prop),\n  Not\n    (∃ g,\n      @Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Unit Nat Unit Unit\n        (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates) g)",
+    "type_sha256": "74d978b9b12e16f403e0a6fd2d27ac233f670dd2c4f9cd72edd0bf88817c2c43",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_ancestry_strict_and_everywhere_supplied": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_ancestry_strict_and_everywhere_supplied : ∀ (received : Prop)\n  (instantiates : Nat → Prop),\n  And\n    (∀ (w : Unit) (x : Nat),\n      Not\n        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Unit Nat Unit Unit\n          (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates) w x x))\n    (And\n      (∀ (w : Unit) (a b c : Nat),\n        @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Unit Nat Unit Unit\n            (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates) w a b →\n          @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Unit Nat Unit Unit\n              (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates) w b c →\n            @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Unit Nat Unit Unit\n              (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates) w a c)\n      (∀ (w : Unit) (x : Nat),\n        @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Unit Nat Unit Unit\n          (Orthemology.Tranche20.OriginalBearerBridge.Controls.natFrame received instantiates) w\n          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) x (@OfNat.ofNat.{0} Nat 1 (instOfNatNat 1)))\n          x))",
+    "type_sha256": "ee1db5e26712d21e75867f4a74cd374162ed2982e96d1f397fbc3164de17f1c8",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_carrier_genuinely_infinite": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.nat_carrier_genuinely_infinite : Infinite.{1} Nat",
+    "type_sha256": "8c219a0768a1561eacf451e5f5effa782c505acbe1f83fbb249211efc733c183",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion : Orthemology.Tranche20.OriginalBearerBridge.Framework.{0,\n    0, 0, 0}\n  Unit Nat Unit Unit",
+    "type_sha256": "6fb0af49a03b04b23f8084aebb46a8d903f87efd90fe14337b5280fba497f49d",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation : Orthemology.Tranche20.OriginalBearerBridge.Framework.{0,\n    0, 0, 0}\n  Unit Nat Unit Unit",
+    "type_sha256": "f89f2a87d71539779c830db879da6ee4f9f71d7ac602f6e031f5321729e78e2d",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport : Orthemology.Tranche20.OriginalBearerBridge.Framework.{0,\n    0, 0, 0}\n  Unit Nat Unit Unit",
+    "type_sha256": "9bf3d67c5089a13db257c184b857fd64dcb509c12fea04636d4678664b5e50a0",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_completion": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_completion : And\n  (∃ t,\n    @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Unit Nat Unit Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion t)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Unit Nat Unit Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion)\n    (And\n      (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Unit Nat Unit Unit\n        Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion)\n      (And\n        (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Unit Nat Unit Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion)\n        (And\n          (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Unit Nat Unit Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion)\n          (And\n            (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Unit Nat Unit Unit\n              Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion)\n            (And\n              (Not\n                (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Unit Nat Unit Unit\n                  Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion))\n              (Not\n                (∃ g,\n                  @Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Unit Nat Unit Unit\n                    Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutCompletion g))))))))",
+    "type_sha256": "79ee1e4641aecb3a90fb98a3221c3ca945e5a3fac79d4e5719a54c9c3de2455e",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_realisation": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_realisation : And\n  (∃ t,\n    @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Unit Nat Unit Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation t)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Unit Nat Unit Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation)\n    (And\n      (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Unit Nat Unit Unit\n        Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation)\n      (And\n        (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Unit Nat Unit Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation)\n        (And\n          (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Unit Nat Unit Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation)\n          (And\n            (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Unit Nat Unit Unit\n              Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation)\n            (And\n              (Not\n                (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Unit Nat Unit Unit\n                  Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation))\n              (Not\n                (∃ g,\n                  @Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Unit Nat Unit Unit\n                    Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutRealisation g))))))))",
+    "type_sha256": "b5d7d4bed2babaa927bb3ef8e2b5a5af278526d9477de9c4fbee04663530de43",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_support": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_support : And\n  (∃ t,\n    @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Unit Nat Unit Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport t)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Unit Nat Unit Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport)\n    (And\n      (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Unit Nat Unit Unit\n        Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport)\n      (And\n        (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Unit Nat Unit Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport)\n        (And\n          (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Unit Nat Unit Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport)\n          (And\n            (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Unit Nat Unit Unit\n              Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport)\n            (And\n              (Not\n                (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Unit Nat Unit Unit\n                  Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport))\n              (Not\n                (∃ g,\n                  @Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Unit Nat Unit Unit\n                    Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutSupport g))))))))",
+    "type_sha256": "e2f0d35cac563808d69f1c5fdf7dffa9a6b681d6154c7e0a6fdfb907da4b9afc",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed : Orthemology.Tranche20.OriginalBearerBridge.Framework.{0,\n    0, 0, 0}\n  Bool Bool Bool Unit",
+    "type_sha256": "44bbf9f6b8b719ab31f0c71da380b3760f1f052a412000a1dcb259da5a39a46d",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_contingency_need": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_contingency_need : And\n  (∃ t,\n    @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Bool Bool Bool Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed t)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Bool Bool Bool Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed)\n    (And\n      (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Bool Bool Bool Unit\n        Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed)\n      (And\n        (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Bool Bool Bool Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed)\n        (And\n          (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed)\n          (And\n            (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Bool Bool Bool Unit\n              Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed)\n            (And\n              (Not\n                (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Bool Bool Bool Unit\n                  Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed))\n              (Not\n                (∃ g,\n                  @Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Bool\n                    (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n                      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed)\n                    g))))))))",
+    "type_sha256": "c3edfe1eb1df7a4138eb788237da749c641ef37acdb85c29766872cad0a0bb51",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.conditional_nonreceipt_without_necessity": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.conditional_nonreceipt_without_necessity : And\n  (@Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Bool Bool Bool Unit\n    Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed false)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{0, 0, 0, 0} Bool Bool Bool Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed false)\n    (Not\n      (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Bool\n        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed)\n        false)))",
+    "type_sha256": "d2638f34b9f06f58d428b996faa48d8326b1626db97134c672942ddf1f996a3c",
+    "axioms": [
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution : Orthemology.Tranche20.OriginalBearerBridge.Framework.{0,\n    0, 0, 0}\n  Bool Bool Bool Unit",
+    "type_sha256": "1fd4c63f6fd9fc9217e654e4fb8365e1d48f0c1f20049b74e60752c63be51f32",
+    "axioms": []
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_constitutive_reception": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.remove_constitutive_reception : And\n  (∃ t,\n    @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Bool Bool Bool Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution t)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Bool Bool Bool Unit\n      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution)\n    (And\n      (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Bool Bool Bool Unit\n        Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution)\n      (And\n        (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Bool Bool Bool Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution)\n        (And\n          (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution)\n          (And\n            (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Bool Bool Bool Unit\n              Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution)\n            (And\n              (Not\n                (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Bool Bool Bool Unit\n                  Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution))\n              (And\n                (∀ (g : Bool),\n                  @Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Bool\n                    (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n                      Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution)\n                    g)\n                (Not\n                  (∃ g,\n                    @Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool Bool\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n                        Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution)\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n                        Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution)\n                      g)))))))))",
+    "type_sha256": "f017b9cd21515d226489ec815618cb34170f59851e865564344b2406d64df851",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "Orthemology.Tranche20.OriginalBearerBridge.Controls.modal_controls_worldwise_acyclic": {
+    "type": "Orthemology.Tranche20.OriginalBearerBridge.Controls.modal_controls_worldwise_acyclic : And\n  (∀ (w x : Bool),\n    Not\n      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n        Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed w x x))\n  (And\n    (∀ (w a b c : Bool),\n      @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n          Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed w a b →\n        @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed w b c →\n          @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutNeed w a c)\n    (And\n      (∀ (w x : Bool),\n        Not\n          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution w x x))\n      (∀ (w a b c : Bool),\n        @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n            Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution w a b →\n          @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n              Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution w b c →\n            @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n              Orthemology.Tranche20.OriginalBearerBridge.Controls.withoutConstitution w a c)))",
+    "type_sha256": "45f85ebee7a343260d897b5346015a55133b4d5271cd6da849cd220d6525159f",
+    "axioms": []
+  }
+}

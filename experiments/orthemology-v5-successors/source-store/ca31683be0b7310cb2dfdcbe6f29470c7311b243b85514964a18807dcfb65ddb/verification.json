@@ -1,0 +1,77 @@
+{
+  "first_pass_receipts": 27,
+  "reflective_receipts": 4,
+  "reflective_intervals": [
+    [
+      236,
+      246
+    ],
+    [
+      266,
+      276
+    ],
+    [
+      194,
+      202
+    ],
+    [
+      410,
+      418
+    ]
+  ],
+  "reflective_words": 7271,
+  "source_checks": [
+    {
+      "section": "005",
+      "source_url": "https://www.islamicbook.ws/tarekh/mnhaj-005.html",
+      "bytes": 372061,
+      "sha256": "66415f46f1ccc188017c9ae83f6564292673ea5d0ed8e965e5e523d27ee15c5d",
+      "matches_acquisition": true
+    },
+    {
+      "section": "006",
+      "source_url": "https://www.islamicbook.ws/tarekh/mnhaj-006.html",
+      "bytes": 372672,
+      "sha256": "3b878f90ddc769944eec4453bad0240466f22faa2524991bbcbf821de3bcc4dc",
+      "matches_acquisition": true
+    }
+  ],
+  "raw_html_phrase_checks": [
+    {
+      "section": "005",
+      "raw_html_count": 1,
+      "phrase_sha256": "8988f1a18f1115c35e50fee2e7b2a66455b866d4a67454bab30ea7ebe5b86b69"
+    },
+    {
+      "section": "005",
+      "raw_html_count": 2,
+      "phrase_sha256": "e4b5a90f7773ef5a5d77358bf5b8e3a6368eb06d92b5fd865f49d60b7c3e4f21"
+    },
+    {
+      "section": "006",
+      "raw_html_count": 1,
+      "phrase_sha256": "b39df99e39cb9e4db32661a5896cf0b8fb190c05e2649f307529910d67dcd91f"
+    },
+    {
+      "section": "006",
+      "raw_html_count": 1,
+      "phrase_sha256": "3a487968a25206aaa131e5ea792dcd8ea5bd7219bc669db1fd2afe437b41d941"
+    },
+    {
+      "section": "006",
+      "raw_html_count": 2,
+      "phrase_sha256": "41353f928877bd14585ac5160f6eac44753005eeffb02a000975535538297afb"
+    },
+    {
+      "section": "006",
+      "raw_html_count": 1,
+      "phrase_sha256": "22744ed6abb0920d488a4d2e086af5cb6415afeb8c7e8bf698fb6c1e162e3753"
+    }
+  ],
+  "limits": [
+    "Mechanical checks verify exact interval and source identity accounting, not independent proof of comprehension.",
+    "No print apparatus, manuscript certification, or independent hadith/historical authentication.",
+    "Suspected local witness errors are retained without emendation."
+  ],
+  "passed": true
+}

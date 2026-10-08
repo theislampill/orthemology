@@ -1,0 +1,687 @@
+{
+  "edition": "Orthemology Nineteenth research evidence, 6 October 2026",
+  "authorship": "AI-authored research synthesis. Source attribution, analytical judgment and human expert endorsement are distinct.",
+  "delivery_status": "Prepared for delivery; source checked at the stated scope. No delivery or publication is asserted.",
+  "locator_rules": [
+    "PDF page indices are one-based. Printed page labels are separately verified and have no globally assumed offset.",
+    "Hosted line ranges refer to the recorded electronic presentation. They are not printed pages and can change if a host changes its transcription.",
+    "Different websites carrying the same work do not supply independent historical witnesses. Modern introductions, notes, translations and indexing remain distinct from medieval authorial text."
+  ],
+  "selected_volumes": [
+    {
+      "id": "ASFAHANI",
+      "author": "Ibn Taymiyya",
+      "title": "Sharh al-Aqidah al-Asbahaniyyah",
+      "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+      "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+      "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+      "pdf_pages_selected": [
+        1,
+        938
+      ],
+      "first_pass": "All selected pages traversed, including printed body, apparatus and indexes.",
+      "partly_deciphered_facsimile_pdf_pages": [
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "reflective_reading": "The finite selected reflective phase is complete at its stated ranges. This is not a complete second volume traversal.",
+      "relevant_printed_main_ranges": [
+        [
+          47,
+          47
+        ],
+        [
+          94,
+          94
+        ],
+        [
+          133,
+          154
+        ],
+        [
+          259,
+          260
+        ],
+        [
+          292,
+          294
+        ],
+        [
+          359,
+          361
+        ],
+        [
+          411,
+          419
+        ],
+        [
+          435,
+          435
+        ],
+        [
+          462,
+          467
+        ],
+        [
+          508,
+          508
+        ],
+        [
+          533,
+          534
+        ],
+        [
+          638,
+          639
+        ],
+        [
+          665,
+          669
+        ],
+        [
+          695,
+          716
+        ]
+      ],
+      "textual_uncertainty_locators": [
+        412,
+        667
+      ],
+      "scope": "The page locators identify relevant passages, not a new manuscript collation. Textual uncertainties are retained without silent correction.",
+      "selected_reflection": {
+        "frozen_at_utc": "2026-10-06T16:43:29.620359+00:00",
+        "receipts": 33,
+        "page_read_occurrences": 470,
+        "distinct_authorial_pages": 442,
+        "one_based_pdf_ranges": [
+          [
+            105,
+            125
+          ],
+          [
+            134,
+            255
+          ],
+          [
+            269,
+            286
+          ],
+          [
+            496,
+            568
+          ],
+          [
+            583,
+            600
+          ],
+          [
+            631,
+            815
+          ],
+          [
+            820,
+            824
+          ]
+        ],
+        "verified_printed_main_ranges": [
+          [
+            5,
+            25
+          ],
+          [
+            34,
+            155
+          ],
+          [
+            169,
+            186
+          ],
+          [
+            396,
+            468
+          ],
+          [
+            483,
+            500
+          ],
+          [
+            531,
+            715
+          ],
+          [
+            720,
+            724
+          ]
+        ],
+        "separate_earlier_comparison_pdf_pages": [
+          4,
+          143
+        ],
+        "separate_partial_plate_attempt_pdf_pages": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ],
+        "unresolved_questions_retained": true
+      }
+    },
+    {
+      "id": "AL_DAA",
+      "author": "Ibn al-Qayyim",
+      "title": "al-Da wa-l-Dawa",
+      "edition": "Edited by Muhammad Ajmal al-Islahi, hadith work by Zaid ibn Ahmad al-Nushayri; Ataat al-Ilm / Dar Ibn Hazm, fourth edition, 1440 AH / 2019",
+      "source_listing": "https://saaid.org/book/open.php?book=18175",
+      "source_sha256": "cf8cbd8550a63414db47543a364556fda49450c769da592ff2c33e464f64777e",
+      "pdf_pages_selected": [
+        1,
+        751
+      ],
+      "first_pass": "All ordinary printed body, apparatus and indexes traversed.",
+      "partly_deciphered_facsimile_pdf_pages": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        64,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "fully_deciphered_facsimile_pdf_pages": [
+        63,
+        65
+      ],
+      "body_end": {
+        "pdf_page": 646,
+        "printed_page": 573
+      },
+      "last_page": {
+        "pdf_page": 751,
+        "printed_page": 678
+      },
+      "reflective_reading": "Seven selected substantive clusters completed; no complete second traversal is claimed.",
+      "earlier_targeted_printed_read_range": [
+        466,
+        474
+      ],
+      "selected_reflection": {
+        "frozen_at_utc": "2026-10-06T17:04:15.645801+00:00",
+        "substantive_page_read_occurrences": 343,
+        "distinct_substantive_pages": 343,
+        "clusters": [
+          {
+            "one_based_pdf_ranges": [
+              [
+                76,
+                123
+              ]
+            ],
+            "verified_printed_main_ranges": [
+              [
+                3,
+                50
+              ]
+            ],
+            "pages": 48
+          },
+          {
+            "one_based_pdf_ranges": [
+              [
+                150,
+                177
+              ]
+            ],
+            "verified_printed_main_ranges": [
+              [
+                77,
+                104
+              ]
+            ],
+            "pages": 28
+          },
+          {
+            "one_based_pdf_ranges": [
+              [
+                205,
+                214
+              ],
+              [
+                236,
+                287
+              ]
+            ],
+            "verified_printed_main_ranges": [
+              [
+                132,
+                141
+              ],
+              [
+                163,
+                214
+              ]
+            ],
+            "pages": 62
+          },
+          {
+            "one_based_pdf_ranges": [
+              [
+                293,
+                302
+              ],
+              [
+                330,
+                345
+              ],
+              [
+                356,
+                363
+              ],
+              [
+                394,
+                400
+              ]
+            ],
+            "verified_printed_main_ranges": [
+              [
+                220,
+                229
+              ],
+              [
+                257,
+                272
+              ],
+              [
+                283,
+                290
+              ],
+              [
+                321,
+                327
+              ]
+            ],
+            "pages": 41
+          },
+          {
+            "one_based_pdf_ranges": [
+              [
+                405,
+                449
+              ]
+            ],
+            "verified_printed_main_ranges": [
+              [
+                332,
+                376
+              ]
+            ],
+            "pages": 45
+          },
+          {
+            "one_based_pdf_ranges": [
+              [
+                486,
+                498
+              ],
+              [
+                503,
+                528
+              ],
+              [
+                536,
+                560
+              ]
+            ],
+            "verified_printed_main_ranges": [
+              [
+                413,
+                425
+              ],
+              [
+                430,
+                455
+              ],
+              [
+                463,
+                487
+              ]
+            ],
+            "pages": 64
+          },
+          {
+            "one_based_pdf_ranges": [
+              [
+                581,
+                589
+              ],
+              [
+                601,
+                646
+              ]
+            ],
+            "verified_printed_main_ranges": [
+              [
+                508,
+                516
+              ],
+              [
+                528,
+                573
+              ]
+            ],
+            "pages": 55
+          }
+        ],
+        "separate_index_verification": {
+          "one_based_pdf_range": [
+            718,
+            751
+          ],
+          "positions": 34,
+          "includes_blank_page": 735,
+          "substantive_authorial_reread_credit": 0
+        },
+        "queue_entries": 140,
+        "all_questions_resolved": false
+      }
+    },
+    {
+      "id": "WASITIYYA_1",
+      "author": "Muhammad ibn Salih al-Uthaymin",
+      "title": "Sharh al-Aqidah al-Wasitiyya, volume 1",
+      "edition": "Dar Ibn al-Jawzi, sixth edition, Jumada I 1421 AH; compiled by Sad ibn Fawwaz al-Sumayl",
+      "source_url": "https://download.ilmussalaf.com/Books/Aqeedatul-Waasitiyah-Uthaimeen.pdf",
+      "host_status": "Third-party host; host-specific licensing or official foundation status is not established.",
+      "composite_source_sha256": "5f61e9592c6f333d4a74ffa322fcd9cb9ade70dd352affea2c1ba081bba4f9fe",
+      "composite_pdf_pages": 896,
+      "selected_pdf_range": [
+        1,
+        484
+      ],
+      "excluded_volume_two_pdf_range": [
+        485,
+        896
+      ],
+      "first_pass_receipts": 484,
+      "body_end": {
+        "pdf_page": 464,
+        "printed_page": 461
+      },
+      "contents_pdf_range": [
+        466,
+        483
+      ],
+      "reflective_receipts": 364,
+      "reflective_unique_pages": 343,
+      "reflective_scope_as_of_utc": "2026-10-06T14:18:28.955736+00:00",
+      "complete_second_traversal": false,
+      "local_reading_uncertainties": "Cover logo, anonymous scan marks and identified apparatus details retain local uncertainty.",
+      "doctrinal_summary_in_this_record": false
+    }
+  ],
+  "supporting_loci": [
+    {
+      "id": "DAR016",
+      "author": "Ibn Taymiyya",
+      "work": "Dar taarud al-aql wa-l-naql",
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "bounded_precision_read_hosted_lines": [
+        [
+          625,
+          658
+        ],
+        [
+          694,
+          730
+        ],
+        [
+          743,
+          759
+        ],
+        [
+          760,
+          790
+        ]
+      ],
+      "speaker_controls": "Ibn Rushd is reported at line 631 and lines 694–704; Ibn Taymiyya replies at 632 and705 onward. Lines 752–753 state an objection, with a reply beginning 754.",
+      "print_mapping": "Selected electronic edition-labelled pages 9:342–343 and9:361–362 were separately inspected. The whole hosted interval has no certified continuous scan mapping."
+    },
+    {
+      "id": "DAR013",
+      "author": "Ibn Taymiyya",
+      "work": "Dar taarud al-aql wa-l-naql",
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-013.html",
+      "read_hosted_lines": [
+        [
+          221,
+          258
+        ]
+      ],
+      "operative_hosted_lines": [
+        [
+          249,
+          258
+        ]
+      ],
+      "speaker_controls": "Reported Ibn Rushd discussion and authorial assent must be distinguished.",
+      "print_mapping": "Exact printed page boundaries remain unverified; subsection 013 is not volume 13."
+    },
+    {
+      "id": "MAJMU20",
+      "author": "Ibn Taymiyya",
+      "work": "Majmu al-Fatawa",
+      "url": "https://www.islamicbook.ws/asol/feqh/mjmwa-alftawa-080.html",
+      "read_hosted_lines": [
+        [
+          7,
+          60
+        ]
+      ],
+      "operative_hosted_lines": [
+        [
+          33,
+          60
+        ]
+      ],
+      "print_mapping": "Conventional volume 20 association; no fresh continuous scanned-page certification.",
+      "exclusion": "Only the legitimately retained earlier electronic body is relied on. Later excluded locator checking supplies no additional pagination credit."
+    },
+    {
+      "id": "MINHAJ2",
+      "author": "Ibn Taymiyya",
+      "work": "Minhaj al-Sunna",
+      "urls": [
+        "https://www.islamicbook.ws/tarekh/mnhaj-003.html",
+        "https://www.fnoor.com/main/articles.aspx?article_no=32248"
+      ],
+      "first_host_read_lines": [
+        [
+          173,
+          202
+        ]
+      ],
+      "second_host_read_lines": [
+        [
+          192,
+          216
+        ]
+      ],
+      "displayed_electronic_print_labels": "2:160–184",
+      "scope": "Electronic page labels, without new scan or manuscript collation; the matching hosts are not independent witnesses."
+    },
+    {
+      "id": "SAWAIQ",
+      "author": "Ibn al-Qayyim",
+      "work": "al-Sawaiq al-mursala",
+      "source_listing": "https://saaid.org/book/open.php?book=18171",
+      "visually_read_printed_ranges": [
+        [
+          227,
+          233
+        ],
+        [
+          558,
+          564
+        ],
+        [
+          605,
+          619
+        ],
+        [
+          653,
+          665
+        ],
+        [
+          700,
+          707
+        ]
+      ],
+      "citation_rule": "Use printed page numbers without an unverified volume prefix. Modern apparatus is separately attributed."
+    },
+    {
+      "id": "NUBUWWAT",
+      "author": "Ibn Taymiyya",
+      "work": "al-Nubuwwat",
+      "electronic_loci": [
+        {
+          "url": "https://www.islamicbook.ws/amma/alnbwat-003.html",
+          "read_hosted_lines": [
+            [
+              55,
+              79
+            ]
+          ]
+        },
+        {
+          "url": "https://www.islamicbook.ws/amma/alnbwat-002.html",
+          "read_hosted_lines": [
+            [
+              147,
+              162
+            ]
+          ]
+        }
+      ],
+      "scope": "These are hosted lines, not printed pages. No whole-work read, print-edition verification or independent textual-witness claim."
+    },
+    {
+      "id": "RICHARD",
+      "author": "Richard of St Victor",
+      "work": "De Trinitate",
+      "url": "https://www.cristianismo.org.br/RSV-DeTrinitate.pdf",
+      "focal_read_sections": [
+        "III.1–9",
+        "III.12–24",
+        "V.1–7",
+        "opening of V.8 only"
+      ],
+      "focal_retrieval_lines": [
+        [
+          1571,
+          1828
+        ],
+        [
+          1905,
+          2195
+        ],
+        [
+          3028,
+          3329
+        ]
+      ],
+      "method": "Selected parsed Latin text; edition ancestry unverified, no modern translation used.",
+      "exclusions": "III.10–11 are outside the claimed focal reading scope; an incidental opening of III.10 is not relied on. The remainder of V.8 is not claimed as read. The 216-page file extent is not a whole-book reading claim; no successful visual page verification is claimed."
+    }
+  ],
+  "case_loci": {
+    "walid": {
+      "quran": "74:18–25",
+      "tabari": "Electronic commentary at 74:18,21,22(parts1–2),24,25; also separate same-work readings at 74:11,18,21,25. No verified print edition.",
+      "ibn_hisham_url": "https://www.islamicbook.ws/tarekh/sirt-abn-hsham-002.html",
+      "ibn_hisham_read_hosted_lines": [
+        707,
+        717
+      ],
+      "ibn_hisham_opening_context_hosted_lines": [
+        5,
+        15
+      ],
+      "limits": "Reported hostile speech in the transmitted narrative is not an independently surviving hostile document. Repeated hosts do not multiply the underlying testimony.",
+      "ibn_hisham_opening_context_url": "https://www.islamicbook.ws/tarekh/sirt-abn-hsham-001.html"
+    }
+  },
+  "excluded_material": [
+    "Raw source PDFs, scans, page images, OCR, manuscript photographs and extensive modern apparatus notes are not included.",
+    "The later excluded Shifa scan and excluded pagination corrections supply no evidentiary credit. Retained electronic Shifa has a recorded lacuna.",
+    "Jami al-Masail extraction is not visually certified; no unavailable image or silently repaired clause supports a decisive claim.",
+    "The modern Swinburne full body was unread; no argument from it is included."
+  ],
+  "coverage_controls": [
+    "Automated processing contributes no reading credit.",
+    "The 2173 selected PDF pages include19 partly deciphered manuscript plates.",
+    "Overlapping targeted rereads and the 51 complementary page-image reading events do not increase unique volume coverage."
+  ],
+  "complementary_reading": {
+    "as_of_utc": "2026-10-06T16:18:02.351036+00:00",
+    "events": 51,
+    "asfahani_pdf_ranges": [
+      [
+        109,
+        120
+      ],
+      [
+        358,
+        361
+      ],
+      [
+        489,
+        491
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        147,
+        147
+      ],
+      [
+        233,
+        233
+      ],
+      [
+        738,
+        739
+      ],
+      [
+        824,
+        828
+      ]
+    ],
+    "al_daa_pdf_ranges": [
+      [
+        76,
+        91
+      ],
+      [
+        98,
+        103
+      ]
+    ],
+    "al_daa_gap_in_this_check": [
+      92,
+      97
+    ],
+    "added_unique_volume_credit": 0
+  }
+}

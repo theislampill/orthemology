@@ -1,0 +1,45 @@
+{
+  "source_checks": [
+    {
+      "source": "T17R",
+      "body_paragraphs_match_extraction": true,
+      "count": 198,
+      "math_nodes": 0
+    },
+    {
+      "source": "T17G",
+      "body_paragraphs_match_extraction": true,
+      "count": 179,
+      "math_nodes": 0
+    },
+    {
+      "source": "T18R",
+      "body_paragraphs_match_extraction": true,
+      "count": 130,
+      "math_nodes": 0
+    },
+    {
+      "source": "T18G",
+      "body_paragraphs_match_extraction": true,
+      "count": 45,
+      "math_nodes": 0
+    },
+    {
+      "source": "T19R",
+      "body_paragraphs_match_extraction": true,
+      "count": 191,
+      "math_nodes": 0
+    },
+    {
+      "source": "T19G",
+      "body_paragraphs_match_extraction": true,
+      "count": 93,
+      "math_nodes": 0
+    }
+  ],
+  "dag_nodes": 103,
+  "dag_edges": 130,
+  "all_references_resolved": true,
+  "acyclic_all_edge_types": true,
+  "new_formalisation": "NOT_ATTEMPTED"
+}

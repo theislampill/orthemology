@@ -1,0 +1,1215 @@
+{
+  "schema": "t20-method-result-source-bindings-v1",
+  "scope": "Only sources actually cited by this 15-owner handoff; original and public identities remain separate.",
+  "alias_base": "Owner archive root; component:path resolves as t20/sources/component/path; final-reader aliases already carry owner-relative t20 paths.",
+  "source_records": [
+    {
+      "alias": "generic-church-probe:PROOF_SCOPE.json",
+      "source_id": "T20-SRC-71bcd8ed1ed071f44369",
+      "owner_relative_path": "t20/sources/generic-church-probe/PROOF_SCOPE.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/0280d6933c790b046be81f030eee2207e81289ae7560d482497305985f6942ed/PROOF_SCOPE.json",
+      "original_sha256": "0280d6933c790b046be81f030eee2207e81289ae7560d482497305985f6942ed",
+      "public_sha256": "0280d6933c790b046be81f030eee2207e81289ae7560d482497305985f6942ed",
+      "public_bytes": 2167,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "generic-church-probe:REVIEW_SUMMARY.md",
+      "source_id": "T20-SRC-e6d13780ce8bf64111f0",
+      "owner_relative_path": "t20/sources/generic-church-probe/REVIEW_SUMMARY.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/ce69f96a46eda0a6cb8710396f6e50cb2b0222a56922369325e8b1671ccfda94/REVIEW_SUMMARY.md",
+      "original_sha256": "ce69f96a46eda0a6cb8710396f6e50cb2b0222a56922369325e8b1671ccfda94",
+      "public_sha256": "ce69f96a46eda0a6cb8710396f6e50cb2b0222a56922369325e8b1671ccfda94",
+      "public_bytes": 1274,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "generic-church-probe:src/GenericIdentityCarrierProbe.lean",
+      "source_id": "T20-SRC-611f8ba14d00927609d0",
+      "owner_relative_path": "t20/sources/generic-church-probe/src/GenericIdentityCarrierProbe.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/43e824a746ef624e8d783e89d62d3dc95108042cb311f931cd868cbe5cf76028/GenericIdentityCarrierProbe.lean",
+      "original_sha256": "43e824a746ef624e8d783e89d62d3dc95108042cb311f931cd868cbe5cf76028",
+      "public_sha256": "43e824a746ef624e8d783e89d62d3dc95108042cb311f931cd868cbe5cf76028",
+      "public_bytes": 7743,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "generic-church-probe:tests/StatementContract.lean",
+      "source_id": "T20-SRC-829ad7f56702d0aec92c",
+      "owner_relative_path": "t20/sources/generic-church-probe/tests/StatementContract.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/9889aaea30cd558de1535a6f066435d2d3536c724c72b1239cf4db2c171da9ba/StatementContract.lean",
+      "original_sha256": "9889aaea30cd558de1535a6f066435d2d3536c724c72b1239cf4db2c171da9ba",
+      "public_sha256": "9889aaea30cd558de1535a6f066435d2d3536c724c72b1239cf4db2c171da9ba",
+      "public_bytes": 967,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "CND-essential-independence-scope:CNDModalScope.lean",
+      "source_id": "T20-SRC-3a62a1925a0c5d287422",
+      "owner_relative_path": "t20/sources/CND-essential-independence-scope/CNDModalScope.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9/CNDModalScope.lean",
+      "original_sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+      "public_sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+      "public_bytes": 5862,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "CND-essential-independence-scope:CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+      "source_id": "T20-SRC-8a6043caee33ba5acbfc",
+      "owner_relative_path": "t20/sources/CND-essential-independence-scope/CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74/CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+      "original_sha256": "b30250338e5bfa601f8c6a269f84a6af04c5e504711897dfdf00071891c941c8",
+      "public_sha256": "735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+      "public_bytes": 14791,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-8a6043caee33ba5acbfc-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "CND-essential-independence-scope:review/REVIEW.md",
+      "source_id": "T20-SRC-e554e265f7f738e4501d",
+      "owner_relative_path": "t20/sources/CND-essential-independence-scope/review/REVIEW.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/0abbe1a423d9b7588c0e67a3e077572d274796fe3802dca2fe201529a7922873/REVIEW.md",
+      "original_sha256": "0abbe1a423d9b7588c0e67a3e077572d274796fe3802dca2fe201529a7922873",
+      "public_sha256": "0abbe1a423d9b7588c0e67a3e077572d274796fe3802dca2fe201529a7922873",
+      "public_bytes": 2779,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "CND-essential-independence-scope:review/EXHAUSTIVE_CHECK_RESULT.json",
+      "source_id": "T20-SRC-a082c819ac55733fd646",
+      "owner_relative_path": "t20/sources/CND-essential-independence-scope/review/EXHAUSTIVE_CHECK_RESULT.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/45c50c4a83480e9a9b7ad9107b80a17b14711e353dfb6a38d66dd68b1c590322/EXHAUSTIVE_CHECK_RESULT.json",
+      "original_sha256": "45c50c4a83480e9a9b7ad9107b80a17b14711e353dfb6a38d66dd68b1c590322",
+      "public_sha256": "45c50c4a83480e9a9b7ad9107b80a17b14711e353dfb6a38d66dd68b1c590322",
+      "public_bytes": 277,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "CND-essential-independence-scope:review/REVIEW_RECEIPT.json",
+      "source_id": "T20-SRC-9b5e14b8fe7536df8fd0",
+      "owner_relative_path": "t20/sources/CND-essential-independence-scope/review/REVIEW_RECEIPT.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/470d9dbb5f9eecb2bf72aa15e2e1c0df6ec572befab8590c03d0b7cbd8d8d601/REVIEW_RECEIPT.json",
+      "original_sha256": "470d9dbb5f9eecb2bf72aa15e2e1c0df6ec572befab8590c03d0b7cbd8d8d601",
+      "public_sha256": "470d9dbb5f9eecb2bf72aa15e2e1c0df6ec572befab8590c03d0b7cbd8d8d601",
+      "public_bytes": 822,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "exact-scalar-fusion:PROOF_SCOPE.json",
+      "source_id": "T20-SRC-160d3b86079a3f6d5432",
+      "owner_relative_path": "t20/sources/exact-scalar-fusion/PROOF_SCOPE.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/820226315e29730d641d03e175af88561fcec493060a329f2ba9815c4e934868/PROOF_SCOPE.json",
+      "original_sha256": "820226315e29730d641d03e175af88561fcec493060a329f2ba9815c4e934868",
+      "public_sha256": "820226315e29730d641d03e175af88561fcec493060a329f2ba9815c4e934868",
+      "public_bytes": 6572,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "exact-scalar-fusion:REVIEW_SUMMARY.md",
+      "source_id": "T20-SRC-5d53d1dd9b2ebd829a74",
+      "owner_relative_path": "t20/sources/exact-scalar-fusion/REVIEW_SUMMARY.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/2ff68e5e14d132976512e6b51e49af871fd488bcaa65288a81a8a1a881a837cf/REVIEW_SUMMARY.md",
+      "original_sha256": "2ff68e5e14d132976512e6b51e49af871fd488bcaa65288a81a8a1a881a837cf",
+      "public_sha256": "2ff68e5e14d132976512e6b51e49af871fd488bcaa65288a81a8a1a881a837cf",
+      "public_bytes": 2102,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "exact-scalar-fusion:src/ScalarFusionCore.lean",
+      "source_id": "T20-SRC-bd0f1eeb511488766385",
+      "owner_relative_path": "t20/sources/exact-scalar-fusion/src/ScalarFusionCore.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/975e2220158cf6b285cc994e36c408389a908c77e0f63bfa028c8cb416319618/ScalarFusionCore.lean",
+      "original_sha256": "975e2220158cf6b285cc994e36c408389a908c77e0f63bfa028c8cb416319618",
+      "public_sha256": "975e2220158cf6b285cc994e36c408389a908c77e0f63bfa028c8cb416319618",
+      "public_bytes": 6739,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "exact-scalar-fusion:src/ScalarFusionReverse.lean",
+      "source_id": "T20-SRC-35f8add63e78a5679299",
+      "owner_relative_path": "t20/sources/exact-scalar-fusion/src/ScalarFusionReverse.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/6a03e72fe6e087c98b97d0f881f6f1dc7960c2a46b89f7f1351394ff3b410b65/ScalarFusionReverse.lean",
+      "original_sha256": "6a03e72fe6e087c98b97d0f881f6f1dc7960c2a46b89f7f1351394ff3b410b65",
+      "public_sha256": "6a03e72fe6e087c98b97d0f881f6f1dc7960c2a46b89f7f1351394ff3b410b65",
+      "public_bytes": 13817,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "exact-scalar-fusion:src/ClosedProofCanonicalisation.lean",
+      "source_id": "T20-SRC-ab2ef8dcaa020b398bba",
+      "owner_relative_path": "t20/sources/exact-scalar-fusion/src/ClosedProofCanonicalisation.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/c773b21488efd769d57b3f92ea81b5d3c1cf50de15c7cf4fb1dfd30fa8dc45d8/ClosedProofCanonicalisation.lean",
+      "original_sha256": "c773b21488efd769d57b3f92ea81b5d3c1cf50de15c7cf4fb1dfd30fa8dc45d8",
+      "public_sha256": "c773b21488efd769d57b3f92ea81b5d3c1cf50de15c7cf4fb1dfd30fa8dc45d8",
+      "public_bytes": 3075,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "exact-scalar-fusion:src/LiteralScalarFusion.lean",
+      "source_id": "T20-SRC-190d7b4556f4978b0e53",
+      "owner_relative_path": "t20/sources/exact-scalar-fusion/src/LiteralScalarFusion.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/b3d6f9e9b235171c0b885ee40d1fb985c6efa82e1647c76a5ca98e493795af5b/LiteralScalarFusion.lean",
+      "original_sha256": "b3d6f9e9b235171c0b885ee40d1fb985c6efa82e1647c76a5ca98e493795af5b",
+      "public_sha256": "b3d6f9e9b235171c0b885ee40d1fb985c6efa82e1647c76a5ca98e493795af5b",
+      "public_bytes": 2228,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "exact-scalar-fusion:tests/StatementContract.lean",
+      "source_id": "T20-SRC-a41f108da0664e1b270a",
+      "owner_relative_path": "t20/sources/exact-scalar-fusion/tests/StatementContract.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/25a1623204ffb54724a7396ade2d5333c3c025f0d95c7950c84be98376b2e28f/StatementContract.lean",
+      "original_sha256": "25a1623204ffb54724a7396ade2d5333c3c025f0d95c7950c84be98376b2e28f",
+      "public_sha256": "25a1623204ffb54724a7396ade2d5333c3c025f0d95c7950c84be98376b2e28f",
+      "public_bytes": 1307,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "modal-union-v2:lean-v2/ModalUnion.lean",
+      "source_id": "T20-SRC-8e6e9f99984ca5e0548c",
+      "owner_relative_path": "t20/sources/modal-union-v2/lean-v2/ModalUnion.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/d7bd80283e505d2379d453ee3fe75018016a3ae737ce4f25d0d610451d00fa08/ModalUnion.lean",
+      "original_sha256": "d7bd80283e505d2379d453ee3fe75018016a3ae737ce4f25d0d610451d00fa08",
+      "public_sha256": "d7bd80283e505d2379d453ee3fe75018016a3ae737ce4f25d0d610451d00fa08",
+      "public_bytes": 7265,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "modal-union-v2:lean-v2/STATEMENT_CONTRACT.txt",
+      "source_id": "T20-SRC-92c41ca72af7972fa3b6",
+      "owner_relative_path": "t20/sources/modal-union-v2/lean-v2/STATEMENT_CONTRACT.txt",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/8791ae645854ad6ec167fb8c38b44f70a1d75e0f5ddb67ffe7776f6012dfcd98/STATEMENT_CONTRACT.txt",
+      "original_sha256": "8791ae645854ad6ec167fb8c38b44f70a1d75e0f5ddb67ffe7776f6012dfcd98",
+      "public_sha256": "8791ae645854ad6ec167fb8c38b44f70a1d75e0f5ddb67ffe7776f6012dfcd98",
+      "public_bytes": 5789,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "modal-union-v2:ROOT_INDEPENDENT_REVIEW.md",
+      "source_id": "T20-SRC-13714d17b9a5f60597bd",
+      "owner_relative_path": "t20/sources/modal-union-v2/ROOT_INDEPENDENT_REVIEW.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/0f8e9f3952b499dc3fc1776415328b95b721cec0f5b2609aa592809bd3829716/ROOT_INDEPENDENT_REVIEW.md",
+      "original_sha256": "0f8e9f3952b499dc3fc1776415328b95b721cec0f5b2609aa592809bd3829716",
+      "public_sha256": "0f8e9f3952b499dc3fc1776415328b95b721cec0f5b2609aa592809bd3829716",
+      "public_bytes": 3465,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "modal-union-v2:ROOT_INDEPENDENT_REVIEW_RECEIPT.json",
+      "source_id": "T20-SRC-340cbd74ab0bfd8b79b9",
+      "owner_relative_path": "t20/sources/modal-union-v2/ROOT_INDEPENDENT_REVIEW_RECEIPT.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/6a9a52c28ca3d6858abe0f0ae23575153bc3e21aaee03fee9450e4950577369b/ROOT_INDEPENDENT_REVIEW_RECEIPT.json",
+      "original_sha256": "6a9a52c28ca3d6858abe0f0ae23575153bc3e21aaee03fee9450e4950577369b",
+      "public_sha256": "6a9a52c28ca3d6858abe0f0ae23575153bc3e21aaee03fee9450e4950577369b",
+      "public_bytes": 1346,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "existential-ground:PROOF_MAP_v1.md",
+      "source_id": "T20-SRC-15eeafdc7592741cc471",
+      "owner_relative_path": "t20/sources/existential-ground/PROOF_MAP_v1.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/577bc52cad53b2b1b56ce75c2b47ae9fc16d463939d98851b922ffb3162e8625/PROOF_MAP_v1.md",
+      "original_sha256": "577bc52cad53b2b1b56ce75c2b47ae9fc16d463939d98851b922ffb3162e8625",
+      "public_sha256": "577bc52cad53b2b1b56ce75c2b47ae9fc16d463939d98851b922ffb3162e8625",
+      "public_bytes": 6791,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "existential-ground:lean/GroundExtension.lean",
+      "source_id": "T20-SRC-b2ab638c0d7021a9ba0b",
+      "owner_relative_path": "t20/sources/existential-ground/lean/GroundExtension.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/828a7541174e85f84ff1d79f00f455bcdd3ec115d86498c9ee8959f07d2bbfc5/GroundExtension.lean",
+      "original_sha256": "828a7541174e85f84ff1d79f00f455bcdd3ec115d86498c9ee8959f07d2bbfc5",
+      "public_sha256": "828a7541174e85f84ff1d79f00f455bcdd3ec115d86498c9ee8959f07d2bbfc5",
+      "public_bytes": 13399,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "existential-ground:lean/GroundExtensionControls.lean",
+      "source_id": "T20-SRC-d648b3345224e663dd99",
+      "owner_relative_path": "t20/sources/existential-ground/lean/GroundExtensionControls.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/41e7b7c620913edd5aff0ba04be3638ac721e4bc8e67479cdf9c038f2975bac9/GroundExtensionControls.lean",
+      "original_sha256": "41e7b7c620913edd5aff0ba04be3638ac721e4bc8e67479cdf9c038f2975bac9",
+      "public_sha256": "41e7b7c620913edd5aff0ba04be3638ac721e4bc8e67479cdf9c038f2975bac9",
+      "public_bytes": 8757,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "existential-ground:lean/ModalCapacityControl.lean",
+      "source_id": "T20-SRC-0730ca2d70adab953e9e",
+      "owner_relative_path": "t20/sources/existential-ground/lean/ModalCapacityControl.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e/ModalCapacityControl.lean",
+      "original_sha256": "899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e",
+      "public_sha256": "899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e",
+      "public_bytes": 4607,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "existential-ground:review/INDEPENDENT_REVIEW_PUBLIC.md",
+      "source_id": "T20-SRC-a6475955ae9502da9c08",
+      "owner_relative_path": "t20/sources/existential-ground/review/INDEPENDENT_REVIEW_PUBLIC.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/c379a80f22e79e5e5f6a012b475c5f9e3333938cde607527838567bd761d1e55/INDEPENDENT_REVIEW_PUBLIC.md",
+      "original_sha256": "4682ac642288b8b58d025c5b7d68063f0db452445e4b750b6aeb9a2840f0215d",
+      "public_sha256": "c379a80f22e79e5e5f6a012b475c5f9e3333938cde607527838567bd761d1e55",
+      "public_bytes": 14712,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-a6475955ae9502da9c08-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "existential-ground:review/INDEPENDENT_REVIEW_RECEIPT_PUBLIC.json",
+      "source_id": "T20-SRC-fc25e2aaafb7ba349f09",
+      "owner_relative_path": "t20/sources/existential-ground/review/INDEPENDENT_REVIEW_RECEIPT_PUBLIC.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/b34b3d43e6d125a8417c51f9890f45c9444ede840995bb02c6d4c30b68f3d04f/INDEPENDENT_REVIEW_RECEIPT_PUBLIC.json",
+      "original_sha256": "7fd5672af799517f3ed2780290fad01586daa991779398459833958fd919948d",
+      "public_sha256": "b34b3d43e6d125a8417c51f9890f45c9444ede840995bb02c6d4c30b68f3d04f",
+      "public_bytes": 6661,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-fc25e2aaafb7ba349f09-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "grounded-attestation:EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+      "source_id": "T20-SRC-bc4086887c386c93d46c",
+      "owner_relative_path": "t20/sources/grounded-attestation/EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037/EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+      "original_sha256": "b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037",
+      "public_sha256": "b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037",
+      "public_bytes": 19471,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:THEOREM_MAP.md",
+      "source_id": "T20-SRC-b6f27c05927bd0c8597a",
+      "owner_relative_path": "t20/sources/grounded-attestation/THEOREM_MAP.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/6563884fd827f0185f913e29b7b45a4f53c87f8ef39bbfb451e4b68d494d3202/THEOREM_MAP.md",
+      "original_sha256": "6563884fd827f0185f913e29b7b45a4f53c87f8ef39bbfb451e4b68d494d3202",
+      "public_sha256": "6563884fd827f0185f913e29b7b45a4f53c87f8ef39bbfb451e4b68d494d3202",
+      "public_bytes": 3414,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:lean/GroundedSupport.lean",
+      "source_id": "T20-SRC-ec7ea1ccc5394bc96e22",
+      "owner_relative_path": "t20/sources/grounded-attestation/lean/GroundedSupport.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed/GroundedSupport.lean",
+      "original_sha256": "73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed",
+      "public_sha256": "73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed",
+      "public_bytes": 4269,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:lean/GroundedQuotient.lean",
+      "source_id": "T20-SRC-44b428c48a577bb328ab",
+      "owner_relative_path": "t20/sources/grounded-attestation/lean/GroundedQuotient.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b/GroundedQuotient.lean",
+      "original_sha256": "7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b",
+      "public_sha256": "7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b",
+      "public_bytes": 3216,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:lean/AliasCuts.lean",
+      "source_id": "T20-SRC-14625a53c7de90bd81a2",
+      "owner_relative_path": "t20/sources/grounded-attestation/lean/AliasCuts.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/ad78fed4255f9ae2a694fbe6d754b7d6b0ebbed10f99f109239430486405d519/AliasCuts.lean",
+      "original_sha256": "ad78fed4255f9ae2a694fbe6d754b7d6b0ebbed10f99f109239430486405d519",
+      "public_sha256": "ad78fed4255f9ae2a694fbe6d754b7d6b0ebbed10f99f109239430486405d519",
+      "public_bytes": 4756,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:lean/OccurrenceControls.lean",
+      "source_id": "T20-SRC-c256c07d71fa302bb583",
+      "owner_relative_path": "t20/sources/grounded-attestation/lean/OccurrenceControls.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a/OccurrenceControls.lean",
+      "original_sha256": "b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a",
+      "public_sha256": "b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a",
+      "public_bytes": 6343,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:lean/CutControls.lean",
+      "source_id": "T20-SRC-6cccb1d53aa222df1f80",
+      "owner_relative_path": "t20/sources/grounded-attestation/lean/CutControls.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/e153d9baf9ca6e4df1a005fe578ea4ceb00347fee7d1918ff02a87f4f445a4b5/CutControls.lean",
+      "original_sha256": "e153d9baf9ca6e4df1a005fe578ea4ceb00347fee7d1918ff02a87f4f445a4b5",
+      "public_sha256": "e153d9baf9ca6e4df1a005fe578ea4ceb00347fee7d1918ff02a87f4f445a4b5",
+      "public_bytes": 2241,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:lean/MutationControls.lean",
+      "source_id": "T20-SRC-f0e52a73256f7e2adbe9",
+      "owner_relative_path": "t20/sources/grounded-attestation/lean/MutationControls.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/19501a1defe88ca77f0001bbbd178a01861752d99bd7e3f39d068e9466a48634/MutationControls.lean",
+      "original_sha256": "19501a1defe88ca77f0001bbbd178a01861752d99bd7e3f39d068e9466a48634",
+      "public_sha256": "19501a1defe88ca77f0001bbbd178a01861752d99bd7e3f39d068e9466a48634",
+      "public_bytes": 1886,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:review/INDEPENDENT_REVIEW.md",
+      "source_id": "T20-SRC-8edaa1ccf0ec77ae1ef0",
+      "owner_relative_path": "t20/sources/grounded-attestation/review/INDEPENDENT_REVIEW.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/9daadb1766b4ce3b0eb53d98775854daf003c8f145f1659003b015fe47939481/INDEPENDENT_REVIEW.md",
+      "original_sha256": "9daadb1766b4ce3b0eb53d98775854daf003c8f145f1659003b015fe47939481",
+      "public_sha256": "9daadb1766b4ce3b0eb53d98775854daf003c8f145f1659003b015fe47939481",
+      "public_bytes": 9124,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "grounded-attestation:review/INDEPENDENT_REVIEW_RECEIPT.json",
+      "source_id": "T20-SRC-b4bfa34d6f373c6ad62a",
+      "owner_relative_path": "t20/sources/grounded-attestation/review/INDEPENDENT_REVIEW_RECEIPT.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/59516c7317d14d94c6ff496c34fbdc807f864002fba90ab8fff1cba2fe84b5c9/INDEPENDENT_REVIEW_RECEIPT.json",
+      "original_sha256": "59516c7317d14d94c6ff496c34fbdc807f864002fba90ab8fff1cba2fe84b5c9",
+      "public_sha256": "59516c7317d14d94c6ff496c34fbdc807f864002fba90ab8fff1cba2fe84b5c9",
+      "public_bytes": 6375,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "literal-HasE-written-negative-route:NEW_PASS_RESULT.md",
+      "source_id": "T20-SRC-104a99583a1b7c4093c7",
+      "owner_relative_path": "t20/sources/literal-HasE-written-negative-route/NEW_PASS_RESULT.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/f52f7257475c5187a8cba284d596fa6a1d3e4d589721524354997d9f5bfc2f7f/NEW_PASS_RESULT.md",
+      "original_sha256": "f52f7257475c5187a8cba284d596fa6a1d3e4d589721524354997d9f5bfc2f7f",
+      "public_sha256": "f52f7257475c5187a8cba284d596fa6a1d3e4d589721524354997d9f5bfc2f7f",
+      "public_bytes": 10943,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "original-bearer-bridge:OriginalBearerBridge.lean",
+      "source_id": "T20-SRC-eb896eabd4ffa2cc6d79",
+      "owner_relative_path": "t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99/OriginalBearerBridge.lean",
+      "original_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "public_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "public_bytes": 6940,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "original-bearer-bridge:THEOREM_SOURCE_MAP.json",
+      "source_id": "T20-SRC-9d279173652a528fa044",
+      "owner_relative_path": "t20/sources/original-bearer-bridge/THEOREM_SOURCE_MAP.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431/THEOREM_SOURCE_MAP.json",
+      "original_sha256": "efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431",
+      "public_sha256": "efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431",
+      "public_bytes": 24677,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "original-bearer-bridge:BOUNDARY_LEDGER.json",
+      "source_id": "T20-SRC-79e15bc9d659cac311c6",
+      "owner_relative_path": "t20/sources/original-bearer-bridge/BOUNDARY_LEDGER.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8/BOUNDARY_LEDGER.json",
+      "original_sha256": "3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8",
+      "public_sha256": "3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8",
+      "public_bytes": 5190,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "original-bearer-bridge:COUNTERMODEL_MATRIX.json",
+      "source_id": "T20-SRC-f1163294344091a3395d",
+      "owner_relative_path": "t20/sources/original-bearer-bridge/COUNTERMODEL_MATRIX.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e/COUNTERMODEL_MATRIX.json",
+      "original_sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e",
+      "public_sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e",
+      "public_bytes": 6059,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "original-bearer-bridge:review/REVIEW.md",
+      "source_id": "T20-SRC-19a0b495b1cba3cc53ca",
+      "owner_relative_path": "t20/sources/original-bearer-bridge/review/REVIEW.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/6fc6b49f9999f78392548b0095bb865c06da4ea49d9fe00257c636e967dd53cc/REVIEW.md",
+      "original_sha256": "6fc6b49f9999f78392548b0095bb865c06da4ea49d9fe00257c636e967dd53cc",
+      "public_sha256": "6fc6b49f9999f78392548b0095bb865c06da4ea49d9fe00257c636e967dd53cc",
+      "public_bytes": 12746,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "original-bearer-bridge:review/fresh-replay/VERIFICATION.json",
+      "source_id": "T20-SRC-99af393fe9d2c5252e0e",
+      "owner_relative_path": "t20/sources/original-bearer-bridge/review/fresh-replay/VERIFICATION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/e90d43c6c7a7f5f88eae103cc7d4c1b55627d4d0f857b6f6bc8433ebb56056f7/VERIFICATION.json",
+      "original_sha256": "e90d43c6c7a7f5f88eae103cc7d4c1b55627d4d0f857b6f6bc8433ebb56056f7",
+      "public_sha256": "e90d43c6c7a7f5f88eae103cc7d4c1b55627d4d0f857b6f6bc8433ebb56056f7",
+      "public_bytes": 10288,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "original-bearer-bridge:review/INDEPENDENT_SCOPE_VERIFICATION.json",
+      "source_id": "T20-SRC-fddc9146c867222828d7",
+      "owner_relative_path": "t20/sources/original-bearer-bridge/review/INDEPENDENT_SCOPE_VERIFICATION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/ab3e099392fdfde7a45cd501667c5a9107aa42030800d327a178e4e469d47c87/INDEPENDENT_SCOPE_VERIFICATION.json",
+      "original_sha256": "ab3e099392fdfde7a45cd501667c5a9107aa42030800d327a178e4e469d47c87",
+      "public_sha256": "ab3e099392fdfde7a45cd501667c5a9107aa42030800d327a178e4e469d47c87",
+      "public_bytes": 15503,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "original-bearer-bridge:SourceIdentityDerived.lean",
+      "source_id": "T20-SRC-9f07b31f780f63baac2e",
+      "owner_relative_path": "t20/sources/original-bearer-bridge/SourceIdentityDerived.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54/SourceIdentityDerived.lean",
+      "original_sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "public_sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "public_bytes": 7438,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "anchored-source-bridge:src/AnchoredSourceBridge.lean",
+      "source_id": "T20-SRC-b5b27fbe3320b2ab2804",
+      "owner_relative_path": "t20/sources/anchored-source-bridge/src/AnchoredSourceBridge.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1/AnchoredSourceBridge.lean",
+      "original_sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "public_sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "public_bytes": 10743,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "anchored-source-bridge:SOURCE_AND_PREMISE_MAP.md",
+      "source_id": "T20-SRC-63aadf9057e5771d260d",
+      "owner_relative_path": "t20/sources/anchored-source-bridge/SOURCE_AND_PREMISE_MAP.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e/SOURCE_AND_PREMISE_MAP.md",
+      "original_sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+      "public_sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+      "public_bytes": 6523,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "anchored-source-bridge:BOUNDARY_LEDGER.json",
+      "source_id": "T20-SRC-25f500169e815e2c70f3",
+      "owner_relative_path": "t20/sources/anchored-source-bridge/BOUNDARY_LEDGER.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/ede9054fc8b954aaff02ee8d35c327327d0612ff6ee2ceee966b20d40419ca48/BOUNDARY_LEDGER.json",
+      "original_sha256": "ede9054fc8b954aaff02ee8d35c327327d0612ff6ee2ceee966b20d40419ca48",
+      "public_sha256": "ede9054fc8b954aaff02ee8d35c327327d0612ff6ee2ceee966b20d40419ca48",
+      "public_bytes": 25835,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "anchored-source-bridge:CONTROL_MATRIX.md",
+      "source_id": "T20-SRC-e20f537233d44523d946",
+      "owner_relative_path": "t20/sources/anchored-source-bridge/CONTROL_MATRIX.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/359c1f4901773262e328d5acb1e4a247ea9f8dc1fb7add195e3be7563026d186/CONTROL_MATRIX.md",
+      "original_sha256": "359c1f4901773262e328d5acb1e4a247ea9f8dc1fb7add195e3be7563026d186",
+      "public_sha256": "359c1f4901773262e328d5acb1e4a247ea9f8dc1fb7add195e3be7563026d186",
+      "public_bytes": 5852,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "anchored-source-bridge:review/REVIEW.md",
+      "source_id": "T20-SRC-ea56b2e099c334426c79",
+      "owner_relative_path": "t20/sources/anchored-source-bridge/review/REVIEW.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/94dba791705477f49ed9949e3d437c1f04201a53dcb19429d4d72ab0d3d46553/REVIEW.md",
+      "original_sha256": "94dba791705477f49ed9949e3d437c1f04201a53dcb19429d4d72ab0d3d46553",
+      "public_sha256": "94dba791705477f49ed9949e3d437c1f04201a53dcb19429d4d72ab0d3d46553",
+      "public_bytes": 14391,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "anchored-source-bridge:review/CLAIM_REVIEW.json",
+      "source_id": "T20-SRC-108cfe780bb4999cc80c",
+      "owner_relative_path": "t20/sources/anchored-source-bridge/review/CLAIM_REVIEW.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/0cf76b8b6602b7dbc6dc2d96cc2d2a810bc9e09978ba264ebb7a05d671a1a463/CLAIM_REVIEW.json",
+      "original_sha256": "0cf76b8b6602b7dbc6dc2d96cc2d2a810bc9e09978ba264ebb7a05d671a1a463",
+      "public_sha256": "0cf76b8b6602b7dbc6dc2d96cc2d2a810bc9e09978ba264ebb7a05d671a1a463",
+      "public_bytes": 7601,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "anchored-source-bridge:review/trust-zero-build/INDEPENDENT_BUILD_MANIFEST.json",
+      "source_id": "T20-SRC-40b5dd8e1b518d85abef",
+      "owner_relative_path": "t20/sources/anchored-source-bridge/review/trust-zero-build/INDEPENDENT_BUILD_MANIFEST.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/294ae70f1f0ba25ae776f1c1c9b739045403ba07a74659f2cbcfe29ad5364f4e/INDEPENDENT_BUILD_MANIFEST.json",
+      "original_sha256": "294ae70f1f0ba25ae776f1c1c9b739045403ba07a74659f2cbcfe29ad5364f4e",
+      "public_sha256": "294ae70f1f0ba25ae776f1c1c9b739045403ba07a74659f2cbcfe29ad5364f4e",
+      "public_bytes": 52419,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "veracity-boundary:src/VeracityBoundary.lean",
+      "source_id": "T20-SRC-f1a8c8439f07297397c0",
+      "owner_relative_path": "t20/sources/veracity-boundary/src/VeracityBoundary.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f/VeracityBoundary.lean",
+      "original_sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "public_sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "public_bytes": 5975,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "veracity-boundary:THEOREM_MAP.md",
+      "source_id": "T20-SRC-cce675d398ac2a8c8e0c",
+      "owner_relative_path": "t20/sources/veracity-boundary/THEOREM_MAP.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099/THEOREM_MAP.md",
+      "original_sha256": "4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099",
+      "public_sha256": "4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099",
+      "public_bytes": 4596,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "veracity-boundary:SOURCE_PREMISE_MAP.json",
+      "source_id": "T20-SRC-06aeb9b1ae37782c87da",
+      "owner_relative_path": "t20/sources/veracity-boundary/SOURCE_PREMISE_MAP.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531/SOURCE_PREMISE_MAP.json",
+      "original_sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531",
+      "public_sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531",
+      "public_bytes": 5901,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "veracity-boundary:review/REVIEW_REPORT.md",
+      "source_id": "T20-SRC-c44a6a205b627753ebe4",
+      "owner_relative_path": "t20/sources/veracity-boundary/review/REVIEW_REPORT.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499/REVIEW_REPORT.md",
+      "original_sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+      "public_sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+      "public_bytes": 13471,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "veracity-boundary:review/REVIEW_RESULT.json",
+      "source_id": "T20-SRC-edb6d4ced78723169641",
+      "owner_relative_path": "t20/sources/veracity-boundary/review/REVIEW_RESULT.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/4edc9e480ff668151725d238a5ce000c793fc3fd0ad522b365ac6b93a63ccc32/REVIEW_RESULT.json",
+      "original_sha256": "4edc9e480ff668151725d238a5ce000c793fc3fd0ad522b365ac6b93a63ccc32",
+      "public_sha256": "4edc9e480ff668151725d238a5ce000c793fc3fd0ad522b365ac6b93a63ccc32",
+      "public_bytes": 1607,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "veracity-boundary:review/fresh-trust0-v3/REVIEW_VERIFICATION.json",
+      "source_id": "T20-SRC-e1590154fe105394e83b",
+      "owner_relative_path": "t20/sources/veracity-boundary/review/fresh-trust0-v3/REVIEW_VERIFICATION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/9326e3982851a9a3fb91009ecb88967e85e84c56ba36d3e275983d2421389f2b/REVIEW_VERIFICATION.json",
+      "original_sha256": "9326e3982851a9a3fb91009ecb88967e85e84c56ba36d3e275983d2421389f2b",
+      "public_sha256": "9326e3982851a9a3fb91009ecb88967e85e84c56ba36d3e275983d2421389f2b",
+      "public_bytes": 12810,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "veracity-boundary:erratum/ERRATUM.md",
+      "source_id": "T20-SRC-3fce6d23ff7680feec40",
+      "owner_relative_path": "t20/sources/veracity-boundary/erratum/ERRATUM.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9/ERRATUM.md",
+      "original_sha256": "4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9",
+      "public_sha256": "4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9",
+      "public_bytes": 1448,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "openai-corpus-transfer-synthesis:CORPUS_AND_TRANSFER_SCOPE.md",
+      "source_id": "T20-SRC-485b0d12ad4edab95b0e",
+      "owner_relative_path": "t20/sources/openai-corpus-transfer-synthesis/CORPUS_AND_TRANSFER_SCOPE.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4/CORPUS_AND_TRANSFER_SCOPE.md",
+      "original_sha256": "65df49d926e79196e2c300359801706e7c34f492256c11bc0a92bcdb4d5c70b5",
+      "public_sha256": "1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4",
+      "public_bytes": 11514,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-485b0d12ad4edab95b0e-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "openai-corpus-transfer-synthesis:FAMILY245_TRANSFER_DECISION.json",
+      "source_id": "T20-SRC-a18edaeadc88ae3a5bac",
+      "owner_relative_path": "t20/sources/openai-corpus-transfer-synthesis/FAMILY245_TRANSFER_DECISION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064/FAMILY245_TRANSFER_DECISION.json",
+      "original_sha256": "e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064",
+      "public_sha256": "e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064",
+      "public_bytes": 2570,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "openai-corpus-transfer-synthesis:SOURCE_IDENTITIES.json",
+      "source_id": "T20-SRC-e90f507509aff2ccf556",
+      "owner_relative_path": "t20/sources/openai-corpus-transfer-synthesis/SOURCE_IDENTITIES.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/5b0cf5f4686a09f79750a8ec440a7ffbddbcee11efa4290055f836579f8847f8/SOURCE_IDENTITIES.json",
+      "original_sha256": "5b0cf5f4686a09f79750a8ec440a7ffbddbcee11efa4290055f836579f8847f8",
+      "public_sha256": "5b0cf5f4686a09f79750a8ec440a7ffbddbcee11efa4290055f836579f8847f8",
+      "public_bytes": 2899,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "math122-observation-controls:formal/TraceControls.lean",
+      "source_id": "T20-SRC-6b7aebabf495038dbc09",
+      "owner_relative_path": "t20/sources/math122-observation-controls/formal/TraceControls.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2/TraceControls.lean",
+      "original_sha256": "0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2",
+      "public_sha256": "0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2",
+      "public_bytes": 7373,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "math122-observation-controls:formal/RationalFixtures.lean",
+      "source_id": "T20-SRC-a4c67c5ec7349f377052",
+      "owner_relative_path": "t20/sources/math122-observation-controls/formal/RationalFixtures.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/5593eb52e66142b99d7f592845fd92096583a3f6cb9fe273ffa306843ddbab6b/RationalFixtures.lean",
+      "original_sha256": "5593eb52e66142b99d7f592845fd92096583a3f6cb9fe273ffa306843ddbab6b",
+      "public_sha256": "5593eb52e66142b99d7f592845fd92096583a3f6cb9fe273ffa306843ddbab6b",
+      "public_bytes": 1366,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "math122-observation-controls:README.md",
+      "source_id": "T20-SRC-92f9081d162a6eef7a1d",
+      "owner_relative_path": "t20/sources/math122-observation-controls/README.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/a0f78f8aa5b928561fd533e9084a0d3e18e9c7ce3775504e5ebdfd06ffeea03a/README.md",
+      "original_sha256": "9095d17f6d6caca7b4a60708289e21f7599c2eceff669d2b6cbbd7e300698600",
+      "public_sha256": "a0f78f8aa5b928561fd533e9084a0d3e18e9c7ce3775504e5ebdfd06ffeea03a",
+      "public_bytes": 4557,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-92f9081d162a6eef7a1d-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "math122-observation-controls:MODEL_DERIVATION_AND_PROPOSAL.md",
+      "source_id": "T20-SRC-9f475b24d9ec1f8acb43",
+      "owner_relative_path": "t20/sources/math122-observation-controls/MODEL_DERIVATION_AND_PROPOSAL.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/ab2729c1927d164129161f785e1eaa3f4b71c6e32b2eb94f93d17c4cc3f06598/MODEL_DERIVATION_AND_PROPOSAL.md",
+      "original_sha256": "199036616a833fb0c1b93d36b649e237e915cf171b5ea875c6759fc82fcdd304",
+      "public_sha256": "ab2729c1927d164129161f785e1eaa3f4b71c6e32b2eb94f93d17c4cc3f06598",
+      "public_bytes": 12265,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-9f475b24d9ec1f8acb43-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "math122-observation-controls:review/REVIEW.md",
+      "source_id": "T20-SRC-76e8901033b9613913e0",
+      "owner_relative_path": "t20/sources/math122-observation-controls/review/REVIEW.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/73d79019e20da7fcf602d64f01e664a8c927d9dc664ff2fb7894c0a27b94e723/REVIEW.md",
+      "original_sha256": "9d2d5517cea6e202f8585980f0cb04bde576be2f94e530ae28177b192740c78a",
+      "public_sha256": "73d79019e20da7fcf602d64f01e664a8c927d9dc664ff2fb7894c0a27b94e723",
+      "public_bytes": 11923,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-76e8901033b9613913e0-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "math122-observation-controls:review/replay/INDEPENDENT_REPLAY.json",
+      "source_id": "T20-SRC-34b20f9f0863d97db0b4",
+      "owner_relative_path": "t20/sources/math122-observation-controls/review/replay/INDEPENDENT_REPLAY.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/c0bbc32c3107968e84690948d08f14d23d83df4fa4d0578e30925c8abd694dc7/INDEPENDENT_REPLAY.json",
+      "original_sha256": "b3879ade78c66c4fd13df745c1201c43023177d759036751c7a31771c4ba194d",
+      "public_sha256": "c0bbc32c3107968e84690948d08f14d23d83df4fa4d0578e30925c8abd694dc7",
+      "public_bytes": 3584,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-34b20f9f0863d97db0b4-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "math122-observation-controls:review/EXTRA_KERNEL_RECEIPT.json",
+      "source_id": "T20-SRC-c7e7d3f345dc4ae2fea7",
+      "owner_relative_path": "t20/sources/math122-observation-controls/review/EXTRA_KERNEL_RECEIPT.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/dbffc52311696797c1cc6efb0b269e50644540398acb436a8713acad1bc5fc4c/EXTRA_KERNEL_RECEIPT.json",
+      "original_sha256": "c0aadb9594a9d7339b4e4ab677fe7642380fb386e2356cbd653b903653e36522",
+      "public_sha256": "dbffc52311696797c1cc6efb0b269e50644540398acb436a8713acad1bc5fc4c",
+      "public_bytes": 1172,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-c7e7d3f345dc4ae2fea7-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "math122-observation-controls:review/COUNTERCHECKS.json",
+      "source_id": "T20-SRC-8df6d7f3f65ed2955c71",
+      "owner_relative_path": "t20/sources/math122-observation-controls/review/COUNTERCHECKS.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/c7020513c083a11369321aa4cac3293ccdbe40ac5bc0fc0df16f65e6fd90763c/COUNTERCHECKS.json",
+      "original_sha256": "8b19638e73025b34e5da262f41d3d54d10685e8a652ab2e8d0306bba01838735",
+      "public_sha256": "c7020513c083a11369321aa4cac3293ccdbe40ac5bc0fc0df16f65e6fd90763c",
+      "public_bytes": 4762,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-8df6d7f3f65ed2955c71-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "math122-observation-controls:review/ReviewerCounterchecks.lean",
+      "source_id": "T20-SRC-b016b85a6579e4390fd7",
+      "owner_relative_path": "t20/sources/math122-observation-controls/review/ReviewerCounterchecks.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/f29664167903378504944fe0284ae707a0c3461dafe876378de848d08914b3e3/ReviewerCounterchecks.lean",
+      "original_sha256": "f29664167903378504944fe0284ae707a0c3461dafe876378de848d08914b3e3",
+      "public_sha256": "f29664167903378504944fe0284ae707a0c3461dafe876378de848d08914b3e3",
+      "public_bytes": 3785,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "joint-foundational-model:src/JointFiniteInterpretation.lean",
+      "source_id": "T20-SRC-abbb67cfdcea61008a86",
+      "owner_relative_path": "t20/sources/joint-foundational-model/src/JointFiniteInterpretation.lean",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46/JointFiniteInterpretation.lean",
+      "original_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "public_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "public_bytes": 24102,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "joint-foundational-model:THEOREM_MAP.md",
+      "source_id": "T20-SRC-1110123518eb9b01ec62",
+      "owner_relative_path": "t20/sources/joint-foundational-model/THEOREM_MAP.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e/THEOREM_MAP.md",
+      "original_sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+      "public_sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+      "public_bytes": 4858,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "joint-foundational-model:BOUNDARY_LEDGER.json",
+      "source_id": "T20-SRC-940b7adee45c7ae67502",
+      "owner_relative_path": "t20/sources/joint-foundational-model/BOUNDARY_LEDGER.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/e410fa131e61102006cdced05d3cb36ffd4a8cb0bc0d6b08b2c5ae77eb7c37ac/BOUNDARY_LEDGER.json",
+      "original_sha256": "e410fa131e61102006cdced05d3cb36ffd4a8cb0bc0d6b08b2c5ae77eb7c37ac",
+      "public_sha256": "e410fa131e61102006cdced05d3cb36ffd4a8cb0bc0d6b08b2c5ae77eb7c37ac",
+      "public_bytes": 6402,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "joint-foundational-model:review/REVIEW.md",
+      "source_id": "T20-SRC-85b5b4b5427d6eb94f3d",
+      "owner_relative_path": "t20/sources/joint-foundational-model/review/REVIEW.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a/REVIEW.md",
+      "original_sha256": "007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a",
+      "public_sha256": "007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a",
+      "public_bytes": 14577,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "joint-foundational-model:review/CLAIM_REVIEW.json",
+      "source_id": "T20-SRC-9fae8ebd07741c7a50ec",
+      "owner_relative_path": "t20/sources/joint-foundational-model/review/CLAIM_REVIEW.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/3ac78afa1fb2ef530398b1b0adfbfd9ac5fbaf30dc5b658f55f22d7120f8dfc8/CLAIM_REVIEW.json",
+      "original_sha256": "47982307d149aeb730cdf2067bdb89e41d6622b934cb3a7b5290083b11971cfc",
+      "public_sha256": "3ac78afa1fb2ef530398b1b0adfbfd9ac5fbaf30dc5b658f55f22d7120f8dfc8",
+      "public_bytes": 3697,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-9fae8ebd07741c7a50ec-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "joint-foundational-model:review/fresh-trust0-v1/REVIEW_VERIFICATION.json",
+      "source_id": "T20-SRC-e2f708ca8c4c9ba0c450",
+      "owner_relative_path": "t20/sources/joint-foundational-model/review/fresh-trust0-v1/REVIEW_VERIFICATION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/f416a193ac826ce67cd5512591b02a46050f386809fe0e3c11a0261074652ed5/REVIEW_VERIFICATION.json",
+      "original_sha256": "17d35f7113f9285689775bdda131ebe0e3a8353cdb89480277d6640709786638",
+      "public_sha256": "f416a193ac826ce67cd5512591b02a46050f386809fe0e3c11a0261074652ed5",
+      "public_bytes": 8748,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-e2f708ca8c4c9ba0c450-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "joint-foundational-model:review/joining-tests-final/JOINING_VERIFICATION.json",
+      "source_id": "T20-SRC-d609c33836f0f33a09c4",
+      "owner_relative_path": "t20/sources/joint-foundational-model/review/joining-tests-final/JOINING_VERIFICATION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/c8815ba8168fa9876fa9239c9b16a41b847af29b17f1638072d1980ad005ee12/JOINING_VERIFICATION.json",
+      "original_sha256": "a383e4df48fc94db8e37c8094fd6d9c839b6e3136ad94667c379c9f10c405621",
+      "public_sha256": "c8815ba8168fa9876fa9239c9b16a41b847af29b17f1638072d1980ad005ee12",
+      "public_bytes": 6394,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-d609c33836f0f33a09c4-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "openai-corpus-transfer-synthesis:FAMILY104_TRANSFER_DECISION.json",
+      "source_id": "T20-SRC-41bb7f18372294a3fb83",
+      "owner_relative_path": "t20/sources/openai-corpus-transfer-synthesis/FAMILY104_TRANSFER_DECISION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/c0a95db2f5bd9c766fee73ae5cfe8aee344b7c1ce28af67fbfad21774d6d5888/FAMILY104_TRANSFER_DECISION.json",
+      "original_sha256": "c0a95db2f5bd9c766fee73ae5cfe8aee344b7c1ce28af67fbfad21774d6d5888",
+      "public_sha256": "c0a95db2f5bd9c766fee73ae5cfe8aee344b7c1ce28af67fbfad21774d6d5888",
+      "public_bytes": 2015,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "openai-corpus-transfer-synthesis:FAMILY104_READING_VALIDATION.json",
+      "source_id": "T20-SRC-f5a49f98f8dd3b85741c",
+      "owner_relative_path": "t20/sources/openai-corpus-transfer-synthesis/FAMILY104_READING_VALIDATION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/445a436bf38edd8045c92c5633b8c141c116ca1d8dda6a2c420651070083e814/FAMILY104_READING_VALIDATION.json",
+      "original_sha256": "445a436bf38edd8045c92c5633b8c141c116ca1d8dda6a2c420651070083e814",
+      "public_sha256": "445a436bf38edd8045c92c5633b8c141c116ca1d8dda6a2c420651070083e814",
+      "public_bytes": 1567,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "openai-corpus-transfer-synthesis:FAMILY104_CURRENT_SCOPE.md",
+      "source_id": "T20-SRC-e5c0f7a4e0822778a732",
+      "owner_relative_path": "t20/sources/openai-corpus-transfer-synthesis/FAMILY104_CURRENT_SCOPE.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/2dcdece2b95688d09b736bc46fe1258a05ecf93a2dfd05f322637511a3e3edbb/FAMILY104_CURRENT_SCOPE.md",
+      "original_sha256": "4a6f2667763d1ffcc0a66e9b493e70786687a819de8a1437a458631ac21631dd",
+      "public_sha256": "2dcdece2b95688d09b736bc46fe1258a05ecf93a2dfd05f322637511a3e3edbb",
+      "public_bytes": 7290,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-e5c0f7a4e0822778a732-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "foundational-final-synthesis:SYNTHESIS.md",
+      "source_id": "T20-SRC-2a4fc4fca28aabcb644f",
+      "owner_relative_path": "t20/sources/foundational-final-synthesis/SYNTHESIS.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1/SYNTHESIS.md",
+      "original_sha256": "9d5637132dd4ab3031fa4fad6b18a2ceedb839737db30c9d389b069c8bb3490b",
+      "public_sha256": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1",
+      "public_bytes": 43331,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-2a4fc4fca28aabcb644f-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "foundational-final-synthesis:CONCLUSION_PREMISE_STATUS_MAP.json",
+      "source_id": "T20-SRC-15d7c3bcb3d0b0aaf672",
+      "owner_relative_path": "t20/sources/foundational-final-synthesis/CONCLUSION_PREMISE_STATUS_MAP.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60/CONCLUSION_PREMISE_STATUS_MAP.json",
+      "original_sha256": "bfbe5abaa944f539a45fc9b7c22f07828f2b02613893c18c500432b589c55972",
+      "public_sha256": "44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60",
+      "public_bytes": 175834,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-15d7c3bcb3d0b0aaf672-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "foundational-final-synthesis:INTEGRATION_MANIFEST.json",
+      "source_id": "T20-SRC-adbd43d2567ea9e826bf",
+      "owner_relative_path": "t20/sources/foundational-final-synthesis/INTEGRATION_MANIFEST.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/e04f52d913a43b225175be690029f81381679f75fda67e6fe2e1653eab150c5a/INTEGRATION_MANIFEST.json",
+      "original_sha256": "dbdb93b7d4862984a470846a72783229eac7c56197e3d3009e30e3449e05921f",
+      "public_sha256": "e04f52d913a43b225175be690029f81381679f75fda67e6fe2e1653eab150c5a",
+      "public_bytes": 58131,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-adbd43d2567ea9e826bf-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "foundational-final-synthesis:SOURCE_INDEX.json",
+      "source_id": "T20-SRC-3b9cb4e37020e923ac70",
+      "owner_relative_path": "t20/sources/foundational-final-synthesis/SOURCE_INDEX.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/f78573c3646e3a47ddbf30bc8e31616cd2b39a4ea1aaece9c3ee4528d51ca17d/SOURCE_INDEX.json",
+      "original_sha256": "8db02b05660dedd22e6656192711e09bf9e3c97fceaf8d6ff2df3de696ded56c",
+      "public_sha256": "f78573c3646e3a47ddbf30bc8e31616cd2b39a4ea1aaece9c3ee4528d51ca17d",
+      "public_bytes": 47602,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-SRC-3b9cb4e37020e923ac70-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "foundational-final-synthesis:HISTORICAL_VALIDATION.json",
+      "source_id": "T20-SRC-7398630d7a872db1b1f0",
+      "owner_relative_path": "t20/sources/foundational-final-synthesis/HISTORICAL_VALIDATION.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7/HISTORICAL_VALIDATION.json",
+      "original_sha256": "35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7",
+      "public_sha256": "35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7",
+      "public_bytes": 1015,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "foundational-final-synthesis:PROJECTION_NOTES.md",
+      "source_id": "T20-SRC-949c82b102a15cba4e87",
+      "owner_relative_path": "t20/sources/foundational-final-synthesis/PROJECTION_NOTES.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/48f29f77d16ea3723af95bdd77a92914051f1038e067763fe9ae486b4592b9b4/PROJECTION_NOTES.md",
+      "original_sha256": "48f29f77d16ea3723af95bdd77a92914051f1038e067763fe9ae486b4592b9b4",
+      "public_sha256": "48f29f77d16ea3723af95bdd77a92914051f1038e067763fe9ae486b4592b9b4",
+      "public_bytes": 1597,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "final-reader:t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+      "source_id": "T20-DOC-64d8e628bb43c3a9270d",
+      "owner_relative_path": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/8b60a62d8956549cdd3a0e22f7101b0bbbc140840e49740cdc248e443f43af27/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+      "original_sha256": "65303af758c4eead3aaa7bf01ce90e2700d3f0bbe80e4590e1131953429f72cf",
+      "public_sha256": "8b60a62d8956549cdd3a0e22f7101b0bbbc140840e49740cdc248e443f43af27",
+      "public_bytes": 9350,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-DOC-64d8e628bb43c3a9270d-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "final-reader:t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+      "source_id": "T20-DOC-2fa9f874572d394bfeff",
+      "owner_relative_path": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/56faca3c16d90d05ff56fa8a0cf93931cfdd08055e64817e31da560c54bf2839/ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+      "original_sha256": "c850ac51db70d5f0262b4a06be96aa5a049adffa7e1c5c04642c320a717a7ab3",
+      "public_sha256": "56faca3c16d90d05ff56fa8a0cf93931cfdd08055e64817e31da560c54bf2839",
+      "public_bytes": 1443,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-DOC-2fa9f874572d394bfeff-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "final-reader:t20/reading/warrant-threshold-audit/AUDIT.md",
+      "source_id": "T20-DOC-e22739ed52e175cf8aef",
+      "owner_relative_path": "t20/reading/warrant-threshold-audit/AUDIT.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8/AUDIT.md",
+      "original_sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+      "public_sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+      "public_bytes": 19830,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "final-reader:t20/reading/warrant-threshold-audit/comparative-response/RESPONSE.md",
+      "source_id": "T20-DOC-cd2ee30674c29ae395e8",
+      "owner_relative_path": "t20/reading/warrant-threshold-audit/comparative-response/RESPONSE.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/94116a152d1bfcc2b434322c75c31357cf9cbe7b84ad5db0c2920ac976b04f95/RESPONSE.md",
+      "original_sha256": "59fca7e0f250c5a22adca452eba5a9001fc4148720aedb2db4871bb711dc3a76",
+      "public_sha256": "94116a152d1bfcc2b434322c75c31357cf9cbe7b84ad5db0c2920ac976b04f95",
+      "public_bytes": 9589,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-DOC-cd2ee30674c29ae395e8-PROJECTION-REVIEW"
+    },
+    {
+      "alias": "final-reader:t20/reports/REPORT.md",
+      "source_id": "T20-DOC-f706ff5d91decee4c435",
+      "owner_relative_path": "t20/reports/REPORT.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd/REPORT.md",
+      "original_sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+      "public_sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+      "public_bytes": 41472,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "final-reader:t20/reports/REPORT_FINAL_SOURCE_READBACK.md",
+      "source_id": "T20-DOC-c53b1a8e937ca9938486",
+      "owner_relative_path": "t20/reports/REPORT_FINAL_SOURCE_READBACK.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/ce69a2ea0642ea26272d0d3635af5a880f801e4b82e1859ed9aa8813d14e4871/REPORT_FINAL_SOURCE_READBACK.md",
+      "original_sha256": "ce69a2ea0642ea26272d0d3635af5a880f801e4b82e1859ed9aa8813d14e4871",
+      "public_sha256": "ce69a2ea0642ea26272d0d3635af5a880f801e4b82e1859ed9aa8813d14e4871",
+      "public_bytes": 3583,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "final-reader:t20/reading/GUIDE.md",
+      "source_id": "T20-DOC-85c5f9bc02142c86236c",
+      "owner_relative_path": "t20/reading/GUIDE.md",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4/GUIDE.md",
+      "original_sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+      "public_sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+      "public_bytes": 63809,
+      "projection": "EXACT",
+      "projection_review_id": null
+    },
+    {
+      "alias": "final-reader:t20/reading/READING_INDEX.json",
+      "source_id": "T20-DOC-e6994a667ab613332196",
+      "owner_relative_path": "t20/reading/READING_INDEX.json",
+      "candidate_relative_path": "experiments/orthemology-v5-successors/source-store/95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998/READING_INDEX.json",
+      "original_sha256": "490bdd577b6e3f17e7ee2912da00fe1cfbf71ac296ba5d85f7f08996bf728b18",
+      "public_sha256": "95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998",
+      "public_bytes": 1029129,
+      "projection": "DERIVED",
+      "projection_review_id": "T20-DOC-e6994a667ab613332196-PROJECTION-REVIEW"
+    }
+  ],
+  "input_identity_scope": "These hashes bind the original methodology files inspected for this handoff. A later owner/public projection can have different bytes and must carry its own curation/derivation binding; none is presumed byte-identical here.",
+  "input_metadata_and_cross_stream_ledgers": [
+    {
+      "alias": "candidate:experiments/orthemology-v5-successors/groups/t20-successor/CLAIM_MAP.json",
+      "sha256": "03fd4b2da2bb19a836eae14ee0b621f11d9e601c4f8c81312fdc92278d1cc4e3",
+      "bytes": 53910,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "original_snapshot_body_included": false
+    },
+    {
+      "alias": "candidate:experiments/orthemology-v5-successors/groups/t20-successor/SOURCE_INDEX.json",
+      "sha256": "b5f0927cee5cca6c4a844ff0e0513482818191a955a359833dfa27b1c592e549",
+      "bytes": 296115,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "original_snapshot_body_included": false
+    },
+    {
+      "alias": "candidate:experiments/orthemology-v5-successors/groups/t20-successor/READING_REPORT_INDEX.json",
+      "sha256": "d7019c0d287c8570735983fb0dd7c8f53db9f6ad615adee967e067bd7e9a8135",
+      "bytes": 145022,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "original_snapshot_body_included": false
+    },
+    {
+      "alias": "candidate:docs/provenance/v5-successors/RESULT_STATUS.json",
+      "sha256": "de13cbe38655f7a7b3ceb542519d1972bb284b846e0bc8aa62dbb85823bf9788",
+      "bytes": 838883,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "original_snapshot_body_included": false
+    },
+    {
+      "alias": "candidate:docs/provenance/v5-successors/SOURCE_MAP.json",
+      "sha256": "b1b2bcb9d6d1ba569b26424da4a7869f486e34ed524518b204e91b5965a47af2",
+      "bytes": 4858885,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "original_snapshot_body_included": false
+    },
+    {
+      "alias": "candidate:docs/provenance/v5-successors/T20_ASSESSMENT_HISTORY.json",
+      "sha256": "d54109dcbabc6ecd5dac4be5078f1dcdaa16235e044aaf87aeb81f290abb8d2b",
+      "bytes": 7713,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "original_snapshot_body_included": false
+    },
+    {
+      "alias": "methodology:math/MATH_UTILISATION.json",
+      "sha256": "fa8a662b5a899cc4070a61f54dbf43d14a752bf8df84cdc4b6aa94935e5d15af",
+      "bytes": 216437,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/math/MATH_UTILISATION.json",
+        "sha256": "d0e73b80d86fd9367c434e7711cb1bb40d5e0f61821db03392b5cd2590b61ff5",
+        "bytes": 216733
+      }
+    },
+    {
+      "alias": "methodology:math/MATH_SOURCE_BINDINGS.json",
+      "sha256": "00941ff25ab3b83c568ad8cd0ba95417f7f15596c5fb1b4dea7a93655e7354c2",
+      "bytes": 69618,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/math/MATH_SOURCE_BINDINGS.json",
+        "sha256": "182307031547748730ab7ca741e07edbc64f9d4422258d536b969c5d87e7d651",
+        "bytes": 69896
+      }
+    },
+    {
+      "alias": "methodology:math/MATH_VALIDATION.json",
+      "sha256": "59e52b1a535dc69513062b4cf5e14920fab3258bd81c4849659fca9d04a28c1e",
+      "bytes": 2279,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/math/MATH_VALIDATION.json",
+        "sha256": "d988a97a3c22e4afb2a36e824e9614ff42e77f0961b29ed5a5eb3d841931d04c",
+        "bytes": 3145
+      }
+    },
+    {
+      "alias": "methodology:drive/DRIVE_CORPUS.json",
+      "sha256": "4a53e294a8c80e86000274a738b14c7caa9ac18d9705a2cd584c8717156bd88b",
+      "bytes": 98391,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/drive/DRIVE_CORPUS.json",
+        "sha256": "6d020b39ac31311ec388678c79dd342ea6b5ee6144e1565e37b16a8d66d11761",
+        "bytes": 99219
+      }
+    },
+    {
+      "alias": "methodology:drive/SOURCE_BINDINGS.json",
+      "sha256": "cc46cf5e0c8c43c867e77cf7bb6808898d69acf5ab566c003a413cb8cee61766",
+      "bytes": 12904,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/drive/SOURCE_BINDINGS.json",
+        "sha256": "4e41aaebbcd30e448cad2b3ac006511c219386e3a0b93d92c416f2ffef04c382",
+        "bytes": 14466
+      }
+    },
+    {
+      "alias": "methodology:drive/VERIFICATION.json",
+      "sha256": "c440a267e78021710fce1a04ab4a8e4b20b64d2c2f195ba6df5218ed6ec1c71b",
+      "bytes": 16448,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/drive/VERIFICATION.json",
+        "sha256": "3cfc7b197a1c39b4f2c0b67ac3922e8875027b930a59c443fac22a9987e6a1b4",
+        "bytes": 17447
+      }
+    },
+    {
+      "alias": "methodology:arabic/ARABIC_READING_METHOD.json",
+      "sha256": "196f711088b2fc9a7d48e3e4f817c0958d47c7f81b16ac19b58bce4805d076cf",
+      "bytes": 44251,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/arabic/ARABIC_READING_METHOD.json",
+        "sha256": "f7171879244b4660b547bcb75bb3b1c5007c570cc4403050636452744535ff04",
+        "bytes": 44373
+      }
+    },
+    {
+      "alias": "methodology:arabic/CROSS_STREAM_CASES.json",
+      "sha256": "6198ce067b5f10df00de7774a10a1d8b26efc4ea503aeffab7fdb92b63ff6a57",
+      "bytes": 42316,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/arabic/CROSS_STREAM_CASES.json",
+        "sha256": "a9bbeb51d33e7e60c82a8228582502e6e40aabc559f95b77fdac3e9826d98597",
+        "bytes": 42438
+      }
+    },
+    {
+      "alias": "methodology:arabic/SOURCE_BINDINGS.json",
+      "sha256": "608bc7d1053a2353ecc02ccc0ed335d347d71dc75f136572729a91d9ed661db2",
+      "bytes": 38893,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/arabic/SOURCE_BINDINGS.json",
+        "sha256": "c42bc9ed720bc810df050b38592d980a265e312098ba0356c77a8bea51daf062",
+        "bytes": 82375
+      }
+    },
+    {
+      "alias": "methodology:arabic/VALIDATION.json",
+      "sha256": "9b36b15830e49c200168374db547f3cf8f3350860ea2bb6077b44ef9467ea38f",
+      "bytes": 72823,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/arabic/VALIDATION.json",
+        "sha256": "3a6e8f9587b050f8093dc48d15cc468b41b3c5a9afbfe5e167ad22707926f274",
+        "bytes": 4213
+      }
+    },
+    {
+      "alias": "methodology:arabic/SEAL.json",
+      "sha256": "009a0c6c82d4f521b508aeea6b02c3d1da97ebfeb3f5df4a2673fa3f00b92a1c",
+      "bytes": 1759,
+      "identity_scope": "Historical original input snapshot inspected for the handoff; its hash does not claim current receiving-registry bytes or bytes of a later distribution projection.",
+      "original_snapshot_body_included": false
+    }
+  ],
+  "public_projection_note": "Private workspace custody locations are omitted. Existing scientific/public aliases keep their exact byte identities; original method inputs and included method projections remain separately identified."
+}

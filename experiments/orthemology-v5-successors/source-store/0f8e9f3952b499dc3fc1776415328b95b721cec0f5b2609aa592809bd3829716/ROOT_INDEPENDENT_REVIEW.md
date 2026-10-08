@@ -1,0 +1,17 @@
+# Independent root review: modal union source certificates
+
+The version-two source package is accepted for its exact abstract equality-language claims. Its manifest is `ab76400447a2b93c6036bfbe5f83818c16bcc6217a70ab90baffab7b0889a83f`. All nine payload identities match; the portable archive contains no compiled objects or unsafe archive members.
+
+The complete core, finite controls, statement contract, axiom output and both replay versions were read. The core argument correctly propagates fixed anchored equalities across individually admitted world witnesses. It does not require those witnesses to be jointly possible. Conversely, quotienting carrier vertices by generated connectivity supplies a genuinely admitted interpretation of the pure equality language. Source sorts range over the carrier universe, which includes that quotient. This does not quotient supplied actual originals or imply that equal labels in a fixed model must be connected.
+
+The expanded interpretation theorem correctly varies the local source sorts and faithful transports while fixing the crossing frame. Equality reflection is stronger than needed at each individual endpoint but is an explicit sufficient hypothesis; identity expansion proves the converse correspondence. Total local-source maps carry no extra availability assertion away from crossings. The finite controls separately establish availability where their crossings are used.
+
+Fresh independent replay used Lean 4.19.0 with `--trust=0`. All three green modules, all 42 theorem axiom readbacks and all three intended false-claim rejections passed. The main exact consequence theorem uses `propext` and `Quot.sound`; only the optional general Boolean separator adds `Classical.choice`. There are no admitted goals or native reduction oracle dependencies.
+
+Two further reviewer statements compiled against a fresh copy of the core: every frame has a faithful interpretation, ruling out an empty-interpretation-class explanation of the main consequence theorem; and the fully expanded quantifier-level statement has the advertised connectivity equivalence.
+
+The first replay version allowed existing output reuse and source-tree output. The version-two repair is accepted: five independently rerun guard cases passed, including the existing-output, source-equal, source-descendant and symlink-alias refusals. Sentinels and source bytes remained unchanged. The ordinary fresh-output run also passed. The four Lean files and all original version-one seals remain unchanged. Earlier denied cleanup was not retried or required.
+
+The coverage corollary proves that represented relevant sources equal the anchored source. It should be read as constancy or at-most-one at that interface. An actual qualified source, appropriate target coverage and any intended existence claim remain separate application inputs. Neither a positive path certificate nor the abstract component counterinterpretation establishes metaphysical possibility, global original plenitude, actual authority, physical execution or numerical uniqueness of all necessary realities.
+
+The checked component is therefore a useful exact boundary for a stated modal-source inference fragment. Its general graph/equality ingredients are established mathematics; the new scoped contribution is their faithful assembly with provenance transport and the non-co-possible-witness distinction. It does not replace the independently required philosophical appraisal.

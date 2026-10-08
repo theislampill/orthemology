@@ -1,0 +1,97 @@
+{
+  "status": "HISTORICAL_AUTHOR_CHECKED; PUBLIC_PROJECTION_NOT_REPLAYED",
+  "created_utc": "2026-10-07T16:19:24.273504+00:00",
+  "lean_binary": {
+    "path": "${LEAN419_ROOT}/bin/lean",
+    "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "path_role": "Portable placeholder for historical external compiler; no compiler binary is packaged."
+  },
+  "source": {
+    "file": "OriginationTypeControl.lean",
+    "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe"
+  },
+  "commands": [
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "log": "lean-version.log",
+      "original_log_sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b",
+      "public_log_sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b",
+      "public_log_bytes": 78
+    },
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "--deps",
+        "OriginationTypeControl.lean"
+      ],
+      "exit_code": 0,
+      "log": "direct-imports.log",
+      "original_log_sha256": "0750a2bfc39c460f25e6f33b18f117712ec0052c5ac747008c71c3d4ed2cbeed",
+      "public_log_sha256": "79d636ad07747e88f5fe3621d360dee3008a0aded61224fd93fce27c332739a2",
+      "public_log_bytes": 72
+    },
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "-t",
+        "0",
+        "-o",
+        "OriginationTypeControl.olean",
+        "OriginationTypeControl.lean"
+      ],
+      "exit_code": 0,
+      "log": "final-check.log",
+      "original_log_sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+      "public_log_sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+      "public_log_bytes": 596
+    },
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "-t",
+        "0",
+        "OverreachRejected.lean"
+      ],
+      "exit_code": 1,
+      "log": "overreach-rejection.log",
+      "original_log_sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+      "public_log_sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+      "public_log_bytes": 803
+    }
+  ],
+  "criteria": {
+    "main_exit_zero": true,
+    "main_no_error_or_sorry": true,
+    "seven_selected_axiom_readbacks": true,
+    "only_Init_direct_import": true,
+    "negative_control_exit_nonzero": true,
+    "two_false_decide_rejections": true,
+    "source_no_admissions": true
+  },
+  "limits": [
+    "Chosen typed interpretation only, not a metaphysical possibility certificate.",
+    "Ground existence and power are model inputs, not consequences of persistent possibility.",
+    "No historical doctrine of total cessation is attributed.",
+    "No inherited package replay, changes to prior sources."
+  ],
+  "original_receipt_identity": {
+    "bytes": 2643,
+    "sha256": "84e99dd8e31b93f9a49a7269844c220105e1541ae9c9294552d5acb37ce327c3"
+  },
+  "first_check_history": {
+    "file": "first-check.log",
+    "sha256": "7d551a8bed8a04c435a8c0e9da8d0ae895bc193bd428ea9bab1221468da55dc2",
+    "status": "UNSEALED_PREDECESSOR_DRAFT_FAILED",
+    "scope": "Complete historical transcript preserves failed goals, missing Decidable instances and sorryAx from failed elaboration. Its draft source is not sealed here. Historical diagnostic paths and line numbers refer to that draft, not the final selected source."
+  },
+  "omitted_duplicate": {
+    "original_filename": "second-check.log",
+    "original_sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+    "equal_selected_file": "final-check.log",
+    "reason": "Exact duplicate; no separate scientific credit."
+  }
+}

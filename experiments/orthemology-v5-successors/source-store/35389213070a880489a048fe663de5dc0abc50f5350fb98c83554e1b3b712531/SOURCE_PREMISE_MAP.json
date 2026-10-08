@@ -1,0 +1,209 @@
+{
+  "schema": "t20-veracity-premise-use-v1",
+  "premises": [
+    {
+      "name": "K",
+      "meaning": "Limited relevant negative-truth knowledge coverage consumed by the theorem; not a complete omniscience model.",
+      "sealed_passage_ids": [
+        "T17R:P00064",
+        "T17R:P00090"
+      ],
+      "status": "semantic specialization of source knowledge input; not independently earned here"
+    },
+    {
+      "name": "A",
+      "meaning": "Exact awareness of this token and its contextual asserted content.",
+      "sealed_passage_ids": [
+        "T17R:P00087",
+        "T17R:P00098",
+        "T19R:P00156"
+      ],
+      "status": "weak-signature interface only; strong ownership makes it a projection; no demonstrated full-profile gap"
+    },
+    {
+      "name": "C",
+      "meaning": "Actual controlled assertoric presentation, distinct from bare standing ability.",
+      "sealed_passage_ids": [
+        "T17R:P00068",
+        "T17R:P00087",
+        "T17R:P00098"
+      ],
+      "status": "weak-signature interface only; strong ownership makes it a projection"
+    },
+    {
+      "name": "D",
+      "meaning": "Descriptive knowing counterfeit carries a respect-specific declarative shortcoming.",
+      "sealed_passage_ids": [
+        "T17R:P00087",
+        "T17R:P00089",
+        "T17R:P00094"
+      ],
+      "status": "source-attested and retained by critic; not defined by truthfulness"
+    },
+    {
+      "name": "N",
+      "meaning": "For this same source, the shortcoming is incompatible with fitting exercise in every in-scope context.",
+      "sealed_passage_ids": [
+        "T17R:P00089",
+        "T17R:P00094",
+        "T17R:P00095"
+      ],
+      "status": "main substantive all-context purity appraisal, affirmatively accepted with critic preserved"
+    },
+    {
+      "name": "P",
+      "meaning": "The source actually conforms to substantive fittingness.",
+      "sealed_passage_ids": [
+        "T17R:P00085",
+        "T17R:P00086",
+        "T17R:P00095",
+        "T17G:P00107",
+        "T17G:P00109"
+      ],
+      "status": "generic practical conformance premise; arbitrary goal efficiency is insufficient"
+    },
+    {
+      "name": "ExerciseBridge",
+      "meaning": "Owned assertion is an actual exercise of the same source.",
+      "sealed_passage_ids": [
+        "T17R:P00087",
+        "T19R:P00081",
+        "T19R:P00085"
+      ],
+      "status": "typing/realisation bridge; no causal-provision-to-ownership conversion"
+    },
+    {
+      "name": "Factive",
+      "meaning": "Knowledge of falsehood is factive.",
+      "sealed_passage_ids": [
+        "T17R:P00090"
+      ],
+      "status": "epistemic semantic law; used only for the reverse/no-counterfeit equivalence, not main positive theorem"
+    }
+  ],
+  "compiled_declaration_usage": {
+    "controlled_token_true": {
+      "global": [
+        "K",
+        "D",
+        "N",
+        "P",
+        "ExerciseBridge"
+      ],
+      "local": [
+        "owned assertion",
+        "awareness",
+        "deliberate presentation"
+      ],
+      "not_used": [
+        "global A",
+        "global C",
+        "Factive",
+        "necessity",
+        "essential independence",
+        "common creatorhood",
+        "graph coverage",
+        "truthful-substitute availability"
+      ]
+    },
+    "veracity_of_coverage": {
+      "global": [
+        "K",
+        "A",
+        "C",
+        "D",
+        "N",
+        "P",
+        "ExerciseBridge"
+      ],
+      "scope": "all assertions only over supplied occasion domain"
+    },
+    "counterfeit_iff_false_under_coverage": {
+      "global": [
+        "K",
+        "A",
+        "C",
+        "Factive"
+      ],
+      "local": [
+        "owned assertion"
+      ],
+      "normative_premises": []
+    },
+    "veracity_iff_no_counterfeit": {
+      "global": [
+        "K",
+        "A",
+        "C",
+        "Factive"
+      ],
+      "normative_premises": [],
+      "warning": "equivalence of leaf guarantees under semantic coverage is not an equivalence of all practical perfection with truthfulness"
+    },
+    "false_excludes_package": {
+      "global": [],
+      "local": [
+        "false owned assertion"
+      ],
+      "diagnostic": "constructive incompatibility with conjunction K/A/C/D/N/P/ExerciseBridge; no classical disjunction asserted"
+    },
+    "strong_awareness": {
+      "global": [],
+      "basis": "projection from stronger informed ownership interpretation"
+    },
+    "strong_control": {
+      "global": [],
+      "basis": "projection from stronger informed ownership interpretation"
+    },
+    "strong_veracity": {
+      "global": [
+        "K",
+        "D",
+        "N",
+        "P",
+        "ExerciseBridge"
+      ],
+      "basis": "local awareness/control supplied by strong assertion; not proof that every weak assertion is strong"
+    },
+    "strong_equals_base_iff_coverage": {
+      "global": [],
+      "basis": "extension equality at fixed g iff A/C coverage; semantic identity/warrant remains external"
+    }
+  },
+  "historical_T0_status": {
+    "appraisal": "T17 affirmatively accepts exceptionless source-owned veracity with defeasible warrant and a continuing critic",
+    "passages": [
+      "T17R:P00089",
+      "T17R:P00094",
+      "T17R:P00095",
+      "T17R:P00096",
+      "T17R:P00098",
+      "T19R:P00155"
+    ]
+  },
+  "scope_guards": {
+    "no_automatic_created_assertion_ownership": [
+      "T19R:P00081",
+      "T19R:P00085",
+      "T19R:P00157"
+    ],
+    "no_automatic_authentication": [
+      "T19R:P00132",
+      "T19R:P00133",
+      "T19R:P00134",
+      "T19R:P00135",
+      "T19R:P00156",
+      "T19R:P00167"
+    ],
+    "no_truthful_substitute_theorem": [
+      "T17R:P00090",
+      "T17R:P00095",
+      "T19R:P00158"
+    ]
+  },
+  "reused_not_new": [
+    "Seventh token-purpose written implication",
+    "grounded-attestation occurrence/content/force/time/retraction",
+    "Dar8 rejection of mandatory universal epistemic ordering"
+  ]
+}

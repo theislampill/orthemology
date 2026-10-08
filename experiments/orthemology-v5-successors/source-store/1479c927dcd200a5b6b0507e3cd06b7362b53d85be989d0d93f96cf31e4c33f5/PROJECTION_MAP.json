@@ -1,0 +1,209 @@
+{
+  "schema": "t20-source-only-projection-map-v1",
+  "historical_seals": {
+    "original_synthesis_seal": "378ad3fae3d736dccf5accd4f107bc6397eafa55cc6191c206a0e62e9341d70e"
+  },
+  "records": [
+    {
+      "path": "inherited-sources/PRODUCTIVE_COMPLETENESS.lean",
+      "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "bytes": 3600,
+      "projection": "EXACT",
+      "change": "Exact selected original bytes; no scientific changes.",
+      "original": {
+        "logical_name": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a.lean",
+        "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+        "bytes": 3600
+      }
+    },
+    {
+      "path": "inherited-sources/UPSTREAM_GROUND.lean",
+      "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+      "bytes": 6105,
+      "projection": "EXACT",
+      "change": "Exact selected original bytes; no scientific changes.",
+      "original": {
+        "logical_name": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3.lean",
+        "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+        "bytes": 6105
+      }
+    },
+    {
+      "path": "inherited-sources/CONNECTED_UNITY.lean",
+      "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+      "bytes": 10176,
+      "projection": "EXACT",
+      "change": "Exact selected original bytes; no scientific changes.",
+      "original": {
+        "logical_name": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea.lean",
+        "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+        "bytes": 10176
+      }
+    },
+    {
+      "path": "inherited-sources/INFINITE_FORK.lean",
+      "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+      "bytes": 3364,
+      "projection": "EXACT",
+      "change": "Exact selected original bytes; no scientific changes.",
+      "original": {
+        "logical_name": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988.lean",
+        "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+        "bytes": 3364
+      }
+    },
+    {
+      "path": "inherited-sources/SIXTH_REVIEWER.lean",
+      "sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+      "bytes": 9856,
+      "projection": "EXACT",
+      "change": "Exact selected original bytes; no scientific changes.",
+      "original": {
+        "logical_name": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6.lean",
+        "sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+        "bytes": 9856
+      }
+    },
+    {
+      "path": "inherited-sources/INTEGRATED_CONTINGENCY.lean",
+      "sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+      "bytes": 2804,
+      "projection": "EXACT",
+      "change": "Exact selected original bytes; no scientific changes.",
+      "original": {
+        "logical_name": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7.lean",
+        "sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+        "bytes": 2804
+      }
+    },
+    {
+      "path": "inherited-sources/KNOWLEDGE_SCOPE.lean",
+      "sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+      "bytes": 10029,
+      "projection": "EXACT",
+      "change": "Exact selected original bytes; no scientific changes.",
+      "original": {
+        "logical_name": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3.lean",
+        "sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+        "bytes": 10029
+      }
+    },
+    {
+      "path": "inherited-sources/COVERAGE_BOUNDARY.lean",
+      "sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+      "bytes": 9474,
+      "projection": "EXACT",
+      "change": "Exact selected original bytes; no scientific changes.",
+      "original": {
+        "logical_name": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74.lean",
+        "sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+        "bytes": 9474
+      }
+    },
+    {
+      "path": "CONCLUSION_PREMISE_STATUS_MAP.json",
+      "sha256": "44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60",
+      "bytes": 175834,
+      "projection": "DERIVED",
+      "change": "Preserve every mathematical conclusion,premise,signature,readback,control,owner and status. Normalize source-ID/role labels, remove conversation IDs and routing-only occasion wording, and replace local source paths with exact public aliases or clearly historical custody locators. Original source hashes remain attached to original bytes.",
+      "original": {
+        "logical_name": "CONCLUSION_PREMISE_STATUS_MAP.json",
+        "sha256": "bfbe5abaa944f539a45fc9b7c22f07828f2b02613893c18c500432b589c55972",
+        "bytes": 179057
+      }
+    },
+    {
+      "path": "INTEGRATION_MANIFEST.json",
+      "sha256": "e04f52d913a43b225175be690029f81381679f75fda67e6fe2e1653eab150c5a",
+      "bytes": 58131,
+      "projection": "DERIVED",
+      "change": "Preserve every mathematical conclusion,premise,signature,readback,control,owner and status. Normalize source-ID/role labels, remove conversation IDs and routing-only occasion wording, and replace local source paths with exact public aliases or clearly historical custody locators. Original source hashes remain attached to original bytes.",
+      "original": {
+        "logical_name": "INTEGRATION_MANIFEST.json",
+        "sha256": "dbdb93b7d4862984a470846a72783229eac7c56197e3d3009e30e3449e05921f",
+        "bytes": 60610
+      }
+    },
+    {
+      "path": "SOURCE_INDEX.json",
+      "sha256": "f78573c3646e3a47ddbf30bc8e31616cd2b39a4ea1aaece9c3ee4528d51ca17d",
+      "bytes": 47602,
+      "projection": "DERIVED",
+      "change": "Preserve all75 original source identities while separating historical custody references from exact/derived public artifact aliases. Omit private workspace/source-body paths and routing labels; raw report/source bodies remain unselected.",
+      "original": {
+        "logical_name": "SOURCE_INDEX.json",
+        "sha256": "8db02b05660dedd22e6656192711e09bf9e3c97fceaf8d6ff2df3de696ded56c",
+        "bytes": 27833
+      }
+    },
+    {
+      "path": "SOURCE_INDEX.md",
+      "sha256": "6bbc7bd4410ef82d9492b0bebd5cfdc4f44a63237f1d3c54a22818c290e77f8a",
+      "bytes": 32648,
+      "projection": "DERIVED",
+      "change": "Rebuild readable75-source identity index from the unchanged original identities plus separately hash-bound public aliases. No source body is reproduced by a custody hash.",
+      "original": {
+        "logical_name": "SOURCE_INDEX.md",
+        "sha256": "39ababc97f52f7db528bfabecfcf975be7a468132d8f27d8fd965658b15e70bc",
+        "bytes": 15762
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "aea9b652a05ae10c269666676cae68d1e9846a78d43ffd2bbd850d773e279f8f",
+      "bytes": 2659,
+      "projection": "DERIVED",
+      "change": "Preserve complete ten-question, A–H, veracity, nonvacuity, current/historical appraisal and explanation content; normalize routing-only labels and clarify public aliases/custody boundaries. No mathematical claim or exact signature changed.",
+      "original": {
+        "logical_name": "README.md",
+        "sha256": "081505243d1bf26d9d2dbcb82f1ff74688f909a5f5e7ed588fbfcaa7c7596525",
+        "bytes": 2085
+      }
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "sha256": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1",
+      "bytes": 43331,
+      "projection": "DERIVED",
+      "change": "Preserve complete ten-question, A–H, veracity, nonvacuity, current/historical appraisal and explanation content; normalize routing-only labels and clarify public aliases/custody boundaries. No mathematical claim or exact signature changed.",
+      "original": {
+        "logical_name": "SYNTHESIS.md",
+        "sha256": "9d5637132dd4ab3031fa4fad6b18a2ceedb839737db30c9d389b069c8bb3490b",
+        "bytes": 42868
+      }
+    },
+    {
+      "path": "ELI5_ELI14.md",
+      "sha256": "a95a85f6a8c429b57b4688d22bb63ad53dfe04d7e1c05f2f68d76d3d42893a40",
+      "bytes": 4231,
+      "projection": "DERIVED",
+      "change": "Preserve complete ten-question, A–H, veracity, nonvacuity, current/historical appraisal and explanation content; normalize routing-only labels and clarify public aliases/custody boundaries. No mathematical claim or exact signature changed.",
+      "original": {
+        "logical_name": "ELI5_ELI14.md",
+        "sha256": "0c8c4bd8ef3ff3193a1732c470849cf6df444a983ce49515bf23c455dd49c2f8",
+        "bytes": 3828
+      }
+    },
+    {
+      "path": "HISTORICAL_VALIDATION.json",
+      "sha256": "35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7",
+      "bytes": 1015,
+      "projection": "EXACT",
+      "change": "Bounded public locator/coordination normalization; exact historical identities, claims, outcomes and source/ownership limits retained. This is not new execution.",
+      "original": {
+        "logical_name": "VALIDATION.json",
+        "sha256": "35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7",
+        "bytes": 1015
+      }
+    },
+    {
+      "path": "PROJECTION_NOTES.md",
+      "sha256": "48f29f77d16ea3723af95bdd77a92914051f1038e067763fe9ae486b4592b9b4",
+      "bytes": 1597,
+      "projection": "DERIVED",
+      "change": "Exact selected original bytes; no scientific changes."
+    }
+  ],
+  "body_admission": false,
+  "new_scientific_execution": false
+}

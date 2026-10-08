@@ -1,0 +1,66 @@
+{
+  "schema": "t20-three-final-documents-v1",
+  "created_at_utc": "2026-10-07T14:49:32.567962+00:00",
+  "documents": [
+    {
+      "role": "research report",
+      "document": {
+        "sha256": "5bf9786c480649ff254888e1f6c94bb7306c485f9acd7f485b65049c545ab38e",
+        "bytes": 53016,
+        "owner_archive_path": "t20/reports/Orthemology_Twentieth_Research_Final_v1_20261007.docx"
+      },
+      "original_qa_record": {
+        "sha256": "d2d1b95015df253831ebd703060a108b44c17aa97e2a05ed9b2c6fc46e7a3b05",
+        "bytes": 6769,
+        "body_included": false
+      },
+      "public_qa_record": {
+        "owner_archive_path": "t20/reports/REPORT_QA_MANIFEST.json",
+        "sha256": "f9bde6e87cc539dde1205572bd1117428c004489309af5d1ec7c82e7e8ad3bde",
+        "bytes": 6730
+      },
+      "qa_identity_relation": "Historical author QA and its included body-free public projection are separately identified."
+    },
+    {
+      "role": "source and reading guide",
+      "document": {
+        "sha256": "6487a11eccf51ba547f9665a5fb94e0c1173db457cb711381c2abae7dfb76b53",
+        "bytes": 62774,
+        "owner_archive_path": "t20/reports/Orthemology_Twentieth_Source_Evidence_Guide_v1_20261007.docx"
+      },
+      "original_qa_record": {
+        "sha256": "d74edbe7b6e743066a8b6b3c2dbaa17eb88e452da6f84a790b92aa3c6c980149",
+        "bytes": 13666,
+        "body_included": false
+      },
+      "public_qa_record": {
+        "owner_archive_path": "t20/reports/GUIDE_QA_MANIFEST.json",
+        "sha256": "12c817b64ee139a28e275f0562c8c1ef2d1aa039f1a0a1115b1462f4b4c00f12",
+        "bytes": 11460
+      },
+      "qa_identity_relation": "Historical author QA and its included body-free public projection are separately identified."
+    },
+    {
+      "role": "mathematical companion",
+      "document": {
+        "sha256": "64ac3dd33e250a5fc0527421bdeb67227be40962389028911f3f76471537e681",
+        "bytes": 39254,
+        "owner_archive_path": "t20/reports/Orthemology_Twentieth_Mathematical_Companion_v2.docx"
+      },
+      "original_qa_record": {
+        "sha256": "498ce21f841a4a13f05790ee7f4cecf30eaba66fc1f2478d095d1b3c43d58be4",
+        "bytes": 12846,
+        "body_included": false
+      },
+      "public_qa_record": {
+        "owner_archive_path": "t20/reports/MATHEMATICAL_COMPANION_QA.json",
+        "sha256": "8e49d169249dae0a00b2afd508e9bc4cfafb76666aa12eac5cc9a3e43bc25d38",
+        "bytes": 13601
+      },
+      "qa_identity_relation": "Historical author QA and its included body-free public projection are separately identified."
+    }
+  ],
+  "total_pages": 48,
+  "all_document_qa_passed": true,
+  "original_delivery_binding_sha256": "6c46d354c086740331eb562649cf0b50c0656edc3dd2631a4ec82c0bdffb9335"
+}

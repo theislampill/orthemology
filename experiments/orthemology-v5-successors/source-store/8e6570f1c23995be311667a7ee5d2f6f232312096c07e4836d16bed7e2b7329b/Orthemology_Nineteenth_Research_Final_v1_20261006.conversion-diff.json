@@ -1,0 +1,89 @@
+{
+  "schema": "authored-docx-public-conversion-diff-v1",
+  "original_filename": "Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+  "original_bytes": 63700,
+  "original_sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+  "document_xml_sha256": "f58068acbccabed28edfec0546c4493ac39c610c89f74049c6479ca0ab365cfa",
+  "public_filename": "Orthemology_Nineteenth_Research_Final_v1_20261006.md",
+  "public_bytes": 72186,
+  "public_sha256": "ca551178b117da992aa2de5c46bba14499d394125ba550626703b30a753caf3f",
+  "added_projection_notice_exact": "> **DERIVED public reading projection.** Original DOCX `Orthemology_Nineteenth_Research_Final_v1_20261006.docx`; original SHA-256 `8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569`. This projection was prepared on 7 October 2026. Original authored text order, link destinations, native mathematics, AI attribution, dates, and scope limitations are retained. Research, reading, review, and verification claims below remain the source’s dated claims, not fresh acceptance or replication. Internal page references name the original DOCX pagination; Markdown has no matching page numbers. Where present, native equations are rendered as TeX with an exact source-to-projection map and declared spacing and prime-glyph normalization. Word typography, pagination, and dynamic page-number fields are not reproduced.\n\n",
+  "converter": "Pandoc 3.1.11.1, DOCX to AST to GFM, wrap=none; finite title/style/spacing assembly",
+  "native_counts": {
+    "w:p": 191,
+    "w:tbl": 0,
+    "m:oMath": 0,
+    "w:footnoteReference": 0,
+    "w:endnoteReference": 0,
+    "w:ins": 0,
+    "w:del": 0,
+    "w:drawing": 0,
+    "w:pict": 0,
+    "w:hyperlink": 16,
+    "w:sym": 0
+  },
+  "literal_coverage": {
+    "nonempty_source_paragraphs": 191,
+    "public_body_paragraphs": 191,
+    "native_to_pandoc_ast_whitespace_normalized_literal_and_math_positions_equal": true,
+    "gfm_round_trip_text_and_math_positions_equal_after_NFC": true,
+    "gfm_reader_canonical_unicode_normalizations": [],
+    "native_and_public_math_objects": 0,
+    "math_round_trip_equal": true,
+    "hyperlinks_in_order": 16,
+    "hyperlink_labels_and_external_targets_equal": true,
+    "public_links_match_pandoc_targets_in_order": true,
+    "internal_bookmark_remaps": [],
+    "source_and_public_normalized_paragraph_sequence_sha256": "d9447cfc2e02ea8a4981c39cece39f5ba50b5538b71d1d88df136b5d568e3a96"
+  },
+  "changes": [
+    {
+      "kind": "format",
+      "detail": "OOXML archive converted to GFM UTF-8, preserving all native body literal text and math positions in original paragraph order under whitespace normalization."
+    },
+    {
+      "kind": "restore_source_cover",
+      "detail": "Pandoc title and subtitle metadata reinserted before source body, preserving original author/date text; a title-internal line break becomes a space."
+    },
+    {
+      "kind": "typography",
+      "detail": "Direct hyperlink underline becomes ordinary Markdown hyperlink style. Other supported emphasis, bookmarks and RTL spans retained. Font, margins, pagination, line wrapping and blank-paragraph geometry not retained."
+    },
+    {
+      "kind": "added_projection_notice",
+      "detail": "A separately identified leading projection notice supplies custody, historical-credit and rendering limitations; Arabic index additionally retains substantive running header/footer text."
+    },
+    {
+      "kind": "native_math",
+      "detail": "OMML to TeX in document order; exact normalized native trees and public TeX bound in companion math map where applicable. Spacing and prime-glyph fixes are individually enumerated below."
+    }
+  ],
+  "math_conversion_repairs": [],
+  "side_parts": [
+    {
+      "part": "word/footer1.xml",
+      "sha256": "66254964d347b8282428e1930a5f922998bff8a68818c45644bdcec6997224ca",
+      "visible_text": "",
+      "math_objects": 0,
+      "footnote_bodies": 0,
+      "comments": 0
+    }
+  ],
+  "omissions": {
+    "body_authored_paragraphs": 0,
+    "body_equations": 0,
+    "body_links": 0,
+    "referenced_footnotes_or_endnotes": 0,
+    "tracked_changes": 0,
+    "body_tables_or_images": 0,
+    "nonempty_comments": 0,
+    "word_pagination_and_typography": "not represented",
+    "empty_note_parts_and_page_fields": "structurally inspected; separator-only notes and dynamic/static page-number footer fields not reproduced"
+  },
+  "limits": [
+    "Conversion fidelity and public-prose suitability only; no fresh theorem acceptance, kernel verification, empirical replay, source reading or human-specialist review.",
+    "Historical research dates come from visible source prose; stale generic OOXML package timestamps are not research dates.",
+    "External source links are locators, not an assertion of public access or permission to redistribute the linked material.",
+    "Original DOCX rendering is inspected selectively; full Word-layout equivalence is neither intended nor certified."
+  ]
+}

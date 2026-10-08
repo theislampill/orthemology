@@ -1,0 +1,174 @@
+[
+  {
+    "sha256": "cd117113d282ad395e400eea9b3aa4517ae51a64ff50aee677838862437389c1",
+    "bytes": 2514,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033147+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Lead reader’s historical appraisal, 7 October 2026, 08:40:48 UTC",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "1dc804b1f16fd75a125dfdaca1fc034ba96a6057066d1a352ef1400ed44c0308",
+    "bytes": 7813,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033173+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Darʾ volumes 8–9 reflective comparison",
+    "reader_projection_path": "t20/reading/dar-8-9/REFLECTIVE_COMPARISON.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "57e8c9818be8945ae3d8a231e683d2f9ab065474f793c201cade76e876db15c7",
+    "bytes": 12012,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033197+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Minhaj volumes 2–3 source appraisal",
+    "reader_projection_path": "t20/reading/minhaj-2-3/SOURCE_APPRAISAL.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "1aee350730ebae117cc98621b7046d4e9ffa30bd6fd2958bc5afdf83c0e5fe0c",
+    "bytes": 5145,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033258+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Minhaj volumes 2–3 lead reader’s bounded second-pass assessment",
+    "reader_projection_path": "t20/reading/minhaj-2-3/bounded-reread/ASSESSMENT.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "6e5c4bf397fcb0a7e9d29d6ea3870eb6697757a021f4ef67e3e9e6aa4a6f6b7a",
+    "bytes": 9312,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033282+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Sawaiq volume one reflective notes",
+    "reader_projection_path": "t20/reading/sawaiq/VOLUME_ONE_REFLECTION.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "e590655fc8875e6b78c171052dbe2009e85c0d4f309692f4303519fa6d2f6a0e",
+    "bytes": 15924,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033307+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Sawaiq volume two reflective synthesis",
+    "reader_projection_path": "t20/reading/sawaiq/VOLUME_TWO_REFLECTION.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "77b14cd6af7c18281ce30c9e7c8d795791295266b58c10b70355e816e238ba1c",
+    "bytes": 5264,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033388+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Sawaiq separate reader’s selected second-volume reinspection",
+    "reader_projection_path": "t20/reading/sawaiq/SELECTED_REINSPECTION.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "cadcc17842cfde12c895e87a08dfb5e547aa0577dc6c623238e7f22370fe4aa9",
+    "bytes": 4097,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033417+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Darʾ IX lead reader’s bounded causal assessment",
+    "reader_projection_path": "t20/reading/dar-8-9/bounded-reread/DAR9_CAUSAL_ASSESSMENT.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "05339824906ac389c32b10b9c29cb3308d47cabab202bbe2712653dfdd589756",
+    "bytes": 1901,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033432+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Sawaiq lead reader’s bounded second-pass notes",
+    "reader_projection_path": "t20/reading/sawaiq/SUPPLEMENTARY_APPRAISAL.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "92f457f800082152fa932642ed72035c3033ee729d15a1994d3edcd4477b9b90",
+    "bytes": 5206,
+    "read_method": "Full text displayed and read as contextual appraisal, not primary Arabic textual evidence",
+    "at_utc": "2026-10-07T10:57:59.033455+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Orthemology Nineteenth Research, source-mode and field review",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+    "bytes": 12754,
+    "read_method": "Direct full text inspection; contextual/modern interface or source metadata, not primary philosophical source evidence",
+    "at_utc": "2026-10-07T11:08:13.685034+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Original-bearer bridge independent review",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+    "bytes": 6940,
+    "read_method": "Direct full text inspection; contextual/modern interface or source metadata, not primary philosophical source evidence",
+    "at_utc": "2026-10-07T11:08:13.685075+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Original Bearer Bridge, retained modern formal interface",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "9fc3d604fa7d8257d6f946e407e69e9e3d575b8a85ffb43a7fc4da13cb8329df",
+    "bytes": 3686,
+    "read_method": "Direct full text inspection; contextual/modern interface or source metadata, not primary philosophical source evidence",
+    "at_utc": "2026-10-07T11:08:13.685095+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Shifa received-body boundaries and edition limits",
+    "reader_projection_path": "t20/reading/shifa/boundaries.json",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "5498267b006363168443c51672c6282dcafbeaa84ec7dcf693516caf6170b65d",
+    "bytes": 4849,
+    "read_method": "Full text displayed and read as contextual appraisal; does not add primary source reading credit",
+    "at_utc": "2026-10-07T11:20:46.008086+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Shifa first-portion reader’s source appraisal",
+    "reader_projection_path": "t20/reading/shifa/first/SOURCE_APPRAISAL.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "51dfaece10680cb67e167a1c450260dbc853681e9b3aa8e910370e0c43a669d5",
+    "bytes": 15465,
+    "read_method": "Full text displayed and read as contextual appraisal; does not add primary source reading credit",
+    "at_utc": "2026-10-07T11:20:46.008086+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Shifa middle-portion reader’s source appraisal",
+    "reader_projection_path": "t20/reading/shifa/middle/SOURCE_APPRAISAL.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  },
+  {
+    "sha256": "9a1c294c1e7c7bdefa7e85484443c8ce7ce72a7dadf0a7e7b3d5e4974d161aa4",
+    "bytes": 14922,
+    "read_method": "Full text displayed and read as contextual appraisal; does not add primary source reading credit",
+    "at_utc": "2026-10-07T11:20:46.008086+00:00",
+    "snapshot_hash_matches": true,
+    "source_locator": "Shifa final-portion reader’s source appraisal",
+    "reader_projection_path": "t20/reading/shifa/final/SOURCE_APPRAISAL.md",
+    "historical_snapshot_retained_in_original_custody": true,
+    "hash_scope": "Original read version; any reader projection is separately derived and has its own hash."
+  }
+]

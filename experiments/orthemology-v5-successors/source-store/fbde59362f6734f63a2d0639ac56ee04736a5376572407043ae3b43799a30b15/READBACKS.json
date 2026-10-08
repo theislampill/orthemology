@@ -1,0 +1,788 @@
+{
+  "JointFinite.W": {
+    "type": "JointFinite.W : Type",
+    "type_sha256": "03a1b36cf5726cc6e615fdda9e112c01e3eb1aad64c99d4020a1fca5ef16c617",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "03a1b36cf5726cc6e615fdda9e112c01e3eb1aad64c99d4020a1fca5ef16c617"
+  },
+  "JointFinite.B": {
+    "type": "JointFinite.B : Type",
+    "type_sha256": "ff8250b77cecb9978f047e2aa4e85fb033cd9180708fae9148b9138adae437d2",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "ff8250b77cecb9978f047e2aa4e85fb033cd9180708fae9148b9138adae437d2"
+  },
+  "JointFinite.R": {
+    "type": "JointFinite.R : Type",
+    "type_sha256": "e74a664b37f6975de253cddc8c573046897033c8876c9c4d4c8ba11fb758b150",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "e74a664b37f6975de253cddc8c573046897033c8876c9c4d4c8ba11fb758b150"
+  },
+  "JointFinite.E": {
+    "type": "JointFinite.E : Type",
+    "type_sha256": "ae6bc109053ceb04a556931386d90f0ea3c7ed9d8724e788bf0a4912bea58275",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "ae6bc109053ceb04a556931386d90f0ea3c7ed9d8724e788bf0a4912bea58275"
+  },
+  "JointFinite.C": {
+    "type": "JointFinite.C : Type",
+    "type_sha256": "862f3cf58fd64f6ad6baf10156e57733d8488111d14b9092660ec01fa3c49475",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "862f3cf58fd64f6ad6baf10156e57733d8488111d14b9092660ec01fa3c49475"
+  },
+  "JointFinite.Token": {
+    "type": "JointFinite.Token : Type",
+    "type_sha256": "110a2ec0fe062cbb370a2e0e1d3e5e209c84aaf7c9745d73e75558ad5c51bd2e",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "110a2ec0fe062cbb370a2e0e1d3e5e209c84aaf7c9745d73e75558ad5c51bd2e"
+  },
+  "JointFinite.Content": {
+    "type": "JointFinite.Content : Type",
+    "type_sha256": "fcf4ba408cf1bce6a0a5f7807a0dd584b8498f0f53e9d195faba5b4bf53190a6",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "fcf4ba408cf1bce6a0a5f7807a0dd584b8498f0f53e9d195faba5b4bf53190a6"
+  },
+  "JointFinite.Exercise": {
+    "type": "JointFinite.Exercise : Type",
+    "type_sha256": "3a46831060c4d4a442b61090f65351496e67b4677630316d39fdea1d41ed8c8b",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "3a46831060c4d4a442b61090f65351496e67b4677630316d39fdea1d41ed8c8b"
+  },
+  "JointFinite.live": {
+    "type": "JointFinite.live : JointFinite.W → Prop",
+    "type_sha256": "780df7b94e32482e830e49094e4ec8b3eb8e7c7451bf3e71b2aa35c728fef0c5",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "780df7b94e32482e830e49094e4ec8b3eb8e7c7451bf3e71b2aa35c728fef0c5"
+  },
+  "JointFinite.receivedBeing": {
+    "type": "JointFinite.receivedBeing : JointFinite.B → Prop",
+    "type_sha256": "8addd335d23c2f9a255ffc136a13659e23be43c26b99bcf7d844c907bd87eec5",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "8addd335d23c2f9a255ffc136a13659e23be43c26b99bcf7d844c907bd87eec5"
+  },
+  "JointFinite.framework": {
+    "type": "JointFinite.framework : Orthemology.Tranche20.OriginalBearerBridge.Framework JointFinite.W JointFinite.B JointFinite.R\n  JointFinite.B",
+    "type_sha256": "deb03a2439b672ebe8b800460e7df2d02003686bdf95f5870d705be2679cc8f1",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "deb03a2439b672ebe8b800460e7df2d02003686bdf95f5870d705be2679cc8f1"
+  },
+  "JointFinite.account": {
+    "type": "JointFinite.account : AnchoredSourceBridge.Account JointFinite.B JointFinite.E JointFinite.C",
+    "type_sha256": "9211c6bd0d93b18659875869e0421f32b04dd1056615221b5b6816f811223dce",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "9211c6bd0d93b18659875869e0421f32b04dd1056615221b5b6816f811223dce"
+  },
+  "JointFinite.producedAt": {
+    "type": "JointFinite.producedAt : JointFinite.B → JointFinite.E → Prop",
+    "type_sha256": "c783f3c9ee57442b8286bb7399715867ffd0362b054a2b7d8efbe548a574f58f",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "c783f3c9ee57442b8286bb7399715867ffd0362b054a2b7d8efbe548a574f58f"
+  },
+  "JointFinite.occursAt": {
+    "type": "JointFinite.occursAt : JointFinite.W → JointFinite.E → Prop",
+    "type_sha256": "b6024684522d44dfeba29756a3409908b5c9d01a6f7903bd14905798df77604d",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "b6024684522d44dfeba29756a3409908b5c9d01a6f7903bd14905798df77604d"
+  },
+  "JointFinite.contributionBearer": {
+    "type": "JointFinite.contributionBearer : JointFinite.C → JointFinite.B",
+    "type_sha256": "9353eff29091047f995441faf3cd21adc6c540d9fb79509c0d86f4bd29b917b2",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "9353eff29091047f995441faf3cd21adc6c540d9fb79509c0d86f4bd29b917b2"
+  },
+  "JointFinite.contributionResource": {
+    "type": "JointFinite.contributionResource : JointFinite.C → JointFinite.R",
+    "type_sha256": "584c2e27b9681cf5a15a2d5c3156b1cbd0d4f8efe67fd7d1633078b71502e796",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "584c2e27b9681cf5a15a2d5c3156b1cbd0d4f8efe67fd7d1633078b71502e796"
+  },
+  "JointFinite.originalResourceUsed": {
+    "type": "JointFinite.originalResourceUsed : JointFinite.R → JointFinite.C → Prop",
+    "type_sha256": "f7ba2d6477160d4dd8c5803f9a5e4ffb975e492f375ee6419a57c6b085860915",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "f7ba2d6477160d4dd8c5803f9a5e4ffb975e492f375ee6419a57c6b085860915"
+  },
+  "JointFinite.directSupport": {
+    "type": "JointFinite.directSupport : JointFinite.B → JointFinite.B → Prop",
+    "type_sha256": "fe800d8e7a68baed7ed44c55f1699c8e80d7426d339c18ed08763d2c52cb47d9",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "fe800d8e7a68baed7ed44c55f1699c8e80d7426d339c18ed08763d2c52cb47d9"
+  },
+  "JointFinite.supportAncestor": {
+    "type": "JointFinite.supportAncestor : JointFinite.B → JointFinite.B → Prop",
+    "type_sha256": "77a5b85fbd9930bd3ea7fcadcf8e1e9e8f77b11eb12d52fe125542c3b379be11",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "77a5b85fbd9930bd3ea7fcadcf8e1e9e8f77b11eb12d52fe125542c3b379be11"
+  },
+  "JointFinite.derivedAct": {
+    "type": "JointFinite.derivedAct : JointFinite.B → JointFinite.E → Prop",
+    "type_sha256": "42582c3dcf44cc2f4277d118790f14951e880d199f5c011f90a37c16cb34ce9c",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "42582c3dcf44cc2f4277d118790f14951e880d199f5c011f90a37c16cb34ce9c"
+  },
+  "JointFinite.derivedUses": {
+    "type": "JointFinite.derivedUses : JointFinite.B → JointFinite.E → JointFinite.C → Prop",
+    "type_sha256": "5d97dd68f0a0b83ce40a1e29a144cd6eae44f2fe705870d6d019340c1172e621",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "5d97dd68f0a0b83ce40a1e29a144cd6eae44f2fe705870d6d019340c1172e621"
+  },
+  "JointFinite.mediateUse": {
+    "type": "JointFinite.mediateUse : JointFinite.E → JointFinite.E → JointFinite.C → Prop",
+    "type_sha256": "56065be092472dda6a7095de3037ad855e9ec2208f64c21043ba806325e60148",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "56065be092472dda6a7095de3037ad855e9ec2208f64c21043ba806325e60148"
+  },
+  "JointFinite.tokenOccurrence": {
+    "type": "JointFinite.tokenOccurrence : JointFinite.Token → JointFinite.E",
+    "type_sha256": "dfac7c75120704c3f9efbf3577bcc5ca1b6b179cb5c66800d56e520e19d954cb",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "dfac7c75120704c3f9efbf3577bcc5ca1b6b179cb5c66800d56e520e19d954cb"
+  },
+  "JointFinite.tokenBearer": {
+    "type": "JointFinite.tokenBearer : JointFinite.Token → JointFinite.B",
+    "type_sha256": "938f70e5db55d9f07e92467054841cbe2cf49818f8f431fd4acd8ace8b85e50f",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "938f70e5db55d9f07e92467054841cbe2cf49818f8f431fd4acd8ace8b85e50f"
+  },
+  "JointFinite.modeExercise": {
+    "type": "JointFinite.modeExercise : JointFinite.E → JointFinite.Exercise",
+    "type_sha256": "a653ca8a2e442496a6d7bdb7d8b18fd938e7811834a6e173384375b8a1e267a0",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "a653ca8a2e442496a6d7bdb7d8b18fd938e7811834a6e173384375b8a1e267a0"
+  },
+  "JointFinite.productivelySupportsToken": {
+    "type": "JointFinite.productivelySupportsToken : JointFinite.B → JointFinite.Token → Prop",
+    "type_sha256": "ae3be8e70bf0503c8f6d8c1477519805150c4b09a7ef383f08f72546f062ff5a",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "ae3be8e70bf0503c8f6d8c1477519805150c4b09a7ef383f08f72546f062ff5a"
+  },
+  "JointFinite.authenticated": {
+    "type": "JointFinite.authenticated : JointFinite.Token → Prop",
+    "type_sha256": "6d2a335316e374881925a6241f27a71a023392c68a3c1f019812e3c3fd1ff0b9",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "6d2a335316e374881925a6241f27a71a023392c68a3c1f019812e3c3fd1ff0b9"
+  },
+  "JointFinite.speech": {
+    "type": "JointFinite.speech : VeracityBoundary.Model JointFinite.B JointFinite.W JointFinite.Token JointFinite.Content\n  JointFinite.Exercise",
+    "type_sha256": "2224c69a9f909c287b543c7d4d28a9ce3ad27fcf7ca6efafd20a3ac4744b3821",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "2224c69a9f909c287b543c7d4d28a9ce3ad27fcf7ca6efafd20a3ac4744b3821"
+  },
+  "JointFinite.abc_full": {
+    "type": "JointFinite.abc_full : Orthemology.Tranche20.OriginalBearerBridge.FullPremises JointFinite.framework",
+    "type_sha256": "04ff389cd0121eb2beee2ef6b1731e180f2a0e9d7c8a1a5d5fbbfb09cc045070",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "c4d56b2f7fb2244a78e7ababecd854af29904b2b07df11475be24b8ae0dffa1d"
+  },
+  "JointFinite.J01_canonical_identity": {
+    "type": "JointFinite.J01_canonical_identity : ∀ (q : JointFinite.R) (s : JointFinite.B),\n  Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x q s →\n    q = JointFinite.R.rg ∧ s = JointFinite.B.g",
+    "type_sha256": "ad6baf0f3c5e2892d5af2c01ab13d36e5f783dad92cd207ca331095c4606bc86",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "f1543abeb5482ec3e95fe47f99dcab8c73038df525dbf7aaf07fc2d71ad97600"
+  },
+  "JointFinite.canonical_original_via_component": {
+    "type": "JointFinite.canonical_original_via_component : Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness\n  JointFinite.framework JointFinite.B.x JointFinite.R.rg JointFinite.B.g",
+    "type_sha256": "9d316060f7a339b0c5d1283035e1ea6ba1ae83c6571a779c26e7fddb12c37523",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "514a0b9767575acd96ea3c60af4025b3fd1b578d946002303e2cb03f4bfa2bfa"
+  },
+  "JointFinite.canonical_root_via_component": {
+    "type": "JointFinite.canonical_root_via_component : Orthemology.Tranche3.SourceIdentity.Root JointFinite.framework.existsAt\n  JointFinite.framework.dep JointFinite.W.w0 JointFinite.B.g",
+    "type_sha256": "5fb92dd62efa578b3abb798b312b770c4fa8f2ab2eccd5cc5b73fc73db26e24f",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "6d9e80e4b53e239c5cfac9ed63a510cd3bc3149eed03adefa56afb70feea0af5"
+  },
+  "JointFinite.canonical_necessary_via_inherited": {
+    "type": "JointFinite.canonical_necessary_via_inherited : Orthemology.Tranche3.SourceIdentity.Necessary\n  JointFinite.framework.existsAt JointFinite.B.g",
+    "type_sha256": "96d462209e0a955525eb032e549e7281784f3f9bbdc37f07bb962e93af4e7df2",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "5c7773f3d3e94af122e63da239b9b41b8471fb052ceb807961731250c1ab0f73"
+  },
+  "JointFinite.canonical_uniform_via_inherited": {
+    "type": "JointFinite.canonical_uniform_via_inherited : Orthemology.Tranche3.SourceIdentity.UniformRoot\n  JointFinite.framework.existsAt JointFinite.framework.dep JointFinite.B.g",
+    "type_sha256": "6aa6e6e7a8eec0aaa63f832fffabd845ceb81c064375cd2ca36a13298b7a9952",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "46abd2e0e7abfec6f8e283c26fed1b32cf4b72803acea71b7ee5d1b033f4d55b"
+  },
+  "JointFinite.canonical_abc_same_g": {
+    "type": "JointFinite.canonical_abc_same_g : Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework\n    JointFinite.B.x JointFinite.R.rg JointFinite.B.g ∧\n  Orthemology.Tranche3.SourceIdentity.Necessary JointFinite.framework.existsAt JointFinite.B.g ∧\n    Orthemology.Tranche3.SourceIdentity.UniformRoot JointFinite.framework.existsAt JointFinite.framework.dep\n        JointFinite.B.g ∧\n      Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt JointFinite.framework JointFinite.B.g",
+    "type_sha256": "85fda7aa5343ece8bfb66e5106ef8ba91357752a85d06a976a6d56276f9296be",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "a06175797a7e7e5835d0542d8e7b62e93159ed39cf5970ccfef54baff6e7c053"
+  },
+  "JointFinite.generic_abc_via_component": {
+    "type": "JointFinite.generic_abc_via_component : ∃ t q s,\n  Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework t q s ∧\n    Orthemology.Tranche3.SourceIdentity.Necessary JointFinite.framework.existsAt s ∧\n      Orthemology.Tranche3.SourceIdentity.UniformRoot JointFinite.framework.existsAt JointFinite.framework.dep s ∧\n        Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt JointFinite.framework s",
+    "type_sha256": "4984e8824c3d2fa5a93c8f3aec2ddee89c5f0aa0e82c6dbd215316f17e8a9559",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "baf2cfacfe8a67726bbaccbfe860b80ce63d2aefab937d58588968ff617c3464"
+  },
+  "JointFinite.abc_live_receipt_and_transport": {
+    "type": "JointFinite.abc_live_receipt_and_transport : JointFinite.framework.existsAt JointFinite.W.w0 JointFinite.B.x ∧\n  JointFinite.framework.existsAt JointFinite.W.w1 JointFinite.B.x ∧\n    ¬JointFinite.framework.existsAt JointFinite.W.w2 JointFinite.B.x ∧\n      JointFinite.framework.wholeReceived JointFinite.W.w0 JointFinite.B.x ∧\n        JointFinite.framework.wholeReceived JointFinite.W.w1 JointFinite.B.x ∧\n          JointFinite.framework.intrinsic JointFinite.B.x JointFinite.R.rx ∧\n            JointFinite.framework.resourceReceived JointFinite.R.rx ∧\n              ¬Orthemology.Tranche3.SourceIdentity.Necessary JointFinite.framework.existsAt JointFinite.B.x",
+    "type_sha256": "8374a41aeed4fef9aab545f517c91dfccc5a7e1da80be505bbf394e779793033",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "15ecf13c7284e6fa4ea91a08ffa7f61fd9c4f14d26b7943289bca26130425f4a"
+  },
+  "JointFinite.field_admissible": {
+    "type": "JointFinite.field_admissible : AnchoredSourceBridge.Admissible JointFinite.account",
+    "type_sha256": "cccd11c740afb8a62720120f7cf629f71dd6f8e935e48a9514e0dfc1e5b6ebe0",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "c52f63563fec2ec4f4247751a31695a663c33d1364185740775de5691ebc8a83"
+  },
+  "JointFinite.field_req_sound": {
+    "type": "JointFinite.field_req_sound : AnchoredSourceBridge.RequisiteSound JointFinite.account",
+    "type_sha256": "422aabc0d9a25704bc5bcdcc607507b05aa6bd32a2aafbe967b65e75ea0c6dc1",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "5062eee0a028c479f36e94e94af0c876e7129f4532a5bec3dacecf39c029f8f7"
+  },
+  "JointFinite.field_req_exhaustive": {
+    "type": "JointFinite.field_req_exhaustive : AnchoredSourceBridge.RequisiteExhaustive JointFinite.account",
+    "type_sha256": "956de494184db97b994211f8de5a09029d33872d6a3bb39a27987a9f4d5adaaf",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "03c798c60f37e7661ef3f3bdd7332e6b38367eb3d491d7a83a0affc7ce28eaf2"
+  },
+  "JointFinite.field_qualified": {
+    "type": "JointFinite.field_qualified : JointFinite.account.Qualified JointFinite.B.g",
+    "type_sha256": "b4a3a2eedff71d0625fdfc136b61f0a6f7ffd9499743a0b6ee2a32594146ede8",
+    "axioms": [
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "fee4be27d56a6048114141672374c4dc44d99a185ae4af075455821ed45b6edf"
+  },
+  "JointFinite.field_classification": {
+    "type": "JointFinite.field_classification : AnchoredSourceBridge.Classification JointFinite.account JointFinite.B.g",
+    "type_sha256": "fb59a3229feca7e634d1715418cf00fc8bbf6c5e0866e169f27e4a14cb045ac1",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "18e714e389aa2f7e803af80e1efd3aae6892d5fde3f3d17ece79a308d6253892"
+  },
+  "JointFinite.field_conformance": {
+    "type": "JointFinite.field_conformance : AnchoredSourceBridge.Conformance JointFinite.account JointFinite.B.g",
+    "type_sha256": "d7d480d636031ae10bcb3618316c7dcf758956a02837ccdbcd2031c171c6953a",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "47509e940657b67f740e3fbf5bb81f6512fdde102d459205765768e29c749837"
+  },
+  "JointFinite.field_use_sound": {
+    "type": "JointFinite.field_use_sound : AnchoredSourceBridge.UseSound JointFinite.account",
+    "type_sha256": "2da2d45108a17bb1036f099586baf96ec342826d994131a126a156c74158f04b",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "9931f15ef1637940c9fcf18c47fef862d8bf47c30387ffd68d288a01df0d7f50"
+  },
+  "JointFinite.field_role": {
+    "type": "JointFinite.field_role : AnchoredSourceBridge.RoleApplicable JointFinite.account JointFinite.B.g",
+    "type_sha256": "b8defc1df69158cbf8071751439d76e42ec15577ce3bf2fabf9e151eedc6b267",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "77a7e06f5284919cc45e87fdc7309829383f2e5bf75b143bd931f594e007e79c"
+  },
+  "JointFinite.field_visible": {
+    "type": "JointFinite.field_visible : AnchoredSourceBridge.Visible JointFinite.account",
+    "type_sha256": "38a369646a87c695a944e03a54cd0f0bde5be6a9bdad3029b58133c40573114e",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "d68ef02af2d07371d63c0ccf9106e5e3581c72014b4dbf17f76154957f0c5d78"
+  },
+  "JointFinite.field_anchor": {
+    "type": "JointFinite.field_anchor : AnchoredSourceBridge.ActualAnchor JointFinite.account JointFinite.B.g JointFinite.E.a",
+    "type_sha256": "798b3ed8b112a501379cdf725de6c69f061298fbc69103146fb3041426de712e",
+    "axioms": [
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "cec0b6dc02ba84485219629ae41d777f49e9a86b5db4f851ea6072dbc5c8e923"
+  },
+  "JointFinite.field_cnd": {
+    "type": "JointFinite.field_cnd : AnchoredSourceBridge.FieldCND JointFinite.account",
+    "type_sha256": "e62a50496a8a9b5f7918d6a926991d75ffe77f2ec5bfd21ae9876f6378e574e7",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "40f23d531ba330016b3931c39eec2e8cf600a4e1af097bd687976915c667273a"
+  },
+  "JointFinite.field_connected": {
+    "type": "JointFinite.field_connected : AnchoredSourceBridge.ConnectedFrom JointFinite.account JointFinite.E.a",
+    "type_sha256": "bd12296bc0e39181482ddf62e5c66de5ede950f274f022eabbf7b8217dde627e",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "6e43c6ffc44f065f730272affa4030e121292176a341afe6453147f9ef5bfb84"
+  },
+  "JointFinite.field_coverage_without_cnd": {
+    "type": "JointFinite.field_coverage_without_cnd : AnchoredSourceBridge.GlobalCoverage JointFinite.account JointFinite.B.g",
+    "type_sha256": "aead44d394635fe0ca74a412815093c7de0a8a712aaafc2701d957bc3a048479",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "6a9df8786f9b1177c87299ff739cdeeb681c8a7fbb8e3b88544a38cfe0887be2"
+  },
+  "JointFinite.field_guarded": {
+    "type": "JointFinite.field_guarded : AnchoredSourceBridge.Admissible JointFinite.account ∧\n  AnchoredSourceBridge.RequisiteSound JointFinite.account ∧\n    AnchoredSourceBridge.RequisiteExhaustive JointFinite.account ∧\n      AnchoredSourceBridge.GlobalCoverage JointFinite.account JointFinite.B.g ∧\n        AnchoredSourceBridge.ActualUnique JointFinite.account JointFinite.B.g ∧\n          ∀ (e : JointFinite.E),\n            JointFinite.account.Field e →\n              ∀ (s : JointFinite.B), AnchoredSourceBridge.Complete JointFinite.account s e → s = JointFinite.B.g",
+    "type_sha256": "37bbcca62bbda462fda4d52cbe6408a380be02c2ae21597503898492b23cedc1",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "11e8d83f5458a39664f98386664e9d2b0bec72ca77b61ea00f24cabf6d77df94"
+  },
+  "JointFinite.field_positive": {
+    "type": "JointFinite.field_positive : ∀ (e : JointFinite.E),\n  JointFinite.account.Field e → AnchoredSourceBridge.Positive JointFinite.account e",
+    "type_sha256": "11d19acd1fcbd91f81f0307e7924d707368c0f62c18d14b595aef76dbe2b5fad",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "64f0dfd23aa1b52d8de830542d50095f8890d35f39ec3f8c2327d8bf7db46a9d"
+  },
+  "JointFinite.complete_provider_exists_and_unique": {
+    "type": "JointFinite.complete_provider_exists_and_unique : (∃ s, AnchoredSourceBridge.GlobalCoverage JointFinite.account s) ∧\n  ∀ (e : JointFinite.E),\n    JointFinite.account.Field e →\n      ∀ (s : JointFinite.B), AnchoredSourceBridge.Complete JointFinite.account s e → s = JointFinite.B.g",
+    "type_sha256": "74f92b6c5d9123caf02df0b27c3d4417a411338d3e4ec1f65c85422c97266038",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "6a131fa4a968426e12489c134a67a448c6ee1fe8ed548bb012403634ea314fe9"
+  },
+  "JointFinite.mixed_occurrence_real": {
+    "type": "JointFinite.mixed_occurrence_real : JointFinite.account.ActualOccurrence JointFinite.E.k ∧\n  JointFinite.E.a ≠ JointFinite.E.k ∧\n    JointFinite.E.b ≠ JointFinite.E.k ∧\n      ¬AnchoredSourceBridge.Overlap JointFinite.account JointFinite.E.a JointFinite.E.b ∧\n        AnchoredSourceBridge.Overlap JointFinite.account JointFinite.E.a JointFinite.E.k ∧\n          AnchoredSourceBridge.Overlap JointFinite.account JointFinite.E.k JointFinite.E.b ∧\n            JointFinite.account.Req JointFinite.E.k JointFinite.C.cm ∧\n              JointFinite.derivedAct JointFinite.B.x JointFinite.E.k ∧\n                JointFinite.derivedUses JointFinite.B.x JointFinite.E.k JointFinite.C.cx ∧\n                  JointFinite.derivedUses JointFinite.B.x JointFinite.E.k JointFinite.C.cl ∧\n                    JointFinite.derivedUses JointFinite.B.x JointFinite.E.k JointFinite.C.cr ∧\n                      JointFinite.mediateUse JointFinite.E.a JointFinite.E.k JointFinite.C.cl ∧\n                        JointFinite.mediateUse JointFinite.E.b JointFinite.E.k JointFinite.C.cr ∧\n                          ¬JointFinite.mediateUse JointFinite.E.k JointFinite.E.a JointFinite.C.cl ∧\n                            ¬JointFinite.mediateUse JointFinite.E.k JointFinite.E.b JointFinite.C.cr",
+    "type_sha256": "42c226f41d4237b9daeb860f13a53af000112a93b7e8f34be33f36a6861220ae",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "bf202fd21ad94965112bf85c7b03fc59e2afeb9aa34aa631e58d5da148f68ef8"
+  },
+  "JointFinite.veracity_package": {
+    "type": "JointFinite.veracity_package : VeracityBoundary.Package JointFinite.speech JointFinite.B.g",
+    "type_sha256": "6e9e0564a6a3fe7d2ef4c137ce28e744b3dceea7595be29601c86563e7b98bdd",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "6c2c5c2fca4296c135b35656ad487c64e5e1d9c0ff128bb868f4e407cc5bc24e"
+  },
+  "JointFinite.veracity_factive": {
+    "type": "JointFinite.veracity_factive : VeracityBoundary.Factive JointFinite.speech JointFinite.B.g",
+    "type_sha256": "c2d16d02c6a4d6c4c263e93b84eda6f57554cf171f4f29a364e470c52b36959d",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "1e44d0884a22cc5bb8ae23fb0df4828bcb3b911ebf3475a965a75770f7dc8805"
+  },
+  "JointFinite.veracity_via_component": {
+    "type": "JointFinite.veracity_via_component : VeracityBoundary.Veracity JointFinite.speech JointFinite.B.g",
+    "type_sha256": "b66f645b7fee5d4407b21d0d9c8679acd4f75dd5eb23b076452d0e71c342146e",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "283012b9a3d36b1aef6dd456e44004355bd82bbc9ea1c7f478d82c955fa4c159"
+  },
+  "JointFinite.honesty_equivalence_via_component": {
+    "type": "JointFinite.honesty_equivalence_via_component : VeracityBoundary.Veracity JointFinite.speech JointFinite.B.g ↔\n  VeracityBoundary.NoCounterfeit JointFinite.speech JointFinite.B.g",
+    "type_sha256": "65d1c53949c342263720525a902c3b4ed0b802478150733f177b2c1f3d2a291c",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "6f40e576a352a09b2cd5bb0a4d52b88d68dd0e5432b08eef04c22f5286e725bf"
+  },
+  "JointFinite.created_speaker_normative_boundary": {
+    "type": "JointFinite.created_speaker_normative_boundary : VeracityBoundary.K JointFinite.speech JointFinite.B.x ∧\n  VeracityBoundary.A JointFinite.speech JointFinite.B.x ∧\n    VeracityBoundary.C JointFinite.speech JointFinite.B.x ∧\n      VeracityBoundary.D JointFinite.speech JointFinite.B.x ∧\n        VeracityBoundary.N JointFinite.speech JointFinite.B.x ∧\n          VeracityBoundary.ExerciseBridge JointFinite.speech JointFinite.B.x ∧\n            VeracityBoundary.Factive JointFinite.speech JointFinite.B.x ∧\n              ¬VeracityBoundary.P JointFinite.speech JointFinite.B.x ∧\n                ¬VeracityBoundary.Package JointFinite.speech JointFinite.B.x ∧\n                  VeracityBoundary.Counterfeit JointFinite.speech JointFinite.B.x JointFinite.W.w0 JointFinite.Token.v\n                      JointFinite.Content.absent ∧\n                    JointFinite.speech.shortcoming JointFinite.W.w0 JointFinite.B.x JointFinite.Exercise.sayX ∧\n                      ¬JointFinite.speech.fitting JointFinite.W.w0 JointFinite.B.x JointFinite.Exercise.sayX",
+    "type_sha256": "b31faeb43c8ccebda2792e5db58bba8b6948d7a439c227f64e03ebe0a47292ca",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "022f025aff264253201818dda00670271c08edea47139852193c88f6ae103651"
+  },
+  "JointFinite.source_live_knowledge_and_nonspeech_conformance": {
+    "type": "JointFinite.source_live_knowledge_and_nonspeech_conformance : JointFinite.speech.knowsFalse JointFinite.W.w0\n    JointFinite.B.g JointFinite.Content.absent ∧\n  ¬JointFinite.speech.trueAt JointFinite.W.w0 JointFinite.Content.absent ∧\n    (¬∃ t, JointFinite.speech.asserts JointFinite.W.w0 JointFinite.B.g t JointFinite.Content.absent) ∧\n      JointFinite.speech.asserts JointFinite.W.w0 JointFinite.B.g JointFinite.Token.u JointFinite.Content.present ∧\n        JointFinite.speech.trueAt JointFinite.W.w0 JointFinite.Content.present ∧\n          JointFinite.speech.actual JointFinite.W.w0 JointFinite.B.g JointFinite.Exercise.provideK ∧\n            JointFinite.speech.fitting JointFinite.W.w0 JointFinite.B.g JointFinite.Exercise.provideK ∧\n              ∀ (t : JointFinite.Token), JointFinite.speech.exercise t ≠ JointFinite.Exercise.provideK",
+    "type_sha256": "14273ad9fbc62830c4ea73e2c36c3eeb1c1af36a9153423d3e0cc595d2fa5c08",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "38149856f43c4033ec6c8d03cf3185e0b9ebc102a0099496cbd2c4d1c836dd86"
+  },
+  "JointFinite.PositiveReach": {
+    "type": "JointFinite.PositiveReach : JointFinite.B → JointFinite.B → Prop",
+    "type_sha256": "816e4211c3bc057cd5038633717ad8170bc356085a3eed5886fcc262f58cdd76",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "816e4211c3bc057cd5038633717ad8170bc356085a3eed5886fcc262f58cdd76"
+  },
+  "JointFinite.ancestor_transitive": {
+    "type": "JointFinite.ancestor_transitive : ∀ (s t u : JointFinite.B),\n  JointFinite.supportAncestor s t → JointFinite.supportAncestor t u → JointFinite.supportAncestor s u",
+    "type_sha256": "f4d1eb8bc88aee4079f445e9a6c85996af164aa8ebd78c533f0bac252fbf40dd",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "08efd42dea2e296e6055d5671426d820ad3dad792283d83d8e1f08492f6ae51d"
+  },
+  "JointFinite.direct_is_ancestor": {
+    "type": "JointFinite.direct_is_ancestor : ∀ (s t : JointFinite.B),\n  JointFinite.directSupport s t → JointFinite.supportAncestor s t",
+    "type_sha256": "16871242fc111892dea3e3942eaaf006479c8333a4bef911a844e011d8d13196",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "60d6f6bd6b4da162aaba6d3ef1c331aceeb407bb168774881834c4fd6be4cc46"
+  },
+  "JointFinite.ancestor_decomposition": {
+    "type": "JointFinite.ancestor_decomposition : ∀ (s t : JointFinite.B),\n  JointFinite.supportAncestor s t → JointFinite.directSupport s t ∨ s = JointFinite.B.g ∧ t = JointFinite.B.m",
+    "type_sha256": "e727175d0d4730116bf92b5c79985915f1ae4853fe3478393b6b5129d1f1ccfe",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "f87f5baa187dd6549166e1c782443616106a6949042693387bc606326257671c"
+  },
+  "JointFinite.reach_is_ancestor": {
+    "type": "@JointFinite.reach_is_ancestor : ∀ {s t : JointFinite.B},\n  JointFinite.PositiveReach s t → JointFinite.supportAncestor s t",
+    "type_sha256": "4e04c0c6e6ad9fd8c1401cd335986e4aa963fb33520ff75c24f0d073e4fe6ef9",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "893f015c78acf869bde5414b4697fb2f13d582323bdcee26e1ab564af9953927"
+  },
+  "JointFinite.ancestor_is_reach": {
+    "type": "@JointFinite.ancestor_is_reach : ∀ {s t : JointFinite.B},\n  JointFinite.supportAncestor s t → JointFinite.PositiveReach s t",
+    "type_sha256": "83381824d3c248c038b0504c028a7acd0d924b40cb24a8f9c52e78841e33204f",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "dd3dd48f20c38a101ba797240a4b64acf828c8250d22d866d79ac023ecb37a44"
+  },
+  "JointFinite.J02_original_resource_provision": {
+    "type": "JointFinite.J02_original_resource_provision : ∀ (s : JointFinite.B) (c : JointFinite.C),\n  JointFinite.account.EntireOrig s c ↔\n    ∃ q,\n      Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource JointFinite.framework q ∧\n        JointFinite.framework.intrinsic s q ∧ JointFinite.originalResourceUsed q c",
+    "type_sha256": "fe8cb99f660b8a9235b0e360481f2417fff148cb94825b6c386a2b5d82d689f7",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "2ca527503ab4a0ae666951c1ef84341d762578d39cc22cef2ae7b890518e29e8"
+  },
+  "JointFinite.J03_concrete_receipt": {
+    "type": "JointFinite.J03_concrete_receipt : ∀ (c : JointFinite.C),\n  JointFinite.framework.wholeReceived JointFinite.W.w0 (JointFinite.contributionBearer c) ∧\n    JointFinite.framework.resourceReceived (JointFinite.contributionResource c) ∧\n      JointFinite.framework.intrinsic (JointFinite.contributionBearer c) (JointFinite.contributionResource c)",
+    "type_sha256": "bd77ba1c5cc439f997cc5b00812ee24aab1d0e9495a029b22f5c0561132f4816",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "0dfa5ebd3ffc5c99257817a48495b97ede30bb954798c52e783d88e88f943ce0"
+  },
+  "JointFinite.J04_field_target_link": {
+    "type": "JointFinite.J04_field_target_link : (∀ (t : JointFinite.B) (e : JointFinite.E),\n    JointFinite.producedAt t e → JointFinite.framework.targetReceived t) ∧\n  (∀ (e : JointFinite.E), JointFinite.account.Field e → ∃ t, JointFinite.producedAt t e) ∧\n    JointFinite.producedAt JointFinite.B.x JointFinite.E.a",
+    "type_sha256": "d6188cd8156dc18c52f02b8088a996e2b81a720fd8e7d83a6d0ddd5c45fdd8ea",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "c0910242aef9c7c68997b30ff489b2b553d40a488ef84b74d2bfe17fcfe4677c"
+  },
+  "JointFinite.J05_positive_reachability": {
+    "type": "JointFinite.J05_positive_reachability : ∀ (s t : JointFinite.B),\n  JointFinite.supportAncestor s t ↔ JointFinite.PositiveReach s t",
+    "type_sha256": "66faa0edff9982a7ae35b3bd332888a5ae2262f4425be3a4f2b8d0840d8fdc24",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "97f3575331c96d451c7e6e63c2e034ff6550f1d6572dfbec3de5872a2c0f44a4"
+  },
+  "JointFinite.J05_live_productive_support": {
+    "type": "JointFinite.J05_live_productive_support : JointFinite.PositiveReach JointFinite.B.g JointFinite.B.x ∧\n  JointFinite.PositiveReach JointFinite.B.g JointFinite.B.l ∧\n    JointFinite.PositiveReach JointFinite.B.g JointFinite.B.r ∧\n      JointFinite.PositiveReach JointFinite.B.g JointFinite.B.m ∧\n        JointFinite.PositiveReach JointFinite.B.h JointFinite.B.z ∧\n          JointFinite.directSupport JointFinite.B.x JointFinite.B.m ∧\n            JointFinite.derivedUses JointFinite.B.x JointFinite.E.k JointFinite.C.cx ∧\n              JointFinite.derivedUses JointFinite.B.x JointFinite.E.k JointFinite.C.cl ∧\n                JointFinite.derivedUses JointFinite.B.x JointFinite.E.k JointFinite.C.cr",
+    "type_sha256": "eb278c764acdb09f08ce0d9d5a0ed5785b44a10ac89473643f079d9333ede379",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "1a604f069ccbcb94129c51be7182073aff6c853a05c3408196ecda612b289928"
+  },
+  "JointFinite.reception_and_direct_support_distinct": {
+    "type": "JointFinite.reception_and_direct_support_distinct : JointFinite.framework.dep JointFinite.W.w0 JointFinite.B.g\n    JointFinite.B.m ∧\n  ¬JointFinite.directSupport JointFinite.B.g JointFinite.B.m ∧\n    JointFinite.directSupport JointFinite.B.x JointFinite.B.m ∧\n      ¬JointFinite.framework.dep JointFinite.W.w0 JointFinite.B.x JointFinite.B.m ∧\n        JointFinite.PositiveReach JointFinite.B.g JointFinite.B.m",
+    "type_sha256": "9164c5af9f814a8a373a9d439be4b20aaf7a2f4a2c972c09c9480f386a0481c6",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "e342060f603bcb6f20b0bdf48b21ca6243697fbab5e563c7b7a96e1f34f2c8f5"
+  },
+  "JointFinite.J06_complete_incoming_inventory": {
+    "type": "JointFinite.J06_complete_incoming_inventory : (∀ (e : JointFinite.E),\n    JointFinite.account.Field e →\n      ∀ (t : JointFinite.B),\n        JointFinite.producedAt t e →\n          ∀ (y : JointFinite.B),\n            JointFinite.supportAncestor y t →\n              y ≠ JointFinite.B.g → ∃ c, JointFinite.account.Req e c ∧ JointFinite.contributionBearer c = y) ∧\n  ∀ (e : JointFinite.E) (c : JointFinite.C),\n    JointFinite.account.Field e →\n      JointFinite.account.Req e c →\n        ∃ t,\n          JointFinite.producedAt t e ∧\n            (JointFinite.contributionBearer c = t ∨ JointFinite.supportAncestor (JointFinite.contributionBearer c) t)",
+    "type_sha256": "fc9c5d78b57d0cd5564af00c21bfd4ac23f2e0cc81b8a96c9f6f4afb345d6fad",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "be652c2d5c1fa010fefe1bd49b84071b2fa324f5dfba839eff1d46f750df65b8"
+  },
+  "JointFinite.J07_no_incoming_outside_source": {
+    "type": "JointFinite.J07_no_incoming_outside_source : (∀ (e : JointFinite.E) (t : JointFinite.B),\n    JointFinite.account.Field e →\n      JointFinite.producedAt t e →\n        ¬JointFinite.directSupport JointFinite.B.h t ∧ ¬JointFinite.supportAncestor JointFinite.B.h t) ∧\n  (∀ (e : JointFinite.E) (c : JointFinite.C),\n      JointFinite.account.Field e → JointFinite.account.Req e c → ¬JointFinite.account.EntireOrig JointFinite.B.h c) ∧\n    ∀ (e : JointFinite.E), JointFinite.account.Field e → ¬JointFinite.account.ActualOriginal JointFinite.B.h e",
+    "type_sha256": "8f7b970faa6c995282b727cdfb4340f0430edd5c044243866750c0fd6ce2aa0e",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "1ebf9b64167b18a2d74688d6510f7662ba188572f4df3f9fdac99514e8da86dd"
+  },
+  "JointFinite.J08_actual_mode_realization": {
+    "type": "JointFinite.J08_actual_mode_realization : ∀ (s : JointFinite.B) (e : JointFinite.E),\n  JointFinite.account.ModeRole s e → JointFinite.speech.actual JointFinite.W.w0 s (JointFinite.modeExercise e)",
+    "type_sha256": "902dc8582950cb7d64ef393d5cf241a01052b5ec08c5cec840d0eead43e739f7",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "e5ef17658abb4460308238a1150f37b4480dc931d301b1b1bd34c279b3fdb4f1"
+  },
+  "JointFinite.J09_fitting_source_realization": {
+    "type": "JointFinite.J09_fitting_source_realization : (∀ (e : JointFinite.E),\n    JointFinite.account.ModeRole JointFinite.B.g e →\n      JointFinite.speech.fitting JointFinite.W.w0 JointFinite.B.g (JointFinite.modeExercise e)) ∧\n  ¬JointFinite.speech.fitting JointFinite.W.w0 JointFinite.B.x JointFinite.Exercise.sayX",
+    "type_sha256": "2fca2b8e384e77a6a653d3678af9748437a52450f10cc8b8f10d3ef9151385bc",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "e88f3e468b901f1719ed50b5cfad7b62f1565495254eeeb87f7cd5d587b955d0"
+  },
+  "JointFinite.J10_truth_grounding": {
+    "type": "JointFinite.J10_truth_grounding : ∀ (w : JointFinite.W),\n  (JointFinite.speech.trueAt w JointFinite.Content.present ↔ JointFinite.framework.existsAt w JointFinite.B.l) ∧\n    (JointFinite.speech.trueAt w JointFinite.Content.absent ↔ ¬JointFinite.framework.existsAt w JointFinite.B.l)",
+    "type_sha256": "f3078c2746c782149183ccfb6f59e0829328fc8be81ca0f78ca1c0c2e7db33d1",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "7a7d71648a205d40dbfaec36dc3c7eaa4588baa3cc8979d7ea58847904d947a5"
+  },
+  "JointFinite.J11_token_support_grounding": {
+    "type": "JointFinite.J11_token_support_grounding : (∀ (s : JointFinite.B) (t : JointFinite.Token),\n    JointFinite.productivelySupportsToken s t ↔ JointFinite.account.ActualOriginal s (JointFinite.tokenOccurrence t)) ∧\n  ∀ (t : JointFinite.Token), JointFinite.producedAt (JointFinite.tokenBearer t) (JointFinite.tokenOccurrence t)",
+    "type_sha256": "7b2341fceadb30b78831de3a5258f94492da68ede4541b0d88bd48fe510e0b5a",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "05f5ccff5e7aa5f6b3d8edb98fdc697ec205fd393cd02e2a8afbcc2b646b72b7"
+  },
+  "JointFinite.J12_support_not_ownership": {
+    "type": "JointFinite.J12_support_not_ownership : JointFinite.productivelySupportsToken JointFinite.B.g JointFinite.Token.v ∧\n  JointFinite.speech.asserts JointFinite.W.w0 JointFinite.B.x JointFinite.Token.v JointFinite.Content.absent ∧\n    ¬JointFinite.speech.trueAt JointFinite.W.w0 JointFinite.Content.absent ∧\n      ¬JointFinite.speech.asserts JointFinite.W.w0 JointFinite.B.g JointFinite.Token.v JointFinite.Content.absent",
+    "type_sha256": "4db4b53ef9af339f4008ea0187786ee64a91d1e5b1af6bf0a8bbb0cc0c85a97e",
+    "axioms": [
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "b205ed9b77cdd3c468951ecf8f33e098fba9952d78b3861cdf115d4f49987277"
+  },
+  "JointFinite.J13_genuine_agent_identity": {
+    "type": "JointFinite.J13_genuine_agent_identity : JointFinite.B.x ≠ JointFinite.B.g ∧\n  JointFinite.B.x ≠ JointFinite.B.h ∧\n    JointFinite.framework.existsAt JointFinite.W.w0 JointFinite.B.x ∧\n      JointFinite.framework.existsAt JointFinite.W.w1 JointFinite.B.x ∧\n        ¬JointFinite.framework.existsAt JointFinite.W.w2 JointFinite.B.x ∧\n          JointFinite.framework.intrinsic JointFinite.B.x JointFinite.R.rx ∧\n            JointFinite.derivedAct JointFinite.B.x JointFinite.E.k ∧\n              JointFinite.speech.actual JointFinite.W.w0 JointFinite.B.x JointFinite.Exercise.actX ∧\n                JointFinite.speech.actual JointFinite.W.w0 JointFinite.B.x JointFinite.Exercise.sayX",
+    "type_sha256": "fe8b9c709390a622f729996e393f8d10b6c7365be5de4004062fd2e247f08c3e",
+    "axioms": [
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "1e41b8d0667b075e89c6949a4bff1e5b68ead61d83f031baf858c4e17c41eaef"
+  },
+  "JointFinite.J14_outside_boundary": {
+    "type": "JointFinite.J14_outside_boundary : JointFinite.B.h ≠ JointFinite.B.g ∧\n  Orthemology.Tranche3.SourceIdentity.Necessary JointFinite.framework.existsAt JointFinite.B.h ∧\n    Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt JointFinite.framework JointFinite.B.h ∧\n      Orthemology.Tranche3.SourceIdentity.UniformRoot JointFinite.framework.existsAt JointFinite.framework.dep\n          JointFinite.B.h ∧\n        Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal JointFinite.framework JointFinite.B.h ∧\n          JointFinite.framework.intrinsic JointFinite.B.h JointFinite.R.rh ∧\n            Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource JointFinite.framework JointFinite.R.rh ∧\n              JointFinite.account.EntireOrig JointFinite.B.h JointFinite.C.cz ∧\n                JointFinite.account.ActualOriginal JointFinite.B.h JointFinite.E.o ∧\n                  ¬AnchoredSourceBridge.Complete JointFinite.account JointFinite.B.g JointFinite.E.o",
+    "type_sha256": "606da73ad792d78b0901450dd04f99b46980fcad0a0052647b3cf99224b0b90b",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "406c8d6c6856106ea18bce78cbfb8769899a16dc5c86dbb5366b2144ee572789"
+  },
+  "JointFinite.J15_strong_ownership_extension": {
+    "type": "JointFinite.J15_strong_ownership_extension : ∀ (s : JointFinite.B),\n  s = JointFinite.B.g ∨ s = JointFinite.B.x →\n    ∀ (w : JointFinite.W) (t : JointFinite.Token) (q : JointFinite.Content),\n      (VeracityBoundary.informedOwnership JointFinite.speech).asserts w s t q ↔ JointFinite.speech.asserts w s t q",
+    "type_sha256": "3c4df3051b8856acfd30fc662238ae288d7617b08d8a034817074822636cf2fb",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "3df6e32421e3fcc2f5e8bdadd4d92d5a619ca322bde9b57faf64c11962497c91"
+  },
+  "JointFinite.selectedSupport": {
+    "type": "JointFinite.selectedSupport : JointFinite.B → Prop",
+    "type_sha256": "b16536b42ea4eafd76d647e21592acc500514317774bf5535c30496579aedc3d",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "b16536b42ea4eafd76d647e21592acc500514317774bf5535c30496579aedc3d"
+  },
+  "JointFinite.below": {
+    "type": "JointFinite.below : JointFinite.B → JointFinite.B → Prop",
+    "type_sha256": "172226752245e6fd44a89218452b80162aa0c536fc45209ad88ead4a1ea96d83",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "172226752245e6fd44a89218452b80162aa0c536fc45209ad88ead4a1ea96d83"
+  },
+  "JointFinite.localCover": {
+    "type": "JointFinite.localCover : JointFinite.B → JointFinite.B → Prop",
+    "type_sha256": "14cb33e6dcf8fe5c4da30a3e74fcb06185331d75c48134a45a932681ac3eff5a",
+    "axioms": null,
+    "axiom_audited": false,
+    "raw_block_sha256": "14cb33e6dcf8fe5c4da30a3e74fcb06185331d75c48134a45a932681ac3eff5a"
+  },
+  "JointFinite.finite_ancestry_compatibility": {
+    "type": "JointFinite.finite_ancestry_compatibility : (∀ (s : JointFinite.B), ¬JointFinite.supportAncestor s s) ∧\n  (∀ (s t u : JointFinite.B),\n      JointFinite.supportAncestor s t → JointFinite.supportAncestor t u → JointFinite.supportAncestor s u) ∧\n    (∀ (s t : JointFinite.B),\n        JointFinite.selectedSupport t → JointFinite.supportAncestor s t → JointFinite.selectedSupport s) ∧\n      (∀ (t : JointFinite.B), JointFinite.selectedSupport t → JointFinite.localCover JointFinite.B.g t) ∧\n        (∀ (t : JointFinite.B),\n            JointFinite.selectedSupport t → t = JointFinite.B.g ∨ JointFinite.supportAncestor JointFinite.B.g t) ∧\n          JointFinite.supportAncestor JointFinite.B.g JointFinite.B.x ∧\n            ¬JointFinite.selectedSupport JointFinite.B.h ∧ ¬JointFinite.selectedSupport JointFinite.B.z",
+    "type_sha256": "4432c6c5d4f27c0c6706b5cb90d07c684afc320fc17c8d32fc42fc44795eceda",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "6a56c82427991808f7856595715cb55e62cf02da2fe9464934f1d78cfaa0ac43"
+  },
+  "JointFinite.no_source_or_created_authentication": {
+    "type": "JointFinite.no_source_or_created_authentication : ¬JointFinite.authenticated JointFinite.Token.u ∧\n  ¬JointFinite.authenticated JointFinite.Token.v",
+    "type_sha256": "889675591db8c793a2ef2715f513ae9789605b385df15083a78b3c3a7c0cd570",
+    "axioms": [],
+    "axiom_audited": true,
+    "raw_block_sha256": "df912817582057060267e9aed0c848b4abb442259e905cde298dbb9baf5f32d4"
+  },
+  "JointFinite.good_source_antecedent_boundary": {
+    "type": "JointFinite.good_source_antecedent_boundary : (∀ (e : JointFinite.E),\n    JointFinite.account.Field e →\n      JointFinite.account.ModeRole JointFinite.B.g e →\n        ¬¬AnchoredSourceBridge.Complete JointFinite.account JointFinite.B.g e) ∧\n  (∀ (w : JointFinite.W) (t : JointFinite.Token) (q : JointFinite.Content),\n      JointFinite.speech.asserts w JointFinite.B.g t q → ¬¬JointFinite.speech.trueAt w q) ∧\n    (∀ (w : JointFinite.W) (t : JointFinite.Token) (q : JointFinite.Content),\n        ¬VeracityBoundary.Counterfeit JointFinite.speech JointFinite.B.g w t q) ∧\n      ∀ (w : JointFinite.W) (e : JointFinite.Exercise), ¬JointFinite.speech.shortcoming w JointFinite.B.g e",
+    "type_sha256": "ecd05a7071c134624f76824b7809aad2001c7dc857724dc39a9ce027f0f7d200",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "axiom_audited": true,
+    "raw_block_sha256": "f7d45e8e2a9c349142437aaade93ac5317d17c87b0323376cf028db33e0e82dc"
+  }
+}

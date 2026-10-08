@@ -1,0 +1,23 @@
+{
+  "evidence_kind": "INTEGRATION_SOURCE_SCOPE_REVIEW",
+  "history_record": "docs/provenance/v5-successors/T20_ASSESSMENT_HISTORY.json",
+  "native_science": "NOT_RUN",
+  "new_independent_evidence_count": 0,
+  "new_result_count": 0,
+  "result_id": "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+  "reviewed_source_ids": [
+    "T20-DOC-64d8e628bb43c3a9270d",
+    "T20-DOC-2fa9f874572d394bfeff",
+    "T20-DOC-e22739ed52e175cf8aef",
+    "T20-DOC-cd2ee30674c29ae395e8",
+    "T20-DOC-f706ff5d91decee4c435",
+    "T20-DOC-c53b1a8e937ca9938486",
+    "T20-DOC-85c5f9bc02142c86236c",
+    "T20-DOC-e6994a667ab613332196"
+  ],
+  "schema": "bounded-final-reader-assessment-scope-review-v1",
+  "scope": "Final sealed source/statement/chronology correspondence for the existing assessment owner; not independent metaphysical adjudication or scientific reexecution.",
+  "seal_sha256": "89c829bc1c3c967dbaf1eac5dbbf5a2978197f7e4847ad28f64c041dfa3472e5",
+  "selection_sha256": "e3e580d9e13d5778fa4fbb43c43e3e40cad4a66597755d307283bdb0c0524000",
+  "statement_sha256": "d5b1790d2c27de81ce43a1f2c56c0e8ef5e1cd61ab1bc3262882f4347fd16bba"
+}

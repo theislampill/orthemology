@@ -1,0 +1,87 @@
+{
+  "status": "FROZEN_AUTHOR_CANDIDATE",
+  "files": [
+    {
+      "path": "lean/GroundedSupport.lean",
+      "bytes": 4269,
+      "sha256": "73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed"
+    },
+    {
+      "path": "lean/GroundedQuotient.lean",
+      "bytes": 3216,
+      "sha256": "7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b"
+    },
+    {
+      "path": "lean/AliasCuts.lean",
+      "bytes": 4756,
+      "sha256": "ad78fed4255f9ae2a694fbe6d754b7d6b0ebbed10f99f109239430486405d519"
+    },
+    {
+      "path": "lean/OccurrenceControls.lean",
+      "bytes": 6343,
+      "sha256": "b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a"
+    },
+    {
+      "path": "lean/CutControls.lean",
+      "bytes": 2241,
+      "sha256": "e153d9baf9ca6e4df1a005fe578ea4ceb00347fee7d1918ff02a87f4f445a4b5"
+    },
+    {
+      "path": "lean/MutationControls.lean",
+      "bytes": 1886,
+      "sha256": "19501a1defe88ca77f0001bbbd178a01861752d99bd7e3f39d068e9466a48634"
+    },
+    {
+      "path": "lean/Readback.lean",
+      "bytes": 4937,
+      "sha256": "2d4f14460cf7200b6e88a6b126baa22c3e8bbf6e2fc4e03aa8b8756bb3480e7a"
+    },
+    {
+      "path": "grounded_support.py",
+      "bytes": 1752,
+      "sha256": "9d70989837f3abc364f315a43067554c1b7bd251254e1c33c1d7b358fd948d05"
+    },
+    {
+      "path": "test_grounded_support.py",
+      "bytes": 4047,
+      "sha256": "add98b94f6891ff78f477785e0f46feb3d0bd380ba33fc317d10fbc6ac325e55"
+    },
+    {
+      "path": "search_cut_order.py",
+      "bytes": 2131,
+      "sha256": "9b2acd2b5f4840d1fb9d7d60e93520c58c028b3918d70953e9d76060ea7544c5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8209,
+      "sha256": "f9ce4c0195878aa0feb0c661c7cf9a0c233c6612ba5ad9f5c5d895f6dbbfb70a"
+    },
+    {
+      "path": "THEOREM_MAP.md",
+      "bytes": 3414,
+      "sha256": "6563884fd827f0185f913e29b7b45a4f53c87f8ef39bbfb451e4b68d494d3202"
+    },
+    {
+      "path": "EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+      "bytes": 19471,
+      "sha256": "b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037"
+    },
+    {
+      "path": "PROOF_PLAN.md",
+      "bytes": 1964,
+      "sha256": "17f0c4621dd534b482771d8380f6f9da6035aa326a9a77c46363ce7f6e2b1917"
+    },
+    {
+      "path": "validation/replay.sh",
+      "bytes": 893,
+      "sha256": "ef5130fb0a04fcc80a43f5c961442d1a1577c946de051fb73f3a201efde140d5"
+    }
+  ],
+  "excluded": [
+    "primary PDFs or source page images",
+    "compiled object files",
+    "scratch probes",
+    "private source notes"
+  ],
+  "new_result_scope": "Scoped grounded-inference and alias-cut connection; established general Horn and provenance methods"
+}
