@@ -1,0 +1,108 @@
+{
+  "schema": "orthemology-t15-finite-reanalysis-summary-v1",
+  "suite_id": "T15-EMPIRICAL-REANALYSIS",
+  "result_id": "D18-T15-EMPIRICAL",
+  "receipt_id": "T15-EMPIRICAL-REANALYSIS-replay",
+  "outcome": "FINITE_ONLY",
+  "proof_scope": "FINITE",
+  "suite_sha256": "3489ac5e52d55dc722b8d08666ccf94cb16fccdda434c7ecc415bf541a1a02b9",
+  "receipt_sha256": "90f7d9f396651635ab82281bd97f3b9e03b0e0bba8c76ac91865573c153295eb",
+  "receipt_canonical_sha256": "66e820c88804eb3203c40bc7ed4722b448d7ad2e9abaca83671b88452bfecf3b",
+  "adapter_sha256": "46624445c5c71706a015e6a44ee38f0fa2c3d657537dc2429f4037f9d1f04568",
+  "started_at": "2026-10-05T19:55:47.396819Z",
+  "ended_at": "2026-10-05T19:55:54.283507Z",
+  "actual_counts": {
+    "projected_source_files": 12,
+    "original_checksum_rows": 11,
+    "unittest_methods": 13,
+    "positive_controls": 15,
+    "intended_subprocess_rejections": 1,
+    "source_excerpt_targets": 3,
+    "official_input_files": 2
+  },
+  "actual_unittest_names": [
+    "test_aggregate_contract_rejects_record_output",
+    "test_bad_fit_inputs_rejected",
+    "test_both_slope_signs_and_balanced_weighting",
+    "test_cli_help_has_only_local_input_and_aggregate_output",
+    "test_derivatives",
+    "test_manifest_mismatch_rejected",
+    "test_missing_or_invalid_selected_response_is_rejected",
+    "test_missing_timing_preserves_all_choices",
+    "test_output_cannot_overwrite_input",
+    "test_output_hardlink_cannot_overwrite_input",
+    "test_paired_direction_and_unit",
+    "test_unequal_bin_counts_do_not_change_default_weighting",
+    "test_wrong_timing_missingness_rejected"
+  ],
+  "stages": [
+    {
+      "exit_code": 0,
+      "id": "_prerequisites",
+      "log_sha256": "2c0f28b03d636fbe943e0053335bf78e330a1503cd506158f001fc968bedfebe",
+      "terminal": "COMPLETED"
+    },
+    {
+      "exit_code": 0,
+      "id": "package-integrity",
+      "log_sha256": "39c91697986c1ece2c92f636a92cfa427f3d8814f07dc709f5016db0722bc292",
+      "terminal": "COMPLETED"
+    },
+    {
+      "exit_code": 0,
+      "id": "synthetic",
+      "log_sha256": "b39c607d16160fba5c8a03fe8751600795d7476169c24c3529d6b304febae2d4",
+      "terminal": "COMPLETED"
+    },
+    {
+      "exit_code": 0,
+      "id": "reanalysis",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "terminal": "COMPLETED"
+    },
+    {
+      "exit_code": 0,
+      "id": "numerical-validation",
+      "log_sha256": "ac63c2b5c11fd5c0e5ab3ec88ae9566c106dbe0ef67590a48e3407a009d7f955",
+      "terminal": "COMPLETED"
+    },
+    {
+      "exit_code": 2,
+      "id": "hash-rejection",
+      "log_sha256": "f7f8223c08b37c4f7d00258d62f1b158bb00074cdc501026cab53af2449dec10",
+      "terminal": "COMPLETED"
+    }
+  ],
+  "official_inputs": [
+    {
+      "id": "decisions_zip",
+      "sha256": "f29d479d75a49670a2be061631dd43efb2927e907b2e93c356d2d4bf861b598c",
+      "bytes": 141808,
+      "status": "UNCHANGED"
+    },
+    {
+      "id": "summary_xlsx",
+      "sha256": "c6cf4aef16b7cabf1822bdad21dd3ef45cb46c1a565253701ff7064e03989505",
+      "bytes": 10168,
+      "status": "UNCHANGED"
+    }
+  ],
+  "projected_sources_unchanged": true,
+  "environment": {
+    "python": "3.12.3",
+    "interpreter_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+    "distributions": 10,
+    "recorded_distribution_files": 9372,
+    "distribution_inventories_unchanged": true,
+    "post_run_identity_receipt_sha256": "b9db3ada6cdd11045ad567b5baae91a9ebd330b257c8e5ac6ad180dfecd7256c"
+  },
+  "aggregate_sha256": "eda676cfd5ac10b0a92040b9164a6d968b7f23ad68e456089579b7cf2d8f6acd",
+  "inherited_aggregate_sha256": "eda676cfd5ac10b0a92040b9164a6d968b7f23ad68e456089579b7cf2d8f6acd",
+  "numerical_validation_sha256": "ac63c2b5c11fd5c0e5ab3ec88ae9566c106dbe0ef67590a48e3407a009d7f955",
+  "limitations": [
+    "Reanalysis of the same 15 dyads, not a new participant experiment or experimental replication.",
+    "Three source excerpt readbacks and 16 controls are finite execution evidence, not kernel theorem or independent experiment counts.",
+    "No actual-member causal attribution, external specialist validation or canonical adoption.",
+    "Official source data, disposable corrupted copy and full logs remain private."
+  ]
+}

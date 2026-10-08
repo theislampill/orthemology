@@ -1,0 +1,42 @@
+[
+  {
+    "module": "WitnessIgnored",
+    "source": "src/DirectEndpoint.lean",
+    "source_sha256": "20af8b9ff9911bcfb4839e8456363cd707d13c19df4269ffd21335dab817cd1f",
+    "anchor": "(submittedFamily c)",
+    "replacement": "(submittedFamily [])",
+    "mutant_sha256": "4aa9a911439acdf900e47ad2cd66ce555ab3e6beb6dd1736404ee7eb0204266f",
+    "expected_exit": 1,
+    "expected_diagnostic": "did not evaluate to"
+  },
+  {
+    "module": "CounterReset",
+    "source": "src/DirectController.lean",
+    "source_sha256": "c68605b22b1c74bdacaec0c586e35f19e80a7154d3d31b3c2edac05feda0f5a5",
+    "anchor": "(historyVisits s\u2080 s h)",
+    "replacement": "0",
+    "mutant_sha256": "a770f7c822785c7243dc5f7c39e693c80af8fde51ca23b68d17fc3826b41e467",
+    "expected_exit": 1,
+    "expected_diagnostic": "did not evaluate to"
+  },
+  {
+    "module": "NonStrictCountGuard",
+    "source": "src/RationalTest.lean",
+    "source_sha256": "87cfb72769c42a459d47eb0c7e3468882ba196abcb709f79fd5febbc34b8d2dc",
+    "anchor": "r < actionCount e h",
+    "replacement": "r \u2264 actionCount e h",
+    "mutant_sha256": "dbd8599528a4b659e245a4cb2d9fd26515b739b416e700dad0e187f6a53b40a8",
+    "expected_exit": 1,
+    "expected_diagnostic": "did not evaluate to"
+  },
+  {
+    "module": "EmpiricalHistoryTruncated",
+    "source": "src/RationalTest.lean",
+    "source_sha256": "87cfb72769c42a459d47eb0c7e3468882ba196abcb709f79fd5febbc34b8d2dc",
+    "anchor": "rationalFrequency e y h - I.row",
+    "replacement": "rationalFrequency e y (h.take 1) - I.row",
+    "mutant_sha256": "35633954b024de762d61783ba20b80c238b71a1a764e15bf2411ea5ab9ae3aa0",
+    "expected_exit": 1,
+    "expected_diagnostic": "did not evaluate to"
+  }
+]

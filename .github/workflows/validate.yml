@@ -192,3 +192,41 @@ jobs:
           git diff --exit-code docs/provenance/RELEASE-MANIFEST.sha256
       - name: PDF clean rebuild, byte-equality with committed artifacts, text-structure QA
         run: python scripts/build_pdfs.py --check
+      - name: Seventh-Sixteenth successor source and status integrity
+        run: |
+          python -B tests/test_v5_successors.py
+          python -B -O tests/test_v5_successors.py
+          python -B tests/test_v5_successor_replay.py
+          python -B -O tests/test_v5_successor_replay.py
+          python -B tests/test_v5_d04_replay.py
+          python -B -O tests/test_v5_d04_replay.py
+          python -B tests/test_v5_operational_assets_v1.py
+          python -B -O tests/test_v5_operational_assets_v1.py
+          python -B tests/test_v5_covering_continuation.py
+          python -B -O tests/test_v5_covering_continuation.py
+          python -B tests/test_v5_covering_dispatch.py
+          python -B -O tests/test_v5_covering_dispatch.py
+          python -B tests/test_v5_covering_execution.py
+          python -B -O tests/test_v5_covering_execution.py
+          python -B tests/test_v5_covering_receipt.py
+          python -B -O tests/test_v5_covering_receipt.py
+          python -B tests/test_v5_d04_public_receipt.py
+          python -B -O tests/test_v5_d04_public_receipt.py
+          python -B tests/test_v5_p1_tail.py
+          python -B -O tests/test_v5_p1_tail.py
+          python -B tests/test_v5_p1_tail_finish.py
+          python -B -O tests/test_v5_p1_tail_finish.py
+          python -B tests/test_v5_selector_dispatch.py
+          python -B -O tests/test_v5_selector_dispatch.py
+          python -B tests/test_v5_selector_executor.py
+          python -B -O tests/test_v5_selector_executor.py
+          python -B tests/test_successor_references.py
+          python -B -O tests/test_successor_references.py
+          python -B scripts/validate_v5_successors.py
+          python -B -O scripts/validate_v5_successors.py
+          python tests/test_v5_g1_membership.py
+          python -O tests/test_v5_g1_membership.py
+          python -B tests/test_v5_sixteenth_boundary.py
+          python -B -O tests/test_v5_sixteenth_boundary.py
+          python -B tests/test_v5_repository_scope.py
+          python -B -O tests/test_v5_repository_scope.py

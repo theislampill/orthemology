@@ -1,0 +1,666 @@
+{
+  "id": "D04-T07-CRITERION-ORIGINAL",
+  "family": "t07-criterion-physical",
+  "result_families": [
+    "t07-criterion-v3"
+  ],
+  "origin_archive_sha256": "9de4a0244b1daa5794c37bc19ef4b9c4f9d9c4a4b0c353dd817cff5287057cec",
+  "source_ids": [
+    "D04-SRC-88647bc166a5fb42c70d",
+    "D04-SRC-45c3c6f7b1832290a51a",
+    "D04-SRC-f7620cfa59cf3e30f233",
+    "D04-SRC-b679d3a6358ba999f5b7",
+    "D04-SRC-a29ba381887e10dc8606",
+    "D04-SRC-a7ec20b118a237f21325",
+    "D04-SRC-fe0fd275db451fe9d0a9"
+  ],
+  "review_ids": [
+    "T07-CRITERION-V3-REVIEW-1",
+    "T07-CRITERION-V3-REVIEW-2"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D04-SRC-f7620cfa59cf3e30f233",
+      "declaration": "theorem actual_decision_behavior_changes (s : RuleState) (c : InstallCommand)\n    (oldRule : s.rule = .normalizedLF)\n    (accepted : (install s c).applied = true) :\n    Accepts s.rule (s.source.content ++ [10]) s.source.content ∧\n    ¬ Accepts (install s c).state.rule (s.source.content ++ [10]) s.source.content ∧\n    Accepts (install s c).state.rule s.source.content s.source.content := by\n  constructor\n  · rw [oldRule]\n    exact (normalized_rule_false_acceptance s.source.content).1\n  · rw [(accepted_changes_rule_and_history s c accepted).1]\n    exact ⟨appended_LF_changes_finite_sequence s.source.content, rfl⟩",
+      "target_sha256": "9b8a58d741d2bb71f11da611a9a7c2182a6518e83beb3e0fcfc7a6213eb0ef77",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D04-SRC-f7620cfa59cf3e30f233",
+      "declaration": "theorem accepted_has_install_specific_grant (s : RuleState) (c : InstallCommand)\n    (accepted : (install s c).applied = true) :\n    s.revoked = false ∧ ∃ g, s.grant = some g ∧ InstallGrantValid s c g := by\n  have valid := (applied_iff_valid s c).mp accepted\n  obtain ⟨hm, ht, hd, hr, hv, he, hn, ho, hrev, hg⟩ := valid\n  refine ⟨hrev, ?_⟩\n  cases hs : s.grant with\n  | none =>\n      rw [hs] at hg\n      exact False.elim hg\n  | some g =>\n      rw [hs] at hg\n      exact ⟨g, rfl, hg⟩",
+      "target_sha256": "ffdddc1ea1965be09e2fe579b7040c65479ba9baae8daddb7475f7c7ea0d817b",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D04-SRC-45c3c6f7b1832290a51a",
+      "declaration": "theorem accepted_repairs_and_retains_history (s : State) (c : Command)\n    (accepted : (execute s c).applied = true) :\n    (execute s c).state.draft = s.source.content ∧\n    (execute s c).state.revision = s.revision + 1 ∧\n    (execute s c).state.history = s.history ++ [s.draft] := by\n  have payload := accepted_payload_is_exact s c accepted\n  have hg := (guard_true_iff_context_valid s c).mpr\n    ((applied_iff_context_valid s c).mp accepted)\n  unfold execute\n  rw [hg]\n  exact ⟨payload, rfl, rfl⟩",
+      "target_sha256": "717c1ff7c853cd588a3df3fde23457005c6fcab24409a91a409fb54c25add8a7",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-4",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "declaration": "theorem uniform_transport_iff_back_coverage {U V : Type}\n    (eu : U → Prop) (ev : V → Prop) (relation : U → V → Prop) :\n    (∀ (p : U → Prop) (q : V → Prop),\n      Robust eu p → Preserves eu ev relation p q → Robust ev q) ↔\n    BackCover eu ev relation := by\n  constructor\n  · intro allClaims v hv\n    let imageClaim : V → Prop := fun x => ∃ u, eu u ∧ relation u x\n    have hp : Robust eu (fun _ => True) := by\n      intro u hu\n      exact True.intro\n    have preserveImage : Preserves eu ev relation (fun _ => True) imageClaim := by\n      intro u x hu hx hux hp\n      exact ⟨u, hu, hux⟩\n    exact allClaims (fun _ => True) imageClaim hp preserveImage v hv\n  · intro covered p q hp preserves\n    exact transport_of_robust_judgment eu ev relation p q hp covered preserves",
+      "target_sha256": "2d982c4f65e5c585ac01a343ae6eda3e962de1f521c2253299da0704ffb57f39",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "counterexample-1",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "declaration": "theorem bare_whole_defeat_with_subset_authority :\n    bareDef true ∧ TokenSufficient (fun _ : Bool => True) bareAuth := by\n  exact ⟨rfl, false, True.intro, rfl⟩",
+      "target_sha256": "5641a1fb4dd282b728627a861c3613728302d34a0c1dcd72cf3608735701154b",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "counterexample-2",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "declaration": "theorem forward_preservation_can_miss_revoked_recipient :\n    Robust oneSource (fun _ => True) ∧\n    Preserves oneSource bothRecipients onlyFalseRelated (fun _ => True)\n      (fun v => v = false) ∧\n    ¬ Robust bothRecipients (fun v => v = false) := by\n  refine ⟨?_, ?_, ?_⟩\n  · intro u hu\n    exact True.intro\n  · intro u v hu hv hrel hp\n    exact hrel\n  · intro h\n    have bad := h true True.intro\n    cases bad",
+      "target_sha256": "0c0fa1537955c1053bb7ea8960979241cdfa655dd173084bd5f04e365cbad36d",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "counterexample-3",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "declaration": "theorem coverage_not_necessary_for_independently_true_fixed_claim :\n    Robust bothRecipients (fun _ => True) ∧\n    ¬ BackCover oneSource bothRecipients onlyFalseRelated := by\n  constructor\n  · intro v hv\n    exact True.intro\n  · intro h\n    obtain ⟨u, hu, huv⟩ := h true True.intro\n    cases huv\n\n/- One-step uniform action result. A guarded compound operation is a distinct\naction/interface and must be included explicitly before applying this test. -/",
+      "target_sha256": "ccf4ace310e53561e3c77549006f338d1b83eee404a760b03e230b5e52302269",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "counterexample-4",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "declaration": "theorem each_world_repair_does_not_give_uniform_action :\n    (∀ w : Bool, ∃ a : Bool, a = w) ∧\n    ¬ (∃ a : Bool, ∀ w : Bool, a = w) := by\n  constructor\n  · intro w\n    exact ⟨w, rfl⟩\n  · intro h\n    obtain ⟨a, ha⟩ := h\n    have bad : (false : Bool) = true := (ha false).symm.trans (ha true)\n    cases bad\n\n/- A minimal execution semantics with an explicit contextual guard.\nThe guard's truth is an input, not a premise generated by this code. -/",
+      "target_sha256": "c4e7eb5a684b800490fa4f8cdc46ceafecfd3fe63ae4607ed982993759ad1a2a",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "positive-infrastructure",
+      "source_id": "D04-SRC-45c3c6f7b1832290a51a",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "proved-bare_whole_defeat_with_subset_authority",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "target_id": "counterexample-1",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "proved-forward_preservation_can_miss_revoked_recipient",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "target_id": "counterexample-2",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "proved-coverage_not_necessary_for_independently_true_fixed_claim",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "target_id": "counterexample-3",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "proved-each_world_repair_does_not_give_uniform_action",
+      "source_id": "D04-SRC-88647bc166a5fb42c70d",
+      "target_id": "counterexample-4",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": []
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "D04-SRC-88647bc166a5fb42c70d",
+        "path": "CriterionTransport.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-45c3c6f7b1832290a51a",
+        "path": "TypedCriterionGuard.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-f7620cfa59cf3e30f233",
+        "path": "CriterionInstallation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-b679d3a6358ba999f5b7",
+        "path": "ReplayCriterionFixtures.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-a29ba381887e10dc8606",
+        "path": "ReplayRuleInstallation.lean",
+        "role": "RUNTIME"
+      },
+      {
+        "source_id": "D04-SRC-a7ec20b118a237f21325",
+        "path": "review-documents/D04-SRC-a7ec20b118a237f21325.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D04-SRC-fe0fd275db451fe9d0a9",
+        "path": "review-documents/D04-SRC-fe0fd275db451fe9d0a9.md",
+        "role": "REVIEW"
+      }
+    ],
+    "modules": [
+      {
+        "name": "CriterionTransport",
+        "source_id": "D04-SRC-88647bc166a5fb42c70d",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "TypedCriterionGuard",
+        "source_id": "D04-SRC-45c3c6f7b1832290a51a",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "CriterionInstallation",
+        "source_id": "D04-SRC-f7620cfa59cf3e30f233",
+        "imports": [
+          "Init",
+          "TypedCriterionGuard"
+        ]
+      },
+      {
+        "name": "ReplayCriterionFixtures",
+        "source_id": "D04-SRC-b679d3a6358ba999f5b7",
+        "imports": [
+          "Init",
+          "TypedCriterionGuard"
+        ]
+      },
+      {
+        "name": "ReplayRuleInstallation",
+        "source_id": "D04-SRC-a29ba381887e10dc8606",
+        "imports": [
+          "Init",
+          "CriterionInstallation"
+        ]
+      }
+    ],
+    "module_order": [
+      "TypedCriterionGuard",
+      "CriterionInstallation",
+      "CriterionTransport"
+    ],
+    "positive_roots": [
+      "CriterionTransport",
+      "TypedCriterionGuard",
+      "CriterionInstallation"
+    ],
+    "audit_roots": [],
+    "negative_roots": [],
+    "runtime_roots": [
+      "ReplayCriterionFixtures",
+      "ReplayRuleInstallation"
+    ],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Std",
+        "package": "lean-release",
+        "path": "Std.lean",
+        "sha256": "fc1fcd5ee6968164eeedd0d1fc6f25784355e088adc8aa37c7da2d46777b145d"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "CriterionInstallation",
+        "name": "CriterionInstallation.actual_decision_behavior_changes"
+      },
+      {
+        "target_id": "target-2",
+        "module": "CriterionInstallation",
+        "name": "CriterionInstallation.accepted_has_install_specific_grant"
+      },
+      {
+        "target_id": "target-3",
+        "module": "TypedCriterionGuard",
+        "name": "TypedCriterionGuard.accepted_repairs_and_retains_history"
+      },
+      {
+        "target_id": "target-4",
+        "module": "CriterionTransport",
+        "name": "CriterionTransport.uniform_transport_iff_back_coverage"
+      },
+      {
+        "target_id": "counterexample-1",
+        "module": "CriterionTransport",
+        "name": "CriterionTransport.bare_whole_defeat_with_subset_authority"
+      },
+      {
+        "target_id": "counterexample-2",
+        "module": "CriterionTransport",
+        "name": "CriterionTransport.forward_preservation_can_miss_revoked_recipient"
+      },
+      {
+        "target_id": "counterexample-3",
+        "module": "CriterionTransport",
+        "name": "CriterionTransport.coverage_not_necessary_for_independently_true_fixed_claim"
+      },
+      {
+        "target_id": "counterexample-4",
+        "module": "CriterionTransport",
+        "name": "CriterionTransport.each_world_repair_does_not_give_uniform_action"
+      }
+    ],
+    "package_manifest_source_id": null,
+    "packages": [],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      },
+      {
+        "name": "python312",
+        "kind": "PYTHON",
+        "version": "3.12.3",
+        "executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-c490a9c2586a7f942b3f",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "9de4a0244b1daa5794c37bc19ef4b9c4f9d9c4a4b0c353dd817cff5287057cec",
+        "expected_bytes": 127206,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "original",
+        "source_id": "D04-SRC-43b7c192557017a0b123",
+        "recipe": "t07-criterion-translated-v1",
+        "sha256": "066e051e6c68174e4af4726f0376040f8d8cf488a78e128510ef9338536ff320",
+        "argument_meanings": {
+          "--output": "FRESH_OUTPUT_DIRECTORY",
+          "--python": "PYTHON_3_12_EXECUTABLE",
+          "--lean": "LEAN_EXECUTABLE"
+        },
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "original-driver",
+        "kind": "DRIVER",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:source-recipe}",
+          "t07-criterion-translated-v1",
+          "--output",
+          "{out}/original",
+          "--python",
+          "{tool:python312}",
+          "--lean",
+          "{tool:lean}"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 5400,
+        "output_paths": [
+          "original"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-verify-bundle",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "verify-bundle"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-python-tests",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "python-tests"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-criterion-transport",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "criterion-transport"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "proved-bare_whole_defeat_with_subset_authority",
+          "proved-forward_preservation_can_miss_revoked_recipient",
+          "proved-coverage_not_necessary_for_independently_true_fixed_claim",
+          "proved-each_world_repair_does_not_give_uniform_action"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-typed-criterion",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "typed-criterion"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-infrastructure"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-criterion-installation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "criterion-installation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-bounded-audit",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "bounded-audit"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-repair-fixtures-generate",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "repair-fixtures-generate"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-repair-fixtures-lean",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "repair-fixtures-lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-repair-fixtures-compare",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "repair-fixtures-compare"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-install-fixtures-generate",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "install-fixtures-generate"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-install-fixtures-lean",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "install-fixtures-lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-install-fixtures-compare",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "install-fixtures-compare"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "closure-compile-CriterionTransport",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/CriterionTransport.olean",
+          "{project}/CriterionTransport.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "observe-install-fixtures-compare"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/CriterionTransport.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "build",
+      "original/build"
+    ]
+  }
+}

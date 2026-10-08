@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-03T13:03:19.116595+00:00",
+  "relationship": "Reviewer authored the ordinary derivation but not the Lean implementation; independent implementation and scope review, not independent mathematical discovery.",
+  "admitted_manifest_sha256": "e7e1eab2d7055f81738cec7515d34b7b3bd7d39bcb2a02411099695151662c18",
+  "nonuniform_members_verified": 35,
+  "original_uniform_manifest_sha256": "5d7b52d653a818641b2fd818a95fc3a13a159dd89cd75bb597435b818f0a55d4",
+  "original_uniform_members_unchanged": 33,
+  "fresh_source_only_copy": true,
+  "author_olean_reuse": false,
+  "compiler_threads": 1,
+  "wall_cap_seconds": 180,
+  "heartbeats": "default",
+  "recursion_depth": "default",
+  "modules": [
+    {
+      "module": "IndexedCompletionCompact",
+      "source_sha256": "e959089e5cf9720f4760e6625c8b4d57b04d9b45790af7bafb1dd03489b61a26",
+      "seconds": 5.885,
+      "exit": 0
+    },
+    {
+      "module": "IndexedCompletionCore",
+      "source_sha256": "8498ffa9bed638cde8316b15f59d9b3b1f1545e07bb192a6916f202245f44516",
+      "seconds": 12.428,
+      "exit": 0
+    },
+    {
+      "module": "IndexedCompletionDiameter",
+      "source_sha256": "df31c9526701553b5594d2facb686e1a4a7cdc0df3e320c2e7be8da99c797a53",
+      "seconds": 4.096,
+      "exit": 0
+    },
+    {
+      "module": "IndexedCompletionForgetting",
+      "source_sha256": "95f249ed2cbd48515217714a2794d8409ec5032c774dcffff0381909b07d032e",
+      "seconds": 6.934,
+      "exit": 0
+    }
+  ],
+  "readbacks": [
+    {
+      "source": "AuthorReadback.lean",
+      "log": "AuthorReadback.log",
+      "readbacks": 33,
+      "without_axioms": 0,
+      "allowed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "source": "ReviewerControls.lean",
+      "log": "ReviewerControls-01.log",
+      "readbacks": 10,
+      "without_axioms": 2,
+      "allowed_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "AuthorReadback.lean",
+      "sha256": "145d232cd81c75ab228bc3f791b4dcee91b0a52def7ebafaac4035666cc0c76e",
+      "bytes": 3909
+    },
+    {
+      "path": "INPUT_VERIFICATION.json",
+      "sha256": "b64228097bf7f96e21ec9e191acdc5d822bb7773e7842d2d5d271278c5c3d772",
+      "bytes": 348
+    },
+    {
+      "path": "REVIEW_PLAN.md",
+      "sha256": "fb86bdf45644f20d48efae4c27b247a07ab38575e8ad86fa2445c50aad30969b",
+      "bytes": 1701
+    },
+    {
+      "path": "ReviewerControls.lean",
+      "sha256": "91f0b56b890d06a56350a190bdb3ed333c3eb21a56d26242e53aeff1863e467b",
+      "bytes": 3389
+    },
+    {
+      "path": "logs/AuthorReadback.log",
+      "sha256": "fcdace6ba26804c78e5ce55a01b3392c0d18ef808f831500886bed7198cb0b31",
+      "bytes": 17969
+    },
+    {
+      "path": "logs/IndexedCompletionCompact.log",
+      "sha256": "2498f013b36f9683fe3b8f226b86d27b67e55838d4fceccd549fa7772013f940",
+      "bytes": 29
+    },
+    {
+      "path": "logs/IndexedCompletionCore.log",
+      "sha256": "0874e8749efb689852e3350169d744680184c0e0105fda40c28bcc9d2301a01f",
+      "bytes": 30
+    },
+    {
+      "path": "logs/IndexedCompletionDiameter.log",
+      "sha256": "22e07cfab6d0389eb3e23a11817634b0be72b1eae18b61d431ff36aecc4d3ae2",
+      "bytes": 29
+    },
+    {
+      "path": "logs/IndexedCompletionForgetting.log",
+      "sha256": "4cab4660e983aabebf46827f4ef96da9fee3df790c7897908a5764409088f634",
+      "bytes": 29
+    },
+    {
+      "path": "logs/ReviewerControls-01.log",
+      "sha256": "ae3d19a4b4cdf57a2ef4a40d502f9f4167353cf841202cbacd46c77748cb6c54",
+      "bytes": 855
+    },
+    {
+      "path": "logs/environment.txt",
+      "sha256": "191b9b12fb19c702b9dd10c0c13662dfb63bb628d83678886a592c7a4422690b",
+      "bytes": 2010
+    },
+    {
+      "path": "src/IndexedCompletionCompact.lean",
+      "sha256": "e959089e5cf9720f4760e6625c8b4d57b04d9b45790af7bafb1dd03489b61a26",
+      "bytes": 4584
+    },
+    {
+      "path": "src/IndexedCompletionCompact.olean",
+      "sha256": "0dd6b4a78340dbc0ac7d1fc098a3a99d8a7f1ca14bfc11fbac920eceb32ebf04",
+      "bytes": 128928
+    },
+    {
+      "path": "src/IndexedCompletionCore.lean",
+      "sha256": "8498ffa9bed638cde8316b15f59d9b3b1f1545e07bb192a6916f202245f44516",
+      "bytes": 4019
+    },
+    {
+      "path": "src/IndexedCompletionCore.olean",
+      "sha256": "534f7af44b06e7e191e226af6016131f2e8f19cc5e3475df200703006707e442",
+      "bytes": 151432
+    },
+    {
+      "path": "src/IndexedCompletionDiameter.lean",
+      "sha256": "df31c9526701553b5594d2facb686e1a4a7cdc0df3e320c2e7be8da99c797a53",
+      "bytes": 2527
+    },
+    {
+      "path": "src/IndexedCompletionDiameter.olean",
+      "sha256": "e399338cc0e08a47cafa0ca46ced13ac07caa4b5468f043010f12630a8227499",
+      "bytes": 105024
+    },
+    {
+      "path": "src/IndexedCompletionForgetting.lean",
+      "sha256": "95f249ed2cbd48515217714a2794d8409ec5032c774dcffff0381909b07d032e",
+      "bytes": 9490
+    },
+    {
+      "path": "src/IndexedCompletionForgetting.olean",
+      "sha256": "6c4564b3f5dd2427811012881e709842b4306dc1ee5cec9c818d277a3766b9d8",
+      "bytes": 246992
+    }
+  ]
+}

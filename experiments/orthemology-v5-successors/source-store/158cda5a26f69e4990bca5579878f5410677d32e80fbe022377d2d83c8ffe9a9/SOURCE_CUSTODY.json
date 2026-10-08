@@ -1,0 +1,18 @@
+{
+  "receipt_path": "tranche11/reviews/type-frontier/DEPENDENCY_RECOVERY_RECEIPT_v1.json",
+  "receipt_sha256": "010c444f90614ff88b3d566503d48ca119e54d4a6fa3cb1ffc214fa6b2252dee",
+  "canonical_commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
+  "canonical_tree": "08a6452e50e8e4791d02410d1c1732875e520f2e",
+  "outer_archive": {
+    "path": "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip",
+    "sha256": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+    "bytes": 79884298
+  },
+  "selected_roots": [
+    "P01DependentFundamental",
+    "P01CanonicalCarrierProjection",
+    "P01ModelWitnesses"
+  ],
+  "actual_import_closure_modules": 28,
+  "extra_recovered_module_not_needed": "AuditSupport"
+}

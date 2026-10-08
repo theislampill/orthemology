@@ -1,0 +1,83 @@
+import AuditSupport
+import PolymorphicNormalizationBoundary
+
+#check P01NormalizationBoundary.wrapper
+#print P01NormalizationBoundary.wrapper
+#print axioms P01NormalizationBoundary.wrapper
+#ortho_audit P01NormalizationBoundary.wrapper
+#check P01NormalizationBoundary.t
+#print P01NormalizationBoundary.t
+#print axioms P01NormalizationBoundary.t
+#ortho_audit P01NormalizationBoundary.t
+#check P01NormalizationBoundary.p
+#print P01NormalizationBoundary.p
+#print axioms P01NormalizationBoundary.p
+#ortho_audit P01NormalizationBoundary.p
+#check P01NormalizationBoundary.oldIdentity
+#print P01NormalizationBoundary.oldIdentity
+#print axioms P01NormalizationBoundary.oldIdentity
+#ortho_audit P01NormalizationBoundary.oldIdentity
+#check P01NormalizationBoundary.eval_p
+#print P01NormalizationBoundary.eval_p
+#print axioms P01NormalizationBoundary.eval_p
+#ortho_audit P01NormalizationBoundary.eval_p
+#check P01NormalizationBoundary.tree
+#print P01NormalizationBoundary.tree
+#print axioms P01NormalizationBoundary.tree
+#ortho_audit P01NormalizationBoundary.tree
+#check P01NormalizationBoundary.tree_supported
+#print P01NormalizationBoundary.tree_supported
+#print axioms P01NormalizationBoundary.tree_supported
+#ortho_audit P01NormalizationBoundary.tree_supported
+#check P01NormalizationBoundary.old_typed
+#print P01NormalizationBoundary.old_typed
+#print axioms P01NormalizationBoundary.old_typed
+#ortho_audit P01NormalizationBoundary.old_typed
+#check P01NormalizationBoundary.new_typed
+#print P01NormalizationBoundary.new_typed
+#print axioms P01NormalizationBoundary.new_typed
+#ortho_audit P01NormalizationBoundary.new_typed
+#check P01NormalizationBoundary.new_finite_target
+#print P01NormalizationBoundary.new_finite_target
+#print axioms P01NormalizationBoundary.new_finite_target
+#ortho_audit P01NormalizationBoundary.new_finite_target
+#check P01NormalizationBoundary.target_inhabited
+#print P01NormalizationBoundary.target_inhabited
+#print axioms P01NormalizationBoundary.target_inhabited
+#ortho_audit P01NormalizationBoundary.target_inhabited
+#check P01NormalizationBoundary.application_S
+#print P01NormalizationBoundary.application_S
+#print axioms P01NormalizationBoundary.application_S
+#ortho_audit P01NormalizationBoundary.application_S
+#check P01NormalizationBoundary.application_K
+#print P01NormalizationBoundary.application_K
+#print axioms P01NormalizationBoundary.application_K
+#ortho_audit P01NormalizationBoundary.application_K
+#check P01NormalizationBoundary.application_returns
+#print P01NormalizationBoundary.application_returns
+#print axioms P01NormalizationBoundary.application_returns
+#ortho_audit P01NormalizationBoundary.application_returns
+#check P01NormalizationBoundary.wrapper_step
+#print P01NormalizationBoundary.wrapper_step
+#print axioms P01NormalizationBoundary.wrapper_step
+#ortho_audit P01NormalizationBoundary.wrapper_step
+#check P01NormalizationBoundary.wrapper_red
+#print P01NormalizationBoundary.wrapper_red
+#print axioms P01NormalizationBoundary.wrapper_red
+#ortho_audit P01NormalizationBoundary.wrapper_red
+#check P01NormalizationBoundary.wrapper_normal
+#print P01NormalizationBoundary.wrapper_normal
+#print axioms P01NormalizationBoundary.wrapper_normal
+#ortho_audit P01NormalizationBoundary.wrapper_normal
+#check P01NormalizationBoundary.no_normal_reduct
+#print P01NormalizationBoundary.no_normal_reduct
+#print axioms P01NormalizationBoundary.no_normal_reduct
+#ortho_audit P01NormalizationBoundary.no_normal_reduct
+#check P01NormalizationBoundary.no_finite_source_representative
+#print P01NormalizationBoundary.no_finite_source_representative
+#print axioms P01NormalizationBoundary.no_finite_source_representative
+#ortho_audit P01NormalizationBoundary.no_finite_source_representative
+#check P01NormalizationBoundary.boundary_control
+#print P01NormalizationBoundary.boundary_control
+#print axioms P01NormalizationBoundary.boundary_control
+#ortho_audit P01NormalizationBoundary.boundary_control

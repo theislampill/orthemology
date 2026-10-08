@@ -1,0 +1,32 @@
+{
+  "unified-v3": {
+    "source_archive_sha256": "3b2a2adeb94a8f960eae6e7301378cc0dbf5a713092368c8553e709f91114b25",
+    "acceptance_record_sha256": "5d1a10b4bab00f3b29af670448628b75b5f6c591d9efe9e6a37d16db89bca384",
+    "unchanged_root_modules": 76
+  },
+  "gate-v1": {
+    "acceptance_record_sha256": "8dd846a0ff36fe4ba6ece34aae8890bb0cde2d2e9e5321e4a3e2fbb2c8b4a948",
+    "unchanged_root_modules": 2
+  },
+  "restricted-v1": {
+    "acceptance_record_sha256": "c8eede5e11103a18e8f0d5cf5195b7169b59ad9fef6d65761e64b651d0bb24fb",
+    "unchanged_root_modules": 1
+  },
+  "restricted-v2": {
+    "source_archive_sha256": "4e88c24c98825232a01d4aa28dab9bd5e0a90b82990dcad3a094d5f0c14acbb3",
+    "acceptance_receipt_sha256": "fd5fa11ec35e498ea87c21cb0efa43cf249a2450a433a354256e7b5f012275bc",
+    "source_list_manifest_sha256": "4cc75ef635deb2ddd50292a5452284ca19a17b8785febe4194e52b3636e395df",
+    "unchanged_root_modules": 7
+  },
+  "unified-v4": {
+    "source_archive_sha256": "c654ad1d01ba9c68a505342cac4b2a3539f9555de6d06cf146faead1cdbb8609",
+    "receipt_sha256": "3ab3b08b87aef587b2b6dd3964f6a884fb90c3b547511157b73275ebe4f7d637",
+    "unchanged_root_modules": 86
+  },
+  "polynomial-test-v1": {
+    "acceptance_record_sha256": "d66d3acb4de386501a1773a639774736b469de94ccf32d59daa0cc2532458436",
+    "source_manifest_sha256": "f130f2faf9bed7df09d088487916aed274dff627a8f79186c1e52e6e5afbecb2",
+    "unchanged_root_modules": 2,
+    "scope": "Current-typing and original F/G semantic bridge for pure arithmetic with one root equality test; full hierarchy result remains written mathematics."
+  }
+}

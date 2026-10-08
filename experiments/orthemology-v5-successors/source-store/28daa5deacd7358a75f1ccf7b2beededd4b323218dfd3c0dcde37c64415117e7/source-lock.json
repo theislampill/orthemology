@@ -1,0 +1,351 @@
+{
+  "accepted_intensional_source_package": {
+    "file_count": 110,
+    "bytes": 709160,
+    "manifest_sha256": "f2d0008f7b01e7471e1e4a9116b7039c730c1c04a26b34a50b95513b78ebc45a"
+  },
+  "baseline": [
+    {
+      "file": "AllBaseLaws.lean",
+      "sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984"
+    },
+    {
+      "file": "AllBinderLaws.lean",
+      "sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9"
+    },
+    {
+      "file": "AllConstants.lean",
+      "sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041"
+    },
+    {
+      "file": "AllFiniteComparison.lean",
+      "sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a"
+    },
+    {
+      "file": "AllInheritedPositiveControls.lean",
+      "sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37"
+    },
+    {
+      "file": "AllInstantiation.lean",
+      "sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606"
+    },
+    {
+      "file": "AllMixedAlgebra.lean",
+      "sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367"
+    },
+    {
+      "file": "AllNucleusSyntax.lean",
+      "sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e"
+    },
+    {
+      "file": "AllPiLaws.lean",
+      "sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f"
+    },
+    {
+      "file": "AllPredicates.lean",
+      "sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3"
+    },
+    {
+      "file": "AllRawRenaming.lean",
+      "sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f"
+    },
+    {
+      "file": "AllRawSubstitution.lean",
+      "sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66"
+    },
+    {
+      "file": "AllSemanticSubstitution.lean",
+      "sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09"
+    },
+    {
+      "file": "AllSigmaLaws.lean",
+      "sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d"
+    },
+    {
+      "file": "AllSoundness.lean",
+      "sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7"
+    },
+    {
+      "file": "AllStructural.lean",
+      "sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1"
+    },
+    {
+      "file": "AllStructuralBase.lean",
+      "sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d"
+    },
+    {
+      "file": "AllStructuralRename.lean",
+      "sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0"
+    },
+    {
+      "file": "AllSyntax.lean",
+      "sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46"
+    },
+    {
+      "file": "AllTermAlgebra.lean",
+      "sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906"
+    },
+    {
+      "file": "AllTermLemmas.lean",
+      "sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e"
+    },
+    {
+      "file": "BoundaryResults.lean",
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
+    },
+    {
+      "file": "EffectsAndDependence.lean",
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2"
+    },
+    {
+      "file": "FiniteBridge.lean",
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042"
+    },
+    {
+      "file": "InternalPolymorphism.lean",
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee"
+    },
+    {
+      "file": "NormalisationAndNumerals.lean",
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2"
+    },
+    {
+      "file": "P01Candidates.lean",
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e"
+    },
+    {
+      "file": "P01CanonicalCarrierProjection.lean",
+      "sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e"
+    },
+    {
+      "file": "P01Certificates.lean",
+      "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6"
+    },
+    {
+      "file": "P01Confluence.lean",
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e"
+    },
+    {
+      "file": "P01ContextualJ.lean",
+      "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c"
+    },
+    {
+      "file": "P01CurryParametricity.lean",
+      "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a"
+    },
+    {
+      "file": "P01DependentControls.lean",
+      "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c"
+    },
+    {
+      "file": "P01DependentCore.lean",
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498"
+    },
+    {
+      "file": "P01DependentFundamental.lean",
+      "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa"
+    },
+    {
+      "file": "P01DependentModel.lean",
+      "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59"
+    },
+    {
+      "file": "P01DependentRepresentation.lean",
+      "sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737"
+    },
+    {
+      "file": "P01DependentSubstitution.lean",
+      "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610"
+    },
+    {
+      "file": "P01Examples.lean",
+      "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82"
+    },
+    {
+      "file": "P01LambdaSyntax.lean",
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21"
+    },
+    {
+      "file": "P01ModelWitnesses.lean",
+      "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f"
+    },
+    {
+      "file": "P01Omega.lean",
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88"
+    },
+    {
+      "file": "P01PER.lean",
+      "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e"
+    },
+    {
+      "file": "P01Polynomials.lean",
+      "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8"
+    },
+    {
+      "file": "P01RecursiveModel.lean",
+      "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9"
+    },
+    {
+      "file": "P01SNReflection.lean",
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86"
+    },
+    {
+      "file": "P01SystemF.lean",
+      "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a"
+    },
+    {
+      "file": "P01Translation.lean",
+      "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d"
+    },
+    {
+      "file": "P01TypeAlgebra.lean",
+      "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188"
+    },
+    {
+      "file": "SubstitutionSyntax.lean",
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649"
+    },
+    {
+      "file": "TypedAlgebra.lean",
+      "sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc"
+    },
+    {
+      "file": "TypedStructural.lean",
+      "sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf"
+    },
+    {
+      "file": "TypedSyntax.lean",
+      "sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c"
+    }
+  ],
+  "intensional": [
+    {
+      "file": "IntensionalIdentityBridge.lean",
+      "sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333",
+      "bytes": 13211
+    },
+    {
+      "file": "IntensionalIdentityModel.lean",
+      "sha256": "64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4",
+      "bytes": 10589
+    },
+    {
+      "file": "IntensionalIdentityRelations.lean",
+      "sha256": "009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d",
+      "bytes": 4946
+    },
+    {
+      "file": "IntensionalIdentitySoundness.lean",
+      "sha256": "011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984",
+      "bytes": 10721
+    },
+    {
+      "file": "IntensionalIdentityTheorems.lean",
+      "sha256": "48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c",
+      "bytes": 4627
+    },
+    {
+      "file": "IntensionalIdentityWitness.lean",
+      "sha256": "6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74",
+      "bytes": 5007
+    }
+  ],
+  "extensional": [
+    {
+      "file": "ExtensionalRepairAudit.lean",
+      "sha256": "a2b12f0df76d8ca0973ea4d6c34cc6892324e0a0fdb89f414c6628e40974651a",
+      "bytes": 3750
+    },
+    {
+      "file": "ExtensionalRepairLemmas.lean",
+      "sha256": "00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac",
+      "bytes": 2338
+    },
+    {
+      "file": "ExtensionalRepairSoundness.lean",
+      "sha256": "b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5",
+      "bytes": 9343
+    },
+    {
+      "file": "ExtensionalRepairSyntax.lean",
+      "sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f",
+      "bytes": 10183
+    },
+    {
+      "file": "ExtensionalRepairTheorems.lean",
+      "sha256": "4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51",
+      "bytes": 2862
+    },
+    {
+      "file": "ExtensionalRepairWitness.lean",
+      "sha256": "0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29",
+      "bytes": 6809
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "official_origin": "https://github.com/leanprover-community/mathlib4.git",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    },
+    {
+      "name": "plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "official_origin": "https://github.com/leanprover-community/plausible",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    },
+    {
+      "name": "LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "official_origin": "https://github.com/leanprover-community/LeanSearchClient",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    },
+    {
+      "name": "importGraph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "official_origin": "https://github.com/leanprover-community/import-graph",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    },
+    {
+      "name": "proofwidgets",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904",
+      "official_origin": "https://github.com/leanprover-community/ProofWidgets4",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    },
+    {
+      "name": "aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "official_origin": "https://github.com/leanprover-community/aesop",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    },
+    {
+      "name": "Qq",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "official_origin": "https://github.com/leanprover-community/quote4",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    },
+    {
+      "name": "batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "official_origin": "https://github.com/leanprover-community/batteries",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    },
+    {
+      "name": "Cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "official_origin": "https://github.com/leanprover/lean4-cli",
+      "clean_tracked_sources": true,
+      "preexisting_olean_count": 0
+    }
+  ],
+  "extensional_author_freeze_sha256": "e8d33e0bfcb0fd3007ae64a84040e610c81678d86ced3050e09d8c6ba07e02c4"
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "eleventh-accounting-bridge-source-audit-v1",
+  "as_of_utc": "2026-10-03T18:15:00Z",
+  "status": "ACCEPTED_EXACT_THREE_FILE_SOURCE_USE",
+  "scope": "Source attribution, source-use and public-custody review of the exact accounting-bridge selection. Philosophical acceptance and final whole-Eleventh distribution remain separate.",
+  "selected_files": [
+    {
+      "path": "tranche11/research/actual-bearer-warrant/accounting-bridge/release-v1/ARTICLE.md",
+      "sha256": "bef95a0a2b0774ad36c8e42d9070968a95b14811434bc0c6affa3ec3eeff7532",
+      "bytes": 13801
+    },
+    {
+      "path": "tranche11/research/actual-bearer-warrant/accounting-bridge/release-v1/CLAIMS.md",
+      "sha256": "b39fab44a37a712740884bec1fb1aae457a4a692e37db8865d02132d9386178a",
+      "bytes": 1837
+    },
+    {
+      "path": "tranche11/research/actual-bearer-warrant/accounting-bridge/release-v1/SOURCE_BINDINGS.md",
+      "sha256": "0490ab38856b2a9774fcbb0644cf99b7b527a794288fecf914c75b89161a3cbb",
+      "bytes": 2511
+    }
+  ],
+  "whole_text_read": true,
+  "work": "REA2011",
+  "charged_spans": [
+    {
+      "id": "R11_CAPSULE",
+      "file": "ARTICLE.md",
+      "location": "3, marked source capsule",
+      "byte_start_inclusive": 5870,
+      "byte_end_exclusive": 6178,
+      "sha256": "1703eea337618d1b0d1423fe6de0337987f188f2bb44324166dff8954116099a",
+      "words": 36,
+      "occurrences": 1
+    },
+    {
+      "id": "R11_RELATA_SETUP",
+      "file": "ARTICLE.md",
+      "location": "3, relata subsection",
+      "byte_start_inclusive": 6472,
+      "byte_end_exclusive": 6588,
+      "sha256": "e3fcfb34cdef88dd6a172964201afa969015b411ef610cafaf54c3308611bb48",
+      "words": 18,
+      "occurrences": 1
+    },
+    {
+      "id": "R11_PLURAL_CONSTITUENT_SETUP",
+      "file": "ARTICLE.md",
+      "location": "3, relata subsection",
+      "byte_start_inclusive": 6589,
+      "byte_end_exclusive": 6663,
+      "sha256": "c76fad7e03b9ae9533c8bb1f036ea548cecee8e72fcb59111ae6a84a835440a1",
+      "words": 10,
+      "occurrences": 1
+    },
+    {
+      "id": "R11_POSSESSION_SETUP",
+      "file": "ARTICLE.md",
+      "location": "3, possession subsection",
+      "byte_start_inclusive": 7271,
+      "byte_end_exclusive": 7424,
+      "sha256": "10769720ebc35a8698e05a0d83f17f4ed420c6c5bf53dd8918cd05dd73178645",
+      "words": 21,
+      "occurrences": 1
+    },
+    {
+      "id": "R11_IDENTITY_SETUP",
+      "file": "ARTICLE.md",
+      "location": "3, identity subsection",
+      "byte_start_inclusive": 10118,
+      "byte_end_exclusive": 10192,
+      "sha256": "46ef183a0584f35b187ec69be576ce4227297cb9f382d7756c6430e080ce5308",
+      "words": 10,
+      "occurrences": 1
+    }
+  ],
+  "counting": "UTF-8 byte spans bound without reproducing them. Whitespace-delimited words, excluding source citation locators; mixed source/application setup retained in full where charged.",
+  "source_totals": {
+    "marked_capsule": 36,
+    "source_associated_application_setup": 59,
+    "article": 95,
+    "companions_added": 0,
+    "quotation_words": 0,
+    "author_allocation": 100,
+    "unused_author_allocation": 5,
+    "shared_review_report_chat_reservation": 100,
+    "pending_final_review_span_reservation": 20,
+    "unreserved_shared_balance": 80
+  },
+  "source_attribution": {
+    "supported": true,
+    "checked_primary_loci": "Author manuscript sections 2-5, especially manuscript pages 13-15 and 19-23.",
+    "capture": {
+      "sha256": "86cf9da15b3495b00dcaf40b64980a297d0770b24a9fd77100d838d215896b4d",
+      "bytes": 234975
+    },
+    "extraction_sha256": "4bdfd37a16aabd7a5224696703d5ce6adf5a1f881a5bbb239b5463c9e9e979d7",
+    "metadata_checked_url": "https://onlinelibrary.wiley.com/toc/15208583/2011/25/1",
+    "witness_limit": "The inspected manuscript indicates forthcoming 2012; official journal metadata identifies volume 25 (2011), pages 341-358, first publication 28 December 2011. Manuscript pagination controls. No final-publication textual identity is certified."
+  },
+  "classification": {
+    "charged_beyond_capsule": "Relata, plural-constituent, possession and identity setup in the source-application section are charged.",
+    "original_and_inherited_reasoning": "Full-origin inclusion, the donation/ownership distinction, source-intrinsic exercise versus event, and the conjunction required for an original-source rival are programme-specific arguments and target constraints, not historical propositions attributed to the primary.",
+    "companions": "CLAIMS.md records the original application’s scope and fixed target; SOURCE_BINDINGS.md contains witness, citation and custody limits without theory synopsis.",
+    "other_work_reuse": "The accepted assembly owner is cited by identity. No renewed Schaffer, Miller, Monism or earlier primary exposition appears in this selection."
+  },
+  "public_boundary": {
+    "raw_primary_captures_excluded": true,
+    "exploratory_versions_excluded": true,
+    "internal_actor_labels_absent": true,
+    "witness_and_scientific_limits_preserved": true
+  },
+  "limits": [
+    "This acceptance is exact-byte and does not apply to an unreviewed later article or added metadata.",
+    "The pending review reservation becomes an actual debit only when its final exact text is inspected.",
+    "No primary doctrine is thereby accepted as an actual-world metaphysical premise."
+  ]
+}

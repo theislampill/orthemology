@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-03T12:36:24.338892+00:00",
+  "candidate_path": "tranche10/research/occurrence-continuation/release-candidate-v1",
+  "candidate_manifest_sha256": "688b8bd2348cbba7f39d5f6b67a0790f7e4d5e376f6226e5e9e4b21db14d66d6",
+  "files_verified": 26,
+  "preserved_copy": "tranche10/reviews/occurrence-checker/inputs/release-candidate-v1",
+  "changes_from_initial_executed_code_copy": {
+    "fixtures/source_roles.json": [
+      "60a592e767d7ef66e7598d77a984db64388d1b9df33e926cf85c72c84d9c7088",
+      "8d821ec871977ba5c22ff00d8cc27841c32aab682aae0c0d2cf99cb6f695169c"
+    ]
+  },
+  "fixture_change_review": "Only capsule path relocation and JSON pretty printing; semantic fields unchanged. Exact frozen fixture passed normal and optimized independent reexecution.",
+  "rechecked_utc": "2026-10-03T12:38:11.845445+00:00",
+  "final_execution_record_sha256": "3be0200bee7074c690a73f9d42c4c5adf08b1d849f14692c620e5dc55dddde75",
+  "all_eight_final_command_groups_exit_zero": true,
+  "same_exact_core_tests_and_fixture_reexecuted": true,
+  "disposition": "ADMITTED_AS_BOUNDED_RESEARCH_CHECKER"
+}

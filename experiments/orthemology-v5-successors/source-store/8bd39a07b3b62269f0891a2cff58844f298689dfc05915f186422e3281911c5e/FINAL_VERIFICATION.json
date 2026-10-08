@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-03T13:06:27.327013+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "author_inputs_unchanged": true,
+  "all_46_recorded_input_identities_rechecked": true,
+  "existing_eight_command_groups_exit_zero_and_log_identities_verified": true,
+  "independent_control_count": 48,
+  "normal_and_optimized_output_identical": true,
+  "exact_candidate_release_case_matches_prior_result": true,
+  "commands": [
+    "python tranche10/reviews/bounded-release-application/check_observations.py",
+    "python -O tranche10/reviews/bounded-release-application/check_observations.py",
+    "python: import release_case from exact reviewer-owned checker copy; explicit result comparison"
+  ],
+  "artifacts": [
+    {
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "7ac31260b75006a42b0a3dafe4e78f18c44c3ee6ca52850cdf5f5c0464b1c818",
+      "bytes": 2264
+    },
+    {
+      "path": "INDEPENDENT_CONTROLS_OPTIMIZED.json",
+      "sha256": "7ac31260b75006a42b0a3dafe4e78f18c44c3ee6ca52850cdf5f5c0464b1c818",
+      "bytes": 2264
+    },
+    {
+      "path": "INDEPENDENT_REVIEW_v1.md",
+      "sha256": "61deeb33635687c7206fe0b70bf0160d4ed42ad72200f42ef7214bcc2ecb839c",
+      "bytes": 7843
+    },
+    {
+      "path": "RELEASE_CASE_REEXECUTION.json",
+      "sha256": "80b6092a2df452ceff9bb14954bc31f542f35d8bfe31407cdd87bc3ddc9020dc",
+      "bytes": 676
+    },
+    {
+      "path": "REVIEW_INPUT_IDENTITIES.json",
+      "sha256": "e8fcd5223c6b64fd91229655b499419522aaf258557f36228b5c67efe7e2a208",
+      "bytes": 10307
+    },
+    {
+      "path": "check_observations.py",
+      "sha256": "ba4f0fa9ed04750b629b5a504c976de589c3899c9c753742dd34cbb0cdcd644c",
+      "bytes": 5096
+    },
+    {
+      "path": "inputs/BOUNDED_RELEASE_DECISION.md",
+      "sha256": "a25c4464f85c4b9a8f920b2e208e35164cf821ef69f352d341b4c86046b434a4",
+      "bytes": 18258
+    },
+    {
+      "path": "inputs/INPUT_IDENTITIES.sha256",
+      "sha256": "94c43edd25099b9929d651f92f3a11cde524e79c263f28e776fc5eb9c32f5a6b",
+      "bytes": 1410
+    },
+    {
+      "path": "inputs/PREMISE_AND_ALTERNATIVE_LEDGER.md",
+      "sha256": "68d885c2cec1f9551dc9899bac224c17ddb3ebd0f9e2858b7989fea19c12c9dc",
+      "bytes": 8423
+    },
+    {
+      "path": "inputs/checker/context_effects.py",
+      "sha256": "0f65f172926e61ff7280ec2e13fd36b4ff287ea530ebbfa00c9dce831f3355fa",
+      "bytes": 6305
+    },
+    {
+      "path": "inputs/checker/read_cover.py",
+      "sha256": "808a9297d27b903722b4fc04ad9a526d3cfc3e371b14e5047e1d33d1c6e3e79f",
+      "bytes": 7785
+    },
+    {
+      "path": "inputs/checker/source_and_release_validation.py",
+      "sha256": "d286e1099431a64390a14c9533d96cdd7aebc673f68ea74953c9c4852e5e24db",
+      "bytes": 5025
+    }
+  ]
+}

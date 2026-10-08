@@ -1,0 +1,19 @@
+import CertifiedSelectorFamily
+
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_selectors
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_literal
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_kernel
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_initialState
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_initialSupport
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_certificate
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_certificate_iff
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_winning
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_model_member
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_normalized
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_source_history
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_runtime_output
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_mixed_history
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_positive_failure
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.CertifiedSuppliedFailure
+#print axioms Orthemology.Ninth.CertifiedSelectorFamily.certified_supplied_failure

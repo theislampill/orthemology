@@ -1,0 +1,322 @@
+{
+  "verdict": "ACCEPT bounded syntactic admissibility extension",
+  "candidate": "v1",
+  "lean_version": "4.19.0",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "dependency_modules": 28,
+  "candidate_modules": 5,
+  "independent_control_modules": 1,
+  "commands": [
+    {
+      "phase": "dependency",
+      "module": "InternalPolymorphism",
+      "source_sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "start_utc": "2026-10-03T18:34:46Z",
+      "end_utc": "2026-10-03T18:34:47Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "FiniteBridge",
+      "source_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "start_utc": "2026-10-03T18:34:47Z",
+      "end_utc": "2026-10-03T18:34:48Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01TypeAlgebra",
+      "source_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "start_utc": "2026-10-03T18:34:48Z",
+      "end_utc": "2026-10-03T18:34:49Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01SNReflection",
+      "source_sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "start_utc": "2026-10-03T18:34:49Z",
+      "end_utc": "2026-10-03T18:34:49Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "BoundaryResults",
+      "source_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "start_utc": "2026-10-03T18:34:49Z",
+      "end_utc": "2026-10-03T18:34:50Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01Candidates",
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "start_utc": "2026-10-03T18:34:50Z",
+      "end_utc": "2026-10-03T18:34:51Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01Confluence",
+      "source_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "start_utc": "2026-10-03T18:34:51Z",
+      "end_utc": "2026-10-03T18:34:53Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "EffectsAndDependence",
+      "source_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "start_utc": "2026-10-03T18:34:53Z",
+      "end_utc": "2026-10-03T18:34:53Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "NormalisationAndNumerals",
+      "source_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "start_utc": "2026-10-03T18:34:53Z",
+      "end_utc": "2026-10-03T18:34:54Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01Omega",
+      "source_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "start_utc": "2026-10-03T18:34:54Z",
+      "end_utc": "2026-10-03T18:34:54Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01Polynomials",
+      "source_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "start_utc": "2026-10-03T18:34:54Z",
+      "end_utc": "2026-10-03T18:34:56Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01PER",
+      "source_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "start_utc": "2026-10-03T18:34:56Z",
+      "end_utc": "2026-10-03T18:34:57Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01DependentCore",
+      "source_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "start_utc": "2026-10-03T18:34:57Z",
+      "end_utc": "2026-10-03T18:34:59Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01ContextualJ",
+      "source_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "start_utc": "2026-10-03T18:34:59Z",
+      "end_utc": "2026-10-03T18:35:00Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01Certificates",
+      "source_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "start_utc": "2026-10-03T18:35:00Z",
+      "end_utc": "2026-10-03T18:35:02Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01Examples",
+      "source_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "start_utc": "2026-10-03T18:35:02Z",
+      "end_utc": "2026-10-03T18:35:03Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01RecursiveModel",
+      "source_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "start_utc": "2026-10-03T18:35:03Z",
+      "end_utc": "2026-10-03T18:35:06Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01LambdaSyntax",
+      "source_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "start_utc": "2026-10-03T18:35:06Z",
+      "end_utc": "2026-10-03T18:35:08Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01SystemF",
+      "source_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "start_utc": "2026-10-03T18:35:08Z",
+      "end_utc": "2026-10-03T18:35:09Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01CurryParametricity",
+      "source_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "start_utc": "2026-10-03T18:35:09Z",
+      "end_utc": "2026-10-03T18:35:10Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01Translation",
+      "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "start_utc": "2026-10-03T18:35:10Z",
+      "end_utc": "2026-10-03T18:35:11Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01ModelWitnesses",
+      "source_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "start_utc": "2026-10-03T18:35:11Z",
+      "end_utc": "2026-10-03T18:35:11Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01DependentModel",
+      "source_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "start_utc": "2026-10-03T18:35:11Z",
+      "end_utc": "2026-10-03T18:35:13Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01DependentSubstitution",
+      "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "start_utc": "2026-10-03T18:35:13Z",
+      "end_utc": "2026-10-03T18:35:14Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01DependentFundamental",
+      "source_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "start_utc": "2026-10-03T18:35:14Z",
+      "end_utc": "2026-10-03T18:35:15Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01DependentControls",
+      "source_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "start_utc": "2026-10-03T18:35:15Z",
+      "end_utc": "2026-10-03T18:35:16Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01DependentRepresentation",
+      "source_sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "start_utc": "2026-10-03T18:35:16Z",
+      "end_utc": "2026-10-03T18:35:17Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "dependency",
+      "module": "P01CanonicalCarrierProjection",
+      "source_sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "start_utc": "2026-10-03T18:35:17Z",
+      "end_utc": "2026-10-03T18:35:18Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "candidate",
+      "module": "SubstitutionSyntax",
+      "source_sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "start_utc": "2026-10-03T18:35:26Z",
+      "end_utc": "2026-10-03T18:35:27Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "candidate",
+      "module": "SubstitutionAdmissibility",
+      "source_sha256": "6ae02ec07b67a81f3019192118e44d4ac37cd26f9ad61f09831c8fafd55ce121",
+      "start_utc": "2026-10-03T18:35:27Z",
+      "end_utc": "2026-10-03T18:35:28Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "candidate",
+      "module": "SubstitutionControls",
+      "source_sha256": "c3d31d2c24e9db193bbe60801bffdbc54e1a61ddb13a21ca19672259c57e7dec",
+      "start_utc": "2026-10-03T18:35:28Z",
+      "end_utc": "2026-10-03T18:35:30Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "candidate",
+      "module": "AdmissibilityContract",
+      "source_sha256": "7f6bc01a5df473be63639f5d07941bce1b3dce94e85397a758e8513af99df339",
+      "start_utc": "2026-10-03T18:35:30Z",
+      "end_utc": "2026-10-03T18:35:30Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "candidate",
+      "module": "SubstitutionReadback",
+      "source_sha256": "0a0b469b9b874b9ec4bf6d1d3c94e4214a14d7ca90961b0d6e6b14cbd4a76137",
+      "start_utc": "2026-10-03T18:35:30Z",
+      "end_utc": "2026-10-03T18:35:31Z",
+      "exit_code": 0
+    },
+    {
+      "phase": "candidate",
+      "module": "IndependentControls",
+      "source_sha256": "5ef51c33cee2464f514881e06bd9b647db355cb4297bbdd6276284dd5a720b2f",
+      "start_utc": "2026-10-03T18:35:31Z",
+      "end_utc": "2026-10-03T18:35:32Z",
+      "exit_code": 0
+    }
+  ],
+  "all_accepted_sources_hash_unchanged": true,
+  "copied_author_oleans": false,
+  "compiler_workers": 1,
+  "serial_review_lane": true,
+  "per_module_cap_seconds": 180,
+  "heartbeat_recursion_settings": "defaults",
+  "new_custom_axioms": false,
+  "admitted_holes": false,
+  "target_axioms": [
+    "propext",
+    "Quot.sound"
+  ],
+  "independent_controls_sha256": "5ef51c33cee2464f514881e06bd9b647db355cb4297bbdd6276284dd5a720b2f",
+  "new_sources": [
+    {
+      "module": "SubstitutionSyntax",
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649"
+    },
+    {
+      "module": "SubstitutionAdmissibility",
+      "sha256": "6ae02ec07b67a81f3019192118e44d4ac37cd26f9ad61f09831c8fafd55ce121"
+    },
+    {
+      "module": "SubstitutionControls",
+      "sha256": "c3d31d2c24e9db193bbe60801bffdbc54e1a61ddb13a21ca19672259c57e7dec"
+    },
+    {
+      "module": "AdmissibilityContract",
+      "sha256": "7f6bc01a5df473be63639f5d07941bce1b3dce94e85397a758e8513af99df339"
+    },
+    {
+      "module": "SubstitutionReadback",
+      "sha256": "0a0b469b9b874b9ec4bf6d1d3c94e4214a14d7ca90961b0d6e6b14cbd4a76137"
+    },
+    {
+      "module": "IndependentControls",
+      "sha256": "5ef51c33cee2464f514881e06bd9b647db355cb4297bbdd6276284dd5a720b2f"
+    }
+  ]
+}

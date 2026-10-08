@@ -25,8 +25,12 @@ Deterministic; offline.
 """
 import io
 import json
+import hashlib
 
-from validate_repo import load_source_map, original_packet_locator
+from validate_repo import (load_source_map, original_packet_locator,
+                           load_successor_source_map, successor_packet_locator,
+                           successor_origin_document, markdown_link_targets,
+                           strip_markdown_math)
 import os
 import re
 import subprocess
@@ -54,6 +58,55 @@ CREATE_LINE_RE = re.compile(
     rf"^\s*-\s+Create:\s+(?:`{PATH_PATTERN}`|{PATH_PATTERN})\s*$"
 )
 PLAN_RE = re.compile(r"^docs/superpowers/plans/[^/]+\.md$")
+
+
+def _original_driver_members(src, text):
+    """Frozen replay/custody contracts name packet members, not repo files.
+
+    The complete owner digest makes this occurrence-local: any adapter change
+    restores normal reference checking. The D03 replay contract separately
+    checks the archived inventories and projected source identities. No path
+    exemption is inherited by other files or later adapter revisions.
+    """
+    pins = {
+        'scripts/replay_v5_successors.py': (
+            '5b4c1b7f0ced9af2599b980fd25fd1a15b819357853753319798b2965fc540ef',
+            [('scripts', 'verify-inputs.py'), ('scripts', 'verify-sources.py')]),
+        'scripts/v5_d04_assets/v5_d04_normalizers_translated.py': (
+            '46133c72f1332efeeec42530cd26ce224decf617e55e7fb79bd5d486b9a28fcd',
+            [('tests', 'EXPECTED_PASS_LINES.json')]),
+        'scripts/v5_d04_assets/covering_recipe.py': (
+            '21159be0c2ac468d5d26f9a3d69f130c116bafc3c7c1b6659a000910e5c09607',
+            [('tests', 'SEMANTIC_RESULTS.json'), ('tests', 'mutation_controls.py'),
+             ('tests', 'semantic_controls.py')]),
+        'scripts/v5_d04_recipes.json': (
+            '11541cb7ca6fe3355f4f0994f5dff642122b146c1fee7998c1d52bdd58cc09b5',
+            [('tests', 'EXPECTED_PASS_LINES.json'), ('tests', 'test_criterion_model.py'),
+             ('tests', 'test_replay.py'), ('tests', 'test_rule_installation.py')]),
+        'docs/provenance/v5-successors/EVIDENCE_BINDINGS.json': (
+            '5482d2ecfacd83efccc46d3baa2544a80bcaf682c46f43ab3c2b2b08cc00e172',
+            [('tests', 'test_criterion_model.py'), ('tests', 'test_replay.py'),
+             ('tests', 'test_rule_installation.py')]),
+        'docs/provenance/v5-successors/fragments/D04.json': (
+            '53a32665ee6e19dd1dc192aac99e6e00e1c9913d35331fdef341ab4fcba4c6d1',
+            [('tests', 'test_criterion_model.py'), ('tests', 'test_replay.py'),
+             ('tests', 'test_rule_installation.py')]),
+        'experiments/orthemology-v5-successors/groups/t16-successor/REPLAY_INPUTS.json': (
+            '37079f69064701fd36a9978127c27ce4333e3277c7af5d959ac5672e0d217740',
+            [('tests', 'test_wrapper.py')]),
+        'experiments/orthemology-v5-successors/source-store/'
+        '5d18a239e9c359aad9bd665e9cceef31c87831561e85c236e1afa10c446e8436/COPY_CUSTODY.json': (
+            '5d18a239e9c359aad9bd665e9cceef31c87831561e85c236e1afa10c446e8436',
+            [('tests', 'test_wrapper.py')]),
+        'experiments/orthemology-v5-successors/source-store/'
+        '768ed23d656626cca7e0c8a15708d0ac0b7d572b47ee2ac6f1f0f74afac83b2b/PACKAGE_MANIFEST.json': (
+            '768ed23d656626cca7e0c8a15708d0ac0b7d572b47ee2ac6f1f0f74afac83b2b',
+            [('tests', 'test_wrapper.py')]),
+    }
+    pin = pins.get(src)
+    if pin and hashlib.sha256(text.encode('utf-8')).hexdigest() == pin[0]:
+        return {'/'.join(parts) for parts in pin[1]}
+    return set()
 
 
 def check(name, ok, detail=""):
@@ -137,9 +190,13 @@ def _resolves(src, cited):
         directory = os.path.dirname(directory)
 
 
-def _citation_occurrences(src, text):
+def _citation_occurrences(src, text, *, root=None, successor_sources=None):
+    original_driver_members = _original_driver_members(src, text)
     # source_path in this typed map is an origin selector, not a checkout path.
     # Destination paths and every other field remain ordinary references.
+    text = successor_origin_document(src, text, sources=successor_sources, root=ROOT if root is None else root)
+    if src.endswith('.md'):
+        text = strip_markdown_math(text)
     selectors = set()
     continuation_members = set()
     if src == "/".join(("docs", "provenance", "v5-research-continuations", "SOURCE_MAP.json")):
@@ -164,9 +221,14 @@ def _citation_occurrences(src, text):
         if field and json.loads(field.group(1)) in selectors:
             continue
         for cited in PATH_RE.findall(line):
+            if cited.replace("\\", "/") in original_driver_members:
+                continue
             yield cited.replace("\\", "/"), line
         if src.endswith(".md"):
-            for target in LINK_RE.findall(line):
+            for target in markdown_link_targets(line):
+                target = target.split('#', 1)[0]
+                if not target:
+                    continue
                 if target.startswith(("http://", "https://", "mailto:")):
                     continue
                 yield (
@@ -213,7 +275,9 @@ def main():
     corpus = _corpus_files()
     committed_plans = _committed_plans()
     sources = load_source_map(ROOT)
+    successor_sources = load_successor_source_map(ROOT)
     packet_locators = set()
+    successor_locators = set()
     missing = {}
     corpus_text = {}
     for src in corpus:
@@ -222,7 +286,7 @@ def main():
         except (UnicodeDecodeError, OSError):
             continue
         corpus_text[src] = text
-        for cited, line in _citation_occurrences(src, text):
+        for cited, line in _citation_occurrences(src, text, root=ROOT, successor_sources=successor_sources):
             if cited in exempt:
                 continue
             if cited.startswith(".."):
@@ -239,6 +303,10 @@ def main():
                     or original_packet_locator(path, cited, sources, ROOT, from_packet_root=True)):
                 packet_locators.add((src, cited))
                 continue
+            if (successor_packet_locator(path, relative, successor_sources, ROOT)
+                    or successor_packet_locator(path, cited, successor_sources, ROOT, from_packet_root=True)):
+                successor_locators.add((src, cited))
+                continue
             if _is_planned_output_occurrence(src, cited, line, committed_plans):
                 # Exemption is occurrence-local: only this exact inventory line
                 # in a plan present in HEAD may name a not-yet-created output.
@@ -246,6 +314,7 @@ def main():
             missing.setdefault(cited, set()).add(src)
 
     print("[INFO] %d digest-bound original-packet references; external custody, public retrieval unconfirmed" % len(packet_locators))
+    print('[INFO] %d digest-bound successor original-member references; projection/custody scope remains explicit' % len(successor_locators))
     check("every repository path cited in the corpus resolves (or is a declared exemption)",
           not missing,
           "; ".join("%s <- %s" % (p, sorted(s)[:2]) for p, s in sorted(missing.items())[:6]))

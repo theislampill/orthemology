@@ -1,0 +1,357 @@
+{
+  "status": "PASS_PUBLIC_PORTABILITY_ONLY",
+  "verified_utc": "2026-10-03T18:49:19.312956+00:00",
+  "scientific_delta": "None; no new theorem credit for this replay.",
+  "clean_extraction_initial_olean_count": 0,
+  "tested_candidate_zip_sha256": "e7f243417a4523acb5c199541f948237a79fb1f5a6f79cc7128f8b722b04c20d",
+  "executed_helpers_identical_to_final_public_helpers": true,
+  "trusted_environment_sha256": "1ff5b5d46f1e67ee0c007e658ef2cffb7270425f581237d76a5a64a645090129",
+  "environment_selection": "Explicit TOOLCHAIN_ENV only; no inferred preparation-layout fallback.",
+  "required_external_exports": [
+    "LEAN_ROOT",
+    "LEAN_PATH"
+  ],
+  "missing_environment_tests": {
+    "verify_sh_exit": 2,
+    "check_module_sh_exit": 2,
+    "unreadable_environment_exit": 2,
+    "diagnostic": "Set TOOLCHAIN_ENV to an explicit readable trusted environment script.",
+    "compilation_started": false
+  },
+  "supplied_environment": {
+    "verify_sh_exit": 0,
+    "dependency_modules": 28,
+    "candidate_modules": 5,
+    "independent_control_modules": 1,
+    "all_34_exits_zero": true
+  },
+  "compiler_exit_propagation": {
+    "expected_original_only_contract_exit": 1,
+    "baseline_source_sha256": "eaf665c14fc21a7e3b1fa8b9ccd881ef29986b3bb06f28d803d2bebf7b1324bb",
+    "source_hash_recorded": true
+  },
+  "historical_selected_members_preserved_byte_identical": 123,
+  "historical_manifest_relocated_byte_identical": true,
+  "accepted_lean_sources_preserved": 34,
+  "accepted_origins_and_original_zip_unchanged": true,
+  "compiler_workers": 1,
+  "per_module_timeout_seconds": 180,
+  "heartbeat_recursion_limits": "defaults",
+  "commands": [
+    {
+      "phase": "reproduction",
+      "module": "InternalPolymorphism",
+      "source_sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "started_utc": "2026-10-03T18:47:15Z",
+      "finished_utc": "2026-10-03T18:47:16Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-InternalPolymorphism.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "FiniteBridge",
+      "source_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "started_utc": "2026-10-03T18:47:16Z",
+      "finished_utc": "2026-10-03T18:47:17Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-FiniteBridge.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01TypeAlgebra",
+      "source_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "started_utc": "2026-10-03T18:47:17Z",
+      "finished_utc": "2026-10-03T18:47:18Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01TypeAlgebra.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01SNReflection",
+      "source_sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "started_utc": "2026-10-03T18:47:18Z",
+      "finished_utc": "2026-10-03T18:47:19Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01SNReflection.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "BoundaryResults",
+      "source_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "started_utc": "2026-10-03T18:47:19Z",
+      "finished_utc": "2026-10-03T18:47:19Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-BoundaryResults.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01Candidates",
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "started_utc": "2026-10-03T18:47:19Z",
+      "finished_utc": "2026-10-03T18:47:20Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01Candidates.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01Confluence",
+      "source_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "started_utc": "2026-10-03T18:47:21Z",
+      "finished_utc": "2026-10-03T18:47:22Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01Confluence.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "EffectsAndDependence",
+      "source_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "started_utc": "2026-10-03T18:47:22Z",
+      "finished_utc": "2026-10-03T18:47:23Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-EffectsAndDependence.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "NormalisationAndNumerals",
+      "source_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "started_utc": "2026-10-03T18:47:23Z",
+      "finished_utc": "2026-10-03T18:47:23Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-NormalisationAndNumerals.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01Omega",
+      "source_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "started_utc": "2026-10-03T18:47:23Z",
+      "finished_utc": "2026-10-03T18:47:24Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01Omega.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01Polynomials",
+      "source_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "started_utc": "2026-10-03T18:47:24Z",
+      "finished_utc": "2026-10-03T18:47:26Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01Polynomials.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01PER",
+      "source_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "started_utc": "2026-10-03T18:47:26Z",
+      "finished_utc": "2026-10-03T18:47:27Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01PER.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01DependentCore",
+      "source_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "started_utc": "2026-10-03T18:47:27Z",
+      "finished_utc": "2026-10-03T18:47:29Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01DependentCore.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01ContextualJ",
+      "source_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "started_utc": "2026-10-03T18:47:29Z",
+      "finished_utc": "2026-10-03T18:47:30Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01ContextualJ.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01Certificates",
+      "source_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "started_utc": "2026-10-03T18:47:30Z",
+      "finished_utc": "2026-10-03T18:47:31Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01Certificates.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01Examples",
+      "source_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "started_utc": "2026-10-03T18:47:31Z",
+      "finished_utc": "2026-10-03T18:47:32Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01Examples.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01RecursiveModel",
+      "source_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "started_utc": "2026-10-03T18:47:32Z",
+      "finished_utc": "2026-10-03T18:47:35Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01RecursiveModel.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01LambdaSyntax",
+      "source_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "started_utc": "2026-10-03T18:47:35Z",
+      "finished_utc": "2026-10-03T18:47:36Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01LambdaSyntax.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01SystemF",
+      "source_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "started_utc": "2026-10-03T18:47:36Z",
+      "finished_utc": "2026-10-03T18:47:37Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01SystemF.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01CurryParametricity",
+      "source_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "started_utc": "2026-10-03T18:47:37Z",
+      "finished_utc": "2026-10-03T18:47:38Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01CurryParametricity.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01Translation",
+      "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "started_utc": "2026-10-03T18:47:38Z",
+      "finished_utc": "2026-10-03T18:47:39Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01Translation.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01ModelWitnesses",
+      "source_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "started_utc": "2026-10-03T18:47:39Z",
+      "finished_utc": "2026-10-03T18:47:40Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01ModelWitnesses.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01DependentModel",
+      "source_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "started_utc": "2026-10-03T18:47:40Z",
+      "finished_utc": "2026-10-03T18:47:41Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01DependentModel.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01DependentSubstitution",
+      "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "started_utc": "2026-10-03T18:47:41Z",
+      "finished_utc": "2026-10-03T18:47:42Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01DependentSubstitution.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01DependentFundamental",
+      "source_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "started_utc": "2026-10-03T18:47:42Z",
+      "finished_utc": "2026-10-03T18:47:43Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01DependentFundamental.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01DependentControls",
+      "source_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "started_utc": "2026-10-03T18:47:43Z",
+      "finished_utc": "2026-10-03T18:47:44Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01DependentControls.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01DependentRepresentation",
+      "source_sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "started_utc": "2026-10-03T18:47:44Z",
+      "finished_utc": "2026-10-03T18:47:45Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01DependentRepresentation.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "P01CanonicalCarrierProjection",
+      "source_sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "started_utc": "2026-10-03T18:47:45Z",
+      "finished_utc": "2026-10-03T18:47:46Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-P01CanonicalCarrierProjection.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "SubstitutionSyntax",
+      "source_sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "started_utc": "2026-10-03T18:47:46Z",
+      "finished_utc": "2026-10-03T18:47:47Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-SubstitutionSyntax.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "SubstitutionAdmissibility",
+      "source_sha256": "6ae02ec07b67a81f3019192118e44d4ac37cd26f9ad61f09831c8fafd55ce121",
+      "started_utc": "2026-10-03T18:47:47Z",
+      "finished_utc": "2026-10-03T18:47:48Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-SubstitutionAdmissibility.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "SubstitutionControls",
+      "source_sha256": "c3d31d2c24e9db193bbe60801bffdbc54e1a61ddb13a21ca19672259c57e7dec",
+      "started_utc": "2026-10-03T18:47:48Z",
+      "finished_utc": "2026-10-03T18:47:49Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-SubstitutionControls.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "AdmissibilityContract",
+      "source_sha256": "7f6bc01a5df473be63639f5d07941bce1b3dce94e85397a758e8513af99df339",
+      "started_utc": "2026-10-03T18:47:49Z",
+      "finished_utc": "2026-10-03T18:47:49Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-AdmissibilityContract.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "SubstitutionReadback",
+      "source_sha256": "0a0b469b9b874b9ec4bf6d1d3c94e4214a14d7ca90961b0d6e6b14cbd4a76137",
+      "started_utc": "2026-10-03T18:47:49Z",
+      "finished_utc": "2026-10-03T18:47:51Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-SubstitutionReadback.log"
+    },
+    {
+      "phase": "reproduction",
+      "module": "IndependentControls",
+      "source_sha256": "5ef51c33cee2464f514881e06bd9b647db355cb4297bbdd6276284dd5a720b2f",
+      "started_utc": "2026-10-03T18:47:51Z",
+      "finished_utc": "2026-10-03T18:47:51Z",
+      "exit_code": 0,
+      "log_path": "portability/logs/reproduction-IndependentControls.log"
+    },
+    {
+      "phase": "portability-negative",
+      "module": "ExpectedRejection",
+      "source_sha256": "eaf665c14fc21a7e3b1fa8b9ccd881ef29986b3bb06f28d803d2bebf7b1324bb",
+      "started_utc": "2026-10-03T18:48:35Z",
+      "finished_utc": "2026-10-03T18:48:36Z",
+      "exit_code": 1,
+      "log_path": "portability/logs/portability-negative-ExpectedRejection.log"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "recorded_utc_system_clock": "2026-10-05T01:04:23.499600+00:00",
+  "release_page": "https://github.com/leanprover/lean4/releases/tag/v4.19.0",
+  "tag": "v4.19.0",
+  "asset_url": "https://github.com/leanprover/lean4/releases/download/v4.19.0/lean-4.19.0-linux.tar.zst",
+  "asset_size": 343842845,
+  "download_bytes": 343842845,
+  "archive_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+  "vendor_digest": null,
+  "vendor_digest_note": "Release API supplies no digest; local SHA256 records downloaded official HTTPS artifact, not independent vendor checksum verification.",
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "lake_version": "Lake version 5.0.0-6caaee8 (Lean version 4.19.0)",
+  "mathlib_remote": "https://github.com/leanprover-community/mathlib4.git",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "mathlib_tag": "v4.19.0",
+  "mathlib_toolchain": "leanprover/lean4:v4.19.0"
+}

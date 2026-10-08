@@ -1,0 +1,219 @@
+{
+  "schema": "fifteenth-unified-proof-source-v4",
+  "verification_date_utc": "2026-10-05",
+  "status": "author source-integration replay passed; independent exact-archive replay remains a separate review",
+  "source_only_distribution": true,
+  "source_groups": {
+    "unified-v3": {
+      "source_archive_sha256": "3b2a2adeb94a8f960eae6e7301378cc0dbf5a713092368c8553e709f91114b25",
+      "acceptance_record_sha256": "5d1a10b4bab00f3b29af670448628b75b5f6c591d9efe9e6a37d16db89bca384",
+      "unchanged_root_modules": 76
+    },
+    "gate-v1": {
+      "acceptance_record_sha256": "8dd846a0ff36fe4ba6ece34aae8890bb0cde2d2e9e5321e4a3e2fbb2c8b4a948",
+      "unchanged_root_modules": 2
+    },
+    "restricted-v1": {
+      "acceptance_record_sha256": "c8eede5e11103a18e8f0d5cf5195b7169b59ad9fef6d65761e64b651d0bb24fb",
+      "unchanged_root_modules": 1
+    },
+    "restricted-v2": {
+      "source_archive_sha256": "4e88c24c98825232a01d4aa28dab9bd5e0a90b82990dcad3a094d5f0c14acbb3",
+      "acceptance_receipt_sha256": "fd5fa11ec35e498ea87c21cb0efa43cf249a2450a433a354256e7b5f012275bc",
+      "source_list_manifest_sha256": "4cc75ef635deb2ddd50292a5452284ca19a17b8785febe4194e52b3636e395df",
+      "unchanged_root_modules": 7
+    }
+  },
+  "source_preservation": {
+    "original76_byte_identical": true,
+    "extension10_byte_identical": true,
+    "namespace_rewrites": 0,
+    "calculus_or_semantic_clause_changes": 0
+  },
+  "build": {
+    "fresh_root_modules": 86,
+    "fresh_supporting_modules": [
+      "verification.KernelAudit"
+    ],
+    "all_project_built_modules": [
+      "AllBaseLaws",
+      "AllBinderLaws",
+      "AllConstants",
+      "AllFiniteComparison",
+      "AllInheritedPositiveControls",
+      "AllInstantiation",
+      "AllMixedAlgebra",
+      "AllNucleusSyntax",
+      "AllPiLaws",
+      "AllPredicates",
+      "AllRawRenaming",
+      "AllRawSubstitution",
+      "AllSemanticSubstitution",
+      "AllSigmaLaws",
+      "AllSoundness",
+      "AllStructural",
+      "AllStructuralBase",
+      "AllStructuralRename",
+      "AllSyntax",
+      "AllTermAlgebra",
+      "AllTermLemmas",
+      "BareBooleanGatePositive",
+      "BareBooleanGateSyntax",
+      "BoundaryResults",
+      "CheckerControls",
+      "CheckerKernelAudit",
+      "ComputablePrelude",
+      "EffectiveBooleanCertificates",
+      "EffectiveBooleanControls",
+      "EffectiveBooleanInterfaces",
+      "EffectiveBooleanStandardness",
+      "EffectiveCanonicalTests",
+      "EffectiveObserver",
+      "EffectivePartialObserver",
+      "EffectivePrimitiveRecursion",
+      "EffectiveReduction",
+      "EffectiveRuleBoundary",
+      "EffectiveStandardness",
+      "EffectsAndDependence",
+      "ExtensionalRepairAudit",
+      "ExtensionalRepairLemmas",
+      "ExtensionalRepairSoundness",
+      "ExtensionalRepairSyntax",
+      "ExtensionalRepairTheorems",
+      "ExtensionalRepairWitness",
+      "FiniteBridge",
+      "IdentityChecker",
+      "IntensionalIdentityBridge",
+      "IntensionalIdentityModel",
+      "IntensionalIdentityRelations",
+      "IntensionalIdentitySoundness",
+      "IntensionalIdentityTheorems",
+      "IntensionalIdentityWitness",
+      "InternalPolymorphism",
+      "MaskNormalisation",
+      "NormalisationAndNumerals",
+      "P01Candidates",
+      "P01CanonicalCarrierProjection",
+      "P01Certificates",
+      "P01Confluence",
+      "P01ContextualJ",
+      "P01CurryParametricity",
+      "P01DependentControls",
+      "P01DependentCore",
+      "P01DependentFundamental",
+      "P01DependentModel",
+      "P01DependentRepresentation",
+      "P01DependentSubstitution",
+      "P01Examples",
+      "P01LambdaSyntax",
+      "P01ModelWitnesses",
+      "P01Omega",
+      "P01PER",
+      "P01Polynomials",
+      "P01RecursiveModel",
+      "P01SNReflection",
+      "P01SystemF",
+      "P01Translation",
+      "P01TypeAlgebra",
+      "PositiveSeparation",
+      "RestrictedCompiler",
+      "SparsePolynomial",
+      "SubstitutionSyntax",
+      "TypedAlgebra",
+      "TypedStructural",
+      "TypedSyntax",
+      "verification.KernelAudit"
+    ],
+    "inherited_linter_warnings": 22,
+    "new_module_warnings": 0,
+    "no_predecessor_project_object_reuse": true,
+    "dependency_reuse": "nine exact clean source revisions with existing compiled caches",
+    "rechecked_dependency_artifact_bindings": 1373,
+    "new_network_downloads": false,
+    "fresh_network_bootstrap": false,
+    "fresh_full_dependency_rebuild": false,
+    "selective_official_cache_acquisition_in_restricted_input": {
+      "downloads": 1360,
+      "scope": "requested Mathlib import closure; not a full Mathlib rebuild"
+    },
+    "build_exit": 0,
+    "full_checks_exit": 0
+  },
+  "proof_audit": {
+    "root_modules": 86,
+    "theorem_roots": 2695,
+    "checked_declarations": 12218,
+    "allowed_standard_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "unsafe_or_partial_proof_dependencies": 0,
+    "declaration_inventory_entries": 6571,
+    "declarationless_audit_modules": [
+      "CheckerKernelAudit",
+      "ExtensionalRepairAudit"
+    ]
+  },
+  "restricted_computational_audit": {
+    "roots": [
+      "identityCheck",
+      "verifyCertificate",
+      "makeCertificate"
+    ],
+    "checked_declarations": 460,
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "no_classical_choice_or_abstract_polynomial_dependency": true
+  },
+  "tests": {
+    "source_mutation_rejections": 9,
+    "inherited_interface_rejections": 9,
+    "raw_initial_interface_rejections": 6,
+    "raw_initial_auditor_poison_rejections": 4,
+    "raw_complexity_interface_rejections": 10,
+    "raw_complexity_auditor_poison_rejections": 4,
+    "boolean_interface_rejections": 12,
+    "boolean_auditor_poison_rejections": 4,
+    "restricted_v1_positive_interfaces": 1,
+    "restricted_v1_rejections": 7,
+    "restricted_v2_positive_interfaces": 1,
+    "restricted_v2_rejections": 9,
+    "restricted_independent_rejections": 7,
+    "lean_negative_fixtures_total": 72,
+    "python_author_tests": 10,
+    "python_independent_tests": 12,
+    "python_total_tests": 22,
+    "all_packaged_suites_passed": true,
+    "gate_and_restricted_independent_positive_interfaces_replayed": true
+  },
+  "historical_receipts": {
+    "raw-v2": {
+      "path": "verification/historical/raw-v2-receipt.json",
+      "sha256": "24db3eb238d712fa242cb5c71a5c074d70a4a52434d34b41ada2f3d731327082"
+    },
+    "unified-v3": {
+      "path": "verification/historical/unified-v3-receipt.json",
+      "sha256": "53cd30a370c0f94db9fc211d2005637af204cc5197e88f30c7edcbfed6a52a27"
+    }
+  },
+  "current_source_lock_sha256": "4ea1304f6f55ce90b448d89f8c95fe0be358b81c3cc23a106ee8b4f0dcfdab50",
+  "declaration_inventory_sha256": "dcc1e833fbde368d11bbf3b87c7b74bd5fcc0c6543e03608f879db65cd9c4f88",
+  "retained_author_log_digests_only": {
+    "fresh_build": "d0f22e5da456f34d554fdf73311b92c2db202ae03cd97415785f69a5238bb7fb",
+    "full_checks": "308deeaf64c8724550d5fa693a061b057c6b4254e13b14a4dce12a9d6d47a6b5",
+    "python_tests": "d89e29033dc4582c4553b49d6d5c43bad959867543029c4d18dd07e871478acd"
+  },
+  "boundaries": {
+    "full_typed_restricted_lean_checker_kernel_proved": true,
+    "python_formal_refinement": false,
+    "degree_plus_one_grid_kernel_formalized": false,
+    "global_pi2_pi1_dce_classifications_kernel_formalized": false,
+    "current_Has_identity_inhabitation_completeness": false,
+    "wire_format_parser_correctness": false,
+    "arbitrary_source_endpoint_equality": false,
+    "canonical_adoption": false
+  }
+}

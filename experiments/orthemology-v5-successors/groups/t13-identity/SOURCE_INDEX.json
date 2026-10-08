@@ -1,0 +1,44 @@
+{
+  "cell": "D12",
+  "scope": "Exact selected scientific text/source and historical review identities; no fresh replay asserted by this index.",
+  "sources": [
+    {
+      "id": "identity-src-18324561d5a479234e08",
+      "origin_input_id": "T13-EVIDENCE",
+      "member_chain": [
+        "OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md"
+      ],
+      "original_sha256": "b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md",
+      "public_sha256": "b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236"
+    },
+    {
+      "id": "identity-src-210a260c6b65330bbabb",
+      "origin_input_id": "T13-EVIDENCE",
+      "member_chain": [
+        "HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md"
+      ],
+      "original_sha256": "02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe",
+      "public_path": "experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md",
+      "public_sha256": "02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe"
+    },
+    {
+      "id": "identity-src-36405a21fb515a544d13",
+      "origin_input_id": "T13-EVIDENCE",
+      "member_chain": [
+        "RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md"
+      ],
+      "original_sha256": "7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md",
+      "public_sha256": "7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e"
+    },
+    {
+      "id": "identity-src-39cf7a4ba2e31c776a77",
+      "origin_input_id": "T13-RECEIPT",
+      "member_chain": [],
+      "original_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "public_path": "experiments/orthemology-v5-successors/source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json",
+      "public_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a"
+    }
+  ]
+}

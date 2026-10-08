@@ -1,0 +1,1724 @@
+{
+  "id": "T10-UNIFORM-COMPLETION",
+  "family": "t10-uniform-completion-suite",
+  "result_families": [
+    "t10-uniform-completion"
+  ],
+  "origin_archive_sha256": "86b1924c39385655005ce8b1159f8032fe27fad7459949c9e235c1638ac15804",
+  "source_ids": [
+    "T10-SOURCE-LawCompletionCore",
+    "T10-SOURCE-LawCompletionCompact",
+    "T10-SOURCE-LawCompletionCounterexample",
+    "T10-SOURCE-LawCompletionBranches",
+    "T10-SOURCE-UNIFORM-READBACK",
+    "T10-SOURCE-UNIFORM-CONTROLS",
+    "T10-SOURCE-UNIFORM-DRIVER",
+    "T10-SOURCE-TOOLCHAIN",
+    "T10-SOURCE-MATHLIB-LOCK",
+    "T10-SOURCE-LEAN-PIN",
+    "T10-SOURCE-UNIFORM-REVIEW",
+    "T10-SOURCE-UNIFORM-SCOPE"
+  ],
+  "review_ids": [
+    "T10-REVIEW-UNIFORM-COMPLETION"
+  ],
+  "targets": [
+    {
+      "id": "T10-UNIFORM-TARGET-001",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem backward_iterate (f : X → X) (b : ℕ → X) (hb : Backward f b)\n    (i n : ℕ) : f^[n] (b (i + n)) = b i",
+      "target_sha256": "05c61baf888d46555a61d7b2150d5abd5cf4347804505753e24710e21f9290f7",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-002",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem backward_survives (f : X → X) (b : ℕ → X) (hb : Backward f b)\n    (i : ℕ) : Survives f (b i)",
+      "target_sha256": "2ad83a0cce0516bb73ead14c2bbfaa90295946b9cf709c54e381b99ea4a7e109",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-003",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem fixed_survives (f : X → X) (e : X) (he : f e = e) : Survives f e",
+      "target_sha256": "0879a4efe800534fb27c40d9994c52b355c439d20747c0c912d6c8fbfd3d7d65",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-004",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem survives_forward (f : X → X) (x : X) (hx : Survives f x) :\n    Survives f (f x)",
+      "target_sha256": "7bf9c6feb72865be90885f9cee4dc36aa5c2345d98f15722a09a23131bc041e6",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-005",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem singleton_fixed (f : X → X) (e : X) (h : SingletonSurvival f e) : f e = e",
+      "target_sha256": "70cc7ee52790691cd62bc63359d3214689529ae969fb750e68a5e5cc663f5f0d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-006",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem singleton_unique_fixed (f : X → X) (e : X) (h : SingletonSurvival f e) :\n    ∀ x, f x = x ↔ x = e",
+      "target_sha256": "ab16845de5c157545bebf05a75c9b39742b0bd401c66ea96883b329739339825",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-007",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem singleton_unique_backward (f : X → X) (e : X) (h : SingletonSurvival f e) :\n    UniqueBackward f",
+      "target_sha256": "b9e6c65efa534d8ae726aea0661690b9a89ab0ba85c01f48089b1816ac843bae",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-008",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem unique_backward_constant (f : X → X) (h : UniqueBackward f) :\n    ∃ e, f e = e ∧ ∀ b, Backward f b → b = fun _ => e",
+      "target_sha256": "669569fd23673cb363c9413b399daf44d82a45440f06cfc16b568f995de8837c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-009",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem uniform_iff_tendstoUniformly (f : X → X) (e : X) :\n    UniformAttraction f e ↔ TendstoUniformly (fun n : ℕ => f^[n]) (fun _ => e) atTop",
+      "target_sha256": "b11224992a2faeef195398fa342ca1c6c89b523b665a60613d5d0a9fc54654fb",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-010",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem uniform_pointwise (f : X → X) (e : X) (h : UniformAttraction f e) :\n    PointwiseAttraction f e",
+      "target_sha256": "bbcf6daffc61d516d3487344c9bc2a8c57c9b312801322b9453e9981b1c0f642",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-011",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "declaration": "theorem uniform_fixed_singleton (f : X → X) (e : X) (he : f e = e)\n    (hu : UniformAttraction f e) : SingletonSurvival f e",
+      "target_sha256": "0b744e73ec1cb2375b79602f35fdbaabccf8a7864b236bca9be62f0619deaaf3",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-012",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem range_succ_subset (f : X → X) (n : ℕ) :\n    Set.range (f^[n + 1]) ⊆ Set.range (f^[n])",
+      "target_sha256": "1b543af56076ec62d4993f7d028c8e871b244a422b3639dbb7eae0558d9c47bf",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-013",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem range_antitone (f : X → X) : Antitone (fun n : ℕ => Set.range (f^[n]))",
+      "target_sha256": "b91f50ab5d514651e162f47072d8cb8dcbc767ac0808de723a9eeeaead0239b8",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-014",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem compact_surviving_predecessor (f : X → X) (hf : Continuous f)\n    (y : X) (hy : Survives f y) : ∃ x, Survives f x ∧ f x = y",
+      "target_sha256": "85d9e84a34d11bfe966d2e0cad94bdcf267b223836165b248fd11de2a6243be5",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-015",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem compact_survivor_realized (f : X → X) (hf : Continuous f)\n    (y : X) (hy : Survives f y) : ∃ b, Backward f b ∧ b 0 = y",
+      "target_sha256": "761c2169dc33c443067b615d5b39eb81c44e6fc1222fbf3a9fcb405b51c724b2",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-016",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem compact_survival_iff_realized (f : X → X) (hf : Continuous f) (y : X) :\n    Survives f y ↔ ∃ b, Backward f b ∧ b 0 = y",
+      "target_sha256": "04567a537c822ebca53d6b7253ef302e4a53606c15ad245745d52976e4c6ac4f",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-017",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem compact_unique_backward_singleton (f : X → X) (hf : Continuous f)\n    (hu : UniqueBackward f) : ∃ e, SingletonSurvival f e",
+      "target_sha256": "66861d7902ee0cb61f78878374a37450efdfb86e2ff3789f8f2584075eabac02",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-018",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem compact_singleton_uniform (f : X → X) (hf : Continuous f)\n    (e : X) (hs : SingletonSurvival f e) : UniformAttraction f e",
+      "target_sha256": "4cd14b2aed455ad105ec92e83726a4e8ee58d992f6c6b514de4d9c3dca0170dc",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-019",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem compact_singleton_iff_unique_backward (f : X → X) (hf : Continuous f) :\n    (∃ e, SingletonSurvival f e) ↔ UniqueBackward f",
+      "target_sha256": "7a3b3d71f7dc155e800c88a686406a3ea9769e80b1529af47d222e73bab2d73f",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-020",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem compact_singleton_iff_uniform_fixed (f : X → X) (hf : Continuous f) :\n    (∃ e, SingletonSurvival f e) ↔ ∃ e, f e = e ∧ UniformAttraction f e",
+      "target_sha256": "0fbd0e3a1e03f03d98d36353c4782659425e707c5bb69302e6042626eb84643a",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-021",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "declaration": "theorem compact_completion_equivalences [Nonempty X] (f : X → X) (hf : Continuous f) :\n    ((∃ e, SingletonSurvival f e) ↔ UniqueBackward f) ∧\n    (UniqueBackward f ↔ ∃ e, f e = e ∧\n      TendstoUniformly (fun n : ℕ => f^[n]) (fun _ => e) atTop)",
+      "target_sha256": "2f01d007933ae4d5361be4b3cdc814a9b56579c575820a0301811c8bedb3f517",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-022",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "@[simp] theorem dist_formula (x y : State) : dist x y = if x = y then 0 else 1",
+      "target_sha256": "7814ac6e50197123bc1a5d409c0b9efa3ad10c0f9178cdd84af8d7406f3175b9",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-023",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem bounded : Bornology.IsBounded (Set.univ : Set State)",
+      "target_sha256": "7eda290071c778bba312505c902e98d5c4e59fb65bb42066ad6dd35e4f7c6bd8",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-024",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem law_continuous : Continuous law",
+      "target_sha256": "1d6e6469871039ba86f84276242c9f7e7da9ad5c574861e185374b6e110aca5a",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-025",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "@[simp] theorem iterate_none (n : ℕ) : law^[n] none = none",
+      "target_sha256": "b3f0c29662f322e36fca1b7de76e62acb8b43047190395890d485dae6f7877ef",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-026",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "@[simp] theorem iterate_some (n k : ℕ) : law^[n] (some k) = some (k + n)",
+      "target_sha256": "379bd1a394f6ba625b9269215db53d453ee4bfadaa3737774988f5477058be2d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-027",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem range_formula (n : ℕ) (x : State) :\n    x ∈ Set.range (law^[n]) ↔ x = none ∨ ∃ k : ℕ, x = some k ∧ n ≤ k",
+      "target_sha256": "977de122dc6c0f7ac31545802dcbf34a64785bf3469b257545db6cff26e97a2c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-028",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem singleton_survival : SingletonSurvival law none",
+      "target_sha256": "e479c3109b74cf671d548d2d158437fa79f50ddcee8130e5282025650b9291fb",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-029",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem unique_backward : UniqueBackward law",
+      "target_sha256": "3b1a1fc0e56d8c913c0384bb74eefe0fa7f744a904e7ab4b67e0016f806983e1",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-030",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem backward_exact (b : ℕ → State) : Backward law b ↔ b = fun _ => none",
+      "target_sha256": "eaab3128f509416d70c93831b3acd38a7c7a6e5baaf329c04b2635d768012124",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-031",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem orbit_distance (n k : ℕ) : dist (law^[n] (some k)) none = 1",
+      "target_sha256": "9b0fbf1bc8a724eb579654edbcd16307cd7d5eb7ed2ead1bf4e2026b831dd75c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-032",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem orbit_not_tendsto (k : ℕ) :\n    ¬ Tendsto (fun n : ℕ => law^[n] (some k)) atTop (𝓝 (none : State))",
+      "target_sha256": "4397e70edee46c01a3e5558c6d149e06f4074c04bf99010e82ba5d820854a7a3",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-033",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem not_pointwise_attraction : ¬ PointwiseAttraction law none",
+      "target_sha256": "9c72fcd925e83ba4f72f170988b0a6116e9aa5e783530617440ea95eccf31666",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-034",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem image_start_failure : (some 1 : State) ∈ Set.range law ∧\n    ¬ Tendsto (fun n : ℕ => law^[n] (some 1)) atTop (𝓝 (none : State))",
+      "target_sha256": "c030ebd9c1aecb3ea324cd1e93aaa27f7f866fe87533d957e6c6b592a715b63e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-035",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem no_attracting_fixed_point : ¬ ∃ e : State, law e = e ∧ PointwiseAttraction law e",
+      "target_sha256": "71fc2c1adbf48bfd5a7b452706fd5434c971ae337240e5563a9b95283f57fcd7",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-036",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "declaration": "theorem counterexample : CompleteSpace State ∧ Infinite State ∧ Continuous law ∧ Bornology.IsBounded (Set.univ : Set State) ∧\n    SingletonSurvival law none ∧ UniqueBackward law ∧ ¬ PointwiseAttraction law none",
+      "target_sha256": "b9efd4445488204974a2024795558a5185afba52212742c54ba591aeb458e92c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-037",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "@[simp] theorem dist_formula (x y : State) : dist x y = if x = y then 0 else 1",
+      "target_sha256": "7814ac6e50197123bc1a5d409c0b9efa3ad10c0f9178cdd84af8d7406f3175b9",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-038",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem bounded : Bornology.IsBounded (Set.univ : Set State)",
+      "target_sha256": "7eda290071c778bba312505c902e98d5c4e59fb65bb42066ad6dd35e4f7c6bd8",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-039",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem law_continuous : Continuous law",
+      "target_sha256": "1d6e6469871039ba86f84276242c9f7e7da9ad5c574861e185374b6e110aca5a",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-040",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem branch_predecessor (x : State) (n k : ℕ) (hk : k ≤ n)\n    (h : law x = branch n k hk) :\n    ∃ j, ∃ hj : j ≤ n, x = branch n j hj ∧ j = k + 1",
+      "target_sha256": "fa4887c06426a54fced1581cf150b8efb1deef8816d0764473120be6dab434ac",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-041",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem branch_capacity (t : ℕ) (x : State) (n k : ℕ) (hk : k ≤ n)\n    (h : law^[t] x = branch n k hk) : k + t ≤ n",
+      "target_sha256": "b15753517fa9d987baaaccb10703b03e241303d2c5bfeba712f7838f47f2086d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-042",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem branch_not_survives (n k : ℕ) (hk : k ≤ n) : ¬ Survives law (branch n k hk)",
+      "target_sha256": "6390fff2837f1ccb5f4a56ccfc52093b34480f04bc4b30c3088de8d110657b53",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-043",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem branch_reaches_r (n k : ℕ) (hk : k ≤ n) : law^[k + 1] (branch n k hk) = r",
+      "target_sha256": "76e2d967852a5ed2ce02267b05dc3cc8cc629d1c3a499d9705555c24da56a0d3",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-044",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem r_survives : Survives law r",
+      "target_sha256": "3fab0d2d73d9999385b86ba7c3b06956be8cf106f503731d5515a547bd79515b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-045",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem survival_exact (x : State) : Survives law x ↔ x = e ∨ x = r",
+      "target_sha256": "460cd07c0c01fd14ae72118c98f6c3c7ab195b1eb5d74b9f39ca3edb90def7f9",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-046",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem backward_exact (b : ℕ → State) : Backward law b ↔ b = fun _ => e",
+      "target_sha256": "f78214c03fb39b3e4181f1edee84ea2a8d175dab049977f1c13eac7413de0dcb",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-047",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem unique_backward : UniqueBackward law",
+      "target_sha256": "3b1a1fc0e56d8c913c0384bb74eefe0fa7f744a904e7ab4b67e0016f806983e1",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-048",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem not_singleton_survival : ¬ ∃ x, SingletonSurvival law x",
+      "target_sha256": "a0ab74d8faa6d0149d7efe426dec28f3951eae3d18c2cacfd19044308bac1d28",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-049",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem eventually_fixed (x : State) : ∃ N : ℕ, law^[N] x = e",
+      "target_sha256": "a6156cc8fae0980c16ff53e42cb13d87e3b56c3c28009824e6ce77a55e078da0",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-050",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem pointwise_attraction : PointwiseAttraction law e",
+      "target_sha256": "da467fe6c683e70324da73e738c2be469dc1831c2c7f4177ee8047ad32b3b29e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-051",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "declaration": "theorem counterexample : CompleteSpace State ∧ Infinite State ∧ Continuous law ∧ Bornology.IsBounded (Set.univ : Set State) ∧\n    UniqueBackward law ∧ PointwiseAttraction law e ∧ ¬ ∃ x, SingletonSurvival law x",
+      "target_sha256": "2857abcc0ba1f1486b3472540ea58e86b26c2cca1a46004fe279a3a68efa35f2",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-052",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "declaration": "theorem removing_compactness_breaks_uniform :\n    ¬ (SingletonSurvival ControlA.law none → UniformAttraction ControlA.law none)",
+      "target_sha256": "a0bb8336727aba0884690792949dc04dbb947c3b27e0a55b7478024759b9d6ad",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-053",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "declaration": "theorem removing_compactness_breaks_survivor_equivalence :\n    ¬ (UniqueBackward ControlB.law → ∃ z, SingletonSurvival ControlB.law z)",
+      "target_sha256": "bebc76ae25dad673268b1039986ee9c4082c91810d38a80fc25f94ec9062439e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-054",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "declaration": "theorem successor_has_no_backward : ¬ ∃ b : ℕ → ℕ, Backward Nat.succ b",
+      "target_sha256": "a7f6d9f0778dae72692967c6b01050bd16085648e0e1074995a3b8287273ba02",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-055",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "declaration": "theorem existence_cannot_be_deleted :\n    (∀ b c : ℕ → ℕ, Backward Nat.succ b → Backward Nat.succ c → b = c) ∧\n    ¬ UniqueBackward Nat.succ",
+      "target_sha256": "3c241f5315d5d68f8fc1aa1c2345cc3d2c787953c7d0f07719db591e69999b72",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-UNIFORM-TARGET-056",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "declaration": "theorem arbitrary_preimage_step_fails :\n    let f : Bool → Bool",
+      "target_sha256": "0ad748a07b2038bd1dbcd5910318bea942dabcf7b216d9f5a9ba621acfabac98",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [
+    {
+      "id": "T10-UNIFORM-CONTROL-001",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-001",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-002",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-002",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-003",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-003",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-004",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-004",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-005",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-005",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-006",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-006",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-007",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-007",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-008",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-008",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-009",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-009",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-010",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-010",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-011",
+      "source_id": "T10-SOURCE-LawCompletionCore",
+      "target_id": "T10-UNIFORM-TARGET-011",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-012",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-012",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-013",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-013",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-014",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-014",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-015",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-015",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-016",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-016",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-017",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-017",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-018",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-018",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-019",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-019",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-020",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-020",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-021",
+      "source_id": "T10-SOURCE-LawCompletionCompact",
+      "target_id": "T10-UNIFORM-TARGET-021",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-022",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-022",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-023",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-023",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-024",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-024",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-025",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-025",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-026",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-026",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-027",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-027",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-028",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-028",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-029",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-029",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-030",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-030",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-031",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-031",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-032",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-032",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-033",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-033",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-034",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-034",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-035",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-035",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-036",
+      "source_id": "T10-SOURCE-LawCompletionCounterexample",
+      "target_id": "T10-UNIFORM-TARGET-036",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-037",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-037",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-038",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-038",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-039",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-039",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-040",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-040",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-041",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-041",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-042",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-042",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-043",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-043",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-044",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-044",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-045",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-045",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-046",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-046",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-047",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-047",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-048",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-048",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-049",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-049",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-050",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-050",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-051",
+      "source_id": "T10-SOURCE-LawCompletionBranches",
+      "target_id": "T10-UNIFORM-TARGET-051",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-052",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "target_id": "T10-UNIFORM-TARGET-052",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-053",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "target_id": "T10-UNIFORM-TARGET-053",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-054",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "target_id": "T10-UNIFORM-TARGET-054",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-055",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "target_id": "T10-UNIFORM-TARGET-055",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-UNIFORM-CONTROL-056",
+      "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+      "target_id": "T10-UNIFORM-TARGET-056",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "COMPONENTS",
+    "files": [
+      {
+        "source_id": "T10-SOURCE-LawCompletionCore",
+        "path": "LawCompletionCore.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "T10-SOURCE-LawCompletionCompact",
+        "path": "LawCompletionCompact.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "T10-SOURCE-LawCompletionCounterexample",
+        "path": "LawCompletionCounterexample.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "T10-SOURCE-LawCompletionBranches",
+        "path": "LawCompletionBranches.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "T10-SOURCE-UNIFORM-READBACK",
+        "path": "LawCompletionReadback.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+        "path": "ReviewerControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "T10-SOURCE-UNIFORM-DRIVER",
+        "path": "metadata/UNIFORM-DRIVER/validate.sh",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-TOOLCHAIN",
+        "path": "metadata/TOOLCHAIN/TOOLCHAIN_REQUIREMENTS.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "T10-SOURCE-MATHLIB-LOCK",
+        "path": "metadata/MATHLIB-LOCK/mathlib-lake-manifest.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "T10-SOURCE-LEAN-PIN",
+        "path": "metadata/LEAN-PIN/lean-toolchain",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "T10-SOURCE-UNIFORM-REVIEW",
+        "path": "metadata/UNIFORM-REVIEW/INDEPENDENT_FORMAL_REVIEW.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "T10-SOURCE-UNIFORM-SCOPE",
+        "path": "metadata/UNIFORM-SCOPE/CHECKED_SCOPE.md",
+        "role": "REVIEW"
+      }
+    ],
+    "modules": [
+      {
+        "name": "LawCompletionCore",
+        "source_id": "T10-SOURCE-LawCompletionCore",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "LawCompletionCompact",
+        "source_id": "T10-SOURCE-LawCompletionCompact",
+        "imports": [
+          "Init",
+          "LawCompletionCore"
+        ]
+      },
+      {
+        "name": "LawCompletionCounterexample",
+        "source_id": "T10-SOURCE-LawCompletionCounterexample",
+        "imports": [
+          "Init",
+          "LawCompletionCore"
+        ]
+      },
+      {
+        "name": "LawCompletionBranches",
+        "source_id": "T10-SOURCE-LawCompletionBranches",
+        "imports": [
+          "Init",
+          "LawCompletionCore"
+        ]
+      },
+      {
+        "name": "LawCompletionReadback",
+        "source_id": "T10-SOURCE-UNIFORM-READBACK",
+        "imports": [
+          "Init",
+          "LawCompletionCompact",
+          "LawCompletionCounterexample",
+          "LawCompletionBranches"
+        ]
+      },
+      {
+        "name": "ReviewerControls",
+        "source_id": "T10-SOURCE-UNIFORM-CONTROLS",
+        "imports": [
+          "Init",
+          "LawCompletionCompact",
+          "LawCompletionCounterexample",
+          "LawCompletionBranches"
+        ]
+      }
+    ],
+    "module_order": [
+      "LawCompletionCore",
+      "LawCompletionCompact",
+      "LawCompletionCounterexample",
+      "LawCompletionBranches",
+      "ReviewerControls"
+    ],
+    "positive_roots": [
+      "LawCompletionCore",
+      "LawCompletionCompact",
+      "LawCompletionCounterexample",
+      "LawCompletionBranches"
+    ],
+    "audit_roots": [
+      "LawCompletionReadback",
+      "ReviewerControls"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      },
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "T10-UNIFORM-TARGET-001",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.backward_iterate"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-002",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.backward_survives"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-003",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.fixed_survives"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-004",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.survives_forward"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-005",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.singleton_fixed"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-006",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.singleton_unique_fixed"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-007",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.singleton_unique_backward"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-008",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.unique_backward_constant"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-009",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.uniform_iff_tendstoUniformly"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-010",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.uniform_pointwise"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-011",
+        "module": "LawCompletionCore",
+        "name": "LawCompletion.uniform_fixed_singleton"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-012",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.range_succ_subset"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-013",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.range_antitone"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-014",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.compact_surviving_predecessor"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-015",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.compact_survivor_realized"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-016",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.compact_survival_iff_realized"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-017",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.compact_unique_backward_singleton"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-018",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.compact_singleton_uniform"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-019",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.compact_singleton_iff_unique_backward"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-020",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.compact_singleton_iff_uniform_fixed"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-021",
+        "module": "LawCompletionCompact",
+        "name": "LawCompletion.compact_completion_equivalences"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-022",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.dist_formula"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-023",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.bounded"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-024",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.law_continuous"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-025",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.iterate_none"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-026",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.iterate_some"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-027",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.range_formula"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-028",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.singleton_survival"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-029",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.unique_backward"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-030",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.backward_exact"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-031",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.orbit_distance"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-032",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.orbit_not_tendsto"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-033",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.not_pointwise_attraction"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-034",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.image_start_failure"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-035",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.no_attracting_fixed_point"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-036",
+        "module": "LawCompletionCounterexample",
+        "name": "LawCompletion.ControlA.counterexample"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-037",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.dist_formula"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-038",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.bounded"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-039",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.law_continuous"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-040",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.branch_predecessor"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-041",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.branch_capacity"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-042",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.branch_not_survives"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-043",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.branch_reaches_r"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-044",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.r_survives"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-045",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.survival_exact"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-046",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.backward_exact"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-047",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.unique_backward"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-048",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.not_singleton_survival"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-049",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.eventually_fixed"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-050",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.pointwise_attraction"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-051",
+        "module": "LawCompletionBranches",
+        "name": "LawCompletion.ControlB.counterexample"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-052",
+        "module": "ReviewerControls",
+        "name": "LawCompletion.IndependentReview.removing_compactness_breaks_uniform"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-053",
+        "module": "ReviewerControls",
+        "name": "LawCompletion.IndependentReview.removing_compactness_breaks_survivor_equivalence"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-054",
+        "module": "ReviewerControls",
+        "name": "LawCompletion.IndependentReview.successor_has_no_backward"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-055",
+        "module": "ReviewerControls",
+        "name": "LawCompletion.IndependentReview.existence_cannot_be_deleted"
+      },
+      {
+        "target_id": "T10-UNIFORM-TARGET-056",
+        "module": "ReviewerControls",
+        "name": "LawCompletion.IndependentReview.arbitrary_preimage_step_fails"
+      }
+    ],
+    "package_manifest_source_id": "T10-SOURCE-MATHLIB-LOCK",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "T10-SOURCE-TOOLCHAIN"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      }
+    ],
+    "tools": [],
+    "external_inputs": [],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "t10-uniform-original-contract",
+        "source_id": "T10-SOURCE-UNIFORM-DRIVER",
+        "recipe": "t10-uniform-completion-v1",
+        "sha256": "a67f3ae196aa45d895f881b02787ec04db4a97c344b73a7aa7e126a0d6ded5c7",
+        "argument_meanings": {},
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "source-check",
+        "kind": "SOURCE_CHECK",
+        "driver_id": "t10-uniform-original-contract",
+        "argv": [
+          "{builtin:source-check}"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-LawCompletionCore",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/LawCompletionCore.olean",
+          "{project}/LawCompletionCore.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "source-check"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/LawCompletionCore.olean"
+        ],
+        "control_ids": [
+          "T10-UNIFORM-CONTROL-001",
+          "T10-UNIFORM-CONTROL-002",
+          "T10-UNIFORM-CONTROL-003",
+          "T10-UNIFORM-CONTROL-004",
+          "T10-UNIFORM-CONTROL-005",
+          "T10-UNIFORM-CONTROL-006",
+          "T10-UNIFORM-CONTROL-007",
+          "T10-UNIFORM-CONTROL-008",
+          "T10-UNIFORM-CONTROL-009",
+          "T10-UNIFORM-CONTROL-010",
+          "T10-UNIFORM-CONTROL-011"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-LawCompletionCompact",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/LawCompletionCompact.olean",
+          "{project}/LawCompletionCompact.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-LawCompletionCore"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/LawCompletionCompact.olean"
+        ],
+        "control_ids": [
+          "T10-UNIFORM-CONTROL-012",
+          "T10-UNIFORM-CONTROL-013",
+          "T10-UNIFORM-CONTROL-014",
+          "T10-UNIFORM-CONTROL-015",
+          "T10-UNIFORM-CONTROL-016",
+          "T10-UNIFORM-CONTROL-017",
+          "T10-UNIFORM-CONTROL-018",
+          "T10-UNIFORM-CONTROL-019",
+          "T10-UNIFORM-CONTROL-020",
+          "T10-UNIFORM-CONTROL-021"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-LawCompletionCounterexample",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/LawCompletionCounterexample.olean",
+          "{project}/LawCompletionCounterexample.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-LawCompletionCompact"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/LawCompletionCounterexample.olean"
+        ],
+        "control_ids": [
+          "T10-UNIFORM-CONTROL-022",
+          "T10-UNIFORM-CONTROL-023",
+          "T10-UNIFORM-CONTROL-024",
+          "T10-UNIFORM-CONTROL-025",
+          "T10-UNIFORM-CONTROL-026",
+          "T10-UNIFORM-CONTROL-027",
+          "T10-UNIFORM-CONTROL-028",
+          "T10-UNIFORM-CONTROL-029",
+          "T10-UNIFORM-CONTROL-030",
+          "T10-UNIFORM-CONTROL-031",
+          "T10-UNIFORM-CONTROL-032",
+          "T10-UNIFORM-CONTROL-033",
+          "T10-UNIFORM-CONTROL-034",
+          "T10-UNIFORM-CONTROL-035",
+          "T10-UNIFORM-CONTROL-036"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-LawCompletionBranches",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/LawCompletionBranches.olean",
+          "{project}/LawCompletionBranches.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-LawCompletionCounterexample"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/LawCompletionBranches.olean"
+        ],
+        "control_ids": [
+          "T10-UNIFORM-CONTROL-037",
+          "T10-UNIFORM-CONTROL-038",
+          "T10-UNIFORM-CONTROL-039",
+          "T10-UNIFORM-CONTROL-040",
+          "T10-UNIFORM-CONTROL-041",
+          "T10-UNIFORM-CONTROL-042",
+          "T10-UNIFORM-CONTROL-043",
+          "T10-UNIFORM-CONTROL-044",
+          "T10-UNIFORM-CONTROL-045",
+          "T10-UNIFORM-CONTROL-046",
+          "T10-UNIFORM-CONTROL-047",
+          "T10-UNIFORM-CONTROL-048",
+          "T10-UNIFORM-CONTROL-049",
+          "T10-UNIFORM-CONTROL-050",
+          "T10-UNIFORM-CONTROL-051"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "original-readback",
+        "kind": "LEAN_AUDIT",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "{project}/LawCompletionReadback.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-LawCompletionBranches"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "reviewer-controls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/ReviewerControls.olean",
+          "{project}/ReviewerControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-readback"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/ReviewerControls.olean"
+        ],
+        "control_ids": [
+          "T10-UNIFORM-CONTROL-052",
+          "T10-UNIFORM-CONTROL-053",
+          "T10-UNIFORM-CONTROL-054",
+          "T10-UNIFORM-CONTROL-055",
+          "T10-UNIFORM-CONTROL-056"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "build"
+    ]
+  }
+}

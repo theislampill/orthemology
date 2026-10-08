@@ -1,0 +1,3016 @@
+{
+  "id": "t11-normalization",
+  "family": "t11-normalization",
+  "result_families": [
+    "T11-NORMALIZATION-BOUNDARY"
+  ],
+  "origin_archive_sha256": "00b7ab12cab9f390437dcfb6d41b2e6c7bf911b64f348ab2954acbf7e75f9790",
+  "source_ids": [
+    "identity-src-3a568ae64ac6477c0a72",
+    "identity-src-114006acabc7afdafa71",
+    "identity-src-5e23eec037f2f1fc3885",
+    "identity-src-4ff8744e4d249457f2de",
+    "identity-src-b72d5ee33aa901b9fbc7",
+    "identity-src-969d96df7f5cacabbc84",
+    "identity-src-4d2242ca386abb9fb05c",
+    "identity-src-3b73994a180eed160e66",
+    "identity-src-69e9aba5b6c86082325a",
+    "identity-src-d96af628cc301c9a3270",
+    "identity-src-d63e281acc44c30b829a",
+    "identity-src-6bfeb2818a8c6de8a9aa",
+    "identity-src-a8bb66faac0c69843076",
+    "identity-src-b762083ea17b529f3c89",
+    "identity-src-08c4b00cf6f55546baae",
+    "identity-src-7869aaee20cf4f9cc7f8",
+    "identity-src-f047bd39c7adf4df339f",
+    "identity-src-1120e0b208f24e022fa5",
+    "identity-src-259156fbe396bf9c3fb9",
+    "identity-src-1d34186abb2851db9db0",
+    "identity-src-9ae14f5352ff9b397c8b",
+    "identity-src-5dec76c8884f9773fda9",
+    "identity-src-c1866be0497186f3d0c9",
+    "identity-src-aa3f8bdd762a25e526b0",
+    "identity-src-fc1f44be0fdd69c68977",
+    "identity-src-f675fd81c41feb3a5577",
+    "identity-src-5837b166d19ec3904f08",
+    "identity-src-3d485b1c9283a625e14f",
+    "identity-src-1ecb6f8b87eb3dcef3ac",
+    "identity-src-ef3967278e941ead9f1e",
+    "identity-src-4f68a8643bcb5875b8c1",
+    "identity-src-238c1dfb4fcf213c07ba",
+    "identity-src-cba4cc3c512e2e6b12ee",
+    "identity-src-8187eeb6c5bdb90e1b11",
+    "identity-src-c3f4ec2976b922090d27",
+    "identity-src-24fa998e9c1dc127c1ed",
+    "identity-src-30403469963501a2d64c",
+    "identity-src-751f4d534f465f1428ee",
+    "identity-src-6eaf2babfe3594350d70",
+    "identity-src-bc0367b194e8459f3276",
+    "identity-src-d9cfb25dc70827d52eb5",
+    "identity-src-3e35be9cc2bf619e531b",
+    "identity-src-c58a3abb895f4e1d5077",
+    "identity-src-aa9086175e05304f369c",
+    "identity-src-4c1f8e3caa0a7cdb996a",
+    "identity-src-680aaab2bf3e6a15db9e",
+    "identity-src-d8d39e778e1700c5297b",
+    "identity-src-dfe0c149e3ee7205ea3f",
+    "identity-src-4576695350242d46a931",
+    "identity-src-2b6aa7d7f310e342dfc9",
+    "identity-src-c37115cd79dce02b44bf",
+    "identity-src-94833a078b19e006c80d",
+    "identity-src-36dc841cc0bbd1a3940d",
+    "identity-src-883b250907ae8b70dc1c",
+    "identity-src-00b02a6d9ab01b9feeaa",
+    "identity-src-a9edc367dff34de50261",
+    "identity-src-5be50422683e5fc79a2a",
+    "identity-src-0460ccd8752a7a8fc39d",
+    "identity-src-5b00cb7a66e3583b0ba7",
+    "identity-src-0cffb5ab1936e586f4df",
+    "identity-src-2460d68728ef24277c56",
+    "identity-src-ed710d91f08705f13d4d",
+    "identity-src-e7f1bdee5935346a515e",
+    "identity-src-99a93717bab9295336c4",
+    "identity-src-d73ae6d55b1ed88f65b7",
+    "identity-src-5eb573e7edf862b1c7a4",
+    "identity-src-6829db5713ffc99787d5",
+    "identity-src-e492759251ba9c19a378",
+    "identity-src-7cec73795da1628c4091",
+    "identity-src-498fd8e16f71e9fa5028",
+    "identity-src-4cb6430a9f6ca024c11f",
+    "identity-src-864dac0cadf7fa7d25c8",
+    "identity-src-75a60db349c64e493278",
+    "identity-src-db1e24bbc42e41ce33ac"
+  ],
+  "review_ids": [
+    "T11-NORMALIZATION-BOUNDARY-inherited-review"
+  ],
+  "targets": [
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-boundary_control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem boundary_control :\n    P01DF.Has p oldIdentity ∧\n    P01AC.Has [] p (P01AC.fin identityCode) ∧\n    (∀ η, eval p η = t) ∧\n    (∀ a, Red (.app t a) a) ∧\n    (∀ u, Red t u → ¬ Normal u) ∧\n    (¬ ∃ u C, FiniteDerives u C ∧ Conv t u) ∧\n    FiniteDerives .i identityCode",
+      "target_sha256": "16e9e8d2080d829fb59459dab2837cb8da58e98873792e58af29462bfd32d67c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-no_normal_reduct",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem no_normal_reduct {u : Term} (h : Red t u) : ¬ Normal u",
+      "target_sha256": "9a1855cc80ab1b4f33645709b57c1bf36585533b287bedc3e5fc56698e92d355",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-no_finite_source_representative",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem no_finite_source_representative :\n    ¬ ∃ u C, FiniteDerives u C ∧ Conv t u",
+      "target_sha256": "79202c2e6aea9eb5457f398767fc09ab3060dad1010cb3b19ba076f81561ecd8",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-IndependentBoundaryControls-discarded_identity_has_normal_reduct",
+      "source_id": "identity-src-259156fbe396bf9c3fb9",
+      "declaration": "theorem discarded_identity_has_normal_reduct :\n    ∃ n, Red (discard .i omega) n ∧ Normal n",
+      "target_sha256": "194b22225bbec694a77906442d50224e9fab0144166237880b758198b71e520d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-IndependentBoundaryControls-matching_is_not_opaque",
+      "source_id": "identity-src-259156fbe396bf9c3fb9",
+      "declaration": "theorem matching_is_not_opaque : p ≠ Poly.atom t",
+      "target_sha256": "d4e30be3ff1b2d524b0db5edbde954fbd90dc907ba472bdb8b3f9c60ada9328b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-IndependentBoundaryControls-matching_and_opaque_evaluate",
+      "source_id": "identity-src-259156fbe396bf9c3fb9",
+      "declaration": "theorem matching_and_opaque_evaluate (η : Env) : eval p η = eval (.atom t) η",
+      "target_sha256": "20a4ccf1b917253ebc5f0417c49158e816eaf851dcf0d3728e963c46727ecbce",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-IndependentBoundaryControls-wrapper_normal_iff",
+      "source_id": "identity-src-259156fbe396bf9c3fb9",
+      "declaration": "theorem wrapper_normal_iff (q : Term) : Normal (wrapper q) ↔ Normal q",
+      "target_sha256": "233d129f75a4c7103b32de4ac4948d5fd346aa579f84169d09431f1c8a0bf4fd",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-wrapper",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "def wrapper (q : Term) : Term",
+      "target_sha256": "630d026754d62752f835200e6a1b4c020567cca471755768d27cf3df3c5cdafd",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-t",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "def t : Term",
+      "target_sha256": "be3ea86510e06cb03205333740b65f6d93ee6cd18592af5b5355a4a8a89be86b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-p",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "def p : Poly",
+      "target_sha256": "045bc8120379074e0d4d45272ee60f7376ea05e074c5dd7783c02d69de500884",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-oldIdentity",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "def oldIdentity : P01DF.Ty",
+      "target_sha256": "e9f4c6cbaa212f681459d1c51d02e5d64cf4f6bb23d45d2600086fe8942bdaf1",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-eval_p",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem eval_p (η : Env) : eval p η = t",
+      "target_sha256": "04890d70e233687df6a612228c13b12437b09d9ab65b83a1854dad1759ce8d60",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-tree",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "def tree : Derivation p oldIdentity",
+      "target_sha256": "bf31ab293165293a3b7e386663cc2b0bb3e6666c355249704b2bcc7fcb8bcdd6",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-tree_supported",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem tree_supported : Supported 0 tree",
+      "target_sha256": "1fc243535da49731df36065b4faffcd46b0782f775df58609e554083f04a2834",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-old_typed",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem old_typed : P01DF.Has p oldIdentity",
+      "target_sha256": "3633fafdf17b3654e952d740ce5b3fc089cfa0aaa452633553dc233b78f61d3e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-new_typed",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem new_typed : P01AC.Has [] p (.all (P01AC.arr (.param 0) (.param 0)))",
+      "target_sha256": "8324c27c359d08f6b3553bb22c2e511be2d5bb129bc994eaa6efffed258e5774",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-new_finite_target",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem new_finite_target : P01AC.Has [] p (P01AC.fin identityCode)",
+      "target_sha256": "873bd78b6078f26a83c0fb089a62d76c90dc6b094f72a8d91ec3a2e9acd9dc11",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-target_inhabited",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem target_inhabited : FiniteDerives .i identityCode",
+      "target_sha256": "d31c88bdcd2a6974c689aa58aea47698635b148023cde5944879709a0e36a7a8",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-application_S",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem application_S (a : Term) :\n    Step (.app t a) (.app (.app .k a) (.app (.app .k omega) a))",
+      "target_sha256": "3f607a155bda40ea0786b0ee2d30e8b201c47a4bae81ef509160d4df8414e7fb",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-application_K",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem application_K (a : Term) :\n    Step (.app (.app .k a) (.app (.app .k omega) a)) a",
+      "target_sha256": "50c8335c5bcc1e98f425dc904c80dcc1d89c661d2130519118cc39151759518b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-application_returns",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem application_returns (a : Term) : Red (.app t a) a",
+      "target_sha256": "56329d455867a655e00499f119b2a8f25505b305e7520b4172c346da4045a52b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-wrapper_step",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem wrapper_step {q u : Term} (h : Step (wrapper q) u) :\n    ∃ q', Step q q' ∧ u = wrapper q'",
+      "target_sha256": "0b400fc38f9735479500492df9109e6b151181e461994269cc5e3fd8a46daf04",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-wrapper_red",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem wrapper_red {q u : Term} (h : Red (wrapper q) u) :\n    ∃ q', Red q q' ∧ u = wrapper q'",
+      "target_sha256": "c9327123ca3bbdfaf92c0c14e39df2f1959331486d8be83444ace8211a13daf0",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-wrapper_normal",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "declaration": "theorem wrapper_normal {q : Term} (h : Normal (wrapper q)) : Normal q",
+      "target_sha256": "9b424bdfd535136e4963c149315896785d99c89ba3c80f421971fc66f28732f9",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "P01AC.Has"
+    }
+  ],
+  "controls": [
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-boundary_control-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-boundary_control",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-no_normal_reduct-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-no_normal_reduct",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-no_finite_source_representative-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-no_finite_source_representative",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-IndependentBoundaryControls-discarded_identity_has_normal_reduct-control",
+      "source_id": "identity-src-259156fbe396bf9c3fb9",
+      "target_id": "t11-normalization-IndependentBoundaryControls-discarded_identity_has_normal_reduct",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-IndependentBoundaryControls-matching_is_not_opaque-control",
+      "source_id": "identity-src-259156fbe396bf9c3fb9",
+      "target_id": "t11-normalization-IndependentBoundaryControls-matching_is_not_opaque",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-IndependentBoundaryControls-matching_and_opaque_evaluate-control",
+      "source_id": "identity-src-259156fbe396bf9c3fb9",
+      "target_id": "t11-normalization-IndependentBoundaryControls-matching_and_opaque_evaluate",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-IndependentBoundaryControls-wrapper_normal_iff-control",
+      "source_id": "identity-src-259156fbe396bf9c3fb9",
+      "target_id": "t11-normalization-IndependentBoundaryControls-wrapper_normal_iff",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-wrapper-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-wrapper",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-t-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-t",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-p-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-p",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-oldIdentity-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-oldIdentity",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-eval_p-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-eval_p",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-tree-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-tree",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-tree_supported-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-tree_supported",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-old_typed-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-old_typed",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-new_typed-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-new_typed",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-new_finite_target-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-new_finite_target",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-target_inhabited-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-target_inhabited",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-application_S-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-application_S",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-application_K-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-application_K",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-application_returns-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-application_returns",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-wrapper_step-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-wrapper_step",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-wrapper_red-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-wrapper_red",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "t11-normalization-P01NormalizationBoundary-wrapper_normal-control",
+      "source_id": "identity-src-0cffb5ab1936e586f4df",
+      "target_id": "t11-normalization-P01NormalizationBoundary-wrapper_normal",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "identity-src-3a568ae64ac6477c0a72",
+        "path": "ACCEPTED_INPUTS.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-114006acabc7afdafa71",
+        "path": "ARCHIVE_CONTENTS.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-5e23eec037f2f1fc3885",
+        "path": "DECLARATION_CENSUS.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-4ff8744e4d249457f2de",
+        "path": "INPUT_IDENTITIES.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-b72d5ee33aa901b9fbc7",
+        "path": "PACKAGING.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-969d96df7f5cacabbc84",
+        "path": "README.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-4d2242ca386abb9fb05c",
+        "path": "SOURCE_IDENTITIES.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-3b73994a180eed160e66",
+        "path": "VERIFICATION.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-69e9aba5b6c86082325a",
+        "path": "dependency-order.txt",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-d96af628cc301c9a3270",
+        "path": "evidence/DESIGN_REVIEW_v1.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-d63e281acc44c30b829a",
+        "path": "evidence/INDEPENDENT_REVIEW.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-6bfeb2818a8c6de8a9aa",
+        "path": "evidence/POLYMORPHIC_NONNORMALIZATION_ADMISSION_v1.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-a8bb66faac0c69843076",
+        "path": "evidence/REVIEW.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-b762083ea17b529f3c89",
+        "path": "independent-review/AXIOM_READBACK.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-08c4b00cf6f55546baae",
+        "path": "independent-review/INHERITED_SOURCE_IDENTITIES.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-7869aaee20cf4f9cc7f8",
+        "path": "independent-review/REVIEW.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-f047bd39c7adf4df339f",
+        "path": "independent-review/SOURCE_IDENTITIES.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-1120e0b208f24e022fa5",
+        "path": "independent-review/VERIFICATION.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-259156fbe396bf9c3fb9",
+        "path": "independent-review/sources/IndependentBoundaryControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "identity-src-1d34186abb2851db9db0",
+        "path": "scripts/reproduce-all.sh",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-9ae14f5352ff9b397c8b",
+        "path": "scripts/reproduce-module.sh",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-5dec76c8884f9773fda9",
+        "path": "scripts/verify-sources.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-c1866be0497186f3d0c9",
+        "path": "sources/AllLegacyDerivations.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-aa3f8bdd762a25e526b0",
+        "path": "sources/AllLegacySyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-fc1f44be0fdd69c68977",
+        "path": "sources/AllMixedAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-f675fd81c41feb3a5577",
+        "path": "sources/AllNucleusSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-5837b166d19ec3904f08",
+        "path": "sources/AllStructural.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-3d485b1c9283a625e14f",
+        "path": "sources/AllStructuralBase.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-1ecb6f8b87eb3dcef3ac",
+        "path": "sources/AllStructuralRename.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-ef3967278e941ead9f1e",
+        "path": "sources/AllSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-4f68a8643bcb5875b8c1",
+        "path": "sources/AllTermAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-238c1dfb4fcf213c07ba",
+        "path": "sources/AuditSupport.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "identity-src-cba4cc3c512e2e6b12ee",
+        "path": "sources/BoundaryReadback.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "identity-src-8187eeb6c5bdb90e1b11",
+        "path": "sources/BoundaryResults.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-c3f4ec2976b922090d27",
+        "path": "sources/EffectsAndDependence.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-24fa998e9c1dc127c1ed",
+        "path": "sources/FiniteBridge.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-30403469963501a2d64c",
+        "path": "sources/InternalPolymorphism.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-751f4d534f465f1428ee",
+        "path": "sources/NormalisationAndNumerals.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-6eaf2babfe3594350d70",
+        "path": "sources/P01Candidates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-bc0367b194e8459f3276",
+        "path": "sources/P01Certificates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-d9cfb25dc70827d52eb5",
+        "path": "sources/P01Confluence.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-3e35be9cc2bf619e531b",
+        "path": "sources/P01ContextualJ.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-c58a3abb895f4e1d5077",
+        "path": "sources/P01CurryParametricity.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-aa9086175e05304f369c",
+        "path": "sources/P01DependentControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-4c1f8e3caa0a7cdb996a",
+        "path": "sources/P01DependentCore.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-680aaab2bf3e6a15db9e",
+        "path": "sources/P01DependentFundamental.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-d8d39e778e1700c5297b",
+        "path": "sources/P01DependentModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-dfe0c149e3ee7205ea3f",
+        "path": "sources/P01DependentSubstitution.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-4576695350242d46a931",
+        "path": "sources/P01Examples.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-2b6aa7d7f310e342dfc9",
+        "path": "sources/P01LambdaSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-c37115cd79dce02b44bf",
+        "path": "sources/P01ModelWitnesses.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-94833a078b19e006c80d",
+        "path": "sources/P01Omega.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-36dc841cc0bbd1a3940d",
+        "path": "sources/P01PER.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-883b250907ae8b70dc1c",
+        "path": "sources/P01Polynomials.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-00b02a6d9ab01b9feeaa",
+        "path": "sources/P01RecursiveModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-a9edc367dff34de50261",
+        "path": "sources/P01SNReflection.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-5be50422683e5fc79a2a",
+        "path": "sources/P01SystemF.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-0460ccd8752a7a8fc39d",
+        "path": "sources/P01Translation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-5b00cb7a66e3583b0ba7",
+        "path": "sources/P01TypeAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-0cffb5ab1936e586f4df",
+        "path": "sources/PolymorphicNormalizationBoundary.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-2460d68728ef24277c56",
+        "path": "sources/SubstitutionSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-ed710d91f08705f13d4d",
+        "path": "sources/TypedAlgebra.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-e7f1bdee5935346a515e",
+        "path": "sources/TypedConstants.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-99a93717bab9295336c4",
+        "path": "sources/TypedLaws.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-d73ae6d55b1ed88f65b7",
+        "path": "sources/TypedLegacy.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-5eb573e7edf862b1c7a4",
+        "path": "sources/TypedPiLaws.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-6829db5713ffc99787d5",
+        "path": "sources/TypedPredicates.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-e492759251ba9c19a378",
+        "path": "sources/TypedSigmaLaws.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-7cec73795da1628c4091",
+        "path": "sources/TypedSoundness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-498fd8e16f71e9fa5028",
+        "path": "sources/TypedStructural.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-4cb6430a9f6ca024c11f",
+        "path": "sources/TypedSyntax.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-864dac0cadf7fa7d25c8",
+        "path": "sources/TypedTermLemmas.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "identity-src-75a60db349c64e493278",
+        "path": "configuration/lake-manifest.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "identity-src-db1e24bbc42e41ce33ac",
+        "path": "configuration/D10_ENVIRONMENT_AND_DESIGN_INPUTS.json",
+        "role": "CONFIG"
+      }
+    ],
+    "modules": [
+      {
+        "name": "IndependentBoundaryControls",
+        "source_id": "identity-src-259156fbe396bf9c3fb9",
+        "imports": [
+          "Init",
+          "PolymorphicNormalizationBoundary",
+          "AuditSupport"
+        ]
+      },
+      {
+        "name": "AllLegacyDerivations",
+        "source_id": "identity-src-c1866be0497186f3d0c9",
+        "imports": [
+          "Init",
+          "AllLegacySyntax"
+        ]
+      },
+      {
+        "name": "AllLegacySyntax",
+        "source_id": "identity-src-aa3f8bdd762a25e526b0",
+        "imports": [
+          "Init",
+          "AllNucleusSyntax",
+          "AllStructural",
+          "TypedLegacy"
+        ]
+      },
+      {
+        "name": "AllMixedAlgebra",
+        "source_id": "identity-src-fc1f44be0fdd69c68977",
+        "imports": [
+          "Init",
+          "AllTermAlgebra"
+        ]
+      },
+      {
+        "name": "AllNucleusSyntax",
+        "source_id": "identity-src-f675fd81c41feb3a5577",
+        "imports": [
+          "Init",
+          "AllStructuralRename",
+          "TypedStructural"
+        ]
+      },
+      {
+        "name": "AllStructural",
+        "source_id": "identity-src-5837b166d19ec3904f08",
+        "imports": [
+          "Init",
+          "AllStructuralRename"
+        ]
+      },
+      {
+        "name": "AllStructuralBase",
+        "source_id": "identity-src-3d485b1c9283a625e14f",
+        "imports": [
+          "Init",
+          "AllMixedAlgebra"
+        ]
+      },
+      {
+        "name": "AllStructuralRename",
+        "source_id": "identity-src-1ecb6f8b87eb3dcef3ac",
+        "imports": [
+          "Init",
+          "AllStructuralBase"
+        ]
+      },
+      {
+        "name": "AllSyntax",
+        "source_id": "identity-src-ef3967278e941ead9f1e",
+        "imports": [
+          "Init",
+          "SubstitutionSyntax"
+        ]
+      },
+      {
+        "name": "AllTermAlgebra",
+        "source_id": "identity-src-4f68a8643bcb5875b8c1",
+        "imports": [
+          "Init",
+          "AllSyntax"
+        ]
+      },
+      {
+        "name": "AuditSupport",
+        "source_id": "identity-src-238c1dfb4fcf213c07ba",
+        "imports": [
+          "Init",
+          "Lean"
+        ]
+      },
+      {
+        "name": "BoundaryReadback",
+        "source_id": "identity-src-cba4cc3c512e2e6b12ee",
+        "imports": [
+          "Init",
+          "AuditSupport",
+          "PolymorphicNormalizationBoundary"
+        ]
+      },
+      {
+        "name": "BoundaryResults",
+        "source_id": "identity-src-8187eeb6c5bdb90e1b11",
+        "imports": [
+          "Init",
+          "FiniteBridge"
+        ]
+      },
+      {
+        "name": "EffectsAndDependence",
+        "source_id": "identity-src-c3f4ec2976b922090d27",
+        "imports": [
+          "Init",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "FiniteBridge",
+        "source_id": "identity-src-24fa998e9c1dc127c1ed",
+        "imports": [
+          "Init",
+          "InternalPolymorphism"
+        ]
+      },
+      {
+        "name": "InternalPolymorphism",
+        "source_id": "identity-src-30403469963501a2d64c",
+        "imports": [
+          "Init"
+        ]
+      },
+      {
+        "name": "NormalisationAndNumerals",
+        "source_id": "identity-src-751f4d534f465f1428ee",
+        "imports": [
+          "Init",
+          "EffectsAndDependence"
+        ]
+      },
+      {
+        "name": "P01Candidates",
+        "source_id": "identity-src-6eaf2babfe3594350d70",
+        "imports": [
+          "Init",
+          "P01TypeAlgebra",
+          "P01SNReflection",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "P01Certificates",
+        "source_id": "identity-src-bc0367b194e8459f3276",
+        "imports": [
+          "Init",
+          "P01ContextualJ"
+        ]
+      },
+      {
+        "name": "P01Confluence",
+        "source_id": "identity-src-d9cfb25dc70827d52eb5",
+        "imports": [
+          "Init",
+          "P01Candidates"
+        ]
+      },
+      {
+        "name": "P01ContextualJ",
+        "source_id": "identity-src-3e35be9cc2bf619e531b",
+        "imports": [
+          "Init",
+          "P01DependentCore"
+        ]
+      },
+      {
+        "name": "P01CurryParametricity",
+        "source_id": "identity-src-c58a3abb895f4e1d5077",
+        "imports": [
+          "Init",
+          "P01RecursiveModel",
+          "P01SystemF"
+        ]
+      },
+      {
+        "name": "P01DependentControls",
+        "source_id": "identity-src-aa9086175e05304f369c",
+        "imports": [
+          "Init",
+          "P01DependentFundamental"
+        ]
+      },
+      {
+        "name": "P01DependentCore",
+        "source_id": "identity-src-4c1f8e3caa0a7cdb996a",
+        "imports": [
+          "Init",
+          "P01PER"
+        ]
+      },
+      {
+        "name": "P01DependentFundamental",
+        "source_id": "identity-src-680aaab2bf3e6a15db9e",
+        "imports": [
+          "Init",
+          "P01DependentSubstitution"
+        ]
+      },
+      {
+        "name": "P01DependentModel",
+        "source_id": "identity-src-d8d39e778e1700c5297b",
+        "imports": [
+          "Init",
+          "P01RecursiveModel",
+          "P01ModelWitnesses"
+        ]
+      },
+      {
+        "name": "P01DependentSubstitution",
+        "source_id": "identity-src-dfe0c149e3ee7205ea3f",
+        "imports": [
+          "Init",
+          "P01DependentModel"
+        ]
+      },
+      {
+        "name": "P01Examples",
+        "source_id": "identity-src-4576695350242d46a931",
+        "imports": [
+          "Init",
+          "P01Certificates"
+        ]
+      },
+      {
+        "name": "P01LambdaSyntax",
+        "source_id": "identity-src-2b6aa7d7f310e342dfc9",
+        "imports": [
+          "Init",
+          "P01TypeAlgebra",
+          "P01SNReflection"
+        ]
+      },
+      {
+        "name": "P01ModelWitnesses",
+        "source_id": "identity-src-c37115cd79dce02b44bf",
+        "imports": [
+          "Init",
+          "P01CurryParametricity",
+          "P01Translation"
+        ]
+      },
+      {
+        "name": "P01Omega",
+        "source_id": "identity-src-94833a078b19e006c80d",
+        "imports": [
+          "Init",
+          "P01Confluence",
+          "NormalisationAndNumerals"
+        ]
+      },
+      {
+        "name": "P01PER",
+        "source_id": "identity-src-36dc841cc0bbd1a3940d",
+        "imports": [
+          "Init",
+          "P01Polynomials"
+        ]
+      },
+      {
+        "name": "P01Polynomials",
+        "source_id": "identity-src-883b250907ae8b70dc1c",
+        "imports": [
+          "Init",
+          "P01Omega"
+        ]
+      },
+      {
+        "name": "P01RecursiveModel",
+        "source_id": "identity-src-00b02a6d9ab01b9feeaa",
+        "imports": [
+          "Init",
+          "P01Examples"
+        ]
+      },
+      {
+        "name": "P01SNReflection",
+        "source_id": "identity-src-a9edc367dff34de50261",
+        "imports": [
+          "Init"
+        ]
+      },
+      {
+        "name": "P01SystemF",
+        "source_id": "identity-src-5be50422683e5fc79a2a",
+        "imports": [
+          "Init",
+          "P01LambdaSyntax"
+        ]
+      },
+      {
+        "name": "P01Translation",
+        "source_id": "identity-src-0460ccd8752a7a8fc39d",
+        "imports": [
+          "Init",
+          "P01SystemF",
+          "BoundaryResults"
+        ]
+      },
+      {
+        "name": "P01TypeAlgebra",
+        "source_id": "identity-src-5b00cb7a66e3583b0ba7",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Bool.Basic",
+          "FiniteBridge"
+        ]
+      },
+      {
+        "name": "PolymorphicNormalizationBoundary",
+        "source_id": "identity-src-0cffb5ab1936e586f4df",
+        "imports": [
+          "Init",
+          "AllLegacyDerivations",
+          "P01Omega"
+        ]
+      },
+      {
+        "name": "SubstitutionSyntax",
+        "source_id": "identity-src-2460d68728ef24277c56",
+        "imports": [
+          "Init",
+          "P01DependentFundamental"
+        ]
+      },
+      {
+        "name": "TypedAlgebra",
+        "source_id": "identity-src-ed710d91f08705f13d4d",
+        "imports": [
+          "Init",
+          "TypedSyntax"
+        ]
+      },
+      {
+        "name": "TypedConstants",
+        "source_id": "identity-src-e7f1bdee5935346a515e",
+        "imports": [
+          "Init",
+          "TypedTermLemmas"
+        ]
+      },
+      {
+        "name": "TypedLaws",
+        "source_id": "identity-src-99a93717bab9295336c4",
+        "imports": [
+          "Init",
+          "TypedPredicates"
+        ]
+      },
+      {
+        "name": "TypedLegacy",
+        "source_id": "identity-src-d73ae6d55b1ed88f65b7",
+        "imports": [
+          "Init",
+          "TypedStructural",
+          "TypedSoundness",
+          "P01DependentControls"
+        ]
+      },
+      {
+        "name": "TypedPiLaws",
+        "source_id": "identity-src-5eb573e7edf862b1c7a4",
+        "imports": [
+          "Init",
+          "TypedLaws"
+        ]
+      },
+      {
+        "name": "TypedPredicates",
+        "source_id": "identity-src-6829db5713ffc99787d5",
+        "imports": [
+          "Init",
+          "TypedSyntax"
+        ]
+      },
+      {
+        "name": "TypedSigmaLaws",
+        "source_id": "identity-src-e492759251ba9c19a378",
+        "imports": [
+          "Init",
+          "TypedPiLaws"
+        ]
+      },
+      {
+        "name": "TypedSoundness",
+        "source_id": "identity-src-7cec73795da1628c4091",
+        "imports": [
+          "Init",
+          "TypedConstants"
+        ]
+      },
+      {
+        "name": "TypedStructural",
+        "source_id": "identity-src-498fd8e16f71e9fa5028",
+        "imports": [
+          "Init",
+          "TypedAlgebra"
+        ]
+      },
+      {
+        "name": "TypedSyntax",
+        "source_id": "identity-src-4cb6430a9f6ca024c11f",
+        "imports": [
+          "Init",
+          "SubstitutionSyntax"
+        ]
+      },
+      {
+        "name": "TypedTermLemmas",
+        "source_id": "identity-src-864dac0cadf7fa7d25c8",
+        "imports": [
+          "Init",
+          "TypedSigmaLaws"
+        ]
+      }
+    ],
+    "module_order": [
+      "InternalPolymorphism",
+      "FiniteBridge",
+      "P01TypeAlgebra",
+      "P01SNReflection",
+      "BoundaryResults",
+      "P01Candidates",
+      "P01Confluence",
+      "EffectsAndDependence",
+      "NormalisationAndNumerals",
+      "P01Omega",
+      "P01Polynomials",
+      "P01PER",
+      "P01DependentCore",
+      "P01ContextualJ",
+      "P01Certificates",
+      "P01Examples",
+      "P01RecursiveModel",
+      "P01LambdaSyntax",
+      "P01SystemF",
+      "P01CurryParametricity",
+      "P01Translation",
+      "P01ModelWitnesses",
+      "P01DependentModel",
+      "P01DependentSubstitution",
+      "P01DependentFundamental",
+      "SubstitutionSyntax",
+      "AllSyntax",
+      "AllTermAlgebra",
+      "AllMixedAlgebra",
+      "AllStructuralBase",
+      "AllStructuralRename",
+      "TypedSyntax",
+      "TypedAlgebra",
+      "TypedStructural",
+      "AllNucleusSyntax",
+      "AllStructural",
+      "TypedPredicates",
+      "TypedLaws",
+      "TypedPiLaws",
+      "TypedSigmaLaws",
+      "TypedTermLemmas",
+      "TypedConstants",
+      "TypedSoundness",
+      "P01DependentControls",
+      "TypedLegacy",
+      "AllLegacySyntax",
+      "AllLegacyDerivations",
+      "AuditSupport",
+      "PolymorphicNormalizationBoundary",
+      "BoundaryReadback",
+      "IndependentBoundaryControls"
+    ],
+    "positive_roots": [
+      "AllLegacyDerivations",
+      "AllLegacySyntax",
+      "AllMixedAlgebra",
+      "AllNucleusSyntax",
+      "AllStructural",
+      "AllStructuralBase",
+      "AllStructuralRename",
+      "AllSyntax",
+      "AllTermAlgebra",
+      "BoundaryResults",
+      "EffectsAndDependence",
+      "FiniteBridge",
+      "InternalPolymorphism",
+      "NormalisationAndNumerals",
+      "P01Candidates",
+      "P01Certificates",
+      "P01Confluence",
+      "P01ContextualJ",
+      "P01CurryParametricity",
+      "P01DependentControls",
+      "P01DependentCore",
+      "P01DependentFundamental",
+      "P01DependentModel",
+      "P01DependentSubstitution",
+      "P01Examples",
+      "P01LambdaSyntax",
+      "P01ModelWitnesses",
+      "P01Omega",
+      "P01PER",
+      "P01Polynomials",
+      "P01RecursiveModel",
+      "P01SNReflection",
+      "P01SystemF",
+      "P01Translation",
+      "P01TypeAlgebra",
+      "PolymorphicNormalizationBoundary",
+      "SubstitutionSyntax",
+      "TypedAlgebra",
+      "TypedConstants",
+      "TypedLaws",
+      "TypedLegacy",
+      "TypedPiLaws",
+      "TypedPredicates",
+      "TypedSigmaLaws",
+      "TypedSoundness",
+      "TypedStructural",
+      "TypedSyntax",
+      "TypedTermLemmas"
+    ],
+    "audit_roots": [
+      "IndependentBoundaryControls",
+      "AuditSupport",
+      "BoundaryReadback"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean",
+        "package": "lean-release",
+        "path": "Lean.lean",
+        "sha256": "81987fb597b14adf25104f16006c885d1feb9a9ec59745384b10989c9546e9a4"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib.Data.Bool.Basic",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Bool/Basic.lean",
+        "sha256": "fb20d50c3aed15cdf7c5b7f1bc92db8ab850444f158199bfa8cb2f09ac3a5e55"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-boundary_control",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.boundary_control"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-no_normal_reduct",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.no_normal_reduct"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-no_finite_source_representative",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.no_finite_source_representative"
+      },
+      {
+        "target_id": "t11-normalization-IndependentBoundaryControls-discarded_identity_has_normal_reduct",
+        "module": "IndependentBoundaryControls",
+        "name": "IndependentBoundaryControls.discarded_identity_has_normal_reduct"
+      },
+      {
+        "target_id": "t11-normalization-IndependentBoundaryControls-matching_is_not_opaque",
+        "module": "IndependentBoundaryControls",
+        "name": "IndependentBoundaryControls.matching_is_not_opaque"
+      },
+      {
+        "target_id": "t11-normalization-IndependentBoundaryControls-matching_and_opaque_evaluate",
+        "module": "IndependentBoundaryControls",
+        "name": "IndependentBoundaryControls.matching_and_opaque_evaluate"
+      },
+      {
+        "target_id": "t11-normalization-IndependentBoundaryControls-wrapper_normal_iff",
+        "module": "IndependentBoundaryControls",
+        "name": "IndependentBoundaryControls.wrapper_normal_iff"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-wrapper",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.wrapper"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-t",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.t"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-p",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.p"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-oldIdentity",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.oldIdentity"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-eval_p",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.eval_p"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-tree",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.tree"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-tree_supported",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.tree_supported"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-old_typed",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.old_typed"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-new_typed",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.new_typed"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-new_finite_target",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.new_finite_target"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-target_inhabited",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.target_inhabited"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-application_S",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.application_S"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-application_K",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.application_K"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-application_returns",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.application_returns"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-wrapper_step",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.wrapper_step"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-wrapper_red",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.wrapper_red"
+      },
+      {
+        "target_id": "t11-normalization-P01NormalizationBoundary-wrapper_normal",
+        "module": "PolymorphicNormalizationBoundary",
+        "name": "P01NormalizationBoundary.wrapper_normal"
+      }
+    ],
+    "package_manifest_source_id": "identity-src-75a60db349c64e493278",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "identity-src-75a60db349c64e493278"
+      }
+    ],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "t11-normalization-source-check",
+        "source_id": "identity-src-5dec76c8884f9773fda9",
+        "recipe": "t11-normalization-source-check-v1",
+        "sha256": "59dfb863bd8f583993d9497f961db96d009343d805abb81fd4f67e5516600a23",
+        "argument_meanings": {},
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "source-check-before",
+        "kind": "SOURCE_CHECK",
+        "driver_id": "t11-normalization-source-check",
+        "argv": [
+          "{tool:python}",
+          "{project}/scripts/verify-sources.py"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 120,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-InternalPolymorphism",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/InternalPolymorphism.olean",
+          "{project}/sources/InternalPolymorphism.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "source-check-before"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/InternalPolymorphism.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-FiniteBridge",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/FiniteBridge.olean",
+          "{project}/sources/FiniteBridge.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-InternalPolymorphism"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/FiniteBridge.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01TypeAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01TypeAlgebra.olean",
+          "{project}/sources/P01TypeAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-FiniteBridge"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01TypeAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01SNReflection",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01SNReflection.olean",
+          "{project}/sources/P01SNReflection.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01TypeAlgebra"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01SNReflection.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-BoundaryResults",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/BoundaryResults.olean",
+          "{project}/sources/BoundaryResults.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01SNReflection"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/BoundaryResults.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Candidates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Candidates.olean",
+          "{project}/sources/P01Candidates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-BoundaryResults"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Candidates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Confluence",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Confluence.olean",
+          "{project}/sources/P01Confluence.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Candidates"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Confluence.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-EffectsAndDependence",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/EffectsAndDependence.olean",
+          "{project}/sources/EffectsAndDependence.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Confluence"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/EffectsAndDependence.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-NormalisationAndNumerals",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/NormalisationAndNumerals.olean",
+          "{project}/sources/NormalisationAndNumerals.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-EffectsAndDependence"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/NormalisationAndNumerals.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Omega",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Omega.olean",
+          "{project}/sources/P01Omega.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-NormalisationAndNumerals"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Omega.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Polynomials",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Polynomials.olean",
+          "{project}/sources/P01Polynomials.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Omega"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Polynomials.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01PER",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01PER.olean",
+          "{project}/sources/P01PER.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Polynomials"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01PER.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentCore",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentCore.olean",
+          "{project}/sources/P01DependentCore.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01PER"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentCore.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01ContextualJ",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01ContextualJ.olean",
+          "{project}/sources/P01ContextualJ.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentCore"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01ContextualJ.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Certificates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Certificates.olean",
+          "{project}/sources/P01Certificates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01ContextualJ"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Certificates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Examples",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Examples.olean",
+          "{project}/sources/P01Examples.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Certificates"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Examples.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01RecursiveModel",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01RecursiveModel.olean",
+          "{project}/sources/P01RecursiveModel.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Examples"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01RecursiveModel.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01LambdaSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01LambdaSyntax.olean",
+          "{project}/sources/P01LambdaSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01RecursiveModel"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01LambdaSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01SystemF",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01SystemF.olean",
+          "{project}/sources/P01SystemF.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01LambdaSyntax"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01SystemF.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01CurryParametricity",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01CurryParametricity.olean",
+          "{project}/sources/P01CurryParametricity.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01SystemF"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01CurryParametricity.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01Translation",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01Translation.olean",
+          "{project}/sources/P01Translation.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01CurryParametricity"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01Translation.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01ModelWitnesses",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01ModelWitnesses.olean",
+          "{project}/sources/P01ModelWitnesses.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01Translation"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01ModelWitnesses.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentModel",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentModel.olean",
+          "{project}/sources/P01DependentModel.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01ModelWitnesses"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentModel.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentSubstitution",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentSubstitution.olean",
+          "{project}/sources/P01DependentSubstitution.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentModel"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentSubstitution.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentFundamental",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentFundamental.olean",
+          "{project}/sources/P01DependentFundamental.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentSubstitution"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentFundamental.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-SubstitutionSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/SubstitutionSyntax.olean",
+          "{project}/sources/SubstitutionSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentFundamental"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/SubstitutionSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllSyntax.olean",
+          "{project}/sources/AllSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-SubstitutionSyntax"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllTermAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllTermAlgebra.olean",
+          "{project}/sources/AllTermAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllSyntax"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllTermAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllMixedAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllMixedAlgebra.olean",
+          "{project}/sources/AllMixedAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllTermAlgebra"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllMixedAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllStructuralBase",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllStructuralBase.olean",
+          "{project}/sources/AllStructuralBase.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllMixedAlgebra"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllStructuralBase.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllStructuralRename",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllStructuralRename.olean",
+          "{project}/sources/AllStructuralRename.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllStructuralBase"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllStructuralRename.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedSyntax.olean",
+          "{project}/sources/TypedSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllStructuralRename"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedAlgebra",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedAlgebra.olean",
+          "{project}/sources/TypedAlgebra.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedSyntax"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedAlgebra.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedStructural",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedStructural.olean",
+          "{project}/sources/TypedStructural.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedAlgebra"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedStructural.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllNucleusSyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllNucleusSyntax.olean",
+          "{project}/sources/AllNucleusSyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedStructural"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllNucleusSyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllStructural",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllStructural.olean",
+          "{project}/sources/AllStructural.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllNucleusSyntax"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllStructural.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedPredicates",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedPredicates.olean",
+          "{project}/sources/TypedPredicates.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllStructural"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedPredicates.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedLaws",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedLaws.olean",
+          "{project}/sources/TypedLaws.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedPredicates"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedLaws.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedPiLaws",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedPiLaws.olean",
+          "{project}/sources/TypedPiLaws.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedLaws"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedPiLaws.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedSigmaLaws",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedSigmaLaws.olean",
+          "{project}/sources/TypedSigmaLaws.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedPiLaws"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedSigmaLaws.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedTermLemmas",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedTermLemmas.olean",
+          "{project}/sources/TypedTermLemmas.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedSigmaLaws"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedTermLemmas.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedConstants",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedConstants.olean",
+          "{project}/sources/TypedConstants.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedTermLemmas"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedConstants.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedSoundness",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedSoundness.olean",
+          "{project}/sources/TypedSoundness.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedConstants"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedSoundness.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-P01DependentControls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/P01DependentControls.olean",
+          "{project}/sources/P01DependentControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedSoundness"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/P01DependentControls.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-TypedLegacy",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/TypedLegacy.olean",
+          "{project}/sources/TypedLegacy.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-P01DependentControls"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/TypedLegacy.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllLegacySyntax",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllLegacySyntax.olean",
+          "{project}/sources/AllLegacySyntax.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-TypedLegacy"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllLegacySyntax.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AllLegacyDerivations",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AllLegacyDerivations.olean",
+          "{project}/sources/AllLegacyDerivations.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllLegacySyntax"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AllLegacyDerivations.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-AuditSupport",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/AuditSupport.olean",
+          "{project}/sources/AuditSupport.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AllLegacyDerivations"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/AuditSupport.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-PolymorphicNormalizationBoundary",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/PolymorphicNormalizationBoundary.olean",
+          "{project}/sources/PolymorphicNormalizationBoundary.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-AuditSupport"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/PolymorphicNormalizationBoundary.olean"
+        ],
+        "control_ids": [
+          "t11-normalization-P01NormalizationBoundary-boundary_control-control",
+          "t11-normalization-P01NormalizationBoundary-no_normal_reduct-control",
+          "t11-normalization-P01NormalizationBoundary-no_finite_source_representative-control",
+          "t11-normalization-P01NormalizationBoundary-wrapper-control",
+          "t11-normalization-P01NormalizationBoundary-t-control",
+          "t11-normalization-P01NormalizationBoundary-p-control",
+          "t11-normalization-P01NormalizationBoundary-oldIdentity-control",
+          "t11-normalization-P01NormalizationBoundary-eval_p-control",
+          "t11-normalization-P01NormalizationBoundary-tree-control",
+          "t11-normalization-P01NormalizationBoundary-tree_supported-control",
+          "t11-normalization-P01NormalizationBoundary-old_typed-control",
+          "t11-normalization-P01NormalizationBoundary-new_typed-control",
+          "t11-normalization-P01NormalizationBoundary-new_finite_target-control",
+          "t11-normalization-P01NormalizationBoundary-target_inhabited-control",
+          "t11-normalization-P01NormalizationBoundary-application_S-control",
+          "t11-normalization-P01NormalizationBoundary-application_K-control",
+          "t11-normalization-P01NormalizationBoundary-application_returns-control",
+          "t11-normalization-P01NormalizationBoundary-wrapper_step-control",
+          "t11-normalization-P01NormalizationBoundary-wrapper_red-control",
+          "t11-normalization-P01NormalizationBoundary-wrapper_normal-control"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-BoundaryReadback",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/BoundaryReadback.olean",
+          "{project}/sources/BoundaryReadback.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-PolymorphicNormalizationBoundary"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/BoundaryReadback.olean"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IndependentBoundaryControls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/IndependentBoundaryControls.olean",
+          "{project}/independent-review/sources/IndependentBoundaryControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-BoundaryReadback"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/IndependentBoundaryControls.olean"
+        ],
+        "control_ids": [
+          "t11-normalization-IndependentBoundaryControls-discarded_identity_has_normal_reduct-control",
+          "t11-normalization-IndependentBoundaryControls-matching_is_not_opaque-control",
+          "t11-normalization-IndependentBoundaryControls-matching_and_opaque_evaluate-control",
+          "t11-normalization-IndependentBoundaryControls-wrapper_normal_iff-control"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "source-check-after",
+        "kind": "SOURCE_CHECK",
+        "driver_id": "t11-normalization-source-check",
+        "argv": [
+          "{tool:python}",
+          "{project}/scripts/verify-sources.py"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IndependentBoundaryControls"
+        ],
+        "timeout_seconds": 120,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "build"
+    ]
+  }
+}

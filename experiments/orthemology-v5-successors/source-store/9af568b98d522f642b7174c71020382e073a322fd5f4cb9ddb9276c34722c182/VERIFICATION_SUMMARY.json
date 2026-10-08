@@ -1,0 +1,203 @@
+{
+  "status": "AUTHOR_VERIFIED_INDEPENDENT_ACCEPTANCE_RECORDED_SEPARATELY",
+  "endpoint": "For valid actual input, SemanticWinning(Unit) iff existence of a finite accepted body; arbitrary measurable-seed policy implies certificate existence",
+  "successful_evidence": [
+    {
+      "module": "InputControls",
+      "source_sha256": "3452763b86cabba5a453c1d0c693f2bf2b8a55e525750ba9908c283f23bbb2ce",
+      "exit_code": 0,
+      "log": "evidence/InputControls.log",
+      "log_sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+      "historical_receipt_sha256": "cc14939d9a37d69648528b6e59b5dbfdda467d97211a17f4a43e460d1ab53cfc"
+    },
+    {
+      "module": "PathControls",
+      "source_sha256": "9bfe96341b130524ee86c4706bc2e996396ff471f3c03e183928d0c2e74825c5",
+      "exit_code": 0,
+      "log": "evidence/PathControls.log",
+      "log_sha256": "e988f0abbb36163100058df9b4217684e2885f201385266c52671c6a464093e3",
+      "historical_receipt_sha256": "3f28e68cb9fd4f4fcb6d80ceec0394bdfb636930fd369a1f44fd72b5228f30f9"
+    },
+    {
+      "module": "CertificateControls",
+      "source_sha256": "be7154c4dad2daa1dc2ab93b88788358adc0d2c9dd6dab949dec1a8300f534ba",
+      "exit_code": 0,
+      "log": "evidence/CertificateControls.log",
+      "log_sha256": "6869789ddc5fa85f81a5096926cfffa18d13d1e7cd9920de14b8f1284aa23389",
+      "historical_receipt_sha256": "33611e8b003068af8168bc9fef2b26b2f13d2945202164ed0e8389eb25068d1b"
+    },
+    {
+      "module": "BindingControls",
+      "source_sha256": "7d936210bd47f72130de3b1caf24deb797d522b3dc55f74c140a876f5b2228c4",
+      "exit_code": 0,
+      "log": "evidence/BindingControls.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "historical_receipt_sha256": "5d86e6f764211d2ca9e064d96f0b7ecce92d034b86a4e3f852a0ec01898b2368"
+    },
+    {
+      "module": "CompositionControls",
+      "source_sha256": "5c663b6dc75b23c6937570766a1913b5c1d40b563fc63928e5239048cb9ec8e6",
+      "exit_code": 0,
+      "log": "evidence/CompositionControls.log",
+      "log_sha256": "c971d03db5aaa1413494b461605575e1508354157d25fca0472087be53643cac",
+      "historical_receipt_sha256": "859b4708790112b8e4ed201dccdadfa5766f3a81ddb2cd100f5d892dc9480b8b"
+    },
+    {
+      "module": "CertificateReadback",
+      "source_sha256": "b0e4638827068c5a8209d6a1895c11bba0554c987c470c442e5813c366b09834",
+      "exit_code": 0,
+      "log": "evidence/CertificateReadback.log",
+      "log_sha256": "2ba440a3698f002ae6078239329899627ff8a52abea2b3ca88d4fc9f1080fdc1",
+      "historical_receipt_sha256": "82843d007ded05c4273c4fc588664e4d8a46e9356854da7add6040a1e5e91125"
+    },
+    {
+      "module": "CheckerDependencies",
+      "source_sha256": "a72a6e1f9f0946a1e8636bd7ad8bd570ef6d4e96e7ef57af058ce9a3feed2685",
+      "exit_code": 0,
+      "log": "evidence/CheckerDependencies.log",
+      "log_sha256": "6a6ee5ba2b938deb973d2cc60bff44a5da60ceac8eca8d7f4e9eda2dd37e26e6",
+      "historical_receipt_sha256": "154cc3b144072d6bc0141969d6118160b143e46eedc66808c768b60ebc8ce9cb"
+    }
+  ],
+  "codegeneration": {
+    "scope": "Lean C codegeneration; not linked standalone execution",
+    "runs": [
+      {
+        "module": "CertificateData",
+        "source_sha256": "e05d663571ba1cdf8e2ad04f19442721d4f03ee5bca46c0ad185e5d2c2f0e0c6",
+        "exit_code": 0,
+        "elapsed": 5.038546672993107,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "c_sha256": "4ffda27f5c620014eb7d67ca06e04f43481de139520ee97ebb4302beb7523d79",
+        "c_bytes": 182866
+      },
+      {
+        "module": "CertificateOrder",
+        "source_sha256": "11975a5518aa70a8b3cb264a07b155611dfc84992a75fc4fe2a417e46813bb0e",
+        "exit_code": 0,
+        "elapsed": 4.014840097996057,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "c_sha256": "463cca72254ad50217853f2b056d05d2757afbeb479555d6dc732f4700eede30",
+        "c_bytes": 9082
+      },
+      {
+        "module": "CertificatePath",
+        "source_sha256": "d8e26f21fa37cd8ddf250ab9b440a1b25da481d201e66f3913ce822620e799f8",
+        "exit_code": 0,
+        "elapsed": 4.81603312700463,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "c_sha256": "ebd456194d33cb2cc648465850f9ed8c9c7f0add4f7f2887d1bbb3bbc1876231",
+        "c_bytes": 72855
+      },
+      {
+        "module": "CertificateSyntax",
+        "source_sha256": "e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a",
+        "exit_code": 0,
+        "elapsed": 6.481388258005609,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "c_sha256": "ae7988c963fc54b0b363790bd00f90250c874e70dec48684dace549ba1f582ce",
+        "c_bytes": 144476
+      },
+      {
+        "module": "CertificateComposition",
+        "source_sha256": "7ef0cb1db2fffa67642c361520560fffc53cc0d8b39530bec92f56070a999c0e",
+        "exit_code": 0,
+        "elapsed": 6.547151798993582,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "c_sha256": "d635e9c400d4e0a3ef21aec20bf210ce687dff2553d697c5ac3aef1cc946bd26",
+        "c_bytes": 87694
+      },
+      {
+        "module": "CertificateBinding",
+        "source_sha256": "206f1197ac41521668bfbb2939d6c817bfe1d114e7f32066e679ce038e999a82",
+        "exit_code": 0,
+        "elapsed": 3.9040822889946867,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "c_sha256": "e7eff7a1f3397644cf73579b554c71adb1364fe2fe3186d24c873729444aed7a",
+        "c_bytes": 8016
+      }
+    ],
+    "status": "PASS_SIX_MODULE_C_CODEGEN_NOT_LINKED"
+  },
+  "checker_mutations": [
+    {
+      "mutation": "AllReceiptsRemoved",
+      "baseline_source_sha256": "e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a",
+      "mutant_source_sha256": "fda25918bc7adddefe7de8c72a061e23d5edafd157d79769eff3f0c5985ea1bd",
+      "status": "DELIBERATE_MUTANT_DETECTED_BY_EXECUTABLE_GUARD",
+      "runs": [
+        {
+          "module": "CertificateSyntax",
+          "exit_code": 0,
+          "elapsed": 5.390038327008369,
+          "source_sha256": "fda25918bc7adddefe7de8c72a061e23d5edafd157d79769eff3f0c5985ea1bd",
+          "log_sha256": "97f13614e546e5c035deb541e084db0de739682c5b3ada8807565ce34f922156"
+        },
+        {
+          "module": "CertificateFixtures",
+          "exit_code": 0,
+          "elapsed": 3.9755451940000057,
+          "source_sha256": "02fa71e29d711f92d4f77c087609bd270eaae726ced36fb2cd748b695d1d37ab",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "MutationControl",
+          "exit_code": 1,
+          "elapsed": 3.6172160059941234,
+          "source_sha256": "438bb09106e768b1cad2fe99911ff3d29ed8037d580e606a56f1fe76cb58b85e",
+          "log_sha256": "3033c691d8a2de71a381d0cb24d6a3dd3ea432032fb8c65f519ed0c3c9e11302"
+        }
+      ]
+    },
+    {
+      "mutation": "RivalParityRemoved",
+      "baseline_source_sha256": "e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a",
+      "mutant_source_sha256": "0b867c4045d18044ab61a2e4f43dc574e25d2d637a7a89fdd386240ee32dc8b7",
+      "status": "DELIBERATE_MUTANT_DETECTED_BY_EXECUTABLE_GUARD",
+      "runs": [
+        {
+          "module": "CertificateSyntax",
+          "exit_code": 0,
+          "elapsed": 5.0305150560016045,
+          "source_sha256": "0b867c4045d18044ab61a2e4f43dc574e25d2d637a7a89fdd386240ee32dc8b7",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "CertificateFixtures",
+          "exit_code": 0,
+          "elapsed": 3.7880921310134,
+          "source_sha256": "02fa71e29d711f92d4f77c087609bd270eaae726ced36fb2cd748b695d1d37ab",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "MutationControl",
+          "exit_code": 1,
+          "elapsed": 3.391229247004958,
+          "source_sha256": "a518e719e9665060437ecf2dcbbb95dd0ecd56ee85d68d1f341f8ae090f5708f",
+          "log_sha256": "b81677b71a8a1cdc279531482ace7e4d82add55ed33bd8489f834caa96b87fcc"
+        }
+      ]
+    }
+  ],
+  "path_mutations": {
+    "length_removed": "EXPECTED_CONCRETE_GUARD_REJECTION",
+    "edge_validation_removed": "EXPECTED_CONCRETE_GUARD_REJECTION"
+  },
+  "dependency_audit": {
+    "count": 1068,
+    "followed": [
+      "definition bodies",
+      "opaque bodies",
+      "implemented_by"
+    ],
+    "trusted_external_primitives_reported": true
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "author_inherited_objects": "qualified exact source/transitive/object/run receipt reuse",
+  "independent_inherited_replay": "Reviewer independently cold-built 87 selected cost modules; final whole-packet review separate",
+  "linked_standalone_execution_claimed": false
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "occurrence-capsule-projection-chain-v2",
+  "accepted_original": {
+    "path": "tranche10/research/occurrence-continuation/release-candidate-v1/SOURCE_CAPSULE.md",
+    "sha256": "9b1a409a9319c5da7d4492115e5087c6b73d369f5a10a65dff0d3c2e3beaf561",
+    "bytes": 2303
+  },
+  "previous_public_projection": {
+    "path": "tranche10/reviews/cross-component/public-projection-v1/occurrence/SOURCE_CAPSULE.md",
+    "sha256": "b822321099c1e6406f0a544cb2d29b9d9ceb90058966d40424ba4fc5b0c4bd15",
+    "bytes": 2188
+  },
+  "current_public_projection": {
+    "path": "tranche10/reviews/cross-component/public-projection-v2/occurrence/SOURCE_CAPSULE.md",
+    "sha256": "e25a4892f50eabf427b9eafce002744aeed9e5ffecc2b5f8896a8992ed7f28f1",
+    "bytes": 1701
+  },
+  "full_projection_receipt": "../../../reviews/cross-component/public-projection-v2/PROJECTION_BINDING.json",
+  "unchanged_fixture": {
+    "path": "tranche10/research/occurrence-continuation/release-candidate-v1/checker/fixtures/source_roles.json",
+    "sha256": "8d821ec871977ba5c22ff00d8cc27841c32aab682aae0c0d2cf99cb6f695169c",
+    "bytes": 1325
+  },
+  "current_work_total_including_delivered_chat": 166,
+  "remaining_report_final_words": 34
+}

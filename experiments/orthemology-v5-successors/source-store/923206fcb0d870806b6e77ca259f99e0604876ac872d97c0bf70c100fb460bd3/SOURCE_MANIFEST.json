@@ -1,0 +1,345 @@
+{
+  "schema": "ninth-selector-a1-source-v1",
+  "declarations": [
+    {
+      "module": "FiniteRadixNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.digit_mod_pow",
+      "line": 9
+    },
+    {
+      "module": "FiniteRadixNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.residue_eq_iff_digits",
+      "line": 16
+    },
+    {
+      "module": "FiniteRadixNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.bounded_eq_iff_digits",
+      "line": 29
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.cell_index_roundtrip",
+      "line": 15
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.support_index_roundtrip",
+      "line": 20
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.bit_encoding_injective",
+      "line": 23
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.target_encoding_injective",
+      "line": 27
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.retained_encoding_injective",
+      "line": 31
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.retained_encoding_le_sixteen",
+      "line": 35
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.absent_present_empty_distinct",
+      "line": 38
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalizeData",
+      "line": 42
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorExtraction.SameCells",
+      "line": 45
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.cycleDigit_as_radix",
+      "line": 50
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.targetDigit_as_radix",
+      "line": 53
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.stageDigit_as_radix",
+      "line": 59
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalized_cycleDigit",
+      "line": 65
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalized_targetDigit",
+      "line": 70
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalized_stageDigit",
+      "line": 77
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalize_sameCells",
+      "line": 84
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.sameCells_iff_normalize_eq",
+      "line": 88
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.certificate_iff_of_sameCells",
+      "line": 117
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalized_certificate_iff",
+      "line": 132
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalized_literal",
+      "line": 138
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.literal_certificate_iff",
+      "line": 142
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.certificate_iff_exact_normalForm",
+      "line": 156
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.exactly_one_literal_certificate",
+      "line": 173
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorExtraction.recoveredOrientation",
+      "line": 187
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.recoveredOrientation_exact",
+      "line": 190
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalized_eq_recovered_literal",
+      "line": 200
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.recovered_literal_certificate",
+      "line": 207
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorExtraction.BoundedData",
+      "line": 215
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalizeData_bounded",
+      "line": 218
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalizeData_of_bounded",
+      "line": 221
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalizeData_idempotent",
+      "line": 227
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.bounded_certificate_iff",
+      "line": 232
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorExtraction.addHighDigits",
+      "line": 237
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.addHighDigits_normalize",
+      "line": 240
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.certificate_addHighDigits_iff",
+      "line": 244
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.certified_records_not_unique",
+      "line": 253
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.data_eq_normalized_plus_high",
+      "line": 267
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.certificate_iff_literal_plus_high",
+      "line": 276
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.certified_normalForms_unique",
+      "line": 292
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.existsUnique_bounded_certificate",
+      "line": 304
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalizeCertified",
+      "line": 320
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.normalizeCertified_value",
+      "line": 328
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorExtraction.extractCertifiedLiteral",
+      "line": 337
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.extractCertifiedLiteral_value",
+      "line": 342
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.malformed_cycle_input_distinguishes_high_bits",
+      "line": 351
+    },
+    {
+      "module": "SelectorTableNormalForm",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorExtraction.sameCells_but_malformed_input_differs",
+      "line": 358
+    }
+  ],
+  "definitions": 7,
+  "theorems": 42,
+  "files": [
+    {
+      "path": "replay.py",
+      "sha256": "95efa27f147b7a7f88146b8e561177e5f9e749334ceeaeade799db3058dc9a2a",
+      "bytes": 5474
+    },
+    {
+      "path": "spec/A1_CLASSIFICATION_SPEC.md",
+      "sha256": "3428f6604404c038e911af7889e4e682b3e27b29a9591d95864226041faa4e35",
+      "bytes": 2868
+    },
+    {
+      "path": "spec/A1_REVIEW_TARGETS.md",
+      "sha256": "15ea260d3eeee82eda0fed876bac5e445f0662b09101973a9bde99c446a4e5db",
+      "bytes": 1735
+    },
+    {
+      "path": "spec/A1_SCOPE_LEDGER.md",
+      "sha256": "07e0c28903535bcf9aaf6352b489dea37ef6f411297000e9a3973c3ef5ef48ae",
+      "bytes": 2528
+    },
+    {
+      "path": "spec/SOURCE_OBSTRUCTION.md",
+      "sha256": "42c97e4e9b8f3b22c64666ce5f6b7ca60216dc8a2257a1c463ee7fdcf1b8333e",
+      "bytes": 3661
+    },
+    {
+      "path": "src/A1AxiomReadback.lean",
+      "sha256": "3aa4e7ec93fe899391fe4a391bc459d5deb6bbe208363851c6e028704b997879",
+      "bytes": 4401
+    },
+    {
+      "path": "src/FiniteRadixNormalForm.lean",
+      "sha256": "b031dccba7de3cf461cf46caa84bb8c3dad71593b149622775bd7f9300058541",
+      "bytes": 1518
+    },
+    {
+      "path": "src/SelectorTableNormalForm.lean",
+      "sha256": "4b9e5ff926ea23b1c715d4f1340ac4c2b26ee537945c0dbf568cba9efdffacc0",
+      "bytes": 18368
+    }
+  ],
+  "required_core_source_manifest_sha256": "8981fe18fb0d182dfbab01142f250354846dfb691c873d8d1ced71d3f1df3f4c",
+  "required_literal_source_manifest_sha256": "81d7bec2f6bf584d62f5cac7aa32773870dcff4ca33d8d53d5c84cec765f63e4"
+}

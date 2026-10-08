@@ -1,0 +1,41 @@
+{
+  "source_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+  "scope": "Source identity only; not a verified semantic extraction",
+  "nodes": {
+    "nat": {
+      "sha256": "98ca338289400b73462706022d8ffedac93a538fc121ef8acf3aea72a0292fed",
+      "start_line": 22,
+      "end_line": 24
+    },
+    "decode_bytes": {
+      "sha256": "d241149dbb73b8b9edf7f2be6a99259dbd2989d5dd5f986cff0b8fae6d01c730",
+      "start_line": 104,
+      "end_line": 113
+    },
+    "decode": {
+      "sha256": "868422343ddb2704ef5eeb4e37bbabef4dba5fb356d68d383781631451499a20",
+      "start_line": 115,
+      "end_line": 120
+    },
+    "Meter": {
+      "sha256": "38c9660c9828c8a97c29fe10fe9d177d6098023a056649be69c9e49a404179c4",
+      "start_line": 123,
+      "end_line": 132
+    },
+    "eval_expr": {
+      "sha256": "ded554af6746f7315e933fa44273bbd38162f998c6df82d8741f4690ec8a9229",
+      "start_line": 134,
+      "end_line": 159
+    },
+    "run": {
+      "sha256": "2f86f6b4b50523019092f2213d809be67c8b6dca0261f02e73fea54755a1ffbb",
+      "start_line": 161,
+      "end_line": 183
+    },
+    "evaluate_index": {
+      "sha256": "f5f1d7000b96ccb497ee802a04348cbdb5240231f300a6ff29dd17ec72480219",
+      "start_line": 185,
+      "end_line": 188
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "schema": "eleventh-actual-bearer-source-selection-audit-v1",
+  "as_of_utc": "2026-10-03T18:02:00Z",
+  "status": "ACCEPTED_EXACT_THREE_FILE_SOURCE_USE",
+  "scope": "Source-use and public-custody review of the exact three-file selection below. Scientific acceptance and whole-Eleventh final distribution remain separate.",
+  "selected_files": [
+    {
+      "path": "tranche11/research/actual-bearer-warrant/release-v1/ARTICLE.md",
+      "sha256": "270004e117a99a58d7619ec25b372c0a4652070ee2c8e2b3c27d44c4e6e4fe16",
+      "bytes": 22754
+    },
+    {
+      "path": "tranche11/research/actual-bearer-warrant/release-v1/CLAIMS.md",
+      "sha256": "ae16b35e7a8696b744ecf350826ecae3474ff04abb07147c3d517d45b8546b8d",
+      "bytes": 4079
+    },
+    {
+      "path": "tranche11/research/actual-bearer-warrant/release-v1/SOURCE_BINDINGS.md",
+      "sha256": "ca0f4103829055bc9b16b6327aa433da681d6b2c9628d58e7598c6842c9eda83",
+      "bytes": 4276
+    }
+  ],
+  "inspected_whole_text": true,
+  "span_binding_convention": "UTF-8 byte offsets in exact ARTICLE.md, start inclusive and end exclusive; hashes bind only charged prose and do not repeat it.",
+  "charged_spans": [
+    {
+      "id": "SA13_CAPSULE",
+      "work": "SCHAFFER_ACTION2013",
+      "file": "ARTICLE.md",
+      "section": "3",
+      "byte_start_inclusive": 5674,
+      "byte_end_exclusive": 5948,
+      "utf8_bytes": 274,
+      "sha256": "7fb65bd8ced341a9ecece681460186436c3ee1ba8932dea5efd8e411ed0ab2ed",
+      "words": 32,
+      "occurrences": 1,
+      "counting_note": "Whitespace-delimited words; source citation locators excluded. Mixed source/application sentences retained in full where charged."
+    },
+    {
+      "id": "EM14_CAPSULE",
+      "work": "MILLER2014",
+      "file": "ARTICLE.md",
+      "section": "3",
+      "byte_start_inclusive": 6034,
+      "byte_end_exclusive": 6318,
+      "utf8_bytes": 284,
+      "sha256": "aa44f9651f29e4ee526cedc93bb3ab41d9a4ee63c5f3ab9328af9266799a44d0",
+      "words": 34,
+      "occurrences": 1,
+      "counting_note": "Whitespace-delimited words; source citation locators excluded. Mixed source/application sentences retained in full where charged."
+    },
+    {
+      "id": "SA13_APPLICATION_QUESTION",
+      "work": "SCHAFFER_ACTION2013",
+      "file": "ARTICLE.md",
+      "section": "3",
+      "byte_start_inclusive": 6444,
+      "byte_end_exclusive": 6570,
+      "utf8_bytes": 126,
+      "sha256": "5fd12905aad8b0b78e0958a4685af01b5e9a367189cf31f1ba570772fa922c58",
+      "words": 20,
+      "occurrences": 1,
+      "counting_note": "Whitespace-delimited words; source citation locators excluded. Mixed source/application sentences retained in full where charged."
+    },
+    {
+      "id": "SA13_DYNAMICAL_SETUP",
+      "work": "SCHAFFER_ACTION2013",
+      "file": "ARTICLE.md",
+      "section": "6",
+      "byte_start_inclusive": 14385,
+      "byte_end_exclusive": 14543,
+      "utf8_bytes": 158,
+      "sha256": "8b43aa167fa367228165d119d3be3cf3d4ad27e732a97b97ed8274675faf66e6",
+      "words": 22,
+      "occurrences": 1,
+      "counting_note": "Whitespace-delimited words; source citation locators excluded. Mixed source/application sentences retained in full where charged."
+    },
+    {
+      "id": "SA13_GOVERNANCE_SETUP",
+      "work": "SCHAFFER_ACTION2013",
+      "file": "ARTICLE.md",
+      "section": "6",
+      "byte_start_inclusive": 15144,
+      "byte_end_exclusive": 15298,
+      "utf8_bytes": 154,
+      "sha256": "e85072cbe2ffde8ec5ef2b0d69c1e0da7c5b7cc9aae9723b60a4be153e403f01",
+      "words": 23,
+      "occurrences": 1,
+      "counting_note": "Whitespace-delimited words; source citation locators excluded. Mixed source/application sentences retained in full where charged."
+    }
+  ],
+  "work_totals": {
+    "SCHAFFER_ACTION2013": {
+      "article_words": 97,
+      "selected_companions_added_words": 0,
+      "quotation_words": 0,
+      "author_allocation": 100,
+      "unused_author_allocation": 3,
+      "shared_review_report_chat_reserved": 100,
+      "actual_source_review_exposition_words": 0
+    },
+    "MILLER2014": {
+      "article_words": 34,
+      "selected_companions_added_words": 0,
+      "quotation_words": 0,
+      "author_allocation": 100,
+      "unused_author_allocation": 66,
+      "shared_review_report_chat_reserved": 100,
+      "actual_source_review_exposition_words": 0
+    }
+  },
+  "count_correction": "The preliminary estimate of the revised application question was 21 words; exact whitespace count is 20. Thus SA13 is 97 rather than the preliminary 98, with no source span changed.",
+  "source_attribution_checks": {
+    "SCHAFFER_ACTION2013": {
+      "result": "Supported at declared witness and argument scope",
+      "checked_loci": "Inspected local publisher-layout text, printed 68-74 and 83-85, with the article witness identity stated in SOURCE_BINDINGS.md.",
+      "limit": "Attribution check does not certify physical/metaphysical premises or final global source conclusions."
+    },
+    "MILLER2014": {
+      "result": "Supported at declared draft-witness scope",
+      "checked_loci": "Exact page-mapped manuscript capture, pages 1-6, especially 2-5; capture hash e0287752028d21d1e3dcefa9caefd2193ba905f2095a1b71820b40ba9e17fb3f.",
+      "limit": "Capture identity does not establish original PDF byte identity or final-publication textual identity."
+    }
+  },
+  "classification_rationale": {
+    "counted_beyond_capsules": "Application question and two dynamical/governance setup spans are conservatively charged to SA13 despite being outside the marked capsule.",
+    "original_or_inherited_programme_reasoning": "The typed assembly application, four attribution responses, actual receiving-mode target and unborrowed-exercise conditions are presented as programme-specific argument with inherited dependencies, not historical statements attributed to either new primary.",
+    "companion_inspection": "CLAIMS.md uses a locator-only prior-art statement. SOURCE_BINDINGS.md supplies identity, access and custody limits without theory synopsis.",
+    "quotation_review": "No primary quotation in the selected files.",
+    "predecessor_use": "Inherited primary exposition and predecessor report/archive bodies are not selected in this three-file packet."
+  },
+  "public_boundary": {
+    "actor_labels_or_copied_instructions_found": false,
+    "private_source_bodies_or_exploratory_records_selected": false,
+    "source_and_custody_limits_retained": true,
+    "selection_must_be_included_once": true
+  },
+  "limits": [
+    "This acceptance is exact-byte and limited to these three files; additional prose or metadata requires source-use review.",
+    "The shared review/report/chat reservations do not certify an unseen final report or later delivered message.",
+    "Any later correction must preserve these accepted identities and bind its replacement."
+  ]
+}

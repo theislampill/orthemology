@@ -1,0 +1,20 @@
+{
+  "schema": "tenth-separate-report-binding-v1",
+  "distribution": "separate_native_docx_identity_only",
+  "report": {
+    "filename": "Orthemology_Tenth_Research_Report_v1_20261003.docx",
+    "sha256": "72d732325f48c720633f32be9b9fd76ef80a47369a3e1df69b08581acaa969fb",
+    "bytes": 64632
+  },
+  "claim_map": {
+    "path": "tranche10/report/public/REPORT_CLAIM_MAP.json",
+    "sha256": "ab2e2d3ac98c2e9209768d4ad4b875c24dee3cf653e5c368f4424eb4d4d6821f",
+    "bytes": 90452
+  },
+  "predecessor_binding_identity": {
+    "sha256": "a554ae99ea824f8caa7d273448426d513273d3f2a6a0d6ab4e28599cf3ae74d7",
+    "bytes": 771
+  },
+  "report_unchanged": true,
+  "change_scope": "Current claim-map evidence identities resolve actor-neutral metadata projections; the separate native report and all source-accounting values are unchanged."
+}

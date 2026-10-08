@@ -1,0 +1,5 @@
+import LookaheadAdmission
+#check EffectiveRenewal.Lookahead.lookCheck_computable
+#check EffectiveRenewal.Lookahead.lookaheadCheck_computable
+#check EffectiveRenewal.Lookahead.lookahead_prefix_closed
+#check EffectiveRenewal.Lookahead.lookahead_path_iff

@@ -1,0 +1,51 @@
+{
+  "status": "COMPLETED_AND_INDEPENDENTLY_ACCEPTED",
+  "scope": "Universal syntactic index and type substitution admissibility for unchanged P01DF.Has",
+  "verified_utc": "2026-10-03T18:39:48.126841+00:00",
+  "universal_targets": [
+    "Has p A → Has (psub σ p) (substIndex σ A), arbitrary σ : Nat → Poly",
+    "Has p A → Has p (substType τ A), arbitrary τ : Nat → Ty"
+  ],
+  "candidate_record": {
+    "path": "CANDIDATE_v1.json",
+    "sha256": "fc51e32962e76ac4c5ebef5c3154b5c4a1ab6061aeb018db712d128ee6dac210",
+    "bytes": 1436
+  },
+  "checked_scope_note": {
+    "path": "CHECKED_SCOPE.md",
+    "sha256": "f47dc5f616e63c186630ed459221d2c80d10b67616f057add2a46c2ee10c2030",
+    "bytes": 7372
+  },
+  "review": {
+    "path": "review/REVIEW.md",
+    "sha256": "c0b598b80f5ccd3bbcc2a3c8c9c03c8c51e4e77c9ba92845eaed5982d0178bd8",
+    "bytes": 7664
+  },
+  "independent_verification": {
+    "path": "review/VERIFICATION.json",
+    "sha256": "95927e700cd403a2651b33280d052a8c972b12bca48c5cac26a1643c14a80cc6",
+    "bytes": 10917
+  },
+  "independent_controls": {
+    "path": "review/sources/IndependentControls.lean",
+    "sha256": "5ef51c33cee2464f514881e06bd9b647db355cb4297bbdd6276284dd5a720b2f",
+    "bytes": 3648
+  },
+  "accepted_imports": {
+    "path": "INPUT_SOURCE_MANIFEST.json",
+    "sha256": "b7500882ab904ebc84f3f28a036d687a54f5f023eac839b6177a1d65b679874f",
+    "bytes": 13212
+  },
+  "new_theorem_axioms": [
+    "propext",
+    "Quot.sound"
+  ],
+  "accepted_sources_unchanged": true,
+  "custom_axioms": false,
+  "admitted_holes": false,
+  "general_canonical_equality": "Previously refuted; unchanged; not a target",
+  "serialized_transformer": "Not established",
+  "physical_or_actual_source_warrant": "Not established",
+  "new_general_type_theory": "Not claimed",
+  "historical_record_note": "Candidate and initial verification records preserve their pre-review status; this disposition records the subsequent independent acceptance."
+}

@@ -1,0 +1,162 @@
+{
+  "schema": "ninth-selector-a3-source-v1",
+  "declarations": [
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "def",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig",
+      "line": 24
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_selectors",
+      "line": 27
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_literal",
+      "line": 30
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_kernel",
+      "line": 33
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_initialState",
+      "line": 36
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_initialSupport",
+      "line": 39
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_certificate",
+      "line": 43
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_certificate_iff",
+      "line": 50
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_winning",
+      "line": 55
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_model_member",
+      "line": 60
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_normalized",
+      "line": 64
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_source_history",
+      "line": 71
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_runtime_output",
+      "line": 82
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_mixed_history",
+      "line": 94
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.suppliedConfig_positive_failure",
+      "line": 107
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "def",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.CertifiedSuppliedFailure",
+      "line": 119
+    },
+    {
+      "module": "CertifiedSelectorFamily",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.CertifiedSelectorFamily.certified_supplied_failure",
+      "line": 133
+    }
+  ],
+  "definitions": 2,
+  "theorems": 15,
+  "files": [
+    {
+      "path": "REPLAY.md",
+      "sha256": "03bb0f57d7bb698bb076bac1a5e123d84cc181c249b31cf76748d8379f695d52",
+      "bytes": 1705
+    },
+    {
+      "path": "dependencies/A1_SOURCE_MANIFEST.json",
+      "sha256": "923206fcb0d870806b6e77ca259f99e0604876ac872d97c0bf70c100fb460bd3",
+      "bytes": 10294
+    },
+    {
+      "path": "dependencies/A2_REVIEW_RECEIPT.json",
+      "sha256": "862df64aff61f32f62f5fa4bd8eb4027a1101466c60372e5188226e9a0b813e9",
+      "bytes": 3385
+    },
+    {
+      "path": "dependencies/A2_SOURCE_MANIFEST.json",
+      "sha256": "83f7bef7b6c6b354aca11cd0ebb9b7603b541d960f8b0f2eb57d8c4c4117f7f1",
+      "bytes": 14811
+    },
+    {
+      "path": "replay.py",
+      "sha256": "9a35872902d3704ff9a88c9f8e323fd8c604c77d8ac7b77816ebd60821b05943",
+      "bytes": 8945
+    },
+    {
+      "path": "spec/A3_CERTIFIED_FAMILY_SCOPE.md",
+      "sha256": "70d1e387be2db5a462a0cc9ef5fdea181ebe5788dd0ca3417ba637586189e0aa",
+      "bytes": 2970
+    },
+    {
+      "path": "spec/A3_SCOPE_LEDGER.md",
+      "sha256": "3d88a62ed3c8ae232ebe81b7fc8e7768059a3b24e6b9dd486a4917a69bccf844",
+      "bytes": 3763
+    },
+    {
+      "path": "src/A3AxiomReadback.lean",
+      "sha256": "2da53c0e4309322033bd2e52983b08169765808d2bb76f817451d690e7925ac1",
+      "bytes": 1435
+    },
+    {
+      "path": "src/CertifiedSelectorFamily.lean",
+      "sha256": "09ecb596817c6df3371f4570ddd7855c863e34863e07aab2ad130d4178cf38f9",
+      "bytes": 7573
+    }
+  ],
+  "required_core_source_manifest_sha256": "8981fe18fb0d182dfbab01142f250354846dfb691c873d8d1ced71d3f1df3f4c",
+  "required_literal_source_manifest_sha256": "81d7bec2f6bf584d62f5cac7aa32773870dcff4ca33d8d53d5c84cec765f63e4",
+  "required_a1_source_manifest_sha256": "923206fcb0d870806b6e77ca259f99e0604876ac872d97c0bf70c100fb460bd3",
+  "required_a2_source_manifest_sha256": "83f7bef7b6c6b354aca11cd0ebb9b7603b541d960f8b0f2eb57d8c4c4117f7f1",
+  "required_a2_independent_review_receipt_sha256": "862df64aff61f32f62f5fa4bd8eb4027a1101466c60372e5188226e9a0b813e9",
+  "approved_a3_specification_sha256": "70d1e387be2db5a462a0cc9ef5fdea181ebe5788dd0ca3417ba637586189e0aa"
+}

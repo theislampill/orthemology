@@ -1,0 +1,27 @@
+[
+  {
+    "module": "SubstitutionSyntax",
+    "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+    "bytes": 9055
+  },
+  {
+    "module": "SubstitutionAdmissibility",
+    "sha256": "6ae02ec07b67a81f3019192118e44d4ac37cd26f9ad61f09831c8fafd55ce121",
+    "bytes": 6952
+  },
+  {
+    "module": "SubstitutionControls",
+    "sha256": "c3d31d2c24e9db193bbe60801bffdbc54e1a61ddb13a21ca19672259c57e7dec",
+    "bytes": 8704
+  },
+  {
+    "module": "SubstitutionReadback",
+    "sha256": "0a0b469b9b874b9ec4bf6d1d3c94e4214a14d7ca90961b0d6e6b14cbd4a76137",
+    "bytes": 3135
+  },
+  {
+    "module": "AdmissibilityContract",
+    "sha256": "7f6bc01a5df473be63639f5d07941bce1b3dce94e85397a758e8513af99df339",
+    "bytes": 337
+  }
+]

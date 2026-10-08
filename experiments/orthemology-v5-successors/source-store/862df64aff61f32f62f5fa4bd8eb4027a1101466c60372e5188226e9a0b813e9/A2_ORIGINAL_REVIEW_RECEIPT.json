@@ -1,0 +1,60 @@
+{
+  "status": "PASS_INDEPENDENT_A2_REVIEW",
+  "finished_utc": "2026-10-03T06:01:49.565034+00:00",
+  "source_manifest_sha256": "83f7bef7b6c6b354aca11cd0ebb9b7603b541d960f8b0f2eb57d8c4c4117f7f1",
+  "approved_specification_sha256": "68d6d80a484a35e6127d4aa08bef605e63144c95f9d027cb9c14b336ff625ba3",
+  "author_receipt_sha256": "da204eb3f5a94d8b0127c7aa60a75329b1b7b0b6d0e328b425ac24a9164a1152",
+  "prior_a1_acceptance_receipt_sha256": "35461135ce61a1b4b217fc1981d782795e2fbd10ceb35210cc50793e7db3ba5f",
+  "independent_core_receipt_sha256": "fbfb9d52950093c7b3bd239cca1296aea6adbb826c65801f67d7290294e84a17",
+  "independent_a1_receipt_sha256": "5aa4f8a9a960a9f3d253d98d3fb0cdbe6622ea3667f6fe532e76468b44890739",
+  "independent_a2_receipt_sha256": "9be2252e6fa86bba684aac5bd668a8ede385b3a9c7ac6d3d42a194a669f0924c",
+  "reviewer_controls": [
+    {
+      "receipt": "evidence/control-attempts/20261003T055459975315Z-ReviewerPaddingBoundary/RESULT.json",
+      "sha256": "21d375b633dabd5027d68460c984a7068ae6e3dada95f451783ec15c6d92b498",
+      "theorems": 3,
+      "elapsed_seconds": 3.5974577910019434
+    },
+    {
+      "receipt": "evidence/control-attempts/20261003T055503681459Z-ReviewerTransportBoundaries/RESULT.json",
+      "sha256": "48af1e3510f88923557709c78458afd7743e93bbbab23c3208a401a89c897fd2",
+      "theorems": 17,
+      "elapsed_seconds": 73.36777231399901
+    }
+  ],
+  "replay_guard_receipt_sha256": "7e5adeaf5fea810acf91d1689ce61f781064add18e77acf93ff94dd0bb694438",
+  "reused_exact_independent_core_modules": 167,
+  "reused_exact_independent_a1_objects": 5,
+  "a2_definitions": 11,
+  "a2_theorems": 61,
+  "a2_axiom_declarations": 72,
+  "a2_empty_axiom_closures": 2,
+  "reviewer_theorems_and_axiom_checks": 20,
+  "new_cold_compiled_modules": 3,
+  "mathematical_gaps": [],
+  "replay_gaps": [],
+  "official_external_dependency_cache_trusted": true,
+  "author_custom_objects_reused": false,
+  "historical_probes_retried": false,
+  "new_lean_failures": false,
+  "new_resource_inconclusive_runs": false,
+  "accepted_scope": [
+    "Derived actual encoded-history/clock-update/18-component-prefix/final-readout call domains, including exhausted padding",
+    "Conditional normalization preserving every encoded acquired-history source decision",
+    "All-tape all-coordinate physical output equality in the existing fixture wrapper",
+    "Independent executed/decoder normalization and exact mixed decoded-history equality",
+    "Law equality for every input measure and exact old/computed failure-event equality",
+    "Instantiated inherited mixed positive failure and matching computed/computed positive control remain distinct"
+  ],
+  "claims_excluded": [
+    "Chosen or evaluated opaque selector orientation",
+    "Native closed selector extraction from an arbitrary kernel",
+    "Arbitrary raw-Nat selector component extensionality",
+    "Equality of encoded bytes, costs, resource meters or finite-fuel thresholds",
+    "CPython implementation correspondence",
+    "New arbitrary-kernel runtime environment correctness",
+    "Tranche closure or authority to dispatch another milestone"
+  ],
+  "author_postprocessing_diagnostic": "snapshot/evidence/A2_AUDIT_PARSE_DIAGNOSTIC.md",
+  "prior_negative_controls": "The prior A1 support-4 malformed-input counterexample, raw payload controls, failed auxiliary attempts and historical inconclusive dispositions remain unchanged."
+}

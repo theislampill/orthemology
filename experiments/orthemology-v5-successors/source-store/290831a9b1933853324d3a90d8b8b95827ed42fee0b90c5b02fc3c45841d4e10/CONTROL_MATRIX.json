@@ -1,0 +1,64 @@
+{
+  "status": "ALL_NAMED_CONTROLS_CHECKED_IN_FINAL_SOURCE_REPLAY",
+  "control_families": {
+    "joined_arbitrary_typed_all_self": [
+      "P01AC.q_has_Q",
+      "P01AC.Q_self_exact",
+      "P01AC.q_self_has",
+      "P01AC.q_self_fundamental"
+    ],
+    "recovered_dependent_all_self": [
+      "P01AC.Legacy.dependent_type_readback",
+      "P01AC.Legacy.dependent_polymorphic_typed",
+      "P01AC.Legacy.dependent_polymorphic_self_typed"
+    ],
+    "open_dependent_replacement": [
+      "P01AC.open_identity_replacement_instance",
+      "P01AC.open_sigma_replacement_instance",
+      "P01AC.open_sigma_replacement_nonempty",
+      "P01AC.open_sigma_replacement_heterogeneous",
+      "P01AC.open_raw_sigma_nonempty_vary",
+      "P01AC.StructuralChecks.dependentReplacement_not_closed",
+      "P01AC.StructuralChecks.dependent_mixed_preserves"
+    ],
+    "capture_and_binders": [
+      "P01AC.capture_both_sorts",
+      "P01AC.capture_both_sorts_double_term",
+      "P01AC.capture_term_not_zero",
+      "P01AC.capture_type_not_zero",
+      "P01AC.open_sigma_nested_capture"
+    ],
+    "finite_zero_padding": [
+      "P01AC.StructuralChecks.finite_identity_tail",
+      "P01AC.StructuralChecks.finite_identity_not_total_identity",
+      "P01AC.StructuralChecks.dependent_all_elimination_map"
+    ],
+    "identity_separate_endpoints": [
+      "P01AC.Negative.right_cross_links_without_equality",
+      "P01AC.Negative.left_cross_links_without_equality"
+    ],
+    "raw_and_j_boundaries": [
+      "P01AC.Negative.no_universal_raw_variable",
+      "P01AC.Negative.j_endpoint_omission_fails",
+      "P01AC.Negative.j_proof_coordinate_omission_fails",
+      "P01AC.Negative.conversion_scope_premise_necessary",
+      "P01AC.concrete_j_nonraw_proof_control",
+      "P01AC.raw_omega_has_no_normal_reduct"
+    ],
+    "legacy_displayed_support_and_hidden_provenance": [
+      "P01AC.Legacy.hidden_replacement_not_supported",
+      "P01AC.Legacy.hidden_premise_not_supported",
+      "P01AC.Legacy.conversion_internal_embedding",
+      "P01AC.Legacy.nucleus_still_excludes_all_intro",
+      "P01AC.Legacy.nucleus_still_excludes_dependent_type"
+    ],
+    "literal_intrinsic_mixed_representation": [
+      "P01AC.represented_mixed_code",
+      "P01AC.represented_mixed_type",
+      "P01AC.MixedTerms.related",
+      "P01AC.representedContextualJ_code",
+      "P01AC.contextual_target_exact"
+    ]
+  },
+  "independent_controls": "Bound by the separate final independent verification record; not a mutation-suite claim."
+}

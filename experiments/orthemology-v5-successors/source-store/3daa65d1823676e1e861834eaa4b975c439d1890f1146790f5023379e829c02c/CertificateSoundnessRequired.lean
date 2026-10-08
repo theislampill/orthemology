@@ -1,0 +1,6 @@
+import UnaryCertificateSoundness
+#check P01AC.UnaryCertificate.certificate_all_valuations
+#check P01AC.UnaryCertificate.form_sound
+#check P01AC.UnaryCertificate.has_sound
+#check P01AC.UnaryCertificate.fundamental
+#check P01AC.UnaryCertificate.fragment_witness_iff_check

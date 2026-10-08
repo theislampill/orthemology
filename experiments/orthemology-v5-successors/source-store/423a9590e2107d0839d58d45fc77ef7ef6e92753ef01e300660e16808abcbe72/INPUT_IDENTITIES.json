@@ -1,0 +1,36 @@
+{
+  "status": "REVIEW_IN_PROGRESS_NO_CANDIDATE_ACCEPTANCE",
+  "observed_at": "2026-10-03T19:51:51.926150+00:00",
+  "files": [
+    {
+      "path": "../dependent-all-frontier/DEPENDENT_ALL_DESIGN_v5.md",
+      "sha256": "f4eb382dc54e142b14d943affe8602b8dbb2f3097eaea8f6e630f6d182e83545",
+      "bytes": 27517
+    },
+    {
+      "path": "../dependent-all-design/REVIEW_v2.md",
+      "sha256": "e6604b05686d58e8137b0458807e9498f6376ff6518738b457fe0732e4d4f142",
+      "bytes": 10547
+    },
+    {
+      "path": "../dependent-all-frontier/ACCEPTED_NUCLEUS_BINDING_ADDENDUM_v1.md",
+      "sha256": "066f57dbed0e8f8a8da5f26c9006dfe37b8a311e65dcf894701e3fcd674e9214",
+      "bytes": 10453
+    },
+    {
+      "path": "../dependent-all-design/ACCEPTED_NUCLEUS_ADDENDUM_v1.md",
+      "sha256": "f01d93272cd1f805b647d0799b1c97df8a6207a01f7bb281fa118908990c0ca5",
+      "bytes": 4668
+    },
+    {
+      "path": "../typed-context-nucleus/REVIEW.md",
+      "sha256": "6e1832ad33853ba245c46ef65e7eb560bfb79f76ea5c566b5488a1b223a856c5",
+      "bytes": 10498
+    },
+    {
+      "path": "../typed-context-nucleus/SOURCE_IDENTITIES.json",
+      "sha256": "729e8924409dde299ebb0a9a57e4d59ca3ba8162ae71e877fbaf108023883490",
+      "bytes": 24163
+    }
+  ]
+}

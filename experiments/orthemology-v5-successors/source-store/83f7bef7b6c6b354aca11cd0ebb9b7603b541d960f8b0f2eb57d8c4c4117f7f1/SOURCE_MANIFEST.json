@@ -1,0 +1,491 @@
+{
+  "schema": "ninth-selector-a2-source-v1",
+  "declarations": [
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.StateDomain",
+      "line": 17
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.StepDomain",
+      "line": 21
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.stateData_domain",
+      "line": 24
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.inputs_domain",
+      "line": 30
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.represented_state_domain",
+      "line": 37
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.represented_step_domain",
+      "line": 43
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.dataView",
+      "line": 50
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.matched_state_domain",
+      "line": 52
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_step_arguments_domain",
+      "line": 63
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.reversePrefix",
+      "line": 72
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.reverse_prefix_registers",
+      "line": 76
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.foldStart",
+      "line": 94
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.controllerStep",
+      "line": 96
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.foldStart_matches",
+      "line": 99
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.controllerStep_implements",
+      "line": 105
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_fold_iteration_matches",
+      "line": 113
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_fold_iteration_domain",
+      "line": 123
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_fold_call_arguments_domain",
+      "line": 132
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.empty_fold_body_noop",
+      "line": 143
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_fold_padding_noop",
+      "line": 151
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.cycleAddress",
+      "line": 161
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.targetAddress",
+      "line": 164
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.cycle_address_in_domain",
+      "line": 167
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.target_address_in_domain",
+      "line": 175
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.action_menu_code_exact",
+      "line": 180
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.action_menu_code_in_domain",
+      "line": 184
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.source_candidate_in_domain",
+      "line": 190
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.source_normalize_in_domain",
+      "line": 199
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.source_active_in_domain",
+      "line": 208
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.source_action_menu_in_domain",
+      "line": 216
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.DerivedCallDomains",
+      "line": 228
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.derived_call_domains",
+      "line": 240
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_readout_arguments_exact",
+      "line": 251
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_readout_arguments_domain",
+      "line": 264
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.source_target_address_in_domain",
+      "line": 275
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.source_action_address_in_domain",
+      "line": 285
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.matches_loop_index_update",
+      "line": 297
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_body_entry_arguments_domain",
+      "line": 311
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_body_entry_padding_noop",
+      "line": 322
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.parallel_prefix_arguments_domain",
+      "line": 337
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_body_parallel_prefix_domain",
+      "line": 356
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.actual_ordered_component_domain",
+      "line": 372
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.CompiledCallDomains",
+      "line": 385
+    },
+    {
+      "module": "SelectorCallDomains",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.compiled_call_domains",
+      "line": 397
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "def",
+      "name": "Orthemology.Ninth.SelectorTransport.normalizeConfig",
+      "line": 23
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalizeConfig_certificate",
+      "line": 25
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalizeConfig_idempotent",
+      "line": 31
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalizeConfig_policy",
+      "line": 35
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalizeConfig_rep",
+      "line": 39
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalizeConfig_computed_commute",
+      "line": 43
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_raw_policy_history",
+      "line": 48
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_policyProgram_history",
+      "line": 57
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_source_history",
+      "line": 66
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_historyPolicy",
+      "line": 74
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.historyStep_of_historyPolicy_eq",
+      "line": 81
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.historyObservation_of_historyPolicy_eq",
+      "line": 86
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.runtime_frames_of_historyPolicy_eq",
+      "line": 94
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.runtime_output_of_historyPolicy_eq",
+      "line": 104
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_runtime_frames",
+      "line": 114
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_runtime_output",
+      "line": 122
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.pairSelector_of_historyPolicy_eq",
+      "line": 130
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.pairUpdate_of_historyPolicy_eq",
+      "line": 135
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.generatedHistory_of_historyPolicy_eq",
+      "line": 140
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.canonicalHistoryDecoder_of_historyPolicy_eq",
+      "line": 145
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.mixed_decodedHistory_of_historyPolicy_eq",
+      "line": 152
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_mixed_decodedHistory",
+      "line": 165
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_old_computed_decodedHistory",
+      "line": 180
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_mixed_decoded_law",
+      "line": 192
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_old_computed_event",
+      "line": 207
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalization_with_derived_domains",
+      "line": 219
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_old_computed_failure_event",
+      "line": 233
+    },
+    {
+      "module": "SelectorSemanticTransport",
+      "kind": "theorem",
+      "name": "Orthemology.Ninth.SelectorTransport.normalized_old_computed_positive_failure_iff",
+      "line": 243
+    }
+  ],
+  "definitions": 11,
+  "theorems": 61,
+  "files": [
+    {
+      "path": "REPLAY.md",
+      "sha256": "c94277bdb290986368e203d68aa4ddd2a094c0e5fde63f8ccf77370d24bfabbe",
+      "bytes": 1827
+    },
+    {
+      "path": "dependencies/A1_REVIEW_RECEIPT.json",
+      "sha256": "35461135ce61a1b4b217fc1981d782795e2fbd10ceb35210cc50793e7db3ba5f",
+      "bytes": 2874
+    },
+    {
+      "path": "dependencies/A1_SOURCE_MANIFEST.json",
+      "sha256": "923206fcb0d870806b6e77ca259f99e0604876ac872d97c0bf70c100fb460bd3",
+      "bytes": 10294
+    },
+    {
+      "path": "replay.py",
+      "sha256": "314fb0521f809e3c5ca471363341546f9bcb88737109f861dff14b78414f0dc1",
+      "bytes": 7576
+    },
+    {
+      "path": "spec/A2_PROPOSED_TRANSPORT.md",
+      "sha256": "68d6d80a484a35e6127d4aa08bef605e63144c95f9d027cb9c14b336ff625ba3",
+      "bytes": 3330
+    },
+    {
+      "path": "spec/A2_SCOPE_LEDGER.md",
+      "sha256": "b7adc10598b42cf2ad89a7ab7f5af85722d881fa37571835d3d4e6bc580f2034",
+      "bytes": 4001
+    },
+    {
+      "path": "src/A2AxiomReadback.lean",
+      "sha256": "6afaf57b8e3a89a9ae67aa99428a6027e51e278fefcad07024f90d663f223b41",
+      "bytes": 6294
+    },
+    {
+      "path": "src/SelectorCallDomains.lean",
+      "sha256": "3a43274f399b332eca32613feee11257364b862bda96c8c73f303490184e0bbc",
+      "bytes": 23388
+    },
+    {
+      "path": "src/SelectorSemanticTransport.lean",
+      "sha256": "b9a5504f7519646341af9c2cbef93848bb364fce87a1dc701d44450b70018ecb",
+      "bytes": 14996
+    }
+  ],
+  "required_core_source_manifest_sha256": "8981fe18fb0d182dfbab01142f250354846dfb691c873d8d1ced71d3f1df3f4c",
+  "required_literal_source_manifest_sha256": "81d7bec2f6bf584d62f5cac7aa32773870dcff4ca33d8d53d5c84cec765f63e4",
+  "required_a1_source_manifest_sha256": "923206fcb0d870806b6e77ca259f99e0604876ac872d97c0bf70c100fb460bd3",
+  "required_a1_independent_review_receipt_sha256": "35461135ce61a1b4b217fc1981d782795e2fbd10ceb35210cc50793e7db3ba5f",
+  "approved_a2_specification_sha256": "68d6d80a484a35e6127d4aa08bef605e63144c95f9d027cb9c14b336ff625ba3"
+}

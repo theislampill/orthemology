@@ -1,0 +1,2123 @@
+{
+  "schema": "orthemology-v5-successor-fragment-v1",
+  "cell": "D17",
+  "sources": [
+    {
+      "id": "D17-T14-LANGUAGE-README",
+      "origin_input_id": "T14-EVIDENCE",
+      "origin_input_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "member_chain": [
+        "language/README.md"
+      ],
+      "original_sha256": "15e4d26373bded96f77aeafd0b92f1a7435d46d8811deafc1f4b5d92a57e420b",
+      "original_bytes": 8869,
+      "public_path": "experiments/orthemology-v5-successors/source-store/15e4d26373bded96f77aeafd0b92f1a7435d46d8811deafc1f4b5d92a57e420b/README.md",
+      "public_sha256": "15e4d26373bded96f77aeafd0b92f1a7435d46d8811deafc1f4b5d92a57e420b",
+      "public_bytes": 8869,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "D17-T14-OCCURRENCE-VERIFIER",
+      "origin_input_id": "T14-EVIDENCE",
+      "origin_input_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "member_chain": [
+        "language/verify_occurrence.py"
+      ],
+      "original_sha256": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615",
+      "original_bytes": 6998,
+      "public_path": "experiments/orthemology-v5-successors/source-store/a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615/verify_occurrence.py",
+      "public_sha256": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615",
+      "public_bytes": 6998,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "D17-T14-OCCURRENCE-LOCK",
+      "origin_input_id": "T14-EVIDENCE",
+      "origin_input_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "member_chain": [
+        "language/source-lock.json"
+      ],
+      "original_sha256": "54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0",
+      "original_bytes": 27255,
+      "public_path": "experiments/orthemology-v5-successors/source-store/54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0/source-lock.json",
+      "public_sha256": "54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0",
+      "public_bytes": 27255,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "D17-T14-SENSE-VERIFIER",
+      "origin_input_id": "T14-EVIDENCE",
+      "origin_input_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "member_chain": [
+        "language/verify_sense_sources.py"
+      ],
+      "original_sha256": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d",
+      "original_bytes": 2908,
+      "public_path": "experiments/orthemology-v5-successors/source-store/5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d/verify_sense_sources.py",
+      "public_sha256": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d",
+      "public_bytes": 2908,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "D17-T14-SENSE-LOCK",
+      "origin_input_id": "T14-EVIDENCE",
+      "origin_input_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "member_chain": [
+        "language/sense-source-lock.json"
+      ],
+      "original_sha256": "72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63",
+      "original_bytes": 3700,
+      "public_path": "experiments/orthemology-v5-successors/source-store/72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63/sense-source-lock.json",
+      "public_sha256": "72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63",
+      "public_bytes": 3700,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "D17-T13-REFERENCE-MAP",
+      "origin_input_id": "T13-EVIDENCE",
+      "origin_input_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+      "origin_archive_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+      "member_chain": [
+        "REFERENCE_MAP.json"
+      ],
+      "original_sha256": "8ecc9e42ba1d7c19c6431722ef1273995d34cebd56759406eeec2c6156cdb0e6",
+      "original_bytes": 15623,
+      "public_path": "experiments/orthemology-v5-successors/source-store/8ecc9e42ba1d7c19c6431722ef1273995d34cebd56759406eeec2c6156cdb0e6/REFERENCE_MAP.json",
+      "public_sha256": "8ecc9e42ba1d7c19c6431722ef1273995d34cebd56759406eeec2c6156cdb0e6",
+      "public_bytes": 15623,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "D17-T13-INHERITED-RECEIPT",
+      "origin_input_id": "T13-RECEIPT",
+      "origin_input_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "original_bytes": 1689,
+      "public_path": "experiments/orthemology-v5-successors/source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json",
+      "public_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "public_bytes": 1689,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "D17-T14-INHERITED-RECEIPT",
+      "origin_input_id": "T14-RECEIPT",
+      "origin_input_sha256": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb",
+      "original_bytes": 3137,
+      "public_path": "experiments/orthemology-v5-successors/source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json",
+      "public_sha256": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb",
+      "public_bytes": 3137,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "D17-T15-INHERITED-RECEIPT",
+      "origin_input_id": "T15-RECEIPT",
+      "origin_input_sha256": "9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27",
+      "original_bytes": 5385,
+      "public_path": "experiments/orthemology-v5-successors/source-store/9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27/Orthemology_Fifteenth_Final_Verification_v1_20261005.json",
+      "public_sha256": "9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27",
+      "public_bytes": 5385,
+      "projection": "EXACT",
+      "projection_basis": "Unchanged original research verification code, source-identification metadata or inherited deliverable receipt; no external Fusha data bytes.",
+      "review_scope": "Source identity and exact declared scope; inherited receipts are not fresh replay or independent specialist certification.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-OCCURRENCE",
+      "origin_input_id": "T12-CP-CURRENT",
+      "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+      "member_chain": [
+        "research/occurrence-warrant/RESULT.md"
+      ],
+      "original_sha256": "2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42",
+      "original_bytes": 5150,
+      "public_path": "experiments/orthemology-v5-successors/source-store/2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42/RESULT.md",
+      "public_sha256": "2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42",
+      "public_bytes": 5150,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "origin_input_id": "T12-SUPPLEMENT",
+      "origin_input_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "origin_archive_sha256": "39a8b248569d01ef037eaafebef42e3422c77d14b43c6d193beee0c859b9e5c5",
+      "member_chain": [
+        "VERIFICATION_SCOPE.md"
+      ],
+      "original_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1",
+      "original_bytes": 3080,
+      "public_path": "experiments/orthemology-v5-successors/source-store/fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1/VERIFICATION_SCOPE.md",
+      "public_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1",
+      "public_bytes": 3080,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T12-SOURCE-FINAL-RECEIPT",
+      "origin_input_id": "T12-RECEIPT",
+      "origin_input_sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "original_bytes": 2526,
+      "public_path": "experiments/orthemology-v5-successors/source-store/4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c/Orthemology_Twelfth_Research_Verification_v1_20261004.json",
+      "public_sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "public_bytes": 2526,
+      "projection": "EXACT",
+      "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+      "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers.",
+      "derivation": null
+    },
+    {
+      "id": "T13-REPORT-DERIVED-MARKDOWN",
+      "origin_input_id": "T13-REPORT",
+      "origin_input_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "original_bytes": 62620,
+      "public_path": "experiments/orthemology-v5-successors/source-store/60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540/Orthemology_Thirteenth_Research_Final_v1_20261004.md",
+      "public_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "public_bytes": 63778,
+      "projection": "DERIVED",
+      "projection_basis": "Original DOCX native OOXML parsed to Markdown with structurally preserved TeX equations. Source notices, hypotheses, quantifiers, limitations, paragraph/table order and public bibliographic links retained; package formatting and internal bookmark destinations normalized. Native equation/text/order readback and bounded semantic conversion review are distinct from scientific acceptance.",
+      "review_scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified.",
+      "derivation": {
+        "diff_path": null,
+        "diff_sha256": "3ffb2a26aecfcfc355981dbade69e0585be7b4bd816036b7fe2514040d560aac",
+        "review_id": "DOCX-CONVERSION-T13-REPORT",
+        "preserved_scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified."
+      }
+    },
+    {
+      "id": "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+      "origin_input_id": "T14-SUPPLEMENT",
+      "origin_input_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+      "original_bytes": 47187,
+      "public_path": "experiments/orthemology-v5-successors/source-store/c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53/Orthemology_Fourteenth_Research_Completion_Supplement_v1_20261005.md",
+      "public_sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+      "public_bytes": 30852,
+      "projection": "DERIVED",
+      "projection_basis": "Original DOCX native OOXML parsed to Markdown with structurally preserved TeX equations. Source notices, hypotheses, quantifiers, limitations, paragraph/table order and public bibliographic links retained; package formatting and internal bookmark destinations normalized. Native equation/text/order readback and bounded semantic conversion review are distinct from scientific acceptance.",
+      "review_scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified.",
+      "derivation": {
+        "diff_path": null,
+        "diff_sha256": "69dd0286ebb119900b1e6c64175800fc0c4345b1fa56eafd77ed0fda9eb665f9",
+        "review_id": "DOCX-CONVERSION-T14-SUPPLEMENT",
+        "preserved_scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified."
+      }
+    },
+    {
+      "id": "T15-REPORT-DERIVED-MARKDOWN",
+      "origin_input_id": "T15-REPORT",
+      "origin_input_sha256": "19aa086ae362153c48b34de0ab00bd52996faa9229c508c7068da35f758b0169",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "19aa086ae362153c48b34de0ab00bd52996faa9229c508c7068da35f758b0169",
+      "original_bytes": 59428,
+      "public_path": "experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md",
+      "public_sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+      "public_bytes": 59204,
+      "projection": "DERIVED",
+      "projection_basis": "Original DOCX native OOXML parsed to Markdown with structurally preserved TeX equations. Source notices, hypotheses, quantifiers, limitations, paragraph/table order and public bibliographic links retained; package formatting and internal bookmark destinations normalized. Native equation/text/order readback and bounded semantic conversion review are distinct from scientific acceptance.",
+      "review_scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified.",
+      "derivation": {
+        "diff_path": null,
+        "diff_sha256": "247fa50be271bb177cde368c6bdaf008a6658a7136872a3df54c3dca52ee1468",
+        "review_id": "DOCX-CONVERSION-T15-REPORT",
+        "preserved_scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified."
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "id": "D17-REVIEW-T12-ATTESTATION",
+      "source_id": "T12-SOURCE-VERIFICATION-SCOPE",
+      "reviewed_source_ids": [
+        "T12-SOURCE-OCCURRENCE"
+      ],
+      "target": "The divergent reading is already present in the inspected 1911 printed witness, whose introduction declares the Leonine revision standard.",
+      "scope": "Inherited source-specific assessment and final-companion preservation scope; original RESULT.md records the four-page visual review. This integration rechecks document association only, not the primary facsimile.",
+      "outcome": "LIMITED",
+      "review_sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1"
+    },
+    {
+      "id": "D17-REVIEW-T13-RECONSTRUCTION",
+      "source_id": "D17-T13-INHERITED-RECEIPT",
+      "reviewed_source_ids": [
+        "T13-REPORT-DERIVED-MARKDOWN",
+        "D17-T13-REFERENCE-MAP"
+      ],
+      "target": "A source-bound supplement can repair received argument text while preserving the shorter occurrence and dependent argument lineage.",
+      "scope": "Inherited final report accepted-content scope, with reference-map F4/F5 locators and report paragraphs 131-133, 164. Source reconstruction and dependent lineage only; no fresh primary-text inspection or stronger philosophical conclusion.",
+      "outcome": "LIMITED",
+      "review_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a"
+    },
+    {
+      "id": "D17-REVIEW-T14-OCCURRENCE",
+      "source_id": "D17-T14-INHERITED-RECEIPT",
+      "reviewed_source_ids": [
+        "D17-T14-LANGUAGE-README",
+        "D17-T14-OCCURRENCE-VERIFIER",
+        "D17-T14-OCCURRENCE-LOCK"
+      ],
+      "target": "At quran:61:5:4, one pinned projection is reused across four recorded appearances while entry, grammatical claims, candidate sense and unresolved governor relation remain distinct.",
+      "scope": "Inherited completion receipt archive_replay.language_occurrence and six language_input_rejection_controls; original README declares 70 byte bindings plus 12 held-byte occurrence assertions. Application self-tests remain a separately identified inherited scope.",
+      "outcome": "LIMITED",
+      "review_sha256": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb"
+    },
+    {
+      "id": "D17-REVIEW-T14-SENSE-IDENTITIES",
+      "source_id": "D17-T14-INHERITED-RECEIPT",
+      "reviewed_source_ids": [
+        "D17-T14-LANGUAGE-README",
+        "D17-T14-SENSE-VERIFIER",
+        "D17-T14-SENSE-LOCK"
+      ],
+      "target": "Nine nonoverlapping supplemental file identities bind the source closure used by the accepted sense-scope assessment, with zero new occurrence-data or linguistic checks.",
+      "scope": "Inherited archive_replay.language_sense_supplement: nine supplemental byte identities, zero additional occurrence/linguistic checks, with original README and source lock.",
+      "outcome": "LIMITED",
+      "review_sha256": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb"
+    },
+    {
+      "id": "D17-REVIEW-T14-SENSE-SCOPE",
+      "source_id": "D17-T14-INHERITED-RECEIPT",
+      "reviewed_source_ids": [
+        "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+        "D17-T14-LANGUAGE-README",
+        "D17-T14-SENSE-LOCK"
+      ],
+      "target": "The retained registry supports a reasoned dictionary-sense-2 candidate for quran:61:5:4; authoritative inclusion of the speech-addressee use remains unestablished.",
+      "scope": "Inherited report-verification and source-specific automated review, restricted to T14 report paragraphs 69-73 and original language README/identity lock. Hash verification does not repeat or certify the interpretation.",
+      "outcome": "LIMITED",
+      "review_sha256": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb"
+    },
+    {
+      "id": "D17-REVIEW-T15-ADMISSION",
+      "source_id": "D17-T15-INHERITED-RECEIPT",
+      "reviewed_source_ids": [
+        "T15-REPORT-DERIVED-MARKDOWN"
+      ],
+      "target": "The proposed elementary join/parity control is already covered by H-ICS-v5, and the inspected occurrence packet does not supply the proposed complete joint reading class.",
+      "scope": "Inherited scientific-consistency/final report scope for paragraphs 116-120 and 163-166; admission decision only. H-ICS-v5 remains the mathematical owner, and no additional theorem or application defect is credited.",
+      "outcome": "LIMITED",
+      "review_sha256": "9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27"
+    }
+  ],
+  "results": [
+    {
+      "id": "T12-LANGUAGE-ATTESTATION",
+      "title": "A declared editorial standard and an attested printed occurrence",
+      "tranche": 12,
+      "family": "language-attested-editorial-source",
+      "original_avenues": [
+        11
+      ],
+      "evidence_keys": [
+        "T12:occurrence-warrant/RESULT.md",
+        "T12:four-page-witness-review"
+      ],
+      "target": "The divergent reading is already present in the inspected 1911 printed witness, whose introduction declares the Leonine revision standard.",
+      "input_contract": "The identified 1911 volume and four inspected image loci: title PDF 7; declaration printed lxxvii/PDF 81; signature printed lxxxvi/PDF 90; source locus printed 20/PDF 114.",
+      "assumptions": [
+        "The inherited source assessment correctly binds the inspected PDF witness and page locations.",
+        "The contemporaneous editorial declaration is interpreted at its stated claim scope, not as universal occurrence-level conformity."
+      ],
+      "conclusion": "Direct attestation narrows first-introduction chronology; the W.L. declaration provides defeasible evidence of an editorial relationship. Both are positive source-use results.",
+      "limitations": [
+        "The actual Latin working exemplar and individual production decision remain unestablished.",
+        "The 1912 catalogue label is distinct from the imaged 1911 volume date; First Number is not separate first-edition authentication.",
+        "No unique production genealogy, whole-translation certification, theological truth, new general theorem or fresh facsimile review follows."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Claim-relative historical occurrence and editorial testimony assessment.",
+      "math_form": "SOURCE_ASSESSMENT",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "SOURCE_TEXT",
+      "source_ids": [
+        "T12-SOURCE-OCCURRENCE"
+      ],
+      "review_ids": [
+        "D17-REVIEW-T12-ATTESTATION"
+      ],
+      "suite_ids": [],
+      "origin_status": "This investigation adds a bounded historical source-use result to the existing occurrence/provenance programme. It does not supply a new general theorem, identify a unique production history, or certify a whole translation.",
+      "obligation_ids": [],
+      "residual_scope": "An identified working exemplar, translator note, correction list, annotated proof or contemporary erratum is needed to distinguish the remaining local production hypotheses."
+    },
+    {
+      "id": "T13-LANGUAGE-RECONSTRUCTION",
+      "title": "Fuller source recovery improves argument reconstruction without independent conclusion support",
+      "tranche": 13,
+      "family": "language-source-reconstruction",
+      "original_avenues": [
+        11
+      ],
+      "evidence_keys": [
+        "T13-REPORT:p0131-p0133",
+        "T13-REPORT:p0164",
+        "T13:REFERENCE_MAP:F4-F5"
+      ],
+      "target": "A source-bound supplement can repair received argument text while preserving the shorter occurrence and dependent argument lineage.",
+      "input_contract": "The report-identified Miftah edition and Ibn Taymiyya antecedent, at reference-map F4 and F5 loci; no claim that fresh primary witness bytes were supplied to this integration.",
+      "assumptions": [
+        "The inherited report assessment and bibliographic reading locators identify the intended fuller and shorter witnesses.",
+        "The restored premise and parallel clause are used for interpretation at the inspected source scope."
+      ],
+      "conclusion": "Better premise recovery improves interpretation but does not add an independent reason for the conclusion, rewrite the shorter occurrence or authenticate an unexamined earliest original.",
+      "limitations": [
+        "The fuller reading’s exact witness basis and the website’s ancestry remain unestablished.",
+        "The earlier source lineages are dependent; two textual witnesses are not counted as two independent arguments.",
+        "The philosophical warrant judgement stays with its source-specific foundational owner; no general semantic-transport theorem or fresh primary-source certification is added."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Occurrence-sensitive textual reconstruction as a concrete application of inherited provenance discipline.",
+      "math_form": "SOURCE_ASSESSMENT",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "SOURCE_TEXT",
+      "source_ids": [
+        "T13-REPORT-DERIVED-MARKDOWN",
+        "D17-T13-REFERENCE-MAP"
+      ],
+      "review_ids": [
+        "D17-REVIEW-T13-RECONSTRUCTION"
+      ],
+      "suite_ids": [],
+      "origin_status": "This is a concrete application, not a new general transport theorem.",
+      "obligation_ids": [],
+      "residual_scope": "Exact fuller-witness basis, production ancestry and any stronger argument conclusion require their own source and warrant evidence."
+    },
+    {
+      "id": "T14-LANGUAGE-OCCURRENCE",
+      "title": "Pinned occurrence reuse retains exact claim statuses and unresolved dependencies",
+      "tranche": 14,
+      "family": "language-pinned-occurrence",
+      "original_avenues": [
+        11
+      ],
+      "evidence_keys": [
+        "T14:language:70-source-bindings",
+        "T14:language:12-occurrence-assertions"
+      ],
+      "target": "At quran:61:5:4, one pinned projection is reused across four recorded appearances while entry, grammatical claims, candidate sense and unresolved governor relation remain distinct.",
+      "input_contract": "Exactly the 70 locked Fusha file byte strings at commit c8b5db593d88311e5a020607dba70ff838ab61c5, tree a5bd2b045bc36c78047b5d3f7e9c2807fbf4153c; unchanged original read-only verifier and adjacent lock.",
+      "assumptions": [
+        "Length, SHA-256 and Git blob bindings identify the selected bytes; all parsed records come from the in-memory checked bytes.",
+        "Certified is a status recorded by the pinned application data, not independent linguistic certification."
+      ],
+      "conclusion": "The selected held-byte records satisfy 70 identity checks and 12 occurrence assertions, retaining the unresolved keys, alternative candidates, historical review-required claims and version-2 successors; the illustrative canary remains distinct.",
+      "limitations": [
+        "The 82 checks are not 82 independent evidence sources; five relevant certified facts are not five independent sources.",
+        "This checks committed records and hashes, not four live page renders, full-repository regression or current/live deployment.",
+        "No Arabic correctness, authoritative sense inclusion, host-lexeme certification, general grammar theorem, general version transport or operational adoption is established.",
+        "The historical pilot self-test’s 14 mutations are separate inherited application-code evidence unless a separate fresh receipt explicitly binds their execution."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Pinned Fusha occurrence/projection/event-fold reference data; source commit and tree fixed.",
+      "math_form": "IMPLEMENTATION",
+      "claim_scope": "DECLARED_SUITE",
+      "domain": "REFERENCE_EXECUTION",
+      "source_ids": [
+        "D17-T14-LANGUAGE-README",
+        "D17-T14-OCCURRENCE-VERIFIER",
+        "D17-T14-OCCURRENCE-LOCK"
+      ],
+      "review_ids": [
+        "D17-REVIEW-T14-OCCURRENCE"
+      ],
+      "suite_ids": [
+        "d17-t14-occurrence-finite"
+      ],
+      "origin_status": "Full repository regression, linguistic correctness, current/live deployment and the broader correspondence problem remain unverified.",
+      "obligation_ids": [],
+      "residual_scope": "A justified adapter needs separately supported sense scope, governor relation, host-lexeme linkage, correlation preservation and actual version applicability."
+    },
+    {
+      "id": "T14-LANGUAGE-SENSE-SOURCE-IDENTITIES",
+      "title": "Nine supplemental source identities remain separate from occurrence assertions",
+      "tranche": 14,
+      "family": "language-supplemental-source-identities",
+      "original_avenues": [
+        11
+      ],
+      "evidence_keys": [
+        "T14:language:9-supplemental-source-identities"
+      ],
+      "target": "Nine nonoverlapping supplemental file identities bind the source closure used by the accepted sense-scope assessment, with zero new occurrence-data or linguistic checks.",
+      "input_contract": "Exactly the nine files in sense-source-lock.json at Fusha commit c8b5db593d88311e5a020607dba70ff838ab61c5, tree a5bd2b045bc36c78047b5d3f7e9c2807fbf4153c; unchanged original verifier and adjacent lock.",
+      "assumptions": [
+        "The nine-file supplemental closure remains separate from the 70-file primary closure.",
+        "Identity verification reads raw bytes only and does not parse or execute the supplemental source files."
+      ],
+      "conclusion": "Length, SHA-256 and Git blob identity checks can reproduce the nine source bindings without distributing source content or promoting the interpretive assessment.",
+      "limitations": [
+        "Zero new occurrence-data assertions and zero new linguistic tests.",
+        "No independent repetition of the sense-scope interpretation, general correctness, publication permission or deployment verification."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Read-only source-identity verifier over a separately acquired nine-file closure.",
+      "math_form": "IMPLEMENTATION",
+      "claim_scope": "DECLARED_SUITE",
+      "domain": "REFERENCE_EXECUTION",
+      "source_ids": [
+        "D17-T14-LANGUAGE-README",
+        "D17-T14-SENSE-VERIFIER",
+        "D17-T14-SENSE-LOCK"
+      ],
+      "review_ids": [
+        "D17-REVIEW-T14-SENSE-IDENTITIES"
+      ],
+      "suite_ids": [
+        "d17-t14-sense-finite"
+      ],
+      "origin_status": "This separate standard-library verifier checks source identity only and prints relative paths and pass/fail results, never source content.",
+      "obligation_ids": [],
+      "residual_scope": "Authoritative sense inclusion remains a separate interpretive and human-gated certification question."
+    },
+    {
+      "id": "T14-LANGUAGE-SENSE-SCOPE",
+      "title": "A reasoned candidate sense mapping with an unresolved inclusion question",
+      "tranche": 14,
+      "family": "language-candidate-sense-scope",
+      "original_avenues": [
+        11
+      ],
+      "evidence_keys": [
+        "T14-SUPPLEMENT:p0069-p0073",
+        "T14:language:sense-source-lock"
+      ],
+      "target": "The retained registry supports a reasoned dictionary-sense-2 candidate for quran:61:5:4; authoritative inclusion of the speech-addressee use remains unestablished.",
+      "input_contract": "Pinned occurrence, retained family registry, grammatical family, contextual reviews and nine additional identified sources; preserve the original report assessment and its source scope.",
+      "assumptions": [
+        "The report’s source-specific interpretive assessment is inherited; a fresh hash replay does not repeat that assessment.",
+        "The source entry, grammatical family and candidate semantic assignment are distinct claim subjects."
+      ],
+      "conclusion": "The candidate has explicit occurrence-linked support stronger than spelling resemblance alone. The broad dictionary grouping does not expressly settle inclusion, and the registry repeats the pilot classification rather than providing an independent scope ruling.",
+      "limitations": [
+        "Narrower grammatical certification does not supply missing sense certification.",
+        "Candidate status, semantic-identity uncertainty and human-gated certification remain unchanged.",
+        "No new status, gloss, source entry, live system, general grammar or ambiguity theorem is produced."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Written source assessment of the existing pinned sense candidate, separate from byte verification.",
+      "math_form": "SOURCE_ASSESSMENT",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "SOURCE_TEXT",
+      "source_ids": [
+        "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+        "D17-T14-LANGUAGE-README",
+        "D17-T14-SENSE-LOCK"
+      ],
+      "review_ids": [
+        "D17-REVIEW-T14-SENSE-SCOPE"
+      ],
+      "suite_ids": [],
+      "origin_status": "The candidate is reasoned and reviewable; semantic identity and human-gated certification remain unestablished.",
+      "obligation_ids": [],
+      "residual_scope": "An independently justified sense-scope ruling, supported governor relation and host-lexeme link would change the stronger application claim."
+    },
+    {
+      "id": "T15-LANGUAGE-ADMISSION-STOP",
+      "title": "Join/parity proposal retains H-ICS ownership and earns no new language theorem",
+      "tranche": 15,
+      "family": "language-join-parity-admission",
+      "original_avenues": [
+        11
+      ],
+      "evidence_keys": [
+        "T15-REPORT:p0116-p0120",
+        "T15-REPORT:p0163-p0166",
+        "H-ICS-V5:relational-strengthening-and-parity"
+      ],
+      "target": "The proposed elementary join/parity control is already covered by H-ICS-v5, and the inspected occurrence packet does not supply the proposed complete joint reading class.",
+      "input_contract": "The existing H-ICS-v5 exact-projection, compatible-relation and parity results, together with the scoped pinned occurrence packet; no invented joint reading relation.",
+      "assumptions": [
+        "The proposed elementary control is compared with the canonical theory’s actual finite relation and query hypotheses.",
+        "The inspected packet’s explicitly unresolved posture is preserved, and absence of supplied joint input is not general exhaustion of evidence."
+      ],
+      "conclusion": "This is a justified admission stop that preserves the existing positive application and source owners, with neither an additional theorem nor an actual application defect established.",
+      "limitations": [
+        "No new theorem, new linguistic ruling, semantic transport closure or exhaustive search of all richer evidence.",
+        "Naming a hypothetical correlation relation after the occurrence would introduce an unprovided input.",
+        "Avenue 11 and inherited M18 obligations remain open; the twelve-avenue map and eighteen-milestone map remain separate."
+      ],
+      "calculus": "NONE",
+      "operational_model": "Written admission comparison against existing H-ICS-v5 composition and parity owners.",
+      "math_form": "SOURCE_ASSESSMENT",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "SOURCE_TEXT",
+      "source_ids": [
+        "T15-REPORT-DERIVED-MARKDOWN"
+      ],
+      "review_ids": [
+        "D17-REVIEW-T15-ADMISSION"
+      ],
+      "suite_ids": [],
+      "origin_status": "The proposed elementary control is a special case of that existing result. It adds no new theorem.",
+      "obligation_ids": [
+        "H-ICS-V5"
+      ],
+      "residual_scope": "A genuinely specified joint reading class, a concrete composed claim or a nontrivial query/observation contract beyond the inherited theory is needed for a further result."
+    }
+  ],
+  "statuses": [
+    {
+      "id": "T12-LANGUAGE-ATTESTATION",
+      "custody": "EXACT",
+      "inherited_evidence": "SOURCE_ASSESSMENT",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "OUT_OF_SCOPE",
+        "normative": "OUT_OF_SCOPE",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T13-LANGUAGE-RECONSTRUCTION",
+      "custody": "MIXED",
+      "inherited_evidence": "SOURCE_ASSESSMENT",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "OUT_OF_SCOPE",
+        "normative": "OUT_OF_SCOPE",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T14-LANGUAGE-OCCURRENCE",
+      "custody": "EXACT",
+      "inherited_evidence": "FINITE_REFERENCE_EXECUTION",
+      "fresh_evidence": "FINITE_ONLY",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "REFERENCE_ONLY",
+      "external_warrants": {
+        "actual_world": "OUT_OF_SCOPE",
+        "normative": "OUT_OF_SCOPE",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [
+        "d17-t14-occurrence-finite-replay"
+      ],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T14-LANGUAGE-SENSE-SOURCE-IDENTITIES",
+      "custody": "EXACT",
+      "inherited_evidence": "FINITE_REFERENCE_EXECUTION",
+      "fresh_evidence": "FINITE_ONLY",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "REFERENCE_ONLY",
+      "external_warrants": {
+        "actual_world": "OUT_OF_SCOPE",
+        "normative": "OUT_OF_SCOPE",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [
+        "d17-t14-sense-finite-replay"
+      ],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T14-LANGUAGE-SENSE-SCOPE",
+      "custody": "MIXED",
+      "inherited_evidence": "SOURCE_ASSESSMENT",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "OUT_OF_SCOPE",
+        "normative": "OUT_OF_SCOPE",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T15-LANGUAGE-ADMISSION-STOP",
+      "custody": "DERIVED",
+      "inherited_evidence": "SOURCE_ASSESSMENT",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "DEFERRED",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "OUT_OF_SCOPE",
+        "normative": "OUT_OF_SCOPE",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    }
+  ],
+  "suites": [
+    {
+      "id": "d17-t14-occurrence-finite",
+      "family": "language-pinned-occurrence",
+      "result_families": [
+        "language-pinned-occurrence"
+      ],
+      "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "source_ids": [
+        "D17-T14-OCCURRENCE-VERIFIER",
+        "D17-T14-OCCURRENCE-LOCK"
+      ],
+      "review_ids": [
+        "D17-REVIEW-T14-OCCURRENCE"
+      ],
+      "targets": [
+        {
+          "id": "occurrence-82",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "declaration": "Read-only replay of 70 byte bindings and 12 occurrence assertions.",
+          "target_sha256": "6a3405699741253d6598255ac752230da7704be59d8ff657d43b382535a30c15",
+          "domain": "REFERENCE_EXECUTION",
+          "calculus": "NONE"
+        }
+      ],
+      "controls": [
+        {
+          "id": "occurrence-positive",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "role": "POSITIVE",
+          "expected_outcome": "ACCEPT",
+          "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+        },
+        {
+          "id": "occurrence-missing-directory",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "role": "MUTATION_REJECTION",
+          "expected_outcome": "REJECT",
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+        },
+        {
+          "id": "occurrence-non-directory",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "role": "MUTATION_REJECTION",
+          "expected_outcome": "REJECT",
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+        },
+        {
+          "id": "occurrence-missing-file",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "role": "MUTATION_REJECTION",
+          "expected_outcome": "REJECT",
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+        },
+        {
+          "id": "occurrence-changed-file",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "role": "MUTATION_REJECTION",
+          "expected_outcome": "REJECT",
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+        }
+      ],
+      "toolchain": {
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "platform": "linux-x86_64",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "packages": []
+      },
+      "replay": {
+        "schema": "orthemology-v5-replay-v1",
+        "scope": "FINITE",
+        "files": [
+          {
+            "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+            "path": "language/verify_occurrence.py",
+            "role": "DRIVER"
+          },
+          {
+            "source_id": "D17-T14-OCCURRENCE-LOCK",
+            "path": "language/source-lock.json",
+            "role": "LOCK"
+          }
+        ],
+        "modules": [],
+        "module_order": [],
+        "positive_roots": [],
+        "audit_roots": [],
+        "negative_roots": [],
+        "runtime_roots": [],
+        "official_imports": [],
+        "target_names": [],
+        "package_manifest_source_id": null,
+        "packages": [],
+        "tools": [],
+        "external_inputs": [
+          {
+            "id": "fusha-selected",
+            "source_id": null,
+            "kind": "TREE",
+            "manifest_source_id": "D17-T14-OCCURRENCE-LOCK",
+            "manifest_key": "files",
+            "expected_sha256": null,
+            "expected_bytes": null,
+            "role": "INPUT"
+          }
+        ],
+        "fixtures": [
+          {
+            "id": "occurrence-missing-directory",
+            "input_id": "fusha-selected",
+            "operation": "ABSENT",
+            "path": null
+          },
+          {
+            "id": "occurrence-non-directory",
+            "input_id": "fusha-selected",
+            "operation": "NON_DIRECTORY",
+            "path": null
+          },
+          {
+            "id": "occurrence-missing-file",
+            "input_id": "fusha-selected",
+            "operation": "OMIT",
+            "path": "qamus/examples/p007-li-pilot/vn-unlock.json"
+          },
+          {
+            "id": "occurrence-changed-file",
+            "input_id": "fusha-selected",
+            "operation": "APPEND_CHANGED_BYTES",
+            "path": "qamus/examples/p007-li-pilot/vn-unlock.json"
+          }
+        ],
+        "drivers": [
+          {
+            "id": "occurrence",
+            "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+            "recipe": "t14-occurrence-v1",
+            "sha256": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615",
+            "argument_meanings": {
+              "source_dir": "INPUT_TREE"
+            },
+            "external_input_id": null
+          }
+        ],
+        "stages": [
+          {
+            "id": "occurrence-positive",
+            "kind": "REFERENCE_TESTS",
+            "driver_id": "occurrence",
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{input:fusha-selected}"
+            ],
+            "cwd": ".",
+            "depends_on": [],
+            "timeout_seconds": 60,
+            "output_paths": [],
+            "control_ids": [
+              "occurrence-positive"
+            ],
+            "expected_exit_codes": [
+              0
+            ],
+            "expected_diagnostics": []
+          },
+          {
+            "id": "occurrence-missing-directory",
+            "kind": "NEGATIVE_CONTROL",
+            "driver_id": "occurrence",
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{fixture:occurrence-missing-directory}"
+            ],
+            "cwd": ".",
+            "depends_on": [
+              "occurrence-positive"
+            ],
+            "timeout_seconds": 60,
+            "output_paths": [],
+            "control_ids": [
+              "occurrence-missing-directory"
+            ],
+            "expected_exit_codes": [
+              1
+            ],
+            "expected_diagnostics": [
+              {
+                "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+                "literal": "source directory is missing or is not a directory",
+                "sha256": "095020e667f5709ab6e5a5f2cf4bf7103a72d31779555535fc621e5db097f77a"
+              }
+            ]
+          },
+          {
+            "id": "occurrence-non-directory",
+            "kind": "NEGATIVE_CONTROL",
+            "driver_id": "occurrence",
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{fixture:occurrence-non-directory}"
+            ],
+            "cwd": ".",
+            "depends_on": [
+              "occurrence-positive"
+            ],
+            "timeout_seconds": 60,
+            "output_paths": [],
+            "control_ids": [
+              "occurrence-non-directory"
+            ],
+            "expected_exit_codes": [
+              1
+            ],
+            "expected_diagnostics": [
+              {
+                "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+                "literal": "source directory is missing or is not a directory",
+                "sha256": "095020e667f5709ab6e5a5f2cf4bf7103a72d31779555535fc621e5db097f77a"
+              }
+            ]
+          },
+          {
+            "id": "occurrence-missing-file",
+            "kind": "NEGATIVE_CONTROL",
+            "driver_id": "occurrence",
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{fixture:occurrence-missing-file}"
+            ],
+            "cwd": ".",
+            "depends_on": [
+              "occurrence-positive"
+            ],
+            "timeout_seconds": 60,
+            "output_paths": [],
+            "control_ids": [
+              "occurrence-missing-file"
+            ],
+            "expected_exit_codes": [
+              1
+            ],
+            "expected_diagnostics": [
+              {
+                "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+                "literal": "missing or unreadable locked file: ",
+                "sha256": "2c12cc9f7a495151e05c002a0af01d9fde0e26e5d41b2dc33edb36e9426afb74"
+              }
+            ]
+          },
+          {
+            "id": "occurrence-changed-file",
+            "kind": "NEGATIVE_CONTROL",
+            "driver_id": "occurrence",
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{fixture:occurrence-changed-file}"
+            ],
+            "cwd": ".",
+            "depends_on": [
+              "occurrence-positive"
+            ],
+            "timeout_seconds": 60,
+            "output_paths": [],
+            "control_ids": [
+              "occurrence-changed-file"
+            ],
+            "expected_exit_codes": [
+              1
+            ],
+            "expected_diagnostics": [
+              {
+                "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+                "literal": "custody:",
+                "sha256": "90f0c7dbbf2c3328ba2ca272d5845c50e4e6d7c3d9987036932882df0e638e92"
+              }
+            ]
+          }
+        ],
+        "build_roots": []
+      }
+    },
+    {
+      "id": "d17-t14-sense-finite",
+      "family": "language-supplemental-source-identities",
+      "result_families": [
+        "language-supplemental-source-identities"
+      ],
+      "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+      "source_ids": [
+        "D17-T14-SENSE-VERIFIER",
+        "D17-T14-SENSE-LOCK"
+      ],
+      "review_ids": [
+        "D17-REVIEW-T14-SENSE-IDENTITIES"
+      ],
+      "targets": [
+        {
+          "id": "sense-9",
+          "source_id": "D17-T14-SENSE-VERIFIER",
+          "declaration": "Verify nine supplemental source identities without printing source content.",
+          "target_sha256": "3bfa06bfed88ca134c4858911fb3ec2d64ae68b7b4abc8d949b6b9391ada5ebb",
+          "domain": "REFERENCE_EXECUTION",
+          "calculus": "NONE"
+        }
+      ],
+      "controls": [
+        {
+          "id": "sense-positive",
+          "source_id": "D17-T14-SENSE-VERIFIER",
+          "target_id": "sense-9",
+          "role": "POSITIVE",
+          "expected_outcome": "ACCEPT",
+          "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+        },
+        {
+          "id": "sense-missing-file",
+          "source_id": "D17-T14-SENSE-VERIFIER",
+          "target_id": "sense-9",
+          "role": "MUTATION_REJECTION",
+          "expected_outcome": "REJECT",
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+        },
+        {
+          "id": "sense-changed-file",
+          "source_id": "D17-T14-SENSE-VERIFIER",
+          "target_id": "sense-9",
+          "role": "MUTATION_REJECTION",
+          "expected_outcome": "REJECT",
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+        }
+      ],
+      "toolchain": {
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "platform": "linux-x86_64",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "packages": []
+      },
+      "replay": {
+        "schema": "orthemology-v5-replay-v1",
+        "scope": "FINITE",
+        "files": [
+          {
+            "source_id": "D17-T14-SENSE-VERIFIER",
+            "path": "language/verify_sense_sources.py",
+            "role": "DRIVER"
+          },
+          {
+            "source_id": "D17-T14-SENSE-LOCK",
+            "path": "language/sense-source-lock.json",
+            "role": "LOCK"
+          }
+        ],
+        "modules": [],
+        "module_order": [],
+        "positive_roots": [],
+        "audit_roots": [],
+        "negative_roots": [],
+        "runtime_roots": [],
+        "official_imports": [],
+        "target_names": [],
+        "package_manifest_source_id": null,
+        "packages": [],
+        "tools": [],
+        "external_inputs": [
+          {
+            "id": "fusha-selected",
+            "source_id": null,
+            "kind": "TREE",
+            "manifest_source_id": "D17-T14-SENSE-LOCK",
+            "manifest_key": "files",
+            "expected_sha256": null,
+            "expected_bytes": null,
+            "role": "INPUT"
+          }
+        ],
+        "fixtures": [
+          {
+            "id": "sense-missing-file",
+            "input_id": "fusha-selected",
+            "operation": "OMIT",
+            "path": "docs/certification-policy.md"
+          },
+          {
+            "id": "sense-changed-file",
+            "input_id": "fusha-selected",
+            "operation": "APPEND_CHANGED_BYTES",
+            "path": "docs/certification-policy.md"
+          }
+        ],
+        "drivers": [
+          {
+            "id": "sense",
+            "source_id": "D17-T14-SENSE-VERIFIER",
+            "recipe": "t14-sense-v1",
+            "sha256": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d",
+            "argument_meanings": {
+              "source_dir": "INPUT_TREE"
+            },
+            "external_input_id": null
+          }
+        ],
+        "stages": [
+          {
+            "id": "sense-positive",
+            "kind": "REFERENCE_TESTS",
+            "driver_id": "sense",
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:sense}",
+              "{input:fusha-selected}"
+            ],
+            "cwd": ".",
+            "depends_on": [],
+            "timeout_seconds": 60,
+            "output_paths": [],
+            "control_ids": [
+              "sense-positive"
+            ],
+            "expected_exit_codes": [
+              0
+            ],
+            "expected_diagnostics": []
+          },
+          {
+            "id": "sense-missing-file",
+            "kind": "NEGATIVE_CONTROL",
+            "driver_id": "sense",
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:sense}",
+              "{fixture:sense-missing-file}"
+            ],
+            "cwd": ".",
+            "depends_on": [
+              "sense-positive"
+            ],
+            "timeout_seconds": 60,
+            "output_paths": [],
+            "control_ids": [
+              "sense-missing-file"
+            ],
+            "expected_exit_codes": [
+              1
+            ],
+            "expected_diagnostics": [
+              {
+                "source_id": "D17-T14-SENSE-VERIFIER",
+                "literal": "missing or unreadable locked file: ",
+                "sha256": "2c12cc9f7a495151e05c002a0af01d9fde0e26e5d41b2dc33edb36e9426afb74"
+              }
+            ]
+          },
+          {
+            "id": "sense-changed-file",
+            "kind": "NEGATIVE_CONTROL",
+            "driver_id": "sense",
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:sense}",
+              "{fixture:sense-changed-file}"
+            ],
+            "cwd": ".",
+            "depends_on": [
+              "sense-positive"
+            ],
+            "timeout_seconds": 60,
+            "output_paths": [],
+            "control_ids": [
+              "sense-changed-file"
+            ],
+            "expected_exit_codes": [
+              1
+            ],
+            "expected_diagnostics": [
+              {
+                "source_id": "D17-T14-SENSE-VERIFIER",
+                "literal": "source identity mismatch: ",
+                "sha256": "47e513ba7d5e27bed04f5410aa0ae27071fef2ff8394dd7c3e1bde18db888014"
+              }
+            ]
+          }
+        ],
+        "build_roots": []
+      }
+    }
+  ],
+  "receipts": [
+    {
+      "axioms": [],
+      "controls": [
+        {
+          "actual_outcome": "ACCEPT",
+          "actual_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+          "exit_code": 0,
+          "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+          "id": "occurrence-positive",
+          "log_sha256": "be8e02f6087646a5ea97024ce0470a582cf99412a044a0ce80ace3562c2702c3",
+          "role": "POSITIVE",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "terminal": "COMPLETED"
+        },
+        {
+          "actual_outcome": "REJECT",
+          "actual_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "exit_code": 1,
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "id": "occurrence-missing-directory",
+          "log_sha256": "7dde34e8988d4c5cb1a6b80f57084ccc4384cf9386c8d96d3352446a7a371a62",
+          "role": "MUTATION_REJECTION",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "terminal": "COMPLETED"
+        },
+        {
+          "actual_outcome": "REJECT",
+          "actual_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "exit_code": 1,
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "id": "occurrence-non-directory",
+          "log_sha256": "7dde34e8988d4c5cb1a6b80f57084ccc4384cf9386c8d96d3352446a7a371a62",
+          "role": "MUTATION_REJECTION",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "terminal": "COMPLETED"
+        },
+        {
+          "actual_outcome": "REJECT",
+          "actual_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "exit_code": 1,
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "id": "occurrence-missing-file",
+          "log_sha256": "720e69984327869cc1ece9515a2ef38d8950a5bdd7e2dc476bf4277b467993ab",
+          "role": "MUTATION_REJECTION",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "terminal": "COMPLETED"
+        },
+        {
+          "actual_outcome": "REJECT",
+          "actual_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "exit_code": 1,
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "id": "occurrence-changed-file",
+          "log_sha256": "f18d6c2e63c1207fcf2ee7b58c52171a984499685a6bd4730023419aa3081516",
+          "role": "MUTATION_REJECTION",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "terminal": "COMPLETED"
+        }
+      ],
+      "ended_at": "2026-10-05T19:52:53.998171Z",
+      "exit_code": 0,
+      "family": "language-pinned-occurrence",
+      "id": "d17-t14-occurrence-finite-replay",
+      "invocation": [
+        "replay_v5_successors.py",
+        "--execute",
+        "--suite",
+        "d17-t14-occurrence-finite",
+        "--out",
+        "{out}"
+      ],
+      "log_sha256": "7a60c40b7b3963e09c037cdd698c2b2956937c820f153c06ec3277ab90c3d5af",
+      "outcome": "FINITE_ONLY",
+      "proof_scope": "FINITE",
+      "replay_evidence": {
+        "cache_policy": "OFFICIAL_PINNED_CACHES_ONLY_FRESH_CUSTOM_OBJECTS",
+        "closure_sha256": "d466864e65a03c22759c867ae9b611d3712468d4eec7687e362cc9ce2e2c8180",
+        "control_diagnostics": [
+          {
+            "control_id": "occurrence-positive",
+            "expected": [],
+            "match": "MATCHED",
+            "observed_log_sha256": "be8e02f6087646a5ea97024ce0470a582cf99412a044a0ce80ace3562c2702c3",
+            "prerequisite_stage_ids": [],
+            "stage_id": "occurrence-positive"
+          },
+          {
+            "control_id": "occurrence-missing-directory",
+            "expected": [
+              {
+                "literal": "source directory is missing or is not a directory",
+                "sha256": "095020e667f5709ab6e5a5f2cf4bf7103a72d31779555535fc621e5db097f77a",
+                "source_id": "D17-T14-OCCURRENCE-VERIFIER"
+              }
+            ],
+            "match": "MATCHED",
+            "observed_log_sha256": "7dde34e8988d4c5cb1a6b80f57084ccc4384cf9386c8d96d3352446a7a371a62",
+            "prerequisite_stage_ids": [
+              "occurrence-positive"
+            ],
+            "stage_id": "occurrence-missing-directory"
+          },
+          {
+            "control_id": "occurrence-non-directory",
+            "expected": [
+              {
+                "literal": "source directory is missing or is not a directory",
+                "sha256": "095020e667f5709ab6e5a5f2cf4bf7103a72d31779555535fc621e5db097f77a",
+                "source_id": "D17-T14-OCCURRENCE-VERIFIER"
+              }
+            ],
+            "match": "MATCHED",
+            "observed_log_sha256": "7dde34e8988d4c5cb1a6b80f57084ccc4384cf9386c8d96d3352446a7a371a62",
+            "prerequisite_stage_ids": [
+              "occurrence-positive"
+            ],
+            "stage_id": "occurrence-non-directory"
+          },
+          {
+            "control_id": "occurrence-missing-file",
+            "expected": [
+              {
+                "literal": "missing or unreadable locked file: ",
+                "sha256": "2c12cc9f7a495151e05c002a0af01d9fde0e26e5d41b2dc33edb36e9426afb74",
+                "source_id": "D17-T14-OCCURRENCE-VERIFIER"
+              }
+            ],
+            "match": "MATCHED",
+            "observed_log_sha256": "720e69984327869cc1ece9515a2ef38d8950a5bdd7e2dc476bf4277b467993ab",
+            "prerequisite_stage_ids": [
+              "occurrence-positive"
+            ],
+            "stage_id": "occurrence-missing-file"
+          },
+          {
+            "control_id": "occurrence-changed-file",
+            "expected": [
+              {
+                "literal": "custody:",
+                "sha256": "90f0c7dbbf2c3328ba2ca272d5845c50e4e6d7c3d9987036932882df0e638e92",
+                "source_id": "D17-T14-OCCURRENCE-VERIFIER"
+              }
+            ],
+            "match": "MATCHED",
+            "observed_log_sha256": "f18d6c2e63c1207fcf2ee7b58c52171a984499685a6bd4730023419aa3081516",
+            "prerequisite_stage_ids": [
+              "occurrence-positive"
+            ],
+            "stage_id": "occurrence-changed-file"
+          }
+        ],
+        "dependency_checks": {},
+        "descriptor_sha256": "c083373c72daa5a7e607a2df918bf39bc9e959f9ca8752e47734cc59ebb154d7",
+        "driver_hashes": {
+          "occurrence": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615"
+        },
+        "import_fingerprints": {},
+        "output_hashes": {},
+        "runner_sha256": "42007624acd3ee707224673b2317596449e0deeb2458424c75af0fcd4357cb62",
+        "schema": "orthemology-v5-replay-evidence-v1",
+        "source_hashes_after": {
+          "D17-T14-OCCURRENCE-LOCK": "54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0",
+          "D17-T14-OCCURRENCE-VERIFIER": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615"
+        },
+        "source_hashes_before": {
+          "D17-T14-OCCURRENCE-LOCK": "54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0",
+          "D17-T14-OCCURRENCE-VERIFIER": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615"
+        },
+        "stage_results": [
+          {
+            "argv": [
+              "{builtin:prerequisites}"
+            ],
+            "budget_seconds": 30,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:52:39.346283Z",
+            "exit_code": 0,
+            "id": "_prerequisites",
+            "log_sha256": "2c0f28b03d636fbe943e0053335bf78e330a1503cd506158f001fc968bedfebe",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:52:37.464527Z",
+            "terminal": "COMPLETED"
+          },
+          {
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{input:fusha-selected}"
+            ],
+            "budget_seconds": 60,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:52:39.677250Z",
+            "exit_code": 0,
+            "id": "occurrence-positive",
+            "log_sha256": "be8e02f6087646a5ea97024ce0470a582cf99412a044a0ce80ace3562c2702c3",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:52:39.406238Z",
+            "terminal": "COMPLETED"
+          },
+          {
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{fixture:occurrence-missing-directory}"
+            ],
+            "budget_seconds": 60,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:52:39.768998Z",
+            "exit_code": 1,
+            "id": "occurrence-missing-directory",
+            "log_sha256": "7dde34e8988d4c5cb1a6b80f57084ccc4384cf9386c8d96d3352446a7a371a62",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:52:39.730560Z",
+            "terminal": "COMPLETED"
+          },
+          {
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{fixture:occurrence-non-directory}"
+            ],
+            "budget_seconds": 60,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:52:39.899478Z",
+            "exit_code": 1,
+            "id": "occurrence-non-directory",
+            "log_sha256": "7dde34e8988d4c5cb1a6b80f57084ccc4384cf9386c8d96d3352446a7a371a62",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:52:39.828549Z",
+            "terminal": "COMPLETED"
+          },
+          {
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{fixture:occurrence-missing-file}"
+            ],
+            "budget_seconds": 60,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:52:45.861120Z",
+            "exit_code": 1,
+            "id": "occurrence-missing-file",
+            "log_sha256": "720e69984327869cc1ece9515a2ef38d8950a5bdd7e2dc476bf4277b467993ab",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:52:45.791162Z",
+            "terminal": "COMPLETED"
+          },
+          {
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:occurrence}",
+              "{fixture:occurrence-changed-file}"
+            ],
+            "budget_seconds": 60,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:52:51.923089Z",
+            "exit_code": 1,
+            "id": "occurrence-changed-file",
+            "log_sha256": "f18d6c2e63c1207fcf2ee7b58c52171a984499685a6bd4730023419aa3081516",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:52:51.852731Z",
+            "terminal": "COMPLETED"
+          }
+        ],
+        "target_audits": [],
+        "tool_fingerprints": {
+          "python": {
+            "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+            "kind": "PYTHON",
+            "platform": "linux-x86_64",
+            "version": "3.11.9",
+            "version_log_sha256": "bc470e08cfeae31ebc8be9f6a8b9e86e415842ad13f9afb19828ca2ac42e81b5"
+          }
+        }
+      },
+      "review_hashes": {
+        "D17-REVIEW-T14-OCCURRENCE": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb"
+      },
+      "source_hashes": {
+        "D17-T14-OCCURRENCE-LOCK": "54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0",
+        "D17-T14-OCCURRENCE-VERIFIER": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615"
+      },
+      "stages": [
+        {
+          "exit_code": 0,
+          "id": "_prerequisites",
+          "log_sha256": "2c0f28b03d636fbe943e0053335bf78e330a1503cd506158f001fc968bedfebe",
+          "terminal": "COMPLETED"
+        },
+        {
+          "exit_code": 0,
+          "id": "occurrence-positive",
+          "log_sha256": "be8e02f6087646a5ea97024ce0470a582cf99412a044a0ce80ace3562c2702c3",
+          "terminal": "COMPLETED"
+        },
+        {
+          "exit_code": 1,
+          "id": "occurrence-missing-directory",
+          "log_sha256": "7dde34e8988d4c5cb1a6b80f57084ccc4384cf9386c8d96d3352446a7a371a62",
+          "terminal": "COMPLETED"
+        },
+        {
+          "exit_code": 1,
+          "id": "occurrence-non-directory",
+          "log_sha256": "7dde34e8988d4c5cb1a6b80f57084ccc4384cf9386c8d96d3352446a7a371a62",
+          "terminal": "COMPLETED"
+        },
+        {
+          "exit_code": 1,
+          "id": "occurrence-missing-file",
+          "log_sha256": "720e69984327869cc1ece9515a2ef38d8950a5bdd7e2dc476bf4277b467993ab",
+          "terminal": "COMPLETED"
+        },
+        {
+          "exit_code": 1,
+          "id": "occurrence-changed-file",
+          "log_sha256": "f18d6c2e63c1207fcf2ee7b58c52171a984499685a6bd4730023419aa3081516",
+          "terminal": "COMPLETED"
+        }
+      ],
+      "started_at": "2026-10-05T19:52:37.461816Z",
+      "suite_id": "d17-t14-occurrence-finite",
+      "suite_sha256": "0b5d14387894105eda0bb2348f2ef3e396ea306cf55a2c88fb3e5181b406a1a3",
+      "target_readbacks": [
+        {
+          "outcome": "CHECKED",
+          "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+          "target_id": "occurrence-82",
+          "target_sha256": "6a3405699741253d6598255ac752230da7704be59d8ff657d43b382535a30c15"
+        }
+      ],
+      "toolchain_sha256": "c20ff7853e3d61811ee9489338a7a210da08fddb461a446c1071c67b57bcbc80"
+    },
+    {
+      "axioms": [],
+      "controls": [
+        {
+          "actual_outcome": "ACCEPT",
+          "actual_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+          "exit_code": 0,
+          "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+          "id": "sense-positive",
+          "log_sha256": "712a777ed6d714a03c862f5d47c9291307a7d03bc4f218f1a16799ce8d2f7bca",
+          "role": "POSITIVE",
+          "source_id": "D17-T14-SENSE-VERIFIER",
+          "target_id": "sense-9",
+          "terminal": "COMPLETED"
+        },
+        {
+          "actual_outcome": "REJECT",
+          "actual_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "exit_code": 1,
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "id": "sense-missing-file",
+          "log_sha256": "895b23c5487f9eefd0d3cbebf317f5f165ce861ae8b79c8dad9477e76b199006",
+          "role": "MUTATION_REJECTION",
+          "source_id": "D17-T14-SENSE-VERIFIER",
+          "target_id": "sense-9",
+          "terminal": "COMPLETED"
+        },
+        {
+          "actual_outcome": "REJECT",
+          "actual_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "exit_code": 1,
+          "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+          "id": "sense-changed-file",
+          "log_sha256": "8ad8f549fdaa7d6887ada1da6a0446930fe7600b41301e504838447ca25f6afb",
+          "role": "MUTATION_REJECTION",
+          "source_id": "D17-T14-SENSE-VERIFIER",
+          "target_id": "sense-9",
+          "terminal": "COMPLETED"
+        }
+      ],
+      "ended_at": "2026-10-05T19:53:05.793585Z",
+      "exit_code": 0,
+      "family": "language-supplemental-source-identities",
+      "id": "d17-t14-sense-finite-replay",
+      "invocation": [
+        "replay_v5_successors.py",
+        "--execute",
+        "--suite",
+        "d17-t14-sense-finite",
+        "--out",
+        "{out}"
+      ],
+      "log_sha256": "74adf728814b6d099c90f8153d8f700446670129cac74f7185ecbe9edebe8760",
+      "outcome": "FINITE_ONLY",
+      "proof_scope": "FINITE",
+      "replay_evidence": {
+        "cache_policy": "OFFICIAL_PINNED_CACHES_ONLY_FRESH_CUSTOM_OBJECTS",
+        "closure_sha256": "3ccfecb3ccb745a780c923d2ee711e430865a122a7ca9655283371b2268ccfb5",
+        "control_diagnostics": [
+          {
+            "control_id": "sense-positive",
+            "expected": [],
+            "match": "MATCHED",
+            "observed_log_sha256": "712a777ed6d714a03c862f5d47c9291307a7d03bc4f218f1a16799ce8d2f7bca",
+            "prerequisite_stage_ids": [],
+            "stage_id": "sense-positive"
+          },
+          {
+            "control_id": "sense-missing-file",
+            "expected": [
+              {
+                "literal": "missing or unreadable locked file: ",
+                "sha256": "2c12cc9f7a495151e05c002a0af01d9fde0e26e5d41b2dc33edb36e9426afb74",
+                "source_id": "D17-T14-SENSE-VERIFIER"
+              }
+            ],
+            "match": "MATCHED",
+            "observed_log_sha256": "895b23c5487f9eefd0d3cbebf317f5f165ce861ae8b79c8dad9477e76b199006",
+            "prerequisite_stage_ids": [
+              "sense-positive"
+            ],
+            "stage_id": "sense-missing-file"
+          },
+          {
+            "control_id": "sense-changed-file",
+            "expected": [
+              {
+                "literal": "source identity mismatch: ",
+                "sha256": "47e513ba7d5e27bed04f5410aa0ae27071fef2ff8394dd7c3e1bde18db888014",
+                "source_id": "D17-T14-SENSE-VERIFIER"
+              }
+            ],
+            "match": "MATCHED",
+            "observed_log_sha256": "8ad8f549fdaa7d6887ada1da6a0446930fe7600b41301e504838447ca25f6afb",
+            "prerequisite_stage_ids": [
+              "sense-positive"
+            ],
+            "stage_id": "sense-changed-file"
+          }
+        ],
+        "dependency_checks": {},
+        "descriptor_sha256": "a41376da5ccd3e122d83c7a0226429847dbdd232b46f25dcf17aa984c41cbe0c",
+        "driver_hashes": {
+          "sense": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d"
+        },
+        "import_fingerprints": {},
+        "output_hashes": {},
+        "runner_sha256": "42007624acd3ee707224673b2317596449e0deeb2458424c75af0fcd4357cb62",
+        "schema": "orthemology-v5-replay-evidence-v1",
+        "source_hashes_after": {
+          "D17-T14-SENSE-LOCK": "72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63",
+          "D17-T14-SENSE-VERIFIER": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d"
+        },
+        "source_hashes_before": {
+          "D17-T14-SENSE-LOCK": "72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63",
+          "D17-T14-SENSE-VERIFIER": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d"
+        },
+        "stage_results": [
+          {
+            "argv": [
+              "{builtin:prerequisites}"
+            ],
+            "budget_seconds": 30,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:53:03.162870Z",
+            "exit_code": 0,
+            "id": "_prerequisites",
+            "log_sha256": "2c0f28b03d636fbe943e0053335bf78e330a1503cd506158f001fc968bedfebe",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:53:02.866623Z",
+            "terminal": "COMPLETED"
+          },
+          {
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:sense}",
+              "{input:fusha-selected}"
+            ],
+            "budget_seconds": 60,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:53:03.343121Z",
+            "exit_code": 0,
+            "id": "sense-positive",
+            "log_sha256": "712a777ed6d714a03c862f5d47c9291307a7d03bc4f218f1a16799ce8d2f7bca",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:53:03.222234Z",
+            "terminal": "COMPLETED"
+          },
+          {
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:sense}",
+              "{fixture:sense-missing-file}"
+            ],
+            "budget_seconds": 60,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:53:04.268515Z",
+            "exit_code": 1,
+            "id": "sense-missing-file",
+            "log_sha256": "895b23c5487f9eefd0d3cbebf317f5f165ce861ae8b79c8dad9477e76b199006",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:53:04.197740Z",
+            "terminal": "COMPLETED"
+          },
+          {
+            "argv": [
+              "{tool:python}",
+              "-I",
+              "-B",
+              "{driver:sense}",
+              "{fixture:sense-changed-file}"
+            ],
+            "budget_seconds": 60,
+            "cwd": ".",
+            "ended_at": "2026-10-05T19:53:05.296639Z",
+            "exit_code": 1,
+            "id": "sense-changed-file",
+            "log_sha256": "8ad8f549fdaa7d6887ada1da6a0446930fe7600b41301e504838447ca25f6afb",
+            "output_hashes": {},
+            "started_at": "2026-10-05T19:53:05.225492Z",
+            "terminal": "COMPLETED"
+          }
+        ],
+        "target_audits": [],
+        "tool_fingerprints": {
+          "python": {
+            "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+            "kind": "PYTHON",
+            "platform": "linux-x86_64",
+            "version": "3.11.9",
+            "version_log_sha256": "bc470e08cfeae31ebc8be9f6a8b9e86e415842ad13f9afb19828ca2ac42e81b5"
+          }
+        }
+      },
+      "review_hashes": {
+        "D17-REVIEW-T14-SENSE-IDENTITIES": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb"
+      },
+      "source_hashes": {
+        "D17-T14-SENSE-LOCK": "72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63",
+        "D17-T14-SENSE-VERIFIER": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d"
+      },
+      "stages": [
+        {
+          "exit_code": 0,
+          "id": "_prerequisites",
+          "log_sha256": "2c0f28b03d636fbe943e0053335bf78e330a1503cd506158f001fc968bedfebe",
+          "terminal": "COMPLETED"
+        },
+        {
+          "exit_code": 0,
+          "id": "sense-positive",
+          "log_sha256": "712a777ed6d714a03c862f5d47c9291307a7d03bc4f218f1a16799ce8d2f7bca",
+          "terminal": "COMPLETED"
+        },
+        {
+          "exit_code": 1,
+          "id": "sense-missing-file",
+          "log_sha256": "895b23c5487f9eefd0d3cbebf317f5f165ce861ae8b79c8dad9477e76b199006",
+          "terminal": "COMPLETED"
+        },
+        {
+          "exit_code": 1,
+          "id": "sense-changed-file",
+          "log_sha256": "8ad8f549fdaa7d6887ada1da6a0446930fe7600b41301e504838447ca25f6afb",
+          "terminal": "COMPLETED"
+        }
+      ],
+      "started_at": "2026-10-05T19:53:02.863967Z",
+      "suite_id": "d17-t14-sense-finite",
+      "suite_sha256": "df8ee3aaf7d37e89bc5164397159059c9d1ce093cbc8e4df955581f41f6b97b8",
+      "target_readbacks": [
+        {
+          "outcome": "CHECKED",
+          "source_id": "D17-T14-SENSE-VERIFIER",
+          "target_id": "sense-9",
+          "target_sha256": "3bfa06bfed88ca134c4858911fb3ec2d64ae68b7b4abc8d949b6b9391ada5ebb"
+        }
+      ],
+      "toolchain_sha256": "c20ff7853e3d61811ee9489338a7a210da08fddb461a446c1071c67b57bcbc80"
+    }
+  ],
+  "supersession": [],
+  "legacy_endpoints": [],
+  "selectors": [
+    {
+      "family": "language-attested-editorial-source",
+      "result_id": "T12-LANGUAGE-ATTESTATION",
+      "statement_sha256": "65402b6058ccc32086cbe3421aebf540da8e14679815381ee0727576ee65c52c"
+    },
+    {
+      "family": "language-source-reconstruction",
+      "result_id": "T13-LANGUAGE-RECONSTRUCTION",
+      "statement_sha256": "cc535f3bebb0bde95ec62fc0000a6e90a5a025a34d4a1386a4b5c5b5a06d03dd"
+    },
+    {
+      "family": "language-pinned-occurrence",
+      "result_id": "T14-LANGUAGE-OCCURRENCE",
+      "statement_sha256": "02fa813cda105e2b09fd1f28f7ed94c75982d02346cd40747961cac76e0c52f9"
+    },
+    {
+      "family": "language-supplemental-source-identities",
+      "result_id": "T14-LANGUAGE-SENSE-SOURCE-IDENTITIES",
+      "statement_sha256": "6d3993a1394a66b81f0aef391df8d2a3666fac8eaf5f98f99c62b0008550bd91"
+    },
+    {
+      "family": "language-candidate-sense-scope",
+      "result_id": "T14-LANGUAGE-SENSE-SCOPE",
+      "statement_sha256": "b5fc303640198965bd5f77b4e0daabb2068222e2c3ce6f1f10d42f8eacf76091"
+    },
+    {
+      "family": "language-join-parity-admission",
+      "result_id": "T15-LANGUAGE-ADMISSION-STOP",
+      "statement_sha256": "dec02ec3c1e02b5d99e2a09bd29cfa9931d20eebb96ccd59f2af70ac5cb7241f"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "H-ICS-V5",
+      "owner_path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "owner_sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "statement": "Joining all proper projections yields the full product, losing parity entirely.",
+      "result_ids": [
+        "T15-LANGUAGE-ADMISSION-STOP"
+      ],
+      "disposition": "PRESERVED_STATUS",
+      "residual": "Existing join/query/parity mathematics retains its owner and scoped credit; actual joint-reading input and broader avenue 11/M18 application obligations remain open."
+    }
+  ],
+  "calculus": [
+    {
+      "id": "T12-LANGUAGE-ATTESTATION",
+      "calculus": "NONE",
+      "operational_model": "Claim-relative historical occurrence and editorial testimony assessment.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T13-LANGUAGE-RECONSTRUCTION",
+      "calculus": "NONE",
+      "operational_model": "Occurrence-sensitive textual reconstruction as a concrete application of inherited provenance discipline.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T14-LANGUAGE-OCCURRENCE",
+      "calculus": "NONE",
+      "operational_model": "Pinned Fusha occurrence/projection/event-fold reference data; source commit and tree fixed.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T14-LANGUAGE-SENSE-SOURCE-IDENTITIES",
+      "calculus": "NONE",
+      "operational_model": "Read-only source-identity verifier over a separately acquired nine-file closure.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T14-LANGUAGE-SENSE-SCOPE",
+      "calculus": "NONE",
+      "operational_model": "Written source assessment of the existing pinned sense candidate, separate from byte verification.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T15-LANGUAGE-ADMISSION-STOP",
+      "calculus": "NONE",
+      "operational_model": "Written admission comparison against existing H-ICS-v5 composition and parity owners.",
+      "canonical_adoption": "NOT_ADOPTED"
+    }
+  ],
+  "empirical": [
+    {
+      "id": "T14-LANGUAGE-OCCURRENCE",
+      "activity": "REFERENCE_COMPUTATION",
+      "data_scope": "Selected pinned occurrence records only: 70 byte bindings plus 12 data assertions.",
+      "limitations": [
+        "The 82 checks are not 82 independent evidence sources; five relevant certified facts are not five independent sources.",
+        "This checks committed records and hashes, not four live page renders, full-repository regression or current/live deployment.",
+        "No Arabic correctness, authoritative sense inclusion, host-lexeme certification, general grammar theorem, general version transport or operational adoption is established.",
+        "The historical pilot self-test’s 14 mutations are separate inherited application-code evidence unless a separate fresh receipt explicitly binds their execution."
+      ]
+    },
+    {
+      "id": "T14-LANGUAGE-SENSE-SOURCE-IDENTITIES",
+      "activity": "REFERENCE_COMPUTATION",
+      "data_scope": "Nine additional source identities; zero occurrence-data or linguistic checks.",
+      "limitations": [
+        "Zero new occurrence-data assertions and zero new linguistic tests.",
+        "No independent repetition of the sense-scope interpretation, general correctness, publication permission or deployment verification."
+      ]
+    },
+    {
+      "id": "T14-LANGUAGE-SENSE-SCOPE",
+      "activity": "CANDIDATE_SENSE_REVIEW",
+      "data_scope": "Inherited written sense-scope assessment of the pinned quran:61:5:4 candidate; fresh identity checks do not repeat interpretation.",
+      "limitations": [
+        "Narrower grammatical certification does not supply missing sense certification.",
+        "Candidate status, semantic-identity uncertainty and human-gated certification remain unchanged.",
+        "No new status, gloss, source entry, live system, general grammar or ambiguity theorem is produced."
+      ]
+    }
+  ],
+  "projection_reviews": [
+    {
+      "id": "DOCX-CONVERSION-T13-REPORT",
+      "source_id": "T13-REPORT-DERIVED-MARKDOWN",
+      "original_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+      "public_sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "diff_sha256": "3ffb2a26aecfcfc355981dbade69e0585be7b4bd816036b7fe2514040d560aac",
+      "scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified.",
+      "outcome": "CONTENT_REVIEWED",
+      "reviewer_kind": "INTEGRATOR_CONTENT_REVIEW"
+    },
+    {
+      "id": "DOCX-CONVERSION-T14-SUPPLEMENT",
+      "source_id": "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+      "original_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+      "public_sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+      "diff_sha256": "69dd0286ebb119900b1e6c64175800fc0c4345b1fa56eafd77ed0fda9eb665f9",
+      "scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified.",
+      "outcome": "CONTENT_REVIEWED",
+      "reviewer_kind": "INTEGRATOR_CONTENT_REVIEW"
+    },
+    {
+      "id": "DOCX-CONVERSION-T15-REPORT",
+      "source_id": "T15-REPORT-DERIVED-MARKDOWN",
+      "original_sha256": "19aa086ae362153c48b34de0ab00bd52996faa9229c508c7068da35f758b0169",
+      "public_sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+      "diff_sha256": "247fa50be271bb177cde368c6bdaf008a6658a7136872a3df54c3dca52ee1468",
+      "scope": "Retained-evidence/candidate source projection only. No scientific acceptance, fresh proof verification, or adopted judgement. Full native literal/order/math coverage; substantial result and equation samples inspected. Full Word pagination and TeX-engine rendering remain unverified.",
+      "outcome": "CONTENT_REVIEWED",
+      "reviewer_kind": "INTEGRATOR_CONTENT_REVIEW"
+    }
+  ],
+  "public_allowlist": [
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/15e4d26373bded96f77aeafd0b92f1a7435d46d8811deafc1f4b5d92a57e420b/README.md",
+      "sha256": "15e4d26373bded96f77aeafd0b92f1a7435d46d8811deafc1f4b5d92a57e420b",
+      "bytes": 8869,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T14-LANGUAGE-README"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615/verify_occurrence.py",
+      "sha256": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615",
+      "bytes": 6998,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T14-OCCURRENCE-VERIFIER"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0/source-lock.json",
+      "sha256": "54638026fd05b40e780d1ed5d51bbd286398926e074b487f746237b5dd816be0",
+      "bytes": 27255,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T14-OCCURRENCE-LOCK"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d/verify_sense_sources.py",
+      "sha256": "5727a43f5207ec7e93aed9b9d6c4a26f83ce3af61bc4041122621bc101d2216d",
+      "bytes": 2908,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T14-SENSE-VERIFIER"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63/sense-source-lock.json",
+      "sha256": "72293db56804c56c017582d7d22f8dc21a985ab37ff258ac789160c2dfeb7c63",
+      "bytes": 3700,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T14-SENSE-LOCK"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/8ecc9e42ba1d7c19c6431722ef1273995d34cebd56759406eeec2c6156cdb0e6/REFERENCE_MAP.json",
+      "sha256": "8ecc9e42ba1d7c19c6431722ef1273995d34cebd56759406eeec2c6156cdb0e6",
+      "bytes": 15623,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T13-REFERENCE-MAP"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json",
+      "sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "bytes": 1689,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T13-INHERITED-RECEIPT"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json",
+      "sha256": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb",
+      "bytes": 3137,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T14-INHERITED-RECEIPT"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27/Orthemology_Fifteenth_Final_Verification_v1_20261005.json",
+      "sha256": "9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27",
+      "bytes": 5385,
+      "kind": "SOURCE",
+      "source_ids": [
+        "D17-T15-INHERITED-RECEIPT"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42/RESULT.md",
+      "sha256": "2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42",
+      "bytes": 5150,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-OCCURRENCE"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1/VERIFICATION_SCOPE.md",
+      "sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1",
+      "bytes": 3080,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-VERIFICATION-SCOPE"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c/Orthemology_Twelfth_Research_Verification_v1_20261004.json",
+      "sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "bytes": 2526,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T12-SOURCE-FINAL-RECEIPT"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540/Orthemology_Thirteenth_Research_Final_v1_20261004.md",
+      "sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "bytes": 63778,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T13-REPORT-DERIVED-MARKDOWN"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53/Orthemology_Fourteenth_Research_Completion_Supplement_v1_20261005.md",
+      "sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+      "bytes": 30852,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T14-SUPPLEMENT-DERIVED-MARKDOWN"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md",
+      "sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+      "bytes": 59204,
+      "kind": "SOURCE",
+      "source_ids": [
+        "T15-REPORT-DERIVED-MARKDOWN"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/groups/occurrence-language/README.md",
+      "sha256": "dcf1e86bb630f7b4203d21587a638c94f2502c6e1a0b07fcf1f697c9e0953300",
+      "bytes": 11414,
+      "kind": "AUTHORED",
+      "source_ids": []
+    }
+  ]
+}

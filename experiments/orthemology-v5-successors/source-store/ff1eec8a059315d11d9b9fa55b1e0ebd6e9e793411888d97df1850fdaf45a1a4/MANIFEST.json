@@ -1,0 +1,51 @@
+{
+  "status": "INTERMEDIATE_EXACT_BYTE_RECOVERY",
+  "recovery_revision": 2,
+  "files": [
+    {
+      "path": "research/foundational-warrant/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md",
+      "bytes": 27006,
+      "sha256": "09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab"
+    },
+    {
+      "path": "research/observation-warrant/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md",
+      "bytes": 31721,
+      "sha256": "c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942"
+    },
+    {
+      "path": "research/observation-warrant/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md",
+      "bytes": 12080,
+      "sha256": "6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48"
+    },
+    {
+      "path": "reviews/finitely-additive-concentration/BOUNDED_COORDINATION_INFORMATION_v1.md",
+      "bytes": 13985,
+      "sha256": "c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7"
+    },
+    {
+      "path": "reviews/finitely-additive-concentration/FINITE_FORWARD_INTERVENTIONS_v1.md",
+      "bytes": 6470,
+      "sha256": "438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a"
+    },
+    {
+      "path": "reviews/finitely-additive-concentration/INDEPENDENT_REVIEW_PUBLIC_v1.md",
+      "bytes": 16547,
+      "sha256": "73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8"
+    },
+    {
+      "path": "reviews/finitely-additive-concentration/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md",
+      "bytes": 9511,
+      "sha256": "6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d"
+    },
+    {
+      "path": "research/occurrence-warrant/RESULT.md",
+      "bytes": 5150,
+      "sha256": "2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42"
+    },
+    {
+      "path": "research/chain-foundation/PUBLIC_CANDIDATE_v1.md",
+      "bytes": 3447,
+      "sha256": "0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b"
+    }
+  ]
+}

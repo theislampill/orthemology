@@ -1,0 +1,14 @@
+{
+  "schema": "orthemology-v5-baseline-binding-v1",
+  "base_commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
+  "base_tree": "08a6452e50e8e4791d02410d1c1732875e520f2e",
+  "preservation_sha256": "cd81d3b80d5183c1c01b637207d0afefd2b143ce4ee346808ca473a15eea6c4a",
+  "legacy_registry": {
+    "path": "experiments/orthemology-v5-continuations/registry.json",
+    "sha256": "51e2cea236dd0a880c7243b2f9ccbd558c6c70f16f03ec0efa274f19d3d105ff"
+  },
+  "legacy_overlay": {
+    "path": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+    "sha256": "879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89"
+  }
+}

@@ -1,0 +1,5 @@
+import LookaheadFiniteSearch
+#check EffectiveRenewal.Lookahead.binaryWords_primrec
+#check EffectiveRenewal.Lookahead.mem_binaryWords_iff
+#check EffectiveRenewal.Lookahead.boundedSelect_computable
+#check EffectiveRenewal.Lookahead.boundedSelect_spec

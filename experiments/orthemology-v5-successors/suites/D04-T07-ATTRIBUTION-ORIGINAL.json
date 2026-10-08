@@ -1,0 +1,1133 @@
+{
+  "id": "D04-T07-ATTRIBUTION-ORIGINAL",
+  "family": "t07-unknown-root-abc",
+  "result_families": [
+    "t07-unknown-root-abc"
+  ],
+  "origin_archive_sha256": "8c4c7e34347dc66e2cd05d8b106f0c7401fa28fde53675aec336ef8808cf019a",
+  "source_ids": [
+    "D04-SRC-1a6e1dd1cef398f3d35d",
+    "D04-SRC-1dc3a63e52fff7d02d7a",
+    "D04-SRC-07193cbf78cdfabfd5c6",
+    "D04-SRC-a87d04ac107bc62be15d",
+    "D04-SRC-a0f5ce0bfb14ddc38cf4",
+    "D04-SRC-65d6024f9da157d0944a",
+    "D04-SRC-853b013d3903fa10581f",
+    "D04-SRC-d51a2b6f7526212a31ef",
+    "D04-SRC-6a559ffed564c394a4a1",
+    "D04-SRC-a2639e2d0b2b108d3c55",
+    "D04-SRC-1745d0a152148e7616a3",
+    "D04-SRC-75cf586ac06c7615284a",
+    "D04-SRC-39d24b69a80b0de0cdaf",
+    "D04-SRC-12ff44bbcc9976bdd547",
+    "D04-SRC-bae0b1e05dae9ca2231c",
+    "D04-SRC-cfef449d01db725d1ac2",
+    "D04-SRC-1837e783e46985b68b52",
+    "D04-SRC-3b26cbf508d0789059c5",
+    "D04-SRC-f642ea93bc22b6d48b17",
+    "D04-SRC-b515574733a9ceee43c6",
+    "D04-SRC-c1d29d2612fd2c47fca4",
+    "D04-SRC-a85d94dc414a670c7a8f",
+    "D04-SRC-be2c9366c9dcd528896a",
+    "D04-SRC-4ea390a9e9a871231f8c"
+  ],
+  "review_ids": [
+    "T07-UNKNOWN-ROOT-ABC-REVIEW-1"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D04-SRC-a87d04ac107bc62be15d",
+      "declaration": "theorem robust_iff [Fintype α] (B c : ℕ) (hB : 1 ≤ B) (hc : 1 ≤ c)\n    (hcm : c ≤ Fintype.card α) (P R : Finset α) :\n    Robust B c P R ↔ B+c ≤ (P ∩ R).card := by\n  constructor\n  · intro hrob\n    by_contra hsmall\n    by_cases hci : c ≤ (P ∩ R).card\n    · obtain ⟨A, hAI, hAc⟩ := exists_subset_card_eq hci\n      have hnon : A.Nonempty := card_pos.mp (by omega)\n      obtain ⟨i, hi⟩ := hnon\n      have hiI := hAI hi\n      have hb : bridge A P R :=\n        ⟨⟨i, by simp_all⟩, ⟨i, by simp_all⟩⟩\n      have hcard := sharedRoots_card A P R\n      rw [card_sdiff hAI, hAc, if_pos hb] at hcard\n      have hsafe := hrob A hAc\n      omega\n    · obtain ⟨A, hIA, _hAU, hAc⟩ := exists_subsuperset_card_eq\n        (subset_univ (P ∩ R)) (by omega : (P ∩ R).card ≤ c)\n        (by simpa using hcm : c ≤ (univ : Finset α).card)\n      have he : (P ∩ R) \\ A = ∅ := sdiff_eq_empty_iff_subset.mpr hIA\n      have hcard := sharedRoots_card A P R\n      rw [he, card_empty] at hcard\n      have hsafe := hrob A hAc\n      split_ifs at hcard <;> omega\n  · intro hlarge A hAc\n    have h := overlap_le_shared_add_class_pred A P R (by omega)\n    omega",
+      "target_sha256": "2b2c58a2811163a45e6d903f66d55b7be63947e50ae503dc5556a70c88aea67e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D04-SRC-a0f5ce0bfb14ddc38cf4",
+      "declaration": "theorem available_iff (B c : ℕ) (hB : 1 ≤ B) (hc : 1 ≤ c)\n    (_hcm : c ≤ Fintype.card α) (hk : B+c-1 ≤ Fintype.card α)\n    (F : Set (Finset α)) :\n    Available B c F ↔ LabelAvailable (B+c-1) F := by\n  constructor\n  · intro hav T hT\n    obtain ⟨A, hAc, S, hSroots, hSB, hST⟩ := maximal_taint_realizable B c hB hc T hT\n    obtain ⟨P, hPF, hdis⟩ := hav A hAc S hSroots (by omega)\n    refine ⟨P, hPF, ?_⟩\n    rw [disjoint_image_iff, hST] at hdis\n    exact hdis\n  · intro hav A hAc S _hSroots hSB\n    have hbudget := tainted_label_budget A S (by omega)\n    obtain ⟨T, hsub, _hTU, hT⟩ := exists_subsuperset_card_eq\n      (subset_univ (taintedLabels A S))\n      (show (taintedLabels A S).card ≤ B+c-1 by omega)\n      (by simpa using hk : B+c-1 ≤ (univ : Finset α).card)\n    obtain ⟨P, hPF, hdis⟩ := hav T hT\n    exact ⟨P, hPF, (disjoint_image_iff A P S).mpr (hdis.mono_right hsub)⟩",
+      "target_sha256": "b813e243bebfe16a4b6dc7f413b26d6d2ecce061a7108482220bdd3a9690554c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D04-SRC-65d6024f9da157d0944a",
+      "declaration": "theorem fixed_family_feasible_iff (B c : ℕ) (hB : 1 ≤ B) (hc : 1 ≤ c)\n    (hcm : c ≤ Fintype.card α) (hBn : B < Fintype.card α-c+1) :\n    (∃ F G : Set (Finset α), FixedFamilyContract B c F G) ↔\n      3*(B+c-1)+1 ≤ Fintype.card α := by\n  have hk : B+c-1 ≤ Fintype.card α := by omega\n  simp only [fixed_contract_iff B c hB hc hcm hk]\n  exact label_fixed_family_feasible_iff (B+c-1) hk",
+      "target_sha256": "733946daa76569cfd5935caf1b45fb1c819312c7178472269303adbfbe2c698a",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "positive-infrastructure",
+      "source_id": "D04-SRC-1a6e1dd1cef398f3d35d",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "mutation-count_labels_as_roots",
+      "source_id": "D04-SRC-f642ea93bc22b6d48b17",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "mutation-drop_positive_class_size",
+      "source_id": "D04-SRC-b515574733a9ceee43c6",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "mutation-drop_positive_fault_budget",
+      "source_id": "D04-SRC-c1d29d2612fd2c47fca4",
+      "target_id": "target-1",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "D04-SRC-1a6e1dd1cef398f3d35d",
+        "path": "DynamicInterlock.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-1dc3a63e52fff7d02d7a",
+        "path": "CoveringCore.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-07193cbf78cdfabfd5c6",
+        "path": "UnknownRootAttribution.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-a87d04ac107bc62be15d",
+        "path": "RootImage.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-a0f5ce0bfb14ddc38cf4",
+        "path": "Availability.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-65d6024f9da157d0944a",
+        "path": "FixedFamilies.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-853b013d3903fa10581f",
+        "path": "Correspondence.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-d51a2b6f7526212a31ef",
+        "path": "ImageMinima.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-6a559ffed564c394a4a1",
+        "path": "MapTransport.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-a2639e2d0b2b108d3c55",
+        "path": "TargetA.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-1745d0a152148e7616a3",
+        "path": "TargetB.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-75cf586ac06c7615284a",
+        "path": "TargetC.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-39d24b69a80b0de0cdaf",
+        "path": "Regression.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-12ff44bbcc9976bdd547",
+        "path": "RootCosts.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D04-SRC-bae0b1e05dae9ca2231c",
+        "path": "FamilyDeletionControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-cfef449d01db725d1ac2",
+        "path": "IndependentChecks.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-1837e783e46985b68b52",
+        "path": "DeletionControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-3b26cbf508d0789059c5",
+        "path": "AxiomAudit.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D04-SRC-f642ea93bc22b6d48b17",
+        "path": "count_labels_as_roots.lean",
+        "role": "NEGATIVE"
+      },
+      {
+        "source_id": "D04-SRC-b515574733a9ceee43c6",
+        "path": "drop_positive_class_size.lean",
+        "role": "NEGATIVE"
+      },
+      {
+        "source_id": "D04-SRC-c1d29d2612fd2c47fca4",
+        "path": "drop_positive_fault_budget.lean",
+        "role": "NEGATIVE"
+      },
+      {
+        "source_id": "D04-SRC-a85d94dc414a670c7a8f",
+        "path": "dependency-lock/mathlib-lake-manifest.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "D04-SRC-be2c9366c9dcd528896a",
+        "path": "dependency-lock/DEPENDENCIES.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "D04-SRC-4ea390a9e9a871231f8c",
+        "path": "review-documents/D04-SRC-4ea390a9e9a871231f8c.md",
+        "role": "REVIEW"
+      }
+    ],
+    "modules": [
+      {
+        "name": "DynamicInterlock",
+        "source_id": "D04-SRC-1a6e1dd1cef398f3d35d",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "CoveringCore",
+        "source_id": "D04-SRC-1dc3a63e52fff7d02d7a",
+        "imports": [
+          "Init",
+          "DynamicInterlock"
+        ]
+      },
+      {
+        "name": "UnknownRootAttribution",
+        "source_id": "D04-SRC-07193cbf78cdfabfd5c6",
+        "imports": [
+          "Init",
+          "CoveringCore"
+        ]
+      },
+      {
+        "name": "RootImage",
+        "source_id": "D04-SRC-a87d04ac107bc62be15d",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "Availability",
+        "source_id": "D04-SRC-a0f5ce0bfb14ddc38cf4",
+        "imports": [
+          "Init",
+          "RootImage"
+        ]
+      },
+      {
+        "name": "FixedFamilies",
+        "source_id": "D04-SRC-65d6024f9da157d0944a",
+        "imports": [
+          "Init",
+          "Availability"
+        ]
+      },
+      {
+        "name": "Correspondence",
+        "source_id": "D04-SRC-853b013d3903fa10581f",
+        "imports": [
+          "Init",
+          "FixedFamilies",
+          "UnknownRootAttribution"
+        ]
+      },
+      {
+        "name": "ImageMinima",
+        "source_id": "D04-SRC-d51a2b6f7526212a31ef",
+        "imports": [
+          "Init",
+          "Availability"
+        ]
+      },
+      {
+        "name": "MapTransport",
+        "source_id": "D04-SRC-6a559ffed564c394a4a1",
+        "imports": [
+          "Init",
+          "FixedFamilies"
+        ]
+      },
+      {
+        "name": "TargetA",
+        "source_id": "D04-SRC-a2639e2d0b2b108d3c55",
+        "imports": [
+          "Init",
+          "RootImage"
+        ]
+      },
+      {
+        "name": "TargetB",
+        "source_id": "D04-SRC-1745d0a152148e7616a3",
+        "imports": [
+          "Init",
+          "Availability"
+        ]
+      },
+      {
+        "name": "TargetC",
+        "source_id": "D04-SRC-75cf586ac06c7615284a",
+        "imports": [
+          "Init",
+          "FixedFamilies"
+        ]
+      },
+      {
+        "name": "Regression",
+        "source_id": "D04-SRC-39d24b69a80b0de0cdaf",
+        "imports": [
+          "Init",
+          "FixedFamilies",
+          "ImageMinima",
+          "Correspondence",
+          "MapTransport"
+        ]
+      },
+      {
+        "name": "RootCosts",
+        "source_id": "D04-SRC-12ff44bbcc9976bdd547",
+        "imports": [
+          "Init",
+          "FixedFamilies"
+        ]
+      },
+      {
+        "name": "FamilyDeletionControls",
+        "source_id": "D04-SRC-bae0b1e05dae9ca2231c",
+        "imports": [
+          "Init",
+          "FixedFamilies"
+        ]
+      },
+      {
+        "name": "IndependentChecks",
+        "source_id": "D04-SRC-cfef449d01db725d1ac2",
+        "imports": [
+          "Init",
+          "MapTransport",
+          "Correspondence",
+          "ImageMinima"
+        ]
+      },
+      {
+        "name": "DeletionControls",
+        "source_id": "D04-SRC-1837e783e46985b68b52",
+        "imports": [
+          "Init",
+          "MapTransport",
+          "ImageMinima"
+        ]
+      },
+      {
+        "name": "AxiomAudit",
+        "source_id": "D04-SRC-3b26cbf508d0789059c5",
+        "imports": [
+          "Init",
+          "Correspondence",
+          "MapTransport",
+          "ImageMinima"
+        ]
+      },
+      {
+        "name": "count_labels_as_roots",
+        "source_id": "D04-SRC-f642ea93bc22b6d48b17",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "drop_positive_class_size",
+        "source_id": "D04-SRC-b515574733a9ceee43c6",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "drop_positive_fault_budget",
+        "source_id": "D04-SRC-c1d29d2612fd2c47fca4",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      }
+    ],
+    "module_order": [
+      "RootImage",
+      "Availability",
+      "FixedFamilies"
+    ],
+    "positive_roots": [
+      "DynamicInterlock",
+      "CoveringCore",
+      "UnknownRootAttribution",
+      "RootImage",
+      "Availability",
+      "FixedFamilies",
+      "Correspondence",
+      "ImageMinima",
+      "MapTransport",
+      "RootCosts"
+    ],
+    "audit_roots": [
+      "TargetA",
+      "TargetB",
+      "TargetC",
+      "Regression",
+      "FamilyDeletionControls",
+      "IndependentChecks",
+      "DeletionControls",
+      "AxiomAudit"
+    ],
+    "negative_roots": [
+      "count_labels_as_roots",
+      "drop_positive_class_size",
+      "drop_positive_fault_budget"
+    ],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      },
+      {
+        "module": "Std",
+        "package": "lean-release",
+        "path": "Std.lean",
+        "sha256": "fc1fcd5ee6968164eeedd0d1fc6f25784355e088adc8aa37c7da2d46777b145d"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "RootImage",
+        "name": "AttributionKernel.robust_iff"
+      },
+      {
+        "target_id": "target-2",
+        "module": "Availability",
+        "name": "AttributionKernel.available_iff"
+      },
+      {
+        "target_id": "target-3",
+        "module": "FixedFamilies",
+        "name": "AttributionKernel.fixed_family_feasible_iff"
+      }
+    ],
+    "package_manifest_source_id": "D04-SRC-be2c9366c9dcd528896a",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "D04-SRC-be2c9366c9dcd528896a"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      }
+    ],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-aa6f474438597f50f496",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "8c4c7e34347dc66e2cd05d8b106f0c7401fa28fde53675aec336ef8808cf019a",
+        "expected_bytes": 554694,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "original",
+        "source_id": "D04-SRC-45f9e7d99844bc25d669",
+        "recipe": "t07-attribution-original-v1",
+        "sha256": "fad631436eecb9b71bdf0360f78503bb8c863a5ebd23b0999e17ca059781b113",
+        "argument_meanings": {
+          "--lean": "LEAN_EXECUTABLE",
+          "--mathlib": "MATHLIB_ROOT",
+          "--output": "FRESH_OUTPUT_DIRECTORY"
+        },
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "original-driver",
+        "kind": "DRIVER",
+        "driver_id": "original",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:original}",
+          "--lean",
+          "{tool:lean}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--output",
+          "{out}/original"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 3600,
+        "output_paths": [
+          "original"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-DynamicInterlock",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "DynamicInterlock"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-infrastructure"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-CoveringCore",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "CoveringCore"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-UnknownRootAttribution",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "UnknownRootAttribution"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RootImage",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RootImage"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Availability",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Availability"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-FixedFamilies",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "FixedFamilies"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Correspondence",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Correspondence"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ImageMinima",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ImageMinima"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-MapTransport",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "MapTransport"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TargetA",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TargetA"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TargetB",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TargetB"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-TargetC",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "TargetC"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-Regression",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "Regression"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-RootCosts",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "RootCosts"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-FamilyDeletionControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "FamilyDeletionControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-IndependentChecks",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "IndependentChecks"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-DeletionControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "DeletionControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-AxiomAudit",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "AxiomAudit"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-count_labels_as_roots",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "count_labels_as_roots"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-DynamicInterlock"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-count_labels_as_roots"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-45f9e7d99844bc25d669",
+            "literal": "error: unsolved goals",
+            "sha256": "14060a8a8682ed8c110c83eb4390d94cba07ba00385da1d50cbe149bcd22d3be"
+          }
+        ]
+      },
+      {
+        "id": "observe-drop_positive_class_size",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "drop_positive_class_size"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-DynamicInterlock"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-drop_positive_class_size"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-45f9e7d99844bc25d669",
+            "literal": "error: omega could not prove the goal",
+            "sha256": "a14517d7459b7156f0a9d1d75d7db487b611faa4082bbb09039ae455c6df573b"
+          }
+        ]
+      },
+      {
+        "id": "observe-drop_positive_fault_budget",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "drop_positive_fault_budget"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver",
+          "observe-DynamicInterlock"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "mutation-drop_positive_fault_budget"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D04-SRC-45f9e7d99844bc25d669",
+            "literal": "error: omega could not prove the goal",
+            "sha256": "a14517d7459b7156f0a9d1d75d7db487b611faa4082bbb09039ae455c6df573b"
+          }
+        ]
+      }
+    ],
+    "build_roots": [
+      "original/build"
+    ]
+  }
+}

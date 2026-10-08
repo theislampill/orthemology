@@ -1,0 +1,33 @@
+[
+  {
+    "path": "certificate_checker.py",
+    "sha256": "8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef",
+    "preservation": "exact accepted reference bytes"
+  },
+  {
+    "path": "verification/test_certificate_checker.py",
+    "sha256": "f2689d00865ed2964fa6dc4337d67da5017f23c34a870e5dad183ccc6ccd6bb9",
+    "preservation": "exact accepted reference bytes"
+  },
+  {
+    "path": "examples/piecewise_certificate.json",
+    "sha256": "d5326efbbe8ab9412afa98c91340df574ba4beedafcfbbaebfe542edb67f219a",
+    "preservation": "exact accepted reference bytes"
+  },
+  {
+    "path": "examples/piecewise_instance.json",
+    "sha256": "f2e38784e8358d65961a89cfc5faf38eadec97fd31a6ac10b68c199a00e7c781",
+    "preservation": "exact accepted reference bytes"
+  },
+  {
+    "path": "examples/unequal_instance.json",
+    "sha256": "f7807e76268ca56274e671d6ff2bf1753cd54b81f169ae4c2a3d25a2cbad0fa2",
+    "preservation": "exact accepted reference bytes"
+  },
+  {
+    "path": "verification/test_independent_checker.py",
+    "sha256": "27c5e18f459c5a6103a35f2fe0570ee2c229832490a02aa4f62064c8c6d25416",
+    "preservation": "only checker-relative path relocated; all twelve tests unchanged",
+    "pre_relocation_sha256": "91a3334ba059dcf5eda246dd2c4b930d60be0052bc2e626a393c04e5560921d6"
+  }
+]

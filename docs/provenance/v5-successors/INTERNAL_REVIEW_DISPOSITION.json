@@ -1,0 +1,30 @@
+{
+  "entries": [
+    {
+      "basis": "Per-cell source reviews, independent projection checks and adapter controls are retained with their exact scopes. None is presented as acceptance of the final whole diff. The eventual reviewed head/tree, findings, repairs and disposition are returned in the external PR review handoff.",
+      "disposition": "PENDING_EXACT_CANDIDATE_REVIEW",
+      "id": "SUCCESSOR-WHOLE-DIFF-REVIEW",
+      "limitations": [
+        "Internal model-assisted review is not outside human-specialist validation.",
+        "R00 is the subsequent owner-requested ChatGPT review; R01 is separately authorized owner-controlled merge.",
+        "This record retains the T07–T15 research cutoff. After its validation and closure, the owner-authorized Sixteenth successor is integrated on the same lineage before the one combined PR, which remains unmerged with auto-merge disabled."
+      ],
+      "result_ids": [],
+      "scope": "A separate internal reviewer must inspect the actual assembled candidate diff and relevant source scopes after candidate validation.",
+      "source_ids": []
+    },
+    {
+      "basis": "FINAL_V3_REVIEW_RECEIPT 6f94fd1064011f507fb318f4794404ded6c9fdf5a541260345683e3e488d1ff9; INDEPENDENT_REVIEW_BINDING_v5 8c5f48b022b1b043c136b923c68150849acd47d044c5ca5c710dd73502be6e6d; INDEPENDENT_SOURCE_ASSURANCE_OUTER_ACCEPTANCE_v3 56fb94926232ceca9085305b8066900279d5057e95b25fe3d4976784d3c0dd0a.",
+      "disposition": "REPORTED_NOT_INSPECTED",
+      "id": "T16-MISSING-DOCUMENT-REVIEW-BODIES",
+      "limitations": [
+        "Reported acceptance is not inspected acceptance. Exact core, signed archive and detached source assurance acceptances are supplied separately."
+      ],
+      "result_ids": [],
+      "scope": "Three final document/outer review bodies are referenced but not supplied.",
+      "source_ids": [
+        "T16-SRC-1cda3e4399e92ac8dd3a"
+      ]
+    }
+  ]
+}

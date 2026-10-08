@@ -1,0 +1,317 @@
+{
+  "schema": "public-source-catalogue-v1",
+  "title": "Fourteenth source catalogue",
+  "scope": "Bibliographic identities, source locations, recorded reading scope and retained file identities only. No publication files are included. Reading scopes describe the recorded inspection, not a new reading or acquisition. Hashes identify retained bytes; they do not authenticate publisher origin or imply complete reading.",
+  "families": [
+    {
+      "id": "Clarke",
+      "citation": "Samuel Clarke. A Demonstration of the Being and Attributes of God, in the CCEL electronic collected edition labelled Glasgow, 1823.",
+      "primary_urls": [
+        "https://ccel.org/ccel/clarke_s/being.iii.iv.html",
+        "https://ccel.org/ccel/clarke_s/being.vii.vi.html",
+        "https://ccel.org/ccel/c/clarke_s/being.xml"
+      ],
+      "retained_witnesses": [
+        {
+          "label": "CCEL complete collection XML",
+          "url": "https://ccel.org/ccel/c/clarke_s/being.xml",
+          "representation": "downloaded electronic transcription (ThML XML)",
+          "bytes": 1360691,
+          "sha256": "b1b89fdb277d1ef101918ba7a5cc97953b4cb309de90b5b994c1605654ae9e22",
+          "read_scope": "Complete title, Propositions II–VII and XI–XII, correspondence sections vii.i–vii.xii; targeted dependencies in VIII–X."
+        }
+      ],
+      "reading_limits": [
+        "Whole-collection custody does not imply whole-collection reading.",
+        "No print, manuscript or facsimile collation; publication particulars are electronic-witness metadata."
+      ]
+    },
+    {
+      "id": "Descartes",
+      "citation": "René Descartes. Meditations on First Philosophy, Meditation III, Haldane and Ross English electronic witness (1911 edition metadata); First Objections and First Replies, French Cousin electronic witness (1824 edition metadata).",
+      "primary_urls": [
+        "https://en.wikisource.org/wiki/The_Philosophical_Works_of_Decartes/Volume_1/Meditations_on_First_Philosophy/Meditation_3",
+        "https://fr.wikisource.org/wiki/Méditations_Métaphysiques/Réponses_de_l’auteur_aux_premières_objections"
+      ],
+      "retained_witnesses": [
+        {
+          "label": "Meditation III English web-rendered capture",
+          "url": "https://en.wikisource.org/wiki/The_Philosophical_Works_of_Decartes/Volume_1/Meditations_on_First_Philosophy/Meditation_3",
+          "representation": "web-rendered text capture; not original webpage or scan bytes",
+          "bytes": 37514,
+          "sha256": "661e22c6bbe2522461e7091a550c04be9401fa777121768890df129db212b9a3",
+          "read_scope": "Complete Meditation III body and three appended translator notes, captured renderer lines 100–208."
+        },
+        {
+          "label": "First Replies French web-rendered capture",
+          "url": "https://fr.wikisource.org/wiki/Méditations_Métaphysiques/Réponses_de_l’auteur_aux_premières_objections",
+          "representation": "web-rendered text capture; not original webpage or scan bytes",
+          "bytes": 33444,
+          "sha256": "6e458c00b3c0eb65622952dc9f8f14b7b6e601b5ed76157e6a7b50559858fd44",
+          "read_scope": "Target and context only, captured renderer lines 117–172; capture is not complete First Replies."
+        },
+        {
+          "label": "First Objections French web-rendered capture",
+          "url": "https://fr.wikisource.org/wiki/M%C3%A9ditations_M%C3%A9taphysiques/Premi%C3%A8res_objections,_faites_par_M._Caterus",
+          "representation": "web-rendered text capture; not original webpage or scan bytes",
+          "bytes": 30984,
+          "sha256": "0b50f1bf4987958d70031b7f88672154002c2d9668ccc2cf6d73a0f60bc91124",
+          "read_scope": "First Objections lines 120–173 and notes/footer through line 206."
+        }
+      ],
+      "reading_limits": [
+        "Line numbers refer to web-renderer captures, not print pagination.",
+        "No whole First Replies reading, scan collation or Latin-original verification.",
+        "Original publication, original webpage and scan byte hashes are not recorded here."
+      ]
+    },
+    {
+      "id": "Chimento2021",
+      "citation": "Michael Chimento, Gustavo Alarcón-Nieto and Lucy M. Aplin. Population turnover facilitates cultural selection for efficiency in birds. Current Biology 31(11) (2021), 2477–2483.e3.",
+      "primary_urls": [
+        "https://doi.org/10.1016/j.cub.2021.03.057",
+        "https://doi.org/10.5281/zenodo.4644347"
+      ],
+      "retained_witnesses": [
+        {
+          "label": "Main article PDF",
+          "url": "https://d-nb.info/1278248056/34",
+          "representation": "downloaded publisher-format repository PDF",
+          "bytes": 1974542,
+          "sha256": "dba10321459dc2705c6170030327cad0ff456a29110f8306d7c7372d919e3953",
+          "read_scope": "All 11 pages, main text, STAR Methods, references, notes, figures and captions; Figures 1–4 visually inspected."
+        },
+        {
+          "label": "Publication deposit v2.0",
+          "url": "https://zenodo.org/api/records/4644347/files/michaelchimento/PopulationTurnoverEfficiency-v2.0.zip/content",
+          "representation": "downloaded original deposit ZIP",
+          "bytes": 5833933,
+          "sha256": "90f74d04620721dec9423827d171be5a6c690c163d06c1eee792f9cc19ecb523",
+          "read_scope": "README, analysis/data readmes and license in full; statistical_analyses.R and figures_SI.R static text in full; figures_final.R lines 1–220, focused on 42–162; df_solves selected population/focal-identity records and df_surv population 6 only."
+        }
+      ],
+      "reading_limits": [
+        "Published supplementary PDF not obtained or inspected.",
+        "Raw video, historical processing pipeline and earlier/later release data not read. Research code not executed; no full statistical reproduction."
+      ]
+    },
+    {
+      "id": "Aplin2017",
+      "citation": "Lucy M. Aplin, Ben C. Sheldon and Richard McElreath. Conformity does not perpetuate suboptimal traditions in a wild population of songbirds. PNAS 114(30) (2017), 7830–7837.",
+      "primary_urls": [
+        "https://doi.org/10.1073/pnas.1621067114",
+        "https://github.com/rmcelreath/wythamewa"
+      ],
+      "retained_witnesses": [
+        {
+          "label": "Main article PDF",
+          "url": "https://www.eva.mpg.de/documents/NatlAcadSciences/Aplin_Conformity_PNAS_2017_2472152.pdf",
+          "representation": "downloaded primary article PDF",
+          "bytes": 8188842,
+          "sha256": "b6c46fa7e70229345529bae2d8d3681f63c5490d0c205aff93a72924c68272bd",
+          "read_scope": "All eight pages continuously via text extraction; printed pages 7831–7836 visually checked."
+        },
+        {
+          "label": "DESCRIPTION",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/DESCRIPTION",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 311,
+          "sha256": "7d8b6a427c5ccf401ea09134b2bb13ecb2263dc3fbe1d4d91f94d9c919f78665",
+          "read_scope": "Full static text read; not executed."
+        },
+        {
+          "label": "R/fit.r",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/R/fit.r",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 6642,
+          "sha256": "b802bb67540431c04adb1ebbfe8a1cd341f1fae2302e63f6f19c2f098966a07e",
+          "read_scope": "Full static text read; not executed."
+        },
+        {
+          "label": "README.md",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/README.md",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 1362,
+          "sha256": "a8535a99b430b2b245b3a863326ab9348ac16c640d9c34e638facd545dff08b1",
+          "read_scope": "Full static text read; not executed."
+        },
+        {
+          "label": "data/WythamUnequal.rda",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/data/WythamUnequal.rda",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 86617,
+          "sha256": "7eed870455fbda2a5e9b06aea23876a29075fe063e33f64c65e2131794cca763",
+          "read_scope": "Entire data object decoded and inspected without executing package code."
+        },
+        {
+          "label": "data/template_raw.rda",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/data/template_raw.rda",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 1654,
+          "sha256": "76c8224175af166050715618d25481a1e57389a9dab27ed67f94344afd02427e",
+          "read_scope": "Entire data object decoded and inspected without executing package code."
+        },
+        {
+          "label": "man/WythamUnequal.Rd",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/man/WythamUnequal.Rd",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 949,
+          "sha256": "4a0be54a883f51b7dd23a7c8683968064ef5dc704a0a867bdfd6d3ddef35097d",
+          "read_scope": "Full static text read; not executed."
+        },
+        {
+          "label": "man/ewa_def.Rd",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/man/ewa_def.Rd",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 2662,
+          "sha256": "df7527be1bb339b2146ec0b3dae395ddfd08c3b0ceb0ac20c5ee4410b0d8110a",
+          "read_scope": "Full static text read; not executed."
+        },
+        {
+          "label": "man/ewa_fit.Rd",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/man/ewa_fit.Rd",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 8074,
+          "sha256": "439840dcca8cbb3fab0ba9c0203626ee3642989eaa98e38de354f6a052c8a3cf",
+          "read_scope": "Full static text read; not executed."
+        },
+        {
+          "label": "man/wythamewa.Rd",
+          "url": "https://raw.githubusercontent.com/rmcelreath/wythamewa/4e8fade10ffb48633c7a3fefa7981f8bcf3c7322/man/wythamewa.Rd",
+          "representation": "downloaded author repository file at publication-day commit 4e8fade10ffb48633c7a3fefa7981f8bcf3c7322",
+          "bytes": 1171,
+          "sha256": "00c929c425462d0330b83a9a08a473e2d52b1b6fe919952862b0010b6563a6a2",
+          "read_scope": "Full static text read; not executed."
+        }
+      ],
+      "reading_limits": [
+        "Published supplementary PDF not obtained or read.",
+        "Earlier 2015 primary study and original unprocessed RFID/gaze/attrition records not read.",
+        "Only listed repository files were inspected; model fitting and simulations were not executed."
+      ]
+    },
+    {
+      "id": "VogelDussutour2016",
+      "citation": "David Vogel and Audrey Dussutour. Direct transfer of learned behaviour via cell fusion in non-neural organisms. Proceedings of the Royal Society B 283(1845) (2016), 20162382.",
+      "primary_urls": [
+        "https://doi.org/10.1098/rspb.2016.2382",
+        "https://rs.figshare.com/articles/journal_contribution/4308080"
+      ],
+      "retained_witnesses": [
+        {
+          "label": "Main article HTML",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5204175/",
+          "representation": "downloaded article HTML; not web-rendered text capture",
+          "bytes": 149808,
+          "sha256": "b7e42d4d4eef1dbc6b0a2da09689b33b3cfcbbed754492bcab2b1aab445abf8a",
+          "read_scope": "Complete substantive body read continuously; Figures 1–4 visually inspected."
+        },
+        {
+          "label": "Official supplement",
+          "url": "https://ndownloader.figshare.com/files/7025393",
+          "representation": "downloaded original supplementary DOCX",
+          "bytes": 345839,
+          "sha256": "0006d053e3a30956c7a4d7d0d29c42f733ec31883d45e83b7a90c3d213961ef8",
+          "read_scope": "Full text, all five tables and figure read; rendered pages and embedded figure inspected."
+        }
+      ],
+      "reading_limits": [
+        "Dryad dataset metadata inspected; Fusion.txt, Habituation.txt and Transfer.txt not obtained or read.",
+        "Movie caption only; movie not obtained or watched."
+      ]
+    },
+    {
+      "id": "Boussard2019",
+      "citation": "A. Boussard, J. Delescluse, A. Pérez-Escudero and A. Dussutour. Memory inception and preservation in slime moulds: the quest for a common mechanism. Philosophical Transactions of the Royal Society B 374 (2019), 20180368.",
+      "primary_urls": [
+        "https://doi.org/10.1098/rstb.2018.0368",
+        "https://doi.org/10.6084/m9.figshare.7834898.v1"
+      ],
+      "retained_witnesses": [
+        {
+          "label": "Main publisher-layout PDF, author-hosted copy",
+          "url": "https://perezescuderolab.org/wp-content/uploads/2019/05/rstb.2018.0368.pdf",
+          "representation": "downloaded original PDF file",
+          "bytes": 893780,
+          "sha256": "e27bc61e63c75e83ac17a5b1235ee20a8c10fb44f2e0c0278796602fdc91d50c",
+          "read_scope": "All ten pages continuously through references; Figures 1–5 visually inspected on rendered pages 3–8."
+        },
+        {
+          "label": "Supplementary statistical modelling, all nine tables",
+          "url": "https://ndownloader.figshare.com/files/14575166",
+          "representation": "downloaded original DOCX file",
+          "bytes": 46593,
+          "sha256": "619def6d9ce3a74e71fb1561180d7433f8ca97c64e614dda6afbd44cf8279a4c",
+          "read_scope": "Complete text, modelling preface and Tables 1–9; all four rendered pages visually inspected."
+        },
+        {
+          "label": "Data deposit; 13 substantive text files",
+          "url": "https://ndownloader.figshare.com/files/14575169",
+          "representation": "downloaded original ZIP file",
+          "bytes": 27280,
+          "sha256": "a98e74f83b857e55762c3cf962aa4ae46f157a1e83e51b10c0e91243c7d00dc3",
+          "read_scope": "All 13 substantive text files parsed for row/schema/group counts; regression and paired mass files inspected; nonrectangular droplet file read in full."
+        }
+      ],
+      "reading_limits": [
+        "Underlying videos and original laboratory records not examined.",
+        "Not all raw experiments reconstructible from deposit; references were bibliographic entries, not separately read sources."
+      ]
+    },
+    {
+      "id": "Kriegman2021",
+      "citation": "Sam Kriegman and colleagues. Kinematic self-replication in reconfigurable organisms. PNAS 118 (2021), e2112672118.",
+      "primary_urls": [
+        "https://doi.org/10.1073/pnas.2112672118"
+      ],
+      "retained_witnesses": [
+        {
+          "label": "Main article PDF",
+          "url": "https://par.nsf.gov/servlets/purl/10357814",
+          "representation": "downloaded primary article PDF",
+          "bytes": 1209167,
+          "sha256": "bc4d6e4c07f9c478ec0e84f69e2c6d2edd3382026cb3d1bfc07d9f6f82d28cff",
+          "read_scope": "All eight pages continuously through extracted text; Figures 1 and 2 rendered and visually checked."
+        },
+        {
+          "label": "pnas.2112672118.sapp.pdf",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8670470/supplementaryFiles",
+          "representation": "original supplementary file extracted from downloaded Europe PMC ZIP",
+          "bytes": 31737365,
+          "sha256": "1e7bd2e4a8c57cca458b65e2eec8c285c4c5c1d7c8c51da29ca29e6e11656b0b",
+          "read_scope": "All 33 pages continuously through extracted text; pages 19, 20, 32 and 33 visually checked."
+        },
+        {
+          "label": "pnas.2112672118.sm01.mp4",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8670470/supplementaryFiles",
+          "representation": "original supplementary file extracted from downloaded Europe PMC ZIP",
+          "bytes": 31954371,
+          "sha256": "b946b13e3661f60fe6279c829ce7ff1887a1ec5c344b35379180bd165c966b6f",
+          "read_scope": "Metadata and full-duration four-second contact-sheet samples at 0, 4, …, 100 seconds; no full-frame playback, audio transcript or unsampled-frame inspection."
+        },
+        {
+          "label": "sim2real.py",
+          "url": "https://raw.githubusercontent.com/skriegman/kinematically_replicating_organisms/main/analysis/sim2real.py",
+          "representation": "downloaded author repository main-branch file",
+          "bytes": 3205,
+          "sha256": "ac92a7b25066392c78676ba11688055a890ddf574d845ffe5814773a838584ef",
+          "read_scope": "Full static read; not executed."
+        },
+        {
+          "label": "statistics.py",
+          "url": "https://raw.githubusercontent.com/skriegman/kinematically_replicating_organisms/main/analysis/statistics.py",
+          "representation": "downloaded author repository main-branch file",
+          "bytes": 8002,
+          "sha256": "54c84ba42acf383f9c5369511731f15d402b71e4a73076dff0c238425154f3c8",
+          "read_scope": "Full static read; not executed."
+        }
+      ],
+      "reading_limits": [
+        "Movie sampling does not constitute complete frame-by-frame viewing.",
+        "Additional project videos not downloaded.",
+        "Author code files are content-hash-bound captures, not identified as immutable publication-era revisions.",
+        "Europe PMC XML inspected for supplement/media linkage and metadata only; project video captions and source links inspected."
+      ]
+    }
+  ]
+}

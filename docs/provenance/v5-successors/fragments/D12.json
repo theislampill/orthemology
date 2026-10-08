@@ -1,0 +1,470 @@
+{
+  "schema": "orthemology-v5-successor-fragment-v1",
+  "cell": "D12",
+  "sources": [
+    {
+      "id": "identity-src-18324561d5a479234e08",
+      "origin_input_id": "T13-EVIDENCE",
+      "origin_input_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+      "origin_archive_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+      "member_chain": [
+        "OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md"
+      ],
+      "original_sha256": "b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236",
+      "original_bytes": 26969,
+      "public_path": "experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md",
+      "public_sha256": "b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236",
+      "public_bytes": 26969,
+      "projection": "EXACT",
+      "projection_basis": "Byte-exact selected scientific source, source-bound driver, configuration, or inherited scope/review record; no execution or new acceptance implied.",
+      "review_scope": "Source-specific original status retained; independent scientific review and fresh replay require their separate records.",
+      "derivation": null
+    },
+    {
+      "id": "identity-src-210a260c6b65330bbabb",
+      "origin_input_id": "T13-EVIDENCE",
+      "origin_input_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+      "origin_archive_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+      "member_chain": [
+        "HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md"
+      ],
+      "original_sha256": "02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe",
+      "original_bytes": 19906,
+      "public_path": "experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md",
+      "public_sha256": "02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe",
+      "public_bytes": 19906,
+      "projection": "EXACT",
+      "projection_basis": "Byte-exact selected scientific source, source-bound driver, configuration, or inherited scope/review record; no execution or new acceptance implied.",
+      "review_scope": "Source-specific original status retained; independent scientific review and fresh replay require their separate records.",
+      "derivation": null
+    },
+    {
+      "id": "identity-src-36405a21fb515a544d13",
+      "origin_input_id": "T13-EVIDENCE",
+      "origin_input_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+      "origin_archive_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+      "member_chain": [
+        "RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md"
+      ],
+      "original_sha256": "7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e",
+      "original_bytes": 11482,
+      "public_path": "experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md",
+      "public_sha256": "7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e",
+      "public_bytes": 11482,
+      "projection": "EXACT",
+      "projection_basis": "Byte-exact selected scientific source, source-bound driver, configuration, or inherited scope/review record; no execution or new acceptance implied.",
+      "review_scope": "Source-specific original status retained; independent scientific review and fresh replay require their separate records.",
+      "derivation": null
+    },
+    {
+      "id": "identity-src-39cf7a4ba2e31c776a77",
+      "origin_input_id": "T13-RECEIPT",
+      "origin_input_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "origin_archive_sha256": null,
+      "member_chain": [],
+      "original_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "original_bytes": 1689,
+      "public_path": "experiments/orthemology-v5-successors/source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json",
+      "public_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "public_bytes": 1689,
+      "projection": "EXACT",
+      "projection_basis": "Byte-exact selected scientific source, source-bound driver, configuration, or inherited scope/review record; no execution or new acceptance implied.",
+      "review_scope": "Source-specific original status retained; independent scientific review and fresh replay require their separate records.",
+      "derivation": null
+    }
+  ],
+  "reviews": [
+    {
+      "id": "T13-OPAQUE-REPRESENTATION-inherited-review",
+      "source_id": "identity-src-39cf7a4ba2e31c776a77",
+      "reviewed_source_ids": [
+        "identity-src-18324561d5a479234e08"
+      ],
+      "target": "Prescribed opaque-polynomial typing separation",
+      "scope": "Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.",
+      "outcome": "LIMITED",
+      "review_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a"
+    },
+    {
+      "id": "T13-ATOM-APPLICATION-BRIDGE-inherited-review",
+      "source_id": "identity-src-39cf7a4ba2e31c776a77",
+      "reviewed_source_ids": [
+        "identity-src-210a260c6b65330bbabb"
+      ],
+      "target": "Hypothetical atom/application bridge and closed conversion",
+      "scope": "Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.",
+      "outcome": "LIMITED",
+      "review_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a"
+    },
+    {
+      "id": "T13-RESIDUAL-HAS-inherited-review",
+      "source_id": "identity-src-39cf7a4ba2e31c776a77",
+      "reviewed_source_ids": [
+        "identity-src-36405a21fb515a544d13"
+      ],
+      "target": "Closed I/SKK target noninhabitation in HAS",
+      "scope": "Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.",
+      "outcome": "LIMITED",
+      "review_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a"
+    },
+    {
+      "id": "T13-RESIDUAL-PLUS-inherited-review",
+      "source_id": "identity-src-39cf7a4ba2e31c776a77",
+      "reviewed_source_ids": [
+        "identity-src-36405a21fb515a544d13"
+      ],
+      "target": "Closed I/SKK target noninhabitation in PLUS",
+      "scope": "Inherited source-specific internal review reported by the exact delivery receipt. Receipt custody and source statements are preserved; no new independent kernel or human-specialist review is asserted.",
+      "outcome": "LIMITED",
+      "review_sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a"
+    }
+  ],
+  "results": [
+    {
+      "id": "T13-OPAQUE-REPRESENTATION",
+      "title": "Prescribed opaque-polynomial typing separation",
+      "tranche": 13,
+      "family": "T13-OPAQUE-REPRESENTATION",
+      "original_avenues": [
+        9
+      ],
+      "evidence_keys": [
+        "OPAQUE_ATOM_COMPLETENESS_PROOF_v3"
+      ],
+      "target": "Prescribed opaque-polynomial typing separation",
+      "input_contract": "Exact source polynomial, opaque raw atom and type target from the written proof.",
+      "assumptions": [
+        "NoFinite of the replaced whole atom, type avoidance and the displayed rejecting semantic model.",
+        "All 18 current typing cases and the finite-import impossibility are included."
+      ],
+      "conclusion": "Equal evaluations of the specified exposed p and opaque q do not force the same current typing certificate; whole-atom replacement proves q untypable at the exact identity target. The discarded-loop corollary isolates backward representation expansion.",
+      "limitations": [
+        "This is prescribed-polynomial failure, not nonexistence of every inhabitant.",
+        "No effective sufficient recognizer follows from the general necessary condition.",
+        "No new Lean proof or failure of forward subject reduction is asserted."
+      ],
+      "calculus": "P01AC.Has",
+      "operational_model": "Exact delivered recursive dependent-All P01AC.Has and original F/G; source identities below govern all names.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "identity-src-18324561d5a479234e08"
+      ],
+      "review_ids": [
+        "T13-OPAQUE-REPRESENTATION-inherited-review"
+      ],
+      "suite_ids": [],
+      "origin_status": "Ordinary written proofs; independently reviewed against the specified definitions",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "residual_scope": "No universe closure, public P01DF transfer, arbitrary semantic completeness or operational adoption; each supplied-certificate, bare-code and reference interface retains its own scope."
+    },
+    {
+      "id": "T13-ATOM-APPLICATION-BRIDGE",
+      "title": "Hypothetical atom/application bridge and closed conversion",
+      "tranche": 13,
+      "family": "T13-ATOM-APPLICATION-BRIDGE",
+      "original_avenues": [
+        9
+      ],
+      "evidence_keys": [
+        "HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2"
+      ],
+      "target": "Hypothetical atom/application bridge and closed conversion",
+      "input_contract": "The exact fresh CtxPlus/FormPlus/HasPlus copy and finite conversion certificates.",
+      "assumptions": [
+        "Only atom(app(r,s)) versus app(atom(r),atom(s)) is added to PolyConv.",
+        "Both endpoint polynomials are Scoped 0 for the closed conversion equivalence."
+      ],
+      "conclusion": "One added polynomial-conversion bridge, used by the copied identityIntro and conv rules, preserves original F/G soundness in the written mutual argument and makes closed polynomial conversion equivalent to raw conversion of evaluations.",
+      "limitations": [
+        "This is a hypothetical 18-rule copied judgement, not operational adoption.",
+        "No arbitrary typed carrier completeness, eta equation or conversion decision algorithm.",
+        "No new Lean status in this paper."
+      ],
+      "calculus": "P01AC.Intensional.Plus.HasPlus",
+      "operational_model": "Exact delivered recursive dependent-All P01AC.Intensional.Plus.HasPlus and original F/G; source identities below govern all names.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "identity-src-210a260c6b65330bbabb"
+      ],
+      "review_ids": [
+        "T13-ATOM-APPLICATION-BRIDGE-inherited-review"
+      ],
+      "suite_ids": [],
+      "origin_status": "Ordinary written proofs; independently reviewed against the specified definitions",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "residual_scope": "No universe closure, public P01DF transfer, arbitrary semantic completeness or operational adoption; each supplied-certificate, bare-code and reference interface retains its own scope."
+    },
+    {
+      "id": "T13-RESIDUAL-HAS",
+      "title": "Historical I/SKK all-inhabitant question in HAS",
+      "tranche": 13,
+      "family": "closed-I-SKK-noninhabitation-HAS",
+      "original_avenues": [
+        9
+      ],
+      "evidence_keys": [
+        "RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1"
+      ],
+      "target": "Closed I/SKK target noninhabitation in HAS",
+      "input_contract": "Every potential polynomial inhabitant at the fixed I/SKK identity target.",
+      "assumptions": [
+        "The displayed finite polymorphic I/SKK endpoints and inherited original F/G semantics."
+      ],
+      "conclusion": "The exact closed target is formed and has a full old F/G witness; the delivered note stops with global syntactic nonderivability unresolved.",
+      "limitations": [
+        "Failure of direct identityIntro is not all-rule noninhabitation.",
+        "The pending historical header is preserved; the later T14 result has a distinct source/status."
+      ],
+      "calculus": "P01AC.Has",
+      "operational_model": "Exact delivered recursive dependent-All P01AC.Has and original F/G; source identities below govern all names.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "identity-src-36405a21fb515a544d13"
+      ],
+      "review_ids": [
+        "T13-RESIDUAL-HAS-inherited-review"
+      ],
+      "suite_ids": [],
+      "origin_status": "semantic candidate established; syntactic nonderivability unresolved",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "residual_scope": "No universe closure, public P01DF transfer, arbitrary semantic completeness or operational adoption; each supplied-certificate, bare-code and reference interface retains its own scope."
+    },
+    {
+      "id": "T13-RESIDUAL-PLUS",
+      "title": "Historical I/SKK all-inhabitant question in PLUS",
+      "tranche": 13,
+      "family": "closed-I-SKK-noninhabitation-PLUS",
+      "original_avenues": [
+        9
+      ],
+      "evidence_keys": [
+        "RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1"
+      ],
+      "target": "Closed I/SKK target noninhabitation in PLUS",
+      "input_contract": "Every potential polynomial inhabitant at the fixed I/SKK identity target.",
+      "assumptions": [
+        "The displayed finite polymorphic I/SKK endpoints and inherited original F/G semantics."
+      ],
+      "conclusion": "The exact closed target is formed and has a full old F/G witness; the delivered note stops with global syntactic nonderivability unresolved.",
+      "limitations": [
+        "Failure of direct identityIntro is not all-rule noninhabitation.",
+        "The pending historical header is preserved; the later T14 result has a distinct source/status."
+      ],
+      "calculus": "P01AC.Intensional.Plus.HasPlus",
+      "operational_model": "Exact delivered recursive dependent-All P01AC.Intensional.Plus.HasPlus and original F/G; source identities below govern all names.",
+      "math_form": "ORDINARY",
+      "claim_scope": "WHOLE_RESULT",
+      "domain": "UNBOUNDED_MODEL",
+      "source_ids": [
+        "identity-src-36405a21fb515a544d13"
+      ],
+      "review_ids": [
+        "T13-RESIDUAL-PLUS-inherited-review"
+      ],
+      "suite_ids": [],
+      "origin_status": "semantic candidate established; syntactic nonderivability unresolved",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "residual_scope": "No universe closure, public P01DF transfer, arbitrary semantic completeness or operational adoption; each supplied-certificate, bare-code and reference interface retains its own scope."
+    }
+  ],
+  "statuses": [
+    {
+      "id": "T13-OPAQUE-REPRESENTATION",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T13-ATOM-APPLICATION-BRIDGE",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "CANDIDATE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T13-RESIDUAL-HAS",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "HISTORICAL",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    },
+    {
+      "id": "T13-RESIDUAL-PLUS",
+      "custody": "EXACT",
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "fresh_evidence": "NOT_RUN",
+      "research_disposition": "HISTORICAL",
+      "implementation_reach": "WRITTEN_ONLY",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "receipt_ids": [],
+      "independent_evidence_count": 0
+    }
+  ],
+  "suites": [],
+  "receipts": [],
+  "supersession": [],
+  "legacy_endpoints": [],
+  "selectors": [
+    {
+      "family": "T13-OPAQUE-REPRESENTATION",
+      "result_id": "T13-OPAQUE-REPRESENTATION",
+      "statement_sha256": "ccb1e4a8f9ea3ece04ef2756ada7043467a658a7626a3d2ba6fd8676d0c53dc4"
+    },
+    {
+      "family": "T13-ATOM-APPLICATION-BRIDGE",
+      "result_id": "T13-ATOM-APPLICATION-BRIDGE",
+      "statement_sha256": "1ad08ca224d2345c730ca2a9e523d4d54cceacd73164ee33ee9801521f7ff7fa"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "U11-IDENTITY-SCOPED",
+      "owner_path": "experiments/orthemology-v5/source/ledgers/REMAINING_OBLIGATIONS.json",
+      "owner_sha256": "693e2a00b6f5c5e20e4a98270d2658b3dc7fe3f2776109f4ae5308803e92f3fa",
+      "statement": "Contextual dependent substitution, J and universe rules",
+      "result_ids": [
+        "T13-OPAQUE-REPRESENTATION",
+        "T13-ATOM-APPLICATION-BRIDGE",
+        "T13-RESIDUAL-HAS",
+        "T13-RESIDUAL-PLUS"
+      ],
+      "disposition": "SCOPED_SUCCESSOR",
+      "residual": "Exact substitution, typed context, All and identity results advance only their displayed syntax/model. Universes, public adoption, full dependent calculus, decidable general kernel and unrestricted semantic completeness remain open or retain their exact negative limits."
+    }
+  ],
+  "calculus": [
+    {
+      "id": "T13-OPAQUE-REPRESENTATION",
+      "calculus": "P01AC.Has",
+      "operational_model": "Exact delivered recursive dependent-All P01AC.Has and original F/G; source identities below govern all names.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T13-ATOM-APPLICATION-BRIDGE",
+      "calculus": "P01AC.Intensional.Plus.HasPlus",
+      "operational_model": "Exact delivered recursive dependent-All P01AC.Intensional.Plus.HasPlus and original F/G; source identities below govern all names.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T13-RESIDUAL-HAS",
+      "calculus": "P01AC.Has",
+      "operational_model": "Exact delivered recursive dependent-All P01AC.Has and original F/G; source identities below govern all names.",
+      "canonical_adoption": "NOT_ADOPTED"
+    },
+    {
+      "id": "T13-RESIDUAL-PLUS",
+      "calculus": "P01AC.Intensional.Plus.HasPlus",
+      "operational_model": "Exact delivered recursive dependent-All P01AC.Intensional.Plus.HasPlus and original F/G; source identities below govern all names.",
+      "canonical_adoption": "NOT_ADOPTED"
+    }
+  ],
+  "empirical": [],
+  "projection_reviews": [],
+  "public_allowlist": [
+    {
+      "path": "experiments/orthemology-v5-successors/groups/t13-identity/README.md",
+      "sha256": "9492d888f684355f2f72f15e1da7ddca3525b2523e3a670c2da25d811c6eaf96",
+      "bytes": 7880,
+      "kind": "AUTHORED",
+      "source_ids": []
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/groups/t13-identity/SOURCE_INDEX.json",
+      "sha256": "088e321fb0e83e71b14db506d0b3d64fd3629ffabc06151889b8a646e56c88b2",
+      "bytes": 2343,
+      "kind": "AUTHORED",
+      "source_ids": []
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md",
+      "sha256": "02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe",
+      "bytes": 19906,
+      "kind": "SOURCE",
+      "source_ids": [
+        "identity-src-210a260c6b65330bbabb"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json",
+      "sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "bytes": 1689,
+      "kind": "SOURCE",
+      "source_ids": [
+        "identity-src-39cf7a4ba2e31c776a77"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md",
+      "sha256": "7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e",
+      "bytes": 11482,
+      "kind": "SOURCE",
+      "source_ids": [
+        "identity-src-36405a21fb515a544d13"
+      ]
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md",
+      "sha256": "b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236",
+      "bytes": 26969,
+      "kind": "SOURCE",
+      "source_ids": [
+        "identity-src-18324561d5a479234e08"
+      ]
+    }
+  ]
+}

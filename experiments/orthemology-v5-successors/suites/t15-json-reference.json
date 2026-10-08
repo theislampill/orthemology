@@ -1,0 +1,238 @@
+{
+  "id": "t15-json-reference",
+  "family": "t15-json-reference",
+  "result_families": [
+    "T15-PYTHON-REFERENCE"
+  ],
+  "origin_archive_sha256": "ac5213e252eca1b17cd885e6b86dbc55a2a15304c915f76f34edc58aac024bd7",
+  "source_ids": [
+    "identity-src-2486a5ef2cae27e7f599",
+    "identity-src-1c4b694e76a97ff0a4f3",
+    "identity-src-6db4df81814f44506b7f",
+    "identity-src-6b450d668340fbf13b73",
+    "identity-src-9eedd9b685ac33604961",
+    "identity-src-7ace94ebaebb37c3d603",
+    "identity-src-fe8e52ab794092cd05af",
+    "identity-src-535a107f1a126871a452"
+  ],
+  "review_ids": [
+    "T15-PYTHON-REFERENCE-inherited-review"
+  ],
+  "targets": [
+    {
+      "id": "t15-json-reference-validate",
+      "source_id": "identity-src-6db4df81814f44506b7f",
+      "declaration": "def validate(r, e):\n    if not _nat(r):\n        raise ValueError('arity must be a natural number')\n    if type(e) is not list or not e or type(e[0]) is not str:\n        raise ValueError('an expression must be a finite tagged JSON array')\n    tag = e[0]\n    if tag == 'c' and len(e) == 2 and _nat(e[1]):\n        return\n    if tag == 'v' and len(e) == 2 and _nat(e[1]) and e[1] < r:\n        return\n    if (tag in ('add', 'mul') and len(e) == 3) or (tag == 'if0' and len(e) == 4):\n        for child in e[1:]:\n            validate(r, child)\n        return\n    raise ValueError('malformed or out-of-fragment expression')",
+      "target_sha256": "453d8533a19fed55e5807e596db218f2714c79c7ab3db205e34a1c7d83addee7",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-json-reference-equivalent",
+      "source_id": "identity-src-6db4df81814f44506b7f",
+      "declaration": "def equivalent(r, e, f):\n    validate(r,e); validate(r,f)\n    return all(_normalise(r,e,s) == _normalise(r,f,s) for s in masks(r))",
+      "target_sha256": "0c7101a767c63054bc0016aaf026bc447be2d2aa02dde36629e6f9485e4f1a29",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-json-reference-distinguish",
+      "source_id": "identity-src-6db4df81814f44506b7f",
+      "declaration": "def distinguish(r, e, f):\n    \"\"\"Return None for equality; otherwise a checked finite-grid counterexample.\"\"\"\n    validate(r,e); validate(r,f)\n    for s in masks(r):\n        p, q = _normalise(r,e,s), _normalise(r,f,s)\n        if p != q:\n            for v in grid(r,p,q,s):\n                if evaluate(e,v) != evaluate(f,v):\n                    return v\n            raise AssertionError('finite-grid separation invariant failed')\n    return None",
+      "target_sha256": "83120446f3ccf6023962f02a6961f287de17e6be8ab4d7a38d29dae1d9eb8278",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-json-reference-certify",
+      "source_id": "identity-src-6db4df81814f44506b7f",
+      "declaration": "def certify(r, e, f):\n    validate(r,e); validate(r,f)\n    forms = []\n    for s in masks(r):\n        p, q = _normalise(r,e,s), _normalise(r,f,s)\n        if p != q:\n            raise ValueError('expressions are unequal; no positive certificate exists')\n        forms.append({'mask': list(s), 'left': _encode(p), 'right': _encode(q)})\n    return {'version': 1, 'arity': r, 'left': e, 'right': f, 'normal_forms': forms}",
+      "target_sha256": "a7476fe9d8501eec1f89124696a827f15e2e31e1ad4988fef35e743ac5c6cb3d",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-json-reference-verify_positive",
+      "source_id": "identity-src-6db4df81814f44506b7f",
+      "declaration": "def verify_positive(certificate):\n    \"\"\"Recompute every mask; accept exactly canonical genuine positive evidence.\n\n    The declared endpoints are the fragment descriptions stored in the packet.\n    A consumer checking a separate claim must additionally match those endpoints\n    to that claim, rather than accepting an unrelated valid certificate.\n    \"\"\"\n    if type(certificate) is not dict: return False\n    if set(certificate) != {'version','arity','left','right','normal_forms'}: return False\n    try:\n        expected = certify(certificate['arity'],certificate['left'],certificate['right'])\n    except (ValueError, TypeError, KeyError, IndexError):\n        return False\n    return _json_equal(certificate, expected)",
+      "target_sha256": "477303cb087e0e22e87da8d442d0940bc0840d92e195c2df2e09efc66d824ce8",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-json-reference-main",
+      "source_id": "identity-src-6db4df81814f44506b7f",
+      "declaration": "def main(argv=None):\n    argv = sys.argv[1:] if argv is None else argv\n    if len(argv) != 1 or argv[0] not in ('decide','certify','verify'):\n        raise SystemExit('usage: certificate_checker.py decide|certify|verify < input.json')\n    data = json.load(sys.stdin)\n    if argv[0] == 'verify':\n        result = {'accepted': verify_positive(data)}\n    else:\n        r,e,f = data['arity'],data['left'],data['right']\n        if argv[0] == 'certify': result = certify(r,e,f)\n        else:\n            witness = distinguish(r,e,f)\n            result = {'equal': witness is None, 'counterexample': witness}\n    json.dump(result,sys.stdout,sort_keys=True,indent=2)\n    print()",
+      "target_sha256": "db58c3208213dd53c5c85e8446a6eadee6c3bec55f3734ac9c8ad03535d58157",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [],
+  "toolchain": {
+    "kind": "PYTHON",
+    "version": "3.12.3",
+    "platform": "linux-x86_64",
+    "executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+    "packages": []
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "FINITE",
+    "files": [
+      {
+        "source_id": "identity-src-2486a5ef2cae27e7f599",
+        "path": "python-reference/README.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-1c4b694e76a97ff0a4f3",
+        "path": "python-reference/SOURCE_LOCK.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "identity-src-6db4df81814f44506b7f",
+        "path": "python-reference/certificate_checker.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-6b450d668340fbf13b73",
+        "path": "python-reference/examples/piecewise_instance.json",
+        "role": "DATA"
+      },
+      {
+        "source_id": "identity-src-9eedd9b685ac33604961",
+        "path": "python-reference/examples/piecewise_certificate.json",
+        "role": "DATA"
+      },
+      {
+        "source_id": "identity-src-7ace94ebaebb37c3d603",
+        "path": "python-reference/examples/unequal_instance.json",
+        "role": "DATA"
+      },
+      {
+        "source_id": "identity-src-fe8e52ab794092cd05af",
+        "path": "python-reference/verification/test_certificate_checker.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-535a107f1a126871a452",
+        "path": "python-reference/verification/test_independent_checker.py",
+        "role": "DRIVER"
+      }
+    ],
+    "modules": [],
+    "module_order": [],
+    "positive_roots": [],
+    "audit_roots": [],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [],
+    "target_names": [],
+    "package_manifest_source_id": null,
+    "packages": [],
+    "tools": [],
+    "external_inputs": [],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "json-tests",
+        "source_id": "identity-src-fe8e52ab794092cd05af",
+        "recipe": "t15-json-reference-tests-v1",
+        "sha256": "f2689d00865ed2964fa6dc4337d67da5017f23c34a870e5dad183ccc6ccd6bb9",
+        "argument_meanings": {},
+        "external_input_id": null
+      },
+      {
+        "id": "json-decide",
+        "source_id": "identity-src-6db4df81814f44506b7f",
+        "recipe": "t15-json-reference-decide-example-v1",
+        "sha256": "8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef",
+        "argument_meanings": {
+          "decide": "LITERAL"
+        },
+        "external_input_id": null
+      },
+      {
+        "id": "json-verify",
+        "source_id": "identity-src-6db4df81814f44506b7f",
+        "recipe": "t15-json-reference-verify-example-v1",
+        "sha256": "8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef",
+        "argument_meanings": {
+          "verify": "LITERAL"
+        },
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "json-reference-tests",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "json-tests",
+        "argv": [
+          "{tool:python}",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "verification",
+          "-p",
+          "test*.py",
+          "-v"
+        ],
+        "cwd": "python-reference",
+        "depends_on": [],
+        "timeout_seconds": 300,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "json-reference-decide-example",
+        "kind": "DRIVER",
+        "driver_id": "json-decide",
+        "argv": [
+          "{tool:python}",
+          "certificate_checker.py",
+          "decide"
+        ],
+        "cwd": "python-reference",
+        "depends_on": [
+          "json-reference-tests"
+        ],
+        "timeout_seconds": 300,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "json-reference-verify-example",
+        "kind": "DRIVER",
+        "driver_id": "json-verify",
+        "argv": [
+          "{tool:python}",
+          "certificate_checker.py",
+          "verify"
+        ],
+        "cwd": "python-reference",
+        "depends_on": [
+          "json-reference-decide-example"
+        ],
+        "timeout_seconds": 300,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": []
+  }
+}

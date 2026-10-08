@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "scope": "Reconstructs each exact public per-paper reader byte stream from the single included full reader. These are reader texts, not historical raw written inputs. Apply native-equation per-paper character/byte offsets after slicing and UTF-8 decoding as indicated by the map.",
+  "full_reader_filename": "FULL_READER_TEXT_v5.md",
+  "full_reader_sha256": "10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+  "public_math_map_filename": "PUBLIC_SOURCE_MATH_MAP_Final_v1.json",
+  "public_math_map_sha256": "0fb3d04bf3b4e835a415680d75eace2170c64d65913a3822ab28494949fc7d6b",
+  "blocks": [
+    {
+      "paper": "continuation",
+      "virtual_reader_filename": "continuation.md",
+      "reader_sha256": "7bc519a4bc629478b1acf7fdbcf4b46114d17811a1618828a680a70013091287",
+      "full_reader_utf8_byte_start_0_based": 6070,
+      "full_reader_utf8_byte_end_exclusive": 42923,
+      "bytes": 36853
+    },
+    {
+      "paper": "randomised",
+      "virtual_reader_filename": "randomised.md",
+      "reader_sha256": "4d4d87887915be00a1565e809b475db9b0c827719ec40955a4e30fcd84846cc2",
+      "full_reader_utf8_byte_start_0_based": 42934,
+      "full_reader_utf8_byte_end_exclusive": 51268,
+      "bytes": 8334
+    },
+    {
+      "paper": "population",
+      "virtual_reader_filename": "population.md",
+      "reader_sha256": "117d65d0db4f657458dfba0fd23c1c06cc3309c2f09fc0695dc7661ce0e1aef8",
+      "full_reader_utf8_byte_start_0_based": 51279,
+      "full_reader_utf8_byte_end_exclusive": 58611,
+      "bytes": 7332
+    },
+    {
+      "paper": "competence",
+      "virtual_reader_filename": "competence.md",
+      "reader_sha256": "177931c617c2f38c68bc38f840228de6b9dc2b7df13fc299ca98c237d9495ae2",
+      "full_reader_utf8_byte_start_0_based": 58622,
+      "full_reader_utf8_byte_end_exclusive": 62005,
+      "bytes": 3383
+    },
+    {
+      "paper": "lookahead",
+      "virtual_reader_filename": "lookahead.md",
+      "reader_sha256": "5c22e88ea80804786b3efc40a783b68d4e118c529cad9aa44de33a747329045f",
+      "full_reader_utf8_byte_start_0_based": 62016,
+      "full_reader_utf8_byte_end_exclusive": 68123,
+      "bytes": 6107
+    },
+    {
+      "paper": "synthesis",
+      "virtual_reader_filename": "synthesis.md",
+      "reader_sha256": "30764d6b2e492d8345732436f8c8f0be50ec9e83783b1ec476755dffb67b894b",
+      "full_reader_utf8_byte_start_0_based": 68134,
+      "full_reader_utf8_byte_end_exclusive": 95645,
+      "bytes": 27511
+    },
+    {
+      "paper": "unary",
+      "virtual_reader_filename": "unary.md",
+      "reader_sha256": "26d6ac16b25c6d25151413d3a58a7c2ce4e9a86843a567f67c319616a49c3e23",
+      "full_reader_utf8_byte_start_0_based": 95656,
+      "full_reader_utf8_byte_end_exclusive": 131755,
+      "bytes": 36099
+    },
+    {
+      "paper": "current",
+      "virtual_reader_filename": "current.md",
+      "reader_sha256": "613b3c35b76405510e95a37f3f3efff0ce8bd623edf2d7f940421130179c27c9",
+      "full_reader_utf8_byte_start_0_based": 131766,
+      "full_reader_utf8_byte_end_exclusive": 142550,
+      "bytes": 10784
+    },
+    {
+      "paper": "certificate",
+      "virtual_reader_filename": "certificate.md",
+      "reader_sha256": "dc241e0174aea9ae22191093eeda69bdf542eda42f0da6882a9dd96e0dcb0583",
+      "full_reader_utf8_byte_start_0_based": 142561,
+      "full_reader_utf8_byte_end_exclusive": 161112,
+      "bytes": 18551
+    },
+    {
+      "paper": "temporal",
+      "virtual_reader_filename": "temporal.md",
+      "reader_sha256": "86e82560e429e4e8f97bbc8b9280e2af2b52706b156201b71b40b5763302a2f0",
+      "full_reader_utf8_byte_start_0_based": 161124,
+      "full_reader_utf8_byte_end_exclusive": 170949,
+      "bytes": 9825
+    },
+    {
+      "paper": "almost_sure",
+      "virtual_reader_filename": "almost_sure.md",
+      "reader_sha256": "e44bd3f84b2afc5369a1a10b2fb4cee76956a60dc98db0805fa646ad08310506",
+      "full_reader_utf8_byte_start_0_based": 170961,
+      "full_reader_utf8_byte_end_exclusive": 184850,
+      "bytes": 13889
+    },
+    {
+      "paper": "signed",
+      "virtual_reader_filename": "signed.md",
+      "reader_sha256": "0c9dae92a9d88c2dc6169990ccc4c83166d941c40b5ae96375d19051d78771d0",
+      "full_reader_utf8_byte_start_0_based": 184862,
+      "full_reader_utf8_byte_end_exclusive": 210373,
+      "bytes": 25511
+    },
+    {
+      "paper": "controller",
+      "virtual_reader_filename": "controller.md",
+      "reader_sha256": "bac5d7d3d405a72549575aa96b404c78665acc5113942966ed263b9f94c7d01b",
+      "full_reader_utf8_byte_start_0_based": 210385,
+      "full_reader_utf8_byte_end_exclusive": 237959,
+      "bytes": 27574
+    },
+    {
+      "paper": "certificate_map",
+      "virtual_reader_filename": "certificate_map.md",
+      "reader_sha256": "3d76104724cef1dabe00ff3cfb5515b7ec597450beeea238fa862aec8568bade",
+      "full_reader_utf8_byte_start_0_based": 237971,
+      "full_reader_utf8_byte_end_exclusive": 241546,
+      "bytes": 3575
+    }
+  ]
+}

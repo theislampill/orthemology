@@ -1,0 +1,5 @@
+import UnaryWitnesses
+#check P01AC.UnaryIdentity.finite_prefix_iff_valid
+#check P01AC.UnaryIdentity.distinguishingInput_sound
+#check P01AC.UnaryIdentity.distinguishingInput_none_iff_valid
+#check P01AC.UnaryIdentity.negative_certificate_complete

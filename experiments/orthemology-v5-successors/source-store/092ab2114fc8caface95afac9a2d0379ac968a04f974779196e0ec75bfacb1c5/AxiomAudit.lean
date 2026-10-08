@@ -1,0 +1,65 @@
+import Correspondence
+import MapTransport
+import ImageMinima
+
+#print axioms AttributionKernel.actual_root_count
+#print axioms AttributionKernel.arbitrary_faults_pullback
+#print axioms AttributionKernel.arbitrary_map_available_iff
+#print axioms AttributionKernel.arbitrary_map_shared_card
+#print axioms AttributionKernel.available_iff
+#print axioms AttributionKernel.booleanLabels_and
+#print axioms AttributionKernel.booleanLabels_card
+#print axioms AttributionKernel.booleanLabels_setPredicate
+#print axioms AttributionKernel.booleanLabels_val_image
+#print axioms AttributionKernel.canonical_exact
+#print axioms AttributionKernel.canonical_faults_pushforward
+#print axioms AttributionKernel.cross_image_identity
+#print axioms AttributionKernel.disjoint_image_iff
+#print axioms AttributionKernel.disjoint_zero_fault_iff
+#print axioms AttributionKernel.encode_injOn_actualRoots
+#print axioms AttributionKernel.encode_rootMap
+#print axioms AttributionKernel.fixed_contract_iff
+#print axioms AttributionKernel.fixed_family_feasible_iff
+#print axioms AttributionKernel.forced_bridge_iff
+#print axioms AttributionKernel.label_available_at_most
+#print axioms AttributionKernel.label_fixed_family_feasible_iff
+#print axioms AttributionKernel.label_fixed_family_lower
+#print axioms AttributionKernel.label_threshold_upper
+#print axioms AttributionKernel.matching_fault_disjointness
+#print axioms AttributionKernel.maximal_taint_realizable
+#print axioms AttributionKernel.meets_if_card_sum_large
+#print axioms AttributionKernel.natLabels_card
+#print axioms AttributionKernel.none_mem_rootImage
+#print axioms AttributionKernel.oldRootImage_as_representative
+#print axioms AttributionKernel.old_robust_iff
+#print axioms AttributionKernel.old_robust_iff_new
+#print axioms AttributionKernel.old_rootOf_correspondence
+#print axioms AttributionKernel.old_shared_card_correspondence
+#print axioms AttributionKernel.overlap_le_shared_add_class_pred
+#print axioms AttributionKernel.rename_commutes
+#print axioms AttributionKernel.rename_injOn
+#print axioms AttributionKernel.renamed_image
+#print axioms AttributionKernel.representative_image
+#print axioms AttributionKernel.representative_shared_card
+#print axioms AttributionKernel.robust_iff
+#print axioms AttributionKernel.rootImage_card_of_class_subset
+#print axioms AttributionKernel.rootImage_mono
+#print axioms AttributionKernel.sharedRoots_card
+#print axioms AttributionKernel.sharedRoots_decomposition
+#print axioms AttributionKernel.shared_nonempty_of_overlap
+#print axioms AttributionKernel.sharp_nonempty_minimum
+#print axioms AttributionKernel.some_mem_rootImage
+#print axioms AttributionKernel.tainted_label_budget
+#print axioms AttributionKernel.tainted_realization
+#print axioms AttributionKernel.tainted_rootImage_subset
+
+#check @AttributionKernel.robust_iff
+#check @AttributionKernel.sharp_nonempty_minimum
+#check @AttributionKernel.forced_bridge_iff
+#check @AttributionKernel.maximal_taint_realizable
+#check @AttributionKernel.available_iff
+#check @AttributionKernel.label_fixed_family_lower
+#check @AttributionKernel.fixed_family_feasible_iff
+#check @AttributionKernel.old_robust_iff
+#check @AttributionKernel.arbitrary_map_available_iff
+#check @AttributionKernel.arbitrary_map_shared_card

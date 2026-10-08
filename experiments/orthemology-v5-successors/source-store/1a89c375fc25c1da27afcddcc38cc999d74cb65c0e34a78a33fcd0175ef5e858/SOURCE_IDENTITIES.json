@@ -1,0 +1,491 @@
+{
+  "schema": "dependent-all-source-manifest-v1",
+  "sources": [
+    {
+      "path": "sources/InternalPolymorphism.lean",
+      "bytes": 15288,
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/FiniteBridge.lean",
+      "bytes": 8366,
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01TypeAlgebra.lean",
+      "bytes": 4003,
+      "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01SNReflection.lean",
+      "bytes": 1447,
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/BoundaryResults.lean",
+      "bytes": 8581,
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01Candidates.lean",
+      "bytes": 10260,
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01Confluence.lean",
+      "bytes": 9226,
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/EffectsAndDependence.lean",
+      "bytes": 8707,
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/NormalisationAndNumerals.lean",
+      "bytes": 3101,
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01Omega.lean",
+      "bytes": 3201,
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01Polynomials.lean",
+      "bytes": 8595,
+      "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01PER.lean",
+      "bytes": 9388,
+      "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01DependentCore.lean",
+      "bytes": 16822,
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01ContextualJ.lean",
+      "bytes": 3535,
+      "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01Certificates.lean",
+      "bytes": 5047,
+      "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01Examples.lean",
+      "bytes": 3514,
+      "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01RecursiveModel.lean",
+      "bytes": 14821,
+      "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01LambdaSyntax.lean",
+      "bytes": 5547,
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01SystemF.lean",
+      "bytes": 6932,
+      "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01CurryParametricity.lean",
+      "bytes": 4213,
+      "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01Translation.lean",
+      "bytes": 6462,
+      "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01ModelWitnesses.lean",
+      "bytes": 4276,
+      "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01DependentModel.lean",
+      "bytes": 9892,
+      "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01DependentSubstitution.lean",
+      "bytes": 7125,
+      "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01DependentFundamental.lean",
+      "bytes": 8990,
+      "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/SubstitutionSyntax.lean",
+      "bytes": 9055,
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/AllSyntax.lean",
+      "bytes": 6469,
+      "sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllPredicates.lean",
+      "bytes": 6228,
+      "sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllRawSubstitution.lean",
+      "bytes": 3157,
+      "sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllRawRenaming.lean",
+      "bytes": 3623,
+      "sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllBaseLaws.lean",
+      "bytes": 6947,
+      "sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllPiLaws.lean",
+      "bytes": 2971,
+      "sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllSigmaLaws.lean",
+      "bytes": 4531,
+      "sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllTermLemmas.lean",
+      "bytes": 6322,
+      "sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllBinderLaws.lean",
+      "bytes": 3942,
+      "sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllConstants.lean",
+      "bytes": 2153,
+      "sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllFiniteComparison.lean",
+      "bytes": 1432,
+      "sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllSemanticSubstitution.lean",
+      "bytes": 7131,
+      "sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllInstantiation.lean",
+      "bytes": 4649,
+      "sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllSoundness.lean",
+      "bytes": 6622,
+      "sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllBoundaryResults.lean",
+      "bytes": 4946,
+      "sha256": "e2d2bc925be16ce4de0395e8635e8eaf4c6a861df5190549c13881bde509e743",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllTermAlgebra.lean",
+      "bytes": 9867,
+      "sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllMixedAlgebra.lean",
+      "bytes": 17017,
+      "sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllStructuralBase.lean",
+      "bytes": 10666,
+      "sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllStructuralRename.lean",
+      "bytes": 11526,
+      "sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllStructural.lean",
+      "bytes": 30140,
+      "sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllRepresentation.lean",
+      "bytes": 3585,
+      "sha256": "736b408e67348b264191a85f0e9591bf8c209ed4dd557bed83e4e1fe83163722",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllContextualJ.lean",
+      "bytes": 4036,
+      "sha256": "4f2c86f1ecc9f9aa709027bf74045b9f0a1dc559bce187d9d455f41226830a01",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/P01DependentControls.lean",
+      "bytes": 6388,
+      "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "bytes": 11117,
+      "sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "bytes": 4054,
+      "sha256": "b25c322a25293a1692a8e67a826eb78a0e1f64953eebba7d6df498f55321dba5",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/TypedSyntax.lean",
+      "bytes": 4557,
+      "sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedAlgebra.lean",
+      "bytes": 9808,
+      "sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedStructural.lean",
+      "bytes": 33519,
+      "sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/AllNucleusSyntax.lean",
+      "bytes": 5356,
+      "sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllJoinedControls.lean",
+      "bytes": 3983,
+      "sha256": "0469bca07f0057d734ea479380f4e33cc45e6f673ab1aa71be93ca141c549912",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/TypedPredicates.lean",
+      "bytes": 5530,
+      "sha256": "acc5fa0f14f126988ed995879d6e39475a33ca2766519f6e4cc1fdb6f74da3ae",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedLaws.lean",
+      "bytes": 7118,
+      "sha256": "234d778b12696c34cf7d61f5fa0c75b4f3e488d14b29f09aef89ea6a12ac8a12",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedPiLaws.lean",
+      "bytes": 2933,
+      "sha256": "bf99ba54a2ee69f0856dc50c7a4c0dc90e3789d590058dcae53909fe39e5e489",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedSigmaLaws.lean",
+      "bytes": 4533,
+      "sha256": "88d025701e15b575b14f6790d0e6ef707591951ed8fd2d3af5aa37ccf92d707e",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedTermLemmas.lean",
+      "bytes": 6324,
+      "sha256": "ead928481cd4b0a3c427664bdb32c4a12cc179c1574ec3290e74dd4ea6dba58a",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedConstants.lean",
+      "bytes": 2990,
+      "sha256": "29ef624541635cd7a2ae00c5c19de93895472b7c676d63ce6c2d8233b7614834",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedSoundness.lean",
+      "bytes": 6129,
+      "sha256": "ba9667b33cb3b6268b3450dbd5a803bb880948d12e2b74f1b3739165ee109143",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedLegacy.lean",
+      "bytes": 24376,
+      "sha256": "47675347844cf2858eb2e5a0aea9bbca08cdf90e4de0aee7f26cb8e2a73f9d45",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/AllLegacySyntax.lean",
+      "bytes": 9883,
+      "sha256": "0d2d2c2d2aba2dadd6f194b86b1ba87c693a9f3cebe0fc4fda5cc0391c7a192e",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllLegacyDerivations.lean",
+      "bytes": 8188,
+      "sha256": "1272802684942dfd8e4009ce772f2685cdd5550fad4ae1fb36059245d39435fa",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllLegacyComparison.lean",
+      "bytes": 5979,
+      "sha256": "47ed250bec3cc080c689adeade033b52acd88d733ed897065bb1a7605f310585",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllLegacyChecks.lean",
+      "bytes": 3136,
+      "sha256": "74a5e301edeaa18cdc847b58833fb31f79908690c252798db19fd0d8b29d5455",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllMixedRepresentation.lean",
+      "bytes": 5055,
+      "sha256": "f9a38bd8871b397b5fb5c668841585ee4004edb3a470db2136d89d22c62d80ea",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllNucleus.lean",
+      "bytes": 7275,
+      "sha256": "81924364c73d8c8fefce55ffb0b6e7c93f2e1233dfbe7463dec2e97206674412",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AuditSupport.lean",
+      "bytes": 1024,
+      "sha256": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/AllStructuralChecks.lean",
+      "bytes": 2966,
+      "sha256": "29f0417393cb5dcc24173c892f385de9cab9ceb721ca85a417b3cfd04727006c",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/AllReadback.lean",
+      "bytes": 60730,
+      "sha256": "0d881ffa5a3b64d75a15c126a880b6bd636eab55775cd3fdd9bf4a93bbdd7606",
+      "role": "new-dependent-all"
+    },
+    {
+      "path": "sources/P01DependentRepresentation.lean",
+      "bytes": 8168,
+      "sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/P01CanonicalCarrierProjection.lean",
+      "bytes": 6747,
+      "sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedPositiveControls.lean",
+      "bytes": 11121,
+      "sha256": "2f5d21fa81bed6dbabc6659a9f695983e9dafad5f9d36656c23d9988b209527b",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedRepresentation.lean",
+      "bytes": 3577,
+      "sha256": "ae9eb62d4e95ec8a66bb0feb009a394112a91dc34413e9621c84eaf09998d606",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedContextualJ.lean",
+      "bytes": 4008,
+      "sha256": "1be1692557b5ec60b7b0170f0682c0503b1d9ea76ca582ff95a3a8af66517f8d",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedNegativeControls.lean",
+      "bytes": 4049,
+      "sha256": "4c385f333c8f75e6afb57398b6fb0f5607eed839f8e82cbbcac4b37e3759de1e",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedBoundaryResults.lean",
+      "bytes": 4027,
+      "sha256": "15f1fd5429884678f073c9b7bb302a2711567ef7952de7de8160c606ddaf2c66",
+      "role": "accepted-unchanged"
+    },
+    {
+      "path": "sources/TypedReadback.lean",
+      "bytes": 20453,
+      "sha256": "04943734a57a2b51e56195f7f63186fb8ec293efdc0d4841d215e802799b2c6f",
+      "role": "accepted-unchanged"
+    }
+  ]
+}

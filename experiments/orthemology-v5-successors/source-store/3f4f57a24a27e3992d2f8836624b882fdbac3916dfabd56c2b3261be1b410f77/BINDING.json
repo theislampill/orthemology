@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14",
+  "lean": "4.19.0",
+  "platform": "Linux",
+  "lean_exit_code": 0,
+  "generator_sha256": "dd69712d1a7b79bdb5fcb55c855c4c13a00725dda1cd8f4dfcdc4544afcbe8fd",
+  "recorded_result_sha256": "41a3a344e492deb878d274ff56bcf76a999baef234465202fed66b1e29c9a668",
+  "captured_lean_output_sha256": "59bb7b03a142bad9de105b85cab998a3ff0082f79f81bd2861f44057b3d7d2f0",
+  "captured_lean_output_distributed": false,
+  "project_modules_changed": false,
+  "formal_refinement": false
+}

@@ -1,0 +1,4 @@
+import ActualExponentialMoments
+#check @HiddenParity.Cost.generated_stack_badCount_affine_tail_of_margin
+#print axioms HiddenParity.Cost.generated_stack_badCount_affine_tail_of_margin
+#print axioms HiddenParity.Cost.generated_actual_badCount_positive_exponential_moments

@@ -1,0 +1,18 @@
+[
+  {
+    "path": "EffectiveStandardness.lean",
+    "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428"
+  },
+  {
+    "path": "EffectiveObserver.lean",
+    "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f"
+  },
+  {
+    "path": "EffectiveReduction.lean",
+    "sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d"
+  },
+  {
+    "path": "EffectiveRuleBoundary.lean",
+    "sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c"
+  }
+]

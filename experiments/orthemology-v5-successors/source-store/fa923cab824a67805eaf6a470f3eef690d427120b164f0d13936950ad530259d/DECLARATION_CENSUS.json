@@ -1,0 +1,3533 @@
+{
+  "schema": "dependent-all-public-census-v1",
+  "declarations": [
+    {
+      "name": "P01AC.RelLaws",
+      "kind": "structure",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.RelLaws.per",
+      "kind": "def",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 12
+    },
+    {
+      "name": "P01AC.RelLaws.left",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 13
+    },
+    {
+      "name": "P01AC.RelLaws.right",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 14
+    },
+    {
+      "name": "P01AC.perLaws",
+      "kind": "def",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 16
+    },
+    {
+      "name": "P01AC.ContextLaws",
+      "kind": "structure",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 18
+    },
+    {
+      "name": "P01AC.TypeLaws",
+      "kind": "structure",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 28
+    },
+    {
+      "name": "P01AC.Fundamental",
+      "kind": "def",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 39
+    },
+    {
+      "name": "P01AC.TypeLaws.raw",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 42
+    },
+    {
+      "name": "P01AC.Fundamental.unary",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 49
+    },
+    {
+      "name": "P01AC.context_nil",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 54
+    },
+    {
+      "name": "P01AC.context_ext",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 63
+    },
+    {
+      "name": "P01AC.type_model",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 96
+    },
+    {
+      "name": "P01AC.type_param",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 112
+    },
+    {
+      "name": "P01AC.type_bottom",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 114
+    },
+    {
+      "name": "P01AC.type_raw",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 116
+    },
+    {
+      "name": "P01AC.type_identity",
+      "kind": "theorem",
+      "path": "sources/AllBaseLaws.lean",
+      "line": 124
+    },
+    {
+      "name": "P01AC.Uniform",
+      "kind": "def",
+      "path": "sources/AllBinderLaws.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.all_uniform_transport",
+      "kind": "theorem",
+      "path": "sources/AllBinderLaws.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.all_per",
+      "kind": "theorem",
+      "path": "sources/AllBinderLaws.lean",
+      "line": 20
+    },
+    {
+      "name": "P01AC.all_transport",
+      "kind": "theorem",
+      "path": "sources/AllBinderLaws.lean",
+      "line": 34
+    },
+    {
+      "name": "P01AC.type_all",
+      "kind": "theorem",
+      "path": "sources/AllBinderLaws.lean",
+      "line": 42
+    },
+    {
+      "name": "P01AC.formedObject",
+      "kind": "def",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.formedLink",
+      "kind": "def",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.formedObject_rel",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 15
+    },
+    {
+      "name": "P01AC.formedLink_rel",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 18
+    },
+    {
+      "name": "P01AC.context_two_sided_invariance",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 21
+    },
+    {
+      "name": "P01AC.context_strong_diagonal",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 26
+    },
+    {
+      "name": "P01AC.formedFibre",
+      "kind": "def",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 29
+    },
+    {
+      "name": "P01AC.formedFibre_coherent",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 34
+    },
+    {
+      "name": "P01AC.formed_pi_exact",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 44
+    },
+    {
+      "name": "P01AC.formed_sigma_exact",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 63
+    },
+    {
+      "name": "P01AC.formed_identity_exact",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 83
+    },
+    {
+      "name": "P01AC.raw_omega_typed",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 88
+    },
+    {
+      "name": "P01AC.raw_omega_has_no_normal_reduct",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 89
+    },
+    {
+      "name": "P01AC.formedAllFamily",
+      "kind": "def",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 94
+    },
+    {
+      "name": "P01AC.formed_all_exact",
+      "kind": "theorem",
+      "path": "sources/AllBoundaryResults.lean",
+      "line": 105
+    },
+    {
+      "name": "P01AC.objectOf",
+      "kind": "def",
+      "path": "sources/AllConstants.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.linkOf",
+      "kind": "def",
+      "path": "sources/AllConstants.lean",
+      "line": 9
+    },
+    {
+      "name": "P01AC.F_arr",
+      "kind": "theorem",
+      "path": "sources/AllConstants.lean",
+      "line": 15
+    },
+    {
+      "name": "P01AC.G_arr",
+      "kind": "theorem",
+      "path": "sources/AllConstants.lean",
+      "line": 19
+    },
+    {
+      "name": "P01AC.fundamental_i",
+      "kind": "theorem",
+      "path": "sources/AllConstants.lean",
+      "line": 26
+    },
+    {
+      "name": "P01AC.fundamental_k",
+      "kind": "theorem",
+      "path": "sources/AllConstants.lean",
+      "line": 33
+    },
+    {
+      "name": "P01AC.fundamental_s",
+      "kind": "theorem",
+      "path": "sources/AllConstants.lean",
+      "line": 40
+    },
+    {
+      "name": "P01AC.contextual_related",
+      "kind": "theorem",
+      "path": "sources/AllContextualJ.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.contextual_valid",
+      "kind": "theorem",
+      "path": "sources/AllContextualJ.lean",
+      "line": 22
+    },
+    {
+      "name": "P01AC.contextualMotive",
+      "kind": "def",
+      "path": "sources/AllContextualJ.lean",
+      "line": 28
+    },
+    {
+      "name": "P01AC.contextualProof",
+      "kind": "def",
+      "path": "sources/AllContextualJ.lean",
+      "line": 36
+    },
+    {
+      "name": "P01AC.contextualBase",
+      "kind": "def",
+      "path": "sources/AllContextualJ.lean",
+      "line": 48
+    },
+    {
+      "name": "P01AC.representedContextualJ",
+      "kind": "def",
+      "path": "sources/AllContextualJ.lean",
+      "line": 59
+    },
+    {
+      "name": "P01AC.representedContextualJ_code",
+      "kind": "theorem",
+      "path": "sources/AllContextualJ.lean",
+      "line": 65
+    },
+    {
+      "name": "P01AC.contextual_target_exact",
+      "kind": "theorem",
+      "path": "sources/AllContextualJ.lean",
+      "line": 70
+    },
+    {
+      "name": "P01AC.FG_fin",
+      "kind": "theorem",
+      "path": "sources/AllFiniteComparison.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.F_fin",
+      "kind": "theorem",
+      "path": "sources/AllFiniteComparison.lean",
+      "line": 23
+    },
+    {
+      "name": "P01AC.G_fin",
+      "kind": "theorem",
+      "path": "sources/AllFiniteComparison.lean",
+      "line": 26
+    },
+    {
+      "name": "P01AC.Negative.totalRaw",
+      "kind": "def",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.Negative.rawTotal",
+      "kind": "def",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 13
+    },
+    {
+      "name": "P01AC.Negative.rightSeparating",
+      "kind": "def",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 18
+    },
+    {
+      "name": "P01AC.Negative.leftSeparating",
+      "kind": "def",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 25
+    },
+    {
+      "name": "P01AC.Negative.pairContext",
+      "kind": "def",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 32
+    },
+    {
+      "name": "P01AC.Negative.equalEnv",
+      "kind": "def",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 33
+    },
+    {
+      "name": "P01AC.Negative.splitEnv",
+      "kind": "def",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 34
+    },
+    {
+      "name": "P01AC.Negative.equalityTest",
+      "kind": "def",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 35
+    },
+    {
+      "name": "P01AC.Negative.pair_context_formed",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 37
+    },
+    {
+      "name": "P01AC.Negative.equality_test_formed",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 40
+    },
+    {
+      "name": "P01AC.Negative.right_cross_links_without_equality",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 44
+    },
+    {
+      "name": "P01AC.Negative.left_cross_links_without_equality",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 53
+    },
+    {
+      "name": "P01AC.Negative.no_universal_raw_variable",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 62
+    },
+    {
+      "name": "P01AC.Negative.j_transport_requires_both_coordinates",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 73
+    },
+    {
+      "name": "P01AC.Negative.j_endpoint_omission_fails",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 77
+    },
+    {
+      "name": "P01AC.Negative.j_proof_coordinate_omission_fails",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 83
+    },
+    {
+      "name": "P01AC.Negative.conversion_scope_premise_necessary",
+      "kind": "theorem",
+      "path": "sources/AllInheritedNegativeControls.lean",
+      "line": 89
+    },
+    {
+      "name": "P01AC.alpha",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 12
+    },
+    {
+      "name": "P01AC.typedPair",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 14
+    },
+    {
+      "name": "P01AC.typedPairType",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 15
+    },
+    {
+      "name": "P01AC.typed_pair_form",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 47
+    },
+    {
+      "name": "P01AC.typed_pair_has",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 51
+    },
+    {
+      "name": "P01AC.typed_pair_abstraction_form",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 54
+    },
+    {
+      "name": "P01AC.typed_pair_abstraction_has",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 58
+    },
+    {
+      "name": "P01AC.typed_pair_related",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 64
+    },
+    {
+      "name": "P01AC.typed_pair_abstraction_related",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 69
+    },
+    {
+      "name": "P01AC.jContext",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 75
+    },
+    {
+      "name": "P01AC.jProofType",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 76
+    },
+    {
+      "name": "P01AC.jMotive",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 77
+    },
+    {
+      "name": "P01AC.jBaseType",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 80
+    },
+    {
+      "name": "P01AC.jTargetType",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 83
+    },
+    {
+      "name": "P01AC.jBase",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 86
+    },
+    {
+      "name": "P01AC.literalJ",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 87
+    },
+    {
+      "name": "P01AC.j_context_formed",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 89
+    },
+    {
+      "name": "P01AC.j_x_has",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 95
+    },
+    {
+      "name": "P01AC.j_y_has",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 98
+    },
+    {
+      "name": "P01AC.j_proof_form",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 101
+    },
+    {
+      "name": "P01AC.j_e_has",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 104
+    },
+    {
+      "name": "P01AC.j_motive_form",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 113
+    },
+    {
+      "name": "P01AC.j_motive_base_exact",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 127
+    },
+    {
+      "name": "P01AC.j_motive_target_exact",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 130
+    },
+    {
+      "name": "P01AC.j_base_form",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 133
+    },
+    {
+      "name": "P01AC.j_target_form",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 139
+    },
+    {
+      "name": "P01AC.j_base_has",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 145
+    },
+    {
+      "name": "P01AC.literal_j_has",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 158
+    },
+    {
+      "name": "P01AC.literal_j_related",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 164
+    },
+    {
+      "name": "P01AC.rawFibreType",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 168
+    },
+    {
+      "name": "P01AC.raw_fibre_form",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 170
+    },
+    {
+      "name": "P01AC.raw_fibre_pair_has",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 173
+    },
+    {
+      "name": "P01AC.raw_fibre_inhabited",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 176
+    },
+    {
+      "name": "P01AC.raw_fibres_nonempty_and_vary",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 182
+    },
+    {
+      "name": "P01AC.identityParameters",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 193
+    },
+    {
+      "name": "P01AC.identity_parameters_I_SKK",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 195
+    },
+    {
+      "name": "P01AC.concreteJEnv",
+      "kind": "def",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 201
+    },
+    {
+      "name": "P01AC.concrete_j_environment_related",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 204
+    },
+    {
+      "name": "P01AC.concrete_j_nonraw_proof_control",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 212
+    },
+    {
+      "name": "P01AC.typed_pair_I_SKK_related",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 222
+    },
+    {
+      "name": "P01AC.typed_pair_I_SKK_control",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 229
+    },
+    {
+      "name": "P01AC.mandatory_raw_family_obstruction_unchanged",
+      "kind": "theorem",
+      "path": "sources/AllInheritedPositiveControls.lean",
+      "line": 236
+    },
+    {
+      "name": "P01AC.imageEnv",
+      "kind": "def",
+      "path": "sources/AllInstantiation.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.imageEnv_match",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 16
+    },
+    {
+      "name": "P01AC.semantic_tsubst",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 25
+    },
+    {
+      "name": "P01AC.top_image_match",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 30
+    },
+    {
+      "name": "P01AC.G_tinst",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 45
+    },
+    {
+      "name": "P01AC.F_tinst",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 50
+    },
+    {
+      "name": "P01AC.fundamental_all_intro",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 55
+    },
+    {
+      "name": "P01AC.fundamental_all_elim",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 74
+    },
+    {
+      "name": "P01AC.typeImages_beyond",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 82
+    },
+    {
+      "name": "P01AC.finite_image_laws",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 90
+    },
+    {
+      "name": "P01AC.fundamental_finite",
+      "kind": "theorem",
+      "path": "sources/AllInstantiation.lean",
+      "line": 98
+    },
+    {
+      "name": "P01AC.Qbody",
+      "kind": "def",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.Q",
+      "kind": "def",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 9
+    },
+    {
+      "name": "P01AC.q",
+      "kind": "def",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.Qbody_form",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 12
+    },
+    {
+      "name": "P01AC.q_body_has",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 13
+    },
+    {
+      "name": "P01AC.Q_form",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 14
+    },
+    {
+      "name": "P01AC.q_has_Q",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 15
+    },
+    {
+      "name": "P01AC.Q_self_exact",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 17
+    },
+    {
+      "name": "P01AC.q_self_has",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 19
+    },
+    {
+      "name": "P01AC.q_self_fundamental",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 23
+    },
+    {
+      "name": "P01AC.polyIdentity",
+      "kind": "def",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 26
+    },
+    {
+      "name": "P01AC.polyIdentity_form",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 28
+    },
+    {
+      "name": "P01AC.polyIdentity_has",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 31
+    },
+    {
+      "name": "P01AC.polyIdentity_instance_exact",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 35
+    },
+    {
+      "name": "P01AC.polymorphic_identity_at",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 38
+    },
+    {
+      "name": "P01AC.openIdentityReplacement",
+      "kind": "def",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 44
+    },
+    {
+      "name": "P01AC.open_identity_replacement_form",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 46
+    },
+    {
+      "name": "P01AC.open_identity_replacement_instance",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 50
+    },
+    {
+      "name": "P01AC.open_sigma_replacement_instance",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 55
+    },
+    {
+      "name": "P01AC.open_sigma_replacement_nonempty",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 58
+    },
+    {
+      "name": "P01AC.open_sigma_replacement_heterogeneous",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 62
+    },
+    {
+      "name": "P01AC.open_sigma_nested_capture",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 68
+    },
+    {
+      "name": "P01AC.open_raw_sigma_instance",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 73
+    },
+    {
+      "name": "P01AC.open_raw_sigma_nonempty_vary",
+      "kind": "theorem",
+      "path": "sources/AllJoinedControls.lean",
+      "line": 76
+    },
+    {
+      "name": "P01AC.Legacy.dependent_type_readback",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.Legacy.open_replacement_embedding",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.Legacy.hiddenOpenReplacementTree",
+      "kind": "def",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 16
+    },
+    {
+      "name": "P01AC.Legacy.hidden_replacement_old_judgment",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 19
+    },
+    {
+      "name": "P01AC.Legacy.hidden_replacement_closed",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 21
+    },
+    {
+      "name": "P01AC.Legacy.hidden_replacement_not_supported",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 23
+    },
+    {
+      "name": "P01AC.Legacy.hiddenOpenPremiseTree",
+      "kind": "def",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 29
+    },
+    {
+      "name": "P01AC.Legacy.hidden_premise_not_supported",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 33
+    },
+    {
+      "name": "P01AC.Legacy.conversionInternalTree",
+      "kind": "def",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 40
+    },
+    {
+      "name": "P01AC.Legacy.conversion_internal_supported",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 44
+    },
+    {
+      "name": "P01AC.Legacy.conversion_internal_embedding",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 47
+    },
+    {
+      "name": "P01AC.Legacy.nucleus_still_excludes_all_intro",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 51
+    },
+    {
+      "name": "P01AC.Legacy.nucleus_still_excludes_dependent_type",
+      "kind": "theorem",
+      "path": "sources/AllLegacyChecks.lean",
+      "line": 54
+    },
+    {
+      "name": "P01AC.Legacy.FG_agrees",
+      "kind": "theorem",
+      "path": "sources/AllLegacyComparison.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.Legacy.F_agrees",
+      "kind": "theorem",
+      "path": "sources/AllLegacyComparison.lean",
+      "line": 100
+    },
+    {
+      "name": "P01AC.Legacy.G_agrees",
+      "kind": "theorem",
+      "path": "sources/AllLegacyComparison.lean",
+      "line": 104
+    },
+    {
+      "name": "P01AC.Legacy.Supported.object_agrees",
+      "kind": "theorem",
+      "path": "sources/AllLegacyComparison.lean",
+      "line": 108
+    },
+    {
+      "name": "P01AC.Legacy.Supported.heterogeneous_agrees",
+      "kind": "theorem",
+      "path": "sources/AllLegacyComparison.lean",
+      "line": 115
+    },
+    {
+      "name": "P01AC.Legacy.Supported",
+      "kind": "def",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.Legacy.Supported.scoped",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 27
+    },
+    {
+      "name": "P01AC.Legacy.Supported.type",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 30
+    },
+    {
+      "name": "P01AC.Legacy.Supported.formed",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 33
+    },
+    {
+      "name": "P01AC.Legacy.supported_embed",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 38
+    },
+    {
+      "name": "P01AC.Legacy.Supported.embed",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 123
+    },
+    {
+      "name": "P01AC.Legacy.Supported.raw_embed",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 127
+    },
+    {
+      "name": "P01AC.Legacy.Supported.old_judgment",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 130
+    },
+    {
+      "name": "P01AC.Legacy.identityTree",
+      "kind": "def",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 133
+    },
+    {
+      "name": "P01AC.Legacy.identityTree_supported",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 136
+    },
+    {
+      "name": "P01AC.Legacy.openIdentityInstance",
+      "kind": "def",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 140
+    },
+    {
+      "name": "P01AC.Legacy.openIdentityInstance_supported",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 144
+    },
+    {
+      "name": "P01AC.Legacy.dependentTree",
+      "kind": "def",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 149
+    },
+    {
+      "name": "P01AC.Legacy.dependentTree_supported",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 152
+    },
+    {
+      "name": "P01AC.Legacy.dependent_polymorphic_typed",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 156
+    },
+    {
+      "name": "P01AC.Legacy.dependentSelfTree",
+      "kind": "def",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 160
+    },
+    {
+      "name": "P01AC.Legacy.dependentSelfTree_supported",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 164
+    },
+    {
+      "name": "P01AC.Legacy.dependent_polymorphic_self_typed",
+      "kind": "theorem",
+      "path": "sources/AllLegacyDerivations.lean",
+      "line": 170
+    },
+    {
+      "name": "P01AC.Legacy.Derivation",
+      "kind": "abbrev",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.Legacy.erase",
+      "kind": "def",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 12
+    },
+    {
+      "name": "P01AC.Legacy.translate",
+      "kind": "def",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 15
+    },
+    {
+      "name": "P01AC.Legacy.TypeSupported",
+      "kind": "def",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 26
+    },
+    {
+      "name": "P01AC.Legacy.translate_index",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 33
+    },
+    {
+      "name": "P01AC.Legacy.translate_inst",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 45
+    },
+    {
+      "name": "P01AC.Legacy.translate_motiveAt",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 48
+    },
+    {
+      "name": "P01AC.Legacy.translate_rename",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 51
+    },
+    {
+      "name": "P01AC.Legacy.translate_liftTypes",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 63
+    },
+    {
+      "name": "P01AC.Legacy.translate_liftIndices",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 70
+    },
+    {
+      "name": "P01AC.Legacy.translate_typeSubst",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 75
+    },
+    {
+      "name": "P01AC.Legacy.translate_tinst",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 91
+    },
+    {
+      "name": "P01AC.Legacy.translate_finite",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 99
+    },
+    {
+      "name": "P01AC.Legacy.RawContext",
+      "kind": "structure",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 107
+    },
+    {
+      "name": "P01AC.Legacy.rawTel",
+      "kind": "def",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 111
+    },
+    {
+      "name": "P01AC.Legacy.rawTel_length",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 115
+    },
+    {
+      "name": "P01AC.Legacy.rawTel_twk",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 120
+    },
+    {
+      "name": "P01AC.Legacy.RawContext.ext",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 125
+    },
+    {
+      "name": "P01AC.Legacy.RawContext.twk",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 133
+    },
+    {
+      "name": "P01AC.Legacy.rawTel_context",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 138
+    },
+    {
+      "name": "P01AC.Legacy.raw_term",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 143
+    },
+    {
+      "name": "P01AC.Legacy.RawContext.theta",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 150
+    },
+    {
+      "name": "P01AC.Legacy.TypeSupported.form",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 165
+    },
+    {
+      "name": "P01AC.Legacy.rawTel_lookup_type",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 180
+    },
+    {
+      "name": "P01AC.Legacy.RawContext.identitySubstitution",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 190
+    },
+    {
+      "name": "P01AC.Legacy.RawContext.finiteIdentitySubstitution",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 199
+    },
+    {
+      "name": "P01AC.Legacy.RawContext.transport_form",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 214
+    },
+    {
+      "name": "P01AC.Legacy.TypeSupported.theta_form",
+      "kind": "theorem",
+      "path": "sources/AllLegacySyntax.lean",
+      "line": 223
+    },
+    {
+      "name": "P01AC.trename_id",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.trename_comp",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 21
+    },
+    {
+      "name": "P01AC.subst_trename",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 36
+    },
+    {
+      "name": "P01AC.trename_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 47
+    },
+    {
+      "name": "P01AC.subst_twk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 51
+    },
+    {
+      "name": "P01AC.twk_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 54
+    },
+    {
+      "name": "P01AC.trename_twk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 56
+    },
+    {
+      "name": "P01AC.tup_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 62
+    },
+    {
+      "name": "P01AC.tup_subst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 69
+    },
+    {
+      "name": "P01AC.tup_param",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 76
+    },
+    {
+      "name": "P01AC.mixed_param",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 80
+    },
+    {
+      "name": "P01AC.mixed_id",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 91
+    },
+    {
+      "name": "P01AC.mixed_trename",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 95
+    },
+    {
+      "name": "P01AC.trename_mixed",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 111
+    },
+    {
+      "name": "P01AC.mixed_subst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 129
+    },
+    {
+      "name": "P01AC.subst_mixed",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 141
+    },
+    {
+      "name": "P01AC.mixed_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 156
+    },
+    {
+      "name": "P01AC.mixed_twk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 162
+    },
+    {
+      "name": "P01AC.mixed_term_lift_comp",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 167
+    },
+    {
+      "name": "P01AC.mixed_type_lift_comp",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 173
+    },
+    {
+      "name": "P01AC.mixed_comp",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 182
+    },
+    {
+      "name": "P01AC.tsubst_id",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 196
+    },
+    {
+      "name": "P01AC.tsubst_comp",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 198
+    },
+    {
+      "name": "P01AC.subst_tsubst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 203
+    },
+    {
+      "name": "P01AC.tinst_twk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 207
+    },
+    {
+      "name": "P01AC.mixed_twk_cancel",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 212
+    },
+    {
+      "name": "P01AC.mixed_wk_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 218
+    },
+    {
+      "name": "P01AC.tup_wk_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 223
+    },
+    {
+      "name": "P01AC.mixed_inst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 227
+    },
+    {
+      "name": "P01AC.mixed_motiveAt",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 239
+    },
+    {
+      "name": "P01AC.mixed_arr",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 256
+    },
+    {
+      "name": "P01AC.mixed_tsubst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 260
+    },
+    {
+      "name": "P01AC.mixed_tinst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 265
+    },
+    {
+      "name": "P01AC.subst_tinst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 277
+    },
+    {
+      "name": "P01AC.trename_inst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 281
+    },
+    {
+      "name": "P01AC.trename_motiveAt",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 285
+    },
+    {
+      "name": "P01AC.trename_arr",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 289
+    },
+    {
+      "name": "P01AC.trename_tinst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 293
+    },
+    {
+      "name": "P01AC.tsubst_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 300
+    },
+    {
+      "name": "P01AC.tinst_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 305
+    },
+    {
+      "name": "P01AC.mixed_term_type_lifts",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 312
+    },
+    {
+      "name": "P01AC.mixed_double_term_type_lifts",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 317
+    },
+    {
+      "name": "P01AC.mixed_twk_wk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 322
+    },
+    {
+      "name": "P01AC.tsubst_trename",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 327
+    },
+    {
+      "name": "P01AC.trename_tsubst",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 331
+    },
+    {
+      "name": "P01AC.tsubst_twk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 335
+    },
+    {
+      "name": "P01AC.tsubst_arr",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 338
+    },
+    {
+      "name": "P01AC.tyScoped_trename",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 341
+    },
+    {
+      "name": "P01AC.tyScoped_twk",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 352
+    },
+    {
+      "name": "P01AC.tyScoped_tup",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 355
+    },
+    {
+      "name": "P01AC.tyScoped_mixed",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 363
+    },
+    {
+      "name": "P01AC.capture_both_sorts",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 378
+    },
+    {
+      "name": "P01AC.capture_term_under_all_pi",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 384
+    },
+    {
+      "name": "P01AC.capture_both_sorts_double_term",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 390
+    },
+    {
+      "name": "P01AC.capture_term_then_type",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 396
+    },
+    {
+      "name": "P01AC.capture_bound_type_retained",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 402
+    },
+    {
+      "name": "P01AC.capture_term_not_zero",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 409
+    },
+    {
+      "name": "P01AC.capture_type_not_zero",
+      "kind": "theorem",
+      "path": "sources/AllMixedAlgebra.lean",
+      "line": 417
+    },
+    {
+      "name": "P01AC.MixedTerms.related",
+      "kind": "theorem",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.imageEnv_diagonal",
+      "kind": "theorem",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 20
+    },
+    {
+      "name": "P01AC.jointContext",
+      "kind": "def",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 33
+    },
+    {
+      "name": "P01AC.jointType",
+      "kind": "def",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 47
+    },
+    {
+      "name": "P01AC.jointTerm",
+      "kind": "def",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 57
+    },
+    {
+      "name": "P01AC.jointTerm_code",
+      "kind": "theorem",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 62
+    },
+    {
+      "name": "P01AC.MixedSub.imageObjects",
+      "kind": "def",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 64
+    },
+    {
+      "name": "P01AC.MixedSub.imageObjects_equal",
+      "kind": "theorem",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 68
+    },
+    {
+      "name": "P01AC.MixedSub.respects",
+      "kind": "theorem",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 76
+    },
+    {
+      "name": "P01AC.MixedSub.valid",
+      "kind": "theorem",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 85
+    },
+    {
+      "name": "P01AC.representedMixedSub",
+      "kind": "def",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 90
+    },
+    {
+      "name": "P01AC.represented_mixed_code",
+      "kind": "theorem",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 97
+    },
+    {
+      "name": "P01AC.represented_mixed_type",
+      "kind": "theorem",
+      "path": "sources/AllMixedRepresentation.lean",
+      "line": 101
+    },
+    {
+      "name": "P01AC.Nucleus.form",
+      "kind": "theorem",
+      "path": "sources/AllNucleus.lean",
+      "line": 9
+    },
+    {
+      "name": "P01AC.Nucleus.has",
+      "kind": "theorem",
+      "path": "sources/AllNucleus.lean",
+      "line": 48
+    },
+    {
+      "name": "P01AC.Nucleus.context",
+      "kind": "theorem",
+      "path": "sources/AllNucleus.lean",
+      "line": 87
+    },
+    {
+      "name": "P01AC.Nucleus.F_agrees",
+      "kind": "theorem",
+      "path": "sources/AllNucleus.lean",
+      "line": 89
+    },
+    {
+      "name": "P01AC.Nucleus.G_agrees",
+      "kind": "theorem",
+      "path": "sources/AllNucleus.lean",
+      "line": 100
+    },
+    {
+      "name": "P01AC.Nucleus.D_agrees",
+      "kind": "theorem",
+      "path": "sources/AllNucleus.lean",
+      "line": 118
+    },
+    {
+      "name": "P01AC.Nucleus.E_agrees",
+      "kind": "theorem",
+      "path": "sources/AllNucleus.lean",
+      "line": 123
+    },
+    {
+      "name": "P01AC.Nucleus.H_agrees",
+      "kind": "theorem",
+      "path": "sources/AllNucleus.lean",
+      "line": 128
+    },
+    {
+      "name": "P01AC.form_arr",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.form_fin",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 11
+    },
+    {
+      "name": "P01AC.fin_tsubst_congr",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 18
+    },
+    {
+      "name": "P01AC.finiteIdentity",
+      "kind": "def",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 38
+    },
+    {
+      "name": "P01AC.finiteIdentity_length",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 40
+    },
+    {
+      "name": "P01AC.finiteIdentity_get",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 43
+    },
+    {
+      "name": "P01AC.finiteIdentity_action",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 56
+    },
+    {
+      "name": "P01AC.finite_import",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 60
+    },
+    {
+      "name": "P01AC.Nucleus.translate",
+      "kind": "def",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 71
+    },
+    {
+      "name": "P01AC.Nucleus.telescope",
+      "kind": "def",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 80
+    },
+    {
+      "name": "P01AC.Nucleus.translate_subst",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 82
+    },
+    {
+      "name": "P01AC.Nucleus.translate_wk",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 93
+    },
+    {
+      "name": "P01AC.Nucleus.translate_inst",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 94
+    },
+    {
+      "name": "P01AC.Nucleus.translate_motiveAt",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 96
+    },
+    {
+      "name": "P01AC.Nucleus.translate_arr",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 98
+    },
+    {
+      "name": "P01AC.Nucleus.translate_fin",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 100
+    },
+    {
+      "name": "P01AC.Nucleus.telescope_theta",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 106
+    },
+    {
+      "name": "P01AC.Nucleus.scoped_agrees",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 110
+    },
+    {
+      "name": "P01AC.Nucleus.lookup",
+      "kind": "theorem",
+      "path": "sources/AllNucleusSyntax.lean",
+      "line": 116
+    },
+    {
+      "name": "P01AC.type_pi",
+      "kind": "theorem",
+      "path": "sources/AllPiLaws.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.Unary",
+      "kind": "abbrev",
+      "path": "sources/AllPredicates.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.Hetero",
+      "kind": "abbrev",
+      "path": "sources/AllPredicates.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.predicates",
+      "kind": "def",
+      "path": "sources/AllPredicates.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.F",
+      "kind": "def",
+      "path": "sources/AllPredicates.lean",
+      "line": 40
+    },
+    {
+      "name": "P01AC.G",
+      "kind": "def",
+      "path": "sources/AllPredicates.lean",
+      "line": 41
+    },
+    {
+      "name": "P01AC.F_param",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 43
+    },
+    {
+      "name": "P01AC.F_bottom",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 47
+    },
+    {
+      "name": "P01AC.F_raw",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 51
+    },
+    {
+      "name": "P01AC.F_pi",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 55
+    },
+    {
+      "name": "P01AC.F_sigma",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 59
+    },
+    {
+      "name": "P01AC.F_identity",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 65
+    },
+    {
+      "name": "P01AC.G_param",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 69
+    },
+    {
+      "name": "P01AC.G_bottom",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 73
+    },
+    {
+      "name": "P01AC.G_raw",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 77
+    },
+    {
+      "name": "P01AC.G_pi",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 81
+    },
+    {
+      "name": "P01AC.G_sigma",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 86
+    },
+    {
+      "name": "P01AC.G_identity",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 92
+    },
+    {
+      "name": "P01AC.F_all",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 97
+    },
+    {
+      "name": "P01AC.G_all",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 103
+    },
+    {
+      "name": "P01AC.zeroEnv",
+      "kind": "def",
+      "path": "sources/AllPredicates.lean",
+      "line": 109
+    },
+    {
+      "name": "P01AC.tail",
+      "kind": "def",
+      "path": "sources/AllPredicates.lean",
+      "line": 110
+    },
+    {
+      "name": "P01AC.D",
+      "kind": "def",
+      "path": "sources/AllPredicates.lean",
+      "line": 112
+    },
+    {
+      "name": "P01AC.E",
+      "kind": "def",
+      "path": "sources/AllPredicates.lean",
+      "line": 116
+    },
+    {
+      "name": "P01AC.H",
+      "kind": "def",
+      "path": "sources/AllPredicates.lean",
+      "line": 120
+    },
+    {
+      "name": "P01AC.tail_cons",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 124
+    },
+    {
+      "name": "P01AC.cons_head_tail",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 125
+    },
+    {
+      "name": "P01AC.eval_pup_env",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 128
+    },
+    {
+      "name": "P01AC.eval_cons_poly",
+      "kind": "theorem",
+      "path": "sources/AllPredicates.lean",
+      "line": 132
+    },
+    {
+      "name": "P01AC.renvMap",
+      "kind": "def",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.renvMap_diag",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 14
+    },
+    {
+      "name": "P01AC.cons_liftRen",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 17
+    },
+    {
+      "name": "P01AC.renvMap_extend",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 21
+    },
+    {
+      "name": "P01AC.FG_trename",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 28
+    },
+    {
+      "name": "P01AC.F_trename",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 54
+    },
+    {
+      "name": "P01AC.G_trename",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 57
+    },
+    {
+      "name": "P01AC.F_twk",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 60
+    },
+    {
+      "name": "P01AC.G_twk",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 63
+    },
+    {
+      "name": "P01AC.D_twk",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 68
+    },
+    {
+      "name": "P01AC.E_twk",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 74
+    },
+    {
+      "name": "P01AC.H_twk",
+      "kind": "theorem",
+      "path": "sources/AllRawRenaming.lean",
+      "line": 80
+    },
+    {
+      "name": "P01AC.FG_subst",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.F_subst",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 32
+    },
+    {
+      "name": "P01AC.G_subst",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 35
+    },
+    {
+      "name": "P01AC.F_wk",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 39
+    },
+    {
+      "name": "P01AC.G_wk",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 42
+    },
+    {
+      "name": "P01AC.F_inst",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 45
+    },
+    {
+      "name": "P01AC.G_inst",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 49
+    },
+    {
+      "name": "P01AC.F_motiveAt",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 53
+    },
+    {
+      "name": "P01AC.G_motiveAt",
+      "kind": "theorem",
+      "path": "sources/AllRawSubstitution.lean",
+      "line": 57
+    },
+    {
+      "name": "P01AC.subEnv",
+      "kind": "def",
+      "path": "sources/AllRepresentation.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.subEnv_nil",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.subEnv_cons",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 11
+    },
+    {
+      "name": "P01AC.TypedSub.related",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 14
+    },
+    {
+      "name": "P01AC.TypedSub.respects",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 25
+    },
+    {
+      "name": "P01AC.TypedSub.valid",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 30
+    },
+    {
+      "name": "P01AC.representedContext",
+      "kind": "def",
+      "path": "sources/AllRepresentation.lean",
+      "line": 35
+    },
+    {
+      "name": "P01AC.representedType",
+      "kind": "def",
+      "path": "sources/AllRepresentation.lean",
+      "line": 43
+    },
+    {
+      "name": "P01AC.representedTerm",
+      "kind": "def",
+      "path": "sources/AllRepresentation.lean",
+      "line": 50
+    },
+    {
+      "name": "P01AC.representedTerm_code",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 55
+    },
+    {
+      "name": "P01AC.representedType_relation",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 58
+    },
+    {
+      "name": "P01AC.representedSub",
+      "kind": "def",
+      "path": "sources/AllRepresentation.lean",
+      "line": 62
+    },
+    {
+      "name": "P01AC.represented_substitution_code",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 70
+    },
+    {
+      "name": "P01AC.intrinsic_type_ext",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 73
+    },
+    {
+      "name": "P01AC.represented_substitution_type",
+      "kind": "theorem",
+      "path": "sources/AllRepresentation.lean",
+      "line": 78
+    },
+    {
+      "name": "P01AC.ImageMatch",
+      "kind": "structure",
+      "path": "sources/AllSemanticSubstitution.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.ImageMatch.diagonalLeft",
+      "kind": "theorem",
+      "path": "sources/AllSemanticSubstitution.lean",
+      "line": 17
+    },
+    {
+      "name": "P01AC.ImageMatch.diagonalRight",
+      "kind": "theorem",
+      "path": "sources/AllSemanticSubstitution.lean",
+      "line": 21
+    },
+    {
+      "name": "P01AC.ImageMatch.termLift",
+      "kind": "theorem",
+      "path": "sources/AllSemanticSubstitution.lean",
+      "line": 25
+    },
+    {
+      "name": "P01AC.ImageMatch.typeLift",
+      "kind": "theorem",
+      "path": "sources/AllSemanticSubstitution.lean",
+      "line": 33
+    },
+    {
+      "name": "P01AC.EvalImages",
+      "kind": "abbrev",
+      "path": "sources/AllSemanticSubstitution.lean",
+      "line": 57
+    },
+    {
+      "name": "P01AC.evalImages_pup",
+      "kind": "theorem",
+      "path": "sources/AllSemanticSubstitution.lean",
+      "line": 59
+    },
+    {
+      "name": "P01AC.FG_mixed",
+      "kind": "theorem",
+      "path": "sources/AllSemanticSubstitution.lean",
+      "line": 63
+    },
+    {
+      "name": "P01AC.type_sigma",
+      "kind": "theorem",
+      "path": "sources/AllSigmaLaws.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.Hereditary",
+      "kind": "def",
+      "path": "sources/AllSoundness.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.FormSound",
+      "kind": "abbrev",
+      "path": "sources/AllSoundness.lean",
+      "line": 14
+    },
+    {
+      "name": "P01AC.TermSound",
+      "kind": "abbrev",
+      "path": "sources/AllSoundness.lean",
+      "line": 15
+    },
+    {
+      "name": "P01AC.Hereditary.laws",
+      "kind": "theorem",
+      "path": "sources/AllSoundness.lean",
+      "line": 17
+    },
+    {
+      "name": "P01AC.form_sound",
+      "kind": "theorem",
+      "path": "sources/AllSoundness.lean",
+      "line": 19
+    },
+    {
+      "name": "P01AC.has_sound",
+      "kind": "theorem",
+      "path": "sources/AllSoundness.lean",
+      "line": 57
+    },
+    {
+      "name": "P01AC.context_sound",
+      "kind": "theorem",
+      "path": "sources/AllSoundness.lean",
+      "line": 95
+    },
+    {
+      "name": "P01AC.fundamental",
+      "kind": "theorem",
+      "path": "sources/AllSoundness.lean",
+      "line": 97
+    },
+    {
+      "name": "P01AC.unary_fundamental",
+      "kind": "theorem",
+      "path": "sources/AllSoundness.lean",
+      "line": 99
+    },
+    {
+      "name": "P01AC.strong_diagonal",
+      "kind": "theorem",
+      "path": "sources/AllSoundness.lean",
+      "line": 103
+    },
+    {
+      "name": "P01AC.two_sided_invariance",
+      "kind": "theorem",
+      "path": "sources/AllSoundness.lean",
+      "line": 106
+    },
+    {
+      "name": "P01AC.MixedSubstitution",
+      "kind": "structure",
+      "path": "sources/AllStructural.lean",
+      "line": 9
+    },
+    {
+      "name": "P01AC.MixedSubstitution.scope",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 13
+    },
+    {
+      "name": "P01AC.MixedSubstitution.lift",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 19
+    },
+    {
+      "name": "P01AC.MixedSubstitution.twk",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 30
+    },
+    {
+      "name": "P01AC.mixed_theta_head",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 44
+    },
+    {
+      "name": "P01AC.MixedSubstitution.theta",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 49
+    },
+    {
+      "name": "P01AC.form_mixed",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 61
+    },
+    {
+      "name": "P01AC.has_mixed",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 199
+    },
+    {
+      "name": "P01AC.images",
+      "kind": "def",
+      "path": "sources/AllStructural.lean",
+      "line": 208
+    },
+    {
+      "name": "P01AC.MixedTerms",
+      "kind": "inductive",
+      "path": "sources/AllStructural.lean",
+      "line": 214
+    },
+    {
+      "name": "P01AC.MixedSub",
+      "kind": "structure",
+      "path": "sources/AllStructural.lean",
+      "line": 221
+    },
+    {
+      "name": "P01AC.MixedTerms.target",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 225
+    },
+    {
+      "name": "P01AC.MixedTerms.source",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 231
+    },
+    {
+      "name": "P01AC.MixedTerms.length",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 237
+    },
+    {
+      "name": "P01AC.mixed_cons_wk",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 243
+    },
+    {
+      "name": "P01AC.MixedTerms.lookup",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 248
+    },
+    {
+      "name": "P01AC.typeImages_ge",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 258
+    },
+    {
+      "name": "P01AC.MixedSub.target",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 267
+    },
+    {
+      "name": "P01AC.MixedSub.source",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 270
+    },
+    {
+      "name": "P01AC.MixedSub.length",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 273
+    },
+    {
+      "name": "P01AC.MixedSub.typeForm",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 276
+    },
+    {
+      "name": "P01AC.MixedSub.toSubstitution",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 283
+    },
+    {
+      "name": "P01AC.MixedSub.scope",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 287
+    },
+    {
+      "name": "P01AC.MixedSub.form",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 290
+    },
+    {
+      "name": "P01AC.MixedSub.has",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 294
+    },
+    {
+      "name": "P01AC.images_map",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 300
+    },
+    {
+      "name": "P01AC.MixedSub.comp",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 311
+    },
+    {
+      "name": "P01AC.liftImages",
+      "kind": "def",
+      "path": "sources/AllStructural.lean",
+      "line": 327
+    },
+    {
+      "name": "P01AC.images_lift",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 329
+    },
+    {
+      "name": "P01AC.liftTypes",
+      "kind": "def",
+      "path": "sources/AllStructural.lean",
+      "line": 336
+    },
+    {
+      "name": "P01AC.typeImages_lift",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 338
+    },
+    {
+      "name": "P01AC.typeImages_wk",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 344
+    },
+    {
+      "name": "P01AC.MixedTerms.weaken",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 349
+    },
+    {
+      "name": "P01AC.MixedSub.lift",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 359
+    },
+    {
+      "name": "P01AC.MixedTerms.twk",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 375
+    },
+    {
+      "name": "P01AC.MixedSub.twk",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 383
+    },
+    {
+      "name": "P01AC.MixedSub.theta",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 393
+    },
+    {
+      "name": "P01AC.typeSupport",
+      "kind": "def",
+      "path": "sources/AllStructural.lean",
+      "line": 401
+    },
+    {
+      "name": "P01AC.telTypeSupport",
+      "kind": "def",
+      "path": "sources/AllStructural.lean",
+      "line": 408
+    },
+    {
+      "name": "P01AC.typeSupport_subst",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 412
+    },
+    {
+      "name": "P01AC.typeSupport_wk",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 423
+    },
+    {
+      "name": "P01AC.psub_scoped_congr",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 425
+    },
+    {
+      "name": "P01AC.mixed_term_congr",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 432
+    },
+    {
+      "name": "P01AC.mixed_type_congr",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 452
+    },
+    {
+      "name": "P01AC.identityImages",
+      "kind": "def",
+      "path": "sources/AllStructural.lean",
+      "line": 478
+    },
+    {
+      "name": "P01AC.identityImages_length",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 482
+    },
+    {
+      "name": "P01AC.identityImages_get",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 487
+    },
+    {
+      "name": "P01AC.psub_identityImages",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 499
+    },
+    {
+      "name": "P01AC.mixed_identityImages",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 503
+    },
+    {
+      "name": "P01AC.parameterImages",
+      "kind": "def",
+      "path": "sources/AllStructural.lean",
+      "line": 508
+    },
+    {
+      "name": "P01AC.parameterImages_length",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 512
+    },
+    {
+      "name": "P01AC.parameterImages_get",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 517
+    },
+    {
+      "name": "P01AC.tsubst_parameterImages",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 530
+    },
+    {
+      "name": "P01AC.mixed_finite_identity",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 536
+    },
+    {
+      "name": "P01AC.lookup_form",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 540
+    },
+    {
+      "name": "P01AC.lookup_typeSupport",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 549
+    },
+    {
+      "name": "P01AC.MixedTerms.ofLookup",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 558
+    },
+    {
+      "name": "P01AC.MixedSub.id",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 578
+    },
+    {
+      "name": "P01AC.MixedSub.allElim",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 592
+    },
+    {
+      "name": "P01AC.mixed_finite_instance_top",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 615
+    },
+    {
+      "name": "P01AC.form_tinst",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 628
+    },
+    {
+      "name": "P01AC.has_tinst",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 638
+    },
+    {
+      "name": "P01AC.TypedSub",
+      "kind": "abbrev",
+      "path": "sources/AllStructural.lean",
+      "line": 649
+    },
+    {
+      "name": "P01AC.TypedSub.toSubstitution",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 651
+    },
+    {
+      "name": "P01AC.TypedSub.form",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 655
+    },
+    {
+      "name": "P01AC.TypedSub.has",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 659
+    },
+    {
+      "name": "P01AC.TypedSub.scope",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 663
+    },
+    {
+      "name": "P01AC.TypedSub.comp",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 666
+    },
+    {
+      "name": "P01AC.TypedSub.id",
+      "kind": "theorem",
+      "path": "sources/AllStructural.lean",
+      "line": 674
+    },
+    {
+      "name": "P01AC.has_scoped",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.lookup_exists",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 42
+    },
+    {
+      "name": "P01AC.has_form",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 54
+    },
+    {
+      "name": "P01AC.form_ctx",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 57
+    },
+    {
+      "name": "P01AC.form_scoped",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 69
+    },
+    {
+      "name": "P01AC.typeImages_mixed",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 79
+    },
+    {
+      "name": "P01AC.typeImages_trename",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 89
+    },
+    {
+      "name": "P01AC.typeImages_subst",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 99
+    },
+    {
+      "name": "P01AC.mixed_fin",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 103
+    },
+    {
+      "name": "P01AC.mixed_finite_instance",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 111
+    },
+    {
+      "name": "P01AC.subst_finite_instance",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 116
+    },
+    {
+      "name": "P01AC.trename_finite_instance",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 121
+    },
+    {
+      "name": "P01AC.trenameTel",
+      "kind": "def",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 126
+    },
+    {
+      "name": "P01AC.trenameTel_twk",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 128
+    },
+    {
+      "name": "P01AC.trenameTel_theta",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 135
+    },
+    {
+      "name": "P01AC.lookup_trename",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 139
+    },
+    {
+      "name": "P01AC.form_trename",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 145
+    },
+    {
+      "name": "P01AC.has_trename",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 216
+    },
+    {
+      "name": "P01AC.ctx_trename",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 222
+    },
+    {
+      "name": "P01AC.ctx_twk",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 225
+    },
+    {
+      "name": "P01AC.form_twk",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 227
+    },
+    {
+      "name": "P01AC.has_twk",
+      "kind": "theorem",
+      "path": "sources/AllStructuralBase.lean",
+      "line": 230
+    },
+    {
+      "name": "P01AC.StructuralChecks.dependentReplacement",
+      "kind": "def",
+      "path": "sources/AllStructuralChecks.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.StructuralChecks.dependentReplacement_formed",
+      "kind": "theorem",
+      "path": "sources/AllStructuralChecks.lean",
+      "line": 12
+    },
+    {
+      "name": "P01AC.StructuralChecks.dependentReplacement_not_closed",
+      "kind": "theorem",
+      "path": "sources/AllStructuralChecks.lean",
+      "line": 16
+    },
+    {
+      "name": "P01AC.StructuralChecks.dependent_mixed_map",
+      "kind": "theorem",
+      "path": "sources/AllStructuralChecks.lean",
+      "line": 21
+    },
+    {
+      "name": "P01AC.StructuralChecks.dependent_mixed_preserves",
+      "kind": "theorem",
+      "path": "sources/AllStructuralChecks.lean",
+      "line": 35
+    },
+    {
+      "name": "P01AC.StructuralChecks.finite_identity_tail",
+      "kind": "theorem",
+      "path": "sources/AllStructuralChecks.lean",
+      "line": 39
+    },
+    {
+      "name": "P01AC.StructuralChecks.finite_identity_not_total_identity",
+      "kind": "theorem",
+      "path": "sources/AllStructuralChecks.lean",
+      "line": 41
+    },
+    {
+      "name": "P01AC.StructuralChecks.dependent_all_elimination_map",
+      "kind": "theorem",
+      "path": "sources/AllStructuralChecks.lean",
+      "line": 47
+    },
+    {
+      "name": "P01AC.renSub",
+      "kind": "def",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 8
+    },
+    {
+      "name": "P01AC.renSub_lift",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.Renaming",
+      "kind": "structure",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 15
+    },
+    {
+      "name": "P01AC.Renaming.id",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 19
+    },
+    {
+      "name": "P01AC.Renaming.lift",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 26
+    },
+    {
+      "name": "P01AC.Renaming.weaken",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 41
+    },
+    {
+      "name": "P01AC.subst_theta_head",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 44
+    },
+    {
+      "name": "P01AC.Renaming.theta",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 49
+    },
+    {
+      "name": "P01AC.renSub_comp",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 56
+    },
+    {
+      "name": "P01AC.Renaming.comp",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 59
+    },
+    {
+      "name": "P01AC.subst_ren_shift",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 65
+    },
+    {
+      "name": "P01AC.psub_ren_shift",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 70
+    },
+    {
+      "name": "P01AC.form_pi_domain",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 75
+    },
+    {
+      "name": "P01AC.lookup_trename_inv",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 79
+    },
+    {
+      "name": "P01AC.Renaming.twk",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 90
+    },
+    {
+      "name": "P01AC.form_rename",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 98
+    },
+    {
+      "name": "P01AC.has_rename",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 245
+    },
+    {
+      "name": "P01AC.form_wk",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 252
+    },
+    {
+      "name": "P01AC.has_wk",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 255
+    },
+    {
+      "name": "P01AC.form_theta_head",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 260
+    },
+    {
+      "name": "P01AC.ctx_theta",
+      "kind": "theorem",
+      "path": "sources/AllStructuralRename.lean",
+      "line": 266
+    },
+    {
+      "name": "P01AC.Ty",
+      "kind": "inductive",
+      "path": "sources/AllSyntax.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.subst",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 17
+    },
+    {
+      "name": "P01AC.wk",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 26
+    },
+    {
+      "name": "P01AC.inst",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 27
+    },
+    {
+      "name": "P01AC.motiveAt",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 28
+    },
+    {
+      "name": "P01AC.arr",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 29
+    },
+    {
+      "name": "P01AC.fin",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 31
+    },
+    {
+      "name": "P01AC.trename",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 38
+    },
+    {
+      "name": "P01AC.twk",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 47
+    },
+    {
+      "name": "P01AC.tup",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 49
+    },
+    {
+      "name": "P01AC.mixed",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 52
+    },
+    {
+      "name": "P01AC.tsubst",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 61
+    },
+    {
+      "name": "P01AC.tinst",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 62
+    },
+    {
+      "name": "P01AC.finSupport",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 65
+    },
+    {
+      "name": "P01AC.typeImages",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 72
+    },
+    {
+      "name": "P01AC.Tel",
+      "kind": "abbrev",
+      "path": "sources/AllSyntax.lean",
+      "line": 76
+    },
+    {
+      "name": "P01AC.Scoped",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 78
+    },
+    {
+      "name": "P01AC.TyScoped",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 83
+    },
+    {
+      "name": "P01AC.Lookup",
+      "kind": "inductive",
+      "path": "sources/AllSyntax.lean",
+      "line": 90
+    },
+    {
+      "name": "P01AC.twkTel",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 94
+    },
+    {
+      "name": "P01AC.theta",
+      "kind": "def",
+      "path": "sources/AllSyntax.lean",
+      "line": 96
+    },
+    {
+      "name": "P01AC.Ctx",
+      "kind": "inductive",
+      "path": "sources/AllSyntax.lean",
+      "line": 102
+    },
+    {
+      "name": "P01AC.Form",
+      "kind": "inductive",
+      "path": "sources/AllSyntax.lean",
+      "line": 105
+    },
+    {
+      "name": "P01AC.Has",
+      "kind": "inductive",
+      "path": "sources/AllSyntax.lean",
+      "line": 113
+    },
+    {
+      "name": "P01AC.subst_id",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 10
+    },
+    {
+      "name": "P01AC.subst_comp",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 21
+    },
+    {
+      "name": "P01AC.subst_wk",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 33
+    },
+    {
+      "name": "P01AC.subst_wk_cancel",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 38
+    },
+    {
+      "name": "P01AC.inst_wk",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 43
+    },
+    {
+      "name": "P01AC.subst_inst",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 46
+    },
+    {
+      "name": "P01AC.subst_motiveAt",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 57
+    },
+    {
+      "name": "P01AC.motiveAt_inst",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 74
+    },
+    {
+      "name": "P01AC.motiveAt_wk_wk",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 85
+    },
+    {
+      "name": "P01AC.subst_arr",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 89
+    },
+    {
+      "name": "P01AC.subst_fin",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 94
+    },
+    {
+      "name": "P01AC.wk_fin",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 102
+    },
+    {
+      "name": "P01AC.inst_fin",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 105
+    },
+    {
+      "name": "P01AC.motiveAt_fin",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 108
+    },
+    {
+      "name": "P01AC.ScopedSub",
+      "kind": "def",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 112
+    },
+    {
+      "name": "P01AC.scoped_mono",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 115
+    },
+    {
+      "name": "P01AC.scoped_subst",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 122
+    },
+    {
+      "name": "P01AC.scoped_rename",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 129
+    },
+    {
+      "name": "P01AC.scoped_wk",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 133
+    },
+    {
+      "name": "P01AC.scopedSub_lift",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 137
+    },
+    {
+      "name": "P01AC.scopedSub_id",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 144
+    },
+    {
+      "name": "P01AC.scopedSub_comp",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 146
+    },
+    {
+      "name": "P01AC.scopedSub_cons",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 151
+    },
+    {
+      "name": "P01AC.scoped_pair",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 158
+    },
+    {
+      "name": "P01AC.scoped_fst",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 162
+    },
+    {
+      "name": "P01AC.scoped_snd",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 165
+    },
+    {
+      "name": "P01AC.scoped_j",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 168
+    },
+    {
+      "name": "P01AC.scoped_drop_absent",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 172
+    },
+    {
+      "name": "P01AC.scoped_abstract",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 186
+    },
+    {
+      "name": "P01AC.tyScoped_mono",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 206
+    },
+    {
+      "name": "P01AC.tyScoped_subst",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 218
+    },
+    {
+      "name": "P01AC.tyScoped_wk",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 230
+    },
+    {
+      "name": "P01AC.tyScoped_inst",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 233
+    },
+    {
+      "name": "P01AC.tyScoped_motiveAt",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 237
+    },
+    {
+      "name": "P01AC.tyScoped_fin",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 242
+    },
+    {
+      "name": "P01AC.lookup_lt",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 249
+    },
+    {
+      "name": "P01AC.polyConv_subst",
+      "kind": "theorem",
+      "path": "sources/AllTermAlgebra.lean",
+      "line": 255
+    },
+    {
+      "name": "P01AC.fundamental_var",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 7
+    },
+    {
+      "name": "P01AC.fundamental_pi_intro",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 18
+    },
+    {
+      "name": "P01AC.fundamental_pi_elim",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 44
+    },
+    {
+      "name": "P01AC.F_pair",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 50
+    },
+    {
+      "name": "P01AC.G_pair",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 61
+    },
+    {
+      "name": "P01AC.fundamental_sigma_intro",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 77
+    },
+    {
+      "name": "P01AC.fundamental_sigma_fst",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 86
+    },
+    {
+      "name": "P01AC.fundamental_sigma_snd",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 89
+    },
+    {
+      "name": "P01AC.fundamental_identity_intro",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 95
+    },
+    {
+      "name": "P01AC.fundamental_proof_erase",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 104
+    },
+    {
+      "name": "P01AC.fundamental_j",
+      "kind": "theorem",
+      "path": "sources/AllTermLemmas.lean",
+      "line": 110
+    }
+  ]
+}

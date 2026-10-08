@@ -1,0 +1,156 @@
+{
+  "schema": "orthemology-claim-source-bindings-v1",
+  "status": "Digest-bound public citation and source-locator map",
+  "artifacts": {
+    "report": {
+      "filename": "Orthemology_Sixteenth_Research_Final_v1_20261005.docx",
+      "bytes": 26544,
+      "sha256": "3d5263089763f124367a12c306af7fc5f246c0b9a316e1f36981130f0818dcc7"
+    },
+    "mathematical_companion": {
+      "filename": "Orthemology_Sixteenth_Mathematical_Companion_Final_v1_20261005.docx",
+      "bytes": 138818,
+      "sha256": "99f6eb226504f67526ce0935a89c9e817d9cb30dce898019960bc01aa470e460"
+    }
+  },
+  "locator_method": "Each report locator identifies the paragraph containing the named citation label. Claims and qualifications are stated once in that report. Links identify external sources; primary files are not embedded here.",
+  "bindings": [
+    {
+      "id": "S01",
+      "report_citation_label": "Can Hardcore Actualism Validate S5?",
+      "source_title": "Can Hardcore Actualism Validate S5?",
+      "author": "Samuel Kimpton-Nye",
+      "witness": "author accepted manuscript",
+      "locator": "manuscript pages 10–13 and 23–29",
+      "url": "https://kclpure.kcl.ac.uk/ws/files/118521154/Can_Hardcore_Actualism_Validate_S5_Accepted_ms_PPR.pdf"
+    },
+    {
+      "id": "S02",
+      "report_citation_label": "Potentialism and S5",
+      "source_title": "Potentialism and S5",
+      "author": "Jonas Werner",
+      "witness": "publisher article; issue 2022, online 2023",
+      "locator": "sections 1–4",
+      "url": "https://www.cambridge.org/core/journals/canadian-journal-of-philosophy/article/potentialism-and-s5/772A658E5CD05549DF0D6BC1852E58BF/share/524c38aa70b49ac562945b7acf962dc756cd4089"
+    },
+    {
+      "id": "S03",
+      "report_citation_label": "Degrees of members of Π⁰₁ classes",
+      "source_title": "Degrees of members of Π⁰₁ classes",
+      "authors": [
+        "Carl G. Jockusch",
+        "Robert I. Soare"
+      ],
+      "witness": "Pacific Journal of Mathematics 40, 1972",
+      "locator": "printed pages 605–607",
+      "url": "https://msp.org/pjm/1972/40-3/pjm-v40-n3-p09-s.pdf"
+    },
+    {
+      "id": "S04",
+      "report_citation_label": "A Survey of Recursive Combinatorics",
+      "source_title": "A Survey of Recursive Combinatorics",
+      "author": "William Gasarch",
+      "witness": "author-hosted survey",
+      "locator": "Definition 3.5 and Theorem 3.10",
+      "url": "https://www.cs.umd.edu/~gasarch/COURSES/752/S22/notes/rcombsur.pdf"
+    },
+    {
+      "id": "S05",
+      "report_citation_label": "Effectively Closed Sets",
+      "source_title": "Effectively Closed Sets",
+      "authors": [
+        "Douglas Cenzer",
+        "Jeffrey B. Remmel"
+      ],
+      "witness": "author-hosted draft dated 3 May 2017",
+      "locator": "Definition 5.1.1 and Theorem 5.3.1",
+      "url": "https://people.clas.ufl.edu/cenzer/files/Closed-Sets-Book-2017.pdf"
+    },
+    {
+      "id": "S06",
+      "report_citation_label": "Al-Jami li-ahkam al-Quran",
+      "source_title": "Al-Jami li-ahkam al-Quran",
+      "author": "Al-Qurtubi",
+      "locator": "commentary on Quran 48:9",
+      "url": "https://quran.ksu.edu.sa/tafseer/qortobi/sura48-aya9.html",
+      "separate_print_witnesses": [
+        {
+          "locator": "volume 16, printed page 267",
+          "url": "https://sites.dlib.nyu.edu/viewer/api/image/books/columbia_aco001662/289/full/!1800,1800/0/default.jpg"
+        },
+        {
+          "locator": "volume colophon",
+          "url": "https://sites.dlib.nyu.edu/viewer/api/image/books/columbia_aco001662/373/full/!2000,2000/0/default.jpg"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "report_citation_label": "Al-Muharrar al-wajiz",
+      "source_title": "Al-Muharrar al-wajiz",
+      "author": "Ibn Atiyya",
+      "locator": "grouped commentary on Quran 48:8–10; inspected volume 5, page 129",
+      "url": "https://quranpedia.net/surah/1/48/book/350"
+    },
+    {
+      "id": "S08",
+      "report_citation_label": "Al-Tahrir wa-l-tanwir",
+      "source_title": "Al-Tahrir wa-l-tanwir",
+      "author": "Ibn Ashur",
+      "locator": "commentary on Quran 48:8–9; inspected volume 26, page 156",
+      "url": "https://tafsir.app/ibn-aashoor/48/9"
+    },
+    {
+      "id": "S09",
+      "report_citation_label": "Al-Kashshaf",
+      "source_title": "Al-Kashshaf",
+      "author": "Al-Zamakhshari",
+      "locator": "commentary on Quran 48:8–9",
+      "url": "https://tafsir.app/kashaf/48/9",
+      "separate_print_witnesses": [
+        {
+          "locator": "volume 4, printed page 334",
+          "url": "https://sites.dlib.nyu.edu/viewer/api/image/books/cornell_aco000435/338/full/!2200,2200/0/default.jpg"
+        },
+        {
+          "locator": "volume 4, printed page 335",
+          "url": "https://sites.dlib.nyu.edu/viewer/api/image/books/cornell_aco000435/339/full/!2200,2200/0/default.jpg"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "report_citation_label": "Pescetelli et al. (2025), author-linked archive",
+      "doi": "10.1177/26339137251372605",
+      "url": "https://doi.org/10.1177/26339137251372605",
+      "author_linked_archive": "https://osf.io/x5hye/",
+      "source_identity": "Pescetelli, Rutherford, Rahwan and Kao; article DOI and author-linked archive"
+    },
+    {
+      "id": "S11",
+      "report_citation_label": "2004, pp. 419–423",
+      "source_title": "And This All Men Call God",
+      "author": "Timothy O’Connor",
+      "locator": "pages 419–423",
+      "url": "https://toconnor.org/wp-content/uploads/2018/07/OConnor_And-this-All-Men-Call-God-2004.pdf"
+    },
+    {
+      "id": "S12",
+      "report_citation_label": "2010, pp. 311–313",
+      "source_title": "Is God’s Necessity Necessary? Replies to Senor, Oppy, McCann, and Almeida",
+      "author": "Timothy O’Connor",
+      "locator": "pages 311–313",
+      "url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_IsGodsNecessity10.pdf"
+    },
+    {
+      "id": "S13",
+      "report_citation_label": "Sententia libri Metaphysicae VIII lectio 5",
+      "source_title": "Sententia libri Metaphysicae",
+      "author": "Thomas Aquinas",
+      "locator": "book VIII, lecture 5",
+      "url": "https://www.corpusthomisticum.org/cmp07.html"
+    }
+  ],
+  "companion_scope": "Mathematical arguments and proof-scope map; primary historical exposition is located in the report.",
+  "scope_note": "This map supplies citation identities and locators. It does not establish source-text authentication, full critical collation or human-specialist endorsement. Verification status is stated in the report and evidence records."
+}

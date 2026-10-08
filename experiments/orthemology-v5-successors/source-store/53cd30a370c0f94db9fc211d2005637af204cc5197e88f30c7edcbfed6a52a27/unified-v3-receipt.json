@@ -1,0 +1,127 @@
+{
+  "schema": "original-identity-raw-boolean-semantic-kernel-v3",
+  "verified_at_utc": "2026-10-05T07:48:25Z",
+  "status": "fresh project build and complete inherited, Raw and Boolean verification suites passed",
+  "whole_pi2_theorem_kernel_verified": false,
+  "whole_pi1_theorem_kernel_verified": false,
+  "effective_certificate_coding_kernel_verified": false,
+  "specific_bounded_machine_characteristic_kernel_verified": false,
+  "direct_current_has_primitive_recursive_compiler_kernel_verified": true,
+  "arbitrary_raw_numeral_adequacy_kernel_verified": true,
+  "build": {
+    "scope": "fresh compilation of all project modules; reused exact dependency checkouts and caches",
+    "project_modules_compiled": 76,
+    "baseline_modules_unchanged": 65,
+    "raw_extension_modules_unchanged": 6,
+    "boolean_extension_modules": 5,
+    "warnings_inherited": 22,
+    "warnings_raw_additions": 0,
+    "warnings_boolean_additions": 0,
+    "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "matches": true
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "matches": true
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "matches": true
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "matches": true
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "matches": true
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "matches": true
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "matches": true
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "matches": true
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "matches": true
+      }
+    ],
+    "build_exit_code": 0,
+    "all_checks_exit_code": 0,
+    "build_log_sha256": "849404c367bd17641a2a64ecfa644226a9d9517c748861a4e20ac3f31a9e2175",
+    "complete_checks_log_sha256": "d79c320a5ed8cb1677df4dbbe7743c02f32beea2dee0e766ee5c55a7f350074e"
+  },
+  "boolean_audit": {
+    "authored_declarations": 98,
+    "authored_theorems": 59,
+    "safe_namespace_roots": 160,
+    "reachable_checked_declarations": 2207,
+    "allowed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "unsafe_or_partial_kernel_dependencies": 0,
+    "core_compiler_and_discriminator_axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "audit_log_sha256": "75fc64c9309bc522d3f1c56e295080eded5a760a2858136eebc278981104c82f"
+  },
+  "controls": {
+    "source_mutations_rejected": 6,
+    "inherited_interface_rejections": 9,
+    "raw_initial_interface_rejections": 6,
+    "raw_initial_auditor_poison_rejections": 4,
+    "raw_complexity_interface_rejections": 10,
+    "raw_complexity_auditor_poison_rejections": 4,
+    "boolean_interface_rejections": 12,
+    "boolean_auditor_poison_rejections": 4
+  },
+  "foundation_reuse": {
+    "duplicate_probe_foundations_shipped": false,
+    "existing_natural_definitions_and_canonical_inputs_reused": true,
+    "checked_correspondence": "Induction identifies the recursive numeral polynomials; definitional equalities identify carriers and observations; a structural finite-PR transport preserves the literal compiled polynomials and closed family.",
+    "correspondence_check_exit_code": 0,
+    "correspondence_log_sha256": "8a00989f8652b3d26dafab9e2bf31e5e49511142505f2054c052ab7bf6efb9d8"
+  },
+  "preserved_raw_record": {
+    "receipt": "verification/raw-predecessor-receipt.json",
+    "receipt_sha256": "24db3eb238d712fa242cb5c71a5c074d70a4a52434d34b41ada2f3d731327082",
+    "project_modules": 71,
+    "source_only_archive_sha256": "35b199f1b0cea39cea2edd9bb1d273cdb501edf4e2beebfc717e9f0291b5ea86",
+    "original_package_files_verified_unchanged": 132
+  },
+  "source_lock_sha256": "0326d252d6ca4ddbbe0e9f7c962573e1a35f3cd85977ac5a92ef47553091ebf0",
+  "boolean_companion_sha256": "f6ca8aecb1b487eb39d6df283d49e899211623b9daf51f653940467475bed73d",
+  "claims_not_kernel_formalized": [
+    "finite syntax/certificate computability coding",
+    "the specific arithmetic and binary-machine characteristic construction",
+    "external machine-indexing completeness",
+    "the full arithmetical classifications",
+    "the no-computable-uniform-bound contradiction"
+  ],
+  "source_only": true,
+  "dependencies_or_compiled_objects_in_archive": false,
+  "fixed_research_scope": "P01AC current-Has and original F/G as packaged; no canonical adoption or transfer to the distinct public P01DF interface asserted"
+}

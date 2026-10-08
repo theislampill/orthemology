@@ -1,0 +1,141 @@
+{
+  "schema": "ninth-independent-public-projection-custody-review-v1",
+  "reviewed_utc": "2026-10-03T08:19:17Z",
+  "decision": "PASS_SCOPED_PUBLIC_PROJECTION_AND_CUSTODY_REVIEW",
+  "review_kind": "Independent model-assisted artifact review; not external specialist endorsement",
+  "exact_components": [
+    {
+      "archive": "Ninth_Foundational_Nexus_Public_Source_v1.zip",
+      "bytes": 21941,
+      "sha256": "8b6605ba3ce5b3a6f3f03c31031463a1b5736a72b9c505c7eecf3f3bf4d5aebb",
+      "members": 10,
+      "manifest": "Ninth_Foundational_Nexus_Public_Source_v1/MANIFEST.json",
+      "manifest_sha256": "77007f0cefd6c3b66f6fc3ca5ae58aac647dc842f3dfe2f87d9699bf5fb1c1f5",
+      "review_disposition": "PUBLIC_PROJECTION_PRESERVATION_ACCEPTED_WITH_ORIGINAL_SCIENTIFIC_LIMITS"
+    },
+    {
+      "archive": "Ninth_Integrated_Rival_Public_Source_v3.zip",
+      "bytes": 21916,
+      "sha256": "02d34bd39b152a984cc25d9dd1d2deebb6452d128e37623adbffda814296f789",
+      "members": 8,
+      "manifest": "Ninth_Integrated_Rival_Public_Source_v3/MANIFEST.json",
+      "manifest_sha256": "3d109b22d172d7c4e2f46bbcc9d7b2cf54fe84822d13af001f13bdeade149677",
+      "review_disposition": "PUBLIC_PROJECTION_PRESERVATION_ACCEPTED_WITH_ORIGINAL_SCIENTIFIC_LIMITS"
+    },
+    {
+      "archive": "Ninth_Continuation_Synthesis_Public_Source_v1.zip",
+      "bytes": 32873,
+      "sha256": "944ed67d6740fb514e3db64fa837178806b7bb103c0e354a62fa3481517e5af3",
+      "members": 10,
+      "manifest": "Ninth_Continuation_Synthesis_Public_Source_v1/MANIFEST.json",
+      "manifest_sha256": "233f3106fedc07f0920b303552cea34c77a242466e7e5545b691e9ee2ab2d41c",
+      "review_disposition": "PUBLIC_PROJECTION_PRESERVATION_ACCEPTED_WITH_ORIGINAL_SCIENTIFIC_LIMITS"
+    },
+    {
+      "archive": "Foundational_Nexus_Independent_Acceptance_v1.zip",
+      "bytes": 7703,
+      "sha256": "f7b7be250697579460135c1cbf6f9a66fe1cd379d22b816f743520b3b1f80fc3",
+      "members": 5,
+      "manifest": "MANIFEST.json",
+      "manifest_sha256": "a16787a593ec12b7e9b2bb78c4cfc5cb60e065a714181a8b5ac6fbadb8371bf0",
+      "review_disposition": "EXACT_ORIGINAL_ACCEPTANCE_RECORD_NOT_DERIVED_BYTE_APPROVAL"
+    },
+    {
+      "archive": "Ninth_Continuation_Synthesis_Independent_Acceptance_v1.zip",
+      "bytes": 5311,
+      "sha256": "fd1badc28e987854c99afd9aea05c00ac74484620486a9c425b7dae7cd8cea08",
+      "members": 3,
+      "manifest": "Ninth_Continuation_Synthesis_Independent_Acceptance_v1/MANIFEST.json",
+      "manifest_sha256": "71bfe4b0c4df0c6c883d36f7b1b446fe761e86ecd98a6c555ebc783db01c5a05",
+      "review_disposition": "EXACT_ORIGINAL_ACCEPTANCE_RECORD_NOT_DERIVED_BYTE_APPROVAL"
+    },
+    {
+      "archive": "Ninth_Paused_Unreviewed_Source_Archive_v1.zip",
+      "bytes": 163378,
+      "sha256": "722d36f5ba32b495f4753edca57517ead22c23d84ff0a592d51e9ec45f59d191",
+      "members": 108,
+      "manifest": "Ninth_Paused_Unreviewed_Source_Archive_v1/MANIFEST.json",
+      "manifest_sha256": "f76f9851a1b52c4b933e6524c675a9cff0856775d5a41244dbcc444513a326d6",
+      "review_disposition": "CUSTODY_ONLY_UNREVIEWED_NO_ACCEPTED_RESEARCH_CREDIT"
+    },
+    {
+      "archive": "Ninth_Selector_Family_Source_Acceptance_v1.zip",
+      "bytes": 173265,
+      "sha256": "e2c40bb8b2612db8898cdea0db2c984c91edaa15122dd23cbfb16f33d3e98255",
+      "members": 83,
+      "manifest": "Ninth_Selector_Family_Source_Acceptance_v1/MANIFEST.json",
+      "manifest_sha256": "138833be8349d7d7a1f5cc2790f9af1f920d52ed2e18d1103726f1e944ac9847",
+      "review_disposition": "EXACT_FINALIZED_PUBLIC_HANDOFF_CUSTODY_AND_ORIGINAL_RECEIPT_BINDINGS_VERIFIED"
+    },
+    {
+      "archive": "P1_Expression_Source_and_Acceptance_v1.zip",
+      "bytes": 2287418,
+      "sha256": "c3088bcc0c75a84754bf70beaac5efca88264cdb53bae771e206459bdb6b6e2d",
+      "members": 46,
+      "manifest": "P1_Expression_Source_and_Acceptance/PUBLIC_MANIFEST.json",
+      "manifest_sha256": "f50c3e223cbc2f8de3bc1f7fc2fed35fc34bd1e37ff3a95487e56af81e54defc",
+      "review_disposition": "EXACT_FINALIZED_PUBLIC_HANDOFF_CUSTODY_AND_ORIGINAL_RECEIPT_BINDINGS_VERIFIED"
+    },
+    {
+      "archive": "H_MOAT_E3_Selected_Historical_Source_v1.zip",
+      "bytes": 48430,
+      "sha256": "216126f9f5a960a0027c5de40442ed050a91d404ad007c5e08d9422cb569535d",
+      "members": 8,
+      "manifest_sha256": "00cf6a4e5ae351f15f134ebcbd6e86ce578dc1ac243a006728d5bfdaa0bab95c",
+      "review_disposition": "SELECTED_HISTORICAL_SOURCE_CUSTODY_ONLY_NOT_NEW_SCIENTIFIC_WORK"
+    }
+  ],
+  "original_scientific_acceptance_is_not_automatic_acceptance_of_derived_public_bytes": true,
+  "derived_public_byte_preservation_reviewed_here": true,
+  "paused_drafts_enter_accepted_claims_ledger": false,
+  "new_scientific_replay_or_repair_performed": false,
+  "complete_outer_collection_approved": false,
+  "g1_approved": false,
+  "report_docx_approved": false,
+  "ninth_completed": false,
+  "canonical_adoption": false,
+  "publication_or_upload_performed": false,
+  "blocking_gaps_in_scoped_review": [],
+  "required_later_checks": [
+    "Reverify any changed component identity",
+    "Verify and independently review exact final outer collection after G1/report disposition",
+    "Preserve paused custody-only segregation and all inherited scientific limitations"
+  ],
+  "supporting_records": [
+    {
+      "path": "HISTORICAL_SOURCE_CHECK.json",
+      "bytes": 3160,
+      "sha256": "6b7c59a75d6e3de194488381523c0da6578568f5d2760739d6db2750b14f4538"
+    },
+    {
+      "path": "INTEGRITY_COMMAND_CHECK.json",
+      "bytes": 4460,
+      "sha256": "7f7d2ec1c64c7186358e43a7c73a5cddafdda75d289b262ef060a27f17e3d05b"
+    },
+    {
+      "path": "OUTER_GUARD_CHECK.json",
+      "bytes": 2092,
+      "sha256": "6fa87c9db93719592772a911ed434c1c74f49003ce5428363e5a27e9be7619e0"
+    },
+    {
+      "path": "PAUSED_STATUS_CHECK.json",
+      "bytes": 4896,
+      "sha256": "c2c8a4f083832dde65d5df5bd77a2bbbcb6f85db1b8f90be63f2396e1f858526"
+    },
+    {
+      "path": "RESTORATION_EXCEPTION_CHECK.json",
+      "bytes": 4082,
+      "sha256": "84f4cb584ac1aedc7bc8e60ec27df246037bd3d621e82b8a63b94b4d787a8224"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 8347,
+      "sha256": "f6d0b984c520cb95073765bae052c13990cc9bd85fda622f2cc750cfd58dc82c"
+    },
+    {
+      "path": "STRUCTURAL_CHECK.json",
+      "bytes": 11365,
+      "sha256": "5176ad8ab7e64a2624add41f841b01f69f262a0ca727a10dde0008f130c47c96"
+    }
+  ]
+}

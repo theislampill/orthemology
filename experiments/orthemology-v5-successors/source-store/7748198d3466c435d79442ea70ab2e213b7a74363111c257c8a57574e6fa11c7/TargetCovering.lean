@@ -1,0 +1,7 @@
+import CoveringPortfolio
+open CoveringKernel
+#check complement_portfolio_iff
+#check complement_card
+#check portfolio_cover_sizes_iff
+#check least_portfolio_eq_coveringNumber
+#check coveringNumber_self

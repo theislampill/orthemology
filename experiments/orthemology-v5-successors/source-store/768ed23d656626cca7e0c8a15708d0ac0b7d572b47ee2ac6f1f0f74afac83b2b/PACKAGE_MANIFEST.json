@@ -1,0 +1,1001 @@
+{
+  "format": 1,
+  "scope": "Exact source-only signed controller service over unchanged Ninth closure; entrypoint excluded to avoid circular self-hash and bound by external ZIP SHA256",
+  "files": [
+    {
+      "path": "CONTROL_ROLES.json",
+      "sha256": "4d32ccfa660519e7ef4069234fcdc1c42cd002f2a5fd20b576f95d4d274f020a",
+      "bytes": 6499
+    },
+    {
+      "path": "DEPENDENCY_OBJECTS.json",
+      "sha256": "724350a6078826b9c3aae3ffe15313d7efbabb1a1c30f07cfd44723956403cef",
+      "bytes": 1384210
+    },
+    {
+      "path": "DEPENDENCY_TRUST.md",
+      "sha256": "f6f9db7e95689421981d0aa834fbd40802f29640f2d83172e3cd3a0fe0ae3edd",
+      "bytes": 2418
+    },
+    {
+      "path": "MUTATION_CONTRACT.json",
+      "sha256": "5db0fac5365709730af400c3dcd97eddc2a174c750029f03af32fc91e5b25352",
+      "bytes": 1554
+    },
+    {
+      "path": "PROOF_SCOPE_AND_OWNERSHIP.md",
+      "sha256": "65442422f143b6aaf2a305cfd139a736b965e481555965d722b564231a64711d",
+      "bytes": 3627
+    },
+    {
+      "path": "README.md",
+      "sha256": "9366801f890e9c14f1b97d2456fa664b3ccd92dbf585c89443adb0ae111fe4ff",
+      "bytes": 7344
+    },
+    {
+      "path": "ninth/COST_SCOPE.md",
+      "sha256": "96b8f65fc920311e045f2b9145483d3ad432ac7adc48d01b0fa4df70152ebc51",
+      "bytes": 3484
+    },
+    {
+      "path": "ninth/DEPENDENCY_PINS.json",
+      "sha256": "9eaffaa788991447cf64938183de0e982b467d333dd9a369f11c0c99a0be595c",
+      "bytes": 1411
+    },
+    {
+      "path": "ninth/DEPENDENCY_TRUST.md",
+      "sha256": "144df48b2fdf2371f8a70fe0e6d4363f88ad61af58a516f9ad6101eb6820f969",
+      "bytes": 2492
+    },
+    {
+      "path": "ninth/MATHLIB_ARCHIVE_INVENTORY.json",
+      "sha256": "1c4d1fa63acf416d7b965ed519d16faea965022cb8eb8d74725d59d801db16f0",
+      "bytes": 1208974
+    },
+    {
+      "path": "ninth/PROOF_OWNERSHIP.md",
+      "sha256": "98afc319cb575a4fe03a52b815a76f5ab8ed22b4cd0f75535dec20c93a724266",
+      "bytes": 4688
+    },
+    {
+      "path": "ninth/PUBLIC_MANIFEST.json",
+      "sha256": "9d8675b5d180d35651ee3a95aec28b3a977f52c0a46b7e9831ca88366736cfbd",
+      "bytes": 21856
+    },
+    {
+      "path": "ninth/README.md",
+      "sha256": "d436f50c8e1335b48d694d22636e554fa2388783645e4e5cbf604417ce6a8f34",
+      "bytes": 5123
+    },
+    {
+      "path": "ninth/SOURCE_CUSTODY.json",
+      "sha256": "ffcf9a9988f9ad9b43a1c5c3b438b7c66af351c02d79241e92a0797e924f759d",
+      "bytes": 32815
+    },
+    {
+      "path": "ninth/SOURCE_MANIFEST.json",
+      "sha256": "5a5e4e8a129b70fe713e76f7b24a97823751264fe4bd67a280682b09a407979f",
+      "bytes": 27267
+    },
+    {
+      "path": "ninth/controls/BindingControls.lean",
+      "sha256": "7d936210bd47f72130de3b1caf24deb797d522b3dc55f74c140a876f5b2228c4",
+      "bytes": 530
+    },
+    {
+      "path": "ninth/controls/CertificateControls.lean",
+      "sha256": "be7154c4dad2daa1dc2ab93b88788358adc0d2c9dd6dab949dec1a8300f534ba",
+      "bytes": 4781
+    },
+    {
+      "path": "ninth/controls/CertificateFixtures.lean",
+      "sha256": "02fa71e29d711f92d4f77c087609bd270eaae726ced36fb2cd748b695d1d37ab",
+      "bytes": 3980
+    },
+    {
+      "path": "ninth/controls/CertificateReadback.lean",
+      "sha256": "b0e4638827068c5a8209d6a1895c11bba0554c987c470c442e5813c366b09834",
+      "bytes": 659
+    },
+    {
+      "path": "ninth/controls/CheckerDependencies.lean",
+      "sha256": "a72a6e1f9f0946a1e8636bd7ad8bd570ef6d4e96e7ef57af058ce9a3feed2685",
+      "bytes": 2616
+    },
+    {
+      "path": "ninth/controls/CompositionControls.lean",
+      "sha256": "5c663b6dc75b23c6937570766a1913b5c1d40b563fc63928e5239048cb9ec8e6",
+      "bytes": 3669
+    },
+    {
+      "path": "ninth/controls/InputControls.lean",
+      "sha256": "3452763b86cabba5a453c1d0c693f2bf2b8a55e525750ba9908c283f23bbb2ce",
+      "bytes": 1531
+    },
+    {
+      "path": "ninth/controls/PathControls.lean",
+      "sha256": "9bfe96341b130524ee86c4706bc2e996396ff471f3c03e183928d0c2e74825c5",
+      "bytes": 3531
+    },
+    {
+      "path": "ninth/controls/PathDependencies.lean",
+      "sha256": "572a8c8aab47e5d0407f3b3134fac6291ca3fffe8be6a67770693123474003a3",
+      "bytes": 1780
+    },
+    {
+      "path": "ninth/evidence/BindingControls.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "ninth/evidence/CertificateControls.log",
+      "sha256": "6869789ddc5fa85f81a5096926cfffa18d13d1e7cd9920de14b8f1284aa23389",
+      "bytes": 20
+    },
+    {
+      "path": "ninth/evidence/CertificateReadback.log",
+      "sha256": "2ba440a3698f002ae6078239329899627ff8a52abea2b3ca88d4fc9f1080fdc1",
+      "bytes": 3568
+    },
+    {
+      "path": "ninth/evidence/CheckerDependencies.log",
+      "sha256": "6a6ee5ba2b938deb973d2cc60bff44a5da60ceac8eca8d7f4e9eda2dd37e26e6",
+      "bytes": 25778
+    },
+    {
+      "path": "ninth/evidence/CompositionControls.log",
+      "sha256": "c971d03db5aaa1413494b461605575e1508354157d25fca0472087be53643cac",
+      "bytes": 3767
+    },
+    {
+      "path": "ninth/evidence/InputControls.log",
+      "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+      "bytes": 5
+    },
+    {
+      "path": "ninth/evidence/PathControls.log",
+      "sha256": "e988f0abbb36163100058df9b4217684e2885f201385266c52671c6a464093e3",
+      "bytes": 3458
+    },
+    {
+      "path": "ninth/evidence/VERIFICATION_SUMMARY.json",
+      "sha256": "9af568b98d522f642b7174c71020382e073a322fd5f4cb9ddb9276c34722c182",
+      "bytes": 9014
+    },
+    {
+      "path": "ninth/inherited/cost/src/ActualTargetPolicy.lean",
+      "sha256": "7040e104fbb268ae6dea93fbd21f1db8bccc56bd5f04910b9d43c64597d0da74",
+      "bytes": 8690
+    },
+    {
+      "path": "ninth/inherited/cost/src/AdaptiveMarkovRecurrentGraph.lean",
+      "sha256": "24cf86efc439d077f7860aabf90f455d75269130094d94c46bc6734bacc2aaf9",
+      "bytes": 6034
+    },
+    {
+      "path": "ninth/inherited/cost/src/CheckedTargetOperation.lean",
+      "sha256": "d1751ecda2c7730b2580575391486f38a40a9ea0e585d90ad12774da9fb33ff8",
+      "bytes": 7621
+    },
+    {
+      "path": "ninth/inherited/cost/src/ConditionalAlmostSure.lean",
+      "sha256": "06d403f36ee3cb95094a53b4a53eea72810565fc66ac1fb0607fef9b01922a9b",
+      "bytes": 10995
+    },
+    {
+      "path": "ninth/inherited/cost/src/ConditionalContinuationLaw.lean",
+      "sha256": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3",
+      "bytes": 14074
+    },
+    {
+      "path": "ninth/inherited/cost/src/ConditionalKilledContinuation.lean",
+      "sha256": "48f69898de357b1cce90acfa6d575cf0688fae41821c8376a4a395bea1ba04c8",
+      "bytes": 9364
+    },
+    {
+      "path": "ninth/inherited/cost/src/ConditionalPrefix.lean",
+      "sha256": "987df7f2262b0b2a5e74bd4aee521b3315d61ca97d1e308ef6b10223f20d48f2",
+      "bytes": 5903
+    },
+    {
+      "path": "ninth/inherited/cost/src/DependentHellinger.lean",
+      "sha256": "cfcafcc7e1ebcda71370644b4b89c84a9948353e9115ed2e3a7807b78079a97e",
+      "bytes": 6926
+    },
+    {
+      "path": "ninth/inherited/cost/src/EmpiricalTailBounds.lean",
+      "sha256": "76d70084a57a2beb4b41784b3c93fd248d732b7422055aba2fdafdaf7957f993",
+      "bytes": 8464
+    },
+    {
+      "path": "ninth/inherited/cost/src/EmpiricalTestLaw.lean",
+      "sha256": "81f3343152589ab4d36d10ccc487f2bbf8c251bd6a2e95cf50826d59fff88da6",
+      "bytes": 3077
+    },
+    {
+      "path": "ninth/inherited/cost/src/EndComponents.lean",
+      "sha256": "f4298061653adc768b292363885e1a7b2213ccb56d17d52376762529d35b2531",
+      "bytes": 7828
+    },
+    {
+      "path": "ninth/inherited/cost/src/EventualCycling.lean",
+      "sha256": "eb29e22c35c3a366d440669da516663f9fe56601794f98ba8dbc81958ab7d5b7",
+      "bytes": 7632
+    },
+    {
+      "path": "ninth/inherited/cost/src/ExecutablePruning.lean",
+      "sha256": "3098f76a8065b9a327a4e9763de88428cd4711c79232b87201b7c079ee7789db",
+      "bytes": 7912
+    },
+    {
+      "path": "ninth/inherited/cost/src/FairComponentParity.lean",
+      "sha256": "566f01a571617215b71386917896044a7dc150e84130dcd0f92f36e45038f414",
+      "bytes": 5156
+    },
+    {
+      "path": "ninth/inherited/cost/src/FairStageNavigation.lean",
+      "sha256": "c497220e36e59578dc8d1efa53bfac17014446fcc84826f3af37f270d9f6e8f3",
+      "bytes": 3937
+    },
+    {
+      "path": "ninth/inherited/cost/src/FeedbackFiberProbability.lean",
+      "sha256": "dbaf6f6cafc94a08bd2f00ca8ecc6c4a253f002b517b52ff58825b944475a834",
+      "bytes": 8467
+    },
+    {
+      "path": "ninth/inherited/cost/src/FeedbackRequests.lean",
+      "sha256": "327eea767c3a2f2ad30e66b2c9c9591b4bb6a1fe7dea39c71c50623cb4b07b38",
+      "bytes": 5588
+    },
+    {
+      "path": "ninth/inherited/cost/src/FiniteChainAvoidance.lean",
+      "sha256": "f7af0f36a68359e8b20b5c85ca527e07191c43686ec345b7d08f582bb4741e24",
+      "bytes": 5521
+    },
+    {
+      "path": "ninth/inherited/cost/src/FiniteChainTrajectory.lean",
+      "sha256": "71acea2c2028a111c1e15ddc85f76f0dd59efb639f9a0372bc35a320c7f4e3ef",
+      "bytes": 8565
+    },
+    {
+      "path": "ninth/inherited/cost/src/FiniteReachability.lean",
+      "sha256": "ad50af371e175b27b62f9fe545267dd434ed256ab84b950afdc92b932dc5fd74",
+      "bytes": 3825
+    },
+    {
+      "path": "ninth/inherited/cost/src/GeneratedParitySuccess.lean",
+      "sha256": "db9ec6cae92ba47810fd360afa3eda2b4447327378a032b17d87afef743a67c4",
+      "bytes": 7402
+    },
+    {
+      "path": "ninth/inherited/cost/src/GeneratedPhaseDynamics.lean",
+      "sha256": "3c52bf3ff7d270ef0343f1d41223b3aacc8a748df216d130a580ff338dd94174",
+      "bytes": 5448
+    },
+    {
+      "path": "ninth/inherited/cost/src/GeneratedPhaseStability.lean",
+      "sha256": "df0a80d810a176bb32b8a5574039115e823bfbeaa588a3ed23a52a7d7aa10a91",
+      "bytes": 3957
+    },
+    {
+      "path": "ninth/inherited/cost/src/GeneratedPolicySafety.lean",
+      "sha256": "6a52c99c8bfe581ed13dcec6a396dcb7227656e6eba937a4cf73c7e36a8f4100",
+      "bytes": 6252
+    },
+    {
+      "path": "ninth/inherited/cost/src/GeneratedRun.lean",
+      "sha256": "bdd551d8c61ae4c78332b957eba7ecab5718747747a51a91902ea55e2306aca9",
+      "bytes": 6791
+    },
+    {
+      "path": "ninth/inherited/cost/src/GenericFiniteQueryLocality.lean",
+      "sha256": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+      "bytes": 6244
+    },
+    {
+      "path": "ninth/inherited/cost/src/GenericFiniteQueryMeasure.lean",
+      "sha256": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+      "bytes": 10817
+    },
+    {
+      "path": "ninth/inherited/cost/src/GenericQueryReference.lean",
+      "sha256": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+      "bytes": 3849
+    },
+    {
+      "path": "ninth/inherited/cost/src/GlobalParityNecessity.lean",
+      "sha256": "7b54bfb8cd869bbe72f7ebeb42504a616c216a1912d09a6fc0d2ab35ca9d39c3",
+      "bytes": 5790
+    },
+    {
+      "path": "ninth/inherited/cost/src/GlobalParitySufficiency.lean",
+      "sha256": "4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3",
+      "bytes": 6759
+    },
+    {
+      "path": "ninth/inherited/cost/src/HellingerTree.lean",
+      "sha256": "3c5dc0288543e481971f9ccdbf811102b191fa4067ff65ed1e0e3cd8e0da06b2",
+      "bytes": 9727
+    },
+    {
+      "path": "ninth/inherited/cost/src/HistoryPathConsistency.lean",
+      "sha256": "2fc036ffd94d213ad5215c447308132dd08edaad19d5f893dd130780382cc146",
+      "bytes": 2398
+    },
+    {
+      "path": "ninth/inherited/cost/src/HistoryStageSafety.lean",
+      "sha256": "2870a3c2d0dd125a59b49600e0fa0853e8d5c46a98153f27846a9f43f860bea5",
+      "bytes": 7400
+    },
+    {
+      "path": "ninth/inherited/cost/src/IndependentProductFamilies.lean",
+      "sha256": "9abc010ebfcfabc85695acd3aef10c1ea7fd5c0527dd215320840d57546b1a3d",
+      "bytes": 2601
+    },
+    {
+      "path": "ninth/inherited/cost/src/InfiniteRecurrence.lean",
+      "sha256": "1792831c1af1628fae2c31b821f40d6d3a67be22303595f66ca14d273223228a",
+      "bytes": 5601
+    },
+    {
+      "path": "ninth/inherited/cost/src/KilledAdaptiveHistory.lean",
+      "sha256": "ff7c13f5212d6b5f9cfdf64979e664e51934422189528d6169b8a72c57cfff56",
+      "bytes": 6262
+    },
+    {
+      "path": "ninth/inherited/cost/src/KilledQueryLaw.lean",
+      "sha256": "17793ba9787eb9c3fc1618d4acfc368804be8309197156f22d440508f8ad22a0",
+      "bytes": 6110
+    },
+    {
+      "path": "ninth/inherited/cost/src/KilledRecurrentTransfer.lean",
+      "sha256": "5de3075faa5e7041d31cb7c18868c0a91db7ef8d47a0630d26cb63dfcd6dd60b",
+      "bytes": 9584
+    },
+    {
+      "path": "ninth/inherited/cost/src/LawfulProbability.lean",
+      "sha256": "feef9755524c9f08ad782339f0c60cbbd5c82391d992b48d59d30e191b1da17e",
+      "bytes": 7175
+    },
+    {
+      "path": "ninth/inherited/cost/src/LawfulRestart.lean",
+      "sha256": "f163f76a1fdab9b12bd96122780339901fcb76b5a3c75cdec56b8d3d505e32dd",
+      "bytes": 5987
+    },
+    {
+      "path": "ninth/inherited/cost/src/MarkovCharge.lean",
+      "sha256": "97e0f881af3140b625d45642c06cecc20dbb49773528f8345dd4c948b1ddfc68",
+      "bytes": 5636
+    },
+    {
+      "path": "ninth/inherited/cost/src/MarkovKilledBridge.lean",
+      "sha256": "7d828069e42926c9e7acb36bfb683a6b3bd8c6f46907d00ccd8c643e27555c04",
+      "bytes": 8890
+    },
+    {
+      "path": "ninth/inherited/cost/src/MarkovSeedPosterior.lean",
+      "sha256": "adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0",
+      "bytes": 5670
+    },
+    {
+      "path": "ninth/inherited/cost/src/MarkovSupportAdapter.lean",
+      "sha256": "6c281b2bc6036789a0d342a14df80b1d9c68bcbdf49a1720855d3cd03a46e499",
+      "bytes": 7541
+    },
+    {
+      "path": "ninth/inherited/cost/src/MemoryTransitions.lean",
+      "sha256": "3fd4a3d8e4a7a2c74343087c8f3a31714b569ff209b3d63b9764f70c2462fe25",
+      "bytes": 2902
+    },
+    {
+      "path": "ninth/inherited/cost/src/ObservedEmpiricalRows.lean",
+      "sha256": "90ba0fd6a17d86323b83185acd96a639fe584407d2496dad678aed08bc74717e",
+      "bytes": 11876
+    },
+    {
+      "path": "ninth/inherited/cost/src/ObservedPhaseController.lean",
+      "sha256": "9814025d9195fe98c7df8a8839fd37b8696f0b61d3970cb3dd61cb257a0009f1",
+      "bytes": 10257
+    },
+    {
+      "path": "ninth/inherited/cost/src/ObservedRowTest.lean",
+      "sha256": "e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee",
+      "bytes": 3409
+    },
+    {
+      "path": "ninth/inherited/cost/src/ParityTailInvariance.lean",
+      "sha256": "1dc8c0e40a86a205498af32bd7c4a0d96afca6020f2fbd321e21fae2beee0077",
+      "bytes": 1224
+    },
+    {
+      "path": "ninth/inherited/cost/src/PhaseStabilization.lean",
+      "sha256": "b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183",
+      "bytes": 4741
+    },
+    {
+      "path": "ninth/inherited/cost/src/PolicyCylinderProbability.lean",
+      "sha256": "2fe2e33744bbd7edada29f4faab67f4b63e22efff2945381c1d367a2859c8d72",
+      "bytes": 4120
+    },
+    {
+      "path": "ninth/inherited/cost/src/PolicyObservedLaw.lean",
+      "sha256": "ad890909953de257c58ae2750e7f7710747489936704e0767b77aa0485f59d76",
+      "bytes": 4919
+    },
+    {
+      "path": "ninth/inherited/cost/src/PolicyRowEvaluator.lean",
+      "sha256": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+      "bytes": 6387
+    },
+    {
+      "path": "ninth/inherited/cost/src/PolicyRowLaw.lean",
+      "sha256": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+      "bytes": 4690
+    },
+    {
+      "path": "ninth/inherited/cost/src/PolicyTailTransfer.lean",
+      "sha256": "a42c82222bd810e4005b536d27d394a01d28b9fcbdb9ab8d53e3c5d6cdc48720",
+      "bytes": 5143
+    },
+    {
+      "path": "ninth/inherited/cost/src/PolicyTraceBinding.lean",
+      "sha256": "fe8d6b84a1cd526a6b0a10770aebd52fdbf19b7ae7804f7d2447a33e133e44bf",
+      "bytes": 7699
+    },
+    {
+      "path": "ninth/inherited/cost/src/PolicyTranscriptFiber.lean",
+      "sha256": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+      "bytes": 4179
+    },
+    {
+      "path": "ninth/inherited/cost/src/PosteriorFeedbackProduct.lean",
+      "sha256": "0f37e47723087f1ad72667012a3abac927ae29162a14625cc58dfae754346115",
+      "bytes": 7434
+    },
+    {
+      "path": "ninth/inherited/cost/src/ProductObservationLaw.lean",
+      "sha256": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+      "bytes": 1663
+    },
+    {
+      "path": "ninth/inherited/cost/src/PruningKernel.lean",
+      "sha256": "d16d51d77c59f0538952e1401e105e699fd6d2648df3aa3db8dbf3c09888a253",
+      "bytes": 13589
+    },
+    {
+      "path": "ninth/inherited/cost/src/RawEmpiricalRows.lean",
+      "sha256": "dbbc16fe32b75bfcd3d1575175cfc857b45926f48533f2317a044cb30cc95d6b",
+      "bytes": 5413
+    },
+    {
+      "path": "ninth/inherited/cost/src/RawTapeRecurrence.lean",
+      "sha256": "d8ff5864c4b0697dbd056940503b6913fe8c3256277efc790601b0e2528f5a8e",
+      "bytes": 5165
+    },
+    {
+      "path": "ninth/inherited/cost/src/RecurrentGraph.lean",
+      "sha256": "395d925096b881b32a46cfdf901ffbd73029cfe598a175bf667884cdc2b6436c",
+      "bytes": 3416
+    },
+    {
+      "path": "ninth/inherited/cost/src/RecurrentSupport.lean",
+      "sha256": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899",
+      "bytes": 9355
+    },
+    {
+      "path": "ninth/inherited/cost/src/RegionAlgorithm.lean",
+      "sha256": "ca456e211d02a994192809bac318ae3a75684f163daf2f9037346b84517b347a",
+      "bytes": 12514
+    },
+    {
+      "path": "ninth/inherited/cost/src/RelativeTailTransfer.lean",
+      "sha256": "bd89640236881734ec68ed3f1bc21684b8af6c986683a5530f550a2221d4a167",
+      "bytes": 8473
+    },
+    {
+      "path": "ninth/inherited/cost/src/ResetBudget.lean",
+      "sha256": "d482ed24b70fa4501eefcd7878a7889af7b8f3fbf31f8c6de60b77ebffa758b1",
+      "bytes": 6731
+    },
+    {
+      "path": "ninth/inherited/cost/src/ResetLaw.lean",
+      "sha256": "f76f752f31565baa5262aa4aafcf21a7f3722d1f74c9681fe6d8a2a50bb02d12",
+      "bytes": 5437
+    },
+    {
+      "path": "ninth/inherited/cost/src/ResetTrajectory.lean",
+      "sha256": "c1bae278764e20b67382204474b62e8bba769463f812d5adfc2086b85b303f68",
+      "bytes": 4486
+    },
+    {
+      "path": "ninth/inherited/cost/src/ResidualSeedPosterior.lean",
+      "sha256": "9608772a6948c3dfb69d95659d27b5f6b961aece08ccc09afc594b63cd264ba6",
+      "bytes": 14840
+    },
+    {
+      "path": "ninth/inherited/cost/src/RoundRobinPolicy.lean",
+      "sha256": "210a5417479100f010c2c38954c89d551a1c1d52b0d8d784e6fa8e8c94245ea1",
+      "bytes": 5568
+    },
+    {
+      "path": "ninth/inherited/cost/src/RoundRobinRecurrence.lean",
+      "sha256": "94da50ee38d07888783573e1d78ece8dac5c58871f2e0c3ac5f6dea77008fc4c",
+      "bytes": 5775
+    },
+    {
+      "path": "ninth/inherited/cost/src/RoundRobinSchedule.lean",
+      "sha256": "21db947de0a6f06908487f50d6ca0038c9337aed7184cd2dc0eb929982f93e2b",
+      "bytes": 4158
+    },
+    {
+      "path": "ninth/inherited/cost/src/SafeSetTailTransfer.lean",
+      "sha256": "960293c6ff358b5bcd571b1f24ad62ce43983894836ce8516a24212bb1cd5699",
+      "bytes": 9649
+    },
+    {
+      "path": "ninth/inherited/cost/src/SeededPolicyNecessity.lean",
+      "sha256": "d0335e4234a9462aa5f9af7217b78717983539703835041c9a0a334040ede016",
+      "bytes": 3334
+    },
+    {
+      "path": "ninth/inherited/cost/src/SelfVerifyingSupport.lean",
+      "sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "bytes": 8289
+    },
+    {
+      "path": "ninth/inherited/cost/src/SemanticSafeActions.lean",
+      "sha256": "66b166d81fd29f864f7dd81f0af6a67f07c4c35ab709fe67eba52bd1b20bc55b",
+      "bytes": 6355
+    },
+    {
+      "path": "ninth/inherited/cost/src/SemanticWinning.lean",
+      "sha256": "a759594adc211fdce0e9013a1d680fabd89983a0202885d8658b7e72477b4252",
+      "bytes": 5711
+    },
+    {
+      "path": "ninth/inherited/cost/src/SequentialTapeConsumption.lean",
+      "sha256": "c06b02171163bd00875060eb97e870673ef689d2e4b0fa6a767324899bc304cb",
+      "bytes": 4610
+    },
+    {
+      "path": "ninth/inherited/cost/src/StableSupportParityNecessity.lean",
+      "sha256": "e7efd3c855f5adf29c0a3fce65aac3cadba994e8ccc72f32e2829bc1434f802d",
+      "bytes": 11102
+    },
+    {
+      "path": "ninth/inherited/cost/src/StackActionLaw.lean",
+      "sha256": "6127e1c8362a4c17f8074937d88ffb13b9fdf7de7ad88d64130f8ee3d35a27fc",
+      "bytes": 13921
+    },
+    {
+      "path": "ninth/inherited/cost/src/StackPathRegularity.lean",
+      "sha256": "fee7903917eff18207791b8d6c3679ad671e14873c025b2ff71987fe265fbaf2",
+      "bytes": 5195
+    },
+    {
+      "path": "ninth/inherited/cost/src/StageAvailability.lean",
+      "sha256": "8e0df2c695b21d91c2473f200317ebd5c4cf3f8203b34f93f5ec4c77d9a9312a",
+      "bytes": 4519
+    },
+    {
+      "path": "ninth/inherited/cost/src/StageTargetOrExit.lean",
+      "sha256": "6235ac02c768a8184b5a05b9f30659b2c24cb33e8c52017ef4a61652001e125e",
+      "bytes": 5767
+    },
+    {
+      "path": "ninth/inherited/cost/src/StationaryPairChain.lean",
+      "sha256": "5b7e23bf7aca12b0529cb77362bf1cb93d54fc1567fe5db7e9d8d000b5d50d99",
+      "bytes": 6498
+    },
+    {
+      "path": "ninth/inherited/cost/src/SubprobHellinger.lean",
+      "sha256": "3e56c01155f3f838a3d911426e10746ab4a20b00711c2c4da3a5ff2f7568c8ad",
+      "bytes": 5951
+    },
+    {
+      "path": "ninth/inherited/cost/src/dependencies/StatisticalRepair.lean",
+      "sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "bytes": 7979
+    },
+    {
+      "path": "ninth/mutations/PathEdgesMutant.lean",
+      "sha256": "d222268e08b6a8960dd349b9b20dd00c2ed53ec1805061b10ddfe915860da41e",
+      "bytes": 3029
+    },
+    {
+      "path": "ninth/mutations/PathEdgesMutationControl.lean",
+      "sha256": "2628c64ef41e82c87c0c35890b12767b04a2075d8b25f98eb1137c2db3aaed57",
+      "bytes": 1776
+    },
+    {
+      "path": "ninth/mutations/PathLengthMutant.lean",
+      "sha256": "c9c64640c7210adee2c9345d48ee225b41957350ebfcde6414886e874450b0da",
+      "bytes": 3022
+    },
+    {
+      "path": "ninth/mutations/PathLengthMutationControl.lean",
+      "sha256": "76e3fa078a75460c6a347dcae9646c9c96cbc32a48cd55bcfbc6ce52ad99b849",
+      "bytes": 1777
+    },
+    {
+      "path": "ninth/replay.py",
+      "sha256": "119fee26d6e3b3a642d03e8fe6af25e7671ac9d06fb0c8954a0bf2f0234e806a",
+      "bytes": 8961
+    },
+    {
+      "path": "ninth/src/CertificateBinding.lean",
+      "sha256": "206f1197ac41521668bfbb2939d6c817bfe1d114e7f32066e679ce038e999a82",
+      "bytes": 1195
+    },
+    {
+      "path": "ninth/src/CertificateCompleteness.lean",
+      "sha256": "94ad1e2f7d6e7ef106b108a79459a4b5103b15867711bebb7daea76005934953",
+      "bytes": 11356
+    },
+    {
+      "path": "ninth/src/CertificateComposition.lean",
+      "sha256": "7ef0cb1db2fffa67642c361520560fffc53cc0d8b39530bec92f56070a999c0e",
+      "bytes": 17387
+    },
+    {
+      "path": "ninth/src/CertificateData.lean",
+      "sha256": "e05d663571ba1cdf8e2ad04f19442721d4f03ee5bca46c0ad185e5d2c2f0e0c6",
+      "bytes": 4576
+    },
+    {
+      "path": "ninth/src/CertificateOrder.lean",
+      "sha256": "11975a5518aa70a8b3cb264a07b155611dfc84992a75fc4fe2a417e46813bb0e",
+      "bytes": 2179
+    },
+    {
+      "path": "ninth/src/CertificatePath.lean",
+      "sha256": "d8e26f21fa37cd8ddf250ab9b440a1b25da481d201e66f3913ce822620e799f8",
+      "bytes": 9295
+    },
+    {
+      "path": "ninth/src/CertificateSoundness.lean",
+      "sha256": "399829e271d3b6db65cfd077a68c15ad9a2e2f4d59d3957a2f30b6f2cd37a4ba",
+      "bytes": 7316
+    },
+    {
+      "path": "ninth/src/CertificateSyntax.lean",
+      "sha256": "e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a",
+      "bytes": 6113
+    },
+    {
+      "path": "ninth/verify_dependency_identity.py",
+      "sha256": "7deeab885edfa67829f733766a1d8e9f08439157dec5bd54f05681371ed0e10e",
+      "bytes": 5537
+    },
+    {
+      "path": "provenance/COPY_CUSTODY.json",
+      "sha256": "5d18a239e9c359aad9bd665e9cceef31c87831561e85c236e1afa10c446e8436",
+      "bytes": 76831
+    },
+    {
+      "path": "provenance/controller_SOURCE_FREEZE_v1.json",
+      "sha256": "0aec94dbb8fdd2b0d223578c434943b4098c0d0bc93dc02a12d61978154a7c77",
+      "bytes": 4435
+    },
+    {
+      "path": "provenance/negative_SOURCE_MANIFEST.json",
+      "sha256": "61ffbeec0a175937672d1f096686652a0e4aec4f5cf86c45bbc9572c34d509c5",
+      "bytes": 4986
+    },
+    {
+      "path": "review/DeclarationAudit.lean",
+      "sha256": "5fa07b180182cef1b263e83361f13398f7ac7237a069732d1de29bf4432d951c",
+      "bytes": 1889
+    },
+    {
+      "path": "review/IndependentControls.lean",
+      "sha256": "885f6d059cadc896fd844a470cd7455ca081dabe13ce6698d90a1d4806950ff1",
+      "bytes": 5194
+    },
+    {
+      "path": "review/SOURCE_REVIEW_SUMMARY.md",
+      "sha256": "9f57394de9d67856fa2e9424c0fa320d90d6c80fdd65989443dc55f393e8c629",
+      "bytes": 3040
+    },
+    {
+      "path": "review/prior-source-review/CompiledServiceDependencies.log",
+      "sha256": "6d5336e59afbbac893521dcb8c4831147f70297468461e627c39c182a4e96486",
+      "bytes": 36188
+    },
+    {
+      "path": "review/prior-source-review/ControllerDependencies.log",
+      "sha256": "8c6681e244ed99ef3b239ef69b80a52bf5e883ecb9dfa9165ec1688eb556e15a",
+      "bytes": 25162
+    },
+    {
+      "path": "review/prior-source-review/DeclarationAudit.log",
+      "sha256": "7a06eacb4f3984c793b58b78e7f2d9225835b859cd5cb08cf5aedd9cab8df6ea",
+      "bytes": 1048165
+    },
+    {
+      "path": "review/prior-source-review/DeclarationAuditHarnessDiagnostic.log",
+      "sha256": "19519809b917efa966471d6b3d2966a0d355f903fda67d8bde40760b043242ae",
+      "bytes": 2840
+    },
+    {
+      "path": "review/prior-source-review/IndependentControls.log",
+      "sha256": "396021bc9e12289678fd0c0d8fd3ecc6e9df1e0a76041d461fb99be4ce2a3c34",
+      "bytes": 45
+    },
+    {
+      "path": "review/prior-source-review/SignedDependencies.log",
+      "sha256": "c57813d48673ec9b405baeb6c101006f83b7291d403b16a439e0b75f13fa2c84",
+      "bytes": 32103
+    },
+    {
+      "path": "review/wrapper-development/WRAPPER_GREEN_v1.log",
+      "sha256": "066db38056bbb89294cc4a760bb4a1ad0fb1e341ba8f9ba1a83bd7fefd7aa322",
+      "bytes": 2622
+    },
+    {
+      "path": "review/wrapper-development/WRAPPER_RED_v1.log",
+      "sha256": "be216c48ed9a44c0be3000d67fb46cea0d44aff9af824114477ffc5fd1fb1746",
+      "bytes": 15674
+    },
+    {
+      "path": "service/controller/derive_mutations.py",
+      "sha256": "64b0e67aeee09bbb27dffac097523d6425caf0a72e8cab141f5b84f188bc57fe",
+      "bytes": 3820
+    },
+    {
+      "path": "service/controller/mutations/CounterReset.lean",
+      "sha256": "a770f7c822785c7243dc5f7c39e693c80af8fde51ca23b68d17fc3826b41e467",
+      "bytes": 4954
+    },
+    {
+      "path": "service/controller/mutations/DERIVATION.json",
+      "sha256": "629c6c2739f60481d4bb3249f38474cf5aa5072fbd557f0046183b1a8a5736d1",
+      "bytes": 1692
+    },
+    {
+      "path": "service/controller/mutations/EmpiricalHistoryTruncated.lean",
+      "sha256": "35633954b024de762d61783ba20b80c238b71a1a764e15bf2411ea5ab9ae3aa0",
+      "bytes": 1135
+    },
+    {
+      "path": "service/controller/mutations/NonStrictCountGuard.lean",
+      "sha256": "dbd8599528a4b659e245a4cb2d9fd26515b739b416e700dad0e187f6a53b40a8",
+      "bytes": 1099
+    },
+    {
+      "path": "service/controller/mutations/WitnessIgnored.lean",
+      "sha256": "4aa9a911439acdf900e47ad2cd66ce555ab3e6beb6dd1736404ee7eb0204266f",
+      "bytes": 1523
+    },
+    {
+      "path": "service/controller/src/DirectActualLaw.lean",
+      "sha256": "77b0a80d2da8405f22591a7a8c2d94c0bce331ffb75c86b4f1690aa8b42e2958",
+      "bytes": 3251
+    },
+    {
+      "path": "service/controller/src/DirectController.lean",
+      "sha256": "c68605b22b1c74bdacaec0c586e35f19e80a7154d3d31b3c2edac05feda0f5a5",
+      "bytes": 8752
+    },
+    {
+      "path": "service/controller/src/DirectCycling.lean",
+      "sha256": "d262dda33bda02d989f65753e312e58cf451fafe1ed70fbc32b7d66184f72dd0",
+      "bytes": 8075
+    },
+    {
+      "path": "service/controller/src/DirectDynamics.lean",
+      "sha256": "9292534e7bad1c144b5ae374c8de7e768268cbd865a56a1eb277d0e68fef3525",
+      "bytes": 5613
+    },
+    {
+      "path": "service/controller/src/DirectEndpoint.lean",
+      "sha256": "20af8b9ff9911bcfb4839e8456363cd707d13c19df4269ffd21335dab817cd1f",
+      "bytes": 3454
+    },
+    {
+      "path": "service/controller/src/DirectMemoryTransitions.lean",
+      "sha256": "50d307ed8779173aca3840673cc0e7e0d676ef7719080ad71fd1afa01d6f4a31",
+      "bytes": 1523
+    },
+    {
+      "path": "service/controller/src/DirectParity.lean",
+      "sha256": "403d3369cafa7d7285d68bd2b7559d83c20c85e152ce9ef99e63b77ecc8d8d0f",
+      "bytes": 7546
+    },
+    {
+      "path": "service/controller/src/DirectRun.lean",
+      "sha256": "0d7903e07dec34ff6706a0579b4b59cc911f98240ddc9585be4eb23710542bbf",
+      "bytes": 6964
+    },
+    {
+      "path": "service/controller/src/DirectSafety.lean",
+      "sha256": "2a763523bd55662c8bc93aa71cd614a5c193739d15c15fb51bbd6add40e1460d",
+      "bytes": 6491
+    },
+    {
+      "path": "service/controller/src/DirectStability.lean",
+      "sha256": "106c15b37e7b54d132d367687d7a8f3b9b881fdc5f2336059527ab612fdcb7b0",
+      "bytes": 4117
+    },
+    {
+      "path": "service/controller/src/OrderedCycle.lean",
+      "sha256": "d9d8d6acb612c51d2fb4c8a93013304ca8452f4de40edccfc23083e0208d82ea",
+      "bytes": 1942
+    },
+    {
+      "path": "service/controller/src/RationalTest.lean",
+      "sha256": "87cfb72769c42a459d47eb0c7e3468882ba196abcb709f79fd5febbc34b8d2dc",
+      "bytes": 4963
+    },
+    {
+      "path": "service/controller/src/StageFamily.lean",
+      "sha256": "71a3ace147651ccf67befba32bcdd2d10da98dbf662cc61c548b9fe86214e89e",
+      "bytes": 4124
+    },
+    {
+      "path": "service/controller/src/SubmittedFamily.lean",
+      "sha256": "a890544e5a83d3e31472203b9c772fd582167f7119c2aaf24856eeb9bc5dc859",
+      "bytes": 9084
+    },
+    {
+      "path": "service/controller/tests/ControllerDependencies.lean",
+      "sha256": "b52a407efc7796c1dc5ff22b1672e5ade1ce38b029cab4ea37468a522fac2f23",
+      "bytes": 2269
+    },
+    {
+      "path": "service/controller/tests/DirectInterfaceControls.lean",
+      "sha256": "783bcc174e1bb2a2cfa4ecfe55a71f55371df2a044da613d8ca3a51d98e602c4",
+      "bytes": 332
+    },
+    {
+      "path": "service/controller/tests/NativeControllerControls.lean",
+      "sha256": "d3849ee6707a7de3c1cfd99c9c8ce7fe0e1e64c78976aa8eb02cfc066794300b",
+      "bytes": 3330
+    },
+    {
+      "path": "service/controller/tests/OrderedCycleControls.lean",
+      "sha256": "de24ef4fe6af288cdf6c1358f662b7795848a63b3e083c9d943de5924f435155",
+      "bytes": 492
+    },
+    {
+      "path": "service/controller/tests/OrderedCycleRED.lean",
+      "sha256": "87237cd1e186077fb22e45c6a7963b41359d809c7df088467bc5c021d3bda768",
+      "bytes": 183
+    },
+    {
+      "path": "service/negative/mutations/OmittedCoverageMutant.lean",
+      "sha256": "ce5a9f6b2e55d50e9b13c1b73f93ce11af31524c4dc1cc1533eb5a1999b63dc5",
+      "bytes": 445
+    },
+    {
+      "path": "service/negative/mutations/SkippedIndexMutant.lean",
+      "sha256": "a988f2558354481f0e13d920d78e3f19cb7de2ee728e72d4d2e3d67bc94a2470",
+      "bytes": 395
+    },
+    {
+      "path": "service/negative/src/FiniteEnumeration.lean",
+      "sha256": "93debf0cf880bd635c1a74df660f2edfafcfb7f33100691b120946c0f7f3a2ab",
+      "bytes": 7038
+    },
+    {
+      "path": "service/negative/src/FiniteLists.lean",
+      "sha256": "4ca373353e6f95da49ac3a0b2519b284ece9a6b2a0eb8863153284f2f1b6a992",
+      "bytes": 2253
+    },
+    {
+      "path": "service/negative/src/IndexedCoverage.lean",
+      "sha256": "21ce74039d33a3d5573422374a857d3ac3a5945403982efbf68aee66e0698b33",
+      "bytes": 3240
+    },
+    {
+      "path": "service/negative/src/PositiveFormula.lean",
+      "sha256": "aa30a4b81eb73e56dea14ad80a5dfc2d59fb7a1ee3b0e3852145d1d62191f452",
+      "bytes": 16359
+    },
+    {
+      "path": "service/negative/src/Refutation.lean",
+      "sha256": "222b6d8cb68432c716845e31e842fe49ad7d273ab8237d4b5e195ebc828356f4",
+      "bytes": 7644
+    },
+    {
+      "path": "service/negative/src/SignedControllerService.lean",
+      "sha256": "4d78524293ec91aaac595d7728bac23bd74ba1fdde9513be84fb954be1e50590",
+      "bytes": 4831
+    },
+    {
+      "path": "service/negative/src/SignedService.lean",
+      "sha256": "0009ee9c664a710663a7c5b32418610d87bc92d62cdbd4840aa2ffadb1e48f97",
+      "bytes": 9231
+    },
+    {
+      "path": "service/negative/tests/CompiledServiceDependencies.lean",
+      "sha256": "029cc4ad8bd297767b4365ca1aa4e2731be8e1c279d838ec9dfe2ea327e0eb0f",
+      "bytes": 2330
+    },
+    {
+      "path": "service/negative/tests/EnumerationControls.lean",
+      "sha256": "a1c782816cd0c906fc191e7b29d0777c67a4a18432520b63ad08b8183c6ffe78",
+      "bytes": 2223
+    },
+    {
+      "path": "service/negative/tests/EnumerationRed.lean",
+      "sha256": "800d4898e11890458ae553af2fba3459e08375c5d4651b8e9d0d62b22463af15",
+      "bytes": 228
+    },
+    {
+      "path": "service/negative/tests/FiniteListsControls.lean",
+      "sha256": "1073426563bc23a80db142b34efce42143df772823fd330390e0046c4c5996bc",
+      "bytes": 654
+    },
+    {
+      "path": "service/negative/tests/FormulaBranchControls.lean",
+      "sha256": "35302cfdb1f172b18fd479d55c84905639f643a56b809f7a7e8f43407764c44a",
+      "bytes": 2193
+    },
+    {
+      "path": "service/negative/tests/IndexedCoverageControls.lean",
+      "sha256": "bda4ff0bd21d51d1b44e1394c7a310c38e2c8be4e1d5999c0bc948313592fa7c",
+      "bytes": 1072
+    },
+    {
+      "path": "service/negative/tests/IndexedCoverageRed.lean",
+      "sha256": "e1ace3cbe65ba1398963557a60f136f11e5ddaa1d389e660070be7bd4e866ed4",
+      "bytes": 141
+    },
+    {
+      "path": "service/negative/tests/PositiveFormulaRed.lean",
+      "sha256": "1df069295afc84a23adc98ae7193dabbbdb798b36ea3bb1f3d4603332d6ccb6e",
+      "bytes": 162
+    },
+    {
+      "path": "service/negative/tests/RefutationControls.lean",
+      "sha256": "d825690f70bfc2e1dacf89ce99c856688d31d325e8faba15a4113ac8cb143607",
+      "bytes": 1036
+    },
+    {
+      "path": "service/negative/tests/RefutationRed.lean",
+      "sha256": "578400fab2b49c0704ea010d2a34923c941417d5483c40022c2089523a59d476",
+      "bytes": 154
+    },
+    {
+      "path": "service/negative/tests/SignedAxioms.lean",
+      "sha256": "ef4a13492e491c64d0688978a786f340406c7ae6d390d165268958f938938dc9",
+      "bytes": 941
+    },
+    {
+      "path": "service/negative/tests/SignedControllerControls.lean",
+      "sha256": "5e940b88903570502bc9a2d950211a47ca942dd038852238390dc10228d119fe",
+      "bytes": 1379
+    },
+    {
+      "path": "service/negative/tests/SignedControllerRed.lean",
+      "sha256": "f44f5fbe2d570209edf225964fd22cf84d3a3bca73f7f382c17d2c11e0d0e49a",
+      "bytes": 149
+    },
+    {
+      "path": "service/negative/tests/SignedControls.lean",
+      "sha256": "35a5d6255b3fb2076f1a7440051f05249a1c467c436e5fcd5fd008b2c07d8b35",
+      "bytes": 2526
+    },
+    {
+      "path": "service/negative/tests/SignedDependencies.lean",
+      "sha256": "841160f6ec05d7bc589bed9b33d1cf422aa0f266bb914430576074e914c3a54d",
+      "bytes": 3507
+    },
+    {
+      "path": "service/negative/tests/SignedServiceRed.lean",
+      "sha256": "4cb50594280758198066ac8dfe89cc6358a3c7c4bfa62bbd93e81fe92105dc71",
+      "bytes": 176
+    },
+    {
+      "path": "service/negative/tests/SmallFixtures.lean",
+      "sha256": "cbfde605e09d1c7eb86c7f54c5a388b48653b15b087d9a8844fae58186a74129",
+      "bytes": 887
+    },
+    {
+      "path": "tests/test_wrapper.py",
+      "sha256": "7230eb7f76593b74ed7872862c0ec7405c16389ebc1307b7260ece6992d11d37",
+      "bytes": 5857
+    }
+  ]
+}

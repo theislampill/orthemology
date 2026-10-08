@@ -1,0 +1,3212 @@
+{
+  "id": "D05-T08-BATCH-ORIGINAL",
+  "family": "t08-batch-physical",
+  "result_families": [
+    "t08-actual-batch",
+    "t08-native-two-batch"
+  ],
+  "origin_archive_sha256": "19f90a7bfd9bd2840c71c972029447533e9f5985281c275c5c0979ff8597f906",
+  "source_ids": [
+    "D05-SRC-69b7e9d5dbac136ba25c",
+    "D05-SRC-8d967029c43dfbcf3cf7",
+    "D05-SRC-e2ac4eef2f76ca44c10e",
+    "D05-SRC-ee81cb71dcbb76add223",
+    "D05-SRC-acd18aa2348309c5d280",
+    "D05-SRC-5feb6eb729bc0f067049",
+    "D05-SRC-4dd88aef8f5057f236f6",
+    "D05-SRC-e3f1256c591b6a86c365",
+    "D05-SRC-813fe3bc7791dd8c9b19",
+    "D05-SRC-4e8066f4e354277af880",
+    "D05-SRC-5b6903fce47272c2bc8c",
+    "D05-SRC-4eaf21d8406e4af0202a",
+    "D05-SRC-554c472c8d36fdc1ca53",
+    "D05-SRC-0bbcf851589f28146753",
+    "D05-SRC-1704b423c2115de83f34",
+    "D05-SRC-afdf71a6629607ee7e7b",
+    "D05-SRC-2bcace24f28ac52740f9",
+    "D05-SRC-e4316eed84fab993a008",
+    "D05-SRC-5d5d1339af5c424d2428",
+    "D05-SRC-73c70d42a76ae3bff816",
+    "D05-SRC-0ab3acdcd1e026a60289",
+    "D05-SRC-cc85b37751706bb54b8f",
+    "D05-SRC-051605b212c25122b9dc",
+    "D05-SRC-e949c962619a86887a5e",
+    "D05-SRC-f50d2a084fd3f2a8534e",
+    "D05-SRC-ab2c34f9c9bed040e966",
+    "D05-SRC-5ddaa875cd66a3981270",
+    "D05-SRC-40cfa4926e54dd007e11",
+    "D05-SRC-340c2490b4bf1b5170b4",
+    "D05-SRC-6343785a482c876eb8b9",
+    "D05-SRC-9549239ac7a10d4fc70f",
+    "D05-SRC-35341203c2b6a8ac227e",
+    "D05-SRC-954f9841133f5baac3dd",
+    "D05-SRC-24f15c386a3a11003bdd",
+    "D05-SRC-f6b4093994109b8e5809",
+    "D05-SRC-9e2a0b0ea01b9837a1e4",
+    "D05-SRC-0f5a28393b67e374e2d1",
+    "D05-SRC-1e5ce5f4a36fbd790d4f",
+    "D05-SRC-5b420daaee17ed5718f9",
+    "D05-SRC-a5d39a0d959746da050a",
+    "D05-SRC-948603121ae4940daa2a",
+    "D05-SRC-a7e04178efbf5f84c7db",
+    "D05-SRC-df0a3fd7cd9046a86012",
+    "D05-SRC-80b33459aa15a1100bb5",
+    "D05-SRC-84f48672225616af620b",
+    "D05-SRC-3ff9ba137f378d20634a",
+    "D05-SRC-a2e03a83d3dec7b23696",
+    "D05-SRC-a7e783750e513524999e",
+    "D05-SRC-d089c4cab6292aa1b9bb",
+    "D05-SRC-aa1f7d785e5a54f578c5",
+    "D05-SRC-0d13f3bfa5cd735b70e8",
+    "D05-SRC-89ca92308cb352735137",
+    "D05-SRC-fde08de35736e4525291",
+    "D05-SRC-18947442a7f8eeb42e13",
+    "D05-SRC-17af0d7cd217255df234",
+    "D05-SRC-6ea5d995049ea07782fa",
+    "D05-SRC-1cc21a292a13727074b1",
+    "D05-SRC-bcb652c97337ceadb485",
+    "D05-SRC-668c923eaa8cf429a329",
+    "D05-SRC-828e5d6a75b3a1ffcdfd",
+    "D05-SRC-c36e6863895f44baf964",
+    "D05-SRC-5f671e027916e9b5e87d",
+    "D05-SRC-120a4a801298c98c74a0",
+    "D05-SRC-875a3a56c4fca5d52dd4",
+    "D05-SRC-add01df525af070ab808",
+    "D05-SRC-2cc6329bf086c04f5fd1",
+    "D05-SRC-60b5eae790584aa70650",
+    "D05-SRC-75e35b0f8c96a6ac6f12",
+    "D05-SRC-98d65954ee6cbecfc860",
+    "D05-SRC-b466f97a0c1850500c41",
+    "D05-SRC-794c1911f7ec98390561",
+    "D05-SRC-b9fac86b402c3894021a",
+    "D04-SRC-a85d94dc414a670c7a8f",
+    "D04-SRC-be2c9366c9dcd528896a"
+  ],
+  "review_ids": [
+    "T08-ACTUAL-BATCH-REVIEW-1",
+    "T08-NATIVE-TWO-BATCH-REVIEW-1",
+    "T08-NATIVE-TWO-BATCH-REVIEW-2"
+  ],
+  "targets": [
+    {
+      "id": "target-1",
+      "source_id": "D05-SRC-aa1f7d785e5a54f578c5",
+      "declaration": "theorem runBatch_refines_history {base} (authority : Authority base 4)\n    (w : ComposedExecution.World) (s : State (interface base 4))\n    (aligned : Aligned authority w s) (reachable : Reachable authority.config s)\n    (actor : Actor) (action : Action) :\n    ∃ next events, Aligned authority (runBatch w actor action).1 next ∧\n      Trace authority.config s events next := by\n  obtain ⟨runtimeEvents, runtimeHistory⟩ := runBatch_runtime_trace authority w actor action\n  exact runtime_cancel_trace_refines_history authority aligned reachable runtimeHistory\n\n/-- This consequence is about the actual aggregate output, and still checks\nthe full effective policy at the actual query time. -/",
+      "target_sha256": "b41b44b9c2b654f0339322f31b3726340c208a251434256c42088c1aa2da8956",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-2",
+      "source_id": "D05-SRC-828e5d6a75b3a1ffcdfd",
+      "declaration": "theorem runBatch_survival_iff (w : ComposedExecution.World) (actor : Actor) (action : Action) (successor : Plant)\n    (proposal : localStep actor.observedPlant actor.policy actor.observedTime action = some successor)\n    (roots : w.n = 4) (quorum : w.q = 3)\n    (ready : AdmissionReady w action successor actor.identity) :\n    landedCount (runBatch w actor action).2 = 1 ↔\n      HasSurvivingTrial w action successor actor.nonce fourPaths := by\n  constructor\n  · intro one\n    have positive : 0 < landedCount (runBatch w actor action).2 := by omega\n    rw [runBatch_eq_fold] at positive\n    exact fold_landing_has_surviving_trial actor action successor proposal fourPaths (w, []) rfl positive\n  · intro available\n    have positive : 0 < landedCount (runBatch w actor action).2 := by\n      rw [runBatch_eq_fold]\n      apply fold_surviving_trial_progress actor action successor proposal fourPaths (w, [])\n      · intro path member\n        exact ⟨(fourPaths_bounded path member).1,\n          by simpa only [quorum] using fourPaths_length path member,\n          by simpa only [roots] using (fourPaths_bounded path member).2⟩\n      · exact ready\n      · exact available\n    have atMost := runBatch_at_most_one_landing w actor action\n    omega",
+      "target_sha256": "cb0f3fbff043244ea6540a4398b253a186b2ff606d59751ca4bb905f2206eec2",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-3",
+      "source_id": "D05-SRC-bcb652c97337ceadb485",
+      "declaration": "theorem native_is_exact_controller_projection :\n    batchTestsPureProjection sourceBytes [0] = Native.repairedBatch := by\n  rfl",
+      "target_sha256": "a94ddd61298101fa84545d46b33f2490f632fc2d48c06906f31ac10ba56410e2",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "target-4",
+      "source_id": "D05-SRC-17af0d7cd217255df234",
+      "declaration": "theorem native_full_batch_common_history :\n    ∃ next events, Aligned authority repairedBatch.1 next ∧\n      Trace authority.config (Initial authority.config before) events next := by\n  obtain ⟨events, history⟩ := native_full_batch_runtime_trace\n  exact runtime_cancel_trace_refines_history authority start_aligned start_reachable history",
+      "target_sha256": "b07534dc974b060865e68704097a58c5f25fa1d360af162af6f3a91d88b4512e",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "counterexample-1",
+      "source_id": "D05-SRC-5f671e027916e9b5e87d",
+      "declaration": "theorem deleting_any_path_loses_one_fault_guarantee :\n    (∀ path ∈ fourPaths.erase [0,1,2], 3 ∈ path) ∧\n    (∀ path ∈ fourPaths.erase [0,1,3], 2 ∈ path) ∧\n    (∀ path ∈ fourPaths.erase [0,2,3], 1 ∈ path) ∧\n    (∀ path ∈ fourPaths.erase [1,2,3], 0 ∈ path) := by decide",
+      "target_sha256": "6e8a8c4a23c87af00b5a661b58f60eaf0f8c68389a5c213472d585dfdd66d981",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "counterexample-2",
+      "source_id": "D05-SRC-5f671e027916e9b5e87d",
+      "declaration": "theorem two_faults_block_every_path :\n    let out := runBatch (w [0,1]) actor a\n    out.2.map AttemptTrace.prepared = [true,true,true,true] ∧\n    out.2.map AttemptTrace.landed = [false,false,false,false] ∧ out.1.plant = p := by decide",
+      "target_sha256": "878852bad3ea2bb5c5c50add3ae6f993264ab7f669bad0bc69c64f856b5737d6",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    },
+    {
+      "id": "counterexample-3",
+      "source_id": "D05-SRC-5f671e027916e9b5e87d",
+      "declaration": "theorem prior_tombstone_blocks_only_intact_path :\n    (cancelWith (w [0]) fourth \"A\" [1,2,3]).2 = true ∧\n    (runBatch fourthCancelled actor a).2.map AttemptTrace.prepared = [true,true,true,false] ∧\n    (runBatch fourthCancelled actor a).2.map AttemptTrace.landed = [false,false,false,false] ∧\n    (runBatch fourthCancelled actor a).1.plant = p := by decide\n\n/-- A high-water condition over all old tombstones is sufficient but not\nnecessary. This larger-nonce old envelope differs from every prospective trial. -/",
+      "target_sha256": "733a55d225ae6db12227ea5434b3b8976e512854ca710a7d417a0704fba9bf14",
+      "domain": "FINITE_MODEL",
+      "calculus": "OTHER"
+    }
+  ],
+  "controls": [
+    {
+      "id": "proved-deleting_any_path_loses_one_fault_guarantee",
+      "source_id": "D05-SRC-5f671e027916e9b5e87d",
+      "target_id": "counterexample-1",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "proved-two_faults_block_every_path",
+      "source_id": "D05-SRC-5f671e027916e9b5e87d",
+      "target_id": "counterexample-2",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "proved-prior_tombstone_blocks_only_intact_path",
+      "source_id": "D05-SRC-5f671e027916e9b5e87d",
+      "target_id": "counterexample-3",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "positive-infrastructure",
+      "source_id": "D05-SRC-69b7e9d5dbac136ba25c",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchSourceChallenges",
+      "source_id": "D05-SRC-5f671e027916e9b5e87d",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchHistoryPremiseChallenges",
+      "source_id": "D05-SRC-120a4a801298c98c74a0",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchAvailabilityChallenges",
+      "source_id": "D05-SRC-875a3a56c4fca5d52dd4",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchFaultSemanticsChallenges",
+      "source_id": "D05-SRC-add01df525af070ab808",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchContractChallenges",
+      "source_id": "D05-SRC-2cc6329bf086c04f5fd1",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchFreshnessV2SourceChallenges",
+      "source_id": "D05-SRC-60b5eae790584aa70650",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchV2ContractChallenges",
+      "source_id": "D05-SRC-75e35b0f8c96a6ac6f12",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchAvailabilityIffSourceChallenges",
+      "source_id": "D05-SRC-98d65954ee6cbecfc860",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "control-review-BatchSurvivalContractChallenges",
+      "source_id": "D05-SRC-b466f97a0c1850500c41",
+      "target_id": "target-1",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "files": [
+      {
+        "source_id": "D05-SRC-69b7e9d5dbac136ba25c",
+        "path": "TypedCriterionGuard.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-8d967029c43dfbcf3cf7",
+        "path": "CriterionInstallation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-e2ac4eef2f76ca44c10e",
+        "path": "DynamicInterlock.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-ee81cb71dcbb76add223",
+        "path": "Composition.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-acd18aa2348309c5d280",
+        "path": "HistoryModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5feb6eb729bc0f067049",
+        "path": "HistoryInvariant.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-4dd88aef8f5057f236f6",
+        "path": "HistorySafety.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-e3f1256c591b6a86c365",
+        "path": "HistoryTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-813fe3bc7791dd8c9b19",
+        "path": "Fixtures.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-4e8066f4e354277af880",
+        "path": "JoinModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5b6903fce47272c2bc8c",
+        "path": "JoinInvariant.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-4eaf21d8406e4af0202a",
+        "path": "JoinSafety.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-554c472c8d36fdc1ca53",
+        "path": "JoinTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-0bbcf851589f28146753",
+        "path": "OriginalTranslation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-1704b423c2115de83f34",
+        "path": "TypedInstantiation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-afdf71a6629607ee7e7b",
+        "path": "JoinOperations.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-2bcace24f28ac52740f9",
+        "path": "TypedHistoryProperties.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-e4316eed84fab993a008",
+        "path": "TypedExamples.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5d5d1339af5c424d2428",
+        "path": "TypedFixtureHelpers.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-73c70d42a76ae3bff816",
+        "path": "TypedControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-0ab3acdcd1e026a60289",
+        "path": "EpochOffset.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-cc85b37751706bb54b8f",
+        "path": "JoinBatches.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-051605b212c25122b9dc",
+        "path": "LifecycleModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-e949c962619a86887a5e",
+        "path": "LifecycleCertification.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-f50d2a084fd3f2a8534e",
+        "path": "LifecycleDelivery.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-ab2c34f9c9bed040e966",
+        "path": "LifecycleAdmission.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5ddaa875cd66a3981270",
+        "path": "JoinPreparation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-40cfa4926e54dd007e11",
+        "path": "LifecyclePreparation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-340c2490b4bf1b5170b4",
+        "path": "LifecycleAttempt.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-6343785a482c876eb8b9",
+        "path": "RuntimeTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-9549239ac7a10d4fc70f",
+        "path": "PinnedSource.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-35341203c2b6a8ac227e",
+        "path": "RuntimeFixture.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-954f9841133f5baac3dd",
+        "path": "OffsetHistoryProperties.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-24f15c386a3a11003bdd",
+        "path": "RuntimeControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-f6b4093994109b8e5809",
+        "path": "JoinCancellation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-9e2a0b0ea01b9837a1e4",
+        "path": "LifecycleCancellation.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-0f5a28393b67e374e2d1",
+        "path": "RuntimeCancellationTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-1e5ce5f4a36fbd790d4f",
+        "path": "RuntimeCancellationControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5b420daaee17ed5718f9",
+        "path": "ReferenceClock.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a5d39a0d959746da050a",
+        "path": "MonotoneReferenceTrace.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-948603121ae4940daa2a",
+        "path": "ReferenceClockControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a7e04178efbf5f84c7db",
+        "path": "BatchSource.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-df0a3fd7cd9046a86012",
+        "path": "BatchTrial.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-80b33459aa15a1100bb5",
+        "path": "BatchUniqueness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-84f48672225616af620b",
+        "path": "BatchReadiness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-3ff9ba137f378d20634a",
+        "path": "BatchProgress.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a2e03a83d3dec7b23696",
+        "path": "BatchMemory.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-a7e783750e513524999e",
+        "path": "BatchFrames.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-d089c4cab6292aa1b9bb",
+        "path": "BatchExtraction.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-aa1f7d785e5a54f578c5",
+        "path": "BatchSafety.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-0d13f3bfa5cd735b70e8",
+        "path": "BatchCleanup.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-89ca92308cb352735137",
+        "path": "BatchExactFreshness.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-fde08de35736e4525291",
+        "path": "BatchExactProgress.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-18947442a7f8eeb42e13",
+        "path": "BatchAdmission.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-17af0d7cd217255df234",
+        "path": "BatchNative.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-6ea5d995049ea07782fa",
+        "path": "BatchExactControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-1cc21a292a13727074b1",
+        "path": "BatchRetryControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-bcb652c97337ceadb485",
+        "path": "BatchControllerProjection.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-668c923eaa8cf429a329",
+        "path": "BatchSurvivalModel.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-828e5d6a75b3a1ffcdfd",
+        "path": "BatchSurvival.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-c36e6863895f44baf964",
+        "path": "BatchSurvivalControls.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "D05-SRC-5f671e027916e9b5e87d",
+        "path": "BatchSourceChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-120a4a801298c98c74a0",
+        "path": "BatchHistoryPremiseChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-875a3a56c4fca5d52dd4",
+        "path": "BatchAvailabilityChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-add01df525af070ab808",
+        "path": "BatchFaultSemanticsChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-2cc6329bf086c04f5fd1",
+        "path": "BatchContractChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-60b5eae790584aa70650",
+        "path": "BatchFreshnessV2SourceChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-75e35b0f8c96a6ac6f12",
+        "path": "BatchV2ContractChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-98d65954ee6cbecfc860",
+        "path": "BatchAvailabilityIffSourceChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-b466f97a0c1850500c41",
+        "path": "BatchSurvivalContractChallenges.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "D05-SRC-794c1911f7ec98390561",
+        "path": "review-documents/D05-SRC-794c1911f7ec98390561.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D05-SRC-b9fac86b402c3894021a",
+        "path": "review-documents/D05-SRC-b9fac86b402c3894021a.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "D04-SRC-a85d94dc414a670c7a8f",
+        "path": "dependency-lock/mathlib-lake-manifest.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "D04-SRC-be2c9366c9dcd528896a",
+        "path": "dependency-lock/DEPENDENCIES.json",
+        "role": "LOCK"
+      }
+    ],
+    "modules": [
+      {
+        "name": "TypedCriterionGuard",
+        "source_id": "D05-SRC-69b7e9d5dbac136ba25c",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "CriterionInstallation",
+        "source_id": "D05-SRC-8d967029c43dfbcf3cf7",
+        "imports": [
+          "Init",
+          "TypedCriterionGuard"
+        ]
+      },
+      {
+        "name": "DynamicInterlock",
+        "source_id": "D05-SRC-e2ac4eef2f76ca44c10e",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "Composition",
+        "source_id": "D05-SRC-ee81cb71dcbb76add223",
+        "imports": [
+          "Init",
+          "CriterionInstallation",
+          "DynamicInterlock"
+        ]
+      },
+      {
+        "name": "HistoryModel",
+        "source_id": "D05-SRC-acd18aa2348309c5d280",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ]
+      },
+      {
+        "name": "HistoryInvariant",
+        "source_id": "D05-SRC-5feb6eb729bc0f067049",
+        "imports": [
+          "Init",
+          "HistoryModel"
+        ]
+      },
+      {
+        "name": "HistorySafety",
+        "source_id": "D05-SRC-4dd88aef8f5057f236f6",
+        "imports": [
+          "Init",
+          "HistoryInvariant"
+        ]
+      },
+      {
+        "name": "HistoryTrace",
+        "source_id": "D05-SRC-e3f1256c591b6a86c365",
+        "imports": [
+          "Init",
+          "HistorySafety"
+        ]
+      },
+      {
+        "name": "Fixtures",
+        "source_id": "D05-SRC-813fe3bc7791dd8c9b19",
+        "imports": [
+          "Init",
+          "Composition"
+        ]
+      },
+      {
+        "name": "JoinModel",
+        "source_id": "D05-SRC-4e8066f4e354277af880",
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ]
+      },
+      {
+        "name": "JoinInvariant",
+        "source_id": "D05-SRC-5b6903fce47272c2bc8c",
+        "imports": [
+          "Init",
+          "JoinModel"
+        ]
+      },
+      {
+        "name": "JoinSafety",
+        "source_id": "D05-SRC-4eaf21d8406e4af0202a",
+        "imports": [
+          "Init",
+          "JoinInvariant"
+        ]
+      },
+      {
+        "name": "JoinTrace",
+        "source_id": "D05-SRC-554c472c8d36fdc1ca53",
+        "imports": [
+          "Init",
+          "JoinSafety"
+        ]
+      },
+      {
+        "name": "OriginalTranslation",
+        "source_id": "D05-SRC-0bbcf851589f28146753",
+        "imports": [
+          "Init",
+          "JoinTrace",
+          "HistoryTrace"
+        ]
+      },
+      {
+        "name": "TypedInstantiation",
+        "source_id": "D05-SRC-1704b423c2115de83f34",
+        "imports": [
+          "Init",
+          "JoinTrace",
+          "Composition"
+        ]
+      },
+      {
+        "name": "JoinOperations",
+        "source_id": "D05-SRC-afdf71a6629607ee7e7b",
+        "imports": [
+          "Init",
+          "JoinTrace"
+        ]
+      },
+      {
+        "name": "TypedHistoryProperties",
+        "source_id": "D05-SRC-2bcace24f28ac52740f9",
+        "imports": [
+          "Init",
+          "TypedInstantiation"
+        ]
+      },
+      {
+        "name": "TypedExamples",
+        "source_id": "D05-SRC-e4316eed84fab993a008",
+        "imports": [
+          "Init",
+          "TypedHistoryProperties",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "TypedFixtureHelpers",
+        "source_id": "D05-SRC-5d5d1339af5c424d2428",
+        "imports": [
+          "Init",
+          "TypedExamples"
+        ]
+      },
+      {
+        "name": "TypedControls",
+        "source_id": "D05-SRC-73c70d42a76ae3bff816",
+        "imports": [
+          "Init",
+          "TypedFixtureHelpers",
+          "HistoryModel"
+        ]
+      },
+      {
+        "name": "EpochOffset",
+        "source_id": "D05-SRC-0ab3acdcd1e026a60289",
+        "imports": [
+          "Init",
+          "TypedHistoryProperties",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "JoinBatches",
+        "source_id": "D05-SRC-cc85b37751706bb54b8f",
+        "imports": [
+          "Init",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "LifecycleModel",
+        "source_id": "D05-SRC-051605b212c25122b9dc",
+        "imports": [
+          "Init",
+          "EpochOffset",
+          "JoinBatches"
+        ]
+      },
+      {
+        "name": "LifecycleCertification",
+        "source_id": "D05-SRC-e949c962619a86887a5e",
+        "imports": [
+          "Init",
+          "LifecycleModel"
+        ]
+      },
+      {
+        "name": "LifecycleDelivery",
+        "source_id": "D05-SRC-f50d2a084fd3f2a8534e",
+        "imports": [
+          "Init",
+          "LifecycleCertification"
+        ]
+      },
+      {
+        "name": "LifecycleAdmission",
+        "source_id": "D05-SRC-ab2c34f9c9bed040e966",
+        "imports": [
+          "Init",
+          "LifecycleDelivery"
+        ]
+      },
+      {
+        "name": "JoinPreparation",
+        "source_id": "D05-SRC-5ddaa875cd66a3981270",
+        "imports": [
+          "Init",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "LifecyclePreparation",
+        "source_id": "D05-SRC-40cfa4926e54dd007e11",
+        "imports": [
+          "Init",
+          "LifecycleAdmission",
+          "JoinPreparation"
+        ]
+      },
+      {
+        "name": "LifecycleAttempt",
+        "source_id": "D05-SRC-340c2490b4bf1b5170b4",
+        "imports": [
+          "Init",
+          "LifecyclePreparation"
+        ]
+      },
+      {
+        "name": "RuntimeTrace",
+        "source_id": "D05-SRC-6343785a482c876eb8b9",
+        "imports": [
+          "Init",
+          "LifecycleAttempt"
+        ]
+      },
+      {
+        "name": "PinnedSource",
+        "source_id": "D05-SRC-9549239ac7a10d4fc70f",
+        "imports": [
+          "Init",
+          "Std"
+        ]
+      },
+      {
+        "name": "RuntimeFixture",
+        "source_id": "D05-SRC-35341203c2b6a8ac227e",
+        "imports": [
+          "Init",
+          "RuntimeTrace",
+          "Fixtures",
+          "PinnedSource"
+        ]
+      },
+      {
+        "name": "OffsetHistoryProperties",
+        "source_id": "D05-SRC-954f9841133f5baac3dd",
+        "imports": [
+          "Init",
+          "LifecycleAttempt"
+        ]
+      },
+      {
+        "name": "RuntimeControls",
+        "source_id": "D05-SRC-24f15c386a3a11003bdd",
+        "imports": [
+          "Init",
+          "RuntimeFixture",
+          "OffsetHistoryProperties"
+        ]
+      },
+      {
+        "name": "JoinCancellation",
+        "source_id": "D05-SRC-f6b4093994109b8e5809",
+        "imports": [
+          "Init",
+          "JoinOperations"
+        ]
+      },
+      {
+        "name": "LifecycleCancellation",
+        "source_id": "D05-SRC-9e2a0b0ea01b9837a1e4",
+        "imports": [
+          "Init",
+          "RuntimeTrace",
+          "JoinCancellation"
+        ]
+      },
+      {
+        "name": "RuntimeCancellationTrace",
+        "source_id": "D05-SRC-0f5a28393b67e374e2d1",
+        "imports": [
+          "Init",
+          "LifecycleCancellation"
+        ]
+      },
+      {
+        "name": "RuntimeCancellationControls",
+        "source_id": "D05-SRC-1e5ce5f4a36fbd790d4f",
+        "imports": [
+          "Init",
+          "RuntimeCancellationTrace",
+          "RuntimeControls"
+        ]
+      },
+      {
+        "name": "ReferenceClock",
+        "source_id": "D05-SRC-5b420daaee17ed5718f9",
+        "imports": [
+          "Init",
+          "RuntimeCancellationTrace"
+        ]
+      },
+      {
+        "name": "MonotoneReferenceTrace",
+        "source_id": "D05-SRC-a5d39a0d959746da050a",
+        "imports": [
+          "Init",
+          "ReferenceClock"
+        ]
+      },
+      {
+        "name": "ReferenceClockControls",
+        "source_id": "D05-SRC-948603121ae4940daa2a",
+        "imports": [
+          "Init",
+          "MonotoneReferenceTrace",
+          "RuntimeCancellationControls"
+        ]
+      },
+      {
+        "name": "BatchSource",
+        "source_id": "D05-SRC-a7e04178efbf5f84c7db",
+        "imports": [
+          "Init",
+          "Composition"
+        ]
+      },
+      {
+        "name": "BatchTrial",
+        "source_id": "D05-SRC-df0a3fd7cd9046a86012",
+        "imports": [
+          "Init",
+          "BatchSource"
+        ]
+      },
+      {
+        "name": "BatchUniqueness",
+        "source_id": "D05-SRC-80b33459aa15a1100bb5",
+        "imports": [
+          "Init",
+          "BatchTrial"
+        ]
+      },
+      {
+        "name": "BatchReadiness",
+        "source_id": "D05-SRC-84f48672225616af620b",
+        "imports": [
+          "Init",
+          "BatchTrial"
+        ]
+      },
+      {
+        "name": "BatchProgress",
+        "source_id": "D05-SRC-3ff9ba137f378d20634a",
+        "imports": [
+          "Init",
+          "BatchReadiness",
+          "BatchUniqueness"
+        ]
+      },
+      {
+        "name": "BatchMemory",
+        "source_id": "D05-SRC-a2e03a83d3dec7b23696",
+        "imports": [
+          "Init",
+          "BatchReadiness",
+          "BatchProgress"
+        ]
+      },
+      {
+        "name": "BatchFrames",
+        "source_id": "D05-SRC-a7e783750e513524999e",
+        "imports": [
+          "Init",
+          "BatchProgress"
+        ]
+      },
+      {
+        "name": "BatchExtraction",
+        "source_id": "D05-SRC-d089c4cab6292aa1b9bb",
+        "imports": [
+          "Init",
+          "RuntimeCancellationTrace",
+          "BatchSource"
+        ]
+      },
+      {
+        "name": "BatchSafety",
+        "source_id": "D05-SRC-aa1f7d785e5a54f578c5",
+        "imports": [
+          "Init",
+          "BatchExtraction",
+          "MonotoneReferenceTrace"
+        ]
+      },
+      {
+        "name": "BatchCleanup",
+        "source_id": "D05-SRC-0d13f3bfa5cd735b70e8",
+        "imports": [
+          "Init",
+          "BatchFrames"
+        ]
+      },
+      {
+        "name": "BatchExactFreshness",
+        "source_id": "D05-SRC-89ca92308cb352735137",
+        "imports": [
+          "Init",
+          "BatchProgress",
+          "BatchFrames"
+        ]
+      },
+      {
+        "name": "BatchExactProgress",
+        "source_id": "D05-SRC-fde08de35736e4525291",
+        "imports": [
+          "Init",
+          "BatchExactFreshness"
+        ]
+      },
+      {
+        "name": "BatchAdmission",
+        "source_id": "D05-SRC-18947442a7f8eeb42e13",
+        "imports": [
+          "Init",
+          "BatchSafety",
+          "BatchFrames"
+        ]
+      },
+      {
+        "name": "BatchNative",
+        "source_id": "D05-SRC-17af0d7cd217255df234",
+        "imports": [
+          "Init",
+          "BatchSafety",
+          "BatchProgress",
+          "BatchMemory",
+          "BatchFrames",
+          "BatchCleanup",
+          "RuntimeFixture"
+        ]
+      },
+      {
+        "name": "BatchExactControls",
+        "source_id": "D05-SRC-6ea5d995049ea07782fa",
+        "imports": [
+          "Init",
+          "BatchExactProgress",
+          "RuntimeFixture"
+        ]
+      },
+      {
+        "name": "BatchRetryControls",
+        "source_id": "D05-SRC-1cc21a292a13727074b1",
+        "imports": [
+          "Init",
+          "BatchNative",
+          "BatchExactProgress"
+        ]
+      },
+      {
+        "name": "BatchControllerProjection",
+        "source_id": "D05-SRC-bcb652c97337ceadb485",
+        "imports": [
+          "Init",
+          "BatchNative"
+        ]
+      },
+      {
+        "name": "BatchSurvivalModel",
+        "source_id": "D05-SRC-668c923eaa8cf429a329",
+        "imports": [
+          "Init",
+          "BatchExactProgress",
+          "BatchMemory"
+        ]
+      },
+      {
+        "name": "BatchSurvival",
+        "source_id": "D05-SRC-828e5d6a75b3a1ffcdfd",
+        "imports": [
+          "Init",
+          "BatchSurvivalModel"
+        ]
+      },
+      {
+        "name": "BatchSurvivalControls",
+        "source_id": "D05-SRC-c36e6863895f44baf964",
+        "imports": [
+          "Init",
+          "BatchSurvival",
+          "BatchRetryControls"
+        ]
+      },
+      {
+        "name": "BatchSourceChallenges",
+        "source_id": "D05-SRC-5f671e027916e9b5e87d",
+        "imports": [
+          "Init",
+          "Fixtures"
+        ]
+      },
+      {
+        "name": "BatchHistoryPremiseChallenges",
+        "source_id": "D05-SRC-120a4a801298c98c74a0",
+        "imports": [
+          "Init",
+          "RuntimeCancellationControls"
+        ]
+      },
+      {
+        "name": "BatchAvailabilityChallenges",
+        "source_id": "D05-SRC-875a3a56c4fca5d52dd4",
+        "imports": [
+          "Init",
+          "RuntimeCancellationControls"
+        ]
+      },
+      {
+        "name": "BatchFaultSemanticsChallenges",
+        "source_id": "D05-SRC-add01df525af070ab808",
+        "imports": [
+          "Init",
+          "BatchSourceChallenges"
+        ]
+      },
+      {
+        "name": "BatchContractChallenges",
+        "source_id": "D05-SRC-2cc6329bf086c04f5fd1",
+        "imports": [
+          "Init",
+          "BatchSafety",
+          "BatchMemory",
+          "BatchFrames",
+          "BatchSourceChallenges",
+          "RuntimeFixture"
+        ]
+      },
+      {
+        "name": "BatchFreshnessV2SourceChallenges",
+        "source_id": "D05-SRC-60b5eae790584aa70650",
+        "imports": [
+          "Init",
+          "BatchSourceChallenges",
+          "BatchAvailabilityChallenges",
+          "BatchSafety"
+        ]
+      },
+      {
+        "name": "BatchV2ContractChallenges",
+        "source_id": "D05-SRC-75e35b0f8c96a6ac6f12",
+        "imports": [
+          "Init",
+          "BatchExactProgress",
+          "BatchAdmission",
+          "BatchCleanup",
+          "BatchNative",
+          "BatchFreshnessV2SourceChallenges"
+        ]
+      },
+      {
+        "name": "BatchAvailabilityIffSourceChallenges",
+        "source_id": "D05-SRC-98d65954ee6cbecfc860",
+        "imports": [
+          "Init",
+          "BatchSourceChallenges",
+          "RuntimeCancellationControls"
+        ]
+      },
+      {
+        "name": "BatchSurvivalContractChallenges",
+        "source_id": "D05-SRC-b466f97a0c1850500c41",
+        "imports": [
+          "Init",
+          "BatchSurvival",
+          "BatchAvailabilityIffSourceChallenges"
+        ]
+      }
+    ],
+    "module_order": [
+      "JoinModel",
+      "JoinInvariant",
+      "JoinSafety",
+      "JoinTrace",
+      "TypedCriterionGuard",
+      "CriterionInstallation",
+      "DynamicInterlock",
+      "Composition",
+      "TypedInstantiation",
+      "TypedHistoryProperties",
+      "JoinOperations",
+      "EpochOffset",
+      "JoinBatches",
+      "LifecycleModel",
+      "LifecycleCertification",
+      "LifecycleDelivery",
+      "LifecycleAdmission",
+      "JoinPreparation",
+      "LifecyclePreparation",
+      "LifecycleAttempt",
+      "RuntimeTrace",
+      "JoinCancellation",
+      "LifecycleCancellation",
+      "RuntimeCancellationTrace",
+      "BatchSource",
+      "BatchExtraction",
+      "ReferenceClock",
+      "MonotoneReferenceTrace",
+      "BatchSafety",
+      "BatchTrial",
+      "BatchReadiness",
+      "BatchUniqueness",
+      "BatchProgress",
+      "BatchFrames",
+      "BatchExactFreshness",
+      "BatchExactProgress",
+      "BatchMemory",
+      "BatchSurvivalModel",
+      "BatchSurvival",
+      "BatchCleanup",
+      "Fixtures",
+      "PinnedSource",
+      "RuntimeFixture",
+      "BatchNative",
+      "BatchControllerProjection",
+      "BatchSourceChallenges"
+    ],
+    "positive_roots": [
+      "TypedCriterionGuard",
+      "CriterionInstallation",
+      "DynamicInterlock",
+      "Composition",
+      "HistoryModel",
+      "HistoryInvariant",
+      "HistorySafety",
+      "HistoryTrace",
+      "Fixtures",
+      "JoinModel",
+      "JoinInvariant",
+      "JoinSafety",
+      "JoinTrace",
+      "OriginalTranslation",
+      "TypedInstantiation",
+      "JoinOperations",
+      "TypedHistoryProperties",
+      "TypedExamples",
+      "TypedFixtureHelpers",
+      "TypedControls",
+      "EpochOffset",
+      "JoinBatches",
+      "LifecycleModel",
+      "LifecycleCertification",
+      "LifecycleDelivery",
+      "LifecycleAdmission",
+      "JoinPreparation",
+      "LifecyclePreparation",
+      "LifecycleAttempt",
+      "RuntimeTrace",
+      "PinnedSource",
+      "RuntimeFixture",
+      "OffsetHistoryProperties",
+      "RuntimeControls",
+      "JoinCancellation",
+      "LifecycleCancellation",
+      "RuntimeCancellationTrace",
+      "RuntimeCancellationControls",
+      "ReferenceClock",
+      "MonotoneReferenceTrace",
+      "ReferenceClockControls",
+      "BatchSource",
+      "BatchTrial",
+      "BatchUniqueness",
+      "BatchReadiness",
+      "BatchProgress",
+      "BatchMemory",
+      "BatchFrames",
+      "BatchExtraction",
+      "BatchSafety",
+      "BatchCleanup",
+      "BatchExactFreshness",
+      "BatchExactProgress",
+      "BatchAdmission",
+      "BatchNative",
+      "BatchExactControls",
+      "BatchRetryControls",
+      "BatchControllerProjection",
+      "BatchSurvivalModel",
+      "BatchSurvival",
+      "BatchSurvivalControls"
+    ],
+    "audit_roots": [
+      "BatchSourceChallenges",
+      "BatchHistoryPremiseChallenges",
+      "BatchAvailabilityChallenges",
+      "BatchFaultSemanticsChallenges",
+      "BatchContractChallenges",
+      "BatchFreshnessV2SourceChallenges",
+      "BatchV2ContractChallenges",
+      "BatchAvailabilityIffSourceChallenges",
+      "BatchSurvivalContractChallenges"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Card.lean",
+        "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+      },
+      {
+        "module": "Mathlib.Tactic",
+        "package": "mathlib",
+        "path": "Mathlib/Tactic.lean",
+        "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+      },
+      {
+        "module": "Std",
+        "package": "lean-release",
+        "path": "Std.lean",
+        "sha256": "fc1fcd5ee6968164eeedd0d1fc6f25784355e088adc8aa37c7da2d46777b145d"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "target-1",
+        "module": "BatchSafety",
+        "name": "OperationalJoin.Offset.Batch.runBatch_refines_history"
+      },
+      {
+        "target_id": "target-2",
+        "module": "BatchSurvival",
+        "name": "OperationalJoin.Offset.Batch.runBatch_survival_iff"
+      },
+      {
+        "target_id": "target-3",
+        "module": "BatchControllerProjection",
+        "name": "OperationalJoin.Offset.Batch.ControllerProjection.native_is_exact_controller_projection"
+      },
+      {
+        "target_id": "target-4",
+        "module": "BatchNative",
+        "name": "OperationalJoin.Offset.Batch.Native.native_full_batch_common_history"
+      },
+      {
+        "target_id": "counterexample-1",
+        "module": "BatchSourceChallenges",
+        "name": "BatchSourceReview.deleting_any_path_loses_one_fault_guarantee"
+      },
+      {
+        "target_id": "counterexample-2",
+        "module": "BatchSourceChallenges",
+        "name": "BatchSourceReview.two_faults_block_every_path"
+      },
+      {
+        "target_id": "counterexample-3",
+        "module": "BatchSourceChallenges",
+        "name": "BatchSourceReview.prior_tombstone_blocks_only_intact_path"
+      }
+    ],
+    "package_manifest_source_id": "D04-SRC-be2c9366c9dcd528896a",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "D04-SRC-be2c9366c9dcd528896a"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "D04-SRC-a85d94dc414a670c7a8f"
+      }
+    ],
+    "tools": [
+      {
+        "name": "python",
+        "kind": "PYTHON",
+        "version": "3.11.9",
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "platform": "linux-x86_64",
+        "path_kind": "EXECUTABLE"
+      },
+      {
+        "name": "lean-root",
+        "kind": "LEAN",
+        "version": "4.19.0",
+        "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+        "platform": "linux-x86_64",
+        "path_kind": "DISTRIBUTION_ROOT"
+      }
+    ],
+    "external_inputs": [
+      {
+        "id": "source-archive",
+        "source_id": "OP-SRC-cf335ac4be7b65a16f82",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "48394ad696250f13be38c3b71074c3f4411090886d7861f12231ff370b4714e5",
+        "expected_bytes": 419952,
+        "role": "INPUT"
+      },
+      {
+        "id": "batch-science-archive",
+        "source_id": "OP-SRC-63c1116b1140f9004b15",
+        "kind": "FILE",
+        "manifest_source_id": null,
+        "manifest_key": null,
+        "expected_sha256": "19f90a7bfd9bd2840c71c972029447533e9f5985281c275c5c0979ff8597f906",
+        "expected_bytes": 2438940,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "original",
+        "source_id": "D05-SRC-23d6e243b4bae7defef4",
+        "recipe": "t08-batch-original-v1",
+        "sha256": "f35cc6d8909ef15ea24156e089f56c6b1db20a83da39c869e6473a76a7cb0aee",
+        "argument_meanings": {
+          "--source-zip": "INPUT_FILE",
+          "--lean-root": "LEAN_DISTRIBUTION_ROOT",
+          "--mathlib": "MATHLIB_ROOT",
+          "--output": "FRESH_OUTPUT_DIRECTORY",
+          "--stage-timeout": "POSITIVE_INTEGER"
+        },
+        "external_input_id": "source-archive"
+      }
+    ],
+    "stages": [
+      {
+        "id": "t08-batch-helper-1",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:operational-helper}",
+          "t08-batch-helper-1"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 600,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "t08-batch-helper-2",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:operational-helper}",
+          "t08-batch-helper-2"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 600,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "original-driver",
+        "kind": "DRIVER",
+        "driver_id": "original",
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:original}",
+          "--source-zip",
+          "{input:batch-science-archive}",
+          "--lean-root",
+          "{tool:lean-root}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--output",
+          "{out}/original",
+          "--stage-timeout",
+          "300"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "t08-batch-helper-1",
+          "t08-batch-helper-2"
+        ],
+        "timeout_seconds": 24000,
+        "output_paths": [
+          "original"
+        ],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "positive-prerequisite",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-TypedCriterionGuard"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "positive-infrastructure"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-CriterionInstallation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-CriterionInstallation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-DynamicInterlock",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-DynamicInterlock"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-Composition",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-Composition"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-HistoryModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-HistoryModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-HistoryInvariant",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-HistoryInvariant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-HistorySafety",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-HistorySafety"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-HistoryTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-HistoryTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-Fixtures",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-Fixtures"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-JoinModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-JoinModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-JoinInvariant",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-JoinInvariant"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-JoinSafety",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-JoinSafety"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-JoinTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-JoinTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-OriginalTranslation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-OriginalTranslation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-TypedInstantiation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-TypedInstantiation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-JoinOperations",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-JoinOperations"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-TypedHistoryProperties",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-TypedHistoryProperties"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-TypedExamples",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-TypedExamples"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-TypedFixtureHelpers",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-TypedFixtureHelpers"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-TypedControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-TypedControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-EpochOffset",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-EpochOffset"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-JoinBatches",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-JoinBatches"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-LifecycleModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-LifecycleModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-LifecycleCertification",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-LifecycleCertification"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-LifecycleDelivery",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-LifecycleDelivery"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-LifecycleAdmission",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-LifecycleAdmission"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-JoinPreparation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-JoinPreparation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-LifecyclePreparation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-LifecyclePreparation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-LifecycleAttempt",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-LifecycleAttempt"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-RuntimeTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-RuntimeTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-PinnedSource",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-PinnedSource"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-RuntimeFixture",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-RuntimeFixture"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-OffsetHistoryProperties",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-OffsetHistoryProperties"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-RuntimeControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-RuntimeControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-JoinCancellation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-JoinCancellation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-LifecycleCancellation",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-LifecycleCancellation"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-RuntimeCancellationTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-RuntimeCancellationTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-RuntimeCancellationControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-RuntimeCancellationControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-ReferenceClock",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-ReferenceClock"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-MonotoneReferenceTrace",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-MonotoneReferenceTrace"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-ReferenceClockControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-ReferenceClockControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchSource",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchSource"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchTrial",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchTrial"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchUniqueness",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchUniqueness"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchReadiness",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchReadiness"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchProgress",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchProgress"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchMemory",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchMemory"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchFrames",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchFrames"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchExtraction",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchExtraction"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchSafety",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchSafety"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchCleanup",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchCleanup"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchExactFreshness",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchExactFreshness"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchExactProgress",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchExactProgress"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchAdmission",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchAdmission"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchNative",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchNative"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchExactControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchExactControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchRetryControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchRetryControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchControllerProjection",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchControllerProjection"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchSurvivalModel",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchSurvivalModel"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchSurvival",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchSurvival"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-science-BatchSurvivalControls",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "science-BatchSurvivalControls"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-fresh-science-AllNamedDeclarations",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "fresh science/AllNamedDeclarations"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchSourceChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchSourceChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "proved-deleting_any_path_loses_one_fault_guarantee",
+          "proved-two_faults_block_every_path",
+          "proved-prior_tombstone_blocks_only_intact_path",
+          "control-review-BatchSourceChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchHistoryPremiseChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchHistoryPremiseChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-review-BatchHistoryPremiseChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchAvailabilityChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchAvailabilityChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-review-BatchAvailabilityChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchFaultSemanticsChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchFaultSemanticsChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-review-BatchFaultSemanticsChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchContractChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchContractChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-review-BatchContractChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchFreshnessV2SourceChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchFreshnessV2SourceChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-review-BatchFreshnessV2SourceChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchV2ContractChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchV2ContractChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-review-BatchV2ContractChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchAvailabilityIffSourceChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchAvailabilityIffSourceChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-review-BatchAvailabilityIffSourceChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-review-BatchSurvivalContractChallenges",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "review-BatchSurvivalContractChallenges"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [
+          "control-review-BatchSurvivalContractChallenges"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "observe-ReviewerNamedDeclarations",
+        "kind": "POSITIVE_CONTROL",
+        "driver_id": "original",
+        "argv": [
+          "{builtin:observe-child}",
+          "original-driver",
+          "ReviewerNamedDeclarations"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-driver"
+        ],
+        "timeout_seconds": 30,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "original/fresh review",
+      "original/fresh science/build"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "tenth-final-report-reference-acceptance-v2",
+  "accepted_at_utc": "2026-10-03T16:36:20.183740+00:00",
+  "disposition": "ACCEPTED narrow current-DOCX reference rebound",
+  "inputs": [
+    {
+      "path": "tranche10/report/draft-v10/REPORT_SOURCE.md",
+      "bytes": 68576,
+      "sha256": "7456f9664506bed6415a5f8b7f0623014180287d033e2e5ff8d9d1d249236974"
+    },
+    {
+      "path": "tranche10/report/candidate-v4/Orthemology_Tenth_Research_Report_v1_20261003.docx",
+      "bytes": 64632,
+      "sha256": "72d732325f48c720633f32be9b9fd76ef80a47369a3e1df69b08581acaa969fb"
+    },
+    {
+      "path": "tranche10/report/candidate-v4/Orthemology_Tenth_Research_Report_v1_20261003.binding.json",
+      "bytes": 118445,
+      "sha256": "524f46982836ad1081b886daa30175e66f792827a0994f26b68e5b54a8da719b"
+    },
+    {
+      "path": "tranche10/report/candidate-v4/NATIVE_DELTA_VERIFICATION.json",
+      "bytes": 6672,
+      "sha256": "de6a2a8479415f740789bace58804727f65fd905a785812339ceb590f4c1612f"
+    },
+    {
+      "path": "tranche10/report/candidate-v4/render-v1/page-16.png",
+      "bytes": 491545,
+      "sha256": "6330c512e7b288dd1ea01f8a749f04d256ec0cc60e683dae40b15e5a6e922d14"
+    },
+    {
+      "path": "tranche10/report/candidate-v4/render-v1/page-17.png",
+      "bytes": 532751,
+      "sha256": "353de9d893042645ec7204dd61e3ac5af998f48a2796a3ce06ff7964a58302dd"
+    },
+    {
+      "path": "tranche10/report/candidate-v4/render-v1/page-18.png",
+      "bytes": 524093,
+      "sha256": "f5a735f609d8300744a43fe1403df75643d35b4055d6ad04771a7612b760e5d9"
+    }
+  ],
+  "prior_acceptance_preserved": {
+    "path": "tranche10/reviews/report-references/FINAL_REFERENCE_ACCEPTANCE_v1.json",
+    "bytes": 4221,
+    "sha256": "b4296896ceb4df2437d3664fe0b9c92d7e3e3af5a6e9720d8e42a6c935b85291"
+  },
+  "exact_docx_readback": {
+    "path": "tranche10/reviews/report-references/FINAL_DOCX_LINK_READBACK_v2.json",
+    "bytes": 13971,
+    "sha256": "e93d52cdbc416cf2374861ec08c9c6f7fa9ac26caedc990af40854293f1f5e31"
+  },
+  "checks": {
+    "all_14_reference_paragraphs_match_current_source": true,
+    "all_23_link_labels_and_targets_match_current_source": true,
+    "all_prior_native_links_unchanged": true,
+    "selected_reference_source_digest_unchanged": true,
+    "unique_destinations": 22,
+    "extra_or_private_signed_scratch_targets": 0,
+    "native_package_member_names_unchanged": true,
+    "only_changed_native_package_member": "word/document.xml",
+    "only_declared_source_sentence_deletion": true,
+    "reference_render_pages_16_17_byte_identical": true,
+    "current_page18_visually_inspected_clean": true
+  },
+  "scope": "Prior bibliographic and source-version findings carry forward because the entire selected reference section and native links are unchanged. New source research, source synopsis and scientific review were not performed. Prior availability observations are dated findings, not refreshed link-availability promises.",
+  "retained_limits": [
+    "Observed 404 on Billon DOI landing and its registered publisher page does not negate DOI identity or establish finality.",
+    "Other tool-access/internal errors do not establish invalid destinations.",
+    "Cached extraction availability is not a newly acquired raw PDF identity.",
+    "No mathematics rerun, source-image rerender, full-render acceptance, historical authentication, specialist scholarly validation, upload or publication is claimed."
+  ],
+  "zero_additional_primary_exposition": true,
+  "direct_quotations": 0
+}

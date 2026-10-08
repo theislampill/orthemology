@@ -1,0 +1,15 @@
+# Independent frozen-source review summary
+
+The exact controller and negative source freezes were independently reviewed and freshly combined in a 21-module integration lane. Controller author manifest SHA256: 0aec94dbb8fdd2b0d223578c434943b4098c0d0bc93dc02a12d61978154a7c77. Negative author manifest SHA256: 61ffbeec0a175937672d1f096686652a0e4aec4f5cf86c45bbc9572c34d509c5. Original independent source-review document SHA256: 20017fbdec59b78b5ca68e3184b1e62cc4af6f121c70b521002678be61e98fdb. Its source-specific disposition was PASS with no blocking mathematical, theorem-scope or executable-closure defect.
+
+That review reused 96 Ninth objects individually bound to a separate successful fresh Ninth replay, then built every new production module and generated C. It did not itself claim a fresh 95+21 replay; this package's replay performs that additional full closure from source.
+
+The all-declaration audit lists 3,165 declarations: 1,309 safe declarations audited for standard axioms and 1,856 compiler/elaborator unsafe artifacts separately enumerated. There are no safe opaque declarations. A lexical source screen found no sorry, admit, axiom, unsafe, implemented_by, extern or native_decide source token after comment removal. The combined executable closure contains 1,467 dependencies; traversals include definitions, opaque bodies and implementation redirections, and report external leaves.
+
+The initial reviewer audit draft mistakenly treated compiler-generated unsafe artifacts as source kernel declarations and stopped on a compiler artifact. The corrected audit distinguishes these populations. No production source changed. This resolved harness diagnostic is preserved as `prior-source-review/DeclarationAuditHarnessDiagnostic.log`, not counted as a successful proof attempt or hidden as a zero-retry run. Only the corrected `DeclarationAudit.lean` is an active audit.
+
+Independent controls exercise all49 tiny-domain bodies over ten valid/malformed inputs, formula/local-refutation reflection, exact interpretation binding across all seven coordinates, refutation shape and coverage faults, changing-state source reconstruction, ordered cycles, and two accepted obligation orders yielding different literal compiled first actions. Native full-domain search is confined to the tiny one-model/one-state/one-action example.
+
+Four original controller mutants derive from the actual executable definitions. The two original negative mutants are weakened wrappers. This packet adds two indexedCheck production-definition mutation derivations and validates their exact source anchors, output digests and intended native-guard failure.
+
+This source review does not automatically accept the top-level replay wrapper, archive census, package-corruption controls or fresh exact-archive full replay. Those require the separate package verification receipt. It also does not establish practical complexity, finite-state memory, byte parsing, linked binary execution, compiler correctness, physical deployment or canonical adoption.

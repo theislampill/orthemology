@@ -1,0 +1,88 @@
+{
+  "status": "PASS: staged post-reset source, fixture and logical-coverage verification",
+  "fresh_mathematical_modules": 111,
+  "project_object_reuse": false,
+  "main_control_slots_present": 220,
+  "main_control_slots_checked": 220,
+  "control_stages": [
+    {
+      "fixture_count": 218,
+      "receipt_sha256": "bbbe4c0d752efc2963aeb7dcad1789bb58ae6a32f1ccf28b2ef30b300fbea23d"
+    },
+    {
+      "additional_fixtures": [
+        {
+          "file": "verification/renewal-independent/IndependentBoundaryChecks.lean",
+          "sha256": "12beccb0be7ce47462af46852f6fee98a45cd8c27a0b06904ae31c29a32229a3",
+          "exit": 0,
+          "log_sha256": "af3029c213dc1283619500447759cee5bf51beb3ed83795261b0ff267d5213b9"
+        },
+        {
+          "file": "verification/lookahead-independent/IndependentEdgeChecks.lean",
+          "sha256": "01aae8004c96f665d5b19b72a41da2220364b48fb536a55fa9c1b35ac695df70",
+          "exit": 0,
+          "log_sha256": "c6b09d49015e2677cbc4b1cbdc6564b0be10a16aac812fc5210bad4941a164bd"
+        }
+      ]
+    }
+  ],
+  "new_integration_auditor_controls": 4,
+  "python_reference_tests": 22,
+  "coverage": {
+    "status": "PASS",
+    "modules": 111,
+    "declarations": 8289,
+    "theorem_roots": 3485,
+    "missing_theorems": [],
+    "extra_theorems": [],
+    "accepted_scope_root_coverage_equal": true,
+    "nonproof_exclusions": 2446,
+    "logical_opaque_declarations": 6,
+    "logical_opaque_inventory_sha256": "03ebd0d29094434a93b58aa7ae90b182a209b378829ba82a6d3501955359a563",
+    "import_only_modules": [
+      "CheckerKernelAudit",
+      "ExtensionalRepairAudit",
+      "PolynomialTestAudit"
+    ],
+    "by_lane": {
+      "inherited": {
+        "modules": 88,
+        "declarations": 6713,
+        "theorems": 2750,
+        "excluded_nonproof": 1952
+      },
+      "renewal": {
+        "modules": 6,
+        "declarations": 392,
+        "theorems": 158,
+        "excluded_nonproof": 145
+      },
+      "lookahead": {
+        "modules": 3,
+        "declarations": 134,
+        "theorems": 70,
+        "excluded_nonproof": 44
+      },
+      "policy": {
+        "modules": 5,
+        "declarations": 264,
+        "theorems": 181,
+        "excluded_nonproof": 55
+      },
+      "unary": {
+        "modules": 9,
+        "declarations": 786,
+        "theorems": 326,
+        "excluded_nonproof": 250
+      }
+    }
+  },
+  "recovery_classification_counts": {
+    "exact-hash-restored": 167,
+    "payload-restored-no-historical-digest": 52,
+    "newly-regenerated-review-required": 1
+  },
+  "full_fresh_archive_replays": "Separate mandatory author and independent receipts; not inferred from these stages.",
+  "frozen_mathematical_source_changes": false,
+  "native_compiler_ffi_verified": false
+}

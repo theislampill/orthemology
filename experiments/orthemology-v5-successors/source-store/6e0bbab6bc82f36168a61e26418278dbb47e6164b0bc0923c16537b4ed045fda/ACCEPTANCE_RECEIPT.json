@@ -1,0 +1,105 @@
+{
+  "schema": "ninth-continuation-independent-bounded-acceptance-v1",
+  "reviewed_utc": "2026-10-03T07:32:00Z",
+  "decision": "PASS_BOUNDED_SYNTHESIS_APPLICATION",
+  "target_directory": "tranche9/reorientation/continuation-identity",
+  "target_manifest": {
+    "name": "RESEARCH_MANIFEST.json",
+    "bytes": 1364,
+    "sha256": "a0b801296afe672efa7dcb7ed178fad9015e6bfc4d00fe2dd341769ebced0888"
+  },
+  "target_files": [
+    {
+      "name": "CANDIDATE_RELATION_AND_SCOPE.md",
+      "bytes": 23183,
+      "sha256": "a8b3cfce6f1c6401869689a6279af0ab58a5fcc86674c63398b8e60b9a77cc6c"
+    },
+    {
+      "name": "LOCAL_SOURCE_BINDING.json",
+      "bytes": 6824,
+      "sha256": "be6f6d334b1174d7bf83713b1034c62effba59e3f395e1fb08d4f2d3568c0519"
+    },
+    {
+      "name": "PRIOR_ART_AND_SOURCE_BUDGETS.json",
+      "bytes": 4302,
+      "sha256": "ddb4d9601fa7b3cc46138e74d8412c0936e6c9941985d603232be452a9257933"
+    },
+    {
+      "name": "PUBLIC_OCCURRENCE_ATTRIBUTION_CASE.md",
+      "bytes": 3923,
+      "sha256": "aed43e209215077ef16e9855537f2a895dcbd9e82af5c00626a17c74f08e650b"
+    },
+    {
+      "name": "RESTRICTED_REPAIR_AND_NEXT_HANDOFF_MODEL.md",
+      "bytes": 14698,
+      "sha256": "edb51175abfa5a10afea085802e37f95cfc4840d68f9ecd0c7d860b9e94fa83b"
+    },
+    {
+      "name": "SYNTHESIS_RESULT.md",
+      "bytes": 14016,
+      "sha256": "79291b4294872f89ea37dc834dd4fb38b49acb5777c0b106007dbb2a1091e21c"
+    }
+  ],
+  "verification": {
+    "artifact_identities_passed": 6,
+    "local_source_identities_passed": 33,
+    "recovered_hmoat_git_blob_identities_passed": 7,
+    "integrity_v3_public_archive_and_manifest_match": true,
+    "ordinary_argument_review": true,
+    "new_formal_proof": false,
+    "physical_experiment": false,
+    "human_review": false,
+    "external_specialist_validation": false
+  },
+  "accepted_scope": [
+    "Compatibility, recipient decision warrant, authorised available causal execution, and next-handoff capacity remain distinct obligations.",
+    "The restricted alignment/calibration and next-handoff controls are correct within their stated finite interfaces and assumed source/realiser authority.",
+    "The occurrence case faithfully illustrates the accepted public attribution/status distinction."
+  ],
+  "not_accepted": [
+    "New general mathematical theorem or quantitative breakthrough",
+    "Fresh primary-proof acceptance of MLT/RSD; comparison is inherited index-level only",
+    "Actual source authenticity, statistical independence or physical policy availability from the model",
+    "Numerical subject identity, physical apoautosis, indefinite continuation or general collective closure",
+    "New translation/quotation composition semantics or empirical pipeline performance",
+    "Later edited manuscript, integrated report or canonical adoption"
+  ],
+  "allocation_gate_disposition": "Supporting application/diagnostic accepted; does not satisfy a new-main-result admission claim.",
+  "required_repairs": [],
+  "nonblocking_limits": [
+    "Bind exact primary MLT/RSD theorem packets before claiming a fresh proof audit; present indexed ancestry is not such an audit.",
+    "Keep cumulative source accounting across every eventual integrated component; no renewed per-file budget."
+  ],
+  "source_tallies": {
+    "AB2011_conservative": 48,
+    "BFMY1983_conservative": 183,
+    "CS2010_conservative": 72,
+    "GKT2007_conservative": 69,
+    "historical_S1_existing": 175,
+    "historical_S2_existing": 59,
+    "historical_exposition_added": 0,
+    "direct_quotation_words": 0
+  },
+  "supporting_evidence": [
+    {
+      "name": "IDENTITY_VERIFICATION.json",
+      "bytes": 13011,
+      "sha256": "782831c657d9459697ff86913f2b22ea3d76a8f1e5531557022275a58738c93c"
+    },
+    {
+      "name": "SOURCE_COMPARISON_AND_ACCOUNTING.json",
+      "bytes": 7973,
+      "sha256": "b6792a72b27310c28147edf44954bad6359840b42eddc03c10e4ae3a6a6da5f3"
+    },
+    {
+      "name": "REVIEW_FINDINGS.md",
+      "bytes": 7796,
+      "sha256": "06c06bbd75dbf20936998cf396a86d46d1e7edcffc146fa6ef190dfce56e427b"
+    }
+  ],
+  "public_acceptance": {
+    "name": "PUBLIC_ACCEPTANCE.md",
+    "bytes": 4717,
+    "sha256": "ec1c011309d1d4c35fb867cd18366f3a02c52f0217c282c0189d9c8c2cce7c55"
+  }
+}

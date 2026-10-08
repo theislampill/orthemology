@@ -1,0 +1,21 @@
+{
+  "seed": 151005,
+  "arities": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "expression_pairs": 720,
+  "equal_pairs": 546,
+  "unequal_pairs": 174,
+  "direct_expression_evaluations": 87360,
+  "negative_witnesses_checked": 174,
+  "checker_sha256": "8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef",
+  "lean_source_sha256": "560af817184c23d55d9484537efec97f7cbfb3cdbda38238c58ca732bee70b77",
+  "lean_runtime_rows_verified": 720,
+  "formal_refinement_claim": false,
+  "scope": "Bounded runtime agreement on deterministic generated well-formed AST pairs; no parser or wire-format correspondence theorem."
+}

@@ -1,0 +1,45 @@
+{
+  "status": "new controls, not claimed as historical restorations",
+  "tests": [
+    {
+      "path": "verification/integration/PositiveControl.lean",
+      "sha256": "55a2b4461786302fc35b4012fc21bb6d976583d4fa53b239b4bbb16bbe0acaa7",
+      "recovery_status": "new-integration-control",
+      "role": "positive",
+      "expected_patterns": [
+        "INTEGRATION_PROOF_CLOSURE_PASS"
+      ],
+      "category": "positive control"
+    },
+    {
+      "path": "verification/integration/negative/CustomAxiom.lean",
+      "sha256": "46cdfeff311dc70c5b95fd02714c5cc3d1ac1c61eaba32f2ae105dc92b555306",
+      "recovery_status": "new-integration-control",
+      "role": "negative",
+      "expected_patterns": [
+        "INTEGRATION_UNAPPROVED_AXIOM integrationCounterfeit"
+      ],
+      "category": "poisoned-auditor input"
+    },
+    {
+      "path": "verification/integration/negative/AdmittedProof.lean",
+      "sha256": "4541dc01f4e2eeae660b97bebea6ae366eef55edd83c75b5db38373b53381206",
+      "recovery_status": "new-integration-control",
+      "role": "negative",
+      "expected_patterns": [
+        "INTEGRATION_UNAPPROVED_AXIOM sorryAx"
+      ],
+      "category": "poisoned-auditor input"
+    },
+    {
+      "path": "verification/integration/negative/UnsafeDependency.lean",
+      "sha256": "30541a1f508fde3e9ff271f8d3880bd13c93a2b4455d532a9fb79e1e62d65d28",
+      "recovery_status": "new-integration-control",
+      "role": "negative",
+      "expected_patterns": [
+        "INTEGRATION_UNSAFE_OR_PARTIAL integrationUnsafeRoot"
+      ],
+      "category": "poisoned-auditor input"
+    }
+  ]
+}

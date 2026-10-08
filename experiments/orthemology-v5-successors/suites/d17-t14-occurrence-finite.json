@@ -1,0 +1,301 @@
+{
+  "id": "d17-t14-occurrence-finite",
+  "family": "language-pinned-occurrence",
+  "result_families": [
+    "language-pinned-occurrence"
+  ],
+  "origin_archive_sha256": "7041e78506edaab9933334d3de99457042564231504eb35cc92e8a86a07b7a0e",
+  "source_ids": [
+    "D17-T14-OCCURRENCE-VERIFIER",
+    "D17-T14-OCCURRENCE-LOCK"
+  ],
+  "review_ids": [
+    "D17-REVIEW-T14-OCCURRENCE"
+  ],
+  "targets": [
+    {
+      "id": "occurrence-82",
+      "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+      "declaration": "Read-only replay of 70 byte bindings and 12 occurrence assertions.",
+      "target_sha256": "6a3405699741253d6598255ac752230da7704be59d8ff657d43b382535a30c15",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [
+    {
+      "id": "occurrence-positive",
+      "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+      "target_id": "occurrence-82",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "occurrence-missing-directory",
+      "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+      "target_id": "occurrence-82",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "occurrence-non-directory",
+      "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+      "target_id": "occurrence-82",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "occurrence-missing-file",
+      "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+      "target_id": "occurrence-82",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    },
+    {
+      "id": "occurrence-changed-file",
+      "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+      "target_id": "occurrence-82",
+      "role": "MUTATION_REJECTION",
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2"
+    }
+  ],
+  "toolchain": {
+    "kind": "PYTHON",
+    "version": "3.11.9",
+    "platform": "linux-x86_64",
+    "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+    "packages": []
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "FINITE",
+    "files": [
+      {
+        "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+        "path": "language/verify_occurrence.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "D17-T14-OCCURRENCE-LOCK",
+        "path": "language/source-lock.json",
+        "role": "LOCK"
+      }
+    ],
+    "modules": [],
+    "module_order": [],
+    "positive_roots": [],
+    "audit_roots": [],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [],
+    "target_names": [],
+    "package_manifest_source_id": null,
+    "packages": [],
+    "tools": [],
+    "external_inputs": [
+      {
+        "id": "fusha-selected",
+        "source_id": null,
+        "kind": "TREE",
+        "manifest_source_id": "D17-T14-OCCURRENCE-LOCK",
+        "manifest_key": "files",
+        "expected_sha256": null,
+        "expected_bytes": null,
+        "role": "INPUT"
+      }
+    ],
+    "fixtures": [
+      {
+        "id": "occurrence-missing-directory",
+        "input_id": "fusha-selected",
+        "operation": "ABSENT",
+        "path": null
+      },
+      {
+        "id": "occurrence-non-directory",
+        "input_id": "fusha-selected",
+        "operation": "NON_DIRECTORY",
+        "path": null
+      },
+      {
+        "id": "occurrence-missing-file",
+        "input_id": "fusha-selected",
+        "operation": "OMIT",
+        "path": "qamus/examples/p007-li-pilot/vn-unlock.json"
+      },
+      {
+        "id": "occurrence-changed-file",
+        "input_id": "fusha-selected",
+        "operation": "APPEND_CHANGED_BYTES",
+        "path": "qamus/examples/p007-li-pilot/vn-unlock.json"
+      }
+    ],
+    "drivers": [
+      {
+        "id": "occurrence",
+        "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+        "recipe": "t14-occurrence-v1",
+        "sha256": "a61800a28a1a7be9415072a949407dfe91085620ddf10d01df0c77219b7a9615",
+        "argument_meanings": {
+          "source_dir": "INPUT_TREE"
+        },
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "occurrence-positive",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "occurrence",
+        "argv": [
+          "{tool:python}",
+          "-I",
+          "-B",
+          "{driver:occurrence}",
+          "{input:fusha-selected}"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [
+          "occurrence-positive"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "occurrence-missing-directory",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "occurrence",
+        "argv": [
+          "{tool:python}",
+          "-I",
+          "-B",
+          "{driver:occurrence}",
+          "{fixture:occurrence-missing-directory}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "occurrence-positive"
+        ],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [
+          "occurrence-missing-directory"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+            "literal": "source directory is missing or is not a directory",
+            "sha256": "095020e667f5709ab6e5a5f2cf4bf7103a72d31779555535fc621e5db097f77a"
+          }
+        ]
+      },
+      {
+        "id": "occurrence-non-directory",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "occurrence",
+        "argv": [
+          "{tool:python}",
+          "-I",
+          "-B",
+          "{driver:occurrence}",
+          "{fixture:occurrence-non-directory}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "occurrence-positive"
+        ],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [
+          "occurrence-non-directory"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+            "literal": "source directory is missing or is not a directory",
+            "sha256": "095020e667f5709ab6e5a5f2cf4bf7103a72d31779555535fc621e5db097f77a"
+          }
+        ]
+      },
+      {
+        "id": "occurrence-missing-file",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "occurrence",
+        "argv": [
+          "{tool:python}",
+          "-I",
+          "-B",
+          "{driver:occurrence}",
+          "{fixture:occurrence-missing-file}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "occurrence-positive"
+        ],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [
+          "occurrence-missing-file"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+            "literal": "missing or unreadable locked file: ",
+            "sha256": "2c12cc9f7a495151e05c002a0af01d9fde0e26e5d41b2dc33edb36e9426afb74"
+          }
+        ]
+      },
+      {
+        "id": "occurrence-changed-file",
+        "kind": "NEGATIVE_CONTROL",
+        "driver_id": "occurrence",
+        "argv": [
+          "{tool:python}",
+          "-I",
+          "-B",
+          "{driver:occurrence}",
+          "{fixture:occurrence-changed-file}"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "occurrence-positive"
+        ],
+        "timeout_seconds": 60,
+        "output_paths": [],
+        "control_ids": [
+          "occurrence-changed-file"
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "expected_diagnostics": [
+          {
+            "source_id": "D17-T14-OCCURRENCE-VERIFIER",
+            "literal": "custody:",
+            "sha256": "90f0c7dbbf2c3328ba2ca272d5845c50e4e6d7c3d9987036932882df0e638e92"
+          }
+        ]
+      }
+    ],
+    "build_roots": []
+  }
+}

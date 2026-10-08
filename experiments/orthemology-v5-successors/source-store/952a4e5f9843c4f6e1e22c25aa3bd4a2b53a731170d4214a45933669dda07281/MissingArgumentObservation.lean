@@ -1,0 +1,7 @@
+/- Deliberately rejected interface use; not an independence proof. -/
+import EffectiveBooleanInterfaces
+open OrthemologyV2 OrthemologyV3 P01D P01R P01AC
+open P01AC.EffectiveCompleteness P01AC.IdentityComplexity
+open P01AC.BooleanIdentity P01AC.BooleanPrimitive
+example {r : Nat} (f : PR r) (η : Env) (v : Nat → Nat) :
+  NatObs (eval f.compile η) (f.denote v) := f.compile_obs η v

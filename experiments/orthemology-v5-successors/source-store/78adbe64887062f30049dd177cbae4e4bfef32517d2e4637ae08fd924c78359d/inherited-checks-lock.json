@@ -1,0 +1,58 @@
+[
+  {
+    "path": "verification/inherited/AxiomAudit.lean",
+    "sha256": "eb7b45593a3248d8166f47dbf4d7f30f51218d92bc91264c322e6ebaa53a2173"
+  },
+  {
+    "path": "verification/inherited/CheckCombined.lean",
+    "sha256": "fce8c1ed518885ee18a4f21894a6dab922c163743ace680af28d1fa9346cd51d"
+  },
+  {
+    "path": "verification/inherited/CheckTheorems.lean",
+    "sha256": "f059e36ba58df9d975b8d50909134a385f388177657d4d317a88624e6b728b5a"
+  },
+  {
+    "path": "verification/inherited/CombinedAxiomAudit.lean",
+    "sha256": "b89fb44ce3c9029c708889ad58df13142edfbc6ca4c9b61635a4d14aef0939a5"
+  },
+  {
+    "path": "verification/inherited/IndependentKernelChecks.lean",
+    "sha256": "29efba63a8bb81d82a0a3c8fb2bbab68cab27036be5c550adf3b1c87c588b9f0"
+  },
+  {
+    "path": "verification/inherited/negative-controls/CurrentHasIsNotHasPlus.lean",
+    "sha256": "408404c9324ff3a1ddabcb93a9f22ca317eb893ccf9ec988c89d4300294b7b66"
+  },
+  {
+    "path": "verification/inherited/negative-controls/ExtensionalIsNotCurrent.lean",
+    "sha256": "c1ba98538103ef2eecd62b0e309d7d494e77689c3967d81325e5088dd90eb655"
+  },
+  {
+    "path": "verification/inherited/negative-controls/ExtensionalIsNotPlus.lean",
+    "sha256": "29fc33ef662ca851e9500f91687cd8aec478d4a891a3267c2043eed12f582167"
+  },
+  {
+    "path": "verification/inherited/negative-controls/MissingAllScope.lean",
+    "sha256": "9ce227a5337b05e70ce8da58ad0f0a290f07c72beae27f8386e45cd0e755ae25"
+  },
+  {
+    "path": "verification/inherited/negative-controls/MissingClosure.lean",
+    "sha256": "edd2deb3c8b864834088992bc05115df35e6d623296b785f0fb6807f0a7a055b"
+  },
+  {
+    "path": "verification/inherited/negative-controls/MissingPiScope.lean",
+    "sha256": "67c1570b7e6b6d3b49dac0c664dab8a2a3f4ad432753295ddba233a2e387e662"
+  },
+  {
+    "path": "verification/inherited/negative-controls/NoninhabitationPolarity.lean",
+    "sha256": "f163f5fd43ebeff925eac33802eb06c300cf8979d34465f1765e5d7fb42878c4"
+  },
+  {
+    "path": "verification/inherited/negative-controls/PositiveCarrierIsNotRaw.lean",
+    "sha256": "352707bb164385cbac4212b278115a1c8e7da96a86ba57659527f94ed52f2bd4"
+  },
+  {
+    "path": "verification/inherited/negative-controls/RawNoninhabitationPolarity.lean",
+    "sha256": "dd787629ff2128b1c61136a1578034cb76eb90e6f40ca60af1d17fca8c6f0967"
+  }
+]

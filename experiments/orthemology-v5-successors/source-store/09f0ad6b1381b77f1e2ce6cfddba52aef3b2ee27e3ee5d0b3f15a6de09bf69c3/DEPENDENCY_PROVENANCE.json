@@ -1,0 +1,79 @@
+{
+  "lean": {
+    "version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "official_release_url": "https://github.com/leanprover/lean4/releases/tag/v4.19.0",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "previously_downloaded_release_archive_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+    "no_independent_vendor_digest_claim": true
+  },
+  "packages": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "rev": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "rev": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "rev": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "rev": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "rev": "c4919189477c3221e6a204008998b0d724f49904",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "rev": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "rev": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "rev": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "tracked_sources_clean": true
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "rev": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "tracked_sources_clean": true
+    }
+  ],
+  "fresh_network_bootstrap": false,
+  "fresh_full_dependency_rebuild": false,
+  "dependency_cache": "This author integration reused exact pinned existing dependency caches. The v4 historical receipt separately records 1,373 artifact binding checks. Independent source-built dependency replay, if supplied separately, has its own exact-source receipt.",
+  "historical_v4_dependency_artifact_rechecks": 1373,
+  "current_v5_replay": {
+    "nine_git_pins_and_origins_verified": true,
+    "tracked_sources_clean": true,
+    "official_lean_executable_digest_verified": true,
+    "fresh_root_modules": 88,
+    "project_object_reuse": false,
+    "external_lean_compiler_rebuilt": false,
+    "third_party_import_closure_rebuilt": false,
+    "full_mathlib_rebuilt": false
+  }
+}

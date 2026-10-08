@@ -1,0 +1,8 @@
+import UnaryCurrentIdentityBoundary
+import verification.KernelAudit
+#audit_safe_closure P01AC.UnaryIdentity.IntensionalBoundary.normalCheck_sound
+#audit_safe_closure P01AC.UnaryIdentity.IntensionalBoundary.endpoints_not_convertible
+#audit_safe_closure P01AC.UnaryIdentity.IntensionalBoundary.no_current_identity
+#audit_safe_closure P01AC.UnaryIdentity.IntensionalBoundary.no_bridge_identity
+#audit_safe_closure P01AC.UnaryIdentity.IntensionalBoundary.compiled_image_counterexample
+#audit_safe_closure P01AC.UnaryIdentity.IntensionalBoundary.old_fragment_counterexample

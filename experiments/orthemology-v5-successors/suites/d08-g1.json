@@ -1,0 +1,4902 @@
+{
+  "controls": [
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-0-D08-01-check_sound",
+      "role": "POSITIVE",
+      "source_id": "s0715-169b3756e95a58db7ae5",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-1-D08-01-check_sound",
+      "role": "POSITIVE",
+      "source_id": "s0715-da22820268c31c5bea91",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-2-D08-01-check_sound",
+      "role": "POSITIVE",
+      "source_id": "s0715-b8025cbfe7e00a5fac97",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-3-D08-01-check_sound",
+      "role": "POSITIVE",
+      "source_id": "s0715-5fa971e22d968f6cf748",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-4-D08-01-check_sound",
+      "role": "POSITIVE",
+      "source_id": "s0715-5d1dfeb3abf1cfd36a15",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-5-D08-03-boundCheck_iff",
+      "role": "POSITIVE",
+      "source_id": "s0715-a8c3d38e841cdc5525c7",
+      "target_id": "D08-03-boundCheck_iff"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-5-D08-03-boundCheck_stale",
+      "role": "POSITIVE",
+      "source_id": "s0715-a8c3d38e841cdc5525c7",
+      "target_id": "D08-03-boundCheck_stale"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-6-D08-03-checkedMerge_some_iff",
+      "role": "POSITIVE",
+      "source_id": "s0715-4e39c9f12cd413ee129e",
+      "target_id": "D08-03-checkedMerge_some_iff"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-6-D08-03-checkedMerge_valid",
+      "role": "POSITIVE",
+      "source_id": "s0715-4e39c9f12cd413ee129e",
+      "target_id": "D08-03-checkedMerge_valid"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-6-D08-03-checkedLinkParent_some_iff",
+      "role": "POSITIVE",
+      "source_id": "s0715-4e39c9f12cd413ee129e",
+      "target_id": "D08-03-checkedLinkParent_some_iff"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-6-D08-03-checkedLinkParent_valid",
+      "role": "POSITIVE",
+      "source_id": "s0715-4e39c9f12cd413ee129e",
+      "target_id": "D08-03-checkedLinkParent_valid"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-01-check_sound",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-02-policy_has_certificate",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-02-policy_has_certificate"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-02-semantic_iff_certificate",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-02-semantic_iff_certificate"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-03-checkedMerge_some_iff",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-03-checkedMerge_some_iff"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-03-checkedMerge_valid",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-03-checkedMerge_valid"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-03-checkedLinkParent_some_iff",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-03-checkedLinkParent_some_iff"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-03-checkedLinkParent_valid",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-03-checkedLinkParent_valid"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-03-boundCheck_iff",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-03-boundCheck_iff"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-7-D08-03-boundCheck_stale",
+      "role": "POSITIVE",
+      "source_id": "s0715-13c5494023a01a3ef3a4",
+      "target_id": "D08-03-boundCheck_stale"
+    },
+    {
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2",
+      "id": "d08-g1-control-8-D08-01-check_sound",
+      "role": "POSITIVE",
+      "source_id": "s0715-1aad533fc6b2e75cd68b",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+      "id": "d08-g1-control-9-D08-01-check_sound",
+      "role": "MUTATION_REJECTION",
+      "source_id": "s0715-913c79014b9d7f98aafe",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+      "id": "d08-g1-control-10-D08-01-check_sound",
+      "role": "MUTATION_REJECTION",
+      "source_id": "s0715-dbfd2596f3b7b49f66c9",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+      "id": "d08-g1-control-11-D08-01-check_sound",
+      "role": "MUTATION_REJECTION",
+      "source_id": "s0715-a0db6d50adae299c15d0",
+      "target_id": "D08-01-check_sound"
+    },
+    {
+      "expected_outcome": "REJECT",
+      "expected_outcome_sha256": "ec947170824a09f8b502f402ac3ef7eb02b6a4096b54a190836b79d5155e0ed2",
+      "id": "d08-g1-control-12-D08-01-check_sound",
+      "role": "MUTATION_REJECTION",
+      "source_id": "s0715-a0db6d50adae299c15d0",
+      "target_id": "D08-01-check_sound"
+    }
+  ],
+  "family": "existence-certificate-author",
+  "id": "d08-g1",
+  "origin_archive_sha256": "7879f8f4011a7596109760d7d113d3bea5a59253df885e39f39f4956992d318a",
+  "replay": {
+    "audit_roots": [],
+    "build_roots": [
+      "original/build"
+    ],
+    "drivers": [
+      {
+        "argument_meanings": {
+          "--lean-bin": "LEAN_BIN_DIRECTORY",
+          "--mathlib": "MATHLIB_ROOT",
+          "--out": "FRESH_OUTPUT_DIRECTORY"
+        },
+        "external_input_id": "g1-archive",
+        "id": "g1",
+        "recipe": "t09-g1-author-original-v2",
+        "sha256": "119fee26d6e3b3a642d03e8fe6af25e7671ac9d06fb0c8954a0bf2f0234e806a",
+        "source_id": "s0715-52c16c3553a9091365c2"
+      }
+    ],
+    "external_inputs": [
+      {
+        "expected_bytes": 636293,
+        "expected_sha256": "7879f8f4011a7596109760d7d113d3bea5a59253df885e39f39f4956992d318a",
+        "id": "g1-archive",
+        "kind": "FILE",
+        "manifest_key": null,
+        "manifest_source_id": null,
+        "role": "INPUT",
+        "source_id": "s0715-05d6a99548aa184317b6"
+      }
+    ],
+    "files": [
+      {
+        "path": "src/GenericFiniteQueryLocality.lean",
+        "role": "PROOF",
+        "source_id": "s0715-dd8cc2029f44ef9fe338"
+      },
+      {
+        "path": "src/GenericFiniteQueryMeasure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1314660330d0b0f692c4"
+      },
+      {
+        "path": "src/PolicyRowEvaluator.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ad90cd60abc28ed239d2"
+      },
+      {
+        "path": "src/PolicyTranscriptFiber.lean",
+        "role": "PROOF",
+        "source_id": "s0715-154688d5d66ce5313d79"
+      },
+      {
+        "path": "src/FeedbackRequests.lean",
+        "role": "PROOF",
+        "source_id": "s0715-efec27493bd981a110ce"
+      },
+      {
+        "path": "src/ProductObservationLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-34183e3d4139e1001727"
+      },
+      {
+        "path": "src/IndependentProductFamilies.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c8887b5e004b43a2d20c"
+      },
+      {
+        "path": "src/GenericQueryReference.lean",
+        "role": "PROOF",
+        "source_id": "s0715-9b1bb081f8a01e48dfe3"
+      },
+      {
+        "path": "src/PolicyRowLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c2721c25c62386848227"
+      },
+      {
+        "path": "src/FeedbackFiberProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3361996a2a07ab591032"
+      },
+      {
+        "path": "src/PolicyCylinderProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1bf0de3b2a6fdbb35495"
+      },
+      {
+        "path": "src/HistoryPathConsistency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-620e92b491c428b7093a"
+      },
+      {
+        "path": "src/PolicyObservedLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e4f63e57624a4d7c63f9"
+      },
+      {
+        "path": "src/PolicyTraceBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-588393fd1be2a0d77868"
+      },
+      {
+        "path": "src/StackActionLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-df47d4a263453e8f352b"
+      },
+      {
+        "path": "src/RecurrentSupport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-eb4e1c3ef064c6f5edfe"
+      },
+      {
+        "path": "src/RawTapeRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8fa4d8451d7b2659bb3f"
+      },
+      {
+        "path": "src/SequentialTapeConsumption.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0c2ae07a9fb14dec8e51"
+      },
+      {
+        "path": "src/PruningKernel.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b807803e41160a43d31a"
+      },
+      {
+        "path": "src/EndComponents.lean",
+        "role": "PROOF",
+        "source_id": "s0715-67bc565d612b83867ee4"
+      },
+      {
+        "path": "src/RecurrentGraph.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3d90d3d85333a2133bfc"
+      },
+      {
+        "path": "src/KilledQueryLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-cb0dce8751c0df75e432"
+      },
+      {
+        "path": "src/KilledAdaptiveHistory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a2b9f753bcb52f063206"
+      },
+      {
+        "path": "src/KilledRecurrentTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1bd23c180c590d453f3e"
+      },
+      {
+        "path": "src/FiniteReachability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-fc55921e456ff60ff2cb"
+      },
+      {
+        "path": "src/ExecutablePruning.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d516cbb334785471f335"
+      },
+      {
+        "path": "src/MarkovSupportAdapter.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7a241551dac51d43d7f4"
+      },
+      {
+        "path": "src/MarkovKilledBridge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4d7d59439ca0b938f992"
+      },
+      {
+        "path": "src/AdaptiveMarkovRecurrentGraph.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2fcc654e69e6f6bf9e62"
+      },
+      {
+        "path": "src/RoundRobinSchedule.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2bc434232626c8286ea3"
+      },
+      {
+        "path": "src/PolicyTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7ca07c1cc8ff403aa51b"
+      },
+      {
+        "path": "src/RelativeTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-00d48ffadc155380cc2a"
+      },
+      {
+        "path": "src/SafeSetTailTransfer.lean",
+        "role": "PROOF",
+        "source_id": "s0715-95b80efcabf277034bdd"
+      },
+      {
+        "path": "src/SelfVerifyingSupport.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c9587c854ee461a02fa8"
+      },
+      {
+        "path": "src/SeededPolicyNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-f8bda503afd0cb4cf140"
+      },
+      {
+        "path": "src/FiniteChainAvoidance.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e9533431bd1d0c79a933"
+      },
+      {
+        "path": "src/dependencies/StatisticalRepair.lean",
+        "role": "PROOF",
+        "source_id": "s0715-14375ad8001da24a4963"
+      },
+      {
+        "path": "src/HellingerTree.lean",
+        "role": "PROOF",
+        "source_id": "s0715-67f673929a05d4650bc5"
+      },
+      {
+        "path": "src/SubprobHellinger.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3931c2780954d4c7f59f"
+      },
+      {
+        "path": "src/DependentHellinger.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ecbb28b9dfc3119ca137"
+      },
+      {
+        "path": "src/ResetBudget.lean",
+        "role": "PROOF",
+        "source_id": "s0715-329e89e9719c254e3f0e"
+      },
+      {
+        "path": "src/ResetLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-8b3d4ae86256afdb3bac"
+      },
+      {
+        "path": "src/ResetTrajectory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-39a75ea7605686a7f7ec"
+      },
+      {
+        "path": "src/MarkovCharge.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7e036d3186027ef03dc0"
+      },
+      {
+        "path": "src/FiniteChainTrajectory.lean",
+        "role": "PROOF",
+        "source_id": "s0715-99bf949a87d2b3346d18"
+      },
+      {
+        "path": "src/InfiniteRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-93ed27ba87c3e5d1e8b5"
+      },
+      {
+        "path": "src/StationaryPairChain.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3a8b982090c1394ad888"
+      },
+      {
+        "path": "src/FairComponentParity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-eb82f6b9e7607ed48537"
+      },
+      {
+        "path": "src/CheckedTargetOperation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6fdd7bcbfaf3700a0bb1"
+      },
+      {
+        "path": "src/StableSupportParityNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3908a26164388e4d93e0"
+      },
+      {
+        "path": "src/StageTargetOrExit.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ad71b5a1514ef406e255"
+      },
+      {
+        "path": "src/ResidualSeedPosterior.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7d0c58079ba053c065c0"
+      },
+      {
+        "path": "src/ConditionalPrefix.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2f122fd5686a2c04ef60"
+      },
+      {
+        "path": "src/ConditionalContinuationLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ad4a019bb259581fece2"
+      },
+      {
+        "path": "src/PosteriorFeedbackProduct.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4fc3f9ea75a109e53fe9"
+      },
+      {
+        "path": "src/MarkovSeedPosterior.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ebcab02a76e347edd846"
+      },
+      {
+        "path": "src/ConditionalKilledContinuation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bef9a538a2f57e0a9eaf"
+      },
+      {
+        "path": "src/LawfulRestart.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ad47eaa7a5fcdb63c491"
+      },
+      {
+        "path": "src/LawfulProbability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-223e1834b6ea238b185d"
+      },
+      {
+        "path": "src/ParityTailInvariance.lean",
+        "role": "PROOF",
+        "source_id": "s0715-951cb071f8f64adc901a"
+      },
+      {
+        "path": "src/ConditionalAlmostSure.lean",
+        "role": "PROOF",
+        "source_id": "s0715-81140268921ee50c54a1"
+      },
+      {
+        "path": "src/SemanticWinning.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1d45c89661dd33f632c5"
+      },
+      {
+        "path": "src/SemanticSafeActions.lean",
+        "role": "PROOF",
+        "source_id": "s0715-d999d7b878c26566e555"
+      },
+      {
+        "path": "src/HistoryStageSafety.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b620929ad725522a3ef0"
+      },
+      {
+        "path": "src/RoundRobinPolicy.lean",
+        "role": "PROOF",
+        "source_id": "s0715-b15efe0b472179a638e1"
+      },
+      {
+        "path": "src/RoundRobinRecurrence.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3bd34ffd89571cee24d3"
+      },
+      {
+        "path": "src/RegionAlgorithm.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e77f3cc5d645eb2a0ce0"
+      },
+      {
+        "path": "src/GlobalParityNecessity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-7a11ac48d7c08fda70d2"
+      },
+      {
+        "path": "src/ActualTargetPolicy.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e9195cb85e7540a14a7e"
+      },
+      {
+        "path": "src/StageAvailability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a75ef86675de7bb99474"
+      },
+      {
+        "path": "src/FairStageNavigation.lean",
+        "role": "PROOF",
+        "source_id": "s0715-6f71163291f1f641fac5"
+      },
+      {
+        "path": "src/EventualCycling.lean",
+        "role": "PROOF",
+        "source_id": "s0715-32c9cfdfe4cc608ef4ab"
+      },
+      {
+        "path": "src/ObservedPhaseController.lean",
+        "role": "PROOF",
+        "source_id": "s0715-ad593a82d8a55a4fa05c"
+      },
+      {
+        "path": "src/GeneratedPolicySafety.lean",
+        "role": "PROOF",
+        "source_id": "s0715-49217ed14ff4add4eb23"
+      },
+      {
+        "path": "src/StackPathRegularity.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2ea42f29473844d49de2"
+      },
+      {
+        "path": "src/GeneratedRun.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1e58e777e44fe768b4e3"
+      },
+      {
+        "path": "src/MemoryTransitions.lean",
+        "role": "PROOF",
+        "source_id": "s0715-bb0e97e7aadd5c4040b6"
+      },
+      {
+        "path": "src/GeneratedPhaseDynamics.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c25555c6ec2dd6eee4d7"
+      },
+      {
+        "path": "src/RawEmpiricalRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-38e7cfca97dbabaaf031"
+      },
+      {
+        "path": "src/EmpiricalTailBounds.lean",
+        "role": "PROOF",
+        "source_id": "s0715-e2a134c11efbf352dd1a"
+      },
+      {
+        "path": "src/ObservedEmpiricalRows.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a26e26ef280001814a59"
+      },
+      {
+        "path": "src/ObservedRowTest.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0935fd900bf12cacc1e3"
+      },
+      {
+        "path": "src/EmpiricalTestLaw.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4ae80a7eca03ea2505ce"
+      },
+      {
+        "path": "src/PhaseStabilization.lean",
+        "role": "PROOF",
+        "source_id": "s0715-89259ffa9f43a905f9ad"
+      },
+      {
+        "path": "src/GeneratedPhaseStability.lean",
+        "role": "PROOF",
+        "source_id": "s0715-1bbe8135156149385489"
+      },
+      {
+        "path": "src/GeneratedParitySuccess.lean",
+        "role": "PROOF",
+        "source_id": "s0715-55aa9f5021906229098e"
+      },
+      {
+        "path": "src/GlobalParitySufficiency.lean",
+        "role": "PROOF",
+        "source_id": "s0715-4aa01fdbbe3f61922652"
+      },
+      {
+        "path": "src/CertificateData.lean",
+        "role": "PROOF",
+        "source_id": "s0715-3fa7f88cf0b52c04bd77"
+      },
+      {
+        "path": "src/CertificateOrder.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c70f97a7dd7659590061"
+      },
+      {
+        "path": "src/CertificatePath.lean",
+        "role": "PROOF",
+        "source_id": "s0715-c65e4c1d0f9ec02bdc13"
+      },
+      {
+        "path": "src/CertificateSyntax.lean",
+        "role": "PROOF",
+        "source_id": "s0715-a0db6d50adae299c15d0"
+      },
+      {
+        "path": "src/CertificateSoundness.lean",
+        "role": "PROOF",
+        "source_id": "s0715-0feb5d853f8a4c771aa3"
+      },
+      {
+        "path": "src/CertificateCompleteness.lean",
+        "role": "PROOF",
+        "source_id": "s0715-46a9a7a426d5c0f4a17b"
+      },
+      {
+        "path": "src/CertificateComposition.lean",
+        "role": "PROOF",
+        "source_id": "s0715-48c674178514929c112a"
+      },
+      {
+        "path": "src/CertificateBinding.lean",
+        "role": "PROOF",
+        "source_id": "s0715-2e926690f9ad380ed393"
+      },
+      {
+        "path": "src/InputControls.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-169b3756e95a58db7ae5"
+      },
+      {
+        "path": "src/PathControls.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-da22820268c31c5bea91"
+      },
+      {
+        "path": "src/PathDependencies.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-b8025cbfe7e00a5fac97"
+      },
+      {
+        "path": "src/CertificateFixtures.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-5fa971e22d968f6cf748"
+      },
+      {
+        "path": "src/CertificateControls.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-5d1dfeb3abf1cfd36a15"
+      },
+      {
+        "path": "src/BindingControls.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-a8c3d38e841cdc5525c7"
+      },
+      {
+        "path": "src/CompositionControls.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-4e39c9f12cd413ee129e"
+      },
+      {
+        "path": "src/CertificateReadback.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-13c5494023a01a3ef3a4"
+      },
+      {
+        "path": "src/CheckerDependencies.lean",
+        "role": "AUDIT",
+        "source_id": "s0715-1aad533fc6b2e75cd68b"
+      },
+      {
+        "path": "src/PathLengthMutant.lean",
+        "role": "RUNTIME",
+        "source_id": "s0715-d1d7564ac4028f204516"
+      },
+      {
+        "path": "src/PathEdgesMutant.lean",
+        "role": "RUNTIME",
+        "source_id": "s0715-174b244b18439e4f791b"
+      },
+      {
+        "path": "locks/DEPENDENCY_PINS.json",
+        "role": "LOCK",
+        "source_id": "s0715-8bc1d7ed6f374d6baed3"
+      }
+    ],
+    "fixtures": [],
+    "module_order": [
+      "GenericFiniteQueryLocality",
+      "GenericFiniteQueryMeasure",
+      "PolicyRowEvaluator",
+      "PolicyTranscriptFiber",
+      "FeedbackRequests",
+      "ProductObservationLaw",
+      "IndependentProductFamilies",
+      "GenericQueryReference",
+      "PolicyRowLaw",
+      "FeedbackFiberProbability",
+      "PolicyCylinderProbability",
+      "HistoryPathConsistency",
+      "PolicyObservedLaw",
+      "PolicyTraceBinding",
+      "StackActionLaw",
+      "RecurrentSupport",
+      "RawTapeRecurrence",
+      "SequentialTapeConsumption",
+      "PruningKernel",
+      "EndComponents",
+      "RecurrentGraph",
+      "KilledQueryLaw",
+      "KilledAdaptiveHistory",
+      "KilledRecurrentTransfer",
+      "FiniteReachability",
+      "ExecutablePruning",
+      "MarkovSupportAdapter",
+      "MarkovKilledBridge",
+      "AdaptiveMarkovRecurrentGraph",
+      "RoundRobinSchedule",
+      "PolicyTailTransfer",
+      "RelativeTailTransfer",
+      "SafeSetTailTransfer",
+      "SelfVerifyingSupport",
+      "SeededPolicyNecessity",
+      "FiniteChainAvoidance",
+      "dependencies.StatisticalRepair",
+      "HellingerTree",
+      "SubprobHellinger",
+      "DependentHellinger",
+      "ResetBudget",
+      "ResetLaw",
+      "ResetTrajectory",
+      "MarkovCharge",
+      "FiniteChainTrajectory",
+      "InfiniteRecurrence",
+      "StationaryPairChain",
+      "FairComponentParity",
+      "CheckedTargetOperation",
+      "StableSupportParityNecessity",
+      "StageTargetOrExit",
+      "ResidualSeedPosterior",
+      "ConditionalPrefix",
+      "ConditionalContinuationLaw",
+      "PosteriorFeedbackProduct",
+      "MarkovSeedPosterior",
+      "ConditionalKilledContinuation",
+      "LawfulRestart",
+      "LawfulProbability",
+      "ParityTailInvariance",
+      "ConditionalAlmostSure",
+      "SemanticWinning",
+      "SemanticSafeActions",
+      "HistoryStageSafety",
+      "RoundRobinPolicy",
+      "RoundRobinRecurrence",
+      "RegionAlgorithm",
+      "GlobalParityNecessity",
+      "ActualTargetPolicy",
+      "StageAvailability",
+      "FairStageNavigation",
+      "EventualCycling",
+      "ObservedPhaseController",
+      "GeneratedPolicySafety",
+      "StackPathRegularity",
+      "GeneratedRun",
+      "MemoryTransitions",
+      "GeneratedPhaseDynamics",
+      "RawEmpiricalRows",
+      "EmpiricalTailBounds",
+      "ObservedEmpiricalRows",
+      "ObservedRowTest",
+      "EmpiricalTestLaw",
+      "PhaseStabilization",
+      "GeneratedPhaseStability",
+      "GeneratedParitySuccess",
+      "GlobalParitySufficiency",
+      "CertificateData",
+      "CertificateOrder",
+      "CertificatePath",
+      "CertificateSyntax",
+      "CertificateSoundness",
+      "CertificateCompleteness",
+      "CertificateComposition",
+      "CertificateBinding",
+      "InputControls",
+      "PathControls",
+      "PathDependencies",
+      "CertificateFixtures",
+      "CertificateControls",
+      "BindingControls",
+      "CompositionControls",
+      "CertificateReadback",
+      "CheckerDependencies",
+      "PathLengthMutant",
+      "PathEdgesMutant"
+    ],
+    "modules": [
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "GenericFiniteQueryLocality",
+        "source_id": "s0715-dd8cc2029f44ef9fe338"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryLocality",
+          "Mathlib.Probability.ProductMeasure"
+        ],
+        "name": "GenericFiniteQueryMeasure",
+        "source_id": "s0715-1314660330d0b0f692c4"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "PolicyRowEvaluator",
+        "source_id": "s0715-ad90cd60abc28ed239d2"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyRowEvaluator"
+        ],
+        "name": "PolicyTranscriptFiber",
+        "source_id": "s0715-154688d5d66ce5313d79"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTranscriptFiber"
+        ],
+        "name": "FeedbackRequests",
+        "source_id": "s0715-efec27493bd981a110ce"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib",
+          "Mathlib.Probability.ProductMeasure"
+        ],
+        "name": "ProductObservationLaw",
+        "source_id": "s0715-34183e3d4139e1001727"
+      },
+      {
+        "imports": [
+          "Init",
+          "ProductObservationLaw"
+        ],
+        "name": "IndependentProductFamilies",
+        "source_id": "s0715-c8887b5e004b43a2d20c"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "GenericQueryReference",
+        "source_id": "s0715-9b1bb081f8a01e48dfe3"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericQueryReference"
+        ],
+        "name": "PolicyRowLaw",
+        "source_id": "s0715-c2721c25c62386848227"
+      },
+      {
+        "imports": [
+          "Init",
+          "FeedbackRequests",
+          "IndependentProductFamilies",
+          "PolicyRowLaw"
+        ],
+        "name": "FeedbackFiberProbability",
+        "source_id": "s0715-3361996a2a07ab591032"
+      },
+      {
+        "imports": [
+          "Init",
+          "FeedbackFiberProbability"
+        ],
+        "name": "PolicyCylinderProbability",
+        "source_id": "s0715-1bf0de3b2a6fdbb35495"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTranscriptFiber",
+          "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+        ],
+        "name": "HistoryPathConsistency",
+        "source_id": "s0715-620e92b491c428b7093a"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyCylinderProbability",
+          "HistoryPathConsistency"
+        ],
+        "name": "PolicyObservedLaw",
+        "source_id": "s0715-e4f63e57624a4d7c63f9"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyObservedLaw"
+        ],
+        "name": "PolicyTraceBinding",
+        "source_id": "s0715-588393fd1be2a0d77868"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding"
+        ],
+        "name": "StackActionLaw",
+        "source_id": "s0715-df47d4a263453e8f352b"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "RecurrentSupport",
+        "source_id": "s0715-eb4e1c3ef064c6f5edfe"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "RecurrentSupport",
+          "Mathlib.Probability.BorelCantelli"
+        ],
+        "name": "RawTapeRecurrence",
+        "source_id": "s0715-8fa4d8451d7b2659bb3f"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "RecurrentSupport"
+        ],
+        "name": "SequentialTapeConsumption",
+        "source_id": "s0715-0c2ae07a9fb14dec8e51"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "PruningKernel",
+        "source_id": "s0715-b807803e41160a43d31a"
+      },
+      {
+        "imports": [
+          "Init",
+          "PruningKernel"
+        ],
+        "name": "EndComponents",
+        "source_id": "s0715-67bc565d612b83867ee4"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "RecurrentSupport"
+        ],
+        "name": "RecurrentGraph",
+        "source_id": "s0715-3d90d3d85333a2133bfc"
+      },
+      {
+        "imports": [
+          "Init",
+          "GenericFiniteQueryMeasure"
+        ],
+        "name": "KilledQueryLaw",
+        "source_id": "s0715-cb0dce8751c0df75e432"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledQueryLaw",
+          "PolicyTraceBinding"
+        ],
+        "name": "KilledAdaptiveHistory",
+        "source_id": "s0715-a2b9f753bcb52f063206"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledAdaptiveHistory",
+          "RecurrentSupport",
+          "PruningKernel"
+        ],
+        "name": "KilledRecurrentTransfer",
+        "source_id": "s0715-1bd23c180c590d453f3e"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteReachability",
+        "source_id": "s0715-fc55921e456ff60ff2cb"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "FiniteReachability"
+        ],
+        "name": "ExecutablePruning",
+        "source_id": "s0715-d516cbb334785471f335"
+      },
+      {
+        "imports": [
+          "Init",
+          "ExecutablePruning"
+        ],
+        "name": "MarkovSupportAdapter",
+        "source_id": "s0715-7a241551dac51d43d7f4"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledRecurrentTransfer",
+          "MarkovSupportAdapter"
+        ],
+        "name": "MarkovKilledBridge",
+        "source_id": "s0715-4d7d59439ca0b938f992"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawTapeRecurrence",
+          "SequentialTapeConsumption",
+          "RecurrentGraph",
+          "MarkovKilledBridge"
+        ],
+        "name": "AdaptiveMarkovRecurrentGraph",
+        "source_id": "s0715-2fcc654e69e6f6bf9e62"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveMarkovRecurrentGraph"
+        ],
+        "name": "RoundRobinSchedule",
+        "source_id": "s0715-2bc434232626c8286ea3"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding",
+          "RecurrentSupport"
+        ],
+        "name": "PolicyTailTransfer",
+        "source_id": "s0715-7ca07c1cc8ff403aa51b"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTailTransfer"
+        ],
+        "name": "RelativeTailTransfer",
+        "source_id": "s0715-00d48ffadc155380cc2a"
+      },
+      {
+        "imports": [
+          "Init",
+          "RelativeTailTransfer"
+        ],
+        "name": "SafeSetTailTransfer",
+        "source_id": "s0715-95b80efcabf277034bdd"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Finset.Powerset",
+          "Mathlib.Data.Finset.Card",
+          "Mathlib.Tactic"
+        ],
+        "name": "SelfVerifyingSupport",
+        "source_id": "s0715-c9587c854ee461a02fa8"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTailTransfer",
+          "SelfVerifyingSupport"
+        ],
+        "name": "SeededPolicyNecessity",
+        "source_id": "s0715-f8bda503afd0cb4cf140"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib"
+        ],
+        "name": "FiniteChainAvoidance",
+        "source_id": "s0715-e9533431bd1d0c79a933"
+      },
+      {
+        "imports": [
+          "Init",
+          "Mathlib.Data.Real.Sqrt",
+          "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+          "Mathlib.Tactic"
+        ],
+        "name": "dependencies.StatisticalRepair",
+        "source_id": "s0715-14375ad8001da24a4963"
+      },
+      {
+        "imports": [
+          "Init",
+          "dependencies.StatisticalRepair",
+          "Mathlib.Topology.Instances.ENNReal.Lemmas"
+        ],
+        "name": "HellingerTree",
+        "source_id": "s0715-67f673929a05d4650bc5"
+      },
+      {
+        "imports": [
+          "Init",
+          "HellingerTree"
+        ],
+        "name": "SubprobHellinger",
+        "source_id": "s0715-3931c2780954d4c7f59f"
+      },
+      {
+        "imports": [
+          "Init",
+          "SubprobHellinger"
+        ],
+        "name": "DependentHellinger",
+        "source_id": "s0715-ecbb28b9dfc3119ca137"
+      },
+      {
+        "imports": [
+          "Init",
+          "DependentHellinger"
+        ],
+        "name": "ResetBudget",
+        "source_id": "s0715-329e89e9719c254e3f0e"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetBudget"
+        ],
+        "name": "ResetLaw",
+        "source_id": "s0715-8b3d4ae86256afdb3bac"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetLaw",
+          "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+          "Mathlib.Probability.ProbabilityMassFunction.Integrals"
+        ],
+        "name": "ResetTrajectory",
+        "source_id": "s0715-39a75ea7605686a7f7ec"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResetTrajectory"
+        ],
+        "name": "MarkovCharge",
+        "source_id": "s0715-7e036d3186027ef03dc0"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainAvoidance",
+          "MarkovCharge"
+        ],
+        "name": "FiniteChainTrajectory",
+        "source_id": "s0715-99bf949a87d2b3346d18"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainTrajectory",
+          "RecurrentSupport"
+        ],
+        "name": "InfiniteRecurrence",
+        "source_id": "s0715-93ed27ba87c3e5d1e8b5"
+      },
+      {
+        "imports": [
+          "Init",
+          "FiniteChainAvoidance",
+          "EndComponents"
+        ],
+        "name": "StationaryPairChain",
+        "source_id": "s0715-3a8b982090c1394ad888"
+      },
+      {
+        "imports": [
+          "Init",
+          "InfiniteRecurrence",
+          "StationaryPairChain",
+          "PruningKernel"
+        ],
+        "name": "FairComponentParity",
+        "source_id": "s0715-eb82f6b9e7607ed48537"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairComponentParity",
+          "MarkovSupportAdapter"
+        ],
+        "name": "CheckedTargetOperation",
+        "source_id": "s0715-6fdd7bcbfaf3700a0bb1"
+      },
+      {
+        "imports": [
+          "Init",
+          "AdaptiveMarkovRecurrentGraph",
+          "SafeSetTailTransfer",
+          "SeededPolicyNecessity",
+          "CheckedTargetOperation"
+        ],
+        "name": "StableSupportParityNecessity",
+        "source_id": "s0715-3908a26164388e4d93e0"
+      },
+      {
+        "imports": [
+          "Init",
+          "StableSupportParityNecessity"
+        ],
+        "name": "StageTargetOrExit",
+        "source_id": "s0715-ad71b5a1514ef406e255"
+      },
+      {
+        "imports": [
+          "Init",
+          "PolicyTraceBinding"
+        ],
+        "name": "ResidualSeedPosterior",
+        "source_id": "s0715-7d0c58079ba053c065c0"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResidualSeedPosterior"
+        ],
+        "name": "ConditionalPrefix",
+        "source_id": "s0715-2f122fd5686a2c04ef60"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalPrefix"
+        ],
+        "name": "ConditionalContinuationLaw",
+        "source_id": "s0715-ad4a019bb259581fece2"
+      },
+      {
+        "imports": [
+          "Init",
+          "ResidualSeedPosterior"
+        ],
+        "name": "PosteriorFeedbackProduct",
+        "source_id": "s0715-4fc3f9ea75a109e53fe9"
+      },
+      {
+        "imports": [
+          "Init",
+          "PosteriorFeedbackProduct",
+          "MarkovKilledBridge"
+        ],
+        "name": "MarkovSeedPosterior",
+        "source_id": "s0715-ebcab02a76e347edd846"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalContinuationLaw",
+          "KilledRecurrentTransfer",
+          "MarkovSeedPosterior"
+        ],
+        "name": "ConditionalKilledContinuation",
+        "source_id": "s0715-bef9a538a2f57e0a9eaf"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageTargetOrExit",
+          "ConditionalKilledContinuation"
+        ],
+        "name": "LawfulRestart",
+        "source_id": "s0715-ad47eaa7a5fcdb63c491"
+      },
+      {
+        "imports": [
+          "Init",
+          "LawfulRestart"
+        ],
+        "name": "LawfulProbability",
+        "source_id": "s0715-223e1834b6ea238b185d"
+      },
+      {
+        "imports": [
+          "Init",
+          "KilledRecurrentTransfer"
+        ],
+        "name": "ParityTailInvariance",
+        "source_id": "s0715-951cb071f8f64adc901a"
+      },
+      {
+        "imports": [
+          "Init",
+          "ConditionalKilledContinuation",
+          "ParityTailInvariance"
+        ],
+        "name": "ConditionalAlmostSure",
+        "source_id": "s0715-81140268921ee50c54a1"
+      },
+      {
+        "imports": [
+          "Init",
+          "LawfulProbability",
+          "ConditionalAlmostSure"
+        ],
+        "name": "SemanticWinning",
+        "source_id": "s0715-1d45c89661dd33f632c5"
+      },
+      {
+        "imports": [
+          "Init",
+          "SemanticWinning"
+        ],
+        "name": "SemanticSafeActions",
+        "source_id": "s0715-d999d7b878c26566e555"
+      },
+      {
+        "imports": [
+          "Init",
+          "SemanticSafeActions"
+        ],
+        "name": "HistoryStageSafety",
+        "source_id": "s0715-b620929ad725522a3ef0"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinSchedule",
+          "HistoryStageSafety"
+        ],
+        "name": "RoundRobinPolicy",
+        "source_id": "s0715-b15efe0b472179a638e1"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinPolicy"
+        ],
+        "name": "RoundRobinRecurrence",
+        "source_id": "s0715-3bd34ffd89571cee24d3"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageTargetOrExit"
+        ],
+        "name": "RegionAlgorithm",
+        "source_id": "s0715-e77f3cc5d645eb2a0ce0"
+      },
+      {
+        "imports": [
+          "Init",
+          "HistoryStageSafety",
+          "RegionAlgorithm"
+        ],
+        "name": "GlobalParityNecessity",
+        "source_id": "s0715-7a11ac48d7c08fda70d2"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinRecurrence",
+          "CheckedTargetOperation",
+          "GlobalParityNecessity"
+        ],
+        "name": "ActualTargetPolicy",
+        "source_id": "s0715-e9195cb85e7540a14a7e"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy"
+        ],
+        "name": "StageAvailability",
+        "source_id": "s0715-a75ef86675de7bb99474"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy"
+        ],
+        "name": "FairStageNavigation",
+        "source_id": "s0715-6f71163291f1f641fac5"
+      },
+      {
+        "imports": [
+          "Init",
+          "FairStageNavigation"
+        ],
+        "name": "EventualCycling",
+        "source_id": "s0715-32c9cfdfe4cc608ef4ab"
+      },
+      {
+        "imports": [
+          "Init",
+          "StageAvailability",
+          "EventualCycling"
+        ],
+        "name": "ObservedPhaseController",
+        "source_id": "s0715-ad593a82d8a55a4fa05c"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController"
+        ],
+        "name": "GeneratedPolicySafety",
+        "source_id": "s0715-49217ed14ff4add4eb23"
+      },
+      {
+        "imports": [
+          "Init",
+          "EventualCycling"
+        ],
+        "name": "StackPathRegularity",
+        "source_id": "s0715-2ea42f29473844d49de2"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPolicySafety",
+          "StackPathRegularity"
+        ],
+        "name": "GeneratedRun",
+        "source_id": "s0715-1e58e777e44fe768b4e3"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedPhaseController"
+        ],
+        "name": "MemoryTransitions",
+        "source_id": "s0715-bb0e97e7aadd5c4040b6"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedRun",
+          "MemoryTransitions"
+        ],
+        "name": "GeneratedPhaseDynamics",
+        "source_id": "s0715-c25555c6ec2dd6eee4d7"
+      },
+      {
+        "imports": [
+          "Init",
+          "StackActionLaw",
+          "Mathlib.Probability.StrongLaw"
+        ],
+        "name": "RawEmpiricalRows",
+        "source_id": "s0715-38e7cfca97dbabaaf031"
+      },
+      {
+        "imports": [
+          "Init",
+          "RawEmpiricalRows"
+        ],
+        "name": "EmpiricalTailBounds",
+        "source_id": "s0715-e2a134c11efbf352dd1a"
+      },
+      {
+        "imports": [
+          "Init",
+          "EmpiricalTailBounds",
+          "SequentialTapeConsumption"
+        ],
+        "name": "ObservedEmpiricalRows",
+        "source_id": "s0715-a26e26ef280001814a59"
+      },
+      {
+        "imports": [
+          "Init",
+          "ActualTargetPolicy",
+          "ObservedEmpiricalRows"
+        ],
+        "name": "ObservedRowTest",
+        "source_id": "s0715-0935fd900bf12cacc1e3"
+      },
+      {
+        "imports": [
+          "Init",
+          "ObservedRowTest"
+        ],
+        "name": "EmpiricalTestLaw",
+        "source_id": "s0715-4ae80a7eca03ea2505ce"
+      },
+      {
+        "imports": [
+          "Init",
+          "RoundRobinSchedule"
+        ],
+        "name": "PhaseStabilization",
+        "source_id": "s0715-89259ffa9f43a905f9ad"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPhaseDynamics",
+          "EmpiricalTestLaw",
+          "PhaseStabilization"
+        ],
+        "name": "GeneratedPhaseStability",
+        "source_id": "s0715-1bbe8135156149385489"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedPhaseStability"
+        ],
+        "name": "GeneratedParitySuccess",
+        "source_id": "s0715-55aa9f5021906229098e"
+      },
+      {
+        "imports": [
+          "Init",
+          "GeneratedParitySuccess"
+        ],
+        "name": "GlobalParitySufficiency",
+        "source_id": "s0715-4aa01fdbbe3f61922652"
+      },
+      {
+        "imports": [
+          "Init",
+          "MarkovSupportAdapter"
+        ],
+        "name": "CertificateData",
+        "source_id": "s0715-3fa7f88cf0b52c04bd77"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateData"
+        ],
+        "name": "CertificateOrder",
+        "source_id": "s0715-c70f97a7dd7659590061"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "Mathlib.Data.Fintype.Card"
+        ],
+        "name": "CertificatePath",
+        "source_id": "s0715-c65e4c1d0f9ec02bdc13"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateData",
+          "CertificatePath",
+          "CertificateOrder"
+        ],
+        "name": "CertificateSyntax",
+        "source_id": "s0715-a0db6d50adae299c15d0"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateSyntax",
+          "GlobalParitySufficiency"
+        ],
+        "name": "CertificateSoundness",
+        "source_id": "s0715-0feb5d853f8a4c771aa3"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateSoundness"
+        ],
+        "name": "CertificateCompleteness",
+        "source_id": "s0715-46a9a7a426d5c0f4a17b"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateSyntax"
+        ],
+        "name": "CertificateComposition",
+        "source_id": "s0715-48c674178514929c112a"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateSyntax"
+        ],
+        "name": "CertificateBinding",
+        "source_id": "s0715-2e926690f9ad380ed393"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateData"
+        ],
+        "name": "InputControls",
+        "source_id": "s0715-169b3756e95a58db7ae5"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificatePath"
+        ],
+        "name": "PathControls",
+        "source_id": "s0715-da22820268c31c5bea91"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificatePath",
+          "Lean.Util.FoldConsts"
+        ],
+        "name": "PathDependencies",
+        "source_id": "s0715-b8025cbfe7e00a5fac97"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateSyntax"
+        ],
+        "name": "CertificateFixtures",
+        "source_id": "s0715-5fa971e22d968f6cf748"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateFixtures"
+        ],
+        "name": "CertificateControls",
+        "source_id": "s0715-5d1dfeb3abf1cfd36a15"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateBinding",
+          "CertificateFixtures"
+        ],
+        "name": "BindingControls",
+        "source_id": "s0715-a8c3d38e841cdc5525c7"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateComposition"
+        ],
+        "name": "CompositionControls",
+        "source_id": "s0715-4e39c9f12cd413ee129e"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateCompleteness",
+          "CertificateBinding"
+        ],
+        "name": "CertificateReadback",
+        "source_id": "s0715-13c5494023a01a3ef3a4"
+      },
+      {
+        "imports": [
+          "Init",
+          "CertificateBinding",
+          "CertificateComposition",
+          "Lean.Util.FoldConsts",
+          "Lean.Compiler.ImplementedByAttr"
+        ],
+        "name": "CheckerDependencies",
+        "source_id": "s0715-1aad533fc6b2e75cd68b"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "Mathlib.Data.Fintype.Card"
+        ],
+        "name": "PathLengthMutant",
+        "source_id": "s0715-d1d7564ac4028f204516"
+      },
+      {
+        "imports": [
+          "Init",
+          "EndComponents",
+          "Mathlib.Data.Fintype.Card"
+        ],
+        "name": "PathEdgesMutant",
+        "source_id": "s0715-174b244b18439e4f791b"
+      }
+    ],
+    "negative_roots": [],
+    "official_imports": [
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Compiler.ImplementedByAttr",
+        "package": "lean-release",
+        "path": "Lean/Compiler/ImplementedByAttr.lean",
+        "sha256": "5d27620d6b6ec58dd9c5f956fa4e4a4c60f2839a9a5c7f2dd5e650f072a4132b"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      },
+      {
+        "module": "Lean.Util.FoldConsts",
+        "package": "lean-release",
+        "path": "Lean/Util/FoldConsts.lean",
+        "sha256": "81731982284c3700fe3acfe2ceb16218ea49a563ee5ef1d3b272e8b6d924eae1"
+      },
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      },
+      {
+        "module": "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "package": "mathlib",
+        "path": "Mathlib/Algebra/Order/BigOperators/Ring/Finset.lean",
+        "sha256": "6341ca875f3963664c94147b1eacd45c9aedfe2015ae695b06af4e717849abe4"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Card.lean",
+        "sha256": "a915b4a9c6ed684221397e67503048f604fc2caf58a88b03c02e4d7e070a940b"
+      },
+      {
+        "module": "Mathlib.Data.Finset.Powerset",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Finset/Powerset.lean",
+        "sha256": "ff946726d050b01703aec4dd1a66398f461455942e036806c24ceaeee6e23ac8"
+      },
+      {
+        "module": "Mathlib.Data.Fintype.Card",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Fintype/Card.lean",
+        "sha256": "49122bdbe4551c4bc0ffaa87030d6ff6b566beafa81a754a1835b62c40d6f577"
+      },
+      {
+        "module": "Mathlib.Data.Real.Sqrt",
+        "package": "mathlib",
+        "path": "Mathlib/Data/Real/Sqrt.lean",
+        "sha256": "100af39c6d268959221d07b8f2fee4579d2dbef4e87bf64158066cc675f67323"
+      },
+      {
+        "module": "Mathlib.Probability.BorelCantelli",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/BorelCantelli.lean",
+        "sha256": "033046517cdc893d6c849aa77f04b039e9e12cabc83eb46cfb8130cc5f6020ea"
+      },
+      {
+        "module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/Kernel/IonescuTulcea/Traj.lean",
+        "sha256": "c565dd9bdc17c21181cd5cbe41055aa2889210745bc463ff0596a01c580ccbcb"
+      },
+      {
+        "module": "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProbabilityMassFunction/Integrals.lean",
+        "sha256": "412763e5ad86cc96721b1bbb1bfaccb5fa15919a2d5afb7af9da419cc2290292"
+      },
+      {
+        "module": "Mathlib.Probability.ProductMeasure",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/ProductMeasure.lean",
+        "sha256": "f8af06e87e2e28916f0fa8a455f792ded4b85a22e1dea5e1c6f9cac1d31b9830"
+      },
+      {
+        "module": "Mathlib.Probability.StrongLaw",
+        "package": "mathlib",
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "sha256": "3c3768b70c3779bea384592bb548bc06de2d25af315e0a0d59a1742b0807717c"
+      },
+      {
+        "module": "Mathlib.Tactic",
+        "package": "mathlib",
+        "path": "Mathlib/Tactic.lean",
+        "sha256": "f20038eba7bba63f07a2f854496101226df407e20414e6b8ebf94b14f95e831b"
+      },
+      {
+        "module": "Mathlib.Topology.Instances.ENNReal.Lemmas",
+        "package": "mathlib",
+        "path": "Mathlib/Topology/Instances/ENNReal/Lemmas.lean",
+        "sha256": "5b078eb5f8aeae72ee8c7348f2cfcc02c36e0ff01e9f72205c2c06187ee04c82"
+      }
+    ],
+    "package_manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+    "packages": [
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "mathlib",
+        "path": "."
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "plausible",
+        "path": ".lake/packages/plausible"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "LeanSearchClient",
+        "path": ".lake/packages/LeanSearchClient"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "importGraph",
+        "path": ".lake/packages/importGraph"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "proofwidgets",
+        "path": ".lake/packages/proofwidgets"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "aesop",
+        "path": ".lake/packages/aesop"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "Qq",
+        "path": ".lake/packages/Qq"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "batteries",
+        "path": ".lake/packages/batteries"
+      },
+      {
+        "kind": "GIT",
+        "manifest_source_id": "s0715-8bc1d7ed6f374d6baed3",
+        "name": "Cli",
+        "path": ".lake/packages/Cli"
+      }
+    ],
+    "positive_roots": [
+      "CertificateSoundness",
+      "CertificateCompleteness",
+      "CertificateComposition",
+      "CertificateBinding"
+    ],
+    "runtime_roots": [],
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "DECLARED_SUITE",
+    "stages": [
+      {
+        "argv": [
+          "{tool:python}",
+          "-B",
+          "{driver:g1}",
+          "--lean-bin",
+          "{tool:lean-bin}",
+          "--mathlib",
+          "{dependency:mathlib}",
+          "--out",
+          "{out}/original"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "original-g1",
+        "kind": "DRIVER",
+        "output_paths": [
+          "original"
+        ],
+        "timeout_seconds": 24000
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GenericFiniteQueryLocality"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GenericFiniteQueryLocality",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GenericFiniteQueryMeasure"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GenericFiniteQueryMeasure",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PolicyRowEvaluator"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyRowEvaluator",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PolicyTranscriptFiber"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyTranscriptFiber",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-FeedbackRequests"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FeedbackRequests",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ProductObservationLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ProductObservationLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-IndependentProductFamilies"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-IndependentProductFamilies",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GenericQueryReference"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GenericQueryReference",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PolicyRowLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyRowLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-FeedbackFiberProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FeedbackFiberProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PolicyCylinderProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyCylinderProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-HistoryPathConsistency"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-HistoryPathConsistency",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PolicyObservedLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyObservedLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PolicyTraceBinding"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyTraceBinding",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-StackActionLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StackActionLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RecurrentSupport"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RecurrentSupport",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RawTapeRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RawTapeRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-SequentialTapeConsumption"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SequentialTapeConsumption",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PruningKernel"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PruningKernel",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-EndComponents"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EndComponents",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RecurrentGraph"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RecurrentGraph",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-KilledQueryLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-KilledQueryLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-KilledAdaptiveHistory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-KilledAdaptiveHistory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-KilledRecurrentTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-KilledRecurrentTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-FiniteReachability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteReachability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ExecutablePruning"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ExecutablePruning",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-MarkovSupportAdapter"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MarkovSupportAdapter",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-MarkovKilledBridge"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MarkovKilledBridge",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-AdaptiveMarkovRecurrentGraph"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-AdaptiveMarkovRecurrentGraph",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RoundRobinSchedule"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RoundRobinSchedule",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PolicyTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PolicyTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RelativeTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RelativeTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-SafeSetTailTransfer"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SafeSetTailTransfer",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-SelfVerifyingSupport"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SelfVerifyingSupport",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-SeededPolicyNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SeededPolicyNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-FiniteChainAvoidance"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteChainAvoidance",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-dependencies.StatisticalRepair"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-dependencies.StatisticalRepair",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-HellingerTree"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-HellingerTree",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-SubprobHellinger"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SubprobHellinger",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-DependentHellinger"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-DependentHellinger",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ResetBudget"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ResetBudget",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ResetLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ResetLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ResetTrajectory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ResetTrajectory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-MarkovCharge"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MarkovCharge",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-FiniteChainTrajectory"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FiniteChainTrajectory",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-InfiniteRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-InfiniteRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-StationaryPairChain"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StationaryPairChain",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-FairComponentParity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FairComponentParity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-CheckedTargetOperation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-CheckedTargetOperation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-StableSupportParityNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StableSupportParityNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-StageTargetOrExit"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StageTargetOrExit",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ResidualSeedPosterior"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ResidualSeedPosterior",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ConditionalPrefix"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalPrefix",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ConditionalContinuationLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalContinuationLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PosteriorFeedbackProduct"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PosteriorFeedbackProduct",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-MarkovSeedPosterior"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MarkovSeedPosterior",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ConditionalKilledContinuation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalKilledContinuation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-LawfulRestart"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-LawfulRestart",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-LawfulProbability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-LawfulProbability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ParityTailInvariance"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ParityTailInvariance",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ConditionalAlmostSure"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ConditionalAlmostSure",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-SemanticWinning"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SemanticWinning",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-SemanticSafeActions"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-SemanticSafeActions",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-HistoryStageSafety"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-HistoryStageSafety",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RoundRobinPolicy"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RoundRobinPolicy",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RoundRobinRecurrence"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RoundRobinRecurrence",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RegionAlgorithm"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RegionAlgorithm",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GlobalParityNecessity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GlobalParityNecessity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ActualTargetPolicy"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ActualTargetPolicy",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-StageAvailability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StageAvailability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-FairStageNavigation"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-FairStageNavigation",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-EventualCycling"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EventualCycling",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ObservedPhaseController"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ObservedPhaseController",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GeneratedPolicySafety"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedPolicySafety",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-StackPathRegularity"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-StackPathRegularity",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GeneratedRun"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedRun",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-MemoryTransitions"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-MemoryTransitions",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GeneratedPhaseDynamics"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedPhaseDynamics",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-RawEmpiricalRows"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-RawEmpiricalRows",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-EmpiricalTailBounds"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EmpiricalTailBounds",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ObservedEmpiricalRows"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ObservedEmpiricalRows",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-ObservedRowTest"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-ObservedRowTest",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-EmpiricalTestLaw"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-EmpiricalTestLaw",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-PhaseStabilization"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-PhaseStabilization",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GeneratedPhaseStability"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedPhaseStability",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GeneratedParitySuccess"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GeneratedParitySuccess",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "cost-GlobalParitySufficiency"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-cost-GlobalParitySufficiency",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateData"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateData",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateOrder"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateOrder",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificatePath"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificatePath",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateSyntax"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateSyntax",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateSoundness"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateSoundness",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateCompleteness"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateCompleteness",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateComposition"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateComposition",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateBinding"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateBinding",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "InputControls"
+        ],
+        "control_ids": [
+          "d08-g1-control-0-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-InputControls",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "PathControls"
+        ],
+        "control_ids": [
+          "d08-g1-control-1-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-PathControls",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "PathDependencies"
+        ],
+        "control_ids": [
+          "d08-g1-control-2-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-PathDependencies",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateFixtures"
+        ],
+        "control_ids": [
+          "d08-g1-control-3-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateFixtures",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateControls"
+        ],
+        "control_ids": [
+          "d08-g1-control-4-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateControls",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "BindingControls"
+        ],
+        "control_ids": [
+          "d08-g1-control-5-D08-03-boundCheck_iff",
+          "d08-g1-control-5-D08-03-boundCheck_stale"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-BindingControls",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CompositionControls"
+        ],
+        "control_ids": [
+          "d08-g1-control-6-D08-03-checkedMerge_some_iff",
+          "d08-g1-control-6-D08-03-checkedMerge_valid",
+          "d08-g1-control-6-D08-03-checkedLinkParent_some_iff",
+          "d08-g1-control-6-D08-03-checkedLinkParent_valid"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CompositionControls",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CertificateReadback"
+        ],
+        "control_ids": [
+          "d08-g1-control-7-D08-01-check_sound",
+          "d08-g1-control-7-D08-02-policy_has_certificate",
+          "d08-g1-control-7-D08-02-semantic_iff_certificate",
+          "d08-g1-control-7-D08-03-checkedMerge_some_iff",
+          "d08-g1-control-7-D08-03-checkedMerge_valid",
+          "d08-g1-control-7-D08-03-checkedLinkParent_some_iff",
+          "d08-g1-control-7-D08-03-checkedLinkParent_valid",
+          "d08-g1-control-7-D08-03-boundCheck_iff",
+          "d08-g1-control-7-D08-03-boundCheck_stale"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CertificateReadback",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "CheckerDependencies"
+        ],
+        "control_ids": [
+          "d08-g1-control-8-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-CheckerDependencies",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "C-CertificateData"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-C-CertificateData",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "C-CertificateOrder"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-C-CertificateOrder",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "C-CertificatePath"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-C-CertificatePath",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "C-CertificateSyntax"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-C-CertificateSyntax",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "C-CertificateComposition"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-C-CertificateComposition",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "C-CertificateBinding"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-C-CertificateBinding",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "PathLengthMutant"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-PathLengthMutant",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "PathLengthMutationControl"
+        ],
+        "control_ids": [
+          "d08-g1-control-9-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [
+          {
+            "literal": "did not evaluate to",
+            "sha256": "7c7aced90706cf40ce83cf69dc0e9b06f4b5367fcf20509532f4926a65bd1a7f",
+            "source_id": "s0715-52c16c3553a9091365c2"
+          }
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "id": "observe-PathLengthMutationControl",
+        "kind": "NEGATIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "PathEdgesMutant"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-PathEdgesMutant",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "PathEdgesMutationControl"
+        ],
+        "control_ids": [
+          "d08-g1-control-10-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [
+          {
+            "literal": "did not evaluate to",
+            "sha256": "7c7aced90706cf40ce83cf69dc0e9b06f4b5367fcf20509532f4926a65bd1a7f",
+            "source_id": "s0715-52c16c3553a9091365c2"
+          }
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "id": "observe-PathEdgesMutationControl",
+        "kind": "NEGATIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "AllReceiptsRemoved-CertificateSyntax"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-AllReceiptsRemoved-CertificateSyntax",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "AllReceiptsRemoved-CertificateFixtures"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-AllReceiptsRemoved-CertificateFixtures",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "AllReceiptsRemoved-MutationControl"
+        ],
+        "control_ids": [
+          "d08-g1-control-11-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [
+          {
+            "literal": "did not evaluate to",
+            "sha256": "7c7aced90706cf40ce83cf69dc0e9b06f4b5367fcf20509532f4926a65bd1a7f",
+            "source_id": "s0715-52c16c3553a9091365c2"
+          }
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "id": "observe-AllReceiptsRemoved-MutationControl",
+        "kind": "NEGATIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "RivalParityRemoved-CertificateSyntax"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-RivalParityRemoved-CertificateSyntax",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "RivalParityRemoved-CertificateFixtures"
+        ],
+        "control_ids": [],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "id": "observe-RivalParityRemoved-CertificateFixtures",
+        "kind": "POSITIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      },
+      {
+        "argv": [
+          "{builtin:observe-child}",
+          "original-g1",
+          "RivalParityRemoved-MutationControl"
+        ],
+        "control_ids": [
+          "d08-g1-control-12-D08-01-check_sound"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-g1"
+        ],
+        "driver_id": "g1",
+        "expected_diagnostics": [
+          {
+            "literal": "did not evaluate to",
+            "sha256": "7c7aced90706cf40ce83cf69dc0e9b06f4b5367fcf20509532f4926a65bd1a7f",
+            "source_id": "s0715-52c16c3553a9091365c2"
+          }
+        ],
+        "expected_exit_codes": [
+          1
+        ],
+        "id": "observe-RivalParityRemoved-MutationControl",
+        "kind": "NEGATIVE_CONTROL",
+        "output_paths": [],
+        "timeout_seconds": 180
+      }
+    ],
+    "target_names": [
+      {
+        "module": "CertificateSoundness",
+        "name": "OrthemicCertificate.check_sound",
+        "target_id": "D08-01-check_sound"
+      },
+      {
+        "module": "CertificateCompleteness",
+        "name": "OrthemicCertificate.policy_has_certificate",
+        "target_id": "D08-02-policy_has_certificate"
+      },
+      {
+        "module": "CertificateCompleteness",
+        "name": "OrthemicCertificate.semantic_iff_certificate",
+        "target_id": "D08-02-semantic_iff_certificate"
+      },
+      {
+        "module": "CertificateComposition",
+        "name": "OrthemicCertificate.checkedMerge_some_iff",
+        "target_id": "D08-03-checkedMerge_some_iff"
+      },
+      {
+        "module": "CertificateComposition",
+        "name": "OrthemicCertificate.checkedMerge_valid",
+        "target_id": "D08-03-checkedMerge_valid"
+      },
+      {
+        "module": "CertificateComposition",
+        "name": "OrthemicCertificate.checkedLinkParent_some_iff",
+        "target_id": "D08-03-checkedLinkParent_some_iff"
+      },
+      {
+        "module": "CertificateComposition",
+        "name": "OrthemicCertificate.checkedLinkParent_valid",
+        "target_id": "D08-03-checkedLinkParent_valid"
+      },
+      {
+        "module": "CertificateBinding",
+        "name": "OrthemicCertificate.boundCheck_iff",
+        "target_id": "D08-03-boundCheck_iff"
+      },
+      {
+        "module": "CertificateBinding",
+        "name": "OrthemicCertificate.boundCheck_stale",
+        "target_id": "D08-03-boundCheck_stale"
+      }
+    ],
+    "tools": [
+      {
+        "executable_sha256": "d1483a82342508f2ec2b172b788d5b676a59eaf70ed01ae846a0f84f63a3a82a",
+        "kind": "PYTHON",
+        "name": "python",
+        "path_kind": "EXECUTABLE",
+        "platform": "linux-x86_64",
+        "version": "3.11.9"
+      },
+      {
+        "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+        "kind": "LEAN",
+        "name": "lean-bin",
+        "path_kind": "BIN_DIRECTORY",
+        "platform": "linux-x86_64",
+        "version": "4.19.0"
+      }
+    ]
+  },
+  "result_families": [
+    "t09-certificate-checker",
+    "t09-certificate-existence",
+    "t09-certificate-composition"
+  ],
+  "review_ids": [
+    "D08-01-review-1",
+    "D08-02-review-1",
+    "D08-03-review-1"
+  ],
+  "source_ids": [
+    "s0715-dd8cc2029f44ef9fe338",
+    "s0715-1314660330d0b0f692c4",
+    "s0715-ad90cd60abc28ed239d2",
+    "s0715-154688d5d66ce5313d79",
+    "s0715-efec27493bd981a110ce",
+    "s0715-34183e3d4139e1001727",
+    "s0715-c8887b5e004b43a2d20c",
+    "s0715-9b1bb081f8a01e48dfe3",
+    "s0715-c2721c25c62386848227",
+    "s0715-3361996a2a07ab591032",
+    "s0715-1bf0de3b2a6fdbb35495",
+    "s0715-620e92b491c428b7093a",
+    "s0715-e4f63e57624a4d7c63f9",
+    "s0715-588393fd1be2a0d77868",
+    "s0715-df47d4a263453e8f352b",
+    "s0715-eb4e1c3ef064c6f5edfe",
+    "s0715-8fa4d8451d7b2659bb3f",
+    "s0715-0c2ae07a9fb14dec8e51",
+    "s0715-b807803e41160a43d31a",
+    "s0715-67bc565d612b83867ee4",
+    "s0715-3d90d3d85333a2133bfc",
+    "s0715-cb0dce8751c0df75e432",
+    "s0715-a2b9f753bcb52f063206",
+    "s0715-1bd23c180c590d453f3e",
+    "s0715-fc55921e456ff60ff2cb",
+    "s0715-d516cbb334785471f335",
+    "s0715-7a241551dac51d43d7f4",
+    "s0715-4d7d59439ca0b938f992",
+    "s0715-2fcc654e69e6f6bf9e62",
+    "s0715-2bc434232626c8286ea3",
+    "s0715-7ca07c1cc8ff403aa51b",
+    "s0715-00d48ffadc155380cc2a",
+    "s0715-95b80efcabf277034bdd",
+    "s0715-c9587c854ee461a02fa8",
+    "s0715-f8bda503afd0cb4cf140",
+    "s0715-e9533431bd1d0c79a933",
+    "s0715-14375ad8001da24a4963",
+    "s0715-67f673929a05d4650bc5",
+    "s0715-3931c2780954d4c7f59f",
+    "s0715-ecbb28b9dfc3119ca137",
+    "s0715-329e89e9719c254e3f0e",
+    "s0715-8b3d4ae86256afdb3bac",
+    "s0715-39a75ea7605686a7f7ec",
+    "s0715-7e036d3186027ef03dc0",
+    "s0715-99bf949a87d2b3346d18",
+    "s0715-93ed27ba87c3e5d1e8b5",
+    "s0715-3a8b982090c1394ad888",
+    "s0715-eb82f6b9e7607ed48537",
+    "s0715-6fdd7bcbfaf3700a0bb1",
+    "s0715-3908a26164388e4d93e0",
+    "s0715-ad71b5a1514ef406e255",
+    "s0715-7d0c58079ba053c065c0",
+    "s0715-2f122fd5686a2c04ef60",
+    "s0715-ad4a019bb259581fece2",
+    "s0715-4fc3f9ea75a109e53fe9",
+    "s0715-ebcab02a76e347edd846",
+    "s0715-bef9a538a2f57e0a9eaf",
+    "s0715-ad47eaa7a5fcdb63c491",
+    "s0715-223e1834b6ea238b185d",
+    "s0715-951cb071f8f64adc901a",
+    "s0715-81140268921ee50c54a1",
+    "s0715-1d45c89661dd33f632c5",
+    "s0715-d999d7b878c26566e555",
+    "s0715-b620929ad725522a3ef0",
+    "s0715-b15efe0b472179a638e1",
+    "s0715-3bd34ffd89571cee24d3",
+    "s0715-e77f3cc5d645eb2a0ce0",
+    "s0715-7a11ac48d7c08fda70d2",
+    "s0715-e9195cb85e7540a14a7e",
+    "s0715-a75ef86675de7bb99474",
+    "s0715-6f71163291f1f641fac5",
+    "s0715-32c9cfdfe4cc608ef4ab",
+    "s0715-ad593a82d8a55a4fa05c",
+    "s0715-49217ed14ff4add4eb23",
+    "s0715-2ea42f29473844d49de2",
+    "s0715-1e58e777e44fe768b4e3",
+    "s0715-bb0e97e7aadd5c4040b6",
+    "s0715-c25555c6ec2dd6eee4d7",
+    "s0715-38e7cfca97dbabaaf031",
+    "s0715-e2a134c11efbf352dd1a",
+    "s0715-a26e26ef280001814a59",
+    "s0715-0935fd900bf12cacc1e3",
+    "s0715-4ae80a7eca03ea2505ce",
+    "s0715-89259ffa9f43a905f9ad",
+    "s0715-1bbe8135156149385489",
+    "s0715-55aa9f5021906229098e",
+    "s0715-4aa01fdbbe3f61922652",
+    "s0715-3fa7f88cf0b52c04bd77",
+    "s0715-c70f97a7dd7659590061",
+    "s0715-c65e4c1d0f9ec02bdc13",
+    "s0715-a0db6d50adae299c15d0",
+    "s0715-0feb5d853f8a4c771aa3",
+    "s0715-46a9a7a426d5c0f4a17b",
+    "s0715-48c674178514929c112a",
+    "s0715-2e926690f9ad380ed393",
+    "s0715-169b3756e95a58db7ae5",
+    "s0715-da22820268c31c5bea91",
+    "s0715-b8025cbfe7e00a5fac97",
+    "s0715-5fa971e22d968f6cf748",
+    "s0715-5d1dfeb3abf1cfd36a15",
+    "s0715-a8c3d38e841cdc5525c7",
+    "s0715-4e39c9f12cd413ee129e",
+    "s0715-13c5494023a01a3ef3a4",
+    "s0715-1aad533fc6b2e75cd68b",
+    "s0715-d1d7564ac4028f204516",
+    "s0715-174b244b18439e4f791b",
+    "s0715-8bc1d7ed6f374d6baed3",
+    "s0715-913c79014b9d7f98aafe",
+    "s0715-dbfd2596f3b7b49f66c9"
+  ],
+  "targets": [
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem check_sound [NeZero n] {I : Input q n k} {c : Body q n k} {B : Support q} {s : Fin n}\n    (h : check I c B s = true) (d : Pair n k) :\n    HiddenParity.Necessity.SemanticWinning (R",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D08-01-check_sound",
+      "source_id": "s0715-0feb5d853f8a4c771aa3",
+      "target_sha256": "166516bdc3612cfaf1ff69604ede03622f6035dba8191ad42d3e660db8d4cc7f"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem policy_has_certificate [NeZero n] {R : Type*} [MeasurableSpace R]\n    (I : Input q n k) (hI : I.Valid) (B : Support q) (s : Fin n) (d : Pair n k)\n    (w : WinningPolicy (R",
+      "domain": "FINITE_MODEL",
+      "id": "D08-02-policy_has_certificate",
+      "source_id": "s0715-46a9a7a426d5c0f4a17b",
+      "target_sha256": "c4fb85d52a5a833b95598fb76b9b0af81af27a3ba3ce9e4aeffb99cc2341ac77"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem semantic_iff_certificate [NeZero n] (I : Input q n k) (hI : I.Valid)\n    (B : Support q) (s : Fin n) (d : Pair n k) :\n    SemanticWinning (R",
+      "domain": "FINITE_MODEL",
+      "id": "D08-02-semantic_iff_certificate",
+      "source_id": "s0715-46a9a7a426d5c0f4a17b",
+      "target_sha256": "be016f386f1c7e4079ec88cd86d107fef3591d0f60b04b3e7d18472f672fe814"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem checkedMerge_some_iff (I : Input q n k) (c d out : Body q n k) :\n    checkedMerge I c d = some out ↔\n      bodyCheck I c = true ∧ bodyCheck I d = true ∧ merge c d = out",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D08-03-checkedMerge_some_iff",
+      "source_id": "s0715-48c674178514929c112a",
+      "target_sha256": "67be228670998da6e11e73c765c6404d503b7ada9025c048036b7dbf0c674e96"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem checkedMerge_valid {I : Input q n k} {c d out : Body q n k}\n    (h : checkedMerge I c d = some out) : bodyCheck I out = true",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D08-03-checkedMerge_valid",
+      "source_id": "s0715-48c674178514929c112a",
+      "target_sha256": "cea447f47b6f60febd304fb03b718e1dec93f68d0ebbb973bbeb6ae4edf1271c"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem checkedLinkParent_some_iff (I : Input q n k) (c : Body q n k)\n    (parent : Node q n k) (out : Body q n k) : checkedLinkParent I c parent = some out ↔\n      bodyCheck I c = true ∧ parent.support ∉ bodySupports c ∧\n      parent.Valid I c ∧ linkParent c parent = out",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D08-03-checkedLinkParent_some_iff",
+      "source_id": "s0715-48c674178514929c112a",
+      "target_sha256": "8e6b6f8e61b3bc786744a6a2006624804c9cd6a89c238dbf56eb3248147c8730"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem checkedLinkParent_valid {I : Input q n k} {c out : Body q n k} {parent : Node q n k}\n    (h : checkedLinkParent I c parent = some out) : bodyCheck I out = true",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D08-03-checkedLinkParent_valid",
+      "source_id": "s0715-48c674178514929c112a",
+      "target_sha256": "7eb7dbdc58beee508cf782e7dde3a52699ae85b54524d5634b55b0da28e0f1ea"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "@[simp] theorem boundCheck_iff {q n k : ℕ} (actual : Input q n k) (package : BoundBody q n k)\n    (B : Support q) (s : Fin n) : boundCheck actual package B s = true ↔\n      actual = package.input ∧ check actual package.body B s = true",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D08-03-boundCheck_iff",
+      "source_id": "s0715-2e926690f9ad380ed393",
+      "target_sha256": "4810b11b45646848560d6441e16226ba0d0fd0cb07f5b503a69584036b9824e2"
+    },
+    {
+      "calculus": "OTHER",
+      "declaration": "theorem boundCheck_stale {q n k : ℕ} {actual : Input q n k} {package : BoundBody q n k}\n    (h : actual ≠ package.input) (B : Support q) (s : Fin n) : boundCheck actual package B s = false",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "id": "D08-03-boundCheck_stale",
+      "source_id": "s0715-2e926690f9ad380ed393",
+      "target_sha256": "96f3a981b17bfdce596d58e39944f20e1fd921df3d1c4d91868ee918ed85ec28"
+    }
+  ],
+  "toolchain": {
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "kind": "LEAN",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ],
+    "platform": "linux-x86_64",
+    "version": "4.19.0"
+  }
+}

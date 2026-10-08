@@ -1,0 +1,147 @@
+{
+  "schema": "original-identity-complexity-semantic-kernel-v2",
+  "verified_at_utc": "2026-10-05T07:09:44Z",
+  "status": "all build and complete verification commands passed",
+  "whole_pi2_theorem_kernel_verified": false,
+  "whole_nonre_theorem_kernel_verified": false,
+  "representation_existence_kernel_verified": false,
+  "effective_certificate_coding_kernel_verified": false,
+  "main_semantic_theorems_have_explicit_representation_hypotheses": true,
+  "build": {
+    "build": "fresh project compilation; reused exact dependency checkouts and caches",
+    "project_modules_compiled": 71,
+    "inherited_modules": 65,
+    "new_modules": 6,
+    "warnings_inherited": 22,
+    "warnings_new": 0,
+    "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "expected_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "matches": true
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "expected_revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "matches": true
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "expected_revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "matches": true
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "expected_revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "matches": true
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "expected_revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "matches": true
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "expected_revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "matches": true
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "expected_revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "matches": true
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "expected_revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "matches": true
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "expected_revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "matches": true
+      }
+    ],
+    "fresh_dependency_bootstrap": false,
+    "downloaded_new_dependencies": false,
+    "preserved_predecessor_additions": 4,
+    "successor_additions": 2
+  },
+  "axiom_report": {
+    "predecessor_authored_declarations": 59,
+    "predecessor_authored_theorems": 42,
+    "successor_authored_declarations": 24,
+    "successor_authored_theorems": 20,
+    "combined_authored_declarations": 83,
+    "combined_authored_theorems": 62,
+    "compiled_namespace_declarations": 154,
+    "compiled_namespace_theorems": 72,
+    "safe_roots": 98,
+    "reachable_checked_declarations": 2180,
+    "compiler_runtime_auxiliaries_outside_closure": 56,
+    "unsafe_or_partial_dependencies": 0,
+    "allowed_transitive_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
+  },
+  "checks": {
+    "predecessor_interface_examples": 43,
+    "successor_interface_examples": 37,
+    "inherited_interface_rejections": 9,
+    "predecessor_interface_rejections": 6,
+    "predecessor_auditor_poison_rejections": 4,
+    "successor_interface_rejections": 10,
+    "successor_auditor_poison_rejections": 4,
+    "source_mutation_rejections": 6,
+    "inherited_assertion_axiom_constructor_replays": true,
+    "full_check_command_exit": 0
+  },
+  "author_sources": [
+    {
+      "path": "EffectiveCanonicalTests.lean",
+      "sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9"
+    },
+    {
+      "path": "EffectiveObserver.lean",
+      "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f"
+    },
+    {
+      "path": "EffectivePartialObserver.lean",
+      "sha256": "3a2c534f00f0d5c4e8a2bde6c8bf057078d03a8c37338eeea2a90f14c8d994aa"
+    },
+    {
+      "path": "EffectiveReduction.lean",
+      "sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d"
+    },
+    {
+      "path": "EffectiveRuleBoundary.lean",
+      "sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c"
+    },
+    {
+      "path": "EffectiveStandardness.lean",
+      "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428"
+    }
+  ],
+  "log_bindings": [
+    {
+      "file": "LAKE_BUILD_v2.log",
+      "sha256": "7779e15f9ae31adb6861ad06e2cf43c243fcfcb66a44a496b20c16da66278b06"
+    },
+    {
+      "file": "FULL_CHECKS_v2.log",
+      "sha256": "94b501126ea2d25e1ac15dcfd6a9569a2a522bd46a173f2cbfcf5ae97be5601a"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "programme": "Orthemology same v5",
+  "tranche": "Thirteenth",
+  "artifact_version": 1,
+  "prepared_utc": "2026-10-04T12:48:16.907179+00:00",
+  "files": [
+    {
+      "filename": "Orthemology_Thirteenth_Research_Final_v1_20261004.docx",
+      "bytes": 62620,
+      "sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470"
+    },
+    {
+      "filename": "Orthemology_Thirteenth_Research_Final_Evidence_v1_20261004.zip",
+      "bytes": 93390,
+      "sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560"
+    }
+  ],
+  "evidence_archive": {
+    "members": 10,
+    "payload_files": 9,
+    "crc_reopen": "PASS",
+    "every_manifested_payload_byte_count_and_sha256": "PASS",
+    "manifest_does_not_hash_itself": true
+  },
+  "document": {
+    "pages": 18,
+    "native_editable_equations": 18,
+    "all_report_text_matches_accepted_content": true,
+    "visual_page_review": "PASS",
+    "inherited_equations_preserved": true
+  },
+  "scope": {
+    "mathematical_results": "Independently reviewed ordinary written proofs. Inherited formal results remain inherited; no new Lean kernel certification.",
+    "hypothetical_extension": "Separately specified, reviewed in writing, not adopted or implemented.",
+    "residual_identity_candidate": "Semantic validity established; global typing nonderivability unresolved.",
+    "validation_design": "Prospective only; no new experiment, recruitment or external specialist endorsement.",
+    "canonical_repository_changes": false
+  },
+  "transport": "This receipt records local content validation. Exact Library byte readback is a separate required check before delivery; it is not self-certified by this file."
+}

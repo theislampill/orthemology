@@ -1,0 +1,119 @@
+{
+  "schema": "typed-context-controls-v1",
+  "evidence_kind": "Kernel-checked propositions and explicit derivations, not empirical mutation-run claims",
+  "readback": "logs/20261003T193043-TypedReadback.log",
+  "controls": [
+    {
+      "obligation": "arbitrary_non_raw_pair",
+      "kind": "positive",
+      "theorems": [
+        "P01TC.typed_pair_has",
+        "P01TC.typed_pair_abstraction_has",
+        "P01TC.typed_pair_I_SKK_control"
+      ]
+    },
+    {
+      "obligation": "endpoint_and_proof_dependent_j",
+      "kind": "positive",
+      "theorems": [
+        "P01TC.literal_j_has",
+        "P01TC.j_motive_base_exact",
+        "P01TC.j_motive_target_exact",
+        "P01TC.concrete_j_nonraw_proof_control"
+      ]
+    },
+    {
+      "obligation": "inhabited_genuinely_varying_raw_fibres",
+      "kind": "positive",
+      "theorems": [
+        "P01TC.raw_fibres_nonempty_and_vary"
+      ]
+    },
+    {
+      "obligation": "right_endpoint_equality_independent",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.Negative.right_cross_links_without_equality"
+      ]
+    },
+    {
+      "obligation": "left_endpoint_equality_independent",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.Negative.left_cross_links_without_equality"
+      ]
+    },
+    {
+      "obligation": "universal_typed_raw_coercion_rejected",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.Negative.no_universal_raw_variable"
+      ]
+    },
+    {
+      "obligation": "j_endpoint_transport_required",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.Negative.j_transport_requires_both_coordinates",
+        "P01TC.Negative.j_endpoint_omission_fails"
+      ]
+    },
+    {
+      "obligation": "j_proof_coordinate_transport_required",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.Negative.j_proof_coordinate_omission_fails"
+      ]
+    },
+    {
+      "obligation": "unchanged_I_SKK_raw_fibre_obstruction",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.mandatory_raw_family_obstruction_unchanged"
+      ]
+    },
+    {
+      "obligation": "raw_conversion_does_not_supply_scope",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.Negative.conversion_scope_premise_necessary"
+      ]
+    },
+    {
+      "obligation": "normalization_limit_retained",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.raw_omega_typed",
+        "P01TC.raw_omega_has_no_normal_reduct"
+      ]
+    },
+    {
+      "obligation": "actual_contextual_J_correspondence",
+      "kind": "positive",
+      "theorems": [
+        "P01TC.representedContextualJ_code",
+        "P01TC.contextual_target_exact"
+      ]
+    },
+    {
+      "obligation": "old_fragment_literal_embedding",
+      "kind": "positive",
+      "theorems": [
+        "P01TC.Legacy.Restricted.old_judgment",
+        "P01TC.Legacy.Restricted.raw_embed",
+        "P01TC.Legacy.Restricted.object_agrees",
+        "P01TC.Legacy.Restricted.heterogeneous_agrees"
+      ]
+    },
+    {
+      "obligation": "old_All_rules_and_nonfinite_All_excluded",
+      "kind": "negative",
+      "theorems": [
+        "P01TC.Legacy.no_allIntro",
+        "P01TC.Legacy.no_allElim",
+        "P01TC.Legacy.no_dependentPolyType",
+        "P01TC.Legacy.no_excludedFiniteConclusion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "tenth-rp5-retention-clarification-inputs-v2",
+  "date_utc": "2026-10-03",
+  "status": "additive_clarification_v2_pending_independent_acceptance",
+  "revision_input": {"selector": "joint-existential-coverage/retention-clarification-v1::MANIFEST.sha256", "sha256": "8deec557dc42a0f0beea986065de9a61a5b0d8b0be415772c921fec648294687", "scope": "Preserved first clarification; v2 makes the actual-F antecedent and earlier-stage retention explicit in one common clause."},
+  "immutable_inputs": [
+    {"selector": "joint-existential-coverage/candidate-v2::MANIFEST.sha256", "sha256": "cf536ca9da34415e9b39bcebeb4facf54a2a4601b007ceeb2fb7952017bb2310"},
+    {"selector": "joint-existential-coverage/candidate-v2::ACTUAL_POWER_ROUTE.md", "sha256": "5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7"},
+    {"selector": "joint-existential-coverage/candidate-v2::CLAIM_AND_PREMISE_LEDGER.md", "sha256": "42588a35fb8bc1fd2ea442e5d4327f06ebbe3668fba9db11fabfb60ac8300cfd"},
+    {"selector": "reviews/joint-existential-coverage::ACCEPTANCE_v2.md", "sha256": "3283a5954c5aca18e2ce627c3e3cf619bcd34ef637f50bbd920ba59cf5c1e60e"},
+    {"selector": "actual-powers-source-level-study/candidate-v1::MANIFEST.sha256", "sha256": "17c48b65f5e23c30488783ca53df69c433704b9503025b6e98a966880515825f"},
+    {"selector": "reviews/actual-powers-theory::ACCEPTANCE_v1.md", "sha256": "6d1289c04a1e351f05d93f49822ee850d513f0c256b8eb151481b900e2636249"}
+  ],
+  "clarification_scope": "RP5's selected actual resource must have a relevant actual availability occurrence and its conditional F-instantiation retained in the full relevant realized history, whether selected as s or r. Actual-S direct coverage remains separate.",
+  "source_accounting": {"new_primary_source_synopsis_words": 0, "new_quoted_words": 0},
+  "authority_limits": "Authorized bounded additive clarification and review only; no changes to immutable candidates or acceptances, no new theorem, research code, canonical modification, source redistribution or external contact."
+}

@@ -1,0 +1,6 @@
+import RenewalContract
+#check EffectiveRenewal.Contract.delay_nonvacuous
+#check EffectiveRenewal.Contract.finite_plan_round_correct
+#check EffectiveRenewal.Contract.run_preserves_contract
+#check EffectiveRenewal.Contract.no_supported_zero_input_renewal
+#check EffectiveRenewal.Contract.revocation_terminates

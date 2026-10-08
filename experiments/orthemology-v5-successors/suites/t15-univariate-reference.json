@@ -1,0 +1,156 @@
+{
+  "id": "t15-univariate-reference",
+  "family": "t15-univariate-reference",
+  "result_families": [
+    "T15-UNIVARIATE-REFERENCE"
+  ],
+  "origin_archive_sha256": "ac5213e252eca1b17cd885e6b86dbc55a2a15304c915f76f34edc58aac024bd7",
+  "source_ids": [
+    "identity-src-6db4df81814f44506b7f",
+    "identity-src-1240d1dc0a2c0cfe550e",
+    "identity-src-85433aeba7b693a8a759",
+    "identity-src-2c1183a4725481f50cfc",
+    "identity-src-836c3aaef2d32f0749a0",
+    "identity-src-166908a0faefae1aed18"
+  ],
+  "review_ids": [
+    "T15-UNIVARIATE-REFERENCE-inherited-review"
+  ],
+  "targets": [
+    {
+      "id": "t15-univariate-reference-validate",
+      "source_id": "identity-src-2c1183a4725481f50cfc",
+      "declaration": "def validate(s):\n    if type(s) is not list or not s or type(s[0]) is not str:\n        raise ValueError('root expression must be a tagged array')\n    if s[0] == 'old' and len(s) == 2:\n        restricted.validate(1,s[1])\n    elif s[0] == 'test' and len(s) == 3:\n        _pure(s[1]); _pure(s[2])\n    else:\n        raise ValueError('unknown or malformed root expression')",
+      "target_sha256": "79838fb222f088045bca7f8c381580b7f219dda5e81d2688639071d944b38bf2",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-univariate-reference-root_bound",
+      "source_id": "identity-src-2c1183a4725481f50cfc",
+      "declaration": "def root_bound(p):\n    \"\"\"Nonzero integer polynomial cannot vanish at n >= this bound.\n\n    The zero polynomial is assigned 1 for bookkeeping only; it has no\n    nonvanishing assertion. Exponent keys are validated nonnegative integers.\n    \"\"\"\n    if type(p) is not dict or any(type(k) is not int or k<0 or type(v) is not int for k,v in p.items()):\n        raise ValueError('expected finite integer coefficient map')\n    p = {k:v for k,v in p.items() if v}\n    if not p or max(p)==0: return 1\n    degree = max(p)\n    return 1+sum(abs(v) for k,v in p.items() if k<degree)",
+      "target_sha256": "0add58a81cd582824dcae391d4eef9bee743217e8bce5d427f55bb8f29b990c8",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-univariate-reference-comparison_bound",
+      "source_id": "identity-src-2c1183a4725481f50cfc",
+      "declaration": "def comparison_bound(s,t):\n    bs,ps = tail(s)\n    bt,pt = tail(t)\n    return max(bs,bt,root_bound(_difference(ps,pt)))",
+      "target_sha256": "cb949994ac395e975e4688bfec3897d9f9a7ab1738950fcb649015dbd7ec8a04",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-univariate-reference-distinguish",
+      "source_id": "identity-src-2c1183a4725481f50cfc",
+      "declaration": "def distinguish(s,t):\n    \"\"\"Return a checked natural counterexample, or None for universal equality.\n\n    Equal tails require a finite prefix check. Different tails give the bound\n    itself as a guaranteed witness. This does not claim the least witness.\n    \"\"\"\n    bs,ps = tail(s)\n    bt,pt = tail(t)\n    d = _difference(ps,pt)\n    if d:\n        n = max(bs,bt,root_bound(d))\n        if evaluate(s,n)==evaluate(t,n): raise AssertionError('tail separation failed')\n        return n\n    for n in range(max(bs,bt)):\n        if evaluate(s,n)!=evaluate(t,n): return n\n    return None",
+      "target_sha256": "90641bc32f20bef9eb1d0763657f4cdbe4b819d432336101ab17d9bb946d4887",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    },
+    {
+      "id": "t15-univariate-reference-equivalent",
+      "source_id": "identity-src-2c1183a4725481f50cfc",
+      "declaration": "def equivalent(s,t):\n    return distinguish(s,t) is None",
+      "target_sha256": "cb93bef6b060ef550cb54da1de2753dc34654d7549f4037b384238ef17b945fc",
+      "domain": "REFERENCE_EXECUTION",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [],
+  "toolchain": {
+    "kind": "PYTHON",
+    "version": "3.12.3",
+    "platform": "linux-x86_64",
+    "executable_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+    "packages": []
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "FINITE",
+    "files": [
+      {
+        "source_id": "identity-src-6db4df81814f44506b7f",
+        "path": "python-reference/certificate_checker.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-1240d1dc0a2c0cfe550e",
+        "path": "univariate-reference/README.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "identity-src-85433aeba7b693a8a759",
+        "path": "univariate-reference/SOURCE_ONLY_v1.sha256",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "identity-src-2c1183a4725481f50cfc",
+        "path": "univariate-reference/root_extension_checker.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-836c3aaef2d32f0749a0",
+        "path": "univariate-reference/test_root_extension_checker.py",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "identity-src-166908a0faefae1aed18",
+        "path": "univariate-reference/test_independent_adversarial.py",
+        "role": "DRIVER"
+      }
+    ],
+    "modules": [],
+    "module_order": [],
+    "positive_roots": [],
+    "audit_roots": [],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [],
+    "target_names": [],
+    "package_manifest_source_id": null,
+    "packages": [],
+    "tools": [],
+    "external_inputs": [],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "univariate-tests",
+        "source_id": "identity-src-836c3aaef2d32f0749a0",
+        "recipe": "t15-univariate-reference-tests-v1",
+        "sha256": "23e55bf11880011ec5ae47c464e971d02b3e9af5e8541fcbaa7cc73b8d7f73e0",
+        "argument_meanings": {},
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "univariate-reference-tests",
+        "kind": "REFERENCE_TESTS",
+        "driver_id": "univariate-tests",
+        "argv": [
+          "{tool:python}",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          ".",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "cwd": "univariate-reference",
+        "depends_on": [],
+        "timeout_seconds": 300,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": []
+  }
+}

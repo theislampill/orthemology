@@ -1,0 +1,61 @@
+import FiniteRadixNormalForm
+import SelectorTableNormalForm
+set_option autoImplicit false
+
+#print axioms Orthemology.Ninth.SelectorExtraction.digit_mod_pow
+#print axioms Orthemology.Ninth.SelectorExtraction.residue_eq_iff_digits
+#print axioms Orthemology.Ninth.SelectorExtraction.bounded_eq_iff_digits
+#print axioms Orthemology.Ninth.SelectorExtraction.cell_index_roundtrip
+#print axioms Orthemology.Ninth.SelectorExtraction.support_index_roundtrip
+#print axioms Orthemology.Ninth.SelectorExtraction.bit_encoding_injective
+#print axioms Orthemology.Ninth.SelectorExtraction.target_encoding_injective
+#print axioms Orthemology.Ninth.SelectorExtraction.retained_encoding_injective
+#print axioms Orthemology.Ninth.SelectorExtraction.retained_encoding_le_sixteen
+#print axioms Orthemology.Ninth.SelectorExtraction.absent_present_empty_distinct
+#print axioms Orthemology.Ninth.SelectorExtraction.normalizeData
+#print axioms Orthemology.Ninth.SelectorExtraction.SameCells
+#print axioms Orthemology.Ninth.SelectorExtraction.cycleDigit_as_radix
+#print axioms Orthemology.Ninth.SelectorExtraction.targetDigit_as_radix
+#print axioms Orthemology.Ninth.SelectorExtraction.stageDigit_as_radix
+#print axioms Orthemology.Ninth.SelectorExtraction.normalized_cycleDigit
+#print axioms Orthemology.Ninth.SelectorExtraction.normalized_targetDigit
+#print axioms Orthemology.Ninth.SelectorExtraction.normalized_stageDigit
+#print axioms Orthemology.Ninth.SelectorExtraction.normalize_sameCells
+#print axioms Orthemology.Ninth.SelectorExtraction.sameCells_iff_normalize_eq
+#print axioms Orthemology.Ninth.SelectorExtraction.certificate_iff_of_sameCells
+#print axioms Orthemology.Ninth.SelectorExtraction.normalized_certificate_iff
+#print axioms Orthemology.Ninth.SelectorExtraction.normalized_literal
+#print axioms Orthemology.Ninth.SelectorExtraction.literal_certificate_iff
+#print axioms Orthemology.Ninth.SelectorExtraction.certificate_iff_exact_normalForm
+#print axioms Orthemology.Ninth.SelectorExtraction.exactly_one_literal_certificate
+#print axioms Orthemology.Ninth.SelectorExtraction.recoveredOrientation
+#print axioms Orthemology.Ninth.SelectorExtraction.recoveredOrientation_exact
+#print axioms Orthemology.Ninth.SelectorExtraction.normalized_eq_recovered_literal
+#print axioms Orthemology.Ninth.SelectorExtraction.recovered_literal_certificate
+#print axioms Orthemology.Ninth.SelectorExtraction.BoundedData
+#print axioms Orthemology.Ninth.SelectorExtraction.normalizeData_bounded
+#print axioms Orthemology.Ninth.SelectorExtraction.normalizeData_of_bounded
+#print axioms Orthemology.Ninth.SelectorExtraction.normalizeData_idempotent
+#print axioms Orthemology.Ninth.SelectorExtraction.bounded_certificate_iff
+#print axioms Orthemology.Ninth.SelectorExtraction.addHighDigits
+#print axioms Orthemology.Ninth.SelectorExtraction.addHighDigits_normalize
+#print axioms Orthemology.Ninth.SelectorExtraction.certificate_addHighDigits_iff
+#print axioms Orthemology.Ninth.SelectorExtraction.certified_records_not_unique
+#print axioms Orthemology.Ninth.SelectorExtraction.data_eq_normalized_plus_high
+#print axioms Orthemology.Ninth.SelectorExtraction.certificate_iff_literal_plus_high
+#print axioms Orthemology.Ninth.SelectorExtraction.certified_normalForms_unique
+#print axioms Orthemology.Ninth.SelectorExtraction.existsUnique_bounded_certificate
+#print axioms Orthemology.Ninth.SelectorExtraction.normalizeCertified
+#print axioms Orthemology.Ninth.SelectorExtraction.normalizeCertified_value
+#print axioms Orthemology.Ninth.SelectorExtraction.extractCertifiedLiteral
+#print axioms Orthemology.Ninth.SelectorExtraction.extractCertifiedLiteral_value
+#print axioms Orthemology.Ninth.SelectorExtraction.malformed_cycle_input_distinguishes_high_bits
+#print axioms Orthemology.Ninth.SelectorExtraction.sameCells_but_malformed_input_differs
+#check Orthemology.Ninth.SelectorExtraction.certificate_iff_exact_normalForm
+#check Orthemology.Ninth.SelectorExtraction.certificate_iff_literal_plus_high
+#check Orthemology.Ninth.SelectorExtraction.existsUnique_bounded_certificate
+#check Orthemology.Ninth.SelectorExtraction.literal_certificate_iff
+#check Orthemology.Ninth.SelectorExtraction.recovered_literal_certificate
+#check Orthemology.Ninth.SelectorExtraction.normalizeCertified
+#check Orthemology.Ninth.SelectorExtraction.extractCertifiedLiteral
+#check Orthemology.Ninth.SelectorExtraction.sameCells_but_malformed_input_differs

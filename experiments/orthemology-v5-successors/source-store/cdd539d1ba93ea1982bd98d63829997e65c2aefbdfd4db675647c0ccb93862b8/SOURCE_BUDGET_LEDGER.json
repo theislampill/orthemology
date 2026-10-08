@@ -1,0 +1,121 @@
+{
+  "schema": "occurrence-public-source-budget-v1",
+  "replaces_for_distribution": {
+    "path": "tranche10/research/occurrence-continuation/release-candidate-v1/SOURCE_BUDGET_LEDGER.json",
+    "sha256": "6a60309130baba1729688a1d0d07ed409ac15db907bc2dd728f7517a2a2fca80",
+    "bytes": 6887
+  },
+  "scope": "Current Tenth component selection only; no predecessor source prose is redistributed.",
+  "historical_work_accounting": "SOURCE_WORDING_LEDGER.json",
+  "technical_works": [
+    {
+      "work_id": "Pitcher2005",
+      "charged_block": {
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/PRIOR_ART_DISPOSITION.md",
+        "document_sha256": "66e0a9c2856b28ea2c701dba5c88350b4de6c513ff0922232863b17e2744f69d",
+        "start_character": 4694,
+        "end_character": 5557,
+        "span_sha256": "07b8af8991e4702155bb226d826578373ad2e17cd3ebe30a07a6a670c50546a8",
+        "conservative_whitespace_words": 92
+      },
+      "allocation": 180,
+      "direct_quotation_words": 0,
+      "total_conservative_charge": 107
+    },
+    {
+      "work_id": "KMV2007",
+      "charged_block": {
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/PRIOR_ART_DISPOSITION.md",
+        "document_sha256": "66e0a9c2856b28ea2c701dba5c88350b4de6c513ff0922232863b17e2744f69d",
+        "start_character": 5559,
+        "end_character": 6060,
+        "span_sha256": "f25c0e5500258efa2978d8377b74f69466da79d7d5f87c0e6b30464b3d11bf6f",
+        "conservative_whitespace_words": 60
+      },
+      "allocation": 180,
+      "direct_quotation_words": 0,
+      "total_conservative_charge": 60
+    },
+    {
+      "work_id": "MVQuery",
+      "charged_block": {
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/PRIOR_ART_DISPOSITION.md",
+        "document_sha256": "66e0a9c2856b28ea2c701dba5c88350b4de6c513ff0922232863b17e2744f69d",
+        "start_character": 6062,
+        "end_character": 6570,
+        "span_sha256": "52522a1437b2da599f0212bc3783e3bce55b2acc261a81e2a211417d351ba099",
+        "conservative_whitespace_words": 57
+      },
+      "allocation": 160,
+      "direct_quotation_words": 0,
+      "total_conservative_charge": 57
+    },
+    {
+      "work_id": "Maier2014",
+      "charged_block": {
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/PRIOR_ART_DISPOSITION.md",
+        "document_sha256": "66e0a9c2856b28ea2c701dba5c88350b4de6c513ff0922232863b17e2744f69d",
+        "start_character": 6615,
+        "end_character": 7200,
+        "span_sha256": "a4b1f52dda2b6fd710d8c25c61816f4e570a4c710dcd40b02b862563203fe2b9",
+        "conservative_whitespace_words": 70
+      },
+      "allocation": 100,
+      "direct_quotation_words": 0,
+      "total_conservative_charge": 70
+    },
+    {
+      "work_id": "CharikarEtAl2000",
+      "charged_block": {
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/PRIOR_ART_DISPOSITION.md",
+        "document_sha256": "66e0a9c2856b28ea2c701dba5c88350b4de6c513ff0922232863b17e2744f69d",
+        "start_character": 7263,
+        "end_character": 8063,
+        "span_sha256": "22d2a21352c9a969940217a3253f9a1776921258437f443ac0cb08967c76b73f",
+        "conservative_whitespace_words": 84
+      },
+      "allocation": 160,
+      "direct_quotation_words": 0,
+      "total_conservative_charge": 99
+    },
+    {
+      "work_id": "KoutrisEtAl2015",
+      "charged_block": {
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/PRIOR_ART_DISPOSITION.md",
+        "document_sha256": "66e0a9c2856b28ea2c701dba5c88350b4de6c513ff0922232863b17e2744f69d",
+        "start_character": 8065,
+        "end_character": 8935,
+        "span_sha256": "b5836f46090a61bf2a3952a2db535e9f09d2ea31c0526618a59e6289ac88df84",
+        "conservative_whitespace_words": 105
+      },
+      "allocation": 180,
+      "direct_quotation_words": 0,
+      "total_conservative_charge": 120
+    },
+    {
+      "work_id": "LaberCarmoKohayakawa2003",
+      "charged_block": {
+        "path": "tranche10/research/occurrence-continuation/release-candidate-v1/PRIOR_ART_DISPOSITION.md",
+        "document_sha256": "66e0a9c2856b28ea2c701dba5c88350b4de6c513ff0922232863b17e2744f69d",
+        "start_character": 8937,
+        "end_character": 9291,
+        "span_sha256": "4693b40d53077e6413bb3384f07a4680b26fd9c1bb35d65e311055349c5682b4",
+        "conservative_whitespace_words": 48
+      },
+      "allocation": 70,
+      "direct_quotation_words": 0,
+      "total_conservative_charge": 48
+    }
+  ],
+  "additional_shared_article_attribution": {
+    "path": "tranche10/research/occurrence-continuation/release-candidate-v1/ARTICLE.md",
+    "document_sha256": "221a50045570edb56a62012eff862df258f9af0ae51d74d116ff224e5c5498e7",
+    "start_character": 21360,
+    "end_character": 21513,
+    "span_sha256": "7f9cacf913212dc77df048f44feea8c2d3972ce90936c55f514c894d3de42961",
+    "conservative_whitespace_words": 15
+  },
+  "conservative_technical_rule": "The entire attribution sentence is additionally charged to each of Pitcher2005, CharikarEtAl2000 and KoutrisEtAl2015, avoiding allocation ambiguity. Other blocks include bibliographic/inspection words as a conservative overcount.",
+  "excluded_prior_screen": "The Alur/D\u2019Antoni entry was only in the replaced screening ledger and has no source-derived public block in this selection.",
+  "quotes": 0
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "typed-context-candidate-v1",
+  "status": "COMPLETE_IMPLEMENTED_BOUNDED_CANDIDATE_PENDING_INDEPENDENT_REVIEW",
+  "source_manifest": "VERIFICATION_v1.json",
+  "source_manifest_sha256": "d375cf1b1e0e3a220a6fd10dfd214fab6afb35e595fd131ccf4fe7c9459268ab",
+  "design_sha256": "21a1016f067499fc087fe0eed26456517db20e3eb050189c9aa3160d549564f2",
+  "mathematical_scope_note": "RESULT_SCOPE.md",
+  "mathematical_scope_note_sha256": "54fe188c30e4bdb113fcea98079e2faed7930a9fe36c86b140725d28f06e7c81",
+  "primary_contracts": [
+    "P01TC.fundamental",
+    "P01TC.unary_fundamental",
+    "P01TC.strong_diagonal",
+    "P01TC.two_sided_invariance",
+    "P01TC.TypedSub.has",
+    "P01TC.representedContextualJ_code",
+    "P01TC.contextual_target_exact",
+    "P01TC.Legacy.Restricted.raw_embed",
+    "P01TC.Legacy.Restricted.object_agrees",
+    "P01TC.Legacy.Restricted.heterogeneous_agrees"
+  ],
+  "completion_credit_limits": [
+    "New parallel finite typed-context calculus only",
+    "Finite All leaves only",
+    "Explicit restricted legacy rule-tree embedding only",
+    "No full U11 or canonical adoption"
+  ]
+}

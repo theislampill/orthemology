@@ -1,0 +1,170 @@
+[
+  {
+    "module": "InternalPolymorphism",
+    "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+    "bytes": 15288,
+    "archive_member": "sources/p01-canonical-projection/InternalPolymorphism.lean"
+  },
+  {
+    "module": "FiniteBridge",
+    "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+    "bytes": 8366,
+    "archive_member": "sources/p01-canonical-projection/FiniteBridge.lean"
+  },
+  {
+    "module": "P01TypeAlgebra",
+    "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+    "bytes": 4003,
+    "archive_member": "sources/p01-canonical-projection/P01TypeAlgebra.lean"
+  },
+  {
+    "module": "P01SNReflection",
+    "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+    "bytes": 1447,
+    "archive_member": "sources/p01-canonical-projection/P01SNReflection.lean"
+  },
+  {
+    "module": "BoundaryResults",
+    "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+    "bytes": 8581,
+    "archive_member": "sources/p01-canonical-projection/BoundaryResults.lean"
+  },
+  {
+    "module": "P01Candidates",
+    "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+    "bytes": 10260,
+    "archive_member": "sources/p01-canonical-projection/P01Candidates.lean"
+  },
+  {
+    "module": "P01Confluence",
+    "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+    "bytes": 9226,
+    "archive_member": "sources/p01-canonical-projection/P01Confluence.lean"
+  },
+  {
+    "module": "EffectsAndDependence",
+    "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+    "bytes": 8707,
+    "archive_member": "sources/p01-canonical-projection/EffectsAndDependence.lean"
+  },
+  {
+    "module": "NormalisationAndNumerals",
+    "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+    "bytes": 3101,
+    "archive_member": "sources/p01-canonical-projection/NormalisationAndNumerals.lean"
+  },
+  {
+    "module": "P01Omega",
+    "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+    "bytes": 3201,
+    "archive_member": "sources/p01-canonical-projection/P01Omega.lean"
+  },
+  {
+    "module": "P01Polynomials",
+    "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+    "bytes": 8595,
+    "archive_member": "sources/p01-canonical-projection/P01Polynomials.lean"
+  },
+  {
+    "module": "P01PER",
+    "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+    "bytes": 9388,
+    "archive_member": "sources/p01-canonical-projection/P01PER.lean"
+  },
+  {
+    "module": "P01DependentCore",
+    "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+    "bytes": 16822,
+    "archive_member": "sources/p01-canonical-projection/P01DependentCore.lean"
+  },
+  {
+    "module": "P01ContextualJ",
+    "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+    "bytes": 3535,
+    "archive_member": "sources/p01-canonical-projection/P01ContextualJ.lean"
+  },
+  {
+    "module": "P01Certificates",
+    "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+    "bytes": 5047,
+    "archive_member": "sources/p01-canonical-projection/P01Certificates.lean"
+  },
+  {
+    "module": "P01Examples",
+    "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+    "bytes": 3514,
+    "archive_member": "sources/p01-canonical-projection/P01Examples.lean"
+  },
+  {
+    "module": "P01RecursiveModel",
+    "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+    "bytes": 14821,
+    "archive_member": "sources/p01-canonical-projection/P01RecursiveModel.lean"
+  },
+  {
+    "module": "P01LambdaSyntax",
+    "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+    "bytes": 5547,
+    "archive_member": "sources/p01-canonical-projection/P01LambdaSyntax.lean"
+  },
+  {
+    "module": "P01SystemF",
+    "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+    "bytes": 6932,
+    "archive_member": "sources/p01-canonical-projection/P01SystemF.lean"
+  },
+  {
+    "module": "P01CurryParametricity",
+    "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+    "bytes": 4213,
+    "archive_member": "sources/p01-canonical-projection/P01CurryParametricity.lean"
+  },
+  {
+    "module": "P01Translation",
+    "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+    "bytes": 6462,
+    "archive_member": "sources/p01-canonical-projection/P01Translation.lean"
+  },
+  {
+    "module": "P01ModelWitnesses",
+    "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+    "bytes": 4276,
+    "archive_member": "sources/p01-canonical-projection/P01ModelWitnesses.lean"
+  },
+  {
+    "module": "P01DependentModel",
+    "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+    "bytes": 9892,
+    "archive_member": "sources/p01-canonical-projection/P01DependentModel.lean"
+  },
+  {
+    "module": "P01DependentSubstitution",
+    "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+    "bytes": 7125,
+    "archive_member": "sources/p01-canonical-projection/P01DependentSubstitution.lean"
+  },
+  {
+    "module": "P01DependentFundamental",
+    "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+    "bytes": 8990,
+    "archive_member": "sources/p01-canonical-projection/P01DependentFundamental.lean"
+  },
+  {
+    "module": "P01DependentControls",
+    "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+    "bytes": 6388,
+    "archive_member": "sources/p01-canonical-projection/P01DependentControls.lean"
+  },
+  {
+    "module": "P01DependentRepresentation",
+    "sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+    "bytes": 8168,
+    "archive_member": "sources/p01-canonical-projection/P01DependentRepresentation.lean"
+  },
+  {
+    "module": "P01CanonicalCarrierProjection",
+    "sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+    "bytes": 6747,
+    "archive_member": "sources/p01-canonical-projection/P01CanonicalCarrierProjection.lean"
+  }
+]

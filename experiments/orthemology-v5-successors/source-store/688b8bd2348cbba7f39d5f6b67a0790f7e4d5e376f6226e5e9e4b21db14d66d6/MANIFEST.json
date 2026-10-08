@@ -1,0 +1,138 @@
+{
+  "status": "FROZEN_FOR_INDEPENDENT_CHECKER_REVIEW",
+  "created_utc": "2026-10-03T12:35:12.809248+00:00",
+  "python": "3.12.14",
+  "scope": "Ordinary mathematical argument plus bounded internal implementation controls; no source authentication, natural-language parser, deployment, human specialist validation or new general theorem credit.",
+  "files": [
+    {
+      "path": "ARTICLE.md",
+      "bytes": 22309,
+      "sha256": "221a50045570edb56a62012eff862df258f9af0ae51d74d116ff224e5c5498e7"
+    },
+    {
+      "path": "EXACT_EFFECT_ALGEBRA.md",
+      "bytes": 4428,
+      "sha256": "b824c43b4f4fad672bb96e930241787b8d07d36a69d49f20ea9d85d2d51b43d2"
+    },
+    {
+      "path": "ORACLE_AND_FORCE_PRECISIONS.md",
+      "bytes": 11935,
+      "sha256": "a282ebf891d26ca2e55fc93bdb73fa3159f60a6388545b930076c17fd73c7571"
+    },
+    {
+      "path": "PRIOR_ART_DISPOSITION.md",
+      "bytes": 10738,
+      "sha256": "66e0a9c2856b28ea2c701dba5c88350b4de6c513ff0922232863b17e2744f69d"
+    },
+    {
+      "path": "REALISABILITY_AND_RESOURCE_ACCOUNT.md",
+      "bytes": 10311,
+      "sha256": "6e3c5aee5d3c339d8a58a4087ea78ded5b75c616dc18ffa697732d44c16ccae6"
+    },
+    {
+      "path": "SOURCE_BUDGET_LEDGER.json",
+      "bytes": 6887,
+      "sha256": "6a60309130baba1729688a1d0d07ed409ac15db907bc2dd728f7517a2a2fca80"
+    },
+    {
+      "path": "SOURCE_CAPSULE.md",
+      "bytes": 2303,
+      "sha256": "9b1a409a9319c5da7d4492115e5087c6b73d369f5a10a65dff0d3c2e3beaf561"
+    },
+    {
+      "path": "SOURCE_WORDING_LEDGER.json",
+      "bytes": 581,
+      "sha256": "1ddb851862d8afb49f6f73e2b02dc27939d335516d59d5bd8273ac7070779267"
+    },
+    {
+      "path": "checker/CASE_TRACEABILITY.json",
+      "bytes": 2177,
+      "sha256": "d43b730b8ada0ceba61bda31cae36e662547c7a883ccf643901d5c061e824a6b"
+    },
+    {
+      "path": "checker/README.md",
+      "bytes": 5387,
+      "sha256": "08d2b29597f4ee32240d7c54ed0fa70b1aa6d1e35d6d16253fd3fde078ddb04d"
+    },
+    {
+      "path": "checker/context_effects.py",
+      "bytes": 6305,
+      "sha256": "0f65f172926e61ff7280ec2e13fd36b4ff287ea530ebbfa00c9dce831f3355fa"
+    },
+    {
+      "path": "checker/exhaustive_validation.py",
+      "bytes": 6630,
+      "sha256": "7614ed0a2d9eca6c2e07c74ee0e02c902cff4956b07347ee9b1b47e70edd8ee2"
+    },
+    {
+      "path": "checker/fixtures/source_roles.json",
+      "bytes": 1325,
+      "sha256": "8d821ec871977ba5c22ff00d8cc27841c32aab682aae0c0d2cf99cb6f695169c"
+    },
+    {
+      "path": "checker/logs/exhaustive_results.json",
+      "bytes": 755,
+      "sha256": "3fba4328c3df5c53bc07d42f5ee68c63b43230d011c12da134c1d3f119c753ca"
+    },
+    {
+      "path": "checker/logs/exhaustive_run.txt",
+      "bytes": 768,
+      "sha256": "37fb0c9ba2b0bc9d038f0f6ee91463b4234a9d85fea7da2f9111d5a18fa7888a"
+    },
+    {
+      "path": "checker/logs/semantic_mutations.json",
+      "bytes": 3739,
+      "sha256": "c9609974a6af472de5d2f2f0ff262e560c4e16d5ededf8a91314d24740f6588e"
+    },
+    {
+      "path": "checker/logs/semantic_mutations_run.txt",
+      "bytes": 3752,
+      "sha256": "f7b22a6f70e357ee4184986cdac6a18e71a155903e4713e8e0719b33e5207770"
+    },
+    {
+      "path": "checker/logs/source_release_results.json",
+      "bytes": 1239,
+      "sha256": "65fb7640aa8619d6ad21a21ad5cbad0d1e116ae1ef2d17f060f7761011015060"
+    },
+    {
+      "path": "checker/logs/source_release_run.txt",
+      "bytes": 1252,
+      "sha256": "e3125778a92ea7983a9f0d9671839d6e03ac26f18d7ac234ec5df255c4100057"
+    },
+    {
+      "path": "checker/logs/tdd_first_green_attempt.txt",
+      "bytes": 4288,
+      "sha256": "3cf75fb8147b68bdf320dcc4a0e5f4a838572466a228d0114754bce0cf4e18ff"
+    },
+    {
+      "path": "checker/logs/tdd_red.txt",
+      "bytes": 1161,
+      "sha256": "19ebedce5cab13308c9edfcb39bdc37039575d60f37b9b4ad2635119bf592bc8"
+    },
+    {
+      "path": "checker/logs/unit_49_green.txt",
+      "bytes": 4498,
+      "sha256": "54110afa11f6392dee0338bc1aa2ff024e912dfa1fd84442e96b2b2e69bf601f"
+    },
+    {
+      "path": "checker/read_cover.py",
+      "bytes": 7785,
+      "sha256": "808a9297d27b903722b4fc04ad9a526d3cfc3e371b14e5047e1d33d1c6e3e79f"
+    },
+    {
+      "path": "checker/semantic_mutations.py",
+      "bytes": 5529,
+      "sha256": "090c48a908c2780f5eccce07c7b211e3970f0f24ea1188d3528a5195fafe8130"
+    },
+    {
+      "path": "checker/source_and_release_validation.py",
+      "bytes": 5025,
+      "sha256": "d286e1099431a64390a14c9533d96cdd7aebc673f68ea74953c9c4852e5e24db"
+    },
+    {
+      "path": "checker/tests/test_contract.py",
+      "bytes": 10512,
+      "sha256": "af8ae17bd3881ab703fc773bf91bffad9859a4fa8f9cb3559d39ed43b4696bf8"
+    }
+  ]
+}

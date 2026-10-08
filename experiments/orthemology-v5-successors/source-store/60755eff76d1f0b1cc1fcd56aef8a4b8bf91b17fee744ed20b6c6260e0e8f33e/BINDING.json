@@ -1,0 +1,71 @@
+{
+  "format_version": 1,
+  "scope": "Portable software and aggregate verification",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "openpyxl": "3.1.5"
+  },
+  "numerical_core_provenance": {
+    "implementation_A_original_sha256": "0291b824d2671f45d20823f12834e89f323baae239d806150f1d5ccb4d0715db",
+    "implementation_B_original_sha256": "ade22a5fa8297090b805a631586739407b2518ed3d753c19c47d8318b0ee6f2a",
+    "adaptation": "Portable interfaces and explicit input validation; original numerical objectives retained"
+  },
+  "synthetic_tests": "pass",
+  "aggregate_reference_verification": "pass",
+  "source_hash_verification": "pass",
+  "public_files": [
+    {
+      "file": "AGGREGATE.json",
+      "sha256": "eda676cfd5ac10b0a92040b9164a6d968b7f23ad68e456089579b7cf2d8f6acd",
+      "bytes": 327
+    },
+    {
+      "file": "INPUTS.json",
+      "sha256": "a919102c102ff3d07b447f52490266aca76afa4f84a972e2f3d78b3470f97a7a",
+      "bytes": 3067
+    },
+    {
+      "file": "README.md",
+      "sha256": "55f26bac8864c6e3279debaf821d1c714abbcff6f22f5364a654823ae6a61b70",
+      "bytes": 1641
+    },
+    {
+      "file": "VALIDATION.json",
+      "sha256": "ac63c2b5c11fd5c0e5ab3ec88ae9566c106dbe0ef67590a48e3407a009d7f955",
+      "bytes": 116
+    },
+    {
+      "file": "fit_bfgs.py",
+      "sha256": "cd6f203e2e79f6113de3cef2e4d98926c3f75fe374ca04b3ea73aeee02301a02",
+      "bytes": 1954
+    },
+    {
+      "file": "fit_checked.py",
+      "sha256": "ebefc609d09bf68296e5a1c5392064effaf4c4d462b82cbb451b1e93340ec376",
+      "bytes": 5114
+    },
+    {
+      "file": "reanalyse.py",
+      "sha256": "20110e73fd822e21651064578946cdf910edc493c973953b2c7d1bb74481dd94",
+      "bytes": 8061
+    },
+    {
+      "file": "requirements.txt",
+      "sha256": "41b4c6a14166306b9f593728df115892a3f0a64aa4c153741b9579c14b74270d",
+      "bytes": 57
+    },
+    {
+      "file": "tests/test_package.py",
+      "sha256": "afb1ba14ecbbf193f07ac81f985be30535abf9771387813e9dbd0bbbfc72fb50",
+      "bytes": 7262
+    },
+    {
+      "file": "validate.py",
+      "sha256": "7d9a4c8d071e2591c8d4568c88c277ab61834e52df21500a1367efb2ac7e060a",
+      "bytes": 1164
+    }
+  ]
+}

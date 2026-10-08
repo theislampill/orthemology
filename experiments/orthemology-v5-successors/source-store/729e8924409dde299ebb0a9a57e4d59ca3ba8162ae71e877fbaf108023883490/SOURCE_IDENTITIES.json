@@ -1,0 +1,664 @@
+{
+  "schema": "typed-context-independent-source-snapshot-v1",
+  "status": "ALL_MANIFEST_SOURCES_MATCHED_AND_COMPILED",
+  "sources": [
+    {
+      "path": "sources/AuditSupport.lean",
+      "sha256": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+      "bytes": 1024,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "candidate-audit-support",
+        "started_utc": "2026-10-03T19:32:43Z",
+        "ended_utc": "2026-10-03T19:32:44Z",
+        "exit_code": 0,
+        "log": "logs/candidate-audit-support-AuditSupport.log"
+      },
+      "candidate_path": "../sources/AuditSupport.lean"
+    },
+    {
+      "path": "sources/BoundaryResults.lean",
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "bytes": 8581,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:21Z",
+        "ended_utc": "2026-10-03T18:54:22Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-BoundaryResults.log"
+      },
+      "candidate_path": "../sources/BoundaryResults.lean"
+    },
+    {
+      "path": "sources/EffectsAndDependence.lean",
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "bytes": 8707,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:24Z",
+        "ended_utc": "2026-10-03T18:54:25Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-EffectsAndDependence.log"
+      },
+      "candidate_path": "../sources/EffectsAndDependence.lean"
+    },
+    {
+      "path": "sources/FiniteBridge.lean",
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "bytes": 8366,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:19Z",
+        "ended_utc": "2026-10-03T18:54:20Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-FiniteBridge.log"
+      },
+      "candidate_path": "../sources/FiniteBridge.lean"
+    },
+    {
+      "path": "sources/InternalPolymorphism.lean",
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "bytes": 15288,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:18Z",
+        "ended_utc": "2026-10-03T18:54:19Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-InternalPolymorphism.log"
+      },
+      "candidate_path": "../sources/InternalPolymorphism.lean"
+    },
+    {
+      "path": "sources/NormalisationAndNumerals.lean",
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "bytes": 3101,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:25Z",
+        "ended_utc": "2026-10-03T18:54:25Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-NormalisationAndNumerals.log"
+      },
+      "candidate_path": "../sources/NormalisationAndNumerals.lean"
+    },
+    {
+      "path": "sources/P01Candidates.lean",
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "bytes": 10260,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:22Z",
+        "ended_utc": "2026-10-03T18:54:23Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01Candidates.log"
+      },
+      "candidate_path": "../sources/P01Candidates.lean"
+    },
+    {
+      "path": "sources/P01CanonicalCarrierProjection.lean",
+      "sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "bytes": 6747,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:46Z",
+        "ended_utc": "2026-10-03T18:54:46Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01CanonicalCarrierProjection.log"
+      },
+      "candidate_path": "../sources/P01CanonicalCarrierProjection.lean"
+    },
+    {
+      "path": "sources/P01Certificates.lean",
+      "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "bytes": 5047,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:31Z",
+        "ended_utc": "2026-10-03T18:54:32Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01Certificates.log"
+      },
+      "candidate_path": "../sources/P01Certificates.lean"
+    },
+    {
+      "path": "sources/P01Confluence.lean",
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "bytes": 9226,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:23Z",
+        "ended_utc": "2026-10-03T18:54:24Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01Confluence.log"
+      },
+      "candidate_path": "../sources/P01Confluence.lean"
+    },
+    {
+      "path": "sources/P01ContextualJ.lean",
+      "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "bytes": 3535,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:30Z",
+        "ended_utc": "2026-10-03T18:54:31Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01ContextualJ.log"
+      },
+      "candidate_path": "../sources/P01ContextualJ.lean"
+    },
+    {
+      "path": "sources/P01CurryParametricity.lean",
+      "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "bytes": 4213,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:38Z",
+        "ended_utc": "2026-10-03T18:54:39Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01CurryParametricity.log"
+      },
+      "candidate_path": "../sources/P01CurryParametricity.lean"
+    },
+    {
+      "path": "sources/P01DependentControls.lean",
+      "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "bytes": 6388,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:44Z",
+        "ended_utc": "2026-10-03T18:54:45Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01DependentControls.log"
+      },
+      "candidate_path": "../sources/P01DependentControls.lean"
+    },
+    {
+      "path": "sources/P01DependentCore.lean",
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "bytes": 16822,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:29Z",
+        "ended_utc": "2026-10-03T18:54:30Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01DependentCore.log"
+      },
+      "candidate_path": "../sources/P01DependentCore.lean"
+    },
+    {
+      "path": "sources/P01DependentFundamental.lean",
+      "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "bytes": 8990,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:43Z",
+        "ended_utc": "2026-10-03T18:54:44Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01DependentFundamental.log"
+      },
+      "candidate_path": "../sources/P01DependentFundamental.lean"
+    },
+    {
+      "path": "sources/P01DependentModel.lean",
+      "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "bytes": 9892,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:41Z",
+        "ended_utc": "2026-10-03T18:54:42Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01DependentModel.log"
+      },
+      "candidate_path": "../sources/P01DependentModel.lean"
+    },
+    {
+      "path": "sources/P01DependentRepresentation.lean",
+      "sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "bytes": 8168,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:45Z",
+        "ended_utc": "2026-10-03T18:54:46Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01DependentRepresentation.log"
+      },
+      "candidate_path": "../sources/P01DependentRepresentation.lean"
+    },
+    {
+      "path": "sources/P01DependentSubstitution.lean",
+      "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "bytes": 7125,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:42Z",
+        "ended_utc": "2026-10-03T18:54:43Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01DependentSubstitution.log"
+      },
+      "candidate_path": "../sources/P01DependentSubstitution.lean"
+    },
+    {
+      "path": "sources/P01Examples.lean",
+      "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "bytes": 3514,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:32Z",
+        "ended_utc": "2026-10-03T18:54:33Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01Examples.log"
+      },
+      "candidate_path": "../sources/P01Examples.lean"
+    },
+    {
+      "path": "sources/P01LambdaSyntax.lean",
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "bytes": 5547,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:36Z",
+        "ended_utc": "2026-10-03T18:54:37Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01LambdaSyntax.log"
+      },
+      "candidate_path": "../sources/P01LambdaSyntax.lean"
+    },
+    {
+      "path": "sources/P01ModelWitnesses.lean",
+      "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "bytes": 4276,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:40Z",
+        "ended_utc": "2026-10-03T18:54:41Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01ModelWitnesses.log"
+      },
+      "candidate_path": "../sources/P01ModelWitnesses.lean"
+    },
+    {
+      "path": "sources/P01Omega.lean",
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "bytes": 3201,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:25Z",
+        "ended_utc": "2026-10-03T18:54:26Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01Omega.log"
+      },
+      "candidate_path": "../sources/P01Omega.lean"
+    },
+    {
+      "path": "sources/P01PER.lean",
+      "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "bytes": 9388,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:27Z",
+        "ended_utc": "2026-10-03T18:54:29Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01PER.log"
+      },
+      "candidate_path": "../sources/P01PER.lean"
+    },
+    {
+      "path": "sources/P01Polynomials.lean",
+      "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "bytes": 8595,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:26Z",
+        "ended_utc": "2026-10-03T18:54:27Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01Polynomials.log"
+      },
+      "candidate_path": "../sources/P01Polynomials.lean"
+    },
+    {
+      "path": "sources/P01RecursiveModel.lean",
+      "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "bytes": 14821,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:33Z",
+        "ended_utc": "2026-10-03T18:54:36Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01RecursiveModel.log"
+      },
+      "candidate_path": "../sources/P01RecursiveModel.lean"
+    },
+    {
+      "path": "sources/P01SNReflection.lean",
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "bytes": 1447,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:21Z",
+        "ended_utc": "2026-10-03T18:54:21Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01SNReflection.log"
+      },
+      "candidate_path": "../sources/P01SNReflection.lean"
+    },
+    {
+      "path": "sources/P01SystemF.lean",
+      "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "bytes": 6932,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:37Z",
+        "ended_utc": "2026-10-03T18:54:38Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01SystemF.log"
+      },
+      "candidate_path": "../sources/P01SystemF.lean"
+    },
+    {
+      "path": "sources/P01Translation.lean",
+      "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "bytes": 6462,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:39Z",
+        "ended_utc": "2026-10-03T18:54:40Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01Translation.log"
+      },
+      "candidate_path": "../sources/P01Translation.lean"
+    },
+    {
+      "path": "sources/P01TypeAlgebra.lean",
+      "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "bytes": 4003,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "accepted-reconstruction",
+        "started_utc": "2026-10-03T18:54:20Z",
+        "ended_utc": "2026-10-03T18:54:21Z",
+        "exit_code": 0,
+        "log": "logs/accepted-reconstruction-P01TypeAlgebra.log"
+      },
+      "candidate_path": "../sources/P01TypeAlgebra.lean"
+    },
+    {
+      "path": "sources/SubstitutionSyntax.lean",
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "bytes": 9055,
+      "role": "inherited",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:25Z",
+        "ended_utc": "2026-10-03T19:20:26Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-SubstitutionSyntax.log"
+      },
+      "candidate_path": "../sources/SubstitutionSyntax.lean"
+    },
+    {
+      "path": "sources/TypedAlgebra.lean",
+      "sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc",
+      "bytes": 9808,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:27Z",
+        "ended_utc": "2026-10-03T19:20:28Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedAlgebra.log"
+      },
+      "candidate_path": "../sources/TypedAlgebra.lean"
+    },
+    {
+      "path": "sources/TypedBoundaryResults.lean",
+      "sha256": "15f1fd5429884678f073c9b7bb302a2711567ef7952de7de8160c606ddaf2c66",
+      "bytes": 4027,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-boundary",
+        "started_utc": "2026-10-03T19:27:16Z",
+        "ended_utc": "2026-10-03T19:27:17Z",
+        "exit_code": 0,
+        "log": "logs/candidate-boundary-TypedBoundaryResults.log"
+      },
+      "candidate_path": "../sources/TypedBoundaryResults.lean"
+    },
+    {
+      "path": "sources/TypedConstants.lean",
+      "sha256": "29ef624541635cd7a2ae00c5c19de93895472b7c676d63ce6c2d8233b7614834",
+      "bytes": 2990,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:36Z",
+        "ended_utc": "2026-10-03T19:20:37Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedConstants.log"
+      },
+      "candidate_path": "../sources/TypedConstants.lean"
+    },
+    {
+      "path": "sources/TypedContextualJ.lean",
+      "sha256": "1be1692557b5ec60b7b0170f0682c0503b1d9ea76ca582ff95a3a8af66517f8d",
+      "bytes": 4008,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:40Z",
+        "ended_utc": "2026-10-03T19:20:41Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedContextualJ.log"
+      },
+      "candidate_path": "../sources/TypedContextualJ.lean"
+    },
+    {
+      "path": "sources/TypedLaws.lean",
+      "sha256": "234d778b12696c34cf7d61f5fa0c75b4f3e488d14b29f09aef89ea6a12ac8a12",
+      "bytes": 7118,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:31Z",
+        "ended_utc": "2026-10-03T19:20:32Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedLaws.log"
+      },
+      "candidate_path": "../sources/TypedLaws.lean"
+    },
+    {
+      "path": "sources/TypedLegacy.lean",
+      "sha256": "47675347844cf2858eb2e5a0aea9bbca08cdf90e4de0aee7f26cb8e2a73f9d45",
+      "bytes": 24376,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-legacy",
+        "started_utc": "2026-10-03T19:31:08Z",
+        "ended_utc": "2026-10-03T19:31:10Z",
+        "exit_code": 0,
+        "log": "logs/candidate-legacy-TypedLegacy.log"
+      },
+      "candidate_path": "../sources/TypedLegacy.lean"
+    },
+    {
+      "path": "sources/TypedNegativeControls.lean",
+      "sha256": "4c385f333c8f75e6afb57398b6fb0f5607eed839f8e82cbbcac4b37e3759de1e",
+      "bytes": 4049,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:41Z",
+        "ended_utc": "2026-10-03T19:20:42Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedNegativeControls.log"
+      },
+      "candidate_path": "../sources/TypedNegativeControls.lean"
+    },
+    {
+      "path": "sources/TypedPiLaws.lean",
+      "sha256": "bf99ba54a2ee69f0856dc50c7a4c0dc90e3789d590058dcae53909fe39e5e489",
+      "bytes": 2933,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:32Z",
+        "ended_utc": "2026-10-03T19:20:33Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedPiLaws.log"
+      },
+      "candidate_path": "../sources/TypedPiLaws.lean"
+    },
+    {
+      "path": "sources/TypedPositiveControls.lean",
+      "sha256": "2f5d21fa81bed6dbabc6659a9f695983e9dafad5f9d36656c23d9988b209527b",
+      "bytes": 11121,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:38Z",
+        "ended_utc": "2026-10-03T19:20:39Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedPositiveControls.log"
+      },
+      "candidate_path": "../sources/TypedPositiveControls.lean"
+    },
+    {
+      "path": "sources/TypedPredicates.lean",
+      "sha256": "acc5fa0f14f126988ed995879d6e39475a33ca2766519f6e4cc1fdb6f74da3ae",
+      "bytes": 5530,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:30Z",
+        "ended_utc": "2026-10-03T19:20:31Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedPredicates.log"
+      },
+      "candidate_path": "../sources/TypedPredicates.lean"
+    },
+    {
+      "path": "sources/TypedReadback.lean",
+      "sha256": "04943734a57a2b51e56195f7f63186fb8ec293efdc0d4841d215e802799b2c6f",
+      "bytes": 20453,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-full-readback",
+        "started_utc": "2026-10-03T19:32:44Z",
+        "ended_utc": "2026-10-03T19:32:50Z",
+        "exit_code": 0,
+        "log": "logs/candidate-full-readback-TypedReadback.log"
+      },
+      "candidate_path": "../sources/TypedReadback.lean"
+    },
+    {
+      "path": "sources/TypedRepresentation.lean",
+      "sha256": "ae9eb62d4e95ec8a66bb0feb009a394112a91dc34413e9621c84eaf09998d606",
+      "bytes": 3577,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:39Z",
+        "ended_utc": "2026-10-03T19:20:40Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedRepresentation.log"
+      },
+      "candidate_path": "../sources/TypedRepresentation.lean"
+    },
+    {
+      "path": "sources/TypedSigmaLaws.lean",
+      "sha256": "88d025701e15b575b14f6790d0e6ef707591951ed8fd2d3af5aa37ccf92d707e",
+      "bytes": 4533,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:33Z",
+        "ended_utc": "2026-10-03T19:20:34Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedSigmaLaws.log"
+      },
+      "candidate_path": "../sources/TypedSigmaLaws.lean"
+    },
+    {
+      "path": "sources/TypedSoundness.lean",
+      "sha256": "ba9667b33cb3b6268b3450dbd5a803bb880948d12e2b74f1b3739165ee109143",
+      "bytes": 6129,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:37Z",
+        "ended_utc": "2026-10-03T19:20:38Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedSoundness.log"
+      },
+      "candidate_path": "../sources/TypedSoundness.lean"
+    },
+    {
+      "path": "sources/TypedStructural.lean",
+      "sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf",
+      "bytes": 33519,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:28Z",
+        "ended_utc": "2026-10-03T19:20:30Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedStructural.log"
+      },
+      "candidate_path": "../sources/TypedStructural.lean"
+    },
+    {
+      "path": "sources/TypedSyntax.lean",
+      "sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c",
+      "bytes": 4557,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:26Z",
+        "ended_utc": "2026-10-03T19:20:27Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedSyntax.log"
+      },
+      "candidate_path": "../sources/TypedSyntax.lean"
+    },
+    {
+      "path": "sources/TypedTermLemmas.lean",
+      "sha256": "ead928481cd4b0a3c427664bdb32c4a12cc179c1574ec3290e74dd4ea6dba58a",
+      "bytes": 6324,
+      "role": "new",
+      "independent_compile": {
+        "phase": "candidate-interim",
+        "started_utc": "2026-10-03T19:20:34Z",
+        "ended_utc": "2026-10-03T19:20:36Z",
+        "exit_code": 0,
+        "log": "logs/candidate-interim-TypedTermLemmas.log"
+      },
+      "candidate_path": "../sources/TypedTermLemmas.lean"
+    }
+  ]
+}

@@ -1,0 +1,1434 @@
+{
+  "id": "T10-NONUNIFORM-COMPLETION",
+  "family": "t10-nonuniform-completion-suite",
+  "result_families": [
+    "t10-nonuniform-completion"
+  ],
+  "origin_archive_sha256": "86b1924c39385655005ce8b1159f8032fe27fad7459949c9e235c1638ac15804",
+  "source_ids": [
+    "T10-SOURCE-IndexedCompletionCore",
+    "T10-SOURCE-IndexedCompletionCompact",
+    "T10-SOURCE-IndexedCompletionForgetting",
+    "T10-SOURCE-IndexedCompletionDiameter",
+    "T10-SOURCE-NONUNIFORM-READBACK",
+    "T10-SOURCE-NONUNIFORM-CONTROLS",
+    "T10-SOURCE-NONUNIFORM-DRIVER",
+    "T10-SOURCE-TOOLCHAIN",
+    "T10-SOURCE-MATHLIB-LOCK",
+    "T10-SOURCE-LEAN-PIN",
+    "T10-SOURCE-NONUNIFORM-REVIEW",
+    "T10-SOURCE-NONUNIFORM-SCOPE"
+  ],
+  "review_ids": [
+    "T10-REVIEW-NONUNIFORM-COMPLETION"
+  ],
+  "targets": [
+    {
+      "id": "T10-NONUNIFORM-TARGET-001",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "declaration": "theorem partial_closed (f : Bonding X) (hf : ∀ i, Continuous (f i)) (n : ℕ) :\n    IsClosed (PartialCompatible f n)",
+      "target_sha256": "fa9b7a42390dc60559c221adecaf0d186ff9fc8c9cb1b347bd5f4db6076b799c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-002",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "declaration": "theorem partial_decreasing (f : Bonding X) (n : ℕ) :\n    PartialCompatible f (n + 1) ⊆ PartialCompatible f n",
+      "target_sha256": "bf5628a5aadb225177718d063a2af5532a116f04ea64ba90f77fe05f572ed5b7",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-003",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "declaration": "theorem partial_nonempty (f : Bonding X) (n : ℕ) : (PartialCompatible f n).Nonempty",
+      "target_sha256": "66023d875f6bcc085588849f222b3c08244db965c382e24e0965b434121a535e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-004",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "declaration": "theorem realization_exists (f : Bonding X) (hf : ∀ i, Continuous (f i)) :\n    ∃ b, Compatible f b",
+      "target_sha256": "2201d33545d0edd826b7477fc0e5d90e1497d20ab6361ffa2012bac65a86b44a",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-005",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "declaration": "theorem survivor_realized (f : Bonding X) (hf : ∀ i, Continuous (f i))\n    (i : ℕ) (y : X i) (hy : Survives f i y) :\n    ∃ b, Compatible f b ∧ b i = y",
+      "target_sha256": "d4d389a9d7a59eec4a9dcbb436bfed08a744c4583f21398f8f64113415485daa",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-006",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "declaration": "theorem survival_iff_projection (f : Bonding X) (hf : ∀ i, Continuous (f i))\n    (i : ℕ) (y : X i) : Survives f i y ↔ ∃ b, Compatible f b ∧ b i = y",
+      "target_sha256": "0c5045f8f90a9b635a288267bc824c447de156b95e3c59d054e5ef8eaee9a590",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-007",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "declaration": "theorem survivor_exists (f : Bonding X) (hf : ∀ i, Continuous (f i)) (i : ℕ) :\n    ∃ y : X i, Survives f i y",
+      "target_sha256": "ad0d42f0eba8ddf778d1ad3e6742cfa05d9361cbca95d042a433996696605eca",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-008",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "declaration": "theorem all_singleton_iff_unique (f : Bonding X) (hf : ∀ i, Continuous (f i)) :\n    AllSingleton f ↔ UniqueRealization f",
+      "target_sha256": "b1a0f850795388200b8254d36383c7432fc1dc5a62b389a9f50b9d3e1298f07e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-009",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "@[simp] theorem transport_self (f : Bonding X) (i : ℕ) (x : X i) :\n    transport f i i le_rfl x = x",
+      "target_sha256": "2884b4385e951a766f41f24c9b379e1e8766c9c214a4921a419d61b59517d026",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-010",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "theorem transport_succ (f : Bonding X) (i j : ℕ) (h : i ≤ j) (x : X (j + 1)) :\n    transport f i (j + 1) (by omega) x = transport f i j h (f j x)",
+      "target_sha256": "90e7076f8f61de47b190ef55d9542e20aae7c3f6c8a9f2c64862344306e18f08",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-011",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "@[simp] theorem transport_one (f : Bonding X) (i : ℕ) (x : X (i + 1)) :\n    transport f i (i + 1) (Nat.le_succ i) x = f i x",
+      "target_sha256": "d1e833a9a24c81c8437cb1bbd6a4eca076eb11491dfdeb292d3613c69c82f559",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-012",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "theorem transport_comp (f : Bonding X) (i j k : ℕ) (hij : i ≤ j) (hjk : j ≤ k) (x : X k) :\n    transport f i k (hij.trans hjk) x =\n      transport f i j hij (transport f j k hjk x)",
+      "target_sha256": "7f61655c0bce06fbb02d73b43533af86ce0e510be348ef568e75b4b107e5af34",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-013",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "theorem transport_left (f : Bonding X) (i j : ℕ) (h : i + 1 ≤ j) (x : X j) :\n    transport f i j (by omega) x = f i (transport f (i + 1) j h x)",
+      "target_sha256": "f1e0f61413735bfc16fcc9202794975c732fb95a975d80dfc156916d843ec086",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-014",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "theorem compatible_transport (f : Bonding X) (b : ∀ i, X i) (hb : Compatible f b)\n    (i j : ℕ) (h : i ≤ j) : transport f i j h (b j) = b i",
+      "target_sha256": "ca2f0f815df8ac9620adda86c7ec480731171b2c447f135ce72f7d4039f11d11",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-015",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "theorem compatible_survives (f : Bonding X) (b : ∀ i, X i) (hb : Compatible f b)\n    (i : ℕ) : Survives f i (b i)",
+      "target_sha256": "b6934a680d96793e462994e1f2130c6d63a995ef2657890187618fa0303377c5",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-016",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "@[simp] theorem finitePath_at [∀ i, Nonempty (X i)] (f : Bonding X) (j : ℕ) (z : X j)\n    (i : ℕ) (h : i ≤ j) : finitePath f j z i = transport f i j h z",
+      "target_sha256": "fbd72dff450837dfadac168b28925db0e85682df756d282517108bc36d2f17f7",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-017",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "theorem finitePath_compatible [∀ i, Nonempty (X i)] (f : Bonding X) (j : ℕ) (z : X j)\n    (i : ℕ) (h : i < j) : finitePath f j z i = f i (finitePath f j z (i + 1))",
+      "target_sha256": "df981f531583e804f67e7f8933f179c93b1280dcc26ba6f9d982902ddf8b24ed",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-018",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "declaration": "theorem transport_continuous (f : Bonding X) (hf : ∀ i, Continuous (f i))\n    (i j : ℕ) (h : i ≤ j) : Continuous (transport f i j h)",
+      "target_sha256": "d2868b8251ecfa6380e98d46454bd94bb3bbe73897e6e892f354cca705b69327",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-019",
+      "source_id": "T10-SOURCE-IndexedCompletionDiameter",
+      "declaration": "theorem coordinate_forgetting_iff_diameter (f : Bonding X) (hf : ∀ i, Continuous (f i)) :\n    CoordinateForgetting f ↔ DiameterShrinking f",
+      "target_sha256": "f0b734508daf771b0a1deccbce733aea77d51b97d0d60d3fd6b71ce47b18cc5c",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-020",
+      "source_id": "T10-SOURCE-IndexedCompletionDiameter",
+      "declaration": "theorem nonuniform_four_way (f : Bonding X) (hf : ∀ i, Continuous (f i)) :\n    (AllSingleton f ↔ UniqueRealization f) ∧\n    (UniqueRealization f ↔ DiameterShrinking f) ∧\n    (DiameterShrinking f ↔ HorizonForgetting f)",
+      "target_sha256": "303380381634c37a7f4d869efb4477c478a4fcaaf9a3339a945d8218d44e769e",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-021",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "@[simp] theorem extensionRange_of_le (f : Bonding X) (i j : ℕ) (h : i ≤ j) :\n    extensionRange f i j = Set.range (transport f i j h)",
+      "target_sha256": "37d1408edd062329114e291cc692177f0fdbe6e1aeeaa762b6fbf84c5da5cb2f",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-022",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem range_step (f : Bonding X) (i j : ℕ) :\n    extensionRange f i (j + 1) ⊆ extensionRange f i j",
+      "target_sha256": "2401cfc0d009fac6794989417c2113d12ce6516664d94f2002aaac51adecf348",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-023",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem ranges_antitone (f : Bonding X) (i : ℕ) : Antitone (extensionRange f i)",
+      "target_sha256": "6cf49b79de8dbe9140e89616af648be01e60e5837f00d9d07aa075b0579fd02b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-024",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem extensionRange_closed (f : Bonding X) (hf : ∀ i, Continuous (f i)) (i j : ℕ) :\n    IsClosed (extensionRange f i j)",
+      "target_sha256": "11b5cf156916581d357ded890f041dcc5e82ba1d165646c8807182eacd5a18e9",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-025",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem survival_iff_all_ranges (f : Bonding X) (i : ℕ) (x : X i) :\n    Survives f i x ↔ ∀ j, x ∈ extensionRange f i j",
+      "target_sha256": "ffd8d652305f5b12fb4ffea1f578e1fbe3261ab5d6eb18f0e320765ca000a1c0",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-026",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem singleton_coordinate_attraction (f : Bonding X) (hf : ∀ i, Continuous (f i))\n    (i : ℕ) (e : X i) (hs : ∀ x, Survives f i x ↔ x = e) :\n    ∀ ε : ℝ, 0 < ε → ∃ N : ℕ, ∀ j ≥ N, ∀ h : i ≤ j, ∀ z : X j,\n      dist (transport f i j h z) e < ε",
+      "target_sha256": "7b66c44e4558787c057599518b79d8d336f97e323e0c3065d49e25dad649d5bb",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-027",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem all_singleton_attraction (f : Bonding X) (hf : ∀ i, Continuous (f i))\n    (hs : AllSingleton f) : ∃ b, Compatible f b ∧ CoordinateAttraction f b",
+      "target_sha256": "4d300855ca08fc9a68801614644e527434995e9bb875150318cbae91cb058c39",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-028",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem attraction_implies_forgetting (f : Bonding X) (b : ∀ i, X i)\n    (ha : CoordinateAttraction f b) : CoordinateForgetting f",
+      "target_sha256": "8ed35451ccc447e8801d4477a2a1faf5606567310dbd0a888c899227c73295c7",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-029",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem forgetting_implies_all_singleton (f : Bonding X) (hf : ∀ i, Continuous (f i))\n    (hd : CoordinateForgetting f) : AllSingleton f",
+      "target_sha256": "7fd224212c3966cc884df53f139fd961d141f553fb6ee577bedf624ae2fb02a2",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-030",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem coordinate_iff_horizon_forgetting (f : Bonding X) :\n    CoordinateForgetting f ↔ HorizonForgetting f",
+      "target_sha256": "3ad174e3997442c5779c1943b7369b48fc3a322573bb2cd786702af03d4d3400",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-031",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem coordinate_iff_horizon_attraction (f : Bonding X) (b : ∀ i, X i) :\n    CoordinateAttraction f b ↔ HorizonAttraction f b",
+      "target_sha256": "ccbbefcb64f6ecff76e0c2913397423101a6a3bb64014798c06d78b1426b6501",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-032",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem nonuniform_completion_equivalences (f : Bonding X) (hf : ∀ i, Continuous (f i)) :\n    (AllSingleton f ↔ UniqueRealization f) ∧\n    (AllSingleton f ↔ CoordinateForgetting f) ∧\n    (CoordinateForgetting f ↔ HorizonForgetting f)",
+      "target_sha256": "4ae0aeb8992b033368d915d827f272c28b524f2cb965e94559cc43eee10d41d8",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-033",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "declaration": "theorem unique_iff_horizon_attraction (f : Bonding X) (hf : ∀ i, Continuous (f i)) :\n    UniqueRealization f ↔ ∃ b, Compatible f b ∧ HorizonAttraction f b",
+      "target_sha256": "a62f11a3948e319104f7fc2364ca078f7d8655a2549266d404c717739ce9a28d",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-034",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem constant_compatible (p : ∀ i, X i) : Compatible (constantBonds p) p",
+      "target_sha256": "511ea0ea34da35bc198a1ca9d3e145e2f82ca708cd0c4d62a38ba05cf65635af",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-035",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem constant_unique (p : ∀ i, X i) : UniqueRealization (constantBonds p)",
+      "target_sha256": "555e9be82bcc0de145302d644f5d9619afe3cb3e03b84d770119c8ecebe0dfee",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-036",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem constant_survival (p : ∀ i, X i) (i : ℕ) (x : X i) :\n    Survives (constantBonds p) i x ↔ x = p i",
+      "target_sha256": "124c682d9ed73305a51f85c0e718f631854ef66108ac1e7cdd4dc98de9460590",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-037",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem moving_unique : UniqueRealization movingBonds",
+      "target_sha256": "010eef48e0dc3d6ae305067d6fcdb6a48dc2e3390eeb3b4e88fe22476f1df3c6",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-038",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem moving_not_surjective : ¬ Function.Surjective (movingBonds 1)",
+      "target_sha256": "f072277fe7af248edc0ac0fd8cfc8aba5a30e3dd39561168867b3625bad64245",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-039",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem bitPath_compatible (c : Bool) : Compatible tailBits (bitPath c)",
+      "target_sha256": "8dc08428a039d718aba64e577d1c0073b5ecf49afc74afbe22b420acb1a018bd",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-040",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem first_coordinate_singleton :\n    ∀ x : Bool, Survives tailBits 0 x ↔ x = false",
+      "target_sha256": "cd1ed3a4647285adcb1f57d13dca2ae381ba7ff011ee59f367380a32f4e2eece",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-041",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem first_coordinate_does_not_give_unique : ¬ UniqueRealization tailBits",
+      "target_sha256": "0100139e5def95a4c46af292cbb455cd49ea8355d9a4c07676ae3f91dece6e5b",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-042",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem empty_forgetting [∀ i, MetricSpace (X i)] [∀ i, IsEmpty (X i)]\n    (f : Bonding X) : HorizonForgetting f",
+      "target_sha256": "24750dddfb28ea2cc518a194f61036f0712eb0f643c4bec843a1446f00e8677f",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    },
+    {
+      "id": "T10-NONUNIFORM-TARGET-043",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "declaration": "theorem empty_has_no_realization [IsEmpty (X 0)] (f : Bonding X) :\n    ¬ UniqueRealization f",
+      "target_sha256": "8ea21ef5f280c9f46f0a3c5cda55992780075876cb3d9edb921c8ea5f56707d1",
+      "domain": "UNBOUNDED_MODEL",
+      "calculus": "NONE"
+    }
+  ],
+  "controls": [
+    {
+      "id": "T10-NONUNIFORM-CONTROL-001",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "target_id": "T10-NONUNIFORM-TARGET-001",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-002",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "target_id": "T10-NONUNIFORM-TARGET-002",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-003",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "target_id": "T10-NONUNIFORM-TARGET-003",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-004",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "target_id": "T10-NONUNIFORM-TARGET-004",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-005",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "target_id": "T10-NONUNIFORM-TARGET-005",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-006",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "target_id": "T10-NONUNIFORM-TARGET-006",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-007",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "target_id": "T10-NONUNIFORM-TARGET-007",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-008",
+      "source_id": "T10-SOURCE-IndexedCompletionCompact",
+      "target_id": "T10-NONUNIFORM-TARGET-008",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-009",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-009",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-010",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-010",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-011",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-011",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-012",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-012",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-013",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-013",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-014",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-014",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-015",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-015",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-016",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-016",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-017",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-017",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-018",
+      "source_id": "T10-SOURCE-IndexedCompletionCore",
+      "target_id": "T10-NONUNIFORM-TARGET-018",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-019",
+      "source_id": "T10-SOURCE-IndexedCompletionDiameter",
+      "target_id": "T10-NONUNIFORM-TARGET-019",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-020",
+      "source_id": "T10-SOURCE-IndexedCompletionDiameter",
+      "target_id": "T10-NONUNIFORM-TARGET-020",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-021",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-021",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-022",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-022",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-023",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-023",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-024",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-024",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-025",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-025",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-026",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-026",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-027",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-027",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-028",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-028",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-029",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-029",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-030",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-030",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-031",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-031",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-032",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-032",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-033",
+      "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+      "target_id": "T10-NONUNIFORM-TARGET-033",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-034",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-034",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-035",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-035",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-036",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-036",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-037",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-037",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-038",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-038",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-039",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-039",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-040",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-040",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-041",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-041",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-042",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-042",
+      "role": "POSITIVE",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    },
+    {
+      "id": "T10-NONUNIFORM-CONTROL-043",
+      "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+      "target_id": "T10-NONUNIFORM-TARGET-043",
+      "role": "COUNTEREXAMPLE_PROOF",
+      "expected_outcome": "ACCEPT",
+      "expected_outcome_sha256": "22655acc6c5508dc185b492655bc695af0445c3e374e1d75244c7fa348e5b9b2"
+    }
+  ],
+  "toolchain": {
+    "kind": "LEAN",
+    "version": "4.19.0",
+    "platform": "linux-x86_64",
+    "executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "packages": [
+      {
+        "name": "mathlib",
+        "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+        "sha256": "cd98bf919c3046e928b00359de55a3b800af0eb5461c510163318e81e4a363a0"
+      },
+      {
+        "name": "plausible",
+        "revision": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "sha256": "274db2d63943b13169d46fcb5189da73860da86f25a41e2e2983f8b03a1c8e9d"
+      },
+      {
+        "name": "LeanSearchClient",
+        "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "sha256": "b98036ed7b330a511a238a04e1d23d0da5bddeb0c8a03dc6f668d2da8ff78549"
+      },
+      {
+        "name": "importGraph",
+        "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "sha256": "b41c0cb2b1bb088207ba76e276a38520c907de915cecbd76db23b5aee1f3d382"
+      },
+      {
+        "name": "proofwidgets",
+        "revision": "c4919189477c3221e6a204008998b0d724f49904",
+        "sha256": "5f371b168c67a017286aefd186a3d877031da9c12b76dcdb343bce0b4d5e9c84"
+      },
+      {
+        "name": "aesop",
+        "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "sha256": "753fdab06552b2c5bc5ab00c6c5ce42b1ec5e7ccfa03566c4671b3e30d1e9f38"
+      },
+      {
+        "name": "Qq",
+        "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "sha256": "d32fcca736b62bc18bbda2d4fbdecab03dd8180c9f769eeaffcd120a8c5d8e3e"
+      },
+      {
+        "name": "batteries",
+        "revision": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "sha256": "bb49c1e52c387262e30f719e08f39e9744717157e2ab862fa23936f29a73b947"
+      },
+      {
+        "name": "Cli",
+        "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "sha256": "edf043420c08407596941b8dff6b51fb4a986781e25c32c8c8a1ec2165f7edb4"
+      }
+    ]
+  },
+  "replay": {
+    "schema": "orthemology-v5-replay-v1",
+    "scope": "COMPONENTS",
+    "files": [
+      {
+        "source_id": "T10-SOURCE-IndexedCompletionCore",
+        "path": "IndexedCompletionCore.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "T10-SOURCE-IndexedCompletionCompact",
+        "path": "IndexedCompletionCompact.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+        "path": "IndexedCompletionForgetting.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "T10-SOURCE-IndexedCompletionDiameter",
+        "path": "IndexedCompletionDiameter.lean",
+        "role": "PROOF"
+      },
+      {
+        "source_id": "T10-SOURCE-NONUNIFORM-READBACK",
+        "path": "IndexedCompletionReadback.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+        "path": "ReviewerControls.lean",
+        "role": "AUDIT"
+      },
+      {
+        "source_id": "T10-SOURCE-NONUNIFORM-DRIVER",
+        "path": "metadata/NONUNIFORM-DRIVER/validate.sh",
+        "role": "DRIVER"
+      },
+      {
+        "source_id": "T10-SOURCE-TOOLCHAIN",
+        "path": "metadata/TOOLCHAIN/TOOLCHAIN_REQUIREMENTS.json",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "T10-SOURCE-MATHLIB-LOCK",
+        "path": "metadata/MATHLIB-LOCK/mathlib-lake-manifest.json",
+        "role": "LOCK"
+      },
+      {
+        "source_id": "T10-SOURCE-LEAN-PIN",
+        "path": "metadata/LEAN-PIN/lean-toolchain",
+        "role": "CONFIG"
+      },
+      {
+        "source_id": "T10-SOURCE-NONUNIFORM-REVIEW",
+        "path": "metadata/NONUNIFORM-REVIEW/INDEPENDENT_NONUNIFORM_ACCEPTANCE.md",
+        "role": "REVIEW"
+      },
+      {
+        "source_id": "T10-SOURCE-NONUNIFORM-SCOPE",
+        "path": "metadata/NONUNIFORM-SCOPE/CHECKED_SCOPE.md",
+        "role": "REVIEW"
+      }
+    ],
+    "modules": [
+      {
+        "name": "IndexedCompletionCore",
+        "source_id": "T10-SOURCE-IndexedCompletionCore",
+        "imports": [
+          "Init",
+          "Mathlib"
+        ]
+      },
+      {
+        "name": "IndexedCompletionCompact",
+        "source_id": "T10-SOURCE-IndexedCompletionCompact",
+        "imports": [
+          "Init",
+          "IndexedCompletionCore"
+        ]
+      },
+      {
+        "name": "IndexedCompletionForgetting",
+        "source_id": "T10-SOURCE-IndexedCompletionForgetting",
+        "imports": [
+          "Init",
+          "IndexedCompletionCompact"
+        ]
+      },
+      {
+        "name": "IndexedCompletionDiameter",
+        "source_id": "T10-SOURCE-IndexedCompletionDiameter",
+        "imports": [
+          "Init",
+          "IndexedCompletionForgetting"
+        ]
+      },
+      {
+        "name": "IndexedCompletionReadback",
+        "source_id": "T10-SOURCE-NONUNIFORM-READBACK",
+        "imports": [
+          "Init",
+          "IndexedCompletionDiameter"
+        ]
+      },
+      {
+        "name": "ReviewerControls",
+        "source_id": "T10-SOURCE-NONUNIFORM-CONTROLS",
+        "imports": [
+          "Init",
+          "IndexedCompletionDiameter"
+        ]
+      }
+    ],
+    "module_order": [
+      "IndexedCompletionCore",
+      "IndexedCompletionCompact",
+      "IndexedCompletionForgetting",
+      "IndexedCompletionDiameter",
+      "ReviewerControls"
+    ],
+    "positive_roots": [
+      "IndexedCompletionCore",
+      "IndexedCompletionCompact",
+      "IndexedCompletionForgetting",
+      "IndexedCompletionDiameter"
+    ],
+    "audit_roots": [
+      "IndexedCompletionReadback",
+      "ReviewerControls"
+    ],
+    "negative_roots": [],
+    "runtime_roots": [],
+    "official_imports": [
+      {
+        "module": "Mathlib",
+        "package": "mathlib",
+        "path": "Mathlib.lean",
+        "sha256": "b0518254279fabf0c6a920804e684536b0f5e2bd1cb6318d0609eb563413f20a"
+      },
+      {
+        "module": "Init",
+        "package": "lean-release",
+        "path": "Init.lean",
+        "sha256": "94c76e813fdf92a0375566c1c7f3335cf269703da809c6189dc0de09d66b0204"
+      },
+      {
+        "module": "Lean.Elab.Command",
+        "package": "lean-release",
+        "path": "Lean/Elab/Command.lean",
+        "sha256": "ada0e6af60d9f4b2ab1538eecb73e5c34a9a742e462c835ae34bdddc60794be7"
+      },
+      {
+        "module": "Lean.Util.CollectAxioms",
+        "package": "lean-release",
+        "path": "Lean/Util/CollectAxioms.lean",
+        "sha256": "26e92bcf497bd81e3a236e648c2dc75b19d084f0e929c5dea43376437fe4355a"
+      }
+    ],
+    "target_names": [
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-001",
+        "module": "IndexedCompletionCompact",
+        "name": "IndexedCompletion.partial_closed"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-002",
+        "module": "IndexedCompletionCompact",
+        "name": "IndexedCompletion.partial_decreasing"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-003",
+        "module": "IndexedCompletionCompact",
+        "name": "IndexedCompletion.partial_nonempty"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-004",
+        "module": "IndexedCompletionCompact",
+        "name": "IndexedCompletion.realization_exists"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-005",
+        "module": "IndexedCompletionCompact",
+        "name": "IndexedCompletion.survivor_realized"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-006",
+        "module": "IndexedCompletionCompact",
+        "name": "IndexedCompletion.survival_iff_projection"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-007",
+        "module": "IndexedCompletionCompact",
+        "name": "IndexedCompletion.survivor_exists"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-008",
+        "module": "IndexedCompletionCompact",
+        "name": "IndexedCompletion.all_singleton_iff_unique"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-009",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.transport_self"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-010",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.transport_succ"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-011",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.transport_one"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-012",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.transport_comp"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-013",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.transport_left"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-014",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.compatible_transport"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-015",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.compatible_survives"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-016",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.finitePath_at"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-017",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.finitePath_compatible"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-018",
+        "module": "IndexedCompletionCore",
+        "name": "IndexedCompletion.transport_continuous"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-019",
+        "module": "IndexedCompletionDiameter",
+        "name": "IndexedCompletion.coordinate_forgetting_iff_diameter"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-020",
+        "module": "IndexedCompletionDiameter",
+        "name": "IndexedCompletion.nonuniform_four_way"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-021",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.extensionRange_of_le"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-022",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.range_step"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-023",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.ranges_antitone"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-024",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.extensionRange_closed"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-025",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.survival_iff_all_ranges"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-026",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.singleton_coordinate_attraction"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-027",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.all_singleton_attraction"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-028",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.attraction_implies_forgetting"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-029",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.forgetting_implies_all_singleton"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-030",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.coordinate_iff_horizon_forgetting"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-031",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.coordinate_iff_horizon_attraction"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-032",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.nonuniform_completion_equivalences"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-033",
+        "module": "IndexedCompletionForgetting",
+        "name": "IndexedCompletion.unique_iff_horizon_attraction"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-034",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.constant_compatible"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-035",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.constant_unique"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-036",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.constant_survival"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-037",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.moving_unique"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-038",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.moving_not_surjective"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-039",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.bitPath_compatible"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-040",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.first_coordinate_singleton"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-041",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.first_coordinate_does_not_give_unique"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-042",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.empty_forgetting"
+      },
+      {
+        "target_id": "T10-NONUNIFORM-TARGET-043",
+        "module": "ReviewerControls",
+        "name": "IndexedReviewer.empty_has_no_realization"
+      }
+    ],
+    "package_manifest_source_id": "T10-SOURCE-MATHLIB-LOCK",
+    "packages": [
+      {
+        "name": "mathlib",
+        "kind": "GIT",
+        "path": ".",
+        "manifest_source_id": "T10-SOURCE-TOOLCHAIN"
+      },
+      {
+        "name": "plausible",
+        "kind": "GIT",
+        "path": ".lake/packages/plausible",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "LeanSearchClient",
+        "kind": "GIT",
+        "path": ".lake/packages/LeanSearchClient",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "importGraph",
+        "kind": "GIT",
+        "path": ".lake/packages/importGraph",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "proofwidgets",
+        "kind": "GIT",
+        "path": ".lake/packages/proofwidgets",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "aesop",
+        "kind": "GIT",
+        "path": ".lake/packages/aesop",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "Qq",
+        "kind": "GIT",
+        "path": ".lake/packages/Qq",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "batteries",
+        "kind": "GIT",
+        "path": ".lake/packages/batteries",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      },
+      {
+        "name": "Cli",
+        "kind": "GIT",
+        "path": ".lake/packages/Cli",
+        "manifest_source_id": "T10-SOURCE-MATHLIB-LOCK"
+      }
+    ],
+    "tools": [],
+    "external_inputs": [],
+    "fixtures": [],
+    "drivers": [
+      {
+        "id": "t10-nonuniform-original-contract",
+        "source_id": "T10-SOURCE-NONUNIFORM-DRIVER",
+        "recipe": "t10-nonuniform-completion-v1",
+        "sha256": "10d15cd1df71ca909c3598e98d090df25cdcd745861d8bbc9cea9ea9d513be13",
+        "argument_meanings": {},
+        "external_input_id": null
+      }
+    ],
+    "stages": [
+      {
+        "id": "source-check",
+        "kind": "SOURCE_CHECK",
+        "driver_id": "t10-nonuniform-original-contract",
+        "argv": [
+          "{builtin:source-check}"
+        ],
+        "cwd": ".",
+        "depends_on": [],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IndexedCompletionCore",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/IndexedCompletionCore.olean",
+          "{project}/IndexedCompletionCore.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "source-check"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/IndexedCompletionCore.olean"
+        ],
+        "control_ids": [
+          "T10-NONUNIFORM-CONTROL-009",
+          "T10-NONUNIFORM-CONTROL-010",
+          "T10-NONUNIFORM-CONTROL-011",
+          "T10-NONUNIFORM-CONTROL-012",
+          "T10-NONUNIFORM-CONTROL-013",
+          "T10-NONUNIFORM-CONTROL-014",
+          "T10-NONUNIFORM-CONTROL-015",
+          "T10-NONUNIFORM-CONTROL-016",
+          "T10-NONUNIFORM-CONTROL-017",
+          "T10-NONUNIFORM-CONTROL-018"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IndexedCompletionCompact",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/IndexedCompletionCompact.olean",
+          "{project}/IndexedCompletionCompact.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IndexedCompletionCore"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/IndexedCompletionCompact.olean"
+        ],
+        "control_ids": [
+          "T10-NONUNIFORM-CONTROL-001",
+          "T10-NONUNIFORM-CONTROL-002",
+          "T10-NONUNIFORM-CONTROL-003",
+          "T10-NONUNIFORM-CONTROL-004",
+          "T10-NONUNIFORM-CONTROL-005",
+          "T10-NONUNIFORM-CONTROL-006",
+          "T10-NONUNIFORM-CONTROL-007",
+          "T10-NONUNIFORM-CONTROL-008"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IndexedCompletionForgetting",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/IndexedCompletionForgetting.olean",
+          "{project}/IndexedCompletionForgetting.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IndexedCompletionCompact"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/IndexedCompletionForgetting.olean"
+        ],
+        "control_ids": [
+          "T10-NONUNIFORM-CONTROL-021",
+          "T10-NONUNIFORM-CONTROL-022",
+          "T10-NONUNIFORM-CONTROL-023",
+          "T10-NONUNIFORM-CONTROL-024",
+          "T10-NONUNIFORM-CONTROL-025",
+          "T10-NONUNIFORM-CONTROL-026",
+          "T10-NONUNIFORM-CONTROL-027",
+          "T10-NONUNIFORM-CONTROL-028",
+          "T10-NONUNIFORM-CONTROL-029",
+          "T10-NONUNIFORM-CONTROL-030",
+          "T10-NONUNIFORM-CONTROL-031",
+          "T10-NONUNIFORM-CONTROL-032",
+          "T10-NONUNIFORM-CONTROL-033"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "compile-IndexedCompletionDiameter",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/IndexedCompletionDiameter.olean",
+          "{project}/IndexedCompletionDiameter.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IndexedCompletionForgetting"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/IndexedCompletionDiameter.olean"
+        ],
+        "control_ids": [
+          "T10-NONUNIFORM-CONTROL-019",
+          "T10-NONUNIFORM-CONTROL-020"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "original-readback",
+        "kind": "LEAN_AUDIT",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "{project}/IndexedCompletionReadback.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "compile-IndexedCompletionDiameter"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [],
+        "control_ids": [],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      },
+      {
+        "id": "reviewer-controls",
+        "kind": "LEAN_COMPILE",
+        "driver_id": null,
+        "argv": [
+          "{tool:lean}",
+          "-j1",
+          "-o",
+          "{build}/ReviewerControls.olean",
+          "{project}/ReviewerControls.lean"
+        ],
+        "cwd": ".",
+        "depends_on": [
+          "original-readback"
+        ],
+        "timeout_seconds": 180,
+        "output_paths": [
+          "build/ReviewerControls.olean"
+        ],
+        "control_ids": [
+          "T10-NONUNIFORM-CONTROL-034",
+          "T10-NONUNIFORM-CONTROL-035",
+          "T10-NONUNIFORM-CONTROL-036",
+          "T10-NONUNIFORM-CONTROL-037",
+          "T10-NONUNIFORM-CONTROL-038",
+          "T10-NONUNIFORM-CONTROL-039",
+          "T10-NONUNIFORM-CONTROL-040",
+          "T10-NONUNIFORM-CONTROL-041",
+          "T10-NONUNIFORM-CONTROL-042",
+          "T10-NONUNIFORM-CONTROL-043"
+        ],
+        "expected_exit_codes": [
+          0
+        ],
+        "expected_diagnostics": []
+      }
+    ],
+    "build_roots": [
+      "build"
+    ]
+  }
+}

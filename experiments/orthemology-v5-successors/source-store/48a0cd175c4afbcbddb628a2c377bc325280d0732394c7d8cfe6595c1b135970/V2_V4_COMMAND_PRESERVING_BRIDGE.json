@@ -1,0 +1,24 @@
+{
+  "status": "EXACT_SOURCE_IDENTITY_AND_COMMAND_PRESERVING_V2_TO_V4_BRIDGE",
+  "v2_public_manifest_sha256": "0e72d20f3467905fbf63bddf45531a5d63e4b975bc86a855bf92523477f33475",
+  "v4_public_manifest_sha256": "9d8675b5d180d35651ee3a95aec28b3a977f52c0a46b7e9831ca88366736cfbd",
+  "shared_source_manifest_sha256": "5a5e4e8a129b70fe713e76f7b24a97823751264fe4bd67a280682b09a407979f",
+  "v2_replay_py_sha256": "d2dd8981aff78a5d9bc7f5df14a009962c368bb804fac7cf26c2a9f700140897",
+  "v4_replay_py_sha256": "119fee26d6e3b3a642d03e8fe6af25e7671ac9d06fb0c8954a0bf2f0234e806a",
+  "changed_files": [
+    "COST_SCOPE.md",
+    "DEPENDENCY_TRUST.md",
+    "PUBLIC_MANIFEST.json",
+    "README.md",
+    "SOURCE_CUSTODY.json",
+    "evidence/VERIFICATION_SUMMARY.json",
+    "replay.py"
+  ],
+  "scientific_and_control_source_bytes_unchanged": true,
+  "replay_command_control_order_and_budget_unchanged": true,
+  "exact_replay_delta": "One result metadata literal replacement records no added heartbeat overrides, defaults for new modules, and the two existing inherited 800000 settings. Replacing that literal back yields byte-identical v2 replay.py.",
+  "v4_zip_sha256": "7879f8f4011a7596109760d7d113d3bea5a59253df885e39f39f4956992d318a",
+  "v4_zip_bytes": 636293,
+  "zip_member_count": 127,
+  "full_replay_version": "v2; no fresh full v4 invocation is claimed"
+}

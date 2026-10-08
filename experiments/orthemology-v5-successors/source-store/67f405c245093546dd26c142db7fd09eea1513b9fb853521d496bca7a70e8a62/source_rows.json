@@ -1,0 +1,104 @@
+{
+  "attribution_semantics": "Holder and selector fields are reports by work_id, not independently acquired statements of those authorities. Group labels are reported, not independently counted.",
+  "independent_acquisition_of_attributed_authorities": false,
+  "legend": {
+    "G": "God",
+    "M": "Messenger"
+  },
+  "null_semantics": "Unspecified in that claim occurrence. Never a wildcard that creates complete attested rows.",
+  "records": [
+    {
+      "antecedents": [
+        "M",
+        "M",
+        "G"
+      ],
+      "claim_id": "qurtubi-48-9-exposition-split",
+      "role": "direct_exposition",
+      "source_url": "https://quran.ksu.edu.sa/tafseer/qortobi/sura48-aya9.html",
+      "work_id": "QURTUBI_JAMI"
+    },
+    {
+      "antecedents": [
+        "G",
+        "G",
+        "G"
+      ],
+      "attributed_selector": "al-Qushayri",
+      "claim_id": "qurtubi-48-9-reported-unified",
+      "role": "reported_variant_with_attributed_choice",
+      "selector_identity": "unresolved person/work",
+      "source_url": "https://quran.ksu.edu.sa/tafseer/qortobi/sura48-aya9.html",
+      "work_id": "QURTUBI_JAMI"
+    },
+    {
+      "antecedents": [
+        "M",
+        "M",
+        "G"
+      ],
+      "attributed_holder": "al-Dahhak",
+      "claim_id": "qurtubi-48-9-attributed-split",
+      "role": "reported_attribution",
+      "source_url": "https://quran.ksu.edu.sa/tafseer/qortobi/sura48-aya9.html",
+      "work_id": "QURTUBI_JAMI"
+    },
+    {
+      "antecedents": [
+        "G",
+        "G",
+        "G"
+      ],
+      "attributed_holder": "some interpreters",
+      "claim_id": "ibn-atiyya-48-9-reported-unified",
+      "role": "reported_variant",
+      "source_url": "https://quranpedia.net/surah/1/48/book/350",
+      "work_id": "IBN_ATIYYA_MUHARRAR"
+    },
+    {
+      "antecedents": [
+        "M",
+        "M",
+        "G"
+      ],
+      "attributed_holder": "majority",
+      "claim_id": "ibn-atiyya-48-9-reported-split",
+      "role": "reported_variant",
+      "source_url": "https://quranpedia.net/surah/1/48/book/350",
+      "work_id": "IBN_ATIYYA_MUHARRAR"
+    },
+    {
+      "antecedents": [
+        "G",
+        "G",
+        "G"
+      ],
+      "claim_id": "ibn-ashur-48-9-exposition-unified",
+      "role": "direct_exposition_with_reasons",
+      "source_url": "https://tafsir.app/ibn-aashoor/48/9",
+      "work_id": "IBN_ASHUR_TAHRIR"
+    },
+    {
+      "antecedents": [
+        "M",
+        "M",
+        null
+      ],
+      "attributed_holder": "Ibn Abbas",
+      "claim_id": "ibn-ashur-48-9-ibn-abbas-report",
+      "report_qualifier": "some reports",
+      "role": "reported_attribution",
+      "source_url": "https://tafsir.app/ibn-aashoor/48/9",
+      "work_id": "IBN_ASHUR_TAHRIR"
+    }
+  ],
+  "role_semantics": "Reports do not become author endorsements. Expository order alone does not establish exclusive final preference.",
+  "schema": "source-relative-pronoun-records-v2",
+  "scope": "A selected set of documented source statements; not all admissible interpretations or a truth verdict.",
+  "status": "manual source interpretation; not Arabic certification",
+  "target_occurrences": [
+    "48:9:4/object-pronoun",
+    "48:9:5/object-pronoun",
+    "48:9:6/object-pronoun"
+  ]
+}

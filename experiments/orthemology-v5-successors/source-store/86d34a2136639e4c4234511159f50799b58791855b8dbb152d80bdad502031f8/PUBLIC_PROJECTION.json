@@ -1,0 +1,40 @@
+{
+  "status": "SOURCE_EXACT_PUBLIC_PROJECTION_HELPERS_AUDITED_FINAL_MEMBERSHIP_CHECK_PENDING",
+  "accepted_private_archive_sha256": "bbbdbecaea7f5075e34067116e05482668ca4b524aedb1e90b1c900b9412057b",
+  "candidate_source_manifest_sha256": "1a89c375fc25c1da27afcddcc38cc999d74cb65c0e34a78a33fcd0175ef5e858",
+  "candidate_proof_sources_changed": false,
+  "independent_proof_sources_changed": false,
+  "acceptance_review_bytes_changed": false,
+  "raw_private_archive_embedded": false,
+  "omitted_raw_transcript": "review/logs/interim-replay-AllSyntax.log",
+  "normalized_log_mapping": "review/public-portable/PUBLIC_LOG_PROJECTION.json",
+  "main_public_helpers": "PACKAGING_SUCCESSOR.json",
+  "review_public_helpers": "review/public-portable/PUBLIC_PROJECTION.json",
+  "scientific_replay": "FINAL_REPLAY.json",
+  "packaging_smokes_not_scientific_replays": true,
+  "omitted_historical_wrapper_bodies": [
+    {
+      "path": "review/scripts/compile-one.sh",
+      "sha256": "86d5883e8435bf49f3eea450a04f9d2c903fb2fb0b9f850f41ac1c614a330e9c",
+      "bytes": 1305,
+      "reason": "Historical wrapper superseded by the portable public helper; exact original preserved in the accepted private archive.",
+      "public_replacement": "review/public-portable/scripts/reproduce-module.sh"
+    },
+    {
+      "path": "review/historical-scripts/compile-one-before-explicit-toolchain.sh",
+      "sha256": "02571ecda136207e6f5c7acca3ff7d74e14b790240611f48ba7748ef8d9375c1",
+      "bytes": 1259,
+      "reason": "Historical wrapper superseded by the portable public helper; exact original preserved in the accepted private archive.",
+      "public_replacement": "review/public-portable/scripts/reproduce-module.sh"
+    }
+  ],
+  "independent_helper_audit": {
+    "path": "packaging-evidence/PORTABILITY_GUARD_AUDIT_v1.json",
+    "sha256": "31a6c9006da80d11885f610e963eb3c2389fd2910ebad81420e752bbac4f24e9"
+  },
+  "evidence_path_aliases": {
+    "tranche11/research/dependent-all-contexts/PACKAGING_SUCCESSOR.json": "PACKAGING_SUCCESSOR.json",
+    "tranche11/reviews/dependent-all-contexts/public-portable/SMOKE_VERIFICATION.json": "review/public-portable/SMOKE_VERIFICATION.json",
+    "tranche11/reviews/dependent-all-contexts/public-portable/PUBLIC_LOG_PROJECTION.json": "review/public-portable/PUBLIC_LOG_PROJECTION.json"
+  }
+}

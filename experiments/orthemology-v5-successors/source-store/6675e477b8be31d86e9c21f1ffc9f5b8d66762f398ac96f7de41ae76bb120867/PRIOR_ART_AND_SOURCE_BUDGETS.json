@@ -1,0 +1,76 @@
+{
+  "status": "Source comparison for ordinary Ninth synthesis; no general novelty claim",
+  "date_utc": "2026-10-03",
+  "accounting_rule": "Cumulative limits apply across any eventual integrated bundle. Listed working allowances are conservative ceilings, not independent renewed budgets. No direct quotations from external primary literature are included.",
+  "sources": [
+    {
+      "id": "AB2011",
+      "url": "https://arxiv.org/abs/1102.0264",
+      "authors": "Samson Abramsky; Adam Brandenburger",
+      "title": "The Sheaf-Theoretic Structure of Non-Locality and Contextuality",
+      "inspection": "Primary abstract and stated global-section scope; not a complete proof audit",
+      "role": "Prior-art barrier to generic local/global gluing novelty",
+      "direct_quote_words": 0,
+      "working_exposition_allowance_words": 60,
+      "source_tool_limit_words": 200
+    },
+    {
+      "id": "BFMY1983",
+      "url": "https://doi.org/10.1145/2402.322389",
+      "located_full_copy": "https://cse.unl.edu/~choueiry/Documents/jacm83a.pdf",
+      "authors": "Catriel Beeri; Ronald Fagin; David Maier; Mihalis Yannakakis",
+      "title": "On the Desirability of Acyclic Database Schemes",
+      "inspection": "Primary full PDF retrieved via author Ron Fagin publication page; definitions of consistency/join tree and Theorem3.4 items7,9,10 inspected. Initial alternate mirror failed; author-linked copy succeeded.",
+      "role": "Prior-art barrier to acyclic relational composition novelty",
+      "direct_quote_words": 0,
+      "working_exposition_allowance_words": 180,
+      "source_tool_limit_words": 200,
+      "full_copy": "https://s3.us.cloud-object-storage.appdomain.cloud/res-files/500-jacm83a.pdf"
+    },
+    {
+      "id": "CS2010",
+      "url": "https://www.cs.cornell.edu/fbs/publications/Hyperproperties.pdf",
+      "authors": "Michael R. Clarkson; Fred B. Schneider",
+      "title": "Hyperproperties",
+      "inspection": "Full primary PDF available; opening definitions and trace/refinement distinctions inspected",
+      "role": "Comparison for isolated-branch vs joint-system properties; no claim access control intrinsically requires hyperproperties",
+      "direct_quote_words": 0,
+      "working_exposition_allowance_words": 100,
+      "source_tool_limit_words": 200
+    },
+    {
+      "id": "GKT2007",
+      "url": "https://web.cs.ucdavis.edu/~green/papers/pods07.pdf",
+      "authors": "Todd J. Green; Grigoris Karvounarakis; Val Tannen",
+      "title": "Provenance Semirings",
+      "inspection": "Primary full PDF; sections2-4 inspected, particularly conditional-table dependence and provenance factorization",
+      "role": "Prior-art barrier to renamed provenance-tag and tuple-join novelty",
+      "direct_quote_words": 0,
+      "working_exposition_allowance_words": 100,
+      "source_tool_limit_words": 200
+    },
+    {
+      "id": "NinthIntegrityS1",
+      "public_capsule": "tranche9/foundation/integrity/deliverable-v3/SOURCE_INTEGRITY_WARRANT.md: Primary-text control",
+      "ledger": "tranche9/foundation/integrity/deliverable-v3/SOURCE_WORDING_LEDGER.json",
+      "prior_aggregate_source_derived_words": 175,
+      "new_substantive_historical_exposition_words": 0,
+      "direct_quote_words": 0,
+      "source_budget_words": 200,
+      "handling": "Only attribution structure and public audit metadata analysed. Historical exposition remains linked in existing capsule; no reset."
+    },
+    {
+      "id": "NinthIntegrityS2",
+      "ledger": "tranche9/foundation/integrity/deliverable-v3/SOURCE_WORDING_LEDGER.json",
+      "prior_aggregate_source_derived_words": 59,
+      "new_substantive_historical_exposition_words": 0,
+      "direct_quote_words": 0,
+      "handling": "Supplied user source; no new historical exposition."
+    }
+  ],
+  "deferred_candidates": {
+    "quorum_capacity": "Not pursued as main research; established Byzantine/quorum and k-exclusion ancestry. No such formal code was written.",
+    "all_queries_bound": "Supporting elementary counting only; task family includes all membership queries and thereby forces near-full relation retention.",
+    "restricted_two_bit_model": "Inherited H-MOAT export/memory mechanism applied to source-authority/realiser binding; no new general theorem credit."
+  }
+}

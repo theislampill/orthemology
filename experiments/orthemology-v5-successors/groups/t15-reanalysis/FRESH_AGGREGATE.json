@@ -1,0 +1,14 @@
+{
+  "paired_dyads": 15,
+  "IND_mean": 3.4375383509947173,
+  "INF_mean": 4.150174851505185,
+  "INF_minus_IND_mean": 0.7126365005104668,
+  "t": 2.704264596388044,
+  "df": 14,
+  "p_two_sided": 0.01711311760610826,
+  "difference_CI95": [
+    0.14743541713250896,
+    1.2778375838884246
+  ],
+  "workbook_reconciliation_4dp": true
+}

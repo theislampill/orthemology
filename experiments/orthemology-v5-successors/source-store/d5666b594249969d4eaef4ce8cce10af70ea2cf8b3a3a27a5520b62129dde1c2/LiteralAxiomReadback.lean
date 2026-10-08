@@ -1,0 +1,13 @@
+import LiteralRuntimeCounterexample
+#print Orthemology.Eighth.SemanticControls.LiteralAssessment.CertifiedLiteralFailure
+#check @Orthemology.Eighth.SemanticControls.LiteralAssessment.literal_certificate
+#print axioms Orthemology.Eighth.SemanticControls.LiteralAssessment.literal_certificate
+#check @Orthemology.Eighth.SemanticControls.LiteralAssessment.sparse_generated_full
+#print axioms Orthemology.Eighth.SemanticControls.LiteralAssessment.sparse_generated_full
+#check @Orthemology.Eighth.SemanticControls.LiteralAssessment.literal_computed_decoder_exact
+#print axioms Orthemology.Eighth.SemanticControls.LiteralAssessment.literal_computed_decoder_exact
+#check @Orthemology.Eighth.SemanticControls.LiteralAssessment.explicit_two_literal_counterexamples
+#print axioms Orthemology.Eighth.SemanticControls.LiteralAssessment.explicit_two_literal_counterexamples
+#print axioms Orthemology.Eighth.SemanticControls.LiteralAssessment.literalConfig
+#print axioms Orthemology.Eighth.SemanticControls.LiteralAssessment.off_path_target_not_unique
+#print axioms Orthemology.Eighth.SemanticControls.LiteralAssessment.full_cycle_one

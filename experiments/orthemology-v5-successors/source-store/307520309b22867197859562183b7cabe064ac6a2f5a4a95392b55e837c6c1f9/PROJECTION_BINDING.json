@@ -1,0 +1,21 @@
+{
+  "schema": "eighth-foundation-reader-projection-v1",
+  "source_argument": {
+    "name": "SOURCE_INTEGRITY_ARGUMENT.md",
+    "sha256": "e22ffbc983d49d1d715094786868286587e07e54c00a41dc4d149f1077104a0d",
+    "bytes": 17335
+  },
+  "reader_argument": {
+    "name": "SOURCE_INTEGRITY_ARGUMENT.md",
+    "sha256": "e4cff3bc77242a99b97a2a79f7cb24c38b4806d75f3c22d4f1b4980f27e567ac",
+    "bytes": 16352
+  },
+  "transformation": "Condense repeated primary-derived exposition while preserving the affirmative proposal, developed criticism, exact inherited target and unresolved conclusions. Bibliographic source maps and original identities remain explicit.",
+  "exact_review_diff_sha256": "d1b081a6ac77b35d4e0f94bc3ceddef8e4a4867c2e7c4838b39f945ac17dd0f9",
+  "scientific_conclusion_changed": false,
+  "original_files_modified": false,
+  "original_zip": {
+    "name": "Eighth_Truthful_Agency_Public_v2.zip",
+    "sha256": "495b8a59ab068273b80504f5178df24bad788199ddfd5c53662a8fbb5576d160"
+  }
+}

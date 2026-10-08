@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "classification": "newly regenerated control from complete retained generator; not a historical output-byte identity claim",
+  "generator": "verification/unary/generate_regressions.py",
+  "generator_sha256": "6d9fb42f6ab653e41d601dfd199711c27ed72b603c591b075286c57283d3a0ea",
+  "invocation": [
+    "python3",
+    "verification/unary/generate_regressions.py"
+  ],
+  "output": "verification/unary/GeneratedUnaryRegressions.lean",
+  "output_sha256": "86f9c6f6a43bc996b9c2d56e669519345f167799512a713de05cdead42288175",
+  "independent_finite_evaluator_cases": 704,
+  "tree_count": 64,
+  "zero_addition_identities": 64,
+  "canonical_reification_checks": 64,
+  "historical_output_digest_available": false,
+  "repeat_generation_from_unrelated_cwd_matched": true
+}

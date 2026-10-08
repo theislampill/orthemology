@@ -21,3 +21,6 @@ experiments/orthemology-v5-continuations/source-store/** -text
 experiments/orthemology-v5-continuations/support-source/** -text
 experiments/orthemology-v5-continuations/reference/** -text
 docs/provenance/v5-research-continuations/notes/** -text
+
+# Successor source custody retains exact bytes across Windows and Linux.
+experiments/orthemology-v5-successors/source-store/** -text

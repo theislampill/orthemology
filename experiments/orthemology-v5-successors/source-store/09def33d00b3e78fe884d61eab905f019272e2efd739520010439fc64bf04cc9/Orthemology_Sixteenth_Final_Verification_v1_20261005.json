@@ -1,0 +1,102 @@
+{
+  "format_version": 1,
+  "status": "VERIFIED_FINAL_RESEARCH_RETURN_READY_FOR_DELIVERY",
+  "qualified_at_utc": "2026-10-05T17:50:09.110068+00:00",
+  "programme": "Same Orthemology v5 research programme",
+  "tranche": "Sixteenth",
+  "research_window": {
+    "started_utc": "2026-10-05T11:14:06.345973+00:00",
+    "verified_interruption_excluded_seconds": 735,
+    "elapsed_seconds_excluding_that_interruption": 23027.764,
+    "six_hour_floor_met": true,
+    "twelve_hour_ceiling_respected": true
+  },
+  "artifacts": [
+    {
+      "filename": "Orthemology_Sixteenth_Research_Final_v1_20261005.docx",
+      "bytes": 26544,
+      "sha256": "3d5263089763f124367a12c306af7fc5f246c0b9a316e1f36981130f0818dcc7"
+    },
+    {
+      "filename": "Orthemology_Sixteenth_Mathematical_Companion_Final_v1_20261005.docx",
+      "bytes": 138818,
+      "sha256": "99f6eb226504f67526ce0935a89c9e817d9cb30dce898019960bc01aa470e460"
+    },
+    {
+      "filename": "Orthemology_Sixteenth_Research_Final_Evidence_v1_20261005.zip",
+      "bytes": 4991714,
+      "sha256": "aebee5c62532044d2bb98f3ca73b48d51800dc1ee049ae3bfb4fd86de12bafef"
+    }
+  ],
+  "independent_acceptance_records": [
+    {
+      "filename": "FINAL_V3_REVIEW_RECEIPT.json",
+      "bytes": 6226,
+      "sha256": "6f94fd1064011f507fb318f4794404ded6c9fdf5a541260345683e3e488d1ff9"
+    },
+    {
+      "filename": "INDEPENDENT_REVIEW_BINDING_v5.json",
+      "bytes": 3072,
+      "sha256": "8c5f48b022b1b043c136b923c68150849acd47d044c5ca5c710dd73502be6e6d"
+    },
+    {
+      "filename": "INDEPENDENT_SOURCE_ASSURANCE_OUTER_ACCEPTANCE_v3.json",
+      "bytes": 7421,
+      "sha256": "56fb94926232ceca9085305b8066900279d5057e95b25fe3d4976784d3c0dd0a"
+    },
+    {
+      "filename": "DETACHED_ACCEPTANCE.json",
+      "bytes": 508936,
+      "sha256": "90338a88a3d92cad214c844796986ba69458165131cb5a24b214227644cd8d33"
+    }
+  ],
+  "report": {
+    "pages": 11,
+    "native_equations": 3,
+    "primary_links": 13
+  },
+  "mathematical_companion": {
+    "pages": 72,
+    "complete_papers": 13,
+    "additional_theorem_map": true,
+    "native_editable_equations": 1594,
+    "source_and_native_mappings_verified": true
+  },
+  "separate_proof_scopes": {
+    "recovered_core_modules": 111,
+    "core_control_fixtures": 220,
+    "additional_integration_controls": 4,
+    "python_reference_tests": 22,
+    "theorem_roots": 3485,
+    "additional_required_dependency_source_build_modules": 1369,
+    "additional_source_build_and_unchanged_core_replay": "PASS_WITH_INDEPENDENT_REVIEW",
+    "signed_controller_predecessor_modules": 95,
+    "signed_controller_new_modules": 21,
+    "signed_controller_full_replay_invocations_each_author_and_independent": 172,
+    "signed_controller_dependencies": "Pinned official objects reused; no cold-build claim for this separate package",
+    "no_fictional_aggregate_library_count": true
+  },
+  "empirical_replay": {
+    "complete_accepted_package_author_and_independent_replays": "PASS",
+    "fresh_reports_byte_identical": true,
+    "historical_hash_comparison": "Exact after reversing only approved narrative metadata changes; numerical/statistical fields untouched",
+    "new_matching_protocol_experiment": false,
+    "new_participants": false
+  },
+  "outer_archive_verification": {
+    "outer_regular_files": 43,
+    "nested_archives": 5,
+    "independent_binding_checks": 1711,
+    "packaged_verifier_tests": 25,
+    "independent_archive_boundary_cases": 18,
+    "verifier_sha256": "de28d08de29509a791a936bd68fccefbc52c7b3cd5864e81dea0ff3ebc5e8fda"
+  },
+  "limits": [
+    "Written arguments retain their stated written-proof status; document equations do not confer kernel verification.",
+    "The core and signed-controller packages have overlapping ancestry and separate scopes.",
+    "Official Lean compiler, standard toolchain, operating system and runtime infrastructure remain trusted; no compiler bootstrap or verified native binary.",
+    "Fourteen source-built dependency object bytes differ from earlier cached objects; the resulting project inventories and control contracts agree, but the byte-difference cause is not asserted.",
+    "No new actual foundational warrant, physical deployment, human-specialist endorsement, publication-version identity or canonical adoption is claimed.",
+    "Raw primary documents, participant records and dependency binaries are not included."
+  ]
+}

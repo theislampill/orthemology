@@ -1,0 +1,63 @@
+{
+  "schema": "ninth-necessity-independent-public-acceptance-v1",
+  "reviewed_utc": "2026-10-03T05:30:00Z",
+  "decision": "PASS_BOUNDED_SCOPE",
+  "target_packet": "necessity/review-candidate-v2",
+  "target_manifest_sha256": "7870193715d9bbe9442e68016dd784d996ffc0451a41377b3d34a960e9632170",
+  "target_argument_sha256": "c27582d4685a50fe28dd17502e38dbacb3f84b61aca735f8c2f5f40e4020a1e5",
+  "target_accounting_sha256": "2f4626caa39d1b7cfb5690ebab91e0c763f8a70db56566e190077ccd2eecc59a",
+  "target_claim_ledger_sha256": "601a05521fdfb4af0a5ceabc462329835bfa41a753d965be6dc4868171ddebf8",
+  "target_source_map_sha256": "1871abcc3d6769da76f42332c7413d26608ed0a8bf5d9211d930eb5971d31907",
+  "target_source_provenance_sha256": "361c42931f5771f3810bbafaa6fc6a8e90c6ac0692b3f306f5f898fe2a85487c",
+  "predecessor_v1_manifest_sha256": "f7025a85f8db7bc231bed455bd103244abc83c6d51cb746d0399bc49e587b986",
+  "baseline_report_sha256": "103548297755d3f74db9e8088cf300e4f742e090318c4707362c544f18139913",
+  "baseline_necessary_reader_sha256": "40fe0b86b19f0806f886d332b1111a4e900cc47168d557d618bdd5ab93f130ae",
+  "binding_and_accounting_check_sha256": "ef5cd5cc299f54c19a777081fea4e9052749b5a0ca5c479f9ea469ea0dc27e0b",
+  "independent_check_script_sha256": "822149a4652653e8081faf4d2e76ed7e9777813f35663adff6ea90fcd80cb549",
+  "independent_check_result_sha256": "b4fa382d9f729759fda798dbf1c7f02b37ccf04df38039d6225bf8a36f1381a3",
+  "independent_check_counts": {
+    "frames_and_states": 4658,
+    "faithful_realisation_interpretations": 1249860,
+    "pointwise_equivalence_checks": 3748996,
+    "pointwise_violations": 0,
+    "coverage_equivalence_checks": 1207092,
+    "coverage_equivalence_violations": 0,
+    "object_local_composition_applications": 355652,
+    "object_violations": 0
+  },
+  "source_capture_identity_records_matched": 46,
+  "source_page_images_inspected": {
+    "N9P6_original_printed_pages": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "N9P2_same_site_generated_pdf_page": 36
+  },
+  "source_witness_limits_preserved": true,
+  "reviewer_primary_synopsis_words_added": 0,
+  "reviewer_direct_quotation_words_added": 0,
+  "corrections_closed": [
+    "Hamri omitted spans conservatively charged and aggregate reduced to 185",
+    "Repeated JAMI_MASAIL span charged; aggregate 54",
+    "Three N9P2 quotation anchors precisely bound and counted; 20 words total"
+  ],
+  "scope": "Whole article, source attribution and exact packet identities reviewed; conditional logical results only; N2/N3 remain open",
+  "private_source_files_excluded": true
+}

@@ -75,6 +75,21 @@ def temporary_corpus():
         # These are historical examples named in the validator's own docstring.
         write(root, "examples/shared-upstream-corroboration-failure.json", "{}\n")
         write(root, "scripts/validate_claim_reasoning_paths.py", "# fixture\n")
+        # Literal owner paths named by the production selector contracts also
+        # need reference targets in this miniature corpus. These empty fixtures
+        # confer no source identity: its source map has no registered rows.
+        for target in (
+            "docs/provenance/v5-successors/EVIDENCE_BINDINGS.json",
+            "docs/provenance/v5-successors/fragments/D04.json",
+            "experiments/orthemology-v5-successors/groups/t16-successor/REPLAY_INPUTS.json",
+            "scripts/replay_v5_successors.py",
+            "scripts/v5_d04_assets/covering_recipe.py",
+            "scripts/v5_d04_assets/v5_d04_normalizers_translated.py",
+            "scripts/v5_d04_recipes.json",
+            "experiments/orthemology-v5-successors/source-store/0748d78e938b178963f833decf2cafba3584b4262c534b6083168d59a0a1b3d6/FINAL_EXECUTION_RECORD.json",
+            "experiments/orthemology-v5-successors/source-store/61b23329c0dc24c8533a922204769a2128e7574bcbf96ba52424bda2a6614fbb/PUBLIC_PROJECTION.json",
+        ):
+            write(root, target, "{}\n" if target.endswith('.json') else '# fixture\n')
         write(root, ".gitignore", ".superpowers/sdd/\n")
         write(root, "docs/provenance/v5-consolidation/SOURCE_MAP.json", '{"sources": []}\n')
         commit_all(root, "initialize synthetic corpus")

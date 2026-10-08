@@ -1,0 +1,98 @@
+{
+  "schema": "ninth-public-projection-v1",
+  "status": "DERIVED_PUBLIC_PROJECTION_PENDING_INDEPENDENT_CUSTODY_REVIEW",
+  "original_manifest": "original_manifests/RESEARCH_MANIFEST.json",
+  "original_manifest_sha256": "a0b801296afe672efa7dcb7ed178fad9015e6bfc4d00fe2dd341769ebced0888",
+  "record_key": "files",
+  "path_key": "name",
+  "acceptance_of_original": {
+    "archive": "Ninth_Continuation_Synthesis_Independent_Acceptance_v1.zip",
+    "archive_sha256": "fd1badc28e987854c99afd9aea05c00ac74484620486a9c425b7dae7cd8cea08",
+    "original_manifest_sha256": "a0b801296afe672efa7dcb7ed178fad9015e6bfc4d00fe2dd341769ebced0888"
+  },
+  "scope": "The cited original acceptance applies to the original scientific packet, not automatically to this derived projection. Original manifest bytes and every entry disposition are preserved. No omitted file is claimed present.",
+  "entries": [
+    {
+      "original_path": "CANDIDATE_RELATION_AND_SCOPE.md",
+      "original_sha256": "a8b3cfce6f1c6401869689a6279af0ab58a5fcc86674c63398b8e60b9a77cc6c",
+      "original_bytes": 23183,
+      "disposition": "projected",
+      "reason": "Remove only non-scientific internal coordination wording; retain the argument and all source-derived exposition.",
+      "change": {
+        "method": "single-exact-utf8-replacement",
+        "original_start_byte": 5691,
+        "original_end_byte": 5843,
+        "removed_sha256": "0961c921299ed49b71b8e4ab11c2ed31070acfd88e31f1f375eaf733e966bcd7",
+        "removed_bytes": 152,
+        "replacement_sha256": "5fdb147c7d6507e762d4284dbab8cc3d1a7c665d662c7b30cf67fe428fed88ad",
+        "replacement_bytes": 123,
+        "public_start_byte": 5691,
+        "public_end_byte": 5814,
+        "prefix_sha256": "98bb3abe2f71cf81ff6694f36ebd9f4b20b1c5e4a7dff37f3e89a513d1354464",
+        "suffix_sha256": "8b72559244a36f057a086bb5cfe45324296c557385ff16720dc73d3344e02131"
+      },
+      "target": "CANDIDATE_RELATION_AND_SCOPE.md",
+      "public_sha256": "1847d9defcef9bf83a4aa5caf8f7658d468ef497d45548514c5a66dcc99cd247",
+      "public_bytes": 23154
+    },
+    {
+      "original_path": "LOCAL_SOURCE_BINDING.json",
+      "original_sha256": "be6f6d334b1174d7bf83713b1034c62effba59e3f395e1fb08d4f2d3568c0519",
+      "original_bytes": 6824,
+      "disposition": "exact",
+      "target": "LOCAL_SOURCE_BINDING.json",
+      "public_sha256": "be6f6d334b1174d7bf83713b1034c62effba59e3f395e1fb08d4f2d3568c0519",
+      "public_bytes": 6824
+    },
+    {
+      "original_path": "PRIOR_ART_AND_SOURCE_BUDGETS.json",
+      "original_sha256": "ddb4d9601fa7b3cc46138e74d8412c0936e6c9941985d603232be452a9257933",
+      "original_bytes": 4302,
+      "disposition": "projected",
+      "reason": "Remove only non-scientific internal coordination wording; retain the argument and all source-derived exposition.",
+      "change": {
+        "method": "single-exact-utf8-replacement",
+        "original_start_byte": 3832,
+        "original_end_byte": 3983,
+        "removed_sha256": "206ddb1af6ee1f572530604f8d17d1d53db55be9bc0c8fdcbae8a3c48ab63a5c",
+        "removed_bytes": 151,
+        "replacement_sha256": "a50a004f1145f501421b5e132cebb7273f316648f0ab28f4a535b0b98907ab1b",
+        "replacement_bytes": 117,
+        "public_start_byte": 3832,
+        "public_end_byte": 3949,
+        "prefix_sha256": "f7676ffeba415e730c1728c6a5d22c6521c69b77d99958caeb4c93e9193b1fc2",
+        "suffix_sha256": "d0714c5cfc6812bb0bea4c1f3c7d8476c7b6d039fc615909c797a05527dcb5b7"
+      },
+      "target": "PRIOR_ART_AND_SOURCE_BUDGETS.json",
+      "public_sha256": "6675e477b8be31d86e9c21f1ffc9f5b8d66762f398ac96f7de41ae76bb120867",
+      "public_bytes": 4268
+    },
+    {
+      "original_path": "PUBLIC_OCCURRENCE_ATTRIBUTION_CASE.md",
+      "original_sha256": "aed43e209215077ef16e9855537f2a895dcbd9e82af5c00626a17c74f08e650b",
+      "original_bytes": 3923,
+      "disposition": "exact",
+      "target": "PUBLIC_OCCURRENCE_ATTRIBUTION_CASE.md",
+      "public_sha256": "aed43e209215077ef16e9855537f2a895dcbd9e82af5c00626a17c74f08e650b",
+      "public_bytes": 3923
+    },
+    {
+      "original_path": "RESTRICTED_REPAIR_AND_NEXT_HANDOFF_MODEL.md",
+      "original_sha256": "edb51175abfa5a10afea085802e37f95cfc4840d68f9ecd0c7d860b9e94fa83b",
+      "original_bytes": 14698,
+      "disposition": "exact",
+      "target": "RESTRICTED_REPAIR_AND_NEXT_HANDOFF_MODEL.md",
+      "public_sha256": "edb51175abfa5a10afea085802e37f95cfc4840d68f9ecd0c7d860b9e94fa83b",
+      "public_bytes": 14698
+    },
+    {
+      "original_path": "SYNTHESIS_RESULT.md",
+      "original_sha256": "79291b4294872f89ea37dc834dd4fb38b49acb5777c0b106007dbb2a1091e21c",
+      "original_bytes": 14016,
+      "disposition": "exact",
+      "target": "SYNTHESIS_RESULT.md",
+      "public_sha256": "79291b4294872f89ea37dc834dd4fb38b49acb5777c0b106007dbb2a1091e21c",
+      "public_bytes": 14016
+    }
+  ]
+}

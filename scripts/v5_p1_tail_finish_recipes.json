@@ -1,0 +1,162 @@
+{
+  "schema": "P1-TAIL-FINISH-CATALOG-1",
+  "recipe": "p1-tail-finish-v1",
+  "replay_schema": "orthemology-v5-p1-tail-finish-replay-v1",
+  "evidence_schema": "orthemology-v5-p1-tail-finish-evidence-v1",
+  "physical_suite_id": "d08-p1-tail-finish-01",
+  "finite_suite_id": "d08-p1-tail-finish-reference-01",
+  "prior_tail": {
+    "receipt_sha256": "f10dc4c6ef4634e7a08d9f25f9e05ca05f3a2a402660d62b4a90cc0252b4e56d",
+    "receipt_canonical_sha256": "38c2b67b1d7b74d92a227915b423a571225e6c96a403f0ee9608d19133195b1a",
+    "command_sha256": "0bd00618ece44f3f558ca91688a36800b96fd9e173062d97b54547b90afcb04e",
+    "run_files": [
+      {
+        "path": "FAILURE.json",
+        "sha256": "bddcf448ca468ad80bb959275b306dc2a9b51923194946825d748ced06bd8313",
+        "bytes": 132
+      },
+      {
+        "path": "OUTPUT_CUSTODY.json",
+        "sha256": "5923c47250f2ba411de6e56e1b5a0332f7f45cd7ebc0eb9d5878cf16f9e1d045",
+        "bytes": 2886
+      },
+      {
+        "path": "RECEIPT.json",
+        "sha256": "f10dc4c6ef4634e7a08d9f25f9e05ca05f3a2a402660d62b4a90cc0252b4e56d",
+        "bytes": 99095
+      },
+      {
+        "path": "RUNTIME.json",
+        "sha256": "f64fb956bb203d2fa007ef1d3c401980f6c2411915f4ba268412fc2d6f935930",
+        "bytes": 6208
+      },
+      {
+        "path": "SUITE.json",
+        "sha256": "0a00f0cbdb86405918796b252a9ea80695accd0ff254a58a47ea0caa1968f68e",
+        "bytes": 48408
+      },
+      {
+        "path": "original/control-layout/tranche9/baseline/components/Eighth_Literal_Runtime_Counterexamples_20261002/prcodec.py",
+        "sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+        "bytes": 15928
+      },
+      {
+        "path": "original/control-layout/tranche9/baseline/components/Semantic_Control_Independent_Review_20261002/literal-snapshot/prcodec.py",
+        "sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+        "bytes": 15928
+      },
+      {
+        "path": "original/control-layout/tranche9/reviews/python-runtime-refinement/controls/independent_source_controls.py",
+        "sha256": "f85aa830978c4ed6d4379e313a971a8aba59c1d8c943719ca269064f2511429f",
+        "bytes": 10193
+      },
+      {
+        "path": "original/logs/IndependentPythonControls.log",
+        "sha256": "3416d2140b368666b666e6b5afd90bb3c4af47401e47dc5d68a87cf37d5c66b7",
+        "bytes": 866
+      },
+      {
+        "path": "original/logs/PythonEdges.log",
+        "sha256": "40d94e808ff114348ad5207a62ae3867701dc162cdce4316170972186742a990",
+        "bytes": 2821
+      },
+      {
+        "path": "original/logs/SourceContract.log",
+        "sha256": "b70aaee4b98aed3c929b11d2edf077f243b297ed21e6fabbffb70bd38d82b0f9",
+        "bytes": 100
+      },
+      {
+        "path": "original/logs/SourceShape.log",
+        "sha256": "eaccc4770da4680b465dc2bd3536a8b88063eefd38702e96c12467e8ec7df2de",
+        "bytes": 1389
+      },
+      {
+        "path": "traces/0000.json",
+        "sha256": "fb4cf547d5202f1fa164225fd427da286827c248136ec2929d4aa6f6113ae507",
+        "bytes": 3178
+      },
+      {
+        "path": "traces/0000.log",
+        "sha256": "eaccc4770da4680b465dc2bd3536a8b88063eefd38702e96c12467e8ec7df2de",
+        "bytes": 1389
+      },
+      {
+        "path": "traces/0001.json",
+        "sha256": "a9240b39d412786ac20265c8eeb7b291df51069fdd2ef529cdd4a7a8de96107b",
+        "bytes": 3195
+      },
+      {
+        "path": "traces/0001.log",
+        "sha256": "b70aaee4b98aed3c929b11d2edf077f243b297ed21e6fabbffb70bd38d82b0f9",
+        "bytes": 100
+      },
+      {
+        "path": "traces/0002.json",
+        "sha256": "9ca4921b03042453a51e4f155a74bb1ea7ffeaa4f7e11f4468197480d2e651c2",
+        "bytes": 3190
+      },
+      {
+        "path": "traces/0002.log",
+        "sha256": "40d94e808ff114348ad5207a62ae3867701dc162cdce4316170972186742a990",
+        "bytes": 2821
+      },
+      {
+        "path": "traces/0003.json",
+        "sha256": "1e30b8f1d0a65ee603fc6e567f8a33ce3ef2022f5f672fa78503022fefef2cc9",
+        "bytes": 4154
+      },
+      {
+        "path": "traces/0003.log",
+        "sha256": "064d956c3e397efa80c9279b7afc3732d34540c051e0139e8e50ac9118185be6",
+        "bytes": 1002
+      }
+    ],
+    "command_files": [
+      {
+        "path": "COMMAND.json",
+        "sha256": "0bd00618ece44f3f558ca91688a36800b96fd9e173062d97b54547b90afcb04e",
+        "bytes": 1148
+      },
+      {
+        "path": "combined.log",
+        "sha256": "108b715be2459c7b17ce02e9540c12e537311e957fa2538b2df3717e6903b892",
+        "bytes": 97
+      }
+    ],
+    "completed_names": [
+      "SourceShape",
+      "SourceContract",
+      "PythonEdges"
+    ],
+    "reused_stage_sha256": [
+      "8f653dc5a1d1615e2bfb8c60cec68fbaadc6e3d8fd4a67cc5188dfffe4204a67",
+      "606a6eab625ad82be5ad72ba07556e75fe07535065189219eb8668ee7486586f",
+      "a31ccef86b5848b86c9871e8056f8c1f8af6cc9a867eefdce6f93644af5013fd"
+    ],
+    "failed_name": "IndependentPythonControls",
+    "expected_exit_codes": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "original_driver_prerequisite": {
+    "source_sha256": "3c6cd0c6573778acc4f81e3d1e139e9467b2147ba5ff5fd12c262f1cdfc7101e",
+    "line": 160,
+    "literal": "(control.parents[1]/'evidence').mkdir()",
+    "output_relative_path": "original/control-layout/tranche9/reviews/python-runtime-refinement/evidence"
+  },
+  "budgets": {
+    "child_seconds": 180,
+    "audit_seconds": 300,
+    "inventory_and_orchestration_seconds": 3300,
+    "outer_seconds": 3780,
+    "formal_slots": 1
+  },
+  "new_finite_processes_max": 1,
+  "new_audit_processes_max": 1,
+  "new_lean_builds": 0,
+  "new_wrapper_runs": 0,
+  "source_copies_changed": false
+}

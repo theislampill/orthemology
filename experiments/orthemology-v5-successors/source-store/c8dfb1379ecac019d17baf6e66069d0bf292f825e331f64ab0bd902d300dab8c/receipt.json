@@ -1,0 +1,259 @@
+{
+  "schema": "fifteenth-unified-proof-source-v5",
+  "verification_date_utc": "2026-10-05",
+  "status": "author source-integration replay passed; independent exact-archive replay remains a separate review",
+  "source_only_distribution": true,
+  "source_groups": {
+    "unified-v3": {
+      "source_archive_sha256": "3b2a2adeb94a8f960eae6e7301378cc0dbf5a713092368c8553e709f91114b25",
+      "acceptance_record_sha256": "5d1a10b4bab00f3b29af670448628b75b5f6c591d9efe9e6a37d16db89bca384",
+      "unchanged_root_modules": 76
+    },
+    "gate-v1": {
+      "acceptance_record_sha256": "8dd846a0ff36fe4ba6ece34aae8890bb0cde2d2e9e5321e4a3e2fbb2c8b4a948",
+      "unchanged_root_modules": 2
+    },
+    "restricted-v1": {
+      "acceptance_record_sha256": "c8eede5e11103a18e8f0d5cf5195b7169b59ad9fef6d65761e64b651d0bb24fb",
+      "unchanged_root_modules": 1
+    },
+    "restricted-v2": {
+      "source_archive_sha256": "4e88c24c98825232a01d4aa28dab9bd5e0a90b82990dcad3a094d5f0c14acbb3",
+      "acceptance_receipt_sha256": "fd5fa11ec35e498ea87c21cb0efa43cf249a2450a433a354256e7b5f012275bc",
+      "source_list_manifest_sha256": "4cc75ef635deb2ddd50292a5452284ca19a17b8785febe4194e52b3636e395df",
+      "unchanged_root_modules": 7
+    },
+    "unified-v4": {
+      "source_archive_sha256": "c654ad1d01ba9c68a505342cac4b2a3539f9555de6d06cf146faead1cdbb8609",
+      "receipt_sha256": "3ab3b08b87aef587b2b6dd3964f6a884fb90c3b547511157b73275ebe4f7d637",
+      "unchanged_root_modules": 86
+    },
+    "polynomial-test-v1": {
+      "acceptance_record_sha256": "d66d3acb4de386501a1773a639774736b469de94ccf32d59daa0cc2532458436",
+      "source_manifest_sha256": "f130f2faf9bed7df09d088487916aed274dff627a8f79186c1e52e6e5afbecb2",
+      "unchanged_root_modules": 2,
+      "scope": "Current-typing and original F/G semantic bridge for pure arithmetic with one root equality test; full hierarchy result remains written mathematics."
+    }
+  },
+  "source_preservation": {
+    "v4_86_root_modules_byte_identical": true,
+    "original76_byte_identical": true,
+    "extension10_byte_identical": true,
+    "polynomial_test2_byte_identical": true,
+    "polynomial_test9_control_fixtures_byte_identical": true,
+    "python_reference_payload_byte_identical_to_v4": true,
+    "namespace_rewrites": 0,
+    "calculus_or_semantic_clause_changes": 0
+  },
+  "build": {
+    "fresh_root_modules": 88,
+    "fresh_supporting_modules": [
+      "verification.KernelAudit"
+    ],
+    "all_project_built_modules": [
+      "AllBaseLaws",
+      "AllBinderLaws",
+      "AllConstants",
+      "AllFiniteComparison",
+      "AllInheritedPositiveControls",
+      "AllInstantiation",
+      "AllMixedAlgebra",
+      "AllNucleusSyntax",
+      "AllPiLaws",
+      "AllPredicates",
+      "AllRawRenaming",
+      "AllRawSubstitution",
+      "AllSemanticSubstitution",
+      "AllSigmaLaws",
+      "AllSoundness",
+      "AllStructural",
+      "AllStructuralBase",
+      "AllStructuralRename",
+      "AllSyntax",
+      "AllTermAlgebra",
+      "AllTermLemmas",
+      "BareBooleanGatePositive",
+      "BareBooleanGateSyntax",
+      "BoundaryResults",
+      "CheckerControls",
+      "CheckerKernelAudit",
+      "ComputablePrelude",
+      "EffectiveBooleanCertificates",
+      "EffectiveBooleanControls",
+      "EffectiveBooleanInterfaces",
+      "EffectiveBooleanStandardness",
+      "EffectiveCanonicalTests",
+      "EffectiveObserver",
+      "EffectivePartialObserver",
+      "EffectivePrimitiveRecursion",
+      "EffectiveReduction",
+      "EffectiveRuleBoundary",
+      "EffectiveStandardness",
+      "EffectsAndDependence",
+      "ExtensionalRepairAudit",
+      "ExtensionalRepairLemmas",
+      "ExtensionalRepairSoundness",
+      "ExtensionalRepairSyntax",
+      "ExtensionalRepairTheorems",
+      "ExtensionalRepairWitness",
+      "FiniteBridge",
+      "IdentityChecker",
+      "IntensionalIdentityBridge",
+      "IntensionalIdentityModel",
+      "IntensionalIdentityRelations",
+      "IntensionalIdentitySoundness",
+      "IntensionalIdentityTheorems",
+      "IntensionalIdentityWitness",
+      "InternalPolymorphism",
+      "MaskNormalisation",
+      "NormalisationAndNumerals",
+      "P01Candidates",
+      "P01CanonicalCarrierProjection",
+      "P01Certificates",
+      "P01Confluence",
+      "P01ContextualJ",
+      "P01CurryParametricity",
+      "P01DependentControls",
+      "P01DependentCore",
+      "P01DependentFundamental",
+      "P01DependentModel",
+      "P01DependentRepresentation",
+      "P01DependentSubstitution",
+      "P01Examples",
+      "P01LambdaSyntax",
+      "P01ModelWitnesses",
+      "P01Omega",
+      "P01PER",
+      "P01Polynomials",
+      "P01RecursiveModel",
+      "P01SNReflection",
+      "P01SystemF",
+      "P01Translation",
+      "P01TypeAlgebra",
+      "PolynomialTestAudit",
+      "PolynomialTestBoundary",
+      "PositiveSeparation",
+      "RestrictedCompiler",
+      "SparsePolynomial",
+      "SubstitutionSyntax",
+      "TypedAlgebra",
+      "TypedStructural",
+      "TypedSyntax",
+      "verification.KernelAudit"
+    ],
+    "inherited_linter_warnings": 22,
+    "new_module_warnings": 0,
+    "no_predecessor_project_object_reuse": true,
+    "dependency_reuse": "nine exact clean source revisions with existing compiled caches; all origins and official Lean executable digest verified",
+    "new_network_downloads": false,
+    "fresh_network_bootstrap": false,
+    "lean_compiler_rebuilt": false,
+    "third_party_import_closure_rebuilt": false,
+    "fresh_full_dependency_rebuild": false,
+    "build_exit": 0,
+    "full_checks_exit": 0
+  },
+  "proof_audit": {
+    "root_modules": 88,
+    "theorem_roots": 2750,
+    "checked_declarations": 12311,
+    "allowed_standard_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "unsafe_or_partial_proof_dependencies": 0,
+    "declaration_inventory_entries": 6713,
+    "declarationless_audit_modules": [
+      "CheckerKernelAudit",
+      "ExtensionalRepairAudit",
+      "PolynomialTestAudit"
+    ]
+  },
+  "polynomial_test_audit": {
+    "safe_namespace_roots": 92,
+    "namespace_theorems": 51,
+    "excluded_nonproof_runtime_auxiliaries": 38,
+    "checked_declarations": 2360,
+    "unsafe_or_partial_proof_dependencies": 0,
+    "allowed_standard_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "custom_representation_or_native_axiom": false
+  },
+  "restricted_computational_audit": {
+    "roots": [
+      "identityCheck",
+      "verifyCertificate",
+      "makeCertificate"
+    ],
+    "checked_declarations": 460,
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "no_classical_choice_or_abstract_polynomial_dependency": true
+  },
+  "tests": {
+    "source_mutation_rejections": 15,
+    "inherited_interface_rejections": 9,
+    "raw_initial_interface_rejections": 6,
+    "raw_initial_auditor_poison_rejections": 4,
+    "raw_complexity_interface_rejections": 10,
+    "raw_complexity_auditor_poison_rejections": 4,
+    "boolean_interface_rejections": 12,
+    "boolean_auditor_poison_rejections": 4,
+    "restricted_v1_positive_interfaces": 1,
+    "restricted_v1_rejections": 7,
+    "restricted_v2_positive_interfaces": 1,
+    "restricted_v2_rejections": 9,
+    "restricted_independent_rejections": 7,
+    "lean_negative_fixtures_total": 80,
+    "python_author_tests": 10,
+    "python_independent_tests": 12,
+    "python_total_tests": 22,
+    "all_packaged_suites_passed": true,
+    "gate_and_restricted_independent_positive_interfaces_replayed": true,
+    "polynomial_test_positive_interfaces": 1,
+    "polynomial_test_rejections": 8
+  },
+  "historical_receipts": {
+    "raw-v2": {
+      "path": "verification/historical/raw-v2-receipt.json",
+      "sha256": "24db3eb238d712fa242cb5c71a5c074d70a4a52434d34b41ada2f3d731327082"
+    },
+    "unified-v3": {
+      "path": "verification/historical/unified-v3-receipt.json",
+      "sha256": "53cd30a370c0f94db9fc211d2005637af204cc5197e88f30c7edcbfed6a52a27"
+    },
+    "unified-v4": {
+      "path": "verification/historical/unified-v4-receipt.json",
+      "sha256": "3ab3b08b87aef587b2b6dd3964f6a884fb90c3b547511157b73275ebe4f7d637"
+    }
+  },
+  "current_source_lock_sha256": "bd800ff0214d7a382feb5da185d706766185fa309794ab52b2ad9e26444f613c",
+  "declaration_inventory_sha256": "15c92d78a7a04fb86a41d547d80e8364c9e77d04a3d7e52fea93cec3ae1c36fc",
+  "retained_author_log_digests_only": {
+    "fresh_build": "3aefae514f241ca3a8871dd36b053c501aeef1cfc477c0bb3d8c43a2188892ef",
+    "full_checks": "3eb5fd9b388697edd63b7f01452cec194445c9afc2eb9405cf6881a02facd453",
+    "python_tests": "6966f6743eeec202cd0831129e2e2cbc0b14fcfcee2a09f505e150671c28d8bf",
+    "source_mutations": "695c3ca7f3a88a79dc06dfa24c32d7be177b97e6d0132bd2078f98f3a49b0fc7"
+  },
+  "boundaries": {
+    "full_typed_restricted_lean_checker_kernel_proved": true,
+    "python_formal_refinement": false,
+    "degree_plus_one_grid_kernel_formalized": false,
+    "global_pi2_pi1_dce_classifications_kernel_formalized": false,
+    "current_Has_identity_inhabitation_completeness": false,
+    "wire_format_parser_correctness": false,
+    "arbitrary_source_endpoint_equality": false,
+    "canonical_adoption": false,
+    "polynomial_test_current_typing_and_original_semantic_bridge_kernel_proved": true,
+    "polynomial_test_hierarchy_theorem_kernel_formalized": false,
+    "machine_to_polynomial_reducer_supplied": false,
+    "numerical_fixed_witness_arity_supplied": false,
+    "independent_cold_dependency_replay_in_this_receipt": false
+  }
+}

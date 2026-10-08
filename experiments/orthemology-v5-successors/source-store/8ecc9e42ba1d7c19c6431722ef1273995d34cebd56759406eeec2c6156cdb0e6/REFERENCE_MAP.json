@@ -1,0 +1,298 @@
+{
+  "description": "Bibliographic identities and inspected reading locators from the accompanying report. No independent source findings are added.",
+  "references": [
+    {
+      "reference_id": "S1",
+      "bibliography_and_reading_locus": "S1. Michael Padilla. Sandia Lab News, 7 December 2007, p. 6; Sandia, final shuttle scans release, 25 July 2011.",
+      "links": [
+        "https://www.sandia.gov/labnews/2007/12/07/071207-3/",
+        "https://newsreleases.sandia.gov/shuttle-scans/"
+      ]
+    },
+    {
+      "reference_id": "S2",
+      "bibliography_and_reading_locus": "S2. Jose Rodriguez. Anything but routine. Sandia Lab News, 18 June 2010, pp. 7–8.",
+      "links": [
+        "https://www.sandia.gov/app/uploads/sites/81/2021/07/labnews06-18-10.pdf"
+      ]
+    },
+    {
+      "reference_id": "S3",
+      "bibliography_and_reading_locus": "S3. David B. Karelitz. LDRI Orbiter Inspection System. SAND2011-0705C, slide 11.",
+      "links": [
+        "https://www.osti.gov/biblio/1120843"
+      ]
+    },
+    {
+      "reference_id": "S4",
+      "bibliography_and_reading_locus": "S4. Robert Habbit and Todd Pitts. Image Enhancement and Automated Inspection/Assessment. SAND2017-0944C, slides 6–8.",
+      "links": [
+        "https://www.osti.gov/biblio/1427038"
+      ]
+    },
+    {
+      "reference_id": "M1",
+      "bibliography_and_reading_locus": "M1. R. W. Fricke Jr. STS-131 Space Shuttle Mission Report. NSTS 37457, October 2010, pp. 4–10, 14, 54–55, 61–62. University-hosted copy.",
+      "links": [
+        "https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-131%20Space%20Shuttle%20Mission%20Report.pdf"
+      ]
+    },
+    {
+      "reference_id": "M2",
+      "bibliography_and_reading_locus": "M2. JAXA. NASA STS-131 MCC Status Report 26, Japanese version, 17 April 2010.",
+      "links": [
+        "https://iss.jaxa.jp/iss/report/sts-131-26.html"
+      ]
+    },
+    {
+      "reference_id": "M5",
+      "bibliography_and_reading_locus": "M5. NASA. STS-131 Experiment Express Press Kit. April 2010, pp. 8–13, 45–47.",
+      "links": [
+        "https://www.nasa.gov/wp-content/uploads/2023/05/440897main-sts-131-press-kit.pdf"
+      ]
+    },
+    {
+      "reference_id": "C1",
+      "bibliography_and_reading_locus": "C1. Columbia Accident Investigation Board Report, Volume VI, Appendix H.1, 6 March 2003 hearing, pp. 18–19.",
+      "links": [
+        "https://govinfo.library.unt.edu/caib/news/report/pdf/vol6/part01.pdf"
+      ]
+    },
+    {
+      "reference_id": "C2",
+      "bibliography_and_reading_locus": "C2. Aerospace Safety Advisory Panel. Annual Report for 2002. March 2003, pp. 30, 52–53 and front notice.",
+      "links": [
+        "https://ntrs.nasa.gov/citations/20040191560"
+      ]
+    },
+    {
+      "reference_id": "N1",
+      "bibliography_and_reading_locus": "N1. NESC. Inspection of the Math Model Tools for On-Orbit Assessment of Impact Damage Report. RP-05-104, September 2005, pp. 8, 108.",
+      "links": [
+        "https://ntrs.nasa.gov/citations/20050237889"
+      ]
+    },
+    {
+      "reference_id": "N2",
+      "bibliography_and_reading_locus": "N2. NESC. Inspection of the Math Model Tools for On-Orbit Assessment of Impact Damage Report. Revised November 2007; December 2007 publication, pp. 9–10, 98–110, 112–115 and Appendix A.",
+      "links": [
+        "https://ntrs.nasa.gov/citations/20080007516"
+      ]
+    },
+    {
+      "reference_id": "N3",
+      "bibliography_and_reading_locus": "N3. NESC. Peer-Review of the Flight Rationale for Expected Debris Report. RP-05-82, July 2005, pp. 35–36, 48, 147.",
+      "links": [
+        "https://ntrs.nasa.gov/citations/20050204127"
+      ]
+    },
+    {
+      "reference_id": "M3",
+      "bibliography_and_reading_locus": "M3. STS-114 Space Shuttle Mission Report. JSC-63290, June 2006, pp. 11–13. University-hosted copy.",
+      "links": [
+        "https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-114%20Space%20Shuttle%20Mission%20Report.pdf"
+      ]
+    },
+    {
+      "reference_id": "M4",
+      "bibliography_and_reading_locus": "M4. STS-116 Space Shuttle Mission Report. JSC-63291, July 2007, pp. 48–49, 56–58. University-hosted copy.",
+      "links": [
+        "https://www.ibiblio.org/apollo/Shuttle/Reports/Mission%20Reports/STS-116%20Space%20Shuttle%20Mission%20Report.pdf"
+      ]
+    },
+    {
+      "reference_id": "T1",
+      "bibliography_and_reading_locus": "T1. Joel W. Sills Jr. and Erica E. Bruno. Space Shuttle Program Dual Docked Operations. NASA/TM-2016-219350, November 2016, pp. 156–160, Table 6-5 and p. 185.",
+      "links": [
+        "https://ntrs.nasa.gov/citations/20160014851"
+      ]
+    },
+    {
+      "reference_id": "R1",
+      "bibliography_and_reading_locus": "R1. Return to Flight Task Group. Final Report, July 2005, pp. 25–28, 60–62, 77–84, 134.",
+      "links": [
+        "https://ntrs.nasa.gov/citations/20050201800"
+      ]
+    },
+    {
+      "reference_id": "R2",
+      "bibliography_and_reading_locus": "R2. NASA. Implementation Plan for Space Shuttle Return to Flight and Beyond. Final update, 15 May 2007, pp. 1-31–39, 1-57–58, 1-81–82.",
+      "links": [
+        "https://www.nasa.gov/pdf/178101main_rtfip_final_200705.pdf"
+      ]
+    },
+    {
+      "reference_id": "G1",
+      "bibliography_and_reading_locus": "G1. Jessica Brown. Group belief and direction of fit. Philosophical Studies 180 (2023), 3161–3178, especially §4.",
+      "links": [
+        "https://doi.org/10.1007/s11098-023-02037-y"
+      ]
+    },
+    {
+      "reference_id": "G2",
+      "bibliography_and_reading_locus": "G2. Fernando Broncano-Berrocal. Knowledge-first summativism about group evidence. Philosophical Studies 182 (2025), 1275–1303, especially §§4, 7.3–7.4.",
+      "links": [
+        "https://doi.org/10.1007/s11098-025-02315-x"
+      ]
+    },
+    {
+      "reference_id": "G3",
+      "bibliography_and_reading_locus": "G3. Mona Simion. Resistance to Evidence. Cambridge University Press, 2024, especially pp. 111–123, 134–137, 145–146, 186–191, 196.",
+      "links": [
+        "https://doi.org/10.1017/9781009298537"
+      ]
+    },
+    {
+      "reference_id": "G4",
+      "bibliography_and_reading_locus": "G4. Mona Simion, J. Adam Carter and Christoph Kelp. On Behalf of Knowledge-First Collective Epistemology. Accepted manuscript, Draft of August 2020, pp. 21–28; chapter published 2022.",
+      "links": [
+        "https://eprints.gla.ac.uk/222812/"
+      ]
+    },
+    {
+      "reference_id": "G5",
+      "bibliography_and_reading_locus": "G5. J. Adam Carter, Christoph Kelp and Mona Simion. Brown on group evidence, group justification, and group responsibility. Inquiry, online 9 July 2025, pp. 2–7.",
+      "links": [
+        "https://doi.org/10.1080/0020174X.2025.2524701"
+      ]
+    },
+    {
+      "reference_id": "G6",
+      "bibliography_and_reading_locus": "G6. Katherine Ritchie. What are groups? Philosophical Studies 166(2) (2013), 257–272; online 2012. Author-hosted 16-page version, especially §6, PDF pp. 14–15.",
+      "links": [
+        "https://www.kcritchie.com/documents/what_are_groups.pdf"
+      ]
+    },
+    {
+      "reference_id": "G7",
+      "bibliography_and_reading_locus": "G7. Katherine Ritchie. Social Structures and the Ontology of Social Groups. Philosophy and Phenomenological Research 100(2) (2020), 402–424; online 2018. Author-hosted version, especially §4, PDF pp. 10–11.",
+      "links": [
+        "https://www.kcritchie.com/documents/SocialStructuresOntologyOfGroups_2.pdf",
+        "https://doi.org/10.1111/phpr.12555"
+      ]
+    },
+    {
+      "reference_id": "G8",
+      "bibliography_and_reading_locus": "G8. Kit Fine. The Identity of Social Groups. Metaphysics 3(1) (2020), 81–91, especially §§3–4.",
+      "links": [
+        "https://doi.org/10.5334/met.45"
+      ]
+    },
+    {
+      "reference_id": "G9",
+      "bibliography_and_reading_locus": "G9. Brian Epstein. What are social groups? Their metaphysics and how to classify them. DOI 10.1007/s11229-017-1387-y. Inspected Tufts author manuscript (2017), especially pp. 15–21, 31–38, 41–44; not final journal pagination.",
+      "links": [
+        "https://dl.tufts.edu/concern/pdfs/qr46rb89r"
+      ]
+    },
+    {
+      "reference_id": "G10",
+      "bibliography_and_reading_locus": "G10. Tufts University, Arts, Sciences and Engineering. Faculty bylaws, edition identified as effective 29 April 2026, Article IV §3, pp. 16–18.",
+      "links": [
+        "https://asefaculty.tufts.edu/faculty-governance/bylaws",
+        "https://tufts.box.com/v/bylaws-as-soe"
+      ]
+    },
+    {
+      "reference_id": "G11",
+      "bibliography_and_reading_locus": "G11. United States presidential documents, official GovInfo editions. EO 14007 (27 January 2021), §§2–6; EO 14044 (13 September 2021), §1; EO 14148 (20 January 2025), §2(r), (ll); EO 14154 (20 January 2025), §4(a)(iv); EO 14177 (23 January 2025), §§2–6; EO 14354 (29 September 2025), §1(u), §4. The latter was effective 30 September 2025 and published 6 October 2025.",
+      "links": [
+        "https://www.govinfo.gov/content/pkg/DCPD-202100094/pdf/DCPD-202100094.pdf",
+        "https://www.govinfo.gov/content/pkg/DCPD-202100743/pdf/DCPD-202100743.pdf",
+        "https://www.govinfo.gov/content/pkg/DCPD-202500115/pdf/DCPD-202500115.pdf",
+        "https://www.govinfo.gov/content/pkg/DCPD-202500121/pdf/DCPD-202500121.pdf",
+        "https://www.govinfo.gov/content/pkg/DCPD-202500168/pdf/DCPD-202500168.pdf",
+        "https://www.govinfo.gov/content/pkg/DCPD-202500968/pdf/DCPD-202500968.pdf"
+      ]
+    },
+    {
+      "reference_id": "E1",
+      "bibliography_and_reading_locus": "E1. Tobias Greitemeyer and Stefan Schulz-Hardt. Preference-Consistent Evaluation of Information in the Hidden Profile Paradigm. Journal of Personality and Social Psychology 84(2) (2003), 322–339, especially Experiment 2, pp. 331–335. Continuous author-posted text inspected; no source-PDF layout verification.",
+      "links": [
+        "https://doi.org/10.1037/0022-3514.84.2.322",
+        "https://www.researchgate.net/publication/10900875_Preference-Consistent_Evaluation_of_Information_in_the_Hidden_Profile_Paradigm_Beyond_Group-Level_Explanations_for_the_Dominance_of_Shared_Information_in_Group_Decisions"
+      ]
+    },
+    {
+      "reference_id": "E2",
+      "bibliography_and_reading_locus": "E2. Andreas Mojzisch and Stefan Schulz-Hardt. Knowing Others’ Preferences Degrades the Quality of Group Decisions. Journal of Personality and Social Psychology 98(5) (2010), 794–808, especially pp. 796–797, 804–806.",
+      "links": [
+        "https://doi.org/10.1037/a0017627"
+      ]
+    },
+    {
+      "reference_id": "E3",
+      "bibliography_and_reading_locus": "E3. Tobias Rothmund, Andreas Mojzisch and Stefan Schulz-Hardt. Effects of Consensus Information and Task Demonstrability on Preference-Consistent Information Evaluation and Decision Quality in Group Decision Making. Basic and Applied Social Psychology 33(4) (2011), 382–390. Inspected author manuscript pp. 9–17, 25–29; not journal pagination.",
+      "links": [
+        "https://doi.org/10.1080/01973533.2011.614147",
+        "https://www.researchgate.net/publication/228107632_Effects_of_Consensus_Information_and_Task_Demonstrability_on_Preference-Consistent_Information_Evaluation_and_Decision_Quality_in_Group_Decision_Making"
+      ]
+    },
+    {
+      "reference_id": "E4",
+      "bibliography_and_reading_locus": "E4. Torsten Reimer, Andrea Reimer and Verlin B. Hinsz. Naïve Groups Can Solve the Hidden-Profile Problem. Human Communication Research 36 (2010), 443–467, especially pp. 451–461 and Table 3.",
+      "links": [
+        "https://doi.org/10.1111/j.1468-2958.2010.01383.x",
+        "https://web.ics.purdue.edu/~treimer/assets/files/Reimer%20Reimer%20Hinsz.pdf"
+      ]
+    },
+    {
+      "reference_id": "E5",
+      "bibliography_and_reading_locus": "E5. Christofer Sean Cordes. Impact of process protocol design on virtual team effectiveness. Iowa State University dissertation, 2013, especially pp. 52–66, 77–80, 86, 126–127 and Appendix B.",
+      "links": [
+        "https://dr.lib.iastate.edu/entities/publication/56f7f6fc-cfc8-4544-a8d1-1866d2a237e3"
+      ]
+    },
+    {
+      "reference_id": "E6",
+      "bibliography_and_reading_locus": "E6. Désirée Zercher, Ekaterina Jussupow, Ivo Benke and Armin Heinzl. How Can Teams Benefit From AI Team Members? Journal of Organizational Behavior, first published 2 June 2025, pp. 1–28, especially methods, results and appendices C, E, F and G.",
+      "links": [
+        "https://doi.org/10.1002/job.2898",
+        "https://publikationen.bibliothek.kit.edu/1000182165/160744208"
+      ]
+    },
+    {
+      "reference_id": "E7",
+      "bibliography_and_reading_locus": "E7. James K. Summers, Stephen E. Humphrey and Gerald R. Ferris. Team Member Change, Flux in Coordination, and Performance: Effects of Strategic Core Roles, Information Transfer, and Cognitive Ability. Academy of Management Journal 55(2) (2012), 314–338, especially pp. 320–331. Author-posted continuous text inspected; no source-PDF layout verification.",
+      "links": [
+        "https://doi.org/10.5465/amj.2010.0175",
+        "https://www.researchgate.net/publication/236862284_Team_Member_Change_Flux_in_Coordination_and_Performance_Effects_of_Strategic_Core_Roles_Information_Transfer_and_Cognitive_Ability"
+      ]
+    },
+    {
+      "reference_id": "F1",
+      "bibliography_and_reading_locus": "F1. John Duns Scotus. De primo principio, III.18–22.",
+      "links": [
+        "https://catholiclibrary.org/library/view?chunk.id=00000009&docId=%2FMedieval-EN%2FXCT.049.html"
+      ]
+    },
+    {
+      "reference_id": "F2",
+      "bibliography_and_reading_locus": "F2. J. L. A. Garcia. Lies and the Vices of Deception. Faith and Philosophy 15(4) (1998), 514–537, especially 521–531.",
+      "links": [
+        "https://place.asburyseminary.edu/faithandphilosophy/vol15/iss4/6/"
+      ]
+    },
+    {
+      "reference_id": "F3",
+      "bibliography_and_reading_locus": "F3. Ibn Qayyim al-Jawziyya. Shifa al-alil. Edited by Zahir b. Salim Balfaqih, Dar Alam al-Fawaid, vol. 2, pp. 163–215, especially 195–197. Edition year not certified from inspected title matter.",
+      "links": [
+        "https://iifa-aifi.org/wp-content/uploads/2025/11/32.%D8%B4%D9%81%D8%A7%D8%A1-%D8%A7%D9%84%D8%B9%D9%84%D9%8A%D9%84-%D9%81%D9%8A-%D9%85%D8%B3%D8%A7%D8%A6%D9%84-%D8%A7%D9%84%D9%82%D8%B6%D8%A7%D8%A1-%D9%88%D8%A7%D9%84%D9%82%D8%AF%D8%B1-%D9%88%D8%A7%D9%84%D8%AD%D9%83%D9%85%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%84-%D9%84%D8%A7%D8%A8%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D9%85-%D8%A7%D9%84%D8%AC%D8%B2%D8%A1-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.pdf"
+      ]
+    },
+    {
+      "reference_id": "F4",
+      "bibliography_and_reading_locus": "F4. Ibn al-Qayyim. Miftah dar al-saada. Edited by Abd al-Rahman b. Hasan b. Qaid, third edition, 1440/2019 according to accompanying edition records; introduction pp. 49–81; vol. 2, pp. 1119–1156, especially 1136–1141.",
+      "links": [
+        "https://islamcontent.com/storage/contents/12880/ar-Miftah-dar-Alsaeada.pdf"
+      ]
+    },
+    {
+      "reference_id": "F5",
+      "bibliography_and_reading_locus": "F5. Ibn Taymiyya. Commentary on the hadith of Abu Dharr, Majmu al-fatawa, vol. 18, pp. 136–156, especially 148–151. King Fahd Complex printing, 1425/2004; openly hosted scan.",
+      "links": [
+        "https://www.fichier-pdf.fr/2016/04/11/mfsiaitm18/mfsiaitm18.pdf"
+      ]
+    }
+  ]
+}

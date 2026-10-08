@@ -1,0 +1,5 @@
+import UnaryFiniteDescription
+#check P01AC.UnaryIdentity.Description
+#check P01AC.UnaryIdentity.makeDescription_correct
+#check P01AC.UnaryIdentity.makeDescription_canonical
+#check P01AC.UnaryIdentity.canonical_description_unique

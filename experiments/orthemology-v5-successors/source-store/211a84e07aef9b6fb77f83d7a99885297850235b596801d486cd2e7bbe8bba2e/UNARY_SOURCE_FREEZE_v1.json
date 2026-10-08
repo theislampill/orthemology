@@ -1,0 +1,36 @@
+{
+  "scope": "Frozen six new mathematical modules for independent review; predecessor/canonical sources unchanged",
+  "utc": "2026-10-05T12:00:00Z",
+  "modules": [
+    {
+      "name": "UnaryPolynomial",
+      "path": "tranche16/research/formal-frontier/lean/UnaryPolynomial.lean",
+      "sha256": "aa716d61f011942c08532878a322c1b98978d5095bab58fe5ae1e1d5eae37cb6"
+    },
+    {
+      "name": "UnaryFiniteDescription",
+      "path": "tranche16/research/formal-frontier/lean/UnaryFiniteDescription.lean",
+      "sha256": "061d8de20772e3fca5bd2a73641da266f782f2d23e8ad4843255c17d875a29d5"
+    },
+    {
+      "name": "UnaryExpressions",
+      "path": "tranche16/research/formal-frontier/lean/UnaryExpressions.lean",
+      "sha256": "9577dc7da47df9915c87b374b9bd87f534849f94ba272bf60ccd7f20313cbe56"
+    },
+    {
+      "name": "UnaryNormalForm",
+      "path": "tranche16/research/formal-frontier/lean/UnaryNormalForm.lean",
+      "sha256": "a2be40ceebd2c9293ac2be158abff27ed6093c2a82325fb946b5d2b534040d9c"
+    },
+    {
+      "name": "UnaryWitnesses",
+      "path": "tranche16/research/formal-frontier/lean/UnaryWitnesses.lean",
+      "sha256": "5b389da5396383c6fc987c3733ff7b5728ad255dc3a9b2fddfe69f12189e9144"
+    },
+    {
+      "name": "UnaryExpressivity",
+      "path": "tranche16/research/formal-frontier/lean/UnaryExpressivity.lean",
+      "sha256": "5b3be44328f04f25dd0506bfb4e07ea6e1e63785461f20be2ecb107f6483bc52"
+    }
+  ]
+}

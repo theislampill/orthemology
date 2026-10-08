@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "modules": 111,
+  "declarations": 8289,
+  "theorem_roots": 3485,
+  "missing_theorems": [],
+  "extra_theorems": [],
+  "nonproof_exclusions": 2446,
+  "logical_opaque_declarations": 6,
+  "logical_opaque_inventory_sha256": "03ebd0d29094434a93b58aa7ae90b182a209b378829ba82a6d3501955359a563",
+  "import_only_modules": [
+    "CheckerKernelAudit",
+    "ExtensionalRepairAudit",
+    "PolynomialTestAudit"
+  ],
+  "by_lane": {
+    "inherited": {
+      "modules": 88,
+      "declarations": 6713,
+      "theorems": 2750,
+      "excluded_nonproof": 1952
+    },
+    "renewal": {
+      "modules": 6,
+      "declarations": 392,
+      "theorems": 158,
+      "excluded_nonproof": 145
+    },
+    "lookahead": {
+      "modules": 3,
+      "declarations": 134,
+      "theorems": 70,
+      "excluded_nonproof": 44
+    },
+    "policy": {
+      "modules": 5,
+      "declarations": 264,
+      "theorems": 181,
+      "excluded_nonproof": 55
+    },
+    "unary": {
+      "modules": 9,
+      "declarations": 786,
+      "theorems": 326,
+      "excluded_nonproof": 250
+    }
+  },
+  "scope": "new post-reset aggregate logical proof audit; no computational totality claim",
+  "opaque_inventory": [
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Lean.opaqueId",
+      "module": "Init.Core",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Basic._hyg.561",
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Basic._hyg.899",
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Eval.Defs._hyg.134",
+      "module": "Mathlib.Algebra.Polynomial.Eval.Defs",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Basic._hyg.740",
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Basic._hyg.10231",
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "kernelValueAvailable": true
+    }
+  ]
+}

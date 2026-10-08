@@ -1,0 +1,11 @@
+--- v3/replay.py
++++ v4/replay.py
+@@ -56,7 +56,7 @@
+  libs=[build,math/'.lake/build/lib/lean']+sorted((math/'.lake/packages').glob('*/.lake/build/lib/lean'))
+  require((libs[1]/'Mathlib.olean').is_file(),'Official Mathlib object cache required')
+  env=dict(os.environ);env.pop('LEAN_SRC_PATH',None);env['LEAN_PATH']=':'.join(map(str,libs))
+- result={'status':'RUNNING','started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_manifest_sha256':sha(ROOT/'SOURCE_MANIFEST.json'),'public_manifest_sha256':sha(ROOT/'PUBLIC_MANIFEST.json'),'dependency_identity':identity,'custom_objects_reused':False,'default_heartbeats':True,'jobs':1,'module_wall_seconds':180,'runs':[]}
++ result={'status':'RUNNING','started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_manifest_sha256':sha(ROOT/'SOURCE_MANIFEST.json'),'public_manifest_sha256':sha(ROOT/'PUBLIC_MANIFEST.json'),'dependency_identity':identity,'custom_objects_reused':False,'added_heartbeat_overrides':False,'new_module_heartbeat_budget':'default','inherited_source_heartbeat_overrides':{'FiniteChainTrajectory':800000,'GeneratedParitySuccess':800000},'jobs':1,'module_wall_seconds':180,'runs':[]}
+  def save(): (out/'RESULT.json').write_text(json.dumps(result,indent=2)+'\n')
+  def run(label,source,expected=0,runenv=env,obj=None,cfile=None,source_root=None):
+   cmd=[str(lean),'-j1','--root='+str(source_root if source_root is not None else source.parent)]

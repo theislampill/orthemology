@@ -1,0 +1,56 @@
+{
+  "schema": "typed-context-final-disposition-v1",
+  "status": "COMPLETED_AND_INDEPENDENTLY_ACCEPTED",
+  "scope": "New parallel finite typed-telescope nucleus with arbitrary PER domains, typed proof-irrelevant Id, Pi/Sigma, finite All leaves, universal heterogeneous fundamental theorem, literal typed substitution, exact intrinsic/contextual-J representation, and restricted explicit old-rule-tree embedding",
+  "completed_utc": "2026-10-03T19:39:23.078628+00:00",
+  "checked_scope": {
+    "path": "CHECKED_SCOPE.md",
+    "sha256": "a8dac2778a7e2bcc4014868679c2c6bba79807fba6d5c4f302b1cae495772f26",
+    "bytes": 7415
+  },
+  "independent_review": {
+    "path": "review/REVIEW.md",
+    "sha256": "6e1832ad33853ba245c46ef65e7eb560bfb79f76ea5c566b5488a1b223a856c5",
+    "bytes": 10498
+  },
+  "independent_verification": {
+    "path": "review/VERIFICATION.json",
+    "sha256": "e9a883c382814585fe1c47188e5df7e63e321e04d5f7490e0d9908ddfc488720",
+    "bytes": 5476
+  },
+  "independent_source_identities": {
+    "path": "review/SOURCE_IDENTITIES.json",
+    "sha256": "729e8924409dde299ebb0a9a57e4d59ca3ba8162ae71e877fbaf108023883490",
+    "bytes": 24163
+  },
+  "frozen_candidate": {
+    "path": "CANDIDATE_v1.json",
+    "sha256": "672ec897bd0b3bfa833782a7c10b298ff71f7449fb9a3d9cd1d56d8c7f0662e3",
+    "bytes": 1117
+  },
+  "implementation_verification": {
+    "path": "VERIFICATION_v1.json",
+    "sha256": "d375cf1b1e0e3a220a6fd10dfd214fab6afb35e595fd131ccf4fe7c9459268ab",
+    "bytes": 9668
+  },
+  "controls": {
+    "path": "CONTROL_MATRIX.json",
+    "sha256": "2c7ccf46db424d26d86e7122945a8eb133a630204526258a6e91a9c5fae4f960",
+    "bytes": 3280
+  },
+  "source_modules": 47,
+  "new_source_modules": 17,
+  "declarations_read_back_and_independently_axiom_audited": 300,
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "qualification": "Independent automated source/kernel qualification, not human-specialist or empirical scientific validation",
+  "scope_clarification": "Legacy support is over the retained Type-valued typing-rule tree, type/motive polynomials, and displayed PolyConv endpoints. No erased Prop-proof provenance recovery or internal conversion-proof witness census is claimed.",
+  "no_full_dependent_All": true,
+  "no_full_U11_closure": true,
+  "no_canonical_adoption_or_mutation": true,
+  "no_publication_or_external_contact": true,
+  "no_untrusted_install_or_limits_override": true
+}

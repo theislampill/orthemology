@@ -1,0 +1,6 @@
+import SignedService
+open OrthemicCertificate.Signed
+#check negativeCheck_iff_not_semantic
+#check negativeCheck_excludes_policy
+#check solve_correct
+#check solve_valid_outcome

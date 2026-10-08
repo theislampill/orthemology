@@ -1,0 +1,47 @@
+{
+  "status": "PASS_INDEPENDENT_A1_REVIEW",
+  "finished_utc": "2026-10-03T05:14:05.433396+00:00",
+  "scope": "Exact unchanged Certificate classification for sparse fixture; independent acceptance evidence only, not tranche closure or next-milestone authority.",
+  "source_manifest_sha256": "923206fcb0d870806b6e77ca259f99e0604876ac872d97c0bf70c100fb460bd3",
+  "approved_specification_sha256": "3428f6604404c038e911af7889e4e682b3e27b29a9591d95864226041faa4e35",
+  "author_receipt_sha256": "c7808337da1bcc4ad94c00d90bdcbe39cfb6c13ba384561904f518c119cd8653",
+  "independent_core_receipt_sha256": "fbfb9d52950093c7b3bd239cca1296aea6adbb826c65801f67d7290294e84a17",
+  "independent_a1_receipt_sha256": "5aa4f8a9a960a9f3d253d98d3fb0cdbe6622ea3667f6fe532e76468b44890739",
+  "core_object_census_receipt_sha256": "c36749153c21bcbec90f7c49ea6cd251065cd9c17c3fe7acdb6d012f6fa5d513",
+  "reviewer_control_receipt": "evidence/control-attempts/20261003T051128224219Z-ReviewerRawContract/RESULT.json",
+  "reviewer_control_receipt_sha256": "95bd6fcb7ccc41876d4cf396630a252c974a643f1d8410f6cba7c125d45d4d8b",
+  "finite_control_receipt_sha256": "6a522ef759af7ed5496490e1cf9eddaf97a4c5282ca5eb17839345dad3a74c7a",
+  "fresh_core_modules": 167,
+  "required_literal_modules": 2,
+  "a1_definitions": 7,
+  "a1_theorems": 42,
+  "a1_all_declaration_axiom_checks": 49,
+  "reviewer_theorems": 15,
+  "reviewer_all_theorem_axiom_checks": 15,
+  "official_dependency_cache_trusted": true,
+  "author_custom_objects_reused": false,
+  "unexpected_custom_objects": false,
+  "custom_object_symlinks": false,
+  "mathematical_gaps": [],
+  "nonblocking_replay_hardening": [
+    "Frozen A1 driver validates expected core objects but not absence of extra objects or symlinks. This independent invocation explicitly verifies exact fresh output census and no symlinks. Future arbitrary supplied output reuse needs the same external check or a separately reviewed guard revision."
+  ],
+  "claims_excluded": [
+    "Chosen/evaluated retained orientation",
+    "Closed executable kernel-to-certified-data extraction",
+    "All-history/frame/law transport",
+    "Arbitrary raw-Nat component extensionality",
+    "Equal encoded bytes or resource costs",
+    "Universal Python-to-Lean implementation refinement"
+  ],
+  "historical_probes_retried": false,
+  "new_resource_inconclusive_runs": false,
+  "reviewer_development_failures": [
+    {
+      "receipt": "evidence/control-attempts/20261003T051100732728Z-ReviewerRawContract/RESULT.json",
+      "cause": "Two Function.Injective references needed explicit eta-expansion to supply their implicit arguments in Iff.intro.",
+      "disposition": "Preserved rejected attempt; fixed only reviewer auxiliary proof terms; unchanged theorem statements and unchanged A1 source."
+    }
+  ],
+  "author_development_failures_binding": "evidence/author-development-failures/BINDING.json"
+}
