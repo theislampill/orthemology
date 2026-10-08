@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-07",
+  "reader": "lead reader",
+  "scope": "Bounded second reading, not whole-volume rereading",
+  "ranges": [
+    {
+      "source": "electronic body volume 2",
+      "source_sha256": "e164225c49e37a4e94dc54ca9f56a59fd96581802b8a5beb7b27c81c7d4b8856",
+      "first_local_line": 100,
+      "last_local_line": 110,
+      "range_sha256": "7033a49f529608433eb109ca9e4707b2199c67e466f3ce12d2f43c0b0550bc59"
+    },
+    {
+      "source": "electronic body volume 2",
+      "source_sha256": "e164225c49e37a4e94dc54ca9f56a59fd96581802b8a5beb7b27c81c7d4b8856",
+      "first_local_line": 111,
+      "last_local_line": 120,
+      "range_sha256": "0208a8a0ade8b6fccfdc867c0d9355d1604f7268c556865b60345447bbe50b9c"
+    },
+    {
+      "source": "electronic body volume 3",
+      "source_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "first_local_line": 236,
+      "last_local_line": 245,
+      "range_sha256": "d5c520575ae2ca9c0ee07d5e954bc639b4e210b1dd0f269e12006c758de24b65"
+    },
+    {
+      "source": "electronic body volume 3",
+      "source_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "first_local_line": 246,
+      "last_local_line": 255,
+      "range_sha256": "127f87cd5aa7aece1687f668fa8ed9527e4e1de4d550e388cd5f880f694cedeb"
+    },
+    {
+      "source": "electronic body volume 3",
+      "source_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "first_local_line": 256,
+      "last_local_line": 265,
+      "range_sha256": "a761aea2f46392ef2650a4a6300679772fb7e8be2585d2447b62c80ebbd59925"
+    },
+    {
+      "source": "electronic body volume 3",
+      "source_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "first_local_line": 266,
+      "last_local_line": 276,
+      "range_sha256": "75ae6aea39c137a0ce5b3d46d0c334cdff3322b12624720ab7ad49406ee1f237"
+    }
+  ]
+}

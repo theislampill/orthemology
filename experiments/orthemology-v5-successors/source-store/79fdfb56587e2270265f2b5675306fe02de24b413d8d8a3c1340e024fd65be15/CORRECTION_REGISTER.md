@@ -1,0 +1,115 @@
+# Complete correction catalogue and electronic-locus register
+
+All 39 substantial and 55 lesser numbered entries were visually read, then their exact catalogue transcription independently checked. All 94 are contextually mapped to the received electronic body. This index is a navigation aid; the JSON retains separate catalogue, body and electronic records, including their disagreements. No full printed-edition or manuscript collation is implied.
+
+- S01: catalogue PDF 41, printed 34; cited new-body page 78. Electronic SF-S001-L0056. Assessment: old-type duplicated/misplaced al-Urmawi phrase. Range 1.
+- S02: catalogue PDF 41, printed 34; cited new-body page not supplied. Electronic SF-S001-L0056. Assessment: old: retains the disputed extra stretch. Range 1.
+- S03: catalogue PDF 41, printed 34; cited new-body page 102. Electronic SF-S001-L0097. Assessment: old-type lacuna/corruption; exact old print not independently available. Range 1.
+- S04: catalogue PDF 41, printed 34; cited new-body page 105. Electronic SF-S001-L0101. Assessment: old-type duration reading. Range 1.
+- S05: catalogue PDF 41, printed 34; cited new-body page 106. Electronic SF-S001-L0102. Assessment: old at both listed sub-loci. Range 1.
+- S06: catalogue PDF 41, printed 34; cited new-body page 122. Electronic SF-S001-L0133. Assessment: old: omits the positive-perfection clause. Range 1.
+- S07: catalogue PDF 42, printed 35; cited new-body page 169. Electronic SF-S001-L0263. Assessment: old. Range 2.
+- S08: catalogue PDF 42, printed 35; cited new-body page 174. Electronic SF-S001-L0270. Assessment: old. Range 2.
+- S09: catalogue PDF 42, printed 35; cited new-body page 197. Electronic SF-S001-L0320. Assessment: old. Range 2.
+- S10: catalogue PDF 42, printed 35; cited new-body page 215. Electronic SF-S001-L0381. Assessment: old. Range 2.
+- S11: catalogue PDF 42, printed 35; cited new-body page 290. Electronic SF-S002-L0193. Assessment: old. Range 3.
+- S12: catalogue PDF 42, printed 35; cited new-body page 297. Electronic SF-S002-L0220. Assessment: old. Range 3.
+- S13: catalogue PDF 42, printed 35; cited new-body page 298. Electronic SF-S002-L0222. Assessment: old. Range 3.
+- S14: catalogue PDF 42, printed 35; cited new-body page 302. Electronic SF-S002-L0234. Assessment: old. Range 3.
+- S15: catalogue PDF 42, printed 35; cited new-body page 302. Electronic SF-S002-L0236. Assessment: old_after_whitespace_join. Range 3.
+- S16: catalogue PDF 42, printed 35; cited new-body page 402. Electronic SF-S003-L0012. Assessment: old. Range 4.
+- S17: catalogue PDF 43, printed 36; cited new-body page 410. Electronic SF-S003-L0063. Assessment: old. Range 4.
+- S18: catalogue PDF 43, printed 36; cited new-body page 469. Electronic SF-S003-L0344. Assessment: old. Range 4.
+- S19: catalogue PDF 43, printed 36; cited new-body page 469. Electronic SF-S003-L0346. Assessment: old. Range 4.
+- S20: catalogue PDF 43, printed 36; cited new-body page 473. Electronic SF-S003-L0359. Assessment: old. Range 4.
+- S21: catalogue PDF 43, printed 36; cited new-body page 477. Electronic SF-S003-L0380. Assessment: old. Range 5.
+- S22: catalogue PDF 43, printed 36; cited new-body page 480. Electronic SF-S003-L0392. Assessment: old. Range 5.
+- S23: catalogue PDF 43, printed 36; cited new-body page 484. Electronic SF-S003-L0405. Assessment: neither. Range 5.
+- S24: catalogue PDF 43, printed 36; cited new-body page 485. Electronic SF-S003-L0412. Assessment: old. Range 5.
+- S25: catalogue PDF 43, printed 36; cited new-body page 488. Electronic SF-S003-L0424. Assessment: old. Range 5.
+- S26: catalogue PDF 43, printed 36; cited new-body page 489. Electronic SF-S003-L0430. Assessment: old. Range 5.
+- S27: catalogue PDF 43, printed 36; cited new-body page 492. Electronic SF-S003-L0439. Assessment: old. Range 5.
+- S28: catalogue PDF 43, printed 36; cited new-body page 492. Electronic SF-S003-L0439. Assessment: old. Range 5.
+- S29: catalogue PDF 43, printed 36; cited new-body page 493. Electronic SF-S003-L0442. Assessment: old. Range 5.
+- S30: catalogue PDF 43, printed 36; cited new-body page 504. Electronic SF-S003-L0480. Assessment: old. Range 5.
+- S31: catalogue PDF 43, printed 36; cited new-body page 531. Electronic SF-S003-L0584. Assessment: old. Range 5.
+- S32: catalogue PDF 43, printed 36; cited new-body page 531. Electronic SF-S003-L0586. Assessment: old. Range 5.
+- S33: catalogue PDF 43, printed 36; cited new-body page 533. Electronic SF-S003-L0592. Assessment: old. Range 5.
+- S34: catalogue PDF 43, printed 36; cited new-body page 533. Electronic SF-S003-L0592. Assessment: old. Range 5.
+- S35: catalogue PDF 43, printed 36; cited new-body page 539. Electronic SF-S003-L0633. Assessment: old. Range 5.
+- S36: catalogue PDF 43, printed 36; cited new-body page 544. Electronic SF-S003-L0649. Assessment: old. Range 5.
+- S37: catalogue PDF 44, printed 37; cited new-body page 552. Electronic SF-S003-L0691. Assessment: old. Range 5.
+- S38: catalogue PDF 44, printed 37; cited new-body page 562. Electronic SF-S003-L0734. Assessment: neither. Range 5.
+- S39: catalogue PDF 44, printed 37; cited new-body page 567. Electronic SF-S004-L0008. Assessment: new. Range 5.
+- L01: catalogue PDF 44, printed 37; cited new-body page 49. Electronic SF-S001-L0005. Assessment: old at this second list. Range 1.
+- L02: catalogue PDF 44, printed 37; cited new-body page 62. Electronic SF-S001-L0024. Assessment: old: omits المتسلسلة. Range 1.
+- L03: catalogue PDF 44, printed 37; cited new-body page 73. Electronic SF-S001-L0049. Assessment: old: omits الذي سماه. Range 1.
+- L04: catalogue PDF 44, printed 37; cited new-body page 107. Electronic SF-S001-L0105. Assessment: old: includes بسيط. Range 1.
+- L05: catalogue PDF 44, printed 37; cited new-body page 108. Electronic SF-S001-L0105. Assessment: old main-print reading AND editorially preferred self-correction. Range 1.
+- L06: catalogue PDF 44, printed 37; cited new-body page 115. Electronic SF-S001-L0120. Assessment: old: المعلومات rather than المعلولات. Range 1.
+- L07: catalogue PDF 44, printed 37; cited new-body page 130. Electronic SF-S001-L0154. Assessment: old: singular in the second occurrence. Range 1.
+- L08: catalogue PDF 44, printed 37; cited new-body page 131. Electronic SF-S001-L0154. Assessment: old: يتشابهان. Range 1.
+- L09: catalogue PDF 44, printed 37; cited new-body page 163. Electronic SF-S001-L0252. Assessment: old. Range 2.
+- L10: catalogue PDF 45, printed 38; cited new-body page 168. Electronic SF-S001-L0263. Assessment: old. Range 2.
+- L11: catalogue PDF 45, printed 38; cited new-body page 188. Electronic SF-S001-L0306. Assessment: old. Range 2.
+- L12: catalogue PDF 45, printed 38; cited new-body page 203. Electronic SF-S001-L0334. Assessment: old. Range 2.
+- L13: catalogue PDF 45, printed 38; cited new-body page 294. Electronic SF-S002-L0209. Assessment: old_and_new_editor_suggested_correction. Range 3.
+- L14: catalogue PDF 45, printed 38; cited new-body page 185. Electronic SF-S001-L0300. Assessment: old. Range 2.
+- L15: catalogue PDF 45, printed 38; cited new-body page 400. Electronic SF-S003-L0002. Assessment: old. Range 4.
+- L16: catalogue PDF 45, printed 38; cited new-body page 465. Electronic SF-S003-L0325. Assessment: old. Range 4.
+- L17: catalogue PDF 45, printed 38; cited new-body page 467. Electronic SF-S003-L0335. Assessment: old. Range 4.
+- L18: catalogue PDF 45, printed 38; cited new-body page 468. Electronic SF-S003-L0340. Assessment: old. Range 4.
+- L19: catalogue PDF 45, printed 38; cited new-body page 468. Electronic SF-S003-L0340. Assessment: old. Range 4.
+- L20: catalogue PDF 45, printed 38; cited new-body page 468. Electronic SF-S003-L0342. Assessment: old. Range 4.
+- L21: catalogue PDF 45, printed 38; cited new-body page 468. Electronic SF-S003-L0342. Assessment: old. Range 4.
+- L22: catalogue PDF 45, printed 38; cited new-body page 469. Electronic SF-S003-L0344. Assessment: old. Range 4.
+- L23: catalogue PDF 45, printed 38; cited new-body page 469. Electronic SF-S003-L0344. Assessment: old. Range 4.
+- L24: catalogue PDF 45, printed 38; cited new-body page 469. Electronic SF-S003-L0345. Assessment: old. Range 4.
+- L25: catalogue PDF 45, printed 38; cited new-body page 470. Electronic SF-S003-L0348. Assessment: old. Range 4.
+- L26: catalogue PDF 45, printed 38; cited new-body page 470. Electronic SF-S003-L0351. Assessment: neither. Range 4.
+- L27: catalogue PDF 46, printed 39; cited new-body page 474. Electronic SF-S003-L0369. Assessment: old. Range 5.
+- L28: catalogue PDF 46, printed 39; cited new-body page 483. Electronic SF-S003-L0404. Assessment: old. Range 5.
+- L29: catalogue PDF 46, printed 39; cited new-body page 493. Electronic SF-S003-L0446. Assessment: old. Range 5.
+- L30: catalogue PDF 46, printed 39; cited new-body page 495. Electronic SF-S003-L0452. Assessment: old. Range 5.
+- L31: catalogue PDF 46, printed 39; cited new-body page 498. Electronic SF-S003-L0468. Assessment: old. Range 5.
+- L32: catalogue PDF 46, printed 39; cited new-body page 502. Electronic SF-S003-L0476. Assessment: old. Range 5.
+- L33: catalogue PDF 46, printed 39; cited new-body page 504. Electronic SF-S003-L0479. Assessment: old. Range 5.
+- L34: catalogue PDF 46, printed 39; cited new-body page 504. Electronic SF-S003-L0484. Assessment: old. Range 5.
+- L35: catalogue PDF 46, printed 39; cited new-body page 508. Electronic SF-S003-L0497. Assessment: old. Range 5.
+- L36: catalogue PDF 46, printed 39; cited new-body page 512. Electronic SF-S003-L0508. Assessment: old. Range 5.
+- L37: catalogue PDF 46, printed 39; cited new-body page 512. Electronic SF-S003-L0509. Assessment: old. Range 5.
+- L38: catalogue PDF 46, printed 39; cited new-body page 518. Electronic SF-S003-L0532. Assessment: old. Range 5.
+- L39: catalogue PDF 46, printed 39; cited new-body page 518. Electronic SF-S003-L0532. Assessment: old. Range 5.
+- L40: catalogue PDF 46, printed 39; cited new-body page 518. Electronic SF-S003-L0534. Assessment: old. Range 5.
+- L41: catalogue PDF 46, printed 39; cited new-body page 520. Electronic SF-S003-L0543. Assessment: old. Range 5.
+- L42: catalogue PDF 46, printed 39; cited new-body page 525. Electronic SF-S003-L0559. Assessment: old. Range 5.
+- L43: catalogue PDF 46, printed 39; cited new-body page 530. Electronic SF-S003-L0580. Assessment: old. Range 5.
+- L44: catalogue PDF 47, printed 40; cited new-body page 537. Electronic SF-S003-L0618. Assessment: old. Range 5.
+- L45: catalogue PDF 47, printed 40; cited new-body page 539. Electronic SF-S003-L0630. Assessment: old. Range 5.
+- L46: catalogue PDF 47, printed 40; cited new-body page 540. Electronic SF-S003-L0633. Assessment: old. Range 5.
+- L47: catalogue PDF 47, printed 40; cited new-body page 540. Electronic SF-S003-L0634. Assessment: old. Range 5.
+- L48: catalogue PDF 47, printed 40; cited new-body page 542. Electronic SF-S003-L0643. Assessment: old. Range 5.
+- L49: catalogue PDF 47, printed 40; cited new-body page 543. Electronic SF-S003-L0644. Assessment: old. Range 5.
+- L50: catalogue PDF 47, printed 40; cited new-body page 543. Electronic SF-S003-L0644. Assessment: old. Range 5.
+- L51: catalogue PDF 47, printed 40; cited new-body page 543. Electronic SF-S003-L0645. Assessment: old. Range 5.
+- L52: catalogue PDF 47, printed 40; cited new-body page 546. Electronic SF-S003-L0660. Assessment: old. Range 5.
+- L53: catalogue PDF 47, printed 40; cited new-body page 573. Electronic SF-S004-L0031. Assessment: old. Range 5.
+- L54: catalogue PDF 47, printed 40; cited new-body page 574. Electronic SF-S004-L0037. Assessment: old. Range 5.
+- L55: catalogue PDF 47, printed 40; cited new-body page 576. Electronic SF-S004-L0048. Assessment: old. Range 5.
+
+## Essential qualifications
+
+- S04: catalogue يقتضي and controlled body يقضي differ; source/power reading is not a duration reading.
+- S05: enlarged catalogue and body agree on لا أن; the earlier alleged catalogue/body conflict was a provisional-transcription error. The electronic إلا أن remains different, and syntax still needs care.
+- S08: catalogue page 174, actual controlled body page 172.
+- S13: catalogue page 298, controlled body page 297.
+- S15: catalogue and body both page 302; a preliminary 303 reading was corrected.
+- S23: catalogue gives العلمي in both anchors. The body apparatus supplies العملي for the older reading. Do not infer this contrast from the catalogue alone.
+- S29: catalogue old anchor includes والمشاهد; the initial والشاهد transcription was corrected.
+- S38: catalogue new لا ينقض, catalogue old لا ينقص, but body note reports old لا ينقضي and electronic agrees with that body-reported old reading.
+- S39: catalogue alleges older omission of أهل; body note says it is absent from the manuscript and present in the older printing. Electronic contains أهل. Preserve the conflict.
+- L05: catalogue says القطعي should be deleted despite its presence in the new main text.
+- L13: new main text تبنون, but its note suggests older/electronic تثبتون is correct.
+- L28: المثبتين versus المثبتن is the catalogue reading, not the initially misread alternatives.
+- L36: new وأنها versus old وإنما.
+- Editor and manuscript assertions remain attributed; no held older scan was retried or inspected.

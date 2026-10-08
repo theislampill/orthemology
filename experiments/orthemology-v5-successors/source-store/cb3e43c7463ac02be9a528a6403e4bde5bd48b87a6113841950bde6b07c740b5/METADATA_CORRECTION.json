@@ -1,0 +1,63 @@
+{
+  "status": "METADATA_ONLY_CORRECTION",
+  "created_utc": "2026-10-07T16:24:29.242272+00:00",
+  "changes": [
+    {
+      "binding": "OTC-D7",
+      "before": [
+        195,
+        221
+      ],
+      "after": [
+        195,
+        219
+      ]
+    },
+    {
+      "binding": "OTC-D9",
+      "before": [
+        1,
+        62
+      ],
+      "after": [
+        1,
+        51
+      ]
+    }
+  ],
+  "initial_manifest_sha256": "f6774c18a7ae3a65fcb77dd9e619059bba113e68134c995b8e3f29a782d71d18",
+  "initial_definition_bindings_sha256": "8266a68ab3f691eae640d4ceee701b0e2597ff7b52b9b3c536a955d0ea36a8f0",
+  "corrected_definition_bindings_sha256": "860fedbc5552868e0d47877e6e6af7f4ccff49b4cefa4b9e5843ac11bb2332af",
+  "preserved_history": {
+    "availability": "EXCLUDED_HISTORICAL_IDENTITIES_ONLY",
+    "original_records": [
+      {
+        "filename": "MANIFEST.json",
+        "bytes": 2637,
+        "sha256": "f6774c18a7ae3a65fcb77dd9e619059bba113e68134c995b8e3f29a782d71d18",
+        "availability": "EXCLUDED_CUSTODY_IDENTITY_ONLY"
+      },
+      {
+        "filename": "DEFINITION_BINDINGS.json",
+        "bytes": 4541,
+        "sha256": "8266a68ab3f691eae640d4ceee701b0e2597ff7b52b9b3c536a955d0ea36a8f0",
+        "availability": "EXCLUDED_CUSTODY_IDENTITY_ONLY"
+      },
+      {
+        "filename": "SHA256SUMS",
+        "bytes": 1106,
+        "sha256": "888e7d12f140b93541597f14617744baf9038998f952dcd7d7ba89e444dfcee0",
+        "availability": "EXCLUDED_CUSTODY_IDENTITY_ONLY"
+      }
+    ]
+  },
+  "unchanged": [
+    "OriginationTypeControl.lean",
+    "EXECUTION_RECEIPT.json",
+    "SOURCE_BINDINGS.json",
+    "AUDIT.md"
+  ],
+  "lean_source_sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+  "proof_rerun": "NOT_RUN: metadata-only changes; preceding checked Lean result unchanged",
+  "publication_note": "The omitted historical replay.py is not a portable prerequisite. REPRODUCE.md derives from tested copied-source commands and adds separately checked public path guards."
+}

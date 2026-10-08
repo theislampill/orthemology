@@ -1,0 +1,85 @@
+import GroundedSupport
+import GroundedQuotient
+import AliasCuts
+import OccurrenceControls
+import CutControls
+import MutationControls
+
+#check T20Grounded.derivable_mono
+#print axioms T20Grounded.derivable_mono
+#check T20Grounded.derivable_rules_mono
+#print axioms T20Grounded.derivable_rules_mono
+#check T20Grounded.derivable_sound
+#print axioms T20Grounded.derivable_sound
+#check T20Grounded.exists_minimal_subset
+#print axioms T20Grounded.exists_minimal_subset
+#check T20Grounded.derivable_after_retraction_iff
+#print axioms T20Grounded.derivable_after_retraction_iff
+#check T20Grounded.survives_disjoint_support
+#print axioms T20Grounded.survives_disjoint_support
+#check T20Grounded.quotient_derivable_iff
+#print axioms T20Grounded.quotient_derivable_iff
+#check T20Grounded.image_derivation
+#print axioms T20Grounded.image_derivation
+#check T20Grounded.minimal_root_support_lifts
+#print axioms T20Grounded.minimal_root_support_lifts
+#check T20Grounded.hits_mono
+#print axioms T20Grounded.hits_mono
+#check T20Grounded.image_of_cut
+#print axioms T20Grounded.image_of_cut
+#check T20Grounded.pullback_of_cut
+#print axioms T20Grounded.pullback_of_cut
+#check T20Grounded.minimal_root_cut_lifts
+#print axioms T20Grounded.minimal_root_cut_lifts
+#check T20Grounded.minimal_root_iff_minimal_archived_image
+#print axioms T20Grounded.minimal_root_iff_minimal_archived_image
+#check T20Grounded.Controls.testimony_needs_no_second_jurisdiction
+#print axioms T20Grounded.Controls.testimony_needs_no_second_jurisdiction
+#check T20Grounded.Controls.old_duty_survives_prospective_revocation
+#print axioms T20Grounded.Controls.old_duty_survives_prospective_revocation
+#check T20Grounded.Controls.old_duty_can_remain_currently_applicable
+#print axioms T20Grounded.Controls.old_duty_can_remain_currently_applicable
+#check T20Grounded.Controls.prospective_power_is_lost
+#print axioms T20Grounded.Controls.prospective_power_is_lost
+#check T20Grounded.Controls.past_duty_does_not_supply_current_applicability
+#print axioms T20Grounded.Controls.past_duty_does_not_supply_current_applicability
+#check T20Grounded.Controls.duty_still_derives_when_current_applicability_is_absent
+#print axioms T20Grounded.Controls.duty_still_derives_when_current_applicability_is_absent
+#check T20Grounded.Controls.prospective_revocation_preserves_non_grant_roots
+#print axioms T20Grounded.Controls.prospective_revocation_preserves_non_grant_roots
+#check T20Grounded.Controls.evidence_invalidation_preserves_current_grant
+#print axioms T20Grounded.Controls.evidence_invalidation_preserves_current_grant
+#check T20Grounded.Controls.no_owned_truth_from_authorship_alone
+#print axioms T20Grounded.Controls.no_owned_truth_from_authorship_alone
+#check T20Grounded.Controls.unanchored_cycle_has_no_derivation
+#print axioms T20Grounded.Controls.unanchored_cycle_has_no_derivation
+#check T20Grounded.Controls.anchor_grounds_cycle
+#print axioms T20Grounded.Controls.anchor_grounds_cycle
+#check T20Grounded.CutControls.four_unique_cheapest_label_cut
+#print axioms T20Grounded.CutControls.four_unique_cheapest_label_cut
+#check T20Grounded.CutControls.four_unique_cheapest_root_cut
+#print axioms T20Grounded.CutControls.four_unique_cheapest_root_cut
+#check T20Grounded.CutControls.four_cheapest_label_image_cost
+#print axioms T20Grounded.CutControls.four_cheapest_label_image_cost
+#check T20Grounded.CutControls.four_actual_root_cut_cost
+#print axioms T20Grounded.CutControls.four_actual_root_cut_cost
+#check T20Grounded.CutControls.four_discarded_cut_is_inclusion_minimal
+#print axioms T20Grounded.CutControls.four_discarded_cut_is_inclusion_minimal
+#check T20Grounded.CutControls.four_discarded_cut_recovers_root_optimum
+#print axioms T20Grounded.CutControls.four_discarded_cut_recovers_root_optimum
+#check T20Grounded.CutControls.k32_unique_cheapest_label_cut
+#print axioms T20Grounded.CutControls.k32_unique_cheapest_label_cut
+#check T20Grounded.CutControls.k32_unique_cheapest_root_cut
+#print axioms T20Grounded.CutControls.k32_unique_cheapest_root_cut
+#check T20Grounded.CutControls.k32_cheapest_label_image_cost
+#print axioms T20Grounded.CutControls.k32_cheapest_label_image_cost
+#check T20Grounded.CutControls.k32_discarded_cut_is_inclusion_minimal
+#print axioms T20Grounded.CutControls.k32_discarded_cut_is_inclusion_minimal
+#check T20Grounded.CutControls.k32_discarded_cut_recovers_root_optimum
+#print axioms T20Grounded.CutControls.k32_discarded_cut_recovers_root_optimum
+#check T20Grounded.Controls.authorship_only_mutation_creates_unsupported_duty
+#print axioms T20Grounded.Controls.authorship_only_mutation_creates_unsupported_duty
+#check T20Grounded.Controls.time_erasure_mutation_creates_unsupported_action
+#print axioms T20Grounded.Controls.time_erasure_mutation_creates_unsupported_action
+#check T20Grounded.Controls.grant_erasure_mutation_creates_unsupported_prospective_power
+#print axioms T20Grounded.Controls.grant_erasure_mutation_creates_unsupported_prospective_power

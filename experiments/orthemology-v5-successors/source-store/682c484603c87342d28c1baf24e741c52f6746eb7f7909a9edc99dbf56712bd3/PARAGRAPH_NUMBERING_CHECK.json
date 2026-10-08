@@ -1,0 +1,29 @@
+[
+  {
+    "source": "T17R",
+    "docx_sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+    "body_paragraphs": 198,
+    "empty_body_paragraphs": [],
+    "first_docx_paragraph": "Orthemology Seventeenth research report",
+    "extraction_first_paragraph_line": "P00000 [Title]: Orthemology Seventeenth research report",
+    "verified_numbering": "zero-based: Pnnnnn matches body paragraph array index nnnnn"
+  },
+  {
+    "source": "T17G",
+    "docx_sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9",
+    "body_paragraphs": 179,
+    "empty_body_paragraphs": [],
+    "first_docx_paragraph": "A guide to the six foundational sources",
+    "extraction_first_paragraph_line": "P00000 [Title]: A guide to the six foundational sources",
+    "verified_numbering": "zero-based: Pnnnnn matches body paragraph array index nnnnn"
+  },
+  {
+    "source": "T19R",
+    "docx_sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+    "body_paragraphs": 191,
+    "empty_body_paragraphs": [],
+    "first_docx_paragraph": "Orthemology Nineteenth research report",
+    "extraction_first_paragraph_line": "P00000 [Title]: Orthemology Nineteenth research report",
+    "verified_numbering": "zero-based: Pnnnnn matches body paragraph array index nnnnn"
+  }
+]

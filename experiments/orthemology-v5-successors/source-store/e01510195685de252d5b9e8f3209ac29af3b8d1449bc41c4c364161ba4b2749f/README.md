@@ -1,0 +1,9 @@
+# Actual common-source assessment
+
+Publication scope note: Historical independent assessment, expressly PRE-MIFTAH/NUBUWWAT/SAFADIYYA. The dated judgement and first-person voice below are preserved; this is not a final after-all-books verdict. The partial-unblinding disclosure and all selected-reading limits remain in force.
+
+The standalone assessment positively favours one complete actual common Creator, while withholding sufficient warrant for complete single-source authorship on the inspected evidence. It separately withholds warrant for the universal complete-source-mode requirement. The actual verdict follows a fresh comparative assessment of integration, coordination and explanatory economy; it is not automatically inferred from the universal principle's failure.
+
+Read [ASSESSMENT.md](ASSESSMENT.md) for the argument; [01_PRIMARY_RECONSTRUCTION.md](01_PRIMARY_RECONSTRUCTION.md) for the primary-first reconstruction and chronology disclosure; [SOURCES_AND_LIMITS.md](SOURCES_AND_LIMITS.md) for witness identity, exact scope and textual issues. [TEXT_READ_RECEIPTS.json](TEXT_READ_RECEIPTS.json) records the source identities, hashes and coordinates of 22 selected text ranges; [IMAGE_READ_RECEIPTS.json](IMAGE_READ_RECEIPTS.json) records 21 directly read full-page images without reproducing them; [CONTEXT_READ_RECEIPTS.json](CONTEXT_READ_RECEIPTS.json) distinguishes controls and secondary appraisals. [VERIFICATION.json](VERIFICATION.json) reports successful local hash/extract consistency only.
+
+This is selected reinspection, not this reader's whole-volume traversal. Later Miftah/Nubuwwat/Safadiyya evidence is outside the assessment boundary. A 12:25 UTC notification from the lead reader of a possible Miftah paired control was received after drafting; it was not inspected or used here and is reserved for a later supplement.

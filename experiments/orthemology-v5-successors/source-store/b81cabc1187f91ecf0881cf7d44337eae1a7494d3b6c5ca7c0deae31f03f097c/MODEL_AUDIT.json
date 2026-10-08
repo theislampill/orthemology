@@ -1,0 +1,1161 @@
+{
+  "schema": "strong-cooperation-model-audit-v1-reconciled",
+  "generated_utc": "2026-10-07T17:54:59.704546+00:00",
+  "verdict": "FULL_COUNTERMODEL_NOT_PRODUCED",
+  "scope": "Current known formal controls versus strong actual cooperation/coalescence argument; exact bridge audit, not comprehensive metaphysical formalisation.",
+  "actual_common_creator": "This audit supplies no full-premise countermodel against the provisional philosophical actual-field assent.",
+  "universal_source_mode": "Not established merely by absence of a countermodel; remains a distinct stronger appraisal.",
+  "source_premise_identifiers": [
+    {
+      "id": "P1",
+      "claim": "Every actual agent needs power to act.",
+      "locators": "Oneness17,34; Asbahani135,147–148"
+    },
+    {
+      "id": "P2",
+      "claim": "An original lord has intrinsic, necessary power and will; neither is conferred, completed, restricted or removed by an external efficient source. Scope of completion is substantive.",
+      "locators": "Oneness18–22,29,31; Asbahani135–139,143,145–146"
+    },
+    {
+      "id": "P3",
+      "claim": "No priority-efficient circular derivation, including a part or condition of a productive cause; no regress of original efficient sources. Concomitance is separately allowed.",
+      "locators": "Oneness18–21; MinhajV03L0259–0263,0273"
+    },
+    {
+      "id": "P4",
+      "claim": "No two distinct agents each actually produce the same numerical effect wholly alone; sole entire production excludes any actual coproductor.",
+      "locators": "Oneness17,23–24,36; Asbahani134,140–141,149; MinhajV03L0264–0265"
+    },
+    {
+      "id": "P5",
+      "claim": "For equal lords, each can produce the same target effects as the other, and the requisite original power must persist in mutual presence.",
+      "locators": "Oneness23–25; Asbahani139–143"
+    },
+    {
+      "id": "P6",
+      "claim": "Complete power together with complete determining will entails the exactly specified effect; unwilled intrinsic possibilities remain within power.",
+      "locators": "Oneness31,34; Asbahani145,147–148; MinhajV03L0238–0242"
+    },
+    {
+      "id": "P7",
+      "claim": "A possible, nonnecessary coalescence needs an efficient producer; in the proposed ultimate pair there is no independent third producer.",
+      "locators": "Oneness30; Asbahani145"
+    },
+    {
+      "id": "B1",
+      "claim": "Any cross-domain coalescence by one lord changes what the other determines and thereby influences the latter’s determining power/will; with consent it is assistance, without consent restriction.",
+      "locators": "Oneness30–32; Asbahani144–146"
+    },
+    {
+      "id": "B2",
+      "claim": "Necessary concord of two original wills/actions makes each a partial productive condition of the other, unless a third produces their concurrence; either defeats original independence.",
+      "locators": "MinhajV03L0269–0273; Oneness40 note32"
+    },
+    {
+      "id": "B3",
+      "claim": "From inability of two whole-alone actual productions, concurrent unrestricted equally-targeted original powers are excluded.",
+      "locators": "Oneness23–25; Asbahani140–141; MinhajV03L0264,0269–0273"
+    },
+    {
+      "id": "O1",
+      "claim": "Actual creation is causally/materially interconnected, including generation, air/water/soil, solar and terrestrial interactions.",
+      "locators": "Oneness32–33; Asbahani146–147; MinhajV03L0267–0268,0276"
+    },
+    {
+      "id": "C1",
+      "claim": "Plural original makers would have separate noninteracting creative domains; O1 excludes that partition of the actual world.",
+      "locators": "Oneness30–36; Asbahani144–149"
+    },
+    {
+      "id": "C2",
+      "claim": "Unequal alleged lords imply superior over inferior; the inferior requires aid or noninterference and is not an original lord.",
+      "locators": "Oneness37–40; Asbahani150–152; MinhajV03L0273–0276"
+    }
+  ],
+  "supplemental_B4": {
+    "claim": "Extension from pair/third efficient provider to arbitrary plurality needs its exhaustion and induction conditions.",
+    "not_same_as": "abstract common law, logical truth, or noncausal reason"
+  },
+  "supplemental_bridges": [
+    {
+      "id": "B5_TRANSFER",
+      "claim": "Possible concentration of two powers in one bearer; applicability to each existing partner and self-sufficiency consequence remain explicit steps.",
+      "evidence_id": "majmu20",
+      "locator": "printed178–181; web L916–921",
+      "all_current_models": "NOT_REPRESENTED"
+    },
+    {
+      "id": "B6_EXCLUSIVE_COMPLETION",
+      "claim": "Complete power plus complete will entails exclusive actual production, not only outcome truth.",
+      "evidence_id": "majmu20",
+      "locator": "printed176–177; web L912–913",
+      "all_current_models": "NOT_REPRESENTED"
+    }
+  ],
+  "exact_test_frontiers": [
+    {
+      "id": "B1",
+      "frontier": "Does every consensual cross-product coalescence negate a fully specified effect determined by unchanged complete will/power, or otherwise necessarily complete the independent original role externally?",
+      "status": "SUBSTANTIVE_SOURCE_ARGUMENT_NOT_REFUTED_BY_CURRENT_MODELS"
+    },
+    {
+      "id": "B2",
+      "frontier": "Does the specified necessary concord of intrinsic powers/wills entail partial efficient production, rather than mere co-occurrence or outcome conditionality, at the full original-lord profile?",
+      "status": "SUBSTANTIVE_SOURCE_ARGUMENT_NOT_REFUTED_BY_CURRENT_MODELS"
+    },
+    {
+      "id": "B3",
+      "frontier": "Does same-token actual sole-producer exclusion establish loss of concurrent unrestricted target power without shifting to the intrinsically contradictory source-indexed target?",
+      "status": "SUBSTANTIVE_SOURCE_ARGUMENT_NOT_REFUTED_BY_CURRENT_MODELS"
+    }
+  ],
+  "conditional_derivation": [
+    "P4 excludes two actual whole-alone productions of one numerical effect.",
+    "P2/P3 exclude receipt or mutual efficient generation of constitutive agency.",
+    "B2 plus P3 excludes efficiently interconditional necessary concord absent a higher efficient source.",
+    "P7 plus prior exclusive/assisting split and B1 excludes optional coalescence as assistance/restriction.",
+    "B3 addresses concurrent complete equal-target power rather than merely actual duplication.",
+    "The resulting no-cross-domain conclusion plus faithfully interpreted O1 excludes divided original authorship of this actual field.",
+    "General source coverage/uniqueness requires original-provider representation, faithful local exclusions, nonempty anchor, connectedness and visibility; no graph alone supplies those."
+  ],
+  "models": [
+    {
+      "id": "M1_ANCHORED_SPLIT",
+      "evidence_ids": [
+        "controls",
+        "anchored"
+      ],
+      "premise_matrix": {
+        "P1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P4": "FINITE_SIGNATURE_ONLY",
+        "P5": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "FINITE_SIGNATURE_ONLY",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "FINITE_SIGNATURE_ONLY",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [
+        "P4",
+        "O1",
+        "ACTUAL_TWO_IN_FIELD"
+      ],
+      "violated_or_absent_as_claim": [],
+      "missing_full_premises": [
+        "P1",
+        "P2",
+        "P3",
+        "P5",
+        "P6",
+        "P7",
+        "PERFECTION"
+      ],
+      "actual_separation": "No GlobalCoverage / SourceMode despite finite faithful requisite tables, CND and anchor.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "StandingCan is True; no will or complete unrestricted control. Failure of B1/SourceMode is the intended target, not itself a disqualification.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    },
+    {
+      "id": "M2_ANCHORED_MIXED_ADVERSE",
+      "evidence_ids": [
+        "controls"
+      ],
+      "premise_matrix": {
+        "P1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P4": "FINITE_SIGNATURE_ONLY",
+        "P5": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "FINITE_SIGNATURE_ONLY",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "FINITE_SIGNATURE_ONLY",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [
+        "P4",
+        "O1",
+        "ACTUAL_TWO_IN_FIELD"
+      ],
+      "violated_or_absent_as_claim": [],
+      "missing_full_premises": [
+        "P1",
+        "P2",
+        "P3",
+        "P5",
+        "P6",
+        "P7",
+        "PERFECTION"
+      ],
+      "actual_separation": "A declared actual mixed occurrence joins two original branches without qualified-source mode satisfaction.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "Finite occurrence/contribution truth tables do not interpret efficient coalescence, intrinsic powers or original lordship.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    },
+    {
+      "id": "M3_FINITE_MODAL_ABILITY",
+      "evidence_ids": [
+        "ability",
+        "controls"
+      ],
+      "premise_matrix": {
+        "P1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P4": "FINITE_SIGNATURE_ONLY",
+        "P5": "FINITE_ALTERNATIVE_TARGET_FRAGMENT_ONLY",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "FINITE_SIGNATURE_ONLY",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "FINITE_SIGNATURE_ONLY",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [
+        "P4",
+        "P5",
+        "O1",
+        "ACTUAL_TWO_IN_FIELD"
+      ],
+      "violated_or_absent_as_claim": [],
+      "missing_full_premises": [
+        "P1",
+        "P2",
+        "P3",
+        "P5_UNRESTRICTED",
+        "P6",
+        "P7",
+        "PERFECTION"
+      ],
+      "actual_separation": "Alternative histories witness solo red/blue outcomes for g and h while actual production is split under WorldCND.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "Only finite P5-like target fragment. Complete will, joint admissibility, perfect concord and full sovereignty absent.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    },
+    {
+      "id": "M4_CND_MODAL_SWITCH",
+      "evidence_ids": [
+        "cnd"
+      ],
+      "premise_matrix": {
+        "P1": "LIVE_DERIVED_EXERCISE_PLUS_UNINTERPRETED_POWER_LABEL_ONLY",
+        "P2": "FALSE_IN_CANDIDATE",
+        "P3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P4": "FINITE_SIGNATURE_ONLY",
+        "P5": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "FINITE_SIGNATURE_ONLY",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [
+        "P1",
+        "P4",
+        "ACTUAL_TWO_IN_FIELD"
+      ],
+      "violated_or_absent_as_claim": [
+        "P2"
+      ],
+      "missing_full_premises": [
+        "P3",
+        "P5",
+        "P6",
+        "P7",
+        "O1",
+        "PERFECTION"
+      ],
+      "actual_separation": "Worldwise CND plus actual originality and necessary existence do not imply essential nonreceipt without role/constitution retention.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "Alternative g wholeReceived is explicit. This deliberately violates the stronger inherited constitutive original-independence package. P1 here is only live exercise with standingPower label, not its full metaphysical semantics.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    },
+    {
+      "id": "M5_CND_TOKEN_RECEIPT",
+      "evidence_ids": [
+        "cnd"
+      ],
+      "premise_matrix": {
+        "P1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P4": "FINITE_SIGNATURE_ONLY",
+        "P5": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "FALSE_IN_CANDIDATE",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [
+        "P4"
+      ],
+      "violated_or_absent_as_claim": [
+        "ACTUAL_TWO_IN_FIELD"
+      ],
+      "missing_full_premises": [
+        "P1",
+        "P2",
+        "P3",
+        "P5",
+        "P6",
+        "P7",
+        "O1",
+        "PERFECTION"
+      ],
+      "actual_separation": "Received token-state and whole-existence receipt are distinct predicates.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "No two original cooperative peers; wrong target for B1/B2/B3 countermodel.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    },
+    {
+      "id": "M6_NONCAUSAL_GROUND_CAPACITY",
+      "evidence_ids": [
+        "ground_capacity",
+        "ground_appraisal",
+        "ground_review"
+      ],
+      "premise_matrix": {
+        "P1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P3": "FINITE_ACYCLICITY_ONLY_NOT_FULL_ANTIREGRESS_WARRANT",
+        "P4": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P5": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "FALSE_IN_CANDIDATE",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [
+        "P3"
+      ],
+      "violated_or_absent_as_claim": [
+        "ACTUAL_TWO_IN_FIELD"
+      ],
+      "missing_full_premises": [
+        "P1",
+        "P2",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "O1",
+        "PERFECTION"
+      ],
+      "actual_separation": "Actual noncausal support plus real nonactual productive capacity does not imply actual productive ancestry.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "Ground does not produce target field actually; old bearer receives broad support from added ground. Old-profile preservation does not preserve the full expanded-domain source theory.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    },
+    {
+      "id": "M7_ORIGINAL_BEARER_REMOVALS",
+      "evidence_ids": [
+        "original_bearer",
+        "original_controls"
+      ],
+      "premise_matrix": {
+        "P1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P4": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P5": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [],
+      "violated_or_absent_as_claim": [],
+      "missing_full_premises": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "O1",
+        "PERFECTION"
+      ],
+      "actual_separation": "Deliberately deletes completion, realisation, support transport, contingency need or constitution in separate controls.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "Only the exact matrix of A/B/C premise removals is certified. No strong cooperation signature; retaining a removed premise would defeat the relevant control.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    },
+    {
+      "id": "M8_JOINT_FINITE_POSITIVE",
+      "evidence_ids": [
+        "joint",
+        "joint_review"
+      ],
+      "premise_matrix": {
+        "P1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2": "SELECTED_ORIGINAL_BEARER_SIGNATURE_ONLY",
+        "P3": "FINITE_ACYCLICITY_ONLY_NOT_FULL_ANTIREGRESS_WARRANT",
+        "P4": "FINITE_SIGNATURE_ONLY",
+        "P5": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "FINITE_SIGNATURE_ONLY",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "FALSE_IN_CANDIDATE",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [
+        "P2",
+        "P3",
+        "P4",
+        "O1"
+      ],
+      "violated_or_absent_as_claim": [
+        "ACTUAL_TWO_IN_FIELD"
+      ],
+      "missing_full_premises": [
+        "P1",
+        "P5",
+        "P6",
+        "P7",
+        "PERFECTION"
+      ],
+      "actual_separation": "One literal g supplies all original contributions in the actual connected field; necessary original h acts outside.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "Satisfies field-common-source C rather than falsifying it. Enlarging to h removes connectedness. Full source philosophical profile remains unrepresented.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    },
+    {
+      "id": "M9_PROSE_NECESSARY_HARMONY",
+      "evidence_ids": [
+        "actual_assessment",
+        "threshold_audit",
+        "threshold_response"
+      ],
+      "premise_matrix": {
+        "P1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P4": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P5": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P6": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P7": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "O1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "PERFECTION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "ACTUAL_TWO_IN_FIELD": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B1": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B2": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B3": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B5_TRANSFER": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "B6_EXCLUSIVE_COMPLETION": "NOT_REPRESENTED_OR_NOT_VERIFIED",
+        "P2a": "SEE_ORIGINAL_POWER_AND_BEARER_INTERPRETATION_LIMITS_IN_ROW",
+        "P2b": "DOWNSTREAM_WHEN_ITS_DERIVATION_IS_TESTED_NOT_AN_AUTOMATIC_FAILURE",
+        "M1_EFFICACY_PERFECTION": "EXCELLENCE_AND_TRANSFER_CLAUSES_MUST_BE_SEPARATED_BY_EXACT_TEST"
+      },
+      "retained_in_selected_signature": [],
+      "violated_or_absent_as_claim": [],
+      "missing_full_premises": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "O1",
+        "PERFECTION"
+      ],
+      "actual_separation": "Proposed intrinsic wise powers and complementary concord.",
+      "full_countermodel": "NOT_PRODUCED",
+      "reason": "No supplied model with faithful full premise interpretation or independent allocation rationale. A conceptual challenge, not certified metaphysical possibility or equal actual explanatory warrant.",
+      "countermodel_rejection_policy": "Denying P2b or another challenged conclusion is not itself disqualifying. The row reports remaining independently upstream interpretation gaps, a deliberately violated retained premise, or failure to falsify the target."
+    }
+  ],
+  "evidence_bindings": [
+    {
+      "id": "majmu20",
+      "path_input_name": "mf_extended.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "29e24a56c0b9e16822dd26fe1975767d81563325be48a256a1b5bae9a00a535b",
+      "bytes": 32433,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "oneness",
+      "path_input_name": "Ibn Taymiyyah on the Oneness of Allah.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "665dd820963249cb88c7d4509567c53e7fad73f6f9e7415cf83312542cc36e6b",
+      "bytes": 107978,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "minhaj3",
+      "path_input_name": "body.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8",
+      "bytes": 647568,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "dar9",
+      "path_input_name": "dar-islamicbook-016.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "04cc1092235e0d92312ed5146f1f89c1bea866546a6c567318a77be9cf1b0963",
+      "bytes": 369110,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "anchored",
+      "path_input_name": "AnchoredSourceBridge.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/joint-foundational-model/components/AnchoredSourceBridge.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "bytes": 10743,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "controls",
+      "path_input_name": "Controls.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/anchored-source-bridge/src/Controls.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+      "bytes": 22563,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "ability",
+      "path_input_name": "ModalAbilityControl.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/anchored-source-bridge/src/ModalAbilityControl.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64",
+      "bytes": 4387,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "cnd",
+      "path_input_name": "CNDModalScope.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/CND-essential-independence-scope/CNDModalScope.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+      "bytes": 5862,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "ground_capacity",
+      "path_input_name": "ModalCapacityControl.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/existential-ground/lean/ModalCapacityControl.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e",
+      "bytes": 4607,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "original_bearer",
+      "path_input_name": "OriginalBearerBridge.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "original_controls",
+      "path_input_name": "COUNTERMODEL_MATRIX.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/original-bearer-bridge/COUNTERMODEL_MATRIX.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e",
+      "bytes": 6059,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "joint",
+      "path_input_name": "JointFiniteInterpretation.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/joint-foundational-model/src/JointFiniteInterpretation.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "bytes": 24102,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "anchored_review",
+      "path_input_name": "FINAL_VALIDATION.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/anchored-source-bridge/review/FINAL_VALIDATION.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "3d94310b95c7c4fe4a3a748a737fd8c0aa0476d9fc0e66b7af8dbcf06f352ed0",
+      "bytes": 910,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "joint_review",
+      "path_input_name": "REVIEW.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/joint-foundational-model/review/REVIEW.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a",
+      "bytes": 14577,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "cnd_review",
+      "path_input_name": "REVIEW_RECEIPT.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/CND-essential-independence-scope/review/REVIEW_RECEIPT.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "470d9dbb5f9eecb2bf72aa15e2e1c0df6ec572befab8590c03d0b7cbd8d8d601",
+      "bytes": 822,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "ground_review",
+      "path_input_name": "INDEPENDENT_REVIEW_v1.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/existential-ground/review/INDEPENDENT_REVIEW_PUBLIC.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "4682ac642288b8b58d025c5b7d68063f0db452445e4b750b6aeb9a2840f0215d",
+      "bytes": 14761,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "ground_appraisal",
+      "path_input_name": "PHILOSOPHICAL_APPRAISAL_v2.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "f56432bc48e2b5aa8394754d521e60f1bf266e17c7fa710ff3367196075e6a47",
+      "bytes": 9222,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "actual_assessment",
+      "path_input_name": "ASSESSMENT.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/reading/actual-common-source-assessment/ASSESSMENT.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "6f2f4c0dfadaf2d46acf9ab7f82a94d2d1df48f3430e0df7fa808517272b81da",
+      "bytes": 23963,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "threshold_audit",
+      "path_input_name": "AUDIT.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/reading/warrant-threshold-audit/AUDIT.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+      "bytes": 19830,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "threshold_response",
+      "path_input_name": "RESPONSE.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/reading/warrant-threshold-audit/comparative-response/RESPONSE.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "59fca7e0f250c5a22adca452eba5a9001fc4148720aedb2db4871bb711dc3a76",
+      "bytes": 9552,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "root_appraisal",
+      "path_input_name": "ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "65303af758c4eead3aaa7bf01ce90e2700d3f0bbe80e4590e1131953429f72cf",
+      "bytes": 9350,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "source_reconstruction",
+      "path_input_name": "SOURCE_ARGUMENT.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "5a9979266c2ed860ac6e5a933228798fee34ef149d603177311bd2940af833fa",
+      "bytes": 3664,
+      "status": "INSPECTED_WORKING_SNAPSHOT"
+    },
+    {
+      "id": "source_premise_map",
+      "path_input_name": "PREMISE_MAP.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/PREMISE_MAP.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "791c015ee386817608f79d2396ce77b7da8bc8786ea6984c79a7cfae7cbd9a8b",
+      "bytes": 3523,
+      "status": "INSPECTED_WORKING_SNAPSHOT"
+    }
+  ],
+  "verification": {
+    "level": "SOURCE_AND_DEFINITION_INSPECTION_WITH_HASH_AND_DECLARATION_CHECKS",
+    "new_lean_proofs": 0,
+    "new_countermodels": 0,
+    "fresh_kernel_replay": false,
+    "exhaustive_model_search": false,
+    "primary_read_scope": [
+      "Oneness extracted text lines 830–1530, with relevant main-text/translator-note distinctions",
+      "Minhaj V03L0269–0276 direct electronic reading",
+      "Dar IX source Islamicbook016 lines 621–650 and 710–779",
+      "Majmu XX printed174–183 retained web response, especially176–181/web L912–921"
+    ],
+    "scan_scope": "Asbahani scan/Arabic locators supplied by separate direct-source reader; not newly collated by this model auditor.",
+    "historical_verification": "Retained independent Lean review receipts inspected; no historical kernel claim upgraded to a fresh replay.",
+    "declaration_checks": [
+      {
+        "evidence_id": "ability",
+        "declaration": "both_have_interpreted_finite_ability",
+        "line": 48,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "ability",
+        "declaration": "matching_outcome_is_not_same_token",
+        "line": 52,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "ability",
+        "declaration": "intact_finite_power_differentiated_actual_production",
+        "line": 56,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "ability",
+        "declaration": "finite_ability_does_not_supply_source_mode",
+        "line": 71,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "controls",
+        "declaration": "missing_source_mode",
+        "line": 200,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "controls",
+        "declaration": "mixed_occurrence_adverse",
+        "line": 271,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "controls",
+        "declaration": "outside_field_necessary_original",
+        "line": 289,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "cnd",
+        "declaration": "original_role_excludes_reception",
+        "line": 21,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "cnd",
+        "declaration": "switch_possible_receipt_assignment",
+        "line": 78,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "cnd",
+        "declaration": "switch_lacks_role_invariance",
+        "line": 88,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "cnd",
+        "declaration": "token_reception_without_whole",
+        "line": 110,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "joint",
+        "declaration": "field_guarded",
+        "line": 207,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "joint",
+        "declaration": "complete_provider_exists_and_unique",
+        "line": 218,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "joint",
+        "declaration": "field_connected",
+        "line": 186,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "ground_capacity",
+        "declaration": "modal_ground_capable",
+        "line": 79,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "ground_capacity",
+        "declaration": "modal_ground_not_actual_producer",
+        "line": 82,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "ground_capacity",
+        "declaration": "modal_nonvacuous_separation",
+        "line": 132,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "anchored",
+        "declaration": "mode_satisfaction_of_classification_conformance",
+        "line": 77,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "anchored",
+        "declaration": "global_coverage_of_qualified_anchor",
+        "line": 111,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      },
+      {
+        "evidence_id": "anchored",
+        "declaration": "actual_rivals_equal",
+        "line": 128,
+        "status": "DECLARATION_PRESENT_NOT_FRESHLY_REPLAYED"
+      }
+    ],
+    "known_hash_checks": [
+      {
+        "id": "joint",
+        "expected_from_retained_review": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+        "actual": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+        "match": true
+      },
+      {
+        "id": "cnd",
+        "expected_from_retained_review": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+        "actual": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+        "match": true
+      },
+      {
+        "id": "ground_appraisal",
+        "expected_from_retained_review": "f56432bc48e2b5aa8394754d521e60f1bf266e17c7fa710ff3367196075e6a47",
+        "actual": "f56432bc48e2b5aa8394754d521e60f1bf266e17c7fa710ff3367196075e6a47",
+        "match": true
+      }
+    ],
+    "modified_existing_sources": false,
+    "not_claimed": [
+      "Full mathematical interpretation of independent lordship",
+      "Metaphysical possibility of a plural-original world",
+      "Truth or sufficient warrant of all source premises from model-search failure",
+      "Research-programme acceptance, readiness or closure authority",
+      "External human review"
+    ],
+    "final_reconciliation": {
+      "level": "BOUNDED_FINAL_SOURCE_ARTIFACT_READ_AND_HASH_RECONCILIATION",
+      "source_files": 3,
+      "historical_snapshots_preserved": 2,
+      "new_kernel_replay": false,
+      "new_model_search": false
+    }
+  },
+  "report": {
+    "path_input_name": "MODEL_AUDIT.md",
+    "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+    "path_corresponding_public_record": {
+      "owner_alias": "t20/cooperation-reassessment/MODEL_AUDIT.md",
+      "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+    },
+    "sha256": "89c963e630164013029090f0f6bde3749959d2e0f74bdea2acfd0d5043e9f389"
+  },
+  "last_reconciled_utc": "2026-10-07T18:14:07.905978+00:00",
+  "source_premise_identifiers_status": "Historical original working-source inspection preserved; current reconciled identifiers are in source_premise_identifiers_final.",
+  "source_premise_identifiers_final": [
+    {
+      "id": "P1",
+      "claim": "Every actual agent needs power to act.",
+      "locators": "Oneness17,34; Asbahani135,147–148"
+    },
+    {
+      "id": "P2",
+      "claim": "P2 is composite: P2a original power/will are intrinsic and not efficiently received; P2b full productive completion is not obtained from a rival’s contribution or leave. The source argues for P2b, not merely P2a, using necessary intrinsic perfection and efficacy-as-perfection. A model preserving only P2a does not preserve the full intended premise.",
+      "locators": "Oneness18–22,29,31; Asbahani135–139,143,145–146"
+    },
+    {
+      "id": "M1_EFFICACY_PERFECTION",
+      "claim": "Realized productive efficacy is a perfection; dependence on another’s action for that efficacy is dependence for a perfection, incompatible with being necessary-by-itself.",
+      "locators": "Minhaj2:180–183; retainedV02L0117–0120; Islamweb108/156–158",
+      "role": "Substantive metaphysical strengthening of P2; its effect-condition to intrinsic-completion transfer remains the precise appraisal issue."
+    },
+    {
+      "id": "P3",
+      "claim": "No priority-efficient circular derivation, including a part or condition of a productive cause; no regress of original efficient sources. Concomitance is separately allowed.",
+      "locators": "Oneness18–21; MinhajV03L0259–0263,0273"
+    },
+    {
+      "id": "P4",
+      "claim": "No two distinct agents each actually produce the same numerical effect wholly alone; sole entire production excludes any actual coproductor.",
+      "locators": "Oneness17,23–24,36; Asbahani134,140–141,149; MinhajV03L0264–0265"
+    },
+    {
+      "id": "P5",
+      "claim": "For equal lords, each can produce the same target effects as the other, and the requisite original power must persist in mutual presence.",
+      "locators": "Oneness23–25; Asbahani139–143"
+    },
+    {
+      "id": "P6",
+      "claim": "Complete power together with complete determining will entails the exactly specified effect; unwilled intrinsic possibilities remain within power.",
+      "locators": "Oneness31,34; Asbahani145,147–148; MinhajV03L0238–0242"
+    },
+    {
+      "id": "P7",
+      "claim": "A possible, nonnecessary coalescence needs an efficient producer; in the proposed ultimate pair there is no independent third producer.",
+      "locators": "Oneness30; Asbahani145"
+    },
+    {
+      "id": "B1",
+      "claim": "Any cross-domain coalescence by one lord changes what the other determines and thereby influences the latter’s determining power/will; with consent it is assistance, without consent restriction.",
+      "locators": "Oneness30–32; Asbahani144–146"
+    },
+    {
+      "id": "B2",
+      "claim": "Necessary concord of two original wills/actions makes each a partial productive condition of the other, unless a third produces their concurrence; either defeats original independence.",
+      "locators": "MinhajV03L0269–0273; Oneness40 note32"
+    },
+    {
+      "id": "B3",
+      "claim": "From inability of two whole-alone actual productions, concurrent unrestricted equally-targeted original powers are excluded.",
+      "locators": "Oneness23–25; Asbahani140–141; MinhajV03L0264,0269–0273"
+    },
+    {
+      "id": "O1",
+      "claim": "Actual creation is causally/materially interconnected, including generation, air/water/soil, solar and terrestrial interactions.",
+      "locators": "Oneness32–33; Asbahani146–147; MinhajV03L0267–0268,0276"
+    },
+    {
+      "id": "C1",
+      "claim": "Plural original makers would have separate noninteracting creative domains; O1 excludes that partition of the actual world.",
+      "locators": "Oneness30–36; Asbahani144–149"
+    },
+    {
+      "id": "C2",
+      "claim": "Unequal alleged lords imply superior over inferior; the inferior requires aid or noninterference and is not an original lord.",
+      "locators": "Oneness37–40; Asbahani150–152; MinhajV03L0273–0276"
+    },
+    {
+      "id": "B5_TRANSFER",
+      "claim": "Possible concentration of two powers in one bearer; applicability to each existing partner and self-sufficiency consequence remain explicit steps.",
+      "evidence_id": "majmu20",
+      "locator": "printed178–181; web L916–921",
+      "all_current_models": "NOT_REPRESENTED",
+      "role": "Source-explicit argued bridge; philosophical warrant assessed separately."
+    },
+    {
+      "id": "B6_EXCLUSIVE_COMPLETION",
+      "claim": "Complete power plus complete will entails exclusive actual production, not only outcome truth.",
+      "evidence_id": "majmu20",
+      "locator": "printed176–177; web L912–913",
+      "all_current_models": "NOT_REPRESENTED",
+      "role": "Source-explicit argued bridge; philosophical warrant assessed separately."
+    }
+  ],
+  "final_delivered_source_bindings": [
+    {
+      "id": "source_reconstruction_final",
+      "path_input_name": "SOURCE_ARGUMENT.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "bytes": 28894,
+      "sha256": "6491b95e39c94ab2fe3cf64d5536c24b7b689f9e03b8793c24ac5e6c2cbef775",
+      "status": "FINAL_DELIVERED_SOURCE_RECONCILED",
+      "owner_terminal_confirmation": "Source reconstruction author, 2026-10-07 18:12 UTC; independently hash checked in reconciliation."
+    },
+    {
+      "id": "source_premise_map_final",
+      "path_input_name": "PREMISE_MAP.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/PREMISE_MAP.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "bytes": 8271,
+      "sha256": "a36302da8fb43c7ce87a1143655402e20e5ae0fa887b66d479fd5f7bd2583183",
+      "status": "FINAL_DELIVERED_SOURCE_RECONCILED",
+      "owner_terminal_confirmation": "Source reconstruction author, 2026-10-07 18:12 UTC; independently hash checked in reconciliation."
+    },
+    {
+      "id": "source_reading_receipt_final",
+      "path_input_name": "DIRECT_READING_RECEIPT.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/DIRECT_READING_RECEIPT.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "bytes": 6802,
+      "sha256": "28ce11119a26feebcd50e82b353a394b830d72969e95528581a93cbebc5805f2",
+      "status": "FINAL_DELIVERED_SOURCE_RECONCILED",
+      "owner_terminal_confirmation": "Source reconstruction author, 2026-10-07 18:12 UTC; independently hash checked in reconciliation."
+    }
+  ],
+  "countermodel_test_scope": "When M1, B5_TRANSFER, B6_EXCLUSIVE_COMPLETION or another inference is offered to establish P2b, P2b is downstream of that inference. Denying P2b alone does not disqualify a countermodel to its derivation; preservation of every independently retained upstream premise is required. The complete intended source package and the upstream test package must not be conflated.",
+  "test_role_policy": {
+    "required_preservation": "All independently retained antecedents of the exactly specified inference, with their semantics held fixed.",
+    "not_a_required_preservation": "The conclusion of the inference under test, including P2b when its derivation is tested.",
+    "M1_split": "Comparative excellence of realised efficacy and transfer from foreign product condition to received intrinsic perfection must be distinguished.",
+    "matrix_reading": "NOT_REPRESENTED downstream bridges identify untested source content, not an automatic countermodel failure. An independent antecedent interpretation gap must be specified.",
+    "fixed_comparison": "Preserve actual determining will, complete productive state, target numerical effect and causal contribution. Unchanged standing capacities alone are insufficient."
+  },
+  "final_source_reconciliation": {
+    "status": "COMPLETE_VERDICT_UNCHANGED",
+    "verdict_before": "FULL_COUNTERMODEL_NOT_PRODUCED",
+    "verdict_after": "FULL_COUNTERMODEL_NOT_PRODUCED",
+    "original_delivered_audit_hashes": {
+      "MODEL_AUDIT.md": "2f599c9c7ec0e08c12a34c07f5cc1d47d2aad2c4ebdc1ff945673f3667b9e31e",
+      "MODEL_AUDIT.json": "8dc71f27211a7e98112fd9de47a25b51bf198f147f8f3e131d722857e0d3a2a6"
+    },
+    "historical_working_snapshot_bindings_preserved": [
+      {
+        "id": "source_reconstruction",
+        "path_input_name": "SOURCE_ARGUMENT.md",
+        "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+        "path_corresponding_public_record": {
+          "owner_alias": "t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+          "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+        },
+        "sha256": "5a9979266c2ed860ac6e5a933228798fee34ef149d603177311bd2940af833fa",
+        "bytes": 3664,
+        "status": "INSPECTED_WORKING_SNAPSHOT"
+      },
+      {
+        "id": "source_premise_map",
+        "path_input_name": "PREMISE_MAP.json",
+        "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+        "path_corresponding_public_record": {
+          "owner_alias": "t20/cooperation-reassessment/PREMISE_MAP.json",
+          "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+        },
+        "sha256": "791c015ee386817608f79d2396ce77b7da8bc8786ea6984c79a7cfae7cbd9a8b",
+        "bytes": 3523,
+        "status": "INSPECTED_WORKING_SNAPSHOT"
+      }
+    ],
+    "changes": [
+      "P2a/P2b split incorporated",
+      "M1_EFFICACY_PERFECTION incorporated",
+      "P2b downstream caveat made explicit in opening, inference test, matrix policy and final reconciliation",
+      "Fixed actual determining will/productive state distinguished from standing capacity",
+      "Separate exact final-delivered source bindings added without rewriting historical working hashes"
+    ],
+    "new_primary_reading_claimed": false,
+    "new_lean_or_model_rerun": false,
+    "verification": "Final delivered source hashes match owner-confirmed terminal hashes; JSON parsed; current report hash checked; historical working bindings retained byte-for-byte as JSON values."
+  }
+}

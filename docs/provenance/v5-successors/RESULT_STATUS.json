@@ -9557,7 +9557,7 @@
       ],
       "calculus": "NONE",
       "claim_scope": "WHOLE_RESULT",
-      "conclusion": "The supplied four-source occurrence fixture preserves whole attested Messenger/Messenger/God and God/God/God rows, partial assignments and source-specific word-form variants.",
+      "conclusion": "The supplied three-commentary occurrence fixture preserves whole attested Messenger/Messenger/God and God/God/God rows and partial assignments; the report separately discusses a fourth commentary and source-specific word-form variants.",
       "domain": "SOURCE_TEXT",
       "evidence_keys": [
         "report",
@@ -9656,7 +9656,7 @@
       ],
       "calculus": "NONE",
       "claim_scope": "WHOLE_RESULT",
-      "conclusion": "The supplied independent exact-archive acceptance binds 111 mathematical roots and controls; separate detached assurance binds 1,369 source-built third-party modules and unchanged replay inventories.",
+      "conclusion": "The supplied independent exact-archive acceptance binds 111 mathematical modules, 3,485 theorem roots and controls; separate detached assurance binds 1,369 source-built third-party modules and unchanged replay inventories.",
       "domain": "SOURCE_TEXT",
       "evidence_keys": [
         "report",
@@ -10069,6 +10069,2276 @@
       "target": "t16-core-assurance",
       "title": "111-module recovered core and dependency-source assurance",
       "tranche": 16
+    },
+    {
+      "assumptions": [
+        "Actual received field",
+        "Whole-existence target",
+        "Original-completion principle"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The adopted whole-existence completion principle has sufficient defeasible rational warrant: an exhaustive account of actual received productive reality requires original existential actuality, rather than received actuality throughout.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T17-REPORT:P00039-P00046"
+      ],
+      "family": "t17-original-completion",
+      "id": "T17-ORIGINAL-COMPLETION",
+      "input_contract": "Actual received field; Whole-existence target; Original-completion principle",
+      "limitations": [
+        "Not deduced from local causality or generic fact-PSR; not a rejection of every infinite temporal succession.",
+        "Sixth already owned the stronger rationale; favourable appraisal is the increment."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-P1-P2-N2-N3"
+      ],
+      "operational_model": "Actual received field; Whole-existence target; Original-completion principle",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1
+      ],
+      "residual_scope": "Not deduced from local causality or generic fact-PSR; not a rejection of every infinite temporal succession. Sixth already owned the stronger rationale; favourable appraisal is the increment.",
+      "review_ids": [
+        "T17-ORIGINAL-COMPLETION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-original-completion",
+      "title": "Affirmative whole-existence original completion appraisal",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "T17 original completion",
+        "Concrete productive-resource and qualified-bearer ontology",
+        "Contingency-as-need",
+        "Same bearer preserved throughout"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Original completion plus qualified concrete resource-to-bearer support warrants some actual particular whole-existence original bearer; contingency-as-need and actuality warrant necessary existence of that same witness.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T17-REPORT:P00025-P00061",
+        "T17-SOURCE-GUIDE:P00169-P00170"
+      ],
+      "family": "t17-necessary-bearer",
+      "id": "T17-NECESSARY-BEARER",
+      "input_contract": "T17 original completion; Concrete productive-resource and qualified-bearer ontology; Contingency-as-need; Same bearer preserved throughout",
+      "limitations": [
+        "No name, uniqueness or universal common coverage is needed for the existential result.",
+        "Not an unconditional deduction from a correction episode, modal logic or generic fact-PSR; no unrestricted noncausal ground-to-efficient-Creator bridge."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-P1-P2-N2-N3"
+      ],
+      "operational_model": "T17 original completion; Concrete productive-resource and qualified-bearer ontology; Contingency-as-need; Same bearer preserved throughout",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1
+      ],
+      "residual_scope": "No name, uniqueness or universal common coverage is needed for the existential result. Not an unconditional deduction from a correction episode, modal logic or generic fact-PSR; no unrestricted noncausal ground-to-efficient-Creator bridge.",
+      "review_ids": [
+        "T17-NECESSARY-BEARER-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-REPORT-DERIVED-MARKDOWN",
+        "T17-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-necessary-bearer",
+      "title": "Actual same-bearer Necessary Being under defended commitments",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "T17 actual original necessary witness",
+        "Constitutive mode-of-existence judgement"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The same warranted actual Necessary Being is essentially independent under the additional constitutive judgement that received versus self-sufficient whole existence belongs to this reality’s constitution.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T17-REPORT:P00055-P00061"
+      ],
+      "family": "t17-essential-independence",
+      "id": "T17-ESSENTIAL-INDEPENDENCE",
+      "input_contract": "T17 actual original necessary witness; Constitutive mode-of-existence judgement",
+      "limitations": [
+        "Necessary existence and actual nonreceipt alone do not entail essential nonreceipt.",
+        "Does not essentialise every actual predicate, remove renewed acts or establish uniqueness."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-P1-P2-N2-N3"
+      ],
+      "operational_model": "T17 actual original necessary witness; Constitutive mode-of-existence judgement",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2
+      ],
+      "residual_scope": "Necessary existence and actual nonreceipt alone do not entail essential nonreceipt. Does not essentialise every actual predicate, remove renewed acts or establish uniqueness.",
+      "review_ids": [
+        "T17-ESSENTIAL-INDEPENDENCE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-essential-independence",
+      "title": "Essential whole-existence independence of the same bearer",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "Same original independent bearer",
+        "Genuine possibility and absence of need, contradiction or impairment",
+        "Separate comparative perfection rationale"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The separately defended pure-perfection argument warrants genuinely possible nondefective standing abilities beyond those already instantiated or donated to creatures, together with real intrinsic power, knowledge and substantive practical perfection.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T17-REPORT:P00062-P00068",
+        "T17-REPORT:P00083-P00090"
+      ],
+      "family": "t17-eligible-standing-power",
+      "id": "T17-ELIGIBLE-STANDING-POWER",
+      "input_contract": "Same original independent bearer; Genuine possibility and absence of need, contradiction or impairment; Separate comparative perfection rationale",
+      "limitations": [
+        "Bare necessity or independence does not establish unlimited power.",
+        "Standing ability does not entail exclusive actual production of every effect, every exercise or jointly incompatible histories."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Same original independent bearer; Genuine possibility and absence of need, contradiction or impairment; Separate comparative perfection rationale",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        2
+      ],
+      "residual_scope": "Bare necessity or independence does not establish unlimited power. Standing ability does not entail exclusive actual production of every effect, every exercise or jointly incompatible histories.",
+      "review_ids": [
+        "T17-ELIGIBLE-STANDING-POWER-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-eligible-standing-power",
+      "title": "Pure perfection supports unrestricted eligible standing power",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "Defended same-bearer perfection package",
+        "Genuine assertoric ownership and contextual asserted content"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The same bearer’s essential independence, perfect knowledge, substantive practical perfection and informed declarative integrity warrant exceptionless veracity in genuinely source-owned contextual assertions.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T17-REPORT:P00083-P00098",
+        "T17-SOURCE-GUIDE:P00088-P00090",
+        "T17-SOURCE-GUIDE:P00110-P00113"
+      ],
+      "family": "t17-owned-veracity",
+      "id": "T17-OWNED-VERACITY",
+      "input_contract": "Defended same-bearer perfection package; Genuine assertoric ownership and contextual asserted content",
+      "limitations": [
+        "Defeasibility qualifies our warrant, not exceptionless scope of the conclusion if its premises hold.",
+        "No common-Creator premise is required; bare necessity is insufficient.",
+        "No actual revelation, D1 occurrence/ownership, D2 recipient route or universal nonassertoric nonmisleading guarantee is established."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-T0-D1-D2"
+      ],
+      "operational_model": "Defended same-bearer perfection package; Genuine assertoric ownership and contextual asserted content",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        2,
+        11
+      ],
+      "residual_scope": "Defeasibility qualifies our warrant, not exceptionless scope of the conclusion if its premises hold. No common-Creator premise is required; bare necessity is insufficient. No actual revelation, D1 occurrence/ownership, D2 recipient route or universal nonassertoric nonmisleading guarantee is established.",
+      "review_ids": [
+        "T17-OWNED-VERACITY-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-REPORT-DERIVED-MARKDOWN",
+        "T17-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-owned-veracity",
+      "title": "Affirmative exceptionless source-owned veracity appraisal",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "Necessary Creator and essential wisdom granted",
+        "Complete determination for local entailment"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Completed will and power necessitate their specified effect; a necessarily fixed occasion with one uniquely best act makes that act necessary under essential wisdom. Power to an intrinsically possible object differs from its wisdom-compatible willing.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T17-REPORT:P00107-P00120"
+      ],
+      "family": "t17-wise-voluntary-determination",
+      "id": "T17-WISE-VOLUNTARY-DETERMINATION",
+      "input_contract": "Necessary Creator and essential wisdom granted; Complete determination for local entailment",
+      "limitations": [
+        "Neither a uniquely necessary complete history nor two complete histories compatible with exactly the same necessary intrinsic nature is established.",
+        "Beginninglessness supplies neither a necessary first state nor alternatives. Three Hoover cited bodies remain unread; later encyclopedia article only corroborates tension."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Necessary Creator and essential wisdom granted; Complete determination for local entailment",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2
+      ],
+      "residual_scope": "Neither a uniquely necessary complete history nor two complete histories compatible with exactly the same necessary intrinsic nature is established. Beginninglessness supplies neither a necessary first state nor alternatives. Three Hoover cited bodies remain unread; later encyclopedia article only corroborates tension.",
+      "review_ids": [
+        "T17-WISE-VOLUNTARY-DETERMINATION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-wise-voluntary-determination",
+      "title": "Voluntary necessitation without whole-history resolution",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "Ordinary admitted epistemic practice",
+        "Competent uptake",
+        "Relevant defeaters assessed",
+        "Content adequately understood"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Competent uptake of a warrantedly understood undefeated ordinary report, including a stranger’s report, can warrant belief without prior independent speaker certification or a uniquely established theory of testimony.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T17-REPORT:P00121-P00134"
+      ],
+      "family": "t17-ordinary-testimonial-warrant",
+      "id": "T17-ORDINARY-TESTIMONIAL-WARRANT",
+      "input_contract": "Ordinary admitted epistemic practice; Competent uptake; Relevant defeaters assessed; Content adequately understood",
+      "limitations": [
+        "Fallible permission to believe is not guaranteed knowledge, confidence one, added unstated content or consequential action authority.",
+        "Common-source transmission can preserve warrant without creating independent roots."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Ordinary admitted epistemic practice; Competent uptake; Relevant defeaters assessed; Content adequately understood",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        3,
+        6,
+        11
+      ],
+      "residual_scope": "Fallible permission to believe is not guaranteed knowledge, confidence one, added unstated content or consequential action authority. Common-source transmission can preserve warrant without creating independent roots.",
+      "review_ids": [
+        "T17-ORDINARY-TESTIMONIAL-WARRANT-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-ordinary-testimonial-warrant",
+      "title": "Ordinary undefeated reports can warrant belief",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "Actual wise Creator grant",
+        "Relevant natures, relations and circumstances",
+        "For duty: actual rightful force, source attribution, content and recipient warrant"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The wise-Creator account supports objective creaturely fittingness and command-dependent relational reasons; actual rightful obligatory force with adequate communicative warrant can support a locally binding direction.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T17-REPORT:P00099-P00106"
+      ],
+      "family": "t17-fittingness-local-authority",
+      "id": "T17-FITTINGNESS-LOCAL-AUTHORITY",
+      "input_contract": "Actual wise Creator grant; Relevant natures, relations and circumstances; For duty: actual rightful force, source attribution, content and recipient warrant",
+      "limitations": [
+        "Not every benefit is a duty; occurrence is not approval; benefaction or force alone is not unlimited lawmaking power.",
+        "No ultimate identity of every normative truth with its productive source."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-NORM-GROUND",
+        "D15-OBL-T0-D1-D2"
+      ],
+      "operational_model": "Actual wise Creator grant; Relevant natures, relations and circumstances; For duty: actual rightful force, source attribution, content and recipient warrant",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        3
+      ],
+      "residual_scope": "Not every benefit is a duty; occurrence is not approval; benefaction or force alone is not unlimited lawmaking power. No ultimate identity of every normative truth with its productive source.",
+      "review_ids": [
+        "T17-FITTINGNESS-LOCAL-AUTHORITY-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-fittingness-local-authority",
+      "title": "Creaturely fittingness and qualified local binding direction",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "Fixed finite population/statistic and legitimate conditioning",
+        "Sharp full-trajectory null including availability",
+        "Actual conditional law belongs to specified family",
+        "Rectangularity for sharp dynamic programming"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "For a sharp fixed full-response trajectory and a warranted conditional assignment family, inclusive robust tails are valid. Fair marginals alone make the complement-invariant two-sided statistic vacuous; rectangular sequential bounds admit exact Bellman/LP optimisation, with distinct directed-tail optimisers and conservative numerical procedures.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T17-COMPANION:P00003-P00157",
+        "T17-EVIDENCE:FINITE_MATH_SCOPE.md"
+      ],
+      "family": "t17-assignment-uncertainty",
+      "id": "T17-ASSIGNMENT-UNCERTAINTY",
+      "input_contract": "Fixed finite population/statistic and legitimate conditioning; Sharp full-trajectory null including availability; Actual conditional law belongs to specified family; Rectangularity for sharp dynamic programming",
+      "limitations": [
+        "Ordinary proofs and synthetic controls, not new Lean verification or historical discovery of classical methods.",
+        "Product endpoint maximisers need not maximise a two-sided dependent tail.",
+        "No actual assignment law or empirical truth is authenticated by the formal family."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Fixed finite population/statistic and legitimate conditioning; Sharp full-trajectory null including availability; Actual conditional law belongs to specified family; Rectangularity for sharp dynamic programming",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        6,
+        10
+      ],
+      "residual_scope": "Ordinary proofs and synthetic controls, not new Lean verification or historical discovery of classical methods. Product endpoint maximisers need not maximise a two-sided dependent tail. No actual assignment law or empirical truth is authenticated by the formal family.",
+      "review_ids": [
+        "T17-ASSIGNMENT-UNCERTAINTY-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-COMPANION-DERIVED-MARKDOWN",
+        "T17-SRC-353de674164a876a6a5f"
+      ],
+      "suite_ids": [],
+      "target": "t17-assignment-uncertainty",
+      "title": "Exact finite inference contracts under assignment uncertainty",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "Prespecified nonempty blocks",
+        "Joint-law generator invariance",
+        "Fixed statistic ingredients under sharp null"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Full joint-law invariance under independently flipping every prespecified block yields a uniform assignment orbit and an inclusive finite-rank test conditional on that orbit. Marginal block symmetry alone fails.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T17-COMPANION:P00158-P00194"
+      ],
+      "family": "t17-block-orbit-contract",
+      "id": "T17-BLOCK-ORBIT-CONTRACT",
+      "input_contract": "Prespecified nonempty blocks; Joint-law generator invariance; Fixed statistic ingredients under sharp null",
+      "limitations": [
+        "Specialisation of classical finite-group testing; no new universal randomisation theory.",
+        "Not nested in general with finite conditional-probability-bound families.",
+        "Six equal aligned blocks have minimum 1/32, but one common orientation makes the unsupported six-block test reject with probability one."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Prespecified nonempty blocks; Joint-law generator invariance; Fixed statistic ingredients under sharp null",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        6,
+        10
+      ],
+      "residual_scope": "Specialisation of classical finite-group testing; no new universal randomisation theory. Not nested in general with finite conditional-probability-bound families. Six equal aligned blocks have minimum 1/32, but one common orientation makes the unsupported six-block test reject with probability one.",
+      "review_ids": [
+        "T17-BLOCK-ORBIT-CONTRACT-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-block-orbit-contract",
+      "title": "Block-complement symmetry yields finite conditional validity",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "232 exported roster members; 11136 opportunities",
+        "Fixed opportunity weights 1/(75 × roster size × 48)",
+        "Frozen grid 1,1.1,1.25,1.5,2,3,5,10 and unrestricted",
+        "Maintained design-model assumptions",
+        "Tyurin nonidentically distributed Berry–Esseen Theorem 7, constant weakened to one"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The fixed all-75-game, 48-opportunity analysis has signed aggregate 250499/50400000. Initial conservative upper bounds equal one throughout the frozen grid. A separately labelled post-inspection certificate proves the fair-product tail and all containing family suprema strictly exceed 167/1500, hence 0.05.",
+      "domain": "REFERENCE_EXECUTION",
+      "evidence_keys": [
+        "T17-REPORT:P00174-P00181",
+        "T17-EVIDENCE:README.md",
+        "T17-EVIDENCE:aggregates/post_inspection_tail_certificate.json"
+      ],
+      "family": "t17-closed-placement-check",
+      "id": "T17-CLOSED-PLACEMENT-CHECK",
+      "input_contract": "232 exported roster members; 11136 opportunities; Fixed opportunity weights 1/(75 × roster size × 48); Frozen grid 1,1.1,1.25,1.5,2,3,5,10 and unrestricted; Maintained design-model assumptions; Tyurin nonidentically distributed Berry–Esseen Theorem 7, constant weakened to one",
+      "limitations": [
+        "Lower bound concerns family suprema, not every individual admissible law.",
+        "No invariance, equivalence, mediation, historical assignment mechanism or deployed rendering claim.",
+        "Public package verifies supplied aggregates and synthetic arithmetic, not omitted raw rows.",
+        "Closed inquiry: do not reopen subgroup or alternative-statistic search."
+      ],
+      "math_form": "MIXED",
+      "obligation_ids": [],
+      "operational_model": "232 exported roster members; 11136 opportunities; Fixed opportunity weights 1/(75 × roster size × 48); Frozen grid 1,1.1,1.25,1.5,2,3,5,10 and unrestricted; Maintained design-model assumptions; Tyurin nonidentically distributed Berry–Esseen Theorem 7, constant weakened to one",
+      "origin_status": "T17 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        6,
+        12
+      ],
+      "residual_scope": "Lower bound concerns family suprema, not every individual admissible law. No invariance, equivalence, mediation, historical assignment mechanism or deployed rendering claim. Public package verifies supplied aggregates and synthetic arithmetic, not omitted raw rows. Closed inquiry: do not reopen subgroup or alternative-statistic search.",
+      "review_ids": [
+        "T17-CLOSED-PLACEMENT-CHECK-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T17-SRC-fe48e5b52f1efcd00dbb",
+        "T17-SRC-bb161f46577e2ee700d9",
+        "T17-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t17-closed-placement-check",
+      "title": "Closed placement sensitivity result and post-inspection lower certificate",
+      "tranche": 17
+    },
+    {
+      "assumptions": [
+        "Two finite models; initial mode 0; at most one irreversible change",
+        "Common nonempty lawful menus",
+        "Observed state and action history; governing departure-pair priorities hidden",
+        "Adversary sees chosen action before deciding change; no seed/future-randomness access",
+        "Minimum-infinitely-often parity"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "A finite positive certificate, membership in the greatest uncertain region, lawful measurable private-seed winning and an effective deterministic public-history winner are equivalent for the exact one-change parity model; full descending traces supply complete negative evidence.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-REPORT:P00019-P00045",
+        "T18-COMPANION:P00011-P00157"
+      ],
+      "family": "t18-one-change-criterion",
+      "id": "T18-ONE-CHANGE-CRITERION",
+      "input_contract": "Two finite models; initial mode 0; at most one irreversible change; Common nonempty lawful menus; Observed state and action history; governing departure-pair priorities hidden; Adversary sees chosen action before deciding change; no seed/future-randomness access; Minimum-infinitely-often parity",
+      "limitations": [
+        "Does not extend automatically to repeated changes, altered timing/observations or arbitrary POMDPs.",
+        "No finite-memory, safe-prefix, deadline or finite expected-cost promise."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Two finite models; initial mode 0; at most one irreversible change; Common nonempty lawful menus; Observed state and action history; governing departure-pair priorities hidden; Adversary sees chosen action before deciding change; no seed/future-randomness access; Minimum-infinitely-often parity",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "Does not extend automatically to repeated changes, altered timing/observations or arbitrary POMDPs. No finite-memory, safe-prefix, deadline or finite expected-cost promise.",
+      "review_ids": [
+        "T18-ONE-CHANGE-CRITERION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-one-change-criterion",
+      "title": "Complete finite criterion for one hidden irreversible change",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Exact valid rational two-mode input and initial state",
+        "Declared probability law, timing, menus and measurability",
+        "Accepted literal Lean body for compiler conclusion"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The reviewed rational-input Lean endpoint binds finite certificate existence and complete negative exclusion to actual all-adversary lawfulness and almost-sure parity. The literal compiler applied to each supplied accepted body has measurability, all-history lawfulness and actual-law success.",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "evidence_keys": [
+        "T18-REPORT:P00079-P00083",
+        "T18-EVIDENCE:code-evidence/lean/hidden-change/sources/HiddenChangeSemanticEndpoint.lean",
+        "T18-EVIDENCE:code-evidence/COMPONENT_STATUS.json"
+      ],
+      "family": "t18-rational-lean-endpoint",
+      "id": "T18-RATIONAL-LEAN-ENDPOINT",
+      "input_contract": "Exact valid rational two-mode input and initial state; Declared probability law, timing, menus and measurability; Accepted literal Lean body for compiler conclusion",
+      "limitations": [
+        "Necessity covers arbitrary probability-normalised measurable private seeds, not only compiler policies.",
+        "Does not establish executable positive-body selection, external byte parsing, Python/Lean accepted-language equality or machine-code correctness.",
+        "Ordinary complexity and arbitrary-real consequences are not mechanised by this endpoint."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [],
+      "operational_model": "Exact valid rational two-mode input and initial state; Declared probability law, timing, menus and measurability; Accepted literal Lean body for compiler conclusion",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        8,
+        10
+      ],
+      "residual_scope": "Necessity covers arbitrary probability-normalised measurable private seeds, not only compiler policies. Does not establish executable positive-body selection, external byte parsing, Python/Lean accepted-language equality or machine-code correctness. Ordinary complexity and arbitrary-real consequences are not mechanised by this endpoint.",
+      "review_ids": [
+        "T18-RATIONAL-LEAN-ENDPOINT-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-SRC-f2712855135f589e7d7c",
+        "T18-SRC-32280fe4c1b8f3ad95ad",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-rational-lean-endpoint",
+      "title": "Kernel checked rational one-change semantic endpoint",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Explicit rational fractions, finite menus and priorities",
+        "Malformed inputs rejected by stated validation",
+        "Threshold before maximal-component decomposition"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Exact explicit rational-input winner existence has a polynomial-time construction and is P-complete under deterministic logspace many-one reductions; the lower bound already uses identical kernels, common 0/1 state priorities, two lawful actions and probabilities 0,1/2,1.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00158-P00200",
+        "T18-REPORT:P00053-P00060"
+      ],
+      "family": "t18-rational-p-complete",
+      "id": "T18-RATIONAL-P-COMPLETE",
+      "input_contract": "Explicit rational fractions, finite menus and priorities; Malformed inputs rejected by stated validation; Threshold before maximal-component decomposition",
+      "limitations": [
+        "Ordinary proof, not a kernel complexity theorem.",
+        "No optimal polynomial degree, runtime lower bound or online learning bound."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Explicit rational fractions, finite menus and priorities; Malformed inputs rejected by stated validation; Threshold before maximal-component decomposition",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "Ordinary proof, not a kernel complexity theorem. No optimal polynomial degree, runtime lower bound or online learning bound.",
+      "review_ids": [
+        "T18-RATIONAL-P-COMPLETE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-rational-p-complete",
+      "title": "Explicit rational one-change decision is P-complete",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Exact real stochastic model exists",
+        "Positive finite certificate",
+        "Nonuniform finite support/equality/calibration advice"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Each positive individual arbitrary-real instance has a deterministic effective finite-history winner using finite exact structural masks and rational calibration advice.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00201-P00209"
+      ],
+      "family": "t18-real-nonuniform",
+      "id": "T18-REAL-NONUNIFORM",
+      "input_contract": "Exact real stochastic model exists; Positive finite certificate; Nonuniform finite support/equality/calibration advice",
+      "limitations": [
+        "No uniform recovery of masks or advice from arbitrary real names; counters can grow unboundedly."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Exact real stochastic model exists; Positive finite certificate; Nonuniform finite support/equality/calibration advice",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "No uniform recovery of masks or advice from arbitrary real names; counters can grow unboundedly.",
+      "review_ids": [
+        "T18-REAL-NONUNIFORM-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-real-nonuniform",
+      "title": "Real-kernel positive instances have nonuniform effective winners",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Cauchy-name rather than exact-fraction input",
+        "Bernoulli hidden-priority construction encoding halting"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "No total exact winner-existence decision exists from arbitrary computable fast-Cauchy row names, even under rational-valued full-support rows.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00210-P00214"
+      ],
+      "family": "t18-cauchy-decision-obstruction",
+      "id": "T18-CAUCHY-DECISION-OBSTRUCTION",
+      "input_contract": "Cauchy-name rather than exact-fraction input; Bernoulli hidden-priority construction encoding halting",
+      "limitations": [
+        "Representation obstruction; not caused by irrationality and not a contradiction of explicit-rational polynomial decision."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Cauchy-name rather than exact-fraction input; Bernoulli hidden-priority construction encoding halting",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        10
+      ],
+      "residual_scope": "Representation obstruction; not caused by irrationality and not a contradiction of explicit-rational polynomial decision.",
+      "review_ids": [
+        "T18-CAUCHY-DECISION-OBSTRUCTION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-cauchy-decision-obstruction",
+      "title": "Exact signed decision from Cauchy names is impossible",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Two-mode one-change contract",
+        "d0=d1",
+        "Trusted exact nonempty support sets and lawful menus"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Trusted exact support maps and common priorities determine a signed outcome; on positive inputs one deterministic effective policy fixed before numerical realisation wins for every compatible kernel and legal adversary.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00215-P00231"
+      ],
+      "family": "t18-common-priority-support-synthesis",
+      "id": "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS",
+      "input_contract": "Two-mode one-change contract; d0=d1; Trusted exact nonempty support sets and lawful menus",
+      "limitations": [
+        "No numerical probabilities, equality mask or positive lower bound is a runtime input.",
+        "Proof obtains candidate-support inclusion on recurrent pairs, not full row equality.",
+        "No exact zero recovery from finite observations or Cauchy names."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Two-mode one-change contract; d0=d1; Trusted exact nonempty support sets and lawful menus",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "No numerical probabilities, equality mask or positive lower bound is a runtime input. Proof obtains candidate-support inclusion on recurrent pairs, not full row equality. No exact zero recovery from finite observations or Cauchy names.",
+      "review_ids": [
+        "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-common-priority-support-synthesis",
+      "title": "Uniform support-only synthesis with a common priority map",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "General mode-owned priorities",
+        "Same skeleton with swapped 1/3 and 2/3 biases"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Two positive instances can share supports, equality masks, menus and hidden mode-owned priorities yet admit no single common measurable private-seed winner; opposite Bernoulli calibrations require disjoint eventual actions under the same observation law.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00232-P00236"
+      ],
+      "family": "t18-hidden-priority-calibration",
+      "id": "T18-HIDDEN-PRIORITY-CALIBRATION",
+      "input_contract": "General mode-owned priorities; Same skeleton with swapped 1/3 and 2/3 biases",
+      "limitations": [
+        "Masks can decide per-instance existence without determining one winning calibration for every realisation.",
+        "Even a shared positive lower bound does not remove this obstruction."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "General mode-owned priorities; Same skeleton with swapped 1/3 and 2/3 biases",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "Masks can decide per-instance existence without determining one winning calibration for every realisation. Even a shared positive lower bound does not remove this obstruction.",
+      "review_ids": [
+        "T18-HIDDEN-PRIORITY-CALIBRATION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-hidden-priority-calibration",
+      "title": "Support and equality masks need not select a common winner",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Unchanged HasE, conversion and application rules",
+        "U is the polymorphic type of an element of every type"
+      ],
+      "calculus": "P01AC.ExtensionalRepair.HasE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Using the actual polymorphic elimination rule under a U variable, HasE derives the identity of K I and K K at U→Raw without a closed inhabitant of U; ordinary erased beta-eta distinction defeats the proposed arbitrary-type invariant.",
+      "domain": "BARE_INPUT",
+      "evidence_keys": [
+        "T18-REPORT:P00084-P00087",
+        "T18-EVIDENCE:code-evidence/VERIFICATION_SUMMARY.md"
+      ],
+      "family": "t18-hase-u-domain-control",
+      "id": "T18-HASE-U-DOMAIN-CONTROL",
+      "input_contract": "Unchanged HasE, conversion and application rules; U is the polymorphic type of an element of every type",
+      "limitations": [
+        "Identity is at U→Raw, not Raw. Proof erasure does not coerce endpoint equality to Raw.",
+        "No literal unary-compiler x/x+0 resolution."
+      ],
+      "math_form": "MIXED",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "operational_model": "Unchanged HasE, conversion and application rules; U is the polymorphic type of an element of every type",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        9
+      ],
+      "residual_scope": "Identity is at U→Raw, not Raw. Proof erasure does not coerce endpoint equality to Raw. No literal unary-compiler x/x+0 resolution.",
+      "review_ids": [
+        "T18-HASE-U-DOMAIN-CONTROL-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-SRC-718d531f4b0325c8a8c8",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-hase-u-domain-control",
+      "title": "HasE U-domain control defeats global erased-equality invariant",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Actual dependent J and inherited source equations",
+        "Exact separately identified transported endpoints"
+      ],
+      "calculus": "P01AC.ExtensionalRepair.HasE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The unchanged dependent J transports the checked identity into closed Church-natural function endpoints with ordinary current typings and inhabited common type; kernel-checked HasE identity plus separate beta-eta analysis defeats final-type-only erased-equality repairs.",
+      "domain": "BARE_INPUT",
+      "evidence_keys": [
+        "T18-REPORT:P00088-P00092",
+        "T18-EVIDENCE:code-evidence/lean/hase/sources/InhabitedEndpointControl.lean"
+      ],
+      "family": "t18-hase-inhabited-j-control",
+      "id": "T18-HASE-INHABITED-J-CONTROL",
+      "input_contract": "Actual dependent J and inherited source equations; Exact separately identified transported endpoints",
+      "limitations": [
+        "Endpoints are not asserted to lie in the literal unary compiler image.",
+        "Beta-eta distinction is ordinary analysis and diagnostic, not a Lean theorem.",
+        "Literal x/x+0 HasE identity, compiler-specific conservativity and all-rule separator remain unresolved."
+      ],
+      "math_form": "MIXED",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "operational_model": "Actual dependent J and inherited source equations; Exact separately identified transported endpoints",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        9
+      ],
+      "residual_scope": "Endpoints are not asserted to lie in the literal unary compiler image. Beta-eta distinction is ordinary analysis and diagnostic, not a Lean theorem. Literal x/x+0 HasE identity, compiler-specific conservativity and all-rule separator remain unresolved.",
+      "review_ids": [
+        "T18-HASE-INHABITED-J-CONTROL-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-SRC-bcb245a6581fd9ff7c12",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-hase-inhabited-j-control",
+      "title": "Dependent J control defeats final-type-only repair",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Unchanged delivered Python implementations and exact source bindings",
+        "20183 reference models; 20686 efficient models overlap",
+        "Revision-2 supplement: 30 positive, 2 negative outcomes"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The reported exact reference and polynomial implementation agree with independent oracles on their declared overlapping populations; the revision-2 stress control additionally checks 32 complete inputs from eight four-state templates with four starts each.",
+      "domain": "REFERENCE_EXECUTION",
+      "evidence_keys": [
+        "T18-REPORT:P00075-P00083",
+        "T18-VERIFICATION:qualification",
+        "T18-EVIDENCE:README.md"
+      ],
+      "family": "t18-implementation-qualification",
+      "id": "T18-IMPLEMENTATION-QUALIFICATION",
+      "input_contract": "Unchanged delivered Python implementations and exact source bindings; 20183 reference models; 20686 efficient models overlap; Revision-2 supplement: 30 positive, 2 negative outcomes",
+      "limitations": [
+        "Finite implementation tests do not prove the theorem or Python/Lean correspondence.",
+        "32 starts are not 32 graph structures or an exhaustive four-state census.",
+        "Independent base replay is a qualified recovered composite, not an uninterrupted full-runner execution."
+      ],
+      "math_form": "IMPLEMENTATION",
+      "obligation_ids": [],
+      "operational_model": "Unchanged delivered Python implementations and exact source bindings; 20183 reference models; 20686 efficient models overlap; Revision-2 supplement: 30 positive, 2 negative outcomes",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        8
+      ],
+      "residual_scope": "Finite implementation tests do not prove the theorem or Python/Lean correspondence. 32 starts are not 32 graph structures or an exhaustive four-state census. Independent base replay is a qualified recovered composite, not an uninterrupted full-runner execution.",
+      "review_ids": [
+        "T18-IMPLEMENTATION-QUALIFICATION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-SRC-e85fd90497fdb62368ff",
+        "T18-REPORT-DERIVED-MARKDOWN",
+        "T18-VERIFICATION"
+      ],
+      "suite_ids": [],
+      "target": "t18-implementation-qualification",
+      "title": "Bounded exact and polynomial implementation evidence",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Target is an unrestricted extension beyond defended productive/bearer framework"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The targeted extension failed to establish that every objective existential fact is a representation or obtains through a supporting bearer of the required productive kind. Restricted support transport and T17’s productive-framework affirmative baseline remain.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T18-REPORT:P00011-P00018",
+        "T18-SOURCE-GUIDE:P00022-P00025"
+      ],
+      "family": "t18-noncausal-extension-stop",
+      "id": "T18-NONCAUSAL-EXTENSION-STOP",
+      "input_contract": "Target is an unrestricted extension beyond defended productive/bearer framework",
+      "limitations": [
+        "Not a retraction of T17 Necessary Being or essential independence; not proof of a possible autonomous rival ontology."
+      ],
+      "math_form": "SOURCE_ASSESSMENT",
+      "obligation_ids": [],
+      "operational_model": "Target is an unrestricted extension beyond defended productive/bearer framework",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1
+      ],
+      "residual_scope": "Not a retraction of T17 Necessary Being or essential independence; not proof of a possible autonomous rival ontology.",
+      "review_ids": [
+        "T18-NONCAUSAL-EXTENSION-STOP-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-REPORT-DERIVED-MARKDOWN",
+        "T18-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-noncausal-extension-stop",
+      "title": "Universal noncausal fact-to-bearer bridge remains unearned",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Concrete-source framework",
+        "Entire actual production in same respect",
+        "Distinguish differentiated work, unused capacity and primitive double sufficiency"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The cumulative appraisal accepts that one concrete productive contribution in the same causal respect does not have two distinct unborrowed entire original productions, on a positive productive-individuation rationale.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00045-P00056",
+        "T19-REPORT:P00098-P00104",
+        "T19-EVIDENCE:reviews/causal_nonduplication.json"
+      ],
+      "family": "t19-cnd",
+      "id": "T19-CND",
+      "input_contract": "Concrete-source framework; Entire actual production in same respect; Distinguish differentiated work, unused capacity and primitive double sufficiency",
+      "limitations": [
+        "Nonexclusive sufficient efficacy is not analytically solitary exhaustive production.",
+        "Whole-alone contradiction and maker-preserver comparison alone do not establish CND.",
+        "CND alone does not exclude differentiated original contributors."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Concrete-source framework; Entire actual production in same respect; Distinguish differentiated work, unused capacity and primitive double sufficiency",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2
+      ],
+      "residual_scope": "Nonexclusive sufficient efficacy is not analytically solitary exhaustive production. Whole-alone contradiction and maker-preserver comparison alone do not establish CND. CND alone does not exclude differentiated original contributors.",
+      "review_ids": [
+        "T19-CND-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-SRC-51ad0dcfb6e4a1c78165",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-cnd",
+      "title": "Defeasible causal nonduplication with preserved dissent",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Qualified original and practical-perfection framework",
+        "Actual positive original resource contribution",
+        "Separate evaluative appraisal of adequate unborrowed provision"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The current appraisal accepts complete unborrowed adequate provision as the fitting original mode of a qualified essentially independent and practically perfect source’s relevant actual productive role.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00057-P00078",
+        "T19-EVIDENCE:reviews/source_mode_and_field.json"
+      ],
+      "family": "t19-source-mode",
+      "id": "T19-SOURCE-MODE",
+      "input_contract": "Qualified original and practical-perfection framework; Actual positive original resource contribution; Separate evaluative appraisal of adequate unborrowed provision",
+      "limitations": [
+        "Fuller optional accomplishment versus required mode is a substantive evaluative step.",
+        "Not maximal creation, eternal-token perfection or an inference from every received state to received whole existence.",
+        "Cross-locus reconstruction/repair, not an explicitly completed derivation at Minhaj 2:183."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Qualified original and practical-perfection framework; Actual positive original resource contribution; Separate evaluative appraisal of adequate unborrowed provision",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2
+      ],
+      "residual_scope": "Fuller optional accomplishment versus required mode is a substantive evaluative step. Not maximal creation, eternal-token perfection or an inference from every received state to received whole existence. Cross-locus reconstruction/repair, not an explicitly completed derivation at Minhaj 2:183.",
+      "review_ids": [
+        "T19-SOURCE-MODE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-SRC-c555be4c24b192140d3a",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-source-mode",
+      "title": "Defeasible norm of unborrowed adequate actual provision",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Actual productive ancestry",
+        "Faithful attribution through real secondary agency",
+        "Separate source-mode norm for complete provision"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Actual original provision used by a derived agent remains part of the downstream result’s original account; complete coverage then needs the additional source-mode principle. Intentional ownership of every intermediary token is unnecessary for causal attribution.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00079-P00097"
+      ],
+      "family": "t19-mediate-original-attribution",
+      "id": "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+      "input_contract": "Actual productive ancestry; Faithful attribution through real secondary agency; Separate source-mode norm for complete provision",
+      "limitations": [
+        "Proximal or moral ownership, original provision of resources, and complete original provision are distinct.",
+        "Causing a creature’s assertion does not make it the original source’s own assertion; intentional attestation remains necessary there."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Actual productive ancestry; Faithful attribution through real secondary agency; Separate source-mode norm for complete provision",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2,
+        11
+      ],
+      "residual_scope": "Proximal or moral ownership, original provision of resources, and complete original provision are distinct. Causing a creature’s assertion does not make it the original source’s own assertion; intentional attestation remains necessary there.",
+      "review_ids": [
+        "T19-MEDIATE-ORIGINAL-ATTRIBUTION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-mediate-original-attribution",
+      "title": "Original productive attribution survives subordinate agency",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "T17 original actuality and qualified bearer/perfection commitments",
+        "T19 CND",
+        "T19 actual source-mode norm",
+        "Actual exhaustive relevant field and genuinely productive crossings",
+        "Faithful mediate original attribution"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Under the explicit original-source, CND, source-mode, mediate-attribution and field premises, there is sufficient defeasible rational warrant for one complete original provider of the actual productively connected field and no independently original co-contributor within it.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00004-P00015",
+        "T19-REPORT:P00092-P00110",
+        "T19-REPORT:P00144-P00169",
+        "T19-EVIDENCE:reviews/disposition_and_review_scope.json"
+      ],
+      "family": "t19-common-connected-source",
+      "id": "T19-COMMON-CONNECTED-SOURCE",
+      "input_contract": "T17 original actuality and qualified bearer/perfection commitments; T19 CND; T19 actual source-mode norm; Actual exhaustive relevant field and genuinely productive crossings; Faithful mediate original attribution",
+      "limitations": [
+        "Connectedness propagates but does not supply local complete coverage P2.",
+        "No numerical uniqueness of all necessary realities outside the field.",
+        "Same-bearer participation or reapplication of the attribute rationale is needed to identify a prior attribute witness with this common source.",
+        "No revelation, general jurisdiction or operational permission follows."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-P1-P2-N2-N3"
+      ],
+      "operational_model": "T17 original actuality and qualified bearer/perfection commitments; T19 CND; T19 actual source-mode norm; Actual exhaustive relevant field and genuinely productive crossings; Faithful mediate original attribution",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2,
+        3
+      ],
+      "residual_scope": "Connectedness propagates but does not supply local complete coverage P2. No numerical uniqueness of all necessary realities outside the field. Same-bearer participation or reapplication of the attribute rationale is needed to identify a prior attribute witness with this common source. No revelation, general jurisdiction or operational permission follows.",
+      "review_ids": [
+        "T19-COMMON-CONNECTED-SOURCE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-SRC-12bbb16f15dbb74d5253",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-common-connected-source",
+      "title": "Affirmative common original source of the warranted connected field",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Actual discriminating contextual evidence",
+        "Separate source ownership and recipient route",
+        "Relevant error/deception alternatives assessed"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Discriminating organisation of an event can defeasibly warrant an informed agent’s adoption of determinate content for an audience, when independent evidence supports communicative control, content-sensitive response and the comparative interpretation.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00130-P00135",
+        "T19-SOURCE-GUIDE:P00074-P00079"
+      ],
+      "family": "t19-attestation-discrimination",
+      "id": "T19-ATTESTATION-DISCRIMINATION",
+      "input_contract": "Actual discriminating contextual evidence; Separate source ownership and recipient route; Relevant error/deception alternatives assessed",
+      "limitations": [
+        "Generic benefit, universal creation, challenge or non-opposition alone do not authenticate adoption.",
+        "No historical revelation or token is authenticated.",
+        "Basic king-sign route was already owned by Seventh; advance is Arabic-source alignment and sharper discrimination."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-T0-D1-D2"
+      ],
+      "operational_model": "Actual discriminating contextual evidence; Separate source ownership and recipient route; Relevant error/deception alternatives assessed",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        2,
+        6,
+        11
+      ],
+      "residual_scope": "Generic benefit, universal creation, challenge or non-opposition alone do not authenticate adoption. No historical revelation or token is authenticated. Basic king-sign route was already owned by Seventh; advance is Arabic-source alignment and sharper discrimination.",
+      "review_ids": [
+        "T19-ATTESTATION-DISCRIMINATION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-attestation-discrimination",
+      "title": "Positive bounded intentional-attestation recognition route",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Bounded Q74, Ibn Hisham and Tabari report families",
+        "Attribution, competence and transmission qualified"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The selected transmitted case gives limited positive weight to striking literary reception and hostile publicity strategy; it records no attempt by al-Walid to compose a comparable text and no observed failure of such an attempt.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00136-P00143",
+        "T19-SOURCE-GUIDE:P00080-P00089"
+      ],
+      "family": "t19-walid-reception-scope",
+      "id": "T19-WALID-RECEPTION-SCOPE",
+      "input_contract": "Bounded Q74, Ibn Hisham and Tabari report families; Attribution, competence and transmission qualified",
+      "limitations": [
+        "Interested reports are not worthless, but hostile attribution is not an independently surviving hostile source.",
+        "No universal incapacity or divine authorship conclusion.",
+        "Surah comparison must not require prior acceptance of the whole Quran’s divine provenance or every whole-corpus excellence."
+      ],
+      "math_form": "SOURCE_ASSESSMENT",
+      "obligation_ids": [],
+      "operational_model": "Bounded Q74, Ibn Hisham and Tabari report families; Attribution, competence and transmission qualified",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        2,
+        6,
+        11
+      ],
+      "residual_scope": "Interested reports are not worthless, but hostile attribution is not an independently surviving hostile source. No universal incapacity or divine authorship conclusion. Surah comparison must not require prior acceptance of the whole Quran’s divine provenance or every whole-corpus excellence.",
+      "review_ids": [
+        "T19-WALID-RECEPTION-SCOPE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-walid-reception-scope",
+      "title": "Al-Walid evidence supports reception and strategy rather than a failed trial",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Independent D1 attribution and determinate contextual content",
+        "D2 adequate recipient route",
+        "Same-bearer knowledge and essential owned veracity",
+        "Recipient, time and conditions fixed"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "An independently authenticated, contextually determinate source-owned assertion that a recipient is obligated can warrant that normative proposition under the same source’s relevant knowledge and owned-veracity premises without a second independent proof of that very obligation.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00159-P00169"
+      ],
+      "family": "t19-asserted-obligation-transfer",
+      "id": "T19-ASSERTED-OBLIGATION-TRANSFER",
+      "input_contract": "Independent D1 attribution and determinate contextual content; D2 adequate recipient route; Same-bearer knowledge and essential owned veracity; Recipient, time and conditions fixed",
+      "limitations": [
+        "A bare imperative or attempted duty-constituting directive still needs rightful obligation-imposing standing and force.",
+        "The token cannot bootstrap its own attribution; causal ownership alone gives no unlimited jurisdiction.",
+        "Implementation, feasibility, safety and further permissions remain distinct."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-NORM-GROUND",
+        "D15-OBL-T0-D1-D2"
+      ],
+      "operational_model": "Independent D1 attribution and determinate contextual content; D2 adequate recipient route; Same-bearer knowledge and essential owned veracity; Recipient, time and conditions fixed",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        2,
+        3,
+        11
+      ],
+      "residual_scope": "A bare imperative or attempted duty-constituting directive still needs rightful obligation-imposing standing and force. The token cannot bootstrap its own attribution; causal ownership alone gives no unlimited jurisdiction. Implementation, feasibility, safety and further permissions remain distinct.",
+      "review_ids": [
+        "T19-ASSERTED-OBLIGATION-TRANSFER-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-asserted-obligation-transfer",
+      "title": "Authenticated true obligation assertions can warrant the obligation",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Bounded source-sensitive interpretation",
+        "Author, interlocutor and editorial voices retained"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The wider reading distinguishes original authorship from a new carrier voice and acoustic token, real successive process from concept/kind, and a remedy from its use, receptivity and obstructions; successful surface copying alone does not establish causal sufficiency.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00112-P00129",
+        "T19-READING-INDEX:structured entries"
+      ],
+      "family": "t19-source-occurrence-controls",
+      "id": "T19-SOURCE-OCCURRENCE-CONTROLS",
+      "input_contract": "Bounded source-sensitive interpretation; Author, interlocutor and editorial voices retained",
+      "limitations": [
+        "No new formal occurrence theorem, personal-identity criterion, causal-identification method, clinical validation or psychology.",
+        "Main value is interpretation and concrete comparison questions against already owned programme results."
+      ],
+      "math_form": "SOURCE_ASSESSMENT",
+      "obligation_ids": [],
+      "operational_model": "Bounded source-sensitive interpretation; Author, interlocutor and editorial voices retained",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        6,
+        7,
+        11
+      ],
+      "residual_scope": "No new formal occurrence theorem, personal-identity criterion, causal-identification method, clinical validation or psychology. Main value is interpretation and concrete comparison questions against already owned programme results.",
+      "review_ids": [
+        "T19-SOURCE-OCCURRENCE-CONTROLS-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-ARABIC-READING-INDEX-DERIVED-MARKDOWN",
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SRC-6aa02c1019b61e7a1b61"
+      ],
+      "suite_ids": [],
+      "target": "t19-source-occurrence-controls",
+      "title": "Broader source reading sharpens occurrence and reuse distinctions",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Unchanged current Has premises, Raw and identity carrier, exact J motive/telescope and piExt interface",
+        "Official Lean 4.19.0; declared standard axiom footprint"
+      ],
+      "calculus": "P01AC.ExtensionalRepair.HasE",
+      "claim_scope": "COMPONENT",
+      "conclusion": "The exact current-Has generic Church probe yields the stated Raw identity and closed inhabited N-to-Raw HasE consequence. The 46 theorem declarations have scoped original kernel and independent review evidence.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "generic-church-probe:PROOF_SCOPE.json",
+        "generic-church-probe:REVIEW_SUMMARY.md",
+        "generic-church-probe:src/GenericIdentityCarrierProbe.lean",
+        "generic-church-probe:tests/StatementContract.lean"
+      ],
+      "family": "t20-church-raw-probe",
+      "id": "T20-CHURCH-RAW-PROBE",
+      "input_contract": "Unchanged current Has premises, Raw and identity carrier, exact J motive/telescope and piExt interface; Official Lean 4.19.0; declared standard axiom footprint",
+      "limitations": [
+        "Literal compiled x/x+0 HasE identity remains OPEN; no generic Church uniformity or carrier promotion follows.",
+        "Beta-eta distinctness is written analysis; intended statement-mismatch controls are not noninhabitation proofs.",
+        "The underlying proof-coordinate J mechanism is inherited."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "operational_model": "Unchanged current Has premises, Raw and identity carrier, exact J motive/telescope and piExt interface; Official Lean 4.19.0; declared standard axiom footprint",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        8,
+        9
+      ],
+      "residual_scope": "Literal compiled x/x+0 HasE identity remains OPEN; no generic Church uniformity or carrier promotion follows. Beta-eta distinctness is written analysis; intended statement-mismatch controls are not noninhabitation proofs. The underlying proof-coordinate J mechanism is inherited.",
+      "review_ids": [
+        "T20-CHURCH-RAW-PROBE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-71bcd8ed1ed071f44369",
+        "T20-SRC-e6d13780ce8bf64111f0",
+        "T20-SRC-611f8ba14d00927609d0",
+        "T20-SRC-829ad7f56702d0aec92c"
+      ],
+      "suite_ids": [],
+      "target": "t20-church-raw-probe",
+      "title": "Generic Church identity-carrier probe and exact N-to-Raw closure",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "CND for entire production of the same concrete contribution in the same respect",
+        "Original productive-role retention at each relevant alternative",
+        "Whole reception supplies a distinct matching producer of that contribution"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "Causal nonduplication, retention of an original productive role in each relevant alternative, and distinct matching whole-supply attribution jointly exclude whole productive reception of the same bearer. The argument uses no self-production and needs no single effect token across alternatives.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "CND-essential-independence-scope:CNDModalScope.lean",
+        "CND-essential-independence-scope:CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+        "CND-essential-independence-scope:review/REVIEW.md",
+        "CND-essential-independence-scope:review/EXHAUSTIVE_CHECK_RESULT.json"
+      ],
+      "family": "t20-cnd-essentiality-scope",
+      "id": "T20-CND-ESSENTIALITY-SCOPE",
+      "input_contract": "CND for entire production of the same concrete contribution in the same respect; Original productive-role retention at each relevant alternative; Whole reception supplies a distinct matching producer of that contribution",
+      "limitations": [
+        "Necessary existence or standing power alone does not establish role retention or matching overlap.",
+        "The sixteen-theorem component and finite controls give no new independent N2/N3 or essential-independence warrant; T17 affirmative judgement remains history.",
+        "Abstract counterinterpretations are not metaphysical possibility evidence."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "D15-OBL-P1-P2-N2-N3"
+      ],
+      "operational_model": "CND for entire production of the same concrete contribution in the same respect; Original productive-role retention at each relevant alternative; Whole reception supplies a distinct matching producer of that contribution",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        1,
+        2,
+        8
+      ],
+      "residual_scope": "Necessary existence or standing power alone does not establish role retention or matching overlap. The sixteen-theorem component and finite controls give no new independent N2/N3 or essential-independence warrant; T17 affirmative judgement remains history. Abstract counterinterpretations are not metaphysical possibility evidence.",
+      "review_ids": [
+        "T20-CND-ESSENTIALITY-SCOPE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-3a62a1925a0c5d287422",
+        "T20-SRC-8a6043caee33ba5acbfc",
+        "T20-SRC-e554e265f7f738e4501d",
+        "T20-SRC-a082c819ac55733fd646"
+      ],
+      "suite_ids": [],
+      "target": "t20-cnd-essentiality-scope",
+      "title": "Exact productive-role premises for the CND nonreceipt implication",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Exact unchanged HasE constructors, original compiler endpoints and expanded scalar type",
+        "Supplied identity derivation for the canonicalisation implication; exact J, piExt and allExt premises"
+      ],
+      "calculus": "P01AC.ExtensionalRepair.HasE",
+      "claim_scope": "COMPONENT",
+      "conclusion": "The original closed HasE identity exists iff its exact scalar-fusion identity exists iff the corresponding fixed literal witness judgments hold. Closed-proof canonicalisation is proved at the supplied exact identity type; both compiler endpoints, carriers and witness directions remain literal.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "exact-scalar-fusion:PROOF_SCOPE.json",
+        "exact-scalar-fusion:REVIEW_SUMMARY.md",
+        "exact-scalar-fusion:src/ScalarFusionCore.lean",
+        "exact-scalar-fusion:src/ScalarFusionReverse.lean",
+        "exact-scalar-fusion:src/ClosedProofCanonicalisation.lean",
+        "exact-scalar-fusion:src/LiteralScalarFusion.lean",
+        "exact-scalar-fusion:tests/StatementContract.lean"
+      ],
+      "family": "t20-scalar-fusion-iff",
+      "id": "T20-SCALAR-FUSION-IFF",
+      "input_contract": "Exact unchanged HasE constructors, original compiler endpoints and expanded scalar type; Supplied identity derivation for the canonicalisation implication; exact J, piExt and allExt premises",
+      "limitations": [
+        "Literal x/x+0 target inhabitation remains OPEN, as does inhabitation of the equivalent scalar obligation.",
+        "A normal fixed proof polynomial does not construct, normalize or bound complete HasE derivations.",
+        "No semantic endpoint reflection, general weakening assumption, finite proof-search bound or current-Has promotion."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "operational_model": "Exact unchanged HasE constructors, original compiler endpoints and expanded scalar type; Supplied identity derivation for the canonicalisation implication; exact J, piExt and allExt premises",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        8,
+        9
+      ],
+      "residual_scope": "Literal x/x+0 target inhabitation remains OPEN, as does inhabitation of the equivalent scalar obligation. A normal fixed proof polynomial does not construct, normalize or bound complete HasE derivations. No semantic endpoint reflection, general weakening assumption, finite proof-search bound or current-Has promotion.",
+      "review_ids": [
+        "T20-SCALAR-FUSION-IFF-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-160d3b86079a3f6d5432",
+        "T20-SRC-5d53d1dd9b2ebd829a74",
+        "T20-SRC-bd0f1eeb511488766385",
+        "T20-SRC-35f8add63e78a5679299",
+        "T20-SRC-ab2ef8dcaa020b398bba",
+        "T20-SRC-190d7b4556f4978b0e53",
+        "T20-SRC-a41f108da0664e1b270a"
+      ],
+      "suite_ids": [],
+      "target": "t20-scalar-fusion-iff",
+      "title": "Exact four-way scalar-fusion equivalence for literal HasE endpoints",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Fixed crossing frame and precisely stated pure equality or faithful-transport interpretation language",
+        "Endpoint provenance retention and equality-reflecting transport",
+        "Source-sort quantification includes the carrier-component quotient"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "For the fixed admitted crossing frame, equality forced by the pure anchored-source language, and its stated faithful-transport expansion, holds exactly at finite union-connected carrier vertices. Individually witnessed crossings need not share a world witness.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "modal-union-v2:lean-v2/ModalUnion.lean",
+        "modal-union-v2:lean-v2/STATEMENT_CONTRACT.txt",
+        "modal-union-v2:ROOT_INDEPENDENT_REVIEW.md",
+        "modal-union-v2:ROOT_INDEPENDENT_REVIEW_RECEIPT.json"
+      ],
+      "family": "t20-modal-crossing-completeness",
+      "id": "T20-MODAL-CROSSING-COMPLETENESS",
+      "input_contract": "Fixed crossing frame and precisely stated pure equality or faithful-transport interpretation language; Endpoint provenance retention and equality-reflecting transport; Source-sort quantification includes the carrier-component quotient",
+      "limitations": [
+        "No actual modal crossing, source-mode premise, metaphysical possibility or global plenitude is warranted by connectivity.",
+        "The converse varies admissible interpretations; equality in one actual attribution does not imply connectivity.",
+        "Coverage and an actual qualified source are separate hypotheses; no numerical uniqueness of all necessary reality."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "D15-OBL-MEN7"
+      ],
+      "operational_model": "Fixed crossing frame and precisely stated pure equality or faithful-transport interpretation language; Endpoint provenance retention and equality-reflecting transport; Source-sort quantification includes the carrier-component quotient",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        1,
+        2,
+        8
+      ],
+      "residual_scope": "No actual modal crossing, source-mode premise, metaphysical possibility or global plenitude is warranted by connectivity. The converse varies admissible interpretations; equality in one actual attribution does not imply connectivity. Coverage and an actual qualified source are separate hypotheses; no numerical uniqueness of all necessary reality.",
+      "review_ids": [
+        "T20-MODAL-CROSSING-COMPLETENESS-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-8e6e9f99984ca5e0548c",
+        "T20-SRC-92c41ca72af7972fa3b6",
+        "T20-SRC-13714d17b9a5f60597bd",
+        "T20-SRC-340cbd74ab0bfd8b79b9"
+      ],
+      "suite_ids": [],
+      "target": "t20-modal-crossing-completeness",
+      "title": "Exact source-equality consequence boundary for admitted modal crossings",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Old-language profiles and specified support/production orientation",
+        "Actual coverage where transferred; necessary-root hypothesis for grounding necessitation",
+        "Separate supplied acyclicity or well-foundedness premises where claimed"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "A uniform Option extension preserves old productive/profile data and old support reachability while adding a necessary nonproductive ground. Actual coverage, optional acyclicity and ancestry well-foundedness are preserved under their explicit hypotheses. A nonvacuous capacity control separates standing ability from actual productive provision.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "existential-ground:PROOF_MAP_v1.md",
+        "existential-ground:lean/GroundExtension.lean",
+        "existential-ground:lean/GroundExtensionControls.lean",
+        "existential-ground:lean/ModalCapacityControl.lean",
+        "existential-ground:review/INDEPENDENT_REVIEW_PUBLIC.md",
+        "existential-ground:review/INDEPENDENT_REVIEW_RECEIPT_PUBLIC.json"
+      ],
+      "family": "t20-original-ground-robustness",
+      "id": "T20-ORIGINAL-GROUND-ROBUSTNESS",
+      "input_contract": "Old-language profiles and specified support/production orientation; Actual coverage where transferred; necessary-root hypothesis for grounding necessitation; Separate supplied acyclicity or well-foundedness premises where claimed",
+      "limitations": [
+        "Old-field/profile preservation is not unrestricted elementary or full-domain conservative extension.",
+        "Root uniqueness is actual-index-only; necessitation concerns grounding, not arbitrary mixed support.",
+        "No possible rival, actual new entity, or retraction of T17 warrant follows. The inherited positive perfection rationale and its independent eligibility premises remain distinct from actual efficient attribution."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "D15-OBL-MEN8",
+        "D15-OBL-P1-P2-N2-N3"
+      ],
+      "operational_model": "Old-language profiles and specified support/production orientation; Actual coverage where transferred; necessary-root hypothesis for grounding necessitation; Separate supplied acyclicity or well-foundedness premises where claimed",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        1,
+        2,
+        8
+      ],
+      "residual_scope": "Old-field/profile preservation is not unrestricted elementary or full-domain conservative extension. Root uniqueness is actual-index-only; necessitation concerns grounding, not arbitrary mixed support. No possible rival, actual new entity, or retraction of T17 warrant follows. The inherited positive perfection rationale and its independent eligibility premises remain distinct from actual efficient attribution.",
+      "review_ids": [
+        "T20-ORIGINAL-GROUND-ROBUSTNESS-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-15eeafdc7592741cc471",
+        "T20-SRC-b2ab638c0d7021a9ba0b",
+        "T20-SRC-d648b3345224e663dd99",
+        "T20-SRC-0730ca2d70adab953e9e",
+        "T20-SRC-a6475955ae9502da9c08",
+        "T20-SRC-fc25e2aaafb7ba349f09"
+      ],
+      "suite_ids": [],
+      "target": "t20-original-ground-robustness",
+      "title": "Uniform old-field preservation with a necessary original ground",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Fixed grounded inference rules and primitive-claim interpretation",
+        "Finite support/removal sets and a fixed supplied carrier-to-root map",
+        "Saturated availability for quotient transport; sound primitives and rules for conditional truth"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "Finite grounded derivability after support removal is characterized exactly by surviving inclusion-minimal supports. Archiving all inclusion-minimal label cuts before a later fixed origin map, then mapping and minimizing, recovers exactly minimal root cuts. The four-label control shows cheapest-label-cut summaries alone can lose the eventual optimum.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "grounded-attestation:EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+        "grounded-attestation:THEOREM_MAP.md",
+        "grounded-attestation:lean/GroundedSupport.lean",
+        "grounded-attestation:lean/GroundedQuotient.lean",
+        "grounded-attestation:lean/AliasCuts.lean",
+        "grounded-attestation:lean/OccurrenceControls.lean",
+        "grounded-attestation:lean/CutControls.lean",
+        "grounded-attestation:lean/MutationControls.lean",
+        "grounded-attestation:review/INDEPENDENT_REVIEW.md",
+        "grounded-attestation:review/INDEPENDENT_REVIEW_RECEIPT.json"
+      ],
+      "family": "t20-grounded-continuation-support",
+      "id": "T20-GROUNDED-CONTINUATION-SUPPORT",
+      "input_contract": "Fixed grounded inference rules and primitive-claim interpretation; Finite support/removal sets and a fixed supplied carrier-to-root map; Saturated availability for quotient transport; sound primitives and rules for conditional truth",
+      "limitations": [
+        "No source authentication, actual duty/jurisdiction, physical continuation or changing-map robustness follows.",
+        "Loss of represented derivations does not imply falsehood; alternative epistemic routes remain possible.",
+        "General Python-to-Lean refinement and complexity remain unproved. Small-size minimality and algorithm correctness retain their written/finite scope.",
+        "Occurrence fixtures distinguish historical duty, prospective grant, evidence invalidation and current applicability; inherited T6–T9 ownership remains."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "D15-OBL-T0-D1-D2",
+        "U14"
+      ],
+      "operational_model": "Fixed grounded inference rules and primitive-claim interpretation; Finite support/removal sets and a fixed supplied carrier-to-root map; Saturated availability for quotient transport; sound primitives and rules for conditional truth",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        11
+      ],
+      "residual_scope": "No source authentication, actual duty/jurisdiction, physical continuation or changing-map robustness follows. Loss of represented derivations does not imply falsehood; alternative epistemic routes remain possible. General Python-to-Lean refinement and complexity remain unproved. Small-size minimality and algorithm correctness retain their written/finite scope. Occurrence fixtures distinguish historical duty, prospective grant, evidence invalidation and current applicability; inherited T6–T9 ownership remains.",
+      "review_ids": [
+        "T20-GROUNDED-CONTINUATION-SUPPORT-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-bc4086887c386c93d46c",
+        "T20-SRC-b6f27c05927bd0c8597a",
+        "T20-SRC-ec7ea1ccc5394bc96e22",
+        "T20-SRC-44b428c48a577bb328ab",
+        "T20-SRC-14625a53c7de90bd81a2",
+        "T20-SRC-c256c07d71fa302bb583",
+        "T20-SRC-6cccb1d53aa222df1f80",
+        "T20-SRC-f0e52a73256f7e2adbe9",
+        "T20-SRC-8edaa1ccf0ec77ae1ef0",
+        "T20-SRC-b4bfa34d6f373c6ad62a"
+      ],
+      "suite_ids": [],
+      "target": "t20-grounded-continuation-support",
+      "title": "Grounded support, exact retraction and later source-root cut transport",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Frozen exact scalar-fusion result and unchanged HasE rule interfaces",
+        "The explicitly stipulated PER/Henkin candidate family with one shared application"
+      ],
+      "calculus": "P01AC.ExtensionalRepair.HasE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Written analysis rejects introduction inversion from the fixed proof polynomial and two proposed strict shared-application iterators: both fail Church membership at the forced higher-order identity carrier before a whole-rule model is established.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "literal-HasE-written-negative-route:NEW_PASS_RESULT.md"
+      ],
+      "family": "t20-hase-further-failed-routes",
+      "id": "T20-HASE-FURTHER-FAILED-ROUTES",
+      "input_contract": "Frozen exact scalar-fusion result and unchanged HasE rule interfaces; The explicitly stipulated PER/Henkin candidate family with one shared application",
+      "limitations": [
+        "The literal HasE target remains OPEN; no inhabitant, whole-rule separator, derivation-normalization theorem or noninhabitation result was obtained.",
+        "Method-specific written failures are not an exhaustive search, new kernel result or general semantic impossibility theorem."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "operational_model": "Frozen exact scalar-fusion result and unchanged HasE rule interfaces; The explicitly stipulated PER/Henkin candidate family with one shared application",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        8,
+        9
+      ],
+      "residual_scope": "The literal HasE target remains OPEN; no inhabitant, whole-rule separator, derivation-normalization theorem or noninhabitation result was obtained. Method-specific written failures are not an exhaustive search, new kernel result or general semantic impossibility theorem.",
+      "review_ids": [
+        "T20-HASE-FURTHER-FAILED-ROUTES-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-104a99583a1b7c4093c7"
+      ],
+      "suite_ids": [],
+      "target": "t20-hase-further-failed-routes",
+      "title": "Three bounded failed routes after the fixed HasE witness reduction",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Actual received-target occurrence and positive Completion",
+        "Realisation and same-respect SupportTransport",
+        "ReceiptRepresentation for inherited binary target, ContingencyNeed and ConstitutiveReception"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "abc_same_witness carries one target/resource/bearer through actual original completion, necessary existence, inherited binary UniformRoot and broad essential nonreceipt. The typed resource-to-bearer A bridge and composition are new scoped work; inherited B/C retain their SourceIdentity ownership.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "original-bearer-bridge:OriginalBearerBridge.lean",
+        "original-bearer-bridge:THEOREM_SOURCE_MAP.json",
+        "original-bearer-bridge:BOUNDARY_LEDGER.json",
+        "original-bearer-bridge:COUNTERMODEL_MATRIX.json",
+        "original-bearer-bridge:review/REVIEW.md",
+        "original-bearer-bridge:review/fresh-replay/VERIFICATION.json",
+        "original-bearer-bridge:review/INDEPENDENT_SCOPE_VERIFICATION.json"
+      ],
+      "family": "t20-typed-original-bearer-abc",
+      "id": "T20-TYPED-ORIGINAL-BEARER-ABC",
+      "input_contract": "Actual received-target occurrence and positive Completion; Realisation and same-respect SupportTransport; ReceiptRepresentation for inherited binary target, ContingencyNeed and ConstitutiveReception",
+      "limitations": [
+        "A uses neither modal premises nor representation; the broader independently checked formulation does not require the binary representation premise.",
+        "Essential nonreceipt conditional on existence does not need necessary existence.",
+        "No source uniqueness, common Creatorhood, attribute/veracity ascent, metaphysical possibility or new premise warrant follows.",
+        "The import-only inherited derivative does not constitute a fresh replay of all historical Mathlib-dependent science."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "D15-OBL-P1-P2-N2-N3"
+      ],
+      "operational_model": "Actual received-target occurrence and positive Completion; Realisation and same-respect SupportTransport; ReceiptRepresentation for inherited binary target, ContingencyNeed and ConstitutiveReception",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        1,
+        2,
+        8
+      ],
+      "residual_scope": "A uses neither modal premises nor representation; the broader independently checked formulation does not require the binary representation premise. Essential nonreceipt conditional on existence does not need necessary existence. No source uniqueness, common Creatorhood, attribute/veracity ascent, metaphysical possibility or new premise warrant follows. The import-only inherited derivative does not constitute a fresh replay of all historical Mathlib-dependent science.",
+      "review_ids": [
+        "T20-TYPED-ORIGINAL-BEARER-ABC-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-eb896eabd4ffa2cc6d79",
+        "T20-SRC-9d279173652a528fa044",
+        "T20-SRC-79e15bc9d659cac311c6",
+        "T20-SRC-f1163294344091a3395d",
+        "T20-SRC-19a0b495b1cba3cc53ca",
+        "T20-SRC-99af393fe9d2c5252e0e",
+        "T20-SRC-fddc9146c867222828d7"
+      ],
+      "suite_ids": [],
+      "target": "t20-typed-original-bearer-abc",
+      "title": "Typed original-resource bridge preserving one actual bearer through ABC",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Qualified, Classification, Conformance, UseSound, RoleApplicable, ActualAnchor and ConnectedFrom",
+        "FieldCND and Visible for guarded uniqueness",
+        "Admissible and sound/exhaustive requisite inventory as explicit certificates"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "Qualified classification and actual conformance, faithful use/role links, actual anchoring and connected shared-contribution paths give complete provision by the fixed source throughout the selected field. Coverage requires no CND. FieldCND identifies represented rivals; Visible supplies the further bridge to actual original contributors.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "anchored-source-bridge:src/AnchoredSourceBridge.lean",
+        "anchored-source-bridge:SOURCE_AND_PREMISE_MAP.md",
+        "anchored-source-bridge:BOUNDARY_LEDGER.json",
+        "anchored-source-bridge:CONTROL_MATRIX.md",
+        "anchored-source-bridge:review/REVIEW.md",
+        "anchored-source-bridge:review/CLAIM_REVIEW.json",
+        "anchored-source-bridge:review/trust-zero-build/INDEPENDENT_BUILD_MANIFEST.json"
+      ],
+      "family": "t20-anchored-field-source",
+      "id": "T20-ANCHORED-FIELD-SOURCE",
+      "input_contract": "Qualified, Classification, Conformance, UseSound, RoleApplicable, ActualAnchor and ConnectedFrom; FieldCND and Visible for guarded uniqueness; Admissible and sound/exhaustive requisite inventory as explicit certificates",
+      "limitations": [
+        "General universe-polymorphic incidence theorem, not merely finite enumeration; application remains confined to the warranted field.",
+        "No full incidence-to-Sixth ancestry refinement, absolute uniqueness of all necessary reality, actual authentication or new source-mode warrant.",
+        "Inventory exhaustiveness is relative to the supplied contribution type; standing ability is not actual solo production."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "D15-OBL-MEN7"
+      ],
+      "operational_model": "Qualified, Classification, Conformance, UseSound, RoleApplicable, ActualAnchor and ConnectedFrom; FieldCND and Visible for guarded uniqueness; Admissible and sound/exhaustive requisite inventory as explicit certificates",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        1,
+        2,
+        8
+      ],
+      "residual_scope": "General universe-polymorphic incidence theorem, not merely finite enumeration; application remains confined to the warranted field. No full incidence-to-Sixth ancestry refinement, absolute uniqueness of all necessary reality, actual authentication or new source-mode warrant. Inventory exhaustiveness is relative to the supplied contribution type; standing ability is not actual solo production.",
+      "review_ids": [
+        "T20-ANCHORED-FIELD-SOURCE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-b5b27fbe3320b2ab2804",
+        "T20-SRC-63aadf9057e5771d260d",
+        "T20-SRC-25f500169e815e2c70f3",
+        "T20-SRC-e20f537233d44523d946",
+        "T20-SRC-ea56b2e099c334426c79",
+        "T20-SRC-108cfe780bb4999cc80c",
+        "T20-SRC-40b5dd8e1b518d85abef"
+      ],
+      "suite_ids": [],
+      "target": "t20-anchored-field-source",
+      "title": "Guarded fixed-source coverage and field-relative uniqueness",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "K negative-truth knowledge coverage; A exact-content awareness; C deliberate presentation",
+        "D counterfeit-to-shortcoming classification; N incompatibility with fitting exercise",
+        "P actual practical conformance and same-source ExerciseBridge"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "controlled_token_true derives exact contextual truth for the same owned token from K/D/N/P/ExerciseBridge with local awareness and deliberate presentation. Universal A/C coverage yields veracity; under K/A/C/Factive, veracity is equivalent to absence of knowing counterfeit.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "veracity-boundary:src/VeracityBoundary.lean",
+        "veracity-boundary:THEOREM_MAP.md",
+        "veracity-boundary:SOURCE_PREMISE_MAP.json",
+        "veracity-boundary:review/REVIEW_REPORT.md",
+        "veracity-boundary:review/REVIEW_RESULT.json",
+        "veracity-boundary:review/fresh-trust0-v3/REVIEW_VERIFICATION.json",
+        "veracity-boundary:erratum/ERRATUM.md"
+      ],
+      "family": "t20-veracity-dependency-audit",
+      "id": "T20-VERACITY-DEPENDENCY-AUDIT",
+      "input_contract": "K negative-truth knowledge coverage; A exact-content awareness; C deliberate presentation; D counterfeit-to-shortcoming classification; N incompatibility with fitting exercise; P actual practical conformance and same-source ExerciseBridge",
+      "limitations": [
+        "Factivity is not required for the positive truth theorem; D does not itself establish N.",
+        "Strong informed ownership exposes A/C without defining truth; equality with base ownership needs separate coverage.",
+        "Weak-signature deletion controls are not full-profile counterexamples. Productive provision does not authenticate messages or transfer assertion ownership; T0/D1/D2 remain separate.",
+        "The source-indexing erratum changes the unsupported numbering explanation, not the scientific review or active source citations."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "D15-OBL-T0-D1-D2",
+        "D15-OBL-NORM-GROUND"
+      ],
+      "operational_model": "K negative-truth knowledge coverage; A exact-content awareness; C deliberate presentation; D counterfeit-to-shortcoming classification; N incompatibility with fitting exercise; P actual practical conformance and same-source ExerciseBridge",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        2,
+        3,
+        8,
+        11
+      ],
+      "residual_scope": "Factivity is not required for the positive truth theorem; D does not itself establish N. Strong informed ownership exposes A/C without defining truth; equality with base ownership needs separate coverage. Weak-signature deletion controls are not full-profile counterexamples. Productive provision does not authenticate messages or transfer assertion ownership; T0/D1/D2 remain separate. The source-indexing erratum changes the unsupported numbering explanation, not the scientific review or active source citations.",
+      "review_ids": [
+        "T20-VERACITY-DEPENDENCY-AUDIT-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-f1a8c8439f07297397c0",
+        "T20-SRC-cce675d398ac2a8c8e0c",
+        "T20-SRC-06aeb9b1ae37782c87da",
+        "T20-SRC-c44a6a205b627753ebe4",
+        "T20-SRC-edb6d4ced78723169641",
+        "T20-SRC-e1590154fe105394e83b",
+        "T20-SRC-3fce6d23ff7680feec40"
+      ],
+      "suite_ids": [],
+      "target": "t20-veracity-dependency-audit",
+      "title": "Exact token-truth and veracity dependencies without conflating D and N",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Pinned upstream family 245 source/interface and bounded reading identities",
+        "Unchanged exact HasE target and inherited raw-reduction ownership"
+      ],
+      "calculus": "P01AC.ExtensionalRepair.HasE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The inspected system-wide PTS weak-to-strong normalization theorem supplies no justified direct import or derivation-normalization bridge for exact HasE: its annotated global hypothesis and subject-preserving type conversion differ from HasE term-changing conversion and proof-coordinate erasure.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "openai-corpus-transfer-synthesis:CORPUS_AND_TRANSFER_SCOPE.md",
+        "openai-corpus-transfer-synthesis:FAMILY245_TRANSFER_DECISION.json",
+        "openai-corpus-transfer-synthesis:SOURCE_IDENTITIES.json"
+      ],
+      "family": "t20-pts-normalization-transfer",
+      "id": "T20-PTS-NORMALIZATION-TRANSFER",
+      "input_contract": "Pinned upstream family 245 source/interface and bounded reading identities; Unchanged exact HasE target and inherited raw-reduction ownership",
+      "limitations": [
+        "No upstream or target Lean/Comparator execution occurred for this transfer assessment.",
+        "Raw Omega, divergent annotations and discarded-Omega identity controls are written instantiations using inherited lemmas, not fresh kernel declarations.",
+        "Literal x/x+0 HasE remains OPEN; no noninhabitation theorem or finite derivation bound. Existing FiniteDerives normalization retains its prior owner."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [
+        "U09",
+        "U11-IDENTITY-SCOPED"
+      ],
+      "operational_model": "Pinned upstream family 245 source/interface and bounded reading identities; Unchanged exact HasE target and inherited raw-reduction ownership",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        8,
+        9
+      ],
+      "residual_scope": "No upstream or target Lean/Comparator execution occurred for this transfer assessment. Raw Omega, divergent annotations and discarded-Omega identity controls are written instantiations using inherited lemmas, not fresh kernel declarations. Literal x/x+0 HasE remains OPEN; no noninhabitation theorem or finite derivation bound. Existing FiniteDerives normalization retains its prior owner.",
+      "review_ids": [
+        "T20-PTS-NORMALIZATION-TRANSFER-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-485b0d12ad4edab95b0e",
+        "T20-SRC-a18edaeadc88ae3a5bac",
+        "T20-SRC-e90f507509aff2ccf556"
+      ],
+      "suite_ids": [],
+      "target": "t20-pts-normalization-transfer",
+      "title": "Bounded negative applicability of upstream PTS normalization to exact HasE",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Complete ordered deletion channel including empty output and trace length",
+        "Declared two-word pair and equal prior; positive copying count for injectivity",
+        "Decision probabilities in [0,1]; finite linearly ordered-field algebra"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "For the complete deletion channel on words 00 and 01 at retention 1/4, one-trace TV is 1/4. Any positive number of copies of that same realized trace preserves TV and optimal equal-prior success 5/8, with attainment checked. Zero copies give TV 0 and success 1/2. Equal encoded words with different stipulated source labels have identical channel laws; observing 0 from known 00 leaves two position masks of conditional weight 1/2.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "math122-observation-controls:formal/TraceControls.lean",
+        "math122-observation-controls:formal/RationalFixtures.lean",
+        "math122-observation-controls:README.md",
+        "math122-observation-controls:MODEL_DERIVATION_AND_PROPOSAL.md",
+        "math122-observation-controls:review/REVIEW.md",
+        "math122-observation-controls:review/replay/INDEPENDENT_REPLAY.json",
+        "math122-observation-controls:review/EXTRA_KERNEL_RECEIPT.json",
+        "math122-observation-controls:review/COUNTERCHECKS.json"
+      ],
+      "family": "t20-trace-observation-copying",
+      "id": "T20-TRACE-OBSERVATION-COPYING",
+      "input_contract": "Complete ordered deletion channel including empty output and trace length; Declared two-word pair and equal prior; positive copying count for injectivity; Decision probabilities in [0,1]; finite linearly ordered-field algebra",
+      "limitations": [
+        "The general fresh-independent-product formula remains written mathematics with bounded checks, not a new all-M Lean product theorem.",
+        "No decoder, asymptotic ordered-field convergence, upstream theorem adoption or source/authenticity conclusion follows.",
+        "H-ICS/T9 retain the general information principle; the contribution is this elementary application and its independent controls. Content at the channel boundary is not contextual meaning, ownership, truth or authority."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "H-ICS-V5",
+        "U05"
+      ],
+      "operational_model": "Complete ordered deletion channel including empty output and trace length; Declared two-word pair and equal prior; positive copying count for injectivity; Decision probabilities in [0,1]; finite linearly ordered-field algebra",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "residual_scope": "The general fresh-independent-product formula remains written mathematics with bounded checks, not a new all-M Lean product theorem. No decoder, asymptotic ordered-field convergence, upstream theorem adoption or source/authenticity conclusion follows. H-ICS/T9 retain the general information principle; the contribution is this elementary application and its independent controls. Content at the channel boundary is not contextual meaning, ownership, truth or authority.",
+      "review_ids": [
+        "T20-TRACE-OBSERVATION-COPYING-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-6b7aebabf495038dbc09",
+        "T20-SRC-a4c67c5ec7349f377052",
+        "T20-SRC-92f9081d162a6eef7a1d",
+        "T20-SRC-9f475b24d9ec1f8acb43",
+        "T20-SRC-76e8901033b9613913e0",
+        "T20-SRC-34b20f9f0863d97db0b4",
+        "T20-SRC-c7e7d3f345dc4ae2fea7",
+        "T20-SRC-8df6d7f3f65ed2955c71"
+      ],
+      "suite_ids": [],
+      "target": "t20-trace-observation-copying",
+      "title": "Sharp finite copied-trace observation and attribution controls",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Explicit finite component premises and cross-interface resource/provision, field, support and complete incoming-inventory bindings",
+        "Same-framework content, contextual truth, exercise, token and ownership links",
+        "Normative and semantic premises independently interpreted rather than derived from ABC"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "One nontrivial finite selected-signature interpretation realizes all three interfaces with literally the same g and canonical x/rg/g witness. The received contingent x remains a productive created agent and owner of a false assertion; a distinct necessary original h is genuinely active outside the selected field.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "joint-foundational-model:src/JointFiniteInterpretation.lean",
+        "joint-foundational-model:THEOREM_MAP.md",
+        "joint-foundational-model:BOUNDARY_LEDGER.json",
+        "joint-foundational-model:review/REVIEW.md",
+        "joint-foundational-model:review/CLAIM_REVIEW.json",
+        "joint-foundational-model:review/fresh-trust0-v1/REVIEW_VERIFICATION.json",
+        "joint-foundational-model:review/joining-tests-final/JOINING_VERIFICATION.json"
+      ],
+      "family": "t20-joint-same-bearer-model",
+      "id": "T20-JOINT-SAME-BEARER-MODEL",
+      "input_contract": "Explicit finite component premises and cross-interface resource/provision, field, support and complete incoming-inventory bindings; Same-framework content, contextual truth, exercise, token and ownership links; Normative and semantic premises independently interpreted rather than derived from ABC",
+      "limitations": [
+        "Relative selected-signature consistency/nonvacuity is not full philosophical-profile consistency or metaphysical possibility.",
+        "No numerical uniqueness simpliciter, unrestricted power/knowledge, authentication or general Sixth refinement.",
+        "Optional ancestry certification concerns this finite graph only; later source-mode/veracity premise warrant remains separate."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [
+        "D15-OBL-MEN8",
+        "D15-OBL-T0-D1-D2"
+      ],
+      "operational_model": "Explicit finite component premises and cross-interface resource/provision, field, support and complete incoming-inventory bindings; Same-framework content, contextual truth, exercise, token and ownership links; Normative and semantic premises independently interpreted rather than derived from ABC",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        1,
+        2,
+        3,
+        8,
+        11
+      ],
+      "residual_scope": "Relative selected-signature consistency/nonvacuity is not full philosophical-profile consistency or metaphysical possibility. No numerical uniqueness simpliciter, unrestricted power/knowledge, authentication or general Sixth refinement. Optional ancestry certification concerns this finite graph only; later source-mode/veracity premise warrant remains separate.",
+      "review_ids": [
+        "T20-JOINT-SAME-BEARER-MODEL-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-abbb67cfdcea61008a86",
+        "T20-SRC-1110123518eb9b01ec62",
+        "T20-SRC-940b7adee45c7ae67502",
+        "T20-SRC-85b5b4b5427d6eb94f3d",
+        "T20-SRC-9fae8ebd07741c7a50ec",
+        "T20-SRC-e2f708ca8c4c9ba0c450",
+        "T20-SRC-d609c33836f0f33a09c4"
+      ],
+      "suite_ids": [],
+      "target": "t20-joint-same-bearer-model",
+      "title": "One finite interpretation joins literal ABC, field source and assertion owner",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Pinned family 104 manuscripts and inspected formal interfaces",
+        "Exact inherited target information, objective and literal certificate/controller contracts"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The bounded family 104 assessment establishes no new completeness transfer. T9 already owns checker/semantic equivalence and T16 owns terminating signed search and literal accepted-body controller compilation. Ordinary fully observed mean-payoff endpoints do not supply the missing hidden-fixed-model almost-sure semantics bridge.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "openai-corpus-transfer-synthesis:FAMILY104_TRANSFER_DECISION.json",
+        "openai-corpus-transfer-synthesis:FAMILY104_READING_VALIDATION.json",
+        "openai-corpus-transfer-synthesis:FAMILY104_CURRENT_SCOPE.md",
+        "openai-corpus-transfer-synthesis:CORPUS_AND_TRANSFER_SCOPE.md"
+      ],
+      "family": "t20-controller-completeness-transfer",
+      "id": "T20-CONTROLLER-COMPLETENESS-TRANSFER",
+      "input_contract": "Pinned family 104 manuscripts and inspected formal interfaces; Exact inherited target information, objective and literal certificate/controller contracts",
+      "limitations": [
+        "Written source/transfer assessment only: no fresh upstream or target theorem execution.",
+        "Adversarial mean payoff, expected liminf, almost-sure parity, energy prefixes and finite-memory conjunction are distinct services.",
+        "The known-arena complexity/potential-certificate lead remains conditional on an unsupplied information/objective-preserving reduction.",
+        "Locating an omitted deterministic endpoint corrects source metadata, not target completeness or fresh kernel status."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [
+        "U03",
+        "U04"
+      ],
+      "operational_model": "Pinned family 104 manuscripts and inspected formal interfaces; Exact inherited target information, objective and literal certificate/controller contracts",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        4,
+        8,
+        10
+      ],
+      "residual_scope": "Written source/transfer assessment only: no fresh upstream or target theorem execution. Adversarial mean payoff, expected liminf, almost-sure parity, energy prefixes and finite-memory conjunction are distinct services. The known-arena complexity/potential-certificate lead remains conditional on an unsupplied information/objective-preserving reduction. Locating an omitted deterministic endpoint corrects source metadata, not target completeness or fresh kernel status.",
+      "review_ids": [
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-41bb7f18372294a3fb83",
+        "T20-SRC-f5a49f98f8dd3b85741c",
+        "T20-SRC-e5c0f7a4e0822778a732",
+        "T20-SRC-485b0d12ad4edab95b0e"
+      ],
+      "suite_ids": [],
+      "target": "t20-controller-completeness-transfer",
+      "title": "No new controller-completeness transfer from ordinary game endpoints",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Distinct conditional mathematical statements, inherited ownership and separately appraised philosophical premises",
+        "Exact original versus public-projection source identities; reading credit remains role- and passage-bounded"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The sealed foundational synthesis preserves 24 conclusions, 34 premises, 103 signatures/readbacks, 39 controls and 75 original source identities across ten questions. The dated 2026-10-07 source-context successor provisionally accepts sufficient warrant for an actual Necessary Being and one complete original source of the relevant actual connected created order, retaining the 14:34 actual-common-source judgement with lower confidence than the Necessary Being judgement. It withholds sufficient warrant for universal SourceMode. The stronger cooperation reconstruction and bounded warrant review refine the disputed bridges without producing a full-premise countermodel or a new formal result. The prior epistemic-admissibility assessment of relatively basic Creator recognition remains unchanged.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "foundational-final-synthesis:SYNTHESIS.md",
+        "foundational-final-synthesis:CONCLUSION_PREMISE_STATUS_MAP.json",
+        "foundational-final-synthesis:INTEGRATION_MANIFEST.json",
+        "foundational-final-synthesis:SOURCE_INDEX.json",
+        "foundational-final-synthesis:HISTORICAL_VALIDATION.json",
+        "foundational-final-synthesis:PROJECTION_NOTES.md",
+        "final-reader:t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+        "final-reader:t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+        "final-reader:t20/reading/warrant-threshold-audit/AUDIT.md",
+        "final-reader:t20/reading/warrant-threshold-audit/comparative-response/RESPONSE.md",
+        "final-reader:t20/reports/REPORT.md",
+        "final-reader:t20/reports/REPORT_FINAL_SOURCE_READBACK.md",
+        "final-reader:t20/reading/GUIDE.md",
+        "final-reader:t20/reading/READING_INDEX.json",
+        "context-reader:t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+        "context-reader:t20/cooperation-reassessment/PREMISE_MAP.json",
+        "context-reader:t20/cooperation-reassessment/DIRECT_READING_RECEIPT.json",
+        "context-reader:t20/cooperation-reassessment/MODEL_AUDIT.md",
+        "context-reader:t20/cooperation-reassessment/MODEL_AUDIT.json",
+        "context-reader:t20/cooperation-reassessment/ROOT_REASSESSMENT.md",
+        "context-reader:t20/cooperation-reassessment/ROOT_READING_RECEIPT.json",
+        "context-reader:t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md",
+        "context-reader:t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.json",
+        "context-reader:t20/targeted-final-loci/uthaymin/READING_RECEIPTS.json",
+        "context-reader:t20/targeted-final-loci/causal-action/LOCUS_AUDIT.md",
+        "context-reader:t20/targeted-final-loci/causal-action/LOCUS_AUDIT.json",
+        "context-reader:t20/targeted-final-loci/causal-action/SOURCE_IDENTITY.json",
+        "context-reader:t20/targeted-final-loci/causal-action/TEXT_READ_RECEIPTS.json",
+        "context-reader:t20/targeted-final-loci/causal-action/IMAGE_READ_RECEIPTS.json",
+        "context-reader:t20/targeted-final-loci/causal-action/PAGE_CORRESPONDENCE.json",
+        "context-reader:t20/targeted-final-loci/causal-action/PREMISE_EDGES.json",
+        "context-reader:t20/cooperation-reassessment/independent-warrant-review/REVIEW.md",
+        "context-reader:t20/cooperation-reassessment/independent-warrant-review/EVIDENCE_BINDINGS.json",
+        "context-reader:t20/cooperation-reassessment/independent-warrant-review/VERIFICATION_RECEIPT.json",
+        "context-reader:t20/final-context-audit/CONTEXT_SCOPE.md"
+      ],
+      "family": "t20-foundational-premise-synthesis",
+      "id": "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+      "input_contract": "Distinct conditional mathematical statements, inherited ownership and separately appraised philosophical premises; Exact original versus public-projection source identities; reading credit remains role- and passage-bounded",
+      "limitations": [
+        "The 08:40 common-source withholding, the pre-Miftah comparative assessment and T19 affirmative common-source judgement remain historical records. The final change concerns cumulative actual-order evidential weighting; universal SourceMode is not thereby closed and conditional theorem credit is unchanged.",
+        "Relatively basic recognition supplies neither a universally reliable faculty nor warrant for every particular recognition.",
+        "No fresh scientific execution, complete perfection ascent, general Sixth refinement, exhaustive modal/contribution semantics, actual D1/D2 authentication or kernel certificate of actual metaphysical existence follows.",
+        "The final report and eight ordered study groups are supplied with exact role-, witness-, body- and scan-level reading limits. Their source-bound appraisal is not external human peer review or a new independent experiment.",
+        "No full-premise countermodel was produced among the nine inspected candidates; this is not proof of every source premise, a general impossibility theorem, or independent positive warrant. Existing weaker separation results retain their exact signatures.",
+        "The source explicitly addresses harmonious cooperation, necessary agreement, complete willing, differentiated contributions and concentrated power. B6 exclusive completion needs stronger independently sufficient original-production semantics than outcome entailment alone; B5 concentration, each existing bearer's eligibility and constitutive dependence are distinct burdens. Disputed P2b must not be inserted into the upstream premises when testing its derivation.",
+        "The independent warrant review covers its stated Majmu/Minhaj reconstruction and selected definitions; it did not independently certify the Nisāʾ/Shūrā locus or global-cessation construction. Later source-reading, textual edition-page verification and available scan checks retain their separate dated receipt scopes."
+      ],
+      "math_form": "SOURCE_ASSESSMENT",
+      "obligation_ids": [
+        "D15-OBL-MEN7",
+        "D15-OBL-MEN8",
+        "D15-OBL-P1-P2-N2-N3",
+        "D15-OBL-T0-D1-D2",
+        "D15-OBL-NONINFERENTIAL-KNOWLEDGE"
+      ],
+      "operational_model": "Distinct conditional mathematical statements, inherited ownership and separately appraised philosophical premises; Exact original versus public-projection source identities; reading credit remains role- and passage-bounded",
+      "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+      "original_avenues": [
+        1,
+        2,
+        3,
+        8,
+        11
+      ],
+      "residual_scope": "The 08:40 common-source withholding, the pre-Miftah comparative assessment and T19 affirmative common-source judgement remain historical records. The final change concerns cumulative actual-order evidential weighting; universal SourceMode is not thereby closed and conditional theorem credit is unchanged. Relatively basic recognition supplies neither a universally reliable faculty nor warrant for every particular recognition. No fresh scientific execution, complete perfection ascent, general Sixth refinement, exhaustive modal/contribution semantics, actual D1/D2 authentication or kernel certificate of actual metaphysical existence follows. The final report and eight ordered study groups are supplied with exact role-, witness-, body- and scan-level reading limits. Their source-bound appraisal is not external human peer review or a new independent experiment. No full-premise countermodel was produced among the nine inspected candidates; this is not proof of every source premise, a general impossibility theorem, or independent positive warrant. Existing weaker separation results retain their exact signatures. The source explicitly addresses harmonious cooperation, necessary agreement, complete willing, differentiated contributions and concentrated power. B6 exclusive completion needs stronger independently sufficient original-production semantics than outcome entailment alone; B5 concentration, each existing bearer's eligibility and constitutive dependence are distinct burdens. Disputed P2b must not be inserted into the upstream premises when testing its derivation. The independent warrant review covers its stated Majmu/Minhaj reconstruction and selected definitions; it did not independently certify the Nisāʾ/Shūrā locus or global-cessation construction. Later source-reading, textual edition-page verification and available scan checks retain their separate dated receipt scopes.",
+      "review_ids": [
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS-INHERITED-SCOPE-REVIEW",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS-FINAL-READER-SCOPE-REVIEW",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS-CONTEXT-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-SRC-2a4fc4fca28aabcb644f",
+        "T20-SRC-15d7c3bcb3d0b0aaf672",
+        "T20-SRC-adbd43d2567ea9e826bf",
+        "T20-SRC-3b9cb4e37020e923ac70",
+        "T20-SRC-7398630d7a872db1b1f0",
+        "T20-SRC-949c82b102a15cba4e87",
+        "T20-DOC-64d8e628bb43c3a9270d",
+        "T20-DOC-2fa9f874572d394bfeff",
+        "T20-DOC-e22739ed52e175cf8aef",
+        "T20-DOC-cd2ee30674c29ae395e8",
+        "T20-DOC-f706ff5d91decee4c435",
+        "T20-DOC-c53b1a8e937ca9938486",
+        "T20-DOC-85c5f9bc02142c86236c",
+        "T20-DOC-e6994a667ab613332196",
+        "T20-CONTEXT-3a1ea08707761cbd8136",
+        "T20-CONTEXT-c78d082c3509e008a538",
+        "T20-CONTEXT-964b2be656dbaa48bde2",
+        "T20-CONTEXT-bbb68d9fd0f6d9a6b8dc",
+        "T20-CONTEXT-f598e574387edb8b86a2",
+        "T20-CONTEXT-e88685ee1012d5b3360a",
+        "T20-CONTEXT-5915bc19300dd1405533",
+        "T20-CONTEXT-cd9be81b37d908520486",
+        "T20-CONTEXT-d1bcdd9a7d28cd39fb84",
+        "T20-CONTEXT-492877437f2af7bd3275",
+        "T20-CONTEXT-6ed0e70acef4dd26af49",
+        "T20-CONTEXT-5252be35bc2e08fa4f4f",
+        "T20-CONTEXT-fd74f33e8d683d1e9455",
+        "T20-CONTEXT-1e286551fffa954fdcae",
+        "T20-CONTEXT-a78c9a2f04d599a31495",
+        "T20-CONTEXT-2d7713c6089558e29f83",
+        "T20-CONTEXT-3383f4a2c2f0b5b22796",
+        "T20-CONTEXT-abca79f07e511a509cf0",
+        "T20-CONTEXT-5009f0d284bc26e8b8fd",
+        "T20-CONTEXT-db07ac98c02f41dbb149",
+        "T20-CONTEXT-8fe32dc31fccd0ad4749"
+      ],
+      "suite_ids": [],
+      "target": "t20-foundational-premise-synthesis",
+      "title": "Source-bound foundational synthesis with dated premise appraisal",
+      "tranche": 20
+    },
+    {
+      "assumptions": [
+        "Obj constructors distinguish ground, gAct(n), effect(n) and other(n); E, rather than mere membership in the potential-label domain, marks existence at a world.",
+        "Power and all-world existence of the ground are explicit interpretation inputs; GAct and capacity are predicates, not additional objects.",
+        "R(w,v) is the chosen strict serial-order relation. The actual trajectory is separately stipulated and is not inferred from modal availability.",
+        "Created and ExternalReceipt extensions are explicitly selected for this model; no universal theory of creation or every form of intrinsic dependence is thereby proved."
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "A chosen typed interpretation distinguishes essential bearer power, an act-kind predicate, successive intrinsic act tokens and created effects. It realises possible G-empty and stronger all-emergent-empty alternatives together with box-diamond availability of genuinely fresh, existent G tokens. Its separately chosen actual trajectory has a total emergent gap followed by a distinct new act; every occurring emergent token permanently ceases. A temporally novel intrinsic act can produce a created effect without itself satisfying Created or the model’s ExternalReceipt predicate. Exactly one stipulated object is all-world necessary; this is a representation control, not an actual metaphysical existence or possibility proof.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "final-reader:t20/ontology-type-control/AUDIT.md",
+        "final-reader:t20/ontology-type-control/OriginationTypeControl.lean",
+        "final-reader:t20/ontology-type-control/OverreachRejected.lean",
+        "final-reader:t20/ontology-type-control/DEFINITION_BINDINGS.json",
+        "final-reader:t20/ontology-type-control/SOURCE_BINDINGS.json",
+        "final-reader:t20/ontology-type-control/EXECUTION_RECEIPT.json",
+        "final-reader:t20/ontology-type-control/MANIFEST.json",
+        "final-reader:t20/ontology-type-control/METADATA_CORRECTION.json",
+        "final-reader:t20/ontology-type-control/SPAN_VALIDATION.json",
+        "final-reader:t20/ontology-type-control/final-check.log",
+        "final-reader:t20/ontology-type-control/overreach-rejection.log",
+        "final-reader:t20/ontology-type-control/ACT_PRODUCT_CONTEXT.json",
+        "final-reader:t20/ontology-type-control/review/EXECUTION_RECEIPT.json",
+        "final-reader:t20/ontology-type-control/review/SOURCE_BINDINGS.json",
+        "final-reader:t20/ontology-type-control/REPRODUCE.md",
+        "final-reader:t20/ontology-type-control/review/ReviewerProbes.lean",
+        "final-reader:t20/ontology-type-control/review/probes.log",
+        "final-reader:t20/ontology-type-control/review/REVIEW.md",
+        "final-reader:t20/ontology-type-control/review/REVIEW.json",
+        "context-reader:t20/cooperation-reassessment/ROOT_REASSESSMENT.md",
+        "context-reader:t20/cooperation-reassessment/ROOT_READING_RECEIPT.json",
+        "context-reader:t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md",
+        "context-reader:t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.json",
+        "context-reader:t20/targeted-final-loci/uthaymin/READING_RECEIPTS.json",
+        "context-reader:t20/targeted-final-loci/causal-action/LOCUS_AUDIT.md",
+        "context-reader:t20/targeted-final-loci/causal-action/LOCUS_AUDIT.json",
+        "context-reader:t20/targeted-final-loci/causal-action/SOURCE_IDENTITY.json",
+        "context-reader:t20/targeted-final-loci/causal-action/TEXT_READ_RECEIPTS.json",
+        "context-reader:t20/targeted-final-loci/causal-action/IMAGE_READ_RECEIPTS.json",
+        "context-reader:t20/targeted-final-loci/causal-action/PAGE_CORRESPONDENCE.json",
+        "context-reader:t20/targeted-final-loci/causal-action/PREMISE_EDGES.json",
+        "context-reader:t20/final-context-audit/CONTEXT_SCOPE.md"
+      ],
+      "family": "t20-emergence-type-control",
+      "id": "T20-EMERGENCE-TYPE-CONTROL",
+      "input_contract": "Obj constructors distinguish ground, gAct(n), effect(n) and other(n); E, rather than mere membership in the potential-label domain, marks existence at a world.; Power and all-world existence of the ground are explicit interpretation inputs; GAct and capacity are predicates, not additional objects.; R(w,v) is the chosen strict serial-order relation. The actual trajectory is separately stipulated and is not inferred from modal availability.; Created and ExternalReceipt extensions are explicitly selected for this model; no universal theory of creation or every form of intrinsic dependence is thereby proved.",
+      "limitations": [
+        "Emergent is a kind predicate; concrete temporal novelty is separately witnessed through E at different actual states.",
+        "The auxiliary other-kind is possible in some worlds but absent on the selected actual trajectory; its actual cessation case is vacuous. G-act and effect occurrences are live.",
+        "A chosen singleton necessary-object extension does not prove actual numerical uniqueness, a second necessary abstract type, or the metaphysical adequacy of the frame.",
+        "Safadiyya supports the intrinsic-act/created-product distinction. It does not by itself attribute historical simultaneous cessation of all emergent kinds.",
+        "Applying OriginalBearerBridge.ContingencyNeed to novel intrinsic act tokens requires an additional B-admission and whole-existence applicability assumption; the inherited conditional proof remains intact.",
+        "Metaphysical possibility, actual realization, empirical cosmology, source-authentication and full divine-action semantics remain unproved.",
+        "The 14:34 Necessary Being/actual common-source appraisal is unchanged; universal SourceMode remains withheld.",
+        "This clarifies an application-scope assumption, not a discovered failure of the old B conditional.",
+        "The 2026-10-07 source-context successor limits historical application: capacity with global inactivity does not preserve the stronger always-active or anti-inactivity commitments at the audited Nisāʾ lesson 33 and al-Ṣafadiyya loci. This is separate from per-kind absence or token cessation, and does not alter the chosen model's formal conclusion or original scientific anchors.",
+        "The renewed-act/created-effect distinction does not make every renewed intrinsic act an externally received essential perfection. The source-context refinement supplies no new Lean execution, full-premise countermodel, metaphysical possibility certificate or universal SourceMode warrant."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [],
+      "operational_model": "Chosen typed interpretation with Nat-indexed worlds and object identities, explicit modal existence and accessibility, and a separately chosen actual trajectory. Lean 4.19.0, direct Init import.",
+      "origin_status": "Original late author control and independent review PASS at the selected interpretation scope: nine named author theorems, seven selected author readbacks, seven independent reviewer probes and two rejected overclaims. This receiving registration performs no native scientific execution or replay and preserves all earlier conditional results.",
+      "original_avenues": [
+        1,
+        2,
+        8
+      ],
+      "residual_scope": "Emergent is a kind predicate; concrete temporal novelty is separately witnessed through E at different actual states. The auxiliary other-kind is possible in some worlds but absent on the selected actual trajectory; its actual cessation case is vacuous. G-act and effect occurrences are live. A chosen singleton necessary-object extension does not prove actual numerical uniqueness, a second necessary abstract type, or the metaphysical adequacy of the frame. Safadiyya supports the intrinsic-act/created-product distinction. It does not by itself attribute historical simultaneous cessation of all emergent kinds. Applying OriginalBearerBridge.ContingencyNeed to novel intrinsic act tokens requires an additional B-admission and whole-existence applicability assumption; the inherited conditional proof remains intact. Metaphysical possibility, actual realization, empirical cosmology, source-authentication and full divine-action semantics remain unproved. The 14:34 Necessary Being/actual common-source appraisal is unchanged; universal SourceMode remains withheld. This clarifies an application-scope assumption, not a discovered failure of the old B conditional. The 2026-10-07 source-context successor limits historical application: capacity with global inactivity does not preserve the stronger always-active or anti-inactivity commitments at the audited Nisāʾ lesson 33 and al-Ṣafadiyya loci. This is separate from per-kind absence or token cessation, and does not alter the chosen model's formal conclusion or original scientific anchors. The renewed-act/created-effect distinction does not make every renewed intrinsic act an externally received essential perfection. The source-context refinement supplies no new Lean execution, full-premise countermodel, metaphysical possibility certificate or universal SourceMode warrant.",
+      "review_ids": [
+        "T20-EMERGENCE-TYPE-CONTROL-INHERITED-SCOPE-REVIEW",
+        "T20-EMERGENCE-TYPE-CONTROL-CONTEXT-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-FINAL-71bd18caf46767970555",
+        "T20-FINAL-30374a0606c9760076bb",
+        "T20-FINAL-ab5767fc84bfbce4da8e",
+        "T20-FINAL-fe5ec462a86c3727a45a",
+        "T20-FINAL-21f365ab1b0b5dbc95c2",
+        "T20-FINAL-5b29b290dbe9cd7c8e92",
+        "T20-FINAL-ff08f5d6e04c16769683",
+        "T20-FINAL-d77cbbf34ccc59e62619",
+        "T20-FINAL-79ed4e68ea81ad53ab3e",
+        "T20-FINAL-2cd93d28bb04ac8740b0",
+        "T20-FINAL-7aef0762e5152250656e",
+        "T20-FINAL-5bb33aef0cf9b70bc639",
+        "T20-FINAL-2e1c86990882338ca9a5",
+        "T20-FINAL-2bad503fad2b4c567662",
+        "T20-FINAL-348846251f0eb72155ca",
+        "T20-FINAL-d8a54cae1a271174d1e7",
+        "T20-FINAL-44f3874d7355217e1060",
+        "T20-FINAL-cd2ad31f1a35b2c5686d",
+        "T20-FINAL-80a5f2b6d3a145a551d7",
+        "T20-CONTEXT-e88685ee1012d5b3360a",
+        "T20-CONTEXT-5915bc19300dd1405533",
+        "T20-CONTEXT-cd9be81b37d908520486",
+        "T20-CONTEXT-d1bcdd9a7d28cd39fb84",
+        "T20-CONTEXT-492877437f2af7bd3275",
+        "T20-CONTEXT-6ed0e70acef4dd26af49",
+        "T20-CONTEXT-5252be35bc2e08fa4f4f",
+        "T20-CONTEXT-fd74f33e8d683d1e9455",
+        "T20-CONTEXT-1e286551fffa954fdcae",
+        "T20-CONTEXT-a78c9a2f04d599a31495",
+        "T20-CONTEXT-2d7713c6089558e29f83",
+        "T20-CONTEXT-3383f4a2c2f0b5b22796",
+        "T20-CONTEXT-8fe32dc31fccd0ad4749"
+      ],
+      "suite_ids": [],
+      "target": "t20-emergence-type-control",
+      "title": "Typed emergence control separating intrinsic acts from created effects",
+      "tranche": 20
     }
   ],
   "statuses": [
@@ -14079,6 +16349,834 @@
       "implementation_reach": "REFERENCE_ONLY",
       "independent_evidence_count": 0,
       "inherited_evidence": "SOURCE_ASSESSMENT",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-ORIGINAL-COMPLETION",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-NECESSARY-BEARER",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-ESSENTIAL-INDEPENDENCE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-ELIGIBLE-STANDING-POWER",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-OWNED-VERACITY",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-WISE-VOLUNTARY-DETERMINATION",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-ORDINARY-TESTIMONIAL-WARRANT",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-FITTINGNESS-LOCAL-AUTHORITY",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-ASSIGNMENT-UNCERTAINTY",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-BLOCK-ORBIT-CONTRACT",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T17-CLOSED-PLACEMENT-CHECK",
+      "implementation_reach": "REFERENCE_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "MIXED_SCOPED",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-ONE-CHANGE-CRITERION",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-RATIONAL-LEAN-ENDPOINT",
+      "implementation_reach": "DECLARED_FORMAL_SUITE",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_DECLARED_SUITE",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-RATIONAL-P-COMPLETE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-REAL-NONUNIFORM",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-CAUCHY-DECISION-OBSTRUCTION",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-HIDDEN-PRIORITY-CALIBRATION",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-HASE-U-DOMAIN-CONTROL",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "MIXED_SCOPED",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-HASE-INHABITED-J-CONTROL",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "MIXED_SCOPED",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-IMPLEMENTATION-QUALIFICATION",
+      "implementation_reach": "REFERENCE_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "FINITE_REFERENCE_EXECUTION",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T18-NONCAUSAL-EXTENSION-STOP",
+      "implementation_reach": "REFERENCE_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "SOURCE_ASSESSMENT",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T19-CND",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T19-SOURCE-MODE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T19-COMMON-CONNECTED-SOURCE",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T19-ATTESTATION-DISCRIMINATION",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T19-WALID-RECEPTION-SCOPE",
+      "implementation_reach": "REFERENCE_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "SOURCE_ASSESSMENT",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "DERIVED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T19-ASSERTED-OBLIGATION-TRANSFER",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "CONDITIONAL_PHILOSOPHY",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T19-SOURCE-OCCURRENCE-CONTROLS",
+      "implementation_reach": "REFERENCE_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "SOURCE_ASSESSMENT",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "EXACT",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-CHURCH-RAW-PROBE",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-CND-ESSENTIALITY-SCOPE",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "EXACT",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-SCALAR-FUSION-IFF",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "EXACT",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-MODAL-CROSSING-COMPLETENESS",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-ORIGINAL-GROUND-ROBUSTNESS",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "EXACT",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-GROUNDED-CONTINUATION-SUPPORT",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "EXACT",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-HASE-FURTHER-FAILED-ROUTES",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "EXACT",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-TYPED-ORIGINAL-BEARER-ABC",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "EXACT",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-ANCHORED-FIELD-SOURCE",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "EXACT",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-VERACITY-DEPENDENCY-AUDIT",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-PTS-NORMALIZATION-TRANSFER",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-TRACE-OBSERVATION-COPYING",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-JOINT-SAME-BEARER-MODEL",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-CONTROLLER-COMPLETENESS-TRANSFER",
+      "implementation_reach": "WRITTEN_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "WRITTEN_MATHEMATICS",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+      "implementation_reach": "REFERENCE_ONLY",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "MIXED_SCOPED",
+      "receipt_ids": [],
+      "research_disposition": "CANDIDATE"
+    },
+    {
+      "custody": "MIXED",
+      "external_warrants": {
+        "actual_world": "NOT_ESTABLISHED",
+        "empirical_replication": "NOT_ESTABLISHED",
+        "normative": "NOT_ESTABLISHED",
+        "novelty": "NOT_ESTABLISHED",
+        "specialist_review": "NOT_ESTABLISHED",
+        "terminology_adoption": "NOT_ESTABLISHED"
+      },
+      "fresh_evidence": "NOT_RUN",
+      "id": "T20-EMERGENCE-TYPE-CONTROL",
+      "implementation_reach": "FORMAL_COMPONENT",
+      "independent_evidence_count": 0,
+      "inherited_evidence": "KERNEL_COMPONENTS",
       "receipt_ids": [],
       "research_disposition": "CANDIDATE"
     }

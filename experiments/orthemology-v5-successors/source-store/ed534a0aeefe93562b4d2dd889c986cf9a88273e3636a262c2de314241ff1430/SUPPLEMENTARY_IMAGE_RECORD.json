@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-07",
+  "scope": "Three-page bounded second reading only",
+  "pages": [
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "printed_page": 231,
+      "pdf_page_one_based": 309,
+      "method": "supplementary reader direct visual reading of complete page including visible apparatus",
+      "capture_sha256": "1b6ff5d5f0588106ac0a02fcc4d83b56df8de4bc50b5f27bd7e4f7e688362f50",
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "printed_page": 232,
+      "pdf_page_one_based": 310,
+      "method": "supplementary reader direct visual reading of complete page including visible apparatus",
+      "capture_sha256": "179ad82b0a1023b9357d47a965f8c64f267c1e522335c01c6afff81993f4f2da",
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "printed_page": 233,
+      "pdf_page_one_based": 311,
+      "method": "supplementary reader direct visual reading of complete page including visible apparatus",
+      "capture_sha256": "ca32311346d24ab219b3f29cde38582b866daebfd29d7e9aba91d1d73b3b516f",
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+    }
+  ],
+  "publication_note": "Historical study metadata retained for scope and source identity. No additional source reading, visual collation or philosophical proof is claimed by this projection."
+}

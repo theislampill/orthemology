@@ -1,0 +1,113 @@
+{
+  "task": "Original al-Sawaiq received volume 02 assigned electronic body",
+  "first_pass": "complete continuous untruncated Arabic output reading",
+  "first_pass_chunks": 46,
+  "total_lines": 1865,
+  "total_chars": 486181,
+  "total_words": 91150,
+  "output_truncations_observed": 0,
+  "sources": [
+    {
+      "source": "electronic section 002",
+      "source_sha256": "fb058f7f62ee879122699c37cd36dac9f8496f3976bc65e03bd74e63dde1cd85",
+      "start": 1010,
+      "end": 1350,
+      "line_count": 341,
+      "chars": 93800,
+      "words": 17580,
+      "interval_sha256": "3395114fdedc9ad87b7124c6151dc0b6c6ebddaf75f3a474d6f0147b7ed4820f",
+      "gap_free_manifest_and_receipts": true
+    },
+    {
+      "source": "electronic section 003",
+      "source_sha256": "e364e5f3ed9e39411e75cfd5bb3bd73619745f20e5052bb2c535f610c70e87e9",
+      "start": 16,
+      "end": 1192,
+      "line_count": 1177,
+      "chars": 301968,
+      "words": 56590,
+      "interval_sha256": "7081b62ecbe0444fe08c2b6e86176c3a9358b8f55904554a9a4f404d68665403",
+      "gap_free_manifest_and_receipts": true
+    },
+    {
+      "source": "electronic section 004",
+      "source_sha256": "052010606c6f4fa2f4a8d0b09648bfd90acb7b08b9b33a3994ca6e4e3f5b9f82",
+      "start": 16,
+      "end": 362,
+      "line_count": 347,
+      "chars": 90413,
+      "words": 16980,
+      "interval_sha256": "60e5ff37fe6e7ba0db1df13e242dbf2177c85fb7721519ce2adc6b3efd9e5675",
+      "gap_free_manifest_and_receipts": true
+    }
+  ],
+  "bounded_rereads_complete": 8,
+  "reread_intervals": [
+    [
+      "A",
+      "electronic section 002",
+      1066,
+      1071
+    ],
+    [
+      "B",
+      "electronic section 002",
+      1159,
+      1210
+    ],
+    [
+      "C",
+      "electronic section 002",
+      1335,
+      1348
+    ],
+    [
+      "D",
+      "electronic section 003",
+      395,
+      428
+    ],
+    [
+      "E",
+      "electronic section 003",
+      1152,
+      1192
+    ],
+    [
+      "F",
+      "electronic section 004",
+      16,
+      36
+    ],
+    [
+      "G",
+      "electronic section 004",
+      148,
+      159
+    ],
+    [
+      "H",
+      "electronic section 004",
+      338,
+      344
+    ]
+  ],
+  "printed_edition_full_collation": false,
+  "scope_note": "Boundary mapping supplied by independent reviewer; transcript defects and editor restorations are separately reported. No reading credit from extraction/search/manifest generation.",
+  "limited_scan_pages_directly_read": [
+    1037,
+    1038
+  ],
+  "seam_corroboration_by_independent_reviewer": {
+    "printed_pages": [
+      1109,
+      1110,
+      1111,
+      1112,
+      1113
+    ],
+    "result": "Electronic original-witness lacuna in face 241–242 transition; modern editor restoration from al-Mawsili auxiliary, not original independent wording"
+  },
+  "original_witness_defects_preserved": true,
+  "publication_note": "Historical study metadata retained for scope and source identity. No additional source reading, visual collation or philosophical proof is claimed by this projection."
+}

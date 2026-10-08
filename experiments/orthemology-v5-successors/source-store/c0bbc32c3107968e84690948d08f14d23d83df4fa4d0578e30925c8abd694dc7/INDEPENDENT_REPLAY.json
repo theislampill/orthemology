@@ -1,0 +1,99 @@
+{
+  "status": "PASS_INDEPENDENT_BOUNDED_REPLAY",
+  "finished_utc": "2026-10-07T10:11:39.885107+00:00",
+  "frozen_packet_sha256": "5754d2e4f04d42c1ea1af67c0a10a304271a54e2b1974851240cd7437348b83d",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "source_files_verified": 16,
+  "readbacks": 19,
+  "readbacks_equal_author": true,
+  "rational_fixtures": 13,
+  "negative_controls": 4,
+  "imports": 2157,
+  "fresh_local_objects": 2,
+  "cached_import_hashes_equal_author": true,
+  "cache_trust": "Official pinned cache trusted, not rebuilt",
+  "upstream_executed": false,
+  "commands": [
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--version"
+      ],
+      "exit_code": 0,
+      "log": "version.log",
+      "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "-o",
+        "tranche20/openai-math-study/deep/122-independent-review/replay/objects/TraceControls.olean",
+        "tranche20/openai-math-study/deep/122/formal/TraceControls.lean"
+      ],
+      "exit_code": 0,
+      "log": "TraceControls.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "-o",
+        "tranche20/openai-math-study/deep/122-independent-review/replay/objects/RationalFixtures.olean",
+        "tranche20/openai-math-study/deep/122/formal/RationalFixtures.lean"
+      ],
+      "exit_code": 0,
+      "log": "RationalFixtures.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/openai-math-study/deep/122/formal/tests/Contract.lean"
+      ],
+      "exit_code": 0,
+      "log": "Contract.log",
+      "sha256": "567a0720d2dea21945f314e59433aa6f823e31e836e1c8959fd27437ebc2b726"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/openai-math-study/deep/122-independent-review/ReviewerReadback.lean"
+      ],
+      "exit_code": 0,
+      "log": "readback.log",
+      "sha256": "fdb40a12c7e2131c79949f292e1191b8201db46d671cf24d5caa2a66e5e6c893"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/openai-math-study/deep/122/formal/tests/RejectedClaims.lean"
+      ],
+      "exit_code": 1,
+      "log": "RejectedClaims.log",
+      "sha256": "dd3b6553b1ef4137bee544ba522d9a72f0ef11db48c4cd9f3d7dc4625371ed71"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/openai-math-study/deep/122-independent-review/ReviewerImports.lean"
+      ],
+      "exit_code": 0,
+      "log": "imports.log",
+      "sha256": "184d131de5eee58ecee4575fda4a1b1ec61434f165e824f144d97f8c6436fe77"
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "schema": "t20-mathematical-companion-final-qa-v1",
+  "created_at_utc": "2026-10-07T12:58:30.485861+00:00",
+  "disposition": "PASS_DOCUMENT_CONTENT_AND_RENDER_QA",
+  "final_document": {
+    "path": "Orthemology_Twentieth_Mathematical_Companion_v2.docx",
+    "bytes": 39254,
+    "sha256": "64ac3dd33e250a5fc0527421bdeb67227be40962389028911f3f76471537e681"
+  },
+  "source": {
+    "path": "MATHEMATICAL_COMPANION.md",
+    "bytes": 70060,
+    "sha256": "40e374a62246636ffdbd424f517094dbaa7a7d00cc177675bed19377598e44fd"
+  },
+  "first_build": {
+    "description": "Superseded first DOCX build, not selected",
+    "bytes": 39316,
+    "sha256": "9ae6032f6d6e8ddf616b2996fca68fc5a5f2d961d157111a92e3236a92c4149f",
+    "body_included": false
+  },
+  "source_prose_records_exact": 209,
+  "literal_code_sequence_exact": 67,
+  "native_editable_OMML_equations": 40,
+  "native_display_equations": 2,
+  "structured_fractions": 9,
+  "structured_subscripts": 11,
+  "structured_superscripts": 2,
+  "rasterised_or_opaque_equations": 0,
+  "equation_pages": {
+    "EQ001": 10,
+    "EQ002": 10,
+    "EQ003": 14,
+    "EQ004": 14,
+    "EQ005": 14,
+    "EQ006": 15,
+    "EQ007": 15,
+    "EQ008": 15,
+    "EQ009": 15,
+    "EQ010": 15,
+    "EQ011": 15,
+    "EQ012": 15,
+    "EQ013": 15,
+    "EQ014": 15,
+    "EQ015": 15,
+    "EQ016": 16,
+    "EQ017": 16,
+    "EQ018": 17,
+    "EQ019": 17,
+    "EQ020": 17,
+    "EQ021": 17,
+    "EQ022": 17,
+    "EQ023": 17,
+    "EQ024": 17,
+    "EQ025": 17,
+    "EQ026": 17,
+    "EQ027": 17,
+    "EQ028": 17,
+    "EQ029": 17,
+    "EQ030": 18,
+    "EQ031": 18,
+    "EQ032": 18,
+    "EQ033": 18,
+    "EQ034": 18,
+    "EQ035": 18,
+    "EQ036": 18,
+    "EQ037": 18,
+    "EQ038": 18,
+    "EQ039": 18,
+    "EQ040": 18
+  },
+  "every_equation_visually_checked": true,
+  "page_count": 19,
+  "final_render_all_pages_byte_identical_to_inspected_first_render": true,
+  "pages": [
+    {
+      "page": 1,
+      "sha256": "e11893bd64df7ea6a71e470aade43e1c4c7fe9eb178a6edac369c544d97eb8bc",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 2,
+      "sha256": "e37c65c329159670a95ae527a491ea3657b7f02fc158db5a248caee56b043b5a",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 3,
+      "sha256": "42cc0a76ca3f9333691436f97c0963231352fe482afb64dc6da4d6cdff5c244f",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 4,
+      "sha256": "d2e0c8196cdc6f308271393c7dc48dbeb45ceb30a9881f898480e89ee0759a77",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 5,
+      "sha256": "b51325c9689a935cce1f4f722b72505ce09f9cad6f91a995f5120d8110f274ca",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 6,
+      "sha256": "1e9e1879e354ff9f0c1c96a4395c4544a79d5619d33cdf97f54bae91f8b6e714",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 7,
+      "sha256": "c2169ec55e8437587502eeeac8450166b2f2304f7d60cf264b842bc146b557f6",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 8,
+      "sha256": "8d4dbac6ced170d7654eb8e7ab16ba422004e04181ecdf092e9d6bfacdcc318e",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 9,
+      "sha256": "f97ea1740830d0979a70598f9f10b53be9abd63e42714a97e7d0082fb1d4debe",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 10,
+      "sha256": "9f7f233bbf6a80dcac538e3231eefe494720eb6bcc54493251a4e0e3fdffd495",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 11,
+      "sha256": "a69d7f52b109da85258fd0f2c87b7da55c97196e22cc8742407fd6c99b96cc1a",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 12,
+      "sha256": "cbaed91396a9f8c7050afd46a10081e52bc465d50f6daea8cdc0f0e94379c22e",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 13,
+      "sha256": "1f01368a2e83b360a19d5469ed32e473a8ad9ce4085ed3999df5ebaba11ff0fa",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 14,
+      "sha256": "99662379d35142d189fe4694de12b2ae6b66de1d8f1b52282dd2ee7fae8e8f79",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 15,
+      "sha256": "48f1b397ab87c570b0cbe066d289f121a03a3a1db89481af4f28a78e862fe7fd",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 16,
+      "sha256": "04ff61724b3e7f1c49932309ba7303050d8f54e139679780e26b40840f7f639c",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 17,
+      "sha256": "60fc436c5512e804b38df114f9436f0b687ec59d7b3433037540ad2eaae40992",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 18,
+      "sha256": "f865730e18aaf5ec817e3bec5df86086dfa6e9e267751c7b55e7adbf399fe751",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    },
+    {
+      "page": 19,
+      "sha256": "b0b7d8d593ab4a50049a760c67aeed2c6d658e2d7ee880f0db13f361a737f5df",
+      "pixels": [
+        1547,
+        2002
+      ],
+      "full_resolution_visual_inspection": "PASS",
+      "visual_review_basis": "This page was individually opened at original resolution; the final rerender is byte-identical to that inspected image.",
+      "clipping_overlap_missing_glyphs_or_broken_layout": false,
+      "image_body_included": false
+    }
+  ],
+  "final_docx_modified_after_render": false,
+  "title_and_heading_color": "black",
+  "title_and_heading_text": "plain words and numbers",
+  "duplicate_style_ids": 0,
+  "source_content_or_mathematics_changed_by_style_fix": false,
+  "renderer": "LibreOffice document renderer",
+  "Microsoft_Word_application_UI_render": "NOT_RUN; native editable Word OMML and a Pandoc DOCX-reader round trip were checked.",
+  "scientific_replay": false,
+  "acceptance_scope": "Document content, native equation structure, and complete rendered-page QA only; no programme, integration, publication or philosophical acceptance.",
+  "historical_qa_records": [
+    {
+      "record_role": "first_build_receipt",
+      "bytes": 5845,
+      "sha256": "7b16ee07e7e3afd19afbd22ccc972556532cf44e8fcca88917ca3fe8b6d60fdd",
+      "body_included": false
+    },
+    {
+      "record_role": "style_correction_receipt",
+      "bytes": 781,
+      "sha256": "f0a99533e7c9b3a7f1c9e2b847396e1714c0e6275f6ca8b662d26658c2cacb96",
+      "body_included": false
+    },
+    {
+      "record_role": "content_qa",
+      "bytes": 10387,
+      "sha256": "2883c9f97b94a29f77b7ed2e4f3013f6124303de7898a49e1db924fe815f51f5",
+      "body_included": false
+    },
+    {
+      "record_role": "source_checks",
+      "bytes": 11344,
+      "sha256": "29a255a7956aefd0471075301b56f0ad17a7588f3071e1bbe17113d78cc2cb61",
+      "body_included": false
+    }
+  ],
+  "qa_attribution": "Reported author document QA; curation rechecked exact final document/source identities and native OOXML structure, without repeating visual inspection or scientific execution.",
+  "original_qa_manifest_sha256": "498ce21f841a4a13f05790ee7f4cecf30eaba66fc1f2478d095d1b3c43d58be4",
+  "historical_draft_currentness": {
+    "report_draft_comparison_in_source_checks": false,
+    "additional_mathematics_draft_comparison_in_source_checks": true,
+    "meaning": "The normal report was deliberately updated after the mathematical exposition review. Its later philosophical, source and integration prose was not represented as covered by that earlier review. The additional mathematics remains exact to the reviewed after-hash. The companion preserves its separately dated, source-bound introduction and pre-Miftah appraisal notice. This field is a historical report-currentness distinction, not a failed mathematical check; the final normal report requires its own final review. The mathematical source reconstruction and final document checks passed."
+  },
+  "source_derivation_public_record": "MATHEMATICAL_COMPANION_DERIVATION.json",
+  "equation_public_record": "MATHEMATICAL_COMPANION_EQUATIONS.json",
+  "source_body_policy": "QA page hashes and historical record identities do not include the corresponding images or unselected draft bodies."
+}

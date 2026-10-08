@@ -1,0 +1,173 @@
+{
+  "status": "HISTORICAL_INDEPENDENT_PASS; PUBLIC_PROJECTION_NOT_REPLAYED",
+  "created_utc": "2026-10-07T16:21:38.219410+00:00",
+  "lean_binary": {
+    "path": "${LEAN419_ROOT}/bin/lean",
+    "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "acquisition_scope": "Existing provided official toolchain; no new download or independent acquisition audit"
+  },
+  "commands": [
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "--version"
+      ],
+      "cwd": "${FRESH_OUT}",
+      "LEAN_PATH": "${FRESH_OUT}",
+      "exit_code": 0,
+      "original_log_identity": {
+        "filename": "version.log",
+        "bytes": 78,
+        "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+      },
+      "selected_log": {
+        "alias": "t20/ontology-type-control/lean-version.log",
+        "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b",
+        "bytes": 78
+      }
+    },
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "--help"
+      ],
+      "cwd": "${FRESH_OUT}",
+      "LEAN_PATH": "${FRESH_OUT}",
+      "exit_code": 0,
+      "original_log_identity": {
+        "filename": "help.log",
+        "bytes": 2511,
+        "sha256": "6fefbea989ebb74ba582bd0207b77ac4f5fdf5f2a239354fb44ef3977e5cd1ad"
+      },
+      "log_availability": "EXCLUDED_HISTORICAL_IDENTITY_ONLY; help output is not a selected member"
+    },
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "--deps",
+        "OriginationTypeControl.lean"
+      ],
+      "cwd": "${FRESH_OUT}",
+      "LEAN_PATH": "${FRESH_OUT}",
+      "exit_code": 0,
+      "original_log_identity": {
+        "filename": "dependencies.log",
+        "bytes": 272,
+        "sha256": "0750a2bfc39c460f25e6f33b18f117712ec0052c5ac747008c71c3d4ed2cbeed"
+      },
+      "selected_log": {
+        "alias": "t20/ontology-type-control/direct-imports.log",
+        "sha256": "79d636ad07747e88f5fe3621d360dee3008a0aded61224fd93fce27c332739a2",
+        "bytes": 72
+      }
+    },
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "-t",
+        "0",
+        "-o",
+        "OriginationTypeControl.olean",
+        "OriginationTypeControl.lean"
+      ],
+      "cwd": "${FRESH_OUT}",
+      "LEAN_PATH": "${FRESH_OUT}",
+      "exit_code": 0,
+      "original_log_identity": {
+        "filename": "control.log",
+        "bytes": 596,
+        "sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d"
+      },
+      "selected_log": {
+        "alias": "t20/ontology-type-control/final-check.log",
+        "sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+        "bytes": 596
+      }
+    },
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "-t",
+        "0",
+        "-o",
+        "ReviewerProbes.olean",
+        "ReviewerProbes.lean"
+      ],
+      "cwd": "${FRESH_OUT}",
+      "LEAN_PATH": "${FRESH_OUT}",
+      "exit_code": 0,
+      "original_log_identity": {
+        "filename": "probes.log",
+        "bytes": 646,
+        "sha256": "0335244aeb3668c4f81d7be83aea5d91bbbdb214762e733933503712ae5ad797"
+      },
+      "selected_log": {
+        "alias": "t20/ontology-type-control/review/probes.log",
+        "sha256": "0335244aeb3668c4f81d7be83aea5d91bbbdb214762e733933503712ae5ad797",
+        "bytes": 646
+      }
+    },
+    {
+      "command": [
+        "${LEAN419_ROOT}/bin/lean",
+        "-t",
+        "0",
+        "OverreachRejected.lean"
+      ],
+      "cwd": "${FRESH_OUT}",
+      "LEAN_PATH": "${FRESH_OUT}",
+      "exit_code": 1,
+      "original_log_identity": {
+        "filename": "negative.log",
+        "bytes": 803,
+        "sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2"
+      },
+      "selected_log": {
+        "alias": "t20/ontology-type-control/overreach-rejection.log",
+        "sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+        "bytes": 803
+      }
+    }
+  ],
+  "criteria": {
+    "version_is_4_19_0": true,
+    "trust_flag_verified": true,
+    "control_compile_exit_zero": true,
+    "seven_control_readbacks": true,
+    "no_admissions_in_control": true,
+    "no_control_error_or_sorryAx": true,
+    "only_distinct_Init_direct_import": true,
+    "probes_compile_exit_zero": true,
+    "seven_probe_readbacks": true,
+    "no_probe_error_or_sorryAx": true,
+    "negative_control_exit_one": true,
+    "two_substantive_false_rejections": true,
+    "copied_control_identical": true,
+    "copied_negative_identical": true
+  },
+  "inputs": [
+    {
+      "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+      "selected_alias": "t20/ontology-type-control/OriginationTypeControl.lean"
+    },
+    {
+      "sha256": "6dfd3ab5400bad336045e449400bb50f5066c003cf10c9413b447b8d36d09c60",
+      "selected_alias": "t20/ontology-type-control/OverreachRejected.lean"
+    },
+    {
+      "sha256": "f176d255baf686b29e4516dfd5796907ed3345befa0370d9812f57faeab826b7",
+      "selected_alias": "t20/ontology-type-control/review/ReviewerProbes.lean"
+    }
+  ],
+  "limits": [
+    "Only the small new control and reviewer probes executed. No old proof campaign or non-core dependency replay.",
+    "No source or historical package mutation; no publication.",
+    "Existing Init/core imports are checked at trust zero; direct imports do not describe the entire transitive core."
+  ],
+  "original_receipt_identity": {
+    "filename": "EXECUTION_RECEIPT.json",
+    "sha256": "1a3aabaf62f70358a7921fe80f7fc8a56303ca03d23d69b1c8757215feef0167",
+    "bytes": 5314
+  },
+  "location_scope": "Commands preserve historical flags and exit codes; location placeholders describe the isolated run roles, not archived directories. Public recipe guards are separately derived packaging checks."
+}

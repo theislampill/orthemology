@@ -1,0 +1,6 @@
+Original author command omitted from this public projection; original receipt SHA-256: fa6ec8eb0b323f1cf473b2a0a1c6b1ae02281a1ee352e9c82419016abd982a15
+Exit code: 0
+'CNDModalScope.original_role_excludes_reception' does not depend on any axioms
+'CNDModalScope.receipt_excludes_original_role' does not depend on any axioms
+'CNDModalScope.switch_cnd' does not depend on any axioms
+'CNDModalScope.switch_overlap' depends on axioms: [propext, Quot.sound]

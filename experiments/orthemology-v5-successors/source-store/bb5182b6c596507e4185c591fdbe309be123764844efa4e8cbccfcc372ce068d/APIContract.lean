@@ -1,0 +1,12 @@
+import Init
+-- RED acceptance contract. These declarations do not exist before implementation.
+#check AnchoredSourceBridge.mode_satisfaction_of_classification_conformance
+#check AnchoredSourceBridge.global_coverage_of_anchor
+#check AnchoredSourceBridge.represented_rivals_equal
+#check AnchoredSourceBridge.actual_rivals_equal
+#check AnchoredSourceBridge.mode_satisfaction_iff_global_coverage
+#check AnchoredSourceBridge.source_mode_iff_global_coverage
+#check AnchoredSourceBridge.unique_complete_provider
+#check AnchoredSourceBridge.Controls.full_nonvacuous_model
+#check AnchoredSourceBridge.Controls.missing_classification
+#check AnchoredSourceBridge.Controls.missing_conformance

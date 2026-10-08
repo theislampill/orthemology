@@ -1,0 +1,1014 @@
+[
+  {
+    "path": ".docker/gitpod/Dockerfile",
+    "sha256": "4d7383637a4a241bdb8eac0b7d7f86d23c921519aa30fd0687f534bb71aac275"
+  },
+  {
+    "path": ".github/workflows/build.yml",
+    "sha256": "e840c611d80e6ea85b18ecd4bde4ba2c182faf645c4d8104d30ebb13a10b768b"
+  },
+  {
+    "path": ".github/workflows/docs-deploy.yml",
+    "sha256": "5e8e6238eb768d31dcfd5dc9a30147db0db519ac89c839c3704f95563e59bb22"
+  },
+  {
+    "path": ".github/workflows/docs-release.yml",
+    "sha256": "b03e01ac143db3676c33cf76f7a50f62ad614801733853fe1f24c95b8a0cab96"
+  },
+  {
+    "path": ".github/workflows/labels-from-comments.yml",
+    "sha256": "5259cde5f7158bd8ebd41617f5110a5b17de09aa6abd98ae028c245af80e8740"
+  },
+  {
+    "path": ".github/workflows/labels-from-status.yml",
+    "sha256": "9a8a432d04f6a7b4417c17ac4dfc6567adffcbb810bdbfa0eb7baded5e8df783"
+  },
+  {
+    "path": ".github/workflows/merge_conflicts.yml",
+    "sha256": "5a00b989ac5e8d5a617058ca90ef0b0d0238d72cc887bb966b5437f0777d2ed9"
+  },
+  {
+    "path": ".github/workflows/nightly_bump_toolchain.yml",
+    "sha256": "7948b9627919ab9d31f64cf376d6d8bbef020c3b69a881087961d6b4eedc7022"
+  },
+  {
+    "path": ".github/workflows/nightly_detect_failure.yml",
+    "sha256": "da243fa569bb10756efb8180f5bed935e30fb18e4a23949e207355c6451f2ce0"
+  },
+  {
+    "path": ".github/workflows/nightly_merge_master.yml",
+    "sha256": "86fd6cc95652743c5afcf9b549c635ec006e183ef598e0b153106d51b6973dbd"
+  },
+  {
+    "path": ".github/workflows/test_mathlib.yml",
+    "sha256": "3123ea2284e31ba27b75d87caa29d52b65f874ab175be1ce0661ede3afb6fe20"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "b386f6e81c012f80724ced9ceeda210059d03340a97299a7ab9c903b19ab27a1"
+  },
+  {
+    "path": ".gitpod.yml",
+    "sha256": "afd6acea7941f0bfa693b903fbd1dade1c1f7e2aa5557fc45d79ef2ec4a845eb"
+  },
+  {
+    "path": ".vscode/copyright.code-snippets",
+    "sha256": "8a7039bb7696d8afe7308601da2c7e2f6c7f2505a2e13794cac3345c7753f282"
+  },
+  {
+    "path": ".vscode/settings.json",
+    "sha256": "2466825eaa45965dba35fdb141cfdbab004b38aac94ff4dd24571f1e888780c0"
+  },
+  {
+    "path": "Batteries.lean",
+    "sha256": "a2ed09682c6664511d734770aa2c4863808d9578559ef31578cfd96d84a47a02"
+  },
+  {
+    "path": "Batteries/Classes/Cast.lean",
+    "sha256": "b419e2b1a2ccaebe8f2b6c5371a6c430e384bca64101d6999ce06f55b220fef9"
+  },
+  {
+    "path": "Batteries/Classes/Order.lean",
+    "sha256": "6faa40be8cf094d633e2d218683b9482b7a630e1ee75bd484a222fa0a9d4fd8b"
+  },
+  {
+    "path": "Batteries/Classes/RatCast.lean",
+    "sha256": "5208d0c8ad499fea15cd8eeef32d98e9b9f12571de4ac4810e5a6ba86c5e6451"
+  },
+  {
+    "path": "Batteries/Classes/SatisfiesM.lean",
+    "sha256": "29e322d7948137064fe2367ff1e89ad4f0809ffd6d0f160038daf4445626c45d"
+  },
+  {
+    "path": "Batteries/CodeAction.lean",
+    "sha256": "d48006a6314fd638e4b197f944bd1fb6f5098c77131cba8fde9e42758d07b65a"
+  },
+  {
+    "path": "Batteries/CodeAction/Attr.lean",
+    "sha256": "869f083f28aa547437b3f776f6d56ae099421bd8b25bf2f0aeada1995aa51dc2"
+  },
+  {
+    "path": "Batteries/CodeAction/Basic.lean",
+    "sha256": "e8acdd34cf2c07bea581ab0f21af2d160cac91f2acb4c4e9c88790c390b2963b"
+  },
+  {
+    "path": "Batteries/CodeAction/Deprecated.lean",
+    "sha256": "0a1a645183475b8b834c77da7668522f88bd174f6e375b9fd1eeaa3ff4e28ae0"
+  },
+  {
+    "path": "Batteries/CodeAction/Misc.lean",
+    "sha256": "7fc05ca1b4a145bb5b1a6f35e51e3664455f259d63b60b15208c078ac330221c"
+  },
+  {
+    "path": "Batteries/Control/AlternativeMonad.lean",
+    "sha256": "55c8aeef7e7cf071dbb27f96d35acddf18e372b870fecd1c08d9e984cffcae8e"
+  },
+  {
+    "path": "Batteries/Control/ForInStep.lean",
+    "sha256": "95e655e59aa2afa306d007891267a43062fe3e3df3eebbf38d57fb562d175431"
+  },
+  {
+    "path": "Batteries/Control/ForInStep/Basic.lean",
+    "sha256": "508f75ccd33a72ae6fbbe4710d92dd3582103dd5ad46a737ba83b59d4658e74e"
+  },
+  {
+    "path": "Batteries/Control/ForInStep/Lemmas.lean",
+    "sha256": "4e36738f846e9a8558b1563f3ac4e09a5a185cffd2d19e4b13050700d38b6d4f"
+  },
+  {
+    "path": "Batteries/Control/Lawful/MonadLift.lean",
+    "sha256": "6ee0959f94ab2682b28d5b316d050f6761fef01a4cc2a13327655f5c9f6fa31f"
+  },
+  {
+    "path": "Batteries/Control/Lemmas.lean",
+    "sha256": "1c38fbbb6ab715fd147722b8b204acd61e8148450b6f241c57d921e1f3077275"
+  },
+  {
+    "path": "Batteries/Control/Monad.lean",
+    "sha256": "cfa3f1ee07b10f5137be53433d9d56e9053b6f8b8ff1b85e4851d119ed9f03d0"
+  },
+  {
+    "path": "Batteries/Control/Nondet/Basic.lean",
+    "sha256": "ba6a614a40f88011cb987e8d8b3bebdb82c683854e03136bb12bf37d485d9773"
+  },
+  {
+    "path": "Batteries/Control/OptionT.lean",
+    "sha256": "0e2e9211b00a3580a6c9d1798bae8b87a7b6a1201649a523f6040a8c0d16e064"
+  },
+  {
+    "path": "Batteries/Data/Array.lean",
+    "sha256": "ddc9b5007a7920a34d668164c71eba3525bcf881b4229d0f249adb5136aaf249"
+  },
+  {
+    "path": "Batteries/Data/Array/Basic.lean",
+    "sha256": "384b412f163d51446b43c4b2b093249bd36c81b28e7067cca9e8fb0698b081f6"
+  },
+  {
+    "path": "Batteries/Data/Array/Init/Lemmas.lean",
+    "sha256": "cde1a0d6c02962b89a3731b3ab17a57f699d959f34ea6b8c76881553b1bf2bf3"
+  },
+  {
+    "path": "Batteries/Data/Array/Lemmas.lean",
+    "sha256": "f1d50527662cf4e2287eaaff72040bbf2c5c87a66313c951d4d06cf0971d6a9f"
+  },
+  {
+    "path": "Batteries/Data/Array/Match.lean",
+    "sha256": "68bdc4c8147f36956874c46269ce9aaff7e819f1677d921b2fa3a603480a2f1d"
+  },
+  {
+    "path": "Batteries/Data/Array/Merge.lean",
+    "sha256": "f4ec28bf131c8c00c5188d4288259df84855eadc8b82932dcb5bce2d1c86fcde"
+  },
+  {
+    "path": "Batteries/Data/Array/Monadic.lean",
+    "sha256": "f81f2564b1f995dce51b9aed3f004e878da7dd939f654ee21fff1eef4238cbe2"
+  },
+  {
+    "path": "Batteries/Data/Array/OfFn.lean",
+    "sha256": "540104ca900aadc0aabacb4d245100c497c75e945e216a19a47cc1489558331e"
+  },
+  {
+    "path": "Batteries/Data/Array/Pairwise.lean",
+    "sha256": "4a6f42d224e919646b672e1da4dd099ebaac3209c1ea2d52a6561e201602a5ba"
+  },
+  {
+    "path": "Batteries/Data/AssocList.lean",
+    "sha256": "5ea6eca9c307a6e47a958533a3cc4b8444cb3cc285505cca23285a8c35005b6f"
+  },
+  {
+    "path": "Batteries/Data/BinaryHeap.lean",
+    "sha256": "c72be81fb267e474077d8671040a2036a1ff42b4e1efe7a5a3ea3d0ef1403ad1"
+  },
+  {
+    "path": "Batteries/Data/BinomialHeap.lean",
+    "sha256": "529cc82209eadc9b6aecbdf15b30048ef2b0d4dadf6d24f87efdc85ae3be8c31"
+  },
+  {
+    "path": "Batteries/Data/BinomialHeap/Basic.lean",
+    "sha256": "af680b0c35d0a2f063b40e452eb80c891f6700a56a7caa809d478add91de6463"
+  },
+  {
+    "path": "Batteries/Data/BinomialHeap/Lemmas.lean",
+    "sha256": "ddf1684170e5dc807df379d7289b1c49042a3c54bbb7bf568caf35e3c4160a39"
+  },
+  {
+    "path": "Batteries/Data/BitVec.lean",
+    "sha256": "0170d10bc2ad27a334130ee4c1015d705f31620698184bcf01ab1fd794a5be5b"
+  },
+  {
+    "path": "Batteries/Data/BitVec/Basic.lean",
+    "sha256": "43115e37c63b3f8277adfe37c706d3e657f4b7885eab3896b14a40109f6b7d94"
+  },
+  {
+    "path": "Batteries/Data/BitVec/Lemmas.lean",
+    "sha256": "b0f06e50bf7728233f826c6eb79a01b24b1c4c3606a2bcfd72ac545e54e58bde"
+  },
+  {
+    "path": "Batteries/Data/ByteArray.lean",
+    "sha256": "d997fce1ccdcdce4af9f338ce86e4671dfa3e89f2f84e836f732c6bc3fd2219d"
+  },
+  {
+    "path": "Batteries/Data/ByteSubarray.lean",
+    "sha256": "a6e4db71cd8d4cddc7599942ce5ad1a1dc99dba8428fea876bebea751f21b0e4"
+  },
+  {
+    "path": "Batteries/Data/Char.lean",
+    "sha256": "16bd1d671212808e8204fcfef91e29994e83225658579330161e6406a681d67d"
+  },
+  {
+    "path": "Batteries/Data/DList.lean",
+    "sha256": "9e7c4774283f7fdb6acbee7f29e7d954afa5fc8a002e8f138b48229f63186c21"
+  },
+  {
+    "path": "Batteries/Data/DList/Basic.lean",
+    "sha256": "28621c7bde3cb31d55afab0126d75c5f82dbf0da6fe7c88201e49aa033b62bbc"
+  },
+  {
+    "path": "Batteries/Data/DList/Lemmas.lean",
+    "sha256": "cb1fd8c271321e87bf3b128857598e333360d9fa9aa3418d6bc4ed9ed5e4086f"
+  },
+  {
+    "path": "Batteries/Data/Fin.lean",
+    "sha256": "6cc5a295ec6ba1e5817243d0b6fb004a87fdce121080a68222e192d32d9e59c1"
+  },
+  {
+    "path": "Batteries/Data/Fin/Basic.lean",
+    "sha256": "aae0db9cf295a00640db185f3208d1e78f6fff91c7ed24194a132ca269f38d01"
+  },
+  {
+    "path": "Batteries/Data/Fin/Fold.lean",
+    "sha256": "0ef108c9fe6ec7cf9db99bed8a99d4190b3915a74dd15988bd3d1b862b6e4ede"
+  },
+  {
+    "path": "Batteries/Data/Fin/Lemmas.lean",
+    "sha256": "59a40ef91b80a18943d5a6cfe82745eb584850f6acc196d5a762438cab8cface"
+  },
+  {
+    "path": "Batteries/Data/Fin/OfBits.lean",
+    "sha256": "3cfb26b10b39eb95e8877dadcb806297dd5a00f14d1c0c14b2aef171a79379f5"
+  },
+  {
+    "path": "Batteries/Data/FloatArray.lean",
+    "sha256": "431a765f038b5ac50f669f93ee86ec9a1283dcafc4920e19be15484d138e8224"
+  },
+  {
+    "path": "Batteries/Data/HashMap.lean",
+    "sha256": "da97601d147dd790abf21ff31d4a86352a398407da09e810466cf9d57a727179"
+  },
+  {
+    "path": "Batteries/Data/HashMap/Basic.lean",
+    "sha256": "294d9588529c435e5e6e9fc474c3396507e780e19b3e2652ee6f7d3ed37aa9b8"
+  },
+  {
+    "path": "Batteries/Data/HashMap/Lemmas.lean",
+    "sha256": "a526fe59fc491c5247cb0ce55eb6d707e7119d8d19639e9d9e30ebad5fae0085"
+  },
+  {
+    "path": "Batteries/Data/Int.lean",
+    "sha256": "47e5251b88c80e57b8c459dde18c53d82b28c97efec5b267748e62511a44ba6e"
+  },
+  {
+    "path": "Batteries/Data/List.lean",
+    "sha256": "c8f76c1b9da34fcd367e5a3d7ea85785796ab0f6fa9b43049f5adabfe1a253e3"
+  },
+  {
+    "path": "Batteries/Data/List/ArrayMap.lean",
+    "sha256": "d0a61e249460154c69e6a443a41c2eef81c274e39fa2ec6a4eea7e94164f3e50"
+  },
+  {
+    "path": "Batteries/Data/List/Basic.lean",
+    "sha256": "16551488f5e33ca7db46aba4396f518ab7dd7d31b0790e38eb33d3e824b17dd9"
+  },
+  {
+    "path": "Batteries/Data/List/Count.lean",
+    "sha256": "44f30a89a6a9de3f9c38eae044e70b02d38129e1ecc4d027eee6518da8eb53bd"
+  },
+  {
+    "path": "Batteries/Data/List/FinRange.lean",
+    "sha256": "381187562502bbae8f957986895a7a6848972c45b4533666971a91237f2b481d"
+  },
+  {
+    "path": "Batteries/Data/List/Init/Lemmas.lean",
+    "sha256": "ea1b31da0188da5d227052a529b762d265504cfc7835e0866d4a29e311733916"
+  },
+  {
+    "path": "Batteries/Data/List/Lemmas.lean",
+    "sha256": "6a7770a05dec2ed944a0b8cdabc26872f68ae7492c3e892e5f5c4e87c0779577"
+  },
+  {
+    "path": "Batteries/Data/List/Matcher.lean",
+    "sha256": "25f980335283fc59ab9a7e35c9304c865c253cf992f4fd2ddef4ca99920c1bf2"
+  },
+  {
+    "path": "Batteries/Data/List/Monadic.lean",
+    "sha256": "3bea14b9c7e7cbdc2696739660a26c9b8c53e6433becb087361f8a9e9da89f53"
+  },
+  {
+    "path": "Batteries/Data/List/OfFn.lean",
+    "sha256": "9e42d7d9bac8b34e6d03a38cd31f013986a78a977376e77b78aae59bc1def6d8"
+  },
+  {
+    "path": "Batteries/Data/List/Pairwise.lean",
+    "sha256": "adef35bc452e38cbf22b8bc4364ef742e0f6cdbef50af8d6c4ac6f5572aab046"
+  },
+  {
+    "path": "Batteries/Data/List/Perm.lean",
+    "sha256": "61da833db8210bd1ee2ca11da346754278f8f69109001045a8e7b952ad1ca143"
+  },
+  {
+    "path": "Batteries/Data/MLList.lean",
+    "sha256": "f262ee3318d0d15d422c3d5e35ed42c9c485878243d616081eab074cd396dea3"
+  },
+  {
+    "path": "Batteries/Data/MLList/Basic.lean",
+    "sha256": "e6307690976ec8d2b9687adc877ba072e3d381796b106e974ee0a08990b354db"
+  },
+  {
+    "path": "Batteries/Data/MLList/Heartbeats.lean",
+    "sha256": "6aabf5aad218f2588f03a57411795d215cecdb292d08fa30fd9a6db4e40fa8e5"
+  },
+  {
+    "path": "Batteries/Data/MLList/IO.lean",
+    "sha256": "4296f08992ef9e986a732c3627892503fe9e90e1a8c1a33b773375d650debaf4"
+  },
+  {
+    "path": "Batteries/Data/NameSet.lean",
+    "sha256": "4524af9fa26a307b7299d8d6d4baecddd4442fe168bb8abe5d9f4436f82a60d3"
+  },
+  {
+    "path": "Batteries/Data/Nat.lean",
+    "sha256": "d46182ff4acf0cb593863effc59f77d5b66fa5a733e9a5ff2dc8e1a01208fb89"
+  },
+  {
+    "path": "Batteries/Data/Nat/Basic.lean",
+    "sha256": "4547c28c8342729d7921c3cd8fc45a803901fb4fc16752527875efcb31c9eb3b"
+  },
+  {
+    "path": "Batteries/Data/Nat/Bisect.lean",
+    "sha256": "545effcda2b79a8e1728e570d705457fcc9d5553bd356907269674be910ffecb"
+  },
+  {
+    "path": "Batteries/Data/Nat/Gcd.lean",
+    "sha256": "9c76f80ca894b0dafd144e75e47cb3966a527644b6f1b82309387d37c5ab187f"
+  },
+  {
+    "path": "Batteries/Data/Nat/Lemmas.lean",
+    "sha256": "5916dd7ff24632f944a9e3a37a9f0ac7213339686e3181f5b6ec1a957b136e50"
+  },
+  {
+    "path": "Batteries/Data/PairingHeap.lean",
+    "sha256": "c9ead15f1d6940e5df4efa791672d9f076989b02818ed3643e577e43b178c12c"
+  },
+  {
+    "path": "Batteries/Data/RBMap.lean",
+    "sha256": "d5c39c3e9c0fe87824c0d66c2ab390cbfc7cdb1dd32956a80a50da7618ff0ce9"
+  },
+  {
+    "path": "Batteries/Data/RBMap/Alter.lean",
+    "sha256": "61977f59a57a0db2be35fdd80570ad6eca27e5f4b0b98a71a43be4336c769baa"
+  },
+  {
+    "path": "Batteries/Data/RBMap/Basic.lean",
+    "sha256": "1803e565450fa4f58b29896599daf0fcd2a134050e4fd2495b379c42587bcc8f"
+  },
+  {
+    "path": "Batteries/Data/RBMap/Depth.lean",
+    "sha256": "dc6df70a2e097fe8da75116ab468b580f3d9879305a23372cb507e6b3c1fb423"
+  },
+  {
+    "path": "Batteries/Data/RBMap/Lemmas.lean",
+    "sha256": "be44f2a9ff5d32cd5602ece28f975c93ccf8652d4126d3d47ba7636f4b3ff5ac"
+  },
+  {
+    "path": "Batteries/Data/RBMap/WF.lean",
+    "sha256": "de8eed5d5e8c9afe464a94d6fdb72fa9e86f3fcbff9976f3be1582f9486cb60e"
+  },
+  {
+    "path": "Batteries/Data/Random.lean",
+    "sha256": "aeb123c31821c407bc5e8a392d5fe971e05a8688196f36104cbaff7620314008"
+  },
+  {
+    "path": "Batteries/Data/Random/MersenneTwister.lean",
+    "sha256": "fb98fa5e5572128e99e18bd0bbac30217a39f5e0db19db72cd67569b4a2168b2"
+  },
+  {
+    "path": "Batteries/Data/Range.lean",
+    "sha256": "535a4e5ad1d453743d030ca503c0eb8c2a5335ad561cbb90de5594258db72df1"
+  },
+  {
+    "path": "Batteries/Data/Range/Lemmas.lean",
+    "sha256": "cd6a353fbefdfa11d8ea288fbb0c64f229fb7048a60499d5b16d93e1ff40122b"
+  },
+  {
+    "path": "Batteries/Data/Rat.lean",
+    "sha256": "5e7e0e66c67313d9aaba50a933a075d5933906162c95aac8f2584d49e15f0e79"
+  },
+  {
+    "path": "Batteries/Data/Rat/Basic.lean",
+    "sha256": "0150d701829a49ba2da972fec6579b755fadb3c875fab9e9f1650f04ca8f840c"
+  },
+  {
+    "path": "Batteries/Data/Rat/Float.lean",
+    "sha256": "fb603eff1e5581c4e1eadb1dc38fa55684ba5204e1861bb490fc28a151bc6c3d"
+  },
+  {
+    "path": "Batteries/Data/Rat/Lemmas.lean",
+    "sha256": "cbca319a48886a15af4bff018b7bf85248e4df55b184aabeda7cf5c8389161ae"
+  },
+  {
+    "path": "Batteries/Data/Stream.lean",
+    "sha256": "8e3d70de6be7ea3b65ea87393cb44dacd948d3d6c3592ab398083ec1b4a557dc"
+  },
+  {
+    "path": "Batteries/Data/String.lean",
+    "sha256": "15f491fef9f4129bf62ca6e8aa2ac67014722682544f6a2087537f3e24b0dfc3"
+  },
+  {
+    "path": "Batteries/Data/String/Basic.lean",
+    "sha256": "9aa92ed083a691a4e11ac38755b4e617948f88bac163e19b50fd8c0d4d115f03"
+  },
+  {
+    "path": "Batteries/Data/String/Lemmas.lean",
+    "sha256": "af8d39323e3e765b4ada9e063f073674d4f71e29224be7b4e0840b7ee89e42b5"
+  },
+  {
+    "path": "Batteries/Data/String/Matcher.lean",
+    "sha256": "ab9b75a8cd909714bafa48a579587a98bf94a094832d8875c9a4cf530b716cdf"
+  },
+  {
+    "path": "Batteries/Data/UInt.lean",
+    "sha256": "e7777805625f7b2dd857fcb3d0ca43ce6c2b505e20358c89362336c036524f0d"
+  },
+  {
+    "path": "Batteries/Data/UnionFind.lean",
+    "sha256": "1e99f0e2c0c5e303b0fbe77dce608feccc2346fe934bacc10348a9963ee412b3"
+  },
+  {
+    "path": "Batteries/Data/UnionFind/Basic.lean",
+    "sha256": "ab001fbbe6ba8d7ff26c8962da0253d5b24ec09478f1b3dedbdee28144fd7d66"
+  },
+  {
+    "path": "Batteries/Data/UnionFind/Lemmas.lean",
+    "sha256": "c223db311ba3a098d2a7bcde7f8eeb60e09e34116fbcea7fa8b3b6580af6c298"
+  },
+  {
+    "path": "Batteries/Data/Vector.lean",
+    "sha256": "e85c0ae820f392ff4f6ded72387c9da7ab85bdad2bae8800e3b044f470e08426"
+  },
+  {
+    "path": "Batteries/Data/Vector/Basic.lean",
+    "sha256": "5a5398ad96d08593231a5bffa33511a205b8d6d3727e0a09e5bd174e3d0d3eb2"
+  },
+  {
+    "path": "Batteries/Data/Vector/Lemmas.lean",
+    "sha256": "1e36d5ff83a9e296e7137a9c984dc7a56499dab3fdb1b630b89c7a01dae40eff"
+  },
+  {
+    "path": "Batteries/Data/Vector/Monadic.lean",
+    "sha256": "cd238c04f0dd8901eb68215b5e6536892c84bda454a52e469fa979d1431a059e"
+  },
+  {
+    "path": "Batteries/Lean/AttributeExtra.lean",
+    "sha256": "d74197dca01a3f06b42c79afa1b2e005cb959251712668566b4f0800b30e9178"
+  },
+  {
+    "path": "Batteries/Lean/EStateM.lean",
+    "sha256": "973d4905cc07eb695347103ea8c0b6a8c72059a804e204b8f900a323a582fba6"
+  },
+  {
+    "path": "Batteries/Lean/Except.lean",
+    "sha256": "8740ee495483257c5b7924e4ba8e5da94c1dc76b4e30cf5969e90d78406175a9"
+  },
+  {
+    "path": "Batteries/Lean/Expr.lean",
+    "sha256": "841b12b5ed2e08e4869ca0805adc4a474b822d742e1f0c7b8c8d65b79d817ca5"
+  },
+  {
+    "path": "Batteries/Lean/Float.lean",
+    "sha256": "0fa59a084ed0a8127dd9390db6938a99cee399d861edc09e80ec5e0ca40b72f6"
+  },
+  {
+    "path": "Batteries/Lean/HashMap.lean",
+    "sha256": "91d2ce6025274a62a57bc069865b28372f25ef6119fe340277a9685996e7b45e"
+  },
+  {
+    "path": "Batteries/Lean/HashSet.lean",
+    "sha256": "5934336540be1ad3a043e9f94371f106fecaa0071c3b10b5db1fdc37604bebf2"
+  },
+  {
+    "path": "Batteries/Lean/IO/Process.lean",
+    "sha256": "08a4e403ac521db83977aa6b0b3537d5ac8757bc72eea5a28b01bb60d58dc799"
+  },
+  {
+    "path": "Batteries/Lean/Json.lean",
+    "sha256": "a40d9d39ff0e838adcd352598cb28c1f17fd95d795e191ed7f26b73b81fb3f89"
+  },
+  {
+    "path": "Batteries/Lean/LawfulMonad.lean",
+    "sha256": "0e0ca6c1b3c13febf8f1bc3e02bc6802684779a1422e43201b9228213b30eeab"
+  },
+  {
+    "path": "Batteries/Lean/LawfulMonadLift.lean",
+    "sha256": "aaf9fb7d02d5934b731dcdc2b5d3de4a509d321bdb44806a26b04fe3694cafc4"
+  },
+  {
+    "path": "Batteries/Lean/Meta/Basic.lean",
+    "sha256": "87ca52c9a6b53ce8bf0ad63db875553b4c21390d9587b47493dabec5cb993c42"
+  },
+  {
+    "path": "Batteries/Lean/Meta/DiscrTree.lean",
+    "sha256": "3e54a27b8ae36f9463f760e9f77d09a6b95ffdc1ab7389762ba700c699dfbeae"
+  },
+  {
+    "path": "Batteries/Lean/Meta/Expr.lean",
+    "sha256": "e9403bca917a5c256e378ffb0c4c9c8a288db04e0c7f4cbfc1fd6e0172f8d103"
+  },
+  {
+    "path": "Batteries/Lean/Meta/Inaccessible.lean",
+    "sha256": "1c8b8b041a5528e26bb21620e6da42e07f2777fa092a51963fc771778b356da5"
+  },
+  {
+    "path": "Batteries/Lean/Meta/InstantiateMVars.lean",
+    "sha256": "407a85d7644a1704dd4b1ff236f6ea0683e681df85685c9f887c27fbe9f2d39c"
+  },
+  {
+    "path": "Batteries/Lean/Meta/SavedState.lean",
+    "sha256": "15b4e17c9394decedf1cea2acec77df3c662d2893120290e9fd21ca4b62bdf2a"
+  },
+  {
+    "path": "Batteries/Lean/Meta/Simp.lean",
+    "sha256": "7066300691195f474c7a3f7a610d365024a3c4f19224dc208b4741eb0a36caaa"
+  },
+  {
+    "path": "Batteries/Lean/Meta/UnusedNames.lean",
+    "sha256": "72433b36fb76b2bd0091b8558bf2a3a215b200f46b000eb91c6a626d1af8cccf"
+  },
+  {
+    "path": "Batteries/Lean/MonadBacktrack.lean",
+    "sha256": "4172b1f417572d450c2ce74d585fcb4b83419a5cc974b3fef5620291252d792f"
+  },
+  {
+    "path": "Batteries/Lean/NameMapAttribute.lean",
+    "sha256": "96528da8c2d72c1ed733e3b1b19cf5cf84fb89bac24383e0aa3c59ef12b80f5f"
+  },
+  {
+    "path": "Batteries/Lean/PersistentHashMap.lean",
+    "sha256": "34e9a76de5d4ff30fb05da9b89515dfb2f59fcb8c03facc865414bfaa2ed2bfa"
+  },
+  {
+    "path": "Batteries/Lean/PersistentHashSet.lean",
+    "sha256": "17398feb1ef9535a9bdf3cfb7315fdda2739b4c7b190c50c2222151dbf7946ef"
+  },
+  {
+    "path": "Batteries/Lean/Position.lean",
+    "sha256": "e6807e2a39ca1076565a3767ad2538be2b9c5e2a13f2f1d1aa75bea3f1b2d079"
+  },
+  {
+    "path": "Batteries/Lean/SatisfiesM.lean",
+    "sha256": "d2b6eb65a26201d009bb5ac32555aa0a0a8c06bea846b1616014ab9aca8b43f3"
+  },
+  {
+    "path": "Batteries/Lean/Syntax.lean",
+    "sha256": "19c23c02596e55f96e903e2462ebcba9106fdd4c1ed423de7dd7a1ebfa830514"
+  },
+  {
+    "path": "Batteries/Lean/System/IO.lean",
+    "sha256": "3ef5ec11d5fbdfe3a565c3f78d5f6307599bf0e18c684fb873e95d0362aff8eb"
+  },
+  {
+    "path": "Batteries/Lean/TagAttribute.lean",
+    "sha256": "06eefb0800ca838c59a4d14a15054bf7cb2856e560bf31a3ae0fbdf9d1334243"
+  },
+  {
+    "path": "Batteries/Lean/Util/EnvSearch.lean",
+    "sha256": "53704e8ae1c64e81c331d8c0e05a01a141444bab50d84dca60d4598723186738"
+  },
+  {
+    "path": "Batteries/Linter.lean",
+    "sha256": "81e552f60b7ce02780abaae4985e81516def547e14e67899f4b7980cb9193a17"
+  },
+  {
+    "path": "Batteries/Linter/UnnecessarySeqFocus.lean",
+    "sha256": "b1419b5633311b28b5bcf8390b83b9d8f8b07e3e04be9b60559b9017510aa89a"
+  },
+  {
+    "path": "Batteries/Linter/UnreachableTactic.lean",
+    "sha256": "c04333813f67fc05736cc91df2e366ccb36fba12a4cbbb1db1c6f90870f16392"
+  },
+  {
+    "path": "Batteries/Logic.lean",
+    "sha256": "6f009f1aede0b792c5ed90ac3709d222d783682c4f9f2441088c930c7e10b817"
+  },
+  {
+    "path": "Batteries/Tactic/Alias.lean",
+    "sha256": "5f0972a53dd2d2261ab1289a91d2859eca1924271d85b6f7c139b302e344802b"
+  },
+  {
+    "path": "Batteries/Tactic/Basic.lean",
+    "sha256": "9f99f1b6c22f745858c06b8f04c20bf0e274c5d39eb0ab488c60b62009b52c07"
+  },
+  {
+    "path": "Batteries/Tactic/Case.lean",
+    "sha256": "82a265f314a89bfd2ed56e9665df6405c383049452ab372237d2e02eaa3e3ec7"
+  },
+  {
+    "path": "Batteries/Tactic/Congr.lean",
+    "sha256": "a3b2a4ed16e24741ffa582f58e61b5c890500f0dd4d39d1b10fb04389a85517b"
+  },
+  {
+    "path": "Batteries/Tactic/Exact.lean",
+    "sha256": "be62b37df6e274841afb275389ded3c284f447e00ed2cbf8b5865f413cddccd7"
+  },
+  {
+    "path": "Batteries/Tactic/HelpCmd.lean",
+    "sha256": "baebc78ea642945f7ba93e0ead28c8fba0a3daf0c95a108e891a0dc7d70ebe66"
+  },
+  {
+    "path": "Batteries/Tactic/Init.lean",
+    "sha256": "5534f622ebc8a6c6883851d777740eb3629c35685d42cc7ca4871164b4f26ffb"
+  },
+  {
+    "path": "Batteries/Tactic/Instances.lean",
+    "sha256": "2d99a632ff384e766a9aeaebaa9cb59798ea250bc212e604a6062676138b7bd3"
+  },
+  {
+    "path": "Batteries/Tactic/Lemma.lean",
+    "sha256": "b8a1b218a0e826408e83f31a97499f402ad4b6ae22bb7170792a73caa1567759"
+  },
+  {
+    "path": "Batteries/Tactic/Lint.lean",
+    "sha256": "8e516f0a2e19d4b5404e14dfe86f1aba6a6a2881ddfc55ae8241b641d83f1cc8"
+  },
+  {
+    "path": "Batteries/Tactic/Lint/Basic.lean",
+    "sha256": "852787c6e257887b570525c7fdcde873b448f27ed3dd8a86a6652a89b2d7e9f8"
+  },
+  {
+    "path": "Batteries/Tactic/Lint/Frontend.lean",
+    "sha256": "9f5ab06398d59769b69580aca52746749b9cb51b954b999ef86477caf048b2ba"
+  },
+  {
+    "path": "Batteries/Tactic/Lint/Misc.lean",
+    "sha256": "80e85be95b406a169f4599457a296bfef36709a122375732794d052dbe983200"
+  },
+  {
+    "path": "Batteries/Tactic/Lint/Simp.lean",
+    "sha256": "bdea107b3d2f9ccf825836d188b1295a3c9f4be2bee357dbf5b6c40623119e06"
+  },
+  {
+    "path": "Batteries/Tactic/Lint/TypeClass.lean",
+    "sha256": "82466804c996c016b1924d3e74183aa4412a43cbcffef452d155a3e214f772c2"
+  },
+  {
+    "path": "Batteries/Tactic/NoMatch.lean",
+    "sha256": "8bd3017c5c6e725a65a321033ef49d9b04c08e725e80234b342a6096d800e288"
+  },
+  {
+    "path": "Batteries/Tactic/OpenPrivate.lean",
+    "sha256": "6d86873805769d8aeba4f4c79985f37a99f9bc29b25bd31b924689f1ae980ac6"
+  },
+  {
+    "path": "Batteries/Tactic/PermuteGoals.lean",
+    "sha256": "ef122c00a16d02d833dfa6742d0985868f56b0222e5f9c053a0ad4d1015b619c"
+  },
+  {
+    "path": "Batteries/Tactic/PrintDependents.lean",
+    "sha256": "e26aa3e7dad7b73631da57d91ed637d0562a211263b8b769a51e4c505ea3cb24"
+  },
+  {
+    "path": "Batteries/Tactic/PrintOpaques.lean",
+    "sha256": "f255242fcb0bcf76f9d1ce8d012f8b52aa170e11bd0b213fb99bf66024023079"
+  },
+  {
+    "path": "Batteries/Tactic/PrintPrefix.lean",
+    "sha256": "c1ea5292d0ab17855fe96f60573b4781458eafaead1ea66c21a3f10bfbabb399"
+  },
+  {
+    "path": "Batteries/Tactic/SeqFocus.lean",
+    "sha256": "72cf79de18cab125d25a932ca56341637826176d1a76c8d8c1d4f14f0003e103"
+  },
+  {
+    "path": "Batteries/Tactic/ShowUnused.lean",
+    "sha256": "a6be6dc568056860db676b54cf4c4d48b56062a76353ae3053a27924cffab9af"
+  },
+  {
+    "path": "Batteries/Tactic/SqueezeScope.lean",
+    "sha256": "0dc3fa140b36cc94c88107fbcc3d4c920c6be64ce594cfbeb80be61c8c7e5738"
+  },
+  {
+    "path": "Batteries/Tactic/Trans.lean",
+    "sha256": "14725882025fff788a4c18410c6b22d3f2e957f6784ca1a588bda388df4c7bd7"
+  },
+  {
+    "path": "Batteries/Tactic/Unreachable.lean",
+    "sha256": "0e53b61434c837ca602167366c351fd6567289b1cc7eb0c0bfe2110b998c918e"
+  },
+  {
+    "path": "Batteries/Util/Cache.lean",
+    "sha256": "c0523a80662d67260d1a2c28a688c0957fa2b83b79a8c36b3e148bb5deef3e72"
+  },
+  {
+    "path": "Batteries/Util/ExtendedBinder.lean",
+    "sha256": "9b306ba07287b7ff0a5bcc4f1a01695d875b0bb2487152638542d32c27cd445d"
+  },
+  {
+    "path": "Batteries/Util/LibraryNote.lean",
+    "sha256": "fc029a0e942a923588b6a424bf43d40cc34452ce71e83fba6d131457f3048682"
+  },
+  {
+    "path": "Batteries/Util/Panic.lean",
+    "sha256": "c138b77c974eb99418cc1bf0238e5eed3455122204073db8fc3b0ddbaa6bcb1c"
+  },
+  {
+    "path": "Batteries/Util/Pickle.lean",
+    "sha256": "7d4ba5908d5ee3a17aa9d6bb7a6063529b7c6c179a5aa90743ba06e7d4eef955"
+  },
+  {
+    "path": "Batteries/Util/ProofWanted.lean",
+    "sha256": "9603f5be7bac20d0f578441e3a50b3b2a620d1278e2c49811b3519a8774615a1"
+  },
+  {
+    "path": "Batteries/WF.lean",
+    "sha256": "0f954a22db2d8ffb1b5e090e352a48fc81c295f01d67f2a645d80d033a3946f6"
+  },
+  {
+    "path": "BatteriesTest/ArrayMap.lean",
+    "sha256": "fb947d621c1c8f330647bd595ca15c19cb8f22538b1ef95e65f295f818632814"
+  },
+  {
+    "path": "BatteriesTest/Internal/DummyLabelAttr.lean",
+    "sha256": "ea62452093603b9caa47e0cdc54445cd9d734dae00bed8a187558e81f6119cb3"
+  },
+  {
+    "path": "BatteriesTest/Internal/DummyLibraryNote.lean",
+    "sha256": "a740595cda5f1319d5316779f4ae378c3363b93f4014441dacb9b5c72c0ca77f"
+  },
+  {
+    "path": "BatteriesTest/Internal/DummyLibraryNote2.lean",
+    "sha256": "fc30291f07fd655b405b0f83318ee192a9e4ec8034fd0e2742472b8a133e04e3"
+  },
+  {
+    "path": "BatteriesTest/MLList.lean",
+    "sha256": "bbc5d6d814da50265f1405aeb4b6aeadc22a5153461de748ad1436f5ab6dcbbf"
+  },
+  {
+    "path": "BatteriesTest/OpenPrivateDefs.lean",
+    "sha256": "d4fd6ae7a3357d93d49893a5da468cedc7edede555b0dc4cd50cdf6f96902515"
+  },
+  {
+    "path": "BatteriesTest/absurd.lean",
+    "sha256": "5337bc852a97b79eb3447712a634ca76b5193df075867321d8b763e845b67c92"
+  },
+  {
+    "path": "BatteriesTest/alias.lean",
+    "sha256": "641598920a9837bdf9b358c7f84d63115262296d5a59e46bc6930aab4cea28e9"
+  },
+  {
+    "path": "BatteriesTest/array.lean",
+    "sha256": "27a13dd15dad973c66d090cd71e7f677f4e7a9ff8a307f24b45ff0ef03ed719a"
+  },
+  {
+    "path": "BatteriesTest/by_contra.lean",
+    "sha256": "aaa0eaad02c31bdbc7b6e35b2cd17c2007a2fefb327aee911367bd2d79f7ecd3"
+  },
+  {
+    "path": "BatteriesTest/case.lean",
+    "sha256": "d26776dc4c4dcfd7199d001a58dc9d06875c2930a5b81446b125d3a5446d81c7"
+  },
+  {
+    "path": "BatteriesTest/congr.lean",
+    "sha256": "bdc3e06173727aaf966c4f4ed3098adb12bfcee0d1720fe1c0ab67eb9855ec60"
+  },
+  {
+    "path": "BatteriesTest/conv_equals.lean",
+    "sha256": "11152eda0a9871d75f06c1c2bfe5124c132b4e81cdca95e1cc680f5e278a1865"
+  },
+  {
+    "path": "BatteriesTest/exfalso.lean",
+    "sha256": "15a137bf7821eecfdfb7171b6af602735aabbf61ddae864ee284d0590d88b4e9"
+  },
+  {
+    "path": "BatteriesTest/float.lean",
+    "sha256": "9c3f8a03c880fbdbae08669eb5033bad8c64f22ecfe3c04ca3cefcba5f2aa105"
+  },
+  {
+    "path": "BatteriesTest/help_cmd.lean",
+    "sha256": "6d5c8676b12941c9ee554dc52f99b8b61ed9479dbc36dc404e40f1317e2773f9"
+  },
+  {
+    "path": "BatteriesTest/import_lean.lean",
+    "sha256": "926ccae4ac81b745b30ca09862501002d41d24bb9cbb5de1ac8c32f9cd2a782d"
+  },
+  {
+    "path": "BatteriesTest/instances.lean",
+    "sha256": "2fd23987b64dc19c650721e5cc76ddef8c8ff73a23bca3faa41f371462fb8e06"
+  },
+  {
+    "path": "BatteriesTest/isIndependentOf.lean",
+    "sha256": "3870c1d24f696b0b06376885e3ed40485aa05b91f2d22be5426bf7e2b4b29bce"
+  },
+  {
+    "path": "BatteriesTest/kmp_matcher.lean",
+    "sha256": "adfa8ec71e41e13abe18485bbaaa1b14e33ad84caf59b671e1f8c8ed15a80d7b"
+  },
+  {
+    "path": "BatteriesTest/lemma_cmd.lean",
+    "sha256": "48c9abf39f58acc472518950fbc9d5ae147e0368a2d6be44a0cf3de157673826"
+  },
+  {
+    "path": "BatteriesTest/library_note.lean",
+    "sha256": "dc981e49ccfc7b0e86fc7dfbcd04434416ffbc60829328eebdb9c2e7001376f2"
+  },
+  {
+    "path": "BatteriesTest/lintTC.lean",
+    "sha256": "83e6fb1778b0f9e35ec71300becfe90b75af0ac05a3ef10e01ae54e927e2287b"
+  },
+  {
+    "path": "BatteriesTest/lint_docBlame.lean",
+    "sha256": "41f6795d545e972f1c15ac645403145940bc53ed3b6b2d905bf2e8074de71a7b"
+  },
+  {
+    "path": "BatteriesTest/lint_docBlameThm.lean",
+    "sha256": "d347767db0db2d546082628010df6fa69a2907d00816db3e65ea9dd5e8c96239"
+  },
+  {
+    "path": "BatteriesTest/lint_dupNamespace.lean",
+    "sha256": "eb5ad5ef5d2ca165aad9cfc524336e73af34969b05721687251ca05a2b46d852"
+  },
+  {
+    "path": "BatteriesTest/lint_empty.lean",
+    "sha256": "cc6dbcef80a681a8402ecc7af7bb7c0021aeab41b5aa7587559404273a93e7ca"
+  },
+  {
+    "path": "BatteriesTest/lint_lean.lean",
+    "sha256": "5b8a09f3ec78bf208c6640b1f552634b52aba90beab334d18309d60d6f38f5b8"
+  },
+  {
+    "path": "BatteriesTest/lint_simpNF.lean",
+    "sha256": "804fce5c4d6015e7f547dde0c1848d7034ee2d68561d8eb75976c4a72fb06935"
+  },
+  {
+    "path": "BatteriesTest/lint_unreachableTactic.lean",
+    "sha256": "1bc97666d32ccc4a42daf333ab8b23af5f924ecbf012b758ef20e5faba62d627"
+  },
+  {
+    "path": "BatteriesTest/lintsimp.lean",
+    "sha256": "aff552a810c400aac6d9ff8cd3b7a46047a1e8808635b12927082b6a63862b17"
+  },
+  {
+    "path": "BatteriesTest/lintunused.lean",
+    "sha256": "c3729482a277fe520aced20674863196f0de66d9d6fe2a801df550d01ca69a65"
+  },
+  {
+    "path": "BatteriesTest/list_sublists.lean",
+    "sha256": "bd55857d8ccfed1dff7a69b31e1948d575f33c26dc1481e518dad477fc4b835e"
+  },
+  {
+    "path": "BatteriesTest/mersenne_twister.lean",
+    "sha256": "408735abe7308cdf6ff3dda1f097918ce49699174e359cff96c27f535d25d2be"
+  },
+  {
+    "path": "BatteriesTest/nondet.lean",
+    "sha256": "b90389b3548651ee28751a290e8c4c8286fe44b06ce2e2207a7aedafaa65a068"
+  },
+  {
+    "path": "BatteriesTest/norm_cast.lean",
+    "sha256": "14e548dddad04f07c2048ae014d132cdd52213bdd8a69b829bfa7ab737c4e666"
+  },
+  {
+    "path": "BatteriesTest/omega/benchmark.lean",
+    "sha256": "622eae6b3942020a71266b808da4f87b21b47b9cc8e85558af1bab5ca5f0a618"
+  },
+  {
+    "path": "BatteriesTest/on_goal.lean",
+    "sha256": "17a7be5aa77c97369e5a486f4b562008931da8778718d7ee25af8a5456a5cb4d"
+  },
+  {
+    "path": "BatteriesTest/openPrivate.lean",
+    "sha256": "309ef1ccf06f0eb0b9fe9086a642dd3d39b62a2662bfe704bf8cc2efd617a297"
+  },
+  {
+    "path": "BatteriesTest/print_opaques.lean",
+    "sha256": "e2c249272e9d8353f8ea2356edf757365b72939d27dcd170450ec150fcf411fc"
+  },
+  {
+    "path": "BatteriesTest/print_prefix.lean",
+    "sha256": "86a17f19237d0ef9aa8a4a02466f7877130d841a3a28aef413eef36453ec6e04"
+  },
+  {
+    "path": "BatteriesTest/proof_wanted.lean",
+    "sha256": "19d1569236a7a898a88626bd04a09844508024b0ca5ad9bb22aef19971198aea"
+  },
+  {
+    "path": "BatteriesTest/register_label_attr.lean",
+    "sha256": "d0763cd6a5c90a55629ee94e3c4f58ee394132b17364b4828580f682da057d0f"
+  },
+  {
+    "path": "BatteriesTest/rfl.lean",
+    "sha256": "3f11f24cda00b0169598c4f2eb7f81f259d25a15cdf45b95eac2a3b31e3a43b0"
+  },
+  {
+    "path": "BatteriesTest/satisfying.lean",
+    "sha256": "dd91f96dbb76bed9e7573e9c14756c3bb13dd6382168d9ee9e432c127ccef996"
+  },
+  {
+    "path": "BatteriesTest/seq_focus.lean",
+    "sha256": "58eb83b1c7de93c1fdb786d506b01cf7a2b26e2df3d97ce0912e123803e2b153"
+  },
+  {
+    "path": "BatteriesTest/show_term.lean",
+    "sha256": "fe6423c92cd82a45ac8c18b4192bad5d03f40e17d0030b7bf40bc4058f9b24bf"
+  },
+  {
+    "path": "BatteriesTest/show_unused.lean",
+    "sha256": "2283ad7f843c0d0aa6d42e99d70805faeab59b47fbd9d98b25f7c6af53dca200"
+  },
+  {
+    "path": "BatteriesTest/simp_trace.lean",
+    "sha256": "4f5d1e2de2d9ecb10c2287fbfb8c919a25f6f0ede5c9f5d9341142a79995a837"
+  },
+  {
+    "path": "BatteriesTest/simpa.lean",
+    "sha256": "a85b270ef24e0b18318a423f35080125bf18b7651098b3f6b40f7e3aa9192186"
+  },
+  {
+    "path": "BatteriesTest/solve_by_elim.lean",
+    "sha256": "045557fbf26da060bd5ded449c16a8e18f098bcb10702866df93d3337870cd51"
+  },
+  {
+    "path": "BatteriesTest/trans.lean",
+    "sha256": "2e75418552f67a9c33713b8f3cd11104ffa86a3e6c0f3ff1e1ae160686a803a7"
+  },
+  {
+    "path": "BatteriesTest/tryThis.lean",
+    "sha256": "60c43b7e96ab2f6dfc254eb7a8d7aaf0d90797357ef2b993c6f0b0b7f6a0a556"
+  },
+  {
+    "path": "BatteriesTest/vector.lean",
+    "sha256": "428effea8cd6209a4608fc2863027686cfdfa1f97f967885407c9449753fe671"
+  },
+  {
+    "path": "BatteriesTest/where.lean",
+    "sha256": "9b7b89fec2d289e3dc5cb923d957fcab9eaf5ad1d73c260215e894347e09f066"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "README.md",
+    "sha256": "e69ebd825dab9979dd8502195a9ded1e9689c435727368e7547a84ad04c13b7d"
+  },
+  {
+    "path": "bors.toml",
+    "sha256": "8a2c258b84e93d4eea2f1a64bdf4ef844502535c8943c0f8e460029a642efb64"
+  },
+  {
+    "path": "docs/README.md",
+    "sha256": "e69ebd825dab9979dd8502195a9ded1e9689c435727368e7547a84ad04c13b7d"
+  },
+  {
+    "path": "docs/lakefile.toml",
+    "sha256": "d7eb5ef29dac0133185b44e6187690388846462906a0cb9cb73258e5a0dae01c"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "22a517fadc44c10f21330be6f4ec69d1f5026882e0d2b157d5459a8e7b720d09"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "acadcd8beb13a53a4ac9399e6706c829309d2380f338d13b037886666f978015"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+  },
+  {
+    "path": "scripts/check_imports.lean",
+    "sha256": "d3e297808880fc70b6e8f6e82a95391ce2b81c43f6b3b21698e00638d0c64b26"
+  },
+  {
+    "path": "scripts/create-adaptation-pr.sh",
+    "sha256": "ef37bf132763deeb4a340e297d14005f5bf07288aaf90038530137da925ab0dd"
+  },
+  {
+    "path": "scripts/lintWhitespace.sh",
+    "sha256": "7f227f0f1ef132722120cc9280ed151d8b800075c9a68a2d04987a22a1869c06"
+  },
+  {
+    "path": "scripts/merge-lean-testing-pr.sh",
+    "sha256": "280dfbf262b7c3f8afc866148470b9e636b1d126f087c6ea3b0ab6b8ed88d8e9"
+  },
+  {
+    "path": "scripts/nolints.json",
+    "sha256": "68ec02368fb67549bf1f2b32bcba5f251dacc3a31025bc7ba99717b0eda8b27a"
+  },
+  {
+    "path": "scripts/runLinter.lean",
+    "sha256": "4303bfa3d159755023d125516f8d32d511c0ec75a3b67e61e40818edf66fc123"
+  },
+  {
+    "path": "scripts/updateBatteries.sh",
+    "sha256": "15db323cdd3cdcb841f86876cf660a9342cd416e6deb19d8333c911655c6911d"
+  }
+]

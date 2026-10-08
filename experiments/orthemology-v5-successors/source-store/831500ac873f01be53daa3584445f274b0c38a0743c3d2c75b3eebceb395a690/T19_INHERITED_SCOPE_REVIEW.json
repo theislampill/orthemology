@@ -1,0 +1,201 @@
+{
+  "limits": [
+    "No new kernel or empirical execution; no additional independent evidence count.",
+    "External warrants stay NOT_ESTABLISHED in this integration ledger; this is not a retraction of the original explicitly conditional/defeasible affirmative appraisal.",
+    "Three earlier missing review bodies remain reported and uninspected. Original source holds remain."
+  ],
+  "outcome": "LIMITED",
+  "results": [
+    {
+      "evidence_keys": [
+        "T19-REPORT:P00045-P00056",
+        "T19-REPORT:P00098-P00104",
+        "T19-EVIDENCE:reviews/causal_nonduplication.json"
+      ],
+      "id": "T19-CND",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [
+          "Adverse appraisal reasonably finds familiar differentiated-work examples and determinacy insufficient for universal nonduplication; no plural-universe construction is required to press the objection."
+        ],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "CONDITIONAL_PHILOSOPHY",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Adds explicit causal premise after preserving a real scope correction.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T19-SRC-51ad0dcfb6e4a1c78165",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "48bc09c33bdeb1503ab290dd751ba5d26dcd0115f0a4c25e889c28a936641a6d",
+      "target": "t19-cnd"
+    },
+    {
+      "evidence_keys": [
+        "T19-REPORT:P00057-P00078",
+        "T19-EVIDENCE:reviews/source_mode_and_field.json"
+      ],
+      "id": "T19-SOURCE-MODE",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [
+          "Adverse appraisal grants comparative fullness and receivedness of chosen foreign completion but withholds the all-relevant-exercise norm: a freely chosen less comprehensive role may still be fitting."
+        ],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "CONDITIONAL_PHILOSOPHY",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Adds stronger actual-source norm beyond intact standing capacity and the prior concord objection.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T19-SRC-c555be4c24b192140d3a",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "cbcbe93bb823f1617e836a33ebd2eb619bee27a3520a6bc76352f3735efb5dfd",
+      "target": "t19-source-mode"
+    },
+    {
+      "evidence_keys": [
+        "T19-REPORT:P00079-P00097"
+      ],
+      "id": "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "CONDITIONAL_PHILOSOPHY",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Clarifies the mediate-attribution bridge and prevents assertoric-ownership requirements from blocking causal tracing; retains inherited strict-ancestry structure.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "b9b6fa71a7b8a8b95fdd69aacdb627fb0f3531c53ce61c2614aa29873f8a1bed",
+      "target": "t19-mediate-original-attribution"
+    },
+    {
+      "evidence_keys": [
+        "T19-REPORT:P00004-P00015",
+        "T19-REPORT:P00092-P00110",
+        "T19-REPORT:P00144-P00169",
+        "T19-EVIDENCE:reviews/disposition_and_review_scope.json"
+      ],
+      "id": "T19-COMMON-CONNECTED-SOURCE",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [
+          "Both source-mode and CND adverse appraisals remain reasonable substantive disagreement.",
+          "The intervening primitive-double-sufficiency scope correction remains valid."
+        ],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "CONDITIONAL_PHILOSOPHY",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Supersedes T17/T18 withholding of sufficient common-field warrant, with additional openly defended premises rather than a new structural theorem.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T19-SRC-12bbb16f15dbb74d5253",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "d7b5bfc2b54c4fb222aff5eb1873379649a94674d8c7ec3b1bf561a442b17820",
+      "target": "t19-common-connected-source"
+    },
+    {
+      "evidence_keys": [
+        "T19-REPORT:P00130-P00135",
+        "T19-SOURCE-GUIDE:P00074-P00079"
+      ],
+      "id": "T19-ATTESTATION-DISCRIMINATION",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "CONDITIONAL_PHILOSOPHY",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Bounded refinement of existing positive route, not first discovery of attestation.",
+        "retain_prior_result_ids": [
+          "D15-T07-ATTESTATION-IMPORT"
+        ]
+      },
+      "reviewed_source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "86525e4164a5d3fabaf6b51342a24dcbd5ffea7e6d859283d771e96f94b24a3f",
+      "target": "t19-attestation-discrimination"
+    },
+    {
+      "evidence_keys": [
+        "T19-REPORT:P00136-P00143",
+        "T19-SOURCE-GUIDE:P00080-P00089"
+      ],
+      "id": "T19-WALID-RECEPTION-SCOPE",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "SOURCE_ASSESSMENT",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Closes one historical illustration at reception/strategy scope; preserves a genuinely uncompleted named counterproduction comparison.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "ebe79cb2442709fb2734aa4b59381a857c90aa531588a55c0006bc955af70c9f",
+      "target": "t19-walid-reception-scope"
+    },
+    {
+      "evidence_keys": [
+        "T19-REPORT:P00159-P00169"
+      ],
+      "id": "T19-ASSERTED-OBLIGATION-TRANSFER",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "CONDITIONAL_PHILOSOPHY",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Sharpens distinction between knowing an obligation by truthful testimony and creating it through an authoritative directive.",
+        "retain_prior_result_ids": [
+          "D15-T07-NORM-ROLES"
+        ]
+      },
+      "reviewed_source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "statement_sha256": "5f02e786079ac92245ff7265664658108986ba31f4e9f6b6c32378a930beca51",
+      "target": "t19-asserted-obligation-transfer"
+    },
+    {
+      "evidence_keys": [
+        "T19-REPORT:P00112-P00129",
+        "T19-READING-INDEX:structured entries"
+      ],
+      "id": "T19-SOURCE-OCCURRENCE-CONTROLS",
+      "inheritance": {
+        "binding_work_remaining": "Map local document aliases to exact existing/source-store identities; bind original reviews and suites only where their inspected scope actually supports this row. Empty review/suite arrays are unresolved integration slots, not a denial of historical review.",
+        "continuing_dissent": [],
+        "fresh_evidence": "NOT_RUN",
+        "inherited_evidence_class": "SOURCE_ASSESSMENT",
+        "new_independent_evidence_count": 0,
+        "new_relative_to_predecessor": "Source-supported synthesis rather than new formal science or wholesale supersession.",
+        "retain_prior_result_ids": []
+      },
+      "reviewed_source_ids": [
+        "T19-ARABIC-READING-INDEX-DERIVED-MARKDOWN",
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SRC-6aa02c1019b61e7a1b61"
+      ],
+      "statement_sha256": "a5647bafcda729e683c01644998e40ecdf8a0ee4d4bf324314abf7754d9e60b3",
+      "target": "t19-source-occurrence-controls"
+    }
+  ],
+  "schema": "bounded-inherited-source-scope-review-v1",
+  "scope": "Integration fidelity/record confirmation against the supplied final research and prepared source-to-claim map. Original scientific or philosophical appraisal is inherited; this document does not independently re-adjudicate it.",
+  "source_review_authority": "AI integration source/scope review; no external human-specialist endorsement",
+  "tranche": 19
+}

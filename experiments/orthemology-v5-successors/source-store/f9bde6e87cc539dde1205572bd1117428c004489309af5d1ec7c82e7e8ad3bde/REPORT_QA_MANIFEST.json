@@ -1,0 +1,188 @@
+{
+  "schema": "t20-final-report-document-qa-v1",
+  "created_at_utc": "2026-10-07T14:42:23.189427+00:00",
+  "disposition": "PASS_CONTENT_AND_FULL_PAGE_VISUAL_QA",
+  "source": {
+    "path": "REPORT.md",
+    "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+    "bytes": 41472
+  },
+  "document": {
+    "path": "Orthemology_Twentieth_Research_Final_v1_20261007.docx",
+    "sha256": "5bf9786c480649ff254888e1f6c94bb7306c485f9acd7f485b65049c545ab38e",
+    "bytes": 53016
+  },
+  "content_qa": {
+    "sha256": "7a7756155778634f57e5ce972ba610ad65b26146145fccf2df58f36bba96b4c7",
+    "bytes": 2173,
+    "body_included": false,
+    "record_role": "content_qa"
+  },
+  "build_receipt": {
+    "sha256": "20c938cf7e9e2ae36522c447c9a0609b6a4e770b42fca3ef0bcfbd0fae6cde80",
+    "bytes": 673,
+    "body_included": false,
+    "record_role": "build_receipt"
+  },
+  "source_readback": {
+    "historical_original": {
+      "sha256": "00f0de3af6fa8acea3c71fad35db63b34662cf84130c9f68a6811882c8d512db",
+      "bytes": 5052,
+      "body_included": false
+    },
+    "public_record": {
+      "path": "REPORT_FINAL_SOURCE_READBACK.json",
+      "sha256": "504d161da15f395acffa4d3f1fef9c97a71142e212abd2b17f94815fe07fccb4",
+      "bytes": 8036
+    },
+    "identity_relation": "Public provenance projection of the original reviewed receipt; original and selected identities differ explicitly."
+  },
+  "authored_content_records": 115,
+  "text_fidelity": "All authored paragraph, heading and list text matches exactly; generated dated authorship subtitle recorded separately.",
+  "native_ordered_list_items": 12,
+  "page_count": 11,
+  "page_inspections": [
+    {
+      "page": 1,
+      "sha256": "3fa65cd9c09f32c12b9239217faae78d2478dbe2855d965109058386585e7f6d",
+      "bytes": 498301,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 2,
+      "sha256": "33ffd36e5a265c65c57bd6312db80c5cd378231359041e14412ac822c77aefaa",
+      "bytes": 481820,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 3,
+      "sha256": "22e2e8c93e7eff275b5625b3f01df232d2e13307aeaab7b08b8ff2eb7692fda2",
+      "bytes": 506307,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 4,
+      "sha256": "59f2d38bcdf4096154e2bdebf58a5cfafb6ac38978587338966bccb41c1edbab",
+      "bytes": 521634,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 5,
+      "sha256": "7108899496825c386e77a2bba149f5f9d571c6f013de35aea395935ac46dfbe1",
+      "bytes": 546237,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 6,
+      "sha256": "389004957ee192aec0b0f6dd184446318dcdb7dd52a89cb5d25ac96ac0feba35",
+      "bytes": 496753,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 7,
+      "sha256": "a77068bed88ba59c1e33d972a007e4b9cf507794afc20106764d04827b3d0059",
+      "bytes": 479719,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 8,
+      "sha256": "c5cb7b8bcb1359697e66e8d1daac2576d5860b6b54d17fe24967eb4e888dc30c",
+      "bytes": 506129,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 9,
+      "sha256": "beaa2da835a6a3f1a14d9bb1351ea844bdda6b4c724f14c0654fdc9c69432f27",
+      "bytes": 586719,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 10,
+      "sha256": "dfdb249c93551b24659126878538ad9de3d5fe01313aa4fd4c939b83ae6dd57a",
+      "bytes": 533884,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 11,
+      "sha256": "57c84c1af1633a70e0837a90a921603f7330f16565f72d90df2771eeab86810e",
+      "bytes": 389624,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing glyphs, broken list continuation, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    }
+  ],
+  "formatting_corrections_required": false,
+  "mathematical_companion_unchanged": {
+    "path": "Orthemology_Twentieth_Mathematical_Companion_v2.docx",
+    "sha256": "64ac3dd33e250a5fc0527421bdeb67227be40962389028911f3f76471537e681",
+    "bytes": 39254
+  },
+  "science_rerun": false,
+  "acceptance_scope": "Document content and rendering only.",
+  "qa_attribution": "Author-reported complete visual QA and text fidelity. Curation checks final identities, the bound page-image hashes and document XML without claiming an additional visual review.",
+  "original_qa_manifest_sha256": "d2d1b95015df253831ebd703060a108b44c17aa97e2a05ed9b2c6fc46e7a3b05"
+}

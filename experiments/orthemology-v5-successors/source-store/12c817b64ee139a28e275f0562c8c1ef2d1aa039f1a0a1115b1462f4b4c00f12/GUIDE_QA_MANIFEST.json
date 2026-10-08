@@ -1,0 +1,295 @@
+{
+  "schema": "t20-final-source-guide-document-qa-v1",
+  "created_at_utc": "2026-10-07T14:49:32.567322+00:00",
+  "disposition": "PASS_CONTENT_AND_FULL_PAGE_VISUAL_QA",
+  "source": {
+    "sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+    "bytes": 63809,
+    "owner_archive_path": "t20/reading/GUIDE.md"
+  },
+  "document": {
+    "sha256": "6487a11eccf51ba547f9665a5fb94e0c1173db457cb711381c2abae7dfb76b53",
+    "bytes": 62774,
+    "owner_archive_path": "t20/reports/Orthemology_Twentieth_Source_Evidence_Guide_v1_20261007.docx"
+  },
+  "content_qa": {
+    "sha256": "894ab83dfcc705549e2c4a035e3b854f2c8b3b5e5219080d52f7797265fc8c26",
+    "bytes": 1185,
+    "record_role": "content_qa",
+    "original_record_body_included": false
+  },
+  "build_receipt": {
+    "sha256": "deede75e8097e85d273428beaf186bfdaacb5099259789808109871423128ea8",
+    "bytes": 692,
+    "record_role": "build_receipt",
+    "original_record_body_included": false
+  },
+  "layout_correction": {
+    "sha256": "15eb2a5e56dc3e9fe19623f79a26f5e8408020a38a56dbaa404785cc6a67c82c",
+    "bytes": 856,
+    "record_role": "layout_correction",
+    "original_record_body_included": false
+  },
+  "source_narrative_approval": {
+    "sha256": "5810b083f91d3211d59cbe6436b04b80406e3f750649d92e9e5c372a5420ce09",
+    "bytes": 875,
+    "record_role": "source_narrative_approval",
+    "original_record_body_included": false
+  },
+  "authored_content_records": 247,
+  "text_fidelity": "Every authored paragraph, heading and list text matches the corrected approved source exactly. The generated dated authorship subtitle is recorded separately.",
+  "external_hyperlinks_exact": 20,
+  "relative_link_labels_and_paths_preserved": 4,
+  "arabic_codepoints_preserved_in_order": 62,
+  "page_count": 18,
+  "page_inspections": [
+    {
+      "page": 1,
+      "sha256": "607884664c8beef3cfaf630c2eb4637514428abd831338dccce9607cd179b77d",
+      "bytes": 511385,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 2,
+      "sha256": "cfc6902e7d0dc2e22387efedb69f4c0a68134b2ebc3116836d972f52cd6b677a",
+      "bytes": 531474,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 3,
+      "sha256": "8a2e3660ec16a209b83215c9cbe26bf9b76b48e088dab426b87bb7e942d252d6",
+      "bytes": 460570,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 4,
+      "sha256": "12cd89c87d75dfbc6216973396b2937e9bbecdc80351f86c96ad69e197cc446c",
+      "bytes": 449253,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 5,
+      "sha256": "ebb79682b6483c0823c15cf94795464bc6318b36647a037933fc5d880fa7704c",
+      "bytes": 466252,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 6,
+      "sha256": "804ab018519357ea624f7a8402cb88164db3b2960be73c1239617760bb4c88be",
+      "bytes": 484159,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 7,
+      "sha256": "3503ecb18a730e4ce338e9b00e10429706633b202a22fb7a267fb2a4b7a0028a",
+      "bytes": 479214,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 8,
+      "sha256": "bdb3213f7670c3aa6e8589ba967194ef65dbf9bf24803204eb6de00a94f7d5de",
+      "bytes": 438486,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 9,
+      "sha256": "1c5a1953aa9f49d325c79a99ea001e319e7b3d412f3b763f4b2e6ede9ae32a15",
+      "bytes": 523968,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 10,
+      "sha256": "88953e2ad858a8b92efd278fb50ac699e66d77d17fc9d4b04900b8386f0ef26b",
+      "bytes": 442959,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 11,
+      "sha256": "df5e178efc7b57265a83af0b87c726f2284ab5f3db8313eb1829a39bb0ab2e62",
+      "bytes": 522398,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 12,
+      "sha256": "810b2fd23b2bbef2fbe92fb59c363b8d22a2668b45881d15e4fe3dec0816709d",
+      "bytes": 491098,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 13,
+      "sha256": "1acf36467664e3d677fc55a1f52b5c01d0310aae45145071aac9be58189e428e",
+      "bytes": 486052,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 14,
+      "sha256": "4cd7f36ace8cd28644a1d83cc98532b20e30d891de99fbcdcd49d4ff62fc4d5b",
+      "bytes": 479692,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 15,
+      "sha256": "452cc97c248ca9fd24c9402132dee2e5c966b6997321cc216bd1258eb1ebac8d",
+      "bytes": 499905,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 16,
+      "sha256": "4627c62ff432c3a83623e7bbda3c9ca104c90fa1f2e55ef30d84f95957aeb247",
+      "bytes": 432353,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 17,
+      "sha256": "06143d4f390b30ca87c56dd9cc04f0c580bd748eff131416b3190f12943ba08a",
+      "bytes": 478209,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    },
+    {
+      "page": 18,
+      "sha256": "0e12240c1c7b5d2005ba021c147cf7b6e3e19a87ab302e1ef7af34c5cd1aa63d",
+      "bytes": 512544,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "final_render_identical_to_individually_viewed_image": true,
+      "inspection": "Opened individually at original resolution. No clipping, overlap, missing Arabic or Latin glyphs, unreadable identifiers, or misplaced footer.",
+      "result": "PASS",
+      "image_body_included": false
+    }
+  ],
+  "corrections": [
+    "Author-approved removal of one hyphen from the SF04 heading; all body text unchanged.",
+    "Kept the SF06 locator paragraph with its following explanation, avoiding a stranded section opening."
+  ],
+  "mathematical_companion_unchanged": {
+    "sha256": "64ac3dd33e250a5fc0527421bdeb67227be40962389028911f3f76471537e681",
+    "bytes": 39254,
+    "owner_archive_path": "t20/reports/Orthemology_Twentieth_Mathematical_Companion_v2.docx"
+  },
+  "science_rerun": false,
+  "acceptance_scope": "Document content, links, typography and rendering only.",
+  "historical_first_builds_retained_separately_not_included": true,
+  "qa_attribution": "Author-reported complete page inspection. Curation independently rehashes final document and all18 final images and checks document XML; it claims no additional visual or scientific review.",
+  "original_qa_manifest_sha256": "d74edbe7b6e743066a8b6b3c2dbaa17eb88e452da6f84a790b92aa3c6c980149"
+}

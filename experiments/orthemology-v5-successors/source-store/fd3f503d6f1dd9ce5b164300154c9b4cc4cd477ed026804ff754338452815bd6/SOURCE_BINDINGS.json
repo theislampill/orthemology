@@ -1,0 +1,342 @@
+{
+  "created_utc": "2026-10-07T16:18:19.780252+00:00",
+  "readings": [
+    {
+      "id": "OTC-R1",
+      "spans": [
+        "SF-S001-L0070–L0085",
+        "SF-S001-L0266–L0276",
+        "SF-S002-L0519–L0534"
+      ],
+      "reading_status": "POST_COMPLETION_CONTEXTUAL_REREAD_ELECTRONIC",
+      "application": "Act/type/product and explicit uncreated intrinsic divine acts. Voices and alternatives retained; no all-emergent-cessation attribution.",
+      "url": [
+        "https://www.islamicbook.ws/amma/alsfdit-001.html",
+        "https://www.islamicbook.ws/amma/alsfdit-002.html"
+      ],
+      "custody_identity": {
+        "filename": "body.txt",
+        "sha256": "ce1fd61095b012e8012c1539d8e9be0b7aa6cfe2b70afc7ca8829a839724185b",
+        "bytes": 1153740,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit"
+    },
+    {
+      "id": "OTC-R2-p165",
+      "spans": {
+        "printed_page": 65,
+        "pdf_page_one_based": 165,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-165.png",
+        "sha256": "147c83ba6bf0b24c3614d4d59b77d442bebbdfb42918df99e11f9f098ae02095",
+        "bytes": 96460,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p166",
+      "spans": {
+        "printed_page": 66,
+        "pdf_page_one_based": 166,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-166.png",
+        "sha256": "87692af1111cce7b4c902ec35d1d396c8785617e271f8166d9726d83fb5ba058",
+        "bytes": 106558,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p167",
+      "spans": {
+        "printed_page": 67,
+        "pdf_page_one_based": 167,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-167.png",
+        "sha256": "43b81e41cc56c108cc53a788bcf7c4f4a4f53cf54582a4ee1fd456bba4dfff1a",
+        "bytes": 107670,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p168",
+      "spans": {
+        "printed_page": 68,
+        "pdf_page_one_based": 168,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-168.png",
+        "sha256": "d6158619149b27044aa386c5a7c5fc496937b69b7a1ad93c8727f53ee9304bff",
+        "bytes": 103581,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p196",
+      "spans": {
+        "printed_page": 96,
+        "pdf_page_one_based": 196,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-196.png",
+        "sha256": "dc4d9f9a79e191d614c84ecf2d5d5a8f644e980be85615b66a4894eca84c99da",
+        "bytes": 104980,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p197",
+      "spans": {
+        "printed_page": 97,
+        "pdf_page_one_based": 197,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-197.png",
+        "sha256": "4f38c8bd815862958280631632eccbb17f6d0a0eaca0e8cbf2163e612cfbf05f",
+        "bytes": 102450,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p198",
+      "spans": {
+        "printed_page": 98,
+        "pdf_page_one_based": 198,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-198.png",
+        "sha256": "b1c7bacf9dbc72b6acee706db66d7309aa47008d8bc7a0ed023f83e1c57e53f7",
+        "bytes": 101116,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p199",
+      "spans": {
+        "printed_page": 99,
+        "pdf_page_one_based": 199,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-199.png",
+        "sha256": "373526473ce4e765076844629b0d7e30c7a8cbe3afd99adcb6f5655b72e0d29c",
+        "bytes": 111621,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p203",
+      "spans": {
+        "printed_page": 103,
+        "pdf_page_one_based": 203,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-203.png",
+        "sha256": "de2497c3ad420c20901c344b5c5bdb5c8c7f816afe707aa158d1a0f3cff6069e",
+        "bytes": 107261,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R2-p204",
+      "spans": {
+        "printed_page": 104,
+        "pdf_page_one_based": 204,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "reading_status": "DIRECT_RETAINED_IMAGE_REREAD",
+      "application": "Qualification/concomitance is not external efficient need; abstract shared necessity is not another extramental particular.",
+      "custody_identity": {
+        "filename": "p-204.png",
+        "sha256": "6403192a38aa4e2ab5fb8bd14f27763f0efb952e550bb21a5f1c5c96d44296f8",
+        "bytes": 94537,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit",
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "locator_provenance_sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+        "availability": "EXCLUDED_PDF; exact source URL and digest are locators only"
+      }
+    },
+    {
+      "id": "OTC-R3",
+      "spans": [
+        [
+          102,
+          124
+        ]
+      ],
+      "reading_status": "POST_COMPLETION_CONTEXTUAL_REREAD_ELECTRONIC_VOLUME8",
+      "application": "Essential/type qualification versus successive individual acts. Individual replacement is not simultaneous absence of all kinds.",
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html",
+      "custody_identity": {
+        "filename": "dar-islamicbook-014.txt",
+        "sha256": "5983b6c8296f7e2f6a61f26b2fb6ac7bc3d99b84c063df6f6ade5250b98c7679",
+        "bytes": 361598,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit"
+    },
+    {
+      "id": "OTC-R4",
+      "spans": [
+        [
+          100,
+          148
+        ]
+      ],
+      "reading_status": "NEW_BOUNDED_TARGETED_FIRST_READING_VOLUME10_ALREADY_ACQUIRED",
+      "application": "Voluntary acts, act/product distinction and non-external influence. Outside completed volumes8–9. No print page or scan certification; no silent correction of electronic110.",
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-017.html",
+      "custody_identity": {
+        "filename": "dar-islamicbook-017.txt",
+        "sha256": "b65e34d1b26b18e2b854730c7cef4b2f3b372f368b7c962b285f1af8a86177f7",
+        "bytes": 358073,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "audit_reading_credit": "NEW_AUDIT_READING_ACTIVITY; not retrospective zero-credit methodology credit"
+    }
+  ],
+  "limits": [
+    "No complete new source study.",
+    "Dar017 is first reading here, not a completed-volume reread.",
+    "No new scan claim for electronic spans.",
+    "Sources establish attribution at these boundaries; formal validity and independent philosophical warrant are separate.",
+    "OTC-R1–OTC-R4 are stable audit-local identifiers; no global source-guide registration is implied."
+  ],
+  "credit_boundary": "The underlying audit adds contextual rereads of Safadiyya and Dar volume 8, ten retained Asbahani image rereads, and the explicitly first targeted reading of Dar section 017 volume 10. Curation adds no reading, witness, collation or replay credit. These activities are outside the retrospective zero-credit Arabic methodology supplement."
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "joint-finite-independent-claim-review-v1",
+  "disposition": "PASS_AT_STATED_FINITE_SCOPE",
+  "blocking_findings": [],
+  "source_corrections_required": [],
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "evidence": "J01; canonical_original_via_component; canonical_abc_same_g",
+      "assessment": "One literal B.g; canonical x uniquely selects rg/g. Independent exact all-witness and source-permutation tests pass.",
+      "status": "PASS"
+    },
+    {
+      "id": "RESOURCE",
+      "evidence": "J02–J04",
+      "assessment": "Distinct B/R/C types, actual original rg provision and genuinely received intrinsic rx/cx roles.",
+      "status": "PASS"
+    },
+    {
+      "id": "REACHABILITY",
+      "evidence": "J05; reception_and_direct_support_distinct",
+      "assessment": "Exactly positive-length direct-support reachability; existential dep is not direct support.",
+      "status": "PASS"
+    },
+    {
+      "id": "INCOMING",
+      "evidence": "J06–J07",
+      "assessment": "All finite incoming branches represented; added h-to-m edge breaks stored reachability and inventory.",
+      "status": "PASS"
+    },
+    {
+      "id": "MODE",
+      "evidence": "J08–J09",
+      "assessment": "Actual source-mode exercises of the same g realized; g fittingness and x defect remain source/exercise specific.",
+      "status": "PASS"
+    },
+    {
+      "id": "TRUTH_OWNERSHIP",
+      "evidence": "J10–J12; J15",
+      "assessment": "Truth uses same existsAt table; productive token provision does not transfer ownership; strong/base ownership agree.",
+      "status": "PASS"
+    },
+    {
+      "id": "LIVE_CREATURE",
+      "evidence": "J13",
+      "assessment": "x received/contingent/productive, truly absent at w2; no world-indexed activity by absent creatures.",
+      "status": "PASS"
+    },
+    {
+      "id": "OUTSIDE",
+      "evidence": "J14",
+      "assessment": "Distinct necessary original h active at o; enlargement destroys connectedness/common coverage while FieldCND survives.",
+      "status": "PASS"
+    },
+    {
+      "id": "PREMISE_BOUNDARY",
+      "evidence": "abc_full; field_*; veracity_package",
+      "assessment": "Qualification, classification and veracity premises independently interpreted, not deduced from ABC.",
+      "status": "PASS"
+    },
+    {
+      "id": "VACUITY",
+      "evidence": "good_source_antecedent_boundary; created_speaker_normative_boundary",
+      "assessment": "Excluded bad-g antecedents disclosed; selected empty g-shortcoming table distinguished from unavoidable exclusions; live x D/N and g nonspeech exercises.",
+      "status": "PASS"
+    },
+    {
+      "id": "ANCESTRY",
+      "evidence": "finite_ancestry_compatibility",
+      "assessment": "Finite-instance compatibility only; no general Sixth refinement.",
+      "status": "PASS"
+    },
+    {
+      "id": "VERIFICATION",
+      "evidence": "fresh-trust0-v1; joining-tests-final",
+      "assessment": "5 local modules; 88 declaration readbacks; 56 candidate theorem audits; 23 primitive and 15 theorem bodies; 20 reviewer theorems; 4+6 intended rejections.",
+      "status": "PASS"
+    }
+  ],
+  "open": [
+    "General incidence-to-Sixth refinement",
+    "Full philosophical-profile formalisation and joint consistency"
+  ],
+  "not_established": [
+    "Metaphysical possibility",
+    "Philosophical premise warrant",
+    "Actual necessary-being existence",
+    "Numerical uniqueness of all necessary originals",
+    "Full omniscience",
+    "Authentication of revelation"
+  ],
+  "candidate_manifest_sha256": "4a0ac2b37856a66bffe0f0787e5def8f629c059aa376816f1ab213072367098d",
+  "candidate_source_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46"
+}

@@ -1,0 +1,1042 @@
+{
+  "schema": "seventeenth-public-six-source-coverage-v1",
+  "status": "Complete team reading coverage attested and audited; explicit image-cover repair included.",
+  "coverage_snapshot_utc": "2026-10-05T20:54:28.265213+00:00",
+  "coverage_record_sha256": "7e3f41a9e3596a4222c5b9c8b4ce755b2c850b46f96711aa1d5430beb57b621e",
+  "total_supplied_pdf_pages": 1393,
+  "total_unique_credited_pdf_pages": 1393,
+  "reading_basis": "Audited source-identity-bound substantive reading records, exact credited page sets, and targeted visual inspection. This is a collective reading statement, not a claim that one person read all six objects or that the auditor independently reread every page.",
+  "nonreading_operations": [
+    "acquisition",
+    "hashing",
+    "page counting",
+    "text extraction",
+    "render generation without inspection",
+    "search hits alone"
+  ],
+  "identity_limit": "SHA-256 binds source bytes; it is not proof of reading or validation of the sources' claims.",
+  "snapshot_scope": "Original complete-reading records plus the completed selected occurrence/collective-knowledge application rereading at the coverage snapshot. Later philosophical rereadings are outside this visual snapshot and add no new unique source pages.",
+  "combined_unique_visually_inspected_source_pages": 190,
+  "supplemental_visually_inspected_source_pages": 18,
+  "minimal_text_candidate_pages_visually_accounted_for": 41,
+  "every_page_image_inspected": false,
+  "sources": [
+    {
+      "source_alias": "el_tobgui_2013",
+      "actual_supplied_filename": "Carl_Sharif_El-TobguiRobert_Wisnovsky_Supervisor2_Wael_Halla_-_Reason_revelation__the_reconstitution_of_rationality__Taqi_al-Din_Ibn_Taymiyyas_d._728_1328_Dar_Ta_arud_al-_Aql_wa-l-Na_2013_McGill_Univ (1).pdf",
+      "source_sha256": "d2c90eaa5f238145c5c8b71ff4f27b048ded1fd154242a300d08d212a737a963",
+      "source_bytes": 2231368,
+      "pdf_page_count": 353,
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+      "drive_link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "exact_covered_pdf_ranges": [
+        [
+          1,
+          353
+        ]
+      ],
+      "unique_credited_pdf_pages": 353,
+      "missing_pdf_pages": [],
+      "out_of_range_pages": [],
+      "duplicated_credited_pages": [],
+      "coverage_contributions": [
+        {
+          "credited_pdf_ranges": [
+            [
+              1,
+              27
+            ],
+            [
+              178,
+              353
+            ]
+          ],
+          "credited_page_count": 203,
+          "reported_visual_pdf_pages": [
+            1,
+            2,
+            11,
+            15,
+            21,
+            185,
+            187,
+            196,
+            253,
+            262,
+            283,
+            299,
+            301,
+            303,
+            305,
+            308,
+            331,
+            336
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "ad53433c006f7b49d7546ab96b5f6cc94620290b11ce47f802cb44ec6ba46e66"
+        },
+        {
+          "credited_pdf_ranges": [
+            [
+              28,
+              87
+            ]
+          ],
+          "credited_page_count": 60,
+          "reported_visual_pdf_pages": [
+            28,
+            29,
+            30,
+            43,
+            58,
+            67,
+            81,
+            85,
+            87
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "983ae8e22af4c4fb3245f0d08db89c8d88313600bd7580dc683e21805b425cd5"
+        },
+        {
+          "credited_pdf_ranges": [
+            [
+              88,
+              177
+            ]
+          ],
+          "credited_page_count": 90,
+          "reported_visual_pdf_pages": [
+            88,
+            102,
+            157,
+            165,
+            170,
+            171,
+            176
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "a4898e389fbbb91892a3d4f8213c64479a7d1da70fcf04ba0e5ec9574e38cb50"
+        },
+        {
+          "credited_pdf_ranges": [],
+          "credited_page_count": 0,
+          "reported_visual_pdf_pages": [
+            101
+          ],
+          "type": "supplemental visual reading",
+          "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+        },
+        {
+          "credited_pdf_ranges": [],
+          "credited_page_count": 0,
+          "reported_visual_pdf_pages": [
+            236,
+            238
+          ],
+          "type": "additional overlapping rereading",
+          "coverage_record_sha256": "6276eb4986b53013cbd6a790c99b46b9ffb1c93a61994b0fda1b7f90064cffc1"
+        }
+      ],
+      "visual_coverage": {
+        "reader_reported_pages": [
+          1,
+          2,
+          11,
+          15,
+          21,
+          28,
+          29,
+          30,
+          43,
+          58,
+          67,
+          81,
+          85,
+          87,
+          88,
+          102,
+          157,
+          165,
+          170,
+          171,
+          176,
+          185,
+          187,
+          196,
+          236,
+          238,
+          253,
+          262,
+          283,
+          299,
+          301,
+          303,
+          305,
+          308,
+          331,
+          336
+        ],
+        "reader_reported_count": 36,
+        "supplemental_auditor_pages": [
+          101
+        ],
+        "supplemental_count": 1,
+        "combined_pages": [
+          1,
+          2,
+          11,
+          15,
+          21,
+          28,
+          29,
+          30,
+          43,
+          58,
+          67,
+          81,
+          85,
+          87,
+          88,
+          101,
+          102,
+          157,
+          165,
+          170,
+          171,
+          176,
+          185,
+          187,
+          196,
+          236,
+          238,
+          253,
+          262,
+          283,
+          299,
+          301,
+          303,
+          305,
+          308,
+          331,
+          336
+        ],
+        "combined_count": 37,
+        "every_page_visually_inspected": false,
+        "render_only_excluded_pages": [
+          239,
+          296,
+          329
+        ]
+      }
+    },
+    {
+      "source_alias": "asfahani_v23",
+      "actual_supplied_filename": "A-Commentary-on-the-Creed-of-Asfahani-v2.3.pdf",
+      "source_sha256": "bed5565280dcb71b96fc3437cf2f9c07cdc75e6fe6e3798e24fe6bf886cad6ad",
+      "source_bytes": 9941932,
+      "pdf_page_count": 248,
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+      "drive_link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "exact_covered_pdf_ranges": [
+        [
+          1,
+          248
+        ]
+      ],
+      "unique_credited_pdf_pages": 248,
+      "missing_pdf_pages": [],
+      "out_of_range_pages": [],
+      "duplicated_credited_pages": [],
+      "coverage_contributions": [
+        {
+          "credited_pdf_ranges": [
+            [
+              1,
+              248
+            ]
+          ],
+          "credited_page_count": 248,
+          "reported_visual_pdf_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            31,
+            32,
+            33,
+            34,
+            35,
+            45,
+            46,
+            47,
+            48,
+            50,
+            51,
+            85,
+            89,
+            115,
+            119,
+            134,
+            135,
+            139,
+            228,
+            229,
+            248
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "07e3bb099190914edb464b214ee8b5d3a93a1dce32fc16bbb8a6c3b2cdbd32ae"
+        },
+        {
+          "credited_pdf_ranges": [],
+          "credited_page_count": 0,
+          "reported_visual_pdf_pages": [
+            49,
+            118
+          ],
+          "type": "supplemental visual reading",
+          "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+        }
+      ],
+      "visual_coverage": {
+        "reader_reported_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          31,
+          32,
+          33,
+          34,
+          35,
+          45,
+          46,
+          47,
+          48,
+          50,
+          51,
+          85,
+          89,
+          115,
+          119,
+          134,
+          135,
+          139,
+          228,
+          229,
+          248
+        ],
+        "reader_reported_count": 29,
+        "supplemental_auditor_pages": [
+          49,
+          118
+        ],
+        "supplemental_count": 2,
+        "combined_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          31,
+          32,
+          33,
+          34,
+          35,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          85,
+          89,
+          115,
+          118,
+          119,
+          134,
+          135,
+          139,
+          228,
+          229,
+          248
+        ],
+        "combined_count": 31,
+        "every_page_visually_inspected": false,
+        "render_only_excluded_pages": []
+      }
+    },
+    {
+      "source_alias": "ibn_taymiyyah_epistemology",
+      "actual_supplied_filename": "Ibn Taymiyyah's Epistemology.pdf",
+      "source_sha256": "66da4801933e9bb63c11b93f5c48fb5edb0cf752abd6a47e89fa4e7b03d7b8ec",
+      "source_bytes": 1446775,
+      "pdf_page_count": 117,
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/1iBAiImdDodsmO7qY4bykiiFzLd8IxmjM/view?usp=drivesdk",
+      "drive_link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "exact_covered_pdf_ranges": [
+        [
+          1,
+          117
+        ]
+      ],
+      "unique_credited_pdf_pages": 117,
+      "missing_pdf_pages": [],
+      "out_of_range_pages": [],
+      "duplicated_credited_pages": [],
+      "coverage_contributions": [
+        {
+          "credited_pdf_ranges": [
+            [
+              1,
+              117
+            ]
+          ],
+          "credited_page_count": 117,
+          "reported_visual_pdf_pages": [
+            2,
+            3,
+            32,
+            60,
+            64,
+            67,
+            79,
+            80,
+            88,
+            89,
+            91,
+            93,
+            95,
+            97,
+            103,
+            106,
+            116,
+            117
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "72e00fb80927de58c2024ac899c0c82b45fcefbeabfcf3a770aa01b478e100e3"
+        },
+        {
+          "credited_pdf_ranges": [],
+          "credited_page_count": 0,
+          "reported_visual_pdf_pages": [
+            1,
+            30,
+            70
+          ],
+          "type": "supplemental visual reading",
+          "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+        },
+        {
+          "credited_pdf_ranges": [],
+          "credited_page_count": 0,
+          "reported_visual_pdf_pages": [
+            77,
+            82,
+            112
+          ],
+          "type": "additional overlapping rereading",
+          "coverage_record_sha256": "6276eb4986b53013cbd6a790c99b46b9ffb1c93a61994b0fda1b7f90064cffc1"
+        }
+      ],
+      "visual_coverage": {
+        "reader_reported_pages": [
+          2,
+          3,
+          32,
+          60,
+          64,
+          67,
+          77,
+          79,
+          80,
+          82,
+          88,
+          89,
+          91,
+          93,
+          95,
+          97,
+          103,
+          106,
+          112,
+          116,
+          117
+        ],
+        "reader_reported_count": 21,
+        "supplemental_auditor_pages": [
+          1,
+          30,
+          70
+        ],
+        "supplemental_count": 3,
+        "combined_pages": [
+          1,
+          2,
+          3,
+          30,
+          32,
+          60,
+          64,
+          67,
+          70,
+          77,
+          79,
+          80,
+          82,
+          88,
+          89,
+          91,
+          93,
+          95,
+          97,
+          103,
+          106,
+          112,
+          116,
+          117
+        ],
+        "combined_count": 24,
+        "every_page_visually_inspected": false,
+        "render_only_excluded_pages": [
+          81,
+          84
+        ]
+      }
+    },
+    {
+      "source_alias": "oneness_allah",
+      "actual_supplied_filename": "Ibn Taymiyyah on the Oneness of Allah.pdf",
+      "source_sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf",
+      "source_bytes": 783093,
+      "pdf_page_count": 55,
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+      "drive_link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "exact_covered_pdf_ranges": [
+        [
+          1,
+          55
+        ]
+      ],
+      "unique_credited_pdf_pages": 55,
+      "missing_pdf_pages": [],
+      "out_of_range_pages": [],
+      "duplicated_credited_pages": [],
+      "coverage_contributions": [
+        {
+          "credited_pdf_ranges": [
+            [
+              1,
+              55
+            ]
+          ],
+          "credited_page_count": 55,
+          "reported_visual_pdf_pages": [
+            1,
+            3,
+            5,
+            24,
+            27,
+            28,
+            30,
+            32,
+            37,
+            38,
+            41,
+            42,
+            47,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "abb6bb273b849425b4c1ab31628ef1c558107935f9fa6822bd42875b4bddc077"
+        },
+        {
+          "credited_pdf_ranges": [],
+          "credited_page_count": 0,
+          "reported_visual_pdf_pages": [
+            7,
+            50
+          ],
+          "type": "supplemental visual reading",
+          "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+        }
+      ],
+      "visual_coverage": {
+        "reader_reported_pages": [
+          1,
+          3,
+          5,
+          24,
+          27,
+          28,
+          30,
+          32,
+          37,
+          38,
+          41,
+          42,
+          47,
+          51,
+          52,
+          53,
+          54,
+          55
+        ],
+        "reader_reported_count": 18,
+        "supplemental_auditor_pages": [
+          7,
+          50
+        ],
+        "supplemental_count": 2,
+        "combined_pages": [
+          1,
+          3,
+          5,
+          7,
+          24,
+          27,
+          28,
+          30,
+          32,
+          37,
+          38,
+          41,
+          42,
+          47,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55
+        ],
+        "combined_count": 20,
+        "every_page_visually_inspected": false,
+        "render_only_excluded_pages": []
+      }
+    },
+    {
+      "source_alias": "attributes_god",
+      "actual_supplied_filename": "Ibn-Taymiyya-and-the-Attributes-of-God.pdf",
+      "source_sha256": "86dbfb555d1098e5d4d333295cd799f728a2aaa2772fd375b1ffe27ae56d92de",
+      "source_bytes": 3071238,
+      "pdf_page_count": 403,
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ/view?usp=drivesdk",
+      "drive_link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "exact_covered_pdf_ranges": [
+        [
+          1,
+          403
+        ]
+      ],
+      "unique_credited_pdf_pages": 403,
+      "missing_pdf_pages": [],
+      "out_of_range_pages": [],
+      "duplicated_credited_pages": [],
+      "coverage_contributions": [
+        {
+          "credited_pdf_ranges": [
+            [
+              2,
+              11
+            ],
+            [
+              109,
+              129
+            ],
+            [
+              223,
+              402
+            ]
+          ],
+          "credited_page_count": 211,
+          "reported_visual_pdf_pages": [
+            4,
+            5,
+            223,
+            225,
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255,
+            301,
+            302,
+            311,
+            312
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "df53a133474843ed01e757c642415c167e8ab179dab3bfd15c5dc0733eae5200"
+        },
+        {
+          "credited_pdf_ranges": [
+            [
+              12,
+              108
+            ]
+          ],
+          "credited_page_count": 97,
+          "reported_visual_pdf_pages": [
+            34,
+            35,
+            47,
+            48,
+            65,
+            66,
+            67,
+            78,
+            79,
+            80,
+            99,
+            105,
+            106,
+            107,
+            108
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "25cd31b7d638a2b3888a1d8e219c4401848c4836eae8a19d7b0c6171aa4d0f9e"
+        },
+        {
+          "credited_pdf_ranges": [
+            [
+              130,
+              222
+            ]
+          ],
+          "credited_page_count": 93,
+          "reported_visual_pdf_pages": [
+            134,
+            174,
+            200
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "275e09abb5ab99ab88dfb1695a1f077bc48bd039efa784c5a2052376b9056a93"
+        },
+        {
+          "credited_pdf_ranges": [
+            [
+              1,
+              1
+            ],
+            [
+              403,
+              403
+            ]
+          ],
+          "credited_page_count": 2,
+          "reported_visual_pdf_pages": [
+            1,
+            2,
+            3,
+            9,
+            287,
+            288,
+            289,
+            349,
+            403
+          ],
+          "type": "supplemental visual reading",
+          "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+        }
+      ],
+      "visual_coverage": {
+        "reader_reported_pages": [
+          4,
+          5,
+          34,
+          35,
+          47,
+          48,
+          65,
+          66,
+          67,
+          78,
+          79,
+          80,
+          99,
+          105,
+          106,
+          107,
+          108,
+          134,
+          174,
+          200,
+          223,
+          225,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          301,
+          302,
+          311,
+          312
+        ],
+        "reader_reported_count": 33,
+        "supplemental_auditor_pages": [
+          1,
+          2,
+          3,
+          9,
+          287,
+          288,
+          289,
+          349,
+          403
+        ],
+        "supplemental_count": 9,
+        "combined_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          9,
+          34,
+          35,
+          47,
+          48,
+          65,
+          66,
+          67,
+          78,
+          79,
+          80,
+          99,
+          105,
+          106,
+          107,
+          108,
+          134,
+          174,
+          200,
+          223,
+          225,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          287,
+          288,
+          289,
+          301,
+          302,
+          311,
+          312,
+          349,
+          403
+        ],
+        "combined_count": 42,
+        "every_page_visually_inspected": false,
+        "render_only_excluded_pages": []
+      }
+    },
+    {
+      "source_alias": "incoherence_atheism",
+      "actual_supplied_filename": "The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri.pdf",
+      "source_sha256": "3cc829df52e425455d7625c488dd0e86c8e0f2c927d78e8b2c39cda23974bfd1",
+      "source_bytes": 5140557,
+      "pdf_page_count": 217,
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/17V1wIb5WwvTZmycm_QG3_N6TlINguU-i/view?usp=drivesdk",
+      "drive_link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "exact_covered_pdf_ranges": [
+        [
+          1,
+          217
+        ]
+      ],
+      "unique_credited_pdf_pages": 217,
+      "missing_pdf_pages": [],
+      "out_of_range_pages": [],
+      "duplicated_credited_pages": [],
+      "coverage_contributions": [
+        {
+          "credited_pdf_ranges": [
+            [
+              1,
+              217
+            ]
+          ],
+          "credited_page_count": 217,
+          "reported_visual_pdf_pages": [
+            1,
+            2,
+            3,
+            14,
+            16,
+            20,
+            25,
+            36,
+            37,
+            64,
+            66,
+            69,
+            70,
+            77,
+            78,
+            79,
+            81,
+            99,
+            100,
+            111,
+            119,
+            122,
+            123,
+            129,
+            147,
+            154,
+            158,
+            159,
+            181,
+            199,
+            203,
+            206,
+            208,
+            214,
+            217
+          ],
+          "type": "original substantive reading",
+          "coverage_record_sha256": "fdd5139d94ba6964c996e6fd50970e23b5cff3dc86f2f35f38df72064d03e069"
+        },
+        {
+          "credited_pdf_ranges": [],
+          "credited_page_count": 0,
+          "reported_visual_pdf_pages": [
+            207
+          ],
+          "type": "supplemental visual reading",
+          "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+        }
+      ],
+      "visual_coverage": {
+        "reader_reported_pages": [
+          1,
+          2,
+          3,
+          14,
+          16,
+          20,
+          25,
+          36,
+          37,
+          64,
+          66,
+          69,
+          70,
+          77,
+          78,
+          79,
+          81,
+          99,
+          100,
+          111,
+          119,
+          122,
+          123,
+          129,
+          147,
+          154,
+          158,
+          159,
+          181,
+          199,
+          203,
+          206,
+          208,
+          214,
+          217
+        ],
+        "reader_reported_count": 35,
+        "supplemental_auditor_pages": [
+          207
+        ],
+        "supplemental_count": 1,
+        "combined_pages": [
+          1,
+          2,
+          3,
+          14,
+          16,
+          20,
+          25,
+          36,
+          37,
+          64,
+          66,
+          69,
+          70,
+          77,
+          78,
+          79,
+          81,
+          99,
+          100,
+          111,
+          119,
+          122,
+          123,
+          129,
+          147,
+          154,
+          158,
+          159,
+          181,
+          199,
+          203,
+          206,
+          207,
+          208,
+          214,
+          217
+        ],
+        "combined_count": 36,
+        "every_page_visually_inspected": false,
+        "render_only_excluded_pages": []
+      }
+    }
+  ],
+  "cover_gap_repair": {
+    "source_alias": "attributes_god",
+    "pdf_pages": [
+      1,
+      403
+    ],
+    "finding": "The front cover lacked explicit original visual binding; the image-only back cover was incorrectly characterised from extracted footer text.",
+    "resolution": "Both complete cover images were explicitly read visually. Pages 1 and 403 receive supplemental credited coverage; the substantive back cover is not a blank page.",
+    "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9",
+    "resolved": true
+  },
+  "limits": [
+    "Every supplied page includes title/front matter, notes, references, bibliography, indices and supplied appendices, including blank pages accounted for visually.",
+    "Complete supplied text does not restore editorial omissions in the anthology: omitted Baldwin section and notes11-36 remain outside the supplied object.",
+    "Not a fresh collation of Arabic originals, manuscripts, translator accuracy or all original unabridged publications.",
+    "Footnotes and bibliography entries were read as part of the supplied books; their cited works are not thereby read or independently authenticated.",
+    "No blanket verification of empirical studies, historical anecdotes, reported quotations, biographies or award claims.",
+    "Overlapping source traditions or adapted publications do not become independent evidence merely because they occur in different supplied PDFs.",
+    "Coverage completion does not certify philosophical conclusions, programme closure, canonical updates or permission for public release."
+  ],
+  "included_primary_text_or_images": false
+}

@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-07T10:08:35.438390+00:00",
+  "status": "PASS",
+  "failures": [],
+  "volumes": {
+    "2": {
+      "lines": 437,
+      "words": 85369,
+      "first_pass_receipts": 27,
+      "missing": [],
+      "duplicates": [],
+      "primary_reflective_distinct_lines": 58,
+      "body_sha256": "e164225c49e37a4e94dc54ca9f56a59fd96581802b8a5beb7b27c81c7d4b8856"
+    },
+    "3": {
+      "lines": 424,
+      "words": 67886,
+      "first_pass_receipts": 27,
+      "missing": [],
+      "duplicates": [],
+      "primary_reflective_distinct_lines": 40,
+      "body_sha256": "4f4337b12c9ca2b930b188b3a3f656b39c0ef484ce7643ea335072a168e878b8"
+    }
+  },
+  "total_body_lines": 861,
+  "total_body_words": 153255,
+  "total_first_pass_receipts": 54,
+  "separate_reader_volume3_reflection_distinct_lines": 68,
+  "separate_reader_volume3_reflection_receipts": 4,
+  "reflection_scopes_overlap": true,
+  "whole_second_traversal_claimed": false,
+  "electronic_witness_errors_retained": true,
+  "print_apparatus_manuscripts_or_all_references_certified": false,
+  "all_Minhaj_volumes_claimed": false,
+  "full_role_philosophical_closure_claimed": false,
+  "verification_limit": "Mechanical verification establishes identity and exact credited interval accounting, not independent proof of comprehension or truth of historical/philosophical premises."
+}

@@ -1,0 +1,1387 @@
+{
+  "schema": "t20-foundational-synthesis-integration-v1",
+  "results": [
+    {
+      "result_id": "A",
+      "tranche": "T20 synthesis of New T20 typed A interface; source rationale T17 and earlier completion ownership",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/OriginalBearerBridge.lean",
+          "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+          "bytes": 6940,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:ABC_REVIEW",
+          "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+          "bytes": 12754,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 typed A interface; source rationale T17 and earlier completion ownership",
+      "formal_declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_resource",
+        "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "A_OCCURRENCE",
+          "A_COMPLETION",
+          "A_REALISATION",
+          "A_SUPPORT"
+        ],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "ABC_REVIEW",
+        "ABC_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Actual premise warrant and same-respect resource interpretation.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "B",
+      "tranche": "T20 synthesis of Inherited T3 SourceIdentity; fresh approved import-only derivative reused in T20",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/SourceIdentity.original.lean",
+          "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "bytes": 7357,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../joint-foundational-model/components/SourceIdentityDerived.lean",
+          "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+          "bytes": 7438,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:ABC_REVIEW",
+          "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+          "bytes": 12754,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "Inherited T3 SourceIdentity; fresh approved import-only derivative reused in T20",
+      "formal_declarations": [
+        "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "B_REPRESENTATION",
+          "B_NEED",
+          "MODAL_DOMAIN"
+        ],
+        "conclusion_ids": [
+          "A"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "ABC_REVIEW",
+        "ABC_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Assumes actual root of g from A; does not prove contingency-as-need.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "C",
+      "tranche": "T20 synthesis of Inherited B/C core; T20 elementary broad re-expression",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/OriginalBearerBridge.lean",
+          "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+          "bytes": 6940,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../joint-foundational-model/components/SourceIdentity.original.lean",
+          "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "bytes": 7357,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:ABC_REVIEW",
+          "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+          "bytes": 12754,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "Inherited B/C core; T20 elementary broad re-expression",
+      "formal_declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original",
+        "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+        "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "C_CONSTITUTION",
+          "B_REPRESENTATION",
+          "MODAL_DOMAIN"
+        ],
+        "conclusion_ids": [
+          "A"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "ABC_REVIEW",
+        "ABC_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Generic constitutive warrant remains; special transfer leaf is target-equivalent.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "ABC",
+      "tranche": "T20 synthesis of New typed composition using inherited necessity and uniform-root calls",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/OriginalBearerBridge.lean",
+          "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+          "bytes": 6940,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../original-bearer-bridge/verification-final/READBACKS.json",
+          "sha256": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+          "bytes": 51051,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:ABC_REVIEW",
+          "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+          "bytes": 12754,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New typed composition using inherited necessity and uniform-root calls",
+      "formal_declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "A_OCCURRENCE",
+          "A_COMPLETION",
+          "A_REALISATION",
+          "A_SUPPORT",
+          "B_REPRESENTATION",
+          "B_NEED",
+          "C_CONSTITUTION",
+          "MODAL_DOMAIN"
+        ],
+        "conclusion_ids": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "ABC_REVIEW",
+        "ABC_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "No uniqueness, common field provider, attributes, or revelation conclusion.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "ABC_BROAD",
+      "tranche": "T20 synthesis of T20 independent reviewer scope/minimality re-expression; not new philosophical rationale",
+      "exact_source_artifacts": [
+        {
+          "path": "../original-bearer-bridge/review/IndependentScopeTests.lean",
+          "sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284",
+          "bytes": 6771,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:ABC_REVIEW",
+          "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+          "bytes": 12754,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "T20 independent reviewer scope/minimality re-expression; not new philosophical rationale",
+      "formal_declarations": [
+        "IndependentOriginalBearerReview.broad_abc_without_representation",
+        "IndependentOriginalBearerReview.representation_is_needed_for_binary_uniform_target",
+        "IndependentOriginalBearerReview.witness_local_sufficiency"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "A_OCCURRENCE",
+          "A_COMPLETION",
+          "A_REALISATION",
+          "A_SUPPORT",
+          "B_NEED",
+          "C_CONSTITUTION",
+          "MODAL_DOMAIN"
+        ],
+        "conclusion_ids": [
+          "A"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "ABC_REVIEW_SCOPE",
+        "ABC_REVIEW",
+        "ABC_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Adapter remains substantive for binary target.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "D",
+      "tranche": "T20 synthesis of Inherited Sixth; no fresh historical-suite replay by this synthesis",
+      "exact_source_artifacts": [
+        {
+          "path": "../foundational-final-synthesis/inherited-sources/CONNECTED_UNITY.lean",
+          "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+          "bytes": 10176,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:PRIOR_REUSE",
+          "sha256": "ef5c316940cf32d6d0b418740ef16019be17112898d22e5b9fbfa0be4b80306e",
+          "bytes": 20489,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "Inherited Sixth; no fresh historical-suite replay by this synthesis",
+      "formal_declarations": [
+        "Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local",
+        "Orthemology.Tranche6.ConnectedUnity.least_of_connected_local",
+        "Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local",
+        "Orthemology.Tranche6.ConnectedUnity.local_connected_iff_least",
+        "Orthemology.Tranche6.ConnectedUnity.local_cover_iff_unique_root_and_ancestral_support"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "D_STRUCTURE",
+          "D_LOCAL",
+          "D_CONNECTED"
+        ],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [],
+      "unresolved_residual": "Actual productive interpretation and general incidence refinement remain open.",
+      "independent_review_status": "INHERITED_SOURCE_BOUND_REVIEW_AND_RECEIPTS"
+    },
+    {
+      "result_id": "E",
+      "tranche": "T20 synthesis of New T20 contribution-incidence interface; CND philosophy T19",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/AnchoredSourceBridge.lean",
+          "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+          "bytes": 10743,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:FIELD_REVIEW",
+          "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+          "bytes": 14415,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 contribution-incidence interface; CND philosophy T19",
+      "formal_declarations": [
+        "AnchoredSourceBridge.field_cnd_of_global_cnd",
+        "AnchoredSourceBridge.represented_rivals_equal",
+        "AnchoredSourceBridge.actual_rivals_equal"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "E_FIELD_CND",
+          "G_VISIBLE"
+        ],
+        "conclusion_ids": [
+          "H_COVERAGE"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW",
+        "FIELD_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Coverage is an input here; CND is not proved true or derived from whole-alone contradiction.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "F",
+      "tranche": "T20 synthesis of New T20 explicit interface; substantive norm and historical acceptance T19",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/AnchoredSourceBridge.lean",
+          "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+          "bytes": 10743,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:FIELD_REVIEW",
+          "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+          "bytes": 14415,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:APPRAISAL",
+          "sha256": "cd117113d282ad395e400eea9b3aa4517ae51a64ff50aee677838862437389c1",
+          "bytes": 2514,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 explicit interface; substantive norm and historical acceptance T19",
+      "formal_declarations": [
+        "AnchoredSourceBridge.mode_satisfaction_of_classification_conformance"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "F_QUALIFIED",
+          "F_CLASSIFICATION",
+          "F_CONFORMANCE"
+        ],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW",
+        "FIELD_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Root currently withholds sufficient warrant for stronger classification.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "G",
+      "tranche": "T20 synthesis of New T20 typed incidence proof; T19 mediation rationale, inherited finite-path technique",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/AnchoredSourceBridge.lean",
+          "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+          "bytes": 10743,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:FIELD_REVIEW",
+          "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+          "bytes": 14415,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 typed incidence proof; T19 mediation rationale, inherited finite-path technique",
+      "formal_declarations": [
+        "AnchoredSourceBridge.source_mode_of_mode_satisfaction",
+        "AnchoredSourceBridge.represented_across_overlap",
+        "AnchoredSourceBridge.complete_along_path"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "G_USE",
+          "G_ROLE",
+          "H_CONNECTED"
+        ],
+        "conclusion_ids": [
+          "F"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW",
+        "FIELD_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Mode satisfaction and starting completeness are inputs; no reverse causation or ownership transfer.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "H_COVERAGE",
+      "tranche": "T20 synthesis of New T20 anchored contribution-incidence theorem",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/AnchoredSourceBridge.lean",
+          "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+          "bytes": 10743,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:FIELD_REVIEW",
+          "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+          "bytes": 14415,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 anchored contribution-incidence theorem",
+      "formal_declarations": [
+        "AnchoredSourceBridge.global_coverage_of_anchor",
+        "AnchoredSourceBridge.global_coverage_of_qualified_anchor",
+        "AnchoredSourceBridge.complete_provider_exists"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "F_QUALIFIED",
+          "F_CLASSIFICATION",
+          "F_CONFORMANCE",
+          "G_USE",
+          "G_ROLE",
+          "H_ANCHOR",
+          "H_CONNECTED"
+        ],
+        "conclusion_ids": [
+          "F",
+          "G"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW",
+        "FIELD_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Coverage does not itself establish exclusion of rivals or certify actual interpretation.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "H",
+      "tranche": "T20 synthesis of New T20 incidence application interface; not Sixth LocalCover refinement",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/AnchoredSourceBridge.lean",
+          "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+          "bytes": 10743,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:FIELD_REVIEW",
+          "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+          "bytes": 14415,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 incidence application interface; not Sixth LocalCover refinement",
+      "formal_declarations": [
+        "AnchoredSourceBridge.guarded_common_original_provider",
+        "AnchoredSourceBridge.unique_complete_provider"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "H_ADMISSIBLE",
+          "H_REQ_SOUND",
+          "H_REQ_EXHAUSTIVE",
+          "F_QUALIFIED",
+          "F_CLASSIFICATION",
+          "F_CONFORMANCE",
+          "G_USE",
+          "G_ROLE",
+          "G_VISIBLE",
+          "H_ANCHOR",
+          "H_CONNECTED",
+          "E_FIELD_CND"
+        ],
+        "conclusion_ids": [
+          "H_COVERAGE",
+          "E"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW",
+        "FIELD_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "First three certificates passed through as assumptions. One field is not numerical uniqueness simpliciter.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "H_MINIMALITY",
+      "tranche": "T20 synthesis of T20 exact dependency transparency",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/AnchoredSourceBridge.lean",
+          "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+          "bytes": 10743,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../anchored-source-bridge/review/BoundaryChecks.lean",
+          "sha256": "aff90d7deb39a50d3818341e61d19e0a656aa238f23c9b80dde5d6a8e696a565",
+          "bytes": 11191,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "T20 exact dependency transparency",
+      "formal_declarations": [
+        "AnchoredSourceBridge.mode_satisfaction_iff_global_coverage",
+        "AnchoredSourceBridge.source_mode_iff_global_coverage",
+        "IndependentAnchoredReview.labels_unique_with_positive_anchor"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "G_USE",
+          "G_ROLE",
+          "H_ANCHOR",
+          "H_CONNECTED"
+        ],
+        "conclusion_ids": [
+          "H_COVERAGE"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW_BOUNDARIES",
+        "FIELD_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "No equivalence of bare norm, qualification or full perfection profile with coverage.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "ATTRIBUTES",
+      "tranche": "T20 synthesis of Historical T17/T19 appraisal with Sixth and earlier reasoning; not new T20 theorem",
+      "exact_source_artifacts": [
+        {
+          "path": "custody:DAG",
+          "sha256": "761ebbb4beaea671449f0c6ddd63f711cc2ae8c355beb1f1097be8352c7426a2",
+          "bytes": 24109,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:T17R",
+          "sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+          "bytes": 79974,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:T17G",
+          "sha256": "72ff4b59cad4c1999476167adbc7d6d03983d6b0b59693b12ec13de5d9a3cfa0",
+          "bytes": 53312,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "SOURCE_ATTESTED",
+        "PHILOSOPHICALLY_ACCEPTED_PREMISE",
+        "PHILOSOPHICALLY_DISPUTED_PREMISE",
+        "NOT_ATTEMPTED"
+      ],
+      "inherited_or_fresh": "Historical T17/T19 appraisal with Sixth and earlier reasoning; not new T20 theorem",
+      "formal_declarations": [],
+      "dependencies": {
+        "premise_ids": [
+          "AT_ASCENT",
+          "MODAL_DOMAIN"
+        ],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [],
+      "unresolved_residual": "Finite ability and knowledge-scope controls are narrower.",
+      "independent_review_status": "NOT_APPLICABLE_NO_NEW_GENERAL_THEOREM"
+    },
+    {
+      "result_id": "V_LOCAL",
+      "tranche": "T20 synthesis of New T20 decomposition; historical T17 veracity rationale retained",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/VeracityBoundary.lean",
+          "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+          "bytes": 5975,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../veracity-boundary/review/REVIEW_REPORT.md",
+          "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+          "bytes": 13471,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 decomposition; historical T17 veracity rationale retained",
+      "formal_declarations": [
+        "VeracityBoundary.controlled_token_true"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "V_K",
+          "V_D",
+          "V_N",
+          "V_P",
+          "V_ExerciseBridge"
+        ],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "VERACITY_REVIEW",
+        "VERACITY_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Local ownership/awareness/control required; factivity, common creatorhood and full A/C not needed.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "V_UNIVERSAL",
+      "tranche": "T20 synthesis of New T20 decomposition; no new philosophical T0 warrant",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/VeracityBoundary.lean",
+          "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+          "bytes": 5975,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../veracity-boundary/review/REVIEW_REPORT.md",
+          "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+          "bytes": 13471,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 decomposition; no new philosophical T0 warrant",
+      "formal_declarations": [
+        "VeracityBoundary.veracity_of_coverage",
+        "VeracityBoundary.false_excludes_package"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "V_K",
+          "V_A",
+          "V_C",
+          "V_D",
+          "V_N",
+          "V_P",
+          "V_ExerciseBridge",
+          "V_DOMAIN"
+        ],
+        "conclusion_ids": [
+          "V_LOCAL"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "VERACITY_REVIEW",
+        "VERACITY_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "No selected token authentication or exhaustive metaphysical domain established.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "V_EQUIVALENCE",
+      "tranche": "T20 synthesis of New T20 conditional transparency; not independent warrant by renaming T0",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/VeracityBoundary.lean",
+          "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+          "bytes": 5975,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../veracity-boundary/review/IndependentBoundaryTests.lean",
+          "sha256": "397cfb115df42e82cc5b02ea96887fa81bf0c0b8378262df172719908159573a",
+          "bytes": 4349,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 conditional transparency; not independent warrant by renaming T0",
+      "formal_declarations": [
+        "VeracityBoundary.veracity_iff_no_counterfeit",
+        "VeracityIndependentReview.truth_to_no_counterfeit",
+        "VeracityIndependentReview.no_counterfeit_to_truth"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "V_K",
+          "V_A",
+          "V_C",
+          "V_Factive"
+        ],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "VERACITY_REVIEW_BOUNDARIES",
+        "VERACITY_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Whole normative package is not equivalent to truthfulness.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "V_OWNERSHIP",
+      "tranche": "T20 synthesis of New T20 interpretation audit",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/components/VeracityBoundary.lean",
+          "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+          "bytes": 5975,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../veracity-boundary/review/REVIEW_REPORT.md",
+          "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+          "bytes": 13471,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "New T20 interpretation audit",
+      "formal_declarations": [
+        "VeracityBoundary.strong_awareness",
+        "VeracityBoundary.strong_control",
+        "VeracityBoundary.strong_veracity",
+        "VeracityBoundary.strong_equals_base_iff_coverage"
+      ],
+      "dependencies": {
+        "premise_ids": [
+          "V_A",
+          "V_C"
+        ],
+        "conclusion_ids": [
+          "V_LOCAL"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "VERACITY_REVIEW",
+        "VERACITY_REVIEW_RECEIPT"
+      ],
+      "unresolved_residual": "Strong relation contains no truth conjunct; selecting narrower extension cannot prove all base assertions true.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "V_AUTHENTICATION",
+      "tranche": "T20 synthesis of Inherited T0/D1/D2 and Seventh attestation boundaries preserved",
+      "exact_source_artifacts": [
+        {
+          "path": "custody:DAG",
+          "sha256": "761ebbb4beaea671449f0c6ddd63f711cc2ae8c355beb1f1097be8352c7426a2",
+          "bytes": 24109,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../veracity-boundary/review/REVIEW_REPORT.md",
+          "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+          "bytes": 13471,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "SOURCE_ATTESTED",
+        "APPLICATION_WARRANT_REQUIRED",
+        "OPEN"
+      ],
+      "inherited_or_fresh": "Inherited T0/D1/D2 and Seventh attestation boundaries preserved",
+      "formal_declarations": [],
+      "dependencies": {
+        "premise_ids": [
+          "V_D1_D2"
+        ],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "VERACITY_REVIEW"
+      ],
+      "unresolved_residual": "No selected revelation authenticated.",
+      "independent_review_status": "BOUNDARY_PRESERVED"
+    },
+    {
+      "result_id": "JOINT",
+      "tranche": "T20 synthesis of New T20 selected-signature finite compatibility model; unchanged component theorem calls",
+      "exact_source_artifacts": [
+        {
+          "path": "../joint-foundational-model/src/JointFiniteInterpretation.lean",
+          "sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+          "bytes": 24102,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../joint-foundational-model/FINAL_STATUS.json",
+          "sha256": "599503b4add6d142b152caa1adb3d79b4386e0d44124ebd2a8d190213139dbac",
+          "bytes": 1372,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:JOINT_RECEIPT",
+          "sha256": "f9560adb9775de825340963a5abfd6401ad14700c5925d4f04a5420ef4ddad21",
+          "bytes": 28493,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../joint-foundational-model/THEOREM_MAP.md",
+          "sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+          "bytes": 4858,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../joint-foundational-model/review/REVIEW.md",
+          "sha256": "007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a",
+          "bytes": 14577,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:JOINT_REVIEW_MANIFEST",
+          "sha256": "a80a6d35bb210bff9d71c6173a37707151ba95a3c46ccb7d356043e5ddccd15e",
+          "bytes": 9404,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:JOINT_REVIEW_RECEIPT",
+          "sha256": "17d35f7113f9285689775bdda131ebe0e3a8353cdb89480277d6640709786638",
+          "bytes": 10389,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:JOINT_REVIEW_JOINING_RECEIPT",
+          "sha256": "a383e4df48fc94db8e37c8094fd6d9c839b6e3136ad94667c379c9f10c405621",
+          "bytes": 6996,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "inherited_or_fresh": "New T20 selected-signature finite compatibility model; unchanged component theorem calls",
+      "formal_declarations": [
+        "JointFinite.canonical_abc_same_g",
+        "JointFinite.field_coverage_without_cnd",
+        "JointFinite.field_guarded",
+        "JointFinite.veracity_via_component",
+        "JointFinite.J01_canonical_identity",
+        "JointFinite.J12_support_not_ownership",
+        "JointFinite.J14_outside_boundary",
+        "JointFinite.finite_ancestry_compatibility"
+      ],
+      "dependencies": {
+        "premise_ids": [],
+        "conclusion_ids": [
+          "ABC",
+          "H",
+          "V_UNIVERSAL"
+        ]
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation",
+        "Retain exact joint independent review binding and finite selected-signature scope; no full-profile possibility claim"
+      ],
+      "reusable_existing_verification": [
+        "JOINT_RECEIPT",
+        "JOINT_REVIEW",
+        "JOINT_REVIEW_MANIFEST",
+        "JOINT_REVIEW_RECEIPT",
+        "JOINT_REVIEW_JOINING_RECEIPT"
+      ],
+      "unresolved_residual": "Complete metaphysical perfect-source profile, metaphysical possibility and general theorem from ABC to qualification/perfections or Sixth refinement remain unverified.",
+      "independent_review_status": "PASS_AT_STATED_FINITE_SELECTED_SIGNATURE_SCOPE"
+    },
+    {
+      "result_id": "SIXTH_REFINEMENT",
+      "tranche": "T20 synthesis of Unresolved T20 semantic bridge; old Sixth results retain ownership",
+      "exact_source_artifacts": [
+        {
+          "path": "../anchored-source-bridge/SOURCE_AND_PREMISE_MAP.md",
+          "sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+          "bytes": 6523,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:FIELD_REVIEW",
+          "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+          "bytes": 14415,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../joint-foundational-model/THEOREM_MAP.md",
+          "sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+          "bytes": 4858,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "OPEN",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "inherited_or_fresh": "Unresolved T20 semantic bridge; old Sixth results retain ownership",
+      "formal_declarations": [],
+      "dependencies": {
+        "premise_ids": [
+          "D_LOCAL",
+          "D_STRUCTURE",
+          "H_REQ_EXHAUSTIVE"
+        ],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW"
+      ],
+      "unresolved_residual": "Need faithful domain, source-node, predecessor/history/branch preservation and non-self-production interpretation.",
+      "independent_review_status": "OPEN_NOT_CLOSED_BY_MODEL_SPECIFIC_CERTIFICATE"
+    },
+    {
+      "result_id": "ABC_NONVACUITY",
+      "tranche": "T20 synthesis of T20 component positive model and independent plural probe",
+      "exact_source_artifacts": [
+        {
+          "path": "../original-bearer-bridge/BridgeControls.lean",
+          "sha256": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8",
+          "bytes": 9487,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../original-bearer-bridge/review/IndependentScopeTests.lean",
+          "sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284",
+          "bytes": 6771,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:ABC_REVIEW",
+          "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+          "bytes": 12754,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "inherited_or_fresh": "T20 component positive model and independent plural probe",
+      "formal_declarations": [
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_full",
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_nonvacuous",
+        "Orthemology.Tranche20.OriginalBearerBridge.Controls.positive_same_witness",
+        "IndependentOriginalBearerReview.plural_full"
+      ],
+      "dependencies": {
+        "premise_ids": [],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "ABC_REVIEW_SCOPE",
+        "ABC_REVIEW"
+      ],
+      "unresolved_residual": "Relative formal consistency, not metaphysical possibility.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "FIELD_NONVACUITY",
+      "tranche": "T20 synthesis of New T20 selected-signature interpreted fixture",
+      "exact_source_artifacts": [
+        {
+          "path": "../anchored-source-bridge/src/Controls.lean",
+          "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+          "bytes": 22563,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:FIELD_REVIEW",
+          "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+          "bytes": 14415,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "inherited_or_fresh": "New T20 selected-signature interpreted fixture",
+      "formal_declarations": [
+        "AnchoredSourceBridge.Controls.full_nonvacuous_model",
+        "AnchoredSourceBridge.Controls.faithful_derived_agency_and_mediation",
+        "AnchoredSourceBridge.Controls.outside_field_necessary_original"
+      ],
+      "dependencies": {
+        "premise_ids": [],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW"
+      ],
+      "unresolved_residual": "Outside necessary label is not a full metaphysical perfect-source profile.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "FINITE_ABILITY",
+      "tranche": "T20 synthesis of New T20 bounded interpreted ability control",
+      "exact_source_artifacts": [
+        {
+          "path": "../anchored-source-bridge/src/ModalAbilityControl.lean",
+          "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64",
+          "bytes": 4387,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "custody:FIELD_REVIEW",
+          "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+          "bytes": 14415,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "inherited_or_fresh": "New T20 bounded interpreted ability control",
+      "formal_declarations": [
+        "AnchoredSourceBridge.Controls.ModalAbility.both_have_interpreted_finite_ability",
+        "AnchoredSourceBridge.Controls.ModalAbility.intact_finite_power_differentiated_actual_production",
+        "AnchoredSourceBridge.Controls.ModalAbility.matching_outcome_is_not_same_token",
+        "AnchoredSourceBridge.Controls.ModalAbility.finite_ability_does_not_supply_source_mode"
+      ],
+      "dependencies": {
+        "premise_ids": [],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "FIELD_REVIEW"
+      ],
+      "unresolved_residual": "Not unrestricted omnipotence, metaphysical possibility, or free selection under identical complete grounds.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    },
+    {
+      "result_id": "VERACITY_NONVACUITY",
+      "tranche": "T20 synthesis of New T20 veracity relative-interpretation controls",
+      "exact_source_artifacts": [
+        {
+          "path": "../veracity-boundary/src/VeracityControls.lean",
+          "sha256": "91d2717e4f9faebbed5e4f10055793a608231a33eefb7df477acdd7890a84d23",
+          "bytes": 7884,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        },
+        {
+          "path": "../veracity-boundary/review/REVIEW_REPORT.md",
+          "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+          "bytes": 13471,
+          "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts"
+        }
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "inherited_or_fresh": "New T20 veracity relative-interpretation controls",
+      "formal_declarations": [
+        "VeracityBoundary.Controls.positive_package",
+        "VeracityBoundary.Controls.positive_nonvacuity",
+        "VeracityBoundary.Controls.created_false_is_not_source_owned",
+        "VeracityBoundary.Controls.truthful_not_conforming",
+        "VeracityBoundary.Controls.local_global_separation",
+        "VeracityBoundary.Controls.strong_ownership_not_truth_by_definition"
+      ],
+      "dependencies": {
+        "premise_ids": [],
+        "conclusion_ids": []
+      },
+      "supersedes": [],
+      "does_not_supersede": [
+        "historical T17/T19 appraisals",
+        "earlier theorem ownership",
+        "dated current appraisal",
+        "sealed source and review identities"
+      ],
+      "public_candidate_projection": "final-synthesis/SYNTHESIS.md and CONCLUSION_PREMISE_STATUS_MAP.json; report preparation only, not published",
+      "required_integration_verification": [
+        "Check exact source hashes and status map",
+        "Retain source/formal/warrant separation"
+      ],
+      "reusable_existing_verification": [
+        "VERACITY_REVIEW"
+      ],
+      "unresolved_residual": "No full source profile or actual revelation authenticated.",
+      "independent_review_status": "COMPONENT_INDEPENDENT_REVIEW_COMPLETE"
+    }
+  ]
+}

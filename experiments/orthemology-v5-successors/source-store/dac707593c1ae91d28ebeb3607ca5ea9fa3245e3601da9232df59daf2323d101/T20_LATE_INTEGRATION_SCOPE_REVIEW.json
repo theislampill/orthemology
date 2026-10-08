@@ -1,0 +1,33 @@
+{
+  "late_selection_sha256": "2d9bab6871ef1f0250e5dca9b914bd8b278dc5f007782bd0ed77b6883a063919",
+  "methodology_core_selection_sha256": "a36bfb1bb9332e129b4e14ac6fb06d1cc4271d0ffc85becc10699e0ae188a05c",
+  "new_independent_evidence_count": 0,
+  "new_native_receipts": 0,
+  "new_native_scientific_execution": "NOT_RUN",
+  "original_author_manifest_sha256": "bd12a5bf5d0ceb9c800232fa1dc39a015c0ea63d89020c1ebcb5c241a10ef655",
+  "result_id": "T20-EMERGENCE-TYPE-CONTROL",
+  "reviewed_source_ids": [
+    "T20-FINAL-71bd18caf46767970555",
+    "T20-FINAL-30374a0606c9760076bb",
+    "T20-FINAL-ab5767fc84bfbce4da8e",
+    "T20-FINAL-fe5ec462a86c3727a45a",
+    "T20-FINAL-21f365ab1b0b5dbc95c2",
+    "T20-FINAL-5b29b290dbe9cd7c8e92",
+    "T20-FINAL-ff08f5d6e04c16769683",
+    "T20-FINAL-d77cbbf34ccc59e62619",
+    "T20-FINAL-79ed4e68ea81ad53ab3e",
+    "T20-FINAL-2cd93d28bb04ac8740b0",
+    "T20-FINAL-7aef0762e5152250656e",
+    "T20-FINAL-5bb33aef0cf9b70bc639",
+    "T20-FINAL-2e1c86990882338ca9a5",
+    "T20-FINAL-2bad503fad2b4c567662",
+    "T20-FINAL-348846251f0eb72155ca",
+    "T20-FINAL-d8a54cae1a271174d1e7",
+    "T20-FINAL-44f3874d7355217e1060",
+    "T20-FINAL-cd2ad31f1a35b2c5686d",
+    "T20-FINAL-80a5f2b6d3a145a551d7"
+  ],
+  "schema": "bounded-late-source-scope-review-v1",
+  "scope": "Exact final selected source/statement/scope correspondence for the late typed interpretation. Original independent research review is inherited; this is not another kernel run or metaphysical/source-attribution adjudication.",
+  "statement_sha256": "4943cdbde01f4295847e94281368aa6154ba0ca6b7cbb6775181822bd6227815"
+}

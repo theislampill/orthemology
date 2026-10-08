@@ -1,0 +1,591 @@
+{
+  "utc": "2026-10-07T11:50:06.060290+00:00",
+  "assigned_electronic_range": [
+    135,
+    256
+  ],
+  "electronic_first_pass_actual_pages": [
+    135,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    205,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    221,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251
+  ],
+  "electronic_first_pass_count": 112,
+  "electronic_word_count_including_apparatus": 22787,
+  "first_pass_windows": [
+    {
+      "requested_range": [
+        135,
+        144
+      ],
+      "actual_pages": [
+        135,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144
+      ],
+      "window_sha256": "183aaa5b74cb812d615309e225001c4010c94f96b48341c62584742bde37accf",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        145,
+        154
+      ],
+      "actual_pages": [
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154
+      ],
+      "window_sha256": "44fb283636f1559a38254c99b3abd84e2f8250425f393f170e538d39e6a76223",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        155,
+        164
+      ],
+      "actual_pages": [
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164
+      ],
+      "window_sha256": "4a232d4075988c498f6116ecadecf553e21ae7a87faa10c2abb05b373f620e66",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        165,
+        174
+      ],
+      "actual_pages": [
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174
+      ],
+      "window_sha256": "15ca6b3cc4428fef7639e1b2d03ce2d3157210f414550ffe6f98d0128ca5c078",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        175,
+        184
+      ],
+      "actual_pages": [
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184
+      ],
+      "window_sha256": "671f989e7d6030932c9ec4bcd569574c88b99d3a787f896519a978b954752fd6",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        185,
+        194
+      ],
+      "actual_pages": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194
+      ],
+      "window_sha256": "8aa7f1b8b5d32f607563f3fae4e428b28a60f14dd97af52c846ea02016e65063",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        195,
+        204
+      ],
+      "actual_pages": [
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203
+      ],
+      "window_sha256": "193a6d4d7c31721c6b41a8a280f2540151a6a5679a79b521aeadb43c3668d9b0",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        205,
+        216
+      ],
+      "actual_pages": [
+        205,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216
+      ],
+      "window_sha256": "5a53141ea86016763c4e8120a5f3d3744eaab258e2d40772f0e1ca7ed7a09889",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        217,
+        226
+      ],
+      "actual_pages": [
+        217,
+        218,
+        219,
+        221,
+        223,
+        224,
+        225,
+        226
+      ],
+      "window_sha256": "cbf0bd210a65b6019e4736223661761688fd664f7586a220e12d6bac1628b618",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        227,
+        236
+      ],
+      "actual_pages": [
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236
+      ],
+      "window_sha256": "da15a572cded558c4fcc47d60a44b161cf4f060154ec9de0858ca45299b11ef7",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        237,
+        246
+      ],
+      "actual_pages": [
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246
+      ],
+      "window_sha256": "07f5b8ed3e2f9ae7283b98dcd925061a69974ccf1a409b072c8aeeaea7647ea2",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "requested_range": [
+        247,
+        251
+      ],
+      "actual_pages": [
+        247,
+        248,
+        249,
+        250,
+        251
+      ],
+      "window_sha256": "67d2a0eb2580e2a77e12c3023f250264b68024fe29feb76fd7e9a883d90af788",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    }
+  ],
+  "skipped_redirect_requests_no_distinct_credit": [
+    {
+      "requested_page": 136,
+      "actual_page": 137
+    },
+    {
+      "requested_page": 204,
+      "actual_page": 205
+    },
+    {
+      "requested_page": 206,
+      "actual_page": 207
+    },
+    {
+      "requested_page": 220,
+      "actual_page": 221
+    },
+    {
+      "requested_page": 222,
+      "actual_page": 223
+    }
+  ],
+  "held_electronic_gaps": [
+    {
+      "electronic_page": 252,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "electronic_page": 253,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "electronic_page": 254,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "electronic_page": 255,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "electronic_page": 256,
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "unread_acquired_actual_pages": [],
+  "duplicate_first_pass_actual_pages": 0,
+  "supplement": {
+    "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+    "sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730",
+    "junction": "E251 matches printed/PDF 247 full-page; poem continues on 248",
+    "printed_pdf_pages_first_read_in_lieu_of_electronic_gap": [
+      248,
+      249,
+      250,
+      251,
+      252
+    ],
+    "electronic_numbers_for_continuation": [
+      252,
+      253,
+      254,
+      255,
+      256
+    ],
+    "electronic_id_status": "inferred continuation mapping; inaccessible electronic pages NOT marked retrieved",
+    "source_ending": "printed 252 manuscript copy ends mid-discussion; footnote explicitly confirms"
+  },
+  "visual_receipts": [
+    {
+      "pdf_page_1based": 179,
+      "printed_page_visually_seen": 179,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "reflective locus",
+      "capture_sha256": "89857b93020965e8656bed217184eb87340e6e42d3ee614010f501d60fb2c335",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 180,
+      "printed_page_visually_seen": 180,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "reflective locus",
+      "capture_sha256": "abcb41c8a469a7f4473248de75caf16653440e1b639e0db53e9efd7d4706d8ce",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 181,
+      "printed_page_visually_seen": 181,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "reflective locus",
+      "capture_sha256": "06613e1c4050809b53aaae4bc43765f0d45baf75ad14cdad97c8a750b3f40663",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 182,
+      "printed_page_visually_seen": 182,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "reflective locus",
+      "capture_sha256": "a309902cb118bbfe70e62b0289ff569a7974d6613a23e32e39f1d8e61e3f960e",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 247,
+      "printed_page_visually_seen": 247,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "junction verification",
+      "capture_sha256": "3ec0e7c2afec56dcf24ff0b5ce8444f6d4019e2a8a219278a8b327415929dd80",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 248,
+      "printed_page_visually_seen": 248,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "first-pass supplement",
+      "capture_sha256": "1b85c3cf898a50a3528cccf4a1d11e73e4919eb0fcec479dee2ad0d3b2f00748",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 249,
+      "printed_page_visually_seen": 249,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "first-pass supplement",
+      "capture_sha256": "5421ee1d8f1f683cf92ffa708ccfcdf9bebbef1381a91334869d260df6621842",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 250,
+      "printed_page_visually_seen": 250,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "first-pass supplement",
+      "capture_sha256": "f8f2274e47d80c47ebb27c0276d7c146b84a2f23f1df7f7207b8e0f1a9889012",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 251,
+      "printed_page_visually_seen": 251,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "first-pass supplement",
+      "capture_sha256": "de555eee26f1a857f98bd2a1c0e1a44674259a23968c93710859deb8da1b333e",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 252,
+      "printed_page_visually_seen": 252,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "first-pass supplement",
+      "capture_sha256": "9d00ee8ddad1ceb864f37bf3fc8122f127709501fdcb62b19fe0088a74695ee8",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "pdf_page_1based": 204,
+      "printed_page_visually_seen": 204,
+      "source_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "capture_included": false,
+      "scope": "full visible page read",
+      "purpose": "incidental corroboration of E208",
+      "capture_sha256": "e8ca15069179952f8530653346705f50845eebc43fccb533217cc238f7dff2b7",
+      "source_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    }
+  ],
+  "reflective_text_rereads": [
+    {
+      "kind": "reflective-final-cause",
+      "requested_range": [
+        199,
+        202
+      ],
+      "actual_pages": [
+        199,
+        200,
+        201,
+        202
+      ],
+      "window_sha256": "d24f300cd084767ca10c08b46f7e536b3073553eed715c4f89cb9040a23db1db",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    },
+    {
+      "kind": "reflective-causation",
+      "requested_range": [
+        211,
+        216
+      ],
+      "actual_pages": [
+        211,
+        212,
+        213,
+        214,
+        215,
+        216
+      ],
+      "window_sha256": "aad53f4bfc87f9f149256386f61581dc4548b8a9ea890d8851ad7ed9f4450f72",
+      "electronic_source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "END_visibility": "confirmed full untruncated in MIDDLE_CONTINUOUS_NOTES.md"
+    }
+  ],
+  "limitations": [
+    "not whole-volume visual collation",
+    "not manuscript collation",
+    "historical and polemical claims not independently corroborated",
+    "five electronic acquisition gaps retained held; substantive printed continuation read instead"
+  ],
+  "publication_note": "Historical study metadata retained for scope and source identity. No additional source reading, visual collation or philosophical proof is claimed by this projection."
+}

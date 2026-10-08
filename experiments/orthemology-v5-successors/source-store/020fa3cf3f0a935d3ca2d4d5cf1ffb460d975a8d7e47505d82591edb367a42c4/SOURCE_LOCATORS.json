@@ -1,0 +1,676 @@
+{
+  "schema": "t20-veracity-source-bindings-v1",
+  "scope": "Exact sealed report/guide paragraph identities and retained prior sources; no fresh primary collation",
+  "sealed_passages_path": "../dependency-dag/SOURCE_PASSAGES.json",
+  "sealed_passages_sha256": "f1ab382835f31be020c84ae11f04747f110b945a17f73c96adfa51272930ddf8",
+  "sealed_dag_path": "../dependency-dag/DEPENDENCY_DAG.json",
+  "sealed_dag_sha256": "cd1cb84f321c4e0b3a99459640329d5e30e0f978f4a2d4154ed1a316b7b3dc19",
+  "paragraphs": {
+    "T17R:P00063": {
+      "paragraph": "P00063",
+      "text_sha256": "57d3b9eb90185e44bcd2d1e0859f029b045cf2a00db98433f6fa2865c7efcb24",
+      "section_path": [
+        "Real attributes and unrestricted standing power"
+      ],
+      "text_utf8_bytes": 530,
+      "body_selected": false
+    },
+    "T17R:P00064": {
+      "paragraph": "P00064",
+      "text_sha256": "3bcb991c7785546dc393432a26454d123dae2d5dba1c1f53f5dc5093e6b95502",
+      "section_path": [
+        "Real attributes and unrestricted standing power"
+      ],
+      "text_utf8_bytes": 534,
+      "body_selected": false
+    },
+    "T17R:P00065": {
+      "paragraph": "P00065",
+      "text_sha256": "cd2d4b18d63d0b7d1b376c6a14076b18502cba392b7952c8b2536a82ed8fb817",
+      "section_path": [
+        "Real attributes and unrestricted standing power"
+      ],
+      "text_utf8_bytes": 583,
+      "body_selected": false
+    },
+    "T17R:P00066": {
+      "paragraph": "P00066",
+      "text_sha256": "c3bdf6afa4495229e5dc7258d8c34c443d9f7de1710ba814dbdb00b7a9e6526b",
+      "section_path": [
+        "Real attributes and unrestricted standing power"
+      ],
+      "text_utf8_bytes": 636,
+      "body_selected": false
+    },
+    "T17R:P00067": {
+      "paragraph": "P00067",
+      "text_sha256": "9c2fd9cf38eb470cccb7706843a66deac0a26ba4fedeb4ac3c5cf1c664a7158f",
+      "section_path": [
+        "Real attributes and unrestricted standing power"
+      ],
+      "text_utf8_bytes": 658,
+      "body_selected": false
+    },
+    "T17R:P00068": {
+      "paragraph": "P00068",
+      "text_sha256": "622ba81f34a2637c2eeaeab25636dd707c122ad76054073fd376ecbfd0e4a0fa",
+      "section_path": [
+        "Real attributes and unrestricted standing power"
+      ],
+      "text_utf8_bytes": 626,
+      "body_selected": false
+    },
+    "T17R:P00085": {
+      "paragraph": "P00085",
+      "text_sha256": "a09cb8a5c68b6eb45ce52968ef5870f317ebb03e59c187dd556ca118db671180",
+      "section_path": [
+        "Wisdom and the positive case for truthful assertion"
+      ],
+      "text_utf8_bytes": 567,
+      "body_selected": false
+    },
+    "T17R:P00086": {
+      "paragraph": "P00086",
+      "text_sha256": "710cf72b12891d17602b6710eeb4bb566be19354f39a231bbc5094aba4dcb081",
+      "section_path": [
+        "Wisdom and the positive case for truthful assertion"
+      ],
+      "text_utf8_bytes": 519,
+      "body_selected": false
+    },
+    "T17R:P00087": {
+      "paragraph": "P00087",
+      "text_sha256": "73d8b985318f839fd8b8f883651a3d9e0040075e852eaf731f6e3a273f298b8e",
+      "section_path": [
+        "Wisdom and the positive case for truthful assertion"
+      ],
+      "text_utf8_bytes": 557,
+      "body_selected": false
+    },
+    "T17R:P00088": {
+      "paragraph": "P00088",
+      "text_sha256": "73381d76fe11380393a42b296bccc839862129fb7500f9cc4757d7fc746c00f3",
+      "section_path": [
+        "Wisdom and the positive case for truthful assertion"
+      ],
+      "text_utf8_bytes": 675,
+      "body_selected": false
+    },
+    "T17R:P00089": {
+      "paragraph": "P00089",
+      "text_sha256": "ce3285c37910bd60b05658de4454da72228d075cbc83388ff0f08515315dd9a5",
+      "section_path": [
+        "Wisdom and the positive case for truthful assertion"
+      ],
+      "text_utf8_bytes": 677,
+      "body_selected": false
+    },
+    "T17R:P00090": {
+      "paragraph": "P00090",
+      "text_sha256": "6fe9051cb5e858d81bb990c002a7789ad1f407218663d07f0cc8a783d31ba884",
+      "section_path": [
+        "Wisdom and the positive case for truthful assertion"
+      ],
+      "text_utf8_bytes": 629,
+      "body_selected": false
+    },
+    "T17R:P00092": {
+      "paragraph": "P00092",
+      "text_sha256": "3aa0d39cf7a451ae4f586fb18052c91d560300a0ed9c4e60d2bd77eef67a94b9",
+      "section_path": [
+        "The remaining veracity disagreement and the revised judgement"
+      ],
+      "text_utf8_bytes": 528,
+      "body_selected": false
+    },
+    "T17R:P00093": {
+      "paragraph": "P00093",
+      "text_sha256": "37a57b8a546daaa042d8c37db94eaed4bbb60b38414e7ea368578e1e9aaac300",
+      "section_path": [
+        "The remaining veracity disagreement and the revised judgement"
+      ],
+      "text_utf8_bytes": 585,
+      "body_selected": false
+    },
+    "T17R:P00094": {
+      "paragraph": "P00094",
+      "text_sha256": "e807d43a4e5d31b64d6b18fd9fdd30c8a1b30b69c00c1b15944a6fff5ff9a9b9",
+      "section_path": [
+        "The remaining veracity disagreement and the revised judgement"
+      ],
+      "text_utf8_bytes": 620,
+      "body_selected": false
+    },
+    "T17R:P00095": {
+      "paragraph": "P00095",
+      "text_sha256": "4101a011f01849366d0af26264813e4f89df02fc2d1cfcdb2b7cd02e1342fad1",
+      "section_path": [
+        "The remaining veracity disagreement and the revised judgement"
+      ],
+      "text_utf8_bytes": 729,
+      "body_selected": false
+    },
+    "T17R:P00096": {
+      "paragraph": "P00096",
+      "text_sha256": "ac9b2e088e687a189b8c30a4da2b264dc7f9e87deb69c6399d929251d8074b1f",
+      "section_path": [
+        "The remaining veracity disagreement and the revised judgement"
+      ],
+      "text_utf8_bytes": 513,
+      "body_selected": false
+    },
+    "T17R:P00097": {
+      "paragraph": "P00097",
+      "text_sha256": "911803412dd15faefef9032f87d93c7addc1787f7ad9cf5143867ff91159560a",
+      "section_path": [
+        "The remaining veracity disagreement and the revised judgement"
+      ],
+      "text_utf8_bytes": 369,
+      "body_selected": false
+    },
+    "T17R:P00098": {
+      "paragraph": "P00098",
+      "text_sha256": "f44af0da06e56c64b20fe1a00d0c4fba9533533956c163a04061d8cdd57b60e3",
+      "section_path": [
+        "The remaining veracity disagreement and the revised judgement"
+      ],
+      "text_utf8_bytes": 680,
+      "body_selected": false
+    },
+    "T17G:P00089": {
+      "paragraph": "P00089",
+      "text_sha256": "323506fabd0b8dd33b4307aafb8b723fb6efa97a88753f458673ffeaa5ece81d",
+      "section_path": [
+        "Further primary readings and their limits",
+        "Speech inhering in its speaker"
+      ],
+      "text_utf8_bytes": 375,
+      "body_selected": false
+    },
+    "T17G:P00090": {
+      "paragraph": "P00090",
+      "text_sha256": "ffdfbc1895886b806c9794ce99c8cfb8fa5bc86b9fbe4886065fe0504473b16f",
+      "section_path": [
+        "Further primary readings and their limits",
+        "Speech inhering in its speaker"
+      ],
+      "text_utf8_bytes": 456,
+      "body_selected": false
+    },
+    "T17G:P00099": {
+      "paragraph": "P00099",
+      "text_sha256": "6929854f566dbd7df7329c78f7dcbaf6a2ee29175b88f23bf0f9375cb729ceb1",
+      "section_path": [
+        "Suleiman on ontology and divine perfection",
+        "The original giver and pure perfection"
+      ],
+      "text_utf8_bytes": 524,
+      "body_selected": false
+    },
+    "T17G:P00100": {
+      "paragraph": "P00100",
+      "text_sha256": "fb4f76f8ea00fef85026f37a066fff48e20a50de3298c2843d3af87dab288eca",
+      "section_path": [
+        "Suleiman on ontology and divine perfection",
+        "The original giver and pure perfection"
+      ],
+      "text_utf8_bytes": 507,
+      "body_selected": false
+    },
+    "T17G:P00101": {
+      "paragraph": "P00101",
+      "text_sha256": "d667dd372935a2086bf4159517a2dbc7dda1cf01dbed669552b3aaec7f07c40a",
+      "section_path": [
+        "Suleiman on ontology and divine perfection",
+        "The original giver and pure perfection"
+      ],
+      "text_utf8_bytes": 485,
+      "body_selected": false
+    },
+    "T17G:P00107": {
+      "paragraph": "P00107",
+      "text_sha256": "82106d88eecfaf745223a3282990b2ac60b848f0880ae2102fb3108897a89bc9",
+      "section_path": [
+        "Suleiman on wisdom acts and objective norms",
+        "The positive case for wise governance"
+      ],
+      "text_utf8_bytes": 352,
+      "body_selected": false
+    },
+    "T17G:P00108": {
+      "paragraph": "P00108",
+      "text_sha256": "1c75df302dbcb41d0b05ebd90ee0a9da37c03265e6f4a971f58fb04bb8448fef",
+      "section_path": [
+        "Suleiman on wisdom acts and objective norms",
+        "The positive case for wise governance"
+      ],
+      "text_utf8_bytes": 478,
+      "body_selected": false
+    },
+    "T17G:P00109": {
+      "paragraph": "P00109",
+      "text_sha256": "a5d4b2df22d725734e9a1abb3f07cfef33a3b49e04468c91c3c884cbe9610667",
+      "section_path": [
+        "Suleiman on wisdom acts and objective norms",
+        "The positive case for wise governance"
+      ],
+      "text_utf8_bytes": 385,
+      "body_selected": false
+    },
+    "T17G:P00111": {
+      "paragraph": "P00111",
+      "text_sha256": "8c1b8bd05cbefbbd059157c313a33ab5f982c8f2b26f810f1873abbd6c9b12c4",
+      "section_path": [
+        "Suleiman on wisdom acts and objective norms",
+        "Truthfulness and normative authority"
+      ],
+      "text_utf8_bytes": 442,
+      "body_selected": false
+    },
+    "T17G:P00112": {
+      "paragraph": "P00112",
+      "text_sha256": "05caf24a77222b59b16614a041c562a3ae93eb5e35e7eb471e3eacfa50180105",
+      "section_path": [
+        "Suleiman on wisdom acts and objective norms",
+        "Truthfulness and normative authority"
+      ],
+      "text_utf8_bytes": 496,
+      "body_selected": false
+    },
+    "T17G:P00113": {
+      "paragraph": "P00113",
+      "text_sha256": "153ed0cd726b8b461f7df9be3c5f4c18a8c9e679b09243303cf4aa8b405956df",
+      "section_path": [
+        "Suleiman on wisdom acts and objective norms",
+        "Truthfulness and normative authority"
+      ],
+      "text_utf8_bytes": 619,
+      "body_selected": false
+    },
+    "T19R:P00081": {
+      "paragraph": "P00081",
+      "text_sha256": "9d98f5a3e912c198c80e2396c972c33add69fb2146affe88165f4e9777071c17",
+      "section_path": [
+        "How original provision follows through created causes",
+        "Three attributions"
+      ],
+      "text_utf8_bytes": 316,
+      "body_selected": false
+    },
+    "T19R:P00082": {
+      "paragraph": "P00082",
+      "text_sha256": "b385750100271416938e627d5f9834e8135223159c3ae7adcca9b971de84ceae",
+      "section_path": [
+        "How original provision follows through created causes",
+        "Three attributions"
+      ],
+      "text_utf8_bytes": 432,
+      "body_selected": false
+    },
+    "T19R:P00083": {
+      "paragraph": "P00083",
+      "text_sha256": "ff27d6e542da86fc5ad7defd956c58515f8c49aab0307f4344182c62bfdf3a28",
+      "section_path": [
+        "How original provision follows through created causes",
+        "Three attributions"
+      ],
+      "text_utf8_bytes": 488,
+      "body_selected": false
+    },
+    "T19R:P00084": {
+      "paragraph": "P00084",
+      "text_sha256": "3b04bbb1b604796e791c8959fa1c2732d2153c5ab923c6962874d76ae6da7a16",
+      "section_path": [
+        "How original provision follows through created causes",
+        "Three attributions"
+      ],
+      "text_utf8_bytes": 393,
+      "body_selected": false
+    },
+    "T19R:P00085": {
+      "paragraph": "P00085",
+      "text_sha256": "873477cb723a62c7209edcb8f00335e2f11fcfd97525af97074efc3c86c36c2e",
+      "section_path": [
+        "How original provision follows through created causes",
+        "Three attributions"
+      ],
+      "text_utf8_bytes": 573,
+      "body_selected": false
+    },
+    "T19R:P00132": {
+      "paragraph": "P00132",
+      "text_sha256": "916c846cb5b98c73afc914b2264844b46c5d3b9ff7478c10f947685f1b047a38",
+      "section_path": [
+        "Intentional attestation and the al Walid case",
+        "A positive route with independent evidential content"
+      ],
+      "text_utf8_bytes": 529,
+      "body_selected": false
+    },
+    "T19R:P00133": {
+      "paragraph": "P00133",
+      "text_sha256": "32753e096f9e96ad2799eeef662e56bfaf699add85320d94277552185c04de80",
+      "section_path": [
+        "Intentional attestation and the al Walid case",
+        "A positive route with independent evidential content"
+      ],
+      "text_utf8_bytes": 514,
+      "body_selected": false
+    },
+    "T19R:P00134": {
+      "paragraph": "P00134",
+      "text_sha256": "cf03ed94861d99516f24bebd30a0251a1345e7d9087165d7da19355e13817640",
+      "section_path": [
+        "Intentional attestation and the al Walid case",
+        "A positive route with independent evidential content"
+      ],
+      "text_utf8_bytes": 544,
+      "body_selected": false
+    },
+    "T19R:P00135": {
+      "paragraph": "P00135",
+      "text_sha256": "72c6145a731703131a9c063a79397444d544cfb08c2da0d8cde91658dbff2d82",
+      "section_path": [
+        "Intentional attestation and the al Walid case",
+        "A positive route with independent evidential content"
+      ],
+      "text_utf8_bytes": 416,
+      "body_selected": false
+    },
+    "T19R:P00155": {
+      "paragraph": "P00155",
+      "text_sha256": "77f6ebb1ee87dab2317d92c6d553014aed43cf61e088edc66447a80fee06fbc6",
+      "section_path": [
+        "What the result reaches and what remains distinct",
+        "Avenue 2 and source owned veracity"
+      ],
+      "text_utf8_bytes": 370,
+      "body_selected": false
+    },
+    "T19R:P00156": {
+      "paragraph": "P00156",
+      "text_sha256": "857307ef4fab220105c0cd9b81581730c183301420716905a1b27e4cf05d5254",
+      "section_path": [
+        "What the result reaches and what remains distinct",
+        "Avenue 2 and source owned veracity"
+      ],
+      "text_utf8_bytes": 451,
+      "body_selected": false
+    },
+    "T19R:P00157": {
+      "paragraph": "P00157",
+      "text_sha256": "4ae79bd1df41577550ada593f8064b13f56e306360564acfb8f5e126d7d46439",
+      "section_path": [
+        "What the result reaches and what remains distinct",
+        "Avenue 2 and source owned veracity"
+      ],
+      "text_utf8_bytes": 383,
+      "body_selected": false
+    },
+    "T19R:P00158": {
+      "paragraph": "P00158",
+      "text_sha256": "2ab9852ed0b2ffef4a105827f7d08617d34e2826a248c35e5b03fcb141c03a03",
+      "section_path": [
+        "What the result reaches and what remains distinct",
+        "Avenue 2 and source owned veracity"
+      ],
+      "text_utf8_bytes": 347,
+      "body_selected": false
+    },
+    "T19R:P00164": {
+      "paragraph": "P00164",
+      "text_sha256": "e5d4d4fb38f3388652db07dccafc79f1b50cb730de256a77a8efde8b9fa7bb6a",
+      "section_path": [
+        "What the result reaches and what remains distinct",
+        "Avenue 3 and rightful guidance"
+      ],
+      "text_utf8_bytes": 638,
+      "body_selected": false
+    },
+    "T19R:P00165": {
+      "paragraph": "P00165",
+      "text_sha256": "d5a2ba5e6ca1f863f76d94cb4e899d9aa5eb63ad876f53e2789cbc9abf69a4f1",
+      "section_path": [
+        "What the result reaches and what remains distinct",
+        "Avenue 3 and rightful guidance"
+      ],
+      "text_utf8_bytes": 563,
+      "body_selected": false
+    },
+    "T19R:P00167": {
+      "paragraph": "P00167",
+      "text_sha256": "150f55efb2970749215b5f3b1e70c013e8056805898de679f2f8a0e2a00739f0",
+      "section_path": [
+        "What the result reaches and what remains distinct",
+        "Source truth recipient warrant and action"
+      ],
+      "text_utf8_bytes": 358,
+      "body_selected": false
+    },
+    "T19R:P00168": {
+      "paragraph": "P00168",
+      "text_sha256": "68cdca0959ec39b913f9a0dce2144682101a4cf1e96adf98d56891b5736ef11c",
+      "section_path": [
+        "What the result reaches and what remains distinct",
+        "Source truth recipient warrant and action"
+      ],
+      "text_utf8_bytes": 407,
+      "body_selected": false
+    }
+  },
+  "document_sources": {
+    "T17R": {
+      "original_path": "report-documents/Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "original_sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "document_xml_sha256": "36bd952089329ea93f89acb6c680cca58048d82fa772d47c03d64d883ee0b0c4",
+      "text_path": "report-extractions/Orthemology_Seventeenth_Research_Final_v1_20261005.txt",
+      "text_sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "public_projection": "report-projections/Orthemology_Seventeenth_Research_Final_v1_20261005.md",
+      "paragraph_count": 198,
+      "math_nodes": 0,
+      "current_stage_inspection": "Relevant actual report and source-guide bodies read; cited primary books not reread for this reconstruction."
+    },
+    "T17G": {
+      "original_path": "report-documents/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "original_sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9",
+      "document_xml_sha256": "8ef0274c14f0ed51a35217384aed5f5a3f3a7ced69717380908de219f51ac010",
+      "text_path": "report-extractions/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.txt",
+      "text_sha256": "72ff4b59cad4c1999476167adbc7d6d03983d6b0b59693b12ec13de5d9a3cfa0",
+      "public_projection": "report-projections/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.md",
+      "paragraph_count": 179,
+      "math_nodes": 0,
+      "current_stage_inspection": "Relevant actual report and source-guide bodies read; cited primary books not reread for this reconstruction."
+    },
+    "T19R": {
+      "original_path": "report-documents/Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "original_sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "document_xml_sha256": "f58068acbccabed28edfec0546c4493ac39c610c89f74049c6479ca0ab365cfa",
+      "text_path": "report-extractions/Orthemology_Nineteenth_Research_Final_v1_20261006.txt",
+      "text_sha256": "edcd0da0ccebd94ea7a8a14070d37f7212e62aeddc275e64d25cbe186e249210",
+      "public_projection": "report-projections/Orthemology_Nineteenth_Research_Final_v1_20261006.md",
+      "paragraph_count": 191,
+      "math_nodes": 0,
+      "current_stage_inspection": "Relevant actual report and source-guide bodies read; cited primary books not reread for this reconstruction."
+    }
+  },
+  "external_sources": {
+    "Seventh-token-purpose": {
+      "path": "predecessor/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md",
+      "lines": [
+        120,
+        137
+      ],
+      "status": "written prior owner; not new proof credit",
+      "sha256": "c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed",
+      "bytes": 37331,
+      "excerpt_sha256": "c24a5dd03f79e1e53e7c79479f417552f203572c75a2a0ab86126e0e159cab30",
+      "excerpt_utf8_bytes": 2299,
+      "body_selected": false
+    },
+    "Grounded-attestation": {
+      "path": "../../testimony-continuation/grounded-attestation/README.md",
+      "lines": [
+        17,
+        29
+      ],
+      "status": "existing import/application/retraction work; not duplicated",
+      "sha256": "f9ce4c0195878aa0feb0c661c7cf9a0c233c6612ba5ad9f5c5d895f6dbbfb70a",
+      "bytes": 8209,
+      "excerpt_sha256": "e73029fe7eb9f184b0f412881b55604502148fa4e9f4a02287cab1fa63510f0c",
+      "excerpt_utf8_bytes": 1390,
+      "body_selected": false
+    },
+    "Dar8-route-scope": {
+      "path": "../../arabic-volume-study/dar-8-9/volume08/paragraphs.json",
+      "paragraphs": [
+        "V08-P0054",
+        "V08-P0055",
+        "V08-P0056",
+        "V08-P0057",
+        "V08-P0058",
+        "V08-P0059",
+        "V08-P0060",
+        "V08-P0061",
+        "V08-P0062",
+        "V08-P0063",
+        "V08-P0064",
+        "V08-P0065",
+        "V08-P0066",
+        "V08-P0067"
+      ],
+      "status": "opponent chain in P0054-56; authorial reply from P0057; sufficient route not universal ordering",
+      "sha256": "3eded28d866a8dd42af6b943071a8f077d94d9bb5b1666abf650330e957ddad4",
+      "bytes": 1070161,
+      "selected_passage_locators": [
+        {
+          "id": "V08-P0054",
+          "source_segment": 12,
+          "source_char_start": 168993,
+          "source_char_end": 169880,
+          "text_sha256": "4bd77a773df7bfadb906e7c57e40cec1c5840738e6da5c44c749c13e8f7e8e57",
+          "text_utf8_bytes": 1592,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0055",
+          "source_segment": 12,
+          "source_char_start": 169881,
+          "source_char_end": 169946,
+          "text_sha256": "3cc8e68e5d7e5c3aceb35dea7a4f5637a62c5251cfa0a5ba4a6b91f8f77f1c23",
+          "text_utf8_bytes": 112,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0056",
+          "source_segment": 12,
+          "source_char_start": 169947,
+          "source_char_end": 170182,
+          "text_sha256": "647bd2d0dd9a338de9b300a9a94d0f27d48356443fa6a3e69ec0d2f442aadcdf",
+          "text_utf8_bytes": 419,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0057",
+          "source_segment": 12,
+          "source_char_start": 170183,
+          "source_char_end": 170198,
+          "text_sha256": "7376447fb73e2e338626877b255de1184ebeb5aea2b8b4b00edaaac4bcd9d7f9",
+          "text_utf8_bytes": 28,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0058",
+          "source_segment": 12,
+          "source_char_start": 170199,
+          "source_char_end": 170518,
+          "text_sha256": "f85f80a6eac66b04d8ba8be1819044e65c05711b8bdffd2822a9084a7b95d489",
+          "text_utf8_bytes": 581,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0059",
+          "source_segment": 12,
+          "source_char_start": 170519,
+          "source_char_end": 170632,
+          "text_sha256": "78ec28924dc0ddc4a745ae7b8a5e6f8f4dfed4d52cbf2c50b571a2e135ececc0",
+          "text_utf8_bytes": 205,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0060",
+          "source_segment": 12,
+          "source_char_start": 170633,
+          "source_char_end": 170985,
+          "text_sha256": "4416addced42ba339e1ee8b3beebf5154731e25b4b0e01f7fa789075026d35f5",
+          "text_utf8_bytes": 618,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0061",
+          "source_segment": 12,
+          "source_char_start": 170986,
+          "source_char_end": 171094,
+          "text_sha256": "473ef854a59f4090abf08714033375957c18246bb1dffd166790c8c5d4c7f731",
+          "text_utf8_bytes": 193,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0062",
+          "source_segment": 12,
+          "source_char_start": 171095,
+          "source_char_end": 171223,
+          "text_sha256": "f8ccfc7b32633727f5e40dafb508e8a08f1bce8736ba00d9eff44fd316d801fa",
+          "text_utf8_bytes": 235,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0063",
+          "source_segment": 12,
+          "source_char_start": 171224,
+          "source_char_end": 171707,
+          "text_sha256": "3ba18494ace7fa1718bcec00215a608e648d06ae2248c8d7011066eedc7c8c48",
+          "text_utf8_bytes": 876,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0064",
+          "source_segment": 12,
+          "source_char_start": 171708,
+          "source_char_end": 171939,
+          "text_sha256": "46d3e392c6a325017aa99158d870f05815cb86bbbba756fb335659622be1c49c",
+          "text_utf8_bytes": 419,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0065",
+          "source_segment": 12,
+          "source_char_start": 171940,
+          "source_char_end": 172517,
+          "text_sha256": "3024912afc57b30c607ed735f62cc5ad6c49116e0433b3f5eeee5964db1003ba",
+          "text_utf8_bytes": 1041,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0066",
+          "source_segment": 12,
+          "source_char_start": 172518,
+          "source_char_end": 172917,
+          "text_sha256": "76fb36aecbc9db0df1b4bc083239b90083b3d0cdacf589339682035837ae93b7",
+          "text_utf8_bytes": 724,
+          "body_selected": false
+        },
+        {
+          "id": "V08-P0067",
+          "source_segment": 12,
+          "source_char_start": 172918,
+          "source_char_end": 173310,
+          "text_sha256": "d0763eec5e51170de6c8079d1af8a5a500b0d14a25d6f698202160056f9d92df",
+          "text_utf8_bytes": 703,
+          "body_selected": false
+        }
+      ],
+      "body_selected": false
+    }
+  },
+  "distribution_note": "Only source/premise locators and custody hashes are selected. No report-paragraph, primary Arabic body or excerpt is redistributed by this record."
+}

@@ -1,0 +1,440 @@
+{
+  "reviewed_at": "2026-10-07T10:27:00Z",
+  "purpose": "Identity, natural boundaries and preservation limits only; no continuous body study by this reader.",
+  "combined_source": {
+    "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+    "sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+    "pages": 1394
+  },
+  "inspected_images": [
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "1442 printing volume 1 title",
+      "visual_inspection": true,
+      "pdf_position_one_based": 1,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "53469e8cc665de50f3ba928ebf56d5c66f3cbf988869a13c30396400e586f733"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "1442/2020 Dar Ataat/Dar Ibn Hazm edition statement, ISBN 9789959858085",
+      "visual_inspection": true,
+      "pdf_position_one_based": 2,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "09edf438c0c9bbd80b31b2049eea888f3bc15dcbefa098b9c7c9290265b23a39"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "intro distinguishes al-Mawsili abridgment",
+      "visual_inspection": true,
+      "pdf_position_one_based": 11,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "9d4be97a85ba3e26336896362303b5aaf1dbf3308dba0afb58a32995df098a85"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "historical book size is not current print seam",
+      "visual_inspection": true,
+      "pdf_position_one_based": 15,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "8b5812ce42ad2ccd917a0c591c6e283228799ee2ee5e69aeb03100da437e57ce"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "Aleppo manuscript historical part 2 notation",
+      "visual_inspection": true,
+      "pdf_position_one_based": 16,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "61de227c240d83ab449b310176a7966b0760bb70deb8110f611d4695af29ae8e"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "CORRECTED after high-resolution inspection: second-taghut nominal 242 faces. Numbering 47→50 at manuscript 54 b: 48–49 may be omitted or numbering erroneous. Numbering 72→79 at 69 b: 73–78 absent; copyist notes هكذا في الأصل. Editor counts 234 present faces; third/fourth portions not found.",
+      "visual_inspection": true,
+      "correction_at": "2026-10-07T10:37:00Z",
+      "pdf_position_one_based": 29,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "eadb5af70030c645c6da2a4afc805f7a57cea9b054262e7166054100a15bdde3"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "promised later chapter absent also from abridgment; composition uncertain",
+      "visual_inspection": true,
+      "pdf_position_one_based": 30,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "1d4af5e95642e5b5c821225fee96c8795ac56568c84b4d2c143c729e9ea771cb"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "al-Mawsili abridgment identity and method",
+      "visual_inspection": true,
+      "pdf_position_one_based": 55,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "2691e4bf48a240c119be4a558edd898d6ad8fac3e138a10a8033ed412609dbd7"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "abridgment preserves material lost from original",
+      "visual_inspection": true,
+      "pdf_position_one_based": 56,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "31d4a7c6d3dcb7c4bbd1e4cf406e42f5a85e7083d28f72dd2271f5bec5161b88"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "no complete original manuscript; Aleppo and Berlin base witnesses",
+      "visual_inspection": true,
+      "pdf_position_one_based": 60,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "1e8efaeeccfc915730cb38f95c7ad68928689d636d038a5566af8182231c19aa"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "Aleppo colophon 1110 AH and restored internal lacuna",
+      "visual_inspection": true,
+      "pdf_position_one_based": 61,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "7c3a4358231ac21bb8261232b5f36ce89f1d64577665a71dfd4eef9a2cf18cf8"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "Berlin preserves about one-third of received original",
+      "visual_inspection": true,
+      "pdf_position_one_based": 62,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "57438d79b63e1e64f495c846dcc9244643ca48bee9c10d0134bac5aeb0a26dde"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "Aleppo fuller; Berlin defective end; abridgment used as control",
+      "visual_inspection": true,
+      "pdf_position_one_based": 63,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "ed0cbb369ac709e528a3b3df578ff4515bc913f51ac36d58c784d21b9c1a18ed"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "first authorial text at printed 3",
+      "visual_inspection": true,
+      "pdf_position_one_based": 81,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "c51a7937b985ad0371bfd946f9ae64c5b085a84c860b0fadb867c40c88009385"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "chapter 16 close printed 183 aligns inherited electronic part 1 endpoint",
+      "visual_inspection": true,
+      "pdf_position_one_based": 261,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "cb7ba9af94682a5459f83319fc6f0db0823e98fcac4cbf06cdb24209bfb85f4f"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "chapter 17 opening printed 184; not two-volume seam",
+      "visual_inspection": true,
+      "pdf_position_one_based": 262,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "dc6e95940e22241ef02ad7810ec43f2dae06299b2ea29124c9b0c16dce54ee55"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "printed 604 last authorial page of first physical volume in same-layout 1441 print",
+      "visual_inspection": true,
+      "pdf_position_one_based": 682,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "e7dfe3136291817cf5912788db956dc3fa42db9f140575a3aaa25e8c591ca542"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "printed 605 first authorial page of second physical volume in same-layout 1441 print",
+      "visual_inspection": true,
+      "pdf_position_one_based": 683,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "d6b977a8193b82408129b1c5de33ff3cc6297fb42e66d03d73d04d6add14354d"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "printed 1143 final authorial page; received-original limit note",
+      "visual_inspection": true,
+      "pdf_position_one_based": 1221,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "677159e020b994b1df55028f63a1d2b34063306bf726ccd1f85d617919d9b26e"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "blank after authorial endpoint",
+      "visual_inspection": true,
+      "pdf_position_one_based": 1222,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "ff73d2c67572a00335afb156ca4b563887754cf75e80d7f4b305bd87b134a816"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "printed 1145 indexes begin",
+      "visual_inspection": true,
+      "pdf_position_one_based": 1223,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "4c1a7d67a51240fd414a4b22028339ec414ba861b5929826e63ed00f50b37e9c"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "printed 1316 final index page",
+      "visual_inspection": true,
+      "pdf_position_one_based": 1394,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "0f978e54b6453b258c497968c7ba99a3a9599a453539ff86957218a485c050eb"
+    },
+    {
+      "source_url": "https://www.darulkutub.co/pages/updatecounter.php?action=download_part&file=746215803-01.pdf&part_id=603&item_id=226",
+      "capture_included": false,
+      "observation": "separately acquired 1441 volume 1 cover",
+      "visual_inspection": true,
+      "source_sha256": "048ff4b60e9e5e9b14f688c7d0912c23f7124da888b309fcb8646e242e8fd648",
+      "pdf_position_one_based": 1,
+      "capture_sha256": "c8e4ec2efd47dc1cb0cc81372f86a1474e638fa6ee19d2ab4ccb0fc9a11e5ab7"
+    },
+    {
+      "source_url": "https://www.darulkutub.co/pages/updatecounter.php?action=download_part&file=746215803-01.pdf&part_id=603&item_id=226",
+      "capture_included": false,
+      "observation": "separately acquired 1441 volume 1 final page 604",
+      "visual_inspection": true,
+      "source_sha256": "048ff4b60e9e5e9b14f688c7d0912c23f7124da888b309fcb8646e242e8fd648",
+      "pdf_position_one_based": 682,
+      "capture_sha256": "c905f2a0d044c042d40bcedbfbb99dcc89cd8ac3371074c4f53b3f182d7d1452"
+    },
+    {
+      "source_url": "https://www.darulkutub.co/pages/updatecounter.php?action=download_part&file=746215803-02.pdf&part_id=604&item_id=226",
+      "capture_included": false,
+      "observation": "separately acquired 1441 volume 2 cover",
+      "visual_inspection": true,
+      "source_sha256": "a2b26ac02221b32de26488374dac7aa52068f3e15fd053ea7f26e23a20fd20b2",
+      "pdf_position_one_based": 1,
+      "capture_sha256": "2245322dd23263e54d0328308ce66be6df15c0c24458563ab72b7b9956bfe86f"
+    },
+    {
+      "source_url": "https://www.darulkutub.co/pages/updatecounter.php?action=download_part&file=746215803-02.pdf&part_id=604&item_id=226",
+      "capture_included": false,
+      "observation": "1441/2020 Dar Alam al-Fawaid imprint distinguishes from 1442 printing",
+      "visual_inspection": true,
+      "source_sha256": "a2b26ac02221b32de26488374dac7aa52068f3e15fd053ea7f26e23a20fd20b2",
+      "pdf_position_one_based": 3,
+      "capture_sha256": "eb7875e3ad677a155c89f7b42fcfcb6d13316a565e5c692458ae18cf484cc5f4"
+    },
+    {
+      "source_url": "https://www.darulkutub.co/pages/updatecounter.php?action=download_part&file=746215803-02.pdf&part_id=604&item_id=226",
+      "capture_included": false,
+      "observation": "volume 2 first body page 605",
+      "visual_inspection": true,
+      "source_sha256": "a2b26ac02221b32de26488374dac7aa52068f3e15fd053ea7f26e23a20fd20b2",
+      "pdf_position_one_based": 5,
+      "capture_sha256": "1a4153c2645bbd977fc2e92afc5410b71a1ecae3ef517b474a124829ce08ab85"
+    },
+    {
+      "source_url": "https://www.darulkutub.co/pages/updatecounter.php?action=download_part&file=746215803-02.pdf&part_id=604&item_id=226",
+      "capture_included": false,
+      "observation": "volume 2 final index page 1316",
+      "visual_inspection": true,
+      "source_sha256": "a2b26ac02221b32de26488374dac7aa52068f3e15fd053ea7f26e23a20fd20b2",
+      "pdf_position_one_based": 716,
+      "capture_sha256": "79e56d424a3c98e8c1684045c015a38b097d9c44e32db014a0923dd7d9951817"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "printed 471 contains BOTH inherited part 2 end and part 3 start; no 1442 physical seam",
+      "visual_inspection": true,
+      "pdf_position_one_based": 549,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "89aac88bfebbf6819c6f797e0831af5aa13e5f8e4a7d024f9cd564e57174bcd0"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "printed 472 remaining first-taghut discussion",
+      "visual_inspection": true,
+      "pdf_position_one_based": 550,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "50726d660d07b36dc7ce036ff453e1c1820d8f7eaecb8be3b9b53b8406509488"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "printed 473 actual second-taghut opening",
+      "visual_inspection": true,
+      "pdf_position_one_based": 551,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "ec2a156d7e4d270e8551281c6796569f90371e4ede1f91d5b3a364f763cd812e"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "CORRECTED after high-resolution inspection: second-taghut nominal 242 faces. Numbering 47→50 at manuscript 54 b: 48–49 may be omitted or numbering erroneous. Numbering 72→79 at 69 b: 73–78 absent; copyist notes هكذا في الأصل. Editor counts 234 present faces; third/fourth portions not found.",
+      "visual_inspection": true,
+      "inspected_at": "2026-10-07T10:36:40Z",
+      "pdf_position_one_based": 29,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "e8cab49831288b318c87112510fad13caf0c3c52d07d1ee80154ac1e1a9e9979"
+    },
+    {
+      "source_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "capture_included": false,
+      "observation": "Reinspection confirms printed 3,183,184,471,472,473,604,605,1143,1145,1316 and independent split 604/605/1316; source-line bounds and PDF counts recomputed.",
+      "visual_inspection": true,
+      "inspected_at": "2026-10-07T10:37:19Z",
+      "composite_source_coordinates": {
+        "combined_pdf_positions": [
+          81,
+          261,
+          262,
+          549,
+          550,
+          551,
+          682,
+          683,
+          1221,
+          1223,
+          1394
+        ],
+        "split_printed_pages": [
+          604,
+          605,
+          1316
+        ]
+      },
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511",
+      "capture_sha256": "48d626a8f30ed34526dc6b0b15d046a3a9cc9e475973b4bf60b135faf715b554"
+    }
+  ],
+  "exact_text_receipts": [
+    {
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-001.html",
+      "electronic_section": "001",
+      "range_1_based_inclusive": [
+        16,
+        18
+      ],
+      "kind": "authorial opening",
+      "raw_source_lines_included": false
+    },
+    {
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-001.html",
+      "electronic_section": "001",
+      "range_1_based_inclusive": [
+        730,
+        733
+      ],
+      "kind": "inherited four-part part1/2 seam",
+      "raw_source_lines_included": false
+    },
+    {
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html",
+      "electronic_section": "002",
+      "range_1_based_inclusive": [
+        464,
+        467
+      ],
+      "kind": "inherited four-part part2/3 seam",
+      "raw_source_lines_included": false
+    },
+    {
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-003.html",
+      "electronic_section": "003",
+      "range_1_based_inclusive": [
+        360,
+        362
+      ],
+      "kind": "inherited four-part part3/4 seam",
+      "raw_source_lines_included": false
+    },
+    {
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html",
+      "electronic_section": "002",
+      "range_1_based_inclusive": [
+        1009,
+        1011
+      ],
+      "kind": "same-layout two-volume604/605 seam anchors",
+      "raw_source_lines_included": false
+    },
+    {
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-004.html",
+      "electronic_section": "004",
+      "range_1_based_inclusive": [
+        360,
+        363
+      ],
+      "kind": "authorial final anchor and following webpage furniture",
+      "raw_source_lines_included": false
+    }
+  ],
+  "corrections": [
+    {
+      "at": "2026-10-07T10:37:00Z",
+      "source": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "reason": "The prior small-render reading misread Arabic preservation numerals; independent reviewer flagged and reviewer independently verified correction.",
+      "superseded_incorrect": {
+        "nominal_faces": 249,
+        "present_faces": 241,
+        "gaps": [
+          [
+            188,
+            194
+          ],
+          [
+            277,
+            277
+          ]
+        ]
+      },
+      "corrected": {
+        "nominal_faces": 242,
+        "present_faces": 234,
+        "numbering_gaps": [
+          {
+            "faces": [
+              48,
+              49
+            ],
+            "certainty": "May be an omission or a numbering error",
+            "manuscript_folio": "54 b"
+          },
+          {
+            "faces": [
+              73,
+              78
+            ],
+            "certainty": "Not given after 72 and before 79; copyist says هكذا في الأصل",
+            "manuscript_folio": "69 b"
+          }
+        ]
+      },
+      "raw_source_changed": false,
+      "other_numeric_findings_rechecked": "All printed boundary numerals, electronic line bounds and three PDF page counts checked; no other correction found.",
+      "pdf_position_one_based": 29,
+      "source_sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+    }
+  ],
+  "publication_note": "Historical study metadata retained for scope and source identity. No additional source reading, visual collation or philosophical proof is claimed by this projection."
+}

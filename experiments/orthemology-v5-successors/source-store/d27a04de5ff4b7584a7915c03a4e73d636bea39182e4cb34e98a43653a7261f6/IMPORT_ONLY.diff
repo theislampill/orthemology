@@ -1,0 +1,10 @@
+--- tranche20/foundational-audit/original-bearer-bridge/inherited/SourceIdentity.original.lean	2026-10-07 05:00:31.474445377 -0400
++++ tranche20/foundational-audit/original-bearer-bridge/SourceIdentityDerived.lean	2026-10-07 05:00:56.167856654 -0400
+@@ -1,4 +1,6 @@
+-import Mathlib
++import Mathlib.Data.Bool.Basic
++import Mathlib.Data.Fintype.Basic
++import Mathlib.Tactic.ByContra
+ 
+ /-!
+ # Exact source-identity implications for Orthemology tranche 3

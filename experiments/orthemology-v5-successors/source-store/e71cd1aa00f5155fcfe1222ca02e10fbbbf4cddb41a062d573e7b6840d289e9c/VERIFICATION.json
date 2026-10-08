@@ -1,0 +1,662 @@
+{
+  "schema": "t20-veracity-replay-v1",
+  "status": "PASS",
+  "failure": null,
+  "utc": "2026-10-07T09:26:06.515437+00:00",
+  "compiler": {
+    "path": "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+    "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023"
+  },
+  "scope": "Conditional Init-only mathematics and explicit finite interpretations, not metaphysical warrant or authentication",
+  "direct_imports": [
+    {
+      "module": "VeracityBoundary",
+      "path": "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944",
+      "bytes": 20864
+    },
+    {
+      "module": "VeracityBoundary",
+      "path": "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944",
+      "bytes": 20864
+    },
+    {
+      "module": "VeracityControls",
+      "path": "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944",
+      "bytes": 20864
+    },
+    {
+      "module": "VeracityControls",
+      "path": "tranche20/foundational-audit/veracity-boundary/validation/final/VeracityBoundary.olean",
+      "sha256": "97835e7879be482735caffc59997d73146b188247708357c256a62173fec7ecd",
+      "bytes": 248656
+    }
+  ],
+  "source_files": [
+    {
+      "path": "CHANGE_RECORD.md",
+      "bytes": 1220,
+      "sha256": "b14801f4098a1afec5de046ff85306c6c69af9e129213fa469f610ead18035f5"
+    },
+    {
+      "path": "IMPLEMENTATION_PLAN.md",
+      "bytes": 5817,
+      "sha256": "454c6b20a1ad9d6bba40c3ef84774a0baef579620c7d0fd4307205b81e88a974"
+    },
+    {
+      "path": "PROGRESS.md",
+      "bytes": 1855,
+      "sha256": "a4018527e6c312b86369f0c4ae453c83bf65906a75fdd577d29a47fef6446cfb"
+    },
+    {
+      "path": "PROPOSED_CONTROLS.md",
+      "bytes": 9529,
+      "sha256": "7c6417cfffb384080b6645179d0d7c107fdb6700d5d21cc9e37cddca05c36e53"
+    },
+    {
+      "path": "PROPOSED_DESIGN.md",
+      "bytes": 10972,
+      "sha256": "eab8038d41e27ba8f6a14091fc3f990516f00555ed41deb02693376381fbebb0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4839,
+      "sha256": "bf30d923ef56ce1313fd587f05a440b9cf8af2b585db125dbe38d3daa64db709"
+    },
+    {
+      "path": "REVIEW_HANDOFF.md",
+      "bytes": 2891,
+      "sha256": "1108702fa245a787f031426885435ce34ed7f76a23f272bd3051a6b0dedd1d12"
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "bytes": 56544,
+      "sha256": "ff0da3a92f13f1ebe23ee2daa0f3484eb32b0236b689c0623f93d4828bd5288b"
+    },
+    {
+      "path": "SOURCE_PREMISE_MAP.json",
+      "bytes": 5901,
+      "sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531"
+    },
+    {
+      "path": "THEOREM_MAP.md",
+      "bytes": 4596,
+      "sha256": "4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099"
+    },
+    {
+      "path": "proposal-v1/MANIFEST.json",
+      "bytes": 432,
+      "sha256": "d9a46e4aa6a8a7c0d2a1032d8e58734e60f885e99b3608dd9194b52e6357a5d3"
+    },
+    {
+      "path": "proposal-v1/PROPOSED_CONTROLS.md",
+      "bytes": 8795,
+      "sha256": "183d4e2dc55aa6c7e856128a4eac95b561534327b0c044e95badf72d6b1a4fe8"
+    },
+    {
+      "path": "proposal-v1/PROPOSED_DESIGN.md",
+      "bytes": 9659,
+      "sha256": "610dca62b8ecd992e41654abaabd7a5fa5a43a389f11356def3ba71d95927502"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 8767,
+      "sha256": "cc1f464d3701cf22a1f3109a4148ea48cb9b98bb9b07455fab005c9ded8e4d75"
+    },
+    {
+      "path": "src/VeracityBoundary.lean",
+      "bytes": 5975,
+      "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f"
+    },
+    {
+      "path": "src/VeracityControls.lean",
+      "bytes": 7884,
+      "sha256": "91d2717e4f9faebbed5e4f10055793a608231a33eefb7df477acdd7890a84d23"
+    },
+    {
+      "path": "tests/APIContract.lean",
+      "bytes": 581,
+      "sha256": "ed26c6ab2a4db2e52add5bd51fb9cf864a50daef1c8b8e9111f5bbd4f8e4d99c"
+    },
+    {
+      "path": "tests/Acceptance.lean",
+      "bytes": 695,
+      "sha256": "90a3df329b7425f8cc010779173a3e3d32e6828efe16977e199f58bf37f7a878"
+    },
+    {
+      "path": "tests/rejected/false_T0_without_A.lean",
+      "bytes": 279,
+      "sha256": "f537e312607c342e5e02cd99d4bf0a0043f1820d8c2634f90a147387112d1e2f"
+    },
+    {
+      "path": "tests/rejected/false_T0_without_C.lean",
+      "bytes": 279,
+      "sha256": "b615e51ebe8b7eb1c9fd866883e5b32833ccfaa642680917db1ad959b2d59f40"
+    },
+    {
+      "path": "tests/rejected/false_T0_without_D.lean",
+      "bytes": 279,
+      "sha256": "da56a2a7710a2e7a44dc9ccfb40cb99bd7f778fbee5022552ccbffe8600906aa"
+    },
+    {
+      "path": "tests/rejected/false_T0_without_K.lean",
+      "bytes": 279,
+      "sha256": "8c07f41b6ca9be33e6fd5ef611563ec2f961eaea0415ae49d4983cc258396da5"
+    },
+    {
+      "path": "tests/rejected/false_T0_without_N.lean",
+      "bytes": 279,
+      "sha256": "aed205437af9e1132b8fe7770bc0da6206bcff72a488775ec367892802475404"
+    },
+    {
+      "path": "tests/rejected/false_T0_without_P.lean",
+      "bytes": 279,
+      "sha256": "8866cffb16fbe16622c7e20f7a8c050de8281e5537cfcf374d6309b245716eb7"
+    },
+    {
+      "path": "tests/rejected/strong_truth_implies_weak_truth.lean",
+      "bytes": 200,
+      "sha256": "9b67464088df3fa2291e6ec62180fba7c7d288120f580b5acc874b87821d3945"
+    },
+    {
+      "path": "tests/rejected/truthfulness_implies_conformance.lean",
+      "bytes": 200,
+      "sha256": "528a89e4b00a3c7df927009934f8649af1388526696617d79396a2fcaaf6953e"
+    }
+  ],
+  "steps": [
+    {
+      "name": "toolchain",
+      "arguments": [
+        "--version"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "toolchain.log"
+    },
+    {
+      "name": "VeracityBoundary",
+      "arguments": [
+        "-o",
+        "tranche20/foundational-audit/veracity-boundary/validation/final/VeracityBoundary.olean",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityBoundary.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "VeracityBoundary.log"
+    },
+    {
+      "name": "VeracityBoundary-direct-imports",
+      "arguments": [
+        "--deps",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityBoundary.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "VeracityBoundary-direct-imports.log"
+    },
+    {
+      "name": "VeracityControls",
+      "arguments": [
+        "-o",
+        "tranche20/foundational-audit/veracity-boundary/validation/final/VeracityControls.olean",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityControls.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "VeracityControls.log"
+    },
+    {
+      "name": "VeracityControls-direct-imports",
+      "arguments": [
+        "--deps",
+        "tranche20/foundational-audit/veracity-boundary/src/VeracityControls.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "VeracityControls-direct-imports.log"
+    },
+    {
+      "name": "api-contract",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/APIContract.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "api-contract.log"
+    },
+    {
+      "name": "acceptance",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/Acceptance.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "acceptance.log"
+    },
+    {
+      "name": "readback",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/validation/final/Readback.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "readback.log"
+    },
+    {
+      "name": "proof-readback",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/validation/final/ProofReadback.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "proof-readback.log"
+    },
+    {
+      "name": "rejected-false_T0_without_A",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_A.lean"
+      ],
+      "exit_code": 1,
+      "expected": "false-proposition rejection",
+      "log": "rejected-false_T0_without_A.log"
+    },
+    {
+      "name": "rejected-false_T0_without_C",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_C.lean"
+      ],
+      "exit_code": 1,
+      "expected": "false-proposition rejection",
+      "log": "rejected-false_T0_without_C.log"
+    },
+    {
+      "name": "rejected-false_T0_without_D",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_D.lean"
+      ],
+      "exit_code": 1,
+      "expected": "false-proposition rejection",
+      "log": "rejected-false_T0_without_D.log"
+    },
+    {
+      "name": "rejected-false_T0_without_K",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_K.lean"
+      ],
+      "exit_code": 1,
+      "expected": "false-proposition rejection",
+      "log": "rejected-false_T0_without_K.log"
+    },
+    {
+      "name": "rejected-false_T0_without_N",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_N.lean"
+      ],
+      "exit_code": 1,
+      "expected": "false-proposition rejection",
+      "log": "rejected-false_T0_without_N.log"
+    },
+    {
+      "name": "rejected-false_T0_without_P",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/false_T0_without_P.lean"
+      ],
+      "exit_code": 1,
+      "expected": "false-proposition rejection",
+      "log": "rejected-false_T0_without_P.log"
+    },
+    {
+      "name": "rejected-strong_truth_implies_weak_truth",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/strong_truth_implies_weak_truth.lean"
+      ],
+      "exit_code": 1,
+      "expected": "false-proposition rejection",
+      "log": "rejected-strong_truth_implies_weak_truth.log"
+    },
+    {
+      "name": "rejected-truthfulness_implies_conformance",
+      "arguments": [
+        "tranche20/foundational-audit/veracity-boundary/tests/rejected/truthfulness_implies_conformance.lean"
+      ],
+      "exit_code": 1,
+      "expected": "false-proposition rejection",
+      "log": "rejected-truthfulness_implies_conformance.log"
+    }
+  ],
+  "declarations": [
+    {
+      "name": "VeracityBoundary.controlled_token_true",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 46,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.veracity_of_coverage",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 58,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.counterfeit_iff_false_under_coverage",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 65,
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.veracity_iff_no_counterfeit",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 75,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.false_excludes_package",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 88,
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.strong_awareness",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 102,
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.strong_control",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 103,
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.strong_veracity",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 105,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.strong_equals_base_iff_coverage",
+      "module": "VeracityBoundary",
+      "source": "src/VeracityBoundary.lean",
+      "source_line": 114,
+      "axioms": []
+    },
+    {
+      "name": "VeracityBoundary.Controls.deletion_K",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 33,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.weak_stress_A",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 42,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.weak_stress_C",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 51,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.deletion_D",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 59,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.deletion_N",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 68,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.deletion_P",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 77,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.positive_package",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 101,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.positive_nonvacuity",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 107,
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.created_false_is_not_source_owned",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 116,
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.truthful_not_conforming",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 125,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.local_global_separation",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 144,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.strong_ownership_noncollapse",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 153,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.strong_ownership_not_truth_by_definition",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 161,
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "name": "VeracityBoundary.Controls.positive_equivalence_instance",
+      "module": "VeracityControls",
+      "source": "src/VeracityControls.lean",
+      "source_line": 169,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "path": "ProofReadback.lean",
+      "sha256": "d19a52ba98b192ea07c5c2ef81fb5d8e5bc0c76a821f03136a217df9e45b1366",
+      "bytes": 505
+    },
+    {
+      "path": "Readback.lean",
+      "sha256": "0a2d45865551ffba7e6aef8a93eaa0b39d78e7d3147e0698616b230006dc7bbf",
+      "bytes": 2629
+    },
+    {
+      "path": "SOURCE_BINDING_CHECK.json",
+      "sha256": "d61f4fe9e7d6ec038a05c463b08c1593ffb81d5956fe1ba382351fef2dce64ff",
+      "bytes": 75
+    },
+    {
+      "path": "VeracityBoundary-direct-imports.log",
+      "sha256": "0750a2bfc39c460f25e6f33b18f117712ec0052c5ac747008c71c3d4ed2cbeed",
+      "bytes": 272
+    },
+    {
+      "path": "VeracityBoundary.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "VeracityBoundary.olean",
+      "sha256": "97835e7879be482735caffc59997d73146b188247708357c256a62173fec7ecd",
+      "bytes": 248656
+    },
+    {
+      "path": "VeracityControls-direct-imports.log",
+      "sha256": "cc250c547f95986947e5b0ba9bba85bf3f2a5428bd521ae4b924294c7da20168",
+      "bytes": 255
+    },
+    {
+      "path": "VeracityControls.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "VeracityControls.olean",
+      "sha256": "865f52caa6fda846e48e35b67ce9084bb0a0481561175104bd5fc121c7f5f659",
+      "bytes": 400744
+    },
+    {
+      "path": "acceptance.log",
+      "sha256": "a08ec91cd20c39e20c5fb566fc731dbe2f376b20bb05326692efec06dd949ea1",
+      "bytes": 3880
+    },
+    {
+      "path": "api-contract.log",
+      "sha256": "ec4100c3c21c3d789fdc598e7bc8348f69fec0507ebfb01377e9801e82a52a78",
+      "bytes": 4145
+    },
+    {
+      "path": "proof-readback.log",
+      "sha256": "dd4a33592eee444f1fb3621f3450a8ec0982038a22c924e46fb1cd21c5c42245",
+      "bytes": 5683
+    },
+    {
+      "path": "readback.log",
+      "sha256": "706c1e8c3c00209eba600bd29e264cafc8e43daac70adfcd1e61d36c03540eb7",
+      "bytes": 18213
+    },
+    {
+      "path": "rejected-false_T0_without_A.log",
+      "sha256": "3d508e30822d94ab42e368f55cb6a1a3f98b3be66fdd4830e545c952d329fd08",
+      "bytes": 242
+    },
+    {
+      "path": "rejected-false_T0_without_C.log",
+      "sha256": "9b82afce3c4ba521838cae0f35fbeade1c61fc4fba5eaa1221fd2b0aff6516cc",
+      "bytes": 242
+    },
+    {
+      "path": "rejected-false_T0_without_D.log",
+      "sha256": "488afeb2edff8a7ec46b29d6dfe71ffd5889c983e5660656bbb5b861fb7b0e79",
+      "bytes": 242
+    },
+    {
+      "path": "rejected-false_T0_without_K.log",
+      "sha256": "e08cf2e5dd232e2c44a3dfac2e3ffe9475adbbc1522528b1510b41d959c4efc9",
+      "bytes": 242
+    },
+    {
+      "path": "rejected-false_T0_without_N.log",
+      "sha256": "6c1f64f20796b3fa57032ff666726ec148625ad3786dc80b64ace7d056594552",
+      "bytes": 242
+    },
+    {
+      "path": "rejected-false_T0_without_P.log",
+      "sha256": "58692865df8b922995c696f36b556447600a385bc6e2ad21df06439659c40097",
+      "bytes": 242
+    },
+    {
+      "path": "rejected-strong_truth_implies_weak_truth.log",
+      "sha256": "6546216622b72b15231df6d0e6803452fe8fdcc004755fd492c0149c8f327917",
+      "bytes": 257
+    },
+    {
+      "path": "rejected-truthfulness_implies_conformance.log",
+      "sha256": "49b5214723728412e5b14506630033f06c16046cacd5e0bf70360ab5c19e59f6",
+      "bytes": 291
+    },
+    {
+      "path": "toolchain.log",
+      "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b",
+      "bytes": 78
+    }
+  ]
+}

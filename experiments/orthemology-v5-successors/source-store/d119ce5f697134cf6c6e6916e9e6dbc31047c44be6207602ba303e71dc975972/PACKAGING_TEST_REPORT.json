@@ -1,0 +1,255 @@
+{
+  "schema": "seventeenth-publication-directory-tests-v2",
+  "status": "PASS_CALCULATION_AND_METADATA_CHECKS",
+  "created_utc": "2026-10-05T23:40:28.173857+00:00",
+  "runtime": {
+    "python": "3.12.14",
+    "implementation": "CPython",
+    "dependencies": "Python standard library only",
+    "documented_minimum": "3.11; exact minimum version not separately executed"
+  },
+  "relocated_allowlisted_content": true,
+  "documented_entry_point_exit_code": 0,
+  "unit_test_methods_passed": 78,
+  "groups": [
+    {
+      "command": "python -I -B -m unittest discover -s calculation -p test_*.py -v",
+      "exit_code": 0,
+      "test_methods": 48,
+      "stdout": "",
+      "stderr": "test_all_encoding_invariances (test_calculation_independently.IndependentImplementationControls.test_all_encoding_invariances) ... ok\ntest_all_repeated_final_state_fields_gate (test_calculation_independently.IndependentImplementationControls.test_all_repeated_final_state_fields_gate) ... ok\ntest_bound_direction_all_frozen_gammas (test_calculation_independently.IndependentImplementationControls.test_bound_direction_all_frozen_gammas) ... ok\ntest_event_dictionary_ambiguity_fails_closed (test_calculation_independently.IndependentImplementationControls.test_event_dictionary_ambiguity_fails_closed) ... ok\ntest_exact_parser_beyond_float_resolution (test_calculation_independently.IndependentImplementationControls.test_exact_parser_beyond_float_resolution) ... ok\ntest_full_population_failure_controls (test_calculation_independently.IndependentImplementationControls.test_full_population_failure_controls) ... ok\ntest_interval_independent_oracle_and_positive_underflow (test_calculation_independently.IndependentImplementationControls.test_interval_independent_oracle_and_positive_underflow) ... ok\ntest_near_alpha_straddling_and_upward_render (test_calculation_independently.IndependentImplementationControls.test_near_alpha_straddling_and_upward_render) ... ok\ntest_order_preserves_bytes_and_full_coordinates (test_calculation_independently.IndependentImplementationControls.test_order_preserves_bytes_and_full_coordinates) ... ok\ntest_projection_seven_fields_and_complete_keys (test_calculation_independently.IndependentImplementationControls.test_projection_seven_fields_and_complete_keys) ... ok\ntest_semantic_repeats_and_missing_score_invariance (test_calculation_independently.IndependentImplementationControls.test_semantic_repeats_and_missing_score_invariance) ... ok\ntest_structural_receipt_has_no_relation_or_keys (test_calculation_independently.IndependentImplementationControls.test_structural_receipt_has_no_relation_or_keys) ... ok\ntest_synthetic_hash_change_does_not_touch_original (test_calculation_independently.IndependentImplementationControls.test_synthetic_hash_change_does_not_touch_original) ... ok\ntest_truth_table (test_calculation_independently.IndependentImplementationControls.test_truth_table) ... ok\ntest_unequal_roster_statistic_against_independent_oracle (test_calculation_independently.IndependentImplementationControls.test_unequal_roster_statistic_against_independent_oracle) ... ok\ntest_zero_support_and_availability_rates (test_calculation_independently.IndependentImplementationControls.test_zero_support_and_availability_rates) ... ok\ntest_absence_is_not_midpoint_and_no_renormalization (test_independent_oracles.IndependentControlTests.test_absence_is_not_midpoint_and_no_renormalization) ... ok\ntest_bellman_exhaustive_and_closed_bound_direction (test_independent_oracles.IndependentControlTests.test_bellman_exhaustive_and_closed_bound_direction) ... ok\ntest_dependent_counterexample_requires_drift (test_independent_oracles.IndependentControlTests.test_dependent_counterexample_requires_drift) ... ok\ntest_exact_boundary_and_near_boundary (test_independent_oracles.IndependentControlTests.test_exact_boundary_and_near_boundary) ... ok\ntest_independent_numeric_evaluations_inside_enclosures (test_independent_oracles.IndependentControlTests.test_independent_numeric_evaluations_inside_enclosures) ... ok\ntest_sign_encoding_controls (test_independent_oracles.IndependentControlTests.test_sign_encoding_controls) ... ok\ntest_tail_separation_and_exact_ties (test_independent_oracles.IndependentControlTests.test_tail_separation_and_exact_ties) ... ok\ntest_unequal_roster_fixed_weighting (test_independent_oracles.IndependentControlTests.test_unequal_roster_fixed_weighting) ... ok\ntest_zero_support_game_remains_in_denominator (test_independent_oracles.IndependentControlTests.test_zero_support_game_remains_in_denominator) ... ok\ntest_absence_50_and_missing_score_are_distinct (test_synthetic.CoreControls.test_absence_50_and_missing_score_are_distinct) ... ok\ntest_all_zero_and_no_support (test_synthetic.CoreControls.test_all_zero_and_no_support) ... ok\ntest_auxiliary_final_state_and_full_event_repeat_consistency (test_synthetic.CoreControls.test_auxiliary_final_state_and_full_event_repeat_consistency) ... ok\ntest_complete_population_and_fixed_denominators (test_synthetic.CoreControls.test_complete_population_and_fixed_denominators) ... ok\ntest_digest_guard_detects_altered_copy (test_synthetic.CoreControls.test_digest_guard_detects_altered_copy) ... ok\ntest_event_truth_table_and_safe_parsing (test_synthetic.CoreControls.test_event_truth_table_and_safe_parsing) ... ok\ntest_event_unpacking_or_dynamic_keys_fail_closed (test_synthetic.CoreControls.test_event_unpacking_or_dynamic_keys_fail_closed) ... ok\ntest_exact_byte_order_and_indexed_fields (test_synthetic.CoreControls.test_exact_byte_order_and_indexed_fields) ... ok\ntest_exact_decimal_parser_and_absence (test_synthetic.CoreControls.test_exact_decimal_parser_and_absence) ... ok\ntest_exact_integer_semantics (test_synthetic.CoreControls.test_exact_integer_semantics) ... ok\ntest_expected_counts_fail_without_subset_selection (test_synthetic.CoreControls.test_expected_counts_fail_without_subset_selection) ... ok\ntest_forecast_stage_semantics (test_synthetic.CoreControls.test_forecast_stage_semantics) ... ok\ntest_game_with_no_disagreement_is_retained (test_synthetic.CoreControls.test_game_with_no_disagreement_is_retained) ... ok\ntest_local_invariant_and_always_left_meaning (test_synthetic.CoreControls.test_local_invariant_and_always_left_meaning) ... ok\ntest_seven_projection_checks_and_exact_key_set (test_synthetic.CoreControls.test_seven_projection_checks_and_exact_key_set) ... ok\ntest_sign_and_polarity_invariances (test_synthetic.CoreControls.test_sign_and_polarity_invariances) ... ok\ntest_structural_rejections (test_synthetic.CoreControls.test_structural_rejections) ... ok\ntest_256_bit_minimum_and_invalid_arguments (test_synthetic.IntervalControls.test_256_bit_minimum_and_invalid_arguments) ... ok\ntest_adaptive_counterexample_and_directed_tails (test_synthetic.IntervalControls.test_adaptive_counterexample_and_directed_tails) ... ok\ntest_bound_direction_all_declared_gammas_and_edge_cases (test_synthetic.IntervalControls.test_bound_direction_all_declared_gammas_and_edge_cases) ... ok\ntest_enclosure_accuracy_and_small_positive_upper (test_synthetic.IntervalControls.test_enclosure_accuracy_and_small_positive_upper) ... ok\ntest_mixed_sign_exhaustive_fixture (test_synthetic.IntervalControls.test_mixed_sign_exhaustive_fixture) ... ok\ntest_near_alpha_enclosure_and_upward_display (test_synthetic.IntervalControls.test_near_alpha_enclosure_and_upward_display) ... ok\n\n----------------------------------------------------------------------\nRan 48 tests in 1.758s\n\nOK\n"
+    },
+    {
+      "command": "python -I -B -m unittest discover -s tail -p test_*.py -v",
+      "exit_code": 0,
+      "test_methods": 15,
+      "stdout": "",
+      "stderr": "test_bad_counts_or_inconsistent_threshold_rejected (test_independent_tail_predicates_v1.IndependentPredicateTests.test_bad_counts_or_inconsistent_threshold_rejected) ... ok\ntest_each_negative_predicate_margin_fails (test_independent_tail_predicates_v1.IndependentPredicateTests.test_each_negative_predicate_margin_fails) ... ok\ntest_exact_rational_parser (test_independent_tail_predicates_v1.IndependentPredicateTests.test_exact_rational_parser) ... ok\ntest_malformed_rationals_rejected (test_independent_tail_predicates_v1.IndependentPredicateTests.test_malformed_rationals_rejected) ... ok\ntest_positive_certificate (test_independent_tail_predicates_v1.IndependentPredicateTests.test_positive_certificate) ... ok\ntest_strict_a_equality_is_failure (test_independent_tail_predicates_v1.IndependentPredicateTests.test_strict_a_equality_is_failure) ... ok\ntest_strict_b_equality_is_failure (test_independent_tail_predicates_v1.IndependentPredicateTests.test_strict_b_equality_is_failure) ... ok\ntest_zero_threshold_has_exact_tail_one (test_independent_tail_predicates_v1.IndependentPredicateTests.test_zero_threshold_has_exact_tail_one) ... ok\ntest_degenerate_and_malformed_cases (test_tail_predicates.TailCheckerTests.test_degenerate_and_malformed_cases) ... ok\ntest_each_games_count_requires_positive_nonboolean_integer (test_tail_predicates.TailCheckerTests.test_each_games_count_requires_positive_nonboolean_integer) ... ok\ntest_each_strict_equality_fails (test_tail_predicates.TailCheckerTests.test_each_strict_equality_fails) ... ok\ntest_inclusive_endpoint_controls_and_zero_case (test_tail_predicates.TailCheckerTests.test_inclusive_endpoint_controls_and_zero_case) ... ok\ntest_independent_aggregate_field_reconciliation (test_tail_predicates.TailCheckerTests.test_independent_aggregate_field_reconciliation) ... ok\ntest_rational_parser_rejects_nonexact_inputs (test_tail_predicates.TailCheckerTests.test_rational_parser_rejects_nonexact_inputs) ... ok\ntest_synthetic_pass_and_exact_differences (test_tail_predicates.TailCheckerTests.test_synthetic_pass_and_exact_differences) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.002s\n\nOK\n"
+    },
+    {
+      "command": "python -I -B -m unittest discover -s checks -p test_*.py -v",
+      "exit_code": 0,
+      "test_methods": 15,
+      "stdout": "",
+      "stderr": "test_complete_frozen_upper_grid_two_implementations (test_aggregate_certificates.AggregateCertificateChecks.test_complete_frozen_upper_grid_two_implementations) ... ok\ntest_frozen_elementary_rational_comparison (test_aggregate_certificates.AggregateCertificateChecks.test_frozen_elementary_rational_comparison) ... ok\ntest_recorded_count_and_rational_identities (test_aggregate_certificates.AggregateCertificateChecks.test_recorded_count_and_rational_identities) ... ok\ntest_scope_and_historical_replication_agreement (test_aggregate_certificates.AggregateCertificateChecks.test_scope_and_historical_replication_agreement) ... ok\ntest_two_strict_predicates_against_two_implementations (test_aggregate_certificates.AggregateCertificateChecks.test_two_strict_predicates_against_two_implementations) ... ok\ntest_exact_bounded_page_union (test_arabic_source_scope.AdditionalArabicScopeChecks.test_exact_bounded_page_union) ... ok\ntest_printed_witness_distinction (test_arabic_source_scope.AdditionalArabicScopeChecks.test_printed_witness_distinction) ... ok\ntest_separate_supplied_pdf_record (test_arabic_source_scope.AdditionalArabicScopeChecks.test_separate_supplied_pdf_record) ... ok\ntest_source_identity_and_exclusions (test_arabic_source_scope.AdditionalArabicScopeChecks.test_source_identity_and_exclusions) ... ok\ntest_earlier_coverage_snapshots_unchanged (test_minhaj_electronic_scope.MinhajElectronicScopeChecks.test_earlier_coverage_snapshots_unchanged) ... ok\ntest_exact_named_companion_document_bindings (test_minhaj_electronic_scope.MinhajElectronicScopeChecks.test_exact_named_companion_document_bindings) ... ok\ntest_exact_urls_and_bounded_body_ranges (test_minhaj_electronic_scope.MinhajElectronicScopeChecks.test_exact_urls_and_bounded_body_ranges) ... ok\ntest_printed_mapping_and_retrieval_limits (test_minhaj_electronic_scope.MinhajElectronicScopeChecks.test_printed_mapping_and_retrieval_limits) ... ok\ntest_exact_coverage_and_visual_snapshot (test_source_coverage.SourceCoverageChecks.test_exact_coverage_and_visual_snapshot) ... ok\ntest_metadata_readers_under_explicit_ascii_locale (test_utf8_metadata_portability.UTF8MetadataPortability.test_metadata_readers_under_explicit_ascii_locale) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.094s\n\nOK\n"
+    },
+    {
+      "command": "python -I -B synthetic/check_orbits.py",
+      "exit_code": 0,
+      "test_methods": null,
+      "stdout": "{\n  \"purpose\": \"Independent exact arithmetic controls for successor orbit section; synthetic inputs only\",\n  \"conditional_rank_inequalities\": 57,\n  \"unconditional_rank_inequalities\": 15,\n  \"unequal_orbit_probability_mass\": \"1/10,2/10,3/10,4/10\",\n  \"weight_choices\": 4,\n  \"six_block_extreme_tail\": \"1/32\",\n  \"common_orientation_wrong_test_size\": \"1\",\n  \"valid_global_complement_tail\": \"1\",\n  \"zero_and_mixed_contribution_resolution_cases\": 3,\n  \"status\": \"PASS\",\n  \"proofs_reviewed_separately\": true\n}\n",
+      "stderr": ""
+    }
+  ],
+  "locale_portability": {
+    "scope": "Strict non-UTF-8 C-locale simulation on Linux, not Windows execution.",
+    "baseline_regression": {
+      "exit_code": 1,
+      "failure_class": "UnicodeDecodeError",
+      "relative_error_loci": [
+        "checks/test_arabic_source_scope.py:14",
+        "checks/test_minhaj_electronic_scope.py:12"
+      ]
+    },
+    "repair": "Six metadata/aggregate read_text calls now explicitly use encoding=utf-8. Source JSON and arithmetic code unchanged.",
+    "regression_after_repair_exit_code": 0,
+    "strict_subprocess_runtime": {
+      "utf8_mode": 0,
+      "locale_encoding": "ascii",
+      "preferred_encoding": "ascii"
+    },
+    "explicit_strict_locale_groups": [
+      {
+        "command": "LC_ALL=C PYTHONCOERCECLOCALE=0 python -I -X utf8=0 -B -m unittest discover -s calculation -p test_*.py -v",
+        "exit_code": 0,
+        "test_methods": 48,
+        "stdout": "",
+        "stderr": "test_all_encoding_invariances (test_calculation_independently.IndependentImplementationControls.test_all_encoding_invariances) ... ok\ntest_all_repeated_final_state_fields_gate (test_calculation_independently.IndependentImplementationControls.test_all_repeated_final_state_fields_gate) ... ok\ntest_bound_direction_all_frozen_gammas (test_calculation_independently.IndependentImplementationControls.test_bound_direction_all_frozen_gammas) ... ok\ntest_event_dictionary_ambiguity_fails_closed (test_calculation_independently.IndependentImplementationControls.test_event_dictionary_ambiguity_fails_closed) ... ok\ntest_exact_parser_beyond_float_resolution (test_calculation_independently.IndependentImplementationControls.test_exact_parser_beyond_float_resolution) ... ok\ntest_full_population_failure_controls (test_calculation_independently.IndependentImplementationControls.test_full_population_failure_controls) ... ok\ntest_interval_independent_oracle_and_positive_underflow (test_calculation_independently.IndependentImplementationControls.test_interval_independent_oracle_and_positive_underflow) ... ok\ntest_near_alpha_straddling_and_upward_render (test_calculation_independently.IndependentImplementationControls.test_near_alpha_straddling_and_upward_render) ... ok\ntest_order_preserves_bytes_and_full_coordinates (test_calculation_independently.IndependentImplementationControls.test_order_preserves_bytes_and_full_coordinates) ... ok\ntest_projection_seven_fields_and_complete_keys (test_calculation_independently.IndependentImplementationControls.test_projection_seven_fields_and_complete_keys) ... ok\ntest_semantic_repeats_and_missing_score_invariance (test_calculation_independently.IndependentImplementationControls.test_semantic_repeats_and_missing_score_invariance) ... ok\ntest_structural_receipt_has_no_relation_or_keys (test_calculation_independently.IndependentImplementationControls.test_structural_receipt_has_no_relation_or_keys) ... ok\ntest_synthetic_hash_change_does_not_touch_original (test_calculation_independently.IndependentImplementationControls.test_synthetic_hash_change_does_not_touch_original) ... ok\ntest_truth_table (test_calculation_independently.IndependentImplementationControls.test_truth_table) ... ok\ntest_unequal_roster_statistic_against_independent_oracle (test_calculation_independently.IndependentImplementationControls.test_unequal_roster_statistic_against_independent_oracle) ... ok\ntest_zero_support_and_availability_rates (test_calculation_independently.IndependentImplementationControls.test_zero_support_and_availability_rates) ... ok\ntest_absence_is_not_midpoint_and_no_renormalization (test_independent_oracles.IndependentControlTests.test_absence_is_not_midpoint_and_no_renormalization) ... ok\ntest_bellman_exhaustive_and_closed_bound_direction (test_independent_oracles.IndependentControlTests.test_bellman_exhaustive_and_closed_bound_direction) ... ok\ntest_dependent_counterexample_requires_drift (test_independent_oracles.IndependentControlTests.test_dependent_counterexample_requires_drift) ... ok\ntest_exact_boundary_and_near_boundary (test_independent_oracles.IndependentControlTests.test_exact_boundary_and_near_boundary) ... ok\ntest_independent_numeric_evaluations_inside_enclosures (test_independent_oracles.IndependentControlTests.test_independent_numeric_evaluations_inside_enclosures) ... ok\ntest_sign_encoding_controls (test_independent_oracles.IndependentControlTests.test_sign_encoding_controls) ... ok\ntest_tail_separation_and_exact_ties (test_independent_oracles.IndependentControlTests.test_tail_separation_and_exact_ties) ... ok\ntest_unequal_roster_fixed_weighting (test_independent_oracles.IndependentControlTests.test_unequal_roster_fixed_weighting) ... ok\ntest_zero_support_game_remains_in_denominator (test_independent_oracles.IndependentControlTests.test_zero_support_game_remains_in_denominator) ... ok\ntest_absence_50_and_missing_score_are_distinct (test_synthetic.CoreControls.test_absence_50_and_missing_score_are_distinct) ... ok\ntest_all_zero_and_no_support (test_synthetic.CoreControls.test_all_zero_and_no_support) ... ok\ntest_auxiliary_final_state_and_full_event_repeat_consistency (test_synthetic.CoreControls.test_auxiliary_final_state_and_full_event_repeat_consistency) ... ok\ntest_complete_population_and_fixed_denominators (test_synthetic.CoreControls.test_complete_population_and_fixed_denominators) ... ok\ntest_digest_guard_detects_altered_copy (test_synthetic.CoreControls.test_digest_guard_detects_altered_copy) ... ok\ntest_event_truth_table_and_safe_parsing (test_synthetic.CoreControls.test_event_truth_table_and_safe_parsing) ... ok\ntest_event_unpacking_or_dynamic_keys_fail_closed (test_synthetic.CoreControls.test_event_unpacking_or_dynamic_keys_fail_closed) ... ok\ntest_exact_byte_order_and_indexed_fields (test_synthetic.CoreControls.test_exact_byte_order_and_indexed_fields) ... ok\ntest_exact_decimal_parser_and_absence (test_synthetic.CoreControls.test_exact_decimal_parser_and_absence) ... ok\ntest_exact_integer_semantics (test_synthetic.CoreControls.test_exact_integer_semantics) ... ok\ntest_expected_counts_fail_without_subset_selection (test_synthetic.CoreControls.test_expected_counts_fail_without_subset_selection) ... ok\ntest_forecast_stage_semantics (test_synthetic.CoreControls.test_forecast_stage_semantics) ... ok\ntest_game_with_no_disagreement_is_retained (test_synthetic.CoreControls.test_game_with_no_disagreement_is_retained) ... ok\ntest_local_invariant_and_always_left_meaning (test_synthetic.CoreControls.test_local_invariant_and_always_left_meaning) ... ok\ntest_seven_projection_checks_and_exact_key_set (test_synthetic.CoreControls.test_seven_projection_checks_and_exact_key_set) ... ok\ntest_sign_and_polarity_invariances (test_synthetic.CoreControls.test_sign_and_polarity_invariances) ... ok\ntest_structural_rejections (test_synthetic.CoreControls.test_structural_rejections) ... ok\ntest_256_bit_minimum_and_invalid_arguments (test_synthetic.IntervalControls.test_256_bit_minimum_and_invalid_arguments) ... ok\ntest_adaptive_counterexample_and_directed_tails (test_synthetic.IntervalControls.test_adaptive_counterexample_and_directed_tails) ... ok\ntest_bound_direction_all_declared_gammas_and_edge_cases (test_synthetic.IntervalControls.test_bound_direction_all_declared_gammas_and_edge_cases) ... ok\ntest_enclosure_accuracy_and_small_positive_upper (test_synthetic.IntervalControls.test_enclosure_accuracy_and_small_positive_upper) ... ok\ntest_mixed_sign_exhaustive_fixture (test_synthetic.IntervalControls.test_mixed_sign_exhaustive_fixture) ... ok\ntest_near_alpha_enclosure_and_upward_display (test_synthetic.IntervalControls.test_near_alpha_enclosure_and_upward_display) ... ok\n\n----------------------------------------------------------------------\nRan 48 tests in 1.728s\n\nOK\n"
+      },
+      {
+        "command": "LC_ALL=C PYTHONCOERCECLOCALE=0 python -I -X utf8=0 -B -m unittest discover -s tail -p test_*.py -v",
+        "exit_code": 0,
+        "test_methods": 15,
+        "stdout": "",
+        "stderr": "test_bad_counts_or_inconsistent_threshold_rejected (test_independent_tail_predicates_v1.IndependentPredicateTests.test_bad_counts_or_inconsistent_threshold_rejected) ... ok\ntest_each_negative_predicate_margin_fails (test_independent_tail_predicates_v1.IndependentPredicateTests.test_each_negative_predicate_margin_fails) ... ok\ntest_exact_rational_parser (test_independent_tail_predicates_v1.IndependentPredicateTests.test_exact_rational_parser) ... ok\ntest_malformed_rationals_rejected (test_independent_tail_predicates_v1.IndependentPredicateTests.test_malformed_rationals_rejected) ... ok\ntest_positive_certificate (test_independent_tail_predicates_v1.IndependentPredicateTests.test_positive_certificate) ... ok\ntest_strict_a_equality_is_failure (test_independent_tail_predicates_v1.IndependentPredicateTests.test_strict_a_equality_is_failure) ... ok\ntest_strict_b_equality_is_failure (test_independent_tail_predicates_v1.IndependentPredicateTests.test_strict_b_equality_is_failure) ... ok\ntest_zero_threshold_has_exact_tail_one (test_independent_tail_predicates_v1.IndependentPredicateTests.test_zero_threshold_has_exact_tail_one) ... ok\ntest_degenerate_and_malformed_cases (test_tail_predicates.TailCheckerTests.test_degenerate_and_malformed_cases) ... ok\ntest_each_games_count_requires_positive_nonboolean_integer (test_tail_predicates.TailCheckerTests.test_each_games_count_requires_positive_nonboolean_integer) ... ok\ntest_each_strict_equality_fails (test_tail_predicates.TailCheckerTests.test_each_strict_equality_fails) ... ok\ntest_inclusive_endpoint_controls_and_zero_case (test_tail_predicates.TailCheckerTests.test_inclusive_endpoint_controls_and_zero_case) ... ok\ntest_independent_aggregate_field_reconciliation (test_tail_predicates.TailCheckerTests.test_independent_aggregate_field_reconciliation) ... ok\ntest_rational_parser_rejects_nonexact_inputs (test_tail_predicates.TailCheckerTests.test_rational_parser_rejects_nonexact_inputs) ... ok\ntest_synthetic_pass_and_exact_differences (test_tail_predicates.TailCheckerTests.test_synthetic_pass_and_exact_differences) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "command": "LC_ALL=C PYTHONCOERCECLOCALE=0 python -I -X utf8=0 -B -m unittest discover -s checks -p test_*.py -v",
+        "exit_code": 0,
+        "test_methods": 15,
+        "stdout": "",
+        "stderr": "test_complete_frozen_upper_grid_two_implementations (test_aggregate_certificates.AggregateCertificateChecks.test_complete_frozen_upper_grid_two_implementations) ... ok\ntest_frozen_elementary_rational_comparison (test_aggregate_certificates.AggregateCertificateChecks.test_frozen_elementary_rational_comparison) ... ok\ntest_recorded_count_and_rational_identities (test_aggregate_certificates.AggregateCertificateChecks.test_recorded_count_and_rational_identities) ... ok\ntest_scope_and_historical_replication_agreement (test_aggregate_certificates.AggregateCertificateChecks.test_scope_and_historical_replication_agreement) ... ok\ntest_two_strict_predicates_against_two_implementations (test_aggregate_certificates.AggregateCertificateChecks.test_two_strict_predicates_against_two_implementations) ... ok\ntest_exact_bounded_page_union (test_arabic_source_scope.AdditionalArabicScopeChecks.test_exact_bounded_page_union) ... ok\ntest_printed_witness_distinction (test_arabic_source_scope.AdditionalArabicScopeChecks.test_printed_witness_distinction) ... ok\ntest_separate_supplied_pdf_record (test_arabic_source_scope.AdditionalArabicScopeChecks.test_separate_supplied_pdf_record) ... ok\ntest_source_identity_and_exclusions (test_arabic_source_scope.AdditionalArabicScopeChecks.test_source_identity_and_exclusions) ... ok\ntest_earlier_coverage_snapshots_unchanged (test_minhaj_electronic_scope.MinhajElectronicScopeChecks.test_earlier_coverage_snapshots_unchanged) ... ok\ntest_exact_named_companion_document_bindings (test_minhaj_electronic_scope.MinhajElectronicScopeChecks.test_exact_named_companion_document_bindings) ... ok\ntest_exact_urls_and_bounded_body_ranges (test_minhaj_electronic_scope.MinhajElectronicScopeChecks.test_exact_urls_and_bounded_body_ranges) ... ok\ntest_printed_mapping_and_retrieval_limits (test_minhaj_electronic_scope.MinhajElectronicScopeChecks.test_printed_mapping_and_retrieval_limits) ... ok\ntest_exact_coverage_and_visual_snapshot (test_source_coverage.SourceCoverageChecks.test_exact_coverage_and_visual_snapshot) ... ok\ntest_metadata_readers_under_explicit_ascii_locale (test_utf8_metadata_portability.UTF8MetadataPortability.test_metadata_readers_under_explicit_ascii_locale) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.081s\n\nOK\n"
+      },
+      {
+        "command": "LC_ALL=C PYTHONCOERCECLOCALE=0 python -I -X utf8=0 -B synthetic/check_orbits.py",
+        "exit_code": 0,
+        "test_methods": null,
+        "stdout": "{\n  \"purpose\": \"Independent exact arithmetic controls for successor orbit section; synthetic inputs only\",\n  \"conditional_rank_inequalities\": 57,\n  \"unconditional_rank_inequalities\": 15,\n  \"unequal_orbit_probability_mass\": \"1/10,2/10,3/10,4/10\",\n  \"weight_choices\": 4,\n  \"six_block_extreme_tail\": \"1/32\",\n  \"common_orientation_wrong_test_size\": \"1\",\n  \"valid_global_complement_tail\": \"1\",\n  \"zero_and_mixed_contribution_resolution_cases\": 3,\n  \"status\": \"PASS\",\n  \"proofs_reviewed_separately\": true\n}\n",
+        "stderr": ""
+      }
+    ],
+    "strict_parent_runner_exit_code": 0,
+    "environment_only_diagnostic": {
+      "old_runner_exit_code": 0,
+      "isolated_child_runtime_without_explicit_X_flag": {
+        "utf8_mode": 1,
+        "locale_encoding": "ascii",
+        "preferred_encoding": "utf-8"
+      },
+      "limit": "-I ignores PYTHONUTF8; a C locale can automatically enable UTF-8 mode. Parent/environment flags alone did not reproduce the defect. Each strict suite above therefore used explicit -X utf8=0."
+    },
+    "not_new_mathematics": true
+  },
+  "named_document_metadata_negative_controls": [
+    {
+      "mutation": "incorrect main report filename",
+      "expected_rejection_observed": true
+    },
+    {
+      "mutation": "incorrect source guide digest",
+      "expected_rejection_observed": true
+    },
+    {
+      "mutation": "stale mathematical predecessor identity",
+      "expected_rejection_observed": true
+    },
+    {
+      "mutation": "incorrect mathematical source relationship",
+      "expected_rejection_observed": true
+    }
+  ],
+  "method_count_scope": "78 top-level methods: the previous 77 plus one strict-locale subprocess regression. Its 14 nested metadata checks are not counted again. No new mathematics.",
+  "historical_arithmetic_and_substantive_code_unchanged": true,
+  "metadata_readers_repaired": "Six explicit UTF-8 decodes; repaired main-document hash and size also updated in its metadata test.",
+  "all_three_source_scope_snapshots_byte_unchanged": true,
+  "content_unchanged_by_execution": true,
+  "raw_dataset_replayed": false,
+  "original_actual_outcome_service_run": false,
+  "new_primary_reading_by_packaging": false,
+  "new_lean_or_kernel_proof": false,
+  "capability_limits": [
+    "run_checks.py verifies retained arithmetic, synthetic controls and specified metadata assertions. It is not an all-member integrity verifier.",
+    "A syntactically valid substituted source-capture digest can pass metadata checks; historical reading and provenance are not authenticated by this command.",
+    "verify_manifest.py separately requires a trusted external manifest digest and checks exact directory inventory, member sizes and hashes.",
+    "The external DOCX files are absent from this directory. Their metadata values are tested here; their actual bytes require separate hashing.",
+    "No later ZIP container or delivery is certified by these checks."
+  ],
+  "tested_content": [
+    {
+      "path": "ADAPTATION_LOG.json",
+      "sha256": "2e41ab52bffa7d67a7386c797e304da0107f05505fe97ca90ae8eb112eb75fbb"
+    },
+    {
+      "path": "FINITE_MATH_SCOPE.md",
+      "sha256": "b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b9ce5857e885ee933344e7c7df6abe3e7ae68612b69d6f0355ceeb851c6d8b2f"
+    },
+    {
+      "path": "RELATED_ARTIFACTS.json",
+      "sha256": "7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e"
+    },
+    {
+      "path": "aggregates/frozen_aggregate_certificate.json",
+      "sha256": "852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9"
+    },
+    {
+      "path": "aggregates/independent_aggregate_certificate.json",
+      "sha256": "561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe"
+    },
+    {
+      "path": "aggregates/post_inspection_tail_certificate.json",
+      "sha256": "1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb"
+    },
+    {
+      "path": "calculation/certified_exp.py",
+      "sha256": "9438baad17a4dac4d100b30ec53397edf9fcd6fbc3b3f0cab21f7af15ebbec89"
+    },
+    {
+      "path": "calculation/independent_oracles.py",
+      "sha256": "a670dbeb98c21531ce7eaac682c8c402e04289547e09bbe1d5935c6f136ab8ec"
+    },
+    {
+      "path": "calculation/placement_core.py",
+      "sha256": "9d39013072bae4cc53f4e681ed1a726209f1477e08bcd2cc9e4231dca9019cf3"
+    },
+    {
+      "path": "calculation/test_calculation_independently.py",
+      "sha256": "bc7d599ef3534dcfe1161490bba0f745f31c43f4d937949e839b82f319038340"
+    },
+    {
+      "path": "calculation/test_independent_oracles.py",
+      "sha256": "93cc86495667a00e1585c1096f43e1e7c1089210374113ecfe06635ecdfc7d8e"
+    },
+    {
+      "path": "calculation/test_synthetic.py",
+      "sha256": "e4c7026aa7ac2542474bd9add0b2e9b182c862fb5437913744bcf02446d97d14"
+    },
+    {
+      "path": "checks/test_aggregate_certificates.py",
+      "sha256": "490476690f4b92fc8bd032278f7c80e72ae631d4bd9b9e72686b8c1b25c41795"
+    },
+    {
+      "path": "checks/test_arabic_source_scope.py",
+      "sha256": "0e9811a6200542c22bad0cb2d794395b027e6605bb4e45d00f3526a549b3116a"
+    },
+    {
+      "path": "checks/test_minhaj_electronic_scope.py",
+      "sha256": "2681111681f26283f4d7c89bf69adb3aa2aa32c9f7d07a9dc47d65d16705e5a6"
+    },
+    {
+      "path": "checks/test_source_coverage.py",
+      "sha256": "38e036152ab2b425b0f9b1b19e7dd62b546f0e073b2e6b33fdcf443ca006f304"
+    },
+    {
+      "path": "checks/test_utf8_metadata_portability.py",
+      "sha256": "a2f23c093d2ea81dbe0caf04d4e5e532f81560199428a29c77828a81295498d6"
+    },
+    {
+      "path": "companion/Mathematical_Companion_Content_v2.md",
+      "sha256": "4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401"
+    },
+    {
+      "path": "run_checks.py",
+      "sha256": "b5e3056961b21e265e710ffca8d8b1293362695c39d292509cb3c6c3bf54f1fe"
+    },
+    {
+      "path": "sources/additional_arabic_source_scope.json",
+      "sha256": "1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944"
+    },
+    {
+      "path": "sources/minhaj_electronic_read_scope.json",
+      "sha256": "2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e"
+    },
+    {
+      "path": "sources/six_source_coverage.json",
+      "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b"
+    },
+    {
+      "path": "synthetic/check_orbits.py",
+      "sha256": "ea4caf6f63af17b7a7fbfc9e878eca0686cd04eda14fc9172d67a313e760ed45"
+    },
+    {
+      "path": "tail/independent_tail_predicates_v1.py",
+      "sha256": "8134bcf2ed063e51c8bea1914763058a80d6cc2d7e5900e675ac1cc095d47623"
+    },
+    {
+      "path": "tail/tail_predicates.py",
+      "sha256": "833129934a3a3cd4ada0039c44b7fc9f90baf8dfbad286a062d22e09508c489d"
+    },
+    {
+      "path": "tail/test_independent_tail_predicates_v1.py",
+      "sha256": "579cca75f2aa90a71941297644310890fb77b05b0a7fae4c36d4332cf267790f"
+    },
+    {
+      "path": "tail/test_tail_predicates.py",
+      "sha256": "fd3f06353dd3b4951f0199cfb142e4c15f6b426f7138639a21f33994b6e38d09"
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "d602041e54d00a5bddb636a2d8b4a34ae60586981bad061321c58a378ab77a73"
+    }
+  ]
+}

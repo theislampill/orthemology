@@ -1,0 +1,20 @@
+{
+  "status": "PASS_WITH_SCOPED_LIMITS",
+  "manifest_sha256": "ab76400447a2b93c6036bfbe5f83818c16bcc6217a70ab90baffab7b0889a83f",
+  "source_archive_sha256": "4e0c51be27dab195f902518356bd97534fc6fa19eb1b4b51130bdfdc7d5c0585",
+  "new_source_inputs_checked": 9,
+  "independent_replay": "three green modules at trust0,42 axiom readbacks and3 intended decide rejections passed",
+  "guard_tests": 5,
+  "additional_review_controls": [
+    "Every fixed frame has a faithful interpretation; no vacuous consequence from an empty model class",
+    "Expanded exact forall-source statement contract at the correct universe"
+  ],
+  "scope": "Abstract source-equality language only; actual modal admissibility, original-source premises and coverage remain unverified inputs. Source uniqueness conclusion is constancy/at-most-one among represented relevant sources; existence and qualification need separate application evidence.",
+  "unchanged_lean_v1_v2": true,
+  "artifacts": {
+    "root-independent-v2-guards.json": "1321b7eb712b5a3b80ffa8a3eb530bdd86599daf49cd594af55a192e52099a48",
+    "axioms.log": "82ae03e693d29a948a5de9a8810c8bce48551cb527107dd6f34a663b9b97ec48",
+    "ReviewContract.lean": "09428ab79f044d0da9d7823a5fb4e8e536208022131500ba8dc2e621ce4cd20c",
+    "contract.log": "839872b60a5f1e98c3ea418d8b160aebee74dae0f59913e30c85fcdc6de04c0a"
+  }
+}

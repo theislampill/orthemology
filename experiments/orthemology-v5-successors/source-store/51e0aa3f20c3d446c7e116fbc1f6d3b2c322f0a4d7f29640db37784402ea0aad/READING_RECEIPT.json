@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-07T13:16:34.876140+00:00",
+  "scope": "Separate bounded contextual reinspection; no additional whole-book first-pass credit",
+  "text": {
+    "source_body_included": false,
+    "sha256": "35b7836c188b5dcff70ee6ed121fe911c0d261816d4490cf35dec2584d0cadfb",
+    "range": "NB-S002-L0103–L0114",
+    "untruncated": true
+  },
+  "images": [
+    {
+      "source_body_included": false,
+      "sha256": "d97b6dd50d76b3b3f84ad7af4fe4eefb6be2e23467064d3162152d7c05ffa0e2",
+      "verified_visible_print_page": 770,
+      "claimed_pdf_position": 770,
+      "inspection": "Direct visual reading of complete displayed page and footnotes. PDF position follows integrating reader mapping; visible print number independently confirmed."
+    },
+    {
+      "source_body_included": false,
+      "sha256": "c890d353660ad99c00540c2b718c5c863248d926f872b56060dbeb4572b997ff",
+      "verified_visible_print_page": 771,
+      "claimed_pdf_position": 771,
+      "inspection": "Direct visual reading of complete displayed page and footnotes. PDF position follows integrating reader mapping; visible print number independently confirmed."
+    },
+    {
+      "source_body_included": false,
+      "sha256": "32438ed62178cb919d9fae0a92082ef8fe6a4dae5163fd81e667915e65263083",
+      "verified_visible_print_page": 772,
+      "claimed_pdf_position": 772,
+      "inspection": "Direct visual reading of complete displayed page and footnotes. PDF position follows integrating reader mapping; visible print number independently confirmed."
+    }
+  ]
+}

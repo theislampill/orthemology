@@ -1,0 +1,145 @@
+IndependentJoining.canonical_witness_exact : ∀ (q : JointFinite.R) (s : JointFinite.B),
+  Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x q s ↔
+    q = JointFinite.R.rg ∧ s = JointFinite.B.g
+'IndependentJoining.canonical_witness_exact' depends on axioms: [propext, Quot.sound]
+IndependentJoining.all_original_witnesses_exact : ∀ (t : JointFinite.B) (q : JointFinite.R) (s : JointFinite.B),
+  Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework t q s ↔
+    (t = JointFinite.B.x ∨ t = JointFinite.B.l ∨ t = JointFinite.B.r ∨ t = JointFinite.B.m) ∧
+        q = JointFinite.R.rg ∧ s = JointFinite.B.g ∨
+      t = JointFinite.B.z ∧ q = JointFinite.R.rh ∧ s = JointFinite.B.h
+'IndependentJoining.all_original_witnesses_exact' depends on axioms: [propext, Quot.sound]
+IndependentJoining.resources_are_not_provider_relabels : JointFinite.contributionBearer JointFinite.C.cx =
+    JointFinite.B.x ∧
+  JointFinite.contributionResource JointFinite.C.cx = JointFinite.R.rx ∧
+    JointFinite.originalResourceUsed JointFinite.R.rg JointFinite.C.cx ∧
+      ¬JointFinite.originalResourceUsed JointFinite.R.rx JointFinite.C.cx ∧
+        JointFinite.framework.intrinsic JointFinite.B.g JointFinite.R.rg ∧
+          JointFinite.framework.intrinsic JointFinite.B.x JointFinite.R.rx ∧
+            ¬JointFinite.framework.intrinsic JointFinite.B.g JointFinite.R.rx ∧
+              ¬JointFinite.framework.intrinsic JointFinite.B.x JointFinite.R.rg
+'IndependentJoining.resources_are_not_provider_relabels' depends on axioms: [propext]
+IndependentJoining.detached_component_witnesses_do_not_join : AnchoredSourceBridge.GlobalCoverage
+    IndependentJoining.switched JointFinite.B.h ∧
+  IndependentJoining.switched.Qualified JointFinite.B.h ∧
+    AnchoredSourceBridge.Classification IndependentJoining.switched JointFinite.B.h ∧
+      AnchoredSourceBridge.Conformance IndependentJoining.switched JointFinite.B.h ∧
+        AnchoredSourceBridge.UseSound IndependentJoining.switched ∧
+          AnchoredSourceBridge.RoleApplicable IndependentJoining.switched JointFinite.B.h ∧
+            AnchoredSourceBridge.Visible IndependentJoining.switched ∧
+              AnchoredSourceBridge.FieldCND IndependentJoining.switched ∧
+                AnchoredSourceBridge.ActualAnchor IndependentJoining.switched JointFinite.B.h JointFinite.E.a ∧
+                  Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness JointFinite.framework JointFinite.B.x
+                      JointFinite.R.rg JointFinite.B.g ∧
+                    VeracityBoundary.Package JointFinite.speech JointFinite.B.g ∧
+                      ¬AnchoredSourceBridge.GlobalCoverage IndependentJoining.switched JointFinite.B.g ∧
+                        ¬∀ (s : JointFinite.B) (c : JointFinite.C),
+                            IndependentJoining.switched.EntireOrig s c ↔
+                              ∃ q,
+                                Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource JointFinite.framework
+                                    q ∧
+                                  JointFinite.framework.intrinsic s q ∧ JointFinite.originalResourceUsed q c
+'IndependentJoining.detached_component_witnesses_do_not_join' depends on axioms: [propext, Quot.sound]
+IndependentJoining.switched_is_connected : AnchoredSourceBridge.ConnectedFrom IndependentJoining.switched
+  JointFinite.E.a
+'IndependentJoining.switched_is_connected' depends on axioms: [propext, Quot.sound]
+IndependentJoining.omitted_h_edge_is_live : IndependentJoining.IncomingReach JointFinite.B.h JointFinite.B.m
+'IndependentJoining.omitted_h_edge_is_live' does not depend on any axioms
+IndependentJoining.omitted_h_breaks_stored_reachability : IndependentJoining.IncomingReach JointFinite.B.h
+    JointFinite.B.m ∧
+  ¬JointFinite.supportAncestor JointFinite.B.h JointFinite.B.m
+'IndependentJoining.omitted_h_breaks_stored_reachability' depends on axioms: [propext]
+IndependentJoining.omitted_h_breaks_joining_inventory : ¬∀ (e : JointFinite.E),
+    JointFinite.account.Field e →
+      ∀ (t : JointFinite.B),
+        JointFinite.producedAt t e →
+          ∀ (y : JointFinite.B),
+            IndependentJoining.IncomingReach y t →
+              y ≠ JointFinite.B.g → ∃ c, JointFinite.account.Req e c ∧ JointFinite.contributionBearer c = y
+'IndependentJoining.omitted_h_breaks_joining_inventory' depends on axioms: [propext, Quot.sound]
+IndependentJoining.original_h_has_no_positive_path_inside : ∀ (e : JointFinite.E) (t : JointFinite.B),
+  JointFinite.account.Field e → JointFinite.producedAt t e → ¬JointFinite.PositiveReach JointFinite.B.h t
+'IndependentJoining.original_h_has_no_positive_path_inside' depends on axioms: [propext, Quot.sound]
+IndependentJoining.enlarged_basic_guards_survive : AnchoredSourceBridge.Admissible IndependentJoining.enlarged ∧
+  AnchoredSourceBridge.RequisiteSound IndependentJoining.enlarged ∧
+    AnchoredSourceBridge.RequisiteExhaustive IndependentJoining.enlarged ∧
+      AnchoredSourceBridge.FieldCND IndependentJoining.enlarged ∧
+        AnchoredSourceBridge.Classification IndependentJoining.enlarged JointFinite.B.g ∧
+          AnchoredSourceBridge.Conformance IndependentJoining.enlarged JointFinite.B.g ∧
+            AnchoredSourceBridge.UseSound IndependentJoining.enlarged ∧
+              AnchoredSourceBridge.RoleApplicable IndependentJoining.enlarged JointFinite.B.g ∧
+                AnchoredSourceBridge.Visible IndependentJoining.enlarged ∧
+                  AnchoredSourceBridge.ActualAnchor IndependentJoining.enlarged JointFinite.B.g JointFinite.E.a
+'IndependentJoining.enlarged_basic_guards_survive' depends on axioms: [propext, Quot.sound]
+IndependentJoining.enlarged_outside_partition : ∀ (e f : JointFinite.E),
+  AnchoredSourceBridge.Overlap IndependentJoining.enlarged e f → (e = JointFinite.E.o ↔ f = JointFinite.E.o)
+'IndependentJoining.enlarged_outside_partition' depends on axioms: [propext, Quot.sound]
+@IndependentJoining.enlarged_paths_preserve_partition : ∀ {e f : JointFinite.E},
+  AnchoredSourceBridge.Path IndependentJoining.enlarged e f → (e = JointFinite.E.o ↔ f = JointFinite.E.o)
+'IndependentJoining.enlarged_paths_preserve_partition' depends on axioms: [propext, Quot.sound]
+IndependentJoining.enlarged_is_not_connected : ¬AnchoredSourceBridge.ConnectedFrom IndependentJoining.enlarged
+    JointFinite.E.a
+'IndependentJoining.enlarged_is_not_connected' depends on axioms: [propext, Quot.sound]
+IndependentJoining.enlarged_has_no_common_provider : ¬AnchoredSourceBridge.GlobalCoverage IndependentJoining.enlarged
+      JointFinite.B.g ∧
+  ¬AnchoredSourceBridge.ActualUnique IndependentJoining.enlarged JointFinite.B.g ∧
+    ¬∃ s, AnchoredSourceBridge.GlobalCoverage IndependentJoining.enlarged s
+'IndependentJoining.enlarged_has_no_common_provider' depends on axioms: [propext, Quot.sound]
+IndependentJoining.contextual_truth_does_not_create_ownership : JointFinite.speech.trueAt JointFinite.W.w2
+    JointFinite.Content.absent ∧
+  ¬JointFinite.framework.existsAt JointFinite.W.w2 JointFinite.B.l ∧
+    (∀ (s : JointFinite.B) (t : JointFinite.Token) (q : JointFinite.Content),
+        ¬JointFinite.speech.asserts JointFinite.W.w2 s t q) ∧
+      JointFinite.speech.asserts JointFinite.W.w0 JointFinite.B.x JointFinite.Token.v JointFinite.Content.absent ∧
+        ¬JointFinite.speech.trueAt JointFinite.W.w0 JointFinite.Content.absent ∧
+          (∀ (w : JointFinite.W) (q : JointFinite.Content),
+              ¬JointFinite.speech.asserts w JointFinite.B.g JointFinite.Token.v q) ∧
+            ∀ (w : JointFinite.W) (q : JointFinite.Content),
+              ¬JointFinite.speech.asserts w JointFinite.B.x JointFinite.Token.u q
+'IndependentJoining.contextual_truth_does_not_create_ownership' depends on axioms: [propext, Quot.sound]
+IndependentJoining.every_owned_assertion_has_existing_owner_and_token_event : ∀ (w : JointFinite.W) (s : JointFinite.B)
+  (t : JointFinite.Token) (q : JointFinite.Content),
+  JointFinite.speech.asserts w s t q →
+    JointFinite.framework.existsAt w s ∧
+      JointFinite.occursAt w (JointFinite.tokenOccurrence t) ∧
+        JointFinite.framework.existsAt w (JointFinite.tokenBearer t)
+'IndependentJoining.every_owned_assertion_has_existing_owner_and_token_event' depends on axioms: [propext, Quot.sound]
+IndependentJoining.absent_creatures_have_no_world_indexed_activity : (∀ (t : JointFinite.B),
+    JointFinite.receivedBeing t →
+      ¬JointFinite.framework.existsAt JointFinite.W.w2 t ∧ ¬JointFinite.framework.wholeReceived JointFinite.W.w2 t) ∧
+  (∀ (s t : JointFinite.B), ¬JointFinite.framework.dep JointFinite.W.w2 s t) ∧
+    (∀ (e : JointFinite.E), ¬JointFinite.occursAt JointFinite.W.w2 e) ∧
+      (∀ (s : JointFinite.B) (e : JointFinite.Exercise),
+          ¬JointFinite.speech.actual JointFinite.W.w2 s e ∧
+            ¬JointFinite.speech.fitting JointFinite.W.w2 s e ∧ ¬JointFinite.speech.shortcoming JointFinite.W.w2 s e) ∧
+        (∀ (s : JointFinite.B) (t : JointFinite.Token) (q : JointFinite.Content),
+            ¬JointFinite.speech.aware JointFinite.W.w2 s t q) ∧
+          (∀ (s : JointFinite.B) (t : JointFinite.Token), ¬JointFinite.speech.deliberate JointFinite.W.w2 s t) ∧
+            JointFinite.framework.existsAt JointFinite.W.w2 JointFinite.B.g ∧
+              JointFinite.framework.existsAt JointFinite.W.w2 JointFinite.B.h
+'IndependentJoining.absent_creatures_have_no_world_indexed_activity' depends on axioms: [propext, Quot.sound]
+IndependentJoining.static_production_is_properly_world_gated : (∀ (w : JointFinite.W) (t : JointFinite.B)
+    (e : JointFinite.E), JointFinite.producedAt t e → (JointFinite.occursAt w e ↔ JointFinite.framework.existsAt w t)) ∧
+  (∀ (w : JointFinite.W) (s : JointFinite.B) (e : JointFinite.Exercise),
+      JointFinite.speech.actual w s e → JointFinite.framework.existsAt w s) ∧
+    (∀ (s t : JointFinite.B),
+        JointFinite.directSupport s t →
+          JointFinite.framework.existsAt JointFinite.W.w0 s ∧ JointFinite.framework.existsAt JointFinite.W.w0 t) ∧
+      ∀ (e : JointFinite.E), JointFinite.account.ActualOccurrence e ↔ JointFinite.occursAt JointFinite.W.w0 e
+'IndependentJoining.static_production_is_properly_world_gated' depends on axioms: [propext, Quot.sound]
+IndependentJoining.received_capacity_and_false_exercise_do_not_transfer : JointFinite.derivedAct JointFinite.B.x
+    JointFinite.E.k ∧
+  JointFinite.speech.actual JointFinite.W.w0 JointFinite.B.x JointFinite.Exercise.actX ∧
+    JointFinite.speech.fitting JointFinite.W.w0 JointFinite.B.x JointFinite.Exercise.actX ∧
+      JointFinite.speech.actual JointFinite.W.w0 JointFinite.B.g JointFinite.Exercise.provideK ∧
+        JointFinite.speech.fitting JointFinite.W.w0 JointFinite.B.g JointFinite.Exercise.provideK ∧
+          JointFinite.speech.shortcoming JointFinite.W.w0 JointFinite.B.x JointFinite.Exercise.sayX ∧
+            ¬JointFinite.speech.shortcoming JointFinite.W.w0 JointFinite.B.g JointFinite.Exercise.provideK ∧
+              JointFinite.productivelySupportsToken JointFinite.B.g JointFinite.Token.v ∧
+                ¬JointFinite.speech.asserts JointFinite.W.w0 JointFinite.B.g JointFinite.Token.v
+                    JointFinite.Content.absent
+'IndependentJoining.received_capacity_and_false_exercise_do_not_transfer' depends on axioms: [propext]
+IndependentJoining.abc_does_not_force_added_premises : Orthemology.Tranche20.OriginalBearerBridge.FullPremises
+    JointFinite.framework ∧
+  ¬IndependentJoining.unqualified.Qualified JointFinite.B.g ∧
+    ¬VeracityBoundary.Package IndependentJoining.nonconforming JointFinite.B.g
+'IndependentJoining.abc_does_not_force_added_premises' depends on axioms: [propext, Quot.sound]

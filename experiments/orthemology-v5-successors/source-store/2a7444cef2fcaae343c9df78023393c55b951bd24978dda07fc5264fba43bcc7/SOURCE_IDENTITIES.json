@@ -1,0 +1,112 @@
+{
+  "record_type": "Historical source acquisition identities, without redistributed source files",
+  "sources": [
+    {
+      "url": "https://islamcontent.com/ar/single-content/8082?id=8082&lang=ar",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://saaid.org/book/open.php?book=18171",
+      "status": 200,
+      "size": 8335,
+      "sha256": "f501d2917754df9cca0546dd0412d690f59843e468fd89504ed7b190725f2163",
+      "utc": "2026-10-07T10:11:58.198937+00:00"
+    },
+    {
+      "url": "https://islamport.com/l/qym/4099/1.htm",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-001.html",
+      "utc": "2026-10-07T10:12:31.418059+00:00",
+      "status": 200,
+      "final_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-001.html",
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-001.html",
+      "bytes": 552144,
+      "sha256": "dd53b5444cc963802055ee32d330fdd042790bd0eee7cc93509fe28d3080a611"
+    },
+    {
+      "url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html",
+      "utc": "2026-10-07T10:12:38.059930+00:00",
+      "status": 200,
+      "final_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html",
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html",
+      "bytes": 555062,
+      "sha256": "d94aebaec8f4bcc9296b964aa068717583ee38132e5d602dc30420d236893f91"
+    },
+    {
+      "url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-003.html",
+      "utc": "2026-10-07T10:12:45.687906+00:00",
+      "status": 200,
+      "final_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-003.html",
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-003.html",
+      "bytes": 556041,
+      "sha256": "2cd3656f18210f548f6d4d5f7e4c8b3c78684e1e87c03f3142ce9e9ee6edaab6"
+    },
+    {
+      "url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-004.html",
+      "utc": "2026-10-07T10:12:51.286501+00:00",
+      "status": 200,
+      "final_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-004.html",
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-004.html",
+      "bytes": 168015,
+      "sha256": "2b0aad45ce152d6b17016c364be30c29187bcc42691bdc4f5c1daa2a9fdd5993"
+    },
+    {
+      "url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "utc": "2026-10-07T10:12:57.081497+00:00",
+      "status": 200,
+      "final_url": "https://saaid.org/book/downloadurl.php?type=pdf&id=18171",
+      "size": 21347308,
+      "sha256": "ee66a0d82477cc06e43f58e62fead3dcee5cd78ec46cc598ba8b49f0454e5511"
+    },
+    {
+      "url": "https://www.ibnalqayem.net/book/279",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://saaid.org/book/downloadurl.php?type=rar&id=18171",
+      "utc": "2026-10-07T10:15:51.217764+00:00",
+      "status": 200,
+      "final_url": "https://saaid.org/book/downloadurl.php?type=rar&id=18171",
+      "size": 20212391,
+      "sha256": "2144a488e1f221776c03b26af79212761553b5baec8938216811ad7c4d254fca"
+    },
+    {
+      "url": "https://usul.ai/ar/t/al-sawaiq-al-mursala-fi-al-radd-ala-al-jahmiyya-wa'l-muattila/615",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "electronic_section_text_identities": [
+    {
+      "section": "001",
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-001.html",
+      "transcription_sha256": "6a220740545e5028116c6732c2bf681336228514304cf22b07935d63708b9668",
+      "transcription_bytes": 541025,
+      "capture_included": false
+    },
+    {
+      "section": "002",
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-002.html",
+      "transcription_sha256": "fb058f7f62ee879122699c37cd36dac9f8496f3976bc65e03bd74e63dde1cd85",
+      "transcription_bytes": 545489,
+      "capture_included": false
+    },
+    {
+      "section": "003",
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-003.html",
+      "transcription_sha256": "e364e5f3ed9e39411e75cfd5bb3bd73619745f20e5052bb2c535f610c70e87e9",
+      "transcription_bytes": 547328,
+      "capture_included": false
+    },
+    {
+      "section": "004",
+      "source_url": "https://www.islamicbook.ws/ageda/alswaaq-almrslt-004.html",
+      "transcription_sha256": "052010606c6f4fa2f4a8d0b09648bfd90acb7b08b9b33a3994ca6e4e3f5b9f82",
+      "transcription_bytes": 164452,
+      "capture_included": false
+    }
+  ],
+  "scope": "Original received al-Sawaiq, not al-Mawsili’s abridgment; electronic and printed witnesses are not assumed textually identical.",
+  "publication_note": "Historical study metadata retained for scope and source identity. No additional source reading, visual collation or philosophical proof is claimed by this projection."
+}

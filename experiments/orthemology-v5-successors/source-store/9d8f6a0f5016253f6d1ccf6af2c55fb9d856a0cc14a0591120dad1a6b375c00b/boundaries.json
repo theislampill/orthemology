@@ -1,0 +1,46 @@
+{
+  "work": "شفاء العليل في مسائل القضاء والقدر والحكمة والتعليل",
+  "author": "محمد بن أبي بكر ابن قيم الجوزية",
+  "witness": "Islamicbook received electronic Arabic body, four website subsections",
+  "edition": "No reliable print-edition identification supplied by acquired host metadata; do not assign a print edition from other witnesses.",
+  "volumes": "One continuous received body; subsection 001–004 are website partitions, not volumes.",
+  "page_kind": "Electronic ص -N- labels, not visually checked printed pages.",
+  "pages": 306,
+  "words": 164258,
+  "labels_contiguous": true,
+  "missing_label_1": "No electronic label 1 or scanned cover; the received body begins at electronic 2 with title, author and preface.",
+  "body_sha256": "f4128b07b3e93a66f5859552d10adb8eb8bbf1e8b03097eedec9771d098b867e",
+  "sections": [
+    {
+      "source_section": "001",
+      "first_page": 2,
+      "last_page": 100,
+      "source_text_sha256": "19737dd329692c9702ac6cdfda8cb2d692af886975d61a2ced9518c2a6b602a9",
+      "source_url": "https://www.islamicbook.ws/amma/shfa-alalil-001.html"
+    },
+    {
+      "source_section": "002",
+      "first_page": 101,
+      "last_page": 201,
+      "source_text_sha256": "ddb610d22829df6f40a7ca9fe0f5f91bd9679b26ca15620d7b3363576fd6476b",
+      "source_url": "https://www.islamicbook.ws/amma/shfa-alalil-002.html"
+    },
+    {
+      "source_section": "003",
+      "first_page": 202,
+      "last_page": 306,
+      "source_text_sha256": "06b734839121e184075ccd82b53f39d181993946b7b04ee61a358af17ce5d12b",
+      "source_url": "https://www.islamicbook.ws/amma/shfa-alalil-003.html"
+    },
+    {
+      "source_section": "004",
+      "first_page": 307,
+      "last_page": 307,
+      "source_text_sha256": "0bdb9c1a9aac8871d6bcfffa7c0a2d4053dcfa48b0041a55051ff4a4e62b35ee",
+      "source_url": "https://www.islamicbook.ws/amma/shfa-alalil-004.html"
+    }
+  ],
+  "first_boundary_description": "Electronic label 2 contains the title, author and preface; label 1 is absent.",
+  "last_boundary_description": "Electronic label 307 ends with the received completion formula; the subsection 004 continuation belongs to electronic 306.",
+  "body_selection": "Witness hashes identify excluded source bodies; only authored notes and body-free provenance are selected."
+}

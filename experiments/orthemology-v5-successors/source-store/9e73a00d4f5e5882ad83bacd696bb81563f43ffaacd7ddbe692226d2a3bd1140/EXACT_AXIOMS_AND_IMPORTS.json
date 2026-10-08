@@ -1,0 +1,373 @@
+{
+  "status": "PASS",
+  "declared_theorems": 39,
+  "readback_byte_identical_to_author": true,
+  "axioms_by_theorem": {
+    "T20Grounded.derivable_mono": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.derivable_rules_mono": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.derivable_sound": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.exists_minimal_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.derivable_after_retraction_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.survives_disjoint_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.quotient_derivable_iff": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.image_derivation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.minimal_root_support_lifts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.hits_mono": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.image_of_cut": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.pullback_of_cut": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.minimal_root_cut_lifts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.minimal_root_iff_minimal_archived_image": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.testimony_needs_no_second_jurisdiction": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.old_duty_survives_prospective_revocation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.old_duty_can_remain_currently_applicable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.prospective_power_is_lost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.past_duty_does_not_supply_current_applicability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.duty_still_derives_when_current_applicability_is_absent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.prospective_revocation_preserves_non_grant_roots": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.evidence_invalidation_preserves_current_grant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.no_owned_truth_from_authorship_alone": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.unanchored_cycle_has_no_derivation": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.anchor_grounds_cycle": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.four_unique_cheapest_label_cut": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.four_unique_cheapest_root_cut": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.four_cheapest_label_image_cost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.four_actual_root_cut_cost": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.four_discarded_cut_is_inclusion_minimal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.four_discarded_cut_recovers_root_optimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.k32_unique_cheapest_label_cut": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.k32_unique_cheapest_root_cut": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.k32_cheapest_label_image_cost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.k32_discarded_cut_is_inclusion_minimal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.CutControls.k32_discarded_cut_recovers_root_optimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.authorship_only_mutation_creates_unsupported_duty": [
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.time_erasure_mutation_creates_unsupported_action": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "T20Grounded.Controls.grant_erasure_mutation_creates_unsupported_prospective_power": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "forbidden_source_token_scan": [
+    {
+      "path": "lean/GroundedSupport.lean",
+      "forbidden_tokens": []
+    },
+    {
+      "path": "lean/GroundedQuotient.lean",
+      "forbidden_tokens": []
+    },
+    {
+      "path": "lean/AliasCuts.lean",
+      "forbidden_tokens": []
+    },
+    {
+      "path": "lean/OccurrenceControls.lean",
+      "forbidden_tokens": []
+    },
+    {
+      "path": "lean/CutControls.lean",
+      "forbidden_tokens": []
+    },
+    {
+      "path": "lean/MutationControls.lean",
+      "forbidden_tokens": []
+    }
+  ],
+  "direct_import_bindings": [
+    {
+      "module": "GroundedSupport",
+      "path": "toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "GroundedSupport",
+      "path": "dependencies/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Card.olean",
+      "bytes": 1141888,
+      "sha256": "4c8d7058ba4178a0bf633e4dba61804aca377e9f8e3b4270b49178cbaa38d8b9"
+    },
+    {
+      "module": "GroundedSupport",
+      "path": "dependencies/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/BooleanAlgebra.olean",
+      "bytes": 308128,
+      "sha256": "1606cd293e0a96a6714ed5e67d8f85180619799e3fbbf0406fc55a34c233e6f9"
+    },
+    {
+      "module": "GroundedQuotient",
+      "path": "toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "GroundedQuotient",
+      "path": "review-objects/GroundedSupport.olean",
+      "bytes": 132896,
+      "sha256": "2ac38a3f7b8daa386ec92289f857e90eedb447b71d82789a827b1458d75b562d"
+    },
+    {
+      "module": "GroundedQuotient",
+      "path": "dependencies/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Image.olean",
+      "bytes": 1001112,
+      "sha256": "8c3403a30278872a4c6aaa075870e84f3410793f0030ed76036a715c58a7744c"
+    },
+    {
+      "module": "AliasCuts",
+      "path": "toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "AliasCuts",
+      "path": "review-objects/GroundedSupport.olean",
+      "bytes": 132896,
+      "sha256": "2ac38a3f7b8daa386ec92289f857e90eedb447b71d82789a827b1458d75b562d"
+    },
+    {
+      "module": "AliasCuts",
+      "path": "dependencies/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Image.olean",
+      "bytes": 1001112,
+      "sha256": "8c3403a30278872a4c6aaa075870e84f3410793f0030ed76036a715c58a7744c"
+    },
+    {
+      "module": "OccurrenceControls",
+      "path": "toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "OccurrenceControls",
+      "path": "review-objects/GroundedSupport.olean",
+      "bytes": 132896,
+      "sha256": "2ac38a3f7b8daa386ec92289f857e90eedb447b71d82789a827b1458d75b562d"
+    },
+    {
+      "module": "OccurrenceControls",
+      "path": "review-objects/AliasCuts.olean",
+      "bytes": 146792,
+      "sha256": "df61f8cd7bc8becdbc8b58aae92d519343dc9eeac1f6ee330b75ea4c422f5048"
+    },
+    {
+      "module": "OccurrenceControls",
+      "path": "dependencies/mathlib/.lake/build/lib/lean/Mathlib/Data/Fintype/Powerset.olean",
+      "bytes": 95488,
+      "sha256": "f727465c47c595731b848e9c8c5f86bf66b400c9fc44054e54e4cd2823ca8c6e"
+    },
+    {
+      "module": "OccurrenceControls",
+      "path": "dependencies/mathlib/.lake/build/lib/lean/Mathlib/Data/Fintype/Fin.olean",
+      "bytes": 147264,
+      "sha256": "92516f774ace34e6dce214ed3ece02da1efcd1870ef9cfed6807b34479433712"
+    },
+    {
+      "module": "CutControls",
+      "path": "toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "CutControls",
+      "path": "review-objects/AliasCuts.olean",
+      "bytes": 146792,
+      "sha256": "df61f8cd7bc8becdbc8b58aae92d519343dc9eeac1f6ee330b75ea4c422f5048"
+    },
+    {
+      "module": "CutControls",
+      "path": "dependencies/mathlib/.lake/build/lib/lean/Mathlib/Data/Fintype/Powerset.olean",
+      "bytes": 95488,
+      "sha256": "f727465c47c595731b848e9c8c5f86bf66b400c9fc44054e54e4cd2823ca8c6e"
+    },
+    {
+      "module": "CutControls",
+      "path": "dependencies/mathlib/.lake/build/lib/lean/Mathlib/Data/Fintype/Fin.olean",
+      "bytes": 147264,
+      "sha256": "92516f774ace34e6dce214ed3ece02da1efcd1870ef9cfed6807b34479433712"
+    },
+    {
+      "module": "MutationControls",
+      "path": "toolchains/lean-4.19.0-linux/lib/lean/Init.olean",
+      "bytes": 20864,
+      "sha256": "f14f6c9ea0d9eb2a6fe7bdad84a6610657db3d006805708c1a62ac72b676e944"
+    },
+    {
+      "module": "MutationControls",
+      "path": "review-objects/OccurrenceControls.olean",
+      "bytes": 340976,
+      "sha256": "6a55f829599d9f96df77600e19bad045254aed99ac80dc9d2ae6d3462c8b4ba6"
+    }
+  ],
+  "fresh_object_bindings": [
+    {
+      "module": "GroundedSupport",
+      "bytes": 132896,
+      "sha256": "2ac38a3f7b8daa386ec92289f857e90eedb447b71d82789a827b1458d75b562d"
+    },
+    {
+      "module": "GroundedQuotient",
+      "bytes": 93728,
+      "sha256": "1f4707c10b21229a632902d6ac86fcb1718a1f062965cb8f961c1a2eb17522d7"
+    },
+    {
+      "module": "AliasCuts",
+      "bytes": 146792,
+      "sha256": "df61f8cd7bc8becdbc8b58aae92d519343dc9eeac1f6ee330b75ea4c422f5048"
+    },
+    {
+      "module": "OccurrenceControls",
+      "bytes": 340976,
+      "sha256": "6a55f829599d9f96df77600e19bad045254aed99ac80dc9d2ae6d3462c8b4ba6"
+    },
+    {
+      "module": "CutControls",
+      "bytes": 141072,
+      "sha256": "65a6754f16c6d6612a2b6f12147f11d91935bb7530bce9fd27f6f0ea2c4ca9d0"
+    },
+    {
+      "module": "MutationControls",
+      "bytes": 58256,
+      "sha256": "1fc0baca8e7b183afa9b405315e52531291a53e6e583e594346e0a723b6bced5"
+    }
+  ],
+  "public_projection_original_sha256": "2ebe5deecf296773b90f5414af640f83fed62e61b77914f2c49438943e724566",
+  "path_scope": "Logical dependency/object locations; objects are not embedded in this source-only package."
+}

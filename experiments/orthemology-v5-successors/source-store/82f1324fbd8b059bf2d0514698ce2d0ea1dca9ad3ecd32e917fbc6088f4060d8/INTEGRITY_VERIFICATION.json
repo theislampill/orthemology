@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "candidate_manifest_sha256": "ac92a3ff320ee3c754e8e0e9b9b37fb2460aab56336614f9a8be81d61d27304e",
+  "candidate_files_verified": 49,
+  "input_bindings_verified": 11,
+  "dag_files_verified": 13,
+  "historical_post_import_bytes_identical": true,
+  "historical_source_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+  "historical_readbacks_matched": 18,
+  "all_readbacks_matched_author_receipt": 60,
+  "ordinary_axioms_only": true,
+  "false_claims_rejected_for_correct_reason": 5,
+  "inherited_B_C_calls_confirmed_in_proof_terms": true,
+  "closure_checks": {
+    "all": {
+      "total": 1809,
+      "fresh_local": 3,
+      "cached_unchanged": 1806
+    },
+    "inherited_derived": {
+      "total": 1797,
+      "fresh_local": 1,
+      "cached_unchanged": 1796
+    }
+  },
+  "fresh_receipt_sha256": "1e538eca0ce77d517da6bc4aa545922fe7f063bbe7c4d76364dce0af46c1fdc0",
+  "no_source_or_cache_writes_performed": true,
+  "scope": "Bounded independent engineering/formal review; no audit closure authority; cached official dependencies trusted, not source-rebuilt."
+}

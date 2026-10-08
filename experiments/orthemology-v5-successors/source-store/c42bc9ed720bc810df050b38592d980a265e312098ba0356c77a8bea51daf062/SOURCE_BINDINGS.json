@@ -1,0 +1,1799 @@
+{
+  "schema_version": "1.0",
+  "reading_index": {
+    "original": {
+      "kind": "original_reading_index_custody_identity",
+      "record_id": "ARABIC-READING-INDEX-ORIGINAL",
+      "sha256": "490bdd577b6e3f17e7ee2912da00fe1cfbf71ac296ba5d85f7f08996bf728b18",
+      "bytes": 972895,
+      "body_included_in_this_supplement": false
+    },
+    "owner_projection": {
+      "archive_alias": "t20/reading/READING_INDEX.json",
+      "sha256": "95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998",
+      "bytes": 1029129
+    },
+    "reference_rule": "Work IDs, return-point IDs and evidence IDs are stable references to these exact indexes. JSON pointers refer to the original bound index. The owner projection retains the scientific content while redacting private custody locators.",
+    "availability": "The separately hashed reading-index projection belongs to the existing reading archive. An original identity does not select its body."
+  },
+  "bindings": [
+    {
+      "id": "F-ORIGINAL-MAP",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-ORIGINAL-MAP",
+        "sha256": "60259d8ce8eb7f84bf6d144cbb97ae56e40f0661e82db363599abef212b3f5ae",
+        "bytes": 24821,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/original-bearer-bridge/THEOREM_SOURCE_MAP.json",
+          "sha256": "efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431",
+          "bytes": 24677,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-FINAL-MAP",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-FINAL-MAP",
+        "sha256": "bfbe5abaa944f539a45fc9b7c22f07828f2b02613893c18c500432b589c55972",
+        "bytes": 179057,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/foundational-final-synthesis/CONCLUSION_PREMISE_STATUS_MAP.json",
+          "sha256": "44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60",
+          "bytes": 175834,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-ANCHORED-MAP",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-ANCHORED-MAP",
+        "sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+        "bytes": 6523,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/anchored-source-bridge/SOURCE_AND_PREMISE_MAP.md",
+          "sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+          "bytes": 6523,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-ANCHORED-REVIEW",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-ANCHORED-REVIEW",
+        "sha256": "75c12652e38e5a2aae349c2cc8356bdebedcf111c83be57ec61d1ece5c85d43c",
+        "bytes": 7584,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/anchored-source-bridge/review/CLAIM_REVIEW.json",
+          "sha256": "0cf76b8b6602b7dbc6dc2d96cc2d2a810bc9e09978ba264ebb7a05d671a1a463",
+          "bytes": 7601,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-JOINT-MAP",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-JOINT-MAP",
+        "sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+        "bytes": 4858,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/joint-foundational-model/THEOREM_MAP.md",
+          "sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+          "bytes": 4858,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-JOINT-REVIEW",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-JOINT-REVIEW",
+        "sha256": "47982307d149aeb730cdf2067bdb89e41d6622b934cb3a7b5290083b11971cfc",
+        "bytes": 3709,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/joint-foundational-model/review/CLAIM_REVIEW.json",
+          "sha256": "3ac78afa1fb2ef530398b1b0adfbfd9ac5fbaf30dc5b658f55f22d7120f8dfc8",
+          "bytes": 3697,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-VERACITY-MAP",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-VERACITY-MAP",
+        "sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531",
+        "bytes": 5901,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/veracity-boundary/SOURCE_PREMISE_MAP.json",
+          "sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531",
+          "bytes": 5901,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-VERACITY-THEOREMS",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-VERACITY-THEOREMS",
+        "sha256": "4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099",
+        "bytes": 4596,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/veracity-boundary/THEOREM_MAP.md",
+          "sha256": "4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099",
+          "bytes": 4596,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-VERACITY-REVIEW",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-VERACITY-REVIEW",
+        "sha256": "4edc9e480ff668151725d238a5ce000c793fc3fd0ad522b365ac6b93a63ccc32",
+        "bytes": 1607,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/veracity-boundary/review/REVIEW_RESULT.json",
+          "sha256": "4edc9e480ff668151725d238a5ce000c793fc3fd0ad522b365ac6b93a63ccc32",
+          "bytes": 1607,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-VERACITY-ERRATUM",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-VERACITY-ERRATUM",
+        "sha256": "4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9",
+        "bytes": 1448,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/veracity-boundary/erratum/ERRATUM.md",
+          "sha256": "4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9",
+          "bytes": 1448,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-GROUNDED-MAP",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-GROUNDED-MAP",
+        "sha256": "6563884fd827f0185f913e29b7b45a4f53c87f8ef39bbfb451e4b68d494d3202",
+        "bytes": 3414,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/grounded-attestation/THEOREM_MAP.md",
+          "sha256": "6563884fd827f0185f913e29b7b45a4f53c87f8ef39bbfb451e4b68d494d3202",
+          "bytes": 3414,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-GROUNDED-DESIGN",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-GROUNDED-DESIGN",
+        "sha256": "f9ce4c0195878aa0feb0c661c7cf9a0c233c6612ba5ad9f5c5d895f6dbbfb70a",
+        "bytes": 8209,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/grounded-attestation/report/RESEARCH_SCOPE.md",
+          "sha256": "b636b305a4d3619801150abf980370cde666a594f8f874eb25cf389c11b6b128",
+          "bytes": 7853,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-ORIGINAL-SOURCE",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-ORIGINAL-SOURCE",
+        "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+        "bytes": 6940,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/joint-foundational-model/components/OriginalBearerBridge.lean",
+          "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+          "bytes": 6940,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        },
+        {
+          "archive_alias": "t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+          "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+          "bytes": 6940,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-INHERITED-SOURCE",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-INHERITED-SOURCE",
+        "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+        "bytes": 7438,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/joint-foundational-model/components/SourceIdentityDerived.lean",
+          "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+          "bytes": 7438,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        },
+        {
+          "archive_alias": "t20/sources/original-bearer-bridge/SourceIdentityDerived.lean",
+          "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+          "bytes": 7438,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-GROUNDED-REVIEW",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-GROUNDED-REVIEW",
+        "sha256": "4808bba1313ac879085f8983f06807adf4197ff687f18b3d1988a41f843e5d85",
+        "bytes": 6025,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "F-TRACE",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-TRACE",
+        "sha256": "0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2",
+        "bytes": 7373,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/math122-observation-controls/formal/TraceControls.lean",
+          "sha256": "0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2",
+          "bytes": 7373,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-TRACE-REVIEW",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-TRACE-REVIEW",
+        "sha256": "b8cbf708630aa9f4701477c3d95d7eb9e025b041b1383d258552970b3a37b453",
+        "bytes": 1913,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/math122-observation-controls/review/REVIEW.json",
+          "sha256": "b8cbf708630aa9f4701477c3d95d7eb9e025b041b1383d258552970b3a37b453",
+          "bytes": 1913,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "R-INTRINSIC-SPEC",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "R-INTRINSIC-SPEC",
+        "sha256": "c7a944d4551a0f187e650fc58bf828dc1b5283839a8448847c975cfbd03a98bb",
+        "bytes": 3364,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/CND-essential-independence-scope/CND_RESEARCH_SCOPE_PUBLIC.md",
+          "sha256": "5c0b6087b75e1ee7702f056cd0fb2c46d40e1ae35509ce5faa2927820f04f108",
+          "bytes": 3260,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "R-INTRINSIC-ASSESSMENT",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "R-INTRINSIC-ASSESSMENT",
+        "sha256": "b30250338e5bfa601f8c6a269f84a6af04c5e504711897dfdf00071891c941c8",
+        "bytes": 15678,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/CND-essential-independence-scope/CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+          "sha256": "735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+          "bytes": 14791,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "F-CND",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "F-CND",
+        "sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+        "bytes": 5862,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/CND-essential-independence-scope/CNDModalScope.lean",
+          "sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+          "bytes": 5862,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "R-SOURCEMODE",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "R-SOURCEMODE",
+        "sha256": "709e34a2ac420f06897cd338b976c21683a584bc4e594abeb2b3b20846b43728",
+        "bytes": 32139,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/source-mode-reassessment/ASSESSMENT.md",
+          "sha256": "ff965ced70da20159e1e13e6754f2d64a9044c5c16e2ef4aec2341693699ab00",
+          "bytes": 32499,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "R-THRESHOLD",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "R-THRESHOLD",
+        "sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+        "bytes": 19830,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/warrant-threshold-audit/AUDIT.md",
+          "sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+          "bytes": 19830,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "R-COMPARATIVE",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "R-COMPARATIVE",
+        "sha256": "59fca7e0f250c5a22adca452eba5a9001fc4148720aedb2db4871bb711dc3a76",
+        "bytes": 9552,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/warrant-threshold-audit/comparative-response/RESPONSE.md",
+          "sha256": "94116a152d1bfcc2b434322c75c31357cf9cbe7b84ad5db0c2920ac976b04f95",
+          "bytes": 9589,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "R-CURRENT",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "R-CURRENT",
+        "sha256": "65303af758c4eead3aaa7bf01ce90e2700d3f0bbe80e4590e1131953429f72cf",
+        "bytes": 9350,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+          "sha256": "8b60a62d8956549cdd3a0e22f7101b0bbbc140840e49740cdc248e443f43af27",
+          "bytes": 9350,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "R-TESTIMONY-RETURN",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "R-TESTIMONY-RETURN",
+        "sha256": "b00b6a3b388e0351a38b6bdcbadd88d9f4583f23df6de918d84ff0197a4d7e70",
+        "bytes": 2579,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "M-LEDGER",
+      "role": "Existing research record or formal source; identity binding is not a new proof replay or primary read.",
+      "original_record": {
+        "kind": "original_research_record_custody_identity",
+        "record_id": "M-LEDGER",
+        "sha256": "fa8a662b5a899cc4070a61f54dbf43d14a752bf8df84cdc4b6aa94935e5d15af",
+        "bytes": 216437,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/methodology/math/MATH_UTILISATION.json",
+          "sha256": "d0e73b80d86fd9367c434e7711cb1bb40d5e0f61821db03392b5cd2590b61ff5",
+          "bytes": 216733,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "ACTUAL-ORDER-TEXT",
+      "reading_index_evidence_id": "ACTUAL-ORDER-TEXT",
+      "index_pointer": "/evidence_records/93",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "ACTUAL-ORDER-TEXT",
+        "sha256": "8df27a650c953c98fdbee7c2777f7e03d5c5ca338e53853cb922b3611689bd31",
+        "bytes": 15351,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/actual-common-source-assessment/TEXT_READ_RECEIPTS.json",
+          "sha256": "c0b09844f52cbbc205db0b81a795c70f0fef8700cf83abb9076d5156ee5e972f",
+          "bytes": 18121,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "AKMALIYYA-READ",
+      "reading_index_evidence_id": "AKMALIYYA-READ",
+      "index_pointer": "/evidence_records/50",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "AKMALIYYA-READ",
+        "sha256": "fb2328f496572f2c88371114c0f71f73de4778000a7cfa572540224a308ab0eb",
+        "bytes": 1346,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "ASBAHANI-ACTS",
+      "reading_index_evidence_id": "ASBAHANI-ACTS",
+      "index_pointer": "/evidence_records/48",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "ASBAHANI-ACTS",
+        "sha256": "428ac7de022d003921305ad4306a16ffb8a3eda279ac4f56bf448b4d54374f2b",
+        "bytes": 4766,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "COMPARATIVE-READ",
+      "reading_index_evidence_id": "COMPARATIVE-READ",
+      "index_pointer": "/evidence_records/196",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "COMPARATIVE-READ",
+        "sha256": "1a9e90c6b50e19931baf693936dc0e6b279256020d3d6ebe101b07f5a846aeed",
+        "bytes": 3882,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/warrant-threshold-audit/comparative-response/READING_RECEIPTS.json",
+          "sha256": "e2588e59f8d684e0438ef902e636525436777c7e5fea6eca2d13b4e57db12f32",
+          "bytes": 5033,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "DAR-APPRAISAL",
+      "reading_index_evidence_id": "DAR-APPRAISAL",
+      "index_pointer": "/evidence_records/9",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "DAR-APPRAISAL",
+        "sha256": "1dc804b1f16fd75a125dfdaca1fc034ba96a6057066d1a352ef1400ed44c0308",
+        "bytes": 7813,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/dar-8-9/REFLECTIVE_COMPARISON.md",
+          "sha256": "e3540eb71cb54a70c5a95b0d10fbda308fd45050eca7f66515a9cf27e1e7cf1e",
+          "bytes": 7998,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "DAR-REFLECT",
+      "reading_index_evidence_id": "DAR-REFLECT",
+      "index_pointer": "/evidence_records/5",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "DAR-REFLECT",
+        "sha256": "d08a4a090e405ede40a0defb69fc0efd5dee2dc16d80c5ca617b3bf7debff13f",
+        "bytes": 1219,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/dar-8-9/reflective_read_receipts.json",
+          "sha256": "1df62e1d50b43418d95b4633a2ee8ef921bf187192f1a13a91048304e22f1fbb",
+          "bytes": 745,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "DAR8-ADDITIONAL",
+      "reading_index_evidence_id": "DAR8-ADDITIONAL",
+      "index_pointer": "/evidence_records/6",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "DAR8-ADDITIONAL",
+        "sha256": "8f9ad207176014b75681b113b8fa530037d5d81f9b88767ddbd7fcf454ea10b6",
+        "bytes": 26139,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/dar-8-9/bounded-reread/COVERAGE.json",
+          "sha256": "2d689cd826a4daf81af731956c5d2f2b33fdaf719569c3b438a6243f11d2173f",
+          "bytes": 932,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "DAR8-FIRST",
+      "reading_index_evidence_id": "DAR8-FIRST",
+      "index_pointer": "/evidence_records/2",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "DAR8-FIRST",
+        "sha256": "5f25544469953d000ecfa5795d17ae49272799f3e9c99a56cb14507c20b52e29",
+        "bytes": 8178,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "DAR9-ADDITIONAL",
+      "reading_index_evidence_id": "DAR9-ADDITIONAL",
+      "index_pointer": "/evidence_records/7",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "DAR9-ADDITIONAL",
+        "sha256": "838af7e68d52560b0a3408072d685935dd8e2460de6a80f5f6204c086d6181fd",
+        "bytes": 552,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/dar-8-9/bounded-reread/DAR9_CAUSAL_REREAD.json",
+          "sha256": "838af7e68d52560b0a3408072d685935dd8e2460de6a80f5f6204c086d6181fd",
+          "bytes": 552,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "DAR9-FIRST",
+      "reading_index_evidence_id": "DAR9-FIRST",
+      "index_pointer": "/evidence_records/3",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "DAR9-FIRST",
+        "sha256": "5f23f157c55b8948393bde5e2ca67d8e71d0712e2d7c3749434fc507499f320a",
+        "bytes": 5739,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "INDEPENDENT-IMAGES",
+      "reading_index_evidence_id": "INDEPENDENT-IMAGES",
+      "index_pointer": "/evidence_records/44",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "INDEPENDENT-IMAGES",
+        "sha256": "bc161bcd6fd6ca8314ccfdc5921607348d8a324fe91567d010316459bcde8838",
+        "bytes": 1971,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/source-mode-reassessment/IMAGE_READ_RECEIPTS.json",
+          "sha256": "980103dab2950e7b08622d05281cf82a1ba6e97052dff6734f70b9abfdb97b1b",
+          "bytes": 2914,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "INDEPENDENT-TEXT",
+      "reading_index_evidence_id": "INDEPENDENT-TEXT",
+      "index_pointer": "/evidence_records/43",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "INDEPENDENT-TEXT",
+        "sha256": "5abbad6edaab6646f0b6e62768613aca855672f5b24bf546445c0c3954b8af96",
+        "bytes": 23920,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/source-mode-reassessment/READ_RECEIPTS.jsonl",
+          "sha256": "2b22b591ffb79867cb18833b064837df7c732b669849b8d823b45aaef7cb8024",
+          "bytes": 32674,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "INTRINSIC-READ",
+      "reading_index_evidence_id": "INTRINSIC-READ",
+      "index_pointer": "/evidence_records/64",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "INTRINSIC-READ",
+        "sha256": "fb9a092d03f0a1a3de21f0b83ced1502ddaf5cbe183bf2769e9ccce2be15fa3e",
+        "bytes": 17755,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/sources/CND-essential-independence-scope/CND_SOURCE_SCOPE_PUBLIC.json",
+          "sha256": "3c72c29520a19c5f55503dc14b092b3626aef58be0e088396eb6cc8a148a8ee5",
+          "bytes": 4769,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "JAMI-ADDITIONAL-87",
+      "reading_index_evidence_id": "JAMI-ADDITIONAL-87",
+      "index_pointer": "/evidence_records/82",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "JAMI-ADDITIONAL-87",
+        "sha256": "249382c32ed69372246845656031840cc36511e2e83ad940066e55c717e4e21f",
+        "bytes": 1829,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/jami-sixth/SUPPLEMENTARY_PRECEDING_IMAGE_RECORD.json",
+          "sha256": "d7ce7754ec75d8ecd9fe05870e09257005d5e49f1abbd076ffa914d75fe47d33",
+          "bytes": 3030,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "JAMI-ADDITIONAL-93",
+      "reading_index_evidence_id": "JAMI-ADDITIONAL-93",
+      "index_pointer": "/evidence_records/83",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "JAMI-ADDITIONAL-93",
+        "sha256": "ece84e94127ce0c435a1c7e8d52df8415d0bb5aa04ee91a1c033f71e64be29be",
+        "bytes": 2084,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/jami-sixth/SUPPLEMENTARY_IMAGE_RECORD.json",
+          "sha256": "93bba772b30dc1a0e0752b95f5670cf06b3b2267b1d709fd37b9e033c78de317",
+          "bytes": 3374,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "JAMI-APPRAISAL",
+      "reading_index_evidence_id": "JAMI-APPRAISAL",
+      "index_pointer": "/evidence_records/72",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "JAMI-APPRAISAL",
+        "sha256": "50061e7f7074bf16471e181efa823258f8cee1bcaba480c80349fbe2df8f1431",
+        "bytes": 12925,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/jami-sixth/SOURCE_APPRAISAL.md",
+          "sha256": "986a801085556fc4051162e410fb9f420e69380ec36429e623de4aa3303cb1fa",
+          "bytes": 13937,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "JAMI-EARLY-TEXT",
+      "reading_index_evidence_id": "JAMI-EARLY-TEXT",
+      "index_pointer": "/evidence_records/75",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "JAMI-EARLY-TEXT",
+        "sha256": "cffa8cd1489f917912d37897d65559b1d49a03c5fc1e183147e5572112408a6a",
+        "bytes": 16452,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "JAMI-FINAL-IMAGES",
+      "reading_index_evidence_id": "JAMI-FINAL-IMAGES",
+      "index_pointer": "/evidence_records/80",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "JAMI-FINAL-IMAGES",
+        "sha256": "ed94fd5c05b1fa3d8b4898a2ac098ac21cdd59abd876d904439cb02b9f6399fd",
+        "bytes": 27077,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "JAMI-LATER-IMAGES",
+      "reading_index_evidence_id": "JAMI-LATER-IMAGES",
+      "index_pointer": "/evidence_records/79",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "JAMI-LATER-IMAGES",
+        "sha256": "99a321acb428fb0051246ff5a3b22bf6f554ff66e630a3262158214024aadad7",
+        "bytes": 88824,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "JAMI-LATER-REREAD",
+      "reading_index_evidence_id": "JAMI-LATER-REREAD",
+      "index_pointer": "/evidence_records/81",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "JAMI-LATER-REREAD",
+        "sha256": "98201308f885e3dcd026c76eb7973bd41f5566bfcc165e7f0616f738cea1f4d2",
+        "bytes": 3227,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "JAMI-MIDDLE-TEXT",
+      "reading_index_evidence_id": "JAMI-MIDDLE-TEXT",
+      "index_pointer": "/evidence_records/76",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "JAMI-MIDDLE-TEXT",
+        "sha256": "632a9f188a34b96b6eb912c9ba8f68e7de07d87ef8ab6c54132611b5b1e2fafb",
+        "bytes": 15675,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "MIFTAH-ADDITIONAL",
+      "reading_index_evidence_id": "MIFTAH-ADDITIONAL",
+      "index_pointer": "/evidence_records/108",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MIFTAH-ADDITIONAL",
+        "sha256": "0680df2f40433928aa7155b7a6c560a8872806e38cbe71787f91cd9aa07f85f5",
+        "bytes": 4072,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/miftah/bounded-reread/READING_RECEIPT.json",
+          "sha256": "610605712d9b7630db33d7dece0157ca8b7ec9d304d9af5247b93ea372fc50f2",
+          "bytes": 4310,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "MIFTAH-APPRAISAL",
+      "reading_index_evidence_id": "MIFTAH-APPRAISAL",
+      "index_pointer": "/evidence_records/102",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MIFTAH-APPRAISAL",
+        "sha256": "edea931f5cd22e5e3a3f771d9a36ae04818312fe52ed527e7f742737317e06e7",
+        "bytes": 15722,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/miftah/SOURCE_APPRAISAL.md",
+          "sha256": "b7aac7287e3da9748e6cf83502af2be554eab6785bf9d38b0c5b2ecdd3a9136f",
+          "bytes": 16170,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "MIFTAH-EARLY-READ",
+      "reading_index_evidence_id": "MIFTAH-EARLY-READ",
+      "index_pointer": "/evidence_records/104",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MIFTAH-EARLY-READ",
+        "sha256": "70c6114f7c7399a1ad5dc68026eb952c32558bb5b6321de3c1c8dacf01938661",
+        "bytes": 22597,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "MIFTAH-FINAL-READ",
+      "reading_index_evidence_id": "MIFTAH-FINAL-READ",
+      "index_pointer": "/evidence_records/106",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MIFTAH-FINAL-READ",
+        "sha256": "bd12b796f078bb98385294edec5fcff2df44704d9ea516049a84f1f636aec674",
+        "bytes": 17415,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "MIFTAH-MIDDLE-READ",
+      "reading_index_evidence_id": "MIFTAH-MIDDLE-READ",
+      "index_pointer": "/evidence_records/105",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MIFTAH-MIDDLE-READ",
+        "sha256": "1bc1d6fe9048c3eb16e42cbf09b1f56c32ba334654306155908fcff81cc2f2fc",
+        "bytes": 20477,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "MIFTAH-NOTES-7",
+      "reading_index_evidence_id": "MIFTAH-NOTES-7",
+      "index_pointer": "/evidence_records/115",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MIFTAH-NOTES-7",
+        "sha256": "a0cb7234106bca92b55b22dd75f848504a98f0094f1984ed44a4442f1c5afb72",
+        "bytes": 9778,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/miftah/middle-section/BOUNDED_REFLECTIONS.md",
+          "sha256": "b3968eb4e9c4a2e50ac3bdbe5be34269ac7e52a7d18860ab8c004fb078574484",
+          "bytes": 10013,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "MIFTAH-NOTES-8",
+      "reading_index_evidence_id": "MIFTAH-NOTES-8",
+      "index_pointer": "/evidence_records/116",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MIFTAH-NOTES-8",
+        "sha256": "a9df8f3539767f77f8e471b076b91f3843485da52c2649df86f8d61748bda991",
+        "bytes": 4125,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/miftah/final-section/BOUNDED_REFLECTION.md",
+          "sha256": "0ae86e2308f395894cef02665a2e324fddec36a0e62165afdc072555da2465cc",
+          "bytes": 4416,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "MINHAJ-ANALYTICAL",
+      "reading_index_evidence_id": "MINHAJ-ANALYTICAL",
+      "index_pointer": "/evidence_records/18",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MINHAJ-ANALYTICAL",
+        "sha256": "b832dcd8ee4abf9e8d4639b05dc39308bba6647946675b014dbfa0abf0509c6f",
+        "bytes": 2392,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/minhaj-2-3/bounded-reread/COVERAGE.json",
+          "sha256": "98b0aef01f7af9447303d564bf862050dbb01565181fa182ff862e72758476c2",
+          "bytes": 1925,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "MINHAJ-APPRAISAL",
+      "reading_index_evidence_id": "MINHAJ-APPRAISAL",
+      "index_pointer": "/evidence_records/12",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MINHAJ-APPRAISAL",
+        "sha256": "57e8c9818be8945ae3d8a231e683d2f9ab065474f793c201cade76e876db15c7",
+        "bytes": 12012,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/minhaj-2-3/SOURCE_APPRAISAL.md",
+          "sha256": "3af57b7a6f32ab8e90310066af7393a0bc4d3a776f76ca825cf01f78898905a7",
+          "bytes": 12157,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "MINHAJ2-FIRST",
+      "reading_index_evidence_id": "MINHAJ2-FIRST",
+      "index_pointer": "/evidence_records/14",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MINHAJ2-FIRST",
+        "sha256": "3eeaa3563b8db89e55585ee6eebcf508dddb10100a0de67cf469dd67fb0ba91c",
+        "bytes": 8007,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "MINHAJ2-REFLECT",
+      "reading_index_evidence_id": "MINHAJ2-REFLECT",
+      "index_pointer": "/evidence_records/15",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MINHAJ2-REFLECT",
+        "sha256": "2be3200f7eaba5db936552dcf43eff17863e26ebe8da60aa16b2b9d353624039",
+        "bytes": 1037,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "MINHAJ3-ADDITIONAL",
+      "reading_index_evidence_id": "MINHAJ3-ADDITIONAL",
+      "index_pointer": "/evidence_records/17",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MINHAJ3-ADDITIONAL",
+        "sha256": "4c830d92085fd714588cd843d07dcdb060ec34fa82bbc9ef3943b088565617b8",
+        "bytes": 1743,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/minhaj-2-3/selected-reinspection/COVERAGE.json",
+          "sha256": "76801d06c485b29034fcbe1d05e5378c1aa18a54ed82b233fcb23faa5a69363c",
+          "bytes": 1532,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "MINHAJ3-READ",
+      "reading_index_evidence_id": "MINHAJ3-READ",
+      "index_pointer": "/evidence_records/16",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "MINHAJ3-READ",
+        "sha256": "b79cc2d2a1d7cbf562b3564d6530f647a94c9609acd5801052fb2e62d0b288ef",
+        "bytes": 12338,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "NB-ADDITIONAL",
+      "reading_index_evidence_id": "NB-ADDITIONAL",
+      "index_pointer": "/evidence_records/135",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "NB-ADDITIONAL",
+        "sha256": "9b5d9e4bd226ff66d501bbc117774378c3b0e67b822de92b2f908d346044abfa",
+        "bytes": 1613,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/nubuwwat/bounded-reread/READING_RECEIPT.json",
+          "sha256": "51e0aa3f20c3d446c7e116fbc1f6d3b2c322f0a4d7f29640db37784402ea0aad",
+          "bytes": 1537,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "NB-APPRAISAL",
+      "reading_index_evidence_id": "NB-APPRAISAL",
+      "index_pointer": "/evidence_records/133",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "NB-APPRAISAL",
+        "sha256": "1783bf963a3709c1de937622c19599b5794c34c2f65780afdc129e30d79ca447",
+        "bytes": 21580,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/nubuwwat/SOURCE_APPRAISAL.md",
+          "sha256": "282274390338f4cd3b89608881c92076dce68bf982ac8784f75e7420173080f8",
+          "bytes": 21819,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "NB-FIRST",
+      "reading_index_evidence_id": "NB-FIRST",
+      "index_pointer": "/evidence_records/131",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "NB-FIRST",
+        "sha256": "26b00d14bb572678b98aac25187510105f653666fc8a366df9a111e509a5fd67",
+        "bytes": 42209,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/nubuwwat/READ_RECEIPTS.json",
+          "sha256": "7ec6e907a149998604feceabb4097ba5b43bde2d047727c4fca95ba0fc026677",
+          "bytes": 40869,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "NB-PART1-REREAD",
+      "reading_index_evidence_id": "NB-PART1-REREAD",
+      "index_pointer": "/evidence_records/137",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "NB-PART1-REREAD",
+        "sha256": "faf6d1d4ad0a3a4d04200323b152a40756d41e5cc629ffbb14923b82295a933d",
+        "bytes": 7340,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/nubuwwat/opening-quarter/REREAD_RECEIPTS.json",
+          "sha256": "b5b9503c0686bd7bd318875882ccdfca047aef05d78d53e5fb7991df7b351cd0",
+          "bytes": 7147,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "NB-PART2-REREAD",
+      "reading_index_evidence_id": "NB-PART2-REREAD",
+      "index_pointer": "/evidence_records/141",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "NB-PART2-REREAD",
+        "sha256": "b78fa8412318c7ed2048a83363608924d4ade7bf7dbf6fdaaf3ce2a7d48c1aba",
+        "bytes": 4801,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/nubuwwat/first-continuation/REREAD_RECEIPTS.json",
+          "sha256": "620c2ac45120610937fb93296c850b922fb57cf01f67511ad71f5198e9bd2fc2",
+          "bytes": 4400,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "NB-PART3-READ",
+      "reading_index_evidence_id": "NB-PART3-READ",
+      "index_pointer": "/evidence_records/144",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "NB-PART3-READ",
+        "sha256": "82c3408c9b9c7906c0954df2637868a63c144f9aa80c15af5b88f79964c4b789",
+        "bytes": 10077,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/nubuwwat/second-opening/READ_RECEIPTS.json",
+          "sha256": "9a0286fedef6d2996fd4a8438ac95e9ee700b48b969ee6b01468ee577e428f21",
+          "bytes": 9470,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "NB-PART3-REREAD",
+      "reading_index_evidence_id": "NB-PART3-REREAD",
+      "index_pointer": "/evidence_records/145",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "NB-PART3-REREAD",
+        "sha256": "f19efe66c2a2dd89b92f625023018b1f11e5ff959d9801a72f68668790a52adb",
+        "bytes": 14074,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/nubuwwat/second-opening/REREAD_RECEIPTS.json",
+          "sha256": "4542366c4517e9ba7eb89d2419d70fc0a4f469891f61b3aca3ab9ef2a8c2dd08",
+          "bytes": 12272,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "NB-PART4-REREAD",
+      "reading_index_evidence_id": "NB-PART4-REREAD",
+      "index_pointer": "/evidence_records/149",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "NB-PART4-REREAD",
+        "sha256": "1c17a2edca9426ca204365b22bd488c9b022dc0c0c57a8970de5513455ecdc6f",
+        "bytes": 11474,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/nubuwwat/final-body/REREAD_RECEIPTS.json",
+          "sha256": "d2003347b38f9e7464451211850dda686b038738440e669354b7d91c7c4453a6",
+          "bytes": 11206,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SAWAIQ-ADDITIONAL",
+      "reading_index_evidence_id": "SAWAIQ-ADDITIONAL",
+      "index_pointer": "/evidence_records/26",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SAWAIQ-ADDITIONAL",
+        "sha256": "a0d6eb451b861ad3af271db7dd47c731a5d3b78d99b9b85ab24ea7f5786850ad",
+        "bytes": 1734,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SAWAIQ-ANALYTICAL-IMAGES",
+      "reading_index_evidence_id": "SAWAIQ-ANALYTICAL-IMAGES",
+      "index_pointer": "/evidence_records/30",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SAWAIQ-ANALYTICAL-IMAGES",
+        "sha256": "457768f01cd5dbf091c3e0d1937378970255c42568511a1727aa103a5ba2602a",
+        "bytes": 1015,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/sawaiq/SUPPLEMENTARY_IMAGE_RECORD.json",
+          "sha256": "ed534a0aeefe93562b4d2dd889c986cf9a88273e3636a262c2de314241ff1430",
+          "bytes": 1714,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SAWAIQ-BOUNDARY",
+      "reading_index_evidence_id": "SAWAIQ-BOUNDARY",
+      "index_pointer": "/evidence_records/21",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SAWAIQ-BOUNDARY",
+        "sha256": "a9745fb83fe1eef3bc3c87c626903b411a4e1ea53f8773b4d168688b4ff6b30f",
+        "bytes": 9680,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/sawaiq/SOURCE_APPRAISAL.md",
+          "sha256": "1f7dcc357d64dced45346ac8388bb515ac0e0a27b2ab0e69aeb5aa310fad7563",
+          "bytes": 10822,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SAWAIQ-RESTORATION",
+      "reading_index_evidence_id": "SAWAIQ-RESTORATION",
+      "index_pointer": "/evidence_records/32",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SAWAIQ-RESTORATION",
+        "sha256": "77b14cd6af7c18281ce30c9e7c8d795791295266b58c10b70355e816e238ba1c",
+        "bytes": 5264,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/sawaiq/SELECTED_REINSPECTION.md",
+          "sha256": "84302676af9846dc8c505009d303a956be643fb4b4b1ae985a1c779baaf1bd0a",
+          "bytes": 6366,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SAWAIQ1-FIRST",
+      "reading_index_evidence_id": "SAWAIQ1-FIRST",
+      "index_pointer": "/evidence_records/22",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SAWAIQ1-FIRST",
+        "sha256": "0854392b802e064c079dba2324bc6578e8cd7fdf732b58c5e1196ab48827e0b7",
+        "bytes": 14710,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SAWAIQ1-REFLECT",
+      "reading_index_evidence_id": "SAWAIQ1-REFLECT",
+      "index_pointer": "/evidence_records/24",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SAWAIQ1-REFLECT",
+        "sha256": "a6b2d64feef94f1a5908d8cbdc0ebd65a4e510d4b0806467a63a8046cc4fd8b3",
+        "bytes": 3286,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SAWAIQ2-FIRST",
+      "reading_index_evidence_id": "SAWAIQ2-FIRST",
+      "index_pointer": "/evidence_records/23",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SAWAIQ2-FIRST",
+        "sha256": "7d2e72fd83c052e7b58efdf772ef39fccf51702246a79e1d7a3e64a030f01039",
+        "bytes": 13806,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SAWAIQ2-REFLECT",
+      "reading_index_evidence_id": "SAWAIQ2-REFLECT",
+      "index_pointer": "/evidence_records/25",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SAWAIQ2-REFLECT",
+        "sha256": "028fea3f14165c3d7aa6b992413a66a35d5fb3fea3b42986d6fbdc8d896d50e4",
+        "bytes": 2400,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SF-ADDITIONAL",
+      "reading_index_evidence_id": "SF-ADDITIONAL",
+      "index_pointer": "/evidence_records/165",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-ADDITIONAL",
+        "sha256": "b208a947f482098d02862581494f4b7a487576cb7b69ac10ad9c2bd881cdc408",
+        "bytes": 3177,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/safadiyya/bounded-reread/UNITY_READING_RECEIPT.json",
+          "sha256": "91d957bdd969f36906cd1d082667ccb2df0b13ad76a0a426769c2ea23b637961",
+          "bytes": 3405,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SF-APPRAISAL",
+      "reading_index_evidence_id": "SF-APPRAISAL",
+      "index_pointer": "/evidence_records/155",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-APPRAISAL",
+        "sha256": "b0354b6f57a1593ea817d6c0a68e0e87f75d91eb8d325d51265e42642911627d",
+        "bytes": 21916,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/safadiyya/SOURCE_APPRAISAL.md",
+          "sha256": "c75042f95c1252cca9f5b088d62427ac955ab87311a9be99a9484c2da9ed8673",
+          "bytes": 21947,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SF-CORRECTIONS",
+      "reading_index_evidence_id": "SF-CORRECTIONS",
+      "index_pointer": "/evidence_records/158",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-CORRECTIONS",
+        "sha256": "690f5ebf95951b3dfc6653845304120bbea95335038ca5bea416b198c3ed094d",
+        "bytes": 268770,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/safadiyya/variants/CORRECTION_REGISTER.json",
+          "sha256": "65f25df70bce01ed636997b8111e35cf76f71613748faa42d5c7d66d65b8d91d",
+          "bytes": 251834,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SF-JOIN-READ",
+      "reading_index_evidence_id": "SF-JOIN-READ",
+      "index_pointer": "/evidence_records/162",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-JOIN-READ",
+        "sha256": "8829947b721f6e4b95a88a5c951728b9a7d932f514e79b14f4d304ac60058249",
+        "bytes": 1998,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SF-PART1-READ",
+      "reading_index_evidence_id": "SF-PART1-READ",
+      "index_pointer": "/evidence_records/166",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-PART1-READ",
+        "sha256": "929edecf5205b93940b4c6344a2f29f6bff6d0641914400e5f2437f4aee234f4",
+        "bytes": 12041,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SF-PART2-READ",
+      "reading_index_evidence_id": "SF-PART2-READ",
+      "index_pointer": "/evidence_records/171",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-PART2-READ",
+        "sha256": "6030f72e1070278b72641511921a0bb8a41daf53825223fe06260982a8dbdcbb",
+        "bytes": 15495,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SF-PART3-READ",
+      "reading_index_evidence_id": "SF-PART3-READ",
+      "index_pointer": "/evidence_records/176",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-PART3-READ",
+        "sha256": "0cedf14ef7ff046e8691e82b92c3b83c8067b6ee178e00cd605626397be6e124",
+        "bytes": 14848,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SF-PART4-READ",
+      "reading_index_evidence_id": "SF-PART4-READ",
+      "index_pointer": "/evidence_records/181",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-PART4-READ",
+        "sha256": "b7e43e82d2c0a45a34e5de40e3b0fac0778f3525462b8249f8af35207214f22b",
+        "bytes": 14847,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SF-PART5-READ",
+      "reading_index_evidence_id": "SF-PART5-READ",
+      "index_pointer": "/evidence_records/186",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SF-PART5-READ",
+        "sha256": "c294c06ac941a002c71593598f7a6acfc256853f88e0102d3887019365228d9a",
+        "bytes": 16054,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "SHIFA-ANALYTICAL",
+      "reading_index_evidence_id": "SHIFA-ANALYTICAL",
+      "index_pointer": "/evidence_records/38",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SHIFA-ANALYTICAL",
+        "sha256": "edfada18b63b3f3198bf6eafa30ebab64072e0d52771fdec12dcc91b2a274723",
+        "bytes": 1673,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/shifa/bounded-reread/READING_RECEIPT.json",
+          "sha256": "b09df07ce16ff4992c943b05135d0e7ac6087c9ff79f58df498ad81c8295e34b",
+          "bytes": 1794,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SHIFA-APPRAISAL",
+      "reading_index_evidence_id": "SHIFA-APPRAISAL",
+      "index_pointer": "/evidence_records/36",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SHIFA-APPRAISAL",
+        "sha256": "55f891e763875d1254e97672f4020283464ef5b1afacb4e78bb8b48ada150a4e",
+        "bytes": 14805,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/shifa/SOURCE_APPRAISAL.md",
+          "sha256": "53ae95d84dbda238beb5e91401ec19f9217dcaf852d5a614920d3605b816a925",
+          "bytes": 15064,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SHIFA-COORDINATOR-READ",
+      "reading_index_evidence_id": "SHIFA-COORDINATOR-READ",
+      "index_pointer": "/evidence_records/42",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SHIFA-COORDINATOR-READ",
+        "sha256": "809bb9a55d16d87108be5c5aee9697858d9c2475b5142ef768aa8ff445bfaec9",
+        "bytes": 7667,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/shifa/cross-range-reflection/read_receipts.jsonl",
+          "sha256": "d938448e6ee73478f8fe775df737b6e0f6d1521755ac780281f3a882afd0ac12",
+          "bytes": 7718,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SHIFA-FINAL-READ",
+      "reading_index_evidence_id": "SHIFA-FINAL-READ",
+      "index_pointer": "/evidence_records/41",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SHIFA-FINAL-READ",
+        "sha256": "af65d77d17eee3f40d6fd24a1d9148735fd6004d26a478dc4522b88786ef1ef9",
+        "bytes": 11981,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/shifa/final/read_receipts.jsonl",
+          "sha256": "54310187a5ac5fa7aa266b0024c3d130052762f082dbd4f93b0b216eeb72f267",
+          "bytes": 12062,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SHIFA-FIRST-READ",
+      "reading_index_evidence_id": "SHIFA-FIRST-READ",
+      "index_pointer": "/evidence_records/39",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SHIFA-FIRST-READ",
+        "sha256": "3009cba7d5aed4482810a74067250acd349fe6cf3c3480196170cb2eb830de12",
+        "bytes": 8817,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/shifa/first/read_receipts.jsonl",
+          "sha256": "e5a4ab536b2c9a8fd6c8c381102af155b2209c058410098e55050122cb62ca8f",
+          "bytes": 8877,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "SHIFA-MIDDLE-READ",
+      "reading_index_evidence_id": "SHIFA-MIDDLE-READ",
+      "index_pointer": "/evidence_records/40",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "SHIFA-MIDDLE-READ",
+        "sha256": "82affd32a7cbf56ce9f3bee8d9163e42699f92651c7a8eab63f50b0ced4dc562",
+        "bytes": 17255,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/shifa/middle/read_receipts.jsonl",
+          "sha256": "4f73e8196e0b388a3fa5d5b4f734ca49d6ab5b1666f6cee5b5110ac005f3f20a",
+          "bytes": 17372,
+          "relation_to_original": "DERIVED",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    },
+    {
+      "id": "TESTIMONY-READ",
+      "reading_index_evidence_id": "TESTIMONY-READ",
+      "index_pointer": "/evidence_records/67",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "TESTIMONY-READ",
+        "sha256": "4129f09f918510a324225d3072b251d6b282ade698ad8a48fcabeea97a7148c9",
+        "bytes": 3820,
+        "body_included_in_this_supplement": false
+      },
+      "availability": "Body-free original identity only; no included projection is selected by this record."
+    },
+    {
+      "id": "THRESHOLD-AUDIT",
+      "reading_index_evidence_id": "THRESHOLD-AUDIT",
+      "index_pointer": "/evidence_records/191",
+      "role": "Original reading credit or source appraisal remains with this bound record.",
+      "original_record": {
+        "kind": "original_reading_evidence_custody_identity",
+        "record_id": "THRESHOLD-AUDIT",
+        "sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+        "bytes": 19830,
+        "body_included_in_this_supplement": false
+      },
+      "included_projections": [
+        {
+          "archive_alias": "t20/reading/warrant-threshold-audit/AUDIT.md",
+          "sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+          "bytes": 19830,
+          "relation_to_original": "EXACT",
+          "selection_scope": "Existing base archive or separately selected methodology part; not an additional file in this six-file Arabic selection."
+        }
+      ]
+    }
+  ],
+  "classification": "Typed body-free original custody identities plus separately hashed selected projections. Neither a custody identity nor an existing archive alias selects any new primary-source body, scan, acquisition script or replay input.",
+  "validation_boundary": "Original validation is a scoped author record. This supplement does not claim a self-contained public replay of that validation or any scientific result."
+}

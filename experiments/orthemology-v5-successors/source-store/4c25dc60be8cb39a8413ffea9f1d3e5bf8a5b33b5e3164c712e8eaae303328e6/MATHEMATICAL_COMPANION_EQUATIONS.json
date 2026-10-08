@@ -1,0 +1,285 @@
+{
+  "schema": "t20-mathematical-equation-map-v1",
+  "source": {
+    "path": "MATHEMATICAL_COMPANION.md",
+    "bytes": 70060,
+    "sha256": "40e374a62246636ffdbd424f517094dbaa7a7d00cc177675bed19377598e44fd"
+  },
+  "equations": [
+    {
+      "id": "EQ001",
+      "mode": "InlineMath",
+      "tex": "\\forall e,\\ \\operatorname{Field}(e)\\to\\operatorname{Complete}(g,e)"
+    },
+    {
+      "id": "EQ002",
+      "mode": "InlineMath",
+      "tex": "\\forall s\\,e,\\ \\operatorname{Field}(e)\\to\\operatorname{ActualOriginal}(s,e)\\to s=g"
+    },
+    {
+      "id": "EQ003",
+      "mode": "DisplayMath",
+      "tex": "\nW(q)=\\Pi\\,n:N,\\ \\forall\\alpha,\\ \\Pi\\,f:\\alpha\\to\\alpha,\\ \\Pi\\,a:\\alpha,\\ \\operatorname{Id}_{\\alpha}(n\\,f\\,a,\\,(q\\,n)\\,f\\,a).\n"
+    },
+    {
+      "id": "EQ004",
+      "mode": "InlineMath",
+      "tex": "c_3=K(K(K\\,I))"
+    },
+    {
+      "id": "EQ005",
+      "mode": "InlineMath",
+      "tex": "p=I"
+    },
+    {
+      "id": "EQ006",
+      "mode": "DisplayMath",
+      "tex": "\nn:N\\vdash I:\\operatorname{Id}_{\\mathrm{Raw}}(n\\,I\\,I,I).\n"
+    },
+    {
+      "id": "EQ007",
+      "mode": "InlineMath",
+      "tex": "\\operatorname{Id}_{\\mathrm{Raw}}(I,I)"
+    },
+    {
+      "id": "EQ008",
+      "mode": "InlineMath",
+      "tex": "E(w,u,v)"
+    },
+    {
+      "id": "EQ009",
+      "mode": "InlineMath",
+      "tex": "U(u,v)"
+    },
+    {
+      "id": "EQ010",
+      "mode": "InlineMath",
+      "tex": "E(w,u,v)"
+    },
+    {
+      "id": "EQ011",
+      "mode": "InlineMath",
+      "tex": "E(w,v,u)"
+    },
+    {
+      "id": "EQ012",
+      "mode": "InlineMath",
+      "tex": "u\\sim v"
+    },
+    {
+      "id": "EQ013",
+      "mode": "InlineMath",
+      "tex": "a:V\\to S"
+    },
+    {
+      "id": "EQ014",
+      "mode": "InlineMath",
+      "tex": "u\\sim v"
+    },
+    {
+      "id": "EQ015",
+      "mode": "InlineMath",
+      "tex": "V/{\\sim}"
+    },
+    {
+      "id": "EQ016",
+      "mode": "InlineMath",
+      "tex": "E(w,a)"
+    },
+    {
+      "id": "EQ017",
+      "mode": "InlineMath",
+      "tex": "S(w,a,b)"
+    },
+    {
+      "id": "EQ018",
+      "mode": "InlineMath",
+      "tex": "O(w,s,e,r)"
+    },
+    {
+      "id": "EQ019",
+      "mode": "InlineMath",
+      "tex": "R(w,g)"
+    },
+    {
+      "id": "EQ020",
+      "mode": "InlineMath",
+      "tex": "R(w,g)"
+    },
+    {
+      "id": "EQ021",
+      "mode": "InlineMath",
+      "tex": "O(w,g,e,r)"
+    },
+    {
+      "id": "EQ022",
+      "mode": "InlineMath",
+      "tex": "O(w,h,e,r)"
+    },
+    {
+      "id": "EQ023",
+      "mode": "InlineMath",
+      "tex": "R(w,g)"
+    },
+    {
+      "id": "EQ024",
+      "mode": "InlineMath",
+      "tex": "\\operatorname{Supports}(c)"
+    },
+    {
+      "id": "EQ025",
+      "mode": "InlineMath",
+      "tex": "\\{a_1\\},\\ \\{a_2,b\\},\\ \\{a_3,b\\}"
+    },
+    {
+      "id": "EQ026",
+      "mode": "InlineMath",
+      "tex": "\\{a_1,b\\}"
+    },
+    {
+      "id": "EQ027",
+      "mode": "InlineMath",
+      "tex": "\\{a_1,a_2,a_3\\}"
+    },
+    {
+      "id": "EQ028",
+      "mode": "InlineMath",
+      "tex": "\\{a,b\\}"
+    },
+    {
+      "id": "EQ029",
+      "mode": "InlineMath",
+      "tex": "\\{a\\}"
+    },
+    {
+      "id": "EQ030",
+      "mode": "InlineMath",
+      "tex": "p=\\frac{1}{4}"
+    },
+    {
+      "id": "EQ031",
+      "mode": "InlineMath",
+      "tex": "\\frac{9}{16}"
+    },
+    {
+      "id": "EQ032",
+      "mode": "InlineMath",
+      "tex": "\\frac{6}{16}"
+    },
+    {
+      "id": "EQ033",
+      "mode": "InlineMath",
+      "tex": "\\frac{1}{16}"
+    },
+    {
+      "id": "EQ034",
+      "mode": "InlineMath",
+      "tex": "\\frac{9}{16}"
+    },
+    {
+      "id": "EQ035",
+      "mode": "InlineMath",
+      "tex": "\\frac{3}{16}"
+    },
+    {
+      "id": "EQ036",
+      "mode": "InlineMath",
+      "tex": "\\frac{3}{16}"
+    },
+    {
+      "id": "EQ037",
+      "mode": "InlineMath",
+      "tex": "\\frac{1}{16}"
+    },
+    {
+      "id": "EQ038",
+      "mode": "InlineMath",
+      "tex": "M=0"
+    },
+    {
+      "id": "EQ039",
+      "mode": "InlineMath",
+      "tex": "1-(1-p)^M"
+    },
+    {
+      "id": "EQ040",
+      "mode": "InlineMath",
+      "tex": "1-\\frac{(1-p)^M}{2}"
+    }
+  ],
+  "literal_code_fragments": [
+    "SYNTHESIS.md",
+    "CONCLUSION_PREMISE_STATUS_MAP.json",
+    "SOURCE_INDEX.json",
+    "SOURCE_INDEX.json",
+    "SOURCE_INDEX.md",
+    "CONCLUSION_PREMISE_STATUS_MAP.json",
+    "ELI5_ELI14.md",
+    "SourceIdentity",
+    "abc_same_witness",
+    "guarded_common_original_provider",
+    "veracity_of_coverage",
+    "ActualOriginalResource(r)",
+    "ActualWholeOriginal(g)",
+    "Completion",
+    "Realisation",
+    "SupportTransport",
+    "original_bearer_of_resource",
+    "original_bearer_of_completion",
+    "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+    "Necessary",
+    "ReceiptRepresentation",
+    "ConstitutiveReception",
+    "essential_nonreceipt_of_actual_original",
+    "uniform_of_necessary_actual_root",
+    "local_transfer_iff_uniform",
+    "Below(g,x)",
+    "LocalCover(g,x)",
+    "LocallyComplete",
+    "Connected",
+    "LeastAncestor(g)",
+    "Root(g)",
+    "common_cover_of_connected_local",
+    "least_of_connected_local",
+    "unique_root_of_connected_local",
+    "local_connected_iff_least",
+    "local_cover_iff_unique_root_and_ancestral_support",
+    "EntireOrig",
+    "FieldCND",
+    "UnborrowedActs",
+    "Qualified",
+    "ModeRole",
+    "ModeDefect",
+    "Classification(g)",
+    "Conformance(g)",
+    "ModeSatisfaction(g)",
+    "RepresentedParticipation(s,e)",
+    "UseSound",
+    "RoleApplicable(g)",
+    "Visible",
+    "KnowledgeScope",
+    "controlled_token_true",
+    "veracity_of_coverage",
+    "informedOwnership",
+    "UnaryIdentity.IntensionalBoundary.variableExpr.closed",
+    "redundantExpr.closed",
+    "N → N",
+    "P01AC.ExtensionalRepair.ExactScalarFusion.literal_four_way_iff",
+    "HasE [] r B",
+    "HasE [] I B",
+    "HasE [] h (W q)",
+    "HasE [] c3 (W q)",
+    "N → Raw",
+    "n Δ z0",
+    "n f a",
+    "Option A",
+    "none",
+    "some a"
+  ],
+  "code_to_math_exposition_exceptions": {
+    "∀ e, Field(e) → Complete(g,e)": 1,
+    "∀ s e, Field(e) → ActualOriginal(s,e) → s=g": 1,
+    "1 - (1-p)^M": 1,
+    "1 - (1-p)^M / 2": 1
+  }
+}

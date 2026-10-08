@@ -1,0 +1,360 @@
+{
+  "created_utc": "2026-10-07T16:24:37.617954+00:00",
+  "status": "READ_AND_SOURCE_HASHES_VERIFIED",
+  "readings": [
+    {
+      "author_local_id": "OTC-R1",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": [
+        {
+          "from": "SF-S001-L0070",
+          "to": "SF-S001-L0085",
+          "paragraph_count": 16,
+          "canonical_joined_sha256": "87988e463061239915993c51484506e4e845356164d9d61b3f3052e576ae06da"
+        },
+        {
+          "from": "SF-S001-L0266",
+          "to": "SF-S001-L0276",
+          "paragraph_count": 11,
+          "canonical_joined_sha256": "0c309052ac759dd8634a1a7f058a2cdae18e32f6de67508a30db5800ff3365b9"
+        },
+        {
+          "from": "SF-S002-L0519",
+          "to": "SF-S002-L0534",
+          "paragraph_count": 16,
+          "canonical_joined_sha256": "3435941b0295e5006503fdb37cf2191b333f8251f08b8b5513ad64fa2a7e2d0a"
+        }
+      ],
+      "method": "Retained electronic body read at exact paragraph IDs; not print/scan-certified.",
+      "source_url": [
+        "https://www.islamicbook.ws/amma/alsfdit-001.html",
+        "https://www.islamicbook.ws/amma/alsfdit-002.html"
+      ],
+      "custody_identity": {
+        "filename": "body.txt",
+        "sha256": "ce1fd61095b012e8012c1539d8e9be0b7aa6cfe2b70afc7ca8829a839724185b",
+        "bytes": 1153740,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p165",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 65,
+        "pdf_page_one_based": 165,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-165.png",
+        "sha256": "147c83ba6bf0b24c3614d4d59b77d442bebbdfb42918df99e11f9f098ae02095",
+        "bytes": 96460,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p166",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 66,
+        "pdf_page_one_based": 166,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-166.png",
+        "sha256": "87692af1111cce7b4c902ec35d1d396c8785617e271f8166d9726d83fb5ba058",
+        "bytes": 106558,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p167",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 67,
+        "pdf_page_one_based": 167,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-167.png",
+        "sha256": "43b81e41cc56c108cc53a788bcf7c4f4a4f53cf54582a4ee1fd456bba4dfff1a",
+        "bytes": 107670,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p168",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 68,
+        "pdf_page_one_based": 168,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-168.png",
+        "sha256": "d6158619149b27044aa386c5a7c5fc496937b69b7a1ad93c8727f53ee9304bff",
+        "bytes": 103581,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p196",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 96,
+        "pdf_page_one_based": 196,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-196.png",
+        "sha256": "dc4d9f9a79e191d614c84ecf2d5d5a8f644e980be85615b66a4894eca84c99da",
+        "bytes": 104980,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p197",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 97,
+        "pdf_page_one_based": 197,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-197.png",
+        "sha256": "4f38c8bd815862958280631632eccbb17f6d0a0eaca0e8cbf2163e612cfbf05f",
+        "bytes": 102450,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p198",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 98,
+        "pdf_page_one_based": 198,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-198.png",
+        "sha256": "b1c7bacf9dbc72b6acee706db66d7309aa47008d8bc7a0ed023f83e1c57e53f7",
+        "bytes": 101116,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p199",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 99,
+        "pdf_page_one_based": 199,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-199.png",
+        "sha256": "373526473ce4e765076844629b0d7e30c7a8cbe3afd99adcb6f5655b72e0d29c",
+        "bytes": 111621,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p203",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 103,
+        "pdf_page_one_based": 203,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-203.png",
+        "sha256": "de2497c3ad420c20901c344b5c5bdb5c8c7f816afe707aa158d1a0f3cff6069e",
+        "bytes": 107261,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R2-p204",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": {
+        "printed_page": 104,
+        "pdf_page_one_based": 204,
+        "scope": "main prose and visible relevant apparatus"
+      },
+      "method": "Actual image pixels displayed and inspected: main prose and relevant visible apparatus. No OCR-only certification, no new scan acquisition.",
+      "custody_identity": {
+        "filename": "p-204.png",
+        "sha256": "6403192a38aa4e2ab5fb8bd14f27763f0efb952e550bb21a5f1c5c96d44296f8",
+        "bytes": 94537,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      },
+      "source_document": {
+        "author": "Ibn Taymiyya",
+        "title": "Sharh al-Aqidah al-Asbahaniyyah",
+        "edition": "Dar al-Minhaj, first edition, 1430 AH / 2009; edited by Muhammad ibn Awdah al-Sawi",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "source_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "source_bytes": 18364577,
+        "availability": "EXCLUDED_PDF; URL and digest are locators only"
+      }
+    },
+    {
+      "author_local_id": "OTC-R3",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": [
+        {
+          "line_start": 102,
+          "line_end": 124,
+          "canonical_joined_sha256": "7bb7dd52d01dcbac97814d00c8a266e349a59e2b75db90fd1bcce936fedff051"
+        }
+      ],
+      "method": "Exact retained electronic lines displayed and read; not print/scan-certified.",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html",
+      "custody_identity": {
+        "filename": "dar-islamicbook-014.txt",
+        "sha256": "5983b6c8296f7e2f6a61f26b2fb6ac7bc3d99b84c063df6f6ade5250b98c7679",
+        "bytes": 361598,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      }
+    },
+    {
+      "author_local_id": "OTC-R4",
+      "author_hash_matches": true,
+      "reviewer_reading_status": "INDEPENDENT_TARGETED_READ_OF_SAME_RETAINED_SOURCE",
+      "independent_historical_witness_credit": 0,
+      "spans": [
+        {
+          "line_start": 100,
+          "line_end": 148,
+          "canonical_joined_sha256": "797182ee1b4042f22f20cfb965a2c13e83ae27063d6619adcd2d030758c039bf"
+        }
+      ],
+      "method": "Exact retained electronic lines displayed and read; not print/scan-certified.",
+      "coverage_limit": "New bounded volume10 first-reading scope for this audit; acquisition is not reading, and this is not completed volume8–9 coverage.",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-017.html",
+      "custody_identity": {
+        "filename": "dar-islamicbook-017.txt",
+        "sha256": "b65e34d1b26b18e2b854730c7cef4b2f3b372f368b7c962b285f1af8a86177f7",
+        "bytes": 358073,
+        "availability": "EXCLUDED_BODY_OR_IMAGE"
+      }
+    }
+  ],
+  "source_claim_scope": "The category distinctions are source-supported. The formal frame, all-empty state, selected trajectory and object-domain uniqueness are representation inputs, not source-certified metaphysical possibilities.",
+  "quotation_policy": "No silent emendation of Dar017 electronic line110; reported alternatives and speakers remain distinct.",
+  "hash_convention": "Source file hashes bind original bytes. Span hashes join splitlines text with LF and one trailing LF.",
+  "projection_scope": "Preserve the independent inspection timestamp, all 13 source/image identities, exact inspected spans and canonical span hashes. Source bodies and images are excluded. New bounded reviewer reading stays separate from retrospective zero-credit methodology; packaging adds no reading or historical-witness credit."
+}

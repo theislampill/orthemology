@@ -1,0 +1,109 @@
+{
+  "title": "Targeted causal and divine-action source audit",
+  "as_of_utc": "2026-10-07T18:20:00Z",
+  "status": "TARGETED_READING_AND_ANALYSIS_COMPLETE",
+  "loci": [
+    {
+      "id": "MF175-178",
+      "classification": [
+        "strengthens",
+        "answers_countermodel",
+        "reveals_equivocation"
+      ],
+      "reason": "Makes sole total production,differentiated contributions and mixed joint production explicit;unchanged cooperator cannot have the same complete power/output alone."
+    },
+    {
+      "id": "MF179-183",
+      "classification": [
+        "new_premise",
+        "answers_countermodel"
+      ],
+      "reason": "Adds coalescence and perfection/independence bridges to move from cooperation to denial of intrinsic necessity."
+    },
+    {
+      "id": "DAR339-362",
+      "classification": [
+        "strengthens",
+        "answers_countermodel",
+        "reveals_equivocation"
+      ],
+      "reason": "Continuous context distinguishes actual diverse contributions,necessary agreement,prior causal receipt,lawful concomitance,actual world-interconnection,and choice versus external prevention."
+    },
+    {
+      "id": "SF1-perfection-cooperation",
+      "classification": [
+        "strengthens",
+        "answers_countermodel"
+      ],
+      "reason": "Perfection argument links intrinsic power to creator independence and rejects circular completion of efficient capacity;Salim1:92–93 directly electronically page-bound,with1:94–95 continuation."
+    },
+    {
+      "id": "SF-action-early",
+      "classification": [
+        "reveals_equivocation",
+        "strengthens"
+      ],
+      "reason": "Particular acts/effects can emerge without renewal of essential perfection or power received from another."
+    },
+    {
+      "id": "SF-third-category",
+      "classification": [
+        "reveals_equivocation",
+        "answers_countermodel"
+      ],
+      "reason": "Adds acts subsisting in the agent through power/will to expose the false eternal-particular/separated-creature binary."
+    },
+    {
+      "id": "SF-wiki11-global",
+      "classification": [
+        "new_premise",
+        "strengthens",
+        "answers_countermodel"
+      ],
+      "reason": "Supplies a causal no-total-stripping argument at any time,distinct from mere availability;does not establish every kind at every time."
+    },
+    {
+      "id": "SF-wiki12-particular",
+      "classification": [
+        "strengthens",
+        "reveals_equivocation"
+      ],
+      "reason": "Intrinsic recurring genus and successive acts differ from a fixed eternal particular;effect differs from act;mere concurrence differs from efficient production."
+    },
+    {
+      "id": "SF-wiki12-power",
+      "classification": [
+        "restates",
+        "strengthens",
+        "answers_countermodel"
+      ],
+      "reason": "Reiterates power/possibility,explicitly handles third-cause concomitance and common-world interaction;possibility argument alone remains modal."
+    }
+  ],
+  "main_result": "A plural-cooperation model that drops unlimited independent agency,coalescence,or the causal/perfection bridges does not preserve the full source-premise set. Temporal emergence of divine action must not be relabelled Created or externally received perfection. A stronger independent causal argument bears against complete global inactivity;it is not an inference from possibility alone.",
+  "canonical_citation_holds": [],
+  "stopping_condition": "Requested Arabic contextual reading,analysis,and exact Salim electronic page binding complete. No scan/manuscript certification beyond listed Adwa controls. Larger project closure remains a separate receiving-integration decision.",
+  "quantifier_limits": [
+    "No actual perpetual tokens from persistent possibility alone",
+    "No every-kind-at-every-time claim",
+    "No identification of particular-token cessation with loss of a power or genus",
+    "No source ontology reduced to the G-empty/all-emergent-empty formal control",
+    "No source-independent contradiction alleged merely because a candidate rejects metaphysical coalescence"
+  ],
+  "historical_credit": "No backdating;no sealed package edits",
+  "public_selection": [
+    "t20/targeted-final-loci/causal-action/LOCUS_AUDIT.md",
+    "t20/targeted-final-loci/causal-action/LOCUS_AUDIT.json",
+    "t20/targeted-final-loci/causal-action/SOURCE_IDENTITY.json",
+    "t20/targeted-final-loci/causal-action/PAGE_CORRESPONDENCE.json",
+    "t20/targeted-final-loci/causal-action/TEXT_READ_RECEIPTS.json",
+    "t20/targeted-final-loci/causal-action/IMAGE_READ_RECEIPTS.json",
+    "t20/targeted-final-loci/causal-action/PREMISE_EDGES.json"
+  ],
+  "witness_limits": [
+    "Salim pagination verified electronically,not by Salim scan",
+    "Dar9 full continuous Arabic source read with bounded page anchors,not full print/apparatus collation",
+    "Adwa printed373 numeral inferred because footer not visible",
+    "No independently authenticated historical/polemical reports"
+  ]
+}

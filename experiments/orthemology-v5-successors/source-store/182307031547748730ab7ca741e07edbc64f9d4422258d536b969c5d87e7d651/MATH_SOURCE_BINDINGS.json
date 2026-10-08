@@ -1,0 +1,1201 @@
+{
+  "schema": "orthemology-t20-math-source-bindings-v1",
+  "source_pin": {
+    "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+    "tree": "a8e3481a92772ee311cdc9dd6409cd7b927a3fc1"
+  },
+  "scope": "Hashes and owner-safe/pinned locators only. No raw corpus,complete abstracts or private process report bodies included.",
+  "evidence_records": [
+    {
+      "id": "CORPUS_SCOPE",
+      "owner_relative_alias": "t20/sources/openai-corpus-transfer-synthesis/CORPUS_AND_TRANSFER_SCOPE.md",
+      "sha256": "1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4",
+      "bytes": 11514,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "AVENUES",
+      "owner_relative_alias": "t20/sources/openai-corpus-transfer-synthesis/AVENUE_SYNTHESIS.md",
+      "sha256": "aebc492c7e8267ceee96527a2a66ab24df7d735adcd15f2d0ffcf5cf64dcdf2e",
+      "bytes": 8496,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "SOURCE_IDENTITIES",
+      "owner_relative_alias": "t20/sources/openai-corpus-transfer-synthesis/SOURCE_IDENTITIES.json",
+      "sha256": "5b0cf5f4686a09f79750a8ec440a7ffbddbcee11efa4290055f836579f8847f8",
+      "bytes": 2899,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "245_DECISION",
+      "owner_relative_alias": "t20/sources/openai-corpus-transfer-synthesis/FAMILY245_TRANSFER_DECISION.json",
+      "sha256": "e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064",
+      "bytes": 2570,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "104_DECISION",
+      "owner_relative_alias": "t20/sources/openai-corpus-transfer-synthesis/FAMILY104_TRANSFER_DECISION.json",
+      "sha256": "c0a95db2f5bd9c766fee73ae5cfe8aee344b7c1ce28af67fbfad21774d6d5888",
+      "bytes": 2015,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "104_SCOPE",
+      "owner_relative_alias": "t20/sources/openai-corpus-transfer-synthesis/FAMILY104_CURRENT_SCOPE.md",
+      "sha256": "2dcdece2b95688d09b736bc46fe1258a05ecf93a2dfd05f322637511a3e3edbb",
+      "bytes": 7290,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "104_VALIDATION",
+      "owner_relative_alias": "t20/sources/openai-corpus-transfer-synthesis/FAMILY104_READING_VALIDATION.json",
+      "sha256": "445a436bf38edd8045c92c5633b8c141c116ca1d8dda6a2c420651070083e814",
+      "bytes": 1567,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_REVIEW",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/review/REVIEW.json",
+      "sha256": "b8cbf708630aa9f4701477c3d95d7eb9e025b041b1383d258552970b3a37b453",
+      "bytes": 1913,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_REVIEW_TEXT",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/review/REVIEW.md",
+      "sha256": "73d79019e20da7fcf602d64f01e664a8c927d9dc664ff2fb7894c0a27b94e723",
+      "bytes": 11923,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_SOURCE_SCOPE",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/review/SOURCE_SCOPE.json",
+      "sha256": "fdf4f753a98c682dacdfc10ea31731616f27a14477fddd473ce713ce0084f07b",
+      "bytes": 11102,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_SOURCE",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/formal/TraceControls.lean",
+      "sha256": "0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2",
+      "bytes": 7373,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_FIXTURES",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/formal/RationalFixtures.lean",
+      "sha256": "5593eb52e66142b99d7f592845fd92096583a3f6cb9fe273ffa306843ddbab6b",
+      "bytes": 1366,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_DECLARATIONS",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/formal/DECLARATIONS.json",
+      "sha256": "df56b3c1d519e0ce0098f44f9939d8f84d66097632ef3d2eaf32500007d8f1c7",
+      "bytes": 697,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_EXTRA_SOURCE",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/review/ReviewerCounterchecks.lean",
+      "sha256": "f29664167903378504944fe0284ae707a0c3461dafe876378de848d08914b3e3",
+      "bytes": 3785,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_EXTRA_RECEIPT",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/review/EXTRA_KERNEL_RECEIPT.json",
+      "sha256": "dbffc52311696797c1cc6efb0b269e50644540398acb436a8713acad1bc5fc4c",
+      "bytes": 1172,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_EXTRA_READBACKS",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/review/EXTRA_READBACKS.json",
+      "sha256": "312e79bd666e200759dda04c84083e8e73cd1f217416502acf1615c28ecb2c1a",
+      "bytes": 24867,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_ENUMERATION",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/review/COUNTERCHECKS.json",
+      "sha256": "c7020513c083a11369321aa4cac3293ccdbe40ac5bc0fc0df16f65e6fd90763c",
+      "bytes": 4762,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "122_DERIVATION",
+      "owner_relative_alias": "t20/sources/math122-observation-controls/MODEL_DERIVATION_AND_PROPOSAL.md",
+      "sha256": "ab2729c1927d164129161f785e1eaa3f4b71c6e32b2eb94f93d17c4cc3f06598",
+      "bytes": 12265,
+      "availability": "Owner evidence package alias; checked in prepared package. Final assembly inclusion must be retained."
+    },
+    {
+      "id": "CATALOGUE_RECEIPT",
+      "sha256": "56385e7e95d7b46683bcdea3e0835b3cd2d752a084105a90f2711dc7252a7194",
+      "bytes": 5330,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "CATALOGUE_CHUNKS",
+      "sha256": "1c9b40f7e36b32ccaa9d17a0267fb2e884f157fedf811e730853660adaefd6dc",
+      "bytes": 17204,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "PRIORITY_MAP",
+      "sha256": "fb194d26ecdcae21f09a86bd2ced89f2c419148bee09c64e3b168b62f041882a",
+      "bytes": 836633,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "CATALOGUE_IDENTITIES",
+      "sha256": "6cb8970889c2a2f29ce7c141e6074b55511cfc79df1402ad2c65cb14802ec28b",
+      "bytes": 665092,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "TRUST_METADATA",
+      "sha256": "298742e33e104af4bcb363670a64c304c09013a4df8728ae1d178900ce6973cd",
+      "bytes": 2098,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "BODY_COVERAGE",
+      "sha256": "2e5b9512ddca1d6e8b21ca03ba3758d4fc4c6e0bc174cc903983f8b2665e6883",
+      "bytes": 4519,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "104_READING_MAP",
+      "sha256": "a6cca4c7492d019b7b06dd64731afdd872c9648e064efc0423f45bacc6a87ff7",
+      "bytes": 151243,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "245_READING_RECEIPT",
+      "sha256": "7e316145a463f27c3b39974bbc4e92820c9b09081ba082f1be632524ceefdea2",
+      "bytes": 91549,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "245_PAPER_REVIEW",
+      "sha256": "6ba9dfca609d1cc5c01846a936a9f1dd1922be3cb2669064d09cd7b918150179",
+      "bytes": 45331,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "245_TRANSFER_AUDIT",
+      "sha256": "fe66e0c6346889d6ed2bed7ea8efd919e1a2339ca1ed9834af819b9345be91d4",
+      "bytes": 23637,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "122_STATIC_AUDIT",
+      "sha256": "91bc9504c5ddaab414cbbf42fa3c25f2396662a3e43a56a5e071caff80772055",
+      "bytes": 5809,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "122_AUTHOR_RECEIPT",
+      "sha256": "068bb6132923f0916f65f52116fa9e96ee7c50f88a03e0de41eafc1c31101c3f",
+      "bytes": 5547,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "122_FROZEN_PACKET",
+      "sha256": "5754d2e4f04d42c1ea1af67c0a10a304271a54e2b1974851240cd7437348b83d",
+      "bytes": 3903,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "122_INDEPENDENT_REPLAY",
+      "sha256": "b3879ade78c66c4fd13df745c1201c43023177d759036751c7a31771c4ba194d",
+      "bytes": 4064,
+      "owner_relative_alias": null,
+      "availability": "Custody record verified for this retrospective audit; body intentionally not redistributed. It grants only the explicitly recorded credit."
+    },
+    {
+      "id": "PINNED_TREE_RECEIPT",
+      "sha256": "8154831ce84478a8cc0d6b3620901d96da40926ddbdc824cad867111dab17737",
+      "bytes": 1216313,
+      "owner_relative_alias": null,
+      "availability": "Custody identity metadata, not a redistributed corpus or new body-reading claim."
+    },
+    {
+      "id": "PINNED_FILE_INVENTORY",
+      "sha256": "996199785a0e784bd0ed3b290dcf8e5210234d34eba719ffd523c9ea7232eca4",
+      "bytes": 45362600,
+      "owner_relative_alias": null,
+      "availability": "Custody identity metadata, not a redistributed corpus or new body-reading claim."
+    }
+  ],
+  "upstream_material_identities": [
+    {
+      "component_id": "MATH-104-STOCHASTIC",
+      "repository_path": "preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026/stochastic-mean-payoff-games.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026/stochastic-mean-payoff-games.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "9822ecf41f16f6c944ae4a97e1a5c2e46d5dcfa9"
+    },
+    {
+      "component_id": "MATH-104-PARITY",
+      "repository_path": "preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/mean-payoff-parity.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/mean-payoff-parity.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "153813d3c3345e6dd62fba419670128cd1459799"
+    },
+    {
+      "component_id": "MATH-104-DETERMINISTIC",
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "bd86aa0e3433b23bde4511da4fc1ce549c1718a8"
+    },
+    {
+      "component_id": "MATH-104-RANDOMIZED",
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "9ca3c44a7c48c2725b89f4ce932786c11f777257"
+    },
+    {
+      "component_id": "MATH-116-01",
+      "repository_path": "preprints/Uniform-Matrix-Hitting-Points-in-Every-Positive-Characteristic-October-4-2026/uniform-matrix-hitting-points-positive-characteristic.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-Matrix-Hitting-Points-in-Every-Positive-Characteristic-October-4-2026/uniform-matrix-hitting-points-positive-characteristic.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "be30187300de8b11c6a5b4f62bd3fc611432b1ea"
+    },
+    {
+      "component_id": "MATH-116-02",
+      "repository_path": "preprints/One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026/One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026/One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "1bec5c48fa4f42404dfce31245d307ad5fc61b89"
+    },
+    {
+      "component_id": "MATH-116-03",
+      "repository_path": "preprints/Polynomial-Hitting-Lists-for-Noncommutative-Rational-Formulas-September-24-2026/Polynomial-Hitting-Lists-for-Noncommutative-Rational-Formulas-September-24-2026.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Polynomial-Hitting-Lists-for-Noncommutative-Rational-Formulas-September-24-2026/Polynomial-Hitting-Lists-for-Noncommutative-Rational-Formulas-September-24-2026.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "ced55bdc7ca5d22f0bae364bd8ea986ef2184670"
+    },
+    {
+      "component_id": "MATH-119-01",
+      "repository_path": "preprints/Sharp-binary-information-contraction-on-the-discrete-cube-September-24-2026/main.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Sharp-binary-information-contraction-on-the-discrete-cube-September-24-2026/main.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "752251c4e74d8ab027dcf8332a9d4bdb0e823459"
+    },
+    {
+      "component_id": "MATH-119-02",
+      "repository_path": "preprints/Hellinger-contraction-with-arbitrary-Boolean-output-bias-September-24-2026/main.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Hellinger-contraction-with-arbitrary-Boolean-output-bias-September-24-2026/main.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "236d9146993885e8b7cd26c2a11f9f1470de5e36"
+    },
+    {
+      "component_id": "MATH-122-DECODER",
+      "repository_path": "preprints/Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026/uniform-trace-reconstruction.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026/uniform-trace-reconstruction.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "cca17cd8900b5eda0252af1126a8423f96a771065d0ccf35b5da500a238915d3",
+      "bytes": 480378,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "d47b37222a6a49e3b680a6158e6a6d3fa8c05ee0",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-122-LATEST-ANCHOR",
+      "repository_path": "preprints/A-latest-anchor-induction-with-spectrally-compact-masks-for-worst-case-trace-reconstruction-October-5-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-latest-anchor-induction-with-spectrally-compact-masks-for-worst-case-trace-reconstruction-October-5-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "579d305ba051329cef924c320ab3f1a8b4d14268"
+    },
+    {
+      "component_id": "MATH-122-LOWER",
+      "repository_path": "preprints/quantitative-lower-bounds-for-trace-reconstruction-September-24-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/quantitative-lower-bounds-for-trace-reconstruction-September-24-2026/paper.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "6b28f84fe939dfe5b740403156413f1d807d1ddad70c38b0f50f12e486dc7596",
+      "bytes": 383366,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "6ebe96a5be9a10dc3f8b32c4137638e90218d4bb",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-124-01",
+      "repository_path": "preprints/A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "123c6c5f245ea4f1668a629127ed08513b288630"
+    },
+    {
+      "component_id": "MATH-129-01",
+      "repository_path": "preprints/An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "c3e8eb27243c6ea785a6f66dbc23f6cd0f3a0cc5"
+    },
+    {
+      "component_id": "MATH-129-02",
+      "repository_path": "preprints/An-exponential-two-way-deterministic-state-lower-bound-for-one-way-liveness-September-25-2026/main.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/An-exponential-two-way-deterministic-state-lower-bound-for-one-way-liveness-September-25-2026/main.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "b2d29b289e89aed7560a9657075ec2c07c4c1779"
+    },
+    {
+      "component_id": "MATH-133-01",
+      "repository_path": "preprints/Parity-lifts-and-bounded-treewidth-witnesses-for-Weisfeiler-Leman-equivalence-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Parity-lifts-and-bounded-treewidth-witnesses-for-Weisfeiler-Leman-equivalence-September-25-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "294f25fb06e70d7f9b7e32acc12ba8d2049679ec"
+    },
+    {
+      "component_id": "MATH-133-02",
+      "repository_path": "preprints/The-complexity-of-identifying-a-graph-by-Weisfeiler-Leman-refinement-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-complexity-of-identifying-a-graph-by-Weisfeiler-Leman-refinement-September-25-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "832aa4b7176b01540e9ff673eb8ebab10ed7c0c2"
+    },
+    {
+      "component_id": "MATH-133-03",
+      "repository_path": "preprints/Unconditional-time-lower-bounds-for-Weisfeiler-Leman-equivalence-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Unconditional-time-lower-bounds-for-Weisfeiler-Leman-equivalence-September-25-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "8adc5d566b3c20da980c3b70f2a3055426906ff4"
+    },
+    {
+      "component_id": "MATH-133-04",
+      "repository_path": "preprints/Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "f7683bc3f228d3871be2ab5c9fb69bbaa4b1e16e"
+    },
+    {
+      "component_id": "MATH-140-01",
+      "repository_path": "preprints/Memory-and-precision-in-noiseless-Gaussian-regression-September-27-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Memory-and-precision-in-noiseless-Gaussian-regression-September-27-2026/paper.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "a46ccc95821da00954309e8fe793099ff82f03eaa4b6c060d5eac5406571decc",
+      "bytes": 585321,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "f9255079e479b800677e4a2cff2374baaeae52fb",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-140-02",
+      "repository_path": "preprints/Posterior-replicas-and-conditional-information-in-Gaussian-regression-September-27-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Posterior-replicas-and-conditional-information-in-Gaussian-regression-September-27-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "5496c9d29f7300ab8706c4dd32f393f9ba27f3ed"
+    },
+    {
+      "component_id": "MATH-140-03",
+      "repository_path": "preprints/Localization-costs-and-information-growth-for-exact-Gaussian-observations-September-27-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Localization-costs-and-information-growth-for-exact-Gaussian-observations-September-27-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "b462c2196dfbbb246353e80114a98824eb7f91f9"
+    },
+    {
+      "component_id": "MATH-140-04",
+      "repository_path": "preprints/Projection-moments-positive-cap-domination-and-Riesz-estimates-on-the-sphere-September-27-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Projection-moments-positive-cap-domination-and-Riesz-estimates-on-the-sphere-September-27-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "724d0568e11b53b7bed03205a370d2c139cb5132"
+    },
+    {
+      "component_id": "MATH-140-05",
+      "repository_path": "preprints/Replacing-Gaussian-observations-in-memory-constrained-inference-September-27-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Replacing-Gaussian-observations-in-memory-constrained-inference-September-27-2026/paper.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "623197ae012dfb0c18f729ac81683eeee6e149eb0be9b729030f1e0f1141c9e9",
+      "bytes": 630529,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "cb6af6023ad32405ca930b1d41fb1d1847f0789c",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-140-06",
+      "repository_path": "preprints/Subsphere-methods-for-memory-sample-lower-bounds-in-noiseless-Gaussian-regression-September-27-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Subsphere-methods-for-memory-sample-lower-bounds-in-noiseless-Gaussian-regression-September-27-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "211a0df0680accf4205348e62b4db5e0a231606b"
+    },
+    {
+      "component_id": "MATH-229-01",
+      "repository_path": "preprints/The-Reconstruction-Threshold-for-the-Ferromagnetic-Four-State-Potts-Model-October-5-2026/four-state-potts.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Reconstruction-Threshold-for-the-Ferromagnetic-Four-State-Potts-Model-October-5-2026/four-state-potts.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "4a1441f84a34affc6b27127da537c93b74793b76"
+    },
+    {
+      "component_id": "MATH-229-02",
+      "repository_path": "preprints/A-Capacity-Criterion-for-Four-State-Potts-Reconstruction-on-Trees-October-5-2026/four-state-capacity.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Capacity-Criterion-for-Four-State-Potts-Reconstruction-on-Trees-October-5-2026/four-state-capacity.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "bd2cde9feb0b1dc3e4637f74585d5033c3368f59"
+    },
+    {
+      "component_id": "MATH-229-03",
+      "repository_path": "preprints/The-exact-reconstruction-threshold-for-the-three-state-symmetric-channel-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-exact-reconstruction-threshold-for-the-three-state-symmetric-channel-September-25-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "68f9dc96e61e0517561555869e6ad85e63d123c4"
+    },
+    {
+      "component_id": "MATH-235-01",
+      "repository_path": "preprints/A-Limiting-Satisfiability-Threshold-for-Every-Fixed-Clause-Size-September-25-2026/article.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Limiting-Satisfiability-Threshold-for-Every-Fixed-Clause-Size-September-25-2026/article.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "031aaa48e475c42928f71cbbf3dd1e611bb20d50"
+    },
+    {
+      "component_id": "MATH-235-02",
+      "repository_path": "preprints/Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026/linear-variance-of-the-random-3-sat-hitting-time.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026/linear-variance-of-the-random-3-sat-hitting-time.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "f287f3015dfbe1fd3f2d1dfba81b99c98997aa44"
+    },
+    {
+      "component_id": "MATH-235-03",
+      "repository_path": "preprints/Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026/article.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026/article.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "5defebcb2ffa5a0dc389c55e61d2118963585cd1"
+    },
+    {
+      "component_id": "MATH-235-CERTIFICATE-SEARCH",
+      "repository_path": "preprints/Computing-the-Random-3-SAT-Threshold-September-27-2026/article.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Computing-the-Random-3-SAT-Threshold-September-27-2026/article.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "be7bde6cd4e513e134ffa36b94506ddd9fd0c13fd9f740d2ebac8494d249c530",
+      "bytes": 612468,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "68db5294b2b32b3cafda90443311d881fa2d95d1",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-242-01",
+      "repository_path": "preprints/Single-fold-Diophantine-representations-September-24-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Single-fold-Diophantine-representations-September-24-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "b9c253ce472a21efbc6aa636730c33d5c541d3e5"
+    },
+    {
+      "component_id": "MATH-243-01",
+      "repository_path": "preprints/Choiceless-polynomial-time-with-counting-does-not-capture-polynomial-time-September-23-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Choiceless-polynomial-time-with-counting-does-not-capture-polynomial-time-September-23-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "7eb0bb3df2e91b02cae7fa8b97d994bbd325938b"
+    },
+    {
+      "component_id": "MATH-243-02",
+      "repository_path": "preprints/Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026/paper.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "d648a0d83b5f41b13ec8fd546b97119e52d525013b6d4a4d00fcaa3c386ddb9f",
+      "bytes": 593898,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "d524f1840d76600c6b9e2a339f6b7e90e5809790",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-244-01",
+      "repository_path": "preprints/The-Partition-Principle-does-not-imply-Choice-September-24-2026/partition-principle-without-choice.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Partition-Principle-does-not-imply-Choice-September-24-2026/partition-principle-without-choice.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "a964a99cdbba4cb2335fb5bd2506ab326c4b5db8"
+    },
+    {
+      "component_id": "MATH-245-PTS",
+      "repository_path": "preprints/Weak-and-strong-normalization-in-pure-type-systems-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Weak-and-strong-normalization-in-pure-type-systems-September-25-2026/paper.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "9db295a439634e3169700af595760553afafc9c5db979de9d2ac27a534af63ef",
+      "bytes": 719425,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "67a758762b22ca12b8eaec890f0254e98c35c1cf",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-266-01",
+      "repository_path": "preprints/The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026/The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026/The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "f875d0608aecd9138f1a027695c69c3b10fab419"
+    },
+    {
+      "component_id": "MATH-266-02",
+      "repository_path": "preprints/Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026/Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026/Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "9bb19ac5f119f87b3b042be5e7df4fe2154472d7"
+    },
+    {
+      "component_id": "MATH-365-01",
+      "repository_path": "preprints/Determination-of-a-metric-and-a-unitary-connection-from-one-boundary-patch-October-5-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Determination-of-a-metric-and-a-unitary-connection-from-one-boundary-patch-October-5-2026/paper.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "8e1bdd3a9067234842406dba45efc9e8efae5be0cd72a6c09f6dceee8793badb",
+      "bytes": 621749,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "14e80a4c2f47149c37f7cbff3b56f51a83338ee4",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-365-02",
+      "repository_path": "preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026/paper.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "2bac21775f17d92731570d7f603444f5d5d08fe6"
+    },
+    {
+      "component_id": "MATH-365-03",
+      "repository_path": "preprints/Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026/paper.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "35017573c88b681f3f029ffb443091aa6fd55d31f6bc7a1b3566e5a6675aa7bb",
+      "bytes": 487936,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "d484e012faf9c491dd6717bf1afa92feae5f7420",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-373-MONGE",
+      "repository_path": "preprints/A-counterexample-to-the-Monge-ansatz-for-the-three-marginal-Coulomb-cost-September-25-2026/paper.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-counterexample-to-the-Monge-ansatz-for-the-three-marginal-Coulomb-cost-September-25-2026/paper.pdf",
+      "local_source_bytes_present": true,
+      "sha256": "46caabb46552913329e6a1a6226ad2dc196bd231d117562d0495f19a5832ae70",
+      "bytes": 322531,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "f2bf6349fc5ee9db3a1c4479996531b793c168eb",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "component_id": "MATH-376-01",
+      "repository_path": "preprints/Finite-Instructions-and-Solenoidal-Shear-Flows-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Finite-Instructions-and-Solenoidal-Shear-Flows-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "6bcb26e296b9c678a576bb1bf2e25f2868cd4b57"
+    },
+    {
+      "component_id": "MATH-376-02",
+      "repository_path": "preprints/A-Fixed-Particle-Test-for-Computation-in-a-Forced-Viscous-Flow-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-Fixed-Particle-Test-for-Computation-in-a-Forced-Viscous-Flow-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "c26efa23df369f4ac028f4ed1e4818b3fb3e60e3"
+    },
+    {
+      "component_id": "MATH-376-03",
+      "repository_path": "preprints/Universal-Computation-with-Eventually-Stationary-Navier-Stokes-Forcing-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Universal-Computation-with-Eventually-Stationary-Navier-Stokes-Forcing-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "6c1877beb2905213bdc483f95221ebc5cd0ede34"
+    },
+    {
+      "component_id": "MATH-376-04",
+      "repository_path": "preprints/Geometric-Programs-for-Solenoidal-Forcing-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Geometric-Programs-for-Solenoidal-Forcing-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "8d235983451e3c6c65767bbbef384f57fe947d4d"
+    },
+    {
+      "component_id": "MATH-376-05",
+      "repository_path": "preprints/Prefix-Instructions-and-Incompressible-Flows-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Prefix-Instructions-and-Incompressible-Flows-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "f28bf108d77f6f9d347cda90371a222b482a549c"
+    },
+    {
+      "component_id": "MATH-376-06",
+      "repository_path": "preprints/Computation-under-Rapidly-Vanishing-Navier-Stokes-Forcing-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Computation-under-Rapidly-Vanishing-Navier-Stokes-Forcing-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "c83d53132d00f02c0b7fa4f49e9e5c22b453a63b"
+    },
+    {
+      "component_id": "MATH-376-07",
+      "repository_path": "preprints/Velocity-Field-Detection-of-Computation-in-Forced-Navier-Stokes-Flows-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Velocity-Field-Detection-of-Computation-in-Forced-Navier-Stokes-Flows-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "7cbb2c8c19e65375cd52dcb97f9f8927bd57449b"
+    },
+    {
+      "component_id": "MATH-376-08",
+      "repository_path": "preprints/Scalar-Potentials-and-Slow-Clocks-for-Forced-Fluid-Computation-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Scalar-Potentials-and-Slow-Clocks-for-Forced-Fluid-Computation-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "7a65d0404abe09530c6c2f211b48a9a5e3e8a2ff"
+    },
+    {
+      "component_id": "MATH-376-09",
+      "repository_path": "preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/manuscript.pdf",
+      "pinned_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Incompressible-Box-Transport-and-Finite-Computation-September-27-2026/manuscript.pdf",
+      "local_source_bytes_present": false,
+      "identity_basis": "Exact catalogue path at pinned tree; local byte digest where present. Acquisition alone adds no reading or verification credit.",
+      "pinned_git_blob": "c8eae2fd6cc36d60cfdae332fbcd44d58f214f53"
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/main.tex",
+      "sha256": "ea80d132d02a04b34f6fdc82e923d223338ee05322f48ddf3c5b888ffff6abcd",
+      "git_blob": "67dee7dde1ceb8883c452dd48e1b0a5fc4d30764",
+      "read_line_ranges": [
+        [
+          1,
+          31
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "67dee7dde1ceb8883c452dd48e1b0a5fc4d30764",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/01-introduction.tex",
+      "sha256": "1b1a39341ec75549f58dc1a540c633fb88efdcd9772763ea16f2fea4cab18646",
+      "git_blob": "d96cccadb855aa53f59afef7d6925ed05f40bc6c",
+      "read_line_ranges": [
+        [
+          1,
+          251
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "d96cccadb855aa53f59afef7d6925ed05f40bc6c",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/02-boxes.tex",
+      "sha256": "99b1870ad8f1438f71cf7c90cf0d3df164ea7de0ae715a8d61ce676ded6c5e7c",
+      "git_blob": "163c9c80c571650333054dda32db838460c72c81",
+      "read_line_ranges": [
+        [
+          1,
+          238
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "163c9c80c571650333054dda32db838460c72c81",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/03-translations.tex",
+      "sha256": "b7b9c3c9b75183984f4a894c1a110ccb2c32d78f33b0f2717a539b996af398e4",
+      "git_blob": "38fc6abe12c7dd2848e37f67ef08ad6ae4894556",
+      "read_line_ranges": [
+        [
+          1,
+          133
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "38fc6abe12c7dd2848e37f67ef08ad6ae4894556",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/04-algorithm.tex",
+      "sha256": "74715cfe52b2223f6bfe7bd7c2c08bb30cbabe7a65753776770d96048b887673",
+      "git_blob": "cf38565ea0228fcc33c2e5506d1265a41837834a",
+      "read_line_ranges": [
+        [
+          1,
+          202
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "cf38565ea0228fcc33c2e5506d1265a41837834a",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/05-correctness.tex",
+      "sha256": "943b070c821020b3934cb2b37f192233e52199584bc1d2ecef2172fab7dfc579",
+      "git_blob": "7a56b46772c193a822997e59baf68c37e2d04c75",
+      "read_line_ranges": [
+        [
+          1,
+          240
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "7a56b46772c193a822997e59baf68c37e2d04c75",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/06-complexity.tex",
+      "sha256": "b841542374a82a78719d2edb7626889205ed9ca3eb0747868b2ebb083426620c",
+      "git_blob": "808f41cca6c7398fd2bc494d6d98c1b02ea99561",
+      "read_line_ranges": [
+        [
+          1,
+          171
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "808f41cca6c7398fd2bc494d6d98c1b02ea99561",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/07-values-and-strategies.tex",
+      "sha256": "774b697e6149f9e601eb9a529995068c965ec75671381dbeafc5f6883ac7a5e7",
+      "git_blob": "1a3aa050cf742e8518c19f0a04207f50bff01e95",
+      "read_line_ranges": [
+        [
+          1,
+          183
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "1a3aa050cf742e8518c19f0a04207f50bff01e95",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/08-energy-credits.tex",
+      "sha256": "66838ce9b976ea47624ca4496bd444abcdb4d02dd8c62a22a1cffbc04f7274d4",
+      "git_blob": "e0326b4990f478ac992e09cc7c47f66c4abb35b6",
+      "read_line_ranges": [
+        [
+          1,
+          177
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "e0326b4990f478ac992e09cc7c47f66c4abb35b6",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/09-tropical.tex",
+      "sha256": "d7f8d5ccc532fd3782c3a39299f545e2371006d867efbe40927e437cfde2d271",
+      "git_blob": "fdbb101d157d53c4a8733eaaa5028a50a2fda9de",
+      "read_line_ranges": [
+        [
+          1,
+          154
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "fdbb101d157d53c4a8733eaaa5028a50a2fda9de",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/build/main.tex",
+      "sha256": "ef2645148275ee4ec350ca8e157c58eadeb86a906ca39b9a22ddcb7d2cca2cf7",
+      "git_blob": "2321ac23c03712683629eb43be67ac449f8f1500",
+      "read_line_ranges": [
+        [
+          1,
+          23
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "2321ac23c03712683629eb43be67ac449f8f1500",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/build/sections/01-introduction.tex",
+      "sha256": "9b8e31f8615dd39c6f3982ebba6f272b4d2c6da12309eb0eef6e6968ec77d2fc",
+      "git_blob": "5caefe70b7ab839d5d20ba32aa5084f8999b44c8",
+      "read_line_ranges": [
+        [
+          1,
+          88
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "5caefe70b7ab839d5d20ba32aa5084f8999b44c8",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/build/sections/02-arenas.tex",
+      "sha256": "9918b0cfc762e5e6606f65b5afeb799c247aed6cf54040674a744ee589187c23",
+      "git_blob": "cb5d2ae245ea4c6bb44d3fd24be80a1d90aa8326",
+      "read_line_ranges": [
+        [
+          1,
+          152
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "cb5d2ae245ea4c6bb44d3fd24be80a1d90aa8326",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/build/sections/03-strategies.tex",
+      "sha256": "ffeaecae4d7eeec441ee6d97dad791068b15521a0b5e8343791deda4c0095ce3",
+      "git_blob": "8c082c20e643093c8f8eed2269b9fd9e011c9a56",
+      "read_line_ranges": [
+        [
+          1,
+          279
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "8c082c20e643093c8f8eed2269b9fd9e011c9a56",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/build/sections/04-algorithm.tex",
+      "sha256": "a4b5043d9f75403d4b8ba0f985a1113fb2c2dfc2b4faedcb15be27ed03804a74",
+      "git_blob": "0f8a562c6da09969de0ab7957789e8ad72321cf9",
+      "read_line_ranges": [
+        [
+          1,
+          215
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "0f8a562c6da09969de0ab7957789e8ad72321cf9",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/build/sections/05-complexity.tex",
+      "sha256": "7640f28b7b55cdc448950b64bb17612276ea6493e0172811352e3bb6c546f921",
+      "git_blob": "c10cda2eeb54f4f34d4e2814c4bebbd13b2259e5",
+      "read_line_ranges": [
+        [
+          1,
+          113
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "c10cda2eeb54f4f34d4e2814c4bebbd13b2259e5",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026/build/sections/history.tex",
+      "sha256": "d3395c5e75eb895f05005802dccbfa3812747399c6f1ae212b240ddebd6bb8ef",
+      "git_blob": "60459d6fc8a2fff29db801e391f512b4337efc46",
+      "read_line_ranges": [
+        [
+          1,
+          75
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "60459d6fc8a2fff29db801e391f512b4337efc46",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/main.tex",
+      "sha256": "e20659ded023e02f3b21df300526078750b99428713546fb3f47c3c5de9a73ba",
+      "git_blob": "6b696aff1e9abe160dcfe30e8630c129f0231947",
+      "read_line_ranges": [
+        [
+          1,
+          35
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "6b696aff1e9abe160dcfe30e8630c129f0231947",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/01-introduction.tex",
+      "sha256": "9f080745b502e41e967201ba23531940994cceb272a293374f067d5458c0021a",
+      "git_blob": "c2f6fcbc353355f3d2723debf49972803c827738",
+      "read_line_ranges": [
+        [
+          1,
+          261
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "c2f6fcbc353355f3d2723debf49972803c827738",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/02-boxes.tex",
+      "sha256": "ae3d4ee9e38fa11262ccc5d0baa61072d641a4a29159b9efbf51eefb6d7df650",
+      "git_blob": "41f1972e57dfb6ad1e6565030c55cb6bab2c0af8",
+      "read_line_ranges": [
+        [
+          1,
+          249
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "41f1972e57dfb6ad1e6565030c55cb6bab2c0af8",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/03-budgets.tex",
+      "sha256": "be62ed1ce50a556fd42ce7227eae12fbbca2c89bc4292283adbbeea0cb964314",
+      "git_blob": "2f3a2f124565ca24aeb1913e6da07a9521772e59",
+      "read_line_ranges": [
+        [
+          1,
+          326
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "2f3a2f124565ca24aeb1913e6da07a9521772e59",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/04-algorithm.tex",
+      "sha256": "897e8101b9ebbd4288d395b0d396586b9246c65622d7386ff3f0ccfab43ab47d",
+      "git_blob": "2f35069cd10c710b201abce74cc88126ac3b87d9",
+      "read_line_ranges": [
+        [
+          1,
+          211
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "2f35069cd10c710b201abce74cc88126ac3b87d9",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/04a-termination.tex",
+      "sha256": "c9f58fc578a2007f872b011fa496f38004c87c05c307031aaf7691712e54125e",
+      "git_blob": "f628bb08243bfdde881596447090948924985952",
+      "read_line_ranges": [
+        [
+          1,
+          116
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "f628bb08243bfdde881596447090948924985952",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/05-orientation.tex",
+      "sha256": "5bda78479a98c40591d431fb2d7ae27e4b97b55ec00d77cb81ed6ad008cf630b",
+      "git_blob": "3aff53a509c0c8e34024a511c511bb05f666cd7b",
+      "read_line_ranges": [
+        [
+          1,
+          698
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "3aff53a509c0c8e34024a511c511bb05f666cd7b",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/06-solving.tex",
+      "sha256": "6a7d2e30b566ae4d52194cf61c3169ead2c14fab1869f01b9e6844db26d409a0",
+      "git_blob": "f534c479bf839a79c8128bfb821fdbda66e15520",
+      "read_line_ranges": [
+        [
+          1,
+          440
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "f534c479bf839a79c8128bfb821fdbda66e15520",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/07-complexity.tex",
+      "sha256": "d67dbf05a9b256b35cb03c3b0c496d48827d0c933a20c26e3a9d280eada72341",
+      "git_blob": "7b1144ef64e4a45affbec4af8a8170dc24b56e94",
+      "read_line_ranges": [
+        [
+          1,
+          267
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "7b1144ef64e4a45affbec4af8a8170dc24b56e94",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/08-conclusion.tex",
+      "sha256": "eab376617ae57e673069cb9003f450a3bbb991cd3e5e4e42d05a49cc7a7dbc2d",
+      "git_blob": "c42ba85ce9cd5b6de8ed3e59c4ed3bf0e5da8ead",
+      "read_line_ranges": [
+        [
+          1,
+          83
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "c42ba85ce9cd5b6de8ed3e59c4ed3bf0e5da8ead",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/build/source/sections/09-comparison.tex",
+      "sha256": "1bc76c1832a2eeddaa4a927b321922137e3c63dfde0a2c2e79ec3b3bf9c6a830",
+      "git_blob": "e84cd5be2cd584c8926e440a3fc5dcda15c8b840",
+      "read_line_ranges": [
+        [
+          1,
+          82
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "e84cd5be2cd584c8926e440a3fc5dcda15c8b840",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026/build/build/main.tex",
+      "sha256": "08eed5ad43c8f25b374d2dbe6d6b19cb140424a9be402cdbd609b2795bd77620",
+      "git_blob": "311371b66bc71be93d220c22d6dc895908b01ef5",
+      "read_line_ranges": [
+        [
+          1,
+          69
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "311371b66bc71be93d220c22d6dc895908b01ef5",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026/build/build/sections/application.tex",
+      "sha256": "1d6e82f0498b62fe3406461c793512b3d2b7c251161eb252a75c585d849e2fbb",
+      "git_blob": "ced4c6d79f96f537a1ea789d61177f50aebe6ffb",
+      "read_line_ranges": [
+        [
+          1,
+          278
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "ced4c6d79f96f537a1ea789d61177f50aebe6ffb",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026/build/build/sections/discount.tex",
+      "sha256": "ee6226b5c369099081a22bb4fc4c6de6e8ae11d0bffc7d4f6781e3f73ac58e58",
+      "git_blob": "c43ee98ab61fff5cc9f39c22a87922865014e66a",
+      "read_line_ranges": [
+        [
+          1,
+          378
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "c43ee98ab61fff5cc9f39c22a87922865014e66a",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026/build/build/sections/introduction.tex",
+      "sha256": "af26d1d41b3bf4c45956d3c63cc0bb7db4308a0f7852091485c6e7d936dd6c13",
+      "git_blob": "6c06e4b06b3275b0e824756e53f585d46ad7d019",
+      "read_line_ranges": [
+        [
+          1,
+          197
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "6c06e4b06b3275b0e824756e53f585d46ad7d019",
+      "actual_git_blob_matches_pin": true
+    },
+    {
+      "repository_path": "preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026/build/build/sections/labeling.tex",
+      "sha256": "53e427d8c6daea40d59a592618270636f1cf7346b678fc7e80fb430c5ca1cda0",
+      "git_blob": "06859f3057e8bd55ade6900d309a79ee571e3f3c",
+      "read_line_ranges": [
+        [
+          1,
+          608
+        ]
+      ],
+      "reading_credit": "Recorded complete substantive source text; not a new read",
+      "evidence": "104_READING_MAP",
+      "pinned_git_blob": "06859f3057e8bd55ade6900d309a79ee571e3f3c",
+      "actual_git_blob_matches_pin": true
+    }
+  ],
+  "original_output_binding": {
+    "path": "MATH_UTILISATION.json",
+    "sha256": "fa8a662b5a899cc4070a61f54dbf43d14a752bf8df84cdc4b6aa94935e5d15af",
+    "body_relation": "Frozen authored ledger identity before the explicit wording projection."
+  },
+  "public_output_binding": {
+    "path": "MATH_UTILISATION.json",
+    "sha256": "d0e73b80d86fd9367c434e7711cb1bb40d5e0f61821db03392b5cd2590b61ff5",
+    "bytes": 216733
+  }
+}

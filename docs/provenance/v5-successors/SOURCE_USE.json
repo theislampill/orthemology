@@ -1794,6 +1794,92 @@
         "T16-SRC-fb9388a841a875bc6076",
         "T16-SRC-1cda3e4399e92ac8dd3a"
       ]
+    },
+    {
+      "basis": "The final dated assessment revises actual common-source weighting while preserving earlier withholding, T19 history and continued universal SourceMode withholding. Original proof statements and evidence are unchanged.",
+      "disposition": "FINAL_SUPPLIED_READER_AND_DATED_ASSESSMENT_REGISTERED",
+      "id": "T20-FINAL-READER-SOURCE_USE",
+      "limitations": [
+        "Owner-only DOCX files and primary source bodies are not repository payloads.",
+        "Final repository workflow, independent whole-diff review and archive roundtrip have their own exact-tree receipts.",
+        "Mandatory exact Docker/Poppler rebuild remains locally blocked; carried-artifact checks are narrower evidence."
+      ],
+      "result_ids": [
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
+      ],
+      "scope": "Finite reading/report addition to the existing assessment owner. No new reading/packaging result, native suite, receipt or independent-evidence count.",
+      "source_ids": [
+        "T20-FINAL-READER-SCOPE-REVIEW",
+        "T20-DOC-64d8e628bb43c3a9270d",
+        "T20-DOC-2fa9f874572d394bfeff",
+        "T20-DOC-e22739ed52e175cf8aef",
+        "T20-DOC-cd2ee30674c29ae395e8",
+        "T20-DOC-f706ff5d91decee4c435",
+        "T20-DOC-c53b1a8e937ca9938486",
+        "T20-DOC-85c5f9bc02142c86236c",
+        "T20-DOC-e6994a667ab613332196"
+      ]
+    },
+    {
+      "basis": "Temporal novelty, intrinsic act tokens, created effects, type predicates and continued possibility remain distinct. Extending the inherited B-bearer premise to intrinsic acts needs an additional application-scope assumption; no old conditional proof defect or change to the 14:34 appraisal is claimed.",
+      "disposition": "FINITE_METHOD_CORE_AND_LATE_INTERPRETATION_REGISTERED",
+      "id": "T20-LAST-APPEND-SOURCE_USE",
+      "limitations": [
+        "Chosen unbounded indexed interpretation, not metaphysical possibility or historical total-cessation attribution.",
+        "Original new source returns and proof/review executions belong to the late research record, not to this receiving integration.",
+        "Native fresh science NOT_RUN; final whole-diff review, clean application and mandatory blocked PDF gate have separate exact-tree receipts."
+      ],
+      "result_ids": [
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+        "T20-EMERGENCE-TYPE-CONTROL"
+      ],
+      "scope": "Retrospective methodological clarification adds no research result or reading credit; one separately checked late representation-control result is registered at its exact scope. Original 261 result/status records remain unchanged.",
+      "source_ids": [
+        "T20-LATE-INTEGRATION-SCOPE-REVIEW",
+        "T20-FINAL-2622a1f5bba53a2d5322",
+        "T20-FINAL-50ddc8deb623dbe4894e",
+        "T20-FINAL-96e1aa1b05c157ba1674",
+        "T20-FINAL-bd52f122013f20bec38c"
+      ]
+    },
+    {
+      "basis": "Provisional actual common-source assent remains; stronger cooperation arguments and exact disputed bridges are distinguished. No full-premise countermodel was produced. Stronger source activity premises narrow historical fit of the reduced-capacity global-inactivity model, not its checked formal conclusion.",
+      "disposition": "DATED_SOURCE_CONTEXT_SUCCESSOR_REGISTERED",
+      "id": "T20-CONTEXT-SOURCE_USE",
+      "limitations": [
+        "No new result owner, Lean execution, native suite, native receipt or independent scientific evidence.",
+        "Prior appraisals, source payloads and scientific reviews remain historical at their exact identities.",
+        "Exact-tree gates, independent review and clean application have separate receipts; mandatory exact PDF rebuild remains locally blocked."
+      ],
+      "result_ids": [
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+        "T20-EMERGENCE-TYPE-CONTROL"
+      ],
+      "scope": "Finite receiving source/statement/context correspondence for two existing owners. Original proof conclusions and statuses are unchanged; independently authored warrant and projection reviews retain only their supplied scopes. No new scientific execution or independence credit.",
+      "source_ids": [
+        "T20-CONTEXT-3a1ea08707761cbd8136",
+        "T20-CONTEXT-c78d082c3509e008a538",
+        "T20-CONTEXT-964b2be656dbaa48bde2",
+        "T20-CONTEXT-bbb68d9fd0f6d9a6b8dc",
+        "T20-CONTEXT-f598e574387edb8b86a2",
+        "T20-CONTEXT-e88685ee1012d5b3360a",
+        "T20-CONTEXT-5915bc19300dd1405533",
+        "T20-CONTEXT-cd9be81b37d908520486",
+        "T20-CONTEXT-d1bcdd9a7d28cd39fb84",
+        "T20-CONTEXT-492877437f2af7bd3275",
+        "T20-CONTEXT-6ed0e70acef4dd26af49",
+        "T20-CONTEXT-5252be35bc2e08fa4f4f",
+        "T20-CONTEXT-fd74f33e8d683d1e9455",
+        "T20-CONTEXT-1e286551fffa954fdcae",
+        "T20-CONTEXT-a78c9a2f04d599a31495",
+        "T20-CONTEXT-2d7713c6089558e29f83",
+        "T20-CONTEXT-3383f4a2c2f0b5b22796",
+        "T20-CONTEXT-abca79f07e511a509cf0",
+        "T20-CONTEXT-5009f0d284bc26e8b8fd",
+        "T20-CONTEXT-db07ac98c02f41dbb149",
+        "T20-CONTEXT-8fe32dc31fccd0ad4749",
+        "T20-CONTEXT-INTEGRATION-SCOPE-REVIEW"
+      ]
     }
   ]
 }

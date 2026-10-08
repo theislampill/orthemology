@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed T07--T16 successor integrity; validation does not adopt research.
+"""Fail-closed T07--T20 successor integrity; validation does not adopt research.
 
 Production CLI anchors the frozen predecessor to an accepted Git object and an
 independently pinned inventory. Programmatic fixture anchors never affect CLI.
@@ -55,7 +55,7 @@ INHERITED = {'NONE', 'WRITTEN_MATHEMATICS', 'CONDITIONAL_PHILOSOPHY', 'SOURCE_AS
 FORMS = {'FORMAL', 'ORDINARY', 'MIXED', 'CONDITIONAL', 'IMPLEMENTATION', 'PROPOSAL', 'SOURCE_ASSESSMENT'}
 CALCULI = {'P01DF', 'P01AC.Has', 'P01AC.Intensional.Plus.HasPlus',
            'P01AC.ExtensionalRepair.HasE', 'P01AC.UnaryCertificate.HasC', 'OTHER', 'NONE'}
-CUTOFF_TRANCHES = {'fifteenth-final': 15, 'sixteenth-final': 16}
+CUTOFF_TRANCHES = {'fifteenth-final': 15, 'sixteenth-final': 16, 'twentieth-final': 20}
 DOMAINS = {'BARE_INPUT', 'SUPPLIED_CERTIFICATE', 'FINITE_MODEL', 'UNBOUNDED_MODEL',
            'SOURCE_TEXT', 'REFERENCE_EXECUTION'}
 REACH = {'NONE', 'WRITTEN_ONLY', 'FORMAL_COMPONENT', 'DECLARED_FORMAL_SUITE',

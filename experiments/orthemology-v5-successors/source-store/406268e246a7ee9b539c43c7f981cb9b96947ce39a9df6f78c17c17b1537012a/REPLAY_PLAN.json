@@ -1,0 +1,2894 @@
+{
+  "schema": 1,
+  "lane": "hidden-change",
+  "custom_objects_reused": false,
+  "modules": {
+    "PruningKernel": {
+      "path": "lean/hidden-change/sources/PruningKernel.lean",
+      "sha256": "d16d51d77c59f0538952e1401e105e699fd6d2648df3aa3db8dbf3c09888a253",
+      "imports": [
+        "Mathlib"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "49c43c520771d95587de1a0bfb1ac0eb4c3a6882087d95bad43cd85cf58b858d",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "EndComponents": {
+      "path": "lean/hidden-change/sources/EndComponents.lean",
+      "sha256": "f4298061653adc768b292363885e1a7b2213ccb56d17d52376762529d35b2531",
+      "imports": [
+        "PruningKernel"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "76ab90b02cc455f6704a7d6eef12f916c9a053ef03ccaf902d8e9c158b2fb466",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "FiniteReachability": {
+      "path": "lean/hidden-change/sources/FiniteReachability.lean",
+      "sha256": "ad50af371e175b27b62f9fe545267dd434ed256ab84b950afdc92b932dc5fd74",
+      "imports": [
+        "Mathlib"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b063d92f065eaa30349738908f13604acc1ac7a83287100f5129528077d91914",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ExecutablePruning": {
+      "path": "lean/hidden-change/sources/ExecutablePruning.lean",
+      "sha256": "3098f76a8065b9a327a4e9763de88428cd4711c79232b87201b7c079ee7789db",
+      "imports": [
+        "EndComponents",
+        "FiniteReachability"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "06e30d038d6c5b7949dcd73b6ac4c2886b34089deebdcd496440f3eb2c207dac",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "MarkovSupportAdapter": {
+      "path": "lean/hidden-change/sources/MarkovSupportAdapter.lean",
+      "sha256": "6c281b2bc6036789a0d342a14df80b1d9c68bcbdf49a1720855d3cd03a46e499",
+      "imports": [
+        "ExecutablePruning"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "6b2d9b4e676dacc2b696a8879c8d3d62c6636f03fcf39a01dfb39e63f39d490a",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "CertificateData": {
+      "path": "lean/hidden-change/sources/CertificateData.lean",
+      "sha256": "e05d663571ba1cdf8e2ad04f19442721d4f03ee5bca46c0ad185e5d2c2f0e0c6",
+      "imports": [
+        "MarkovSupportAdapter"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b0d3e8dd8df47a960aba3d7b27cbdc514b05686ab5eabbf7e6a3f9bf8e6bd947",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "CertificatePath": {
+      "path": "lean/hidden-change/sources/CertificatePath.lean",
+      "sha256": "d8e26f21fa37cd8ddf250ab9b440a1b25da481d201e66f3913ce822620e799f8",
+      "imports": [
+        "EndComponents",
+        "Mathlib.Data.Fintype.Card"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "4c4128ccf18edc4c7837fd95846b8f00889a29c764332b75f63bbabad0ffb205",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "GenericFiniteQueryLocality": {
+      "path": "lean/hidden-change/sources/GenericFiniteQueryLocality.lean",
+      "sha256": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+      "imports": [
+        "Mathlib"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "42b4acb1951d5d4938610a5909473d90298ec5ab058c067ae3f49657ceb6407f",
+        "log_sha256": "14d7221eee78551c233a621599e8e0823bc27a7f32ad56ea89ab5932ae65bd25"
+      }
+    },
+    "GenericFiniteQueryMeasure": {
+      "path": "lean/hidden-change/sources/GenericFiniteQueryMeasure.lean",
+      "sha256": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+      "imports": [
+        "GenericFiniteQueryLocality",
+        "Mathlib.Probability.ProductMeasure"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "6623cf440929c6c839f526c6c78dd3ccd7ef7e6b0ce26078af9b4a97f8aa7cd7",
+        "log_sha256": "b0035d939b9ec0a95b13f3b96c831743415ccd0394b49d793e1a7100fd908e3b"
+      }
+    },
+    "PolicyRowEvaluator": {
+      "path": "lean/hidden-change/sources/PolicyRowEvaluator.lean",
+      "sha256": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "237f8d93547cb1a49856158698efebfd1b1c82152a7e7f4194d43cfee68a16bf",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "PolicyTranscriptFiber": {
+      "path": "lean/hidden-change/sources/PolicyTranscriptFiber.lean",
+      "sha256": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+      "imports": [
+        "PolicyRowEvaluator"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "daaed36effe9303aece81043ba9fe7e798d0a9650a012cd66b6fa893e0ee4e4c",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "FeedbackRequests": {
+      "path": "lean/hidden-change/sources/FeedbackRequests.lean",
+      "sha256": "327eea767c3a2f2ad30e66b2c9c9591b4bb6a1fe7dea39c71c50623cb4b07b38",
+      "imports": [
+        "PolicyTranscriptFiber"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "f3becdc21a91b36fda599b71b5c5bd86f44d9d2e600326a5612d78dd94959a9c",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ProductObservationLaw": {
+      "path": "lean/hidden-change/sources/ProductObservationLaw.lean",
+      "sha256": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760",
+      "imports": [
+        "Mathlib",
+        "Mathlib.Probability.ProductMeasure"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "2a6782617537fccbee2444adcd60af2c2f31e0bbedb86094166e6a1bca9675e6",
+        "log_sha256": "c8c329f663e19c51a88aa51c4a77c9cf772761a32a8b650fa92276a2b2d94a4a"
+      }
+    },
+    "IndependentProductFamilies": {
+      "path": "lean/hidden-change/sources/IndependentProductFamilies.lean",
+      "sha256": "9abc010ebfcfabc85695acd3aef10c1ea7fd5c0527dd215320840d57546b1a3d",
+      "imports": [
+        "ProductObservationLaw"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "4eb66abf62797de8c08a49ac2d6df776deaba7765129db04d14be4df869462ef",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "GenericQueryReference": {
+      "path": "lean/hidden-change/sources/GenericQueryReference.lean",
+      "sha256": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "af71fa9094a205265b80f33571a505b63b50b3a20db40aad621710e234ef9789",
+        "log_sha256": "767ba33c628d1c44c87ead5138c9cf56bd68d710e13ff5381d9d09ed21ecd65c"
+      }
+    },
+    "PolicyRowLaw": {
+      "path": "lean/hidden-change/sources/PolicyRowLaw.lean",
+      "sha256": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+      "imports": [
+        "GenericQueryReference"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "03a34af5d076fd961be054f9f04d3d61a28a5127ecbaa22256974e0153cf9a20",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "FeedbackFiberProbability": {
+      "path": "lean/hidden-change/sources/FeedbackFiberProbability.lean",
+      "sha256": "dbaf6f6cafc94a08bd2f00ca8ecc6c4a253f002b517b52ff58825b944475a834",
+      "imports": [
+        "FeedbackRequests",
+        "IndependentProductFamilies",
+        "PolicyRowLaw"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "14ee2d0387fc74a093e18e71a41be701b42e65be6ff6cbd013f6ec68332ea060",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "PolicyCylinderProbability": {
+      "path": "lean/hidden-change/sources/PolicyCylinderProbability.lean",
+      "sha256": "2fe2e33744bbd7edada29f4faab67f4b63e22efff2945381c1d367a2859c8d72",
+      "imports": [
+        "FeedbackFiberProbability"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "1f2135dd16f483f5a86bd8d0cdca61825f90a7968aae29244ac1c48d414087f9",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HistoryPathConsistency": {
+      "path": "lean/hidden-change/sources/HistoryPathConsistency.lean",
+      "sha256": "2fc036ffd94d213ad5215c447308132dd08edaad19d5f893dd130780382cc146",
+      "imports": [
+        "PolicyTranscriptFiber",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "d43152f7f3a257736341efac1d18eabb32a8a7487597a1cef4a5fbf7a1654263",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "PolicyObservedLaw": {
+      "path": "lean/hidden-change/sources/PolicyObservedLaw.lean",
+      "sha256": "ad890909953de257c58ae2750e7f7710747489936704e0767b77aa0485f59d76",
+      "imports": [
+        "PolicyCylinderProbability",
+        "HistoryPathConsistency"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "cf5c1f598088a68da31ffe5055858d542413a05985181dfe83de9ca6814ef479",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "PolicyTraceBinding": {
+      "path": "lean/hidden-change/sources/PolicyTraceBinding.lean",
+      "sha256": "fe8d6b84a1cd526a6b0a10770aebd52fdbf19b7ae7804f7d2447a33e133e44bf",
+      "imports": [
+        "PolicyObservedLaw"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "50ad6bcac13a0e1afad9ba1ac6b2775629374bc5c3e0bca696b3ab57e2b08bc0",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "StackActionLaw": {
+      "path": "lean/hidden-change/sources/StackActionLaw.lean",
+      "sha256": "6127e1c8362a4c17f8074937d88ffb13b9fdf7de7ad88d64130f8ee3d35a27fc",
+      "imports": [
+        "PolicyTraceBinding"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "e186b8b42c6e1f582f421fee1259ae92abbf8c5b9a22fed17b40f50735798cb9",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "RecurrentSupport": {
+      "path": "lean/hidden-change/sources/RecurrentSupport.lean",
+      "sha256": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899",
+      "imports": [
+        "Mathlib"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "faf8f9614458e9706e85dce37863b42abbeef21a8fbdf2a8036f4637ac7da79d",
+        "log_sha256": "7a31efadf2c9ab86764222464aec38d26da64a0dee92b9a5eabc2c7671b6487d"
+      }
+    },
+    "RawTapeRecurrence": {
+      "path": "lean/hidden-change/sources/RawTapeRecurrence.lean",
+      "sha256": "d8ff5864c4b0697dbd056940503b6913fe8c3256277efc790601b0e2528f5a8e",
+      "imports": [
+        "StackActionLaw",
+        "RecurrentSupport",
+        "Mathlib.Probability.BorelCantelli"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "907d5b639687fbe7511aaef9fe5575cef07b41a65a7727ea8dbf0049f12aca7d",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "SequentialTapeConsumption": {
+      "path": "lean/hidden-change/sources/SequentialTapeConsumption.lean",
+      "sha256": "c06b02171163bd00875060eb97e870673ef689d2e4b0fa6a767324899bc304cb",
+      "imports": [
+        "StackActionLaw",
+        "RecurrentSupport"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "4d1af15c5427ba0b9d073eab22f23c454f2c8f438710228f619491179fdbcf1d",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "RecurrentGraph": {
+      "path": "lean/hidden-change/sources/RecurrentGraph.lean",
+      "sha256": "395d925096b881b32a46cfdf901ffbd73029cfe598a175bf667884cdc2b6436c",
+      "imports": [
+        "EndComponents",
+        "RecurrentSupport"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "6b0f500c9a4bfc5272f8827eb624f6ee59dcd55651b2ff9f5c71a10e2bce9f50",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "KilledQueryLaw": {
+      "path": "lean/hidden-change/sources/KilledQueryLaw.lean",
+      "sha256": "17793ba9787eb9c3fc1618d4acfc368804be8309197156f22d440508f8ad22a0",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "4da478436236f3e9de535fc4c8ce31d11403a33252454d650208d76631565114",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "KilledAdaptiveHistory": {
+      "path": "lean/hidden-change/sources/KilledAdaptiveHistory.lean",
+      "sha256": "ff7c13f5212d6b5f9cfdf64979e664e51934422189528d6169b8a72c57cfff56",
+      "imports": [
+        "KilledQueryLaw",
+        "PolicyTraceBinding"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b9bd5d2ab1c78fffbd20d4adfa70c90270749cc571a35c845ba4b5b48429cd41",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "KilledRecurrentTransfer": {
+      "path": "lean/hidden-change/sources/KilledRecurrentTransfer.lean",
+      "sha256": "5de3075faa5e7041d31cb7c18868c0a91db7ef8d47a0630d26cb63dfcd6dd60b",
+      "imports": [
+        "KilledAdaptiveHistory",
+        "RecurrentSupport",
+        "PruningKernel"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "85f73027df07a01f8b641c9173e9d555aff5a9b3f6b78648ee5d9a0ce41b162b",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "MarkovKilledBridge": {
+      "path": "lean/hidden-change/sources/MarkovKilledBridge.lean",
+      "sha256": "7d828069e42926c9e7acb36bfb683a6b3bd8c6f46907d00ccd8c643e27555c04",
+      "imports": [
+        "KilledRecurrentTransfer",
+        "MarkovSupportAdapter"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "03c44fa4636ee5e22cb9d99fe93c66f4be40e3478c7493e65395b8e0dc8840a0",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "AdaptiveMarkovRecurrentGraph": {
+      "path": "lean/hidden-change/sources/AdaptiveMarkovRecurrentGraph.lean",
+      "sha256": "24cf86efc439d077f7860aabf90f455d75269130094d94c46bc6734bacc2aaf9",
+      "imports": [
+        "RawTapeRecurrence",
+        "SequentialTapeConsumption",
+        "RecurrentGraph",
+        "MarkovKilledBridge"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b8e8de48f6940f0d27a58710f8466aafafea8c9fa23d69c9068f46b0aba01a15",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "PolicyTailTransfer": {
+      "path": "lean/hidden-change/sources/PolicyTailTransfer.lean",
+      "sha256": "a42c82222bd810e4005b536d27d394a01d28b9fcbdb9ab8d53e3c5d6cdc48720",
+      "imports": [
+        "PolicyTraceBinding",
+        "RecurrentSupport"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "d575aa17fa2fa5bddb5e37547bfa5bc8600d6ea7ee969f74c47b4f280c8ab552",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "RelativeTailTransfer": {
+      "path": "lean/hidden-change/sources/RelativeTailTransfer.lean",
+      "sha256": "bd89640236881734ec68ed3f1bc21684b8af6c986683a5530f550a2221d4a167",
+      "imports": [
+        "PolicyTailTransfer"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "3c23ce221f774139aa05b0751d23534cabafc82e4eac69a7fe8db5cf79ea8315",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "SafeSetTailTransfer": {
+      "path": "lean/hidden-change/sources/SafeSetTailTransfer.lean",
+      "sha256": "960293c6ff358b5bcd571b1f24ad62ce43983894836ce8516a24212bb1cd5699",
+      "imports": [
+        "RelativeTailTransfer"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "5464d868c3687c9e72ad82c287bc9a0a65abf6d7f06ff736b0640f66a126b936",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "SelfVerifyingSupport": {
+      "path": "lean/hidden-change/sources/SelfVerifyingSupport.lean",
+      "sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Tactic"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "c374298f87d9a74b9262585054e1cd04b6bf87bbfbc4ba9033d6acaf4e32a489",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "SeededPolicyNecessity": {
+      "path": "lean/hidden-change/sources/SeededPolicyNecessity.lean",
+      "sha256": "d0335e4234a9462aa5f9af7217b78717983539703835041c9a0a334040ede016",
+      "imports": [
+        "PolicyTailTransfer",
+        "SelfVerifyingSupport"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "8ff9af34b04a19b6b3744554d044e03f4c92697ed253f2bddc322107088a49d0",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "FiniteChainAvoidance": {
+      "path": "lean/hidden-change/sources/FiniteChainAvoidance.lean",
+      "sha256": "f7af0f36a68359e8b20b5c85ca527e07191c43686ec345b7d08f582bb4741e24",
+      "imports": [
+        "Mathlib"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "0538eb5863756e6b0b8166795330c4031d9896cf0fece3b6eca4e5eb0983e796",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "dependencies.StatisticalRepair": {
+      "path": "lean/hidden-change/sources/dependencies/StatisticalRepair.lean",
+      "sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Tactic"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "93b51d4a8318e5127657bb80b4f8eec2ee0dd35c4e7356c574efc0ac1a25297c",
+        "log_sha256": "8c4f5bde4fd5621e3c8d2e4ebec5523590879eed4a45e13a5a127fc7fc099886"
+      }
+    },
+    "HellingerTree": {
+      "path": "lean/hidden-change/sources/HellingerTree.lean",
+      "sha256": "3c5dc0288543e481971f9ccdbf811102b191fa4067ff65ed1e0e3cd8e0da06b2",
+      "imports": [
+        "dependencies.StatisticalRepair",
+        "Mathlib.Topology.Instances.ENNReal.Lemmas"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "e6492536f62b81c4b363b1ac7b4485e64e09d60f5f9d9ff4403d53ab659dffa2",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "SubprobHellinger": {
+      "path": "lean/hidden-change/sources/SubprobHellinger.lean",
+      "sha256": "3e56c01155f3f838a3d911426e10746ab4a20b00711c2c4da3a5ff2f7568c8ad",
+      "imports": [
+        "HellingerTree"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "567e07b06781c2a66b6d0ee8659dbfbc134e11d6f0162f3d7fb63d5fb43ad434",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "DependentHellinger": {
+      "path": "lean/hidden-change/sources/DependentHellinger.lean",
+      "sha256": "cfcafcc7e1ebcda71370644b4b89c84a9948353e9115ed2e3a7807b78079a97e",
+      "imports": [
+        "SubprobHellinger"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "abbde594afa11643cff2b1ec4aea2e0bd4b742b835d5d1a7ea878a6505f94e03",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ResetBudget": {
+      "path": "lean/hidden-change/sources/ResetBudget.lean",
+      "sha256": "d482ed24b70fa4501eefcd7878a7889af7b8f3fbf31f8c6de60b77ebffa758b1",
+      "imports": [
+        "DependentHellinger"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "f3d38d03695eebd8239db079100e0da5b42e931601cbb6b47d87bc7d04e1137c",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ResetLaw": {
+      "path": "lean/hidden-change/sources/ResetLaw.lean",
+      "sha256": "f76f752f31565baa5262aa4aafcf21a7f3722d1f74c9681fe6d8a2a50bb02d12",
+      "imports": [
+        "ResetBudget"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "df550024c0736693090ad9742ce3ee36c270090640a2a40592d2a2895c8f5731",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ResetTrajectory": {
+      "path": "lean/hidden-change/sources/ResetTrajectory.lean",
+      "sha256": "c1bae278764e20b67382204474b62e8bba769463f812d5adfc2086b85b303f68",
+      "imports": [
+        "ResetLaw",
+        "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+        "Mathlib.Probability.ProbabilityMassFunction.Integrals"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "28e93e447be01944e4944653a3b38b87a83506fe4e7738ce828d2849fcd61313",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "MarkovCharge": {
+      "path": "lean/hidden-change/sources/MarkovCharge.lean",
+      "sha256": "97e0f881af3140b625d45642c06cecc20dbb49773528f8345dd4c948b1ddfc68",
+      "imports": [
+        "ResetTrajectory"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "9705e93391502c05da152205c4f338e414b44c127e2ad5c5de98073efaf1d2f9",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "FiniteChainTrajectory": {
+      "path": "lean/hidden-change/sources/FiniteChainTrajectory.lean",
+      "sha256": "71acea2c2028a111c1e15ddc85f76f0dd59efb639f9a0372bc35a320c7f4e3ef",
+      "imports": [
+        "FiniteChainAvoidance",
+        "MarkovCharge"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "988036119ad08486826d0e70cb1eb2ea567f11d3d2951d81638230c2fa785d32",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "InfiniteRecurrence": {
+      "path": "lean/hidden-change/sources/InfiniteRecurrence.lean",
+      "sha256": "1792831c1af1628fae2c31b821f40d6d3a67be22303595f66ca14d273223228a",
+      "imports": [
+        "FiniteChainTrajectory",
+        "RecurrentSupport"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "e90f02a7c676a2bdf6a29c686b773067b6d3e7a81b0301795a25b4d42c199b0a",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "StationaryPairChain": {
+      "path": "lean/hidden-change/sources/StationaryPairChain.lean",
+      "sha256": "5b7e23bf7aca12b0529cb77362bf1cb93d54fc1567fe5db7e9d8d000b5d50d99",
+      "imports": [
+        "FiniteChainAvoidance",
+        "EndComponents"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "e8de90eed0275b630d7d22c61de9f263c5d02188b66fe62037bba559058092fd",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "FairComponentParity": {
+      "path": "lean/hidden-change/sources/FairComponentParity.lean",
+      "sha256": "566f01a571617215b71386917896044a7dc150e84130dcd0f92f36e45038f414",
+      "imports": [
+        "InfiniteRecurrence",
+        "StationaryPairChain",
+        "PruningKernel"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "aace7157db8f06a4bd0fe7b8610b43e51fffa78275c42ce77899ff080deddf47",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "CheckedTargetOperation": {
+      "path": "lean/hidden-change/sources/CheckedTargetOperation.lean",
+      "sha256": "d1751ecda2c7730b2580575391486f38a40a9ea0e585d90ad12774da9fb33ff8",
+      "imports": [
+        "FairComponentParity",
+        "MarkovSupportAdapter"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "e46a731c01fdb3c79687043a49e491bcca8d6456096d98ea406a729ab74f708c",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "StableSupportParityNecessity": {
+      "path": "lean/hidden-change/sources/StableSupportParityNecessity.lean",
+      "sha256": "e7efd3c855f5adf29c0a3fce65aac3cadba994e8ccc72f32e2829bc1434f802d",
+      "imports": [
+        "AdaptiveMarkovRecurrentGraph",
+        "SafeSetTailTransfer",
+        "SeededPolicyNecessity",
+        "CheckedTargetOperation"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "459468d0b762124db3d4d71adcf457f1a08e9e5ae335de36c9e359456db0565d",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "StageTargetOrExit": {
+      "path": "lean/hidden-change/sources/StageTargetOrExit.lean",
+      "sha256": "6235ac02c768a8184b5a05b9f30659b2c24cb33e8c52017ef4a61652001e125e",
+      "imports": [
+        "StableSupportParityNecessity"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "2612d9f20a621d48241abb782ab7aa86a0574782b8a7180996dfd2c0d58ffa80",
+        "log_sha256": "7e6ef00856959bd0938114991ca8f8ac6fb274a9be2e67fcde1ba03c2ded2b01"
+      }
+    },
+    "RegionAlgorithm": {
+      "path": "lean/hidden-change/sources/RegionAlgorithm.lean",
+      "sha256": "ca456e211d02a994192809bac318ae3a75684f163daf2f9037346b84517b347a",
+      "imports": [
+        "StageTargetOrExit"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "171c72418fb7e91a3da5c3465d0ae4b3ecfcd57a937e9f980716222a39158817",
+        "log_sha256": "7c3f57cd688617ef91e524c9b24978ff8c03d869b42fa2e133e984a7f4fe8108"
+      }
+    },
+    "HiddenChangeFinite": {
+      "path": "lean/hidden-change/sources/HiddenChangeFinite.lean",
+      "sha256": "37211b5ded947f0b48f46b39c2f9ee81b353e24fafd8bc0944118ea74de94394",
+      "imports": [
+        "CertificateData",
+        "CertificatePath",
+        "RegionAlgorithm"
+      ],
+      "package": "lean-finite-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "6ced844779a7cda592abf44ae50649b9d9d8b667a760ce863f56535ceaf37305",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ResidualSeedPosterior": {
+      "path": "lean/hidden-change/sources/ResidualSeedPosterior.lean",
+      "sha256": "9608772a6948c3dfb69d95659d27b5f6b961aece08ccc09afc594b63cd264ba6",
+      "imports": [
+        "PolicyTraceBinding"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "a6dcfb7676eb9007a950f74e0fbe4780ab9092b9a93d9902d40746f865cc6dfd",
+        "log_sha256": "796777ed3c2198bbabb8eb3d14b1b9ec7ae7e2a8a31ce57aae3a1fc006ac23e4"
+      }
+    },
+    "PosteriorFeedbackProduct": {
+      "path": "lean/hidden-change/sources/PosteriorFeedbackProduct.lean",
+      "sha256": "0f37e47723087f1ad72667012a3abac927ae29162a14625cc58dfae754346115",
+      "imports": [
+        "ResidualSeedPosterior"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "1da990b2acb4fc2804a6c1d0e13151205c1f08b2d39f58a5774b5b08034d116b",
+        "log_sha256": "e9dff739b56f4cef43e74c6e12edf528b5d010cd0b9aa2993e2d322d6b20a914"
+      }
+    },
+    "MarkovSeedPosterior": {
+      "path": "lean/hidden-change/sources/MarkovSeedPosterior.lean",
+      "sha256": "adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0",
+      "imports": [
+        "PosteriorFeedbackProduct",
+        "MarkovKilledBridge"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "6d930df587d0c9ce1f33bc748a065e366acab09b730e46680ce7641fc04ecbca",
+        "log_sha256": "41a16ec32ff640ebbe3138ad784a33bfff0342d0f3f34f144c7a602931f01c34"
+      }
+    },
+    "ConditionalPrefix": {
+      "path": "lean/hidden-change/sources/ConditionalPrefix.lean",
+      "sha256": "987df7f2262b0b2a5e74bd4aee521b3315d61ca97d1e308ef6b10223f20d48f2",
+      "imports": [
+        "ResidualSeedPosterior"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "8a3c6e01e23c9fdeca26e5a4ce93547ebd76c5ea34dddc5003cb74dc98f7bf06",
+        "log_sha256": "5b3b268f0ef06e215c38d37d4de6e6bc0b90bd89450890a39cb5804739d20591"
+      }
+    },
+    "HiddenChangeTaggedLaw": {
+      "path": "lean/hidden-change/sources/HiddenChangeTaggedLaw.lean",
+      "sha256": "93af2d6a58792060dc2cd7a8bd2723f2d5f3b59c8313926666ffbb20f79fe0b2",
+      "imports": [
+        "HiddenChangeFinite",
+        "PolicyObservedLaw",
+        "StackActionLaw",
+        "MarkovSeedPosterior",
+        "ConditionalPrefix"
+      ],
+      "package": "lean-laws-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b2acc33a8813287f2213afe0122564b9970175fb8b54b469b65ca3ced9d2fc13",
+        "log_sha256": "c291ad4cb8c5f3198ec0cf1c3132829fcd40272e59ecbfdeb0e37d4bcb9f834f"
+      }
+    },
+    "ConditionalContinuationLaw": {
+      "path": "lean/hidden-change/sources/ConditionalContinuationLaw.lean",
+      "sha256": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3",
+      "imports": [
+        "ConditionalPrefix"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "2dad1ad81ae9b4a7ee5f9347c56e8c9c6cde7df57fbc5f3ad65c55b9e2918901",
+        "log_sha256": "f4d922460888e560688eba5135c8ec8dcccc74edbc600feba08be9a5e0185c22"
+      }
+    },
+    "ConditionalKilledContinuation": {
+      "path": "lean/hidden-change/sources/ConditionalKilledContinuation.lean",
+      "sha256": "48f69898de357b1cce90acfa6d575cf0688fae41821c8376a4a395bea1ba04c8",
+      "imports": [
+        "ConditionalContinuationLaw",
+        "KilledRecurrentTransfer",
+        "MarkovSeedPosterior"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "7d05ff2422610d570bace7f53cf2fdc4ad344c8ceaaf8bf3cc2242149b167e2c",
+        "log_sha256": "bd0b225cba4f5766a863528e86afebedce48a3f53917baef24b0d50dcc0476f8"
+      }
+    },
+    "HiddenChangePrefix": {
+      "path": "lean/hidden-change/sources/HiddenChangePrefix.lean",
+      "sha256": "68e3fa0145d194dc4d8532eb99237af170cb8736ba964ea8ea752bc0c04736bd",
+      "imports": [
+        "HiddenChangeTaggedLaw",
+        "ConditionalKilledContinuation"
+      ],
+      "package": "lean-laws-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "17112957fbfc01f68a3896c0fccf56e60a8f1f5f16ea1719d0f632f9660b6f19",
+        "log_sha256": "b510093673ca5fbd3178b981e2f5c4dc7461c0d11bf16cfe5df69bc5ac3d8e94"
+      }
+    },
+    "HiddenChangeTailTransport": {
+      "path": "lean/hidden-change/sources/HiddenChangeTailTransport.lean",
+      "sha256": "7ef35cb6890a6b3f721188d3fe569ea2b49faf06001403fbe89b3d4790aa333c",
+      "imports": [
+        "HiddenChangePrefix"
+      ],
+      "package": "lean-laws-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "375852f3d58712582515fe6f0751f4d217b7c6542ba477765cfe5775e5af32dc",
+        "log_sha256": "51b112c555d6e14b5fa008b4d4202179af4f6a7675449d7564845b0784cc0c81"
+      }
+    },
+    "HiddenChangeCertificate": {
+      "path": "lean/hidden-change/sources/HiddenChangeCertificate.lean",
+      "sha256": "da30bbf05e29a8924afc6aead60e6dfde1664c30cff8994a350c31233f469c0e",
+      "imports": [
+        "HiddenChangeFinite"
+      ],
+      "package": "lean-finite-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "7ca42677186b2d98c7fe2a09b26d4f13f72f45df38ed813a23758f1e96ba9ae1",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangePolicyRegions": {
+      "path": "lean/hidden-change/sources/HiddenChangePolicyRegions.lean",
+      "sha256": "6c0b651c0910d309529007929d34e619617b3a2af51e64007033f265ffa1f20f",
+      "imports": [
+        "HiddenChangeTailTransport",
+        "HiddenChangeCertificate"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "3f32cf08f41a0684a13b3060c0493887dd2f24f8f489e8ea2bfcad156220e799",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangePrefixSafety": {
+      "path": "lean/hidden-change/sources/HiddenChangePrefixSafety.lean",
+      "sha256": "850b3c60a6c6f7e44807a4e50bdae1f3789962a52b6716622fc06a08db5a14b5",
+      "imports": [
+        "HiddenChangePolicyRegions"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "ef84399ad9a685814cafebbed8ddccb8846d6de9c966b42599d5d3bbd26da94b",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ParityTailInvariance": {
+      "path": "lean/hidden-change/sources/ParityTailInvariance.lean",
+      "sha256": "1dc8c0e40a86a205498af32bd7c4a0d96afca6020f2fbd321e21fae2beee0077",
+      "imports": [
+        "KilledRecurrentTransfer"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b288df14e68ac142eb93e8884237fba987358b77619900d82badd21d6a2e0564",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ConditionalAlmostSure": {
+      "path": "lean/hidden-change/sources/ConditionalAlmostSure.lean",
+      "sha256": "06d403f36ee3cb95094a53b4a53eea72810565fc66ac1fb0607fef9b01922a9b",
+      "imports": [
+        "ConditionalKilledContinuation",
+        "ParityTailInvariance"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "c3fd38810c93580bdb916ac2f65b6f84fb1dad79c5e34b039e843d6df27d1880",
+        "log_sha256": "94f9eabce5f8ce2d76d65e37717af57f6bdff8ccfde7c4102077de70fa28b690"
+      }
+    },
+    "HiddenChangeConditionalSafety": {
+      "path": "lean/hidden-change/sources/HiddenChangeConditionalSafety.lean",
+      "sha256": "d4f0c77ecbdfd87f00cf225235c419dd2a3525d1f9e84eda051f69d9b09f2566",
+      "imports": [
+        "HiddenChangePrefixSafety",
+        "ConditionalAlmostSure"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "d7b9562c25182621cce84e9986a437e9bb908b94e3459b7d6f607653f224dffe",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeParityBridge": {
+      "path": "lean/hidden-change/sources/HiddenChangeParityBridge.lean",
+      "sha256": "464055b56abd1d1191fce18c116cb9c4c01227ceb056ba7e8d0f956d208dd5e3",
+      "imports": [
+        "HiddenChangeConditionalSafety"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "aa0edfed0ed778d08ab9caba3d155f0f00bc19dfc5daea00872d9f7d426e39e6",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeKnownProgress": {
+      "path": "lean/hidden-change/sources/HiddenChangeKnownProgress.lean",
+      "sha256": "345c6c01770f9e5169679f738183f7f5e79a4dad29ea9eb0c4216375af046fd2",
+      "imports": [
+        "HiddenChangeParityBridge",
+        "StableSupportParityNecessity"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "e40c355a41757ed473049472743b17055d704d1d584cdb6e1e9a6e6391ab650f",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "RoundRobinSchedule": {
+      "path": "lean/hidden-change/sources/RoundRobinSchedule.lean",
+      "sha256": "21db947de0a6f06908487f50d6ca0038c9337aed7184cd2dc0eb929982f93e2b",
+      "imports": [
+        "AdaptiveMarkovRecurrentGraph"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "ed2fe58af08b0f28e82c04eb5ab65101f776dbd727640b65534c0f6a5058f096",
+        "log_sha256": "3f1cbf002a99082b5d07b7b8d820ee11db7ed9182f043b5f03fd6cfa98a6687f"
+      }
+    },
+    "LawfulRestart": {
+      "path": "lean/hidden-change/sources/LawfulRestart.lean",
+      "sha256": "f163f76a1fdab9b12bd96122780339901fcb76b5a3c75cdec56b8d3d505e32dd",
+      "imports": [
+        "StageTargetOrExit",
+        "ConditionalKilledContinuation"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "f2f2ba7f051c99992ff74d281a56813155b5b7a64dc9aee42eb7b2378586d8be",
+        "log_sha256": "6fe310a009011c9c44596e7c2784c123bcd2dc5795e42cc75da3bb8063e01b38"
+      }
+    },
+    "LawfulProbability": {
+      "path": "lean/hidden-change/sources/LawfulProbability.lean",
+      "sha256": "feef9755524c9f08ad782339f0c60cbbd5c82391d992b48d59d30e191b1da17e",
+      "imports": [
+        "LawfulRestart"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "c2f7a296586ef24dd4ceae6b0ef1f79bea3bde0dc5c5f4219e92b955241d45a5",
+        "log_sha256": "7003f74ebe2a689d5ddced5f102899929a00f324ac853380ba339b0ba1d06d5a"
+      }
+    },
+    "SemanticWinning": {
+      "path": "lean/hidden-change/sources/SemanticWinning.lean",
+      "sha256": "a759594adc211fdce0e9013a1d680fabd89983a0202885d8658b7e72477b4252",
+      "imports": [
+        "LawfulProbability",
+        "ConditionalAlmostSure"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "7b3737bdc318b3ece10c80599392f8b7f51cf795bd581bca026c013f1934a92f",
+        "log_sha256": "2a5ca6ea4d031c748559b167e3fb48930414dc375ab1df0fa3000d4ed0218878"
+      }
+    },
+    "SemanticSafeActions": {
+      "path": "lean/hidden-change/sources/SemanticSafeActions.lean",
+      "sha256": "66b166d81fd29f864f7dd81f0af6a67f07c4c35ab709fe67eba52bd1b20bc55b",
+      "imports": [
+        "SemanticWinning"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b7b8d786ff4e4bc68475eb04feb90100028c1516a9350fb8699001b0b50eed58",
+        "log_sha256": "32e96f9f4192219111e4b78dbfd85b8ccd59fe53d0575a77b17186a0864615b2"
+      }
+    },
+    "HistoryStageSafety": {
+      "path": "lean/hidden-change/sources/HistoryStageSafety.lean",
+      "sha256": "2870a3c2d0dd125a59b49600e0fa0853e8d5c46a98153f27846a9f43f860bea5",
+      "imports": [
+        "SemanticSafeActions"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "c1c11cb33bcb1dda7586e5fe4aa410f7a93dab88dbbadd746f43ed8ad5b9b379",
+        "log_sha256": "1e75c60b413ce8b0237ee41ba0dc08481221d08e6e923bc44167890ec65ae8a3"
+      }
+    },
+    "RoundRobinPolicy": {
+      "path": "lean/hidden-change/sources/RoundRobinPolicy.lean",
+      "sha256": "210a5417479100f010c2c38954c89d551a1c1d52b0d8d784e6fa8e8c94245ea1",
+      "imports": [
+        "RoundRobinSchedule",
+        "HistoryStageSafety"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "2ea50a7799814c0b9369d40455ec232b7f44c608794c4bb1c07699ae93669d51",
+        "log_sha256": "72b9cadb8709fd695b494ee4d405d1bf50b5369e619abb6923835c56bf26d29b"
+      }
+    },
+    "RoundRobinRecurrence": {
+      "path": "lean/hidden-change/sources/RoundRobinRecurrence.lean",
+      "sha256": "94da50ee38d07888783573e1d78ece8dac5c58871f2e0c3ac5f6dea77008fc4c",
+      "imports": [
+        "RoundRobinPolicy"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "35aedda7c75427ae607e548d9141e6df962cea46acf368af15e851850d0f973c",
+        "log_sha256": "9a80626fe0a7514500e293ec77d3a37c50e080545d9d875a9d7b0ad6909a00d2"
+      }
+    },
+    "GlobalParityNecessity": {
+      "path": "lean/hidden-change/sources/GlobalParityNecessity.lean",
+      "sha256": "7b54bfb8cd869bbe72f7ebeb42504a616c216a1912d09a6fc0d2ab35ca9d39c3",
+      "imports": [
+        "HistoryStageSafety",
+        "RegionAlgorithm"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "85f03c41ec92aea7838246dc00b13fc20fa466914f97033189badaa508d6b250",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ActualTargetPolicy": {
+      "path": "lean/hidden-change/sources/ActualTargetPolicy.lean",
+      "sha256": "7040e104fbb268ae6dea93fbd21f1db8bccc56bd5f04910b9d43c64597d0da74",
+      "imports": [
+        "RoundRobinRecurrence",
+        "CheckedTargetOperation",
+        "GlobalParityNecessity"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "655803361255cf59533c885a1c3f9aaf5ee53f123812352a3b5fce6ca870814a",
+        "log_sha256": "622b85789c69cb9cce817b51fa58b5a10a3977659a2e42bdd27e857e47ceac08"
+      }
+    },
+    "RawEmpiricalRows": {
+      "path": "lean/hidden-change/sources/RawEmpiricalRows.lean",
+      "sha256": "dbbc16fe32b75bfcd3d1575175cfc857b45926f48533f2317a044cb30cc95d6b",
+      "imports": [
+        "StackActionLaw",
+        "Mathlib.Probability.StrongLaw"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "23a6fa0465972cac46f4050ba6c84790a671bfbe9e61b33856543d1fdfeb21a3",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "EmpiricalTailBounds": {
+      "path": "lean/hidden-change/sources/EmpiricalTailBounds.lean",
+      "sha256": "76d70084a57a2beb4b41784b3c93fd248d732b7422055aba2fdafdaf7957f993",
+      "imports": [
+        "RawEmpiricalRows"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "571ee265733651e94070bed10c13f52fcd9cb109525f58c66fda98fa10ee449b",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ObservedEmpiricalRows": {
+      "path": "lean/hidden-change/sources/ObservedEmpiricalRows.lean",
+      "sha256": "90ba0fd6a17d86323b83185acd96a639fe584407d2496dad678aed08bc74717e",
+      "imports": [
+        "EmpiricalTailBounds",
+        "SequentialTapeConsumption"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "2dd3501db27f7d9b390fbc40eacbc56614e7334838fe174c789577a58d48dd6e",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "ObservedRowTest": {
+      "path": "lean/hidden-change/sources/ObservedRowTest.lean",
+      "sha256": "e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee",
+      "imports": [
+        "ActualTargetPolicy",
+        "ObservedEmpiricalRows"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b891b48267e3f3678bb434ffba0660393ed1cb446429e2134ae6e775c65ae141",
+        "log_sha256": "c1e32740e07a91fcbde4177ce1a05d0bf079b733a5b92625aac15bd4116e6bbe"
+      }
+    },
+    "EmpiricalTestLaw": {
+      "path": "lean/hidden-change/sources/EmpiricalTestLaw.lean",
+      "sha256": "81f3343152589ab4d36d10ccc487f2bbf8c251bd6a2e95cf50826d59fff88da6",
+      "imports": [
+        "ObservedRowTest"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "1894948acb511b2ae3834a2728027e26f1b929adb36657e7d78e98afae12bfa0",
+        "log_sha256": "2a2c7fcfd7d37695148438d374421ec474bc020e8f6d539744b30a8a73cc03f1"
+      }
+    },
+    "RationalTest": {
+      "path": "lean/hidden-change/sources/RationalTest.lean",
+      "sha256": "87cfb72769c42a459d47eb0c7e3468882ba196abcb709f79fd5febbc34b8d2dc",
+      "imports": [
+        "CertificateData",
+        "EmpiricalTestLaw"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "67e912972e29640b86f318abf11cdb996b658a79f477b325892156ffa09dad51",
+        "log_sha256": "8316a505cb60347e36e07e79dbad40e4360e59debf8ff08126f9863fac230eb4"
+      }
+    },
+    "HiddenChangeContamination": {
+      "path": "lean/hidden-change/sources/HiddenChangeContamination.lean",
+      "sha256": "395ab119cd2e4eb25902492cafad8153563a126ae81cad8a4d0bf88bb97ef6d4",
+      "imports": [
+        "HiddenChangeTaggedLaw",
+        "RationalTest"
+      ],
+      "package": "lean-laws-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "c9666b2d3204d775ac66dfa59db1b0b6f1f9f8751572d45b58f777ef9c3a6467",
+        "log_sha256": "c66df4d4288df0ae3575d5b0b821e6a7fe4efc960bca02eb2a5eeed9b110d87e"
+      }
+    },
+    "HiddenChangeActualRecurrence": {
+      "path": "lean/hidden-change/sources/HiddenChangeActualRecurrence.lean",
+      "sha256": "67c260c32c7d6db10fec65451d9efe09574bd1a0027c99fdb7f34965548d85b3",
+      "imports": [
+        "HiddenChangeKnownProgress",
+        "HiddenChangeContamination"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "800a1370e6eacbce34f86bf1361bafa645b01470c583d82ee86a0fa8d18a18d6",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeBinding": {
+      "path": "lean/hidden-change/sources/HiddenChangeBinding.lean",
+      "sha256": "35963bfdab6f60e730e76711921b358ecd0e136293c1fb98233b49155e18c428",
+      "imports": [
+        "HiddenChangeCertificate"
+      ],
+      "package": "lean-finite-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "5d4ef17772733c443979e759b682392664cca82e2f1449fe137b8ff6ad8e4b43",
+        "object_sha256": "ae2d4b437a980efc6984cc7a9553ec5deb4dead2fc2a60eb7963a39fed9ac302",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "OrderedCycle": {
+      "path": "lean/hidden-change/sources/OrderedCycle.lean",
+      "sha256": "d9d8d6acb612c51d2fb4c8a93013304ca8452f4de40edccfc23083e0208d82ea",
+      "imports": [
+        "Mathlib.Data.Finset.Sort"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "7dd12a2993100ceeeb5ad64a3340d3f033756dd25275cfa4777061f051cfdc40",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "StageAvailability": {
+      "path": "lean/hidden-change/sources/StageAvailability.lean",
+      "sha256": "8e0df2c695b21d91c2473f200317ebd5c4cf3f8203b34f93f5ec4c77d9a9312a",
+      "imports": [
+        "ActualTargetPolicy"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "74b06463a64f03d079e0097999ec1edccdc1c841b8ff29529ff29227d18ead9b",
+        "log_sha256": "8e2030c54817b98a16361b71c9c79cada137d8e2ec37c8bfbe65e50a46a3533d"
+      }
+    },
+    "FairStageNavigation": {
+      "path": "lean/hidden-change/sources/FairStageNavigation.lean",
+      "sha256": "c497220e36e59578dc8d1efa53bfac17014446fcc84826f3af37f270d9f6e8f3",
+      "imports": [
+        "ActualTargetPolicy"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "1f520d1a045e904dbe2850c53a6259b9aa90a39b39cca3f790467164dc699658",
+        "log_sha256": "da91773160424b4a661b2cab539d06a126222f6aa3218bf4faddc4a516934d15"
+      }
+    },
+    "EventualCycling": {
+      "path": "lean/hidden-change/sources/EventualCycling.lean",
+      "sha256": "eb29e22c35c3a366d440669da516663f9fe56601794f98ba8dbc81958ab7d5b7",
+      "imports": [
+        "FairStageNavigation"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "c028a64d8c8d32a112a6cb1d9b6444021688c60906c3b7d7323d649da02192d3",
+        "log_sha256": "89bfa49eb189f70212f39bbd02dffe2e933a71f0c1438214902a0a7c3121d088"
+      }
+    },
+    "ObservedPhaseController": {
+      "path": "lean/hidden-change/sources/ObservedPhaseController.lean",
+      "sha256": "9814025d9195fe98c7df8a8839fd37b8696f0b61d3970cb3dd61cb257a0009f1",
+      "imports": [
+        "StageAvailability",
+        "EventualCycling"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "39e88887bd03db5e623f10ed647b4944ef54641322f0fc7622f3d8f6ff1ccec5",
+        "log_sha256": "0ad64aded49225b18ed1afb75990570cb35d234a848e877a6b7f2e4298624250"
+      }
+    },
+    "HiddenChangeController": {
+      "path": "lean/hidden-change/sources/HiddenChangeController.lean",
+      "sha256": "d90f24efa921a51bd0f81b81365a407f7b5d5a0e2e17d73b7d597e8d5963f994",
+      "imports": [
+        "HiddenChangeCertificate",
+        "HiddenChangeTaggedLaw",
+        "RationalTest",
+        "OrderedCycle",
+        "ObservedPhaseController"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "3e5dcec275e792906371e2154340889c14ecf1377a64d78bf7f5569b488bc234",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeControllerSafety": {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerSafety.lean",
+      "sha256": "9cd9993d4c5a1087282c28a82d1fe2fa52414bebfc3aceaa207382686121b423",
+      "imports": [
+        "HiddenChangeController"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "0413afeab5a7fc9881c7fa8cdbefb90f43f2c5c3d729e6d7d4abbde54a8fd334",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "PhaseStabilization": {
+      "path": "lean/hidden-change/sources/PhaseStabilization.lean",
+      "sha256": "b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183",
+      "imports": [
+        "RoundRobinSchedule"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "a60dbc68555768a12ff128143802fe971effd64498f645fbf591b8a9cc7c7302",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangePhaseArithmetic": {
+      "path": "lean/hidden-change/sources/HiddenChangePhaseArithmetic.lean",
+      "sha256": "e2a1290ebf8beafef4356449cdf5799980068af8d38626e3960869df94177b30",
+      "imports": [
+        "PhaseStabilization"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "6049396bef48cec4a3f45f9788731bf8fcf0ada9d423afda80009b9761d48d3c",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeControllerDynamics": {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerDynamics.lean",
+      "sha256": "73b7076ec67e3a60bea1627928088c0edf8decaa53f41b96f4c782639f4c884b",
+      "imports": [
+        "HiddenChangeControllerSafety",
+        "HiddenChangePhaseArithmetic",
+        "PhaseStabilization"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "080c09a27171613fb7f44b5b3e114f905c2d36be3a70bc3edd04eb927264301b",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeFixedIndex": {
+      "path": "lean/hidden-change/sources/HiddenChangeFixedIndex.lean",
+      "sha256": "3b218331b2d9f040763097702b15bac7488a2939930a7039e0682afdeedace49",
+      "imports": [
+        "HiddenChangeTaggedLaw",
+        "ParityTailInvariance"
+      ],
+      "package": "lean-laws-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "7e056b890c0de033e9e2c477d653ad071e64400a4c4995c16c75a4d5294e8940",
+        "log_sha256": "bc407d9285162493aea57a2c010283e6a8491327b2f9080a7c0cd991781d7cdc"
+      }
+    },
+    "HiddenChangeControllerActualLaw": {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerActualLaw.lean",
+      "sha256": "a23216ba3eb1eb6ded572ce7068d246065bb375a260e41e3f952bb7088e17c42",
+      "imports": [
+        "HiddenChangeControllerDynamics",
+        "HiddenChangeContamination",
+        "HiddenChangeFixedIndex"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "7654276b7474d7be1ffe7511a676ddbe88379ffd7366bd3c02eac912a5614c33",
+        "log_sha256": "dc85718c54f285021b0c1ac30181d20b17e41f89cf8fdfe999c2ccbd45c2563b"
+      }
+    },
+    "CertificateOrder": {
+      "path": "lean/hidden-change/sources/CertificateOrder.lean",
+      "sha256": "11975a5518aa70a8b3cb264a07b155611dfc84992a75fc4fe2a417e46813bb0e",
+      "imports": [
+        "CertificateData"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "c86afdbc629bfb3acd242a1cf45f904f7943cf0ab00776d4963021b752d37c1a",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "CertificateSyntax": {
+      "path": "lean/hidden-change/sources/CertificateSyntax.lean",
+      "sha256": "e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a",
+      "imports": [
+        "CertificateData",
+        "CertificatePath",
+        "CertificateOrder"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "bb0d11aad29928417404b4e09c6549e06d7f12ee5ed110431c180f6af9b9a5b0",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "GeneratedPolicySafety": {
+      "path": "lean/hidden-change/sources/GeneratedPolicySafety.lean",
+      "sha256": "6a52c99c8bfe581ed13dcec6a396dcb7227656e6eba937a4cf73c7e36a8f4100",
+      "imports": [
+        "ObservedPhaseController"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "89b3dfd9d6c910313a742c390f078df48d230fdd42c90def8b0407a81965689a",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "StackPathRegularity": {
+      "path": "lean/hidden-change/sources/StackPathRegularity.lean",
+      "sha256": "fee7903917eff18207791b8d6c3679ad671e14873c025b2ff71987fe265fbaf2",
+      "imports": [
+        "EventualCycling"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "56486be403741d59736b66d0f6303065d57bb8aa82a55a80b5b761cb828803c4",
+        "log_sha256": "e45c25623b81d65f5286f190292caf4975a70fbe69527191ffdfcf0c36b36718"
+      }
+    },
+    "GeneratedRun": {
+      "path": "lean/hidden-change/sources/GeneratedRun.lean",
+      "sha256": "bdd551d8c61ae4c78332b957eba7ecab5718747747a51a91902ea55e2306aca9",
+      "imports": [
+        "GeneratedPolicySafety",
+        "StackPathRegularity"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "8d98d5d9fb9db27b670a09b564a8a8dee1474682e97214e1b8da0186883f0f45",
+        "log_sha256": "11d220e4c113295aadba3a8a34af244667dfda834eb3d0b543d2a46f6d83fc82"
+      }
+    },
+    "MemoryTransitions": {
+      "path": "lean/hidden-change/sources/MemoryTransitions.lean",
+      "sha256": "3fd4a3d8e4a7a2c74343087c8f3a31714b569ff209b3d63b9764f70c2462fe25",
+      "imports": [
+        "ObservedPhaseController"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "cd7a42da7af1dfc0537cba734696b1109b807b494a55187bb20b1ae954d52b67",
+        "log_sha256": "1fa7a6c9f4315e93609f9d1039dce7fb55e6f0b48be8653b1b7f6f770da64184"
+      }
+    },
+    "GeneratedPhaseDynamics": {
+      "path": "lean/hidden-change/sources/GeneratedPhaseDynamics.lean",
+      "sha256": "3c52bf3ff7d270ef0343f1d41223b3aacc8a748df216d130a580ff338dd94174",
+      "imports": [
+        "GeneratedRun",
+        "MemoryTransitions"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "1a20d8bae326a2f98f499b305fcad87d93f5f6525ab9055287fad49321e1b3b5",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "GeneratedPhaseStability": {
+      "path": "lean/hidden-change/sources/GeneratedPhaseStability.lean",
+      "sha256": "df0a80d810a176bb32b8a5574039115e823bfbeaa588a3ed23a52a7d7aa10a91",
+      "imports": [
+        "GeneratedPhaseDynamics",
+        "EmpiricalTestLaw",
+        "PhaseStabilization"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "20e633963c352190c19ecf31a340c3a2016665bddb801624a7c54cab794a7e21",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "GeneratedParitySuccess": {
+      "path": "lean/hidden-change/sources/GeneratedParitySuccess.lean",
+      "sha256": "db9ec6cae92ba47810fd360afa3eda2b4447327378a032b17d87afef743a67c4",
+      "imports": [
+        "GeneratedPhaseStability"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "7f060f00c4e72ba38e870425bb28113f9ddce9ca78cb7f3c8047a93c3d887bdf",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "GlobalParitySufficiency": {
+      "path": "lean/hidden-change/sources/GlobalParitySufficiency.lean",
+      "sha256": "4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3",
+      "imports": [
+        "GeneratedParitySuccess"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "0c009b4c0b299ad59835371479a9787c63e374e3a352a817aea4ef1ddf5d6c74",
+        "log_sha256": "ff2ed9446de4c844312ba0450d7ebdd9b41f13648ec4beee156e9d56b9b08212"
+      }
+    },
+    "CertificateSoundness": {
+      "path": "lean/hidden-change/sources/CertificateSoundness.lean",
+      "sha256": "399829e271d3b6db65cfd077a68c15ad9a2e2f4d59d3957a2f30b6f2cd37a4ba",
+      "imports": [
+        "CertificateSyntax",
+        "GlobalParitySufficiency"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "a901d8751c66c9f73c26e5b85b919b6522063e233efd29a7f7e38b2ab2fb5fac",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "StageFamily": {
+      "path": "lean/hidden-change/sources/StageFamily.lean",
+      "sha256": "71a3ace147651ccf67befba32bcdd2d10da98dbf662cc61c548b9fe86214e89e",
+      "imports": [
+        "CertificateSoundness",
+        "OrderedCycle"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "2a798024d5e03e0e8d52de0d39fc16895b7547bfc5c110ec8b81c8f59bc45bef",
+        "log_sha256": "8097379f3a46355e0f3c60d85c95b35b1f9d7f0f4545f688b53d8609692696c9"
+      }
+    },
+    "DirectController": {
+      "path": "lean/hidden-change/sources/DirectController.lean",
+      "sha256": "c68605b22b1c74bdacaec0c586e35f19e80a7154d3d31b3c2edac05feda0f5a5",
+      "imports": [
+        "StageFamily",
+        "MemoryTransitions"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "9174102b5a21ea45ba5f1144799608baefd5e9c5d52bdcf2c913c04380959e0c",
+        "log_sha256": "b1d28ae1997aa829e40ab21002d71184d16dc30f65f8b7ab26379c9a04961cf5"
+      }
+    },
+    "DirectCycling": {
+      "path": "lean/hidden-change/sources/DirectCycling.lean",
+      "sha256": "d262dda33bda02d989f65753e312e58cf451fafe1ed70fbc32b7d66184f72dd0",
+      "imports": [
+        "DirectController",
+        "PhaseStabilization"
+      ],
+      "package": "inherited",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "4f5ca6a8a31144834064e912b30c0eab1304044d992c7b3bd816e060d27c4e5c",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeControllerGraphs": {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerGraphs.lean",
+      "sha256": "cd06fcf2cf79a7ba39b07f1d897f0d52c465b38ec83ea65688cb26602458ee5e",
+      "imports": [
+        "HiddenChangeController",
+        "DirectCycling"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "15e3c142b47e4aea9a0e5659333d68775355e92b6c6b1003f383c1d4ad638c36",
+        "log_sha256": "5d55c9eacc6cbbee64a13ec933b2574a48d4e57ece491de249030ee8be3e20eb"
+      }
+    },
+    "HiddenChangeControllerStability": {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerStability.lean",
+      "sha256": "c9c82b598c3df411010cb4677544efd5c49694f21754ffb356389b7b7b0ffc7a",
+      "imports": [
+        "HiddenChangeControllerDynamics",
+        "HiddenChangeControllerGraphs"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "909d052ca3bdce0faf08d14d67db8de6345a8b23639adb6dca9408d1c1f4df2d",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeControllerParity": {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerParity.lean",
+      "sha256": "2fec13712488b3fc671d7edb0ee9f3776b6f2941ee38672c6514de308e0d0f6e",
+      "imports": [
+        "HiddenChangeControllerStability"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "8ff6fca52d566cc94fe62244a74bf1e73a1bcc860ac6a93db03a29100b6d3525",
+        "log_sha256": "0194b490e405aa9b20c5cb862b24aca4dc0a541635bcb89e085f623eb7c3b6d0"
+      }
+    },
+    "HiddenChangeControllerEndpoint": {
+      "path": "lean/hidden-change/sources/HiddenChangeControllerEndpoint.lean",
+      "sha256": "3d88b8221dfb58a4d8c35f2b2cd9ccb05405845296ea90870fa9d22578c723c9",
+      "imports": [
+        "HiddenChangeControllerActualLaw",
+        "HiddenChangeControllerParity"
+      ],
+      "package": "lean-controller-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "object_sha256": "2398fd4044c87ced28dcfaff140f70bf098a1baa15f927fd2084957cd886b8f2",
+        "log_sha256": "6e80dc4f19fdec907c036a21041196ca824ecd4efc2738c8567c283fc618cf89"
+      }
+    },
+    "HiddenChangeRivalParity": {
+      "path": "lean/hidden-change/sources/HiddenChangeRivalParity.lean",
+      "sha256": "8ee817790b80b391e4c57cbec91295214dbc3ba3de4e7dc04f66fc683397638c",
+      "imports": [
+        "HiddenChangeParityBridge"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "f6fb1ae480484ef2a1ebad1c53d75b63ecb540dda296f41c1e3d927fc647c7ab",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeUncertainPaths": {
+      "path": "lean/hidden-change/sources/HiddenChangeUncertainPaths.lean",
+      "sha256": "e35c19958c148800cd38c1b7f39f898f5084e78737df1304622cc73c43375ff1",
+      "imports": [
+        "HiddenChangeActualRecurrence",
+        "HiddenChangeRivalParity"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "47b4fe75698c8e2b65deda521d948802fbeb818e9dd9715998552a6e7d71fa0c",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeUncertainProgress": {
+      "path": "lean/hidden-change/sources/HiddenChangeUncertainProgress.lean",
+      "sha256": "531276ea83eec88186836c473074c54fb96527e45889b9a7c39f288fa9fe8029",
+      "imports": [
+        "HiddenChangeUncertainPaths"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "b171058bacd494c9e6536a84ea170b32236d76dee56ab193cfb477861d5762eb",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeNecessity": {
+      "path": "lean/hidden-change/sources/HiddenChangeNecessity.lean",
+      "sha256": "f2a667cd51eb563fadf5068e690cc6ae0b3cb0eb5fa006f4baec0ad4f6405948",
+      "imports": [
+        "HiddenChangeUncertainProgress",
+        "HiddenChangeFixedIndex"
+      ],
+      "package": "lean-necessity-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "object_sha256": "857a3ea0a44f4779eb22572d2e37053f0c8d6e7d04c0b1b01451a107faf22af3",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "HiddenChangeSemanticEndpoint": {
+      "path": "lean/hidden-change/sources/HiddenChangeSemanticEndpoint.lean",
+      "sha256": "646eab76f1f39827772ed08587824d7c945ba3b2ca6504f34841b6aa73ed4540",
+      "imports": [
+        "HiddenChangeBinding",
+        "HiddenChangeControllerEndpoint",
+        "HiddenChangeNecessity"
+      ],
+      "package": "lean-endpoint-v1",
+      "prior_compile_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "object_sha256": "46b2f91438631904728e8f02b01d991ef569208d44e7542d588d2e83f22b46ef",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "roots": [
+    "HiddenChangeActualRecurrence",
+    "HiddenChangeBinding",
+    "HiddenChangeCertificate",
+    "HiddenChangeConditionalSafety",
+    "HiddenChangeContamination",
+    "HiddenChangeController",
+    "HiddenChangeControllerActualLaw",
+    "HiddenChangeControllerDynamics",
+    "HiddenChangeControllerEndpoint",
+    "HiddenChangeControllerGraphs",
+    "HiddenChangeControllerParity",
+    "HiddenChangeControllerSafety",
+    "HiddenChangeControllerStability",
+    "HiddenChangeFinite",
+    "HiddenChangeFixedIndex",
+    "HiddenChangeKnownProgress",
+    "HiddenChangeNecessity",
+    "HiddenChangeParityBridge",
+    "HiddenChangePhaseArithmetic",
+    "HiddenChangePolicyRegions",
+    "HiddenChangePrefix",
+    "HiddenChangePrefixSafety",
+    "HiddenChangeRivalParity",
+    "HiddenChangeSemanticEndpoint",
+    "HiddenChangeTaggedLaw",
+    "HiddenChangeTailTransport",
+    "HiddenChangeUncertainPaths",
+    "HiddenChangeUncertainProgress"
+  ],
+  "external_direct_imports": [
+    "Mathlib",
+    "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Powerset",
+    "Mathlib.Data.Finset.Sort",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Real.Sqrt",
+    "Mathlib.Probability.BorelCantelli",
+    "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+    "Mathlib.Probability.ProbabilityMassFunction.Integrals",
+    "Mathlib.Probability.ProductMeasure",
+    "Mathlib.Probability.StrongLaw",
+    "Mathlib.Tactic",
+    "Mathlib.Topology.Instances.ENNReal.Lemmas"
+  ],
+  "controls": [
+    {
+      "group": "finite",
+      "module": "FiniteControls",
+      "path": "lean/hidden-change/controls/finite/FiniteControls.lean",
+      "sha256": "8f16386b7799d3428ecd928ed9a365ce23021df0521371266000979097a3f274",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeFinite"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "5d4ef17772733c443979e759b682392664cca82e2f1449fe137b8ff6ad8e4b43",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "finite",
+      "module": "GreatestRegionControls",
+      "path": "lean/hidden-change/controls/finite/GreatestRegionControls.lean",
+      "sha256": "ffb2a7a3acd1c3495a6b7c53c1bf402b0f3bcb3d4173efab691ce974551bcf37",
+      "expected_exit": 0,
+      "imports": [
+        "FiniteControls"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "5d4ef17772733c443979e759b682392664cca82e2f1449fe137b8ff6ad8e4b43",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "finite",
+      "module": "CertificateControls",
+      "path": "lean/hidden-change/controls/finite/CertificateControls.lean",
+      "sha256": "f5c7559218224928217a470ffd10d27b1fcb091e063eb3d8e037d2982b24d03b",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeCertificate",
+        "FiniteControls"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "5d4ef17772733c443979e759b682392664cca82e2f1449fe137b8ff6ad8e4b43",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "finite",
+      "module": "NegativeTraceControls",
+      "path": "lean/hidden-change/controls/finite/NegativeTraceControls.lean",
+      "sha256": "36f0e653ad31e4a4e7c7dd9716f66c709478a4aa2095670e9992a911228ef23e",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeCertificate",
+        "GreatestRegionControls"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "5d4ef17772733c443979e759b682392664cca82e2f1449fe137b8ff6ad8e4b43",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "finite",
+      "module": "BindingControls",
+      "path": "lean/hidden-change/controls/finite/BindingControls.lean",
+      "sha256": "4cd70ef0b70a85f16dfa0fa7bc68eee0542af6416aea621741f314668e820eda",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeBinding",
+        "CertificateControls"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "5d4ef17772733c443979e759b682392664cca82e2f1449fe137b8ff6ad8e4b43",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "finite",
+      "module": "EndpointAxioms",
+      "path": "lean/hidden-change/controls/finite/EndpointAxioms.lean",
+      "sha256": "b173583d94c091207a3299131fa90d51309b0af7a94666e189b1866809a5ee03",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeBinding"
+      ],
+      "markers": [],
+      "axiom_count": 18,
+      "prior_run_binding": {
+        "receipt_sha256": "5d4ef17772733c443979e759b682392664cca82e2f1449fe137b8ff6ad8e4b43",
+        "log_sha256": "66f44283aab3054edc46359b5c62909eff617bb8dba8da8c9c340eab96ce64d7",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "finite",
+      "module": "TraceApiProbe",
+      "path": "lean/hidden-change/controls/finite/TraceApiProbe.lean",
+      "sha256": "b7c3458d30a6d3acc7c926874eabb75ab40037bf32f6c56e9d66d7bf6c670b9e",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeCertificate"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "5d4ef17772733c443979e759b682392664cca82e2f1449fe137b8ff6ad8e4b43",
+        "log_sha256": "5dc06f8276ef45bc91146b21a4b655670f09754788fb5e8bfb911790321d2213",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "finite",
+      "module": "SupplementaryControls",
+      "path": "lean/hidden-change/controls/finite/SupplementaryControls.lean",
+      "sha256": "7c11c21b07e296136e93287e8017d90b8f8dc8485ed04d3286e3d8c5dbd12f92",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeBinding",
+        "CertificateControls",
+        "GreatestRegionControls"
+      ],
+      "markers": []
+    },
+    {
+      "group": "finite",
+      "module": "RepresentationControls",
+      "path": "lean/hidden-change/controls/finite/RepresentationControls.lean",
+      "sha256": "ca56c7b81b8730cb0a602fea3d63ebd80e114b29b60b7f5a95fcf546f26c8cdf",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeBinding",
+        "FiniteControls"
+      ],
+      "markers": []
+    },
+    {
+      "group": "finite",
+      "module": "AllNewAxioms",
+      "path": "lean/hidden-change/controls/finite/AllNewAxioms.lean",
+      "sha256": "02b4744e9d8bc25d6ea3bb58c6cc6e8d79e9345e0144f47a7c824e8adc25e714",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeBinding"
+      ],
+      "markers": [],
+      "axiom_count": 46
+    },
+    {
+      "group": "laws",
+      "module": "TaggedLawControls",
+      "path": "lean/hidden-change/controls/laws/TaggedLawControls.lean",
+      "sha256": "cb3d94187d641c366a32c5c6e6097c4b4e660446ac74d3066e10efc46aabc22e",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeTaggedLaw"
+      ],
+      "markers": [],
+      "axiom_count": 3,
+      "prior_run_binding": {
+        "receipt_sha256": "eb27120a2d6479db8a1950f9e38b76bbb0544389b8f217cb27d8446db1e93a73",
+        "log_sha256": "3755f1e0f414fcacf481b8b3067716451826afa6ec19275a5dd9a8894a9be090",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "laws",
+      "module": "FixedIndexControls",
+      "path": "lean/hidden-change/controls/laws/FixedIndexControls.lean",
+      "sha256": "4dd6f350a034531fad9d2753cc405503e152aed574c0e590febdf593b62b3fc4",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeFixedIndex",
+        "HiddenChangeContamination"
+      ],
+      "markers": [],
+      "axiom_count": 4,
+      "prior_run_binding": {
+        "receipt_sha256": "eb27120a2d6479db8a1950f9e38b76bbb0544389b8f217cb27d8446db1e93a73",
+        "log_sha256": "58da829e523e945db14e23c118e07652a4d56dc827b5a0667822898d9029a8bc",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "laws",
+      "module": "PrefixTransportControls",
+      "path": "lean/hidden-change/controls/laws/PrefixTransportControls.lean",
+      "sha256": "99ed6e991f7a1e96bced15fcf85adb43106052390802ed140d2fd37fd18a500c",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeTailTransport"
+      ],
+      "markers": [],
+      "axiom_count": 6,
+      "prior_run_binding": {
+        "receipt_sha256": "eb27120a2d6479db8a1950f9e38b76bbb0544389b8f217cb27d8446db1e93a73",
+        "log_sha256": "aa951ce2d283946eb9d3f97bb093b2285dd2ad998f5af611ea94cf4b6022b6c8",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "laws",
+      "module": "ContaminationControls",
+      "path": "lean/hidden-change/controls/laws/ContaminationControls.lean",
+      "sha256": "dc3285a64fac115de96afeb74acb985a2bc47d0b6b26391dd67dec367c7d0ba9",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeContamination"
+      ],
+      "markers": [],
+      "axiom_count": 8,
+      "prior_run_binding": {
+        "receipt_sha256": "eb27120a2d6479db8a1950f9e38b76bbb0544389b8f217cb27d8446db1e93a73",
+        "log_sha256": "938316b09adbd14aafe0834a53430054463b644ee8e9fde7bae1038f8b74d5c0",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "laws",
+      "module": "EndpointAxioms",
+      "path": "lean/hidden-change/controls/laws/EndpointAxioms.lean",
+      "sha256": "5f1f208bdb9f837f69368e783e4fb5b6122927b113df8daba02392ba9474e26f",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeFixedIndex",
+        "HiddenChangeTailTransport",
+        "HiddenChangeContamination"
+      ],
+      "markers": [],
+      "axiom_count": 31,
+      "prior_run_binding": {
+        "receipt_sha256": "eb27120a2d6479db8a1950f9e38b76bbb0544389b8f217cb27d8446db1e93a73",
+        "log_sha256": "ecf07b8e1582b1de96feb9edede16015ab37262be4eb1565149b54014fa72cfc",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "laws",
+      "module": "MutationTagPersistence",
+      "path": "lean/hidden-change/controls/laws/MutationTagPersistence.lean",
+      "sha256": "b687a7cb8d4f0af9ed457ebaa2d5f7f211a15cca2f7da8683452d579f95c5dac",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeFinite",
+        "PolicyObservedLaw",
+        "StackActionLaw",
+        "MarkovSeedPosterior",
+        "ConditionalPrefix"
+      ],
+      "markers": [
+        "⊢ α.choose"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "eb27120a2d6479db8a1950f9e38b76bbb0544389b8f217cb27d8446db1e93a73",
+        "log_sha256": "60815e90f4b82e3f1e22803e235e1766b5b059c2976a9495da4e490d157c5b4a",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "laws",
+      "module": "MutationSwitchTiming",
+      "path": "lean/hidden-change/controls/laws/MutationSwitchTiming.lean",
+      "sha256": "f28864e1da49295980017ac16fef033f44118ca3891133c085db8ef33565992e",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeFinite",
+        "PolicyObservedLaw",
+        "StackActionLaw",
+        "MarkovSeedPosterior",
+        "ConditionalPrefix"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "eb27120a2d6479db8a1950f9e38b76bbb0544389b8f217cb27d8446db1e93a73",
+        "log_sha256": "73db6135e38e12f16f92897b96347bd7357ceb0191b2ec9e9495f3e42e32bd4f",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "laws",
+      "module": "MutationPrefixReversal",
+      "path": "lean/hidden-change/controls/laws/MutationPrefixReversal.lean",
+      "sha256": "04a7cfa782f9cb6b50a7b8b7a7b1fc3d56e903871286934c6222b5af6c883d50",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeTaggedLaw",
+        "ConditionalKilledContinuation"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "eb27120a2d6479db8a1950f9e38b76bbb0544389b8f217cb27d8446db1e93a73",
+        "log_sha256": "ce679dd1929db64242c75612addde1da522385285a457847e6a2eb831d0e7ffe",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "laws",
+      "module": "ReviewerControls",
+      "path": "lean/hidden-change/controls/laws/ReviewerControls.lean",
+      "sha256": "49d8fdd5a54d8bb31c82801bb855a50d36ebc1d23bc56d7d8d222a45d6a0f5e4",
+      "expected_exit": 0,
+      "imports": [
+        "PrefixTransportControls",
+        "ContaminationControls",
+        "HiddenChangeFixedIndex"
+      ],
+      "markers": []
+    },
+    {
+      "group": "laws",
+      "module": "AllAxioms",
+      "path": "lean/hidden-change/controls/laws/AllAxioms.lean",
+      "sha256": "ddaf736552460936cfe6bd50a26b6b85325be60c683eefb668e8d7b20c218822",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeFixedIndex",
+        "HiddenChangeTailTransport",
+        "HiddenChangeContamination"
+      ],
+      "markers": [],
+      "axiom_count": 84
+    },
+    {
+      "group": "controller",
+      "module": "ControllerFixtures",
+      "path": "lean/hidden-change/controls/controller/ControllerFixtures.lean",
+      "sha256": "fb4fd31e67bfe4c88fc78b6713ef9d03a6e3261d2f509cef757501c46182f9b4",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeControllerEndpoint"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "controller",
+      "module": "ControllerControls",
+      "path": "lean/hidden-change/controls/controller/ControllerControls.lean",
+      "sha256": "8f16b47f50f573c74395fc042eb60b53bdf6494e8861d2e262e30e8fbe76e162",
+      "expected_exit": 0,
+      "imports": [
+        "ControllerFixtures"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "controller",
+      "module": "PhaseArithmeticControls",
+      "path": "lean/hidden-change/controls/controller/PhaseArithmeticControls.lean",
+      "sha256": "c1101224054d587b115631a9dd2c17020430497cded524334360d6bb5e39a743",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangePhaseArithmetic"
+      ],
+      "markers": [],
+      "axiom_count": 2,
+      "prior_run_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "log_sha256": "2bc3320b6dd979334ea68c0c95d67f8163152c26b6dceb9df94ecdd42a724774",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "controller",
+      "module": "ControllerAxioms",
+      "path": "lean/hidden-change/controls/controller/ControllerAxioms.lean",
+      "sha256": "48d86b1dff40143d124a5074083059d321c0e22a532f480dc708a169e3b0ffb3",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeControllerEndpoint"
+      ],
+      "markers": [],
+      "axiom_count": 25,
+      "prior_run_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "log_sha256": "8475f223397d66cdf8199436657ce188e98be16ac30fca786ed5392e06ba8af4",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "controller",
+      "module": "ControllerTimingRed",
+      "path": "lean/hidden-change/controls/controller/ControllerTimingRed.lean",
+      "sha256": "7c0f8725f69ceb644b4f18fd991d47a153f429657781920c2ec4cc7a16c08d9a",
+      "expected_exit": 1,
+      "imports": [
+        "RationalTest",
+        "Mathlib.Tactic"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "log_sha256": "a3825ca2803af103df96fcb7359cbcff4baac1e86956eb9e5deba78ffc7a5a64",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "PhaseArithmeticExpectedFailure",
+      "path": "lean/hidden-change/controls/controller/PhaseArithmeticExpectedFailure.lean",
+      "sha256": "87492a1bb30d9ec5e906289fbac128b005a6defbef99a8c79ea1a666690211fa",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangePhaseArithmetic"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "91c39fe010682e8292594be8b8733e6a277e6edbde00b5e261627a9c5a008216",
+        "log_sha256": "2467f97b597e20846f0a6ec6c257d173e0c74e4898976eaade7739522bf26faa",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationClearsKnownFlag",
+      "path": "lean/hidden-change/controls/controller/MutationClearsKnownFlag.lean",
+      "sha256": "7693bde5a031bd8b61970e495dd51d7fbd55dcf135e88064925ec57577b1ff3e",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeCertificate",
+        "HiddenChangeTaggedLaw",
+        "RationalTest",
+        "OrderedCycle",
+        "ObservedPhaseController"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "521d9b9a79c4b1bf17d7a4b0736bea1967417a0424956b90c9ce2d3e6dfe6261",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationDeletesCandidateOne",
+      "path": "lean/hidden-change/controls/controller/MutationDeletesCandidateOne.lean",
+      "sha256": "86ad158a1fbd6a30a2fa9e64c0fb632f03aef6f9621c848d55bbe9d2b4e2c67b",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeCertificate",
+        "HiddenChangeTaggedLaw",
+        "RationalTest",
+        "OrderedCycle",
+        "ObservedPhaseController"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "6e059e184ce5f4c397c7195babe566b05996a56b996e3813e6338e621d421dfb",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationDoublePhase",
+      "path": "lean/hidden-change/controls/controller/MutationDoublePhase.lean",
+      "sha256": "358e0581b17182bc7e42fafa2bf5b0ee5b5843d23a8d33153b86b2390d5ce083",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeCertificate",
+        "HiddenChangeTaggedLaw",
+        "RationalTest",
+        "OrderedCycle",
+        "ObservedPhaseController"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "20b01da47fbccf8b4295c8bf738674fd06793ba8584e31bfe4c14f8ccc1948b2",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationDropsCountGate",
+      "path": "lean/hidden-change/controls/controller/MutationDropsCountGate.lean",
+      "sha256": "e1ad4ed82be77786cb99b0a6dfd48c31082c070d44ccc3ba7a7afc860f4cf04c",
+      "expected_exit": 1,
+      "imports": [
+        "CertificateData",
+        "EmpiricalTestLaw"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "ab38938955eb0b090e6b63751a288dc71d1be8040d962897c012313da922fc59",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationDropsNewReceipt",
+      "path": "lean/hidden-change/controls/controller/MutationDropsNewReceipt.lean",
+      "sha256": "0843f7c2f1bfe6f835ab5a0ff28f6ef0560961149110cc534a29af13e85fa38f",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeCertificate",
+        "HiddenChangeTaggedLaw",
+        "RationalTest",
+        "OrderedCycle",
+        "ObservedPhaseController"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "581f5cf2ec56b4af4137953aaf8a4e128136b45d20f7c911bd0133be79b43f36",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationLiteralCandidate",
+      "path": "lean/hidden-change/controls/controller/MutationLiteralCandidate.lean",
+      "sha256": "ad6a7aea0a9d7e5ce528c89ae695fa8cb5e3ef6dc42c649072d75c6a62298716",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeCertificate",
+        "HiddenChangeTaggedLaw",
+        "RationalTest",
+        "OrderedCycle",
+        "ObservedPhaseController"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "f37b5f06ecf51ce33e629c68fa766e3fe013fae19c35b09c1955418ae6ab3d88",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationNonstrictCount",
+      "path": "lean/hidden-change/controls/controller/MutationNonstrictCount.lean",
+      "sha256": "dbba5b4b5334ae56800d5d1119ade736aa2efd5f5f0179f8a137d10ee9980932",
+      "expected_exit": 1,
+      "imports": [
+        "CertificateData",
+        "EmpiricalTestLaw"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "e7d907015bbae0f747f60884d10478dbcdda8ce4cd9532c66d6581823d262e11",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationRejectBeforeReveal",
+      "path": "lean/hidden-change/controls/controller/MutationRejectBeforeReveal.lean",
+      "sha256": "4e2893243c488b572ff15d9dbf4c7053536110acac1e6cf2088e2e66bd8414dc",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangeCertificate",
+        "HiddenChangeTaggedLaw",
+        "RationalTest",
+        "OrderedCycle",
+        "ObservedPhaseController"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "68cd78fd5dbdb87cf4782535bd77c07df92854918d5b3f773c224c29a1320ba1",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "MutationStrictDiscrepancy",
+      "path": "lean/hidden-change/controls/controller/MutationStrictDiscrepancy.lean",
+      "sha256": "622117a8996db7a4de715666764643cce316519aa8de7137c06089088109ede9",
+      "expected_exit": 1,
+      "imports": [
+        "CertificateData",
+        "EmpiricalTestLaw"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "761a230a0903ed502f18f2c12ef2d9cb61cbd6efbf90015ba15671105401b131",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "controller",
+      "module": "ReviewControllerControls",
+      "path": "lean/hidden-change/controls/controller/ReviewControllerControls.lean",
+      "sha256": "a343e82d8cf336b4e059545f43e76b17269cf943dfdac686a365f0c58f9411b3",
+      "expected_exit": 0,
+      "imports": [
+        "ControllerFixtures"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "b50703d9e35eb1cf1a502269ed6e246c9544c5e7071495f49818e7c184239784",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "controller",
+      "module": "ReviewAllAxioms",
+      "path": "lean/hidden-change/controls/controller/ReviewAllAxioms.lean",
+      "sha256": "6767af52fc1cb0462631f66bd760960094643521336503dc844a12dc1e655e1a",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeControllerEndpoint"
+      ],
+      "markers": [],
+      "axiom_count": 95,
+      "prior_run_binding": {
+        "receipt_sha256": "8b3af6c3c0c0a93d340405e9c86693f6f8fa81806c57b2a13d06fe44d35790f5",
+        "log_sha256": "24bb849c4b64a74a54b000a4bdfd09025f4ba1d80021919b076ace45f828b6a5",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "NecessityControls",
+      "path": "lean/hidden-change/controls/necessity/NecessityControls.lean",
+      "sha256": "b43c7809e91b99904102d0d82dbcc85703a232d84d8b8ddaefef69fdc6620ebe",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeNecessity"
+      ],
+      "markers": [],
+      "axiom_count": 8,
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "d0ef6ce3eeb05f03584068c464f8955f42a744307fad6b927d7838e00cf03af9",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "RivalParityControls",
+      "path": "lean/hidden-change/controls/necessity/RivalParityControls.lean",
+      "sha256": "a04e27e0f5734b446bcd607c761aae91ea91f0cbbf70d3faa99db376c8d67d9c",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeRivalParity"
+      ],
+      "markers": [],
+      "axiom_count": 5,
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "c032403dd7a419e9ed5d27e6e9841298affec26cae123066cfefee068f2708b8",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "ContractLawfulnessControls",
+      "path": "lean/hidden-change/controls/necessity/ContractLawfulnessControls.lean",
+      "sha256": "bf366a159a49dbaf5ae4986812b1302a955403fa20663d74d3343206e373309b",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeNecessity"
+      ],
+      "markers": [],
+      "axiom_count": 1,
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "0e4562b8859f4dcb8f630908614565ea49d727ea3c6f8fcd193c5f874a96687a",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "MutationNoChangeOnly",
+      "path": "lean/hidden-change/controls/necessity/MutationNoChangeOnly.lean",
+      "sha256": "f6209a5b043bda64d8e6a0c2d89c656b2791f3accaad219a0cd42ef61e2ee26d",
+      "expected_exit": 1,
+      "imports": [
+        "NecessityControls"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "92837fb111cfdceddf928db8f1fdc48b6882b5f009660e4a9ecca02765c891cf",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "MutationStationaryPrefix",
+      "path": "lean/hidden-change/controls/necessity/MutationStationaryPrefix.lean",
+      "sha256": "2991a4dd8faafbd6b0da6c159a9f5487e50f794c11a46d13fc8ab86ded643762",
+      "expected_exit": 1,
+      "imports": [
+        "NecessityControls"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "04079e84388172421309feac65848fdfa6483a2388057eb983ea93dc56ab1a88",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "MutationStrictPostSwitch",
+      "path": "lean/hidden-change/controls/necessity/MutationStrictPostSwitch.lean",
+      "sha256": "44c0f751657993ffc655b9362f854abd77c4cf45fce1a3adc5692b5d4852d604",
+      "expected_exit": 1,
+      "imports": [
+        "HiddenChangePolicyRegions"
+      ],
+      "markers": [
+        "tactic 'decide' proved that the proposition"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "2f570d03c23691f87f0cffb75290ff2c35879c9dd383ce528773e75e60bd0367",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "MutationUnselectedBranch",
+      "path": "lean/hidden-change/controls/necessity/MutationUnselectedBranch.lean",
+      "sha256": "daa72afcefd18dd7221acd3664a179e7b5e08cff9d03bf9db3d7a4cd2aca34f3",
+      "expected_exit": 1,
+      "imports": [
+        "NecessityControls"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "c2874264f8ee5a857dc8c8075e52bc37ba80214f71246302868334dd1a3049cf",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "ReviewSemanticControls",
+      "path": "lean/hidden-change/controls/necessity/ReviewSemanticControls.lean",
+      "sha256": "fbe81e88a1cdbc82cdbd0d9d74d176db2f0c6c9d75b65275ada0e8bcab919d85",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeNecessity"
+      ],
+      "markers": [],
+      "axiom_count": 2,
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "469ea7bc7daa759ca75d05654e7939ac8bb24a100e9d5e272a1b8d55fa60bb70",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "MutationChosenReceiptClosure",
+      "path": "lean/hidden-change/controls/necessity/MutationChosenReceiptClosure.lean",
+      "sha256": "f936ca1a2e3d6fff6e59aca60e60152762f48abc4d867f534e402ea229986c46",
+      "expected_exit": 1,
+      "imports": [
+        "ReviewSemanticControls"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "fcccf3305ae7f18880768ccc7de59808cdb8d7fe21506fb2b51f714ae00fcd72",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "MutationParityGivesLawfulness",
+      "path": "lean/hidden-change/controls/necessity/MutationParityGivesLawfulness.lean",
+      "sha256": "c27cfc7f57669f88fca7abc18f3c8a3fe89e44469e307ee141b39e1299ecddb1",
+      "expected_exit": 1,
+      "imports": [
+        "ReviewSemanticControls"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "54b5c62f783975eb6931e641a4c75e74f9fb2fe1f6c2b71eb2501f6cd59cc0f1",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "MutationSupportImpliesMatching",
+      "path": "lean/hidden-change/controls/necessity/MutationSupportImpliesMatching.lean",
+      "sha256": "23b268c2e96015781fbb2cbfe7a25457004d3846ab207ced577dd06f1c595bfc",
+      "expected_exit": 1,
+      "imports": [
+        "ReviewSemanticControls"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "38107878c442abf89fceb124dd1cc6b7fa3b3ff080b5b7d620e9a733d008c6c6",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "MutationUnconditionalRivalParity",
+      "path": "lean/hidden-change/controls/necessity/MutationUnconditionalRivalParity.lean",
+      "sha256": "12a83f613cea2de432415a9628c79bd245bab092e58231d9f7e021058f57a5ca",
+      "expected_exit": 1,
+      "imports": [
+        "ReviewSemanticControls"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "a7977a68a8dfcb5b95571c1437946be40beed43515c60eb4df95e3a60ec55138",
+        "log_sha256": "10cf8f30e97920c4bc656b1776d4524d5c3da9f7df42014cabe91d53dc28fce1",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "necessity",
+      "module": "ReviewAllAxioms",
+      "path": "lean/hidden-change/controls/necessity/ReviewAllAxioms.lean",
+      "sha256": "3a65d9812276aed807382f1a7b165864a2d5ed53075313a7c32e132b455324c0",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeNecessity"
+      ],
+      "markers": [],
+      "axiom_count": 74,
+      "prior_run_binding": {
+        "receipt_sha256": "4933d301618d4865f99c92bc9cf57f9a16224c40d48ad1f242f9297e8ebba82b",
+        "log_sha256": "f85f45dda94f9dabfd05b18eb243342c48d68a47984148cdeebb54250153f92e",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "EndpointFixtures",
+      "path": "lean/hidden-change/controls/endpoint/EndpointFixtures.lean",
+      "sha256": "8fe2870c40af338155f589c009eb6d4deab649bc5983a20e8df215f80c01c0e5",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeSemanticEndpoint"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "EndpointControls",
+      "path": "lean/hidden-change/controls/endpoint/EndpointControls.lean",
+      "sha256": "5ff601a4d001fb9db5fa49a5cb9fdae2d8a5caa76fadeb987d37b6c0f9f84563",
+      "expected_exit": 0,
+      "imports": [
+        "EndpointFixtures"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "EndpointSeparator",
+      "path": "lean/hidden-change/controls/endpoint/EndpointSeparator.lean",
+      "sha256": "6b523d00092658c68f7fb6ebb0285ce83d9bde6e6855b7b7c6c450b9da6206ef",
+      "expected_exit": 0,
+      "imports": [
+        "EndpointFixtures"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "5bda5ff8ffae0f38a4768949b166725b1ba1228898e003d4569848a0c31e1882",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "EndpointLawfulnessControls",
+      "path": "lean/hidden-change/controls/endpoint/EndpointLawfulnessControls.lean",
+      "sha256": "1da85dc06dd0002214643fec081dcfc9392e00dc96c4e095448824b3aa59f76b",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeSemanticEndpoint"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "EndpointInterfaces",
+      "path": "lean/hidden-change/controls/endpoint/EndpointInterfaces.lean",
+      "sha256": "274a039f6dbe1a31341394423bd61a606ee979422197d8fb23db2612ce62ae32",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeSemanticEndpoint"
+      ],
+      "markers": [],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "1f88327da59ed957c571a1132ed6dfdfac74ef15eea83751b168e574ac54328c",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "SemanticEndpointAxioms",
+      "path": "lean/hidden-change/controls/endpoint/SemanticEndpointAxioms.lean",
+      "sha256": "b87465b9413af8edededf57336d8d7f21a1a4a004af96fb7d08f396cef9e2198",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeSemanticEndpoint"
+      ],
+      "markers": [],
+      "axiom_count": 12,
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "7778c9b5e37e33634ca03285ba45f99135dc519c54671156e62b61c0a0963c75",
+        "exit_code": 0
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "MutationPositiveDropsInput",
+      "path": "lean/hidden-change/controls/endpoint/MutationPositiveDropsInput.lean",
+      "sha256": "ed99c3cbd5253c1fa6412801136653d1b94675c23afb003f80c02187cb5d5b5c",
+      "expected_exit": 1,
+      "imports": [
+        "EndpointFixtures"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "55f05d1b3d8304d292113d723a550867b29342fd4b605f65d71c3fd08512f9b3",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "MutationPositiveDropsInitial",
+      "path": "lean/hidden-change/controls/endpoint/MutationPositiveDropsInitial.lean",
+      "sha256": "2988efa498c9cd33d09a3ec4728965316d4d69a97db526676bb1433e2d62df12",
+      "expected_exit": 1,
+      "imports": [
+        "EndpointFixtures"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "e026ed95a4d3a01fc21ff6f8a46b257ae2cf151441445d225c02037df5fec60d",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "MutationNegativeDropsInput",
+      "path": "lean/hidden-change/controls/endpoint/MutationNegativeDropsInput.lean",
+      "sha256": "d1dd9952d92f0e049536dbdd97b91712fbcd052d5f8f1251df121bb11c8bb283",
+      "expected_exit": 1,
+      "imports": [
+        "EndpointFixtures"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "59fdba88096dd8cf250693ea67fcf3e90bd693df88b2a405035d2772af2d122c",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "MutationNegativeDropsInitial",
+      "path": "lean/hidden-change/controls/endpoint/MutationNegativeDropsInitial.lean",
+      "sha256": "cea3fd2651bbdddf548285daa55ae019e5071c54359ae345b78960ae742c687c",
+      "expected_exit": 1,
+      "imports": [
+        "EndpointFixtures"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "c03e30a752a70aef4e03507a8a842056cc464a9713e52803dafd737d0e7d121b",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "MutationWinnerDropsLawfulness",
+      "path": "lean/hidden-change/controls/endpoint/MutationWinnerDropsLawfulness.lean",
+      "sha256": "d4bf757adba9e2a7a756f7ef91b46af84e90d8f1f2270d99e4a243823d89adca",
+      "expected_exit": 1,
+      "imports": [
+        "EndpointLawfulnessControls",
+        "EndpointFixtures",
+        "HiddenChangeBinding",
+        "HiddenChangeControllerEndpoint",
+        "HiddenChangeNecessity"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "d90c327b98e06065f1a75c584014d8e681884c86848167f6265c2bfb2b399850",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "MutationWinnerDropsParity",
+      "path": "lean/hidden-change/controls/endpoint/MutationWinnerDropsParity.lean",
+      "sha256": "37ccc58c3b6aba817ff922e7e5c5782ff5a7735f8d208fca7c285c2320465c03",
+      "expected_exit": 1,
+      "imports": [
+        "EndpointLawfulnessControls",
+        "EndpointFixtures",
+        "HiddenChangeBinding",
+        "HiddenChangeControllerEndpoint",
+        "HiddenChangeNecessity"
+      ],
+      "markers": [
+        "error: unsolved goals"
+      ],
+      "prior_run_binding": {
+        "receipt_sha256": "f9e6dfb762d109701012477d345aa3f1eb50ba52b6dad3f63c68dcc82e2e4835",
+        "log_sha256": "efe223ec1422a57cd80b54bbef31d410921801e49e6542df83e9a801cdc3454c",
+        "exit_code": 1
+      }
+    },
+    {
+      "group": "endpoint",
+      "module": "ReviewEndpointControls",
+      "path": "lean/hidden-change/controls/endpoint/ReviewEndpointControls.lean",
+      "sha256": "9a0ac8c22cf75b51e02a5b4e0b4bb2bc89fced80e39c35d7f59fd2ae82350c3f",
+      "expected_exit": 0,
+      "imports": [
+        "EndpointFixtures",
+        "EndpointLawfulnessControls"
+      ],
+      "markers": [],
+      "axiom_count": 10
+    },
+    {
+      "group": "endpoint",
+      "module": "ReviewAllAxioms",
+      "path": "lean/hidden-change/controls/endpoint/ReviewAllAxioms.lean",
+      "sha256": "0466a5edff0defc5a4982ebf5b4f310b1ae2831a27b956fc4cc227c30f7c1ed4",
+      "expected_exit": 0,
+      "imports": [
+        "HiddenChangeSemanticEndpoint"
+      ],
+      "markers": [],
+      "axiom_count": 12
+    }
+  ],
+  "dependencies": "dependencies/hidden-change.json"
+}

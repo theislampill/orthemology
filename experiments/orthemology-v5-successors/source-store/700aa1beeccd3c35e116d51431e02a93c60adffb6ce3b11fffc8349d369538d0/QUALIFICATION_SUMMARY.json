@@ -1,0 +1,66 @@
+{
+  "status": "LOCALLY_QUALIFIED_SOURCE_BUILD_AND_UNCHANGED_HASE_REPLAY",
+  "schema": 1,
+  "as_of_utc": "2026-10-06T05:46:45.887376+00:00",
+  "source_qualification_utc": "2026-10-06T05:33:16.715637+00:00",
+  "platform": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "v24.19.0",
+    "npm": "11.9.0",
+    "lean": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+    "lake": "Lake version 5.0.0-6caaee8 (Lean version 4.19.0)"
+  },
+  "source_acquisition": "CLEAN_LOCAL_CLONES",
+  "registry_acquisition": "REUSED_REGISTRY_CACHE_OFFLINE",
+  "new_host_network_acquisition_test": false,
+  "third_party_objects_rebuilt": 1369,
+  "pinned_tracked_files_checked": 7507,
+  "custom_modules_replayed": 84,
+  "selected_controls_replayed": 8,
+  "axiom_audits": 9,
+  "ordinary_diagnostic": {
+    "status": "PASS: separate diagnostic, not a kernel proof",
+    "normalizer_self_tests": 7,
+    "distinct_alpha_classes": true,
+    "scope": "Ordinary finite calculation on exported exact syntax; not a Lean theorem of beta-eta separation or compiler-image membership."
+  },
+  "dependency_build_start_utc": "2026-10-06T05:11:30.911290+00:00",
+  "dependency_build_end_utc": "2026-10-06T05:30:57.487363+00:00",
+  "dependency_build_seconds": 1166.576,
+  "source_hashes_and_pins_unchanged": true,
+  "independent_inspection": {
+    "status": "PASS",
+    "as_of_utc": "2026-10-06T05:34:04.131609+00:00",
+    "raw_review_receipt_sha256": "bbf116c2e218955e8cd989846735edf303b9d54920a44d06a6effae6d845486c",
+    "scope": "Independent inspection of the initial object-free state, exact source/compiler/output custody and actual HasE replay; not a second dependency rebuild."
+  },
+  "object_hashes_differing_from_original_hase_snapshot_in_this_run": 0,
+  "public_input_manifest_projection": {
+    "omitted_unused_historical_acquisition_receipt": "REUSED_OFFICIAL_TOOLCHAIN_ACQUISITION.json",
+    "all_effective_pin_files_byte_identical": true,
+    "qualification_input_manifest_sha256": "b4ad55507e391578db2b001c29829a1542799e26eb100603bf0ecd8c2b6a98bf",
+    "distributed_input_manifest_sha256": "ae700932bd7761971567eb4c1b76aeb66fdd0ed625a9d5b5000f8926173344be"
+  },
+  "original_consumer_manifest_sha256": "9f2a0f116f90fc4189faacc79d5b7c02116e1d36735cc2cdffe4f9117406de95",
+  "locally_derived_manifest_sha256": "b7729a4206a7a8f37410e51a84b5625a5ef0577883fc5f80b26c27e0572cb09e",
+  "unchanged_replay_runner_sha256": "4b1522dbe651ac97bece149b2fd21c8fc0688a87ac7bbd10e1f761bcf80d9adc",
+  "derived_package_changed_files": [
+    "MANIFEST.json",
+    "dependencies/hase.json"
+  ],
+  "raw_source_build_receipt_sha256": "834062978e7914be2c8f10333fde69da9c9702ded3c5680e79245ce9584b1fe8",
+  "raw_derivation_receipt_sha256": "d956ce0ded64896904c64ac8e461b75f498776e6ecaabc81e0745f1de917fccd",
+  "raw_hase_result_sha256": "a83c669ef12479abe839175808ca5f239f279d20590aa98d942d0a5348769864",
+  "raw_terminal_custody_receipt_sha256": "3b37c150450c705acd0c5d9c45a6b31d13cf14ecd4b72e93f9b3ca0d6c734804",
+  "public_object_projection_sha256": "788d04d23dc6b294103623729e541469abaa9bd3de5dd6613a447f7344b55a9b",
+  "full_mathlib_rebuild": false,
+  "compiler_bootstrap": false,
+  "byte_reproducibility_claim": false,
+  "tranche_complete_claim": false,
+  "trust_boundary": "Official Lean/compiler/standard-library/runtime and npm registry JavaScript tools remain trusted.",
+  "static_original_scope_note": "Only the separately derived HasE lane is covered. The original package, exact-cache inventories and static cold_dependency_build=false field remain unchanged. The derivation receipt gives the actual source-build custody.",
+  "raw_evidence_disclosure": "Full local execution receipts/logs are unchanged and not included. Their exact hashes bind this projection. The supplied recipe generates and verifies full logs for each new local run.",
+  "review_scope": "Source/build qualification and public disclosure review are separate. This result summary describes the verified local execution at the stated time.",
+  "separate_prerequisite_projection_sha256": "49c315252eba977e04810cb7a6942cac6f6d33317d51c828ed97d40180ad5244"
+}

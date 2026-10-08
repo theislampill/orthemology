@@ -1,0 +1,221 @@
+{
+  "schema": "t20-joint-model-integration-v1",
+  "status": "AWAITING_INDEPENDENT_REVIEW",
+  "results": [
+    {
+      "result_id": "JF-ABC",
+      "tranche": 20,
+      "source_artifact": "src/JointFiniteInterpretation.lean",
+      "source_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "ownership": "fresh fixed-model compatibility certificate; all component proof ownership retained",
+      "declarations": [
+        "JointFinite.abc_full",
+        "JointFinite.J01_canonical_identity",
+        "JointFinite.canonical_abc_same_g",
+        "JointFinite.generic_abc_via_component"
+      ],
+      "dependencies": [
+        "../original-bearer-bridge/MANIFEST.json",
+        "../anchored-source-bridge/SOURCE_MANIFEST.json",
+        "../veracity-boundary/SHA256SUMS",
+        "INPUT_BINDINGS.json"
+      ],
+      "does_not_supersede": [
+        "OriginalBearerBridge general A/B/C interface",
+        "SourceIdentity inherited B/C",
+        "AnchoredSourceBridge general theorem",
+        "VeracityBoundary general theorem",
+        "Open general Sixth-refinement obligation"
+      ],
+      "public_candidate_projection": "README.md",
+      "required_integration_verification": [
+        "Rehash sealed packet and bound component inputs",
+        "Fresh independent same-bearer model review",
+        "Retain selected-fragment, philosophical-warrant and antecedent-vacuity qualifications"
+      ],
+      "reusable_verification": "verification-final-v2/VERIFICATION.json",
+      "unresolved_residual": [
+        "No philosophical warrant of completion, realization, transport, contingency-as-need, constitution or representation is proved.",
+        "The generic existential theorem can select other targets; canonical x identity is separately checked."
+      ]
+    },
+    {
+      "result_id": "JF-FIELD",
+      "tranche": 20,
+      "source_artifact": "src/JointFiniteInterpretation.lean",
+      "source_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "ownership": "fresh fixed-model compatibility certificate; all component proof ownership retained",
+      "declarations": [
+        "JointFinite.field_guarded",
+        "JointFinite.field_coverage_without_cnd",
+        "JointFinite.complete_provider_exists_and_unique",
+        "JointFinite.mixed_occurrence_real"
+      ],
+      "dependencies": [
+        "../original-bearer-bridge/MANIFEST.json",
+        "../anchored-source-bridge/SOURCE_MANIFEST.json",
+        "../veracity-boundary/SHA256SUMS",
+        "INPUT_BINDINGS.json"
+      ],
+      "does_not_supersede": [
+        "OriginalBearerBridge general A/B/C interface",
+        "SourceIdentity inherited B/C",
+        "AnchoredSourceBridge general theorem",
+        "VeracityBoundary general theorem",
+        "Open general Sixth-refinement obligation"
+      ],
+      "public_candidate_projection": "README.md",
+      "required_integration_verification": [
+        "Rehash sealed packet and bound component inputs",
+        "Fresh independent same-bearer model review",
+        "Retain selected-fragment, philosophical-warrant and antecedent-vacuity qualifications"
+      ],
+      "reusable_verification": "verification-final-v2/VERIFICATION.json",
+      "unresolved_residual": [
+        "Classification and conformance remain independently interpreted.",
+        "Inventory completeness is only relative to the declared finite contribution type.",
+        "Field uniqueness does not exclude necessary original h outside."
+      ]
+    },
+    {
+      "result_id": "JF-VERACITY",
+      "tranche": 20,
+      "source_artifact": "src/JointFiniteInterpretation.lean",
+      "source_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "ownership": "fresh fixed-model compatibility certificate; all component proof ownership retained",
+      "declarations": [
+        "JointFinite.veracity_package",
+        "JointFinite.veracity_via_component",
+        "JointFinite.honesty_equivalence_via_component",
+        "JointFinite.created_speaker_normative_boundary"
+      ],
+      "dependencies": [
+        "../original-bearer-bridge/MANIFEST.json",
+        "../anchored-source-bridge/SOURCE_MANIFEST.json",
+        "../veracity-boundary/SHA256SUMS",
+        "INPUT_BINDINGS.json"
+      ],
+      "does_not_supersede": [
+        "OriginalBearerBridge general A/B/C interface",
+        "SourceIdentity inherited B/C",
+        "AnchoredSourceBridge general theorem",
+        "VeracityBoundary general theorem",
+        "Open general Sixth-refinement obligation"
+      ],
+      "public_candidate_projection": "README.md",
+      "required_integration_verification": [
+        "Rehash sealed packet and bound component inputs",
+        "Fresh independent same-bearer model review",
+        "Retain selected-fragment, philosophical-warrant and antecedent-vacuity qualifications"
+      ],
+      "reusable_verification": "verification-final-v2/VERIFICATION.json",
+      "unresolved_residual": [
+        "K is negative-truth knowledge coverage, not full omniscience.",
+        "Package applies to g; x fails P and Package.",
+        "Productive support is not assertoric ownership."
+      ]
+    },
+    {
+      "result_id": "JF-JOIN",
+      "tranche": 20,
+      "source_artifact": "src/JointFiniteInterpretation.lean",
+      "source_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "ownership": "fresh fixed-model compatibility certificate; all component proof ownership retained",
+      "declarations": [
+        "JointFinite.J01_canonical_identity",
+        "JointFinite.J02_original_resource_provision",
+        "JointFinite.J03_concrete_receipt",
+        "JointFinite.J04_field_target_link",
+        "JointFinite.J05_positive_reachability",
+        "JointFinite.J05_live_productive_support",
+        "JointFinite.J06_complete_incoming_inventory",
+        "JointFinite.J07_no_incoming_outside_source",
+        "JointFinite.J08_actual_mode_realization",
+        "JointFinite.J09_fitting_source_realization",
+        "JointFinite.J10_truth_grounding",
+        "JointFinite.J11_token_support_grounding",
+        "JointFinite.J12_support_not_ownership",
+        "JointFinite.J13_genuine_agent_identity",
+        "JointFinite.J14_outside_boundary"
+      ],
+      "dependencies": [
+        "../original-bearer-bridge/MANIFEST.json",
+        "../anchored-source-bridge/SOURCE_MANIFEST.json",
+        "../veracity-boundary/SHA256SUMS",
+        "INPUT_BINDINGS.json"
+      ],
+      "does_not_supersede": [
+        "OriginalBearerBridge general A/B/C interface",
+        "SourceIdentity inherited B/C",
+        "AnchoredSourceBridge general theorem",
+        "VeracityBoundary general theorem",
+        "Open general Sixth-refinement obligation"
+      ],
+      "public_candidate_projection": "README.md",
+      "required_integration_verification": [
+        "Rehash sealed packet and bound component inputs",
+        "Fresh independent same-bearer model review",
+        "Retain selected-fragment, philosophical-warrant and antecedent-vacuity qualifications"
+      ],
+      "reusable_verification": "verification-final-v2/VERIFICATION.json",
+      "unresolved_residual": [
+        "These are fixed-model equalities and certificates, not new universal philosophical bridges."
+      ]
+    },
+    {
+      "result_id": "JF-ANCESTRY",
+      "tranche": 20,
+      "source_artifact": "src/JointFiniteInterpretation.lean",
+      "source_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "ownership": "fresh fixed-model compatibility certificate; all component proof ownership retained",
+      "declarations": [
+        "JointFinite.finite_ancestry_compatibility",
+        "JointFinite.J05_positive_reachability"
+      ],
+      "dependencies": [
+        "../original-bearer-bridge/MANIFEST.json",
+        "../anchored-source-bridge/SOURCE_MANIFEST.json",
+        "../veracity-boundary/SHA256SUMS",
+        "INPUT_BINDINGS.json"
+      ],
+      "does_not_supersede": [
+        "OriginalBearerBridge general A/B/C interface",
+        "SourceIdentity inherited B/C",
+        "AnchoredSourceBridge general theorem",
+        "VeracityBoundary general theorem",
+        "Open general Sixth-refinement obligation"
+      ],
+      "public_candidate_projection": "README.md",
+      "required_integration_verification": [
+        "Rehash sealed packet and bound component inputs",
+        "Fresh independent same-bearer model review",
+        "Retain selected-fragment, philosophical-warrant and antecedent-vacuity qualifications"
+      ],
+      "reusable_verification": "verification-final-v2/VERIFICATION.json",
+      "unresolved_residual": [
+        "General incidence-to-Sixth refinement remains OPEN.",
+        "No historical Sixth theorem imported or freshly replayed."
+      ]
+    }
+  ]
+}

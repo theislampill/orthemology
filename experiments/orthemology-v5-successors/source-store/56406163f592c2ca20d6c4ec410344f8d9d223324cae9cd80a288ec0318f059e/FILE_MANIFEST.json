@@ -1,0 +1,115 @@
+{
+  "scope": "source-only portable exact scalar-fusion candidate",
+  "files": [
+    {
+      "path": "DEPENDENCY_OBJECTS.json",
+      "sha256": "c37257357107bb7ca99cb32f2c9f07c752d84cfd102c44c0ad9362b9e01d424b",
+      "bytes": 274616
+    },
+    {
+      "path": "PREDECESSOR_CLOSURE.json",
+      "sha256": "46c6c6ac66692b883b7172acadf6eb7c44c4641e23363dbd66f73d6e8fd4959f",
+      "bytes": 32283
+    },
+    {
+      "path": "PROOF_SCOPE.json",
+      "sha256": "820226315e29730d641d03e175af88561fcec493060a329f2ba9815c4e934868",
+      "bytes": 6572
+    },
+    {
+      "path": "README.md",
+      "sha256": "8f5195915f5f5fe2db63736b71b19228346b468fce1a4c2ec38e3d3d26e8d364",
+      "bytes": 4441
+    },
+    {
+      "path": "REVIEW_SUMMARY.md",
+      "sha256": "2ff68e5e14d132976512e6b51e49af871fd488bcaa65288a81a8a1a881a837cf",
+      "bytes": 2102
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924",
+      "bytes": 3530
+    },
+    {
+      "path": "replay.py",
+      "sha256": "c82fece5084fe2c4b2de3c5c543db5201315a47ef0257d3f0ef448298553bf3e",
+      "bytes": 5544
+    },
+    {
+      "path": "src/ClosedProofCanonicalisation.lean",
+      "sha256": "c773b21488efd769d57b3f92ea81b5d3c1cf50de15c7cf4fb1dfd30fa8dc45d8",
+      "bytes": 3075
+    },
+    {
+      "path": "src/LiteralScalarFusion.lean",
+      "sha256": "b3d6f9e9b235171c0b885ee40d1fb985c6efa82e1647c76a5ca98e493795af5b",
+      "bytes": 2228
+    },
+    {
+      "path": "src/ScalarFusionCore.lean",
+      "sha256": "975e2220158cf6b285cc994e36c408389a908c77e0f63bfa028c8cb416319618",
+      "bytes": 6739
+    },
+    {
+      "path": "src/ScalarFusionReverse.lean",
+      "sha256": "6a03e72fe6e087c98b97d0f881f6f1dc7960c2a46b89f7f1351394ff3b410b65",
+      "bytes": 13817
+    },
+    {
+      "path": "tests/AllDeclarationAxioms.lean",
+      "sha256": "1b743f7a60189ddcad8d7882e9881f5672327d757fef78aa5a54bcae25c41f1a",
+      "bytes": 5257
+    },
+    {
+      "path": "tests/BeforeImplementation.lean",
+      "sha256": "4ef4a4b5fe942dafe902f82abe210ab344f60197cb7895b6b5206991cac401ac",
+      "bytes": 191
+    },
+    {
+      "path": "tests/CanonicalizationContract.lean",
+      "sha256": "0a87d4ddb3cba9f45ac2cdd298668cfc6403f75aa06d7e6877f774cde7dd049c",
+      "bytes": 688
+    },
+    {
+      "path": "tests/CanonicalizationRed.lean",
+      "sha256": "1b83248dc6fe0975f18099558e0a30332105019bd6c282598d32fe50510efea3",
+      "bytes": 276
+    },
+    {
+      "path": "tests/MotiveAndDirectionContract.lean",
+      "sha256": "09a3eb40ec65389a7b06a2d7a829d94f76d3bdb6958476c4dc728ea01029c5f0",
+      "bytes": 1231
+    },
+    {
+      "path": "tests/RejectChangedEndpoint.lean",
+      "sha256": "be410b79282a16f264dfe6f989c7bbf19153613b796afe76298e247bb4d79b37",
+      "bytes": 220
+    },
+    {
+      "path": "tests/RejectCurrentLaundering.lean",
+      "sha256": "3238b21fe5dae7149de4e1c622e78a50ed723df0cac20ed654247cd2bcee8678",
+      "bytes": 219
+    },
+    {
+      "path": "tests/RejectNonliteralWitness.lean",
+      "sha256": "91c2125bd2b75af9b46dc56c47fe6385726cdf7af3d89f943ef4bb696d483dc6",
+      "bytes": 241
+    },
+    {
+      "path": "tests/RejectSemanticReflection.lean",
+      "sha256": "568831c8e9f6226328560c0e2d1d6803dbcab5a79341cc074ba91c1cb73b268e",
+      "bytes": 382
+    },
+    {
+      "path": "tests/RejectUnconditionalIdentity.lean",
+      "sha256": "680346cc7b3fcaa3ca96b5818de33f673a1ae704d36c3da72b7b0d45781fe53d",
+      "bytes": 195
+    },
+    {
+      "path": "tests/StatementContract.lean",
+      "sha256": "25a1623204ffb54724a7396ade2d5333c3c025f0d95c7950c84be98376b2e28f",
+      "bytes": 1307
+    }
+  ]
+}

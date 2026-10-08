@@ -1,0 +1,82 @@
+{
+  "verified_at": "2026-10-07T10:57:53.603586+00:00",
+  "scope": "Entire assigned received original electronic authorial body with inherited gaps; selected scan controls, NOT all edited print words or whole historical work",
+  "first_pass_windows": 88,
+  "volume1": {
+    "source_ranges": [
+      [
+        "electronic section 001",
+        16,
+        1569
+      ],
+      [
+        "electronic section 002",
+        16,
+        1009
+      ]
+    ],
+    "lines": 2548,
+    "whitespace_words": 94952,
+    "windows": 42
+  },
+  "volume2": {
+    "source_ranges": [
+      [
+        "electronic section 002",
+        1010,
+        1350
+      ],
+      [
+        "electronic section 003",
+        16,
+        1192
+      ],
+      [
+        "electronic section 004",
+        16,
+        362
+      ]
+    ],
+    "lines": 1865,
+    "whitespace_words": 91150,
+    "windows": 46
+  },
+  "total_lines": 4413,
+  "total_whitespace_words": 186102,
+  "coverage_gaps_in_received_body": [],
+  "overlaps_in_first_pass": [],
+  "reflection_text_windows": {
+    "volume1": 12,
+    "volume2": 8
+  },
+  "independent_selected_volume2_reinspection_lines": 98,
+  "supplementary_reading_credit_included": false,
+  "historical_work_complete": false,
+  "unavailable_portions_or_abridgment_substituted_silently": false,
+  "nominal_second_polemic_faces": 242,
+  "present_faces": 234,
+  "recorded_missing_or_misnumbered_faces": [
+    [
+      48,
+      49
+    ],
+    [
+      73,
+      78
+    ]
+  ],
+  "third_fourth_major_polemics_not_found": true,
+  "printed_scope_alignment": {
+    "volume1": [
+      3,
+      604
+    ],
+    "volume2": [
+      605,
+      1143
+    ],
+    "qualifier": "endpoint/layout alignment, not complete textual identity; direct physical seam in 1441 printing corroborates 1442 combined"
+  },
+  "verification_pass": true,
+  "publication_note": "Historical study metadata retained for scope and source identity. No additional source reading, visual collation or philosophical proof is claimed by this projection."
+}

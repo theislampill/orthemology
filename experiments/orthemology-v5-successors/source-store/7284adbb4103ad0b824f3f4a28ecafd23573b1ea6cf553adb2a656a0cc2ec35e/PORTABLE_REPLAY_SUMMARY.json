@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "status": "PASS_AUTHOR_PORTABLE_REPLAY",
+  "checked_utc": "2026-10-06T03:52:00.733476+00:00",
+  "candidate_manifest_sha256": "dedd850a7b3e2a89cfbdeaf6fd01d069be8b4e00a9e4019b59066bddb29e753c",
+  "runner_sha256": "4b1522dbe651ac97bece149b2fd21c8fc0688a87ac7bbd10e1f761bcf80d9adc",
+  "terminal_receipt_sha256": "51d6dc046a6d01d6363078a5d6875721835e201877af82d46da6c422e6885de8",
+  "lanes": {
+    "python": {
+      "status": "PASS_PYTHON_SUITES_AND_FULL_CAMPAIGNS",
+      "receipt_sha256": "c506a27004c81666dd6436a3040a95c7fbc0e8d8edc3256225794394aa6b5d0d",
+      "commands_passed": 11,
+      "source_copies_exact": true,
+      "source_unchanged_after": true,
+      "checks": [
+        {
+          "label": "reference-author",
+          "exit_code": 0,
+          "log_sha256": "25b68e4cdd454c992118ce8f83d18a38058d9de47fc5beffe75cc0534033585c"
+        },
+        {
+          "label": "efficient-author",
+          "exit_code": 0,
+          "log_sha256": "ec14ae7ead7286515b22d926fd233a3bb4a320dd926962d9cbb8df949ea57bf5"
+        },
+        {
+          "label": "reference-independent",
+          "exit_code": 0,
+          "log_sha256": "99649b340557cead3318b7a2f849ac45eaaa76fb3eded55bdc708fc010bf3a1f"
+        },
+        {
+          "label": "efficient-independent",
+          "exit_code": 0,
+          "log_sha256": "089606e556313207e4589e5ade2bde5c1dad0d4dc72ae711a3b5eb0fd6aaa834"
+        },
+        {
+          "label": "efficient-protected-paths",
+          "exit_code": 0,
+          "log_sha256": "2c44806420c402566499346b87a3813680c41dfe2d504462112ce2367872dae8"
+        },
+        {
+          "label": "efficient-prior-controls",
+          "exit_code": 0,
+          "log_sha256": "5a743f60877b38488bb619c06d40c018d9f76cf6e86508f0796b91173b13f32c"
+        },
+        {
+          "label": "reference-census",
+          "exit_code": 0,
+          "log_sha256": "69cd1faf8700cdc2d40afdf977d4aea9da6248f14623a8719de3d7f8f8847a29"
+        },
+        {
+          "label": "reference-extended-census",
+          "exit_code": 0,
+          "log_sha256": "6249312ae94b00e43f60b74762d321c123aca2e2278e5f3bed6f87b6693ebd37"
+        },
+        {
+          "label": "efficient-census",
+          "exit_code": 0,
+          "log_sha256": "fffcaf3ddb8c73a60b743b80a254bbf924ae2cc1ead6bbf8845686def4b7aae3"
+        },
+        {
+          "label": "efficient-extra-end-to-end",
+          "exit_code": 0,
+          "log_sha256": "cacd44074387f7323588570aa2a5bc0cb7fc0fc2f45c2c6bc6526170e038c2a8"
+        },
+        {
+          "label": "efficient-forged-negatives",
+          "exit_code": 0,
+          "log_sha256": "42c273d3e6f77c76de1195b66adb040b7976dfc359433a48f8a99f02de380464"
+        }
+      ]
+    },
+    "hidden-change": {
+      "status": "PASS_FRESH_CUSTOM_SOURCES_AND_SELECTED_CONTROLS",
+      "receipt_sha256": "5a8df31f847dca72befbc1fd64c1a4bb76513a7f022c9c8d33c778103c55a970",
+      "fresh_custom_source_modules": 125,
+      "positive_control_files": 36,
+      "qualified_expected_failure_files": 28,
+      "printed_audit_rows": 446,
+      "distinct_audited_declarations": 324,
+      "axiom_whitelist": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "custom_objects_reused": false,
+      "external_object_count": 6646,
+      "external_inventory_sha256": "e13b1cfa127cc6e065a0611672f3c993bab19cfadd90a81fd92843c2e86ad827",
+      "cold_dependency_build": false
+    },
+    "hase": {
+      "status": "PASS_FRESH_CUSTOM_SOURCES_AND_SELECTED_CONTROLS",
+      "receipt_sha256": "91063b06ca1aa4293b84b754350e8a00291b9a961e5930f07d0ee81321a34bb8",
+      "fresh_custom_source_modules": 84,
+      "positive_control_files": 4,
+      "qualified_expected_failure_files": 4,
+      "printed_audit_rows": 9,
+      "distinct_audited_declarations": 9,
+      "axiom_whitelist": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "custom_objects_reused": false,
+      "external_object_count": 1369,
+      "external_inventory_sha256": "bffd038a1277bd4434dfa01e8f72928ff3ef902e84fa46da0e18e02a8423b780",
+      "cold_dependency_build": false,
+      "ordinary_diagnostic": {
+        "scope": "Ordinary finite calculation on exported exact syntax; not a Lean theorem of beta-eta separation or compiler-image membership.",
+        "exit_code": 0,
+        "script_sha256": "093857b23dac06e14ec7da11a3be91cc356af1a498c93fed51a6e5ab32d99504",
+        "export_sha256": "615d4c95a4e05b6453199a223e99165903ebfe1aeb3449b4f1019beb2459fb9a",
+        "log_sha256": "17495d9d816a1538ee9b4eaa67a161562d6404ed2e1536bb0c231fb14d00942c",
+        "normalizer_self_tests": 7,
+        "distinct_alpha_classes": true,
+        "is_kernel_theorem": false
+      }
+    }
+  },
+  "platform_scope": "Recorded Linux execution under a Unicode/spaces path; no Windows or macOS execution claim.",
+  "trust_boundary": "Fresh custom source compilation against two separately pinned external object caches and an explicitly supplied Lean 4.19.0 compiler/runtime. No cold dependency build or Python/Lean correspondence proof.",
+  "scope_of_status": "Author qualification snapshot at checked_utc; separate independent acceptance is recorded in INDEPENDENT_PACKAGE_SUMMARY.json. No current publication or overall-research status is asserted."
+}

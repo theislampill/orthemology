@@ -1,0 +1,21 @@
+{
+  "edition": "Orthemology Nineteenth research evidence, 6 October 2026",
+  "authorship": "AI-authored research synthesis. Source attribution, analytical judgment and human expert endorsement are distinct.",
+  "delivery_status": "Prepared for delivery; source checked at the stated scope. No delivery or publication is asserted.",
+  "verified_at_utc": "2026-10-06T14:19:58Z",
+  "repository": "https://github.com/theislampill/orthemology",
+  "adopted_main": {
+    "commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
+    "scope": "Through Sixth tranche"
+  },
+  "review_candidate": {
+    "pull_request": "https://github.com/theislampill/orthemology/pull/30",
+    "head_commit": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+    "state": "open",
+    "merged": false,
+    "scope": "Through Tranche16"
+  },
+  "read_only_observation": "Candidate/adopted boundary unchanged at the stated time. Later research is not automatically integrated or adopted.",
+  "validation": "Two recorded GitHub Actions check runs succeeded for that head; this does not certify substantive human review or merge authorization.",
+  "changes_performed": []
+}

@@ -1,0 +1,77 @@
+{
+  "checkpoint_utc": "2026-10-07T09:08:00Z",
+  "primary_study_witness": {
+    "host": "Islamicbook",
+    "format": "downloaded raw HTML and derived UTF-8 text",
+    "edition_explicit_in_downloaded_body": false,
+    "qualification": "Opening/closing authorial body strings are matched to edition-linked Shamela pages. This does not establish complete textual identity or apparatus completeness across the hosts.",
+    "subsections_used_for_volume8": [
+      "012 tail",
+      "013 body",
+      "014 prefix"
+    ],
+    "subsections_used_for_volume9": [
+      "014 tail",
+      "015 body",
+      "016 body"
+    ],
+    "subsection017": "Only boundary confirmation of volume10; no selected-volume credit for that body."
+  },
+  "edition_anchor": {
+    "url": "https://shamela.ws/book/21506",
+    "author": "Ibn Taymiyya",
+    "title": "Darʾ taʿāruḍ al-ʿaql wa-l-naql",
+    "editor": "Muhammad Rashad Salim",
+    "publisher": "Imam Muhammad ibn Saud Islamic University, Saudi Arabia",
+    "edition": "second",
+    "year_hijri": 1411,
+    "year_ce": 1991,
+    "host_claim": "Pagination agrees with print",
+    "qualification": "Host bibliographic claim; no print or manuscript collation."
+  },
+  "volume_boundaries": {
+    "8": {
+      "first_electronic_url": "https://shamela.ws/book/21506/2750",
+      "first_label": "8:3",
+      "last_electronic_url": "https://shamela.ws/book/21506/3282",
+      "last_label": "8:535",
+      "last_text_matched": true
+    },
+    "9": {
+      "first_electronic_url": "https://shamela.ws/book/21506/3283",
+      "first_label": "9:3",
+      "last_url_attempt": "https://shamela.ws/book/21506/3714",
+      "last_attempt_outcome": "Internal Error; not credited as displayed page",
+      "last_print_label": "not certified",
+      "next_volume_first_url": "https://shamela.ws/book/21506/3715",
+      "next_volume_label": "10:3",
+      "next_volume_text_match": "Verified by volume09 reader"
+    }
+  },
+  "held_targets": [
+    {
+      "url": "https://islamhouse.com/ar/books/2827553/",
+      "route": "urllib local download",
+      "outcome": "HTTP403; no local listing saved",
+      "context": "Public no-slash listing was separately visible through web before download failure; not permission to bypass."
+    },
+    {
+      "url": "https://d1.islamhouse.com/data/ar/ih_books/chain_01/Dra_Altaearud/ar_08_Dra_taearud_aleaql_walnaql.pdf",
+      "outcome": "HTTP403 local acquisition; paused; no file/hash/visual credit"
+    },
+    {
+      "url": "https://d1.islamhouse.com/data/ar/ih_books/chain_01/Dra_Altaearud/ar_09_Dra_taearud_aleaql_walnaql.pdf",
+      "outcome": "HTTP403 local acquisition; paused; no file/hash/visual credit"
+    },
+    {
+      "url": "https://shamela.ws/book/21506/2750",
+      "route": "urllib local retrieval",
+      "outcome": "HTTP403; no local HTML; separate permitted electronic web reading retained"
+    }
+  ],
+  "web_pdf_listing_only": {
+    "8": 541,
+    "9": 441
+  },
+  "visual_check_status": "No images successfully displayed to the reader. A web screenshot call returned references for8 but was emitted as text, not viewed images;9 returned cache miss. No visual credit."
+}

@@ -1,0 +1,232 @@
+{
+  "schema": "t20-anchored-source-integration-v1",
+  "results": [
+    {
+      "result_id": "T20-ASB-01",
+      "title": "Anchored source coverage",
+      "tranche": "T20",
+      "exact_source_artifacts": [
+        "src/AnchoredSourceBridge.lean",
+        "src/Controls.lean",
+        "src/ModalAbilityControl.lean"
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "FRESH_INTERFACE_AND_CONTROLS; PATH_INDUCTION_IDEA_INHERITED",
+      "formal_declarations": [
+        "AnchoredSourceBridge.global_coverage_of_qualified_anchor",
+        "AnchoredSourceBridge.guarded_common_original_provider"
+      ],
+      "dependencies": [
+        "F01",
+        "F02",
+        "G01",
+        "G02",
+        "G04",
+        "D16",
+        "H02"
+      ],
+      "supersedes": [],
+      "does_not_supersede": [
+        "Sixth ConnectedUnity/LocalCover",
+        "Sixth ProductiveCompleteness",
+        "T17/T19 philosophical warrant appraisals"
+      ],
+      "public_candidate_projection": "Bounded conditional theorem and finite control summary; no metaphysical verification claim",
+      "required_integration_verification": "Run reproduce.py against exact bound new source; preserve primitive predicates, input scopes, axioms and expected rejections",
+      "reusable_existing_verification": "This source-bound fresh Init-only receipt; prior Sixth receipts retain their own separate scope",
+      "unresolved_residual": "Exact source-mode and complete-account interpretation remains substantive",
+      "receipt": "builds/final-field-cnd-v1/BUILD_MANIFEST.json"
+    },
+    {
+      "result_id": "T20-ASB-02",
+      "title": "Scoped satisfaction transparency",
+      "tranche": "T20",
+      "exact_source_artifacts": [
+        "src/AnchoredSourceBridge.lean",
+        "src/Controls.lean",
+        "src/ModalAbilityControl.lean"
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "FRESH_INTERFACE_AND_CONTROLS; PATH_INDUCTION_IDEA_INHERITED",
+      "formal_declarations": [
+        "AnchoredSourceBridge.mode_satisfaction_iff_global_coverage",
+        "AnchoredSourceBridge.source_mode_iff_global_coverage"
+      ],
+      "dependencies": [
+        "F01",
+        "G01",
+        "G02",
+        "D16",
+        "H02"
+      ],
+      "supersedes": [],
+      "does_not_supersede": [
+        "Sixth ConnectedUnity/LocalCover",
+        "Sixth ProductiveCompleteness",
+        "T17/T19 philosophical warrant appraisals"
+      ],
+      "public_candidate_projection": "Bounded conditional theorem and finite control summary; no metaphysical verification claim",
+      "required_integration_verification": "Run reproduce.py against exact bound new source; preserve primitive predicates, input scopes, axioms and expected rejections",
+      "reusable_existing_verification": "This source-bound fresh Init-only receipt; prior Sixth receipts retain their own separate scope",
+      "unresolved_residual": "No philosophical-warrant credit from equivalence",
+      "receipt": "builds/final-field-cnd-v1/BUILD_MANIFEST.json"
+    },
+    {
+      "result_id": "T20-ASB-03",
+      "title": "Rival and complete-provider uniqueness",
+      "tranche": "T20",
+      "exact_source_artifacts": [
+        "src/AnchoredSourceBridge.lean",
+        "src/Controls.lean",
+        "src/ModalAbilityControl.lean"
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED"
+      ],
+      "inherited_or_fresh": "FRESH_INTERFACE_AND_CONTROLS; PATH_INDUCTION_IDEA_INHERITED",
+      "formal_declarations": [
+        "AnchoredSourceBridge.represented_rivals_equal",
+        "AnchoredSourceBridge.actual_rivals_equal",
+        "AnchoredSourceBridge.unique_complete_provider",
+        "AnchoredSourceBridge.field_cnd_of_global_cnd",
+        "AnchoredSourceBridge.guarded_common_original_provider_of_global_cnd",
+        "AnchoredSourceBridge.Controls.principal_application_with_outside_duplication"
+      ],
+      "dependencies": [
+        "E06",
+        "D16",
+        "H02",
+        "H03"
+      ],
+      "supersedes": [],
+      "does_not_supersede": [
+        "Sixth ConnectedUnity/LocalCover",
+        "Sixth ProductiveCompleteness",
+        "T17/T19 philosophical warrant appraisals"
+      ],
+      "public_candidate_projection": "Bounded conditional theorem and finite control summary; no metaphysical verification claim",
+      "required_integration_verification": "Run reproduce.py against exact bound new source; preserve primitive predicates, input scopes, axioms and expected rejections",
+      "reusable_existing_verification": "This source-bound fresh Init-only receipt; prior Sixth receipts retain their own separate scope",
+      "unresolved_residual": "Field-restricted CND and visibility/positivity remain separate. Global CND is sufficient but unnecessary; outside-duplication control verifies the scope restriction.",
+      "receipt": "builds/final-field-cnd-v1/BUILD_MANIFEST.json"
+    },
+    {
+      "result_id": "T20-ASB-04",
+      "title": "Thirteen-control campaign",
+      "tranche": "T20",
+      "exact_source_artifacts": [
+        "src/AnchoredSourceBridge.lean",
+        "src/Controls.lean",
+        "src/ModalAbilityControl.lean"
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "inherited_or_fresh": "FRESH_INTERFACE_AND_CONTROLS; PATH_INDUCTION_IDEA_INHERITED",
+      "formal_declarations": [
+        "AnchoredSourceBridge.Controls.full_nonvacuous_model",
+        "AnchoredSourceBridge.Controls.missing_cnd",
+        "AnchoredSourceBridge.Controls.missing_classification",
+        "AnchoredSourceBridge.Controls.missing_conformance",
+        "AnchoredSourceBridge.Controls.empty_inventory_singleton"
+      ],
+      "dependencies": [
+        "E06",
+        "F01",
+        "F02",
+        "G01",
+        "G02",
+        "D16"
+      ],
+      "supersedes": [],
+      "does_not_supersede": [
+        "Sixth ConnectedUnity/LocalCover",
+        "Sixth ProductiveCompleteness",
+        "T17/T19 philosophical warrant appraisals"
+      ],
+      "public_candidate_projection": "Bounded conditional theorem and finite control summary; no metaphysical verification claim",
+      "required_integration_verification": "Run reproduce.py against exact bound new source; preserve primitive predicates, input scopes, axioms and expected rejections",
+      "reusable_existing_verification": "This source-bound fresh Init-only receipt; prior Sixth receipts retain their own separate scope",
+      "unresolved_residual": "Finite interpretations do not establish metaphysical possibility",
+      "receipt": "builds/final-field-cnd-v1/BUILD_MANIFEST.json"
+    },
+    {
+      "result_id": "T20-ASB-05",
+      "title": "Derived ownership and out-of-field bounds",
+      "tranche": "T20",
+      "exact_source_artifacts": [
+        "src/AnchoredSourceBridge.lean",
+        "src/Controls.lean",
+        "src/ModalAbilityControl.lean"
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "inherited_or_fresh": "FRESH_INTERFACE_AND_CONTROLS; PATH_INDUCTION_IDEA_INHERITED",
+      "formal_declarations": [
+        "AnchoredSourceBridge.Controls.faithful_derived_agency_and_mediation",
+        "AnchoredSourceBridge.Controls.assertion_ownership_separate",
+        "AnchoredSourceBridge.Controls.outside_field_necessary_original"
+      ],
+      "dependencies": [
+        "G01",
+        "G02",
+        "G03",
+        "H02"
+      ],
+      "supersedes": [],
+      "does_not_supersede": [
+        "Sixth ConnectedUnity/LocalCover",
+        "Sixth ProductiveCompleteness",
+        "T17/T19 philosophical warrant appraisals"
+      ],
+      "public_candidate_projection": "Bounded conditional theorem and finite control summary; no metaphysical verification claim",
+      "required_integration_verification": "Run reproduce.py against exact bound new source; preserve primitive predicates, input scopes, axioms and expected rejections",
+      "reusable_existing_verification": "This source-bound fresh Init-only receipt; prior Sixth receipts retain their own separate scope",
+      "unresolved_residual": "No revelation authentication or uniqueness of all necessary reality",
+      "receipt": "builds/final-field-cnd-v1/BUILD_MANIFEST.json"
+    },
+    {
+      "result_id": "T20-ASB-06",
+      "title": "Witnessed finite standing ability",
+      "tranche": "T20",
+      "exact_source_artifacts": [
+        "src/AnchoredSourceBridge.lean",
+        "src/Controls.lean",
+        "src/ModalAbilityControl.lean"
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ],
+      "inherited_or_fresh": "FRESH_INTERFACE_AND_CONTROLS; PATH_INDUCTION_IDEA_INHERITED",
+      "formal_declarations": [
+        "AnchoredSourceBridge.Controls.ModalAbility.intact_finite_power_differentiated_actual_production",
+        "AnchoredSourceBridge.Controls.ModalAbility.actual_partial_fixture_mapping",
+        "AnchoredSourceBridge.Controls.ModalAbility.matching_outcome_is_not_same_token"
+      ],
+      "dependencies": [
+        "E01",
+        "E02",
+        "F01"
+      ],
+      "supersedes": [],
+      "does_not_supersede": [
+        "Sixth ConnectedUnity/LocalCover",
+        "Sixth ProductiveCompleteness",
+        "T17/T19 philosophical warrant appraisals"
+      ],
+      "public_candidate_projection": "Bounded conditional theorem and finite control summary; no metaphysical verification claim",
+      "required_integration_verification": "Run reproduce.py against exact bound new source; preserve primitive predicates, input scopes, axioms and expected rejections",
+      "reusable_existing_verification": "This source-bound fresh Init-only receipt; prior Sixth receipts retain their own separate scope",
+      "unresolved_residual": "No exhaustive metaphysical modality or source-fixed peer-act transfer",
+      "receipt": "builds/final-field-cnd-v1/BUILD_MANIFEST.json"
+    }
+  ]
+}

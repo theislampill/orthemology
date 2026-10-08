@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-05T17:07:34.500900+00:00",
+  "archive_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+  "all_six_compiler_and_shared_library_files_match_archive": true,
+  "files": [
+    {
+      "archive_member": "lean-4.19.0-linux/bin/lean",
+      "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023"
+    },
+    {
+      "archive_member": "lean-4.19.0-linux/bin/lake",
+      "sha256": "5111aee5c9434ab05d4265606475ef22e8bda69aaf3a0657b61a7eec6e550bed"
+    },
+    {
+      "archive_member": "lean-4.19.0-linux/lib/lean/libleanshared.so",
+      "sha256": "2ab605c74c78f9ba4431a7b5305a4b28a9071d8a826f223eb14fe5530f78e14d"
+    },
+    {
+      "archive_member": "lean-4.19.0-linux/lib/lean/libLake_shared.so",
+      "sha256": "41d978bb36ca6e187a24688c92a047b9293c43b0562049e1d6407cc0b3d39208"
+    },
+    {
+      "archive_member": "lean-4.19.0-linux/lib/lean/libInit_shared.so",
+      "sha256": "44bc5837306f8e24a5db0db56d56ca3114415bd65e3b107426d3c93e21d20098"
+    },
+    {
+      "archive_member": "lean-4.19.0-linux/lib/lean/libleanshared_1.so",
+      "sha256": "44bc5837306f8e24a5db0db56d56ca3114415bd65e3b107426d3c93e21d20098"
+    }
+  ]
+}

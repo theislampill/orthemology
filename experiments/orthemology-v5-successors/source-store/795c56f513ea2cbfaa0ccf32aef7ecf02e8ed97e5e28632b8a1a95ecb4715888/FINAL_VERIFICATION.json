@@ -1,0 +1,2674 @@
+{
+  "utc": "2026-10-07T12:50:13.920772+00:00",
+  "selection": "Entire received authorial main 3–1603 plus supplied electronic notes; complete electronic preliminary layer separately",
+  "coverage": {
+    "intro": {
+      "expected_positions": 103,
+      "actual_positions": 103,
+      "ordered_exact_coverage": true,
+      "missing": [],
+      "duplicates": [],
+      "unexpected": []
+    },
+    "body": {
+      "expected_positions": 1601,
+      "actual_positions": 1601,
+      "ordered_exact_coverage": true,
+      "missing": [],
+      "duplicates": [],
+      "unexpected": []
+    }
+  },
+  "first_pass_receipt_batches": 107,
+  "first_pass_untruncated_index_windows": 109,
+  "batched_receipt_note": "Middle 553–572 and 873–892 are each one hash-bound receipt supported by two contiguous untruncated smaller displays. Exact ordered span matching permits batching, never truncated credit.",
+  "first_pass_body_words_with_notes": 334183,
+  "first_pass_intro_words": 15224,
+  "reflection": {
+    "windows": 29,
+    "page_visits": 79,
+    "unique_electronic_body_positions": 71,
+    "words": 16263,
+    "scope": "Bounded rereadings, including overlapping integration returns to the middle section; no full second traversal.",
+    "consolidated_unique_ranges": [
+      [
+        89,
+        92
+      ],
+      [
+        238,
+        242
+      ],
+      [
+        264,
+        265
+      ],
+      [
+        460,
+        462
+      ],
+      [
+        498,
+        502
+      ],
+      [
+        511,
+        514
+      ],
+      [
+        587,
+        588
+      ],
+      [
+        896,
+        898
+      ],
+      [
+        909,
+        910
+      ],
+      [
+        921,
+        922
+      ],
+      [
+        1024,
+        1026
+      ],
+      [
+        1050,
+        1051
+      ],
+      [
+        1055,
+        1056
+      ],
+      [
+        1138,
+        1141
+      ],
+      [
+        1164,
+        1165
+      ],
+      [
+        1171,
+        1172
+      ],
+      [
+        1243,
+        1244
+      ],
+      [
+        1279,
+        1280
+      ],
+      [
+        1301,
+        1301
+      ],
+      [
+        1391,
+        1395
+      ],
+      [
+        1447,
+        1447
+      ],
+      [
+        1450,
+        1451
+      ],
+      [
+        1474,
+        1474
+      ],
+      [
+        1512,
+        1515
+      ],
+      [
+        1565,
+        1566
+      ],
+      [
+        1590,
+        1593
+      ]
+    ]
+  },
+  "source_doc_sha256": "a5d0c62a4021602bb009ce5dabf3cadad3ee702610b12def6ba94b55bbd105f5",
+  "source_pdf_sha256": "2f12843b0c252fe097bbf602178a798f8a6a2f446a11238376eabe65e953a6b3",
+  "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752",
+  "pages_json_sha256": "3d8eb7969da34586aa09fc61e3a49f1d5c38ba4015689d984b54d9c01f560116",
+  "scan_visual_positions": 53,
+  "partial_manuscript_plates": 21,
+  "source_and_image_hash_checks_match": true,
+  "errors": [],
+  "complete_selected_received_body": true,
+  "limitations": [
+    "Accounting and hashes verify coverage consistency, not independently comprehension. Direct untruncated source displays and substantive notes ground reading attestations.",
+    "No whole PDF reading, every-glyph manuscript decipherment, exhaustive apparatus collation, source-book authentication or full second traversal.",
+    "Historical textual lacunae and unexecuted authorial programme remain.",
+    "Electronic volume markers do not independently prove physical binding seams."
+  ],
+  "sections": {
+    "introduction_and_first_section": {
+      "first_pass_receipt_batches": 41,
+      "first_pass_untruncated_displays": 41,
+      "first_pass_body_positions": 535,
+      "first_pass_intro_positions": 103,
+      "first_pass_words": 127418,
+      "reflection_windows": 10,
+      "reflection_page_visits": 33,
+      "reflection_words": 6820,
+      "reflection_ranges": [
+        [
+          89,
+          92
+        ],
+        [
+          238,
+          242
+        ],
+        [
+          264,
+          265
+        ],
+        [
+          460,
+          462
+        ],
+        [
+          498,
+          502
+        ],
+        [
+          511,
+          514
+        ],
+        [
+          587,
+          588
+        ],
+        [
+          896,
+          898
+        ],
+        [
+          909,
+          910
+        ],
+        [
+          1024,
+          1026
+        ]
+      ]
+    },
+    "middle_section": {
+      "first_pass_receipt_batches": 37,
+      "first_pass_untruncated_displays": 39,
+      "first_pass_body_positions": 635,
+      "first_pass_intro_positions": 0,
+      "first_pass_words": 129931,
+      "reflection_windows": 9,
+      "reflection_page_visits": 22,
+      "reflection_words": 4510,
+      "reflection_ranges": [
+        [
+          896,
+          898
+        ],
+        [
+          909,
+          910
+        ],
+        [
+          1171,
+          1172
+        ],
+        [
+          1024,
+          1026
+        ],
+        [
+          1050,
+          1051
+        ],
+        [
+          1164,
+          1165
+        ],
+        [
+          921,
+          922
+        ],
+        [
+          1055,
+          1056
+        ],
+        [
+          1138,
+          1141
+        ]
+      ]
+    },
+    "final_section": {
+      "first_pass_receipt_batches": 29,
+      "first_pass_untruncated_displays": 29,
+      "first_pass_body_positions": 431,
+      "first_pass_intro_positions": 0,
+      "first_pass_words": 92058,
+      "reflection_windows": 10,
+      "reflection_page_visits": 24,
+      "reflection_words": 4933,
+      "reflection_ranges": [
+        [
+          1243,
+          1244
+        ],
+        [
+          1279,
+          1280
+        ],
+        [
+          1301,
+          1301
+        ],
+        [
+          1512,
+          1515
+        ],
+        [
+          1590,
+          1593
+        ],
+        [
+          1391,
+          1395
+        ],
+        [
+          1447,
+          1447
+        ],
+        [
+          1450,
+          1451
+        ],
+        [
+          1474,
+          1474
+        ],
+        [
+          1565,
+          1566
+        ]
+      ]
+    }
+  },
+  "separate_contextual_reread": {
+    "outside_original_study_checksum_seal": true,
+    "distinct_positions": 100,
+    "consolidated_ranges": [
+      [
+        229,
+        278
+      ],
+      [
+        455,
+        467
+      ],
+      [
+        496,
+        513
+      ],
+      [
+        892,
+        910
+      ]
+    ],
+    "selection_words": 21051,
+    "range_record": "bounded-reread/READING_RECEIPT.json",
+    "additional_primary_body_credit": 0
+  },
+  "combined_reflection": {
+    "study_reflection_distinct_positions": 71,
+    "separate_reread_distinct_positions": 100,
+    "overlap_distinct_positions": 23,
+    "overlap_ranges": [
+      [
+        238,
+        242
+      ],
+      [
+        264,
+        265
+      ],
+      [
+        460,
+        462
+      ],
+      [
+        498,
+        502
+      ],
+      [
+        511,
+        513
+      ],
+      [
+        896,
+        898
+      ],
+      [
+        909,
+        910
+      ]
+    ],
+    "union_distinct_positions": 148,
+    "union_ranges": [
+      [
+        89,
+        92
+      ],
+      [
+        229,
+        278
+      ],
+      [
+        455,
+        467
+      ],
+      [
+        496,
+        514
+      ],
+      [
+        587,
+        588
+      ],
+      [
+        892,
+        910
+      ],
+      [
+        921,
+        922
+      ],
+      [
+        1024,
+        1026
+      ],
+      [
+        1050,
+        1051
+      ],
+      [
+        1055,
+        1056
+      ],
+      [
+        1138,
+        1141
+      ],
+      [
+        1164,
+        1165
+      ],
+      [
+        1171,
+        1172
+      ],
+      [
+        1243,
+        1244
+      ],
+      [
+        1279,
+        1280
+      ],
+      [
+        1301,
+        1301
+      ],
+      [
+        1391,
+        1395
+      ],
+      [
+        1447,
+        1447
+      ],
+      [
+        1450,
+        1451
+      ],
+      [
+        1474,
+        1474
+      ],
+      [
+        1512,
+        1515
+      ],
+      [
+        1565,
+        1566
+      ],
+      [
+        1590,
+        1593
+      ]
+    ],
+    "extra_first_pass_coverage": 0,
+    "full_second_traversal": false,
+    "method": "Set union of the exact inclusive ranges in the study reflection receipts and separate contextual reread record; neither totals nor page visits are added without de-duplication."
+  },
+  "source_word_url": "https://ibnelqayem.com/ar/media/download/86",
+  "source_pdf_url": "https://ibnelqayem.com/ar/media/download/65",
+  "first_pass_ranges": {
+    "intro": [
+      [
+        1,
+        20
+      ],
+      [
+        21,
+        40
+      ],
+      [
+        43,
+        61
+      ],
+      [
+        62,
+        85
+      ],
+      [
+        86,
+        107
+      ]
+    ],
+    "body": [
+      [
+        3,
+        20
+      ],
+      [
+        21,
+        32
+      ],
+      [
+        33,
+        47
+      ],
+      [
+        48,
+        62
+      ],
+      [
+        63,
+        77
+      ],
+      [
+        78,
+        92
+      ],
+      [
+        93,
+        107
+      ],
+      [
+        108,
+        122
+      ],
+      [
+        123,
+        137
+      ],
+      [
+        138,
+        152
+      ],
+      [
+        153,
+        167
+      ],
+      [
+        168,
+        182
+      ],
+      [
+        183,
+        197
+      ],
+      [
+        198,
+        212
+      ],
+      [
+        213,
+        227
+      ],
+      [
+        228,
+        242
+      ],
+      [
+        243,
+        257
+      ],
+      [
+        258,
+        272
+      ],
+      [
+        273,
+        287
+      ],
+      [
+        288,
+        302
+      ],
+      [
+        303,
+        317
+      ],
+      [
+        318,
+        332
+      ],
+      [
+        333,
+        347
+      ],
+      [
+        348,
+        362
+      ],
+      [
+        363,
+        377
+      ],
+      [
+        378,
+        392
+      ],
+      [
+        393,
+        407
+      ],
+      [
+        408,
+        422
+      ],
+      [
+        423,
+        437
+      ],
+      [
+        438,
+        452
+      ],
+      [
+        453,
+        467
+      ],
+      [
+        468,
+        482
+      ],
+      [
+        483,
+        497
+      ],
+      [
+        498,
+        512
+      ],
+      [
+        513,
+        527
+      ],
+      [
+        528,
+        537
+      ],
+      [
+        538,
+        552
+      ],
+      [
+        553,
+        572
+      ],
+      [
+        573,
+        592
+      ],
+      [
+        593,
+        612
+      ],
+      [
+        613,
+        632
+      ],
+      [
+        633,
+        652
+      ],
+      [
+        653,
+        672
+      ],
+      [
+        673,
+        692
+      ],
+      [
+        693,
+        712
+      ],
+      [
+        713,
+        732
+      ],
+      [
+        733,
+        752
+      ],
+      [
+        753,
+        772
+      ],
+      [
+        773,
+        792
+      ],
+      [
+        793,
+        812
+      ],
+      [
+        813,
+        832
+      ],
+      [
+        833,
+        852
+      ],
+      [
+        853,
+        872
+      ],
+      [
+        873,
+        892
+      ],
+      [
+        893,
+        907
+      ],
+      [
+        908,
+        922
+      ],
+      [
+        923,
+        937
+      ],
+      [
+        938,
+        952
+      ],
+      [
+        953,
+        967
+      ],
+      [
+        968,
+        982
+      ],
+      [
+        983,
+        997
+      ],
+      [
+        998,
+        1012
+      ],
+      [
+        1013,
+        1027
+      ],
+      [
+        1028,
+        1042
+      ],
+      [
+        1043,
+        1057
+      ],
+      [
+        1058,
+        1072
+      ],
+      [
+        1073,
+        1087
+      ],
+      [
+        1088,
+        1102
+      ],
+      [
+        1103,
+        1117
+      ],
+      [
+        1118,
+        1132
+      ],
+      [
+        1133,
+        1147
+      ],
+      [
+        1148,
+        1162
+      ],
+      [
+        1163,
+        1172
+      ],
+      [
+        1173,
+        1185
+      ],
+      [
+        1186,
+        1200
+      ],
+      [
+        1201,
+        1215
+      ],
+      [
+        1216,
+        1230
+      ],
+      [
+        1231,
+        1245
+      ],
+      [
+        1246,
+        1260
+      ],
+      [
+        1261,
+        1275
+      ],
+      [
+        1276,
+        1290
+      ],
+      [
+        1291,
+        1305
+      ],
+      [
+        1306,
+        1320
+      ],
+      [
+        1321,
+        1335
+      ],
+      [
+        1336,
+        1350
+      ],
+      [
+        1351,
+        1365
+      ],
+      [
+        1366,
+        1380
+      ],
+      [
+        1381,
+        1395
+      ],
+      [
+        1396,
+        1410
+      ],
+      [
+        1411,
+        1425
+      ],
+      [
+        1426,
+        1440
+      ],
+      [
+        1441,
+        1455
+      ],
+      [
+        1456,
+        1470
+      ],
+      [
+        1471,
+        1485
+      ],
+      [
+        1486,
+        1500
+      ],
+      [
+        1501,
+        1515
+      ],
+      [
+        1516,
+        1530
+      ],
+      [
+        1531,
+        1545
+      ],
+      [
+        1546,
+        1560
+      ],
+      [
+        1561,
+        1575
+      ],
+      [
+        1576,
+        1590
+      ],
+      [
+        1591,
+        1603
+      ]
+    ]
+  },
+  "reading_range_hashes": [
+    {
+      "section": "introduction_and_first_section",
+      "layer": "intro",
+      "kind": "continuous-first-pass",
+      "range": [
+        1,
+        20
+      ],
+      "positions": 20,
+      "words": 3470,
+      "sha256": "585b14fb1b2563a4dfb37e84c1985496c10c4add63e6c98569c55e06972bc465",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "intro",
+      "kind": "continuous-first-pass",
+      "range": [
+        21,
+        40
+      ],
+      "positions": 20,
+      "words": 4559,
+      "sha256": "a6b962206ef54912ecc0942b484cb64aa7ed4c2a3d32e9d0859961c19812f3e7",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "intro",
+      "kind": "continuous-first-pass",
+      "range": [
+        43,
+        61
+      ],
+      "positions": 19,
+      "words": 3456,
+      "sha256": "3630a2cc400197b76a5b78394b837c59289e45583cbdd69941aa1746b90eac86",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "intro",
+      "kind": "continuous-first-pass",
+      "range": [
+        62,
+        85
+      ],
+      "positions": 22,
+      "words": 3630,
+      "sha256": "c939a05cf2eb25b45a9914ad663ce17518cb0af93b846189b445ab03996f0b17",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "intro",
+      "kind": "continuous-first-pass",
+      "range": [
+        86,
+        107
+      ],
+      "positions": 22,
+      "words": 109,
+      "sha256": "b9ad8a8b7f3cb7a4ac31a64ef66c24e48a8512c1164cca0ae56f4cf03f452495",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        3,
+        20
+      ],
+      "positions": 18,
+      "words": 3769,
+      "sha256": "c3189b68f86d68be46e056310097a1446f24fa974d5059621faaad7578bde5de",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        21,
+        32
+      ],
+      "positions": 12,
+      "words": 2607,
+      "sha256": "d56cfb3481f4b413b27c6b737af10813ac3687c1ea64e824411c6b0b94273ab6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        33,
+        47
+      ],
+      "positions": 15,
+      "words": 3157,
+      "sha256": "bb1928a61204ed56f77106b0db9a6f16986ce671674f756654349281c645be95",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        48,
+        62
+      ],
+      "positions": 15,
+      "words": 3058,
+      "sha256": "d0201d3d004de74c5ffccb8cc77b56d5b012a91decf6554176a7e2669d3d864e",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        63,
+        77
+      ],
+      "positions": 15,
+      "words": 3208,
+      "sha256": "0689d5ca31a9bac27c4f8bb3bfdc8e311dc72b89cb9dba41ac86cb59c4542ec8",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        78,
+        92
+      ],
+      "positions": 15,
+      "words": 3218,
+      "sha256": "d360b6ebd09eecab6f14706ff6cb5c96c699dd7f10b5da18418e1fe0fcdc4ef9",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        93,
+        107
+      ],
+      "positions": 15,
+      "words": 3216,
+      "sha256": "9ba2134ee29e67e823bccab45a33ff0341a2241be9780ff64aa46b3c2b4946c3",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        108,
+        122
+      ],
+      "positions": 15,
+      "words": 3027,
+      "sha256": "1636623cbe338001985ab49d92c928f7e63bd089e253251e64cad4eae4c4b41d",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        123,
+        137
+      ],
+      "positions": 15,
+      "words": 3024,
+      "sha256": "e20dadd43147e2b237766c7986994737ccffaa3e75366f6af8414aa42ed4a1fe",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        138,
+        152
+      ],
+      "positions": 15,
+      "words": 3070,
+      "sha256": "47bf375794a0266bb5314765d87dffc5a6963c3ed334aa02965bab621741cdcc",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        153,
+        167
+      ],
+      "positions": 15,
+      "words": 3031,
+      "sha256": "98fa6cd9c7d4c0fb9c049ed99a551baf542f646746df8b1b3aaa63d1bb4e6a0a",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        168,
+        182
+      ],
+      "positions": 15,
+      "words": 3247,
+      "sha256": "fdb44a9abb1ba88afcd6c5b0f3ea417ab59d05b3b3d2db075cf0a2c4e6c6fbda",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        183,
+        197
+      ],
+      "positions": 15,
+      "words": 3331,
+      "sha256": "87cc8eaa308f013a65e5b3d14161548c6a1e4413f18c2f9259b838a2a9c656ed",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        198,
+        212
+      ],
+      "positions": 15,
+      "words": 3422,
+      "sha256": "8dafaa943916c982e6de40e65722e392df87f7bbdb3576e8759a0e33ccac2c40",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        213,
+        227
+      ],
+      "positions": 15,
+      "words": 3110,
+      "sha256": "e8306e57b3cddbb4368c20d218521592002c3e4ad12d71fcebad7fd85c36c8e6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        228,
+        242
+      ],
+      "positions": 15,
+      "words": 3151,
+      "sha256": "f9f21968930805e2c5d45a23247e25452f99030f39abad90f1325e1c051ca918",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        243,
+        257
+      ],
+      "positions": 15,
+      "words": 3300,
+      "sha256": "a85b12b7aea3065afa57314d76c38e2d814d8c87255a64378f636faf703696c8",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        258,
+        272
+      ],
+      "positions": 15,
+      "words": 3098,
+      "sha256": "b86e30a221a4ffca0c04cf427b3fd381abd7f47dc38d9e49fb45c91df6704268",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        273,
+        287
+      ],
+      "positions": 15,
+      "words": 3013,
+      "sha256": "7dd3766bfdae5965b4529bda2f6466477d5dde29cee632cf24a5b4bf548d46dd",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        288,
+        302
+      ],
+      "positions": 15,
+      "words": 3168,
+      "sha256": "d452f5845d2bd3247d4eb4e0ba4871bff84bffc32da3afde049e395a3fbe46c6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        303,
+        317
+      ],
+      "positions": 15,
+      "words": 2903,
+      "sha256": "e84ca7bef5d8f9bf0034e47048e322fd8564a033e7218beccd8669348f2c6e35",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        318,
+        332
+      ],
+      "positions": 15,
+      "words": 3181,
+      "sha256": "ff44101a0bca3c2573d13b85c477891b1653db151bb854c82991884b42e79e78",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        333,
+        347
+      ],
+      "positions": 15,
+      "words": 3396,
+      "sha256": "6102c778fc0301b4772513c14bae731869edc207c6a189a87aef0b6028e8ac5e",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        348,
+        362
+      ],
+      "positions": 15,
+      "words": 3189,
+      "sha256": "d0f9f17a4c65a003de7d8bfa37437fc3e552496921efd8f6bea6a39e224771ab",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        363,
+        377
+      ],
+      "positions": 15,
+      "words": 2997,
+      "sha256": "27dfa14ea1071ab746a3a1f53462cd7d5b5e3cad1f1dc00750cb99c526c3d220",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        378,
+        392
+      ],
+      "positions": 15,
+      "words": 3058,
+      "sha256": "7ecea2da585ed7bb37beaebf60a81d8050d168980c595ad08f3d800d529ada67",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        393,
+        407
+      ],
+      "positions": 15,
+      "words": 3178,
+      "sha256": "80127a3e53e401961e6dbb5b7db275537c5b544c65333f8ca8cdd26d2f2f3c5a",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        408,
+        422
+      ],
+      "positions": 15,
+      "words": 3236,
+      "sha256": "bf85eabc1ce75c57bd5ca028d9b6f3767a124b2bdefba2eecf6cd369d3b55cee",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        423,
+        437
+      ],
+      "positions": 15,
+      "words": 2993,
+      "sha256": "0702f7ff8aaf5d3e7779be00d0a50f07baa4afbeb2c622f5c616021e7ddc88b7",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        438,
+        452
+      ],
+      "positions": 15,
+      "words": 3085,
+      "sha256": "88343ea02c87472a01c10a8e93a80ec7d8321afa7c46f9f44ee23537976b61ad",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        453,
+        467
+      ],
+      "positions": 15,
+      "words": 3366,
+      "sha256": "88689ea9f8755ab39bc5decda26dae92310d6c5c7208c8137171bb5090b166a3",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        468,
+        482
+      ],
+      "positions": 15,
+      "words": 3278,
+      "sha256": "053a50adfc0825dfa2e6b350ec36ac9e512bd4853e4db0c5f48039aac0187dce",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        483,
+        497
+      ],
+      "positions": 15,
+      "words": 3058,
+      "sha256": "665bc45b5191be45108d68e93f62a5b01f83724ad0e554c872a5c7ec2b4e4663",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        498,
+        512
+      ],
+      "positions": 15,
+      "words": 3113,
+      "sha256": "55f02e50158f8e8e5fb5a9fdfcbe56ac0f70eb6bcf01f62123ee51fcae91c1d3",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        513,
+        527
+      ],
+      "positions": 15,
+      "words": 3100,
+      "sha256": "3c23f8566e0c3a4fc6b09ff3e5c741980fa94e149ae4847b6e90d2aee9518fc3",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        528,
+        537
+      ],
+      "positions": 10,
+      "words": 1838,
+      "sha256": "bf2e74a3fd583ed29a0a85d10dea6e28ec62f4657bb170693bdab280b902673d",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "selected-reflection",
+      "range": [
+        89,
+        92
+      ],
+      "positions": 4,
+      "words": 821,
+      "sha256": "130eb2c751501e30021c3230cc24744f0d59e68c6a6ff8827763c1a5bfa4f66f",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "selected-reflection",
+      "range": [
+        238,
+        242
+      ],
+      "positions": 5,
+      "words": 1044,
+      "sha256": "6086b8fcad2c6f146c1eaa2b584d82003b2b21b8e431dbdd44ce66686420d5a6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "selected-reflection",
+      "range": [
+        264,
+        265
+      ],
+      "positions": 2,
+      "words": 406,
+      "sha256": "3eedaa055e6411a852de4004b71cdc75f09d430758f7b72da1e4d733a221e0a3",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "selected-reflection",
+      "range": [
+        460,
+        462
+      ],
+      "positions": 3,
+      "words": 648,
+      "sha256": "46a59054d3077008a828b261d736e31681f58338503a416adb57eb311afb2c7b",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "selected-reflection",
+      "range": [
+        498,
+        502
+      ],
+      "positions": 5,
+      "words": 979,
+      "sha256": "c937f000fd6eff30769541a069d9725451a3524730a514d5ae3f4ba22b557736",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "selected-reflection",
+      "range": [
+        511,
+        514
+      ],
+      "positions": 4,
+      "words": 848,
+      "sha256": "907d21e2baa182e4cd9fcb3eec0ec37e043f3a9f01cafc886a800214a07b17d2",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "integration-reflection",
+      "range": [
+        587,
+        588
+      ],
+      "positions": 2,
+      "words": 466,
+      "sha256": "af3483240f853efe3c048c9dc13a5071f83df813aa846b18df2e971a107ddb94",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "integration-reflection",
+      "range": [
+        896,
+        898
+      ],
+      "positions": 3,
+      "words": 605,
+      "sha256": "587e20c87b7b0f7325185e14c567787c50dd0c0a513c7165f91793cb0bd97c93",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "integration-reflection",
+      "range": [
+        909,
+        910
+      ],
+      "positions": 2,
+      "words": 391,
+      "sha256": "c7d2463d4e6e0572531d968d881dc45583affdb6f509b3add1d69561b3682fb5",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "introduction_and_first_section",
+      "layer": "body",
+      "kind": "integration-reflection",
+      "range": [
+        1024,
+        1026
+      ],
+      "positions": 3,
+      "words": 612,
+      "sha256": "1684dabc0af6defa7fb2af01b31d89b2b5e70da57c2fb518a93fa36440944b51",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        538,
+        552
+      ],
+      "positions": 15,
+      "words": 3057,
+      "sha256": "84d655d773c533b92e49d27ec2b97f7e619dc03d5f20576b7d49f2786657c247",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        553,
+        572
+      ],
+      "positions": 20,
+      "words": 3988,
+      "sha256": "b901df3317aedc677bd100bb1f06b3c6d33b78943a765075fca81aff15992ca3",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        573,
+        592
+      ],
+      "positions": 20,
+      "words": 4068,
+      "sha256": "26cb9d4b2676b0c50a9f5b052a5bd360df538bb61071a53fc56959fb41c7accc",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        593,
+        612
+      ],
+      "positions": 20,
+      "words": 3825,
+      "sha256": "12487899215575f19c025d328e7c327c49f4a837fbf22dbdf9cb2b45f135e90c",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        613,
+        632
+      ],
+      "positions": 20,
+      "words": 3937,
+      "sha256": "b8638750d002919abab22dc42a874b07822e3099112507ad26052f60e17bc64b",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        633,
+        652
+      ],
+      "positions": 20,
+      "words": 3948,
+      "sha256": "908a2df778b9a8092eda18172fb267a9cce103d479beb4e25d6e21661350d7cb",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        653,
+        672
+      ],
+      "positions": 20,
+      "words": 4146,
+      "sha256": "3962cf7fb8e3f57549aaeae5057a006348feb8923b2a0682262324085f914b9d",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        673,
+        692
+      ],
+      "positions": 20,
+      "words": 4171,
+      "sha256": "525ac90b4506e12b290ddb7140638159b7d6e5d6772dd9be44d0405073378e47",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        693,
+        712
+      ],
+      "positions": 20,
+      "words": 4163,
+      "sha256": "1d99e00ea174088622dc6ca1b2e0f230d99883259a3fc2ed55ebad8a7cd0219b",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        713,
+        732
+      ],
+      "positions": 20,
+      "words": 4243,
+      "sha256": "a2d0b2ad301aff23d9bca80c3e19487f0c0d051436deda27fee8fbc5789d9956",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        733,
+        752
+      ],
+      "positions": 20,
+      "words": 4197,
+      "sha256": "12b28001177b1e0bc3c39931a3c1a52a6b6ef57df39f3f66b34940c8bcff6a46",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        753,
+        772
+      ],
+      "positions": 20,
+      "words": 3951,
+      "sha256": "a80160eb5bbfb6c2f712dd7cd96aad16a6a0fc4637e9df6fac929a096683d935",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        773,
+        792
+      ],
+      "positions": 20,
+      "words": 4062,
+      "sha256": "0bd9c25e0bf257b57ac055b4c3c7c52525813c2be77005a4d042a9cadb525031",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        793,
+        812
+      ],
+      "positions": 20,
+      "words": 4009,
+      "sha256": "17cf2e8cd3beeceba87ee523181f5dd40ab90623e2e5c6e0661d28db2336be83",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        813,
+        832
+      ],
+      "positions": 20,
+      "words": 4018,
+      "sha256": "f63158157e2d60984a8e678f0c0b38f881a82a5cbabcce34820b9a03f2edfc93",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        833,
+        852
+      ],
+      "positions": 20,
+      "words": 4250,
+      "sha256": "31bba603750039d37577e69f390fba734c4b01925da9aa2c753b3057bcc4898b",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        853,
+        872
+      ],
+      "positions": 20,
+      "words": 4098,
+      "sha256": "0484f32b6823893580e48bb64e09d780aed4904707a34a9cfa1ea7fa93f3dff2",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        873,
+        892
+      ],
+      "positions": 20,
+      "words": 4399,
+      "sha256": "bd1e1e066e8792d3b4b4e5c30ceb9985dc8ea8e8cabee5f5417627c06293796c",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        893,
+        907
+      ],
+      "positions": 15,
+      "words": 3035,
+      "sha256": "eb25e5e8f3cb6680060f36b157cc18f79077f57b025ef4e9ab2607497190a5c8",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        908,
+        922
+      ],
+      "positions": 15,
+      "words": 3037,
+      "sha256": "5ae25511f5b1e4583144126cc6dfa0a9bd54cab88dd62c4168d6d84104c7f35e",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        923,
+        937
+      ],
+      "positions": 15,
+      "words": 3139,
+      "sha256": "5f92e7572321d5e9d397cc4e4e6c45f0847d1d5c7525557b7ceb85c99224d4a1",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        938,
+        952
+      ],
+      "positions": 15,
+      "words": 3024,
+      "sha256": "3ba5cde073dc62b3bdf88aab9a3b27ac648302cf8da53e338b7786aa1b079df1",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        953,
+        967
+      ],
+      "positions": 15,
+      "words": 3137,
+      "sha256": "fbff2e5874888af8ab69925e0914030002a31bae1d83f944918fbc9c54f8995e",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        968,
+        982
+      ],
+      "positions": 15,
+      "words": 3082,
+      "sha256": "6065eb635eb3f1e295601f22ea952f821ab50b635b664405f02651965947109c",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        983,
+        997
+      ],
+      "positions": 15,
+      "words": 3206,
+      "sha256": "e2b0a0551728fa60d032c3fbb203747eee89a7fee818e6dda833dd35a7d2b70a",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        998,
+        1012
+      ],
+      "positions": 15,
+      "words": 3146,
+      "sha256": "af8589ae566c13e04add51b2f382787d307502ec6c22c13a10345a327959008c",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1013,
+        1027
+      ],
+      "positions": 15,
+      "words": 3005,
+      "sha256": "202efb88b620600fa1c7237f6baa43516dbddee65cb5df26b3142127849af8b2",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1028,
+        1042
+      ],
+      "positions": 15,
+      "words": 3142,
+      "sha256": "2fedc93a79b10649a8aa4e6341c725e56b34627dd7768f686d86318ec328429a",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1043,
+        1057
+      ],
+      "positions": 15,
+      "words": 3062,
+      "sha256": "99655f85275f9c914943eff16d05785c67506a17621ed86ac8282f3ce65c65a7",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1058,
+        1072
+      ],
+      "positions": 15,
+      "words": 3210,
+      "sha256": "e556c6c9029643585894534092970d28af5b7287d6d9409ccf629053866149c7",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1073,
+        1087
+      ],
+      "positions": 15,
+      "words": 3057,
+      "sha256": "310c1c5fe5d488c4c6f287dccad86af057c3fede1613e288ec9247b4957cda03",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1088,
+        1102
+      ],
+      "positions": 15,
+      "words": 2988,
+      "sha256": "9cf4619711c096d6f498f678594553ef4c8c56f38e4fc3b0abb79a5c920bf8ef",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1103,
+        1117
+      ],
+      "positions": 15,
+      "words": 2991,
+      "sha256": "48dae3ff135ede25b3c391908e09f90713b6036b3ab66076f249f1b19b0ef6d3",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1118,
+        1132
+      ],
+      "positions": 15,
+      "words": 2993,
+      "sha256": "80be08ffb88a7c0b75f16bfd137e0e8830906e787576766c63f06bed19698930",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1133,
+        1147
+      ],
+      "positions": 15,
+      "words": 2940,
+      "sha256": "a855ad97eb593e10b0361fa4da688199872e3d0a5242ba84a2e99d9520014a3d",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1148,
+        1162
+      ],
+      "positions": 15,
+      "words": 3134,
+      "sha256": "56f930f26573b86c1f32768a2decc0717235ae72ec9c572453de9d5b07cb1ef6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1163,
+        1172
+      ],
+      "positions": 10,
+      "words": 2073,
+      "sha256": "2198ae5ebadd9b1702ba1ff655a4754578a7cfe938ba253fb37225cc0a20f3e2",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        896,
+        898
+      ],
+      "positions": 3,
+      "words": 605,
+      "sha256": "587e20c87b7b0f7325185e14c567787c50dd0c0a513c7165f91793cb0bd97c93",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        909,
+        910
+      ],
+      "positions": 2,
+      "words": 391,
+      "sha256": "c7d2463d4e6e0572531d968d881dc45583affdb6f509b3add1d69561b3682fb5",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1171,
+        1172
+      ],
+      "positions": 2,
+      "words": 403,
+      "sha256": "a9a7ad1161db37d9fdd3c637d79f0a6c536b4f078ea2fe375971109e226ff947",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1024,
+        1026
+      ],
+      "positions": 3,
+      "words": 612,
+      "sha256": "1684dabc0af6defa7fb2af01b31d89b2b5e70da57c2fb518a93fa36440944b51",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1050,
+        1051
+      ],
+      "positions": 2,
+      "words": 445,
+      "sha256": "f6ffa8d38414f60c9bf0130cc10d820e9de40d9c63532fa043e00321382c8543",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1164,
+        1165
+      ],
+      "positions": 2,
+      "words": 418,
+      "sha256": "551cc00546d34d1f70e29f6a48904680d1bf3a91318fed3ea1ef56d1e2949005",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        921,
+        922
+      ],
+      "positions": 2,
+      "words": 411,
+      "sha256": "8a81855d062cb046a9b0c37290791eaea2d6f421450d2d6dced9377c03ffce06",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1055,
+        1056
+      ],
+      "positions": 2,
+      "words": 404,
+      "sha256": "bb0e375436c3bdf94f9f0146b1889be6546be728b164bd33549c585ed3ff5c36",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "middle_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1138,
+        1141
+      ],
+      "positions": 4,
+      "words": 821,
+      "sha256": "362e676220d1ba7c559cd4f9f2ea8695fc36141a95bd1957b2dffcd40f8a3680",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1173,
+        1185
+      ],
+      "positions": 13,
+      "words": 2731,
+      "sha256": "2338e156dbebf1095235ad362ec28e5be4bf5172c1c527df527b523d2e416fa1",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1186,
+        1200
+      ],
+      "positions": 15,
+      "words": 3336,
+      "sha256": "fbd689916d5e77392ac7fa8542bc364198df2e24f7cf4969fa72b3494b63aca5",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1201,
+        1215
+      ],
+      "positions": 15,
+      "words": 3316,
+      "sha256": "06db0a460decd6fc84e9233d8a3823a4570cd31994d667d09c2db9819d8aebad",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1216,
+        1230
+      ],
+      "positions": 15,
+      "words": 3350,
+      "sha256": "8e4b0ac404f862c898127cfca34931a5e7d8acd57aef8c18dfc55ea39168877d",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1231,
+        1245
+      ],
+      "positions": 15,
+      "words": 3349,
+      "sha256": "a19fdb24fbce07e1e686272ec958ef1652d7fc640eaf3691d3da26f9264dd041",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1246,
+        1260
+      ],
+      "positions": 15,
+      "words": 3063,
+      "sha256": "b2ff8c3259bd31df23282382d15042c0710198a66aa5c615a382d3221fff728b",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1261,
+        1275
+      ],
+      "positions": 15,
+      "words": 3082,
+      "sha256": "970f843e90b54e8141ed213157d7628726cac20e1d4ce916c6dc1b966f72a498",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1276,
+        1290
+      ],
+      "positions": 15,
+      "words": 3016,
+      "sha256": "d262658ea6ae1a7b847e55b06ce5e4df6ac28c3de3cabe99e26c6a8848279d30",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1291,
+        1305
+      ],
+      "positions": 15,
+      "words": 3136,
+      "sha256": "f4daabc831bb2d9c56c3a438ff1f5d20cf6bc54fc3b5d97c028c0797b09cb3ed",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1306,
+        1320
+      ],
+      "positions": 15,
+      "words": 3207,
+      "sha256": "4ce61b0f42eaa67080c3867486120d12c260e797010aed61756bd2637f1f029d",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1321,
+        1335
+      ],
+      "positions": 15,
+      "words": 3169,
+      "sha256": "d26e9d53e4dbaffee23a41b59af340462117d8bf30053e4ccda6c032662be98c",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1336,
+        1350
+      ],
+      "positions": 15,
+      "words": 3087,
+      "sha256": "63d864db5330a21fddbf808de4bb216c2640f72e58ed2fe5cd1d1dcc15fe8cf6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1351,
+        1365
+      ],
+      "positions": 15,
+      "words": 3221,
+      "sha256": "8ab148adef20139230144f461a0245234867d98d9b6eabf94ac2cf4d875c7ea8",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1366,
+        1380
+      ],
+      "positions": 15,
+      "words": 2771,
+      "sha256": "47cc7beb8836e790e66f27f64a57980a06a919b7892cbd8f2034cbaf5691844e",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1381,
+        1395
+      ],
+      "positions": 15,
+      "words": 3075,
+      "sha256": "c3c88f380e380e1423fd50fd6a3f7b7e5c26c118418176c7364c6d0b7c678cd2",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1396,
+        1410
+      ],
+      "positions": 15,
+      "words": 3182,
+      "sha256": "ca160b634fb3498e9be2cfe309cee1c7c6edffc21c80046a1c00d66a0e0bfecb",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1411,
+        1425
+      ],
+      "positions": 15,
+      "words": 3201,
+      "sha256": "3a85056ae0c0470df8f6f76225eb21fce34374d5af2730f3f183b0683c809062",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1426,
+        1440
+      ],
+      "positions": 15,
+      "words": 3283,
+      "sha256": "afe2ca411496ae60eed7314dfae3c73c03f02efc143da35fa5ba59cef8ec7514",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1441,
+        1455
+      ],
+      "positions": 15,
+      "words": 3326,
+      "sha256": "a013f914ed6c10f75135e31719c95a6dc2a56a802fe137349a5a6f97cb57d8d5",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1456,
+        1470
+      ],
+      "positions": 15,
+      "words": 3221,
+      "sha256": "f599ff69c713519cf36aa9f9553a6c3bbcd31ebcf262ea6184d4b0e489a5225b",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1471,
+        1485
+      ],
+      "positions": 15,
+      "words": 3227,
+      "sha256": "7a69b7815379a5fc5960bae78ac0c9bb73c491ba254bf4adab80627f00b2e238",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1486,
+        1500
+      ],
+      "positions": 15,
+      "words": 3419,
+      "sha256": "4d6f82b7865c1a139613350d4ddcd3228e1b6ec89f1dfa68496251a897998804",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1501,
+        1515
+      ],
+      "positions": 15,
+      "words": 3376,
+      "sha256": "38e2bd4d0e9fb881a0bb92c721fe8e610955c0978cfca881d6d3747b24f47365",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1516,
+        1530
+      ],
+      "positions": 15,
+      "words": 3364,
+      "sha256": "4dfd2a3caf660bd0d0cd2dec65de6e3e6ed482ae872d8c241b6bee053563b148",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1531,
+        1545
+      ],
+      "positions": 15,
+      "words": 3433,
+      "sha256": "54ee2fe6eee66db879402668e62f985c88d3794658d66612b58d687d0cb09896",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1546,
+        1560
+      ],
+      "positions": 15,
+      "words": 3262,
+      "sha256": "193f479d0e454286d3e2cf330b1c88999558ed9529555a24d1afadf25a73aaa6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1561,
+        1575
+      ],
+      "positions": 15,
+      "words": 3123,
+      "sha256": "e89b10055ca67eb9429d1dce466eecafe76abaf1f3d0ad42e6896f3d32977db6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1576,
+        1590
+      ],
+      "positions": 15,
+      "words": 3246,
+      "sha256": "a1c3f55fefc30100ed753bd7760c2d72751cc03ca8becef00359b1beac40b346",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "continuous-first-pass",
+      "range": [
+        1591,
+        1603
+      ],
+      "positions": 13,
+      "words": 2486,
+      "sha256": "b55c14b3d1039bbceefa6f50468b447c0f86f97e9cf75fec684c291f1985e9e6",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1243,
+        1244
+      ],
+      "positions": 2,
+      "words": 392,
+      "sha256": "fe95fa0fcb40b53b1a1361fc6a281415f507f2ab3eecb666aef44f7b05c3c733",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1279,
+        1280
+      ],
+      "positions": 2,
+      "words": 401,
+      "sha256": "98c0947356e4cc8c5d39af0f36a36813feccd3bcf71392b403dd7584bfa9adc1",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1301,
+        1301
+      ],
+      "positions": 1,
+      "words": 194,
+      "sha256": "b7243c276c72ba1f014b223a54f3429db23192da45b62608efaaaae07329f694",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1512,
+        1515
+      ],
+      "positions": 4,
+      "words": 808,
+      "sha256": "ada7885a70370716263b149e2a0eeda97809ffd9062fac2230e0fe9c4b166790",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1590,
+        1593
+      ],
+      "positions": 4,
+      "words": 835,
+      "sha256": "6d31ef081083996522a6f78e5724a98ee661564d1e92a73a62e9c006899e3b0c",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1391,
+        1395
+      ],
+      "positions": 5,
+      "words": 1011,
+      "sha256": "fdef8a4ac5c0e35de7dbb524a69db9a5e1a5970e92728c1bf63dba7d2450e7f7",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1447,
+        1447
+      ],
+      "positions": 1,
+      "words": 257,
+      "sha256": "348f7eb8fde50db720302fa0730d166bfe3457e9ea987e45233247ad86d37783",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1450,
+        1451
+      ],
+      "positions": 2,
+      "words": 420,
+      "sha256": "8b726871763b550e9a8793b18ef45b03034253528fff443ddcbc192b05c5dde0",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1474,
+        1474
+      ],
+      "positions": 1,
+      "words": 226,
+      "sha256": "a6b732b27af30409d6a4fdb65e2cfdec7edf791da3afc55a0356595540b348d4",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    },
+    {
+      "section": "final_section",
+      "layer": "body",
+      "kind": "bounded-reflective-reread",
+      "range": [
+        1565,
+        1566
+      ],
+      "positions": 2,
+      "words": 389,
+      "sha256": "eb57baf53a5be5aa807016ededc8bebecaa1eba22bd704d60d296cfe55b604df",
+      "body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752"
+    }
+  ],
+  "curatorial_verification_note": "Source seal, every first-pass/reflection selection hash and count, untruncated display-span correspondence, separate reread hashes, scan image hashes and exact no-gap order were independently recomputed during selection. This is mechanical verification, not a new source reading or independent proof of comprehension."
+}

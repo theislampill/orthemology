@@ -1,0 +1,37 @@
+tranche20/ontology-type-control/OriginationTypeControl.lean:81:65: error: unsolved goals
+case gAct
+id✝ : Nat
+⊢ ∃ x, id✝ = x.serial → x.gOn = false
+
+case effect
+id✝ : Nat
+⊢ ∃ x, id✝ = x.serial → x.gOn = false
+
+case other
+id✝ : Nat
+⊢ ∃ x, id✝ = x.serial → x.otherOn = false
+tranche20/ontology-type-control/OriginationTypeControl.lean:94:2: error: failed to synthesize
+  Decidable
+    (¬E (actual 0) (Obj.gAct 1) ∧
+      E (actual 1) (Obj.gAct 1) ∧
+        Emergent (Obj.gAct 1) ∧
+          DivineAct (Obj.gAct 1) Obj.ground ∧
+            Produces (Obj.gAct 1) (Obj.effect 1) ∧
+              E (actual 1) (Obj.effect 1) ∧
+                Created (Obj.effect 1) ∧ ¬Created (Obj.gAct 1) ∧ ¬ExternalReceipt (actual 1) (Obj.gAct 1))
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+tranche20/ontology-type-control/OriginationTypeControl.lean:116:18: error: failed to synthesize
+  Decidable (E (actual 3) (Obj.gAct 3))
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'T20.OntologyTypeControl.empty_and_renewable' depends on axioms: [propext]
+'T20.OntologyTypeControl.created_possibility_has_existent_witness' does not depend on any axioms
+'T20.OntologyTypeControl.capacity_and_only_one_necessary' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'T20.OntologyTypeControl.act_product_boundary' depends on axioms: [sorryAx]
+'T20.OntologyTypeControl.each_token_ceases' does not depend on any axioms
+'T20.OntologyTypeControl.actual_gap_and_new_act' depends on axioms: [propext, sorryAx]
+'T20.OntologyTypeControl.scoped_absence_is_not_global' depends on axioms: [propext]

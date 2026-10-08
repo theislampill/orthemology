@@ -1,0 +1,45 @@
+{
+  "status": "BOUNDED_NEGATIVE_APPLICABILITY_RESULT",
+  "date_utc": "2026-10-07",
+  "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "upstream_family": 245,
+  "upstream_theorem": "OAI.PureTypeSystem.weak_implies_strong",
+  "target_root_sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f",
+  "literal_x_xpluszero_HasE": "OPEN",
+  "direct_theorem_import_justified": false,
+  "derivation_normalization_supplied_by_upstream": false,
+  "new_formalization_or_kernel_claim": "NONE",
+  "counterexample_scope": "Written exact HasE rule instantiations plus inherited raw reduction lemmas; not fresh Lean declarations or noninhabitation of the target",
+  "decisive_mismatches": [
+    "Source assumes system-wide WN for all full annotated legal expressions in all valid contexts",
+    "Target rawAtom types the inherited non-WN Omega term",
+    "Target term-changing conv gives WN/non-SN discarded-Omega proofs at an ordinary closed reflexive identity carrier, without Raw typing rules",
+    "Source type-changing conversion and generation preserve the subject syntax; target conv does not",
+    "Source mode-label erasure preserves all computational syntax and annotations; target J erases the endpoint and proof coordinates",
+    "Fixed proof-polynomial canonicalisation does not normalize or bound complete HasE derivations"
+  ],
+  "restricted_fragment": {
+    "name": "FiniteDerives",
+    "existing_result": "P01Candidates.finite_SN",
+    "transfer_value": "Potential independent PTS reproof would be redundant and still requires elaboration, system WN and positive simulation obligations"
+  },
+  "recommendation": "Do not import or upgrade/build for this route. Reconsider only a reviewed target-specific proof-relevant derivation-preservation proposal with all unchanged HasE rules covered.",
+  "checks_performed": [
+    "Complete 72-page paper review",
+    "Exact critical proof/definition/interface source comparison",
+    "33 upstream Git-blob matches",
+    "30 target root source-closure content-address matches",
+    "82 frozen scalar predecessor hash matches",
+    "4 frozen scalar result source hash matches"
+  ],
+  "checks_not_performed": [
+    "Upstream or target Lean elaboration",
+    "Fresh kernel, comparator or Nanoda check",
+    "Tactic-by-tactic independent certification of all 29547 upstream source lines",
+    "Transitive Mathlib source audit",
+    "Scientific replay or registry promotion"
+  ],
+  "report": "TRANSFER_AUDIT.md",
+  "paper_review": "paper-scope.md",
+  "identity_receipt": "SOURCE_READ_RECEIPT.json"
+}

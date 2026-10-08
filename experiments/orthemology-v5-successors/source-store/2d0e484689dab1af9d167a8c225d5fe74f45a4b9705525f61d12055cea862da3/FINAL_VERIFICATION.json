@@ -1,0 +1,48 @@
+{
+  "status": "ORIGINAL_STUDY_VERIFICATION_RECORDED_PUBLICATION_PROJECTION_UNSEALED",
+  "verified_utc": "2026-10-07T14:30:04Z",
+  "manifest": "Original study manifest, not included as a publication member",
+  "manifest_sha256": "c905f5500bf86f542d8112575a4232c5e07dee6bdca5132d098774d44c81c187",
+  "sealed_file_count": 86,
+  "publication_selection_count": 88,
+  "all_manifest_members_match": true,
+  "missing_or_changed_members": [],
+  "independent_review": "Original bounded independent review, identified by the following digest",
+  "independent_review_sha256": "ee1a305d1199c5845b930f1d191c1b5c5552a1e8e7acd0435db09d8ced6a8ba9",
+  "independent_review_status": "PASS_BOUNDED_REVIEW_COMPLETE_WITH_RETAINED_LIMITS",
+  "electronic_coverage": {
+    "lines": 1947,
+    "whitespace_words": 119021,
+    "windows": 85,
+    "ranges": 5,
+    "assignment_joins_reconciled": 4
+  },
+  "scan_scope": {
+    "unique_received_body_positions_including_opening_frame": 150,
+    "complete_catalogue_positions": 7,
+    "fully_read_modern_text_positions": 39,
+    "full_scan_or_manuscript_reading_claimed": false
+  },
+  "catalogue": {
+    "substantial": 39,
+    "lesser": 55,
+    "all94_contextually_mapped_and_independently_catalogue_checked": true,
+    "reader_map_hashes_current": true
+  },
+  "deliverable_words": {
+    "CONTINUOUS_NOTES.md": 28505,
+    "SOURCE_APPRAISAL.md": 3016,
+    "ACTUAL_COMMON_SOURCE_SUPPLEMENT.md": 1725
+  },
+  "limits_reference": "t20/reading/safadiyya/SOURCE_GUIDE_AND_LIMITS.md",
+  "no_new_lean_or_formal_result": true,
+  "original_study_status": "PASS_FINAL_STUDY_INTEGRITY_AND_BOUNDED_REVIEW",
+  "publication_projection": {
+    "owner_file_count": 24,
+    "scope": "Full authored reading accounts, appraisals, scan-control analyses and 94 contextual correction records with bounded factual provenance. No raw bodies, images, source windows, operational plans or tool outputs.",
+    "unsealed": true,
+    "final_document_and_overall_stance_pending": true,
+    "separate_unity_reread_outside_original_study_seal": true
+  },
+  "original_final_verification_sha256": "27c9899c9fcd627996e0de09767a320249ff2341a37bd67f0ef8b9199a33408b"
+}

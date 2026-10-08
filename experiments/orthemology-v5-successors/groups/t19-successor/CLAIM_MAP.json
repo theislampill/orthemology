@@ -1,0 +1,361 @@
+{
+  "results": [
+    {
+      "assumptions": [
+        "Concrete-source framework",
+        "Entire actual production in same respect",
+        "Distinguish differentiated work, unused capacity and primitive double sufficiency"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The cumulative appraisal accepts that one concrete productive contribution in the same causal respect does not have two distinct unborrowed entire original productions, on a positive productive-individuation rationale.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00045-P00056",
+        "T19-REPORT:P00098-P00104",
+        "T19-EVIDENCE:reviews/causal_nonduplication.json"
+      ],
+      "family": "t19-cnd",
+      "id": "T19-CND",
+      "input_contract": "Concrete-source framework; Entire actual production in same respect; Distinguish differentiated work, unused capacity and primitive double sufficiency",
+      "limitations": [
+        "Nonexclusive sufficient efficacy is not analytically solitary exhaustive production.",
+        "Whole-alone contradiction and maker-preserver comparison alone do not establish CND.",
+        "CND alone does not exclude differentiated original contributors."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Concrete-source framework; Entire actual production in same respect; Distinguish differentiated work, unused capacity and primitive double sufficiency",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2
+      ],
+      "residual_scope": "Nonexclusive sufficient efficacy is not analytically solitary exhaustive production. Whole-alone contradiction and maker-preserver comparison alone do not establish CND. CND alone does not exclude differentiated original contributors.",
+      "review_ids": [
+        "T19-CND-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-SRC-51ad0dcfb6e4a1c78165",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-cnd",
+      "title": "Defeasible causal nonduplication with preserved dissent",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Qualified original and practical-perfection framework",
+        "Actual positive original resource contribution",
+        "Separate evaluative appraisal of adequate unborrowed provision"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The current appraisal accepts complete unborrowed adequate provision as the fitting original mode of a qualified essentially independent and practically perfect source’s relevant actual productive role.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00057-P00078",
+        "T19-EVIDENCE:reviews/source_mode_and_field.json"
+      ],
+      "family": "t19-source-mode",
+      "id": "T19-SOURCE-MODE",
+      "input_contract": "Qualified original and practical-perfection framework; Actual positive original resource contribution; Separate evaluative appraisal of adequate unborrowed provision",
+      "limitations": [
+        "Fuller optional accomplishment versus required mode is a substantive evaluative step.",
+        "Not maximal creation, eternal-token perfection or an inference from every received state to received whole existence.",
+        "Cross-locus reconstruction/repair, not an explicitly completed derivation at Minhaj 2:183."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Qualified original and practical-perfection framework; Actual positive original resource contribution; Separate evaluative appraisal of adequate unborrowed provision",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2
+      ],
+      "residual_scope": "Fuller optional accomplishment versus required mode is a substantive evaluative step. Not maximal creation, eternal-token perfection or an inference from every received state to received whole existence. Cross-locus reconstruction/repair, not an explicitly completed derivation at Minhaj 2:183.",
+      "review_ids": [
+        "T19-SOURCE-MODE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-SRC-c555be4c24b192140d3a",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-source-mode",
+      "title": "Defeasible norm of unborrowed adequate actual provision",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Actual productive ancestry",
+        "Faithful attribution through real secondary agency",
+        "Separate source-mode norm for complete provision"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Actual original provision used by a derived agent remains part of the downstream result’s original account; complete coverage then needs the additional source-mode principle. Intentional ownership of every intermediary token is unnecessary for causal attribution.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00079-P00097"
+      ],
+      "family": "t19-mediate-original-attribution",
+      "id": "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+      "input_contract": "Actual productive ancestry; Faithful attribution through real secondary agency; Separate source-mode norm for complete provision",
+      "limitations": [
+        "Proximal or moral ownership, original provision of resources, and complete original provision are distinct.",
+        "Causing a creature’s assertion does not make it the original source’s own assertion; intentional attestation remains necessary there."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [],
+      "operational_model": "Actual productive ancestry; Faithful attribution through real secondary agency; Separate source-mode norm for complete provision",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2,
+        11
+      ],
+      "residual_scope": "Proximal or moral ownership, original provision of resources, and complete original provision are distinct. Causing a creature’s assertion does not make it the original source’s own assertion; intentional attestation remains necessary there.",
+      "review_ids": [
+        "T19-MEDIATE-ORIGINAL-ATTRIBUTION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-mediate-original-attribution",
+      "title": "Original productive attribution survives subordinate agency",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "T17 original actuality and qualified bearer/perfection commitments",
+        "T19 CND",
+        "T19 actual source-mode norm",
+        "Actual exhaustive relevant field and genuinely productive crossings",
+        "Faithful mediate original attribution"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Under the explicit original-source, CND, source-mode, mediate-attribution and field premises, there is sufficient defeasible rational warrant for one complete original provider of the actual productively connected field and no independently original co-contributor within it.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00004-P00015",
+        "T19-REPORT:P00092-P00110",
+        "T19-REPORT:P00144-P00169",
+        "T19-EVIDENCE:reviews/disposition_and_review_scope.json"
+      ],
+      "family": "t19-common-connected-source",
+      "id": "T19-COMMON-CONNECTED-SOURCE",
+      "input_contract": "T17 original actuality and qualified bearer/perfection commitments; T19 CND; T19 actual source-mode norm; Actual exhaustive relevant field and genuinely productive crossings; Faithful mediate original attribution",
+      "limitations": [
+        "Connectedness propagates but does not supply local complete coverage P2.",
+        "No numerical uniqueness of all necessary realities outside the field.",
+        "Same-bearer participation or reapplication of the attribute rationale is needed to identify a prior attribute witness with this common source.",
+        "No revelation, general jurisdiction or operational permission follows."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-P1-P2-N2-N3"
+      ],
+      "operational_model": "T17 original actuality and qualified bearer/perfection commitments; T19 CND; T19 actual source-mode norm; Actual exhaustive relevant field and genuinely productive crossings; Faithful mediate original attribution",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1,
+        2,
+        3
+      ],
+      "residual_scope": "Connectedness propagates but does not supply local complete coverage P2. No numerical uniqueness of all necessary realities outside the field. Same-bearer participation or reapplication of the attribute rationale is needed to identify a prior attribute witness with this common source. No revelation, general jurisdiction or operational permission follows.",
+      "review_ids": [
+        "T19-COMMON-CONNECTED-SOURCE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-SRC-12bbb16f15dbb74d5253",
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-common-connected-source",
+      "title": "Affirmative common original source of the warranted connected field",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Actual discriminating contextual evidence",
+        "Separate source ownership and recipient route",
+        "Relevant error/deception alternatives assessed"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Discriminating organisation of an event can defeasibly warrant an informed agent’s adoption of determinate content for an audience, when independent evidence supports communicative control, content-sensitive response and the comparative interpretation.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00130-P00135",
+        "T19-SOURCE-GUIDE:P00074-P00079"
+      ],
+      "family": "t19-attestation-discrimination",
+      "id": "T19-ATTESTATION-DISCRIMINATION",
+      "input_contract": "Actual discriminating contextual evidence; Separate source ownership and recipient route; Relevant error/deception alternatives assessed",
+      "limitations": [
+        "Generic benefit, universal creation, challenge or non-opposition alone do not authenticate adoption.",
+        "No historical revelation or token is authenticated.",
+        "Basic king-sign route was already owned by Seventh; advance is Arabic-source alignment and sharper discrimination."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-T0-D1-D2"
+      ],
+      "operational_model": "Actual discriminating contextual evidence; Separate source ownership and recipient route; Relevant error/deception alternatives assessed",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        2,
+        6,
+        11
+      ],
+      "residual_scope": "Generic benefit, universal creation, challenge or non-opposition alone do not authenticate adoption. No historical revelation or token is authenticated. Basic king-sign route was already owned by Seventh; advance is Arabic-source alignment and sharper discrimination.",
+      "review_ids": [
+        "T19-ATTESTATION-DISCRIMINATION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-attestation-discrimination",
+      "title": "Positive bounded intentional-attestation recognition route",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Bounded Q74, Ibn Hisham and Tabari report families",
+        "Attribution, competence and transmission qualified"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The selected transmitted case gives limited positive weight to striking literary reception and hostile publicity strategy; it records no attempt by al-Walid to compose a comparable text and no observed failure of such an attempt.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00136-P00143",
+        "T19-SOURCE-GUIDE:P00080-P00089"
+      ],
+      "family": "t19-walid-reception-scope",
+      "id": "T19-WALID-RECEPTION-SCOPE",
+      "input_contract": "Bounded Q74, Ibn Hisham and Tabari report families; Attribution, competence and transmission qualified",
+      "limitations": [
+        "Interested reports are not worthless, but hostile attribution is not an independently surviving hostile source.",
+        "No universal incapacity or divine authorship conclusion.",
+        "Surah comparison must not require prior acceptance of the whole Quran’s divine provenance or every whole-corpus excellence."
+      ],
+      "math_form": "SOURCE_ASSESSMENT",
+      "obligation_ids": [],
+      "operational_model": "Bounded Q74, Ibn Hisham and Tabari report families; Attribution, competence and transmission qualified",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        2,
+        6,
+        11
+      ],
+      "residual_scope": "Interested reports are not worthless, but hostile attribution is not an independently surviving hostile source. No universal incapacity or divine authorship conclusion. Surah comparison must not require prior acceptance of the whole Quran’s divine provenance or every whole-corpus excellence.",
+      "review_ids": [
+        "T19-WALID-RECEPTION-SCOPE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-walid-reception-scope",
+      "title": "Al-Walid evidence supports reception and strategy rather than a failed trial",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Independent D1 attribution and determinate contextual content",
+        "D2 adequate recipient route",
+        "Same-bearer knowledge and essential owned veracity",
+        "Recipient, time and conditions fixed"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "An independently authenticated, contextually determinate source-owned assertion that a recipient is obligated can warrant that normative proposition under the same source’s relevant knowledge and owned-veracity premises without a second independent proof of that very obligation.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00159-P00169"
+      ],
+      "family": "t19-asserted-obligation-transfer",
+      "id": "T19-ASSERTED-OBLIGATION-TRANSFER",
+      "input_contract": "Independent D1 attribution and determinate contextual content; D2 adequate recipient route; Same-bearer knowledge and essential owned veracity; Recipient, time and conditions fixed",
+      "limitations": [
+        "A bare imperative or attempted duty-constituting directive still needs rightful obligation-imposing standing and force.",
+        "The token cannot bootstrap its own attribution; causal ownership alone gives no unlimited jurisdiction.",
+        "Implementation, feasibility, safety and further permissions remain distinct."
+      ],
+      "math_form": "CONDITIONAL",
+      "obligation_ids": [
+        "D15-OBL-NORM-GROUND",
+        "D15-OBL-T0-D1-D2"
+      ],
+      "operational_model": "Independent D1 attribution and determinate contextual content; D2 adequate recipient route; Same-bearer knowledge and essential owned veracity; Recipient, time and conditions fixed",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        2,
+        3,
+        11
+      ],
+      "residual_scope": "A bare imperative or attempted duty-constituting directive still needs rightful obligation-imposing standing and force. The token cannot bootstrap its own attribution; causal ownership alone gives no unlimited jurisdiction. Implementation, feasibility, safety and further permissions remain distinct.",
+      "review_ids": [
+        "T19-ASSERTED-OBLIGATION-TRANSFER-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t19-asserted-obligation-transfer",
+      "title": "Authenticated true obligation assertions can warrant the obligation",
+      "tranche": 19
+    },
+    {
+      "assumptions": [
+        "Bounded source-sensitive interpretation",
+        "Author, interlocutor and editorial voices retained"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The wider reading distinguishes original authorship from a new carrier voice and acoustic token, real successive process from concept/kind, and a remedy from its use, receptivity and obstructions; successful surface copying alone does not establish causal sufficiency.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T19-REPORT:P00112-P00129",
+        "T19-READING-INDEX:structured entries"
+      ],
+      "family": "t19-source-occurrence-controls",
+      "id": "T19-SOURCE-OCCURRENCE-CONTROLS",
+      "input_contract": "Bounded source-sensitive interpretation; Author, interlocutor and editorial voices retained",
+      "limitations": [
+        "No new formal occurrence theorem, personal-identity criterion, causal-identification method, clinical validation or psychology.",
+        "Main value is interpretation and concrete comparison questions against already owned programme results."
+      ],
+      "math_form": "SOURCE_ASSESSMENT",
+      "obligation_ids": [],
+      "operational_model": "Bounded source-sensitive interpretation; Author, interlocutor and editorial voices retained",
+      "origin_status": "T19 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        6,
+        7,
+        11
+      ],
+      "residual_scope": "No new formal occurrence theorem, personal-identity criterion, causal-identification method, clinical validation or psychology. Main value is interpretation and concrete comparison questions against already owned programme results.",
+      "review_ids": [
+        "T19-SOURCE-OCCURRENCE-CONTROLS-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T19-ARABIC-READING-INDEX-DERIVED-MARKDOWN",
+        "T19-REPORT-DERIVED-MARKDOWN",
+        "T19-SRC-6aa02c1019b61e7a1b61"
+      ],
+      "suite_ids": [],
+      "target": "t19-source-occurrence-controls",
+      "title": "Broader source reading sharpens occurrence and reuse distinctions",
+      "tranche": 19
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "status": "PASS_INDEPENDENT_EXACT_COUNTERCHECKS",
+  "finished_utc": "2026-10-07T10:13:22.228525+00:00",
+  "script_sha256": "cdee3f8aef6998c316be8a372a2e93c8ed48a339a5da90bb499d00ed75458f72",
+  "channel": "retained index subsets on all four words; seven complete traces",
+  "endpoint_retention_values": [
+    "0",
+    "1/4",
+    "1/2",
+    "3/4",
+    "1"
+  ],
+  "finite_product_checks": [
+    {
+      "retention": "0",
+      "M": 0,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "0",
+      "M": 1,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "0",
+      "M": 2,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "0",
+      "M": 3,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "0",
+      "M": 4,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "1/4",
+      "M": 0,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "1/4",
+      "M": 1,
+      "copied_tv": "1/4",
+      "fresh_tv": "1/4",
+      "fresh_success": "5/8"
+    },
+    {
+      "retention": "1/4",
+      "M": 2,
+      "copied_tv": "1/4",
+      "fresh_tv": "7/16",
+      "fresh_success": "23/32"
+    },
+    {
+      "retention": "1/4",
+      "M": 3,
+      "copied_tv": "1/4",
+      "fresh_tv": "37/64",
+      "fresh_success": "101/128"
+    },
+    {
+      "retention": "1/4",
+      "M": 4,
+      "copied_tv": "1/4",
+      "fresh_tv": "175/256",
+      "fresh_success": "431/512"
+    },
+    {
+      "retention": "1/2",
+      "M": 0,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "1/2",
+      "M": 1,
+      "copied_tv": "1/2",
+      "fresh_tv": "1/2",
+      "fresh_success": "3/4"
+    },
+    {
+      "retention": "1/2",
+      "M": 2,
+      "copied_tv": "1/2",
+      "fresh_tv": "3/4",
+      "fresh_success": "7/8"
+    },
+    {
+      "retention": "1/2",
+      "M": 3,
+      "copied_tv": "1/2",
+      "fresh_tv": "7/8",
+      "fresh_success": "15/16"
+    },
+    {
+      "retention": "1/2",
+      "M": 4,
+      "copied_tv": "1/2",
+      "fresh_tv": "15/16",
+      "fresh_success": "31/32"
+    },
+    {
+      "retention": "3/4",
+      "M": 0,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "3/4",
+      "M": 1,
+      "copied_tv": "3/4",
+      "fresh_tv": "3/4",
+      "fresh_success": "7/8"
+    },
+    {
+      "retention": "3/4",
+      "M": 2,
+      "copied_tv": "3/4",
+      "fresh_tv": "15/16",
+      "fresh_success": "31/32"
+    },
+    {
+      "retention": "3/4",
+      "M": 3,
+      "copied_tv": "3/4",
+      "fresh_tv": "63/64",
+      "fresh_success": "127/128"
+    },
+    {
+      "retention": "3/4",
+      "M": 4,
+      "copied_tv": "3/4",
+      "fresh_tv": "255/256",
+      "fresh_success": "511/512"
+    },
+    {
+      "retention": "1",
+      "M": 0,
+      "copied_tv": "0",
+      "fresh_tv": "0",
+      "fresh_success": "1/2"
+    },
+    {
+      "retention": "1",
+      "M": 1,
+      "copied_tv": "1",
+      "fresh_tv": "1",
+      "fresh_success": "1"
+    },
+    {
+      "retention": "1",
+      "M": 2,
+      "copied_tv": "1",
+      "fresh_tv": "1",
+      "fresh_success": "1"
+    },
+    {
+      "retention": "1",
+      "M": 3,
+      "copied_tv": "1",
+      "fresh_tv": "1",
+      "fresh_success": "1"
+    },
+    {
+      "retention": "1",
+      "M": 4,
+      "copied_tv": "1",
+      "fresh_tv": "1",
+      "fresh_success": "1"
+    }
+  ],
+  "deterministic_rules_complete_alphabet": 128,
+  "randomized_grid_rules": 2187,
+  "randomized_grid": "0,1/3,1 independently at each of seven traces; finite evidence only",
+  "optimal_success": "5/8",
+  "condition_nonempty_tv": "4/7",
+  "copied_joint_empty": "9/16",
+  "fresh_joint_empty": "81/256",
+  "copy_offdiagonal_empty_zero": "0",
+  "fresh_offdiagonal_empty_zero": "27/128",
+  "known_word_mask_fresh_observation_checks": [
+    {
+      "second_trace": [],
+      "first_position_posterior": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "second_trace": [
+        0
+      ],
+      "first_position_posterior": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "second_trace": [
+        0,
+        0
+      ],
+      "first_position_posterior": [
+        "1/2",
+        "1/2"
+      ]
+    }
+  ],
+  "mask_exposure_caveat": "Exposing original retained positions changes attribution even when this pair TV happens to remain1/4.",
+  "limit": "Finite checks are not all-M kernel proofs or asymptotic convergence; coordinating/author enumerations were not reused."
+}

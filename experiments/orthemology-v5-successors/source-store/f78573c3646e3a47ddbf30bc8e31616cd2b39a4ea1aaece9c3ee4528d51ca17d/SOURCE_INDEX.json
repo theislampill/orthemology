@@ -1,0 +1,992 @@
+{
+  "schema": "t20-foundational-synthesis-sources-v1",
+  "as_of_utc": "2026-10-07T10:53:07.938773+00:00",
+  "sources": {
+    "OWNER": {
+      "path": "custody:OWNER",
+      "sha256": "a8bc018382a0d82eee99d36e4fd0a2201bf0b1980f3a964859d26839b9bea85c",
+      "bytes": 15759,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "PRIVATE_CUSTODY_BODY_NOT_SELECTED; scientific/philosophical content needed by this report is already stated in its synthesis and status map"
+    },
+    "APPRAISAL": {
+      "path": "custody:APPRAISAL",
+      "sha256": "cd117113d282ad395e400eea9b3aa4517ae51a64ff50aee677838862437389c1",
+      "bytes": 2514,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "CONCLUSION_PREMISE_STATUS_MAP.json#/current_appraisal",
+        "sha256": "44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60",
+        "bytes": 175834,
+        "identity_relation": "BOUNDED_PUBLIC_APPRAISAL_PROJECTION",
+        "body_selected": false
+      },
+      "disposition": "PRIVATE_CUSTODY_BODY_NOT_SELECTED; scientific/philosophical content needed by this report is already stated in its synthesis and status map"
+    },
+    "SECOND_MINHAJ_ASSESSMENT": {
+      "path": "custody:SECOND_MINHAJ_ASSESSMENT",
+      "sha256": "1aee350730ebae117cc98621b7046d4e9ffa30bd6fd2958bc5afdf83c0e5fe0c",
+      "bytes": 5145,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "PRIVATE_CUSTODY_BODY_NOT_SELECTED; scientific/philosophical content needed by this report is already stated in its synthesis and status map"
+    },
+    "JOINT_REVIEW": {
+      "path": "custody:JOINT_REVIEW",
+      "sha256": "007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a",
+      "bytes": 14577,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/review/REVIEW.md",
+        "sha256": "007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a",
+        "bytes": 14577,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "JOINT_REVIEW_MANIFEST": {
+      "path": "custody:JOINT_REVIEW_MANIFEST",
+      "sha256": "a80a6d35bb210bff9d71c6173a37707151ba95a3c46ccb7d356043e5ddccd15e",
+      "bytes": 9404,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED"
+    },
+    "JOINT_REVIEW_RECEIPT": {
+      "path": "custody:JOINT_REVIEW_RECEIPT",
+      "sha256": "17d35f7113f9285689775bdda131ebe0e3a8353cdb89480277d6640709786638",
+      "bytes": 10389,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../joint-foundational-model/review/fresh-trust0-v1/REVIEW_VERIFICATION.json",
+        "sha256": "f416a193ac826ce67cd5512591b02a46050f386809fe0e3c11a0261074652ed5",
+        "bytes": 8748,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "JOINT_REVIEW_JOINING": {
+      "path": "custody:JOINT_REVIEW_JOINING",
+      "sha256": "3047c2ad1ec477ef12ed5cc25857cbf556128a436130dce23512ce2194aa3b75",
+      "bytes": 10260,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/review/IndependentJoiningTests.lean",
+        "sha256": "3047c2ad1ec477ef12ed5cc25857cbf556128a436130dce23512ce2194aa3b75",
+        "bytes": 10260,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "JOINT_REVIEW_JOINING_RECEIPT": {
+      "path": "custody:JOINT_REVIEW_JOINING_RECEIPT",
+      "sha256": "a383e4df48fc94db8e37c8094fd6d9c839b6e3136ad94667c379c9f10c405621",
+      "bytes": 6996,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../joint-foundational-model/review/joining-tests-final/JOINING_VERIFICATION.json",
+        "sha256": "c8815ba8168fa9876fa9239c9b16a41b847af29b17f1638072d1980ad005ee12",
+        "bytes": 6394,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "GATE": {
+      "path": "custody:GATE",
+      "sha256": "568c1e2eb2881b4b756f44bacec4982e0bb2dfd7d9318d87f8008fcdaca5cdea",
+      "bytes": 2643,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "PRIVATE_CUSTODY_BODY_NOT_SELECTED; scientific/philosophical content needed by this report is already stated in its synthesis and status map"
+    },
+    "DAG": {
+      "path": "custody:DAG",
+      "sha256": "761ebbb4beaea671449f0c6ddd63f711cc2ae8c355beb1f1097be8352c7426a2",
+      "bytes": 24109,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../foundational-dependency-dag/RECONSTRUCTION.md",
+        "sha256": "38820a6eb210e1a58b6d9e6df59dfe716a4fe338bde5afe272169f096c6607b4",
+        "bytes": 24345,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "DAG_DATA": {
+      "path": "custody:DAG_DATA",
+      "sha256": "cd1cb84f321c4e0b3a99459640329d5e30e0f978f4a2d4154ed1a316b7b3dc19",
+      "bytes": 450432,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../foundational-dependency-dag/DEPENDENCY_DAG.json",
+        "sha256": "35562fca2e81a165288f648f05b14d9a8cfd881b357fa0597c10bfd8ebb27098",
+        "bytes": 448971,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "DAG_PASSAGES": {
+      "path": "custody:DAG_PASSAGES",
+      "sha256": "f1ab382835f31be020c84ae11f04747f110b945a17f73c96adfa51272930ddf8",
+      "bytes": 174802,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+        "sha256": "4f365005680ede0dbef993054ca64ae01b8f57bbeb7233da86b4c0fe57372d3c",
+        "bytes": 93018,
+        "identity_relation": "BODY_FREE_LOCATOR_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "DAG_SEAL": {
+      "path": "custody:DAG_SEAL",
+      "sha256": "796856c7de6d50d284a241a066ea9bdd6fb84409174329de6b81a16eb4572bb8",
+      "bytes": 2486,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED"
+    },
+    "PRIOR_REUSE": {
+      "path": "custody:PRIOR_REUSE",
+      "sha256": "ef5c316940cf32d6d0b418740ef16019be17112898d22e5b9fbfa0be4b80306e",
+      "bytes": 20489,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../foundational-prior-formal-reuse/REUSE_MAP.md",
+        "sha256": "a5d770b8880481cdc60205131bc0a5c11ee95ca101628de8e1169acd55c6ce42",
+        "bytes": 20458,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "PRIOR_REUSE_DATA": {
+      "path": "custody:PRIOR_REUSE_DATA",
+      "sha256": "853d80ee54a7a9fd6bf7460da87a3e04a4bc262fe1c816fdcee18e6410b40915",
+      "bytes": 185133,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../foundational-prior-formal-reuse/PRIOR_FORMAL_REUSE.json",
+        "sha256": "992fe4cd09f8f45f441093ed02ca64d619f94d699044bb699eece622481359d1",
+        "bytes": 180516,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "ABC_CORE": {
+      "path": "custody:ABC_CORE",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/components/OriginalBearerBridge.lean",
+        "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+        "bytes": 6940,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "ABC_CONTROLS": {
+      "path": "custody:ABC_CONTROLS",
+      "sha256": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8",
+      "bytes": 9487,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/BridgeControls.lean",
+        "sha256": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8",
+        "bytes": 9487,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "ABC_MATRIX": {
+      "path": "custody:ABC_MATRIX",
+      "sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e",
+      "bytes": 6059,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/COUNTERMODEL_MATRIX.json",
+        "sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e",
+        "bytes": 6059,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "ABC_LEDGER": {
+      "path": "custody:ABC_LEDGER",
+      "sha256": "3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8",
+      "bytes": 5190,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/BOUNDARY_LEDGER.json",
+        "sha256": "3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8",
+        "bytes": 5190,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "ABC_SOURCE_MAP": {
+      "path": "custody:ABC_SOURCE_MAP",
+      "sha256": "60259d8ce8eb7f84bf6d144cbb97ae56e40f0661e82db363599abef212b3f5ae",
+      "bytes": 24821,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/THEOREM_SOURCE_MAP.json",
+        "sha256": "efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431",
+        "bytes": 24677,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "ABC_DERIVATIVE": {
+      "path": "custody:ABC_DERIVATIVE",
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "bytes": 7438,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/components/SourceIdentityDerived.lean",
+        "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+        "bytes": 7438,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "ABC_READBACK": {
+      "path": "custody:ABC_READBACK",
+      "sha256": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+      "bytes": 51051,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/verification-final/READBACKS.json",
+        "sha256": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+        "bytes": 51051,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "ABC_REVIEW": {
+      "path": "custody:ABC_REVIEW",
+      "sha256": "44d5b8f3778cb6ed99889a45601c72effa88badc6271c98e50bce8cc1b4b6181",
+      "bytes": 12754,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/review/REVIEW.md",
+        "sha256": "6fc6b49f9999f78392548b0095bb865c06da4ea49d9fe00257c636e967dd53cc",
+        "bytes": 12746,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "ABC_REVIEW_SCOPE": {
+      "path": "custody:ABC_REVIEW_SCOPE",
+      "sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284",
+      "bytes": 6771,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/review/IndependentScopeTests.lean",
+        "sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284",
+        "bytes": 6771,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "ABC_REVIEW_RECEIPT": {
+      "path": "custody:ABC_REVIEW_RECEIPT",
+      "sha256": "1e538eca0ce77d517da6bc4aa545922fe7f063bbe7c4d76364dce0af46c1fdc0",
+      "bytes": 11056,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/review/fresh-replay/VERIFICATION.json",
+        "sha256": "e90d43c6c7a7f5f88eae103cc7d4c1b55627d4d0f857b6f6bc8433ebb56056f7",
+        "bytes": 10288,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "ABC_REVIEW_FINDINGS": {
+      "path": "custody:ABC_REVIEW_FINDINGS",
+      "sha256": "492949de62d914926b59a7eeb7e5a3ed7b01f0243ad576a755e431a7b4db9669",
+      "bytes": 4848,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../original-bearer-bridge/review/FINDINGS.json",
+        "sha256": "b1eb2a072b0a63ae988afdb3fec983502e91d4d2d62a68b62c21afdb8c6f0e05",
+        "bytes": 4839,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "FIELD_CORE": {
+      "path": "custody:FIELD_CORE",
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "bytes": 10743,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/components/AnchoredSourceBridge.lean",
+        "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+        "bytes": 10743,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "FIELD_CONTROLS": {
+      "path": "custody:FIELD_CONTROLS",
+      "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+      "bytes": 22563,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/src/Controls.lean",
+        "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+        "bytes": 22563,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "FIELD_MATRIX": {
+      "path": "custody:FIELD_MATRIX",
+      "sha256": "359c1f4901773262e328d5acb1e4a247ea9f8dc1fb7add195e3be7563026d186",
+      "bytes": 5852,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/CONTROL_MATRIX.md",
+        "sha256": "359c1f4901773262e328d5acb1e4a247ea9f8dc1fb7add195e3be7563026d186",
+        "bytes": 5852,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "FIELD_ABILITY": {
+      "path": "custody:FIELD_ABILITY",
+      "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64",
+      "bytes": 4387,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/src/ModalAbilityControl.lean",
+        "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64",
+        "bytes": 4387,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "FIELD_PREMISES": {
+      "path": "custody:FIELD_PREMISES",
+      "sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+      "bytes": 6523,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/SOURCE_AND_PREMISE_MAP.md",
+        "sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+        "bytes": 6523,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "FIELD_LEDGER": {
+      "path": "custody:FIELD_LEDGER",
+      "sha256": "de3c854d783c03d1504a55347ccc3e106cc9bf0250ec18fb9e005580951a014a",
+      "bytes": 25816,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/BOUNDARY_LEDGER.json",
+        "sha256": "ede9054fc8b954aaff02ee8d35c327327d0612ff6ee2ceee966b20d40419ca48",
+        "bytes": 25835,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "FIELD_RECEIPT": {
+      "path": "custody:FIELD_RECEIPT",
+      "sha256": "9e0d17a182cb66e2c48cd7cafeff07c3d201b0d03bc50355965b298592194c3c",
+      "bytes": 29927,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/builds/final-field-cnd-v1/BUILD_MANIFEST.json",
+        "sha256": "4ac388c98f6aa197c4041b2d58eab9196161a20d04b0641152480a1fad965b71",
+        "bytes": 28231,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "FIELD_REVIEW": {
+      "path": "custody:FIELD_REVIEW",
+      "sha256": "1c2d8354be0397953fb3233659bc4a887e428ab347ff851934d77a5147802809",
+      "bytes": 14415,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/review/REVIEW.md",
+        "sha256": "94dba791705477f49ed9949e3d437c1f04201a53dcb19429d4d72ab0d3d46553",
+        "bytes": 14391,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "FIELD_REVIEW_BOUNDARIES": {
+      "path": "custody:FIELD_REVIEW_BOUNDARIES",
+      "sha256": "aff90d7deb39a50d3818341e61d19e0a656aa238f23c9b80dde5d6a8e696a565",
+      "bytes": 11191,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/review/BoundaryChecks.lean",
+        "sha256": "aff90d7deb39a50d3818341e61d19e0a656aa238f23c9b80dde5d6a8e696a565",
+        "bytes": 11191,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "FIELD_REVIEW_RECEIPT": {
+      "path": "custody:FIELD_REVIEW_RECEIPT",
+      "sha256": "3d94310b95c7c4fe4a3a748a737fd8c0aa0476d9fc0e66b7af8dbcf06f352ed0",
+      "bytes": 910,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../anchored-source-bridge/review/FINAL_VALIDATION.json",
+        "sha256": "3d94310b95c7c4fe4a3a748a737fd8c0aa0476d9fc0e66b7af8dbcf06f352ed0",
+        "bytes": 910,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "VERACITY_CORE": {
+      "path": "custody:VERACITY_CORE",
+      "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "bytes": 5975,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/components/VeracityBoundary.lean",
+        "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+        "bytes": 5975,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "VERACITY_CONTROLS": {
+      "path": "custody:VERACITY_CONTROLS",
+      "sha256": "91d2717e4f9faebbed5e4f10055793a608231a33eefb7df477acdd7890a84d23",
+      "bytes": 7884,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../veracity-boundary/src/VeracityControls.lean",
+        "sha256": "91d2717e4f9faebbed5e4f10055793a608231a33eefb7df477acdd7890a84d23",
+        "bytes": 7884,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "VERACITY_PREMISES": {
+      "path": "custody:VERACITY_PREMISES",
+      "sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531",
+      "bytes": 5901,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../veracity-boundary/SOURCE_PREMISE_MAP.json",
+        "sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531",
+        "bytes": 5901,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "VERACITY_MAP": {
+      "path": "custody:VERACITY_MAP",
+      "sha256": "4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099",
+      "bytes": 4596,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../veracity-boundary/THEOREM_MAP.md",
+        "sha256": "4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099",
+        "bytes": 4596,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "VERACITY_RECEIPT": {
+      "path": "custody:VERACITY_RECEIPT",
+      "sha256": "ddd4ee81abe5e9583298d2a812ff501aac569b4f51411b90dd789e571f0c7177",
+      "bytes": 20568,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../veracity-boundary/validation/final/VERIFICATION.json",
+        "sha256": "e71cd1aa00f5155fcfe1222ca02e10fbbbf4cddb41a062d573e7b6840d289e9c",
+        "bytes": 19832,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "VERACITY_REVIEW": {
+      "path": "custody:VERACITY_REVIEW",
+      "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+      "bytes": 13471,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../veracity-boundary/review/REVIEW_REPORT.md",
+        "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+        "bytes": 13471,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "VERACITY_REVIEW_BOUNDARIES": {
+      "path": "custody:VERACITY_REVIEW_BOUNDARIES",
+      "sha256": "397cfb115df42e82cc5b02ea96887fa81bf0c0b8378262df172719908159573a",
+      "bytes": 4349,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../veracity-boundary/review/IndependentBoundaryTests.lean",
+        "sha256": "397cfb115df42e82cc5b02ea96887fa81bf0c0b8378262df172719908159573a",
+        "bytes": 4349,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "VERACITY_REVIEW_RECEIPT": {
+      "path": "custody:VERACITY_REVIEW_RECEIPT",
+      "sha256": "1fea0837e024cad0dd45b423cf8063fc21907f7176d6c2af4a6fae95dc493244",
+      "bytes": 14154,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../veracity-boundary/review/fresh-trust0-v3/REVIEW_VERIFICATION.json",
+        "sha256": "9326e3982851a9a3fb91009ecb88967e85e84c56ba36d3e275983d2421389f2b",
+        "bytes": 12810,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "VERACITY_ERRATUM": {
+      "path": "custody:VERACITY_ERRATUM",
+      "sha256": "4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9",
+      "bytes": 1448,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../veracity-boundary/erratum/ERRATUM.md",
+        "sha256": "4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9",
+        "bytes": 1448,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "VERACITY_ERRATUM_MANIFEST": {
+      "path": "custody:VERACITY_ERRATUM_MANIFEST",
+      "sha256": "364cc13c3b57486054b18e064c976c3ab86d502284fdea676fc3719dfdbab3b6",
+      "bytes": 3669,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../veracity-boundary/erratum/ERRATUM_MANIFEST.json",
+        "sha256": "364cc13c3b57486054b18e064c976c3ab86d502284fdea676fc3719dfdbab3b6",
+        "bytes": 3669,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "JOINT_README": {
+      "path": "custody:JOINT_README",
+      "sha256": "3ef693fbfdd31d37076eff58595f31f3be2f3db0807acaf81ee013f966369439",
+      "bytes": 6356,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../joint-foundational-model/README.md",
+        "sha256": "477bd9137234f58941b4e43996fd271716a75767c77fa41a80f9d70fdb659876",
+        "bytes": 6868,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "JOINT_MAP": {
+      "path": "custody:JOINT_MAP",
+      "sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+      "bytes": 4858,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/THEOREM_MAP.md",
+        "sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+        "bytes": 4858,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "JOINT_COMPATIBILITY": {
+      "path": "custody:JOINT_COMPATIBILITY",
+      "sha256": "8f8a25c2f0a8c7d8e91a46ff06df2d7e6fed16d9175bef2906ad596c0279a904",
+      "bytes": 13508,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../joint-foundational-model/MAPPING_AND_COMPATIBILITY.md",
+        "sha256": "2b2c6c478ff8562b19a531cfb5adf1495714ef11cddd1355e0923a7f59d09116",
+        "bytes": 13503,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "JOINT_CORE": {
+      "path": "custody:JOINT_CORE",
+      "sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "bytes": 24102,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/src/JointFiniteInterpretation.lean",
+        "sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+        "bytes": 24102,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "JOINT_STATUS": {
+      "path": "custody:JOINT_STATUS",
+      "sha256": "599503b4add6d142b152caa1adb3d79b4386e0d44124ebd2a8d190213139dbac",
+      "bytes": 1372,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/FINAL_STATUS.json",
+        "sha256": "599503b4add6d142b152caa1adb3d79b4386e0d44124ebd2a8d190213139dbac",
+        "bytes": 1372,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "JOINT_RECEIPT": {
+      "path": "custody:JOINT_RECEIPT",
+      "sha256": "f9560adb9775de825340963a5abfd6401ad14700c5925d4f04a5420ef4ddad21",
+      "bytes": 28493,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": {
+        "path": "../joint-foundational-model/verification-final-v2/VERIFICATION.json",
+        "sha256": "8f883c57cb6a04467a2388c51c0c639859a0a267bf6444ce41c7270166772df6",
+        "bytes": 26637,
+        "identity_relation": "DERIVED_PUBLIC_PROJECTION",
+        "body_selected": false
+      }
+    },
+    "JOINT_READBACK": {
+      "path": "custody:JOINT_READBACK",
+      "sha256": "fbde59362f6734f63a2d0639ac56ee04736a5376572407043ae3b43799a30b15",
+      "bytes": 47443,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/verification-final-v2/READBACKS.json",
+        "sha256": "fbde59362f6734f63a2d0639ac56ee04736a5376572407043ae3b43799a30b15",
+        "bytes": 47443,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "JOINT_SEAL": {
+      "path": "custody:JOINT_SEAL",
+      "sha256": "4a0ac2b37856a66bffe0f0787e5def8f629c059aa376816f1ab213072367098d",
+      "bytes": 17302,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED"
+    },
+    "SOURCE_IDENTITY": {
+      "path": "custody:SOURCE_IDENTITY",
+      "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "bytes": 7357,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../joint-foundational-model/components/SourceIdentity.original.lean",
+        "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+        "bytes": 7357,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "PRODUCTIVE_COMPLETENESS": {
+      "path": "custody:PRODUCTIVE_COMPLETENESS",
+      "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "bytes": 3600,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../foundational-final-synthesis/inherited-sources/PRODUCTIVE_COMPLETENESS.lean",
+        "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+        "bytes": 3600,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "UPSTREAM_GROUND": {
+      "path": "custody:UPSTREAM_GROUND",
+      "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+      "bytes": 6105,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../foundational-final-synthesis/inherited-sources/UPSTREAM_GROUND.lean",
+        "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+        "bytes": 6105,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "CONNECTED_UNITY": {
+      "path": "custody:CONNECTED_UNITY",
+      "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+      "bytes": 10176,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../foundational-final-synthesis/inherited-sources/CONNECTED_UNITY.lean",
+        "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+        "bytes": 10176,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "INFINITE_FORK": {
+      "path": "custody:INFINITE_FORK",
+      "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+      "bytes": 3364,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../foundational-final-synthesis/inherited-sources/INFINITE_FORK.lean",
+        "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+        "bytes": 3364,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "SIXTH_REVIEWER": {
+      "path": "custody:SIXTH_REVIEWER",
+      "sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+      "bytes": 9856,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../foundational-final-synthesis/inherited-sources/SIXTH_REVIEWER.lean",
+        "sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+        "bytes": 9856,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "INTEGRATED_CONTINGENCY": {
+      "path": "custody:INTEGRATED_CONTINGENCY",
+      "sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+      "bytes": 2804,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../foundational-final-synthesis/inherited-sources/INTEGRATED_CONTINGENCY.lean",
+        "sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+        "bytes": 2804,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "KNOWLEDGE_SCOPE": {
+      "path": "custody:KNOWLEDGE_SCOPE",
+      "sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+      "bytes": 10029,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../foundational-final-synthesis/inherited-sources/KNOWLEDGE_SCOPE.lean",
+        "sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+        "bytes": 10029,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "COVERAGE_BOUNDARY": {
+      "path": "custody:COVERAGE_BOUNDARY",
+      "sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+      "bytes": 9474,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": true,
+      "public_artifact": {
+        "path": "../foundational-final-synthesis/inherited-sources/COVERAGE_BOUNDARY.lean",
+        "sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+        "bytes": 9474,
+        "identity_relation": "EXACT_ORIGINAL_BYTES",
+        "body_selected": true
+      }
+    },
+    "T17R": {
+      "path": "custody:T17R",
+      "sha256": "da28c71db6088ee2be4497a8a6b9549b6f353e00c862c9fea3974b7b0f4c7130",
+      "bytes": 79974,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T17R_DOCX": {
+      "path": "custody:T17R_DOCX",
+      "sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "bytes": 65239,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T17G": {
+      "path": "custody:T17G",
+      "sha256": "72ff4b59cad4c1999476167adbc7d6d03983d6b0b59693b12ec13de5d9a3cfa0",
+      "bytes": 53312,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T17G_DOCX": {
+      "path": "custody:T17G_DOCX",
+      "sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9",
+      "bytes": 56611,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T18R": {
+      "path": "custody:T18R",
+      "sha256": "c27fa73f26fba3311699084f28be46064b2e3a25852a49c9d42066377b96c4ea",
+      "bytes": 45400,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T18R_DOCX": {
+      "path": "custody:T18R_DOCX",
+      "sha256": "99295d834b3e4f2a41c2f44395007a7465dc7c7f01f627e43f0da9bb8fdaa051",
+      "bytes": 53524,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T18G": {
+      "path": "custody:T18G",
+      "sha256": "c1bd9c370ee3c6c93ba089a21e96436bdc39675c72e32b14e48248c3c3d103f5",
+      "bytes": 12945,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T18G_DOCX": {
+      "path": "custody:T18G_DOCX",
+      "sha256": "ba46d0a64972d88e0275d68d55474faaf51f27a08b07872b2e4d0e8a6f0539fc",
+      "bytes": 43011,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T19R": {
+      "path": "custody:T19R",
+      "sha256": "edcd0da0ccebd94ea7a8a14070d37f7212e62aeddc275e64d25cbe186e249210",
+      "bytes": 72443,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T19R_DOCX": {
+      "path": "custody:T19R_DOCX",
+      "sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "bytes": 63700,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T19G": {
+      "path": "custody:T19G",
+      "sha256": "a6ec2065102f96cc4ceafd92652e0049efd0df2589d1ca80c616d394695b23a0",
+      "bytes": 28793,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    },
+    "T19G_DOCX": {
+      "path": "custody:T19G_DOCX",
+      "sha256": "4364e1c90e8a213cde09fffb3766c5205f98b9f5c174aa447e1130114b93df91",
+      "bytes": 50521,
+      "identity_basis": "actual bytes read for this synthesis; proof status comes from separately cited retained receipts",
+      "original_body_publicly_selected": false,
+      "public_artifact": null,
+      "disposition": "HISTORICAL_SOURCE_IDENTITY_ONLY_BODY_NOT_SELECTED",
+      "body_free_report_locators": "../foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "body_selected": false
+    }
+  },
+  "warning": "Original SHA-256/byte fields identify historical original inputs. Public_artifact independently identifies selected exact bytes or derived/locator-only projections. Neither a hash nor a custody locator selects a raw body; all75 original identities remain intact. No new reading/proof credit."
+}

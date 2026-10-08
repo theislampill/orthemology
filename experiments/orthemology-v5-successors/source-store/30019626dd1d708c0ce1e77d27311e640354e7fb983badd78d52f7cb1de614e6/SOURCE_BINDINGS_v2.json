@@ -1,0 +1,331 @@
+{
+  "schema": "t20-late-control-evidence-bindings-v2",
+  "scope": "Exact original documentary and scientific inputs, with separately hashed included projections. Historical omitted inputs are not promised archive members. Native admission remains the captured pending state.",
+  "predecessor_files": [
+    {
+      "historical_original": {
+        "sha256": "8ec800ab6f2e117e1f2f1b941d885f9163d258c3e1a44b145283c403c433da99",
+        "bytes": 203529
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/result-ledger/RESULT_EVIDENCE_LEDGER.json",
+        "sha256": "87d09884accfd207240e10d520289cc99947c6a59d1b8ce3adb3b1a8fa880671",
+        "bytes": 203537
+      }
+    },
+    {
+      "historical_original": {
+        "sha256": "d2bf1a9cbfb1e78b79e4ef630fb9c44ba6fb36067557658a6a432e63245fb7c2",
+        "bytes": 29623
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/result-ledger/METHOD_INTEGRATION_HANDOFF.md",
+        "sha256": "d2bf1a9cbfb1e78b79e4ef630fb9c44ba6fb36067557658a6a432e63245fb7c2",
+        "bytes": 29623
+      }
+    },
+    {
+      "historical_original": {
+        "sha256": "0a98fc20d341f78b042fbfee4e94281b83fa4a719f1ebb1169f66e68bdb0fa97",
+        "bytes": 71263
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/result-ledger/SOURCE_BINDINGS.json",
+        "sha256": "79ad56d83c7585468eebf02286ef86471576e8d16898b96376545b03ac912475",
+        "bytes": 75464
+      }
+    },
+    {
+      "historical_original": {
+        "sha256": "450baa4100906709f0a9a955e8abde60f59c441b2f82d0f18e7fe9c7de4c9a3d",
+        "bytes": 1924
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/result-ledger/VALIDATION.json",
+        "sha256": "3a4d76f7b6e713bc0e68758cb354e5ed92005fc96357a3d20da5c6b5c5ac67fa",
+        "bytes": 2782
+      }
+    }
+  ],
+  "late_input_bindings": [
+    {
+      "original_sha256": "4ee0f896358f59752991b8ab72edbdd588d0b0db07c022f5b8fa1b2f61a18284",
+      "original_bytes": 13054,
+      "original_record_name": "AUDIT.md",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/AUDIT.md",
+        "sha256": "e9e55a70a8a84323d76514f095227067a7b962f6c718daa6e75ce2b4dbf83e05",
+        "bytes": 13140
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+      "original_bytes": 7014,
+      "original_record_name": "OriginationTypeControl.lean",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/OriginationTypeControl.lean",
+        "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+        "bytes": 7014
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "6dfd3ab5400bad336045e449400bb50f5066c003cf10c9413b447b8d36d09c60",
+      "original_bytes": 329,
+      "original_record_name": "OverreachRejected.lean",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/OverreachRejected.lean",
+        "sha256": "6dfd3ab5400bad336045e449400bb50f5066c003cf10c9413b447b8d36d09c60",
+        "bytes": 329
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "860fedbc5552868e0d47877e6e6af7f4ccff49b4cefa4b9e5843ac11bb2332af",
+      "original_bytes": 4541,
+      "original_record_name": "DEFINITION_BINDINGS.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/DEFINITION_BINDINGS.json",
+        "sha256": "171f38cd4bb5fc3c44cde69be7c3a04718322db771ec27b3a66d897d829ae7e3",
+        "bytes": 10615
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "3d128af9ccc9de78b222ea576d919a9df0475300956bba16a84dbabb92e4cdd3",
+      "original_bytes": 8324,
+      "original_record_name": "SOURCE_BINDINGS.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/SOURCE_BINDINGS.json",
+        "sha256": "fd3f503d6f1dd9ce5b164300154c9b4cc4cd477ed026804ff754338452815bd6",
+        "bytes": 17191
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "84e99dd8e31b93f9a49a7269844c220105e1541ae9c9294552d5acb37ce327c3",
+      "original_bytes": 2643,
+      "original_record_name": "EXECUTION_RECEIPT.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/EXECUTION_RECEIPT.json",
+        "sha256": "4690dbd95f752e80c1eed8cff5788b73088893493cc802acc18ffe32921dba1c",
+        "bytes": 3708
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "bd12a5bf5d0ceb9c800232fa1dc39a015c0ea63d89020c1ebcb5c241a10ef655",
+      "original_bytes": 3754,
+      "original_record_name": "MANIFEST.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/MANIFEST.json",
+        "sha256": "ccf9167bbb612d800a14b528407c6952101f5d217767922f4f074068277ee5fc",
+        "bytes": 9350
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "092f1d91d2decfae9fd4f4c5f794835c8f1f42a20f52e18c92614c97aa79d406",
+      "original_bytes": 1227,
+      "original_record_name": "METADATA_CORRECTION.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/METADATA_CORRECTION.json",
+        "sha256": "cb3e43c7463ac02be9a528a6403e4bde5bd48b87a6113841950bde6b07c740b5",
+        "bytes": 2004
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "b790f73a1b03704eeffcb3ad431ebeb6399f642cd376d0fbe25f90e1bdf514a5",
+      "original_bytes": 3507,
+      "original_record_name": "SPAN_VALIDATION.json",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/SPAN_VALIDATION.json",
+        "sha256": "b790f73a1b03704eeffcb3ad431ebeb6399f642cd376d0fbe25f90e1bdf514a5",
+        "bytes": 3507
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+      "original_bytes": 596,
+      "original_record_name": "final-check.log",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/final-check.log",
+        "sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+        "bytes": 596
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+      "original_bytes": 803,
+      "original_record_name": "overreach-rejection.log",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/overreach-rejection.log",
+        "sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+        "bytes": 803
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "d4a044355a94fe4f228a6d56f17de4ebe16d9423e79cae7203d5071d092ab806",
+      "original_bytes": 2390,
+      "original_record_name": "ACT_PRODUCT_CONTEXT.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/ACT_PRODUCT_CONTEXT.json",
+        "sha256": "176884b53175d142365a74b4d3a1832ff9f4e0dc2730000e327cb377a4dd1de5",
+        "bytes": 3163
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "1a3aabaf62f70358a7921fe80f7fc8a56303ca03d23d69b1c8757215feef0167",
+      "original_bytes": 5314,
+      "original_record_name": "EXECUTION_RECEIPT.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/review/EXECUTION_RECEIPT.json",
+        "sha256": "8b3627450a5d90bc3d2e093425894fc785f816721ded33ebed532755a6faffff",
+        "bytes": 5806
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "673d53a472cceb05c184f46da8ac49ae0d8459a3ff6d041f2d899b3f9d05c774",
+      "original_bytes": 10980,
+      "original_record_name": "SOURCE_BINDINGS.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/review/SOURCE_BINDINGS.json",
+        "sha256": "16ee01f25a93117b0dd893bfb06b2f73a974594ef794650aada7e1231266b6d3",
+        "bytes": 17192
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "2c22b821908cb35cbe20a7302e0682a7835cfac6b9137d175ffca38f6bef9e37",
+      "original_bytes": 2986,
+      "original_record_name": "TESTED_RECIPE.md",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/REPRODUCE.md",
+        "sha256": "91fffcff6c40dfe9d25979f2f295636afa7927fd6f6e989b99fdbe06fa2621cf",
+        "bytes": 6587
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "7295f9e0e61406a2b97a49f2d10777833db44bb82aad786840de3951fdcceb17",
+      "original_bytes": 9619,
+      "original_record_name": "DEFINITION_BINDINGS.json",
+      "original_record_body_included_exactly": false,
+      "body_included": false,
+      "related_public_review": "t20/ontology-type-control/review/REVIEW.json",
+      "identity_relation": "Historical original input, separately identified; the related review is not a byte-equivalent replacement."
+    },
+    {
+      "original_sha256": "cf85e4e37e2e362c31b150fe7611daa64b44a19f5d1fe739f2e9f5c19b896bb4",
+      "original_bytes": 867,
+      "original_record_name": "SEPARATE_PARENT_BINDING.json",
+      "original_record_body_included_exactly": false,
+      "body_included": false,
+      "related_public_review": "t20/ontology-type-control/review/REVIEW.json",
+      "identity_relation": "Historical original input, separately identified; the related review is not a byte-equivalent replacement."
+    },
+    {
+      "original_sha256": "f176d255baf686b29e4516dfd5796907ed3345befa0370d9812f57faeab826b7",
+      "original_bytes": 3027,
+      "original_record_name": "ReviewerProbes.lean",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/review/ReviewerProbes.lean",
+        "sha256": "f176d255baf686b29e4516dfd5796907ed3345befa0370d9812f57faeab826b7",
+        "bytes": 3027
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+      "original_bytes": 596,
+      "original_record_name": "control.log",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/final-check.log",
+        "sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+        "bytes": 596
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "0335244aeb3668c4f81d7be83aea5d91bbbdb214762e733933503712ae5ad797",
+      "original_bytes": 646,
+      "original_record_name": "probes.log",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/review/probes.log",
+        "sha256": "0335244aeb3668c4f81d7be83aea5d91bbbdb214762e733933503712ae5ad797",
+        "bytes": 646
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+      "original_bytes": 803,
+      "original_record_name": "negative.log",
+      "original_record_body_included_exactly": true,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/overreach-rejection.log",
+        "sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+        "bytes": 803
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "f7aa8cf6ee30f9e6844aa2db1ea987efc8bffe201fcc6e30911d1c971e84a520",
+      "original_bytes": 11507,
+      "original_record_name": "REVIEW.md",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/review/REVIEW.md",
+        "sha256": "3afc19f45c2b17f175acb36672352c64ef8623b4179af095c4fb3aadf9033a86",
+        "bytes": 11713
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    },
+    {
+      "original_sha256": "2852cc25b4b97d24d0ea559bb0a1319c1ea7c1e4d56224677a7ea0d496789c66",
+      "original_bytes": 7430,
+      "original_record_name": "REVIEW.json",
+      "original_record_body_included_exactly": false,
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/review/REVIEW.json",
+        "sha256": "5ea6ba565b18e0d20d064f7672d3cab80c5be674c67eef53abd5226ad31a5659",
+        "bytes": 10175
+      },
+      "identity_relation": "Original inspected input and selected projection are separately hashed; identical duplicate logs share one retained payload."
+    }
+  ],
+  "native_snapshot": {
+    "path": "docs/provenance/v5-successors/RESULT_STATUS.json",
+    "sha256": "de13cbe38655f7a7b3ceb542519d1972bb284b846e0bc8aa62dbb85823bf9788",
+    "result_count": 261,
+    "late_owner_present": false,
+    "identity_scope": "Historical registry snapshot at the captured time; later admission can change the live registry without changing this receipt."
+  },
+  "source_credit_limit": "Primary source bytes/images are not copied into this handoff. New reading credit is actor-, span- and receipt-specific; no ledger-assembler primary reading is claimed.",
+  "original_binding_sha256": "21bd8da73a129f4f5539f8a655adc7cbe54ac1d224a2ba989e00dcfdae48c293"
+}

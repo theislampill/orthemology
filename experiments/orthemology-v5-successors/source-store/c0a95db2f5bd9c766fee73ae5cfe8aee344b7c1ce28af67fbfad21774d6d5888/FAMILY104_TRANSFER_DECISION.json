@@ -1,0 +1,52 @@
+{
+  "family": 104,
+  "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "target_commit": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+  "disposition": "NO_NEW_COMPLETENESS_TRANSFER",
+  "reason_codes": [
+    "EXISTING_TARGET_OWNERSHIP",
+    "MODEL_MISMATCH",
+    "NO_INFORMATION_PRESERVING_REDUCTION",
+    "NO_OBJECTIVE_EQUIVALENCE"
+  ],
+  "direct_transfer_established": false,
+  "novelty_established": false,
+  "new_kernel_evidence": false,
+  "old_science_replay": "NOT_RUN",
+  "source_changes": "NONE",
+  "core_existing_owners": [
+    "D08-01",
+    "D08-02",
+    "D08-03",
+    "D08-04",
+    "T16-SIGNED-SERVICE",
+    "T16-DIRECT-CONTROLLER"
+  ],
+  "retained_lead": {
+    "status": "CONDITIONAL_ONLY",
+    "description": "Explicit known fully observed finite adversarial quantitative arena: ordinary mean-payoff complexity and exact potential certificate; optional one-resource fixed-credit service.",
+    "upstream_source": "Randomized manuscript section 8 cor:certified-output; deterministic manuscript theorem 1.1 and sections 7-8.",
+    "unmet_obligations": [
+      "effective finite total arena and complete bit encoding",
+      "information-respecting strategy correspondence",
+      "exact objective equivalence",
+      "literal target checker/runtime connection",
+      "size comparison to existing T9/T16 interfaces"
+    ]
+  },
+  "scope_correction": {
+    "metadata_only_randomized_endpoint": true,
+    "additional_actual_source_endpoint": "OAI.deterministic_quasipolynomial_mean_payoff",
+    "additional_endpoint_output": "Ordinary zero-threshold winning set only",
+    "stochastic_parity_formal_endpoint": "NOT_ESTABLISHED_BY_REVIEWED_METADATA_OR_INSPECTED_SOURCE",
+    "potential_helper_negative_bound": "low_payoff has liminf <= -1/(n+1), not printed stronger limsup <= -1/n"
+  },
+  "report": "ASSESSMENT.md",
+  "maps": [
+    "READING_MAP.json",
+    "ORTHEMOLOGY_SOURCE_MAP.json",
+    "ORTHEMOLOGY_REGISTRY_EXCERPTS.json",
+    "DECLARATION_INDEX.md",
+    "ACQUISITION_MANIFEST.json"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "rule": "No raw witness silently corrected. Reader observation, visible editorial intervention and independent historical verification are distinct.",
+  "controls": [
+    {
+      "locus": "print 10/E014",
+      "status": "full-page visually checked",
+      "finding": "Punishment-for-omission-of-recommended-action wording is printed; remains unresolved, no correction."
+    },
+    {
+      "locus": "print 50/E054",
+      "status": "full-page visually checked",
+      "finding": "Print الشرعي versus electronic الشرير; cite local print reading, keep electronic unchanged."
+    },
+    {
+      "locus": "print 59/E063",
+      "status": "full-page visually checked",
+      "finding": "Problematic negated-willing clause remains in print; no inferred negation repair."
+    },
+    {
+      "locus": "print 62–66/E066–070",
+      "status": "full-page visually checked",
+      "finding": "Source-mode divine love/joy argument intact; print 66 bracketed [و] differs from faulty electronic أو."
+    },
+    {
+      "locus": "print 90,92,93,96,98,99",
+      "status": "full-page visually checked",
+      "finding": "Awkward sibling comparison, legal-disjunction/naqd formulations, compressed power sentence and interrupted final-cause clauses are already printed. Do not silently normalise."
+    },
+    {
+      "locus": "print 103/E107",
+      "status": "full-page visually checked",
+      "finding": "One-word manuscript blank explicitly noted."
+    },
+    {
+      "locus": "print 107/E111",
+      "status": "full-page visually checked",
+      "finding": "Editor supplies [قد] for original لا يكون; substantive polarity intervention exposed in footnote."
+    },
+    {
+      "locus": "print 111/E115",
+      "status": "full-page visually checked",
+      "finding": "Modal واجب بنفسه / ممتنع بنفسه wording is printed; avoid extracting unqualified contingency denial."
+    },
+    {
+      "locus": "print 179–182/E183–186",
+      "status": "middle reader full-page visually checked",
+      "finding": "Print 179 supplied [لا يكون]; print 180 supplied [كل] corrupted electronically. Awkward مستفيدًا لا يحتاج فيه إليه remains unresolved. Clear print 181 dual cooperator wording supports distinction without emendation."
+    },
+    {
+      "locus": "E161,162,171,186,188,201,208,212",
+      "status": "electronic continuous read; selected scan controls only",
+      "finding": "Explicit manuscript blanks or uncertainties retained. Exact details in middle notes."
+    },
+    {
+      "locus": "print 248–252",
+      "status": "middle reader full-page visually checked",
+      "finding": "Continuation across unavailable electronic gap; damaged word 250 and incomplete ending 252, ending notice confirms manuscript stops."
+    },
+    {
+      "locus": "print 273,283,318",
+      "status": "later reader full-page visually checked",
+      "finding": "Explicit missing openings 273/283 and ending 318."
+    },
+    {
+      "locus": "print 326,342,355,365",
+      "status": "later reader full-page visually checked",
+      "finding": "Unclear original words 326; proposed dawn/sunrise change 342; conjectural missing ترك355; obscure wording in both copies 365. Editorial conjectures not silently adopted."
+    },
+    {
+      "locus": "print 389,423",
+      "status": "later/final reader full-page visually checked",
+      "finding": "Explicit copyist abridgment notices; apparent sequence is received abridged answer rather than full original argument."
+    },
+    {
+      "locus": "print 398",
+      "status": "later reader full-page visually checked and reread",
+      "finding": "Modern apparatus qualifies migration-sheep report with multiple defects; not certified sound by its citation."
+    },
+    {
+      "locus": "print 419",
+      "status": "final reader full-page read/reread and detail crops",
+      "finding": "Compressed partnership role formula remains repetitious/awkward as printed. Seed/capital contrast separately clear; no silent emendation."
+    }
+  ],
+  "publication_note": "Historical study metadata retained for scope and source identity. No additional source reading, visual collation or philosophical proof is claimed by this projection."
+}

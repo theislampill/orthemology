@@ -1,0 +1,149 @@
+{
+  "scope": "Selected material issues from first reader and cross-range inspections; reader notes/appraisals preserve additional defects. This is not an exhaustive error inventory.",
+  "items": [
+    {
+      "electronic_page": 4,
+      "received_anchor": "لا يقدرون يقدرون",
+      "anchor_present": true,
+      "issue": "Duplicate words; not corrected.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 5,
+      "received_anchor": "في الكتب والجبر",
+      "anchor_present": true,
+      "issue": "Chapter title reads الكتب; no emendation.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 17,
+      "received_anchor": "للفعل وجهين وجه قائم",
+      "anchor_present": true,
+      "issue": "Announces two aspects but only first explicit before reference to both; no supplemented clause.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 29,
+      "received_anchor": "المرتبة الأولى على الرب",
+      "anchor_present": true,
+      "issue": "Malformed prior-knowledge grade; clarified by nearby explicit العلم but source unchanged.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 50,
+      "received_anchor": "كما يمتنع وقوع معلوم",
+      "anchor_present": true,
+      "issue": "Suspect negation in an argument for permitting shared objects.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 50,
+      "received_anchor": "على سبيل وهذا مذهب",
+      "anchor_present": true,
+      "issue": "Incomplete qualifier; no inferred completion.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 54,
+      "received_anchor": "لا ينبغي أن تكون أفعالا لهم",
+      "anchor_present": true,
+      "issue": "Contradicts surrounding clear affirmation; suspect corruption, not used as a load-bearing negative.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 57,
+      "received_anchor": "بل هو غير مقدور العبد",
+      "anchor_present": true,
+      "issue": "Awkward doctrinal negative against context, unrepaired.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 63,
+      "received_anchor": "وهذا لا ينبغي أن يكون فعلا",
+      "anchor_present": true,
+      "issue": "Suspect corruption; immediate positive account retained without local repair.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 91,
+      "received_anchor": "والكفر السابق على فعل الجرائم",
+      "anchor_present": true,
+      "issue": "Incomplete objection.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 100,
+      "received_anchor": "فهل الذئب كل الذئب إلا الشاة",
+      "anchor_present": true,
+      "issue": "Semantically damaged sheep/wolf clause; no repair.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 146,
+      "received_anchor": "إضافة السبب إلى مسببه",
+      "anchor_present": true,
+      "issue": "Reversed-looking causal-attribution phrase; surrounding direction explicit.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 146,
+      "received_anchor": "ولا نعطل قدرة الرب التي هي سبب",
+      "anchor_present": true,
+      "issue": "Likely damaged contrast with created power; unrepaired.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 206,
+      "received_anchor": "الباب الثاني والعشرون: في استيفاء",
+      "anchor_present": true,
+      "issue": "Heading/topic mismatch with initial table; no renumbering.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 232,
+      "received_anchor": "فلو كان معه آلهة وأرباب غيره كما لا ترضى",
+      "anchor_present": true,
+      "issue": "Critical unfinished hypothetical preceding worldly-kings analogy; no scan or conjectural consequent.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 278,
+      "received_anchor": "فإنهم قالوا الفعل غير المفعول",
+      "anchor_present": true,
+      "issue": "Suspect lost/changed negation given next clause says decree identical with decreed.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 306,
+      "received_anchor": "(هامش) تعلق الثالثة",
+      "anchor_present": true,
+      "issue": "Unresolved apparatus/marginal intrusion and garbling within received page; no homogeneous author-prose certification.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    },
+    {
+      "electronic_page": 307,
+      "received_anchor": "ثم يعرض إليه",
+      "anchor_present": true,
+      "issue": "Malformed scriptural-looking phrase, unchanged.",
+      "disposition": "Retained as received; not emended or used for missing-premise reconstruction.",
+      "certainty": "Reader observation, not editor/manuscript collation result."
+    }
+  ]
+}

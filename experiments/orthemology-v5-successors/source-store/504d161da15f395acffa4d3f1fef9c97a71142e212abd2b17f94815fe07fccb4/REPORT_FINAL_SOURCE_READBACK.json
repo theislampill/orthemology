@@ -1,0 +1,147 @@
+{
+  "created_at_utc": "2026-10-07T14:40:02.457981+00:00",
+  "disposition": "PASS_FINAL_REPORT_SOURCE_FOR_DOCX_AUTHORING",
+  "report": {
+    "included_record_alias": "t20/reports/REPORT.md",
+    "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+    "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+    "bytes": 41472,
+    "whitespace_words": 5537
+  },
+  "current_successor_appraisal": {
+    "included_record_alias": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+    "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+    "sha256": "65303af758c4eead3aaa7bf01ce90e2700d3f0bbe80e4590e1131953429f72cf",
+    "bytes": 9350,
+    "whitespace_words": 1243
+  },
+  "current_successor_status": {
+    "included_record_alias": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+    "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+    "sha256": "c850ac51db70d5f0262b4a06be96aa5a049adffa7e1c5c04642c320a717a7ab3",
+    "bytes": 1323,
+    "whitespace_words": 94
+  },
+  "blocking_findings": [],
+  "scientific_sources_replayed": false,
+  "source_changes_made": false,
+  "previous_evidence_bindings_rechecked": 108,
+  "previous_evidence_bindings_unchanged": true,
+  "readback": {
+    "included_record_alias": "t20/reports/REPORT_FINAL_SOURCE_READBACK.md",
+    "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+    "sha256": "ce69a2ea0642ea26272d0d3635af5a880f801e4b82e1859ed9aa8813d14e4871",
+    "bytes": 3583,
+    "whitespace_words": 468
+  },
+  "inspected_bindings": [
+    {
+      "included_record_alias": "t20/reports/REPORT.md",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+      "bytes": 41472,
+      "whitespace_words": 5537
+    },
+    {
+      "included_record_alias": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "65303af758c4eead3aaa7bf01ce90e2700d3f0bbe80e4590e1131953429f72cf",
+      "bytes": 9350,
+      "whitespace_words": 1243
+    },
+    {
+      "included_record_alias": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "c850ac51db70d5f0262b4a06be96aa5a049adffa7e1c5c04642c320a717a7ab3",
+      "bytes": 1323,
+      "whitespace_words": 94
+    },
+    {
+      "included_record_alias": "t20/reading/warrant-threshold-audit/AUDIT.md",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+      "bytes": 19830,
+      "whitespace_words": 2807
+    },
+    {
+      "included_record_alias": "t20/reading/warrant-threshold-audit/comparative-response/RESPONSE.md",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "59fca7e0f250c5a22adca452eba5a9001fc4148720aedb2db4871bb711dc3a76",
+      "bytes": 9552,
+      "whitespace_words": 1248
+    },
+    {
+      "included_record_alias": "t20/reading/nubuwwat/SOURCE_APPRAISAL.md",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "1783bf963a3709c1de937622c19599b5794c34c2f65780afdc129e30d79ca447",
+      "bytes": 21580,
+      "whitespace_words": 2977
+    },
+    {
+      "included_record_alias": "t20/reading/nubuwwat/ACTUAL_COMMON_SOURCE_SUPPLEMENT.md",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "a0cdcb89c1f93881c6cbabcf8bcbe215cfdd5e0adc3572f3aa6230ae1f775222",
+      "bytes": 6156,
+      "whitespace_words": 852
+    },
+    {
+      "included_record_alias": "t20/reading/safadiyya/SOURCE_APPRAISAL.md",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "b0354b6f57a1593ea817d6c0a68e0e87f75d91eb8d325d51265e42642911627d",
+      "bytes": 21916,
+      "whitespace_words": 3016
+    },
+    {
+      "included_record_alias": "t20/reading/safadiyya/ACTUAL_COMMON_SOURCE_SUPPLEMENT.md",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "003e33ffbe55d2386bc16465d70e87002a27c52836fdb17293439b5cf4391024",
+      "bytes": 12408,
+      "whitespace_words": 1725
+    },
+    {
+      "included_record_alias": "t20/reading/safadiyya/FINAL_VERIFICATION.json",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "27c9899c9fcd627996e0de09767a320249ff2341a37bd67f0ef8b9199a33408b",
+      "bytes": 1424,
+      "whitespace_words": 72
+    },
+    {
+      "included_record_alias": "t20/reading/safadiyya/READING_COVERAGE.json",
+      "identity_scope": "Hash and byte count bind the historical original reviewed; public projection identity is separately recorded in the addendum derivation map.",
+      "sha256": "fbfbdac6f15982199ec652048696dd45762ff936b1a8d564b8fb94cf713000a9",
+      "bytes": 13523,
+      "whitespace_words": 963
+    },
+    {
+      "historical_record_title": "Safadiyya independent factual study verification",
+      "original_record_body_included": false,
+      "sha256": "ee1a305d1199c5845b930f1d191c1b5c5552a1e8e7acd0435db09d8ced6a8ba9",
+      "bytes": 24673,
+      "whitespace_words": 701
+    },
+    {
+      "historical_record_title": "Repository boundary readback, 7 October 2026 at13:44 UTC",
+      "original_record_body_included": false,
+      "sha256": "8ab388ff019d6019f3305baadf4ebe92e1ffd3af1da1162ad995ddb29ee42fc3",
+      "bytes": 1198,
+      "whitespace_words": 100
+    },
+    {
+      "historical_record_title": "Scientific-extension admission status before the reading/report addendum",
+      "original_record_body_included": false,
+      "sha256": "a48e6808d1db1801ca72304f4493d1297c0628eb0d19d6ebfcad49c8f9fe6df5",
+      "bytes": 16196,
+      "whitespace_words": 472
+    }
+  ],
+  "limits": [
+    "No new kernel or scientific execution",
+    "No independent new whole-volume reading",
+    "No DOCX render/fidelity acceptance",
+    "No later final integration verification"
+  ],
+  "safadiyya_catalogue_positions_are_within_modern_text_positions": true,
+  "review_helper_history": "First readback helper attempted UTF-8 word counting on binary source bindings and stopped before writes; corrected helper hashes binary inputs without decoding. This was a review-metadata helper issue, not a source defect.",
+  "public_record_kind": "Exact historical review dispositions and scope with body-free input provenance; no new proof replay or source study.",
+  "original_review_receipt_sha256": "00f0de3af6fa8acea3c71fad35db63b34662cf84130c9f68a6811882c8d512db"
+}

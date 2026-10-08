@@ -1,0 +1,845 @@
+{
+  "schema": 1,
+  "lane": "hase",
+  "custom_objects_reused": false,
+  "modules": {
+    "InternalPolymorphism": {
+      "path": "lean/hase/sources/InternalPolymorphism.lean",
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "imports": [
+        "Init"
+      ],
+      "package": "inherited"
+    },
+    "FiniteBridge": {
+      "path": "lean/hase/sources/FiniteBridge.lean",
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "imports": [
+        "InternalPolymorphism"
+      ],
+      "package": "inherited"
+    },
+    "P01TypeAlgebra": {
+      "path": "lean/hase/sources/P01TypeAlgebra.lean",
+      "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "FiniteBridge"
+      ],
+      "package": "inherited"
+    },
+    "P01SNReflection": {
+      "path": "lean/hase/sources/P01SNReflection.lean",
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "imports": [
+        "Init"
+      ],
+      "package": "inherited"
+    },
+    "BoundaryResults": {
+      "path": "lean/hase/sources/BoundaryResults.lean",
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "imports": [
+        "FiniteBridge"
+      ],
+      "package": "inherited"
+    },
+    "P01Candidates": {
+      "path": "lean/hase/sources/P01Candidates.lean",
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection",
+        "BoundaryResults"
+      ],
+      "package": "inherited"
+    },
+    "P01Confluence": {
+      "path": "lean/hase/sources/P01Confluence.lean",
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "imports": [
+        "P01Candidates"
+      ],
+      "package": "inherited"
+    },
+    "EffectsAndDependence": {
+      "path": "lean/hase/sources/EffectsAndDependence.lean",
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "imports": [
+        "BoundaryResults"
+      ],
+      "package": "inherited"
+    },
+    "NormalisationAndNumerals": {
+      "path": "lean/hase/sources/NormalisationAndNumerals.lean",
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "imports": [
+        "EffectsAndDependence"
+      ],
+      "package": "inherited"
+    },
+    "P01Omega": {
+      "path": "lean/hase/sources/P01Omega.lean",
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "imports": [
+        "P01Confluence",
+        "NormalisationAndNumerals"
+      ],
+      "package": "inherited"
+    },
+    "P01Polynomials": {
+      "path": "lean/hase/sources/P01Polynomials.lean",
+      "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "imports": [
+        "P01Omega"
+      ],
+      "package": "inherited"
+    },
+    "P01PER": {
+      "path": "lean/hase/sources/P01PER.lean",
+      "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "imports": [
+        "P01Polynomials"
+      ],
+      "package": "inherited"
+    },
+    "P01DependentCore": {
+      "path": "lean/hase/sources/P01DependentCore.lean",
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "imports": [
+        "P01PER"
+      ],
+      "package": "inherited"
+    },
+    "P01ContextualJ": {
+      "path": "lean/hase/sources/P01ContextualJ.lean",
+      "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "imports": [
+        "P01DependentCore"
+      ],
+      "package": "inherited"
+    },
+    "P01Certificates": {
+      "path": "lean/hase/sources/P01Certificates.lean",
+      "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "imports": [
+        "P01ContextualJ"
+      ],
+      "package": "inherited"
+    },
+    "P01Examples": {
+      "path": "lean/hase/sources/P01Examples.lean",
+      "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "imports": [
+        "P01Certificates"
+      ],
+      "package": "inherited"
+    },
+    "P01RecursiveModel": {
+      "path": "lean/hase/sources/P01RecursiveModel.lean",
+      "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "imports": [
+        "P01Examples"
+      ],
+      "package": "inherited"
+    },
+    "P01LambdaSyntax": {
+      "path": "lean/hase/sources/P01LambdaSyntax.lean",
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection"
+      ],
+      "package": "inherited"
+    },
+    "P01SystemF": {
+      "path": "lean/hase/sources/P01SystemF.lean",
+      "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "imports": [
+        "P01LambdaSyntax"
+      ],
+      "package": "inherited"
+    },
+    "P01CurryParametricity": {
+      "path": "lean/hase/sources/P01CurryParametricity.lean",
+      "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "imports": [
+        "P01RecursiveModel",
+        "P01SystemF"
+      ],
+      "package": "inherited"
+    },
+    "P01Translation": {
+      "path": "lean/hase/sources/P01Translation.lean",
+      "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "imports": [
+        "P01SystemF",
+        "BoundaryResults"
+      ],
+      "package": "inherited"
+    },
+    "P01ModelWitnesses": {
+      "path": "lean/hase/sources/P01ModelWitnesses.lean",
+      "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "imports": [
+        "P01CurryParametricity",
+        "P01Translation"
+      ],
+      "package": "inherited"
+    },
+    "P01DependentModel": {
+      "path": "lean/hase/sources/P01DependentModel.lean",
+      "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "imports": [
+        "P01RecursiveModel",
+        "P01ModelWitnesses"
+      ],
+      "package": "inherited"
+    },
+    "P01DependentSubstitution": {
+      "path": "lean/hase/sources/P01DependentSubstitution.lean",
+      "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "imports": [
+        "P01DependentModel"
+      ],
+      "package": "inherited"
+    },
+    "P01DependentFundamental": {
+      "path": "lean/hase/sources/P01DependentFundamental.lean",
+      "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "imports": [
+        "P01DependentSubstitution"
+      ],
+      "package": "inherited"
+    },
+    "SubstitutionSyntax": {
+      "path": "lean/hase/sources/SubstitutionSyntax.lean",
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "imports": [
+        "P01DependentFundamental"
+      ],
+      "package": "inherited"
+    },
+    "AllSyntax": {
+      "path": "lean/hase/sources/AllSyntax.lean",
+      "sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "imports": [
+        "SubstitutionSyntax"
+      ],
+      "package": "inherited"
+    },
+    "AllPredicates": {
+      "path": "lean/hase/sources/AllPredicates.lean",
+      "sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3",
+      "imports": [
+        "AllSyntax"
+      ],
+      "package": "inherited"
+    },
+    "IntensionalIdentityBridge": {
+      "path": "lean/hase/sources/IntensionalIdentityBridge.lean",
+      "sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333",
+      "imports": [
+        "AllPredicates"
+      ],
+      "package": "inherited"
+    },
+    "ExtensionalRepairSyntax": {
+      "path": "lean/hase/sources/ExtensionalRepairSyntax.lean",
+      "sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f",
+      "imports": [
+        "IntensionalIdentityBridge"
+      ],
+      "package": "inherited"
+    },
+    "AllTermAlgebra": {
+      "path": "lean/hase/sources/AllTermAlgebra.lean",
+      "sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906",
+      "imports": [
+        "AllSyntax"
+      ],
+      "package": "inherited"
+    },
+    "AllMixedAlgebra": {
+      "path": "lean/hase/sources/AllMixedAlgebra.lean",
+      "sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367",
+      "imports": [
+        "AllTermAlgebra"
+      ],
+      "package": "inherited"
+    },
+    "AllStructuralBase": {
+      "path": "lean/hase/sources/AllStructuralBase.lean",
+      "sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d",
+      "imports": [
+        "AllMixedAlgebra"
+      ],
+      "package": "inherited"
+    },
+    "AllStructuralRename": {
+      "path": "lean/hase/sources/AllStructuralRename.lean",
+      "sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0",
+      "imports": [
+        "AllStructuralBase"
+      ],
+      "package": "inherited"
+    },
+    "AllStructural": {
+      "path": "lean/hase/sources/AllStructural.lean",
+      "sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1",
+      "imports": [
+        "AllStructuralRename"
+      ],
+      "package": "inherited"
+    },
+    "AllRawSubstitution": {
+      "path": "lean/hase/sources/AllRawSubstitution.lean",
+      "sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66",
+      "imports": [
+        "AllPredicates"
+      ],
+      "package": "inherited"
+    },
+    "AllRawRenaming": {
+      "path": "lean/hase/sources/AllRawRenaming.lean",
+      "sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f",
+      "imports": [
+        "AllRawSubstitution"
+      ],
+      "package": "inherited"
+    },
+    "AllBaseLaws": {
+      "path": "lean/hase/sources/AllBaseLaws.lean",
+      "sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984",
+      "imports": [
+        "AllRawRenaming"
+      ],
+      "package": "inherited"
+    },
+    "AllPiLaws": {
+      "path": "lean/hase/sources/AllPiLaws.lean",
+      "sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f",
+      "imports": [
+        "AllBaseLaws"
+      ],
+      "package": "inherited"
+    },
+    "AllSigmaLaws": {
+      "path": "lean/hase/sources/AllSigmaLaws.lean",
+      "sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d",
+      "imports": [
+        "AllPiLaws"
+      ],
+      "package": "inherited"
+    },
+    "AllTermLemmas": {
+      "path": "lean/hase/sources/AllTermLemmas.lean",
+      "sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e",
+      "imports": [
+        "AllSigmaLaws"
+      ],
+      "package": "inherited"
+    },
+    "AllBinderLaws": {
+      "path": "lean/hase/sources/AllBinderLaws.lean",
+      "sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9",
+      "imports": [
+        "AllTermLemmas"
+      ],
+      "package": "inherited"
+    },
+    "AllConstants": {
+      "path": "lean/hase/sources/AllConstants.lean",
+      "sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041",
+      "imports": [
+        "AllBinderLaws"
+      ],
+      "package": "inherited"
+    },
+    "AllFiniteComparison": {
+      "path": "lean/hase/sources/AllFiniteComparison.lean",
+      "sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a",
+      "imports": [
+        "AllConstants"
+      ],
+      "package": "inherited"
+    },
+    "AllSemanticSubstitution": {
+      "path": "lean/hase/sources/AllSemanticSubstitution.lean",
+      "sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09",
+      "imports": [
+        "AllRawRenaming"
+      ],
+      "package": "inherited"
+    },
+    "AllInstantiation": {
+      "path": "lean/hase/sources/AllInstantiation.lean",
+      "sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606",
+      "imports": [
+        "AllFiniteComparison",
+        "AllSemanticSubstitution"
+      ],
+      "package": "inherited"
+    },
+    "AllSoundness": {
+      "path": "lean/hase/sources/AllSoundness.lean",
+      "sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7",
+      "imports": [
+        "AllInstantiation"
+      ],
+      "package": "inherited"
+    },
+    "P01DependentControls": {
+      "path": "lean/hase/sources/P01DependentControls.lean",
+      "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "imports": [
+        "P01DependentFundamental"
+      ],
+      "package": "inherited"
+    },
+    "AllInheritedPositiveControls": {
+      "path": "lean/hase/sources/AllInheritedPositiveControls.lean",
+      "sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37",
+      "imports": [
+        "AllStructural",
+        "AllSoundness",
+        "P01DependentControls"
+      ],
+      "package": "inherited"
+    },
+    "EffectiveStandardness": {
+      "path": "lean/hase/sources/EffectiveStandardness.lean",
+      "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428",
+      "imports": [
+        "AllInheritedPositiveControls"
+      ],
+      "package": "inherited"
+    },
+    "TypedSyntax": {
+      "path": "lean/hase/sources/TypedSyntax.lean",
+      "sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c",
+      "imports": [
+        "SubstitutionSyntax"
+      ],
+      "package": "inherited"
+    },
+    "TypedAlgebra": {
+      "path": "lean/hase/sources/TypedAlgebra.lean",
+      "sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc",
+      "imports": [
+        "TypedSyntax"
+      ],
+      "package": "inherited"
+    },
+    "TypedStructural": {
+      "path": "lean/hase/sources/TypedStructural.lean",
+      "sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf",
+      "imports": [
+        "TypedAlgebra"
+      ],
+      "package": "inherited"
+    },
+    "AllNucleusSyntax": {
+      "path": "lean/hase/sources/AllNucleusSyntax.lean",
+      "sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e",
+      "imports": [
+        "AllStructuralRename",
+        "TypedStructural"
+      ],
+      "package": "inherited"
+    },
+    "EffectiveObserver": {
+      "path": "lean/hase/sources/EffectiveObserver.lean",
+      "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f",
+      "imports": [
+        "EffectiveStandardness",
+        "AllNucleusSyntax"
+      ],
+      "package": "inherited"
+    },
+    "EffectiveReduction": {
+      "path": "lean/hase/sources/EffectiveReduction.lean",
+      "sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d",
+      "imports": [
+        "EffectiveObserver"
+      ],
+      "package": "inherited"
+    },
+    "ExtensionalRepairLemmas": {
+      "path": "lean/hase/sources/ExtensionalRepairLemmas.lean",
+      "sha256": "00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac",
+      "imports": [
+        "ExtensionalRepairSyntax",
+        "AllTermAlgebra"
+      ],
+      "package": "inherited"
+    },
+    "ExtensionalRepairSoundness": {
+      "path": "lean/hase/sources/ExtensionalRepairSoundness.lean",
+      "sha256": "b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5",
+      "imports": [
+        "ExtensionalRepairSyntax",
+        "AllSoundness"
+      ],
+      "package": "inherited"
+    },
+    "IntensionalIdentityWitness": {
+      "path": "lean/hase/sources/IntensionalIdentityWitness.lean",
+      "sha256": "6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74",
+      "imports": [
+        "AllNucleusSyntax",
+        "AllFiniteComparison",
+        "P01ModelWitnesses"
+      ],
+      "package": "inherited"
+    },
+    "ExtensionalRepairWitness": {
+      "path": "lean/hase/sources/ExtensionalRepairWitness.lean",
+      "sha256": "0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29",
+      "imports": [
+        "ExtensionalRepairSyntax",
+        "IntensionalIdentityWitness"
+      ],
+      "package": "inherited"
+    },
+    "IntensionalIdentityModel": {
+      "path": "lean/hase/sources/IntensionalIdentityModel.lean",
+      "sha256": "64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4",
+      "imports": [
+        "AllPredicates"
+      ],
+      "package": "inherited"
+    },
+    "IntensionalIdentitySoundness": {
+      "path": "lean/hase/sources/IntensionalIdentitySoundness.lean",
+      "sha256": "011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984",
+      "imports": [
+        "IntensionalIdentityModel",
+        "IntensionalIdentityBridge"
+      ],
+      "package": "inherited"
+    },
+    "IntensionalIdentityRelations": {
+      "path": "lean/hase/sources/IntensionalIdentityRelations.lean",
+      "sha256": "009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d",
+      "imports": [
+        "IntensionalIdentitySoundness"
+      ],
+      "package": "inherited"
+    },
+    "IntensionalIdentityTheorems": {
+      "path": "lean/hase/sources/IntensionalIdentityTheorems.lean",
+      "sha256": "48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c",
+      "imports": [
+        "IntensionalIdentityRelations",
+        "IntensionalIdentityWitness"
+      ],
+      "package": "inherited"
+    },
+    "ExtensionalRepairTheorems": {
+      "path": "lean/hase/sources/ExtensionalRepairTheorems.lean",
+      "sha256": "4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51",
+      "imports": [
+        "ExtensionalRepairLemmas",
+        "ExtensionalRepairSoundness",
+        "ExtensionalRepairWitness",
+        "IntensionalIdentityTheorems"
+      ],
+      "package": "inherited"
+    },
+    "EffectiveRuleBoundary": {
+      "path": "lean/hase/sources/EffectiveRuleBoundary.lean",
+      "sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c",
+      "imports": [
+        "EffectiveReduction",
+        "ExtensionalRepairTheorems"
+      ],
+      "package": "inherited"
+    },
+    "EffectiveCanonicalTests": {
+      "path": "lean/hase/sources/EffectiveCanonicalTests.lean",
+      "sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9",
+      "imports": [
+        "EffectiveRuleBoundary"
+      ],
+      "package": "inherited"
+    },
+    "EffectiveBooleanStandardness": {
+      "path": "lean/hase/sources/EffectiveBooleanStandardness.lean",
+      "sha256": "5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd",
+      "imports": [
+        "EffectiveCanonicalTests"
+      ],
+      "package": "inherited"
+    },
+    "EffectiveBooleanCertificates": {
+      "path": "lean/hase/sources/EffectiveBooleanCertificates.lean",
+      "sha256": "c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354",
+      "imports": [
+        "EffectiveBooleanStandardness"
+      ],
+      "package": "inherited"
+    },
+    "EffectivePrimitiveRecursion": {
+      "path": "lean/hase/sources/EffectivePrimitiveRecursion.lean",
+      "sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba",
+      "imports": [
+        "EffectiveBooleanCertificates"
+      ],
+      "package": "inherited"
+    },
+    "RestrictedCompiler": {
+      "path": "lean/hase/sources/RestrictedCompiler.lean",
+      "sha256": "7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30",
+      "imports": [
+        "EffectivePrimitiveRecursion"
+      ],
+      "package": "inherited"
+    },
+    "PolynomialTestBoundary": {
+      "path": "lean/hase/sources/PolynomialTestBoundary.lean",
+      "sha256": "1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82",
+      "imports": [
+        "RestrictedCompiler"
+      ],
+      "package": "inherited"
+    },
+    "UnaryPolynomial": {
+      "path": "lean/hase/sources/UnaryPolynomial.lean",
+      "sha256": "aa716d61f011942c08532878a322c1b98978d5095bab58fe5ae1e1d5eae37cb6",
+      "imports": [
+        "PolynomialTestBoundary"
+      ],
+      "package": "inherited"
+    },
+    "UnaryFiniteDescription": {
+      "path": "lean/hase/sources/UnaryFiniteDescription.lean",
+      "sha256": "061d8de20772e3fca5bd2a73641da266f782f2d23e8ad4843255c17d875a29d5",
+      "imports": [
+        "UnaryPolynomial"
+      ],
+      "package": "inherited"
+    },
+    "UnaryExpressions": {
+      "path": "lean/hase/sources/UnaryExpressions.lean",
+      "sha256": "9577dc7da47df9915c87b374b9bd87f534849f94ba272bf60ccd7f20313cbe56",
+      "imports": [
+        "PolynomialTestBoundary"
+      ],
+      "package": "inherited"
+    },
+    "UnaryNormalForm": {
+      "path": "lean/hase/sources/UnaryNormalForm.lean",
+      "sha256": "a2be40ceebd2c9293ac2be158abff27ed6093c2a82325fb946b5d2b534040d9c",
+      "imports": [
+        "UnaryFiniteDescription",
+        "UnaryExpressions"
+      ],
+      "package": "inherited"
+    },
+    "ComputablePrelude": {
+      "path": "lean/hase/sources/ComputablePrelude.lean",
+      "sha256": "b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292",
+      "imports": [
+        "RestrictedCompiler"
+      ],
+      "package": "inherited"
+    },
+    "SparsePolynomial": {
+      "path": "lean/hase/sources/SparsePolynomial.lean",
+      "sha256": "2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a",
+      "imports": [
+        "ComputablePrelude",
+        "Mathlib.Algebra.MvPolynomial.Funext",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Algebra.BigOperators.Fin"
+      ],
+      "package": "inherited"
+    },
+    "PositiveSeparation": {
+      "path": "lean/hase/sources/PositiveSeparation.lean",
+      "sha256": "8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8",
+      "imports": [
+        "Mathlib.Algebra.MvPolynomial.Funext"
+      ],
+      "package": "inherited"
+    },
+    "MaskNormalisation": {
+      "path": "lean/hase/sources/MaskNormalisation.lean",
+      "sha256": "d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4",
+      "imports": [
+        "SparsePolynomial",
+        "PositiveSeparation"
+      ],
+      "package": "inherited"
+    },
+    "IdentityChecker": {
+      "path": "lean/hase/sources/IdentityChecker.lean",
+      "sha256": "989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02",
+      "imports": [
+        "MaskNormalisation"
+      ],
+      "package": "inherited"
+    },
+    "UnaryCurrentIdentityBoundary": {
+      "path": "lean/hase/sources/UnaryCurrentIdentityBoundary.lean",
+      "sha256": "8e943773416edcb225d1c3ed9961938bc75f82d7cc67f0bdb1aea5a98b126eac",
+      "imports": [
+        "UnaryNormalForm",
+        "IdentityChecker",
+        "IntensionalIdentitySoundness"
+      ],
+      "package": "inherited"
+    },
+    "UArrowAndCompilerControls": {
+      "path": "lean/hase/sources/UArrowAndCompilerControls.lean",
+      "sha256": "7fe317d5fbc4657ecd7f793808872941a8bfdf5b3a281f87a2f11b6ea70ac7a9",
+      "imports": [
+        "ExtensionalRepairSyntax",
+        "UnaryCurrentIdentityBoundary"
+      ],
+      "package": "control-v1"
+    },
+    "InhabitedEndpointControl": {
+      "path": "lean/hase/sources/InhabitedEndpointControl.lean",
+      "sha256": "57a4559c45f76bbb6b2a55b0ddc208350bb866bb7fe1be0f80fd4df8ffeef61f",
+      "imports": [
+        "UArrowAndCompilerControls"
+      ],
+      "package": "inhabited-control-v1"
+    }
+  },
+  "roots": [
+    "UArrowAndCompilerControls",
+    "InhabitedEndpointControl"
+  ],
+  "external_direct_imports": [
+    "Init",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.MvPolynomial.Funext",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Data.Bool.Basic"
+  ],
+  "controls": [
+    {
+      "group": "existing",
+      "module": "KernelReadback",
+      "path": "lean/hase/controls/existing/KernelReadback.lean",
+      "sha256": "a5c0f490b5ad83f6a6b3f282da79b08d1cb0df04ce177cc1bea97290c7d12641",
+      "expected_exit": 0,
+      "imports": [
+        "UArrowAndCompilerControls"
+      ],
+      "markers": [],
+      "axiom_count": 2
+    },
+    {
+      "group": "inhabited",
+      "module": "KernelReadback",
+      "path": "lean/hase/controls/inhabited/KernelReadback.lean",
+      "sha256": "e957ac234c4a515ba24432eb6d286e0145bb298794bb027e647b985853d236a1",
+      "expected_exit": 0,
+      "imports": [
+        "InhabitedEndpointControl"
+      ],
+      "markers": [],
+      "axiom_count": 4
+    },
+    {
+      "group": "inhabited",
+      "module": "WrongEndpointReadback",
+      "path": "lean/hase/controls/inhabited/WrongEndpointReadback.lean",
+      "sha256": "4105a1e224403f5dc9fecada98c0e902cd391cb402ef4781936ce2e03a6bfd88",
+      "expected_exit": 1,
+      "imports": [
+        "InhabitedEndpointControl"
+      ],
+      "markers": [
+        "error: type mismatch",
+        "inhabited_endpoint_identity",
+        "Q.identity Fp Fq",
+        "Q.identity Fp Fp",
+        "but is expected to have type"
+      ]
+    },
+    {
+      "group": "inhabited",
+      "module": "WrongMotiveCoordinate",
+      "path": "lean/hase/controls/inhabited/WrongMotiveCoordinate.lean",
+      "sha256": "fd720b1dd6eae50b0f505be7a0b7a50f5c19c45cadd126f3aa03c2667e13bf54",
+      "expected_exit": 1,
+      "imports": [
+        "InhabitedEndpointControl"
+      ],
+      "markers": [
+        "error: type mismatch",
+        "target_substitution",
+        "Poly.var 0",
+        "but is expected to have type"
+      ]
+    },
+    {
+      "group": "inhabited",
+      "module": "ReviewerReadback",
+      "path": "lean/hase/controls/inhabited/ReviewerReadback.lean",
+      "sha256": "7ebd4056c1aece159fd00270eb1f8de5239276943659f863eda71dd0ac20e90e",
+      "expected_exit": 0,
+      "imports": [
+        "InhabitedEndpointControl"
+      ],
+      "markers": [],
+      "axiom_count": 3
+    },
+    {
+      "group": "inhabited",
+      "module": "WrongJudgmentCast",
+      "path": "lean/hase/controls/inhabited/WrongJudgmentCast.lean",
+      "sha256": "248b5ba9b09a97396153d47c9c373720afac702cc787e69ba98e88b5b6161c30",
+      "expected_exit": 1,
+      "imports": [
+        "InhabitedEndpointControl"
+      ],
+      "markers": [
+        "error: type mismatch",
+        "inhabited_endpoint_identity",
+        "ExtensionalRepair.HasE []",
+        "but is expected to have type",
+        "Has []"
+      ]
+    },
+    {
+      "group": "inhabited",
+      "module": "ReflexivityCannotReplacePremise",
+      "path": "lean/hase/controls/inhabited/ReflexivityCannotReplacePremise.lean",
+      "sha256": "0b5e02f6d3fe4c131085bd28a33dd0ffb2fb6eccfae2698318751fc285777f5d",
+      "expected_exit": 1,
+      "imports": [
+        "InhabitedEndpointControl"
+      ],
+      "markers": [
+        "error: type mismatch",
+        "PolyConvPlus p p",
+        "PolyConvPlus p q",
+        "but is expected to have type"
+      ]
+    },
+    {
+      "group": "ordinary-diagnostic",
+      "module": "DumpExactPolynomials",
+      "path": "lean/hase/controls/ordinary-diagnostic/DumpExactPolynomials.lean",
+      "sha256": "ed383adafd31af8ba3a823a4c63ac7a06f7e1993f3c7997380483c8f8ff4e389",
+      "expected_exit": 0,
+      "imports": [
+        "InhabitedEndpointControl"
+      ],
+      "markers": []
+    }
+  ],
+  "ordinary_diagnostic": {
+    "script": "diagnostics/hase/check_lambda_normal_forms.py",
+    "export_group": "ordinary-diagnostic",
+    "export_module": "DumpExactPolynomials",
+    "scope": "Ordinary finite calculation on exported exact syntax; not a Lean theorem of beta-eta separation or compiler-image membership."
+  },
+  "dependencies": "dependencies/hase.json"
+}

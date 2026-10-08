@@ -1,0 +1,127 @@
+{
+  "scope": "Six bounded contextual returns after completion of the assigned continuous electronic pass. They do not substitute for that pass.",
+  "completed_utc": "2026-10-07T13:00:43Z",
+  "ranges": [
+    {
+      "id": "R1",
+      "first_id": "NB-S001-L0139",
+      "last_id": "NB-S001-L0145",
+      "line_ids": [
+        "NB-S001-L0139",
+        "NB-S001-L0140",
+        "NB-S001-L0141",
+        "NB-S001-L0142",
+        "NB-S001-L0143",
+        "NB-S001-L0144",
+        "NB-S001-L0145"
+      ],
+      "source_body_included": false,
+      "sha256": "41edf9aa5847ae4b8998b908780f812c39eec59ee71e281477bc92f25231fa6f",
+      "words_excluding_ids": 1310,
+      "reason_selected_after_continuous_pass": "Distinguish knowledge/love/delight; inspect inference from ends to worship and how fear is treated.",
+      "actual_read": true,
+      "begin_marker_seen": true,
+      "end_marker_seen": true,
+      "truncation": false
+    },
+    {
+      "id": "R2",
+      "first_id": "NB-S001-L0164",
+      "last_id": "NB-S001-L0165",
+      "line_ids": [
+        "NB-S001-L0164",
+        "NB-S001-L0165"
+      ],
+      "source_body_included": false,
+      "sha256": "343c556e6a456eb7639d313b18dd299ab1524f390711a91749314830fe7b930d",
+      "words_excluding_ids": 685,
+      "reason_selected_after_continuous_pass": "Assess conditional force of agency-will-wisdom parity and the regress/composition argument.",
+      "actual_read": true,
+      "begin_marker_seen": true,
+      "end_marker_seen": true,
+      "truncation": false
+    },
+    {
+      "id": "R3",
+      "first_id": "NB-S001-L0177",
+      "last_id": "NB-S001-L0182",
+      "line_ids": [
+        "NB-S001-L0177",
+        "NB-S001-L0178",
+        "NB-S001-L0179",
+        "NB-S001-L0180",
+        "NB-S001-L0181",
+        "NB-S001-L0182"
+      ],
+      "source_body_included": false,
+      "sha256": "0d87955dcd97d4dce3ed27ae1a4a350e23e7cbbfef89f16a41ed827df4c8017d",
+      "words_excluding_ids": 1059,
+      "reason_selected_after_continuous_pass": "Keep attributed rival routes distinct from author reply and track explicit concessions.",
+      "actual_read": true,
+      "begin_marker_seen": true,
+      "end_marker_seen": true,
+      "truncation": false
+    },
+    {
+      "id": "R4",
+      "first_id": "NB-S002-L0007",
+      "last_id": "NB-S002-L0011",
+      "line_ids": [
+        "NB-S002-L0007",
+        "NB-S002-L0008",
+        "NB-S002-L0009",
+        "NB-S002-L0010",
+        "NB-S002-L0011"
+      ],
+      "source_body_included": false,
+      "sha256": "43e514a62d0605004b9e274bd28d828eef7c79fa26095467e5760706a85ef92d",
+      "words_excluding_ids": 1396,
+      "reason_selected_after_continuous_pass": "Test whether context/request may belong to evidence without importing truth of the claim; inspect rational/intentional evidence.",
+      "actual_read": true,
+      "begin_marker_seen": true,
+      "end_marker_seen": true,
+      "truncation": false
+    },
+    {
+      "id": "R5",
+      "first_id": "NB-S002-L0015",
+      "last_id": "NB-S002-L0018",
+      "line_ids": [
+        "NB-S002-L0015",
+        "NB-S002-L0016",
+        "NB-S002-L0017",
+        "NB-S002-L0018"
+      ],
+      "source_body_included": false,
+      "sha256": "ce77d0e9ff79dd51afabd7bff284d8bbe2c186fa2c3794795228e649df4f8ad3",
+      "words_excluding_ids": 1187,
+      "reason_selected_after_continuous_pass": "Distinguish power from wisdom, ignorance from evidence of negation, and sincere error from deliberate lying.",
+      "actual_read": true,
+      "begin_marker_seen": true,
+      "end_marker_seen": true,
+      "truncation": false
+    },
+    {
+      "id": "R6",
+      "first_id": "NB-S002-L0044",
+      "last_id": "NB-S002-L0049",
+      "line_ids": [
+        "NB-S002-L0044",
+        "NB-S002-L0045",
+        "NB-S002-L0046",
+        "NB-S002-L0047",
+        "NB-S002-L0048",
+        "NB-S002-L0049"
+      ],
+      "source_body_included": false,
+      "sha256": "9b5afc4657063061603fe2ef9e3c434abffbd25741cef5e090bce551d1d6d086",
+      "words_excluding_ids": 1315,
+      "reason_selected_after_continuous_pass": "Check final request-response concession, limits on challenge conditions, and mixed judgements on philosophical and theological routes.",
+      "actual_read": true,
+      "begin_marker_seen": true,
+      "end_marker_seen": true,
+      "truncation": false
+    }
+  ],
+  "reflection_location": "SOURCE_APPRAISAL.md, Reflective changes after rereading"
+}

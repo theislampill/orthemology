@@ -1,0 +1,28 @@
+{
+  "schema": "t20-joint-model-final-status-v1",
+  "status": "AUTHOR_VERIFIED_AWAITING_FRESH_INDEPENDENT_REVIEW",
+  "verified_utc": "2026-10-07T10:15:50.039391+00:00",
+  "author_final_readback_utc": "2026-10-07T10:17:32.856710+00:00",
+  "evidence_status": [
+    "KERNEL_PROVED",
+    "FINITE_MODEL_VERIFIED"
+  ],
+  "verification_receipt": "verification-final-v2/VERIFICATION.json",
+  "verification_receipt_sha256": "f9560adb9775de825340963a5abfd6401ad14700c5925d4f04a5420ef4ddad21",
+  "model_source_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+  "theorems": 56,
+  "named_declaration_readbacks": 88,
+  "definition_body_readbacks": 23,
+  "selected_theorem_body_readbacks": 15,
+  "expected_semantic_rejections": 4,
+  "fresh_objects": 5,
+  "bound_cached_objects": 1796,
+  "trust_level": 0,
+  "independent_review": "NOT_ATTEMPTED_IN_THIS_PACKET",
+  "scope": "Relative consistency/nonvacuity of the selected formal signature in one shared finite interpretation. No metaphysical possibility or general Sixth-refinement claim.",
+  "component_sources": "UNCHANGED",
+  "new_downloads": "NONE",
+  "broad_earlier_suite_replay": "NOT_RUN",
+  "retained_failed_attempt": "verification-final/FAILURE.json",
+  "failed_attempt_disposition": "Readback option error; repaired using registered format.width. Joint model/proof source unchanged by that repair."
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "t20-modal-union-verification-v2",
+  "verified_on": "2026-10-07",
+  "status": "AUTHOR_VERIFIED_AWAITING_ROOT_INDEPENDENT_REPLAY",
+  "toolchain": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "lean_recipe": "--trust=0 on ModalUnion.lean, FiniteControls.lean, AxiomAudit.lean and negative-controls/RejectedClaims.lean",
+  "v1_recipe_disclaimer": "V1 did not explicitly use trust=0; no retroactive claim is made.",
+  "mathematical_sources_identical_to_v1": true,
+  "v1_manifest_archive_and_harness_seals_preserved": true,
+  "green_modules": 3,
+  "audited_theorems": 42,
+  "expected_semantic_false_claim_rejections": 3,
+  "fresh_replay_result": "PASS: three green modules; all authored theorem axioms printed; three false finite claims rejected.",
+  "guard_tests": [
+    {
+      "case": "existing_output",
+      "passed": true,
+      "exit_code": 73,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true
+    },
+    {
+      "case": "source_descendant",
+      "passed": true,
+      "exit_code": 64,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true
+    },
+    {
+      "case": "source_equal",
+      "passed": true,
+      "exit_code": 64,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true
+    },
+    {
+      "case": "source_symlink_alias",
+      "passed": true,
+      "exit_code": 64,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true
+    },
+    {
+      "case": "normal_fresh",
+      "passed": true,
+      "exit_code": 0,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true
+    }
+  ],
+  "evidence": {
+    "guard_record": {
+      "path": "../harness-guards-v2-seal-check.json",
+      "sha256": "1321b7eb712b5a3b80ffa8a3eb530bdd86599daf49cd594af55a192e52099a48"
+    },
+    "axiom_audit": {
+      "path": "../modal-union-v2-final-replay/axioms.log",
+      "sha256": "82ae03e693d29a948a5de9a8810c8bce48551cb527107dd6f34a663b9b97ec48"
+    },
+    "rejected_claims": {
+      "path": "../modal-union-v2-final-replay/rejected.log",
+      "sha256": "f619409013f85349d72437f99d07652e3f253c56ff14407df76f3a0c5888ce92"
+    },
+    "input_hashes": {
+      "path": "../modal-union-v2-final-replay/SHA256SUMS",
+      "sha256": "b045ba201ffc01d1fe64cd5988d7039edbfe9c2b5dafed89762524851c9d0612"
+    }
+  },
+  "development_regression": "The v1 guard probe on disposable copies reproduced overwrites/source-tree writes; the final v2 guard suite rejects all four prohibited requests without changing byte/path snapshots. An intermediate fixture omitted the newly hashed test script; its payload copy was corrected, then the final suite passed.",
+  "scope": "Harness repair only; prior proofs, appraisals, denied-cleanup artifacts and pinned repository remain untouched."
+}

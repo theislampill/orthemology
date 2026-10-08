@@ -1,0 +1,228 @@
+{
+  "JointFinite.abc_full": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J01_canonical_identity": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.canonical_original_via_component": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.canonical_root_via_component": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.canonical_necessary_via_inherited": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.canonical_uniform_via_inherited": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.canonical_abc_same_g": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.generic_abc_via_component": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.abc_live_receipt_and_transport": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_admissible": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_req_sound": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_req_exhaustive": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_qualified": [
+    "propext"
+  ],
+  "JointFinite.field_classification": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_conformance": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_use_sound": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_role": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_visible": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_anchor": [
+    "propext"
+  ],
+  "JointFinite.field_cnd": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_connected": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_coverage_without_cnd": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_guarded": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.field_positive": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.complete_provider_exists_and_unique": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.mixed_occurrence_real": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.veracity_package": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.veracity_factive": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.veracity_via_component": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.honesty_equivalence_via_component": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.created_speaker_normative_boundary": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.source_live_knowledge_and_nonspeech_conformance": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.ancestor_transitive": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.direct_is_ancestor": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.ancestor_decomposition": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.reach_is_ancestor": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.ancestor_is_reach": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J02_original_resource_provision": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J03_concrete_receipt": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J04_field_target_link": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J05_positive_reachability": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J05_live_productive_support": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.reception_and_direct_support_distinct": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J06_complete_incoming_inventory": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J07_no_incoming_outside_source": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J08_actual_mode_realization": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J09_fitting_source_realization": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J10_truth_grounding": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J11_token_support_grounding": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J12_support_not_ownership": [
+    "propext"
+  ],
+  "JointFinite.J13_genuine_agent_identity": [
+    "propext"
+  ],
+  "JointFinite.J14_outside_boundary": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.J15_strong_ownership_extension": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.finite_ancestry_compatibility": [
+    "Quot.sound",
+    "propext"
+  ],
+  "JointFinite.no_source_or_created_authentication": [],
+  "JointFinite.good_source_antecedent_boundary": [
+    "Quot.sound",
+    "propext"
+  ]
+}

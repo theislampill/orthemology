@@ -1,0 +1,12 @@
+{
+  "status": "PASS_WITH_SCOPED_LIMITS",
+  "manifest_sha256": "618d067e7220a344b48edd9bc9c7c2ae110bd8ff015f2fb911e5c72619d91d5e",
+  "all_ten_manifest_files_match": true,
+  "new_source_sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+  "independent_trust0_exit": 0,
+  "all_theorem_declarations_audited": 16,
+  "axioms_log_sha256": "94a549bad6f75cb9419e694a171950579bc5fe328cd18d70814a0d9727e368c2",
+  "six_python_scenarios": "independently run in copied output location; identical JSON bytes",
+  "additional_exhaustive_CND_interpretations_checked": 26244,
+  "scope": "Formula consequence and finite assignments only. No primary source rereading by this review, no metaphysical possibility/adoption or new warrant for N2/N3. Full scholarly source attribution remains scoped to author receipt."
+}

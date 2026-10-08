@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "consumer_manifest_sha256": "9f2a0f116f90fc4189faacc79d5b7c02116e1d36735cc2cdffe4f9117406de95",
+  "retained_v3_manifest_sha256": "dedd850a7b3e2a89cfbdeaf6fd01d069be8b4e00a9e4019b59066bddb29e753c",
+  "unchanged_runner_sha256": "4b1522dbe651ac97bece149b2fd21c8fc0688a87ac7bbd10e1f761bcf80d9adc",
+  "frozen_v3_binder_sha256": "c9ffbf277413135fa59d194d22de14714a46c4ac9f1d9098187e7512403ffc12",
+  "consumer_binder_sha256": "8785e7de9225627451fe5bddab9fdc5f085c3d7dd4eb368c812e51a96a1fed2a",
+  "binder_delta": "Only the exact accepted MANIFEST constant differs. No source, compiler, control, pin or arbitrary-inventory gate is changed.",
+  "metadata_bridge_sha256": "0a9e7a2ad69e010a47944edc765d87a3a4212a59e595e6b0cb211f721eba52e6",
+  "metadata_bridge": {
+    "status": "PASS_EXACT_V3_TO_FINAL_CONSUMER_METADATA_BRIDGE",
+    "v3_manifest_sha256": "dedd850a7b3e2a89cfbdeaf6fd01d069be8b4e00a9e4019b59066bddb29e753c",
+    "consumer_manifest_sha256": "9f2a0f116f90fc4189faacc79d5b7c02116e1d36735cc2cdffe4f9117406de95",
+    "runner_sha256": "4b1522dbe651ac97bece149b2fd21c8fc0688a87ac7bbd10e1f761bcf80d9adc",
+    "differences": [
+      {
+        "path": "INDEPENDENT_PACKAGE_SUMMARY.json",
+        "prior_sha256": null,
+        "consumer_sha256": "a7ad87680993fa6799f4bda0b8578b1f4f8538b16d653e8f086a6944bc3152a2"
+      },
+      {
+        "path": "MANIFEST.json",
+        "prior_sha256": "dedd850a7b3e2a89cfbdeaf6fd01d069be8b4e00a9e4019b59066bddb29e753c",
+        "consumer_sha256": "9f2a0f116f90fc4189faacc79d5b7c02116e1d36735cc2cdffe4f9117406de95"
+      },
+      {
+        "path": "PACKAGE_STATUS.json",
+        "prior_sha256": "18821420f16ed90197e8e84cd10780713cc2b50f88f390bad6d5f3634257f18d",
+        "consumer_sha256": "239dd7cdf7696174578c73392a136e8358959945754bda69e664993f8fb4621b"
+      },
+      {
+        "path": "PORTABLE_REPLAY_SUMMARY.json",
+        "prior_sha256": null,
+        "consumer_sha256": "7284adbb4103ad0b824f3f4a28ecafd23573b1ea6cf553adb2a656a0cc2ec35e"
+      },
+      {
+        "path": "README.md",
+        "prior_sha256": "e8fc9cd48eef5162d9413822ddbefa10df13a02680b4523e5566ac2dec7e6205",
+        "consumer_sha256": "26c5929222fdfe39073848892dc2b5e512c0292e923749107c11898fedc45f34"
+      },
+      {
+        "path": "VERIFICATION_SUMMARY.md",
+        "prior_sha256": "fed40639739b4f5ca4b74b27a75aed9ef33473516eca74866c6e549ca334a74f",
+        "consumer_sha256": "164789fddd3ade86d576d6c1c3a6b06cd31c62328657b3f2f7ce9e4e323e8978"
+      },
+      {
+        "path": "dependencies/INVENTORY_COMPARISON.json",
+        "prior_sha256": null,
+        "consumer_sha256": "5cacc89f7ccfdb23fc3db6f9d042c88d81e8f34159b241073dc67ffc76d4430f"
+      },
+      {
+        "path": "dependencies/ORIGINS_AND_AVAILABILITY.md",
+        "prior_sha256": null,
+        "consumer_sha256": "cae78b6cc70bb3a5f1592f03ac9442e189e2b96c5d31422c16eea1f925decc20"
+      }
+    ]
+  }
+}

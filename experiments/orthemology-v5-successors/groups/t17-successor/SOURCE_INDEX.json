@@ -1,0 +1,292 @@
+{
+  "source_map_owner": "docs/provenance/v5-successors/SOURCE_MAP.json",
+  "sources": [
+    {
+      "id": "T17-SRC-405369cfcde8285868e0",
+      "original_sha256": "2e41ab52bffa7d67a7386c797e304da0107f05505fe97ca90ae8eb112eb75fbb",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/2e41ab52bffa7d67a7386c797e304da0107f05505fe97ca90ae8eb112eb75fbb/ADAPTATION_LOG.json",
+      "public_sha256": "2e41ab52bffa7d67a7386c797e304da0107f05505fe97ca90ae8eb112eb75fbb"
+    },
+    {
+      "id": "T17-SRC-353de674164a876a6a5f",
+      "original_sha256": "b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71/FINITE_MATH_SCOPE.md",
+      "public_sha256": "b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71"
+    },
+    {
+      "id": "T17-SRC-90bfbf94fdf6a186b391",
+      "original_sha256": "c18fb7bf49cec25b2fbcab01af321259f2d2f88a2f35ea52aac5e99e8ff7bb85",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c18fb7bf49cec25b2fbcab01af321259f2d2f88a2f35ea52aac5e99e8ff7bb85/MANIFEST.json",
+      "public_sha256": "c18fb7bf49cec25b2fbcab01af321259f2d2f88a2f35ea52aac5e99e8ff7bb85"
+    },
+    {
+      "id": "T17-SRC-6c854f8d103c88710cbb",
+      "original_sha256": "d119ce5f697134cf6c6e6916e9e6dbc31047c44be6207602ba303e71dc975972",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d119ce5f697134cf6c6e6916e9e6dbc31047c44be6207602ba303e71dc975972/PACKAGING_TEST_REPORT.json",
+      "public_sha256": "d119ce5f697134cf6c6e6916e9e6dbc31047c44be6207602ba303e71dc975972"
+    },
+    {
+      "id": "T17-SRC-7f7e088f2255f8ca8f9b",
+      "original_sha256": "7704c9e6f14261c16d151f0ccebbd110e27617761d7016ba6611897f2576b44c",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7704c9e6f14261c16d151f0ccebbd110e27617761d7016ba6611897f2576b44c/PRIVACY_SCAN_REPORT.json",
+      "public_sha256": "7704c9e6f14261c16d151f0ccebbd110e27617761d7016ba6611897f2576b44c"
+    },
+    {
+      "id": "T17-SRC-fe48e5b52f1efcd00dbb",
+      "original_sha256": "b9ce5857e885ee933344e7c7df6abe3e7ae68612b69d6f0355ceeb851c6d8b2f",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b9ce5857e885ee933344e7c7df6abe3e7ae68612b69d6f0355ceeb851c6d8b2f/README.md",
+      "public_sha256": "b9ce5857e885ee933344e7c7df6abe3e7ae68612b69d6f0355ceeb851c6d8b2f"
+    },
+    {
+      "id": "T17-SRC-38d48999a018c83abc10",
+      "original_sha256": "7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e/RELATED_ARTIFACTS.json",
+      "public_sha256": "7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e"
+    },
+    {
+      "id": "T17-SRC-99a10c5cba122be7f5c8",
+      "original_sha256": "852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9/frozen_aggregate_certificate.json",
+      "public_sha256": "852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9"
+    },
+    {
+      "id": "T17-SRC-cf5a267f902f2597272f",
+      "original_sha256": "561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe/independent_aggregate_certificate.json",
+      "public_sha256": "561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe"
+    },
+    {
+      "id": "T17-SRC-bb161f46577e2ee700d9",
+      "original_sha256": "1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb/post_inspection_tail_certificate.json",
+      "public_sha256": "1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb"
+    },
+    {
+      "id": "T17-SRC-8100afd945c5b0bfb79f",
+      "original_sha256": "9438baad17a4dac4d100b30ec53397edf9fcd6fbc3b3f0cab21f7af15ebbec89",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9438baad17a4dac4d100b30ec53397edf9fcd6fbc3b3f0cab21f7af15ebbec89/certified_exp.py",
+      "public_sha256": "9438baad17a4dac4d100b30ec53397edf9fcd6fbc3b3f0cab21f7af15ebbec89"
+    },
+    {
+      "id": "T17-SRC-e35dc7aa553e6ee53eb4",
+      "original_sha256": "a670dbeb98c21531ce7eaac682c8c402e04289547e09bbe1d5935c6f136ab8ec",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/a670dbeb98c21531ce7eaac682c8c402e04289547e09bbe1d5935c6f136ab8ec/independent_oracles.py",
+      "public_sha256": "a670dbeb98c21531ce7eaac682c8c402e04289547e09bbe1d5935c6f136ab8ec"
+    },
+    {
+      "id": "T17-SRC-306284f97bdb3f03d6fa",
+      "original_sha256": "9d39013072bae4cc53f4e681ed1a726209f1477e08bcd2cc9e4231dca9019cf3",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9d39013072bae4cc53f4e681ed1a726209f1477e08bcd2cc9e4231dca9019cf3/placement_core.py",
+      "public_sha256": "9d39013072bae4cc53f4e681ed1a726209f1477e08bcd2cc9e4231dca9019cf3"
+    },
+    {
+      "id": "T17-SRC-a6a6183df126fcc5603a",
+      "original_sha256": "bc7d599ef3534dcfe1161490bba0f745f31c43f4d937949e839b82f319038340",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/bc7d599ef3534dcfe1161490bba0f745f31c43f4d937949e839b82f319038340/test_calculation_independently.py",
+      "public_sha256": "bc7d599ef3534dcfe1161490bba0f745f31c43f4d937949e839b82f319038340"
+    },
+    {
+      "id": "T17-SRC-e720b471ab8dc6acafbb",
+      "original_sha256": "93cc86495667a00e1585c1096f43e1e7c1089210374113ecfe06635ecdfc7d8e",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/93cc86495667a00e1585c1096f43e1e7c1089210374113ecfe06635ecdfc7d8e/test_independent_oracles.py",
+      "public_sha256": "93cc86495667a00e1585c1096f43e1e7c1089210374113ecfe06635ecdfc7d8e"
+    },
+    {
+      "id": "T17-SRC-1f690239a31e4b448239",
+      "original_sha256": "e4c7026aa7ac2542474bd9add0b2e9b182c862fb5437913744bcf02446d97d14",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/e4c7026aa7ac2542474bd9add0b2e9b182c862fb5437913744bcf02446d97d14/test_synthetic.py",
+      "public_sha256": "e4c7026aa7ac2542474bd9add0b2e9b182c862fb5437913744bcf02446d97d14"
+    },
+    {
+      "id": "T17-SRC-7bcb7a5f1babd9672820",
+      "original_sha256": "490476690f4b92fc8bd032278f7c80e72ae631d4bd9b9e72686b8c1b25c41795",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/490476690f4b92fc8bd032278f7c80e72ae631d4bd9b9e72686b8c1b25c41795/test_aggregate_certificates.py",
+      "public_sha256": "490476690f4b92fc8bd032278f7c80e72ae631d4bd9b9e72686b8c1b25c41795"
+    },
+    {
+      "id": "T17-SRC-c59cf367d4098bceebdb",
+      "original_sha256": "0e9811a6200542c22bad0cb2d794395b027e6605bb4e45d00f3526a549b3116a",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/0e9811a6200542c22bad0cb2d794395b027e6605bb4e45d00f3526a549b3116a/test_arabic_source_scope.py",
+      "public_sha256": "0e9811a6200542c22bad0cb2d794395b027e6605bb4e45d00f3526a549b3116a"
+    },
+    {
+      "id": "T17-SRC-4ca5f8a29f6bdcc66c85",
+      "original_sha256": "2681111681f26283f4d7c89bf69adb3aa2aa32c9f7d07a9dc47d65d16705e5a6",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/2681111681f26283f4d7c89bf69adb3aa2aa32c9f7d07a9dc47d65d16705e5a6/test_minhaj_electronic_scope.py",
+      "public_sha256": "2681111681f26283f4d7c89bf69adb3aa2aa32c9f7d07a9dc47d65d16705e5a6"
+    },
+    {
+      "id": "T17-SRC-3b9bf3c38785029bae23",
+      "original_sha256": "38e036152ab2b425b0f9b1b19e7dd62b546f0e073b2e6b33fdcf443ca006f304",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/38e036152ab2b425b0f9b1b19e7dd62b546f0e073b2e6b33fdcf443ca006f304/test_source_coverage.py",
+      "public_sha256": "38e036152ab2b425b0f9b1b19e7dd62b546f0e073b2e6b33fdcf443ca006f304"
+    },
+    {
+      "id": "T17-SRC-9148d3f18cc9ef63eb70",
+      "original_sha256": "a2f23c093d2ea81dbe0caf04d4e5e532f81560199428a29c77828a81295498d6",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/a2f23c093d2ea81dbe0caf04d4e5e532f81560199428a29c77828a81295498d6/test_utf8_metadata_portability.py",
+      "public_sha256": "a2f23c093d2ea81dbe0caf04d4e5e532f81560199428a29c77828a81295498d6"
+    },
+    {
+      "id": "T17-SRC-410a4553f0caf523d2c4",
+      "original_sha256": "4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401/Mathematical_Companion_Content_v2.md",
+      "public_sha256": "4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401"
+    },
+    {
+      "id": "T17-SRC-cb9c7c2cf0b82d6e7ba2",
+      "original_sha256": "b5e3056961b21e265e710ffca8d8b1293362695c39d292509cb3c6c3bf54f1fe",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b5e3056961b21e265e710ffca8d8b1293362695c39d292509cb3c6c3bf54f1fe/run_checks.py",
+      "public_sha256": "b5e3056961b21e265e710ffca8d8b1293362695c39d292509cb3c6c3bf54f1fe"
+    },
+    {
+      "id": "T17-SRC-56011e064a4ac0c8d511",
+      "original_sha256": "1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944/additional_arabic_source_scope.json",
+      "public_sha256": "1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944"
+    },
+    {
+      "id": "T17-SRC-2f4a078fc08bd3d1ff8f",
+      "original_sha256": "2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e/minhaj_electronic_read_scope.json",
+      "public_sha256": "2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e"
+    },
+    {
+      "id": "T17-SRC-2f387bf3787e190359bc",
+      "original_sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b/six_source_coverage.json",
+      "public_sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b"
+    },
+    {
+      "id": "T17-SRC-9ae098d81eb55b91afa6",
+      "original_sha256": "ea4caf6f63af17b7a7fbfc9e878eca0686cd04eda14fc9172d67a313e760ed45",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ea4caf6f63af17b7a7fbfc9e878eca0686cd04eda14fc9172d67a313e760ed45/check_orbits.py",
+      "public_sha256": "ea4caf6f63af17b7a7fbfc9e878eca0686cd04eda14fc9172d67a313e760ed45"
+    },
+    {
+      "id": "T17-SRC-492429e040a41a31f8e5",
+      "original_sha256": "8134bcf2ed063e51c8bea1914763058a80d6cc2d7e5900e675ac1cc095d47623",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/8134bcf2ed063e51c8bea1914763058a80d6cc2d7e5900e675ac1cc095d47623/independent_tail_predicates_v1.py",
+      "public_sha256": "8134bcf2ed063e51c8bea1914763058a80d6cc2d7e5900e675ac1cc095d47623"
+    },
+    {
+      "id": "T17-SRC-793e50b5cd8e6352d337",
+      "original_sha256": "833129934a3a3cd4ada0039c44b7fc9f90baf8dfbad286a062d22e09508c489d",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/833129934a3a3cd4ada0039c44b7fc9f90baf8dfbad286a062d22e09508c489d/tail_predicates.py",
+      "public_sha256": "833129934a3a3cd4ada0039c44b7fc9f90baf8dfbad286a062d22e09508c489d"
+    },
+    {
+      "id": "T17-SRC-3fca6eff0e577c1e726e",
+      "original_sha256": "579cca75f2aa90a71941297644310890fb77b05b0a7fae4c36d4332cf267790f",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/579cca75f2aa90a71941297644310890fb77b05b0a7fae4c36d4332cf267790f/test_independent_tail_predicates_v1.py",
+      "public_sha256": "579cca75f2aa90a71941297644310890fb77b05b0a7fae4c36d4332cf267790f"
+    },
+    {
+      "id": "T17-SRC-1deab0780ae566955e03",
+      "original_sha256": "fd3f06353dd3b4951f0199cfb142e4c15f6b426f7138639a21f33994b6e38d09",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/fd3f06353dd3b4951f0199cfb142e4c15f6b426f7138639a21f33994b6e38d09/test_tail_predicates.py",
+      "public_sha256": "fd3f06353dd3b4951f0199cfb142e4c15f6b426f7138639a21f33994b6e38d09"
+    },
+    {
+      "id": "T17-SRC-ec60b6431528a9f615fd",
+      "original_sha256": "d602041e54d00a5bddb636a2d8b4a34ae60586981bad061321c58a378ab77a73",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/d602041e54d00a5bddb636a2d8b4a34ae60586981bad061321c58a378ab77a73/verify_manifest.py",
+      "public_sha256": "d602041e54d00a5bddb636a2d8b4a34ae60586981bad061321c58a378ab77a73"
+    },
+    {
+      "id": "T17-VERIFICATION",
+      "original_sha256": "6207c8816f391758ad85f6a56a5a3a5d770119b147d6e5c580f4f9bfeaebf110",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/6207c8816f391758ad85f6a56a5a3a5d770119b147d6e5c580f4f9bfeaebf110/Orthemology_Seventeenth_Final_Verification_v1_20261005.json",
+      "public_sha256": "6207c8816f391758ad85f6a56a5a3a5d770119b147d6e5c580f4f9bfeaebf110"
+    },
+    {
+      "id": "T17-SOURCE-GUIDE-CONVERSION-DIFF",
+      "original_sha256": "ace26cd76733fa68cf157be70ae4e06be4e1d8a31fb858eb3ed096a3cf0ed046",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/ace26cd76733fa68cf157be70ae4e06be4e1d8a31fb858eb3ed096a3cf0ed046/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.conversion-diff.json",
+      "public_sha256": "ace26cd76733fa68cf157be70ae4e06be4e1d8a31fb858eb3ed096a3cf0ed046"
+    },
+    {
+      "id": "T17-SOURCE-GUIDE-DERIVED-MARKDOWN",
+      "original_sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9",
+      "projection": "DERIVED",
+      "public_path": "experiments/orthemology-v5-successors/source-store/eab4653f5e3a4f8fd87f1df17ff130dfe70b6442cfb33e83218f9848d722be82/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.md",
+      "public_sha256": "eab4653f5e3a4f8fd87f1df17ff130dfe70b6442cfb33e83218f9848d722be82"
+    },
+    {
+      "id": "T17-COMPANION-CONVERSION-DIFF",
+      "original_sha256": "b11c8f2238aa8d7e477650adfc7559cd5e061b94bd825b430dc63391653fb336",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/b11c8f2238aa8d7e477650adfc7559cd5e061b94bd825b430dc63391653fb336/Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.conversion-diff.json",
+      "public_sha256": "b11c8f2238aa8d7e477650adfc7559cd5e061b94bd825b430dc63391653fb336"
+    },
+    {
+      "id": "T17-COMPANION-MATH-MAP",
+      "original_sha256": "bd677da3421df76de06ecb8b01e8d4f848440f882921f38a0e3fa4c7d84fe7d5",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/bd677da3421df76de06ecb8b01e8d4f848440f882921f38a0e3fa4c7d84fe7d5/Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.math-map.json",
+      "public_sha256": "bd677da3421df76de06ecb8b01e8d4f848440f882921f38a0e3fa4c7d84fe7d5"
+    },
+    {
+      "id": "T17-COMPANION-DERIVED-MARKDOWN",
+      "original_sha256": "764c038e4cd2febb74c23e19c15cc86f6377c65f376964b3a33512a7ac83cf89",
+      "projection": "DERIVED",
+      "public_path": "experiments/orthemology-v5-successors/source-store/9b0885cfa2484979b818d968e0785880742a809214e571fca875820d39809cce/Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.md",
+      "public_sha256": "9b0885cfa2484979b818d968e0785880742a809214e571fca875820d39809cce"
+    },
+    {
+      "id": "T17-REPORT-CONVERSION-DIFF",
+      "original_sha256": "c8b211a5ab81afb3a63b1f5ce683a5ecb79efe4745e787f8f5bc8a119301f04e",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/c8b211a5ab81afb3a63b1f5ce683a5ecb79efe4745e787f8f5bc8a119301f04e/Orthemology_Seventeenth_Research_Final_v1_20261005.conversion-diff.json",
+      "public_sha256": "c8b211a5ab81afb3a63b1f5ce683a5ecb79efe4745e787f8f5bc8a119301f04e"
+    },
+    {
+      "id": "T17-REPORT-DERIVED-MARKDOWN",
+      "original_sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "projection": "DERIVED",
+      "public_path": "experiments/orthemology-v5-successors/source-store/4336a5098e25dc97288284d941ac5eefe9a7c651406960e519e87c40658ef45e/Orthemology_Seventeenth_Research_Final_v1_20261005.md",
+      "public_sha256": "4336a5098e25dc97288284d941ac5eefe9a7c651406960e519e87c40658ef45e"
+    },
+    {
+      "id": "T17-INTEGRATION-SCOPE-REVIEW",
+      "original_sha256": "21776239f4c828af9b4d52cad1bf9f41f9c53c2873b5f79da1bf2b6c8092d9b9",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/21776239f4c828af9b4d52cad1bf9f41f9c53c2873b5f79da1bf2b6c8092d9b9/T17_INHERITED_SCOPE_REVIEW.json",
+      "public_sha256": "21776239f4c828af9b4d52cad1bf9f41f9c53c2873b5f79da1bf2b6c8092d9b9"
+    }
+  ]
+}

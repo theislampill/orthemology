@@ -1,0 +1,8 @@
+{
+  "version": "Lean 4.19.0",
+  "target": "x86_64-unknown-linux-gnu",
+  "lean_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "official_archive_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+  "official_archive_name": "lean-4.19.0-linux.tar.zst",
+  "trust": "Compiler, standard library and runtime from the official release remain trusted. Runner checks the executable digest. No cold compiler/bootstrap verification is claimed."
+}

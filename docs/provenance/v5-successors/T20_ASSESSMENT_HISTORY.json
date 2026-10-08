@@ -1,0 +1,130 @@
+{
+  "prior_binding": {
+    "id": "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+    "receipt_ids": [],
+    "receipts": {},
+    "reviews": {
+      "T20-FOUNDATIONAL-PREMISE-SYNTHESIS-INHERITED-SCOPE-REVIEW": "daa1da5485fa565945cca942adbc9d0a3517332de8ce0f8ef9eecc3ec2d51b97"
+    },
+    "sources": {
+      "T20-SRC-15d7c3bcb3d0b0aaf672": {
+        "original_sha256": "bfbe5abaa944f539a45fc9b7c22f07828f2b02613893c18c500432b589c55972",
+        "projection_review_sha256": "64173f3aed8b9a5138bf7ef294fee41204c7cc8a33078f89d6b24fb4074462b3",
+        "public_sha256": "44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60"
+      },
+      "T20-SRC-2a4fc4fca28aabcb644f": {
+        "original_sha256": "9d5637132dd4ab3031fa4fad6b18a2ceedb839737db30c9d389b069c8bb3490b",
+        "projection_review_sha256": "6ff396f5d32f591c9a9b5ff4bd886ab87472a1ad300019a70127101abe7e926f",
+        "public_sha256": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1"
+      },
+      "T20-SRC-3b9cb4e37020e923ac70": {
+        "original_sha256": "8db02b05660dedd22e6656192711e09bf9e3c97fceaf8d6ff2df3de696ded56c",
+        "projection_review_sha256": "3ce6472ee7a5542b514fb1d0190fa62648e8f2d57b1abaf9acff07b01de64cd6",
+        "public_sha256": "f78573c3646e3a47ddbf30bc8e31616cd2b39a4ea1aaece9c3ee4528d51ca17d"
+      },
+      "T20-SRC-7398630d7a872db1b1f0": {
+        "original_sha256": "35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7",
+        "projection_review_sha256": null,
+        "public_sha256": "35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7"
+      },
+      "T20-SRC-949c82b102a15cba4e87": {
+        "original_sha256": "48f29f77d16ea3723af95bdd77a92914051f1038e067763fe9ae486b4592b9b4",
+        "projection_review_sha256": null,
+        "public_sha256": "48f29f77d16ea3723af95bdd77a92914051f1038e067763fe9ae486b4592b9b4"
+      },
+      "T20-SRC-adbd43d2567ea9e826bf": {
+        "original_sha256": "dbdb93b7d4862984a470846a72783229eac7c56197e3d3009e30e3449e05921f",
+        "projection_review_sha256": "49ace8ef5cf45d0ee6ced5065a04f75af8976b06979bce80deb4b6d4cfa6034c",
+        "public_sha256": "e04f52d913a43b225175be690029f81381679f75fda67e6fe2e1653eab150c5a"
+      }
+    },
+    "statement_sha256": "8c1099f4b8779ce9b940552ca6738716c72e8a4557d877488cc34d19cc96c094",
+    "suite_targets": []
+  },
+  "prior_result": {
+    "assumptions": [
+      "Distinct conditional mathematical statements, inherited ownership and separately appraised philosophical premises",
+      "Exact original versus public-projection source identities; reading credit remains role- and passage-bounded"
+    ],
+    "calculus": "NONE",
+    "claim_scope": "WHOLE_RESULT",
+    "conclusion": "The complete source-bound synthesis preserves 24 conclusions, 34 premises, 103 signatures/readbacks, 39 controls and 75 original source identities across ten questions. Its dated 2026-10-07 08:40:48 UTC appraisal provisionally accepts sufficient warrant for the Necessary Being route, withholds sufficient warrant for the stronger common-source route, and accepts the epistemic admissibility of relatively basic Creator recognition.",
+    "domain": "SOURCE_TEXT",
+    "evidence_keys": [
+      "foundational-final-synthesis:SYNTHESIS.md",
+      "foundational-final-synthesis:CONCLUSION_PREMISE_STATUS_MAP.json",
+      "foundational-final-synthesis:INTEGRATION_MANIFEST.json",
+      "foundational-final-synthesis:SOURCE_INDEX.json",
+      "foundational-final-synthesis:HISTORICAL_VALIDATION.json",
+      "foundational-final-synthesis:PROJECTION_NOTES.md"
+    ],
+    "family": "t20-foundational-premise-synthesis",
+    "id": "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+    "input_contract": "Distinct conditional mathematical statements, inherited ownership and separately appraised philosophical premises; Exact original versus public-projection source identities; reading credit remains role- and passage-bounded",
+    "limitations": [
+      "T19 affirmative common-source judgement remains historical evidence; this separately dated successor does not erase it or invalidate conditional theorems.",
+      "Relatively basic recognition supplies neither a universally reliable faculty nor warrant for every particular recognition.",
+      "No new proof execution, complete perfection ascent, general Sixth refinement, exhaustive modal/contribution semantics, actual D1/D2 authentication or actual-world premise truth follows.",
+      "This frozen foundational synthesis is complete at its scope; the separate normal report, extended ordered reading and final overall appraisal remain pending."
+    ],
+    "math_form": "SOURCE_ASSESSMENT",
+    "obligation_ids": [
+      "D15-OBL-MEN7",
+      "D15-OBL-MEN8",
+      "D15-OBL-P1-P2-N2-N3",
+      "D15-OBL-T0-D1-D2",
+      "D15-OBL-NONINFERENTIAL-KNOWLEDGE"
+    ],
+    "operational_model": "Distinct conditional mathematical statements, inherited ownership and separately appraised philosophical premises; Exact original versus public-projection source identities; reading credit remains role- and passage-bounded",
+    "origin_status": "Selected T20 research and source/transfer assessments. Original scoped proof execution and independent reviews retain their affirmative credit where supplied; receiving integration is source-bound with native fresh science NOT_RUN and no new independent evidence.",
+    "original_avenues": [
+      1,
+      2,
+      3,
+      8,
+      11
+    ],
+    "residual_scope": "T19 affirmative common-source judgement remains historical evidence; this separately dated successor does not erase it or invalidate conditional theorems. Relatively basic recognition supplies neither a universally reliable faculty nor warrant for every particular recognition. No new proof execution, complete perfection ascent, general Sixth refinement, exhaustive modal/contribution semantics, actual D1/D2 authentication or actual-world premise truth follows. This frozen foundational synthesis is complete at its scope; the separate normal report, extended ordered reading and final overall appraisal remain pending.",
+    "review_ids": [
+      "T20-FOUNDATIONAL-PREMISE-SYNTHESIS-INHERITED-SCOPE-REVIEW"
+    ],
+    "source_ids": [
+      "T20-SRC-2a4fc4fca28aabcb644f",
+      "T20-SRC-15d7c3bcb3d0b0aaf672",
+      "T20-SRC-adbd43d2567ea9e826bf",
+      "T20-SRC-3b9cb4e37020e923ac70",
+      "T20-SRC-7398630d7a872db1b1f0",
+      "T20-SRC-949c82b102a15cba4e87"
+    ],
+    "suite_ids": [],
+    "target": "t20-foundational-premise-synthesis",
+    "title": "Source-bound foundational synthesis with dated premise appraisal",
+    "tranche": 20
+  },
+  "prior_selector": {
+    "family": "t20-foundational-premise-synthesis",
+    "result_id": "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+    "statement_sha256": "8c1099f4b8779ce9b940552ca6738716c72e8a4557d877488cc34d19cc96c094"
+  },
+  "prior_status": {
+    "custody": "MIXED",
+    "external_warrants": {
+      "actual_world": "NOT_ESTABLISHED",
+      "empirical_replication": "NOT_ESTABLISHED",
+      "normative": "NOT_ESTABLISHED",
+      "novelty": "NOT_ESTABLISHED",
+      "specialist_review": "NOT_ESTABLISHED",
+      "terminology_adoption": "NOT_ESTABLISHED"
+    },
+    "fresh_evidence": "NOT_RUN",
+    "id": "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+    "implementation_reach": "REFERENCE_ONLY",
+    "independent_evidence_count": 0,
+    "inherited_evidence": "MIXED_SCOPED",
+    "receipt_ids": [],
+    "research_disposition": "CANDIDATE"
+  },
+  "schema": "t20-dated-assessment-history-v1",
+  "scope": "Complete prior selected-synthesis registry statement and bindings retained before the final dated successor. Original source bytes, reviews and scientific status remain unchanged.",
+  "successor_date_utc": "2026-10-07T14:34:00Z"
+}

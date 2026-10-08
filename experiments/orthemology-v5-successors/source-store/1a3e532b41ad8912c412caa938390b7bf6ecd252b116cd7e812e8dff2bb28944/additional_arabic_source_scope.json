@@ -1,0 +1,168 @@
+{
+  "schema": "seventeenth-public-additional-arabic-scope-v1",
+  "status": "BOUNDED_READING_RECEIPT_DERIVATIVE_NOT_WHOLE_SCAN_COVERAGE",
+  "source": {
+    "title": "شرح الأصبهانية",
+    "author": "Ibn Taymiyya",
+    "editor": "Muḥammad ibn ʿAwdah al-Saʿwī (محمد بن عودة السعوي)",
+    "publisher": "Dār al-Minhāj, Riyadh",
+    "edition": "First edition, 1430 AH; identified as 2009 in the supplied translation",
+    "cip_copyright_hijri": 1428,
+    "catalogue_url": "https://islamhouse.com/ar/books/1913",
+    "scan_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+    "sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+    "bytes": 18364577,
+    "pdf_page_count": 938,
+    "identity_basis": "Catalogue and title/imprint inspection recorded in the acquisition review; exact local scan digest, byte count and PDF count rechecked during package qualification.",
+    "not_one_of_six_user_supplied_pdfs": true
+  },
+  "page_convention": "All ranges are inclusive and PDF pages are one-based. Printed-to-PDF offsets are stated only for the bounded passages, not assumed across the volume.",
+  "continuous_main_text_reads": [
+    {
+      "topic": "Oneness comparison",
+      "printed_range": [
+        134,
+        153
+      ],
+      "pdf_range": [
+        234,
+        253
+      ],
+      "pages": 20,
+      "comparison_target_printed_range": [
+        134,
+        152
+      ],
+      "comparison_target_pdf_range": [
+        234,
+        252
+      ],
+      "boundary_context_printed_page": 153,
+      "scope": "Main text read directly from page images; bounded English comparison, not whole-volume critical collation.",
+      "reading_receipt_sha256": "4735f1a9c1f5bc4cc9e0cd3cca785dca2c9d951b53ff5bc821a60eb4fb999c66"
+    },
+    {
+      "topic": "Power, choice and transition to wisdom",
+      "printed_range": [
+        396,
+        410
+      ],
+      "pdf_range": [
+        496,
+        510
+      ],
+      "pages": 15,
+      "scope": "Full-page direct visual reading including all visible apparatus.",
+      "reading_receipt_sha256": "69cafa7cab671f60e3668cbb5eadc3c7c43c8cf399ef899296e9aeb8c454879f"
+    },
+    {
+      "topic": "Wisdom objections and responses",
+      "printed_range": [
+        410,
+        450
+      ],
+      "pdf_range": [
+        510,
+        550
+      ],
+      "pages": 41,
+      "scope": "Full-page direct visual reading including all visible apparatus; printed p. 450 included as closure and next-section context.",
+      "reading_receipt_sha256": "7b2dca860d1d7a7b420f022a9f82b6b9aaf05ba72467e763a00ad58df51faf40"
+    },
+    {
+      "topic": "Specification and volition passage",
+      "printed_range": [
+        450,
+        453
+      ],
+      "pdf_range": [
+        550,
+        553
+      ],
+      "pages": 4,
+      "decisive_printed_page": 452,
+      "decisive_pdf_page": 552,
+      "scope": "Direct visual reading of the local printed passage, surrounding argument and edition apparatus.",
+      "reading_receipt_sha256": "d283ccbfa5126a08633547fdac29e100d17458de91b75ab438a4aa824b0df142"
+    }
+  ],
+  "unique_main_text_pdf_ranges": [
+    [
+      234,
+      253
+    ],
+    [
+      496,
+      553
+    ]
+  ],
+  "unique_main_text_pdf_pages": 78,
+  "overlap_note": "PDF pp. 510 and 550 occur in adjacent reading scopes and are counted once in the 78-page union.",
+  "separately_bounded_context_reads": {
+    "title_and_imprint_pdf_pages": [
+      1,
+      2
+    ],
+    "introductory_witness_and_editorial_context_pdf_ranges": [
+      [
+        82,
+        91
+      ],
+      [
+        96,
+        98
+      ]
+    ],
+    "table_of_contents_pdf_pages": [
+      928,
+      929
+    ],
+    "unique_context_pdf_pages": 17,
+    "basis": "Direct visual inspection reported in the complete bounded reading receipts; not a continuous reading of the whole introduction or apparatus.",
+    "navigation_only_not_credited_pdf_pages": [
+      925,
+      930
+    ],
+    "rendered_but_unseen_not_credited_pdf_ranges": [
+      [
+        92,
+        95
+      ]
+    ]
+  },
+  "edition_and_manuscript_distinction": {
+    "inspected_object": "Modern printed edition scan, not an original manuscript or autograph.",
+    "sad": "The editor identifies ص as a Dār al-Kutub al-Miṣriyya manuscript and reports the added block from printed pp. 399–450 as unique to it among the consulted witnesses.",
+    "kaf": "The editor identifies ك as the 1329 AH Cairo Kurdistan Scientific Press printed collection, volume 5; it is a printed edition, not a manuscript.",
+    "basis_change": "The editor reports using ص through its termination at printed p. 450, then changing the base to printed ك.",
+    "qualification": "These are verified reports of the modern printed apparatus, including its corrections and variants. Neither original witness was independently inspected or collated here.",
+    "edition_loci_printed_pages": [
+      85,
+      88,
+      96,
+      97,
+      98,
+      399,
+      450,
+      452
+    ]
+  },
+  "six_supplied_pdf_coverage_relation": {
+    "metadata_file": "sources/six_source_coverage.json",
+    "metadata_sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+    "supplied_pdf_count": 6,
+    "supplied_pdf_pages": 1393,
+    "unchanged": true,
+    "limit": "The additional Arabic scan is separate. Its 938-page length is not credited as reading and is not added to the six-PDF 1,393-page coverage total. Later bounded English comparisons do not alter that record or its frozen visual snapshot."
+  },
+  "limits": [
+    "No whole-938-page reading or whole-volume critical collation claim.",
+    "No original-manuscript inspection, autograph authentication or independent collation of the 1329 printed witness.",
+    "No independent direct collation of the Rushd 2001 edition, al-Razi's al-Arbaʿin, or every cited work.",
+    "Reading coverage and source hashes do not establish philosophical truth, historical novelty or final release clearance.",
+    "This package includes bibliographical and scope metadata only; no source passage, translation extract, PDF, OCR text or page image is redistributed."
+  ],
+  "included_primary_text_or_images": false,
+  "original_manuscripts_inspected": false,
+  "whole_scan_read": false
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "path": ".github/workflows/lean_action_ci.yml",
+    "sha256": "66061e54cdbd53a3fb4a135cf1b1ad4edbc15d5132874c42c692e04bd314829c"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "b3ad09fc93f83fdbd0bee771258dd4a58d3798fd7e6048611dde5a804bb43f1e"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "Plausible.lean",
+    "sha256": "fc5ae00d4eeb17228187e3ce59c446d462c449d707d79db85e16331f54e6942b"
+  },
+  {
+    "path": "Plausible/Attr.lean",
+    "sha256": "5999fd0dfa7c3addb938e0c4f481ef7e32079e4dd4a47fabc884e402f6477cc3"
+  },
+  {
+    "path": "Plausible/Functions.lean",
+    "sha256": "46adc245b8daf0de10c82aaf7cd718e5f079d7499bac303e191c7d60d48919ce"
+  },
+  {
+    "path": "Plausible/Gen.lean",
+    "sha256": "a2f25bd20d976b066385e048e2ddf75712d5f48ce46ee20befe3a3dc96697c49"
+  },
+  {
+    "path": "Plausible/Random.lean",
+    "sha256": "f338741c143e71086e62171eaf828e62403636ce80727be4e0b9eb3644b6bde1"
+  },
+  {
+    "path": "Plausible/Sampleable.lean",
+    "sha256": "fdfca8c930e86c9362f078d8c6b35af6eb99c46c319d5c6305985235960f9419"
+  },
+  {
+    "path": "Plausible/Tactic.lean",
+    "sha256": "4392434ef7910749875178aad131e82c263a746b01cee6bb9bcf423b95897990"
+  },
+  {
+    "path": "Plausible/Testable.lean",
+    "sha256": "c1f2031811f27c90cb6dd04a3ecf5fb54138b972a99fbe338194a0a740ef94ec"
+  },
+  {
+    "path": "README.md",
+    "sha256": "ba7be6678fc3e78410ba97fe31df9e5f451e217dee32d56d2fbdc1d4e25c3136"
+  },
+  {
+    "path": "Test.lean",
+    "sha256": "b71ae34e65541638db1a5f7b6ef88f78d7c6bc1778a812f297240c68f3a95d5f"
+  },
+  {
+    "path": "Test/Tactic.lean",
+    "sha256": "1fa904d64851dd9749596216bca3e187a33dcbab8d366e1f2c9ac34a9313917d"
+  },
+  {
+    "path": "Test/Testable.lean",
+    "sha256": "6192999960b078a5c24fed6d34ad70f2333a00f80634c88145fe72c2cd0ec9ff"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "99a17603b60cd9af445e5689b572b8441aaeaed149f3760dc52595a0c4b128db"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "7d7ea4683f70f5a5473a887e5a06df1cd3dbc25e4d351e35c2583edd9d5e2e57"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+  }
+]

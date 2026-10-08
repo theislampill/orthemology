@@ -1,0 +1,268 @@
+{
+  "schema": "seventeenth-evidence-adaptations-publication-v2",
+  "originals_preserved": true,
+  "changes": [
+    {
+      "staged_file": "calculation/placement_core.py",
+      "original_filename": "placement_core.py",
+      "original_sha256": "38927f470d5051d9bca036dc7336e80225f3039fb50242fdeba16bc3bd4906d0",
+      "changes": "Original v1 copy was byte-for-byte. Successor v2 changes one docstring only; see successor_changes."
+    },
+    {
+      "staged_file": "calculation/certified_exp.py",
+      "original_filename": "certified_exp.py",
+      "original_sha256": "662f3b40d04d1922f6994cff7c9369fea698d637e350f4e3459f7770d431f0fb",
+      "changes": "One documentation link changed to the portable scope note. All executable code is unchanged."
+    },
+    {
+      "staged_file": "calculation/test_synthetic.py",
+      "original_filename": "test_synthetic.py",
+      "original_sha256": "34434a4c18623932ee3e5705e1a27e1d73f00af74d2195b59191e924a82e4839",
+      "retained_definitions": [
+        "rows_fixture",
+        "alter_opportunity",
+        "exact_tail",
+        "CoreControls",
+        "IntervalControls"
+      ],
+      "changes": "Exact source segments retained. Imports/docstring adapted for portable pure-function or synthetic-only use. Private execution entry points and their tests omitted."
+    },
+    {
+      "staged_file": "calculation/independent_oracles.py",
+      "original_filename": "independent_oracles.py",
+      "original_sha256": "a670dbeb98c21531ce7eaac682c8c402e04289547e09bbe1d5935c6f136ab8ec",
+      "changes": "Byte-for-byte copy; no content changes."
+    },
+    {
+      "staged_file": "calculation/test_independent_oracles.py",
+      "original_filename": "test_independent_oracles.py",
+      "original_sha256": "93cc86495667a00e1585c1096f43e1e7c1089210374113ecfe06635ecdfc7d8e",
+      "changes": "Byte-for-byte copy; no content changes."
+    },
+    {
+      "staged_file": "calculation/test_calculation_independently.py",
+      "original_filename": "test_calculation_independently.py",
+      "original_sha256": "2220f34464b9b36cb1da70a12b0f2b588540959100d98e2468caeeeeede26a97",
+      "retained_definitions": [
+        "decimal_token",
+        "serialize",
+        "summarize",
+        "IndependentImplementationControls"
+      ],
+      "changes": "Exact source segments retained. Imports/docstring adapted for portable pure-function or synthetic-only use. Private execution entry points and their tests omitted."
+    },
+    {
+      "staged_file": "tail/tail_predicates.py",
+      "original_filename": "tail_checker_v2.py",
+      "original_sha256": "4395237b77d54e15e209d8a340c56496f833c38cc14689b4e2767d386843f291",
+      "retained_definitions": [
+        "rational",
+        "encode",
+        "evaluate",
+        "reconcile"
+      ],
+      "changes": "Exact source segments retained. Imports/docstring adapted for portable pure-function or synthetic-only use. Private execution entry points and their tests omitted."
+    },
+    {
+      "staged_file": "tail/test_tail_predicates.py",
+      "original_filename": "test_tail_checker_v2.py",
+      "original_sha256": "0f8315d9a35743620ff66daf789341667c5bc9d92d71e7bdf3db7b68a4074873",
+      "retained_test_methods": [
+        "test_synthetic_pass_and_exact_differences",
+        "test_each_strict_equality_fails",
+        "test_degenerate_and_malformed_cases",
+        "test_rational_parser_rejects_nonexact_inputs",
+        "test_independent_aggregate_field_reconciliation",
+        "test_each_games_count_requires_positive_nonboolean_integer",
+        "test_inclusive_endpoint_controls_and_zero_case"
+      ],
+      "changes": "Seven original pure predicate/endpoint tests preserved. Setup imports portable pure module. File/release/orchestration tests omitted because their private service is not distributed."
+    },
+    {
+      "staged_file": "tail/independent_tail_predicates_v1.py",
+      "original_filename": "independent_tail_predicates_v1.py",
+      "original_sha256": "fadbae29f9185375bb4774a5444f00cafb47ab5bc644534b956340fe2c1b2e77",
+      "changes": "Docstring removes nonportable execution instructions and points to the theorem-dependency note; executable code unchanged."
+    },
+    {
+      "staged_file": "tail/test_independent_tail_predicates_v1.py",
+      "original_filename": "test_independent_tail_predicates_v1.py",
+      "original_sha256": "579cca75f2aa90a71941297644310890fb77b05b0a7fae4c36d4332cf267790f",
+      "changes": "Byte-for-byte copy; no content changes."
+    },
+    {
+      "staged_file": "synthetic/check_orbits.py",
+      "original_filename": "check_successor_v2_orbits.py",
+      "original_sha256": "798f9869555fb1c60bec01057bf07d131a390b5415b139554f92f398140c9e47",
+      "changes": "Removed write into the original research directory and its pathlib import. Exact calculations/assertions retained; output goes only to standard output."
+    },
+    {
+      "staged_file": "companion/Mathematical_Companion_Content_v2.md",
+      "original_filename": "FULL_READER_TEXT_v2.md",
+      "original_sha256": "4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401",
+      "changes": "Byte-for-byte copy; no content changes."
+    },
+    {
+      "staged_file": "aggregates/frozen_aggregate_certificate.json",
+      "original_sha256": "2845086d63ede9765162cf30744968c6b6d25fb10ef4a976a1ba1347fc40d2b6",
+      "changes": "Explicit allowlisted aggregate fields only; private paths, execution records, approval records and identifiers omitted. Previously recorded values unchanged."
+    },
+    {
+      "staged_file": "aggregates/independent_aggregate_certificate.json",
+      "original_sha256": "c53828e37e7a1d2b30a48718dacb702cb0d867f9ddab40496cd87b5ac0c037bb",
+      "changes": "Explicit allowlisted aggregate fields only; private paths, execution records, approval records and identifiers omitted. Previously recorded values unchanged."
+    },
+    {
+      "staged_file": "aggregates/post_inspection_tail_certificate.json",
+      "original_sha256": "fbfe45319fb0e2f22409db7f6815aa6849b9e875a7faf595291f9a8e8a3921a6",
+      "changes": "Explicit allowlisted aggregate fields only; private paths, execution records, approval records and identifiers omitted. Previously recorded values unchanged."
+    },
+    {
+      "staged_file": "sources/six_source_coverage.json",
+      "original_sha256": "7e3f41a9e3596a4222c5b9c8b4ce755b2c850b46f96711aa1d5430beb57b621e",
+      "changes": "Explicit metadata projection. Preserves actual supplied filenames, verified acquisition URLs, source hashes, exact credited page ranges, targeted visual page sets and the two-cover repair. Omits all book content, images, internal reader identities and filesystem paths."
+    }
+  ],
+  "new_files": "README, mathematical scope, package tests and the manifest/privacy report are packaging material; they introduce no new empirical statistics.",
+  "preserved_predecessor_manifest_sha256": "274e376619e3f5efd0911a20ca6e541385448f927761b4d424a16dc64d980c56",
+  "successor_changes": [
+    {
+      "staged_file": "README.md",
+      "changes": "Corrects retained generic CSV capability, Python 3.11 minimum, current accepted draft bindings and separate Arabic scope. No empirical claim added."
+    },
+    {
+      "staged_file": "calculation/placement_core.py",
+      "predecessor_sha256": "38927f470d5051d9bca036dc7336e80225f3039fb50242fdeba16bc3bd4906d0",
+      "changes": "Replaces one stale docstring referring to an omitted CLI authorization gate. AST excluding docstrings is unchanged; no executable logic changed."
+    },
+    {
+      "staged_file": "RELATED_ARTIFACTS.json",
+      "changes": "Adds exact identities of two separately accepted DOCX drafts and the unchanged companion text source; documents pending main report and final release gates."
+    },
+    {
+      "staged_file": "sources/additional_arabic_source_scope.json",
+      "changes": "Adds explicit metadata projection from four complete bounded reading receipts. No source text, source images, private paths or internal reader IDs copied."
+    },
+    {
+      "staged_file": "checks/test_arabic_source_scope.py",
+      "changes": "Adds consistency controls for source identity, bounded ranges, overlap deduplication, manuscript/edition distinction and separation from supplied-PDF totals; no primary-source reading or empirical execution."
+    },
+    {
+      "staged_file": "PACKAGING_TEST_REPORT.json",
+      "changes": "Replaced with fresh relocated checks of this exact successor."
+    },
+    {
+      "staged_file": "PRIVACY_SCAN_REPORT.json",
+      "changes": "Replaced with fresh full-member inventory and bounded disclosure checks of this successor."
+    },
+    {
+      "staged_file": "MANIFEST.json",
+      "changes": "Rebuilt exact allowlist and digest inventory, explicitly not a final release seal."
+    }
+  ],
+  "v3_preserved_predecessor_manifest_sha256": "9af84a8a7bb71e1ef3a49371c8183db5d8556f16a682ec8e54bcefc5bd31beec",
+  "v3_changes": [
+    {
+      "staged_file": "sources/minhaj_electronic_read_scope.json",
+      "change": "Adds metadata-only projection from three complete new source-reading receipts; no primary text, private report, image or hidden material included."
+    },
+    {
+      "staged_file": "checks/test_minhaj_electronic_scope.py",
+      "change": "Adds source-scope and pending-binding consistency checks; no mathematical or empirical result added."
+    },
+    {
+      "staged_file": "README.md",
+      "change": "Describes added electronic-body scope and pending report/guide identities."
+    },
+    {
+      "staged_file": "RELATED_ARTIFACTS.json",
+      "change": "Removes obsolete current-source-guide draft reference; leaves report and guide successor names/hashes explicitly pending. Mathematical companion snapshot and source stay unchanged."
+    },
+    {
+      "staged_file": "PACKAGING_TEST_REPORT.json",
+      "change": "Fresh relocated test receipt for candidate v3."
+    },
+    {
+      "staged_file": "PRIVACY_SCAN_REPORT.json",
+      "change": "Fresh bounded all-member disclosure and inventory checks."
+    },
+    {
+      "staged_file": "MANIFEST.json",
+      "change": "Fresh exact candidate allowlist; no final archive seal."
+    }
+  ],
+  "publication_predecessor_manifest_sha256": "6b0206a86db2141bf55939c0251bcf9bd7ecfd8f078cfa1de6ef4c89721163c5",
+  "publication_changes": [
+    {
+      "staged_file": "README.md",
+      "change": "Neutral reader-ready instructions distinguish calculation/metadata replay, historical-reading limits, separate trusted-manifest verification and external document hashing."
+    },
+    {
+      "staged_file": "RELATED_ARTIFACTS.json",
+      "change": "Binds exact three named DOCX files and records the preserved source-v2/authorship-only mathematical successor relationship."
+    },
+    {
+      "staged_file": "checks/test_minhaj_electronic_scope.py",
+      "change": "Replaces only the obsolete pending-document method with exact named-document metadata controls. Three electronic-source methods remain unchanged; no new mathematical result."
+    },
+    {
+      "staged_file": "verify_manifest.py",
+      "change": "Adds a separate standard-library exact-inventory and member-hash checker requiring an independently supplied trusted manifest digest. It is not called by run_checks.py."
+    },
+    {
+      "staged_file": "PACKAGING_TEST_REPORT.json",
+      "change": "Fresh relocated arithmetic/metadata checks and separate integrity controls."
+    },
+    {
+      "staged_file": "PRIVACY_SCAN_REPORT.json",
+      "change": "Fresh exact-stage bounded disclosure/inventory check."
+    },
+    {
+      "staged_file": "MANIFEST.json",
+      "change": "Exact directory allowlist and byte inventory; not a claim that a later archive or delivery is verified."
+    }
+  ],
+  "publication_v2_predecessor_manifest_sha256": "c9e26fd89aeda864267298e3fa4f02aad0994fe09b9db52ccc6e5ccd99dd8ba7",
+  "publication_v2_changes": [
+    {
+      "staged_file": "RELATED_ARTIFACTS.json",
+      "change": "Binds the narrowly repaired main-report scope pointer at its new exact SHA-256 and size. Guide/math bindings unchanged."
+    },
+    {
+      "staged_file": "README.md",
+      "change": "Distinguishes the mathematical companion probability contracts from the lower-certificate argument in FINITE_MATH_SCOPE; discloses strict non-UTF-8 Linux simulation."
+    },
+    {
+      "staged_file": "checks/test_aggregate_certificates.py",
+      "change": "One metadata read now explicitly decodes UTF-8."
+    },
+    {
+      "staged_file": "checks/test_source_coverage.py",
+      "change": "One metadata read now explicitly decodes UTF-8."
+    },
+    {
+      "staged_file": "checks/test_arabic_source_scope.py",
+      "change": "Two metadata reads now explicitly decode UTF-8."
+    },
+    {
+      "staged_file": "checks/test_minhaj_electronic_scope.py",
+      "change": "Two metadata reads now explicitly decode UTF-8; main-report expected hash/size updated."
+    },
+    {
+      "staged_file": "checks/test_utf8_metadata_portability.py",
+      "change": "New single regression method invokes the actual metadata suites under LC_ALL=C and explicit -X utf8=0, verifying the ASCII locale and disabled UTF-8 mode. The regression failed before the six-call repair and passes afterward. Linux locale simulation only."
+    },
+    {
+      "staged_file": "PACKAGING_TEST_REPORT.json",
+      "change": "Fresh documented-runner and explicit strict-locale group results; no additional mathematics."
+    },
+    {
+      "staged_file": "PRIVACY_SCAN_REPORT.json",
+      "change": "Fresh bounded successor checks."
+    },
+    {
+      "staged_file": "MANIFEST.json",
+      "change": "Fresh exact successor byte inventory; no archive or delivery claim."
+    }
+  ]
+}

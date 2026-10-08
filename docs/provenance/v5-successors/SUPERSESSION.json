@@ -1132,7 +1132,7 @@
     {
       "family": "t16-occurrence",
       "result_id": "T16-OCCURRENCE",
-      "statement_sha256": "d471338aef84278cd45c751a1b6408dfc81ef085111e8804bd5febe739813d5a"
+      "statement_sha256": "921a99a47825d4319804f25ae8f658e415917cd6837157490d5edc4169c98fb7"
     },
     {
       "family": "t16-empirical",
@@ -1142,7 +1142,237 @@
     {
       "family": "t16-core-assurance",
       "result_id": "T16-CORE-ASSURANCE",
-      "statement_sha256": "4476a8641f9346bd40fd9aa5520751f7a3ad509ddba8b61e80f7faf389684a55"
+      "statement_sha256": "17a33351dcf77c5e47ab9785d1ffdf8c7195abe95257c5080316394e35cacf15"
+    },
+    {
+      "family": "t17-original-completion",
+      "result_id": "T17-ORIGINAL-COMPLETION",
+      "statement_sha256": "9c42f510b3fbabf86477ea609343d1800b75aae581fe3d27c91131055ba741a6"
+    },
+    {
+      "family": "t17-necessary-bearer",
+      "result_id": "T17-NECESSARY-BEARER",
+      "statement_sha256": "7a4edcc74c94add1524df83d94d4c8b4e56e87999740e8d729411b3bcbdfdcb6"
+    },
+    {
+      "family": "t17-essential-independence",
+      "result_id": "T17-ESSENTIAL-INDEPENDENCE",
+      "statement_sha256": "ee1677b07053f21b03a4a3dc58cea5cf3b3dfef91e91bf767bf3d0048d3ea895"
+    },
+    {
+      "family": "t17-eligible-standing-power",
+      "result_id": "T17-ELIGIBLE-STANDING-POWER",
+      "statement_sha256": "3a9e0e2e6318e4e99a7a02177662afb7b2f595a160fdd0ec77e1412c493de041"
+    },
+    {
+      "family": "t17-owned-veracity",
+      "result_id": "T17-OWNED-VERACITY",
+      "statement_sha256": "1f8862c81046b79e1547e47e4caa6ccc727409ff36e3b6834f8dc95a1b125516"
+    },
+    {
+      "family": "t17-wise-voluntary-determination",
+      "result_id": "T17-WISE-VOLUNTARY-DETERMINATION",
+      "statement_sha256": "f5041e500334cb68ab273d1008147c7dbf35cc266aa1fe17f86a3666fd0b1e24"
+    },
+    {
+      "family": "t17-ordinary-testimonial-warrant",
+      "result_id": "T17-ORDINARY-TESTIMONIAL-WARRANT",
+      "statement_sha256": "6a41994776206da2749c83efe054a3a20e62f2572a99cf6c845b21f6cf0fc155"
+    },
+    {
+      "family": "t17-fittingness-local-authority",
+      "result_id": "T17-FITTINGNESS-LOCAL-AUTHORITY",
+      "statement_sha256": "9c104df7e6168e7219d7c5aefa25f554211dcb43f73936f708cecf3e89d61a5e"
+    },
+    {
+      "family": "t17-assignment-uncertainty",
+      "result_id": "T17-ASSIGNMENT-UNCERTAINTY",
+      "statement_sha256": "785fbc93aaa60cadf363ae888109109ffd4dbbf3580b79c9a2ada7c830cc561b"
+    },
+    {
+      "family": "t17-block-orbit-contract",
+      "result_id": "T17-BLOCK-ORBIT-CONTRACT",
+      "statement_sha256": "2eb4b7c2041c79e5b665b2456f05558d185978b556f7512ad9ec991cc47d30a9"
+    },
+    {
+      "family": "t17-closed-placement-check",
+      "result_id": "T17-CLOSED-PLACEMENT-CHECK",
+      "statement_sha256": "5b4a6c06a1c8b7cde15a73aa4cd08aac80e900aa8fac57cb045c86a3bea93d59"
+    },
+    {
+      "family": "t18-one-change-criterion",
+      "result_id": "T18-ONE-CHANGE-CRITERION",
+      "statement_sha256": "a6a3f71ccd8f44da97b47b9c0c545fb9a0e985105171e861f4d47f1e3fac72d6"
+    },
+    {
+      "family": "t18-rational-lean-endpoint",
+      "result_id": "T18-RATIONAL-LEAN-ENDPOINT",
+      "statement_sha256": "7fda0ac19d7242a0fab759a1ba3c8d6b088cb53b7d4f36f927ee39911be58a84"
+    },
+    {
+      "family": "t18-rational-p-complete",
+      "result_id": "T18-RATIONAL-P-COMPLETE",
+      "statement_sha256": "7a639ddb3f8e6c8ce8172a2cc8eabb20170725bf51ef1f9471fc29d8eccc2b15"
+    },
+    {
+      "family": "t18-real-nonuniform",
+      "result_id": "T18-REAL-NONUNIFORM",
+      "statement_sha256": "2d6b9614ccee168810f71e8093261c9e9623fdcaa1cdd1466fb1f6e9ce50e082"
+    },
+    {
+      "family": "t18-cauchy-decision-obstruction",
+      "result_id": "T18-CAUCHY-DECISION-OBSTRUCTION",
+      "statement_sha256": "e2b9001b070117882ee3573947dcc797f23d538f10bcc15f93f365ba0823d9af"
+    },
+    {
+      "family": "t18-common-priority-support-synthesis",
+      "result_id": "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS",
+      "statement_sha256": "e8b16a5fdc803ab853f788fd1a6e812aaf88f07a13bdab8ff3e4c2ee2e088ffb"
+    },
+    {
+      "family": "t18-hidden-priority-calibration",
+      "result_id": "T18-HIDDEN-PRIORITY-CALIBRATION",
+      "statement_sha256": "7bef0f09140fb067e3ea6db579e5002b5b6f3ab8e687cde7867c07015f20cdd3"
+    },
+    {
+      "family": "t18-hase-u-domain-control",
+      "result_id": "T18-HASE-U-DOMAIN-CONTROL",
+      "statement_sha256": "06b7523604533fa09f5091d8edfaf4546ba3572fdde300bc8ce6739e9a19d3d3"
+    },
+    {
+      "family": "t18-hase-inhabited-j-control",
+      "result_id": "T18-HASE-INHABITED-J-CONTROL",
+      "statement_sha256": "287bd1bc9b78517a81a040ebc5e69a8a17a0b18b0eea1a9aba45533993ddc575"
+    },
+    {
+      "family": "t18-implementation-qualification",
+      "result_id": "T18-IMPLEMENTATION-QUALIFICATION",
+      "statement_sha256": "b65e72cc47666945fabb09804c547cd7dc97c1b4741b3dff1c41c78ac433f7a4"
+    },
+    {
+      "family": "t18-noncausal-extension-stop",
+      "result_id": "T18-NONCAUSAL-EXTENSION-STOP",
+      "statement_sha256": "a88e4504bb7d9767409dd809bac1e2e854fc3c1a46f3c1de971f9060be9410c5"
+    },
+    {
+      "family": "t19-cnd",
+      "result_id": "T19-CND",
+      "statement_sha256": "48bc09c33bdeb1503ab290dd751ba5d26dcd0115f0a4c25e889c28a936641a6d"
+    },
+    {
+      "family": "t19-source-mode",
+      "result_id": "T19-SOURCE-MODE",
+      "statement_sha256": "cbcbe93bb823f1617e836a33ebd2eb619bee27a3520a6bc76352f3735efb5dfd"
+    },
+    {
+      "family": "t19-mediate-original-attribution",
+      "result_id": "T19-MEDIATE-ORIGINAL-ATTRIBUTION",
+      "statement_sha256": "b9b6fa71a7b8a8b95fdd69aacdb627fb0f3531c53ce61c2614aa29873f8a1bed"
+    },
+    {
+      "family": "t19-common-connected-source",
+      "result_id": "T19-COMMON-CONNECTED-SOURCE",
+      "statement_sha256": "d7b5bfc2b54c4fb222aff5eb1873379649a94674d8c7ec3b1bf561a442b17820"
+    },
+    {
+      "family": "t19-attestation-discrimination",
+      "result_id": "T19-ATTESTATION-DISCRIMINATION",
+      "statement_sha256": "86525e4164a5d3fabaf6b51342a24dcbd5ffea7e6d859283d771e96f94b24a3f"
+    },
+    {
+      "family": "t19-walid-reception-scope",
+      "result_id": "T19-WALID-RECEPTION-SCOPE",
+      "statement_sha256": "ebe79cb2442709fb2734aa4b59381a857c90aa531588a55c0006bc955af70c9f"
+    },
+    {
+      "family": "t19-asserted-obligation-transfer",
+      "result_id": "T19-ASSERTED-OBLIGATION-TRANSFER",
+      "statement_sha256": "5f02e786079ac92245ff7265664658108986ba31f4e9f6b6c32378a930beca51"
+    },
+    {
+      "family": "t19-source-occurrence-controls",
+      "result_id": "T19-SOURCE-OCCURRENCE-CONTROLS",
+      "statement_sha256": "a5647bafcda729e683c01644998e40ecdf8a0ee4d4bf324314abf7754d9e60b3"
+    },
+    {
+      "family": "t20-church-raw-probe",
+      "result_id": "T20-CHURCH-RAW-PROBE",
+      "statement_sha256": "5cd7cf8f544276a08a34347cb17749c36806458fd3600a6c0bb84a17e615f7d9"
+    },
+    {
+      "family": "t20-cnd-essentiality-scope",
+      "result_id": "T20-CND-ESSENTIALITY-SCOPE",
+      "statement_sha256": "57d87eb75c234c40cff2aeeb45f4bab7ae00914d2ef2ce60176c789ad7d0f852"
+    },
+    {
+      "family": "t20-scalar-fusion-iff",
+      "result_id": "T20-SCALAR-FUSION-IFF",
+      "statement_sha256": "7a138ed715956dc1d5a02039c4d47c04c4c60af21fb3010dbc0dc828dc6a76c7"
+    },
+    {
+      "family": "t20-modal-crossing-completeness",
+      "result_id": "T20-MODAL-CROSSING-COMPLETENESS",
+      "statement_sha256": "ca6ef8836a4fd4d87927223f95fa7d3d75ee87ee7fcdb6d3acaf59fecdb2cb44"
+    },
+    {
+      "family": "t20-original-ground-robustness",
+      "result_id": "T20-ORIGINAL-GROUND-ROBUSTNESS",
+      "statement_sha256": "061b670afdd32545276725e633353bb108e92210d6a5915976c4675a253cd649"
+    },
+    {
+      "family": "t20-grounded-continuation-support",
+      "result_id": "T20-GROUNDED-CONTINUATION-SUPPORT",
+      "statement_sha256": "4705cac56567687dd7125a499123a968c0375a63c3f1af29aab211dbf722f4a6"
+    },
+    {
+      "family": "t20-hase-further-failed-routes",
+      "result_id": "T20-HASE-FURTHER-FAILED-ROUTES",
+      "statement_sha256": "541eace850bd6fa8ca14d76477dbed0fc0f1a33ce714a46ea4532962d48572d3"
+    },
+    {
+      "family": "t20-typed-original-bearer-abc",
+      "result_id": "T20-TYPED-ORIGINAL-BEARER-ABC",
+      "statement_sha256": "fb3e54e03bf3e151139a011b56493a9cb3b3827620ececc8b0c469f4b631d9b2"
+    },
+    {
+      "family": "t20-anchored-field-source",
+      "result_id": "T20-ANCHORED-FIELD-SOURCE",
+      "statement_sha256": "c44c1abd3736f875090237fff3183a6d11c90cd8317cd7a707d4047db64f6498"
+    },
+    {
+      "family": "t20-veracity-dependency-audit",
+      "result_id": "T20-VERACITY-DEPENDENCY-AUDIT",
+      "statement_sha256": "63a3ab05bd2984030ac7dd783108e273549f3128f8bb05a022eb41f7c2f8cc51"
+    },
+    {
+      "family": "t20-pts-normalization-transfer",
+      "result_id": "T20-PTS-NORMALIZATION-TRANSFER",
+      "statement_sha256": "08661dacead1e5b0e1464fe21005b153ecdffa681ede34fbd4ec2fe2bd3c323d"
+    },
+    {
+      "family": "t20-trace-observation-copying",
+      "result_id": "T20-TRACE-OBSERVATION-COPYING",
+      "statement_sha256": "342feee71d7d4b6ed7271b87a46433d3d0e7977b2d3f9b0f781ebb83d6ea66a6"
+    },
+    {
+      "family": "t20-joint-same-bearer-model",
+      "result_id": "T20-JOINT-SAME-BEARER-MODEL",
+      "statement_sha256": "0dfb6810be10bd864c198b017af9e73834d02b96b4d65a7c19fe681011257fac"
+    },
+    {
+      "family": "t20-controller-completeness-transfer",
+      "result_id": "T20-CONTROLLER-COMPLETENESS-TRANSFER",
+      "statement_sha256": "af012b2ebd890424393fc7a359648c955a99a290b13985c3a314158cde1ac568"
+    },
+    {
+      "family": "t20-foundational-premise-synthesis",
+      "result_id": "T20-FOUNDATIONAL-PREMISE-SYNTHESIS",
+      "statement_sha256": "d1dcf111c624ce388a261bbb66531c9139f9c997152decd981127d05bbe4699b"
+    },
+    {
+      "family": "t20-emergence-type-control",
+      "result_id": "T20-EMERGENCE-TYPE-CONTROL",
+      "statement_sha256": "57708c0cd8da24f68e91f32156a8d5f0c01a97d3202253866861c8902083fd3c"
     }
   ]
 }

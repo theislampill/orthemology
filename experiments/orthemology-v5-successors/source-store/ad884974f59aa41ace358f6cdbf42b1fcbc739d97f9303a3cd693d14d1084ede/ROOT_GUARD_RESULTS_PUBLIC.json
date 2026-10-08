@@ -1,0 +1,53 @@
+{
+  "source": "modal-union/lean-v2",
+  "cases": [
+    {
+      "case": "existing_output",
+      "passed": true,
+      "exit_code": 73,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true,
+      "stdout": "",
+      "stderr": "Refusing an existing output path; select a fresh directory\n"
+    },
+    {
+      "case": "source_descendant",
+      "passed": true,
+      "exit_code": 64,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true,
+      "stdout": "",
+      "stderr": "Refusing output equal to or inside the sealed input tree\n"
+    },
+    {
+      "case": "source_equal",
+      "passed": true,
+      "exit_code": 64,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true,
+      "stdout": "",
+      "stderr": "Refusing output equal to or inside the sealed input tree\n"
+    },
+    {
+      "case": "source_symlink_alias",
+      "passed": true,
+      "exit_code": 64,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true,
+      "stdout": "",
+      "stderr": "Refusing output equal to or inside the sealed input tree\n"
+    },
+    {
+      "case": "normal_fresh",
+      "passed": true,
+      "exit_code": 0,
+      "source_bytes_and_paths_unchanged": true,
+      "existing_output_bytes_and_paths_unchanged": true,
+      "stdout": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)\nPASS: three green modules; all authored theorem axioms printed; three false finite claims rejected.\n",
+      "stderr": ""
+    }
+  ],
+  "all_passed": true,
+  "original_record_sha256": "1321b7eb712b5a3b80ffa8a3eb530bdd86599daf49cd594af55a192e52099a48",
+  "projection_note": "Only the original machine-local source locator is replaced; all five recorded cases are unchanged."
+}

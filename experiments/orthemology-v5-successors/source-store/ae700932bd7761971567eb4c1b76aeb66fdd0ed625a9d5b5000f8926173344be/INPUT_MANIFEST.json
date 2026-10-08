@@ -1,0 +1,79 @@
+{
+  "files": [
+    {
+      "path": "DEPENDENCY_CLOSURE.json",
+      "sha256": "b052da2940028d54307acfa3078c6fe26a11a9884b1a68326081fcc90c013c01",
+      "bytes": 422772
+    },
+    {
+      "path": "OFFICIAL_TOOLCHAIN_ARCHIVE_BYTE_CHECK.json",
+      "sha256": "7e13adc2c28945b23408631a60576a9bbed329d0ecaea08c7989d0d17afebf4f",
+      "bytes": 1212
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924",
+      "bytes": 3530
+    },
+    {
+      "path": "lean/lakefile.lean",
+      "sha256": "b7c139548d9e3417149723c5f2568e0956f369fe2a11fb736d4c5ea801f30826",
+      "bytes": 2659
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+      "bytes": 25
+    },
+    {
+      "path": "source-inventories/Cli_source_inventory.json",
+      "sha256": "f285d6513abb5f3211ec38cf305b9644d2cf2f9a78cda7966e6f450bcf644f19",
+      "bytes": 1444
+    },
+    {
+      "path": "source-inventories/LeanSearchClient_source_inventory.json",
+      "sha256": "d505079aad033cf61fabeaec0800a005da7bc4b48ce7e9471853b39013735231",
+      "bytes": 2100
+    },
+    {
+      "path": "source-inventories/Qq_source_inventory.json",
+      "sha256": "e7d348f521792efaa74951de1edcb0a2c85afe11cf952c88c0d7f6aa2d05b212",
+      "bytes": 4264
+    },
+    {
+      "path": "source-inventories/aesop_source_inventory.json",
+      "sha256": "34c97802225b52724c62133701a69d4466685d3b40c6ad000ec5b43239e77a3d",
+      "bytes": 32795
+    },
+    {
+      "path": "source-inventories/batteries_source_inventory.json",
+      "sha256": "8e121ae7ace129ad9270db82ab6682609f5fec12a0d2de4fe567cf8898d6f039",
+      "bytes": 34319
+    },
+    {
+      "path": "source-inventories/importGraph_source_inventory.json",
+      "sha256": "10823805cb2a1c95c086d67ce11ac2b3a679510b56f6fab499dc8e69bdace987",
+      "bytes": 4295
+    },
+    {
+      "path": "source-inventories/mathlib_source_inventory.json",
+      "sha256": "f461e480570d88a8b438fc332b6f3327216df187dedd09c979d47bedbaaa3bba",
+      "bytes": 1008600
+    },
+    {
+      "path": "source-inventories/plausible_source_inventory.json",
+      "sha256": "fecd31abb1a75550a130fb9cbc6f56b4328a98a0b4983626587165cf47c9a03b",
+      "bytes": 2226
+    },
+    {
+      "path": "source-inventories/proofwidgets_source_inventory.json",
+      "sha256": "074154889520fb2274dab098ebe07670bc21540977bfffce57b5a06047519aec",
+      "bytes": 10207
+    },
+    {
+      "path": "widget-package-overrides.json",
+      "sha256": "e35d12037855a06c141a930f1b1fde5d21f5e82b3c629e70d42f4ab6a370c052",
+      "bytes": 515
+    }
+  ]
+}

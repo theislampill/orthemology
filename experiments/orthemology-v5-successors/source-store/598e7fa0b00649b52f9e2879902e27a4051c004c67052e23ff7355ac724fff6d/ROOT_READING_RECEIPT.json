@@ -1,0 +1,88 @@
+{
+  "schema": "root-contextual-reading-receipt/1",
+  "recorded_at_utc": "2026-10-07T18:09:25.588845+00:00",
+  "author": "dot",
+  "status": "TARGETED_CONTEXTUAL_RETURN",
+  "local_sources": [
+    {
+      "path_input_name": "oneness.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 104994,
+      "sha256": "3279d299696883c70a6aef423b2fd6c5aa5087976058a96afa08e83fc6163e1f",
+      "actually_read": "PDF positions 30–40 continuously, equivalent to printed23–33; includes translator notes19–26. Text only in this late pass, no new diagram inspection."
+    },
+    {
+      "path_input_name": "mf_extended.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 32433,
+      "sha256": "29e24a56c0b9e16822dd26fe1975767d81563325be48a256a1b5bae9a00a535b",
+      "actually_read": "Arabic unvocalised continuous section printed174–183, rendered lines906–928; site navigation and duplicate vocalised text not additional source witnesses."
+    },
+    {
+      "path_input_name": "islamweb-item95.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 1147,
+      "sha256": "c9dabf6932a02c1bab04a6d0bdffbfe2b2693be1153fdf9c2275616da2d5c544",
+      "actually_read": "Entire retained Arabic body, Minhaj1:438–441, with first-page continuation boundary explicit."
+    },
+    {
+      "path_input_name": "islamweb-vol2.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 22897,
+      "sha256": "96434788b6020ef06bc705d3fbada829d4bc34446fef61c4fb516b361ee26435",
+      "actually_read": "Targeted final paragraphs around2:180 including realised efficacy/perfection; does not claim the entire retained item was read in this assessment pass."
+    },
+    {
+      "path_input_name": "islamweb-item157.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 4190,
+      "sha256": "135d20a6599f95cc809a5916cddab75243c86a185603793d94430d03e11970bf",
+      "actually_read": "Entire retained body for2:180–182 and transition to183."
+    },
+    {
+      "path_input_name": "islamweb-item158.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 18086,
+      "sha256": "1d682c5b1822e9f4a3c196a98ce929983cdfa811fffe71e5cbf3c25fd5b15c57",
+      "actually_read": "Initial displayed continuation beginning2:183, including its perfection argument; no whole-item reading credit."
+    },
+    {
+      "path_input_name": "islamweb-item365.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 9281,
+      "sha256": "21540b3cd5966603c0971688c41355b292ef64c70d139e41d0638cf29c19e3b1",
+      "actually_read": "Entire retained body, Minhaj3:314/315–320."
+    },
+    {
+      "path_input_name": "islamweb-vol3.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 23817,
+      "sha256": "8c788e5c90af0ed4b2adf4503a761befb58e4535d8683f999f376f867831fe57",
+      "actually_read": "Continuous lines1–26 including3:320–329; later displayed tail consulted but not counted as whole-item reading."
+    },
+    {
+      "path_input_name": "003.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "bytes": 364452,
+      "sha256": "c4753f171a73fb1d7bf572286563bd857eab675f94dfc9550e685c5cd9a2ec3e",
+      "actually_read": "Continuous lines64–113, including Arabic anchor at92. This is a contextual return to an already acquired and studied unit. Rashad Salim print mapping governed by separate locus audit."
+    }
+  ],
+  "web_sources": [
+    {
+      "url": "https://old.binothaimeen.net/content/13904",
+      "scope": "Arabic lines380–415, particularly405–411; official Nisāʾ lesson33; print edition not verified; no audio listening."
+    },
+    {
+      "url": "https://old.binothaimeen.net/content/14192",
+      "scope": "Arabic lines228–246, particularly234–236; official Shūrā lesson6; print edition not verified; no audio listening."
+    },
+    {
+      "url": "https://islamhouse.com/read/ar/الصفدية-272837",
+      "scope": "Metadata line15: Muhammad Rashad Salim, Maktabat Ibn Taymiyya Egypt, second1406AH, printed-pagination correspondence. Direct body/footers at2:143–147 and1:91–95 read. Exact anchor at2:145 verified electronically; no fresh Salim print-scan inspection.",
+      "checked_at_utc": "2026-10-07T18:14:18.028560+00:00"
+    }
+  ],
+  "evidence_credit": "Interpretive reassessment and premise audit only. Overlapping reads are not independent witnesses. No new proof replay, empirical verification or source-authority-to-truth inference.",
+  "related_assessment": "t20/cooperation-reassessment/ROOT_REASSESSMENT.md"
+}

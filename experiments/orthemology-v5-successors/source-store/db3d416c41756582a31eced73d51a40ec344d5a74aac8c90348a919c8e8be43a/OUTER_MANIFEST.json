@@ -1,0 +1,2089 @@
+{
+  "schema": 1,
+  "member_scope": "Every file in this outer evidence tree except OUTER_MANIFEST.json itself.",
+  "qualification_snapshot_utc": "2026-10-06T06:45:44.966933+00:00",
+  "siblings": [
+    {
+      "path": "code-evidence",
+      "manifest": "MANIFEST.json",
+      "sha256": "9f2a0f116f90fc4189faacc79d5b7c02116e1d36735cc2cdffe4f9117406de95"
+    },
+    {
+      "path": "hase-source-build",
+      "manifest": "PUBLIC_MANIFEST.json",
+      "sha256": "ef584ef906d313c22094c4bc2e536872231314979a70c32b16d92eed826350db"
+    },
+    {
+      "path": "hidden-change-cache-setup",
+      "manifest": "PUBLIC_MANIFEST.json",
+      "sha256": "672f66b6e7bd5735deeff44e9c0e88cd291f5f26353cf432abd5a32f7b5f1e93"
+    },
+    {
+      "path": "four-state-stress-control",
+      "manifest": "MANIFEST.json",
+      "sha256": "a1aea1d36db3355f5b0c908f7df41fd77165048feb70aa63b7cd6da525cbe20c"
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6987,
+      "sha256": "0a3d9345f1ca6fced6c69af1db53b34deab96bf71987668b279e10914664c0a9"
+    },
+    {
+      "path": "code-evidence/COMPONENT_STATUS.json",
+      "bytes": 3198,
+      "sha256": "a57f537f4aba27b2a450ccd73eda956dd17a772930b34cd87d64adeda2af9602"
+    },
+    {
+      "path": "code-evidence/INDEPENDENT_PACKAGE_SUMMARY.json",
+      "bytes": 3544,
+      "sha256": "a7ad87680993fa6799f4bda0b8578b1f4f8538b16d653e8f086a6944bc3152a2"
+    },
+    {
+      "path": "code-evidence/MANIFEST.json",
+      "bytes": 63345,
+      "sha256": "9f2a0f116f90fc4189faacc79d5b7c02116e1d36735cc2cdffe4f9117406de95"
+    },
+    {
+      "path": "code-evidence/PACKAGE_STATUS.json",
+      "bytes": 1271,
+      "sha256": "239dd7cdf7696174578c73392a136e8358959945754bda69e664993f8fb4621b"
+    },
+    {
+      "path": "code-evidence/PORTABLE_REPLAY_SUMMARY.json",
+      "bytes": 5270,
+      "sha256": "7284adbb4103ad0b824f3f4a28ecafd23573b1ea6cf553adb2a656a0cc2ec35e"
+    },
+    {
+      "path": "code-evidence/README.md",
+      "bytes": 11768,
+      "sha256": "26c5929222fdfe39073848892dc2b5e512c0292e923749107c11898fedc45f34"
+    },
+    {
+      "path": "code-evidence/SOURCE_BINDINGS.json",
+      "bytes": 133304,
+      "sha256": "fe80d2bc89864ae1f31f8eefe2ce16f1b050f56e790ff2fb73373719f81e2510"
+    },
+    {
+      "path": "code-evidence/VERIFICATION_SUMMARY.md",
+      "bytes": 10939,
+      "sha256": "164789fddd3ade86d576d6c1c3a6b06cd31c62328657b3f2f7ce9e4e323e8978"
+    },
+    {
+      "path": "code-evidence/dependencies/INVENTORY_COMPARISON.json",
+      "bytes": 4290,
+      "sha256": "5cacc89f7ccfdb23fc3db6f9d042c88d81e8f34159b241073dc67ffc76d4430f"
+    },
+    {
+      "path": "code-evidence/dependencies/ORIGINS_AND_AVAILABILITY.md",
+      "bytes": 2289,
+      "sha256": "cae78b6cc70bb3a5f1592f03ac9442e189e2b96c5d31422c16eea1f925decc20"
+    },
+    {
+      "path": "code-evidence/dependencies/TOOLCHAIN.json",
+      "bytes": 493,
+      "sha256": "2a608761c11b67e636e479beaf49555cf4cd36f2ffad1114d94ceaff9a099344"
+    },
+    {
+      "path": "code-evidence/dependencies/hase.json",
+      "bytes": 275148,
+      "sha256": "bffd038a1277bd4434dfa01e8f72928ff3ef902e84fa46da0e18e02a8423b780"
+    },
+    {
+      "path": "code-evidence/dependencies/hidden-change.json",
+      "bytes": 1386174,
+      "sha256": "e13b1cfa127cc6e065a0611672f3c993bab19cfadd90a81fd92843c2e86ad827"
+    },
+    {
+      "path": "code-evidence/diagnostics/hase/check_lambda_normal_forms.py",
+      "bytes": 4891,
+      "sha256": "093857b23dac06e14ec7da11a3be91cc356af1a498c93fed51a6e5ab32d99504"
+    },
+    {
+      "path": "code-evidence/environment.example.json",
+      "bytes": 242,
+      "sha256": "73411386f5a8b3c2c827c9ed8cd89d42a5f43b193e7886e3ad716aff4a24a224"
+    },
+    {
+      "path": "code-evidence/lean/hase/REPLAY_PLAN.json",
+      "bytes": 27439,
+      "sha256": "3532a0efca5024369e2eb0107df8472475ae49099f2f0824ba6c2fe89cc040ec"
+    },
+    {
+      "path": "code-evidence/lean/hase/controls/existing/KernelReadback.lean",
+      "bytes": 667,
+      "sha256": "a5c0f490b5ad83f6a6b3f282da79b08d1cb0df04ce177cc1bea97290c7d12641"
+    },
+    {
+      "path": "code-evidence/lean/hase/controls/inhabited/KernelReadback.lean",
+      "bytes": 1985,
+      "sha256": "e957ac234c4a515ba24432eb6d286e0145bb298794bb027e647b985853d236a1"
+    },
+    {
+      "path": "code-evidence/lean/hase/controls/inhabited/ReflexivityCannotReplacePremise.lean",
+      "bytes": 249,
+      "sha256": "0b5e02f6d3fe4c131085bd28a33dd0ffb2fb6eccfae2698318751fc285777f5d"
+    },
+    {
+      "path": "code-evidence/lean/hase/controls/inhabited/ReviewerReadback.lean",
+      "bytes": 2111,
+      "sha256": "7ebd4056c1aece159fd00270eb1f8de5239276943659f863eda71dd0ac20e90e"
+    },
+    {
+      "path": "code-evidence/lean/hase/controls/inhabited/WrongEndpointReadback.lean",
+      "bytes": 383,
+      "sha256": "4105a1e224403f5dc9fecada98c0e902cd391cb402ef4781936ce2e03a6bfd88"
+    },
+    {
+      "path": "code-evidence/lean/hase/controls/inhabited/WrongJudgmentCast.lean",
+      "bytes": 286,
+      "sha256": "248b5ba9b09a97396153d47c9c373720afac702cc787e69ba98e88b5b6161c30"
+    },
+    {
+      "path": "code-evidence/lean/hase/controls/inhabited/WrongMotiveCoordinate.lean",
+      "bytes": 297,
+      "sha256": "fd720b1dd6eae50b0f505be7a0b7a50f5c19c45cadd126f3aa03c2667e13bf54"
+    },
+    {
+      "path": "code-evidence/lean/hase/controls/ordinary-diagnostic/DumpExactPolynomials.lean",
+      "bytes": 534,
+      "sha256": "ed383adafd31af8ba3a823a4c63ac7a06f7e1993f3c7997380483c8f8ff4e389"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllBaseLaws.lean",
+      "bytes": 6947,
+      "sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllBinderLaws.lean",
+      "bytes": 3942,
+      "sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllConstants.lean",
+      "bytes": 2153,
+      "sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllFiniteComparison.lean",
+      "bytes": 1432,
+      "sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllInheritedPositiveControls.lean",
+      "bytes": 11117,
+      "sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllInstantiation.lean",
+      "bytes": 4649,
+      "sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllMixedAlgebra.lean",
+      "bytes": 17017,
+      "sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllNucleusSyntax.lean",
+      "bytes": 5356,
+      "sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllPiLaws.lean",
+      "bytes": 2971,
+      "sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllPredicates.lean",
+      "bytes": 6228,
+      "sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllRawRenaming.lean",
+      "bytes": 3623,
+      "sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllRawSubstitution.lean",
+      "bytes": 3157,
+      "sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllSemanticSubstitution.lean",
+      "bytes": 7131,
+      "sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllSigmaLaws.lean",
+      "bytes": 4531,
+      "sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllSoundness.lean",
+      "bytes": 6622,
+      "sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllStructural.lean",
+      "bytes": 30140,
+      "sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllStructuralBase.lean",
+      "bytes": 10666,
+      "sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllStructuralRename.lean",
+      "bytes": 11526,
+      "sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllSyntax.lean",
+      "bytes": 6469,
+      "sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllTermAlgebra.lean",
+      "bytes": 9867,
+      "sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/AllTermLemmas.lean",
+      "bytes": 6322,
+      "sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/BoundaryResults.lean",
+      "bytes": 8581,
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/ComputablePrelude.lean",
+      "bytes": 1494,
+      "sha256": "b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectiveBooleanCertificates.lean",
+      "bytes": 3356,
+      "sha256": "c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectiveBooleanStandardness.lean",
+      "bytes": 4636,
+      "sha256": "5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectiveCanonicalTests.lean",
+      "bytes": 4484,
+      "sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectiveObserver.lean",
+      "bytes": 5513,
+      "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectivePrimitiveRecursion.lean",
+      "bytes": 21266,
+      "sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectiveReduction.lean",
+      "bytes": 6798,
+      "sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectiveRuleBoundary.lean",
+      "bytes": 2704,
+      "sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectiveStandardness.lean",
+      "bytes": 2778,
+      "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/EffectsAndDependence.lean",
+      "bytes": 8707,
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/ExtensionalRepairLemmas.lean",
+      "bytes": 2338,
+      "sha256": "00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/ExtensionalRepairSoundness.lean",
+      "bytes": 9343,
+      "sha256": "b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/ExtensionalRepairSyntax.lean",
+      "bytes": 10183,
+      "sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/ExtensionalRepairTheorems.lean",
+      "bytes": 2862,
+      "sha256": "4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/ExtensionalRepairWitness.lean",
+      "bytes": 6809,
+      "sha256": "0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/FiniteBridge.lean",
+      "bytes": 8366,
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/IdentityChecker.lean",
+      "bytes": 5632,
+      "sha256": "989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/InhabitedEndpointControl.lean",
+      "bytes": 6450,
+      "sha256": "57a4559c45f76bbb6b2a55b0ddc208350bb866bb7fe1be0f80fd4df8ffeef61f"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/IntensionalIdentityBridge.lean",
+      "bytes": 13211,
+      "sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/IntensionalIdentityModel.lean",
+      "bytes": 10589,
+      "sha256": "64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/IntensionalIdentityRelations.lean",
+      "bytes": 4946,
+      "sha256": "009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/IntensionalIdentitySoundness.lean",
+      "bytes": 10721,
+      "sha256": "011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/IntensionalIdentityTheorems.lean",
+      "bytes": 4627,
+      "sha256": "48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/IntensionalIdentityWitness.lean",
+      "bytes": 5007,
+      "sha256": "6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/InternalPolymorphism.lean",
+      "bytes": 15288,
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/MaskNormalisation.lean",
+      "bytes": 5896,
+      "sha256": "d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/NormalisationAndNumerals.lean",
+      "bytes": 3101,
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01Candidates.lean",
+      "bytes": 10260,
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01Certificates.lean",
+      "bytes": 5047,
+      "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01Confluence.lean",
+      "bytes": 9226,
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01ContextualJ.lean",
+      "bytes": 3535,
+      "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01CurryParametricity.lean",
+      "bytes": 4213,
+      "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01DependentControls.lean",
+      "bytes": 6388,
+      "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01DependentCore.lean",
+      "bytes": 16822,
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01DependentFundamental.lean",
+      "bytes": 8990,
+      "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01DependentModel.lean",
+      "bytes": 9892,
+      "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01DependentSubstitution.lean",
+      "bytes": 7125,
+      "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01Examples.lean",
+      "bytes": 3514,
+      "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01LambdaSyntax.lean",
+      "bytes": 5547,
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01ModelWitnesses.lean",
+      "bytes": 4276,
+      "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01Omega.lean",
+      "bytes": 3201,
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01PER.lean",
+      "bytes": 9388,
+      "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01Polynomials.lean",
+      "bytes": 8595,
+      "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01RecursiveModel.lean",
+      "bytes": 14821,
+      "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01SNReflection.lean",
+      "bytes": 1447,
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01SystemF.lean",
+      "bytes": 6932,
+      "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01Translation.lean",
+      "bytes": 6462,
+      "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/P01TypeAlgebra.lean",
+      "bytes": 4003,
+      "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/PolynomialTestBoundary.lean",
+      "bytes": 7563,
+      "sha256": "1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/PositiveSeparation.lean",
+      "bytes": 3453,
+      "sha256": "8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/RestrictedCompiler.lean",
+      "bytes": 15997,
+      "sha256": "7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/SparsePolynomial.lean",
+      "bytes": 5828,
+      "sha256": "2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/SubstitutionSyntax.lean",
+      "bytes": 9055,
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/TypedAlgebra.lean",
+      "bytes": 9808,
+      "sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/TypedStructural.lean",
+      "bytes": 33519,
+      "sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/TypedSyntax.lean",
+      "bytes": 4557,
+      "sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/UArrowAndCompilerControls.lean",
+      "bytes": 4224,
+      "sha256": "7fe317d5fbc4657ecd7f793808872941a8bfdf5b3a281f87a2f11b6ea70ac7a9"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/UnaryCurrentIdentityBoundary.lean",
+      "bytes": 6225,
+      "sha256": "8e943773416edcb225d1c3ed9961938bc75f82d7cc67f0bdb1aea5a98b126eac"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/UnaryExpressions.lean",
+      "bytes": 8562,
+      "sha256": "9577dc7da47df9915c87b374b9bd87f534849f94ba272bf60ccd7f20313cbe56"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/UnaryFiniteDescription.lean",
+      "bytes": 5651,
+      "sha256": "061d8de20772e3fca5bd2a73641da266f782f2d23e8ad4843255c17d875a29d5"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/UnaryNormalForm.lean",
+      "bytes": 7746,
+      "sha256": "a2be40ceebd2c9293ac2be158abff27ed6093c2a82325fb946b5d2b534040d9c"
+    },
+    {
+      "path": "code-evidence/lean/hase/sources/UnaryPolynomial.lean",
+      "bytes": 8219,
+      "sha256": "aa716d61f011942c08532878a322c1b98978d5095bab58fe5ae1e1d5eae37cb6"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/REPLAY_PLAN.json",
+      "bytes": 119639,
+      "sha256": "406268e246a7ee9b539c43c7f981cb9b96947ce39a9df6f78c17c17b1537012a"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/ControllerAxioms.lean",
+      "bytes": 1066,
+      "sha256": "48d86b1dff40143d124a5074083059d321c0e22a532f480dc708a169e3b0ffb3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/ControllerControls.lean",
+      "bytes": 3606,
+      "sha256": "8f16b47f50f573c74395fc042eb60b53bdf6494e8861d2e262e30e8fbe76e162"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/ControllerFixtures.lean",
+      "bytes": 1245,
+      "sha256": "fb4fd31e67bfe4c88fc78b6713ef9d03a6e3261d2f509cef757501c46182f9b4"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/ControllerTimingRed.lean",
+      "bytes": 291,
+      "sha256": "7c0f8725f69ceb644b4f18fd991d47a153f429657781920c2ec4cc7a16c08d9a"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationClearsKnownFlag.lean",
+      "bytes": 4579,
+      "sha256": "7693bde5a031bd8b61970e495dd51d7fbd55dcf135e88064925ec57577b1ff3e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationDeletesCandidateOne.lean",
+      "bytes": 4565,
+      "sha256": "86ad158a1fbd6a30a2fa9e64c0fb632f03aef6f9621c848d55bbe9d2b4e2c67b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationDoublePhase.lean",
+      "bytes": 4559,
+      "sha256": "358e0581b17182bc7e42fafa2bf5b0ee5b5843d23a8d33153b86b2390d5ce083"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationDropsCountGate.lean",
+      "bytes": 1573,
+      "sha256": "e1ad4ed82be77786cb99b0a6dfd48c31082c070d44ccc3ba7a7afc860f4cf04c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationDropsNewReceipt.lean",
+      "bytes": 5179,
+      "sha256": "0843f7c2f1bfe6f835ab5a0ff28f6ef0560961149110cc534a29af13e85fa38f"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationLiteralCandidate.lean",
+      "bytes": 4244,
+      "sha256": "ad6a7aea0a9d7e5ce528c89ae695fa8cb5e3ef6dc42c649072d75c6a62298716"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationNonstrictCount.lean",
+      "bytes": 1599,
+      "sha256": "dbba5b4b5334ae56800d5d1119ade736aa2efd5f5f0179f8a137d10ee9980932"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationRejectBeforeReveal.lean",
+      "bytes": 4590,
+      "sha256": "4e2893243c488b572ff15d9dbf4c7053536110acac1e6cf2088e2e66bd8414dc"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/MutationStrictDiscrepancy.lean",
+      "bytes": 1531,
+      "sha256": "622117a8996db7a4de715666764643cce316519aa8de7137c06089088109ede9"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/PhaseArithmeticControls.lean",
+      "bytes": 2051,
+      "sha256": "c1101224054d587b115631a9dd2c17020430497cded524334360d6bb5e39a743"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/PhaseArithmeticExpectedFailure.lean",
+      "bytes": 280,
+      "sha256": "87492a1bb30d9ec5e906289fbac128b005a6defbef99a8c79ea1a666690211fa"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/ReviewAllAxioms.lean",
+      "bytes": 4614,
+      "sha256": "6767af52fc1cb0462631f66bd760960094643521336503dc844a12dc1e655e1a"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/controller/ReviewControllerControls.lean",
+      "bytes": 5240,
+      "sha256": "a343e82d8cf336b4e059545f43e76b17269cf943dfdac686a365f0c58f9411b3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/EndpointControls.lean",
+      "bytes": 3593,
+      "sha256": "5ff601a4d001fb9db5fa49a5cb9fdae2d8a5caa76fadeb987d37b6c0f9f84563"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/EndpointFixtures.lean",
+      "bytes": 1657,
+      "sha256": "8fe2870c40af338155f589c009eb6d4deab649bc5983a20e8df215f80c01c0e5"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/EndpointInterfaces.lean",
+      "bytes": 403,
+      "sha256": "274a039f6dbe1a31341394423bd61a606ee979422197d8fb23db2612ce62ae32"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/EndpointLawfulnessControls.lean",
+      "bytes": 3278,
+      "sha256": "1da85dc06dd0002214643fec081dcfc9392e00dc96c4e095448824b3aa59f76b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/EndpointSeparator.lean",
+      "bytes": 4783,
+      "sha256": "6b523d00092658c68f7fb6ebb0285ce83d9bde6e6855b7b7c6c450b9da6206ef"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/MutationNegativeDropsInitial.lean",
+      "bytes": 1150,
+      "sha256": "cea3fd2651bbdddf548285daa55ae019e5071c54359ae345b78960ae742c687c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/MutationNegativeDropsInput.lean",
+      "bytes": 1137,
+      "sha256": "d1dd9952d92f0e049536dbdd97b91712fbcd052d5f8f1251df121bb11c8bb283"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/MutationPositiveDropsInitial.lean",
+      "bytes": 1098,
+      "sha256": "2988efa498c9cd33d09a3ec4728965316d4d69a97db526676bb1433e2d62df12"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/MutationPositiveDropsInput.lean",
+      "bytes": 1103,
+      "sha256": "ed99c3cbd5253c1fa6412801136653d1b94675c23afb003f80c02187cb5d5b5c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/MutationWinnerDropsLawfulness.lean",
+      "bytes": 2566,
+      "sha256": "d4bf757adba9e2a7a756f7ef91b46af84e90d8f1f2270d99e4a243823d89adca"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/MutationWinnerDropsParity.lean",
+      "bytes": 2696,
+      "sha256": "37ccc58c3b6aba817ff922e7e5c5782ff5a7735f8d208fca7c285c2320465c03"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/ReviewAllAxioms.lean",
+      "bytes": 1408,
+      "sha256": "0466a5edff0defc5a4982ebf5b4f310b1ae2831a27b956fc4cc227c30f7c1ed4"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/ReviewEndpointControls.lean",
+      "bytes": 9969,
+      "sha256": "9a0ac8c22cf75b51e02a5b4e0b4bb2bc89fced80e39c35d7f59fd2ae82350c3f"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/endpoint/SemanticEndpointAxioms.lean",
+      "bytes": 1469,
+      "sha256": "b87465b9413af8edededf57336d8d7f21a1a4a004af96fb7d08f396cef9e2198"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/AllNewAxioms.lean",
+      "bytes": 2198,
+      "sha256": "02b4744e9d8bc25d6ea3bb58c6cc6e8d79e9345e0144f47a7c824e8adc25e714"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/BindingControls.lean",
+      "bytes": 658,
+      "sha256": "4cd70ef0b70a85f16dfa0fa7bc68eee0542af6416aea621741f314668e820eda"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/CertificateControls.lean",
+      "bytes": 3373,
+      "sha256": "f5c7559218224928217a470ffd10d27b1fcb091e063eb3d8e037d2982b24d03b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/EndpointAxioms.lean",
+      "bytes": 902,
+      "sha256": "b173583d94c091207a3299131fa90d51309b0af7a94666e189b1866809a5ee03"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/FiniteControls.lean",
+      "bytes": 2926,
+      "sha256": "8f16386b7799d3428ecd928ed9a365ce23021df0521371266000979097a3f274"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/GreatestRegionControls.lean",
+      "bytes": 1141,
+      "sha256": "ffb2a7a3acd1c3495a6b7c53c1bf402b0f3bcb3d4173efab691ce974551bcf37"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/NegativeTraceControls.lean",
+      "bytes": 880,
+      "sha256": "36f0e653ad31e4a4e7c7dd9716f66c709478a4aa2095670e9992a911228ef23e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/RepresentationControls.lean",
+      "bytes": 832,
+      "sha256": "ca56c7b81b8730cb0a602fea3d63ebd80e114b29b60b7f5a95fcf546f26c8cdf"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/SupplementaryControls.lean",
+      "bytes": 3026,
+      "sha256": "7c11c21b07e296136e93287e8017d90b8f8dc8485ed04d3286e3d8c5dbd12f92"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/finite/TraceApiProbe.lean",
+      "bytes": 381,
+      "sha256": "b7c3458d30a6d3acc7c926874eabb75ab40037bf32f6c56e9d66d7bf6c670b9e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/AllAxioms.lean",
+      "bytes": 4562,
+      "sha256": "ddaf736552460936cfe6bd50a26b6b85325be60c683eefb668e8d7b20c218822"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/ContaminationControls.lean",
+      "bytes": 4589,
+      "sha256": "dc3285a64fac115de96afeb74acb985a2bc47d0b6b26391dd67dec367c7d0ba9"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/EndpointAxioms.lean",
+      "bytes": 1826,
+      "sha256": "5f1f208bdb9f837f69368e783e4fb5b6122927b113df8daba02392ba9474e26f"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/FixedIndexControls.lean",
+      "bytes": 5648,
+      "sha256": "4dd6f350a034531fad9d2753cc405503e152aed574c0e590febdf593b62b3fc4"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/MutationPrefixReversal.lean",
+      "bytes": 22731,
+      "sha256": "04a7cfa782f9cb6b50a7b8b7a7b1fc3d56e903871286934c6222b5af6c883d50"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/MutationSwitchTiming.lean",
+      "bytes": 12134,
+      "sha256": "f28864e1da49295980017ac16fef033f44118ca3891133c085db8ef33565992e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/MutationTagPersistence.lean",
+      "bytes": 3406,
+      "sha256": "b687a7cb8d4f0af9ed457ebaa2d5f7f211a15cca2f7da8683452d579f95c5dac"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/PrefixTransportControls.lean",
+      "bytes": 3879,
+      "sha256": "99ed6e991f7a1e96bced15fcf85adb43106052390802ed140d2fd37fd18a500c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/ReviewerControls.lean",
+      "bytes": 3396,
+      "sha256": "49d8fdd5a54d8bb31c82801bb855a50d36ebc1d23bc56d7d8d222a45d6a0f5e4"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/laws/TaggedLawControls.lean",
+      "bytes": 1643,
+      "sha256": "cb3d94187d641c366a32c5c6e6097c4b4e660446ac74d3066e10efc46aabc22e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/ContractLawfulnessControls.lean",
+      "bytes": 1508,
+      "sha256": "bf366a159a49dbaf5ae4986812b1302a955403fa20663d74d3343206e373309b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/MutationChosenReceiptClosure.lean",
+      "bytes": 182,
+      "sha256": "f936ca1a2e3d6fff6e59aca60e60152762f48abc4d867f534e402ea229986c46"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/MutationNoChangeOnly.lean",
+      "bytes": 403,
+      "sha256": "f6209a5b043bda64d8e6a0c2d89c656b2791f3accaad219a0cd42ef61e2ee26d"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/MutationParityGivesLawfulness.lean",
+      "bytes": 167,
+      "sha256": "c27cfc7f57669f88fca7abc18f3c8a3fe89e44469e307ee141b39e1299ecddb1"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/MutationStationaryPrefix.lean",
+      "bytes": 667,
+      "sha256": "2991a4dd8faafbd6b0da6c159a9f5487e50f794c11a46d13fc8ab86ded643762"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/MutationStrictPostSwitch.lean",
+      "bytes": 185,
+      "sha256": "44c0f751657993ffc655b9362f854abd77c4cf45fce1a3adc5692b5d4852d604"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/MutationSupportImpliesMatching.lean",
+      "bytes": 167,
+      "sha256": "23b268c2e96015781fbb2cbfe7a25457004d3846ab207ced577dd06f1c595bfc"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/MutationUnconditionalRivalParity.lean",
+      "bytes": 156,
+      "sha256": "12a83f613cea2de432415a9628c79bd245bab092e58231d9f7e021058f57a5ca"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/MutationUnselectedBranch.lean",
+      "bytes": 440,
+      "sha256": "daa72afcefd18dd7221acd3664a179e7b5e08cff9d03bf9db3d7a4cd2aca34f3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/NecessityControls.lean",
+      "bytes": 6983,
+      "sha256": "b43c7809e91b99904102d0d82dbcc85703a232d84d8b8ddaefef69fdc6620ebe"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/ReviewAllAxioms.lean",
+      "bytes": 3954,
+      "sha256": "3a65d9812276aed807382f1a7b165864a2d5ed53075313a7c32e132b455324c0"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/ReviewSemanticControls.lean",
+      "bytes": 4185,
+      "sha256": "fbe81e88a1cdbc82cdbd0d9d74d176db2f0c6c9d75b65275ada0e8bcab919d85"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/controls/necessity/RivalParityControls.lean",
+      "bytes": 1479,
+      "sha256": "a04e27e0f5734b446bcd607c761aae91ea91f0cbbf70d3faa99db376c8d67d9c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ActualTargetPolicy.lean",
+      "bytes": 8690,
+      "sha256": "7040e104fbb268ae6dea93fbd21f1db8bccc56bd5f04910b9d43c64597d0da74"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/AdaptiveMarkovRecurrentGraph.lean",
+      "bytes": 6034,
+      "sha256": "24cf86efc439d077f7860aabf90f455d75269130094d94c46bc6734bacc2aaf9"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/CertificateData.lean",
+      "bytes": 4576,
+      "sha256": "e05d663571ba1cdf8e2ad04f19442721d4f03ee5bca46c0ad185e5d2c2f0e0c6"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/CertificateOrder.lean",
+      "bytes": 2179,
+      "sha256": "11975a5518aa70a8b3cb264a07b155611dfc84992a75fc4fe2a417e46813bb0e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/CertificatePath.lean",
+      "bytes": 9295,
+      "sha256": "d8e26f21fa37cd8ddf250ab9b440a1b25da481d201e66f3913ce822620e799f8"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/CertificateSoundness.lean",
+      "bytes": 7316,
+      "sha256": "399829e271d3b6db65cfd077a68c15ad9a2e2f4d59d3957a2f30b6f2cd37a4ba"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/CertificateSyntax.lean",
+      "bytes": 6113,
+      "sha256": "e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/CheckedTargetOperation.lean",
+      "bytes": 7621,
+      "sha256": "d1751ecda2c7730b2580575391486f38a40a9ea0e585d90ad12774da9fb33ff8"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ConditionalAlmostSure.lean",
+      "bytes": 10995,
+      "sha256": "06d403f36ee3cb95094a53b4a53eea72810565fc66ac1fb0607fef9b01922a9b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ConditionalContinuationLaw.lean",
+      "bytes": 14074,
+      "sha256": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ConditionalKilledContinuation.lean",
+      "bytes": 9364,
+      "sha256": "48f69898de357b1cce90acfa6d575cf0688fae41821c8376a4a395bea1ba04c8"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ConditionalPrefix.lean",
+      "bytes": 5903,
+      "sha256": "987df7f2262b0b2a5e74bd4aee521b3315d61ca97d1e308ef6b10223f20d48f2"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/DependentHellinger.lean",
+      "bytes": 6926,
+      "sha256": "cfcafcc7e1ebcda71370644b4b89c84a9948353e9115ed2e3a7807b78079a97e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/DirectController.lean",
+      "bytes": 8752,
+      "sha256": "c68605b22b1c74bdacaec0c586e35f19e80a7154d3d31b3c2edac05feda0f5a5"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/DirectCycling.lean",
+      "bytes": 8075,
+      "sha256": "d262dda33bda02d989f65753e312e58cf451fafe1ed70fbc32b7d66184f72dd0"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/EmpiricalTailBounds.lean",
+      "bytes": 8464,
+      "sha256": "76d70084a57a2beb4b41784b3c93fd248d732b7422055aba2fdafdaf7957f993"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/EmpiricalTestLaw.lean",
+      "bytes": 3077,
+      "sha256": "81f3343152589ab4d36d10ccc487f2bbf8c251bd6a2e95cf50826d59fff88da6"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/EndComponents.lean",
+      "bytes": 7828,
+      "sha256": "f4298061653adc768b292363885e1a7b2213ccb56d17d52376762529d35b2531"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/EventualCycling.lean",
+      "bytes": 7632,
+      "sha256": "eb29e22c35c3a366d440669da516663f9fe56601794f98ba8dbc81958ab7d5b7"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ExecutablePruning.lean",
+      "bytes": 7912,
+      "sha256": "3098f76a8065b9a327a4e9763de88428cd4711c79232b87201b7c079ee7789db"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/FairComponentParity.lean",
+      "bytes": 5156,
+      "sha256": "566f01a571617215b71386917896044a7dc150e84130dcd0f92f36e45038f414"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/FairStageNavigation.lean",
+      "bytes": 3937,
+      "sha256": "c497220e36e59578dc8d1efa53bfac17014446fcc84826f3af37f270d9f6e8f3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/FeedbackFiberProbability.lean",
+      "bytes": 8467,
+      "sha256": "dbaf6f6cafc94a08bd2f00ca8ecc6c4a253f002b517b52ff58825b944475a834"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/FeedbackRequests.lean",
+      "bytes": 5588,
+      "sha256": "327eea767c3a2f2ad30e66b2c9c9591b4bb6a1fe7dea39c71c50623cb4b07b38"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/FiniteChainAvoidance.lean",
+      "bytes": 5521,
+      "sha256": "f7af0f36a68359e8b20b5c85ca527e07191c43686ec345b7d08f582bb4741e24"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/FiniteChainTrajectory.lean",
+      "bytes": 8565,
+      "sha256": "71acea2c2028a111c1e15ddc85f76f0dd59efb639f9a0372bc35a320c7f4e3ef"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/FiniteReachability.lean",
+      "bytes": 3825,
+      "sha256": "ad50af371e175b27b62f9fe545267dd434ed256ab84b950afdc92b932dc5fd74"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GeneratedParitySuccess.lean",
+      "bytes": 7402,
+      "sha256": "db9ec6cae92ba47810fd360afa3eda2b4447327378a032b17d87afef743a67c4"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GeneratedPhaseDynamics.lean",
+      "bytes": 5448,
+      "sha256": "3c52bf3ff7d270ef0343f1d41223b3aacc8a748df216d130a580ff338dd94174"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GeneratedPhaseStability.lean",
+      "bytes": 3957,
+      "sha256": "df0a80d810a176bb32b8a5574039115e823bfbeaa588a3ed23a52a7d7aa10a91"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GeneratedPolicySafety.lean",
+      "bytes": 6252,
+      "sha256": "6a52c99c8bfe581ed13dcec6a396dcb7227656e6eba937a4cf73c7e36a8f4100"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GeneratedRun.lean",
+      "bytes": 6791,
+      "sha256": "bdd551d8c61ae4c78332b957eba7ecab5718747747a51a91902ea55e2306aca9"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GenericFiniteQueryLocality.lean",
+      "bytes": 6244,
+      "sha256": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GenericFiniteQueryMeasure.lean",
+      "bytes": 10817,
+      "sha256": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GenericQueryReference.lean",
+      "bytes": 3849,
+      "sha256": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GlobalParityNecessity.lean",
+      "bytes": 5790,
+      "sha256": "7b54bfb8cd869bbe72f7ebeb42504a616c216a1912d09a6fc0d2ab35ca9d39c3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/GlobalParitySufficiency.lean",
+      "bytes": 6759,
+      "sha256": "4a93ef96999718cc4fc6ac566da899c6f9938d5a8cbce269d8ee20a3f459d9a3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HellingerTree.lean",
+      "bytes": 9727,
+      "sha256": "3c5dc0288543e481971f9ccdbf811102b191fa4067ff65ed1e0e3cd8e0da06b2"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeActualRecurrence.lean",
+      "bytes": 6441,
+      "sha256": "67c260c32c7d6db10fec65451d9efe09574bd1a0027c99fdb7f34965548d85b3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeBinding.lean",
+      "bytes": 2731,
+      "sha256": "35963bfdab6f60e730e76711921b358ecd0e136293c1fb98233b49155e18c428"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeCertificate.lean",
+      "bytes": 18506,
+      "sha256": "da30bbf05e29a8924afc6aead60e6dfde1664c30cff8994a350c31233f469c0e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeConditionalSafety.lean",
+      "bytes": 8044,
+      "sha256": "d4f0c77ecbdfd87f00cf225235c419dd2a3525d1f9e84eda051f69d9b09f2566"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeContamination.lean",
+      "bytes": 25734,
+      "sha256": "395ab119cd2e4eb25902492cafad8153563a126ae81cad8a4d0bf88bb97ef6d4"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeController.lean",
+      "bytes": 7334,
+      "sha256": "d90f24efa921a51bd0f81b81365a407f7b5d5a0e2e17d73b7d597e8d5963f994"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeControllerActualLaw.lean",
+      "bytes": 7255,
+      "sha256": "a23216ba3eb1eb6ded572ce7068d246065bb375a260e41e3f952bb7088e17c42"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeControllerDynamics.lean",
+      "bytes": 8311,
+      "sha256": "73b7076ec67e3a60bea1627928088c0edf8decaa53f41b96f4c782639f4c884b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeControllerEndpoint.lean",
+      "bytes": 6793,
+      "sha256": "3d88b8221dfb58a4d8c35f2b2cd9ccb05405845296ea90870fa9d22578c723c9"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeControllerGraphs.lean",
+      "bytes": 14524,
+      "sha256": "cd06fcf2cf79a7ba39b07f1d897f0d52c465b38ec83ea65688cb26602458ee5e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeControllerParity.lean",
+      "bytes": 8631,
+      "sha256": "2fec13712488b3fc671d7edb0ee9f3776b6f2941ee38672c6514de308e0d0f6e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeControllerSafety.lean",
+      "bytes": 10034,
+      "sha256": "9cd9993d4c5a1087282c28a82d1fe2fa52414bebfc3aceaa207382686121b423"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeControllerStability.lean",
+      "bytes": 8685,
+      "sha256": "c9c82b598c3df411010cb4677544efd5c49694f21754ffb356389b7b7b0ffc7a"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeFinite.lean",
+      "bytes": 8265,
+      "sha256": "37211b5ded947f0b48f46b39c2f9ee81b353e24fafd8bc0944118ea74de94394"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeFixedIndex.lean",
+      "bytes": 11464,
+      "sha256": "3b218331b2d9f040763097702b15bac7488a2939930a7039e0682afdeedace49"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeKnownProgress.lean",
+      "bytes": 4948,
+      "sha256": "345c6c01770f9e5169679f738183f7f5e79a4dad29ea9eb0c4216375af046fd2"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeNecessity.lean",
+      "bytes": 3251,
+      "sha256": "f2a667cd51eb563fadf5068e690cc6ae0b3cb0eb5fa006f4baec0ad4f6405948"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeParityBridge.lean",
+      "bytes": 6719,
+      "sha256": "464055b56abd1d1191fce18c116cb9c4c01227ceb056ba7e8d0f956d208dd5e3"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangePhaseArithmetic.lean",
+      "bytes": 1509,
+      "sha256": "e2a1290ebf8beafef4356449cdf5799980068af8d38626e3960869df94177b30"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangePolicyRegions.lean",
+      "bytes": 8655,
+      "sha256": "6c0b651c0910d309529007929d34e619617b3a2af51e64007033f265ffa1f20f"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangePrefix.lean",
+      "bytes": 22746,
+      "sha256": "68e3fa0145d194dc4d8532eb99237af170cb8736ba964ea8ea752bc0c04736bd"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangePrefixSafety.lean",
+      "bytes": 9197,
+      "sha256": "850b3c60a6c6f7e44807a4e50bdae1f3789962a52b6716622fc06a08db5a14b5"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeRivalParity.lean",
+      "bytes": 8346,
+      "sha256": "8ee817790b80b391e4c57cbec91295214dbc3ba3de4e7dc04f66fc683397638c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeSemanticEndpoint.lean",
+      "bytes": 7788,
+      "sha256": "646eab76f1f39827772ed08587824d7c945ba3b2ca6504f34841b6aa73ed4540"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeTaggedLaw.lean",
+      "bytes": 12062,
+      "sha256": "93af2d6a58792060dc2cd7a8bd2723f2d5f3b59c8313926666ffbb20f79fe0b2"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeTailTransport.lean",
+      "bytes": 6580,
+      "sha256": "7ef35cb6890a6b3f721188d3fe569ea2b49faf06001403fbe89b3d4790aa333c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeUncertainPaths.lean",
+      "bytes": 5228,
+      "sha256": "e35c19958c148800cd38c1b7f39f898f5084e78737df1304622cc73c43375ff1"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HiddenChangeUncertainProgress.lean",
+      "bytes": 6288,
+      "sha256": "531276ea83eec88186836c473074c54fb96527e45889b9a7c39f288fa9fe8029"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HistoryPathConsistency.lean",
+      "bytes": 2398,
+      "sha256": "2fc036ffd94d213ad5215c447308132dd08edaad19d5f893dd130780382cc146"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/HistoryStageSafety.lean",
+      "bytes": 7400,
+      "sha256": "2870a3c2d0dd125a59b49600e0fa0853e8d5c46a98153f27846a9f43f860bea5"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/IndependentProductFamilies.lean",
+      "bytes": 2601,
+      "sha256": "9abc010ebfcfabc85695acd3aef10c1ea7fd5c0527dd215320840d57546b1a3d"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/InfiniteRecurrence.lean",
+      "bytes": 5601,
+      "sha256": "1792831c1af1628fae2c31b821f40d6d3a67be22303595f66ca14d273223228a"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/KilledAdaptiveHistory.lean",
+      "bytes": 6262,
+      "sha256": "ff7c13f5212d6b5f9cfdf64979e664e51934422189528d6169b8a72c57cfff56"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/KilledQueryLaw.lean",
+      "bytes": 6110,
+      "sha256": "17793ba9787eb9c3fc1618d4acfc368804be8309197156f22d440508f8ad22a0"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/KilledRecurrentTransfer.lean",
+      "bytes": 9584,
+      "sha256": "5de3075faa5e7041d31cb7c18868c0a91db7ef8d47a0630d26cb63dfcd6dd60b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/LawfulProbability.lean",
+      "bytes": 7175,
+      "sha256": "feef9755524c9f08ad782339f0c60cbbd5c82391d992b48d59d30e191b1da17e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/LawfulRestart.lean",
+      "bytes": 5987,
+      "sha256": "f163f76a1fdab9b12bd96122780339901fcb76b5a3c75cdec56b8d3d505e32dd"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/MarkovCharge.lean",
+      "bytes": 5636,
+      "sha256": "97e0f881af3140b625d45642c06cecc20dbb49773528f8345dd4c948b1ddfc68"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/MarkovKilledBridge.lean",
+      "bytes": 8890,
+      "sha256": "7d828069e42926c9e7acb36bfb683a6b3bd8c6f46907d00ccd8c643e27555c04"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/MarkovSeedPosterior.lean",
+      "bytes": 5670,
+      "sha256": "adc48e40e89c35782be3f30eafb0a62bb6100de48bf853a84e081631da8092e0"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/MarkovSupportAdapter.lean",
+      "bytes": 7541,
+      "sha256": "6c281b2bc6036789a0d342a14df80b1d9c68bcbdf49a1720855d3cd03a46e499"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/MemoryTransitions.lean",
+      "bytes": 2902,
+      "sha256": "3fd4a3d8e4a7a2c74343087c8f3a31714b569ff209b3d63b9764f70c2462fe25"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ObservedEmpiricalRows.lean",
+      "bytes": 11876,
+      "sha256": "90ba0fd6a17d86323b83185acd96a639fe584407d2496dad678aed08bc74717e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ObservedPhaseController.lean",
+      "bytes": 10257,
+      "sha256": "9814025d9195fe98c7df8a8839fd37b8696f0b61d3970cb3dd61cb257a0009f1"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ObservedRowTest.lean",
+      "bytes": 3409,
+      "sha256": "e38e3a972bbdf859b854b42c44a7cbf4d83c0f5b2fb7566d2f726f155572bfee"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/OrderedCycle.lean",
+      "bytes": 1942,
+      "sha256": "d9d8d6acb612c51d2fb4c8a93013304ca8452f4de40edccfc23083e0208d82ea"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ParityTailInvariance.lean",
+      "bytes": 1224,
+      "sha256": "1dc8c0e40a86a205498af32bd7c4a0d96afca6020f2fbd321e21fae2beee0077"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PhaseStabilization.lean",
+      "bytes": 4741,
+      "sha256": "b4d8348961420e0b0ec7459d0ddc0276090fb34349e6b26823ac90afb8ef4183"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PolicyCylinderProbability.lean",
+      "bytes": 4120,
+      "sha256": "2fe2e33744bbd7edada29f4faab67f4b63e22efff2945381c1d367a2859c8d72"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PolicyObservedLaw.lean",
+      "bytes": 4919,
+      "sha256": "ad890909953de257c58ae2750e7f7710747489936704e0767b77aa0485f59d76"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PolicyRowEvaluator.lean",
+      "bytes": 6387,
+      "sha256": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PolicyRowLaw.lean",
+      "bytes": 4690,
+      "sha256": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PolicyTailTransfer.lean",
+      "bytes": 5143,
+      "sha256": "a42c82222bd810e4005b536d27d394a01d28b9fcbdb9ab8d53e3c5d6cdc48720"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PolicyTraceBinding.lean",
+      "bytes": 7699,
+      "sha256": "fe8d6b84a1cd526a6b0a10770aebd52fdbf19b7ae7804f7d2447a33e133e44bf"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PolicyTranscriptFiber.lean",
+      "bytes": 4179,
+      "sha256": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PosteriorFeedbackProduct.lean",
+      "bytes": 7434,
+      "sha256": "0f37e47723087f1ad72667012a3abac927ae29162a14625cc58dfae754346115"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ProductObservationLaw.lean",
+      "bytes": 1663,
+      "sha256": "f7903cc3b7756f708e51eeccaf15220fd864e6964cf81db71b242694c6785760"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/PruningKernel.lean",
+      "bytes": 13589,
+      "sha256": "d16d51d77c59f0538952e1401e105e699fd6d2648df3aa3db8dbf3c09888a253"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RationalTest.lean",
+      "bytes": 4963,
+      "sha256": "87cfb72769c42a459d47eb0c7e3468882ba196abcb709f79fd5febbc34b8d2dc"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RawEmpiricalRows.lean",
+      "bytes": 5413,
+      "sha256": "dbbc16fe32b75bfcd3d1575175cfc857b45926f48533f2317a044cb30cc95d6b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RawTapeRecurrence.lean",
+      "bytes": 5165,
+      "sha256": "d8ff5864c4b0697dbd056940503b6913fe8c3256277efc790601b0e2528f5a8e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RecurrentGraph.lean",
+      "bytes": 3416,
+      "sha256": "395d925096b881b32a46cfdf901ffbd73029cfe598a175bf667884cdc2b6436c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RecurrentSupport.lean",
+      "bytes": 9355,
+      "sha256": "ee53d2fceb24d3552b0cf0798fb8c10b22717f66e80546db2e26d48c36d19899"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RegionAlgorithm.lean",
+      "bytes": 12514,
+      "sha256": "ca456e211d02a994192809bac318ae3a75684f163daf2f9037346b84517b347a"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RelativeTailTransfer.lean",
+      "bytes": 8473,
+      "sha256": "bd89640236881734ec68ed3f1bc21684b8af6c986683a5530f550a2221d4a167"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ResetBudget.lean",
+      "bytes": 6731,
+      "sha256": "d482ed24b70fa4501eefcd7878a7889af7b8f3fbf31f8c6de60b77ebffa758b1"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ResetLaw.lean",
+      "bytes": 5437,
+      "sha256": "f76f752f31565baa5262aa4aafcf21a7f3722d1f74c9681fe6d8a2a50bb02d12"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ResetTrajectory.lean",
+      "bytes": 4486,
+      "sha256": "c1bae278764e20b67382204474b62e8bba769463f812d5adfc2086b85b303f68"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/ResidualSeedPosterior.lean",
+      "bytes": 14840,
+      "sha256": "9608772a6948c3dfb69d95659d27b5f6b961aece08ccc09afc594b63cd264ba6"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RoundRobinPolicy.lean",
+      "bytes": 5568,
+      "sha256": "210a5417479100f010c2c38954c89d551a1c1d52b0d8d784e6fa8e8c94245ea1"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RoundRobinRecurrence.lean",
+      "bytes": 5775,
+      "sha256": "94da50ee38d07888783573e1d78ece8dac5c58871f2e0c3ac5f6dea77008fc4c"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/RoundRobinSchedule.lean",
+      "bytes": 4158,
+      "sha256": "21db947de0a6f06908487f50d6ca0038c9337aed7184cd2dc0eb929982f93e2b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/SafeSetTailTransfer.lean",
+      "bytes": 9649,
+      "sha256": "960293c6ff358b5bcd571b1f24ad62ce43983894836ce8516a24212bb1cd5699"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/SeededPolicyNecessity.lean",
+      "bytes": 3334,
+      "sha256": "d0335e4234a9462aa5f9af7217b78717983539703835041c9a0a334040ede016"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/SelfVerifyingSupport.lean",
+      "bytes": 8289,
+      "sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/SemanticSafeActions.lean",
+      "bytes": 6355,
+      "sha256": "66b166d81fd29f864f7dd81f0af6a67f07c4c35ab709fe67eba52bd1b20bc55b"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/SemanticWinning.lean",
+      "bytes": 5711,
+      "sha256": "a759594adc211fdce0e9013a1d680fabd89983a0202885d8658b7e72477b4252"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/SequentialTapeConsumption.lean",
+      "bytes": 4610,
+      "sha256": "c06b02171163bd00875060eb97e870673ef689d2e4b0fa6a767324899bc304cb"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/StableSupportParityNecessity.lean",
+      "bytes": 11102,
+      "sha256": "e7efd3c855f5adf29c0a3fce65aac3cadba994e8ccc72f32e2829bc1434f802d"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/StackActionLaw.lean",
+      "bytes": 13921,
+      "sha256": "6127e1c8362a4c17f8074937d88ffb13b9fdf7de7ad88d64130f8ee3d35a27fc"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/StackPathRegularity.lean",
+      "bytes": 5195,
+      "sha256": "fee7903917eff18207791b8d6c3679ad671e14873c025b2ff71987fe265fbaf2"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/StageAvailability.lean",
+      "bytes": 4519,
+      "sha256": "8e0df2c695b21d91c2473f200317ebd5c4cf3f8203b34f93f5ec4c77d9a9312a"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/StageFamily.lean",
+      "bytes": 4124,
+      "sha256": "71a3ace147651ccf67befba32bcdd2d10da98dbf662cc61c548b9fe86214e89e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/StageTargetOrExit.lean",
+      "bytes": 5767,
+      "sha256": "6235ac02c768a8184b5a05b9f30659b2c24cb33e8c52017ef4a61652001e125e"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/StationaryPairChain.lean",
+      "bytes": 6498,
+      "sha256": "5b7e23bf7aca12b0529cb77362bf1cb93d54fc1567fe5db7e9d8d000b5d50d99"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/SubprobHellinger.lean",
+      "bytes": 5951,
+      "sha256": "3e56c01155f3f838a3d911426e10746ab4a20b00711c2c4da3a5ff2f7568c8ad"
+    },
+    {
+      "path": "code-evidence/lean/hidden-change/sources/dependencies/StatisticalRepair.lean",
+      "bytes": 7979,
+      "sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4"
+    },
+    {
+      "path": "code-evidence/replay.py",
+      "bytes": 19758,
+      "sha256": "4b1522dbe651ac97bece149b2fd21c8fc0688a87ac7bbd10e1f761bcf80d9adc"
+    },
+    {
+      "path": "code-evidence/tests/test_replay_contract.py",
+      "bytes": 8550,
+      "sha256": "a7334c42d58f90331ef8de0e975763ae46bae46356e5503a89ea2f9d0980e1db"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/dependencies.py",
+      "bytes": 2328,
+      "sha256": "80a239405e103d780c8328acd03347f84b9f6af26e795ae0cc562e090bff600f"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/efficient.py",
+      "bytes": 6075,
+      "sha256": "eaf319dd0909271ea757ec14b88efa0ad45f325ba3b652aa6a6f88f3230a157f"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/mec.py",
+      "bytes": 2841,
+      "sha256": "22a119d827635d18fd47bccfded1fcf2735f177a5534830525a026c9dc2e40f4"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/negative.py",
+      "bytes": 1784,
+      "sha256": "41658548a65dc6aa6bffdae1f11a692bb4d58ccec6056a6a95bd55a5817ea4a0"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/fixtures.py",
+      "bytes": 2449,
+      "sha256": "d05f7b01d3c85cb7b873ccc0fa93e0bfef3260a119a50b49a82ca9d2e57f4d53"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/operation_counts.py",
+      "bytes": 2001,
+      "sha256": "587a53b4330851962e34b896c9479addf917bc5b2ce28a1bcbfeaa35302ecef8"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/support.py",
+      "bytes": 1801,
+      "sha256": "8ec609b981f3176589a31c0907ce9e0bd02dbadec2d5568e0606630f616f4b58"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/test_dependencies.py",
+      "bytes": 1380,
+      "sha256": "e8ddcc7f0c691cfdc31c7f2da1eba91de7ae2e67782dd1e5aa648a683bc5de50"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/test_mec.py",
+      "bytes": 3346,
+      "sha256": "197c3ddc6295de759436a1a5b14dc39aa48e501b0178333aba5177ad319e0a01"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/test_solver.py",
+      "bytes": 9422,
+      "sha256": "a4837ad3e57c780866d14ee332c952b5695369180395e98dfd89f8d0d0146253"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/test_structure.py",
+      "bytes": 3219,
+      "sha256": "b0d04c12037b0ff4e7ada426efbb23033339127de78b78f44f9af0b026c29cdd"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/efficient-v1/tests/test_thresholds.py",
+      "bytes": 4880,
+      "sha256": "add193071ffbf84dcddae379692c2e37e9383a07da794a0b4d4f16df3671c331"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/API.md",
+      "bytes": 4549,
+      "sha256": "5d9f384c23ee6995eb963da6bb10b3073bcc4dd856d666f4c639e1aca71288c5"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/certificates.py",
+      "bytes": 6959,
+      "sha256": "a75e325dd879bab3ab392b4a467e12b93716ee33eebec61d30ba668fbdd1e41c"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/controller.py",
+      "bytes": 6354,
+      "sha256": "777a95bf89caa09b4c0c4c9274e4b5aa3b7371d63ea9a92c313e7bffba8be003"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/finite.py",
+      "bytes": 3263,
+      "sha256": "50c7a6dbb1f72b9907886eacd2ad04941ff803e01703b8968ef699cfa1e8fae1"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/model.py",
+      "bytes": 2852,
+      "sha256": "81e01e552e6ebb455f381a81f2568aa08d5b233522bda53d23c8b930d023c823"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/synthesis.py",
+      "bytes": 4008,
+      "sha256": "94c0445a5979171ed5eba929ac75a88f02e1685f41701ee21d809f4b628bde09"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/tests/fixtures.py",
+      "bytes": 2449,
+      "sha256": "d05f7b01d3c85cb7b873ccc0fa93e0bfef3260a119a50b49a82ca9d2e57f4d53"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/tests/support.py",
+      "bytes": 280,
+      "sha256": "d6e3287baf9864f397f962658bcd5af43c96e1b347c8aacd8e93b3d39ac25879"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/tests/test_certificates.py",
+      "bytes": 4727,
+      "sha256": "7b5282bc84c2637c44481799c9f28334114189854878a28bcf6ad9eb67cf36ca"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/tests/test_controller.py",
+      "bytes": 8101,
+      "sha256": "a9711497756f6a0962dae8f6795c87c7cf8415945dfa7cdf903b512d7461b4eb"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/tests/test_finite.py",
+      "bytes": 2135,
+      "sha256": "685f5307b177a1a1aed10fc486dac57ea0c5b3f26d1a0fc17a4500ece091acc9"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/tests/test_model.py",
+      "bytes": 2768,
+      "sha256": "4eadeb5229787a92545139ebaff231c74ccb674a259773efcbc7ffdc4a28bf06"
+    },
+    {
+      "path": "code-evidence/tranche18/research/hidden-change/reference-v1/tests/test_synthesis.py",
+      "bytes": 4327,
+      "sha256": "3532d000ddaaa951456e2ea8a6abb2ba1f46c076584b317940bc721c59fce5ac"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/component_checks.py",
+      "bytes": 2128,
+      "sha256": "c9f1f091a125fc6d197772ff5b870ab10dd11317d13e3ca29edb5e39bf2a64a9"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/oracle.py",
+      "bytes": 3222,
+      "sha256": "57d0f7be02946ac8723cfaaac9d8e0cda0a6743ff7f382c7a26db1129121b1e2"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/replay_previous_adversarial.py",
+      "bytes": 1139,
+      "sha256": "a74ef658c1e8d530b2d15bed2411e8a59f20cc2ecdc688031663a0a4514d8c04"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/run_campaign.py",
+      "bytes": 5607,
+      "sha256": "dfad96bc36c2d0f75fd737cf46ff0295254bfacf9f207795f060321e2707b727"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/run_extra_campaign.py",
+      "bytes": 2181,
+      "sha256": "6f1428055f2db50eb8e43a3ba7e17ed1f149b999bbeb63597b386f47ce224393"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/run_extra_end_to_end.py",
+      "bytes": 524,
+      "sha256": "04e6462783fa751eb968178f6090dca06fe981ec2b8512f22a9365d58851c7f0"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/run_negative_campaign.py",
+      "bytes": 2140,
+      "sha256": "75d30ef82def50fa8e2dacc7cd60b4de2268f38cfb9f35b4794f6ec8b13d7211"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/test_efficient_independent.py",
+      "bytes": 8606,
+      "sha256": "d6d18bd003ad11dee04c506b4a2e56c3d965285cb1ec2b62700dffc1be9d95af"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-efficient/test_production_paths.py",
+      "bytes": 5219,
+      "sha256": "8ca7779e47f8241b587ba4fc2b8fc37f5880513b787bdf2e1751c67b64d7ac10"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-reference/oracle.py",
+      "bytes": 8724,
+      "sha256": "093b6530adab6b9c1cd022a3f3c82208088534717a9bc412673ad9a1857cbe33"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-reference/run_census.py",
+      "bytes": 3391,
+      "sha256": "a6011a82aeabb2d82b45fb753996af1f77a2e6a343faf412c4a1cdbeb8a6421d"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-reference/run_extended_census.py",
+      "bytes": 442,
+      "sha256": "6a85124dc106a6387108b323375630b77b1c2aa9e06cc293a7320d4fc5dc0d54"
+    },
+    {
+      "path": "code-evidence/tranche18/reviews/hidden-change-reference/test_reference_independent.py",
+      "bytes": 15464,
+      "sha256": "33e9e65f19f696211583e81330751a42017869f6faf723efe45f313c52018db3"
+    },
+    {
+      "path": "four-state-stress-control/EXECUTION.json",
+      "bytes": 291,
+      "sha256": "ec19ee97919901e7721f16ebb6d7c064ef38d92812c6a853ae65bd2670c6bc2d"
+    },
+    {
+      "path": "four-state-stress-control/FEATURE_COVERAGE.json",
+      "bytes": 685,
+      "sha256": "aaa93c8d212af5976104c83ae6bc52fced9dca3f666629c7cd93bf8f72136e20"
+    },
+    {
+      "path": "four-state-stress-control/INPUTS.json",
+      "bytes": 93191,
+      "sha256": "d5c0403840e123cf07f61d88b29ac01d13d256961edde65bbd158ee0b3f397f0"
+    },
+    {
+      "path": "four-state-stress-control/MANIFEST.json",
+      "bytes": 3644,
+      "sha256": "a1aea1d36db3355f5b0c908f7df41fd77165048feb70aa63b7cd6da525cbe20c"
+    },
+    {
+      "path": "four-state-stress-control/README.md",
+      "bytes": 6111,
+      "sha256": "89a3add9be4b25912e773341b47066ac4e2815fadfda1d90ae5d32bfa35f558e"
+    },
+    {
+      "path": "four-state-stress-control/RESULT.json",
+      "bytes": 1758,
+      "sha256": "a45e0b93cd8de4a3fd47733ef48b69dc322f0ca299d5d98dd348e2280add006c"
+    },
+    {
+      "path": "four-state-stress-control/SOURCE_BINDINGS.json",
+      "bytes": 3482,
+      "sha256": "22b590a1fb08de58aea1b565c7c6055a4ae7fa892d819296cfb82e558b224868"
+    },
+    {
+      "path": "four-state-stress-control/run_control.py",
+      "bytes": 16928,
+      "sha256": "54d3331b984636eb15aaa4dd783995fed6147a527be15d1c6afa99bb5a993fe1"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/efficient-v1/dependencies.py",
+      "bytes": 2328,
+      "sha256": "80a239405e103d780c8328acd03347f84b9f6af26e795ae0cc562e090bff600f"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/efficient-v1/efficient.py",
+      "bytes": 6075,
+      "sha256": "eaf319dd0909271ea757ec14b88efa0ad45f325ba3b652aa6a6f88f3230a157f"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/efficient-v1/mec.py",
+      "bytes": 2841,
+      "sha256": "22a119d827635d18fd47bccfded1fcf2735f177a5534830525a026c9dc2e40f4"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/efficient-v1/negative.py",
+      "bytes": 1784,
+      "sha256": "41658548a65dc6aa6bffdae1f11a692bb4d58ccec6056a6a95bd55a5817ea4a0"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/reference-v1/certificates.py",
+      "bytes": 6959,
+      "sha256": "a75e325dd879bab3ab392b4a467e12b93716ee33eebec61d30ba668fbdd1e41c"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/reference-v1/controller.py",
+      "bytes": 6354,
+      "sha256": "777a95bf89caa09b4c0c4c9274e4b5aa3b7371d63ea9a92c313e7bffba8be003"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/reference-v1/finite.py",
+      "bytes": 3263,
+      "sha256": "50c7a6dbb1f72b9907886eacd2ad04941ff803e01703b8968ef699cfa1e8fae1"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/reference-v1/model.py",
+      "bytes": 2852,
+      "sha256": "81e01e552e6ebb455f381a81f2568aa08d5b233522bda53d23c8b930d023c823"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/research/hidden-change/reference-v1/synthesis.py",
+      "bytes": 4008,
+      "sha256": "94c0445a5979171ed5eba929ac75a88f02e1685f41701ee21d809f4b628bde09"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/reviews/hidden-change-efficient/oracle.py",
+      "bytes": 3222,
+      "sha256": "57d0f7be02946ac8723cfaaac9d8e0cda0a6743ff7f382c7a26db1129121b1e2"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/reviews/hidden-change-efficient/run_campaign.py",
+      "bytes": 5607,
+      "sha256": "dfad96bc36c2d0f75fd737cf46ff0295254bfacf9f207795f060321e2707b727"
+    },
+    {
+      "path": "four-state-stress-control/sources/tranche18/reviews/hidden-change-reference/oracle.py",
+      "bytes": 8724,
+      "sha256": "093b6530adab6b9c1cd022a3f3c82208088534717a9bc412673ad9a1857cbe33"
+    },
+    {
+      "path": "hase-source-build/FINAL_BASE_BINDING.json",
+      "bytes": 2889,
+      "sha256": "bbcd5fe99c3b79b183617a4a7900e3152522a5651ad3bc20f267f99e75da4ddf"
+    },
+    {
+      "path": "hase-source-build/PUBLIC_MANIFEST.json",
+      "bytes": 5485,
+      "sha256": "ef584ef906d313c22094c4bc2e536872231314979a70c32b16d92eed826350db"
+    },
+    {
+      "path": "hase-source-build/README.md",
+      "bytes": 7751,
+      "sha256": "fb547676e8ebb71cef9acaacbac9400dcb52346ca8b183ff29bc07b2dc83c8b7"
+    },
+    {
+      "path": "hase-source-build/evidence/ADAPTER_SOURCE_FREEZE_v2.json",
+      "bytes": 1305,
+      "sha256": "df8ea0ab67e6ce65483d33de0928222228673d9f582d27b947c36c05deae7e81"
+    },
+    {
+      "path": "hase-source-build/inputs/DEPENDENCY_CLOSURE.json",
+      "bytes": 422772,
+      "sha256": "b052da2940028d54307acfa3078c6fe26a11a9884b1a68326081fcc90c013c01"
+    },
+    {
+      "path": "hase-source-build/inputs/INPUT_MANIFEST.json",
+      "bytes": 2647,
+      "sha256": "ae700932bd7761971567eb4c1b76aeb66fdd0ed625a9d5b5000f8926173344be"
+    },
+    {
+      "path": "hase-source-build/inputs/OFFICIAL_TOOLCHAIN_ARCHIVE_BYTE_CHECK.json",
+      "bytes": 1212,
+      "sha256": "7e13adc2c28945b23408631a60576a9bbed329d0ecaea08c7989d0d17afebf4f"
+    },
+    {
+      "path": "hase-source-build/inputs/lean/lake-manifest.json",
+      "bytes": 3530,
+      "sha256": "59f9f607436e2b70ba2b8060aafcbf5edbd80f5c5c69553fe43447d039589924"
+    },
+    {
+      "path": "hase-source-build/inputs/lean/lakefile.lean",
+      "bytes": 2659,
+      "sha256": "b7c139548d9e3417149723c5f2568e0956f369fe2a11fb736d4c5ea801f30826"
+    },
+    {
+      "path": "hase-source-build/inputs/lean/lean-toolchain",
+      "bytes": 25,
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/Cli_source_inventory.json",
+      "bytes": 1444,
+      "sha256": "f285d6513abb5f3211ec38cf305b9644d2cf2f9a78cda7966e6f450bcf644f19"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/LeanSearchClient_source_inventory.json",
+      "bytes": 2100,
+      "sha256": "d505079aad033cf61fabeaec0800a005da7bc4b48ce7e9471853b39013735231"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/Qq_source_inventory.json",
+      "bytes": 4264,
+      "sha256": "e7d348f521792efaa74951de1edcb0a2c85afe11cf952c88c0d7f6aa2d05b212"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/aesop_source_inventory.json",
+      "bytes": 32795,
+      "sha256": "34c97802225b52724c62133701a69d4466685d3b40c6ad000ec5b43239e77a3d"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/batteries_source_inventory.json",
+      "bytes": 34319,
+      "sha256": "8e121ae7ace129ad9270db82ab6682609f5fec12a0d2de4fe567cf8898d6f039"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/importGraph_source_inventory.json",
+      "bytes": 4295,
+      "sha256": "10823805cb2a1c95c086d67ce11ac2b3a679510b56f6fab499dc8e69bdace987"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/mathlib_source_inventory.json",
+      "bytes": 1008600,
+      "sha256": "f461e480570d88a8b438fc332b6f3327216df187dedd09c979d47bedbaaa3bba"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/plausible_source_inventory.json",
+      "bytes": 2226,
+      "sha256": "fecd31abb1a75550a130fb9cbc6f56b4328a98a0b4983626587165cf47c9a03b"
+    },
+    {
+      "path": "hase-source-build/inputs/source-inventories/proofwidgets_source_inventory.json",
+      "bytes": 10207,
+      "sha256": "074154889520fb2274dab098ebe07670bc21540977bfffce57b5a06047519aec"
+    },
+    {
+      "path": "hase-source-build/inputs/widget-package-overrides.json",
+      "bytes": 515,
+      "sha256": "e35d12037855a06c141a930f1b1fde5d21f5e82b3c629e70d42f4ab6a370c052"
+    },
+    {
+      "path": "hase-source-build/results/DEPENDENCY_SOURCE_OBJECTS.json",
+      "bytes": 1706157,
+      "sha256": "788d04d23dc6b294103623729e541469abaa9bd3de5dd6613a447f7344b55a9b"
+    },
+    {
+      "path": "hase-source-build/results/PREREQUISITE_ACQUISITION.json",
+      "bytes": 5515,
+      "sha256": "49c315252eba977e04810cb7a6942cac6f6d33317d51c828ed97d40180ad5244"
+    },
+    {
+      "path": "hase-source-build/results/QUALIFICATION_SUMMARY.json",
+      "bytes": 4155,
+      "sha256": "700aa1beeccd3c35e116d51431e02a93c60adffb6ce3b11fffc8349d369538d0"
+    },
+    {
+      "path": "hase-source-build/tests/test_adapters.py",
+      "bytes": 4300,
+      "sha256": "8bb189eb2ff21bf7c160185f87642d4602edec03f26f49a53879d1ba873a5174"
+    },
+    {
+      "path": "hase-source-build/tools/context.py",
+      "bytes": 968,
+      "sha256": "5957e2677ef60196c5d8f59e1bf8af67bec0f42d089c2aedf5e9a30cbd0b2123"
+    },
+    {
+      "path": "hase-source-build/tools/derive_final_package.py",
+      "bytes": 6391,
+      "sha256": "8785e7de9225627451fe5bddab9fdc5f085c3d7dd4eb368c812e51a96a1fed2a"
+    },
+    {
+      "path": "hase-source-build/tools/derive_package.py",
+      "bytes": 6391,
+      "sha256": "c9ffbf277413135fa59d194d22de14714a46c4ac9f1d9098187e7512403ffc12"
+    },
+    {
+      "path": "hase-source-build/tools/final_verify.py",
+      "bytes": 8243,
+      "sha256": "906d49f4c331d79bdf85df549dcc64f5b4a926a70f33a33a21de217855eb5da7"
+    },
+    {
+      "path": "hase-source-build/tools/prepare.py",
+      "bytes": 6311,
+      "sha256": "58e62b416e505cc3d1fa176caca64ee03f96dc3117cb9310867b560c4cc8768c"
+    },
+    {
+      "path": "hase-source-build/tools/run_build.py",
+      "bytes": 3502,
+      "sha256": "e0b659e39e3681e292470aaac8f3ebd7f8fafb8dbb4f4dad6f9e137ecb09f439"
+    },
+    {
+      "path": "hase-source-build/tools/source_closure.py",
+      "bytes": 2974,
+      "sha256": "2c2304e2a9f525f5cd893fd3bc272231ee5fa0627838e7170c6eaf06184f59c6"
+    },
+    {
+      "path": "hase-source-build/tools/verify_cold_build.py",
+      "bytes": 6290,
+      "sha256": "b0626e8a3d985d9d27e6000a49fc044beb95f50d463f94f31ac5ec6d1b70be09"
+    },
+    {
+      "path": "hase-source-build/tools/verify_widget.py",
+      "bytes": 1988,
+      "sha256": "14b788637e192a35cb3a92d8a68530ea8c7645b8f8b48c99b6799601786c301d"
+    },
+    {
+      "path": "hidden-change-cache-setup/PUBLIC_MANIFEST.json",
+      "bytes": 3220,
+      "sha256": "672f66b6e7bd5735deeff44e9c0e88cd291f5f26353cf432abd5a32f7b5f1e93"
+    },
+    {
+      "path": "hidden-change-cache-setup/PUBLIC_SUMMARY.json",
+      "bytes": 2698,
+      "sha256": "b95f0faa0553b10ddc673874c839a390f4c4f40ef31f532339b39cc41fb4bfd8"
+    },
+    {
+      "path": "hidden-change-cache-setup/README.md",
+      "bytes": 6452,
+      "sha256": "6cb3686f8225216646c469db8e15f29aa9b9c87994aefe0ade57b4dfaa12cded"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/QUALIFICATION_PLAN.md",
+      "bytes": 2870,
+      "sha256": "9a4255223c8c149ffb0c6dd267c8721725106e046040652a89035b3052839abe"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/RECIPE_MANIFEST.json",
+      "bytes": 2521,
+      "sha256": "df2921321ea700cc351edd5f24a14756e2f0c04adfb702ab7c9d3e549ab12e0d"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/pins.json",
+      "bytes": 3178,
+      "sha256": "982057a21093c223543f0f0016bd29900b8d0ef9125e65aaaf971bca77910b2f"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/Cli_source_inventory.json",
+      "bytes": 1444,
+      "sha256": "f285d6513abb5f3211ec38cf305b9644d2cf2f9a78cda7966e6f450bcf644f19"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/LeanSearchClient_source_inventory.json",
+      "bytes": 2100,
+      "sha256": "d505079aad033cf61fabeaec0800a005da7bc4b48ce7e9471853b39013735231"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/Qq_source_inventory.json",
+      "bytes": 4264,
+      "sha256": "e7d348f521792efaa74951de1edcb0a2c85afe11cf952c88c0d7f6aa2d05b212"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/aesop_source_inventory.json",
+      "bytes": 32795,
+      "sha256": "34c97802225b52724c62133701a69d4466685d3b40c6ad000ec5b43239e77a3d"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/batteries_source_inventory.json",
+      "bytes": 34319,
+      "sha256": "8e121ae7ace129ad9270db82ab6682609f5fec12a0d2de4fe567cf8898d6f039"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/importGraph_source_inventory.json",
+      "bytes": 4295,
+      "sha256": "10823805cb2a1c95c086d67ce11ac2b3a679510b56f6fab499dc8e69bdace987"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/mathlib_source_inventory.json",
+      "bytes": 1008600,
+      "sha256": "f461e480570d88a8b438fc332b6f3327216df187dedd09c979d47bedbaaa3bba"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/plausible_source_inventory.json",
+      "bytes": 2226,
+      "sha256": "fecd31abb1a75550a130fb9cbc6f56b4328a98a0b4983626587165cf47c9a03b"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/source-inventories/proofwidgets_source_inventory.json",
+      "bytes": 10207,
+      "sha256": "074154889520fb2274dab098ebe07670bc21540977bfffce57b5a06047519aec"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/inputs/toolchain-files.json",
+      "bytes": 883,
+      "sha256": "42fa57677cb7cabddd4f3b5eea38b3a5a8f211869e26863ac50c21b86b9eab0c"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/provision.py",
+      "bytes": 16646,
+      "sha256": "c34a8b5c5105e4308abf7b888b9b3fce57c0906d13d93c3fdf36e4633590c8e5"
+    },
+    {
+      "path": "hidden-change-cache-setup/recipe/test_refusal_custody.py",
+      "bytes": 1633,
+      "sha256": "7b0eef9674097a729fc5e1b55cadcbac13948c4baafcc9ef6f552f044b9976df"
+    }
+  ]
+}

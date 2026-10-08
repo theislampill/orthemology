@@ -1,0 +1,797 @@
+{
+  "schema": "t20-anchored-original-provision-build-v1",
+  "status": "PASS",
+  "utc": "2026-10-07T09:21:29.499778+00:00",
+  "compiler": {
+    "path": "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+    "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023"
+  },
+  "import_scope": "Init and the three new modules only",
+  "semantic_scope": "Conditional typed contribution-incidence mathematics and explicit finite interpretations; no metaphysical warrant verification",
+  "source_files": [
+    {
+      "path": "src/AnchoredSourceBridge.lean",
+      "bytes": 10743,
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1"
+    },
+    {
+      "path": "src/Controls.lean",
+      "bytes": 22563,
+      "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc"
+    },
+    {
+      "path": "src/ModalAbilityControl.lean",
+      "bytes": 4387,
+      "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64"
+    },
+    {
+      "path": "tests/APIContract.lean",
+      "bytes": 681,
+      "sha256": "bb5182b6c596507e4185c591fdbe309be123764844efa4e8cbccfcc372ce068d"
+    },
+    {
+      "path": "tests/Acceptance.lean",
+      "bytes": 1041,
+      "sha256": "3571bc9ef4c07d61b060abb20991a11cf6d977ebe13ba7e8181cc3ad8cdcba10"
+    },
+    {
+      "path": "tests/rejected/01_cnd_alone_forces_coverage.lean",
+      "bytes": 200,
+      "sha256": "7d99c43260f9ed90ae36740f17d94ef291f4e3d77a7fffce0d5985c9bf82d984"
+    },
+    {
+      "path": "tests/rejected/02_drop_cnd_preserves_uniqueness.lean",
+      "bytes": 202,
+      "sha256": "21280060176dcbff943829f4fb4302d93613d7103362ab4ee6680f50639b35eb"
+    },
+    {
+      "path": "tests/rejected/03_vacuous_mode_creates_anchor.lean",
+      "bytes": 205,
+      "sha256": "1ac39626c951d071727e0b66530b432628a0440af5fc820b8805b4799dbefb62"
+    },
+    {
+      "path": "tests/rejected/04_local_mode_forces_global_without_connection.lean",
+      "bytes": 204,
+      "sha256": "90a18952c366bd62521fe6ba3c7ca5df17220cb04b0a4eee7212ae86e47f3926"
+    },
+    {
+      "path": "tests/rejected/05_arbitrary_graph_transfers_actual_provision.lean",
+      "bytes": 200,
+      "sha256": "a6250f28b59723d5fd7e491eb33e4d683e194527eadaca9d4996073babd24b31"
+    },
+    {
+      "path": "tests/rejected/06_ignore_original_use.lean",
+      "bytes": 205,
+      "sha256": "64b8ee9c29eb55bbcb508a2d0ae562e7927b57d2afeeb7a78b61f8dc10e62c8c"
+    },
+    {
+      "path": "tests/rejected/07_ignore_mode_role.lean",
+      "bytes": 206,
+      "sha256": "10362d056a0872e07ad0ebf0997f3c4cb4573f0b3a2714b57710a57d9af3db76"
+    },
+    {
+      "path": "tests/rejected/08_ignore_contributor_visibility.lean",
+      "bytes": 199,
+      "sha256": "1040fe46e4a3dc0a233201651a8571188daaed33498a7ed243e985d0b2bff173"
+    },
+    {
+      "path": "tests/rejected/09_coarse_effect_is_full_account.lean",
+      "bytes": 197,
+      "sha256": "444897f4778d2912b1562b950c78eb007cb26d9137386d31b583102ae32979cb"
+    },
+    {
+      "path": "tests/rejected/10_separated_originals_meet_mode_at_mixed.lean",
+      "bytes": 203,
+      "sha256": "be0e8f348e1159e2a59ce7a7a64230897192ed7a52ea6c765139479e4bd89a71"
+    },
+    {
+      "path": "tests/rejected/11_field_unity_excludes_outside_necessary_source.lean",
+      "bytes": 180,
+      "sha256": "a2281dc17e2ed61df033cb1dbfa74ceb3a123032c8bb9946c1f4bfb2b1498585"
+    },
+    {
+      "path": "tests/rejected/12_causal_provision_transfers_assertion_ownership.lean",
+      "bytes": 193,
+      "sha256": "a8ccb8d0404a27d53f224c998f7867265a51e1a9f3a5e170cf1c429bb9ac5c7c"
+    },
+    {
+      "path": "tests/rejected/13_artificial_bundle_is_admissible.lean",
+      "bytes": 197,
+      "sha256": "14b8c6acf39d6b10ddc81a5d825dad8f166d708b61b0167d54bb9d61b7f0768a"
+    },
+    {
+      "path": "tests/rejected/14_conformance_without_classification.lean",
+      "bytes": 200,
+      "sha256": "90c1d550ec8fe54f0b822eb04e00e89a800f029dc233f14a66e01cea37e75f1d"
+    },
+    {
+      "path": "tests/rejected/15_norm_without_actual_conformance.lean",
+      "bytes": 206,
+      "sha256": "07133955d39b64006882de25ee5bd58802d6085be11260f17c74b1031c934e77"
+    },
+    {
+      "path": "tests/rejected/16_empty_inventory_provider_is_unique.lean",
+      "bytes": 224,
+      "sha256": "3d085cb341414d6558aa2fa77e6c8cb7964d2e112aba6ee37ac116287f28b51f"
+    },
+    {
+      "path": "tests/rejected/17_source_provision_authenticates_message.lean",
+      "bytes": 193,
+      "sha256": "768c8045f5eab5ac399ac5d6aff9421863a4434d85be18277e255197a629b0dc"
+    },
+    {
+      "path": "tests/rejected/18_ability_entails_actual_solo.lean",
+      "bytes": 162,
+      "sha256": "49fa43a8cd2709652557e0b87d1e666581d949022747335feb1c4189106a875f"
+    },
+    {
+      "path": "tests/rejected/19_field_cnd_is_not_global_cnd.lean",
+      "bytes": 194,
+      "sha256": "81e1ec9a98519b5cddfa3ec11f58a425b67e6a2f7def4301e071b6df074faeec"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 4387,
+      "sha256": "80c009d0a2d91df810e3dad80e214b269d2972b2a0be581a71050366976662eb"
+    }
+  ],
+  "steps": [
+    {
+      "label": "toolchain",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "toolchain.log"
+    },
+    {
+      "label": "AnchoredSourceBridge",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-o",
+        "tranche20/foundational-audit/anchored-source-bridge/builds/final-field-cnd-v1/AnchoredSourceBridge.olean",
+        "tranche20/foundational-audit/anchored-source-bridge/src/AnchoredSourceBridge.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "AnchoredSourceBridge.log"
+    },
+    {
+      "label": "Controls",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-o",
+        "tranche20/foundational-audit/anchored-source-bridge/builds/final-field-cnd-v1/Controls.olean",
+        "tranche20/foundational-audit/anchored-source-bridge/src/Controls.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "Controls.log"
+    },
+    {
+      "label": "ModalAbilityControl",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-o",
+        "tranche20/foundational-audit/anchored-source-bridge/builds/final-field-cnd-v1/ModalAbilityControl.olean",
+        "tranche20/foundational-audit/anchored-source-bridge/src/ModalAbilityControl.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "ModalAbilityControl.log"
+    },
+    {
+      "label": "Acceptance",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/Acceptance.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "Acceptance.log"
+    },
+    {
+      "label": "Readback",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/builds/final-field-cnd-v1/Readback.lean"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "log": "Readback.log"
+    },
+    {
+      "label": "rejected-01_cnd_alone_forces_coverage",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/01_cnd_alone_forces_coverage.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-01_cnd_alone_forces_coverage.log"
+    },
+    {
+      "label": "rejected-02_drop_cnd_preserves_uniqueness",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/02_drop_cnd_preserves_uniqueness.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-02_drop_cnd_preserves_uniqueness.log"
+    },
+    {
+      "label": "rejected-03_vacuous_mode_creates_anchor",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/03_vacuous_mode_creates_anchor.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-03_vacuous_mode_creates_anchor.log"
+    },
+    {
+      "label": "rejected-04_local_mode_forces_global_without_connection",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/04_local_mode_forces_global_without_connection.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-04_local_mode_forces_global_without_connection.log"
+    },
+    {
+      "label": "rejected-05_arbitrary_graph_transfers_actual_provision",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/05_arbitrary_graph_transfers_actual_provision.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-05_arbitrary_graph_transfers_actual_provision.log"
+    },
+    {
+      "label": "rejected-06_ignore_original_use",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/06_ignore_original_use.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-06_ignore_original_use.log"
+    },
+    {
+      "label": "rejected-07_ignore_mode_role",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/07_ignore_mode_role.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-07_ignore_mode_role.log"
+    },
+    {
+      "label": "rejected-08_ignore_contributor_visibility",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/08_ignore_contributor_visibility.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-08_ignore_contributor_visibility.log"
+    },
+    {
+      "label": "rejected-09_coarse_effect_is_full_account",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/09_coarse_effect_is_full_account.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-09_coarse_effect_is_full_account.log"
+    },
+    {
+      "label": "rejected-10_separated_originals_meet_mode_at_mixed",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/10_separated_originals_meet_mode_at_mixed.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-10_separated_originals_meet_mode_at_mixed.log"
+    },
+    {
+      "label": "rejected-11_field_unity_excludes_outside_necessary_source",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/11_field_unity_excludes_outside_necessary_source.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-11_field_unity_excludes_outside_necessary_source.log"
+    },
+    {
+      "label": "rejected-12_causal_provision_transfers_assertion_ownership",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/12_causal_provision_transfers_assertion_ownership.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-12_causal_provision_transfers_assertion_ownership.log"
+    },
+    {
+      "label": "rejected-13_artificial_bundle_is_admissible",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/13_artificial_bundle_is_admissible.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-13_artificial_bundle_is_admissible.log"
+    },
+    {
+      "label": "rejected-14_conformance_without_classification",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/14_conformance_without_classification.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-14_conformance_without_classification.log"
+    },
+    {
+      "label": "rejected-15_norm_without_actual_conformance",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/15_norm_without_actual_conformance.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-15_norm_without_actual_conformance.log"
+    },
+    {
+      "label": "rejected-16_empty_inventory_provider_is_unique",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/16_empty_inventory_provider_is_unique.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-16_empty_inventory_provider_is_unique.log"
+    },
+    {
+      "label": "rejected-17_source_provision_authenticates_message",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/17_source_provision_authenticates_message.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-17_source_provision_authenticates_message.log"
+    },
+    {
+      "label": "rejected-18_ability_entails_actual_solo",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/18_ability_entails_actual_solo.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-18_ability_entails_actual_solo.log"
+    },
+    {
+      "label": "rejected-19_field_cnd_is_not_global_cnd",
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "tranche20/foundational-audit/anchored-source-bridge/tests/rejected/19_field_cnd_is_not_global_cnd.lean"
+      ],
+      "exit_code": 1,
+      "expected": "reject",
+      "log": "rejected-19_field_cnd_is_not_global_cnd.log"
+    }
+  ],
+  "declarations": [
+    {
+      "name": "AnchoredSourceBridge.overlap_symmetric",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.mode_satisfaction_of_classification_conformance",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.source_mode_of_mode_satisfaction",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.represented_across_overlap",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.complete_along_path",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.global_coverage_of_anchor",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.global_coverage_of_qualified_anchor",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.field_cnd_of_global_cnd",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.represented_rivals_equal",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.actual_rivals_equal",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.mode_satisfaction_iff_global_coverage",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.source_mode_iff_global_coverage",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.positive_along_path",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.every_field_positive",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.complete_providers_equal_at_positive",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.complete_provider_exists",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.unique_complete_provider",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.guarded_common_original_provider",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.guarded_common_original_provider_of_global_cnd",
+      "module": "AnchoredSourceBridge"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.finite_quantifiers",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.split_signature",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.singleton_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.hub_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.split_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.duplicate_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.unanchored_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.hidden_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.defective_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.empty_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_use_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_role_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.full_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.outside_duplicate_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.adverse_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.aggregate_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_source_mode",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_cnd",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_anchor",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.separated_complete_only_at_e",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.separated_not_connected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_connectedness",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.arbitrary_graph_not_faithful",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_original_use",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_mode_role",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_visibility",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.coarse_effect_not_full_account",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.mixed_occurrence_positive",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.mixed_occurrence_adverse",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.faithful_derived_agency_and_mediation",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.outside_field_necessary_original",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.assertion_ownership_separate",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.arbitrary_bundle_rejected",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_classification",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_conformance",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.empty_inventory_singleton",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.full_nonvacuous_model",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.outside_duplication_preserves_field_uniqueness",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.principal_application_with_outside_duplication",
+      "module": "Controls"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.both_have_interpreted_finite_ability",
+      "module": "ModalAbilityControl"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.matching_outcome_is_not_same_token",
+      "module": "ModalAbilityControl"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.intact_finite_power_differentiated_actual_production",
+      "module": "ModalAbilityControl"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.actual_partial_fixture_mapping",
+      "module": "ModalAbilityControl"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.finite_ability_does_not_supply_source_mode",
+      "module": "ModalAbilityControl"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "Acceptance.log",
+      "bytes": 12031,
+      "sha256": "d04b179b78a0e53ee297aedac6bf201d48aff4b3c8ff8a82834c070ad250939d"
+    },
+    {
+      "path": "AnchoredSourceBridge.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AnchoredSourceBridge.olean",
+      "bytes": 283808,
+      "sha256": "634ec64518ed3ee894241d299c1164cefa7d1a347074a5dfcdfef4fb146bab27"
+    },
+    {
+      "path": "Controls.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Controls.olean",
+      "bytes": 1564760,
+      "sha256": "935edb329cd831676525a0720248ba614cd23a3b29d8c31cef5cfd1cdbac03e4"
+    },
+    {
+      "path": "ModalAbilityControl.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ModalAbilityControl.olean",
+      "bytes": 458896,
+      "sha256": "264875f3266b6a06ce46bbc6b38e451626310553bbb66ae5c528005595258f3b"
+    },
+    {
+      "path": "Readback.lean",
+      "bytes": 8324,
+      "sha256": "42495f4e480ff6d14799065a7ee3022c4890fbd2fcec25e3befebc8826b63b91"
+    },
+    {
+      "path": "Readback.log",
+      "bytes": 59624,
+      "sha256": "429d2cc45156cc083e5c07d624773e5aa69782f1359fe9e513131c3348714291"
+    },
+    {
+      "path": "rejected-01_cnd_alone_forces_coverage.log",
+      "bytes": 320,
+      "sha256": "170a8aa516fe7d8c13a087a07a555b3c684ae375827ba30c7972af31cab8bd17"
+    },
+    {
+      "path": "rejected-02_drop_cnd_preserves_uniqueness.log",
+      "bytes": 319,
+      "sha256": "1b6d2881457cc245c8202f98e96acb880323f1892e30ea450e1bc0a89b953d22"
+    },
+    {
+      "path": "rejected-03_vacuous_mode_creates_anchor.log",
+      "bytes": 327,
+      "sha256": "5fed96dec9215064095808e20327914985cc58c8b841a11a15c45d02acee44a2"
+    },
+    {
+      "path": "rejected-04_local_mode_forces_global_without_connection.log",
+      "bytes": 360,
+      "sha256": "4a4d352499872d3b194d4c56db7891055f6d39bcf03c588e91a4cded67c044a8"
+    },
+    {
+      "path": "rejected-05_arbitrary_graph_transfers_actual_provision.log",
+      "bytes": 319,
+      "sha256": "d18ae0620232c4ecf9fdf11a0cdb66ada05a192174c806ae7d69627014ef65ad"
+    },
+    {
+      "path": "rejected-06_ignore_original_use.log",
+      "bytes": 360,
+      "sha256": "7ef3c4c610dcebb0445df997e6bd0bd412f00d2f8a5f11e195e4ace389b4506f"
+    },
+    {
+      "path": "rejected-07_ignore_mode_role.log",
+      "bytes": 357,
+      "sha256": "978b26dc73b897da6f36e1a62514983c59099175810a2c32e073b24b84b11680"
+    },
+    {
+      "path": "rejected-08_ignore_contributor_visibility.log",
+      "bytes": 284,
+      "sha256": "14de6ddff665dd9b4408876e36e407081ac90b0573ce3e4643f1bc37ae748e60"
+    },
+    {
+      "path": "rejected-09_coarse_effect_is_full_account.log",
+      "bytes": 296,
+      "sha256": "1dd81b36c2976f79eac303f20d7906fc8f679a4f298330264bf01242cc5e837c"
+    },
+    {
+      "path": "rejected-10_separated_originals_meet_mode_at_mixed.log",
+      "bytes": 639,
+      "sha256": "5cc38f911714fea857b590d40cae32e44aeec661c2efb91044178b3654bc98f7"
+    },
+    {
+      "path": "rejected-11_field_unity_excludes_outside_necessary_source.log",
+      "bytes": 231,
+      "sha256": "0ed23f437d178ea3f9df40fa502a950eff76668b3bdb0c4a4e9d022eba7b7cc2"
+    },
+    {
+      "path": "rejected-12_causal_provision_transfers_assertion_ownership.log",
+      "bytes": 249,
+      "sha256": "8df1dc6d45cbf0fb5481ac249a719af3a5257a19bd87ef6a0fa0118597e81553"
+    },
+    {
+      "path": "rejected-13_artificial_bundle_is_admissible.log",
+      "bytes": 254,
+      "sha256": "3aa8f5a5d9be1bbcbe902b2caf37fada5ee5eaa92a83e5209b6a6630e2505d97"
+    },
+    {
+      "path": "rejected-14_conformance_without_classification.log",
+      "bytes": 478,
+      "sha256": "9262c420331953fe9c1716de6ac1adba667eb3a3976c2e826e14064a4537622c"
+    },
+    {
+      "path": "rejected-15_norm_without_actual_conformance.log",
+      "bytes": 370,
+      "sha256": "194a1fb42d3d655014daff35800c2b9afd834ee03e51848aa5752aa77c394c39"
+    },
+    {
+      "path": "rejected-16_empty_inventory_provider_is_unique.log",
+      "bytes": 259,
+      "sha256": "85dbb3014e80118b00929f3949b3b175b4ffc6c85c609eff1e22862e24c60e03"
+    },
+    {
+      "path": "rejected-17_source_provision_authenticates_message.log",
+      "bytes": 220,
+      "sha256": "33b0f5d818fb34b5dc78362684968ba3d7172e9d177561ced14300f8a2cdce4f"
+    },
+    {
+      "path": "rejected-18_ability_entails_actual_solo.log",
+      "bytes": 384,
+      "sha256": "52ecfd8538881b8fe19f8c2aabb7a4d23e8d0d78efb49adf8873547e45605926"
+    },
+    {
+      "path": "rejected-19_field_cnd_is_not_global_cnd.log",
+      "bytes": 394,
+      "sha256": "e8e0d5ab834b7b3ecaad7419e9a8d59f0c2d687ee901e55ace681eeb7bc1b301"
+    },
+    {
+      "path": "toolchain.log",
+      "bytes": 78,
+      "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+    }
+  ]
+}

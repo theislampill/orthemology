@@ -1,0 +1,503 @@
+{
+  "schema": "independent-cooperation-warrant-evidence-v1",
+  "captured_utc": "2026-10-07T18:16:52.498420+00:00",
+  "evidence": [
+    {
+      "id": "E01",
+      "role": "PRIMARY_ARABIC",
+      "path_input_name": "mf_extended.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "29e24a56c0b9e16822dd26fe1975767d81563325be48a256a1b5bae9a00a535b",
+      "bytes": 32433,
+      "lines": 40,
+      "read_scope": "Complete unique authorial passage, web L906–928, printed20:174–183; duplicate vocalised beginning L929–936 also inspected where relevant.",
+      "source_url": "https://islamweb.net/ar/library/content/22/2032/",
+      "url_status": "SUPPLIED_PRIMARY_PROVENANCE_NOT_NEWLY_BROWSED",
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E02",
+      "role": "PRIMARY_ARABIC",
+      "path_input_name": "islamweb-vol2.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "96434788b6020ef06bc705d3fbada829d4bc34446fef61c4fb516b361ee26435",
+      "bytes": 22897,
+      "lines": 41,
+      "read_scope": "Complete text lines1–41, printed2:167–180; main target40–41; intrinsic-attribute/concomitance controls8–24.",
+      "source_url": "https://www.islamweb.net/ar/library/content/108/156/",
+      "url_status": "SUPPLIED_PRIMARY_PROVENANCE_NOT_NEWLY_BROWSED",
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E03",
+      "role": "PRIMARY_ARABIC",
+      "path_input_name": "islamweb-item157.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "135d20a6599f95cc809a5916cddab75243c86a185603793d94430d03e11970bf",
+      "bytes": 4190,
+      "lines": 4,
+      "read_scope": "Complete four text lines, printed2:180–182.",
+      "source_url": "https://www.islamweb.net/ar/library/content/108/157/",
+      "url_status": "SUPPLIED_PRIMARY_PROVENANCE_NOT_NEWLY_BROWSED",
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E04",
+      "role": "PRIMARY_ARABIC",
+      "path_input_name": "islamweb-item158.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "1d682c5b1822e9f4a3c196a98ce929983cdfa811fffe71e5cbf3c25fd5b15c57",
+      "bytes": 18086,
+      "lines": 27,
+      "read_scope": "Printed2:182–184 perfection continuation, text lines1–5. Additional displayed continuation was not needed for the assessment.",
+      "source_url": "https://www.islamweb.net/ar/library/content/108/158/",
+      "url_status": "SUPPLIED_PRIMARY_PROVENANCE_NOT_NEWLY_BROWSED",
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E05",
+      "role": "PARALLEL_PRIMARY_ARABIC",
+      "path_input_name": "body.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "e164225c49e37a4e94dc54ca9f56a59fd96581802b8a5beb7b27c81c7d4b8856",
+      "bytes": 813989,
+      "lines": 437,
+      "read_scope": "V02L0115–0121; primary correspondence0117–0120 to printed2:180–183.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E06",
+      "role": "PRIMARY_ARABIC_CONTROL",
+      "path_input_name": "saf2-L0574-L0636.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "961f9a9f3ffe92816c1124ee6c7681db6595f35157c02e284e36be49bffce7e0",
+      "bytes": 32457,
+      "lines": 63,
+      "read_scope": "Supplied lines0613–0636 displayed; targeted genus/token control0623–0627 directly read. No independent printed-page collation.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E07",
+      "role": "PRIOR_MODEL_AUDIT",
+      "path_input_name": "MODEL_AUDIT.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/MODEL_AUDIT.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "89c963e630164013029090f0f6bde3749959d2e0f74bdea2acfd0d5043e9f389",
+      "bytes": 29074,
+      "lines": 160,
+      "read_scope": "Complete original report read; final reconciled report reread including full upstream/P2b qualification and section7. Model descriptions are prior auditor findings except where selected code definitions were independently inspected.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E08",
+      "role": "PRIOR_MODEL_AUDIT_STRUCTURED",
+      "path_input_name": "MODEL_AUDIT.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/MODEL_AUDIT.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "fdb2f8b821b044a3ad71728473ecd92f66ea2e5b961d66f19815fd7f222e91af",
+      "bytes": 47569,
+      "lines": 1036,
+      "read_scope": "Parsed complete JSON; substantive original fields, all nine model verdicts/reasons, final source fields, test-role policy, final-source bindings, reconciliation and per-model rejection-policy fields inspected. No new kernel replay.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E09",
+      "role": "FORMAL_DEFINITION_INSPECTION",
+      "path_input_name": "AnchoredSourceBridge.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/joint-foundational-model/components/AnchoredSourceBridge.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "bytes": 10743,
+      "lines": 219,
+      "read_scope": "Lines1–125: Account, predicates and conditional propagation proofs. No kernel rerun.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E10",
+      "role": "FORMAL_DEFINITION_INSPECTION",
+      "path_input_name": "Controls.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/anchored-source-bridge/src/Controls.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+      "bytes": 22563,
+      "lines": 367,
+      "read_scope": "Lines1–95: fixtures, split model and selected comparison controls. No kernel rerun.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E11",
+      "role": "FORMAL_DEFINITION_INSPECTION",
+      "path_input_name": "ModalAbilityControl.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/anchored-source-bridge/src/ModalAbilityControl.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64",
+      "bytes": 4387,
+      "lines": 77,
+      "read_scope": "Complete file read. No kernel rerun.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E12",
+      "role": "FORMAL_DEFINITION_INSPECTION",
+      "path_input_name": "CNDModalScope.lean",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/sources/CND-essential-independence-scope/CNDModalScope.lean",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9",
+      "bytes": 5862,
+      "lines": 121,
+      "read_scope": "Complete file read. No kernel rerun.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E13",
+      "role": "SOURCE_RECONSTRUCTION",
+      "path_input_name": "SOURCE_ARGUMENT.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "6491b95e39c94ab2fe3cf64d5536c24b7b689f9e03b8793c24ac5e6c2cbef775",
+      "bytes": 28894,
+      "lines": 198,
+      "read_scope": "Initial working version and expanded complete reconstruction read; terminal adjacent Stage B noncircular-P2b qualification read and exact change checked against earlier reviewed hash.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E14",
+      "role": "SOURCE_PREMISE_MAP",
+      "path_input_name": "PREMISE_MAP.json",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/PREMISE_MAP.json",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "a36302da8fb43c7ce87a1143655402e20e5ae0fa887b66d479fd5f7bd2583183",
+      "bytes": 8271,
+      "lines": 134,
+      "read_scope": "Initial and expanded complete forms read; terminal countermodel_test_scope field directly read and sole-field change checked against earlier reviewed hash.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E15",
+      "role": "ROOT_NOTE_REVIEW",
+      "path_input_name": "ROOT_REASSESSMENT.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/ROOT_REASSESSMENT.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "3f049a92d1da97dcbd2b4e8126d1c566543138ad274cb9334d5e9ea759b3033c",
+      "bytes": 12799,
+      "lines": 65,
+      "read_scope": "Complete initial and expanded notes read; terminal Salim2:145 locator paragraph and exact contextual-audit link read. Review bounded to cooperation and selected genus control; no independent official cessation-source or terminal page-locator certification. Final two-sentence Necessary Being status clarification directly read; exact deletion verified against prior reviewed bytes. That prior conclusion is retained, not independently reviewed here.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E16",
+      "role": "PRIOR_ROOT_APPRAISAL",
+      "path_input_name": "ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "65303af758c4eead3aaa7bf01ce90e2700d3f0bbe80e4590e1131953429f72cf",
+      "bytes": 9350,
+      "lines": 51,
+      "read_scope": "Complete earlier appraisal read for actual-field versus universal-scope continuity.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E17",
+      "role": "EDITORIAL_APPARATUS",
+      "path_input_name": "islamweb-vol2-notes.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "f0f1fefb6dc3e778c5a47e6cea7202d2d212ed35bf54f1dcb569cb4a6110c056",
+      "bytes": 5188,
+      "lines": 83,
+      "read_scope": "Complete notes displayed; distinguish modern critical apparatus from authorial argument.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E18",
+      "role": "EDITORIAL_APPARATUS",
+      "path_input_name": "islamweb-item157-notes.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "7ce2e5d132a44d88e0e266211575efd5d13b9043c264f31f23d980d90908fd7b",
+      "bytes": 817,
+      "lines": 13,
+      "read_scope": "Complete notes displayed; distinguish modern critical apparatus from authorial argument.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    },
+    {
+      "id": "E19",
+      "role": "EDITORIAL_APPARATUS",
+      "path_input_name": "islamweb-item158-notes.txt",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "sha256": "45e433172d20d6ad0d26f674bbcf8ec44820c85400f9db10398f1d6f35216378",
+      "bytes": 7195,
+      "lines": 57,
+      "read_scope": "Complete notes displayed; relevant perfection continuation only used in review.",
+      "source_url": null,
+      "url_status": null,
+      "status": "READ_ONLY_INPUT"
+    }
+  ],
+  "claim_bindings": [
+    {
+      "id": "C_B6",
+      "finding": "Complete power/will to exclusive original provenance is explicit, but stronger than outcome entailment.",
+      "bindings": [
+        {
+          "evidence": "E01",
+          "locator": "webL912–913; printed176–177",
+          "anchor_arabic": "لوجب وجود المفعول به وحده"
+        }
+      ]
+    },
+    {
+      "id": "C_UNCHANGED",
+      "finding": "The source fixes the relevant operative agent state, not merely standing ability.",
+      "bindings": [
+        {
+          "evidence": "E01",
+          "locator": "webL908; printed175",
+          "anchor_arabic": "في إرادته وحركته وآلاته ونحو ذلك"
+        }
+      ]
+    },
+    {
+      "id": "C_B5_U",
+      "finding": "Power concentration is supported by examples of united subjects/members/bodies.",
+      "bindings": [
+        {
+          "evidence": "E01",
+          "locator": "webL917–919; printed179–180",
+          "anchor_arabic": "فإن القدرة القائمة باثنين لا يمتنع أن تقوم بواحد"
+        }
+      ]
+    },
+    {
+      "id": "C_B5_R",
+      "finding": "The source expressly transfers unified capacity to each existing partner.",
+      "bindings": [
+        {
+          "evidence": "E01",
+          "locator": "webL919; printed180",
+          "anchor_arabic": "فعلم أنه يمكن أن يكون كل منهما قابلا للقدرة على الاستقلال"
+        }
+      ]
+    },
+    {
+      "id": "C_B5_N",
+      "finding": "The source moves from externally completed product to intrinsic act/quality dependence.",
+      "bindings": [
+        {
+          "evidence": "E01",
+          "locator": "webL920–921; printed180–181",
+          "anchor_arabic": "وافتقاره إلى غيره في بعض المفعولات يوجب افتقاره في فعله وصفته القائمة به"
+        }
+      ]
+    },
+    {
+      "id": "C_M1",
+      "finding": "Efficacy is explicitly classified as a perfection.",
+      "bindings": [
+        {
+          "evidence": "E02",
+          "locator": "line41; printed180",
+          "anchor_arabic": "فإن المؤثر أكمل من غير المؤثر"
+        },
+        {
+          "evidence": "E05",
+          "locator": "V02L0117"
+        }
+      ]
+    },
+    {
+      "id": "C_PERFECTION",
+      "finding": "Necessary intrinsic perfection argument rather than bare modal necessity.",
+      "bindings": [
+        {
+          "evidence": "E03",
+          "locator": "line4; printed182"
+        },
+        {
+          "evidence": "E04",
+          "locator": "lines1–2; printed182–183"
+        },
+        {
+          "evidence": "E05",
+          "locator": "V02L0119–0120"
+        }
+      ]
+    },
+    {
+      "id": "C_GENUS",
+      "finding": "Essential genus of activity does not entail essential act-token or created product.",
+      "bindings": [
+        {
+          "evidence": "E06",
+          "locator": "0623–0627",
+          "anchor_arabic": "فالذي هو من لوازم ذاته نوع الفعل لا فعل معين ولا مفعول معين"
+        }
+      ]
+    },
+    {
+      "id": "C_CAUSAL_CYCLE",
+      "finding": "Concomitance and efficient-priority receipt are distinguished in the source.",
+      "bindings": [
+        {
+          "evidence": "E02",
+          "locator": "lines8–24; printed168–172"
+        }
+      ]
+    },
+    {
+      "id": "C_MODELS",
+      "finding": "No full upstream-preserving model certified; selected definitions independently confirm narrower signatures.",
+      "bindings": [
+        {
+          "evidence": "E07",
+          "locator": "See read_scope"
+        },
+        {
+          "evidence": "E08",
+          "locator": "See read_scope"
+        },
+        {
+          "evidence": "E09",
+          "locator": "See read_scope"
+        },
+        {
+          "evidence": "E10",
+          "locator": "See read_scope"
+        },
+        {
+          "evidence": "E11",
+          "locator": "See read_scope"
+        },
+        {
+          "evidence": "E12",
+          "locator": "See read_scope"
+        }
+      ]
+    },
+    {
+      "id": "C_P2B",
+      "finding": "P2b cannot be required as independently prior when its own derivation is the target.",
+      "bindings": [
+        {
+          "evidence": "E14",
+          "locator": "P2 and M1_EFFICACY_PERFECTION"
+        },
+        {
+          "evidence": "E15",
+          "locator": "Present judgement, P2b paragraph"
+        }
+      ]
+    },
+    {
+      "id": "C_ROOT",
+      "finding": "No blocking issue within bounded reviewed scope; no independent certification of cessation section.",
+      "bindings": [
+        {
+          "evidence": "E15",
+          "locator": "Complete note; review boundaries specified in REVIEW.md section8"
+        }
+      ]
+    }
+  ],
+  "source_witness_limit": "Electronic received texts and existing receipts; no new manuscript collation or print-scan certification.",
+  "role_separation": [
+    "Primary reading supplies source content, not truth certification.",
+    "Source reconstruction maps authorial claims and bridges.",
+    "Prior model audit and selected direct definition inspection establish bounded representation limits.",
+    "This review supplies independent philosophical warrant assessment.",
+    "Philosophical-assessment review checks bounded accuracy and argument without replacing the author’s judgement."
+  ],
+  "final_source_delta_checks": [
+    {
+      "evidence_id": "E13",
+      "prior_reviewed_sha256": "92ac1dfa9541462b5884aaac37e9946fc13cd94b78cf2d0b68d9f1d6032b021e",
+      "final_reviewed_sha256": "6491b95e39c94ab2fe3cf64d5536c24b7b689f9e03b8793c24ac5e6c2cbef775",
+      "change": "Specific noncircular P2b test-scope qualification only",
+      "exact_delta_check": true
+    },
+    {
+      "evidence_id": "E14",
+      "prior_reviewed_sha256": "a7217a2678cd85a725343212b7ff14432a752389bccfa697c5397ee1c0082eee",
+      "final_reviewed_sha256": "a36302da8fb43c7ce87a1143655402e20e5ae0fa887b66d479fd5f7bd2583183",
+      "change": "Specific noncircular P2b test-scope qualification only",
+      "exact_delta_check": true
+    }
+  ],
+  "historical_root_bindings": [
+    {
+      "path_input_name": "ROOT_REASSESSMENT.md",
+      "path_input_delivery": "Historical input identity only; this field does not promise the input body in the public selection.",
+      "path_corresponding_public_record": {
+        "owner_alias": "t20/cooperation-reassessment/ROOT_REASSESSMENT.md",
+        "identity_rule": "The original hash and byte count in this record bind the audited input. The final public alias has its own selected identity; equality is not implied."
+      },
+      "sha256": "69787c09188c27dc701fe29f737508d4fe04f40b7ca3ab9a6a28bbe4778503e0",
+      "bytes": 12573,
+      "status": "SUPERSEDED_REVIEWED_ROOT_SNAPSHOT"
+    }
+  ],
+  "final_root_metadata_rebind": {
+    "completed_utc": "2026-10-07T18:16:52.498420+00:00",
+    "prior_sha256": "69787c09188c27dc701fe29f737508d4fe04f40b7ca3ab9a6a28bbe4778503e0",
+    "current_sha256": "3f049a92d1da97dcbd2b4e8126d1c566543138ad274cb9334d5e9ea759b3033c",
+    "exact_added_text": "My separate provisional sufficient-warrant acceptance of at least one actual Necessary Being is unchanged. This bounded common-source and divine-action audit does not add a fresh independent proof of that earlier conclusion.",
+    "exact_delta_check": true,
+    "scope": "Separate Necessary Being judgement explicitly retained; not independently reviewed or newly proved in this assessment. No change to cooperation/action judgement."
+  }
+}

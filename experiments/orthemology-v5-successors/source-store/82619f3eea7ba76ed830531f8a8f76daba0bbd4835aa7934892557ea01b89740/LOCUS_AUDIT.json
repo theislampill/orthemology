@@ -1,0 +1,125 @@
+{
+  "schema": "targeted-locus-audit/1",
+  "date_utc": "2026-10-07",
+  "author": "Ibn Uthaymin",
+  "reading_status": "new_targeted_reading",
+  "full_assessment": "t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md",
+  "receipts": "t20/targeted-final-loci/uthaymin/READING_RECEIPTS.json",
+  "audits": [
+    "plural_original_source_and_cooperation",
+    "divine_action_ontology"
+  ],
+  "loci": [
+    {
+      "id": "U1",
+      "work": "تفسير سورة النساء - 6",
+      "verse": "4:15",
+      "url": "https://old.binothaimeen.net/content/13876",
+      "classification": [
+        "strengthening",
+        "hidden_equivocation",
+        "answer_countermodel"
+      ],
+      "cooperation_effect": "terminology_constraint_only",
+      "ontology_effect": "genus_kind_token_and_bearer_distinction",
+      "reason": "An occurring act does not entail an originated bearer.",
+      "assessment_section": "U1"
+    },
+    {
+      "id": "U2",
+      "work": "تفسير سورة النساء - 26",
+      "verse": "4:87",
+      "url": "https://old.binothaimeen.net/content/13896",
+      "classification": [
+        "strengthening",
+        "hidden_equivocation",
+        "answer_countermodel"
+      ],
+      "cooperation_effect": "terminology_constraint_only",
+      "ontology_effect": "originated_attribute_not_identical_to_separate_created_entity",
+      "reason": "Speech and its bearer must not be conflated with separate created effects.",
+      "assessment_section": "U2"
+    },
+    {
+      "id": "U3",
+      "work": "تفسير سورة النساء - 33",
+      "verse": "4:114",
+      "url": "https://old.binothaimeen.net/content/13904",
+      "classification": [
+        "new_premise",
+        "strengthening",
+        "answer_countermodel"
+      ],
+      "cooperation_effect": "no_independent_uniqueness_derivation",
+      "ontology_effect": "global_inactivity_excluded_by_extra_perfection_premise",
+      "reason": "A capacity-only empty extension omits the fuller general-activity premise.",
+      "assessment_section": "U3"
+    },
+    {
+      "id": "U4",
+      "work": "تفسير سورة الشورى - 6",
+      "verse": "digression between 42:17 and 42:18",
+      "url": "https://old.binothaimeen.net/content/14192",
+      "classification": [
+        "strengthening",
+        "restatement",
+        "answer_countermodel"
+      ],
+      "cooperation_effect": "no_independent_uniqueness_derivation",
+      "ontology_effect": "will_governed_tokens_and_agent_act_effect_distinction",
+      "reason": "The general affirmation and particular voluntary occurrences have different scopes.",
+      "assessment_section": "U4"
+    },
+    {
+      "id": "U5",
+      "work": "تفسير سورة غافر - 2",
+      "verse": "40:6",
+      "url": "https://old.binothaimeen.net/content/14157",
+      "classification": [
+        "strengthening",
+        "new_premise",
+        "hidden_equivocation"
+      ],
+      "cooperation_effect": "no_additional_exclusion_of_cooperation",
+      "ontology_effect": "succession_of_speech_itself_distinguished_from_new_object_of_hearing",
+      "reason": "Ordered utterance argument is supplementary evidence for token succession.",
+      "assessment_section": "U5"
+    },
+    {
+      "id": "U6",
+      "work": "تفسير سورة المائدة - 24",
+      "verse": "5:73 explaining 21:22 and 23:91",
+      "url": "https://old.binothaimeen.net/content/13941",
+      "classification": [
+        "strengthening",
+        "restatement",
+        "new_premise"
+      ],
+      "cooperation_effect": "explicit_exclusive_rule_conflict_premise_not_cooperation_refutation",
+      "ontology_effect": "no_new_ontology_premise",
+      "reason": "Nonrival co-production is not tested in this bounded unity argument.",
+      "assessment_section": "U6"
+    }
+  ],
+  "decisions": {
+    "requested_nisa_verified": true,
+    "requested_shura_verified": true,
+    "speech_discussion_verified": true,
+    "unity_verses_explanation_verified_in_maida": true,
+    "standalone_q23_91_or_q21_22_commentary_verified": false,
+    "later_control_independent_historical_witness": false,
+    "global_empty_extension_is_countermodel_to_fuller_doctrine": false,
+    "kind_specific_nonperformance_implies_global_cessation": false,
+    "emergent_implies_created_is_definition": false,
+    "new_act_implies_external_perfection_is_definition": false,
+    "cooperation_countermodel_eliminated_by_these_loci": false,
+    "old_sealed_material_edited": false,
+    "closure_authority_exercised": false
+  },
+  "boundaries": [
+    "Print edition and page numbers unverified; use exact official web loci.",
+    "Section timestamps are not exact audio-locus timestamps.",
+    "Classification new_premise is relative to capacity-only or plurality-only reconstructions, not a claim that the author's doctrine is novel.",
+    "The absence of a cooperation branch is bounded to U6's argument, not the author's entire corpus."
+  ]
+}

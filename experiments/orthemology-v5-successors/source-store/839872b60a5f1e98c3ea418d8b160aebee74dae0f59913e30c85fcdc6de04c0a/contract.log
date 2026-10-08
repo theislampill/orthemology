@@ -1,0 +1,2 @@
+'ModalUnion.IndependentReview.every_frame_has_interpretation' depends on axioms: [Quot.sound]
+'ModalUnion.IndependentReview.exact_statement_contract' depends on axioms: [propext, Quot.sound]

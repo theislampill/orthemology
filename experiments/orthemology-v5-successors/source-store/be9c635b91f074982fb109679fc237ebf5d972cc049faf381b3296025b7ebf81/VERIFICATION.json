@@ -1,0 +1,124 @@
+{
+  "created_utc": "2026-10-07T14:16:43.578829+00:00",
+  "scope": "File integrity and declared bounded research scope; not philosophical validation, proof of understanding or new reading credit.",
+  "artifacts": [
+    {
+      "historical_authored_record": "AUDIT.md",
+      "original_bytes": 19830,
+      "original_sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+      "public_alias": "AUDIT.md",
+      "public_bytes": 19830,
+      "public_sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8"
+    },
+    {
+      "historical_authored_record": "SOURCES_AND_LIMITS.md",
+      "original_bytes": 7864,
+      "original_sha256": "453ab0a58bedab86b156960c96dcce4c90d457b5f0174dc0d71db510552baa39",
+      "public_alias": "SOURCES_AND_LIMITS.md",
+      "public_bytes": 8562,
+      "public_sha256": "e180a55591a501f753b0b53e4de7f76013499640ff72bc9c907224203d61cc6c"
+    }
+  ],
+  "primary_source_bindings": [
+    {
+      "bytes": 4056211,
+      "sha256": "3d8eb7969da34586aa09fc61e3a49f1d5c38ba4015689d984b54d9c01f560116",
+      "direct_selection": "M0583–M0590; M1023–M1027",
+      "historical_object_description": "Miftah electronic index",
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "body_included": false
+    },
+    {
+      "bytes": 1026940,
+      "sha256": "ae7b03d45c069d4a2fc66ceb7562ded68db1fe292d2b84749ddffb906b703053",
+      "direct_selection": "S002L105–107; S003L14–18",
+      "historical_object_description": "Nubuwwat electronic index",
+      "source_url": [
+        "https://www.islamicbook.ws/amma/alnbwat-002.html",
+        "https://www.islamicbook.ws/amma/alnbwat-003.html"
+      ],
+      "body_included": false
+    },
+    {
+      "bytes": 1464867,
+      "sha256": "5505f29f0578540d5fb2f808ccf10fcd0524bd08dfa792f51fd286dd0c3e0390",
+      "direct_selection": "S001L31–34; S001L132–140",
+      "historical_object_description": "Safadiyya electronic index",
+      "source_url": "https://www.islamicbook.ws/amma/alsfdit-001.html",
+      "body_included": false
+    },
+    {
+      "bytes": 9797,
+      "sha256": "63e68c2aac3fcfaa57438c00da8891217080a7614575e15e3263b2adea900540",
+      "direct_selection": "entire saved extract",
+      "historical_object_description": "Darʾ volume8 selected saved extract",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-012.html",
+      "body_included": false
+    },
+    {
+      "bytes": 17926,
+      "sha256": "0208a8a0ade8b6fccfdc867c0d9355d1604f7268c556865b60345447bbe50b9c",
+      "direct_selection": "entire saved extract",
+      "historical_object_description": "Minhaj volume2 selected saved extract",
+      "source_url": "https://www.islamicbook.ws/tarekh/mnhaj-003.html",
+      "body_included": false
+    },
+    {
+      "bytes": 8911,
+      "sha256": "e40857942847966b725fef86ea0cd3f351bdee0ce3166d93843843e82f7fba24",
+      "direct_selection": "entire saved extract",
+      "historical_object_description": "Jami sixth collection selected saved extract",
+      "source_url": "https://www.islamarchive.cc/ketab_content/28157",
+      "body_included": false
+    },
+    {
+      "bytes": 21645,
+      "sha256": "dcd74174ed97e8e1914f286a6470e0ffd9ebce1acfbfd1a258d4857982795bdf",
+      "direct_selection": "entire saved extract; E232 redisplayed separately",
+      "historical_object_description": "Shifa selected saved extract",
+      "source_url": "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+      "body_included": false
+    },
+    {
+      "bytes": 333315,
+      "sha256": "c890d353660ad99c00540c2b718c5c863248d926f872b56060dbeb4572b997ff",
+      "direct_selection": "full viewed image, printed771",
+      "historical_object_description": "Nubuwwat scan image at printed/PDF771",
+      "source_url": "https://drive.google.com/file/d/1N7PDd1uV7BsT-xluSRscUmy5ypUl4CWo/view?usp=sharing",
+      "body_included": false
+    },
+    {
+      "bytes": 244230,
+      "sha256": "d33c2a9e477859f59a96644a49cf70ce068a07016ce3b275f9caf2ab01786606",
+      "direct_selection": "full viewed image, printed122",
+      "historical_object_description": "Safadiyya Adwa scan image at printed122/PDF129",
+      "source_url": "https://archive.org/download/al-mulakhas/al-risala.pdf",
+      "body_included": false
+    },
+    {
+      "bytes": 207656,
+      "sha256": "5ff690e6813489e1c4e5714610a34ed362869002403e86728a52e0809b583dd7",
+      "direct_selection": "full viewed image, printed123",
+      "historical_object_description": "Safadiyya Adwa scan image at printed123/PDF130",
+      "source_url": "https://archive.org/download/al-mulakhas/al-risala.pdf",
+      "body_included": false
+    }
+  ],
+  "checks": {
+    "artifacts_nonempty": true,
+    "all_declared_primary_files_exist": true,
+    "new_primary_scan_images_viewed": 3,
+    "full_volume_reading_claim": false,
+    "new_formal_or_scientific_campaign": false,
+    "external_contact": false,
+    "historical_reports_edited_by_auditor": false
+  },
+  "verdict": {
+    "Necessary_Being": "provisionally accepted at sufficient defeasible warrant",
+    "Actual_common_Creator": "provisionally accepted at sufficient defeasible warrant; weaker than Necessary Being",
+    "Universal_SourceMode": "sufficiency withheld",
+    "background": "original completion, bearerhood and genuine original efficacy personally accepted; integrative agency and scope enlargement appraised, not inherited wholesale"
+  },
+  "record_status": "Independent bounded historical assessment; the verdict belongs to this auditor and is not a final current appraisal or a consensus claim.",
+  "original_verification_sha256": "3835c861e562380a0d51565d028c5440ab1f213b1e5f7cfcbeba5438a5d738d3"
+}

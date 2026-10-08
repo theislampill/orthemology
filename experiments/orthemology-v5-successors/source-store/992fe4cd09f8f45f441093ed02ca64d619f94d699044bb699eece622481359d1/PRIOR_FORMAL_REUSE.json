@@ -1,0 +1,3467 @@
+{
+  "schema": "foundational-prior-reuse-v1",
+  "candidate_commit": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+  "accepted_main_commit": "19de267cd41d2a5eeeb3eaf0b91562f706e2a916",
+  "scope": "Read-only source reuse audit of immutable PR30 candidate, with current T17–T19 report mapping. No canonical, git, formal, or suite changes.",
+  "sources": [
+    {
+      "id": "SourceIdentity",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503.lean",
+      "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "bytes": 7357,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-db6ccdc793a0a1a9-a04b99d4ca66aed8",
+          "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+          "member": "tranche3/independent-audit/orthability-core/snapshot/SourceIdentity.lean",
+          "original_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "original_bytes": 7357,
+          "path": "experiments/orthemology-v5-continuations/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503.lean",
+          "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "bytes": 7357,
+          "projection": "EXACT",
+          "derivation": null
+        },
+        {
+          "id": "src-332d0dbea81d90d7-a04b99d4ca66aed8",
+          "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+          "member": "tranche3/independent-audit/orthability-core/snapshot/SourceIdentity.lean",
+          "original_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "original_bytes": 7357,
+          "path": "experiments/orthemology-v5-continuations/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503.lean",
+          "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "bytes": 7357,
+          "projection": "EXACT",
+          "derivation": null
+        },
+        {
+          "id": "src-83f1a917b40abc1e-3e5403aa4cb7858c",
+          "origin": "83f1a917b40abc1e4d6ebac2df9fec31e1141440cf17bd57321efe9ebcab9cd9",
+          "member": "models/lean/source/SourceIdentity.lean",
+          "original_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "original_bytes": 7357,
+          "path": "experiments/orthemology-v5-continuations/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503.lean",
+          "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "bytes": 7357,
+          "projection": "EXACT",
+          "derivation": null
+        },
+        {
+          "id": "src-eff5fada59f4f411-3e5403aa4cb7858c",
+          "origin": "eff5fada59f4f411bb5dce5fedc5b6aae566df4220bcde7bbc421764dd1d1bd4",
+          "member": "models/lean/source/SourceIdentity.lean",
+          "original_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "original_bytes": 7357,
+          "path": "experiments/orthemology-v5-continuations/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503.lean",
+          "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+          "bytes": 7357,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/83f1a917b40a-knowledge-author.json",
+          "sha256": "0a24b843dc840d697f9a268c57e946195857a0b98855b97fb1926874d805f3f4",
+          "suite_id": "83f1a917b40a-knowledge-author",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:21:32.428019+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "SourceIdentity",
+              "source_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+              "object_sha256": "39d9009d24028b82362dad37769d484320683b6980504487fdacc817f541c599",
+              "transitive_source_fingerprint": "9f686dd18b5cda0baf2a3e5f24b403b16612c4501cf0d53401350e736fb47ee6",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        },
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+          "sha256": "f2309bcc850669fc3be465e76433989cf223f665e9a0239457188c1b0ed1a68b",
+          "suite_id": "eff5fada59f4-upstream-author",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:21:37.474966+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "SourceIdentity",
+              "source_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+              "object_sha256": "39d9009d24028b82362dad37769d484320683b6980504487fdacc817f541c599",
+              "transitive_source_fingerprint": "9f686dd18b5cda0baf2a3e5f24b403b16612c4501cf0d53401350e736fb47ee6",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        },
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+          "sha256": "73dd81be434394a11406a045949151129ee43f71bb8c7b151ec40e801ed96950",
+          "suite_id": "db6ccdc793a0-orthability-core",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "SourceIdentity",
+              "source_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+              "object_sha256": "39d9009d24028b82362dad37769d484320683b6980504487fdacc817f541c599",
+              "transitive_source_fingerprint": "9f686dd18b5cda0baf2a3e5f24b403b16612c4501cf0d53401350e736fb47ee6",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "necessary_of_actual_root",
+          "line": 41,
+          "exact_statement_and_assumptions": "theorem necessary_of_actual_root\n    (ex : W → D → Prop) (dep : W → D → D → Prop) (actual : W) (x : D)\n    (root : Root ex dep actual x)\n    (contingent_receives : ∀ y, ex actual y → ¬ Necessary ex y → Received dep actual y) :\n    Necessary ex x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+              "type_sha256": "6689a2796f2a353c8522819d3b0e0710529618a427d8541e3daccad40f3c4ee0",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "uniform_of_necessary_actual_root",
+          "line": 52,
+          "exact_statement_and_assumptions": "theorem uniform_of_necessary_actual_root\n    (ex : W → D → Prop) (dep : W → D → D → Prop) (actual : W) (x : D)\n    (root : Root ex dep actual x) (necessary : Necessary ex x)\n    (reception : GenericReception ex dep) : UniformRoot ex dep x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+              "type_sha256": "b2e06edf1a7e3532770f5aee1c5339907932d7b0e46faafb1683fb74e81b4fac",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "uniform_of_contingent_reception",
+          "line": 61,
+          "exact_statement_and_assumptions": "theorem uniform_of_contingent_reception\n    (ex : W → D → Prop) (dep : W → D → D → Prop) (actual : W) (x : D)\n    (root : Root ex dep actual x)\n    (contingent_receives : ∀ y, ex actual y → ¬ Necessary ex y → Received dep actual y)\n    (reception : GenericReception ex dep) : UniformRoot ex dep x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception",
+              "type_sha256": "e1da8c54925d7141ca9ea567fffd100e8efa0bb2763798552b02eefd8159ea88",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_transfer_iff_uniform",
+          "line": 73,
+          "exact_statement_and_assumptions": "theorem local_transfer_iff_uniform\n    (ex : W → D → Prop) (dep : W → D → D → Prop) (actual : W) (x : D)\n    (root : Root ex dep actual x) (necessary : Necessary ex x) :\n    (∀ w, ex w x → Received dep w x → Received dep actual x) ↔\n      UniformRoot ex dep x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform",
+              "type_sha256": "39b784e48b1c9015f92eb7f3881c5d1b5dd68d0b2c07c69eaa4105e0cb78d2ed",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "generic_of_fixed_origin",
+          "line": 86,
+          "exact_statement_and_assumptions": "theorem generic_of_fixed_origin\n    (ex : W → D → Prop) (dep : W → D → D → Prop)\n    (target_exists : ∀ w y x, dep w y x → ex w x)\n    (fixed : ∀ w v y x, ex w x → ex v x → dep w y x → dep v y x) :\n    GenericReception ex dep",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.generic_of_fixed_origin",
+              "type_sha256": "ad1f2f3771fc42eebf8d66602ad393fc3fc8d65913b23bc1ba7777c46ed5c1de",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "actual_preservation_does_not_give_uniform",
+          "line": 103,
+          "exact_statement_and_assumptions": "theorem actual_preservation_does_not_give_uniform :\n    Root (fun (_ : Bool) (_ : Fin 2) => True) changingDep false 0 ∧\n    Necessary (fun (_ : Bool) (_ : Fin 2) => True) 0 ∧\n    ActualReceptionPreservation (fun (_ : Bool) (_ : Fin 2) => True)\n      changingDep false ∧\n    ¬ UniformRoot (fun (_ : Bool) (_ : Fin 2) => True) changingDep 0",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.Controls.actual_preservation_does_not_give_uniform",
+              "type_sha256": "37e46cff22b8c47c3900105c6c420d7738b205096c4206bb9c4e5d3d1f0f2e60",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "generic_not_fixed_origin",
+          "line": 118,
+          "exact_statement_and_assumptions": "theorem generic_not_fixed_origin :\n    GenericReception (fun (_ : Bool) (_ : Fin 3) => True) variableOrigin ∧\n    variableOrigin false 0 2 ∧ ¬ variableOrigin true 0 2",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.Controls.generic_not_fixed_origin",
+              "type_sha256": "645270f1d93465cf03c90eb0d533d8915c374c953553a2d8d916568e2e8382be",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "generic_allows_modal_cycle",
+          "line": 131,
+          "exact_statement_and_assumptions": "theorem generic_allows_modal_cycle :\n    GenericReception (fun (_ : Bool) (_ : Fin 3) => True) switchingOrder ∧\n    UniformRoot (fun (_ : Bool) (_ : Fin 3) => True) switchingOrder 0 ∧\n    switchingOrder false 1 2 ∧ switchingOrder true 2 1",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.Controls.generic_allows_modal_cycle",
+              "type_sha256": "60ba2e7d077dca9d3cbc122e5d027ff6606698cd0bed033db6f1fdd1fe391137",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reception_alone_does_not_give_necessary",
+          "line": 141,
+          "exact_statement_and_assumptions": "theorem reception_alone_does_not_give_necessary :\n    GenericReception (fun w (_ : Unit) => w = false)\n      (fun (_ : Bool) (_ _ : Unit) => False) ∧\n    Root (fun w (_ : Unit) => w = false)\n      (fun (_ : Bool) (_ _ : Unit) => False) false () ∧\n    ¬ Necessary (fun w (_ : Unit) => w = false) ()",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.SourceIdentity.Controls.reception_alone_does_not_give_necessary",
+              "type_sha256": "6fbb8f8129557c7a2e2c0f4d069658779b349968aef3e9b2b60ad5cc4b78bdd0",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        }
+      ],
+      "owner_scope": "T3; reused unchanged through T5/T6",
+      "current_objectives": [
+        "B",
+        "C"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "ProductiveCompleteness",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a.lean",
+      "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "bytes": 3600,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-db6ccdc793a0a1a9-ba8c6576b25abeae",
+          "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+          "member": "tranche3/independent-audit/orthability-core/snapshot/ProductiveCompleteness.lean",
+          "original_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+          "original_bytes": 3600,
+          "path": "experiments/orthemology-v5-continuations/source-store/8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a.lean",
+          "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+          "bytes": 3600,
+          "projection": "EXACT",
+          "derivation": null
+        },
+        {
+          "id": "src-332d0dbea81d90d7-ba8c6576b25abeae",
+          "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+          "member": "tranche3/independent-audit/orthability-core/snapshot/ProductiveCompleteness.lean",
+          "original_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+          "original_bytes": 3600,
+          "path": "experiments/orthemology-v5-continuations/source-store/8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a.lean",
+          "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+          "bytes": 3600,
+          "projection": "EXACT",
+          "derivation": null
+        },
+        {
+          "id": "src-83f1a917b40abc1e-0d06ed00c0031fd4",
+          "origin": "83f1a917b40abc1e4d6ebac2df9fec31e1141440cf17bd57321efe9ebcab9cd9",
+          "member": "models/lean/source/ProductiveCompleteness.lean",
+          "original_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+          "original_bytes": 3600,
+          "path": "experiments/orthemology-v5-continuations/source-store/8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a.lean",
+          "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+          "bytes": 3600,
+          "projection": "EXACT",
+          "derivation": null
+        },
+        {
+          "id": "src-549ba6a7f0941c36-5405cfe6e3ccbc0c",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/connected-author/models/lean/source/ProductiveCompleteness.lean",
+          "original_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+          "original_bytes": 3600,
+          "path": "experiments/orthemology-v5-continuations/source-store/8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a.lean",
+          "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+          "bytes": 3600,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/83f1a917b40a-knowledge-author.json",
+          "sha256": "0a24b843dc840d697f9a268c57e946195857a0b98855b97fb1926874d805f3f4",
+          "suite_id": "83f1a917b40a-knowledge-author",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:21:32.428019+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "ProductiveCompleteness",
+              "source_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+              "object_sha256": "8296d838a723ff76f4274886f8fb45219eaa9819a8890283d3b83a6969488cff",
+              "transitive_source_fingerprint": "041bd4576cebfb5ae4e42ad4d0e691835e882743ce68035a70a98ad1b050c42b",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        },
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+          "sha256": "26a8c1ad7c84ac7b31bb09b061265dde921a6a2a5fa59a74460bd18b27c5b507",
+          "suite_id": "549ba6a7f094-connected-review",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": null,
+          "execution_kind": "QUALIFIED_CURRENT_PREDECESSOR_PLUS_FRESH_SOURCE",
+          "module_records": [
+            {
+              "module": "ProductiveCompleteness",
+              "source_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+              "object_sha256": "8296d838a723ff76f4274886f8fb45219eaa9819a8890283d3b83a6969488cff",
+              "transitive_source_fingerprint": "041bd4576cebfb5ae4e42ad4d0e691835e882743ce68035a70a98ad1b050c42b",
+              "status": "QUALIFIED_PREDECESSOR",
+              "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "predecessor_receipt_sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f"
+            }
+          ],
+          "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+        },
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+          "sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f",
+          "suite_id": "549ba6a7f094-connected-author",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": null,
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "ProductiveCompleteness",
+              "source_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+              "object_sha256": "8296d838a723ff76f4274886f8fb45219eaa9819a8890283d3b83a6969488cff",
+              "transitive_source_fingerprint": "041bd4576cebfb5ae4e42ad4d0e691835e882743ce68035a70a98ad1b050c42b",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+        },
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+          "sha256": "73dd81be434394a11406a045949151129ee43f71bb8c7b151ec40e801ed96950",
+          "suite_id": "db6ccdc793a0-orthability-core",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "ProductiveCompleteness",
+              "source_sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+              "object_sha256": "8296d838a723ff76f4274886f8fb45219eaa9819a8890283d3b83a6969488cff",
+              "transitive_source_fingerprint": "041bd4576cebfb5ae4e42ad4d0e691835e882743ce68035a70a98ad1b050c42b",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "uniqueness_of_history_complete",
+          "line": 35,
+          "exact_statement_and_assumptions": "theorem uniqueness_of_history_complete\n    (complete : S → X → Prop) (modeOf : X → M → Prop)\n    (proper accounts : S → M → Prop)\n    (closure : HistoryComplete complete modeOf accounts)\n    (unborrowed : UnborrowedActs proper accounts)\n    (witness : ProductiveWitness complete modeOf proper)\n    {s t : S} {x : X} (hs : complete s x) (ht : complete t x) : s = t",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_history_complete",
+              "type_sha256": "19d62e3adbaf359ee1a6ac55cb1bb1ee2a78be38e7d7a0a517b8bb072153f53a",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "uniqueness_of_universal_activity_scope",
+          "line": 49,
+          "exact_statement_and_assumptions": "theorem uniqueness_of_universal_activity_scope\n    (source : S → Prop) (proper accounts : S → M → Prop)\n    (universal : ∀ s, source s → ∀ m, accounts s m)\n    (unborrowed : UnborrowedActs proper accounts)\n    (witness : ∀ s, source s → ∃ m, proper s m)\n    {s t : S} (hs : source s) (ht : source t) : s = t",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_universal_activity_scope",
+              "type_sha256": "62753de0813c6805cb2e955fce8b6acacfbb5a35e9256161b6e5033cef9ddaf3",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "endpoint_sufficiency_does_not_give_history_closure",
+          "line": 69,
+          "exact_statement_and_assumptions": "theorem endpoint_sufficiency_does_not_give_history_closure :\n    UnborrowedActs ownMode ownMode ∧\n    ProductiveWitness endpointOnly everyMode ownMode ∧\n    endpointOnly false () ∧ endpointOnly true () ∧\n    ¬ HistoryComplete endpointOnly everyMode ownMode",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.ProductiveCompleteness.Controls.endpoint_sufficiency_does_not_give_history_closure",
+              "type_sha256": "9b53d4bc9f1142a48a0f9301d041f03ca55fe28f6cda5bcb40e6c877836a10a1",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        }
+      ],
+      "owner_scope": "T3; retained unchanged by T6",
+      "current_objectives": [
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "UpstreamGround",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3.lean",
+      "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+      "bytes": 6105,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-eff5fada59f4f411-69761a5f38d592cd",
+          "origin": "eff5fada59f4f411bb5dce5fedc5b6aae566df4220bcde7bbc421764dd1d1bd4",
+          "member": "models/lean/source/UpstreamGround.lean",
+          "original_sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+          "original_bytes": 6105,
+          "path": "experiments/orthemology-v5-continuations/source-store/ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3.lean",
+          "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+          "bytes": 6105,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+          "sha256": "f2309bcc850669fc3be465e76433989cf223f665e9a0239457188c1b0ed1a68b",
+          "suite_id": "eff5fada59f4-upstream-author",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:21:37.474966+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "UpstreamGround",
+              "source_sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+              "object_sha256": "17edf3911a5e4940c0b906d201418671b6c0ea91e1d976ea53103cb89828f155",
+              "transitive_source_fingerprint": "5ec5c977af0fee6e9d9c67c5f9a0084aee27f337ba30fec6df162ec145380f9e",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "predecessor_free_of_coverage",
+          "line": 20,
+          "exact_statement_and_assumptions": "theorem predecessor_free_of_coverage\n    (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g x : D) (coverage : Coverage r g x) : ¬ ∃ y, r y g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.predecessor_free_of_coverage",
+              "type_sha256": "eae1cd78184fea4e0b3d7cd50890d93386aa5397f9218427828cba65f607eb14",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "uniform_of_complete_coverage",
+          "line": 32,
+          "exact_statement_and_assumptions": "theorem uniform_of_complete_coverage\n    (ex : W → D → Prop) (dep : W → D → D → Prop)\n    (actual : W) (g x : D)\n    (present : ex actual g)\n    (irrefl : ∀ y, ¬ dep actual y y)\n    (trans : ∀ a b c, dep actual a b → dep actual b c → dep actual a c)\n    (coverage : Coverage (dep actual) g x)\n    (contingent_receives : ∀ y, ex actual y → ¬ Necessary ex y → Received dep actual y)\n    (essential_reception : GenericReception ex dep) : UniformRoot ex dep g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.uniform_of_complete_coverage",
+              "type_sha256": "853d53849078fa3840260367ff9385d6f59922afaf7245b1e32bd3a3151ae73a",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "chain_irreflexive",
+          "line": 51,
+          "exact_statement_and_assumptions": "theorem chain_irreflexive : ∀ x, ¬ Chain x x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_irreflexive",
+              "type_sha256": "8f9a1b19d0098bf6631cc979baf18a86af83843d2339f367b9dbe1731da3a240",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "chain_transitive",
+          "line": 55,
+          "exact_statement_and_assumptions": "theorem chain_transitive : ∀ a b c, Chain a b → Chain b c → Chain a c",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_transitive",
+              "type_sha256": "339b3b19906a09112bcf973a99c5fba3ea66f875423458253ac1a09254a02def",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "chain_every_member_receives",
+          "line": 59,
+          "exact_statement_and_assumptions": "theorem chain_every_member_receives : ∀ x, ∃ y, Chain y x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_every_member_receives",
+              "type_sha256": "2cd4a9b555074b0965bce2fdfee342627038ba81203082cc02fbfb0902843c5c",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "chain_has_no_covering_member",
+          "line": 63,
+          "exact_statement_and_assumptions": "theorem chain_has_no_covering_member : ¬ ∃ g x, Coverage Chain g x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_has_no_covering_member",
+              "type_sha256": "67fc06abf931b71a45d597b455af87bec4c2007a19545204cfc22954042122b2",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "contingent_dependency_factive",
+          "line": 74,
+          "exact_statement_and_assumptions": "theorem contingent_dependency_factive :\n    ∀ w y x, ContingentDep w y x → ContingentEx w y ∧ ContingentEx w x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.contingent_dependency_factive",
+              "type_sha256": "4169f2e636ebf3bef7962cba1518bc87f5b96446366c0f46f971b979457d9fc0",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "contingent_reception",
+          "line": 79,
+          "exact_statement_and_assumptions": "theorem contingent_reception :\n    ∀ x, ContingentEx true x → ¬ Necessary ContingentEx x →\n      Received ContingentDep true x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.contingent_reception",
+              "type_sha256": "4bf2ec20a4de7d322f57286df9f5966bbd073e915017e3743fcd31895fcc1868",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "generic_reception_without_foundation",
+          "line": 85,
+          "exact_statement_and_assumptions": "theorem generic_reception_without_foundation :\n    GenericReception ContingentEx ContingentDep",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.generic_reception_without_foundation",
+              "type_sha256": "c582c3a6989cb63cf8be5bbcd2042deb6155f4659650a8a1f772ab5c1566075b",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "actual_chain_but_no_root",
+          "line": 90,
+          "exact_statement_and_assumptions": "theorem actual_chain_but_no_root :\n    (∀ x, ContingentEx true x) ∧ ¬ ∃ x, Root ContingentEx ContingentDep true x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.actual_chain_but_no_root",
+              "type_sha256": "5b2ffa258909f7b16e5b259320865c9e87b0a7582ebf549a0f9cd24035bc8eda",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "all_necessarily_exist_without_root",
+          "line": 100,
+          "exact_statement_and_assumptions": "theorem all_necessarily_exist_without_root :\n    (∀ x, Necessary NecessaryEx x) ∧\n      (∀ w, ¬ ∃ x, Root NecessaryEx NecessaryDep w x)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.all_necessarily_exist_without_root",
+              "type_sha256": "cad331b0054ee717af9f968608dd001e165ee0ae2262b084682495dc5cc2fd1f",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "rooted_irreflexive",
+          "line": 114,
+          "exact_statement_and_assumptions": "theorem rooted_irreflexive : ∀ x, ¬ Rooted x x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.rooted_irreflexive",
+              "type_sha256": "569362e69b4a2d708e3a03f92f4247c55f15480e9bd19610ec55936f204c5b97",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rooted_transitive",
+          "line": 118,
+          "exact_statement_and_assumptions": "theorem rooted_transitive : ∀ a b c, Rooted a b → Rooted b c → Rooted a c",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.rooted_transitive",
+              "type_sha256": "4a0c3a02b7ab45920e766a1dde2eb399f0bf49cfa902753ea9052a0124476056",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "root_covers_infinite_ancestry",
+          "line": 123,
+          "exact_statement_and_assumptions": "theorem root_covers_infinite_ancestry : Coverage Rooted none (some 0)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.root_covers_infinite_ancestry",
+              "type_sha256": "3cf4430e89870a8fb4324beea4ed2423e5362bda43466d2ce9b38b7937dca95d",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "not_acc_some",
+          "line": 130,
+          "exact_statement_and_assumptions": "private theorem not_acc_some (n : ℕ) : ¬ Acc Rooted (some n)",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "complete_root_without_global_wellfoundedness",
+          "line": 137,
+          "exact_statement_and_assumptions": "theorem complete_root_without_global_wellfoundedness :\n    Coverage Rooted none (some 0) ∧ ¬ WellFounded Rooted",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.InfiniteControls.complete_root_without_global_wellfoundedness",
+              "type_sha256": "f3af26ad0bf63561908cb82cffa9a4b8e9c3c22253d2978c05775f9208d900b9",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "split_local_coverage",
+          "line": 156,
+          "exact_statement_and_assumptions": "theorem split_local_coverage :\n    Coverage Split leftSource leftEffect ∧ Coverage Split rightSource rightEffect",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.FiniteControls.split_local_coverage",
+              "type_sha256": "1f3dd71c69ef1ac97d8a745f2fdf506000a136dd0dc0fa7f8b2358ae3f804935",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "split_no_common_source",
+          "line": 161,
+          "exact_statement_and_assumptions": "theorem split_no_common_source :\n    ¬ ∃ g, Split g leftEffect ∧ Split g rightEffect",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.FiniteControls.split_no_common_source",
+              "type_sha256": "33536c1296c27c3b8b47de0ea7930c70593981e4cf9c15dc5e4692e21ff0a2b1",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "brute_actual_root_without_necessity",
+          "line": 170,
+          "exact_statement_and_assumptions": "theorem brute_actual_root_without_necessity :\n    Root BruteEx BruteDep true () ∧ ¬ Necessary BruteEx ()",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/eff5fada59f4-upstream-author.json",
+              "declaration": "Orthemology.Tranche6.UpstreamGround.FiniteControls.brute_actual_root_without_necessity",
+              "type_sha256": "6b0b10f25c65ebe48b8f1bc6cda163f0efef3928afbe0040ee21c1ad8306976e",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        }
+      ],
+      "owner_scope": "T6",
+      "current_objectives": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "ConnectedUnity",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea.lean",
+      "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+      "bytes": 10176,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-549ba6a7f0941c36-fc26842425d00959",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/connected-author/models/lean/source/ConnectedUnity.lean",
+          "original_sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+          "original_bytes": 10176,
+          "path": "experiments/orthemology-v5-continuations/source-store/261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea.lean",
+          "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+          "bytes": 10176,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+          "sha256": "26a8c1ad7c84ac7b31bb09b061265dde921a6a2a5fa59a74460bd18b27c5b507",
+          "suite_id": "549ba6a7f094-connected-review",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": null,
+          "execution_kind": "QUALIFIED_CURRENT_PREDECESSOR_PLUS_FRESH_SOURCE",
+          "module_records": [
+            {
+              "module": "ConnectedUnity",
+              "source_sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+              "object_sha256": "5c696e3f40f77d3f5f99adfd4ca589077c476b31fff049346f716d28d2c1a4a5",
+              "transitive_source_fingerprint": "030c2695b57e619afd728ea9b8a90c5f44e54459990034c8421de256345182d9",
+              "status": "QUALIFIED_PREDECESSOR",
+              "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "predecessor_receipt_sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f"
+            }
+          ],
+          "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+        },
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+          "sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f",
+          "suite_id": "549ba6a7f094-connected-author",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": null,
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "ConnectedUnity",
+              "source_sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+              "object_sha256": "5c696e3f40f77d3f5f99adfd4ca589077c476b31fff049346f716d28d2c1a4a5",
+              "transitive_source_fingerprint": "030c2695b57e619afd728ea9b8a90c5f44e54459990034c8421de256345182d9",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "below_transitive",
+          "line": 27,
+          "exact_statement_and_assumptions": "theorem below_transitive (r : D → D → Prop)\n    (trans : ∀ a b c, r a b → r b c → r a c) :\n    ∀ a b c, Below r a b → Below r b c → Below r a c",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.below_transitive",
+              "type_sha256": "77a4528277e9a349ca1e54537968cf3d7f7a510342452fc6d86ddfe5b737b987",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "below_root_eq",
+          "line": 37,
+          "exact_statement_and_assumptions": "theorem below_root_eq (r : D → D → Prop) (a g : D)\n    (root : Root r g) (h : Below r a g) : a = g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.below_root_eq",
+              "type_sha256": "478d0ca51846c57ba8592e21fb85898e195395d0fc39946395198f80d4ecd972",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "root_of_local_cover",
+          "line": 43,
+          "exact_statement_and_assumptions": "theorem root_of_local_cover (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g x : D) (cover : LocalCover r g x) : Root r g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.root_of_local_cover",
+              "type_sha256": "8518ad08bc3035293ed1f2f1df9b8fcf0f22f2742c4064225e74731ddae01cc1",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "local_cover_unique",
+          "line": 54,
+          "exact_statement_and_assumptions": "theorem local_cover_unique (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g h x : D) (cg : LocalCover r g x) (ch : LocalCover r h x) : g = h",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.local_cover_unique",
+              "type_sha256": "c32182f208c5b2ecb1ae385f2151f8bd322cca897a7a9eb420de605b5615ee87",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "root_covers_itself",
+          "line": 60,
+          "exact_statement_and_assumptions": "theorem root_covers_itself (r : D → D → Prop) (g : D)\n    (root : Root r g) : LocalCover r g g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.root_covers_itself",
+              "type_sha256": "7326f63c1b5c46a130487139b6069b8df51cdd59077a0d68d7f5de22d6d8ab90",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "roots_agree_on_edge",
+          "line": 66,
+          "exact_statement_and_assumptions": "theorem roots_agree_on_edge (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g h x y : D) (cx : LocalCover r g x) (cy : LocalCover r h y)\n    (edge : r x y) : g = h",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.roots_agree_on_edge",
+              "type_sha256": "e7c1a257ecddfaee102b59450d4d4c72d18fda675aa2f358ce5a079ff47ebf50",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "roots_agree_on_path",
+          "line": 75,
+          "exact_statement_and_assumptions": "theorem roots_agree_on_path (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (source : D → D) (covers : ∀ x, LocalCover r (source x) x)\n    (x y : D) (path : Path r x y) : source x = source y",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.roots_agree_on_path",
+              "type_sha256": "0f53d61e9448a25e833c6ab2e282de3dc2a9da06a7d83faf897c96f20cc8d887",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "common_cover_of_connected_local",
+          "line": 89,
+          "exact_statement_and_assumptions": "theorem common_cover_of_connected_local (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (base : D) (hlocal : LocallyComplete r) (connected : Connected r) :\n    ∃ g, ∀ x, LocalCover r g x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local",
+              "type_sha256": "75e83d8735063fd14035040de621d8b8525fe9d87848d416631b27f7b35c0fda",
+              "axioms": [
+                "Classical.choice"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "least_of_connected_local",
+          "line": 103,
+          "exact_statement_and_assumptions": "theorem least_of_connected_local (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (base : D) (hlocal : LocallyComplete r) (connected : Connected r) :\n    ∃ g, LeastAncestor r g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.least_of_connected_local",
+              "type_sha256": "bfaaf323b5caced44898ae23c014f2d1658f18f3ef48b93f3ae8127a0e947c45",
+              "axioms": [
+                "Classical.choice"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "least_implies_local_and_connected",
+          "line": 111,
+          "exact_statement_and_assumptions": "theorem least_implies_local_and_connected (r : D → D → Prop)\n    (g : D) (least : LeastAncestor r g) : LocallyComplete r ∧ Connected r",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.least_implies_local_and_connected",
+              "type_sha256": "9d4884b63dbdeb30ea7478a35e61d2b343d58ff7a21e41cf7297ca7eee440d0c",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "local_connected_iff_least",
+          "line": 127,
+          "exact_statement_and_assumptions": "theorem local_connected_iff_least (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c) (base : D) :\n    (LocallyComplete r ∧ Connected r) ↔ ∃ g, LeastAncestor r g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.local_connected_iff_least",
+              "type_sha256": "38f55123980c85147a1b8342a660b61ff58d56b6d30cf4989c2e56b70cb743bb",
+              "axioms": [
+                "Classical.choice"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "unique_root_of_connected_local",
+          "line": 137,
+          "exact_statement_and_assumptions": "theorem unique_root_of_connected_local (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (base : D) (hlocal : LocallyComplete r) (connected : Connected r) :\n    ∃ g, Root r g ∧ ∀ h, Root r h → h = g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local",
+              "type_sha256": "6889a0009263a6b911db5c82c54b8d6d6f02003a9cbb562916efb3cc8dea6a18",
+              "axioms": [
+                "Classical.choice"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_cover_iff_unique_root_and_ancestral_support",
+          "line": 152,
+          "exact_statement_and_assumptions": "theorem local_cover_iff_unique_root_and_ancestral_support (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c) (x : D) :\n    (∃ g, LocalCover r g x) ↔\n      ((∃! g, RootAncestor r g x) ∧\n        ∀ y, Below r y x → ∃ h, RootAncestor r h y)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.local_cover_iff_unique_root_and_ancestral_support",
+              "type_sha256": "a0a7522f6e9b832f5d0a2f754185b3aa96f2a13442bc68b22a2664ab2f5af1ee",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "local_iff_unique_root_ancestors",
+          "line": 177,
+          "exact_statement_and_assumptions": "theorem local_iff_unique_root_ancestors (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c) :\n    LocallyComplete r ↔ ∀ x, ∃! g, RootAncestor r g x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.local_iff_unique_root_ancestors",
+              "type_sha256": "4dac368a36ae694c844cb4cdffa43615861785a5004e06f47bf0274f5be56219",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "strict_descendant_of_nontrivial_field",
+          "line": 198,
+          "exact_statement_and_assumptions": "theorem strict_descendant_of_nontrivial_field (r : D → D → Prop)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g : D) (least : LeastAncestor r g) (nontrivial : ∃ a b, r a b) :\n    ∃ x, r g x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.strict_descendant_of_nontrivial_field",
+              "type_sha256": "62b6adc709431b142f39bc64f2a34f15374c8d4be50bb288299b72d994072d4a",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "merge_strict",
+          "line": 212,
+          "exact_statement_and_assumptions": "theorem merge_strict :\n    (∀ x, ¬ Merge x x) ∧ (∀ a b c, Merge a b → Merge b c → Merge a c)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.merge_strict",
+              "type_sha256": "56da3891737e36272ddea23cd4c0480adfd49b9b0e4ec8b1d06db5d8ebd7f220",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "merge_connected",
+          "line": 217,
+          "exact_statement_and_assumptions": "theorem merge_connected : Connected Merge",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.merge_connected",
+              "type_sha256": "2cfdf337aa8276061e9ca2a542215f12b2c6d0ad4ca0646aa2b1fd09ba7db4ea",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "merge_two_roots_no_local_completion",
+          "line": 227,
+          "exact_statement_and_assumptions": "theorem merge_two_roots_no_local_completion :\n    Root Merge 0 ∧ Root Merge 1 ∧ (0:Fin 3) ≠ 1 ∧ ¬ ∃ g, LocalCover Merge g 2",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.merge_two_roots_no_local_completion",
+              "type_sha256": "2d5b368c1ea03417b5cd2def570518aac9dcf2b9a908a4fc9398e1198360d283",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "split_strict",
+          "line": 234,
+          "exact_statement_and_assumptions": "theorem split_strict :\n    (∀ x, ¬ Split x x) ∧ (∀ a b c, Split a b → Split b c → Split a c)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.split_strict",
+              "type_sha256": "721ed24b92db43b020d2d53e6d522d18b29b73b5c5c51f2d21d4ae6da1870cfa",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "split_local_no_global",
+          "line": 239,
+          "exact_statement_and_assumptions": "theorem split_local_no_global : LocallyComplete Split ∧ ¬ ∃ g, LeastAncestor Split g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.split_local_no_global",
+              "type_sha256": "28c7e55b9482a73474dfe90ace51fa182a4deaf1314f92f76500b8947b4408b7",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "split_disconnected",
+          "line": 243,
+          "exact_statement_and_assumptions": "theorem split_disconnected : ¬ Connected Split",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.split_disconnected",
+              "type_sha256": "4e52e75c88fbc4f88f233280c457a9d2e8b1d6cdf7c8cd2c15e3b55712dbdf5e",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "merge_all_necessary",
+          "line": 250,
+          "exact_statement_and_assumptions": "theorem merge_all_necessary : ∀ x w, NecessaryEx w x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.merge_all_necessary",
+              "type_sha256": "865305278fa0987715be188dea6bca9f91109763dd83769ecc062d414421ac2a",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "singleton_reflexive_no_productivity",
+          "line": 254,
+          "exact_statement_and_assumptions": "theorem singleton_reflexive_no_productivity :\n    LocalCover (fun (_ _ : Unit) => False) () () ∧\n      ¬ ∃ x, (fun (_ _ : Unit) => False) () x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.singleton_reflexive_no_productivity",
+              "type_sha256": "1eb49bfe6be5da81f84b075e9b22e5800101b25fd44e1a4b01f87d47ffb7950d",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "empty_vacuous_local_connected_no_least",
+          "line": 261,
+          "exact_statement_and_assumptions": "theorem empty_vacuous_local_connected_no_least :\n    LocallyComplete (fun (_ _ : Empty) => False) ∧\n      Connected (fun (_ _ : Empty) => False) ∧\n      ¬ ∃ g, LeastAncestor (fun (_ _ : Empty) => False) g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.Controls.empty_vacuous_local_connected_no_least",
+              "type_sha256": "5a22d943bcab884dc80c1b5a6d7ef0ffcf4d5fd79cd82952aa9bee8f4f67011c",
+              "axioms": []
+            }
+          ]
+        }
+      ],
+      "owner_scope": "T6",
+      "current_objectives": [
+        "D",
+        "H"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "InfiniteRootlessBranch",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988.lean",
+      "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+      "bytes": 3364,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-549ba6a7f0941c36-7793f6e920bf844b",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/connected-author/models/lean/source/InfiniteRootlessBranch.lean",
+          "original_sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+          "original_bytes": 3364,
+          "path": "experiments/orthemology-v5-continuations/source-store/b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988.lean",
+          "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+          "bytes": 3364,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+          "sha256": "26a8c1ad7c84ac7b31bb09b061265dde921a6a2a5fa59a74460bd18b27c5b507",
+          "suite_id": "549ba6a7f094-connected-review",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": null,
+          "execution_kind": "QUALIFIED_CURRENT_PREDECESSOR_PLUS_FRESH_SOURCE",
+          "module_records": [
+            {
+              "module": "InfiniteRootlessBranch",
+              "source_sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+              "object_sha256": "f540bea1f20edf4c7c121ad27ef5b7f0963c4539dd90a530e4634298478a7be6",
+              "transitive_source_fingerprint": "3ac4236dce575754dd8c885739cc83669322cfab8a4d5fe469f76ce9eb11581f",
+              "status": "QUALIFIED_PREDECESSOR",
+              "predecessor_receipt": "docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "predecessor_receipt_sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f"
+            }
+          ],
+          "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+        },
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+          "sha256": "1e7a4d3f9ca9935d6d5c1328b0e958a08a03fb12f247fcb8ca643705f6c1349f",
+          "suite_id": "549ba6a7f094-connected-author",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": null,
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "InfiniteRootlessBranch",
+              "source_sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+              "object_sha256": "f540bea1f20edf4c7c121ad27ef5b7f0963c4539dd90a530e4634298478a7be6",
+              "transitive_source_fingerprint": "3ac4236dce575754dd8c885739cc83669322cfab8a4d5fe469f76ce9eb11581f",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "fork_irreflexive",
+          "line": 25,
+          "exact_statement_and_assumptions": "theorem fork_irreflexive : ∀ x, ¬ Fork x x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_irreflexive",
+              "type_sha256": "73fff83492de0b586ae1e00caddf5a823a5c5560ea58df333768a8cd113a4e7a",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fork_transitive",
+          "line": 29,
+          "exact_statement_and_assumptions": "theorem fork_transitive : ∀ a b c, Fork a b → Fork b c → Fork a c",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_transitive",
+              "type_sha256": "af21651944a8ee324e8720fea1d5bef59b86b7d9fdc5c3a71672984c13c06a61",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "ground_is_root",
+          "line": 34,
+          "exact_statement_and_assumptions": "theorem ground_is_root : Root Fork ground",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.ground_is_root",
+              "type_sha256": "a495b01ada886a338544e3b27ffb853472955f071cf1c761e18d9b1fff2f5b92",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "branch_has_predecessor",
+          "line": 38,
+          "exact_statement_and_assumptions": "theorem branch_has_predecessor (n : ℕ) : Fork (branch (n+1)) (branch n)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_predecessor",
+              "type_sha256": "01e66a9ca0ecdf4526802c18f91b3070d575617e86883e90c22b7955cdc91bb7",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "only_ground_is_root",
+          "line": 41,
+          "exact_statement_and_assumptions": "theorem only_ground_is_root : ∀ x, Root Fork x ↔ x = ground",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.only_ground_is_root",
+              "type_sha256": "bb9c6e9442c81ed7c7ae5a092da453c5454ac32b2fae8d824d5b9786a379e217",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "branch_has_no_root_ancestor",
+          "line": 52,
+          "exact_statement_and_assumptions": "theorem branch_has_no_root_ancestor (n : ℕ) : ¬ ∃ g, RootAncestor Fork g (branch n)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_no_root_ancestor",
+              "type_sha256": "1c2c923d1c55542fe5e031b50bec26b12d494e78e2d865e42cb57202b33c4d51",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "target_unique_root_ancestor",
+          "line": 58,
+          "exact_statement_and_assumptions": "theorem target_unique_root_ancestor : ∃! g, RootAncestor Fork g target",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_unique_root_ancestor",
+              "type_sha256": "786fbac53755b1f84feb2f22eca1525786ff09d98b6000b4225785c5166ace2c",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "target_no_local_cover",
+          "line": 63,
+          "exact_statement_and_assumptions": "theorem target_no_local_cover : ¬ ∃ g, LocalCover Fork g target",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_no_local_cover",
+              "type_sha256": "f1ba2e233b75e2c37fc4a051d22be31e6eb85e8257f549f4a8e780b3a43c7117",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fork_connected",
+          "line": 71,
+          "exact_statement_and_assumptions": "theorem fork_connected : Connected Fork",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_connected",
+              "type_sha256": "8bbad37c7a9eee2a1b30486df85301f2311be5b071e028f29c7de0ec4809fff9",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "unique_root_connected_without_least",
+          "line": 83,
+          "exact_statement_and_assumptions": "theorem unique_root_connected_without_least :\n    Connected Fork ∧ (∃! g, Root Fork g) ∧ ¬ ∃ g, LeastAncestor Fork g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.unique_root_connected_without_least",
+              "type_sha256": "2042a1d0919567a28604fdf0db4db12da09eabf8083c7797af48baf488ce1966",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pointwise_uniqueness_without_local_completion",
+          "line": 89,
+          "exact_statement_and_assumptions": "theorem pointwise_uniqueness_without_local_completion :\n    (∃! g, RootAncestor Fork g target) ∧ ¬ ∃ g, LocalCover Fork g target",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.pointwise_uniqueness_without_local_completion",
+              "type_sha256": "7b3c68e5bf522ce5151750d60933b0466996c60631a40752688dc3125ddaa60e",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "all_fork_nodes_necessary",
+          "line": 95,
+          "exact_statement_and_assumptions": "theorem all_fork_nodes_necessary : ∀ x w, NecessaryEx w x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-author.json",
+              "declaration": "Orthemology.Tranche6.ConnectedUnity.InfiniteControls.all_fork_nodes_necessary",
+              "type_sha256": "0d2aa62a02bd84163bcb3096444c257a368fb977d43507452f72f8ed68ea234f",
+              "axioms": []
+            }
+          ]
+        }
+      ],
+      "owner_scope": "T6",
+      "current_objectives": [
+        "D",
+        "H"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "ReviewerProbes",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6.lean",
+      "sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+      "bytes": 9856,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-549ba6a7f0941c36-a40446d7a332b520",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/connected-review/independent-lean/source/ReviewerProbes.lean",
+          "original_sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+          "original_bytes": 9856,
+          "path": "experiments/orthemology-v5-continuations/source-store/db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6.lean",
+          "sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+          "bytes": 9856,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+          "sha256": "26a8c1ad7c84ac7b31bb09b061265dde921a6a2a5fa59a74460bd18b27c5b507",
+          "suite_id": "549ba6a7f094-connected-review",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": null,
+          "execution_kind": "QUALIFIED_CURRENT_PREDECESSOR_PLUS_FRESH_SOURCE",
+          "module_records": [
+            {
+              "module": "ReviewerProbes",
+              "source_sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+              "object_sha256": "c0d5b283c2c32357e3beae97038bbabbd75b0bc77c9b4e9db34af8b7b76c8cf5",
+              "transitive_source_fingerprint": "075fb797dc2102f698703edb970fcc5a7b18e8b363c24e2de1dac43f19cb532a",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Exact custom source closure and selected type/axiom readbacks. Separate native, positive and mutation controls are associated in the sixth-final overlay; this component receipt alone does not qualify the whole original control contract. Official dependency caches are trusted. No ordinary-proof, philosophical, empirical, normative, novelty, external human review or merged-adoption credit."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "reviewer_root_of_cover",
+          "line": 9,
+          "exact_statement_and_assumptions": "theorem reviewer_root_of_cover\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    {g x : D} (h : LocalCover r g x) : Root r g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_root_of_cover",
+              "type_sha256": "53ccd24f0f0edfba1f860d67a2ab430a175b08583ed2d1b93660f49dedd1ef05",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_edge_cover_eq",
+          "line": 22,
+          "exact_statement_and_assumptions": "theorem reviewer_edge_cover_eq\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    {g h x y : D} (cx : LocalCover r g x) (cy : LocalCover r h y)\n    (xy : r x y) : g = h",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_edge_cover_eq",
+              "type_sha256": "f38a115b4a33efcc653657d7bd07210766e13c5be02fe9025ad184b1f0a5f84e",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_path_cover",
+          "line": 35,
+          "exact_statement_and_assumptions": "theorem reviewer_path_cover\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    (hl : LocallyComplete r) {x y : D} (p : Path r x y) :\n    ∀ g, LocalCover r g x → LocalCover r g y",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_path_cover",
+              "type_sha256": "1796d930b7a413c838c525e5a3edabef27c5c67a779692d22ed4248e9716120c",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_constructive_local_to_least",
+          "line": 52,
+          "exact_statement_and_assumptions": "theorem reviewer_constructive_local_to_least\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    (base : D) (hl : LocallyComplete r) (hc : Connected r) :\n    ∃ g, LeastAncestor r g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_constructive_local_to_least",
+              "type_sha256": "1dbea82b1b2c6fde5a71799b71916261743762eb4e564d0e8c16acc891d7c784",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_least_unique",
+          "line": 60,
+          "exact_statement_and_assumptions": "theorem reviewer_least_unique\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    {g h : D} (hg : LeastAncestor r g) (hh : LeastAncestor r h) : g = h",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_least_unique",
+              "type_sha256": "205eed5b056b03e0e1fd59864f26e82fb97886cd5f7d8e41003ac9d9e6ac7612",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_global_unique_supported_to_least",
+          "line": 71,
+          "exact_statement_and_assumptions": "theorem reviewer_global_unique_supported_to_least\n    (unique : ∃! g, Root r g)\n    (supported : ∀ x, ∃ g, RootAncestor r g x) : ∃ g, LeastAncestor r g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_global_unique_supported_to_least",
+              "type_sha256": "4aca01c4d4dec9b16003a8854a1796da185879137050e82c6204afe24fa616f5",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_pointwise_forward",
+          "line": 83,
+          "exact_statement_and_assumptions": "theorem reviewer_pointwise_forward\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    {g x : D} (hx : LocalCover r g x) :\n    (∃! h, RootAncestor r h x) ∧ ∀ y, Below r y x → ∃ h, RootAncestor r h y",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_pointwise_forward",
+              "type_sha256": "4299fe394961d98cb83192c9ca120d44723064df39e89a3e45ea39c7b4dd0070",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_pointwise_reverse",
+          "line": 97,
+          "exact_statement_and_assumptions": "theorem reviewer_pointwise_reverse\n    (ht : ∀ a b c, r a b → r b c → r a c) {x : D}\n    (unique : ∃! g, RootAncestor r g x)\n    (support : ∀ y, Below r y x → ∃ h, RootAncestor r h y) :\n    ∃ g, LocalCover r g x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_pointwise_reverse",
+              "type_sha256": "23f4679aa17fd475a0d3a83a9e3844a1343bfad73fdffef8156bfbfc280a7e2e",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_transitivity_is_material",
+          "line": 118,
+          "exact_statement_and_assumptions": "theorem reviewer_transitivity_is_material :\n    (∀ x, ¬ ChainWithoutClosure x x) ∧\n    LocallyComplete ChainWithoutClosure ∧\n    ¬ ∃ g, LeastAncestor ChainWithoutClosure g",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_transitivity_is_material",
+              "type_sha256": "c1321cebb9a9c293cddc726524341c06195960214e8028f89b4801e5cda8e34b",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reviewer_unclosed_chain_connected",
+          "line": 125,
+          "exact_statement_and_assumptions": "theorem reviewer_unclosed_chain_connected : Connected ChainWithoutClosure",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_unclosed_chain_connected",
+              "type_sha256": "04f7da898b8b8465057dd1ea900f13509c2a0c8cfa1ceb742996ed7c87e481c7",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reviewer_irreflexivity_is_material_to_uniqueness",
+          "line": 141,
+          "exact_statement_and_assumptions": "theorem reviewer_irreflexivity_is_material_to_uniqueness :\n    LocalCover (fun (_ _ : Bool) => True) false true ∧\n    LocalCover (fun (_ _ : Bool) => True) true true ∧\n    false ≠ true ∧ ¬ Root (fun (_ _ : Bool) => True) false",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_irreflexivity_is_material_to_uniqueness",
+              "type_sha256": "ebadafeb8540e6f666393aef78b03102dda5ccfd830fa6de2feedc5cb5dd3493",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reviewer_scope_roothood_control",
+          "line": 150,
+          "exact_statement_and_assumptions": "theorem reviewer_scope_roothood_control :\n    ¬ Root (fun (a b : Bool) => a=false ∧ b=true) true ∧\n    Root (fun (_ _ : Unit) => False) ()",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_scope_roothood_control",
+              "type_sha256": "319b00191168fe3dd8a986ba98157221d8af4f6950bf99ffdb64798949bcdc1e",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reviewer_rooted_strict",
+          "line": 163,
+          "exact_statement_and_assumptions": "theorem reviewer_rooted_strict :\n    (∀ x, ¬ Rooted x x) ∧\n    (∀ a b c, Rooted a b → Rooted b c → Rooted a c)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_rooted_strict",
+              "type_sha256": "7ff9e42929496db1c9e662d37c6a4a32060e8da4cc959c27cb57e07e3797cbc9",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reviewer_rooted_least",
+          "line": 172,
+          "exact_statement_and_assumptions": "theorem reviewer_rooted_least : LeastAncestor Rooted none",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_rooted_least",
+              "type_sha256": "ae5851b7c06fd121b0364b8a69d3e9202e9b45661fb2d079a33ad5c115cae578",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_rooted_no_accessible_branch",
+          "line": 177,
+          "exact_statement_and_assumptions": "theorem reviewer_rooted_no_accessible_branch (n : ℕ) : ¬ Acc Rooted (some n)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_rooted_no_accessible_branch",
+              "type_sha256": "c7808447fe17499b986d76613d933e5632a719a8dc492c82d96634d35306e608",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_rooted_not_well_founded",
+          "line": 185,
+          "exact_statement_and_assumptions": "theorem reviewer_rooted_not_well_founded : ¬ WellFounded Rooted",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_rooted_not_well_founded",
+              "type_sha256": "f48da5eedea8c9051c4a43461fb5ffd18a517b477f9edff953a21b6f0e63aadc",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "reviewer_fork_support_failure_inside_cone",
+          "line": 191,
+          "exact_statement_and_assumptions": "theorem reviewer_fork_support_failure_inside_cone :\n    ∃ y, Below InfiniteControls.Fork y InfiniteControls.Item.target ∧\n      ¬ ∃ h, RootAncestor InfiniteControls.Fork h y",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_fork_support_failure_inside_cone",
+              "type_sha256": "05c698e5d6593c16ba561f04e7eea3025c78f6e146fccf707b161cc2ffb27d6e",
+              "axioms": [
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reviewer_graph_does_not_supply_act_bridge",
+          "line": 199,
+          "exact_statement_and_assumptions": "theorem reviewer_graph_does_not_supply_act_bridge :\n    LeastAncestor Rooted none ∧\n    ¬ Orthemology.Tranche3.ProductiveCompleteness.HistoryComplete\n      Orthemology.Tranche3.ProductiveCompleteness.Controls.endpointOnly\n      Orthemology.Tranche3.ProductiveCompleteness.Controls.everyMode\n      Orthemology.Tranche3.ProductiveCompleteness.Controls.ownMode",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/549ba6a7f094-connected-review.json",
+              "declaration": "ConnectedReview.reviewer_graph_does_not_supply_act_bridge",
+              "type_sha256": "1dac880e3ca214693778ab90dbe14cdcc880f0db2c3d544c71f3f9b24ba27965",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        }
+      ],
+      "owner_scope": "T6 reviewer",
+      "current_objectives": [
+        "D",
+        "H"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "IntegratedContingency",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7.lean",
+      "sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+      "bytes": 2804,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-db6ccdc793a0a1a9-d4e1cb125533656a",
+          "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+          "member": "tranche3/independent-audit/orthability-core/snapshot/IntegratedContingency.lean",
+          "original_sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+          "original_bytes": 2804,
+          "path": "experiments/orthemology-v5-continuations/source-store/e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7.lean",
+          "sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+          "bytes": 2804,
+          "projection": "EXACT",
+          "derivation": null
+        },
+        {
+          "id": "src-332d0dbea81d90d7-d4e1cb125533656a",
+          "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+          "member": "tranche3/independent-audit/orthability-core/snapshot/IntegratedContingency.lean",
+          "original_sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+          "original_bytes": 2804,
+          "path": "experiments/orthemology-v5-continuations/source-store/e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7.lean",
+          "sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+          "bytes": 2804,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+          "sha256": "73dd81be434394a11406a045949151129ee43f71bb8c7b151ec40e801ed96950",
+          "suite_id": "db6ccdc793a0-orthability-core",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "IntegratedContingency",
+              "source_sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+              "object_sha256": "3e0be2a5609713cd4cfff9652d7ff6bb2507c577e29665ea3a4db7b5d99e4ab3",
+              "transitive_source_fingerprint": "4efffed68c0a0e91fe29db8618a6a2dbebafef21c99c1fa8f96ed398047a5c03",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "source_with_contingent_effect",
+          "line": 27,
+          "exact_statement_and_assumptions": "theorem source_with_contingent_effect :\n    Root Ex Dep true 0 ∧\n    (∀ x, Ex true x → ¬ Necessary Ex x → Received Dep true x) ∧\n    GenericReception Ex Dep ∧\n    UniformRoot Ex Dep 0 ∧\n    Ex true 1 ∧ ¬ Ex false 1 ∧\n    (∀ w, Power w) ∧\n    (∀ w, Power w ∧ Will w → Ex w 1) ∧\n    (¬ ∀ w, Will w)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.IntegratedContingency.source_with_contingent_effect",
+              "type_sha256": "e3592526ad9e392a3cf7370a8cd0e75b6149604cc7c9f796ee3d845aec9b8a88",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "productive_package_is_inhabited",
+          "line": 50,
+          "exact_statement_and_assumptions": "theorem productive_package_is_inhabited :\n    Complete 0 () ∧\n    HistoryComplete Complete Mode Account ∧\n    UnborrowedActs Proper Account ∧\n    ProductiveWitness Complete Mode Proper",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.IntegratedContingency.productive_package_is_inhabited",
+              "type_sha256": "48207ff6bbac84e65a7c7e0533d51544fde0dbf77bc39829400677bf175164cf",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "integrated_noncollapse_witness",
+          "line": 61,
+          "exact_statement_and_assumptions": "theorem integrated_noncollapse_witness :\n    UniformRoot Ex Dep 0 ∧ Ex true 1 ∧ ¬ Ex false 1 ∧\n    Complete 0 () ∧ HistoryComplete Complete Mode Account ∧\n    UnborrowedActs Proper Account ∧ ProductiveWitness Complete Mode Proper",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-orthability-core.json",
+              "declaration": "Orthemology.Tranche3.IntegratedContingency.integrated_noncollapse_witness",
+              "type_sha256": "87abd1b0cfca28123ed4ff84018490bbfdf5a81552d85d30cda1f2ccda356951",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        }
+      ],
+      "owner_scope": "T3",
+      "current_objectives": [
+        "B",
+        "C",
+        "H/nonvacuity"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "KnowledgeScope",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3.lean",
+      "sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+      "bytes": 10029,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-83f1a917b40abc1e-423fc5e85a3612ac",
+          "origin": "83f1a917b40abc1e4d6ebac2df9fec31e1141440cf17bd57321efe9ebcab9cd9",
+          "member": "models/lean/source/KnowledgeScope.lean",
+          "original_sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+          "original_bytes": 10029,
+          "path": "experiments/orthemology-v5-continuations/source-store/546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3.lean",
+          "sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+          "bytes": 10029,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/83f1a917b40a-knowledge-author.json",
+          "sha256": "0a24b843dc840d697f9a268c57e946195857a0b98855b97fb1926874d805f3f4",
+          "suite_id": "83f1a917b40a-knowledge-author",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:21:32.428019+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "KnowledgeScope",
+              "source_sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+              "object_sha256": "b0fc861eef0f96084f8d8bf03502cc369c7bba4d47ae67d9c81b56f4d6010fc2",
+              "transitive_source_fingerprint": "36a942f4bc915532cdd7e986bd57a6dab953d8c80117c2946587e41cc05b5efb",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "exact_source_schemas",
+          "line": 93,
+          "exact_statement_and_assumptions": "theorem exact_source_schemas : ExactSourceSchemas",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "cognitive_interpretation",
+          "line": 101,
+          "exact_statement_and_assumptions": "theorem cognitive_interpretation : CognitiveInterpretation",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "relational_sanity",
+          "line": 118,
+          "exact_statement_and_assumptions": "theorem relational_sanity : RelationalSanity",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "possible_dependence_wellFounded",
+          "line": 124,
+          "exact_statement_and_assumptions": "theorem possible_dependence_wellFounded :\n    WellFounded (fun y x => ∃ w, Dep w y x)",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "each_world_dependence_wellFounded",
+          "line": 136,
+          "exact_statement_and_assumptions": "theorem each_world_dependence_wellFounded (w : World) : WellFounded (Dep w)",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "uniform_source_via_retained_theorem",
+          "line": 142,
+          "exact_statement_and_assumptions": "theorem uniform_source_via_retained_theorem : SourceIdentity.UniformRoot Ex Dep u",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "complete_sources_coincide",
+          "line": 148,
+          "exact_statement_and_assumptions": "theorem complete_sources_coincide (w : World) (s t x : Entity)\n    (hs : Complete w s x) (ht : Complete w t x) : s = t",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "joint_relative_interpretation",
+          "line": 156,
+          "exact_statement_and_assumptions": "theorem joint_relative_interpretation :\n    ExactSourceSchemas ∧ CognitiveInterpretation ∧ RelationalSanity ∧\n    WellFounded (fun y x => ∃ w, Dep w y x) ∧\n    (∀ w, WellFounded (Dep w))",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "exact_schemas_with_recipient_knowledge_without_source_knowledge",
+          "line": 164,
+          "exact_statement_and_assumptions": "theorem exact_schemas_with_recipient_knowledge_without_source_knowledge :\n    ExactSourceSchemas ∧ Knows a r p ∧ Owns a r ka ∧\n    (∀ w p', ¬ Knows w u p') ∧ (∀ w k, ¬ Owns w u k)",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "promoting_local_activity_breaks_unborrowed",
+          "line": 175,
+          "exact_statement_and_assumptions": "theorem promoting_local_activity_breaks_unborrowed :\n    ¬ ProductiveCompleteness.UnborrowedActs (PromotedProper a) (Accounts a)",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "identity_and_knowledge_of_unborrowed_exercise",
+          "line": 194,
+          "exact_statement_and_assumptions": "theorem identity_and_knowledge_of_unborrowed_exercise\n    (complete : S → X → Prop) (modeOf : X → M → Prop)\n    (proper accounts : S → M → Prop) (knows : S → P → Prop)\n    (closure : ProductiveCompleteness.HistoryComplete complete modeOf accounts)\n    (unborrowed : ProductiveCompleteness.UnborrowedActs proper accounts)\n    {s t : S} {x : X} {m : M} {p' : P}\n    (hs : complete s x) (hm : modeOf x m) (ht : proper t m)\n    (hk : knows t p') : s = t ∧ knows s p'",
+          "selected_readback_evidence": []
+        },
+        {
+          "name": "knowledge_via_retained_uniqueness",
+          "line": 207,
+          "exact_statement_and_assumptions": "theorem knowledge_via_retained_uniqueness\n    (complete : S → X → Prop) (modeOf : X → M → Prop)\n    (proper accounts : S → M → Prop) (knows : S → P → Prop)\n    (closure : ProductiveCompleteness.HistoryComplete complete modeOf accounts)\n    (unborrowed : ProductiveCompleteness.UnborrowedActs proper accounts)\n    (witness : ProductiveCompleteness.ProductiveWitness complete modeOf proper)\n    {s t : S} {x : X} {p' : P}\n    (hs : complete s x) (ht : complete t x) (hk : knows t p') :\n    s = t ∧ knows s p'",
+          "selected_readback_evidence": []
+        }
+      ],
+      "owner_scope": "T5; reused T6",
+      "current_objectives": [
+        "G",
+        "knowledge",
+        "ownership"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "CoverageBoundary",
+      "path": "predecessor/experiments/orthemology-v5-continuations/source-store/980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74.lean",
+      "repository_relative_path": "experiments/orthemology-v5-continuations/source-store/980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74.lean",
+      "sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+      "bytes": 9474,
+      "source_kind": "LEAN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-db6ccdc793a0a1a9-5173aba7436e4725",
+          "origin": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+          "member": "tranche3/independent-audit/coverage-boundary/snapshot/CoverageBoundary.lean",
+          "original_sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+          "original_bytes": 9474,
+          "path": "experiments/orthemology-v5-continuations/source-store/980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74.lean",
+          "sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+          "bytes": 9474,
+          "projection": "EXACT",
+          "derivation": null
+        },
+        {
+          "id": "src-332d0dbea81d90d7-5173aba7436e4725",
+          "origin": "332d0dbea81d90d7697f391520f43df61afb04c10bf11736320d9f8299cb6d58",
+          "member": "tranche3/independent-audit/coverage-boundary/snapshot/CoverageBoundary.lean",
+          "original_sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+          "original_bytes": 9474,
+          "path": "experiments/orthemology-v5-continuations/source-store/980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74.lean",
+          "sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+          "bytes": 9474,
+          "projection": "EXACT",
+          "derivation": null
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "verification_receipts": [
+        {
+          "path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+          "sha256": "ffa0749d5578026af7b607ce54d4d7c34449ac3c0513a725e1d56f3661ab06ea",
+          "suite_id": "db6ccdc793a0-coverage-boundary",
+          "recorded_status": "FRESH_KERNEL_COMPONENTS",
+          "kernel_verified": true,
+          "exit_code": 0,
+          "finished_utc": "2026-10-02T05:42:34.892959+00:00",
+          "execution_kind": "FRESH_CUSTOM_CLOSURE",
+          "module_records": [
+            {
+              "module": "CoverageBoundary",
+              "source_sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+              "object_sha256": "bf406123bd04d61c79a3f36368fb739a24b8fbcc66347fbf4b6356067d6d13fe",
+              "transitive_source_fingerprint": "7d757010c152750c7ffc20067f9f8c0f923fbefc8446c3bb9625adb219374c31",
+              "status": "FRESH_COMPILE",
+              "exit_code": 0
+            }
+          ],
+          "scope": "Source-bound custom closure and selected declaration readbacks. Types are represented by hashes of the exact printed types; complete logs remain private. Official caches are trusted. This does not establish ordinary proof, runtime completeness, empirical or normative warrant, novelty, external human review or merged adoption."
+        }
+      ],
+      "evidence_status": "KERNEL_PROVED",
+      "evidence_temporality": "INHERITED_SOURCE_BOUND_KERNEL_RECEIPTS",
+      "theorems": [
+        {
+          "name": "provides_iff_requirements",
+          "line": 75,
+          "exact_statement_and_assumptions": "theorem provides_iff_requirements (U : Finset Source) (t : Token) :\n    Provides U t ↔ requirements t ⊆ U",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.provides_iff_requirements",
+              "type_sha256": "75b2b2debd4b6ba07a54e5005bedf016499f57a3a090d735b1b4dfe7953698c1",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "actual_outputs",
+          "line": 81,
+          "exact_statement_and_assumptions": "theorem actual_outputs :\n    output actual evaluation = some 4 ∧\n    output actual auxiliary = some true ∧\n    output actual joint = some (4, true)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.actual_outputs",
+              "type_sha256": "9ebf85f4637432266904407a5cab822fe3a41f1492c7b6fa1bcba0eb784b5842",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "actual_evaluation_correct",
+          "line": 88,
+          "exact_statement_and_assumptions": "theorem actual_evaluation_correct :\n    output actual evaluation = some 4 ∧ (2 + 2 : ℕ) = 4 ∧ (2 + 2 : ℕ) ≠ 5",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.actual_evaluation_correct",
+              "type_sha256": "2ad9a6522c80ffbd834a831ba01a294cd100cfb779a8c320e4b4edd52578694f",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "enablers_exist_necessarily",
+          "line": 92,
+          "exact_statement_and_assumptions": "theorem enablers_exist_necessarily : ∀ s w, SourceExists w s",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.enablers_exist_necessarily",
+              "type_sha256": "fd9205e8d1523def3ef11ae4fafb53a65a8b358888b787f8832d17d24530b48c",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "every_actual_token_produced",
+          "line": 96,
+          "exact_statement_and_assumptions": "theorem every_actual_token_produced :\n    ∀ t, ExistsToken actual t ∧ Provides {a, b} t",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.every_actual_token_produced",
+              "type_sha256": "13266a443a105cce192e08f3505281ace333a909f8a1d5892c6844603e6619d7",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_but_not_universal",
+          "line": 100,
+          "exact_statement_and_assumptions": "theorem local_but_not_universal :\n    Complete a evaluation ∧ ¬ Complete a auxiliary ∧ ¬ Complete a joint",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.local_but_not_universal",
+              "type_sha256": "65eb34877f118d5d3d649284c9fe0f081479ea3fa41060402982373934ef8d11",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "no_individual_complete_for_joint",
+          "line": 104,
+          "exact_statement_and_assumptions": "theorem no_individual_complete_for_joint : ∀ s, ¬ Complete s joint",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.no_individual_complete_for_joint",
+              "type_sha256": "9fbf91c868ae7c4046edc333b94471ad833c35cce566465490e0eeeaa4b94668",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "no_universal_individual",
+          "line": 107,
+          "exact_statement_and_assumptions": "theorem no_universal_individual : ¬ ∃ s, ∀ t, Complete s t",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.no_universal_individual",
+              "type_sha256": "0839f99644a70f9c72101dd7db4b0fee0db68574fba12a0ab8a79492213b024c",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "local_exclusive",
+          "line": 110,
+          "exact_statement_and_assumptions": "theorem local_exclusive :\n    ∀ s r t, Complete s t → Complete r t → s = r",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.local_exclusive",
+              "type_sha256": "363f107b38d568ccb5c7eb6694a5ad35c121c22f1f8f6a667144e9d6a9ab1798",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "prerequisite_closed",
+          "line": 114,
+          "exact_statement_and_assumptions": "theorem prerequisite_closed :\n    ∀ s x y, Complete s x → Needs x y → Complete s y",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.prerequisite_closed",
+              "type_sha256": "b56ffbe8d99277d791ec79c39948f64028d85a23c12c9e0b8452b52dac808d5d",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "connected_hub",
+          "line": 121,
+          "exact_statement_and_assumptions": "theorem connected_hub : ∀ t, t = joint ∨ Needs joint t",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.connected_hub",
+              "type_sha256": "5900a056ea8954677e4d4daffbb95b98ebbfd4fee8a71d54b39a53f6e884db9b",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "genuine_cooperation",
+          "line": 125,
+          "exact_statement_and_assumptions": "theorem genuine_cooperation :\n    output (available {a}) joint = none ∧\n    output (available {b}) joint = none ∧\n    output (available {a, b}) joint = some (4, true)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.genuine_cooperation",
+              "type_sha256": "2c24af32e5e99033d60361b195ad691ae9fb615bcf7171dadd5be9e55a6713ce",
+              "axioms": [
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "effects_contingent",
+          "line": 133,
+          "exact_statement_and_assumptions": "theorem effects_contingent :\n    ∀ t, ExistsToken actual t ∧ ¬ ExistsToken (fun _ => false) t",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.effects_contingent",
+              "type_sha256": "b468705e7beb1652884d7ed24c3e8b29233017683f21ba4d5d162382c3a1b816",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "source_roots_necessary",
+          "line": 160,
+          "exact_statement_and_assumptions": "theorem source_roots_necessary :\n    ∀ s, (∀ w, NodeExists w (Sum.inl s)) ∧\n      (∀ w x, ¬ Origin w x (Sum.inl s))",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.source_roots_necessary",
+              "type_sha256": "7e171c88b6fcbed410df2eb419b7448ba9b6a69b74b07866aa6c875918668dad",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "origin_factive",
+          "line": 165,
+          "exact_statement_and_assumptions": "theorem origin_factive :\n    ∀ w x y, Origin w x y → NodeExists w x ∧ NodeExists w y",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.origin_factive",
+              "type_sha256": "0db6ce58ef1cf99ec6f3c96a64b1115065b28169f27c1e4dc07bb669c154cee7",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "origin_strict_rank",
+          "line": 169,
+          "exact_statement_and_assumptions": "theorem origin_strict_rank :\n    ∀ w x y, Origin w x y → rank x < rank y",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.origin_strict_rank",
+              "type_sha256": "3c4a8b0a88237abec11cdf7788649625e572ccd663cf4ea6be68fcba6148232e",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "actual_contingent_source_principle",
+          "line": 175,
+          "exact_statement_and_assumptions": "theorem actual_contingent_source_principle :\n    ∀ x, NodeExists actual x → ¬ (∀ w, NodeExists w x) →\n      ∃ y, Origin actual y x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.actual_contingent_source_principle",
+              "type_sha256": "77df54c084b65de7bfc530b44f1809cc028b3957bb3e87bde1251c2db2a62002",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "generic_reception_retained",
+          "line": 180,
+          "exact_statement_and_assumptions": "theorem generic_reception_retained :\n    ∀ x, (∃ w y, Origin w y x) → ∀ v, NodeExists v x → ∃ y, Origin v y x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.generic_reception_retained",
+              "type_sha256": "470ef86e950c05d8188f871e6041ba6daa99cabe15640330c4623ec6d9016c8a",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "envelope_closed",
+          "line": 196,
+          "exact_statement_and_assumptions": "theorem envelope_closed (seed : Set V) (requires : V → V → Prop) :\n    ClosedUnder requires (InEnvelope seed requires)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.envelope_closed",
+              "type_sha256": "083f394505200e783ac717b29ea8f0eea5cdb21f770c907a9ecba6522e2ce7fd",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "envelope_least",
+          "line": 201,
+          "exact_statement_and_assumptions": "theorem envelope_least (seed C : Set V) (requires : V → V → Prop)\n    (initial : seed ⊆ C) (closed : ClosedUnder requires C) :\n    ∀ x, InEnvelope seed requires x → C x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.envelope_least",
+              "type_sha256": "c4dc3f05a537b21eab7eeeb83404626774df93c9121cff08bf7500207fc61d62",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "universal_propagation_iff_envelope",
+          "line": 212,
+          "exact_statement_and_assumptions": "theorem universal_propagation_iff_envelope\n    (seed : Set V) (requires : V → V → Prop) :\n    (∀ C : Set V, seed ⊆ C → ClosedUnder requires C → ∀ x, C x) ↔\n      ∀ x, InEnvelope seed requires x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.universal_propagation_iff_envelope",
+              "type_sha256": "5962805dd3b63cfeaecad16e774ea1162150a649923507daa918b46ccb0ca199",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "complete_on_field_of_envelope",
+          "line": 223,
+          "exact_statement_and_assumptions": "theorem complete_on_field_of_envelope {S : Type*}\n    (complete : S → V → Prop) (s : S) (seed : Set V)\n    (requires : V → V → Prop)\n    (initial : ∀ x, seed x → complete s x)\n    (closed : ∀ x y, complete s x → requires x y → complete s y)\n    (scope : ∀ x, InEnvelope seed requires x) :\n    ∀ x, complete s x",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.complete_on_field_of_envelope",
+              "type_sha256": "2a7b722d921e2837fe596531b49bd1474749e9d77c3847dc073f07d0ad2936b0",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "seed_evaluation_envelope_only",
+          "line": 234,
+          "exact_statement_and_assumptions": "theorem seed_evaluation_envelope_only :\n    ∀ t, InEnvelope ({evaluation} : Set Token) Needs t → t = evaluation",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.seed_evaluation_envelope_only",
+              "type_sha256": "f0ae2976cf1271a67fb2a7a1ce9117ff656927aabeaa94b0884072c9cf0e1738",
+              "axioms": []
+            }
+          ]
+        },
+        {
+          "name": "connected_does_not_give_prerequisite_scope",
+          "line": 243,
+          "exact_statement_and_assumptions": "theorem connected_does_not_give_prerequisite_scope :\n    (∀ t, t = joint ∨ Needs joint t) ∧\n      ¬ (∀ t, InEnvelope ({evaluation} : Set Token) Needs t)",
+          "selected_readback_evidence": [
+            {
+              "receipt_path": "predecessor/docs/provenance/v5-research-continuations/checks/db6ccdc793a0-coverage-boundary.json",
+              "declaration": "Orthemology.Tranche3.CoverageBoundary.connected_does_not_give_prerequisite_scope",
+              "type_sha256": "fcadeea7de9477a2beb3b38a50e68f9489039a9a54825c17ce4d30a4c82d4a9b",
+              "axioms": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ]
+            }
+          ]
+        }
+      ],
+      "owner_scope": "T3",
+      "current_objectives": [
+        "D",
+        "F",
+        "G",
+        "H"
+      ],
+      "evidence_labels": [
+        "KERNEL_PROVED"
+      ],
+      "new_verification_scope": "READ_ONLY_BYTE_AND_RECEIPT_BINDING_INTEGRITY"
+    },
+    {
+      "id": "Sixth-upstream-review",
+      "path": "predecessor/docs/provenance/v5-research-continuations/notes/25c6c5efae4829755fb829a57157f1682b67234322ffde87d154559dd9fa246d.md",
+      "repository_relative_path": "docs/provenance/v5-research-continuations/notes/25c6c5efae4829755fb829a57157f1682b67234322ffde87d154559dd9fa246d.md",
+      "sha256": "25c6c5efae4829755fb829a57157f1682b67234322ffde87d154559dd9fa246d",
+      "bytes": 14012,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-549ba6a7f0941c36-9da2afc107d10fbd",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/upstream-review/REPORT.md",
+          "original_sha256": "7e56277697facc134b148a3d8729b909ace22c36d26846f70b9ee9835dfab0a7",
+          "original_bytes": 13672,
+          "path": "docs/provenance/v5-research-continuations/notes/25c6c5efae4829755fb829a57157f1682b67234322ffde87d154559dd9fa246d.md",
+          "sha256": "25c6c5efae4829755fb829a57157f1682b67234322ffde87d154559dd9fa246d",
+          "bytes": 14012,
+          "projection": "DERIVED",
+          "derivation": {
+            "method": "Reviewed navigation-only projection: packet links become text, private locators are removed, packet path separators are spaced and an inherited-evidence notice is added. Original mathematical prose and notices are retained; original bytes and the exact diff remain in private custody.",
+            "diff_sha256": "1cc6c3165a812c00d5e38e15c43f86285d4e78579af5e3f05422054eaf032997",
+            "review_status": "REVIEWED"
+          }
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "WRITTEN_MATHEMATICAL_PROOF",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "Sixth-connected-review",
+      "path": "predecessor/docs/provenance/v5-research-continuations/notes/06a096f0844f48eac253a26b455ea7f995385b4d5f1743eb0306d61c206f9292.md",
+      "repository_relative_path": "docs/provenance/v5-research-continuations/notes/06a096f0844f48eac253a26b455ea7f995385b4d5f1743eb0306d61c206f9292.md",
+      "sha256": "06a096f0844f48eac253a26b455ea7f995385b4d5f1743eb0306d61c206f9292",
+      "bytes": 15409,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-549ba6a7f0941c36-cd09ef9986bd7cce",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/connected-review/REPORT.md",
+          "original_sha256": "cb1fb289be6d2d02d426193bbceda4a84dd3c96a42680252b4b58f22cf8cd1c9",
+          "original_bytes": 15069,
+          "path": "docs/provenance/v5-research-continuations/notes/06a096f0844f48eac253a26b455ea7f995385b4d5f1743eb0306d61c206f9292.md",
+          "sha256": "06a096f0844f48eac253a26b455ea7f995385b4d5f1743eb0306d61c206f9292",
+          "bytes": 15409,
+          "projection": "DERIVED",
+          "derivation": {
+            "method": "Reviewed navigation-only projection: packet links become text, private locators are removed, packet path separators are spaced and an inherited-evidence notice is added. Original mathematical prose and notices are retained; original bytes and the exact diff remain in private custody.",
+            "diff_sha256": "b8fad2d1b23277ab71342fb6693dbf7029d8a504c3687cf3fc6f7874eea9763b",
+            "review_status": "REVIEWED"
+          }
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "WRITTEN_MATHEMATICAL_PROOF",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "Sixth-intrinsic-necessity",
+      "path": "predecessor/docs/provenance/v5-research-continuations/notes/cfc0393b381fcd5fea90cce22c271420f5c6c9fbd74c30ec91b1c2563a876ee3.md",
+      "repository_relative_path": "docs/provenance/v5-research-continuations/notes/cfc0393b381fcd5fea90cce22c271420f5c6c9fbd74c30ec91b1c2563a876ee3.md",
+      "sha256": "cfc0393b381fcd5fea90cce22c271420f5c6c9fbd74c30ec91b1c2563a876ee3",
+      "bytes": 47323,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-549ba6a7f0941c36-e37aa2da9a054ee1",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "selected-source-union/tranche6/foundations/intrinsic-necessity/freeze-v2/INTRINSIC_NECESSITY_ARGUMENT.md",
+          "original_sha256": "7f12edad1756dcfb5c29fd6c0c8ee2c1df9120bf2306028ba1cd2bb7f9a4309c",
+          "original_bytes": 46983,
+          "path": "docs/provenance/v5-research-continuations/notes/cfc0393b381fcd5fea90cce22c271420f5c6c9fbd74c30ec91b1c2563a876ee3.md",
+          "sha256": "cfc0393b381fcd5fea90cce22c271420f5c6c9fbd74c30ec91b1c2563a876ee3",
+          "bytes": 47323,
+          "projection": "DERIVED",
+          "derivation": {
+            "method": "Reviewed navigation-only projection: packet links become text, private locators are removed, packet path separators are spaced and an inherited-evidence notice is added. Original mathematical prose and notices are retained; original bytes and the exact diff remain in private custody.",
+            "diff_sha256": "4737c1d2345b271f8a5c5f0d348d003f3c8b970ef20f5898d8c36342bcacbe39",
+            "review_status": "REVIEWED"
+          }
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "SOURCE_ATTESTED",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "Sixth-act-ontology",
+      "path": "predecessor/docs/provenance/v5-research-continuations/notes/e2ba2ea03f8b2a35d01b26fb6840febf4c8ea6f3bc6affa53f2068a03f53fa32.md",
+      "repository_relative_path": "docs/provenance/v5-research-continuations/notes/e2ba2ea03f8b2a35d01b26fb6840febf4c8ea6f3bc6affa53f2068a03f53fa32.md",
+      "sha256": "e2ba2ea03f8b2a35d01b26fb6840febf4c8ea6f3bc6affa53f2068a03f53fa32",
+      "bytes": 16890,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-549ba6a7f0941c36-834a7acb563ae11b",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "selected-source-union/tranche6/foundations/world-bridge/freeze-v1/ACT_ONTOLOGY_AND_COMPLETENESS.md",
+          "original_sha256": "0076382325f98a15176e34abc2771c32fd6c2753d6df71324603c9a2f0ee715f",
+          "original_bytes": 16550,
+          "path": "docs/provenance/v5-research-continuations/notes/e2ba2ea03f8b2a35d01b26fb6840febf4c8ea6f3bc6affa53f2068a03f53fa32.md",
+          "sha256": "e2ba2ea03f8b2a35d01b26fb6840febf4c8ea6f3bc6affa53f2068a03f53fa32",
+          "bytes": 16890,
+          "projection": "DERIVED",
+          "derivation": {
+            "method": "Reviewed navigation-only projection: packet links become text, private locators are removed, packet path separators are spaced and an inherited-evidence notice is added. Original mathematical prose and notices are retained; original bytes and the exact diff remain in private custody.",
+            "diff_sha256": "8e0c01e95802a6b237c09fc544d01b2fa11d2b7e5d27194c805eae47da3b7aeb",
+            "review_status": "REVIEWED"
+          }
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "SOURCE_ATTESTED",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "Sixth-attribute-dependencies",
+      "path": "predecessor/docs/provenance/v5-research-continuations/notes/0797149b6869d04aaeb335a37405d77a0eac19645f406fe53bf90fa396c84254.md",
+      "repository_relative_path": "docs/provenance/v5-research-continuations/notes/0797149b6869d04aaeb335a37405d77a0eac19645f406fe53bf90fa396c84254.md",
+      "sha256": "0797149b6869d04aaeb335a37405d77a0eac19645f406fe53bf90fa396c84254",
+      "bytes": 16502,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "id": "src-549ba6a7f0941c36-c1f76a9be18bbf78",
+          "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+          "member": "projections/attributes-delivery/DEPENDENCIES_AND_DISCRIMINATION.md",
+          "original_sha256": "71e3f0abc8ea5996d6032e6b0c38e18a6b21f98a51c29e8ab2e974a24dcd5dd5",
+          "original_bytes": 16160,
+          "path": "docs/provenance/v5-research-continuations/notes/0797149b6869d04aaeb335a37405d77a0eac19645f406fe53bf90fa396c84254.md",
+          "sha256": "0797149b6869d04aaeb335a37405d77a0eac19645f406fe53bf90fa396c84254",
+          "bytes": 16502,
+          "projection": "DERIVED",
+          "derivation": {
+            "method": "Reviewed navigation-only projection: packet links become text, private locators are removed, packet path separators are spaced and an inherited-evidence notice is added. Original mathematical prose and notices are retained; original bytes and the exact diff remain in private custody.",
+            "diff_sha256": "93c77cd932ffc037170dc6ca69406add2bfc453f333a1c153c2f7143d876a5c5",
+            "review_status": "REVIEWED"
+          }
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "SOURCE_ATTESTED",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "Modal-original-owner",
+      "path": "predecessor/theory/lineages/h-modal/orthability_modal_grounding.md",
+      "repository_relative_path": "theory/lineages/h-modal/orthability_modal_grounding.md",
+      "sha256": "313e1ed5bdc225e380b77952c8be111b402b6359d30c53233968664372d0e1c7",
+      "bytes": 119172,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "SAME_BYTES_IN_ACCEPTED_SIXTH_MAIN",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "WRITTEN_MATHEMATICAL_PROOF",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "T07-source-veracity",
+      "path": "predecessor/experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md",
+      "repository_relative_path": "experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md",
+      "sha256": "c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed",
+      "bytes": 37331,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "PR30_CANDIDATE_ONLY",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "derivation": null,
+          "id": "D15-SRC-T07-TRUTHFUL",
+          "member_chain": [
+            "Seventh_Evidence/components/truthful.zip",
+            "SOURCE_TRUTHFULNESS_WARRANT.md"
+          ],
+          "origin_archive_sha256": "62792a8c87cf709f8b4a84969c20f7b8156edd3e9576568c5d56d48982979622",
+          "origin_input_id": "T07-EVIDENCE",
+          "origin_input_sha256": "f56dab60b87068ce9be4f3b13aa8dc6958bc3d2962467beb580fcd2cd352b553",
+          "original_bytes": 37331,
+          "original_sha256": "c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed",
+          "projection": "EXACT",
+          "projection_basis": "Original delivered research or scoped review; complete byte-exact projection after private-path scan.",
+          "public_bytes": 37331,
+          "public_path": "experiments/orthemology-v5-successors/source-store/c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed/SOURCE_TRUTHFULNESS_WARRANT.md",
+          "public_sha256": "c17e4a3c6bf20034102fbe0c84501bad487368139cf18e989518ce061c060aed",
+          "review_scope": "Original scientific/review scope retained; no new primary-source verification, specialist endorsement, or adoption."
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "WRITTEN_MATHEMATICAL_PROOF",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "T09-premise-union",
+      "path": "predecessor/experiments/orthemology-v5-successors/source-store/cb3f00678575bf5f5e7d5a2bca329ccfc02fe130d452585f3e36610c70254804/PREMISE_UNION_AND_TARGET_LEDGER.md",
+      "repository_relative_path": "experiments/orthemology-v5-successors/source-store/cb3f00678575bf5f5e7d5a2bca329ccfc02fe130d452585f3e36610c70254804/PREMISE_UNION_AND_TARGET_LEDGER.md",
+      "sha256": "cb3f00678575bf5f5e7d5a2bca329ccfc02fe130d452585f3e36610c70254804",
+      "bytes": 15974,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "PR30_CANDIDATE_ONLY",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "derivation": null,
+          "id": "D15-SRC-T09-PREMISE-UNION",
+          "member_chain": [
+            "Ninth_Research_Evidence/components/Ninth_Integrated_Rival_Public_Source_v3.zip",
+            "Ninth_Integrated_Rival_Public_Source_v3/PREMISE_UNION_AND_TARGET_LEDGER.md"
+          ],
+          "origin_archive_sha256": "02d34bd39b152a984cc25d9dd1d2deebb6452d128e37623adbffda814296f789",
+          "origin_input_id": "T09-EVIDENCE",
+          "origin_input_sha256": "d930a2e4bc8ec6c3bab1a5cd6708b8206816642d9cb669786f0d15d1c7106ab9",
+          "original_bytes": 15974,
+          "original_sha256": "cb3f00678575bf5f5e7d5a2bca329ccfc02fe130d452585f3e36610c70254804",
+          "projection": "EXACT",
+          "projection_basis": "Original delivered research or scoped review; complete byte-exact projection after private-path scan.",
+          "public_bytes": 15974,
+          "public_path": "experiments/orthemology-v5-successors/source-store/cb3f00678575bf5f5e7d5a2bca329ccfc02fe130d452585f3e36610c70254804/PREMISE_UNION_AND_TARGET_LEDGER.md",
+          "public_sha256": "cb3f00678575bf5f5e7d5a2bca329ccfc02fe130d452585f3e36610c70254804",
+          "review_scope": "Original scientific/review scope retained; no new primary-source verification, specialist endorsement, or adoption."
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "SOURCE_ATTESTED",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "T10-actual-power",
+      "path": "predecessor/experiments/orthemology-v5-successors/source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md",
+      "repository_relative_path": "experiments/orthemology-v5-successors/source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md",
+      "sha256": "5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7",
+      "bytes": 18749,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "PR30_CANDIDATE_ONLY",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "derivation": null,
+          "id": "D15-SRC-T10-POWER-ROUTE",
+          "member_chain": [
+            "Orthemology_Tenth_Research_Evidence_v1_20261003/tranche10/research/joint-existential-coverage/candidate-v2/ACTUAL_POWER_ROUTE.md"
+          ],
+          "origin_archive_sha256": "86b1924c39385655005ce8b1159f8032fe27fad7459949c9e235c1638ac15804",
+          "origin_input_id": "T10-EVIDENCE",
+          "origin_input_sha256": "86b1924c39385655005ce8b1159f8032fe27fad7459949c9e235c1638ac15804",
+          "original_bytes": 18749,
+          "original_sha256": "5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7",
+          "projection": "EXACT",
+          "projection_basis": "Original delivered research or scoped review; complete byte-exact projection after private-path scan.",
+          "public_bytes": 18749,
+          "public_path": "experiments/orthemology-v5-successors/source-store/5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7/ACTUAL_POWER_ROUTE.md",
+          "public_sha256": "5ccacdb8203921877d4351a2ff93f65be23c6c41eabaf7eddde42e78b3ff4da7",
+          "review_scope": "Original scientific/review scope retained; no new primary-source verification, specialist endorsement, or adoption."
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "WRITTEN_MATHEMATICAL_PROOF",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "T10-RP5-clarification",
+      "path": "predecessor/experiments/orthemology-v5-successors/source-store/ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e/RP5_RETENTION_CLARIFICATION.md",
+      "repository_relative_path": "experiments/orthemology-v5-successors/source-store/ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e/RP5_RETENTION_CLARIFICATION.md",
+      "sha256": "ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e",
+      "bytes": 3442,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "PR30_CANDIDATE_ONLY",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "derivation": null,
+          "id": "D15-SRC-T10-RP5",
+          "member_chain": [
+            "Orthemology_Tenth_Research_Evidence_v1_20261003/tranche10/research/joint-existential-coverage/retention-clarification-v2/RP5_RETENTION_CLARIFICATION.md"
+          ],
+          "origin_archive_sha256": "86b1924c39385655005ce8b1159f8032fe27fad7459949c9e235c1638ac15804",
+          "origin_input_id": "T10-EVIDENCE",
+          "origin_input_sha256": "86b1924c39385655005ce8b1159f8032fe27fad7459949c9e235c1638ac15804",
+          "original_bytes": 3442,
+          "original_sha256": "ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e",
+          "projection": "EXACT",
+          "projection_basis": "Original delivered research or scoped review; complete byte-exact projection after private-path scan.",
+          "public_bytes": 3442,
+          "public_path": "experiments/orthemology-v5-successors/source-store/ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e/RP5_RETENTION_CLARIFICATION.md",
+          "public_sha256": "ee348e6c8f6fa6709163319bedd349028b31dc236a51227fae4647373691bf1e",
+          "review_scope": "Original scientific/review scope retained; no new primary-source verification, specialist endorsement, or adoption."
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "SOURCE_ATTESTED",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "T12-local-cone",
+      "path": "predecessor/experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md",
+      "repository_relative_path": "experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md",
+      "sha256": "0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b",
+      "bytes": 3447,
+      "source_kind": "WRITTEN_SOURCE",
+      "baseline_presence": "PR30_CANDIDATE_ONLY",
+      "adoption_warning": "Repository containment is not metaphysical premise adoption; preserve source status and current main/candidate boundary.",
+      "source_aliases": [
+        {
+          "derivation": null,
+          "id": "T12-SOURCE-CHAIN",
+          "member_chain": [
+            "research/chain-foundation/PUBLIC_CANDIDATE_v1.md"
+          ],
+          "origin_archive_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+          "origin_input_id": "T12-CP-CURRENT",
+          "origin_input_sha256": "0dbca68aad572ea488c480fca5e6cd512940980241524e043b07f7b0125be2c4",
+          "original_bytes": 3447,
+          "original_sha256": "0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b",
+          "projection": "EXACT",
+          "projection_basis": "Exact delivered scientific Markdown/JSON bytes; no equation, hypothesis, quantifier, limit or historical status rewritten.",
+          "public_bytes": 3447,
+          "public_path": "experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md",
+          "public_sha256": "0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b",
+          "review_scope": "Source identity and stated written/review scope only; final companion role does not alter frozen recovery headers."
+        }
+      ],
+      "fresh_verification_this_audit": "NOT_RUN",
+      "inspection": "Actual source content inspected; hashes and receipt bindings freshly compared, no proof or model suite rerun.",
+      "evidence_status": "WRITTEN_SOURCE_ONLY",
+      "evidence_labels": [
+        "WRITTEN_MATHEMATICAL_PROOF",
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "evidence_labels_scope": "Labels describe written conditional arguments or source records, not new validity or philosophical acceptance. Exact result scope is in REUSE_AND_NEW_BRIDGES.json."
+    },
+    {
+      "id": "Seventeenth-current-report",
+      "path": "report-projections/Orthemology_Seventeenth_Research_Final_v1_20261005.md",
+      "sha256": "4336a5098e25dc97288284d941ac5eefe9a7c651406960e519e87c40658ef45e",
+      "bytes": 80153,
+      "source_kind": "DERIVED_PUBLIC_REPORT_PROJECTION",
+      "baseline_presence": "OUTSIDE_PR30_T17_T19_SUCCESSOR_INPUT",
+      "evidence_status": "PHILOSOPHICAL_REPORT_NOT_KERNEL_VERIFICATION",
+      "inspection": "Relevant foundational sections inspected; no new primary/source verification.",
+      "sections": [
+        {
+          "heading": "# Orthemology Seventeenth research report",
+          "line": 3
+        },
+        {
+          "heading": "# The present judgement",
+          "line": 11
+        },
+        {
+          "heading": "# What the reading establishes",
+          "line": 25
+        },
+        {
+          "heading": "# A fair standard of philosophical appraisal",
+          "line": 39
+        },
+        {
+          "heading": "# Contingency and intrinsic necessity",
+          "line": 53
+        },
+        {
+          "heading": "# The existential disagreement and what actually changed",
+          "line": 67
+        },
+        {
+          "heading": "# Actual supply and original existential completion",
+          "line": 81
+        },
+        {
+          "heading": "# The actual witness and the Necessary Being conclusion",
+          "line": 97
+        },
+        {
+          "heading": "# Essential independence of that same bearer",
+          "line": 113
+        },
+        {
+          "heading": "# Real attributes and unrestricted standing power",
+          "line": 127
+        },
+        {
+          "heading": "# The cumulative case for one common Creator",
+          "line": 141
+        },
+        {
+          "heading": "# Cooperation and foreknowledge in the unity argument",
+          "line": 155
+        },
+        {
+          "heading": "# Wisdom and the positive case for truthful assertion",
+          "line": 171
+        },
+        {
+          "heading": "# The remaining veracity disagreement and the revised judgement",
+          "line": 185
+        },
+        {
+          "heading": "# Objective fittingness and the scope of authority",
+          "line": 201
+        },
+        {
+          "heading": "# Necessary wisdom and voluntary determination",
+          "line": 217
+        },
+        {
+          "heading": "# Created occasions and the necessity of a whole history",
+          "line": 231
+        },
+        {
+          "heading": "# Ordinary reports can warrant belief",
+          "line": 245
+        },
+        {
+          "heading": "# Content occurrence and the preservation of warrant",
+          "line": 259
+        },
+        {
+          "heading": "# Implications for the first six avenues",
+          "line": 273
+        },
+        {
+          "heading": "## Necessary being",
+          "line": 275
+        },
+        {
+          "heading": "## Source and attribute ascent",
+          "line": 279
+        },
+        {
+          "heading": "## Objective norm fixing",
+          "line": 283
+        },
+        {
+          "heading": "## Unknown structure restoration",
+          "line": 287
+        },
+        {
+          "heading": "## Provenance resilient restoration",
+          "line": 291
+        },
+        {
+          "heading": "## Warranted collective diagnosis",
+          "line": 295
+        },
+        {
+          "heading": "# Implications for the remaining six avenues",
+          "line": 299
+        },
+        {
+          "heading": "## Identity and copying",
+          "line": 301
+        },
+        {
+          "heading": "## Semantic fidelity",
+          "line": 305
+        },
+        {
+          "heading": "## Type theoretic completion",
+          "line": 309
+        },
+        {
+          "heading": "## Measure and computability",
+          "line": 313
+        },
+        {
+          "heading": "## Occurrence sensitive language",
+          "line": 317
+        },
+        {
+          "heading": "## Empirical and specialist validation",
+          "line": 321
+        },
+        {
+          "heading": "# Two short explanations and the scope of the results",
+          "line": 329
+        },
+        {
+          "heading": "## For a five year old",
+          "line": 331
+        },
+        {
+          "heading": "## For a fourteen year old",
+          "line": 337
+        },
+        {
+          "heading": "## What remains limited",
+          "line": 347
+        },
+        {
+          "heading": "# Appendix on the closed secondary inquiry",
+          "line": 351
+        },
+        {
+          "heading": "# Source register",
+          "line": 367
+        },
+        {
+          "heading": "## The six supplied books",
+          "line": 369
+        },
+        {
+          "heading": "## Other cited works",
+          "line": 383
+        }
+      ],
+      "evidence_labels": [
+        "SOURCE_ATTESTED"
+      ],
+      "evidence_labels_scope": "Current report attribution and appraisal only, not independent primary-source validation."
+    },
+    {
+      "id": "Eighteenth-current-report",
+      "path": "report-projections/Orthemology_Eighteenth_Research_Final_v1_20261006.md",
+      "sha256": "865b5da539f093cb79e42d3756f0bde05bb911e8420f3d1dc141c2ea7f011250",
+      "bytes": 44691,
+      "source_kind": "DERIVED_PUBLIC_REPORT_PROJECTION",
+      "baseline_presence": "OUTSIDE_PR30_T17_T19_SUCCESSOR_INPUT",
+      "evidence_status": "PHILOSOPHICAL_REPORT_NOT_KERNEL_VERIFICATION",
+      "inspection": "Relevant foundational sections inspected; no new primary/source verification.",
+      "sections": [
+        {
+          "heading": "# Orthemology Eighteenth research report",
+          "line": 3
+        },
+        {
+          "heading": "# The present judgement",
+          "line": 11
+        },
+        {
+          "heading": "# The foundational result and the closed extension",
+          "line": 25
+        },
+        {
+          "heading": "## Reading scope and source voices",
+          "line": 35
+        },
+        {
+          "heading": "# The exact hidden change problem",
+          "line": 41
+        },
+        {
+          "heading": "## Why fixed change times suffice",
+          "line": 51
+        },
+        {
+          "heading": "# A finite certificate for actual success",
+          "line": 59
+        },
+        {
+          "heading": "## Necessity and sufficiency",
+          "line": 69
+        },
+        {
+          "heading": "# How the extracted controller learns",
+          "line": 77
+        },
+        {
+          "heading": "## Finite contamination and stable phases",
+          "line": 85
+        },
+        {
+          "heading": "# Three examples that distinguish the claims",
+          "line": 95
+        },
+        {
+          "heading": "## Static success can fail after a change",
+          "line": 97
+        },
+        {
+          "heading": "## Finite certificates can describe unbounded memory",
+          "line": 103
+        },
+        {
+          "heading": "## Stale data can permanently reject the true mode",
+          "line": 111
+        },
+        {
+          "heading": "# Decision complexity and exact representation",
+          "line": 117
+        },
+        {
+          "heading": "## What information determines the answer",
+          "line": 127
+        },
+        {
+          "heading": "# When support alone can guide learning",
+          "line": 135
+        },
+        {
+          "heading": "## Why general hidden priorities need calibration",
+          "line": 143
+        },
+        {
+          "heading": "# What the implementation and kernel checks establish",
+          "line": 153
+        },
+        {
+          "heading": "## The accepted combined semantic endpoint",
+          "line": 161
+        },
+        {
+          "heading": "# The literal type theoretic question remains open",
+          "line": 171
+        },
+        {
+          "heading": "## Restricting the final type does not repair the method",
+          "line": 179
+        },
+        {
+          "heading": "# Implications for avenues one to six",
+          "line": 189
+        },
+        {
+          "heading": "## 1 Necessary being",
+          "line": 191
+        },
+        {
+          "heading": "## 2 Source and attribute ascent",
+          "line": 195
+        },
+        {
+          "heading": "## 3 Objective norm fixing",
+          "line": 199
+        },
+        {
+          "heading": "## 4 Unknown structure restoration",
+          "line": 203
+        },
+        {
+          "heading": "## 5 Provenance resilient restoration",
+          "line": 207
+        },
+        {
+          "heading": "## 6 Warranted collective diagnosis",
+          "line": 211
+        },
+        {
+          "heading": "# Implications for avenues seven to twelve",
+          "line": 217
+        },
+        {
+          "heading": "## 7 Identity and copying",
+          "line": 219
+        },
+        {
+          "heading": "## 8 Semantic fidelity",
+          "line": 223
+        },
+        {
+          "heading": "## 9 Type theoretic completion",
+          "line": 227
+        },
+        {
+          "heading": "## 10 Measure and computability",
+          "line": 231
+        },
+        {
+          "heading": "## 11 Occurrence sensitive language",
+          "line": 235
+        },
+        {
+          "heading": "## 12 Empirical and specialist validation",
+          "line": 239
+        },
+        {
+          "heading": "# Scope and remaining research",
+          "line": 245
+        },
+        {
+          "heading": "## Related work and programme ownership",
+          "line": 251
+        },
+        {
+          "heading": "## The next research question",
+          "line": 257
+        }
+      ],
+      "evidence_labels": [
+        "SOURCE_ATTESTED"
+      ],
+      "evidence_labels_scope": "Current report attribution and appraisal only, not independent primary-source validation."
+    },
+    {
+      "id": "Nineteenth-current-report",
+      "path": "report-projections/Orthemology_Nineteenth_Research_Final_v1_20261006.md",
+      "sha256": "ca551178b117da992aa2de5c46bba14499d394125ba550626703b30a753caf3f",
+      "bytes": 72186,
+      "source_kind": "DERIVED_PUBLIC_REPORT_PROJECTION",
+      "baseline_presence": "OUTSIDE_PR30_T17_T19_SUCCESSOR_INPUT",
+      "evidence_status": "PHILOSOPHICAL_REPORT_NOT_KERNEL_VERIFICATION",
+      "inspection": "Relevant foundational sections inspected; no new primary/source verification.",
+      "sections": [
+        {
+          "heading": "# Orthemology Nineteenth research report",
+          "line": 3
+        },
+        {
+          "heading": "# The present judgement",
+          "line": 11
+        },
+        {
+          "heading": "# What was already established and what changes",
+          "line": 25
+        },
+        {
+          "heading": "# The strongest source owned argument",
+          "line": 41
+        },
+        {
+          "heading": "## The concrete product is the starting point",
+          "line": 43
+        },
+        {
+          "heading": "## Realised efficacy is an excellence",
+          "line": 51
+        },
+        {
+          "heading": "## The maker who also preserves",
+          "line": 65
+        },
+        {
+          "heading": "## Voluntary partnership and sovereignty",
+          "line": 79
+        },
+        {
+          "heading": "# Causal nonduplication and the stronger local norm",
+          "line": 93
+        },
+        {
+          "heading": "## Why the earlier scope correction remains necessary",
+          "line": 95
+        },
+        {
+          "heading": "## The positive causal rationale",
+          "line": 103
+        },
+        {
+          "heading": "# Independence and the perfection of actual exercise",
+          "line": 117
+        },
+        {
+          "heading": "# The source mode reconstruction and its textual tension",
+          "line": 133
+        },
+        {
+          "heading": "## Four levels of perfection",
+          "line": 135
+        },
+        {
+          "heading": "## What the compressed Minhāj argument leaves to explain",
+          "line": 149
+        },
+        {
+          "heading": "# How original provision follows through created causes",
+          "line": 161
+        },
+        {
+          "heading": "## Three attributions",
+          "line": 163
+        },
+        {
+          "heading": "## Shared products and later modification",
+          "line": 175
+        },
+        {
+          "heading": "## From local coverage to the connected field",
+          "line": 187
+        },
+        {
+          "heading": "# The substantive dissent and the standard of warrant",
+          "line": 199
+        },
+        {
+          "heading": "# Standing power and source sensitive targets",
+          "line": 213
+        },
+        {
+          "heading": "# Wider gains from reading the arguments together",
+          "line": 227
+        },
+        {
+          "heading": "## Source identity voice and an utterance event",
+          "line": 229
+        },
+        {
+          "heading": "## Real succession and correctly typed conditions",
+          "line": 237
+        },
+        {
+          "heading": "## Carrying a remedy into another setting",
+          "line": 247
+        },
+        {
+          "heading": "## Graded restoration and agency",
+          "line": 255
+        },
+        {
+          "heading": "# Intentional attestation and the al Walid case",
+          "line": 263
+        },
+        {
+          "heading": "## A positive route with independent evidential content",
+          "line": 265
+        },
+        {
+          "heading": "## What the selected historical example actually supplies",
+          "line": 275
+        },
+        {
+          "heading": "## The comparison must preserve the challenge actually stated",
+          "line": 285
+        },
+        {
+          "heading": "# What the result reaches and what remains distinct",
+          "line": 291
+        },
+        {
+          "heading": "## Beyond the actual connected field",
+          "line": 293
+        },
+        {
+          "heading": "## Avenue 1 and original actuality",
+          "line": 301
+        },
+        {
+          "heading": "## Avenue 2 and source owned veracity",
+          "line": 311
+        },
+        {
+          "heading": "## Avenue 3 and rightful guidance",
+          "line": 321
+        },
+        {
+          "heading": "## Source truth recipient warrant and action",
+          "line": 335
+        },
+        {
+          "heading": "# Repository and verification boundary",
+          "line": 343
+        },
+        {
+          "heading": "# Source guide and reading limits",
+          "line": 353
+        }
+      ],
+      "evidence_labels": [
+        "SOURCE_ATTESTED"
+      ],
+      "evidence_labels_scope": "Current report attribution and appraisal only, not independent primary-source validation."
+    }
+  ],
+  "custody_only_unread_originals": [
+    {
+      "id": "src-549ba6a7f0941c36-9c780f3a36141917",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "member": "selected-source-union/tranche6/necessary-ground/connected-unity-v1/CONNECTED_SOURCE_UNITY.md",
+      "original_sha256": "a5d4a68b6e3b9c874a7855385bc28180b9a83951f34c9700015b2e00b9e2ecb7",
+      "original_bytes": 16527,
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
+    },
+    {
+      "id": "src-549ba6a7f0941c36-91178ac8626c8eb8",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "member": "selected-source-union/tranche6/necessary-ground/connected-unity-v1/PREMISE_AND_RIVAL_MAP.md",
+      "original_sha256": "7dbdfaa708f5d3fcb091ba01748a13758172bf973e5404b19e88404b78b62201",
+      "original_bytes": 7544,
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
+    },
+    {
+      "id": "src-549ba6a7f0941c36-021ccc83bea7cabe",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "member": "selected-source-union/tranche6/necessary-ground/upstream-v1/PREMISE_STATUS_MAP.md",
+      "original_sha256": "aad923c64db9569fdeb98df6ff99bfeb0dd9ffcc2d06775e5524eaad9e2c58ad",
+      "original_bytes": 7738,
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
+    }
+  ],
+  "status_warning": "KERNEL_PROVED labels refer solely to conditional mathematics or explicit relative structures covered by retained source-bound receipts. Metaphysical premises are not promoted. All such kernel evidence is inherited; fresh compilation/model replay NOT_RUN."
+}

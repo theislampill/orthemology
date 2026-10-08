@@ -1,0 +1,392 @@
+{
+  "created_at_utc": "2026-10-07T16:34:51.603054+00:00",
+  "disposition": "PASS_SUCCESSOR_SOURCE_CHANGES_FOR_DOCUMENT_AUTHORING",
+  "blocking_findings": [],
+  "resolved_findings": [
+    "Separate v2 result-ledger navigation and pending-native-admission boundary",
+    "Eight study groups wording"
+  ],
+  "preservation": [
+    {
+      "baseline": {
+        "historical_original": {
+          "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+          "bytes": 41472,
+          "record_name": "REPORT.md"
+        },
+        "included_projection": {
+          "owner_archive_path": "t20/reports/REPORT.md",
+          "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+          "bytes": 41472
+        },
+        "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+      },
+      "successor": {
+        "historical_original": {
+          "sha256": "067a2a085e8c4a5ec837c8d17869ade90618b8b5a4d20b562a3e3c32f6e5605e",
+          "bytes": 53358,
+          "record_name": "REPORT_v2_DRAFT.md"
+        },
+        "included_projection": {
+          "owner_archive_path": "t20/reports/REPORT_v2.md",
+          "sha256": "067a2a085e8c4a5ec837c8d17869ade90618b8b5a4d20b562a3e3c32f6e5605e",
+          "bytes": 53358
+        },
+        "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+      },
+      "allowed_replacement_baseline_line": 11,
+      "changes": [
+        {
+          "operation": "replace",
+          "old_line_start": 11,
+          "old_line_end": 11,
+          "new_line_start": 11,
+          "new_line_end": 11
+        },
+        {
+          "operation": "insert",
+          "old_line_start": 80,
+          "old_line_end": 79,
+          "new_line_start": 80,
+          "new_line_end": 93
+        },
+        {
+          "operation": "insert",
+          "old_line_start": 191,
+          "old_line_end": 190,
+          "new_line_start": 205,
+          "new_line_end": 240
+        }
+      ],
+      "all_other_old_text_byte_preserved": true
+    },
+    {
+      "baseline": {
+        "historical_original": {
+          "sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+          "bytes": 63809,
+          "record_name": "GUIDE.md"
+        },
+        "included_projection": {
+          "owner_archive_path": "t20/reading/GUIDE.md",
+          "sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+          "bytes": 63809
+        },
+        "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+      },
+      "successor": {
+        "historical_original": {
+          "sha256": "c966158d0c2f2e2dc8007c1de9abbce0587a04cfd918fe1c9284508dbeeff6ee",
+          "bytes": 68244,
+          "record_name": "GUIDE_v2_DRAFT.md"
+        },
+        "included_projection": {
+          "owner_archive_path": "t20/reading/GUIDE_v2.md",
+          "sha256": "c966158d0c2f2e2dc8007c1de9abbce0587a04cfd918fe1c9284508dbeeff6ee",
+          "bytes": 68244
+        },
+        "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+      },
+      "allowed_replacement_baseline_line": 9,
+      "changes": [
+        {
+          "operation": "replace",
+          "old_line_start": 9,
+          "old_line_end": 9,
+          "new_line_start": 9,
+          "new_line_end": 9
+        },
+        {
+          "operation": "insert",
+          "old_line_start": 14,
+          "old_line_end": 13,
+          "new_line_start": 14,
+          "new_line_end": 29
+        }
+      ],
+      "all_other_old_text_byte_preserved": true
+    }
+  ],
+  "current_1434_philosophical_section_verbatim_preserved": true,
+  "predecessor_15_result_objects_raw_json_preserved": true,
+  "methodology_new_reading_or_science_credit": 0,
+  "ontology_author_theorems": 9,
+  "ontology_author_selected_readbacks": 7,
+  "ontology_author_semantic_rejections": 2,
+  "ontology_reviewer_probes": 7,
+  "ontology_final_review_bound_files_verified": 26,
+  "proofs_replayed_by_this_reviewer": false,
+  "scientific_sources_changed_by_this_reviewer": false,
+  "source_bindings": [
+    {
+      "historical_original": {
+        "sha256": "fa8a662b5a899cc4070a61f54dbf43d14a752bf8df84cdc4b6aa94935e5d15af",
+        "bytes": 216437,
+        "record_name": "MATH_UTILISATION.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/math/MATH_UTILISATION.json",
+        "sha256": "d0e73b80d86fd9367c434e7711cb1bb40d5e0f61821db03392b5cd2590b61ff5",
+        "bytes": 216733
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "fd16c7ddcbb724e2170b5682414f476cf6e71e7ffb82c49d2ddbcb52d4068cfd",
+        "bytes": 24120,
+        "record_name": "MATH_UTILISATION.md"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/math/MATH_UTILISATION.md",
+        "sha256": "fd16c7ddcbb724e2170b5682414f476cf6e71e7ffb82c49d2ddbcb52d4068cfd",
+        "bytes": 24120
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "4a53e294a8c80e86000274a738b14c7caa9ac18d9705a2cd584c8717156bd88b",
+        "bytes": 98391,
+        "record_name": "DRIVE_CORPUS.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/drive/DRIVE_CORPUS.json",
+        "sha256": "6d020b39ac31311ec388678c79dd342ea6b5ee6144e1565e37b16a8d66d11761",
+        "bytes": 99219
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "8376e12c86b1ecec6d4fe31a07e48245f6e07321de334b4da72336aba370c781",
+        "bytes": 32075,
+        "record_name": "DRIVE_CORPUS.md"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/drive/DRIVE_CORPUS.md",
+        "sha256": "866e0d85f3524013ce7e5e6df1907fe184139259028d6e9b4ded91379893f0fa",
+        "bytes": 32665
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "196f711088b2fc9a7d48e3e4f817c0958d47c7f81b16ac19b58bce4805d076cf",
+        "bytes": 44251,
+        "record_name": "ARABIC_READING_METHOD.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/arabic/ARABIC_READING_METHOD.json",
+        "sha256": "f7171879244b4660b547bcb75bb3b1c5007c570cc4403050636452744535ff04",
+        "bytes": 44373
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219",
+        "bytes": 17550,
+        "record_name": "ARABIC_READING_METHOD.md"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/arabic/ARABIC_READING_METHOD.md",
+        "sha256": "1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219",
+        "bytes": 17550
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "6198ce067b5f10df00de7774a10a1d8b26efc4ea503aeffab7fdb92b63ff6a57",
+        "bytes": 42316,
+        "record_name": "CROSS_STREAM_CASES.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/arabic/CROSS_STREAM_CASES.json",
+        "sha256": "a9bbeb51d33e7e60c82a8228582502e6e40aabc559f95b77fdac3e9826d98597",
+        "bytes": 42438
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8",
+        "bytes": 17763,
+        "record_name": "CROSS_STREAM_CASES.md"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/arabic/CROSS_STREAM_CASES.md",
+        "sha256": "182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8",
+        "bytes": 17763
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "59057535b987e9abe97fa3540fef2b754cec95ef04e24d5dfc09d3b6f003effd",
+        "bytes": 233627,
+        "record_name": "RESULT_EVIDENCE_LEDGER_v2.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/result-ledger/RESULT_EVIDENCE_LEDGER_v2.json",
+        "sha256": "6b1e3b7a3ce32842eda6deada3c5bad3ef740215dba77b2f7750d0de51ba333b",
+        "bytes": 235075
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "a1c8ae6e7ae4cc8a8e4b1ebe166b2a273a5bd8842c3f56c904b863a346e5ffcd",
+        "bytes": 3587,
+        "record_name": "RESULT_EVIDENCE_SUCCESSOR_NOTE_v2.md"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/result-ledger/RESULT_EVIDENCE_SUCCESSOR_NOTE_v2.md",
+        "sha256": "a1c8ae6e7ae4cc8a8e4b1ebe166b2a273a5bd8842c3f56c904b863a346e5ffcd",
+        "bytes": 3587
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "29f14045926fe0b0806f3aacc36845c1d9e58ce41e84b3006a472e7e6e98db3c",
+        "bytes": 1564,
+        "record_name": "VALIDATION_v2.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/methodology/result-ledger/VALIDATION_v2.json",
+        "sha256": "1ffc2e72f4e4ec8b8c1b7cef9e095d11320012c69ec32bf07487511d09e3c11c",
+        "bytes": 2557
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "4ee0f896358f59752991b8ab72edbdd588d0b0db07c022f5b8fa1b2f61a18284",
+        "bytes": 13054,
+        "record_name": "AUDIT.md"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/AUDIT.md",
+        "sha256": "e9e55a70a8a84323d76514f095227067a7b962f6c718daa6e75ce2b4dbf83e05",
+        "bytes": 13140
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+        "bytes": 7014,
+        "record_name": "OriginationTypeControl.lean"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/OriginationTypeControl.lean",
+        "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+        "bytes": 7014
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "84e99dd8e31b93f9a49a7269844c220105e1541ae9c9294552d5acb37ce327c3",
+        "bytes": 2643,
+        "record_name": "EXECUTION_RECEIPT.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/EXECUTION_RECEIPT.json",
+        "sha256": "4690dbd95f752e80c1eed8cff5788b73088893493cc802acc18ffe32921dba1c",
+        "bytes": 3708
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "860fedbc5552868e0d47877e6e6af7f4ccff49b4cefa4b9e5843ac11bb2332af",
+        "bytes": 4541,
+        "record_name": "DEFINITION_BINDINGS.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/DEFINITION_BINDINGS.json",
+        "sha256": "171f38cd4bb5fc3c44cde69be7c3a04718322db771ec27b3a66d897d829ae7e3",
+        "bytes": 10615
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "3d128af9ccc9de78b222ea576d919a9df0475300956bba16a84dbabb92e4cdd3",
+        "bytes": 8324,
+        "record_name": "SOURCE_BINDINGS.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/SOURCE_BINDINGS.json",
+        "sha256": "fd3f503d6f1dd9ce5b164300154c9b4cc4cd477ed026804ff754338452815bd6",
+        "bytes": 17191
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "f7aa8cf6ee30f9e6844aa2db1ea987efc8bffe201fcc6e30911d1c971e84a520",
+        "bytes": 11507,
+        "record_name": "REVIEW.md"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/review/REVIEW.md",
+        "sha256": "3afc19f45c2b17f175acb36672352c64ef8623b4179af095c4fb3aadf9033a86",
+        "bytes": 11713
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "2852cc25b4b97d24d0ea559bb0a1319c1ea7c1e4d56224677a7ea0d496789c66",
+        "bytes": 7430,
+        "record_name": "REVIEW.json"
+      },
+      "included_projection": {
+        "owner_archive_path": "t20/ontology-type-control/review/REVIEW.json",
+        "sha256": "5ea6ba565b18e0d20d064f7672d3cab80c5be674c67eef53abd5226ad31a5659",
+        "bytes": 10175
+      },
+      "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+    },
+    {
+      "historical_original": {
+        "sha256": "67413981c3b7350196744080ff572cc19e1966a1d822a6711d48caf38d17e848",
+        "bytes": 4894,
+        "record_name": "REVIEW.md",
+        "body_included": false
+      }
+    },
+    {
+      "historical_original": {
+        "sha256": "21d26dd1c1e4f4d6efb43b3123bc82600603f891b5f5411eb5b85fe1003ae583",
+        "bytes": 2150,
+        "record_name": "METHODOLOGY_CORE_SEAL_v1.json",
+        "body_included": false
+      }
+    }
+  ],
+  "readback": {
+    "historical_original": {
+      "sha256": "7b49b13c05f553ae1cd48ff630146a1d19281dd9099a7701547894b48a74020a",
+      "bytes": 3925,
+      "record_name": "REPORT_GUIDE_V2_READBACK.md"
+    },
+    "included_projection": {
+      "owner_archive_path": "t20/reports/REPORT_GUIDE_V2_READBACK.md",
+      "sha256": "7b49b13c05f553ae1cd48ff630146a1d19281dd9099a7701547894b48a74020a",
+      "bytes": 3925
+    },
+    "identity_relation": "Reviewed original input and selected public projection have separate identities. Approved draft and final narrative bytes are identical where so recorded."
+  },
+  "original_review_receipt_sha256": "4c25f7bea815e6bb09c5c98c942ba7e1132feec1d98b918b476277d887c30d2e",
+  "source_finalisation_receipt": {
+    "original_sha256": "fead11ad49aa577737774262dee587f121290e75259390e732a8b1aba8217eba",
+    "body_included": false,
+    "approved_drafts_equal_final_narrative_bytes": true
+  },
+  "public_scope": "Historical source-change review, with original and selected identities separated. No document rendering, new source reading, proof execution or native admission is performed by this projection."
+}

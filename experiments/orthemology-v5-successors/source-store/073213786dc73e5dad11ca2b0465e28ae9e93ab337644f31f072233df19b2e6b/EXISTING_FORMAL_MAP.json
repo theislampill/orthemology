@@ -1,0 +1,1078 @@
+{
+  "schema": "t20-existing-foundational-coverage-map-v1",
+  "created_utc": "2026-10-07",
+  "scope": "read-only exact graph source audit and retrospective T19 P0–P4 application map",
+  "repository": {
+    "path": "tranche20/repository-inspection/repository",
+    "head": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+    "tree": "e7b47c7e3dc18685c33904181d9d31d7cd75495f",
+    "status": "local through-T16 candidate snapshot, live remote not checked"
+  },
+  "sources": [
+    {
+      "id": "CU",
+      "path": "experiments/orthemology-v5-continuations/source-store/261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea.lean",
+      "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+      "sha256_verified": true,
+      "inspection": "direct_full_source_read",
+      "fresh_compile_this_audit": false
+    },
+    {
+      "id": "IR",
+      "path": "experiments/orthemology-v5-continuations/source-store/b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988.lean",
+      "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+      "sha256_verified": true,
+      "inspection": "direct_full_source_read",
+      "fresh_compile_this_audit": false
+    },
+    {
+      "id": "RP",
+      "path": "experiments/orthemology-v5-continuations/source-store/db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6.lean",
+      "sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+      "sha256_verified": true,
+      "inspection": "direct_full_source_read",
+      "fresh_compile_this_audit": false
+    },
+    {
+      "id": "UG",
+      "path": "experiments/orthemology-v5-continuations/source-store/ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3.lean",
+      "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+      "sha256_verified": true,
+      "inspection": "direct_full_source_read",
+      "fresh_compile_this_audit": false
+    },
+    {
+      "id": "SI",
+      "path": "experiments/orthemology-v5-continuations/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503.lean",
+      "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "sha256_verified": true,
+      "inspection": "direct_full_source_read",
+      "fresh_compile_this_audit": false
+    },
+    {
+      "id": "PC",
+      "path": "experiments/orthemology-v5-continuations/source-store/8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a.lean",
+      "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "sha256_verified": true,
+      "inspection": "direct_full_source_read",
+      "fresh_compile_this_audit": false
+    },
+    {
+      "id": "CR",
+      "path": "docs/provenance/v5-research-continuations/notes/06a096f0844f48eac253a26b455ea7f995385b4d5f1743eb0306d61c206f9292.md",
+      "inspection": "direct_full_report_read"
+    },
+    {
+      "id": "T19",
+      "path": "report-extractions/Orthemology_Nineteenth_Research_Final_v1_20261006.txt",
+      "path_base": "workspace",
+      "inspection": "direct_read_P00079_P00097",
+      "authority_note": "Read-only flattened DOCX extraction; original DOCX authoritative"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "S6.r",
+      "kind": "definition",
+      "formula": "r : D → D → Prop",
+      "source": {
+        "source": "CU",
+        "lines": [
+          8,
+          17
+        ]
+      },
+      "role": "primitive relation parameter; strict productive ancestry only under separate interpretation"
+    },
+    {
+      "id": "S6.Below",
+      "kind": "definition",
+      "formula": "Below r a b := a = b ∨ r a b",
+      "source": {
+        "source": "CU",
+        "lines": [
+          10,
+          10
+        ]
+      }
+    },
+    {
+      "id": "S6.Root",
+      "kind": "definition",
+      "formula": "Root r g := ¬ ∃ y, r y g",
+      "source": {
+        "source": "CU",
+        "lines": [
+          12,
+          12
+        ]
+      }
+    },
+    {
+      "id": "S6.LocalCover",
+      "kind": "definition",
+      "formula": "LocalCover r g x := Below r g x ∧ ∀ y, Below r y x → Below r g y",
+      "source": {
+        "source": "CU",
+        "lines": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "id": "S6.LocallyComplete",
+      "kind": "definition",
+      "formula": "LocallyComplete r := ∀ x, ∃ g, LocalCover r g x",
+      "source": {
+        "source": "CU",
+        "lines": [
+          17,
+          17
+        ]
+      }
+    },
+    {
+      "id": "S6.LeastAncestor",
+      "kind": "definition",
+      "formula": "LeastAncestor r g := ∀ x, Below r g x",
+      "source": {
+        "source": "CU",
+        "lines": [
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "id": "S6.Path",
+      "kind": "definition",
+      "formula": "inductive Path r : D → D → Prop | refl (x) : Path r x x | step : (r x y ∨ r y x) → Path r y z → Path r x z",
+      "source": {
+        "source": "CU",
+        "lines": [
+          21,
+          23
+        ]
+      }
+    },
+    {
+      "id": "S6.Connected",
+      "kind": "definition",
+      "formula": "Connected r := ∀ x y, Path r x y",
+      "source": {
+        "source": "CU",
+        "lines": [
+          25,
+          25
+        ]
+      }
+    },
+    {
+      "id": "S6.RootAncestor",
+      "kind": "definition",
+      "formula": "RootAncestor r g x := Root r g ∧ Below r g x",
+      "source": {
+        "source": "CU",
+        "lines": [
+          147,
+          147
+        ]
+      }
+    },
+    {
+      "id": "S6U.Coverage",
+      "kind": "definition",
+      "formula": "Coverage r g x := r g x ∧ ∀ y, r y x → y = g ∨ r g y",
+      "source": {
+        "source": "UG",
+        "lines": [
+          14,
+          16
+        ]
+      }
+    },
+    {
+      "id": "S6.P0.actual_scope",
+      "kind": "application_premise",
+      "formula": "actual, predecessor-closed relevant field D; base : D",
+      "formalized_part": "base : D only",
+      "source": [
+        {
+          "source": "T19",
+          "paragraph": "P00094"
+        },
+        {
+          "source": "CU",
+          "lines": [
+            89,
+            93
+          ]
+        },
+        {
+          "source": "CR",
+          "lines": [
+            35,
+            39
+          ]
+        }
+      ],
+      "original_numbered_prose_available": false
+    },
+    {
+      "id": "S6.P1.ancestry",
+      "kind": "application_premise",
+      "formula": "faithful strict productive ancestry r in one fixed respect; ∀y, ¬r y y; ∀a b c, r a b → r b c → r a c",
+      "source": [
+        {
+          "source": "T19",
+          "paragraph": "P00094"
+        },
+        {
+          "source": "CU",
+          "lines": [
+            89,
+            93
+          ]
+        },
+        {
+          "source": "CR",
+          "lines": [
+            37,
+            39
+          ]
+        }
+      ],
+      "not_same_as": "upstream.P1.original_completion",
+      "original_numbered_prose_available": false
+    },
+    {
+      "id": "S6.P2.local_completion",
+      "kind": "application_premise",
+      "formula": "∀x, ∃g, LocalCover r g x",
+      "source": [
+        {
+          "source": "T19",
+          "paragraphs": [
+            "P00094",
+            "P00095"
+          ]
+        },
+        {
+          "source": "CU",
+          "lines": [
+            14,
+            17
+          ]
+        },
+        {
+          "source": "CR",
+          "lines": [
+            17,
+            21
+          ]
+        }
+      ],
+      "status": "substantive existence and interpretation premise, not derived from connectedness",
+      "original_numbered_prose_available": false
+    },
+    {
+      "id": "S6.P3.productive_connectedness",
+      "kind": "application_premise",
+      "formula": "∀x y, Path r x y",
+      "source": [
+        {
+          "source": "T19",
+          "paragraph": "P00094"
+        },
+        {
+          "source": "CU",
+          "lines": [
+            21,
+            25
+          ]
+        },
+        {
+          "source": "CR",
+          "lines": [
+            37,
+            39
+          ]
+        }
+      ],
+      "original_numbered_prose_available": false
+    },
+    {
+      "id": "S6.P4.act_interpretation",
+      "kind": "application_premise",
+      "formula": "graph coverage must be correctly interpreted into actual productive sourcehood; reflexive coverage is not an actual act",
+      "source": [
+        {
+          "source": "T19",
+          "paragraph": "P00094"
+        },
+        {
+          "source": "CU",
+          "lines": [
+            198,
+            206
+          ]
+        },
+        {
+          "source": "CR",
+          "lines": [
+            41,
+            43
+          ]
+        },
+        {
+          "source": "RP",
+          "lines": [
+            197,
+            210
+          ]
+        }
+      ],
+      "not_supplied_by": "LeastAncestor or strict descendant alone",
+      "original_numbered_prose_available": false
+    },
+    {
+      "id": "T19.CND",
+      "kind": "philosophical_appraisal",
+      "source": [
+        {
+          "source": "T19",
+          "paragraphs": [
+            "P00093",
+            "P00095"
+          ]
+        }
+      ],
+      "formalized_in_existing_graph_sources": false
+    },
+    {
+      "id": "T19.source_mode_perfection",
+      "kind": "philosophical_appraisal",
+      "source": [
+        {
+          "source": "T19",
+          "paragraphs": [
+            "P00093",
+            "P00095"
+          ]
+        }
+      ],
+      "formalized_in_existing_graph_sources": false
+    },
+    {
+      "id": "T19.faithful_mediate_attribution",
+      "kind": "philosophical_appraisal",
+      "source": [
+        {
+          "source": "T19",
+          "paragraphs": [
+            "P00082",
+            "P00083",
+            "P00089",
+            "P00090",
+            "P00091",
+            "P00093"
+          ]
+        }
+      ],
+      "formalized_in_existing_graph_sources": false
+    },
+    {
+      "id": "T19.application_to_all_local_cones",
+      "kind": "unformalized_application_bridge",
+      "formula": "T19 metaphysical premises warrant S6.P2.local_completion over the same actually adequate, faithfully represented field",
+      "requires": [
+        "S6.P0.actual_scope",
+        "S6.P1.ancestry",
+        "T19.CND",
+        "T19.source_mode_perfection",
+        "T19.faithful_mediate_attribution"
+      ],
+      "source": [
+        {
+          "source": "T19",
+          "paragraphs": [
+            "P00093",
+            "P00094",
+            "P00095",
+            "P00096",
+            "P00097"
+          ]
+        }
+      ],
+      "status": "must be audited philosophically and semantically; no retained Lean proof of this bridge located"
+    }
+  ],
+  "theorems": [
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.below_transitive",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          27,
+          35
+        ]
+      },
+      "assumptions": [
+        "∀a b c, r a b → r b c → r a c"
+      ],
+      "conclusion": "∀a b c, Below r a b → Below r b c → Below r a c",
+      "direct_named_dependencies": [],
+      "exact_source": "theorem below_transitive (r : D → D → Prop)\n    (trans : ∀ a b c, r a b → r b c → r a c) :\n    ∀ a b c, Below r a b → Below r b c → Below r a c := by\n  intro a b c hab hbc\n  rcases hab with rfl | hab\n  · exact hbc\n  rcases hbc with rfl | hbc\n  · exact Or.inr hab\n  · exact Or.inr (trans a b c hab hbc)",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.root_of_local_cover",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          43,
+          52
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "LocalCover r g x"
+      ],
+      "conclusion": "Root r g",
+      "direct_named_dependencies": [
+        "below_transitive"
+      ],
+      "exact_source": "theorem root_of_local_cover (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g x : D) (cover : LocalCover r g x) : Root r g := by\n  rintro ⟨y,hyg⟩\n  have hyx := below_transitive r trans y g x (Or.inr hyg) cover.1\n  rcases cover.2 y hyx with h | h\n  · subst y\n    exact irrefl g hyg\n  · exact irrefl g (trans g y g h hyg)",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.local_cover_unique",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          54,
+          58
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "LocalCover r g x",
+        "LocalCover r h x"
+      ],
+      "conclusion": "g=h",
+      "direct_named_dependencies": [
+        "root_of_local_cover",
+        "below_root_eq"
+      ],
+      "exact_source": "theorem local_cover_unique (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g h x : D) (cg : LocalCover r g x) (ch : LocalCover r h x) : g = h := by\n  exact below_root_eq r g h (root_of_local_cover r irrefl trans h x ch) (cg.2 h ch.1)",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.roots_agree_on_edge",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          66,
+          73
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "LocalCover r g x",
+        "LocalCover r h y",
+        "r x y"
+      ],
+      "conclusion": "g=h",
+      "direct_named_dependencies": [
+        "below_transitive",
+        "root_of_local_cover",
+        "below_root_eq"
+      ],
+      "exact_source": "theorem roots_agree_on_edge (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g h x y : D) (cx : LocalCover r g x) (cy : LocalCover r h y)\n    (edge : r x y) : g = h := by\n  have gBelowY := below_transitive r trans g x y cx.1 (Or.inr edge)\n  exact (below_root_eq r h g (root_of_local_cover r irrefl trans g x cx)\n    (cy.2 g gBelowY)).symm",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.roots_agree_on_path",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          75,
+          87
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "source : D→D",
+        "∀x, LocalCover r (source x) x",
+        "Path r x y"
+      ],
+      "conclusion": "source x = source y",
+      "direct_named_dependencies": [
+        "roots_agree_on_edge"
+      ],
+      "exact_source": "theorem roots_agree_on_path (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (source : D → D) (covers : ∀ x, LocalCover r (source x) x)\n    (x y : D) (path : Path r x y) : source x = source y := by\n  induction path with\n  | refl _ => rfl\n  | @step x y z edge _ ih =>\n    have e : source x = source y := by\n      rcases edge with h | h\n      · exact roots_agree_on_edge r irrefl trans (source x) (source y) x y (covers x) (covers y) h\n      · exact (roots_agree_on_edge r irrefl trans (source y) (source x) y x (covers y) (covers x) h).symm\n    exact e.trans ih",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          89,
+          101
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "base : D",
+        "LocallyComplete r",
+        "Connected r"
+      ],
+      "conclusion": "∃g, ∀x, LocalCover r g x",
+      "direct_named_dependencies": [
+        "roots_agree_on_path"
+      ],
+      "exact_source": "theorem common_cover_of_connected_local (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (base : D) (hlocal : LocallyComplete r) (connected : Connected r) :\n    ∃ g, ∀ x, LocalCover r g x := by\n  classical\n  let source : D → D := fun x => Classical.choose (hlocal x)\n  have covers : ∀ x, LocalCover r (source x) x := fun x => Classical.choose_spec (hlocal x)\n  refine ⟨source base, ?_⟩\n  intro x\n  have h := roots_agree_on_path r irrefl trans source covers base x (connected base x)\n  rw [h]\n  exact covers x",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": [
+        "Classical.choice"
+      ]
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.least_of_connected_local",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          103,
+          109
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "base : D",
+        "LocallyComplete r",
+        "Connected r"
+      ],
+      "conclusion": "∃g, LeastAncestor r g",
+      "direct_named_dependencies": [
+        "common_cover_of_connected_local"
+      ],
+      "exact_source": "theorem least_of_connected_local (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (base : D) (hlocal : LocallyComplete r) (connected : Connected r) :\n    ∃ g, LeastAncestor r g := by\n  obtain ⟨g,hg⟩ := common_cover_of_connected_local r irrefl trans base hlocal connected\n  exact ⟨g,fun x => (hg x).1⟩",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": [
+        "Classical.choice"
+      ]
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.least_implies_local_and_connected",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          111,
+          125
+        ]
+      },
+      "assumptions": [
+        "LeastAncestor r g"
+      ],
+      "conclusion": "LocallyComplete r ∧ Connected r",
+      "direct_named_dependencies": [],
+      "exact_source": "theorem least_implies_local_and_connected (r : D → D → Prop)\n    (g : D) (least : LeastAncestor r g) : LocallyComplete r ∧ Connected r := by\n  constructor\n  · intro x\n    exact ⟨g,least x,fun y _ => least y⟩\n  · intro x y\n    have pgy : Path r g y := by\n      rcases least y with h | h\n      · subst y\n        exact Path.refl g\n      · exact Path.step (Or.inl h) (Path.refl y)\n    rcases least x with h | h\n    · subst x\n      exact pgy\n    · exact Path.step (Or.inr h) pgy",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.local_connected_iff_least",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          127,
+          135
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "base : D"
+      ],
+      "conclusion": "(LocallyComplete r ∧ Connected r) ↔ ∃g, LeastAncestor r g",
+      "direct_named_dependencies": [
+        "least_of_connected_local",
+        "least_implies_local_and_connected"
+      ],
+      "exact_source": "theorem local_connected_iff_least (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c) (base : D) :\n    (LocallyComplete r ∧ Connected r) ↔ ∃ g, LeastAncestor r g := by\n  constructor\n  · rintro ⟨hl,hc⟩\n    exact least_of_connected_local r irrefl trans base hl hc\n  · rintro ⟨g,hg⟩\n    exact least_implies_local_and_connected r g hg",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": [
+        "Classical.choice"
+      ]
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          137,
+          145
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "base : D",
+        "LocallyComplete r",
+        "Connected r"
+      ],
+      "conclusion": "∃g, Root r g ∧ ∀h, Root r h → h=g",
+      "direct_named_dependencies": [
+        "common_cover_of_connected_local",
+        "root_of_local_cover",
+        "below_root_eq"
+      ],
+      "exact_source": "theorem unique_root_of_connected_local (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (base : D) (hlocal : LocallyComplete r) (connected : Connected r) :\n    ∃ g, Root r g ∧ ∀ h, Root r h → h = g := by\n  obtain ⟨g,hg⟩ := common_cover_of_connected_local r irrefl trans base hlocal connected\n  refine ⟨g,root_of_local_cover r irrefl trans g base (hg base), ?_⟩\n  intro h hr\n  exact (below_root_eq r g h hr (hg h).1).symm",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": [
+        "Classical.choice"
+      ]
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.local_cover_iff_unique_root_and_ancestral_support",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          152,
+          175
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c"
+      ],
+      "conclusion": "(∃g, LocalCover r g x) ↔ ((∃!g, RootAncestor r g x) ∧ ∀y, Below r y x → ∃h, RootAncestor r h y)",
+      "direct_named_dependencies": [
+        "root_of_local_cover",
+        "below_root_eq",
+        "below_transitive"
+      ],
+      "exact_source": "theorem local_cover_iff_unique_root_and_ancestral_support (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c) (x : D) :\n    (∃ g, LocalCover r g x) ↔\n      ((∃! g, RootAncestor r g x) ∧\n        ∀ y, Below r y x → ∃ h, RootAncestor r h y) := by\n  constructor\n  · rintro ⟨g,hg⟩\n    have root := root_of_local_cover r irrefl trans g x hg\n    constructor\n    · refine ⟨g,⟨root,hg.1⟩,?_⟩\n      intro h hh\n      exact (below_root_eq r g h hh.1 (hg.2 h hh.2)).symm\n    · intro y hy\n      exact ⟨g,root,hg.2 y hy⟩\n  · rintro ⟨⟨g,hg,unique⟩,support⟩\n    refine ⟨g,hg.2,?_⟩\n    intro y hy\n    obtain ⟨h,hh⟩ := support y hy\n    have hx : RootAncestor r h x :=\n      ⟨hh.1,below_transitive r trans h y x hh.2 hy⟩\n    have eq := unique h hx\n    rw [← eq]\n    exact hh.2",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.local_iff_unique_root_ancestors",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          177,
+          196
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c"
+      ],
+      "conclusion": "LocallyComplete r ↔ ∀x, ∃!g, RootAncestor r g x",
+      "direct_named_dependencies": [
+        "root_of_local_cover",
+        "below_root_eq",
+        "below_transitive"
+      ],
+      "exact_source": "theorem local_iff_unique_root_ancestors (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c) :\n    LocallyComplete r ↔ ∀ x, ∃! g, RootAncestor r g x := by\n  constructor\n  · intro hl x\n    obtain ⟨g,hg⟩ := hl x\n    refine ⟨g,⟨root_of_local_cover r irrefl trans g x hg,hg.1⟩,?_⟩\n    intro h hh\n    exact (below_root_eq r g h hh.1 (hg.2 h hh.2)).symm\n  · intro hu x\n    obtain ⟨g,hg,unique⟩ := hu x\n    refine ⟨g,hg.2,?_⟩\n    intro y hy\n    obtain ⟨h,hh,_⟩ := hu y\n    have hx : RootAncestor r h x :=\n      ⟨hh.1,below_transitive r trans h y x hh.2 hy⟩\n    have eq := unique h hx\n    rw [← eq]\n    exact hh.2",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.ConnectedUnity.strict_descendant_of_nontrivial_field",
+      "kind": "theorem",
+      "source": {
+        "source": "CU",
+        "lines": [
+          198,
+          206
+        ]
+      },
+      "assumptions": [
+        "∀a b c, r a b → r b c → r a c",
+        "LeastAncestor r g",
+        "∃a b, r a b"
+      ],
+      "conclusion": "∃x, r g x",
+      "direct_named_dependencies": [],
+      "exact_source": "theorem strict_descendant_of_nontrivial_field (r : D → D → Prop)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g : D) (least : LeastAncestor r g) (nontrivial : ∃ a b, r a b) :\n    ∃ x, r g x := by\n  obtain ⟨a,b,hab⟩ := nontrivial\n  rcases least a with h | h\n  · subst a\n    exact ⟨b,hab⟩\n  · exact ⟨b,trans g a b h hab⟩",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "ConnectedReview.reviewer_constructive_local_to_least",
+      "kind": "theorem",
+      "source": {
+        "source": "RP",
+        "lines": [
+          51,
+          57
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "base : D",
+        "LocallyComplete r",
+        "Connected r"
+      ],
+      "conclusion": "∃g, LeastAncestor r g",
+      "direct_named_dependencies": [
+        "reviewer_path_cover"
+      ],
+      "exact_source": "/-- Independent constructive proof: no selected global source function. -/\ntheorem reviewer_constructive_local_to_least\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    (base : D) (hl : LocallyComplete r) (hc : Connected r) :\n    ∃ g, LeastAncestor r g := by\n  obtain ⟨g,hg⟩ := hl base\n  exact ⟨g, fun x => (reviewer_path_cover r hi ht hl (hc base x) g hg).1⟩",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "ConnectedReview.reviewer_least_unique",
+      "kind": "theorem",
+      "source": {
+        "source": "RP",
+        "lines": [
+          59,
+          67
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "LeastAncestor r g",
+        "LeastAncestor r h"
+      ],
+      "conclusion": "g=h",
+      "direct_named_dependencies": [],
+      "exact_source": "/-- Existence is the field theorem; strictness separately fixes the bearer. -/\ntheorem reviewer_least_unique\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    {g h : D} (hg : LeastAncestor r g) (hh : LeastAncestor r h) : g = h := by\n  rcases hg h with eq | gh\n  · exact eq\n  rcases hh g with eq | hgr\n  · exact eq.symm\n  · exact False.elim (hi g (ht g h g gh hgr))",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "ConnectedReview.reviewer_global_unique_supported_to_least",
+      "kind": "theorem",
+      "source": {
+        "source": "RP",
+        "lines": [
+          69,
+          80
+        ]
+      },
+      "assumptions": [
+        "∃!g, Root r g",
+        "∀x, ∃g, RootAncestor r g x"
+      ],
+      "conclusion": "∃g, LeastAncestor r g",
+      "direct_named_dependencies": [],
+      "exact_source": "/-- Every node's root support plus globally unique root suffices without\n    separately assuming connectivity. The support premise does actual work. -/\ntheorem reviewer_global_unique_supported_to_least\n    (unique : ∃! g, Root r g)\n    (supported : ∀ x, ∃ g, RootAncestor r g x) : ∃ g, LeastAncestor r g := by\n  obtain ⟨g,_,hu⟩ := unique\n  refine ⟨g, ?_⟩\n  intro x\n  obtain ⟨h,hh⟩ := supported x\n  have eq := hu h hh.1\n  subst h\n  exact hh.2",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "ConnectedReview.reviewer_pointwise_forward",
+      "kind": "theorem",
+      "source": {
+        "source": "RP",
+        "lines": [
+          82,
+          95
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "LocalCover r g x"
+      ],
+      "conclusion": "(∃!h, RootAncestor r h x) ∧ ∀y, Below r y x → ∃h, RootAncestor r h y",
+      "direct_named_dependencies": [
+        "reviewer_root_of_cover"
+      ],
+      "exact_source": "/-- A target's local cover cannot skip a productive predecessor of itself. -/\ntheorem reviewer_pointwise_forward\n    (hi : ∀ x, ¬ r x x) (ht : ∀ a b c, r a b → r b c → r a c)\n    {g x : D} (hx : LocalCover r g x) :\n    (∃! h, RootAncestor r h x) ∧ ∀ y, Below r y x → ∃ h, RootAncestor r h y := by\n  have hr := reviewer_root_of_cover r hi ht hx\n  constructor\n  · refine ⟨g,⟨hr,hx.1⟩,?_⟩\n    intro h hh\n    rcases hx.2 h hh.2 with eq | gh\n    · exact eq.symm\n    · exact False.elim (hh.1 ⟨g,gh⟩)\n  · intro y hy\n    exact ⟨g,hr,hx.2 y hy⟩",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "ConnectedReview.reviewer_pointwise_reverse",
+      "kind": "theorem",
+      "source": {
+        "source": "RP",
+        "lines": [
+          97,
+          114
+        ]
+      },
+      "assumptions": [
+        "∀a b c, r a b → r b c → r a c",
+        "∃!g, RootAncestor r g x",
+        "∀y, Below r y x → ∃h, RootAncestor r h y"
+      ],
+      "conclusion": "∃g, LocalCover r g x",
+      "direct_named_dependencies": [],
+      "exact_source": "theorem reviewer_pointwise_reverse\n    (ht : ∀ a b c, r a b → r b c → r a c) {x : D}\n    (unique : ∃! g, RootAncestor r g x)\n    (support : ∀ y, Below r y x → ∃ h, RootAncestor r h y) :\n    ∃ g, LocalCover r g x := by\n  obtain ⟨g,hg,hu⟩ := unique\n  refine ⟨g,hg.2,?_⟩\n  intro y hy\n  obtain ⟨h,hh⟩ := support y hy\n  have hx : Below r h x := by\n    rcases hh.2 with hhy | hhy\n    · exact hhy ▸ hy\n    rcases hy with hyx | hyx\n    · exact Or.inr (hyx ▸ hhy)\n    · exact Or.inr (ht h y x hhy hyx)\n  have eq := hu h ⟨hh.1,hx⟩\n  subst h\n  exact hh.2",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.UpstreamGround.predecessor_free_of_coverage",
+      "kind": "theorem",
+      "source": {
+        "source": "UG",
+        "lines": [
+          20,
+          29
+        ]
+      },
+      "assumptions": [
+        "∀y, ¬r y y",
+        "∀a b c, r a b → r b c → r a c",
+        "Coverage r g x"
+      ],
+      "conclusion": "¬∃y, r y g",
+      "direct_named_dependencies": [],
+      "exact_source": "theorem predecessor_free_of_coverage\n    (r : D → D → Prop)\n    (irrefl : ∀ y, ¬ r y y)\n    (trans : ∀ a b c, r a b → r b c → r a c)\n    (g x : D) (coverage : Coverage r g x) : ¬ ∃ y, r y g := by\n  rintro ⟨y, hyg⟩\n  rcases coverage.2 y (trans y g x hyg coverage.1) with h | h\n  · subst y\n    exact irrefl g hyg\n  · exact irrefl g (trans g y g h hyg)",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": []
+    },
+    {
+      "id": "Orthemology.Tranche6.UpstreamGround.uniform_of_complete_coverage",
+      "kind": "theorem",
+      "source": {
+        "source": "UG",
+        "lines": [
+          31,
+          44
+        ]
+      },
+      "assumptions": [
+        "ex actual g",
+        "irreflexivity and transitivity of dep actual",
+        "Coverage (dep actual) g x",
+        "∀y, ex actual y → ¬ Necessary ex y → Received dep actual y",
+        "GenericReception ex dep"
+      ],
+      "conclusion": "UniformRoot ex dep g",
+      "direct_named_dependencies": [
+        "predecessor_free_of_coverage",
+        "Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception"
+      ],
+      "exact_source": "/-- Same actual bearer, with both modal premises displayed unchanged. -/\ntheorem uniform_of_complete_coverage\n    (ex : W → D → Prop) (dep : W → D → D → Prop)\n    (actual : W) (g x : D)\n    (present : ex actual g)\n    (irrefl : ∀ y, ¬ dep actual y y)\n    (trans : ∀ a b c, dep actual a b → dep actual b c → dep actual a c)\n    (coverage : Coverage (dep actual) g x)\n    (contingent_receives : ∀ y, ex actual y → ¬ Necessary ex y → Received dep actual y)\n    (essential_reception : GenericReception ex dep) : UniformRoot ex dep g := by\n  apply uniform_of_contingent_reception ex dep actual g\n  · exact ⟨present, predecessor_free_of_coverage (dep actual) irrefl trans g x coverage⟩\n  · exact contingent_receives\n  · exact essential_reception",
+      "status": "retained_source_and_historical_kernel_receipt_read; not freshly recompiled",
+      "historical_receipt_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "name": "merge_two_roots_no_local_completion",
+      "source": {
+        "source": "CU",
+        "lines": [
+          210,
+          230
+        ]
+      },
+      "force": "Connected strict transitive field can have two roots and no local completion",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "split_local_no_global",
+      "source": {
+        "source": "CU",
+        "lines": [
+          232,
+          246
+        ]
+      },
+      "force": "Local completion without connectedness does not provide common least source",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "singleton_reflexive_no_productivity",
+      "source": {
+        "source": "CU",
+        "lines": [
+          254,
+          258
+        ]
+      },
+      "force": "Reflexive local cover gives no productive edge",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "empty_vacuous_local_connected_no_least",
+      "source": {
+        "source": "CU",
+        "lines": [
+          260,
+          271
+        ]
+      },
+      "force": "Nonemptiness is necessary for existence inference",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "unique_root_connected_without_least",
+      "source": {
+        "source": "IR",
+        "lines": [
+          83,
+          87
+        ]
+      },
+      "force": "An actual infinite connected field with one root can lack least ancestor",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "pointwise_uniqueness_without_local_completion",
+      "source": {
+        "source": "IR",
+        "lines": [
+          89,
+          91
+        ]
+      },
+      "force": "Unique root ancestor at one target does not imply local complete coverage",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "reviewer_fork_support_failure_inside_cone",
+      "source": {
+        "source": "RP",
+        "lines": [
+          189,
+          195
+        ]
+      },
+      "force": "Missing support is among target actual ancestors",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "reviewer_transitivity_is_material",
+      "source": {
+        "source": "RP",
+        "lines": [
+          116,
+          138
+        ]
+      },
+      "force": "Connected irreflexive nontransitive chain has local covers but no least source",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "reviewer_irreflexivity_is_material_to_uniqueness",
+      "source": {
+        "source": "RP",
+        "lines": [
+          140,
+          146
+        ]
+      },
+      "force": "Without strictness distinct local covers and no root are possible",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "reviewer_scope_roothood_control",
+      "source": {
+        "source": "RP",
+        "lines": [
+          148,
+          154
+        ]
+      },
+      "force": "Dropped actual predecessor manufactures induced roothood",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "reviewer_rooted_not_well_founded",
+      "source": {
+        "source": "RP",
+        "lines": [
+          156,
+          187
+        ]
+      },
+      "force": "Least source and non-well-founded subordinate ancestry coexist",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "reviewer_graph_does_not_supply_act_bridge",
+      "source": {
+        "source": "RP",
+        "lines": [
+          197,
+          210
+        ]
+      },
+      "force": "LeastAncestor does not force independently assigned HistoryComplete",
+      "metaphysical_possibility_certified": false
+    },
+    {
+      "name": "complete_root_without_global_wellfoundedness",
+      "source": {
+        "source": "UG",
+        "lines": [
+          107,
+          141
+        ]
+      },
+      "force": "Strict coverage is compatible with globally non-well-founded subordinate ancestry",
+      "metaphysical_possibility_certified": false
+    }
+  ],
+  "missing_author_prose": [
+    {
+      "id": "src-549ba6a7f0941c36-ef0541a8983592e3",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "member": "projections/connected-author/CONNECTED_SOURCE_UNITY.md",
+      "original_sha256": "a5d4a68b6e3b9c874a7855385bc28180b9a83951f34c9700015b2e00b9e2ecb7",
+      "original_bytes": 16527,
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
+    },
+    {
+      "id": "src-549ba6a7f0941c36-67555c1eb5ca5f1a",
+      "origin": "549ba6a7f0941c36faa048bf525a252b943d74956c356b70f3bd0dbada96440f",
+      "member": "projections/connected-author/PREMISE_AND_RIVAL_MAP.md",
+      "original_sha256": "7dbdfaa708f5d3fcb091ba01748a13758172bf973e5404b19e88404b78b62201",
+      "original_bytes": 7544,
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "projection": "CUSTODY_ONLY",
+      "derivation": null
+    }
+  ],
+  "fresh_execution_this_audit": false,
+  "repository_files_edited": false,
+  "scope_note": "SourceIdentity and ProductiveCompleteness detailed ownership is also assigned to separate prior-formal-reuse map; these interface references are not new credit."
+}

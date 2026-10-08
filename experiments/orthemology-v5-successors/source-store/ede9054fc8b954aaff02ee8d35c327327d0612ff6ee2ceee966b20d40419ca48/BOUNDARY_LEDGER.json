@@ -1,0 +1,847 @@
+{
+  "schema": "t20-anchored-source-boundary-ledger-v1",
+  "utc": "2026-10-07T09:22:11.445922+00:00",
+  "sealed_dag_manifest_sha256": "796856c7de6d50d284a241a066ea9bdd6fb84409174329de6b81a16eb4572bb8",
+  "historical_appraisal": {
+    "owner": "T19",
+    "source_mode": "PHILOSOPHICALLY_ACCEPTED_PREMISE",
+    "qualification": "Defeasible affirmative report appraisal with continuing substantive dissent, not merely hypothetical exploration"
+  },
+  "current_root_appraisal": {
+    "source_mode": "PHILOSOPHICALLY_DISPUTED_PREMISE",
+    "common_source_warrant": "WITHHELD",
+    "relation_to_conditional": "Does not downgrade a correctly represented checked conditional theorem"
+  },
+  "verification": {
+    "status": "KERNEL_PROVED",
+    "scope": "Conditional mathematics plus explicit finite interpretations",
+    "build_manifest": "builds/final-field-cnd-v1/BUILD_MANIFEST.json",
+    "build_manifest_sha256": "9e0d17a182cb66e2c48cd7cafeff07c3d201b0d03bc50355965b298592194c3c",
+    "theorem_count": 63,
+    "rejected_false_overclaims": 19,
+    "finite_design_control_families": 13,
+    "python_enumeration": "NOT_ATTEMPTED",
+    "new_installs": false,
+    "repository_edits": false,
+    "broad_historical_replay": false
+  },
+  "declarations": [
+    {
+      "name": "AnchoredSourceBridge.overlap_symmetric",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.mode_satisfaction_of_classification_conformance",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.source_mode_of_mode_satisfaction",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.represented_across_overlap",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.complete_along_path",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.global_coverage_of_anchor",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.global_coverage_of_qualified_anchor",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.field_cnd_of_global_cnd",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.represented_rivals_equal",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.actual_rivals_equal",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.mode_satisfaction_iff_global_coverage",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.source_mode_iff_global_coverage",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.positive_along_path",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.every_field_positive",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.complete_providers_equal_at_positive",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.complete_provider_exists",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.unique_complete_provider",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.guarded_common_original_provider",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.guarded_common_original_provider_of_global_cnd",
+      "module": "AnchoredSourceBridge",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "artifact": "src/AnchoredSourceBridge.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.finite_quantifiers",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.split_signature",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.singleton_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.hub_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.split_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.duplicate_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.unanchored_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.hidden_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.defective_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.empty_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_use_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_role_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.full_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.outside_duplicate_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.adverse_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.aggregate_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_source_mode",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_cnd",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_anchor",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.separated_complete_only_at_e",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.separated_not_connected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_connectedness",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.arbitrary_graph_not_faithful",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_original_use",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_mode_role",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_visibility",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.coarse_effect_not_full_account",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.mixed_occurrence_positive",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.mixed_occurrence_adverse",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.faithful_derived_agency_and_mediation",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.outside_field_necessary_original",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.assertion_ownership_separate",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.arbitrary_bundle_rejected",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_classification",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.missing_conformance",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.empty_inventory_singleton",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.full_nonvacuous_model",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.outside_duplication_preserves_field_uniqueness",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.principal_application_with_outside_duplication",
+      "module": "Controls",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "artifact": "src/Controls.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.both_have_interpreted_finite_ability",
+      "module": "ModalAbilityControl",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/ModalAbilityControl.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.matching_outcome_is_not_same_token",
+      "module": "ModalAbilityControl",
+      "status": "KERNEL_PROVED",
+      "axioms": [],
+      "artifact": "src/ModalAbilityControl.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.intact_finite_power_differentiated_actual_production",
+      "module": "ModalAbilityControl",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/ModalAbilityControl.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.actual_partial_fixture_mapping",
+      "module": "ModalAbilityControl",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/ModalAbilityControl.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    },
+    {
+      "name": "AnchoredSourceBridge.Controls.ModalAbility.finite_ability_does_not_supply_source_mode",
+      "module": "ModalAbilityControl",
+      "status": "KERNEL_PROVED",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "artifact": "src/ModalAbilityControl.lean",
+      "freshness": "FRESH_T20_AT_DECLARED_INTERFACE"
+    }
+  ],
+  "premises": [
+    {
+      "id": "ASB-P01",
+      "formal": "Account.Qualified(g)",
+      "role": "Qualified fixed source profile",
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "source_nodes": [
+        "F01",
+        "H02"
+      ],
+      "defined_by_coverage": false
+    },
+    {
+      "id": "ASB-P02",
+      "formal": "Classification(A,g)",
+      "role": "Independent evaluative classification of incomplete actual provision as ModeDefect",
+      "status": [
+        "PHILOSOPHICALLY_ACCEPTED_PREMISE",
+        "PHILOSOPHICALLY_DISPUTED_PREMISE"
+      ],
+      "source_nodes": [
+        "F01",
+        "F02"
+      ],
+      "note": "Accepted historically T19; withheld by current coordinating assessment; primitive defect not defined as noncoverage"
+    },
+    {
+      "id": "ASB-P03",
+      "formal": "Conformance(A,g)",
+      "role": "Qualified relevant actual exercise has no independently interpreted defect",
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "source_nodes": [
+        "F01",
+        "F02"
+      ],
+      "note": "Actual exercise, not merely retained standing capacity"
+    },
+    {
+      "id": "ASB-P04",
+      "formal": "UseSound(A)",
+      "role": "Represented actually used contribution is genuine actual original involvement",
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "source_nodes": [
+        "G01",
+        "G02",
+        "G04"
+      ]
+    },
+    {
+      "id": "ASB-P05",
+      "formal": "RoleApplicable(A,g)",
+      "role": "Actual involvement lies within the norm-governed result/account scope",
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED",
+        "PHILOSOPHICALLY_DISPUTED_PREMISE"
+      ],
+      "source_nodes": [
+        "F01",
+        "G02",
+        "G04"
+      ]
+    },
+    {
+      "id": "ASB-P06",
+      "formal": "Admissible/RequisiteSound/RequisiteExhaustive(A)",
+      "role": "Concrete actual scope, faithful actual operative inventory, all relevant branches/history",
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "source_nodes": [
+        "D16",
+        "G01",
+        "G04"
+      ],
+      "note": "Structural proof carries these as side certificates; index-domain adequacy remains externally warranted"
+    },
+    {
+      "id": "ASB-P07",
+      "formal": "Visible(A)",
+      "role": "Every actual original contributor has a required EntireOrig witness",
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "source_nodes": [
+        "D16"
+      ],
+      "needed_for": [
+        "ActualUnique",
+        "positive actual anchor",
+        "uniqueness of Complete-labelled providers"
+      ],
+      "not_needed_for": "ModeSatisfaction-based core coverage"
+    },
+    {
+      "id": "ASB-P08",
+      "formal": "ActualAnchor(A,g,a)",
+      "role": "Same qualified source genuinely contributes to this field",
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "source_nodes": [
+        "H02",
+        "H03"
+      ]
+    },
+    {
+      "id": "ASB-P09",
+      "formal": "ConnectedFrom(A,a)",
+      "role": "Faithful field-restricted finite incidence paths, through genuine mixed occurrences when needed",
+      "status": [
+        "APPLICATION_WARRANT_REQUIRED"
+      ],
+      "source_nodes": [
+        "D15",
+        "D16"
+      ],
+      "note": "Paths are not directed causation; no finiteness of field or ancestry is assumed"
+    },
+    {
+      "id": "ASB-P10",
+      "formal": "FieldCND(A), with global CND(A) as stronger sufficient condition",
+      "role": "Two entire original providers of the same required contribution/respect at an admitted field occurrence are identical",
+      "status": [
+        "PHILOSOPHICALLY_ACCEPTED_PREMISE",
+        "PHILOSOPHICALLY_DISPUTED_PREMISE"
+      ],
+      "source_nodes": [
+        "E06"
+      ],
+      "needed_for": "Field rival/provider uniqueness",
+      "not_needed_for": "Coverage/provider existence; no nonduplication assumption outside the field is needed"
+    }
+  ],
+  "open_boundaries": [
+    {
+      "id": "ASB-O01",
+      "status": "OPEN",
+      "claim": "Faithful refinement to independently interpreted Sixth strict ancestry/all-ancestor LocalCover",
+      "note": "Not proved; no redefinition of ancestry from coverage"
+    },
+    {
+      "id": "ASB-O02",
+      "status": "APPLICATION_WARRANT_REQUIRED",
+      "claim": "Real field occurrence/index soundness, exhaustive productive histories/branches and actual-use scope"
+    },
+    {
+      "id": "ASB-O03",
+      "status": "NOT_ATTEMPTED",
+      "claim": "Unrestricted metaphysical ability/omnipotence",
+      "note": "Only finite source-neutral target/alternative interpretation checked"
+    },
+    {
+      "id": "ASB-O04",
+      "status": "NOT_ATTEMPTED",
+      "claim": "Numerical uniqueness of all necessary reality",
+      "note": "Outside-field counterinterpretation explicitly allows distinct h"
+    },
+    {
+      "id": "ASB-O05",
+      "status": "NOT_ATTEMPTED",
+      "claim": "Actual revelation authentication or transfer of derived assertion ownership",
+      "note": "Causal-provision control blocks such an inference"
+    },
+    {
+      "id": "ASB-O06",
+      "status": "NOT_ATTEMPTED",
+      "claim": "Derivation of CND or source-mode philosophical truth from simpler metaphysical premises"
+    }
+  ],
+  "equivalence_warning": "ModeSatisfaction iff GlobalCoverage under fixed anchored connected setup is a transparency result; it gives no independent philosophical warrant and is not an equivalence of bare norm/classification/conformance with coverage."
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "path": ".github/workflows/lean_action_ci.yml",
+    "sha256": "66061e54cdbd53a3fb4a135cf1b1ad4edbc15d5132874c42c692e04bd314829c"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "b3ad09fc93f83fdbd0bee771258dd4a58d3798fd7e6048611dde5a804bb43f1e"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "LeanSearchClient.lean",
+    "sha256": "052c2be210a0e258d8e68c5b3595f2083b4eb296b45d3e40404bbd1c620b88b6"
+  },
+  {
+    "path": "LeanSearchClient/Basic.lean",
+    "sha256": "73d040fdf5643b2c55ace8cc3ff2c737faba3a9825065991e9e21be00154b3a4"
+  },
+  {
+    "path": "LeanSearchClient/LoogleSyntax.lean",
+    "sha256": "59c96a5afcc859eb6f77ad6987caed64149ec808bd96e75553100611d05f54ce"
+  },
+  {
+    "path": "LeanSearchClient/Syntax.lean",
+    "sha256": "47739ea38c19b8fb5e997a2da057bc6b9d2d5d472ca715b323c03fcbf695619a"
+  },
+  {
+    "path": "LeanSearchClientTest.lean",
+    "sha256": "e7ceb96f4a42da5ca95b7db504daa4e468877bf39b06edd175a5fee6ed9cf2b6"
+  },
+  {
+    "path": "LeanSearchClientTest/Examples.lean",
+    "sha256": "688e3b88687501bff0a420183cf34e1b674aedc3b2b076feeed3b057f80f9f65"
+  },
+  {
+    "path": "LeanSearchClientTest/LoogleExamples.lean",
+    "sha256": "69c76081d47d52214ca3f34e23248ae9e8179a516f1ad8fe9fcf563016d8330c"
+  },
+  {
+    "path": "LeanSearchClientTest/MoogleExamples.lean",
+    "sha256": "2535f0e298b9de4381dfcae3dd86148614d61f06fcd618ecf8080937c7097230"
+  },
+  {
+    "path": "LeanSearchClientTest/StateSearchExamples.lean",
+    "sha256": "5d3e895d7396252793abae28d8c2b2f0776d43086ca312ac3c473655c1dd73a8"
+  },
+  {
+    "path": "README.md",
+    "sha256": "9ab73a5ca5897bb2ded97250f637b0f09b287ff4674f21ea85299e4f87083dd3"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "a9b5fc5e76254f415e49b04b7049f58c6cb42e76a0e31b0aed2ddf4af6882033"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "cb5d6c80c4ffd4b3be99294a911ebf2f6a2fee4eb9f840d96f0f813bd484c05d"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "2959ac2e561dbc36a05348039bcdb1cb990a0b69f793a0716ac0686d6008189a"
+  }
+]

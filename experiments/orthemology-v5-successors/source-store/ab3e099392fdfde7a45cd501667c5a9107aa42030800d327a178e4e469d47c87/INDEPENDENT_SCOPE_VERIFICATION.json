@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "-o",
+        "tranche20/foundational-audit/original-bearer-independent-review/IndependentScopeTests.olean",
+        "tranche20/foundational-audit/original-bearer-independent-review/IndependentScopeTests.lean"
+      ],
+      "exit_code": 0,
+      "log": "IndependentScopeTests.log",
+      "sha256": "67dd133c2b76755ade92bfbfbe9d82574304d9ca077b7e066a5ccdc359710314"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/foundational-audit/original-bearer-independent-review/IndependentReadback.lean"
+      ],
+      "exit_code": 0,
+      "log": "IndependentReadback.log",
+      "sha256": "93fcbf5551dfc4affac79663d7f175db6d24f41c111eb95ebf54f60b3f2bbab6"
+    }
+  ],
+  "readbacks": {
+    "IndependentOriginalBearerReview.broad_abc_without_representation": {
+      "type": "@IndependentOriginalBearerReview.broad_abc_without_representation.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T),\n  (∃ t, @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{u_1, u_2, u_3, u_4} W B R T s t) →\n    @Orthemology.Tranche20.OriginalBearerBridge.Completion.{u_1, u_2, u_3, u_4} W B R T s →\n      @Orthemology.Tranche20.OriginalBearerBridge.Realisation.{u_1, u_2, u_3, u_4} W B R T s →\n        @Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{u_1, u_2, u_3, u_4} W B R T s →\n          @Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{u_1, u_2, u_3, u_4} W B R T s →\n            @Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{u_1, u_2, u_3, u_4} W B R T s →\n              ∃ t r g,\n                And (@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{u_1, u_2, u_3, u_4} W B R T s t r g)\n                  (And\n                    (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W B\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s) g)\n                    (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{u_1, u_2, u_3, u_4} W B R T s g))",
+      "type_sha256": "dcc39c98d4ec41b745cc5f314890df292d30cfc80b2109559ce66d76d693045b",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOriginalBearerReview.representation_is_needed_for_binary_uniform_target": {
+      "type": "IndependentOriginalBearerReview.representation_is_needed_for_binary_uniform_target : And\n  (∃ t,\n    @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Bool Bool Bool Unit\n      IndependentOriginalBearerReview.representationMismatch t)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Bool Bool Bool Unit\n      IndependentOriginalBearerReview.representationMismatch)\n    (And\n      (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Bool Bool Bool Unit\n        IndependentOriginalBearerReview.representationMismatch)\n      (And\n        (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Bool Bool Bool Unit\n          IndependentOriginalBearerReview.representationMismatch)\n        (And\n          (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Bool Bool Bool Unit\n            IndependentOriginalBearerReview.representationMismatch)\n          (And\n            (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Bool Bool Bool Unit\n              IndependentOriginalBearerReview.representationMismatch)\n            (And\n              (Not\n                (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Bool Bool Bool Unit\n                  IndependentOriginalBearerReview.representationMismatch))\n              (And\n                (∃ g,\n                  And\n                    (@Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Bool Bool Bool Unit\n                      IndependentOriginalBearerReview.representationMismatch g)\n                    (And\n                      (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool Bool\n                        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool Unit\n                          IndependentOriginalBearerReview.representationMismatch)\n                        g)\n                      (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{0, 0, 0, 0} Bool Bool Bool Unit\n                        IndependentOriginalBearerReview.representationMismatch g)))\n                (And\n                  (∀ (w x : Bool),\n                    Not\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n                        IndependentOriginalBearerReview.representationMismatch w x x))\n                  (And\n                    (∀ (w y x : Bool),\n                      @Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n                          IndependentOriginalBearerReview.representationMismatch w y x →\n                        And\n                          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool\n                            Unit IndependentOriginalBearerReview.representationMismatch w y)\n                          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool\n                            Unit IndependentOriginalBearerReview.representationMismatch w x))\n                    (Not\n                      (∃ g,\n                        @Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool Bool\n                          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool Bool Bool\n                            Unit IndependentOriginalBearerReview.representationMismatch)\n                          (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool Bool Bool Unit\n                            IndependentOriginalBearerReview.representationMismatch)\n                          g)))))))))))",
+      "type_sha256": "82aec8ea2ecf35692029609d85da6bcdd0e3afee16105e5a859f430fb59ee264",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOriginalBearerReview.plural_full": {
+      "type": "IndependentOriginalBearerReview.plural_full : @Orthemology.Tranche20.OriginalBearerBridge.FullPremises.{0, 0, 0, 0} Bool\n  (Prod.{0, 0} Bool Bool) (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural",
+      "type_sha256": "97055c78c72ba9b23e8fd668506aef899e1aff41372130f8f192a182a2ccc142",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOriginalBearerReview.plural_nonvacuous_and_no_common_bearer": {
+      "type": "IndependentOriginalBearerReview.plural_nonvacuous_and_no_common_bearer : And\n  (@Ne.{1} (Prod.{0, 0} Bool Bool) (@Prod.mk.{0, 0} Bool Bool false false) (@Prod.mk.{0, 0} Bool Bool true false))\n  (And\n    (∀ (field : Bool),\n      And\n        (@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)\n          (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural field\n          (@Prod.mk.{0, 0} Bool Bool field false) (@Prod.mk.{0, 0} Bool Bool field false))\n        (And\n          (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool (Prod.{0, 0} Bool Bool)\n            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)\n              (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural)\n            (@Prod.mk.{0, 0} Bool Bool field false))\n          (And\n            (@Orthemology.Tranche3.SourceIdentity.UniformRoot.{0, 0} Bool (Prod.{0, 0} Bool Bool)\n              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)\n                (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural)\n              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)\n                (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural)\n              (@Prod.mk.{0, 0} Bool Bool field false))\n            (And\n              (@Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{0, 0, 0, 0} Bool\n                (Prod.{0, 0} Bool Bool) (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural false\n                (@Prod.mk.{0, 0} Bool Bool field true))\n              (And\n                (Not\n                  (@Orthemology.Tranche3.SourceIdentity.Necessary.{0, 0} Bool (Prod.{0, 0} Bool Bool)\n                    (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{0, 0, 0, 0} Bool\n                      (Prod.{0, 0} Bool Bool) (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural)\n                    (@Prod.mk.{0, 0} Bool Bool field true)))\n                (@Orthemology.Tranche20.OriginalBearerBridge.Framework.dep.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)\n                  (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural false\n                  (@Prod.mk.{0, 0} Bool Bool field false) (@Prod.mk.{0, 0} Bool Bool field true)))))))\n    (Not\n      (∃ g,\n        ∀ (t : Bool),\n          ∃ r,\n            @Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{0, 0, 0, 0} Bool (Prod.{0, 0} Bool Bool)\n              (Prod.{0, 0} Bool Bool) Bool IndependentOriginalBearerReview.plural t r g)))",
+      "type_sha256": "35a0eb14d6a055a9350fe97109d433b5faac7d36cdd2868c8879f69cc6bbab84",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOriginalBearerReview.witness_local_sufficiency": {
+      "type": "@IndependentOriginalBearerReview.witness_local_sufficiency.{u_1, u_2, u_3,\n    u_4} : ∀ {W : Type u_1} {B : Type u_2} {R : Type u_3} {T : Type u_4}\n  (s : Orthemology.Tranche20.OriginalBearerBridge.Framework.{u_1, u_2, u_3, u_4} W B R T) (t : T) (r : R) (g : B),\n  @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{u_1, u_2, u_3, u_4} W B R T s t →\n    @Orthemology.Tranche20.OriginalBearerBridge.Framework.relevant.{u_1, u_2, u_3, u_4} W B R T s r t →\n      @Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource.{u_1, u_2, u_3, u_4} W B R T s r →\n        @Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s\n            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g →\n          @Orthemology.Tranche20.OriginalBearerBridge.Framework.intrinsic.{u_1, u_2, u_3, u_4} W B R T s g r →\n            (@Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{u_1, u_2, u_3, u_4} W B R T s\n                  (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g →\n                @Orthemology.Tranche20.OriginalBearerBridge.Framework.resourceReceived.{u_1, u_2, u_3, u_4} W B R T s\n                  r) →\n              (Not\n                    (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W B\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s)\n                      g) →\n                  @Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{u_1, u_2, u_3, u_4} W B R T s\n                    (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g) →\n                ((∃ w,\n                      @Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{u_1, u_2, u_3, u_4} W B R T s\n                        w g) →\n                    @Orthemology.Tranche20.OriginalBearerBridge.Framework.wholeReceived.{u_1, u_2, u_3, u_4} W B R T s\n                      (@Orthemology.Tranche20.OriginalBearerBridge.Framework.actual.{u_1, u_2, u_3, u_4} W B R T s) g) →\n                  And (@Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness.{u_1, u_2, u_3, u_4} W B R T s t r g)\n                    (And\n                      (@Orthemology.Tranche3.SourceIdentity.Necessary.{u_1, u_2} W B\n                        (@Orthemology.Tranche20.OriginalBearerBridge.Framework.existsAt.{u_1, u_2, u_3, u_4} W B R T s)\n                        g)\n                      (@Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt.{u_1, u_2, u_3, u_4} W B R T s\n                        g))",
+      "type_sha256": "088a26b718dc8ea742a5ee3e5311d8d56d88f68f206b282ddf556df30f93dab3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "IndependentOriginalBearerReview.occurrence_is_not_free": {
+      "type": "IndependentOriginalBearerReview.occurrence_is_not_free : And\n  (@Orthemology.Tranche20.OriginalBearerBridge.Completion.{0, 0, 0, 0} Unit Nat Unit Unit\n    IndependentOriginalBearerReview.noOccurrence)\n  (And\n    (@Orthemology.Tranche20.OriginalBearerBridge.Realisation.{0, 0, 0, 0} Unit Nat Unit Unit\n      IndependentOriginalBearerReview.noOccurrence)\n    (And\n      (@Orthemology.Tranche20.OriginalBearerBridge.SupportTransport.{0, 0, 0, 0} Unit Nat Unit Unit\n        IndependentOriginalBearerReview.noOccurrence)\n      (And\n        (@Orthemology.Tranche20.OriginalBearerBridge.ReceiptRepresentation.{0, 0, 0, 0} Unit Nat Unit Unit\n          IndependentOriginalBearerReview.noOccurrence)\n        (And\n          (@Orthemology.Tranche20.OriginalBearerBridge.ContingencyNeed.{0, 0, 0, 0} Unit Nat Unit Unit\n            IndependentOriginalBearerReview.noOccurrence)\n          (And\n            (@Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception.{0, 0, 0, 0} Unit Nat Unit Unit\n              IndependentOriginalBearerReview.noOccurrence)\n            (And\n              (Not\n                (∃ t,\n                  @Orthemology.Tranche20.OriginalBearerBridge.Framework.targetReceived.{0, 0, 0, 0} Unit Nat Unit Unit\n                    IndependentOriginalBearerReview.noOccurrence t))\n              (Not\n                (∃ g,\n                  @Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal.{0, 0, 0, 0} Unit Nat Unit Unit\n                    IndependentOriginalBearerReview.noOccurrence g))))))))",
+      "type_sha256": "62aa6d83c55f79541c46fa38028e4b7f4707bcb557cdf47a7ac9662d2d839db1",
+      "axioms": []
+    }
+  },
+  "source_sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284",
+  "object_sha256": "76d2e88bffd6f4340b282e5001942a9e94ad8f85669d42a999a1a1b9edc527c9",
+  "candidate_objects_receipt_sha256": "1e538eca0ce77d517da6bc4aa545922fe7f063bbe7c4d76364dce0af46c1fdc0",
+  "scientific_claim": "Logical implication and counterinterpretation tests, not metaphysical possibility or fresh philosophical warrant."
+}

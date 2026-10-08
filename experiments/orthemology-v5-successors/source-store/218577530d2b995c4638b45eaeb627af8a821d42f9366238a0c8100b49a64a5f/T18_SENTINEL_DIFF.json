@@ -1,0 +1,13 @@
+{
+  "edits": [
+    {
+      "delete_utf8_hex": "2f746d702f6f757473696465",
+      "insert_utf8": "/outside",
+      "offset_bytes": 1912
+    }
+  ],
+  "original_sha256": "a7334c42d58f90331ef8de0e975763ae46bae46356e5503a89ea2f9d0980e1db",
+  "public_sha256": "3f5dca9b4c5e106b32772f79de3c3366ad7a78593a0cf8a64e33b53ab8231b93",
+  "schema": "exact-utf8-byte-edits-v1",
+  "scope": "Replace only one fabricated absolute-path rejection sentinel. The original is retained in the owner archive and its historical manifests remain original-byte manifests."
+}

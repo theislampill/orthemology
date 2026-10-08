@@ -1,0 +1,132 @@
+{
+  "schema": "t20-joint-finite-input-bindings-v1",
+  "scope": "Bounded shared finite interpretation; reviewed component cores and prior approved derivative unchanged. Public input projection checks selected exact component sources; raw prior custody/review/specification files are historical references, not bundled or reread.",
+  "path_base": "This standalone selected package root; all bound files are finite selected payloads.",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "preparation_receipt_sha256": "4b1c06c026eb6a7e15e6699e67b7322f8514f36fadba9c58e9975e5b0d0dfcf7",
+  "historical_source": "components/SourceIdentity.original.lean",
+  "derived_source": "components/SourceIdentityDerived.lean",
+  "derived_imports": [
+    "Mathlib.Data.Bool.Basic",
+    "Mathlib.Data.Fintype.Basic",
+    "Mathlib.Tactic.ByContra"
+  ],
+  "cached_closure_receipt": "DEPENDENCY_OBJECTS.json",
+  "compile_modules": [
+    {
+      "module": "SourceIdentityDerived",
+      "path": "components/SourceIdentityDerived.lean",
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "Mathlib.Data.Fintype.Basic",
+        "Mathlib.Tactic.ByContra"
+      ]
+    },
+    {
+      "module": "OriginalBearerBridge",
+      "path": "components/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "imports": [
+        "SourceIdentityDerived"
+      ]
+    },
+    {
+      "module": "AnchoredSourceBridge",
+      "path": "components/AnchoredSourceBridge.lean",
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "VeracityBoundary",
+      "path": "components/VeracityBoundary.lean",
+      "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "imports": [
+        "Init"
+      ]
+    }
+  ],
+  "required_proof_map": {
+    "JointFinite.canonical_original_via_component": [
+      "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion"
+    ],
+    "JointFinite.canonical_necessary_via_inherited": [
+      "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+      "Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited"
+    ],
+    "JointFinite.canonical_uniform_via_inherited": [
+      "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+      "Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited"
+    ],
+    "JointFinite.canonical_abc_same_g": [
+      "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original"
+    ],
+    "JointFinite.generic_abc_via_component": [
+      "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness"
+    ],
+    "JointFinite.field_coverage_without_cnd": [
+      "AnchoredSourceBridge.global_coverage_of_qualified_anchor"
+    ],
+    "JointFinite.field_guarded": [
+      "AnchoredSourceBridge.guarded_common_original_provider"
+    ],
+    "JointFinite.field_positive": [
+      "AnchoredSourceBridge.every_field_positive"
+    ],
+    "JointFinite.complete_provider_exists_and_unique": [
+      "AnchoredSourceBridge.unique_complete_provider"
+    ],
+    "JointFinite.veracity_via_component": [
+      "VeracityBoundary.veracity_of_coverage"
+    ],
+    "JointFinite.honesty_equivalence_via_component": [
+      "VeracityBoundary.veracity_iff_no_counterfeit"
+    ],
+    "JointFinite.J05_positive_reachability": []
+  },
+  "required_component_calls": [
+    "AnchoredSourceBridge.every_field_positive",
+    "AnchoredSourceBridge.global_coverage_of_qualified_anchor",
+    "AnchoredSourceBridge.guarded_common_original_provider",
+    "AnchoredSourceBridge.unique_complete_provider",
+    "Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness",
+    "Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited",
+    "Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original",
+    "Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited",
+    "Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion",
+    "Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root",
+    "Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root",
+    "VeracityBoundary.veracity_iff_no_counterfeit",
+    "VeracityBoundary.veracity_of_coverage"
+  ],
+  "inputs": [
+    {
+      "path": "components/SourceIdentityDerived.lean",
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "bytes": 7438
+    },
+    {
+      "path": "components/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940
+    },
+    {
+      "path": "components/AnchoredSourceBridge.lean",
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "bytes": 10743
+    },
+    {
+      "path": "components/VeracityBoundary.lean",
+      "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "bytes": 5975
+    },
+    {
+      "path": "components/SourceIdentity.original.lean",
+      "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "bytes": 7357
+    }
+  ],
+  "original_contract_sha256": "201b39c5d96193dc69bcdcb3873d572c136b4d26842d934481f0685a38ae5ddd"
+}

@@ -1,0 +1,501 @@
+{
+  "schema": "t20-mathematical-companion-derivation-v1",
+  "inputs": [
+    {
+      "bytes": 43331,
+      "sha256": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1",
+      "owner_archive_path": "t20/sources/foundational-final-synthesis/SYNTHESIS.md",
+      "body_included_in_frozen_v5": true
+    },
+    {
+      "bytes": 19254,
+      "sha256": "6ef8c72281eaaa57137da131d25dea9fdea2837f3523ec79a00148c7f496ae2f",
+      "historical_input_title": "Additional mathematical exposition draft used for the companion",
+      "body_included": false,
+      "identity_scope": "Recorded input snapshot identity; not a claim that an evolving report has these bytes now."
+    },
+    {
+      "bytes": 4231,
+      "sha256": "a95a85f6a8c429b57b4688d22bb63ad53dfe04d7e1c05f2f68d76d3d42893a40",
+      "owner_archive_path": "t20/sources/foundational-final-synthesis/ELI5_ELI14.md",
+      "body_included_in_frozen_v5": true
+    },
+    {
+      "bytes": 36148,
+      "sha256": "cc9ddd8776d83a32224c933d86f4a441fffdf3b06c8bd81cfead854fd68c89d6",
+      "historical_input_title": "Research report draft used for the dated philosophical comparison",
+      "body_included": false,
+      "identity_scope": "Recorded input snapshot identity; not a claim that an evolving report has these bytes now."
+    },
+    {
+      "bytes": 1718,
+      "sha256": "ac3a266ee7ee3494b0804d800f97ba063ed51eac24bf4e74d2a16bb904431685",
+      "historical_input_title": "Mathematical exposition final readback",
+      "body_included": false,
+      "identity_scope": "Recorded input snapshot identity; not a claim that an evolving report has these bytes now."
+    },
+    {
+      "bytes": 47602,
+      "sha256": "f78573c3646e3a47ddbf30bc8e31616cd2b39a4ea1aaece9c3ee4528d51ca17d",
+      "owner_archive_path": "t20/sources/foundational-final-synthesis/SOURCE_INDEX.json",
+      "body_included_in_frozen_v5": true
+    }
+  ],
+  "output": {
+    "path": "MATHEMATICAL_COMPANION.md",
+    "bytes": 70060,
+    "sha256": "40e374a62246636ffdbd424f517094dbaa7a7d00cc177675bed19377598e44fd"
+  },
+  "intro_text": "# Orthemology Twentieth mathematical companion\n\n7 October 2026\n\n## Purpose and principal result\n\nThe Twentieth results establish precise conditional inferences about an original bearer, common provision within a connected field, source owned veracity, and several further mathematical interfaces. Their premises and interpretation obligations remain explicit. The original HasE identity is still open. A finite interpretation establishes consistency of its selected signature, not metaphysical possibility or the truth of the premises in actual reality.\n\nPart 1 explains what was checked in simple terms. Part 2 preserves the foundational synthesis, including all ten questions and the A through H architecture. Part 3 gives the additional mathematical results and their scope limits. Exact declaration names and literal formal syntax remain code; mathematical notation is typeset as editable equations in the Word edition.\n\nAuthor: dot, an OpenAI-powered AI research assistant. The separately dispatched AI reviews cited here are not external human peer review or independent proof-assistant implementations.\n\n## Appraisal distinction on 7 October 2026\n\nThe dated appraisal statements retained below should be read alongside the later comparative assessment in the Twentieth research report. The actual common-source account is positively favoured on the stated explanatory considerations, while sufficient warrant for complete single-source production is still withheld. That comparative judgement is separate from the universal SourceMode requirement that every qualified original completely provide every composite result to which it contributes. This is the dated pre-Miftah comparative assessment, bounded before the later Miftah, Nubuwwat and Safadiyya studies. The final research report is authoritative for any subsequent source-informed judgement. This distinction does not alter a theorem, a historical appraisal, or the scope of a countermodel.\n\n## Finding the source evidence\n\nIn the delivered archive, bracketed foundational source IDs resolve through t20/sources/foundational-final-synthesis/SOURCE_INDEX.json, with the readable SOURCE_INDEX.md in the same folder. The index retains both historical custody identities and separately hashed public aliases. Resolve an alias relative to that foundational folder; an original custody hash does not identify changed public bytes, and a body-free historical locator is not an included source body. The same folder contains CONCLUSION_PREMISE_STATUS_MAP.json and the preserved SYNTHESIS.md and ELI5_ELI14.md. The accompanying research report and integration map identify the additional mathematical source packets.\n\nThis companion changes no sealed scientific input and adds no scientific replay. Its dates and verification counts refer to the recorded work and reviews described in the source packets.\n",
+  "section_order": [
+    "simple",
+    "foundation",
+    "additional"
+  ],
+  "transforms": {
+    "foundation": [
+      {
+        "old": "`∀ e, Field(e) → Complete(g,e)`",
+        "new": "$\\forall e,\\ \\operatorname{Field}(e)\\to\\operatorname{Complete}(g,e)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "`∀ s e, Field(e) → ActualOriginal(s,e) → s=g`",
+        "new": "$\\forall s\\,e,\\ \\operatorname{Field}(e)\\to\\operatorname{ActualOriginal}(s,e)\\to s=g$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "# Orthemology Twentieth foundational audit synthesis",
+        "new": "## Part 2 Foundational audit synthesis",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## Result and reading guide",
+        "new": "### Result and reading guide",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## 1 Answers to all ten owner questions",
+        "new": "### Answers to all ten owner questions",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## 2 Exact A through H architecture",
+        "new": "### Exact A through H architecture",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## 3 Attributes and source-owned veracity",
+        "new": "### Attributes and veracity of source owned assertions",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## 4 Nonvacuity and verification strength",
+        "new": "### Nonvacuity and verification strength",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## 5 Integration and remaining limits",
+        "new": "### Integration and remaining limits",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 1 How much of the Necessary Being argument is now machine-checkable",
+        "new": "#### 1 How much of the Necessary Being argument is now machine checkable",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 2 Which exact premises retain philosophical warrant",
+        "new": "#### 2 Which exact premises retain philosophical warrant",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 3 Are any premises reducible to simpler already accepted principles",
+        "new": "#### 3 Are any premises reducible to simpler already accepted principles",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 4 Which premises have countermodel independence evidence",
+        "new": "#### 4 Which premises have countermodel independence evidence",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 5 Are any current distinctions redundant",
+        "new": "#### 5 Are any current distinctions redundant",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 6 Does formalisation expose circularity or an illicit shift",
+        "new": "#### 6 Does formalisation expose circularity or an illicit shift",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 7 What is the strongest truthfully claimable checked theorem",
+        "new": "#### 7 What is the strongest truthfully claimable checked theorem",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 8 What strongest conclusion remains computationally unverified",
+        "new": "#### 8 What strongest conclusion remains computationally unverified",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 9 What specific work would push the boundary further",
+        "new": "#### 9 What specific work would push the boundary further",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### 10 Does formalisation materially increase confidence",
+        "new": "#### 10 Does formalisation materially increase confidence",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### A Original resource and actual bearer",
+        "new": "#### A Original resource and actual bearer",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### B Necessary existence of that bearer",
+        "new": "#### B Necessary existence of that bearer",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### C Essential independence",
+        "new": "#### C Essential independence",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### D Existing Sixth ancestry theorem",
+        "new": "#### D Existing Sixth ancestry theorem",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### E CND and the five production claims",
+        "new": "#### E CND and the five production claims",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### F Source mode as classification and actual conformance",
+        "new": "#### F Source mode as classification and actual conformance",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### G Mediation without ownership collapse",
+        "new": "#### G Mediation without ownership collapse",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### H The exact meaning of one common source",
+        "new": "#### H The exact meaning of one common source",
+        "kind": "heading",
+        "occurrences": 1
+      }
+    ],
+    "additional": [
+      {
+        "old": "W(q) = Π n : N, ∀ α, Π f : α → α, Π a : α, Id_α(n f a, (q n) f a).",
+        "new": "$$\nW(q)=\\Pi\\,n:N,\\ \\forall\\alpha,\\ \\Pi\\,f:\\alpha\\to\\alpha,\\ \\Pi\\,a:\\alpha,\\ \\operatorname{Id}_{\\alpha}(n\\,f\\,a,\\,(q\\,n)\\,f\\,a).\n$$",
+        "kind": "display_math",
+        "occurrences": 1
+      },
+      {
+        "old": "c3 = K(K(K I))",
+        "new": "$c_3=K(K(K\\,I))$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "p = I",
+        "new": "$p=I$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "n : N ⊢ I : Id_Raw(n I I, I).",
+        "new": "$$\nn:N\\vdash I:\\operatorname{Id}_{\\mathrm{Raw}}(n\\,I\\,I,I).\n$$",
+        "kind": "display_math",
+        "occurrences": 1
+      },
+      {
+        "old": "Id_Raw(I,I)",
+        "new": "$\\operatorname{Id}_{\\mathrm{Raw}}(I,I)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "E(w,u,v)",
+        "new": "$E(w,u,v)$",
+        "kind": "inline_math",
+        "occurrences": 2
+      },
+      {
+        "old": "E(w,v,u)",
+        "new": "$E(w,v,u)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "U(u,v)",
+        "new": "$U(u,v)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "u ~ v",
+        "new": "$u\\sim v$",
+        "kind": "inline_math",
+        "occurrences": 2
+      },
+      {
+        "old": "a : V → S",
+        "new": "$a:V\\to S$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "V/~",
+        "new": "$V/{\\sim}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "E(w,a)",
+        "new": "$E(w,a)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "S(w,a,b)",
+        "new": "$S(w,a,b)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "O(w,s,e,r)",
+        "new": "$O(w,s,e,r)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "R(w,g)",
+        "new": "$R(w,g)$",
+        "kind": "inline_math",
+        "occurrences": 3
+      },
+      {
+        "old": "O(w,g,e,r)",
+        "new": "$O(w,g,e,r)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "O(w,h,e,r)",
+        "new": "$O(w,h,e,r)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "Supports(c)",
+        "new": "$\\operatorname{Supports}(c)$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "{a1}, {a2,b}, {a3,b}",
+        "new": "$\\{a_1\\},\\ \\{a_2,b\\},\\ \\{a_3,b\\}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "{a1,b}",
+        "new": "$\\{a_1,b\\}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "{a1,a2,a3}",
+        "new": "$\\{a_1,a_2,a_3\\}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "{a,b}",
+        "new": "$\\{a,b\\}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "{a}",
+        "new": "$\\{a\\}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "p = 1/4",
+        "new": "$p=\\frac{1}{4}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "9/16",
+        "new": "$\\frac{9}{16}$",
+        "kind": "inline_math",
+        "occurrences": 2
+      },
+      {
+        "old": "6/16",
+        "new": "$\\frac{6}{16}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "1/16",
+        "new": "$\\frac{1}{16}$",
+        "kind": "inline_math",
+        "occurrences": 2
+      },
+      {
+        "old": "3/16",
+        "new": "$\\frac{3}{16}$",
+        "kind": "inline_math",
+        "occurrences": 2
+      },
+      {
+        "old": "M = 0",
+        "new": "$M=0$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "`1 - (1-p)^M`",
+        "new": "$1-(1-p)^M$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "`1 - (1-p)^M / 2`",
+        "new": "$1-\\frac{(1-p)^M}{2}$",
+        "kind": "inline_math",
+        "occurrences": 1
+      },
+      {
+        "old": "# Further Twentieth mathematical results",
+        "new": "## Part 3 Further mathematical results",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## Status and source of this companion section",
+        "new": "### Status and source of the additional results",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## Exact HasE scalar fusion reduction",
+        "new": "### Exact HasE scalar fusion reduction",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "### The generic Raw probe and the remaining fusion gap",
+        "new": "#### The generic Raw probe and the remaining fusion gap",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## Modal union consequence completeness",
+        "new": "### Modal union consequence completeness",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## Original ground extension and preservation",
+        "new": "### Original ground extension and preservation",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## A productive nonduplication route to essential nonreceipt",
+        "new": "### A productive nonduplication route to essential nonreceipt",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## Grounded support retraction and later root aliasing",
+        "new": "### Grounded support retraction and later root aliasing",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## The deletion observation control",
+        "new": "### The deletion observation control",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## External results considered without false transfer credit",
+        "new": "### External results considered without false transfer credit",
+        "kind": "heading",
+        "occurrences": 1
+      }
+    ],
+    "simple": [
+      {
+        "old": "# What the computer checked",
+        "new": "## Part 1 What the computer checked",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## ELI5",
+        "new": "### ELI5",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## ELI14",
+        "new": "### ELI14",
+        "kind": "heading",
+        "occurrences": 1
+      },
+      {
+        "old": "## Evidence",
+        "new": "### Evidence",
+        "kind": "heading",
+        "occurrences": 1
+      }
+    ]
+  },
+  "complete_original_text_recoverable": {
+    "foundation": true,
+    "additional": true,
+    "simple": true
+  },
+  "record_kind": "Public provenance projection: all exposition transforms retained; internal input paths replaced by selected-file aliases or body-free historical titles."
+}

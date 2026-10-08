@@ -1,0 +1,171 @@
+{
+  "schema": "seventeenth-publication-directory-privacy-v2",
+  "status": "PASS_BOUNDED_DIRECTORY_CONTENT_AND_INVENTORY_CHECK",
+  "scope": "All 29 substantive/control-input files and the fresh test report; generated privacy and manifest files additionally checked after generation.",
+  "checks": {
+    "explicit_32_member_allowlist": true,
+    "utf8_text_only": true,
+    "no_symlinks_or_hardlinks": true,
+    "no_extra_or_hidden_members": true,
+    "no_extended_attributes": true,
+    "no_unexpected_hidden_unicode": true,
+    "no_primary_source_bodies_pdfs_images_or_screenshots": true,
+    "no_participant_records_or_correspondence": true,
+    "no_private_paths_or_internal_identifiers": true,
+    "no_private_substantive_reports_copied": true
+  },
+  "pattern_categories": [
+    "private_absolute_path",
+    "private_relative_path",
+    "internal_identifier",
+    "internal_uuid",
+    "email_address",
+    "credential_like",
+    "embedded_primary_binary",
+    "unexpected_hidden_unicode"
+  ],
+  "findings": [],
+  "external_urls": [
+    "https://ar.wikisource.org/wiki/منهاج_السنة_النبوية/20",
+    "https://arxiv.org/abs/0912.0726v1",
+    "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+    "https://doi.org/10.1007/s11749-017-0571-1",
+    "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+    "https://drive.google.com/file/d/17V1wIb5WwvTZmycm_QG3_N6TlINguU-i/view?usp=drivesdk",
+    "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+    "https://drive.google.com/file/d/1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ/view?usp=drivesdk",
+    "https://drive.google.com/file/d/1iBAiImdDodsmO7qY4bykiiFzLd8IxmjM/view?usp=drivesdk",
+    "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+    "https://islamhouse.com/ar/books/1913",
+    "https://islamicbook.ws/tarekh/mnhaj-005.html",
+    "https://islamicbook.ws/tarekh/mnhaj-006.html",
+    "https://journals.sagepub.com/doi/10.1177/26339137251372605",
+    "https://osf.io/x5hye/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6405018/"
+  ],
+  "change_review": "The repaired main-document binding, clarified certificate pointer, six explicit UTF-8 callsite repairs and one subprocess regression were inspected. The separate manifest verifier, all source-scope snapshots, certificates and substantive mathematical content remain unchanged.",
+  "allowlisted_identifiers": "Document/source filenames and hashes, source URLs and bibliographic references, bounded reading coordinates, aggregate counts, and fabricated synthetic labels.",
+  "limitations": "Bounded inventory, pattern and semantic inspection is not a universal disclosure proof, source redistribution permission or verification of a later archive. This receipt does not replace independent review of the complete final artifact set.",
+  "scanned_files": [
+    {
+      "path": "ADAPTATION_LOG.json",
+      "sha256": "2e41ab52bffa7d67a7386c797e304da0107f05505fe97ca90ae8eb112eb75fbb"
+    },
+    {
+      "path": "FINITE_MATH_SCOPE.md",
+      "sha256": "b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b9ce5857e885ee933344e7c7df6abe3e7ae68612b69d6f0355ceeb851c6d8b2f"
+    },
+    {
+      "path": "RELATED_ARTIFACTS.json",
+      "sha256": "7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e"
+    },
+    {
+      "path": "aggregates/frozen_aggregate_certificate.json",
+      "sha256": "852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9"
+    },
+    {
+      "path": "aggregates/independent_aggregate_certificate.json",
+      "sha256": "561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe"
+    },
+    {
+      "path": "aggregates/post_inspection_tail_certificate.json",
+      "sha256": "1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb"
+    },
+    {
+      "path": "calculation/certified_exp.py",
+      "sha256": "9438baad17a4dac4d100b30ec53397edf9fcd6fbc3b3f0cab21f7af15ebbec89"
+    },
+    {
+      "path": "calculation/independent_oracles.py",
+      "sha256": "a670dbeb98c21531ce7eaac682c8c402e04289547e09bbe1d5935c6f136ab8ec"
+    },
+    {
+      "path": "calculation/placement_core.py",
+      "sha256": "9d39013072bae4cc53f4e681ed1a726209f1477e08bcd2cc9e4231dca9019cf3"
+    },
+    {
+      "path": "calculation/test_calculation_independently.py",
+      "sha256": "bc7d599ef3534dcfe1161490bba0f745f31c43f4d937949e839b82f319038340"
+    },
+    {
+      "path": "calculation/test_independent_oracles.py",
+      "sha256": "93cc86495667a00e1585c1096f43e1e7c1089210374113ecfe06635ecdfc7d8e"
+    },
+    {
+      "path": "calculation/test_synthetic.py",
+      "sha256": "e4c7026aa7ac2542474bd9add0b2e9b182c862fb5437913744bcf02446d97d14"
+    },
+    {
+      "path": "checks/test_aggregate_certificates.py",
+      "sha256": "490476690f4b92fc8bd032278f7c80e72ae631d4bd9b9e72686b8c1b25c41795"
+    },
+    {
+      "path": "checks/test_arabic_source_scope.py",
+      "sha256": "0e9811a6200542c22bad0cb2d794395b027e6605bb4e45d00f3526a549b3116a"
+    },
+    {
+      "path": "checks/test_minhaj_electronic_scope.py",
+      "sha256": "2681111681f26283f4d7c89bf69adb3aa2aa32c9f7d07a9dc47d65d16705e5a6"
+    },
+    {
+      "path": "checks/test_source_coverage.py",
+      "sha256": "38e036152ab2b425b0f9b1b19e7dd62b546f0e073b2e6b33fdcf443ca006f304"
+    },
+    {
+      "path": "checks/test_utf8_metadata_portability.py",
+      "sha256": "a2f23c093d2ea81dbe0caf04d4e5e532f81560199428a29c77828a81295498d6"
+    },
+    {
+      "path": "companion/Mathematical_Companion_Content_v2.md",
+      "sha256": "4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401"
+    },
+    {
+      "path": "run_checks.py",
+      "sha256": "b5e3056961b21e265e710ffca8d8b1293362695c39d292509cb3c6c3bf54f1fe"
+    },
+    {
+      "path": "sources/additional_arabic_source_scope.json",
+      "sha256": "1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944"
+    },
+    {
+      "path": "sources/minhaj_electronic_read_scope.json",
+      "sha256": "2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e"
+    },
+    {
+      "path": "sources/six_source_coverage.json",
+      "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b"
+    },
+    {
+      "path": "synthetic/check_orbits.py",
+      "sha256": "ea4caf6f63af17b7a7fbfc9e878eca0686cd04eda14fc9172d67a313e760ed45"
+    },
+    {
+      "path": "tail/independent_tail_predicates_v1.py",
+      "sha256": "8134bcf2ed063e51c8bea1914763058a80d6cc2d7e5900e675ac1cc095d47623"
+    },
+    {
+      "path": "tail/tail_predicates.py",
+      "sha256": "833129934a3a3cd4ada0039c44b7fc9f90baf8dfbad286a062d22e09508c489d"
+    },
+    {
+      "path": "tail/test_independent_tail_predicates_v1.py",
+      "sha256": "579cca75f2aa90a71941297644310890fb77b05b0a7fae4c36d4332cf267790f"
+    },
+    {
+      "path": "tail/test_tail_predicates.py",
+      "sha256": "fd3f06353dd3b4951f0199cfb142e4c15f6b426f7138639a21f33994b6e38d09"
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "d602041e54d00a5bddb636a2d8b4a34ae60586981bad061321c58a378ab77a73"
+    },
+    {
+      "path": "PACKAGING_TEST_REPORT.json",
+      "sha256": "d119ce5f697134cf6c6e6916e9e6dbc31047c44be6207602ba303e71dc975972"
+    }
+  ]
+}

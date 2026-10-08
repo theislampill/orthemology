@@ -1,0 +1,16 @@
+import VeracityBoundary
+#check VeracityBoundary.Model
+#check VeracityBoundary.K
+#check VeracityBoundary.A
+#check VeracityBoundary.C
+#check VeracityBoundary.D
+#check VeracityBoundary.N
+#check VeracityBoundary.P
+#check VeracityBoundary.controlled_token_true
+#check VeracityBoundary.veracity_of_coverage
+#check VeracityBoundary.counterfeit_iff_false_under_coverage
+#check VeracityBoundary.veracity_iff_no_counterfeit
+#check VeracityBoundary.false_excludes_package
+#check VeracityBoundary.strong_awareness
+#check VeracityBoundary.strong_control
+#check VeracityBoundary.strong_veracity

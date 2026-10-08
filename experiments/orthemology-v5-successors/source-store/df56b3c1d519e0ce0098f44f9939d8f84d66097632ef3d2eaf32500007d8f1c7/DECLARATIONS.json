@@ -1,0 +1,21 @@
+[
+  "TraceControls.mask_sum",
+  "TraceControls.trace_total",
+  "TraceControls.mass_nonneg",
+  "TraceControls.complete_law00",
+  "TraceControls.complete_law01",
+  "TraceControls.one_trace_tv",
+  "TraceControls.copies_injective",
+  "TraceControls.copyMass_at",
+  "TraceControls.duplicate_tv",
+  "TraceControls.copies_zero_const",
+  "TraceControls.copyMass_zero",
+  "TraceControls.zero_data_tv",
+  "TraceControls.success_formula",
+  "TraceControls.randomized_success_bound",
+  "TraceControls.duplicate_randomized_success_bound",
+  "TraceControls.zero_data_success",
+  "TraceControls.same_content_source_law",
+  "TraceControls.distinct_sources_same_law",
+  "TraceControls.known_word_mask_ambiguity"
+]

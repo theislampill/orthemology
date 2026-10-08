@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "title": "Eighteenth four-state structured stress-control supplement",
+  "scope": "One fixed eight-template family, four initial states each; 32 bounded input instances.",
+  "files": [
+    {
+      "path": "EXECUTION.json",
+      "bytes": 291,
+      "sha256": "ec19ee97919901e7721f16ebb6d7c064ef38d92812c6a853ae65bd2670c6bc2d"
+    },
+    {
+      "path": "FEATURE_COVERAGE.json",
+      "bytes": 685,
+      "sha256": "aaa93c8d212af5976104c83ae6bc52fced9dca3f666629c7cd93bf8f72136e20"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 93191,
+      "sha256": "d5c0403840e123cf07f61d88b29ac01d13d256961edde65bbd158ee0b3f397f0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6111,
+      "sha256": "89a3add9be4b25912e773341b47066ac4e2815fadfda1d90ae5d32bfa35f558e"
+    },
+    {
+      "path": "RESULT.json",
+      "bytes": 1758,
+      "sha256": "a45e0b93cd8de4a3fd47733ef48b69dc322f0ca299d5d98dd348e2280add006c"
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "bytes": 3482,
+      "sha256": "22b590a1fb08de58aea1b565c7c6055a4ae7fa892d819296cfb82e558b224868"
+    },
+    {
+      "path": "run_control.py",
+      "bytes": 16928,
+      "sha256": "54d3331b984636eb15aaa4dd783995fed6147a527be15d1c6afa99bb5a993fe1"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/efficient-v1/dependencies.py",
+      "bytes": 2328,
+      "sha256": "80a239405e103d780c8328acd03347f84b9f6af26e795ae0cc562e090bff600f"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/efficient-v1/efficient.py",
+      "bytes": 6075,
+      "sha256": "eaf319dd0909271ea757ec14b88efa0ad45f325ba3b652aa6a6f88f3230a157f"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/efficient-v1/mec.py",
+      "bytes": 2841,
+      "sha256": "22a119d827635d18fd47bccfded1fcf2735f177a5534830525a026c9dc2e40f4"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/efficient-v1/negative.py",
+      "bytes": 1784,
+      "sha256": "41658548a65dc6aa6bffdae1f11a692bb4d58ccec6056a6a95bd55a5817ea4a0"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/certificates.py",
+      "bytes": 6959,
+      "sha256": "a75e325dd879bab3ab392b4a467e12b93716ee33eebec61d30ba668fbdd1e41c"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/controller.py",
+      "bytes": 6354,
+      "sha256": "777a95bf89caa09b4c0c4c9274e4b5aa3b7371d63ea9a92c313e7bffba8be003"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/finite.py",
+      "bytes": 3263,
+      "sha256": "50c7a6dbb1f72b9907886eacd2ad04941ff803e01703b8968ef699cfa1e8fae1"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/model.py",
+      "bytes": 2852,
+      "sha256": "81e01e552e6ebb455f381a81f2568aa08d5b233522bda53d23c8b930d023c823"
+    },
+    {
+      "path": "sources/tranche18/research/hidden-change/reference-v1/synthesis.py",
+      "bytes": 4008,
+      "sha256": "94c0445a5979171ed5eba929ac75a88f02e1685f41701ee21d809f4b628bde09"
+    },
+    {
+      "path": "sources/tranche18/reviews/hidden-change-efficient/oracle.py",
+      "bytes": 3222,
+      "sha256": "57d0f7be02946ac8723cfaaac9d8e0cda0a6743ff7f382c7a26db1129121b1e2"
+    },
+    {
+      "path": "sources/tranche18/reviews/hidden-change-efficient/run_campaign.py",
+      "bytes": 5607,
+      "sha256": "dfad96bc36c2d0f75fd737cf46ff0295254bfacf9f207795f060321e2707b727"
+    },
+    {
+      "path": "sources/tranche18/reviews/hidden-change-reference/oracle.py",
+      "bytes": 8724,
+      "sha256": "093b6530adab6b9c1cd022a3f3c82208088534717a9bc412673ad9a1857cbe33"
+    }
+  ]
+}

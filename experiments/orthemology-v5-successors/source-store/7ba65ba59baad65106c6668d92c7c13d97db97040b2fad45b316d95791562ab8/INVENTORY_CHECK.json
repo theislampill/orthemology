@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "named_declaration_exact_order_equality": 88,
+  "theorem_exact_order_equality": 56,
+  "definition_bodies": 23,
+  "theorem_bodies": 15,
+  "source_sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+  "primitive_review": "Every finite table compared manually with full approved design; primitive bodies reprinted byte-identically in independent fresh rebuild."
+}

@@ -1,0 +1,248 @@
+{
+  "scope": "Exact reviewed scientific source and selected public-safe evidence; original private execution paths and source-book bodies excluded",
+  "entries": [
+    {
+      "source_record": "author/lean/GroundedSupport.lean",
+      "source_sha256": "73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed",
+      "public_path": "lean/GroundedSupport.lean",
+      "public_sha256": "73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/lean/GroundedQuotient.lean",
+      "source_sha256": "7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b",
+      "public_path": "lean/GroundedQuotient.lean",
+      "public_sha256": "7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/lean/AliasCuts.lean",
+      "source_sha256": "ad78fed4255f9ae2a694fbe6d754b7d6b0ebbed10f99f109239430486405d519",
+      "public_path": "lean/AliasCuts.lean",
+      "public_sha256": "ad78fed4255f9ae2a694fbe6d754b7d6b0ebbed10f99f109239430486405d519",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/lean/OccurrenceControls.lean",
+      "source_sha256": "b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a",
+      "public_path": "lean/OccurrenceControls.lean",
+      "public_sha256": "b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/lean/CutControls.lean",
+      "source_sha256": "e153d9baf9ca6e4df1a005fe578ea4ceb00347fee7d1918ff02a87f4f445a4b5",
+      "public_path": "lean/CutControls.lean",
+      "public_sha256": "e153d9baf9ca6e4df1a005fe578ea4ceb00347fee7d1918ff02a87f4f445a4b5",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/lean/MutationControls.lean",
+      "source_sha256": "19501a1defe88ca77f0001bbbd178a01861752d99bd7e3f39d068e9466a48634",
+      "public_path": "lean/MutationControls.lean",
+      "public_sha256": "19501a1defe88ca77f0001bbbd178a01861752d99bd7e3f39d068e9466a48634",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/lean/Readback.lean",
+      "source_sha256": "2d4f14460cf7200b6e88a6b126baa22c3e8bbf6e2fc4e03aa8b8756bb3480e7a",
+      "public_path": "lean/Readback.lean",
+      "public_sha256": "2d4f14460cf7200b6e88a6b126baa22c3e8bbf6e2fc4e03aa8b8756bb3480e7a",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/grounded_support.py",
+      "source_sha256": "9d70989837f3abc364f315a43067554c1b7bd251254e1c33c1d7b358fd948d05",
+      "public_path": "grounded_support.py",
+      "public_sha256": "9d70989837f3abc364f315a43067554c1b7bd251254e1c33c1d7b358fd948d05",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/test_grounded_support.py",
+      "source_sha256": "add98b94f6891ff78f477785e0f46feb3d0bd380ba33fc317d10fbc6ac325e55",
+      "public_path": "test_grounded_support.py",
+      "public_sha256": "add98b94f6891ff78f477785e0f46feb3d0bd380ba33fc317d10fbc6ac325e55",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/search_cut_order.py",
+      "source_sha256": "9b2acd2b5f4840d1fb9d7d60e93520c58c028b3918d70953e9d76060ea7544c5",
+      "public_path": "search_cut_order.py",
+      "public_sha256": "9b2acd2b5f4840d1fb9d7d60e93520c58c028b3918d70953e9d76060ea7544c5",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/THEOREM_MAP.md",
+      "source_sha256": "6563884fd827f0185f913e29b7b45a4f53c87f8ef39bbfb451e4b68d494d3202",
+      "public_path": "THEOREM_MAP.md",
+      "public_sha256": "6563884fd827f0185f913e29b7b45a4f53c87f8ef39bbfb451e4b68d494d3202",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+      "source_sha256": "b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037",
+      "public_path": "EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+      "public_sha256": "b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/README.md",
+      "source_sha256": "f9ce4c0195878aa0feb0c661c7cf9a0c233c6612ba5ad9f5c5d895f6dbbfb70a",
+      "public_path": "report/RESEARCH_SCOPE.md",
+      "public_sha256": "b636b305a4d3619801150abf980370cde666a594f8f874eb25cf389c11b6b128",
+      "transformation": "Original reviewed scientific exposition retained; only scholarly-source section shortened to a concise original-authored theorem-to-source locator mapping in v3 curation."
+    },
+    {
+      "source_record": "author/SOURCE_MANIFEST.json",
+      "source_sha256": "75528460e5853d4f4265fd1e4bf06cf08cf6d041157845e37a2e7ad6482439d1",
+      "public_path": "history/AUTHOR_FROZEN_MANIFEST.json",
+      "public_sha256": "75528460e5853d4f4265fd1e4bf06cf08cf6d041157845e37a2e7ad6482439d1",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/validation/VALIDATION_RECEIPT.json",
+      "source_sha256": "964f102a4344f3cd28b21f8ab03c8281c05a9d721c4d9851411506c5c9b27eca",
+      "public_path": "history/AUTHOR_VALIDATION_RECEIPT.json",
+      "public_sha256": "964f102a4344f3cd28b21f8ab03c8281c05a9d721c4d9851411506c5c9b27eca",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/validation/type-and-axiom-readback.txt",
+      "source_sha256": "ebc8efb425f4e3328aba0730ea752dc36f7a0146ff39f4bf9797553f1d54586f",
+      "public_path": "validation/TYPE_AXIOM_READBACK.txt",
+      "public_sha256": "ebc8efb425f4e3328aba0730ea752dc36f7a0146ff39f4bf9797553f1d54586f",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/validation/DECLARATIONS.json",
+      "source_sha256": "3518794fd86be5761aef3aeb76cbc86f66f809b88bdc543581b3230091327183",
+      "public_path": "validation/DECLARATIONS.json",
+      "public_sha256": "3518794fd86be5761aef3aeb76cbc86f66f809b88bdc543581b3230091327183",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/validation/DEPENDENCY_REHASH.json",
+      "source_sha256": "cfbd1224b8fdd6caf7f274c634bf222fa593c3c1cc4df58988e5b43adfafb13f",
+      "public_path": "validation/AUTHOR_DEPENDENCY_REHASH.json",
+      "public_sha256": "cfbd1224b8fdd6caf7f274c634bf222fa593c3c1cc4df58988e5b43adfafb13f",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/CUT_ORDER_SEARCH.json",
+      "source_sha256": "251ebf6b405deb76131482fa28013ca927748ec60970e16e5c63686242b48d6d",
+      "public_path": "validation/CUT_ORDER_SEARCH.json",
+      "public_sha256": "251ebf6b405deb76131482fa28013ca927748ec60970e16e5c63686242b48d6d",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "author/validation/python-test-results.txt",
+      "source_sha256": "00b952dc2a4f2582b289ee6661a549da82c6a94a84023f5bdd1694640e01fb83",
+      "public_path": "validation/AUTHOR_PYTHON_TESTS.txt",
+      "public_sha256": "00b952dc2a4f2582b289ee6661a549da82c6a94a84023f5bdd1694640e01fb83",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/INDEPENDENT_REVIEW.md",
+      "source_sha256": "9daadb1766b4ce3b0eb53d98775854daf003c8f145f1659003b015fe47939481",
+      "public_path": "review/INDEPENDENT_REVIEW.md",
+      "public_sha256": "9daadb1766b4ce3b0eb53d98775854daf003c8f145f1659003b015fe47939481",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/IndependentControls.lean",
+      "source_sha256": "b4ca5075b192243907387ac792ce3b37aa109dcfd3f5d38a44a864b10ace36d2",
+      "public_path": "review/IndependentControls.lean",
+      "public_sha256": "b4ca5075b192243907387ac792ce3b37aa109dcfd3f5d38a44a864b10ace36d2",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/INDEPENDENT_FINITE_CHECKS.json",
+      "source_sha256": "835a5d2cc5b62660cb377e849c2bfe63c6fb7d1e7ea9fe2b5af085563f636714",
+      "public_path": "review/INDEPENDENT_FINITE_CHECKS.json",
+      "public_sha256": "835a5d2cc5b62660cb377e849c2bfe63c6fb7d1e7ea9fe2b5af085563f636714",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/FINAL_SOURCE_IDENTITY.json",
+      "source_sha256": "e19595d385241c287244ff3b340eeff3e590df04887a598c06c259eebc36c486",
+      "public_path": "review/FINAL_SOURCE_IDENTITY.json",
+      "public_sha256": "e19595d385241c287244ff3b340eeff3e590df04887a598c06c259eebc36c486",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/DEPENDENCY_REHASH.json",
+      "source_sha256": "df9fe928e762837d201880aa88df525de51d65d31aefbb0c408a3c73868e7329",
+      "public_path": "review/DEPENDENCY_REHASH.json",
+      "public_sha256": "df9fe928e762837d201880aa88df525de51d65d31aefbb0c408a3c73868e7329",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/logs/independent-controls-attempt1.txt",
+      "source_sha256": "5bb359b06a7c16e16029e7a99b366552d5be0e0b79b43ed7baae8f48d1299ae9",
+      "public_path": "review/INDEPENDENT_CONTROL_READBACK.txt",
+      "public_sha256": "5bb359b06a7c16e16029e7a99b366552d5be0e0b79b43ed7baae8f48d1299ae9",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/logs/python-unit-tests.txt",
+      "source_sha256": "2f8b0e455811223fc8ff021fd287bc29b2aa65aabb5d9eaedc4e7c6d02b40b20",
+      "public_path": "review/PYTHON_TESTS.txt",
+      "public_sha256": "2f8b0e455811223fc8ff021fd287bc29b2aa65aabb5d9eaedc4e7c6d02b40b20",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/logs/final-evidence-verification-attempt2.txt",
+      "source_sha256": "f3c66c2fcc190a4496a15f6fe4f478828768475396592af0734fbea1c6923056",
+      "public_path": "history/REVIEWER_HARNESS_RECOVERY.txt",
+      "public_sha256": "f3c66c2fcc190a4496a15f6fe4f478828768475396592af0734fbea1c6923056",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/INDEPENDENT_REVIEW_RECEIPT.json",
+      "source_sha256": "4808bba1313ac879085f8983f06807adf4197ff687f18b3d1988a41f843e5d85",
+      "public_path": "review/INDEPENDENT_REVIEW_RECEIPT.json",
+      "public_sha256": "59516c7317d14d94c6ff496c34fbdc807f864002fba90ab8fff1cba2fe84b5c9",
+      "transformation": "Public-scope receipt projection; factual outcomes unchanged, reviewer wording made surface-neutral, full original evidence hashes retained"
+    },
+    {
+      "source_record": "review/EXACT_AXIOMS_AND_IMPORTS.json",
+      "source_sha256": "2ebe5deecf296773b90f5414af640f83fed62e61b77914f2c49438943e724566",
+      "public_path": "review/EXACT_AXIOMS_AND_IMPORTS.json",
+      "public_sha256": "9e73a00d4f5e5882ad83bacd696bb81563f43ffaacd7ddbe692226d2a3bd1140",
+      "transformation": "Absolute executor prefixes removed; exact object names, sizes, hashes and theorem axiom sets unchanged"
+    },
+    {
+      "source_record": "review/logs/author-initial-red-preserved.txt",
+      "source_sha256": "03ae701a35e53a81502e3aeb081a35520ce690bbac1a952ae3f8cb9fada737dd",
+      "public_path": "history/AUTHOR_INITIAL_RED.txt",
+      "public_sha256": "4011378666fc2c9dc8eb35059a43a0c8c463bc6a67792d4a0f52c07b05d97a45",
+      "transformation": "Preserved failing assertion with absolute executor prefix replaced by a neutral placeholder"
+    },
+    {
+      "source_record": "review/logs/final-evidence-verification-attempt1-failed.txt",
+      "source_sha256": "ce3f7e65369bdf35dbac3d2ca54bc3755d35f4d29dff143c6b5d154d567e8422",
+      "public_path": "history/REVIEWER_HARNESS_INITIAL_FAILURE.txt",
+      "public_sha256": "13515e1220b228efcd73f55bf45eb2920d72cbee272f68652c70d4b81786b03a",
+      "transformation": "Preserved reviewer-harness failure with absolute executor prefix replaced by a neutral placeholder"
+    },
+    {
+      "source_record": "review/logs/path-check-diagnosis.json",
+      "source_sha256": "1ad2516ca5004a02b1b8b4c6d188fd1a865041260ba15b5a92b1f236a3d2ea2e",
+      "public_path": "history/REVIEWER_PATH_CHECK_DIAGNOSIS.json",
+      "public_sha256": "1ad2516ca5004a02b1b8b4c6d188fd1a865041260ba15b5a92b1f236a3d2ea2e",
+      "transformation": "Exact reviewed bytes"
+    },
+    {
+      "source_record": "review/independent_finite_checks.py",
+      "source_sha256": "e9860862423f5934ee1d9a27d41886efe70bba2a65b15f6d690a05b650e8ccdf",
+      "public_path": "review/independent_finite_checks.py",
+      "public_sha256": "f281561d2b03429ef1e29213272ec3c874e8aed87a2a45f4d025604cdf146b46",
+      "transformation": "Import/output locations adapted for a portable package; mathematical checks unchanged"
+    }
+  ],
+  "v3_curation": {
+    "original_projection_map_sha256": "6bf6b36fa3389a4fbb5926a869074e1de4e677cf1f0b9d724d33400eb81fa1e5",
+    "original_sealed_package_manifest_sha256": "a4d0fdaa80cceb0de922789930499e581131a9716daf40649dd5f4d7df58c452",
+    "scope": "Only report source-locator capsule and dependent manifest bindings changed. All code, mathematical proof, execution outcomes and source attribution preserved. No replay or ZIP rebuilt."
+  }
+}

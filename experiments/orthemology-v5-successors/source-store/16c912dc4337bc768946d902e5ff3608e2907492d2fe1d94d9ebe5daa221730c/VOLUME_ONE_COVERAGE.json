@@ -1,0 +1,67 @@
+{
+  "verified_at": "2026-10-07T10:57:53.522143+00:00",
+  "selected_scope": "Complete received electronic body between scanned 2020-edition volume 1 endpoints; no complete print apparatus or historical-whole-book claim",
+  "source_intervals": [
+    {
+      "source": "electronic section 001",
+      "sha256": "6a220740545e5028116c6732c2bf681336228514304cf22b07935d63708b9668",
+      "range": [
+        16,
+        1569
+      ],
+      "covered_lines": 1554,
+      "missing_lines": [],
+      "whitespace_words": 56220
+    },
+    {
+      "source": "electronic section 002",
+      "sha256": "fb058f7f62ee879122699c37cd36dac9f8496f3976bc65e03bd74e63dde1cd85",
+      "range": [
+        16,
+        1009
+      ],
+      "covered_lines": 994,
+      "missing_lines": [],
+      "whitespace_words": 38732
+    }
+  ],
+  "total_lines": 2548,
+  "total_whitespace_words": 94952,
+  "body_sha256": "fcb0262183866afa24508b21e196bea5e65c03775dbc435a02f769cd64850b0e",
+  "first_pass_receipts": 42,
+  "all_intervals_continuously_covered": true,
+  "download_or_parse_reading_credit": false,
+  "historical_work_incomplete": true,
+  "reflection": "bounded phase complete; see reflection receipts and VOLUME_ONE_REFLECTION.md",
+  "truncation_repair": {
+    "truncated_attempt_excluded": true,
+    "source": "electronic section 002",
+    "attempted_range": [
+      921,
+      1009
+    ],
+    "reason": "The first displayed window was truncated and excluded; the three subsequent windows fully cover the attempted range.",
+    "credit_for_attempt": false,
+    "fully_reexposed_ranges": [
+      [
+        921,
+        955
+      ],
+      [
+        956,
+        983
+      ],
+      [
+        984,
+        1009
+      ]
+    ],
+    "repair_window_count": 3,
+    "repair_complete": true
+  },
+  "reflection_text_windows": 12,
+  "reflection_distinct_lines": 241,
+  "reflection_scan_body_pages": 21,
+  "image_receipt_hashes_verified": 28,
+  "publication_note": "Historical study metadata retained for scope and source identity. No additional source reading, visual collation or philosophical proof is claimed by this projection."
+}

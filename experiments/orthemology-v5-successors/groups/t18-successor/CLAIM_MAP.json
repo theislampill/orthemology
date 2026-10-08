@@ -1,0 +1,459 @@
+{
+  "results": [
+    {
+      "assumptions": [
+        "Two finite models; initial mode 0; at most one irreversible change",
+        "Common nonempty lawful menus",
+        "Observed state and action history; governing departure-pair priorities hidden",
+        "Adversary sees chosen action before deciding change; no seed/future-randomness access",
+        "Minimum-infinitely-often parity"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "A finite positive certificate, membership in the greatest uncertain region, lawful measurable private-seed winning and an effective deterministic public-history winner are equivalent for the exact one-change parity model; full descending traces supply complete negative evidence.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-REPORT:P00019-P00045",
+        "T18-COMPANION:P00011-P00157"
+      ],
+      "family": "t18-one-change-criterion",
+      "id": "T18-ONE-CHANGE-CRITERION",
+      "input_contract": "Two finite models; initial mode 0; at most one irreversible change; Common nonempty lawful menus; Observed state and action history; governing departure-pair priorities hidden; Adversary sees chosen action before deciding change; no seed/future-randomness access; Minimum-infinitely-often parity",
+      "limitations": [
+        "Does not extend automatically to repeated changes, altered timing/observations or arbitrary POMDPs.",
+        "No finite-memory, safe-prefix, deadline or finite expected-cost promise."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Two finite models; initial mode 0; at most one irreversible change; Common nonempty lawful menus; Observed state and action history; governing departure-pair priorities hidden; Adversary sees chosen action before deciding change; no seed/future-randomness access; Minimum-infinitely-often parity",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "Does not extend automatically to repeated changes, altered timing/observations or arbitrary POMDPs. No finite-memory, safe-prefix, deadline or finite expected-cost promise.",
+      "review_ids": [
+        "T18-ONE-CHANGE-CRITERION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-one-change-criterion",
+      "title": "Complete finite criterion for one hidden irreversible change",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Exact valid rational two-mode input and initial state",
+        "Declared probability law, timing, menus and measurability",
+        "Accepted literal Lean body for compiler conclusion"
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The reviewed rational-input Lean endpoint binds finite certificate existence and complete negative exclusion to actual all-adversary lawfulness and almost-sure parity. The literal compiler applied to each supplied accepted body has measurability, all-history lawfulness and actual-law success.",
+      "domain": "SUPPLIED_CERTIFICATE",
+      "evidence_keys": [
+        "T18-REPORT:P00079-P00083",
+        "T18-EVIDENCE:code-evidence/lean/hidden-change/sources/HiddenChangeSemanticEndpoint.lean",
+        "T18-EVIDENCE:code-evidence/COMPONENT_STATUS.json"
+      ],
+      "family": "t18-rational-lean-endpoint",
+      "id": "T18-RATIONAL-LEAN-ENDPOINT",
+      "input_contract": "Exact valid rational two-mode input and initial state; Declared probability law, timing, menus and measurability; Accepted literal Lean body for compiler conclusion",
+      "limitations": [
+        "Necessity covers arbitrary probability-normalised measurable private seeds, not only compiler policies.",
+        "Does not establish executable positive-body selection, external byte parsing, Python/Lean accepted-language equality or machine-code correctness.",
+        "Ordinary complexity and arbitrary-real consequences are not mechanised by this endpoint."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [],
+      "operational_model": "Exact valid rational two-mode input and initial state; Declared probability law, timing, menus and measurability; Accepted literal Lean body for compiler conclusion",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        8,
+        10
+      ],
+      "residual_scope": "Necessity covers arbitrary probability-normalised measurable private seeds, not only compiler policies. Does not establish executable positive-body selection, external byte parsing, Python/Lean accepted-language equality or machine-code correctness. Ordinary complexity and arbitrary-real consequences are not mechanised by this endpoint.",
+      "review_ids": [
+        "T18-RATIONAL-LEAN-ENDPOINT-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-SRC-f2712855135f589e7d7c",
+        "T18-SRC-32280fe4c1b8f3ad95ad",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-rational-lean-endpoint",
+      "title": "Kernel checked rational one-change semantic endpoint",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Explicit rational fractions, finite menus and priorities",
+        "Malformed inputs rejected by stated validation",
+        "Threshold before maximal-component decomposition"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Exact explicit rational-input winner existence has a polynomial-time construction and is P-complete under deterministic logspace many-one reductions; the lower bound already uses identical kernels, common 0/1 state priorities, two lawful actions and probabilities 0,1/2,1.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00158-P00200",
+        "T18-REPORT:P00053-P00060"
+      ],
+      "family": "t18-rational-p-complete",
+      "id": "T18-RATIONAL-P-COMPLETE",
+      "input_contract": "Explicit rational fractions, finite menus and priorities; Malformed inputs rejected by stated validation; Threshold before maximal-component decomposition",
+      "limitations": [
+        "Ordinary proof, not a kernel complexity theorem.",
+        "No optimal polynomial degree, runtime lower bound or online learning bound."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Explicit rational fractions, finite menus and priorities; Malformed inputs rejected by stated validation; Threshold before maximal-component decomposition",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "Ordinary proof, not a kernel complexity theorem. No optimal polynomial degree, runtime lower bound or online learning bound.",
+      "review_ids": [
+        "T18-RATIONAL-P-COMPLETE-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-rational-p-complete",
+      "title": "Explicit rational one-change decision is P-complete",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Exact real stochastic model exists",
+        "Positive finite certificate",
+        "Nonuniform finite support/equality/calibration advice"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Each positive individual arbitrary-real instance has a deterministic effective finite-history winner using finite exact structural masks and rational calibration advice.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00201-P00209"
+      ],
+      "family": "t18-real-nonuniform",
+      "id": "T18-REAL-NONUNIFORM",
+      "input_contract": "Exact real stochastic model exists; Positive finite certificate; Nonuniform finite support/equality/calibration advice",
+      "limitations": [
+        "No uniform recovery of masks or advice from arbitrary real names; counters can grow unboundedly."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Exact real stochastic model exists; Positive finite certificate; Nonuniform finite support/equality/calibration advice",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "No uniform recovery of masks or advice from arbitrary real names; counters can grow unboundedly.",
+      "review_ids": [
+        "T18-REAL-NONUNIFORM-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-real-nonuniform",
+      "title": "Real-kernel positive instances have nonuniform effective winners",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Cauchy-name rather than exact-fraction input",
+        "Bernoulli hidden-priority construction encoding halting"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "No total exact winner-existence decision exists from arbitrary computable fast-Cauchy row names, even under rational-valued full-support rows.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00210-P00214"
+      ],
+      "family": "t18-cauchy-decision-obstruction",
+      "id": "T18-CAUCHY-DECISION-OBSTRUCTION",
+      "input_contract": "Cauchy-name rather than exact-fraction input; Bernoulli hidden-priority construction encoding halting",
+      "limitations": [
+        "Representation obstruction; not caused by irrationality and not a contradiction of explicit-rational polynomial decision."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Cauchy-name rather than exact-fraction input; Bernoulli hidden-priority construction encoding halting",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        10
+      ],
+      "residual_scope": "Representation obstruction; not caused by irrationality and not a contradiction of explicit-rational polynomial decision.",
+      "review_ids": [
+        "T18-CAUCHY-DECISION-OBSTRUCTION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-cauchy-decision-obstruction",
+      "title": "Exact signed decision from Cauchy names is impossible",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Two-mode one-change contract",
+        "d0=d1",
+        "Trusted exact nonempty support sets and lawful menus"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Trusted exact support maps and common priorities determine a signed outcome; on positive inputs one deterministic effective policy fixed before numerical realisation wins for every compatible kernel and legal adversary.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00215-P00231"
+      ],
+      "family": "t18-common-priority-support-synthesis",
+      "id": "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS",
+      "input_contract": "Two-mode one-change contract; d0=d1; Trusted exact nonempty support sets and lawful menus",
+      "limitations": [
+        "No numerical probabilities, equality mask or positive lower bound is a runtime input.",
+        "Proof obtains candidate-support inclusion on recurrent pairs, not full row equality.",
+        "No exact zero recovery from finite observations or Cauchy names."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "Two-mode one-change contract; d0=d1; Trusted exact nonempty support sets and lawful menus",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "No numerical probabilities, equality mask or positive lower bound is a runtime input. Proof obtains candidate-support inclusion on recurrent pairs, not full row equality. No exact zero recovery from finite observations or Cauchy names.",
+      "review_ids": [
+        "T18-COMMON-PRIORITY-SUPPORT-SYNTHESIS-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-common-priority-support-synthesis",
+      "title": "Uniform support-only synthesis with a common priority map",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "General mode-owned priorities",
+        "Same skeleton with swapped 1/3 and 2/3 biases"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Two positive instances can share supports, equality masks, menus and hidden mode-owned priorities yet admit no single common measurable private-seed winner; opposite Bernoulli calibrations require disjoint eventual actions under the same observation law.",
+      "domain": "FINITE_MODEL",
+      "evidence_keys": [
+        "T18-COMPANION:P00232-P00236"
+      ],
+      "family": "t18-hidden-priority-calibration",
+      "id": "T18-HIDDEN-PRIORITY-CALIBRATION",
+      "input_contract": "General mode-owned priorities; Same skeleton with swapped 1/3 and 2/3 biases",
+      "limitations": [
+        "Masks can decide per-instance existence without determining one winning calibration for every realisation.",
+        "Even a shared positive lower bound does not remove this obstruction."
+      ],
+      "math_form": "ORDINARY",
+      "obligation_ids": [],
+      "operational_model": "General mode-owned priorities; Same skeleton with swapped 1/3 and 2/3 biases",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        4,
+        10
+      ],
+      "residual_scope": "Masks can decide per-instance existence without determining one winning calibration for every realisation. Even a shared positive lower bound does not remove this obstruction.",
+      "review_ids": [
+        "T18-HIDDEN-PRIORITY-CALIBRATION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-COMPANION-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-hidden-priority-calibration",
+      "title": "Support and equality masks need not select a common winner",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Unchanged HasE, conversion and application rules",
+        "U is the polymorphic type of an element of every type"
+      ],
+      "calculus": "P01AC.ExtensionalRepair.HasE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "Using the actual polymorphic elimination rule under a U variable, HasE derives the identity of K I and K K at U→Raw without a closed inhabitant of U; ordinary erased beta-eta distinction defeats the proposed arbitrary-type invariant.",
+      "domain": "BARE_INPUT",
+      "evidence_keys": [
+        "T18-REPORT:P00084-P00087",
+        "T18-EVIDENCE:code-evidence/VERIFICATION_SUMMARY.md"
+      ],
+      "family": "t18-hase-u-domain-control",
+      "id": "T18-HASE-U-DOMAIN-CONTROL",
+      "input_contract": "Unchanged HasE, conversion and application rules; U is the polymorphic type of an element of every type",
+      "limitations": [
+        "Identity is at U→Raw, not Raw. Proof erasure does not coerce endpoint equality to Raw.",
+        "No literal unary-compiler x/x+0 resolution."
+      ],
+      "math_form": "MIXED",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "operational_model": "Unchanged HasE, conversion and application rules; U is the polymorphic type of an element of every type",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        9
+      ],
+      "residual_scope": "Identity is at U→Raw, not Raw. Proof erasure does not coerce endpoint equality to Raw. No literal unary-compiler x/x+0 resolution.",
+      "review_ids": [
+        "T18-HASE-U-DOMAIN-CONTROL-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-SRC-718d531f4b0325c8a8c8",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-hase-u-domain-control",
+      "title": "HasE U-domain control defeats global erased-equality invariant",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Actual dependent J and inherited source equations",
+        "Exact separately identified transported endpoints"
+      ],
+      "calculus": "P01AC.ExtensionalRepair.HasE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The unchanged dependent J transports the checked identity into closed Church-natural function endpoints with ordinary current typings and inhabited common type; kernel-checked HasE identity plus separate beta-eta analysis defeats final-type-only erased-equality repairs.",
+      "domain": "BARE_INPUT",
+      "evidence_keys": [
+        "T18-REPORT:P00088-P00092",
+        "T18-EVIDENCE:code-evidence/lean/hase/sources/InhabitedEndpointControl.lean"
+      ],
+      "family": "t18-hase-inhabited-j-control",
+      "id": "T18-HASE-INHABITED-J-CONTROL",
+      "input_contract": "Actual dependent J and inherited source equations; Exact separately identified transported endpoints",
+      "limitations": [
+        "Endpoints are not asserted to lie in the literal unary compiler image.",
+        "Beta-eta distinction is ordinary analysis and diagnostic, not a Lean theorem.",
+        "Literal x/x+0 HasE identity, compiler-specific conservativity and all-rule separator remain unresolved."
+      ],
+      "math_form": "MIXED",
+      "obligation_ids": [
+        "U11-IDENTITY-SCOPED"
+      ],
+      "operational_model": "Actual dependent J and inherited source equations; Exact separately identified transported endpoints",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        9
+      ],
+      "residual_scope": "Endpoints are not asserted to lie in the literal unary compiler image. Beta-eta distinction is ordinary analysis and diagnostic, not a Lean theorem. Literal x/x+0 HasE identity, compiler-specific conservativity and all-rule separator remain unresolved.",
+      "review_ids": [
+        "T18-HASE-INHABITED-J-CONTROL-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-SRC-bcb245a6581fd9ff7c12",
+        "T18-REPORT-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-hase-inhabited-j-control",
+      "title": "Dependent J control defeats final-type-only repair",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Unchanged delivered Python implementations and exact source bindings",
+        "20183 reference models; 20686 efficient models overlap",
+        "Revision-2 supplement: 30 positive, 2 negative outcomes"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The reported exact reference and polynomial implementation agree with independent oracles on their declared overlapping populations; the revision-2 stress control additionally checks 32 complete inputs from eight four-state templates with four starts each.",
+      "domain": "REFERENCE_EXECUTION",
+      "evidence_keys": [
+        "T18-REPORT:P00075-P00083",
+        "T18-VERIFICATION:qualification",
+        "T18-EVIDENCE:README.md"
+      ],
+      "family": "t18-implementation-qualification",
+      "id": "T18-IMPLEMENTATION-QUALIFICATION",
+      "input_contract": "Unchanged delivered Python implementations and exact source bindings; 20183 reference models; 20686 efficient models overlap; Revision-2 supplement: 30 positive, 2 negative outcomes",
+      "limitations": [
+        "Finite implementation tests do not prove the theorem or Python/Lean correspondence.",
+        "32 starts are not 32 graph structures or an exhaustive four-state census.",
+        "Independent base replay is a qualified recovered composite, not an uninterrupted full-runner execution."
+      ],
+      "math_form": "IMPLEMENTATION",
+      "obligation_ids": [],
+      "operational_model": "Unchanged delivered Python implementations and exact source bindings; 20183 reference models; 20686 efficient models overlap; Revision-2 supplement: 30 positive, 2 negative outcomes",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        8
+      ],
+      "residual_scope": "Finite implementation tests do not prove the theorem or Python/Lean correspondence. 32 starts are not 32 graph structures or an exhaustive four-state census. Independent base replay is a qualified recovered composite, not an uninterrupted full-runner execution.",
+      "review_ids": [
+        "T18-IMPLEMENTATION-QUALIFICATION-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-SRC-e85fd90497fdb62368ff",
+        "T18-REPORT-DERIVED-MARKDOWN",
+        "T18-VERIFICATION"
+      ],
+      "suite_ids": [],
+      "target": "t18-implementation-qualification",
+      "title": "Bounded exact and polynomial implementation evidence",
+      "tranche": 18
+    },
+    {
+      "assumptions": [
+        "Target is an unrestricted extension beyond defended productive/bearer framework"
+      ],
+      "calculus": "NONE",
+      "claim_scope": "WHOLE_RESULT",
+      "conclusion": "The targeted extension failed to establish that every objective existential fact is a representation or obtains through a supporting bearer of the required productive kind. Restricted support transport and T17’s productive-framework affirmative baseline remain.",
+      "domain": "SOURCE_TEXT",
+      "evidence_keys": [
+        "T18-REPORT:P00011-P00018",
+        "T18-SOURCE-GUIDE:P00022-P00025"
+      ],
+      "family": "t18-noncausal-extension-stop",
+      "id": "T18-NONCAUSAL-EXTENSION-STOP",
+      "input_contract": "Target is an unrestricted extension beyond defended productive/bearer framework",
+      "limitations": [
+        "Not a retraction of T17 Necessary Being or essential independence; not proof of a possible autonomous rival ontology."
+      ],
+      "math_form": "SOURCE_ASSESSMENT",
+      "obligation_ids": [],
+      "operational_model": "Target is an unrestricted extension beyond defended productive/bearer framework",
+      "origin_status": "T18 final supplied research; affirmative conclusions, historical review and continuing dissent are inherited at their stated scope. Integration registers source identity and scope, with no new scientific execution or adoption.",
+      "original_avenues": [
+        1
+      ],
+      "residual_scope": "Not a retraction of T17 Necessary Being or essential independence; not proof of a possible autonomous rival ontology.",
+      "review_ids": [
+        "T18-NONCAUSAL-EXTENSION-STOP-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T18-REPORT-DERIVED-MARKDOWN",
+        "T18-SOURCE-GUIDE-DERIVED-MARKDOWN"
+      ],
+      "suite_ids": [],
+      "target": "t18-noncausal-extension-stop",
+      "title": "Universal noncausal fact-to-bearer bridge remains unearned",
+      "tranche": 18
+    }
+  ]
+}

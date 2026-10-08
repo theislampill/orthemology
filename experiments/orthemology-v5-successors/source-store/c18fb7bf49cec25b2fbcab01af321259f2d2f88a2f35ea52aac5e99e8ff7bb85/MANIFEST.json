@@ -1,0 +1,212 @@
+{
+  "schema": "seventeenth-publication-directory-manifest-v2",
+  "status": "EXACT_DIRECTORY_INVENTORY_NOT_ARCHIVE_OR_DELIVERY_VERIFICATION",
+  "member_count": 32,
+  "allowlist": [
+    "ADAPTATION_LOG.json",
+    "FINITE_MATH_SCOPE.md",
+    "MANIFEST.json",
+    "PACKAGING_TEST_REPORT.json",
+    "PRIVACY_SCAN_REPORT.json",
+    "README.md",
+    "RELATED_ARTIFACTS.json",
+    "aggregates/frozen_aggregate_certificate.json",
+    "aggregates/independent_aggregate_certificate.json",
+    "aggregates/post_inspection_tail_certificate.json",
+    "calculation/certified_exp.py",
+    "calculation/independent_oracles.py",
+    "calculation/placement_core.py",
+    "calculation/test_calculation_independently.py",
+    "calculation/test_independent_oracles.py",
+    "calculation/test_synthetic.py",
+    "checks/test_aggregate_certificates.py",
+    "checks/test_arabic_source_scope.py",
+    "checks/test_minhaj_electronic_scope.py",
+    "checks/test_source_coverage.py",
+    "checks/test_utf8_metadata_portability.py",
+    "companion/Mathematical_Companion_Content_v2.md",
+    "run_checks.py",
+    "sources/additional_arabic_source_scope.json",
+    "sources/minhaj_electronic_read_scope.json",
+    "sources/six_source_coverage.json",
+    "synthetic/check_orbits.py",
+    "tail/independent_tail_predicates_v1.py",
+    "tail/tail_predicates.py",
+    "tail/test_independent_tail_predicates_v1.py",
+    "tail/test_tail_predicates.py",
+    "verify_manifest.py"
+  ],
+  "preserved_predecessor_manifest_sha256": "c9e26fd89aeda864267298e3fa4f02aad0994fe09b9db52ccc6e5ccd99dd8ba7",
+  "hash_method": "SHA-256 of exact UTF-8 bytes; manifest identity must be supplied externally because self-referential hashing is omitted.",
+  "files": [
+    {
+      "path": "ADAPTATION_LOG.json",
+      "bytes": 13650,
+      "sha256": "2e41ab52bffa7d67a7386c797e304da0107f05505fe97ca90ae8eb112eb75fbb"
+    },
+    {
+      "path": "FINITE_MATH_SCOPE.md",
+      "bytes": 8108,
+      "sha256": "b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71"
+    },
+    {
+      "path": "PACKAGING_TEST_REPORT.json",
+      "bytes": 33386,
+      "sha256": "d119ce5f697134cf6c6e6916e9e6dbc31047c44be6207602ba303e71dc975972"
+    },
+    {
+      "path": "PRIVACY_SCAN_REPORT.json",
+      "bytes": 7313,
+      "sha256": "7704c9e6f14261c16d151f0ccebbd110e27617761d7016ba6611897f2576b44c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7195,
+      "sha256": "b9ce5857e885ee933344e7c7df6abe3e7ae68612b69d6f0355ceeb851c6d8b2f"
+    },
+    {
+      "path": "RELATED_ARTIFACTS.json",
+      "bytes": 2697,
+      "sha256": "7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e"
+    },
+    {
+      "path": "aggregates/frozen_aggregate_certificate.json",
+      "bytes": 13401,
+      "sha256": "852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9"
+    },
+    {
+      "path": "aggregates/independent_aggregate_certificate.json",
+      "bytes": 11561,
+      "sha256": "561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe"
+    },
+    {
+      "path": "aggregates/post_inspection_tail_certificate.json",
+      "bytes": 2502,
+      "sha256": "1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb"
+    },
+    {
+      "path": "calculation/certified_exp.py",
+      "bytes": 4008,
+      "sha256": "9438baad17a4dac4d100b30ec53397edf9fcd6fbc3b3f0cab21f7af15ebbec89"
+    },
+    {
+      "path": "calculation/independent_oracles.py",
+      "bytes": 6310,
+      "sha256": "a670dbeb98c21531ce7eaac682c8c402e04289547e09bbe1d5935c6f136ab8ec"
+    },
+    {
+      "path": "calculation/placement_core.py",
+      "bytes": 18629,
+      "sha256": "9d39013072bae4cc53f4e681ed1a726209f1477e08bcd2cc9e4231dca9019cf3"
+    },
+    {
+      "path": "calculation/test_calculation_independently.py",
+      "bytes": 13717,
+      "sha256": "bc7d599ef3534dcfe1161490bba0f745f31c43f4d937949e839b82f319038340"
+    },
+    {
+      "path": "calculation/test_independent_oracles.py",
+      "bytes": 5106,
+      "sha256": "93cc86495667a00e1585c1096f43e1e7c1089210374113ecfe06635ecdfc7d8e"
+    },
+    {
+      "path": "calculation/test_synthetic.py",
+      "bytes": 20573,
+      "sha256": "e4c7026aa7ac2542474bd9add0b2e9b182c862fb5437913744bcf02446d97d14"
+    },
+    {
+      "path": "checks/test_aggregate_certificates.py",
+      "bytes": 6135,
+      "sha256": "490476690f4b92fc8bd032278f7c80e72ae631d4bd9b9e72686b8c1b25c41795"
+    },
+    {
+      "path": "checks/test_arabic_source_scope.py",
+      "bytes": 3183,
+      "sha256": "0e9811a6200542c22bad0cb2d794395b027e6605bb4e45d00f3526a549b3116a"
+    },
+    {
+      "path": "checks/test_minhaj_electronic_scope.py",
+      "bytes": 4972,
+      "sha256": "2681111681f26283f4d7c89bf69adb3aa2aa32c9f7d07a9dc47d65d16705e5a6"
+    },
+    {
+      "path": "checks/test_source_coverage.py",
+      "bytes": 2433,
+      "sha256": "38e036152ab2b425b0f9b1b19e7dd62b546f0e073b2e6b33fdcf443ca006f304"
+    },
+    {
+      "path": "checks/test_utf8_metadata_portability.py",
+      "bytes": 1645,
+      "sha256": "a2f23c093d2ea81dbe0caf04d4e5e532f81560199428a29c77828a81295498d6"
+    },
+    {
+      "path": "companion/Mathematical_Companion_Content_v2.md",
+      "bytes": 50164,
+      "sha256": "4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401"
+    },
+    {
+      "path": "run_checks.py",
+      "bytes": 920,
+      "sha256": "b5e3056961b21e265e710ffca8d8b1293362695c39d292509cb3c6c3bf54f1fe"
+    },
+    {
+      "path": "sources/additional_arabic_source_scope.json",
+      "bytes": 6273,
+      "sha256": "1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944"
+    },
+    {
+      "path": "sources/minhaj_electronic_read_scope.json",
+      "bytes": 8648,
+      "sha256": "2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e"
+    },
+    {
+      "path": "sources/six_source_coverage.json",
+      "bytes": 25752,
+      "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b"
+    },
+    {
+      "path": "synthetic/check_orbits.py",
+      "bytes": 2111,
+      "sha256": "ea4caf6f63af17b7a7fbfc9e878eca0686cd04eda14fc9172d67a313e760ed45"
+    },
+    {
+      "path": "tail/independent_tail_predicates_v1.py",
+      "bytes": 2571,
+      "sha256": "8134bcf2ed063e51c8bea1914763058a80d6cc2d7e5900e675ac1cc095d47623"
+    },
+    {
+      "path": "tail/tail_predicates.py",
+      "bytes": 2942,
+      "sha256": "833129934a3a3cd4ada0039c44b7fc9f90baf8dfbad286a062d22e09508c489d"
+    },
+    {
+      "path": "tail/test_independent_tail_predicates_v1.py",
+      "bytes": 3112,
+      "sha256": "579cca75f2aa90a71941297644310890fb77b05b0a7fae4c36d4332cf267790f"
+    },
+    {
+      "path": "tail/test_tail_predicates.py",
+      "bytes": 4271,
+      "sha256": "fd3f06353dd3b4951f0199cfb142e4c15f6b426f7138639a21f33994b6e38d09"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 3720,
+      "sha256": "d602041e54d00a5bddb636a2d8b4a34ae60586981bad061321c58a378ab77a73"
+    }
+  ],
+  "self_entry": {
+    "path": "MANIFEST.json",
+    "sha256": null,
+    "reason": "Verify against the independently supplied manifest digest."
+  },
+  "related_documents_record": "RELATED_ARTIFACTS.json",
+  "verification_commands": {
+    "arithmetic_and_metadata": "python -B run_checks.py",
+    "separate_directory_integrity": "python -B verify_manifest.py --expected-manifest-sha256 TRUSTED_MANIFEST_SHA256"
+  },
+  "raw_dataset_replay_available": false,
+  "new_empirical_research": false,
+  "canonical_programme_change": false,
+  "new_lean_or_kernel_proof": false
+}

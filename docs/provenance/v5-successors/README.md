@@ -1,8 +1,8 @@
-# Seventh–Sixteenth source and evidence index
+# Seventh–Twentieth source and evidence index
 
-Current addition: [Sixteenth source and evidence guide](../../../experiments/orthemology-v5-successors/groups/t16-successor/README.md). Earlier tranche records retain their original cutoff and status.
+Current addition: [Twentieth research and final reader guide](../../../experiments/orthemology-v5-successors/groups/t20-successor/README.md), with separately preserved [Seventeenth](../../../experiments/orthemology-v5-successors/groups/t17-successor/README.md), [Eighteenth](../../../experiments/orthemology-v5-successors/groups/t18-successor/README.md) and [Nineteenth](../../../experiments/orthemology-v5-successors/groups/t19-successor/README.md) sources. Earlier tranche records retain their original cutoff and status.
 
-These records describe the research sources through the final Sixteenth return
+These records describe the research sources through the final Twentieth return
 within Orthemology v5. The [scientific source guide](../../../experiments/orthemology-v5-successors/README.md)
 leads to the actual papers, definitions, implementations and exact reviews.
 The [architecture](../../architecture/V5-RESEARCH-SUCCESSORS-07-15.md) explains
@@ -72,4 +72,14 @@ warrant or adopting a candidate identity judgement. The exact PR head, tree,
 local workflow receipts and actual GitHub CI state are returned in the PR review
 handoff. The tracked registry contains no self-referential final-HEAD digest.
 
-The current index includes the [Sixteenth successor](../../../experiments/orthemology-v5-successors/groups/t16-successor/README.md), with 216 results, 2,648 source identities, 37 existing replay descriptors and 44 retained execution receipts. All 21 Sixteenth results retain `NOT_RUN` fresh-science fields; supplied scientific assurance is inherited. No new independence is inferred from overlapping modules or archives. The T07–T15 receipts remain historically true. One combined PR is left unmerged for ChatGPT review (R00); merge (R01), auto-merge and Seventeenth integration are not authorized.
+The current index contains 262 results and 3,828 source identities, with 37 existing suite descriptors and 44 retained native execution receipts. The final scientific component baseline was 261 results / 3,539 sources; the sealed reading/report addition contributes 212 public text sources and one integration-only scope record, with no new result rows or scientific credit. The three exact DOCX deliverables remain owner-archive-only.
+
+All 21 Sixteenth results and the later receiving integrations retain NOT_RUN fresh-science fields. Original scoped research checks remain source-bound evidence; the T07–T15 native receipts stay historically true. The two approved T16 wording changes retain complete prior rows in T20_FIDELITY_CORRECTIONS.json. The separately dated current assessment and its previous registry bindings are distinguished in T20_ASSESSMENT_HISTORY.json.
+
+The final reader index maps the declared owner-archive layout to exact public source IDs and hashes. Relative links inside those immutable source payloads are archive-context references; they are not necessarily clickable in GitHub's content-addressed view. Use the group guide and its native index links, or open the reconstructed owner archive at the stated aliases. A verified correspondence is not a native-URL usability claim.
+
+Local patch preparation does not authorize a push, PR or merge. Exact-tree gate/review/roundtrip records are supplied separately by the owner handoff. The mandatory Docker/Poppler clean PDF rebuild remains blocked in this local environment; unchanged-artifact carry checks do not replace it. Owner-controlled review/adoption and all external warrants remain separate.
+
+The final separately sealed methodological/control/document successor adds 53 public texts and one integration-only scope record. Exactly one new source-bound result, T20-EMERGENCE-TYPE-CONTROL, describes a chosen unbounded indexed interpretation; all 261 prior result/status records are preserved. Retrospective reading/methodology and packaging receive no new result or native scientific-execution credit. Current document roles and historical predecessors are linked from the Twentieth guide.
+
+The separately dated source-context successor adds 21 selected public records and one receiving-scope record, for 262 results / 3,828 sources. The existing foundational-synthesis and emergence-control owners bind the new reconstruction and application limits, with exact prior statements retained. All statuses, old sources, proof conclusions, 37 suites and 44 receipts remain unchanged. The Twentieth guide links the current reassessment and the preserved report/guide history.

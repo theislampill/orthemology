@@ -1,0 +1,92 @@
+{
+  "created_utc": "2026-10-07T18:20:00Z",
+  "sources": [
+    {
+      "id": "DAR9-IB",
+      "title": "Darʾ taʿāruḍ al-ʿaql wa-l-naql",
+      "author": "Ibn Taymiyya",
+      "object": "received Islamicbook electronic section 016",
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "source_sha256": "04cc1092235e0d92312ed5146f1f89c1bea866546a6c567318a77be9cf1b0963",
+      "edition_anchor": "Muhammad Rashad Salim, Imam Muhammad ibn Saud Islamic University, second edition 1411/1991; Shamela21506",
+      "qualification": "Electronic authorial text with matched page anchors; no newly acquired print scan and no apparatus certification."
+    },
+    {
+      "id": "SF-IB",
+      "title": "al-Safadiyya",
+      "author": "Ibn Taymiyya",
+      "object": "previously acquired Islamicbook electronic sections001–003",
+      "urls": [
+        "https://www.islamicbook.ws/amma/alsfdit-001.html",
+        "https://www.islamicbook.ws/amma/alsfdit-002.html",
+        "https://www.islamicbook.ws/amma/alsfdit-003.html"
+      ],
+      "qualification": "SF-Sxxx-Lxxxx are electronic line identifiers, never printed page or manuscript line labels."
+    },
+    {
+      "id": "SF-ADWA",
+      "title": "al-Risala al-Safadiyya",
+      "author": "Ibn Taymiyya",
+      "editors": [
+        "Abu Abd Allah Sayyid ibn Abbas al-Julaymi",
+        "Abu Muadh Ayman ibn Arif al-Dimashqi"
+      ],
+      "publisher": "Adwa al-Salaf / Dar Ibn Hazm",
+      "edition": "first,1423/2002",
+      "pdf_positions": 625,
+      "sha256": "97d79af373636137d0845f68702b5a9aa11935046e6451b6d1b0df8d89cd1a51",
+      "qualification": "Distinct publication. Its printed pages cannot be cited as Salim volume:page."
+    },
+    {
+      "id": "SF-SALIM-E",
+      "title": "al-Safadiyya",
+      "editor": "Muhammad Rashad Salim",
+      "publisher": "Maktabat Ibn Taymiyya, Egypt",
+      "edition": "second,1406;two parts in one binding",
+      "url": "https://shamela.ws/book/22874",
+      "qualification": "Metadata-confirmed Salim electronic edition. Exact1:92–93,2:142–149 and section boundary footers directly read on IslamHouse HTML text;2:146 additionally checked on Shamela. No Salim scan inspection.",
+      "urls": [
+        "https://shamela.ws/book/22874",
+        "https://islamhouse.com/read/ar/الصفدية-272837"
+      ]
+    },
+    {
+      "id": "SF-WIKI",
+      "title": "al-Safadiyya /11 and /12",
+      "author": "Ibn Taymiyya",
+      "urls": [
+        "https://ar.wikisource.org/wiki/الصفدية/11",
+        "https://ar.wikisource.org/wiki/الصفدية/12"
+      ],
+      "qualification": "Website section numbers, not printed chapters. Newly retrieved and continuously read Arabic representation of previously acquired/read text; not a new historical witness."
+    },
+    {
+      "id": "MF-SHAMELA",
+      "title": "Majmuʿ al-Fatawa",
+      "author": "Ibn Taymiyya",
+      "compiler": "Abd al-Rahman ibn Muhammad ibn Qasim, assisted by Muhammad",
+      "publication_claim": "King Fahd Quran Printing Complex, Medina,1425/2004",
+      "url": "https://shamela.ws/book/7289",
+      "qualification": "Electronic witness adds headings from Dar al-Wafa3rd1426/2005 and corrections from al-Fahd1423/2003 and other sources. Not a diplomatic print transcript."
+    },
+    {
+      "id": "MF-ISLAMWEB",
+      "title": "Majmuʿ Fatawa Ibn Taymiyya",
+      "url": "https://islamweb.net/ar/library/content/22/2032/فصل-العلتين-لا-تكونان-مستقلتين-بحكم-واحد-حال-الاجتماع",
+      "qualification": "Page-labelled electronic primary text;175–177 matched against Shamela,178–183 from continuous Islamweb display. Its exact printing has not been independently certified."
+    }
+  ],
+  "held_sources_respected": true,
+  "new_hold": {
+    "url": "https://ketabonline.com/ar/books/2940/read?part=1&page=93",
+    "route": "urllib",
+    "outcome": "HTTP403;stopped,no retry or bypass"
+  },
+  "non_substitute_acquisition": {
+    "url": "https://www.islamicbook.ws/amma/alsfdit-.pdf",
+    "sha256": "fd43eae006d4034779fd2496d76347fc2955365a5ba114d5c3cbeea4fdc8437b",
+    "status": "HTTP200;233-position electronic reflow;metadata/first-text probe only;no whole-reading credit",
+    "not_a_Salim_print_scan": true
+  },
+  "access_distinction": "Earlier denied IslamHouse book-listing/raw-PDF objects and FPSfdia scans were not reacquired. The separately served public /read/ar/ HTML text successfully displayed in the web tool. Shamela cache/accessibility tool errors are not recorded as HTTP403. The new Ketab raw HTTP403 remains held."
+}

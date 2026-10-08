@@ -1,0 +1,70 @@
+{
+  "schema": "t20-method-result-validation-v1",
+  "status": "PASS_LOCAL_SOURCE_AND_REFERENCE_CHECKS",
+  "utc": "2026-10-07T16:07:22.491132+00:00",
+  "result_owners": 15,
+  "exact_owner_set_matches_claim_map": true,
+  "current_canonical_rows_used": true,
+  "historical_row_differences_preserved": [
+    "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
+  ],
+  "bound_cited_source_aliases": 95,
+  "all_bound_bytes_hashes_and_sizes_match": true,
+  "all_410_selected_scientific_public_source_bytes_verified": true,
+  "all_215_reading_report_owner_file_bytes_verified": true,
+  "existing_owner_relative_aliases_resolve_and_match": 95,
+  "owner_alias_check_scope": "Existing prepared owner tree; not publication or new archive verification",
+  "exact_key_declaration_signatures_found": 70,
+  "foundation_counts_verified": {
+    "conclusions": 24,
+    "premises": 34,
+    "declarations": 103,
+    "controls": 39,
+    "owner_questions": 10
+  },
+  "all_native_fresh_evidence_NOT_RUN": true,
+  "all_native_independent_evidence_zero": true,
+  "math_material_ids_resolve": true,
+  "drive_relationship_ids_resolve": true,
+  "arabic_join_complete": true,
+  "arabic_topic_ids_resolve": true,
+  "arabic_case_ids_resolve": true,
+  "arabic_chronology_classes_preserved": true,
+  "scope": "Metadata, source identity and reference validation only. No scientific execution, independent science evidence, fresh primary reading or repository mutation.",
+  "historical_author_outputs": [
+    {
+      "path": "RESULT_EVIDENCE_LEDGER.json",
+      "sha256": "8ec800ab6f2e117e1f2f1b941d885f9163d258c3e1a44b145283c403c433da99",
+      "bytes": 203529
+    },
+    {
+      "path": "METHOD_INTEGRATION_HANDOFF.md",
+      "sha256": "d2bf1a9cbfb1e78b79e4ef630fb9c44ba6fb36067557658a6a432e63245fb7c2",
+      "bytes": 29623
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "0a98fc20d341f78b042fbfee4e94281b83fa4a719f1ebb1169f66e68bdb0fa97",
+      "bytes": 71263
+    }
+  ],
+  "public_outputs": [
+    {
+      "path": "METHOD_INTEGRATION_HANDOFF.md",
+      "bytes": 29623,
+      "sha256": "d2bf1a9cbfb1e78b79e4ef630fb9c44ba6fb36067557658a6a432e63245fb7c2"
+    },
+    {
+      "path": "RESULT_EVIDENCE_LEDGER.json",
+      "bytes": 203537,
+      "sha256": "87d09884accfd207240e10d520289cc99947c6a59d1b8ce3adb3b1a8fa880671"
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "bytes": 75464,
+      "sha256": "79ad56d83c7585468eebf02286ef86471576e8d16898b96376545b03ac912475"
+    }
+  ],
+  "original_validation_sha256": "450baa4100906709f0a9a955e8abde60f59c441b2f82d0f18e7fe9c7de4c9a3d",
+  "validation_attribution": "Original source/signature/reference validation, preserved as a scoped historical receipt. Curation checks exact identities and projection correspondence; no receiving scientific execution is added."
+}

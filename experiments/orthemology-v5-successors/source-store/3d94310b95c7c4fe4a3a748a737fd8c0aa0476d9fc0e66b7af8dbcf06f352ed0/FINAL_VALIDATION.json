@@ -1,0 +1,28 @@
+{
+  "schema": "t20-anchored-review-final-verification-v1",
+  "utc": "2026-10-07T09:43:25.091372+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "manifest": "trust-zero-build/INDEPENDENT_BUILD_MANIFEST.json",
+      "status": "PASS",
+      "sha256": "aac69a75dd4660d4b24069cc48d608abe96a10744e808232eeafe6309d5795be",
+      "checked_steps": 26,
+      "verified_output_count": 31
+    },
+    {
+      "manifest": "boundary-build-v1/BOUNDARY_BUILD_MANIFEST.json",
+      "status": "PASS",
+      "sha256": "645f7abd400dbd385a09fe7c466f08ee6cc51c3292d86059b5a034ddb4c7121d",
+      "checked_steps": 10,
+      "verified_output_count": 21
+    }
+  ],
+  "candidate_theorems": 63,
+  "independent_theorems": 14,
+  "candidate_negative_rejections": 19,
+  "independent_negative_rejections": 8,
+  "candidate_source_seal_unchanged": true,
+  "author_receipt_seal_unchanged": true,
+  "reviewer_boundaries_source_bound": true
+}

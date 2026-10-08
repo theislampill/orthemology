@@ -1,0 +1,166 @@
+{
+  "work": "مفتاح دار السعادة ومنشور ولاية العلم والإرادة",
+  "author": "ابن قيم الجوزية",
+  "edition": "Third 1440/2019, first Dar Ibn Hazm; PDF imprint108/111 visually checked",
+  "editor": "عبد الرحمن بن حسن بن قائد",
+  "reviewers": [
+    "محمد أجمل الإصلاحي",
+    "سليمان بن عبد الله العمير"
+  ],
+  "publisher": "دار عطاءات العلم، الرياض / دار ابن حزم، بيروت",
+  "isbn_visible": "978-9959-857-82-8",
+  "acquisitions": [
+    {
+      "url": "https://ibnelqayem.com/ar/media/download/86",
+      "final_url": "https://ibnelqayem.com/ar/media/download/86",
+      "status": 200,
+      "bytes": 4836352,
+      "type": "application/msword",
+      "sha256": "a5d0c62a4021602bb009ce5dabf3cadad3ee702610b12def6ba94b55bbd105f5",
+      "utc": "2026-10-07T12:09:15.091259+00:00",
+      "representation": "downloaded Word witness"
+    },
+    {
+      "url": "https://ibnelqayem.com/ar/media/download/65",
+      "final_url": "https://ibnelqayem.com/ar/media/download/65",
+      "status": 200,
+      "bytes": 27621724,
+      "type": "application/pdf",
+      "sha256": "2f12843b0c252fe097bbf602178a798f8a6a2f446a11238376eabe65e953a6b3",
+      "utc": "2026-10-07T12:09:07.349048+00:00",
+      "representation": "downloaded composite PDF scan"
+    },
+    {
+      "url": "https://ibnelqayem.com/ar/books/34?is_intro=1&page=67",
+      "final_url": "https://ibnelqayem.com/ar/books/mftah-dar-alsaaad-omnshor-olay-alaalm-o-34?page=67&is_intro=1",
+      "status": 200,
+      "bytes": 282953,
+      "type": "text/html; charset=UTF-8",
+      "sha256": "44d088fe2ffed356c6571e39b1be56c2e75da3d44f48c69c040d32ea33546123",
+      "utc": "2026-10-07T12:09:15.764439+00:00",
+      "representation": "downloaded catalogue HTML"
+    }
+  ],
+  "files": [
+    {
+      "bytes": 557711,
+      "sha256": "3649362ad9ec3e0799fb4924d1e2411ca951f73c43f15cdfae47023f0e08fff3",
+      "selected": false,
+      "source_url": "https://www.islamicbook.ws/amma/mftah-dar-alsaadt-001.html",
+      "representation": "unselected HTML acquisition",
+      "included_in_reader_selection": false
+    },
+    {
+      "bytes": 282953,
+      "sha256": "44d088fe2ffed356c6571e39b1be56c2e75da3d44f48c69c040d32ea33546123",
+      "selected": true,
+      "source_url": "https://ibnelqayem.com/ar/books/34?is_intro=1&page=67",
+      "representation": "catalogue HTML",
+      "included_in_reader_selection": false
+    },
+    {
+      "bytes": 4836352,
+      "sha256": "a5d0c62a4021602bb009ce5dabf3cadad3ee702610b12def6ba94b55bbd105f5",
+      "selected": true,
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "representation": "Word witness",
+      "included_in_reader_selection": false
+    },
+    {
+      "bytes": 27621724,
+      "sha256": "2f12843b0c252fe097bbf602178a798f8a6a2f446a11238376eabe65e953a6b3",
+      "selected": true,
+      "source_url": "https://ibnelqayem.com/ar/media/download/65",
+      "representation": "composite PDF scan",
+      "included_in_reader_selection": false
+    }
+  ],
+  "unused_acquisition": {
+    "url": "https://www.islamicbook.ws/amma/mftah-dar-alsaadt-001.html",
+    "credit": "Not selected. Acquisition alone conveys no authorial-body reading credit."
+  },
+  "selection": {
+    "work": "مفتاح دار السعادة ومنشور ولاية العلم والإرادة",
+    "author": "ابن قيم الجوزية",
+    "editor": "عبد الرحمن بن حسن بن قائد",
+    "publisher": "دار عطاءات العلم / دار ابن حزم",
+    "edition": "Third 1440/2019, first Dar Ibn Hazm; PDF imprint108/111 visually checked",
+    "selection": "Entire received authorial work, main electronic 3–1603, with supplied modern textual apparatus. Electronic volume 1/2/3 boundaries are witness markers, not independently verified physical bindings. The catalogue describes three volumes; the composite PDF has a continuous page sequence without inserted volume 2/3 title leaves at the inspected seams. Prefatory electronic material and selected scan supplements are separately labelled. Post-body modern indexes are ancillary and outside the authorial-body selection.",
+    "volume_ranges": {
+      "1": [
+        3,
+        537
+      ],
+      "2": [
+        538,
+        1172
+      ],
+      "3": [
+        1173,
+        1603
+      ]
+    },
+    "intro_electronic_positions": 103,
+    "intro_labels_missing": [
+      41,
+      42,
+      82,
+      84
+    ],
+    "body_positions": 1601,
+    "words_with_electronic_preface_and_notes": 349407,
+    "words_per_volume": {
+      "المقدمة": 15224,
+      "1": 112194,
+      "2": 129931,
+      "3": 92058
+    },
+    "electronic_source": "https://ibnelqayem.com/ar/media/download/86",
+    "electronic_source_sha256": "a5d0c62a4021602bb009ce5dabf3cadad3ee702610b12def6ba94b55bbd105f5",
+    "derived_body_sha256": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752",
+    "mode": "Shamela generated Word converted read-only to UTF-8 text with LibreOffice. Page markers are electronic; supplied notes include bracketed later editorial additions. No automatic conversion is reading credit.",
+    "volume_boundary_evidence": "Electronic markers in Word; edition catalogue describes three volumes; composite scan inspected at main 537–540 and 1171–1174, with no independent physical binding boundary established."
+  },
+  "scan": {
+    "pages": 1998,
+    "text_layer": "Image only: fitz get_text found no extraction text",
+    "inspected_body_mapping": "Main label n corresponds to onebasedPDF n+109 at opening/end and inspected seams; not a whole-scan collation claim.",
+    "authorial_body_pdf_positions": [
+      112,
+      1712
+    ],
+    "end_blank_pdf": 1713,
+    "ancillary_indexes_begin_pdf": 1714,
+    "last_pdf1998_printed_label": 1889,
+    "complete_scan_read": false,
+    "complete_apparatus_or_manuscript_collation": false
+  },
+  "electronic_layers": [
+    "Shamela-generated Word body with supplied Qaid modern footnotes",
+    "Second-edition addenda inserted by electronic preparer in brackets although absent from printed third edition",
+    "Electronic preliminary103positions include captions replacing21manuscript plates, separately visually inspected with partial decipherment",
+    "No postbody modern indexes in selected authorial body"
+  ],
+  "received_completeness": "Authorial closing main1601–1603 received and read. Projected conceptual second part on will not fully realized, as editorI23–28 observes; no ungrounded lost-volume claim. Inherited blanks and defects retained.",
+  "earlier_access_history": {
+    "guide_sha256": "4364e1c90e8a213cde09fffb3766c5205f98b9f5c174aa447e1130114b93df91",
+    "earlier_reads": "Wikisource part1 hosted860–868 electronic1:393–396; part2 hosted459–464 electronic2:94–96. Edition/print mapping not established.",
+    "held_objects_untouched": [
+      "https://ar.wikisource.org/wiki/مفتاح_دار_السعادة_1",
+      "https://ar.wikisource.org/wiki/مفتاح_دار_السعادة_2"
+    ],
+    "exact_later_denial_metadata": "Exact later denial metadata was not retained in the supplied guide or source-location record. The two identified earlier Wikisource objects were conservatively left unopened. This does not establish a blanket prohibition on independently hosted witnesses.",
+    "new_independent_host_objects": [
+      "https://ibnelqayem.com/ar/media/download/86",
+      "https://ibnelqayem.com/ar/media/download/65"
+    ],
+    "no_independent_historical_witness_claim": true,
+    "guide_title": "Orthemology Nineteenth Source Evidence Guide, Final v1, 6 October 2026"
+  },
+  "derived_representations_sha256": {
+    "UTF-8 authorial-body and introductory extraction": "bd85d3f1c67a563f98fb01324487dedbd708f3a45898bf5816cc82ce08e6b752",
+    "electronic page mapping": "3d8eb7969da34586aa09fc61e3a49f1d5c38ba4015689d984b54d9c01f560116",
+    "whole converted Word text": "94a2e13f8a9ad17a0910393bfdbe9cf036481bcdd22d8b1adb861338242bb5bf"
+  },
+  "public_projection_note": "Source assets and derived bodies are omitted. URLs, hashes, byte counts, bibliographic identity, coordinates and limitations identify the retained witnesses; this record conveys no new reading credit."
+}

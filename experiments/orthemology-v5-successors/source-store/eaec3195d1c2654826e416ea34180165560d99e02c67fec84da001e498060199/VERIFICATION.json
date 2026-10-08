@@ -1,0 +1,230 @@
+{
+  "schema": "t20-original-bearer-bridge-verification-v1",
+  "status": "PASS",
+  "executor_finished_utc": "2026-10-07T09:09:27.140994+00:00",
+  "scope": "New typed A and explicit ABC composition plus models; import-adapted inherited source check only. Official cached imports trusted. No full historical suite or full Mathlib umbrella replay; no metaphysical premise verification.",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "approved_dag_manifest_sha256": "796856c7de6d50d284a241a066ea9bdd6fb84409174329de6b81a16eb4572bb8",
+  "historical_source_sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+  "derived_imports": [
+    "Mathlib.Data.Bool.Basic",
+    "Mathlib.Data.Fintype.Basic",
+    "Mathlib.Tactic.ByContra"
+  ],
+  "historical_body_byte_identical_after_import": true,
+  "inherited_readback_matches": 18,
+  "readback_declarations": 60,
+  "false_claims_rejected": 5,
+  "source_hashes": {
+    "BridgeControls.lean": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8",
+    "ImportClosure.lean": "592791295999536ae5c78e11232bb5ddd7729929c2b48bfbd2945a0c7e90679f",
+    "InheritedImportClosure.lean": "7b2e918998b21f0a2e2ac20deba04ebc15681b1352f74b3914ee0e37d361656f",
+    "OriginalBearerBridge.lean": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+    "ProofReadback.lean": "590cd5889cbd9c5cd77c0d0590e3f01712ca170d25c7ba22500c1a3cd0613ca2",
+    "ReadbackAudit.lean": "e89423e1188a2c9bc5abcd1f374483c47af48942fb75e9fd4ac53ad6de963a55",
+    "SourceIdentityDerived.lean": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+    "inherited/SourceIdentity.original.lean": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+    "negative-controls/RejectedClaims.lean": "751ceb0fb12d2515b96f72d9d75ab915d68c32eb7b4f6fa23bb8c0f7c90af22e",
+    "tests/BridgeContract.before.lean": "6491a484a1c2a7346c8b5220369f39f6254eecf7dbeeb53fddc3768ff34d7632",
+    "tests/BridgeContract.lean": "abb02e1e99486b41ba17ea8a1e574b46a3b997a90312bac07ba37e2baee8c138"
+  },
+  "object_hashes": {
+    "SourceIdentityDerived.olean": "ee38c90885c817b7ef9f424fcb3e9c7e2ea2978f311dcdfdb99fa4fca21f795f",
+    "OriginalBearerBridge.olean": "fd1d83e5f07251eafca49e75aafa98daa37016451ff1e79734b5f5bcf2f2454d",
+    "BridgeControls.olean": "1a6fbd305bf89b1868b15b3b58d115c80d48910337600c01aff8e5f926415679"
+  },
+  "official_dependency_packages": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "--version"
+      ],
+      "exit_code": 0,
+      "log": "toolchain.log",
+      "log_sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "-o",
+        "tranche20/foundational-audit/original-bearer-bridge/verification-final/objects/SourceIdentityDerived.olean",
+        "tranche20/foundational-audit/original-bearer-bridge/SourceIdentityDerived.lean"
+      ],
+      "exit_code": 0,
+      "log": "SourceIdentityDerived.log",
+      "log_sha256": "5da7cc7b59d2191904c64c7d49429da7b0cc1d015eba0af5087d6fe99154d1dd"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "-o",
+        "tranche20/foundational-audit/original-bearer-bridge/verification-final/objects/OriginalBearerBridge.olean",
+        "tranche20/foundational-audit/original-bearer-bridge/OriginalBearerBridge.lean"
+      ],
+      "exit_code": 0,
+      "log": "OriginalBearerBridge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "-o",
+        "tranche20/foundational-audit/original-bearer-bridge/verification-final/objects/BridgeControls.olean",
+        "tranche20/foundational-audit/original-bearer-bridge/BridgeControls.lean"
+      ],
+      "exit_code": 0,
+      "log": "BridgeControls.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/foundational-audit/original-bearer-bridge/tests/BridgeContract.lean"
+      ],
+      "exit_code": 0,
+      "log": "contract-green.log",
+      "log_sha256": "91b3a6206f40afc28905b16088f1d23b8b9cd46800f178b9847ddac3e07ef611"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/foundational-audit/original-bearer-bridge/tests/BridgeContract.before.lean"
+      ],
+      "exit_code": 1,
+      "log": "contract-red.log",
+      "log_sha256": "ef485e50341a006c1d1d618e5af2653102b89d459dd8cdba9f33850d7e0fb405"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/foundational-audit/original-bearer-bridge/ReadbackAudit.lean"
+      ],
+      "exit_code": 0,
+      "log": "readback.log",
+      "log_sha256": "dda7eb9109553102fd2f2770f1339fd885e4f56c8ee458525338458d3105b4c4"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/foundational-audit/original-bearer-bridge/ProofReadback.lean"
+      ],
+      "exit_code": 0,
+      "log": "proof-readback.log",
+      "log_sha256": "0c5cab88539c68dc152cf4f71c4a976885b244ef3fbe5c98153b8f2caf5612ef"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/foundational-audit/original-bearer-bridge/negative-controls/RejectedClaims.lean"
+      ],
+      "exit_code": 1,
+      "log": "rejected.log",
+      "log_sha256": "7056f98e8082d4859f5394123fb32638ad1e275805fc51eda20a6855a5d54cf8"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/foundational-audit/original-bearer-bridge/ImportClosure.lean"
+      ],
+      "exit_code": 0,
+      "log": "all-imports.log",
+      "log_sha256": "ec8547235d91ec51001115b35c65fa6b722a894d80a65aeb4a63061658c7ac28"
+    },
+    {
+      "command": [
+        "tranche20/hase-positive-research/toolchain-preparation/toolchains/lean-4.19.0-linux/bin/lean",
+        "-j1",
+        "--trust=0",
+        "tranche20/foundational-audit/original-bearer-bridge/InheritedImportClosure.lean"
+      ],
+      "exit_code": 0,
+      "log": "inherited_derived-imports.log",
+      "log_sha256": "6ba8c76d2630b3bc39b9a960ec288c57480eab3d21d34a666fa88c31ced01e53"
+    }
+  ],
+  "receipt_hashes": {
+    "IMPORT_CLOSURES.json": "223cd8232d4845f4e72aa08996643a23cb474f951fd8b989039cfa37385b9a90",
+    "READBACKS.json": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+    "rejected.log": "7056f98e8082d4859f5394123fb32638ad1e275805fc51eda20a6855a5d54cf8",
+    "all-imports.log": "ec8547235d91ec51001115b35c65fa6b722a894d80a65aeb4a63061658c7ac28",
+    "contract-green.log": "91b3a6206f40afc28905b16088f1d23b8b9cd46800f178b9847ddac3e07ef611",
+    "BridgeControls.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "toolchain.log": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b",
+    "contract-red.log": "ef485e50341a006c1d1d618e5af2653102b89d459dd8cdba9f33850d7e0fb405",
+    "INHERITED_COMPARISON.json": "e0f28079b695b628182a9cad45267c00a05e93b2b6f84ea78b5ab52bb1909669",
+    "readback.log": "dda7eb9109553102fd2f2770f1339fd885e4f56c8ee458525338458d3105b4c4",
+    "OriginalBearerBridge.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "proof-readback.log": "0c5cab88539c68dc152cf4f71c4a976885b244ef3fbe5c98153b8f2caf5612ef",
+    "inherited_derived-imports.log": "6ba8c76d2630b3bc39b9a960ec288c57480eab3d21d34a666fa88c31ced01e53",
+    "SourceIdentityDerived.log": "5da7cc7b59d2191904c64c7d49429da7b0cc1d015eba0af5087d6fe99154d1dd"
+  },
+  "root_source_or_dependency_mutations": "NONE",
+  "network_or_installation": "NONE"
+}

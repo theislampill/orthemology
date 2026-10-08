@@ -1,0 +1,342 @@
+{
+  "schema": "t20-drive-body-free-source-bindings-v1",
+  "created_utc": "2026-10-07T15:50:49.951107+00:00",
+  "path_basis": "E## identifies an original retained evidence record; B## identifies an original retained source-body check. Bytes and SHA-256 identify original records, not public projections. Bodies are excluded unless an independently selected public projection is identified. These identifiers do not imply that the underlying originals or author scripts are published or publicly replayable.",
+  "evidence_records": [
+    {
+      "record_id": "E01",
+      "retained_record_label": "REPORT.md",
+      "bytes": 41472,
+      "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+      "body_copied_into_this_packet": false,
+      "selected_public_projection": {
+        "owner_archive_path": "t20/reports/REPORT.md",
+        "bytes": 41472,
+        "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+        "identity_note": "Projection identity is separate from the original record identity above."
+      }
+    },
+    {
+      "record_id": "E02",
+      "retained_record_label": "READING_INDEX.json",
+      "bytes": 972895,
+      "sha256": "490bdd577b6e3f17e7ee2912da00fe1cfbf71ac296ba5d85f7f08996bf728b18",
+      "body_copied_into_this_packet": false,
+      "selected_public_projection": {
+        "owner_archive_path": "t20/reading/READING_INDEX.json",
+        "bytes": 1029129,
+        "sha256": "95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998",
+        "identity_note": "Projection identity is separate from the original record identity above."
+      }
+    },
+    {
+      "record_id": "E03",
+      "retained_record_label": "SOURCE_AND_PREMISE_MAP.md",
+      "bytes": 6523,
+      "sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E04",
+      "retained_record_label": "THEOREM_SOURCE_MAP.json",
+      "bytes": 24821,
+      "sha256": "60259d8ce8eb7f84bf6d144cbb97ae56e40f0661e82db363599abef212b3f5ae",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E05",
+      "retained_record_label": "SOURCE_PREMISE_MAP.json",
+      "bytes": 5901,
+      "sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E06",
+      "retained_record_label": "ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+      "bytes": 1323,
+      "sha256": "c850ac51db70d5f0262b4a06be96aa5a049adffa7e1c5c04642c320a717a7ab3",
+      "body_copied_into_this_packet": false,
+      "selected_public_projection": {
+        "owner_archive_path": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+        "bytes": 1443,
+        "sha256": "56faca3c16d90d05ff56fa8a0cf93931cfdd08055e64817e31da560c54bf2839",
+        "identity_note": "Projection identity is separate from the original record identity above."
+      }
+    },
+    {
+      "record_id": "E07",
+      "retained_record_label": "ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+      "bytes": 9350,
+      "sha256": "65303af758c4eead3aaa7bf01ce90e2700d3f0bbe80e4590e1131953429f72cf",
+      "body_copied_into_this_packet": false,
+      "selected_public_projection": {
+        "owner_archive_path": "t20/reading/assessments/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+        "bytes": 9350,
+        "sha256": "8b60a62d8956549cdd3a0e22f7101b0bbbc140840e49740cdc248e443f43af27",
+        "identity_note": "Projection identity is separate from the original record identity above."
+      }
+    },
+    {
+      "record_id": "E08",
+      "retained_record_label": "READING_LOG.json",
+      "bytes": 4766,
+      "sha256": "428ac7de022d003921305ad4306a16ffb8a3eda279ac4f56bf448b4d54374f2b",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E09",
+      "retained_record_label": "ONENESS_READ_SCOPE.json",
+      "bytes": 1313,
+      "sha256": "980e6f009fe5fe16533cbcb1962976baa4d7dae104e2c4c3994294b6347de226",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E10",
+      "retained_record_label": "READING_LOG.json",
+      "bytes": 3653,
+      "sha256": "05e7af193bde3cec204781184f2638a6afd0c7bfdd7ba83ace536b50cd433344",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E11",
+      "retained_record_label": "ARCHIVE_MEMBER_INVENTORY.json",
+      "bytes": 1244645,
+      "sha256": "c8cb4afde898f45ace54513fbe067bec652aea71ab7e623594632c45434e043c",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E12",
+      "retained_record_label": "INVENTORY.json",
+      "bytes": 355687,
+      "sha256": "6182c0f42007e2726eb8af64e66c08ac3b9b385fe64ee4da41ea0bae62456bd5",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E13",
+      "retained_record_label": "ONENESS_SOURCE_IDENTITY.json",
+      "bytes": 3186,
+      "sha256": "f467b6da1a427d0cbecdbbeedef1781e0d5e07f921bb475606be524f30741ada",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E14",
+      "retained_record_label": "RECOVERY_SUMMARY.md",
+      "bytes": 4814,
+      "sha256": "a38e8684ff3e446816d8805140f397334730179a33ce9f77b95821616745cd33",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E15",
+      "retained_record_label": "Arabic_Volume_Reading_Index.json",
+      "bytes": 41363,
+      "sha256": "ec81c17d452291351e869c7d1a66e5a42c0b3190d3683686ddf48bda915a8026",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E16",
+      "retained_record_label": "source_locations_and_reading_scope.json",
+      "bytes": 17447,
+      "sha256": "7dc04bd7c34615a62769ca29313362d767af9eb0205769f20b6be1291765fbdc",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E17",
+      "retained_record_label": "six_source_coverage.json",
+      "bytes": 25752,
+      "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E18",
+      "retained_record_label": "Arabic_Volume_Reading_Index_Final_v1_20261006.docx",
+      "bytes": 66206,
+      "sha256": "f1c136b1ef3a83ba780a129ce047866b92f41192599722672e4ee6c516f8e708",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E19",
+      "retained_record_label": "Orthemology_Eighteenth_Source_and_Validation_Guide_Final_v1_20261006.docx",
+      "bytes": 43011,
+      "sha256": "ba46d0a64972d88e0275d68d55474faaf51f27a08b07872b2e4d0e8a6f0539fc",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E20",
+      "retained_record_label": "Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.docx",
+      "bytes": 50521,
+      "sha256": "4364e1c90e8a213cde09fffb3766c5205f98b9f5c174aa447e1130114b93df91",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E21",
+      "retained_record_label": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "bytes": 56611,
+      "sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E22",
+      "retained_record_label": "Orthemology_Seventeenth_Research_Final_Evidence_v1_20261005.zip",
+      "bytes": 95685,
+      "sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E23",
+      "retained_record_label": "Orthemology_Eighteenth_Source_and_Validation_Guide_Final_v1_20261006.txt",
+      "bytes": 12945,
+      "sha256": "c1bd9c370ee3c6c93ba089a21e96436bdc39675c72e32b14e48248c3c3d103f5",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E24",
+      "retained_record_label": "Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.txt",
+      "bytes": 28793,
+      "sha256": "a6ec2065102f96cc4ceafd92652e0049efd0df2589d1ca80c616d394695b23a0",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E25",
+      "retained_record_label": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.txt",
+      "bytes": 53312,
+      "sha256": "72ff4b59cad4c1999476167adbc7d6d03983d6b0b59693b12ec13de5d9a3cfa0",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E26",
+      "retained_record_label": "primary_inspection_receipt.json",
+      "bytes": 3801,
+      "sha256": "aa72b5e86462bb8c701a8373f0b34eb10ddb0aa3562ae3793d14fc3b6bdeeb67",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E27",
+      "retained_record_label": "INDEPENDENT_REVIEW_RECEIPT_v1.json",
+      "bytes": 6336,
+      "sha256": "7fd5672af799517f3ed2780290fad01586daa991779398459833958fd919948d",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E28",
+      "retained_record_label": "PHILOSOPHICAL_APPRAISAL_v2.md",
+      "bytes": 9222,
+      "sha256": "f56432bc48e2b5aa8394754d521e60f1bf266e17c7fa710ff3367196075e6a47",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E29",
+      "retained_record_label": "SOURCE_AND_PREMISE_BINDING_v1.json",
+      "bytes": 4355,
+      "sha256": "ccf3d29313d1419a383acfaf4663c6c733ce852ec8ae9c7baaf141cb0f801d0e",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E30",
+      "retained_record_label": "MANIFEST_v1.json",
+      "bytes": 2637,
+      "sha256": "618d067e7220a344b48edd9bc9c7c2ae110bd8ff015f2fb911e5c72619d91d5e",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E31",
+      "retained_record_label": "SOURCE_READ_SCOPE_v1.json",
+      "bytes": 17755,
+      "sha256": "fb9a092d03f0a1a3de21f0b83ced1502ddaf5cbe183bf2769e9ccce2be15fa3e",
+      "body_copied_into_this_packet": false
+    },
+    {
+      "record_id": "E32",
+      "retained_record_label": "SOURCE_MANIFEST.json",
+      "bytes": 2665,
+      "sha256": "75528460e5853d4f4265fd1e4bf06cf08cf6d041157845e37a2e7ad6482439d1",
+      "body_copied_into_this_packet": false
+    }
+  ],
+  "original_supplied_objects": [
+    {
+      "source_alias": "el_tobgui_2013",
+      "drive_file_id": "12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU",
+      "drive_url": "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+      "filename": "Carl_Sharif_El-TobguiRobert_Wisnovsky_Supervisor2_Wael_Halla_-_Reason_revelation__the_reconstitution_of_rationality__Taqi_al-Din_Ibn_Taymiyyas_d._728_1328_Dar_Ta_arud_al-_Aql_wa-l-Na_2013_McGill_Univ (1).pdf",
+      "sha256": "d2c90eaa5f238145c5c8b71ff4f27b048ded1fd154242a300d08d212a737a963",
+      "bytes": 2231368,
+      "pages": 353,
+      "binding_status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE"
+    },
+    {
+      "source_alias": "asfahani_v23",
+      "drive_file_id": "1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym",
+      "drive_url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+      "filename": "A-Commentary-on-the-Creed-of-Asfahani-v2.3.pdf",
+      "sha256": "bed5565280dcb71b96fc3437cf2f9c07cdc75e6fe6e3798e24fe6bf886cad6ad",
+      "bytes": 9941932,
+      "pages": 248,
+      "binding_status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE"
+    },
+    {
+      "source_alias": "ibn_taymiyyah_epistemology",
+      "drive_file_id": "1iBAiImdDodsmO7qY4bykiiFzLd8IxmjM",
+      "drive_url": "https://drive.google.com/file/d/1iBAiImdDodsmO7qY4bykiiFzLd8IxmjM/view?usp=drivesdk",
+      "filename": "Ibn Taymiyyah's Epistemology.pdf",
+      "sha256": "66da4801933e9bb63c11b93f5c48fb5edb0cf752abd6a47e89fa4e7b03d7b8ec",
+      "bytes": 1446775,
+      "pages": 117,
+      "binding_status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE"
+    },
+    {
+      "source_alias": "oneness_allah",
+      "drive_file_id": "1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u",
+      "drive_url": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+      "filename": "Ibn Taymiyyah on the Oneness of Allah.pdf",
+      "sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf",
+      "bytes": 783093,
+      "pages": 55,
+      "binding_status": "PRESENT_EXACT_HASH_VERIFIED"
+    },
+    {
+      "source_alias": "attributes_god",
+      "drive_file_id": "1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ",
+      "drive_url": "https://drive.google.com/file/d/1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ/view?usp=drivesdk",
+      "filename": "Ibn-Taymiyya-and-the-Attributes-of-God.pdf",
+      "sha256": "86dbfb555d1098e5d4d333295cd799f728a2aaa2772fd375b1ffe27ae56d92de",
+      "bytes": 3071238,
+      "pages": 403,
+      "binding_status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE"
+    },
+    {
+      "source_alias": "incoherence_atheism",
+      "drive_file_id": "17V1wIb5WwvTZmycm_QG3_N6TlINguU-i",
+      "drive_url": "https://drive.google.com/file/d/17V1wIb5WwvTZmycm_QG3_N6TlINguU-i/view?usp=drivesdk",
+      "filename": "The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri.pdf",
+      "sha256": "3cc829df52e425455d7625c488dd0e86c8e0f2c927d78e8b2c39cda23974bfd1",
+      "bytes": 5140557,
+      "pages": 217,
+      "binding_status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE"
+    }
+  ],
+  "local_source_body_checks": [
+    {
+      "expected_sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf",
+      "expected_bytes": 783093,
+      "expected_pages": 55,
+      "record_id": "B01",
+      "retained_source_body": "Ibn Taymiyyah on the Oneness of Allah",
+      "source_body_included": false
+    },
+    {
+      "expected_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+      "expected_pages": 938,
+      "record_id": "B02",
+      "retained_source_body": "Longer Arabic Asbahani edited witness",
+      "source_body_included": false
+    }
+  ],
+  "metadata_copy": {
+    "file": "T17_SIX_SOURCE_COVERAGE.json",
+    "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+    "source_record_internal_coverage_record_sha256": "7e3f41a9e3596a4222c5b9c8b4ce755b2c850b46f96711aa1d5430beb57b621e",
+    "distinction": "The two hashes bind different records; neither is a book-body hash."
+  },
+  "reproduced_source_bodies": false,
+  "publication_projection_scope": "Body-free original evidence bindings and source-object identities only; no original book body, full primary extract, private operational note or author script is selected."
+}

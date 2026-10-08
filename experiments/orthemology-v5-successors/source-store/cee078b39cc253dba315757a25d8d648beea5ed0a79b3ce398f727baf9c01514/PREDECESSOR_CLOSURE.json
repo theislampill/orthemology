@@ -1,0 +1,455 @@
+{
+  "source_archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+  "source_package_name": "Sixteenth_Orthemology_Proof_Source_Recovered_v1",
+  "source_lock_sha256": "fd4a106042df084782815c27505cb74a4b73a9021c765081f07eaeddcd044239",
+  "roots": [
+    "EffectiveObserver",
+    "ExtensionalRepairSyntax"
+  ],
+  "external_imports": [
+    "Init",
+    "Mathlib.Data.Bool.Basic"
+  ],
+  "records": [
+    {
+      "module": "InternalPolymorphism",
+      "path": "lean/InternalPolymorphism.lean",
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/InternalPolymorphism.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "FiniteBridge",
+      "path": "lean/FiniteBridge.lean",
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/FiniteBridge.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "path": "lean/P01TypeAlgebra.lean",
+      "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01TypeAlgebra.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01SNReflection",
+      "path": "lean/P01SNReflection.lean",
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01SNReflection.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "BoundaryResults",
+      "path": "lean/BoundaryResults.lean",
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/BoundaryResults.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01Candidates",
+      "path": "lean/P01Candidates.lean",
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01Candidates.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01Confluence",
+      "path": "lean/P01Confluence.lean",
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01Confluence.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "EffectsAndDependence",
+      "path": "lean/EffectsAndDependence.lean",
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/EffectsAndDependence.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "path": "lean/NormalisationAndNumerals.lean",
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/NormalisationAndNumerals.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01Omega",
+      "path": "lean/P01Omega.lean",
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01Omega.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01Polynomials",
+      "path": "lean/P01Polynomials.lean",
+      "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01Polynomials.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01PER",
+      "path": "lean/P01PER.lean",
+      "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01PER.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01DependentCore",
+      "path": "lean/P01DependentCore.lean",
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01DependentCore.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01ContextualJ",
+      "path": "lean/P01ContextualJ.lean",
+      "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01ContextualJ.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01Certificates",
+      "path": "lean/P01Certificates.lean",
+      "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01Certificates.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01Examples",
+      "path": "lean/P01Examples.lean",
+      "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01Examples.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01RecursiveModel",
+      "path": "lean/P01RecursiveModel.lean",
+      "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01RecursiveModel.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "path": "lean/P01LambdaSyntax.lean",
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01LambdaSyntax.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01SystemF",
+      "path": "lean/P01SystemF.lean",
+      "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01SystemF.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01CurryParametricity",
+      "path": "lean/P01CurryParametricity.lean",
+      "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01CurryParametricity.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01Translation",
+      "path": "lean/P01Translation.lean",
+      "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01Translation.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01ModelWitnesses",
+      "path": "lean/P01ModelWitnesses.lean",
+      "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01ModelWitnesses.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01DependentModel",
+      "path": "lean/P01DependentModel.lean",
+      "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01DependentModel.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01DependentSubstitution",
+      "path": "lean/P01DependentSubstitution.lean",
+      "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01DependentSubstitution.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01DependentFundamental",
+      "path": "lean/P01DependentFundamental.lean",
+      "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01DependentFundamental.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "SubstitutionSyntax",
+      "path": "lean/SubstitutionSyntax.lean",
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/SubstitutionSyntax.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllSyntax",
+      "path": "lean/AllSyntax.lean",
+      "sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllSyntax.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllTermAlgebra",
+      "path": "lean/AllTermAlgebra.lean",
+      "sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllTermAlgebra.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllMixedAlgebra",
+      "path": "lean/AllMixedAlgebra.lean",
+      "sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllMixedAlgebra.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllStructuralBase",
+      "path": "lean/AllStructuralBase.lean",
+      "sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllStructuralBase.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllStructuralRename",
+      "path": "lean/AllStructuralRename.lean",
+      "sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllStructuralRename.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllStructural",
+      "path": "lean/AllStructural.lean",
+      "sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllStructural.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllPredicates",
+      "path": "lean/AllPredicates.lean",
+      "sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllPredicates.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllRawSubstitution",
+      "path": "lean/AllRawSubstitution.lean",
+      "sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllRawSubstitution.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllRawRenaming",
+      "path": "lean/AllRawRenaming.lean",
+      "sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllRawRenaming.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllBaseLaws",
+      "path": "lean/AllBaseLaws.lean",
+      "sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllBaseLaws.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllPiLaws",
+      "path": "lean/AllPiLaws.lean",
+      "sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllPiLaws.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllSigmaLaws",
+      "path": "lean/AllSigmaLaws.lean",
+      "sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllSigmaLaws.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllTermLemmas",
+      "path": "lean/AllTermLemmas.lean",
+      "sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllTermLemmas.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllBinderLaws",
+      "path": "lean/AllBinderLaws.lean",
+      "sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllBinderLaws.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllConstants",
+      "path": "lean/AllConstants.lean",
+      "sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllConstants.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllFiniteComparison",
+      "path": "lean/AllFiniteComparison.lean",
+      "sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllFiniteComparison.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllSemanticSubstitution",
+      "path": "lean/AllSemanticSubstitution.lean",
+      "sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllSemanticSubstitution.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllInstantiation",
+      "path": "lean/AllInstantiation.lean",
+      "sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllInstantiation.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllSoundness",
+      "path": "lean/AllSoundness.lean",
+      "sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllSoundness.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "P01DependentControls",
+      "path": "lean/P01DependentControls.lean",
+      "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/P01DependentControls.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllInheritedPositiveControls",
+      "path": "lean/AllInheritedPositiveControls.lean",
+      "sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllInheritedPositiveControls.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "EffectiveStandardness",
+      "path": "lean/EffectiveStandardness.lean",
+      "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/EffectiveStandardness.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "TypedSyntax",
+      "path": "lean/TypedSyntax.lean",
+      "sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/TypedSyntax.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "TypedAlgebra",
+      "path": "lean/TypedAlgebra.lean",
+      "sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/TypedAlgebra.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "TypedStructural",
+      "path": "lean/TypedStructural.lean",
+      "sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/TypedStructural.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "AllNucleusSyntax",
+      "path": "lean/AllNucleusSyntax.lean",
+      "sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/AllNucleusSyntax.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "EffectiveObserver",
+      "path": "lean/EffectiveObserver.lean",
+      "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/EffectiveObserver.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "IntensionalIdentityBridge",
+      "path": "lean/IntensionalIdentityBridge.lean",
+      "sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/IntensionalIdentityBridge.lean",
+      "original_mathematical_bytes_changed": false
+    },
+    {
+      "module": "ExtensionalRepairSyntax",
+      "path": "lean/ExtensionalRepairSyntax.lean",
+      "sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f",
+      "lane": "inherited",
+      "recovered_origin": "recovery-20261005-1330/extracted/Orthemology_Fifteenth_Source_Evidence/lean/ExtensionalRepairSyntax.lean",
+      "original_mathematical_bytes_changed": false
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "status": "hash-bound official pinned cache preparation",
+  "object_scope": "54 official cache archives plus five cache-client module objects; not a source cold build",
+  "records": [
+    {
+      "path": "mathlib/.lake/build/lib/lean/Cache/Hashing.olean",
+      "bytes": 670216,
+      "sha256": "bd3d3160e4a2fa3b42424abfe6194a5fa8ec87136994ee07f849478d1a18ac33"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Cache/IO.olean",
+      "bytes": 1327008,
+      "sha256": "7ebe204352cd0c612be8b55591e7e376243c8eac44dc62f423e9df27e9773007"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Cache/Lean.olean",
+      "bytes": 102976,
+      "sha256": "d0ae00c69c7c39309f6f12e2bf9a69220ba989479c81ede064647e06c662596b"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Cache/Main.olean",
+      "bytes": 470792,
+      "sha256": "1439ca11a19efba6f4c52fcb41004d0716aaaa26af0577b2294ebc747bcb5b6b"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Cache/Requests.olean",
+      "bytes": 725976,
+      "sha256": "442aaf4146b98dac98dbdad05fb0aa06f0565b77d0f6fd5a9b4d50a1e0334937"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Data/Bool/Basic.olean",
+      "bytes": 235592,
+      "sha256": "3f3ab3416a476335803264b7f6ad5d00622ab91fea8e6fd118b2e6c7d3a4aa0e"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Data/Int/Notation.olean",
+      "bytes": 67968,
+      "sha256": "3f8b88b41599ee110ec7dac9e1a347469f2e8c56357ae6221624baa77bb72d71"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Notation.olean",
+      "bytes": 67720,
+      "sha256": "d72c4cd847ce8382220a64f6339c0b7c20bf6a05c6d8fe158319db161d19101d"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Data/Ordering/Basic.olean",
+      "bytes": 85352,
+      "sha256": "0b73c62197defefed7dcd8546df5782ccb7d6b8a0d131fea2b706141e8e55379"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Init.olean",
+      "bytes": 23280,
+      "sha256": "cf16728c32b823b96220b5d51d1eb701d857c050506c99e99c6157091a115476"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Lean/Expr/Basic.olean",
+      "bytes": 1328864,
+      "sha256": "5f56237417e6f3715b4ff0d65b4537c25cfa4a7852ac91f743445e4e6a0aa5d5"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Logic/Basic.olean",
+      "bytes": 862672,
+      "sha256": "8086fbe192ae6450f0816ba34a76ec5147d275ed5aa611a784ebd7008bf003b0"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Defs.olean",
+      "bytes": 219816,
+      "sha256": "afe0fb4cc68ac365ab367e5b9ee38fbab7d6d6e9df4ceafbf4b6a6a076ee1afd"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Order/Defs/LinearOrder.olean",
+      "bytes": 493928,
+      "sha256": "7f6a1a5eb918ff46a72fa73520640d9359c1a8bf1853e8bfa75b2dc137ebbd39"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Order/Defs/PartialOrder.olean",
+      "bytes": 288792,
+      "sha256": "0b7972371e0f88abdd20abf9320cac1657c641afb7ac510fae475eda25a3f4ba"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/AdaptationNote.olean",
+      "bytes": 198472,
+      "sha256": "5cb07c77fb4b92ec8c77cc804bdfac104294932fdbe19b34da4a82db4f2ca429"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Attr/Register.olean",
+      "bytes": 320216,
+      "sha256": "db678f37823eaa46210ac5d17e26d5ddef66c0ff11062d1b177134ef91c52220"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Basic.olean",
+      "bytes": 575208,
+      "sha256": "3f0c3a95c11ad8ec9e1db7572924e14e7ea06ce9c5b47a4d5b822c7f985b46cb"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Core.olean",
+      "bytes": 671152,
+      "sha256": "f4be8b7099a575370b0d0e51daabaad530ba7e369dd748608e1487da4aea070e"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/DeclarationNames.olean",
+      "bytes": 164480,
+      "sha256": "16f6368aa08426aaa4610e73b3a2db933d17f4b0e454b05a478b6d00c29a2d57"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Eqns.olean",
+      "bytes": 120304,
+      "sha256": "271d80cc0dfdbba5a5cebeac6d8bf0e314b85b1683737df4afb4dcf11ac1704f"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/ExtendDoc.olean",
+      "bytes": 155760,
+      "sha256": "c949cd83a2e6e4a7916b6d288d45efc231aa970f942b8a7588684521d5a8fdfc"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Lemma.olean",
+      "bytes": 137600,
+      "sha256": "231d749c5ff2d9101db2a68cddc54373644e4f3de17f6b8e5e20760ab3be8ef0"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/DeprecatedSyntaxLinter.olean",
+      "bytes": 376048,
+      "sha256": "59b3b2916690952cc06dbe441ee7c6049128a3c2c567d049631f4ee26e4f142e"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/DirectoryDependency.olean",
+      "bytes": 873088,
+      "sha256": "01813559a14e3374e09812e85567b1f184289877f7a5005b4c292f468df82ec4"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/DocPrime.olean",
+      "bytes": 198096,
+      "sha256": "006dea9ae7121a92a53b7508cd7103c214351bf66322bdadd22daa8925e58159"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/DocString.olean",
+      "bytes": 247968,
+      "sha256": "e03d8cd5f8957b0278899c70c14685600efb71a15b17748eec9aa86000d287da"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/FlexibleLinter.olean",
+      "bytes": 2677280,
+      "sha256": "fa9d003ace89e4b88798aa482c90bd5150ba395dc0bc48aa33bb44c2f91734f3"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/GlobalAttributeIn.olean",
+      "bytes": 230544,
+      "sha256": "87b97331c0c83362674a59ed9f8668fd51d6c37221dff914d80ccdc8c552c117"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/HashCommandLinter.olean",
+      "bytes": 239032,
+      "sha256": "1138c71c9dc5b7a8aee9173ae13ee3d2243857c36249016a452ff7a1b14e1c49"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/Header.olean",
+      "bytes": 820072,
+      "sha256": "067e04055cdc51ffdb1e070aebbcb6b775846cc99d3d37414ccfc51baa6d834a"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/Lint.olean",
+      "bytes": 288432,
+      "sha256": "8d36eb15460ad7a011fe0e0df842a68336ac4dbdfa21c6db197928bb45b3be0a"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/Multigoal.olean",
+      "bytes": 623000,
+      "sha256": "a31dbc9b06f4cc1c06ce02b92e02494f46d11e9f54ff760e6fad98d2f2fda3c5"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/OldObtain.olean",
+      "bytes": 104512,
+      "sha256": "111c3cb01783e419d88ed8f7e4e695e5ef20ec38bf55e98e1765a24e9da9fed1"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/Style.olean",
+      "bytes": 1209672,
+      "sha256": "ebdc2ba163adbc73ca8336c9029c4557cd5923f5bb1f3184dd7e3b1702324591"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/UnusedTactic.olean",
+      "bytes": 770728,
+      "sha256": "773fa1f310cf41b73f68805aa72abef2a6900829e0d073e1d239e32486dfb841"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter/UnusedTacticExtension.olean",
+      "bytes": 400416,
+      "sha256": "48db87f1a5fa01c75ec19b27f63aab5151e6a4480811a73c003a90b5e857188e"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/PPWithUniv.olean",
+      "bytes": 268136,
+      "sha256": "45ca26415885f3462f47514cc45f27253114271f29989ec317f797b36398649f"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/Simproc/ExistsAndEq.olean",
+      "bytes": 274704,
+      "sha256": "73b3c9dd61391a218462f4a1facf9f5b3b5548a696d19d27ec5e75cedac47435"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/SplitIfs.olean",
+      "bytes": 629904,
+      "sha256": "c3674e62a78fc019d892278e91c6b41fe7d69e0faf82a1c3255baaf22c19a14c"
+    },
+    {
+      "path": "mathlib/.lake/build/lib/lean/Mathlib/Tactic/TypeStar.olean",
+      "bytes": 62592,
+      "sha256": "35b79b4376bbc6f4e76fa917e4726f13e872bf2272dd175be8ed0be90aa3c69a"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Classes/Order.olean",
+      "bytes": 391512,
+      "sha256": "c3659c9e13d185d1cfc86d210128f19bc2c57f08ec890860540fc659a1e6942d"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/CodeAction/Attr.olean",
+      "bytes": 437152,
+      "sha256": "1da7080cecabecf46c726049cbbc07b4d226a8f0e4dd9b106d98636e581c124b"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/CodeAction/Basic.olean",
+      "bytes": 313128,
+      "sha256": "3d1071981ec75f29093e39485fc9560e3a7176cc156a49f0695ed3de1fdf194e"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/CodeAction/Deprecated.olean",
+      "bytes": 385824,
+      "sha256": "51beb298fe9ea62a65544a0ba9fb6b84fa0834172268e2185303509cc5ed1f25"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Lean/NameMapAttribute.olean",
+      "bytes": 225208,
+      "sha256": "ed40f70af38ba7787f7dd839479b4604b113fc906903a341662203fe03be146f"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Logic.olean",
+      "bytes": 125776,
+      "sha256": "aba8aca0e88b98cf6f66d4351502956828a3b01aa928f2423542266acaa256fd"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Alias.olean",
+      "bytes": 928944,
+      "sha256": "edc96a18fffa18ddf4555e50a55ae516cda96e474dadaed8a434f54b3007f577"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Lint/Basic.olean",
+      "bytes": 613392,
+      "sha256": "0bcfb6fe01bf0461989870077d1b9a24b08a9a1a1b5e4a94f763996302a1e8d1"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Lint/Frontend.olean",
+      "bytes": 1345776,
+      "sha256": "2665de70f0d686d33ab00efdc8acb5495da3ea711b13b58bcdd07a6b57d83ab3"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Lint/Misc.olean",
+      "bytes": 903208,
+      "sha256": "6b166341b7401ac82cf8fcd64b7b44de286a29435589b4dee539a3515fb13e4a"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Lint/Simp.olean",
+      "bytes": 861520,
+      "sha256": "e73d7704588b5b87d5b61764787ec00d995aa31a34b7d0b62f40ed0e50b09580"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Lint/TypeClass.olean",
+      "bytes": 207240,
+      "sha256": "fee4a3654d289023ee690dd33cc4cc7e9b5b4df198d589a961e67768c42a26e5"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Lint.olean",
+      "bytes": 19880,
+      "sha256": "dbeeb620123bc8c7398bfe20540c831ead3e628363ef6aa76786b0bc4a3533af"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/OpenPrivate.olean",
+      "bytes": 551440,
+      "sha256": "404775a65889172eac69ac4a25a5575d1750ba1ed1ee5fd49bf77cf8495015bc"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/SeqFocus.olean",
+      "bytes": 254680,
+      "sha256": "9a855a3412052cfe9c10436761509d2dd200b388d2f705358be762b4d294730f"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Trans.olean",
+      "bytes": 1499856,
+      "sha256": "c38547917bf2a9b2158de61abb063007aacff1b34f9775b1da4394310ece1f7a"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Tactic/Unreachable.olean",
+      "bytes": 103824,
+      "sha256": "21608d47ca1bc45f836edc3762d1cdbbe030ae3a2f7af788edd6271953fc1658"
+    },
+    {
+      "path": "batteries/.lake/build/lib/lean/Batteries/Util/LibraryNote.olean",
+      "bytes": 98128,
+      "sha256": "f633dbde129983022a6d6aaaf2953d0c80d0e015f5937123604946c510664e0b"
+    }
+  ]
+}

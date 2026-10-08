@@ -1,0 +1,442 @@
+{
+  "schema": "t20-successor-guide-document-qa-v2",
+  "created_at_utc": "2026-10-07T16:49:45.693301+00:00",
+  "disposition": "PASS_EXACT_TEXT_LINKS_ARABIC_AND_ALL_PAGE_RENDER",
+  "source": {
+    "historical_original_identity": {
+      "record_name": "GUIDE_v2.md",
+      "sha256": "c966158d0c2f2e2dc8007c1de9abbce0587a04cfd918fe1c9284508dbeeff6ee",
+      "bytes": 68244
+    },
+    "included_record": {
+      "owner_archive_path": "t20/reading/GUIDE_v2.md",
+      "sha256": "c966158d0c2f2e2dc8007c1de9abbce0587a04cfd918fe1c9284508dbeeff6ee",
+      "bytes": 68244
+    },
+    "original_body_included_exactly": true,
+    "identity_relation": "Historical original and included record are explicitly distinguished; exact document/source bodies retain the same digest, while public QA projections have their own digest."
+  },
+  "document": {
+    "historical_original_identity": {
+      "record_name": "Orthemology_Twentieth_Source_Evidence_Guide_v2_20261007.docx",
+      "sha256": "409d22c0cec230943e17e6a50ff05015bcb7d9d09c0c1ae0c37f090173923666",
+      "bytes": 64510
+    },
+    "included_record": {
+      "owner_archive_path": "t20/reports/Orthemology_Twentieth_Source_Evidence_Guide_v2_20261007.docx",
+      "sha256": "409d22c0cec230943e17e6a50ff05015bcb7d9d09c0c1ae0c37f090173923666",
+      "bytes": 64510
+    },
+    "original_body_included_exactly": true,
+    "identity_relation": "Historical original and included record are explicitly distinguished; exact document/source bodies retain the same digest, while public QA projections have their own digest."
+  },
+  "source_finalisation": {
+    "historical_original_identity": {
+      "record_name": "V2_SOURCE_FINALISATION.json",
+      "sha256": "fead11ad49aa577737774262dee587f121290e75259390e732a8b1aba8217eba",
+      "bytes": 663
+    },
+    "original_body_included": false
+  },
+  "source_review": {
+    "historical_original_identity": {
+      "record_name": "REPORT_GUIDE_V2_READBACK.json",
+      "sha256": "4c25f7bea815e6bb09c5c98c942ba7e1132feec1d98b918b476277d887c30d2e",
+      "bytes": 6967
+    },
+    "included_record": {
+      "owner_archive_path": "t20/reports/REPORT_GUIDE_V2_READBACK.json",
+      "sha256": "f08aceaf869f487af3c8859cafc66c86b3653bf48454ca1fc0eda7a62e374350",
+      "bytes": 17333
+    },
+    "original_body_included_exactly": false,
+    "identity_relation": "Historical original and included record are explicitly distinguished; exact document/source bodies retain the same digest, while public QA projections have their own digest."
+  },
+  "content_qa": {
+    "historical_original_identity": {
+      "record_name": "GUIDE_v2_CONTENT_QA.json",
+      "sha256": "d3f556c3cd735ec2db95998aa4df485a06f13e1dfd0cb72f53c0a801d5c28a14",
+      "bytes": 1189
+    },
+    "original_body_included": false
+  },
+  "initial_build_receipt": {
+    "historical_original_identity": {
+      "record_name": "GUIDE_v2_BUILD_RECEIPT.json",
+      "sha256": "40d070d757fc0f2d27d42098724e4d3a0088bb4ff76412624906e53ff0e97c02",
+      "bytes": 695
+    },
+    "original_body_included": false
+  },
+  "layout_correction": {
+    "historical_original_identity": {
+      "record_name": "GUIDE_v2_LAYOUT_CORRECTION.json",
+      "sha256": "5434d66f9cd1ae186c16e6fad8cf3eb956e33a4b18804cfb6c5a2383e42be2cd",
+      "bytes": 5522
+    },
+    "original_body_included": false
+  },
+  "historical_preservation": {
+    "historical_original_identity": {
+      "record_name": "V2_PRESERVATION_CHECK.json",
+      "sha256": "a286cdf71bb123540db5a7233360ce42294112ee1a5e1d70e2be2a4df52b5f69",
+      "bytes": 536
+    },
+    "original_body_included": false
+  },
+  "authored_records_exact": 255,
+  "external_hyperlinks_exact": 20,
+  "relative_references_as_exact_labels_and_literal_paths": 11,
+  "arabic_codepoints_exact_in_source_order": 62,
+  "native_numbered_items": 0,
+  "page_count": 20,
+  "pages": [
+    {
+      "page": 1,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-1.png",
+        "sha256": "2b4bb15ae9b313f31f6feba3c7463d06d8ef16088b29a6d9a6d148eef218a8c7",
+        "bytes": 522460
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 2,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-2.png",
+        "sha256": "6c1b39f3ed0a53703dd6949d5675af92997816814e62eac41f242d9b3e025563",
+        "bytes": 503273
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 3,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-3.png",
+        "sha256": "72f401da2660995efa3ae9749c7186e4f9cc7ac7c133699028efda4f6a241330",
+        "bytes": 517446
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 4,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-4.png",
+        "sha256": "47ece3d16a02965be564cd2a51c254708509854fdc000f566d7f310a55c8f414",
+        "bytes": 512698
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 5,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-5.png",
+        "sha256": "2f5c56009ef411a01ef218ac33f43f06b53858df379a4819c3f6e1e35bc67248",
+        "bytes": 416935
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 6,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-6.png",
+        "sha256": "029dc19dca7e3ea6df62de10c4a9f712c39d957561b58b936c2920e278e53477",
+        "bytes": 432706
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 7,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-7.png",
+        "sha256": "562c1f04f71ab973d1081273cee78d0f7e70a99d2577afca72624f36f4315408",
+        "bytes": 443558
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 8,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-8.png",
+        "sha256": "f5c10cfffbe823ac8327204a907db4c582c068a32bf5eed0484c9a140373e89f",
+        "bytes": 452175
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 9,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-9.png",
+        "sha256": "73eb834ccdad7df3be15eb3a1a09b24822d3507fbaad2bfff0c05e13d7b8e696",
+        "bytes": 438576
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 10,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-10.png",
+        "sha256": "2e22687564c6b0c8a83bd5d8b3017fde11dd479d97fbf0256ff2725519106249",
+        "bytes": 457157
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 11,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-11.png",
+        "sha256": "985e0148d1a06732a62267c6ecd03f0ae9f4e917cbb6374cc8b0902da7a8e08c",
+        "bytes": 505964
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 12,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-12.png",
+        "sha256": "905fb24ca8bec766d932bb46886ccef3d5b272ca042761ebbaa5493d3b7db452",
+        "bytes": 478746
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 13,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-13.png",
+        "sha256": "868f597e4d4d83e2ec5841fc7a952f57396312bca89b88b87c768a54e47da52b",
+        "bytes": 528012
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 14,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-14.png",
+        "sha256": "39638e46c99dde327fb1c73c35aa05da2edb2a66e23ffaec5360f80b1e0cec5e",
+        "bytes": 450780
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 15,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-15.png",
+        "sha256": "f1dd4a6e6b58b2b93a290f5873c3ad613e63c95d7808c75dd799561070b7d49f",
+        "bytes": 477132
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 16,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-16.png",
+        "sha256": "bc1a9f57d704c97e242c802f24c9b4c304df583e00094b75f7bab27a278393a0",
+        "bytes": 494898
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 17,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-17.png",
+        "sha256": "f6ba37093bc4314e6d0cfe7637615cc137e22d37979302defabc0bcf22abee4e",
+        "bytes": 496473
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 18,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-18.png",
+        "sha256": "14d888aa6faaca9511eb0140c51dba8b8d561f68960306cad8bacc01364d32b3",
+        "bytes": 453509
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 19,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-19.png",
+        "sha256": "bee783d85eee41cb8e162c12104aa6e8aa20f5ba942a322492e99c4c81dacbce",
+        "bytes": 530745
+      },
+      "original_body_included": false
+    },
+    {
+      "page": 20,
+      "pixels": [
+        1547,
+        2002
+      ],
+      "original_resolution_individual_visual_inspection": "PASS",
+      "defects": [],
+      "historical_original_identity": {
+        "record_name": "page-20.png",
+        "sha256": "f98761d6d332fc7285a050f2f935546d11da9b15588ecefe4b04a2f176c67b19",
+        "bytes": 219172
+      },
+      "original_body_included": false
+    }
+  ],
+  "render_route": {
+    "page_pngs": "1547 by 2002 pixels",
+    "qa_only_pdf": {
+      "historical_original_identity": {
+        "record_name": "Orthemology_Twentieth_Source_Evidence_Guide_v2_20261007.pdf",
+        "sha256": "db4d0ecae7f45732d43606257c5b212d91dc8f38ed1444037b7dea435a1a048e",
+        "bytes": 228296
+      },
+      "original_body_included": false
+    }
+  },
+  "layout_review": {
+    "first_render_pages_individually_inspected": 20,
+    "demonstrated_first_render_defect": "Three section openings left a heading and locator together at the foot of a page while the first explanatory paragraph began on the next page.",
+    "formatting_only_correction": "Keep each of the 37 Locators paragraphs with its following explanatory paragraph.",
+    "first_build_preserved": {
+      "historical_original_identity": {
+        "record_name": "Orthemology_Twentieth_Source_Evidence_Guide_v2_before_locator_keep.docx",
+        "sha256": "660542e564d390f1fac377faca4a2ae9424c9b67262be3a45c56d611e50b4286",
+        "bytes": 64463
+      },
+      "original_body_included": false
+    },
+    "zip_delta_check": "Only word/document.xml changed. Removing the 37 added keepNext elements and their newly introduced empty paragraph property containers restores exact prior XML; every other ZIP member is byte-identical.",
+    "final_pages_individually_reinspected": 20,
+    "final_defects": [],
+    "all_body_text_clear_of_footer": true,
+    "minimum_body_to_footer_gap_points": 16.22
+  },
+  "historical_v1_document": {
+    "historical_original_identity": {
+      "record_name": "Orthemology_Twentieth_Source_Evidence_Guide_v1_20261007.docx",
+      "sha256": "6487a11eccf51ba547f9665a5fb94e0c1173db457cb711381c2abae7dfb76b53",
+      "bytes": 62774
+    },
+    "included_record": {
+      "owner_archive_path": "t20/reports/Orthemology_Twentieth_Source_Evidence_Guide_v1_20261007.docx",
+      "sha256": "6487a11eccf51ba547f9665a5fb94e0c1173db457cb711381c2abae7dfb76b53",
+      "bytes": 62774
+    },
+    "original_body_included_exactly": true,
+    "identity_relation": "Historical original and included record are explicitly distinguished; exact document/source bodies retain the same digest, while public QA projections have their own digest."
+  },
+  "source_edited": false,
+  "scientific_replay": false,
+  "original_document_record_sha256": "0539b7be389415fdd9ec0afec8aff7fc18be60ae42785fe5225def98122e827a",
+  "qa_attribution": "Author-reported complete document fidelity and page inspection. Curation rehashes all bound inputs and final page images and scans document XML; it claims no additional visual review, source reading or science execution."
+}

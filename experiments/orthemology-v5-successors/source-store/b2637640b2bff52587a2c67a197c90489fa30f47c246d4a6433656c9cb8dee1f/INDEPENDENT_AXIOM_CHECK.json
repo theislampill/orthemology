@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "declarations": [
+    {
+      "declaration": "VeracityIndependentReview.exercise_bridge_is_substantive",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "VeracityIndependentReview.factivity_guards_forward_equivalence",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "VeracityIndependentReview.coverage_guards_reverse_equivalence",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "VeracityIndependentReview.package_does_not_transfer_to_created_speaker",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "VeracityIndependentReview.other_unfitting_exercise_is_nonassertoric",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "VeracityIndependentReview.strong_false_ownership_retains_D_and_P",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "VeracityIndependentReview.truth_to_no_counterfeit",
+      "axioms": []
+    },
+    {
+      "declaration": "VeracityIndependentReview.no_counterfeit_to_truth",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

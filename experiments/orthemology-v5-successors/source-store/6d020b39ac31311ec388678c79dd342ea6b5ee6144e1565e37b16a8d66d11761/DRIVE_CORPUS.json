@@ -1,0 +1,2868 @@
+{
+  "schema": "t20-six-drive-corpus-audit-v1",
+  "title": "The six supplied Drive sources in Orthemology Twentieth",
+  "audit_utc": "2026-10-07T15:50:49.951107+00:00",
+  "status": "COMPLETED_LOCAL_PROVENANCE_AND_READING_BOUNDARY_AUDIT",
+  "authorship": "AI research audit; no external human specialist certification",
+  "audit_scope": "Existing retained source-identity records, inherited T17–T19 guides/indices, T20 receipts and selected result maps; no remote acquisition, book-body rereading, code replay, upload or repository edit.",
+  "counting_summary": {
+    "exact_supplied_drive_objects": 6,
+    "inherited_T17_supplied_pdf_pages": 1393,
+    "inherited_T17_credited_pages": 1393,
+    "inherited_T17_distinct_visual_pages": 190,
+    "T17_every_page_visually_inspected": false,
+    "inherited_T18_distinct_revisited_supplied_pdf_pages": 188,
+    "inherited_T18_distinct_visual_pages": 22,
+    "T20_exact_English_objects_with_fresh_contextual_receipt": [
+      "oneness_allah"
+    ],
+    "T20_Oneness_text_scope": "All extracted text; selected 13 image positions include blanks and five diagrams. Prior full reading remains inherited.",
+    "T20_Oneness_visual_positions": 13,
+    "new_unique_supplied_pages_added_by_T18_T20_or_this_audit": 0,
+    "primary_reading_credit_for_this_audit": 0
+  },
+  "reading_credit_rule": "Whole-object T17 coverage is inherited collective attestation, not six freshly re-read books, a claim one researcher read them all, or every-page visual checking. Acquisition, extraction, hashing, page-counting, indexing and rendering alone earn no reading credit.",
+  "identity_rule": "Source SHA-256 and byte length identify the original supplied object. The internal coverage_record_sha256 is a different provenance identifier from the SHA-256 of the delivered coverage member. Same title, translation, host, scholarly reuse or prior extraction does not establish byte identity or independent evidence.",
+  "sources": [
+    {
+      "id": "el_tobgui_2013",
+      "drive_file_id": "12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU",
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+      "link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "title": "Reason, Revelation and the Reconstitution of Rationality",
+      "authorship": "Carl Sharif El-Tobgui; Robert Wisnovsky and Wael Hallaq are supervisory or mentoring figures, not coauthors.",
+      "edition": "McGill University PhD dissertation, final submission 12 April 2013. The supplied file is the thesis, not the later book.",
+      "source_type": "Modern scholarly reconstruction of Ibn Taymiyya, with embedded primary quotations and reports of opponents.",
+      "actual_supplied_filename": "Carl_Sharif_El-TobguiRobert_Wisnovsky_Supervisor2_Wael_Halla_-_Reason_revelation__the_reconstitution_of_rationality__Taqi_al-Din_Ibn_Taymiyyas_d._728_1328_Dar_Ta_arud_al-_Aql_wa-l-Na_2013_McGill_Univ (1).pdf",
+      "source_sha256": "d2c90eaa5f238145c5c8b71ff4f27b048ded1fd154242a300d08d212a737a963",
+      "source_bytes": 2231368,
+      "pdf_page_count": 353,
+      "title_scope": "Displayed work title as established in the inherited guide; no additional subtitle or missing publication particulars inferred from filename.",
+      "identity_basis": {
+        "record": "T17-COVERAGE",
+        "status": "INHERITED_EXACT_OBJECT_BINDING",
+        "locator": "sources[source_alias=el_tobgui_2013]",
+        "bibliography_evidence": [
+          "T17G:P00018",
+          "T17G:P00116–P00117"
+        ]
+      },
+      "current_local_original_bytes": {
+        "status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE",
+        "path": null,
+        "limit": "Five absent original bodies are not declared inaccessible at Drive; current remote permissions were not tested."
+      },
+      "page_convention": "Main printed Arabic-numbered page + 24 = one-based PDF page; front matter uses its own numbering.",
+      "reading_history": {
+        "T17": {
+          "mode": "Inherited audited collective substantive reading plus targeted image checks",
+          "exact_covered_pdf_ranges": [
+            [
+              1,
+              353
+            ]
+          ],
+          "unique_credited_pdf_pages": 353,
+          "missing_pdf_pages": [],
+          "coverage_contributions": [
+            {
+              "credited_pdf_ranges": [
+                [
+                  1,
+                  27
+                ],
+                [
+                  178,
+                  353
+                ]
+              ],
+              "credited_page_count": 203,
+              "reported_visual_pdf_pages": [
+                1,
+                2,
+                11,
+                15,
+                21,
+                185,
+                187,
+                196,
+                253,
+                262,
+                283,
+                299,
+                301,
+                303,
+                305,
+                308,
+                331,
+                336
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "ad53433c006f7b49d7546ab96b5f6cc94620290b11ce47f802cb44ec6ba46e66"
+            },
+            {
+              "credited_pdf_ranges": [
+                [
+                  28,
+                  87
+                ]
+              ],
+              "credited_page_count": 60,
+              "reported_visual_pdf_pages": [
+                28,
+                29,
+                30,
+                43,
+                58,
+                67,
+                81,
+                85,
+                87
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "983ae8e22af4c4fb3245f0d08db89c8d88313600bd7580dc683e21805b425cd5"
+            },
+            {
+              "credited_pdf_ranges": [
+                [
+                  88,
+                  177
+                ]
+              ],
+              "credited_page_count": 90,
+              "reported_visual_pdf_pages": [
+                88,
+                102,
+                157,
+                165,
+                170,
+                171,
+                176
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "a4898e389fbbb91892a3d4f8213c64479a7d1da70fcf04ba0e5ec9574e38cb50"
+            },
+            {
+              "credited_pdf_ranges": [],
+              "credited_page_count": 0,
+              "reported_visual_pdf_pages": [
+                101
+              ],
+              "type": "supplemental visual reading",
+              "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+            },
+            {
+              "credited_pdf_ranges": [],
+              "credited_page_count": 0,
+              "reported_visual_pdf_pages": [
+                236,
+                238
+              ],
+              "type": "additional overlapping rereading",
+              "coverage_record_sha256": "6276eb4986b53013cbd6a790c99b46b9ffb1c93a61994b0fda1b7f90064cffc1"
+            }
+          ],
+          "visual_coverage": {
+            "reader_reported_pages": [
+              1,
+              2,
+              11,
+              15,
+              21,
+              28,
+              29,
+              30,
+              43,
+              58,
+              67,
+              81,
+              85,
+              87,
+              88,
+              102,
+              157,
+              165,
+              170,
+              171,
+              176,
+              185,
+              187,
+              196,
+              236,
+              238,
+              253,
+              262,
+              283,
+              299,
+              301,
+              303,
+              305,
+              308,
+              331,
+              336
+            ],
+            "reader_reported_count": 36,
+            "supplemental_auditor_pages": [
+              101
+            ],
+            "supplemental_count": 1,
+            "combined_pages": [
+              1,
+              2,
+              11,
+              15,
+              21,
+              28,
+              29,
+              30,
+              43,
+              58,
+              67,
+              81,
+              85,
+              87,
+              88,
+              101,
+              102,
+              157,
+              165,
+              170,
+              171,
+              176,
+              185,
+              187,
+              196,
+              236,
+              238,
+              253,
+              262,
+              283,
+              299,
+              301,
+              303,
+              305,
+              308,
+              331,
+              336
+            ],
+            "combined_count": 37,
+            "every_page_visually_inspected": false,
+            "render_only_excluded_pages": [
+              239,
+              296,
+              329
+            ]
+          },
+          "record": "T17-COVERAGE",
+          "snapshot_utc": "2026-10-05T20:54:28.265213+00:00",
+          "new_credit_in_this_audit": 0
+        },
+        "T18": {
+          "mode": "Inherited selected rereading; retained-text and separately listed visual inspections",
+          "one_based_pdf_ranges": [
+            [
+              253,
+              306
+            ],
+            [
+              323,
+              325
+            ]
+          ],
+          "distinct_revisited_pdf_pages": 57,
+          "visually_checked_pdf_positions": [
+            291
+          ],
+          "evidence": "T18G:P00007–P00025",
+          "new_unique_programme_pages": 0
+        },
+        "T19": {
+          "status": "NO_FRESH_READING_OF_THIS_EXACT_ENGLISH_OBJECT_ESTABLISHED_IN_INSPECTED_T19_RECORDS",
+          "limit": "Separate Arabic first traversals/rereads are identified below and cannot be added to this Drive object’s coverage."
+        },
+        "T20": {
+          "status": "INHERITED_ONLY_NO_FRESH_EXACT_OBJECT_REREAD_ESTABLISHED",
+          "new_unique_programme_pages": 0,
+          "this_audit_primary_reading_credit": 0
+        }
+      },
+      "voice_controls": [
+        "El-Tobgui’s interpretations remain his own; reported Avicenna, Ghazali and other opponents are not Ibn Taymiyya’s commitments.",
+        "Detailed existence and miracle proofs are outside the thesis’s stated scope (printed 161 n59/PDF 185); fuller rational-proof criteria are deferred (printed 183 n105/PDF 207)."
+      ],
+      "material_loci": [
+        {
+          "question": "Basic recognition and plural routes to knowledge",
+          "pdf": [
+            [
+              21,
+              21
+            ],
+            [
+              272,
+              272
+            ],
+            [
+              276,
+              276
+            ],
+            [
+              278,
+              278
+            ],
+            [
+              299,
+              299
+            ],
+            [
+              305,
+              306
+            ],
+            [
+              312,
+              312
+            ]
+          ],
+          "printed": "xxi;248;252;254;275 n49;281–282;288",
+          "guide": "T17G:P00119–P00120"
+        },
+        {
+          "question": "Concrete bearer, universals and inseparable attributes",
+          "pdf": [
+            [
+              253,
+              264
+            ],
+            [
+              270,
+              294
+            ],
+            [
+              314,
+              326
+            ]
+          ],
+          "printed": "229–240;246–270;290–302",
+          "guide": "T17G:P00122–P00124"
+        }
+      ],
+      "unverified_limits": [
+        "Not an independent new reading of all Darʾ volumes or of the 1979 eleven-volume Rashad Salim edition cited by the thesis.",
+        "El-Tobgui’s tentative innate-form interpretation remains qualified scholarship."
+      ],
+      "overlap_family_ids": [
+        "F-DAR-EPISTEMOLOGY",
+        "F-MODERN-EPISTEMOLOGY"
+      ]
+    },
+    {
+      "id": "asfahani_v23",
+      "drive_file_id": "1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym",
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+      "link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "title": "A Commentary on the Creed of Asfahani v2.3",
+      "authorship": "Ibn Taymiyyah, translated by Wordsmiths; base creed by al-Asfahani.",
+      "edition": "Sapience Publishing, first edition 2024. Selectively harmonised translation: principal 2001 Maktabat al-Rushd edition edited by Saʿid ibn Nasr ibn Muhammad, supplemented from the longer 2009 Dar al-Minhaj edition edited by Muhammad ibn ʿAwdah al-Saʿawi.",
+      "source_type": "English translation with creed, commentary, reported material and modern translator/editorial additions.",
+      "actual_supplied_filename": "A-Commentary-on-the-Creed-of-Asfahani-v2.3.pdf",
+      "source_sha256": "bed5565280dcb71b96fc3437cf2f9c07cdc75e6fe6e3798e24fe6bf886cad6ad",
+      "source_bytes": 9941932,
+      "pdf_page_count": 248,
+      "title_scope": "Displayed work title as established in the inherited guide; no additional subtitle or missing publication particulars inferred from filename.",
+      "identity_basis": {
+        "record": "T17-COVERAGE",
+        "status": "INHERITED_EXACT_OBJECT_BINDING",
+        "locator": "sources[source_alias=asfahani_v23]",
+        "bibliography_evidence": [
+          "T17G:P00015",
+          "T17G:P00047–P00048"
+        ]
+      },
+      "current_local_original_bytes": {
+        "status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE",
+        "path": null,
+        "limit": "Five absent original bodies are not declared inaccessible at Drive; current remote permissions were not tested."
+      },
+      "page_convention": "Main printed page + 7 = one-based PDF page.",
+      "reading_history": {
+        "T17": {
+          "mode": "Inherited audited collective substantive reading plus targeted image checks",
+          "exact_covered_pdf_ranges": [
+            [
+              1,
+              248
+            ]
+          ],
+          "unique_credited_pdf_pages": 248,
+          "missing_pdf_pages": [],
+          "coverage_contributions": [
+            {
+              "credited_pdf_ranges": [
+                [
+                  1,
+                  248
+                ]
+              ],
+              "credited_page_count": 248,
+              "reported_visual_pdf_pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                31,
+                32,
+                33,
+                34,
+                35,
+                45,
+                46,
+                47,
+                48,
+                50,
+                51,
+                85,
+                89,
+                115,
+                119,
+                134,
+                135,
+                139,
+                228,
+                229,
+                248
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "07e3bb099190914edb464b214ee8b5d3a93a1dce32fc16bbb8a6c3b2cdbd32ae"
+            },
+            {
+              "credited_pdf_ranges": [],
+              "credited_page_count": 0,
+              "reported_visual_pdf_pages": [
+                49,
+                118
+              ],
+              "type": "supplemental visual reading",
+              "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+            }
+          ],
+          "visual_coverage": {
+            "reader_reported_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              31,
+              32,
+              33,
+              34,
+              35,
+              45,
+              46,
+              47,
+              48,
+              50,
+              51,
+              85,
+              89,
+              115,
+              119,
+              134,
+              135,
+              139,
+              228,
+              229,
+              248
+            ],
+            "reader_reported_count": 29,
+            "supplemental_auditor_pages": [
+              49,
+              118
+            ],
+            "supplemental_count": 2,
+            "combined_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              31,
+              32,
+              33,
+              34,
+              35,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              85,
+              89,
+              115,
+              118,
+              119,
+              134,
+              135,
+              139,
+              228,
+              229,
+              248
+            ],
+            "combined_count": 31,
+            "every_page_visually_inspected": false,
+            "render_only_excluded_pages": []
+          },
+          "record": "T17-COVERAGE",
+          "snapshot_utc": "2026-10-05T20:54:28.265213+00:00",
+          "new_credit_in_this_audit": 0
+        },
+        "T18": {
+          "mode": "Inherited selected rereading; retained-text and separately listed visual inspections",
+          "one_based_pdf_ranges": [
+            [
+              29,
+              44
+            ],
+            [
+              85,
+              91
+            ],
+            [
+              116,
+              118
+            ]
+          ],
+          "distinct_revisited_pdf_pages": 26,
+          "visually_checked_pdf_positions": [
+            41,
+            89
+          ],
+          "evidence": "T18G:P00007–P00025",
+          "new_unique_programme_pages": 0,
+          "last_added_pass": "PDF 37–41 and116–118 in retained text; no fresh PDF or Arabic visual inspection in that last pass."
+        },
+        "T19": {
+          "status": "NO_FRESH_READING_OF_THIS_EXACT_ENGLISH_OBJECT_ESTABLISHED_IN_INSPECTED_T19_RECORDS",
+          "limit": "Separate Arabic first traversals/rereads are identified below and cannot be added to this Drive object’s coverage."
+        },
+        "T20": {
+          "status": "INHERITED_ONLY_NO_FRESH_EXACT_OBJECT_REREAD_ESTABLISHED",
+          "new_unique_programme_pages": 0,
+          "this_audit_primary_reading_credit": 0
+        }
+      },
+      "voice_controls": [
+        "The base creed (printed 5–6/PDF 12–13), Ibn Taymiyya’s commentary beginning printed 6, and editorial headings/notes are separate voices.",
+        "The long Ghazali material at printed 158–173/PDF 165–180 is quotation followed by agreement and criticism.",
+        "This translation is not a diplomatic rendering of a single unchanged Arabic edition."
+      ],
+      "material_loci": [
+        {
+          "question": "Origination, contingency-as-need and whole-existence sufficiency",
+          "pdf": [
+            [
+              29,
+              34
+            ]
+          ],
+          "printed": "22–27",
+          "guide": "T17G:P00025–P00033"
+        },
+        {
+          "question": "Attributes are not externally assembled parts; living knowledge and will",
+          "pdf": [
+            [
+              36,
+              51
+            ],
+            [
+              87,
+              89
+            ]
+          ],
+          "printed": "29–44;80–82",
+          "guide": "T17G:P00036–P00038"
+        },
+        {
+          "question": "Pure perfection, standing capacity and voluntary exercise",
+          "pdf": [
+            [
+              114,
+              118
+            ],
+            [
+              134,
+              137
+            ]
+          ],
+          "printed": "107–111;127–130",
+          "guide": "T17G:P00039–P00041"
+        },
+        {
+          "question": "Value, command and cumulative knowledge",
+          "pdf": [
+            [
+              144,
+              145
+            ],
+            [
+              154,
+              154
+            ],
+            [
+              180,
+              183
+            ],
+            [
+              191,
+              193
+            ],
+            [
+              228,
+              237
+            ]
+          ],
+          "printed": "137–138;147;173–176;184–186;221–230",
+          "guide": "T17G:P00041–P00044"
+        }
+      ],
+      "unverified_limits": [
+        "English translation body is not byte-identical to the Arabic scan and does not contain the extended unity span supplied in the separate Oneness excerpt.",
+        "Three local translation problems and editorial note 58 were already recorded in T17; their restatement here adds no discovery credit.",
+        "The principal Rushd edition and older Kurdistan printing were not independently collated in the inherited correction."
+      ],
+      "overlap_family_ids": [
+        "F-ASBAHANI",
+        "F-AKMALIYYA-PERFECTION"
+      ]
+    },
+    {
+      "id": "ibn_taymiyyah_epistemology",
+      "drive_file_id": "1iBAiImdDodsmO7qY4bykiiFzLd8IxmjM",
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/1iBAiImdDodsmO7qY4bykiiFzLd8IxmjM/view?usp=drivesdk",
+      "link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "title": "A Collection on the Epistemology of Ibn Taymiyyah",
+      "authorship": "Modern anthology of Enis Doko, Jamie B. Turner and Carl Sharif El-Tobgui; signed compiler identity not established.",
+      "edition": "Supplied 117-page, repaginated and partly abridged compilation. Original publication particulars are not established for every component; later contents-page references are inaccurate.",
+      "source_type": "Modern scholarship and adapted/abridged editorial compilation, not a book authored by Ibn Taymiyya.",
+      "actual_supplied_filename": "Ibn Taymiyyah's Epistemology.pdf",
+      "source_sha256": "66da4801933e9bb63c11b93f5c48fb5edb0cf752abd6a47e89fa4e7b03d7b8ec",
+      "source_bytes": 1446775,
+      "pdf_page_count": 117,
+      "title_scope": "Displayed work title as established in the inherited guide; no additional subtitle or missing publication particulars inferred from filename.",
+      "identity_basis": {
+        "record": "T17-COVERAGE",
+        "status": "INHERITED_EXACT_OBJECT_BINDING",
+        "locator": "sources[source_alias=ibn_taymiyyah_epistemology]",
+        "bibliography_evidence": [
+          "T17G:P00019",
+          "T17G:P00127–P00133"
+        ]
+      },
+      "current_local_original_bytes": {
+        "status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE",
+        "path": null,
+        "limit": "Five absent original bodies are not declared inaccessible at Drive; current remote permissions were not tested."
+      },
+      "page_convention": "Use exact one-based supplied PDF coordinates; no single global printed-page offset.",
+      "reading_history": {
+        "T17": {
+          "mode": "Inherited audited collective substantive reading plus targeted image checks",
+          "exact_covered_pdf_ranges": [
+            [
+              1,
+              117
+            ]
+          ],
+          "unique_credited_pdf_pages": 117,
+          "missing_pdf_pages": [],
+          "coverage_contributions": [
+            {
+              "credited_pdf_ranges": [
+                [
+                  1,
+                  117
+                ]
+              ],
+              "credited_page_count": 117,
+              "reported_visual_pdf_pages": [
+                2,
+                3,
+                32,
+                60,
+                64,
+                67,
+                79,
+                80,
+                88,
+                89,
+                91,
+                93,
+                95,
+                97,
+                103,
+                106,
+                116,
+                117
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "72e00fb80927de58c2024ac899c0c82b45fcefbeabfcf3a770aa01b478e100e3"
+            },
+            {
+              "credited_pdf_ranges": [],
+              "credited_page_count": 0,
+              "reported_visual_pdf_pages": [
+                1,
+                30,
+                70
+              ],
+              "type": "supplemental visual reading",
+              "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+            },
+            {
+              "credited_pdf_ranges": [],
+              "credited_page_count": 0,
+              "reported_visual_pdf_pages": [
+                77,
+                82,
+                112
+              ],
+              "type": "additional overlapping rereading",
+              "coverage_record_sha256": "6276eb4986b53013cbd6a790c99b46b9ffb1c93a61994b0fda1b7f90064cffc1"
+            }
+          ],
+          "visual_coverage": {
+            "reader_reported_pages": [
+              2,
+              3,
+              32,
+              60,
+              64,
+              67,
+              77,
+              79,
+              80,
+              82,
+              88,
+              89,
+              91,
+              93,
+              95,
+              97,
+              103,
+              106,
+              112,
+              116,
+              117
+            ],
+            "reader_reported_count": 21,
+            "supplemental_auditor_pages": [
+              1,
+              30,
+              70
+            ],
+            "supplemental_count": 3,
+            "combined_pages": [
+              1,
+              2,
+              3,
+              30,
+              32,
+              60,
+              64,
+              67,
+              70,
+              77,
+              79,
+              80,
+              82,
+              88,
+              89,
+              91,
+              93,
+              95,
+              97,
+              103,
+              106,
+              112,
+              116,
+              117
+            ],
+            "combined_count": 24,
+            "every_page_visually_inspected": false,
+            "render_only_excluded_pages": [
+              81,
+              84
+            ]
+          },
+          "record": "T17-COVERAGE",
+          "snapshot_utc": "2026-10-05T20:54:28.265213+00:00",
+          "new_credit_in_this_audit": 0
+        },
+        "T18": {
+          "mode": "Inherited selected rereading; retained-text and separately listed visual inspections",
+          "one_based_pdf_ranges": [
+            [
+              1,
+              3
+            ],
+            [
+              71,
+              71
+            ],
+            [
+              77,
+              78
+            ],
+            [
+              88,
+              89
+            ],
+            [
+              95,
+              96
+            ],
+            [
+              117,
+              117
+            ]
+          ],
+          "distinct_revisited_pdf_pages": 11,
+          "visually_checked_pdf_positions": [],
+          "evidence": "T18G:P00007–P00025",
+          "new_unique_programme_pages": 0
+        },
+        "T19": {
+          "status": "NO_FRESH_READING_OF_THIS_EXACT_ENGLISH_OBJECT_ESTABLISHED_IN_INSPECTED_T19_RECORDS",
+          "limit": "Separate Arabic first traversals/rereads are identified below and cannot be added to this Drive object’s coverage."
+        },
+        "T20": {
+          "status": "INHERITED_ONLY_NO_FRESH_EXACT_OBJECT_REREAD_ESTABLISHED",
+          "new_unique_programme_pages": 0,
+          "this_audit_primary_reading_credit": 0
+        }
+      },
+      "voice_controls": [
+        "Turner identifies the proper-function model as his construction at PDF 32 and conditions its Islamic extension on Islam’s truth at PDF 60.",
+        "Historical claims of actual Creator-recognition remain distinct from the conditional modern model.",
+        "Al-Musawwada is a family work; the qualitative transmission formulation in notes 67/77 is attributed to Majd al-Din. Hallaq’s Greek Logicians transmits al-Suyuti’s abridgement."
+      ],
+      "material_loci": [
+        {
+          "question": "Basic recognition, proper function and conditionally warranted belief",
+          "pdf": [
+            [
+              15,
+              15
+            ],
+            [
+              23,
+              23
+            ],
+            [
+              26,
+              26
+            ],
+            [
+              32,
+              32
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              56,
+              56
+            ],
+            [
+              60,
+              60
+            ],
+            [
+              64,
+              64
+            ]
+          ],
+          "printed": "PDF locators govern",
+          "guide": "T17G:P00135–P00136"
+        },
+        {
+          "question": "Qualitative tawatur, independent ordinary cognition and functionally equivalent routes",
+          "pdf": [
+            [
+              77,
+              85
+            ],
+            [
+              91,
+              91
+            ],
+            [
+              116,
+              116
+            ]
+          ],
+          "printed": "PDF locators govern",
+          "guide": "T17G:P00138–P00140"
+        }
+      ],
+      "unverified_limits": [
+        "Reading the complete supplied object does not restore omitted Baldwin material or notes 11–36.",
+        "Internal citations do not constitute collation with original articles or fresh reading of all underlying Arabic texts."
+      ],
+      "overlap_family_ids": [
+        "F-MODERN-EPISTEMOLOGY",
+        "F-DAR-EPISTEMOLOGY",
+        "F-AKMALIYYA-PERFECTION"
+      ],
+      "components": [
+        {
+          "title": "Islamic Religious Epistemology",
+          "author": "Enis Doko and Jamie B. Turner",
+          "pdf_ranges": [
+            [
+              4,
+              18
+            ]
+          ],
+          "printed": "1–15"
+        },
+        {
+          "title": "Ibn Taymiyyah’s Common Sense Philosophy",
+          "author": "Jamie B. Turner",
+          "pdf_ranges": [
+            [
+              19,
+              30
+            ],
+            [
+              68,
+              69
+            ]
+          ],
+          "note": "References resume at PDF 68–69."
+        },
+        {
+          "title": "Appendix I: An Islamic Account of Reformed Epistemology",
+          "author": "Jamie B. Turner; editorial abridgement",
+          "pdf_ranges": [
+            [
+              31,
+              45
+            ]
+          ],
+          "note": "Baldwin discussion and notes 11–36 explicitly omitted at PDF 32 and 45."
+        },
+        {
+          "title": "Appendix II: Who Shoulders the Burden of Proof",
+          "author": "Jamie B. Turner; adapted form",
+          "pdf_ranges": [
+            [
+              46,
+              67
+            ]
+          ],
+          "note": "Note 17 identifies adaptation from the preceding model."
+        },
+        {
+          "title": "From Legal Theory to Erkenntnistheorie",
+          "author": "Carl Sharif El-Tobgui",
+          "pdf_ranges": [
+            [
+              71,
+              100
+            ],
+            [
+              101,
+              105
+            ],
+            [
+              106,
+              117
+            ]
+          ],
+          "note": "Body, bibliography, endnotes respectively; abstract/attribution at PDF 3."
+        }
+      ]
+    },
+    {
+      "id": "oneness_allah",
+      "drive_file_id": "1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u",
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+      "link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "title": "Ibn Taymiyyah on the Oneness of Allah",
+      "authorship": "English excerpt attributed to Ibn Taymiyya’s Asfahani commentary; translator/editor unidentified.",
+      "edition": "Supplied 55-page English excerpt. Translator, editor, publisher, date and exact Arabic exemplar remain unidentified. A similarly titled publication does not resolve them.",
+      "source_type": "English authorial-text presentation plus biography, preface/summary, 37 numbered notes, bracketed additions, headings and five image-based editorial diagrams.",
+      "actual_supplied_filename": "Ibn Taymiyyah on the Oneness of Allah.pdf",
+      "source_sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf",
+      "source_bytes": 783093,
+      "pdf_page_count": 55,
+      "title_scope": "Displayed work title as established in the inherited guide; no additional subtitle or missing publication particulars inferred from filename.",
+      "identity_basis": {
+        "record": "T17-COVERAGE",
+        "status": "INHERITED_EXACT_OBJECT_BINDING",
+        "locator": "sources[source_alias=oneness_allah]",
+        "bibliography_evidence": [
+          "T17G:P00016",
+          "T17G:P00059–P00060",
+          "T18G:P00014"
+        ]
+      },
+      "current_local_original_bytes": {
+        "status": "PRESENT_EXACT_HASH_VERIFIED",
+        "path": "SOURCE_BINDINGS:B01 (retained source body; not included)",
+        "limit": "Five absent original bodies are not declared inaccessible at Drive; current remote permissions were not tested."
+      },
+      "page_convention": "Main printed 1–42 = PDF 8–49; closing prayer printed 43/PDF 50; five diagrams PDF 51–55.",
+      "reading_history": {
+        "T17": {
+          "mode": "Inherited audited collective substantive reading plus targeted image checks",
+          "exact_covered_pdf_ranges": [
+            [
+              1,
+              55
+            ]
+          ],
+          "unique_credited_pdf_pages": 55,
+          "missing_pdf_pages": [],
+          "coverage_contributions": [
+            {
+              "credited_pdf_ranges": [
+                [
+                  1,
+                  55
+                ]
+              ],
+              "credited_page_count": 55,
+              "reported_visual_pdf_pages": [
+                1,
+                3,
+                5,
+                24,
+                27,
+                28,
+                30,
+                32,
+                37,
+                38,
+                41,
+                42,
+                47,
+                51,
+                52,
+                53,
+                54,
+                55
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "abb6bb273b849425b4c1ab31628ef1c558107935f9fa6822bd42875b4bddc077"
+            },
+            {
+              "credited_pdf_ranges": [],
+              "credited_page_count": 0,
+              "reported_visual_pdf_pages": [
+                7,
+                50
+              ],
+              "type": "supplemental visual reading",
+              "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+            }
+          ],
+          "visual_coverage": {
+            "reader_reported_pages": [
+              1,
+              3,
+              5,
+              24,
+              27,
+              28,
+              30,
+              32,
+              37,
+              38,
+              41,
+              42,
+              47,
+              51,
+              52,
+              53,
+              54,
+              55
+            ],
+            "reader_reported_count": 18,
+            "supplemental_auditor_pages": [
+              7,
+              50
+            ],
+            "supplemental_count": 2,
+            "combined_pages": [
+              1,
+              3,
+              5,
+              7,
+              24,
+              27,
+              28,
+              30,
+              32,
+              37,
+              38,
+              41,
+              42,
+              47,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55
+            ],
+            "combined_count": 20,
+            "every_page_visually_inspected": false,
+            "render_only_excluded_pages": []
+          },
+          "record": "T17-COVERAGE",
+          "snapshot_utc": "2026-10-05T20:54:28.265213+00:00",
+          "new_credit_in_this_audit": 0
+        },
+        "T18": {
+          "mode": "Inherited selected rereading; retained-text and separately listed visual inspections",
+          "one_based_pdf_ranges": [
+            [
+              1,
+              55
+            ]
+          ],
+          "distinct_revisited_pdf_pages": 55,
+          "visually_checked_pdf_positions": [
+            1,
+            3,
+            7,
+            31,
+            37,
+            38,
+            39,
+            40,
+            41,
+            47,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "evidence": "T18G:P00007–P00025",
+          "new_unique_programme_pages": 0
+        },
+        "T19": {
+          "status": "NO_FRESH_READING_OF_THIS_EXACT_ENGLISH_OBJECT_ESTABLISHED_IN_INSPECTED_T19_RECORDS",
+          "limit": "Separate Arabic first traversals/rereads are identified below and cannot be added to this Drive object’s coverage."
+        },
+        "T20": {
+          "status": "FRESH_CONTEXTUAL_TEXT_AND_SELECTED_IMAGE_REREAD",
+          "new_unique_programme_pages": 0,
+          "this_audit_primary_reading_credit": 0,
+          "receipt": "ONENESS-READ",
+          "textual_scope": "All extracted textual pages, including preface, main1–42, footnotes, appendix captions, read continuously through textual windows",
+          "visual_pdf_positions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "blank_pdf_positions": [
+            3,
+            7
+          ],
+          "diagram_pdf_positions": [
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "arabic_crosscheck": "ASBAHANI-SCAN PDF 207–254 / main 107–154; already in Arabic overlap union.",
+          "not_claimed": "No fresh collation of translator edition ancestry; not every English body page visually inspected; no new independent historical witness",
+          "novelty_control": "T17 source guide¶68 already identifies note26 editorial spatial argument and Figure3a nonfollowing branch. Fresh revisit confirms retained finding, not new defect discovery."
+        }
+      },
+      "voice_controls": [
+        "Editorial notes, the spatial argument in note 26 and diagrams are not silently attributed to Ibn Taymiyya.",
+        "Its extended main unity span appears in the longer Arabic edited witness, without establishing the translation’s exact exemplar or a separately authored second commentary."
+      ],
+      "material_loci": [
+        {
+          "question": "Original ability, cooperation and complete original production",
+          "pdf": [
+            [
+              24,
+              36
+            ]
+          ],
+          "printed": "17–29",
+          "guide": "T17G:P00062–P00064"
+        },
+        {
+          "question": "Connected creation and original field provision",
+          "pdf": [
+            [
+              37,
+              40
+            ]
+          ],
+          "printed": "30–33",
+          "guide": "T17G:P00065"
+        },
+        {
+          "question": "Fuller cooperation replies in separate editorial notes",
+          "pdf": [
+            [
+              33,
+              33
+            ],
+            [
+              47,
+              47
+            ]
+          ],
+          "printed": "26 note 19;40 note 32",
+          "guide": "T17G:P00085–P00087"
+        },
+        {
+          "question": "Power without actual willing; editorial diagram defect",
+          "pdf": [
+            [
+              41,
+              41
+            ],
+            [
+              54,
+              54
+            ]
+          ],
+          "printed": "34;Figure 3a",
+          "guide": "T17G:P00067–P00068"
+        }
+      ],
+      "unverified_limits": [
+        "Not an independently collated Arabic or manuscript witness.",
+        "Figure 3a branch problem was identified in T17 and confirmed in T20, not discovered anew.",
+        "T20 did not visually inspect every English body page."
+      ],
+      "overlap_family_ids": [
+        "F-ASBAHANI",
+        "F-MINHAJ-COOPERATION"
+      ]
+    },
+    {
+      "id": "attributes_god",
+      "drive_file_id": "1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ",
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ/view?usp=drivesdk",
+      "link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "title": "Ibn Taymiyya and the Attributes of God",
+      "authorship": "Farid Suleiman; translated from German by Carl Sharif El-Tobgui.",
+      "edition": "Brill, Islamic Philosophy, Theology and Science volume 125; English imprint copyright 2024, cataloguing record 2023. German original: revised dissertation completed 2017, defended 2018, published 2019.",
+      "source_type": "Modern monograph with scholarly reconstruction, criticism and embedded primary quotations.",
+      "actual_supplied_filename": "Ibn-Taymiyya-and-the-Attributes-of-God.pdf",
+      "source_sha256": "86dbfb555d1098e5d4d333295cd799f728a2aaa2772fd375b1ffe27ae56d92de",
+      "source_bytes": 3071238,
+      "pdf_page_count": 403,
+      "title_scope": "Displayed work title as established in the inherited guide; no additional subtitle or missing publication particulars inferred from filename.",
+      "identity_basis": {
+        "record": "T17-COVERAGE",
+        "status": "INHERITED_EXACT_OBJECT_BINDING",
+        "locator": "sources[source_alias=attributes_god]",
+        "bibliography_evidence": [
+          "T17G:P00017",
+          "T17G:P00093"
+        ]
+      },
+      "current_local_original_bytes": {
+        "status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE",
+        "path": null,
+        "limit": "Five absent original bodies are not declared inaccessible at Drive; current remote permissions were not tested."
+      },
+      "page_convention": "Main printed page + 13 = one-based PDF page.",
+      "reading_history": {
+        "T17": {
+          "mode": "Inherited audited collective substantive reading plus targeted image checks",
+          "exact_covered_pdf_ranges": [
+            [
+              1,
+              403
+            ]
+          ],
+          "unique_credited_pdf_pages": 403,
+          "missing_pdf_pages": [],
+          "coverage_contributions": [
+            {
+              "credited_pdf_ranges": [
+                [
+                  2,
+                  11
+                ],
+                [
+                  109,
+                  129
+                ],
+                [
+                  223,
+                  402
+                ]
+              ],
+              "credited_page_count": 211,
+              "reported_visual_pdf_pages": [
+                4,
+                5,
+                223,
+                225,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                301,
+                302,
+                311,
+                312
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "df53a133474843ed01e757c642415c167e8ab179dab3bfd15c5dc0733eae5200"
+            },
+            {
+              "credited_pdf_ranges": [
+                [
+                  12,
+                  108
+                ]
+              ],
+              "credited_page_count": 97,
+              "reported_visual_pdf_pages": [
+                34,
+                35,
+                47,
+                48,
+                65,
+                66,
+                67,
+                78,
+                79,
+                80,
+                99,
+                105,
+                106,
+                107,
+                108
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "25cd31b7d638a2b3888a1d8e219c4401848c4836eae8a19d7b0c6171aa4d0f9e"
+            },
+            {
+              "credited_pdf_ranges": [
+                [
+                  130,
+                  222
+                ]
+              ],
+              "credited_page_count": 93,
+              "reported_visual_pdf_pages": [
+                134,
+                174,
+                200
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "275e09abb5ab99ab88dfb1695a1f077bc48bd039efa784c5a2052376b9056a93"
+            },
+            {
+              "credited_pdf_ranges": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  403,
+                  403
+                ]
+              ],
+              "credited_page_count": 2,
+              "reported_visual_pdf_pages": [
+                1,
+                2,
+                3,
+                9,
+                287,
+                288,
+                289,
+                349,
+                403
+              ],
+              "type": "supplemental visual reading",
+              "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+            }
+          ],
+          "visual_coverage": {
+            "reader_reported_pages": [
+              4,
+              5,
+              34,
+              35,
+              47,
+              48,
+              65,
+              66,
+              67,
+              78,
+              79,
+              80,
+              99,
+              105,
+              106,
+              107,
+              108,
+              134,
+              174,
+              200,
+              223,
+              225,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              301,
+              302,
+              311,
+              312
+            ],
+            "reader_reported_count": 33,
+            "supplemental_auditor_pages": [
+              1,
+              2,
+              3,
+              9,
+              287,
+              288,
+              289,
+              349,
+              403
+            ],
+            "supplemental_count": 9,
+            "combined_pages": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              9,
+              34,
+              35,
+              47,
+              48,
+              65,
+              66,
+              67,
+              78,
+              79,
+              80,
+              99,
+              105,
+              106,
+              107,
+              108,
+              134,
+              174,
+              200,
+              223,
+              225,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              287,
+              288,
+              289,
+              301,
+              302,
+              311,
+              312,
+              349,
+              403
+            ],
+            "combined_count": 42,
+            "every_page_visually_inspected": false,
+            "render_only_excluded_pages": []
+          },
+          "record": "T17-COVERAGE",
+          "snapshot_utc": "2026-10-05T20:54:28.265213+00:00",
+          "new_credit_in_this_audit": 0
+        },
+        "T18": {
+          "mode": "Inherited selected rereading; retained-text and separately listed visual inspections",
+          "one_based_pdf_ranges": [
+            [
+              108,
+              138
+            ]
+          ],
+          "distinct_revisited_pdf_pages": 31,
+          "visually_checked_pdf_positions": [
+            128,
+            134,
+            136
+          ],
+          "evidence": "T18G:P00007–P00025",
+          "new_unique_programme_pages": 0
+        },
+        "T19": {
+          "status": "NO_FRESH_READING_OF_THIS_EXACT_ENGLISH_OBJECT_ESTABLISHED_IN_INSPECTED_T19_RECORDS",
+          "limit": "Separate Arabic first traversals/rereads are identified below and cannot be added to this Drive object’s coverage."
+        },
+        "T20": {
+          "status": "INHERITED_ONLY_NO_FRESH_EXACT_OBJECT_REREAD_ESTABLISHED",
+          "new_unique_programme_pages": 0,
+          "this_audit_primary_reading_credit": 0
+        }
+      },
+      "voice_controls": [
+        "Suleiman’s paraphrase/reconstruction, primary quotations, reported opponents and translator choices remain separate.",
+        "The seven-attribute chain at printed 210/PDF 223 is Ibn Taymiyya’s report of an Ashʿari argument, with parts completed by Suleiman.",
+        "Ibn ʿArabi’s unity of being (PDF 138–153) is not numerical unity of a Creator distinct from creation."
+      ],
+      "material_loci": [
+        {
+          "question": "Concrete essence and inseparable attributes",
+          "pdf": [
+            [
+              123,
+              123
+            ],
+            [
+              168,
+              179
+            ],
+            [
+              190,
+              200
+            ],
+            [
+              253,
+              253
+            ]
+          ],
+          "printed": "110;240; exact PDF ranges otherwise",
+          "guide": "T17G:P00096–P00097"
+        },
+        {
+          "question": "Original giver and pure-perfection eligibility",
+          "pdf": [
+            [
+              248,
+              259
+            ]
+          ],
+          "printed": "235–246",
+          "guide": "T17G:P00099–P00101"
+        },
+        {
+          "question": "Standing acts, wise volition, justice and speech",
+          "pdf": [
+            [
+              254,
+              255
+            ],
+            [
+              290,
+              302
+            ],
+            [
+              310,
+              313
+            ]
+          ],
+          "printed": "241–242;277–289;297–300",
+          "guide": "T17G:P00104–P00113"
+        }
+      ],
+      "unverified_limits": [
+        "Motion/time discussion is an identified scholarly reconstruction, not an independently verified universal ontology.",
+        "Quoted Nubuwwat 2:926 at PDF 302 is not a fresh primary-source reading by virtue of appearing in this book.",
+        "Printed239 note 96 and240 note 99 report edition omissions/order differences without new manuscript inspection."
+      ],
+      "overlap_family_ids": [
+        "F-AKMALIYYA-PERFECTION",
+        "F-ASBAHANI",
+        "F-NUBUWWAT-WISDOM"
+      ]
+    },
+    {
+      "id": "incoherence_atheism",
+      "drive_file_id": "17V1wIb5WwvTZmycm_QG3_N6TlINguU-i",
+      "verified_supplied_drive_url": "https://drive.google.com/file/d/17V1wIb5WwvTZmycm_QG3_N6TlINguU-i/view?usp=drivesdk",
+      "link_scope": "Original user-supplied Drive object resolved through authenticated acquisition. No public-sharing or third-party-access claim; permissions unchanged.",
+      "title": "The Incoherence of Atheism",
+      "authorship": "ʿAbdullah ibn Salih al-ʿUjayri; closing appendix by Ibrahim ibn ʿUmar al-Sakran. Translator not established from supplied front matter; metadata Osman Latiff is not authorial evidence.",
+      "edition": "Sapience Publishing, first edition 2022.",
+      "source_type": "Contemporary accessible cumulative defence, drawing on Ibn Taymiyya and cited scientific/philosophical material.",
+      "actual_supplied_filename": "The_Incoherence_of_Atheism_by_Sheikh_Abdullah_ibn_Salih_Al-Ujayri.pdf",
+      "source_sha256": "3cc829df52e425455d7625c488dd0e86c8e0f2c927d78e8b2c39cda23974bfd1",
+      "source_bytes": 5140557,
+      "pdf_page_count": 217,
+      "title_scope": "Displayed work title as established in the inherited guide; no additional subtitle or missing publication particulars inferred from filename.",
+      "identity_basis": {
+        "record": "T17-COVERAGE",
+        "status": "INHERITED_EXACT_OBJECT_BINDING",
+        "locator": "sources[source_alias=incoherence_atheism]",
+        "bibliography_evidence": [
+          "T17G:P00020",
+          "T17G:P00143",
+          "T17G:P00152"
+        ]
+      },
+      "current_local_original_bytes": {
+        "status": "NOT_RECOVERED_IN_INSPECTED_WORKSPACE",
+        "path": null,
+        "limit": "Five absent original bodies are not declared inaccessible at Drive; current remote permissions were not tested."
+      },
+      "page_convention": "Main printed page + 4 = one-based PDF page.",
+      "reading_history": {
+        "T17": {
+          "mode": "Inherited audited collective substantive reading plus targeted image checks",
+          "exact_covered_pdf_ranges": [
+            [
+              1,
+              217
+            ]
+          ],
+          "unique_credited_pdf_pages": 217,
+          "missing_pdf_pages": [],
+          "coverage_contributions": [
+            {
+              "credited_pdf_ranges": [
+                [
+                  1,
+                  217
+                ]
+              ],
+              "credited_page_count": 217,
+              "reported_visual_pdf_pages": [
+                1,
+                2,
+                3,
+                14,
+                16,
+                20,
+                25,
+                36,
+                37,
+                64,
+                66,
+                69,
+                70,
+                77,
+                78,
+                79,
+                81,
+                99,
+                100,
+                111,
+                119,
+                122,
+                123,
+                129,
+                147,
+                154,
+                158,
+                159,
+                181,
+                199,
+                203,
+                206,
+                208,
+                214,
+                217
+              ],
+              "type": "original substantive reading",
+              "coverage_record_sha256": "fdd5139d94ba6964c996e6fd50970e23b5cff3dc86f2f35f38df72064d03e069"
+            },
+            {
+              "credited_pdf_ranges": [],
+              "credited_page_count": 0,
+              "reported_visual_pdf_pages": [
+                207
+              ],
+              "type": "supplemental visual reading",
+              "coverage_record_sha256": "344a17773d1a07245ae2f5c2da4a7e790cceef1d4c7b9bc1d337af0b612832a9"
+            }
+          ],
+          "visual_coverage": {
+            "reader_reported_pages": [
+              1,
+              2,
+              3,
+              14,
+              16,
+              20,
+              25,
+              36,
+              37,
+              64,
+              66,
+              69,
+              70,
+              77,
+              78,
+              79,
+              81,
+              99,
+              100,
+              111,
+              119,
+              122,
+              123,
+              129,
+              147,
+              154,
+              158,
+              159,
+              181,
+              199,
+              203,
+              206,
+              208,
+              214,
+              217
+            ],
+            "reader_reported_count": 35,
+            "supplemental_auditor_pages": [
+              207
+            ],
+            "supplemental_count": 1,
+            "combined_pages": [
+              1,
+              2,
+              3,
+              14,
+              16,
+              20,
+              25,
+              36,
+              37,
+              64,
+              66,
+              69,
+              70,
+              77,
+              78,
+              79,
+              81,
+              99,
+              100,
+              111,
+              119,
+              122,
+              123,
+              129,
+              147,
+              154,
+              158,
+              159,
+              181,
+              199,
+              203,
+              206,
+              207,
+              208,
+              214,
+              217
+            ],
+            "combined_count": 36,
+            "every_page_visually_inspected": false,
+            "render_only_excluded_pages": []
+          },
+          "record": "T17-COVERAGE",
+          "snapshot_utc": "2026-10-05T20:54:28.265213+00:00",
+          "new_credit_in_this_audit": 0
+        },
+        "T18": {
+          "mode": "Inherited selected rereading; retained-text and separately listed visual inspections",
+          "one_based_pdf_ranges": [
+            [
+              35,
+              36
+            ],
+            [
+              76,
+              79
+            ],
+            [
+              111,
+              112
+            ]
+          ],
+          "distinct_revisited_pdf_pages": 8,
+          "visually_checked_pdf_positions": [],
+          "evidence": "T18G:P00007–P00025",
+          "new_unique_programme_pages": 0
+        },
+        "T19": {
+          "status": "NO_FRESH_READING_OF_THIS_EXACT_ENGLISH_OBJECT_ESTABLISHED_IN_INSPECTED_T19_RECORDS",
+          "limit": "Separate Arabic first traversals/rereads are identified below and cannot be added to this Drive object’s coverage."
+        },
+        "T20": {
+          "status": "INHERITED_ONLY_NO_FRESH_EXACT_OBJECT_REREAD_ESTABLISHED",
+          "new_unique_programme_pages": 0,
+          "this_audit_primary_reading_credit": 0
+        }
+      },
+      "voice_controls": [
+        "Al-Ujayri’s text, al-Sakran’s appendix, translated quotations and modern scientific citations are distinct layers.",
+        "Historical philosophical or scientific assertions are not converted into independently verified empirical results."
+      ],
+      "material_loci": [
+        {
+          "question": "Natural recognition and its relation to reflection",
+          "pdf": [
+            [
+              14,
+              20
+            ],
+            [
+              25,
+              25
+            ]
+          ],
+          "printed": "10–16;21",
+          "guide": "T17G:P00144"
+        },
+        {
+          "question": "Actual origination, borrowed efficacy and modal necessity",
+          "pdf": [
+            [
+              67,
+              81
+            ],
+            [
+              111,
+              111
+            ],
+            [
+              121,
+              123
+            ]
+          ],
+          "printed": "63–77;107;117–119",
+          "guide": "T17G:P00146–P00148"
+        },
+        {
+          "question": "Attributes and objective norms",
+          "pdf": [
+            [
+              29,
+              49
+            ],
+            [
+              70,
+              70
+            ],
+            [
+              99,
+              100
+            ],
+            [
+              108,
+              108
+            ],
+            [
+              125,
+              132
+            ]
+          ],
+          "printed": "25–45;66;95–96;104;121–128",
+          "guide": "T17G:P00150–P00151"
+        },
+        {
+          "question": "Quantitative illustrations need model-specific correction",
+          "pdf": [
+            [
+              147,
+              149
+            ],
+            [
+              154,
+              154
+            ],
+            [
+              157,
+              159
+            ]
+          ],
+          "printed": "143–145;150;153–155",
+          "guide": "T17G:P00155–P00166"
+        }
+      ],
+      "unverified_limits": [
+        "Underlying biological, cosmological and fine-tuning studies were not independently tested.",
+        "The appendix’s Jeans anecdote is mediated; note 363 identifies Eric Metaxas’s 2014 article as its information source. Repetition is not new scientific corroboration.",
+        "Origin of numerical wording errors cannot be allocated to author, translator, editor or typesetter without source originals."
+      ],
+      "overlap_family_ids": [
+        "F-CONTEMPORARY-CUMULATIVE",
+        "F-SHARED-CAUSAL-TRADITION"
+      ]
+    }
+  ],
+  "related_arabic_and_scholarly_overlaps": [
+    {
+      "id": "F-ASBAHANI",
+      "drive_objects": [
+        "asfahani_v23",
+        "oneness_allah"
+      ],
+      "related_witness": {
+        "id": "ASBAHANI-SCAN",
+        "source_url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+        "format": "PDF",
+        "sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+        "edition": "Dar al-Minhaj, first-edition notice 1430 AH; catalogue line 1428 AH",
+        "pdf_positions": 938,
+        "role": "Inherited source; bounded Twentieth reinspection only."
+      },
+      "local_source_path": "SOURCE_BINDINGS:B02 (retained source body; not included)",
+      "relation": "Separately acquired longer edited Arabic witness. Not the English translation bytes, not a new manuscript, and not the exact proven exemplar of Oneness.",
+      "T17_comparison": {
+        "Oneness_main_span": {
+          "english_pdf": [
+            24,
+            47
+          ],
+          "english_printed": [
+            17,
+            40
+          ],
+          "arabic_pdf": [
+            234,
+            252
+          ],
+          "arabic_printed": [
+            134,
+            152
+          ]
+        },
+        "other_controls": [
+          {
+            "english_pdf": 51,
+            "arabic_pdf": 552,
+            "arabic_printed": 452,
+            "subject": "Specification clause"
+          },
+          {
+            "arabic_pdf": [
+              496,
+              510
+            ],
+            "arabic_printed": [
+              396,
+              410
+            ],
+            "subject": "Standing power and wise willing"
+          }
+        ],
+        "evidence": "T17G:P00059;P00069–P00087"
+      },
+      "T19_coverage": {
+        "recorded_pdf_range": [
+          1,
+          938
+        ],
+        "main_printed_read_range": [
+          5,
+          728
+        ],
+        "main_text_end": {
+          "pdf_page": 828,
+          "printed_page": 728
+        },
+        "back_matter_pdf_range": [
+          829,
+          938
+        ],
+        "first_traversal_complete": true,
+        "first_traversal_qualified": true,
+        "fully_read_pages": 931,
+        "blank_pages": [
+          78,
+          830
+        ],
+        "partially_read_facsimile_pages": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ],
+        "unread_pdf_range": [],
+        "all_printed_text_read": true,
+        "every_glyph_read": false,
+        "complete_second_pass": false,
+        "reflective_status": "Selected reflection complete at this boundary; not a second complete traversal.",
+        "post_traversal_reflective_receipts": 33,
+        "substantive_reflective_unique_pages": 442,
+        "substantive_reflective_page_visits": 470,
+        "post_traversal_reflective_pdf_ranges": [
+          [
+            105,
+            125
+          ],
+          [
+            134,
+            255
+          ],
+          [
+            269,
+            286
+          ],
+          [
+            496,
+            568
+          ],
+          [
+            583,
+            600
+          ],
+          [
+            631,
+            815
+          ],
+          [
+            820,
+            824
+          ]
+        ],
+        "separate_earlier_comparison_pdf_pages": [
+          4,
+          143
+        ],
+        "partial_plate_reinspection_pages": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ],
+        "complete_original_composition_recovery_asserted": false
+      },
+      "T20_bounded_rereads": [
+        {
+          "label": "Unity-region reread",
+          "coordinate": "One-based PDF positions",
+          "ranges": [
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                207,
+                254
+              ]
+            }
+          ],
+          "receipt_record": "ASBAHANI-UNITY",
+          "unit_occurrences": 48,
+          "distinct_units": 48,
+          "repeated_unit_occurrences": 0,
+          "distinct_revisited_units": 0,
+          "adds_unique_first_pass_credit": false,
+          "printed_main_ranges": [
+            [
+              107,
+              154
+            ]
+          ],
+          "apparatus_only_pdf_positions": [
+            217,
+            225
+          ]
+        },
+        {
+          "label": "Acts-region reread",
+          "coordinate": "One-based PDF positions",
+          "ranges": [
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                496,
+                568
+              ]
+            }
+          ],
+          "receipt_record": "ASBAHANI-ACTS",
+          "unit_occurrences": 73,
+          "distinct_units": 73,
+          "repeated_unit_occurrences": 0,
+          "distinct_revisited_units": 0,
+          "adds_unique_first_pass_credit": false,
+          "printed_main_ranges": [
+            [
+              396,
+              468
+            ]
+          ]
+        },
+        {
+          "label": "Selected philosophical comparison",
+          "coordinate": "One-based PDF positions",
+          "ranges": [
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                503,
+                531
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                607,
+                609
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                632,
+                637
+              ]
+            }
+          ],
+          "receipt_record": "ASBAHANI-COMPARISON",
+          "unit_occurrences": 38,
+          "distinct_units": 38,
+          "repeated_unit_occurrences": 0,
+          "distinct_revisited_units": 0,
+          "adds_unique_first_pass_credit": false,
+          "printed_main_ranges": [
+            [
+              403,
+              431
+            ],
+            [
+              507,
+              509
+            ],
+            [
+              532,
+              537
+            ]
+          ]
+        },
+        {
+          "label": "Intrinsic necessity continuous reread",
+          "coordinate": "One-based PDF positions",
+          "ranges": [
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                147,
+                207
+              ]
+            }
+          ],
+          "receipt_record": "INTRINSIC-READ",
+          "unit_occurrences": 61,
+          "distinct_units": 61,
+          "repeated_unit_occurrences": 0,
+          "distinct_revisited_units": 0,
+          "adds_unique_first_pass_credit": false
+        },
+        {
+          "label": "Existential account selected revisit",
+          "coordinate": "One-based PDF positions",
+          "ranges": [
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                155,
+                157
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                499,
+                503
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                508,
+                508
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                551,
+                552
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                559,
+                561
+              ]
+            }
+          ],
+          "receipt_record": "GROUND-READ",
+          "unit_occurrences": 14,
+          "distinct_units": 14,
+          "repeated_unit_occurrences": 0,
+          "distinct_revisited_units": 0,
+          "adds_unique_first_pass_credit": false
+        },
+        {
+          "label": "Independent visual verification of that selected revisit",
+          "coordinate": "One-based PDF positions",
+          "ranges": [
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                155,
+                157
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                499,
+                503
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                508,
+                508
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                551,
+                552
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                559,
+                561
+              ]
+            }
+          ],
+          "receipt_record": "GROUND-REVIEW",
+          "unit_occurrences": 14,
+          "distinct_units": 14,
+          "repeated_unit_occurrences": 0,
+          "distinct_revisited_units": 0,
+          "adds_unique_first_pass_credit": false
+        },
+        {
+          "label": "Source-owned testimony reread",
+          "coordinate": "One-based PDF positions",
+          "ranges": [
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                489,
+                491
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                649,
+                653
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                704,
+                720
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                738,
+                739
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                776,
+                782
+              ]
+            },
+            {
+              "witness": "ASBAHANI-SCAN",
+              "range": [
+                825,
+                828
+              ]
+            }
+          ],
+          "receipt_record": "TESTIMONY-READ",
+          "unit_occurrences": 38,
+          "distinct_units": 38,
+          "repeated_unit_occurrences": 0,
+          "distinct_revisited_units": 0,
+          "adds_unique_first_pass_credit": false
+        }
+      ],
+      "T20_overlap_accounting": {
+        "first_two_reread_receipts_distinct_positions": 121,
+        "comparison_receipt_distinct_positions": 38,
+        "shared_positions_between_those_receipts": 29,
+        "union_of_those_first_three_receipts": 130,
+        "intrinsic_necessity_reread_positions": 61,
+        "additional_unique_positions_from_intrinsic_reread": 60,
+        "testimony_reread_positions": 38,
+        "additional_unique_positions_from_testimony_reread": 38,
+        "existential_account_positions": 14,
+        "independent_verification_of_same_positions": 14,
+        "additional_unique_positions_from_these_two_checks": 0,
+        "all_identified_twentieth_distinct_positions": 228,
+        "position_occurrences_across_separately_attributed_sets": 286,
+        "ranges": [
+          [
+            147,
+            254
+          ],
+          [
+            489,
+            491
+          ],
+          [
+            496,
+            568
+          ],
+          [
+            607,
+            609
+          ],
+          [
+            632,
+            637
+          ],
+          [
+            649,
+            653
+          ],
+          [
+            704,
+            720
+          ],
+          [
+            738,
+            739
+          ],
+          [
+            776,
+            782
+          ],
+          [
+            825,
+            828
+          ]
+        ],
+        "apparatus_only_positions_with_no_medieval_author_body_credit": [
+          217,
+          225
+        ],
+        "no_whole_second_traversal": true,
+        "credit_limit": "All positions belong to a previously studied historical volume. Fresh Twentieth rereading is distinguished from new unique programme coverage, which is not claimed."
+      },
+      "textual_controls": [
+        {
+          "locator": "Main 399–450",
+          "status": "Editor identifies an addition from a single witness, sad; this is editorial provenance, not a new manuscript inspection."
+        },
+        {
+          "locator": "Main 412",
+          "status": "Possible missing negation remains unresolved and unrepaired."
+        },
+        {
+          "locator": "Main 606",
+          "status": "Retained saints/prophets distinction remains locally uncertain; no new resolution asserted."
+        },
+        {
+          "locator": "Main 616–617",
+          "status": "Defective or omitted passage and reported restorations remain distinguished from surviving wording."
+        }
+      ],
+      "counting_rule": "Keep English-object page coverage and Arabic-object page coverage in separate ledgers; matching content and alternate translations do not multiply independent evidential support."
+    },
+    {
+      "id": "F-DAR-EPISTEMOLOGY",
+      "drive_objects": [
+        "el_tobgui_2013",
+        "ibn_taymiyyah_epistemology"
+      ],
+      "related_T20_work": "DAR",
+      "relation": "Modern reconstructions and later direct Arabic Darʾ 8/9 studies concern overlapping authorial material. The thesis is not an alternate byte witness of the direct Arabic objects.",
+      "scope_reference": "SOURCE_BINDINGS:E02 (READING_INDEX.json; retained original)#/works/DAR",
+      "counting_rule": "Distinct scholarly analyses can be identified as analyses; they cannot be counted as independent primary attestations of the same argument."
+    },
+    {
+      "id": "F-MODERN-EPISTEMOLOGY",
+      "drive_objects": [
+        "el_tobgui_2013",
+        "ibn_taymiyyah_epistemology"
+      ],
+      "relation": "El-Tobgui thesis/article and Turner’s adapted versions overlap; repeated MF 6:73 citations at anthology PDF 15,23,26,36,56 are not five independent discoveries.",
+      "evidence": "T17G:P00135–P00140"
+    },
+    {
+      "id": "F-AKMALIYYA-PERFECTION",
+      "drive_objects": [
+        "attributes_god",
+        "asfahani_v23",
+        "ibn_taymiyyah_epistemology"
+      ],
+      "related_T20_work": "AKMALIYYA",
+      "relation": "Suleiman’s Akmaliyya reconstruction at PDF 248–259, the translated perfection routes and repeated anthology references overlap with the direct received Arabic answer. Three T20 full-answer readers read the same witness; duplicated diacritized/plain versions are one witness.",
+      "scope_reference": "SOURCE_BINDINGS:E02 (READING_INDEX.json; retained original)#/works/AKMALIYYA",
+      "evidence": "T17G:P00039;P00099–P00101;P00135"
+    },
+    {
+      "id": "F-MINHAJ-COOPERATION",
+      "drive_objects": [
+        "oneness_allah"
+      ],
+      "related_T20_work": "MINHAJ",
+      "relation": "Oneness note 19/PDF 33 cites3:326–328 and note 32/PDF 47 cites3:321–322. Direct electronic bodies and later volume3 reading provide context; different hosts do not establish separate manuscript testimony.",
+      "evidence": "T17G:P00085–P00087",
+      "scope_reference": "SOURCE_BINDINGS:E02 (READING_INDEX.json; retained original)#/works/MINHAJ"
+    },
+    {
+      "id": "F-NUBUWWAT-WISDOM",
+      "drive_objects": [
+        "attributes_god"
+      ],
+      "related_T20_work": "NUBUWWAT",
+      "relation": "Suleiman PDF 302 quotes Nubuwwat 2:926. Later direct Arabic study must retain its own witness and coordinates, rather than treating the quoted locator as a new scan verification.",
+      "evidence": "T17G:P00109",
+      "scope_reference": "SOURCE_BINDINGS:E02 (READING_INDEX.json; retained original)#/works/NUBUWWAT"
+    },
+    {
+      "id": "F-CONTEMPORARY-CUMULATIVE",
+      "drive_objects": [
+        "incoherence_atheism"
+      ],
+      "relation": "Contemporary re-presentation, appendix and cited modern sources remain mediated. No multiplied scientific evidence from repeated anecdotes.",
+      "evidence": "T17G:P00143–P00152"
+    },
+    {
+      "id": "F-SHARED-CAUSAL-TRADITION",
+      "drive_objects": [
+        "asfahani_v23",
+        "oneness_allah",
+        "incoherence_atheism",
+        "attributes_god",
+        "el_tobgui_2013"
+      ],
+      "relation": "Shared causal, perfection and recognitional arguments may corroborate interpretation while remaining intellectually dependent. Six supplied objects are not six independent tests of metaphysical truth."
+    }
+  ],
+  "result_and_question_links": [
+    {
+      "id": "DRIVE-R01",
+      "title": "Necessary Being and the typed original-bearer bridge",
+      "T20_result_ids": [
+        "T20-TYPED-ORIGINAL-BEARER-ABC"
+      ],
+      "result_path": "SOURCE_BINDINGS:E04 (THEOREM_SOURCE_MAP.json; retained original)",
+      "report_section": "From an original resource to the same necessary bearer",
+      "source_links": [
+        {
+          "drive_object": "asfahani_v23",
+          "url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+          "locator": "PDF 29–34 / printed 22–27",
+          "inherited_guide_locator": "T17G:P00025–P00033"
+        },
+        {
+          "drive_object": "el_tobgui_2013",
+          "url": "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+          "locator": "PDF 253–264;270–294",
+          "inherited_guide_locator": "T17G:P00122–P00123"
+        },
+        {
+          "drive_object": "incoherence_atheism",
+          "url": "https://drive.google.com/file/d/17V1wIb5WwvTZmycm_QG3_N6TlINguU-i/view?usp=drivesdk",
+          "locator": "PDF 67–81;111;121–123",
+          "inherited_guide_locator": "T17G:P00146–P00148"
+        }
+      ],
+      "contribution": "Inherited source case distinguishes concrete sufficiency, received existence and necessity. T20 formalises typed original resource→same bearer, then separately exposes contingency-as-need, constitutive transport and representation assumptions.",
+      "current_boundary": "Provisional sufficient-warrant Necessary Being acceptance remains philosophical; this audit reruns no Lean proof and the sources do not supply a modern exhaustive ontology by citation alone."
+    },
+    {
+      "id": "DRIVE-R02",
+      "title": "Causal nonduplication and essentiality transfer",
+      "T20_result_ids": [
+        "T20-CND-ESSENTIALITY-SCOPE"
+      ],
+      "result_path": "SOURCE_BINDINGS:E30 (MANIFEST_v1.json; retained original)",
+      "report_section": "Causal nonduplication and standing capacity",
+      "source_links": [
+        {
+          "drive_object": "oneness_allah",
+          "url": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+          "locator": "PDF 24–36 / printed 17–29",
+          "inherited_guide_locator": "T17G:P00062–P00064"
+        },
+        {
+          "drive_object": "asfahani_v23",
+          "url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+          "locator": "PDF 36–44;114–118",
+          "inherited_guide_locator": "T17G:P00036;P00039–P00041"
+        }
+      ],
+      "related_primary_links": [
+        {
+          "url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+          "locator": "Arabic PDF 147–207 / printed 47–107",
+          "receipt": "SOURCE_BINDINGS:E31 (SOURCE_READ_SCOPE_v1.json; retained original)"
+        }
+      ],
+      "contribution": "Source ideas of original power, inseparable qualification and concrete bearer constrain a new conditional transfer audit. CND alone does not entail essential nonreceipt; original-role retention and receipt-to-same-contribution overlap do further work.",
+      "current_boundary": "No fresh warrant for every formal premise and no new independent English-source reading; the 61-page Arabic revisit is part of the same previously studied Arabic witness."
+    },
+    {
+      "id": "DRIVE-R03",
+      "title": "Connected creation and the actual common-source appraisal",
+      "T20_result_ids": [
+        "T20-ANCHORED-FIELD-SOURCE",
+        "T20-GLOBAL-PLENITUDE-APPRAISAL"
+      ],
+      "result_path": "SOURCE_BINDINGS:E07 (ROOT_CURRENT_APPRAISAL_20261007_143400.md; retained original)",
+      "report_section": "From a qualified source to common field provision; Current philosophical assessment",
+      "source_links": [
+        {
+          "drive_object": "oneness_allah",
+          "url": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+          "locator": "PDF 24–47, especially 37–40; notes 19 and 32 at 33 and 47",
+          "inherited_guide_locator": "T17G:P00059–P00087"
+        },
+        {
+          "drive_object": "attributes_god",
+          "url": "https://drive.google.com/file/d/1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ/view?usp=drivesdk",
+          "locator": "PDF 248–259",
+          "inherited_guide_locator": "T17G:P00099–P00101"
+        }
+      ],
+      "related_primary_links": [
+        {
+          "url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+          "locator": "Arabic PDF 207–254 / printed 107–154",
+          "receipt": "SOURCE_BINDINGS:E10 (READING_LOG.json; retained original)"
+        }
+      ],
+      "contribution": "The supplied Oneness argument already includes connected creation, compatible cooperation and fuller cited replies. T20’s exact same-object reread and Arabic contextual checks prevent describing that case as a mere disagreement dilemma or a newly discovered argument.",
+      "current_boundary": "At 14:34 UTC the actual field-bounded common-source claim is provisionally accepted at lower confidence than Necessary Being; universal SourceMode remains withheld. Historical T17–T19 and earlier T20 judgements remain dated and unchanged. Conditional incidence proofs do not resolve their application premises."
+    },
+    {
+      "id": "DRIVE-R04",
+      "title": "Perfection ascent versus thin original ground",
+      "T20_result_ids": [
+        "T20-ORIGINAL-GROUND-ROBUSTNESS",
+        "T20-JOINT-SAME-BEARER-MODEL"
+      ],
+      "result_path": "SOURCE_BINDINGS:E28 (PHILOSOPHICAL_APPRAISAL_v2.md; retained original)",
+      "report_section": "Original ground and the limits of observation",
+      "source_links": [
+        {
+          "drive_object": "asfahani_v23",
+          "url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+          "locator": "PDF 116–118;134–137",
+          "inherited_guide_locator": "T17G:P00039"
+        },
+        {
+          "drive_object": "attributes_god",
+          "url": "https://drive.google.com/file/d/1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ/view?usp=drivesdk",
+          "locator": "PDF 248–259, especially 252–253",
+          "inherited_guide_locator": "T17G:P00099–P00101"
+        },
+        {
+          "drive_object": "el_tobgui_2013",
+          "url": "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+          "locator": "PDF 270–294;314–326",
+          "inherited_guide_locator": "T17G:P00122–P00124"
+        }
+      ],
+      "related_primary_links": [
+        {
+          "url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+          "locator": "Arabic PDF 155–157;499–503;508;551–552;559–561",
+          "receipt": "SOURCE_BINDINGS:E29 (SOURCE_AND_PREMISE_BINDING_v1.json; retained original)"
+        }
+      ],
+      "contribution": "The sources have broader pure-perfection and original-giver arguments. A thin powerless model therefore tests only a thin interface and does not refute those additional premises. Reified necessary-bearer language and mere nonobjectual fact language must be distinguished.",
+      "current_boundary": "Standing capacity and actual efficient provision remain different conclusions. Finite interpretations establish declared relative consistency, not metaphysical possibility or the whole philosophical attribute profile."
+    },
+    {
+      "id": "DRIVE-R05",
+      "title": "Source-owned veracity and the ownership boundary",
+      "T20_result_ids": [
+        "T20-VERACITY-DEPENDENCY-AUDIT"
+      ],
+      "result_path": "SOURCE_BINDINGS:E05 (SOURCE_PREMISE_MAP.json; retained original)",
+      "report_section": "Assertion ownership and veracity",
+      "source_links": [
+        {
+          "drive_object": "attributes_god",
+          "url": "https://drive.google.com/file/d/1bnIdhLEOw2_P2p7xanFqbN9m8OBoNIEQ/view?usp=drivesdk",
+          "locator": "PDF 254–255;297–302;310–313",
+          "inherited_guide_locator": "T17G:P00107–P00113"
+        },
+        {
+          "drive_object": "asfahani_v23",
+          "url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+          "locator": "PDF 46–51;114–118;228–237",
+          "inherited_guide_locator": "T17G:P00037–P00044"
+        }
+      ],
+      "contribution": "The T20 premise map expressly cites inherited T17 guide P00107 and P00109 for practical conformance and wisdom. Relevant knowledge, awareness/control, shortcoming classification, all-context fittingness and actual conformance remain separate.",
+      "current_boundary": "Historical T17 essential-T0 acceptance is not erased, but this audit supplies no new warrant for it. A productive source is not automatically the speaker of a creature’s assertion, and truthfulness does not authenticate an alleged revelation."
+    },
+    {
+      "id": "DRIVE-R06",
+      "title": "Basic recognition and sufficient warrant",
+      "T20_result_ids": [
+        "CURRENT-1434-RECOGNITION"
+      ],
+      "result_path": "SOURCE_BINDINGS:E06 (ROOT_CURRENT_APPRAISAL_20261007_143400.json; retained original)",
+      "report_section": "Current philosophical assessment",
+      "source_links": [
+        {
+          "drive_object": "el_tobgui_2013",
+          "url": "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+          "locator": "PDF 21;272;276;278;299;305–306;312",
+          "inherited_guide_locator": "T17G:P00119–P00124"
+        },
+        {
+          "drive_object": "ibn_taymiyyah_epistemology",
+          "url": "https://drive.google.com/file/d/1iBAiImdDodsmO7qY4bykiiFzLd8IxmjM/view?usp=drivesdk",
+          "locator": "PDF 15;23;26;32;36;56;60;64;91",
+          "inherited_guide_locator": "T17G:P00135–P00140"
+        },
+        {
+          "drive_object": "incoherence_atheism",
+          "url": "https://drive.google.com/file/d/17V1wIb5WwvTZmycm_QG3_N6TlINguU-i/view?usp=drivesdk",
+          "locator": "PDF 14–20;25",
+          "inherited_guide_locator": "T17G:P00144"
+        }
+      ],
+      "contribution": "The historical sources claim actual Creator-knowledge, while Turner’s proper-function construction has its own explicit conditional scope. Relatively basic knowledge need not await a prior complete theory of reliability.",
+      "current_boundary": "T20 accepts epistemological admissibility of warranted basic Creator-recognition, not an independently certified universal empirical faculty or every particular recognition. Repeated MF 6:73 references are one overlapping source family."
+    },
+    {
+      "id": "DRIVE-R07",
+      "title": "Cumulative testimony and shared-source copying",
+      "T20_result_ids": [
+        "T20-GROUNDED-CONTINUATION-SUPPORT",
+        "T20-TRACE-OBSERVATION-COPYING"
+      ],
+      "result_path": "SOURCE_BINDINGS:E32 (SOURCE_MANIFEST.json; retained original)",
+      "report_section": "Grounded testimony and warranted continuation; Deletion traces and copied observations",
+      "source_links": [
+        {
+          "drive_object": "ibn_taymiyyah_epistemology",
+          "url": "https://drive.google.com/file/d/1iBAiImdDodsmO7qY4bykiiFzLd8IxmjM/view?usp=drivesdk",
+          "locator": "PDF 77–85;91;116",
+          "inherited_guide_locator": "T17G:P00138–P00140"
+        },
+        {
+          "drive_object": "asfahani_v23",
+          "url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+          "locator": "PDF 144–145;154;180–183",
+          "inherited_guide_locator": "T17G:P00043"
+        }
+      ],
+      "contribution": "The sources motivate qualitative, contextual and dependence-sensitive testimony assessment. Shared roots, adapted versions and copied observations cannot be treated as fresh independent support. This is a conceptual relation to the T20 formal provenance work.",
+      "current_boundary": "The finite support/alias-cut and deletion-channel theorems are T20 mathematical work with their own evidence; they are not theorems proved by these theological books and do not infer the actual root map."
+    },
+    {
+      "id": "DRIVE-R08",
+      "title": "Numerical illustrations and model-specific validation",
+      "T20_result_ids": [
+        "INHERITED-T17-NUMERICAL-CORRECTIONS"
+      ],
+      "result_path": "SOURCE_BINDINGS:E25 (Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.txt; retained original)",
+      "report_section": "Methodological source-control boundary",
+      "source_links": [
+        {
+          "drive_object": "incoherence_atheism",
+          "url": "https://drive.google.com/file/d/17V1wIb5WwvTZmycm_QG3_N6TlINguU-i/view?usp=drivesdk",
+          "locator": "PDF 147–149;154;157–159",
+          "inherited_guide_locator": "T17G:P00155–P00166"
+        }
+      ],
+      "contribution": "Prior corrections distinguish a digit from a full four-digit code, 10^10 from one billion, with-replacement from without-replacement draws, and small positive probability from impossibility. Their model-specific status is a control against decorative numerical authority.",
+      "current_boundary": "Inherited findings, not new T20 discoveries, independent source experiments, or disproof of the separate causal/recognitional arguments. No new scientific literature validation is claimed."
+    },
+    {
+      "id": "DRIVE-R09",
+      "title": "Translation and editorial apparatus controls",
+      "T20_result_ids": [
+        "T20-ONENESS-CONTEXTUAL-CONFIRMATION"
+      ],
+      "result_path": "SOURCE_BINDINGS:E09 (ONENESS_READ_SCOPE.json; retained original)",
+      "report_section": "Arabic source study and rereading",
+      "source_links": [
+        {
+          "drive_object": "oneness_allah",
+          "url": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+          "locator": "PDF 31;35;38;44;54",
+          "inherited_guide_locator": "T17G:P00068;P00075–P00078"
+        },
+        {
+          "drive_object": "asfahani_v23",
+          "url": "https://drive.google.com/file/d/1K5hs__uav9eYDNCgSG_0ei_wCPtM4Uym/view?usp=drivesdk",
+          "locator": "PDF 12;29;31–33;51;85",
+          "inherited_guide_locator": "T17G:P00049–P00056;P00071–P00073"
+        }
+      ],
+      "related_primary_links": [
+        {
+          "url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+          "locator": "Arabic PDF 240–242;245;250;552",
+          "receipt": "T17G:P00071–P00078; ONENESS-READ"
+        }
+      ],
+      "contribution": "Translation, diagram, reported variant and authorial-body claims retain separate voices. T20 confirms the prior Figure 3a defect against the retained prose and Arabic context.",
+      "current_boundary": "No new discovery credit for the diagram problem; no complete translation reliability verdict, resolved translator ancestry or new manuscript collation."
+    }
+  ],
+  "results_without_direct_Drive_proof_source": [
+    {
+      "result_ids": [
+        "T20-CHURCH-RAW-PROBE",
+        "T20-SCALAR-FUSION-IFF",
+        "T20-HASE-FURTHER-FAILED-ROUTES",
+        "T20-PTS-NORMALIZATION-TRANSFER"
+      ],
+      "scope": "No direct proof-source relation to the six Drive theological/epistemological PDFs is established. Exact HasE, Lean declarations and normalisation transfer must cite their own mathematical source/verification records."
+    },
+    {
+      "result_ids": [
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER",
+        "T20-MODAL-CROSSING-COMPLETENESS"
+      ],
+      "scope": "The Drive corpus can frame philosophical or epistemic interpretation but does not provide upstream controller completeness, a semantics bridge or actual-world warrant for modal crossing assumptions."
+    }
+  ],
+  "current_appraisal_boundaries": {
+    "as_of_utc": "2026-10-07T14:34:00Z",
+    "record": "CURRENT-1434-JSON",
+    "narrative_record": "CURRENT-1434-MD",
+    "necessary_being": "Provisional sufficient-warrant acceptance.",
+    "actual_complete_common_original_source": "Provisional sufficient-warrant acceptance, lower confidence than Necessary Being.",
+    "universal_source_mode": "Sufficient warrant withheld.",
+    "basic_creator_recognition": "Epistemological admissibility accepted; no universal empirical faculty or particular-recognition certification.",
+    "positive_reason": "Residual integration/economy advantage of genuine one-bearer original provision of the actual connected field, with comprehensive scope appraised as an additional explanatory commitment.",
+    "strongest_live_objection": "Principled intrinsic harmony, disguised complexity or excessive cost of comprehensive competence could defeat the comparison if sufficiently established; no complete rival cosmology is demanded.",
+    "history": "Dated successor judgement, not retrospective consensus. Earlier withholding appraisals and historical Seventeenth/Nineteenth judgements remain unchanged.",
+    "credit_limit": "Expressed philosophical appraisal; no new scientific or kernel execution, no claim that the synthesising author personally performed every full-body or scan reading."
+  },
+  "access_and_unavailability": {
+    "remote_calls_made": 0,
+    "reacquisitions_made": 0,
+    "held_access_denials_retried": 0,
+    "fresh_permission_verification": false,
+    "Drive_identity_status": "All six IDs grounded by exact inherited authenticated-acquisition records. No supplied Drive ID is asserted currently denied; current availability was not tested.",
+    "local_body_status": "Only Oneness original PDF was found under the two inspected workspace roots using the six identifying filename families. Other five hashes are inherited original-file identities, not freshly rehashed source bodies.",
+    "Arabic_denial_boundary": "Previously denied Arabic or comparator objects remain excluded. This audit uses only already held records and does not bypass denials, newly access alternate hosts or convert metadata into reading credit.",
+    "sharing_boundary": "Exact Drive links are owner-supplied identity/retrieval locators; no public access, sharing change or redistribution permission is asserted."
+  },
+  "integration_findings": [
+    {
+      "id": "IF01",
+      "severity": "PROVENANCE_GAP",
+      "finding": "T20 index witness ONENESS-SUPPLIED has source_url=null despite exact supplied Drive URL retained in T17 coverage and ONENESS_SOURCE_IDENTITY.",
+      "proposed_fix": "Use the verified original Drive URL in the final methodology supplement or explicitly bind it to that witness; preserve no-public-access qualification."
+    },
+    {
+      "id": "IF02",
+      "severity": "CORPUS_SCOPE_GAP",
+      "finding": "T20 Arabic reading index has 13 work entries, including Oneness, but no original-witness entries for the other five Drive supplied objects.",
+      "proposed_fix": "Include this six-object supplement alongside the Arabic and OpenAI/math methodology. Do not describe those five as freshly read in T20."
+    },
+    {
+      "id": "IF03",
+      "severity": "OVERLAP_CONTROL",
+      "finding": "All T18 and T20 supplied-object rereads are within the T17 inherited 1393-page union. Arabic Asbahani T20 rereads are also within the qualified T19 traversal.",
+      "proposed_fix": "Report stage-specific modes/intervals and do not add them into a unique-page grand total or number of independent witnesses."
+    },
+    {
+      "id": "IF04",
+      "severity": "HISTORICAL_APPRAISAL_CONTROL",
+      "finding": "Early research ledger and some source papers preserve 08:40 withholding; the 14:34 successor accepts the actual common-source claim while still withholding universal SourceMode.",
+      "proposed_fix": "Use the dated current appraisal for current conclusions and preserve older records as historical judgements."
+    }
+  ],
+  "not_claimed": [
+    "All six source objects freshly read or reacquired in T20.",
+    "Every supplied page visually inspected.",
+    "Authentication of every quotation, empirical claim, bibliography entry or cited source.",
+    "Complete original publication restoration for abridged anthology components.",
+    "Identity of Oneness translator, publisher, date or exact exemplar.",
+    "Independent manuscript collation or six independent tests of a shared argument.",
+    "Fresh philosophical, scientific or kernel verification from this metadata audit."
+  ],
+  "evidence_legend": {
+    "T17-COVERAGE": "SOURCE_BINDINGS:E17 (six_source_coverage.json; retained original)",
+    "T17G": "SOURCE_BINDINGS:E25 (Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.txt; retained original)",
+    "T18G": "SOURCE_BINDINGS:E23 (Orthemology_Eighteenth_Source_and_Validation_Guide_Final_v1_20261006.txt; retained original)",
+    "T19G": "SOURCE_BINDINGS:E24 (Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.txt; retained original)",
+    "T19-ARABIC-INDEX": "SOURCE_BINDINGS:E15 (Arabic_Volume_Reading_Index.json; retained original)",
+    "T20-INDEX": "SOURCE_BINDINGS:E02 (READING_INDEX.json; retained original)",
+    "ONENESS-READ": "SOURCE_BINDINGS:E09 (ONENESS_READ_SCOPE.json; retained original)"
+  },
+  "body_free": true,
+  "source_books_or_page_images_included": false,
+  "publication_projection_scope": "Full six-object methodology ledger; nine mapping entries are result/question areas, not nine new research results. T20_result_ids contains result-or-question references: T20-GLOBAL-PLENITUDE-APPRAISAL and CURRENT-1434-RECOGNITION are appraisal labels, not native result identifiers; their current native synthesis owner is T20-FOUNDATIONAL-PREMISE-SYNTHESIS. SOURCE_BINDINGS record identifiers retain original evidence hashes and locators without publishing private custody paths. Original audit and reading scopes are unchanged; this projection adds no reading, acquisition, science or replay."
+}

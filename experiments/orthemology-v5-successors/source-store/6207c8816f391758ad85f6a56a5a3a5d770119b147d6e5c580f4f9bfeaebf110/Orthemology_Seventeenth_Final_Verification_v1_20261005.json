@@ -1,0 +1,107 @@
+{
+  "format_version": 1,
+  "status": "VERIFIED_RESEARCH_RETURN_READY_FOR_DELIVERY",
+  "programme": "Same Orthemology v5 research programme",
+  "tranche": "Seventeenth",
+  "authorship": "Prepared by dot, an AI assistant powered by OpenAI. Separate AI-assisted review is not external human-specialist validation.",
+  "qualified_at_utc": "2026-10-05T23:54:25+00:00",
+  "research_window": {
+    "started_utc": "2026-10-05T17:54:18.523061+00:00",
+    "earliest_completion_utc": "2026-10-05T23:54:18.523061+00:00",
+    "ceiling_utc": "2026-10-06T05:54:18.523061+00:00",
+    "elapsed_seconds_at_qualification": 21606.476939,
+    "six_hour_floor_met": true,
+    "twelve_hour_ceiling_respected": true
+  },
+  "artifacts": [
+    {
+      "filename": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "bytes": 65239,
+      "sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608"
+    },
+    {
+      "filename": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "bytes": 56611,
+      "sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9"
+    },
+    {
+      "filename": "Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.docx",
+      "bytes": 45148,
+      "sha256": "764c038e4cd2febb74c23e19c15cc86f6377c65f376964b3a33512a7ac83cf89"
+    },
+    {
+      "filename": "Orthemology_Seventeenth_Research_Final_Evidence_v1_20261005.zip",
+      "bytes": 95685,
+      "sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb"
+    }
+  ],
+  "documents": {
+    "research_report": {
+      "pages": 23,
+      "native_body_paragraphs": 198,
+      "hyperlink_occurrences": 22,
+      "complete_text_and_all_page_visual_review": "PASS; unchanged page-image identities carried forward where documented"
+    },
+    "source_guide": {
+      "pages": 15,
+      "native_body_paragraphs": 179,
+      "hyperlink_occurrences": 19,
+      "complete_text_and_all_page_visual_review": "PASS"
+    },
+    "mathematical_companion": {
+      "pages": 15,
+      "native_body_paragraphs": 195,
+      "native_editable_equations": 398,
+      "display_equations": 36,
+      "inline_equations": 362,
+      "equation_images": 0,
+      "complete_text_and_all_page_visual_review": "PASS; final authorship-only delta separately verified",
+      "native_editability_scope": "Verified structurally in OOXML; not an interactive test in every office application"
+    }
+  },
+  "source_coverage": {
+    "supplied_pdf_count": 6,
+    "supplied_pdf_pages_checked": 1393,
+    "targeted_visual_page_snapshot": 190,
+    "coverage_scope": "Receipt-backed team reading of all supplied pages, including notes, supplied appendices, bibliographies, indices and image-only material; not all pages visually inspected and not all underlying cited works independently verified.",
+    "additional_arabic_scan_pages": 938,
+    "additional_arabic_frozen_scope": {
+      "distinct_main_text_pages": 78,
+      "distinct_context_pages": 17,
+      "entire_scan_read": false
+    },
+    "additional_electronic_scope": "Bounded primary passages on cooperation and intrinsic speech, with exact ranges in the evidence package; no verified edition-specific print mapping or independent manuscript witnesses."
+  },
+  "evidence_package": {
+    "regular_members": 32,
+    "manifest_sha256": "c18fb7bf49cec25b2fbcab01af321259f2d2f88a2f35ea52aac5e99e8ff7bb85",
+    "crc_and_reopened_member_identity_check": "PASS",
+    "fresh_extraction_replay": "PASS",
+    "distinct_top_level_unit_test_methods": 78,
+    "nested_regression_executions_not_added_to_method_count": true,
+    "synthetic_orbit_controls": "PASS; 57 conditional and 15 unconditional rank inequalities, extreme-tail and common-orientation counterexamples, and resolution cases",
+    "separate_trusted_manifest_verification": "PASS",
+    "source_metadata_consistency_is_not_provenance_authentication": true,
+    "raw_participant_dataset_replay_included": false,
+    "aggregate_arithmetic_and_historical_certificate_checks": "PASS",
+    "external_docx_files_in_zip": false
+  },
+  "portability": {
+    "documented_minimum_python": "3.11",
+    "executed_runtime": "CPython 3.12.14 on Linux",
+    "ordinary_relocation": "PASS",
+    "strict_ascii_locale_with_utf8_mode_disabled": "PASS after six explicit UTF-8 metadata-reader repairs",
+    "spaced_and_arabic_character_directory": "PASS",
+    "regression_failed_before_repair_and_passed_after": true,
+    "windows_execution_performed": false,
+    "network_acquisition_required": false
+  },
+  "scope_limits": [
+    "Philosophical conclusions retain their defended premises and reported disagreements; document or hash verification does not prove them.",
+    "Written proofs and finite checks are not Lean or other proof-kernel verification.",
+    "The external probability theorem used by the post-inspection certificate remains an explicit dependency; its proof is not reproduced.",
+    "The package checks synthetic examples and supplied aggregate arithmetic, not omitted participant rows or an actual historical assignment mechanism.",
+    "No new participant experiment, external human-specialist endorsement, actual revelation authentication or canonical programme adoption is claimed.",
+    "Raw source books, electronic primary bodies, participant records, correspondence and private working reports are not distributed."
+  ]
+}

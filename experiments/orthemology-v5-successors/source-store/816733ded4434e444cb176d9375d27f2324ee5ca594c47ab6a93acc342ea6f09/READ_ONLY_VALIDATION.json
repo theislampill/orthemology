@@ -1,0 +1,14 @@
+{
+  "schema": "foundational-read-only-integrity-v1",
+  "observed_utc": "2026-10-07T08:43:41.186952+00:00",
+  "source_files_byte_checked": 23,
+  "source_receipt_bindings_checked": 16,
+  "formal_modules": 9,
+  "indexed_theorems": 124,
+  "candidate_head": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+  "git_status_porcelain": "",
+  "kernel_or_model_suites_this_audit": "NOT_RUN",
+  "source_changes": "NONE",
+  "status": "PASS_READ_ONLY_IDENTITY_AND_BINDINGS",
+  "caveat": "No fresh proof check, model replay, primary source collation, philosophical premise verification, adoption or publication."
+}

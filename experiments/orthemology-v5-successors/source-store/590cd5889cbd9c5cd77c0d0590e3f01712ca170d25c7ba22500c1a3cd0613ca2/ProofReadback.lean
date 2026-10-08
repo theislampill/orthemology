@@ -1,0 +1,11 @@
+import BridgeControls
+#print Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource
+#print Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness
+#print Orthemology.Tranche20.OriginalBearerBridge.FullPremises
+#print Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_resource
+#print Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion
+#print Orthemology.Tranche20.OriginalBearerBridge.root_to_inherited
+#print Orthemology.Tranche20.OriginalBearerBridge.need_to_inherited
+#print Orthemology.Tranche20.OriginalBearerBridge.constitution_to_inherited
+#print Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original
+#print Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness

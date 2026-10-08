@@ -1,0 +1,248 @@
+{
+  "schema": "authored-docx-public-conversion-diff-v1",
+  "original_filename": "Orthemology_Eighteenth_Mathematical_Companion_Final_v1_20261006.docx",
+  "original_bytes": 51850,
+  "original_sha256": "e1cacf4081f897cdd8eacea9fd8cc75274e4f6f3d90845a01082112b00242960",
+  "document_xml_sha256": "9fa257ff303762c413a757d4b05eb32dd5fa3c6d334109e4d54d8891d572e7d4",
+  "public_filename": "Orthemology_Eighteenth_Mathematical_Companion_Final_v1_20261006.md",
+  "public_bytes": 80440,
+  "public_sha256": "578f6f4bc699f0658d77e0eff4dc39b995410b35f7380ddf02f68ed15550e70a",
+  "added_projection_notice_exact": "> **DERIVED public reading projection.** Original DOCX `Orthemology_Eighteenth_Mathematical_Companion_Final_v1_20261006.docx`; original SHA-256 `e1cacf4081f897cdd8eacea9fd8cc75274e4f6f3d90845a01082112b00242960`. This projection was prepared on 7 October 2026. Original authored text order, link destinations, native mathematics, AI attribution, dates, and scope limitations are retained. Research, reading, review, and verification claims below remain the source’s dated claims, not fresh acceptance or replication. Internal page references name the original DOCX pagination; Markdown has no matching page numbers. Where present, native equations are rendered as TeX with an exact source-to-projection map and declared spacing and prime-glyph normalization. Word typography, pagination, and dynamic page-number fields are not reproduced.\n\n",
+  "converter": "Pandoc 3.1.11.1, DOCX to AST to GFM, wrap=none; finite title/style/spacing assembly",
+  "native_counts": {
+    "w:p": 266,
+    "w:tbl": 0,
+    "m:oMath": 455,
+    "w:footnoteReference": 0,
+    "w:endnoteReference": 0,
+    "w:ins": 0,
+    "w:del": 0,
+    "w:drawing": 0,
+    "w:pict": 0,
+    "w:hyperlink": 0,
+    "w:sym": 0
+  },
+  "literal_coverage": {
+    "nonempty_source_paragraphs": 266,
+    "public_body_paragraphs": 266,
+    "native_to_pandoc_ast_whitespace_normalized_literal_and_math_positions_equal": true,
+    "gfm_round_trip_text_and_math_positions_equal_after_NFC": true,
+    "gfm_reader_canonical_unicode_normalizations": [],
+    "native_and_public_math_objects": 455,
+    "math_round_trip_equal": true,
+    "hyperlinks_in_order": 0,
+    "hyperlink_labels_and_external_targets_equal": true,
+    "public_links_match_pandoc_targets_in_order": true,
+    "internal_bookmark_remaps": [],
+    "source_and_public_normalized_paragraph_sequence_sha256": "50f3a30d7aa411a04e080c7c9cadbe8bdf7c2cf5048d0d1199ba8a2921c316cb"
+  },
+  "changes": [
+    {
+      "kind": "format",
+      "detail": "OOXML archive converted to GFM UTF-8, preserving all native body literal text and math positions in original paragraph order under whitespace normalization."
+    },
+    {
+      "kind": "restore_source_cover",
+      "detail": "Pandoc title and subtitle metadata reinserted before source body, preserving original author/date text; a title-internal line break becomes a space."
+    },
+    {
+      "kind": "typography",
+      "detail": "Direct hyperlink underline becomes ordinary Markdown hyperlink style. Other supported emphasis, bookmarks and RTL spans retained. Font, margins, pagination, line wrapping and blank-paragraph geometry not retained."
+    },
+    {
+      "kind": "added_projection_notice",
+      "detail": "A separately identified leading projection notice supplies custody, historical-credit and rendering limitations; Arabic index additionally retains substantive running header/footer text."
+    },
+    {
+      "kind": "native_math",
+      "detail": "OMML to TeX in document order; exact normalized native trees and public TeX bound in companion math map where applicable. Spacing and prime-glyph fixes are individually enumerated below."
+    }
+  ],
+  "math_conversion_repairs": [
+    {
+      "equation_ordinal": 7,
+      "before_tex": "P_{i}\\text{:}S\\text{×}A\\text{×}S\\text{→}\\text{[}0\\text{,}1\\text{]}\\text{,}\\text{\\quad\\quad}\\sum_{y\\text{∈}S}^{}P_{i}\\text{(}s\\text{,}a\\text{,}y\\text{)}\\text{=}1\\text{,}\\text{\\quad\\quad}d_{i}\\text{:}S\\text{×}A\\text{→}\\text{ℕ}\\text{.}",
+      "after_tex": "P_{i}\\text{:}S\\text{×}A\\text{×}S\\text{→}\\text{[}0\\text{,}1\\text{]}\\text{,}\\quad\\quad \\sum_{y\\text{∈}S}^{}P_{i}\\text{(}s\\text{,}a\\text{,}y\\text{)}\\text{=}1\\text{,}\\quad\\quad d_{i}\\text{:}S\\text{×}A\\text{→}\\text{ℕ}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 12,
+      "before_tex": "h_{t}\\text{=}\\text{(}x_{0}\\text{,}a_{0}\\text{,}x_{1}\\text{,}\\text{…}\\text{,}a_{t\\text{−}1}\\text{,}x_{t}\\text{)}\\text{,}\\text{\\quad\\quad}x_{0}\\text{=}s_{0}\\text{.}",
+      "after_tex": "h_{t}\\text{=}\\text{(}x_{0}\\text{,}a_{0}\\text{,}x_{1}\\text{,}\\text{…}\\text{,}a_{t\\text{−}1}\\text{,}x_{t}\\text{)}\\text{,}\\quad\\quad x_{0}\\text{=}s_{0}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 23,
+      "before_tex": "\\text{∃}\\pi\\text{\\:}\\text{∀}\\alpha\\text{\\quad\\quad}\\underset{s_{0}}{\\overset{\\pi\\text{,}\\alpha}{\\text{Pr}}}\\text{(}\\text{𝖯𝖺𝗋}\\text{)}\\text{=}1\\text{.}",
+      "after_tex": "\\text{∃}\\pi\\: \\text{∀}\\alpha\\quad\\quad \\underset{s_{0}}{\\overset{\\pi\\text{,}\\alpha}{\\text{Pr}}}\\text{(}\\text{𝖯𝖺𝗋}\\text{)}\\text{=}1\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 44,
+      "before_tex": "U\\text{(}E\\text{)}\\text{=}\\text{\\{}s\\text{:}\\text{∃}a\\text{\\:}\\text{(}s\\text{,}a\\text{)}\\text{∈}E\\text{\\}}\\text{.}",
+      "after_tex": "U\\text{(}E\\text{)}\\text{=}\\text{\\{}s\\text{:}\\text{∃}a\\: \\text{(}s\\text{,}a\\text{)}\\text{∈}E\\text{\\}}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 60,
+      "before_tex": "\\text{[}\\text{∀}e\\text{∈}E\\text{\\:}\\text{∀}y\\text{∈}S\\text{\\quad}P_{\\sigma}\\text{(}e\\text{,}y\\text{)}\\text{=}P_{\\theta}\\text{(}e\\text{,}y\\text{)}\\text{]}\\text{\\:}\\text{⇒}\\text{\\:}\\underset{e\\text{∈}E}{\\text{min}}d_{\\sigma}\\text{(}e\\text{)}\\text{ is even}\\text{,}\\text{\\quad\\quad}\\sigma\\text{∈}\\text{\\{}0\\text{,}1\\text{\\}}\\text{.}",
+      "after_tex": "\\text{[}\\text{∀}e\\text{∈}E\\: \\text{∀}y\\text{∈}S\\quad P_{\\sigma}\\text{(}e\\text{,}y\\text{)}\\text{=}P_{\\theta}\\text{(}e\\text{,}y\\text{)}\\text{]}\\: \\text{⇒}\\: \\underset{e\\text{∈}E}{\\text{min}}d_{\\sigma}\\text{(}e\\text{)}\\text{ is even}\\text{,}\\quad\\quad \\sigma\\text{∈}\\text{\\{}0\\text{,}1\\text{\\}}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 78,
+      "before_tex": "P_{0}\\text{(}s\\text{,}a\\text{,}y\\text{)}\\text{>}0\\text{⇒}y\\text{∈}W\\text{,}\\text{\\quad\\quad}\\text{(}P_{1}\\text{(}s\\text{,}a\\text{,}y\\text{)}\\text{>}0\\text{\\:}\\text{and}\\text{\\:}P_{0}\\text{(}s\\text{,}a\\text{,}y\\text{)}\\text{=}0\\text{)}\\text{⇒}y\\text{∈}K\\text{.}",
+      "after_tex": "P_{0}\\text{(}s\\text{,}a\\text{,}y\\text{)}\\text{>}0\\text{⇒}y\\text{∈}W\\text{,}\\quad\\quad \\text{(}P_{1}\\text{(}s\\text{,}a\\text{,}y\\text{)}\\text{>}0\\: \\text{and}\\: P_{0}\\text{(}s\\text{,}a\\text{,}y\\text{)}\\text{=}0\\text{)}\\text{⇒}y\\text{∈}K\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 116,
+      "before_tex": "\\frac{\\text{|}S_{m}\\text{|}}{m}\\text{≤}\\frac{\\text{|}S_{j^{2}}\\text{|}}{j^{2}}\\text{+}\\frac{2j\\text{+}1}{j^{2}}\\text{,}\\text{\\quad\\quad}j^{2}\\text{≤}m\\text{<}{\\text{(}j\\text{+}1\\text{)}}^{2}\\text{.}",
+      "after_tex": "\\frac{\\text{|}S_{m}\\text{|}}{m}\\text{≤}\\frac{\\text{|}S_{j^{2}}\\text{|}}{j^{2}}\\text{+}\\frac{2j\\text{+}1}{j^{2}}\\text{,}\\quad\\quad j^{2}\\text{≤}m\\text{<}{\\text{(}j\\text{+}1\\text{)}}^{2}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 126,
+      "before_tex": "N_{e}\\text{(}t\\text{)}\\text{=}b_{e}\\text{+}J_{e}\\text{(}t\\text{)}\\text{,}\\text{\\quad\\quad}N_{e\\text{,}y}\\text{(}t\\text{)}\\text{=}b_{e\\text{,}y}\\text{+}\\sum_{k\\text{<}J_{e}\\text{(}t\\text{)}}^{}\\text{𝟏}\\text{\\{}Y_{e\\text{,}k}\\text{=}y\\text{\\}}\\text{.}",
+      "after_tex": "N_{e}\\text{(}t\\text{)}\\text{=}b_{e}\\text{+}J_{e}\\text{(}t\\text{)}\\text{,}\\quad\\quad N_{e\\text{,}y}\\text{(}t\\text{)}\\text{=}b_{e\\text{,}y}\\text{+}\\sum_{k\\text{<}J_{e}\\text{(}t\\text{)}}^{}\\text{𝟏}\\text{\\{}Y_{e\\text{,}k}\\text{=}y\\text{\\}}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 157,
+      "before_tex": "C_{h}\\text{=}\\text{\\{}r\\text{:}\\pi\\text{(}r\\text{,}h_{t}\\text{)}\\text{=}a_{t}\\text{ for every }t\\text{<}n\\text{\\}}\\text{,}\\text{\\quad\\quad}L_{P}\\text{(}h\\text{)}\\text{=}\\prod_{t\\text{<}n}^{}P_{t}\\text{(}e_{t}\\text{,}x_{t\\text{+}1}\\text{)}\\text{.}",
+      "after_tex": "C_{h}\\text{=}\\text{\\{}r\\text{:}\\pi\\text{(}r\\text{,}h_{t}\\text{)}\\text{=}a_{t}\\text{ for every }t\\text{<}n\\text{\\}}\\text{,}\\quad\\quad L_{P}\\text{(}h\\text{)}\\text{=}\\prod_{t\\text{<}n}^{}P_{t}\\text{(}e_{t}\\text{,}x_{t\\text{+}1}\\text{)}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 188,
+      "before_tex": "\\underset{P}{\\text{Pr}}\\text{(}H_{n}\\text{=}h\\text{,}\\text{\\:}K_{E}\\text{∈}G\\text{)}\\text{=}\\nu\\text{(}C_{h}\\text{)}L_{P}\\text{(}h\\text{)}k_{h}\\text{(}G\\text{)}\\text{,}",
+      "after_tex": "\\underset{P}{\\text{Pr}}\\text{(}H_{n}\\text{=}h\\text{,}\\: K_{E}\\text{∈}G\\text{)}\\text{=}\\nu\\text{(}C_{h}\\text{)}L_{P}\\text{(}h\\text{)}k_{h}\\text{(}G\\text{)}\\text{,}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 189,
+      "before_tex": "\\underset{Q}{\\text{Pr}}\\text{(}H_{n}\\text{=}h\\text{,}\\text{\\:}K_{E}\\text{∈}G\\text{)}\\text{=}\\nu\\text{(}C_{h}\\text{)}L_{Q}\\text{(}h\\text{)}k_{h}\\text{(}G\\text{)}\\text{.}",
+      "after_tex": "\\underset{Q}{\\text{Pr}}\\text{(}H_{n}\\text{=}h\\text{,}\\: K_{E}\\text{∈}G\\text{)}\\text{=}\\nu\\text{(}C_{h}\\text{)}L_{Q}\\text{(}h\\text{)}k_{h}\\text{(}G\\text{)}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 225,
+      "before_tex": "\\theta\\text{=}r\\text{\\:}\\text{mod}\\text{\\:}2\\text{,}",
+      "after_tex": "\\theta\\text{=}r\\: \\text{mod}\\: 2\\text{,}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 229,
+      "before_tex": "\\text{∃}e\\text{,}y\\text{\\quad\\quad}N_{e}\\text{>}r\\text{\\quad}\\text{and}\\text{\\quad}\\text{|}\\frac{N_{e\\text{,}y}}{N_{e}}\\text{−}P_{\\theta}\\text{(}e\\text{,}y\\text{)}\\text{|}\\text{≥}\\delta\\text{.}",
+      "after_tex": "\\text{∃}e\\text{,}y\\quad\\quad N_{e}\\text{>}r\\quad \\text{and}\\quad \\text{|}\\frac{N_{e\\text{,}y}}{N_{e}}\\text{−}P_{\\theta}\\text{(}e\\text{,}y\\text{)}\\text{|}\\text{≥}\\delta\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 284,
+      "before_tex": "W_{0}\\text{=}S\\text{,}\\text{\\quad\\quad}W_{j\\text{+}1}\\text{=}F\\text{(}W_{j}\\text{)}\\text{,}",
+      "after_tex": "W_{0}\\text{=}S\\text{,}\\quad\\quad W_{j\\text{+}1}\\text{=}F\\text{(}W_{j}\\text{)}\\text{,}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 297,
+      "before_tex": "R_{\\text{eq}}\\text{=}\\text{\\{}e\\text{∈}B\\text{:}\\text{∀}y\\text{∈}S\\text{\\quad}P_{0}\\text{(}e\\text{,}y\\text{)}\\text{=}P_{1}\\text{(}e\\text{,}y\\text{)}\\text{\\}}\\text{.}",
+      "after_tex": "R_{\\text{eq}}\\text{=}\\text{\\{}e\\text{∈}B\\text{:}\\text{∀}y\\text{∈}S\\quad P_{0}\\text{(}e\\text{,}y\\text{)}\\text{=}P_{1}\\text{(}e\\text{,}y\\text{)}\\text{\\}}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 304,
+      "before_tex": "B\\text{'}",
+      "after_tex": "B\\text{′}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 306,
+      "before_tex": "B\\text{'}",
+      "after_tex": "B\\text{′}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 359,
+      "before_tex": "V\\text{(}\\text{OR}\\text{(}u\\text{,}v\\text{)}\\text{)}\\text{=}\\text{max}\\text{\\{}V\\text{(}u\\text{)}\\text{,}V\\text{(}v\\text{)}\\text{\\}}\\text{,}\\text{\\quad\\quad}V\\text{(}\\text{AND}\\text{(}u\\text{,}v\\text{)}\\text{)}\\text{=}\\frac{V\\text{(}u\\text{)}\\text{+}V\\text{(}v\\text{)}}{2}\\text{.}",
+      "after_tex": "V\\text{(}\\text{OR}\\text{(}u\\text{,}v\\text{)}\\text{)}\\text{=}\\text{max}\\text{\\{}V\\text{(}u\\text{)}\\text{,}V\\text{(}v\\text{)}\\text{\\}}\\text{,}\\quad\\quad V\\text{(}\\text{AND}\\text{(}u\\text{,}v\\text{)}\\text{)}\\text{=}\\frac{V\\text{(}u\\text{)}\\text{+}V\\text{(}v\\text{)}}{2}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 367,
+      "before_tex": "x\\text{∈}L\\text{\\quad}\\text{⇔}\\text{\\quad}I_{x}\\text{ admits an almost-sure one-change winner}\\text{.}",
+      "after_tex": "x\\text{∈}L\\quad \\text{⇔}\\quad I_{x}\\text{ admits an almost-sure one-change winner}\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 372,
+      "before_tex": "4\\tau\\text{<}\\Delta\\text{,}\\text{\\quad\\quad}\\text{|}q_{\\theta}\\text{(}e\\text{,}y\\text{)}\\text{−}P_{\\theta}\\text{(}e\\text{,}y\\text{)}\\text{|}\\text{<}\\tau\\text{/}4\\text{.}",
+      "after_tex": "4\\tau\\text{<}\\Delta\\text{,}\\quad\\quad \\text{|}q_{\\theta}\\text{(}e\\text{,}y\\text{)}\\text{−}P_{\\theta}\\text{(}e\\text{,}y\\text{)}\\text{|}\\text{<}\\tau\\text{/}4\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 392,
+      "before_tex": "\\text{∀}\\text{(}P_{0}\\text{,}P_{1}\\text{)}\\text{ compatible}\\text{\\quad}\\text{∀}\\alpha\\text{ legal}\\text{\\quad\\quad}\\underset{P_{0}\\text{,}P_{1}}{\\overset{\\pi\\text{,}\\alpha}{\\text{Pr}}}\\text{(}\\text{𝖯𝖺𝗋}\\text{)}\\text{=}1\\text{.}",
+      "after_tex": "\\text{∀}\\text{(}P_{0}\\text{,}P_{1}\\text{)}\\text{ compatible}\\quad \\text{∀}\\alpha\\text{ legal}\\quad\\quad \\underset{P_{0}\\text{,}P_{1}}{\\overset{\\pi\\text{,}\\alpha}{\\text{Pr}}}\\text{(}\\text{𝖯𝖺𝗋}\\text{)}\\text{=}1\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 393,
+      "before_tex": "N_{e}\\text{>}r\\text{,}\\text{\\quad\\quad}y\\text{∈}H_{\\theta}\\text{(}e\\text{)}\\text{,}\\text{\\quad\\quad}\\frac{N_{e\\text{,}y}}{N_{e}}\\text{<}\\frac{1}{r\\text{+}1}",
+      "after_tex": "N_{e}\\text{>}r\\text{,}\\quad\\quad y\\text{∈}H_{\\theta}\\text{(}e\\text{)}\\text{,}\\quad\\quad \\frac{N_{e\\text{,}y}}{N_{e}}\\text{<}\\frac{1}{r\\text{+}1}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    },
+    {
+      "equation_ordinal": 414,
+      "before_tex": "P_{0}\\text{(}q\\text{,}a\\text{,}r\\text{)}\\text{=}P_{0}\\text{(}r\\text{,}a\\text{,}q\\text{)}\\text{=}1\\text{,}\\text{\\quad\\quad}P_{1}\\text{(}q\\text{,}a\\text{,}q\\text{)}\\text{=}P_{1}\\text{(}r\\text{,}a\\text{,}r\\text{)}\\text{=}1\\text{.}",
+      "after_tex": "P_{0}\\text{(}q\\text{,}a\\text{,}r\\text{)}\\text{=}P_{0}\\text{(}r\\text{,}a\\text{,}q\\text{)}\\text{=}1\\text{,}\\quad\\quad P_{1}\\text{(}q\\text{,}a\\text{,}q\\text{)}\\text{=}P_{1}\\text{(}r\\text{,}a\\text{,}r\\text{)}\\text{=}1\\text{.}",
+      "change": "Repair converter text-mode spacing to math-mode spacing with terminating space, and restore native U+2032 prime where converter emitted apostrophe; exact before/after supplied."
+    }
+  ],
+  "side_parts": [
+    {
+      "part": "word/footnotes.xml",
+      "sha256": "0862050ac498039adcb369c821645a486c0dd66d3edf3ed464eb7da29ca4b67a",
+      "visible_text": "",
+      "math_objects": 0,
+      "footnote_bodies": 2,
+      "comments": 0
+    },
+    {
+      "part": "word/comments.xml",
+      "sha256": "753eda214b682a0cab96d3464231583c464f576373ef587a75179b00a70ad156",
+      "visible_text": "",
+      "math_objects": 0,
+      "footnote_bodies": 0,
+      "comments": 0
+    },
+    {
+      "part": "word/footer1.xml",
+      "sha256": "c5b6df09bd8d7734dbb559f626373a1cb99261d65ada6537b264792d520ffbd1",
+      "visible_text": "",
+      "math_objects": 0,
+      "footnote_bodies": 0,
+      "comments": 0
+    }
+  ],
+  "omissions": {
+    "body_authored_paragraphs": 0,
+    "body_equations": 0,
+    "body_links": 0,
+    "referenced_footnotes_or_endnotes": 0,
+    "tracked_changes": 0,
+    "body_tables_or_images": 0,
+    "nonempty_comments": 0,
+    "word_pagination_and_typography": "not represented",
+    "empty_note_parts_and_page_fields": "structurally inspected; separator-only notes and dynamic/static page-number footer fields not reproduced"
+  },
+  "limits": [
+    "Conversion fidelity and public-prose suitability only; no fresh theorem acceptance, kernel verification, empirical replay, source reading or human-specialist review.",
+    "Historical research dates come from visible source prose; stale generic OOXML package timestamps are not research dates.",
+    "External source links are locators, not an assertion of public access or permission to redistribute the linked material.",
+    "Original DOCX rendering is inspected selectively; full Word-layout equivalence is neither intended nor certified."
+  ],
+  "math_map": {
+    "filename": "Orthemology_Eighteenth_Mathematical_Companion_Final_v1_20261006.math-map.json",
+    "sha256": "522b201a6371b42a599a225942f0caf9b932f996760ad3b484422a7fee93e74b"
+  }
+}

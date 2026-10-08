@@ -1,0 +1,111 @@
+{
+  "schema": "t20-source-only-projection-map-v1",
+  "historical_seals": {
+    "VERIFICATION_DISCIPLINE.md": "65df49d926e79196e2c300359801706e7c34f492256c11bc0a92bcdb4d5c70b5",
+    "COVERAGE.json": "2e5b9512ddca1d6e8b21ca03ba3758d4fc4c6e0bc174cc903983f8b2665e6883",
+    "catalogue-review/AVENUE_SYNTHESIS.md": "aebc492c7e8267ceee96527a2a66ab24df7d735adcd15f2d0ffcf5cf64dcdf2e",
+    "catalogue-review/VALIDATION.json": "56385e7e95d7b46683bcdea3e0835b3cd2d752a084105a90f2711dc7252a7194",
+    "normalization-transfer/TRANSFER_AUDIT.md": "fe66e0c6346889d6ed2bed7ea8efd919e1a2339ca1ed9834af819b9345be91d4",
+    "normalization-transfer/TRANSFER_DECISION.json": "e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064",
+    "normalization-transfer/SOURCE_READ_RECEIPT.json": "7e316145a463f27c3b39974bbc4e92820c9b09081ba082f1be632524ceefdea2",
+    "normalization-transfer/paper-scope.md": "6ba9dfca609d1cc5c01846a936a9f1dd1922be3cb2669064d09cd7b918150179",
+    "family104_manifest": "a4dbd3f0e55604f09452a1cee61b4f099283593e21246fcfd75a87a14b9cfa78"
+  },
+  "records": [
+    {
+      "path": "AVENUE_SYNTHESIS.md",
+      "sha256": "aebc492c7e8267ceee96527a2a66ab24df7d735adcd15f2d0ffcf5cf64dcdf2e",
+      "bytes": 8496,
+      "projection": "EXACT",
+      "change": "Bounded public locator/coordination normalization; exact historical identities, claims, outcomes and source/ownership limits retained. This is not new execution.",
+      "original": {
+        "logical_name": "AVENUE_SYNTHESIS.md",
+        "sha256": "aebc492c7e8267ceee96527a2a66ab24df7d735adcd15f2d0ffcf5cf64dcdf2e",
+        "bytes": 8496
+      }
+    },
+    {
+      "path": "FAMILY245_TRANSFER_DECISION.json",
+      "sha256": "e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064",
+      "bytes": 2570,
+      "projection": "EXACT",
+      "change": "Bounded public locator/coordination normalization; exact historical identities, claims, outcomes and source/ownership limits retained. This is not new execution.",
+      "original": {
+        "logical_name": "TRANSFER_DECISION.json",
+        "sha256": "e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064",
+        "bytes": 2570
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "057167d8f8821c1a8fb667816dcf66d600495d661fb2d5d57f5b32bd6050d3b2",
+      "bytes": 567,
+      "projection": "DERIVED",
+      "change": "Exact selected original bytes; no scientific changes."
+    },
+    {
+      "path": "CORPUS_AND_TRANSFER_SCOPE.md",
+      "sha256": "1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4",
+      "bytes": 11514,
+      "projection": "DERIVED",
+      "change": "New bounded synthesis derived jointly from the discipline, full-catalogue avenue map, coverage ledger and family245 audit/decision. Omits raw corpus inventory/body/code; retains exact reading, source-verification, inheritance and negative-transfer limits. All contributing originals are hash-bound in SOURCE_IDENTITIES.json.",
+      "original": {
+        "logical_name": "VERIFICATION_DISCIPLINE.md",
+        "sha256": "65df49d926e79196e2c300359801706e7c34f492256c11bc0a92bcdb4d5c70b5",
+        "bytes": 9160
+      }
+    },
+    {
+      "path": "SOURCE_IDENTITIES.json",
+      "sha256": "5b0cf5f4686a09f79750a8ec440a7ffbddbcee11efa4290055f836579f8847f8",
+      "bytes": 2899,
+      "projection": "DERIVED",
+      "change": "Exact selected original bytes; no scientific changes."
+    },
+    {
+      "path": "PROJECTION_NOTES.md",
+      "sha256": "b1bd296a8794d9555f07838813bcd1f237a76c50932fcbf56bc99b6ec11464fc",
+      "bytes": 762,
+      "projection": "DERIVED",
+      "change": "Exact selected original bytes; no scientific changes."
+    },
+    {
+      "path": "FAMILY104_TRANSFER_DECISION.json",
+      "sha256": "c0a95db2f5bd9c766fee73ae5cfe8aee344b7c1ce28af67fbfad21774d6d5888",
+      "bytes": 2015,
+      "projection": "EXACT",
+      "change": "Bounded public locator/coordination normalization; exact historical identities, claims, outcomes and source/ownership limits retained. This is not new execution.",
+      "original": {
+        "logical_name": "TRANSFER_DECISION.json",
+        "sha256": "c0a95db2f5bd9c766fee73ae5cfe8aee344b7c1ce28af67fbfad21774d6d5888",
+        "bytes": 2015
+      }
+    },
+    {
+      "path": "FAMILY104_READING_VALIDATION.json",
+      "sha256": "445a436bf38edd8045c92c5633b8c141c116ca1d8dda6a2c420651070083e814",
+      "bytes": 1567,
+      "projection": "EXACT",
+      "change": "Bounded public locator/coordination normalization; exact historical identities, claims, outcomes and source/ownership limits retained. This is not new execution.",
+      "original": {
+        "logical_name": "FINAL_VALIDATION.json",
+        "sha256": "445a436bf38edd8045c92c5633b8c141c116ca1d8dda6a2c420651070083e814",
+        "bytes": 1567
+      }
+    },
+    {
+      "path": "FAMILY104_CURRENT_SCOPE.md",
+      "sha256": "2dcdece2b95688d09b736bc46fe1258a05ecf93a2dfd05f322637511a3e3edbb",
+      "bytes": 7290,
+      "projection": "DERIVED",
+      "change": "Bounded authored current-disposition projection: preserve six prior owners, information/objective mismatch, source-only deterministic-endpoint correction, five written controls and conditional service lead; omit long proof exposition, local paths and complete source/registry acquisition maps.",
+      "original": {
+        "logical_name": "ASSESSMENT.md",
+        "sha256": "4a6f2667763d1ffcc0a66e9b493e70786687a819de8a1437a458631ac21631dd",
+        "bytes": 23023
+      }
+    }
+  ],
+  "body_admission": false,
+  "new_scientific_execution": false
+}

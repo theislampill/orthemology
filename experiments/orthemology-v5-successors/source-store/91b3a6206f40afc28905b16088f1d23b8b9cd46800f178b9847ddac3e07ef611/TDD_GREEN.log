@@ -1,0 +1,25 @@
+Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_resource.{u_1, u_2, u_3, u_4} {W : Type u_1}
+  {B : Type u_2} {R : Type u_3} {T : Type u_4} (s : Orthemology.Tranche20.OriginalBearerBridge.Framework W B R T)
+  (r : R) (original : Orthemology.Tranche20.OriginalBearerBridge.ActualOriginalResource s r)
+  (realisation : Orthemology.Tranche20.OriginalBearerBridge.Realisation s)
+  (support : Orthemology.Tranche20.OriginalBearerBridge.SupportTransport s) :
+  ∃ g, s.intrinsic g r ∧ Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal s g
+Orthemology.Tranche20.OriginalBearerBridge.original_bearer_of_completion.{u_1, u_2, u_3, u_4} {W : Type u_1}
+  {B : Type u_2} {R : Type u_3} {T : Type u_4} (s : Orthemology.Tranche20.OriginalBearerBridge.Framework W B R T)
+  (t : T) (occurrence : s.targetReceived t) (completion : Orthemology.Tranche20.OriginalBearerBridge.Completion s)
+  (realisation : Orthemology.Tranche20.OriginalBearerBridge.Realisation s)
+  (support : Orthemology.Tranche20.OriginalBearerBridge.SupportTransport s) :
+  ∃ r g, Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness s t r g
+Orthemology.Tranche20.OriginalBearerBridge.abc_same_witness.{u_1, u_2, u_3, u_4} {W : Type u_1} {B : Type u_2}
+  {R : Type u_3} {T : Type u_4} (s : Orthemology.Tranche20.OriginalBearerBridge.Framework W B R T)
+  (premises : Orthemology.Tranche20.OriginalBearerBridge.FullPremises s) :
+  ∃ t r g,
+    Orthemology.Tranche20.OriginalBearerBridge.OriginalWitness s t r g ∧
+      Orthemology.Tranche3.SourceIdentity.Necessary s.existsAt g ∧
+        Orthemology.Tranche3.SourceIdentity.UniformRoot s.existsAt s.dep g ∧
+          Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt s g
+Orthemology.Tranche20.OriginalBearerBridge.essential_nonreceipt_of_actual_original.{u_1, u_2, u_3, u_4} {W : Type u_1}
+  {B : Type u_2} {R : Type u_3} {T : Type u_4} (s : Orthemology.Tranche20.OriginalBearerBridge.Framework W B R T)
+  (g : B) (original : Orthemology.Tranche20.OriginalBearerBridge.ActualWholeOriginal s g)
+  (constitution : Orthemology.Tranche20.OriginalBearerBridge.ConstitutiveReception s) :
+  Orthemology.Tranche20.OriginalBearerBridge.EssentialNonreceipt s g

@@ -1,0 +1,8 @@
+{
+  "lean": "/absolute/path/to/lean-4.19.0-linux/bin/lean",
+  "dependency_roots": {
+    "hidden-change": "/absolute/path/to/hidden-change-dependencies",
+    "hase": "/absolute/path/to/hase-dependencies"
+  },
+  "module_timeout_seconds": 600
+}

@@ -1,0 +1,175 @@
+{
+  "date_utc": "2026-10-07",
+  "source": "https://archive.org/download/al-mulakhas/al-risala.pdf",
+  "source_sha256": "97d79af373636137d0845f68702b5a9aa11935046e6451b6d1b0df8d89cd1a51",
+  "fully_read_modern_text_pdf_positions": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    32,
+    33,
+    34,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "fully_read_categories": {
+    "publisher": [
+      4,
+      5
+    ],
+    "al_saad_introduction": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "editors_introduction": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "biography": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "attribution_title": [
+      23,
+      24,
+      25
+    ],
+    "subject_outline": [
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "manuscript_description": [
+      32,
+      33,
+      34
+    ],
+    "edition_justification_and_full_correction_lists": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "editorial_method": [
+      48,
+      49
+    ]
+  },
+  "catalogue_numbered_entries_read": {
+    "substantial": 39,
+    "lesser": 55,
+    "all_numbered_entries_read": true
+  },
+  "manuscript_plates_inspected_but_not_transcribed_or_collated": [
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "blank_pages_inspected": [
+    11,
+    31,
+    51,
+    53
+  ],
+  "inner_title_inspected": [
+    50
+  ],
+  "opening_body_control_pages": [
+    52,
+    54
+  ],
+  "opening_body_control_printed_labels": {
+    "52": "45",
+    "54": "47"
+  },
+  "index_locating_pages_only": [
+    590,
+    600,
+    610,
+    620,
+    625
+  ],
+  "additional_reread_zooms": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "limits": [
+    "No full authorial scan traversal in this apparatus pass.",
+    "No independent manuscript handwriting authentication.",
+    "Index probing does not count as continuous index reading.",
+    "The five plate images were seen, but handwritten body was not fully read.",
+    "Earlier acquisition title inspection is separately recorded, not imputed here."
+  ],
+  "final_signature_reinspection": {
+    "pdf_position": 49,
+    "printed_page": 42,
+    "arabic_signature": "أبو عبد الله سيد بن عباس الجليمي",
+    "correction": "Initial ح reading superseded by ج on enlarged signature",
+    "additional_unique_page": false
+  },
+  "prepared_unread_in_this_apparatus_pass": [
+    55,
+    56,
+    57,
+    58,
+    581,
+    582,
+    583,
+    584,
+    585
+  ]
+}

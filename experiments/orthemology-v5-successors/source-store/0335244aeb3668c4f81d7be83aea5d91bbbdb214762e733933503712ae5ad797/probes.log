@@ -1,0 +1,7 @@
+'IndependentReview.frame_serial' does not depend on any axioms
+'IndependentReview.fresh_act_has_explicit_owner' does not depend on any axioms
+'IndependentReview.actual_novelty_not_created_or_received' depends on axioms: [propext, Quot.sound]
+'IndependentReview.inhabited_emergence_not_universally_created' depends on axioms: [propext, Quot.sound]
+'IndependentReview.modal_renewability_does_not_populate_quiet_trajectory' depends on axioms: [propext]
+'IndependentReview.auxiliary_kind_possible_but_absent_on_actual' does not depend on any axioms
+'IndependentReview.unrestricted_receipt_need_not_satisfied' depends on axioms: [propext, Quot.sound]

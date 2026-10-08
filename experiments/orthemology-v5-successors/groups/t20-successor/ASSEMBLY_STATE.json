@@ -1,0 +1,52 @@
+{
+  "base_commit": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+  "final_reader_addendum": {
+    "owner_files": 215,
+    "owner_only_docx": 3,
+    "public_text_sources": 212,
+    "scope_review_sources": 1,
+    "seal_sha256": "89c829bc1c3c967dbaf1eac5dbbf5a2978197f7e4847ad28f64c041dfa3472e5",
+    "selection_sha256": "e3e580d9e13d5778fa4fbb43c43e3e40cad4a66597755d307283bdb0c0524000"
+  },
+  "fresh_clean_apply": "CONSULT_SEPARATE_EXACT_TREE_OWNER_HANDOFF",
+  "fresh_pdf_rebuild": "BLOCKED_EXACT_DOCKER_POPPLER_ENVIRONMENT",
+  "last_append": {
+    "integration_scope_sources": 1,
+    "late_owner_only_docx": 2,
+    "late_public_sources": 34,
+    "method_core_public_sources": 19,
+    "native_scientific_execution": "NOT_RUN",
+    "new_results": [
+      "T20-EMERGENCE-TYPE-CONTROL"
+    ],
+    "original_261_result_rows_preserved": true
+  },
+  "native_final_gate": "CONSULT_SEPARATE_EXACT_TREE_OWNER_HANDOFF",
+  "pending_inputs": [],
+  "prior_reader_candidate_tree": "f3758be0140c5048616256269df6fa80c039966b",
+  "publication": "No push, PR, merge or adoption by this assembly.",
+  "schema": "t20-integration-assembly-state-v1",
+  "science": "Native receiving science NOT_RUN; original scoped research execution preserved. No new scientific suite, receipt or independent evidence.",
+  "scientific_baseline": {
+    "receipts": 44,
+    "results": 261,
+    "selected_files": 410,
+    "sources": 3539,
+    "suites": 37
+  },
+  "source_context_append": {
+    "all_262_statuses_preserved": true,
+    "formal_conclusions_preserved": true,
+    "history_record": "docs/provenance/v5-successors/T20_CONTEXT_REAPPRAISAL_HISTORY.json",
+    "integration_scope_sources": 1,
+    "new_native_science": "NOT_RUN",
+    "new_results": 0,
+    "prior_candidate_tree": "fadbecadf440641d117d9eabb44faf2fae2ceab4",
+    "selected_public_sources": 21,
+    "selection_sha256": "00bf802818563d942f047401fe6d9eed8b2c2cf1ea9f91a03c576783aa45adc4"
+  },
+  "status": "LAST_FINITE_SUPPLIED_INPUTS_ASSEMBLED",
+  "total_results": 262,
+  "total_sources": 3828,
+  "whole_diff_independent_review": "CONSULT_SEPARATE_EXACT_TREE_OWNER_HANDOFF"
+}

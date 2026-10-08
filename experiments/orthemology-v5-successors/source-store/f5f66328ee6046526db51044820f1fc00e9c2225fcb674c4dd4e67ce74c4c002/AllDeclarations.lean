@@ -1,0 +1,226 @@
+import ModalAbilityControl
+set_option pp.universes true
+set_option pp.proofs false
+set_option format.width 140
+#print AnchoredSourceBridge.Account
+#print AnchoredSourceBridge.RepresentedParticipation
+#print AnchoredSourceBridge.Complete
+#print AnchoredSourceBridge.GlobalCoverage
+#print AnchoredSourceBridge.Admissible
+#print AnchoredSourceBridge.RequisiteSound
+#print AnchoredSourceBridge.RequisiteExhaustive
+#print AnchoredSourceBridge.UseSound
+#print AnchoredSourceBridge.RoleApplicable
+#print AnchoredSourceBridge.Visible
+#print AnchoredSourceBridge.Classification
+#print AnchoredSourceBridge.Conformance
+#print AnchoredSourceBridge.ModeSatisfaction
+#print AnchoredSourceBridge.SourceMode
+#print AnchoredSourceBridge.CND
+#print AnchoredSourceBridge.FieldCND
+#print AnchoredSourceBridge.Overlap
+#print AnchoredSourceBridge.Path
+#print AnchoredSourceBridge.ConnectedFrom
+#print AnchoredSourceBridge.ActualAnchor
+#print AnchoredSourceBridge.Positive
+#print AnchoredSourceBridge.ActualUnique
+#print AnchoredSourceBridge.overlap_symmetric
+#print axioms AnchoredSourceBridge.overlap_symmetric
+#print AnchoredSourceBridge.mode_satisfaction_of_classification_conformance
+#print axioms AnchoredSourceBridge.mode_satisfaction_of_classification_conformance
+#print AnchoredSourceBridge.source_mode_of_mode_satisfaction
+#print axioms AnchoredSourceBridge.source_mode_of_mode_satisfaction
+#print AnchoredSourceBridge.represented_across_overlap
+#print axioms AnchoredSourceBridge.represented_across_overlap
+#print AnchoredSourceBridge.complete_along_path
+#print axioms AnchoredSourceBridge.complete_along_path
+#print AnchoredSourceBridge.global_coverage_of_anchor
+#print axioms AnchoredSourceBridge.global_coverage_of_anchor
+#print AnchoredSourceBridge.global_coverage_of_qualified_anchor
+#print axioms AnchoredSourceBridge.global_coverage_of_qualified_anchor
+#print AnchoredSourceBridge.field_cnd_of_global_cnd
+#print axioms AnchoredSourceBridge.field_cnd_of_global_cnd
+#print AnchoredSourceBridge.represented_rivals_equal
+#print axioms AnchoredSourceBridge.represented_rivals_equal
+#print AnchoredSourceBridge.actual_rivals_equal
+#print axioms AnchoredSourceBridge.actual_rivals_equal
+#print AnchoredSourceBridge.mode_satisfaction_iff_global_coverage
+#print axioms AnchoredSourceBridge.mode_satisfaction_iff_global_coverage
+#print AnchoredSourceBridge.source_mode_iff_global_coverage
+#print axioms AnchoredSourceBridge.source_mode_iff_global_coverage
+#print AnchoredSourceBridge.positive_along_path
+#print axioms AnchoredSourceBridge.positive_along_path
+#print AnchoredSourceBridge.every_field_positive
+#print axioms AnchoredSourceBridge.every_field_positive
+#print AnchoredSourceBridge.complete_providers_equal_at_positive
+#print axioms AnchoredSourceBridge.complete_providers_equal_at_positive
+#print AnchoredSourceBridge.complete_provider_exists
+#print axioms AnchoredSourceBridge.complete_provider_exists
+#print AnchoredSourceBridge.unique_complete_provider
+#print axioms AnchoredSourceBridge.unique_complete_provider
+#print AnchoredSourceBridge.guarded_common_original_provider
+#print axioms AnchoredSourceBridge.guarded_common_original_provider
+#print AnchoredSourceBridge.guarded_common_original_provider_of_global_cnd
+#print axioms AnchoredSourceBridge.guarded_common_original_provider_of_global_cnd
+#print AnchoredSourceBridge.Controls.S
+#print AnchoredSourceBridge.Controls.E
+#print AnchoredSourceBridge.Controls.C
+#print AnchoredSourceBridge.Controls.Agent
+#print AnchoredSourceBridge.Controls.Token
+#print AnchoredSourceBridge.Controls.sourceForall
+#print AnchoredSourceBridge.Controls.sourceExists
+#print AnchoredSourceBridge.Controls.occurrenceForall
+#print AnchoredSourceBridge.Controls.occurrenceExists
+#print AnchoredSourceBridge.Controls.contributionForall
+#print AnchoredSourceBridge.Controls.contributionExists
+#print AnchoredSourceBridge.Controls.tableRep
+#print AnchoredSourceBridge.Controls.fixture
+#print AnchoredSourceBridge.Controls.faithful
+#print AnchoredSourceBridge.Controls.singleton
+#print AnchoredSourceBridge.Controls.pairField
+#print AnchoredSourceBridge.Controls.mixedField
+#print AnchoredSourceBridge.Controls.splitReq
+#print AnchoredSourceBridge.Controls.splitEntire
+#print AnchoredSourceBridge.Controls.split
+#print AnchoredSourceBridge.Controls.finite_quantifiers
+#print axioms AnchoredSourceBridge.Controls.finite_quantifiers
+#print AnchoredSourceBridge.Controls.split_signature
+#print axioms AnchoredSourceBridge.Controls.split_signature
+#print AnchoredSourceBridge.Controls.oneReq
+#print AnchoredSourceBridge.Controls.duplicateEntire
+#print AnchoredSourceBridge.Controls.duplicate
+#print AnchoredSourceBridge.Controls.unanchoredEntire
+#print AnchoredSourceBridge.Controls.unanchored
+#print AnchoredSourceBridge.Controls.separateReq
+#print AnchoredSourceBridge.Controls.separated
+#print AnchoredSourceBridge.Controls.chainReq
+#print AnchoredSourceBridge.Controls.shortRole
+#print AnchoredSourceBridge.Controls.missingUse
+#print AnchoredSourceBridge.Controls.missingRole
+#print AnchoredSourceBridge.Controls.onlyG
+#print AnchoredSourceBridge.Controls.hiddenActual
+#print AnchoredSourceBridge.Controls.hidden
+#print AnchoredSourceBridge.Controls.mixedReq
+#print AnchoredSourceBridge.Controls.fullEntire
+#print AnchoredSourceBridge.Controls.full
+#print AnchoredSourceBridge.Controls.outsideDuplicateEntire
+#print AnchoredSourceBridge.Controls.outsideDuplicate
+#print AnchoredSourceBridge.Controls.mixedAdverse
+#print AnchoredSourceBridge.Controls.aggregate
+#print AnchoredSourceBridge.Controls.defectiveSplit
+#print AnchoredSourceBridge.Controls.emptyActual
+#print AnchoredSourceBridge.Controls.emptyInventory
+#print AnchoredSourceBridge.Controls.StandingCan
+#print AnchoredSourceBridge.Controls.Necessary
+#print AnchoredSourceBridge.Controls.EndpointSufficient
+#print AnchoredSourceBridge.Controls.DerivedAct
+#print AnchoredSourceBridge.Controls.SourceOwns
+#print AnchoredSourceBridge.Controls.DerivedOwns
+#print AnchoredSourceBridge.Controls.TrueContent
+#print AnchoredSourceBridge.Controls.TokenOccurrence
+#print AnchoredSourceBridge.Controls.ProvidesToken
+#print AnchoredSourceBridge.Controls.Authenticated
+#print AnchoredSourceBridge.Controls.DerivedUses
+#print AnchoredSourceBridge.Controls.MediateUse
+#print AnchoredSourceBridge.Controls.agentForall
+#print AnchoredSourceBridge.Controls.tokenForall
+#print AnchoredSourceBridge.Controls.Interpretation
+#print AnchoredSourceBridge.Controls.FixedMode
+#print AnchoredSourceBridge.Controls.singleton_connected
+#print axioms AnchoredSourceBridge.Controls.singleton_connected
+#print AnchoredSourceBridge.Controls.hub_connected
+#print axioms AnchoredSourceBridge.Controls.hub_connected
+#print AnchoredSourceBridge.Controls.split_connected
+#print axioms AnchoredSourceBridge.Controls.split_connected
+#print AnchoredSourceBridge.Controls.duplicate_connected
+#print axioms AnchoredSourceBridge.Controls.duplicate_connected
+#print AnchoredSourceBridge.Controls.unanchored_connected
+#print axioms AnchoredSourceBridge.Controls.unanchored_connected
+#print AnchoredSourceBridge.Controls.hidden_connected
+#print axioms AnchoredSourceBridge.Controls.hidden_connected
+#print AnchoredSourceBridge.Controls.defective_connected
+#print axioms AnchoredSourceBridge.Controls.defective_connected
+#print AnchoredSourceBridge.Controls.empty_connected
+#print axioms AnchoredSourceBridge.Controls.empty_connected
+#print AnchoredSourceBridge.Controls.missing_use_connected
+#print axioms AnchoredSourceBridge.Controls.missing_use_connected
+#print AnchoredSourceBridge.Controls.missing_role_connected
+#print axioms AnchoredSourceBridge.Controls.missing_role_connected
+#print AnchoredSourceBridge.Controls.full_connected
+#print axioms AnchoredSourceBridge.Controls.full_connected
+#print AnchoredSourceBridge.Controls.outside_duplicate_connected
+#print axioms AnchoredSourceBridge.Controls.outside_duplicate_connected
+#print AnchoredSourceBridge.Controls.adverse_connected
+#print axioms AnchoredSourceBridge.Controls.adverse_connected
+#print AnchoredSourceBridge.Controls.aggregate_connected
+#print axioms AnchoredSourceBridge.Controls.aggregate_connected
+#print AnchoredSourceBridge.Controls.missing_source_mode
+#print axioms AnchoredSourceBridge.Controls.missing_source_mode
+#print AnchoredSourceBridge.Controls.missing_cnd
+#print axioms AnchoredSourceBridge.Controls.missing_cnd
+#print AnchoredSourceBridge.Controls.missing_anchor
+#print axioms AnchoredSourceBridge.Controls.missing_anchor
+#print AnchoredSourceBridge.Controls.separated_complete_only_at_e
+#print axioms AnchoredSourceBridge.Controls.separated_complete_only_at_e
+#print AnchoredSourceBridge.Controls.separated_not_connected
+#print axioms AnchoredSourceBridge.Controls.separated_not_connected
+#print AnchoredSourceBridge.Controls.missing_connectedness
+#print axioms AnchoredSourceBridge.Controls.missing_connectedness
+#print AnchoredSourceBridge.Controls.UnrelatedGraph
+#print AnchoredSourceBridge.Controls.arbitrary_graph_not_faithful
+#print axioms AnchoredSourceBridge.Controls.arbitrary_graph_not_faithful
+#print AnchoredSourceBridge.Controls.missing_original_use
+#print axioms AnchoredSourceBridge.Controls.missing_original_use
+#print AnchoredSourceBridge.Controls.missing_mode_role
+#print axioms AnchoredSourceBridge.Controls.missing_mode_role
+#print AnchoredSourceBridge.Controls.missing_visibility
+#print axioms AnchoredSourceBridge.Controls.missing_visibility
+#print AnchoredSourceBridge.Controls.coarse_effect_not_full_account
+#print axioms AnchoredSourceBridge.Controls.coarse_effect_not_full_account
+#print AnchoredSourceBridge.Controls.mixed_occurrence_positive
+#print axioms AnchoredSourceBridge.Controls.mixed_occurrence_positive
+#print AnchoredSourceBridge.Controls.mixed_occurrence_adverse
+#print axioms AnchoredSourceBridge.Controls.mixed_occurrence_adverse
+#print AnchoredSourceBridge.Controls.faithful_derived_agency_and_mediation
+#print axioms AnchoredSourceBridge.Controls.faithful_derived_agency_and_mediation
+#print AnchoredSourceBridge.Controls.outside_field_necessary_original
+#print axioms AnchoredSourceBridge.Controls.outside_field_necessary_original
+#print AnchoredSourceBridge.Controls.assertion_ownership_separate
+#print axioms AnchoredSourceBridge.Controls.assertion_ownership_separate
+#print AnchoredSourceBridge.Controls.arbitrary_bundle_rejected
+#print axioms AnchoredSourceBridge.Controls.arbitrary_bundle_rejected
+#print AnchoredSourceBridge.Controls.missing_classification
+#print axioms AnchoredSourceBridge.Controls.missing_classification
+#print AnchoredSourceBridge.Controls.missing_conformance
+#print axioms AnchoredSourceBridge.Controls.missing_conformance
+#print AnchoredSourceBridge.Controls.empty_inventory_singleton
+#print axioms AnchoredSourceBridge.Controls.empty_inventory_singleton
+#print AnchoredSourceBridge.Controls.full_nonvacuous_model
+#print axioms AnchoredSourceBridge.Controls.full_nonvacuous_model
+#print AnchoredSourceBridge.Controls.outside_duplication_preserves_field_uniqueness
+#print axioms AnchoredSourceBridge.Controls.outside_duplication_preserves_field_uniqueness
+#print AnchoredSourceBridge.Controls.principal_application_with_outside_duplication
+#print axioms AnchoredSourceBridge.Controls.principal_application_with_outside_duplication
+#print AnchoredSourceBridge.Controls.ModalAbility.W
+#print AnchoredSourceBridge.Controls.ModalAbility.Target
+#print AnchoredSourceBridge.Controls.ModalAbility.Piece
+#print AnchoredSourceBridge.Controls.ModalAbility.worldForall
+#print AnchoredSourceBridge.Controls.ModalAbility.worldExists
+#print AnchoredSourceBridge.Controls.ModalAbility.targetForall
+#print AnchoredSourceBridge.Controls.ModalAbility.pieceForall
+#print AnchoredSourceBridge.Controls.ModalAbility.ContributionToken
+#print AnchoredSourceBridge.Controls.ModalAbility.supplies
+#print AnchoredSourceBridge.Controls.ModalAbility.EntireToken
+#print AnchoredSourceBridge.Controls.ModalAbility.ActualSolo
+#print AnchoredSourceBridge.Controls.ModalAbility.Ability
+#print AnchoredSourceBridge.Controls.ModalAbility.WorldCND
+#print AnchoredSourceBridge.Controls.ModalAbility.both_have_interpreted_finite_ability
+#print axioms AnchoredSourceBridge.Controls.ModalAbility.both_have_interpreted_finite_ability
+#print AnchoredSourceBridge.Controls.ModalAbility.matching_outcome_is_not_same_token
+#print axioms AnchoredSourceBridge.Controls.ModalAbility.matching_outcome_is_not_same_token
+#print AnchoredSourceBridge.Controls.ModalAbility.intact_finite_power_differentiated_actual_production
+#print axioms AnchoredSourceBridge.Controls.ModalAbility.intact_finite_power_differentiated_actual_production
+#print AnchoredSourceBridge.Controls.ModalAbility.actual_partial_fixture_mapping
+#print axioms AnchoredSourceBridge.Controls.ModalAbility.actual_partial_fixture_mapping
+#print AnchoredSourceBridge.Controls.ModalAbility.finite_ability_does_not_supply_source_mode
+#print axioms AnchoredSourceBridge.Controls.ModalAbility.finite_ability_does_not_supply_source_mode

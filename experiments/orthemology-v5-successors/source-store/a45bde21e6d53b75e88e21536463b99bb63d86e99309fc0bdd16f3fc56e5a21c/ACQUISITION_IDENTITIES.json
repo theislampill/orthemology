@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://www.islamicbook.ws/amma/alnbwat-001.html",
+    "utc": "2026-10-07T12:36:07.399794+00:00",
+    "status": 200,
+    "final_url": "https://www.islamicbook.ws/amma/alnbwat-001.html",
+    "bytes": 373776,
+    "source_body_included": false,
+    "sha256": "9989f6bcbb6682ddc2d91c345503308e746fbfea34715fafe48165b8b877450a"
+  },
+  {
+    "url": "https://www.islamicbook.ws/amma/alnbwat-002.html",
+    "utc": "2026-10-07T12:37:49.671320+00:00",
+    "status": 200,
+    "final_url": "https://www.islamicbook.ws/amma/alnbwat-002.html",
+    "bytes": 374238,
+    "mime": "text/html",
+    "source_body_included": false,
+    "sha256": "d28415a0697658e0efce3a1a2cfdeae3a260664ce417b21398a60b6885441504"
+  },
+  {
+    "url": "https://www.islamicbook.ws/amma/alnbwat-003.html",
+    "utc": "2026-10-07T12:37:49.671845+00:00",
+    "status": 200,
+    "final_url": "https://www.islamicbook.ws/amma/alnbwat-003.html",
+    "bytes": 211420,
+    "mime": "text/html",
+    "source_body_included": false,
+    "sha256": "14cc7c0cfbdf086913953bcfbd29edd700fa72ef7548e04f221a8831a2ca06a7"
+  },
+  {
+    "url": "https://saaid.org/book/20/13342.pdf",
+    "utc": "2026-10-07T12:37:49.672385+00:00",
+    "status": 200,
+    "final_url": "https://saaid.org/book/20/13342.pdf",
+    "bytes": 3160195,
+    "mime": "application/pdf",
+    "source_body_included": false,
+    "sha256": "6fd97bc73a2ecc222620d8c253b3fcb72a6d90d5b30b84afc9ca10b1e5e87645"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1N7PDd1uV7BsT-xluSRscUmy5ypUl4CWo/view?usp=sharing",
+    "utc": "2026-10-07T12:37:49.672932+00:00",
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1N7PDd1uV7BsT-xluSRscUmy5ypUl4CWo/view?usp=sharing",
+    "bytes": 87291,
+    "mime": "text/html; charset=utf-8",
+    "source_body_included": false,
+    "sha256": "22432717549764c390052bc161d75d0920d27a67523a052a026901666a306fd1"
+  },
+  {
+    "url": "https://drive.usercontent.google.com/uc?id=1N7PDd1uV7BsT-xluSRscUmy5ypUl4CWo&export=download",
+    "discovered_in": "successfully received public Google Drive viewer HTML",
+    "utc": "2026-10-07T12:39:10.408966+00:00",
+    "status": 200,
+    "final_url": "https://drive.usercontent.google.com/download?id=1N7PDd1uV7BsT-xluSRscUmy5ypUl4CWo&export=download",
+    "mime": "application/octet-stream",
+    "bytes": 15879923,
+    "source_body_included": false,
+    "sha256": "8a351f41452a3ec86a1819a069d8c23e88f0a36519e12016ce4e10a9e9292d93"
+  }
+]

@@ -1,0 +1,183 @@
+{
+  "schema": "seventeenth-public-minhaj-electronic-reading-scope-v1",
+  "status": "BOUNDED_PRIMARY_BODY_READING_METADATA_ONLY",
+  "work": {
+    "title": "منهاج السنة النبوية",
+    "author": "Ibn Taymiyya",
+    "inspected_form": "Modern electronic transcriptions of the primary work; not independently collated print or manuscript witnesses."
+  },
+  "source_urls": [
+    "https://islamicbook.ws/tarekh/mnhaj-005.html",
+    "https://islamicbook.ws/tarekh/mnhaj-006.html",
+    "https://ar.wikisource.org/wiki/منهاج_السنة_النبوية/20"
+  ],
+  "retrieval_coordinate_convention": "Inclusive line ranges refer to the successful tool-rendered body captures at the recorded reading, not stable website anchors or printed pages. Website subdivision numbers 005, 006 and 20 are not asserted printed volume numbers.",
+  "bounded_reading_groups": [
+    {
+      "topic": "Cooperation and foreknowledge reply",
+      "recorded_utc": "2026-10-05T23:00:15.446266+00:00",
+      "reading_receipt_sha256": "9e8cd8c71b0de9992573396af191749bee3e8d629dfebe0279e39f854f441ef1",
+      "reads": [
+        {
+          "url": "https://islamicbook.ws/tarekh/mnhaj-006.html",
+          "retrieved_body_lines_inclusive": [
+            108,
+            133
+          ],
+          "scope": "Opposition and agreement objection through the cooperation, foreknowledge, original-power, correlative-relations and partnership replies, with immediate surrounding context.",
+          "earlier_lines_98_107": "Partially inspected; no guaranteed continuous reading is credited.",
+          "bounded_capture_sha256": "36bc77039637a0a9bc5d8a1c54f09c78c619e50ada4c4d473fc0cf926144c883",
+          "bounded_capture_bytes": 37476
+        },
+        {
+          "url": "https://ar.wikisource.org/wiki/منهاج_السنة_النبوية/20",
+          "retrieved_body_lines_inclusive": [
+            92,
+            178
+          ],
+          "core_reply_lines_inclusive": [
+            145,
+            175
+          ],
+          "scope": "Matching primary body read in successive bounded displays, including preceding and following context.",
+          "bounded_capture_sha256": "5f6b7ad83a1fd723410f6ce769720a33cd8a799c44ed1dc804b74ad80067a78b",
+          "bounded_capture_bytes": 33633
+        }
+      ]
+    },
+    {
+      "topic": "Source-inhering speech and the replies concerning truthfulness",
+      "recorded_utc": "2026-10-05T23:04:00.880915+00:00",
+      "reading_receipt_sha256": "f4567013fe1b4057c427c4c22fc46dd6db9f643619ea832ed75f8a05899ea1db",
+      "reads": [
+        {
+          "url": "https://islamicbook.ws/tarekh/mnhaj-005.html",
+          "retrieved_body_lines_inclusive": [
+            350,
+            354
+          ],
+          "scope": "Preceding objection and beginning of the authorial reply, continuing across the website subdivision.",
+          "bounded_capture_sha256": "6a43b4272d554825443900c510ebee72502f667df05dbbdf1db39070c6f5b1df",
+          "bounded_capture_bytes": 2507
+        },
+        {
+          "url": "https://islamicbook.ws/tarekh/mnhaj-006.html",
+          "retrieved_body_lines_inclusive": [
+            7,
+            21
+          ],
+          "scope": "Complete eight-reply continuation, including voluntary/nonvolitional voice distinctions and the inhering/external contrast.",
+          "bounded_capture_sha256": "5a00d6ec89de0ef18d3f5b4f7d395a99a6afaf8ee81abb924581ef0036214d40",
+          "bounded_capture_bytes": 12872
+        }
+      ]
+    },
+    {
+      "topic": "Additional same-team reading of the intrinsic-speech continuation",
+      "recorded_utc": "2026-10-05T23:00:18.757069+00:00",
+      "reading_receipt_sha256": "5e3e5d5e1f821f08fe2fe681a82dbd5597fdfe80961502d8296cc10dd6b3b9f8",
+      "reads": [
+        {
+          "url": "https://islamicbook.ws/tarekh/mnhaj-005.html",
+          "retrieved_body_lines_inclusive": [
+            350,
+            354
+          ],
+          "metadata_and_boundary_lines_checked": [],
+          "scope": "Chapter heading, quoted objection, beginning of reply and first cause/bearer distinction.",
+          "bounded_capture_sha256": "7b2e73d2c4ac42baaee8de2f25ace59eaade28e1aca78b4141e23c0a0fac4d81",
+          "bounded_capture_bytes": 2506
+        },
+        {
+          "url": "https://islamicbook.ws/tarekh/mnhaj-006.html",
+          "retrieved_body_lines_inclusive": [
+            7,
+            21
+          ],
+          "metadata_and_boundary_lines_checked": [
+            5,
+            6,
+            22,
+            23
+          ],
+          "scope": "Complete continuation through the eighth reply and prophetic-discrimination replies, before the next chapter.",
+          "bounded_capture_sha256": "6b6b4c53c38353048d3c15daf8c53b0113e7c112697343248b806eb380522994",
+          "bounded_capture_bytes": 13533
+        }
+      ],
+      "independence_limit": "Additional reading of the same electronic bodies, followed by same-team discussion; not an independent textual witness or an isolated blind assessment."
+    }
+  ],
+  "capture_identity_limit": "Hashes bind the particular bounded retained text captures, including their representation and surrounding returned material. They are not whole-webpage hashes or evidence that all captured surrounding material was read. Captures and body text are not included.",
+  "electronic_witness_limit": "Matching transcriptions and repeated reads do not establish independent witness ancestry. No count of independent textual witnesses is claimed.",
+  "print_mapping": {
+    "status": "CITATION_AND_SEARCH_DERIVED_NOT_PRINT_COLLATED",
+    "reported_volume": 3,
+    "reported_combined_page_range": [
+      321,
+      328
+    ],
+    "supplied_translation_references": [
+      {
+        "footnote": 19,
+        "translation_printed_page": 26,
+        "translation_pdf_page": 33,
+        "cited_minhaj_volume": 3,
+        "cited_minhaj_page_range": [
+          326,
+          328
+        ]
+      },
+      {
+        "footnote": 32,
+        "translation_printed_page": 40,
+        "translation_pdf_page": 47,
+        "cited_minhaj_volume": 3,
+        "cited_minhaj_page_range": [
+          321,
+          322
+        ]
+      }
+    ],
+    "edition_specific_mapping_verified": false,
+    "qualification": "The corresponding thematic electronic body was read. Exact edition-specific correspondence to the cited printed pages was not independently verified. These page references concern the cooperation/foreknowledge material; no verified printed locus is assigned to the separate intrinsic-speech body."
+  },
+  "islamweb_retrieval_scope": {
+    "search_location_reported": "Matching volume 3, pages 321–328 search location.",
+    "reported_open_failures": 2,
+    "failure_classification": "Tool/cache retrieval failures; not an established HTTP 403 or permission denial.",
+    "direct_body_read_credited": false,
+    "limit": "No successful full-body reading is credited to these attempts; no new attempt was made during packaging."
+  },
+  "preserved_coverage_snapshots": [
+    {
+      "metadata_file": "sources/six_source_coverage.json",
+      "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+      "supplied_pdf_count": 6,
+      "supplied_pdf_pages": 1393,
+      "unchanged": true
+    },
+    {
+      "metadata_file": "sources/additional_arabic_source_scope.json",
+      "sha256": "1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944",
+      "additional_scan_pdf_pages": 938,
+      "bounded_unique_main_text_pdf_pages": 78,
+      "bounded_unique_context_pdf_pages": 17,
+      "unchanged": true
+    }
+  ],
+  "coverage_limit": "Electronic line ranges are not converted into printed page counts or added to either preserved coverage snapshot. Later local rereadings do not revise those snapshots.",
+  "included_primary_body_text_or_images": false,
+  "whole_work_read_claimed": false,
+  "printed_edition_collation_performed": false,
+  "manuscript_collation_performed": false,
+  "independent_witness_claimed": false,
+  "new_primary_reading_by_packaging": false,
+  "philosophical_disposition_included": false,
+  "limits": [
+    "Bibliographic and scope metadata only; no source text, screenshot, private path, internal identifier or private substantive report is distributed.",
+    "Reading credit is bounded to the listed successful body reads, not search snippets or failed retrievals.",
+    "Argument evaluation belongs in the separately reviewed main report; this record neither adopts the source claims nor resolves the substantive review disagreement.",
+    "No final release, publication, dataset replay, new mathematical theorem or kernel-checked proof is implied."
+  ]
+}

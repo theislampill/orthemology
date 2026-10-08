@@ -1,0 +1,89 @@
+{
+  "results": [
+    {
+      "assumptions": [
+        "Obj constructors distinguish ground, gAct(n), effect(n) and other(n); E, rather than mere membership in the potential-label domain, marks existence at a world.",
+        "Power and all-world existence of the ground are explicit interpretation inputs; GAct and capacity are predicates, not additional objects.",
+        "R(w,v) is the chosen strict serial-order relation. The actual trajectory is separately stipulated and is not inferred from modal availability.",
+        "Created and ExternalReceipt extensions are explicitly selected for this model; no universal theory of creation or every form of intrinsic dependence is thereby proved."
+      ],
+      "calculus": "OTHER",
+      "claim_scope": "COMPONENT",
+      "conclusion": "A chosen typed interpretation distinguishes essential bearer power, an act-kind predicate, successive intrinsic act tokens and created effects. It realises possible G-empty and stronger all-emergent-empty alternatives together with box-diamond availability of genuinely fresh, existent G tokens. Its separately chosen actual trajectory has a total emergent gap followed by a distinct new act; every occurring emergent token permanently ceases. A temporally novel intrinsic act can produce a created effect without itself satisfying Created or the model’s ExternalReceipt predicate. Exactly one stipulated object is all-world necessary; this is a representation control, not an actual metaphysical existence or possibility proof.",
+      "domain": "UNBOUNDED_MODEL",
+      "evidence_keys": [
+        "final-reader:t20/ontology-type-control/AUDIT.md",
+        "final-reader:t20/ontology-type-control/OriginationTypeControl.lean",
+        "final-reader:t20/ontology-type-control/OverreachRejected.lean",
+        "final-reader:t20/ontology-type-control/DEFINITION_BINDINGS.json",
+        "final-reader:t20/ontology-type-control/SOURCE_BINDINGS.json",
+        "final-reader:t20/ontology-type-control/EXECUTION_RECEIPT.json",
+        "final-reader:t20/ontology-type-control/MANIFEST.json",
+        "final-reader:t20/ontology-type-control/METADATA_CORRECTION.json",
+        "final-reader:t20/ontology-type-control/SPAN_VALIDATION.json",
+        "final-reader:t20/ontology-type-control/final-check.log",
+        "final-reader:t20/ontology-type-control/overreach-rejection.log",
+        "final-reader:t20/ontology-type-control/ACT_PRODUCT_CONTEXT.json",
+        "final-reader:t20/ontology-type-control/review/EXECUTION_RECEIPT.json",
+        "final-reader:t20/ontology-type-control/review/SOURCE_BINDINGS.json",
+        "final-reader:t20/ontology-type-control/REPRODUCE.md",
+        "final-reader:t20/ontology-type-control/review/ReviewerProbes.lean",
+        "final-reader:t20/ontology-type-control/review/probes.log",
+        "final-reader:t20/ontology-type-control/review/REVIEW.md",
+        "final-reader:t20/ontology-type-control/review/REVIEW.json"
+      ],
+      "family": "t20-emergence-type-control",
+      "id": "T20-EMERGENCE-TYPE-CONTROL",
+      "input_contract": "Obj constructors distinguish ground, gAct(n), effect(n) and other(n); E, rather than mere membership in the potential-label domain, marks existence at a world.; Power and all-world existence of the ground are explicit interpretation inputs; GAct and capacity are predicates, not additional objects.; R(w,v) is the chosen strict serial-order relation. The actual trajectory is separately stipulated and is not inferred from modal availability.; Created and ExternalReceipt extensions are explicitly selected for this model; no universal theory of creation or every form of intrinsic dependence is thereby proved.",
+      "limitations": [
+        "Emergent is a kind predicate; concrete temporal novelty is separately witnessed through E at different actual states.",
+        "The auxiliary other-kind is possible in some worlds but absent on the selected actual trajectory; its actual cessation case is vacuous. G-act and effect occurrences are live.",
+        "A chosen singleton necessary-object extension does not prove actual numerical uniqueness, a second necessary abstract type, or the metaphysical adequacy of the frame.",
+        "Safadiyya supports the intrinsic-act/created-product distinction. It does not by itself attribute historical simultaneous cessation of all emergent kinds.",
+        "Applying OriginalBearerBridge.ContingencyNeed to novel intrinsic act tokens requires an additional B-admission and whole-existence applicability assumption; the inherited conditional proof remains intact.",
+        "Metaphysical possibility, actual realization, empirical cosmology, source-authentication and full divine-action semantics remain unproved.",
+        "The 14:34 Necessary Being/actual common-source appraisal is unchanged; universal SourceMode remains withheld.",
+        "This clarifies an application-scope assumption, not a discovered failure of the old B conditional."
+      ],
+      "math_form": "FORMAL",
+      "obligation_ids": [],
+      "operational_model": "Chosen typed interpretation with Nat-indexed worlds and object identities, explicit modal existence and accessibility, and a separately chosen actual trajectory. Lean 4.19.0, direct Init import.",
+      "origin_status": "Original late author control and independent review PASS at the selected interpretation scope: nine named author theorems, seven selected author readbacks, seven independent reviewer probes and two rejected overclaims. This receiving registration performs no native scientific execution or replay and preserves all earlier conditional results.",
+      "original_avenues": [
+        1,
+        2,
+        8
+      ],
+      "residual_scope": "Emergent is a kind predicate; concrete temporal novelty is separately witnessed through E at different actual states. The auxiliary other-kind is possible in some worlds but absent on the selected actual trajectory; its actual cessation case is vacuous. G-act and effect occurrences are live. A chosen singleton necessary-object extension does not prove actual numerical uniqueness, a second necessary abstract type, or the metaphysical adequacy of the frame. Safadiyya supports the intrinsic-act/created-product distinction. It does not by itself attribute historical simultaneous cessation of all emergent kinds. Applying OriginalBearerBridge.ContingencyNeed to novel intrinsic act tokens requires an additional B-admission and whole-existence applicability assumption; the inherited conditional proof remains intact. Metaphysical possibility, actual realization, empirical cosmology, source-authentication and full divine-action semantics remain unproved. The 14:34 Necessary Being/actual common-source appraisal is unchanged; universal SourceMode remains withheld. This clarifies an application-scope assumption, not a discovered failure of the old B conditional.",
+      "review_ids": [
+        "T20-EMERGENCE-TYPE-CONTROL-INHERITED-SCOPE-REVIEW"
+      ],
+      "source_ids": [
+        "T20-FINAL-71bd18caf46767970555",
+        "T20-FINAL-30374a0606c9760076bb",
+        "T20-FINAL-ab5767fc84bfbce4da8e",
+        "T20-FINAL-fe5ec462a86c3727a45a",
+        "T20-FINAL-21f365ab1b0b5dbc95c2",
+        "T20-FINAL-5b29b290dbe9cd7c8e92",
+        "T20-FINAL-ff08f5d6e04c16769683",
+        "T20-FINAL-d77cbbf34ccc59e62619",
+        "T20-FINAL-79ed4e68ea81ad53ab3e",
+        "T20-FINAL-2cd93d28bb04ac8740b0",
+        "T20-FINAL-7aef0762e5152250656e",
+        "T20-FINAL-5bb33aef0cf9b70bc639",
+        "T20-FINAL-2e1c86990882338ca9a5",
+        "T20-FINAL-2bad503fad2b4c567662",
+        "T20-FINAL-348846251f0eb72155ca",
+        "T20-FINAL-d8a54cae1a271174d1e7",
+        "T20-FINAL-44f3874d7355217e1060",
+        "T20-FINAL-cd2ad31f1a35b2c5686d",
+        "T20-FINAL-80a5f2b6d3a145a551d7"
+      ],
+      "suite_ids": [],
+      "target": "t20-emergence-type-control",
+      "title": "Typed emergence control separating intrinsic acts from created effects",
+      "tranche": 20
+    }
+  ],
+  "scope": "One distinct late representation result. Retrospective method records and document successors add no result rows."
+}

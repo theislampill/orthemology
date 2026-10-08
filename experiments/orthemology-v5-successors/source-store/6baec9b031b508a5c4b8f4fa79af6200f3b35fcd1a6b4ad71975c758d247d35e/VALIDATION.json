@@ -1,0 +1,22 @@
+{
+  "scope": "Reconstruction metadata/source identity checks only. No Lean compilation, premise-truth proof, actual-world model validation or new historical source reading.",
+  "nodes": 103,
+  "edges": 130,
+  "unique_bound_passages": 270,
+  "issues": 32,
+  "all_six_docx_body_extractions_verified": true,
+  "formal_source_excerpt_bindings_verified": true,
+  "acyclic_typed_graph_verified": true,
+  "unproved_D18_bridge_edges_labelled": true,
+  "proper_time_edges_are_qualifications": true,
+  "historical_and_current_appraisal_separate": true,
+  "repository_status_porcelain": "",
+  "repository_untouched": true,
+  "fresh_formal_work": "NOT_ATTEMPTED",
+  "known_limitations": [
+    "Original Sixth author numbered-premise prose is custody-only; current P0–P4 mapping comes from T19 P94.",
+    "CND/source-mode/mediate-to-full-coverage bridge is not already a kernel theorem.",
+    "Existing conditional Lean results have inherited receipts; not rerun here.",
+    "Source-guide primary citations preserve inherited read scope; underlying primary books not reread in this reconstruction."
+  ]
+}

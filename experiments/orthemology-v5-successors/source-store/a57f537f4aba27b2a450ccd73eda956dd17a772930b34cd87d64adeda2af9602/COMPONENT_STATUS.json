@@ -1,0 +1,70 @@
+{
+  "snapshot_utc": "2026-10-06T03:19:49.821274+00:00",
+  "components": [
+    {
+      "component": "reference",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "aea526ca91d21d95968ffe6d618c4479277e6b3d5ded9e4a8f03d31c6805631e",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    },
+    {
+      "component": "efficient",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "0bb3087a81afefa5f97b7aeafa8157c1d3fd715f618aff2c1ff08bf21ca2be96",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    },
+    {
+      "component": "lean-finite",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "34f63e63ead0b408cd4978c301748e25764dbbe21074f57aa33fc19c44fcdcbf",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    },
+    {
+      "component": "lean-laws",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "63bc3c143ddf5e82684e8979580aefa5361a5bf96dda3fed5dd7fcc09e37e22b",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    },
+    {
+      "component": "lean-controller",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "7ee584eb345fb944bc23954105907039987af0e6219321469a5c400345416add",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    },
+    {
+      "component": "lean-necessity",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "a81786ffd858f46de37ba680e388534751a76d0c012e74a0d91716830f39c578",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    },
+    {
+      "component": "lean-endpoint",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "9d3515b1610bb034a21ae3de1d55674153d91262a32e19e2546c70bf997b47ea",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    },
+    {
+      "component": "hase-existing",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "8d7eb5f3c1f0a3e700f96f44293a3985994e014388f0a55e0990fd701b5219a3",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    },
+    {
+      "component": "hase-inhabited",
+      "author_stage": "checked at bounded component scope",
+      "independent_stage": "accepted at bounded component scope",
+      "independent_evidence_sha256": "76fdf2f73ad6417b3c09a0e569d3ffe2060377dc6a76f0d7e147e2fd2e5ff4af",
+      "public_summary": "VERIFICATION_SUMMARY.md"
+    }
+  ],
+  "root_admission_sha256": "591158a99a79e9611ecbdd6d5034cd553e59be1d2c85eb068d4389e1ada11e9b",
+  "does_not_authorize_publication_or_overall_completion": true
+}

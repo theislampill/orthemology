@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "oracle": "Independent integer-bitmask closure, subset/cut enumeration and partition generation; does not use author cut/minimization/search helpers",
+  "rule_domain": {
+    "claims": 3,
+    "roots": 2,
+    "fixed_base": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "possible_rules": 24,
+    "selected_rule_count_range": [
+      0,
+      3
+    ],
+    "systems": 2325,
+    "availability_profiles": 9300
+  },
+  "alias_records": [
+    {
+      "labels": 1,
+      "antichains": 1,
+      "partitions": 1,
+      "cases": 1,
+      "strict_failures": 0
+    },
+    {
+      "labels": 2,
+      "antichains": 4,
+      "partitions": 2,
+      "cases": 8,
+      "strict_failures": 0
+    },
+    {
+      "labels": 3,
+      "antichains": 18,
+      "partitions": 5,
+      "cases": 90,
+      "strict_failures": 0
+    },
+    {
+      "labels": 4,
+      "antichains": 166,
+      "partitions": 15,
+      "cases": 2490,
+      "strict_failures": 40
+    }
+  ],
+  "alias_cases": 2589,
+  "additional_edge_transport_checks": 10,
+  "discriminating_controls": [
+    "empty family",
+    "empty support",
+    "dominated/redundant supports",
+    "alternative versus union",
+    "saturated alias availability",
+    "unique cheapest four-label cut still wrong after aliasing"
+  ]
+}

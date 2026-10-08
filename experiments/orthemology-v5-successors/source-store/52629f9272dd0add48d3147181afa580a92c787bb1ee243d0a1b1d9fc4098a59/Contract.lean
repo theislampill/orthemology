@@ -1,0 +1,12 @@
+import TraceControls
+#check TraceControls.mask_sum
+#check TraceControls.trace_total
+#check TraceControls.complete_law00
+#check TraceControls.complete_law01
+#check TraceControls.one_trace_tv
+#check TraceControls.duplicate_tv
+#check TraceControls.zero_data_tv
+#check TraceControls.randomized_success_bound
+#check TraceControls.duplicate_randomized_success_bound
+#check TraceControls.same_content_source_law
+#check TraceControls.known_word_mask_ambiguity

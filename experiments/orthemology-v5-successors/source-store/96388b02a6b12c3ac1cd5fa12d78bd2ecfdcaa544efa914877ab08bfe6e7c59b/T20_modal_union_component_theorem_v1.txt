@@ -1,0 +1,139 @@
+T20 Modal Union Component Theorem and Finite Tests
+7 October 2026
+
+Result
+
+Yes. Source equality can propagate along a finite chain whose edges are individually admissible in different worlds. A single world realizing the whole chain is unnecessary. The crucial condition is that every edge yields equality of the same anchored source identities. Rigid original-bearer identities alone do not secure this if a shared product or descriptor changes its source between worlds.
+
+The result is elementary equality propagation on the union of world-indexed relations, together with a precise cross-world attribution bridge. It extends the usable certificate format beyond an actual-world graph and beyond a demand that each pair be directly contactable. It does not supply the modal or metaphysical warrant for any crossing. All earlier source appraisals, the frozen contact review, the affirmative Akmaliyya addendum and its later sufficiency revision remain unchanged.
+
+1. Exact anchored theorem
+
+Let V be a set of provenance carriers, S a set of anchored original-source identities, W a set of world indices, and a : V -> S a fixed attribution map. Let Admissible(w) specify which worlds count. Let E(w,u,v) mean that an appropriately typed productive crossing connects u and v in w.
+
+Assume the anchored edge law:
+
+For every w, u and v, if Admissible(w) and E(w,u,v), then a(u) = a(v).
+
+Define the undirected union relation U by:
+
+U(u,v) holds exactly when some admissible w satisfies E(w,u,v) or E(w,v,u).
+
+Define union reachability by a finite path v0, ..., vn such that U(vi,vi+1) for every consecutive pair. The length-zero path is allowed.
+
+THEOREM. If u and v are connected by such a finite path, then a(u) = a(v). Consequently a is constant on each connected component of the union of admissible crossings.
+
+PROOF. Each path edge has an admissible world witness. The anchored edge law gives equality of its endpoint attributions; reverse an equality when the crossing is oriented oppositely. Compose these equalities along the finite path. The length-zero case is reflexivity. Nothing in this argument selects one common world for the edge witnesses.
+
+The essential local source condition is used only through the anchored edge law. Calling a condition essential is not a machine-checkable substitute for providing this quantified premise over all admitted edge witnesses.
+
+2. Factor the cross-world bridge rather than hide it
+
+The anchored law should be derived from distinct inputs if the local source identity types vary by world. For each w, let Sw be its local source-identity set, let t_w : S -> Sw transport anchored identities into that world, and let s_w assign local source identities to carriers available there. Values of s_w outside the availability domain are irrelevant.
+
+For every admissible crossing E(w,u,v), require:
+
+- Availability: u and v have the required local realizations and productive roles in w.
+- Local same-source: s_w(u) = s_w(v).
+- Provenance retention at this crossing: s_w(u) = t_w(a(u)) and s_w(v) = t_w(a(v)).
+- Identity reflection on its endpoints: if t_w(a(u)) = t_w(a(v)), then a(u) = a(v).
+
+These conditions give the anchored edge law by equality substitution. A convenient stronger version of identity reflection requires t_w to be injective for all relevant anchored sources. Literal rigid identities, with Sw = S and t_w the identity, satisfy that condition.
+
+Full rigid naming is stronger than the mathematics needs. Injective renaming or faithful transport suffices. What fails is coalescence of distinct anchored originals into one local identity, or an untracked change of a carrier's provenance. Conversely, retention at every world whatsoever is unnecessary: it is enough at the worlds and endpoints used by the certificate.
+
+The four conditions are an interpretable sufficient decomposition, not a claim that each is logically necessary in every particular model. The mathematically minimal condition is simply that each admitted edge entails equality of its anchored source labels. Full pointwise injectivity and provenance retention are useful independently auditable ways to establish that condition.
+
+3. What the vertices mean
+
+A vertex may represent an actual provenance-bearing contribution, a stable lineage, or a source-tagged product role. It must not silently alternate between unrelated source-neutral counterparts. If q means an A-original product in one edge and a B-original product in another, it cannot serve as one shared vertex unless the attribution bridge warrants identifying the relevant source anchors.
+
+The theorem does not require every carrier to be the numerically same physical token across every world. A source-tagged role may have different local realizations, provided each realization used by an edge really retains the anchored original supplier. This can avoid a general origin-essentiality thesis about all products. It does not eliminate the need to prove the narrower retained-provenance assertions for the actual certificate.
+
+An alternative presentation takes original-bearer identities themselves as the vertices. Then every edge already yields identity of its endpoints. This is correct but makes the propagation nearly immediate: the graph cannot have a genuine edge between distinct qualified originals. A carrier graph is more informative for tracking how apparently separate products or fields become linked through different admissible scenarios.
+
+4. Individually possible edges are enough
+
+The theorem requires, for each path edge, a world in which that edge is admissible. The witnesses may differ from edge to edge. It does not require a world in which all path edges occur together, and it does not require a direct edge between the first and last vertices.
+
+The reason is not a principle that individually possible events are jointly possible. Each edge instead proves a non-world-varying equality of anchored sources. Equalities can be composed even when the scenarios that disclose them are mutually incompatible.
+
+All worlds in the certificate must be admissible relative to the stated modal reference or assumption set. The proof does not assume any particular modal accessibility logic, including S5. If different edges are licensed only under inconsistent revisions of the essential premises, they are not witnesses for one common Admissible predicate with one anchored edge law.
+
+Availability is likewise conditional. An edge cannot be certified merely because each endpoint is separately producible somewhere. Both local endpoints and their retained productive roles must occur together in that edge's witness world. Cross-edge co-possibility is unnecessary; within-edge availability remains necessary for the intended interpretation.
+
+5. Three discriminating finite models
+
+These are exact finite relational interpretations. They demonstrate entailment boundaries and consistency of the formal assumptions. They do not establish metaphysical possibility of their worlds or sources.
+
+MODEL A. Union connectivity without any connected witness world.
+
+V = {p,q,r}. S = {A}. Worlds = {w0,w1,w2}; all are admitted. Every available carrier has anchored and local source A. Identity transport is the identity.
+
+- w0: p,q,r are available; no crossing edges.
+- w1: p,q are available; the sole crossing edge is p -> q.
+- w2: q,r are available; the sole crossing edge is q -> r.
+
+The union has the path p -- q -- r. No world realizes both edges, and no world has a connected crossing graph on all three vertices. Local same-source, retention and identity reflection all hold. The certificate yields a(p) = a(q) = a(r).
+
+This separates union connectivity from actual-world connectivity and from joint possibility of a connected crossing arrangement. If an additional original B is placed in S but no carrier is attributed to B, all these conclusions about V remain true; no theorem here excludes that unrepresented B. This is the coverage warning, not a claim that an idle B is metaphysically possible.
+
+MODEL B. Failure when product provenance is not retained, despite rigid source identities.
+
+V = {p,q,r}. S = {A,B}, with A distinct from B. All three carriers are available in every world. All transports are identities, so anchored source identities remain fully rigid. Anchored attribution is a(p)=A, a(q)=A, a(r)=B.
+
+- w0: local sources (p,q,r) = (A,A,B); no edges.
+- w1: local sources (p,q,r) = (A,A,B); sole edge p -> q.
+- w2: local sources (p,q,r) = (A,B,B); sole edge q -> r.
+
+Every local edge has equal local sources. The union is connected. Nevertheless a(p) is not a(r). The failure is exactly at q in w2: its local source B is not its anchored source A. Rigid bearers alone do not prevent this source-attribution switch. Treating q in both edges as an interchangeable source-neutral descriptor would create a false common-source inference.
+
+MODEL C. Failure when identity transport does not reflect equality, with transported provenance retained.
+
+V = {p,q}. S = {A,B}, with A distinct from B; a(p)=A and a(q)=B. Both carriers are available in both worlds. Local source labels are {0,1}.
+
+- w0: t_0(A)=0, t_0(B)=1; local sources are 0 and 1; no edge.
+- w1: t_1(A)=0, t_1(B)=0; both local sources are 0; sole edge p -> q.
+
+In w1 local same-source and provenance retention through t_1 both hold. The union is connected. Yet the anchored sources remain distinct. The transport has merged two anchored identities, so it cannot reflect the local equality back to the anchored domain.
+
+This is the formal danger of allowing two actually distinct source designators to co-refer, or two distinct originals to share one counterpart, in the witness world. It is not permitted by rigid original identity. Mere changes of names with an injective transport cause no problem.
+
+6. Exact common-source and coverage corollaries
+
+If v0 is an anchored carrier and every vertex in a target T is union-reachable from v0, then every v in T has source a(v0). This is common-source attribution for the represented target, even when T is not connected by actual-world productive edges.
+
+To conclude that every relevant original in a source set R equals a(v0), add coverage:
+
+For every source b in R, there is a carrier v in T such that a(v)=b.
+
+Then b=a(v)=a(v0). Without this coverage premise, connectedness of carriers says nothing about original identities with no carrier in the graph.
+
+An active-product availability principle can provide coverage for active originals, but it must genuinely ensure an appropriate product or provenance-tagged productive role. Bare activity does not automatically mean material output receptive to motion or rest. To cover idle originals, one needs a different representation or a separately warranted activity-kind principle that applies to their actual qualifications. The union theorem does not promote bare necessary existence into that profile.
+
+A useful weakened connectivity premise is therefore a modal spanning chain or spanning tree on the represented carriers. It can replace all-pairs direct contactability and any demand for one co-possible connected world. It cannot replace provenance retention, identity reflection, local source unity or coverage.
+
+7. Relation to the earlier results and novelty limit
+
+T19 propagates locally established source identity through a genuinely connected actual productive field. The frozen modal review extends the local incompatibility to every admissible provenance-preserving foreign-completing crossing. The present step composes those world-indexed equalities through a single anchored union graph.
+
+The mathematical core is the familiar fact that a labeling equal on adjacent vertices is constant on connected components. The source-sensitive contribution is the exact factorization of the cross-world edge law and the distinction between per-edge admissibility and co-possible connectivity. If the existing actual-field proof already accepts an arbitrary relation, its propagation lemma can simply be instantiated with the existential union relation. That is a reuse and a new application boundary, not a discovery of a deep new graph theorem.
+
+The metaphysical scope remains conditional. For the typed differentiated-crossing case, the local source-mode premise must establish same-source attribution for each edge. For a graph admitting alleged primitive duplicate production, the distinct CND appraisal may still be needed to establish that edge law. Graph reachability supplies neither premise. The later global-plenitude appraisal and its sufficiency dispute are independent of this certificate theorem.
+
+8. Minimal machine-verification proposal
+
+A minimal Lean development would use only four ingredients:
+
+- Fixed types V, S and W; an attribution function a; admissibility and world-indexed crossing relations.
+- A definition of the undirected existential union relation.
+- A finite-path or reflexive-transitive-closure relation, with an induction proving attribution equality along a path from the anchored edge law.
+- A factorization lemma deriving the anchored edge law from local same-source, provenance retention and injectivity of world transport, followed by the target-coverage corollary.
+
+The core theorem needs no decidability or finiteness assumptions. It can be written against a small self-defined finite-path inductive type if the existing environment lacks a suitable graph library. If a generic connectivity-propagation theorem already exists, reuse it rather than duplicate the proof.
+
+For finite machine-checked examples, use enumerated source, carrier and world types. Model A should verify all premises and the absence of a world containing both edges. Model B should verify local unity and rigid transport while evaluating the provenance-retention predicate to false. Model C should verify local unity and transported provenance while evaluating injectivity to false. In the latter two, the union-connected and nonconstant-anchored-label predicates should both evaluate to true.
+
+A proof-carrying finite certificate can list the anchor, each target's path, and for every path edge its world identifier, direction and the four bridge witnesses. A checker can verify those formal witnesses and compose source equalities. A textual source citation or a field named admissible does not establish actual metaphysical admissibility: in Lean that status remains a declared assumption or separately proved proposition. The certificate should expose that boundary rather than mark metaphysics verified merely because a finite array passed computation.
+
+No Lean code or repository files were created in this pass. This paper supplies the exact theorem, discriminating finite interpretations and the minimal implementation target for an authorized proof-development lane.

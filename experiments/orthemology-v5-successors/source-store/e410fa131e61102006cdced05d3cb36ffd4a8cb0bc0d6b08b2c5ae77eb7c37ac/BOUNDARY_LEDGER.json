@@ -1,0 +1,175 @@
+{
+  "schema": "t20-joint-finite-model-boundary-v1",
+  "scope": "One finite interpretation of the selected reviewed A/B/C, anchored-field and owned-veracity signatures, preserving literal source/bearer identity.",
+  "formal_status_source": "FINAL_STATUS.json and verification-final-v2/VERIFICATION.json; no successful verification is asserted merely by this ledger.",
+  "carriers": {
+    "World": 3,
+    "BeingAndAllSourceRoles": 7,
+    "Resource": 7,
+    "Occurrence": 4,
+    "Contribution": 5,
+    "Token": 2,
+    "Content": 2,
+    "Exercise": 7
+  },
+  "literal_type_equalities": [
+    "ABC.B = Anchored.S = Veracity.Source = JointFinite.B",
+    "ABC.T = JointFinite.B",
+    "ABC.W = Veracity.Occasion = JointFinite.W"
+  ],
+  "design_status": "APPROVED_BEFORE_IMPLEMENTATION",
+  "results": [
+    {
+      "id": "JF-ABC",
+      "declarations": [
+        "abc_full",
+        "J01_canonical_identity",
+        "canonical_abc_same_g",
+        "generic_abc_via_component"
+      ],
+      "owned_gain": "fixed-interpretation same-bearer consistency certificates",
+      "inherited_core": "OriginalBearerBridge A and SourceIdentity B/C",
+      "limits": [
+        "No philosophical warrant of completion, realization, transport, contingency-as-need, constitution or representation is proved.",
+        "The generic existential theorem can select other targets; canonical x identity is separately checked."
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ]
+    },
+    {
+      "id": "JF-FIELD",
+      "declarations": [
+        "field_guarded",
+        "field_coverage_without_cnd",
+        "complete_provider_exists_and_unique",
+        "mixed_occurrence_real"
+      ],
+      "owned_gain": "one shared finite account with actual mixed production and outside original",
+      "inherited_core": "AnchoredSourceBridge",
+      "limits": [
+        "Classification and conformance remain independently interpreted.",
+        "Inventory completeness is only relative to the declared finite contribution type.",
+        "Field uniqueness does not exclude necessary original h outside."
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ]
+    },
+    {
+      "id": "JF-VERACITY",
+      "declarations": [
+        "veracity_package",
+        "veracity_via_component",
+        "honesty_equivalence_via_component",
+        "created_speaker_normative_boundary"
+      ],
+      "owned_gain": "same original g plus genuinely received false speaker x",
+      "inherited_core": "VeracityBoundary",
+      "limits": [
+        "K is negative-truth knowledge coverage, not full omniscience.",
+        "Package applies to g; x fails P and Package.",
+        "Productive support is not assertoric ownership."
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ]
+    },
+    {
+      "id": "JF-JOIN",
+      "declarations": [
+        "J01_canonical_identity",
+        "J02_original_resource_provision",
+        "J03_concrete_receipt",
+        "J04_field_target_link",
+        "J05_positive_reachability",
+        "J05_live_productive_support",
+        "J06_complete_incoming_inventory",
+        "J07_no_incoming_outside_source",
+        "J08_actual_mode_realization",
+        "J09_fitting_source_realization",
+        "J10_truth_grounding",
+        "J11_token_support_grounding",
+        "J12_support_not_ownership",
+        "J13_genuine_agent_identity",
+        "J14_outside_boundary"
+      ],
+      "owned_gain": "explicit cross-interface role/identity compatibility",
+      "limits": [
+        "These are fixed-model equalities and certificates, not new universal philosophical bridges."
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ]
+    },
+    {
+      "id": "JF-ANCESTRY",
+      "declarations": [
+        "finite_ancestry_compatibility",
+        "J05_positive_reachability"
+      ],
+      "owned_gain": "optional fixed-relation compatibility certificate",
+      "limits": [
+        "General incidence-to-Sixth refinement remains OPEN.",
+        "No historical Sixth theorem imported or freshly replayed."
+      ],
+      "evidence_status": [
+        "KERNEL_PROVED",
+        "FINITE_MODEL_VERIFIED"
+      ]
+    }
+  ],
+  "unavoidable_antecedent_limits": {
+    "g_incomplete_qualified_role": "Excluded by classification and conformance at the full package.",
+    "g_false_owned_content": "Excluded by full owned-veracity package.",
+    "g_counterfeit": "Excluded by full owned-veracity package.",
+    "g_shortcoming": "Empty in this selected good-source table; x supplies live D/N counterfeiting and defect witnesses.",
+    "premise_discrimination": "Retain reviewed component removal controls; this is not a new general minimality campaign."
+  },
+  "retained_statuses": [
+    {
+      "status": "APPLICATION_WARRANT_REQUIRED",
+      "subjects": [
+        "Semantic adequacy of all primitive interpretations",
+        "Coverage of intended modal alternatives",
+        "Real-world field boundaries and complete resource index",
+        "Source qualification, actual conformance and ownership attribution"
+      ]
+    },
+    {
+      "status": "OPEN",
+      "subjects": [
+        "General incidence-to-Sixth strict-ancestry refinement",
+        "Formalization and joint consistency of all unformalized source doctrines"
+      ]
+    },
+    {
+      "status": "NOT_ATTEMPTED",
+      "subjects": [
+        "Metaphysical possibility proof",
+        "Actual necessary-being existence",
+        "Full omniscience model",
+        "Actual revelation authentication",
+        "Broad historical-suite replay"
+      ]
+    }
+  ],
+  "source_appraisal": "All prior philosophical acceptance, objections, dissent and root-appraisal qualifications are retained; this finite model adds no philosophical adoption.",
+  "prohibited_overclaims": [
+    "Computer proved metaphysics",
+    "All necessary originals are numerically one",
+    "All productively supported assertions are g-owned",
+    "A/B/C entails qualification or veracity without further substantive premises",
+    "This finite model discharges general Sixth refinement"
+  ],
+  "verification": {
+    "status": "PASS",
+    "receipt": "verification-final-v2/VERIFICATION.json",
+    "sha256": "f9560adb9775de825340963a5abfd6401ad14700c5925d4f04a5420ef4ddad21",
+    "independent_review": "PENDING"
+  }
+}

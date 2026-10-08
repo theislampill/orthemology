@@ -1,0 +1,80 @@
+{
+  "verified_utc": "2026-10-07T13:38:07.910490+00:00",
+  "passed": true,
+  "errors": [],
+  "first_pass": {
+    "windows": 51,
+    "source_records": 436,
+    "unique_source_records": 436,
+    "words": 101419,
+    "exact_source_order_and_coverage": true,
+    "source_window_hashes": true,
+    "source_line_hashes": true,
+    "reader_divisions": [
+      {
+        "reader": "integrating reader",
+        "windows": 13,
+        "source_records": 138,
+        "words": 25826,
+        "first_id": "NB-S001-L0001",
+        "last_id": "NB-S001-L0138",
+        "source_hashes_reverified": true,
+        "all_END_markers_reported": true,
+        "limits": "This reader division only; human/agent reading attestation is not inferred from hashes."
+      },
+      {
+        "reader": "first-continuation",
+        "windows": 13,
+        "source_records": 116,
+        "words": 24927,
+        "first_id": "NB-S001-L0139",
+        "last_id": "NB-S002-L0049",
+        "source_hashes_reverified": true,
+        "all_END_markers_reported": true,
+        "limits": "This reader division only; human/agent reading attestation is not inferred from hashes."
+      },
+      {
+        "reader": "second-opening",
+        "windows": 12,
+        "source_records": 89,
+        "words": 24281,
+        "first_id": "NB-S002-L0050",
+        "last_id": "NB-S002-L0138",
+        "source_hashes_reverified": true,
+        "all_END_markers_reported": true,
+        "limits": "This reader division only; human/agent reading attestation is not inferred from hashes."
+      },
+      {
+        "reader": "final-body",
+        "windows": 13,
+        "source_records": 93,
+        "words": 26385,
+        "first_id": "NB-S002-L0139",
+        "last_id": "NB-S003-L0078",
+        "source_hashes_reverified": true,
+        "all_END_markers_reported": true,
+        "limits": "This reader division only; human/agent reading attestation is not inferred from hashes."
+      }
+    ]
+  },
+  "bounded_returns": {
+    "electronic_ranges": 10,
+    "selected_main_body_or_locator_images": 67,
+    "unique_main_body_positions": 67,
+    "modern_subject_index_images": 13,
+    "acquisition_images_separate": 48
+  },
+  "scan_sha256": "8a351f41452a3ec86a1819a069d8c23e88f0a36519e12016ce4e10a9e9292d93",
+  "prior_assessment_seal_checked": 30,
+  "prior_assessment_unchanged": true,
+  "separate_bounded_reread_excluded": true,
+  "reading_not_inferred_from_emission_or_hashing": true,
+  "full_critical_edition_or_apparatus_claim": false,
+  "original_study_seal": {
+    "manifest_sha256": "39d18c4ddc83342fe63759d2587e29b0f5493744e56252442bd9c0b66a8bf885",
+    "sealed_files": 267,
+    "sealed_utc": "2026-10-07T13:38:08.068442+00:00",
+    "source_bodies_selected": false
+  },
+  "public_record_scope": "Historical author checks retained as reported; curation performs only identity/coverage arithmetic and adds no source-reading credit."
+}
