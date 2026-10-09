@@ -1,0 +1,297 @@
+{
+  "recorded_at_utc": "2026-10-08T10:29:00Z",
+  "operation": "Bounded read-only source and theorem-interface assessment",
+  "local_sources": [
+    {
+      "path": "t20-next-frontier-20261008/root-following-checkpoint/DAR_RECOGNITION_READ.md",
+      "sha256": "99790ee1aa2d4176b93ce6e612d362472a055899cf6074695d240b0ca0bcbe60",
+      "bytes": 2547,
+      "inspection": "Full; root handoff context."
+    },
+    {
+      "path": "t20-next-frontier-20261008/fitrah-warrant-bridge/INDEPENDENT_ASSESSMENT.md",
+      "sha256": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0",
+      "bytes": 20215,
+      "inspection": "Full; prior appraisal and distinctions."
+    },
+    {
+      "path": "t20-next-frontier-20261008/fitrah-warrant-bridge/PRIMARY_VERIFICATION.md",
+      "sha256": "b74d13abf1e51da3442341740f5152b856905f07a80a1f0c71c19429bc4b114a",
+      "bytes": 6472,
+      "inspection": "Full; inherited primary source locator and scope."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940,
+      "inspection": "Full definitions and proofs; no compilation."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/inherited/SourceIdentity.original.lean",
+      "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "bytes": 7357,
+      "inspection": "Full definitions and proofs; no compilation."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/README.md",
+      "sha256": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138",
+      "bytes": 8178,
+      "inspection": "Result, guardrails, source ownership and verification boundaries."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/PROJECTION_NOTES.md",
+      "sha256": "fe9db442aaf977af1b536a04ed813df1ba67b44804063b72f29710b890211f46",
+      "bytes": 3200,
+      "inspection": "Full public projection scope."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-final-synthesis/SYNTHESIS.md",
+      "sha256": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1",
+      "bytes": 43331,
+      "inspection": "Relevant Result/sections 1–4 and A–H/T0/D1/D2 interfaces directly read; no fresh replay."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/RECONSTRUCTION.md",
+      "sha256": "38820a6eb210e1a58b6d9e6df59dfe716a4fe338bde5afe272169f096c6607b4",
+      "bytes": 24345,
+      "inspection": "A–H, attributes/veracity/application, readiness/semantic interface sections."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/PREMISE_REGISTRY.md",
+      "sha256": "6b4ba4e87e46b5a284311d69d82c40df7ab608a48651dabf22003a786510dcbd",
+      "bytes": 86325,
+      "inspection": "Lines 859–984: H03–H04 and V01–V07; other keyword matches used as locators only."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/PRE_FORMAL_ISSUES.md",
+      "sha256": "74c8b4b1a47c916e39f1f78ac34d7c54a8019a84008e3ccf7f83962514b9459b",
+      "bytes": 13814,
+      "inspection": "Lines 296–326, especially V-T3 and N-T1."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "sha256": "4f365005680ede0dbef993054ca64ae01b8f57bbeb7233da86b4c0fe57372d3c",
+      "bytes": 93018,
+      "inspection": "Header/first records; programmatic matching against directly extracted original paragraph hashes."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/AnchoredSourceBridge.lean",
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "bytes": 10743,
+      "inspection": "Full definitions and proofs; no compilation."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/Controls.lean",
+      "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+      "bytes": 22563,
+      "inspection": "Lines 90–158 and 288–310: source/derivative ownership tables and exact control."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/veracity-boundary/src/VeracityBoundary.lean",
+      "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "bytes": 5975,
+      "inspection": "Full definitions and proofs; no compilation."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/grounded-attestation/EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+      "sha256": "b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037",
+      "bytes": 19471,
+      "inspection": "Definitions, Theorem 1, support-survival and occurrence boundaries, Theorem 7 actual-origin-map disclaimer; no fresh full prior-art review."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/grounded-attestation/lean/GroundedSupport.lean",
+      "sha256": "73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed",
+      "bytes": 4269,
+      "inspection": "Full definitions and proofs; no compilation."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/grounded-attestation/lean/OccurrenceControls.lean",
+      "sha256": "b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a",
+      "bytes": 6343,
+      "inspection": "Full definitions and proofs; no compilation."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/grounded-attestation/lean/GroundedQuotient.lean",
+      "sha256": "7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b",
+      "bytes": 3216,
+      "inspection": "Full definitions and proofs; no compilation."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/RESULT.md",
+      "sha256": "e5973984625313731008b8ce63376de1f9cbb2e6ab6ecb0ca5680d74489fa908",
+      "bytes": 21811,
+      "inspection": "Sections 1–7: genuine-source emission and identical-fragment controls; retained execution claims not replayed."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/SOURCE_MAP.md",
+      "sha256": "8fa4f3bc446847d13132c1cdbf2ae01ce9352af7f74d8989e6474edc709f1faa",
+      "bytes": 8065,
+      "inspection": "Keyword-located paragraphs on source emission, implicit indication and inheritance."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/PROBE_PLAN.md",
+      "sha256": "9d16a40d974487f1effc1b68f76717b987110d09f8e8da830fcc9a8a25d8b8c4",
+      "bytes": 3457,
+      "inspection": "Keyword-located observation fidelity boundary."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/IMPLICIT_PLAN.md",
+      "sha256": "60af0c9e239380bd90c072685b2bb7113a232b55b1bcef030f5e998ed1835325",
+      "bytes": 2139,
+      "inspection": "Keyword-located prior-pact/implicit-sign boundary."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/IMPLICIT_RESULT.md",
+      "sha256": "659cdc835270528214736e1cbca65709b6f1c5e9ecbf6cbddf21ffe937e75dcb",
+      "bytes": 11409,
+      "inspection": "Full; logical-rival versus contextual-warrant distinction."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/rivals.py",
+      "sha256": "7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817",
+      "bytes": 15287,
+      "inspection": "Lines 1–114 and 187–231: token/challenge and discourse interpreters."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/extended_histories.py",
+      "sha256": "5efd8893228454abfc859802583862148167625a0799f576fb613c672c076012",
+      "bytes": 6820,
+      "inspection": "Lines 65–123: scoped office and adoption after amendment."
+    },
+    {
+      "path": "recovery-t20/earlier/supplement/Orthemology_T20_Closure_Audit_and_Research_Supplement_v1_20261007/tranche20/research-resumption/testimony-continuation/RESULT.md",
+      "sha256": "0e59321018f5dda5cadcf26dba19fdba0faad853ad90cb97286ecec4a81a3a73",
+      "bytes": 23768,
+      "inspection": "Sections 1–2 directly read in untruncated output; later portions appeared in a truncated retrieval and are not claimed as completely read."
+    },
+    {
+      "path": "recovery-t20/earlier/supplement/Orthemology_T20_Closure_Audit_and_Research_Supplement_v1_20261007/tranche20/research-resumption/testimony-continuation/occurrence_model.py",
+      "sha256": "84150174b12db73b14a4f336f6265336de4b4ba17a9d42360c38350d32964964",
+      "bytes": 14403,
+      "inspection": "Lines 120–180: RecipientPremises, prospective_owner, warranted, and action separation."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "bytes": 65239,
+      "inspection": "Direct zero-based word/document.xml body/w:p extraction. No rendered pagination or layout verification claimed.",
+      "paragraph_ids": [
+        "P00015",
+        "P00016",
+        "P00024",
+        "P00037",
+        "P00040",
+        "P00041",
+        "P00042",
+        "P00043",
+        "P00044",
+        "P00045",
+        "P00046",
+        "P00047",
+        "P00048",
+        "P00049",
+        "P00050",
+        "P00051",
+        "P00052",
+        "P00053",
+        "P00054",
+        "P00055",
+        "P00056",
+        "P00057",
+        "P00058",
+        "P00059",
+        "P00060",
+        "P00061",
+        "P00071",
+        "P00085",
+        "P00086",
+        "P00087",
+        "P00088",
+        "P00089",
+        "P00090",
+        "P00091",
+        "P00092",
+        "P00093",
+        "P00094",
+        "P00095",
+        "P00096",
+        "P00097",
+        "P00098",
+        "P00099",
+        "P00100",
+        "P00101",
+        "P00102",
+        "P00103",
+        "P00104",
+        "P00117",
+        "P00118",
+        "P00119",
+        "P00120",
+        "P00121",
+        "P00122",
+        "P00123",
+        "P00124",
+        "P00125",
+        "P00126",
+        "P00127",
+        "P00128",
+        "P00129",
+        "P00130",
+        "P00131",
+        "P00132",
+        "P00133"
+      ]
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "bytes": 63700,
+      "inspection": "Direct zero-based word/document.xml body/w:p extraction. No rendered pagination or layout verification claimed.",
+      "paragraph_ids": [
+        "P00127",
+        "P00128",
+        "P00129",
+        "P00130",
+        "P00131",
+        "P00132",
+        "P00133",
+        "P00134",
+        "P00135",
+        "P00136",
+        "P00146",
+        "P00147",
+        "P00148",
+        "P00149",
+        "P00150",
+        "P00153",
+        "P00154",
+        "P00155",
+        "P00156",
+        "P00157",
+        "P00158",
+        "P00159",
+        "P00160",
+        "P00161",
+        "P00162",
+        "P00163",
+        "P00164",
+        "P00165",
+        "P00166",
+        "P00167",
+        "P00168",
+        "P00169",
+        "P00170"
+      ]
+    }
+  ],
+  "web_sources": [
+    {
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html",
+      "retrieved_at_utc": "2026-10-08T10:18:31Z",
+      "directly_read_scope": "Connected authorial unit lines 913–928; relevant voice boundary 908–912. Broader context displayed but no full-segment reading claimed.",
+      "local_body_hash": null,
+      "limitations": "Electronic witness only; no print pagination or manuscript collation. No raw Arabic body redistributed."
+    }
+  ],
+  "reading_credit": "Fresh targeted checks of inherited materials, not newly discovered independent historical witnesses. Extraction alone is not credited as reading."
+}

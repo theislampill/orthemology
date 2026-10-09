@@ -1,0 +1,125 @@
+{
+  "scope": "Exact inputs inspected for the log-squared review",
+  "sources": [
+    {
+      "path": "../full-skyline-log-squared/RESULT.md",
+      "sha256": "7251887ac088bfc13a93b94e400879e851ebd1ceb1a6337449f9def20cb0c2f7",
+      "read_scope": "Full file",
+      "role": "Final reviewed author packet"
+    },
+    {
+      "path": "../full-skyline-log-squared/MANIFEST.json",
+      "sha256": "1e0b0927a4bb4a3734c682acfd0cf4c67624291909800ceef2a503a7d42eba71",
+      "read_scope": "Full file",
+      "role": "Final reviewed author packet"
+    },
+    {
+      "path": "../full-skyline-log-squared/SOURCE_BINDINGS.json",
+      "sha256": "5f78bbfdc8ad6a9fcb9415ec06efa3edd85e7acb50585a2fae71d06ba283fafb",
+      "read_scope": "Full file",
+      "role": "Final reviewed author packet"
+    },
+    {
+      "path": "../full-skyline-log-squared/SOURCE_AUDIT.md",
+      "sha256": "60e33982b5775b38aa6a257654c7bb98d3cb26fe3e2c1d49fb8e918f88c735de",
+      "read_scope": "Full file",
+      "role": "Final reviewed author packet"
+    },
+    {
+      "path": "../full-skyline-log-squared/controls.py",
+      "sha256": "43b2eb32343777d5094c2564f4641d99fcd6354bfab3a130b9dd8d92e3c6ca8c",
+      "read_scope": "Full file",
+      "role": "Final reviewed author packet"
+    },
+    {
+      "path": "../full-skyline-log-squared/CONTROL_RESULTS.json",
+      "sha256": "6de20900a23a8578bfe57dfab63f2147c517c5a8cd606a74ff02b4646c3a5211",
+      "read_scope": "Machine parsed status and structure; complete replay byte equality; no claim of manual inspection of every numeric row",
+      "role": "Final reviewed author packet"
+    },
+    {
+      "path": "../full-skyline-log-squared/CONTROL_RUN.log",
+      "sha256": "a2b159568211b665dc8e829f3babfc7bd0415cd47eb897961b0f9b9392c31fb4",
+      "read_scope": "Full file",
+      "role": "Final reviewed author packet"
+    },
+    {
+      "path": "../full-skyline-log-squared/ACTIVITY_LOG.json",
+      "sha256": "864d8e84ae9ed159c8bc09ff25a1405e0626323d0b2d4cc098f81a9f0e59fc6c",
+      "read_scope": "Full file",
+      "role": "Final reviewed author packet"
+    },
+    {
+      "path": "../retained-skyline-likelihood/RESULT.md",
+      "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+      "read_scope": "Full file",
+      "role": "Exact density, latent conditional law, singular mass and orientation"
+    },
+    {
+      "path": "../skyline-count-information/RESULT.md",
+      "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d",
+      "read_scope": "Full file",
+      "role": "Count record law, Joe coupling and upper test comparator"
+    },
+    {
+      "path": "../skyline-likelihood-score/RESULT.md",
+      "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f",
+      "read_scope": "Full file",
+      "role": "Localized deterministic expansion"
+    },
+    {
+      "path": "../skyline-likelihood-score-review/REVIEW.md",
+      "sha256": "77fa54173fa04c4d9b942cb668dbc080dd3b5062c563e29ed6850c5b1185d596",
+      "read_scope": "Full file",
+      "role": "Independent localized-expansion verification"
+    },
+    {
+      "path": "../full-skyline-reverse-kl/RESULT.md",
+      "sha256": "4aa4bee754cf89284a327d4322f4d35a93314525da8aaa22e5d028754908e28a",
+      "read_scope": "Full file",
+      "role": "Inherited entropy and actual-action arguments"
+    },
+    {
+      "path": "../full-skyline-reverse-kl-review/REVIEW.md",
+      "sha256": "bf100b4cb87154cc520f21dc6db3957357e8baa6f64c4f37d729d576d299c55f",
+      "read_scope": "Full file",
+      "role": "Bounded predecessor review, excludes new strengthening"
+    },
+    {
+      "path": "../full-skyline-reverse-kl-review/REVIEW_RECEIPT.json",
+      "sha256": "7ebf6592f163671710a52e4368d4487e2a96d33ee8f8ccb0f8268a2df128aea2",
+      "read_scope": "Full file",
+      "role": "Predecessor immutable review scope"
+    },
+    {
+      "path": "../baseline-skyline-moments/RESULT.md",
+      "sha256": "b7bdcfa8b7288d69d569b6ed904c314fe58e4795c92549a6d525c433ad7c139f",
+      "read_scope": "Full file",
+      "role": "Baseline centering and small-count crosschecks"
+    },
+    {
+      "path": "../skyline-probability-prior-art/RESULT.md",
+      "sha256": "ff663eca1abe6b680ef9ed615eb8978484e78ff6a3c2debc13b9cc0e0ddaa945",
+      "read_scope": "Full file",
+      "role": "Prior-art attribution and comparison; sharper tail not required"
+    },
+    {
+      "path": "../skyline-probability-prior-art/SOURCE_AUDIT.md",
+      "sha256": "a297002371f620dcf0233f0e5d494b617b3b406ed4d7be4299630cd0aad69ba7",
+      "read_scope": "Full file",
+      "role": "Inherited source-read boundaries, no fresh source read claimed"
+    },
+    {
+      "path": "../skyline-probability-prior-art-review/REVIEW.md",
+      "sha256": "b505d15c693b8a4fbba103d7c4f1e4691598095f00726c360e84e13a4d53a234",
+      "read_scope": "Full file",
+      "role": "Existing source-hypothesis verification"
+    },
+    {
+      "path": "../skyline-probability-prior-art-review/VERIFICATION_MANIFEST.json",
+      "sha256": "46842e57d4e1b6ec0bc4fda180a5d8f813dd7cc16bc2ef9b4e0eb7a108c15cea",
+      "read_scope": "Full file",
+      "role": "Source-review bindings and read boundaries"
+    }
+  ]
+}

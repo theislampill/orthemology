@@ -1,0 +1,53 @@
+{
+  "verified_utc": "2026-10-09",
+  "scan_url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+  "scan_sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730",
+  "pdf_pages": 444,
+  "byte_identical_to_prior_source": true,
+  "independent_source_credit": false,
+  "visual_main_pages": [
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "visual_front_or_context_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    85,
+    86,
+    87
+  ],
+  "mapping": {
+    "csiislam_one_based_pdf_to_printed": "identity verified for 93–99",
+    "iifa_zero_based_index_to_printed": "P93 = printed 94 through P98 = printed 99, verified by text alignment only; screenshots failed"
+  },
+  "date_and_edition_basis": "Islamarchive metadata: first edition, 1429 AH; no dated imprint leaf in inspected scan frontmatter",
+  "findings_file": "JAMI_VI_94_98_VERIFIED_RETURN.md",
+  "files": {
+    "islamarchive28157-metadata.txt": "bf901b3c09b7b38907654e4b45ca60571bf569373f0114eb9283ed01d43e0c6e",
+    "fetch-record.json": "4262609c94ea4b98fde7d50ac08d41f1b035bbc0f8590af163e722e8cc8b0643",
+    "JAMI_VI_94_98_VERIFIED_RETURN.md": "0c6789e8f9299cab6609ccfdca152858bbe95036ce66df04c3fba5406d4beb4e",
+    "islamarchive28157-metadata.html": "b22c12c70ef29eda68682f9df44e05a39a24fd071e55061ca2cde25986338859",
+    "jami6-csiislam.pdf": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730",
+    "pages/csiislam-097.png": "23ba58423fae9b62cd721cb7a9cfe17f0a542b3c42cb590de0d072a2f832a1e6",
+    "pages/csiislam-front-004.png": "ac74f278aa75f42cacd3fd41ba2811390954c5dea22bdd5d0c15ee85de48acc0",
+    "pages/csiislam-094.png": "c25962d32488f7b703817fe694b8ab39d840c32bac695ffe9c7c807f670cdda6",
+    "pages/csiislam-093.png": "29a2b63fd73e3ed47ba61192e00e3af184400195d4aa06a9f74c864dacc8cab7",
+    "pages/csiislam-front-001.png": "228faaa3c6b259939ec3201c5aa2071c711954ccbe89502472eb857a7b9b4b10",
+    "pages/csiislam-front-003.png": "e552586b149ab72078ee5041165b12fe6a1c30fa527d2367d036ff17455468ad",
+    "pages/csiislam-context-086.png": "39116b4ff190093038fbf729e60ebf5795466af95809c14eda502bbd3a8ca268",
+    "pages/csiislam-096.png": "98db91fffdb679c2950df62ca1a4b8b9d6c37ddfc91e187c0ece7ede584b73ab",
+    "pages/csiislam-context-085.png": "b6d2d8f67e72fe3dc94c0792d679ba543959843edd77f3c80078ccccec98201e",
+    "pages/csiislam-099.png": "9a148b0264e27f0941a4ec5e70c85b473c2e8df1a839ac2f3e9c35f1ac17fe1c",
+    "pages/csiislam-context-087.png": "fde1123cf4a5d2034c3545321077e2b63abf9f90c1876c4a5c9b03f50e66d46f",
+    "pages/csiislam-front-002.png": "ce4a2a931bfb8a7097a09cd925a7e19b5bee3818077738d5f8a108206b72ac59",
+    "pages/csiislam-098.png": "ac2dd03d665fc0e654064caababeb29e2364f53c64129af7ba4eb648c76de2aa",
+    "pages/csiislam-095.png": "734d55fbe8e368e242e1f13cd1f896a1c5e77bf4749f28e0596b711f4bb4f65e"
+  }
+}

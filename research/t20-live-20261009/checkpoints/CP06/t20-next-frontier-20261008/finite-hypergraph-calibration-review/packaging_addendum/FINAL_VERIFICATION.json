@@ -1,0 +1,19 @@
+{
+  "author_families": 12,
+  "author_stdout_and_json_byte_identical": true,
+  "currentness_aware_predecessor_verifier": {
+    "binding_and_replay_checks": 39,
+    "both_replays_byte_identical": true,
+    "extension_assertions": 251,
+    "original_assertions": 305,
+    "original_receipt_unchanged": true,
+    "scope": "Current author bindings, preserved predecessor review payloads, and two fresh independent replays.",
+    "status": "PASS",
+    "unary_supersession_applied": true
+  },
+  "primary_pdf_hash_verified": true,
+  "scope": "Supplement-only verification, preserving all prior sealed receipts and their separate scopes.",
+  "source_binding_checks": 25,
+  "status": "PASS",
+  "supplement_checks": 55
+}

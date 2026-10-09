@@ -1,0 +1,201 @@
+{
+  "target_sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+  "source_hashes": {
+    "full-face-threshold-kl-rate/RESULT.md": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+    "full-face-threshold-information/RESULT.md": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+    "arbitrary-face-replay-design/RESULT.md": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7",
+    "arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c"
+  },
+  "symbolic_checks": {
+    "S_x_residual": "0",
+    "S_y_residual": "0",
+    "S_xy_residual": "0",
+    "density_ratio_residual": "0",
+    "leading_squared_kernel_integral": "1"
+  },
+  "high_precision_point_controls": [
+    {
+      "n": 1,
+      "u": "0.125",
+      "v": "2.0",
+      "density_ratio_absolute_discrepancy": "9.0556791e-72",
+      "positive_integral_absolute_discrepancy": "1.7545378e-71",
+      "scaled_density_perturbation": "-0.4018345234094668",
+      "limiting_kernel": "-0.875"
+    },
+    {
+      "n": 2,
+      "u": "3.0",
+      "v": "0.5",
+      "density_ratio_absolute_discrepancy": "7.2445433e-71",
+      "positive_integral_absolute_discrepancy": "3.1694877e-71",
+      "scaled_density_perturbation": "-0.6794077036972924",
+      "limiting_kernel": "-1.0"
+    },
+    {
+      "n": 8,
+      "u": "1.0",
+      "v": "1.0",
+      "density_ratio_absolute_discrepancy": "3.6222716e-71",
+      "positive_integral_absolute_discrepancy": "6.3495875e-72",
+      "scaled_density_perturbation": "0.008704560920010755",
+      "limiting_kernel": "0.0"
+    },
+    {
+      "n": 32,
+      "u": "2.0",
+      "v": "5.0",
+      "density_ratio_absolute_discrepancy": "7.2445433e-71",
+      "positive_integral_absolute_discrepancy": "1.2929104e-71",
+      "scaled_density_perturbation": "3.871995208570808",
+      "limiting_kernel": "4.0"
+    },
+    {
+      "n": 128,
+      "u": "0.25",
+      "v": "7.0",
+      "density_ratio_absolute_discrepancy": "8.0595544e-70",
+      "positive_integral_absolute_discrepancy": "2.4199917e-71",
+      "scaled_density_perturbation": "-4.464935184591648",
+      "limiting_kernel": "-4.5"
+    },
+    {
+      "n": 512,
+      "u": "4.0",
+      "v": "0.125",
+      "density_ratio_absolute_discrepancy": "4.6183963e-70",
+      "positive_integral_absolute_discrepancy": "1.1428313e-72",
+      "scaled_density_perturbation": "-2.61987374660948",
+      "limiting_kernel": "-2.625"
+    }
+  ],
+  "bounded_quadrature": [
+    {
+      "n": 8,
+      "order": 80,
+      "L": 20.79441541679836,
+      "scaled_bulk_entropy": 0.3966638991700423,
+      "analytic_scaled_tail_upper_bound": 0.0003432792353950873,
+      "sample_min_ratio": 0.7604061732465468,
+      "sample_max_transformed_density": 1.0043964111614088
+    },
+    {
+      "n": 8,
+      "order": 140,
+      "L": 20.79441541679836,
+      "scaled_bulk_entropy": 0.39666389916988093,
+      "analytic_scaled_tail_upper_bound": 0.0003432792353950873,
+      "sample_min_ratio": 0.7598366634832014,
+      "sample_max_transformed_density": 1.0107626340097264
+    },
+    {
+      "n": 16,
+      "order": 80,
+      "L": 27.725887222397812,
+      "scaled_bulk_entropy": 0.44364919939254605,
+      "analytic_scaled_tail_upper_bound": 7.016329712021803e-06,
+      "sample_min_ratio": 0.9069412152390309,
+      "sample_max_transformed_density": 0.9912918652377353
+    },
+    {
+      "n": 16,
+      "order": 140,
+      "L": 27.725887222397812,
+      "scaled_bulk_entropy": 0.4436491993923024,
+      "analytic_scaled_tail_upper_bound": 7.016329712021803e-06,
+      "sample_min_ratio": 0.9065842894181787,
+      "sample_max_transformed_density": 0.9995936663230303
+    },
+    {
+      "n": 32,
+      "order": 80,
+      "L": 34.657359027997266,
+      "scaled_bulk_entropy": 0.47040228914739196,
+      "analytic_scaled_tail_upper_bound": 1.354518964218026e-07,
+      "sample_min_ratio": 0.9688691595709636,
+      "sample_max_transformed_density": 0.9855736776555855
+    },
+    {
+      "n": 32,
+      "order": 140,
+      "L": 34.657359027997266,
+      "scaled_bulk_entropy": 0.47040228914706933,
+      "analytic_scaled_tail_upper_bound": 1.354518964218026e-07,
+      "sample_min_ratio": 0.9687082769540399,
+      "sample_max_transformed_density": 0.9958737201328995
+    },
+    {
+      "n": 64,
+      "order": 80,
+      "L": 41.58883083359672,
+      "scaled_bulk_entropy": 0.48480448086766104,
+      "analytic_scaled_tail_upper_bound": 2.5199006420822584e-09,
+      "sample_min_ratio": 0.9903815551692134,
+      "sample_max_transformed_density": 0.9818467141289107
+    },
+    {
+      "n": 64,
+      "order": 140,
+      "L": 41.58883083359672,
+      "scaled_bulk_entropy": 0.48480448086726274,
+      "analytic_scaled_tail_upper_bound": 2.5199006420822584e-09,
+      "sample_min_ratio": 0.9903203862959628,
+      "sample_max_transformed_density": 0.9941641445046921
+    },
+    {
+      "n": 128,
+      "order": 80,
+      "L": 48.520302639196174,
+      "scaled_bulk_entropy": 0.4922970757542126,
+      "analytic_scaled_tail_upper_bound": 4.567758441521642e-11,
+      "sample_min_ratio": 0.9971578372326105,
+      "sample_max_transformed_density": 0.9786419792643639
+    },
+    {
+      "n": 128,
+      "order": 140,
+      "L": 48.520302639196174,
+      "scaled_bulk_entropy": 0.49229707575375603,
+      "analytic_scaled_tail_upper_bound": 4.567758441521642e-11,
+      "sample_min_ratio": 0.9971365945487108,
+      "sample_max_transformed_density": 0.9929777509668138
+    },
+    {
+      "n": 256,
+      "order": 80,
+      "L": 55.451774444795625,
+      "scaled_bulk_entropy": 0.49612143037279555,
+      "analytic_scaled_tail_upper_bound": 8.122143952796492e-13,
+      "sample_min_ratio": 0.9991831146253233,
+      "sample_max_transformed_density": 0.9755766956620836
+    },
+    {
+      "n": 256,
+      "order": 140,
+      "L": 55.451774444795625,
+      "scaled_bulk_entropy": 0.49612143037224327,
+      "analytic_scaled_tail_upper_bound": 8.122143952796492e-13,
+      "sample_min_ratio": 0.9991761243285108,
+      "sample_max_transformed_density": 0.9919253933323059
+    },
+    {
+      "n": 512,
+      "order": 80,
+      "L": 62.383246250395075,
+      "scaled_bulk_entropy": 0.49805383160775557,
+      "analytic_scaled_tail_upper_bound": 1.4229945844867843e-14,
+      "sample_min_ratio": 0.9997696284290098,
+      "sample_max_transformed_density": 0.9725534054431365
+    },
+    {
+      "n": 512,
+      "order": 140,
+      "L": 62.383246250395075,
+      "scaled_bulk_entropy": 0.4980538316071269,
+      "analytic_scaled_tail_upper_bound": 1.4229945844867843e-14,
+      "sample_min_ratio": 0.9997674098263803,
+      "sample_max_transformed_density": 0.9909075944221398
+    }
+  ],
+  "limits": "Finite deterministic controls only. Quadrature has no rigorous numerical error certificate; analytic proof, not these samples, establishes the asymptotic or tail bound."
+}

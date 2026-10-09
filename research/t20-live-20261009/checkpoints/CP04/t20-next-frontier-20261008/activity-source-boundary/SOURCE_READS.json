@@ -1,0 +1,54 @@
+{
+  "recorded_utc": "2026-10-08T11:46:07.959105+00:00",
+  "method": "Web retrieval windows were filtered only by rendered L-number to retain the named continuous spans. Some initial unfiltered displays were tool-truncated; each relied-on span was subsequently displayed completely in bounded filtered output. Saved files contain those exact displayed source lines, not raw HTML.",
+  "reading_claim": "Only stated spans, no whole-work or historical-duration claims. Salīm ancient authorial text is public domain; modern apparatus not copied.",
+  "reads": [
+    {
+      "id": "SF23",
+      "file": "sources/salim-2-20-25-return.txt",
+      "url": "https://islamhouse.com/read/ar/الصفدية-272837",
+      "edition": "Muḥammad Rashād Salīm, Maktabat Ibn Taymiyya, second edition 1406; metadata at rendered L15",
+      "source_rendered_lines": [
+        1520,
+        1546
+      ],
+      "continuous_read": "2:20–24 plus opening paragraph of 2:25",
+      "key": "L1536, footer L1538: 2:23",
+      "inherited_locator": "SF-S002-L0322, reported in range-03/RANGE_APPRAISAL.md; absent original body not silently reconstructed",
+      "status": "Targeted primary return for new inference question; authorial taxonomy and conditional case division; not a newly discovered whole-source distinction or independent witness",
+      "sha256": "28805be96258b94c7472453381db47c6860e2659d2c56ec4c79bc2e20da0547c",
+      "bytes": 10346
+    },
+    {
+      "id": "SF142",
+      "file": "sources/salim-2-139-150-return.txt",
+      "url": "https://islamhouse.com/read/ar/الصفدية-272837",
+      "edition": "Same electronic Salīm witness",
+      "source_rendered_lines": [
+        2237,
+        2301
+      ],
+      "continuous_read": "2:139–150",
+      "key": "L2254–2256/footer2257:2:142; L2272/footer2273:2:145",
+      "inherited_locator": "SF-S003-L0079–0082 and L0092, inherited mapping; fresh web confirmation here",
+      "status": "Targeted continuous primary reread; no Salīm scan acquired or newly examined",
+      "sha256": "9225c107b5e3b64969058b884e98e5be10b85ead147c8baa40a9cbbc2e2c6d0f",
+      "bytes": 23777
+    },
+    {
+      "id": "UShura",
+      "file": "sources/shura6-L228-247-return.txt",
+      "url": "https://old.binothaimeen.net/content/14192",
+      "edition": "Official author website Arabic lecture transcript, Shūrā lesson6; no print pagination",
+      "source_rendered_lines": [
+        228,
+        247
+      ],
+      "continuous_read": "Complete digression and adjacent context, core L234–236",
+      "key": "L236",
+      "status": "Targeted return to check stronger productive consequence; not an independent witness to Ibn Taymiyyah; no audio timestamp verification",
+      "sha256": "6b67fbe5613d49616e931161df821eb8b43d9ff6ea4ff68fea971387d360a5e1",
+      "bytes": 13370
+    }
+  ]
+}

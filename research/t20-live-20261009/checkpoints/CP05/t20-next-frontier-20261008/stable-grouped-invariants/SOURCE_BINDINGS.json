@@ -1,0 +1,126 @@
+{
+  "created_utc": "2026-10-08T14:13:48.716235+00:00",
+  "frozen_manifests": [
+    {
+      "directory": "grouped-calibration-invariants",
+      "manifest_sha256": "c53b0d1352f6b9890a0da2d7e46443654465447e3706c9cf2b87afc24bf93d3e",
+      "payloads": [
+        {
+          "path": "EXACT_CONTROLS.md",
+          "sha256": "6987473e061e29b01aba27374addeae3da4d7a1456965bbdf510a3199f172af2",
+          "verified": true
+        },
+        {
+          "path": "GLOBAL_SCALE_COROLLARY.md",
+          "sha256": "0cef524519a83260c1a13afa9af28d5fba517fcf04b21a7c2ae697bfbb4f8667",
+          "verified": true
+        },
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "7bb94b2f0750af3435fdf0779b59d30ea39274b93bf6996f8c1ac33f29b22602",
+          "verified": true
+        },
+        {
+          "path": "RESEARCH_EVENTS.jsonl",
+          "sha256": "1f8d12e41c1052e7b6eeb3840d995d51fdb8368c0b69e0d535d834f4b3bff581",
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113",
+          "verified": true
+        },
+        {
+          "path": "REVIEW_STATUS.md",
+          "sha256": "84c01dc889560c7196a68b8e68374b0df100985cc118ae7a05319981e5bcb33a",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_AUDIT.md",
+          "sha256": "c11364329a2d250ec65007c1d7bfb34815de30a8c8a6ad469c3cdcbdc1594182",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_BINDINGS.json",
+          "sha256": "274ad3616f31556c2f1a2e5799f03dcd838762003575db8671bd7443e9f0a960",
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "aa8c7c45fc8f2f803aaf4535a6eec6f49b67048e59d0ab8ca402b4fb77ca1af1",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.json",
+          "sha256": "6d6a436a6f318ff39e9bc457a5bb7ebba384d559af68a855fe3a9d8b439d7c22",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.log",
+          "sha256": "e41c0fc78a94a7699c21a638a8a2a0f958a6ce09a522954004ebe4273a1724ac",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "directory": "catalogue-mixture-sampling",
+      "manifest_sha256": "4cc3ee6c2eef3ea291e020bd3a62638694c2ed3f492ad32519cb4fb3a3932ea1",
+      "payloads": [
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "880749d32f299be7e83db5054eb9768fbaf8a79b02d9b8eed5267c02dd6f8bcd",
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "add5ac0c7b5db4ff229607e294c5d238bc59dc24826705c3469205633b807d46",
+          "verified": true
+        },
+        {
+          "path": "PROCESS_AND_LABEL_BOUNDARIES.md",
+          "sha256": "4c9f0159f73faf76f0cc3998dacc9ec83dd3bfa112b45a793b0a14db80945c2e",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_AUDIT.md",
+          "sha256": "5d21cf088fa9abbdf16f1830b716be35d809bdd2732cf492e1f378fb1f6a8c11",
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "9e92b5affb6ce926bca92e39a9e222b051cdc47bd8f1efd6d78a98d2c0752d77",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.log",
+          "sha256": "11f00021b69e0b0f384ca8fd25d0c7be9c31f8537a198a6dda45810c7d7616eb",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.json",
+          "sha256": "54cd8bd22eb688c1c05b84cdf2b3819166a029bcf0f291eb7078db3d595c33ed",
+          "verified": true
+        },
+        {
+          "path": "ACTIVE_RESEARCH.jsonl",
+          "sha256": "0392c482dea7cf10ff24fc4b1d29dd57269ba91d8720cbd1c1b057e1af8a376a",
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "individual_inputs": [
+    {
+      "path": "global-calibration-ambiguity/RESULT.md",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827"
+    },
+    {
+      "path": "global-calibration-ambiguity/POLYNOMIAL_EFFICIENCY_APPENDIX.md",
+      "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4"
+    },
+    {
+      "path": "grouped-mixture-identification/SOURCE_AUDIT.md",
+      "sha256": "a4f731ceaafc720e3abc878bb4222172a92ebf7a9f925160b90d23c8919ad934"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "sha": "6d4c0461265e50a3bbedb640fe60d9ad292b50a7",
+  "tree_sha": "40319d587692a4a85f69abbcb24b3ba46ce63162",
+  "author_date": "2026-05-29T08:12:19Z",
+  "committer_date": "2026-05-29T08:12:19Z",
+  "message": "Strengthen the irreducibility counter-models to the full stated-axiom register\n\nThe A12 and A15 counter-models now instance the complete stated-axiom\nregister (Spinoza's A1-A7 with the Section I definitional bridges)\ntogether with the PSR augmentation, while still falsifying A12 and A15\n— previously they instanced only the bare predicate signature. A new\n§1.4 situates the contribution relative to prior machine-checked\nphilosophy (computational metaphysics). Paper prose, docs, and the\nbuild are synced accordingly.",
+  "html_url": "https://github.com/Nakammura/spinoza-ethica-lean/commit/6d4c0461265e50a3bbedb640fe60d9ad292b50a7",
+  "parent_shas": [
+    "52b6d049e2ec57d9307ff387c04d68dd30a5d8e4"
+  ],
+  "fetched_via": "public GitHub API through connected GitHub read tool",
+  "observed_utc": "2026-10-09T09:34:00Z",
+  "no_signature_authentication_claim": true
+}

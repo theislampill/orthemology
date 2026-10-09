@@ -1,0 +1,38 @@
+{
+  "verified_at_utc": "2026-10-08T07:35:48.678204+00:00",
+  "status": "full_target_kernel_checked",
+  "scope": "arbitrary finite effect type; five natural histograms vanishing at empty; equality of actual rational three-panel families on all nonempty queries implies histogram equality",
+  "lean": "4.19.0",
+  "lean_commit": "6caaee842e94",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "principal_theorem": "CalibratedIdentification.calibrated_panels_identify",
+  "coefficientwise_theorem": "CalibratedIdentification.calibrated_panels_identify_coefficients",
+  "standard_axiom_dependencies": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "new_axioms": false,
+  "admitted_proofs": false,
+  "frozen_manifest": "SOURCE_MANIFEST.sha256",
+  "successful_commands": [
+    "bash -n bootstrap.sh verify.sh mutation_checks.sh",
+    "./bootstrap.sh",
+    "./verify.sh",
+    "./mutation_checks.sh",
+    "sha256sum --check SOURCE_MANIFEST.sha256"
+  ],
+  "negative_controls": [
+    "changing the 5/6 failure factor to 1/6 is rejected",
+    "removing query intersection from the hit transform is rejected",
+    "an unsolved main hit-injectivity goal is rejected"
+  ],
+  "unproved_external_premises": [
+    "stochastic independence and derivation of product law",
+    "physical actuator admissibility and calibration",
+    "semantic productive-route faithfulness",
+    "exact oracle access versus finite samples",
+    "source/metaphysical application"
+  ],
+  "protected_repository_changed": false
+}

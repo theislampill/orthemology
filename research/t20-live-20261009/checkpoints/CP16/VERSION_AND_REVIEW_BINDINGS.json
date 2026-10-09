@@ -1,0 +1,54 @@
+{
+  "recorded_utc": "2026-10-09T03:30:36.554892+00:00",
+  "current_and_history": [
+    {
+      "path": "metaphysical-semantics-return/SOURCE_FAITHFUL_SEMANTIC_AUDIT.md",
+      "bytes": 30668,
+      "sha256": "66354aa2e9d4edc8b054f403df1b4bbc1e2870c2554372b0c6264bc280d98330"
+    },
+    {
+      "path": "metaphysical-semantics-return/history/SOURCE_FAITHFUL_SEMANTIC_AUDIT.pre-review-80aa6b0b.md",
+      "bytes": 27028,
+      "sha256": "80aa6b0b6b58d0f8f2828a6baff2f725bc0843a910225ee8372cc75eac2fad69"
+    },
+    {
+      "path": "productive-totality-source-return/REPORT.md",
+      "bytes": 35568,
+      "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393"
+    },
+    {
+      "path": "productive-totality-source-return/REPORT.pre-modal-domain-refinement.md",
+      "bytes": 32845,
+      "sha256": "323d1a6617cf317173f23d9ec80d98d94caf1645378e864f9d1d03a01b011400"
+    },
+    {
+      "path": "reassessment-semantic-warrant/FOCUSED_ARGUMENT.md",
+      "bytes": 11976,
+      "sha256": "d31ae29f086bcbe117c6f5a0d844ca1049415695bb5d920c07b4ae13ce1f40a4"
+    },
+    {
+      "path": "reassessment-semantic-warrant/history/FOCUSED_ARGUMENT.reviewed-b2fa8566.md",
+      "bytes": 11836,
+      "sha256": "b2fa8566252414025cbfb6dd2216ab8400eea73e3fb2508f6ece8c5568919754"
+    },
+    {
+      "path": "reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+      "bytes": 4923,
+      "sha256": "b8f652952ff626479d8b4e8fd9928283a6ed5de3046a50105b6138cec2b7ba10"
+    },
+    {
+      "path": "metaphysical-semantics-return/user-input/Pasted text(20261009-025305).txt",
+      "bytes": 16674,
+      "sha256": "451c35c1ec4e0f432d323550dc5fecb758737ed926908f73d7dcd92963a6b88e"
+    }
+  ],
+  "semantic_review": "FOCUSED_REVIEW.md concerns the preserved old 80aa6b0b version. REVISION_RESOLUTION.md explicitly accepts the two scoped repairs in current 66354aa2. Additional Dar and bearer-domain additions remain outside that review scope.",
+  "productive_totality": "Current 3c2a8427 refines the modal domain. Historical 323d1a66 is preserved unchanged. Modal persistence is not intrinsic nonreceipt; all received bearers cannot silently be restricted to those absent in some represented world.",
+  "warrant_review": "Explicit reviewed acceptance binds b2fa8566. Final d31ae29f contains a substantive single-paragraph clarification adopting the reviewer-supplied distinction. No subsequent explicit final-hash inspection or blanket acceptance is claimed. Exact scope is in REVIEW_BINDING.md.",
+  "authority_limit": "These are internal focused reviews, not external independent validation. Review agreement does not establish metaphysical truth or decide the confidence threshold.",
+  "root_status_order": {
+    "current": "reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+    "superseded_proposal": "metaphysical-semantics-return/ROOT_PRELIMINARY_FINDINGS.md",
+    "historical_preserved": "metaphysical-semantics-return/ROOT_ASSESSMENT.md and older common-Creator records are preserved historical evidence, not coequal current dispositions."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "deterministic exact-rational and high-precision numerical controls, not general proofs",
+  "exact_uniform_envelope_and_amgm_cases": 26035,
+  "exact_chi_square_identity_cases": 30,
+  "high_precision_actual_kl_cases": 1110,
+  "max_observed_kl_over_bound": {
+    "ratio": "0.1785099909750255722224995856651815183498387147053938105055515863950951744422159748881071922811711498",
+    "n_lambda": [
+      1,
+      "1.25892541179416721042395410639580060609361740946693106910792301952664761578250202412105096627594617"
+    ]
+  },
+  "exact_fixed_rate_gap_K_cases": 251,
+  "high_precision_calibration_identity_and_floor_cases": 252,
+  "adaptive_exact_probability_transcript_cases": 48,
+  "adaptive_boundary_rates_exercised": [
+    0,
+    1
+  ],
+  "confidence_and_hoeffding_constants": "PASS",
+  "K_2_boundary": {
+    "max_hard_pair_per_trial_bound": 1,
+    "nominal_t": "1/2",
+    "ambiguity_d": "sqrt(1/2)-1/2",
+    "empty_count_mean": 1
+  },
+  "result": "PASS"
+}

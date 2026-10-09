@@ -1,0 +1,21 @@
+{
+  "date_utc": "2026-10-09",
+  "files": [
+    {
+      "path": "attestation-context-source-return-20261009/EXACT_READING.md",
+      "bytes": 6401,
+      "sha256": "ead100350bbe76f1dea83c783cd7c99671724fbae9db4d6b7d9b65eb21343a68"
+    },
+    {
+      "path": "attestation-context-source-return-20261009/INPUTS.json",
+      "bytes": 12723,
+      "sha256": "2aa3c6027c26ba20ceeac0b333a2e53fde8f22e2f57b9745f037770dfc677e79"
+    },
+    {
+      "path": "attestation-context-source-return-20261009/RESULT.md",
+      "bytes": 10834,
+      "sha256": "f7ddcbd238f7fad8406a8475b0f61dea6859515182431c4c3742ec6bc9e93d55"
+    }
+  ],
+  "verified": "All input digests rechecked; JSON parsed; no source PDFs, images or HTML in deliverable directory; no prior files edited."
+}

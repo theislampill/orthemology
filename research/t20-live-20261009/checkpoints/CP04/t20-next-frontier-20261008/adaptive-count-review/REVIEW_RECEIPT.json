@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-08T12:38:46.563626+00:00",
+  "verdict": "PASS_WITH_BOTH_STATEMENT_CLARIFICATIONS_APPLIED",
+  "review_scope": "Arbitrary adaptive exact-calibration fixed-budget pure-count theorem, matching upper order, fixed-command calibration scale, and local predecessor novelty.",
+  "source_hashes": {
+    "calibration-design-frontier/ARBITRARY_RATE_COUNT_BOUND.md": "e68242d3052342b2c2cf029b3e9d65d3402e7005d6179f8a335ec1e5ad52daad",
+    "noise-aware-calibration/THEOREMS.md": "1b3d0c4ee7e45041d5b8866c7bf2d8d4f48e8b6082597b70debf9350473a51dc",
+    "noise-aware-calibration/RESULT.md": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d",
+    "noise-aware-review/RESTRICTED_MASK_LOWER_BOUND.md": "6f1c95bca5083e3cdfc2421308700a5b78a8c62f5433a4eb0ae089ef7b5819c3"
+  },
+  "unresolved_mathematical_blockers": [],
+  "control_result": "PASS",
+  "author_files_modified_or_frozen": false,
+  "scope_exclusions": [
+    "arbitrary-mixture upper bound",
+    "arbitrary-multirate calibration-error impossibility",
+    "expected stopping-time theorem",
+    "field-wide novelty",
+    "physical validation",
+    "kernel formalization",
+    "protected integration",
+    "owner acceptance",
+    "T20 closure"
+  ],
+  "review_artifact_hashes": {
+    "REVIEW.md": "22d0712ad9e394827c7ec8ad71584b0f32a661daa618cd9618089dca13a3ce22",
+    "check_adaptive_count.py": "9cfc8784ba15466c67598885a0b7a643a51fe9e316d35f78eb73c0b712be86e7",
+    "results/INDEPENDENT_CONTROLS.json": "0a44c40f071d96638096dc884e27fdb63e00fece467f2060d5a0e115d04ec517",
+    "results/INDEPENDENT_REPLAY.log": "0a44c40f071d96638096dc884e27fdb63e00fece467f2060d5a0e115d04ec517"
+  },
+  "initial_reviewed_appendix_sha256": "3766ab84f85e44a54af3c39b6802ae052ed685214411643e87fe0b7da932f74c",
+  "resolved_clarifications": [
+    "Make confidence domain explicit as 0 < delta < 1/2.",
+    "State fixed unknown actual rate and fresh conditional Bernoulli trials in the calibration corollary, or justify a more general concentration model."
+  ],
+  "author_binding_recheck": "PASS"
+}

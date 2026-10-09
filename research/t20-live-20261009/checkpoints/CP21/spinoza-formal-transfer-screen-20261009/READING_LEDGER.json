@@ -1,0 +1,171 @@
+{
+  "operation": "Focused T20 Spinoza candidate transfer screen",
+  "date_utc": "2026-10-09",
+  "commit": "6d4c0461265e50a3bbedb640fe60d9ad292b50a7",
+  "reading": {
+    "manuscript": {
+      "url": "https://arxiv.org/html/2605.02331v2",
+      "coverage": "Whole HTML manuscript: abstract, sections 1 through 9, references; navigational boilerplate excluded",
+      "method": "Overlapping public web line views covering substantive HTML lines 66-523, with 190-221 separately reread after output truncation",
+      "whole_pdf_read": false
+    },
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2605.02331v2",
+      "coverage": "Targeted extracted title-page metadata and early section 1 cross-check; 42-page document count verified by web tool",
+      "screenshot": "Attempt on page 1 returned cache miss; no visual-page verification claimed"
+    },
+    "repository": [
+      {
+        "path": "Ethica/Pars1/Definitions.lean",
+        "coverage": "Whole file",
+        "lines": [
+          [
+            1,
+            269
+          ]
+        ]
+      },
+      {
+        "path": "Ethica/Pars1/Axioms.lean",
+        "coverage": "Whole file",
+        "lines": [
+          [
+            1,
+            319
+          ]
+        ]
+      },
+      {
+        "path": "Ethica/Pars1/Models/Counterexamples.lean",
+        "coverage": "Whole file",
+        "lines": [
+          [
+            1,
+            434
+          ]
+        ]
+      },
+      {
+        "path": "Ethica/Pars1/ModalForm.lean",
+        "coverage": "Targeted continuous selections plus declaration index",
+        "lines": [
+          [
+            103,
+            310
+          ],
+          [
+            360,
+            745
+          ]
+        ],
+        "unread": "Introductory documentation 1-102 and demote introduction 312-359 not comprehensively read"
+      },
+      {
+        "path": "Ethica/Pars1/Causation.lean",
+        "coverage": "Targeted initial definitions and inheritance",
+        "lines": [
+          [
+            1,
+            125
+          ]
+        ]
+      },
+      {
+        "path": "Ethica/Pars1/Propositions.lean",
+        "coverage": "Targeted theorem assumptions and P5/P14/P6",
+        "lines": [
+          [
+            74,
+            80
+          ],
+          [
+            95,
+            145
+          ],
+          [
+            221,
+            236
+          ],
+          [
+            300,
+            379
+          ]
+        ]
+      },
+      {
+        "path": "docs/auxiliary_axioms.md",
+        "coverage": "Targeted register ranges; headings searched",
+        "lines": [
+          [
+            1,
+            550
+          ],
+          [
+            684,
+            959
+          ]
+        ]
+      },
+      {
+        "path": "papers/cluster_a_irreducibility/08_scope.md",
+        "coverage": "Whole file",
+        "lines": [
+          [
+            1,
+            227
+          ]
+        ]
+      },
+      {
+        "path": "lean-toolchain",
+        "coverage": "Whole file",
+        "text": "leanprover/lean4:v4.13.0"
+      },
+      {
+        "path": "README.md",
+        "coverage": "Acquired and hash-verified; no new comprehensive child reading claimed"
+      },
+      {
+        "path": "LICENSE",
+        "coverage": "Whole MIT license read and retained"
+      }
+    ],
+    "prior_context": [
+      {
+        "path": "essence-attribute-source-return/REPORT.md",
+        "coverage": "Whole report reread; no new primary Arabic read claimed"
+      },
+      {
+        "path": "metaphysical-semantics-return/ROOT_ASSESSMENT.md",
+        "coverage": "Whole report reread"
+      },
+      {
+        "path": "total-explainer-uniqueness/RESULT.md",
+        "coverage": "Whole result reread"
+      }
+    ],
+    "official_lean_docs": {
+      "coverage": "Narrow delegated documentation verification of proof construction/checking and possible kernel nontermination",
+      "urls": [
+        "https://lean-lang.org/theorem_proving_in_lean4/Propositions-and-Proofs/",
+        "https://lean-lang.org/doc/reference/latest/Elaboration-and-Compilation/"
+      ]
+    }
+  },
+  "execution": {
+    "downloaded_repository_code_executed": false,
+    "lake_run": false,
+    "macros_run": false,
+    "software_installed": false,
+    "kernel_replay": false,
+    "external_repo_mutated": false,
+    "local_actions": "Read source text; write research report and evidence files; hash retained byte copies"
+  },
+  "stop": {
+    "result": "Rejected substantive transport with useful semantic controls",
+    "new_metaphysical_countermodel_credit": false,
+    "new_original_identity_theorem": false,
+    "new_lean_proof": false,
+    "broad_campaign_started": false
+  }
+}

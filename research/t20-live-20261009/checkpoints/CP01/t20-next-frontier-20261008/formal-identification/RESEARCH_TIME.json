@@ -1,0 +1,14 @@
+{
+  "scope": "calibrated formal-identification mathematical verification",
+  "prospective_event_file": "RESEARCH_EVENTS.jsonl",
+  "active_research_seconds_certified": null,
+  "no_aggregate_duration_claim": true,
+  "excluded_from_credit": [
+    "toolchain/dependency installation",
+    "download or process waits",
+    "administration",
+    "error recovery",
+    "packaging"
+  ],
+  "parallel_worker_intervals_not_summed": true
+}

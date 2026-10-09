@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-08T12:38:16.541596+00:00",
+  "verdict": "PASS_SCOPED_CROSSED_CODE_INCORPORATION",
+  "source": "t20-next-frontier-20261008/calibration-design-frontier/RESULT.md",
+  "snapshot": "t20-next-frontier-20261008/crossed-code-root-review/frozen/FRONTIER_RESULT.md",
+  "sha256": "89b17388c4f243f555dbcb2232a3f106683cc3cc23edf0e3f7371bec3e018db7",
+  "included": [
+    "RESULT.md crossed-code findings and sections 1\u20136, excluding count-appendix claims",
+    "known product-channel determinant and count compression",
+    "independent nonidentical-group error bounds",
+    "route-rate calibration contamination example",
+    "general ideal-code and minimal-support antichain statements"
+  ],
+  "excluded": [
+    "ARBITRARY_RATE_COUNT_BOUND.md",
+    "count-rate claim in Main finding 3 and count-appendix claims repeated elsewhere",
+    "author source audit and author executable-control verification",
+    "physical or empirical validation",
+    "kernel proof",
+    "protected writes or integration",
+    "owner acceptance or T20 closure"
+  ],
+  "outstanding_blocking_findings": []
+}

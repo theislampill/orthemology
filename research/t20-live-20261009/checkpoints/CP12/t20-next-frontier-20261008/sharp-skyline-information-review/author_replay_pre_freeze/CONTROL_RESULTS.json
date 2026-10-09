@@ -1,0 +1,407 @@
+{
+  "derivatives": {
+    "2": "M**2 - Z",
+    "4": "M**4 - 6*M**2*Z - 4*M*Z + 3*Z**2 - Z",
+    "6": "M**6 - 15*M**4*Z - 20*M**3*Z + 45*M**2*Z**2 - 15*M**2*Z + 60*M*Z**2 - 6*M*Z - 15*Z**3 + 25*Z**2 - Z"
+  },
+  "sixth_absorption": {
+    "mixed_terms": [
+      {
+        "M_power": 4,
+        "Z_power": 1,
+        "coefficient": "-15",
+        "weighted_degree": 6,
+        "holder_M_exponent": "2/3"
+      },
+      {
+        "M_power": 3,
+        "Z_power": 1,
+        "coefficient": "-20",
+        "weighted_degree": 5,
+        "holder_M_exponent": "1/2"
+      },
+      {
+        "M_power": 2,
+        "Z_power": 2,
+        "coefficient": "45",
+        "weighted_degree": 6,
+        "holder_M_exponent": "1/3"
+      },
+      {
+        "M_power": 2,
+        "Z_power": 1,
+        "coefficient": "-15",
+        "weighted_degree": 4,
+        "holder_M_exponent": "1/3"
+      },
+      {
+        "M_power": 1,
+        "Z_power": 2,
+        "coefficient": "60",
+        "weighted_degree": 5,
+        "holder_M_exponent": "1/6"
+      },
+      {
+        "M_power": 1,
+        "Z_power": 1,
+        "coefficient": "-6",
+        "weighted_degree": 3,
+        "holder_M_exponent": "1/6"
+      },
+      {
+        "M_power": 0,
+        "Z_power": 3,
+        "coefficient": "-15",
+        "weighted_degree": 6,
+        "holder_M_exponent": "0"
+      },
+      {
+        "M_power": 0,
+        "Z_power": 2,
+        "coefficient": "25",
+        "weighted_degree": 4,
+        "holder_M_exponent": "0"
+      },
+      {
+        "M_power": 0,
+        "Z_power": 1,
+        "coefficient": "-1",
+        "weighted_degree": 2,
+        "holder_M_exponent": "0"
+      }
+    ],
+    "wrong_cubic_sign_rejected": true
+  },
+  "exact_sixth_skyline_identity": {
+    "order": 5,
+    "sum_coefficients": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "normalization_coefficients": [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "empty_contributions": [
+      "0",
+      "-1",
+      "32",
+      "-243/2",
+      "512/3",
+      "-3125/24"
+    ],
+    "strata": [
+      {
+        "K": 0,
+        "coefficients_from_power_K": [
+          "0",
+          "-1",
+          "32",
+          "-243/2",
+          "512/3",
+          "-3125/24"
+        ]
+      },
+      {
+        "K": 1,
+        "coefficients_from_power_K": [
+          "1",
+          "-48",
+          "891/4",
+          "-3200/9",
+          "85625/288"
+        ]
+      },
+      {
+        "K": 2,
+        "coefficients_from_power_K": [
+          "16",
+          "-243/2",
+          "2240/9",
+          "-15625/64"
+        ]
+      },
+      {
+        "K": 3,
+        "coefficients_from_power_K": [
+          "81/4",
+          "-640/9",
+          "53125/576"
+        ]
+      },
+      {
+        "K": 4,
+        "coefficients_from_power_K": [
+          "64/9",
+          "-3125/192"
+        ]
+      },
+      {
+        "K": 5,
+        "coefficients_from_power_K": [
+          "625/576"
+        ]
+      }
+    ],
+    "omitting_empty_stratum_rejected": true
+  },
+  "direct_fixed_count_integrals": {
+    "cases": [
+      {
+        "n": 1,
+        "mass": "1",
+        "U": "3/4",
+        "U2": "11/18",
+        "K": "1",
+        "K2": "1",
+        "M2": "4/9",
+        "M4": "23/75",
+        "Q": "-7/72",
+        "Q2": "43/1200"
+      },
+      {
+        "n": 2,
+        "mass": "1",
+        "U": "11/18",
+        "U2": "61/144",
+        "K": "3/2",
+        "K2": "5/2",
+        "M2": "31/48",
+        "M4": "16/15",
+        "Q": "-37/864",
+        "Q2": "1277/97200"
+      },
+      {
+        "n": 3,
+        "mass": "1",
+        "U": "25/48",
+        "U2": "379/1200",
+        "K": "11/6",
+        "K2": "23/6",
+        "M2": "133/150",
+        "M4": "47953/22050",
+        "Q": "-9/400",
+        "Q2": "110491/16934400"
+      },
+      {
+        "n": 4,
+        "mass": "1",
+        "U": "137/300",
+        "U2": "667/2700",
+        "K": "25/12",
+        "K2": "5",
+        "M2": "599/540",
+        "M4": "2003021/564480",
+        "Q": "-91/6750",
+        "Q2": "5174797/1411200000"
+      }
+    ],
+    "n1_M4_independent_product_check": "23/75"
+  },
+  "posterior_test_configurations": {
+    "cases": [
+      {
+        "power": 4,
+        "k": 2,
+        "sign": -1,
+        "Z": "0.334890777684604487293671",
+        "density_ratio": "0.870954216912936789887162565556",
+        "local_logmass_error": "-0.0204853331930770079160634604775"
+      },
+      {
+        "power": 4,
+        "k": 2,
+        "sign": 0,
+        "Z": "2.0",
+        "density_ratio": "1.06825019931102150537935257697",
+        "local_logmass_error": "-0.0072910704753340726844588420002"
+      },
+      {
+        "power": 4,
+        "k": 2,
+        "sign": 1,
+        "Z": "3.66510922231539551270633",
+        "density_ratio": "1.08871767421883661232482384051",
+        "local_logmass_error": "-0.00609511451825984769730072338862"
+      },
+      {
+        "power": 8,
+        "k": 5,
+        "sign": -1,
+        "Z": "2.64517995496905061797686",
+        "density_ratio": "0.989594699556378146171892325813",
+        "local_logmass_error": "-0.000432026277846811126168103253862"
+      },
+      {
+        "power": 8,
+        "k": 5,
+        "sign": 0,
+        "Z": "5.0",
+        "density_ratio": "1.00990449624119836845011361405",
+        "local_logmass_error": "-0.000335983898683158316074075988528"
+      },
+      {
+        "power": 8,
+        "k": 5,
+        "sign": 1,
+        "Z": "7.35482004503094938202314",
+        "density_ratio": "1.00819949211813793751673100772",
+        "local_logmass_error": "-0.000326647368239692858038482212946"
+      },
+      {
+        "power": 12,
+        "k": 8,
+        "sign": -1,
+        "Z": "5.11594622679823396587445",
+        "density_ratio": "0.99925564983123430228535327343",
+        "local_logmass_error": "-0.0000209736704439715642136896979234"
+      },
+      {
+        "power": 12,
+        "k": 8,
+        "sign": 0,
+        "Z": "8.0",
+        "density_ratio": "1.00097795549063808531484975256",
+        "local_logmass_error": "-0.000020399828214481081106434053644"
+      },
+      {
+        "power": 12,
+        "k": 8,
+        "sign": 1,
+        "Z": "10.8840537732017660341255",
+        "density_ratio": "1.00066562257215100610886756187",
+        "local_logmass_error": "-0.0000203230780719024993771972988805"
+      },
+      {
+        "power": 20,
+        "k": 13,
+        "sign": -1,
+        "Z": "9.27670258894096586723875",
+        "density_ratio": "0.999996037644574049591019144199",
+        "local_logmass_error": "-0.0000000794898940482529691034877006672"
+      },
+      {
+        "power": 20,
+        "k": 13,
+        "sign": 0,
+        "Z": "13.0",
+        "density_ratio": "1.00000619893971115860414185466",
+        "local_logmass_error": "-0.0000000794740723781188056450826669955"
+      },
+      {
+        "power": 20,
+        "k": 13,
+        "sign": 1,
+        "Z": "16.7232974110590341327612",
+        "density_ratio": "1.00000313932462651659916264448",
+        "local_logmass_error": "-0.0000000794708591990118690422818705763"
+      },
+      {
+        "power": 32,
+        "k": 22,
+        "sign": -1,
+        "Z": "17.2903599099381012359537",
+        "density_ratio": "0.99999999888241407022916430833",
+        "local_logmass_error": "-1.940255542345114600532371497e-11"
+      },
+      {
+        "power": 32,
+        "k": 22,
+        "sign": 0,
+        "Z": "22.0",
+        "density_ratio": "1.00000000256113708993231547537",
+        "local_logmass_error": "-1.94025537507601960260805409998e-11"
+      },
+      {
+        "power": 32,
+        "k": 22,
+        "sign": 1,
+        "Z": "26.7096400900618987640463",
+        "density_ratio": "1.00000000107551114473572638813",
+        "local_logmass_error": "-1.94025532804879414047308555015e-11"
+      },
+      {
+        "power": 48,
+        "k": 33,
+        "sign": -1,
+        "Z": "27.2318924535964679317489",
+        "density_ratio": "0.999999999999979026057844167708",
+        "local_logmass_error": "-2.96059473234063024310656830264e-16"
+      },
+      {
+        "power": 48,
+        "k": 33,
+        "sign": 0,
+        "Z": "33.0",
+        "density_ratio": "1.00000000000005861977570021339",
+        "local_logmass_error": "-2.96059473233412942769752391541e-16"
+      },
+      {
+        "power": 48,
+        "k": 33,
+        "sign": 1,
+        "Z": "38.7681075464035320682511",
+        "density_ratio": "1.00000000000002001092700597133",
+        "local_logmass_error": "-2.96059473233182801103900500294e-16"
+      }
+    ],
+    "status": "diagnostics, not stochastic convergence proof"
+  },
+  "constants": {
+    "entropy_series": "a**2/2 + a**3/6 + a**4/24 + O(a**5)",
+    "hellinger_series": "a**2/4 + a**3/8 + 7*a**4/192 + O(a**5)",
+    "E_M2_minus_K_squared_over_log2": "2",
+    "score_square": "1/2",
+    "reverse_KL": "1/4",
+    "hellinger_squared_without_half": "1/8",
+    "affinity_deficit": "1/16",
+    "sufficient_fixed_alpha_budget_multiplier": 16,
+    "singular_mass_plus_sign_and_H2_equals_2_minus_2rho": true
+  },
+  "singular_discrete_control": {
+    "H2": "(-1/2 + sqrt(3)/3)**2 + (-sqrt(2)/2 + sqrt(6)/3)**2 + 1/4",
+    "rho": "sqrt(3)/2",
+    "products": [
+      {
+        "R": 1,
+        "sum_errors": "3/4",
+        "affinity_bound": "sqrt(3)/2"
+      },
+      {
+        "R": 2,
+        "sum_errors": "9/16",
+        "affinity_bound": "3/4"
+      },
+      {
+        "R": 3,
+        "sum_errors": "27/64",
+        "affinity_bound": "3*sqrt(3)/8"
+      },
+      {
+        "R": 4,
+        "sum_errors": "81/256",
+        "affinity_bound": "9/16"
+      },
+      {
+        "R": 5,
+        "sum_errors": "243/1024",
+        "affinity_bound": "9*sqrt(3)/32"
+      },
+      {
+        "R": 6,
+        "sum_errors": "729/4096",
+        "affinity_bound": "27/64"
+      }
+    ]
+  },
+  "status": "PASS",
+  "limitations": "Deterministic diagnostics only; no simulation, empirical inference, or numerical interval certification."
+}

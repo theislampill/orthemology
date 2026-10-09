@@ -1,0 +1,84 @@
+{
+  "date_utc": "2026-10-09",
+  "all_bound_inputs_unchanged": true,
+  "checks": [
+    {
+      "path": "original-cognitive-efficacy-20261009/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "positive-agency-source-return/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "particular-agency-bridge-20261009/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "affirmative-intrinsic-necessity-20261009/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "unchanged": true
+    },
+    {
+      "path": "reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+      "unchanged": true
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/majmu8-item865-body.txt",
+      "unchanged": true
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/read-selections/shifa-e206-e216.txt",
+      "unchanged": true
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/dar017-L0915-L0940.txt",
+      "unchanged": true
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/miftah-952-955.txt",
+      "unchanged": true
+    },
+    {
+      "path": "source-noncirculation-feedback/RESULT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/mnhaj005.txt",
+      "unchanged": true
+    }
+  ],
+  "source_reading_scope": {
+    "majmu_8_428_436": "Complete retained electronic unit reread",
+    "shifa_e206_e211": "Retained continuous unit reread",
+    "shifa_e213_e216": "Relevant retained continuation checked",
+    "dar017_L0915_L0940": "Retained contiguous selection reread",
+    "miftah_2_952_955": "Retained contiguous selection with apparatus reread"
+  },
+  "no_protected_write": true,
+  "no_integration_or_closure": true,
+  "no_new_formal_theorem": true,
+  "no_new_external_source_acquisition": true,
+  "current_report_sha256": "6ccf33e9cf9c5a53a4d2c6bfb6f2a71ff4e6b6b70aa3c6598a6e950c1c77ad1a",
+  "current_report_hash_in_review": true,
+  "independent_review_disposition": "No blocking defects at declared originally directed created-sequence scope; suggested wording refinements resolved"
+}

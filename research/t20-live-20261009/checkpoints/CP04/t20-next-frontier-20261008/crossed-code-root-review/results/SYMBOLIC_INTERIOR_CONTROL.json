@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "expanded_polynomial_difference": "0",
+  "row_order": [
+    "A",
+    "B",
+    "OR",
+    "AND"
+  ],
+  "column_order": [
+    "00",
+    "01",
+    "10",
+    "11"
+  ],
+  "marginal_transform_determinant": "-1"
+}

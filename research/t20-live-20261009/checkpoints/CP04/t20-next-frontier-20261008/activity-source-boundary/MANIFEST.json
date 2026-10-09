@@ -1,0 +1,50 @@
+{
+  "recorded_utc": "2026-10-08T11:47:34.787886+00:00",
+  "files": [
+    {
+      "path": "CONDITIONAL_SCOPE.md",
+      "bytes": 8169,
+      "sha256": "3f761b354e0c287ba501a5610b7650fadf72b1cb170ba99e1ba66961d0918e31"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 4945,
+      "sha256": "bf3681eb9bc66d5f84cd0f8a54b53bafad2a1533ed9b2ba236e597702122b9da"
+    },
+    {
+      "path": "OPERATIONS.jsonl",
+      "bytes": 1032,
+      "sha256": "f709dd40de8a172d6d35163329df128e677032727839b7a626ba6120f5929280"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 17368,
+      "sha256": "09a8abc2182bb1bbb4b13e7a776fd11f69a1d7d1fb0622622d207bbd695495eb"
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "bytes": 2824,
+      "sha256": "a337c2b6f0eecc10c4213a6accef96378aaf4c88ecdcff365d77fa1499acc9e0"
+    },
+    {
+      "path": "results/VERIFICATION.json",
+      "bytes": 1469,
+      "sha256": "8c843e88a8ad07f20c9ea65bee6e4642b1838964ab71ea83d8be1dd35aaeaee6"
+    },
+    {
+      "path": "sources/salim-2-139-150-return.txt",
+      "bytes": 23777,
+      "sha256": "9225c107b5e3b64969058b884e98e5be10b85ead147c8baa40a9cbbc2e2c6d0f"
+    },
+    {
+      "path": "sources/salim-2-20-25-return.txt",
+      "bytes": 10346,
+      "sha256": "28805be96258b94c7472453381db47c6860e2659d2c56ec4c79bc2e20da0547c"
+    },
+    {
+      "path": "sources/shura6-L228-247-return.txt",
+      "bytes": 13370,
+      "sha256": "6b67fbe5613d49616e931161df821eb8b43d9ff6ea4ff68fea971387d360a5e1"
+    }
+  ]
+}

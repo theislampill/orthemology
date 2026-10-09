@@ -1,0 +1,592 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v1",
+  "checkpoint_ordinal": 13,
+  "snapshot_cutoff_utc": "2026-10-08T23:57:29.097912+00:00",
+  "results": [
+    {
+      "id": "modal-identity-transport",
+      "kind": "STANDARD_MATHEMATICS_APPLICATION_WITH_WRITTEN_PROOFS",
+      "status": "ACCEPTED_WITHIN_SEPARATE_INTERNAL_REVIEW_SCOPE",
+      "author": {
+        "path": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md",
+        "bytes": 33327,
+        "sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8"
+      },
+      "review": {
+        "path": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md",
+        "bytes": 16295,
+        "sha256": "9c7f8ba6fd7f82c1c9be613ad020fcf130df7cd2a03aff787ede51e3e9ee6533"
+      },
+      "acceptance_record": {
+        "path": "t20-next-frontier-20261008/modal-identity-transport/REVIEW_RECEIPT.json",
+        "bytes": 986,
+        "sha256": "1a1ac7c36bd1b5db5d6346a652b394d46af3fd381db5bbe620db0fd16af598cc"
+      },
+      "claims": [
+        "Finite identity transport separates full trivial-holonomy alignment from one fixed-point bearer; existence filters remain separate.",
+        "Normalized copyability isolates point witnesses; invariant averages do not supply individuals. Exact Back and separate Realisation witness lifting guard restriction loss."
+      ],
+      "limits": [
+        "No defect newly attributed to the saved global-bearer or injective modal-union interfaces.",
+        "No actual Necessary Being, metaphysical identity or unity proof."
+      ],
+      "control_ids": [
+        "author-modal",
+        "review-modal"
+      ],
+      "source_and_input_records": [
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport/INPUT_BINDINGS.json",
+          "bytes": 4937,
+          "sha256": "8086c38e20886219db8f3daa1f409eb8572cc009b602b20a4f594f2b89906c73"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport/MANIFEST.json",
+          "bytes": 1719,
+          "sha256": "21efd69ffd890097053c198193bc20ce44b3d620af60ad328e29eb9058e51379"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json",
+          "bytes": 2542,
+          "sha256": "cb5e24198649d87118a215cf8c26762cb018e3ed2fff655935a39021d30ea660"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport/READ_FIRST.md",
+          "bytes": 3124,
+          "sha256": "1b879363e0bb956e7fcd553012fae26d6d08a58fbd36837cbf576b8b05b0f95b"
+        }
+      ],
+      "separate_review_records": [
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport-review/AUTHOR_REPLAY.json",
+          "bytes": 2531,
+          "sha256": "f740b49863794c4319a508f152a30c17270a96b4ec58925ff57a0ea5da40a676"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RESULTS.json",
+          "bytes": 2541,
+          "sha256": "124bdd9bd4923a9e6f6cc72e73849a77a1d24a7c47f391bb824011d6d784181a"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RUN.stdout.json",
+          "bytes": 2541,
+          "sha256": "124bdd9bd4923a9e6f6cc72e73849a77a1d24a7c47f391bb824011d6d784181a"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md",
+          "bytes": 16295,
+          "sha256": "9c7f8ba6fd7f82c1c9be613ad020fcf130df7cd2a03aff787ede51e3e9ee6533"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW_BINDINGS.json",
+          "bytes": 3337,
+          "sha256": "22684c9f0675d485e6e0e4a732cb43095e3c19b563e334c77baedf5865c07aa2"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport-review/author_controls_snapshot.py",
+          "bytes": 14363,
+          "sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-identity-transport-review/independent_controls.py",
+          "bytes": 14539,
+          "sha256": "3dbea80144c730655a8e8b61833a4bba606c3eaab56007ae1c9cd2d5cbd4c31b"
+        }
+      ],
+      "assurance": "Written report/proof and bounded separate internal review. No external peer-review, independent rediscovery or kernel-proof claim."
+    },
+    {
+      "id": "modal-grounding-source",
+      "kind": "PHILOSOPHICAL_SOURCE_AND_MAPPING_ASSESSMENT",
+      "status": "ACCEPTED_WITHIN_SEPARATE_INTERNAL_REVIEW_SCOPE",
+      "author": {
+        "path": "t20-next-frontier-20261008/modal-grounding-source/REPORT.md",
+        "bytes": 26915,
+        "sha256": "97f4cd1b948aa6396d29780e0ba9ea92f51d45c7ea91128d0671e1296d3c57db"
+      },
+      "review": {
+        "path": "t20-next-frontier-20261008/modal-grounding-source-review/REVIEW.md",
+        "bytes": 10897,
+        "sha256": "3b5c9fbe74f8258ad3a105971a2155447cd1038c524e8f1df82e5b02ff7c1d7c"
+      },
+      "acceptance_record": {
+        "path": "t20-next-frontier-20261008/modal-grounding-source-review/REVIEW_RECEIPT.json",
+        "bytes": 2045,
+        "sha256": "ed6e0a5f950b27558fe50a98226b85cec8dc226814d29467aa93318231c2de43"
+      },
+      "claims": [
+        "2011 positive algebraic proposal collectively grounds individualistic facts without singleton grounding; Necessitation does not distribute grounding.",
+        "Whole-field target remains available to inherited bearer theorem if productive Completion, Realisation and SupportTransport are independently warranted."
+      ],
+      "limits": [
+        "No actual autonomous obtaining, metaphysical countermodel or consistency theorem for an unstated plural calculus.",
+        "Whole-source author read versus bounded reviewer reading remain distinct."
+      ],
+      "control_ids": [],
+      "source_and_input_records": [
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source/MANIFEST.json",
+          "bytes": 3874,
+          "sha256": "94756f946b2e9c0aca406de2bed11471fb62f40fbbd939a9faeea590ea11c6a0"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source/READING_LEDGER.json",
+          "bytes": 7167,
+          "sha256": "02520251152c138d53157583461112a0613f9ba8893917a2b1ee52cbdf8f0e9e"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source/SOURCE_EXTRACTION_CHECK.json",
+          "bytes": 11785,
+          "sha256": "749121d3e535ade49a942db72b54b8797d6856dcac85bf9982f676b0a18e7295"
+        }
+      ],
+      "separate_review_records": [
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/INPUT_BINDINGS.json",
+          "bytes": 9070,
+          "sha256": "4cd50eba0358c18fdac81484da7e85595b4a01f7e52f341e474482ce5f5e3076"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/READING_LEDGER.json",
+          "bytes": 3684,
+          "sha256": "7a2eb0118cda10741ff52a29927ad61d80b9db84141626e7aaf6cb16394ab9a2"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/REVIEW.md",
+          "bytes": 10897,
+          "sha256": "3b5c9fbe74f8258ad3a105971a2155447cd1038c524e8f1df82e5b02ff7c1d7c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/REVIEW_RECEIPT.json",
+          "bytes": 2045,
+          "sha256": "ed6e0a5f950b27558fe50a98226b85cec8dc226814d29467aa93318231c2de43"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/VERIFICATION.json",
+          "bytes": 12690,
+          "sha256": "66c0a0f948c0942771052d5eb01eae29644f1df9ba8c0fb4dc1b6ab44ce61346"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/MANIFEST.json",
+          "bytes": 3874,
+          "sha256": "94756f946b2e9c0aca406de2bed11471fb62f40fbbd939a9faeea590ea11c6a0"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/MAPPING_TEST.md",
+          "bytes": 12491,
+          "sha256": "c65d19e90e6571c5e363147d39e5d817e92d5b1499e5536961544d187a8ad7b7"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/READING_LEDGER.json",
+          "bytes": 7167,
+          "sha256": "02520251152c138d53157583461112a0613f9ba8893917a2b1ee52cbdf8f0e9e"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/REPORT.md",
+          "bytes": 26915,
+          "sha256": "97f4cd1b948aa6396d29780e0ba9ea92f51d45c7ea91128d0671e1296d3c57db"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/SOURCE_EXTRACTION_CHECK.json",
+          "bytes": 11785,
+          "sha256": "749121d3e535ade49a942db72b54b8797d6856dcac85bf9982f676b0a18e7295"
+        }
+      ],
+      "assurance": "Written report/proof and bounded separate internal review. No external peer-review, independent rediscovery or kernel-proof claim."
+    },
+    {
+      "id": "wise-determination-continuation",
+      "kind": "PHILOSOPHICAL_SOURCE_AND_TRANSPORT_ASSESSMENT",
+      "status": "ACCEPTED_WITHIN_SEPARATE_INTERNAL_REVIEW_SCOPE",
+      "author": {
+        "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+        "bytes": 17870,
+        "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040"
+      },
+      "review": {
+        "path": "t20-next-frontier-20261008/wise-determination-continuation/review/RELATIONAL_PERFECTION_TRANSPORT.md",
+        "bytes": 11452,
+        "sha256": "316e7bd24f600c5f89e95cbf75b725284bb3d25ad3b52baa24d483b9babc7414"
+      },
+      "acceptance_record": {
+        "path": "t20-next-frontier-20261008/wise-determination-continuation/review/RELATIONAL_PERFECTION_TRANSPORT.md",
+        "bytes": 11452,
+        "sha256": "316e7bd24f600c5f89e95cbf75b725284bb3d25ad3b52baa24d483b9babc7414"
+      },
+      "claims": [
+        "The conditional knowledge-of-an-object passage distinguishes object-conditioned perfection from foreign donation, including a posited object existing otherwise than through God.",
+        "That source appraisal does not warrant independently original peers, the eligibility of their shared end, or complete joint productive adequacy."
+      ],
+      "limits": [
+        "No independent metaphysical counterexample or first reading of inherited Arabic evidence.",
+        "L1049 awkward electronic wording is preserved without emendation; hypothetical antecedent is not certified possible."
+      ],
+      "control_ids": [],
+      "source_and_input_records": [
+        {
+          "path": "t20-next-frontier-20261008/wise-determination-continuation/INPUT_BINDINGS.json",
+          "bytes": 5947,
+          "sha256": "1a60cf05895da5410311df4ae21745d0cc2a85b9557fe60576d643e7c8622b9f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/wise-determination-continuation/MANIFEST.json",
+          "bytes": 1253,
+          "sha256": "9f1e11a227bd51066b41c43ead8d7846ba9696c96489ef93f3302778f5bf2650"
+        },
+        {
+          "path": "t20-next-frontier-20261008/wise-determination-continuation/MANIFEST.sha256",
+          "bytes": 80,
+          "sha256": "8007d95a08d8d3de682d8e523c47c4e832214c7cae058457831e7808bc546e1d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/wise-determination-continuation/READ_FIRST.md",
+          "bytes": 983,
+          "sha256": "a39e64a065773c982c1a584b0e2cc7b42e7b4952fed83b220a32da59ae11d745"
+        },
+        {
+          "path": "t20-next-frontier-20261008/wise-determination-continuation/SOURCE_READS.json",
+          "bytes": 3463,
+          "sha256": "7c3cefc13d1241a4fc0afe954c60608d71205dcccf0b5bd2d9564ed4cfa81902"
+        }
+      ],
+      "separate_review_records": [
+        {
+          "path": "t20-next-frontier-20261008/wise-determination-continuation/review/RELATIONAL_PERFECTION_TRANSPORT.md",
+          "bytes": 11452,
+          "sha256": "316e7bd24f600c5f89e95cbf75b725284bb3d25ad3b52baa24d483b9babc7414"
+        }
+      ],
+      "assurance": "Written report/proof and bounded separate internal review. No external peer-review, independent rediscovery or kernel-proof claim."
+    },
+    {
+      "id": "collective-explanation-adequacy",
+      "kind": "PHILOSOPHICAL_POSITIVE_ADEQUACY_ASSESSMENT",
+      "status": "ACCEPTED_WITHIN_SEPARATE_INTERNAL_REVIEW_SCOPE",
+      "author": {
+        "path": "t20-next-frontier-20261008/collective-explanation-adequacy/REPORT.md",
+        "bytes": 24176,
+        "sha256": "6b0cbc001634b3b3fccb183c759bf0d813a359c6ac2df5cd59b911ae661f47ce"
+      },
+      "review": {
+        "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/REVIEW.md",
+        "bytes": 13586,
+        "sha256": "9fdd15e135e76531d346b305c4bc4b9f68a630fb2ea42de3a0b98d04d1158ad2"
+      },
+      "acceptance_record": {
+        "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/VERIFICATION.json",
+        "bytes": 1038,
+        "sha256": "e8c1caa56788118da9035c896f6be337ce66a879bbc783f585f02fee1988e2f9"
+      },
+      "claims": [
+        "2014 offers substantive defeasible abductive warrant for irreducibly collective explanation; accounting for consequences and singleton grounding remain distinct.",
+        "Coordinated inferential role to nonsemantic metaphysical explanation remains a disputed step. Which particular differs from whether an obtaining basis exists."
+      ],
+      "limits": [
+        "No autonomous actual obtaining or actual productive-resource presence/absence theorem.",
+        "Published metadata is Philosophers’ Imprint 14, number 20; historical 14(14) lead remains a corrected provenance item."
+      ],
+      "control_ids": [],
+      "source_and_input_records": [
+        {
+          "path": "t20-next-frontier-20261008/collective-explanation-adequacy/INPUT_BINDINGS.json",
+          "bytes": 635,
+          "sha256": "ceaa3440eb100a7b05a272f2f507fb5e90d5561dbfc1e1096f0d62e152bf79f5"
+        },
+        {
+          "path": "t20-next-frontier-20261008/collective-explanation-adequacy/MANIFEST.json",
+          "bytes": 4067,
+          "sha256": "1523998841ffa5bfcab102a7aa8c86107a33fd7857b29c49451a7a982499cddb"
+        },
+        {
+          "path": "t20-next-frontier-20261008/collective-explanation-adequacy/READING_LEDGER.json",
+          "bytes": 4839,
+          "sha256": "7bc1322c87e3e707567a4817ce34856dd68b4a5d48b5f98a265c407d6ce823aa"
+        }
+      ],
+      "separate_review_records": [
+        {
+          "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/INPUT_HASHES.json",
+          "bytes": 9548,
+          "sha256": "1ae36a072995c8d874c94a48c38ba2d5e037fae8c5a3a31113df065f7d02b834"
+        },
+        {
+          "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/READING_RECEIPT.json",
+          "bytes": 6345,
+          "sha256": "1142ede1073d45e41b769fee08ea6f9a7ae818a8d16107d04bb83463dc021031"
+        },
+        {
+          "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/REVIEW.md",
+          "bytes": 13586,
+          "sha256": "9fdd15e135e76531d346b305c4bc4b9f68a630fb2ea42de3a0b98d04d1158ad2"
+        },
+        {
+          "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/VERIFICATION.json",
+          "bytes": 1038,
+          "sha256": "e8c1caa56788118da9035c896f6be337ce66a879bbc783f585f02fee1988e2f9"
+        }
+      ],
+      "assurance": "Written report/proof and bounded separate internal review. No external peer-review, independent rediscovery or kernel-proof claim."
+    },
+    {
+      "id": "de-se-sovereignty",
+      "kind": "WRITTEN_STANDARD_CENTERED_SEMANTIC_CONSTRUCTION_APPLIED_HERE",
+      "status": "ACCEPTED_WITHIN_SEPARATE_INTERNAL_REVIEW_SCOPE",
+      "author": {
+        "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+        "bytes": 29525,
+        "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d"
+      },
+      "review": {
+        "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.md",
+        "bytes": 12763,
+        "sha256": "9593a1acdbd2704205c82c7d4c5bf55421c64fd8334380ec2ddb5528bd5c527e"
+      },
+      "acceptance_record": {
+        "path": "t20-next-frontier-20261008/de-se-sovereignty/REVIEW_STATUS.json",
+        "bytes": 758,
+        "sha256": "3b5016e20204c0418a9eccea369ec53816a467c4f79dc61669fe6403b497b986"
+      },
+      "claims": [
+        "Centered semantic enrichment preserves the prior metaphysical reduct; added de se recognition alone does not derive exclusivity.",
+        "Three conditional sovereignty routes and recognition/conformance factorization preserve the need for independently warranted norm and application premises."
+      ],
+      "limits": [
+        "Action-guiding epistemic basing is an additional conditional interpretation, NOT established by old code.",
+        "No new code, kernel proof or metaphysical-possibility certificate; corrected original and review history retained."
+      ],
+      "control_ids": [],
+      "source_and_input_records": [
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty/INPUT_BINDINGS.json",
+          "bytes": 8692,
+          "sha256": "856121ebb6874d312bcbfba205a117034d444117c94cc64724a815c02c77132f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty/MANIFEST.json",
+          "bytes": 2015,
+          "sha256": "681aff1296de6a7e880a2223cef1e0716e61d266b5daa41d939e0975c8b75b2f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty/READING_LEDGER.json",
+          "bytes": 1240,
+          "sha256": "9e547f0ad94eda92afd86a5f4c1c201bb3005dba80f0c05f9e3ec434898d454b"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty/history/MANIFEST-before-basing-clarification.json",
+          "bytes": 1268,
+          "sha256": "7e070c5ff6ca5f3a539d5ae3a4379886214c4d86a1fe7af7c2618ac998144973"
+        }
+      ],
+      "separate_review_records": [
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty-review/INPUT_HASHES.json",
+          "bytes": 6949,
+          "sha256": "854a9c56101a08203d19466c230d1cba8490abf25a4294f7caf3fdb1d4b5008d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty-review/MANIFEST.json",
+          "bytes": 1146,
+          "sha256": "f496973f74b13d566fbc9b1b6e5bf2030d4455434b76fefd8f3cdf980cf2e468"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty-review/READING_RECEIPT.json",
+          "bytes": 946,
+          "sha256": "16581ba5d00ef04752a3ddc7fb7a1afa55e0c2e3b2154fb41297b6033e28b1e7"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.before-correction-verification.md",
+          "bytes": 11852,
+          "sha256": "6086874421af47be3d2e61165f35f80aa2021eaa1f6762c7566b13fa0b53abcd"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.md",
+          "bytes": 12763,
+          "sha256": "9593a1acdbd2704205c82c7d4c5bf55421c64fd8334380ec2ddb5528bd5c527e"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty-review/VERIFICATION.json",
+          "bytes": 3889,
+          "sha256": "3f797a5f512187c8fd01c9c61538986a60db6ca67ffde3e1645d01af40366a9c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.final.md",
+          "bytes": 29525,
+          "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.initial.md",
+          "bytes": 27739,
+          "sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91"
+        }
+      ],
+      "assurance": "Written report/proof and bounded separate internal review. No external peer-review, independent rediscovery or kernel-proof claim."
+    },
+    {
+      "id": "de-se-perfection-sources",
+      "kind": "PHILOSOPHICAL_DE_SE_AND_PERFECTION_SOURCE_ASSESSMENT",
+      "status": "ACCEPTED_WITHIN_SEPARATE_INTERNAL_REVIEW_SCOPE",
+      "author": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+        "bytes": 20537,
+        "sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b"
+      },
+      "review": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/REVIEW.md",
+        "bytes": 17354,
+        "sha256": "d5536f4ae4a426359e2c05dba3df41e85e0534a0212540e12b6793cf100a63e8"
+      },
+      "acceptance_record": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/VERIFICATION.json",
+        "bytes": 14478,
+        "sha256": "8354f45a1023b357400da47fac77bc5cb57dbf269c19153f773f947f6811c261"
+      },
+      "claims": [
+        "Perfect self-knowledge accurately recognizes actual agency and authority; exclusivity still requires a perfection/authority premise.",
+        "Affirmative source supplies substantive original-adequacy and universal-supremacy arguments. Rival must truthfully recognize own exercise and joint basis; reading does not settle norm application."
+      ],
+      "limits": [
+        "Lewis/Perry/Torre whole readings, Grim selected indexical argument, and Ganya whole publisher article have distinct recorded scopes and intellectual dependence.",
+        "Perry ownership caution and stronger non-inferential concession are applications, not falsely attributed source theorems; Torre single-ascription scope retained."
+      ],
+      "control_ids": [],
+      "source_and_input_records": [
+        {
+          "path": "t20-next-frontier-20261008/de-se-perfection-sources/INPUT_BINDINGS.json",
+          "bytes": 4914,
+          "sha256": "f4b38a100363e2dcd816a4692755fffddfb677f0033cd20596ca59d4ae44c883"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-perfection-sources/MANIFEST.json",
+          "bytes": 3521,
+          "sha256": "382ffddd395bec8359948acf30c65ac80eb15f152d2933a506579ba584bc64f6"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-perfection-sources/READ_FIRST.md",
+          "bytes": 634,
+          "sha256": "6f410587bba2fffa381379d359144771f2b84b33026170b5db73d67566ab3bb1"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json",
+          "bytes": 6789,
+          "sha256": "e902d0b09c518362302f702fcc78ddecc9bf191ddc1dc1da71ec399dd88e4776"
+        }
+      ],
+      "separate_review_records": [
+        {
+          "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/INPUT_HASHES.json",
+          "bytes": 13201,
+          "sha256": "1b941bbf485e428f22163389b3c0f0061a5e76a62ce71a13c6e9bc5aeed53e6e"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/READING_RECEIPT.json",
+          "bytes": 8031,
+          "sha256": "41f29179c0300c5bd2cad2a31aacda1d1b9e51e073ee588212f2f17cb4e6d8e3"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/REVIEW.md",
+          "bytes": 17354,
+          "sha256": "d5536f4ae4a426359e2c05dba3df41e85e0534a0212540e12b6793cf100a63e8"
+        },
+        {
+          "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/VERIFICATION.json",
+          "bytes": 14478,
+          "sha256": "8354f45a1023b357400da47fac77bc5cb57dbf269c19153f773f947f6811c261"
+        }
+      ],
+      "assurance": "Written report/proof and bounded separate internal review. No external peer-review, independent rediscovery or kernel-proof claim."
+    }
+  ],
+  "separately_classified_notes": [
+    {
+      "path": "t20-next-frontier-20261008/research-allocation/20261008_SUCCESSOR_PRIORITY.md",
+      "bytes": 4504,
+      "sha256": "b45fc11608d88df1ac667c544b4081a2b0863964e3978b9223cfd6cdd4b0b6cf",
+      "origin_relative_to_workspace": "t20-next-frontier-20261008/research-allocation/20261008_SUCCESSOR_PRIORITY.md",
+      "classification": "ALLOCATION_OR_TARGETED_SOURCE_SCOPE_NOTE_NOT_PROOF_CREDIT",
+      "copied_unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_2011_TARGETED_RETURN.json",
+      "bytes": 1623,
+      "sha256": "cc1750991d34d4eeaa7daa41b0acafcff67c2c61de944bcb64aefb2ae1782b16",
+      "origin_relative_to_workspace": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_2011_TARGETED_RETURN.json",
+      "classification": "ALLOCATION_OR_TARGETED_SOURCE_SCOPE_NOTE_NOT_PROOF_CREDIT",
+      "copied_unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_TARGETED_RETURN.json",
+      "bytes": 1894,
+      "sha256": "27995aecb8a3d59dbce88098f95ba64f33564f2e3314c7fedc60b14d61138ee3",
+      "origin_relative_to_workspace": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_TARGETED_RETURN.json",
+      "classification": "ALLOCATION_OR_TARGETED_SOURCE_SCOPE_NOTE_NOT_PROOF_CREDIT",
+      "copied_unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PLURAL_TARGET_SCOPE_CHECK.md",
+      "bytes": 2022,
+      "sha256": "bd6575bc801108dbc42dfbd6d56fe2513f1c4d098b3e024fccebeae67d713883",
+      "origin_relative_to_workspace": "t20-next-frontier-20261008/root-later-operations/PLURAL_TARGET_SCOPE_CHECK.md",
+      "classification": "ALLOCATION_OR_TARGETED_SOURCE_SCOPE_NOTE_NOT_PROOF_CREDIT",
+      "copied_unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/SOURCE_COMPARISONS_2324.json",
+      "bytes": 1871,
+      "sha256": "41dec2707ccf73a164ac0bbca44465d6c6204cf037380c8d3fe160d7e28e8ad2",
+      "origin_relative_to_workspace": "t20-next-frontier-20261008/root-later-operations/SOURCE_COMPARISONS_2324.json",
+      "classification": "ALLOCATION_OR_TARGETED_SOURCE_SCOPE_NOTE_NOT_PROOF_CREDIT",
+      "copied_unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-next-operations/AKMALIYYA_SCOPE_RETURN.json",
+      "bytes": 1105,
+      "sha256": "6f59482cf6770b254af3e57a77a47ae36fbd1958be33a3f7e44800f03673eb78",
+      "origin_relative_to_workspace": "t20-next-frontier-20261008/root-next-operations/AKMALIYYA_SCOPE_RETURN.json",
+      "classification": "ALLOCATION_OR_TARGETED_SOURCE_SCOPE_NOTE_NOT_PROOF_CREDIT",
+      "copied_unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-next-operations/MAJMU_DETERMINATION_RETURN.json",
+      "bytes": 1019,
+      "sha256": "69d02a0c84c36344e6dc693372dd3a8ecb53745f9c01cca41ecf03e2c6b93e48",
+      "origin_relative_to_workspace": "t20-next-frontier-20261008/root-next-operations/MAJMU_DETERMINATION_RETURN.json",
+      "classification": "ALLOCATION_OR_TARGETED_SOURCE_SCOPE_NOTE_NOT_PROOF_CREDIT",
+      "copied_unchanged": true
+    }
+  ],
+  "external_dependency_registry": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json",
+  "prior_identity_registry": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+  "control_plan": "PACKING/CONTROL_PLAN.json",
+  "scope": {
+    "classification": "THIRTEENTH_ADDITIVE_INTERMEDIATE_PRESERVATION_ONLY",
+    "checkpoint_ordinal": 13,
+    "T20_status": "ACTIVE",
+    "snapshot_cutoff_utc": "2026-10-08T23:57:29.097912+00:00",
+    "membership_cutoff": [
+      "modal-identity-transport",
+      "modal-grounding-source",
+      "wise-determination-continuation",
+      "collective-explanation-adequacy",
+      "de-se-sovereignty",
+      "de-se-perfection-sources"
+    ],
+    "excluded_active_or_later": [
+      "necessary-concordance-power",
+      "All research beyond the six explicitly listed accepted stages, regardless of timestamp"
+    ],
+    "not_a_numbered_research_tranche": true,
+    "owner_handles_integration": true,
+    "protected_integration": false,
+    "closure": false,
+    "historical_six_hour_active_compliance": "UNVERIFIED",
+    "research_duration_credit_seconds": 0,
+    "independent_mathematical_value": "Preserved. Sampling optimisation frontier is paused on marginal priority, not repudiated or subordinated to theology.",
+    "source_claim_limit": "Source reports are philosophical/source assessments; no formal proof of actual Necessary Being or unity.",
+    "de_se_semantics": "Written standard centered construction applied here, not a new executable/kernel theorem.",
+    "de_se_basing": "Action-guiding epistemic basing explicitly NOT established by inherited policy code.",
+    "review_independence": "Separate internal review, not external peer review or independent source confirmation.",
+    "reading_limits": "Recorded author/reviewer reading scope retained. Byte/hash checks do not certify reading, comprehension, truth or metaphysics.",
+    "new_acquisition": false,
+    "prior_archives_rebuilt_or_executed": false
+  }
+}

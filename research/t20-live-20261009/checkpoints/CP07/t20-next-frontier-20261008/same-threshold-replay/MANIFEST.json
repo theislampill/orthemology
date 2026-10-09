@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-10-08T16:07:27.537070+00:00",
+  "status": "Frozen author packet awaiting independent review",
+  "scope": "All-command threshold replay characterization and fixed finite-grid global-copula obstruction; no finite-count impossibility or physical replay warrant",
+  "files": [
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "f0f438a4f99c5a2fef5b7f40384747c46f1454cfb1b719b4cb96dd6fa1d9b16b",
+      "bytes": 1767
+    },
+    {
+      "path": "PROSPECTIVE_EVENTS.jsonl",
+      "sha256": "e6f1356fafe89886601cf0951278be91409db3fd030ddd21c7ccc356e04def06",
+      "bytes": 631
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "ecae3eedf6b01f76bd31b039826c932f5418e9d3cf3a5679826c18f4dcf6a641",
+      "bytes": 1522
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098",
+      "bytes": 15218
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "81e922088053db364802826927a9ba042dd5910f96974b9d21bebe5e691b3416",
+      "bytes": 6780
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "adfbc884c980593876b941e3b8c7327ac5294623a0e5d4463001aa556d5e7a7c",
+      "bytes": 7996
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "0e43b8b3d5dc15929e79dae69e90ea8f06091477a181f5e1a64d503a24e947b6",
+      "bytes": 7158
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "060ed3aae850901e96d00a59b2b42f10e7c3e933628cd97e7503b8368b656596",
+      "bytes": 3717
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "808a51e1fae31562dece66d76ff7c41aef73f571319cf207093862a336dd156d",
+      "bytes": 1257
+    },
+    {
+      "path": "results/predecessor_verification.json",
+      "sha256": "bebb17eace4e5bed8431fa6d8daed38d92c53ec568c7557cf22b2eac60e1c817",
+      "bytes": 556
+    }
+  ]
+}

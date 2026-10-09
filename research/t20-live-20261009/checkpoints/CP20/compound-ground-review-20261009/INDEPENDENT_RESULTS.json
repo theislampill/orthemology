@@ -1,0 +1,647 @@
+{
+  "independent_implementation": "Primary table transcription and Hasse-edge transitive closure; no author code import or execution",
+  "axioms": [
+    {
+      "axiom": 1,
+      "assignments": 8,
+      "failures": []
+    },
+    {
+      "axiom": 2,
+      "assignments": 512,
+      "failures": []
+    },
+    {
+      "axiom": 3,
+      "assignments": 64,
+      "failures": []
+    },
+    {
+      "axiom": 4,
+      "assignments": 512,
+      "failures": []
+    },
+    {
+      "axiom": 5,
+      "assignments": 4096,
+      "failures": []
+    },
+    {
+      "axiom": 6,
+      "assignments": 64,
+      "failures": []
+    },
+    {
+      "axiom": 7,
+      "assignments": 64,
+      "failures": []
+    },
+    {
+      "axiom": 8,
+      "assignments": 512,
+      "failures": []
+    },
+    {
+      "axiom": 9,
+      "assignments": 512,
+      "failures": []
+    },
+    {
+      "axiom": 10,
+      "assignments": 64,
+      "failures": []
+    },
+    {
+      "axiom": 11,
+      "assignments": 64,
+      "failures": []
+    },
+    {
+      "axiom": 12,
+      "assignments": 512,
+      "failures": []
+    },
+    {
+      "axiom": 13,
+      "assignments": 512,
+      "failures": []
+    },
+    {
+      "axiom": 14,
+      "assignments": 8,
+      "failures": []
+    },
+    {
+      "axiom": 15,
+      "assignments": 64,
+      "failures": []
+    },
+    {
+      "axiom": 16,
+      "assignments": 8,
+      "failures": []
+    }
+  ],
+  "axiom_assignment_total": 7576,
+  "modus_ponens_pairs": 64,
+  "modus_ponens_failures": [],
+  "adjunction_pairs": 64,
+  "adjunction_failures": [],
+  "lattice_covers": [
+    [
+      "-3",
+      "-1"
+    ],
+    [
+      "-3",
+      "+0"
+    ],
+    [
+      "-3",
+      "-2"
+    ],
+    [
+      "-1",
+      "+1"
+    ],
+    [
+      "-1",
+      "-0"
+    ],
+    [
+      "+0",
+      "+1"
+    ],
+    [
+      "+0",
+      "+2"
+    ],
+    [
+      "-2",
+      "-0"
+    ],
+    [
+      "-2",
+      "+2"
+    ],
+    [
+      "+1",
+      "+3"
+    ],
+    [
+      "-0",
+      "+3"
+    ],
+    [
+      "+2",
+      "+3"
+    ]
+  ],
+  "order_pairs": 27,
+  "negation_involution_and_de_morgan": true,
+  "designation_boolean_for_and_or_negation": true,
+  "target": "Q →R Q is A1; syntactic theorem, not just finite-algebra validity",
+  "identity_all_eight_Q_values_designated_and_negation_undesignated": true,
+  "witness_assignment": {
+    "P": "+1",
+    "Q": "+2"
+  },
+  "witness": {
+    "P": "+1",
+    "N": "+2",
+    "not_P": "-1",
+    "not_N": "-2",
+    "M": "+3",
+    "B": "+1",
+    "not_M": "-3",
+    "not_B": "-1",
+    "B_arrow_N": "-3",
+    "sensitivity_B": "-3",
+    "sensitivity_P": "-3",
+    "sensitivity_M": "-3",
+    "C": "-1",
+    "C_arrow_B": "+1",
+    "C_arrow_N": "-3",
+    "relevant_conditional": "-3",
+    "relevant_compound": "-3",
+    "relevant_compound_arrow_N": "+3",
+    "relevant_compound_sensitivity": "+3",
+    "add_target": "+0",
+    "add_noncontradiction": "+1",
+    "classically_equivalent_P_and_N": "+0"
+  },
+  "material_actual_assignments": 32,
+  "material_actual_sensitivity_failures": 8,
+  "material_actual_failure_witnesses": [
+    {
+      "assignment": {
+        "P": "+1",
+        "Q": "-2"
+      },
+      "P": "+1",
+      "N": "+2",
+      "not_P": "-1",
+      "not_N": "-2",
+      "M": "+3",
+      "B": "+1",
+      "not_M": "-3",
+      "not_B": "-1",
+      "B_arrow_N": "-3",
+      "sensitivity_B": "-3",
+      "sensitivity_P": "-3",
+      "sensitivity_M": "-3",
+      "C": "-1",
+      "C_arrow_B": "+1",
+      "C_arrow_N": "-3",
+      "relevant_conditional": "-3",
+      "relevant_compound": "-3",
+      "relevant_compound_arrow_N": "+3",
+      "relevant_compound_sensitivity": "+3",
+      "add_target": "+0",
+      "add_noncontradiction": "+1",
+      "classically_equivalent_P_and_N": "+0"
+    },
+    {
+      "assignment": {
+        "P": "+1",
+        "Q": "-0"
+      },
+      "P": "+1",
+      "N": "+0",
+      "not_P": "-1",
+      "not_N": "-0",
+      "M": "+1",
+      "B": "+1",
+      "not_M": "-1",
+      "not_B": "-1",
+      "B_arrow_N": "-3",
+      "sensitivity_B": "-3",
+      "sensitivity_P": "-3",
+      "sensitivity_M": "-3",
+      "C": "-1",
+      "C_arrow_B": "+1",
+      "C_arrow_N": "-3",
+      "relevant_conditional": "-3",
+      "relevant_compound": "-3",
+      "relevant_compound_arrow_N": "+3",
+      "relevant_compound_sensitivity": "+3",
+      "add_target": "+0",
+      "add_noncontradiction": "+1",
+      "classically_equivalent_P_and_N": "+0"
+    },
+    {
+      "assignment": {
+        "P": "+1",
+        "Q": "+0"
+      },
+      "P": "+1",
+      "N": "+0",
+      "not_P": "-1",
+      "not_N": "-0",
+      "M": "+1",
+      "B": "+1",
+      "not_M": "-1",
+      "not_B": "-1",
+      "B_arrow_N": "-3",
+      "sensitivity_B": "-3",
+      "sensitivity_P": "-3",
+      "sensitivity_M": "-3",
+      "C": "-1",
+      "C_arrow_B": "+1",
+      "C_arrow_N": "-3",
+      "relevant_conditional": "-3",
+      "relevant_compound": "-3",
+      "relevant_compound_arrow_N": "+3",
+      "relevant_compound_sensitivity": "+3",
+      "add_target": "+0",
+      "add_noncontradiction": "+1",
+      "classically_equivalent_P_and_N": "+0"
+    },
+    {
+      "assignment": {
+        "P": "+1",
+        "Q": "+2"
+      },
+      "P": "+1",
+      "N": "+2",
+      "not_P": "-1",
+      "not_N": "-2",
+      "M": "+3",
+      "B": "+1",
+      "not_M": "-3",
+      "not_B": "-1",
+      "B_arrow_N": "-3",
+      "sensitivity_B": "-3",
+      "sensitivity_P": "-3",
+      "sensitivity_M": "-3",
+      "C": "-1",
+      "C_arrow_B": "+1",
+      "C_arrow_N": "-3",
+      "relevant_conditional": "-3",
+      "relevant_compound": "-3",
+      "relevant_compound_arrow_N": "+3",
+      "relevant_compound_sensitivity": "+3",
+      "add_target": "+0",
+      "add_noncontradiction": "+1",
+      "classically_equivalent_P_and_N": "+0"
+    },
+    {
+      "assignment": {
+        "P": "+2",
+        "Q": "-1"
+      },
+      "P": "+2",
+      "N": "+1",
+      "not_P": "-2",
+      "not_N": "-1",
+      "M": "+3",
+      "B": "+2",
+      "not_M": "-3",
+      "not_B": "-2",
+      "B_arrow_N": "-3",
+      "sensitivity_B": "-3",
+      "sensitivity_P": "-3",
+      "sensitivity_M": "-3",
+      "C": "-2",
+      "C_arrow_B": "+2",
+      "C_arrow_N": "-3",
+      "relevant_conditional": "-3",
+      "relevant_compound": "-3",
+      "relevant_compound_arrow_N": "+3",
+      "relevant_compound_sensitivity": "+3",
+      "add_target": "+0",
+      "add_noncontradiction": "+2",
+      "classically_equivalent_P_and_N": "+0"
+    },
+    {
+      "assignment": {
+        "P": "+2",
+        "Q": "-0"
+      },
+      "P": "+2",
+      "N": "+0",
+      "not_P": "-2",
+      "not_N": "-0",
+      "M": "+2",
+      "B": "+2",
+      "not_M": "-2",
+      "not_B": "-2",
+      "B_arrow_N": "-3",
+      "sensitivity_B": "-3",
+      "sensitivity_P": "-3",
+      "sensitivity_M": "-3",
+      "C": "-2",
+      "C_arrow_B": "+2",
+      "C_arrow_N": "-3",
+      "relevant_conditional": "-3",
+      "relevant_compound": "-3",
+      "relevant_compound_arrow_N": "+3",
+      "relevant_compound_sensitivity": "+3",
+      "add_target": "+0",
+      "add_noncontradiction": "+2",
+      "classically_equivalent_P_and_N": "+0"
+    },
+    {
+      "assignment": {
+        "P": "+2",
+        "Q": "+0"
+      },
+      "P": "+2",
+      "N": "+0",
+      "not_P": "-2",
+      "not_N": "-0",
+      "M": "+2",
+      "B": "+2",
+      "not_M": "-2",
+      "not_B": "-2",
+      "B_arrow_N": "-3",
+      "sensitivity_B": "-3",
+      "sensitivity_P": "-3",
+      "sensitivity_M": "-3",
+      "C": "-2",
+      "C_arrow_B": "+2",
+      "C_arrow_N": "-3",
+      "relevant_conditional": "-3",
+      "relevant_compound": "-3",
+      "relevant_compound_arrow_N": "+3",
+      "relevant_compound_sensitivity": "+3",
+      "add_target": "+0",
+      "add_noncontradiction": "+2",
+      "classically_equivalent_P_and_N": "+0"
+    },
+    {
+      "assignment": {
+        "P": "+2",
+        "Q": "+1"
+      },
+      "P": "+2",
+      "N": "+1",
+      "not_P": "-2",
+      "not_N": "-1",
+      "M": "+3",
+      "B": "+2",
+      "not_M": "-3",
+      "not_B": "-2",
+      "B_arrow_N": "-3",
+      "sensitivity_B": "-3",
+      "sensitivity_P": "-3",
+      "sensitivity_M": "-3",
+      "C": "-2",
+      "C_arrow_B": "+2",
+      "C_arrow_N": "-3",
+      "relevant_conditional": "-3",
+      "relevant_compound": "-3",
+      "relevant_compound_arrow_N": "+3",
+      "relevant_compound_sensitivity": "+3",
+      "add_target": "+0",
+      "add_noncontradiction": "+2",
+      "classically_equivalent_P_and_N": "+0"
+    }
+  ],
+  "repair_values": {
+    "B": {
+      "ground": "+1",
+      "ground_designated": true,
+      "arrow_to_N": "-3",
+      "sensitivity": "-3"
+    },
+    "P": {
+      "ground": "+1",
+      "ground_designated": true,
+      "arrow_to_N": "-3",
+      "sensitivity": "-3"
+    },
+    "M": {
+      "ground": "+3",
+      "ground_designated": true,
+      "arrow_to_N": "-3",
+      "sensitivity": "-3"
+    },
+    "add_target": {
+      "ground": "+0",
+      "ground_designated": true,
+      "arrow_to_N": "+2",
+      "sensitivity": "+2"
+    },
+    "add_noncontradiction": {
+      "ground": "+1",
+      "ground_designated": true,
+      "arrow_to_N": "-3",
+      "sensitivity": "-3"
+    },
+    "classically_equivalent_P_and_N": {
+      "ground": "+0",
+      "ground_designated": true,
+      "arrow_to_N": "+2",
+      "sensitivity": "+2"
+    },
+    "relevant_compound": {
+      "ground": "-3",
+      "ground_designated": false,
+      "arrow_to_N": "+3",
+      "sensitivity": "+3"
+    }
+  },
+  "classical_material_modus_ponens_failures": [],
+  "conditional_derivation": [
+    {
+      "line": 1,
+      "reason": "A6",
+      "valid": true
+    },
+    {
+      "line": 2,
+      "reason": "A7",
+      "valid": true
+    },
+    {
+      "line": 3,
+      "reason": "A10",
+      "valid": true
+    },
+    {
+      "line": 4,
+      "reason": "A2",
+      "valid": true
+    },
+    {
+      "line": 5,
+      "reason": "MP 4, 3",
+      "valid": true
+    },
+    {
+      "line": 6,
+      "reason": "MP 5, 2",
+      "valid": true
+    },
+    {
+      "line": 7,
+      "reason": "Adjunction 1, 6",
+      "valid": true
+    },
+    {
+      "line": 8,
+      "reason": "A8",
+      "valid": true
+    },
+    {
+      "line": 9,
+      "reason": "MP 8, 7",
+      "valid": true
+    },
+    {
+      "line": 10,
+      "reason": "H: suppose this were an R theorem",
+      "valid": true
+    },
+    {
+      "line": 11,
+      "reason": "A2",
+      "valid": true
+    },
+    {
+      "line": 12,
+      "reason": "MP 11, 10",
+      "valid": true
+    },
+    {
+      "line": 13,
+      "reason": "MP 12, 9",
+      "valid": true
+    }
+  ],
+  "conditional_derivation_rejected_without_H": true,
+  "wrong_final_consequent_rejected": true,
+  "corrupt_table_entry_rejected_by_recomputed_A1": true,
+  "positive_relevant_derivation": [
+    {
+      "line": 1,
+      "reason": "A6",
+      "valid": true
+    },
+    {
+      "line": 2,
+      "reason": "A7",
+      "valid": true
+    },
+    {
+      "line": 3,
+      "reason": "A2",
+      "valid": true
+    },
+    {
+      "line": 4,
+      "reason": "A4",
+      "valid": true
+    },
+    {
+      "line": 5,
+      "reason": "MP 4, 3",
+      "valid": true
+    },
+    {
+      "line": 6,
+      "reason": "MP 5, 1",
+      "valid": true
+    },
+    {
+      "line": 7,
+      "reason": "A2",
+      "valid": true
+    },
+    {
+      "line": 8,
+      "reason": "MP 7, 6",
+      "valid": true
+    },
+    {
+      "line": 9,
+      "reason": "MP 8, 2",
+      "valid": true
+    },
+    {
+      "line": 10,
+      "reason": "A3",
+      "valid": true
+    },
+    {
+      "line": 11,
+      "reason": "MP 10, 9",
+      "valid": true
+    },
+    {
+      "line": 12,
+      "reason": "A1",
+      "valid": true
+    },
+    {
+      "line": 13,
+      "reason": "A15",
+      "valid": true
+    },
+    {
+      "line": 14,
+      "reason": "MP 13, 12",
+      "valid": true
+    },
+    {
+      "line": 15,
+      "reason": "A2",
+      "valid": true
+    },
+    {
+      "line": 16,
+      "reason": "MP 15, 14",
+      "valid": true
+    },
+    {
+      "line": 17,
+      "reason": "MP 16, 11",
+      "valid": true
+    },
+    {
+      "line": 18,
+      "reason": "A15",
+      "valid": true
+    },
+    {
+      "line": 19,
+      "reason": "MP 18, 17",
+      "valid": true
+    }
+  ],
+  "variable_sharing_closed_subalgebras": [
+    [
+      "+1",
+      "-1"
+    ],
+    [
+      "+2",
+      "-2"
+    ]
+  ],
+  "variable_sharing_cross_values": [
+    {
+      "a": "+1",
+      "b": "-2",
+      "value": "-3"
+    },
+    {
+      "a": "+1",
+      "b": "+2",
+      "value": "-3"
+    },
+    {
+      "a": "-1",
+      "b": "-2",
+      "value": "-3"
+    },
+    {
+      "a": "-1",
+      "b": "+2",
+      "value": "-3"
+    }
+  ],
+  "source_and_author_table_and_lattice_agree": true,
+  "scope_warning": "B entails N because N is already an R theorem. Failure is of the internal relevant arrow and of deriving relevant sensitivity from designated material grounds. No epistemic-model construction is supplied."
+}

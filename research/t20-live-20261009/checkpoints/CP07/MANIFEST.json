@@ -1,0 +1,911 @@
+{
+  "schema": "t20-intermediate-checkpoint-manifest-v1",
+  "classification": "SEVENTH_ADDITIVE_INTERMEDIATE_RESEARCH_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "sealed_utc": "2026-10-08T17:13:28.548757+00:00",
+  "research_cutoff_utc": "2026-10-08T17:10:40.977609+00:00",
+  "previous_research_cutoff_utc": "2026-10-08T16:15:27.659356+00:00",
+  "fresh_definition": "Frozen post-sixth mathematical stages copied unchanged; packing and replay give no active-research time credit.",
+  "entrypoint": "INCREMENTAL_RESULT_SOURCE_EVIDENCE_DEPENDENCY_MANIFEST.json",
+  "evidence_boundaries": "EVIDENCE_BOUNDARIES.json",
+  "exclusions": "OMISSIONS_AND_SOURCE_LINKS.json",
+  "portable_program_count": 8,
+  "active_excluded_successors": [
+    "Separate within-pair adaptation addendum, permitting the second face rate to depend on the first bit: active and not frozen/reviewed into this cutoff. No additional theorem credit."
+  ],
+  "new_Lean_or_kernel_verification": false,
+  "empirical_validation": false,
+  "metaphysical_warrant_credit": false,
+  "file_count": 139,
+  "files": [
+    {
+      "path": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 4987,
+      "sha256": "bdeafe251f94b3b7a640bba5f1ebcdedee5e393a1cacf3b8122ae3453d50d7c8",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "EVIDENCE_BOUNDARIES.json",
+      "bytes": 3429,
+      "sha256": "33b6b1e453f3f7aaced9318cd7e48e2ca083dd9bfcb7dc46a86a43e6de884d41",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "INCREMENTAL_RESULT_SOURCE_EVIDENCE_DEPENDENCY_MANIFEST.json",
+      "bytes": 19543,
+      "sha256": "d980e0bbee51cd1f9aeba5986449add0e63bf9eadbb78aba4ab50b46f47d80f4",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "OMISSIONS_AND_SOURCE_LINKS.json",
+      "bytes": 731,
+      "sha256": "4b05e815af3b2b418ac1446dbd177406954b0acb35ca6e3c39a8ebaae5b874bf",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/CONTROL_PLAN.json",
+      "bytes": 4783,
+      "sha256": "c03d9a6dc7f2a4055bb3ab2d5b676a1deff01eb962d407d744fcebae549f0190",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/FREEZE_IDENTITIES.json",
+      "bytes": 4501,
+      "sha256": "779efea388c8d538cb54a594c30859fe771c4984b1d93c5711888426fb2b59fd",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/MINIMAL_REPLAY_DEPENDENCIES.json",
+      "bytes": 23026,
+      "sha256": "17e551ec8d599b66277afaa64eb3748194d703519c174ff938a372a94ee9ec81",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/ORIGINAL_AND_REVIEW_BINDING_CHECKS.json",
+      "bytes": 82417,
+      "sha256": "c7059341bccd950e4309f4cb708959c55822fb28e0f237263a133dce60172c21",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/SOURCE_COPY_BINDINGS.json",
+      "bytes": 39761,
+      "sha256": "3cbe88e11526e6d16d5a0c3a7322e8c02928fdd6222dc94b392b8e09c3f9a34b",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/check_manifest.py",
+      "bytes": 2227,
+      "sha256": "a7e377e58ca0c61272cb6e5fdb9e287bde378dd3e8b18f091100807ab1b69610",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/REPLAY_RECEIPT.json",
+      "bytes": 7148,
+      "sha256": "8464c8ae62eefb2bcec8b25f47db7005690b9c433c3559eaec53418d5b33a17b",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/all-rate-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/all-rate-author.stdout.log",
+      "bytes": 3417,
+      "sha256": "9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/all-rate-final-review-bindings.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/all-rate-final-review-bindings.stdout.log",
+      "bytes": 4462,
+      "sha256": "2e4cc6b5a20ab2964615f92d7ef6d9352351160770ec281a4af84e330bb8ed03",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/all-rate-final-review-controls.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/all-rate-final-review-controls.stdout.log",
+      "bytes": 986,
+      "sha256": "052c3f9547871669d5ed4cdaf1cf773c5c24a6ff4c327fab3223253df2fcd408",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/all-rate-source-bindings.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/all-rate-source-bindings.stdout.log",
+      "bytes": 6393,
+      "sha256": "11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/fixed-rate-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/fixed-rate-author.stdout.log",
+      "bytes": 1176,
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/fixed-rate-bindings.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/fixed-rate-bindings.stdout.log",
+      "bytes": 4556,
+      "sha256": "69a7bae07a7de7751ab9ac7199e379acf66a3023b96ba08147d2d8de83eac0c3",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/fixed-rate-review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/fixed-rate-review.stdout.log",
+      "bytes": 382,
+      "sha256": "3db0ded5aa6d73c9c5b0a388eeb7878f8038239d4ee551a86253fe95c0152c6d",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/robustness-symbolic.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/robustness-symbolic.stdout.log",
+      "bytes": 2449,
+      "sha256": "3bf3e5aa977563653ad182a1c63f0c68b52ecb8f36d5c517ae0199a507fa8b05",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/prior-identities/SIXTH_COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 7661,
+      "sha256": "28c7ff083067ca8bfd294202fc284d66245be980462060fbca57efd6100c518f",
+      "boundary": "INHERITED_IDENTITY_MAP"
+    },
+    {
+      "path": "PACKING/prior-identities/SIXTH_DELIVERY_IDENTITIES.json",
+      "bytes": 805,
+      "sha256": "cedd3c1df9a57677829b9ae84a9713d3e4523df7d1b011e39c40f05023447c23",
+      "boundary": "INHERITED_DELIVERY_IDENTITIES"
+    },
+    {
+      "path": "PACKING/replay_python.py",
+      "bytes": 3065,
+      "sha256": "af6099b12794d3545ab07d0e0a067099b3f23e2f2f8c0f1fee0cb4fff07128e8",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 5378,
+      "sha256": "eb1b6052e88a4e127d926daae5a62cabed27994d63c6741a9ec09bc311403481",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 1402,
+      "sha256": "1f2837a34b8f3622be019bbe2b968b2e550529467540b4ca6fa06da6cbc0dbb5",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "requirements-controls.txt",
+      "bytes": 28,
+      "sha256": "47fd19021144e071cc43b6e265aafada0056abe89724ad95bd6e3a8e37995b94",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+      "bytes": 5833,
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/CONTROLS_OUTPUT.json",
+      "bytes": 3417,
+      "sha256": "9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/EXACT_CONTROLS.md",
+      "bytes": 2673,
+      "sha256": "8255889acd5fe46eb63b1259e8cf6ae342157c10a3669d15e36189ffa8b86717",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/FINAL_CHECK.json",
+      "bytes": 816,
+      "sha256": "f4f242098e1c2c6d40416056556de0ebb86ce91849a3fc0e2751a691592268da",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/MANIFEST.json",
+      "bytes": 2503,
+      "sha256": "e454504588064ed84b4565fbc4656075c456a34b3f812973f1c96c5d4d83af3f",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/NEGATIVE_CONTROLS.md",
+      "bytes": 5020,
+      "sha256": "ceea5caacbafbc11b6acee5865964092db779b16f67a71501ef5036d52603f87",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/READ_FIRST.md",
+      "bytes": 2159,
+      "sha256": "6abc98959222dd3d389fabf64bdd8f0f34c5cd1e1d886dedc661b633881a8467",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/RESEARCH_EVENTS.jsonl",
+      "bytes": 947,
+      "sha256": "48932408a000e96edc187ff86eb088ba9afa25f2b4b59d84826e441e9012c2b9",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/RESULT.md",
+      "bytes": 13174,
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/REVIEW_STATUS.md",
+      "bytes": 2276,
+      "sha256": "3cb5747d814a77d4e0bbb0985ed7a01909ce9869953816e464285731ed148de2",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/SOURCE_AUDIT.md",
+      "bytes": 5295,
+      "sha256": "03ca00dd14213af6c8cfd86a59ab36f052441ece947274bed6787df2cad10eb4",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/SOURCE_BINDINGS.json",
+      "bytes": 2606,
+      "sha256": "81b8388c7db66fbcdd0da6db3bd54088cc2dec8fb1d6af8ba75423755ba4d2ef",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/SOURCE_CHECK_OUTPUT.json",
+      "bytes": 6393,
+      "sha256": "11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/controls.py",
+      "bytes": 7663,
+      "sha256": "e448f57ba034c782deed64e4013f8afc50ce4ae1ede1f8e1f1be4bf4ea6504b4",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/source_binding_check.py",
+      "bytes": 1153,
+      "sha256": "a11f4b18edefba84ccea562cea37d4572bdc92379374f1634505ee7ae11f58c3",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/AUTHOR_CONTROLS_RERUN.json",
+      "bytes": 2603,
+      "sha256": "e72a2adbc43f13038cd42fe130c65fd6f079642361200578e326fe2f1f674698",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/AUTHOR_CONTROLS_STRENGTHENED_RERUN.json",
+      "bytes": 3417,
+      "sha256": "9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/CONTROL_RESULTS.json",
+      "bytes": 12417,
+      "sha256": "d1fce48063577ec64673e24927b1f4e9f61d0987341e5d793bd2f4644fb3497b",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/CONTROL_RUN.log",
+      "bytes": 986,
+      "sha256": "052c3f9547871669d5ed4cdaf1cf773c5c24a6ff4c327fab3223253df2fcd408",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/INITIAL_BINDINGS.json",
+      "bytes": 597,
+      "sha256": "15dee11f7e4fc2aec74aae8643ff26f2f066b974521edfba1279d7d05abc7efd",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/RECEIPT_VERIFICATION.json",
+      "bytes": 4462,
+      "sha256": "2e4cc6b5a20ab2964615f92d7ef6d9352351160770ec281a4af84e330bb8ed03",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW.md",
+      "bytes": 17583,
+      "sha256": "82607136c173948ec90de23ff853664f30ab869425014f359ce64b70f1e4de03",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json",
+      "bytes": 6991,
+      "sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/SOURCE_BINDING_RERUN.json",
+      "bytes": 6393,
+      "sha256": "11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/independent_controls.py",
+      "bytes": 10430,
+      "sha256": "1b290a8bba3ca20b27a6c363018e24dc1f86b19bef24510e2cfef1f15021d83d",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/verify_review.py",
+      "bytes": 921,
+      "sha256": "2b80e45c54e77991fafe638b956dcdfc2e5a1e956d5b8d8eba07e457569312da",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-review/UNIFORM_BOUND_AND_SHARP_ASYMPTOTICS.md",
+      "bytes": 12931,
+      "sha256": "1543ed1b1406bd59948bd66f962001f451dbff2523e3f0e8b67a96a82ad319e9",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/ADDENDUM_MANIFEST.json",
+      "bytes": 467,
+      "sha256": "66a631d04cfe92964aaf8829f3668e362b589004d1c1c66dba287c4155513716",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/EXACT_CONTROLS.md",
+      "bytes": 2062,
+      "sha256": "463b14ece2b32e3004c9c9bc373664803a6daa81ee6e20210406a849808261fc",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/MANIFEST.json",
+      "bytes": 1809,
+      "sha256": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/READ_FIRST.md",
+      "bytes": 1231,
+      "sha256": "48ae64facbc6556c6f4346858f74a3a0f0049077c9d11e9adfbb0fc8c0d05be4",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/RESEARCH_EVENTS.jsonl",
+      "bytes": 650,
+      "sha256": "3a53862de5488ae43923c32d7ff55d942a55d617444790e9473c0ffb57cc10e8",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/RESULT.md",
+      "bytes": 15467,
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/SEMANTIC_GUARD.md",
+      "bytes": 1792,
+      "sha256": "0fbd40f05cb115621d367a220eb1bdc754a218e6fd6b84f8d5e4c63af8dbd924",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/SOURCE_AUDIT.md",
+      "bytes": 7007,
+      "sha256": "187867e9e99c74e1897b570d6101106a2b6a65818cbf1126ed38441af53da90d",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/SOURCE_BINDINGS.json",
+      "bytes": 6234,
+      "sha256": "d0168bae91d619e795e50326caaf91e6a19df0e5cb84f8b1e1562a53646c5c0a",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/exact_controls.py",
+      "bytes": 6916,
+      "sha256": "c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/results/exact_controls.json",
+      "bytes": 18639,
+      "sha256": "cb68c4936ac039a7046a411d717078e1212006fbabb0fd8620ef98bf679779db",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/results/exact_controls.log",
+      "bytes": 1381,
+      "sha256": "a9d0a69aa7cf1cdc25bc24bea0e7c46d8b2b27a777aad0b6ba75808cbdf134f7",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/sources/SOURCE_READS.json",
+      "bytes": 2114,
+      "sha256": "dae0993624569e077dd96def3e52d243b222f0dd5a6a94475a05cc5115d195b5",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/EVENT_RECORD.json",
+      "bytes": 1251,
+      "sha256": "1537019ced01d70638a737127261845249ab7b53860001f2cb335a6b4801f1ae",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/EXACT_CONTROLS_OUTPUT.txt",
+      "bytes": 2485,
+      "sha256": "ac4ccc9d9f475e5ed401f2682f9a938e5c75cf05d734d87e1a7b4f99414fc499",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/MANIFEST.sha256",
+      "bytes": 948,
+      "sha256": "03a2b836250eb1b77eb99e3214ebcaff8ecf2e2748442d28bca6851c6a5b46d3",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/RESULT.md",
+      "bytes": 10261,
+      "sha256": "327b6fb25944ac90e7ecd6010a427993b69400fbdc9b79928d731120b6d62243",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/SHARED_MARGINAL_BOUNDARY.md",
+      "bytes": 3986,
+      "sha256": "3d55f739d398ed1b4b28253cdb5db34ec9b32d46415e14750a612e35f43b4788",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/SOURCE_REVIEW_BINDINGS.md",
+      "bytes": 3082,
+      "sha256": "83df5ebbbf0717d09392af28d5a7ca77fcfc783dc7f13484c586d157d086faac",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/VERIFICATION.md",
+      "bytes": 1946,
+      "sha256": "6a335e09623ae4d446a0f820b37862077dd3903cec3d6ceeb31fac17c34ad279",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/exact_controls.py",
+      "bytes": 4176,
+      "sha256": "04cffc5e5d694deb58f64e69f60479afd4a847234b75616c9f5c702d18e72a8b",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-review/REVIEW.md",
+      "bytes": 6960,
+      "sha256": "812eb02988e1e2e695e71fcdead1debbd20a9525570b5f3eb68c26b601af208e",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/EVENT_RECORD.json",
+      "bytes": 2138,
+      "sha256": "84d2e7557035f64728dff9bd9f7fe2bc20dd1dfe0fc638dd4f1fba078901b1ee",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/EXACT_CONTROLS_OUTPUT.txt",
+      "bytes": 2449,
+      "sha256": "3bf3e5aa977563653ad182a1c63f0c68b52ecb8f36d5c517ae0199a507fa8b05",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/MANIFEST.sha256",
+      "bytes": 1225,
+      "sha256": "4c7934a6eac9c3412dfb3a5f982c6fe0dcdc94e80f43e0ed75b36eb3b4db386d",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/RESULT.md",
+      "bytes": 12263,
+      "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+      "bytes": 3776,
+      "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/VERIFICATION.md",
+      "bytes": 2721,
+      "sha256": "539badb30aa96eb4c16d630e080e4e4fb8ec626de4d11e062957e49303f21551",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/exact_controls.py",
+      "bytes": 4202,
+      "sha256": "76e2f5b429966995b5dec93ffd5576f7a0168d37733132faba2793cc00a6ace7",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-panel-replay-robustness-review/REVIEW.md",
+      "bytes": 13318,
+      "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/EXACT_CONTROLS.md",
+      "bytes": 2055,
+      "sha256": "ee33ab16aa16e935f8d028913b8d2c563e0a5359912ebc5f71127a2598977449",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/FINAL_BINDINGS.json",
+      "bytes": 1685,
+      "sha256": "c8cab11fbde0f8e2bc024079fa7796fe5639418b700335a792e5eab192ea74b9",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/MANIFEST.json",
+      "bytes": 1664,
+      "sha256": "3f7db7a3045f45135af93f82130791635cb56c808caf9aae89d137966095fa23",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/PROSPECTIVE_EVENTS.jsonl",
+      "bytes": 563,
+      "sha256": "921557295ca543c6a124e9675152b1f3148490b4733c6c03a538ddf197f37731",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/READ_FIRST.md",
+      "bytes": 1304,
+      "sha256": "cbe81fac3e555730bbb27ed53e62e33b09aa6773fa023ef453d4942eaef986c1",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/RESULT.md",
+      "bytes": 14735,
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/SOURCE_AUDIT.md",
+      "bytes": 7131,
+      "sha256": "75ef486b0458f2e95dc70ff9cafd9dd0cc6285bfc1e2f76f74df53460724a681",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/SOURCE_BINDINGS.json",
+      "bytes": 9703,
+      "sha256": "f642a4a2214d76d50edfbaad21d8356a02e0f723ac8db304d92dd205abd6375a",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/exact_controls.py",
+      "bytes": 6905,
+      "sha256": "2acf221085fc8f0263041e7adbf129e828e4c93a877a5ee0668729bcf6b84901",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/results/exact_controls.json",
+      "bytes": 25985,
+      "sha256": "3eadf7e16d2c499d9b405f3186a4ccee9072ab34e4b6f0b3776bcc4bb0037ac2",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/results/exact_controls.log",
+      "bytes": 1176,
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/results/final_review_verification.json",
+      "bytes": 4556,
+      "sha256": "69a7bae07a7de7751ab9ac7199e379acf66a3023b96ba08147d2d8de83eac0c3",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/AUTHOR_REPLAY.log",
+      "bytes": 1176,
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/BOUNDARY_ATTACKS.md",
+      "bytes": 4333,
+      "sha256": "ab78c2806840578eb516da86a2994dce1c9d4d91531d36f89d9daafa32f161e7",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/FINAL_VERIFICATION.json",
+      "bytes": 4556,
+      "sha256": "69a7bae07a7de7751ab9ac7199e379acf66a3023b96ba08147d2d8de83eac0c3",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/INDEPENDENT_CONTROLS.json",
+      "bytes": 36045,
+      "sha256": "54e1a262026d0834adc0a92f7266b91a2428bf7fe0aae88be1c850048cde7b3d",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/INDEPENDENT_CONTROLS.log",
+      "bytes": 382,
+      "sha256": "3db0ded5aa6d73c9c5b0a388eeb7878f8038239d4ee551a86253fe95c0152c6d",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/INDEPENDENT_DERIVATION.md",
+      "bytes": 4692,
+      "sha256": "9d03205d6f0436d83c9edfb543a7520dbadc2d58be9240a21bd56dd0f8da4510",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/MANIFEST.json",
+      "bytes": 3824,
+      "sha256": "86d5d4931788994a7fb7a0031f6e59c516c348e3c506d4edc17aff3eaf7e3715",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/PREFREEZE_DERIVATION_RECEIPT.json",
+      "bytes": 258,
+      "sha256": "bc898b58ac9438daa35e11254eaced47ceaf017c64042ecc4f1d937633528973",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/READ_FIRST.md",
+      "bytes": 1180,
+      "sha256": "cb537f8f1f71dd24e03b9080e12830950340f6228b23e4aee5a54632b5bf8718",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/REVIEW.md",
+      "bytes": 7919,
+      "sha256": "e3e8677f03775f984622495997b2dc0a6a55e50102fb1de03b3995a58f0a3de6",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/REVIEW_RECEIPT.json",
+      "bytes": 15736,
+      "sha256": "f0c732d3c7067c5dea993e0d0d6a3aef04ae880aff6adc895a8f8b008aba5fd8",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/SOURCE_AUDIT.md",
+      "bytes": 3146,
+      "sha256": "4c26a0846202eb0ca30adf0265a4a390af54232b16cacf22d8f4f5faf7974982",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/EXACT_CONTROLS.md",
+      "bytes": 2055,
+      "sha256": "ee33ab16aa16e935f8d028913b8d2c563e0a5359912ebc5f71127a2598977449",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/MANIFEST.json",
+      "bytes": 1664,
+      "sha256": "3f7db7a3045f45135af93f82130791635cb56c808caf9aae89d137966095fa23",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/PROSPECTIVE_EVENTS.jsonl",
+      "bytes": 563,
+      "sha256": "921557295ca543c6a124e9675152b1f3148490b4733c6c03a538ddf197f37731",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/READ_FIRST.md",
+      "bytes": 1304,
+      "sha256": "cbe81fac3e555730bbb27ed53e62e33b09aa6773fa023ef453d4942eaef986c1",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/RESULT.md",
+      "bytes": 14735,
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/SOURCE_AUDIT.md",
+      "bytes": 7131,
+      "sha256": "75ef486b0458f2e95dc70ff9cafd9dd0cc6285bfc1e2f76f74df53460724a681",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/SOURCE_BINDINGS.json",
+      "bytes": 9703,
+      "sha256": "f642a4a2214d76d50edfbaad21d8356a02e0f723ac8db304d92dd205abd6375a",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/exact_controls.py",
+      "bytes": 6905,
+      "sha256": "2acf221085fc8f0263041e7adbf129e828e4c93a877a5ee0668729bcf6b84901",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/results/exact_controls.json",
+      "bytes": 25985,
+      "sha256": "3eadf7e16d2c499d9b405f3186a4ccee9072ab34e4b6f0b3776bcc4bb0037ac2",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/author_snapshot/results/exact_controls.log",
+      "bytes": 1176,
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/independent_controls.py",
+      "bytes": 5754,
+      "sha256": "c83beb69f4da41177df474b528662088b32bb8db0bbc9c30b6939c01263438d6",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/verify_review.py",
+      "bytes": 1571,
+      "sha256": "91dccd065453c507e9c79ec707598abf20d2948d51733ae0cd6a1f62ba9f0ed3",
+      "boundary": "NEW_STAGE_FROZEN_FILE_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/REPLAY_SAMPLE_LOWER_BOUND_CANDIDATE.md",
+      "bytes": 1461,
+      "sha256": "8b799d9e73b04a4aa43324b68b97d1aecaa932ced461cc5b8cf5bc8ef2d1d844",
+      "boundary": "HISTORICAL_CANDIDATE_GOVERNED_BY_FINAL_RESULTS_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/ROBUST_REPLAY_CANDIDATE.md",
+      "bytes": 2030,
+      "sha256": "203cf1f7304c192f7b0ddc76339ac87d9521b2de76d1ba9f71ef64cf3a1ff673",
+      "boundary": "HISTORICAL_CANDIDATE_GOVERNED_BY_FINAL_RESULTS_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/EXACT_CONTROLS.md",
+      "bytes": 1767,
+      "sha256": "f0f438a4f99c5a2fef5b7f40384747c46f1454cfb1b719b4cb96dd6fa1d9b16b",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/MANIFEST.json",
+      "bytes": 1857,
+      "sha256": "f58c75e855e51be1bf4818b2b4ea6a91b1b5e685cbd45cfe304e9c3627fcbf53",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/PROSPECTIVE_EVENTS.jsonl",
+      "bytes": 631,
+      "sha256": "e6f1356fafe89886601cf0951278be91409db3fd030ddd21c7ccc356e04def06",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/READ_FIRST.md",
+      "bytes": 1522,
+      "sha256": "ecae3eedf6b01f76bd31b039826c932f5418e9d3cf3a5679826c18f4dcf6a641",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/RESULT.md",
+      "bytes": 15218,
+      "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/SOURCE_AUDIT.md",
+      "bytes": 6780,
+      "sha256": "81e922088053db364802826927a9ba042dd5910f96974b9d21bebe5e691b3416",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/SOURCE_BINDINGS.json",
+      "bytes": 7996,
+      "sha256": "adfbc884c980593876b941e3b8c7327ac5294623a0e5d4463001aa556d5e7a7c",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/exact_controls.py",
+      "bytes": 7158,
+      "sha256": "0e43b8b3d5dc15929e79dae69e90ea8f06091477a181f5e1a64d503a24e947b6",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/results/exact_controls.json",
+      "bytes": 3717,
+      "sha256": "060ed3aae850901e96d00a59b2b42f10e7c3e933628cd97e7503b8368b656596",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/results/exact_controls.log",
+      "bytes": 1257,
+      "sha256": "808a51e1fae31562dece66d76ff7c41aef73f571319cf207093862a336dd156d",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/results/predecessor_verification.json",
+      "bytes": 556,
+      "sha256": "bebb17eace4e5bed8431fa6d8daed38d92c53ec568c7557cf22b2eac60e1c817",
+      "boundary": "MINIMAL_INHERITED_HASH_OR_PROOF_INPUT_NO_NEW_RESULT_CREDIT"
+    }
+  ],
+  "manifest_self_hash_exclusion": [
+    "MANIFEST.json",
+    "MANIFEST.sha256"
+  ],
+  "previous_checkpoints": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+      "bytes": 544325,
+      "sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+      "bytes": 389515,
+      "sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+      "bytes": 318928,
+      "sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 549190,
+      "sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/interaction-invariants/T20_Grouped_Invariants_and_Interaction_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 465413,
+      "sha256": "80849c0ece0517a96070fcbc40308440cd655c8d6ecd13f62f0c8d4a3caf0bc3",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/replay-calibration/T20_Calibration_and_Replay_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 730140,
+      "sha256": "9371dbf519e86886a2d99c0fd8c3014bd4a510d6d97c6c19416d02060c042c66",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    }
+  ],
+  "owner_adopted_main": "3a0bdeaa1394c656245cae9599adcb143e885059",
+  "owner_repository_provenance": "OWNER_REPORTED; no fresh GitHub lookup",
+  "historical_merged_snapshot": "Frozen 7 October corpus, distinct from later 8 October scratch",
+  "owner_acceptance": false,
+  "final_integration": false,
+  "closure": false,
+  "uploaded": false
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "stats": {
+    "complete_world_name_runs": 18,
+    "positive_count_searches": 52,
+    "half_integer_signs": 168,
+    "raw_queries": 46972,
+    "max_bits": 34,
+    "bounded_partial_checks": 8
+  },
+  "scope": "complete count recovery on promised interaction covers; bounded harness checks make no nontermination or absence inference"
+}

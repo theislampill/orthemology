@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "timestamp_utc": "2026-10-08T07:48:13.356150+00:00",
+      "event": "prospective_active_start",
+      "scope": "Known-K nonsaturating mask calibration, certified log-M\u00f6bius integer recovery, finite-sample confidence and calibration-error coupling.",
+      "exclusions": "Earlier informal appraisal before this marker, prior stages, waiting, packaging and repeat verification are not credited."
+    },
+    {
+      "timestamp_utc": "2026-10-08T08:10:21.121737+00:00",
+      "event": "active_research_pause_for_review_and_evidence",
+      "result": "Known-K mask confidence theorem, finite rational-log certificate, exact guard/effect recovery after rounding, calibrated-error budget and correlation control; matching restricted lower-bound proof read. Eleven controls pass.",
+      "exclusions": "Following export, hashes, repeat replay, waiting and delivery are administrative; no extra discovery or active-time credit."
+    }
+  ],
+  "net_active_seconds": null,
+  "scope": "Prospectively marked activity boundaries; elapsed envelopes are not certified uninterrupted active duration.",
+  "excluded": "Before-ledger appraisal, prior results, waiting, exports, bookkeeping, hashing, routine repeat replay and delivery."
+}

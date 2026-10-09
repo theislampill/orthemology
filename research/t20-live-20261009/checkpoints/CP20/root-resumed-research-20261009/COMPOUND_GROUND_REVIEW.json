@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-10-09T08:49:20.567580+00:00",
+  "status": "PASS",
+  "scope": "Fresh replay of unchanged independent Python checker; not Lean verification. Complete final independent report read. Six bound inputs hash-verified.",
+  "byte_identical": false,
+  "difference": "Order only in four variable_sharing_cross_values entries due to set iteration; all other fields identical. Canonical comparison of that array passes. No source/output altered.",
+  "review_sha256": "680b35f20b5791b646aec3ae10da0e7972481c729506a97d9e06b22376f468c0",
+  "checker_sha256": "79572867a618226cb074178c0b6896da036a05309bd7ab509fc4d6929fb0551c",
+  "review_results_sha256": "0e0fdb9be21a6603da2d58d6cc0f1e79abdf13dd59fb010e4a1794d206ef945d",
+  "replay_results_sha256": "bdd5fb0337e488df3eda7dac5ed1a803e09ac3a7a15d87e202ef2bbcb742aee6",
+  "research_boundary": "Additive post-checkpoint19 evidence; T20 active; no closure, owner acceptance or duration certification."
+}

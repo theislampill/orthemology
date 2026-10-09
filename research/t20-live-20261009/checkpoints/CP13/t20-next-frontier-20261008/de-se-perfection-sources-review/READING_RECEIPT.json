@@ -1,0 +1,107 @@
+{
+  "date_utc": "2026-10-08",
+  "final_report_read": "Complete final REPORT.md and REVIEW_RESPONSE.md read after the author confirmation; final report SHA256 38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b.",
+  "inherited_readings": [
+    {
+      "credit": "Targeted rereading of retained canonical electronic working extraction; no new first acquisition, full-epistle, critical-edition or volume-reading credit.",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "scope": "L001-008 for extraction format; continuous L069-090, L210-240, L248-274. Relevant claims anchored to L073, L082-090, L217-223, L235-240 and L258-274."
+    },
+    {
+      "credit": "Inherited electronic excerpt rereading, not whole-volume reading.",
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+      "scope": "Complete retained subsection L001-020; interrupted combined return completed with focused L014-020 return."
+    },
+    {
+      "credit": "Inherited partial subsection rereading.",
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+      "scope": "L034-041, independently repeated untruncated."
+    },
+    {
+      "credit": "Inherited targeted rereading; quotation and reply voices distinguished; no new complete-volume credit.",
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-L1012-L1054-return.txt",
+      "scope": "Complete retained targeted return L1012-1054, in two untruncated blocks."
+    },
+    {
+      "credit": "Inherited analysis, no new primary-source discovery.",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "scope": "Complete report directly read."
+    },
+    {
+      "credit": "Partial inherited-report check, not independent reading of all its primary sources.",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "scope": "Lines 1-70: changed judgment, original reading scope, eligibility and comparative rationale, beginning donor audit."
+    },
+    {
+      "credit": "Targeted inherited review; no proof replay or adopted first-reading credit.",
+      "path": "t20-next-frontier-20261008/eligibility-review/REPORT.md",
+      "scope": "Lines 1-18, 33-125 and 140-158: result, sections 2-5, disposition."
+    }
+  ],
+  "not_claimed": [
+    "No new primary acquisition or broad literature survey.",
+    "No Grim1985 primary full reading or unavailable Torre draft reading.",
+    "No independent full Lewis, Perry, Torre or Ganya reading.",
+    "No direct review/replay of the formal implementation; mathematical disposition coordinated with separate reviewer.",
+    "No metaphysical instantiation, global closure, time-floor or duration claim."
+  ],
+  "primary_readings": [
+    {
+      "author_reported_scope": "Printed 513-543, all sections I-XIV.",
+      "author_reported_status": "Complete paper read in sequential overlapping extraction blocks; printed 520-521 visually inspected from retained PDF.",
+      "author_status_evidence": "de-se-perfection-sources/SOURCE_READS.json; retained as reported, not a reconstruction of the author prior execution history.",
+      "id": "Lewis1979",
+      "limits": "No independent complete visual collation; decoded extraction has disclosed character/punctuation/footer defects.",
+      "reviewer_status": "Targeted primary-source review, not independent complete-paper reading.",
+      "source": "https://andrewmbailey.com/dkl/Attitudes_De_Dicto_and_De_Se.pdf",
+      "text_scope": "Decoded extraction lines 298-580: printed 519-523 and opening 524, plus surrounding 518 footer; decisive case/repair at 520-521.",
+      "visual_scope": "Both retained PNGs lewis-verify-08.png and lewis-verify-09.png, showing printed 520 and 521; source PDF metadata checked."
+    },
+    {
+      "author_reported_scope": "Printed 3-21.",
+      "author_reported_status": "Complete printed paper and endnotes read in continuous extraction blocks.",
+      "author_status_evidence": "de-se-perfection-sources/SOURCE_READS.json; retained as reported, not a reconstruction of the author prior execution history.",
+      "id": "Perry1979",
+      "limits": "No independent complete 3-21 reading or PDF-wide visual collation.",
+      "reviewer_status": "Partial primary-source review.",
+      "source": "https://www.uvm.edu/~lderosse/courses/lang/Perry%281979%29.pdf",
+      "text_scope": "Printed 13-20 and entry into section Relativized Propositions (extraction 465-811). Truncated combined return was filled by focused 530-661, 465-481 and 650-707 returns.",
+      "visual_scope": "None."
+    },
+    {
+      "author_reported_scope": "Author PDF pages 1-6, sections 1-2. No complete-paper reading credit.",
+      "author_reported_status": "Introduction and complete essential-indexical argument, including replies to Abbruzzese and Perry/Boer-Lycan, directly read.",
+      "author_status_evidence": "de-se-perfection-sources/SOURCE_READS.json; retained as reported, not a reconstruction of the author prior execution history.",
+      "id": "Grim2000",
+      "limits": "Partial article only; author-PDF pagination distinct from printed 141-154. Grim1985 remains unrecovered except quotations in Torre.",
+      "reviewer_status": "Introduction and complete local essential-indexical section read.",
+      "source": "https://pgrim.org/pgrim/Being.pdf",
+      "text_scope": "Author-PDF pages 1-6, sections 1 and 2; retained extraction lines 1-270.",
+      "visual_scope": "None."
+    },
+    {
+      "author_reported_scope": "Printed 191-200; PDF first page is repository cover.",
+      "author_reported_status": "Complete published paper and notes directly read; printed 197-198 visually checked.",
+      "author_status_evidence": "de-se-perfection-sources/SOURCE_READS.json; retained as reported, not a reconstruction of the author prior execution history.",
+      "id": "Torre2006",
+      "limits": "Published journal source, not failed archive draft; Grim1985 quotations remain indirect access.",
+      "reviewer_status": "Targeted published primary-source review; no new full-reading claim.",
+      "source": "https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=2038&context=faithandphilosophy",
+      "text_scope": "Properties argument, reply and notes, printed 195-200, extraction 245-546; earlier printed 191-195 viewed in initial combined return but no complete independent reading credit claimed for that potentially truncated return.",
+      "visual_scope": "Both retained PNGs torre-verify-08.png and torre-verify-09.png, showing printed 197 and 198; PDF metadata and a fresh primary-PDF extraction heading at page 197 checked."
+    },
+    {
+      "author_reported_scope": "Working extraction L053-L208; body through conclusion L166 and notes L168-172.",
+      "author_reported_status": "Complete article body, objections, notes and references read from verified publisher HTML.",
+      "author_status_evidence": "de-se-perfection-sources/SOURCE_READS.json; retained as reported, not a reconstruction of the author prior execution history.",
+      "id": "Ganya2026",
+      "limits": "No independent whole article/bibliography checking; author reports its own complete reading. Stored HTML consistency checked for pivotal source sentences.",
+      "reviewer_status": "Partial independent publisher-article review.",
+      "source": "https://link.springer.com/article/10.1007/s11841-026-01169-y",
+      "text_scope": "Working L001-033 metadata/abstract, L053-068 introduction/BP and conditional claim, targeted L103-104, L125-168 SLC/objections/conclusion/first note, L232-243 version metadata. Other grep hits were locators, not continuous reading credit.",
+      "visual_scope": "None."
+    }
+  ],
+  "provenance_read": "SOURCE_READS.json, INPUT_BINDINGS.json, MANIFEST.json, READ_FIRST.md and RESEARCH_EVENTS.jsonl inspected; currentness independently checked.",
+  "reviewer": "[OMITTED_PRIVATE_MACHINE_PATH]"
+}

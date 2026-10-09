@@ -1,0 +1,611 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v1",
+  "classification": "SIXTH_ADDITIVE_INTERMEDIATE_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "research_cutoff_utc": "2026-10-08T16:15:27.659356+00:00",
+  "previous_cutoff_utc": "2026-10-08T14:49:16.553449+00:00",
+  "entrypoint": "READ_FIRST.md",
+  "integration_performed": false,
+  "owner_acceptance": false,
+  "closure": false,
+  "results": [
+    {
+      "id": "HYPERGRAPH_INTERIOR_FIBRE",
+      "kind": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "Finite sampled calibration equivalence is the feasible incidence-kernel gauge; row space identifies individual log-linear targets.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/RESULT.md",
+          "sha256": "6511a092052a73dade0086268858960ead240a7ad85eb3e4fe6bcc84022dad96",
+          "bytes": 12063
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/LINEAR_RECORD_SCOPE.md",
+          "sha256": "ce6f0e1c26f780edc76ff66f7b1004670dd9300ad90198e46fadea5783afc835",
+          "bytes": 3621
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/COMPOSITE_REVIEW_MANIFEST.json",
+          "sha256": "a7c726ccbb380d5688bed42b2cd2fe9df6ba109a7feb4d3d60d53a1cabcc9714",
+          "bytes": 12771
+        }
+      ],
+      "executable_control_ids": [
+        "hypergraph-author",
+        "hypergraph-review"
+      ],
+      "depends_on": [
+        "PREVIOUS_INTERACTION_ANCHOR",
+        "PREVIOUS_HISTORICAL_SCOPE_ADDENDUM"
+      ],
+      "premises": [
+        "Known complete finite support inventory and positive integer multiplicities",
+        "Shared coordinatewise endpoint-preserving homeomorphisms",
+        "Mutually independent route occurrences with within-route product success"
+      ],
+      "limits": [
+        "Interior/zero finite panel only; unit probes are a separate instrument",
+        "Identifies sampled values, not arbitrary whole functions",
+        "Log calibration coordinates are not normalized probability masses"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "ANCHORED_UNARY_COUNT",
+      "kind": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "A positive unary integer count is recoverable with an interaction anchor and nonzero half-integer sign cuts.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/ANCHORED_UNARY_COUNT.md",
+          "sha256": "1f2312b0387c06753879150c88da61ad506fbe9b132e4ccd0c8e5f4e4f29ef3c",
+          "bytes": 3925
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/COMPOSITE_REVIEW_MANIFEST.json",
+          "sha256": "a7c726ccbb380d5688bed42b2cd2fe9df6ba109a7feb4d3d60d53a1cabcc9714",
+          "bytes": 12771
+        }
+      ],
+      "executable_control_ids": [
+        "hypergraph-author",
+        "hypergraph-review"
+      ],
+      "depends_on": [
+        "PREVIOUS_INTERACTION_ANCHOR"
+      ],
+      "premises": [
+        "Promised positive unary support",
+        "Certified population Cauchy access"
+      ],
+      "limits": [
+        "Owned once here; bounded-stage corroboration is not a second discovery",
+        "Current unary-v2 receipt supersedes only the old zero-stall wording binding"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "BOUNDARY_AND_ALL_COMMAND_CALIBRATION",
+      "kind": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "Unit-boundary reduction reconstructs participating calibration points; an all-command point oracle yields certified uniform polygonal approximants.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/BOUNDARY_POINT_RECONSTRUCTION.md",
+          "sha256": "4f3834eff224224d3e6db2a50efe8f88be2e7d58f6b4ba97c45e87f50a3a3dfb",
+          "bytes": 6098
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/UNIFORM_CALIBRATION_REPRESENTATION.md",
+          "sha256": "03623fae668a5b89870ddadaccd6649b5e025d4d6b2df36f462fae4b10fc26a6",
+          "bytes": 4098
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/COMPOSITE_REVIEW_MANIFEST.json",
+          "sha256": "a7c726ccbb380d5688bed42b2cd2fe9df6ba109a7feb4d3d60d53a1cabcc9714",
+          "bytes": 12771
+        }
+      ],
+      "executable_control_ids": [
+        "hypergraph-author",
+        "hypergraph-review",
+        "hypergraph-uniform-review"
+      ],
+      "depends_on": [
+        "HYPERGRAPH_INTERIOR_FIBRE"
+      ],
+      "premises": [
+        "Known finite inventory",
+        "Endpoint commands and valid independent-route model",
+        "New rational command queries available for the all-command corollary"
+      ],
+      "limits": [
+        "Finite point reconstruction and all-command function approximation are distinct",
+        "No supplied a priori/world-uniform modulus; stopping mesh supplies a function-specific continuity scale relative to oracle",
+        "No uniform precision/runtime/sample guarantee"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "BOUNDED_SUPPORT_DETECTION",
+      "kind": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "An independently supplied total route ceiling permits support detection; remaining isolated-unary tuples obey the exact ceiling-constrained fibre.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/bounded-interaction-detection/RESULT.md",
+          "sha256": "5c296d4aae493b0f8bb7bbfb6330ae95e155c7efd3d724c0624ddca1b42ed8e6",
+          "bytes": 17779
+        },
+        {
+          "path": "t20-next-frontier-20261008/bounded-interaction-detection/CORROBORATING_UNARY_CHECK.md",
+          "sha256": "997253493dbe742cc5643db49a1104bddb1db938439c46ab7e07328dad5a0e28",
+          "bytes": 2051
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/bounded-interaction-detection-review/REVIEW.md",
+          "sha256": "21eed2890dfbc26587da6c3ce62f392b29b655782f33e1454c19b1871ed150b2",
+          "bytes": 25958
+        },
+        {
+          "path": "t20-next-frontier-20261008/bounded-interaction-detection-review/REVIEW_RECEIPT.json",
+          "sha256": "3fff50ce76083cf12b802965198038d8880fc93e0c09c3f82bb5abc7204f5dbf",
+          "bytes": 6143
+        }
+      ],
+      "executable_control_ids": [
+        "bounded-author",
+        "bounded-review"
+      ],
+      "depends_on": [
+        "ANCHORED_UNARY_COUNT",
+        "PREVIOUS_INTERACTION_ANCHOR",
+        "PREVIOUS_ABSENCE_OBSTRUCTION"
+      ],
+      "premises": [
+        "Known finite root universe",
+        "Independent total ceiling M, not learned from endpoint observations",
+        "Fixed inventory and shared calibration independent-route model"
+      ],
+      "limits": [
+        "Corners alone find minimal supports only; mixed safe grid detects absorbed supports",
+        "Total ceiling is an inequality, not exact attained total",
+        "No physical warrant for M, no uniform precision or noisy-data theorem"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "COVERED_SUPPORT_DISCOVERY",
+      "kind": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "A known positive-support cover permits target decisions; a full-interaction-cover promise permits terminating discovery and full count recovery without a total ceiling.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/bounded-interaction-detection/COVER_DISCOVERY.md",
+          "sha256": "81520f7b56911f06b9f047670f48a3e72910bc49d256546970b8b7b84d13cf15",
+          "bytes": 7323
+        },
+        {
+          "path": "t20-next-frontier-20261008/bounded-interaction-detection/RESULT.md",
+          "sha256": "5c296d4aae493b0f8bb7bbfb6330ae95e155c7efd3d724c0624ddca1b42ed8e6",
+          "bytes": 17779
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/bounded-interaction-detection-review/REVIEW.md",
+          "sha256": "21eed2890dfbc26587da6c3ce62f392b29b655782f33e1454c19b1871ed150b2",
+          "bytes": 25958
+        },
+        {
+          "path": "t20-next-frontier-20261008/bounded-interaction-detection-review/REVIEW_RECEIPT.json",
+          "sha256": "3fff50ce76083cf12b802965198038d8880fc93e0c09c3f82bb5abc7204f5dbf",
+          "bytes": 6143
+        }
+      ],
+      "executable_control_ids": [
+        "covered-root-review",
+        "cover-discovery-review"
+      ],
+      "depends_on": [
+        "ANCHORED_UNARY_COUNT",
+        "BOUNDED_SUPPORT_DETECTION"
+      ],
+      "premises": [
+        "Every target coordinate covered at common base commands for the conditional result",
+        "Every root belongs to a positive interaction for terminating discovery"
+      ],
+      "limits": [
+        "Without the full-cover promise, discovery is partial; timeout is not absence evidence",
+        "Coverage discovery and a supplied cover are different input contracts"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "DEPENDENT_GATE_TRANSPORT",
+      "kind": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "Genuine Joe-copula gate transport preserves the entire fresh endpoint response for exactly counts m >= n under shared marginals; smaller counts are excluded even with heterogeneous within-route laws.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/dependent-gate-transport/RESULT.md",
+          "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+          "bytes": 15467
+        },
+        {
+          "path": "t20-next-frontier-20261008/dependent-gate-transport/SEMANTIC_GUARD.md",
+          "sha256": "0fbd40f05cb115621d367a220eb1bdc754a218e6fd6b84f8d5e4c63af8dbd924",
+          "bytes": 1792
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/dependent-gate-transport-review/REVIEW.md",
+          "sha256": "4a123eaaa894f8e88485221ab1769b22cde2147116076610cbc41158e6280ab3",
+          "bytes": 14290
+        },
+        {
+          "path": "t20-next-frontier-20261008/dependent-gate-transport-review/REVIEW_RECEIPT.json",
+          "sha256": "7623f04fc8a325603e1af0a4c3a329aeef5fc6904773e3a42bd094ff459ea604",
+          "bytes": 4346
+        }
+      ],
+      "executable_control_ids": [
+        "dependent-gate-author",
+        "dependent-gate-review"
+      ],
+      "depends_on": [
+        "PREVIOUS_INTERACTION_ANCHOR"
+      ],
+      "premises": [
+        "Common coordinatewise marginal calibration across routes",
+        "Mutual independence between route pairs",
+        "Valid within-route joint laws and fixed finite count"
+      ],
+      "limits": [
+        "Within-route gate independence is deliberately relaxed; cross-route independence remains",
+        "Failed monotone-response-to-CDF and invalid c>1 copula transports preserved",
+        "Joe-family source attribution is bounded to formula/parameter/metadata reads; original paper full text unread"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "SAME_THRESHOLD_ALL_COMMAND",
+      "kind": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "Fresh endpoint and genuine same-threshold paired-face laws together force the reference count, calibrations and each within-route copula factorization over all commands.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/same-threshold-replay/RESULT.md",
+          "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098",
+          "bytes": 15218
+        },
+        {
+          "path": "t20-next-frontier-20261008/same-threshold-replay/FINAL_BINDINGS.json",
+          "sha256": "7d5f494f2f4ba8e5b41b884c959882ec5a5613c48ee767de40b617310daf2e78",
+          "bytes": 1480
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/same-threshold-replay-review/REVIEW.md",
+          "sha256": "52730f217361cbbfb25d07cc9634f049b4727c1c4e4e776a1ad37b564b1f840f",
+          "bytes": 12073
+        },
+        {
+          "path": "t20-next-frontier-20261008/same-threshold-replay-review/REVIEW_RECEIPT.json",
+          "sha256": "dd10f56ae9a8f9aa91fe4e2fe2af53fa1458969c350d9da4ce2015341969a0cf",
+          "bytes": 6180
+        }
+      ],
+      "executable_control_ids": [
+        "same-threshold-author",
+        "same-threshold-review"
+      ],
+      "depends_on": [
+        "DEPENDENT_GATE_TRANSPORT"
+      ],
+      "premises": [
+        "Common coordinate marginals and mutually independent route pairs",
+        "Same gate realization retained across separately readable face commands",
+        "No state mutation/output carryover and same Bernoulli law underlying diagonal/replay"
+      ],
+      "limits": [
+        "Held route inventory with fresh threshold redraw is insufficient",
+        "Fixed finite grids do not certify arbitrary global copula independence",
+        "Preserved high-command count alias is a particular design, not universal finite count impossibility"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "FINITE_REPLAY_COUNT_CERTIFICATE",
+      "kind": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "Four exact probabilities at t=1/[3(n+1)] identify the route count without an upper count bound and identify each local tested Bernoulli table.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/finite-panel-replay/RESULT.md",
+          "sha256": "327b6fb25944ac90e7ecd6010a427993b69400fbdc9b79928d731120b6d62243",
+          "bytes": 10261
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-panel-replay/SHARED_MARGINAL_BOUNDARY.md",
+          "sha256": "3d55f739d398ed1b4b28253cdb5db34ec9b32d46415e14750a612e35f43b4788",
+          "bytes": 3986
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/finite-panel-replay-review/REVIEW.md",
+          "sha256": "812eb02988e1e2e695e71fcdead1debbd20a9525570b5f3eb68c26b601af208e",
+          "bytes": 6960
+        }
+      ],
+      "executable_control_ids": [
+        "finite-panel-symbolic"
+      ],
+      "depends_on": [
+        "DEPENDENT_GATE_TRANSPORT"
+      ],
+      "premises": [
+        "Reference true rate t known/selectable, or result only existential in latent true-rate coordinates",
+        "Shared coordinatewise marginals across alternative routes",
+        "Mutual route independence and actual same-threshold replay",
+        "Four exact population probabilities"
+      ],
+      "limits": [
+        "Unknown nominal calibration gives no known command-selection algorithm depending only on n",
+        "Conditional positive gap assumes the other three values match exactly; no joint-noise robustness theorem",
+        "Finite panel does not certify global copula independence",
+        "Route-specific marginal maps permit exact m=2n alias; preserved as failed transport boundary",
+        "Symbolic controls were added after review and do not enlarge that review scope"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "FORMAL_OBJECTIVE_REENTRY",
+      "kind": "REENTRY_CONTEXT_NO_NEW_RESULT_CREDIT",
+      "summary": "Bounded return to the original formal objective identifies governing inherited declarations and two still-open generalizations; no new required-but-unperformed operation found in that scoped return.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/root-next-operations/FORMAL_OBJECTIVE_REENTRY_BOUNDARY.md",
+          "sha256": "d3ab4e1bfe5ae0a80ba0d9580446b3b40fedc9e8c56d60b39546fa3103d81124",
+          "bytes": 8072
+        },
+        {
+          "path": "t20-next-frontier-20261008/root-next-operations/FORMAL_OBJECTIVE_REENTRY_BINDINGS.json",
+          "sha256": "359ddfedc34fa5660f997c3a5e356100a3de10abf92ee215b40077b7265f06c8",
+          "bytes": 7038
+        }
+      ],
+      "separate_internal_review": [],
+      "executable_control_ids": [],
+      "depends_on": [
+        "HISTORICAL_FROZEN_7_OCTOBER_CORPUS"
+      ],
+      "premises": [],
+      "limits": [
+        "No new theorem, proof replay, active-time credit, A-H completion credit or exhaustion claim",
+        "General incidence-to-Sixth refinement and unrestricted pure-perfection ascent are not established",
+        "Historical merged snapshot remains distinct from later scratch"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    }
+  ],
+  "candidate_history": {
+    "artifact": {
+      "path": "t20-next-frontier-20261008/root-later-operations/REPLAY_DISCRIMINATOR_CANDIDATE.md",
+      "sha256": "4240ce96585f361a355508887882cac852cee9033be936e2c76cc0451934303e",
+      "bytes": 1971
+    },
+    "kind": "HISTORICAL_CANDIDATE_NO_RESULT_CREDIT",
+    "governed_by": [
+      "SAME_THRESHOLD_ALL_COMMAND",
+      "FINITE_REPLAY_COUNT_CERTIFICATE"
+    ],
+    "correction": "Final finite proof excludes smaller counts at the same low point; candidate high-command suggestion is not the final method."
+  },
+  "sources": [
+    {
+      "stage": "finite-hypergraph-calibration",
+      "source_audit": {
+        "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/SOURCE_AUDIT.md",
+        "sha256": "baf0b33572d389e922527769c55ad5c1e877f1b095e7f140461a71fed94df4fe",
+        "bytes": 5618
+      },
+      "source_bindings": {
+        "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/SOURCE_BINDINGS.json",
+        "sha256": "2c1facf6e9e5cd35a4cdc3bc3e522f5a9a510b85b8e4f7a8f4a379fdcbaa750e",
+        "bytes": 5010
+      },
+      "new_reading_credit_from_packaging": false
+    },
+    {
+      "stage": "bounded-interaction-detection",
+      "source_audit": {
+        "path": "t20-next-frontier-20261008/bounded-interaction-detection/SOURCE_AUDIT.md",
+        "sha256": "d9ece1651da081de323c927f8fd8bec5bf7dd76c8a57e854e4451879896c68d1",
+        "bytes": 8119
+      },
+      "source_bindings": {
+        "path": "t20-next-frontier-20261008/bounded-interaction-detection/SOURCE_BINDINGS.json",
+        "sha256": "667e4f3aa1b66750bca7623a607962f5c19ed9351932e1d8338026575d25012d",
+        "bytes": 28852
+      },
+      "new_reading_credit_from_packaging": false
+    },
+    {
+      "stage": "dependent-gate-transport",
+      "source_audit": {
+        "path": "t20-next-frontier-20261008/dependent-gate-transport/SOURCE_AUDIT.md",
+        "sha256": "187867e9e99c74e1897b570d6101106a2b6a65818cbf1126ed38441af53da90d",
+        "bytes": 7007
+      },
+      "source_bindings": {
+        "path": "t20-next-frontier-20261008/dependent-gate-transport/SOURCE_BINDINGS.json",
+        "sha256": "d0168bae91d619e795e50326caaf91e6a19df0e5cb84f8b1e1562a53646c5c0a",
+        "bytes": 6234
+      },
+      "new_reading_credit_from_packaging": false
+    },
+    {
+      "stage": "same-threshold-replay",
+      "source_audit": {
+        "path": "t20-next-frontier-20261008/same-threshold-replay/SOURCE_AUDIT.md",
+        "sha256": "81e922088053db364802826927a9ba042dd5910f96974b9d21bebe5e691b3416",
+        "bytes": 6780
+      },
+      "source_bindings": {
+        "path": "t20-next-frontier-20261008/same-threshold-replay/SOURCE_BINDINGS.json",
+        "sha256": "adfbc884c980593876b941e3b8c7327ac5294623a0e5d4463001aa556d5e7a7c",
+        "bytes": 7996
+      },
+      "new_reading_credit_from_packaging": false
+    },
+    {
+      "stage": "finite-panel-replay",
+      "source_bindings": {
+        "path": "t20-next-frontier-20261008/finite-panel-replay/SOURCE_REVIEW_BINDINGS.md",
+        "sha256": "83df5ebbbf0717d09392af28d5a7ca77fcfc783dc7f13484c586d157d086faac",
+        "bytes": 3082
+      },
+      "external_sources_opened_for_stage": false,
+      "new_reading_credit_from_packaging": false
+    }
+  ],
+  "external_dependency_registry": {
+    "PREVIOUS_INTERACTION_ANCHOR": {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+      "bytes": 15546,
+      "inclusion": "INCLUDED_UNCHANGED",
+      "credit": "INHERITED_ONLY"
+    },
+    "PREVIOUS_HISTORICAL_SCOPE_ADDENDUM": {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/SCOPE_ADDENDUM.md",
+      "sha256": "7f9d219cb2e9eeba85a372fb81c1aa5e17a7cc20b3b0309859f371ccab86ad24",
+      "bytes": 2298,
+      "inclusion": "NOT_INCLUDED_BINDING_ONLY",
+      "credit": "INHERITED_ONLY"
+    },
+    "PREVIOUS_ABSENCE_OBSTRUCTION": {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/RESULT.md",
+      "sha256": "f8424612e92e5f4f3d45f89317070bf5ed4fd63b5cc53a43ee88b4713bc29f4b",
+      "bytes": 12481,
+      "inclusion": "INCLUDED_UNCHANGED",
+      "credit": "INHERITED_ONLY"
+    },
+    "HISTORICAL_FROZEN_7_OCTOBER_CORPUS": {
+      "binding_index": {
+        "path": "t20-next-frontier-20261008/root-next-operations/FORMAL_OBJECTIVE_REENTRY_BINDINGS.json",
+        "sha256": "359ddfedc34fa5660f997c3a5e356100a3de10abf92ee215b40077b7265f06c8",
+        "bytes": 7038
+      },
+      "inclusion": "NOT_INCLUDED_HISTORICAL_CORPUS",
+      "credit": "REENTRY_ONLY_NO_NEW_RESULT_OR_KERNEL_REPLAY"
+    }
+  },
+  "source_locator_and_reading_metadata": {
+    "access_date": "2026-10-08",
+    "mode": "targeted web formula/parameter reads and metadata checks",
+    "sources": [
+      {
+        "id": "vinecopulas_joe",
+        "url": "https://vinecopulas.readthedocs.io/en/stable/vinecopulas.html#fitting-a-vine-copula",
+        "scope": "Targeted Table 1 Joe row ID 11: formula and theta>=1",
+        "supports": "Named Joe family, full CDF including outer power, parameter range"
+      },
+      {
+        "id": "copula_joe_source",
+        "url": "https://raw.githubusercontent.com/cran/copula/master/R/joeCopula.R",
+        "scope": "Targeted constructor: expression builder lines 27-31, parameter bounds 41-43, independence branch 19-24 in retrieved text",
+        "supports": "Equivalent product form and theta>=1",
+        "version_limit": "Mutable master; not executed or pinned"
+      },
+      {
+        "id": "acopula_generator",
+        "url": "https://search.r-project.org/CRAN/refmans/acopula/html/generator.html",
+        "scope": "Targeted Joe row, retrieved line 36; package 0.9.4",
+        "supports": "Generator -log(1-(1-u)^theta), theta>=1"
+      },
+      {
+        "id": "vinecopulib_enum",
+        "url": "https://vinecopulib.github.io/vinecopulib/namespacevinecopulib.html",
+        "scope": "Targeted Joe enum description",
+        "supports": "Corroborating theta>=1"
+      },
+      {
+        "id": "joe1993_metadata",
+        "url": "https://doi.org/10.1006/jmva.1993.1061",
+        "scope": "Publisher abstract and bibliographic metadata only; full paper not read",
+        "supports": "Bibliographic context only"
+      },
+      {
+        "id": "joe_author_publications",
+        "url": "https://www.stat.ubc.ca/~harry/pubs.html",
+        "scope": "Targeted publication entry in search retrieval",
+        "supports": "Bibliographic context only"
+      },
+      {
+        "id": "copBasic_retrieval_issue",
+        "url": "https://search.r-project.org/CRAN/refmans/copBasic/html/JOcopB5.html",
+        "scope": "Targeted formula/example retrieval; outer exponent omitted in retrieved displayed formula",
+        "supports": "Source quality issue, not used as sole formula evidence"
+      }
+    ],
+    "whole_original_paper_read": false
+  },
+  "historical_primary_locator": {
+    "sha256": "75527bc45892a3447b8d9f554f8e55ea464790f43a172b784c6761367089cf70",
+    "page_inspected": 5,
+    "scope": "Targeted Proposition 6 statement/proof in the retained original PDF extraction",
+    "source_url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf",
+    "pdf_copied_into_deliverable": false
+  },
+  "executable_control_plan": "PACKING/CONTROL_PLAN.json",
+  "minimal_file_dependencies": "PACKING/MINIMAL_REPLAY_DEPENDENCIES.json",
+  "all_file_identities": "MANIFEST.json",
+  "copy_identities": "PACKING/SOURCE_COPY_BINDINGS.json",
+  "source_and_receipt_binding_checks": "PACKING/ORIGINAL_AND_REVIEW_BINDING_CHECKS.json",
+  "prior_checkpoint_identities": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+  "exclusions": "OMISSIONS_AND_SOURCE_LINKS.json",
+  "active_beyond_cutoff": [
+    "Separate four-coordinate noise-robustness successor; not part of this packet and not a missing obligation of included conditional proofs."
+  ],
+  "verification_levels": {
+    "written_proofs": "Preserved author mathematics",
+    "separate_internal_review": "Preserved independently scoped internal reviews, not external peer review",
+    "executable_controls": "Finite exact/algebraic controls; no full-proof machine verification",
+    "new_Lean_or_kernel_verification": false,
+    "empirical_validation": false,
+    "metaphysical_warrant_credit": false
+  },
+  "integration_procedure": [
+    "Check outer MANIFEST and archive identities.",
+    "Match the five earlier checkpoint identities and adopted-main provenance without rebuilding historical integration.",
+    "Import new result artifacts with their exact premise/limit fields and separately scoped governing reviews.",
+    "Preserve composite unary supersession, failed transports, omitted-source markers and historical source-reading boundaries.",
+    "Carry inherited dependencies as inherited-only. Reentry and candidate notes receive no new-result credit.",
+    "Run only PACKING/replay_python.py for this portable assurance scope; retain UNREPLAYED original full verifiers.",
+    "Owner acceptance, integration, empirical warrant and closure require separate authorization and evidence."
+  ]
+}

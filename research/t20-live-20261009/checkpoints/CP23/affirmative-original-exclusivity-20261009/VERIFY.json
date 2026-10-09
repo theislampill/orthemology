@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "page": "e143",
+      "exact_contiguous_substring": true,
+      "sha256": "d3456683ee595285f5563c2faeb04dbf656527d638cf237c5410734326827f90",
+      "source_start_character": 124015,
+      "source_end_character_exclusive": 126828
+    },
+    {
+      "page": "e144",
+      "exact_contiguous_substring": true,
+      "sha256": "46a8e4d54f7ef17aa748ebb74af2235ab67974062f57c3df29f266c9e7d5d836",
+      "source_start_character": 126828,
+      "source_end_character_exclusive": 129702
+    },
+    {
+      "page": "e145",
+      "exact_contiguous_substring": true,
+      "sha256": "fc9a1d5ca7368c4f03c2b40c1d50c7985a107d6c15a9ad6a4bcccf9a023d91b6",
+      "source_start_character": 129702,
+      "source_end_character_exclusive": 132536
+    },
+    {
+      "page": "e146",
+      "exact_contiguous_substring": true,
+      "sha256": "440ae5b3f916c0770af4fffc845e385dbdbe154b7c99a4da9b8582f76ea03b43",
+      "source_start_character": 132536,
+      "source_end_character_exclusive": 135363
+    },
+    {
+      "page": "e147",
+      "exact_contiguous_substring": true,
+      "sha256": "850c09de937c1781acc3c196f1b44e8ecc245dd65006bbd883d9096f69762319",
+      "source_start_character": 135363,
+      "source_end_character_exclusive": 138366
+    },
+    {
+      "page": "e150",
+      "exact_contiguous_substring": true,
+      "sha256": "5fee0d359032224fd97d0ff5cc28fbffffd562fbcbcb040fcc690f9967f8515d",
+      "source_start_character": 144381,
+      "source_end_character_exclusive": 147234
+    }
+  ],
+  "outputs": [
+    {
+      "path": "affirmative-original-exclusivity-20261009/REPORT.md",
+      "sha256": "9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+      "bytes": 29099
+    },
+    {
+      "path": "affirmative-original-exclusivity-20261009/SOURCE_RECORD.md",
+      "sha256": "395f8a4ed285d55568be4c273562a0b77aa7890c36c49aa977c858c0dcecb5c3",
+      "bytes": 7210
+    },
+    {
+      "path": "affirmative-original-exclusivity-20261009/INPUT_BINDINGS.json",
+      "sha256": "56da081d7b859e1845114b2b5d8856c0d6d24c869e823f4fb9f446ca8febd24d",
+      "bytes": 4355
+    }
+  ],
+  "limits": "No semantic, historical-authenticity, metaphysical-possibility, source-completeness, or theorem verification claimed."
+}

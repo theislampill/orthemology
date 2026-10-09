@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-10-08T10:04:32.994450+00:00",
+  "scope": "Successor freeze distinguishing incremental verification from retained programme appraisal; verification receipt and manifest excluded from self-hashing",
+  "files": [
+    {
+      "path": "INDEPENDENT_ASSESSMENT.md",
+      "bytes": 20215,
+      "sha256": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0"
+    },
+    {
+      "path": "LOCATOR_ADDENDUM.md",
+      "bytes": 2165,
+      "sha256": "c025704d1cf5272b550f963a6d06796e3ba7d736c4d3372c0847e321933a876f"
+    },
+    {
+      "path": "PRIMARY_VERIFICATION.md",
+      "bytes": 6472,
+      "sha256": "b74d13abf1e51da3442341740f5152b856905f07a80a1f0c71c19429bc4b114a"
+    },
+    {
+      "path": "PUBLIC_SOURCE_SUMMARY.md",
+      "bytes": 1710,
+      "sha256": "04acd948d022ea3a11cbbdde509c692dbe7d837d464fb3f23e7a2692e43e1558"
+    },
+    {
+      "path": "READING_PROVENANCE.json",
+      "bytes": 5747,
+      "sha256": "29901ab937e94587e530015f73e20e923de63b80024be151c02f1e526d14ef6c"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 1993,
+      "sha256": "0502d24894567f34847f5e606323ee5e90b5f270224ba0853be8364403313a96"
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "bytes": 2664,
+      "sha256": "9f644e5ca9b7881333e77da5d916a5a0803529958679aafad771f1b0012d23eb"
+    },
+    {
+      "path": "empirical-check/SHA256SUMS",
+      "bytes": 275,
+      "sha256": "3f9961d8dafb69e42d4e3cd7d6c88f3d1b14ecbf597df85015458ebeeced8b70"
+    },
+    {
+      "path": "empirical-check/empirical_findings.md",
+      "bytes": 11477,
+      "sha256": "1d6d042bb6aba2de98e4a9fc50bae8243ed6d8bd367f6c5955d6975ec08edbd7"
+    },
+    {
+      "path": "empirical-check/inheritance_manifest.json",
+      "bytes": 15665,
+      "sha256": "fbed19d45742000dbe1099beedf9af44328f34ec402d15accb78f68edb5cfaee"
+    },
+    {
+      "path": "empirical-check/primary_source_receipts.json",
+      "bytes": 2037,
+      "sha256": "0b281a75eee37f7bccca0513b87322c4ec15c45e4a6ce5473ba0c966efee5c72"
+    }
+  ]
+}

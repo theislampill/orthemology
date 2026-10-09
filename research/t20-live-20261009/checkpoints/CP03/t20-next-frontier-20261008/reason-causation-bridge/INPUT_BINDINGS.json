@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-08T10:47:42.096847+00:00",
+  "meaning": "Hashes bind inspected predecessor inputs; all task writes were confined to the successor folder or temporary source cache. Existing formal source manifests separately reverified.",
+  "files": [
+    {
+      "path": "recovery-t20/addendum/AMERI_SCREEN.md",
+      "sha256": "25bf973f45b71ad1d4f5e4234faa4997d420078acabfba2e15d2d842657c2841"
+    },
+    {
+      "path": "t20-next-frontier-20261008/fitrah-warrant-bridge/INDEPENDENT_ASSESSMENT.md",
+      "sha256": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/fitrah-warrant-bridge/warranting-basis-addendum/CLARIFICATION.md",
+      "sha256": "bbf9090cae6f829caf70a8dc1208055235cceb49fd37e578a91da864ccb2b270"
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/README.md",
+      "sha256": "04bc15352aca5cd9d480b2ac6254737cfd73b6d0102edb0873ca0ce9c080381f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/KERNEL_STATUS.json",
+      "sha256": "fe7d51f3778d2fc071ee7991a2ce6adcc98aa3d4a4cbdb9ce4ce0b950b757bbb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/Verification.lean",
+      "sha256": "c66cda0da6393d46178c07912016e02a73d23bdae123fb38a5513ae4fbf57e7d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/EndpointLaw.lean",
+      "sha256": "0a1e6aa470334ecb7766d53bbdd984b2cdeab0945ec3639984c66d4f3980f616"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/SOURCE_MANIFEST.sha256",
+      "sha256": "23eeafa2ed7f10a03beece20edd570af66e01cc9dc932ac4a4a1255eebd5b38e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-identification/README.md",
+      "sha256": "96fd091d44a7634e342c9e6d36de1e73244117ab4e4cd7a33702bd2d60ecb6bd"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-identification/SOURCE_MANIFEST.sha256",
+      "sha256": "df46b57947983bd89dac42fc17c235f6696089e0319923162c309aff451eaa1d"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "verified_utc": "2026-10-09T04:39:11Z",
+  "report_sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5",
+  "primary_scan_images_present": 17,
+  "electronic_body_units_present": 6,
+  "unchanged_inherited_files": [
+    {
+      "path": "brute-contingent-source-return/REPORT.md",
+      "sha256": "46e532e16b8d3fa9fefd0614157b9324fcef44dbaf115d4778e3800e258e6d4c",
+      "unchanged": true
+    },
+    {
+      "path": "intrinsic-necessity-source-return/PRIMARY_DEPENDENCE_RESPONSE.md",
+      "sha256": "0be18bf6e1f4c4ea5372c3063083f31d91efa14646cb3e88782abcc6387cc7ef",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "unchanged": true
+    }
+  ],
+  "claims_not_made": [
+    "metaphysical possibility certificate",
+    "new formal theorem",
+    "T20 closure"
+  ],
+  "parent_read_draft_sha256": "e1931c8545ed19186168f34e78c49e5101fee6630049e2b2a967037c8233f3cb",
+  "final_revision": "Focused reviewer correction: a counterexample must preserve intended meanings and independently supported surrounding commitments, not the disputed premise itself."
+}

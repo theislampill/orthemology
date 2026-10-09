@@ -1,0 +1,10 @@
+{
+  "binding_and_replay_checks": 39,
+  "both_replays_byte_identical": true,
+  "extension_assertions": 251,
+  "original_assertions": 305,
+  "original_receipt_unchanged": true,
+  "scope": "Current author bindings, preserved predecessor review payloads, and two fresh independent replays.",
+  "status": "PASS",
+  "unary_supersession_applied": true
+}

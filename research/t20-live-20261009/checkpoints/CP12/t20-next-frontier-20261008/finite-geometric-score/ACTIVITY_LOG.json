@@ -1,0 +1,28 @@
+{
+  "packet": "finite-geometric-score",
+  "scope": "New bounded scratch candidate only.",
+  "operations": [
+    {
+      "time_utc": "2026-10-08T22:04:50Z",
+      "operation": "Assignment received; read relevant bound mathematical sources."
+    },
+    {
+      "time_utc": "2026-10-08T22:05:47Z",
+      "operation": "Reported later matching sharp PASS receipt; no predecessor files changed."
+    },
+    {
+      "time_utc": "2026-10-08T22:09:27Z",
+      "operation": "Completed written finite-score reduction and first source bindings."
+    },
+    {
+      "time_utc": "2026-10-08T22:11:57Z",
+      "operation": "First complete exact deterministic controls passed."
+    },
+    {
+      "time_utc": "2026-10-08T22:13:38.182419+00:00",
+      "operation": "Reran controls after adding non-mutating reviewer output routing; freezing candidate."
+    }
+  ],
+  "time_credit": "No active-duration or unattended waiting credit claimed.",
+  "historical_floor": "UNVERIFIED"
+}

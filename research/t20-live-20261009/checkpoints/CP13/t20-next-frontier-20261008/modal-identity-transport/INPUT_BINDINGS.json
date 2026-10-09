@@ -1,0 +1,106 @@
+{
+  "bound_at_utc": "2026-10-08T22:38:58.932588+00:00",
+  "scope": "Saved predecessors bound after inspection, before final freeze; no claim of retrospective full-session hash monitoring.",
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md",
+      "bytes": 29225,
+      "sha256": "23f930729f24a2e014f0d678992cd3c390ae13745e7054431c236333fd085b97"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+      "bytes": 30791,
+      "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+      "bytes": 18923,
+      "sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "bytes": 19590,
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "bytes": 6167,
+      "sha256": "e290e95b31c54b824ff452f627f7ede399ce39cf000fd2fada6bf8d89125ded0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/action-genus-scope-audit/RESULT.md",
+      "bytes": 10426,
+      "sha256": "06e3cf7c178f801033d678dac3b6eb84297d74504ffd0d9811644abb7b536705"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/SourceIdentityDerived.lean",
+      "bytes": 7438,
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/modal-union-v2/lean-v2/ModalUnion.lean",
+      "bytes": 7265,
+      "sha256": "d7bd80283e505d2379d453ee3fe75018016a3ae737ce4f25d0d610451d00fa08"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/modal-union-v2/T20_modal_union_component_theorem_v1.txt",
+      "bytes": 14773,
+      "sha256": "96388b02a6b12c3ac1cd5fa12d78bd2ecfdcaa544efa914877ab08bfe6e7c59b"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/CND-essential-independence-scope/CNDModalScope.lean",
+      "bytes": 5862,
+      "sha256": "4642177ab82f997e5e5fecbf993e2289013cf3e930de68515f4d46732d3995d9"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/existential-ground/lean/ModalCapacityControl.lean",
+      "bytes": 4607,
+      "sha256": "899e39c160d1471793ff0874a5a3f82e23a70cc6252ca9f31c45eeaee164040e"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/ModalAbilityControl.lean",
+      "bytes": 4387,
+      "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/origin-identity-bridge/RESULT.md",
+      "bytes": 24328,
+      "sha256": "53a18c9944984f7bbdd35641e4fb457a500e59abfd33c71e5120400ee1cc5e25"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-02.txt",
+      "bytes": 3711,
+      "sha256": "a03ac6759977d5a12145d8fa89cba3204f529662d263e3e8efcf3988c1def027"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-03.txt",
+      "bytes": 3309,
+      "sha256": "f0ced9eb80d9298d09a541091a601872e0efe7ae8b1105325f568093f9493a44"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-28.txt",
+      "bytes": 2723,
+      "sha256": "dd3c1e1fe14b337f59b47c6c83f46c5efa226aa722e60974e758384dcb57e357"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-29.txt",
+      "bytes": 3235,
+      "sha256": "371e139384895244995960eb8a9d33b6a1ff911d93db990156b45bd1b3db3973"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-30.txt",
+      "bytes": 3258,
+      "sha256": "b115ff36a07438647b9c8c83bd9ef8fa78d94b2fa15dd557c74d7437e75d0198"
+    }
+  ]
+}

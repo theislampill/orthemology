@@ -1,0 +1,44 @@
+{
+  "checkpoint_number": 16,
+  "archive": {
+    "path": "t20-next-frontier-20261008/checkpoints/source-semantics/T20_Source_Semantics_and_Warrant_Intermediate_Checkpoint_20261009.zip",
+    "bytes": 180381,
+    "sha256": "0ce85dd4d3b25c20dc84a55cbd78c14cdc39f8861396c0401250f3cc0c98f015",
+    "library_file_id": "libfile_e83d3c9aae5c819190509e272fcfc82e",
+    "library_version": 0,
+    "included": false
+  },
+  "guide": {
+    "path": "t20-next-frontier-20261008/checkpoints/source-semantics/T20_Source_Semantics_and_Warrant_Intermediate_Checkpoint_20261009.READ_FIRST.md",
+    "bytes": 4210,
+    "sha256": "0b604ea672b677b21a52b65da14892581329145f53fb45133497f35023e5c583",
+    "library_file_id": "libfile_5c7ba81447dc8191aa37f31187a4a397",
+    "library_version": 0,
+    "included": false
+  },
+  "exact_inherited_prior_records": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/source-semantics/T20_Source_Semantics_and_Warrant_Intermediate_Checkpoint_20261009/PRIOR_CHECKPOINT.json",
+      "bytes": 1488,
+      "sha256": "6289e74dbc18cc64abbd26c7d0a9f22ecc8e8acd01f22ce61e697934767e0401",
+      "package_path": "prior-checkpoints/CHECKPOINT_16_PRIOR_CHECKPOINT.json",
+      "included": true,
+      "copy_mode": "exact bytes"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/source-semantics/T20_Source_Semantics_and_Warrant_Intermediate_Checkpoint_20261009/prior-checkpoints/CHECKPOINT_15_PRIOR_REGISTRY.json",
+      "bytes": 19654,
+      "sha256": "58dfed8a7a75e40cde193a450bfc3783c3c92304e9d61e48e7f1a34a79805a04",
+      "package_path": "prior-checkpoints/CHECKPOINT_15_PRIOR_REGISTRY.json",
+      "included": true,
+      "copy_mode": "exact bytes"
+    }
+  ],
+  "scope": "Immediate predecessor archive, guide, and the two copied registry records were rehashed. Earlier identities are inherited records only. No global archive replay, prior ZIP duplication, historical validation campaign, or update to any prior report/history was performed.",
+  "already_preserved_user_text": {
+    "checkpoint_number": 16,
+    "package_path": "metaphysical-semantics-return/user-input/Pasted text(20261009-025305).txt",
+    "sha256": "451c35c1ec4e0f432d323550dc5fecb758737ed926908f73d7dcd92963a6b88e",
+    "duplicated_here": false
+  }
+}

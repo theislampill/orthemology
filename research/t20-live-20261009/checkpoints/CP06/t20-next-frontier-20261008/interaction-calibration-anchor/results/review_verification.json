@@ -1,0 +1,27 @@
+{
+  "author_files_bound": 13,
+  "before_after_identity": true,
+  "frozen_predecessor_payloads": 50,
+  "individually_listed_sources": 12,
+  "replays": [
+    {
+      "output_byte_identical": true,
+      "script": "exact_controls.py"
+    },
+    {
+      "output_byte_identical": true,
+      "script": "panel_controls.py"
+    },
+    {
+      "output_byte_identical": true,
+      "script": "independent_controls.py"
+    },
+    {
+      "output_byte_identical": true,
+      "script": "independent_panel_controls.py"
+    }
+  ],
+  "review_manifest_files": 31,
+  "scope": "Scoped proof-review reproducibility and byte identity; no integration or closure authority.",
+  "status": "PASS"
+}

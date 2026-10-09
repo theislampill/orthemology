@@ -1,0 +1,28 @@
+{
+  "independent_convolution_guarded_effect_models": 40,
+  "perturbed_probability_coordinates": 1600,
+  "root_effect_bound_cases": [
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      3,
+      2,
+      6
+    ],
+    [
+      4,
+      1,
+      8
+    ]
+  ],
+  "largest_author_series_budget": 32,
+  "noise": "Independent convolution at uniformly upward-biased gate rates, including leakage, followed by bounded rational endpoint-probability perturbations."
+}

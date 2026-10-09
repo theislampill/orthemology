@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-10-08T09:57:49.005590+00:00",
+  "status": "author checkpoint frozen; independent review pending",
+  "scope": "Known finite catalogue grouped-sampling certificate with calibration allowance; no repository integration or T20 closure.",
+  "source_dependency_manifest_sha256": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6",
+  "evidence_layers": [
+    "Imported frozen eligible finite-histogram base4 injection and grouped model",
+    "Self-contained written interpolation, concentration, calibration, support and unknown-label coupling proofs",
+    "Fifteen exact rational control families; no empirical observations or new Lean result"
+  ],
+  "files": [
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "880749d32f299be7e83db5054eb9768fbaf8a79b02d9b8eed5267c02dd6f8bcd",
+      "bytes": 1619
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "add5ac0c7b5db4ff229607e294c5d238bc59dc24826705c3469205633b807d46",
+      "bytes": 13547
+    },
+    {
+      "path": "PROCESS_AND_LABEL_BOUNDARIES.md",
+      "sha256": "4c9f0159f73faf76f0cc3998dacc9ec83dd3bfa112b45a793b0a14db80945c2e",
+      "bytes": 10212
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "5d21cf088fa9abbdf16f1830b716be35d809bdd2732cf492e1f378fb1f6a8c11",
+      "bytes": 6314
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "9e92b5affb6ce926bca92e39a9e222b051cdc47bd8f1efd6d78a98d2c0752d77",
+      "bytes": 8504
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "11f00021b69e0b0f384ca8fd25d0c7be9c31f8537a198a6dda45810c7d7616eb",
+      "bytes": 550
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "54cd8bd22eb688c1c05b84cdf2b3819166a029bcf0f291eb7078db3d595c33ed",
+      "bytes": 11956
+    },
+    {
+      "path": "ACTIVE_RESEARCH.jsonl",
+      "sha256": "0392c482dea7cf10ff24fc4b1d29dd57269ba91d8720cbd1c1b057e1af8a376a",
+      "bytes": 1310
+    }
+  ]
+}

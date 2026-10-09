@@ -1,0 +1,56 @@
+{
+  "frozen_utc": "2026-10-08T22:14:15.290447+00:00",
+  "status": "Frozen research sibling; no programme integration or closure",
+  "payloads": [
+    {
+      "path": "INFERENTIAL_TRANSMISSION_TEST.md",
+      "bytes": 6583,
+      "sha256": "9e60b3c227a434093da9f6d1c6dffe624de9ed16abf2dac09d1393311652782c"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 2513,
+      "sha256": "ece8fdfb7836d03298ef7af51c2b7ad7872cc746a85350a9da88dc3d486d01cf"
+    },
+    {
+      "path": "PROSPECTIVE_TEST.md",
+      "bytes": 2738,
+      "sha256": "f91816aa3d28c05f149c566af9bbe6bb0dfd5c62bdb1ddb41f704262a4c8919a"
+    },
+    {
+      "path": "PUBLIC_SOURCE_SUMMARIES.md",
+      "bytes": 2315,
+      "sha256": "b403d5c798869f9124b40736410d87852022f8c8c94cc71bea9c69ef58404a2a"
+    },
+    {
+      "path": "READING_PROVENANCE.json",
+      "bytes": 7656,
+      "sha256": "6a479204612f2fac7ea817628fcf290026fee84e79148a2544b9eaaac95aedb5"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 2555,
+      "sha256": "3e51ba6bf91384237b98ae005c62e2be87e5da7fd6cbe2a98f1bbbce96c873f3"
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "bytes": 1095,
+      "sha256": "16bc181f2f028496bea3c77fa1768eb226a6d2895f459d6a98a05051c655e330"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 8091,
+      "sha256": "4c48b7ec591654c39f9a8bc93c2e15c7e7f8bf67fd3de202d51fec0da07d8972"
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "bytes": 1352,
+      "sha256": "32a58b22de72edae5322ab16a84efff4d2c6b5fab53019edcf1dfea4dd99fae1"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 3483,
+      "sha256": "b3bd17df8366999ccd5f600dc9c2ace4f36b54954f93e04f21d3c53ba2bd71dd"
+    }
+  ]
+}

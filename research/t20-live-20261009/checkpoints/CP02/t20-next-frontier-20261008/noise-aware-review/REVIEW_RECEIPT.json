@@ -1,0 +1,32 @@
+{
+  "recorded_utc": "2026-10-08T08:13:36.675081+00:00",
+  "scope": "Independent bounded-count statistical/interval review and separate restricted-mask matching lower bound; no protected integration or model-to-world validation.",
+  "author_control_groups_passed": 11,
+  "independent_interval_control_groups_passed": 3,
+  "adversarial_probability_panels": 48,
+  "convolution_guarded_effect_models": 40,
+  "crosscheck_coordinates": 1600,
+  "lower_bound_parameter_checks": 234,
+  "restricted_mask_lower_bound": "N >= (2K)^(2r)/45, K>=2, fixed p=1/(2K), fixed total budget with adaptive mask allocation.",
+  "unresolved_mathematical_blockers": [],
+  "files": {
+    "INDEPENDENT_METRICS.json": "bd59b9d563531b5c4caa46b1ada76c3eb0ea1d66bebc67ee87e07b71019843cf",
+    "INDEPENDENT_REPLAY.log": "0342e5cdebae43ffb43f688d9c534b0ff6281e38fa9bee406ca8e4d58be1b89b",
+    "LOWER_BOUND_CONTROL.json": "473ea989b1c13ea50ec86ae02b4be2010426e947b72ecd4ede48e07689367f7a",
+    "LOWER_BOUND_REPLAY.log": "473ea989b1c13ea50ec86ae02b4be2010426e947b72ecd4ede48e07689367f7a",
+    "RESTRICTED_MASK_LOWER_BOUND.md": "6f1c95bca5083e3cdfc2421308700a5b78a8c62f5433a4eb0ae089ef7b5819c3",
+    "REVIEW.md": "0d08fcb2c99565044f0bbff4219d941048986bdfd0337dee368c9416fac11bcd",
+    "check_lower_bound.py": "bd6917765c29d79090cebc498738023ed735ed3e668f1c13ba1cd93ad20e134b",
+    "crosscheck_frozen_decoder.py": "6b8684173c18e513aaabe7ef39bacfa63f16c80ff745e63bf3b5e7ea06e81d03",
+    "frozen/RESULT.md": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d",
+    "frozen/THEOREMS.md": "1b3d0c4ee7e45041d5b8866c7bf2d8d4f48e8b6082597b70debf9350473a51dc",
+    "frozen/robust_masks.py": "1c818590a66e5e6b7af39d46c2db849bb2bb99e758a90771218c4b2cb148efd3",
+    "frozen/test_robust_masks.py": "e9e1a14061d66a77fac35659d80b7f7298294afb940cdc797b5db62fee3d46c2",
+    "independent_noise_controls.py": "73f534d869ff1c8fbd9bd1a993779ae04d40693f2c5151eb6d95c534c7328e24",
+    "results/AUTHOR_FROZEN_REPLAY.log": "f6ef2cb3b1cd697e978fca94f8eab44263222c11cefb3f1c26c42848b4039e4e",
+    "results/AUTHOR_SOURCE_HASHES.txt": "7ddfc51308b43c0b8c875f4730f53b286c48fb2b8f81bb0b6368ef39b92031f0",
+    "results/AUTHOR_SOURCE_VERIFICATION.log": "4c66c1287d1859f67253cf81299df1b6f639dfaf0d9f833b80584240a6ab6d08",
+    "results/CROSSCHECK_METRICS.json": "61eb3951a85e941ce8757f14a1f9725821c453365b2169ffca09599c3c4ad816",
+    "results/CROSSCHECK_REPLAY.log": "61eb3951a85e941ce8757f14a1f9725821c453365b2169ffca09599c3c4ad816"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "verified_at_utc": "2026-10-09T10:20:16.723322+00:00",
+  "scope": "Mechanical checks of this bounded return and its fourteen named historical input bindings only. No unrelated archive survey or global preservation certification.",
+  "checks": {
+    "ameri_pdf_hash": true,
+    "ameri_pdf_bytes": true,
+    "ameri_pdf_pages": true,
+    "ameri_extraction_hash": true,
+    "bounded_historical_inputs_hashes": true,
+    "railton_source_hashes": true,
+    "railton_report_hash": true,
+    "james_pdf_hash": true,
+    "james_report_hash": true,
+    "recorded_windows_cover_1_to_244_exactly": true,
+    "recorded_visual_font_blocks_55": true,
+    "six_font_repair_sheets_exist": true,
+    "ameri_capsule_161_words_and_under_180": true,
+    "deliverable_json_parse": true
+  },
+  "counts": {
+    "received_book_pages": 244,
+    "initial_read_windows": 21,
+    "historical_inputs": 14,
+    "ameri_source_capsule_words": 161,
+    "font_blocks": 55,
+    "font_repair_sheets": 6
+  },
+  "epistemic_limit": "Hashes, page counts and recorded intervals verify file identity and ledger consistency. They do not mechanically prove comprehension, authenticity of unverified primary quotations, empirical claims, or philosophical conclusions. Personal and delegated reading boundaries are explicit in the ledger.",
+  "raw_source_distribution": "All research-intermediates paths excluded from deliverable manifest."
+}

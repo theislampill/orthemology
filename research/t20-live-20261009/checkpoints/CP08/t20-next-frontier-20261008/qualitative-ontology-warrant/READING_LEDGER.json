@@ -1,0 +1,332 @@
+{
+  "source": "Dasgupta 2009, Individuals",
+  "continuous_read_order": [
+    [
+      1,
+      6
+    ],
+    [
+      7,
+      12
+    ],
+    [
+      13,
+      18
+    ],
+    [
+      19,
+      24
+    ],
+    [
+      25,
+      33
+    ]
+  ],
+  "source_sha256": "b336f711d358c894c9a5480bbae0f9f2d32c897d67b8cfa01e0476af74722108",
+  "limitations": [
+    "Complete text read is not a claim of full visual inspection of all 33 pages.",
+    "Text extraction omitted displayed proof diagrams on PDF pages 26–27; images inspected.",
+    "Several mathematical glyphs were corrupted in extraction; central formula and appendix pages visually checked.",
+    "Poppler shared-object hint-table warning; all 33 pages extracted and selected pages rendered successfully.",
+    "Kuhn 1983 and other cited sources not independently read; no fresh formal proof verification."
+  ],
+  "pages": [
+    {
+      "pdf_page": 1,
+      "printed_page": 35,
+      "section": "Abstract and introduction",
+      "notes": "None",
+      "read_scope": "Task, actual-world claim, material individuality; opening thesis",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 2,
+      "printed_page": 36,
+      "section": "Introduction continued",
+      "notes": "1",
+      "read_scope": "Individualism, bundle/generalism contrast, explicitly comparative support",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 3,
+      "printed_page": 37,
+      "section": "Introduction; §1; §1.1",
+      "notes": "2–4 (4 begins)",
+      "read_scope": "Material-only restriction, modal questions bracketed, velocity analogy",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 4,
+      "printed_page": 38,
+      "section": "§1.1",
+      "notes": "4 continued; 5–6",
+      "read_scope": "Conditional completeness of Newtonian laws; detector conditions",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 5,
+      "printed_page": 39,
+      "section": "§1.1",
+      "notes": "7–8",
+      "read_scope": "Uniform velocity change, physical redundancy and measurement",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 6,
+      "printed_page": 40,
+      "section": "§1.1 end; §1.2",
+      "notes": "None",
+      "read_scope": "Redundancy definition and general versus individualistic facts",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 7,
+      "printed_page": 41,
+      "section": "§1.2",
+      "notes": "9–12",
+      "read_scope": "Identity-insensitive dynamics; other redundancy senses explicitly left open",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 8,
+      "printed_page": 42,
+      "section": "§1.2",
+      "notes": "13",
+      "read_scope": "Matched qualitative individuals and empirical discrimination",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 9,
+      "printed_page": 43,
+      "section": "§1.2 end; §1.3",
+      "notes": "None",
+      "read_scope": "Danglers premise and defeasible theory preference",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 10,
+      "printed_page": 44,
+      "section": "§1.3; §1.4 opening",
+      "notes": "None",
+      "read_scope": "Occamist argument; material-domain restriction; no verificationism",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 11,
+      "printed_page": 45,
+      "section": "§1.4",
+      "notes": "14",
+      "read_scope": "Experience objection; reidentification versus empirical detection",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 12,
+      "printed_page": 46,
+      "section": "§1.4",
+      "notes": "15",
+      "read_scope": "De re cognition distinguished; burden on alternative",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 13,
+      "printed_page": 47,
+      "section": "§1.4 end; §2",
+      "notes": "16–18",
+      "read_scope": "Bundle strategy; compresence, universals and tropes",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 14,
+      "printed_page": 48,
+      "section": "§2",
+      "notes": "19–20",
+      "read_scope": "Identity of indiscernibles and preservation of general multiplicity facts",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 15,
+      "printed_page": 49,
+      "section": "§2 end; §3",
+      "notes": "21–22",
+      "read_scope": "Scope of anti-bundle objection and alternative strategy",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 16,
+      "printed_page": 50,
+      "section": "§3",
+      "notes": "23–24",
+      "read_scope": "Modal supervenience insufficient; actual structure and quantifier concern",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 17,
+      "printed_page": 51,
+      "section": "§3.1",
+      "notes": "None",
+      "read_scope": "PRESERVATION, SUFFICIENCY and MODESTY",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 18,
+      "printed_page": 52,
+      "section": "§3.1 end; §3.2",
+      "notes": "25–27",
+      "read_scope": "First-order scope caveat; domain of universals and algebra",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 19,
+      "printed_page": 53,
+      "section": "§3.2",
+      "notes": "None",
+      "read_scope": "Zero-place states; primitive obtains; distinction between term and assertion",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 20,
+      "printed_page": 54,
+      "section": "§3.2",
+      "notes": "28–29",
+      "read_scope": "Multiplicity; alternative statuses of individual discourse",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 21,
+      "printed_page": 55,
+      "section": "§3.2 end; §3.3",
+      "notes": "30–32",
+      "read_scope": "Atomistic and holistic descriptions of relational situation",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 22,
+      "printed_page": 56,
+      "section": "§3.3 end; §4",
+      "notes": "33–34",
+      "read_scope": "Missing shared-witness/orientation information; holistic priority; world-object distinction",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 23,
+      "printed_page": 57,
+      "section": "§4; §4.1; §4.2 opening",
+      "notes": "35",
+      "read_scope": "Three-premise comparative argument; complexity objection",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 24,
+      "printed_page": 58,
+      "section": "§4.2; §4.3; §4.4 opening",
+      "notes": "36–37",
+      "read_scope": "Revision, local causation, and perceptual/cognitive burden",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    },
+    {
+      "pdf_page": 25,
+      "printed_page": 59,
+      "section": "§4.4",
+      "notes": "38 begins",
+      "read_scope": "Hypothetical language-of-thought model and updating cost",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 26,
+      "printed_page": 60,
+      "section": "§4.4",
+      "notes": "38 continued",
+      "read_scope": "Constants and existential introduction/elimination; displayed rules",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 27,
+      "printed_page": 61,
+      "section": "§4.4 end",
+      "notes": "39",
+      "read_scope": "Displayed derivation; explicitly incomplete cognitive explanation and no semantics",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 28,
+      "printed_page": 62,
+      "section": "§5; acknowledgements; Appendix syntax",
+      "notes": "None",
+      "read_scope": "Conclusion and language G syntax",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 29,
+      "printed_page": 63,
+      "section": "Appendix syntax end; term-functors",
+      "notes": "40",
+      "read_scope": "Operations, non-material biconditional caveat, deferred language extensions",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 30,
+      "printed_page": 64,
+      "section": "Appendix predicate-functor logic",
+      "notes": "41–42",
+      "read_scope": "Language Q, nonempty model domain, satisfaction and consequence",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 31,
+      "printed_page": 65,
+      "section": "Appendix equivalence and three theorems",
+      "notes": "43–44",
+      "read_scope": "Model-theoretic equivalence, outline of preservation proof; cited translation results",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 32,
+      "printed_page": 66,
+      "section": "Appendix using individual domains; references begin",
+      "notes": "None",
+      "read_scope": "Conceptual versus metaphysical priority; limited defense of primitive interpretation",
+      "continuous_text_read": true,
+      "rendered_image_inspected": true
+    },
+    {
+      "pdf_page": 33,
+      "printed_page": 67,
+      "section": "References continued",
+      "notes": "None",
+      "read_scope": "Complete bibliography read; no independent reading credit for cited works",
+      "continuous_text_read": true,
+      "rendered_image_inspected": false
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "utc": "2026-10-08T17:53:21.495432+00:00",
+  "status": "BOUNDED_REVIEW_ACCEPTED; T20_ACTIVE",
+  "full_primary_reads": "Dasgupta 2016, journal 379–418, including notes; Morganti 2015, journal 555–572, including notes. Overlapping reads are not independent witnesses.",
+  "Billon": "Explicit partial-access limitation remains; not a philosophical failure proof",
+  "appraisal": "Conditional theorem unchanged; reduced confidence in unqualified exhaustive bearer application; downward pressure on unconditional actual Necessary Being/common-source inference without forced reversal or parity.",
+  "review": "Independent targeted source/bridge acceptance; earlier corrections addressed.",
+  "next_operation": "The separate 2009 account is ongoing and excluded from this checkpoint’s conclusions.",
+  "old_checkpoint_checks": [
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_READS.json",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_BINDINGS.json",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/RESEARCH_EVENTS.jsonl",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-review/INDEPENDENT_LAW_ONLY_TRANSPORT_REVIEW.md",
+      "unchanged": true
+    }
+  ],
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "bytes": 20262,
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_READS.json",
+      "bytes": 6176,
+      "sha256": "06a83739da8a3b9de8d7c0c0da570f515e2d4e2022810fb57cfb8275b760c4dc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_BINDINGS.json",
+      "bytes": 5151,
+      "sha256": "30ffeb911d999339ee4fe6a187f6210c230bb26a6bd398c6232ae33317c54296"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/BILLON_ACCESS_BOUNDARY.md",
+      "bytes": 4824,
+      "sha256": "36c4ab8df18df08c0b23eee6508877b398621cd96525c8a0cc20e4bb72c34bef"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/RESEARCH_EVENTS.jsonl",
+      "bytes": 1795,
+      "sha256": "35584f334084ef50fdaa123af169fe18448e1ae40f284096815f54ceebe81856"
+    },
+    {
+      "path": "t20-next-frontier-20261008/autonomous-quality-bridge-review/REVIEW.md",
+      "bytes": 19407,
+      "sha256": "01cc512ab6f4c9367f0bfaea223bdb8375863b82fc187cc5da4d99e14382ab66"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/CHECKPOINT_RECEIPT.json",
+      "bytes": 1693,
+      "sha256": "06aa2e64def5dbee54dfeca08657aad48fe4d90e720a499e8309513d275737a6"
+    }
+  ]
+}

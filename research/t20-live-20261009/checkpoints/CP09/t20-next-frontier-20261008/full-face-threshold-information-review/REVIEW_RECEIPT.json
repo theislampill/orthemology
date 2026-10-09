@@ -1,0 +1,76 @@
+{
+  "claims": [
+    "Two-minimum CDFs, strictly positive interior densities and mutual absolute continuity including boundary/singular-residual accounting",
+    "Infinite P1-relative-to-P0 chi-square, independently corroborated via M=max(X,Y)",
+    "Positive linear fixed-n dyadic-shell divergence slope and all-K lower bound",
+    "Finite forward KL with exact density-envelope constant n²+n/(n+1)",
+    "n=1 validity and separate c=1,m=n equality control",
+    "Accurate finite transcript/coarsening distinction and n-dependent cost/feasibility limitations"
+  ],
+  "excluded": [
+    "Author control implementation certification",
+    "Sharp forward or reverse KL asymptotic",
+    "Improved testing/sample exponent or practical instrument feasibility",
+    "Empirical validation, protected integration, T20 closure",
+    "Blanket approval of unbound author supporting documents or future RESULT edits"
+  ],
+  "issued_utc": "2026-10-08T19:40:26.129047+00:00",
+  "review_artifacts": [
+    {
+      "bytes": 13636,
+      "path": "REVIEW.md",
+      "sha256": "874ddffcf6533c8c3ee35c711fa0d8c5e5ce275efd5a0f0e6016fe8e7e857902"
+    },
+    {
+      "bytes": 12215,
+      "path": "reviewed_RESULT.md",
+      "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17"
+    },
+    {
+      "bytes": 3818,
+      "path": "independent_controls.py",
+      "sha256": "e8a8feb53f4abdce050043f1e2e12fc11da241e1835bd0053d0786f82c37bfd3"
+    },
+    {
+      "bytes": 2667,
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "d0395de5b721cfbccf22927a6d911819d74d44576d30ae389f7a6e6cfa3d62da"
+    },
+    {
+      "bytes": 1096,
+      "path": "CONTROL_NOTES.md",
+      "sha256": "f48623f377a034734a9aa4554cc1457c7ac20c537ff59c5c5a387577dcc47715"
+    },
+    {
+      "bytes": 2386,
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "4994768ee2e10bca86d21402b9cbcd3970e18983a3b0fd20e2894b7af2035d49"
+    },
+    {
+      "bytes": 634,
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "c20b94caab3dc9cbb90c83800ae58a439a8bff2a8eff4a40564da307521149d3"
+    },
+    {
+      "bytes": 541,
+      "path": "RESEARCH_ACCOUNTING.json",
+      "sha256": "3151540103101cf4df9a61ebc83fa95dbf62453726fc57d89c80073dc16ac68c"
+    }
+  ],
+  "reviewed_result": {
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+    "snapshot": "reviewed_RESULT.md"
+  },
+  "reviewer_task": "[OMITTED_PRIVATE_MACHINE_PATH]",
+  "schema": "independent-mathematical-review-receipt/v1",
+  "unresolved_findings": [],
+  "verdict": "PASS",
+  "verification": {
+    "author_controls_replayed": false,
+    "predecessor_result_receipt_digests_match": true,
+    "reviewer_exact_symbolic_groups": 18,
+    "reviewer_exhaustive_finite_decoding_cases": 284,
+    "target_sha256_unchanged": true
+  }
+}

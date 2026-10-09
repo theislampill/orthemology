@@ -1,0 +1,34 @@
+{
+  "review_assigned_utc": "2026-10-08T07:06:19Z",
+  "receipt_recorded_utc": "2026-10-08T07:25:06.598176+00:00",
+  "scope": "Independent conditional mathematical review only; no protected changes, final integration, causal validation or owner acceptance.",
+  "duration_claim": "No active-duration certificate or historical floor is asserted. Test runtime and elapsed timestamps are not research credit.",
+  "two_root_author_tests_passed": 20,
+  "two_root_independent_control_groups_passed": 7,
+  "general_root_author_tests_passed": 8,
+  "general_root_independent_control_groups_passed": 5,
+  "current_source_verification": "All seven listed live files matched frozen hashes after replay.",
+  "unresolved_mathematical_blockers": [],
+  "remaining_interpretation_obligations": [
+    "Admissibility of the chosen intervention law",
+    "Known support-specific calibration and cross-occurrence independence",
+    "Fixed issued-profile guard semantics",
+    "Correct occurrence aliases and route bundling",
+    "Completeness of the observed created-effect catalogue",
+    "Transport from declared support to source-level actual productive ground"
+  ],
+  "files": {
+    "REVIEW.md": "5f77e9053586b6dc1fd60f301c7fb5b9e3966d4d326b04a9f10c9e2cfec81fb1",
+    "GENERAL_ROOT_REVIEW.md": "747143daebc079eadaa62547ead82e855777b1aaad2ae9e5a3f486984fbd73e1",
+    "independent_controls.py": "62a58f19251768b51738ec54bbba653bb1095563bad7a368bd5b48898b6b5815",
+    "independent_controls_v2.py": "b96cf2b11c1c4ac68b82e682a90d0f51a449686e4f8fbb814b749ca2f3d72da8",
+    "general_rank_controls.py": "62bffdf3a7160f408ec7af37dc1d908d2963fb305f2e223aea39c691c73fae78",
+    "results/CURRENT_FREEZE_SOURCE_HASHES.txt": "5ddd6de378a77f800abf874535b0396a79c06514ce11b65f8b99268ee445cb5f",
+    "results/CURRENT_SOURCE_VERIFICATION.log": "14ba99fae7744577184621fb88d56c1c28412398390f9c08e07c893ebed35f41",
+    "results/AUTHOR_TEST_REPLAY_V2.log": "b80471b5aff71e03428290e9b06adbdc043079da68f9a54e16587a8f39fa2fb4",
+    "results/INDEPENDENT_REPLAY_V2.log": "7cf587c537946e320e40d06f6616d46c2bce140adcd730991cd9c379e185eaec",
+    "results/GENERAL_AUTHOR_REPLAY.log": "71cbe51899b2e58f04731f902c1a6877fd6c92b39068df9d11e26c004468c77c",
+    "results/GENERAL_INDEPENDENT_REPLAY.log": "26c6ad85c1b97de870a827218fc8037b6a5f011a8c77d9b6e6c613f04871c7a0",
+    "results/FINAL_REVIEW_BINDINGS.sha256": "b2d14b6bf502e3d13852d165918f5036b75053e9d773c8f8a0582df04fce2fa6"
+  }
+}

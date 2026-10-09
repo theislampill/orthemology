@@ -1,0 +1,14 @@
+{
+  "anchored_unary_presence_decisions": 26,
+  "assertions": 305,
+  "boundary_reduction_grid_equalities": 27,
+  "caveat": "Finite controls support the proof audit; observed costs are not uniform bounds.",
+  "covered_support_presence_decisions": 14,
+  "max_precision_bits": 32,
+  "raw_grid_equalities": 81,
+  "raw_oracle_calls": 4936,
+  "status": "PASS",
+  "unary_recoveries": 24,
+  "unary_sign_decisions": 204,
+  "zero_unary_interval_checks": 12
+}

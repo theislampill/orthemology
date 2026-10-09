@@ -1,0 +1,351 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v1",
+  "classification": "TENTH_ADDITIVE_INTERMEDIATE_PRESERVATION_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "assembly_snapshot_utc": "2026-10-08T21:19:23.923228+00:00",
+  "timestamp_scope": "Prospective packaging snapshot and recorded author activity windows are not independent historical active-duration certificates.",
+  "previous_checkpoint": "Ninth Scope_Clarified delivery, exact archive hash and Library ID in dependency registry.",
+  "results": [
+    {
+      "id": "retained_skyline_likelihood",
+      "title": "Exact skyline likelihood; singular and common-support information",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/retained-skyline-likelihood/RESULT.md",
+          "bytes": 17673,
+          "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-skyline-likelihood/SOURCE_AUDIT.md",
+          "bytes": 1799,
+          "sha256": "96830def73a2e7600a90f8c5bab295e59e3cacd7d4edb62a715c125fb4f1a6bf"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-skyline-likelihood/SOURCE_BINDINGS.json",
+          "bytes": 736,
+          "sha256": "63bd6ae22842de99513e873fcf3ac5fe0af4efbafd2bdbc4ce057b25d0492fea"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-skyline-likelihood/ACTIVITY_LOG.json",
+          "bytes": 1440,
+          "sha256": "5206a27134ee50163c8a9a965c4293e0a9fbf891e50e852843445b70b49d4e0a"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-information-review/REVIEW.md",
+          "bytes": 10863,
+          "sha256": "76d3e6cffdd95992c47e9ccb3ddb9f273f73a8d7ed058ca10dadb5242453c3b3"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-information-review/SOURCE_BINDINGS.json",
+          "bytes": 1256,
+          "sha256": "e79c38c0aa40593087a5f6800e65b872959404705ba7fa2be2393dcec0bb5e84"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-information-review/SOURCE_BINDINGS.initial.json",
+          "bytes": 1030,
+          "sha256": "15406e6893df89ec25afbeab89a03d426b44e96292848d9eff29de273c99d5e4"
+        }
+      ],
+      "claims": [
+        "On x-ordered k-point interior antichains the normalized density is (N)_k product_i f(z_i) mu(D(s))^(N-k), with no k! divisor. Conditional invisible routes are iid draws truncated to the dominated region, once visible labels are fixed.",
+        "For the hard pair, K=n+1 is the entire alternative singular component; its probability satisfies 0<p_n<1/(n+1)! by strict TP2. Waiting only for this support event has alternative mean > (n+1)! and never terminates under the baseline.",
+        "After conditioning the alternative on K<=n, both directions of KL against the baseline are finite and strictly positive for every fixed n. This separates ordinary likelihood information from singular support evidence.",
+        "Exact/stable dominated-strip formulas and exact n=1 masses are given. Numerical quadrature is not a certified error bound."
+      ],
+      "limits": [
+        "No sharp skyline divergence asymptotics, optimal testing rate, finite exact recovery of arbitrary reals, distribution-free actual route count, or physical access conclusion.",
+        "Dominated routes remain invisible in an individual endpoint function. Factorial waiting applies only to support-only detection, not all skyline tests."
+      ],
+      "depends_on": [
+        "NINTH_HARD_PAIR_AND_RETAINED_INTERFACE",
+        "NINTH_RECONSTRUCTION_BOUNDARY"
+      ],
+      "control_ids": [
+        "likelihood-author",
+        "skyline-review"
+      ],
+      "source_ids": [
+        "LIKELIHOOD_LOCAL"
+      ],
+      "fresh_local_contribution": [
+        "Written specialization, normalized ordered density and hidden law, stable strip representation, factorial rarity and finite strictly positive common-support KL."
+      ],
+      "inherited_not_newly_discovered_or_reproved": [
+        "Parent supplied likelihood/count candidates and interface guards. Predecessor hard pair and certificate semantics are inherited. Conditioning, record ranks, TP2 and elementary likelihood tools are standard; no field-wide novelty claim."
+      ],
+      "assurance": "Written proofs plus scoped separately authored internal review; bounded deterministic controls; no Lean formalization."
+    },
+    {
+      "id": "skyline_count_information",
+      "title": "Count mean gap, TP2 record coupling and improved vector upper bound",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-count-information/RESULT.md",
+          "bytes": 10942,
+          "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-count-information/SOURCE_AUDIT.md",
+          "bytes": 1778,
+          "sha256": "7566656cd2e29eb3a6044514a86df92de554eee042ba4cd0a6b7465dbaceef83"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-information-review/REVIEW.md",
+          "bytes": 10863,
+          "sha256": "76d3e6cffdd95992c47e9ccb3ddb9f273f73a8d7ed058ca10dadb5242453c3b3"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-information-review/SOURCE_BINDINGS.json",
+          "bytes": 1256,
+          "sha256": "e79c38c0aa40593087a5f6800e65b872959404705ba7fa2be2393dcec0bb5e84"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-information-review/SOURCE_BINDINGS.initial.json",
+          "bytes": 1030,
+          "sha256": "15406e6893df89ec25afbeab89a03d426b44e96292848d9eff29de273c99d5e4"
+        }
+      ],
+      "claims": [
+        "E0 K=H_n and E1 K=H_n+delta_n, with delta_n=(H_n-1)/(n^2-1) for n>1 and delta_1=(zeta(2)-1)/2.",
+        "Conditional quantile coupling under TP2 gives K<=R_(n+1) pathwise. Subtracting the exact squared mean from the coupled second moment yields Var1 K<=V_(n+1)+H_(n+1)^2-(H_n+delta_n)^2=O(log n). Joe record indicators are not assumed independent.",
+        "The midpoint test on independent ideal retained vectors has each error <=4 max(V_n,W_n)/(s delta_n^2), giving O_alpha(n^4/log n) vectors for fixed error.",
+        "With matched error, reset, started-vector and unconditional termination assumptions, this improves vector cost over the inherited strongest face-only Omega_alpha(n^4) bound, including arbitrary adaptive face-only words."
+      ],
+      "limits": [
+        "No optimal skyline rate or matching lower bound. No total endpoint-probe advantage follows from the ideal vector bound.",
+        "The mean gap alone is insufficient: the coupling and variance subtraction carry the rate. Exact ideal readout is not asserted to be a physical operation."
+      ],
+      "depends_on": [
+        "NINTH_HARD_PAIR_AND_RETAINED_INTERFACE",
+        "NINTH_FULL_FACE_KL_RATE"
+      ],
+      "control_ids": [
+        "count-author",
+        "skyline-review"
+      ],
+      "source_ids": [
+        "COUNT_LOCAL"
+      ],
+      "fresh_local_contribution": [
+        "Written exact mean specialization, quantile-record domination, variance subtraction and count test comparison."
+      ],
+      "inherited_not_newly_discovered_or_reproved": [
+        "Parent supplied expectation/TP2 candidates and independently the same coupling and sharper variance subtraction; shared derivation, not duplicate independent discovery credit.",
+        "Strongest face-only KL/asymptotic lower theorem is consumed from ninth checkpoint without new proof or replay."
+      ],
+      "assurance": "Written proofs plus scoped shared internal review bound to final comparator revision; no Lean formalization."
+    },
+    {
+      "id": "finite_skyline_readout",
+      "title": "Finite rational-grid extraction and error-budget transport",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/finite-skyline-readout/RESULT.md",
+          "bytes": 12282,
+          "sha256": "6687a8f2f56290427297bba1cfef6c8c14a58878ffa0010805550f0cd632b0d5"
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-skyline-readout/SOURCE_AUDIT.md",
+          "bytes": 1660,
+          "sha256": "cbdbf37f09510bcd97fa08af8c8dd62b249e796465bf5f895accfab20f8bd0eb"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/finite-skyline-readout-review/REVIEW.md",
+          "bytes": 7305,
+          "sha256": "0111a2e0a649842cd5def5ddc8ce2f8350a20844a7c5ee51667fb03182df82d0"
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-skyline-readout-review/SOURCE_BINDINGS.json",
+          "bytes": 3199,
+          "sha256": "c586bbf302df5029300b16b226016485ffbcbf752871e488e1d3fe1da5468a28"
+        }
+      ],
+      "claims": [
+        "Quantization Q_L(x)=ceil(Lx) preserves grid endpoint responses. The binary-search staircase extracts exactly all distinct quantized minima, including ties, duplicates, endpoints and empty input, in T<=K_L+1+2 K_L ceil(log2(L+1)) probes.",
+        "Pathwise K_L<=K; coordinate-bin injectivity suffices for equality. Under either hard-pair world, P(K_L!=K)<=m(m-1)L^(-c). Across R vectors the mismatch probability is at most Rm(m-1)L^(-c).",
+        "Choosing the ideal test budget R and least integer L with L^n q^(n+1)>=p^(n+1), p/q=m(m-1)R/eta, realizes per-world error <=alpha+eta. A fully rational n=1 repair uses R>=ceil(16/alpha) and threshold 1+1/8.",
+        "For fixed total error below one half, the finite protocol realizes O(n^4/log n) independent vectors and the inherited face-only comparison. Total probe bounds are O(n^5) worst case and O(n^4 log n) expected."
+      ],
+      "limits": [
+        "These upper bounds do not establish improved total-probe complexity or optimality. Physical precision, computation, retention and resets are uncharged resources.",
+        "Requires known n/c/calibration, independently refreshed vectors, noiseless rational endpoint access and exact comparisons. No arbitrary-real exact reconstruction, unknown-calibration uniformity, noise or laboratory validation."
+      ],
+      "depends_on": [
+        "skyline_count_information",
+        "NINTH_HARD_PAIR_AND_RETAINED_INTERFACE",
+        "NINTH_FULL_FACE_KL_RATE"
+      ],
+      "control_ids": [
+        "finite-author",
+        "finite-review"
+      ],
+      "source_ids": [
+        "FINITE_LOCAL"
+      ],
+      "fresh_local_contribution": [
+        "General deterministic extraction/quantization proof, finite collision/event budget, exact integer-resolution procedure, n=1 rational implementation and separate expected/worst probe accounting."
+      ],
+      "inherited_not_newly_discovered_or_reproved": [
+        "Parent supplied finite-grid candidate. Count mean/variance/test and strongest full-face lower bound are consumed, not re-derived or independently credited here."
+      ],
+      "assurance": "Written transport proof plus separately authored scoped internal review and finite exhaustive implementation controls; no Lean formalization."
+    }
+  ],
+  "common_assumptions": [
+    "Known simple hard pair: P0 has n iid product-uniform threshold pairs; P1 has m=n+1 iid Joe-law threshold pairs with F_c(x,y)=1-(1-xy)^c and c=n/(n+1).",
+    "Within-vector thresholds are unchanged throughout separately read nonlatched queries; the endpoint is the OR over coordinate-separable threshold-AND routes.",
+    "Fresh vectors are independent for the statistical test; repeated commands on one vector do not create fresh samples.",
+    "Ideal likelihood/count readout observes the exact endpoint function and hence the minimal antichain. Finite readout instead uses noiseless selectable rational endpoints in the named calibrated command coordinates.",
+    "Comparator uses the same hard pair, common policy, independent resets, fixed per-world error below one half, unconditional terminal correctness, and every independent vector charged from its first observation, including incomplete face-only words."
+  ],
+  "source_registry": {
+    "LIKELIHOOD_LOCAL": {
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/retained-skyline-likelihood/SOURCE_AUDIT.md",
+          "bytes": 1799,
+          "sha256": "96830def73a2e7600a90f8c5bab295e59e3cacd7d4edb62a715c125fb4f1a6bf"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-skyline-likelihood/SOURCE_BINDINGS.json",
+          "bytes": 736,
+          "sha256": "63bd6ae22842de99513e873fcf3ac5fe0af4efbafd2bdbc4ce057b25d0492fea"
+        }
+      ],
+      "reading": "Three named predecessor RESULT files read in full by author; new local derivations; no new external source search/body reading or novelty claim."
+    },
+    "COUNT_LOCAL": {
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-count-information/SOURCE_AUDIT.md",
+          "bytes": 1778,
+          "sha256": "7566656cd2e29eb3a6044514a86df92de554eee042ba4cd0a6b7465dbaceef83"
+        }
+      ],
+      "reading": "Retained-interior, exact-face and full-face KL results read in full by author; strongest comparator consumed with matched assumptions."
+    },
+    "FINITE_LOCAL": {
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/finite-skyline-readout/SOURCE_AUDIT.md",
+          "bytes": 1660,
+          "sha256": "cbdbf37f09510bcd97fa08af8c8dd62b249e796465bf5f895accfab20f8bd0eb"
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-skyline-readout-review/SOURCE_BINDINGS.json",
+          "bytes": 3199,
+          "sha256": "c586bbf302df5029300b16b226016485ffbcbf752871e488e1d3fe1da5468a28"
+        }
+      ],
+      "reading": "Author read full original count proof plus final comparator revisions and full face-KL result. Reviewer read full finite proof/revisions and scoped predecessor sections exactly as recorded; it does not independently re-prove inherited KL C2 asymptotics."
+    }
+  },
+  "external_dependency_registry": {
+    "NINTH_HARD_PAIR_AND_RETAINED_INTERFACE": {
+      "included": false,
+      "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate/RESULT.md",
+          "sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+          "binding_records": [
+            "finite-skyline-readout-review/SOURCE_BINDINGS.json",
+            "retained-skyline-likelihood/SOURCE_BINDINGS.json"
+          ],
+          "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/retained-interior-certificate/RESULT.md",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "included": false
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate/SOURCE_AUDIT.md",
+          "sha256": "fefdee68383cf0ea813182da8b918be831935774317e18ba609513191d5659f7",
+          "binding_records": [
+            "finite-skyline-readout-review/SOURCE_BINDINGS.json"
+          ],
+          "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/retained-interior-certificate/SOURCE_AUDIT.md",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "included": false
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information/RESULT.md",
+          "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+          "binding_records": [
+            "retained-skyline-likelihood/SOURCE_BINDINGS.json"
+          ],
+          "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/full-face-threshold-information/RESULT.md",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "included": false
+        }
+      ]
+    },
+    "NINTH_FULL_FACE_KL_RATE": {
+      "included": false,
+      "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
+          "sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+          "binding_records": [
+            "skyline-information-review/SOURCE_BINDINGS.json",
+            "finite-skyline-readout-review/SOURCE_BINDINGS.json"
+          ],
+          "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "included": false
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/SOURCE_AUDIT.md",
+          "sha256": "5028101157e52889aa845949e4dae7e2e71655bc5768312455056b0e5317cd3f",
+          "binding_records": [
+            "finite-skyline-readout-review/SOURCE_BINDINGS.json"
+          ],
+          "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/full-face-threshold-kl-rate/SOURCE_AUDIT.md",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "included": false
+        }
+      ],
+      "theorem": "KL(P1_minima||P0_minima) ~ 1/(2n^4), with matched exact-minima/unrestricted adaptive face-only started-vector lower bound Omega_alpha(n^4). Consumed, not newly re-proved or replayed."
+    },
+    "NINTH_RECONSTRUCTION_BOUNDARY": {
+      "included": false,
+      "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/readout-reconstruction-boundary/RESULT.md",
+          "sha256": "e6a82d4061b3e91af3c2b2a34bb4c836cdd5240caa1a95ff5d1b642b6971de50",
+          "binding_records": [
+            "retained-skyline-likelihood/SOURCE_BINDINGS.json"
+          ],
+          "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/readout-reconstruction-boundary/RESULT.md",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "included": false
+        }
+      ],
+      "theorem": "Observation-channel and reconstruction scope inherited; no universal comparison inferred."
+    }
+  },
+  "kernel_status": "NO_NEW_LEAN_THEOREMS_OR_REPLAYS",
+  "kernel_boundary": "All three new stages are written-proof-only. Ninth deterministic certificate kernel evidence is inherited by reference only, not extended to likelihood, information, variance, grid probabilities or asymptotics.",
+  "review_independence": "Separate internal mathematical reviewers. Shared parent derivation/attribution remains explicit; no external peer-review or independent rediscovery inference."
+}

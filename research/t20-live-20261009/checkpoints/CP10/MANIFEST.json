@@ -1,0 +1,207 @@
+{
+  "schema": "t20-checkpoint-file-manifest-v1",
+  "classification": "TENTH_INTERMEDIATE_PRESERVATION_ONLY",
+  "file_count": 40,
+  "files": [
+    {
+      "path": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 3758,
+      "sha256": "0dfbec213bac56d7fbfbd89d78058030e8d43910c0d99f981557256f37a21902"
+    },
+    {
+      "path": "EVIDENCE_BOUNDARIES.json",
+      "bytes": 3179,
+      "sha256": "448a2793c7beebe4d55bace892ba351252c256a84cb442d10ccfc85961ccb0fb"
+    },
+    {
+      "path": "INCREMENTAL_RESULT_SOURCE_EVIDENCE_DEPENDENCY_MANIFEST.json",
+      "bytes": 20474,
+      "sha256": "e786aeb2d858a83910e1f3e2a4786779ff85421337482a5c8ece582f1838817f"
+    },
+    {
+      "path": "OMISSIONS_AND_SOURCE_LINKS.json",
+      "bytes": 902,
+      "sha256": "139395e195df9a1f2917a0959fcdba90714ffeef4356e00bbb2715b9b95ed60b"
+    },
+    {
+      "path": "PACKING/CONTROL_PLAN.json",
+      "bytes": 3403,
+      "sha256": "f7e60b06d8895bdc6e7c6a4aa64029461f13dd22f97befb1eeedb8d9952928af"
+    },
+    {
+      "path": "PACKING/PREPARATION_STATUS.json",
+      "bytes": 363,
+      "sha256": "fad1189bf87b4e8164d67c01efe8c9eabdc2a8d5a7dceaff7001e045df1b9467"
+    },
+    {
+      "path": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json",
+      "bytes": 12552,
+      "sha256": "01c69b46bc539e5a2d5c3f4515cb880eca07980577478464707845f866656959"
+    },
+    {
+      "path": "PACKING/SOURCE_COPY_BINDINGS.json",
+      "bytes": 7802,
+      "sha256": "86cdc3cd32b73bc9fd672c0ff7d8255722689038cbc75ace924c04e3aa797df5"
+    },
+    {
+      "path": "PACKING/check_manifest.py",
+      "bytes": 3703,
+      "sha256": "2738a6fffd9ac95428e6d5f6bc213610563092da3169b19cfd97ab385d439dec"
+    },
+    {
+      "path": "PACKING/integrity_controls.py",
+      "bytes": 2865,
+      "sha256": "7b804921c63e4dc88c7d0a59469b1b6a81473cad89386cc629b51799364e947c"
+    },
+    {
+      "path": "PACKING/replay_python.py",
+      "bytes": 3365,
+      "sha256": "ddff83faa16705f0a70e7e896a6445a1482f4b98e0f9f4f41cd8f680d77b9ecc"
+    },
+    {
+      "path": "PACKING/safe_extract.py",
+      "bytes": 2643,
+      "sha256": "efdf833b72bd9e34325edef7d25ac7dbc6c0042503a5fcbb5b77a789ad192e71"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 6519,
+      "sha256": "88e89ef5e3965ab85bb8631861741d6be777a4c9ed921942a09c3e615e524364"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 2584,
+      "sha256": "5f9310e34626b32352e6f6d41ce352555d55c650e2d51fe4ea27d187c1b722ea"
+    },
+    {
+      "path": "requirements-controls.txt",
+      "bytes": 73,
+      "sha256": "0fe5b20ac4f0b2eee290dcbf6781a112284f8bbf1d9f85cbaceb8d7161fa170a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout/CONTROL_RESULTS.json",
+      "bytes": 1838,
+      "sha256": "21de5180ec9b7b5fa2bdcc3723af87f2daa7a9d7bdda09da7cf47e1a03064248"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout/RESULT.md",
+      "bytes": 12282,
+      "sha256": "6687a8f2f56290427297bba1cfef6c8c14a58878ffa0010805550f0cd632b0d5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout/SOURCE_AUDIT.md",
+      "bytes": 1660,
+      "sha256": "cbdbf37f09510bcd97fa08af8c8dd62b249e796465bf5f895accfab20f8bd0eb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout/controls.py",
+      "bytes": 3217,
+      "sha256": "10b6cf8278c254e67a1e8f61c96f6d8a1df5db4b22f16023d4933fec46d520c4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout-review/AUTHOR_REPLAY.log",
+      "bytes": 1933,
+      "sha256": "284d7e6c76e95b5b412c334117197d20bd04818c4bba8c42cf911efb27ab3ffc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout-review/INDEPENDENT_RESULTS.json",
+      "bytes": 435,
+      "sha256": "231a289a72a62b43f8952bb67aba5b47ae0043d5d28e287312b32f1c1875033c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout-review/REVIEW.md",
+      "bytes": 7305,
+      "sha256": "0111a2e0a649842cd5def5ddc8ce2f8350a20844a7c5ee51667fb03182df82d0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout-review/SOURCE_BINDINGS.json",
+      "bytes": 3199,
+      "sha256": "c586bbf302df5029300b16b226016485ffbcbf752871e488e1d3fe1da5468a28"
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-skyline-readout-review/independent_checks.py",
+      "bytes": 3407,
+      "sha256": "b55f7ace5994773f389bbef5d44090337dd34e2334895913f1e34129de13d57e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/retained-skyline-likelihood/ACTIVITY_LOG.json",
+      "bytes": 1440,
+      "sha256": "5206a27134ee50163c8a9a965c4293e0a9fbf891e50e852843445b70b49d4e0a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/retained-skyline-likelihood/CONTROL_RESULTS.json",
+      "bytes": 6899,
+      "sha256": "9d593577eda951f90327228cdc079ef22c0a776206c5063350e8cfcc686255df"
+    },
+    {
+      "path": "t20-next-frontier-20261008/retained-skyline-likelihood/RESULT.md",
+      "bytes": 17673,
+      "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345"
+    },
+    {
+      "path": "t20-next-frontier-20261008/retained-skyline-likelihood/SOURCE_AUDIT.md",
+      "bytes": 1799,
+      "sha256": "96830def73a2e7600a90f8c5bab295e59e3cacd7d4edb62a715c125fb4f1a6bf"
+    },
+    {
+      "path": "t20-next-frontier-20261008/retained-skyline-likelihood/SOURCE_BINDINGS.json",
+      "bytes": 736,
+      "sha256": "63bd6ae22842de99513e873fcf3ac5fe0af4efbafd2bdbc4ce057b25d0492fea"
+    },
+    {
+      "path": "t20-next-frontier-20261008/retained-skyline-likelihood/check_stdout.json",
+      "bytes": 6899,
+      "sha256": "9d593577eda951f90327228cdc079ef22c0a776206c5063350e8cfcc686255df"
+    },
+    {
+      "path": "t20-next-frontier-20261008/retained-skyline-likelihood/checks.py",
+      "bytes": 4856,
+      "sha256": "ace0a67be5a0608edf36517cea202e1e2b871a51514edb5cc36a4e45728e6b4d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-count-information/CONTROL_RESULTS.json",
+      "bytes": 15299,
+      "sha256": "3d8a274a736e5810873e201df969b4d2e8b454f0258e976c50bc1b542586cf08"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-count-information/RESULT.md",
+      "bytes": 10942,
+      "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-count-information/SOURCE_AUDIT.md",
+      "bytes": 1778,
+      "sha256": "7566656cd2e29eb3a6044514a86df92de554eee042ba4cd0a6b7465dbaceef83"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-count-information/controls.py",
+      "bytes": 3231,
+      "sha256": "66313d5de18868680418d8160e3a593a3a547938f0cdf96c117d015bbf0886c4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-information-review/CONTROL_RESULTS.json",
+      "bytes": 2348,
+      "sha256": "7a43f51120b2cc3d625499a1abc20989ab3929560ab81f4a4e74028383d9ba37"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-information-review/REVIEW.md",
+      "bytes": 10863,
+      "sha256": "76d3e6cffdd95992c47e9ccb3ddb9f273f73a8d7ed058ca10dadb5242453c3b3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-information-review/SOURCE_BINDINGS.initial.json",
+      "bytes": 1030,
+      "sha256": "15406e6893df89ec25afbeab89a03d426b44e96292848d9eff29de273c99d5e4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-information-review/SOURCE_BINDINGS.json",
+      "bytes": 1256,
+      "sha256": "e79c38c0aa40593087a5f6800e65b872959404705ba7fa2be2393dcec0bb5e84"
+    },
+    {
+      "path": "t20-next-frontier-20261008/skyline-information-review/controls.py",
+      "bytes": 2258,
+      "sha256": "8b63d410e203244ebdc5180ed8ba37df1022aac29ece192cfea35fb47c84cd3a"
+    }
+  ]
+}

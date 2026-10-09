@@ -1,0 +1,23 @@
+{
+  "verdict": "PASS: final mathematical report, source-specific kernel, independent controls and dependency identities reviewed",
+  "checked_utc": "2026-10-08T20:07:08.527098+00:00",
+  "author_directory": "retained-interior-certificate",
+  "artifacts": {
+    "RESULT.md": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+    "RetainedInterior.lean": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+    "controls.py": "8b88ebefafedf4afdee817f73420870648b5b162ffb0ad8e6699b4a2aab9dced",
+    "verify_kernel.sh": "fa3eb5e78bcbd956962ab55889868d74906bfd11305c99b201aa3a91a24585b7",
+    "CONTROL_RESULTS.json": "a3e4120b7146789bf5f076c1a3fe1ec6d98752a1719fcc9b7f5ab36bbc62c97f",
+    "SOURCE_AUDIT.md": "fefdee68383cf0ea813182da8b918be831935774317e18ba609513191d5659f7",
+    "NEGATIVE_CONTROLS.md": "3f12981aeee57e4830dd35c73b7656ad0ee979fd1a14e84401727abfc8887629",
+    "READ_FIRST.md": "7be48b3930d16883c45388938c2321d97ff03d7465adf2849c12f8f4663947da",
+    "KERNEL_DEPENDENCIES.json": "5c86cb97ff5484b15119996446e836a6716aff9e7cc70e71796128c6e90800a6",
+    "IMPORTED_MODULE_BINDINGS.json": "73e04cfdb187330947b6c2cd27e0472471d1bc37d9be5461c42eb22d678144c4",
+    "SOURCE_BINDINGS.json": "56149dac036d20695f3286dfc9e45ac8979a1306a731acceabc4e88e6ecaaab3",
+    "ImportInventory.lean": "240941371ef58576258cd8b879ab2d6119157d95e3b0f11156d027585fea0620"
+  },
+  "replayed_import_count": 1798,
+  "individually_rehashed_import_source_and_binary_files": 3596,
+  "compiler_runtime_and_metadata_files_rehashed": 11,
+  "scope": "Bindings verify exact local identities; not an upstream rebuild or physical/model validation."
+}

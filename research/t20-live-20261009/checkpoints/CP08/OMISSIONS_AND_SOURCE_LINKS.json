@@ -1,0 +1,519 @@
+{
+  "omitted_local_entries": [
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-493-contiguous-indexed-extract.txt",
+      "bytes": 33465,
+      "sha256": "4049d194ccf6c29b410b24d6154a32a531c9731cc3d5754913ef95906945a982",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-absence-indexed-extract.txt",
+      "bytes": 32561,
+      "sha256": "cf84d59d8d3073084c786a03cba16d6a3c9b33a7943bb21b3f74103369a75813",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-focused-indexed-extract.txt",
+      "bytes": 34326,
+      "sha256": "54d91647bb031986af2c29d30872db84b5e0285edbb98c7463f44acd2aece34e",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-functional-indexed-extract.txt",
+      "bytes": 30406,
+      "sha256": "1a49a084b84da5632b21d245037774165c52a0bbb1f6ebb107ef891b3921c0a8",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-law-domain-indexed-extract.txt",
+      "bytes": 30570,
+      "sha256": "206854f35ad0ca86baa71bdf1236e172ff319586d125c3ad1b3977fd63d3fb2e",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-p493-indexed-extract.txt",
+      "bytes": 18635,
+      "sha256": "6763f63cba82d7c924f1bdc63353fd395663cca73d69cd902a61358cb2581df1",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-p495-indexed-extract.txt",
+      "bytes": 19498,
+      "sha256": "9738c7326214b699d67e5dff43f4298cd764fb32dcd94fdfa7b5a7b5c7793577",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-p496-indexed-extract.txt",
+      "bytes": 20430,
+      "sha256": "46497b317848cfe2986c5c82b9b01f673e7b556f1fe6c99ca71040702e3d34b9",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-search-indexed-extract.txt",
+      "bytes": 34043,
+      "sha256": "a8c76a9a400367efd58da5ede62f9dc5b3aec76ddfc0f87db21533dad4334207",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-sec5-ed2-indexed-extract.txt",
+      "bytes": 32063,
+      "sha256": "20907e321ffc159fc6b59da460cf4d29ec1f6202d710b857132d15fc40beb7a2",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-sec7-8-indexed-extract.txt",
+      "bytes": 34938,
+      "sha256": "51aad90fd18efc3d73ac92b3e56f573be2905412f3ee60119935232a9d27bf53",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-sec9-indexed-extract.txt",
+      "bytes": 33825,
+      "sha256": "188971541f48b954fe3212834a36792f26e55e0ec5a6372457abadaa5ed927e7",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-supercomplete-indexed-extract.txt",
+      "bytes": 35182,
+      "sha256": "a257ca8146410cc250f661901105b2286f14c22871190a2d034b942ac222824f",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/source-images/dasgupta-p19.png",
+      "bytes": 507116,
+      "sha256": "dd3e8fd3c54930aa7e183266cabfffebf6c893342b6e5a08578177e7b07080da",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/source-images/dasgupta-p24.png",
+      "bytes": 456142,
+      "sha256": "e6a6442148caa067e665969a8234354401c7a67dab83f7955d7fd53280062581",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/source-images/dasgupta-p37.png",
+      "bytes": 583135,
+      "sha256": "c13d484bbdac6eaa169e6a891858178b90df3988def64e03f4e9fe0eaf41af44",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/source-images/dasgupta-p38.png",
+      "bytes": 609904,
+      "sha256": "4ed23a8846deb996e911d1e0e604ca99ca3ef3e1cfb66e602b15b81416ea5e5e",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-publisher-notes.txt",
+      "bytes": 23489,
+      "sha256": "41eb32b7a6a085df7d33600e649386d66119d39fbd5dce04b2edba9ac4b8ad9d",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-sec6-indexed-extract.txt",
+      "bytes": 35369,
+      "sha256": "6fd1ecf8ef8707411851e944aa56c4933a9295e8e1e25d23f559d4c0829e6bf0",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-sec7-indexed-extract.txt",
+      "bytes": 3391,
+      "sha256": "b695ccc2d0871530cb87cbb05ed9874fb8c3282b8fbafb20948a5a5f212239eb",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-sec73-indexed-extract.txt",
+      "bytes": 30388,
+      "sha256": "f18a73725a2162768c3b75f9c40b0ff7f6d931f61f887e90c869c0fc609d4ffd",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2009-individuals-candidate.pdf",
+      "bytes": 520134,
+      "sha256": "b336f711d358c894c9a5480bbae0f9f2d32c897d67b8cfa01e0476af74722108",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages1-10.txt",
+      "bytes": 34417,
+      "sha256": "08daf606ed59b90953cd4ee29162cda1986025aec8a731007a1c287d92cce46c",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages11-20.txt",
+      "bytes": 35842,
+      "sha256": "1b24503d14bb1540fcc96a18cefd1f1ca8351fc2ea09a1fd3e22227126521456",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages21-30.txt",
+      "bytes": 34964,
+      "sha256": "5faada100d0fcfec6e6735d39050a3d982bffd4712d6b3ebd219254c4a9d3580",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages31-40.txt",
+      "bytes": 42165,
+      "sha256": "20aac4586c1d1adfccadb9e39425b3e4bd9171c65b678dda4638966e80f5cc5a",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.pdf",
+      "bytes": 268941,
+      "sha256": "47b9ad8c841db60d840f7bbbfbbbb1c538d0c0e6c5db8d0105ad600dc1045989",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "bytes": 146041,
+      "sha256": "bd165592d56bfa08166861125343914e8dea5d10af82eb6aa5a0e82dbb69b3f7",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/morganti2015-journal-mirror.pdf",
+      "bytes": 562628,
+      "sha256": "f8a9546c849a38f8d7a842ac7401415b6940305f9eecaad31c3bda9584c2e299",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/morganti2015-journal-mirror.txt",
+      "bytes": 67913,
+      "sha256": "18b1d929e7b4d3215796200ae5d0e844011f24a9dc3223f6deba93250e64b3b0",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-001.html",
+      "bytes": 372056,
+      "sha256": "8e78e6cc9565303b04eb1730f04232f6f2c154f6e69a43a3ea95ae5a47fa44a4",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-001.txt",
+      "bytes": 373527,
+      "sha256": "327da51acaef60300a86208e805d98a756d437b3416c99e0668cad502c9273ac",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-003.html",
+      "bytes": 371067,
+      "sha256": "f7843d4429233f11313d77d129cf8c3ee556546d98b0b9873cf5a9463e80ce97",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-003.txt",
+      "bytes": 374854,
+      "sha256": "45e493f652a4a017a826016814bddc11b638e669ad7f25f713b25f178a579e40",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-19.png",
+      "bytes": 398515,
+      "sha256": "2c62625cf02934ee924049c74e569759e34adf4076215cf69ba2bb6cb129a6ba",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-20.png",
+      "bytes": 396862,
+      "sha256": "9e7eba40ce4f285f89b8a511ff9d63d3643386bf274dc5ced26e12495c0b9ae1",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-21.png",
+      "bytes": 339646,
+      "sha256": "1e219ad490ce408b28c223d4acfb9d898bb117762dad75b43c5cc875f98e802b",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-22.png",
+      "bytes": 326822,
+      "sha256": "2c7d92cca28ed004d1c5a651fa98b45ff1156c3dab1c6fe35d3f632333c28a05",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-25.png",
+      "bytes": 371695,
+      "sha256": "1207087d841586e03a15e052e09b9c40a0e97b443958818a96f356e837c81031",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-26.png",
+      "bytes": 249519,
+      "sha256": "300f25aed846e2e0b0e06a4699e17dc1a1e1c7b8a701ac701a1715c91e14e96a",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-27.png",
+      "bytes": 267457,
+      "sha256": "8b34b9c12043421b4e8d55a20f37078cc935d76739870dac80a27e435ce362ea",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-28.png",
+      "bytes": 312488,
+      "sha256": "b22a78c201d2d599444550ac7e1c07b6584ff7e4010269c3f3d79915bf971242",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-29.png",
+      "bytes": 361836,
+      "sha256": "579be2b642e860b0706efda8054f10022a890268f0d80c1ebb3a53c57a49c6f4",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-30.png",
+      "bytes": 375348,
+      "sha256": "27fc2bcc0fad84fcdcd2a807dcedce423a7d16311f08692889b2c94a7fa8d2da",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-31.png",
+      "bytes": 367945,
+      "sha256": "57cb41632c6c80dc1e75f2196893280c3dc7ab55a3839c8021884ac89a913a11",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-32.png",
+      "bytes": 414742,
+      "sha256": "eb53367eb7c0595c222f8541abb26fa9fc61df6e4b8723d8a749426c7c54d49e",
+      "reason": "SOURCE_PAGE_RENDER"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/dasgupta2009-layout.txt",
+      "bytes": 110364,
+      "sha256": "b203658f64ad51ad396fc80100076109b64e26431f1f5de3304a3f109cb81134",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-01.txt",
+      "bytes": 2149,
+      "sha256": "8efd8ae5326e207ede9f357f9d42c9a325413ff4d8a990c44b9ad4cd797cc2eb",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-02.txt",
+      "bytes": 3711,
+      "sha256": "a03ac6759977d5a12145d8fa89cba3204f529662d263e3e8efcf3988c1def027",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-03.txt",
+      "bytes": 3309,
+      "sha256": "f0ced9eb80d9298d09a541091a601872e0efe7ae8b1105325f568093f9493a44",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-04.txt",
+      "bytes": 3966,
+      "sha256": "6f75b3cc0e3a5a978abed0cfa753429dfd3657431b79de9af3a3ba0d20bde6c0",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-05.txt",
+      "bytes": 4229,
+      "sha256": "eb916a39e4ab66267d66025a7ca2077e994a34e7a14139eb02e605feb278f60a",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-06.txt",
+      "bytes": 2986,
+      "sha256": "a9b22242a514620c8d10aa82edbbccd0259a581cedf092188a7f9af7c2e882ac",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-07.txt",
+      "bytes": 4029,
+      "sha256": "b00337947d69b347cf6246037b097108d428944abdade0773245449f9c10ee4d",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-08.txt",
+      "bytes": 3930,
+      "sha256": "b07b0e59e90e3866ea9852c69034b0e452088e9a00408e18ea90a5a148cc069b",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-09.txt",
+      "bytes": 3257,
+      "sha256": "fb2ce326f6a23b9707da518c476135d334453f22d7cf48ca352539a0862f56d2",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-10.txt",
+      "bytes": 3514,
+      "sha256": "97c5d8b579d916a20e88d9d0550bf1ca7ecb6f4204e3867c236a0f0326659b81",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-11.txt",
+      "bytes": 3656,
+      "sha256": "7b8318e43279b2c5539f8f67888e448d00b2587ae9c0bfd7c235b68f508b812f",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-12.txt",
+      "bytes": 3951,
+      "sha256": "a934bc658e942c93c22140e34466c19608c44e35e63333640699a87d7d29c315",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-13.txt",
+      "bytes": 3572,
+      "sha256": "a570c406e905bfcb8915b96a104d9594ae14b80db05fba8761630c472da7f0aa",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-14.txt",
+      "bytes": 3725,
+      "sha256": "36ac5bc2b3e158331df8cb879d69f7fa978f9d2aad4e53a87ac0568c63f42bc5",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-15.txt",
+      "bytes": 3772,
+      "sha256": "611614a658225b0a966ac67acc02de3bd5fc29191324f290d187b2c2718b0e12",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-16.txt",
+      "bytes": 3690,
+      "sha256": "12c58466f5691f48a724982a804d801bafd482bdf837004dc2f8159d46306c97",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-17.txt",
+      "bytes": 3228,
+      "sha256": "0c3e73d7fe79a5a1da60ed2710ec0bd573a9dc269dab567ee85de10984df5084",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-18.txt",
+      "bytes": 3614,
+      "sha256": "9110f2d9ac644cb4ac275ab1b534495dcaa1d38c84f95ceb6ada2a8876a180fe",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-19.txt",
+      "bytes": 3503,
+      "sha256": "8b8d5fd9517e043446f4c7c5edf0063e7a78f25aae447cb3ad99fc558dda7a22",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-20.txt",
+      "bytes": 3584,
+      "sha256": "2f4c6c97d717477b41e4c965f5437eadc5f8d5736a626d4b0a01921f28322f9f",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-21.txt",
+      "bytes": 3049,
+      "sha256": "94f9d7e2911625043cb0dd24e28a40e4eae42418e655f24f5215fdade3a46097",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-22.txt",
+      "bytes": 3176,
+      "sha256": "5f611acb9d06526375e36fc0c1dd286d715f3040e8c62aff0e4a4e0158ccf643",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-23.txt",
+      "bytes": 3027,
+      "sha256": "23294053ef1a286965dd5b346a394e9031729d48663432554a8990cccb82aa61",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-24.txt",
+      "bytes": 3271,
+      "sha256": "a505af129e773fd785d43aa5c6e6d11e310377a8c85bd0742991a89df1a14423",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-25.txt",
+      "bytes": 3512,
+      "sha256": "eeb48f4f165a460bf843a4c72c0e66ce912feb0d0f751dd4e4f8c248882cdc90",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-26.txt",
+      "bytes": 2155,
+      "sha256": "835fb00e06d48b401abaef9516b157448b94f782a8fb082ab6ace1c085bcf5e8",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-27.txt",
+      "bytes": 2195,
+      "sha256": "537d69bf326cb992531e2aadf2730119f9994ebfa2f0efaffee54047f3ea1455",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-28.txt",
+      "bytes": 2723,
+      "sha256": "dd3c1e1fe14b337f59b47c6c83f46c5efa226aa722e60974e758384dcb57e357",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-29.txt",
+      "bytes": 3235,
+      "sha256": "371e139384895244995960eb8a9d33b6a1ff911d93db990156b45bd1b3db3973",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-30.txt",
+      "bytes": 3258,
+      "sha256": "b115ff36a07438647b9c8c83bd9ef8fa78d94b2fa15dd557c74d7437e75d0198",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-31.txt",
+      "bytes": 3216,
+      "sha256": "4cb6cb7490f734ad88ed8c01393c40ff24d43005cdea481f67b6d8ef7167c41b",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-32.txt",
+      "bytes": 3524,
+      "sha256": "df8a0d9419a79eeec76c03f0a90ff04f4cf40319aac6796f9a49b6bec815e80c",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/page-33.txt",
+      "bytes": 2615,
+      "sha256": "e76bf7cd30394fecc9cb8e412e19db90eab30b94a419e8762b10958fc88a43a7",
+      "reason": "SOURCE_BODY_OR_RAW_RETRIEVAL_OMITTED"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/qualitative-tensor-transport/__pycache__/controls.cpython-312.pyc",
+      "bytes": 30097,
+      "sha256": "dc6bf42848b1ea18a1ac49fbea3e49ed2db0e748272aa849424a8e32cfeaf306",
+      "reason": "CACHE"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/checkpoints/robust-replay/DELIVERY_IDENTITIES.json",
+      "bytes": 861,
+      "sha256": "ea4ca60d8e88d733bc900f59d88bfbfb3615a94c81039228db51a686b14812ec",
+      "reason": "UNNEEDED_PRIOR_DELIVERY_METADATA_OMITTED; archive identities remain in prior-checkpoint map"
+    }
+  ],
+  "excluded_categories": [
+    "Modern journal PDFs, full extracted text, page images and raw indexed primary-search dumps",
+    "Raw source bodies and HTML, even where historical public-domain originals",
+    "Private correspondence and credentials",
+    "Compiled caches",
+    "All seven earlier ZIPs",
+    "Entire active full-face-threshold-information investigation and its candidate note",
+    "Historical merged integration corpus"
+  ],
+  "source_links_and_read_limits": "See immutable SOURCE_READS.json and READING_LEDGER.json records plus the incremental source registry. URLs and hashes retained, full source bodies omitted.",
+  "active_excluded_successors": [
+    {
+      "path": "full-face-threshold-information",
+      "status": "ACTIVE_EXCLUDED_NOT_EVALUATED_OR_CREDITED"
+    },
+    {
+      "path": "root-later-operations/FULL_THRESHOLD_INFORMATION_CANDIDATE.md",
+      "status": "EXCLUDED_WITH_ACTIVE_INVESTIGATION"
+    }
+  ],
+  "public_domain_context_exception": "existential-law-source-bridge/PASSAGE_NOTES.md retains bounded historical Arabic passages with the author’s interpretation and textual-variant limits; it is not a modern journal full text or new whole-source read.",
+  "new_source_reading_credit_from_packaging": false,
+  "new_research_time_credit": false
+}

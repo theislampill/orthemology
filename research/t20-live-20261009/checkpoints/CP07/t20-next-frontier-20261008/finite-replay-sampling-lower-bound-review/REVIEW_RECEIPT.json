@@ -1,0 +1,341 @@
+{
+  "created_utc": "2026-10-08T16:45:32.892248+00:00",
+  "verdict": "PASS",
+  "blocking_findings": [],
+  "scope": "Fixed paired-face action at t=1/[3(n+1)] plus independent fresh endpoints; shared H_c Joe alternative m=n+1; 0<alpha<1/2; unconditional terminal correctness; potentially infinite stopping; expected replay count under Joe only.",
+  "author_artifacts": [
+    {
+      "path": "finite-replay-sampling-lower-bound/MANIFEST.json",
+      "bytes": 1664,
+      "sha256": "3f7db7a3045f45135af93f82130791635cb56c808caf9aae89d137966095fa23",
+      "snapshot": "author_snapshot/MANIFEST.json"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/EXACT_CONTROLS.md",
+      "bytes": 2055,
+      "sha256": "ee33ab16aa16e935f8d028913b8d2c563e0a5359912ebc5f71127a2598977449",
+      "snapshot": "author_snapshot/EXACT_CONTROLS.md"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/PROSPECTIVE_EVENTS.jsonl",
+      "bytes": 563,
+      "sha256": "921557295ca543c6a124e9675152b1f3148490b4733c6c03a538ddf197f37731",
+      "snapshot": "author_snapshot/PROSPECTIVE_EVENTS.jsonl"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/READ_FIRST.md",
+      "bytes": 1304,
+      "sha256": "cbe81fac3e555730bbb27ed53e62e33b09aa6773fa023ef453d4942eaef986c1",
+      "snapshot": "author_snapshot/READ_FIRST.md"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/RESULT.md",
+      "bytes": 14735,
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26",
+      "snapshot": "author_snapshot/RESULT.md"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/SOURCE_AUDIT.md",
+      "bytes": 7131,
+      "sha256": "75ef486b0458f2e95dc70ff9cafd9dd0cc6285bfc1e2f76f74df53460724a681",
+      "snapshot": "author_snapshot/SOURCE_AUDIT.md"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/SOURCE_BINDINGS.json",
+      "bytes": 9703,
+      "sha256": "f642a4a2214d76d50edfbaad21d8356a02e0f723ac8db304d92dd205abd6375a",
+      "snapshot": "author_snapshot/SOURCE_BINDINGS.json"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/exact_controls.py",
+      "bytes": 6905,
+      "sha256": "2acf221085fc8f0263041e7adbf129e828e4c93a877a5ee0668729bcf6b84901",
+      "snapshot": "author_snapshot/exact_controls.py"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/results/exact_controls.json",
+      "bytes": 25985,
+      "sha256": "3eadf7e16d2c499d9b405f3186a4ccee9072ab34e4b6f0b3776bcc4bb0037ac2",
+      "snapshot": "author_snapshot/results/exact_controls.json"
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/results/exact_controls.log",
+      "bytes": 1176,
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8",
+      "snapshot": "author_snapshot/results/exact_controls.log"
+    }
+  ],
+  "prerequisite_sources": [
+    {
+      "path": "dependent-gate-transport/ADDENDUM_MANIFEST.json",
+      "bytes": 467,
+      "sha256": "66a631d04cfe92964aaf8829f3668e362b589004d1c1c66dba287c4155513716",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/EXACT_CONTROLS.md",
+      "bytes": 2062,
+      "sha256": "463b14ece2b32e3004c9c9bc373664803a6daa81ee6e20210406a849808261fc",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/MANIFEST.json",
+      "bytes": 1809,
+      "sha256": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/READ_FIRST.md",
+      "bytes": 1231,
+      "sha256": "48ae64facbc6556c6f4346858f74a3a0f0049077c9d11e9adfbb0fc8c0d05be4",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/RESEARCH_EVENTS.jsonl",
+      "bytes": 650,
+      "sha256": "3a53862de5488ae43923c32d7ff55d942a55d617444790e9473c0ffb57cc10e8",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/RESULT.md",
+      "bytes": 15467,
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+      "review_read_scope": "Mathematical source inspected in this review"
+    },
+    {
+      "path": "dependent-gate-transport/SEMANTIC_GUARD.md",
+      "bytes": 1792,
+      "sha256": "0fbd40f05cb115621d367a220eb1bdc754a218e6fd6b84f8d5e4c63af8dbd924",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/SOURCE_AUDIT.md",
+      "bytes": 7007,
+      "sha256": "187867e9e99c74e1897b570d6101106a2b6a65818cbf1126ed38441af53da90d",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/SOURCE_BINDINGS.json",
+      "bytes": 6234,
+      "sha256": "d0168bae91d619e795e50326caaf91e6a19df0e5cb84f8b1e1562a53646c5c0a",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/exact_controls.py",
+      "bytes": 6916,
+      "sha256": "c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/results/exact_controls.json",
+      "bytes": 18639,
+      "sha256": "cb68c4936ac039a7046a411d717078e1212006fbabb0fd8620ef98bf679779db",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/results/exact_controls.log",
+      "bytes": 1381,
+      "sha256": "a9d0a69aa7cf1cdc25bc24bea0e7c46d8b2b27a777aad0b6ba75808cbdf134f7",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "dependent-gate-transport/sources/SOURCE_READS.json",
+      "bytes": 2114,
+      "sha256": "dae0993624569e077dd96def3e52d243b222f0dd5a6a94475a05cc5115d195b5",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay-review/REVIEW.md",
+      "bytes": 6960,
+      "sha256": "812eb02988e1e2e695e71fcdead1debbd20a9525570b5f3eb68c26b601af208e",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay-robustness-review/REVIEW.md",
+      "bytes": 13318,
+      "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf",
+      "review_read_scope": "Mathematical source inspected in this review"
+    },
+    {
+      "path": "finite-panel-replay-robustness/EVENT_RECORD.json",
+      "bytes": 2138,
+      "sha256": "84d2e7557035f64728dff9bd9f7fe2bc20dd1dfe0fc638dd4f1fba078901b1ee",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay-robustness/EXACT_CONTROLS_OUTPUT.txt",
+      "bytes": 2449,
+      "sha256": "3bf3e5aa977563653ad182a1c63f0c68b52ecb8f36d5c517ae0199a507fa8b05",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay-robustness/MANIFEST.sha256",
+      "bytes": 1225,
+      "sha256": "4c7934a6eac9c3412dfb3a5f982c6fe0dcdc94e80f43e0ed75b36eb3b4db386d",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay-robustness/RESULT.md",
+      "bytes": 12263,
+      "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe",
+      "review_read_scope": "Mathematical source inspected in this review"
+    },
+    {
+      "path": "finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+      "bytes": 3776,
+      "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay-robustness/VERIFICATION.md",
+      "bytes": 2721,
+      "sha256": "539badb30aa96eb4c16d630e080e4e4fb8ec626de4d11e062957e49303f21551",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay-robustness/exact_controls.py",
+      "bytes": 4202,
+      "sha256": "76e2f5b429966995b5dec93ffd5576f7a0168d37733132faba2793cc00a6ace7",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay/EVENT_RECORD.json",
+      "bytes": 1251,
+      "sha256": "1537019ced01d70638a737127261845249ab7b53860001f2cb335a6b4801f1ae",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay/EXACT_CONTROLS_OUTPUT.txt",
+      "bytes": 2485,
+      "sha256": "ac4ccc9d9f475e5ed401f2682f9a938e5c75cf05d734d87e1a7b4f99414fc499",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay/MANIFEST.sha256",
+      "bytes": 948,
+      "sha256": "03a2b836250eb1b77eb99e3214ebcaff8ecf2e2748442d28bca6851c6a5b46d3",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay/RESULT.md",
+      "bytes": 10261,
+      "sha256": "327b6fb25944ac90e7ecd6010a427993b69400fbdc9b79928d731120b6d62243",
+      "review_read_scope": "Mathematical source inspected in this review"
+    },
+    {
+      "path": "finite-panel-replay/SHARED_MARGINAL_BOUNDARY.md",
+      "bytes": 3986,
+      "sha256": "3d55f739d398ed1b4b28253cdb5db34ec9b32d46415e14750a612e35f43b4788",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay/SOURCE_REVIEW_BINDINGS.md",
+      "bytes": 3082,
+      "sha256": "83df5ebbbf0717d09392af28d5a7ca77fcfc783dc7f13484c586d157d086faac",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay/VERIFICATION.md",
+      "bytes": 1946,
+      "sha256": "6a335e09623ae4d446a0f820b37862077dd3903cec3d6ceeb31fac17c34ad279",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "finite-panel-replay/exact_controls.py",
+      "bytes": 4176,
+      "sha256": "04cffc5e5d694deb58f64e69f60479afd4a847234b75616c9f5c702d18e72a8b",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/EXACT_CONTROLS.md",
+      "bytes": 1767,
+      "sha256": "f0f438a4f99c5a2fef5b7f40384747c46f1454cfb1b719b4cb96dd6fa1d9b16b",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/MANIFEST.json",
+      "bytes": 1857,
+      "sha256": "f58c75e855e51be1bf4818b2b4ea6a91b1b5e685cbd45cfe304e9c3627fcbf53",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/PROSPECTIVE_EVENTS.jsonl",
+      "bytes": 631,
+      "sha256": "e6f1356fafe89886601cf0951278be91409db3fd030ddd21c7ccc356e04def06",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/READ_FIRST.md",
+      "bytes": 1522,
+      "sha256": "ecae3eedf6b01f76bd31b039826c932f5418e9d3cf3a5679826c18f4dcf6a641",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/RESULT.md",
+      "bytes": 15218,
+      "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/SOURCE_AUDIT.md",
+      "bytes": 6780,
+      "sha256": "81e922088053db364802826927a9ba042dd5910f96974b9d21bebe5e691b3416",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/SOURCE_BINDINGS.json",
+      "bytes": 7996,
+      "sha256": "adfbc884c980593876b941e3b8c7327ac5294623a0e5d4463001aa556d5e7a7c",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/exact_controls.py",
+      "bytes": 7158,
+      "sha256": "0e43b8b3d5dc15929e79dae69e90ea8f06091477a181f5e1a64d503a24e947b6",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/results/exact_controls.json",
+      "bytes": 3717,
+      "sha256": "060ed3aae850901e96d00a59b2b42f10e7c3e933628cd97e7503b8368b656596",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/results/exact_controls.log",
+      "bytes": 1257,
+      "sha256": "808a51e1fae31562dece66d76ff7c41aef73f571319cf207093862a336dd156d",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    },
+    {
+      "path": "same-threshold-replay/results/predecessor_verification.json",
+      "bytes": 556,
+      "sha256": "bebb17eace4e5bed8431fa6d8daed38d92c53ec568c7557cf22b2eac60e1c817",
+      "review_read_scope": "Checksum verification only; not an independent full-content read claim"
+    }
+  ],
+  "independent_controls": {
+    "status": "PASS",
+    "assertions": 4922,
+    "actual_Joe_instances": 36,
+    "adaptive_surrogate_prefixes": 5,
+    "replay_json_and_stdout_byte_identical": true,
+    "limitations": "Supplementary exact controls, not finite exhaustion of universal proof or empirical validation"
+  },
+  "author_control_replay": {
+    "status": "PASS",
+    "assertions": 2043,
+    "families": 27,
+    "isolated_directory": "author_snapshot",
+    "json_byte_identical_to_frozen_author": true,
+    "stdout_byte_identical_to_frozen_author": true,
+    "performance_change_reviewed": "96-bit outward probability and ratio enclosures preserve certified log inclusion"
+  },
+  "proof_independence": {
+    "derivation_recorded_before_author_RESULT_read": true,
+    "record": "PREFREEZE_DERIVATION_RECEIPT.json",
+    "candidate_and_constants_supplied_by_parent": true
+  },
+  "external_read_scope": "Kaufmann/Cappe/Garivier 2016: targeted Lemma 1 and Appendix A.1, not whole-paper reading.",
+  "verification_recovery": "Initial supplementary panel-manifest traversal used the manifest directory rather than its declared parent-base working directory. The manifest contents established the path contract; sha256sum -c from the parent base and corrected path binding both pass. No mathematical assertion or payload hash failed.",
+  "boundaries": "No global instrument optimality, every-world expected-cost claim, practical/physical capability, source-level original independence, empirical validation, integration, checkpoint inclusion or T20 closure."
+}

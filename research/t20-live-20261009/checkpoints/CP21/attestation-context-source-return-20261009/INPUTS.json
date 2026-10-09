@@ -1,0 +1,301 @@
+{
+  "currentness_search": {
+    "exclusions": "Delivery/checkpoint copies treated as duplicate history; source-body keyword searches are retrieval only. No exhaustive archive or whole-corpus reading claim.",
+    "finding": "No later verification located; later testimony findings read and retained.",
+    "roots": [
+      "recovery-t20",
+      "t20-next-frontier-20261008",
+      "root-resumed-research-20261009",
+      "other visible sibling markdown records"
+    ],
+    "terms": [
+      "11:301",
+      "11:302",
+      "11/301",
+      "11/302",
+      "Majmu",
+      "Majmū",
+      "301–302",
+      "Ameri",
+      "attestation",
+      "testimony"
+    ]
+  },
+  "date_utc": "2026-10-09",
+  "edition_control": {
+    "ameri": "Rawasikh first1445/2024 verified PDF6;648 pages",
+    "exact_cited_1995_impression": "Not physically collated; electronic descriptor names1416/1995",
+    "qasim": "King Fahd1425/2004 imprint PDF2;copyright1415;728 pages;PDF positions agree with printed301–302",
+    "wafa": "Dar al-Wafa third1426/2005 imprint PDF4;395 pages;old302 at typeset166–167"
+  },
+  "inherited_inputs": [
+    {
+      "bytes": 6211,
+      "path": "recovery-t20/addendum/AMERI_SCREEN.md",
+      "sha256": "25bf973f45b71ad1d4f5e4234faa4997d420078acabfba2e15d2d842657c2841"
+    },
+    {
+      "bytes": 17973,
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/attestation-intention-recovery/RESULT.md",
+      "sha256": "eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c"
+    },
+    {
+      "bytes": 11409,
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/IMPLICIT_RESULT.md",
+      "sha256": "659cdc835270528214736e1cbca65709b6f1c5e9ecbf6cbddf21ffe937e75dcb"
+    },
+    {
+      "bytes": 14617,
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rival-review/implicit-review/REVIEW.md",
+      "sha256": "65ff08c65868b42d7b284e65f5a06b7b969bde6cfc5fcefa035452244a730f71"
+    },
+    {
+      "bytes": 2790,
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/attestation-intention-recovery/INPUT_BINDINGS.json",
+      "sha256": "963f62961ce2b6b16113ec15cae9cb0afdd1b8d288e31833395245700c60d60c"
+    },
+    {
+      "bytes": 3693,
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rival-review/SOURCE_BINDINGS.json",
+      "sha256": "d50c539038fb49ccea5bf375280309f3620980273d76fbc7449702088e1819d0"
+    },
+    {
+      "bytes": 5610,
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-resumption/testimony-continuation/SOURCE_THEOREM_MAP.md",
+      "sha256": "808278f21f07d027073e469f2d9898a7cc1fc992ad93b108c4f45aea1069409f"
+    },
+    {
+      "bytes": 15022,
+      "path": "t20-next-frontier-20261008/reference-acquisition-audit/ASSESSMENT.md",
+      "sha256": "c1fe1a2d66feb8588c747549c12ee1f916a2f0a8b5680d9fcc8f030449fcd5c1"
+    },
+    {
+      "bytes": 4144,
+      "path": "t20-next-frontier-20261008/reference-acquisition-audit/INDEPENDENT_CHALLENGE.md",
+      "sha256": "d096f12b1a5238a628412e57f38af19b24fbdd6ed034a49f7aa185923f727b7a"
+    },
+    {
+      "bytes": 2812,
+      "path": "t20-next-frontier-20261008/reference-acquisition-audit/RESEARCH_BOUNDARY.md",
+      "sha256": "74aa888ef3b2c11186e94577e78dccd3c18b37f990e6355fd1ec2769a7a2d371"
+    },
+    {
+      "bytes": 5250,
+      "path": "t20-next-frontier-20261008/veracity-crosscheck/SCOPE_FINDING.md",
+      "sha256": "2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e"
+    },
+    {
+      "bytes": 15087,
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/SCOPED_AUTHORITY_APPRAISAL.md",
+      "sha256": "e64b4946c0bf437502c145fce5a7425b82692d036da6360883d023384488393a"
+    },
+    {
+      "bytes": 1464,
+      "path": "t20-next-frontier-20261008/root-audit-addenda/AMERI_TARGETED_READ.json",
+      "sha256": "61ee4c7836ae69a17c5a785b4d527db7bbbea547fed6104bb6073dba3f3cbcba"
+    }
+  ],
+  "inspected_image_controls_excluded_from_deliverable": [
+    {
+      "bytes": 69555,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "26e2df1cb8edffeacfc0847f1054d9dcf5eec107be1752794b46805c7b1eabf8"
+    },
+    {
+      "bytes": 239499,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "e801075d66c04c71881cc784d742996f7ed1b3e1bb1efd0602c1c038458a4a52"
+    },
+    {
+      "bytes": 267859,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "8fb69d8d5485833a1398855e4c428c42961c687ada532410e269a60fae34bfc5"
+    },
+    {
+      "bytes": 282703,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "6ae8bc30e045b1162f65617b3437f383e57593b135a8bceda96c85bff36d8d08"
+    },
+    {
+      "bytes": 323176,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "4da6adea9612de81140f25019c821c83b91e65affb03bbbd096cdb1c643f0d66"
+    },
+    {
+      "bytes": 231701,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "36211e88a8d3bbe466468dc27eb9b28c1c181beabac26940a5e19f0f31039aa0"
+    },
+    {
+      "bytes": 150966,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "e211b9c879428eb2424f799f2ce612ea8be910bccc23d925e689dafc0adf57b2"
+    },
+    {
+      "bytes": 162305,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "a025ddd0aa9dcbb76d4935db2d03a2c167c5d997978ab67a9d63d96bdbb67f96"
+    },
+    {
+      "bytes": 168315,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "9636cad0364882bbe57549b8c8ff3889e79a3c1e2136a3ab25539c5b55c2b774"
+    },
+    {
+      "bytes": 34697,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "911bcebbdf2ab3c33fcc8740fed98a7e37fab569a55f63897d8df625c33b6a25"
+    },
+    {
+      "bytes": 7604,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "c17ea3473e09bada6d80d258b1b994f2f6806f4c00581c6150a9883882cf519e"
+    },
+    {
+      "bytes": 257449,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "9e52374aa90e7bfdb9ccd21239e13bec665d712eceefc2698f8d632fce0de3e6"
+    },
+    {
+      "bytes": 275442,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "166278721404cd83df3b337c2e672f5d5a239aaf06e8ea0d0e754d66733b2e27"
+    },
+    {
+      "bytes": 274912,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "4d9cc64ccf84a53e7255cdda62e5f507c3b9f33a599298f24df52b3caee53f2d"
+    },
+    {
+      "bytes": 267691,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "6bc973f2b10db6d0879361dcff3b4e7244bea98d0aa36efcd692b045c5d9a510"
+    },
+    {
+      "bytes": 307351,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "7ece9feaa228855cc2942d7ecbe696262181efd1425b95fe3559accdcb560378"
+    },
+    {
+      "bytes": 269987,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "e1608766628b7828f30b994ea941ada35db6d78b08b7b1ef1a05e22856e9dee1"
+    },
+    {
+      "bytes": 44305,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "e20b057ec02911c5f689e96a01b1f34ea79ca5a88cf520ac8df30702bbde340d"
+    },
+    {
+      "bytes": 20524,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "b5ca4c9c6bcdb3cd93a8649094acb6271b47c88e9e86f3808465cd02f1a88798"
+    },
+    {
+      "bytes": 19720,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "5433df307e5b04a7c7c63c98ed67c19f946872a5d6acb05628b6801275af1e1f"
+    },
+    {
+      "bytes": 29100,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "a3d7e1ceaef46f8ef147433cfda79f983de47782bed7c0d66a35ddec80ad6dce"
+    },
+    {
+      "bytes": 110641,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "62a96ff190057d71a1fd6378cee10bac04b38c9c5ad58131359ce3246b881efc"
+    },
+    {
+      "bytes": 114827,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "c205d84d097d115838e14b2fd9bed8142badbf4b51169babc49ba464bb34c5f4"
+    },
+    {
+      "bytes": 106380,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "b85b3fde61d41f698e372550fb10bf921d125c1d34f504edb518fbefd213e215"
+    },
+    {
+      "bytes": 101170,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "58e95b84a41ed10a55882229eab422fc45fb823b8d761aa35454ec453732ef7b"
+    }
+  ],
+  "no_credit": [
+    "No new programme-first reading claimed for Ameri39–60",
+    "No new Nubuwwat primary-page credit",
+    "No tests or Lean replay performed",
+    "No real-world experiment",
+    "No historical or demonological verification",
+    "No whole-book read",
+    "No new independent witness merely from multiple editions"
+  ],
+  "retrieval_failures_and_recoveries": [
+    "Old author URL /books/baraheen.ar.pdf returned404; current catalogue-linked URL succeeded.",
+    "Web screenshot of Qasim PDF returned cache miss; direct linked PDF download and local render succeeded.",
+    "An indexed third-party catalogue labelled the linked Wafa scan King Fahd; actual title/imprint corrected that attribution."
+  ],
+  "scope": "Read-only bounded attribution and source-context return; writes only this result directory and /tmp source intermediates. No integration, closure, outreach, historical verification or new model.",
+  "source_intermediates_excluded_from_deliverable": [
+    {
+      "bytes": 42750,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "57892f4cfffbbd5fe11de7c06a7456400932f0f821acc4e086225345d7ea0d3e"
+    },
+    {
+      "bytes": 15034452,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "c1c3c2a49561a2957574bb57e2b490fd7e09f25118a252d550a87589f30c14d7"
+    },
+    {
+      "bytes": 1457,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "f093da3f0757b34a5b8e7be6b0d1d651cefb6d7f91d5bc44ece10d2d1eefc097"
+    },
+    {
+      "bytes": 97652,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "e741e9ed2830eced70abac17de8f3f929fb41ced2ea33ee91f84e150b9dcfa55"
+    },
+    {
+      "bytes": 86072,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "449ef37f7aae310132b3dffab56f8970c2ad36e63a26a37c4cdc8ea37a7be9c6"
+    },
+    {
+      "bytes": 628936,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "bb35207c6174c300ea7c2ddc037502b6ce0ef5df26a965709e9292c56dfd7a92"
+    },
+    {
+      "bytes": 489765,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "b93ccdcf9fe8e8a86b31850c5e00ddaaa690f525137e7cb9e758a16b57b537af"
+    },
+    {
+      "bytes": 8554512,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "231d243da6354d198167d5d07fdebb522db09f51f76119b7bace993b174d1fbf"
+    },
+    {
+      "bytes": 6624818,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "db8619a108b5061353637b76e3892285e43ae45eab7b5b3fefb2e18dbbc45cc4"
+    },
+    {
+      "bytes": 142861,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "775772708938cecdd6f41cf8c254c790741ec4821f0fd9fa8d6feb6a57dd7f60"
+    }
+  ],
+  "urls": {
+    "ameri_catalogue": "https://almobadarah.com/publications/book-4",
+    "ameri_current_pdf": "https://almobadarah.com/uploads/books/3fdd5a732011fbbb7e1de818.pdf",
+    "electronic_edition_descriptor": "https://quranislam.github.io/fatwa/ibn-taymiyyah/",
+    "majmu_electronic": "https://quranislam.github.io/fatwa/ibn-taymiyyah/fatwa173.html",
+    "qasim_catalogue": "https://a-alqasim.com/books/majmufataawa_ibntaymiyyah/?vol=11",
+    "qasim_pdf": "https://files.a-alqasim.com/books/AbdurRahmanIbnQasim/MajmuFataawa_IbnTaymiyyah_11.pdf",
+    "wafa_pdf": "https://archive.org/download/FP70716/11_70721-1.pdf"
+  }
+}

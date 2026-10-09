@@ -1,0 +1,54 @@
+{
+  "status": "Bounded written result independently accepted after scope correction; no programme closure",
+  "accepted_result_sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+  "files": {
+    "INPUT_BINDINGS.json": {
+      "sha256": "856121ebb6874d312bcbfba205a117034d444117c94cc64724a815c02c77132f",
+      "bytes": 8692
+    },
+    "VERIFICATION.json": {
+      "sha256": "ecbd6c6b8723f64bdd150cf2aea1983633b3034b3cb6e84322780c76e0794f04",
+      "bytes": 4925
+    },
+    "RESEARCH_ACCOUNTING.json": {
+      "sha256": "baf4efc014253d1eb1e913ecc13aef87133f9832852e8d234f82b8f4f3a7ebed",
+      "bytes": 511
+    },
+    "CORRECTION_RECORD.json": {
+      "sha256": "46d5eb48901cf27ab28a01ff2d282cc12930ac7ebc8d1f3f9661ec6db5cbc158",
+      "bytes": 1718
+    },
+    "REVIEW_STATUS.json": {
+      "sha256": "3b5016e20204c0418a9eccea369ec53816a467c4f79dc61669fe6403b497b986",
+      "bytes": 758
+    },
+    "READING_LEDGER.json": {
+      "sha256": "9e547f0ad94eda92afd86a5f4c1c201bb3005dba80f0c05f9e3ec434898d454b",
+      "bytes": 1240
+    },
+    "RESULT.md": {
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "bytes": 29525
+    },
+    "RESEARCH_EVENTS.jsonl": {
+      "sha256": "a40ed97ea94f215df484a8ea892c0e8d646ebd49d80932128db6f2da8c8e5ed1",
+      "bytes": 2397
+    },
+    "inherited/T16_FULL_READER_TEXT_v5.md": {
+      "sha256": "10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "bytes": 241546
+    },
+    "inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md": {
+      "sha256": "b0447ae60a4a6e36660b727f40e33a3e22d274643d6e01406a38a18a29e943db",
+      "bytes": 13802
+    },
+    "history/MANIFEST-before-basing-clarification.json": {
+      "sha256": "7e070c5ff6ca5f3a539d5ae3a4379886214c4d86a1fe7af7c2618ac998144973",
+      "bytes": 1268
+    },
+    "history/RESULT-before-basing-clarification.md": {
+      "sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91",
+      "bytes": 27739
+    }
+  }
+}

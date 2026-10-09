@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-10-09T11:30:11.097098+00:00",
+  "status": "Restricted constructive result; written proofs and independent review complete",
+  "report_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+  "checks": "PASS",
+  "independent_review": "No blocking mathematical defect within stated restricted model; no outstanding corrections",
+  "scope_limits": [
+    "Fixed finite valid derivation catalogue",
+    "Persistent evidence and immutable source/rule/scope commitments",
+    "Finite order-independent permitted tests",
+    "Deterministic or pathwise-worst-case execution cost",
+    "Concrete proof/evidence reconstruction required",
+    "No inference from unsupported to false",
+    "No derivation of human epistemic basing"
+  ],
+  "inherited_inputs_unchanged": true,
+  "repository_modified": false,
+  "integration_or_closure": false,
+  "files": [
+    {
+      "path": "CHECK_RESULTS.json",
+      "bytes": 813,
+      "sha256": "429fc2e93da069d5ac61b7527860f74ecb83e73e9d780e6caf85a51b9e60a602"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 1280,
+      "sha256": "f4f6eb63369249865aaaedea4ca4251edd593e1526bb5dd6efccefcb6e9c41b3"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 33268,
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 4380,
+      "sha256": "54ccf146a95d22b88263c54664dd1b94033785d55901f6b9e7fbea0dff6b07b4"
+    },
+    {
+      "path": "review/REVIEW.md",
+      "bytes": 16650,
+      "sha256": "35c595f3626c7c86bddd4d0941708a938085ce96a1e67da5adf2bde7804b1149"
+    },
+    {
+      "path": "sources/continuation_complete_orthing.md",
+      "bytes": 57950,
+      "sha256": "aeb539a09210be126383ad4a93a396c7676de20363382ce248119d31a707116b"
+    },
+    {
+      "path": "sources/continuation_complete_orthing_full.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    },
+    {
+      "path": "sources/continuation_tail_761_onward.md",
+      "bytes": 8461,
+      "sha256": "be78894b262fc3ad428a9a2e2f250c3055015aa4e628a684d9f5b39dd2e229d7"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 7876,
+      "sha256": "bdd29fd57418db2327983bf2cb7e4c40632c9140637ae6df5d0d990ff28481b2"
+    }
+  ]
+}

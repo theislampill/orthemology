@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-08T12:33:33.410149+00:00",
+  "reviewed_author_artifacts": [
+    {
+      "source": "t20-next-frontier-20261008/root-next-operations/CROSSED_CODE_DERIVATION.md",
+      "snapshot": "t20-next-frontier-20261008/crossed-code-root-review/frozen/CROSSED_CODE_DERIVATION.md",
+      "sha256": "9f7d2fd2dd87a76bb0d17c9119fa64c998cbfe31db400b290c793c737c3d6eab",
+      "live_matches_snapshot": true
+    },
+    {
+      "source": "t20-next-frontier-20261008/root-next-operations/CORNER_SIGNATURE_CONTROL.json",
+      "snapshot": "t20-next-frontier-20261008/crossed-code-root-review/frozen/CORNER_SIGNATURE_CONTROL.json",
+      "sha256": "bc816be61d1f3fcfcead9dcc30eb9a58f3be38c8c327a6d96d4771fe30e0e430",
+      "live_matches_snapshot": true
+    },
+    {
+      "source": "t20-next-frontier-20261008/root-next-operations/CROSSED_INTERIOR_DETERMINANT.json",
+      "snapshot": "t20-next-frontier-20261008/crossed-code-root-review/frozen/CROSSED_INTERIOR_DETERMINANT.json",
+      "sha256": "2d504a2e2d242e07eb5777272137b353df684ea4fa3a07169f2fcebdc44ac073",
+      "live_matches_snapshot": true
+    },
+    {
+      "source": "t20-next-frontier-20261008/root-next-operations/CROSSED_COMPRESSION_BOUNDARY.md",
+      "snapshot": "t20-next-frontier-20261008/crossed-code-root-review/frozen/CROSSED_COMPRESSION_BOUNDARY.md",
+      "sha256": "666efaabc346f244c3c7288ebd7c1e361884f57f855a240bb514916bf3e5b66a",
+      "live_matches_snapshot": true
+    }
+  ],
+  "targeted_dependencies": [
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/RESULT.md",
+      "sha256": "add5ac0c7b5db4ff229607e294c5d238bc59dc24826705c3469205633b807d46",
+      "inspection": "Targeted route-law and process-boundary reading; no revalidation of all predecessor claims."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/PROCESS_AND_LABEL_BOUNDARIES.md",
+      "sha256": "4c9f0159f73faf76f0cc3998dacc9ec83dd3bfa112b45a793b0a14db80945c2e",
+      "inspection": "Targeted route-law and process-boundary reading; no revalidation of all predecessor claims."
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/RESULT.md",
+      "sha256": "c5f5a0aa82292fdea78e8939012abd5070ed3a855d270330db27d645e34c5239",
+      "inspection": "Targeted route-law and process-boundary reading; no revalidation of all predecessor claims."
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/PROCESS_AND_ORACLE_BOUNDARIES.md",
+      "sha256": "5e67e1c1db5d2a46dde90a84b93fdfab941fb096de1ae6683b6c5ade139dc793",
+      "inspection": "Targeted route-law and process-boundary reading; no revalidation of all predecessor claims."
+    }
+  ],
+  "scope": "Independent mathematical review and finite exact controls only; no author writes, empirical/physical validation, protected writes, integration or T20 closure."
+}

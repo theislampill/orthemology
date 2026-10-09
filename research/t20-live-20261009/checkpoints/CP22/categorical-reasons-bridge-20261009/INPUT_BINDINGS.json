@@ -1,0 +1,50 @@
+{
+  "prior_records_inspected": [
+    {
+      "path": "normative-wisdom-warrant-20261009/railton-independent-rival-analysis.md",
+      "bytes": 11773,
+      "sha256": "e88dca291910f6755674dad8c4c6809f473fb48260d5c878b19cf10d12fb2ec0"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/railton-reading-provenance.json",
+      "bytes": 1318,
+      "sha256": "0ff28537a05aec52e7ea9eb8a8e2badec7ec5dcb81fa4a0eb8356179882b1341"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/REPORT.md",
+      "bytes": 19116,
+      "sha256": "d54dc0d3014e236cf20293e04e2fea3d8043bb41f94af54ab27dbeafe93caf8d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/SCOPED_AUTHORITY_APPRAISAL.md",
+      "bytes": 15087,
+      "sha256": "e64b4946c0bf437502c145fce5a7425b82692d036da6360883d023384488393a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/fitrah-warrant-bridge/INDEPENDENT_ASSESSMENT.md",
+      "bytes": 20215,
+      "sha256": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/RESULT.md",
+      "bytes": 8091,
+      "sha256": "4c48b7ec591654c39f9a8bc93c2e15c7e7f8bf67fd3de202d51fec0da07d8972"
+    },
+    {
+      "path": "user-checkpoints/extracted/P15/P15_RESEARCH_SEED.md",
+      "bytes": 3414,
+      "sha256": "1aac88fd746ee5e440ff62a3468ab8d4fed75d64583eedf7e1e3ceb98646a0d3"
+    },
+    {
+      "path": "user-checkpoints/extracted/P15/BRIDGE_GUARDS.md",
+      "bytes": 4268,
+      "sha256": "58bc0e7d5a794d72ea466e41f8f562f04f73f48900d6e85f84eda779942c74e9"
+    },
+    {
+      "path": "user-checkpoints/extracted/P15/RESEARCH_BRIEF.md",
+      "bytes": 2578,
+      "sha256": "e7ea4a314eadc2188474aedaf2457895c66df3623a611b1dc54e09d74944cbca"
+    }
+  ],
+  "scope": "Prior analysis and provenance records were read. Inherited full-primary readings are not counted as fresh personal readings. P15 files are explicitly proposals/guards, not proof-completion records."
+}

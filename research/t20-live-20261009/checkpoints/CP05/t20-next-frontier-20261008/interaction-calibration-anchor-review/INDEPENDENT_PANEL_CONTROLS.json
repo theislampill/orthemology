@@ -1,0 +1,13 @@
+{
+  "arithmetic": "Exact rational input intervals and integer-power root brackets",
+  "c2_exact_determinant_factorizations": 3,
+  "recovered_positive_count_cases": 40,
+  "scope": "Finite tests include approximate raw-mask Q propagation, not a uniform precision or sample theorem.",
+  "statistics": {
+    "largest_bits_used": 32,
+    "oracle_calls": 21104,
+    "sign_decisions": 320
+  },
+  "status": "PASS",
+  "zero_support_intervals_contain_zero": 36
+}

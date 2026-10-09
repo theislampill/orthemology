@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-09",
+  "operations": [
+    {
+      "path": "sources/ilahiyyat-anawati-scan.pdf",
+      "url": "https://dn790003.ca.archive.org/0/items/ali95_20161004_1241/%D8%A7%D9%84%D8%B4%D9%81%D8%A7%D8%A1%20%28%D8%A7%D9%84%D8%A5%D9%84%D9%87%DB%8C%D8%A7%D8%AA%29%20-%20%D8%A5%D8%A8%D9%86%20%D8%B3%D9%8A%D9%86%D8%A7.pdf",
+      "status": "acquired complete print scan after same-source resume",
+      "bytes": 26775179,
+      "pages": 479,
+      "retrieval_notes": "Web tool rejected full PDF as too large; curl initial 45-second operation stopped after 6291456 bytes; resumed with HTTP 206 delivering remaining 20483723 bytes; pdfinfo and page renders succeeded."
+    },
+    {
+      "path": "sources/rafed355.html",
+      "url": "https://lib.rafed.net/view.php?b_id=1128&page=355&type=c_fbook",
+      "status": "HTTP 200; complete returned 20-page block preserved",
+      "scope_warning": "Acquisition is broader than reading; see reading ledger."
+    },
+    {
+      "path": "sources/rafed362.html",
+      "url": "https://lib.rafed.net/view.php?b_id=1128&page=362&type=c_fbook",
+      "status": "HTTP 200; complete returned 20-page block preserved",
+      "scope_warning": "Acquisition is broader than reading; see reading ledger."
+    },
+    {
+      "path": "sources/rafed393.html",
+      "url": "https://lib.rafed.net/view.php?b_id=1128&page=393&type=c_fbook",
+      "status": "HTTP 200; complete returned 20-page block preserved",
+      "scope_warning": "Acquisition is broader than reading; see reading ledger."
+    },
+    {
+      "path": "sources/rafed414.html",
+      "url": "https://lib.rafed.net/view.php?b_id=1128&page=414&type=c_fbook",
+      "status": "HTTP 200; complete returned 20-page block preserved",
+      "scope_warning": "Acquisition is broader than reading; see reading ledger."
+    },
+    {
+      "path": "sources/rafed421.html",
+      "url": "https://lib.rafed.net/view.php?b_id=1128&page=421&type=c_fbook",
+      "status": "HTTP 200; complete returned 20-page block preserved",
+      "scope_warning": "Acquisition is broader than reading; see reading ledger."
+    },
+    {
+      "path": "sources/najat-wikisource.html",
+      "url": "https://ar.wikisource.org/wiki/%D8%A7%D8%A8%D9%86_%D8%B3%D9%8A%D9%86%D8%A7_%E2%80%93_%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%A9",
+      "status": "HTTP 200; electronic original text; underlying printed exemplar unverified"
+    },
+    {
+      "path": "sources/najat-book9.pdf",
+      "url": "https://ia601501.us.archive.org/4/items/maktabana_manthiq/book9.pdf",
+      "status": "HTTP 200; 1184010 bytes; 189-page reflow, not print scan",
+      "use": "Cover inspection only; rejected as print-control source; text extraction emitted malformed-stream warnings"
+    },
+    {
+      "url": "https://shamela.org/gen/b0e761742ece1c2a51e37b63a6d9b6be_gen.pdf",
+      "status": "Web open yielded a one-line HTML response without usable source text; not used"
+    },
+    {
+      "url": "https://ia601500.us.archive.org/30/items/galerikitabkuning-maktabana-ibnu-sina-collections/assyifa-galeri-kitab-kuning-10.pdf",
+      "status": "Web redirect target inaccessible via that tool; not acquired; independent public scan subsequently acquired instead"
+    },
+    {
+      "url": "https://ww.lisanarb.com/2024/05/pdf_848.html",
+      "status": "Discovery page reports download unavailable to preserve rights; no attempted bypass and not a doctrinal source"
+    }
+  ],
+  "authorization_denials": []
+}

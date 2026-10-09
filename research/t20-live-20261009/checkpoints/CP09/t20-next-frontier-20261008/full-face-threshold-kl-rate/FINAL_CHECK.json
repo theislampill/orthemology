@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "predecessors_unchanged": [
+    {
+      "path": "full-face-threshold-information/RESULT.md",
+      "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+      "matches": true
+    },
+    {
+      "path": "arbitrary-face-replay-design/RESULT.md",
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7",
+      "matches": true
+    },
+    {
+      "path": "arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c",
+      "matches": true
+    }
+  ],
+  "author_controls_pass": true,
+  "author_assertions": 511,
+  "author_controls_hash_matches": true,
+  "independent_review_pass": true,
+  "reviewed_result_sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+  "review_sha256": "301f91005fbc53a7603fd6ac475d75a2406fb16f653a90885cac9cdddf7f116b",
+  "independent_controls_target_hash_matches": true,
+  "empirical_validation": false,
+  "protected_integration": false,
+  "T20_closure": false
+}

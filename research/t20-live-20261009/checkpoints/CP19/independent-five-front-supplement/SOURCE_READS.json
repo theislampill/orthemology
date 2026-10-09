@@ -1,0 +1,30 @@
+{
+  "date_utc": "2026-10-09",
+  "sources": [
+    {
+      "name": "bayan4-item839",
+      "path": "independent-five-front-supplement/sources/bayan4-item839.txt",
+      "sha256": "ad960785931958b7301554bdb87df3d42d42fa68420257a84e24fa107964ef0a",
+      "reading_scope": "Complete two paragraphs L001\u2013002; reported positions separated from author statement; printed marker571 occurs withinL001 and572 withinL002.",
+      "source_status": "Direct fresh electronic primary-text reading; root independently inspected the same retained text, not another textual witness."
+    },
+    {
+      "name": "bayan4-item844",
+      "path": "independent-five-front-supplement/sources/bayan4-item844.txt",
+      "sha256": "340484a654b30b2f36c04d244c1173053eb3dce15a253191a71d96c75f3df621",
+      "reading_scope": "Complete two paragraphs L001\u2013002, including all hadith transmission continuation; opening before586 marker and continuing through590. Exact initial printed page not independently verified; no scan control.",
+      "source_status": "Direct fresh electronic primary-text reading; root independently inspected the same retained text, not another textual witness."
+    },
+    {
+      "name": "ahkam2-item198",
+      "path": "independent-five-front-supplement/sources/ahkam2-item198.txt",
+      "sha256": "84eced7e8e366a110ffcd146c3dcce2c0b8f4dd1cb384764453b9ec508d22511",
+      "reading_scope": "Complete28 paragraphs L001\u2013028; chapter179 opening before945 marker, continuation through953. Exact initial printed page not independently verified. Author repliesL015/L023, separate reported criticismL013\u2013014. No scan control.",
+      "source_status": "Direct fresh electronic primary-text reading; root independently inspected the same retained text, not another textual witness."
+    }
+  ],
+  "package_reads": "Companion15 lines; detailed report308 lines in two complete displays; full37-row source ledger; README_FIRST,VALIDATION,SHA256SUMS all read.",
+  "coordinated_root_evidence": "necessity-domain-source-control/RESULT.md read; no independent viewing of its six scan pages claimed by this worker.",
+  "retrieval": "Five bare web opens returned internal inaccessible errors; search gave irrelevant results and no evidence. Public HTTPS urllib retrieval succeeded for three fitrah targets. No access denial bypass or authentication.",
+  "pagination_correction": "Root clarified that tentative585/944 opening labels were inferences, not verified page controls. They have been removed from this return."
+}

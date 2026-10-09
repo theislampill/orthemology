@@ -1,0 +1,177 @@
+{
+  "created_utc": "2026-10-08T09:35:49.546022+00:00",
+  "scope": "Countable-signature stage with separate mathematical and oracle boundaries; no protected integration or closure.",
+  "files": [
+    {
+      "path": "FINITENESS_AUDIT.md",
+      "sha256": "f4eb402123b330f82855c1b4dec010ce8b3cf3b50f01ce2db0fccd252e16da9a",
+      "bytes": 6271
+    },
+    {
+      "path": "GCD_DECODER.md",
+      "sha256": "cb8ec9266aaec258133d78034809545265b70c6f1ee0b51c2e922d4f55cd1ff1",
+      "bytes": 4486
+    },
+    {
+      "path": "ORACLE_AND_EXTENSION_BOUNDARIES.md",
+      "sha256": "c694d06f556cc62d55504dfd3b73da0a034bbb5971aae571d624a905b42a719c",
+      "bytes": 8454
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "6b8cf7d1277db0a01cbe40089f7bd9811cd8a810d009a5657b9bab00817245fa",
+      "bytes": 1747
+    },
+    {
+      "path": "RESEARCH_ACCOUNTING.json",
+      "sha256": "4cc410e960074cb485acf8dd5e08840d3d821ad0b598988924dc7683ba842de4",
+      "bytes": 1368
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "2a5e9ab769d8555b8f9803416e09f424431cbef4a602e29f082ec32f41e7c2bc",
+      "bytes": 971
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "1b4c66a3fa955ea4a60d2d04d3210f773620dcdacbcb1ff8a6381b6a23f95923",
+      "bytes": 7766
+    },
+    {
+      "path": "REVIEW_RESPONSE.md",
+      "sha256": "28e3a06a3dbec1931533068e81304ba192672979725b0865665f52031d670bb0",
+      "bytes": 2204
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "cf34a22396fe714ae93fc348111a7879d45f0a4547074fe27c9821c88c7de33a",
+      "bytes": 1934
+    },
+    {
+      "path": "THEOREMS.md",
+      "sha256": "f232016d83bff0f15dbe9b9623f70f6ed6e512e7de05095b5d4f280bea65cce0",
+      "bytes": 10284
+    },
+    {
+      "path": "results/DEVELOPMENT_RUN.log",
+      "sha256": "91d3ecf0cfb874f69bf9af4164b576aafbcf4424048650057a80e1108f42876c",
+      "bytes": 2427
+    },
+    {
+      "path": "results/FINAL_test_countable_support.py.log",
+      "sha256": "e0a26135294510706bd128487ca86a05fddb32c578633233bccdb1102ff5e358",
+      "bytes": 2427
+    },
+    {
+      "path": "results/FINAL_test_gcd_decoder.py.log",
+      "sha256": "6d4ca41233df69fe5339a93e6e0249e390d57026e27ec0d9bcb257f72deed564",
+      "bytes": 910
+    },
+    {
+      "path": "results/FINAL_test_oracle_boundaries.py.log",
+      "sha256": "b422c57f4b916636c506df4e93da547c0e5c89047a54c1328f0b29be2a3ca632",
+      "bytes": 1430
+    },
+    {
+      "path": "results/FIRST_RUN.log",
+      "sha256": "bcb1eed14a1b9ed46b041bbe6b97ef6292e298b83a2538d79fb5cb8cbf3e4db1",
+      "bytes": 1761
+    },
+    {
+      "path": "results/GCD_FIRST_RUN.log",
+      "sha256": "7879f877aec3e05a724ac60036797607917eccc1b52d9d149f7464b89fd226c9",
+      "bytes": 910
+    },
+    {
+      "path": "results/ORACLE_DEVELOPMENT_RUN.log",
+      "sha256": "7d60a548b03a20eea96aec1d733348655969ca3d5f3252dcc8f262960134f35d",
+      "bytes": 1430
+    },
+    {
+      "path": "results/ORACLE_FIRST_RUN.log",
+      "sha256": "613ad6cc5b22f5766d21b924f93a58c17fa4d02aa216d3beb6f746e6cc78247d",
+      "bytes": 1280
+    },
+    {
+      "path": "results/RESULTS.json",
+      "sha256": "2cb1e0b5b9eacde3e33deed245dc37c45e75db76acbb2b6c6682b8d38eb68c27",
+      "bytes": 162763
+    },
+    {
+      "path": "results/VERIFICATION.json",
+      "sha256": "236d20ec9a0652abcb432fb54c55b62fb4eff77d1a320d0e1bda3b4533f77774",
+      "bytes": 11822
+    },
+    {
+      "path": "sources/SOURCE_AUDIT.md",
+      "sha256": "f7287b1283468e6830637f4c3f570e5ffa4bc4ee5a3061a6a43d563ce185f0c0",
+      "bytes": 1353
+    },
+    {
+      "path": "sources/SOURCE_READS.json",
+      "sha256": "7e26b823775ded323fbc820980387ff06beb5aa5911dfae9e6457560e150f0c4",
+      "bytes": 1208
+    },
+    {
+      "path": "sources/zsigmondy-1892.pdf",
+      "sha256": "45b2aea11e6e92711ab9b744b368dcb8ae0e84e69e5267c8515f61072faa9132",
+      "bytes": 966828
+    },
+    {
+      "path": "sources/zsigmondy-1892.txt",
+      "sha256": "edcb9c78c1d271634a95dc94415379b76fe983c331f71d8f74e853794c82d8af",
+      "bytes": 49953
+    },
+    {
+      "path": "sources/zsigmondy-page19.png",
+      "sha256": "a701c2cbe9b4aed3bdc90bacff02879ae0815bfba743ec172ff42d8098c73849",
+      "bytes": 115624
+    },
+    {
+      "path": "src/countable_support.py",
+      "sha256": "e6e928ce4894770b671e1b74b4c7cf2f88e5a3b767bdbd28c0dd03a6b923e2f6",
+      "bytes": 8119
+    },
+    {
+      "path": "src/export_results.py",
+      "sha256": "7527132f895862262474e6ef72490cc87269ec235ffb42870ed756ac5a199704",
+      "bytes": 2994
+    },
+    {
+      "path": "src/gcd_decoder.py",
+      "sha256": "3450a5cf943da435984a48bbb8e04a5c4cdb13ad7fa89bed48f18738ba70d827",
+      "bytes": 4257
+    },
+    {
+      "path": "src/oracle_boundaries.py",
+      "sha256": "f39ed4839663137b7c7863211de97fd6c33cf5b75486b5f96fd02cbc181cc060",
+      "bytes": 4206
+    },
+    {
+      "path": "src/test_countable_support.py",
+      "sha256": "52aca0366e185b21c8f61437dd3c79ab3935f38bbe64246c9215870d9890ceed",
+      "bytes": 7560
+    },
+    {
+      "path": "src/test_gcd_decoder.py",
+      "sha256": "ce0ad237e36bfdb16f5b52a90e387d750bf91a7e5f5001c78178612d9910e676",
+      "bytes": 2502
+    },
+    {
+      "path": "src/test_oracle_boundaries.py",
+      "sha256": "e03e1a5721aec610e0cc88c7a372cb37292cfdd8f8aa5bcb71a31f7bd91df8ba",
+      "bytes": 3857
+    },
+    {
+      "path": "src/verify_evidence.py",
+      "sha256": "1baa6d39c42d9995fd6b9b84988d0b1d346e4df066842d6aca1f247d304aca60",
+      "bytes": 3049
+    }
+  ],
+  "excluded_local_inspection_files": [
+    "sources/gyory-smyth-2010.pdf",
+    "sources/gyory-smyth-2010.txt",
+    "sources/gyory-smyth-page7.png",
+    "sources/zsigmondy-page18.png"
+  ]
+}

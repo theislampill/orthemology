@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "metric_unit": "exact assertions, not independent discoveries",
+  "assertions_total": 553359,
+  "assertions_by_family": {
+    "B_contraction_is_existential": 1,
+    "Boolean_inclusion_not_additive": 1,
+    "N_1_minus_count_wrong": 1,
+    "N_contraction_not_existential": 1,
+    "N_support_c": 93,
+    "N_support_join": 6651,
+    "N_support_padding": 93,
+    "N_support_sum": 6651,
+    "N_zero_test_complement": 93,
+    "basis_change_cancellation": 1,
+    "basis_changed_covector_correct": 1,
+    "complement_one": 1,
+    "complement_zero": 1,
+    "composed_B": 223232,
+    "composed_N_with_zero_test": 223232,
+    "cylindrification": 810,
+    "delta_index_map_B": 9470,
+    "delta_index_map_N": 9470,
+    "distinct_witness_counts": 1,
+    "domain_relabelling_equivariance": 80,
+    "empty_delta_wiring": 2,
+    "empty_dummy_existential_fails": 1,
+    "empty_padding_has_no_entries": 1,
+    "empty_scalar_c_remains_identity": 1,
+    "empty_scalar_unit_exists": 1,
+    "encoding_injective": 12,
+    "exists_count_support": 804,
+    "faithful_inverse": 810,
+    "identity_relabelling": 1,
+    "independent_existentials_true": 1,
+    "inhabited_dummy_existential": 1,
+    "iota": 810,
+    "literal_unary_iota_same_prefix_different_value": 1,
+    "mixed_arity_conjunction": 484,
+    "negation": 810,
+    "nullary_universal_existential_agree": 1,
+    "open_predicate_existential_true": 1,
+    "open_predicate_universal_false": 1,
+    "padding": 810,
+    "padding_c_B_identity": 810,
+    "padding_c_N_scale": 810,
+    "plurality_preserved": 1,
+    "real_linear_OR_contradiction": 1,
+    "same_witness_joint_false": 1,
+    "scalar_truth": 810,
+    "sigma": 810,
+    "signed_cancellation": 1,
+    "signed_support_does_not_commute": 1,
+    "source_joint_opposite": 1,
+    "source_numeric_scalar_records_same": 1,
+    "source_record_same": 1,
+    "symmetrisation_loses_orientation": 1,
+    "ternary_conjunction": 65536,
+    "truth_wire_AND": 4,
+    "truth_wire_NOT": 2,
+    "truth_wire_OR": 4,
+    "truth_wire_exists": 126,
+    "zero_test_of_count_correct": 1
+  },
+  "source_orientation": {
+    "separated_with_distinctness": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "joint_truths": [
+      1,
+      0
+    ]
+  },
+  "same_label_plurality": [
+    {
+      "size": 1,
+      "Boolean_at_least_two": 0,
+      "ordered_distinct_pairs": 0
+    },
+    {
+      "size": 2,
+      "Boolean_at_least_two": 1,
+      "ordered_distinct_pairs": 2
+    },
+    {
+      "size": 3,
+      "Boolean_at_least_two": 1,
+      "ordered_distinct_pairs": 6
+    }
+  ],
+  "controls_boundary": "Finite exhaustive/generated checks; universal claims proved in RESULT.md. Low-arity permutations use stated identity convention; literal unary source ambiguity separately exposed.",
+  "script_sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2"
+}

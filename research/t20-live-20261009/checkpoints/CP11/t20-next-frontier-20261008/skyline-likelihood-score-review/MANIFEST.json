@@ -1,0 +1,60 @@
+{
+  "kind": "Independent review payload; verification output excluded to avoid self-reference",
+  "files": [
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "37bd6c14a6d1b999b2056e1495c9e00093a8310371c6594681312cf8fd3ed5c8",
+      "bytes": 330144
+    },
+    {
+      "path": "CONTROL_RUN.log",
+      "sha256": "fc3f41ee56d681cfd47ad361aff7cb2084db2569f17fbb26c7c5c6a7735b4cda",
+      "bytes": 645
+    },
+    {
+      "path": "OPERATION_LOG.md",
+      "sha256": "95278b0632436250c00803f50ece8cffc3967c2cc108b88344b2dd841e1a1870",
+      "bytes": 1020
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "77fa54173fa04c4d9b942cb668dbc080dd3b5062c563e29ed6850c5b1185d596",
+      "bytes": 10253
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "effd28cce9cb9d3e892d3c1e19df59e66a06c16c7595e7b3d9fb3aa1ab1149c4",
+      "bytes": 803
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "4159c1bdaeac9797787fafdd6307ae295bd9ccce612b311e61c3c413d096611c",
+      "bytes": 1316
+    },
+    {
+      "path": "author_replay/AUTHOR_REPLAY.log",
+      "sha256": "80de28491ee1fb2efb6105470aa819afa0b71dd167d4a5223b1abe7af4173d28",
+      "bytes": 81
+    },
+    {
+      "path": "author_replay/CONTROL_RESULTS.json",
+      "sha256": "fc4e65e6f42844a9c886881a60b95fcccefa8a10defe48a26d733f31ad8cdab9",
+      "bytes": 10323
+    },
+    {
+      "path": "author_replay/controls.py",
+      "sha256": "b1399fda7487fa985f66e5cfa6650d7a63c10b91f3d9da665c6285dcd1bd8cc5",
+      "bytes": 2333
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "d0c171fb3816d5b71ad5f3a8e4f6042be015d095248f933d7aacebc80b53f36e",
+      "bytes": 7528
+    },
+    {
+      "path": "verify_review.py",
+      "sha256": "5a5ffd7d3b885636aec55e99260486724a8d2e1e8848bfcd8afecd0e7d2f8cee",
+      "bytes": 2122
+    }
+  ]
+}

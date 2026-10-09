@@ -1,0 +1,66 @@
+{
+  "date_utc": "2026-10-09",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/INPUT_BINDINGS.json",
+      "bytes": 3764,
+      "sha256": "bc7daf060062907c514d36211847c397b12856a36535ca0794735d0c358b7698"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/READ_FIRST.md",
+      "bytes": 1081,
+      "sha256": "83962aa30afa8835ad5ef65d30f75043cc9720394b282c3ae311bf5de325be13"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md",
+      "bytes": 23804,
+      "sha256": "21362330512dff0ef5ca9f48a3b8311ab8b0dd952e97d3ae338af0bc2e118b68"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/SOURCE_RECEIPT.json",
+      "bytes": 4393,
+      "sha256": "1eceeb045675e4968919e2e22e45e7999e12feee2741ac66aa4f92100062c763"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_exact_supplied.pdf",
+      "bytes": 783093,
+      "sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_layout.txt",
+      "bytes": 104994,
+      "sha256": "3279d299696883c70a6aef423b2fd6c5aa5087976058a96afa08e83fc6163e1f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_page_labelled.txt",
+      "bytes": 106097,
+      "sha256": "0f43db63d567466d6e90332385d55b3067462fbeaf5c177d982f17643cb94dce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_printed17-40.txt",
+      "bytes": 55136,
+      "sha256": "6b8f5927766a2fa79ed8c7f5c03f387dd77c2d793c2ada795bb8217aa55b62a6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/visual-30.png",
+      "bytes": 388473,
+      "sha256": "3901cc25ef4a7890d8b565f9adeca9e3a67c04ea9ff26f0241b725932186fb8c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/visual-31.png",
+      "bytes": 226787,
+      "sha256": "32197b4aa971ae4578d1e48ab0398c4527e7437718d743aa02c4c9f6bcd2b265"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/visual-37.png",
+      "bytes": 422149,
+      "sha256": "4de1d616ab25fbdc87730b73ba9a951909810b689def77a3c198d36855b5263f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/visual-38.png",
+      "bytes": 402615,
+      "sha256": "aa281f52e31c9ce57922cd1270b562e1addc5ac24a9ba8854d3c1526bb9a0e44"
+    }
+  ],
+  "scope": "Local successor appraisal packet; earlier files were not edited by this operation."
+}

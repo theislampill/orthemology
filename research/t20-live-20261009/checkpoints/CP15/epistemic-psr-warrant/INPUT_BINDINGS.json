@@ -1,0 +1,55 @@
+{
+  "scope": "Consulted inherited files, bound after reading. No historical before-and-after claim is inferred from these hashes. This worker wrote only within epistemic-psr-warrant/.",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt",
+      "sha256": "921665c78f77f579221962de74209af8d8873f1c480e16fdb0d75f64823e637b",
+      "bytes": 279352
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+      "sha256": "94887ef5d27b5ca50115ccc9841e5f0f16833f0b80781b63ce553d3e75802f26",
+      "bytes": 4823
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md",
+      "sha256": "01dce257466aaa678520fe87d43e2cf08a2bb0f15e36c6020d4c6fd86e7759d6",
+      "bytes": 17505
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/READ_FIRST.md",
+      "sha256": "3e51ba6bf91384237b98ae005c62e2be87e5da7fd6cbe2a98f1bbbce96c873f3",
+      "bytes": 2555
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/RESULT.md",
+      "sha256": "4c48b7ec591654c39f9a8bc93c2e15c7e7f8bf67fd3de202d51fec0da07d8972",
+      "bytes": 8091
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/PUBLIC_SOURCE_SUMMARIES.md",
+      "sha256": "b403d5c798869f9124b40736410d87852022f8c8c94cc71bea9c69ef58404a2a",
+      "bytes": 2315
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/INFERENTIAL_TRANSMISSION_TEST.md",
+      "sha256": "9e60b3c227a434093da9f6d1c6dffe624de9ed16abf2dac09d1393311652782c",
+      "bytes": 6583
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation-review/ASSESSMENT.md",
+      "sha256": "2669ee4d590a46442e94720090a3ab121af779b48b853a16752c1758ed08ce03",
+      "bytes": 10252
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation-review/INFERENTIAL_TEST_ADDENDUM.md",
+      "sha256": "c7286644949414b4ff8c75508b0aa058df41053988dab872288d5caf32438105",
+      "bytes": 9327
+    },
+    {
+      "path": "t20-next-frontier-20261008/dretske-continuation-access/ACCESS_RESULT.md",
+      "sha256": "f24569fad0b089d74f81fe9102c1414d089aff6f77f05a107b29b0b6769c872a",
+      "bytes": 3354
+    }
+  ]
+}

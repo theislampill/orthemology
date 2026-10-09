@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-10-09T09:48:32.687068+00:00",
+  "credit": "Inherited primary rereading prompted by new formal source; not new source discovery or independent witness",
+  "root_reading": "Entire four received electronic units, 39 paragraphs total; no print collation",
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/book413-item790.txt",
+      "sha256": "b2135fe4501528e061007c87ce7d1c975e00fbdd41a37af9fd3bdcdfa84ac75c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/book413-item791.txt",
+      "sha256": "92a3a2d7f3bb21a2607d4f0392d34a97f5eb8c34dc0780b7b3bd5f78f5cdaf07"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/book413-item792.txt",
+      "sha256": "101db7720cea304658575bb6cb8cb636d5601266403653c35537e7c3a05b6b86"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/book413-item793.txt",
+      "sha256": "22febd9af8ec696cb6fd7d8b310002a64af80c32286b7565cbd9a027a9a10c4b"
+    }
+  ],
+  "addendum_sha256": "f84622f47a3547acaef3cd5435105ab89ed50d4f60974e27e8ae81fd8c16711a",
+  "original_report_sha256": "c1dae1a738fc90e7977f4257a960eef29b76d17ac6121d878361d2aaf18f139e",
+  "boundary": "Original final report unchanged; additive root feedback only. No code replay or integration."
+}

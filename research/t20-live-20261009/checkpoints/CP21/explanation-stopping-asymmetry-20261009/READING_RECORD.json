@@ -1,0 +1,102 @@
+{
+  "operation": "Bounded T20 explanatory-stopping asymmetry comparison",
+  "primary_oconnor": {
+    "source": "Timothy O’Connor, Could There Be a Complete Explanation of Everything?, 2013",
+    "url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_CouldCompleteExpl13.pdf",
+    "acquisition": "Inherited received source; no new acquisition",
+    "direct_read": "Complete supplied OCR of printed 22–43, sections 1–8, all notes 1–21 including continued note 10; initial bibliography on 43",
+    "visual_check": "Retained images page-07, page-08, page-09; printed 34–39 including notes 13–17",
+    "unread": "Published bibliography continuation 44–45, absent from inherited author copy",
+    "limits": "Publication and scan-provenance metadata inherited. Other authors mentioned in this chapter were not independently read."
+  },
+  "arabic_reread": [
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "scope": "L305–318 and L339–356; output-truncated L344–351 separately reread",
+      "purpose": "Complete-determiner no-exemption judgment, actual powers, intrinsic act/condition scope",
+      "status": "New direct reread of inherited electronic Arabic; doctrinal distinctions already inherited"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "scope": "L001–004 complete electronic unit",
+      "purpose": "Standing completeness does not alone fix particular exercise; replies quoted from others",
+      "status": "Direct reread; no new scan or manuscript"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "scope": "Complete electronic unit L001–011; previously quarantined L002 and opening L009 not used as premises",
+      "purpose": "Unreceived willing and no foreign coercion kept distinct from particular intelligibility",
+      "status": "Direct reread; electronic uncertainty inherited, not repaired"
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item593-body.txt",
+      "scope": "Complete retained body, printed 287–289",
+      "purpose": "Third-option rejection and foundational warrant; no equation of through-self with self-production",
+      "status": "Direct reread; printed-page verification inherited"
+    },
+    {
+      "path": "brute-contingent-source-return/read-selections/isfahaniyya-L181-L187.txt",
+      "scope": "L181–187 complete retained selection",
+      "purpose": "L184 intrinsic existential sufficiency and modal consequence in surrounding argument",
+      "status": "Direct reread; edition and scan checks inherited"
+    }
+  ],
+  "inherited_reports_read": [
+    {
+      "path": "complete-explanation-source-20261009/REPORT.md",
+      "scope": "Complete",
+      "use": "Controlling 2013 argument assessment; no repeated reading credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "scope": "Complete",
+      "use": "Actual complete-determiner scope; no new model or compilation"
+    },
+    {
+      "path": "direct-anti-brute-return/REPORT.md",
+      "scope": "Complete",
+      "use": "Strong brute rival, effect/self-adequacy distinction, positive foundational warrant"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/REPORT.md",
+      "scope": "Complete",
+      "use": "Positive 2009 agent-power rationale inherited; no fresh primary 2009 read"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "scope": "Complete",
+      "use": "Autonomy is substantive explanatory nonaptitude, not mere brute label; no fresh Dasgupta primary read"
+    },
+    {
+      "path": "actual-original-production-residual-20261009/REPORT.md",
+      "scope": "Complete",
+      "use": "Consulted while locating autonomous-grounding comparison; not a premise of the new result"
+    }
+  ],
+  "interface": {
+    "path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean",
+    "scope": "Lines 1–110 directly reread",
+    "use": "Definitions and original-resource bridge; not recompiled or modified"
+  },
+  "new_analysis": [
+    "Apply 2013 meta-explanation to inherited strongest brute original while holding relevant downstream productive account fixed; isolate the remaining independent existential-adequacy premise.",
+    "Distinguish principled absence of exhaustive necessitating selection from warrant for ultimate adequacy of that stopping rule; no inference that some informative stochastic contrast defeats the exhaustive contrast claim.",
+    "PCE II by its disjunctive form does not alone impose PCE I first-order causal explanation on every contingent concrete original; identify exact additional burden on serious principled-inexplicability rival without certifying one."
+  ],
+  "not_new": [
+    "Productive basis versus contrastive selection",
+    "Effect adequacy versus original self-adequacy",
+    "Strong beginningless brute original with real unreceived powers",
+    "No foreign compulsion versus intrinsic particular intelligibility",
+    "Restricted act/effect/bearer types",
+    "Autonomous noncausal explanation as a substantive inherited alternative"
+  ],
+  "scope_limits": [
+    "No new metaphysical possibility certificate",
+    "No actual counterexample to Completion or ContingencyNeed",
+    "No automatic defeater credit",
+    "No fresh quantum interpretation verification",
+    "No model, theorem replay, protected edit, integration, closure, upload, or outreach"
+  ],
+  "created_at_utc": "2026-10-09T09:33:08.891153+00:00"
+}

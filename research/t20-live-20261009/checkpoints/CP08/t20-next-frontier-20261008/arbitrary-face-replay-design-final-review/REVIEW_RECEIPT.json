@@ -1,0 +1,171 @@
+{
+  "approved_claims": [
+    "Uniform chi-squared and Joe-oriented KL upper bound 32768/n^4 over all atomic preselected face-rate pairs",
+    "Expected pair-cost lower bound under world 1 and unconditional terminal correctness, including adaptive completed-history policies",
+    "Global n^4 chi-squared supremum limit 0.4193990202224225571...",
+    "Global n^4 Joe-oriented KL supremum limit 0.2096995101112112785...",
+    "Both asymptotic maximizing scaled coordinates converge to the unique positive root u*=1.5936242600400400923...",
+    "Matched fourth-power upper/lower exponent only within the stated instrument and imported upper alternative class"
+  ],
+  "author_payloads": [
+    {
+      "bytes": 5833,
+      "path": "../arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c"
+    },
+    {
+      "bytes": 3417,
+      "path": "../arbitrary-face-replay-design/CONTROLS_OUTPUT.json",
+      "sha256": "9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209"
+    },
+    {
+      "bytes": 2673,
+      "path": "../arbitrary-face-replay-design/EXACT_CONTROLS.md",
+      "sha256": "8255889acd5fe46eb63b1259e8cf6ae342157c10a3669d15e36189ffa8b86717"
+    },
+    {
+      "bytes": 5020,
+      "path": "../arbitrary-face-replay-design/NEGATIVE_CONTROLS.md",
+      "sha256": "ceea5caacbafbc11b6acee5865964092db779b16f67a71501ef5036d52603f87"
+    },
+    {
+      "bytes": 2159,
+      "path": "../arbitrary-face-replay-design/READ_FIRST.md",
+      "sha256": "6abc98959222dd3d389fabf64bdd8f0f34c5cd1e1d886dedc661b633881a8467"
+    },
+    {
+      "bytes": 947,
+      "path": "../arbitrary-face-replay-design/RESEARCH_EVENTS.jsonl",
+      "sha256": "48932408a000e96edc187ff86eb088ba9afa25f2b4b59d84826e441e9012c2b9"
+    },
+    {
+      "bytes": 13174,
+      "path": "../arbitrary-face-replay-design/RESULT.md",
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7"
+    },
+    {
+      "bytes": 5295,
+      "path": "../arbitrary-face-replay-design/SOURCE_AUDIT.md",
+      "sha256": "03ca00dd14213af6c8cfd86a59ab36f052441ece947274bed6787df2cad10eb4"
+    },
+    {
+      "bytes": 2606,
+      "path": "../arbitrary-face-replay-design/SOURCE_BINDINGS.json",
+      "sha256": "81b8388c7db66fbcdd0da6db3bd54088cc2dec8fb1d6af8ba75423755ba4d2ef"
+    },
+    {
+      "bytes": 6393,
+      "path": "../arbitrary-face-replay-design/SOURCE_CHECK_OUTPUT.json",
+      "sha256": "11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf"
+    },
+    {
+      "bytes": 7663,
+      "path": "../arbitrary-face-replay-design/controls.py",
+      "sha256": "e448f57ba034c782deed64e4013f8afc50ce4ae1ede1f8e1f1be4bf4ea6504b4"
+    },
+    {
+      "bytes": 1153,
+      "path": "../arbitrary-face-replay-design/source_binding_check.py",
+      "sha256": "a11f4b18edefba84ccea562cea37d4572bdc92379374f1634505ee7ae11f58c3"
+    }
+  ],
+  "directly_read_ancestry": [
+    {
+      "bytes": 14735,
+      "path": "../finite-replay-sampling-lower-bound/RESULT.md",
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26"
+    },
+    {
+      "bytes": 12263,
+      "path": "../finite-panel-replay-robustness/RESULT.md",
+      "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe"
+    }
+  ],
+  "exclusions": [
+    "No second-rate selection after observing the first outcome",
+    "No longer replay words, cross-replicate retained vectors, gate-level observations or altered instruments",
+    "No reverse-KL optimum, finite-n global optimum or sharp minimax sample constant",
+    "No physical validation, exhaustive novelty, protected integration or T20 closure",
+    "Later REVIEW_STATUS, FINAL_CHECK and MANIFEST packaging is outside this author-payload receipt"
+  ],
+  "external_source": {
+    "retrieved_utc_date": "2026-10-08",
+    "scope": "Mass formula and transform attribution; analytical proof checked independently.",
+    "url": "https://search.r-project.org/CRAN/refmans/copula/html/Sibuya.html"
+  },
+  "immutability": "Any changed author payload needs a new review receipt; this receipt intentionally does not hash itself.",
+  "independence": "Reviewer did not contribute to author theorem or asymptotic extension; one control-strength correction was requested during review.",
+  "issued_utc": "2026-10-08T17:09:15.525806+00:00",
+  "resolved_findings": [
+    {
+      "id": "R1",
+      "initial": "Author PGF checks proved interval overlap instead of full enclosure.",
+      "resolution": "Author changed to 400 exact root bisections and full containment inequalities; reviewer reran and inspected the final controls. Initial output and history retained.",
+      "severity": "nonblocking control-strength issue"
+    }
+  ],
+  "review_artifacts": [
+    {
+      "bytes": 2603,
+      "path": "AUTHOR_CONTROLS_RERUN.json",
+      "sha256": "e72a2adbc43f13038cd42fe130c65fd6f079642361200578e326fe2f1f674698"
+    },
+    {
+      "bytes": 3417,
+      "path": "AUTHOR_CONTROLS_STRENGTHENED_RERUN.json",
+      "sha256": "9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209"
+    },
+    {
+      "bytes": 12417,
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "d1fce48063577ec64673e24927b1f4e9f61d0987341e5d793bd2f4644fb3497b"
+    },
+    {
+      "bytes": 986,
+      "path": "CONTROL_RUN.log",
+      "sha256": "052c3f9547871669d5ed4cdaf1cf773c5c24a6ff4c327fab3223253df2fcd408"
+    },
+    {
+      "bytes": 597,
+      "path": "INITIAL_BINDINGS.json",
+      "sha256": "15dee11f7e4fc2aec74aae8643ff26f2f066b974521edfba1279d7d05abc7efd"
+    },
+    {
+      "bytes": 17583,
+      "path": "REVIEW.md",
+      "sha256": "82607136c173948ec90de23ff853664f30ab869425014f359ce64b70f1e4de03"
+    },
+    {
+      "bytes": 6393,
+      "path": "SOURCE_BINDING_RERUN.json",
+      "sha256": "11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf"
+    },
+    {
+      "bytes": 10430,
+      "path": "independent_controls.py",
+      "sha256": "1b290a8bba3ca20b27a6c363018e24dc1f86b19bef24510e2cfef1f15021d83d"
+    },
+    {
+      "bytes": 921,
+      "path": "verify_review.py",
+      "sha256": "2b80e45c54e77991fafe638b956dcdfc2e5a1e956d5b8d8eba07e457569312da"
+    }
+  ],
+  "reviewer_task": "[OMITTED_PRIVATE_MACHINE_PATH]",
+  "schema": "independent-mathematical-review-receipt/v1",
+  "unresolved_findings": [],
+  "verdict": "PASS",
+  "verification": {
+    "ancestry_result_hashes_unchanged": true,
+    "author_80_160_digit_comparisons": 1750,
+    "author_exact_four_cell_cases": 12,
+    "author_literal_boundaries": 48,
+    "author_output_byte_matches": true,
+    "author_pgf_enclosures": 12,
+    "author_rational_algebraic_cases": 180,
+    "author_source_hash_checks": 31,
+    "failed_methods_retained": "Two binary64 cancellation cases, boundary-continuity invalidity, author high-precision cancellation and initial interval-overlap weakness.",
+    "independent_asymmetric_interior_cases": 700,
+    "independent_checks_passed": 43
+  }
+}

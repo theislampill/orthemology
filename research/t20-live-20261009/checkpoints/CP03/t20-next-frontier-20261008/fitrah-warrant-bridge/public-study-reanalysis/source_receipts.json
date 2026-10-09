@@ -1,0 +1,297 @@
+{
+  "checked_on_utc": "2026-10-08",
+  "classification": "public-source retrieval receipts; no participant dataset located",
+  "participant_level_data_downloaded": false,
+  "primary_sources": [
+    {
+      "id": "TRACY_XML",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=manuscript",
+      "acquired_bytes": 135377,
+      "sha256": "0ea70c0dd951112aa33e15d946811674353de803ec14fc9da6f11abb6e77ece6",
+      "read_scope": "Study 4 methods and results; Study 5 results; scoring and item definition",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "TRACY_PDF",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+      "acquired_bytes": 366306,
+      "sha256": "cdabf5ab01e8b207fcad0619823f5ad62e14647e047cc9aad00cb46dd744a276",
+      "read_scope": "Text extraction, visual verification of pages 8 and 10",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "TRACY_HTML",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0017349",
+      "acquired_bytes": 251227,
+      "sha256": "43c8238b334858781124be286c674cde499b92ed0754c243296b06c7a566486b",
+      "read_scope": "Study 4 and Study 5 results; linked supporting files and comment routes",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "JARNEFELT_PDF",
+      "url": "https://www.bu.edu/cdl/files/2015/04/Creator-online-publication1.pdf",
+      "acquired_bytes": 640276,
+      "sha256": "c8fcd3c0a6dcd25029ec7a6f2f199323eb5eb524e3542922a24c7b1c91b4ad41",
+      "read_scope": "Data-link and appendix check; not a new complete empirical analysis",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "COMMENTS_INDEX",
+      "url": "https://journals.plos.org/plosone/article/comments?id=10.1371/journal.pone.0017349",
+      "acquired_bytes": 77147,
+      "sha256": "2c6ed0769c38587d0df49c9707dd9b3f4023c511c05f3a909c4435a5b2609284",
+      "read_scope": "Reader-comments index with two threads and one response",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "TRACY_S1",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349.s001&type=supplementary",
+      "acquired_bytes": 25088,
+      "sha256": "21a7c383172f84fd78dab78c690ca1d0e6cdcbfdd13bc3c8e145fe0d56f8bb08",
+      "read_scope": "Actual DOC content inspected via readable text stream; classified as stimulus or summary analysis; no participant rows",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "TRACY_S2",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349.s002&type=supplementary",
+      "acquired_bytes": 23040,
+      "sha256": "d7a172a2ba4b45ff90501573266c3a8930f2d49485480e30d975044cb1dd58b7",
+      "read_scope": "Actual DOC content inspected via readable text stream; classified as stimulus or summary analysis; no participant rows",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "TRACY_S3",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349.s003&type=supplementary",
+      "acquired_bytes": 24576,
+      "sha256": "b8ecdd181e2aa14671e2768b8e3335413ade9a9be4977eb20bf27e417cd8c888",
+      "read_scope": "Actual DOC content inspected via readable text stream; classified as stimulus or summary analysis; no participant rows",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "TRACY_S4",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349.s004&type=supplementary",
+      "acquired_bytes": 23040,
+      "sha256": "48a8229bb8eec2aaf67c2baf8db29703b560f88b8bab5b5c21d85a3347eb904e",
+      "read_scope": "Actual DOC content inspected via readable text stream; classified as stimulus or summary analysis; no participant rows",
+      "full_source_in_public_package": false
+    },
+    {
+      "id": "bu_publications",
+      "url": "https://www.bu.edu/cdl/ccl/publications/",
+      "http_status": 200,
+      "bytes": 118157,
+      "sha256": "ee13547517e09ca446dd0bfaedc65c5aafe89eb6ea9be152ad09795ab2788408",
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "datacite_tracy",
+      "url": "https://api.datacite.org/dois?query=%2210.1371%2Fjournal.pone.0017349%22&page%5Bsize%5D=25",
+      "http_status": 200,
+      "bytes": 42673,
+      "sha256": "ff1269365bc21048a6fb659342b5094634f658a4cbe383d39c5bfc9e4344f4ed",
+      "type": "application/json; charset=utf-8",
+      "meta": {
+        "total": 6,
+        "totalPages": 1,
+        "page": 1
+      },
+      "n_records": 6,
+      "titles": [
+        [
+          {
+            "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "datacite_jarnefelt",
+      "url": "https://api.datacite.org/dois?query=%2210.1016%2Fj.cognition.2015.02.005%22&page%5Bsize%5D=25",
+      "http_status": 200,
+      "bytes": 102388,
+      "sha256": "1d2afd26a9a6fafdb3bbdad2506921f2c9c524b47decd3153d7f00d16bac42a5",
+      "type": "application/json; charset=utf-8",
+      "meta": {
+        "total": 12,
+        "totalPages": 1,
+        "page": 1
+      },
+      "n_records": 12,
+      "titles": [
+        [
+          {
+            "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 1 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 1 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "osf_tracy",
+      "url": "https://api.osf.io/v2/nodes/?filter%5Btitle%5D=Death+and+Science",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "337a5845bf62ccbe2bee6d47834c9d6317bc033ab935af60bc66d75c688ef71a",
+      "type": "application/vnd.api+json; charset=utf-8",
+      "meta": {
+        "version": "2.0"
+      },
+      "n_records": 0,
+      "titles": []
+    },
+    {
+      "id": "osf_jarnefelt",
+      "url": "https://api.osf.io/v2/nodes/?filter%5Btitle%5D=divided+mind+of+a+disbeliever",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "337a5845bf62ccbe2bee6d47834c9d6317bc033ab935af60bc66d75c688ef71a",
+      "type": "application/vnd.api+json; charset=utf-8",
+      "meta": {
+        "version": "2.0"
+      },
+      "n_records": 0,
+      "titles": []
+    },
+    {
+      "id": "comment_genotype",
+      "url": "https://journals.plos.org/plosone/article/comment?id=10.1371/annotation/afb91486-3fff-4cd8-bd15-8a869484d7bd",
+      "http_status": 200,
+      "bytes": 84081,
+      "sha256": "c4227c60a6cff84befa94d4faca542edc25bf8d36bc01ce7a288062af2ece603"
+    },
+    {
+      "id": "comment_texas",
+      "url": "https://journals.plos.org/plosone/article/comment?id=10.1371/annotation/82b1a946-a4cf-4e96-a73a-ed062d2fdb5e",
+      "http_status": 200,
+      "bytes": 88749,
+      "sha256": "9592ed41f5b9c5c36862fe47b1cf331c45b9a7d309600a8110199ba75b8d52f0"
+    },
+    {
+      "id": "crossref_tracy",
+      "url": "https://api.crossref.org/works/10.1371/journal.pone.0017349",
+      "http_status": 200,
+      "bytes": 16429,
+      "sha256": "ab709d2e0a5044985868ee678e22e46d80348a45a4dec1aa4e9479d9a24939bf",
+      "update-to": null,
+      "relation": {}
+    }
+  ],
+  "xml_paragraph_locators": [
+    {
+      "xml_section_id": "s2a",
+      "direct_paragraph_index_1_based": 2,
+      "text_sha256": "43d8e46b91ee4a2462f650fa92291362600887c9c847230ae0bbd67728b76581",
+      "character_count": 1384
+    },
+    {
+      "xml_section_id": "s2a",
+      "direct_paragraph_index_1_based": 3,
+      "text_sha256": "2c40e3e7cc050a602aa661691fd8fe21014b94f358303967a5acba3e8d18477c",
+      "character_count": 1830
+    },
+    {
+      "xml_section_id": "s2d",
+      "direct_paragraph_index_1_based": 1,
+      "text_sha256": "d8e57a08108b1a78ef395f715afc3a6e43299bcc57bde81457b5ebbe42ab0d0c",
+      "character_count": 779
+    },
+    {
+      "xml_section_id": "s3d1",
+      "direct_paragraph_index_1_based": 1,
+      "text_sha256": "d8c9d4d00ca783c48fbe7533ca4210c1dcba79e43402137d0ff55580476f34f8",
+      "character_count": 1609
+    },
+    {
+      "xml_section_id": "s3d3",
+      "direct_paragraph_index_1_based": 1,
+      "text_sha256": "35de5ab221a80f98dfd6ce0f9a549c52a4ac4ba1c2e105f0ed135f185d6885fd",
+      "character_count": 1178
+    },
+    {
+      "xml_section_id": "s3e",
+      "direct_paragraph_index_1_based": 1,
+      "text_sha256": "61295cc9e7d72618a1a6e661dab37d68412e6c7c7b101ba6b06f254eea407f5e",
+      "character_count": 1032
+    }
+  ],
+  "source_text_note": "Source bodies and PDF page images are deliberately not in this public package. Download sources using their lawful URLs and compare acquired-byte hashes; live HTML can change."
+}

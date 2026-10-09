@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-09T04:03:07.606711+00:00",
+  "toolchain": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "checks": [
+    {
+      "file": "Uniqueness.lean",
+      "sha256": "29f7e5820f187957286705824a9347b41a5e889a6bc200223a2990b2efcb18e1",
+      "exit_code": 0,
+      "log": "total-explainer-uniqueness/root-Uniqueness.lean.log"
+    },
+    {
+      "file": "FiniteControl.lean",
+      "sha256": "de5eefa7432a8d6fbe58f2ac9f54afa6baa14924291e4808964f8d77139d1686",
+      "exit_code": 0,
+      "log": "total-explainer-uniqueness/root-FiniteControl.lean.log"
+    }
+  ],
+  "scope": "Fresh root replay of two new isolated conditional mathematical files only; no metaphysical premise or historical-time verification."
+}

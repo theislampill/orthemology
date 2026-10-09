@@ -1,0 +1,20 @@
+[
+  {
+    "file": "sources/asbahani-minhaj.pdf",
+    "url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+    "bytes": 18364577,
+    "sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+    "method": "curl public download after web PDF extractor size limitation",
+    "pdf_pages": 938,
+    "reading": "Only listed image pages; acquisition is not whole-work reading"
+  },
+  {
+    "file": "sources/dtan10.pdf",
+    "url": "https://archive.org/download/WAQ44998/dtan10.pdf",
+    "bytes": 5195041,
+    "sha256": "c8422b92a10de5298089a666f5951bc63fbf6202079a04b8706fc9bd16c0d538",
+    "md5": "2e48872f9b68b97129633d7a6695f1f1",
+    "method": "curl public archive download; filename and expected 5195041 bytes/MD5 found in retained archive metadata",
+    "reading": "Only listed image pages; acquisition is not whole-work reading"
+  }
+]

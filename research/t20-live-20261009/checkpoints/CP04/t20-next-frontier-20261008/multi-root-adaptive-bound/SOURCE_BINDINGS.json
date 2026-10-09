@@ -1,0 +1,180 @@
+{
+  "created_utc": "2026-10-08T12:53:08.266247+00:00",
+  "frozen_manifests": [
+    {
+      "directory": "noise-aware-calibration",
+      "manifest_sha256": "764ba9089be07d87f20ba1591886d901ceb3cf4d9fac60bc358c0d3cbd07716f",
+      "payloads": [
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "cce1c2d767ad52b72dce9ba324d42c21de916047bcd6b6588550e4cb9e05ac72",
+          "verified": true
+        },
+        {
+          "path": "RESEARCH_ACCOUNTING.json",
+          "sha256": "2b44b736562c22d183524fd6adaa98c2fae685157b15852bb58a5896fa38a44a",
+          "verified": true
+        },
+        {
+          "path": "RESEARCH_EVENTS.jsonl",
+          "sha256": "57c752c576353dcc5f8bc2fe97c1570078643d4893081befc7b6cab2200adc02",
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d",
+          "verified": true
+        },
+        {
+          "path": "REVIEW_RESPONSE.md",
+          "sha256": "c679ae75b1aff3568227285a361071ebee55b1dc0e2c6bed9fe5cd7e40f55e06",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_BINDINGS.json",
+          "sha256": "121a333ac5648bceafdaf7473080d154b7e5151bf744b5be36133ae7fc04b9c0",
+          "verified": true
+        },
+        {
+          "path": "THEOREMS.md",
+          "sha256": "1b3d0c4ee7e45041d5b8866c7bf2d8d4f48e8b6082597b70debf9350473a51dc",
+          "verified": true
+        },
+        {
+          "path": "results/DEVELOPMENT_RUN.log",
+          "sha256": "1f6187da9294c676a13de9b3e1b750bb2f6f340ad0de3487ceed0d2bc461715c",
+          "verified": true
+        },
+        {
+          "path": "results/EXACT_INPUT_GREEN.log",
+          "sha256": "1a6ad8bd78a4f33004a304dd1974b75d3aeb204ad083a3c37adef1d8e2c9d52e",
+          "verified": true
+        },
+        {
+          "path": "results/EXACT_INPUT_RED.log",
+          "sha256": "b325d17956d6074ca64a9821a4978f55c21dc40ddceb1b27188b682df31f6832",
+          "verified": true
+        },
+        {
+          "path": "results/FINAL_TESTS.log",
+          "sha256": "395ccd495dcec22939046c33ad54dc4e3642693e40f7e9314bc2a0c723e6ac5e",
+          "verified": true
+        },
+        {
+          "path": "results/FIRST_RUN.log",
+          "sha256": "3dce8a11c463bc5e52cd0dbe260b8d098ebb22aac59488581182cb3b3eabb69c",
+          "verified": true
+        },
+        {
+          "path": "results/RESULTS.json",
+          "sha256": "df2b9318eb81b1125c73c85bea847e95bb7da6da6b43b0cd1021de1da39a9d9b",
+          "verified": true
+        },
+        {
+          "path": "results/VERIFICATION.json",
+          "sha256": "475adc9771d137e6fb5997347e4a67924db1897dd5b165084a4fdcb2674776f8",
+          "verified": true
+        },
+        {
+          "path": "src/export_results.py",
+          "sha256": "e74fbaa81a6302f6aedde234e0ae6b87097e07d32479c295276900143d5cc302",
+          "verified": true
+        },
+        {
+          "path": "src/robust_masks.py",
+          "sha256": "1c818590a66e5e6b7af39d46c2db849bb2bb99e758a90771218c4b2cb148efd3",
+          "verified": true
+        },
+        {
+          "path": "src/test_robust_masks.py",
+          "sha256": "e9e1a14061d66a77fac35659d80b7f7298294afb940cdc797b5db62fee3d46c2",
+          "verified": true
+        },
+        {
+          "path": "src/verify_evidence.py",
+          "sha256": "ff32ca63f9d0727d3b13bc53eb03cdb6db4a9fbc3b4d478042fbc4c8b822a1f2",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "directory": "calibration-design-frontier",
+      "manifest_sha256": "07a2b23dc30856f388a263bfc62a215d4d5277f03ce845f014b2ce399d94f412",
+      "payloads": [
+        {
+          "path": "ARBITRARY_RATE_COUNT_BOUND.md",
+          "sha256": "e68242d3052342b2c2cf029b3e9d65d3402e7005d6179f8a335ec1e5ad52daad",
+          "verified": true
+        },
+        {
+          "path": "EXACT_CONTROLS.md",
+          "sha256": "64310261d40e3ba17cfb82a2c7fe257afe7f37a5d270a51e57a66882acd7135c",
+          "verified": true
+        },
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "dd3e8b31eaedc20f21213598167af759dcc13dad010e19d158c84cd8d9c00556",
+          "verified": true
+        },
+        {
+          "path": "RESEARCH_EVENTS.jsonl",
+          "sha256": "e69c99b2fd439849cc442b2a38f24cba1fb2455d516e318779090aab31b06c8e",
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "89b17388c4f243f555dbcb2232a3f106683cc3cc23edf0e3f7371bec3e018db7",
+          "verified": true
+        },
+        {
+          "path": "REVIEW_STATUS.md",
+          "sha256": "f8304a9baf2ba1d354c7ed35fe3344975b33ac00dc440a5ef60fba7c2c379f2c",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_AUDIT.md",
+          "sha256": "7de2684ff3ae0b89c36d117e168c0714a500138e7e0c044a3a5f47dee8237dad",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_BINDINGS.json",
+          "sha256": "b037dac94a5a9feb0084c0bfbc1eb2dd99ed4fff20453df4397277e61da1d2dc",
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "d67b5b1d8077046ab29b6175584a14181cb306796fa708d667cb45f3bf7adf65",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.json",
+          "sha256": "e7f9bea59d7f1fa1d9126ac5745bbae18957baa6f89162caf8097a713094f5da",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.log",
+          "sha256": "2e0532c7079d5cffac688d23a2005e333f3f8fc58603dafc6f0df52f06e14128",
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "individual_inputs": [
+    {
+      "path": "noise-aware-review/RESTRICTED_MASK_LOWER_BOUND.md",
+      "sha256": "6f1c95bca5083e3cdfc2421308700a5b78a8c62f5433a4eb0ae089ef7b5819c3"
+    },
+    {
+      "path": "productive-identifiability/THEOREMS.md",
+      "sha256": "aec96500f0b273b5f4d1cf40c075e2d1bc906062e2c314ad420c7d36652a35dc"
+    },
+    {
+      "path": "adaptive-count-review/REVIEW.md",
+      "sha256": "22d0712ad9e394827c7ec8ad71584b0f32a661daa618cd9618089dca13a3ce22"
+    },
+    {
+      "path": "adaptive-count-review/REVIEW_RECEIPT.json",
+      "sha256": "d6adc2dd598b28ae5e72b9e1f2e83c1dd85f6863b6ea5be8d0fbfb7e6ada3325"
+    }
+  ]
+}

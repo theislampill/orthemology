@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "stats": {
+    "world_name_runs": 1216,
+    "support_decisions": 9740,
+    "raw_queries": 631925,
+    "max_bits": 94,
+    "unary_signs": 168,
+    "unary_recoveries": 32
+  },
+  "count_fibre_controls": [
+    {
+      "isolated_roots": 0,
+      "residual_budget": 0,
+      "feasible_tuples": 1
+    },
+    {
+      "isolated_roots": 0,
+      "residual_budget": 1,
+      "feasible_tuples": 1
+    },
+    {
+      "isolated_roots": 0,
+      "residual_budget": 2,
+      "feasible_tuples": 1
+    },
+    {
+      "isolated_roots": 0,
+      "residual_budget": 3,
+      "feasible_tuples": 1
+    },
+    {
+      "isolated_roots": 1,
+      "residual_budget": 1,
+      "feasible_tuples": 1
+    },
+    {
+      "isolated_roots": 1,
+      "residual_budget": 2,
+      "feasible_tuples": 2
+    },
+    {
+      "isolated_roots": 1,
+      "residual_budget": 3,
+      "feasible_tuples": 3
+    },
+    {
+      "isolated_roots": 1,
+      "residual_budget": 4,
+      "feasible_tuples": 4
+    },
+    {
+      "isolated_roots": 2,
+      "residual_budget": 2,
+      "feasible_tuples": 1
+    },
+    {
+      "isolated_roots": 2,
+      "residual_budget": 3,
+      "feasible_tuples": 3
+    },
+    {
+      "isolated_roots": 2,
+      "residual_budget": 4,
+      "feasible_tuples": 6
+    },
+    {
+      "isolated_roots": 2,
+      "residual_budget": 5,
+      "feasible_tuples": 10
+    },
+    {
+      "isolated_roots": 3,
+      "residual_budget": 3,
+      "feasible_tuples": 1
+    },
+    {
+      "isolated_roots": 3,
+      "residual_budget": 4,
+      "feasible_tuples": 4
+    },
+    {
+      "isolated_roots": 3,
+      "residual_budget": 5,
+      "feasible_tuples": 10
+    },
+    {
+      "isolated_roots": 3,
+      "residual_budget": 6,
+      "feasible_tuples": 20
+    },
+    {
+      "isolated_roots": 4,
+      "residual_budget": 4,
+      "feasible_tuples": 1
+    },
+    {
+      "isolated_roots": 4,
+      "residual_budget": 5,
+      "feasible_tuples": 5
+    },
+    {
+      "isolated_roots": 4,
+      "residual_budget": 6,
+      "feasible_tuples": 15
+    },
+    {
+      "isolated_roots": 4,
+      "residual_budget": 7,
+      "feasible_tuples": 35
+    }
+  ],
+  "prior_files_unchanged": 91,
+  "scope": "finite exact controls only; all-name correctness and termination require the proof in REVIEW.md"
+}

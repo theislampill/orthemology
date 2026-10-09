@@ -1,0 +1,90 @@
+{
+  "utc": "2026-10-09T08:42:06.582636+00:00",
+  "status": "one bounded operation completed; independent review pending; T20 active",
+  "new_primary": {
+    "title": "Shawn Standefer, Actual Issues for Relevant Logics",
+    "url": "https://shawn-standefer.github.io/pdfs/actual.pdf",
+    "doi": "https://doi.org/10.3998/ergo.12405314.0007.008",
+    "scope": "printed270-271 complete extracted text and visual read; table2 and Hasse diagram visually checked; preceding derivation context also read in extracted text; no whole-paper claim",
+    "file_sha256": "5d2e941826285295341280153134e899763d5de4f5df3c8b303c359ff79879ce",
+    "attribution": "Belnap matrix via Anderson-Belnap; not a new matrix"
+  },
+  "other_acquisition": {
+    "path": "research-intermediates/standefer-epistemic.pdf",
+    "url": "https://shawn-standefer.github.io/pdfs/epistemic.pdf",
+    "scope": "downloaded; theorem and table search/extraction only; not relied on for completed argument or full-read credit"
+  },
+  "inherited_primary_rechecks": [
+    {
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/bimbo-dunn-ferenz2018.txt",
+      "scope": "printed176-177 axioms/rules, with preceding context; already credited by predecessor"
+    },
+    {
+      "path": "relevant-closure-review-20261009/research-intermediates/barker-adams2010.txt",
+      "scope": "printed227-228 closure argument and notes21-23, with continuation context; already credited by predecessor"
+    }
+  ],
+  "input_bindings": [
+    {
+      "path": "necessary-truth-operative-basing-20261009/REPORT.md",
+      "sha256": "4bd8f0e5bcac178bf9eb890544fcba9fd60f6a1d08cdf2e0cc12bb6d2c4b4c1c"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/check_relevant_bridge.py",
+      "sha256": "f1f954730610c75df29f36f04d9e6a6c4c69b5b9b360f0fccf71e44fee54e814"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/bimbo-dunn-ferenz2018.pdf",
+      "sha256": "e94bbd19d899cb754d1d66e71a863bcac3dea5052d1b05992e699fd8ae78533c"
+    },
+    {
+      "path": "relevant-closure-review-20261009/INDEPENDENT_REVIEW.md",
+      "sha256": "67c90c4fcb68080ea8df986b99458fce20d40c1816c9e1742e3019a6132aab73"
+    },
+    {
+      "path": "relevant-closure-review-20261009/research-intermediates/barker-adams2010.pdf",
+      "sha256": "253789f4e96fa040459a12bae173a2c28053ff64c9ae85e9355226377c538c08"
+    },
+    {
+      "path": "actual-original-production-residual-20261009/REPORT.md",
+      "sha256": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e"
+    },
+    {
+      "path": "particular-agency-bridge-20261009/REPORT.md",
+      "sha256": "01cf59219b9d36ef5a734a934e07246d0d39dad4f8c78fc26a1f16168b03b924"
+    },
+    {
+      "path": "recognition-story-provenance-20261009/REPORT.md",
+      "sha256": "329b1b1fe1deddab33922bb7479dcd98330ad036a7365664876bdbf1f160e7a0"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/REPORT.md",
+      "sha256": "e63116973f12d3ed2ee51a390c8f357658b98433e39071588adb24638412c436"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/RESULT.md",
+      "sha256": "66cb5493dfa6f71f67b21255cc46f510cba6c1b7c761b1232e8fc4535e215fda"
+    },
+    {
+      "path": "t20-next-frontier-20261008/research-allocation/20261008_SUCCESSOR_PRIORITY.md",
+      "sha256": "b45fc11608d88df1ac667c544b4081a2b0863964e3978b9223cfd6cdd4b0b6cf"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/closure-case-current/OBLIGATION_MATRIX.md",
+      "sha256": "b860c7989abdf22ea2b18792e025dce59e92585151196bf11def1ff0f6b64a72"
+    }
+  ],
+  "independent_math_screen": {
+    "worker": "screen_inherited_math_frontier",
+    "scope": "bounded record and actual pinned manuscript screen; no experiment or proof initiated",
+    "result": "no second ready operation selected; exact adaptive-discharge instance absent"
+  },
+  "limits": [
+    "No root kernel verification",
+    "No epistemic model",
+    "No actual human/Creator-recognition inference",
+    "No source epistemology refutation",
+    "No packaging, upload, integration, or closure",
+    "No retrospective active-time certification"
+  ]
+}

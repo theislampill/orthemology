@@ -1,0 +1,38 @@
+{
+  "frozen_utc": "2026-10-08T09:29:04+00:00",
+  "decision": "Positive conditional scoped ownership/control-of-use specification at the supplied defeasible relational standard. Remaining questions concern transfer of normative title/domain and actual directive force.",
+  "precedence": "Read scoped-ownership-addendum.md as the governing correction to authority-assessment.md, particularly its p48 description and counterfactual test.",
+  "parent_review_required": true,
+  "deliverable_candidates": [
+    "authority-assessment.md",
+    "scoped-ownership-addendum.md"
+  ],
+  "metadata_only": [
+    "source-manifest.json",
+    "reading-intervals.jsonl",
+    "freeze-manifest.json"
+  ],
+  "excluded_research_intermediates": [
+    "ameri-waqfeya.pdf",
+    "ameri-waqfeya.txt",
+    "page-images/"
+  ],
+  "files": {
+    "authority-assessment.md": {
+      "bytes": 10666,
+      "sha256": "a8b5375aa9a33aeafaf1c6f379333e672423a415743b24d34fa76a59ebf2ccaa"
+    },
+    "scoped-ownership-addendum.md": {
+      "bytes": 5283,
+      "sha256": "9e8dd7029625998f2c43649bafaa2596ab31cc802d75161998d3ad63a6790034"
+    },
+    "source-manifest.json": {
+      "bytes": 1725,
+      "sha256": "103f063b5d19577a63124f0e58184dea102bcf9b938f74926d1eb1654fb9cbdc"
+    },
+    "reading-intervals.jsonl": {
+      "bytes": 1929,
+      "sha256": "2395e874564cad2fca520eb0a03e4250df21fce90f3b0f90ea6885bc61bf4679"
+    }
+  }
+}

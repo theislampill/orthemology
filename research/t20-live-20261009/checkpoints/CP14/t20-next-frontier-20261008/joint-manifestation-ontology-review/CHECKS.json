@@ -1,0 +1,16 @@
+{
+  "result_sha256": "d6bd565310de6270d5d60fdc386d2c086c328184615f0d17eb4c4fcbf2f4261b",
+  "expected_result_sha256": "d6bd565310de6270d5d60fdc386d2c086c328184615f0d17eb4c4fcbf2f4261b",
+  "source_pdf_bytes": 616462,
+  "source_nonempty_extraction_pages": 21,
+  "source_capsule_words": 149,
+  "source_extraction_reproduced": true,
+  "all_seven_author_declared_input_hashes_match": true,
+  "substantive_transport_blocker_found": false,
+  "editorial_refinements": [
+    "R1 explicit inherited-source attribution",
+    "R2 explicit existing many-partner allowance"
+  ],
+  "metaphysical_validation": false,
+  "author_files_changed_by_reviewer": false
+}

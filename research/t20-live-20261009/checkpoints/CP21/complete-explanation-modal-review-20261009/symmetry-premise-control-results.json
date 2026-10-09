@@ -1,0 +1,61 @@
+{
+  "scope": "local transport after admitted explanatory premises",
+  "premises": [
+    "globally C implies S",
+    "globally S implies box C"
+  ],
+  "conclusion": "diamond C implies C, equivalently not C implies box not C",
+  "symmetric_example": {
+    "relation": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "properties": {
+      "reflexive": false,
+      "symmetric": true,
+      "transitive": false
+    },
+    "valuations_checked": 16,
+    "satisfying_premises": 2,
+    "counterexamples": 0
+  },
+  "directed_countermodel": {
+    "relation": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "properties": {
+      "reflexive": true,
+      "symmetric": false,
+      "transitive": true
+    },
+    "C": [
+      false,
+      true
+    ],
+    "S": [
+      false,
+      true
+    ],
+    "global_premises_hold": true,
+    "not_C_and_diamond_C_at_w0": true,
+    "empty_successor_sets": false
+  },
+  "limitation": "No full frame characterization or metaphysical-possibility claim"
+}

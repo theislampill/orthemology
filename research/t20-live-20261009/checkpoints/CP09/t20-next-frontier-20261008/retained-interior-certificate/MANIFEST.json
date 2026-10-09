@@ -1,0 +1,118 @@
+{
+  "status": "Frozen scratch mathematical packet after independent review; no integration or closure",
+  "created_utc": "2026-10-08T20:08:23.604066+00:00",
+  "files": {
+    "CONTROL_RESULTS.json": {
+      "sha256": "a3e4120b7146789bf5f076c1a3fe1ec6d98752a1719fcc9b7f5ab36bbc62c97f",
+      "bytes": 2459
+    },
+    "FINAL_CHECK.json": {
+      "sha256": "3c562d9b10782b632465afdf9633d6b70c2eae3053c37e08617d33c7a5c7401c",
+      "bytes": 444
+    },
+    "IMPORTED_MODULE_BINDINGS.json": {
+      "sha256": "73e04cfdb187330947b6c2cd27e0472471d1bc37d9be5461c42eb22d678144c4",
+      "bytes": 787990
+    },
+    "IMPORTS.log": {
+      "sha256": "64f8a8e39cb7b43010ca0b75d0557f374017dab6dc91e87053f809460515573e",
+      "bytes": 60129
+    },
+    "ImportInventory.lean": {
+      "sha256": "240941371ef58576258cd8b879ab2d6119157d95e3b0f11156d027585fea0620",
+      "bytes": 194
+    },
+    "KERNEL.log": {
+      "sha256": "bc56772cd84d4a1b4b9cd32dfa0b74a5e8716dda9e32864037111a9d2261a3c5",
+      "bytes": 375
+    },
+    "KERNEL_DEPENDENCIES.json": {
+      "sha256": "5c86cb97ff5484b15119996446e836a6716aff9e7cc70e71796128c6e90800a6",
+      "bytes": 2023
+    },
+    "LEAN_PATH.txt": {
+      "sha256": "ec558c15b2f0bc4c7bcb83431a4f453f767d9d6cc11765166eb30601c99e0d3a",
+      "bytes": 538
+    },
+    "NEGATIVE_CONTROLS.md": {
+      "sha256": "3f12981aeee57e4830dd35c73b7656ad0ee979fd1a14e84401727abfc8887629",
+      "bytes": 2719
+    },
+    "READ_FIRST.md": {
+      "sha256": "7be48b3930d16883c45388938c2321d97ff03d7465adf2849c12f8f4663947da",
+      "bytes": 1860
+    },
+    "RESEARCH_ACCOUNTING.json": {
+      "sha256": "e79b57109d3cd013c84262d0111158037785d8932b247573c5fc71ea63018661",
+      "bytes": 769
+    },
+    "RESEARCH_EVENTS.jsonl": {
+      "sha256": "9eb34440648f1ddd865166b67e5b12ce956902b7afa1debe24f834cb5b8fae05",
+      "bytes": 1126
+    },
+    "RESULT.md": {
+      "sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+      "bytes": 16475
+    },
+    "REVIEW_STATUS.json": {
+      "sha256": "e4b3892ed08121ee6b07313effaec174717d6463c197ff3d2dc9498d201578c3",
+      "bytes": 864
+    },
+    "RetainedInterior.lean": {
+      "sha256": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+      "bytes": 3269
+    },
+    "RetainedInterior.olean": {
+      "sha256": "e608afe007977c64368c039be98d7f979c4fad01345c0c24cb7c6c17d78ee808",
+      "bytes": 111776
+    },
+    "SOURCE_AUDIT.md": {
+      "sha256": "fefdee68383cf0ea813182da8b918be831935774317e18ba609513191d5659f7",
+      "bytes": 3679
+    },
+    "SOURCE_BINDINGS.json": {
+      "sha256": "56149dac036d20695f3286dfc9e45ac8979a1306a731acceabc4e88e6ecaaab3",
+      "bytes": 439
+    },
+    "controls.py": {
+      "sha256": "8b88ebefafedf4afdee817f73420870648b5b162ffb0ad8e6699b4a2aab9dced",
+      "bytes": 5579
+    },
+    "kernel-replay/FalseConnectorPremise.lean": {
+      "sha256": "58f1e282f69df4c355264695de926ecb0942a9126b00f34dca66b5253e7f32d6",
+      "bytes": 3263
+    },
+    "kernel-replay/FalseConnectorPremise.log": {
+      "sha256": "378a0b30fffc32eebf4712c1dfced503876186fcb4843a1e5dc00175bdc949c8",
+      "bytes": 1435
+    },
+    "kernel-replay/FalseCountBound.lean": {
+      "sha256": "3fdd60e121af0abade18bdb59331ac4f8be8e9eeee8b3490bbebb1895396518f",
+      "bytes": 3277
+    },
+    "kernel-replay/FalseCountBound.log": {
+      "sha256": "acccb6f4be408411639118f503432a2e83f013ee3ab6d30dc1a6eb8d23c89daf",
+      "bytes": 709
+    },
+    "kernel-replay/LEAN_VERSION.txt": {
+      "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b",
+      "bytes": 78
+    },
+    "kernel-replay/RetainedInterior.lean": {
+      "sha256": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+      "bytes": 3269
+    },
+    "kernel-replay/RetainedInterior.olean": {
+      "sha256": "e608afe007977c64368c039be98d7f979c4fad01345c0c24cb7c6c17d78ee808",
+      "bytes": 111776
+    },
+    "kernel-replay/TRUST_ZERO.log": {
+      "sha256": "bc56772cd84d4a1b4b9cd32dfa0b74a5e8716dda9e32864037111a9d2261a3c5",
+      "bytes": 375
+    },
+    "verify_kernel.sh": {
+      "sha256": "fa3eb5e78bcbd956962ab55889868d74906bfd11305c99b201aa3a91a24585b7",
+      "bytes": 1640
+    }
+  }
+}

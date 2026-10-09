@@ -1,0 +1,82 @@
+{
+  "recorded_utc": "2026-10-08T12:54:51+00:00",
+  "status": "ACCEPTED_WITHIN_DECLARED_MATHEMATICAL_SCOPE",
+  "scope": "Independent fixed-budget arbitrary-root-rate multiroot lower-bound review and same-class inherited upper comparison; no protected integration or model-to-world validation.",
+  "author_directory": "../multi-root-adaptive-bound",
+  "author_files": {
+    "RESULT.md": "60f7f240fc98d2105bddf0d4668f6e1a18e81df62421f333a4b92da3ff5f2a00",
+    "NEGATIVE_CONTROLS.md": "4bb44b2542d99c3188ba2e75ed126420e099203e498fe3d4e549f80f4dd345c5",
+    "SOURCE_AUDIT.md": "a58b5ace08849930b7add343875956bd5ebf6cd9b91716ba334806ec965e0695",
+    "SOURCE_BINDINGS.json": "0f2923fac9f85bf17aced259526cd1f5035a5ae1b023ce0a62e6328b686859e6",
+    "EXACT_CONTROLS.md": "3689a2756dbeb4868b689665b50232655b82038abe932197f6128d16312a89fe",
+    "exact_controls.py": "c503cdaf9391b69dc503510ef05ff656c85aa6989f33ded6e75397cef1679907",
+    "results/exact_controls.json": "abcc9a3e3660314a3364da1c5262de222193ca692c538d04708a198d5e9ab6b4",
+    "results/exact_controls.log": "5f9398f5876cd9d3c3ff3ce3df5c2dab613b577afc2780b71415beb145d7873d"
+  },
+  "required_inherited_inputs": {
+    "noise-aware-calibration/THEOREMS.md": "1b3d0c4ee7e45041d5b8866c7bf2d8d4f48e8b6082597b70debf9350473a51dc",
+    "noise-aware-review/RESTRICTED_MASK_LOWER_BOUND.md": "6f1c95bca5083e3cdfc2421308700a5b78a8c62f5433a4eb0ae089ef7b5819c3",
+    "calibration-design-frontier/ARBITRARY_RATE_COUNT_BOUND.md": "e68242d3052342b2c2cf029b3e9d65d3402e7005d6179f8a335ec1e5ad52daad"
+  },
+  "accepted_exact_bound": "N >= kl(1-delta,delta)/C(r,k), C(r,k)=2/[k(k+3)] * 4/(k+1)^2 * [4/(k+2)^2]^(r-2), r>=2, L>=r+1, k=floor((L-1)/r), 0<delta<1/2.",
+  "matched_order_scope": "Theta(L^(2r) log(1/delta)) for fixed r and fixed effect catalogue, 0<delta<=1/4, exact root-shared numerical rates, fixed histogram, fresh conditional independent-route endpoint law, fixed total budget.",
+  "independent_metrics": {
+    "count_budget_scaling_cases": 2211,
+    "route_profile_cases": 18688,
+    "proper_profile_equalities": 17344,
+    "boundary_full_profile_equalities": 1232,
+    "interior_inequality_chains": 26752,
+    "certified_log_KL_cases": 702,
+    "adaptive_transcript_leaf_counts": {
+      "r2_k1_N3": 64,
+      "r2_k3_N3": 64,
+      "r3_k1_N2": 16,
+      "r3_k2_N3": 64
+    },
+    "upper_menu_and_budget_checks": 147
+  },
+  "author_replay": {
+    "families_passed": 10,
+    "json_byte_identical": true,
+    "stdout_byte_identical": true
+  },
+  "source_binding_checks": {
+    "frozen_manifests": 2,
+    "frozen_payloads": 29,
+    "individual_inputs": 4,
+    "all_verified": true
+  },
+  "initial_precision_obstacle_preserved": true,
+  "log_certificate_cases_refined_to_32_terms": 10,
+  "failed_or_unresolved_mathematical_controls": [],
+  "unresolved_mathematical_blockers": [],
+  "excluded_claims": [
+    "expected stopping times",
+    "route-addressable gating",
+    "unbounded-dimension polynomial complexity",
+    "arbitrary-mixture recovery upper bound",
+    "optimal constants",
+    "physical or causal validation",
+    "protected integration",
+    "T20 closure"
+  ],
+  "reviewer_files": {
+    "COUNTEREXAMPLE_ATTEMPTS.md": "b91bd5b0e30dd2b7a7243c7f78e0822e99be4d1306ff47b2c32db35a7ada49d7",
+    "EXACT_CONTROLS.md": "283d6ddcae6688124c080797525ab329a39ab0abafac8bef54191b18d4dfd6f4",
+    "INDEPENDENT_PROOF.md": "71915f578a8765c0799539f0266334a9f810754b0094c7cb25bc7854083bfc3b",
+    "READ_FIRST.md": "6a56bc538ed007e76be476662d0145a18fe96c3331d172012e870ad3a01e61e3",
+    "REVIEW.md": "5e780a5e167f09c19f9ecfce6e1715e0eb938986f2c2f9ad0f2765c9daded417",
+    "author_replay/exact_controls.py": "c503cdaf9391b69dc503510ef05ff656c85aa6989f33ded6e75397cef1679907",
+    "author_replay/results/exact_controls.json": "abcc9a3e3660314a3364da1c5262de222193ca692c538d04708a198d5e9ab6b4",
+    "author_replay/results/exact_controls.log": "5f9398f5876cd9d3c3ff3ce3df5c2dab613b577afc2780b71415beb145d7873d",
+    "author_snapshot/NEGATIVE_CONTROLS.md": "4bb44b2542d99c3188ba2e75ed126420e099203e498fe3d4e549f80f4dd345c5",
+    "author_snapshot/RESULT.md": "60f7f240fc98d2105bddf0d4668f6e1a18e81df62421f333a4b92da3ff5f2a00",
+    "check_multiroot.py": "de64619c210d19f272e9e6c45b399becd40e372553688af8e534d425a7b3bd7a",
+    "results/AUTHOR_CODE_HASH_CHECK.txt": "25375b76d1ddd6271cbe3a7360a7601fec88ca5d9086571bdde61441ce808d3e",
+    "results/AUTHOR_REPLAY_COMPARISON.txt": "2ac7df2bb1db5b9386d71ae6b72efddecd1d3cbd015d70da095f439d9c0a883a",
+    "results/INDEPENDENT_CONTROLS.json": "3b4a40c449bf03551d7c58e4638ceb71cd8d38afd2e8a003872226848e41fd5b",
+    "results/INDEPENDENT_REPLAY.log": "3b4a40c449bf03551d7c58e4638ceb71cd8d38afd2e8a003872226848e41fd5b",
+    "results/INITIAL_PRECISION_ATTEMPT.md": "f9761d7464624ff7e84f1e50451d6fb38b0184245d9ca8a93a6af70b1a650864",
+    "results/SOURCE_BINDING_VERIFICATION.json": "a503ec40e44d39db84f4c2cda806bc81f786bff19cba4e063b8c3973b17600d5"
+  }
+}

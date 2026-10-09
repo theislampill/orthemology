@@ -1,0 +1,518 @@
+{
+  "policy": "No full source books/papers, extracted source bodies, source renders or participant-level records are distributed. Original provenance/citation records remain unchanged.",
+  "source_receipt_index": [
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/READING_PROVENANCE.json",
+      "json_pointer": "$.source",
+      "urls": {
+        "catalogue_url": "https://almobadarah.com/publications/book-5",
+        "pdf_url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "title": "\u0628\u0631\u0627\u0647\u064a\u0646 \u0648\u062c\u0648\u062f \u0627\u0644\u0644\u0647 \u0641\u064a \u0627\u0644\u0646\u0641\u0633 \u0648\u0627\u0644\u0639\u0642\u0644 \u0648\u0627\u0644\u0639\u0644\u0645",
+      "author": "Sami Ameri / \u0633\u0627\u0645\u064a \u0639\u0627\u0645\u0631\u064a",
+      "bytes": 11351820
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/empirical-check/primary_source_receipts.json",
+      "json_pointer": "$.sources[0]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0017349"
+      },
+      "recorded_sha256": {
+        "acquired_bytes_sha256": "0ea70c0dd951112aa33e15d946811674353de803ec14fc9da6f11abb6e77ece6"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "TRACY2011",
+      "read_scope": "Targeted direct publisher HTML and downloadable JATS XML inspection of Methods Studies1\u20135, Results Studies1\u20135, and relevant Discussion. The file endpoint returned XML despite the temporary .pdf suffix. No participant-data replication or supplementary-file review."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/empirical-check/primary_source_receipts.json",
+      "json_pointer": "$.sources[1]",
+      "urls": {
+        "url": "https://www.bu.edu/cdl/files/2015/04/Creator-online-publication1.pdf"
+      },
+      "recorded_sha256": {
+        "acquired_bytes_sha256": "c8fcd3c0a6dcd25029ec7a6f2f199323eb5eb524e3542922a24c7b1c91b4ad41"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "JARNEFELT2015",
+      "read_scope": "Author-laboratory-hosted published article; selected Methods, Results, controls and General discussion read in PDF text. No participant-data replication. Page images not needed for these text-only findings; an apparent sample-count inconsistency was not resolved or used."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/empirical-check/primary_source_receipts.json",
+      "json_pointer": "$.sources[2]",
+      "urls": {
+        "url": "https://psychiatryonline.org/doi/10.1176/appi.ajp.161.12.2303"
+      },
+      "recorded_sha256": {},
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "DERVIC2004",
+      "read_scope": "Publisher/primary-study indexed text and PubMed abstract read. Direct publisher open returned403 and PubMed open429 after search successfully returned the primary abstract. Whole article/PDF not continuously read; no raw-data review."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/empirical-check/primary_source_receipts.json",
+      "json_pointer": "$.sources[3]",
+      "urls": {
+        "url": "https://www.livescience.com/13534-death-anxiety-intelligent-design-evolution.html"
+      },
+      "recorded_sha256": {},
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "WELSH2011",
+      "read_scope": "Media item opened only to establish the citation chain to the primary study; no independent empirical status."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[0]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=manuscript"
+      },
+      "recorded_sha256": {
+        "sha256": "0ea70c0dd951112aa33e15d946811674353de803ec14fc9da6f11abb6e77ece6"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "TRACY_XML",
+      "acquired_bytes": 135377,
+      "read_scope": "Study 4 methods and results; Study 5 results; scoring and item definition"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[1]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable"
+      },
+      "recorded_sha256": {
+        "sha256": "cdabf5ab01e8b207fcad0619823f5ad62e14647e047cc9aad00cb46dd744a276"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "TRACY_PDF",
+      "acquired_bytes": 366306,
+      "read_scope": "Text extraction, visual verification of pages 8 and 10"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[2]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0017349"
+      },
+      "recorded_sha256": {
+        "sha256": "43c8238b334858781124be286c674cde499b92ed0754c243296b06c7a566486b"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "TRACY_HTML",
+      "acquired_bytes": 251227,
+      "read_scope": "Study 4 and Study 5 results; linked supporting files and comment routes"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[3]",
+      "urls": {
+        "url": "https://www.bu.edu/cdl/files/2015/04/Creator-online-publication1.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "c8fcd3c0a6dcd25029ec7a6f2f199323eb5eb524e3542922a24c7b1c91b4ad41"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "JARNEFELT_PDF",
+      "acquired_bytes": 640276,
+      "read_scope": "Data-link and appendix check; not a new complete empirical analysis"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[4]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/comments?id=10.1371/journal.pone.0017349"
+      },
+      "recorded_sha256": {
+        "sha256": "2c6ed0769c38587d0df49c9707dd9b3f4023c511c05f3a909c4435a5b2609284"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "COMMENTS_INDEX",
+      "acquired_bytes": 77147,
+      "read_scope": "Reader-comments index with two threads and one response"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[5]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349.s001&type=supplementary"
+      },
+      "recorded_sha256": {
+        "sha256": "21a7c383172f84fd78dab78c690ca1d0e6cdcbfdd13bc3c8e145fe0d56f8bb08"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "TRACY_S1",
+      "acquired_bytes": 25088,
+      "read_scope": "Actual DOC content inspected via readable text stream; classified as stimulus or summary analysis; no participant rows"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[6]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349.s002&type=supplementary"
+      },
+      "recorded_sha256": {
+        "sha256": "d7a172a2ba4b45ff90501573266c3a8930f2d49485480e30d975044cb1dd58b7"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "TRACY_S2",
+      "acquired_bytes": 23040,
+      "read_scope": "Actual DOC content inspected via readable text stream; classified as stimulus or summary analysis; no participant rows"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[7]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349.s003&type=supplementary"
+      },
+      "recorded_sha256": {
+        "sha256": "b8ecdd181e2aa14671e2768b8e3335413ade9a9be4977eb20bf27e417cd8c888"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "TRACY_S3",
+      "acquired_bytes": 24576,
+      "read_scope": "Actual DOC content inspected via readable text stream; classified as stimulus or summary analysis; no participant rows"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[8]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349.s004&type=supplementary"
+      },
+      "recorded_sha256": {
+        "sha256": "48a8229bb8eec2aaf67c2baf8db29703b560f88b8bab5b5c21d85a3347eb904e"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "TRACY_S4",
+      "acquired_bytes": 23040,
+      "read_scope": "Actual DOC content inspected via readable text stream; classified as stimulus or summary analysis; no participant rows"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[9]",
+      "urls": {
+        "url": "https://www.bu.edu/cdl/ccl/publications/"
+      },
+      "recorded_sha256": {
+        "sha256": "ee13547517e09ca446dd0bfaedc65c5aafe89eb6ea9be152ad09795ab2788408"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "bu_publications",
+      "bytes": 118157,
+      "http_status": 200
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[10]",
+      "urls": {
+        "url": "https://api.datacite.org/dois?query=%2210.1371%2Fjournal.pone.0017349%22&page%5Bsize%5D=25"
+      },
+      "recorded_sha256": {
+        "sha256": "ff1269365bc21048a6fb659342b5094634f658a4cbe383d39c5bfc9e4344f4ed"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "datacite_tracy",
+      "bytes": 42673,
+      "http_status": 200
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[11]",
+      "urls": {
+        "url": "https://api.datacite.org/dois?query=%2210.1016%2Fj.cognition.2015.02.005%22&page%5Bsize%5D=25"
+      },
+      "recorded_sha256": {
+        "sha256": "1d2afd26a9a6fafdb3bbdad2506921f2c9c524b47decd3153d7f00d16bac42a5"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "datacite_jarnefelt",
+      "bytes": 102388,
+      "http_status": 200
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[12]",
+      "urls": {
+        "url": "https://api.osf.io/v2/nodes/?filter%5Btitle%5D=Death+and+Science"
+      },
+      "recorded_sha256": {
+        "sha256": "337a5845bf62ccbe2bee6d47834c9d6317bc033ab935af60bc66d75c688ef71a"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "osf_tracy",
+      "bytes": 128,
+      "http_status": 200
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[13]",
+      "urls": {
+        "url": "https://api.osf.io/v2/nodes/?filter%5Btitle%5D=divided+mind+of+a+disbeliever"
+      },
+      "recorded_sha256": {
+        "sha256": "337a5845bf62ccbe2bee6d47834c9d6317bc033ab935af60bc66d75c688ef71a"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "osf_jarnefelt",
+      "bytes": 128,
+      "http_status": 200
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[14]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/comment?id=10.1371/annotation/afb91486-3fff-4cd8-bd15-8a869484d7bd"
+      },
+      "recorded_sha256": {
+        "sha256": "c4227c60a6cff84befa94d4faca542edc25bf8d36bc01ce7a288062af2ece603"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "comment_genotype",
+      "bytes": 84081,
+      "http_status": 200
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[15]",
+      "urls": {
+        "url": "https://journals.plos.org/plosone/article/comment?id=10.1371/annotation/82b1a946-a4cf-4e96-a73a-ed062d2fdb5e"
+      },
+      "recorded_sha256": {
+        "sha256": "9592ed41f5b9c5c36862fe47b1cf331c45b9a7d309600a8110199ba75b8d52f0"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "comment_texas",
+      "bytes": 88749,
+      "http_status": 200
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/source_receipts.json",
+      "json_pointer": "$.primary_sources[16]",
+      "urls": {
+        "url": "https://api.crossref.org/works/10.1371/journal.pone.0017349"
+      },
+      "recorded_sha256": {
+        "sha256": "ab709d2e0a5044985868ee678e22e46d80348a45a4dec1aa4e9479d9a24939bf"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "id": "crossref_tracy",
+      "bytes": 16429,
+      "http_status": 200
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reference-acquisition-audit/SOURCE_PROVENANCE.json",
+      "json_pointer": "$.web_sources[0]",
+      "urls": {
+        "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html"
+      },
+      "recorded_sha256": {},
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "limitations": "Electronic witness only; no print pagination or manuscript collation. No raw Arabic body redistributed."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-bridge/READING_PROVENANCE.json",
+      "json_pointer": "$.source",
+      "urls": {
+        "url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "title": "\u0628\u0631\u0627\u0647\u064a\u0646 \u0648\u062c\u0648\u062f \u0627\u0644\u0644\u0647 \u0641\u064a \u0627\u0644\u0646\u0641\u0633 \u0648\u0627\u0644\u0639\u0642\u0644 \u0648\u0627\u0644\u0639\u0644\u0645",
+      "author": "Sami Ameri / \u0633\u0627\u0645\u064a \u0639\u0627\u0645\u0631\u064a",
+      "bytes": 11351820
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/source-manifest.json",
+      "json_pointer": "$.downloaded_sources[0]",
+      "urls": {
+        "source_url": "https://archive.org/download/foundationsofbeln00balf/foundationsofbeln00balf.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "f61bb6dc942e7aa1ee86ac1c70b61386fc8114055be95b6ae35aae60a9449f75"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "temporary_file": "balfour1906.pdf",
+      "bytes": 20814296,
+      "note": "Balfour 1906 printing, 8th revised edition; 446 PDF pages; printed 278\u2013286 inspected, PDF 322\u2013330."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/source-manifest.json",
+      "json_pointer": "$.downloaded_sources[1]",
+      "urls": {
+        "source_url": "https://archive.org/download/foundationsofbeln00balf/foundationsofbeln00balf_djvu.txt"
+      },
+      "recorded_sha256": {
+        "sha256": "8e930f7b66d352329aa5120e623d8c26f134714fe21787e46fe56899bea157df"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "temporary_file": "balfour1906.txt",
+      "bytes": 718600,
+      "note": "OCR used for continuous targeted reading; verified scans at printed 279,282,285."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/source-manifest.json",
+      "json_pointer": "$.downloaded_sources[2]",
+      "urls": {
+        "source_url": "https://archive.org/download/foundationsofbeln00balf/foundationsofbeln00balf_scandata.xml"
+      },
+      "recorded_sha256": {
+        "sha256": "922e9982710f874ce534736ed774d6ce9e56ad32175995bee5d7bf1c93620846"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "temporary_file": "balfour1906-scandata.xml",
+      "bytes": 232415,
+      "note": "IA leaves 322\u2013330 map to printed 278\u2013286; PDF one-based pages happen to have same numerals as these IA zero-based leaf identifiers."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/source-manifest.json",
+      "json_pointer": "$.downloaded_sources[3]",
+      "urls": {
+        "source_url": "https://www.theistic.net/papers/V.Reppert/ReppertAFR.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "cdb4f5b6aa18bbe2ed146f98d6de7c206f2c4a294a5c99f44f06b40bdbd6a8d1"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "temporary_file": "ReppertAFR.pdf",
+      "bytes": 186104,
+      "note": "14 PDF pages; PDF creator author metadata Tim; generated 2011-01-15; primary author credited in body Victor Reppert. Displayed pages 7\u201327 inspected plus page 2."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/source-manifest.json",
+      "json_pointer": "$.downloaded_sources[4]",
+      "urls": {
+        "source_url": "https://dangerousidea.blogspot.com/2011/01/cleaning-up-old-paper-of-mine.html"
+      },
+      "recorded_sha256": {
+        "sha256": "dc6d2c592086808712868b59d4da2bf3b36f90d95114deae38dc966337884de9"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "temporary_file": "reppert-provenance.html",
+      "bytes": 148495,
+      "note": "Author post body only inspected, not comments."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/source-manifest.json",
+      "json_pointer": "$.downloaded_sources[5]",
+      "urls": {
+        "source_url": "https://static1.1.sqspcdn.com/static/f/38692/383655/1263300179793/Naturalism%2BDefeated.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "80e0a0cb37c015ae1bae6e8d0ad1cec5500dc82080ecdd4973c1237e31599a80"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "temporary_file": "plantinga-naturalism-defeated.pdf",
+      "bytes": 446036,
+      "note": "54 PDF pages; displayed copyright 1994 Alvin Plantinga. Opening through section I, PDF pp1\u201310, and pp19\u201321 inspected; later material not read systematically."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/source-manifest.json",
+      "json_pointer": "$.web_only_source",
+      "urls": {
+        "url": "https://www.christianitytoday.com/2008/07/evolution-vs-naturalism/"
+      },
+      "recorded_sha256": {},
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "author": "Alvin Plantinga",
+      "scope": "Continuous argument body and notes, excluding navigation, advertisements and unrelated content"
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-review/REVIEW_RECEIPT.json",
+      "json_pointer": "$.primary_source_returns[0]",
+      "urls": {
+        "url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "scope": "Targeted visual return to pages249,251,252,255,256,257,262,268,269,270,271,272,273,274,275; retained renders, plus PDF extraction. No independent continuous-chapter reread."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-review/REVIEW_RECEIPT.json",
+      "json_pointer": "$.primary_source_returns[1]",
+      "urls": {
+        "url": "https://www.theistic.net/papers/V.Reppert/ReppertAFR.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "cdb4f5b6aa18bbe2ed146f98d6de7c206f2c4a294a5c99f44f06b40bdbd6a8d1"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "scope": "Displayed7\u201327 via extracted text; displayed23\u201324 visually checked; online primary PDF opened. Not the 2003 book."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-review/REVIEW_RECEIPT.json",
+      "json_pointer": "$.primary_source_returns[2]",
+      "urls": {
+        "url": "https://archive.org/details/foundationsofbeln00balf/page/279/mode/1up"
+      },
+      "recorded_sha256": {
+        "sha256": "f61bb6dc942e7aa1ee86ac1c70b61386fc8114055be95b6ae35aae60a9449f75"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "scope": "Printed278\u2013286 via fresh extraction; retained renders279,282,285 visually checked. 1906 printing, not cited1918 printing."
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/reason-causation-review/REVIEW_RECEIPT.json",
+      "json_pointer": "$.primary_source_returns[3]",
+      "urls": {
+        "url": "https://static1.1.sqspcdn.com/static/f/38692/383655/1263300179793/Naturalism%2BDefeated.pdf"
+      },
+      "recorded_sha256": {
+        "sha256": "80e0a0cb37c015ae1bae6e8d0ad1cec5500dc82080ecdd4973c1237e31599a80"
+      },
+      "status": "SOURCE_OR_RETRIEVAL_BODY_NOT_DISTRIBUTED",
+      "hash_scope": "As recorded in frozen receipt; not freshly rechecked against omitted bytes by packaging.",
+      "scope": "Selected causal alternatives and reliability/inscrutability argument; PDF19\u201321 continuous extracted text. Mirror provenance limitation retained; not complete1994 manuscript or 2011 book."
+    }
+  ],
+  "derived_files": "Source text extractions and page renders were already kept outside these frozen deliverable directories. They remain excluded. No per-file digest is invented where the original receipt supplies none.",
+  "participant_data": {
+    "status": "NOT_LOCATED_IN_BOUNDED_PUBLIC_SEARCH",
+    "included": false,
+    "qualification": "This is not proof of universal unavailability, and the included aggregate p-value calculations are not participant-data reanalysis or replication."
+  },
+  "inherited_material": "Predecessor archives and full Lean/toolchain/cache trees are omitted; exact required reason-checker hash dependencies alone are copied. Full inherited proof manifests may refer to further files not included here.",
+  "active_work_excluded": [
+    "structuring-cause-reply"
+  ]
+}

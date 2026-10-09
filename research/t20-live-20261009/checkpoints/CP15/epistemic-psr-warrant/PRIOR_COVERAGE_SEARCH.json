@@ -1,0 +1,18 @@
+{
+  "scope": "Bounded local coverage search before primary acquisition; not a claim that all earlier user research has been searched.",
+  "searches": [
+    {
+      "command": "find . -type f -iname *koons*",
+      "finding": "No saved Koons-named source file found before this task."
+    },
+    {
+      "command": "rg -n -i koons|epistem...psr|objective probability|uncaused perception t20-next-frontier-20261008 over md/json/txt",
+      "finding": "Pruss chapter, prior totality-route mention, and existing modal-PSR packet found; no continuous Koons epistemological-source reading record found."
+    },
+    {
+      "command": "rg -n -i koons|new look at the cosmological|skepticism and the principle recovery-t20 t20-continuation-20261008 user-checkpoints/extracted over md/json/txt",
+      "finding": "Historical T19 report preserves an incomplete Koons totality/fusion route. It does not document a completed epistemic-warrant audit."
+    }
+  ],
+  "inherited": "The Dretske/rational-basing results are inherited and inspected for constraints, not credited as new primary readings or newly answered objections."
+}

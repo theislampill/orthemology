@@ -1,0 +1,34 @@
+{
+  "canonical_results_match": true,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "elapsed_seconds": 14.889,
+  "lean_run": false,
+  "network_used": false,
+  "passed": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "result_sha256": "8326a6daa597391aca913b4578b326149161e4484d2c78e6fd4108043fde0df6",
+  "schema": "t20-independent-replay-v1",
+  "scope": "Tests and exact finite/rational recomputation; no source authentication or metaphysical validation.",
+  "test_exit_code": 0,
+  "tree_after": {
+    "manifest_sha256": "f2e7b0835df4d30dbea7d95b8b469749012afaad5cafcf46af98c92d4a2afa0f",
+    "payload_bytes": 308579,
+    "payload_files": 37
+  },
+  "tree_before": {
+    "manifest_sha256": "f2e7b0835df4d30dbea7d95b8b469749012afaad5cafcf46af98c92d4a2afa0f",
+    "payload_bytes": 308579,
+    "payload_files": 37
+  },
+  "tree_unchanged": true,
+  "utc": "2026-10-09T10:56:59.375541+00:00"
+}

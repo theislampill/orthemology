@@ -1,0 +1,30 @@
+{
+  "input_hashes_unchanged": true,
+  "input_count": 19,
+  "dar10_matches_retained_archive_md5": true,
+  "images_retained": 19,
+  "images": [
+    "reading/asbahani-503.png",
+    "reading/asbahani-504.png",
+    "reading/asbahani-505.png",
+    "reading/asbahani-508.png",
+    "reading/asbahani-820.png",
+    "reading/asbahani-821.png",
+    "reading/asbahani-822.png",
+    "reading/asbahani-823.png",
+    "reading/dar10-001.png",
+    "reading/dar10-112.png",
+    "reading/dar10-113.png",
+    "reading/dar10-138.png",
+    "reading/dar10-139.png",
+    "reading/dar10-142.png",
+    "reading/dar10-143.png",
+    "reading/dar10-144.png",
+    "reading/dar10-145.png",
+    "reading/dar10-146.png",
+    "reading/dar10-147.png"
+  ],
+  "report_sha256": "bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+  "reading_record_sha256": "3bc3ff50fa64e3398b76a99be0d6018c4d1667a6d0f59451b52ba4340edad6ec",
+  "scope": "Only own directory written; no formal execution, integration or closure; checks establish file identity and internal record consistency, not truth of metaphysical propositions"
+}

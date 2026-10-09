@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "arithmetic": "Certified Fraction intervals and integer powers, no floating-point signs",
+  "assertions": 548,
+  "families": {
+    "half_integer_cut_sign": 336,
+    "unbounded_integer_search": 48,
+    "finite_cut_count": 48,
+    "true_count_rank_one": 48,
+    "relative_factors": 48,
+    "zero_support_not_sign_decidable": 16,
+    "finite_panel_scale_freedom": 4
+  },
+  "largest_bisection_bits_in_controls": 64,
+  "scope": "Finite diagnostics only; measured control precision is not a uniform theorem bound."
+}

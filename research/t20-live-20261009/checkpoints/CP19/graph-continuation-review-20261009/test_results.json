@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "n": 1,
+      "labelled_graphs": 1,
+      "nonempty_graph_mask_pairs": 1,
+      "maximum_finite_minimum_cost": 0
+    },
+    {
+      "n": 2,
+      "labelled_graphs": 2,
+      "nonempty_graph_mask_pairs": 6,
+      "maximum_finite_minimum_cost": 1
+    },
+    {
+      "n": 3,
+      "labelled_graphs": 8,
+      "nonempty_graph_mask_pairs": 56,
+      "maximum_finite_minimum_cost": 3
+    },
+    {
+      "n": 4,
+      "labelled_graphs": 64,
+      "nonempty_graph_mask_pairs": 960,
+      "maximum_finite_minimum_cost": 5
+    },
+    {
+      "n": 5,
+      "labelled_graphs": 1024,
+      "nonempty_graph_mask_pairs": 31744,
+      "maximum_finite_minimum_cost": 7
+    },
+    {
+      "n": 6,
+      "labelled_graphs": 32768,
+      "nonempty_graph_mask_pairs": 2064384,
+      "maximum_finite_minimum_cost": 9
+    }
+  ],
+  "total_graphs": 33867,
+  "total_nonempty_graph_mask_pairs": 2097151,
+  "all_passed": true,
+  "fixed_root_checked_through_n": 5,
+  "runtime_seconds": 3.254
+}

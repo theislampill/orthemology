@@ -1,0 +1,11 @@
+# Exact controls and their limits
+
+The author controls use only Python standard-library integers and Fraction arithmetic. They are deterministic algebraic diagnostics, not observed physical data or substitutes for the general proofs.
+
+`exact_controls.py` passes 36,604 assertions across 22 named families. It checks all 2,187 three-root inventories with counts in {0,1,2}, plus 128 generated four-root inventories, for 17,229 exact masked support-factor recoveries and an equal number of positive-support checks. The calibrations used there are explicit rational-valued nonlinear homeomorphisms at the tested commands. Further controls cover unary gauge equality, strict interaction failure of the same gauge, independent-route visibility of Boolean absorption, shared-gate collapse, support-specific calibration, the continuous own-monotone cross-talk construction, unused roots, a mixed anchored/isolated inventory, step maps, guard semantics, a fresh-mixture false interaction, independent route-assignment enumeration and 64 adaptive unary transcript laws.
+
+`panel_controls.py` passes 548 assertions across seven named families. Exact rational interval bisection supplies certified signs for 336 half-integer cuts, including small-rate panels, and verifies 48 complete no-ceiling integer searches for n=1,...,16. It also checks true-count rank one, relative factor ratios, failure to separate a zero-support determinant, and finite-panel reciprocal scaling. The largest bisection precision encountered was 64 steps; this is only a control-run statistic and is not a bound for the theorem or a sampling budget.
+
+The panel controls start from exact rational Z entries and use rigorously bounded root intervals. The proof separately establishes computability of those Z entries from a positive-probability Cauchy oracle. The controls do not simulate arbitrary oracle error, measure statistical noise, or claim that arbitrary unknown calibration produces rational response values.
+
+A separate reviewer supplies independently written controls, proof audits and byte-bound receipts. Replaying an author script is reproducibility evidence; it is not an independent mathematical proof or a new research discovery.

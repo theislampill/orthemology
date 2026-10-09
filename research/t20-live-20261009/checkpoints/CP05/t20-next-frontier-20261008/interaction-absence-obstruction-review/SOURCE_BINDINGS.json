@@ -1,0 +1,29 @@
+{
+  "scope": "Directly read local predecessor files; no claim to reread or authenticate their external ancestors.",
+  "sources": [
+    {
+      "path": "../interaction-calibration-anchor/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3"
+    },
+    {
+      "path": "../interaction-calibration-anchor/FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4"
+    },
+    {
+      "path": "../interaction-calibration-anchor-review/FINITE_PANEL_REVIEW.md",
+      "sha256": "d16ed278ce739bf88fad955282d76596a636760f634e2d182c95ff28a173dc6f"
+    },
+    {
+      "path": "../grouped-calibration-invariants/RESULT.md",
+      "sha256": "c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113"
+    },
+    {
+      "path": "../grouped-calibration-invariants-review/REVIEW.md",
+      "sha256": "64025953510bb3cd7847389e980b209e580ce006394fc359cae9db92e93e917e"
+    },
+    {
+      "path": "../interaction-calibration-anchor/SOURCE_AUDIT.md",
+      "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6"
+    }
+  ]
+}

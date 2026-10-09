@@ -1,0 +1,209 @@
+{
+  "author_directory": "[OMITTED_PRIVATE_MACHINE_PATH]",
+  "author_files_sha256": {
+    "MANIFEST.json": "f959f10dcaef214f07d1580c5363e2dadf5053895f9cec579409ce17fdff876f",
+    "RESULT.md": "ff663eca1abe6b680ef9ed615eb8978484e78ff6a3c2debc13b9cc0e0ddaa945",
+    "SOURCE_AUDIT.md": "a297002371f620dcf0233f0e5d494b617b3b406ed4d7be4299630cd0aad69ba7"
+  },
+  "blocking_findings": [],
+  "bounds": {
+    "author_or_predecessor_mutation": false,
+    "empirical_validation": false,
+    "formal_kernel_verification": false,
+    "historical_floor": "UNVERIFIED",
+    "integration_or_closure_authority": false,
+    "new_broad_literature_search": false,
+    "physical_oracle_validation": false,
+    "raw_moment_finite_sum_scope": "positive integer r",
+    "source_bodies_in_review_deliverable": false
+  },
+  "dependency_files_sha256": {
+    "baseline-skyline-moments/RESULT.md": "b7bdcfa8b7288d69d569b6ed904c314fe58e4795c92549a6d525c433ad7c139f",
+    "retained-skyline-likelihood/RESULT.md": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+    "skyline-count-information/RESULT.md": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d",
+    "skyline-likelihood-score/RESULT.md": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f"
+  },
+  "external_identity_checks": [
+    {
+      "result": "Official record confirms title, authors, v4 date and 42 pages",
+      "url": "https://arxiv.org/abs/2212.02150"
+    },
+    {
+      "result": "Official record confirms title, authors, v1 submission date and 25 pages",
+      "url": "https://arxiv.org/abs/2608.06038"
+    }
+  ],
+  "limitations": [
+    "No retrospective certificate of author reading history or active research duration",
+    "No recursive verification of externally invoked strong Markov theorem",
+    "No independent journal-body inspection",
+    "Finite-grid and exact-arithmetic controls are consistency checks, not general proofs"
+  ],
+  "mathematical_checks": [
+    {
+      "check": "Finite Pareto geometry, multiplicities, empty configuration, graph measurability and stopping property",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Markov-set and finite-intensity hypotheses for Theorem 4.7",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Exact exponential identity signs and constant-test-function specialization",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Poisson estimator variance identity and independent skyline-density normalization",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Mixed falling-factorial identity with entire square in localizing ring",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Fixed Joe law while Poisson intensity/sample count varies",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Poi(m) masses at m-1 and m equal p_m",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Nonnegative conditioning cost 1/p_m retained",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Cauchy-Schwarz decomposition and record exponential moment m+1",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Joe mass-to-area comparison via f_c>=c and mc=n",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Inherited conditional-quantile record domination direction",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Tail threshold and Stirling coefficient 3 log m",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Positive-integer raw-moment stochastic domination and count-area moment bounds",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Localized residual-square estimate; common support and indicator retained",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "No CLT, centered-fourth-moment, KL/Hellinger-rate or global residual transfer",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    },
+    {
+      "check": "Source read boundaries stated without retrospective certification of author activity",
+      "status": "PASS_BY_SOURCE_INSPECTION_AND_WRITTEN_REASONING"
+    }
+  ],
+  "review_date_utc": "2026-10-08",
+  "review_files_sha256": {
+    "REVIEW.md": "b505d15c693b8a4fbba103d7c4f1e4691598095f00726c360e84e13a4d53a234"
+  },
+  "reviewer": "Independent delegated mathematical/source reviewer",
+  "source_artifacts": {
+    "efron-stopping-sets": {
+      "fresh_pdftotext_layout_matches_supplied_extract": true,
+      "not_read": [
+        "Recursively cited spatial strong Markov source",
+        "Zuyev original Equation (12)",
+        "Lemma A.2 proof"
+      ],
+      "pdf_pages": 25,
+      "pdf_sha256": "1d10a0c740aae2b062f1c59e4917e8ef66ce878d2fec279ceda44b154f979a5f",
+      "primary_url": "https://arxiv.org/abs/2608.06038",
+      "reviewer_read_scope": [
+        "Title/version/date",
+        "Section 2 definitions and Theorem 2.1; Markov-set definition; Theorem 2.2 and proof",
+        "Corollary 4.3 and Theorem 4.5 through full Theorem 4.7 proof",
+        "Corollary 4.8 and full proof",
+        "Complete Example 8.4",
+        "Appendix A generator definitions and complete Lemma A.1 proof"
+      ],
+      "text_sha256": "1306e2f5816597c99b22fdb3e7cd3a819b88028b7ae82f54e707d902da962db6",
+      "version": "arXiv:2608.06038v1, submitted 6 August 2026; title page dated 7 August 2026",
+      "visual_pdf_pages": [
+        8,
+        9
+      ]
+    },
+    "pareto-frontier": {
+      "pdf_sha256": "d2305f1d75330ed9e891564e4320535b1e4804fe4d18e61aca723391bcfef649",
+      "primary_url": "https://arxiv.org/abs/1901.05620",
+      "reviewer_read_scope": [
+        "Section 1 introductory model and Definitions 1.1–1.2",
+        "Sections 3.1–3.3 through Proposition 3.2"
+      ],
+      "role": "Bounded secondary mapping check only",
+      "text_sha256": "2a2886e9edc9b33d791ce1928dca1d4025f21111696d4ea4140573a07eb9fd69"
+    },
+    "poisson-hulls": {
+      "fresh_pdftotext_layout_matches_supplied_extract": true,
+      "not_read": [
+        "Supplementary proofs of Theorem 7.1 and Corollary 7.3",
+        "Recursively cited spatial strong Markov source",
+        "Journal body"
+      ],
+      "pdf_pages": 42,
+      "pdf_sha256": "40532db7351b7fc7b35f093239f0e18cabeef138e8511c3ec64fcb1c19ea1f14",
+      "primary_url": "https://arxiv.org/abs/2212.02150",
+      "reviewer_read_scope": [
+        "Section 2 localizing-ring and generator definitions; Lemmas 2.3–2.5; Example 2.15",
+        "Theorem 3.2 and complete displayed proof",
+        "Section 4 estimator definition; Lemmas 4.3–4.4 and surrounding argument",
+        "Theorem 5.1 and complete conditional-variance proof; Proposition 5.2",
+        "Example 6.3 and Section 7 statements through Remark 7.4"
+      ],
+      "text_sha256": "33f2e3b42341a7b19d36fa2730742b9ead5d088f04226c70fdbab1eb65acf930",
+      "version": "arXiv:2212.02150v4, 1 February 2024",
+      "visual_pdf_pages": [
+        12
+      ]
+    },
+    "wrapping-hull": {
+      "pdf_sha256": "be8d564da21e01abd15b963a7a1315905a39237455195ccb4443069db838ebf2",
+      "primary_url": "https://arxiv.org/abs/1703.01658",
+      "reviewer_read_scope": [
+        "Section 4.1 and Proposition 4.3 with displayed proof",
+        "Beginning of Section 4.2"
+      ],
+      "role": "Bounded secondary risk-transfer exclusion only",
+      "text_sha256": "0b4bfd721726d25dcb777f5bfed34c61ddd9bc1e34a13543324aa0a7e8c9ca99"
+    }
+  },
+  "supplementary_controls": {
+    "equal_poisson_mass_coefficients": {
+      "arithmetic": "exact rational; common exp(-m) factor omitted",
+      "m_max": 128,
+      "m_min": 2,
+      "passed": true
+    },
+    "finite_grid_stopping_property": {
+      "configurations_including_empty_and_multiplicities": 81,
+      "limitation": "Finite consistency control, not the proof for arbitrary finite Borel configurations.",
+      "passed": true,
+      "probe_points": 9,
+      "replacement_pairs": 6561
+    },
+    "pdf_text_regeneration": {
+      "efron_stopping_sets": "byte identical to supplied pdftotext output",
+      "poisson_hulls": "byte identical to supplied pdftotext output"
+    },
+    "record_mgf_telescoping": {
+      "arithmetic": "exact rational",
+      "ell_max": 128,
+      "ell_min": 1,
+      "passed": true
+    }
+  },
+  "verdict": "PASS_WITHIN_STATED_SCOPE"
+}

@@ -1,0 +1,75 @@
+{
+  "kind": "Bound inputs inspected for independent written mathematical review",
+  "files": [
+    {
+      "path": "full-face-threshold-kl-rate/RESULT.md",
+      "sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+      "bytes": 14568
+    },
+    {
+      "path": "full-skyline-reverse-kl/ACTIVITY_LOG.json",
+      "sha256": "8b5a50fd96a0146a0f6e716630ab8f9c470707c65e715b5e3c327e885ecb4d2b",
+      "bytes": 590
+    },
+    {
+      "path": "full-skyline-reverse-kl/CONTROL_RESULTS.json",
+      "sha256": "68e99ec9eb962d4922ccd6b3a9cad981c770d0edd461e83dbaace1c3d0802ddc",
+      "bytes": 11873
+    },
+    {
+      "path": "full-skyline-reverse-kl/CONTROL_RUN.log",
+      "sha256": "56b7d7bd17cdc5bd62ed8e42babcc238a7d49710d68542a97ebc9b7dd234ddd9",
+      "bytes": 172
+    },
+    {
+      "path": "full-skyline-reverse-kl/MANIFEST.json",
+      "sha256": "9c233f0f9367caae2bc44a04dae42f00da4187686388119827a2a5c02249fd7a",
+      "bytes": 1198
+    },
+    {
+      "path": "full-skyline-reverse-kl/RESULT.md",
+      "sha256": "4aa4bee754cf89284a327d4322f4d35a93314525da8aaa22e5d028754908e28a",
+      "bytes": 16686
+    },
+    {
+      "path": "full-skyline-reverse-kl/SOURCE_AUDIT.md",
+      "sha256": "6bb333b117229c52521c8de0e950b0e78d58ad05151dc1ea6a65c2eb10f154a0",
+      "bytes": 2107
+    },
+    {
+      "path": "full-skyline-reverse-kl/SOURCE_BINDINGS.json",
+      "sha256": "af1a2792c31c811513e39654b36600bac648349b7aff0a176d9cfd88b5173a68",
+      "bytes": 1030
+    },
+    {
+      "path": "full-skyline-reverse-kl/controls.py",
+      "sha256": "a56ff98a0dfa7e8dbedda9b257ccfef48297eca553d2588092f86e659c4102d9",
+      "bytes": 8125
+    },
+    {
+      "path": "retained-skyline-likelihood/RESULT.md",
+      "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+      "bytes": 17673
+    },
+    {
+      "path": "skyline-count-information/RESULT.md",
+      "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d",
+      "bytes": 10942
+    },
+    {
+      "path": "skyline-likelihood-score/RESULT.md",
+      "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f",
+      "bytes": 9091
+    },
+    {
+      "path": "skyline-likelihood-score-review/REVIEW.md",
+      "sha256": "77fa54173fa04c4d9b942cb668dbc080dd3b5062c563e29ed6850c5b1185d596",
+      "bytes": 10253
+    },
+    {
+      "path": "skyline-likelihood-score-review/REVIEW_RECEIPT.json",
+      "sha256": "effd28cce9cb9d3e892d3c1e19df59e66a06c16c7595e7b3d9fb3aa1ab1149c4",
+      "bytes": 803
+    }
+  ]
+}

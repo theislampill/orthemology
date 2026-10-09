@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-09T02:29:51.139600+00:00",
+  "reviewer": "independent review_explanation_bridge_scope worker",
+  "scope": "Source-to-formal semantic fidelity, direct mathematical proof/control inspection, written regular-open realization. No Lean replay, new framework, literature search, protected-source edit, integration, novelty or programme-closure claim.",
+  "source_read_scope": "Full section 2 (source labels L49-L175), abstract and introduction L3-L48, restricted-PSR framing in sections 3-4 L176-L368, section 9/conclusion L754-L823, plus targeted whole-source term scan.",
+  "root_replay_hashes_match_reviewed_lean_files": true,
+  "files": [
+    {
+      "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+      "sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b",
+      "bytes": 72314
+    },
+    {
+      "path": "plural-explanation-theorem-audit/RESULT.md",
+      "sha256": "e1a2311dd76a5d18e121a02974de3a28cdccee957d8b120c567e481e129f7e79",
+      "bytes": 18627
+    },
+    {
+      "path": "plural-explanation-theorem-audit/DependencyAudit.lean",
+      "sha256": "9ce772a752d068c374004901bef1d8ae23b145c9f85d6bd71aa266eeb6722392",
+      "bytes": 6554
+    },
+    {
+      "path": "plural-explanation-theorem-audit/SupplementedControl.lean",
+      "sha256": "9462f1f41c5d3162a27fe85438b905124602b005c58178a5f710cd4e1db335c9",
+      "bytes": 5202
+    },
+    {
+      "path": "particular-explanans-bridge-audit/RESULT.md",
+      "sha256": "3dedbeef25eed122342ae46f82a09e17a36719a52126d3169f3c13125b7d37d6",
+      "bytes": 14598
+    },
+    {
+      "path": "particular-explanans-bridge-audit/RestrictedBridgeControl.lean",
+      "sha256": "56afa15a4bc3f3ec04db4a8c0f98a4acc43fa67128fe8497619e988b7382b61d",
+      "bytes": 5477
+    },
+    {
+      "path": "particular-explanans-bridge-audit/BridgeRepairs.lean",
+      "sha256": "27f18369adcd7722ddcd3508f85343f09c4bb56ee3b0d4d1cd57374d5f669af0",
+      "bytes": 4515
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PLURAL_EXPLANATION_ROOT_REPLAY_20261009.json",
+      "sha256": "997f90dc1ae9ff49c2d34b2abfb724b962c981a2d97f5c3ea2d6c63e01128f54",
+      "bytes": 3955
+    }
+  ]
+}

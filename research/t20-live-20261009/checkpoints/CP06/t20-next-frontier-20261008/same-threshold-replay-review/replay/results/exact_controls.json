@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "arithmetic": "Python Fraction only; analytic radical comparisons through squared rationals",
+  "assertions": 16598,
+  "families": {
+    "replay_log_linear_coefficient": 256,
+    "replay_log_quadratic_coefficient": 256,
+    "second_order_count_rigidity": 256,
+    "second_order_discrepancy_sign": 256,
+    "each_joint_bounded_by_total_hit": 2187,
+    "product_to_sum_quadratic_remainder": 729,
+    "pointwise_two_product_rigidity": 9914,
+    "pointwise_unique_grid_solution": 10,
+    "global_density_lower_bound_certificate": 1,
+    "perturbation_grid_zeros": 5,
+    "copula_CDF_grid_match": 25,
+    "density_grid_diagnostic": 1089,
+    "uniform_margins_and_grounding": 1089,
+    "all_threshold_grid_cells_equal": 16,
+    "off_grid_nonindependence": 1,
+    "single_route_full_panel_transcript_equal": 1,
+    "multi_route_full_panel_transcript_equal": 4,
+    "full_panel_transcript_total_mass": 4,
+    "high_panel_face_alias": 1,
+    "high_panel_fresh_alias": 1,
+    "high_panel_paired_alias": 1,
+    "high_panel_entire_three_bit_replay_alias": 1,
+    "Joe_sqrt6_rational_bracket": 1,
+    "Joe_replay_strict_separation": 1,
+    "Joe_exact_gap_sign": 1,
+    "fresh_threshold_faces_erase_separation": 1,
+    "same_command_replay_is_one_bit": 1,
+    "baseline_paired_law_valid": 245,
+    "baseline_face_pair_independence": 245
+  },
+  "pointwise_grid_audits": [
+    {
+      "a": "1/2",
+      "b": "1/2",
+      "n": 1,
+      "table_candidates": 9,
+      "solutions": 1
+    },
+    {
+      "a": "1/2",
+      "b": "1/2",
+      "n": 2,
+      "table_candidates": 81,
+      "solutions": 1
+    },
+    {
+      "a": "1/2",
+      "b": "1/2",
+      "n": 3,
+      "table_candidates": 729,
+      "solutions": 1
+    },
+    {
+      "a": "1/2",
+      "b": "1/2",
+      "n": 4,
+      "table_candidates": 6561,
+      "solutions": 1
+    },
+    {
+      "a": "1/3",
+      "b": "2/3",
+      "n": 1,
+      "table_candidates": 13,
+      "solutions": 1
+    },
+    {
+      "a": "1/3",
+      "b": "2/3",
+      "n": 2,
+      "table_candidates": 169,
+      "solutions": 1
+    },
+    {
+      "a": "1/3",
+      "b": "2/3",
+      "n": 3,
+      "table_candidates": 2197,
+      "solutions": 1
+    },
+    {
+      "a": "1/4",
+      "b": "1/4",
+      "n": 1,
+      "table_candidates": 5,
+      "solutions": 1
+    },
+    {
+      "a": "1/4",
+      "b": "1/4",
+      "n": 2,
+      "table_candidates": 25,
+      "solutions": 1
+    },
+    {
+      "a": "1/4",
+      "b": "1/4",
+      "n": 3,
+      "table_candidates": 125,
+      "solutions": 1
+    }
+  ],
+  "perturbed_copula": {
+    "grid": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "f_coefficients": [
+      "0",
+      "-3/32",
+      "25/32",
+      "-35/16",
+      "5/2",
+      "-1"
+    ],
+    "g_coefficients": [
+      "0",
+      "-3/32",
+      "25/32",
+      "-35/16",
+      "5/2",
+      "-1"
+    ],
+    "derivative_bounds": [
+      "743/32",
+      "743/32"
+    ],
+    "epsilon": "512/552049",
+    "certified_density_lower_bound": "1/2",
+    "off_grid_point": [
+      "1/8",
+      "3/8"
+    ],
+    "off_grid_difference": "-4725/1157730664448"
+  },
+  "transcript_sizes": [
+    {
+      "n": 1,
+      "possible_response_words": 16
+    },
+    {
+      "n": 2,
+      "possible_response_words": 52
+    },
+    {
+      "n": 3,
+      "possible_response_words": 68
+    },
+    {
+      "n": 4,
+      "possible_response_words": 69
+    }
+  ],
+  "high_panel_three_bit_law": {
+    "(0, 0, 0)": "1/16",
+    "(1, 0, 0)": "3/16",
+    "(0, 1, 0)": "3/16",
+    "(1, 1, 1)": "9/16"
+  },
+  "Joe_midpoint_paired_interval": [
+    "3/10",
+    "301/1000"
+  ],
+  "scope": "No finite global copula certification, no universal finite count impossibility, no physical replay validation."
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "minhaj1-item96",
+    "url": "https://www.islamweb.net/ar/library/content/108/96/",
+    "html_sha256": "7305c57a1b94d1fe8e5f48c77065693fdfb91d82adb555e125653242df5b8086",
+    "lines": 9,
+    "status": "acquired; not yet read"
+  },
+  {
+    "name": "minhaj2-item156",
+    "url": "https://www.islamweb.net/ar/library/content/108/156/",
+    "html_sha256": "9f2307b09b175d1b18313ed82175a01e311f3bb52de9775812bd8e1ec96227c5",
+    "lines": 41,
+    "status": "acquired; not yet read"
+  },
+  {
+    "name": "safadiyya002",
+    "url": "https://www.islamicbook.ws/amma/alsfdit-002.html",
+    "html_sha256": "713e0b8fadff520d96d3bee97339f40ffe82401293d8caeffc8fbd50a79edb12",
+    "line_count": 759,
+    "status": "acquisition only; read ranges separately"
+  },
+  {
+    "name": "dar013",
+    "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-013.html",
+    "html_sha256": "56b55f4c6ef0658cb0778cd76256609793476c54d64d98f4afac5eda29628b6e",
+    "line_count": 752,
+    "status": "acquisition only; read ranges separately"
+  }
+]

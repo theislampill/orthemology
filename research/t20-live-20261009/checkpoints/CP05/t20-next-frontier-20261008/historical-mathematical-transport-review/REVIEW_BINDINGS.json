@@ -1,0 +1,116 @@
+{
+  "bound_at_utc": "2026-10-08T14:43:04.500196+00:00",
+  "frozen_author_directory": "historical-mathematical-transport",
+  "frozen_author_files": [
+    {
+      "path": "ANALYSIS.md",
+      "sha256": "c70ade3f34431728761e0f1e0c3493823b43703120a45c85c096fea1064f235c",
+      "bytes": 18684
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "f2e25199b98a4b44bfbda6ef41a0d98886253578304c673beb067ae9737e5284",
+      "bytes": 532
+    },
+    {
+      "path": "MANIFEST.json",
+      "sha256": "e1be24d3c56a21afda391af1e3ac3015faf36048b6926088832a935bbd6fca0d",
+      "bytes": 1054
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "565550bbfdf55c7055a171123bc5e7ffddcb90c152959bfdfac9a05f96e50561",
+      "bytes": 1750
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "13835238258ecb6626a1688a9bf8f710dad2e04c4ac905c57a3f19ecc3f4477c",
+      "bytes": 4548
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "d6f4375e9a57a0a51e79b97c349d2e1aabe46c7e410dd4b48fe85e1d90db4de3",
+      "bytes": 5255
+    }
+  ],
+  "compared_modern_proofs": [
+    {
+      "path": "interaction-calibration-anchor/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+      "bytes": 15546
+    },
+    {
+      "path": "interaction-calibration-anchor/FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4",
+      "bytes": 8194
+    },
+    {
+      "path": "grouped-calibration-invariants/RESULT.md",
+      "sha256": "c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113",
+      "bytes": 17594
+    },
+    {
+      "path": "grouped-calibration-invariants/GLOBAL_SCALE_COROLLARY.md",
+      "sha256": "0cef524519a83260c1a13afa9af28d5fba517fcf04b21a7c2ae697bfbb4f8667",
+      "bytes": 4949
+    },
+    {
+      "path": "global-calibration-ambiguity/RESULT.md",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+      "bytes": 12746
+    },
+    {
+      "path": "global-calibration-ambiguity/POLYNOMIAL_EFFICIENCY_APPENDIX.md",
+      "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4",
+      "bytes": 7854
+    },
+    {
+      "path": "multi-root-adaptive-bound/RESULT.md",
+      "sha256": "60f7f240fc98d2105bddf0d4668f6e1a18e81df62421f333a4b92da3ff5f2a00",
+      "bytes": 12090
+    }
+  ],
+  "archived_commit": "3a0bdeaa1394c656245cae9599adcb143e885059",
+  "archived_sources": [
+    {
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf",
+      "git_blob_sha1": "9bebbfb6c0a01737a5bf8a85f4f7e929d38cfb53",
+      "sha256": "75527bc45892a3447b8d9f554f8e55ea464790f43a172b784c6761367089cf70",
+      "bytes": 341285,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf"
+    },
+    {
+      "path": "theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+      "git_blob_sha1": "b2a4c6f3c1f6f923eddca1e5225b92c8b41cc388",
+      "sha256": "4e5eb8e7559c4daaf1757386a5a101bfc399bf0ba77c769e025512bd2f6ac5c3",
+      "bytes": 221506,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf"
+    },
+    {
+      "path": "theory/lineages/h-ics-v5/README.md",
+      "git_blob_sha1": "79c26dea604541fad96e36588ae7c63259e7f8ea",
+      "sha256": "d316044509290188c81866904e159f49b20248f00c71ebdd7dfbd7c3537f3255",
+      "bytes": 2331,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/README.md"
+    },
+    {
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "git_blob_sha1": "7672f79a105b8b2d051eea1cd29ef4e0ffd6a595",
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "bytes": 47537,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex"
+    },
+    {
+      "path": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "git_blob_sha1": "54a3218b55a09da4f1bf8b0b5fa931d63ccf166a",
+      "sha256": "bf8490a82b45fbf8a5be11ecd7a7ee90a0e49cbb383b86f60a5993a54782d1af",
+      "bytes": 15086,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex"
+    }
+  ],
+  "archive_verification": {
+    "method": "Independent GitHub connector fetch of both PDFs and lineage README at exact commit; locally recomputed git blob SHA-1 and SHA-256 match. Both TeX files also locally rehashed; no TeX-to-PDF build verified.",
+    "pdf_pages_read": "Companion pp. 1-4; main manuscript pp. 1-12. Fresh pdftotext extraction, plus fresh rendered visual checks of companion p. 2 and main p. 5.",
+    "current_proof_reading_scope": "Full finite-panel appendix, grouped RESULT, multi-root RESULT; all seven identities checked. The remaining four are not independently re-reviewed here."
+  }
+}

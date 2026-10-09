@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "precision_decimal_digits": 140,
+  "assertions": 8996,
+  "scope": "Exact rational equality controls plus finite high-precision formula checks; no Monte Carlo, empirical data, infinite-limit verification by computation, or n-rate theorem.",
+  "max_sampled_density_over_envelope": "0.99999700000416666233",
+  "partition_controls": [
+    {
+      "n": 1,
+      "lambda_n": "0.34314575050761980479",
+      "d_n": "0.03924966869714588584",
+      "chi_K256": "10.014482658290913979",
+      "KL_K256": "0.039541054054878562239",
+      "slope_128_to_256_relative_error": "4.6344293e-80"
+    },
+    {
+      "n": 2,
+      "lambda_n": "0.070239975120084280186",
+      "d_n": "0.0029601924629220352144",
+      "chi_K256": "0.76974329603686483937",
+      "KL_K256": "0.0060736183013365222861",
+      "slope_128_to_256_relative_error": "1.1777358e-40"
+    },
+    {
+      "n": 3,
+      "lambda_n": "0.010252737583757453529",
+      "d_n": "0.000081758932858860931659",
+      "chi_K256": "0.024477603335815256337",
+      "KL_K256": "0.0013159474516811513753",
+      "slope_128_to_256_relative_error": "3.120237e-40"
+    },
+    {
+      "n": 8,
+      "lambda_n": "3.4591348243075922581e-8",
+      "d_n": "1.1872496116140338037e-15",
+      "chi_K256": "4.2586544138745288999e-6",
+      "KL_K256": "1.8290983320023978716e-6",
+      "slope_128_to_256_relative_error": "2.2851775e-39"
+    },
+    {
+      "n": 16,
+      "lambda_n": "2.207534566163982511e-19",
+      "d_n": "4.8730601445459033893e-38",
+      "chi_K256": "8.3044170483005912896e-11",
+      "KL_K256": "3.5087977536784689968e-11",
+      "slope_128_to_256_relative_error": "8.8268042e-39"
+    },
+    {
+      "n": 32,
+      "lambda_n": "2.6303801216658272555e-46",
+      "d_n": "6.9188995812328685088e-92",
+      "chi_K256": "2.214659578612097601e-20",
+      "KL_K256": "9.2639244568349309591e-21",
+      "slope_128_to_256_relative_error": "3.4611466e-38"
+    }
+  ],
+  "source_sha256": "ea38c0af21875d60e59c379e07236fa45389ea0a00bfa30eb3b15d119a9a15db"
+}

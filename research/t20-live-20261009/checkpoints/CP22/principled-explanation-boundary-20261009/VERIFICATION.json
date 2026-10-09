@@ -1,0 +1,108 @@
+{
+  "all_bound_inputs_unchanged": true,
+  "artifact_files": [
+    "REPORT.md",
+    "INPUT_BINDINGS.json",
+    "READING_RECORD.json",
+    "dasgupta-printed387.png",
+    "dasgupta-printed393.png"
+  ],
+  "formal_or_possibility_verification_claim": false,
+  "input_integrity": [
+    {
+      "path": "explanation-stopping-asymmetry-20261009/REPORT.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "explicability-parity-20261009/REPORT.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "direct-anti-brute-return/REPORT.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "explicability-parity-20261009/INPUT_BINDINGS.json",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "explanation-stopping-asymmetry-20261009/READING_RECORD.json",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/autonomous-quality-bridge-review/REVIEW.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_TARGETED_RETURN.json",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_2011_TARGETED_RETURN.json",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/REPORT.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/REVIEW.md",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.pdf",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "same_bytes": true,
+      "same_sha256": true
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/REPORT.md",
+      "same_bytes": true,
+      "same_sha256": true
+    }
+  ],
+  "new_external_acquisition": false,
+  "recorded_utc": "2026-10-09T10:02:03Z",
+  "report_words": 2311,
+  "scope": "Source-critical conditional inference and target/range audit, not metaphysical premise verification",
+  "writes_limited_to": "principled-explanation-boundary-20261009"
+}

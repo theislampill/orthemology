@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "bound_inputs_unchanged": 20,
+  "payload_files": 9,
+  "controls_replayed": true,
+  "control_assertions": 626901,
+  "historical_floor": "UNVERIFIED",
+  "scope": "Local artifact integrity and finite mathematical controls only"
+}

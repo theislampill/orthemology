@@ -1,0 +1,41 @@
+{
+  "scope": "finite logical premise-independence control only",
+  "worlds": [
+    "w0",
+    "w1"
+  ],
+  "accessibility": "universal S5",
+  "candidate_domain": [
+    "g"
+  ],
+  "thin_constraint": "At every world C implies N; N is box E(g)",
+  "strong_addition": "At every world C iff H; H is box E(g) and box C",
+  "thin_models_checked": 7,
+  "thin_countermodels": 2,
+  "strong_models_checked": 5,
+  "strong_countermodels": 0,
+  "witness": {
+    "E": [
+      true,
+      true
+    ],
+    "N": [
+      true,
+      true
+    ],
+    "C": [
+      false,
+      true
+    ],
+    "H": [
+      false,
+      false
+    ],
+    "not_C_implies_box_not_C": [
+      false,
+      true
+    ]
+  },
+  "witness_excluded_by": "C at w1 does not imply essential-coverage profile H",
+  "limitation": "No claim of actual metaphysical possibility or source-theory refutation"
+}

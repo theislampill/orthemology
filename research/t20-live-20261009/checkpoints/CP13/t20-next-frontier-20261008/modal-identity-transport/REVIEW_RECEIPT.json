@@ -1,0 +1,30 @@
+{
+  "accepted_at_utc": "2026-10-08T22:43:03.351437+00:00",
+  "status": "PASS",
+  "unresolved_findings": 0,
+  "report_sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8",
+  "author_control_assertions": 626901,
+  "independent_control_assertions": 175130,
+  "review_files": [
+    {
+      "path": "../modal-identity-transport-review/REVIEW.md",
+      "bytes": 16295,
+      "sha256": "9c7f8ba6fd7f82c1c9be613ad020fcf130df7cd2a03aff787ede51e3e9ee6533"
+    },
+    {
+      "path": "../modal-identity-transport-review/REVIEW_BINDINGS.json",
+      "bytes": 3337,
+      "sha256": "22684c9f0675d485e6e0e4a732cb43095e3c19b563e334c77baedf5865c07aa2"
+    },
+    {
+      "path": "../modal-identity-transport-review/INDEPENDENT_RESULTS.json",
+      "bytes": 2541,
+      "sha256": "124bdd9bd4923a9e6f6cc72e73849a77a1d24a7c47f391bb824011d6d784181a"
+    }
+  ],
+  "limits": [
+    "No metaphysical validation",
+    "No integration or closure",
+    "Historical floor UNVERIFIED"
+  ]
+}

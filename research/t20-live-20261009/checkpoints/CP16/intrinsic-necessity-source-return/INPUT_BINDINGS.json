@@ -1,0 +1,49 @@
+{
+  "note": "Hashes identify held inputs; no claim that every listed input received a new full read. Audit.md was inspected only through its first 100 lines; earlier large combined displays sometimes truncated, and only actually received spans inform coverage comparison.",
+  "inputs": [
+    {
+      "path": "recovery-t20/addendum/AMERI_SCREEN.md",
+      "sha256": "25bf973f45b71ad1d4f5e4234faa4997d420078acabfba2e15d2d842657c2841"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/authority-assessment.md",
+      "sha256": "a8b5375aa9a33aeafaf1c6f379333e672423a415743b24d34fa76a59ebf2ccaa"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/scoped-ownership-addendum.md",
+      "sha256": "9e8dd7029625998f2c43649bafaa2596ab31cc802d75161998d3ad63a6790034"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/sawaiq/VOLUME_ONE_SCOPE.md",
+      "sha256": "6a57185c921ed4d494082ae5b84b788445a02d97a914c0260b77385d3961e1a8"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/sawaiq/VOLUME_TWO_SCOPE.md",
+      "sha256": "ffe506be38ba894311a54a19ceec0cc16e76bb015901edecc2277b7832064f3a"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/sawaiq/SOURCE_IDENTITIES.json",
+      "sha256": "2a7444cef2fcaae343c9df78023393c55b951bd24978dda07fc5264fba43bcc7"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md",
+      "sha256": "3deb84870b2d2de2da472946031d2886e06d03efbc76e9e2b6c6ff968e738b50"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+      "sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md",
+      "sha256": "0dc3642ac0c17b614fa87c8b513f6f9008272861693139b26b9c92893c276f08"
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md",
+      "sha256": "46c6db37bf86fbe531f877520c0416afc8a5b709ce09d729482c3ff0cd038454"
+    }
+  ]
+}

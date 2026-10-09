@@ -1,0 +1,16 @@
+{
+  "python": "Python 3.10 or later; standard library only",
+  "lean_version": "4.19.0",
+  "lean_commit": "6caaee842e94",
+  "historical_linux_lean_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "mathlib_repository": "https://github.com/leanprover-community/mathlib4",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "mathlib_lake_manifest_sha256": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752",
+  "mathlib_lean_toolchain": "leanprover/lean4:v4.19.0",
+  "cache_scope": "Existing compatible compiled mathlib and package caches required. No package install, cache fetch, rebuild, network or full transitive dependency hash audit.",
+  "portable_replay_source": {
+    "path": "graph-constrained-continuation-20261009/GraphContinuation.lean",
+    "sha256": "2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73"
+  },
+  "manifest_copy": "dependency-metadata/mathlib/lake-manifest.json"
+}

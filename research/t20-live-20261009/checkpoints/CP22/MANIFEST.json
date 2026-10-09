@@ -1,0 +1,315 @@
+{
+  "schema": "t20-additive-preservation-manifest-v1",
+  "checkpoint_number": 22,
+  "status": "INTERMEDIATE_T20_ACTIVE",
+  "created_utc": "2026-10-09T10:36:13.050609+00:00",
+  "root": "T20_Resumed_Research_Intermediate_Checkpoint22_20261009",
+  "file_count": 50,
+  "selected_original_count": 41,
+  "excludes_self": [
+    "MANIFEST.json",
+    "MANIFEST.sha256"
+  ],
+  "files": [
+    {
+      "path": "COMPONENT_MANIFEST_CHECKS.json",
+      "bytes": 34689,
+      "sha256": "c439f2149e6dd0194e3c49f12b3950e005173ff0b914347c02289dd2edb76f74",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "DEPENDENCIES.json",
+      "bytes": 509,
+      "sha256": "8081106beda28ee3244c012ccb9313b527c93eced9415223465a2af4ba59d1b4",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "OMISSIONS_AND_DEPENDENCIES.json",
+      "bytes": 22870,
+      "sha256": "923d6ca27453199c846b56f740d1d82fe96455b167e98a39994429cecbfda4e0",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "PRESERVATION_RECEIPT.json",
+      "bytes": 767,
+      "sha256": "a72b8ef3b5d400fee0a5a224a7b53422a7642020d4878b79aec79a037ff19290",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "PRESERVED_INPUTS.json",
+      "bytes": 14196,
+      "sha256": "c64d7b3dd80fe2a621a576d220052180bbb486685ed36cc739220e197857d723",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "PRIOR_CHECKPOINT.json",
+      "bytes": 2425,
+      "sha256": "b73999f0926fd6f886e1b8689918f25ccd1b0e300ea5c1000a992b3c09419a5a",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 9379,
+      "sha256": "1cc68ba61427d30d85aa1393bdb9d1871d08af60040cf595a500cbcc8e46ab1b",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "SCOPE_AND_HISTORY.json",
+      "bytes": 3229,
+      "sha256": "d9f970cafb90bb6bd6a30139f02350d2393cdfde6f620a3c120821c7f0f08a54",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/ANALYSIS.md",
+      "bytes": 19181,
+      "sha256": "11c43396546b3327f24a36c446d2051003181f6029e41122ecb6d5061a16204c",
+      "classification": "completed_independent_agency_review"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/INPUT_READ_RECEIPT.json",
+      "bytes": 3656,
+      "sha256": "9bb6bd2f4371b6bebf1d4a408a75b6f6121b1fc3952a0294b816ebcda57f8818",
+      "classification": "completed_independent_agency_review"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "bytes": 1855,
+      "sha256": "c9cf014b1b0ce739c25cfc21de169a5e516a6ab8669b2fb9700759113fca41a8",
+      "classification": "completed_independent_agency_review"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/SOURCE_SUMMARY.md",
+      "bytes": 1239,
+      "sha256": "89a52377bbab13aca247b85dab4bb514e32231f44421e44877ea7b7526050749",
+      "classification": "completed_independent_agency_review"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/ACCESS_LEDGER.json",
+      "bytes": 2197,
+      "sha256": "d776da93b717e784d7aaca0a9aee0d76939df0f0bc5727812e9635b3b0f3627a",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/CHECKS.json",
+      "bytes": 563,
+      "sha256": "e94f9b9cc7d9577ab7c6ae399aa54f055eaba887f4e7d9b323488e1f9bdd9190",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/INPUT_BINDINGS.json",
+      "bytes": 2018,
+      "sha256": "94c97721149941afc5bd089097baebab35ba199dce906a634d0ba74541c49d07",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/MANIFEST.sha256",
+      "bytes": 501,
+      "sha256": "f122ea3a4b2bdea1f39da2e9d149a66ed00e94c70f0579eabb6790da70851ef1",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/PRIOR_RECORD_CHECK.json",
+      "bytes": 570,
+      "sha256": "34dc0c2ae3d1cc4cf8d24efbd7777ccfaa2f42cd6fd610a11e7aa3118f7cffd7",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/READING_LEDGER.json",
+      "bytes": 5605,
+      "sha256": "0646751d2a2a213820efd9714f64fc945c1bf80d37370346f7197f68cb298ae1",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/REPORT.md",
+      "bytes": 26008,
+      "sha256": "7f2e3e5a85864fab035d1ec2d2fcf25d92ef3e63ea8e786fabbf1b052962c92b",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "knowing-production-semantics-20261009/ACQUISITION.json",
+      "bytes": 897,
+      "sha256": "49af43bcb3cb55f0044d648a45b9d8f613521530fa0fe11bde53c22e56e6b5a3",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "knowing-production-semantics-20261009/FILES.sha256",
+      "bytes": 3656,
+      "sha256": "9248d4ae84a9b8a8f3c04f82c85aac7340bfad5c8094bbd01f3aecd6f1bc8652",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "knowing-production-semantics-20261009/INPUT_BINDINGS.json",
+      "bytes": 3708,
+      "sha256": "e3cb5885ac7fb8fea67e286c008948daac5c8403a8445eb8f4f974840c784d8b",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "knowing-production-semantics-20261009/PRINT_CONTROLS.md",
+      "bytes": 6262,
+      "sha256": "4bf8c0cce65650ec07374fe310815d80303c98e6631de3b8c0ff7fc2250ed297",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "knowing-production-semantics-20261009/READING_RECORD.json",
+      "bytes": 5164,
+      "sha256": "3bc3ff50fa64e3398b76a99be0d6018c4d1667a6d0f59451b52ba4340edad6ec",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "knowing-production-semantics-20261009/REPORT.md",
+      "bytes": 17456,
+      "sha256": "bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "knowing-production-semantics-20261009/VERIFICATION.json",
+      "bytes": 1094,
+      "sha256": "91e08a08c12bb721697ccf0253afc445bff2b1ee4c6934082b82ce85f090730a",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/INPUT_BINDINGS.json",
+      "bytes": 4612,
+      "sha256": "f3b70f9e621ace993549730f83e13f3812279feb6b3a6a645300c5f87d889edd",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "bytes": 1001,
+      "sha256": "8daa3129336c969f2e5c85cf513ed99d21d35ab91a088571dceb12f7be2af79a",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/READING_LEDGER.json",
+      "bytes": 9468,
+      "sha256": "cd0e218bf54fdd86b29e51a99702c48fdf2f180588669521caaece48a41fdcb3",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/READ_FIRST.md",
+      "bytes": 1449,
+      "sha256": "82fc4954cab8e80fb44607766e27556ca2cc8ce61af31d0fb5564cddbdbdbed4",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/REPORT.md",
+      "bytes": 19116,
+      "sha256": "d54dc0d3014e236cf20293e04e2fea3d8043bb41f94af54ab27dbeafe93caf8d",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/VERIFICATION.json",
+      "bytes": 1400,
+      "sha256": "23cf56443e8196b03e4d4c247b3e7338544d87bdc9212972087a13e34e9da934",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/james-primary/MANIFEST.sha256",
+      "bytes": 249,
+      "sha256": "44f1c1e8269d0a2a62555804532067f853c0acd22edc20143695c8577780d07c",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/james-primary/READING_LEDGER.json",
+      "bytes": 2579,
+      "sha256": "4726d5a2349ae4dba4f221d7347553ce3dd538506d985a1a30e62b553df80dd0",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/james-primary/REPORT.md",
+      "bytes": 14256,
+      "sha256": "7a482d25e1158d224e6b847cecdb12f3455629ee0aef091b83ff5d8a7493628e",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/james-primary/SOURCE_BINDINGS.json",
+      "bytes": 21090,
+      "sha256": "064c14c516a4ef49cd2c6c3f41cd66e71f814b9881ddd3d2ebbf9ab9569c1eb4",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/railton-independent-rival-analysis.md",
+      "bytes": 11773,
+      "sha256": "e88dca291910f6755674dad8c4c6809f473fb48260d5c878b19cf10d12fb2ec0",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/railton-reading-provenance.json",
+      "bytes": 1318,
+      "sha256": "0ff28537a05aec52e7ea9eb8a8e2badec7ec5dcb81fa4a0eb8356179882b1341",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "principled-explanation-boundary-20261009/INPUT_BINDINGS.json",
+      "bytes": 4026,
+      "sha256": "503a48ba4342f29f6bacb5c1db8d50dee65412f1981075dd793a3bb4e64293b8",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "principled-explanation-boundary-20261009/MANIFEST.sha256",
+      "bytes": 512,
+      "sha256": "6b419ff56697869295dfe2f8cc36bf626e4206e59743371cdbc72ef7641be4fe",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "principled-explanation-boundary-20261009/READING_RECORD.json",
+      "bytes": 6284,
+      "sha256": "61ff7733261d9861ec2946f2925694b6be2012297f66447441439a4514802025",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "principled-explanation-boundary-20261009/REPORT.md",
+      "bytes": 16828,
+      "sha256": "9f4e94215b7154a32e391104421d79dd4187d187660475e962354c1fcc04e875",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "principled-explanation-boundary-20261009/VERIFICATION.json",
+      "bytes": 3260,
+      "sha256": "9a78dfe8ada2c46103a77db527613c9bc91c73a5c7e09cfbc9c098e8cba30696",
+      "classification": "completed_written_source_critical_research"
+    },
+    {
+      "path": "prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.LIBRARY_DELIVERY.json",
+      "bytes": 1722,
+      "sha256": "f122ecfd5a48dd5d37e130caa76e71fe8f1128a9a9c6408057101e793dfa1be1",
+      "classification": "prior_delivery_identity_only"
+    },
+    {
+      "path": "replay/verify_portable.py",
+      "bytes": 8584,
+      "sha256": "59204318aa15643f56eb5537b5e83329433bfaeb24840902bd88f3d47df2ec51",
+      "classification": "checkpoint22_packaging_control_not_research"
+    },
+    {
+      "path": "root-resumed-research-20261009/AFTER_CHECKPOINT21_READING.json",
+      "bytes": 2947,
+      "sha256": "701a6ec295d5eeb4303c094ecc244121c65225ec3a97871e0fd79b5eb8137f89",
+      "classification": "root_reading_and_scope_record"
+    },
+    {
+      "path": "root-resumed-research-20261009/KNOWING_PRODUCTION_PRINT_CONTROL.json",
+      "bytes": 1617,
+      "sha256": "56192b727221151404e5ad087974d9b4a529d92c4aaaf513e4e124165faeac90",
+      "classification": "root_reading_and_scope_record"
+    },
+    {
+      "path": "root-resumed-research-20261009/NORMATIVE_WISDOM_READING.json",
+      "bytes": 5324,
+      "sha256": "a8ec63ad9f363966e56c331179e0ffd3dfab9b027115a11c1be118c123fa4fdf",
+      "classification": "root_reading_and_scope_record"
+    },
+    {
+      "path": "root-resumed-research-20261009/SMITH_AGENCY_FULL_TEXT_RETURN.json",
+      "bytes": 1204,
+      "sha256": "284cbc93ac0b2ac2dd0afd88d6ee8a3a4ef90e4f736f5cb2920843e3d521c239",
+      "classification": "root_reading_and_scope_record"
+    },
+    {
+      "path": "root-resumed-research-20261009/SMITH_AGENCY_READING.json",
+      "bytes": 3429,
+      "sha256": "a7d60a933f5792a01139758aa901160c0333561b3589b59961264d74091f8f67",
+      "classification": "root_reading_and_scope_record"
+    }
+  ]
+}

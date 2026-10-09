@@ -1,0 +1,213 @@
+{
+  "distributed_body_coverage": {
+    "expected": [
+      19,
+      260
+    ],
+    "missing_pages": [],
+    "single_reader_whole_book_claim": false
+  },
+  "inherited_inputs": [
+    {
+      "actual_sha256": "25bf973f45b71ad1d4f5e4234faa4997d420078acabfba2e15d2d842657c2841",
+      "expected_sha256": "25bf973f45b71ad1d4f5e4234faa4997d420078acabfba2e15d2d842657c2841",
+      "match": true,
+      "path": "recovery-t20/addendum/AMERI_SCREEN.md"
+    },
+    {
+      "actual_sha256": "02d722446917dbd56450043e135f9dcbf489d8bbc9d2874443c425435a97f7a8",
+      "expected_sha256": "02d722446917dbd56450043e135f9dcbf489d8bbc9d2874443c425435a97f7a8",
+      "match": true,
+      "path": "intrinsic-necessity-source-return/REPORT.md"
+    },
+    {
+      "actual_sha256": "0be18bf6e1f4c4ea5372c3063083f31d91efa14646cb3e88782abcc6387cc7ef",
+      "expected_sha256": "0be18bf6e1f4c4ea5372c3063083f31d91efa14646cb3e88782abcc6387cc7ef",
+      "match": true,
+      "path": "intrinsic-necessity-source-return/PRIMARY_DEPENDENCE_RESPONSE.md"
+    },
+    {
+      "actual_sha256": "b2a32604c623324db39e97f153ea9ff8c557cfa29fae289056110deb8298f305",
+      "expected_sha256": "b2a32604c623324db39e97f153ea9ff8c557cfa29fae289056110deb8298f305",
+      "match": true,
+      "path": "intrinsic-necessity-source-return/PRIMARY_CITATION_CHECK.md"
+    },
+    {
+      "actual_sha256": "9d17ed92dbbaf3c575b9d6bf2f501fbcafc96b278d08b7767b1e8841be5df55c",
+      "expected_sha256": "9d17ed92dbbaf3c575b9d6bf2f501fbcafc96b278d08b7767b1e8841be5df55c",
+      "match": true,
+      "path": "intrinsic-necessity-source-return/READING_LEDGER.json"
+    },
+    {
+      "actual_sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5",
+      "expected_sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5",
+      "match": true,
+      "path": "direct-anti-brute-return/REPORT.md"
+    },
+    {
+      "actual_sha256": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e",
+      "expected_sha256": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e",
+      "match": true,
+      "path": "actual-original-production-residual-20261009/REPORT.md"
+    },
+    {
+      "actual_sha256": "01cf59219b9d36ef5a734a934e07246d0d39dad4f8c78fc26a1f16168b03b924",
+      "expected_sha256": "01cf59219b9d36ef5a734a934e07246d0d39dad4f8c78fc26a1f16168b03b924",
+      "match": true,
+      "path": "particular-agency-bridge-20261009/REPORT.md"
+    },
+    {
+      "actual_sha256": "66354aa2e9d4edc8b054f403df1b4bbc1e2870c2554372b0c6264bc280d98330",
+      "expected_sha256": "66354aa2e9d4edc8b054f403df1b4bbc1e2870c2554372b0c6264bc280d98330",
+      "match": true,
+      "path": "metaphysical-semantics-return/SOURCE_FAITHFUL_SEMANTIC_AUDIT.md"
+    },
+    {
+      "actual_sha256": "d2a195ebb48d41af23938e1b963180383930371fb6cd90c31900e7e40db14c59",
+      "expected_sha256": "d2a195ebb48d41af23938e1b963180383930371fb6cd90c31900e7e40db14c59",
+      "match": true,
+      "path": "epistemic-psr-warrant/RESULT.md"
+    },
+    {
+      "actual_sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+      "expected_sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+      "match": true,
+      "path": "productive-totality-source-return/REPORT.md"
+    },
+    {
+      "actual_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "expected_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "match": true,
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean"
+    }
+  ],
+  "json_parse_passes": [
+    "READING_LEDGER.json",
+    "SOURCE_BINDINGS.json",
+    "cosmology-context/READING-LEDGER.json",
+    "review/REVIEW_LEDGER.json",
+    "scriptural-context/reading-ledger.json"
+  ],
+  "private_source_checks": [
+    {
+      "actual_sha256": "73aa990afec39c35c2d4c511f8924e9dfacf1724ac1f937117c68be0c8176ae4",
+      "expected_sha256": "73aa990afec39c35c2d4c511f8924e9dfacf1724ac1f937117c68be0c8176ae4",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    },
+    {
+      "actual_sha256": "303cefdc9576236c495e6105c3b68202948554feb65f914affc5980ae15eeebc",
+      "expected_sha256": "303cefdc9576236c495e6105c3b68202948554feb65f914affc5980ae15eeebc",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    },
+    {
+      "actual_sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+      "expected_sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    }
+  ],
+  "raw_source_files_in_deliverable": [],
+  "report_review_rebinding": [
+    {
+      "at_utc": "2026-10-09T08:36Z",
+      "current_bytes": 22321,
+      "current_read_scope": "Complete report, lines 1–130",
+      "current_sha256": "e63116973f12d3ed2ee51a390c8f357658b98433e39071588adb24638412c436",
+      "exact_diff_available": false,
+      "judgment_change": false,
+      "path": "ameri-causal-foundations-20261009/REPORT.md",
+      "previous_bytes_preserved": false,
+      "previous_snapshot_metadata": {
+        "bytes": 22116,
+        "path": "ameri-causal-foundations-20261009/REPORT.md",
+        "read_scope": "Complete report, lines 1–130",
+        "sha256": "4910ba1e67c235531637fea81fd2a988cfce5138760537c82e9fcb4355bf49d6"
+      },
+      "reason": "Complete current report reread; focused judgment unchanged. Earlier report bytes were not preserved, so no exact diff or exhaustive change classification is claimed. Prior hash/size metadata retained; no new primary reading credited."
+    }
+  ],
+  "review_current_inputs": [
+    {
+      "actual_sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+      "expected_sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    },
+    {
+      "actual_sha256": "73aa990afec39c35c2d4c511f8924e9dfacf1724ac1f937117c68be0c8176ae4",
+      "expected_sha256": "73aa990afec39c35c2d4c511f8924e9dfacf1724ac1f937117c68be0c8176ae4",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    },
+    {
+      "actual_sha256": "a5755c2dbf0534988ba06b5422b94bd74f051c9a7bb473c80e0eeaf4c113425d",
+      "expected_sha256": "a5755c2dbf0534988ba06b5422b94bd74f051c9a7bb473c80e0eeaf4c113425d",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    },
+    {
+      "actual_sha256": "82e0e07961c67ecad3567eede56312d6e7de1a5102e5694f4092403334796489",
+      "expected_sha256": "82e0e07961c67ecad3567eede56312d6e7de1a5102e5694f4092403334796489",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    },
+    {
+      "actual_sha256": "434f87eae0135d37a6b4f8582c3fad3d006f436fc5592f7576eed2b169843bab",
+      "expected_sha256": "434f87eae0135d37a6b4f8582c3fad3d006f436fc5592f7576eed2b169843bab",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    },
+    {
+      "actual_sha256": "d33476bae5d4b0b22855e5dc04d736e3db455d2602299ec090b23c57b5265165",
+      "expected_sha256": "d33476bae5d4b0b22855e5dc04d736e3db455d2602299ec090b23c57b5265165",
+      "match": true,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]"
+    },
+    {
+      "actual_sha256": "e63116973f12d3ed2ee51a390c8f357658b98433e39071588adb24638412c436",
+      "expected_sha256": "e63116973f12d3ed2ee51a390c8f357658b98433e39071588adb24638412c436",
+      "match": true,
+      "path": "ameri-causal-foundations-20261009/REPORT.md"
+    },
+    {
+      "actual_sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5",
+      "expected_sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5",
+      "match": true,
+      "path": "direct-anti-brute-return/REPORT.md"
+    },
+    {
+      "actual_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "expected_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "match": true,
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean"
+    },
+    {
+      "actual_sha256": "02d722446917dbd56450043e135f9dcbf489d8bbc9d2874443c425435a97f7a8",
+      "expected_sha256": "02d722446917dbd56450043e135f9dcbf489d8bbc9d2874443c425435a97f7a8",
+      "match": true,
+      "path": "intrinsic-necessity-source-return/REPORT.md"
+    },
+    {
+      "actual_sha256": "9d17ed92dbbaf3c575b9d6bf2f501fbcafc96b278d08b7767b1e8841be5df55c",
+      "expected_sha256": "9d17ed92dbbaf3c575b9d6bf2f501fbcafc96b278d08b7767b1e8841be5df55c",
+      "match": true,
+      "path": "intrinsic-necessity-source-return/READING_LEDGER.json"
+    },
+    {
+      "actual_sha256": "c8efbde7f1b94ee198201872ee6e0768bb8ec74748ababf987a689f96a258c27",
+      "expected_sha256": "c8efbde7f1b94ee198201872ee6e0768bb8ec74748ababf987a689f96a258c27",
+      "match": true,
+      "path": "ameri-causal-foundations-20261009/SIMULTANEOUS_PRIORITY_CONTROL.md"
+    }
+  ],
+  "review_output": {
+    "actual_sha256": "869423a84e8bad52290bbd5df18007870a3b04e2c92cdd6087d070137d85d53b",
+    "expected_sha256": "869423a84e8bad52290bbd5df18007870a3b04e2c92cdd6087d070137d85d53b",
+    "match": true,
+    "path": "ameri-causal-foundations-20261009/review/INDEPENDENT_FOCUSED_REVIEW.md"
+  },
+  "validated_utc": "2026-10-09T08:37:22.056250+00:00",
+  "validation_history": "Initial freeze check caught a report hash mismatch after final linking/context edits. The reviewer reread the full current report and rebound the unchanged judgment. Prior hash metadata is retained; no frozen prior bytes or exact diff are claimed."
+}

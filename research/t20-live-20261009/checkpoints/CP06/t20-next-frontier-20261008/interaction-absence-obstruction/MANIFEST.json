@@ -1,0 +1,98 @@
+{
+  "created_utc": "2026-10-08T14:49:16.553449+00:00",
+  "status": "Frozen new author checkpoint with independent PASS and separately bound review transcription erratum",
+  "scope": "Support-absence approximation-oracle obstruction only; no physical validation, protected integration, owner acceptance or T20 closure.",
+  "files": [
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "1d56ba9524576b64dc9cdcb56a611247cfa316db424fe3b750a3c44c239e5e4a",
+      "bytes": 1614
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "557dafd62477f2f4341cdf50122dc1cb6b2ac37ea86225e7362818691d9009ba",
+      "bytes": 1229
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "22629f28c164b62767040a11216be9b177a6969f721de33059e8dc566893051e",
+      "bytes": 915
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "f8424612e92e5f4f3d45f89317070bf5ed4fd63b5cc53a43ee88b4713bc29f4b",
+      "bytes": 12481
+    },
+    {
+      "path": "REVIEW_STATUS.md",
+      "sha256": "872e2c09030b2170609d72fbbae093c1de834e98d36085cd1b44cae01d96982b",
+      "bytes": 2516
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "7bf7d837c61ed3c6ef6ecb08270b3b0d345754fb54afcda091aefb96e0d7648a",
+      "bytes": 6410
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "ec2f86038126da0bf98ed994982341adc1cf58fa2807707979baf217c1612888",
+      "bytes": 20571
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70",
+      "bytes": 5030
+    },
+    {
+      "path": "results/erratum_verification.json",
+      "sha256": "b9cc706acd6b7b90e4dfbd759a26a1d7796e65672802cf2cf908eb42cf9451d6",
+      "bytes": 425
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "bytes": 1156
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "bytes": 1156
+    },
+    {
+      "path": "results/review_verification.json",
+      "sha256": "9d7fff67839a3f665517cfb813359e64e4d91498d55df453e38f5bda315f254f",
+      "bytes": 412
+    },
+    {
+      "path": "verify_evidence.py",
+      "sha256": "2f1771287858cca17a987faeacb917bc42eed68f98eb62147520b2aa46746d56",
+      "bytes": 1959
+    }
+  ],
+  "review_references": [
+    {
+      "path": "../interaction-absence-obstruction-review/REVIEW.md",
+      "sha256": "85284366281cc77a4957ddf8b291d5a91c641fa9e80ce0889eb94a2062460dbf"
+    },
+    {
+      "path": "../interaction-absence-obstruction-review/REVIEW_RECEIPT.json",
+      "sha256": "7731d7ada9d6a4d1ceb456a6af3b90e934f47941ccfd532a73b879af9356a945"
+    },
+    {
+      "path": "../interaction-absence-obstruction-review/REVIEW_MANIFEST.json",
+      "sha256": "6bc8b43fbf0f91812c8344475857d0db7430fa553fb2d365cf4ee8af2d2889ec"
+    },
+    {
+      "path": "../interaction-absence-obstruction-review/ERRATUM.md",
+      "sha256": "8ed2d479c07d30487072ba0b5dde52228259cb88589ec295de73453f5b3bc9f1"
+    },
+    {
+      "path": "../interaction-absence-obstruction-review/ERRATUM_RECEIPT.json",
+      "sha256": "34932c23d76203b90f6f569067d588bce66ad3e222018543a241eca4202a02ab"
+    }
+  ],
+  "excluded_generated_reports": [
+    "results/verification.json"
+  ],
+  "exclusion_reason": "Generated report includes whether this manifest exists; excluded to avoid a self-referential manifest/report digest cycle."
+}

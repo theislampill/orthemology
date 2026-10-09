@@ -1,0 +1,51 @@
+{
+  "classification": "FIFTEENTH_INTERMEDIATE_ADDITIVE_PRESERVATION_ONLY",
+  "checkpoint_ordinal": 15,
+  "assembly_cutoff_utc": "2026-10-09T02:52:16.133916+00:00",
+  "membership_cutoff": [
+    "epistemic-psr-warrant",
+    "plural-explanation-theorem-audit",
+    "particular-explanans-bridge-audit",
+    "explanation-bridge-review",
+    "source-noncirculation-feedback"
+  ],
+  "T20_status": "ACTIVE",
+  "historical_six_hour_active_compliance": "UNVERIFIED",
+  "owner_acceptance": false,
+  "final_integration": false,
+  "closure": false,
+  "new_research_duration_credit_seconds": 0,
+  "new_source_reading_credit": false,
+  "new_proof_development": false,
+  "historical_proofs_rerun": false,
+  "package_qualification_fresh_lean_replays": 4,
+  "toolchain_bundled_or_rebuilt": false,
+  "prior_archives_mutated": false,
+  "current_root_judgement": {
+    "latest": {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+      "bytes": 8405,
+      "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1"
+    },
+    "latest_status": "PROVISIONAL_PREFERENCE_ONE_ACTUAL_COMMON_CREATOR_WITH_JUDGEMENT_WITHHELD_ON_UNIVERSAL_EXCLUSION",
+    "historical_positive_judgement": {
+      "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+      "bytes": 5862,
+      "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+    },
+    "historical_frontier_record": {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+      "bytes": 1820,
+      "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6"
+    },
+    "exact_checkpoint14_members": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json#inherited_member_bindings",
+    "anti_bootstrap_does_not_settle_redundant_originals": true
+  },
+  "internal_review_not_external_validation": true,
+  "regular_open_realization": "WRITTEN_ONLY",
+  "actual_necessary_being_or_uniqueness_proved": false,
+  "repairs": "SUFFICIENT_NOT_PROVED_NECESSARY_UNIQUE_OR_WEAKEST; wholly particular constituents required",
+  "finite_control": "DISPLAYED_RESTRICTED_RELATIONAL_PACKAGE; Full(c,{b}) ASSIGNED; no genuine explanation or naturalistic metaphysical countermodel claimed",
+  "weakened_controls": "BOTH_TRANSITIVITY_CLAUSES_AND_OUTPUT_DISTRIBUTIVITY_DROPPED",
+  "general_E_parthood_BNF_productive_transports": "OPEN"
+}

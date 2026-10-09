@@ -1,0 +1,163 @@
+{
+  "created_utc": "2026-10-08T16:19:20.166669+00:00",
+  "prior_checkpoints": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+      "bytes": 544325,
+      "sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+      "bytes": 389515,
+      "sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+      "bytes": 318928,
+      "sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 549190,
+      "sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/interaction-invariants/T20_Grouped_Invariants_and_Interaction_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 465413,
+      "sha256": "80849c0ece0517a96070fcbc40308440cd655c8d6ecd13f62f0c8d4a3caf0bc3",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    }
+  ],
+  "components": [
+    {
+      "stage": "finite-hypergraph-calibration",
+      "manifest": "t20-next-frontier-20261008/finite-hypergraph-calibration/MANIFEST.json",
+      "bytes": 3948,
+      "sha256": "abf22fdc2ae54d092d2675bf654b3cae94b5953ac03969e7070d8c2d42d77889",
+      "frozen_utc": "2026-10-08T15:36:32.873615+00:00",
+      "governing": true,
+      "payload_count": 15,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "finite-hypergraph-calibration-review",
+      "manifest": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/COMPOSITE_REVIEW_MANIFEST.json",
+      "bytes": 12771,
+      "sha256": "a7c726ccbb380d5688bed42b2cd2fe9df6ba109a7feb4d3d60d53a1cabcc9714",
+      "frozen_utc": null,
+      "governing": true,
+      "payload_count": 43,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "bounded-interaction-detection",
+      "manifest": "t20-next-frontier-20261008/bounded-interaction-detection/MANIFEST.json",
+      "bytes": 3328,
+      "sha256": "a2f701142ff4b8b38040331f9c174a0e0a09624dcb810ffd5dbf1c3d76c79a5d",
+      "frozen_utc": "2026-10-08T15:28:38.052474+00:00",
+      "governing": true,
+      "payload_count": 14,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "bounded-interaction-detection-review",
+      "manifest": "t20-next-frontier-20261008/bounded-interaction-detection-review/REVIEW_MANIFEST.json",
+      "bytes": 1931,
+      "sha256": "800fcc235c3118adf0f40bf564ad994c4e483988eabc0782075ad069aef84300",
+      "frozen_utc": null,
+      "governing": true,
+      "payload_count": 17,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "dependent-gate-transport",
+      "manifest": "t20-next-frontier-20261008/dependent-gate-transport/MANIFEST.json",
+      "bytes": 1809,
+      "sha256": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+      "frozen_utc": "2026-10-08T15:35:19.238677+00:00",
+      "governing": true,
+      "payload_count": 10,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "dependent-gate-transport",
+      "manifest": "t20-next-frontier-20261008/dependent-gate-transport/ADDENDUM_MANIFEST.json",
+      "bytes": 467,
+      "sha256": "66a631d04cfe92964aaf8829f3668e362b589004d1c1c66dba287c4155513716",
+      "frozen_utc": "2026-10-08T15:36:18.217720+00:00",
+      "governing": false,
+      "payload_count": 1,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "dependent-gate-transport",
+      "manifest": "t20-next-frontier-20261008/dependent-gate-transport/FINAL_BINDINGS.json",
+      "bytes": 1210,
+      "sha256": "cf705c2cde50760f4a356600210257a538905cf880ba86213359f4a168c17307",
+      "frozen_utc": "2026-10-08T15:46:49.991820+00:00",
+      "governing": true,
+      "payload_count": 5,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "dependent-gate-transport-review",
+      "manifest": "t20-next-frontier-20261008/dependent-gate-transport-review/MANIFEST.json",
+      "bytes": 2921,
+      "sha256": "178f5d67673ff245873a4b8d525de13194c9f6ce79e43d787f56c9b6499c2bc4",
+      "frozen_utc": "2026-10-08T15:45:28.233987+00:00",
+      "governing": true,
+      "payload_count": 16,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "same-threshold-replay",
+      "manifest": "t20-next-frontier-20261008/same-threshold-replay/MANIFEST.json",
+      "bytes": 1857,
+      "sha256": "f58c75e855e51be1bf4818b2b4ea6a91b1b5e685cbd45cfe304e9c3627fcbf53",
+      "frozen_utc": "2026-10-08T16:07:27.537070+00:00",
+      "governing": true,
+      "payload_count": 10,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "same-threshold-replay",
+      "manifest": "t20-next-frontier-20261008/same-threshold-replay/FINAL_BINDINGS.json",
+      "bytes": 1480,
+      "sha256": "7d5f494f2f4ba8e5b41b884c959882ec5a5613c48ee767de40b617310daf2e78",
+      "frozen_utc": "2026-10-08T16:15:27.659356+00:00",
+      "governing": true,
+      "payload_count": 5,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "same-threshold-replay-review",
+      "manifest": "t20-next-frontier-20261008/same-threshold-replay-review/MANIFEST.json",
+      "bytes": 2977,
+      "sha256": "68a23ddfdb42ce093ad4ff8a6a929800caf88984b70b0db0c7c4f7029ceec1a9",
+      "frozen_utc": "2026-10-08T16:14:08.140518+00:00",
+      "governing": true,
+      "payload_count": 17,
+      "verification_scope": "Fresh source-byte binding checks; included and intentionally omitted payloads distinguished."
+    },
+    {
+      "stage": "finite-panel-replay",
+      "manifest": "t20-next-frontier-20261008/finite-panel-replay/MANIFEST.sha256",
+      "bytes": 948,
+      "sha256": "03a2b836250eb1b77eb99e3214ebcaff8ecf2e2748442d28bca6851c6a5b46d3",
+      "governing": true,
+      "payload_count": 9
+    }
+  ],
+  "owner_adopted_main": "3a0bdeaa1394c656245cae9599adcb143e885059",
+  "owner_repository_status": "OWNER_REPORTED; no GitHub access during packaging",
+  "historical_boundary": "Merged frozen 7 October snapshot is distinct from these later 8 October scratch stages. This incremental packet is separately unintegrated."
+}

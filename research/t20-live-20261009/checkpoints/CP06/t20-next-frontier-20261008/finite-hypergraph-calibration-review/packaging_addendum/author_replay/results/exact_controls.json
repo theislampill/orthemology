@@ -1,0 +1,86 @@
+{
+  "families_passed": 12,
+  "controls": {
+    "raw_mask_product_extraction_with_background": 135,
+    "complete_interior_zero_grid_gauge_and_homeomorphic_extension": 135,
+    "triangle_without_unary_anchors": {
+      "base": [
+        "1/5",
+        "1/3",
+        "2/5"
+      ],
+      "products": [
+        "1/15",
+        "2/25",
+        "2/15"
+      ]
+    },
+    "partial_identification_AB_ABC": [
+      false,
+      false,
+      true
+    ],
+    "unsigned_graph_bipartite_and_odd_cycle_criterion": 1098,
+    "false_probability_mass_row_and_higher_hyperedges": true,
+    "full_rank_does_not_determine_unsampled_values": true,
+    "positive_unary_half_integer_interval_search": {
+      "recoveries": 15,
+      "certified_sign_calls": 75,
+      "max_bits": 16
+    },
+    "zero_count_stalls_this_cut_without_claiming_absence_impossibility": true,
+    "boundary_reduced_inventory_and_triple_point_reconstruction": {
+      "grid_equalities": 9,
+      "original_count": 3,
+      "aggregate_count": 7
+    },
+    "boundary_pair_with_unary_neighbor_and_saturation_guard": {
+      "unary_count": 5,
+      "reduced_count": 8
+    },
+    "all_command_point_oracle_uniform_polygonal_controls": [
+      {
+        "power": 1,
+        "epsilon": "1/8",
+        "mesh": 32,
+        "point_calls": 67,
+        "max_cell_enclosure_span": "3/64"
+      },
+      {
+        "power": 1,
+        "epsilon": "1/32",
+        "mesh": 128,
+        "point_calls": 261,
+        "max_cell_enclosure_span": "3/256"
+      },
+      {
+        "power": 2,
+        "epsilon": "1/8",
+        "mesh": 64,
+        "point_calls": 132,
+        "max_cell_enclosure_span": "3/64"
+      },
+      {
+        "power": 2,
+        "epsilon": "1/32",
+        "mesh": 256,
+        "point_calls": 518,
+        "max_cell_enclosure_span": "3/256"
+      },
+      {
+        "power": 7,
+        "epsilon": "1/8",
+        "mesh": 256,
+        "point_calls": 518,
+        "max_cell_enclosure_span": "3/64"
+      },
+      {
+        "power": 7,
+        "epsilon": "1/32",
+        "mesh": 1024,
+        "point_calls": 2056,
+        "max_cell_enclosure_span": "3/256"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "classification": "INTERMEDIATE_PRESERVATION_ONLY",
+  "checkpoint_ordinal": 12,
+  "T20_status": "ACTIVE",
+  "not_a_numbered_research_tranche": true,
+  "owner_handles_integration": true,
+  "protected_integration": false,
+  "GitHub_maintenance": false,
+  "historical_six_hour_active_compliance": "UNVERIFIED",
+  "research_duration_credit_seconds": 0,
+  "timing": "Packaging/replay/waiting gives no research-duration credit; no summing overlapping windows or treating wall time as active time.",
+  "kernel": "Written arguments, bounded deterministic controls and internal review only; no fresh Lean.",
+  "assumptions": [
+    "Known hard pair: n iid product-uniform route points versus m=n+1 iid Joe-law points with c=n/m and F_c(x,y)=1-(1-xy)^c.",
+    "Independent fresh/reset vectors, unchanged retention within a vector, noiseless endpoint-AND routes combined by OR; all logarithms natural.",
+    "Started-vector charging, common world-independent policy randomization and unconditional terminal correctness; fixed confidence below 1/2 for matched vector order.",
+    "The finite rule uses exact rational/integer comparisons and an eventual asymptotic guarantee only; no hidden exact real-number oracle or certified finite cutoff.",
+    "Philosophical models grant relevant content, operative ground, competence and warrant premises explicitly; symbolic or modal checks do not manufacture them."
+  ],
+  "failed_or_limited_controls": [
+    "Sharp CONTROL_ATTEMPT1.log records an interrupted inefficient symbolic expansion; final coefficient-first script and exact results are preserved.",
+    "Sharp pre-freeze reviewer script differs from final author script; it is historical evidence only and is not replayed. Final reviewer author_replay matches final author bytes.",
+    "Finite controls reject zero centering, omitted collision/quantization loss, wrong threshold and invalid sufficient-bound constants; no asymptotic cutoff is certified.",
+    "Basing review required feature-level witness precision, strict logical entailment and complete-operative-basis qualification; final addendum binds exact corrected arguments.",
+    "Fourth-world and factive-ground controls limit the conditional modal argument; they do not settle real-world epistemology.",
+    "Unreachable chapter 6 and limited discovery-only candidates remain uncredited as reading."
+  ],
+  "excluded_claims": [
+    "All-n finite-score deployment certificate or automatic hybrid cutoff",
+    "Query-optimality and exact testing constants",
+    "New modal mathematical theorem or complete cognitive naturalization",
+    "First-order recognition defeat or automatic Creator-stance revision",
+    "External peer review, independent rediscovery or empirical certification",
+    "Historical active-floor certification",
+    "Owner acceptance, protected integration, GitHub changes or T20 closure"
+  ]
+}

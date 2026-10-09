@@ -1,0 +1,233 @@
+{
+  "commuting_abstraction_checks": 512,
+  "established": [
+    "finite commuting abstraction",
+    "formula-code-sensitive acceptance",
+    "conditional propositional truth preservation",
+    "faulty match mutation rejected",
+    "valid execution does not authenticate external premise truth"
+  ],
+  "explicit_upstream_error_control": [
+    {
+      "local_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "record": {
+        "input_correct": true,
+        "output": [
+          true,
+          "q"
+        ],
+        "output_correct": true,
+        "packet": [
+          "p",
+          "p",
+          "q",
+          true,
+          true
+        ],
+        "world": {
+          "p": true,
+          "q": true
+        }
+      },
+      "source_error": false,
+      "world": {
+        "p": true,
+        "q": true
+      }
+    },
+    {
+      "local_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "record": {
+        "input_correct": false,
+        "output": [
+          true,
+          "q"
+        ],
+        "output_correct": false,
+        "packet": [
+          "p",
+          "p",
+          "q",
+          true,
+          true
+        ],
+        "world": {
+          "p": true,
+          "q": false
+        }
+      },
+      "source_error": true,
+      "world": {
+        "p": true,
+        "q": false
+      }
+    }
+  ],
+  "fixed_content_external_world_control": {
+    "bad": {
+      "input_correct": false,
+      "output": [
+        true,
+        "q"
+      ],
+      "output_correct": false,
+      "packet": [
+        "p",
+        "p",
+        "q",
+        true,
+        true
+      ],
+      "world": {
+        "p": true,
+        "q": false
+      }
+    },
+    "good": {
+      "input_correct": true,
+      "output": [
+        true,
+        "q"
+      ],
+      "output_correct": true,
+      "packet": [
+        "p",
+        "p",
+        "q",
+        true,
+        true
+      ],
+      "world": {
+        "p": true,
+        "q": true
+      }
+    }
+  },
+  "formula_codes": {
+    "0": "p",
+    "1": "not_p",
+    "2": "q",
+    "3": "not_q"
+  },
+  "input_packets": 512,
+  "interventions": {
+    "base": [
+      true,
+      "q"
+    ],
+    "change_consequent_only": [
+      true,
+      "not_q"
+    ],
+    "change_first_formula_only": [
+      false,
+      "q"
+    ],
+    "change_implication_antecedent_only": [
+      false,
+      "q"
+    ],
+    "withdraw_first": [
+      false,
+      "q"
+    ],
+    "withdraw_second": [
+      false,
+      "q"
+    ]
+  },
+  "mutation_witnesses": {
+    "drop_first_premise": {
+      "input_correct": true,
+      "output": [
+        true,
+        "p"
+      ],
+      "output_correct": false,
+      "packet": [
+        "p",
+        "p",
+        "p",
+        false,
+        true
+      ],
+      "world": {
+        "p": false,
+        "q": false
+      }
+    },
+    "drop_formula_match": {
+      "input_correct": true,
+      "output": [
+        true,
+        "not_p"
+      ],
+      "output_correct": false,
+      "packet": [
+        "p",
+        "not_p",
+        "not_p",
+        true,
+        true
+      ],
+      "world": {
+        "p": true,
+        "q": false
+      }
+    }
+  },
+  "noise_invariance_checks": 512,
+  "not_established": [
+    "actual mental content",
+    "subjective understanding",
+    "human belief",
+    "naturalised normativity or proper function",
+    "warrant or knowledge",
+    "metaphysical naturalism",
+    "theism",
+    "evolutionary origin",
+    "any reliability probability"
+  ],
+  "scope": "Finite bit-level/formula-level compatibility only",
+  "specific_formula_matching_mutation": {
+    "input_correct": true,
+    "output": [
+      true,
+      "not_p"
+    ],
+    "output_correct": false,
+    "packet": [
+      "p",
+      "q",
+      "not_p",
+      true,
+      true
+    ],
+    "world": {
+      "p": true,
+      "q": false
+    }
+  },
+  "truth_preservation_checks": 2048,
+  "world_valuations": 4
+}

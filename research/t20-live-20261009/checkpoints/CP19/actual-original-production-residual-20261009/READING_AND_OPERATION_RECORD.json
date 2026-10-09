@@ -1,0 +1,46 @@
+{
+  "date_utc": "2026-10-09",
+  "new_operation": "Resolve queued Dar3:440 against scan and continuous context",
+  "printed_pages_visually_read": [
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448
+  ],
+  "pdf_one_based_indices": [
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448
+  ],
+  "electronic_items": [
+    691,
+    692,
+    693,
+    694
+  ],
+  "electronic_body_read": "All saved paragraph bodies",
+  "voice": {
+    "item692": "Ibn Tumart quotation",
+    "item693": "Ibn Taymiyyah reply from printed440; includes arguments reported for criticism",
+    "item694": "Ibn Taymiyyah, completion of unit through first line printed448"
+  },
+  "boundary": "The new al-Amidi quotation beginning on printed448 was visually read for boundary only; no continuation campaign.",
+  "source_credit": "Reused inherited scan; newly resolved exact locator and voice; no new edition or independent manuscript witness",
+  "prior_operation_result": "All four considered substantive dependency/individuation tests had been performed in materially relevant form; none counted anew",
+  "no_execution_claim": "No model, Lean, mask, SCM, or old-kernel replay performed"
+}

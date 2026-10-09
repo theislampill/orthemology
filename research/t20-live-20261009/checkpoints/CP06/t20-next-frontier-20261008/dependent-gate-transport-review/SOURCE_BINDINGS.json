@@ -1,0 +1,260 @@
+{
+  "created_utc": "2026-10-08T15:45:28.232076+00:00",
+  "local_inputs": [
+    {
+      "path": "../dependent-gate-transport/RESULT.md",
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+      "bytes": 15467,
+      "review_read_scope": "complete main text"
+    },
+    {
+      "path": "../dependent-gate-transport/READ_FIRST.md",
+      "sha256": "48ae64facbc6556c6f4346858f74a3a0f0049077c9d11e9adfbb0fc8c0d05be4",
+      "bytes": 1231,
+      "review_read_scope": "complete text"
+    },
+    {
+      "path": "../dependent-gate-transport/EXACT_CONTROLS.md",
+      "sha256": "463b14ece2b32e3004c9c9bc373664803a6daa81ee6e20210406a849808261fc",
+      "bytes": 2062,
+      "review_read_scope": "complete text"
+    },
+    {
+      "path": "../dependent-gate-transport/SOURCE_AUDIT.md",
+      "sha256": "187867e9e99c74e1897b570d6101106a2b6a65818cbf1126ed38441af53da90d",
+      "bytes": 7007,
+      "review_read_scope": "complete text"
+    },
+    {
+      "path": "../dependent-gate-transport/SOURCE_BINDINGS.json",
+      "sha256": "d0168bae91d619e795e50326caaf91e6a19df0e5cb84f8b1e1562a53646c5c0a",
+      "bytes": 6234,
+      "review_read_scope": "complete binding record; predecessor hashes independently verified"
+    },
+    {
+      "path": "../dependent-gate-transport/sources/SOURCE_READS.json",
+      "sha256": "dae0993624569e077dd96def3e52d243b222f0dd5a6a94475a05cc5115d195b5",
+      "bytes": 2114,
+      "review_read_scope": "complete recorded read-scope metadata"
+    },
+    {
+      "path": "../dependent-gate-transport/exact_controls.py",
+      "sha256": "c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1",
+      "bytes": 6916,
+      "review_read_scope": "complete source plus byte-preserving isolated replay"
+    },
+    {
+      "path": "../dependent-gate-transport/SEMANTIC_GUARD.md",
+      "sha256": "0fbd40f05cb115621d367a220eb1bdc754a218e6fd6b84f8d5e4c63af8dbd924",
+      "bytes": 1792,
+      "review_read_scope": "complete text"
+    },
+    {
+      "path": "../dependent-gate-transport/MANIFEST.json",
+      "sha256": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+      "bytes": 1809,
+      "review_read_scope": "complete manifest and all payload digests verified"
+    },
+    {
+      "path": "../dependent-gate-transport/ADDENDUM_MANIFEST.json",
+      "sha256": "66a631d04cfe92964aaf8829f3668e362b589004d1c1c66dba287c4155513716",
+      "bytes": 467,
+      "review_read_scope": "complete addendum manifest and payload verified"
+    },
+    {
+      "path": "../dependent-gate-transport/results/exact_controls.json",
+      "sha256": "cb68c4936ac039a7046a411d717078e1212006fbabb0fd8620ef98bf679779db",
+      "bytes": 18639,
+      "review_read_scope": "result counts and record structure; byte comparison to fresh isolated replay"
+    },
+    {
+      "path": "../dependent-gate-transport/results/exact_controls.log",
+      "sha256": "a9d0a69aa7cf1cdc25bc24bea0e7c46d8b2b27a777aad0b6ba75808cbdf134f7",
+      "bytes": 1381,
+      "review_read_scope": "complete fresh replay comparison"
+    },
+    {
+      "path": "../dependent-gate-transport/RESEARCH_EVENTS.jsonl",
+      "sha256": "3a53862de5488ae43923c32d7ff55d942a55d617444790e9473c0ffb57cc10e8",
+      "bytes": 650,
+      "review_read_scope": "hash verified only; no research duration inferred"
+    },
+    {
+      "path": "../interaction-calibration-anchor/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+      "bytes": 15546,
+      "review_read_scope": "Targeted sections 1, 3, 5.2-5.7 and interpretation limits"
+    },
+    {
+      "path": "../interaction-calibration-anchor/FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4",
+      "bytes": 8194,
+      "review_read_scope": "Targeted strict determinant sign theorem and proof, sections 1-2"
+    },
+    {
+      "path": "../interaction-calibration-anchor/SOURCE_AUDIT.md",
+      "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6",
+      "bytes": 6901,
+      "review_read_scope": "Hash verification only; not reread"
+    },
+    {
+      "path": "../interaction-calibration-anchor/READ_FIRST.md",
+      "sha256": "56468e1e3a00f85dbbf2f1e7dd0ca26940e5747603c431c18659f014c176f688",
+      "bytes": 1553,
+      "review_read_scope": "Hash verification only; not reread"
+    },
+    {
+      "path": "../interaction-calibration-anchor/EXACT_CONTROLS.md",
+      "sha256": "b30ea170c53b94cc6a8bf9f41cae0fd4840965d4519542c006c94506017b888c",
+      "bytes": 2210,
+      "review_read_scope": "Hash verification only; not reread"
+    },
+    {
+      "path": "../productive-identifiability/RESULT.md",
+      "sha256": "fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d",
+      "bytes": 12476,
+      "review_read_scope": "Targeted shared gates, occurrence aliases, route-level implementation and source-admissibility passages"
+    },
+    {
+      "path": "../productive-identifiability/THEOREMS.md",
+      "sha256": "aec96500f0b273b5f4d1cf40c075e2d1bc906062e2c314ad420c7d36652a35dc",
+      "bytes": 12573,
+      "review_read_scope": "Targeted declared model and theorem framing; not a full reread"
+    },
+    {
+      "path": "../noise-aware-calibration/RESULT.md",
+      "sha256": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d",
+      "bytes": 7424,
+      "review_read_scope": "Targeted sections on calibration, correlation, statistical versus metaphysical independence and source admissibility"
+    },
+    {
+      "path": "../interaction-calibration-anchor/MANIFEST.json",
+      "sha256": "5cceea13e65e76604e1290ab420a34bb352c506c73d2f65937afdd10bdd6005b",
+      "bytes": 4029,
+      "review_read_scope": "Complete payload digest verification only; not proof of rereading all payloads"
+    }
+  ],
+  "predecessor_manifest_payloads": [
+    {
+      "path": "../interaction-calibration-anchor/EXACT_CONTROLS.md",
+      "sha256": "b30ea170c53b94cc6a8bf9f41cae0fd4840965d4519542c006c94506017b888c",
+      "bytes": 2210
+    },
+    {
+      "path": "../interaction-calibration-anchor/FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4",
+      "bytes": 8194
+    },
+    {
+      "path": "../interaction-calibration-anchor/READ_FIRST.md",
+      "sha256": "56468e1e3a00f85dbbf2f1e7dd0ca26940e5747603c431c18659f014c176f688",
+      "bytes": 1553
+    },
+    {
+      "path": "../interaction-calibration-anchor/RESEARCH_EVENTS.jsonl",
+      "sha256": "da34f3004039219422e2c211ccf6bac01864a281cd09ece727c6dac399fafc39",
+      "bytes": 1546
+    },
+    {
+      "path": "../interaction-calibration-anchor/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+      "bytes": 15546
+    },
+    {
+      "path": "../interaction-calibration-anchor/REVIEW_STATUS.md",
+      "sha256": "37473e32858ec1b1fb69f7ac5e49afa5d898d0bd5da95750685acb220d9fec94",
+      "bytes": 2582
+    },
+    {
+      "path": "../interaction-calibration-anchor/SOURCE_AUDIT.md",
+      "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6",
+      "bytes": 6901
+    },
+    {
+      "path": "../interaction-calibration-anchor/SOURCE_BINDINGS.json",
+      "sha256": "d295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17",
+      "bytes": 11953
+    },
+    {
+      "path": "../interaction-calibration-anchor/exact_controls.py",
+      "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c",
+      "bytes": 4780
+    },
+    {
+      "path": "../interaction-calibration-anchor/panel_controls.py",
+      "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b",
+      "bytes": 2826
+    },
+    {
+      "path": "../interaction-calibration-anchor/results/exact_controls.json",
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "bytes": 1076
+    },
+    {
+      "path": "../interaction-calibration-anchor/results/exact_controls.log",
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "bytes": 1076
+    },
+    {
+      "path": "../interaction-calibration-anchor/results/panel_controls.json",
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "bytes": 535
+    },
+    {
+      "path": "../interaction-calibration-anchor/results/panel_controls.log",
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "bytes": 535
+    },
+    {
+      "path": "../interaction-calibration-anchor/results/review_verification.json",
+      "sha256": "b5e520b7b0edb4e8e68843e80c3d6d7760337e8283dd33753b557cf7772d6ad8",
+      "bytes": 676
+    },
+    {
+      "path": "../interaction-calibration-anchor/verify_evidence.py",
+      "sha256": "8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093",
+      "bytes": 2252
+    }
+  ],
+  "external_reads": [
+    {
+      "url": "https://vinecopulas.readthedocs.io/en/stable/vinecopulas.html#fitting-a-vine-copula",
+      "review_read_scope": "Table 1 Joe row ID 11, retrieved line 103; CDF and theta>=1",
+      "snapshot": "sources/vinecopulas_formula_web.json",
+      "snapshot_sha256": "e244e5f30d220637540526d8c4d32472c5c6f63a197aaac9bd8bfab0f7477ef1",
+      "snapshot_kind": "Serialized web-tool retrieval response; digest does not pin source repository or live website"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cran/copula/master/R/joeCopula.R",
+      "review_read_scope": "Targeted constructor lines 19-24,27-31,41-43; mutable master, no package run or release pin",
+      "snapshot": "sources/copula_constructor_web.json",
+      "snapshot_sha256": "dd79f7164213f10a48d01954d0b3f8bb4d112ec91c7d5c24e2fc0cecc10ddbd4",
+      "snapshot_kind": "Serialized web-tool retrieval response; digest does not pin source repository or live website"
+    },
+    {
+      "url": "https://search.r-project.org/CRAN/refmans/acopula/html/generator.html",
+      "review_read_scope": "Joe generator row, retrieved line 36; acopula 0.9.4",
+      "snapshot": "sources/acopula_generator_web.json",
+      "snapshot_sha256": "3b31a45c39072b7fd0dbfafd8dcc18ed23bbc009390200dbea58fe856d21d18d",
+      "snapshot_kind": "Serialized web-tool retrieval response; digest does not pin source repository or live website"
+    },
+    {
+      "url": "https://search.r-project.org/CRAN/refmans/copBasic/html/JOcopB5.html",
+      "review_read_scope": "Targeted displayed formula omission and example, lines 7 and 55; also captures failed direct DOI open",
+      "snapshot": "sources/additional_sources_web.json",
+      "snapshot_sha256": "cd898c4eb30aac34675c0a2e190c32f4d7bf6134704ce1234eca609204d522b0",
+      "snapshot_kind": "Serialized web-tool retrieval response; digest does not pin source repository or live website"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0047259X83710614",
+      "review_read_scope": "Official publisher metadata/abstract and UBC author list search retrieval only; unrelated search hits not used",
+      "snapshot": "sources/bibliographic_search_web.json",
+      "snapshot_sha256": "d50e43a2c695322b991af89516a53b4d0cb91321648238fb35cb85975602ac2a",
+      "snapshot_kind": "Serialized web-tool retrieval response; digest does not pin source repository or live website"
+    }
+  ],
+  "original_paper_full_text_read": false,
+  "independent_vinecopulib_enum_reread": false,
+  "earlier_files_modified": false,
+  "notes": "This review authenticates exact bytes and bounded reading scope. Author reading-history claims are not expanded by digest verification."
+}

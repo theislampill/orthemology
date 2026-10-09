@@ -1,0 +1,276 @@
+{
+  "created_utc": "2026-10-08T16:42:34.403695+00:00",
+  "inputs": [
+    {
+      "path": "../dependent-gate-transport/RESULT.md",
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+      "bytes": 15467,
+      "read_scope": "Relevant formulas and full earlier-operation inspection; current hash checked"
+    },
+    {
+      "path": "../dependent-gate-transport/SEMANTIC_GUARD.md",
+      "sha256": "0fbd40f05cb115621d367a220eb1bdc754a218e6fd6b84f8d5e4c63af8dbd924",
+      "bytes": 1792,
+      "read_scope": "Full earlier-operation inspection; current hash checked"
+    },
+    {
+      "path": "../same-threshold-replay/RESULT.md",
+      "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098",
+      "bytes": 15218,
+      "read_scope": "Full earlier-operation development/inspection; current hash checked"
+    },
+    {
+      "path": "../finite-panel-replay-robustness/RESULT.md",
+      "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe",
+      "bytes": 12263,
+      "read_scope": "Full current-operation read"
+    },
+    {
+      "path": "../finite-panel-replay-robustness-review/REVIEW.md",
+      "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf",
+      "bytes": 13318,
+      "read_scope": "Full current-operation read"
+    },
+    {
+      "path": "../finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+      "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c",
+      "bytes": 3776,
+      "read_scope": "Full current-operation read"
+    }
+  ],
+  "upper_manifest": {
+    "path": "../finite-panel-replay-robustness/MANIFEST.sha256",
+    "sha256": "4c7934a6eac9c3412dfb3a5f982c6fe0dcdc94e80f43e0ed75b36eb3b4db386d",
+    "bytes": 1225,
+    "verified_listed_payloads": [
+      {
+        "path": "../finite-panel-replay/MANIFEST.sha256",
+        "sha256": "03a2b836250eb1b77eb99e3214ebcaff8ecf2e2748442d28bca6851c6a5b46d3",
+        "bytes": 948,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay/RESULT.md",
+        "sha256": "327b6fb25944ac90e7ecd6010a427993b69400fbdc9b79928d731120b6d62243",
+        "bytes": 10261,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay/SHARED_MARGINAL_BOUNDARY.md",
+        "sha256": "3d55f739d398ed1b4b28253cdb5db34ec9b32d46415e14750a612e35f43b4788",
+        "bytes": 3986,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay-review/REVIEW.md",
+        "sha256": "812eb02988e1e2e695e71fcdead1debbd20a9525570b5f3eb68c26b601af208e",
+        "bytes": 6960,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay-robustness-review/REVIEW.md",
+        "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf",
+        "bytes": 13318,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay-robustness/EVENT_RECORD.json",
+        "sha256": "84d2e7557035f64728dff9bd9f7fe2bc20dd1dfe0fc638dd4f1fba078901b1ee",
+        "bytes": 2138,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay-robustness/EXACT_CONTROLS_OUTPUT.txt",
+        "sha256": "3bf3e5aa977563653ad182a1c63f0c68b52ecb8f36d5c517ae0199a507fa8b05",
+        "bytes": 2449,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay-robustness/RESULT.md",
+        "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe",
+        "bytes": 12263,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+        "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c",
+        "bytes": 3776,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay-robustness/VERIFICATION.md",
+        "sha256": "539badb30aa96eb4c16d630e080e4e4fb8ec626de4d11e062957e49303f21551",
+        "bytes": 2721,
+        "verified": true
+      },
+      {
+        "path": "../finite-panel-replay-robustness/exact_controls.py",
+        "sha256": "76e2f5b429966995b5dec93ffd5576f7a0168d37733132faba2793cc00a6ace7",
+        "bytes": 4202,
+        "verified": true
+      }
+    ]
+  },
+  "ancestry_manifests": [
+    {
+      "path": "../dependent-gate-transport/MANIFEST.json",
+      "sha256": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+      "bytes": 1809,
+      "verified_payloads": [
+        {
+          "path": "EXACT_CONTROLS.md",
+          "sha256": "463b14ece2b32e3004c9c9bc373664803a6daa81ee6e20210406a849808261fc",
+          "bytes": 2062,
+          "verified": true
+        },
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "48ae64facbc6556c6f4346858f74a3a0f0049077c9d11e9adfbb0fc8c0d05be4",
+          "bytes": 1231,
+          "verified": true
+        },
+        {
+          "path": "RESEARCH_EVENTS.jsonl",
+          "sha256": "3a53862de5488ae43923c32d7ff55d942a55d617444790e9473c0ffb57cc10e8",
+          "bytes": 650,
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+          "bytes": 15467,
+          "verified": true
+        },
+        {
+          "path": "SOURCE_AUDIT.md",
+          "sha256": "187867e9e99c74e1897b570d6101106a2b6a65818cbf1126ed38441af53da90d",
+          "bytes": 7007,
+          "verified": true
+        },
+        {
+          "path": "SOURCE_BINDINGS.json",
+          "sha256": "d0168bae91d619e795e50326caaf91e6a19df0e5cb84f8b1e1562a53646c5c0a",
+          "bytes": 6234,
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1",
+          "bytes": 6916,
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.json",
+          "sha256": "cb68c4936ac039a7046a411d717078e1212006fbabb0fd8620ef98bf679779db",
+          "bytes": 18639,
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.log",
+          "sha256": "a9d0a69aa7cf1cdc25bc24bea0e7c46d8b2b27a777aad0b6ba75808cbdf134f7",
+          "bytes": 1381,
+          "verified": true
+        },
+        {
+          "path": "sources/SOURCE_READS.json",
+          "sha256": "dae0993624569e077dd96def3e52d243b222f0dd5a6a94475a05cc5115d195b5",
+          "bytes": 2114,
+          "verified": true
+        }
+      ]
+    },
+    {
+      "path": "../dependent-gate-transport/ADDENDUM_MANIFEST.json",
+      "sha256": "66a631d04cfe92964aaf8829f3668e362b589004d1c1c66dba287c4155513716",
+      "bytes": 467,
+      "verified_payloads": [
+        {
+          "path": "SEMANTIC_GUARD.md",
+          "sha256": "0fbd40f05cb115621d367a220eb1bdc754a218e6fd6b84f8d5e4c63af8dbd924",
+          "bytes": 1792,
+          "verified": true
+        }
+      ]
+    },
+    {
+      "path": "../same-threshold-replay/MANIFEST.json",
+      "sha256": "f58c75e855e51be1bf4818b2b4ea6a91b1b5e685cbd45cfe304e9c3627fcbf53",
+      "bytes": 1857,
+      "verified_payloads": [
+        {
+          "path": "EXACT_CONTROLS.md",
+          "sha256": "f0f438a4f99c5a2fef5b7f40384747c46f1454cfb1b719b4cb96dd6fa1d9b16b",
+          "bytes": 1767,
+          "verified": true
+        },
+        {
+          "path": "PROSPECTIVE_EVENTS.jsonl",
+          "sha256": "e6f1356fafe89886601cf0951278be91409db3fd030ddd21c7ccc356e04def06",
+          "bytes": 631,
+          "verified": true
+        },
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "ecae3eedf6b01f76bd31b039826c932f5418e9d3cf3a5679826c18f4dcf6a641",
+          "bytes": 1522,
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098",
+          "bytes": 15218,
+          "verified": true
+        },
+        {
+          "path": "SOURCE_AUDIT.md",
+          "sha256": "81e922088053db364802826927a9ba042dd5910f96974b9d21bebe5e691b3416",
+          "bytes": 6780,
+          "verified": true
+        },
+        {
+          "path": "SOURCE_BINDINGS.json",
+          "sha256": "adfbc884c980593876b941e3b8c7327ac5294623a0e5d4463001aa556d5e7a7c",
+          "bytes": 7996,
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "0e43b8b3d5dc15929e79dae69e90ea8f06091477a181f5e1a64d503a24e947b6",
+          "bytes": 7158,
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.json",
+          "sha256": "060ed3aae850901e96d00a59b2b42f10e7c3e933628cd97e7503b8368b656596",
+          "bytes": 3717,
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.log",
+          "sha256": "808a51e1fae31562dece66d76ff7c41aef73f571319cf207093862a336dd156d",
+          "bytes": 1257,
+          "verified": true
+        },
+        {
+          "path": "results/predecessor_verification.json",
+          "sha256": "bebb17eace4e5bed8431fa6d8daed38d92c53ec568c7557cf22b2eac60e1c817",
+          "bytes": 556,
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "earlier_files_modified": false,
+  "new_primary_read": {
+    "url": "https://www.jmlr.org/papers/volume17/kaufman16a/kaufman16a.pdf",
+    "title": "On the Complexity of Best-Arm Identification in Multi-Armed Bandit Models",
+    "authors": [
+      "Emilie Kaufmann",
+      "Olivier Cappe",
+      "Aurelien Garivier"
+    ],
+    "year": 2016,
+    "scope": "Targeted Lemma 1 at printed p7/PDF index6; Appendix A.1 at printed p25/PDF index24 and surrounding log-likelihood definition p24. Web PDF text only; not full paper.",
+    "whole_paper_read": false
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "created_utc": "2026-10-08T15:26:18.174032+00:00",
+  "frozen_manifests": [
+    {
+      "directory": "interaction-calibration-anchor",
+      "manifest_sha256": "5cceea13e65e76604e1290ab420a34bb352c506c73d2f65937afdd10bdd6005b",
+      "payloads": [
+        {
+          "path": "EXACT_CONTROLS.md",
+          "sha256": "b30ea170c53b94cc6a8bf9f41cae0fd4840965d4519542c006c94506017b888c",
+          "verified": true
+        },
+        {
+          "path": "FINITE_PANEL_APPENDIX.md",
+          "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4",
+          "verified": true
+        },
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "56468e1e3a00f85dbbf2f1e7dd0ca26940e5747603c431c18659f014c176f688",
+          "verified": true
+        },
+        {
+          "path": "RESEARCH_EVENTS.jsonl",
+          "sha256": "da34f3004039219422e2c211ccf6bac01864a281cd09ece727c6dac399fafc39",
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+          "verified": true
+        },
+        {
+          "path": "REVIEW_STATUS.md",
+          "sha256": "37473e32858ec1b1fb69f7ac5e49afa5d898d0bd5da95750685acb220d9fec94",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_AUDIT.md",
+          "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_BINDINGS.json",
+          "sha256": "d295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17",
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c",
+          "verified": true
+        },
+        {
+          "path": "panel_controls.py",
+          "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.json",
+          "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.log",
+          "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+          "verified": true
+        },
+        {
+          "path": "results/panel_controls.json",
+          "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+          "verified": true
+        },
+        {
+          "path": "results/panel_controls.log",
+          "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+          "verified": true
+        },
+        {
+          "path": "results/review_verification.json",
+          "sha256": "b5e520b7b0edb4e8e68843e80c3d6d7760337e8283dd33753b557cf7772d6ad8",
+          "verified": true
+        },
+        {
+          "path": "verify_evidence.py",
+          "sha256": "8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "directory": "historical-mathematical-transport",
+      "manifest_sha256": "e1be24d3c56a21afda391af1e3ac3015faf36048b6926088832a935bbd6fca0d",
+      "payloads": [
+        {
+          "path": "ANALYSIS.md",
+          "sha256": "c70ade3f34431728761e0f1e0c3493823b43703120a45c85c096fea1064f235c",
+          "verified": true
+        },
+        {
+          "path": "CONTROL_RESULTS.json",
+          "sha256": "f2e25199b98a4b44bfbda6ef41a0d98886253578304c673beb067ae9737e5284",
+          "verified": true
+        },
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "565550bbfdf55c7055a171123bc5e7ffddcb90c152959bfdfac9a05f96e50561",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_BINDINGS.json",
+          "sha256": "13835238258ecb6626a1688a9bf8f710dad2e04c4ac905c57a3f19ecc3f4477c",
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "d6f4375e9a57a0a51e79b97c349d2e1aabe46c7e410dd4b48fe85e1d90db4de3",
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "individual_inputs": [
+    {
+      "path": "historical-mathematical-transport-review/SCOPE_ADDENDUM.md",
+      "sha256": "7f9d219cb2e9eeba85a372fb81c1aa5e17a7cc20b3b0309859f371ccab86ad24"
+    },
+    {
+      "path": "identification-review/results/H_THEOREM_4_2_SOURCE.json",
+      "sha256": "8f41f4e8e1d9c7469adda2e952b57477f3818a3dddb1d33380d87b6869178dfd"
+    }
+  ],
+  "archived_primary": {
+    "sha256": "75527bc45892a3447b8d9f554f8e55ea464790f43a172b784c6761367089cf70",
+    "page_inspected": 5,
+    "scope": "Targeted Proposition 6 statement/proof in the retained original PDF extraction",
+    "source_url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf",
+    "pdf_copied_into_deliverable": false
+  }
+}

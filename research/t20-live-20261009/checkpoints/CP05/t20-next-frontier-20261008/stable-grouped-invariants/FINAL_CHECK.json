@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-08T14:20:20.671516+00:00",
+  "review_bound_author_payloads_verified_unchanged": 14,
+  "inherited_manifest_payloads_verified": 19,
+  "individual_inputs_verified": 3,
+  "author_control_families": 13,
+  "synthetic_histogram_and_moment_path_independently_verified": true,
+  "review_references": [
+    {
+      "path": "../stable-grouped-invariants-review/REVIEW.md",
+      "sha256": "44c908b9bdf0fcaffa875ce435a30c0c74e6e506aa6f1c76e09328bf483cbd07"
+    },
+    {
+      "path": "../stable-grouped-invariants-review/FINAL_BINDINGS.json",
+      "sha256": "e1f6ea87ac2c22b97927d9f40d812c692780d3a23d2ab1503f4af6a79300a1de"
+    },
+    {
+      "path": "../stable-grouped-invariants-review/WITNESS_REPLAY.md",
+      "sha256": "dfc68794c2c52824922fa9e38add7b1d6076a40c36340d81a320120689c756a6"
+    },
+    {
+      "path": "../stable-grouped-invariants-review/MANIFEST.json",
+      "sha256": "d688d3d1555d02f31e27f49cfdb8fbd807b480da6cc9fdd884fa78926ca8adc9"
+    }
+  ],
+  "note": "This freeze record is a new file. Existing review-bound research events and mathematical files were not modified."
+}

@@ -1,0 +1,30 @@
+{
+  "arithmetic": "integer and Fraction; no simulation or floating-point probability approximation",
+  "assertion_counts": {
+    "absence_not_certified": 29,
+    "adaptive_transcript": 264,
+    "calibration_membership": 8050,
+    "derivative_sign": 8100,
+    "fixed_total_name": 504,
+    "inventory_counts": 50,
+    "masked_boundary_identity": 4750,
+    "not_population_equivalence": 50,
+    "presence_semidecision": 47,
+    "randomized_threshold_events": 304,
+    "response_lipschitz": 32400,
+    "route_formula": 32400,
+    "supremum_and_bound": 200,
+    "uniform_gap_grid": 64800
+  },
+  "presence_detection_bits_for_test_names": {
+    "1": 5,
+    "15": 8,
+    "2": 6,
+    "3": 6,
+    "31": 9,
+    "7": 7
+  },
+  "scope": "Finite exact diagnostic controls only; universal claims rely on written proofs.",
+  "status": "PASS",
+  "total_assertions": 151948
+}

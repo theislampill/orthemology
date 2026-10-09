@@ -1,0 +1,25 @@
+{
+  "date_utc": "2026-10-09",
+  "files": [
+    {
+      "path": "REPORT.md",
+      "size_bytes": 23052,
+      "sha256": "0eea12c3e2e4c761f165406a3b17391917f8b49a9eae8ca521023f658ef2dc99"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "size_bytes": 4813,
+      "sha256": "41d6a22e992f6c342103cc1f4886fb1860597d742df96f17c45488122269c3ba"
+    },
+    {
+      "path": "ANALYTICAL_TEST.json",
+      "size_bytes": 2077,
+      "sha256": "a424dd6beaeeb151fb3a4e51bf0eb5c41f2db3d644ec906f94fa13bcb74e3505"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "size_bytes": 623,
+      "sha256": "1a63069297c3df7d4c7789890055620ce65f6702c86e5fb52a30d130841388b3"
+    }
+  ]
+}

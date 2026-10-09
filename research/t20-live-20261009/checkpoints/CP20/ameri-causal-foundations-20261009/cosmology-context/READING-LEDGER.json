@@ -1,0 +1,545 @@
+{
+  "record_type": "Exact bounded continuous-reading ledger",
+  "created_utc": "2026-10-09T08:24:22.347463+00:00",
+  "work": {
+    "author": "Sami Ameri",
+    "title": "فمن خلق الله؟",
+    "source_url": "https://almobadarah.com/uploads/books/93cf86d674df49e95cef37e3.pdf",
+    "source_url_provenance": "Official source supplied by parent; local PDF checksum independently verified in this subtask.",
+    "pdf_sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+    "pdf_total_pages": 276
+  },
+  "scope": {
+    "printed_pages_inclusive": [
+      87,
+      132
+    ],
+    "pdf_pages_one_based_inclusive": [
+      87,
+      132
+    ],
+    "continuous_pages_read": 46,
+    "pdf_page_equals_printed_page": "Supplied page map, corroborated on all 11 rendered/inspected pages.",
+    "whole_book_read": false,
+    "outside_assigned_range_read": false
+  },
+  "method": {
+    "text": "Full layout-extracted page text read in original order, including footnotes; not keyword retrieval.",
+    "contiguous_batches": [
+      {
+        "first_page": 87,
+        "last_page": 94
+      },
+      {
+        "first_page": 95,
+        "last_page": 102
+      },
+      {
+        "first_page": 103,
+        "last_page": 110
+      },
+      {
+        "first_page": 111,
+        "last_page": 118
+      },
+      {
+        "first_page": 119,
+        "last_page": 126
+      },
+      {
+        "first_page": 127,
+        "last_page": 132
+      }
+    ],
+    "visual": "Selective rendered cross-checks; not all 46 pages visually read.",
+    "visual_pages_inspected": [
+      87,
+      109,
+      116,
+      121,
+      123,
+      124,
+      126,
+      129,
+      130,
+      131,
+      132
+    ],
+    "external_scientific_sources_independently_read": false,
+    "independent_scientific_validation": false,
+    "raw_source_material_in_deliverable": false
+  },
+  "pages": [
+    {
+      "reading_order": 1,
+      "printed_page": 87,
+      "pdf_page_one_based": 87,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 1,
+      "page_summary_paraphrase": "Section opens: modern cosmology is presented as confirmation of the philosophical proof of created time and space; opposition to material eternity frames the unit.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Section title, opening program, confirmation relation, printed page number."
+    },
+    {
+      "reading_order": 2,
+      "printed_page": 88,
+      "pdf_page_one_based": 88,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 1,
+      "page_summary_paraphrase": "Big Bang introduced as origination of space and time, with figurative-explosion caveat; heat death and early Einstein/Friedmann/Slipher history.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 3,
+      "printed_page": 89,
+      "pdf_page_one_based": 89,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 1,
+      "page_summary_paraphrase": "Slipher/Hubble expansion history, Lemaître and the primeval-atom proposal, and the hot early state.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 4,
+      "printed_page": 90,
+      "pdf_page_one_based": 90,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 1,
+      "page_summary_paraphrase": "Gamow, microwave-background discovery and later confirmation, with cited testimony; transition to rival explanations.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 5,
+      "printed_page": 91,
+      "pdf_page_one_based": 91,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 1,
+      "page_summary_paraphrase": "Steady-state continuous matter creation contrasted with Big Bang; alleged lack of verification and observational objections begin.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 6,
+      "printed_page": 92,
+      "pdf_page_one_based": 92,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 1,
+      "page_summary_paraphrase": "Remaining observational/explanatory objections to steady state and reported preference for the Big Bang based on fewer parameters.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 7,
+      "printed_page": 93,
+      "pdf_page_one_based": 93,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 1,
+      "page_summary_paraphrase": "Evidence inventory introduced as most of Hugh Ross's thirty items; item 1 on microwave-background existence and temperature.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 8,
+      "printed_page": 94,
+      "pdf_page_one_based": 94,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 1,
+      "page_summary_paraphrase": "Evidence items 2–6: background spectrum, cooling, uniformity, photon/baryon ratio, and thermal variations.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 9,
+      "printed_page": 95,
+      "pdf_page_one_based": 95,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 2,
+      "page_summary_paraphrase": "Evidence items 7–11: fluctuation spectrum, expansion rate, orbits, life, and helium.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 10,
+      "printed_page": 96,
+      "pdf_page_one_based": 96,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 2,
+      "page_summary_paraphrase": "Evidence items 12–16: deuterium, lithium, general relativity, a conditionally stated Hawking–Penrose theorem, energy density.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 11,
+      "printed_page": 97,
+      "pdf_page_one_based": 97,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 2,
+      "page_summary_paraphrase": "Evidence items 17–21 begin: stellar/galactic ages, crowding and morphology, ordinary/exotic matter ratio.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 12,
+      "printed_page": 98,
+      "pdf_page_one_based": 98,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 2,
+      "page_summary_paraphrase": "Item 21 concludes; items 22–25 cover light elements in old stars, stellar populations, compact objects, and cluster evolution.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 13,
+      "printed_page": 99,
+      "pdf_page_one_based": 99,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 2,
+      "page_summary_paraphrase": "Items 26–27 conclude Ross-derived inventory; section changes from evidence list to scientist testimony.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 14,
+      "printed_page": 100,
+      "pdf_page_one_based": 100,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 2,
+      "page_summary_paraphrase": "Reported broad acceptance of Big Bang; polemical claim that materialist/atheist commitments resist the scientific findings.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 15,
+      "printed_page": 101,
+      "pdf_page_one_based": 101,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 2,
+      "page_summary_paraphrase": "Reports about Einstein, Eddington, Wilson, Sandage, and Hoyle used to illustrate philosophical resistance or conversion.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 16,
+      "printed_page": 102,
+      "pdf_page_one_based": 102,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 2,
+      "page_summary_paraphrase": "Hoyle quotation concludes; Sciama's change of view and Isham's interpretation of motivations.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 17,
+      "printed_page": 103,
+      "pdf_page_one_based": 103,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 3,
+      "page_summary_paraphrase": "Isham conclusion, Maddox and later reports; footnote explains why the testimony section is extensive: theological import of Big Bang.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 18,
+      "printed_page": 104,
+      "pdf_page_one_based": 104,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 3,
+      "page_summary_paraphrase": "Objection that Big Bang may fail; response begins by distinguishing scientific theory from unsupported conjecture.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 19,
+      "printed_page": 105,
+      "pdf_page_one_based": 105,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 3,
+      "page_summary_paraphrase": "Theory response concludes; multiple purportedly independent grounds for a cosmic beginning introduced; second law begins.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 20,
+      "printed_page": 106,
+      "pdf_page_one_based": 106,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 3,
+      "page_summary_paraphrase": "Second-law argument explicitly uses assumptions about a closed material cosmos and energy depletion over time.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 21,
+      "printed_page": 107,
+      "pdf_page_one_based": 107,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 3,
+      "page_summary_paraphrase": "Davies on irreversibility/equilibrium; generalized-second-law/quantum-cosmology response begins.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 22,
+      "printed_page": 108,
+      "pdf_page_one_based": 108,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 3,
+      "page_summary_paraphrase": "Quantum response concludes; relativity and BGV introduced broadly; expansion proposed as a ground beyond the Big Bang model.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 23,
+      "printed_page": 109,
+      "pdf_page_one_based": 109,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 3,
+      "page_summary_paraphrase": "Positive-expansion formulation of BGV, incompleteness language, and conclusion against eternity; Olbers paradox begins.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Positive-expansion condition, incompleteness wording, subsequent anti-eternity conclusion, footnote placement."
+    },
+    {
+      "reading_order": 24,
+      "printed_page": 110,
+      "pdf_page_one_based": 110,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 3,
+      "page_summary_paraphrase": "Olbers paradox with spatial/temporal infinity assumptions; cumulative-evidence response and Jastrow reply to future-science objection begin.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 25,
+      "printed_page": 111,
+      "pdf_page_one_based": 111,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 4,
+      "page_summary_paraphrase": "Jastrow reply concludes; broad model distinguished from subsidiary theories; inflation presented as internal problem-solving.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 26,
+      "printed_page": 112,
+      "pdf_page_one_based": 112,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 4,
+      "page_summary_paraphrase": "Cumulative evidence and predictive success; reported statements from Davies, Stenger, Burnham, Rees.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 27,
+      "printed_page": 113,
+      "pdf_page_one_based": 113,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 4,
+      "page_summary_paraphrase": "Rees continuation; Cannon, Will, ESA/Planck confirmations reported.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 28,
+      "printed_page": 114,
+      "pdf_page_one_based": 114,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 4,
+      "page_summary_paraphrase": "Planck confirmation concludes; alternatives section begins, with explicit acknowledgment of reliance on Craig; cyclic model introduced.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 29,
+      "printed_page": 115,
+      "pdf_page_one_based": 115,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 4,
+      "page_summary_paraphrase": "Cyclic model: rational objection to infinitely many past cycles plus empirical, entropy, density, and mechanism objections.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 30,
+      "printed_page": 116,
+      "pdf_page_one_based": 116,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 4,
+      "page_summary_paraphrase": "Cyclic objections finish, including fine adjustment; finite past contrasted with infinite future; eternal/chaotic inflation introduced.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Conditional concession to cyclic history and explicit future/past infinity asymmetry; transition to inflation."
+    },
+    {
+      "reading_order": 31,
+      "printed_page": 117,
+      "pdf_page_one_based": 117,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 4,
+      "page_summary_paraphrase": "Eternal inflation: testability criticism, Borde–Vilenkin beginning claim, reported Linde response.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 32,
+      "printed_page": 118,
+      "pdf_page_one_based": 118,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 4,
+      "page_summary_paraphrase": "Later inflation criticism; string-related pre-Big-Bang model and objections involving old/merged black holes and equilibrium.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 33,
+      "printed_page": 119,
+      "pdf_page_one_based": 119,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 5,
+      "page_summary_paraphrase": "Ekpyrotic/cyclic brane scenario; rational infinity, internal issues, design, and BGV objections.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 34,
+      "printed_page": 120,
+      "pdf_page_one_based": 120,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 5,
+      "page_summary_paraphrase": "Reported Steinhardt beginning qualification; vacuum-fluctuation model explicitly permits our universe to begin without an absolute beginning; objections start.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 35,
+      "printed_page": 121,
+      "pdf_page_one_based": 121,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 5,
+      "page_summary_paraphrase": "Vacuum objection concludes with inference from eternal initial energy to eternal products; Hartle–Hawking imaginary/real time distinction begins.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Eternal-energy/products wording; Hartle–Hawking section and imaginary/real-time distinction."
+    },
+    {
+      "reading_order": 36,
+      "printed_page": 122,
+      "pdf_page_one_based": 122,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 5,
+      "page_summary_paraphrase": "Imaginary time treated as mathematical device; smooth beginning without a singular first point distinguished from real history.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 37,
+      "printed_page": 123,
+      "pdf_page_one_based": 123,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 5,
+      "page_summary_paraphrase": "Hartle–Hawking conclusion: beginning without singularity, possible endless future; separate motionless-eternal-cosmos objection begins with relational account of time.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Beginning without singularity and endless future; transition to motionless-eternal case."
+    },
+    {
+      "reading_order": 38,
+      "printed_page": 124,
+      "pdf_page_one_based": 124,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 5,
+      "page_summary_paraphrase": "Motionless-eternal scenario rejected by causal and physical arguments; ontological precedence stated; active quantum vacuum distinguished from no motion; recap begins.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Ontological precedence, no-motion/time relation, and distinction from active quantum vacuum."
+    },
+    {
+      "reading_order": 39,
+      "printed_page": 125,
+      "pdf_page_one_based": 125,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 5,
+      "page_summary_paraphrase": "Recap items 1–2: strong claim of scientific origination evidence and resilience of the Big Bang.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 40,
+      "printed_page": 126,
+      "pdf_page_one_based": 126,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 5,
+      "page_summary_paraphrase": "Item 2 concludes; item 3 explicitly distinguishes Big Bang history from absolute beginning; item 4 categorizes eternal alternatives.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Explicit local-versus-absolute-beginning distinction and adjacent recap structure."
+    },
+    {
+      "reading_order": 41,
+      "printed_page": 127,
+      "pdf_page_one_based": 127,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 6,
+      "page_summary_paraphrase": "Wider-universe/BGV objection and Mithani–Vilenkin report; item 5 on speculative pre-Planck alternatives and evidential limits.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 42,
+      "printed_page": 128,
+      "pdf_page_one_based": 128,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 6,
+      "page_summary_paraphrase": "Reported Jastrow/Guth limits; item 6 demands historical traces and mechanisms and notes missing quantum-gravity theory.",
+      "render_visually_inspected": false
+    },
+    {
+      "reading_order": 43,
+      "printed_page": 129,
+      "pdf_page_one_based": 129,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 6,
+      "page_summary_paraphrase": "Item 6 concludes; item 7 gives design/fine-tuning fallback for proposed eternal universes.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Separate design/fine-tuning fallback for proposed eternal models."
+    },
+    {
+      "reading_order": 44,
+      "printed_page": 130,
+      "pdf_page_one_based": 130,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 6,
+      "page_summary_paraphrase": "Items 8–9: origination/fine-balance summary and rational/scientific convergence; boxed conclusion contains a visually verified apparent wording reversal.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Boxed wording anomaly confirmed as printed, not extraction error; convergence claim."
+    },
+    {
+      "reading_order": 45,
+      "printed_page": 131,
+      "pdf_page_one_based": 131,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 6,
+      "page_summary_paraphrase": "Two-option framing qualified by recognition that eternity does not logically exclude a creator for many ancient philosophers; future-science objection starts.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Parenthetical qualification that eternity need not logically deny a creator; adjacent Islamic-creation claim."
+    },
+    {
+      "reading_order": 46,
+      "printed_page": 132,
+      "pdf_page_one_based": 132,
+      "continuous_full_text_read": true,
+      "available_footnotes_included": true,
+      "batch": 6,
+      "page_summary_paraphrase": "Future-science reply finishes; last point expressly retains an independently conclusive rational proof irrespective of scientific developments.",
+      "render_visually_inspected": true,
+      "visual_check_purpose": "Final assertion of conclusive rational proof independent of scientific developments."
+    }
+  ]
+}

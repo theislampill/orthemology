@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-09",
+  "scope": "Independent warrant audit; inputs not edited by this operation",
+  "inputs": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+      "sha256": "3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05",
+      "bytes": 28965,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/MODEL_AUDIT.md",
+      "sha256": "aad1327aa577fa6edb2b90477481cd2849b6ffe1701c27a3ddfdec69d15b8e67",
+      "bytes": 29085,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/ROOT_REASSESSMENT.md",
+      "sha256": "3f049a92d1da97dcbd2b4e8126d1c566543138ad274cb9334d5e9ea759b3033c",
+      "bytes": 12799,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "recovery-t20/addendum/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+      "bytes": 6736,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/intrinsic-willing/COGNITION_REFINEMENT.md",
+      "sha256": "7824768f0267657ac102d64d24201b6d36d07d0fc3188048a2666057b6a9aa65",
+      "bytes": 5706,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "bytes": 30941,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/REPORT.md",
+      "sha256": "3b7300e64938d8ca64049d8001008f9663a910940a240a706a847496aa110556",
+      "bytes": 16528,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/src/joint_end.py",
+      "sha256": "d7a5871adb8dc48db7bc85e7e672947a48c317cbe79e503eaebb04cf86239e6d",
+      "bytes": 7324,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/src/selection_probe.py",
+      "sha256": "df64dd0a57851cf25948c1d0d887f6fc9baea5a2e8bb2be181ebc4ab326e5a06",
+      "bytes": 2567,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c",
+      "bytes": 19131,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/INPUT_BINDINGS.json",
+      "sha256": "53b5e522a5da3eb954ecee2c4eaa67f896b120c51c4ce12cd234ee4f90881e29",
+      "bytes": 1092,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/src/determination_contract.py",
+      "sha256": "b5c0fcf4d77ed6b15c79c65f1d442ac96425ff52053c86a34a9bd87bf2a4a156",
+      "bytes": 2998,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040",
+      "bytes": 17870,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3",
+      "bytes": 19590,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "sha256": "e290e95b31c54b824ff452f627f7ede399ce39cf000fd2fada6bf8d89125ded0",
+      "bytes": 6167,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "bytes": 123088,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/eligibility-review/REPORT.md",
+      "sha256": "f63cb6c0b19c88ab77c1cd9d62cd470ab5d6bc0c3cbfeb46ea2c0080b44471d6",
+      "bytes": 21866,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "bytes": 23526,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+      "bytes": 22307,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "bytes": 19070,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+      "bytes": 25536,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "bytes": 29525,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.md",
+      "sha256": "9593a1acdbd2704205c82c7d4c5bf55421c64fd8334380ec2ddb5528bd5c527e",
+      "bytes": 12763,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+      "sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b",
+      "bytes": 20537,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REVIEW_RESPONSE.md",
+      "sha256": "3c3bddbb7e2fdc5275f3ade9bb520e858f673744726cdf81ca003acf56efd7b4",
+      "bytes": 1333,
+      "inspection": "read-only; direct report/code inspection or focused retained-primary return as described in AUDIT.md; no new execution credit"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md",
+      "sha256": "93876913fbd76931f93b21f0d23ef5697facad754cfba284b3aa48fc75ff06eb",
+      "bytes": 23306,
+      "inspection": "read-only coordinated source-return report; no duplicate primary-reading credit"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-10-08T13:39:16.517003+00:00",
+  "files": [
+    {
+      "bytes": 11932,
+      "path": "INDEPENDENT_DERIVATIONS.md",
+      "sha256": "eeb1d3af5aadebb8232735ff9ec6f66f9b3cb47f54e273bbf6318ade0ef7c202"
+    },
+    {
+      "bytes": 930,
+      "path": "READ_FIRST.md",
+      "sha256": "ba6ab7a221d8f8b489447cd8be2358d54c126a45ce6c8701648f32c48c1c5bf1"
+    },
+    {
+      "bytes": 10089,
+      "path": "REVIEW.md",
+      "sha256": "64025953510bb3cd7847389e980b209e580ce006394fc359cae9db92e93e917e"
+    },
+    {
+      "bytes": 7116,
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "33ddb13d45e8ae057fbe688a4187df7933ec5c7c1ceff7b54db7442c013f8df3"
+    },
+    {
+      "bytes": 12428,
+      "path": "independent_controls.py",
+      "sha256": "4d79776ca9b1ea780be4e34e28d5180626574b55c3ded1e21cbcd1e65d7353ba"
+    },
+    {
+      "bytes": 7255,
+      "path": "replayed_author_controls/exact_controls.py",
+      "sha256": "aa8c7c45fc8f2f803aaf4535a6eec6f49b67048e59d0ab8ca402b4fb77ca1af1"
+    },
+    {
+      "bytes": 2809,
+      "path": "replayed_author_controls/results/exact_controls.json",
+      "sha256": "6d6a436a6f318ff39e9bc457a5bb7ebba384d559af68a855fe3a9d8b439d7c22"
+    },
+    {
+      "bytes": 764,
+      "path": "results/author_replay.log",
+      "sha256": "e41c0fc78a94a7699c21a638a8a2a0f958a6ce09a522954004ebe4273a1724ac"
+    },
+    {
+      "bytes": 2678,
+      "path": "results/independent_controls.json",
+      "sha256": "849d6d93656c738627efc7e05061a97e8ca3b6a777b47bc0888c825fc346d9c4"
+    },
+    {
+      "bytes": 2678,
+      "path": "results/independent_controls.log",
+      "sha256": "849d6d93656c738627efc7e05061a97e8ca3b6a777b47bc0888c825fc346d9c4"
+    },
+    {
+      "bytes": 318,
+      "path": "results/verification.json",
+      "sha256": "79a55cdfdf7b8edf0f485a6d9b87dadbc9bb0566e7c4e2bc97672be8e1946c5a"
+    },
+    {
+      "bytes": 1590,
+      "path": "verify_receipt.py",
+      "sha256": "ebccf653f1a0eb372a84cd0ac2019bbe97132042d503fe58c8f22c56469f3286"
+    }
+  ],
+  "status": "Independent review frozen; scoped PASS for digest-bound mathematical artifacts.",
+  "verdict_scope": "No release, protected integration, empirical certification, owner acceptance or T20 closure."
+}

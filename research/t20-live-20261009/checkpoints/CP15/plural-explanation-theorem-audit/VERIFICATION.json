@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "file": "DependencyAudit.lean",
+      "sha256": "9ce772a752d068c374004901bef1d8ae23b145c9f85d6bd71aa266eeb6722392",
+      "command": [
+        "t20-next-frontier-20261008/formal-identification/toolchain/lean-4.19.0-linux/bin/lean",
+        "plural-explanation-theorem-audit/DependencyAudit.lean"
+      ],
+      "exit_code": 0,
+      "log": "lean-check.log",
+      "sorryAx_in_output": false,
+      "error_in_output": false
+    },
+    {
+      "file": "SupplementedControl.lean",
+      "sha256": "9462f1f41c5d3162a27fe85438b905124602b005c58178a5f710cd4e1db335c9",
+      "command": [
+        "t20-next-frontier-20261008/formal-identification/toolchain/lean-4.19.0-linux/bin/lean",
+        "plural-explanation-theorem-audit/SupplementedControl.lean"
+      ],
+      "exit_code": 0,
+      "log": "supplemented-check.log",
+      "sorryAx_in_output": false,
+      "error_in_output": false
+    }
+  ],
+  "regular_open_realization": "Written proof only; not claimed kernel-checked.",
+  "independence_scope": "Both complete and partial transitivity omitted; output distributivity omitted. No claim of independence of complete transitivity with partial transitivity retained.",
+  "full_source_interpretation": "Not formalized; E(x,{x}) is the precise positive conclusion. Terminological identification with wholly self-explanatory is separately source-audited."
+}

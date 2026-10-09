@@ -1,0 +1,430 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v1",
+  "classification": "SEVENTH_ADDITIVE_INTERMEDIATE_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "research_cutoff_utc": "2026-10-08T17:10:40.977609+00:00",
+  "previous_cutoff_utc": "2026-10-08T16:15:27.659356+00:00",
+  "active_excluded_successors": [
+    "Separate within-pair adaptation addendum, permitting the second face rate to depend on the first bit: active and not frozen/reviewed into this cutoff. No additional theorem credit."
+  ],
+  "results": [
+    {
+      "id": "ROBUST_FOUR_COORDINATE_CERTIFICATE",
+      "classification": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "The closed four-probability box at t=1/[3(n+1)] of radius 1/[10000(n+1)^2] excludes every wrong positive finite count, with no upper count bound.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/RESULT.md",
+          "bytes": 12263,
+          "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/finite-panel-replay-robustness-review/REVIEW.md",
+          "bytes": 13318,
+          "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf"
+        }
+      ],
+      "executable_control_ids": [
+        "robustness-symbolic"
+      ],
+      "depends_on": [
+        "INHERITED_FINITE_PANEL_CERTIFICATE"
+      ],
+      "premises": [
+        "Common coordinatewise marginal calibrations across routes",
+        "Mutual independence between route pairs",
+        "Actual retained same-gate realization within each separately readable face pair",
+        "Stable same pair law across replay and fresh diagonal modes",
+        "Selectable true reference-rate coordinates for an operational design"
+      ],
+      "limits": [
+        "All four observation probabilities may move simultaneously",
+        "Wrong-count separation within the stipulated model, not model-assumption validation",
+        "Route-specific marginal alias remains outside the theorem",
+        "No global copula independence is certified"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "BOUNDED_SAMPLE_REFERENCE_TEST",
+      "classification": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "N >= ceil[200000000(n+1)^4 log(8/alpha)] face pairs plus N fresh diagonal trials control exact-reference rejection and wrong-count acceptance by alpha.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/RESULT.md",
+          "bytes": 12263,
+          "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe"
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+          "bytes": 3776,
+          "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/finite-panel-replay-robustness-review/REVIEW.md",
+          "bytes": 13318,
+          "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf"
+        }
+      ],
+      "executable_control_ids": [
+        "robustness-symbolic"
+      ],
+      "depends_on": [
+        "ROBUST_FOUR_COORDINATE_CERTIFICATE"
+      ],
+      "premises": [
+        "Common coordinatewise marginal calibrations across routes",
+        "Mutual independence between route pairs",
+        "Actual retained same-gate realization within each separately readable face pair",
+        "Stable same pair law across replay and fresh diagonal modes",
+        "Selectable true reference-rate coordinates for an operational design",
+        "Iid stable latent-vector replicates; the same fixed law in both modes",
+        "0 < alpha < 1"
+      ],
+      "limits": [
+        "Tests a specified reference response vector, not general count estimation",
+        "A same-count nonreference model can be rejected",
+        "Within-pair indicators may be dependent; union bound does not assume their independence",
+        "2N independent replicates and 3N endpoint evaluations",
+        "Conservative existence bound, not a practical budget or optimal constant"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "FIXED_RATE_INFORMATION_BOUND",
+      "classification": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "At fixed t=1/[3(n+1)], the n+1 Joe alternative gives KL(P1||P0) <= 3136/[625(n+1)^4], and fixed or Joe-expected pair cost at least (625/3136)(n+1)^4 kl(1-alpha,alpha).",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/RESULT.md",
+          "bytes": 14735,
+          "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26"
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/FINAL_BINDINGS.json",
+          "bytes": 1685,
+          "sha256": "c8cab11fbde0f8e2bc024079fa7796fe5639418b700335a792e5eab192ea74b9"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/REVIEW.md",
+          "bytes": 7919,
+          "sha256": "e3e8677f03775f984622495997b2dc0a6a55e50102fb1de03b3995a58f0a3de6"
+        },
+        {
+          "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/REVIEW_RECEIPT.json",
+          "bytes": 15736,
+          "sha256": "f0c732d3c7067c5dea993e0d0d6a3aef04ae880aff6adc895a8f8b008aba5fd8"
+        }
+      ],
+      "executable_control_ids": [
+        "fixed-rate-author",
+        "fixed-rate-review",
+        "fixed-rate-bindings"
+      ],
+      "depends_on": [
+        "BOUNDED_SAMPLE_REFERENCE_TEST",
+        "INHERITED_DEPENDENT_GATE_TRANSPORT",
+        "INHERITED_SAME_THRESHOLD_REPLAY"
+      ],
+      "premises": [
+        "Atomic fixed-rate two-bit pair observations",
+        "Fresh independent single-endpoint probes may be chosen adaptively at arbitrary commands",
+        "Common randomized policy and unconditional terminal correctness",
+        "0 < alpha < 1/2"
+      ],
+      "limits": [
+        "Expected cost is under the Joe alternative, not automatically under the reference",
+        "Nontermination consumes the error budget",
+        "Fixed-rate result by itself makes no all-rate claim",
+        "Matching n^4 order is for the declared instrument and specified reference test; not general estimation or global physical optimality",
+        "Small-alpha logarithmic comparison is not uniform near alpha=1/2"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "ALL_RATE_INFORMATION_AND_ADAPTATION",
+      "classification": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "The uniform all-rate bound KL <= chi-squared <= 32768/n^4 yields Joe-expected pair cost >= n^4 kl(1-alpha,alpha)/32768, allowing rate selection from completed histories.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/RESULT.md",
+          "bytes": 13174,
+          "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW.md",
+          "bytes": 17583,
+          "sha256": "82607136c173948ec90de23ff853664f30ab869425014f359ce64b70f1e4de03"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json",
+          "bytes": 6991,
+          "sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910"
+        }
+      ],
+      "executable_control_ids": [
+        "all-rate-author",
+        "all-rate-source-bindings",
+        "all-rate-final-review-controls",
+        "all-rate-final-review-bindings"
+      ],
+      "depends_on": [
+        "FIXED_RATE_INFORMATION_BOUND",
+        "BOUNDED_SAMPLE_REFERENCE_TEST"
+      ],
+      "premises": [
+        "Same n versus n+1 Joe hard pair and true-coordinate two-face instrument",
+        "Both rates selected before either bit",
+        "Fresh independent threshold vector for each pair",
+        "Common adaptive policy, alpha < 1/2, unconditional terminal correctness"
+      ],
+      "limits": [
+        "Longer retained-threshold words and within-pair second-rate adaptation are outside the main theorem",
+        "Literal boundary commands have identical laws and zero divergence; interior divergence limits need not agree with boundary values",
+        "Fresh endpoints are conditionally information-free for this pair, not necessarily for every wrong-count alternative",
+        "The older robust upper design remains valid; no new broad certificate at the asymptotically optimal hard-pair rate is inferred"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "GLOBAL_CHI_SQUARED_ASYMPTOTIC_DESIGN",
+      "classification": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "The unrestricted rate-square supremum has limit n^4 sup chi-squared -> [max u^2/(exp(u)-1)]^2; the unique positive optimizer solves u=2(1-exp(-u)).",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+          "bytes": 5833,
+          "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW.md",
+          "bytes": 17583,
+          "sha256": "82607136c173948ec90de23ff853664f30ab869425014f359ce64b70f1e4de03"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json",
+          "bytes": 6991,
+          "sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910"
+        }
+      ],
+      "executable_control_ids": [
+        "all-rate-author",
+        "all-rate-source-bindings",
+        "all-rate-final-review-controls",
+        "all-rate-final-review-bindings"
+      ],
+      "depends_on": [
+        "ALL_RATE_INFORMATION_AND_ADAPTATION"
+      ],
+      "premises": [
+        "Specified n versus n+1 Joe hard pair",
+        "Atomic preselected two-face rates",
+        "Compact-uniform asymptotics plus uniform escaping-rate envelopes"
+      ],
+      "limits": [
+        "u* approximately 1.5936242600; limit approximately 0.4193990202",
+        "a=b=1-exp(-u*/n) is asymptotically optimal for hard-pair chi-squared, not a proved finite-n global optimizer",
+        "Numerical evaluations illustrate the analytic characterization; exploratory grids are not proof",
+        "The approximately 5.3168 information-constant ratio does not imply the same reduction in the conservative all-alternative test budget",
+        "Unknown nominal calibration does not supply the recommended true-rate commands"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    },
+    {
+      "id": "GLOBAL_KL_ASYMPTOTIC_DESIGN",
+      "classification": "WRITTEN_MATHEMATICAL_RESULT",
+      "summary": "The separately reviewed KL extension identifies the unrestricted all-rate asymptotic KL supremum using compact-uniform expansion and global escape control.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+          "bytes": 5833,
+          "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW.md",
+          "bytes": 17583,
+          "sha256": "82607136c173948ec90de23ff853664f30ab869425014f359ce64b70f1e4de03"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json",
+          "bytes": 6991,
+          "sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910"
+        }
+      ],
+      "executable_control_ids": [
+        "all-rate-author",
+        "all-rate-source-bindings",
+        "all-rate-final-review-controls",
+        "all-rate-final-review-bindings"
+      ],
+      "depends_on": [
+        "GLOBAL_CHI_SQUARED_ASYMPTOTIC_DESIGN"
+      ],
+      "premises": [
+        "Same declared hard pair and atomic preselected two-face instrument"
+      ],
+      "limits": [
+        "Joe-oriented KL(P1||P0) only; no reverse-KL optimum",
+        "Global scaled supremum limit is half the chi-squared constant, approximately 0.2096995101, with the same asymptotic optimizer",
+        "No finite-n global optimum or sharp minimax sequential-testing sample constant",
+        "No extension to within-pair rate adaptation, longer replay words or physical instrument optimality"
+      ],
+      "kernel_verified": false,
+      "empirically_validated": false,
+      "metaphysical_warrant_credit": false
+    }
+  ],
+  "external_dependency_registry": {
+    "INHERITED_FINITE_PANEL_CERTIFICATE": {
+      "path": "t20-next-frontier-20261008/finite-panel-replay/RESULT.md",
+      "bytes": 10261,
+      "sha256": "327b6fb25944ac90e7ecd6010a427993b69400fbdc9b79928d731120b6d62243",
+      "credit": "INHERITED_ONLY",
+      "source_checkpoint": 6
+    },
+    "INHERITED_DEPENDENT_GATE_TRANSPORT": {
+      "path": "t20-next-frontier-20261008/dependent-gate-transport/RESULT.md",
+      "bytes": 15467,
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+      "credit": "INHERITED_ONLY",
+      "source_checkpoint": 6
+    },
+    "INHERITED_SAME_THRESHOLD_REPLAY": {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/RESULT.md",
+      "bytes": 15218,
+      "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098",
+      "credit": "INHERITED_ONLY",
+      "source_checkpoint": 6
+    }
+  },
+  "candidate_history": [
+    {
+      "artifact": {
+        "path": "t20-next-frontier-20261008/root-later-operations/ROBUST_REPLAY_CANDIDATE.md",
+        "bytes": 2030,
+        "sha256": "203cf1f7304c192f7b0ddc76339ac87d9521b2de76d1ba9f71ef64cf3a1ff673"
+      },
+      "governed_by": [
+        "ROBUST_FOUR_COORDINATE_CERTIFICATE",
+        "BOUNDED_SAMPLE_REFERENCE_TEST"
+      ],
+      "credit": "HISTORICAL_CANDIDATE_NO_NEW_RESULT"
+    },
+    {
+      "artifact": {
+        "path": "t20-next-frontier-20261008/root-later-operations/REPLAY_SAMPLE_LOWER_BOUND_CANDIDATE.md",
+        "bytes": 1461,
+        "sha256": "8b799d9e73b04a4aa43324b68b97d1aecaa932ced461cc5b8cf5bc8ef2d1d844"
+      },
+      "governed_by": [
+        "FIXED_RATE_INFORMATION_BOUND"
+      ],
+      "credit": "HISTORICAL_CANDIDATE_NO_NEW_RESULT"
+    }
+  ],
+  "sources": [
+    {
+      "stage": "finite-panel-replay-robustness",
+      "record": {
+        "path": "t20-next-frontier-20261008/finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+        "bytes": 3776,
+        "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c"
+      },
+      "new_external_source_read_in_stage": false
+    },
+    {
+      "stage": "finite-replay-sampling-lower-bound",
+      "audit": {
+        "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/SOURCE_AUDIT.md",
+        "bytes": 7131,
+        "sha256": "75ef486b0458f2e95dc70ff9cafd9dd0cc6285bfc1e2f76f74df53460724a681"
+      },
+      "binding": {
+        "path": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/SOURCE_BINDINGS.json",
+        "bytes": 9703,
+        "sha256": "f642a4a2214d76d50edfbaad21d8356a02e0f723ac8db304d92dd205abd6375a"
+      },
+      "primary_read": {
+        "url": "https://www.jmlr.org/papers/volume17/kaufman16a/kaufman16a.pdf",
+        "title": "On the Complexity of Best-Arm Identification in Multi-Armed Bandit Models",
+        "authors": [
+          "Emilie Kaufmann",
+          "Olivier Cappe",
+          "Aurelien Garivier"
+        ],
+        "year": 2016,
+        "scope": "Targeted Lemma 1 at printed p7/PDF index6; Appendix A.1 at printed p25/PDF index24 and surrounding log-likelihood definition p24. Web PDF text only; not full paper.",
+        "whole_paper_read": false
+      }
+    },
+    {
+      "stage": "arbitrary-face-replay-design",
+      "audit": {
+        "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/SOURCE_AUDIT.md",
+        "bytes": 5295,
+        "sha256": "03ca00dd14213af6c8cfd86a59ab36f052441ece947274bed6787df2cad10eb4"
+      },
+      "reading_scope": "Targeted CRAN copula Sibuya mass/transform/Joe-pointer read; JSS article metadata/abstract only, full linked PDF retrieval failed. Author and final-review source scopes are separately preserved."
+    }
+  ],
+  "proof_contribution_boundary": {
+    "artifact": {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-review/UNIFORM_BOUND_AND_SHARP_ASYMPTOTICS.md",
+      "bytes": 12931,
+      "sha256": "1543ed1b1406bd59948bd66f962001f451dbff2523e3f0e8b67a96a82ad319e9"
+    },
+    "scope": "Contributing proof note, not the independent final review. Its explicitly unreviewed within-pair-adaptation future note receives no final-theorem credit."
+  },
+  "entrypoint": "READ_FIRST.md",
+  "all_file_identities": "MANIFEST.json",
+  "prior_checkpoint_identities": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+  "source_copy_identities": "PACKING/SOURCE_COPY_BINDINGS.json",
+  "binding_checks": "PACKING/ORIGINAL_AND_REVIEW_BINDING_CHECKS.json",
+  "portable_controls": "PACKING/CONTROL_PLAN.json",
+  "minimal_dependencies": "PACKING/MINIMAL_REPLAY_DEPENDENCIES.json",
+  "evidence_boundaries": "EVIDENCE_BOUNDARIES.json",
+  "exclusions": "OMISSIONS_AND_SOURCE_LINKS.json",
+  "verification_levels": {
+    "mathematical_proof": "Written exact theorem arguments",
+    "review": "Separately scoped internal final reviews; contributing proof note distinguished",
+    "controls": "Exact symbolic/rational/certified checks, finite high-precision numerical diagnostics and exploratory grids distinguished program by program",
+    "new_Lean_or_kernel_verification": false,
+    "empirical_validation": false,
+    "metaphysical_warrant": false
+  },
+  "integration_performed": false,
+  "owner_acceptance": false,
+  "closure": false,
+  "research_duration_certified": false,
+  "packaging_is_research": false,
+  "integration_procedure": [
+    "Verify archive, manifest, component hashes and six earlier ZIP identities.",
+    "Import each new artifact only with its separately bound final review, premises, limitations and source-reading boundaries.",
+    "Keep inherited inputs and candidate notes out of new-result counts.",
+    "Distinguish fixed-rate and all-rate information bounds, and hard-pair design from general count estimation or broad reference-test redesign.",
+    "Run only the declared portable controls in disposable copies; retain any UNREPLAYED predecessor/source-corpus boundary.",
+    "Treat owner acceptance, historical integration, empirical warrant and closure as separate unauthorized operations."
+  ]
+}

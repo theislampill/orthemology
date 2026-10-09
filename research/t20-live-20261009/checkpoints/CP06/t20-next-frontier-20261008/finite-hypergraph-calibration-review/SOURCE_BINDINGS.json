@@ -1,0 +1,45 @@
+{
+  "author_artifacts": [
+    {
+      "bytes": 12063,
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/RESULT.md",
+      "sha256": "6511a092052a73dade0086268858960ead240a7ad85eb3e4fe6bcc84022dad96",
+      "snapshot": "author_snapshot/RESULT.md"
+    },
+    {
+      "bytes": 3763,
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/ANCHORED_UNARY_COUNT.md",
+      "sha256": "c40758b305662cd0b02c0b0f0b6173949f313f228d798f6a7f07c1edd6cdf497",
+      "snapshot": "author_snapshot/ANCHORED_UNARY_COUNT.md"
+    },
+    {
+      "bytes": 6098,
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/BOUNDARY_POINT_RECONSTRUCTION.md",
+      "sha256": "4f3834eff224224d3e6db2a50efe8f88be2e7d58f6b4ba97c45e87f50a3a3dfb",
+      "snapshot": "author_snapshot/BOUNDARY_POINT_RECONSTRUCTION.md"
+    }
+  ],
+  "prerequisite_sources": [
+    {
+      "bytes": 15546,
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3"
+    },
+    {
+      "bytes": 8194,
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4"
+    },
+    {
+      "bytes": 18684,
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/ANALYSIS.md",
+      "sha256": "c70ade3f34431728761e0f1e0c3493823b43703120a45c85c096fea1064f235c"
+    },
+    {
+      "bytes": 2298,
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/SCOPE_ADDENDUM.md",
+      "sha256": "7f9d219cb2e9eeba85a372fb81c1aa5e17a7cc20b3b0309859f371ccab86ad24"
+    }
+  ],
+  "status": "Source binding; final verdict recorded in REVIEW_RECEIPT.json"
+}

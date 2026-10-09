@@ -1,0 +1,57 @@
+{
+  "verified_utc": "2026-10-09T03:13:58.008462+00:00",
+  "source_identity_matches": true,
+  "pdf_pages": 276,
+  "selected_substantive_pages": 62,
+  "interval_texts_nonempty": true,
+  "visual_check_files_present": true,
+  "source_capsule_words": 167,
+  "modern_source_quotes": 0,
+  "reading_claim_is_selective": true,
+  "no_outreach_or_integration": true,
+  "checks_do_not_establish": [
+    "Metaphysical truth of interpretation",
+    "Whole-book reading",
+    "Duration-floor compliance"
+  ],
+  "deliverables": [
+    "REPORT.md",
+    "READING_LEDGER.json",
+    "INPUT_BINDINGS.json",
+    "ACQUISITION.json",
+    "VERIFICATION.json",
+    "MANIFEST.sha256",
+    "PRIMARY_CITATION_CHECK.md",
+    "PRIMARY_DEPENDENCE_RESPONSE.md"
+  ],
+  "exclude_from_delivery": [
+    "research-intermediates/"
+  ],
+  "parent_precision_request_addressed": [
+    "Distinguishes original prose from quoted Reichenbach inference",
+    "Retains independent dependence rationale from85",
+    "Distinguishes joint-cessation hypothetical from established actual-world premise",
+    "No Lean quantifier exercise"
+  ],
+  "primary_quote_text_located": true,
+  "dar_wafa_pagination_collated": false,
+  "ameri_rushd18_citation_scan_verified": true,
+  "primary_response_visual_pages_verified": [
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43
+  ],
+  "primary_source_is_prior_project_known": true,
+  "primary_arabic_short_anchors_words": 9,
+  "separate_application_audit_owner": "test_source_productive_totality"
+}

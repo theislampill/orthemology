@@ -1,0 +1,262 @@
+{
+  "access_or_negative_results": [
+    {
+      "result": "Web internal error; not used for primary text and not retried.",
+      "target": "alhawzaonline Sharh Ihqaq12/06.htm"
+    },
+    {
+      "result": "Only one-line page returned; not primary body evidence.",
+      "target": "masaha.org/book/view/1952/page/220"
+    },
+    {
+      "result": "Search lead only, open internal error; no full primary reading credited.",
+      "target": "usul.ai/ar/t/macani-akhbar-1"
+    },
+    {
+      "result": "Web cache misses followed by successful ordinary downloads; no denial, challenge, login or access-control bypass.",
+      "target": "archive.org BSAER01/06 public PDFs"
+    },
+    {
+      "result": "Web cache miss; not needed after photographic scan locator found.",
+      "target": "archive.org/stream/ALBSAER/BSAER06_djvu.txt"
+    },
+    {
+      "result": "Relative composition priority, oldest surviving manuscript, genealogy independence and historical authenticity not established. Ameri immediate source unnamed.",
+      "target": "Earliest textual priority and historical isnad"
+    },
+    {
+      "result": "Initial filename search found unrelated worship book; page-range request failed because only72pages. Excluded from relevant body reading and all source-use claims.",
+      "target": "Same-author72-page retained PDF"
+    }
+  ],
+  "additional_prior_record_check": {
+    "result": "No matched prior reading of the particular Baṣāʾir6:36–37, Rabīʿ2:48, or Ṣadūq Tawḥīd31/5 units found. Generic Zamakhshari hits unrelated; Tawhid87–98 was Ibn Taymiyyah, not Ṣadūq. Bounded record finding only.",
+    "scope": "Markdown and source/read/provenance JSON in recovery-t20, t20-continuation-20261008, t20-next-frontier-20261008; matching notes and reading index inspected for generic hits"
+  },
+  "claims": [
+    "TEXTUAL_PROVENANCE_ADVANCED",
+    "AMERI_FOOTNOTE_ABSENT_CONFIRMED",
+    "ACQUISITION_CHRONOLOGY_UNDERDETERMINED",
+    "HISTORICAL_AUTHENTICATION_NOT_ESTABLISHED",
+    "NO_OBSERVED_COGNITIVE_DATA"
+  ],
+  "prior_records_compared": [
+    "recognition-operative-content-20261009/REPORT.md",
+    "recognition-operative-content-20261009/SOURCE_READS.json",
+    "t20-next-frontier-20261008/fitrah-warrant-bridge/READING_PROVENANCE.json",
+    "t20-next-frontier-20261008/fitrah-warrant-bridge/PRIMARY_VERIFICATION.md"
+  ],
+  "recorded_utc": "2026-10-09T08:14:51.972303+00:00",
+  "research_duration": "No retrospective duration or uninterrupted active-time certification",
+  "scope": "Additive T20 source criticism of the Jaʿfar storm story; no historical authentication, integration, protected repository mutation, or closure.",
+  "source_bodies_delivered": false,
+  "sources": [
+    {
+      "acquisition": "Retained local PDF; no reacquisition",
+      "author": "Sami Ameri",
+      "bytes": 11351820,
+      "cache_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "edition": "first1445/2024, inherited metadata",
+      "finding": "No footnote or named source for story. The only175 footnote is attached to preceding Otago study paragraph. Authorial crisis identification and reported dialogue separated.",
+      "id": "AMERI_RECHECK",
+      "read_scope": {
+        "complete_immediate_section_printed_pdf": [
+          173,
+          176
+        ],
+        "credit": "Contextual reread only; prior complete157–204 chapter and prior174–175 visual reread retained",
+        "text": "172–177 for boundary navigation; whole173–176 section read",
+        "visual_pages": [
+          173,
+          174,
+          175,
+          176
+        ]
+      },
+      "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6",
+      "title": "براهين وجود الله في النفس والعقل والعلم",
+      "url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf"
+    },
+    {
+      "acquisition": "Web cache miss; ordinary public download succeeded, valid PDF",
+      "author": "Abu Hayyan al-Tawhidi",
+      "bytes": 3781531,
+      "cache_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "edition": "Wadad al-Qadi, Dar Sadir, first1408/1988; title and imprint visually checked",
+      "finding": "Reported from Abu Hamid; no intermediates to Jaʿfar or named sailor. Editor cites Rabīʿ1:663, not authenticity grade. First body reading in bounded checked records; same work across formats is not independent testimony.",
+      "id": "TAWHIDI_SCAN",
+      "physical_pages": 254,
+      "read_scope": {
+        "context": "Neighbouring89–90 and92; scan35–39 read; part6 opening5–6 read",
+        "decisive_complete_unit": "part6 pp36–37 item91 including two Quran clauses and editor parallel citation",
+        "navigation_only": [
+          40,
+          50,
+          60,
+          70
+        ],
+        "visual_pages": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          50,
+          60,
+          70
+        ],
+        "whole_volume_read": false
+      },
+      "sha256": "ff88adf0d00dd9f250a5d84038f45bcd82b73b0a0bf51e0020ce86dee2a0bd1d",
+      "title": "البصائر والذخائر",
+      "url": "https://archive.org/download/ALBSAER/BSAER06.pdf"
+    },
+    {
+      "acquisition": "Web body and ordinary HTML cache obtained",
+      "author": "Abu Hayyan al-Tawhidi",
+      "bytes": 371255,
+      "cache_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "id": "TAWHIDI_ETEXT",
+      "read_scope": "Full story799 with predecessor797–798 and following800–802; connected navigation743–807 and part6 start612–624. Full story checked against scan. No full HTML-division reading claimed.",
+      "secondary_format": {
+        "bytes": 5090020,
+        "cache_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "format_limits": "Reflow, not photographic edition; pdftotext emitted repeated stream warnings; decisive wording therefore controlled with valid photographic part6 scan.",
+        "physical_pages": 860,
+        "read_scope": "Reflow page472 visually inspected; story plus adjacent reports. Whole PDF not read.",
+        "sha256": "2f1990c7ade909b68fcfd65acc8c4c22dfb2298d004a326b61446444ad09a93a",
+        "url": "https://www.almutadaber.com/books/book1_8095.pdf"
+      },
+      "sha256": "dcfa5ebcb91f2f2bf95f5cdbc8965a13fe2f41a1c47d3784ca9da9ff6112436f",
+      "url": "https://www.islamicbook.ws/adab/albsaer-waldkhaer-005.html"
+    },
+    {
+      "acquisition": "Public PDF downloaded successfully",
+      "author": "al-Zamakhshari",
+      "bytes": 7765392,
+      "cache_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "edition": "Abd al-Amir Muhanna, Muassasat al-Alami, Beirut, first1412/1992; title/imprint visually checked",
+      "finding": "Close version with الجوهر instead of Baṣāʾir الجسم. No chain; notes identify Jaʿfar and verse references. Actual scan controls misleading web snippet variants.",
+      "id": "RABIA_SCAN",
+      "physical_pages": 488,
+      "read_scope": {
+        "complete_unit": "part2 p48 item6, chapter19; opening47 and next item checked",
+        "generated_not_viewed": [
+          55
+        ],
+        "navigation_only": [
+          3,
+          4,
+          5,
+          46,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "visual_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "whole_volume_read": false
+      },
+      "sha256": "c5ba01515416974780d0d8282fe2bd932dace6fa9eb6d6762d6ef806dc86073d",
+      "title": "ربيع الأبرار ونصوص الأخبار",
+      "url": "https://maknoon.org/ai/bk/rana2/rana2.pdf"
+    },
+    {
+      "acquisition": "Web body and ordinary HTML cache obtained",
+      "bytes": 367244,
+      "cache_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "id": "RABIA_ETEXT",
+      "lineage": "Same work as scan; not independent historical testimony.",
+      "read_scope": "Chapter19 header1456–1459 and full item1464, connected1460–1468; extended context1410–1480 read. No full chapter or work credit.",
+      "sha256": "96c315397b6b272126106676706356da2398659fb435fc1e357587bb444c4e20",
+      "url": "https://www.islamicbook.ws/adab/rbia-alabrar-002.html"
+    },
+    {
+      "acquisition": "Web text and public PDF download succeeded",
+      "author": "al-Shaykh al-Saduq",
+      "bytes": 2566576,
+      "cache_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "editor": "Hashim al-Husayni al-Tihrani, named on reflow frontmatter",
+      "finding": "Different early shipwreck variant: explicit heart attachment to something able to rescue; later divine identification; surrounding theological exposition read. Explicit chain/parents-clause editor dispute recorded; no isnad grading or original manuscript collation.",
+      "format": "Modern reflowed electronic PDF, not photographic print scan. Inherited page labels do not map one-to-one to PDF pages.",
+      "id": "SADUQ_TAWHID",
+      "physical_pages": 351,
+      "read_scope": {
+        "complete_chapter": "chapter31, all reports1–5, printed229–232, physical173–175; notes accompanying unit read",
+        "story": "chapter31 no5, chain begins printed230, dialogue printed231, physical174",
+        "visual_pages": [
+          173,
+          174,
+          175
+        ],
+        "web_lines": "4898–4965 complete unit; preceding context4839–4897 and chapter32 boundary viewed",
+        "whole_work_read": false
+      },
+      "sha256": "30cf4f805c02d1f00eaca25cb5cc9ebc84166fb810b6842ed62f3704c7a7895c",
+      "title": "التوحيد",
+      "url": "https://download.almohsinlibrary.com/Aqaed/Aqaed578.pdf"
+    },
+    {
+      "id": "BIOGRAPHY_LIMITED",
+      "read_scope": "Entire short page11–16 main text/editorial notes",
+      "title": "طبقات الشافعية, hosted page86",
+      "url": "https://ablibrary.net/book_content/12920/86",
+      "use": "Lead connecting Qadi Abu Hamid, Ahmad b. Bishr b. Amir, to al-Tawhidi. Does not authenticate storm story or provide missing chain. Name-order textual variants retained."
+    },
+    {
+      "acquisition": "Public download succeeded",
+      "bytes": 4803170,
+      "cache_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "id": "TAWHIDI_VOL1_NEGATIVE",
+      "physical_pages": 278,
+      "read_scope": {
+        "printed_pages_at_last_three": [
+          60,
+          61,
+          62
+        ],
+        "status": "Reference-mapping navigation only. None of the inspected passages yielded claimed Abu Hamid biography. No biography authentication or full-volume credit.",
+        "visual_pages": [
+          2,
+          60,
+          61,
+          62,
+          84,
+          85,
+          86
+        ]
+      },
+      "sha256": "0810406b7b3b9a34373f7a34308f6ed9524a08795352aa50edc2bea8d9345ab2",
+      "url": "https://archive.org/download/ALBSAER/BSAER01.pdf"
+    },
+    {
+      "id": "BIBLIOGRAPHY_ONLY",
+      "read_scope": "Host metadata author414AH and Dar Sadir/Wadad Qadi1408/1988; unrelated text13 not used substantively",
+      "url": "https://usul.ai/t/basair/13",
+      "use": "Metadata checked against downloaded title/imprint, not proof of historical event or exact compilation date."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "exact_parameter_pairs": 234,
+  "K_range": [
+    2,
+    40
+  ],
+  "root_range": [
+    1,
+    6
+  ],
+  "checked": "Probability bounds, chi-square upper bound and certified rational-log KL upper enclosures.",
+  "not_checked_by_enumeration": "The adaptive chain-rule/Pinsker argument is a written general proof, not a finite simulation."
+}

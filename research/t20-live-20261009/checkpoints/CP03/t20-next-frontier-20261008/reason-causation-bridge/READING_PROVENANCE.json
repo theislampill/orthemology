@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-10-08T10:47:42.096847+00:00",
+  "status": "Bounded chapter and bridge assessment; not final T20 integration",
+  "source": {
+    "author": "Sami Ameri / سامي عامري",
+    "title": "براهين وجود الله في النفس والعقل والعلم",
+    "publisher_metadata": "Rawasikh first1445/2024; metadata inherited from previous receipt at identical PDF hash, not a new frontmatter inspection",
+    "url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf",
+    "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6",
+    "bytes": 11351820,
+    "pdf_pages": 732,
+    "source_body_delivered": false
+  },
+  "reading": {
+    "method": "Continuous page text including notes, followed by decisive rendered-page rereading to control Arabic extraction ordering",
+    "chapter_printed_and_one_based_pdf": [
+      249,
+      274
+    ],
+    "chapter_complete": true,
+    "text_display_batches": [
+      [
+        247,
+        253
+      ],
+      [
+        254,
+        260
+      ],
+      [
+        261,
+        268
+      ],
+      [
+        269,
+        277
+      ]
+    ],
+    "immediate_predecessor": [
+      247,
+      248
+    ],
+    "immediate_successor": [
+      275,
+      277
+    ],
+    "visual_reread_pages": [
+      249,
+      251,
+      252,
+      255,
+      256,
+      257,
+      262,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275
+    ],
+    "strongest_bridge_returns": "255–257,262,268–272; content-sensitive causation, theism/physical-consciousness qualification, computer response, origin and warrant",
+    "complete_second_traversal": false,
+    "whole_book_credit": false
+  },
+  "primary_checks": {
+    "receipt": "primary-check/primary-source-receipt.md",
+    "source_manifest": "primary-check/source-manifest.json",
+    "lead_assessor_additional_direct_read": "Reppert displayed7–27 continuously via extraction and final-page return; Plantinga1994 opening through start of belief/behaviour analysis only. Worker full targeted scopes are separately stated; no conflation with lead reading.",
+    "limits": [
+      "Balfour1906 inspected, not cited1918 printing",
+      "Reppert1998 paper inspected, not exact2003 book73/85",
+      "Plantinga1994 manuscript and2008 publisher article inspected, not2011 book329",
+      "Lewis Miracles17–36 not directly inspected",
+      "No full bibliographic or empirical-consciousness audit"
+    ]
+  },
+  "comparison": {
+    "predecessor_bindings": "INPUT_BINDINGS.json",
+    "scope": "Complete nonabsorption and wise-determination reports; warrant-standard-review read across two displays to recover the truncated opening; fitrah assessment and governing warrant-basis addendum; exact inherited proof theorem and assurance boundary",
+    "lineage": "Shared sources and arguments are not independent evidence"
+  },
+  "formal_check": {
+    "version": "Lean4.19.0",
+    "fresh_scope": "Both existing source manifests plus non-mutating --trust=0 imported Verification.lean check",
+    "full_dependency_rebuild": false,
+    "inherited_mutation_suite_rerun": false,
+    "logs": [
+      "results/inherited_source_check.log",
+      "results/inherited_imported_kernel_check.log"
+    ],
+    "initial_path_failure": "An initial relative manifest command ran from wrong working directory and failed to open files; corrected-directory checks passed. No source mismatch or file mutation."
+  },
+  "new_model": {
+    "prospective_plan": "PROSPECTIVE_TEST.md",
+    "improvement": "Independent preconstruction critique required formula matching rather than acceptance-only AND",
+    "implementation": "model/check_bridge.py",
+    "scope": "512 finite packets including noise, four valuations, 2048 semantic cases; fixed formula map; no probability claim",
+    "not_a_new_general_theorem": "Modus ponens soundness is elementary prior mathematics; new credit is the scoped discriminating control and cross-programme application boundary."
+  },
+  "limits": [
+    "No protected repository changes",
+    "No final integration or closure",
+    "No source PDFs, extracts or images delivered",
+    "No actual human-cognition experiment",
+    "No metaphysical naturalism/theism decision from code",
+    "No measured active-research duration or historical six-hour certification"
+  ],
+  "public_source_summary_words": 188,
+  "research_duration_seconds": null
+}

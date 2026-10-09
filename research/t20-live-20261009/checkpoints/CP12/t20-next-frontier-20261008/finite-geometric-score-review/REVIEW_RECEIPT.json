@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "kind": "Independent written mathematical review and independently implemented exact deterministic controls",
+  "accepted_author_result_sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+  "author_manifest_sha256": "f7d1033b6f4d269155f1e6dc5950c267414e6d498ab94166aeb55e0cf341b4a3",
+  "review_sha256": "1dc64801da9ee70b289bcc66610832e3eb7a5c353a393e55305730b3cd48052f",
+  "source_bindings_sha256": "754641957cb72c931ea075f10835f04932eeb584aea676e6145a32a42e425b74",
+  "independent_controls_sha256": "7a888d81d6eeb16481bba823159eca1adde101fc66f268371c0d534621859ff2",
+  "claims": [
+    "Exact rational baseline centering and ideal geometric-score mean gap asymptotic h^2/m^2 with both variances asymptotic 2h^2.",
+    "Eventual finite rational-endpoint test with R=ceil(192m^4/(alpha h^2)) and exact integer grid resolution has each error at most alpha+eta.",
+    "Fixed-error independent-vector complexity Theta_epsilon(n^4/log^2 n), including baseline expected started-vector and maximum expected costs.",
+    "Expected total endpoint-query upper bound O_epsilon(n^4) and deterministic worst-case upper bound O_epsilon(n^5/log n)."
+  ],
+  "blocking_findings": [],
+  "required_author_mathematical_revisions": [],
+  "independent_controls_status": "PASS",
+  "author_replay_byte_identical": true,
+  "explicit_cutoff_certified": false,
+  "guarantee_scope": "Eventually in n for fixed confidence; no all-n deployment certificate or certified hybrid cutoff.",
+  "scope_exclusions": [
+    "No total-query optimality, exact optimal testing constant, or shrinking-error uniformity.",
+    "No unknown-pair minimax, noise, physical realization, or polynomial arithmetic complexity guarantee.",
+    "No empirical experiment or formal theorem kernel.",
+    "No protected integration, archive rewrite, historical-floor certification, or closure."
+  ],
+  "historical_floor": "UNVERIFIED",
+  "prepared_at_utc": "2026-10-08T22:18:09.782188+00:00"
+}

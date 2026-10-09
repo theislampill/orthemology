@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-09T01:09:31.961898+00:00",
+  "reader": "root",
+  "operation": "Continuous reading of three bounded later Pruss sections after origin recovery",
+  "sections": [
+    "2.3.2.3",
+    "2.3.5",
+    "4.1.1.6"
+  ],
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-libertarian-continuous.txt",
+      "sha256": "2180c8f53ed4f25fbf3ba1350b53be1215a2503e70fc6f8cc45068fdd2fb5cae"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-contrastive-continuous.txt",
+      "sha256": "ba2330bff89b5604b42d31151171a430257d893297e2168d68de70b83175d1d4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-continuous.txt",
+      "sha256": "28fbb71d0c2d8b4f32d16fe6d55b585610f174f8ea308f9d88a2f2f4602b38ba"
+    }
+  ],
+  "boundary": "All three supplied extracted sections read. Not full LCA chapter. Earlier indexed return was narrower; successful HTTP origin acquisition reported by author and separately retained. 2002 full reply remains unavailable.",
+  "consequences": [
+    "Credit actual reasons-basing, exclusion of unused reasons for explanatory relevance, and an explicit fallback denying universal contrastive explanation.",
+    "Necessary reasons-state q differs from the 1999 successful-action q that entails the particular totality p.",
+    "No simple modal-collapse or reasonless-will objection is established. Transfer to stronger particular-determination requirement remains under assessment."
+  ],
+  "credit": "Targeted reflective source comparison, not an independent witness or measured-duration claim.",
+  "additional_reading": {
+    "utc": "2026-10-09T01:16:24.002428+00:00",
+    "origin_lines": [
+      1474,
+      1710
+    ],
+    "note_lines": [
+      4456,
+      4471
+    ],
+    "scope": "Sections 2.3.2.1–2 and notes10–12 read continuously; explanatory projection and internal-determinism qualification preserved.",
+    "origin_sha256": "921665c78f77f579221962de74209af8d8873f1c480e16fdb0d75f64823e637b"
+  }
+}

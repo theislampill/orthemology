@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-10-08T07:43:36.781367+00:00",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/RESULT.md",
+      "sha256": "fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d",
+      "bytes": 12476,
+      "scope": "Predecessor mathematical stage, read-only; not recounted or rerun as new research."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/THEOREMS.md",
+      "sha256": "aec96500f0b273b5f4d1cf40c075e2d1bc906062e2c314ad420c7d36652a35dc",
+      "bytes": 12573,
+      "scope": "Predecessor mathematical stage, read-only; not recounted or rerun as new research."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/general-roots/RESULT.md",
+      "sha256": "2916675e350ada87fa6c9ee99d737e1b198fcc49d9fbaef6e25fdc9ffffbdd26",
+      "bytes": 7741,
+      "scope": "Predecessor mathematical stage, read-only; not recounted or rerun as new research."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/MANIFEST.json",
+      "sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a",
+      "bytes": 4086,
+      "scope": "Predecessor mathematical stage, read-only; not recounted or rerun as new research."
+    }
+  ],
+  "previous_manifest_all_files_unchanged": true,
+  "previous_manifest_file_count": 24,
+  "runtime_dependencies": "None outside this sibling Python standard-library code.",
+  "source_scope": "No new Arabic source read or broad literature novelty claim."
+}

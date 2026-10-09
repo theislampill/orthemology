@@ -1,0 +1,41 @@
+{
+  "prepared_at_utc": "2026-10-08T21:34:41.165549+00:00",
+  "status": "Author proof complete; independent review pending",
+  "artifacts": [
+    {
+      "path": "ACTIVITY_LOG.json",
+      "sha256": "8b5a50fd96a0146a0f6e716630ab8f9c470707c65e715b5e3c327e885ecb4d2b",
+      "bytes": 590
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "68e99ec9eb962d4922ccd6b3a9cad981c770d0edd461e83dbaace1c3d0802ddc",
+      "bytes": 11873
+    },
+    {
+      "path": "CONTROL_RUN.log",
+      "sha256": "56b7d7bd17cdc5bd62ed8e42babcc238a7d49710d68542a97ebc9b7dd234ddd9",
+      "bytes": 172
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "4aa4bee754cf89284a327d4322f4d35a93314525da8aaa22e5d028754908e28a",
+      "bytes": 16686
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "6bb333b117229c52521c8de0e950b0e78d58ad05151dc1ea6a65c2eb10f154a0",
+      "bytes": 2107
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "af1a2792c31c811513e39654b36600bac648349b7aff0a176d9cfd88b5173a68",
+      "bytes": 1030
+    },
+    {
+      "path": "controls.py",
+      "sha256": "a56ff98a0dfa7e8dbedda9b257ccfef48297eca553d2588092f86e659c4102d9",
+      "bytes": 8125
+    }
+  ]
+}

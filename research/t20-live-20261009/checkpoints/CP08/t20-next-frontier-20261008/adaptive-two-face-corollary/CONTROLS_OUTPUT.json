@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "exact_rational_channel_cases": 75,
+  "rational_scope": "Algebraic proxies, not claims that these rational tables are the Joe model",
+  "actual_Joe_checks": [
+    {
+      "n": 1,
+      "n4_adaptive_chi": "0.06809015134155631501678088"
+    },
+    {
+      "n": 2,
+      "n4_adaptive_chi": "0.1571643274696619764985871"
+    },
+    {
+      "n": 5,
+      "n4_adaptive_chi": "0.2558984535820231187261957"
+    },
+    {
+      "n": 10,
+      "n4_adaptive_chi": "0.3039009155312582895970457"
+    },
+    {
+      "n": 100,
+      "n4_adaptive_chi": "0.3596225859947305090851588"
+    }
+  ],
+  "free_screening_negative_controls": [
+    {
+      "n": 1,
+      "Joe_selected_absence": "0.9999999999292893218825952",
+      "reference_selected_absence": "0.5",
+      "expected_first_probes_per_completion_log10": 20
+    },
+    {
+      "n": 2,
+      "Joe_selected_absence": "0.9999999999342476955363865",
+      "reference_selected_absence": "0.5",
+      "expected_first_probes_per_completion_log10": 60
+    },
+    {
+      "n": 5,
+      "Joe_selected_absence": "0.9999999999337624130736103",
+      "reference_selected_absence": "0.5",
+      "expected_first_probes_per_completion_log10": 300
+    },
+    {
+      "n": 10,
+      "Joe_selected_absence": "0.9999999999326096774615187",
+      "reference_selected_absence": "0.5",
+      "expected_first_probes_per_completion_log10": 1100
+    }
+  ],
+  "scope": "Proof supplements only; no samples or global optimization"
+}

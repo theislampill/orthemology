@@ -1,0 +1,81 @@
+{
+  "created_utc": "2026-10-08T12:39:44.578506+00:00",
+  "status": "author checkpoint frozen with separate scoped independent reviews",
+  "scope": "Calibration-design mathematical continuation only; no empirical validation, protected integration, owner acceptance or T20 closure.",
+  "control_families": 17,
+  "independent_review_references": [
+    {
+      "path": "../crossed-code-root-review/FRONTIER_INCORPORATION_REVIEW.md",
+      "sha256": "8d8f0ece06df9de600c2f27fb782d811b9453791a90f23ea377e3049abc58e92"
+    },
+    {
+      "path": "../crossed-code-root-review/FRONTIER_INCORPORATION_RECEIPT.json",
+      "sha256": "4c89a739ec6f6b732c39d2ed6fc716ea97ee17f796c946cfeb7529c49b4ce939"
+    },
+    {
+      "path": "../adaptive-count-review/REVIEW.md",
+      "sha256": "22d0712ad9e394827c7ec8ad71584b0f32a661daa618cd9618089dca13a3ce22"
+    },
+    {
+      "path": "../adaptive-count-review/REVIEW_RECEIPT.json",
+      "sha256": "d6adc2dd598b28ae5e72b9e1f2e83c1dd85f6863b6ea5be8d0fbfb7e6ada3325"
+    }
+  ],
+  "files": [
+    {
+      "path": "ARBITRARY_RATE_COUNT_BOUND.md",
+      "sha256": "e68242d3052342b2c2cf029b3e9d65d3402e7005d6179f8a335ec1e5ad52daad",
+      "bytes": 5588
+    },
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "64310261d40e3ba17cfb82a2c7fe257afe7f37a5d270a51e57a66882acd7135c",
+      "bytes": 2461
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "dd3e8b31eaedc20f21213598167af759dcc13dad010e19d158c84cd8d9c00556",
+      "bytes": 1364
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "e69c99b2fd439849cc442b2a38f24cba1fb2455d516e318779090aab31b06c8e",
+      "bytes": 895
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "89b17388c4f243f555dbcb2232a3f106683cc3cc23edf0e3f7371bec3e018db7",
+      "bytes": 16304
+    },
+    {
+      "path": "REVIEW_STATUS.md",
+      "sha256": "f8304a9baf2ba1d354c7ed35fe3344975b33ac00dc440a5ef60fba7c2c379f2c",
+      "bytes": 2687
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "7de2684ff3ae0b89c36d117e168c0714a500138e7e0c044a3a5f47dee8237dad",
+      "bytes": 5884
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "b037dac94a5a9feb0084c0bfbc1eb2dd99ed4fff20453df4397277e61da1d2dc",
+      "bytes": 29632
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "d67b5b1d8077046ab29b6175584a14181cb306796fa708d667cb45f3bf7adf65",
+      "bytes": 7052
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "e7f9bea59d7f1fa1d9126ac5745bbae18957baa6f89162caf8097a713094f5da",
+      "bytes": 5658
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "2e0532c7079d5cffac688d23a2005e333f3f8fc58603dafc6f0df52f06e14128",
+      "bytes": 711
+    }
+  ]
+}

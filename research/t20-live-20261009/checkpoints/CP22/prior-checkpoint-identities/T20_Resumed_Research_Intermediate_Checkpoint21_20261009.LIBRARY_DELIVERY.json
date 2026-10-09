@@ -1,0 +1,38 @@
+{
+  "archive_sha256": "997962d2dbeb4a56068a4a757f6de09d32be28645aec71c29f558d0a4281784e",
+  "checkpoint": 21,
+  "client_opening_verified": false,
+  "created_utc": "2026-10-09T09:57:36.026287+00:00",
+  "owner_research_acceptance": false,
+  "send": {
+    "channel": "chatgpt",
+    "created_at": "2026-10-09T09:57:27.806896+00:00",
+    "message_id": "Sentinel_94ca31520160819187de4713aa5b3470",
+    "status": "accepted"
+  },
+  "t20_status": "ACTIVE",
+  "uploads": [
+    {
+      "current_version_number": 0,
+      "file_id": "file_00000000060c81f5a0205d95f7bfecee",
+      "file_name": "T20_Resumed_Research_Intermediate_Checkpoint21_20261009.zip",
+      "library_file_id": "libfile_5f55d9b3b62c819189242bba8cd731a6",
+      "local_metadata_applied": true,
+      "local_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "path": "/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.zip",
+      "purpose": "create_library_file",
+      "status": "succeeded"
+    },
+    {
+      "current_version_number": 0,
+      "file_id": "file_0000000059d081f59e9a12dc9838c106",
+      "file_name": "T20_Resumed_Research_Intermediate_Checkpoint21_20261009.READ_FIRST.md",
+      "library_file_id": "libfile_8369119635a081918a10d8b5a1d938c2",
+      "local_metadata_applied": true,
+      "local_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "path": "/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.READ_FIRST.md",
+      "purpose": "create_library_file",
+      "status": "succeeded"
+    }
+  ]
+}

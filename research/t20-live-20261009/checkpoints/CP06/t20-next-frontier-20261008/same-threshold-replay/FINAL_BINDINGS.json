@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-10-08T16:15:27.659356+00:00",
+  "status": "PASS independent review and read-only final verification",
+  "scope": "All-command same-threshold replay rigidity; finite-grid global-copula obstruction; distinct from separate finite count certificate",
+  "verification_entrypoint": "verify_final.py (read-only)",
+  "warning": "The reviewer verify_evidence.py is an authoring/replay workflow that writes its evidence timestamp; do not rerun it in place after the review freeze. Use this read-only final verifier.",
+  "frozen_author_review_and_predecessors_preserved": true,
+  "files": [
+    {
+      "path": "MANIFEST.json",
+      "sha256": "f58c75e855e51be1bf4818b2b4ea6a91b1b5e685cbd45cfe304e9c3627fcbf53",
+      "bytes": 1857
+    },
+    {
+      "path": "verify_final.py",
+      "sha256": "b03b0082624fb3f2cb2040e795023cb95c2865f072b98c14a18baa6e93c8e69e",
+      "bytes": 2340
+    },
+    {
+      "path": "results/final_verification.json",
+      "sha256": "c0ba42f4340b82e8d322c6120ad74869b212c658e2e8ad15e1b56d9fd7ca7717",
+      "bytes": 539
+    },
+    {
+      "path": "../same-threshold-replay-review/MANIFEST.json",
+      "sha256": "68a23ddfdb42ce093ad4ff8a6a929800caf88984b70b0db0c7c4f7029ceec1a9",
+      "bytes": 2977
+    },
+    {
+      "path": "../same-threshold-replay-review/REVIEW_RECEIPT.json",
+      "sha256": "dd10f56ae9a8f9aa91fe4e2fe2af53fa1458969c350d9da4ce2015341969a0cf",
+      "bytes": 6180
+    }
+  ],
+  "no_integration_or_T20_closure": true
+}

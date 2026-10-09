@@ -1,0 +1,53 @@
+{
+  "self_contained": false,
+  "included": "Frozen local written work, narrow Lean source, finite controls/logs/reviews, exact source bindings, minimal inherited replay/proof inputs and dependency pins.",
+  "excluded": [
+    "Eight historical archives and broader historical corpus",
+    "Full mathlib/toolchain and compiled Lean outputs",
+    "Modern source PDFs/OCR/images/raw retrieval/search bodies",
+    "Private user data or credentials",
+    "Caches and unrelated active/future work"
+  ],
+  "source_links": {
+    "JOE_TAIL": {
+      "url": "https://tnagler.github.io/VineCopula/reference/BiCopPar2TailDep.html",
+      "reading_scope": "Author targeted documentation/table inspection for family 6 and upper-tail coefficient; whole Joe books not read. No packer re-retrieval.",
+      "record": {
+        "path": "t20-next-frontier-20261008/full-face-threshold-information/SOURCE_AUDIT.md",
+        "bytes": 4102,
+        "sha256": "0725f901e0aa1efca8f70872f3e31d6bc671b4bc3399de0361d44c17e826d0f0"
+      }
+    },
+    "DIVERGENCE_BACKGROUND": {
+      "url": "https://arxiv.org/html/2004.11197",
+      "reading_scope": "Author introduction and Section II definitions/relationship only; not full-paper reading. PMC browser check produced no usable text; alternate open arXiv source used, no CAPTCHA solved.",
+      "record": {
+        "path": "t20-next-frontier-20261008/full-face-threshold-information/SOURCE_AUDIT.md",
+        "bytes": 4102,
+        "sha256": "0725f901e0aa1efca8f70872f3e31d6bc671b4bc3399de0361d44c17e826d0f0"
+      }
+    },
+    "COPBASIC_CONTROL": {
+      "url": "https://search.r-project.org/CRAN/refmans/copBasic/html/JOcopB5.html",
+      "reading_scope": "Author targeted coefficient example; apparent displayed-CDF extraction omission not used for proof. No whole-book read.",
+      "record": {
+        "path": "t20-next-frontier-20261008/full-face-threshold-information/SOURCE_AUDIT.md",
+        "bytes": 4102,
+        "sha256": "0725f901e0aa1efca8f70872f3e31d6bc671b4bc3399de0361d44c17e826d0f0"
+      }
+    },
+    "FOOLING_SET_ANCESTRY": {
+      "url": "https://arxiv.org/pdf/0708.1174",
+      "reading_scope": "Author inspected introduction pp.1-2 for established biclique/fooling-set bound only; no full-paper/rank/tensor theorem import or novelty search. Reviewer did not independently retrieve it; packer did not retrieve it.",
+      "record": {
+        "path": "t20-next-frontier-20261008/retained-interior-certificate/SOURCE_AUDIT.md",
+        "bytes": 3679,
+        "sha256": "fefdee68383cf0ea813182da8b918be831935774317e18ba609513191d5659f7"
+      }
+    }
+  },
+  "lean_dependencies": "See retained-interior-certificate/KERNEL_DEPENDENCIES.json and IMPORTED_MODULE_BINDINGS.json; package revisions in included lake-manifest.json. Obtain separately from official Lean/mathlib sources; no install or network step is performed by replay.",
+  "source_body_checks": "UNREPLAYED. Original targeted source-inspection claims are retained at their stated scope. No omitted-source extraction/page coverage/quote validator is represented as passed.",
+  "historical_lineage_inspection": "The exact H manuscript is a bound eighth-checkpoint reference, not included again.",
+  "excluded_local_binary_identity_inventory": "PACKING/EXCLUDED_LOCAL_ARTIFACTS.json"
+}

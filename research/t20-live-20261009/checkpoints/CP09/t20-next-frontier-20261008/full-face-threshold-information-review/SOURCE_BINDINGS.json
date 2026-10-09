@@ -1,0 +1,42 @@
+{
+  "author_support_read_after_core_analysis": [
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "scope": "Supplemental ancestry/scope context only; not separately approved by this RESULT-only review",
+      "sha256": "0725f901e0aa1efca8f70872f3e31d6bc671b4bc3399de0361d44c17e826d0f0"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "scope": "Supplemental ancestry/scope context only; not separately approved by this RESULT-only review",
+      "sha256": "b39e2952ac9b2ad576ba6ee6a9b81183a4cf1a4321f4a89df0328fa3611bf8cd"
+    }
+  ],
+  "local_predecessors_read": [
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Full text; inherited theorem and scope checks, not a complete re-audit of every predecessor proof",
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Full text; inherited theorem and scope checks, not a complete re-audit of every predecessor proof",
+      "sha256": "3997cb39f8306545ac622feeb19e55f0fe18c570e0059e84dea39940c6b22e0f"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Result full text; receipt tool output inspected for claims/hash only",
+      "sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Result full text; receipt tool output inspected for claims/hash only",
+      "sha256": "b2ca44f3477b8b0fd52569f9acad9931c4865dfd2b9cdd7d230c0e23356aa22a"
+    }
+  ],
+  "reviewed_result": {
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+    "snapshot": "reviewed_RESULT.md"
+  },
+  "snapshot_time_utc": "2026-10-08T19:34:00.767558+00:00"
+}

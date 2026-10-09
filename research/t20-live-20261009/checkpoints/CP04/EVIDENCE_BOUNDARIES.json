@@ -1,0 +1,87 @@
+{
+  "classification": "FOURTH_ADDITIVE_INTERMEDIATE_RESEARCH_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "research_cutoff_utc": "2026-10-08T13:15:48.915045Z",
+  "cutoff_basis": "Final global-calibration-ambiguity author manifest, after separate main and appendix review freezes",
+  "root_snapshot_recorded_utc": "2026-10-08T13:17:14.936728+00:00",
+  "root_snapshot_scope": "Final root reentry audit and existing research/candidate notes at packaging snapshot; no continuing live-state claim.",
+  "fresh_research_preserved": [
+    "structuring-cause-reply",
+    "activity-source-boundary",
+    "productive-sufficiency-scope",
+    "structuring-cause-basing-addendum",
+    "calibration-design-frontier",
+    "multi-root-adaptive-bound",
+    "global-calibration-ambiguity"
+  ],
+  "inherited_or_nonnew_work": [
+    "action-genus-scope-audit confirms a pre-existing safeguard; no new theorem or historical witness",
+    "root ACTUAL_COMPLETION_REENTRY_AUDIT records inherited adequacy controls and stops a duplicative proposal",
+    "inherited Lean source dependencies and prior receipts retain historical scope",
+    "packaging and replay are delivery assurance with zero active-research credit"
+  ],
+  "separate_review_scopes": {
+    "structuring-cause-reply": "bounded included REVIEW_RECEIPT.md",
+    "activity-source-boundary": "sibling activity-source-boundary-review",
+    "productive-sufficiency-scope": "included review/; historical kernel replay not repeated by packager",
+    "structuring-cause-basing-addendum": "four final text files independently bound; lead verifies metadata separately",
+    "calibration-design-frontier": "crossed-code incorporation review for main; adaptive-count-review for count appendix",
+    "multi-root-adaptive-bound": "multi-root-adaptive-review final RESULT and NEGATIVE_CONTROLS; scopes in receipt",
+    "global-calibration-ambiguity": "separate main and appendix receipts bound before final author freeze"
+  },
+  "candidate_history_controls": {
+    "CALIBRATION_EFFICIENCY_CANDIDATE.md": "calibration-design-frontier final reports and separate reviews",
+    "CROSSED_CODE_DERIVATION.md": "calibration-design-frontier/RESULT.md and crossed-code-root-review/FRONTIER_INCORPORATION_REVIEW.md",
+    "CROSSED_COMPRESSION_BOUNDARY.md": "calibration-design-frontier/RESULT.md and crossed-code-root-review",
+    "MULTIROOT_LOWER_BOUND_CANDIDATE.md": "multi-root-adaptive-bound/RESULT.md and multi-root-adaptive-review",
+    "GLOBAL_CALIBRATION_CANDIDATE.md": "global-calibration-ambiguity/RESULT.md and separately reviewed POLYNOMIAL_EFFICIENCY_APPENDIX.md"
+  },
+  "active_not_included": [
+    "grouped-calibration-invariants"
+  ],
+  "not_claimed": [
+    "T20 closure",
+    "owner acceptance",
+    "final integration",
+    "new kernel replay",
+    "empirical validation",
+    "whole-programme reconstruction",
+    "new historical-duration or six-hour certificate"
+  ],
+  "repository_boundary": {
+    "latest_status_source": "OWNER_REPORTED",
+    "source_timestamp_utc": "2026-10-08T13:17:43Z",
+    "source_message_id": "Sentinel_fbdb4d5dc1c08191807bc127c64e2b70",
+    "merged_PRs": [
+      30,
+      31,
+      32
+    ],
+    "current_main_as_reported": "3a0bdeaa1394c656245cae9599adcb143e885059",
+    "final_CI_as_reported": "PASS, including exact PDF and successor integrity",
+    "additional_owner_report": [
+      "Stale Task 14 repaired",
+      "Two historical manuscripts archived"
+    ],
+    "scope_limit": "New baseline for future integration; later 8 October research is not automatically integrated. T20 ACTIVE, no owner acceptance.",
+    "evidence_limit": "Owner-reported dated state, not independently re-queried by the packager. Distinct from the research cutoff.",
+    "prior_historical_readback": {
+      "readback_utc": "2026-10-08T12:21:00Z",
+      "evidence_type": "Dated independently reported readback supplied to packager; no fresh GitHub check here",
+      "PR30": {
+        "merged_utc": "2026-10-08T12:19:22Z",
+        "adopted_main_commit": "744760f7ae9e058588bda04109e9688c94427118",
+        "tree": "e7b47c7e3dc18685c33904181d9d31d7cd75495f",
+        "scope": "through T16"
+      },
+      "PR31": {
+        "state_at_readback": "draft/open/unmerged",
+        "head": "6c427cdcf91e3bd561b790eb7e92f06dadc99fc1",
+        "head_CI_run": "37773340128",
+        "head_CI_status_at_readback": "success",
+        "scope": "frozen Oct 7 T17–T20 only; later Oct 8 research excluded"
+      },
+      "currentness_warning": "Dated state, not perpetual currentness. Owner handles integration separately."
+    }
+  }
+}

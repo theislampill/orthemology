@@ -1,0 +1,340 @@
+{
+  "logic": "System R, A1-A16 and R1-R2 as in Bimbo/Dunn/Ferenz2018",
+  "matrix_source": "Standefer2020, Actual Issues for Relevant Logics, printed270-271, Table2",
+  "values": [
+    "-3",
+    "-2",
+    "-1",
+    "-0",
+    "+0",
+    "+1",
+    "+2",
+    "+3"
+  ],
+  "designated": [
+    "+0",
+    "+1",
+    "+2",
+    "+3"
+  ],
+  "table": [
+    [
+      "+3",
+      "+3",
+      "+3",
+      "+3",
+      "+3",
+      "+3",
+      "+3",
+      "+3"
+    ],
+    [
+      "-3",
+      "+2",
+      "-3",
+      "+2",
+      "-3",
+      "-3",
+      "+2",
+      "+3"
+    ],
+    [
+      "-3",
+      "-3",
+      "+1",
+      "+1",
+      "-3",
+      "+1",
+      "-3",
+      "+3"
+    ],
+    [
+      "-3",
+      "-3",
+      "-3",
+      "+0",
+      "-3",
+      "-3",
+      "-3",
+      "+3"
+    ],
+    [
+      "-3",
+      "-2",
+      "-1",
+      "-0",
+      "+0",
+      "+1",
+      "+2",
+      "+3"
+    ],
+    [
+      "-3",
+      "-3",
+      "-1",
+      "-1",
+      "-3",
+      "+1",
+      "-3",
+      "+3"
+    ],
+    [
+      "-3",
+      "-2",
+      "-3",
+      "-2",
+      "-3",
+      "-3",
+      "+2",
+      "+3"
+    ],
+    [
+      "-3",
+      "-3",
+      "-3",
+      "-3",
+      "-3",
+      "-3",
+      "-3",
+      "+3"
+    ]
+  ],
+  "negation": {
+    "-3": "+3",
+    "-2": "+2",
+    "-1": "+1",
+    "-0": "+0",
+    "+0": "-0",
+    "+1": "-1",
+    "+2": "-2",
+    "+3": "-3"
+  },
+  "lattice_bits": {
+    "-3": 0,
+    "-2": 2,
+    "-1": 1,
+    "-0": 3,
+    "+0": 4,
+    "+1": 5,
+    "+2": 6,
+    "+3": 7
+  },
+  "axiom_checks": [
+    {
+      "axiom": 1,
+      "distinct_variables": [
+        "a"
+      ],
+      "assignments": 8,
+      "failures": 0
+    },
+    {
+      "axiom": 2,
+      "distinct_variables": [
+        "a",
+        "b",
+        "c"
+      ],
+      "assignments": 512,
+      "failures": 0
+    },
+    {
+      "axiom": 3,
+      "distinct_variables": [
+        "a",
+        "b"
+      ],
+      "assignments": 64,
+      "failures": 0
+    },
+    {
+      "axiom": 4,
+      "distinct_variables": [
+        "a",
+        "b",
+        "c"
+      ],
+      "assignments": 512,
+      "failures": 0
+    },
+    {
+      "axiom": 5,
+      "distinct_variables": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "assignments": 4096,
+      "failures": 0
+    },
+    {
+      "axiom": 6,
+      "distinct_variables": [
+        "a",
+        "b"
+      ],
+      "assignments": 64,
+      "failures": 0
+    },
+    {
+      "axiom": 7,
+      "distinct_variables": [
+        "a",
+        "b"
+      ],
+      "assignments": 64,
+      "failures": 0
+    },
+    {
+      "axiom": 8,
+      "distinct_variables": [
+        "a",
+        "b",
+        "c"
+      ],
+      "assignments": 512,
+      "failures": 0
+    },
+    {
+      "axiom": 9,
+      "distinct_variables": [
+        "a",
+        "b",
+        "c"
+      ],
+      "assignments": 512,
+      "failures": 0
+    },
+    {
+      "axiom": 10,
+      "distinct_variables": [
+        "a",
+        "b"
+      ],
+      "assignments": 64,
+      "failures": 0
+    },
+    {
+      "axiom": 11,
+      "distinct_variables": [
+        "a",
+        "b"
+      ],
+      "assignments": 64,
+      "failures": 0
+    },
+    {
+      "axiom": 12,
+      "distinct_variables": [
+        "a",
+        "b",
+        "c"
+      ],
+      "assignments": 512,
+      "failures": 0
+    },
+    {
+      "axiom": 13,
+      "distinct_variables": [
+        "a",
+        "b",
+        "c"
+      ],
+      "assignments": 512,
+      "failures": 0
+    },
+    {
+      "axiom": 14,
+      "distinct_variables": [
+        "a"
+      ],
+      "assignments": 8,
+      "failures": 0
+    },
+    {
+      "axiom": 15,
+      "distinct_variables": [
+        "a",
+        "b"
+      ],
+      "assignments": 64,
+      "failures": 0
+    },
+    {
+      "axiom": 16,
+      "distinct_variables": [
+        "a"
+      ],
+      "assignments": 8,
+      "failures": 0
+    }
+  ],
+  "total_axiom_assignments": 7576,
+  "modus_ponens_failures": [],
+  "adjunction_failures": [],
+  "variable_sharing_subalgebras_verified": true,
+  "identity_target_all_values": [
+    {
+      "Q": "-3",
+      "N": "+3",
+      "not_N": "-3"
+    },
+    {
+      "Q": "-2",
+      "N": "+2",
+      "not_N": "-2"
+    },
+    {
+      "Q": "-1",
+      "N": "+1",
+      "not_N": "-1"
+    },
+    {
+      "Q": "-0",
+      "N": "+0",
+      "not_N": "-0"
+    },
+    {
+      "Q": "+0",
+      "N": "+0",
+      "not_N": "-0"
+    },
+    {
+      "Q": "+1",
+      "N": "+1",
+      "not_N": "-1"
+    },
+    {
+      "Q": "+2",
+      "N": "+2",
+      "not_N": "-2"
+    },
+    {
+      "Q": "+3",
+      "N": "+3",
+      "not_N": "-3"
+    }
+  ],
+  "countervaluation_assignment": {
+    "P": "+1",
+    "Q": "+2"
+  },
+  "countervaluation": {
+    "P": "+1",
+    "not_P": "-1",
+    "N": "+2",
+    "not_N": "-2",
+    "material_conditional": "+3",
+    "compound_ground": "+1",
+    "ground_implies_target": "-3",
+    "sensitivity": "-3",
+    "source_premise_only_bridge": "-3"
+  },
+  "conditional_derivation_verified": true,
+  "derivation_lines": 13,
+  "wrong_final_consequent_rejected": true,
+  "corrupt_identity_table_rejected": true,
+  "claim": "Neither the internal-arrow formula B->R N nor the sensitivity formula follows from the designated material grounds, even for N=(Q->R Q). N itself remains an R theorem and thus a syntactic/semantic consequence of B.",
+  "ceiling": "No knowledge, competent inference, basing, counterfactual-world choice or cognition interpretation is supplied."
+}

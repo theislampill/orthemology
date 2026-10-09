@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-09T02:01:13.040036+00:00",
+  "reader": "root",
+  "status": "ONGOING; excluded from checkpoint14",
+  "primary_reads": [
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt",
+      "lines": [
+        107,
+        354
+      ],
+      "scope": "Sections2.1 and2.2.1–3 continuous; attribution/navigation, not an evolutionary research campaign.",
+      "sha256": "921665c78f77f579221962de74209af8d8873f1c480e16fdb0d75f64823e637b"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+      "source_line_ranges": [
+        [
+          51,
+          360
+        ],
+        [
+          629,
+          811
+        ]
+      ],
+      "scope": "Definitions/plural PSR, epistemic scenarios, symmetry, neo-Humean and origin-essentialist replies, direct future-knowledge argument, conclusion through explicit KK disclaimer; not whole paper.",
+      "sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b"
+    }
+  ],
+  "current_controls": [
+    "No refutation of Koons from Pruss simplified paragraph.",
+    "First-order knowledge, knowledge of knowledge, objective chance and epistemic-nearness distinct.",
+    "Authors explicitly discuss local restrictions, counterpart repair and neo-Humean escape; evaluate actual replies.",
+    "Noncircular plurality PSR and particular-explanans bridge are stronger than singleton causal regularity.",
+    "Basic-natural/supernatural definitions are source-specific; not automatically Necessary Being/complete original source.",
+    "2020 bibliography names Dasgupta2014 The possibility of physicalism; do not conflate with previously read grounding/rationalism papers."
+  ],
+  "credit": "Targeted reading and comparative investigation; no elapsed-time certificate, kernel run or completed verdict."
+}

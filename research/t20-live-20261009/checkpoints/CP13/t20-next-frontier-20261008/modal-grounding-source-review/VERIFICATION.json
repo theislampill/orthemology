@@ -1,0 +1,394 @@
+{
+  "author_manifest_all_entries_verified": true,
+  "author_manifest_entries": [
+    {
+      "group": "inputs",
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+      "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce",
+      "expected_sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce",
+      "bytes": 30791,
+      "ok": true
+    },
+    {
+      "group": "inputs",
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+      "sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361",
+      "expected_sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361",
+      "bytes": 18923,
+      "ok": true
+    },
+    {
+      "group": "inputs",
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f",
+      "expected_sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f",
+      "bytes": 20262,
+      "ok": true
+    },
+    {
+      "group": "inputs",
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.pdf",
+      "sha256": "47b9ad8c841db60d840f7bbbfbbbb1c538d0c0e6c5db8d0105ad600dc1045989",
+      "expected_sha256": "47b9ad8c841db60d840f7bbbfbbbb1c538d0c0e6c5db8d0105ad600dc1045989",
+      "bytes": 268941,
+      "ok": true
+    },
+    {
+      "group": "inputs",
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "sha256": "bd165592d56bfa08166861125343914e8dea5d10af82eb6aa5a0e82dbb69b3f7",
+      "expected_sha256": "bd165592d56bfa08166861125343914e8dea5d10af82eb6aa5a0e82dbb69b3f7",
+      "bytes": 146041,
+      "ok": true
+    },
+    {
+      "group": "inputs",
+      "path": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md",
+      "sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8",
+      "expected_sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8",
+      "bytes": 33327,
+      "ok": true
+    },
+    {
+      "group": "inputs",
+      "path": "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json",
+      "sha256": "cb5e24198649d87118a215cf8c26762cb018e3ed2fff655935a39021d30ea660",
+      "expected_sha256": "cb5e24198649d87118a215cf8c26762cb018e3ed2fff655935a39021d30ea660",
+      "bytes": 2542,
+      "ok": true
+    },
+    {
+      "group": "inputs",
+      "path": "t20-next-frontier-20261008/modal-identity-transport/INPUT_BINDINGS.json",
+      "sha256": "8086c38e20886219db8f3daa1f409eb8572cc009b602b20a4f594f2b89906c73",
+      "expected_sha256": "8086c38e20886219db8f3daa1f409eb8572cc009b602b20a4f594f2b89906c73",
+      "bytes": 4937,
+      "ok": true
+    },
+    {
+      "group": "inputs",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "expected_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940,
+      "ok": true
+    },
+    {
+      "group": "deliverables",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/REPORT.md",
+      "sha256": "97f4cd1b948aa6396d29780e0ba9ea92f51d45c7ea91128d0671e1296d3c57db",
+      "expected_sha256": "97f4cd1b948aa6396d29780e0ba9ea92f51d45c7ea91128d0671e1296d3c57db",
+      "bytes": 26915,
+      "ok": true
+    },
+    {
+      "group": "deliverables",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md",
+      "sha256": "c65d19e90e6571c5e363147d39e5d817e92d5b1499e5536961544d187a8ad7b7",
+      "expected_sha256": "c65d19e90e6571c5e363147d39e5d817e92d5b1499e5536961544d187a8ad7b7",
+      "bytes": 12491,
+      "ok": true
+    },
+    {
+      "group": "deliverables",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/READING_LEDGER.json",
+      "sha256": "02520251152c138d53157583461112a0613f9ba8893917a2b1ee52cbdf8f0e9e",
+      "expected_sha256": "02520251152c138d53157583461112a0613f9ba8893917a2b1ee52cbdf8f0e9e",
+      "bytes": 7167,
+      "ok": true
+    },
+    {
+      "group": "deliverables",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/SOURCE_EXTRACTION_CHECK.json",
+      "sha256": "749121d3e535ade49a942db72b54b8797d6856dcac85bf9982f676b0a18e7295",
+      "expected_sha256": "749121d3e535ade49a942db72b54b8797d6856dcac85bf9982f676b0a18e7295",
+      "bytes": 11785,
+      "ok": true
+    },
+    {
+      "group": "visual_checks",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-36.png",
+      "sha256": "10206a2eb29dd2ca2f764e6b13cc83583d6d1e2003e60c391be9390b3957cad1",
+      "expected_sha256": "10206a2eb29dd2ca2f764e6b13cc83583d6d1e2003e60c391be9390b3957cad1",
+      "bytes": 336941,
+      "ok": true
+    },
+    {
+      "group": "visual_checks",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-37.png",
+      "sha256": "11108bb6f93c39c045c9d7665c03b530131bb19ee4157c716ca13152ed709fd7",
+      "expected_sha256": "11108bb6f93c39c045c9d7665c03b530131bb19ee4157c716ca13152ed709fd7",
+      "bytes": 410702,
+      "ok": true
+    },
+    {
+      "group": "visual_checks",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-38.png",
+      "sha256": "cd73e726c2bb0406307ccea9f5f5f22f7abc3380e3786f47cf1063f91952aae2",
+      "expected_sha256": "cd73e726c2bb0406307ccea9f5f5f22f7abc3380e3786f47cf1063f91952aae2",
+      "bytes": 335909,
+      "ok": true
+    },
+    {
+      "group": "visual_checks",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-40.png",
+      "sha256": "4a4ed6b9164e15393c220c811abc7d86c8d52b400c71b0110e19164a058e7059",
+      "expected_sha256": "4a4ed6b9164e15393c220c811abc7d86c8d52b400c71b0110e19164a058e7059",
+      "bytes": 392739,
+      "ok": true
+    },
+    {
+      "group": "visual_checks",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-44.png",
+      "sha256": "d581b14684e324b355a85a56e1f933d2fa76fe207610b96b243e9ba530a12428",
+      "expected_sha256": "d581b14684e324b355a85a56e1f933d2fa76fe207610b96b243e9ba530a12428",
+      "bytes": 387003,
+      "ok": true
+    },
+    {
+      "group": "primary",
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/dasgupta2011.pdf",
+      "sha256": "1c60972c6ccdeda410ee77537495d6ff7bcd456b778aaf3f06110510d9d07e07",
+      "expected_sha256": "1c60972c6ccdeda410ee77537495d6ff7bcd456b778aaf3f06110510d9d07e07",
+      "bytes": 653379,
+      "ok": true
+    }
+  ],
+  "fresh_full_layout_equals_cached_bytes": true,
+  "fresh_layout_sha256": "410023448da4e07357793b188d0c618c2f68f492d7b352bfc487bf263f77e71f",
+  "page_count": 46,
+  "all_extractions_match": true,
+  "page_checks": [
+    {
+      "pdf_page": 1,
+      "printed_page": 115,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 2,
+      "printed_page": 116,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 3,
+      "printed_page": 117,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 4,
+      "printed_page": 118,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 5,
+      "printed_page": 119,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 6,
+      "printed_page": 120,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 7,
+      "printed_page": 121,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 8,
+      "printed_page": 122,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 9,
+      "printed_page": 123,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 10,
+      "printed_page": 124,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 11,
+      "printed_page": 125,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 12,
+      "printed_page": 126,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 13,
+      "printed_page": 127,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 14,
+      "printed_page": 128,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 15,
+      "printed_page": 129,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 16,
+      "printed_page": 130,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 17,
+      "printed_page": 131,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 18,
+      "printed_page": 132,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 19,
+      "printed_page": 133,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 20,
+      "printed_page": 134,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 21,
+      "printed_page": 135,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 22,
+      "printed_page": 136,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 23,
+      "printed_page": 137,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 24,
+      "printed_page": 138,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 25,
+      "printed_page": 139,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 26,
+      "printed_page": 140,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 27,
+      "printed_page": 141,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 28,
+      "printed_page": 142,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 29,
+      "printed_page": 143,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 30,
+      "printed_page": 144,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 31,
+      "printed_page": 145,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 32,
+      "printed_page": 146,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 33,
+      "printed_page": 147,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 34,
+      "printed_page": 148,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 35,
+      "printed_page": 149,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 36,
+      "printed_page": 150,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 37,
+      "printed_page": 151,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 38,
+      "printed_page": 152,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 39,
+      "printed_page": 153,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 40,
+      "printed_page": 154,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 41,
+      "printed_page": 155,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 42,
+      "printed_page": 156,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 43,
+      "printed_page": 157,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 44,
+      "printed_page": 158,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 45,
+      "printed_page": 159,
+      "matches_fresh_extraction_and_recorded_hash": true
+    },
+    {
+      "pdf_page": 46,
+      "printed_page": 160,
+      "matches_fresh_extraction_and_recorded_hash": true
+    }
+  ],
+  "scope": "Mechanical byte/extraction verification only. Checking all 46 extract hashes does not claim reading all 46 pages. No Lean compilation performed; Lean source inspected."
+}

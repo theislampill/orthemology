@@ -1,0 +1,11 @@
+# Bounded new primary-source findings
+
+No source PDF, OCR or page image is redistributed. Each source digest is under 200 words. These readings supplement, rather than replace, the already verified 1991 response and chapter 4.
+
+## Dretske and Enç, 1984
+
+[Causal Theories of Knowledge](https://home.csulb.edu/~cwallis/382/readings/680/dretske.causal.theories.knowledge.1984.pdf), *Midwest Studies in Philosophy* IX, 517–528; complete article and all ten notes read. The authors distinguish a causal event from its effective property, then examine successively revised causal conditions. Current background beliefs can make a person responsive to the property relevant to the truth of a belief (521–522). They subsequently reject the necessity of a direct or surrogate causal relation to the known condition: environmentally dependable, historically learned correlations can also matter. Their final C(3) is explicitly a proposed necessary condition, not a biconditional, and they hesitate to endorse even that analysis (525–526). Their concluding biological analogy concerns environmental reliability, not a completed account of reflective inference. The view is jointly authored; the initial pure causal thesis is a target under examination, not their final accepted doctrine. The cited empirical studies were not independently checked.
+
+## Dretske–Hawthorne exchange, 2014 reprint
+
+[Complete chapter packet](https://fitelson.org/epistemology/text_ch2.pdf), *Contemporary Debates in Epistemology*, second edition: Dretske, 27–40; Hawthorne, 40–56; Dretske's reply, 56–59. All 33 PDF pages, arguments, notes and references were read. Dretske's note 4 requires the informative feature actually to produce belief; his note 1 retains inferential basing in the closure debate. Hawthorne's principle (4) requires competent deduction with premise-knowledge retained. His equivalence/distribution argument exposes a cost of rejecting closure; note 16 flags factive versus nonfactive reasons. Dretske accepts the distribution cost and acknowledges difficulties applying counterfactual criteria. The exchange grants rather than reduces inferential competence. The editorial overview is not either author's argument. No original-edition collation, settled closure verdict or complete naturalization is claimed.

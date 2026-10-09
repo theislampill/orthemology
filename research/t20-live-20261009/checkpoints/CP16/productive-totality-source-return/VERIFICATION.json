@@ -1,0 +1,134 @@
+{
+  "scope": "Focused source comparison and inference audit only; no new formal theorem, model, integration, outreach, or closure.",
+  "direct_primary_read": [
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-web-return.txt",
+      "embedded_lines": "171–187 inclusive",
+      "all_embedded_labels_present": true
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-unity-web-return.txt",
+      "embedded_lines": "188–210 inclusive",
+      "all_embedded_labels_present": true
+    },
+    {
+      "scan_printed_pages": [
+        34,
+        35,
+        36,
+        39
+      ],
+      "method": "Direct visual inspection of retained PNGs; larger source-worker inspection not duplicated."
+    }
+  ],
+  "interpretive_text_correction": "Electronic L199 verb differs from scan 39: the scan states exists rather than necessitates. Awkward L186 clause also present in scan 36; not emended.",
+  "inherited_comparison_scope": "Full original-bearer interface and specified report arguments read; no new whole-paper credit for modern sources. Large report displays were sometimes truncated; only displayed, relevant portions support their use here.",
+  "verification": {
+    "report_exists": true,
+    "report_words": 4869,
+    "source_line_contiguity_check": "pass",
+    "new_formal_run": false,
+    "philosophical_claims_machine_verified": false,
+    "independent_review_status": "Not requested in this worker; root to read final report.",
+    "full_final_report_consistency_read": true,
+    "new_artifacts": [
+      "REPORT.md",
+      "REPORT.pre-modal-domain-refinement.md",
+      "VERIFICATION.json"
+    ]
+  },
+  "report_sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+  "input_bindings": [
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-web-return.txt",
+      "bytes": 44882,
+      "sha256": "e20ecab19f23f460f75bd539ea7acb4a2a701fee5e511a49d353084d3cbd496c"
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-unity-web-return.txt",
+      "bytes": 43625,
+      "sha256": "9b5ab509fb6a7009c662f7d7d0c4d3462dec099b1a3a344215c455d916b56db4"
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-rushd1995.pdf",
+      "bytes": 3905728,
+      "sha256": "76467cd7ed09c989cca92697a24ab079864a90352f8cf1a35b96ce2a4389b925"
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-34.png",
+      "bytes": 85275,
+      "sha256": "0ebf25ff387feb6d40b5ac914cd30eb67e2d2d4e8dbf21caba6a415fa0646588"
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-35.png",
+      "bytes": 101077,
+      "sha256": "dec888b1a656c345fecec5c10d891af8ab1aed827d8b3f77425574c5f3d1507c"
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-36.png",
+      "bytes": 69369,
+      "sha256": "caba02891f3b54d1f489fffafc73e571b1db41e9c127f522180e575af25d3659"
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-39.png",
+      "bytes": 107889,
+      "sha256": "cce3e25210dd046f8d4a8f3215b07b9685cbc9428d7eafef27e55734e78524d2"
+    },
+    {
+      "path": "intrinsic-necessity-source-return/PRIMARY_DEPENDENCE_RESPONSE.md",
+      "bytes": 13589,
+      "sha256": "0be18bf6e1f4c4ea5372c3063083f31d91efa14646cb3e88782abcc6387cc7ef"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/REPORT.md",
+      "bytes": 16495,
+      "sha256": "ec045d05b5d7da64332d166be5b00e9fcd455453e668e0b5b07ffd3c3c3dbb97"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "bytes": 20262,
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+      "bytes": 30791,
+      "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/REPORT.md",
+      "bytes": 24176,
+      "sha256": "6b0cbc001634b3b3fccb183c759bf0d813a359c6ac2df5cd59b911ae661f47ce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/RULE_AND_TRANSPORT_AUDIT.md",
+      "bytes": 8648,
+      "sha256": "5e1371ebf6411da8b5bdc0dc052fe8b33379e5fc4c855616b0e4575a5f48deb5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/REVIEW.md",
+      "bytes": 13586,
+      "sha256": "9fdd15e135e76531d346b305c4bc4b9f68a630fb2ea42de3a0b98d04d1158ad2"
+    },
+    {
+      "path": "essence-attribute-source-return/REPORT.md",
+      "bytes": 22095,
+      "sha256": "b3285f626648219e3a5d4fe991908f59caf5d368f2218d36dfab929248d47700"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/SourceIdentityDerived.lean",
+      "bytes": 7438,
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "read_scope": "Targeted Necessary definition and necessity_of_actual_root theorem; no full source reading or formal replay claimed."
+    }
+  ],
+  "previous_report": {
+    "path": "productive-totality-source-return/REPORT.pre-modal-domain-refinement.md",
+    "sha256": "323d1a6617cf317173f23d9ec80d98d94caf1645378e864f9d1d03a01b011400"
+  },
+  "semantic_refinement": "Source contingency through itself, whole receipt, and represented modal nonnecessity are not identified. ContingencyNeed entails modal nonnecessity implies receipt only; modal persistence does not entail nonreceipt."
+}

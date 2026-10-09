@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-10-08T14:46:32.857393+00:00",
+  "verdict": "Scoped mathematical results supported; governing Proposition 6 mass/support qualification in SCOPE_ADDENDUM.md",
+  "files": [
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "326db45ba67e11bb0b2a916eb3d73adc96d94615372d9be2d07df5b2c30c64c2",
+      "bytes": 1047
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "67da1adbed1f7c3d4000b3950c75833c8d0a4b5d68cd0e8970d95fb4a4abaf6d",
+      "bytes": 903
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "505821674301ee1da70a5124e06d746df86f8bbdfcf8afe6eef603b1c546186a",
+      "bytes": 16603
+    },
+    {
+      "path": "REVIEW_BINDINGS.json",
+      "sha256": "886dc2643f00239cedb7d0b896545197d0f28796024dcd0536c2076aee074769",
+      "bytes": 5244
+    },
+    {
+      "path": "SCOPE_ADDENDUM.md",
+      "sha256": "7f9d219cb2e9eeba85a372fb81c1aa5e17a7cc20b3b0309859f371ccab86ad24",
+      "bytes": 2298
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "e5cf7137078b43f1a25e8445c14c0dd14e2e19c27c039f8fe79a64c03f156592",
+      "bytes": 9631
+    }
+  ],
+  "verification": "Independent exact controls freshly rerun with byte-identical saved JSON; original author manifest and all frozen bindings match.",
+  "authority": "Independent review only; no integration, acceptance, or T20 closure."
+}

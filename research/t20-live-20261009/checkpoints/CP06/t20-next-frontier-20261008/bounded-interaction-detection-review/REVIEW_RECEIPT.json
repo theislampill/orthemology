@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "sealed_utc": "2026-10-08T15:25:51.687855+00:00",
+  "review_kind": "Independent adversarial proof audit, exact rational raw-Cauchy controls, and copied replay verification",
+  "scope": [
+    "Known-total-ceiling complete support detection and finite recovery of interaction-anchored counts",
+    "Exact joint isolated-positive-unary count fibre under the total ceiling",
+    "Conditional known-count cover gives target support decisions without a target-count ceiling",
+    "Fair discovery under coverage of every known finite root by positive multi-root supports; all counts recovered without a total ceiling"
+  ],
+  "blocking_findings": [],
+  "author_artifacts": [
+    {
+      "path": "bounded-interaction-detection/RESULT.md",
+      "sha256": "5c296d4aae493b0f8bb7bbfb6330ae95e155c7efd3d724c0624ddca1b42ed8e6",
+      "bytes": 17779
+    },
+    {
+      "path": "bounded-interaction-detection/COVER_DISCOVERY.md",
+      "sha256": "81520f7b56911f06b9f047670f48a3e72910bc49d256546970b8b7b84d13cf15",
+      "bytes": 7323
+    },
+    {
+      "path": "bounded-interaction-detection/CORROBORATING_UNARY_CHECK.md",
+      "sha256": "997253493dbe742cc5643db49a1104bddb1db938439c46ab7e07328dad5a0e28",
+      "bytes": 2051
+    },
+    {
+      "path": "bounded-interaction-detection/EXACT_CONTROLS.md",
+      "sha256": "9e42c814e73bd5bbdaa879462769145c7534aa786c93a289ac98c5ddc12513f6",
+      "bytes": 1978
+    },
+    {
+      "path": "bounded-interaction-detection/SOURCE_AUDIT.md",
+      "sha256": "d9ece1651da081de323c927f8fd8bec5bf7dd76c8a57e854e4451879896c68d1",
+      "bytes": 8119
+    },
+    {
+      "path": "bounded-interaction-detection/READ_FIRST.md",
+      "sha256": "479a698efb8b3a0346fccb75b778506a29f7574c1ca305ef1d81e193bfcfb0ad",
+      "bytes": 1432
+    },
+    {
+      "path": "bounded-interaction-detection/SOURCE_BINDINGS.json",
+      "sha256": "667e4f3aa1b66750bca7623a607962f5c19ed9351932e1d8338026575d25012d",
+      "bytes": 28852
+    },
+    {
+      "path": "bounded-interaction-detection/RESEARCH_EVENTS.jsonl",
+      "sha256": "2b0a3257e4764534ee0ad8a323e867bb2a3e0a49119f4857ac8604751ef4b005",
+      "bytes": 1327
+    },
+    {
+      "path": "bounded-interaction-detection/exact_controls.py",
+      "sha256": "6c4859846a169b94ba75e4a8087cfc432dc511d76a993a9f2e8f5e597e5e5a45",
+      "bytes": 7535
+    },
+    {
+      "path": "bounded-interaction-detection/verify_evidence.py",
+      "sha256": "4d9b89e0a5222e49b5000000b041c6458197edc69a9845e007c454d5eb4cb25b",
+      "bytes": 2100
+    },
+    {
+      "path": "bounded-interaction-detection/results/exact_controls.json",
+      "sha256": "74df7532deff48971dcf342ecaa5a21b0bfb4626a6b6853fceb2dd627f20bba2",
+      "bytes": 1120
+    },
+    {
+      "path": "bounded-interaction-detection/results/exact_controls.log",
+      "sha256": "74df7532deff48971dcf342ecaa5a21b0bfb4626a6b6853fceb2dd627f20bba2",
+      "bytes": 1120
+    }
+  ],
+  "imported_unary": {
+    "path": "finite-hypergraph-calibration/ANCHORED_UNARY_COUNT.md",
+    "sha256": "1f2312b0387c06753879150c88da61ad506fbe9b132e4ccd0c8e5f4e4f29ef3c",
+    "scoped_superseding_receipt": "finite-hypergraph-calibration-review/unary_v2_addendum/REVIEW_RECEIPT.json",
+    "receipt_sha256": "a865338a2bf493349450d4b9670c6ff65c8f367ae5ca72bcdfa7fac9f2217335",
+    "ownership": "Imported lemma; this review\u2019s equivalent determinant proof is corroboration only."
+  },
+  "review_manifest": {
+    "path": "REVIEW_MANIFEST.json",
+    "sha256": "800fcc235c3118adf0f40bf564ad994c4e483988eabc0782075ad069aef84300",
+    "payloads": 17
+  },
+  "source_bindings": {
+    "path": "SOURCE_BINDINGS.json",
+    "sha256": "7125c3a9f675b6b8fec99d8a4e18dde8e4b294fbc811935b8de7c7b1869f5bab",
+    "files": 163
+  },
+  "verification": {
+    "path": "VERIFICATION.json",
+    "sha256": "1f5f1448377d8ede1137eedfbdaaa09d26d66cd234b7f4ef29bfe094864ab202",
+    "result": {
+      "status": "PASS",
+      "bound_review_files": 17,
+      "bound_source_files": 163,
+      "unchanged_prior_files": 91,
+      "copied_replays": [
+        "independent",
+        "conditional",
+        "discovery",
+        "author"
+      ],
+      "source_files_executed_in_place": false
+    }
+  },
+  "independent_controls": {
+    "world_name_runs": 1216,
+    "support_decisions": 9740,
+    "raw_queries": 631925,
+    "max_bits": 94,
+    "unary_signs": 168,
+    "unary_recoveries": 32
+  },
+  "conditional_cover_controls": {
+    "runs": 104,
+    "raw_queries": 3949,
+    "max_bits": 42,
+    "uncovered_rejections": 4
+  },
+  "cover_discovery_controls": {
+    "complete_world_name_runs": 18,
+    "positive_count_searches": 52,
+    "half_integer_signs": 168,
+    "raw_queries": 46972,
+    "max_bits": 34,
+    "bounded_partial_checks": 8
+  },
+  "author_replay": {
+    "assertions": 18101,
+    "byte_identical": true,
+    "script_sha256": "6c4859846a169b94ba75e4a8087cfc432dc511d76a993a9f2e8f5e597e5e5a45"
+  },
+  "qualifications": [
+    "Every oracle claim is relative to the declared fixed finite independent-route/shared-calibration model and every valid certified population Cauchy name.",
+    "M is independently supplied, never inferred; its total budget is not a per-support bound or an attained-total promise.",
+    "H includes the empty set and all rate bounds use one common base.",
+    "Conditional cover requires actual known positive supports/counts covering every target root.",
+    "Without the structural cover promise, discovery is partial and nontermination gives no negative inference.",
+    "Outputs are discrete support/count information, not entire calibration functions.",
+    "No finite-sample or uniform precision/runtime guarantee, model-validation claim, physical/metaphysical inference, protected integration, owner acceptance, or T20 closure."
+  ],
+  "preservation": "All 91 preexisting source files captured at review start are byte-identical; all 163 final bound source artifacts verified before and after copied replay. Writes remained in the new review directory.",
+  "subsequent_author_packaging": "Author REVIEW_STATUS, final MANIFEST, and generated verification result are not proof dependencies of this receipt and may be added after it."
+}

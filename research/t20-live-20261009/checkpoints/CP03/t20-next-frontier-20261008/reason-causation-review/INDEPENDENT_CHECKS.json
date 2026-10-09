@@ -1,0 +1,45 @@
+{
+  "author_tree_unchanged": true,
+  "counts": {
+    "accepted_cases": 128,
+    "accepted_false_input_cases": 96,
+    "accepted_true_input_cases": 32,
+    "bit_packets": 512,
+    "conditional_cases": 2048,
+    "conditional_failures": 0,
+    "drop_first_true_input_false_output_cases": 32,
+    "drop_match_true_input_false_output_cases": 64,
+    "true_input_cases": 1344
+  },
+  "limits": [
+    "Finite declared equations only; no device physics or human-cognition experiment.",
+    "Conditional soundness is not completeness, warrant, content origin or a reliability probability.",
+    "Single-bit intervention counts are directed finite comparisons, not frequencies of natural processes."
+  ],
+  "payload_hashes_before_and_after": 19,
+  "predecessor_hash_bindings_verified": 13,
+  "reviewed_manifest_sha256": "504ef228406a1e9d9e38979df9dfa58f0f3fab4a7551ed944177a2a3e5d29794",
+  "saved_results_equal": true,
+  "single_bit_accepted_derivation_changes": [
+    64,
+    64,
+    64,
+    64,
+    32,
+    32,
+    64,
+    64,
+    0
+  ],
+  "single_bit_output_changes_over_512_packets": [
+    64,
+    64,
+    64,
+    64,
+    512,
+    512,
+    64,
+    64,
+    0
+  ]
+}

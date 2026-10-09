@@ -1,0 +1,329 @@
+{
+  "files": [
+    {
+      "path": "INHERITED_BINDINGS.json",
+      "bytes": 3197,
+      "sha256": "13cc66c8ad669124aa286989d61f3410993d0b537dff84d906a2d38f75cb777a"
+    },
+    {
+      "path": "PAGE_AND_VOICE_MAP.md",
+      "bytes": 9343,
+      "sha256": "857c6940093ed2771655ab07503ab5338d3204fae56953a7cd2644d819fcb1c0"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 1266,
+      "sha256": "e735384946a81eaa42e77ededeed774c7d5f40ac1e752ea4abd2709008d90683"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 18141,
+      "sha256": "cfd70cdca601878e4b62c91757f5622e094d4e060446e21ceea0e21a6d717634"
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "bytes": 3958,
+      "sha256": "51459e094ea21be7959ebaea8b349b2a45325a36001a160412c4b2a021771d26"
+    },
+    {
+      "path": "commentary/RESULT.md",
+      "bytes": 7752,
+      "sha256": "f6c59db2399cc4fb62bdd3383b6b079c4331125f0473e68a38f9f253590f1722"
+    },
+    {
+      "path": "jami/JAMI_VI_94_98_VERIFIED_RETURN.md",
+      "bytes": 15919,
+      "sha256": "0c6789e8f9299cab6609ccfdca152858bbe95036ce66df04c3fba5406d4beb4e"
+    },
+    {
+      "path": "jami/VERIFICATION_MANIFEST.json",
+      "bytes": 2834,
+      "sha256": "3fb701cad6522f997e44865c15e4a2ad7af9c69a0358b920a1ac55297ed3855e"
+    },
+    {
+      "path": "jami/fetch-record.json",
+      "bytes": 464,
+      "sha256": "4262609c94ea4b98fde7d50ac08d41f1b035bbc0f8590af163e722e8cc8b0643"
+    },
+    {
+      "path": "jami/islamarchive28157-metadata.html",
+      "bytes": 284055,
+      "sha256": "b22c12c70ef29eda68682f9df44e05a39a24fd071e55061ca2cde25986338859"
+    },
+    {
+      "path": "jami/islamarchive28157-metadata.txt",
+      "bytes": 67322,
+      "sha256": "bf901b3c09b7b38907654e4b45ca60571bf569373f0114eb9283ed01d43e0c6e"
+    },
+    {
+      "path": "jami/jami6-csiislam.pdf",
+      "bytes": 6584222,
+      "sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    },
+    {
+      "path": "jami/pages/csiislam-093.png",
+      "bytes": 93844,
+      "sha256": "29a2b63fd73e3ed47ba61192e00e3af184400195d4aa06a9f74c864dacc8cab7"
+    },
+    {
+      "path": "jami/pages/csiislam-094.png",
+      "bytes": 89607,
+      "sha256": "c25962d32488f7b703817fe694b8ab39d840c32bac695ffe9c7c807f670cdda6"
+    },
+    {
+      "path": "jami/pages/csiislam-095.png",
+      "bytes": 94006,
+      "sha256": "734d55fbe8e368e242e1f13cd1f896a1c5e77bf4749f28e0596b711f4bb4f65e"
+    },
+    {
+      "path": "jami/pages/csiislam-096.png",
+      "bytes": 97451,
+      "sha256": "98db91fffdb679c2950df62ca1a4b8b9d6c37ddfc91e187c0ece7ede584b73ab"
+    },
+    {
+      "path": "jami/pages/csiislam-097.png",
+      "bytes": 94386,
+      "sha256": "23ba58423fae9b62cd721cb7a9cfe17f0a542b3c42cb590de0d072a2f832a1e6"
+    },
+    {
+      "path": "jami/pages/csiislam-098.png",
+      "bytes": 85150,
+      "sha256": "ac2dd03d665fc0e654064caababeb29e2364f53c64129af7ba4eb648c76de2aa"
+    },
+    {
+      "path": "jami/pages/csiislam-099.png",
+      "bytes": 86961,
+      "sha256": "9a148b0264e27f0941a4ec5e70c85b473c2e8df1a839ac2f3e9c35f1ac17fe1c"
+    },
+    {
+      "path": "jami/pages/csiislam-context-085.png",
+      "bytes": 20283,
+      "sha256": "b6d2d8f67e72fe3dc94c0792d679ba543959843edd77f3c80078ccccec98201e"
+    },
+    {
+      "path": "jami/pages/csiislam-context-086.png",
+      "bytes": 7698,
+      "sha256": "39116b4ff190093038fbf729e60ebf5795466af95809c14eda502bbd3a8ca268"
+    },
+    {
+      "path": "jami/pages/csiislam-context-087.png",
+      "bytes": 80756,
+      "sha256": "fde1123cf4a5d2034c3545321077e2b63abf9f90c1876c4a5c9b03f50e66d46f"
+    },
+    {
+      "path": "jami/pages/csiislam-front-001.png",
+      "bytes": 1788239,
+      "sha256": "228faaa3c6b259939ec3201c5aa2071c711954ccbe89502472eb857a7b9b4b10"
+    },
+    {
+      "path": "jami/pages/csiislam-front-002.png",
+      "bytes": 14851,
+      "sha256": "ce4a2a931bfb8a7097a09cd925a7e19b5bee3818077738d5f8a108206b72ac59"
+    },
+    {
+      "path": "jami/pages/csiislam-front-003.png",
+      "bytes": 21301,
+      "sha256": "e552586b149ab72078ee5041165b12fe6a1c30fa527d2367d036ff17455468ad"
+    },
+    {
+      "path": "jami/pages/csiislam-front-004.png",
+      "bytes": 7455,
+      "sha256": "ac74f278aa75f42cacd3fd41ba2811390954c5dea22bdd5d0c15ee85de48acc0"
+    },
+    {
+      "path": "read-selections/dar016-L0622-L0651.txt",
+      "bytes": 12017,
+      "sha256": "69e4a9477de909b137261e9e70bb978206ccbf276e77c8d52e86ef4f35dfc9d8"
+    },
+    {
+      "path": "read-selections/dar016-L0690-L0757.txt",
+      "bytes": 23764,
+      "sha256": "1110e59e8a16f54437297fa61c84d1081ae2ad185fc1603b2fb942e451f26b75"
+    },
+    {
+      "path": "read-selections/majmu20-item2032-L0001-L0020.txt",
+      "bytes": 17326,
+      "sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b"
+    },
+    {
+      "path": "read-selections/minhaj1-item96-L0001-L0009.txt",
+      "bytes": 4822,
+      "sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d"
+    },
+    {
+      "path": "read-selections/minhaj2-item156-L0021-L0041.txt",
+      "bytes": 16349,
+      "sha256": "a63ee0704acda67330177966e989f3e13961edb3cd640c0ef5fb250b355f4b8a"
+    },
+    {
+      "path": "read-selections/minhaj2-item157-L0001-L0004.txt",
+      "bytes": 4028,
+      "sha256": "a4564e944544d14733b06aad01f3285db3c4e0d1243d84d4aa22184ead4bb60e"
+    },
+    {
+      "path": "sources/ACQUISITION.json",
+      "bytes": 596,
+      "sha256": "6b0af813a2c8215fb4ddd73cc61234b3c1216c56f9f9da50bd364d4329490aeb"
+    },
+    {
+      "path": "sources/DAR_ACQUISITION.json",
+      "bytes": 7431,
+      "sha256": "835c40f230a3717301de855760e884235b6bbcc8e58f49f8b0ff11ba387a1213"
+    },
+    {
+      "path": "sources/MINHAJ_ACQUISITION.json",
+      "bytes": 2316,
+      "sha256": "9d96f605774a351195b69b5da8d7787322e669d6b3994bde7aca9a1f41b326d7"
+    },
+    {
+      "path": "sources/dar9-item1766.html",
+      "bytes": 595429,
+      "sha256": "1b52b42d861e34155ad693ef7128345126d3d8f7e9a26c0429bc0a547c164023"
+    },
+    {
+      "path": "sources/dar9-item1766.txt",
+      "bytes": 3601,
+      "sha256": "12b8344d3c2eedca56682a9666654aac83bdd2ddc3da03c1f9c4fb93b6efd000"
+    },
+    {
+      "path": "sources/dar9-item1767.html",
+      "bytes": 595781,
+      "sha256": "745cdd6d9430f6ee1ce2e752f01553206f10832c43145e453e4dc144adf1d226"
+    },
+    {
+      "path": "sources/dar9-item1767.txt",
+      "bytes": 2700,
+      "sha256": "a036994ff796bff007d356ef39c81d90ccfba3f5049d984ac323a87299ce330f"
+    },
+    {
+      "path": "sources/dar9-item1768.html",
+      "bytes": 609714,
+      "sha256": "e68f52113afea0178e90373c45b0e1a350f68c4237330f749b48cfa3b7efd210"
+    },
+    {
+      "path": "sources/dar9-item1768.txt",
+      "bytes": 8729,
+      "sha256": "fabea83cfaa36f50d1b69709a9511cc49563dee3e5bb2223a837be3a672e4ba0"
+    },
+    {
+      "path": "sources/dar9-item1769.html",
+      "bytes": 613584,
+      "sha256": "dd4735e64bdcd86227f65af71fd14bb2c553e19e0674594daefe22ce86d6a963"
+    },
+    {
+      "path": "sources/dar9-item1769.txt",
+      "bytes": 6668,
+      "sha256": "104e98e090099d3a8aba439e8313c8287d6e51128cf77e405e1d8d23d33b9427"
+    },
+    {
+      "path": "sources/dar9-item1770.html",
+      "bytes": 596145,
+      "sha256": "3b4c8ff66a83dbb8fe914d159b810e91572b416f4c5789e17f8a76a4e297694f"
+    },
+    {
+      "path": "sources/dar9-item1770.txt",
+      "bytes": 3960,
+      "sha256": "203c66321524149e879856d816b90c217a412fda124106b9ac7b3aafebe72e37"
+    },
+    {
+      "path": "sources/dar9-item1771.html",
+      "bytes": 622179,
+      "sha256": "737fef565de4ba93cc0fd10d8a942da72323de68f15b4c0cb2f7269e4aedf0e7"
+    },
+    {
+      "path": "sources/dar9-item1771.txt",
+      "bytes": 8335,
+      "sha256": "8bc4fb53a81ea91354a222625cfa318934767a309e7c76fe862b4c97e41fc471"
+    },
+    {
+      "path": "sources/dar9-item1772.html",
+      "bytes": 595429,
+      "sha256": "2c0eecb24e5204a7308c01b6098193a950be4dd2efa77d1269a23a1326757013"
+    },
+    {
+      "path": "sources/dar9-item1772.txt",
+      "bytes": 3385,
+      "sha256": "9b611ee728efb05d129943dd85d10c3cfa3d506009fa4ab5e4c840814360e9fc"
+    },
+    {
+      "path": "sources/dar9-item1773.html",
+      "bytes": 617037,
+      "sha256": "6e2f0732c53fd7b2e16cbfcd551fef096ffb7c2bd851c47c3894be0affa5252c"
+    },
+    {
+      "path": "sources/dar9-item1773.txt",
+      "bytes": 10622,
+      "sha256": "11310540f2cdf7555f4faded6eac67e573ccd6e7c1d7013de16f637599e987a2"
+    },
+    {
+      "path": "sources/dar9-item1774.html",
+      "bytes": 600267,
+      "sha256": "eb1b5c9748e5acf04edfeeccf07a2c29ec2a268b5cf0a3a3c1e3869cbdf892d5"
+    },
+    {
+      "path": "sources/dar9-item1774.txt",
+      "bytes": 5204,
+      "sha256": "6bbcf5fa03937fa96de456a8225a77e5ba08d2fe86201d9767ff2385d256d728"
+    },
+    {
+      "path": "sources/dar9-item1775.html",
+      "bytes": 594472,
+      "sha256": "5509f5efb52eb222ffce76fb367d44bbd47e284f3cfe0081f954e92cbbb7dc26"
+    },
+    {
+      "path": "sources/dar9-item1775.txt",
+      "bytes": 3596,
+      "sha256": "da2701d238564924a4a95f706ec17f110b710439acd02110eae30f0cb69564d5"
+    },
+    {
+      "path": "sources/dar9-item1776.html",
+      "bytes": 597916,
+      "sha256": "72e16113dd2f5cbc790ffae23045b8657f079b3a895b0893584723bcf08f3286"
+    },
+    {
+      "path": "sources/dar9-item1776.txt",
+      "bytes": 4472,
+      "sha256": "e15e6280b1c22012888dcd41546e18297c4facc963be67e74f87986d429118ab"
+    },
+    {
+      "path": "sources/extract_dar.py",
+      "bytes": 1685,
+      "sha256": "8a73546d78520528316a4b1454fb5728a5b081b26ec39147deeaf6ec7e3f5cd2"
+    },
+    {
+      "path": "sources/extract_minhaj.py",
+      "bytes": 1692,
+      "sha256": "bf33b335618bbceaa39391ccdc6f9d2685d41fc14f235fc98a32cc6945adf066"
+    },
+    {
+      "path": "sources/minhaj3-item364.html",
+      "bytes": 328401,
+      "sha256": "b43b494ada42c622f7664c5509f5ad0871fd16faf452f3a17294f498d0313b3b"
+    },
+    {
+      "path": "sources/minhaj3-item364.txt",
+      "bytes": 16481,
+      "sha256": "af268151cd5f1f0a82e9df377e68b1285975c9201abc80acad5587d28bf1e999"
+    },
+    {
+      "path": "sources/minhaj3-item365.html",
+      "bytes": 268064,
+      "sha256": "081c5255fc92bf7b80b9ca8ae6f0c8a9dd2201f97e25797ec9f9027041f2cec1"
+    },
+    {
+      "path": "sources/minhaj3-item365.txt",
+      "bytes": 9296,
+      "sha256": "6d1d3d21a4b24c45709242609137b66031f2c0d8a262c6ab60a46efec69856cb"
+    },
+    {
+      "path": "sources/minhaj3-item366.html",
+      "bytes": 407961,
+      "sha256": "47bc59df85887b762735f90139f5a62f03a9324341ae4d7aba9d8a0fbb501fec"
+    },
+    {
+      "path": "sources/minhaj3-item366.txt",
+      "bytes": 23821,
+      "sha256": "971e1b9369a026c4eb24dfa4b98a5dd21e42b712dd6415a8d81ba5443e6fc8cb"
+    }
+  ]
+}

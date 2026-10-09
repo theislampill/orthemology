@@ -1,0 +1,84 @@
+{
+  "schema": "bounded-source-first-reading/1",
+  "date_utc": "2026-10-09",
+  "author": "Muhammad ibn Salih al-Uthaymin",
+  "work": "القواعد المثلى في صفات الله وأسمائه الحسنى",
+  "operation": "New title reading followed by bounded reflective rereading",
+  "complete_presented_electronic_witness_read": true,
+  "certified_complete_published_book_read": false,
+  "whole_print_scan_read": false,
+  "official_complete_copy_obtained": false,
+  "primary_witness": {
+    "url": "https://www.arabic-keyboard.info/books/ar/read-book/القواعد-المثلى-في-صفات-الله-وأسمائه-الحسنى",
+    "local_file": "sources/qawaid-available-electronic-witness.txt",
+    "sha256": "e02205ec0dc401891eddf6d117658a4097d2bf8d43ff203bcc26eba1dd0c5995",
+    "read_interval_inclusive": [38, 375],
+    "main_body_interval_inclusive": [38, 345],
+    "appended_article_interval_inclusive": [346, 375],
+    "retrieval_read_spans_in_order": [[38, 99], [72, 135], [113, 181], [163, 222], [205, 259], [241, 300], [281, 341], [324, 375]],
+    "missing_numbered_lines": [],
+    "conflicting_overlapping_lines": [],
+    "publisher_authorization_of_host_verified": false,
+    "print_edition_identity_verified": false,
+    "visible_witness_defects": [
+      {"lines": [46, 46], "description": "Abrupt transition in Ibn Baz preface; not repaired."},
+      {"lines": [153, 153], "description": "Incomplete Quran quotation; no inference depends on the defective wording."},
+      {"lines": [357, 358], "description": "Appended article quotation loses intervening wording; not repaired."}
+    ]
+  },
+  "reflective_reread": {
+    "intervals_inclusive": [[54, 73], [94, 118], [119, 154], [195, 205], [245, 256], [274, 281]],
+    "questions": [
+      "Does the perfection ascent establish the disputed numerical exclusivity bridge?",
+      "Does possible qualification license necessary actuality of particular voluntary acts?",
+      "Does shared predication collapse distinct concrete attribute instances or multiply self-standing bearers?",
+      "How do generic perfection, rational warrant for a revealed attribute, names, name derivation, and unfamiliar descriptive terminology differ?"
+    ],
+    "not_a_second_complete_traversal": true
+  },
+  "secondary_electronic_check": {
+    "url": "https://usul.ai/ar/t/the-fundamental-principles-on-the-names-and-attributes-of-allah",
+    "local_file": "sources/usul-perfection.txt",
+    "catalog_edition_label": "Islamic University, Medina, third edition, 1421 AH / 2001 CE",
+    "selectively_verified_displayed_print_pages": [[8, 9], [11, 13], [18, 20]],
+    "additional_page_url": "https://usul.ai/ar/t/the-fundamental-principles-on-the-names-and-attributes-of-allah/27",
+    "additional_displayed_print_page": 28,
+    "independent_textual_witness_claimed": false,
+    "scan_collation_claimed": false
+  },
+  "official_catalog": {
+    "url": "https://foundation.binothaimeen.net/ar/books/show/e53e28b8-25a6-498e-8204-67b3dd161a51",
+    "edition": "Fourth, 1435 AH",
+    "pages": 143,
+    "identity_with_read_witness_claimed": false
+  },
+  "prior_coverage_check": {
+    "qawaid_prior_reading_record_located": false,
+    "bounded_workspace_search_not_universal_corpus_claim": true,
+    "previous_coverage_preserved": [
+      "Sharh al-Aqida al-Wasitiyya volume 1: inherited full first traversal and selective reflection.",
+      "Six official-site tafsir loci U1-U6: inherited targeted reading, not reread in this operation."
+    ],
+    "record_paths": [
+      "../recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/historical-reading-projections/documents/Arabic_Volume_Reading_Index_Final_v1_20261006.md",
+      "../recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md",
+      "../recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/uthaymin/READING_RECEIPTS.json"
+    ]
+  },
+  "current_comparison_targets_read": [
+    "../reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+    "../essence-attribute-source-return/REPORT.md"
+  ],
+  "access_limits": [
+    {"target": "https://binothaimeen.net/books", "method": "shell public HTTP read", "result": "HTTP 403", "disposition": "Stopped endpoint; no retry or bypass."},
+    {"target": "https://old.binothaimeen.net/content/16818", "method": "public web click/open", "result": "Cache miss/inaccessible", "disposition": "No readable commentary or official full text acquired."},
+    {"target": "https://usul.ai/ar/t/the-fundamental-principles-on-the-names-and-attributes-of-allah", "method": "shell public HTTP read", "result": "HTTP 403", "disposition": "Stopped shell route; separately public web presentation used."},
+    {"target": "https://shamela.org/gen/68d792eeec1755164c6dc94f08727b53_gen.pdf", "method": "public web open", "result": "NO REFERER", "disposition": "Stopped; no header spoofing or bypass."},
+    {"target": "https://download.ilmussalaf.com/Books/Qawaidul-Muthla.pdf", "method": "public web PDF open/screenshots", "result": "Tool declared 112-page PDF; screenshots did not provide inspectable images in this interface", "disposition": "No scan-reading or edition-verification credit."}
+  ],
+  "external_contacts": 0,
+  "protected_changes": false,
+  "integration_or_closure_authority_exercised": false,
+  "historical_timing_claims_made": false,
+  "deliverable": "REPORT.md"
+}

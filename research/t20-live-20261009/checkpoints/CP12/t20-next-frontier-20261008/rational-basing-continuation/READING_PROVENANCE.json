@@ -1,0 +1,183 @@
+{
+  "recorded_utc": "2026-10-08T22:13:03.299997+00:00",
+  "scope": "Bounded philosophical continuation; primary text plus scoped modal diagnostic; no integration or closure",
+  "time_floor": "UNVERIFIED",
+  "duration_claim": "None; events record actual operations, not accumulated or uninterrupted work duration",
+  "sources": [
+    {
+      "authors": [
+        "Fred Dretske",
+        "Berent Enç"
+      ],
+      "title": "Causal Theories of Knowledge",
+      "publication": "Midwest Studies in Philosophy IX (1984), 517–528",
+      "url": "https://home.csulb.edu/~cwallis/382/readings/680/dretske.causal.theories.knowledge.1984.pdf",
+      "host": "California State University Long Beach faculty teaching copy",
+      "http_status": 200,
+      "bytes": 792083,
+      "sha256": "97e9f5f4b341f89ea72699188283f907160ae93d6f5be0bfe3c83df84167f22c",
+      "pdf_pages": 12,
+      "printed_read": [
+        517,
+        528
+      ],
+      "full_continuous_argument_and_notes_read": true,
+      "notes_read": "All ten; printed527–528",
+      "method": "Web PDF text in overlapping continuous windows through printed526, then local pdftotext -layout printed525–528 to recover final argument and all notes without truncation. Complete argument coverage, not a claim of a second uninterrupted traversal.",
+      "visual_recheck_printed": [
+        525
+      ],
+      "source_body_delivered": false,
+      "qualification": "Jointly authored philosophical argument. Necessary-condition proposals and reported target theories are distinguished from endorsed conclusions; cited empirical studies not independently checked."
+    },
+    {
+      "title": "Is Knowledge Closed under Known Entailment? chapter packet",
+      "collection": "Contemporary Debates in Epistemology, second edition",
+      "editors": [
+        "Matthias Steup",
+        "John Turri",
+        "Ernest Sosa"
+      ],
+      "url": "https://fitelson.org/epistemology/text_ch2.pdf",
+      "host": "Branden Fitelson faculty teaching website",
+      "host_context_verified": "https://fitelson.org/epistemology/",
+      "http_status": 200,
+      "bytes": 151250,
+      "sha256": "4e7341231d7c54f5f042b40591bf490a85417c8dd61123e3645198de16e98406",
+      "pdf_pages": 33,
+      "pdf_pages_read": [
+        1,
+        33
+      ],
+      "continuous_full_packet_read": true,
+      "reading_order": "Editorial introduction and complete Dretske essay; complete Dretske reply; then complete Hawthorne essay before final response assessment. No full-packet single-sequence traversal claim.",
+      "components": [
+        {
+          "author": "Fred Dretske",
+          "title": "The Case against Closure",
+          "printed": [
+            27,
+            40
+          ],
+          "notes": "All eight",
+          "references_read": true,
+          "local_text_line_batches": [
+            [
+              1,
+              245
+            ],
+            [
+              246,
+              495
+            ],
+            [
+              496,
+              675
+            ]
+          ]
+        },
+        {
+          "author": "John Hawthorne",
+          "title": "The Case for Closure",
+          "printed": [
+            40,
+            56
+          ],
+          "notes": "All twenty-four",
+          "references_read": true,
+          "local_text_line_batches": [
+            [
+              674,
+              939
+            ],
+            [
+              940,
+              1184
+            ],
+            [
+              1185,
+              1473
+            ]
+          ]
+        },
+        {
+          "author": "Fred Dretske",
+          "title": "Reply to Hawthorne",
+          "printed": [
+            56,
+            59
+          ],
+          "full_read": true,
+          "notes": "No separate notes section",
+          "local_text_line_batches": [
+            [
+              1470,
+              1592
+            ]
+          ]
+        }
+      ],
+      "method": "pdftotext -layout with explicit continuous batches; selected PDF page images visually rechecked",
+      "visual_recheck_printed": [
+        38,
+        39,
+        45,
+        55,
+        57
+      ],
+      "edition_identity": {
+        "witness_statement": "First PDF page explicitly labels Second Edition and ©2014 / Published2014; cite this witness and its printed pagination.",
+        "original_vs_reprint": "Bibliographic sources index the original exchange in the 2005 first edition; no original-edition body reading or textual collation is claimed. Do not present the second-edition witness as a newly written 2014 argument.",
+        "date_qualification": "Wiley metadata for the same second-edition volume (ISBN9780470672099) records print publication10September2013 with copyright2014; MIT OCW also catalogs it as2013. The exact textual witness used here bears2014.",
+        "metadata_sources": [
+          "https://onlinelibrary.wiley.com/doi/10.1002/9781394260744.ch12",
+          "https://ocw.mit.edu/courses/24-211-theory-of-knowledge-spring-2014/pages/readings/",
+          "https://philpapers.org/sep/epistemology/"
+        ],
+        "metadata_scope": "The Wiley metadata is for another chapter in the same edition, used only to distinguish publication metadata from the witness copyright. It is not an additional philosophical argument source."
+      },
+      "attribution": "Editorial introduction is distinct from the authors. Hawthorne is read directly, not reconstructed only from Dretske’s reply. Full closure dispute not resolved.",
+      "source_body_delivered": false
+    }
+  ],
+  "limited_candidates": [
+    {
+      "title": "From Experience to Belief: Modes of Mental Representation",
+      "url": "https://www.uh.edu/~garson/DretskeExperience.PDF",
+      "scope": "Existing local21-page scan; first page visually inspected only; no complete argument/notes credit; witness publication identity not established",
+      "link_verification": "Href directly read from https://www.uh.edu/~garson/SyllabusMeaning2011.htm"
+    },
+    {
+      "title": "Entitlement: Epistemic Rights Without Epistemic Duties?",
+      "scope": "Bibliographic/abstract discovery only; no body read; not used as substantive argument evidence"
+    },
+    {
+      "title": "Conclusive Reasons",
+      "scope": "Publisher/indexed bibliography only; no verified primary body acquired or read in this operation; no source-content conclusions attributed from snippets"
+    },
+    {
+      "title": "Reasons and Causes",
+      "scope": "Bibliographic discovery only; inherited failed full-body access retained; no new publisher loop or reading credit"
+    }
+  ],
+  "inherited_limits": {
+    "chapter6": "Explaining Behavior1988, DOI10.7551/mitpress/2927.003.0007 remains unread; prior Cloudflare obstruction retained without repeating the publisher loop.",
+    "1991_reply": "Complete prior reading and answered same-acquisition circularity objection retained; not freshly reread here.",
+    "chapter4": "Prior whole-chapter OCR coverage with gaps and decisive visual checks retained, not upgraded.",
+    "fitrah": "Only declared predecessor assessments and clarification were freshly read; no new Ameri/classical-source or empirical reading credit.",
+    "corpus": "No corpus exhaustion claim."
+  },
+  "excluded": [
+    "Complete reductive naturalization",
+    "New cognition simulation",
+    "New mathematical theorem",
+    "Empirical cognitive test",
+    "Defeat of ordinary externalist warrant from missing identification procedure",
+    "Creator or anti-naturalism conclusion",
+    "Protected edits",
+    "Integration",
+    "Programme closure",
+    "Historical duration certification",
+    "Copyrighted full source bodies"
+  ]
+}

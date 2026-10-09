@@ -1,0 +1,24 @@
+{
+  "checkpoint_number": 18,
+  "status": "LOCAL_SEALED_VERIFIED_NOT_UPLOADED_OR_SENT",
+  "zip": {
+    "path": "t20-next-frontier-20261008/checkpoints/foundational-discriminators/T20_Foundational_Discriminators_Intermediate_Checkpoint_20261009.zip",
+    "bytes": 140995,
+    "sha256": "fc2093c7a97c66c50f0bd12a7612279b991089510a147595f1f6eceb5e435bd1"
+  },
+  "read_first": {
+    "path": "t20-next-frontier-20261008/checkpoints/foundational-discriminators/T20_Foundational_Discriminators_Intermediate_Checkpoint_20261009.READ_FIRST.md",
+    "bytes": 4062,
+    "sha256": "036a53f6aedd4f64fdcff41b961f47c0472c69a818b25713bd903ae501801444"
+  },
+  "validation_receipt": {
+    "path": "t20-next-frontier-20261008/checkpoints/foundational-discriminators/T20_Foundational_Discriminators_Intermediate_Checkpoint_20261009.VALIDATION_RECEIPT.json",
+    "bytes": 9435,
+    "sha256": "d3f6026639032e9ffe48a416a5ab34944a9e3bdd2214f3cfdf0cc49c73b8b8c4"
+  },
+  "manifest": {
+    "path": "t20-next-frontier-20261008/checkpoints/foundational-discriminators/T20_Foundational_Discriminators_Intermediate_Checkpoint_20261009.MANIFEST.json",
+    "bytes": 12068,
+    "sha256": "a4c15fba185baf973fd1296976856a53febb8bd96e51f22c8a8acbb5de005d86"
+  }
+}

@@ -1,0 +1,9 @@
+# Finite qualitative-tensor transport
+
+Read `RESULT.md` for the exact finite transport and its limitations. `controls.py` is the independent set/array test suite; run it with Python 3 to regenerate `CONTROL_RESULTS.json`. `SOURCE_BINDINGS.json` fixes the relevant inputs and reading scope; `RESEARCH_EVENTS.jsonl` records prospective hypotheses and scope changes. `INHERITED_GRADED_INTERFACE.md` is an exact read-only acquired source copy at the declared current commit, identical to its historical binding.
+
+The positive result is a finite extensional Boolean-semiring representation under an explicit low-arity typing convention. Full negation needs complement, zero-test, or a different truth-wire encoding. Raw real/N contraction is not existential truth; signed cancellation and arbitrary basis changes obstruct naive support transport. A source-exact orientation pair preserves the existence of F, G, and an R-pair while losing which role occupies which endpoint. Domain indices retain numerical plurality even under equal qualitative labels. An empty-domain control prevents importing the source's nonemptiness assumption into an empty token sort.
+
+The generic preservation criterion, graded interface, semiring facts, and predicate-functor ancestry are inherited. The new work is their exact source-specific transport test, proof of the intertwining, and explicit failure controls. No new general theorem, ontology vindication, repository integration, or T20 closure is claimed.
+
+The separate adversarial review in sibling `qualitative-tensor-transport-review/REVIEW.md` reports no blocking correctness findings for the stated completed finite nonempty extensional semantics; `VERIFICATION.json` binds the reviewed result and successful independent/replay checks. A test count is testing scope, not independent discovery credit or a replacement for the structural induction in `RESULT.md`.

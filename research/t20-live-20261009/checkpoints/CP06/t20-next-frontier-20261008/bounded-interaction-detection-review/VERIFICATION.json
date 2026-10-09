@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "bound_review_files": 17,
+  "bound_source_files": 163,
+  "unchanged_prior_files": 91,
+  "copied_replays": [
+    "independent",
+    "conditional",
+    "discovery",
+    "author"
+  ],
+  "source_files_executed_in_place": false
+}

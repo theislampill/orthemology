@@ -1,0 +1,83 @@
+{
+  "book": {
+    "catalogue": "https://almobadarah.com/publications/book-6",
+    "url": "https://almobadarah.com/uploads/books/d054b3190ecdfbaaef33369a.pdf",
+    "sha256": "c33be9d676c40f9f7f2ec63d5ea0198ce12903f02fd24fa8cd2e567891c730fc",
+    "bytes": 2534078,
+    "pages": 244,
+    "extraction_sha256": "b982be2e0afec97d99beba2ce38602feb963b79c610dbee9fc631b5a063865fa",
+    "rights_scope": "Modern book: research intermediates only. No source text/image redistribution in deliverable."
+  },
+  "historical_records": [
+    {
+      "path": "recovery-t20/addendum/AMERI_SCREEN.md",
+      "sha256": "25bf973f45b71ad1d4f5e4234faa4997d420078acabfba2e15d2d842657c2841",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/SOURCE_READS.json",
+      "sha256": "36f3309243f5525e32deb7589c29ed5501b360e65a3f9cd6db761456a5fa8c6a",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/SOURCE_READS.json",
+      "sha256": "7c3cefc13d1241a4fc0afe954c60608d71205dcccf0b5bd2d9564ed4cfa81902",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/SCOPED_AUTHORITY_APPRAISAL.md",
+      "sha256": "e64b4946c0bf437502c145fce5a7425b82692d036da6360883d023384488393a",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-audit-addenda/AMERI_TARGETED_READ.json",
+      "sha256": "61ee4c7836ae69a17c5a785b4d527db7bbbea547fed6104bb6073dba3f3cbcba",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/SOURCE_READS.json",
+      "sha256": "609a847bb4b492f91e5d65d66e0b4da00ddfedaf1c03eb2dded3f5d3781d8f31",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/sources/AMERI_READBACK.json",
+      "sha256": "47da75a964ee58de9391d3afaeaecba0073fdff92652bdbc56ffb549c36a65f5",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/veracity-crosscheck/SCOPE_FINDING.md",
+      "sha256": "2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/middle-section/CONTINUOUS_NOTES.md",
+      "sha256": "3ce80cd3175b4809cbc97a63cc3f8d5c00b004f0286b4182473ed4c4929b6577",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/middle-section/BOUNDED_REFLECTIONS.md",
+      "sha256": "b3968eb4e9c4a2e50ac3bdbe5be34269ac7e52a7d18860ab8c004fb078574484",
+      "use": "Historical read/novelty/currentness comparison; not a claim of new primary-body reading."
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/REPORT.md",
+      "sha256": "3b7300e64938d8ca64049d8001008f9663a910940a240a706a847496aa110556",
+      "use": "Full historical report read; inherited result, not new primary reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/PRIMARY_QUOTATION_CHECK.md",
+      "sha256": "0f125411379ba5ef5ef7289ef2f755bb516d0dc98d7fd17585a5f58311b1bb40",
+      "use": "Full historical report read; inherited result, not new primary reading."
+    }
+  ]
+}

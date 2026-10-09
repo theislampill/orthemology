@@ -1,0 +1,212 @@
+{
+  "classification": "reported-statistic arithmetic consistency check only",
+  "participant_level_data_used": false,
+  "empirical_reanalysis_completed": false,
+  "python_version": "3.12.14",
+  "scipy_version": "1.17.0",
+  "results": [
+    {
+      "id": "S4_THEORY_SAGAN_INTERACTION",
+      "label": "Study 4 theory-only MS by author within Sagan",
+      "distribution": "F",
+      "statistic": 2.69,
+      "df_numerator": 1,
+      "df_denominator": 131,
+      "publisher_pdf_page": 8,
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+      "role": "inconsistent claim",
+      "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+      "verified_in": [
+        "publisher HTML",
+        "publisher XML",
+        "rendered publisher PDF"
+      ],
+      "ordinary_p_convention": "F upper tail (equivalent to two-sided t when numerator df is 1)",
+      "ordinary_p_from_printed_value": 0.1033789180949381,
+      "directional_t_equivalent_p_if_direction_prejustified": 0.05168945904746905,
+      "rounding_assumption": "nearest 0.01; statistic within printed value +/- 0.005",
+      "ordinary_p_rounding_range": [
+        0.1030620968958976,
+        0.10369681760920844
+      ],
+      "directional_p_rounding_range": [
+        0.0515310484479488,
+        0.05184840880460422
+      ]
+    },
+    {
+      "id": "S4_THEORY_THREE_WAY",
+      "label": "Study 4 theory-only three-way interaction",
+      "distribution": "F",
+      "statistic": 6.07,
+      "df_numerator": 1,
+      "df_denominator": 257,
+      "publisher_pdf_page": 8,
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+      "role": "preserved control",
+      "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+      "verified_in": [
+        "publisher HTML",
+        "publisher XML",
+        "rendered publisher PDF"
+      ],
+      "ordinary_p_convention": "F upper tail (equivalent to two-sided t when numerator df is 1)",
+      "ordinary_p_from_printed_value": 0.014405251826305664,
+      "directional_t_equivalent_p_if_direction_prejustified": 0.007202625913152832,
+      "rounding_assumption": "nearest 0.01; statistic within printed value +/- 0.005",
+      "ordinary_p_rounding_range": [
+        0.014365494826180124,
+        0.014445122840956242
+      ],
+      "directional_p_rounding_range": [
+        0.007182747413090062,
+        0.007222561420478121
+      ]
+    },
+    {
+      "id": "S4_THEORY_IDT_SIMPLE",
+      "label": "Study 4 theory-only IDT mortality simple effect within Sagan",
+      "distribution": "t",
+      "statistic": 2.86,
+      "df_numerator": null,
+      "df_denominator": 64,
+      "publisher_pdf_page": 8,
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+      "role": "preserved control",
+      "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+      "verified_in": [
+        "publisher HTML",
+        "publisher XML",
+        "rendered publisher PDF"
+      ],
+      "ordinary_p_convention": "two-sided t",
+      "ordinary_p_from_printed_value": 0.005714294913994357,
+      "directional_t_equivalent_p_if_direction_prejustified": 0.0028571474569971784,
+      "rounding_assumption": "nearest 0.01; statistic within printed value +/- 0.005",
+      "ordinary_p_rounding_range": [
+        0.005635081646277511,
+        0.005794534853172598
+      ],
+      "directional_p_rounding_range": [
+        0.0028175408231387554,
+        0.002897267426586299
+      ]
+    },
+    {
+      "id": "S5_THEORY_ET_SIMPLE",
+      "label": "Study 5 theory-only ET mortality simple effect",
+      "distribution": "t",
+      "statistic": 1.47,
+      "df_numerator": null,
+      "df_denominator": 94,
+      "publisher_pdf_page": 10,
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+      "role": "inconsistent claim",
+      "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+      "verified_in": [
+        "publisher HTML",
+        "publisher XML",
+        "rendered publisher PDF"
+      ],
+      "ordinary_p_convention": "two-sided t",
+      "ordinary_p_from_printed_value": 0.1449010174709335,
+      "directional_t_equivalent_p_if_direction_prejustified": 0.07245050873546675,
+      "rounding_assumption": "nearest 0.01; statistic within printed value +/- 0.005",
+      "ordinary_p_rounding_range": [
+        0.14355416226089832,
+        0.14625768812931936
+      ],
+      "directional_p_rounding_range": [
+        0.07177708113044916,
+        0.07312884406465968
+      ]
+    },
+    {
+      "id": "S5_THEORY_INTERACTION",
+      "label": "Study 5 theory-only MS by author interaction",
+      "distribution": "F",
+      "statistic": 5.17,
+      "df_numerator": 1,
+      "df_denominator": 94,
+      "publisher_pdf_page": 10,
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+      "role": "preserved control",
+      "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+      "verified_in": [
+        "publisher HTML",
+        "publisher XML",
+        "rendered publisher PDF"
+      ],
+      "ordinary_p_convention": "F upper tail (equivalent to two-sided t when numerator df is 1)",
+      "ordinary_p_from_printed_value": 0.025255919374972877,
+      "directional_t_equivalent_p_if_direction_prejustified": 0.012627959687486439,
+      "rounding_assumption": "nearest 0.01; statistic within printed value +/- 0.005",
+      "ordinary_p_rounding_range": [
+        0.02518723418603883,
+        0.025324802554690398
+      ],
+      "directional_p_rounding_range": [
+        0.012593617093019415,
+        0.012662401277345199
+      ]
+    },
+    {
+      "id": "S5_THEORY_IDT_SIMPLE",
+      "label": "Study 5 theory-only IDT mortality simple effect",
+      "distribution": "t",
+      "statistic": 3.23,
+      "df_numerator": null,
+      "df_denominator": 94,
+      "publisher_pdf_page": 10,
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+      "role": "preserved control",
+      "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+      "verified_in": [
+        "publisher HTML",
+        "publisher XML",
+        "rendered publisher PDF"
+      ],
+      "ordinary_p_convention": "two-sided t",
+      "ordinary_p_from_printed_value": 0.0017062062326109989,
+      "directional_t_equivalent_p_if_direction_prejustified": 0.0008531031163054994,
+      "rounding_assumption": "nearest 0.01; statistic within printed value +/- 0.005",
+      "ordinary_p_rounding_range": [
+        0.0016795764903033109,
+        0.0017332300864292447
+      ],
+      "directional_p_rounding_range": [
+        0.0008397882451516554,
+        0.0008666150432146224
+      ]
+    },
+    {
+      "id": "S5_SIX_ET_SIMPLE",
+      "label": "Study 5 six-item ET mortality simple effect",
+      "distribution": "t",
+      "statistic": 1.8,
+      "df_numerator": null,
+      "df_denominator": 94,
+      "publisher_pdf_page": 10,
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+      "role": "preserved explicitly one-tailed control",
+      "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+      "verified_in": [
+        "publisher HTML",
+        "publisher XML",
+        "rendered publisher PDF"
+      ],
+      "ordinary_p_convention": "two-sided t",
+      "ordinary_p_from_printed_value": 0.07506851493186432,
+      "directional_t_equivalent_p_if_direction_prejustified": 0.03753425746593216,
+      "rounding_assumption": "nearest 0.01; statistic within printed value +/- 0.005",
+      "ordinary_p_rounding_range": [
+        0.07427640873852122,
+        0.07586761655489915
+      ],
+      "directional_p_rounding_range": [
+        0.03713820436926061,
+        0.03793380827744958
+      ]
+    }
+  ]
+}

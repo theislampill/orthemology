@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "arithmetic": "fractions.Fraction throughout; logarithms enclosed by exact rational series after powers-of-two range reduction",
+  "controls": {
+    "count_budget_scaling_cases": 2211,
+    "route_profile_cases": 18688,
+    "proper_profile_equalities": 17344,
+    "boundary_full_profile_equalities": 1232,
+    "interior_inequality_chains": 26752,
+    "largest_exact_chi_to_C_ratio": {
+      "value": "54/581",
+      "parameters_r_k_rates": [
+        2,
+        1,
+        [
+          "3/4",
+          "3/4"
+        ]
+      ]
+    },
+    "certified_log_KL_cases": 702,
+    "log_certificate_refinements_to_32_terms": [
+      [
+        4,
+        5,
+        [
+          "3/4",
+          "3/4",
+          "3/4",
+          "3/4"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "1/4",
+          "3/4",
+          "3/4",
+          "3/4"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "1/2",
+          "3/4",
+          "3/4",
+          "3/4"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "3/4",
+          "1/4",
+          "3/4",
+          "3/4"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "3/4",
+          "1/2",
+          "3/4",
+          "3/4"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "3/4",
+          "3/4",
+          "1/4",
+          "3/4"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "3/4",
+          "3/4",
+          "1/2",
+          "3/4"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "3/4",
+          "3/4",
+          "3/4",
+          "1/4"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "3/4",
+          "3/4",
+          "3/4",
+          "1/2"
+        ]
+      ],
+      [
+        4,
+        6,
+        [
+          "3/4",
+          "3/4",
+          "3/4",
+          "3/4"
+        ]
+      ]
+    ],
+    "adaptive_transcript_leaf_counts": {
+      "r2_k1_N3": 64,
+      "r2_k3_N3": 64,
+      "r3_k1_N2": 16,
+      "r3_k2_N3": 64
+    },
+    "negative_control_uncovered_roots": {
+      "r": 3,
+      "k": 20,
+      "certified_KL_lower_exceeds": "1/2000",
+      "claimed_multiroot_C": "2/6136515",
+      "result": "An unbalanced baseline does not prove the proposed uniform multi-root inequality."
+    },
+    "negative_control_route_addressable_gating": "Baseline suppressed, added route enabled: q0=1, q1=0, so one endpoint distinguishes the hard pair. This action is excluded.",
+    "negative_control_shared_random_gates": "One reused Bernoulli gate per root gives q0=q1=1/4 at r=2,k=2,a=(1/2,1/2); independent-route laws give 1/16 and 3/64.",
+    "negative_control_variance_floor": "Exact near-zero and near-one rate sequences have variance bounded by quantities tending to zero; there is no uniform positive variance floor.",
+    "negative_control_confidence_half": "Certified ratios kl(1-delta,delta)/log(1/delta) < 10/j^2 at delta=(j-1)/(2j), j=10,100,1000.",
+    "upper_menu_and_budget_checks": 147
+  },
+  "limitations": [
+    "Finite controls supplement the written analytic proof; they do not replace it.",
+    "No physical, calibration, independence, or model-validity test was performed.",
+    "No unbounded-dimension, mixture-upper, route-addressable, expected-stopping-time, or integration claim."
+  ]
+}

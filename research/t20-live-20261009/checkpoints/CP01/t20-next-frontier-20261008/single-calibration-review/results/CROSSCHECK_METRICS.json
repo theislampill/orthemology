@@ -1,0 +1,18 @@
+{
+  "calibrations_agree_through_roots": 6,
+  "independent_readout_author_decoder_cases": 60,
+  "nonunit_diagonal_examples": [
+    {
+      "roots": 6,
+      "support": 1,
+      "prime": 41,
+      "coefficient": 2
+    },
+    {
+      "roots": 6,
+      "support": 16,
+      "prime": 107,
+      "coefficient": 2
+    }
+  ]
+}

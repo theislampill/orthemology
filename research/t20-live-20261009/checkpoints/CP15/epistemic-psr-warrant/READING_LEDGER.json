@@ -1,0 +1,75 @@
+{
+  "date_utc": "2026-10-09",
+  "fresh_primary_readings": [
+    {
+      "id": "Koons1997",
+      "citation": "Robert C. Koons, A New Look at the Cosmological Argument, American Philosophical Quarterly 34(2) (1997), 193-211.",
+      "journal_metadata_url": "https://www.jstor.org/stable/i20009890",
+      "witness_url": "https://lionandlambapologetics.org/wp-content/uploads/2021/03/A-New-Look-at-the-Cosmological-Argument.pdf",
+      "author_upload_record": "https://www.researchgate.net/publication/253291940_A_New_Look_at_the_Cosmological_Argument",
+      "version": "Author-uploaded manuscript dated 18 December 1996, with ResearchGate cover identifying upload by Robert C. Koons on 30 January 2015. 27 PDF pages: service cover + 26 manuscript pages. No collation to journal text.",
+      "read_boundaries": [
+        {
+          "web_lines": "17-308",
+          "extent": "Complete sections 1-6, including modal facts/causal definitions, defeasible default, epistemological argument, and sketch of cosmological proof.",
+          "manuscript_pages": "1-9"
+        },
+        {
+          "web_lines": "439-634",
+          "extent": "Sections 8.1-8.9 continuously, including replies about reference classes, a posteriori warrant, causation versus determinism, totality, and comparative exceptional-cause burden.",
+          "manuscript_pages": "13-19"
+        }
+      ],
+      "not_claimed": "No full-article read. Section 7 and sections 8.10 onward were not continuously studied; incidental captured text is not reading credit. No evolutionary or cosmological empirical investigation.",
+      "metadata_correction": "Author website lists 171-192; journal issue verifies 193-211. Pruss chapter bibliography ends at 212; journal range is used.",
+      "capture_files": [
+        "sources/koons1997-web.json",
+        "sources/koons1997-web-replies.json"
+      ],
+      "limits": "Text extraction only; no PDF visual authentication obtained; no reliance on doubtful formula glyphs."
+    },
+    {
+      "id": "KoonsPruss2020_2021",
+      "citation": "Robert C. Koons and Alexander R. Pruss, Skepticism and the principle of sufficient reason, Philosophical Studies 178 (2021), 1079-1099; online publication 8 June 2020. DOI 10.1007/s11098-020-01482-3.",
+      "publisher_url": "https://doi.org/10.1007/s11098-020-01482-3",
+      "witness_url": "https://robkoons.net/uploads/1/3/5/2/135276253/koons-pruss2020_article_skepticismandtheprincipleofsuf.pdf",
+      "author_index_url": "https://robkoons.net/published-articles.html",
+      "extent": "Entire author-hosted 21-page advance article; sections 1-10, all footnotes, license, and references. Web lines 0-855 recovered without gaps.",
+      "continuous_read_displays": [
+        "Initial PDF open displayed beginning through epistemic framework; subsequent full displays cover lines 62-411, 335-686, and 508-855.",
+        "Lines 0-61 reread from the assembled saved text to verify the head and definitions."
+      ],
+      "combined_capture": "sources/koons-pruss2020-web-continuous.txt",
+      "corroboration": "Publisher HTML full text independently checked at section 5.1 for Bayesian fraction and prose about assignment of one, and at rights/metadata. No uncertain PDF glyph supplies an inference.",
+      "license": "CC BY 4.0; credit and link supplied in report and source notice.",
+      "bibliography_control": "Note 4 says Dasgupta (2014); the actual bibliography gives The possibility of physicalism, Journal of Philosophy 111(9-10), 557-592. No equation with On the Plurality of Grounds or Metaphysical Rationalism. No independent reading of that cited paper is claimed."
+    }
+  ],
+  "inherited_primary_target": {
+    "id": "PrussLCA",
+    "file": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt",
+    "status": "Already acquired and read by parent; source context checked here. No fresh acquisition credit.",
+    "task_relevant_bounds": "Source lines 107-256, sections 2.1, 2.2.1 and 2.2.2. A display continued to line 354; evolution section was not developed into a research campaign.",
+    "retained": "Basic/self-evident warrant versus ability to persuade a dissenter. Disagreement alone is no refutation."
+  },
+  "inherited_results": {
+    "Dretske": "Read the continuation results, source summaries, inferential test, and both independent review files. Present operative informational feature credited. Necessary versus sufficient conditions, factive/nonfactive operative grounds, and actual use versus upstream contribution retained. No new read of original Dretske works; chapter 6 remains unread.",
+    "modal_psr": "Earlier source-ledger and result inspected to distinguish this epistemic question from prior modal actualisation and productive-transport work."
+  },
+  "retrieval_limits": [
+    {
+      "action": "Author-index direct 1997 PDF link",
+      "outcome": "Web fetch returned 404. Used lawful author-uploaded manuscript mirror and checked its provenance."
+    },
+    {
+      "action": "Direct urllib binary downloads of selected 1997 mirror and 2020 author PDF",
+      "outcome": "Both returned HTTP 406; no local PDF binary retained. Public web reader supplied text."
+    },
+    {
+      "action": "Web screenshots of 2020 PDF pages 10, 11, 15 (zero-indexed)",
+      "outcome": "All returned cache-miss errors. No visual read claimed."
+    }
+  ],
+  "excluded": "No broad bibliography campaign. 2001 reply to Oppy, 2003 counterfactual paper, 2017 probability paper and other cited works are not independently read or adjudicated. The directly relevant 2020/2021 author treatment and all its own replies were read.",
+  "status": "Fresh bounded substantive source assessment; no repository/integration/closure/owner acceptance or historical time claim."
+}

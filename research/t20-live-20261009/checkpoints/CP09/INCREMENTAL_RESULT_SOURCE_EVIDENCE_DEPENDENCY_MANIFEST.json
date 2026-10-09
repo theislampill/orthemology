@@ -1,0 +1,528 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v1",
+  "classification": "NINTH_ADDITIVE_INTERMEDIATE_PRESERVATION_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "research_cutoff_utc": "2026-10-08T20:44:07.754056+00:00",
+  "cutoff_meaning": "Latest explicit included author freeze receipt; review date-only records and communication freezes are not independent timestamp certificates.",
+  "previous_research_cutoff_utc": "2026-10-08T19:22:46.258191+00:00",
+  "results": [
+    {
+      "id": "full_face_information",
+      "title": "Exact face-minimum readout: infinite chi-square, finite forward KL",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information/RESULT.md",
+          "bytes": 12215,
+          "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information/SOURCE_BINDINGS.json",
+          "bytes": 933,
+          "sha256": "c665cca85214d31dfe1e5195477b6d5e0e0203f15b9075acc573f5b444cc004c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information/SOURCE_AUDIT.md",
+          "bytes": 4102,
+          "sha256": "0725f901e0aa1efca8f70872f3e31d6bc671b4bc3399de0361d44c17e826d0f0"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information/NEGATIVE_CONTROLS.md",
+          "bytes": 2634,
+          "sha256": "b39e2952ac9b2ad576ba6ee6a9b81183a4cf1a4321f4a89df0328fa3611bf8cd"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information/REVIEW_STATUS.json",
+          "bytes": 1201,
+          "sha256": "b8eff928ae34a6dfd017160e9286ecc721b642bbcae8bc01c4536faaa4857a67"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information/MANIFEST.json",
+          "bytes": 1884,
+          "sha256": "e2c54d1c9d50b13b23f22d2c996734ca88dd57839fc04adc06a83615338cfec1"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information-review/REVIEW.md",
+          "bytes": 13636,
+          "sha256": "874ddffcf6533c8c3ee35c711fa0d8c5e5ce275efd5a0f0e6016fe8e7e857902"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information-review/REVIEW_RECEIPT.json",
+          "bytes": 2934,
+          "sha256": "5afdc80205f28e9251d028314755e1b9bad53074b52ca7493493ac737bfeb5c2"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-information-review/SOURCE_BINDINGS.json",
+          "bytes": 2386,
+          "sha256": "4994768ee2e10bca86d21402b9cbcd3970e18983a3b0fd20e2894b7af2035d49"
+        }
+      ],
+      "claims": [
+        "For the stipulated n versus n+1 product/Joe hard pair, the exact two-coordinate-minima laws are mutually absolutely continuous; chi-square(P1||P0) is infinite for every n>=1, while 0<KL(P1||P0)<=2+log(1+1/[n(n+1)]).",
+        "Fixed-n dyadic retained-face quantizations have finite chi-square for each finite K and chi-square/K -> d_n=(2-2^c)^(2m)(1-2^-n)/(1+2^-n)>0; at most 2K face probes realize the stated coarsening."
+      ],
+      "limits": [
+        "Fixed-n resolution limit is not a joint n/K rate, sample-efficiency theorem, optimal word budget, reverse-KL claim, latent route readout, or physical exact-real instrument.",
+        "Result-only review excludes blanket approval of author controls and support documents; author controls are separately preserved and freshly replayed by packaging."
+      ],
+      "depends_on": [
+        "OLD_HARD_PAIR",
+        "OLD_ADAPTIVE_FACES"
+      ],
+      "control_ids": [
+        "full-information-author",
+        "full-information-review"
+      ],
+      "source_ids": [
+        "JOE_TAIL",
+        "DIVERGENCE_BACKGROUND",
+        "COPBASIC_CONTROL"
+      ],
+      "fresh_local_contribution": [
+        "Checks the stronger channel laws, full density mass, shrinking-corner L2 contradiction, finite-KL envelope and explicit shell witness."
+      ],
+      "inherited_not_newly_discovered_or_reproved": [
+        "Joe family/tail dependence, Cauchy-Schwarz, integral absolute continuity and divergence identities are established mathematical tools. Parent supplied candidate corner/KL approach."
+      ],
+      "assurance": "Written mathematical proof with a separately authored internal review and bounded executable diagnostics. Lean assurance is narrower and separately mapped below."
+    },
+    {
+      "id": "full_face_kl_rate",
+      "title": "Full face-minimum channel retains the quartic KL rate",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
+          "bytes": 14568,
+          "sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/SOURCE_BINDINGS.json",
+          "bytes": 602,
+          "sha256": "b79509ac3e826ac95b574d63b0badd0b82b752cb889ddf7c427c0f95c33a9e00"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/SOURCE_AUDIT.md",
+          "bytes": 3906,
+          "sha256": "5028101157e52889aa845949e4dae7e2e71655bc5768312455056b0e5317cd3f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/NEGATIVE_CONTROLS.md",
+          "bytes": 4584,
+          "sha256": "8eb1bb8b120b6da32b14a8527aa5e1397718d4534274b53abe0b57d3973c8c4d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/REVIEW_STATUS.json",
+          "bytes": 1022,
+          "sha256": "5fbfd0b3b8c3b762a1163320f3d30d83dd91b42498ecabeb3f9f93b45c420f15"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/MANIFEST.json",
+          "bytes": 2289,
+          "sha256": "56519243b820038757bab8987a529a643b977c5ed3a99f8112dd44f55998d20a"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-review/RESULT.md",
+          "bytes": 12481,
+          "sha256": "301f91005fbc53a7603fd6ac475d75a2406fb16f653a90885cac9cdddf7f116b"
+        }
+      ],
+      "claims": [
+        "For the same pair and channel, n^4 KL(P1||P0) -> 1/2.",
+        "Every finite adaptive face-only word on one unchanged vector is a common randomized postprocessing of its minima; the expected count of fresh retained vectors has the written terminal-correctness lower bound kl(1-alpha,alpha)/D_n."
+      ],
+      "limits": [
+        "Uses one common reference-n transform, a growing-box C2 density expansion and separate entropy-tail control; infinite global chi-square prevents a global L2 shortcut.",
+        "Actual-action prefixes and charging started vectors include nontermination. Reused vectors must be face-only from first observation. Fresh endpoint-only draws must obey the separate discard/independence contract.",
+        "No reverse-KL rate, broad unknown-calibration identification, matching achievable sample constant, physical probe optimum or interval-certified bulk quadrature."
+      ],
+      "depends_on": [
+        "full_face_information",
+        "OLD_HARD_PAIR"
+      ],
+      "control_ids": [
+        "kl-author",
+        "kl-review"
+      ],
+      "source_ids": [],
+      "fresh_local_contribution": [
+        "Writes/verifies derivative remainder, dependence-safe entropy tail and centered entropy limit; reconciles final face-only stopping/cost scope."
+      ],
+      "inherited_not_newly_discovered_or_reproved": [
+        "Hard pair, predecessor absolute continuity and positive double-integral identity; standard Taylor, KL chain rule/data processing and lower semicontinuity. Parent supplied candidate 1/2 limit approach."
+      ],
+      "assurance": "Written mathematical proof with a separately authored internal review and bounded executable diagnostics. Lean assurance is narrower and separately mapped below."
+    },
+    {
+      "id": "retained_interior",
+      "title": "Finite retained interior staircase certificate",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate/RESULT.md",
+          "bytes": 16475,
+          "sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate/SOURCE_BINDINGS.json",
+          "bytes": 439,
+          "sha256": "56149dac036d20695f3286dfc9e45ac8979a1306a731acceabc4e88e6ecaaab3"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate/SOURCE_AUDIT.md",
+          "bytes": 3679,
+          "sha256": "fefdee68383cf0ea813182da8b918be831935774317e18ba609513191d5659f7"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate/NEGATIVE_CONTROLS.md",
+          "bytes": 2719,
+          "sha256": "3f12981aeee57e4830dd35c73b7656ad0ee979fd1a14e84401727abfc8887629"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate/REVIEW_STATUS.json",
+          "bytes": 864,
+          "sha256": "e4b3892ed08121ee6b07313effaec174717d6463c197ff3d2dc9498d201578c3"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate/MANIFEST.json",
+          "bytes": 4188,
+          "sha256": "51f3795f5464eca3fad8d8ce0359d2331658539774c8256481c933786166f358"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate-review/REVIEW.md",
+          "bytes": 12536,
+          "sha256": "276ceb3b9c261ba2c416998dc528d5d611e3cb2d57c9b04329b4a1a6cd329df2"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate-review/FINAL_ARTIFACT_BINDINGS.json",
+          "bytes": 1650,
+          "sha256": "553783f4cb9359a5bb2f274e1e1699a4086f85b7d8ba349eb2e109f14009e451"
+        },
+        {
+          "path": "t20-next-frontier-20261008/retained-interior-certificate-review/REVIEW_MANIFEST.sha256",
+          "bytes": 2327,
+          "sha256": "d2b7f4c70887a0813c555292bc7e39501d27eba3a645d5c0884f885e0c572c01"
+        }
+      ],
+      "claims": [
+        "On one retained vector of coordinate-separable AND routes, m positive staircase sites and m-1 negative connectors force at least m total routes.",
+        "For exactly m independent iid routes with null axis mass, certificate probability is m! product mu(B_i); independent heterogeneous laws instead yield a permanent. The stipulated full-support Joe alternative gives positive mass, while n=m-1 routes cannot realize the event, hence finite-panel forward KL is infinite.",
+        "The n=1 certificate probability is 10/3 - 8 sqrt(14)/9. A certificate-only waiting rule has mean at least m^m/m! in the iid case."
+      ],
+      "limits": [
+        "Not certain one-vector count identification or an overall testing/sample lower bound. Within-route conjunction and retention are essential; generic monotone responses or redraws invalidate the certificate.",
+        "Without pure-AB support the certificate bounds total routes; only max(m-2,0) AB routes are forced. Full-support marginals without route independence do not ensure positive certificate probability.",
+        "Lean formalizes only the deterministic source-specific connector/injection/cardinality chain. Written probability, density, KL and waiting claims remain outside its kernel scope."
+      ],
+      "depends_on": [
+        "full_face_kl_rate",
+        "OLD_ROUTE_LAW",
+        "OLD_RETAINED_INTERFACE"
+      ],
+      "control_ids": [
+        "certificate-author",
+        "certificate-review"
+      ],
+      "source_ids": [
+        "FOOLING_SET_ANCESTRY"
+      ],
+      "fresh_local_contribution": [
+        "Proves exact occupancy/box characterization, positive support, conditional probability/permanent/KL boundary and source-specific Lean injection."
+      ],
+      "inherited_not_newly_discovered_or_reproved": [
+        "Fooling-set/rectangle cover and pigeonhole reasoning; old threshold law and retention contract; inherited alias remains correct outside the Joe full-support conditions."
+      ],
+      "assurance": "Written mathematical proof with a separately authored internal review and bounded executable diagnostics. Lean assurance is narrower and separately mapped below."
+    },
+    {
+      "id": "minimal_panel",
+      "title": "Exact two-dimensional minimal panel and bounded adaptive support",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/minimal-interior-panel/RESULT.md",
+          "bytes": 19053,
+          "sha256": "c35abf8d96720c8ee9c611fc554db647990c0f0233e630dee0792939a75b0dc7"
+        },
+        {
+          "path": "t20-next-frontier-20261008/minimal-interior-panel/SOURCE_BINDINGS.json",
+          "bytes": 336,
+          "sha256": "ac6a1a59eca01e2d66be8a901ebd0c8dd5b06ced346c7ec32b59bacfd03c1b80"
+        },
+        {
+          "path": "t20-next-frontier-20261008/minimal-interior-panel/REVIEW_STATUS.json",
+          "bytes": 442,
+          "sha256": "7458e8b82b6c8fdd58ab541029447fe8fe60c0dd79af04668127d64a2de8b233"
+        },
+        {
+          "path": "t20-next-frontier-20261008/minimal-interior-panel/FREEZE_MANIFEST.json",
+          "bytes": 908,
+          "sha256": "faadfa1a12c9e0ebfab70a9d9b3650f5dc7a7bd688b9ff3c06ed1515798036fb"
+        },
+        {
+          "path": "t20-next-frontier-20261008/minimal-interior-panel/CURRENT_SOURCE_BINDINGS.json",
+          "bytes": 980,
+          "sha256": "66499b407197696750e3de1f3ab83bd9d4b2c5d0e54166b8369628e55d45393e"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/minimal-interior-panel-review/REVIEW.md",
+          "bytes": 12605,
+          "sha256": "09402b887d60796286ef392ea463f5c131b5ec58c043fff1156978f38b01f0d8"
+        },
+        {
+          "path": "t20-next-frontier-20261008/minimal-interior-panel-review/REVIEW_BINDINGS.json",
+          "bytes": 748,
+          "sha256": "7e8787e6d05983b167b9229456124d79942efb82ce0a9650b8fd8ae2974ccf34"
+        }
+      ],
+      "claims": [
+        "For a consistent finite 2D panel, the least route count is 0 with no positives and otherwise 1+tau, where tau hits the negative-obligation cut intervals on the minimal positive antichain.",
+        "Forcing m routes needs at least m positive and m-1 negative probes; strict interior staircases attain 2m-1.",
+        "For any common measurable threshold-independent randomized policy of depth <=2n, any nonempty finite source inventory with thresholds in (0,1]^2 has transcript law absolutely continuous with respect to an n-route independent open-square-full-support target. Thus 2n+1 is the sharp one-sided support-separation depth under the stated 2D laws.",
+        "In 3D four probes force three routes, refuting unrestricted extension of the 2D 2m-1 bound."
+      ],
+      "limits": [
+        "Zero-coordinate source thresholds and empty source inventories are excluded from adaptive transport; upper-boundary atoms are allowed. The deterministic formula separately allows thresholds in [0,1]^2.",
+        "Seed law must be common and independent of vector; measurability required. Support inclusion alone implies neither finite KL nor bounded likelihood or sample-rate/stopping guarantees.",
+        "No new Lean proof; finite grids and seeded synthetic 4x4 controls do not test all real policies or supply empirical data."
+      ],
+      "depends_on": [
+        "retained_interior",
+        "full_face_kl_rate"
+      ],
+      "control_ids": [
+        "minimal-author",
+        "minimal-review"
+      ],
+      "source_ids": [],
+      "fresh_local_contribution": [
+        "Exact interval formula, open realization/padding, seedwise absolute-continuity proof, sharp query lower bound and 3D failure. Final reviewer accepted two prose-only clarifications."
+      ],
+      "inherited_not_newly_discovered_or_reproved": [
+        "Staircase obstruction/probability and predecessor kernel certificate, interval greedy duality, monotonicity and conditional integration. Historical source/events retained without certifying past durations."
+      ],
+      "assurance": "Written mathematical proof with a separately authored internal review and bounded executable diagnostics. Lean assurance is narrower and separately mapped below."
+    },
+    {
+      "id": "readout_reconstruction",
+      "title": "Exact randomized experiment incomparability",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/readout-reconstruction-boundary/RESULT.md",
+          "bytes": 7177,
+          "sha256": "e6a82d4061b3e91af3c2b2a34bb4c836cdd5240caa1a95ff5d1b642b6971de50"
+        },
+        {
+          "path": "t20-next-frontier-20261008/readout-reconstruction-boundary/SOURCE_BINDINGS.json",
+          "bytes": 2252,
+          "sha256": "d5cdb7f886103440808d04051bcd66354a02ce28f6adbc70a7857e2856afdd54"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/readout-reconstruction-review/REVIEW.md",
+          "bytes": 7604,
+          "sha256": "b81beb4ef172d78f1d120867e2a9b9918d4efdf88466bc52beb483c190fecdc9"
+        },
+        {
+          "path": "t20-next-frontier-20261008/readout-reconstruction-review/REVIEW_RECEIPT.json",
+          "bytes": 1017,
+          "sha256": "0aef70d5d0dd65f01d5211a4fecae6ad612f2351f5f8db561a3a651b5066e962"
+        },
+        {
+          "path": "t20-next-frontier-20261008/readout-reconstruction-review/SOURCE_BINDINGS.json",
+          "bytes": 1121,
+          "sha256": "c6e48dfab13f282d5cf49de67e94a34077efeed988295b563295ee786bb36c2c"
+        }
+      ],
+      "claims": [
+        "For the specified hard pair, exact two-minima experiment M and fixed finite interior staircase Q are incomparable under exact common Markov postprocessing in both directions.",
+        "M-to-Q is obstructed by preservation of absolute continuity; any baseline-exact kernel M0K=Q0 has TV(M1K,Q1)>=p=Q1(E)>0.",
+        "Q-to-M is obstructed by finite-alphabet bounded reverse domination Q0<=C Q1 versus an essentially unbounded reverse minima likelihood; proof uses open-neighborhood route duplication and a uniform strip bound."
+      ],
+      "limits": [
+        "TV bound assumes exact baseline reconstruction; it is not an unconditional approximate deficiency bound with error in both worlds.",
+        "No universal adaptive/all-panel or repeated-experiment incomparability, practical ranking, sample exponent, or finite exact-real recovery.",
+        "H Theorem 4.2 and Proposition 11.1 provide deterministic fibre/interface lineage only; deterministic-update Theorem 11.2 is not promoted to stochastic models. Written proof only, no new Lean proof."
+      ],
+      "depends_on": [
+        "full_face_information",
+        "retained_interior",
+        "H_DETERMINISTIC_LINEAGE"
+      ],
+      "control_ids": [
+        "reconstruction-review"
+      ],
+      "source_ids": [],
+      "fresh_local_contribution": [
+        "Verifies common-kernel lemmas, finite-panel reverse domination, strip likelihood boundary and pair-specific two-direction obstruction."
+      ],
+      "inherited_not_newly_discovered_or_reproved": [
+        "Standard Markov-kernel absolute continuity/domination, inherited exact laws and certificate; parent supplied both-direction candidate proof."
+      ],
+      "assurance": "Written mathematical proof with a separately authored internal review and bounded executable diagnostics. Lean assurance is narrower and separately mapped below."
+    }
+  ],
+  "source_registry": {
+    "JOE_TAIL": {
+      "url": "https://tnagler.github.io/VineCopula/reference/BiCopPar2TailDep.html",
+      "reading_scope": "Author targeted documentation/table inspection for family 6 and upper-tail coefficient; whole Joe books not read. No packer re-retrieval.",
+      "record": {
+        "path": "t20-next-frontier-20261008/full-face-threshold-information/SOURCE_AUDIT.md",
+        "bytes": 4102,
+        "sha256": "0725f901e0aa1efca8f70872f3e31d6bc671b4bc3399de0361d44c17e826d0f0"
+      }
+    },
+    "DIVERGENCE_BACKGROUND": {
+      "url": "https://arxiv.org/html/2004.11197",
+      "reading_scope": "Author introduction and Section II definitions/relationship only; not full-paper reading. PMC browser check produced no usable text; alternate open arXiv source used, no CAPTCHA solved.",
+      "record": {
+        "path": "t20-next-frontier-20261008/full-face-threshold-information/SOURCE_AUDIT.md",
+        "bytes": 4102,
+        "sha256": "0725f901e0aa1efca8f70872f3e31d6bc671b4bc3399de0361d44c17e826d0f0"
+      }
+    },
+    "COPBASIC_CONTROL": {
+      "url": "https://search.r-project.org/CRAN/refmans/copBasic/html/JOcopB5.html",
+      "reading_scope": "Author targeted coefficient example; apparent displayed-CDF extraction omission not used for proof. No whole-book read.",
+      "record": {
+        "path": "t20-next-frontier-20261008/full-face-threshold-information/SOURCE_AUDIT.md",
+        "bytes": 4102,
+        "sha256": "0725f901e0aa1efca8f70872f3e31d6bc671b4bc3399de0361d44c17e826d0f0"
+      }
+    },
+    "FOOLING_SET_ANCESTRY": {
+      "url": "https://arxiv.org/pdf/0708.1174",
+      "reading_scope": "Author inspected introduction pp.1-2 for established biclique/fooling-set bound only; no full-paper/rank/tensor theorem import or novelty search. Reviewer did not independently retrieve it; packer did not retrieve it.",
+      "record": {
+        "path": "t20-next-frontier-20261008/retained-interior-certificate/SOURCE_AUDIT.md",
+        "bytes": 3679,
+        "sha256": "fefdee68383cf0ea813182da8b918be831935774317e18ba609513191d5659f7"
+      }
+    }
+  },
+  "external_dependency_registry": {
+    "OLD_HARD_PAIR": {
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/RESULT.md",
+          "bytes": 13174,
+          "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+          "bytes": 5833,
+          "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c"
+        }
+      ],
+      "boundary": "Minimal inherited proof input from seventh checkpoint, no fresh discovery or full re-audit claim."
+    },
+    "OLD_ADAPTIVE_FACES": {
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/RESULT.md",
+          "bytes": 9589,
+          "sha256": "3997cb39f8306545ac622feeb19e55f0fe18c570e0059e84dea39940c6b22e0f"
+        }
+      ],
+      "boundary": "Minimal inherited eighth-checkpoint result, not rederived or repackaged as fresh."
+    },
+    "OLD_ROUTE_LAW": {
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/dependent-gate-transport/RESULT.md",
+          "bytes": 15467,
+          "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997"
+        }
+      ],
+      "boundary": "Minimal inherited stipulated route-law input, no new physical warrant."
+    },
+    "OLD_RETAINED_INTERFACE": {
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/same-threshold-replay/RESULT.md",
+          "bytes": 15218,
+          "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098"
+        }
+      ],
+      "boundary": "Minimal inherited retention/alias input; wider identification theorem not recertified."
+    },
+    "H_DETERMINISTIC_LINEAGE": {
+      "included": false,
+      "predecessor_checkpoint": 8,
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "bytes": 93523,
+      "repository": "theislampill/orthemology",
+      "owner_reported_main": "3a0bdeaa1394c656245cae9599adcb143e885059",
+      "git_blob": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+      "sections": [
+        "Theorem 4.2",
+        "Proposition 11.1",
+        "Theorem 11.2 inspected solely to exclude stochastic promotion"
+      ],
+      "boundary": "Bound predecessor reference, not historical manuscript rebundling; exact source required for independent lineage inspection."
+    },
+    "LEAN_PINNED_CLOSURE": {
+      "included": false,
+      "manifest": {
+        "path": "t20-next-frontier-20261008/retained-interior-certificate/KERNEL_DEPENDENCIES.json",
+        "bytes": 2023,
+        "sha256": "5c86cb97ff5484b15119996446e836a6716aff9e7cc70e71796128c6e90800a6"
+      },
+      "module_inventory": {
+        "path": "t20-next-frontier-20261008/retained-interior-certificate/IMPORTED_MODULE_BINDINGS.json",
+        "bytes": 787990,
+        "sha256": "73e04cfdb187330947b6c2cd27e0472471d1bc37d9be5461c42eb22d678144c4"
+      },
+      "package_manifest": {
+        "path": "t20-next-frontier-20261008/formal-identification/mathlib/lake-manifest.json",
+        "bytes": 2786,
+        "sha256": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752"
+      },
+      "toolchain_pin": {
+        "path": "t20-next-frontier-20261008/formal-identification/mathlib/lean-toolchain",
+        "bytes": 25,
+        "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+      },
+      "boundary": "Compiler, runtimes, complete mathlib/toolchain and imported sources/binaries are external. Their 1,798 module source/olean identities and compiler/package pins are included; replay requires matching dependencies."
+    }
+  },
+  "kernel_component": {
+    "source": {
+      "path": "t20-next-frontier-20261008/retained-interior-certificate/RetainedInterior.lean",
+      "bytes": 3269,
+      "sha256": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a"
+    },
+    "assured_claims": [
+      "connector_forced",
+      "witness_injection",
+      "route_count_bound",
+      "threshold_route_count_bound"
+    ],
+    "depends_on": [
+      "LEAN_PINNED_CLOSURE"
+    ],
+    "standard_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "excluded": [
+      "probability and density",
+      "KL and asymptotics",
+      "minimality and adaptive support",
+      "randomized reconstruction",
+      "physical semantics",
+      "philosophical warrant"
+    ]
+  },
+  "owner_final_integration": false,
+  "closure": false,
+  "historical_six_hour_active_compliance": "UNVERIFIED",
+  "packaging_research_time_credit_seconds": 0
+}

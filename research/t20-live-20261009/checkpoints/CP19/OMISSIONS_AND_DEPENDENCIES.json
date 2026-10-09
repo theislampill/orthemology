@@ -1,0 +1,743 @@
+{
+  "omitted_component_files": [
+    {
+      "path": "independent-five-front-supplement/ahkam-test.html",
+      "bytes": 406279,
+      "recorded_sha256": "dbb461569d3f448141d209987f66305b612b57056eb3ee68dd3d2f8fe97a15a0",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "independent-five-front-supplement/extracted/T20_Independent_Five_Front_Supplement/DOT_COMPANION_MESSAGE.md",
+      "bytes": 4360,
+      "recorded_sha256": "a2cec0ae9ec67ea34103f566b8409d6d29adf55edb7bdac987a84f3e4fd7df22",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Long owner report or duplicate companion omitted; exact identity and report/crosswalk retained."
+    },
+    {
+      "path": "independent-five-front-supplement/extracted/T20_Independent_Five_Front_Supplement/INDEPENDENT_FIVE_FRONT_SOURCE_SUPPLEMENT.md",
+      "bytes": 51345,
+      "recorded_sha256": "54df8e28e3fcbe8470c6f8ad9d4160da35b23f182b01dbfaa587138b0ea04712",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Long owner report or duplicate companion omitted; exact identity and report/crosswalk retained."
+    },
+    {
+      "path": "independent-five-front-supplement/library-helpers/library_file_transfer.py",
+      "bytes": 11085,
+      "recorded_sha256": "5c81478cd94a59d721a1677d0bd36f7cec23c18a21b48740b1c9ff94d27fb26f",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Historical transfer helper omitted; no upload or materialization operation in this checkpoint."
+    },
+    {
+      "path": "independent-five-front-supplement/sources/ahkam2-item198.html",
+      "bytes": 406279,
+      "recorded_sha256": "dbb461569d3f448141d209987f66305b612b57056eb3ee68dd3d2f8fe97a15a0",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "independent-five-front-supplement/sources/bayan4-item839.html",
+      "bytes": 730860,
+      "recorded_sha256": "d2442d69745359734851ea7684832c7070ad368f2ed3f8e4cb5e34c33461af16",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "independent-five-front-supplement/sources/bayan4-item844.html",
+      "bytes": 746434,
+      "recorded_sha256": "6e31508ed73f6b5707c778c2e7deddbf118ee80df7c61ef127ba3a9b437cff05",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "independent-five-front-supplement/supplied/Orthemology_T20_Independent_Five_Front_Source_Supplement_20261009(1).md",
+      "bytes": 51345,
+      "recorded_sha256": "54df8e28e3fcbe8470c6f8ad9d4160da35b23f182b01dbfaa587138b0ea04712",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Long owner report or duplicate companion omitted; exact identity and report/crosswalk retained."
+    },
+    {
+      "path": "independent-five-front-supplement/supplied/Orthemology_T20_Independent_Five_Front_Source_Supplement_20261009(1).zip",
+      "bytes": 27310,
+      "recorded_sha256": "df0c846459392e50f71bd7c010858ef0ed77ce7edf01c0249964ef2c81ae6a86",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Owner archive omitted, never nested; exact Library identity and CRC/member provenance preserved."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-282.png",
+      "bytes": 87187,
+      "recorded_sha256": "eb740b32c1045ca0fa44444e82c8ace8d86a543a3adb51722083bb99cf54f84f",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-283.png",
+      "bytes": 84614,
+      "recorded_sha256": "0012ce9d8b911672b267308004d484be0278ea49c37044f7ab1ac0a625ae98b6",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-284.png",
+      "bytes": 96148,
+      "recorded_sha256": "3e7f21c90860ace0224b9f936a6873c0b335174e5254b8d37001bff69a348640",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-285.png",
+      "bytes": 81864,
+      "recorded_sha256": "a24b27ff71961866868a4e18ad80fde6f39d68adcc31e092dac4e3b7a4092f06",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-286.png",
+      "bytes": 82221,
+      "recorded_sha256": "7f05b5c956c1521e215a162dcdbee2640ba875fe9f9918f75fa0e8292d35d205",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-287.png",
+      "bytes": 80203,
+      "recorded_sha256": "d98190877f5211c1754cc8aa35f1402d5658deb921c98bea958b8da5ada21fa2",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-288.png",
+      "bytes": 90324,
+      "recorded_sha256": "63da7af69314939cf1d9d258bc928ca0ad16448c31d5a8d61d646315084d553a",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-289.png",
+      "bytes": 91837,
+      "recorded_sha256": "2b9d66ea96cab1e38d7329ef1dc5f02b48080e8ac7d802d1b2d01b6f5d864c22",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-290.png",
+      "bytes": 84740,
+      "recorded_sha256": "60f324c6095ef69c4d311a5f2d6a9483e0c5930b713ba83931d44fd6dc640a58",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-291.png",
+      "bytes": 85398,
+      "recorded_sha256": "88a9abb78172cb606768f9026d6093722cdc5565b42e3bcfd260ab1db7ec4ef7",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-292.png",
+      "bytes": 92931,
+      "recorded_sha256": "f23386b8d58d140acf5e2f5bc9ae27f929efff373a01fff75fe7ace6e08546df",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-293.png",
+      "bytes": 90624,
+      "recorded_sha256": "fa0475a04f72485661c5a333b6dfff14666e5f630d712b9bc40037d28e1de757",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-294.png",
+      "bytes": 87344,
+      "recorded_sha256": "679338f0018507cc4254c28783b5e8360f542330087607ec641c464530cf9f46",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-295.png",
+      "bytes": 82291,
+      "recorded_sha256": "88be423dde8de07fc9c8f5f9e148ddf7540c6d5f6ec1505095504a93dc16b3c3",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-296.png",
+      "bytes": 79417,
+      "recorded_sha256": "632f037020052ef37776b58a2061769935d32accaf22877b5075d3570f82dec8",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-297.png",
+      "bytes": 89650,
+      "recorded_sha256": "1e4439d9105d2c5993d3776ac7a7940ce858771ce05411f6d8bf7ed32531a0f2",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/printed-pages/dar3-298.png",
+      "bytes": 96680,
+      "recorded_sha256": "9f983d3e1f6f80c1d3bbffce700039bab18eb6c041a32e43c65e8d399d0c3ebd",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item590.html",
+      "bytes": 589425,
+      "recorded_sha256": "68ea7c8962ab9ea6be61d960f91cdce45936452d0af31ca1d14b2959dc40ac72",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item590.txt",
+      "bytes": 80976,
+      "recorded_sha256": "c7f9be5edde90febe5b737efcf1e44a7e80d502692fb4520fc3b8337db8914a5",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item591.html",
+      "bytes": 590471,
+      "recorded_sha256": "496643a36c59a8e2d0ea6c08cc9e49acc6f224a072c08ca2fc5ccbb92554dcbf",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item591.txt",
+      "bytes": 81798,
+      "recorded_sha256": "caa4acad3a25fc2ebe0fb20191dfcae064e18eba7f2df3093f0475fdb01215d5",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item592.html",
+      "bytes": 590177,
+      "recorded_sha256": "d588da9ca9232267af47ec1f983b1e492e6edd4a3733f7aff9ca3137b5023da3",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item592.txt",
+      "bytes": 81512,
+      "recorded_sha256": "de6a74e50a6638d7372de2bce60adb00cb2963e6c9e553b5dbb83068e61a697e",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item593.html",
+      "bytes": 595135,
+      "recorded_sha256": "92548067267ff11313c931f371dd6f5dcbbd1023ac3ac8a9adbaea30912d7765",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item593.txt",
+      "bytes": 86484,
+      "recorded_sha256": "cb234de4d6acb1bed27b07c33dbe6fddf396302648454b2031e197387e12ca03",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item594.html",
+      "bytes": 594955,
+      "recorded_sha256": "a5538930c5f3f1e6b8e5139242725ddab934fd8fc6a3b0bc9d7fe9be7fef9893",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item594.txt",
+      "bytes": 85298,
+      "recorded_sha256": "570abbe1f1e6aae74696b100266e0c240fde8b36bcb2eba752370df884a6d6c2",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item595.html",
+      "bytes": 591305,
+      "recorded_sha256": "04bc02b1944a1f73f595e5eafe836d757122bbcb5ccee7874e315d365805aa4c",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item595.txt",
+      "bytes": 82508,
+      "recorded_sha256": "55da8fdac157f0031e757c74931d398816cf5a8225a316c4aa786c2c31235ca0",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-240.png",
+      "bytes": 77306,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-241.png",
+      "bytes": 73820,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-p17.png",
+      "bytes": 77630,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-p18.png",
+      "bytes": 83217,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-p239.png",
+      "bytes": 66895,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-p242.png",
+      "bytes": 70291,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "origin-ranking-source-control/sawaiq002.html",
+      "bytes": 555062,
+      "recorded_sha256": "d94aebaec8f4bcc9296b964aa068717583ee38132e5d602dc30420d236893f91",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "origin-ranking-source-control/sawaiq002.txt",
+      "bytes": 545489,
+      "recorded_sha256": "fb058f7f62ee879122699c37cd36dac9f8496f3976bc65e03bd74e63dde1cd85",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/GraphContinuation.olean",
+      "bytes": 583880,
+      "recorded_sha256": "9673311c76b3095a726e44d8ee762f6ce9335e74895682ad39cd6195861fb8c5",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Compiled artifact/cache omitted; historical digest remains in component receipt where recorded."
+    },
+    {
+      "path": "graph-continuation-review-20261009/__pycache__/verify_formula.cpython-312.pyc",
+      "bytes": 5441,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Compiled artifact/cache omitted; historical digest remains in component receipt where recorded."
+    },
+    {
+      "path": "graph-continuation-review-20261009/lean-replay/GraphContinuation.olean",
+      "bytes": 583880,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Compiled artifact/cache omitted; historical digest remains in component receipt where recorded."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/bayan-bridge-search.txt",
+      "bytes": 41428,
+      "recorded_sha256": "52a5542ce3ecb0efe39b65a8ead0104269e8b5b340f7a3aa0efa601773e8bf6c",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/bayan-primary-web.txt",
+      "bytes": 32576,
+      "recorded_sha256": "87b334267b3344de71809ffc0e6a0be86d34cd376c21641b78c3cd774c1acea5",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/bayan002.html",
+      "bytes": 372569,
+      "recorded_sha256": "c0d168bf0920f00902365e55ab7675ee95e6c4a83b4fbe4169179272d6b2ca10",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/bayan002.txt",
+      "bytes": 370082,
+      "recorded_sha256": "13e3aa87dd86a61711b64fd73386e48dce1795897792190d3af7e8a0d632e290",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/dar-particular-web.txt",
+      "bytes": 17908,
+      "recorded_sha256": "6cf4bef2cbdcc0b44d64ddd02c1cd5696f0b4d7456e196a7f7ab83cea01aca58",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/miftah-normalized-all-derivative.txt",
+      "bytes": 3835614,
+      "recorded_sha256": "1a7e3cb22aa4a381007eb35311e09cb93994e158499398293e187572c9be6489",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/miftah-wise-choice-web.txt",
+      "bytes": 42323,
+      "recorded_sha256": "25442c37b8150ebe5f3008028ae18a580f663d10c8156320afbd69ebadb6ec22",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/miftah003.html",
+      "bytes": 557505,
+      "recorded_sha256": "f10ad59734655c9d99021666d2bb15ac9586b2febc17b943198595b03e6a3f7d",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/sources/miftah003.txt",
+      "bytes": 555260,
+      "recorded_sha256": "e1d0d655109f729e5eda443e86efc6a57e032ad5706c3e1671ce247604d7e5c1",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Whole source body, search capture or broad derivative omitted; report, source linkage and bounded reading records retained."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-438.png",
+      "bytes": 63870,
+      "recorded_sha256": "a59f71a1664621a3d6cd2af69975dafd77a8d46ae06d3e2087ebabd554a7e8b0",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-439.png",
+      "bytes": 66590,
+      "recorded_sha256": "36a6703d795f5d5c273671255e22ee419bb1990c24323edc945e34b6c72df69c",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-440.png",
+      "bytes": 67349,
+      "recorded_sha256": "e23e09949303dc39f1c72f84e581826c0ac079eb88f429cf7363a35cc0c5b385",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-441.png",
+      "bytes": 72496,
+      "recorded_sha256": "61744919a1448154e244896e9ab3e467f37b2e9a9cb2c95689f67016e8394f74",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-442.png",
+      "bytes": 60207,
+      "recorded_sha256": "c903a91ae12e033d4f545d8a8050303b86847ec9fd620d0137415a72bfc435ae",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-443.png",
+      "bytes": 67737,
+      "recorded_sha256": "8652f6b2c707391075382d150c094468f1dc2cca7fb452268fd8f806fae1169d",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-444.png",
+      "bytes": 65441,
+      "recorded_sha256": "aab7b900131498f37ae59e380a922e1a7471825877a3d1cfb5f4e419f58546db",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-445.png",
+      "bytes": 68010,
+      "recorded_sha256": "aa18b91ae4a26048991aacdd7042e666d06385f2781c7e694d4e1b2974f388cb",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-446.png",
+      "bytes": 66643,
+      "recorded_sha256": "5d20da4bd9f7e92d9e3cbc888cd95c6181e7f7246fb7f790a142810e18b87ade",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-447.png",
+      "bytes": 64873,
+      "recorded_sha256": "19872a57ae090042adafb505f4e588a4935e83f6d8e86abebeeb7aa74136692f",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/printed-pages/dar3-448.png",
+      "bytes": 61415,
+      "recorded_sha256": "b48e0fc96cd93d62f865cbf2f49c033e4be07fa44c3e3d7a387caef8054db467",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Scan/image omitted; exact reading and edition records retained. No new print check."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/sources/dar3-item691.html",
+      "bytes": 588240,
+      "recorded_sha256": "61d52b950335a9fea248dcc53b2357903ab88d43a0beb5c6632eb3871aec8729",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/sources/dar3-item692.html",
+      "bytes": 589275,
+      "recorded_sha256": "8d792ff3a598ec59ffee03583b9ebd87000d5c9f2a9556e623c5b76db9b6bcce",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/sources/dar3-item693.html",
+      "bytes": 615803,
+      "recorded_sha256": "76608c865bb49ed4f08e00c7ac657d631692a8ecf383d7015cf507cf0fcfde61",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/sources/dar3-item694.html",
+      "bytes": 594205,
+      "recorded_sha256": "19d3a65abe56f439a59f95862672a85fd9d0573adc15b7f6e6d6e4337b2f4463",
+      "hash_scope": "Inherited value if present; omitted bytes not freshly hashed by this staging operation.",
+      "reason": "Raw HTML omitted; bounded body selections and/or report/source links retained."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/sources/dar3-item691.txt",
+      "bytes": 1302,
+      "recorded_sha256": "ae2321105037403e96c87db4bdf6a11301972a00032cb6d4be45e799e32ce2bb",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/sources/dar3-item692.txt",
+      "bytes": 1806,
+      "recorded_sha256": "9454daa2a82d9b4fc0674c03e01a46596e209b1c209e0560acfbb09d4d840234",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/sources/dar3-item693.txt",
+      "bytes": 10357,
+      "recorded_sha256": "f52357d9d45ec739e33ca1e44d0043c73c64111c2221065d6558baf71a09ac54",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/sources/dar3-item694.txt",
+      "bytes": 3505,
+      "recorded_sha256": "8a6a03cf2d2e6ad7ca93b4272c7a4ff1d29eca05e72a76caae46072b2407aeea",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item590-body.txt",
+      "bytes": 1877,
+      "recorded_sha256": "54ac6a19b9b6d97ceb4b86f692fade42d85cc5bde57919efb70d5f32563e7157",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item591-body.txt",
+      "bytes": 2121,
+      "recorded_sha256": "49c9a8eefd911ca17396db9b73706fa98e1f64d15e499e2d122fcbd3bd286c20",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item592-body.txt",
+      "bytes": 2044,
+      "recorded_sha256": "2d56dae3b56704116737dd7c2ad88eaa49d0830270995c26dec8d7e0285b1b9f",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item593-body.txt",
+      "bytes": 3869,
+      "recorded_sha256": "080c2527327729bd5f6dd97e626d0f5a8d03ff8486b00157afa43f3429ac9dea",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item594-body.txt",
+      "bytes": 3386,
+      "recorded_sha256": "03ae1e61488831ba0eac19afe0e5c449242b2a713d98a48dc5a0034e6d3ecafb",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item595-body.txt",
+      "bytes": 2396,
+      "recorded_sha256": "5b7b098a7b284e4a0424026c8c49100a2680b75a0267a9676b1c87a91d6c21ee",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "independent-five-front-supplement/sources/ahkam2-item198.txt",
+      "bytes": 15618,
+      "recorded_sha256": "84eced7e8e366a110ffcd146c3dcce2c0b8f4dd1cb384764453b9ec508d22511",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "independent-five-front-supplement/sources/bayan4-item839.txt",
+      "bytes": 2574,
+      "recorded_sha256": "ad960785931958b7301554bdb87df3d42d42fa68420257a84e24fa107964ef0a",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "independent-five-front-supplement/sources/bayan4-item844.txt",
+      "bytes": 4229,
+      "recorded_sha256": "340484a654b30b2f36c04d244c1173053eb3dce15a253191a71d96c75f3df621",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/akmaliyya-L0493-L0500.txt",
+      "bytes": 4292,
+      "recorded_sha256": "0ece53132ff99fc84b310289f096b51d0e36c639c7a739dac745c81a64a6d878",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/bayan002-L0071-L0080.txt",
+      "bytes": 10320,
+      "recorded_sha256": "06ee950112d75900f366fd499ac67b04ca7021c8ed7d2c5f80a225b7baffe2a5",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/bayan002-L0088-L0103.txt",
+      "bytes": 15553,
+      "recorded_sha256": "ba174ba34cb66a63fef677ecf92c870aee994f260fdc0082573088dc26a654fe",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/dar017-L0701-L0745.txt",
+      "bytes": 16288,
+      "recorded_sha256": "b3daff261fc72662d29ccad874e3859060439bf168e353324ad8753b18bae51e",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/dar017-L0915-L0940.txt",
+      "bytes": 11801,
+      "recorded_sha256": "7b671e957d67e1de2f0549d973d36ee0eba150e3481a50ec678d49bc525053be",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/miftah-237-242.txt",
+      "bytes": 12335,
+      "recorded_sha256": "ae68c5b47728c1a04d6faa7e73ebbeb68d02da6a691f22d8e81e1cf071c194c2",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/miftah-238-242.txt",
+      "bytes": 10246,
+      "recorded_sha256": "31798e2a89c09d40f26a5d3654df171ed3771691d0a74984909be2bd43e66ede",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/miftah-905-909.txt",
+      "bytes": 9931,
+      "recorded_sha256": "bfa33e3a4d6f6ced17c393aafea43dbeb4d85b641f4bc5a4b0a4af95374bdcf0",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/miftah-929-938.txt",
+      "bytes": 20385,
+      "recorded_sha256": "4d0619aaed36567dccc645c7c9f514941e73e3f3e38ed62ea5ea2a2d711c13cb",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/miftah-950-955.txt",
+      "bytes": 11337,
+      "recorded_sha256": "560df205ab65e5af0353adaa7ff76bde3d3635cfb4894da86e7a43319b4e25e2",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/miftah-952-955.txt",
+      "bytes": 7632,
+      "recorded_sha256": "3e2db10e6babb1e1e270305101c0ab9e4d8225405900a7ae51fa1d20d6e66f4f",
+      "hash_scope": "Selected bytes verified during staging, then omitted by final seal instruction. Originals preserved.",
+      "reason": "Source body excluded, including bounded classical text selections; reading/source records retained."
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/bimbo-dunn-ferenz2018.txt",
+      "bytes": 99083,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value where available; excluded bodies not freshly hashed.",
+      "reason": "Source body/research intermediate excluded by seal instruction."
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/routley-meyer1973.blocked.html",
+      "bytes": 5952,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value where available; excluded bodies not freshly hashed.",
+      "reason": "Source body/research intermediate excluded by seal instruction."
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/bimbo-dunn-ferenz2018.pdf",
+      "bytes": 456119,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value where available; excluded bodies not freshly hashed.",
+      "reason": "Source body/research intermediate excluded by seal instruction."
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/abc2017-scielo.html",
+      "bytes": 181342,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value where available; excluded bodies not freshly hashed.",
+      "reason": "Source body/research intermediate excluded by seal instruction."
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/abc2017-lines.txt",
+      "bytes": 73103,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value where available; excluded bodies not freshly hashed.",
+      "reason": "Source body/research intermediate excluded by seal instruction."
+    },
+    {
+      "path": "relevant-closure-review-20261009/research-intermediates/barker-adams2010.txt",
+      "bytes": 80804,
+      "recorded_sha256": null,
+      "hash_scope": "Inherited value where available; excluded bodies not freshly hashed.",
+      "reason": "Source body/research intermediate excluded by seal instruction."
+    },
+    {
+      "path": "relevant-closure-review-20261009/research-intermediates/barker-adams2010.pdf",
+      "bytes": 149376,
+      "recorded_sha256": "253789f4e96fa040459a12bae173a2c28053ff64c9ae85e9355226377c538c08",
+      "hash_scope": "Inherited value where available; excluded bodies not freshly hashed.",
+      "reason": "Source body/research intermediate excluded by seal instruction."
+    }
+  ],
+  "not_bundled": [
+    "Prior checkpoint ZIPs and their earlier research trees",
+    "Full owner long MD and owner ZIP (identities retained)",
+    "Modern Dretske typescript, Adams/Barker/Clarke full HTML and Ameri book bodies",
+    "Full classical books, scans, page images and raw HTML",
+    "Lean toolchain, mathlib source checkout, compiled cache and package repositories",
+    "Older source bodies and formal files named in inherited INPUT_BINDINGS/SOURCE_BINDINGS",
+    "All standalone source bodies, including previously staged bounded classical selections",
+    "Ongoing Ameri Who Created God? continuous reading begun at 08:16 UTC; expressly outside this checkpoint"
+  ],
+  "scope": "Top-level final MANIFEST.json will govern distributed bytes; historical component manifests cover larger original scopes and refer to omitted dependencies. Missing originals are not silently reconstructed. Retained source URLs are locators, not access/availability promises."
+}

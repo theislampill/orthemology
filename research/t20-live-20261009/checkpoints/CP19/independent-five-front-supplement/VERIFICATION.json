@@ -1,0 +1,17 @@
+{
+  "crc_failure_member": null,
+  "supplied_checksums": {
+    "README_FIRST.md": true,
+    "INDEPENDENT_FIVE_FRONT_SOURCE_SUPPLEMENT.md": true,
+    "DOT_COMPANION_MESSAGE.md": true,
+    "SOURCE_LEDGER.csv": true
+  },
+  "standalone_report_matches_zip": true,
+  "standalone_companion_matches_zip": true,
+  "ledger_rows": 37,
+  "unique_ids": 37,
+  "all_ids_in_report": true,
+  "all_rows_crosswalked": true,
+  "no_embedded_code": true,
+  "no_existing_repository_files_modified": true
+}

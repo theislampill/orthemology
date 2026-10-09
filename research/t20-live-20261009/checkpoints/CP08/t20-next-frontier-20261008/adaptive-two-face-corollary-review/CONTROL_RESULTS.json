@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "precision_decimal_digits": 160,
+  "method": "Independent rational table arithmetic and explicit Joe transcript enumeration; no author module imports",
+  "exact_rational": {
+    "adaptive_chi_squared": "53/9600",
+    "incorrect_swapped_weights": "1/300",
+    "randomized_abort_chi_squared": "263/72000",
+    "coarsened_action_chi_squared": "2384573/766443600",
+    "strict_coarsening_loss": "8301503/15328872000"
+  },
+  "joe_grid": {
+    "transcripts": 864,
+    "deterministic_first_bit_transcripts": 288,
+    "max_absolute_identity_residual": "1.1113793747425387417213567071352800484562622807325e-162",
+    "finite_grid_supremum_identity": "PASS for each first rate and n",
+    "general_kl_factor_two_envelope": "PASS",
+    "max_kl_over_chi": "0.63005385435961068569326251954372847464330349887965"
+  },
+  "screening": {
+    "first_branch_probability": "0.064",
+    "one_attempt_kl": "0.0010968910653070106259597967626908149747863812849459",
+    "eventual_selected_second_bit_kl": "0.017138922895422041030621824417043983981037207577279",
+    "expected_attempts": "15.625",
+    "expected_endpoint_probes": "16.625",
+    "expected_completed_pairs": 1,
+    "cost_warning": "Charging only the completed pair discards all screening costs"
+  },
+  "stopped_adaptive_tree": {
+    "terminal_atoms": 9,
+    "direct_transcript_kl": "0.00049457301417820516344489459573145665163665254844113",
+    "conditional_chain_rule_kl": "0.00049457301417820516344489459573145665163665254844113",
+    "expected_attempts_world_1": "1.6438282907792295049519509056884647931620223915074",
+    "expected_endpoints_world_1": "2.9691285815584590099039018113769295863240447830147",
+    "max_conditional_kl_times_expected_attempts": "0.0013121337982900336793223692571420921743872103749214"
+  },
+  "free_screening_limit": {
+    "precision_decimal_digits": 550,
+    "cases": [
+      {
+        "n": 1,
+        "k": 1,
+        "selected_Joe_absence_probability": "0.93070900897015228885330862687313623605649854802711",
+        "expected_first_probe_cost_log10": 2
+      },
+      {
+        "n": 1,
+        "k": 2,
+        "selected_Joe_absence_probability": "0.99294160833103059878237667445697296178977331694679",
+        "expected_first_probe_cost_log10": 4
+      },
+      {
+        "n": 1,
+        "k": 4,
+        "selected_Joe_absence_probability": "0.99992929057205811569197270803643054003294872472292",
+        "expected_first_probe_cost_log10": 8
+      },
+      {
+        "n": 3,
+        "k": 1,
+        "selected_Joe_absence_probability": "0.93602493614268086591595261263283618545372781210958",
+        "expected_first_probe_cost_log10": 12
+      },
+      {
+        "n": 3,
+        "k": 2,
+        "selected_Joe_absence_probability": "0.99345910486179969048938461289289123163681370002744",
+        "expected_first_probe_cost_log10": 24
+      },
+      {
+        "n": 3,
+        "k": 4,
+        "selected_Joe_absence_probability": "0.99993443160853522728669850717233818216907172707193",
+        "expected_first_probe_cost_log10": 48
+      },
+      {
+        "n": 13,
+        "k": 1,
+        "selected_Joe_absence_probability": "0.93433401488579319248633524785752777940294673835605",
+        "expected_first_probe_cost_log10": 182
+      },
+      {
+        "n": 13,
+        "k": 2,
+        "selected_Joe_absence_probability": "0.99324559482845849714453431382979782882451292702437",
+        "expected_first_probe_cost_log10": 364
+      },
+      {
+        "n": 13,
+        "k": 4,
+        "selected_Joe_absence_probability": "0.99993224533908842895416632495303543443600138824396",
+        "expected_first_probe_cost_log10": 728
+      },
+      {
+        "n": 64,
+        "k": 1,
+        "selected_Joe_absence_probability": "0.93333713172371114834986000412790888120420874148423",
+        "expected_first_probe_cost_log10": 4160
+      },
+      {
+        "n": 64,
+        "k": 2,
+        "selected_Joe_absence_probability": "0.99312813389702026040892385292174457649857095141451",
+        "expected_first_probe_cost_log10": 8320
+      },
+      {
+        "n": 64,
+        "k": 4,
+        "selected_Joe_absence_probability": "0.99993105013702880100496330150304277740192403639388",
+        "expected_first_probe_cost_log10": 16640
+      }
+    ]
+  },
+  "limits": "Finite numerical grids and rational identities are controls; the prose review establishes universal, continuous-kernel, and stopping claims."
+}

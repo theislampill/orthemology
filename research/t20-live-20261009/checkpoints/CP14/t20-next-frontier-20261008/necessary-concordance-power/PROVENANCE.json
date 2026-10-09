@@ -1,0 +1,73 @@
+{
+  "operation_date_utc": "2026-10-08",
+  "historical_time_certification": false,
+  "sources": [
+    {
+      "id": "baillie-hagen-2008",
+      "authors": "James Baillie and Jason Hagen",
+      "title": "There cannot be two omnipotent beings",
+      "issue_year": "2008",
+      "doi": "10.1007/s11153-007-9152-7",
+      "witness_type": "mirror of published-format PDF; metadata verified at publisher; byte identity not verified",
+      "url": "https://submissiontogod.wordpress.com/wp-content/uploads/2025/02/there-cannot-be-two-omnipotent-beings-james-baillie-and-jason-hagen-1.pdf",
+      "reading_scope": "pp.21–33 inclusive, all notes/references; rendered pp.29–30 visually inspected",
+      "files": [
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.pdf",
+          "sha256": "92a6b382c650a148a7a53bf1eeb9b69f4a3b9f5c090e5c1ce8d3ff64ef129768",
+          "bytes": 114041
+        },
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.txt",
+          "sha256": "95c81afecf2ff69007f571bfda439601c6c1113f757380ec88ecf5b3f931ff61",
+          "bytes": 47512
+        }
+      ]
+    },
+    {
+      "id": "amini-2009",
+      "authors": "Majid Amini",
+      "title": "Omnipotence and the Vicious Circle Principle",
+      "issue_year": "2009",
+      "doi": "10.35765/forphil.2009.1402.19",
+      "witness_type": "official journal PDF",
+      "url": "https://forumphilosophicum.ignatianum.edu.pl/docannexe/file/5801/fp_autumn_2009_v_14_issue_2.amini_majid.4.pdf",
+      "reading_scope": "pp.247–258 inclusive and copyright page",
+      "files": [
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.pdf",
+          "sha256": "e292e970e5d59ae65da0278112bb87ed4c38e24efe863625ba92c061328a41cc",
+          "bytes": 121020
+        },
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.txt",
+          "sha256": "8ab02b88645329d29a2f64a6e485b9710c17e33092f40b7e9a5bd842f3195577",
+          "bytes": 31358
+        }
+      ]
+    },
+    {
+      "id": "gordon-2024",
+      "authors": "Noah Gordon",
+      "title": "God, Über-God, and Unter-God",
+      "issue_year": "2024",
+      "doi": "10.1017/S003441252300063X",
+      "witness_type": "official publisher PDF, open access CC BY 4.0; first online2023",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9AD4212CD64B76BDDCCCB5BE9C866D73/S003441252300063Xa.pdf/god_ubergod_and_untergod.pdf",
+      "reading_scope": "pp.564–573 through Modality and Maximality; note17 pp.577–578; not whole paper",
+      "files": [
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.pdf",
+          "sha256": "b93d334542778d39a9843f222c64098a1d62860a4d70d114078ceb55702bb45b",
+          "bytes": 371184
+        },
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.txt",
+          "sha256": "b80a3093de735c2166e6b274e1cccbcee252f4e96339ea58e9e6d4b7334b93a6",
+          "bytes": 77908
+        }
+      ]
+    }
+  ],
+  "witness_counting": "Publisher landing page and mirror verify one publication, not independent corroborating arguments. Gordon HTML and PDF are one publication. Intellectual genealogy overlaps."
+}

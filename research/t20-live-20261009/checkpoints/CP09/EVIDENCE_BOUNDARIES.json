@@ -1,0 +1,41 @@
+{
+  "classification": "INTERMEDIATE_PRESERVATION_ONLY",
+  "T20_status": "ACTIVE",
+  "owner_handles_integration": true,
+  "owner_expressly_retains_later_research_separately": true,
+  "owner_adopted_baseline": "3a0bdeaa1394c656245cae9599adcb143e885059",
+  "baseline_provenance": "Owner report of 8 October PR 30/31/32 merge; no packer GitHub maintenance/check.",
+  "historical_six_hour_active_compliance": "UNVERIFIED",
+  "research_duration_accounting": "Original component prospective timing records preserved. No summed overlapping worker credit, reconstructed historical duration, elapsed-wait credit or packaging/replay credit.",
+  "written_proof_vs_controls": "General probability/asymptotic/minimality/reconstruction arguments are written proofs plus scoped separate internal reviews. Finite/exhaustive/synthetic numerical checks are bounded corroboration, not general mathematical proof or empirical tests.",
+  "lean_scope": "Only source-specific deterministic connector/witness injection/cardinality threshold-AND chain. Fresh packaging replay is permitted with exact external dependencies, not a new proof or a bootstrap rebuild.",
+  "no_warrant_transfer": [
+    "physical manipulability or route independence",
+    "real-world threshold retention/access",
+    "psychological or productive architecture",
+    "philosophical common-source warrant",
+    "perfect/original-source premises",
+    "T20 closure"
+  ],
+  "excluded_tests": [
+    "Whole mathlib/toolchain from-source rebuild",
+    "Kernel formalization of probability, KL, asymptotic, minimal-panel or Markov-kernel claims",
+    "Noisy/finite-actuator physical readout validation",
+    "Monte Carlo or empirical observation",
+    "Rigorous interval enclosure of bulk KL quadrature",
+    "Universal optimal sampling or probing strategy",
+    "Arbitrary all-panel/repeated/approximate experiment comparison",
+    "Independent complete external-literature/priority search or new full-source reading",
+    "Global all-model or philosophical truth certification"
+  ],
+  "failed_shortcuts_and_controls": [
+    "Single corner two-cell divergence does not establish infinite full chi-square; localized L2 contradiction or many shells required.",
+    "c=1,m=n equality has zero divergence; literal face endpoint is not its interior limit.",
+    "Global L2 expansion fails; pointwise CDF expansion, differing world transforms, independent-tail multiplication and uncentered finite-box first-order cancellation are invalid shortcuts.",
+    "Redraws, arbitrary monotone nonseparable logic, dependence across routes, singular non-full-support alias laws, unary supports and axis atoms are explicit certificate boundary controls.",
+    "Replacing connector misses by hits and strengthening m to m+1 are deliberately false Lean mutations; their rejection is expected success of negative controls, not accepted proof.",
+    "Empty/zero-coordinate source inventories break adaptive support assumptions; four-query 3D example breaks unqualified dimension extension.",
+    "A deterministic same-minima fibre example alone does not prove continuous-law randomised incomparability; the separate measure proofs are required.",
+    "Packaging attempt 1 ran all nine controls successfully but failed its whole-checkpoint immutability guard because packaging metadata was still being updated. Frozen original components were unchanged; fresh sealed extraction replay is authoritative."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "freeze_utc": "2026-10-09T10:36:13.050609+00:00",
+  "selected_original_count": 41,
+  "staged_copies_exact": true,
+  "originals_before_after_staging_unchanged": true,
+  "prepared_originals_unchanged_since_preparation": true,
+  "component_bindings": {
+    "included_checked": 33,
+    "omitted_historical_bindings": 41
+  },
+  "prior_archive_count_protected": 3,
+  "preservation_scope": "Only selected original files, checkpoint19-21 delivered resumed-research archives and direct checkpoint21 sidecars; no broad filesystem survey.",
+  "source_research_code_executed": false,
+  "uploads": 0,
+  "user_messages": 0,
+  "qualification": "Staging receipt only. Final ZIP/extraction/negative-test results are in the external VALIDATION_RECEIPT.json."
+}

@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "name": "majmu8-item805",
+      "url": "https://www.islamweb.net/ar/library/content/22/805/",
+      "scope": "Unvocalized display-layer L264–356: continuous118–150, dialectical151–153 completion. Vocalized duplicate L080ff not counted separately.",
+      "status": "Fresh corroborative reacquisition of inherited targeted span; no first-reading claim.",
+      "html_path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.html",
+      "html_sha256": "e96970e601cf129240e2398a10b09c789f5cab06bbc1c7ea08ce3fb906e99f0c",
+      "text_path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "text_sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1"
+    },
+    {
+      "name": "bayan5-item960",
+      "url": "https://www.islamweb.net/ar/library/content/415/960/",
+      "scope": "Entire L001, immediate capacity/completion lead-in before item961.",
+      "status": "Fresh contextual primary reading, no new scan collation.",
+      "html_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item960.html",
+      "html_sha256": "d1f29bb5e1c8fae4b3a32d326dc5098eed37a19473fa6019af2efd5a688f3ebc",
+      "text_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item960.txt",
+      "text_sha256": "b7fe90dfbc6dec72f2c73b9b872925ed081eefa538c531616043cce494418336"
+    },
+    {
+      "name": "bayan5-item961",
+      "url": "https://www.islamweb.net/ar/library/content/415/961/",
+      "scope": "Entire L001–004; crosses into247–248. Equal paths/loaves and generic will argument reported as opponents response.",
+      "status": "Fresh corroborative primary reading.",
+      "html_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.html",
+      "html_sha256": "f8c476649acbf04e178e2078b0a0579bb94dfc5a5c4e5e713d1fb662be14f45b",
+      "text_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "text_sha256": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08"
+    },
+    {
+      "name": "bayan5-item962",
+      "url": "https://www.islamweb.net/ar/library/content/415/962/",
+      "scope": "Entire L001–011;249–257. Suspect inherited electronic strings at L002 and beginningL009 quarantined. Positive clausesL006–007 and concludingL009 used.",
+      "status": "Fresh corroborative primary reading; no emendation or scan certification.",
+      "html_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.html",
+      "html_sha256": "69a72f0a42ffdaca8ac8e25e1bb0462f4339ae764cfb0105026d1137b31ee237",
+      "text_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "text_sha256": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1"
+    },
+    {
+      "name": "bayan5-item963",
+      "url": "https://www.islamweb.net/ar/library/content/415/963/",
+      "scope": "Entire L001–008;257–264, continuous sequel.",
+      "status": "Fresh corroborative primary reading.",
+      "html_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item963.html",
+      "html_sha256": "531e461c806b3f386e307e6d0979361b0d459207cf3c7e48068e8b3ee839be44",
+      "text_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item963.txt",
+      "text_sha256": "3a1d22e9e25053a17e6799634bde40d31a1eca1a44520cba51dbcafdaf6ab4f2"
+    },
+    {
+      "name": "bayan5-item964",
+      "url": "https://www.islamweb.net/ar/library/content/415/964/",
+      "scope": "Entire L001–003;265–268 continuation, not necessary for main inference.",
+      "status": "Bounded following-context reading; no broad Bayan reading claim.",
+      "html_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item964.html",
+      "html_sha256": "6b02abe1f3103005c29a0ed5dcb742bbf80fcf0f4bc3caa6d3b6512c1f4259cb",
+      "text_path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item964.txt",
+      "text_sha256": "90b3783788038f060ff96fb613ea0907699fcadf113cc4a4739abebe75402723"
+    },
+    {
+      "name": "Akmaliyya companion",
+      "url": "https://www.islamweb.net/ar/library/content/22/591/",
+      "text_path": "t20-next-frontier-20261008/bearer-eligibility/sources/majmu-item591.txt",
+      "text_sha256": "b1473cbaa302259cc9a20c999f4d1880a5029b00a2cdc9c6ad498d82563fa988",
+      "scope": "L476–500 continuously, electronic6:125–130; fresh local primary read on root source-lead notice",
+      "status": "Corroboration/application, not new first-reading claim. L489–490 guards inference from human ignorance; L495–500 separates reported unlimited-will answer from positive wisdom-and-efficacy appraisal."
+    }
+  ],
+  "acquisition": "Web open inaccessible for805/962; direct Python urllib HTTPS succeeded. These were tool/site errors, not access denials. No archive or protected source files mutated.",
+  "edition_status": "Electronic pagination only; no fresh print scan collation."
+}

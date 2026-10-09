@@ -1,0 +1,2007 @@
+{
+  "category_exclusions": [
+    "Earlier checkpoint archives and unrelated predecessor packages, identified separately",
+    "All .olean/.ilean objects, mathlib/toolchains, package caches and giant rebuild outputs",
+    "Symlinked predecessor environments; no external symlink is serialized",
+    "Protected repository/PR files and state changes",
+    "Participant-level data, credentials, private email bodies and internal memory",
+    "Active grouped-calibration-invariants investigation and all later research",
+    "No fresh kernel replay, empirical trial, source reacquisition, owner acceptance, final integration or T20 closure"
+  ],
+  "excluded_component_entries": [
+    {
+      "bytes": 23777,
+      "reason": "SOURCE_BODY_COMPACTNESS_OR_COPYRIGHT",
+      "sha256": "9225c107b5e3b64969058b884e98e5be10b85ead147c8baa40a9cbbc2e2c6d0f",
+      "source_path": "t20-next-frontier-20261008/activity-source-boundary/sources/salim-2-139-150-return.txt"
+    },
+    {
+      "bytes": 10346,
+      "reason": "SOURCE_BODY_COMPACTNESS_OR_COPYRIGHT",
+      "sha256": "28805be96258b94c7472453381db47c6860e2659d2c56ec4c79bc2e20da0547c",
+      "source_path": "t20-next-frontier-20261008/activity-source-boundary/sources/salim-2-20-25-return.txt"
+    },
+    {
+      "bytes": 13370,
+      "reason": "SOURCE_BODY_COMPACTNESS_OR_COPYRIGHT",
+      "sha256": "6b67fbe5613d49616e931161df821eb8b43d9ff6ea4ff68fea971387d360a5e1",
+      "source_path": "t20-next-frontier-20261008/activity-source-boundary/sources/shura6-L228-247-return.txt"
+    },
+    {
+      "bytes": 171464,
+      "reason": "COMPILED_CACHE",
+      "sha256": "3fec5fe4e0eb9a854a05d74c0e8aa3284ac19c0050990907f48aeaf2db1b252d",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/ScopeTest.olean"
+    },
+    {
+      "bytes": 182192,
+      "reason": "COMPILED_CACHE",
+      "sha256": "1a6fbd305bf89b1868b15b3b58d115c80d48910337600c01aff8e5f926415679",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/BridgeControls.olean"
+    },
+    {
+      "bytes": 267096,
+      "reason": "COMPILED_CACHE",
+      "sha256": "fd1d83e5f07251eafca49e75aafa98daa37016451ff1e79734b5f5bcf2f2454d",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.olean"
+    },
+    {
+      "bytes": 126432,
+      "reason": "COMPILED_CACHE",
+      "sha256": "ee38c90885c817b7ef9f424fcb3e9c7e2ea2978f311dcdfdb99fa4fca21f795f",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/SourceIdentityDerived.olean"
+    },
+    {
+      "reason": "SYMLINK_TO_UNBUNDLED_DEPENDENCY",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/formal-identification",
+      "target": "../../formal-identification"
+    },
+    {
+      "reason": "SYMLINK_TO_UNBUNDLED_DEPENDENCY",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/formal-route-probability",
+      "target": "../../formal-route-probability"
+    },
+    {
+      "bytes": 123384,
+      "reason": "COMPILED_CACHE",
+      "sha256": "d32257b5fc363fba944032bdf807153fc43fb56ee4dad305753c5b6df8d8f2e9",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/BernoulliAssignments.olean"
+    },
+    {
+      "bytes": 153024,
+      "reason": "COMPILED_CACHE",
+      "sha256": "5f3064f84315b6f61acd5bfd18589869f1ff84d11ed359cfbf09cdd54aeee78d",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/EndpointLaw.olean"
+    },
+    {
+      "bytes": 443208,
+      "reason": "COMPILED_CACHE",
+      "sha256": "468f976937ebd260dd5d01791f01d76a22386ff58871b2d62debaed04a2300cb",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/GenerativePanels.olean"
+    },
+    {
+      "bytes": 131288,
+      "reason": "COMPILED_CACHE",
+      "sha256": "52110e10c560394e0722c9b286fa38207459fa38ab7b07dafda6fd8924ff7735",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/HistogramGrouping.olean"
+    },
+    {
+      "bytes": 391024,
+      "reason": "COMPILED_CACHE",
+      "sha256": "50e464a7b70a907b854d23baa2dd8db026052057746169a9258eac2bb3362e09",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/Model.olean"
+    },
+    {
+      "bytes": 40024,
+      "reason": "COMPILED_CACHE",
+      "sha256": "030c991247a1a30a02722e6c40ed4dd6008f2495f3eb6b1f95d7bc17f0357e65",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/ReviewerChecks.olean"
+    },
+    {
+      "bytes": 171464,
+      "reason": "COMPILED_CACHE",
+      "sha256": "3fec5fe4e0eb9a854a05d74c0e8aa3284ac19c0050990907f48aeaf2db1b252d",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/ScopeTest.olean"
+    },
+    {
+      "bytes": 182192,
+      "reason": "COMPILED_CACHE",
+      "sha256": "1a6fbd305bf89b1868b15b3b58d115c80d48910337600c01aff8e5f926415679",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/inherited/BridgeControls.olean"
+    },
+    {
+      "bytes": 267096,
+      "reason": "COMPILED_CACHE",
+      "sha256": "fd1d83e5f07251eafca49e75aafa98daa37016451ff1e79734b5f5bcf2f2454d",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/inherited/OriginalBearerBridge.olean"
+    },
+    {
+      "bytes": 126432,
+      "reason": "COMPILED_CACHE",
+      "sha256": "ee38c90885c817b7ef9f424fcb3e9c7e2ea2978f311dcdfdb99fa4fca21f795f",
+      "source_path": "t20-next-frontier-20261008/productive-sufficiency-scope/review/replay/inherited/SourceIdentityDerived.olean"
+    }
+  ],
+  "locally_hashed_omitted_source_material": [
+    {
+      "bytes": 190890,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "f208c02e69635aa29f2c32616c36164fee881750e03b3f935041509203af614b"
+    },
+    {
+      "bytes": 1005,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "838f6cd5ef797b60aa9746a219e1a3480d7ea0a487ed235ecce18d23c1fcb2f5"
+    },
+    {
+      "bytes": 403112,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1c5c1c940148f0a58c9b45fb917bf1467f7ccb5f2673e92a286a863b80b622d6"
+    },
+    {
+      "bytes": 2042,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1c44c7126d5fb494ae61799ae164dbd6ebd844c1a997c1a65bd1410e53d6de2d"
+    },
+    {
+      "bytes": 435309,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "273256238f9a1dff2b1730022e2cf19a98a0f71f3981d4c5c966fdfbf8b8c544"
+    },
+    {
+      "bytes": 2087,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "3eae62a13ebb64c30e028ec751e46986d754a70a5ee77a8a051e3a9855bc067a"
+    },
+    {
+      "bytes": 482252,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b8b7c9dbc6d15bf114b4f32d6d5f40d791d79dd623deb9935e345ea5ee756b4e"
+    },
+    {
+      "bytes": 2375,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "4cf1c44f34e523ce00908c45ffcc76b6aa6e0aafeb8402a221e60ac3b252c3cf"
+    },
+    {
+      "bytes": 423690,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "88a3242bcf3d63f08bef80dd69bb250262f883f987b1b37939869c99fcbbfa67"
+    },
+    {
+      "bytes": 2160,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "558f57b24d7ab70c0c60160ca518869502ffef640985a338b5ecadf74955cdec"
+    },
+    {
+      "bytes": 451022,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "ed3bb6c3b77110e96c65a2248666cc6df06f44cf651585d44ecc1d9a3828a491"
+    },
+    {
+      "bytes": 2252,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "f6d078bb069857187a51e333c27b30c31a1f8803a2fda7ee135f6ccd8761a1f9"
+    },
+    {
+      "bytes": 420200,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "556e393b7eb6863f9bd3d48c1568d90727ddc31d5962520b9ea6450377b01921"
+    },
+    {
+      "bytes": 2104,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "00cb701a38d01145d70f0cf4c77b6f90867491a5f0af0cf0f0f72ca6770c9e4d"
+    },
+    {
+      "bytes": 459021,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "bd46008859d3d98a68c0972fb9f709ca451d4072444d286bd5786a2ab90fc684"
+    },
+    {
+      "bytes": 2253,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b82723ae026ef7bc31e8803b76336bb702b505d36661e58db975a0c7efddaa77"
+    },
+    {
+      "bytes": 430720,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "9db6db44bc8cd63c647b2d6df46147594c3b6a67a78ab70aca358ed95f0d17d7"
+    },
+    {
+      "bytes": 2097,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "39972d81fc481690ee7ed42688f4a9bcfe946cca55b40635de6504bbf2033fa4"
+    },
+    {
+      "bytes": 441626,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7a8f16ddfa38d6ce185d4379cbea629bae06b8ad4c194e1d7a5fac2adcb9f39a"
+    },
+    {
+      "bytes": 2190,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7c2d7b9a37407039d3dee2601caa9077946f648df093b42af85e8acf2c0ad8b8"
+    },
+    {
+      "bytes": 475409,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "c905a6b8d5251950da76e969342a4647b6c7a23c42c25a463fca854ab7342ee1"
+    },
+    {
+      "bytes": 2398,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "d05866726ab44b6a438f4c148963a9373004495c93c9896885d13d40017f69e5"
+    },
+    {
+      "bytes": 443860,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1d052780b7b19124e6bcc9665f64050fce3ed412e88862e1e5ee96014645afac"
+    },
+    {
+      "bytes": 2166,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "344b1ef752624c3272555c3ba67ce6bad8195176c1d77f17de0dd9485874d056"
+    },
+    {
+      "bytes": 552942,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "d932c6a59d48172baf417b43b229ffdf591dea6b1dcf9ae664ff450d69552483"
+    },
+    {
+      "bytes": 3512,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "6198180a076c5a03842dfa440c3d278aa9e9b0cc70f7910ecc19c34d395404d1"
+    },
+    {
+      "bytes": 360564,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "5c84da5ab1b788d0ff4aa34f2970d76e0138fe895c088a46bbcef95576eedc6c"
+    },
+    {
+      "bytes": 2241,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "84ba142ea004d23e2ba666f38833f4597e4caecb85b258ee39b36e8be351a84d"
+    },
+    {
+      "bytes": 945440,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "c912f4d38d74a3542ac347e20ae7068cb1eeef4d30f0a3b4c84c1deaee90f968"
+    },
+    {
+      "bytes": 14,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "bac73e8e5d0502cae3490d5e2a0617d2a437fb20599903f18494f207e4f80cdc"
+    },
+    {
+      "bytes": 242286,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b50aa67be2c814d68177745525a3383a07e8a4b1259838b065c096a4682089a7"
+    },
+    {
+      "bytes": 284870,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "ace2dacc76a8547a8eb560114052623c4357be52e8f76376ce4c703a03f56633"
+    },
+    {
+      "bytes": 289525,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "2c7732bdb4a67890c3df66d93bca7e769c6faab8aa0b0bd3ae9c6ef79e936dd1"
+    },
+    {
+      "bytes": 247470,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7a455a3b44036d98f5bb6f21e4cb894354172607a4d1aa84d6324854837450e0"
+    },
+    {
+      "bytes": 217216,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "42b79ad2faa458ad080930c67ebdfc71e0f1c322be371f05f4677e022aa5cb35"
+    },
+    {
+      "bytes": 404536,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b77ae12b8f0499af2073469000d17cd03ba4d19d3d3346aa12287fcee768ac4e"
+    },
+    {
+      "bytes": 6,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7b2aa16484b6ad79ef5bec51da3501f5079367b625da44bf97468422d27e8e95"
+    },
+    {
+      "bytes": 136725,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "fdcc6f12da029c361e8f42ddd0128e2b344afc999946fabb4dc2c01adaeda6f8"
+    },
+    {
+      "bytes": 36031,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "8c764e7b3b6269eb6a3d90632e6b562107824aed9b02b11b7b53c419541e8ee8"
+    },
+    {
+      "bytes": 190116,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "a44a9ea681d5e956f38b6a46ef528b6beec77edb9aef23105d9cc6259ba42d23"
+    },
+    {
+      "bytes": 1014,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "c5e4795e27b527c5ec6fa7300d2634064bbe2c1e4d45b61cd73ecc3db59ea3a2"
+    },
+    {
+      "bytes": 428758,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "79a590b970577a4494388a1863c75f189affac99e8718ce4d1861ecd1b7981e8"
+    },
+    {
+      "bytes": 2113,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "96c395c29b83b6745e4652052dd31732a333d1a3d109d5622d5fcbca11091b22"
+    },
+    {
+      "bytes": 526306,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "c4a9c26664fab9d8c7abf86a757dc20b9f4df8fb3c16908d319a0321e04f28c0"
+    },
+    {
+      "bytes": 2488,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "4362c0c122b58f7a62646218c1fed4ecc85a1b77fb7b418798683b18997e1640"
+    },
+    {
+      "bytes": 527027,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "ead7836653f539fb563181ca4fb7970f9bcf20f64835ff74581504b81f336bc1"
+    },
+    {
+      "bytes": 2513,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "292d15bf4aad91493edd9778af4e68f12878f4775ad70401da7c65b4675f6e67"
+    },
+    {
+      "bytes": 526045,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b4fe231ffec548ea80ef59a01a4b615cb8c0ce73baf04822cc1c28a74eeb96ec"
+    },
+    {
+      "bytes": 2598,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "c4964116d7e78a535071980989667be5ad88ed2fd247dc42403598701a1d1fca"
+    },
+    {
+      "bytes": 379158,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1c65c9b90bef30ae669e97e8ecf909bcf3cf3d922b8ef1fe2f9265b5bc05ab2e"
+    },
+    {
+      "bytes": 1813,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "2a79a50777d94a395a4937bd9b4b862de8fdc09b0df0ff6b79e42f68895410e6"
+    },
+    {
+      "bytes": 332717,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "5fcbfe8632689dab10fef1321fe380d319968faaf371ba1b300ad28c843d12ba"
+    },
+    {
+      "bytes": 281142,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7acf2f4701735e2f6ddc2843f3aa98a093bc9eece072716cd26f323a33cb4e03"
+    },
+    {
+      "bytes": 82975,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7322cd080d5d32a959d944ca27abb29f2180eb3da3ba20dbd99b3bdea876056a"
+    },
+    {
+      "bytes": 177995,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "f0d7ee522752a52ad2ba8cdf095bedd087fe76bcf6b2c564050e102127cda2ba"
+    },
+    {
+      "bytes": 161534,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "d2c75d67a816358805e8a7ab302af041044390c2d5e80c7f703692beb0a50b10"
+    },
+    {
+      "bytes": 177581,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1eeaa1009aafda5f9961a54550bc942152c851c218fb342560f748256a044309"
+    },
+    {
+      "bytes": 125761,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "72e38cd6ac6f15404423688200df12a78e5bd49b7cfe5a9c452a80f00b659bd6"
+    },
+    {
+      "bytes": 171928,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "351c6d9555401f3a4518d52ee3104ae45c911e45ed3018ce5864acac0b6a250f"
+    },
+    {
+      "bytes": 175586,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "3d5f10f49d21c14a11ab7fd20ec03af24940be9f82c3f3840e55f1a110bf6a7d"
+    },
+    {
+      "bytes": 172091,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "199e1c8c8b90dbd27048a1aba5ecdb37ab530a06e62f0e218af4dd9e679c2133"
+    },
+    {
+      "bytes": 56165,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "9a479ecd394bc5f66a59cc9e9bf1936bc143b5fd7100e66e6f672a91644f6448"
+    },
+    {
+      "bytes": 179159,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1710044e509fbde17c2fb1dec1b445b55b836e99ed2ffbf537e61168b215ee00"
+    },
+    {
+      "bytes": 217769,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "cd09a16f73ce294b431bf9ae95e205f03e890ecb24bd2404e5539982bea66923"
+    },
+    {
+      "bytes": 197094,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "bd88945ce19c85f3611501bf9a17d6d19eb5a4efaf0d9f834ae94ecb91241d18"
+    },
+    {
+      "bytes": 219365,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "f7e7c54636c85761a0f4e1fa6fce50b41c181d1a59ac8c8209643ed6ddffbfc9"
+    },
+    {
+      "bytes": 425447,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "0abb1a351c111d7586071113d96dde6460fa538f26124d11ad8aa6dd738dcb36"
+    },
+    {
+      "bytes": 101266,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "22f0f53ec0e792fff6a8a0cb5b6590a7e2220c70f0c0801a20feccd1bc0362a9"
+    },
+    {
+      "bytes": 224977,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "efca9f6894671b4051d48457acd4a48b7f978114052f1b50f5c9800da1e08d36"
+    },
+    {
+      "bytes": 258273,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "d367f13f5bc8dd19ba0dab26ba1d52a178fa4f02053d9767bf5069b8ff59b50c"
+    },
+    {
+      "bytes": 225976,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "de0beeef0ad485cad7e9100567d7fe63b5cf1131d1af481ff7b14f0b7357f748"
+    },
+    {
+      "bytes": 231276,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "0f3d23c8f80a9895809a02dae0faae33a323b0ebbec1512d1066d149dec8f2d9"
+    },
+    {
+      "bytes": 202050,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "5ee34501d3bdaa3daf74d8d9ed15e397e0625c8f45326a60ffbe087967e9a2a0"
+    },
+    {
+      "bytes": 223109,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "3e7cfcc4d48083c6707c62400df1a75f9534418311de4a46c2882cf16461b779"
+    },
+    {
+      "bytes": 219448,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "dc8f2edda19a7313ddde900d058ffb55882b2b109b90a9fa013e7c53032b6063"
+    },
+    {
+      "bytes": 207595,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "0d14be3ae7209f72e0b53ff7ec9ac1d9fab64dcaef4cdfbeb8b793929bc84fe9"
+    },
+    {
+      "bytes": 56152,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e4b621aa52284e2533d5f4231d996fd50760fb45813324ab3c4bf7989c577de5"
+    },
+    {
+      "bytes": 235518,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "51b9971d336eafed8a5a4702e0490228d918dbf6d3673642ac0eb12283ec393b"
+    },
+    {
+      "bytes": 2199,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "f1a99ddd79a99e3f576c73cbc1095123bc49fcbd54ed3f365c1868b34b3d8638"
+    },
+    {
+      "bytes": 204245,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "a8b406e32f300d80806dc0de66180c7d2c645d61cefb7e85f039ccb329b3f1a2"
+    },
+    {
+      "bytes": 470894,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1a990e573ed64c7a51687a1e50e3f072ffc4f89eb64f993f3ba4747dd2061558"
+    },
+    {
+      "bytes": 0,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 449765,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "757e9bd6df2c71a74bb646c66fb8c4163e2fd56b3aca60162ff3fee23c3932de"
+    },
+    {
+      "bytes": 0,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 445689,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "8a0eac11ad8c2aa8ac1877bae0ecaa4baca925cb3bf37a1dfcadd38da828cca7"
+    },
+    {
+      "bytes": 5416,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "8166afd900f5193d4143152dfbeb946f63a110c54d261cd72481b29263bfd456"
+    },
+    {
+      "bytes": 434974,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b47464a779ba4e66f295fdd0f6ec1f361754cc80e83dcca8b1f3562a29dfcc03"
+    },
+    {
+      "bytes": 0,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 423353,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "140874bac1e466ec6eb79a9466d243c301ab8be65045f8ce088007af56d41484"
+    },
+    {
+      "bytes": 0,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 425474,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "2dace55ed46144f4661c6df6e99c114e9547110b4c65e2ed3cea62bdb1c265ad"
+    },
+    {
+      "bytes": 6449,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b57ed9177749462c9d60a28a46941fb727b44d3f547fcd6b3ae3de62abea473b"
+    },
+    {
+      "bytes": 426690,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "3fef6aa4a7504c153958701c3f2638c6c0d502482c1fc4500a22a7f56c05a064"
+    },
+    {
+      "bytes": 0,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 437193,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "0c69f76398b8bb1b149ed1def1dc2ddad40a246512c81f6a12f9b70ceb8d9635"
+    },
+    {
+      "bytes": 5518,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "9a9228df11b8ffaab21f553188df622b30af70afab97526facdc6aa2d51b59e5"
+    },
+    {
+      "bytes": 447219,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "ffd1ce227ce3fa3166c19c94d8f65ce68cd36e2ecad63fec0d5fb35d43c9f763"
+    },
+    {
+      "bytes": 6411,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "ba187cf3c49e4360ca7333c8fe610c4a1f52faf9ead609d6ecafb18c187c0612"
+    },
+    {
+      "bytes": 475804,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "4d00c3f7e1c8342323ff87df2f167ba0c76d66ba8dc427515b6f76ad11550226"
+    },
+    {
+      "bytes": 0,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 429194,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "720adaf60c8a0265dd51214fc061fa4f90c0302b7d929e3daa9629b370a2928d"
+    },
+    {
+      "bytes": 5992,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "70989b49895304fd127d5ae0741b40b05cae4492970dbd4a17c381170a058850"
+    },
+    {
+      "bytes": 431731,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "25fdc4d9a238cbf5ba3256ad415732751712f0bdfbc7f6a004d52540e6d25e8c"
+    },
+    {
+      "bytes": 5221,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "279ffa297d7e6ce2065eff72062f331dbb231e09c371b244654113ab1df0fd23"
+    },
+    {
+      "bytes": 455330,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b9c97fa655d05efa48f0013bae9eb0edfe932273b9e355eace843964ba722cbe"
+    },
+    {
+      "bytes": 4765,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "9da51e4cf7288f6ec30aeb6d2bb02d366ffac42cc2ee5348b3623b2ae1cfc98a"
+    },
+    {
+      "bytes": 398285,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "35c08372e07faf3cb89081dec2e547ff14eb8f3fc3d6b00add9ed011526589af"
+    },
+    {
+      "bytes": 5428,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "a1f94955488ddb25d0ad75e4b5ed1575d21e289487c576b1d869d23c80ddc6d1"
+    },
+    {
+      "bytes": 235518,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "51b9971d336eafed8a5a4702e0490228d918dbf6d3673642ac0eb12283ec393b"
+    },
+    {
+      "bytes": 2199,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "f1a99ddd79a99e3f576c73cbc1095123bc49fcbd54ed3f365c1868b34b3d8638"
+    },
+    {
+      "bytes": 526174,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "bed2d0a39f27233844658bb7c14ed2fbe4fef9a17634d44bab25c34164441ed6"
+    },
+    {
+      "bytes": 6468,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "9747b35142a006b5b0f8227eccc38c20bcf2f0ff609c71c1a02797bd168d0cd6"
+    },
+    {
+      "bytes": 514160,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "dd5c80673db718b2c2beb3975abb54b2da60a238eada426bb58b569e9efccb88"
+    },
+    {
+      "bytes": 6361,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1c16d182466511441c40cfa95e18c7ea32be61d95caaa0a7796630b893d6caff"
+    },
+    {
+      "bytes": 510582,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7f5872cfd416ce990ad10f89e69cf5c4d16b1bed973cc0d2d95f10d235508ebd"
+    },
+    {
+      "bytes": 4703,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e51db2cd76a24406ea25174c11fbc46332353a817a74b2e393ac2da87f024961"
+    },
+    {
+      "bytes": 504221,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1577bf5549590dc83e2f58a434318001bc03e0f41e3c085d5e328196f244ac33"
+    },
+    {
+      "bytes": 6437,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "660a7c5c7151142a7bedaf92bcc76fb56289ba87cd17d68513b2940a880c139b"
+    },
+    {
+      "bytes": 461920,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "27b2874db35b494bef259cf68945f5e1d55e5d6b7dd1f4afe38b55dcb7275888"
+    },
+    {
+      "bytes": 5249,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "534ea939d64e09d516190fa9bb8821fd533c2e44c892530dd824e62a20b916c1"
+    },
+    {
+      "bytes": 496915,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "83a7cdc3b438050aed47854f2aaac7bfa9240de6a692d75c1c46ec122118e956"
+    },
+    {
+      "bytes": 6449,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "b57ed9177749462c9d60a28a46941fb727b44d3f547fcd6b3ae3de62abea473b"
+    },
+    {
+      "bytes": 501246,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "234634cfc620b2a4bf81669e6c65b3776a7952049d05c26f28d66d343f9f7a4d"
+    },
+    {
+      "bytes": 5850,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "109c88511f5157b05d68da4f39f714229e0c47e1ea26f2c16257c27792b677f3"
+    },
+    {
+      "bytes": 501203,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e28dd12e65921278876946de69d3aa74b53991fd84224ec005d497d5a7e01e41"
+    },
+    {
+      "bytes": 5540,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "4b8ee275dae8c83203a49f950d0da7eccd44d29fa20324d62fca06c7f3a0f13a"
+    },
+    {
+      "bytes": 508857,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "fc07a93a078b808e0bf981b4665d6e449ae675e769c22e3c26084349de4ef24e"
+    },
+    {
+      "bytes": 6297,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "f848c1141e96242db4a31bbba2b2afa1eb276fe6fde48cd698048daa9c9a3631"
+    },
+    {
+      "bytes": 542922,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "f9791e002d4784ad433ee3804268bae6e09c623c631498d1ab6aeb56d92f7210"
+    },
+    {
+      "bytes": 6309,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "cd25e130c927e7628448e3a995a12b9b75da9cda8a5c80089ecb45068d4df127"
+    },
+    {
+      "bytes": 493870,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "cb460b8bc6e7739d163bb1db89fec33b5c712ea29634859805cd8e497b51659b"
+    },
+    {
+      "bytes": 5633,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "44047d54a38f7848f42d23c141eebf8e4b9385f5f0b34d6c925d7829df0b8c58"
+    },
+    {
+      "bytes": 505487,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "a422dce878eaf38b29c790c17a6000ca3357e6459a43a25d6052a98251303a24"
+    },
+    {
+      "bytes": 4990,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "d1c7d9abb2ea9724697115271f1d5b361633e2d273a4bce1e4b2687cd8b1b466"
+    },
+    {
+      "bytes": 529555,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "5b5419ecdc8ed6f87755865c389c9043e7e89c5087e7e02104f32a0b918d7181"
+    },
+    {
+      "bytes": 4723,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "a229a75534c6fda4bd9b566885923c0987b55246c0db90dcd3e076edb983224f"
+    },
+    {
+      "bytes": 440201,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "fa04dda77518553d7d54cd7c238e0ed4672d0a8cfd55c3b72e48864a59aee326"
+    },
+    {
+      "bytes": 4769,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "3a0e0007714f7527bc466856af81cdbae9e15af8716028359346400192a62c57"
+    },
+    {
+      "bytes": 867776,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "59e60eaf53c250950cbfb869176cded76bf9b89c0064190bdb0d2bb78cf78f15"
+    },
+    {
+      "bytes": 285724,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "77b9d687e5334b1c64c415fbe4806946b9ed6c285f47300ae77c74791134b2bf"
+    },
+    {
+      "bytes": 295653,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "71cd9101b1b238a457bb40cc0e7d2c005ff8e4e397b2b946b150f1f5572daa8c"
+    },
+    {
+      "bytes": 290283,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "daafc065551427f97365707428661ab51f62fb6646568a4c62eecbeaa0d7839a"
+    },
+    {
+      "bytes": 251510,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "51a8aa392cdddc27fa05c2829d643e39948f1ad3955cb0587e2de311c7f732bb"
+    },
+    {
+      "bytes": 308410,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "bbe80b63adbf03bef0f6a9369d17fc6a1e138c88185b6aa88c8c1cbaa9136460"
+    },
+    {
+      "bytes": 296919,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "bd5724566808b7d3bac2834e6b2027332b356b3fbdf5c3142fcb89d6c2143367"
+    },
+    {
+      "bytes": 302416,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "39ada77bbac40a694ee3c5926fcc9bccd4454af697e858ecb83cc1a39722ac95"
+    },
+    {
+      "bytes": 292761,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "633f6a5c9384278cad93ecdb215c56f796c6fa8242f5285eb5104851c186d060"
+    },
+    {
+      "bytes": 278891,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7156207bf736531851f452f0a6b2b04ca94b6ed621c7aa1cd76058718dd32d71"
+    },
+    {
+      "bytes": 310747,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1c51b13df719f2e2cd8d4d0faeb1d92e0d510ea8bce5f4bb3b37feac05b28236"
+    },
+    {
+      "bytes": 309620,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e92949fbc8a5e3abe225386a05ab545087943f777f002f1042e029c70cefdb4f"
+    },
+    {
+      "bytes": 328890,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "7146d47484bf9f94198c0eba7fb66f61bdaea7d8a95b51db1c19cf2542638496"
+    },
+    {
+      "bytes": 307368,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "429e4e7329a0a0ee44fbf6db0679342512332b9f1f384624aa09225ce714cdeb"
+    },
+    {
+      "bytes": 343731,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "ffb6ce6ec4e2f0b0ea0faf759a5e4430b80a3a9fb8ebd1a608bad431450ab662"
+    },
+    {
+      "bytes": 355522,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "1b61e6b5796b700019e8f243ea7e4cf56105bc1b3b3d1517be5d088450e6f56b"
+    },
+    {
+      "bytes": 314118,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "0cb9393c93761f702fef20ad36df0c944570eaf7d60c3169ed0d81fb11ff3014"
+    },
+    {
+      "bytes": 354508,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "02b5c920bbe51795a166697e40526ba1f9a9d60791788cc49c86783f1e5fbdc4"
+    },
+    {
+      "bytes": 340745,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "870948dc11ff790cf966a9cd53edb9e41f3d4bd76302aa317acec584308bcf98"
+    },
+    {
+      "bytes": 334851,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "a4fb216c334e82d86245f1b85f3ae933efc07f7d8a9809fc618d4f205b341d8d"
+    },
+    {
+      "bytes": 4248396,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "a5aaab02c076c4d8738ef06bdc236a99887acd1c9a748afad307d8b096eb0244"
+    },
+    {
+      "bytes": 387,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "e3ac5cc4431207433b094a498de3b4878bb18dd95956f82d4b5863162f113dd9"
+    },
+    {
+      "bytes": 712107,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "36519b67ab8884f87a17d94eb36ebf89f003ee9ddd00c87f2791ea3a7a9222f4"
+    },
+    {
+      "bytes": 1233698,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "26ece2babf03cd8a58581e8131764ad0bbb5db27da2568d9a9159652466d5455"
+    },
+    {
+      "bytes": 21,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "59c8d76fe1873f93e9e8ab511cb874584584c2210ce24708493f1eab8f9a7f31"
+    },
+    {
+      "bytes": 1929705,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "fa6643124c53ddf215750d63aee9121058d0b4223697617496e5e9ce423eff27"
+    },
+    {
+      "bytes": 15,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "935047c666a1db0949a1835603efa663e57981a31bd3336edad8d804c20707d5"
+    },
+    {
+      "bytes": 1103,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "9010e5a841cf0acfb13facfaa2c3318bc8118020ec071d15de099eb9a628fd01"
+    },
+    {
+      "bytes": 35031,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "32fde2a0133c2cca9dbc673d811127385e1244626c3a2efdbea905118a7e57f4"
+    },
+    {
+      "bytes": 35178,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "883f36c6b638974f7a37d357b8a8b1091770629fa04600612f752e319f81eaf7"
+    },
+    {
+      "bytes": 3038,
+      "category": "source_body_ocr_render_or_retrieval_attempt",
+      "hash_scope": "Local bytes freshly hashed for exclusion inventory only; not a new source-reading claim.",
+      "local_omitted_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "locator_receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "reading_credit": "Only the final provenance receipt determines whether this item was used, read, partial, failed, or exploratory.",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea"
+    }
+  ],
+  "policy": "No full source books or papers, OCR/extracted source bodies, source renders, participant records, credentials, private email bodies or internal memory are distributed. Bounded public summaries and original provenance receipts are preserved unchanged. Classical bodies are also omitted for compactness.",
+  "source_identity_limits": [
+    "No missing DOI, URL, source hash or text is reconstructed or guessed. The preserved receipt governs when no body hash is available.",
+    "Downloaded challenge/metadata pages or unused exploratory scans are not promoted to full-text evidence by appearing in this omission inventory.",
+    "Component manifests still describe original evidence environments; this omission map determines actual physical inclusion in the checkpoint."
+  ],
+  "source_receipt_index": [
+    {
+      "author": "Fred Dretske",
+      "doi": "10.1093/oso/9780198239291.003.0008",
+      "full_text_read": false,
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.requested_source",
+      "obstruction": "Indexed OUP page explicitly says current access is absent; direct abstract, chapter and DOI opens returned internal/access failures in web tool.",
+      "pages": [
+        121,
+        136
+      ],
+      "receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "recorded_hashes": {},
+      "scope_inspected": "Publisher-indexed metadata and complete public abstract only",
+      "source_body_included": false,
+      "title": "Mental Events as Structuring Causes of Behaviour",
+      "urls": {
+        "url": "https://academic.oup.com/book/50168/chapter-abstract/422029519"
+      },
+      "year": 1993
+    },
+    {
+      "author": "Fred Dretske",
+      "bytes": 136725,
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.later_primary",
+      "method": "pdftotext -layout continuous text; local renders at decisive argument and qualification pages",
+      "pages": [
+        167,
+        177
+      ],
+      "receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "recorded_hashes": {
+        "sha256": "fdcc6f12da029c361e8f42ddd0128e2b344afc999946fabb4dc2c01adaeda6f8"
+      },
+      "source_body_in_deliverables": false,
+      "source_body_included": false,
+      "title": "Psychological vs. Biological Explanations of Behavior",
+      "urls": {
+        "url": "https://store.behavior.org/httpdocs/resources/157.pdf"
+      },
+      "year": 2004
+    },
+    {
+      "author": "Victor Reppert",
+      "bytes": 186104,
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.comparison_primary",
+      "method": "Existing layout extraction read both columns continuously; an attempted geometric half-page extraction clipped columns because of PDF page geometry, so it was rejected and replaced by full-page layout text and visual verification.",
+      "receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "recorded_hashes": {
+        "sha256": "cdb4f5b6aa18bbe2ed146f98d6de7c206f2c4a294a5c99f44f06b40bdbd6a8d1"
+      },
+      "source_body_included": false,
+      "title": "The Argument from Reason (1998)",
+      "urls": {
+        "url": "https://www.theistic.net/papers/V.Reppert/ReppertAFR.pdf"
+      }
+    },
+    {
+      "author": "Lynne Rudder Baker",
+      "bytes": 945440,
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.objection_primary",
+      "method": "Scan-only PDF; tesseract OCR pages individually, continuous reading; decisive scanned pages visually verified",
+      "pages": [
+        99,
+        111
+      ],
+      "receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "recorded_hashes": {
+        "sha256": "c912f4d38d74a3542ac347e20ae7068cb1eeef4d30f0a3b4c84c1deaee90f968"
+      },
+      "source_body_included": false,
+      "title": "Dretske on the Explanatory Role of Belief",
+      "urls": {
+        "url": "https://uh.edu/~garson/BakeronDretske.pdf"
+      },
+      "year": 1991
+    },
+    {
+      "author": "Fred Dretske",
+      "bytes": 404536,
+      "doi": "10.1007/BF00376000",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.reply_primary",
+      "method": "Scan-only source; tesseract OCR of every page, continuous full response read; rendered decisive pages visually reread",
+      "pages": [
+        113,
+        117
+      ],
+      "receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "recorded_hashes": {
+        "sha256": "b77ae12b8f0499af2073469000d17cd03ba4d19d3d3346aa12287fcee768ac4e"
+      },
+      "source_body_in_deliverables": false,
+      "source_body_included": false,
+      "title": "How Beliefs Explain: Reply to Baker",
+      "urls": {
+        "discovery_page": "https://www.uh.edu/~garson/SyllabusMeaning2011.htm",
+        "url": "https://www.uh.edu/~garson/Dretske%27s%20Reply%20to%20Baker.pdf"
+      },
+      "year": 1991
+    },
+    {
+      "author": "Fred Dretske",
+      "doi": "10.1007/BF00376000",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.reply_primary.first_pass_unavailability",
+      "obstruction": "Publisher open inaccessible and PhilPapers direct open403; targeted searches did not locate an eligible open primary copy.",
+      "pages": [
+        113,
+        117
+      ],
+      "receipt": "t20-next-frontier-20261008/structuring-cause-reply/READING_PROVENANCE.json",
+      "recorded_hashes": {},
+      "source_body_included": false,
+      "title": "How Beliefs Explain: Reply to Baker",
+      "urls": {
+        "url": "https://link.springer.com/article/10.1007/BF00376000"
+      },
+      "year": 1991
+    },
+    {
+      "author": "Fred Dretske",
+      "bytes": 1929705,
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.sources[0]",
+      "original_work_year": 1988,
+      "printed_pages": [
+        79,
+        107
+      ],
+      "reading_credit": "Worker read OCR covering every page; annotated/underlined passages elsewhere missing from OCR, so whole-chapter coverage with textual gaps, not unqualified full-text reading.",
+      "receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "recorded_hashes": {
+        "sha256": "fa6643124c53ddf215750d63aee9121058d0b4223697617496e5e9ce423eff27"
+      },
+      "source_body_in_deliverables": false,
+      "source_body_included": false,
+      "temporary_file": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "title": "Explaining Behavior: Reasons in a World of Causes, chapter4 The Explanatory Role of Belief",
+      "urls": {
+        "publisher_metadata_url": "https://mitpress.mit.edu/9780262040945/explaining-behavior/",
+        "url": "https://www.uh.edu/~garson/DretskeExplanCh.4.PDF"
+      }
+    },
+    {
+      "author": "Cameron Buckner",
+      "bytes": 425447,
+      "doi": "10.1111/phpr.12455",
+      "edition": "2017 online-first 28-page PDF, later published2019 Philosophy and Phenomenological Research98(3):697–724",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.sources[1]",
+      "receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "recorded_hashes": {
+        "sha256": "0abb1a351c111d7586071113d96dde6460fa538f26124d11ad8aa6dd738dcb36"
+      },
+      "scope_caveat": "Primary philosophical argument inspected; cited animal studies not independently checked; practical inference focus explicitly excludes a completed theoretical/deductive inference account.",
+      "source_body_included": false,
+      "temporary_file": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "title": "Rational Inference: The Lowest Bounds",
+      "urls": {
+        "publisher_metadata": "https://onlinelibrary.wiley.com/doi/10.1111/phpr.12455",
+        "url": "https://web.mit.edu/6.034/www/6.s077/Buckner-2017-Philosophy_and_Phenomenological_Research.pdf"
+      }
+    },
+    {
+      "author": "Paul Boghossian",
+      "bytes": 172091,
+      "doi": "10.1007/s11098-012-9903-x",
+      "edition": "Philosophical Studies169:1–18(2014); online publication19April2012",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.sources[2]",
+      "receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "recorded_hashes": {
+        "sha256": "199e1c8c8b90dbd27048a1aba5ecdb37ab530a06e62f0e218af4dd9e679c2133"
+      },
+      "scope_caveat": "He explicitly restricts inquiry to person-level System1.5-and-up theoretical reasoning; not a demonstration that every basic recognition requires reflection.",
+      "source_body_included": false,
+      "temporary_file": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "title": "What is inference?",
+      "urls": {
+        "url": "https://paulboghossian.com/pb/files/WhatIsInference.pdf"
+      }
+    },
+    {
+      "author": "Ilia Patronnikov",
+      "doi": "10.1007/s12136-025-00632-8",
+      "edition": "Acta Analytica40:731–752(2025), published15March2025",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.sources[3]",
+      "method": "Publisher open-access HTML; argument lines59–221 and all21notes lines224–276 inspected; tiny truncated gap194–195 recovered by separate open. References and metadata also displayed.",
+      "receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "recorded_hashes": {},
+      "scope_caveat": "Primary critic argument, not a replacement for Siegel’s own definitions; empirical weather-prediction findings reported by source, not independently reanalysed. Counterfactual justificatory criterion has explicit good-inference and externalist qualifications.",
+      "source_body_included": false,
+      "title": "Associative Inferential Transitions, or One Problem with Siegel’s Response Hypothesis",
+      "urls": {
+        "url": "https://link.springer.com/article/10.1007/s12136-025-00632-8"
+      }
+    },
+    {
+      "author": "Susanna Siegel",
+      "bytes": 207595,
+      "edition": "Harvard-hosted manuscript for2019 Reasoning: New Essays on Theoretical and Practical Thinking; manuscript1–19. Published chapter15–31 verified separately.",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.sources[4]",
+      "metadata_warning": "Harvard repository cover incorrectly combines2017 book-chapter DOI/date/pagination with2019 Reasoning citation. Actual manuscript header identifies the Reasoning volume; Oxford chapter2 metadata independently confirms2019,15–31 and correct DOI. Manuscript body used for all substantive citations; no final publisher-body or2017book-chapter reading credit.",
+      "receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "recorded_hashes": {
+        "sha256": "0d14be3ae7209f72e0b53ff7ec9ac1d9fab64dcaef4cdfbeb8b793929bc84fe9"
+      },
+      "scope_current": "Entire Harvard manuscript read continuously in three batches, including footnotes and bibliography. Cite manuscript pagination; not2017 book-chapter reading credit.",
+      "source_body_included": false,
+      "temporary_file": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "title": "Inference without reckoning",
+      "urls": {
+        "repository_record": "https://dash.harvard.edu/entities/publication/73120379-3754-6bd4-e053-0100007fdf3b",
+        "url": "https://dash.harvard.edu/server/api/core/bitstreams/7312037e-6d0f-6bd4-e053-0100007fdf3b/content"
+      }
+    },
+    {
+      "doi": "10.1093/oso/9780198791478.003.0002",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.sources[4].publisher_metadata",
+      "pages": [
+        15,
+        31
+      ],
+      "receipt": "t20-next-frontier-20261008/structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "recorded_hashes": {},
+      "source_body_included": false,
+      "urls": {
+        "url": "https://academic.oup.com/book/35161/chapter/299396776"
+      }
+    },
+    {
+      "bytes": 10346,
+      "continuous_read": "2:20–24 plus opening paragraph of 2:25",
+      "edition": "Muḥammad Rashād Salīm, Maktabat Ibn Taymiyya, second edition 1406; metadata at rendered L15",
+      "file": "sources/salim-2-20-25-return.txt",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.reads[0]",
+      "key": "L1536, footer L1538: 2:23",
+      "receipt": "t20-next-frontier-20261008/activity-source-boundary/SOURCE_READS.json",
+      "recorded_hashes": {
+        "sha256": "28805be96258b94c7472453381db47c6860e2659d2c56ec4c79bc2e20da0547c"
+      },
+      "source_body_included": false,
+      "source_rendered_lines": [
+        1520,
+        1546
+      ],
+      "status": "Targeted primary return for new inference question; authorial taxonomy and conditional case division; not a newly discovered whole-source distinction or independent witness",
+      "urls": {
+        "url": "https://islamhouse.com/read/ar/الصفدية-272837"
+      }
+    },
+    {
+      "bytes": 23777,
+      "continuous_read": "2:139–150",
+      "edition": "Same electronic Salīm witness",
+      "file": "sources/salim-2-139-150-return.txt",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.reads[1]",
+      "key": "L2254–2256/footer2257:2:142; L2272/footer2273:2:145",
+      "receipt": "t20-next-frontier-20261008/activity-source-boundary/SOURCE_READS.json",
+      "recorded_hashes": {
+        "sha256": "9225c107b5e3b64969058b884e98e5be10b85ead147c8baa40a9cbbc2e2c6d0f"
+      },
+      "source_body_included": false,
+      "source_rendered_lines": [
+        2237,
+        2301
+      ],
+      "status": "Targeted continuous primary reread; no Salīm scan acquired or newly examined",
+      "urls": {
+        "url": "https://islamhouse.com/read/ar/الصفدية-272837"
+      }
+    },
+    {
+      "bytes": 13370,
+      "continuous_read": "Complete digression and adjacent context, core L234–236",
+      "edition": "Official author website Arabic lecture transcript, Shūrā lesson6; no print pagination",
+      "file": "sources/shura6-L228-247-return.txt",
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.reads[2]",
+      "key": "L236",
+      "receipt": "t20-next-frontier-20261008/activity-source-boundary/SOURCE_READS.json",
+      "recorded_hashes": {
+        "sha256": "6b67fbe5613d49616e931161df821eb8b43d9ff6ea4ff68fea971387d360a5e1"
+      },
+      "source_body_included": false,
+      "source_rendered_lines": [
+        228,
+        247
+      ],
+      "status": "Targeted return to check stronger productive consequence; not an independent witness to Ibn Taymiyyah; no audio timestamp verification",
+      "urls": {
+        "url": "https://old.binothaimeen.net/content/14192"
+      }
+    },
+    {
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.primary_sources[0]",
+      "path": "../wise-determination/sources/majmu8-item805.txt",
+      "read_scope": "L294–312; continuous L311–359",
+      "receipt": "t20-next-frontier-20261008/productive-sufficiency-scope/review/REVIEW_BINDINGS.json",
+      "recorded_hashes": {
+        "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1"
+      },
+      "source_body_included": false,
+      "urls": {}
+    },
+    {
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.primary_sources[1]",
+      "path": "../wise-determination/sources/bayan5-item961.txt",
+      "read_scope": "L001–004",
+      "receipt": "t20-next-frontier-20261008/productive-sufficiency-scope/review/REVIEW_BINDINGS.json",
+      "recorded_hashes": {
+        "sha256": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08"
+      },
+      "source_body_included": false,
+      "urls": {}
+    },
+    {
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.primary_sources[2]",
+      "path": "../wise-determination/sources/bayan5-item962.txt",
+      "read_scope": "L001–011, excluding suspect L002 and opening L009 from evidential use",
+      "receipt": "t20-next-frontier-20261008/productive-sufficiency-scope/review/REVIEW_BINDINGS.json",
+      "recorded_hashes": {
+        "sha256": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1"
+      },
+      "source_body_included": false,
+      "urls": {}
+    },
+    {
+      "hash_scope": "Inherited source receipt; absent bytes are not freshly re-read or re-certified.",
+      "json_pointer": "$.primary_sources[3]",
+      "path": "../bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "read_scope": "L035–046, L081–090, L232–240",
+      "receipt": "t20-next-frontier-20261008/productive-sufficiency-scope/review/REVIEW_BINDINGS.json",
+      "recorded_hashes": {
+        "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8"
+      },
+      "source_body_included": false,
+      "urls": {}
+    }
+  ]
+}

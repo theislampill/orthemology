@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-10-08T13:00:04.659731+00:00",
+  "scope": "Input identity only; all prior stages remain unchanged.",
+  "inputs": [
+    {
+      "path": "../calibration-design-frontier/ARBITRARY_RATE_COUNT_BOUND.md",
+      "sha256": "e68242d3052342b2c2cf029b3e9d65d3402e7005d6179f8a335ec1e5ad52daad",
+      "bytes": 5588
+    },
+    {
+      "path": "../calibration-design-frontier/MANIFEST.json",
+      "sha256": "07a2b23dc30856f388a263bfc62a215d4d5277f03ce845f014b2ce399d94f412",
+      "bytes": 2719
+    },
+    {
+      "path": "../calibration-design-frontier/REVIEW_STATUS.md",
+      "sha256": "f8304a9baf2ba1d354c7ed35fe3344975b33ac00dc440a5ef60fba7c2c379f2c",
+      "bytes": 2687
+    },
+    {
+      "path": "../ROOT_RESEARCH_CONTROL.md",
+      "sha256": "4ee2604b09aceb6f9d9de4b6b595255d95f542fb671b93a7ff016c1c6cce2a28",
+      "bytes": 2117
+    }
+  ]
+}

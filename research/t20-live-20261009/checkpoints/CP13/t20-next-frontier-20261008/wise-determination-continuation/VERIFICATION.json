@@ -1,0 +1,109 @@
+{
+  "recorded_at_utc": "2026-10-08T23:21:03.097440+00:00",
+  "input_hash_checks": [
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/SOURCE_READS.json",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/review/CONTRACT_REVIEW.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/review/DETERMINATION_TRANSPORT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/REPORT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/activity-source-boundary/RESULT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/activity-source-boundary/CONDITIONAL_SCOPE.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/action-genus-scope-audit/RESULT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/SOURCE_READS.json",
+      "matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/source-fidelity-review/REVIEW.md",
+      "matches": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/dar-8-9/volume09/READING_LOG.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/majmu-item591.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+      "matches": true
+    }
+  ],
+  "slice_checks": [
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-L1012-L1054-return.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-L0465-L0545-return.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-L0705-L0758-return.txt",
+      "matches": true
+    }
+  ],
+  "independent_review_binds_current_report": true,
+  "report_sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040",
+  "manifest_sha256": "9f1e11a227bd51066b41c43ead8d7846ba9696c96489ef93f3302778f5bf2650",
+  "all_checks_passed": true,
+  "finalization_history": "Initial final-binding assertion failed because reviewer held the pre-caution report hash. Reviewer explicitly checked the added L1049 caution and rebound the current report. No substantive result changed; no new full-reading credit.",
+  "limits": "Artifact/evidence integrity only; not verification of metaphysical truth, original-peer possibility, historical time credit, or closure."
+}

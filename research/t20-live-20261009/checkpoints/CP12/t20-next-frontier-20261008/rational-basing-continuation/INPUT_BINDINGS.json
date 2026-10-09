@@ -1,0 +1,63 @@
+{
+  "recorded_utc": "2026-10-08T21:59:26.938465+00:00",
+  "status": "Prospective active research, no historical duration credit. Time floor UNVERIFIED.",
+  "inputs": [
+    {
+      "path": "structuring-cause-reply/MODEL_AND_TRANSPORT.md",
+      "sha256": "62af913b9011cb1853e194fba429462923ffaf6fdc7b826a056584245f044deb"
+    },
+    {
+      "path": "structuring-cause-reply/PUBLIC_SOURCE_SUMMARIES.md",
+      "sha256": "22946b950c49dbf2c3ea8aff52a0c6117959e6e29229f5ae9e11f6fda1d5adca"
+    },
+    {
+      "path": "structuring-cause-reply/READING_PROVENANCE.json",
+      "sha256": "375fcf6bca7e01d666bf03cab5d936a77779c40f452da9c9cc74ef025998b476"
+    },
+    {
+      "path": "root-next-operations/DRETSKE_REPLY_READ.json",
+      "sha256": "c6b76286d685f6eb54b6a9c314dffeb94a72a43e6650b6c7d14bc3c5f55987d1"
+    },
+    {
+      "path": "dretske-continuation-access/ACCESS_RESULT.md",
+      "sha256": "f24569fad0b089d74f81fe9102c1414d089aff6f77f05a107b29b0b6769c872a"
+    },
+    {
+      "path": "dretske-continuation-access/ACCESS_PROVENANCE.json",
+      "sha256": "2914ccd9fd31815d52cc8b188bea645aac9481486d011b9fb2fcfdce3fdfb39d"
+    },
+    {
+      "path": "structuring-cause-basing-addendum/ASSESSMENT.md",
+      "sha256": "6cc552de77138656319257e57dd102fc6448cac333e10e8e1fb3bcf01045ac87"
+    },
+    {
+      "path": "structuring-cause-basing-addendum/PUBLIC_SOURCE_SUMMARIES.md",
+      "sha256": "97e1d419fd158852163086e0de16037e6fadc9458b758d82b312e6fea5844af5"
+    },
+    {
+      "path": "structuring-cause-basing-addendum/READING_PROVENANCE.json",
+      "sha256": "54a6275482f0acc80ae5d688a379ee35c4e96e6130f590faa9aedbc8e3f3c311"
+    },
+    {
+      "path": "structuring-cause-basing-addendum/MATHEMATICAL_TRANSPORT.md",
+      "sha256": "b92e211d58f9706f928e4d5c2776d486559c3b674d603f7f2e61b459050c33c5"
+    }
+  ],
+  "additional_read_inputs": [
+    {
+      "recorded_utc": "2026-10-08T22:13:03.299997+00:00",
+      "path": "fitrah-warrant-bridge/READ_FIRST.md",
+      "sha256": "0502d24894567f34847f5e606323ee5e90b5f270224ba0853be8364403313a96"
+    },
+    {
+      "recorded_utc": "2026-10-08T22:13:03.299997+00:00",
+      "path": "fitrah-warrant-bridge/INDEPENDENT_ASSESSMENT.md",
+      "sha256": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0"
+    },
+    {
+      "recorded_utc": "2026-10-08T22:13:03.299997+00:00",
+      "path": "fitrah-warrant-bridge/warranting-basis-addendum/CLARIFICATION.md",
+      "sha256": "bbf9090cae6f829caf70a8dc1208055235cceb49fd37e578a91da864ccb2b270"
+    }
+  ]
+}

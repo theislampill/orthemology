@@ -1,0 +1,129 @@
+{
+  "recorded_utc": "2026-10-09T11:29:00Z",
+  "owner_instructions": [
+    {
+      "library_file_id": "libfile_aeb0213834b0819180bd1e7b1e0b3426",
+      "name": "Pasted text(20261009-111336).txt",
+      "bytes": 20637,
+      "lines": 321,
+      "read_complete": true,
+      "has_more": false
+    },
+    {
+      "library_file_id": "libfile_2041f9aa86648191a0fdee0e653705a3",
+      "name": "Pasted text(20261009-111337).txt",
+      "bytes": 10076,
+      "lines": 138,
+      "read_complete": true,
+      "has_more": false
+    }
+  ],
+  "inherited_local_inputs": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "read": [
+        [
+          1,
+          80
+        ],
+        [
+          107,
+          505
+        ],
+        [
+          641,
+          689
+        ]
+      ],
+      "purpose": "Typed representation, fibre, parity, witnessed revision, inquiry and proof bridge definitions"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/REPORT.md",
+      "bytes": 15381,
+      "sha256": "4bd8f0e5bcac178bf9eb890544fcba9fd60f6a1d08cdf2e0cc12bb6d2c4b4c1c",
+      "read": "full",
+      "purpose": "Operative basing input and non-circular factive-ground qualification"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "bytes": 1939,
+      "sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b",
+      "read": "full",
+      "purpose": "Nineteen-line inherited System R proof"
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/RESULT.md",
+      "bytes": 8091,
+      "sha256": "4c48b7ec591654c39f9a8bc93c2e15c7e7f8bf67fd3de202d51fec0da07d8972",
+      "read": "full",
+      "purpose": "Inherited present-use versus premise-relative basing distinction"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-audit-addenda/H_CONTINUATION_108_292.md",
+      "bytes": 13323,
+      "sha256": "bb226ec3e294b31153808cca11e5facd2182af0372974b267c6f68f18b491396",
+      "read": "full",
+      "purpose": "Previously retained exact continuation theorem range"
+    }
+  ],
+  "continuation": {
+    "repository": "theislampill/orthemology",
+    "commit": "3a0bdeaa1394c656245cae9599adcb143e885059",
+    "path": "theory/lineages/h-continuation/continuation_complete_orthing.md",
+    "git_blob_expected": "99d0434aad8b8a841f59eb078e2b70c0b961d226",
+    "git_blob_recomputed": "99d0434aad8b8a841f59eb078e2b70c0b961d226",
+    "bytes": 66411,
+    "lines": 804,
+    "local_copy": "sources/continuation_complete_orthing_full.md",
+    "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+    "retrieved_ranges": [
+      [
+        1,
+        760
+      ],
+      [
+        761,
+        804
+      ]
+    ],
+    "whole_file_retrieved": true,
+    "whole_file_read_claimed": false,
+    "substantive_ranges_read": [
+      [
+        1,
+        292
+      ],
+      [
+        293,
+        450
+      ],
+      [
+        609,
+        804
+      ]
+    ],
+    "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-continuation/continuation_complete_orthing.md"
+  },
+  "primary_ancestry_checks": [
+    {
+      "authors": "Green, Karvounarakis and Tannen",
+      "title": "Provenance Semirings",
+      "url": "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+      "read": "Abstract, introduction and sections 2\u20134 relevant provenance definitions through theorem discussion",
+      "full_read_claimed": false,
+      "role": "Acknowledged positive provenance ancestry, not theorem import"
+    },
+    {
+      "authors": "Buhrman and de Wolf",
+      "title": "Complexity Measures and Decision Tree Complexity: A Survey",
+      "url": "https://homepages.cwi.nl/~rdewolf/publ/qc/dectree.pdf",
+      "read": "Deterministic history-dependent query description and section 4.1 certificate definitions",
+      "full_read_claimed": false,
+      "role": "Acknowledged certificate versus search ancestry, not novelty certification"
+    }
+  ],
+  "novelty": "Restricted development relative to retained packet; no general mathematical novelty claim",
+  "authority": "No repository modification, integration, scientific adoption or programme closure"
+}

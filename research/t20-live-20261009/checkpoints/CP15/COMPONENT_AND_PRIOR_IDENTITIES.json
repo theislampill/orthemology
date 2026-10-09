@@ -1,0 +1,390 @@
+{
+  "prior_checkpoints": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+      "bytes": 544325,
+      "sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged",
+      "checkpoint_number": 1,
+      "library_file_id": "libfile_ea979c6aff9c8191a628db3d70c2d39d",
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+      "bytes": 389515,
+      "sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged",
+      "checkpoint_number": 2,
+      "library_file_id": "libfile_f4760dc368b08191bf4ede9576836ffa",
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+      "bytes": 318928,
+      "sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged",
+      "checkpoint_number": 3,
+      "library_file_id": "libfile_3863165449d08191a27d385b6a7ad3df",
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 549190,
+      "sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged",
+      "checkpoint_number": 4,
+      "library_file_id": "libfile_bc799d1a07f081919df98cbccc13bfc9",
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/interaction-invariants/T20_Grouped_Invariants_and_Interaction_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 465413,
+      "sha256": "80849c0ece0517a96070fcbc40308440cd655c8d6ecd13f62f0c8d4a3caf0bc3",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged",
+      "checkpoint_number": 5,
+      "library_file_id": "libfile_a0e5361238c88191964de0a1f1cf56ef",
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/replay-calibration/T20_Calibration_and_Replay_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 730140,
+      "sha256": "9371dbf519e86886a2d99c0fd8c3014bd4a510d6d97c6c19416d02060c042c66",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged",
+      "checkpoint_number": 6,
+      "library_file_id": "libfile_c454aa98f32c8191a894cf7d52c9229b",
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/robust-replay/T20_Robust_Replay_and_Information_Bounds_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 319689,
+      "sha256": "21de2a8b2e14ab9a26035514054a8fb3555bd284938751acbd8282b4c4e6965a",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged",
+      "checkpoint_number": 7,
+      "library_file_id": "libfile_f65626da53f481919f90247d46fcc9df",
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/ontology-tensor/T20_Ontology_and_Qualitative_Tensor_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 359977,
+      "sha256": "19e9cf299df2c51d018ab5186dc591a98c8e05e2b0ea39b1c1e15c3236ff0dcf",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged",
+      "checkpoint_number": 8,
+      "library_file_id": "libfile_e499c9ce10b88191b20bbedaec5416cf",
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/retained-readout/T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified.zip",
+      "bytes": 524152,
+      "sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+      "included": false,
+      "boundary": "authoritative ninth Scope_Clarified delivered archive; earlier initial ninth seal remains preserved",
+      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "checkpoint_number": 9,
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/skyline-information/T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 91193,
+      "sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
+      "included": false,
+      "boundary": "Authoritative delivered tenth intermediate archive",
+      "library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+      "guide_library_file_id": "libfile_410ea1421dc08191898ef2c7097d724b",
+      "checkpoint_number": 10,
+      "library_version": 0
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/full-skyline-bounds/T20_Full_Skyline_Information_Bounds_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 344808,
+      "sha256": "76bec736f7345358f43b82409592a52167d627103b53a97d7939f9ae56b3534d",
+      "included": false,
+      "checkpoint_number": 11,
+      "boundary": "Authoritative delivered eleventh archive; historical pending-sharp and one-log-gap language preserved unchanged",
+      "library_file_id": "libfile_d997bac5e5f48191a011cbc021ad4d84",
+      "guide_library_file_id": "libfile_48a39c0fcb6c8191a06abfd78608fd06"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/sharp-and-basing/T20_Sharp_Skyline_and_Rational_Basing_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 190347,
+      "sha256": "8f2d12eaf5219a8b84df921ab2e917580ebf10f7a724079bde60587fa78c1801",
+      "included": false,
+      "checkpoint_number": 12,
+      "library_file_id": "libfile_f802826896448191b3ca8a9704dc06ae",
+      "guide_library_file_id": "libfile_893a7b9f919481918a6905b46bf94346",
+      "boundary": "Authoritative delivered twelfth; its cutoff excluded current six successors, now added without revising it"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/foundational-selfknowledge/T20_Foundational_Transport_and_Selfknowledge_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 386850,
+      "sha256": "18a66948e5ae98915c82f7920a869ef93d4e650432925ad1f35279a222cc6db9",
+      "checkpoint_number": 13,
+      "included": false,
+      "library_file_id": "libfile_d67e0672d6dc81919bab04d90d21bdf4",
+      "guide_library_file_id": "libfile_d6f0a9ddd5c88191acf258e0b68d4d95",
+      "boundary": "Delivered thirteenth; this additive checkpoint changes none of its bytes or historical claims."
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/sourcehood-explanation/T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009.zip",
+      "bytes": 296862,
+      "sha256": "ca9c0b7b471593dbde65a642c694f2c40b3cd5ea9f81052d7bc0901699a6b31c",
+      "checkpoint_number": 14,
+      "included": false,
+      "library_file_id": "libfile_75e5398badd48191b4234ecbd8669a39",
+      "guide_library_file_id": "libfile_2170fb6d35bc8191aa9f86fe0b4c9c5b",
+      "boundary": "Delivered fourteenth remains unchanged. Its exclusion of the then-ongoing epistemic successor was a historical membership cutoff."
+    }
+  ],
+  "all_checked_archives": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+      "bytes": 544325,
+      "sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+      "archive_id": "prior-archive-1",
+      "checkpoint_number": 1,
+      "library_file_id": "libfile_ea979c6aff9c8191a628db3d70c2d39d",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/sharp-and-basing/T20_Sharp_Skyline_and_Rational_Basing_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 190347,
+      "sha256": "8f2d12eaf5219a8b84df921ab2e917580ebf10f7a724079bde60587fa78c1801",
+      "archive_id": "prior-archive-2",
+      "checkpoint_number": 12,
+      "library_file_id": "libfile_f802826896448191b3ca8a9704dc06ae",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/skyline-information/T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 91193,
+      "sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
+      "archive_id": "prior-archive-3",
+      "checkpoint_number": 10,
+      "library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/robust-replay/T20_Robust_Replay_and_Information_Bounds_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 319689,
+      "sha256": "21de2a8b2e14ab9a26035514054a8fb3555bd284938751acbd8282b4c4e6965a",
+      "archive_id": "prior-archive-4",
+      "checkpoint_number": 7,
+      "library_file_id": "libfile_f65626da53f481919f90247d46fcc9df",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 549190,
+      "sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+      "archive_id": "prior-archive-5",
+      "checkpoint_number": 4,
+      "library_file_id": "libfile_bc799d1a07f081919df98cbccc13bfc9",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/replay-calibration/T20_Calibration_and_Replay_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 730140,
+      "sha256": "9371dbf519e86886a2d99c0fd8c3014bd4a510d6d97c6c19416d02060c042c66",
+      "archive_id": "prior-archive-6",
+      "checkpoint_number": 6,
+      "library_file_id": "libfile_c454aa98f32c8191a894cf7d52c9229b",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+      "bytes": 389515,
+      "sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+      "archive_id": "prior-archive-7",
+      "checkpoint_number": 2,
+      "library_file_id": "libfile_f4760dc368b08191bf4ede9576836ffa",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/ontology-tensor/T20_Ontology_and_Qualitative_Tensor_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 359977,
+      "sha256": "19e9cf299df2c51d018ab5186dc591a98c8e05e2b0ea39b1c1e15c3236ff0dcf",
+      "archive_id": "prior-archive-8",
+      "checkpoint_number": 8,
+      "library_file_id": "libfile_e499c9ce10b88191b20bbedaec5416cf",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+      "bytes": 318928,
+      "sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+      "archive_id": "prior-archive-9",
+      "checkpoint_number": 3,
+      "library_file_id": "libfile_3863165449d08191a27d385b6a7ad3df",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/foundational-selfknowledge/T20_Foundational_Transport_and_Selfknowledge_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 386850,
+      "sha256": "18a66948e5ae98915c82f7920a869ef93d4e650432925ad1f35279a222cc6db9",
+      "archive_id": "prior-archive-10",
+      "checkpoint_number": 13,
+      "library_file_id": "libfile_d67e0672d6dc81919bab04d90d21bdf4",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/full-skyline-bounds/T20_Full_Skyline_Information_Bounds_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 344808,
+      "sha256": "76bec736f7345358f43b82409592a52167d627103b53a97d7939f9ae56b3534d",
+      "archive_id": "prior-archive-11",
+      "checkpoint_number": 11,
+      "library_file_id": "libfile_d997bac5e5f48191a011cbc021ad4d84",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/interaction-invariants/T20_Grouped_Invariants_and_Interaction_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 465413,
+      "sha256": "80849c0ece0517a96070fcbc40308440cd655c8d6ecd13f62f0c8d4a3caf0bc3",
+      "archive_id": "prior-archive-12",
+      "checkpoint_number": 5,
+      "library_file_id": "libfile_a0e5361238c88191964de0a1f1cf56ef",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/retained-readout/T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified.zip",
+      "bytes": 524152,
+      "sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+      "archive_id": "prior-archive-13",
+      "checkpoint_number": 9,
+      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/retained-readout/T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 518329,
+      "sha256": "94d840cc2eda559dd132b38dec45a68156d323a48ba1e68ab9eb521e41ce0f30",
+      "archive_id": "prior-archive-14",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/skyline-information/_assembly/pre_delivery_binding_correction/T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 90971,
+      "sha256": "a494583e4dea0a85a5410fa8342454671c98ef1dba99d496e34a1127525b78a7",
+      "archive_id": "prior-archive-15",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008.zip",
+      "bytes": 1584036,
+      "sha256": "c06fddfd16be58f254b57560c9e09e22c470fa8f66ac07c51f7a40c5f5629990",
+      "archive_id": "prior-archive-16",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/Orthemology_T20_Targeted_Source_Addendum_20261008.zip",
+      "bytes": 59298,
+      "sha256": "614d9de89bba48db016079f749ba8211ad32a12eb87cc6d0a01939733ff122f8",
+      "archive_id": "prior-archive-17",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/earlier/Orthemology_T16_T20_Consolidated_v1_20261007.zip",
+      "bytes": 18472757,
+      "sha256": "64d964a763168169b4e5ac643f3ed991b0563ffa6cf47b51f97e6ac7f3bf24fd",
+      "archive_id": "prior-archive-18",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/earlier/Orthemology_T20_Closure_Audit_and_Research_Supplement_v1_20261007.zip",
+      "bytes": 490964,
+      "sha256": "7087cfca2c671878e08050c667f7a778f83d86ca0c7ea4b06f1be6335a26986f",
+      "archive_id": "prior-archive-19",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/historical-supplements/t16/Orthemology_Sixteenth_Source_Recovery_Checkpoint_v1_20261005.zip",
+      "bytes": 52134,
+      "sha256": "bbc44314d30bedd3d1042a3f9dbb846be2f8c1c3d9019b70caa83ceb28309d7b",
+      "archive_id": "prior-archive-20",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Eighteenth_Research_Final_Evidence_v2_20261006.zip",
+      "bytes": 2246794,
+      "sha256": "e2f433b58cf934313940293c8f82e20be3b8d75f070c50e5b6777f58667c482c",
+      "archive_id": "prior-archive-21",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Nineteenth_Research_Evidence_v1_20261006.zip",
+      "bytes": 22689,
+      "sha256": "ab655329fa190a8fc8ea655b326600d44c72d5376d195e21f6e57e3a3ae34b81",
+      "archive_id": "prior-archive-22",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Seventeenth_Research_Final_Evidence_v1_20261005.zip",
+      "bytes": 95685,
+      "sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+      "archive_id": "prior-archive-23",
+      "included": false
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Sixteenth_Research_Final_Evidence_v1_20261005.zip",
+      "bytes": 4991714,
+      "sha256": "aebee5c62532044d2bb98f3ca73b48d51800dc1ee049ae3bfb4fd86de12bafef",
+      "archive_id": "prior-archive-24",
+      "included": false
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/sourcehood-explanation/T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009.zip",
+      "bytes": 296862,
+      "sha256": "ca9c0b7b471593dbde65a642c694f2c40b3cd5ea9f81052d7bc0901699a6b31c",
+      "archive_id": "prior-archive-25",
+      "checkpoint_number": 14,
+      "included": false,
+      "library_file_id": "libfile_75e5398badd48191b4234ecbd8669a39"
+    }
+  ],
+  "prior_correction_genealogy": {
+    "ninth_initial_seal": {
+      "path": "t20-next-frontier-20261008/checkpoints/retained-readout/T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 518329,
+      "sha256": "94d840cc2eda559dd132b38dec45a68156d323a48ba1e68ab9eb521e41ce0f30",
+      "included": false,
+      "authority": "Historical superseded seal; authoritative ninth is Scope_Clarified in prior_checkpoints"
+    },
+    "ninth_scope_clarified_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+    "eleventh_to_twelfth": "Eleventh pending-sharp and one-log-gap statuses were superseded by accepted twelfth sharp and finite-score results; old claims and bytes unchanged.",
+    "de_se_basing": {
+      "old_result_sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91",
+      "accepted_result_sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/CORRECTION_RECORD.json",
+      "historical_files_are_not_current_acceptance": true
+    },
+    "collective_publication": "2014 paper canonical journal citation is volume 14, number 20, pp. 1–28. Earlier inherited 14(14) lead preserved as historical, not silently corrected.",
+    "wise_report": "Nested review retains ab750d8c… prior binding and current 188c4119… refinement history; current full digest governs accepted report."
+  },
+  "direct_predecessor": {
+    "path": "t20-next-frontier-20261008/checkpoints/sourcehood-explanation/T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009.zip",
+    "bytes": 296862,
+    "sha256": "ca9c0b7b471593dbde65a642c694f2c40b3cd5ea9f81052d7bc0901699a6b31c",
+    "checkpoint_number": 14,
+    "included": false,
+    "library_file_id": "libfile_75e5398badd48191b4234ecbd8669a39",
+    "guide_library_file_id": "libfile_2170fb6d35bc8191aa9f86fe0b4c9c5b",
+    "boundary": "Delivered fourteenth remains unchanged. Its exclusion of the then-ongoing epistemic successor was a historical membership cutoff."
+  },
+  "direct_predecessor_guide": {
+    "path": "t20-next-frontier-20261008/checkpoints/sourcehood-explanation/T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009.READ_FIRST.md",
+    "bytes": 9236,
+    "sha256": "9bb68d362297e61fa394211498c71ba94efb7d9a3296fe9e0f131ed12c0f6dec"
+  },
+  "direct_predecessor_validation_receipt": {
+    "path": "t20-next-frontier-20261008/checkpoints/sourcehood-explanation/T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009.VALIDATION_RECEIPT.json",
+    "bytes": 7272,
+    "sha256": "57b343e2d6e80905b5d3c9575fa27939c0cb74def19a46d959df61ecca15e9ef"
+  },
+  "all_archives_omitted": true
+}

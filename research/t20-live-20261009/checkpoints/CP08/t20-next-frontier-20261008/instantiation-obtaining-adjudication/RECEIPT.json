@@ -1,0 +1,45 @@
+{
+  "recorded_at_utc": "2026-10-08T19:21:26.921749+00:00",
+  "status": "BOUNDED_COMPARISON_COMPLETE; T20_ACTIVE",
+  "result": "No source-backed counterexample to restricted Realisation; dispute lies in exhaustive philosophical application of concrete-resource Completion or widened resource interpretation; autonomy of qualitative obtaining remains unsettled",
+  "scope": "No new primary acquisition, independent whole-source credit, theorem, countermodel, integration, or closure",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+      "bytes": 18923,
+      "sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/READING_SCOPE.json",
+      "bytes": 1959,
+      "sha256": "9cc7db7a49704aec070a1199047d7de5ef2c3537863610e73c7f9d1232080057"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/RESEARCH_EVENTS.jsonl",
+      "bytes": 567,
+      "sha256": "d252411a3df094b3edfbbb762c3253cce084dc8d3dfa6d29b15574c33363262e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REVIEW.md",
+      "bytes": 1499,
+      "sha256": "44fb21edfaca0df3d3e565776dad5709e63e8254686671fdab4b4146c4b85040"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/MANIFEST.json",
+      "bytes": 2614,
+      "sha256": "85c5c25bd9be097d1cd2232e5b8c1b4908ebc96f0d9b77a21c4952202e510bfc"
+    }
+  ],
+  "prior_checkpoint_checks": [
+    {
+      "receipt": "t20-next-frontier-20261008/global-explanation-rival/CHECKPOINT_RECEIPT.json",
+      "bound_files_checked": 5,
+      "unchanged": true
+    },
+    {
+      "receipt": "t20-next-frontier-20261008/global-explanation-rival-continuation/CONTINUATION_RECEIPT.json",
+      "bound_files_checked": 7,
+      "unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "all_subsets_by_L": {
+    "1": 16,
+    "2": 512,
+    "3": 65536
+  },
+  "max_queries_by_L": {
+    "1": 5,
+    "2": 10,
+    "3": 16
+  },
+  "multiset_cases_grid_L2_through_N6": 5005,
+  "quantization_cases": 132600,
+  "collision_free_cases": 23260,
+  "strict_count_loss_cases": 21055,
+  "exact_resolution_cases": 243,
+  "author_controls_sha256": "10b6cf8278c254e67a1e8f61c96f6d8a1df5db4b22f16023d4933fec46d520c4"
+}

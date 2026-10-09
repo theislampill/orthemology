@@ -1,0 +1,111 @@
+{
+  "utc": "2026-10-08T17:53:21.495432+00:00",
+  "note": "Raw published sources are local research reference material; prefer public links for user delivery. No duplicate source-witness credit.",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/BILLON_ACCESS_BOUNDARY.md",
+      "bytes": 4824,
+      "sha256": "36c4ab8df18df08c0b23eee6508877b398621cd96525c8a0cc20e4bb72c34bef"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/RESEARCH_EVENTS.jsonl",
+      "bytes": 1795,
+      "sha256": "35584f334084ef50fdaa123af169fe18448e1ae40f284096815f54ceebe81856"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "bytes": 20262,
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_READS.json",
+      "bytes": 6176,
+      "sha256": "06a83739da8a3b9de8d7c0c0da570f515e2d4e2022810fb57cfb8275b760c4dc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/source-images/dasgupta-p19.png",
+      "bytes": 507116,
+      "sha256": "dd3e8fd3c54930aa7e183266cabfffebf6c893342b6e5a08578177e7b07080da"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/source-images/dasgupta-p24.png",
+      "bytes": 456142,
+      "sha256": "e6a6442148caa067e665969a8234354401c7a67dab83f7955d7fd53280062581"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/source-images/dasgupta-p37.png",
+      "bytes": 583135,
+      "sha256": "c13d484bbdac6eaa169e6a891858178b90df3988def64e03f4e9fe0eaf41af44"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/source-images/dasgupta-p38.png",
+      "bytes": 609904,
+      "sha256": "4ed23a8846deb996e911d1e0e604ca99ca3ef3e1cfb66e602b15b81416ea5e5e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-publisher-notes.txt",
+      "bytes": 23489,
+      "sha256": "41eb32b7a6a085df7d33600e649386d66119d39fbd5dce04b2edba9ac4b8ad9d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-sec6-indexed-extract.txt",
+      "bytes": 35369,
+      "sha256": "6fd1ecf8ef8707411851e944aa56c4933a9295e8e1e25d23f559d4c0829e6bf0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-sec7-indexed-extract.txt",
+      "bytes": 3391,
+      "sha256": "b695ccc2d0871530cb87cbb05ed9874fb8c3282b8fbafb20948a5a5f212239eb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-sec73-indexed-extract.txt",
+      "bytes": 30388,
+      "sha256": "f18a73725a2162768c3b75f9c40b0ff7f6d931f61f887e90c869c0fc609d4ffd"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2009-individuals-candidate.pdf",
+      "bytes": 520134,
+      "sha256": "b336f711d358c894c9a5480bbae0f9f2d32c897d67b8cfa01e0476af74722108"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages1-10.txt",
+      "bytes": 34417,
+      "sha256": "08daf606ed59b90953cd4ee29162cda1986025aec8a731007a1c287d92cce46c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages11-20.txt",
+      "bytes": 35842,
+      "sha256": "1b24503d14bb1540fcc96a18cefd1f1ca8351fc2ea09a1fd3e22227126521456"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages21-30.txt",
+      "bytes": 34964,
+      "sha256": "5faada100d0fcfec6e6735d39050a3d982bffd4712d6b3ebd219254c4a9d3580"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages31-40.txt",
+      "bytes": 42165,
+      "sha256": "20aac4586c1d1adfccadb9e39425b3e4bd9171c65b678dda4638966e80f5cc5a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.pdf",
+      "bytes": 268941,
+      "sha256": "47b9ad8c841db60d840f7bbbfbbbb1c538d0c0e6c5db8d0105ad600dc1045989"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "bytes": 146041,
+      "sha256": "bd165592d56bfa08166861125343914e8dea5d10af82eb6aa5a0e82dbb69b3f7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/morganti2015-journal-mirror.pdf",
+      "bytes": 562628,
+      "sha256": "f8a9546c849a38f8d7a842ac7401415b6940305f9eecaad31c3bda9584c2e299"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/morganti2015-journal-mirror.txt",
+      "bytes": 67913,
+      "sha256": "18b1d929e7b4d3215796200ae5d0e844011f24a9dc3223f6deba93250e64b3b0"
+    }
+  ]
+}

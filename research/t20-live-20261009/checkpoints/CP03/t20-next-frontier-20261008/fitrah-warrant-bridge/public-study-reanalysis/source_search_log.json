@@ -1,0 +1,409 @@
+{
+  "checked_on_utc": "2026-10-08",
+  "search_scope": "One bounded targeted public-data discovery pass for two specified papers, with a supplementary correction check. No author contact, private access or broad literature review.",
+  "web_search_queries_in_order": [
+    "\"Tracy\" \"Hart\" \"Martens\" \"2011\" \"data\" \"Death and Science\"",
+    "\"Järnefelt\" \"Canfield\" \"Kelemen\" \"2015\" \"data\" repository",
+    "\"pone.0017349\" data",
+    "\"Death and Science\" \"data\" \"osf\"",
+    "\"The divided mind of a disbeliever\" \"data\" \"osf\"",
+    "\"Tracy\" \"Martens\" \"intelligent design\" dataset",
+    "site:ubc-emotionlab.ca \"Death and Science\"",
+    "site:drjesstracy.com \"Death and Science\" \"data\"",
+    "site:osf.io \"Järnefelt\" \"2015\"",
+    "site:osf.io \"Tracy\" \"Hart\" \"Martens\"",
+    "\"Järnefelt\" \"Canfield\" \"Kelemen\" dataset",
+    "\"divided mind of a disbeliever\" \"data\" repository",
+    "\"Death and science\" \"data\" site:dataverse.harvard.edu",
+    "\"Death and science\" \"data\" site:borealisdata.ca",
+    "\"Järnefelt\" \"data\" site:bu.edu/cdl",
+    "\"Jarnefelt\" \"Canfield\" site:osf.io",
+    "\"0017349\" site:figshare.com",
+    "\"divided mind\" site:researchdata.bu.edu OR site:dataverse.harvard.edu OR site:zenodo.org",
+    "\"Death and Science\" figshare",
+    "\"Death and Science\" \"raw data\"",
+    "\"divided mind of a disbeliever\" \"supplementary\"",
+    "\"Järnefelt\" \"2015\" site:researchportal.helsinki.fi",
+    "\"Tracy\" \"Hart\" \"Martens\" \"data\" \"repository\"",
+    "\"Jarnefelt\" \"Canfield\" \"Kelemen\" \"open data\"",
+    "\"Death and Science\" site:osf.io OR site:zenodo.org OR site:figshare.com OR site:borealisdata.ca",
+    "\"divided mind of a disbeliever\" site:helda.helsinki.fi OR site:bu.edu OR site:osf.io",
+    "\"10.1371/journal.pone.0017349\" correction erratum",
+    "\"Death and Science\" \"2.69\" correction",
+    "\"Death and Science\" \"1.47\" correction"
+  ],
+  "web_search_result": "No usable authenticated participant-level target dataset located. Search results were used for discovery; substantive evidence uses publisher, author-lab and repository primary records.",
+  "direct_repository_queries": [
+    {
+      "id": "datacite_tracy",
+      "url": "https://api.datacite.org/dois?query=%2210.1371%2Fjournal.pone.0017349%22&page%5Bsize%5D=25",
+      "http_status": 200,
+      "bytes": 42673,
+      "sha256": "ff1269365bc21048a6fb659342b5094634f658a4cbe383d39c5bfc9e4344f4ed",
+      "type": "application/json; charset=utf-8",
+      "meta": {
+        "total": 6,
+        "totalPages": 1,
+        "page": 1
+      },
+      "n_records": 6,
+      "titles": [
+        [
+          {
+            "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ]
+      ],
+      "returned_items": [
+        {
+          "id": "10.6084/m9.figshare.22624984.v1",
+          "title": [
+            {
+              "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_1_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624984/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624984",
+          "title": [
+            {
+              "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_1_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624984"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624987.v1",
+          "title": [
+            {
+              "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_2_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624987/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624987",
+          "title": [
+            {
+              "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_2_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624987"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624990.v1",
+          "title": [
+            {
+              "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_3_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624990/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624990",
+          "title": [
+            {
+              "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_3_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624990"
+        }
+      ],
+      "interpretation": "Returned supporting files belong to later citing studies, not the target article. No authenticated target participant dataset identified."
+    },
+    {
+      "id": "datacite_jarnefelt",
+      "url": "https://api.datacite.org/dois?query=%2210.1016%2Fj.cognition.2015.02.005%22&page%5Bsize%5D=25",
+      "http_status": 200,
+      "bytes": 102388,
+      "sha256": "1d2afd26a9a6fafdb3bbdad2506921f2c9c524b47decd3153d7f00d16bac42a5",
+      "type": "application/json; charset=utf-8",
+      "meta": {
+        "total": 12,
+        "totalPages": 1,
+        "page": 1
+      },
+      "n_records": 12,
+      "titles": [
+        [
+          {
+            "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 1 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 1 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 2 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ],
+        [
+          {
+            "title": "Additional file 3 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+          }
+        ]
+      ],
+      "returned_items": [
+        {
+          "id": "10.6084/m9.figshare.22624984.v1",
+          "title": [
+            {
+              "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_1_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624984/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624984",
+          "title": [
+            {
+              "title": "Additional file 1 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_1_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624984"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624987.v1",
+          "title": [
+            {
+              "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_2_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624987/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624987",
+          "title": [
+            {
+              "title": "Additional file 2 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_2_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624987"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624990.v1",
+          "title": [
+            {
+              "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_3_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624990/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.22624990",
+          "title": [
+            {
+              "title": "Additional file 3 of Evolution hesitancy: challenges and a way forward for teachers and teacher educators"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_3_of_Evolution_hesitancy_challenges_and_a_way_forward_for_teachers_and_teacher_educators/22624990"
+        },
+        {
+          "id": "10.6084/m9.figshare.23512774.v1",
+          "title": [
+            {
+              "title": "Additional file 1 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_1_of_The_effects_of_religious_views_and_creationism_on_teleological_reasoning_acceptance_and_understanding_of_natural_selection_a_preliminary_mixed-methods_study/23512774/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.23512774",
+          "title": [
+            {
+              "title": "Additional file 1 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_1_of_The_effects_of_religious_views_and_creationism_on_teleological_reasoning_acceptance_and_understanding_of_natural_selection_a_preliminary_mixed-methods_study/23512774"
+        },
+        {
+          "id": "10.6084/m9.figshare.23512777.v1",
+          "title": [
+            {
+              "title": "Additional file 2 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_2_of_The_effects_of_religious_views_and_creationism_on_teleological_reasoning_acceptance_and_understanding_of_natural_selection_a_preliminary_mixed-methods_study/23512777/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.23512777",
+          "title": [
+            {
+              "title": "Additional file 2 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_2_of_The_effects_of_religious_views_and_creationism_on_teleological_reasoning_acceptance_and_understanding_of_natural_selection_a_preliminary_mixed-methods_study/23512777"
+        },
+        {
+          "id": "10.6084/m9.figshare.23512780.v1",
+          "title": [
+            {
+              "title": "Additional file 3 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_3_of_The_effects_of_religious_views_and_creationism_on_teleological_reasoning_acceptance_and_understanding_of_natural_selection_a_preliminary_mixed-methods_study/23512780/1"
+        },
+        {
+          "id": "10.6084/m9.figshare.23512780",
+          "title": [
+            {
+              "title": "Additional file 3 of The effects of religious views and creationism on teleological reasoning, acceptance and understanding of natural selection: a preliminary mixed-methods study"
+            }
+          ],
+          "url": "https://springernature.figshare.com/articles/journal_contribution/Additional_file_3_of_The_effects_of_religious_views_and_creationism_on_teleological_reasoning_acceptance_and_understanding_of_natural_selection_a_preliminary_mixed-methods_study/23512780"
+        }
+      ],
+      "interpretation": "Returned supporting files belong to later citing studies, not the target article. No authenticated target participant dataset identified."
+    },
+    {
+      "id": "osf_tracy",
+      "url": "https://api.osf.io/v2/nodes/?filter%5Btitle%5D=Death+and+Science",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "337a5845bf62ccbe2bee6d47834c9d6317bc033ab935af60bc66d75c688ef71a",
+      "type": "application/vnd.api+json; charset=utf-8",
+      "meta": {
+        "version": "2.0"
+      },
+      "n_records": 0,
+      "titles": [],
+      "interpretation": "No public node returned by this literal title filter; differently titled, private, unindexed or otherwise undiscovered deposits remain possible."
+    },
+    {
+      "id": "osf_jarnefelt",
+      "url": "https://api.osf.io/v2/nodes/?filter%5Btitle%5D=divided+mind+of+a+disbeliever",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "337a5845bf62ccbe2bee6d47834c9d6317bc033ab935af60bc66d75c688ef71a",
+      "type": "application/vnd.api+json; charset=utf-8",
+      "meta": {
+        "version": "2.0"
+      },
+      "n_records": 0,
+      "titles": [],
+      "interpretation": "No public node returned by this literal title filter; differently titled, private, unindexed or otherwise undiscovered deposits remain possible."
+    }
+  ],
+  "author_lab_pages": [
+    {
+      "url": "https://drjesstracy.com/publications/topic/trends-in-science/",
+      "result": "Target paper entry links PDF, no target dataset link located in inspected entry. Browser-search reader succeeded; independent shell HTTP request returned 403."
+    },
+    {
+      "url": "https://drjesstracy.com/research-tools/",
+      "result": "Inspected listed research tools; no target dataset identified."
+    },
+    {
+      "url": "https://www.bu.edu/cdl/ccl/publications/",
+      "result": "Target entry links author-lab published PDF; no target dataset identified."
+    }
+  ],
+  "retrieval_limits": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0010027715000293",
+      "result": "Direct web open returned HTTP 403; author-lab article copy accessible. This does not establish absence of publisher-hosted data."
+    },
+    {
+      "url": "https://drjesstracy.com/research/",
+      "result": "Initial guessed conventional route did not open; followed verified publication and research-tools links instead."
+    },
+    {
+      "url": "https://www.bu.edu/cdl/publications/",
+      "result": "Initial conventional route did not open; found and inspected verified /cdl/ccl/publications/ route."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21479169/",
+      "result": "Direct open returned HTTP 429; indexed primary record was visible to search. Not relied on to certify correction absence."
+    }
+  ],
+  "correction_check": {
+    "publisher_article": "No linked correction to these statistical entries located in inspected HTML/XML/PDF.",
+    "publisher_comments_index_url": "https://journals.plos.org/plosone/article/comments?id=10.1371/journal.pone.0017349",
+    "index_result": "3 comments counted, in 2 threads with 1 response; both thread pages inspected.",
+    "comments": [
+      {
+        "url": "https://journals.plos.org/plosone/article/comment?id=10.1371/annotation/afb91486-3fff-4cd8-bd15-8a869484d7bd",
+        "result": "2013 reader objection about genotype/phenotype and origins, no target statistical correction."
+      },
+      {
+        "url": "https://journals.plos.org/plosone/article/comment?id=10.1371/annotation/82b1a946-a4cf-4e96-a73a-ed062d2fdb5e",
+        "result": "2011 reader correction about Texas education standards and an author response qualifying the introductory statement. It does not address the Study 4/5 statistics."
+      }
+    ],
+    "crossref_url": "https://api.crossref.org/works/10.1371/journal.pone.0017349",
+    "crossref_result": "No update-to field and empty relation object in inspected record. This metadata result is not exhaustive proof of absent corrections.",
+    "conclusion": "No correction to these statistical entries located in the inspected publisher record; no universal absence or novelty claim."
+  },
+  "stopping_rule": "Public materials and bounded repository discovery did not pass the raw-data gate; stop rather than reconstruct participant data or expand into unapproved outreach.",
+  "reanalysis_status": "not performed",
+  "independent_experiment_status": "not performed"
+}

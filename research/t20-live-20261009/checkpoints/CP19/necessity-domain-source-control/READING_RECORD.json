@@ -1,0 +1,55 @@
+{
+  "recorded_at_utc": "2026-10-09T04:32:45.509766+00:00",
+  "operation": "Root visual targeted source reading",
+  "pages": [
+    17,
+    18,
+    239,
+    240,
+    241,
+    242
+  ],
+  "historical_duration_certified": false,
+  "files": [
+    {
+      "path": "brute-contingent-source-return/sources/dtan03.pdf",
+      "bytes": 6859029,
+      "sha256": "0557e7a2c84a3222a4b4664bdf645d126551e859ac7f4fd492ade9bc66d9a41e"
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-p239.png",
+      "bytes": 66895,
+      "sha256": "5e7963917cb7095c88229fc588db067b1ab697645aeb75ff28398da4c645ac46"
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-p17.png",
+      "bytes": 77630,
+      "sha256": "51e06ba91a2eb8f6ce35887d57145e6a66d66f4abe6f1810739788528ad856e7"
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-p18.png",
+      "bytes": 83217,
+      "sha256": "e1101aeb1b9098be8030e4ec91dfdf0360c45bac076256606f1c5c561856b28b"
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-240.png",
+      "bytes": 77306,
+      "sha256": "6c57a41d4c835e8f0e346912dc52c65f2ba461d0167d2ce2d968cb758b2b1276"
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-241.png",
+      "bytes": 73820,
+      "sha256": "ea1cb0a1af810568be56d697a57187aa6bb7ae86fea345f429f8f685fba7fcb7"
+    },
+    {
+      "path": "necessity-domain-source-control/dar3-p242.png",
+      "bytes": 70291,
+      "sha256": "22a8ba8393de492bc7c5090f88ca917298e3f1f49de34ebaea7bbeafc300ca2d"
+    },
+    {
+      "path": "necessity-domain-source-control/RESULT.md",
+      "bytes": 3566,
+      "sha256": "9f7232cb81b87c7f8bfc77f667770fb05e790663d75d8f6265d535258041a3e3"
+    }
+  ]
+}

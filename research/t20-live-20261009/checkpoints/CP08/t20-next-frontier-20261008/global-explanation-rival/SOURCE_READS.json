@@ -1,0 +1,125 @@
+{
+  "utc": "2026-10-08T17:30:54.153732+00:00",
+  "status": "BOUNDED_PRIMARY_SOURCE_TRANSPORT_REVIEW; FULL_BILLON_READING_INCOMPLETE",
+  "claim_limits": [
+    "T20 ACTIVE",
+    "No actual-world countermodel established",
+    "No downgrade of inherited defeasible Necessary Being/common-source judgement",
+    "No GitHub or integration",
+    "No fresh Lean run or deep-theorem credit",
+    "No duration certification; timestamps record events only"
+  ],
+  "primary_sources": [
+    {
+      "id": "B",
+      "author": "Alexandre Billon",
+      "title": "A Recipe for Non-wellfounded but Complete Chains of Explanations (And Other Determination Relations)",
+      "bibliography": "Dialectica 77(4) (2023), 459–504",
+      "doi": "10.48106/dial.v77.i4.04",
+      "verified_urls": [
+        "https://www.philosophie.ch/billon-2023",
+        "https://assets.philosophie.ch/dialectica/billon_a-2023.pdf",
+        "https://philarchive.org/archive/BILARF-3",
+        "https://philarchive.org/archive/BILARF-2v2"
+      ],
+      "received_versions": "Search-indexed publisher HTML labelled Beta and search-indexed PDF passages labelled PROOF. Older attachment also retrieved as indexed text; none silently identified with a final authoritative version.",
+      "reading_method": "Literal primary-source body extracts retrieved through web search, including continuous complete paragraphs and selected section arguments. Retrieval truncates/jumps between passages; not full-paper access, not merely abstract attribution.",
+      "principal_passages": [
+        "§2 triadic explanations, zero-explanation, complete/supercomplete definitions",
+        "§3.1 full local explanations versus whole-series variation; extra-property reply",
+        "§4 monomaniacal-scribe existence argument; conditional stick-length construction and proof; footnote7",
+        "§5 sufficient contraction/boundedness conditions, §5.2 ED1/ED2 entire recovered argument, §5.3 weak/strong determination and §5.4 formulation",
+        "§6 general determination-relation extension and quasi-complete/complete distinction",
+        "§7.2 Sierpinski world definition, explicitly existential laws, shape determination; §7.3 available truth-value example",
+        "§8 scope/extra-property comparison, proposed meta-law continuation, footnote28 with its limited existential open question",
+        "§9 equilibrium and essentialist analogies; §10 available simplicity reply",
+        "Appendix A opening singleton-image condition; Appendix B Cantor existence-law example"
+      ],
+      "page_anchors": {
+        "proof_page_473": "state functions and absent-item value",
+        "proof_page_492": "§8 opening through the first concession bullet; proof lines982–1016",
+        "proof_page_494": "§8 law/meta-law continuation; footnote28 printed on same recovered indexed page",
+        "other_pages": "No uninspected PDF page boundaries inferred from section positions."
+      },
+      "not_read": [
+        "Continuous complete 46-page article",
+        "Complete Appendix A proof and domains",
+        "Full page images/figures",
+        "Complete final-publication-to-proof version collation"
+      ],
+      "attribution_guard": "Recovered typos and divergent pagination remain raw; report paraphrases without silently presenting corrected quotations."
+    },
+    {
+      "id": "M",
+      "author": "Matteo Morganti",
+      "title": "Dependence, Justification and Explanation: Must Reality Be Well-Founded?",
+      "bibliography": "Erkenntnis 80 (2015), 555–572",
+      "doi": "10.1007/s10670-014-9655-4",
+      "read_url": "https://www.pul.it/wp-content/uploads/2019/03/MORGANTI-ERKE-10.1007.pdf",
+      "institutional_record": "https://iris.uniroma3.it/handle/11590/286868",
+      "reading_method": "Direct PDF extraction through web open calls, overlapping ranges covering continuous main argument",
+      "complete_read_scope": "Journal pp558–567, §§2–4; PDF one-based pages6–15 (two prefatory pages). Web extraction lines183–585 covered continuously.",
+      "additional_partial_scope": "Introduction and §5 examples inspected selectively; not claimed fully read.",
+      "not_read": "Entire paper, referenced probabilistic paper or full book; neither source is credited indirectly as independently read."
+    },
+    {
+      "id": "W",
+      "author": "Evan Welchance",
+      "title": "Metaphysical Infinitism and Theoretical Virtue",
+      "bibliography": "Erkenntnis, online11March2026",
+      "doi": "10.1007/s10670-026-01084-1",
+      "url": "https://link.springer.com/article/10.1007/s10670-026-01084-1",
+      "read_scope": "Direct HTML §1.1–§1.3, §2.1–§2.3 selectively through near-complete continuous passages; conclusion and relevant notes. §2.4 not continuously read.",
+      "use": "Explanatory-parity control only, not direct argument for the received field actuality."
+    }
+  ],
+  "failed_direct_acquisitions": [
+    {
+      "source": "Billon publisher HTML",
+      "outcome": "404 / internal error"
+    },
+    {
+      "source": "Billon publisher individual and full-issue PDFs",
+      "outcome": "403"
+    },
+    {
+      "source": "Billon PhilArchive/PhilPapers PDFs and verified older version",
+      "outcome": "403"
+    },
+    {
+      "source": "Billon publisher older attachment",
+      "outcome": "404 from web;403 from shell"
+    },
+    {
+      "source": "Billon ResearchGate",
+      "outcome": "429; search metadata says request-full-text only; no contact made"
+    },
+    {
+      "source": "Billon2021 predecessor on PhilArchive/PhilPapers",
+      "outcome": "403; not read as full backup"
+    },
+    {
+      "source": "Morganti institutional PDF direct shell",
+      "outcome": "403; direct web mirror was readable"
+    }
+  ],
+  "novelty_check": {
+    "searched_paths": [
+      "recovery-t20",
+      "t20-continuation-20261008",
+      "t20-next-frontier-20261008"
+    ],
+    "search_terms": [
+      "Morganti",
+      "Peijnenburg",
+      "Atkinson",
+      "Common explanatory virtue",
+      "boundary independence",
+      "tail independence",
+      "emergence model"
+    ],
+    "result": "No inherited text matches in broad check before new candidate files. This is a bounded duplication search, not an exhaustive proof of absence."
+  },
+  "review": "../global-explanation-rival-review/INDEPENDENT_LAW_ONLY_TRANSPORT_REVIEW.md",
+  "residual": "Acquire complete actual Billon source and verify section/appendix domains; then assess independently warranted existential lawhood and actual bearer/capacity coverage without deleting full laws or assuming bearer-only explanation."
+}

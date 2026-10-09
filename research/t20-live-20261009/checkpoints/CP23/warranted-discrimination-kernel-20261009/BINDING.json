@@ -1,0 +1,110 @@
+{
+  "source_inputs": [
+    {
+      "path": "warranted-discrimination-research-20261009/RESULT.md",
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "bytes": 33268
+    },
+    {
+      "path": "warranted-discrimination-research-20261009/review/REVIEW.md",
+      "sha256": "35c595f3626c7c86bddd4d0941708a938085ce96a1e67da5adf2bde7804b1149",
+      "bytes": 16650
+    },
+    {
+      "path": "warranted-discrimination-research-20261009/SOURCES.json",
+      "sha256": "54ccf146a95d22b88263c54664dd1b94033785d55901f6b9e7fbea0dff6b07b4",
+      "bytes": 4380
+    },
+    {
+      "path": "warranted-discrimination-research-20261009/verify.py",
+      "sha256": "bdd29fd57418db2327983bf2cb7e4c40632c9140637ae6df5d0d990ff28481b2",
+      "bytes": 7876
+    },
+    {
+      "path": "warranted-discrimination-research-20261009/CHECK_RESULTS.json",
+      "sha256": "429fc2e93da069d5ac61b7527860f74ecb83e73e9d780e6caf85a51b9e60a602",
+      "bytes": 813
+    },
+    {
+      "path": "graph-continuation-review-20261009/lean-replay/replay.sh",
+      "sha256": "26715abfdf0215c9575b61a28fb4094a34ce213c46ac54864d4b204599d40cd9",
+      "bytes": 432
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-identification/mathlib/lake-manifest.json",
+      "sha256": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752",
+      "bytes": 2786
+    }
+  ],
+  "inherited_input_preservation_checks": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "expected_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "verified_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "read_claim": "hash check only in this kernel task; substantive source use inherited through manuscript"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/REPORT.md",
+      "expected_sha256": "4bd8f0e5bcac178bf9eb890544fcba9fd60f6a1d08cdf2e0cc12bb6d2c4b4c1c",
+      "verified_sha256": "4bd8f0e5bcac178bf9eb890544fcba9fd60f6a1d08cdf2e0cc12bb6d2c4b4c1c",
+      "read_claim": "hash check only in this kernel task; substantive source use inherited through manuscript"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "expected_sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b",
+      "verified_sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b",
+      "read_claim": "hash check only in this kernel task; substantive source use inherited through manuscript"
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/RESULT.md",
+      "expected_sha256": "4c48b7ec591654c39f9a8bc93c2e15c7e7f8bf67fd3de202d51fec0da07d8972",
+      "verified_sha256": "4c48b7ec591654c39f9a8bc93c2e15c7e7f8bf67fd3de202d51fec0da07d8972",
+      "read_claim": "hash check only in this kernel task; substantive source use inherited through manuscript"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-audit-addenda/H_CONTINUATION_108_292.md",
+      "expected_sha256": "bb226ec3e294b31153808cca11e5facd2182af0372974b267c6f68f18b491396",
+      "verified_sha256": "bb226ec3e294b31153808cca11e5facd2182af0372974b267c6f68f18b491396",
+      "read_claim": "hash check only in this kernel task; substantive source use inherited through manuscript"
+    }
+  ],
+  "frozen_kernel_inputs": [
+    {
+      "path": "CertificateFrontier.lean",
+      "sha256": "5e799995b95e37105dff8dfe10e5ba78dfe44034334353bcf66107069e8a67e0",
+      "bytes": 12278
+    },
+    {
+      "path": "Controls.lean",
+      "sha256": "7d49f0df7d1b5eb633e6edebf17bc0a967eeff1718b9e1cc3fcab1513afb5132",
+      "bytes": 2410
+    },
+    {
+      "path": "replay.sh",
+      "sha256": "925769666b67cdccae6da51365e58bc4beaf81c7512f3d5673c7f157d3038593",
+      "bytes": 973
+    },
+    {
+      "path": "mutations/CostBlind.lean",
+      "sha256": "c05bf6d3207aeeaa7dddc222092c73d44f73ecc5eab5c8d465485a9a540d5776",
+      "bytes": 227
+    },
+    {
+      "path": "mutations/CurrentCost.lean",
+      "sha256": "876039d480a1415531f1f099679c5094327caf35c7933a36550e09692de1e83d",
+      "bytes": 249
+    },
+    {
+      "path": "mutations/InfinitePrice.lean",
+      "sha256": "0b2d8b2584f48d343d753a373161e28f93c397982ce9ab4c098b8daf16db31fe",
+      "bytes": 293
+    }
+  ],
+  "read_scope": {
+    "RESULT.md": "full",
+    "review/REVIEW.md": "full",
+    "SOURCES.json": "full",
+    "graph-continuation-review-20261009/lean-replay/replay.sh": "full"
+  },
+  "scope": "Theorem 1 canonical residual frontier only; no philosophical or semantic warrant, Bellman certification, integration or closure"
+}

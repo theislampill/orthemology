@@ -1,0 +1,71 @@
+{
+  "recorded_utc": "2026-10-09T02:59:33.450601+00:00",
+  "status": "ongoing focused semantic investigation",
+  "source_credit": "rereading and reinterpretation, not independent witnesses",
+  "records": [
+    {
+      "kind": "attachment",
+      "path": "metaphysical-semantics-return/user-input/Pasted text(20261009-025305).txt",
+      "bytes": 16674,
+      "sha256": "451c35c1ec4e0f432d323550dc5fecb758737ed926908f73d7dcd92963a6b88e",
+      "root_read_scope": "Entire 132-line Library text, 16674 bytes"
+    },
+    {
+      "kind": "Arabic rereading",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "bytes": 123088,
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "root_read_scope": "L110\u2013177 continuous in two reads, electronic printed95\u2013113; inherited witness; no fresh first-reading credit"
+    },
+    {
+      "kind": "formal interface",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "root_read_scope": "Entire file"
+    },
+    {
+      "kind": "nonabsorption",
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "bytes": 19070,
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "root_read_scope": "Lines1\u2013150 continuous"
+    },
+    {
+      "kind": "overdetermination source",
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/schaffer-overdetermination-2003.txt",
+      "bytes": 58388,
+      "sha256": "f00745aa15b7909764279a837b21128519400f6944aecf0480e0c103d9bf0e03",
+      "root_read_scope": "Lines138\u2013204 and425\u2013489 targeted rereading; p27 and complete-process argument opening"
+    },
+    {
+      "kind": "overdetermination assessment",
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md",
+      "bytes": 20893,
+      "sha256": "0dc3642ac0c17b614fa87c8b513f6f9008272861693139b26b9c92893c276f08",
+      "root_read_scope": "Lines60\u2013115"
+    },
+    {
+      "kind": "current judgement",
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+      "bytes": 8405,
+      "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1",
+      "root_read_scope": "Entire file"
+    },
+    {
+      "kind": "primary Arabic targeted return",
+      "path": "essence-attribute-source-return/sources/dar1-p281.txt",
+      "bytes": 3455,
+      "sha256": "9e852434445cd2b9c8249c2eafd8ea740f42a3f07510f05cf73ed7d910e3595b",
+      "root_read_scope": "Entire seven paragraphs; electronic Dar1:280\u2013282"
+    },
+    {
+      "kind": "primary Arabic targeted return",
+      "path": "essence-attribute-source-return/sources/dar1-item178.txt",
+      "bytes": 5348,
+      "sha256": "00089e71801885dcb1894c5ff37ba9411720ab2f27e0a000add25b4d5fdeb72e",
+      "root_read_scope": "Entire eight paragraphs; electronic Dar1:292\u2013295"
+    }
+  ],
+  "last_updated_utc": "2026-10-09T03:04:41.131183+00:00"
+}

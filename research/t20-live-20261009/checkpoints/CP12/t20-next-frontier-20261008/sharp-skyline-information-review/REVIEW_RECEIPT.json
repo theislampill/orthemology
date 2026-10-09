@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "kind": "Independent written mathematical review with separately implemented deterministic exact/high-precision controls",
+  "accepted_author_result_sha256": "52a9c53ca5d1765de2956e685701532529efca9a0292165f8f9e738b43b7a870",
+  "author_manifest_sha256": "2275f71c24bed4789a36dcb5c6e143fdc82d95554706c6c452fa39a09567c39f",
+  "review_sha256": "3527ce6bd1c625dfb10c9b425997a015549c911cd24d9afe62fffb6b0ba5db90",
+  "source_bindings_sha256": "7166335b40cc9b1afe3acd2e9de99e676d6b7b940f5411ed187cff156d843e1a",
+  "claims": [
+    "KL(Q0||Q1) ~ log^2(m)/(4m^4), m=n+1, unconditioned with the singular alternative stratum retained",
+    "H^2(Q0,Q1) ~ log^2(m)/(8m^4), with H^2 = integral (sqrt(dP)-sqrt(dQ))^2",
+    "Fixed two-sided-error ideal exact-skyline independent-vector complexity Theta_alpha(n^4/log^2(n))",
+    "Adaptive unchanged-retained-endpoint lower bound on E0 started vectors under unconditional terminal correctness; matching upper only in exact-skyline channel"
+  ],
+  "blocking_findings": [],
+  "required_author_mathematical_revisions": [],
+  "independent_controls_status": "PASS",
+  "independent_poisson_coefficient_order": 6,
+  "author_replay_byte_identical": true,
+  "scope_exclusions": [
+    "No exact optimal testing constants or all-confidence asymptotics",
+    "No larger-family minimax, total variation, or Gaussian-limit theorem",
+    "No finite endpoint-query, finite-precision, noisy, or physical realization guarantee",
+    "No empirical or formal-kernel assurance",
+    "No protected integration, archive rewrite, historical-floor certification, or closure"
+  ],
+  "historical_floor": "UNVERIFIED",
+  "prepared_at_utc": "2026-10-08T21:59:53.373250+00:00"
+}

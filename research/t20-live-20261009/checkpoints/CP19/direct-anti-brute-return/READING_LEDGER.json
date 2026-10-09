@@ -1,0 +1,100 @@
+{
+  "date_utc": "2026-10-09",
+  "task": "Focused direct anti-brute primary-source and inference return",
+  "provenance": "Dar 3:287-289 lead supplied in the independent five-front source supplement and retrieved by the parent before dispatch; no discovery credit claimed.",
+  "new_direct_worker_inspection": [
+    {
+      "work": "Dar ta arud al aql wa l naql",
+      "edition": "Muhammad Rashad Salim, second edition, 1411 AH / 1991 CE; edition identification inherited from earlier visual title-page control",
+      "local_pdf": "../brute-contingent-source-return/sources/dtan03.pdf",
+      "printed_interval": [
+        282,
+        298
+      ],
+      "pdf_interval": [
+        282,
+        298
+      ],
+      "method": "Rendered and visually read each of 17 consecutive printed pages at 125 dpi; visible numerals checked. Direct unit starts286; third-option quotation starts287; focal reply288-289; continued causes/conditions/circularity discussion through298.",
+      "images": "printed-pages/dar3-282.png through dar3-298.png",
+      "history_limit": "First direct reading by this dispatched worker. No claim that the broader project had never traversed the electronic volume; no whole-volume or whole-manuscript reading claim."
+    },
+    {
+      "work": "Dar electronic units590-595",
+      "urls": [
+        "https://www.islamweb.net/ar/library/content/413/590/",
+        "https://www.islamweb.net/ar/library/content/413/591/",
+        "https://www.islamweb.net/ar/library/content/413/592/",
+        "https://www.islamweb.net/ar/library/content/413/593/",
+        "https://www.islamweb.net/ar/library/content/413/594/",
+        "https://www.islamweb.net/ar/library/content/413/595/"
+      ],
+      "method": "Downloaded full HTML with urllib; isolated articleBody and read complete six non-vocalized text units. Unit593 also verified using web retrieval.",
+      "files": "sources/dar3-item590-body.txt through dar3-item595-body.txt",
+      "boundary": "Units are electronic divisions, not one-to-one printed pages. No extra reading credit for duplicated vocalized text or page-navigation menus."
+    }
+  ],
+  "historical_rereading": [
+    {
+      "work": "Sharh al aqida al Isfahaniyya",
+      "edition": "Maktabat al Rushd, first edition,1415 AH /1995 CE",
+      "printed_pages": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "method": "Visually reread all six retained images plus retained electronic L181-L187. Prior direct Arabic/context/edition work documented in intrinsic-necessity-source-return.",
+      "new_acquisition": false
+    },
+    {
+      "path": "../brute-contingent-source-return/REPORT.md",
+      "method": "Complete report read; preserved unchanged."
+    },
+    {
+      "path": "../intrinsic-necessity-source-return/PRIMARY_DEPENDENCE_RESPONSE.md",
+      "method": "Complete report read; retained scope and source credit."
+    },
+    {
+      "path": "../productive-totality-source-return/REPORT.md",
+      "method": "Sections covering intrinsic sufficiency, concrete essence/existence, and productive totality compared; no fresh modern-source readings claimed."
+    },
+    {
+      "path": "../metaphysical-semantics-return/SOURCE_FAITHFUL_SEMANTIC_AUDIT.md",
+      "method": "Relevant resource/bearer, necessity, and ContingencyNeed domain analysis read."
+    }
+  ],
+  "formal_interface": {
+    "path": "../t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean",
+    "method": "Read unchanged definitions and proofs through end; checked Necessary and Received definitions in inherited SourceIdentityDerived.lean. No new formal model, code mutation, or theorem run."
+  },
+  "inherited_not_primary_worker_read": {
+    "path": "../necessity-domain-source-control/RESULT.md",
+    "description": "Parent directly checked Dar3:17-18 and239-242; this worker read the parent report only, without duplicating primary-page reading credit."
+  },
+  "textual_controls": [
+    "The third-option quotation begins on printed287, not288; Ibn Taymiyyah reply starts288.",
+    "At printed291, the scan includes the restrictive phrase except at the time of its existence omitted by electronic item594.",
+    "At printed292, the fourth reason ends incompletely and the editor notes an approximately two-word gap; the third reason also has an awkward final clause. Neither used to prove continuous or cross-world reception.",
+    "Printed288 enumeration label appears mismatched; no silent correction or argument rests on it.",
+    "The focal third-option and anti-self-production clarification is clear in the scan."
+  ],
+  "excluded_claims": [
+    "Programme-first discovery of these books",
+    "Whole-volume reading",
+    "Manuscript collation",
+    "New active-reading duration certification",
+    "Fresh epistemological-source campaign",
+    "New brute metaphysical countermodel",
+    "T20 closure",
+    "Confidence certification",
+    "Repository or inherited report changes"
+  ],
+  "timing": {
+    "dispatch_utc": "2026-10-09T04:31:00Z",
+    "final_record_check_utc": "2026-10-09T04:38:39Z",
+    "interpretation": "These are elapsed task markers, not a claim of uninterrupted source-reading duration. No active-reading duration or whole-corpus novelty credit is claimed. Host filesystem timestamps were not used as reading-duration evidence."
+  }
+}

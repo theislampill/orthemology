@@ -1,0 +1,155 @@
+{
+  "actual_reading": "Every received published page 1–13 and numbered note 1–15 read continuously in original two-column text layout; left column then right column, including continuation of note 13. All subsequent source analytical attributions refer to this witness.",
+  "limitations": [
+    "Direct official-journal and PDF endpoints were unavailable or returned HTTP 403.",
+    "Author download endpoint also returned HTTP 403; reading used the public viewer text, not a PDF download.",
+    "Two-column text extraction can preserve typographical anomalies; no argument depends on a silent correction.",
+    "Secondary authors cited in the article were not independently read for this assignment.",
+    "No direct new Arabic source reading.",
+    "O’Connor whole-chapter reading is inherited; this worker reread only printed 34–37 primary text and visually checked 36–37."
+  ],
+  "pages": [
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        1,
+        2,
+        3
+      ],
+      "published_page": 1,
+      "read_complete": true,
+      "sha256": "6824ccd4b28751d5088adebee4542de208ead2b42d518c36b0c17a4d52184fb5"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        4
+      ],
+      "published_page": 2,
+      "read_complete": true,
+      "sha256": "c37673fbaea1f819d56aa0636c5183117a537a33d3d7e03716e08ef07a500fb0"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        5,
+        6
+      ],
+      "published_page": 3,
+      "read_complete": true,
+      "sha256": "a0c72207e97f95c5e8e5600d4c4962b40f53c1a23fa6e184fc255fa454cd323b"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        7
+      ],
+      "published_page": 4,
+      "read_complete": true,
+      "sha256": "0ede50d72dc3140358e29fd09b56a3c3a954b9405e2c56d9b4dab6ba6711865d"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        8
+      ],
+      "published_page": 5,
+      "read_complete": true,
+      "sha256": "7f44af60d7d98ed4ebd603d4663b0d2ad060c36ef1911bd55b2628d8bd2c03f9"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        9,
+        10
+      ],
+      "published_page": 6,
+      "read_complete": true,
+      "sha256": "49f8a7daece5df05086cfcda0f6a4c0b8390b917ada665bdb0c92c9625227a24"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        11,
+        12
+      ],
+      "published_page": 7,
+      "read_complete": true,
+      "sha256": "8954c466c052235c5ce63ea93a6c031df9f70f23c4dda714e944e280c4b1cfa9"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [],
+      "published_page": 8,
+      "read_complete": true,
+      "sha256": "c3af54deb24002a54985a6094e3b847defc0d780b639039615869f47aef812a8"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        13
+      ],
+      "published_page": 9,
+      "read_complete": true,
+      "sha256": "caf52eb83956a8227962caabd91cecc7f273b418edd7d5f83e68430b863c652e"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        14
+      ],
+      "published_page": 10,
+      "read_complete": true,
+      "sha256": "5814e2015c47bee3053bbcdb844f37839a5979a89a2dbe92ee7e2d2892644057"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [],
+      "published_page": 11,
+      "read_complete": true,
+      "sha256": "228ffd7eeb247ca67e833fc488cd1495ee1e59d23f7afac28c7cc07b053d52a6"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [],
+      "published_page": 12,
+      "read_complete": true,
+      "sha256": "44aac0db78c92abc67d2515ddbd53ca05d8c935a684754ec8425c82b577f2ae8"
+    },
+    {
+      "local_intermediate": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "notes_read": [
+        15
+      ],
+      "published_page": 13,
+      "read_complete": true,
+      "sha256": "8ad3a41b944ccef1381d752fe6833868e29af9b2474ab49974b27f370b84581e"
+    }
+  ],
+  "verification": {
+    "author_link_locally_preserved": true,
+    "final_page_present": true,
+    "full_resolution_visual_collation": false,
+    "last_numbered_note": 15,
+    "metadata_official_record_search_indexed": true,
+    "nonempty_page_count": 13,
+    "published_pdf_acquired": false,
+    "thumbnail_not_counted_as_print_reading": true
+  },
+  "work": {
+    "author": "Michael Della Rocca",
+    "author_profile": "https://yale.academia.edu/MichaelDellaRocca",
+    "date": "July 2010",
+    "journal": "Philosophers’ Imprint",
+    "number": 7,
+    "official_permalink": "http://hdl.handle.net/2027/spo.3521354.0010.007",
+    "official_record": "https://quod.lib.umich.edu/cgi/t/text/idx/p/phimp/3521354.0010.007/--psr?view=toc",
+    "published_pages": [
+      1,
+      13
+    ],
+    "read_witness": "https://www.academia.edu/3607091/PSR",
+    "title": "PSR",
+    "volume": 10
+  }
+}

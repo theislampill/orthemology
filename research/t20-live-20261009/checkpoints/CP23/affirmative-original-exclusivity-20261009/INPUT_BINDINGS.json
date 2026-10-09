@@ -1,0 +1,106 @@
+{
+  "date_utc": "2026-10-09",
+  "scope": "Identity bindings, not new source witnesses or full reading claims. Reading scopes in SOURCE_RECORD.md.",
+  "inputs": [
+    {
+      "path": "reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+      "sha256": "b8f652952ff626479d8b4e8fd9928283a6ed5de3046a50105b6138cec2b7ba10",
+      "bytes": 4923
+    },
+    {
+      "path": "actual-original-production-residual-20261009/REPORT.md",
+      "sha256": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e",
+      "bytes": 15569
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/RESULT.md",
+      "sha256": "cfd70cdca601878e4b62c91757f5622e094d4e060446e21ceea0e21a6d717634",
+      "bytes": 18141
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/JAMI_VI_94_98_VERIFIED_RETURN.md",
+      "sha256": "0c6789e8f9299cab6609ccfdca152858bbe95036ce66df04c3fba5406d4beb4e",
+      "bytes": 15919
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-095.png",
+      "sha256": "734d55fbe8e368e242e1f13cd1f896a1c5e77bf4749f28e0596b711f4bb4f65e",
+      "bytes": 94006
+    },
+    {
+      "path": "qayyim-complete-causation-return/RESULT.md",
+      "sha256": "bb55c9a2dc96b0b2afe937cb14732b62e47e4eab74643366c3f950bad196ec2c",
+      "bytes": 19606
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-002.txt",
+      "sha256": "b75356cafb4406e6dee42afd246278479fa8af59419a3e085b434460c5bba90e",
+      "bytes": 553017
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+      "sha256": "3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05",
+      "bytes": 28965
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/MODEL_AUDIT.md",
+      "sha256": "aad1327aa577fa6edb2b90477481cd2849b6ffe1701c27a3ddfdec69d15b8e67",
+      "bytes": 29085
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/reports/02_UNITY_SOVEREIGNTY_AND_CAUSATION.md",
+      "sha256": "56bc970de5f62ef58f144fa155f8e0dfa52a46874863df44a3457e7395f1795a",
+      "bytes": 11805
+    },
+    {
+      "path": "simultaneous-production-argument/REPORT.md",
+      "sha256": "0eea12c3e2e4c761f165406a3b17391917f8b49a9eae8ca521023f658ef2dc99",
+      "bytes": 23052
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "bytes": 19070
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+      "sha256": "d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+      "bytes": 17246
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/read-selections/majmu20-item2032-L0001-L0020.txt",
+      "sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b",
+      "bytes": 17326
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/minhaj3-item366.txt",
+      "sha256": "971e1b9369a026c4eb24dfa4b98a5dd21e42b712dd6415a8d81ba5443e6fc8cb",
+      "bytes": 23821
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+      "sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f",
+      "bytes": 22494
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item157.txt",
+      "sha256": "a4564e944544d14733b06aad01f3285db3c4e0d1243d84d4aa22184ead4bb60e",
+      "bytes": 4028
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item158.txt",
+      "sha256": "d01e80d1500484febd28a283f1dd4700febd190556e91d9003e9f79b0456222f",
+      "bytes": 17568
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/read-selections/minhaj1-item96-L0001-L0009.txt",
+      "sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d",
+      "bytes": 4822
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/read-selections/dar016-L0690-L0757.txt",
+      "sha256": "1110e59e8a16f54437297fa61c84d1081ae2ad185fc1603b2fb942e451f26b75",
+      "bytes": 23764
+    }
+  ]
+}

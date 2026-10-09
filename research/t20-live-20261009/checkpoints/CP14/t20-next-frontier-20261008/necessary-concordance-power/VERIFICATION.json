@@ -1,0 +1,67 @@
+{
+  "hash_checks": [
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/INPUT_BINDINGS.json",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.pdf",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.pdf",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.pdf",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.txt",
+      "matches": true
+    }
+  ],
+  "all_hashes_match": true,
+  "amini_contains_baillie_or_hagen": false,
+  "gordon_direct_note17_verified": true,
+  "formal_execution": false,
+  "external_review": false,
+  "integration_or_closure": false,
+  "historical_duration_certification": false,
+  "visual_inspection": [
+    "Baillie–Hagen printed p.29, whole-origin paragraph",
+    "Baillie–Hagen printed p.30, nested-necessity footnote10"
+  ]
+}

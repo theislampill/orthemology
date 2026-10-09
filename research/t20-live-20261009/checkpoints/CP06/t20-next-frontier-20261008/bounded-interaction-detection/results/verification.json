@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "bound_artifacts_rechecked": 158,
+  "frozen_manifest_payloads": 128,
+  "imported_unary_artifacts": 7,
+  "author_replay_byte_identical": true,
+  "before_after_identity": true,
+  "scope": "Artifact identity and replay only; no uniform numerical guarantee, physical validation, integration or T20 closure."
+}

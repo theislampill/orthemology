@@ -1,0 +1,35 @@
+{
+  "source_bindings": [
+    {
+      "path": "t20-next-frontier-20261008/reason-causation-bridge/INDEPENDENT_ASSESSMENT.md",
+      "bytes": 15360,
+      "sha256": "d6a39127f52e8644cbf4d1c6340fca5138b3f02dac449f7db300e8c35b13bd24"
+    },
+    {
+      "path": "t20-next-frontier-20261008/reason-causation-bridge/EXCLUSION_TRANSPORT.md",
+      "bytes": 5251,
+      "sha256": "724825586f3ec4c049a4bd95731cb4162d6fe9877f2df3b40e4b88e751f146b6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/reason-causation-bridge/READING_PROVENANCE.json",
+      "bytes": 4406,
+      "sha256": "3315f4ed00df7b07448229e008d64f34a90eedfa850ce8a54e8aa011aacd1b1a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/primary-source-receipt.md",
+      "bytes": 8404,
+      "sha256": "cb61f610b3319da7317eeb2871af743db9c09996812a61318f5a3dcfcedfc335"
+    },
+    {
+      "path": "t20-next-frontier-20261008/reason-causation-bridge/primary-check/source-manifest.json",
+      "bytes": 3084,
+      "sha256": "c0d68157675008be8c971a6ee000b477507ce56c8f4d797214624d7207767b05"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/RESULT.md",
+      "bytes": 12476,
+      "sha256": "fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d"
+    }
+  ],
+  "frozen_predecessor_manifest_sha256": "504ef228406a1e9d9e38979df9dfa58f0f3fab4a7551ed944177a2a3e5d29794"
+}

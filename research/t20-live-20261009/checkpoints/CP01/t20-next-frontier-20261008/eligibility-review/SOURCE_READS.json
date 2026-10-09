@@ -1,0 +1,31 @@
+{
+  "akmaliyya": {
+    "path": "bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+    "coverage": "L001–274 complete retained unique extraction, continuous blocks",
+    "witness_count": 1,
+    "fresh_source_acquisition": false,
+    "scan_collation": false,
+    "credit": "independent appraisal; no new textual witness"
+  },
+  "dar9": {
+    "path": "bearer-eligibility/sources/book413-item707.txt",
+    "coverage": "L001–011 complete, quotation/reply voice distinguished"
+  },
+  "dar4": {
+    "paths": [
+      "bearer-eligibility/sources/book413-item790.txt",
+      "bearer-eligibility/sources/book413-item791.txt",
+      "bearer-eligibility/sources/book413-item792-unvocalized-working.txt",
+      "bearer-eligibility/sources/book413-item793.txt"
+    ],
+    "coverage": "complete retained sections790–793"
+  },
+  "interface_reports": {
+    "paths": [
+      "nonabsorption/REPORT.md",
+      "wise-determination/REPORT.md",
+      "bearer-eligibility/domain-addendum/ADDENDUM.md"
+    ],
+    "claim": "read reports; no new independent reading credit for their other source spans or code"
+  }
+}

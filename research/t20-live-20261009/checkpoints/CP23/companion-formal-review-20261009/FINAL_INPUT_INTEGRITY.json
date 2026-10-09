@@ -1,0 +1,54 @@
+{
+  "archive_sha256": "c16bb8a75b84e4f79119d49635190e51ba1e862ffe207f137f0201cae542ae19",
+  "archive_unchanged": true,
+  "independent_controls_passed": true,
+  "input_tree_file_count": 39,
+  "input_tree_unchanged": true,
+  "lean_run": false,
+  "new_ancestral_replay": false,
+  "portable_replay_passed": true,
+  "review_artifacts": [
+    {
+      "bytes": 6687,
+      "path": "AFTER_REPLAY_RECEIPT.json",
+      "sha256": "058e581229e14ea5c4edc9ecf7260bc9daaf49c0212cb381bfc28cb1348156a4"
+    },
+    {
+      "bytes": 8964,
+      "path": "BEFORE_RECEIPT.json",
+      "sha256": "fa296a0a442f0253565db86a4ab9aaec3dd8c7629ca36ff759283601f9824d7d"
+    },
+    {
+      "bytes": 14079,
+      "path": "FORMAL_REVIEW.md",
+      "sha256": "ff5617b1af8e0e42ae21896e3fea226ef2c0344fa73bf1146696f22314895979"
+    },
+    {
+      "bytes": 2861,
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "06ce1cd0671f6313b4c8a9d12dbe1fb9a413148d40bcf9a78d33c5a482eb1dcc"
+    },
+    {
+      "bytes": 7292,
+      "path": "independent_controls.py",
+      "sha256": "b2b9f6baf3c469a71fb91ff8589f0154b089b8f39c33b1b3fb97756484dc9fe1"
+    },
+    {
+      "bytes": 12906,
+      "path": "portable-replay/DIAGNOSTIC_RESULTS.json",
+      "sha256": "8326a6daa597391aca913b4578b326149161e4484d2c78e6fd4108043fde0df6"
+    },
+    {
+      "bytes": 1056,
+      "path": "portable-replay/REPLAY_RECEIPT.json",
+      "sha256": "858f3bc3ef86de3d698d129490674379cede620ace3513f0878d45250aedae13"
+    },
+    {
+      "bytes": 5919,
+      "path": "portable-replay/TESTS.log",
+      "sha256": "60e2a75749010ca91df52ad95043224e1a00c7485a9d1316e21ad1447a71a984"
+    }
+  ],
+  "test_count": 56,
+  "utc": "2026-10-09T11:02:12.615089+00:00"
+}

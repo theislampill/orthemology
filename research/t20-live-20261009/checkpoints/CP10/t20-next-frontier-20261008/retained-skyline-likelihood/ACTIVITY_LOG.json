@@ -1,0 +1,24 @@
+{
+  "historical_floor": "UNVERIFIED",
+  "scope": "Prospective activity of this worker only; no claimed historical hours",
+  "windows": [
+    {
+      "start_utc": "2026-10-08T20:58:24Z",
+      "end_utc": "2026-10-08T21:06:34Z",
+      "wall_window_seconds": 490,
+      "activity": "Read the three specified predecessor results; derive and check skyline density, conditional hidden law, stable mass integrals, TP2 factorial bound, finite common-support KL, and low-n identities; implement deterministic quadrature and write the substantive result.",
+      "active_seconds_credited": null,
+      "credit_status": "UNVERIFIED: this is a prospectively bounded work window, not a precise active-time measurement. No exact effort total is claimed. Tool/output and final source-hash preparation overlap the window and are not counted as qualifying effort."
+    },
+    {
+      "start_utc": "2026-10-08T21:07:06Z",
+      "end_utc": "2026-10-08T21:07:32Z",
+      "wall_window_seconds": 26,
+      "activity": "Add and run explicit deterministic assertions for the formula controls.",
+      "active_seconds_credited": null,
+      "credit_status": "UNVERIFIED precise active-time split; reports the observed window only."
+    }
+  ],
+  "excluded": ["idle waits", "reviewer wait time", "packaging and handoff", "any historical floor inferred from earlier packets"],
+  "claim": "No hour floor or cumulative active-time threshold is certified by this log."
+}

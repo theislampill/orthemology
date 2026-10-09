@@ -1,0 +1,10 @@
+{
+  "status": "initial inspected bytes; not final acceptance",
+  "date_utc": "2026-10-08",
+  "sha256": {
+    "../arbitrary-face-replay-design/RESULT.md": "1693161c160f8524772bd57b5546a88e2818d28341e63d2c5a936834a07010d4",
+    "../arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md": "be69eef8d3a8141a573d1ac8931ad599f4d37ab20eece039b2a9d5998ee6b0ec",
+    "../finite-replay-sampling-lower-bound/RESULT.md": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26",
+    "../finite-panel-replay-robustness/RESULT.md": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe"
+  }
+}

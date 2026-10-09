@@ -1,0 +1,55 @@
+{
+  "scope": "Read-only source bindings for separate log-squared sibling",
+  "sources": [
+    {
+      "path": "../retained-skyline-likelihood/RESULT.md",
+      "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+      "role": "Exact fixed-count density, family, singular mass"
+    },
+    {
+      "path": "../skyline-count-information/RESULT.md",
+      "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d",
+      "role": "Record law, Joe coupling, count-test comparator"
+    },
+    {
+      "path": "../skyline-likelihood-score/RESULT.md",
+      "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f",
+      "role": "Local deterministic score expansion"
+    },
+    {
+      "path": "../full-skyline-reverse-kl/RESULT.md",
+      "sha256": "4aa4bee754cf89284a327d4322f4d35a93314525da8aaa22e5d028754908e28a",
+      "role": "Inherited entropy window, tail and stopping architecture"
+    },
+    {
+      "path": "../full-skyline-reverse-kl-review/REVIEW.md",
+      "sha256": "bf100b4cb87154cc520f21dc6db3957357e8baa6f64c4f37d729d576d299c55f",
+      "role": "Independent log-four review only"
+    },
+    {
+      "path": "../full-skyline-reverse-kl-review/REVIEW_RECEIPT.json",
+      "sha256": "7ebf6592f163671710a52e4368d4487e2a96d33ee8f8ccb0f8268a2df128aea2",
+      "role": "Bounded log-four review receipt only"
+    },
+    {
+      "path": "../skyline-probability-prior-art/RESULT.md",
+      "sha256": "ff663eca1abe6b680ef9ed615eb8978484e78ff6a3c2debc13b9cc0e0ddaa945",
+      "role": "Prior-art mapping and optional area-tail comparison"
+    },
+    {
+      "path": "../skyline-probability-prior-art/SOURCE_AUDIT.md",
+      "sha256": "a297002371f620dcf0233f0e5d494b617b3b406ed4d7be4299630cd0aad69ba7",
+      "role": "Prior-art discovery provenance"
+    },
+    {
+      "path": "../skyline-probability-prior-art-review/REVIEW.md",
+      "sha256": "b505d15c693b8a4fbba103d7c4f1e4691598095f00726c360e84e13a4d53a234",
+      "role": "Inspected source-mapping review"
+    },
+    {
+      "path": "../skyline-probability-prior-art-review/VERIFICATION_MANIFEST.json",
+      "sha256": "46842e57d4e1b6ec0bc4fda180a5d8f813dd7cc16bc2ef9b4e0eb7a108c15cea",
+      "role": "Source-review binding"
+    }
+  ]
+}

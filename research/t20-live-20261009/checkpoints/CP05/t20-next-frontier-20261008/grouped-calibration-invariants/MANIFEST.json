@@ -1,0 +1,77 @@
+{
+  "created_utc": "2026-10-08T13:40:21.418521+00:00",
+  "status": "author checkpoint frozen with scoped independent mathematical pass",
+  "scope": "Population grouped-count invariants under unknown common calibration and conditional fixed-signature nuisance-radius corollary; no empirical recovery, protected integration or T20 closure",
+  "author_control_families": 14,
+  "review_references": [
+    {
+      "path": "../grouped-calibration-invariants-review/REVIEW.md",
+      "sha256": "64025953510bb3cd7847389e980b209e580ce006394fc359cae9db92e93e917e"
+    },
+    {
+      "path": "../grouped-calibration-invariants-review/REVIEW_RECEIPT.json",
+      "sha256": "33ddb13d45e8ae057fbe688a4187df7933ec5c7c1ceff7b54db7442c013f8df3"
+    },
+    {
+      "path": "../grouped-calibration-invariants-review/MANIFEST.json",
+      "sha256": "25751eddc5b1c20a8af165a8deec64049f4d0a5ca0433140c7347c6cce185dce"
+    }
+  ],
+  "files": [
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "6987473e061e29b01aba27374addeae3da4d7a1456965bbdf510a3199f172af2",
+      "bytes": 2079
+    },
+    {
+      "path": "GLOBAL_SCALE_COROLLARY.md",
+      "sha256": "0cef524519a83260c1a13afa9af28d5fba517fcf04b21a7c2ae697bfbb4f8667",
+      "bytes": 4949
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "7bb94b2f0750af3435fdf0779b59d30ea39274b93bf6996f8c1ac33f29b22602",
+      "bytes": 1262
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "1f8d12e41c1052e7b6eeb3840d995d51fdb8368c0b69e0d535d834f4b3bff581",
+      "bytes": 932
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113",
+      "bytes": 17594
+    },
+    {
+      "path": "REVIEW_STATUS.md",
+      "sha256": "84c01dc889560c7196a68b8e68374b0df100985cc118ae7a05319981e5bcb33a",
+      "bytes": 1937
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "c11364329a2d250ec65007c1d7bfb34815de30a8c8a6ad469c3cdcbdc1594182",
+      "bytes": 5376
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "274ad3616f31556c2f1a2e5799f03dcd838762003575db8671bd7443e9f0a960",
+      "bytes": 4870
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "aa8c7c45fc8f2f803aaf4535a6eec6f49b67048e59d0ab8ca402b4fb77ca1af1",
+      "bytes": 7255
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "6d6a436a6f318ff39e9bc457a5bb7ebba384d559af68a855fe3a9d8b439d7c22",
+      "bytes": 2809
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "e41c0fc78a94a7699c21a638a8a2a0f958a6ce09a522954004ebe4273a1724ac",
+      "bytes": 764
+    }
+  ]
+}

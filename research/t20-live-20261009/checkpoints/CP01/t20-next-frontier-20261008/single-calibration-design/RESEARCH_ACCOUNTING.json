@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "timestamp_utc": "2026-10-08T07:33:31.098677+00:00",
+      "event": "prospective_active_start",
+      "scope": "Independently validate private-prime/CRT universal single rational calibration, prove finite-root design, test exact diagonal valuations and guarded recovery.",
+      "excluded": "Earlier mathematical stages, before-ledger discussion, waits, administration and prior checkpoint research."
+    },
+    {
+      "timestamp_utc": "2026-10-08T07:43:36.781248+00:00",
+      "event": "active_research_pause",
+      "result": "Universal CRT calibration validated with exact private diagonal and decoder, guard composition and sample/calibration limits; 11 author controls.",
+      "exclusions": "Exports, receipts, hashing, isolated replay and waits are administrative verification, not additional research credit."
+    }
+  ],
+  "net_active_seconds": null,
+  "scope": "Prospective boundaries; elapsed envelopes are not certified uninterrupted active duration.",
+  "excluded": "Prior stages, before-ledger reasoning, waits, administrative exports, hashing, repeated replay and delivery."
+}

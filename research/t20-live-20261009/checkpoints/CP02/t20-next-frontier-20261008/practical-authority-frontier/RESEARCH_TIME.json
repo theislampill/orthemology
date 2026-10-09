@@ -1,0 +1,17 @@
+{
+  "start_clock_utc": "2026-10-08T09:08:15Z",
+  "phase": "historical scope screen before campaign",
+  "active_seconds_credited": null,
+  "excluded": "Prior elapsed time, recovery, tool waits, bookkeeping and packaging; no retrospective six-hour claim",
+  "end_observed_utc": "2026-10-08T09:38:36Z",
+  "status": "Scoped research pass ended; owner/parent review pending; T20 remains active",
+  "timing_scope": "The initial 09:08:15 start was recorded prospectively. The enclosing span includes historical inspection, source appraisal, retrieval, coordination and drafting; it is not claimed as continuous active research. No reconstructed active-time total is certified.",
+  "exclusions": [
+    "Recovery and earlier elapsed work",
+    "Acquisition and rendering",
+    "Tool and network waits",
+    "Administrative coordination, artifact binding and packaging"
+  ],
+  "child_timing": "ameri-reading/reading-intervals.jsonl preserves separately recorded prospective intervals and explicit corrections; do not add overlapping worker time as elapsed lead time.",
+  "six_hour_certificate": false
+}

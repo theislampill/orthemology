@@ -1,0 +1,13 @@
+{
+  "runtime": "Python 3.8+ standard library only",
+  "network_needed": false,
+  "only_executed_research_scripts": [
+    "complete-explanation-modal-review-20261009/modal-premise-independence.py",
+    "complete-explanation-modal-review-20261009/symmetry-premise-control.py"
+  ],
+  "control_inputs": "Embedded constants only; each script is copied unchanged into a separate output directory and its stdout is compared byte-for-byte with the preserved JSON result.",
+  "scope": "Finite logical illustrations, not metaphysical possibility, source-premise truth, or new theorem certification.",
+  "historical_nested_manifests": "Provenance only; some list omitted source items. The top-level MANIFEST.json and MANIFEST.sha256 define and verify this package.",
+  "source_ledger_paths": "Absolute original paths and omitted witness references are preserved historical provenance, not portable runtime dependencies.",
+  "spinoza_code": "MIT-licensed pinned reference only, never executed or imported. No full repository, build configuration, toolchain, or kernel replay is supplied."
+}

@@ -1,0 +1,83 @@
+{
+  "primary_records": [
+    {
+      "id": "Akmaliyya",
+      "html_path": "sources/majmu-item591.html",
+      "sha256": "5c792c388ee957c3afd423266097a4cbabd1ba91b656c91651f45191b92297ff",
+      "url": "https://islamweb.net/ar/library/content/22/591/",
+      "direct_read_scope": "Canonical L001–274, complete unique epistle electronic6:68–140",
+      "note": "Unique answer first layer; raw repeated layer L275+ excluded.591/595/597/607 received same epistle; one witness. Mechanical vowel-removal only, no emendation.",
+      "page_status": "Electronic markers; no fresh scan collation"
+    },
+    {
+      "id": "Dar9-receptivity",
+      "html_path": "sources/book413-item707.html",
+      "sha256": "9dccffbab257f8343668d83a404389d56a6a771534a4be67cdb36e31098dfdc5",
+      "url": "https://islamweb.net/ar/library/content/413/707/",
+      "direct_read_scope": "All11 paragraphs electronic9:36–39",
+      "note": "Quoted opponent/al-Amidi material and authorial replies differentiated.",
+      "page_status": "Electronic markers; no fresh scan collation"
+    },
+    {
+      "id": "Dar4-control790",
+      "html_path": "sources/book413-item790.html",
+      "sha256": "8b847b41f420b303dc6b216cc012e7e0023a9d9106a0cd2d337e9daade4de94d",
+      "url": "https://islamweb.net/ar/library/content/413/790/",
+      "direct_read_scope": "All4 paragraphs, lead-in251/252",
+      "note": "Context for criticism of a particular unity proof; no plural-necessaries endorsement.",
+      "page_status": "Electronic markers; no fresh scan collation"
+    },
+    {
+      "id": "Dar4-control791",
+      "html_path": "sources/book413-item791.html",
+      "sha256": "01d0c71d53253ddc4b40dc664c48112dd245a10687607486d9d9b6594e653760",
+      "url": "https://islamweb.net/ar/library/content/413/791/",
+      "direct_read_scope": "All16 paragraphs252–256",
+      "note": "Author explicitly accepts unity while criticising proof.",
+      "page_status": "Electronic markers; no fresh scan collation"
+    },
+    {
+      "id": "Dar4-control792",
+      "html_path": "sources/book413-item792.html",
+      "sha256": "ccfe359fc7ffd3e7d0e0168de53ce9e26f8e04ec1189cd400f624b58fbde1ed4",
+      "url": "https://islamweb.net/ar/library/content/413/792/",
+      "direct_read_scope": "All14 paragraphs256–259",
+      "note": "General/singular properties and particular essences.",
+      "page_status": "Electronic markers; no fresh scan collation"
+    },
+    {
+      "id": "Dar4-control793",
+      "html_path": "sources/book413-item793.html",
+      "sha256": "8c1c26356ed89d3cfa9b4ba642570dc90920768aad79178dbc88b224149fe973",
+      "url": "https://islamweb.net/ar/library/content/413/793/",
+      "direct_read_scope": "All5 paragraphs259–260",
+      "note": "Clarifies inherence/concomitance versus efficient origin.",
+      "page_status": "Electronic markers; no fresh scan collation"
+    },
+    {
+      "id": "Majmu2-concentration",
+      "html_path": "sources/majmu-item133.html",
+      "sha256": "998b06e419b047fba6f5ecd1e10c9fab04e7e3309263c6757721f15b0ba93df6",
+      "url": "https://islamweb.net/ar/library/content/22/133/",
+      "direct_read_scope": "L023–034 complete electronic2:32–34; preceding1–22 read as context",
+      "note": "Parallel wording discrepancy, not claimed manuscript/edition variant. Later lines not credited.",
+      "page_status": "Electronic markers; no fresh scan collation"
+    }
+  ],
+  "retained_not_additional_direct_read_credit": [
+    "majmu-item595.html",
+    "majmu-item597.html",
+    "majmu-item607.html",
+    "book22-item226.html",
+    "book22-item240.html",
+    "book22-item1285.html",
+    "book22-item1286.html"
+  ],
+  "novelty": "New eligibility-focused appraisal and full unique Akmaliyya reading in this pass. No claim that these passages were unread in all earlier programme work. Parallel primary passages are one author, not independent corroboration.",
+  "integrity_notes": [
+    "Akmaliyya canonical extraction removes vowels mechanically; original HTML remains authoritative.",
+    "Akmaliyya L086 contains awkward electronic wording about the blind animal, but repeated clear comparisons atL085,L088 and Dar9L008 control the claim.",
+    "Akmaliyya L112 repeats an awkward comparison; no new inference depends on repairing it.",
+    "Modern search summaries and merely located documents are not primary reading credit."
+  ]
+}

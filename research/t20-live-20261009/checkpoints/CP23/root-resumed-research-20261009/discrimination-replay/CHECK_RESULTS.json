@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite controls, not a proof of general theorems",
+  "checks": {
+    "frontier_inverse_catalogues": 256,
+    "cost_recovery_evaluations": 4096,
+    "residual_congruence_updates": 4096,
+    "n4_profiles": 16,
+    "n4_pairwise_single_token_distinguishers": 120,
+    "priced_verification_best_cost": 2,
+    "witness_search_n1_to_n6_including_check_cost2": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "full_transcript_feasibility_cases": 1024,
+    "content_equal_provenance_distinction": true,
+    "scope_transport_cost": 6,
+    "derived_support_and_wrong_scope_mutation": true,
+    "expiry_breaks_union_completion_control": true,
+    "deterministic_vs_randomized_expected_cost": {
+      "deterministic": 2,
+      "randomized_expected": "3/2"
+    }
+  }
+}

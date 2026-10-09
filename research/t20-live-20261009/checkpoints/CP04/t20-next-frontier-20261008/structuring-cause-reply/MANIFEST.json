@@ -1,0 +1,69 @@
+{
+  "frozen_utc": "2026-10-08T11:17:22.085508+00:00",
+  "status": "bounded supplemental successor frozen for parent review, no final integration",
+  "root": "t20-next-frontier-20261008/structuring-cause-reply",
+  "source_bodies_included": false,
+  "file_count": 12,
+  "files": [
+    {
+      "path": "INDEPENDENT_ASSESSMENT.md",
+      "bytes": 10131,
+      "sha256": "2201df0503808fe14b01cf0068047f9f4b7822e912154427b40a16245ee096b9"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 1411,
+      "sha256": "e2b29231b1f448ae0b27b3dc068701e7dcbb829be088a8e63b0629f4c4e20cf6"
+    },
+    {
+      "path": "MODEL_AND_TRANSPORT.md",
+      "bytes": 8335,
+      "sha256": "62af913b9011cb1853e194fba429462923ffaf6fdc7b826a056584245f044deb"
+    },
+    {
+      "path": "PROSPECTIVE_TEST.md",
+      "bytes": 3515,
+      "sha256": "e90762503d435ad20710155042a862fe36e2d3ee5a75351d9ff8159b4f13729b"
+    },
+    {
+      "path": "PUBLIC_SOURCE_SUMMARIES.md",
+      "bytes": 4127,
+      "sha256": "22946b950c49dbf2c3ea8aff52a0c6117959e6e29229f5ae9e11f6fda1d5adca"
+    },
+    {
+      "path": "READING_PROVENANCE.json",
+      "bytes": 8004,
+      "sha256": "375fcf6bca7e01d666bf03cab5d936a77779c40f452da9c9cc74ef025998b476"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 2324,
+      "sha256": "e504aee3428b7b519ebed3ca81d47d35030fdb6182bff82aa5952605da5e74ed"
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "bytes": 1760,
+      "sha256": "d0ae6566db3483ff2d816a9489a639cf2526171b7cd59175cca46dcab7c90b85"
+    },
+    {
+      "path": "REVIEW_RECEIPT.md",
+      "bytes": 2191,
+      "sha256": "584e211e62bb20ff93563237e828376ac785047a20e6a85b0be7526249ea230b"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 1260,
+      "sha256": "2b23a9f0cb29575525414ec58c43d6d3402dc3c77ba0e182dccc65956207a0ae"
+    },
+    {
+      "path": "model/check_acquisition.py",
+      "bytes": 4159,
+      "sha256": "ac10a8bf1915311107dcf602dacd2487728f9ef3650b5cd844f6bfc364c1d112"
+    },
+    {
+      "path": "results/acquisition.json",
+      "bytes": 1723,
+      "sha256": "d9174701b3170048d8ee21a56219ce99527b7bd9e1854e3c3dcdecb7d3b22ab0"
+    }
+  ]
+}

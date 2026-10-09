@@ -1,0 +1,106 @@
+{
+  "schema": "productive-sufficiency-verification-v1",
+  "recorded_at_utc": "2026-10-08T12:12:25.590944+00:00",
+  "author_compile_exit_code": 0,
+  "author_command": "./verify.sh",
+  "warning_as_error": true,
+  "final_file_trust_level": 0,
+  "exact_per_theorem_axioms": {
+    "all_seven_preserved": [
+      "propext",
+      "Quot.sound"
+    ],
+    "original_same_witness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "normalized_law": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "both_realizations_have_positive_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "occurrence_coherence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "necessary_bearer_nonnecessary_target": [
+      "propext",
+      "Quot.sound"
+    ],
+    "standing_basis_does_not_select": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "full_record_determines": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "no_standing_record_selector": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "act_genus_without_fixed_token": [
+      "propext"
+    ],
+    "existential_premises_do_not_fix_act_token": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "inherited_copy_equality": {
+    "OriginalBearerBridge.lean": true,
+    "SourceIdentityDerived.lean": true,
+    "BridgeControls.lean": true
+  },
+  "negative_controls": [
+    {
+      "claim": "necessary_target",
+      "exit_code": 1,
+      "intended_false_proposition_rejected": true,
+      "source_sha256": "a4ffbd3832735b5fafd1b50ebba14c280abd5ba7039adcf1d6cc4edc12488852"
+    },
+    {
+      "claim": "fixed_act_token",
+      "exit_code": 1,
+      "intended_false_proposition_rejected": true,
+      "source_sha256": "1802cfb96c76e1202e0812e088313676441d946dfce4a6670e93e0aa88dfd64b"
+    },
+    {
+      "claim": "normalization_forces_nonempty_endpoint",
+      "exit_code": 1,
+      "intended_false_proposition_rejected": true,
+      "source_sha256": "b56be9cad3c7c7caba544a31647ee224af15a190c4bc7bc87c3a6e80253575de"
+    }
+  ],
+  "scope": "Imported mathematical-interface assumption audit only; not a physical or full source-faithful metaphysical model.",
+  "source_claim": "General complete determination endorsed authorially at Majmu8 L312; L342 is reported dialectic on particular willing.",
+  "unrelated_replays_performed": false,
+  "duration_certified": false,
+  "closure_certified": false,
+  "independent_review": {
+    "disposition": "no blocking findings for bounded diagnostic use",
+    "report_sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+    "review_sha256": "f7af343e99551bf000734cdab278e0a6630d3df24519bb3c4a00081d6e92b4cf",
+    "bindings_sha256": "a1ef6f051420d382d5457a0be9af2095f393c4dfdcb45751c14be437e0319b03",
+    "fresh_probability_modules": 5,
+    "fresh_bridge_modules": 3,
+    "trust_level": 0,
+    "negative_controls_passed": 3,
+    "scope": "Not a source-faithful stochastic metaphysical countermodel; no duration, integration or closure status."
+  }
+}

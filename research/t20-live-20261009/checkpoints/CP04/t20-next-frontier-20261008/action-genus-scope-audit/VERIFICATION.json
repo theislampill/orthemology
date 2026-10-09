@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-10-08T11:32:31.154047+00:00",
+  "status": "PASS_BOUNDED_ARTIFACT_INTEGRITY",
+  "bound_entries": 20,
+  "unique_inherited_files_unchanged": 17,
+  "exact_span_hashes_match": true,
+  "json_parse": true,
+  "screen_counts_match": true,
+  "fresh_primary_reading": false,
+  "fresh_proof_replay": false,
+  "qualification": "Integrity and exact-scope readback only; not a new theorem/source authentication or independent philosophical review."
+}

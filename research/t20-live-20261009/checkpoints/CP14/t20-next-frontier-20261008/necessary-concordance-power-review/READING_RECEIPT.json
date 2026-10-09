@@ -1,0 +1,114 @@
+{
+  "reviewed_result_sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+  "readings": [
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "scope": "Read complete; final exact bytes bound. Hash records are provenance, not philosophical evidence."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md",
+      "scope": "Read complete; final exact bytes bound. Hash records are provenance, not philosophical evidence."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json",
+      "scope": "Read complete; final exact bytes bound. Hash records are provenance, not philosophical evidence."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/INPUT_BINDINGS.json",
+      "scope": "Read complete; final exact bytes bound. Hash records are provenance, not philosophical evidence."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/MANIFEST.json",
+      "scope": "Read complete; final exact bytes bound. Hash records are provenance, not philosophical evidence."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/VERIFICATION.json",
+      "scope": "Read complete; final exact bytes bound. Hash records are provenance, not philosophical evidence."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.txt",
+      "scope": "Printed pp.21\u201333 complete, continuous page contents, notes and references; originally displayed nonsequentially, no omitted pages."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.txt",
+      "scope": "Complete pp.247\u2013258 and terminal copyright page, continuous ranges 1\u2013245 and 246\u2013end."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.txt",
+      "scope": "Lines 1\u201374, 247\u2013545, 693\u2013761 and 776\u2013821. The 286\u2013421 overlap repaired a truncated combined display. No whole-paper reading claimed."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.pdf",
+      "scope": "Identity/hash bound; reading used corresponding extraction; Baillie\u2013Hagen pp.29\u201330 also image inspected. No new PDF acquisition."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.pdf",
+      "scope": "Identity/hash bound; reading used corresponding extraction; Baillie\u2013Hagen pp.29\u201330 also image inspected. No new PDF acquisition."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.pdf",
+      "scope": "Identity/hash bound; reading used corresponding extraction; Baillie\u2013Hagen pp.29\u201330 also image inspected. No new PDF acquisition."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/bh-page-09.png",
+      "scope": "Visually inspected in full; confirms productive wording / printed nested modality."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/bh-page-10.png",
+      "scope": "Visually inspected in full; confirms productive wording / printed nested modality."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "scope": "Complete, with lines45\u201392 reread to repair truncated combined display."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/REVIEW_STATUS.json",
+      "scope": "Complete."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.md",
+      "scope": "Complete accepted review."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "scope": "Complete stored article and references. Its underlying sources were not independently reacquired."
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "scope": "Complete, lines1\u2013134."
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "scope": "Only canonical L216\u2013240 and L249\u2013274, both continuous. Not the complete epistle, scan collation, or new witness."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "scope": "Targeted lines53\u201366; additional matching source/claim lines displayed by grep are not whole-report reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "scope": "Targeted lines15\u201332; additional matching source/claim lines displayed by grep are not whole-report reading."
+    }
+  ],
+  "web_verification": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s11153-007-9152-7",
+      "scope": "Official title, authors, issue year, page range, DOI and abstract; subscription content not accessed."
+    },
+    {
+      "url": "https://forumphilosophicum.ignatianum.edu.pl/1246-omnipotence-and-the-vicious-circle-principle.html",
+      "scope": "Official title, author, issue, pages and DOI; article reading via retained extraction."
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/religious-studies/article/god-ubergod-and-untergod/9AD4212CD64B76BDDCCCB5BE9C866D73",
+      "scope": "Official HTML note17 directly verified against retained text."
+    }
+  ],
+  "limitations": [
+    "No source survey or new source paper.",
+    "No historical reading-duration certification.",
+    "No formal/model execution.",
+    "No repository adoption/currentness revalidation.",
+    "No whole Gordon article or whole Arabic epistle reading claimed."
+  ]
+}

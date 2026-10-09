@@ -1,0 +1,121 @@
+{
+  "schema": "de-se-sovereignty-review-inputs/1",
+  "created_utc": "2026-10-08T23:47:03.658189+00:00",
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.initial.md",
+      "sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91",
+      "bytes": 27739,
+      "scope": "Full initial author RESULT; scope corrected only after final re-read."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/INPUT_BINDINGS.json",
+      "sha256": "856121ebb6874d312bcbfba205a117034d444117c94cc64724a815c02c77132f",
+      "bytes": 8692,
+      "scope": "Full author input ledger, metadata and claimed reading scopes; this is not independent reading of every listed item."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/READING_LEDGER.json",
+      "sha256": "9e547f0ad94eda92afd86a5f4c1c201bb3005dba80f0c05f9e3ec434898d454b",
+      "bytes": 1240,
+      "scope": "Full author reading ledger; provenance context, no transfer of author reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "sha256": "b0447ae60a4a6e36660b727f40e33a3e22d274643d6e01406a38a18a29e943db",
+      "bytes": 13802,
+      "scope": "Whole stored article directly read, including all substantive sections and references."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/EXISTING_FORMAL_MAP.md",
+      "sha256": "c43eeea4ce1b402d67d4c41a77dede0e796838485b7c6a2926e9ab0be96dfbd5",
+      "bytes": 30169,
+      "scope": "Sections 7\u20139 directly read in untruncated relevant output; also inspected displayed earlier map sections without whole-map fresh-reading credit."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940,
+      "scope": "Whole source, lines 1\u2013150, directly inspected; no Lean replay."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/AnchoredSourceBridge.lean",
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "bytes": 10743,
+      "scope": "Direct lines 1\u2013175, including definitions and relevant theorem; no Lean replay."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/Controls.lean",
+      "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+      "bytes": 22563,
+      "scope": "Direct lines 260\u2013340, including missing-classification and missing-conformance controls; no Lean replay."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/intrinsic-willing/COGNITION_REFINEMENT.md",
+      "sha256": "7824768f0267657ac102d64d24201b6d36d07d0fc3188048a2666057b6a9aa65",
+      "bytes": 5706,
+      "scope": "Whole short report directly read."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/intrinsic-willing/src/intrinsic_knower.py",
+      "sha256": "26ad1408c7f28c2a4db0523f8305e47ee5e3d7a432719b0e40784ad8e3eb649d",
+      "bytes": 5448,
+      "scope": "Whole source directly inspected; no execution."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+      "bytes": 6736,
+      "scope": "Whole source directly inspected, followed by line-numbered return to 93\u2013145; no execution."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/RESULT.md",
+      "sha256": "23ae84216ec9390dd2a24c483a0347c2f5493190da1ca8d64c5d496c8e9b2d0f",
+      "bytes": 21566,
+      "scope": "Whole report sections 1\u20137 directly read; neighboring-field primary-source reading is not repeated or claimed."
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/src/joint_end.py",
+      "sha256": "d7a5871adb8dc48db7bc85e7e672947a48c317cbe79e503eaebb04cf86239e6d",
+      "bytes": 7324,
+      "scope": "Whole source directly inspected; line-numbered return to 15\u2013103; no execution."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c",
+      "bytes": 19131,
+      "scope": "Sections 1\u20134 and evidence introduction directly read; small truncation in ancillary source paragraph, not claimed full report reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040",
+      "bytes": 17870,
+      "scope": "Targeted displayed search hits about cognition/production relation and warrant boundary; not whole report reading."
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "bytes": 123088,
+      "scope": "Direct retained electronic lines L248\u2013274; targeted primary rereading, not fresh acquisition, full epistle or scan collation."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "bytes": 29525,
+      "scope": "Full initial draft plus direct complete diff and every revised passage; accepted final artifact."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/CORRECTION_RECORD.json",
+      "sha256": "46d5eb48901cf27ab28a01ff2d282cc12930ac7ebc8d1f3f9661ec6db5cbc158",
+      "bytes": 1718,
+      "scope": "Whole correction record directly read and checked against observed source changes."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.final.md",
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "bytes": 29525,
+      "scope": "Frozen exact final reviewed RESULT; hash identity checked."
+    }
+  ],
+  "accepted_result_sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d"
+}

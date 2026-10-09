@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "erratum_receipt_sha256": "34932c23d76203b90f6f569067d588bce66ad3e222018543a241eca4202a02ab",
+  "erratum_bound_files_verified": 10,
+  "original_review_manifest_sha256": "6bc8b43fbf0f91812c8344475857d0db7430fa553fb2d365cf4ee8af2d2889ec",
+  "original_sealed_review_payloads_verified": 18,
+  "scope": "Separate explanatory transcription correction; original review and author result remain unchanged."
+}

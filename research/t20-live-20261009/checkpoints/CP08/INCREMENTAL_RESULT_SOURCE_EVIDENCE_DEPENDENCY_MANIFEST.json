@@ -1,0 +1,722 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v1",
+  "classification": "EIGHTH_ADDITIVE_INTERMEDIATE_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "research_cutoff_utc": "2026-10-08T19:22:46.258191+00:00",
+  "previous_research_cutoff_utc": "2026-10-08T17:10:40.977609+00:00",
+  "results": [
+    {
+      "id": "adaptive_second_face",
+      "title": "Adaptive second-face charged-attempt extension",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/RESULT.md",
+          "bytes": 9589,
+          "sha256": "3997cb39f8306545ac622feeb19e55f0fe18c570e0059e84dea39940c6b22e0f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/MANIFEST.json",
+          "bytes": 1619,
+          "sha256": "f1d94d43fb7067e1a7626d26e8d010c1d634f86236b730d4cf519171e829e5a0"
+        },
+        {
+          "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/SOURCE_BINDINGS.json",
+          "bytes": 1201,
+          "sha256": "9c66c47798c3f327f637113ce5e63c3ed94b314d7f96df04ad94d962a9a43a78"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/REVIEW.md",
+          "bytes": 12475,
+          "sha256": "34cad583c0556f53aef7c235f7dacd88c684eac2347e85c097a7713ebca6c6a3"
+        },
+        {
+          "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/REVIEW_RECEIPT.json",
+          "bytes": 7377,
+          "sha256": "b2ca44f3477b8b0fd52569f9acad9931c4865dfd2b9cdd7d230c0e23356aa22a"
+        }
+      ],
+      "depends_on": [
+        "SEVENTH_ARBITRARY_FACE"
+      ],
+      "claims": [
+        "Exact one-attempt chi-squared identity and equality of adaptive/nonadaptive chi-squared suprema, with first and second commands recorded; discrete/continuous/mixed kernels and aborts covered by the written argument",
+        "Uniform Joe-oriented KL <= 32768/n^4 transfers to world 1 expected charged attempts under unconditional terminal correctness",
+        "Free screening defeats the bound under a different cost convention that charges only selected completed pairs"
+      ],
+      "limits": [
+        "Every first probe is charged; nontermination consumes error budget",
+        "No adaptive KL supremum equality or optimal constant",
+        "No longer replay words, cross-attempt retained vectors, gate observations or physical instrument optimum"
+      ],
+      "control_ids": [
+        "adaptive-author",
+        "adaptive-independent",
+        "adaptive-review-bindings"
+      ],
+      "source_ids": [],
+      "governance": "Explicitly excluded from seventh freeze; included only now. Historical no-eighth-request statements describe original freeze context."
+    },
+    {
+      "id": "global_rival",
+      "title": "Bounded global-explanation rival comparison",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival/REPORT.md",
+          "bytes": 16495,
+          "sha256": "ec045d05b5d7da64332d166be5b00e9fcd455453e668e0b5b07ffd3c3c3dbb97"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival/CHECKPOINT_RECEIPT.json",
+          "bytes": 1693,
+          "sha256": "06aa2e64def5dbee54dfeca08657aad48fe4d90e720a499e8309513d275737a6"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_READS.json",
+          "bytes": 6604,
+          "sha256": "3c390abf8889dc84366ff4b7f641ff822b76332926987e645a91e48871d80241"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-review/INDEPENDENT_LAW_ONLY_TRANSPORT_REVIEW.md",
+          "bytes": 14738,
+          "sha256": "6da1ffcbd2f780e3f3007b66024b2b4a65641812567f12cb8e06fad930812abc"
+        }
+      ],
+      "depends_on": [
+        "ORIGINAL_BEARER_INTERFACE",
+        "BEGINNINGLESS_PROVISION",
+        "INHERITED_WARRANT"
+      ],
+      "claims": [
+        "Separate law-only total-history determination from original actual productive coverage",
+        "Weak recurrence-only dormant alternatives do not preserve full inherited actual-use interpretation"
+      ],
+      "limits": [
+        "Billon partial; no actual-world rival certification",
+        "Final review limited to Billon transport, source limits and typing; not independent full Morganti/Welchance validation",
+        "Initial no-downgrade language is historically preserved; later continuation and adjudication govern current appraisal"
+      ],
+      "control_ids": [],
+      "source_ids": [
+        "BILLON2023",
+        "MORGANTI2015",
+        "WELCHANCE2026"
+      ],
+      "governance": ""
+    },
+    {
+      "id": "source_autonomy_continuation",
+      "title": "Completed source coverage and autonomous qualitative alternative",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+          "bytes": 20262,
+          "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/CONTINUATION_RECEIPT.json",
+          "bytes": 3045,
+          "sha256": "3c50d986290580d6b2e1a64baa2917f36449cd6abde63800a85937c58d4e1488"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_READS.json",
+          "bytes": 6176,
+          "sha256": "06a83739da8a3b9de8d7c0c0da570f515e2d4e2022810fb57cfb8275b760c4dc"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/BILLON_ACCESS_BOUNDARY.md",
+          "bytes": 4824,
+          "sha256": "36c4ab8df18df08c0b23eee6508877b398621cd96525c8a0cc20e4bb72c34bef"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/autonomous-quality-bridge-review/REVIEW.md",
+          "bytes": 19407,
+          "sha256": "01cc512ab6f4c9367f0bfaea223bdb8375863b82fc187cc5da4d99e14382ab66"
+        }
+      ],
+      "depends_on": [
+        "global_rival",
+        "ORIGINAL_BEARER_INTERFACE"
+      ],
+      "claims": [
+        "Morganti 2015 and Dasgupta 2016 full readings completed, with recorded boundaries",
+        "Positive qualitative motivation reduces confidence in unqualified exhaustive bearer application and puts downward pressure on unconditional inference; does not force reversal or parity",
+        "Autonomy as not apt for ground, relative necessity, amodality and intrinsically original existence remain distinct"
+      ],
+      "limits": [
+        "No worked autonomous existential qualitative essence or actual rival world established",
+        "No new logical-gap claim against already-qualified T17/T18",
+        "Later exact-interface adjudication narrows premise attribution; original phrase exhaustive_realisation_application is not a restricted-Realisation counterexample"
+      ],
+      "control_ids": [],
+      "source_ids": [
+        "BILLON2023",
+        "BILLON_PRIOR",
+        "MORGANTI2015",
+        "DASGUPTA2016"
+      ],
+      "governance": ""
+    },
+    {
+      "id": "existential_law_bridge",
+      "title": "Bounded Arabic/source bridge return",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/existential-law-source-bridge/REPORT.md",
+          "bytes": 20834,
+          "sha256": "5ddee32d26314b34ec446e742359dc9571905e12f55c096c9a92b199596c7dfe"
+        },
+        {
+          "path": "t20-next-frontier-20261008/existential-law-source-bridge/PASSAGE_NOTES.md",
+          "bytes": 115348,
+          "sha256": "3dcedc2b69bf58d0c3c867f3b58b60cc7d7bac3984606b7e67838d7cbcbaa26d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/existential-law-source-bridge/MANIFEST.json",
+          "bytes": 1626,
+          "sha256": "1450a503da6f8f9ea23d2019ef4a5e590c86ce596e5c98c891d654e90e35b894"
+        },
+        {
+          "path": "t20-next-frontier-20261008/existential-law-source-bridge/VERIFICATION.json",
+          "bytes": 899,
+          "sha256": "b9126486648e05d9ba26d64ea0bb6c6c76b1b91ac86162797332acb48a8113ed"
+        }
+      ],
+      "separate_internal_review": [],
+      "depends_on": [
+        "global_rival",
+        "source_autonomy_continuation",
+        "INHERITED_WARRANT"
+      ],
+      "claims": [
+        "Already-inhering quality instances cannot simply be antecedent constituents of their bearer",
+        "Receptive/substrate dependence, necessary concomitance and efficient production remain distinct",
+        "No independently warranted reduction classifies every qualitative obtaining fact as an instance-dependent bearer/property reality"
+      ],
+      "limits": [
+        "Targeted rereads only; no fresh full-work or scan credit",
+        "Received textual variants and awkward clauses unaltered",
+        "Original extraction/quote verification is historical and source-body-dependent UNREPLAYED here; no metaphysical verification"
+      ],
+      "control_ids": [],
+      "source_ids": [
+        "ARABIC_RETURN",
+        "DASGUPTA2016"
+      ],
+      "governance": ""
+    },
+    {
+      "id": "qualitative_ontology",
+      "title": "Full 2009 qualitative ontology warrant reading",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+          "bytes": 30791,
+          "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/READING_LEDGER.json",
+          "bytes": 10331,
+          "sha256": "fc00e2e638693978e8e48462164a63c4370fa9a19c2db24d4b4ff6b43a78f057"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/SOURCE_AND_DELIVERABLE_MANIFEST.json",
+          "bytes": 1928,
+          "sha256": "e5c24c14a27a635770b82fe67eb7fa3b1ba2534ad8deead9db1b4186a452ebe3"
+        }
+      ],
+      "separate_internal_review": [],
+      "depends_on": [
+        "source_autonomy_continuation",
+        "ORIGINAL_BEARER_INTERFACE"
+      ],
+      "claims": [
+        "Positive symmetry/redundancy/parsimony argument goes beyond variable elimination",
+        "Generalism preserves structured relational content, shared-witness information and multiple numerically distinct elements",
+        "Material-world scope, primitive obtaining and conceptual/metaphysical priority distinctions retained"
+      ],
+      "limits": [
+        "No argument that every individual assertion is false, every power bearerless, or nonmaterial originals absent",
+        "2009 does not independently provide the existential essence contemplated in 2016",
+        "Cited Kuhn and other sources not independently read; later adjudication governs precise T20 application"
+      ],
+      "control_ids": [],
+      "source_ids": [
+        "DASGUPTA2009",
+        "DASGUPTA2016"
+      ],
+      "governance": ""
+    },
+    {
+      "id": "instantiation_obtaining",
+      "title": "Final bounded instantiation and obtaining adjudication",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+          "bytes": 18923,
+          "sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361"
+        },
+        {
+          "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/RECEIPT.json",
+          "bytes": 1946,
+          "sha256": "7dc97cbda1e9a130d00a1420b2d17130af61a371b6a7e2be5cf6495613bb018d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/MANIFEST.json",
+          "bytes": 2614,
+          "sha256": "85c5c25bd9be097d1cd2232e5b8c1b4908ebc96f0d9b77a21c4952202e510bfc"
+        },
+        {
+          "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/READING_SCOPE.json",
+          "bytes": 1959,
+          "sha256": "9cc7db7a49704aec070a1199047d7de5ef2c3537863610e73c7f9d1232080057"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REVIEW.md",
+          "bytes": 1499,
+          "sha256": "44fb21edfaca0df3d3e565776dad5709e63e8254686671fdab4b4146c4b85040"
+        }
+      ],
+      "depends_on": [
+        "qualitative_ontology",
+        "existential_law_bridge",
+        "source_autonomy_continuation",
+        "ORIGINAL_BEARER_INTERFACE"
+      ],
+      "claims": [
+        "No source-backed counterexample to restricted concrete-resource Realisation",
+        "Pressure is on exhaustive philosophical application of concrete-resource Completion, or widening R while retaining Realisation/SupportTransport without new warrant",
+        "Existence-entailment does not decide fundamental constitution or grounding direction",
+        "Successful qualitative explanation can coexist with original productive resources; it does not alone falsify Completion",
+        "Original conditional and eligible-agent common-source comparisons remain intact"
+      ],
+      "limits": [
+        "Neither read source settles autonomous qualitative obtaining",
+        "No new source acquisition, independent whole-source credit, theorem, countermodel or truth certificate",
+        "Directional caution remains for unrestricted exhaustiveness; no forced reversal, equality of evidence, numerical confidence or closure"
+      ],
+      "control_ids": [],
+      "source_ids": [
+        "DASGUPTA2009",
+        "DASGUPTA2016",
+        "ARABIC_RETURN"
+      ],
+      "governance": "Latest included philosophical adjudication; narrows prior premise wording without changing earlier frozen files."
+    },
+    {
+      "id": "qualitative_tensor",
+      "title": "Exact finite completed qualitative Boolean-tensor transport",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md",
+          "bytes": 29225,
+          "sha256": "23f930729f24a2e014f0d678992cd3c390ae13745e7054431c236333fd085b97"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/MANIFEST.json",
+          "bytes": 3563,
+          "sha256": "a2591eed5465a387dcb63fd82ba547803f6ba2a51640d92dfe2f565ce396ddbe"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/SOURCE_BINDINGS.json",
+          "bytes": 3611,
+          "sha256": "dce39eff0a54a96c6df920794dfd2e67ba4164108945518a580bfc8ae22e5ef1"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESEARCH_ACCOUNTING.json",
+          "bytes": 1851,
+          "sha256": "4afd4ae3577fdbcee1fb89c3335570a47346b92ba5410944408023bccf34331d"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REVIEW.md",
+          "bytes": 16011,
+          "sha256": "9fdcd3b120268501b8ea756ddd28a244065db6f1a21e5436b574d5942ef28b45"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/VERIFICATION.json",
+          "bytes": 1271,
+          "sha256": "596561099f8889303a8c77ef375ec60b6dd1ea31daac094acfd108b561e83ec1"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REVIEW_INPUT_BINDINGS.json",
+          "bytes": 1744,
+          "sha256": "c2335b25d0031d4713d30b49ec84a50fbfc2146bb1a694d77905f3257ce9cb7d"
+        }
+      ],
+      "depends_on": [
+        "qualitative_ontology",
+        "H_INTERFACE",
+        "INHERITED_TRANSPORT_CONTEXT"
+      ],
+      "claims": [
+        "Basis-declared finite extensional Boolean-semiring intertwining for mixed-arity conjunction, existential projection, leading padding, permutations, identity and shared-variable binding",
+        "Explicit identity completion of sigma/iota below arity 2 is required; the literal uncompleted unary clause cannot be silently represented as arity-preserving",
+        "Nonnegative support preserves positive operations; arithmetic contraction counts weights/witnesses; complement or zero-test is additional",
+        "Signed cancellation and arbitrary basis changes defeat naive support truth transport; truth-wire encoding is a different construction",
+        "Source-exact orientation pair exposes missing binding; equal qualitative labels retain numerical plurality; empty-token-sort guard prevents borrowing source inhabitedness"
+      ],
+      "limits": [
+        "Finite nonempty extensional semantics, not property identity or literal-source unrestricted first-order completeness",
+        "Written structural induction carries general claim; finite exact assertions are supplemental, not discovery counts",
+        "No new generic factorisation/semiring theorem, actual obtaining, grounding priority, bearer conclusion, empirical validation or Lean/kernel check"
+      ],
+      "control_ids": [
+        "tensor-author",
+        "tensor-independent",
+        "tensor-reviewed-snapshot"
+      ],
+      "source_ids": [
+        "DASGUPTA2009",
+        "H_INTERFACE",
+        "GREEN_KT2007",
+        "KUHN1983"
+      ],
+      "governance": ""
+    }
+  ],
+  "source_registry": {
+    "BILLON2023": {
+      "source": "A Recipe for Non-wellfounded but Complete Chains of Explanations (And Other Determination Relations)",
+      "urls": [
+        "https://www.philosophie.ch/billon-2023",
+        "https://assets.philosophie.ch/dialectica/billon_a-2023.pdf",
+        "https://doi.org/10.48106/dial.v77.i4.04"
+      ],
+      "reading_status": "PARTIAL_PRIMARY_PASSAGES_ONLY",
+      "boundaries": [
+        "Recovered indexed primary sections and paragraphs; no continuous complete 46-page reading",
+        "Complete Appendix A, full page images and final-to-proof collation not read",
+        "PROOF/Beta/version labels preserved; access limitation is not a philosophical failure proof"
+      ],
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_READS.json",
+          "bytes": 6604,
+          "sha256": "3c390abf8889dc84366ff4b7f641ff822b76332926987e645a91e48871d80241"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_BINDINGS.json",
+          "bytes": 5663,
+          "sha256": "7de3a2a2a90b4c95378d7a2f2e62f3d1a9fe5de7e2abed39559660fdd9addb52"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/BILLON_ACCESS_BOUNDARY.md",
+          "bytes": 4824,
+          "sha256": "36c4ab8df18df08c0b23eee6508877b398621cd96525c8a0cc20e4bb72c34bef"
+        }
+      ]
+    },
+    "BILLON_PRIOR": {
+      "source": "Are Infinite Explanations Self-Explanatory?",
+      "urls": [
+        "https://link.springer.com/article/10.1007/s10670-021-00436-3",
+        "https://newworkinphilosophy.substack.com/p/alexandre-billon-universite-charles"
+      ],
+      "reading_status": "PARTIAL_JOURNAL_PRIMARY_AND_COMPLETE_AUTHOR_POST_TEXT",
+      "boundaries": [
+        "Publisher notes/bibliography and bounded indexed manuscript passages; no whole journal/manuscript read",
+        "Author exposition prose complete; equation images not inspected; not a journal substitute"
+      ],
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_READS.json",
+          "bytes": 6176,
+          "sha256": "06a83739da8a3b9de8d7c0c0da570f515e2d4e2022810fb57cfb8275b760c4dc"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/BILLON_ACCESS_BOUNDARY.md",
+          "bytes": 4824,
+          "sha256": "36c4ab8df18df08c0b23eee6508877b398621cd96525c8a0cc20e4bb72c34bef"
+        }
+      ]
+    },
+    "MORGANTI2015": {
+      "source": "Dependence, Justification and Explanation: Must Reality Be Well-Founded?",
+      "urls": [
+        "https://www.pul.it/wp-content/uploads/2019/03/MORGANTI-ERKE-10.1007.pdf",
+        "https://doi.org/10.1007/s10670-014-9655-4"
+      ],
+      "reading_status": "FULL_BY_MAIN_SOURCE_READER",
+      "read_scope": "Journal555–572/PDF 3–20 body, notes and bibliography complete; PDF 1–2 prefatory pages inspected. Supersedes initial partial status without adding a second source witness.",
+      "pdf_sha256": "f8a9546c849a38f8d7a842ac7401415b6940305f9eecaad31c3bda9584c2e299",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_READS.json",
+          "bytes": 6604,
+          "sha256": "3c390abf8889dc84366ff4b7f641ff822b76332926987e645a91e48871d80241"
+        },
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_READS.json",
+          "bytes": 6176,
+          "sha256": "06a83739da8a3b9de8d7c0c0da570f515e2d4e2022810fb57cfb8275b760c4dc"
+        }
+      ]
+    },
+    "DASGUPTA2016": {
+      "source": "Metaphysical Rationalism",
+      "urls": [
+        "https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf",
+        "https://doi.org/10.1111/nous.12082"
+      ],
+      "reading_status": "FULL_BY_MAIN_SOURCE_READER_PLUS_TARGETED_OVERLAPPING_RETURNS",
+      "read_scope": "All 40 PDF pages/journal 379–418, all 68 notes and bibliography; selected images 19,24,37,38 only. Root and Arabic-worker returns are targeted, not additional whole-source witnesses.",
+      "pdf_sha256": "47b9ad8c841db60d840f7bbbfbbbb1c538d0c0e6c5db8d0105ad600dc1045989",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_READS.json",
+          "bytes": 6176,
+          "sha256": "06a83739da8a3b9de8d7c0c0da570f515e2d4e2022810fb57cfb8275b760c4dc"
+        },
+        {
+          "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_TARGETED_RETURN.json",
+          "bytes": 1894,
+          "sha256": "27995aecb8a3d59dbce88098f95ba64f33564f2e3314c7fedc60b14d61138ee3"
+        },
+        {
+          "path": "t20-next-frontier-20261008/existential-law-source-bridge/SOURCE_READS.json",
+          "bytes": 5454,
+          "sha256": "0481af3b2a80d20af130785974abd38c15da662ef711c0202ee61905ce3f7161"
+        }
+      ]
+    },
+    "DASGUPTA2009": {
+      "source": "Individuals: an essay in revisionary metaphysics",
+      "urls": [
+        "https://www.shamik.net/papers/dasgupta%20individuals.pdf",
+        "https://doi.org/10.1007/s11098-009-9390-x"
+      ],
+      "reading_status": "FULL_BY_DESIGNATED_READER_PLUS_TARGETED_COMPARISON_AND_TENSOR_RETURNS",
+      "read_scope": "All 33 pages/journal 35–67 and 44 notes read by designated source reader; selected mathematical diagrams/glyphs checked visually, not all 33 pages. Tensor author/reviewer read section 3 and full Appendix with selected 56/63/64 images. Adjudication targeted returns are not new whole-source credit.",
+      "pdf_sha256": "b336f711d358c894c9a5480bbae0f9f2d32c897d67b8cfa01e0476af74722108",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/READING_LEDGER.json",
+          "bytes": 10331,
+          "sha256": "fc00e2e638693978e8e48462164a63c4370fa9a19c2db24d4b4ff6b43a78f057"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/SOURCE_AND_DELIVERABLE_MANIFEST.json",
+          "bytes": 1928,
+          "sha256": "e5c24c14a27a635770b82fe67eb7fa3b1ba2534ad8deead9db1b4186a452ebe3"
+        },
+        {
+          "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/READING_SCOPE.json",
+          "bytes": 1959,
+          "sha256": "9cc7db7a49704aec070a1199047d7de5ef2c3537863610e73c7f9d1232080057"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/SOURCE_BINDINGS.json",
+          "bytes": 3611,
+          "sha256": "dce39eff0a54a96c6df920794dfd2e67ba4164108945518a580bfc8ae22e5ef1"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REVIEW_INPUT_BINDINGS.json",
+          "bytes": 1744,
+          "sha256": "c2335b25d0031d4713d30b49ec84a50fbfc2146bb1a694d77905f3257ce9cb7d"
+        }
+      ]
+    },
+    "ARABIC_RETURN": {
+      "source": "Safadiyya and Akmaliyya targeted historical contexts",
+      "urls": [
+        "https://www.islamicbook.ws/amma/alsfdit-001.html",
+        "https://www.islamicbook.ws/amma/alsfdit-003.html",
+        "https://islamweb.net/ar/library/content/22/591/"
+      ],
+      "reading_status": "TARGETED_REREADING_OF_ALREADY_HELD_SOURCES",
+      "read_scope": "Exact ranges and received textual variants remain in SOURCE_READS/PASSAGE_NOTES; no new full-work or scan credit. S003649 awkward wording and prior control retained without repair.",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/existential-law-source-bridge/SOURCE_READS.json",
+          "bytes": 5454,
+          "sha256": "0481af3b2a80d20af130785974abd38c15da662ef711c0202ee61905ce3f7161"
+        },
+        {
+          "path": "t20-next-frontier-20261008/existential-law-source-bridge/PASSAGE_NOTES.md",
+          "bytes": 115348,
+          "sha256": "3dcedc2b69bf58d0c3c867f3b58b60cc7d7bac3984606b7e67838d7cbcbaa26d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/READING_SCOPE.json",
+          "bytes": 1959,
+          "sha256": "9cc7db7a49704aec070a1199047d7de5ef2c3537863610e73c7f9d1232080057"
+        }
+      ]
+    },
+    "WELCHANCE2026": {
+      "source": "Metaphysical Infinitism and Theoretical Virtue",
+      "urls": [
+        "https://link.springer.com/article/10.1007/s10670-026-01084-1"
+      ],
+      "reading_status": "SELECTIVE_PRIMARY_HTML",
+      "read_scope": "Sections 1.1–1.3,2.1–2.3 selectively, conclusion and relevant notes; section 2.4 not continuously read. Explanatory-parity control only.",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_READS.json",
+          "bytes": 6604,
+          "sha256": "3c390abf8889dc84366ff4b7f641ff822b76332926987e645a91e48871d80241"
+        }
+      ]
+    },
+    "GREEN_KT2007": {
+      "source": "Provenance Semirings",
+      "urls": [
+        "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf"
+      ],
+      "reading_status": "TARGETED_SECTION3_AND_PROPOSITION3_5",
+      "read_scope": "Positive-semiring operations and homomorphism ancestry; not whole-paper read or new general theorem.",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/SOURCE_BINDINGS.json",
+          "bytes": 3611,
+          "sha256": "dce39eff0a54a96c6df920794dfd2e67ba4164108945518a580bfc8ae22e5ef1"
+        }
+      ]
+    },
+    "KUHN1983": {
+      "source": "Kuhn predicate-functor ancestry",
+      "urls": [
+        "https://steven-t-kuhn.weebly.com/papers-in-logic-and-philosophy-of-logic.html"
+      ],
+      "reading_status": "BIBLIOGRAPHIC_ONLY_FULL_TEXT_ACCESS_FAILED",
+      "read_scope": "No independent verification of its low-arity convention or full-paper reading.",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/SOURCE_BINDINGS.json",
+          "bytes": 3611,
+          "sha256": "dce39eff0a54a96c6df920794dfd2e67ba4164108945518a580bfc8ae22e5ef1"
+        }
+      ]
+    },
+    "H_INTERFACE": {
+      "source": "User manuscript, Graded Representations, Witnessed Revision, and Inquiry Landscapes",
+      "urls": [
+        "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-formalisation/orthing_formalisation_v1.md"
+      ],
+      "reading_status": "EXACT_CURRENT_COPY_EQUALS_HISTORICAL_BLOB; TARGETED_SECTIONS_READ",
+      "current_pin": "3a0bdeaa1394c656245cae9599adcb143e885059",
+      "historical_pin": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+      "git_blob": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+      "read_scope": "Tensor worker directly read sections 2–6 and 11 quotient interface. Later H-v5 sections 1–3 were separately consulted; not a whole-paper reread.",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+          "bytes": 93523,
+          "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/SOURCE_BINDINGS.json",
+          "bytes": 3611,
+          "sha256": "dce39eff0a54a96c6df920794dfd2e67ba4164108945518a580bfc8ae22e5ef1"
+        }
+      ]
+    }
+  },
+  "external_dependency_registry": {
+    "SEVENTH_ARBITRARY_FACE": {
+      "status": "INHERITED_REVIEWED_RESULT_NO_NEW_CREDIT",
+      "description": "Seventh all-rate preselected-pair results and final receipt; six minimal ancestry files included for current adaptive verifier.",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/RESULT.md",
+          "bytes": 13174,
+          "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+          "bytes": 5833,
+          "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/MANIFEST.json",
+          "bytes": 2503,
+          "sha256": "e454504588064ed84b4565fbc4656075c456a34b3f812973f1c96c5d4d83af3f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/REVIEW_STATUS.md",
+          "bytes": 2276,
+          "sha256": "3cb5747d814a77d4e0bbb0985ed7a01909ce9869953816e464285731ed148de2"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json",
+          "bytes": 6991,
+          "sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910"
+        },
+        {
+          "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-review/UNIFORM_BOUND_AND_SHARP_ASYMPTOTICS.md",
+          "bytes": 12931,
+          "sha256": "1543ed1b1406bd59948bd66f962001f451dbff2523e3f0e8b67a96a82ad319e9"
+        }
+      ]
+    },
+    "ORIGINAL_BEARER_INTERFACE": {
+      "status": "EXACT_MINIMAL_INHERITED_LEAN_FILE; UNCOMPILED_HERE",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    "BEGINNINGLESS_PROVISION": {
+      "status": "EXACT_MINIMAL_INHERITED_LEAN_FILE; UNCOMPILED_HERE",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-review/BeginninglessProvision.lean",
+      "sha256": "508da994aa96b57fc57301decea302c65571d636538f5bd517d1f106b654e2cd"
+    },
+    "INHERITED_WARRANT": {
+      "status": "BOUND_PATHS_AND_HASHES_ONLY_NOT_CORPUS_REBUILT",
+      "description": "Exact inherited source/warrant reports, T17/T18 interpretation and historical Arabic controls are named in original input bindings; not new reads or unconditional acceptance."
+    },
+    "INHERITED_TRANSPORT_CONTEXT": {
+      "status": "BOUND_CONTEXT_ONLY_NOT_REPLAYED",
+      "description": "productive-identifiability and historical-mathematical-transport reports plus later H-v5 extraction; not runtime dependencies or new theorem credit."
+    },
+    "H_INTERFACE": {
+      "status": "CURRENT_SOURCE_COPY_EQUALS_OLD_BLOB",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+          "bytes": 93523,
+          "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+        },
+        {
+          "path": "t20-next-frontier-20261008/qualitative-tensor-transport/SOURCE_BINDINGS.json",
+          "bytes": 3611,
+          "sha256": "dce39eff0a54a96c6df920794dfd2e67ba4164108945518a580bfc8ae22e5ef1"
+        }
+      ]
+    }
+  },
+  "reading_scope_records": [
+    {
+      "artifact": {
+        "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_TARGETED_RETURN.json",
+        "bytes": 1894,
+        "sha256": "27995aecb8a3d59dbce88098f95ba64f33564f2e3314c7fedc60b14d61138ee3"
+      },
+      "credit": "Reading scope only; no independent-source, discovery, whole-paper or research-duration multiplication"
+    }
+  ],
+  "candidate_history": [],
+  "active_excluded_successors": [
+    {
+      "path": "full-face-threshold-information",
+      "candidate": "root-later-operations/FULL_THRESHOLD_INFORMATION_CANDIDATE.md",
+      "status": "ACTIVE; ENTIRELY EXCLUDED; NO RESULT OR PASS CREDIT"
+    }
+  ],
+  "historical_status_governance": "Frozen stages preserve their original pending/no-eighth language. This manifest supplies chronological navigation; it does not rewrite them. Completed 2009 coverage supersedes earlier 2009-screen status, and final adjudication narrows earlier Realisation/exhaustiveness phrasing.",
+  "packaging_credit": {
+    "research_time": false,
+    "source_reading": false,
+    "owner_acceptance": false,
+    "integration": false,
+    "closure": false,
+    "philosophical_truth": false
+  }
+}

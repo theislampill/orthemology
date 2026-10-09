@@ -1,0 +1,881 @@
+{
+  "classification": "ADDITIONAL_INTERMEDIATE_RESEARCH_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "files": [
+    {
+      "path": "OMITTED_SOURCES.json",
+      "bytes": 45107,
+      "sha256": "9c23b121ff1cea7048966fd42ce609074aad2c1eeb2b9fdad7845ac5c4815325"
+    },
+    {
+      "path": "PACKING/ADDITIONAL_REPLAY_COMMANDS.json",
+      "bytes": 373,
+      "sha256": "7c9567e3eca288c82d2ed9ad64a130efc2383fa3650a216596f708bf035e0e61"
+    },
+    {
+      "path": "PACKING/INTEGRITY_RECEIPT.json",
+      "bytes": 41796,
+      "sha256": "c4965e8c6d1f77a9ca8c925d1ba6c418ad84182c145707304a20f3f1c5aaa8c8"
+    },
+    {
+      "path": "PACKING/PACKING_RECEIPT.json",
+      "bytes": 876,
+      "sha256": "6a57a73426d150c75bbecfde1bb5d16c5deaa9f2acc36674fef19b59a2cb82dd"
+    },
+    {
+      "path": "PACKING/REPLAY_RECEIPT.json",
+      "bytes": 6968,
+      "sha256": "7041caf10e9e66187f37077e0e112b70cd962094c83cd4470f540f59e31932f4"
+    },
+    {
+      "path": "PACKING/SOURCE_COPY_BINDINGS.json",
+      "bytes": 43424,
+      "sha256": "f776da636be23b6562e87e051b188923b3e4b1cc8e08a3d72e6c15a5645d303f"
+    },
+    {
+      "path": "PACKING/check_manifest.py",
+      "bytes": 1084,
+      "sha256": "b952fbeacc124b25d10d1c71d25296d274de679e1746b050a261852aee92b43f"
+    },
+    {
+      "path": "PACKING/replay-logs/REPLAY_RECEIPT.json",
+      "bytes": 6968,
+      "sha256": "7041caf10e9e66187f37077e0e112b70cd962094c83cd4470f540f59e31932f4"
+    },
+    {
+      "path": "PACKING/replay-logs/arithmetic-boundary-control.log",
+      "bytes": 1132,
+      "sha256": "451707ab2dbb0d3224f0dfb51314964d7a9c42c67dd004cb2e9938c187f663f3"
+    },
+    {
+      "path": "PACKING/replay-logs/countable-author-tests.log",
+      "bytes": 2427,
+      "sha256": "8f01d26d470143be76411c44a859add20ad0404b03185edf9b3dcea199165e66"
+    },
+    {
+      "path": "PACKING/replay-logs/countable-frozen-decoder-crosscheck.log",
+      "bytes": 249,
+      "sha256": "eafcb6777fc1ac17899a75a5b0edb3e93156d80ce295cd8ece9189cd096f8c4c"
+    },
+    {
+      "path": "PACKING/replay-logs/countable-independent-controls.log",
+      "bytes": 1120,
+      "sha256": "7b40aac15c921c4a50531937b415fddaa4ca8a9a99604cca74d5f95f346d4d88"
+    },
+    {
+      "path": "PACKING/replay-logs/countable-signature-identification-export.log",
+      "bytes": 140,
+      "sha256": "eb34bc262d053b3a5a09843a1d032504ae96bdb2311bc15b76f07b5f32c2824b"
+    },
+    {
+      "path": "PACKING/replay-logs/gcd-author-tests.log",
+      "bytes": 910,
+      "sha256": "6d4ca41233df69fe5339a93e6e0249e390d57026e27ec0d9bcb257f72deed564"
+    },
+    {
+      "path": "PACKING/replay-logs/gcd-independent-controls.log",
+      "bytes": 408,
+      "sha256": "2c7fe9fee52a36ff3303d60b3355426ae89c512a9e9a4b37831dbc07d74275a5"
+    },
+    {
+      "path": "PACKING/replay-logs/grouped-author-controls.log",
+      "bytes": 1090,
+      "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b"
+    },
+    {
+      "path": "PACKING/replay-logs/grouped-frozen-author-controls.log",
+      "bytes": 1090,
+      "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b"
+    },
+    {
+      "path": "PACKING/replay-logs/grouped-independent-controls.log",
+      "bytes": 617,
+      "sha256": "67821a5062f693043d86a88fa5ff350dbd81b2d485f83b34349add50768251e8"
+    },
+    {
+      "path": "PACKING/replay-logs/grouped-receipt-verification.log",
+      "bytes": 60,
+      "sha256": "6947b4f19613f2bd09162d1a18b258d761222bb37afc7094f4d86657c5360fda"
+    },
+    {
+      "path": "PACKING/replay-logs/noise-author-tests.log",
+      "bytes": 1871,
+      "sha256": "d71dfeb1fc2ca25f0ffb28ac1c55f1ec7c5cb244a9819cd8075c8feef217e6f4"
+    },
+    {
+      "path": "PACKING/replay-logs/noise-aware-calibration-export.log",
+      "bytes": 231,
+      "sha256": "4e7d67c5b84dc45b90c6b7067b48005be664d3ab08958db3ed18544403480a30"
+    },
+    {
+      "path": "PACKING/replay-logs/noise-frozen-decoder-crosscheck.log",
+      "bytes": 493,
+      "sha256": "61eb3951a85e941ce8757f14a1f9725821c453365b2169ffca09599c3c4ad816"
+    },
+    {
+      "path": "PACKING/replay-logs/noise-independent-controls.log",
+      "bytes": 510,
+      "sha256": "64e746a90e3bde94d9598459c3f316a9f12954324036dcb87e01a46cc44f54d7"
+    },
+    {
+      "path": "PACKING/replay-logs/noise-restricted-lower-bound.log",
+      "bytes": 341,
+      "sha256": "473ea989b1c13ea50ec86ae02b4be2010426e947b72ecd4ede48e07689367f7a"
+    },
+    {
+      "path": "PACKING/replay-logs/oracle-author-tests.log",
+      "bytes": 1430,
+      "sha256": "6128fc079bc84f86fcbd6630579cdf554720a10d604be8774e134b95eb93c6d0"
+    },
+    {
+      "path": "PACKING/replay_python.py",
+      "bytes": 4507,
+      "sha256": "4f45549592aa0b7b4f2e6105166235a15d5ec08c9b0a377c00d4b05e51405554"
+    },
+    {
+      "path": "PRIOR_AND_COMPONENT_IDENTITIES.json",
+      "bytes": 1763,
+      "sha256": "d01a5089fdd02b41742c014f087e74a23ea76d8715de36f91838e0dd4a94498d"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 8940,
+      "sha256": "18557ed9011f5dd975568dad6b0ef2c8584715381518cba49f2e1af52539aefb"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 3725,
+      "sha256": "920afb04c52e60dcc7c10bc0b878492e93be3478a25b48d4efa56bb8aacb6724"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/FINITENESS_AUDIT.md",
+      "bytes": 6271,
+      "sha256": "f4eb402123b330f82855c1b4dec010ce8b3cf3b50f01ce2db0fccd252e16da9a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/GCD_DECODER.md",
+      "bytes": 4486,
+      "sha256": "cb8ec9266aaec258133d78034809545265b70c6f1ee0b51c2e922d4f55cd1ff1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/MANIFEST.json",
+      "bytes": 5653,
+      "sha256": "43681d0c2d070e30200afb7b3dc557396150bff9c8012e75bd0a72328a27a974"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/ORACLE_AND_EXTENSION_BOUNDARIES.md",
+      "bytes": 8454,
+      "sha256": "c694d06f556cc62d55504dfd3b73da0a034bbb5971aae571d624a905b42a719c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/READ_FIRST.md",
+      "bytes": 1747,
+      "sha256": "6b8cf7d1277db0a01cbe40089f7bd9811cd8a810d009a5657b9bab00817245fa"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/RESEARCH_ACCOUNTING.json",
+      "bytes": 1368,
+      "sha256": "4cc410e960074cb485acf8dd5e08840d3d821ad0b598988924dc7683ba842de4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/RESEARCH_EVENTS.jsonl",
+      "bytes": 971,
+      "sha256": "2a5e9ab769d8555b8f9803416e09f424431cbef4a602e29f082ec32f41e7c2bc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/RESULT.md",
+      "bytes": 7766,
+      "sha256": "1b4c66a3fa955ea4a60d2d04d3210f773620dcdacbcb1ff8a6381b6a23f95923"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/REVIEW_RESPONSE.md",
+      "bytes": 2204,
+      "sha256": "28e3a06a3dbec1931533068e81304ba192672979725b0865665f52031d670bb0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/SOURCE_BINDINGS.json",
+      "bytes": 1934,
+      "sha256": "cf34a22396fe714ae93fc348111a7879d45f0a4547074fe27c9821c88c7de33a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/THEOREMS.md",
+      "bytes": 10284,
+      "sha256": "f232016d83bff0f15dbe9b9623f70f6ed6e512e7de05095b5d4f280bea65cce0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/DEVELOPMENT_RUN.log",
+      "bytes": 2427,
+      "sha256": "91d3ecf0cfb874f69bf9af4164b576aafbcf4424048650057a80e1108f42876c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/FINAL_test_countable_support.py.log",
+      "bytes": 2427,
+      "sha256": "e0a26135294510706bd128487ca86a05fddb32c578633233bccdb1102ff5e358"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/FINAL_test_gcd_decoder.py.log",
+      "bytes": 910,
+      "sha256": "6d4ca41233df69fe5339a93e6e0249e390d57026e27ec0d9bcb257f72deed564"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/FINAL_test_oracle_boundaries.py.log",
+      "bytes": 1430,
+      "sha256": "b422c57f4b916636c506df4e93da547c0e5c89047a54c1328f0b29be2a3ca632"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/FIRST_RUN.log",
+      "bytes": 1761,
+      "sha256": "bcb1eed14a1b9ed46b041bbe6b97ef6292e298b83a2538d79fb5cb8cbf3e4db1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/GCD_FIRST_RUN.log",
+      "bytes": 910,
+      "sha256": "7879f877aec3e05a724ac60036797607917eccc1b52d9d149f7464b89fd226c9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/ORACLE_DEVELOPMENT_RUN.log",
+      "bytes": 1430,
+      "sha256": "7d60a548b03a20eea96aec1d733348655969ca3d5f3252dcc8f262960134f35d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/ORACLE_FIRST_RUN.log",
+      "bytes": 1280,
+      "sha256": "613ad6cc5b22f5766d21b924f93a58c17fa4d02aa216d3beb6f746e6cc78247d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/RESULTS.json",
+      "bytes": 162763,
+      "sha256": "2cb1e0b5b9eacde3e33deed245dc37c45e75db76acbb2b6c6682b8d38eb68c27"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/results/VERIFICATION.json",
+      "bytes": 11822,
+      "sha256": "236d20ec9a0652abcb432fb54c55b62fb4eff77d1a320d0e1bda3b4533f77774"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/SOURCE_AUDIT.md",
+      "bytes": 1353,
+      "sha256": "f7287b1283468e6830637f4c3f570e5ffa4bc4ee5a3061a6a43d563ce185f0c0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/SOURCE_READS.json",
+      "bytes": 1208,
+      "sha256": "7e26b823775ded323fbc820980387ff06beb5aa5911dfae9e6457560e150f0c4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/src/countable_support.py",
+      "bytes": 8119,
+      "sha256": "e6e928ce4894770b671e1b74b4c7cf2f88e5a3b767bdbd28c0dd03a6b923e2f6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/src/export_results.py",
+      "bytes": 2994,
+      "sha256": "7527132f895862262474e6ef72490cc87269ec235ffb42870ed756ac5a199704"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/src/gcd_decoder.py",
+      "bytes": 4257,
+      "sha256": "3450a5cf943da435984a48bbb8e04a5c4cdb13ad7fa89bed48f18738ba70d827"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/src/oracle_boundaries.py",
+      "bytes": 4206,
+      "sha256": "f39ed4839663137b7c7863211de97fd6c33cf5b75486b5f96fd02cbc181cc060"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/src/test_countable_support.py",
+      "bytes": 7560,
+      "sha256": "52aca0366e185b21c8f61437dd3c79ab3935f38bbe64246c9215870d9890ceed"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/src/test_gcd_decoder.py",
+      "bytes": 2502,
+      "sha256": "ce0ad237e36bfdb16f5b52a90e387d750bf91a7e5f5001c78178612d9910e676"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/src/test_oracle_boundaries.py",
+      "bytes": 3857,
+      "sha256": "e03e1a5721aec610e0cc88c7a372cb37292cfdd8f8aa5bcb71a31f7bd91df8ba"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/src/verify_evidence.py",
+      "bytes": 3049,
+      "sha256": "1baa6d39c42d9995fd6b9b84988d0b1d346e4df066842d6aca1f247d304aca60"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/ARITHMETIC_BOUNDARY.md",
+      "bytes": 2665,
+      "sha256": "cf0ebb404dbac6f90deb533a3a94854a3879feed79e31996f99c49fad860a2f2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/ARITHMETIC_CONTROL.json",
+      "bytes": 1132,
+      "sha256": "451707ab2dbb0d3224f0dfb51314964d7a9c42c67dd004cb2e9938c187f663f3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/ARITHMETIC_REPLAY.log",
+      "bytes": 1132,
+      "sha256": "451707ab2dbb0d3224f0dfb51314964d7a9c42c67dd004cb2e9938c187f663f3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/FINITENESS_REVIEW.md",
+      "bytes": 6149,
+      "sha256": "c2e6b0a42ae30e78db87b749143b95045d109fc9b7433a8802831d365a662d20"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/GCD_DECODER_METRICS.json",
+      "bytes": 10727,
+      "sha256": "19f939a9baf3c8b600259af601bba24160737e2fc33a0c4006613eb39ca8519d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/GCD_DECODER_REPLAY.log",
+      "bytes": 408,
+      "sha256": "2c7fe9fee52a36ff3303d60b3355426ae89c512a9e9a4b37831dbc07d74275a5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/GCD_DECODER_REVIEW.md",
+      "bytes": 4621,
+      "sha256": "54fb4c5be329fe771b005bb2ff5991fb651686b476dc5253acd52e29f032990a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/GUARDED_ORACLE_BOUNDARY.md",
+      "bytes": 3898,
+      "sha256": "0e08a4befc5d2530cf6a2c216189c5ba64ebefcfb070599c48a7ff63a5de5088"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/INDEPENDENT_METRICS.json",
+      "bytes": 289,
+      "sha256": "95e95eb1114bdf09ae6b306b232aefe6350e50cec04161b0c939936381178d60"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/INDEPENDENT_REPLAY.log",
+      "bytes": 1120,
+      "sha256": "ba1a3b5e8345742408663338d2beeba7075373fcf39ae9d39fe4e873ef1fa608"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/REVIEW.md",
+      "bytes": 11251,
+      "sha256": "86bcf5a7160a0b1cd7c590e3444bb14226b11844f0d81ae3c97456154fdd6bb6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/REVIEW_RECEIPT.json",
+      "bytes": 5021,
+      "sha256": "40be03d0d6b9b983ed7b3c09edbbecc59a17ea56bc92695fff78c49e98cd5556"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/check_arithmetic_block.py",
+      "bytes": 980,
+      "sha256": "b735c2e66c9e77d0348cff71678b3d5bf2102618003c4edcf7f2bf1a62d4907c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/crosscheck_frozen_decoders.py",
+      "bytes": 2409,
+      "sha256": "1c87c78820caf019916d0c407c341d482d812175c3bd4e5ffdc22a7f2f0973e3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/FINITENESS_AUDIT.md",
+      "bytes": 6271,
+      "sha256": "f4eb402123b330f82855c1b4dec010ce8b3cf3b50f01ce2db0fccd252e16da9a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/GCD_DECODER.md",
+      "bytes": 4486,
+      "sha256": "cb8ec9266aaec258133d78034809545265b70c6f1ee0b51c2e922d4f55cd1ff1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/ORACLE_AND_EXTENSION_BOUNDARIES.md",
+      "bytes": 8454,
+      "sha256": "c694d06f556cc62d55504dfd3b73da0a034bbb5971aae571d624a905b42a719c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/RESULT.md",
+      "bytes": 7766,
+      "sha256": "1b4c66a3fa955ea4a60d2d04d3210f773620dcdacbcb1ff8a6381b6a23f95923"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/THEOREMS.md",
+      "bytes": 10284,
+      "sha256": "f232016d83bff0f15dbe9b9623f70f6ed6e512e7de05095b5d4f280bea65cce0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/countable_support.py",
+      "bytes": 8119,
+      "sha256": "e6e928ce4894770b671e1b74b4c7cf2f88e5a3b767bdbd28c0dd03a6b923e2f6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/gcd_decoder.py",
+      "bytes": 4257,
+      "sha256": "3450a5cf943da435984a48bbb8e04a5c4cdb13ad7fa89bed48f18738ba70d827"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/oracle_boundaries.py",
+      "bytes": 4206,
+      "sha256": "f39ed4839663137b7c7863211de97fd6c33cf5b75486b5f96fd02cbc181cc060"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/test_countable_support.py",
+      "bytes": 7560,
+      "sha256": "52aca0366e185b21c8f61437dd3c79ab3935f38bbe64246c9215870d9890ceed"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/test_gcd_decoder.py",
+      "bytes": 2502,
+      "sha256": "ce0ad237e36bfdb16f5b52a90e387d750bf91a7e5f5001c78178612d9910e676"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/frozen/test_oracle_boundaries.py",
+      "bytes": 3857,
+      "sha256": "e03e1a5721aec610e0cc88c7a372cb37292cfdd8f8aa5bcb71a31f7bd91df8ba"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/independent_countable_controls.py",
+      "bytes": 7711,
+      "sha256": "a51c0b99b35b93f857da8e50b3a880e83770951d14cdc71b740f9925942d21b8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/independent_gcd_decoder.py",
+      "bytes": 3731,
+      "sha256": "25fb4d6d0b4b2b18d06896026c260febdf8e05a8f05cb811dfe8d224d81bb316"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/AUTHOR_FINAL_MANIFEST.json",
+      "bytes": 5653,
+      "sha256": "43681d0c2d070e30200afb7b3dc557396150bff9c8012e75bd0a72328a27a974"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/AUTHOR_FINAL_MANIFEST_VERIFICATION.json",
+      "bytes": 1436,
+      "sha256": "ebd2c6228c9bceb58b7c2ac9fd00c470b46c44e8b6c9569d1af70c08643869ca"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/AUTHOR_SOURCE_HASHES.txt",
+      "bytes": 1653,
+      "sha256": "6f1c579fc4e84a5c083762fad158733a81bafff79b208b7e24140a832ef1f9c6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/AUTHOR_test_countable_support.log",
+      "bytes": 2427,
+      "sha256": "0a3f29df2713ca3862e7d356afe96b18de8b3c3eeb58e87906481d2e4488c412"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/AUTHOR_test_gcd_decoder.log",
+      "bytes": 910,
+      "sha256": "4fdbd0cf4efc2aba77ed295f18211d17a9d13110244512063533ff18e1475305"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/AUTHOR_test_oracle_boundaries.log",
+      "bytes": 1430,
+      "sha256": "38772c5287daf81f74d99b49d7ef84681788abf5598d77f0c17f2cda74013cb9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/CROSSCHECK_METRICS.json",
+      "bytes": 249,
+      "sha256": "eafcb6777fc1ac17899a75a5b0edb3e93156d80ce295cd8ece9189cd096f8c4c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/CROSSCHECK_REPLAY.log",
+      "bytes": 249,
+      "sha256": "eafcb6777fc1ac17899a75a5b0edb3e93156d80ce295cd8ece9189cd096f8c4c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/results/FINAL_CORE_VERIFICATION.log",
+      "bytes": 971,
+      "sha256": "38fa85e1ce3dd18e6719e44ffb5ded5338f1592f550371453defead1c7cb2bfa"
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/sources/SOURCE_REVIEW.json",
+      "bytes": 1922,
+      "sha256": "2e82ec98fb26fafa7b4f15862dcfeca1095486375f2daf7389afa36b2c47b59c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/MANIFEST.json",
+      "bytes": 1575,
+      "sha256": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/PROCESS_AND_ORACLE_BOUNDARIES.md",
+      "bytes": 17002,
+      "sha256": "5e67e1c1db5d2a46dde90a84b93fdfab941fb096de1ae6683b6c5ade139dc793"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/READ_FIRST.md",
+      "bytes": 2317,
+      "sha256": "26fc9e137798cbc537a9f9b7e8df66b4c4953d7058eefec0af3bf2d5f814fb00"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/RESULT.md",
+      "bytes": 15005,
+      "sha256": "c5f5a0aa82292fdea78e8939012abd5070ed3a855d270330db27d645e34c5239"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/SOURCE_AUDIT.md",
+      "bytes": 7498,
+      "sha256": "a4f731ceaafc720e3abc878bb4222172a92ebf7a9f925160b90d23c8919ad934"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/exact_controls.py",
+      "bytes": 9072,
+      "sha256": "7b9dbb1f7fa25a7165c421f61b3b2fd257a8c4f2a9d4446efde822900107cf82"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/results/exact_controls.log",
+      "bytes": 1090,
+      "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/REVIEW.md",
+      "bytes": 10289,
+      "sha256": "f135b9a8427fc2be15648a50556fe4d0358ac88674b6fc36d8b6779301cb7b4e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/REVIEW_RECEIPT.json",
+      "bytes": 2844,
+      "sha256": "9294b54421ca4f9c431dae254bc1126134e0fb5d349018f488a00b4180243673"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/SOURCE_CHECK.md",
+      "bytes": 2625,
+      "sha256": "30b535b735287dcb15c04fc5ee7840197d16b9a81e6001af03b1d9a5ee21254a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/frozen/MANIFEST.json",
+      "bytes": 1575,
+      "sha256": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/frozen/PROCESS_AND_ORACLE_BOUNDARIES.md",
+      "bytes": 17002,
+      "sha256": "5e67e1c1db5d2a46dde90a84b93fdfab941fb096de1ae6683b6c5ade139dc793"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/frozen/READ_FIRST.md",
+      "bytes": 2317,
+      "sha256": "26fc9e137798cbc537a9f9b7e8df66b4c4953d7058eefec0af3bf2d5f814fb00"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/frozen/RESULT.md",
+      "bytes": 15005,
+      "sha256": "c5f5a0aa82292fdea78e8939012abd5070ed3a855d270330db27d645e34c5239"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/frozen/SOURCE_AUDIT.md",
+      "bytes": 7498,
+      "sha256": "a4f731ceaafc720e3abc878bb4222172a92ebf7a9f925160b90d23c8919ad934"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/frozen/exact_controls.py",
+      "bytes": 9072,
+      "sha256": "7b9dbb1f7fa25a7165c421f61b3b2fd257a8c4f2a9d4446efde822900107cf82"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/frozen/results/exact_controls.log",
+      "bytes": 1090,
+      "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/independent_checks.py",
+      "bytes": 6792,
+      "sha256": "bcc262f1919be7197bec2446f212c50e1e904f06c0f9db355d9eba71993ecdae"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/results/AUTHOR_REPLAY.log",
+      "bytes": 1090,
+      "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/results/INDEPENDENT_REPLAY.log",
+      "bytes": 617,
+      "sha256": "67821a5062f693043d86a88fa5ff350dbd81b2d485f83b34349add50768251e8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/sources/H_CONTINUATION_108_292.md",
+      "bytes": 13323,
+      "sha256": "bb226ec3e294b31153808cca11e5facd2182af0372974b267c6f68f18b491396"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-review/verify_receipt.py",
+      "bytes": 855,
+      "sha256": "c3d6f11ca4c5879f839c0eb52f8a9e1a926190240c24a2f650502279c0c90491"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/MANIFEST.json",
+      "bytes": 3004,
+      "sha256": "764ba9089be07d87f20ba1591886d901ceb3cf4d9fac60bc358c0d3cbd07716f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/READ_FIRST.md",
+      "bytes": 1623,
+      "sha256": "cce1c2d767ad52b72dce9ba324d42c21de916047bcd6b6588550e4cb9e05ac72"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/RESEARCH_ACCOUNTING.json",
+      "bytes": 1251,
+      "sha256": "2b44b736562c22d183524fd6adaa98c2fae685157b15852bb58a5896fa38a44a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/RESEARCH_EVENTS.jsonl",
+      "bytes": 874,
+      "sha256": "57c752c576353dcc5f8bc2fe97c1570078643d4893081befc7b6cab2200adc02"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/RESULT.md",
+      "bytes": 7424,
+      "sha256": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/REVIEW_RESPONSE.md",
+      "bytes": 1575,
+      "sha256": "c679ae75b1aff3568227285a361071ebee55b1dc0e2c6bed9fe5cd7e40f55e06"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/SOURCE_BINDINGS.json",
+      "bytes": 2478,
+      "sha256": "121a333ac5648bceafdaf7473080d154b7e5151bf744b5be36133ae7fc04b9c0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/THEOREMS.md",
+      "bytes": 10243,
+      "sha256": "1b3d0c4ee7e45041d5b8866c7bf2d8d4f48e8b6082597b70debf9350473a51dc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/results/DEVELOPMENT_RUN.log",
+      "bytes": 1871,
+      "sha256": "1f6187da9294c676a13de9b3e1b750bb2f6f340ad0de3487ceed0d2bc461715c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/results/EXACT_INPUT_GREEN.log",
+      "bytes": 1871,
+      "sha256": "1a6ad8bd78a4f33004a304dd1974b75d3aeb204ad083a3c37adef1d8e2c9d52e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/results/EXACT_INPUT_RED.log",
+      "bytes": 2530,
+      "sha256": "b325d17956d6074ca64a9821a4978f55c21dc40ddceb1b27188b682df31f6832"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/results/FINAL_TESTS.log",
+      "bytes": 1871,
+      "sha256": "395ccd495dcec22939046c33ad54dc4e3642693e40f7e9314bc2a0c723e6ac5e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/results/FIRST_RUN.log",
+      "bytes": 1727,
+      "sha256": "3dce8a11c463bc5e52cd0dbe260b8d098ebb22aac59488581182cb3b3eabb69c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/results/RESULTS.json",
+      "bytes": 44723,
+      "sha256": "df2b9318eb81b1125c73c85bea847e95bb7da6da6b43b0cd1021de1da39a9d9b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/results/VERIFICATION.json",
+      "bytes": 5089,
+      "sha256": "475adc9771d137e6fb5997347e4a67924db1897dd5b165084a4fdcb2674776f8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/src/export_results.py",
+      "bytes": 2650,
+      "sha256": "e74fbaa81a6302f6aedde234e0ae6b87097e07d32479c295276900143d5cc302"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/src/robust_masks.py",
+      "bytes": 9511,
+      "sha256": "1c818590a66e5e6b7af39d46c2db849bb2bb99e758a90771218c4b2cb148efd3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/src/test_robust_masks.py",
+      "bytes": 6722,
+      "sha256": "e9e1a14061d66a77fac35659d80b7f7298294afb940cdc797b5db62fee3d46c2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/src/verify_evidence.py",
+      "bytes": 2294,
+      "sha256": "ff32ca63f9d0727d3b13bc53eb03cdb6db4a9fbc3b4d478042fbc4c8b822a1f2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/INDEPENDENT_METRICS.json",
+      "bytes": 79,
+      "sha256": "bd59b9d563531b5c4caa46b1ada76c3eb0ea1d66bebc67ee87e07b71019843cf"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/INDEPENDENT_REPLAY.log",
+      "bytes": 510,
+      "sha256": "0342e5cdebae43ffb43f688d9c534b0ff6281e38fa9bee406ca8e4d58be1b89b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/LOWER_BOUND_CONTROL.json",
+      "bytes": 341,
+      "sha256": "473ea989b1c13ea50ec86ae02b4be2010426e947b72ecd4ede48e07689367f7a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/LOWER_BOUND_REPLAY.log",
+      "bytes": 341,
+      "sha256": "473ea989b1c13ea50ec86ae02b4be2010426e947b72ecd4ede48e07689367f7a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/RESTRICTED_MASK_LOWER_BOUND.md",
+      "bytes": 4875,
+      "sha256": "6f1c95bca5083e3cdfc2421308700a5b78a8c62f5433a4eb0ae089ef7b5819c3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/REVIEW.md",
+      "bytes": 7888,
+      "sha256": "0d08fcb2c99565044f0bbff4219d941048986bdfd0337dee368c9416fac11bcd"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/REVIEW_RECEIPT.json",
+      "bytes": 2483,
+      "sha256": "91ab1d2e208dd8c6ed09c56a88b77c0e323ef87159b1e82799c625455e18736d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/check_lower_bound.py",
+      "bytes": 1383,
+      "sha256": "bd6917765c29d79090cebc498738023ed735ed3e668f1c13ba1cd93ad20e134b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/crosscheck_frozen_decoder.py",
+      "bytes": 3384,
+      "sha256": "6b8684173c18e513aaabe7ef39bacfa63f16c80ff745e63bf3b5e7ea06e81d03"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/frozen/RESULT.md",
+      "bytes": 7424,
+      "sha256": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/frozen/THEOREMS.md",
+      "bytes": 10243,
+      "sha256": "1b3d0c4ee7e45041d5b8866c7bf2d8d4f48e8b6082597b70debf9350473a51dc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/frozen/robust_masks.py",
+      "bytes": 9511,
+      "sha256": "1c818590a66e5e6b7af39d46c2db849bb2bb99e758a90771218c4b2cb148efd3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/frozen/test_robust_masks.py",
+      "bytes": 6722,
+      "sha256": "e9e1a14061d66a77fac35659d80b7f7298294afb940cdc797b5db62fee3d46c2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/independent_noise_controls.py",
+      "bytes": 5342,
+      "sha256": "73f534d869ff1c8fbd9bd1a993779ae04d40693f2c5151eb6d95c534c7328e24"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/results/AUTHOR_FROZEN_REPLAY.log",
+      "bytes": 1871,
+      "sha256": "f6ef2cb3b1cd697e978fca94f8eab44263222c11cefb3f1c26c42848b4039e4e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/results/AUTHOR_SOURCE_HASHES.txt",
+      "bytes": 535,
+      "sha256": "7ddfc51308b43c0b8c875f4730f53b286c48fb2b8f81bb0b6368ef39b92031f0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/results/AUTHOR_SOURCE_VERIFICATION.log",
+      "bytes": 287,
+      "sha256": "4c66c1287d1859f67253cf81299df1b6f639dfaf0d9f833b80584240a6ab6d08"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/results/CROSSCHECK_METRICS.json",
+      "bytes": 493,
+      "sha256": "61eb3951a85e941ce8757f14a1f9725821c453365b2169ffca09599c3c4ad816"
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/results/CROSSCHECK_REPLAY.log",
+      "bytes": 493,
+      "sha256": "61eb3951a85e941ce8757f14a1f9725821c453365b2169ffca09599c3c4ad816"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/HISTORICAL_PARAGRAPH_BINDINGS.json",
+      "bytes": 16649,
+      "sha256": "1523bb3b87ff9b88979717587738705d32387b5d69930a541de9dc1addb91aa4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/MANIFEST.json",
+      "bytes": 2193,
+      "sha256": "10cec3a4e13b4251cf287a0dc0698b278da55e706099ebf38fa1be3e20011c9f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/PRIMARY_QUOTATION_CHECK.md",
+      "bytes": 5935,
+      "sha256": "0f125411379ba5ef5ef7289ef2f755bb516d0dc98d7fd17585a5f58311b1bb40"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/READING_AND_STATUS.json",
+      "bytes": 1472,
+      "sha256": "c6d34bbd1d48d130408a3e84710688b20df722766595e0b9f69e43be034f0957"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/RESEARCH_TIME.json",
+      "bytes": 1093,
+      "sha256": "168a806f754c704a8b14aabc080244ddbd29cecb6942e068bf935fb1073058f7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/SCOPED_AUTHORITY_APPRAISAL.md",
+      "bytes": 15087,
+      "sha256": "e64b4946c0bf437502c145fce5a7425b82692d036da6360883d023384488393a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/authority-assessment.md",
+      "bytes": 10666,
+      "sha256": "a8b5375aa9a33aeafaf1c6f379333e672423a415743b24d34fa76a59ebf2ccaa"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/freeze-manifest.json",
+      "bytes": 1394,
+      "sha256": "f5e825481dc588a5554f5442d213a83b19581716c8a74887cfd1e04c38c9731b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/reading-intervals.jsonl",
+      "bytes": 1929,
+      "sha256": "2395e874564cad2fca520eb0a03e4250df21fce90f3b0f90ea6885bc61bf4679"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/scoped-ownership-addendum.md",
+      "bytes": 5283,
+      "sha256": "9e8dd7029625998f2c43649bafaa2596ab31cc802d75161998d3ad63a6790034"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/source-manifest.json",
+      "bytes": 1725,
+      "sha256": "103f063b5d19577a63124f0e58184dea102bcf9b938f74926d1eb1654fb9cbdc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-acquisition.json",
+      "bytes": 244,
+      "sha256": "dc7e5017c061ce595865ac7d8b1b4642a0e20bcba2b59b212ea39e509b5bf4a5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-target-extraction.json",
+      "bytes": 708,
+      "sha256": "31e9a02dddaabd3b792698c4854be5d8f6a10bf608b0d4726d49fd34336d9153"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-audit-addenda/AMERI_TARGETED_READ.json",
+      "bytes": 1464,
+      "sha256": "61ee4c7836ae69a17c5a785b4d527db7bbbea547fed6104bb6073dba3f3cbcba"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-audit-addenda/H_CONTINUATION_108_292.md",
+      "bytes": 13323,
+      "sha256": "bb226ec3e294b31153808cca11e5facd2182af0372974b267c6f68f18b491396"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-audit-addenda/PROSPECTIVE_EVENTS.jsonl",
+      "bytes": 766,
+      "sha256": "4609f12be097f400e989e20103ceb3138588069b54ac0a6684b50b1e00517483"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-audit-addenda/REVIEW_20261008_0938.md",
+      "bytes": 5405,
+      "sha256": "d777afbb1667c7cc9eb155ee5e9dd5c9330a72416d2b30c27e3bc995aa6b5900"
+    }
+  ],
+  "self_exclusions": [
+    "MANIFEST.json",
+    "MANIFEST.sha256"
+  ],
+  "source_omission_map": "OMITTED_SOURCES.json"
+}

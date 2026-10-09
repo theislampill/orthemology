@@ -1,0 +1,94 @@
+{
+  "scope": "Preservation of completed source/semantic increment only; T20 ACTIVE. No research closure, integration, new theorem, kernel run, or external validation.",
+  "reading_credit": "Packaging/hashing/extraction tests add no substantive reading credit and certify no duration floor. Exact historical reading boundaries are retained in the original ledgers.",
+  "El_Tobgui_2013": {
+    "source_sha256": "d2c90eaa5f238145c5c8b71ff4f27b048ded1fd154242a300d08d212a737a963",
+    "status": "Byte-identical reacquisition of the previously supplied 2013 dissertation, not a newly read whole work or independent witness. The 2020 book was not acquired/read.",
+    "printed_continuous_intervals": [
+      [
+        236,
+        240
+      ],
+      [
+        266,
+        270
+      ],
+      [
+        299,
+        302
+      ]
+    ],
+    "additional_scope": "Bounded contextual paragraph at printed 228. Prior whole-work reading is inherited, not re-earned here."
+  },
+  "Ameri": {
+    "title": "وقفات مع شبهة... فمن خلق الله؟",
+    "edition": "1445 AH / 2023 CE",
+    "printed_intervals": [
+      [
+        83,
+        86
+      ],
+      [
+        133,
+        190
+      ]
+    ],
+    "substantive_pages": 62,
+    "whole_book": false,
+    "later_metadata_only": [
+      261
+    ],
+    "source_sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372"
+  },
+  "Asfahaniyya": {
+    "direct_Arabic_return": "Direct edition/context return to an already project-known source, not first discovery. Source worker records continuous response scan pages 31–43; productive-totality worker separately records only pages 34,35,36,39 plus electronic lines 171–210.",
+    "whole_book": false,
+    "scan_sha256": "76467cd7ed09c989cca92697a24ab079864a90352f8cf1a35b96ce2a4389b925",
+    "electronic_vs_scan": "L199 necessitates vs scan p39 exists; scan wording controls. L186 awkward wording is also present in scan p36 and not silently repaired. Majmu Dar al-Wafa 5:321 vs electronic 5:428 exact pagination correspondence remains uncollated."
+  },
+  "other_electronic_defects": "Majmu6 repeated/missing negatives and Dar item178/item180/dangling wording remain explicitly flagged in essence-attribute READING_LEDGER.json. Their electronic readings are not silently promoted to verified scan readings.",
+  "user_provided_text": {
+    "path": "metaphysical-semantics-return/user-input/Pasted text(20261009-025305).txt",
+    "bytes": 16674,
+    "sha256": "451c35c1ec4e0f432d323550dc5fecb758737ed926908f73d7dcd92963a6b88e",
+    "library_file_id": "libfile_f597862fe4d081919e41fa64f68fa73e",
+    "role": "User-provided source/context; not an independent published witness."
+  },
+  "derived_classical_extracts": [
+    {
+      "package_path": "classical-bounded-extracts/isfahaniyya-electronic-L171-L187.txt",
+      "bytes": 15344,
+      "sha256": "586d5d0b531153f026a4eb76fd655e9f1bdf88300f80703568ac0db01ae40e34",
+      "source": {
+        "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-web-return.txt",
+        "bytes": 44882,
+        "sha256": "e20ecab19f23f460f75bd539ea7acb4a2a701fee5e511a49d353084d3cbd496c"
+      },
+      "selected_embedded_line_interval": [
+        171,
+        187
+      ],
+      "public_url": "https://ar.wikisource.org/wiki/شرح_العقيدة_الأصفهانية",
+      "transformation": "Preserved selected substantive Arabic lines and their embedded line labels verbatim; removed blank lines, section heading, edit navigation and raw tool wrapper. No lexical emendation.",
+      "warning": "Electronic L199 uses لا يوجب المركب; inspected printed scan page 39 reads لا يوجد المركب. Use the scan reading for interpretation. Electronic L186 awkward wording was confirmed in printed scan page 36 and remains unemended. This packaging operation did not repeat scan inspection."
+    },
+    {
+      "package_path": "classical-bounded-extracts/isfahaniyya-electronic-L188-L210.txt",
+      "bytes": 18307,
+      "sha256": "d37aead971b082fd7337af8f0abe53f17c8cb65e50917512267fa93d692bcb9b",
+      "source": {
+        "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-unity-web-return.txt",
+        "bytes": 43625,
+        "sha256": "9b5ab509fb6a7009c662f7d7d0c4d3462dec099b1a3a344215c455d916b56db4"
+      },
+      "selected_embedded_line_interval": [
+        188,
+        210
+      ],
+      "public_url": "https://ar.wikisource.org/wiki/شرح_العقيدة_الأصفهانية",
+      "transformation": "Preserved selected substantive Arabic lines and their embedded line labels verbatim; removed blank lines, section heading, edit navigation and raw tool wrapper. No lexical emendation.",
+      "warning": "Electronic L199 uses لا يوجب المركب; inspected printed scan page 39 reads لا يوجد المركب. Use the scan reading for interpretation. Electronic L186 awkward wording was confirmed in printed scan page 36 and remains unemended. This packaging operation did not repeat scan inspection."
+    }
+  ],
+  "preserved_native_manifest_warning": "Component MANIFEST.json and MANIFEST.sha256 are exact historical records and include references to omitted inputs. The checkpoint top-level MANIFEST.json alone is the complete delivery inventory; no component is represented as a standalone complete source bundle."
+}

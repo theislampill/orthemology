@@ -1,0 +1,26 @@
+{
+  "scope": "New prospective robustness research requested after the exact certificate; excluded from the sixth checkpoint being assembled. The frozen finite-panel-replay packet is preserved.",
+  "events": [
+    {
+      "observed_utc": "2026-10-08T16:17:10Z",
+      "source": "clock.curr_time",
+      "event": "Started a separate attempt to prove or refute a positive four-coordinate error radius uniformly over all wrong positive integer route counts, followed only if justified by an explicit bounded-sample reference-model test. No result or empirical validation yet asserted."
+    },
+    {
+      "observed_utc": "2026-10-08T16:26:57Z",
+      "source": "clock.curr_time",
+      "event": "The robustness RESULT.md is frozen at SHA256 3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe and independent adversarial review is active. The supplementary exact_controls.py has passed 29 algebraic controls and all five frozen bindings; the complete predecessor manifest also verifies unchanged. Initial reviewer report found no gap, but final review is still pending."
+    },
+    {
+      "observed_utc": "2026-10-08T16:31:28Z",
+      "source": "clock.curr_time",
+      "event": "Independent adversarial review completed with PASS and was read in full. Review SHA256 is 946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf; author RESULT hash remains unchanged. Exact controls now include the review binding: 29 algebraic checks and six frozen bindings passed, with a repeat run exactly matching retained stdout. Preparing final dependency bindings and manifest; no integration or sixth-checkpoint inclusion is asserted."
+    }
+  ],
+  "boundaries": [
+    "Observed checkpoints do not assert continuous work or elapsed research duration.",
+    "No frozen predecessor is to be edited.",
+    "The task concerns a reference-model certificate under common marginal, mutual route-independence, calibrated-command, and genuine same-gate replay contracts.",
+    "No nominal-calibration inversion, global independence, physical experiment, universal model validation, protected integration, or T20 closure is claimed."
+  ]
+}

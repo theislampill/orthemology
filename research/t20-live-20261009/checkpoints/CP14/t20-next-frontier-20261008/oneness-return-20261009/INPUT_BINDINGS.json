@@ -1,0 +1,86 @@
+{
+  "date_utc": "2026-10-09",
+  "purpose": "Identity bindings for the reports and primary extracts actually used. Inclusion does not assert a fresh whole-source reading or test replay.",
+  "inputs": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+      "bytes": 28965,
+      "sha256": "3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/MODEL_AUDIT.md",
+      "bytes": 29085,
+      "sha256": "aad1327aa577fa6edb2b90477481cd2849b6ffe1701c27a3ddfdec69d15b8e67"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/ROOT_REASSESSMENT.md",
+      "bytes": 12799,
+      "sha256": "3f049a92d1da97dcbd2b4e8126d1c566543138ad274cb9334d5e9ea759b3033c"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/DIRECT_READING_RECEIPT.json",
+      "bytes": 8190,
+      "sha256": "6044a7b5b78e5cbb1891e9fe9a348b9348142a6ef0ad6e03b700c5d8d64e169c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "bytes": 19590,
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "bytes": 6167,
+      "sha256": "e290e95b31c54b824ff452f627f7ede399ce39cf000fd2fada6bf8d89125ded0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/eligibility-review/REPORT.md",
+      "bytes": 21866,
+      "sha256": "f63cb6c0b19c88ab77c1cd9d62cd470ab5d6bc0c3cbfeb46ea2c0080b44471d6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "bytes": 19070,
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "bytes": 17870,
+      "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+      "bytes": 20537,
+      "sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/REVIEW.md",
+      "bytes": 17354,
+      "sha256": "d5536f4ae4a426359e2c05dba3df41e85e0534a0212540e12b6793cf100a63e8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "bytes": 29525,
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.md",
+      "bytes": 12763,
+      "sha256": "9593a1acdbd2704205c82c7d4c5bf55421c64fd8334380ec2ddb5528bd5c527e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "bytes": 123088,
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/majmu-item133.txt",
+      "bytes": 25948,
+      "sha256": "c0002d11177f30f5841ef4adb0b2ae5fdd9aba7f88c6be9cf89538e9dfd7b94f"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "bytes": 30941,
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2"
+    }
+  ]
+}

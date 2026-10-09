@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 2010,
+      "sha256": "25342148209cc7ac3eef2cfd28a8376c8fc31e42463ea3d2fde4fbeb59f2feca"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 2723,
+      "sha256": "74e234accafe8768a9a0ae2132ac7505d1593446284946841792f4daf5a480b3"
+    },
+    {
+      "path": "READING_NOTES.md",
+      "bytes": 3740,
+      "sha256": "dd77ee7a794b212c82c6edf0ff3d821de5ce56adcdde6892d871402926adc085"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 21513,
+      "sha256": "080d4c2a1c46835d76fcf86345c6536b84eb7b8278855a0a7b4b99cd7b3258c9"
+    },
+    {
+      "path": "REVIEW_CORRECTIONS.json",
+      "bytes": 792,
+      "sha256": "639e2ddeb4e27060c6b7cfd0bcd6e898fa84dd0d7d9cdd1a07fc10421c732904"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 697,
+      "sha256": "7770ce02b25e225d42a4fd8c9ecf3c1afcf99798d1ade2b6cb3ce860bcffb6e8"
+    },
+    {
+      "path": "history/RESULT.before-review-corrections.md",
+      "bytes": 20557,
+      "sha256": "d6bd565310de6270d5d60fdc386d2c086c328184615f0d17eb4c4fcbf2f4261b"
+    },
+    {
+      "path": "sources/marmodoro-2013-accepted.pdf",
+      "bytes": 616462,
+      "sha256": "1f377b6c671d35839278f8b08722b7b550998489c9bda2a5fc83020a936a0d36"
+    },
+    {
+      "path": "sources/marmodoro-2013-accepted.txt",
+      "bytes": 67259,
+      "sha256": "3e95ca109f83e7305a1ed5121edf079553760883cafa16bd1405b4ef5dea1547"
+    },
+    {
+      "path": "sources/page03.png",
+      "bytes": 209871,
+      "sha256": "7e8797f96a1b6bc949a79a9be586af82b5001658146fe06032bbd77b77329ae3"
+    },
+    {
+      "path": "sources/page16.png",
+      "bytes": 199466,
+      "sha256": "8692975bc173e35156a0964baf3a525dde7f59e4b58cdfa677487f3d1a38137b"
+    }
+  ]
+}

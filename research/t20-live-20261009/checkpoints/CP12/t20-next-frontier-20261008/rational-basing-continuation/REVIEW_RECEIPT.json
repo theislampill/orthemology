@@ -1,0 +1,37 @@
+{
+  "recorded_utc": "2026-10-08T22:14:15.290447+00:00",
+  "verdict": "No remaining substantive blocker within scoped review",
+  "review_files": [
+    {
+      "path": "../rational-basing-continuation-review/ASSESSMENT.md",
+      "sha256": "2669ee4d590a46442e94720090a3ab121af779b48b853a16752c1758ed08ce03"
+    },
+    {
+      "path": "../rational-basing-continuation-review/INFERENTIAL_TEST_ADDENDUM.md",
+      "sha256": "c7286644949414b4ff8c75508b0aa058df41053988dab872288d5caf32438105"
+    }
+  ],
+  "exact_reviewed_arguments": [
+    {
+      "path": "INFERENTIAL_TRANSMISSION_TEST.md",
+      "sha256": "9e60b3c227a434093da9f6d1c6dffe624de9ed16abf2dac09d1393311652782c"
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "4c48b7ec591654c39f9a8bc93c2e15c7e7f8bf67fd3de202d51fec0da07d8972"
+    },
+    {
+      "path": "PUBLIC_SOURCE_SUMMARIES.md",
+      "sha256": "b403d5c798869f9124b40736410d87852022f8c8c94cc71bea9c69ef58404a2a"
+    }
+  ],
+  "scope": "Primary attribution, actual-use versus attention inference, conditional three-world sensitivity argument, complete-basis and strict-entailment repairs, factive-ground and fourth-world controls",
+  "not_certified": [
+    "Complete epistemology",
+    "Independent fitrah source audit",
+    "Corpus exhaustion",
+    "Programme closure",
+    "Historical time floor"
+  ],
+  "time_floor": "UNVERIFIED"
+}

@@ -1,0 +1,311 @@
+{
+  "method": "Independent exact finite-cell OR convolution, plus symbolic/high-precision identities. No Monte Carlo.",
+  "exact_integer_enumeration": [
+    {
+      "m": 1,
+      "threshold_cells_per_route": 4,
+      "event_vector_counts_k_0_to_m": [
+        0,
+        1
+      ],
+      "event_count_at_m": 1,
+      "total_labelled_vectors_at_m": 4
+    },
+    {
+      "m": 2,
+      "threshold_cells_per_route": 9,
+      "event_vector_counts_k_0_to_m": [
+        0,
+        0,
+        2
+      ],
+      "event_count_at_m": 2,
+      "total_labelled_vectors_at_m": 81
+    },
+    {
+      "m": 3,
+      "threshold_cells_per_route": 16,
+      "event_vector_counts_k_0_to_m": [
+        0,
+        0,
+        0,
+        6
+      ],
+      "event_count_at_m": 6,
+      "total_labelled_vectors_at_m": 4096
+    },
+    {
+      "m": 4,
+      "threshold_cells_per_route": 25,
+      "event_vector_counts_k_0_to_m": [
+        0,
+        0,
+        0,
+        0,
+        24
+      ],
+      "event_count_at_m": 24,
+      "total_labelled_vectors_at_m": 390625
+    },
+    {
+      "m": 5,
+      "threshold_cells_per_route": 36,
+      "event_vector_counts_k_0_to_m": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        120
+      ],
+      "event_count_at_m": 120,
+      "total_labelled_vectors_at_m": 60466176
+    },
+    {
+      "m": 6,
+      "threshold_cells_per_route": 49,
+      "event_vector_counts_k_0_to_m": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        720
+      ],
+      "event_count_at_m": 720,
+      "total_labelled_vectors_at_m": 13841287201
+    },
+    {
+      "m": 7,
+      "threshold_cells_per_route": 64,
+      "event_vector_counts_k_0_to_m": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5040
+      ],
+      "event_count_at_m": 5040,
+      "total_labelled_vectors_at_m": 4398046511104
+    },
+    {
+      "m": 8,
+      "threshold_cells_per_route": 81,
+      "event_vector_counts_k_0_to_m": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        40320
+      ],
+      "event_count_at_m": 40320,
+      "total_labelled_vectors_at_m": 1853020188851841
+    }
+  ],
+  "unequal_rational_grid": [
+    {
+      "m": 1,
+      "probability": "1/32",
+      "formula_exact": true
+    },
+    {
+      "m": 2,
+      "probability": "14/19683",
+      "formula_exact": true
+    },
+    {
+      "m": 3,
+      "probability": "5985/536870912",
+      "formula_exact": true
+    },
+    {
+      "m": 4,
+      "probability": "2480184/19073486328125",
+      "formula_exact": true
+    },
+    {
+      "m": 5,
+      "probability": "52531675/43873901280755712",
+      "formula_exact": true
+    }
+  ],
+  "n1_m2_symbolic": {
+    "assignments_examined": 81,
+    "expression": "10/3 - 8*sqrt(14)/9",
+    "claimed_formula_exact": true,
+    "decimal_50": "0.0074156562009409905922233490519561762168712819744649"
+  },
+  "joe_CDF_cell_convolution": [
+    {
+      "n": 1,
+      "m": 2,
+      "event_probability": "0.00741565620094099059222334905195617621687128197",
+      "absolute_convolution_formula_error": "0.0",
+      "minimum_CDF_cell_mass": "0.057190958417936634132"
+    },
+    {
+      "n": 2,
+      "m": 3,
+      "event_probability": "0.000540058901948769901921008118155402179052289204",
+      "absolute_convolution_formula_error": "0.0",
+      "minimum_CDF_cell_mass": "0.042113209508058616752"
+    },
+    {
+      "n": 3,
+      "m": 4,
+      "event_probability": "0.0000248296195006954277463864730154491547675381005",
+      "absolute_convolution_formula_error": "0.0",
+      "minimum_CDF_cell_mass": "0.030152557755220767161"
+    },
+    {
+      "n": 4,
+      "m": 5,
+      "event_probability": "0.000000847144142462336477077212142516737097920115866",
+      "absolute_convolution_formula_error": "1.1704191e-97",
+      "minimum_CDF_cell_mass": "0.022284647156910356558"
+    },
+    {
+      "n": 5,
+      "m": 6,
+      "event_probability": "0.0000000230433035715658193756944284161412762415347897",
+      "absolute_convolution_formula_error": "7.3151193e-99",
+      "minimum_CDF_cell_mass": "0.017035957974447280578"
+    },
+    {
+      "n": 6,
+      "m": 7,
+      "event_probability": "0.00000000052154916474050017083133291406798683821524267",
+      "absolute_convolution_formula_error": "0.0",
+      "minimum_CDF_cell_mass": "0.013407894252734266746"
+    }
+  ],
+  "boundary_countercontrols": {
+    "monotone_nonseparable_one_route_transcript": [
+      1,
+      1,
+      0
+    ],
+    "fully_dependent_identical_routes_event_count": 0,
+    "fresh_redraw_n1_event_probability": "32/729",
+    "two_unary_routes_zero_AB_transcript": [
+      1,
+      1,
+      0
+    ],
+    "axis_atom_invalidates_open_axis_box_equality_without_nullity": true,
+    "heterogeneous_t_three_quarters_alias": {
+      "000": "1/16",
+      "010": "3/16",
+      "100": "3/16",
+      "111": "9/16"
+    },
+    "m1_included_in_exact_controls": true,
+    "m1_n0_Joe_hard_pair": "Excluded; c=0 is not the valid continuous full-support distribution."
+  },
+  "heterogeneous_positive_cell_laws": {
+    "probability": "783/1556480",
+    "permanent_exact": true,
+    "incorrect_iid_diagonal_expression": "441/1556480"
+  },
+  "same_face_minima_different_interior_transcript": {
+    "equal_minima": [
+      "1/6",
+      "1/6"
+    ],
+    "different_transcripts": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "zero_gate_boundary": {
+    "m1_one_zero_gate_route_can_satisfy_E": true,
+    "m_ge_2_any_zero_gate_route_makes_E_impossible": true
+  },
+  "extended_route_count_inclusion_exclusion": [
+    {
+      "m": 1,
+      "route_counts_checked": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "m": 2,
+      "route_counts_checked": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "m": 3,
+      "route_counts_checked": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "m": 4,
+      "route_counts_checked": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "m": 5,
+      "route_counts_checked": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "m": 6,
+      "route_counts_checked": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

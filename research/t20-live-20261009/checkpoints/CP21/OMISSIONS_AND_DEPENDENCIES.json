@@ -1,0 +1,25 @@
+{
+  "omissions": [
+    {
+      "path": "sovereignty-discriminator-currentness-20261009/record_bindings.py",
+      "reason": "Provenance-generating script not needed for preserved reports/ledgers or modal replay. Retained FILES.sha256 lists its historical identity."
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/lean-toolchain",
+      "reason": "Toolchain-selection metadata deliberately omitted with all build/toolchain facilities. Its original identity remains in unchanged nested ledgers."
+    },
+    {
+      "scope": "Primary PDF, OCR, HTML article bodies, raw source selections and images, including OConnor and Della Rocca witnesses",
+      "reason": "Primary-body redistribution excluded. Source identities, bounded report synopses and reading records retained."
+    },
+    {
+      "scope": "Prior checkpoint payloads, nested archives, original project code, caches and toolchain binaries",
+      "reason": "Not required for the two bounded controls; earlier archives remain unchanged and separately identified."
+    },
+    {
+      "scope": "Private memory and internal notes",
+      "reason": "Excluded; not inspected or included."
+    }
+  ],
+  "qualification": "Not a hermetic reproduction of primary-source scholarship or the third-party repository. Reference-only MIT code/docs are the explicit licensed exception to primary-body exclusion."
+}

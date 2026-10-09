@@ -1,0 +1,345 @@
+{
+  "created_utc": "2026-10-08T09:50:53Z",
+  "task": "Targeted T17/T19 inheritance and empirical source check for T20 fitrah warrant bridge",
+  "read_only_originals": true,
+  "source_directory_relative_to_workspace": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19",
+  "inspected_files": [
+    {
+      "filename": "Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.docx",
+      "sha256": "4364e1c90e8a213cde09fffb3766c5205f98b9f5c174aa447e1130114b93df91",
+      "bytes": 50521,
+      "body_paragraph_count": 93,
+      "paragraph_indexing": "P plus four digits, one-based, all w:p below w:body in document order, including tables and empty paragraphs.",
+      "w14_paraId_count": 0,
+      "named_study_term_matches": {
+        "Tracy": [],
+        "Welsh": [],
+        "Dervic": [],
+        "Järnefelt": [],
+        "Jarnefelt": [],
+        "Petrovich": [],
+        "Banerjee": [],
+        "Bloom": [],
+        "Bering": [],
+        "Heywood": [],
+        "Kelemen": [],
+        "Barrett": [],
+        "Boyer": []
+      }
+    },
+    {
+      "filename": "Orthemology_Seventeenth_Research_Final_Evidence_v1_20261005.zip",
+      "sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+      "bytes": 95685
+    },
+    {
+      "filename": "Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.docx",
+      "sha256": "764c038e4cd2febb74c23e19c15cc86f6377c65f376964b3a33512a7ac83cf89",
+      "bytes": 45148,
+      "body_paragraph_count": 195,
+      "paragraph_indexing": "P plus four digits, one-based, all w:p below w:body in document order, including tables and empty paragraphs.",
+      "w14_paraId_count": 0,
+      "named_study_term_matches": {
+        "Tracy": [],
+        "Welsh": [],
+        "Dervic": [],
+        "Järnefelt": [],
+        "Jarnefelt": [],
+        "Petrovich": [],
+        "Banerjee": [],
+        "Bloom": [],
+        "Bering": [],
+        "Heywood": [],
+        "Kelemen": [],
+        "Barrett": [],
+        "Boyer": []
+      }
+    },
+    {
+      "filename": "Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "bytes": 63700,
+      "body_paragraph_count": 191,
+      "paragraph_indexing": "P plus four digits, one-based, all w:p below w:body in document order, including tables and empty paragraphs.",
+      "w14_paraId_count": 0,
+      "named_study_term_matches": {
+        "Tracy": [],
+        "Welsh": [],
+        "Dervic": [],
+        "Järnefelt": [],
+        "Jarnefelt": [],
+        "Petrovich": [],
+        "Banerjee": [],
+        "Bloom": [],
+        "Bering": [],
+        "Heywood": [],
+        "Kelemen": [],
+        "Barrett": [],
+        "Boyer": []
+      }
+    },
+    {
+      "filename": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9",
+      "bytes": 56611,
+      "body_paragraph_count": 179,
+      "paragraph_indexing": "P plus four digits, one-based, all w:p below w:body in document order, including tables and empty paragraphs.",
+      "w14_paraId_count": 0,
+      "named_study_term_matches": {
+        "Tracy": [],
+        "Welsh": [],
+        "Dervic": [],
+        "Järnefelt": [],
+        "Jarnefelt": [],
+        "Petrovich": [],
+        "Banerjee": [],
+        "Bloom": [],
+        "Bering": [],
+        "Heywood": [],
+        "Kelemen": [],
+        "Barrett": [],
+        "Boyer": []
+      }
+    },
+    {
+      "filename": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "bytes": 65239,
+      "body_paragraph_count": 198,
+      "paragraph_indexing": "P plus four digits, one-based, all w:p below w:body in document order, including tables and empty paragraphs.",
+      "w14_paraId_count": 0,
+      "named_study_term_matches": {
+        "Tracy": [],
+        "Welsh": [],
+        "Dervic": [],
+        "Järnefelt": [],
+        "Jarnefelt": [],
+        "Petrovich": [],
+        "Banerjee": [],
+        "Bloom": [],
+        "Bering": [],
+        "Heywood": [],
+        "Kelemen": [],
+        "Barrett": [],
+        "Boyer": []
+      }
+    },
+    {
+      "filename": "Orthemology_Seventeenth_Final_Verification_v1_20261005.json",
+      "sha256": "6207c8816f391758ad85f6a56a5a3a5d770119b147d6e5c580f4f9bfeaebf110",
+      "bytes": 5364
+    },
+    {
+      "filename": "Orthemology_Nineteenth_Research_Evidence_v1_20261006.zip",
+      "sha256": "ab655329fa190a8fc8ea655b326600d44c72d5376d195e21f6e57e3a3ae34b81",
+      "bytes": 22689
+    }
+  ],
+  "paragraph_locators": [
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0016",
+      "paragraph_sha256_utf8": "1f1d593e4a769f5396ceb0c86684b3dacba418d48ec571e363bdd508efc5d6bd",
+      "opening_words": "These differences prevent false multiplication of evidence. Repeated discussion"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0072",
+      "paragraph_sha256_utf8": "3ab205b3c625af4804986bd47af502892e6236b6c68299c31708ad2ead1f2065",
+      "opening_words": "Asfahani printed pp. 109–111 / PDF pp. 116–118 supplies"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0123",
+      "paragraph_sha256_utf8": "1cf7fc23bfd7ac8c508afe976045d44c3b1afe47faeda8fe57d5a34e960107ef",
+      "opening_words": "The completed ordinary-entitlement result is affirmative. A competent recipient"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0124",
+      "paragraph_sha256_utf8": "e329b959683ed7981f1d3765d49e5d71046a2cc646ef6d84adf2ff386917f99a",
+      "opening_words": "Burge's mature account supplies a positive rationale through presumed"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0125",
+      "paragraph_sha256_utf8": "5510febe1d3b02f61993a95d9dfb5ff82074d372cb5e0fcb9a513434e6f82301",
+      "opening_words": "The original assessment's overly demanding stopping criterion has been"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0128",
+      "paragraph_sha256_utf8": "f371f04c0182392b2f6450ddb830770506b6ea083aa9f45ecd06c19b14ed0b7a",
+      "opening_words": "The result does not apply to every intelligible-looking string"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0130",
+      "paragraph_sha256_utf8": "372258fd9f188a5be0753e0504bfbe15b76141c06d25d24efd053171243d55cc",
+      "opening_words": "The foundational epistemology sources connect perception, reasoning, testimony and"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0132",
+      "paragraph_sha256_utf8": "21d0a4c8be896039397a09ebcbea4376e8cad35afd251ab7c1fe27884ed8583a",
+      "opening_words": "Shared-source dependence also need not destroy knowledge. Faithful transmission"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0134",
+      "paragraph_sha256_utf8": "394c31c4654937c91367e3966360f1728319046c926de1e01ea50a2f478fabd1",
+      "opening_words": "The ordinary-entitlement result makes the methodological consequence more positive."
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0135",
+      "paragraph_sha256_utf8": "0debf29d125ef28a8f67741c30170237a701dd2de1cc36749a82326d00908708",
+      "opening_words": "More precise competent testimony could warrant a more precise"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0148",
+      "paragraph_sha256_utf8": "ef667586ec687fd525f60c428bc82568211011da3927403486f023766db33bfa",
+      "opening_words": "The ordinary-entitlement judgement improves the account of how a"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0157",
+      "paragraph_sha256_utf8": "089ff7e54d0a23d9203de47854481372995be49a807f111c4d9bbdb42ab2483e",
+      "opening_words": "The separate mathematical companion develops the bounded probability contracts,"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0161",
+      "paragraph_sha256_utf8": "5e3bae515c1073e0bfe5d4aa5de443ee829b54ba9c959a1d10e2c31b7f857f74",
+      "opening_words": "All supplied pages have been checked and the selected"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0176",
+      "paragraph_sha256_utf8": "6184ec8ca9177251a79dc04e5d5486f4769a72ab5e09e48792591b5a6534e7ec",
+      "opening_words": "The archived-placement inquiry is a completed, bounded secondary check."
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0179",
+      "paragraph_sha256_utf8": "c22974ffa28161768390e2f760288482818f6ed447f955a4d87e65edf322ac02",
+      "opening_words": "A simple digital coin-toss interpretation remains natural, and the"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "paragraph": "P0186",
+      "paragraph_sha256_utf8": "d7d41647f966899e0558708f1e6908e4d03ab32a31699c7a24f7f792eeae3e23",
+      "opening_words": "Oneness excerpt. Ibn Taymiyyah on the Oneness of Allah,"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0023",
+      "paragraph_sha256_utf8": "4d907941b5cc89b7de4232166bb26f7a085d834d5fd3345ccc7e26f4f147634b",
+      "opening_words": "Fiṭrah denotes the account’s natural, truth-directed human disposition, whose"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0120",
+      "paragraph_sha256_utf8": "846401707afe6228aa90789f8e062a3dc60b6c69c1a07bb5cf3fa36275ff4115",
+      "opening_words": "The introduction describes genuine knowledge of God’s existence and"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0121",
+      "paragraph_sha256_utf8": "5c628a90b860bd88baba92b1586cca951a9301a51e057f998863bc1f8617d030",
+      "opening_words": "Basic perception and rational knowledge need not wait for"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0125",
+      "paragraph_sha256_utf8": "85f6b44701608f5e8b5d623895487118797706146d7b23e56eed8f3cfa4dbba5",
+      "opening_words": "The source supports actual Creator-knowledge, plural routes to it"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0136",
+      "paragraph_sha256_utf8": "823e62322c7efd030d5b0dda95485362d687e241313b6d048c464c9edc1f4f0f",
+      "opening_words": "The historical account affirms actual recognition of the Creator"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0137",
+      "paragraph_sha256_utf8": "992acc9cfb862d06cc9c5b8c9bf9b4dbe6d8ae7051973e9bbba5ee2aecce4df9",
+      "opening_words": "Turner separately identifies the proper-function model as his interpretation"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0138",
+      "paragraph_sha256_utf8": "7207ab8cc81ec43c2ea048985541f86012b38fb6c15029bec6f19b15fdd2d173",
+      "opening_words": "Tawatur and cumulative warrant"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0139",
+      "paragraph_sha256_utf8": "60d8e0c8f5354e1a4f7ae14a791635111c6ad8918ddb363d018328bf427c68b2",
+      "opening_words": "El-Tobgui’s article shows why report quality, competence, contextual detail"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0141",
+      "paragraph_sha256_utf8": "24a1e37e9ed8680b01445022fc0e72b579b2a8e46c1b7ca986982016a4532214",
+      "opening_words": "This collection improves the account of basic and cumulative"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0145",
+      "paragraph_sha256_utf8": "cd23661653afe975c31e7789070567e6875c6a8c7b9492d3efb0336756194717",
+      "opening_words": "Printed pp. 10–16 and 21 / PDF pp. 14–20"
+    },
+    {
+      "file": "Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "paragraph": "P0174",
+      "paragraph_sha256_utf8": "7606068fe5a2cc739b6d2ef61dbf613209e1ba3df2d4e03eba893203304812d4",
+      "opening_words": "For knowledge, basic cognition, testimony, inference and cumulative signs"
+    },
+    {
+      "file": "Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "paragraph": "P0125",
+      "paragraph_sha256_utf8": "3c2d051dedb45262c97f0ea1495af3fac108f1608de5dde06550bd5cab5286a1",
+      "opening_words": "The programme connection is condition-sensitive reuse. Transporting an effective"
+    },
+    {
+      "file": "Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "paragraph": "P0130",
+      "paragraph_sha256_utf8": "743575324409643d5351e9f80369eaaf04e42bb4a827c601f90decc64e9f7c1c",
+      "opening_words": "Alongside avenues 1–3, these gains chiefly inform avenue 6,"
+    },
+    {
+      "file": "Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "paragraph": "P0151",
+      "paragraph_sha256_utf8": "26c5f2413ebb71aac67416d435fc6558fa9938e3d6707b7e577459761f0dd6f5",
+      "opening_words": "Avenue 1 gains common-source identification for the relevant received"
+    },
+    {
+      "file": "Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "paragraph": "P0169",
+      "paragraph_sha256_utf8": "68cdca0959ec39b913f9a0dce2144682101a4cf1e96adf98d56891b5736ef11c",
+      "opening_words": "No empirical law, lawful intervention, safe root or version,"
+    },
+    {
+      "file": "Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.docx",
+      "paragraph": "P0041",
+      "paragraph_sha256_utf8": "87d518c9b0e9c143cc69420682bcad774bd5a93e61890779ed6893bd4b470778",
+      "opening_words": "Shifāʾ al-ʿalīl supplies two important controls. The permitted Shamela"
+    },
+    {
+      "file": "Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.docx",
+      "paragraph": "P0042",
+      "paragraph_sha256_utf8": "78217630532f7ded034734c1ce678ee2355f14759c93bde666861bdd3f8b34ed",
+      "opening_words": "The retained IslamHouse reads cover lines 831–837, 1132–1141 and"
+    }
+  ],
+  "limits": [
+    "Keyword absence applies only to the specified original reports, source guides, companion and extracted evidence packages; it is not a programme-wide proof that no earlier worker inspected a study.",
+    "Original DOCX files had no w14 paragraph identifiers. P labels are newly assigned, reproducible XML traversal locators.",
+    "Coverage receipts were inspected as inherited evidence, not independently reproduced page-by-page.",
+    "No old record or repository was modified.",
+    "Modern primary PDFs/XML were read in temporary scratch; no raw modern primary texts or page images are redistributed here."
+  ]
+}

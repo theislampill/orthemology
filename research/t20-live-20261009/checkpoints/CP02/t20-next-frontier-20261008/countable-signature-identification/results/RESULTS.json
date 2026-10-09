@@ -1,0 +1,4999 @@
+{
+  "scope": "Exact finite controls and proved infinite-limit targets; no finite prefix is represented as an executed infinite process.",
+  "primitive_order_witnesses": [
+    {
+      "exponent": 1,
+      "prime": 3
+    },
+    {
+      "exponent": 2,
+      "prime": 5
+    },
+    {
+      "exponent": 3,
+      "prime": 7
+    },
+    {
+      "exponent": 4,
+      "prime": 17
+    },
+    {
+      "exponent": 5,
+      "prime": 11
+    },
+    {
+      "exponent": 6,
+      "prime": 13
+    },
+    {
+      "exponent": 7,
+      "prime": 43
+    },
+    {
+      "exponent": 8,
+      "prime": 257
+    },
+    {
+      "exponent": 9,
+      "prime": 19
+    },
+    {
+      "exponent": 10,
+      "prime": 41
+    },
+    {
+      "exponent": 11,
+      "prime": 23
+    },
+    {
+      "exponent": 12,
+      "prime": 241
+    },
+    {
+      "exponent": 13,
+      "prime": 2731
+    },
+    {
+      "exponent": 14,
+      "prime": 29
+    },
+    {
+      "exponent": 15,
+      "prime": 151
+    },
+    {
+      "exponent": 16,
+      "prime": 65537
+    },
+    {
+      "exponent": 17,
+      "prime": 43691
+    },
+    {
+      "exponent": 18,
+      "prime": 37
+    },
+    {
+      "exponent": 19,
+      "prime": 174763
+    },
+    {
+      "exponent": 20,
+      "prime": 61681
+    },
+    {
+      "exponent": 21,
+      "prime": 337
+    },
+    {
+      "exponent": 22,
+      "prime": 397
+    },
+    {
+      "exponent": 23,
+      "prime": 47
+    },
+    {
+      "exponent": 24,
+      "prime": 97
+    }
+  ],
+  "finite_decodings": [
+    {
+      "model": {
+        "4": 1
+      },
+      "probability": {
+        "numerator": 255,
+        "denominator": 256
+      },
+      "decoded": {
+        "4": 1
+      },
+      "trace": {
+        "denominator_weight": 4,
+        "numerator_factorisation": [
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            17,
+            1
+          ]
+        ],
+        "steps": [
+          {
+            "exponent": 4,
+            "selected_prime": 17,
+            "order": 4,
+            "factor_valuation": 1,
+            "residual_valuation": 1,
+            "count": 1
+          },
+          {
+            "exponent": 2,
+            "selected_prime": 5,
+            "order": 2,
+            "factor_valuation": 1,
+            "residual_valuation": 0,
+            "count": 0
+          },
+          {
+            "exponent": 1,
+            "selected_prime": 3,
+            "order": 1,
+            "factor_valuation": 1,
+            "residual_valuation": 0,
+            "count": 0
+          }
+        ],
+        "decoded_supports": {
+          "4": [
+            2
+          ]
+        },
+        "scope": "Finite integer histogram only; exact readout; no known largest port index supplied."
+      }
+    },
+    {
+      "model": {
+        "6": 2,
+        "3": 1,
+        "1": 4
+      },
+      "probability": {
+        "numerator": 85572334575,
+        "denominator": 274877906944
+      },
+      "decoded": {
+        "6": 2,
+        "3": 1,
+        "1": 4
+      },
+      "trace": {
+        "denominator_weight": 19,
+        "numerator_factorisation": [
+          [
+            3,
+            10
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            13,
+            2
+          ]
+        ],
+        "steps": [
+          {
+            "exponent": 6,
+            "selected_prime": 13,
+            "order": 6,
+            "factor_valuation": 1,
+            "residual_valuation": 2,
+            "count": 2
+          },
+          {
+            "exponent": 3,
+            "selected_prime": 7,
+            "order": 3,
+            "factor_valuation": 1,
+            "residual_valuation": 1,
+            "count": 1
+          },
+          {
+            "exponent": 2,
+            "selected_prime": 5,
+            "order": 2,
+            "factor_valuation": 1,
+            "residual_valuation": 0,
+            "count": 0
+          },
+          {
+            "exponent": 1,
+            "selected_prime": 3,
+            "order": 1,
+            "factor_valuation": 1,
+            "residual_valuation": 4,
+            "count": 4
+          }
+        ],
+        "decoded_supports": {
+          "6": [
+            1,
+            2
+          ],
+          "3": [
+            0,
+            1
+          ],
+          "1": [
+            0
+          ]
+        },
+        "scope": "Finite integer histogram only; exact readout; no known largest port index supplied."
+      }
+    },
+    {
+      "model": {
+        "32": 1
+      },
+      "probability": {
+        "numerator": 18446744073709551615,
+        "denominator": 18446744073709551616
+      },
+      "decoded": {
+        "32": 1
+      },
+      "trace": {
+        "denominator_weight": 32,
+        "numerator_factorisation": [
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            257,
+            1
+          ],
+          [
+            641,
+            1
+          ],
+          [
+            65537,
+            1
+          ],
+          [
+            6700417,
+            1
+          ]
+        ],
+        "steps": [
+          {
+            "exponent": 32,
+            "selected_prime": 641,
+            "order": 32,
+            "factor_valuation": 1,
+            "residual_valuation": 1,
+            "count": 1
+          },
+          {
+            "exponent": 16,
+            "selected_prime": 65537,
+            "order": 16,
+            "factor_valuation": 1,
+            "residual_valuation": 0,
+            "count": 0
+          },
+          {
+            "exponent": 8,
+            "selected_prime": 257,
+            "order": 8,
+            "factor_valuation": 1,
+            "residual_valuation": 0,
+            "count": 0
+          },
+          {
+            "exponent": 4,
+            "selected_prime": 17,
+            "order": 4,
+            "factor_valuation": 1,
+            "residual_valuation": 0,
+            "count": 0
+          },
+          {
+            "exponent": 2,
+            "selected_prime": 5,
+            "order": 2,
+            "factor_valuation": 1,
+            "residual_valuation": 0,
+            "count": 0
+          },
+          {
+            "exponent": 1,
+            "selected_prime": 3,
+            "order": 1,
+            "factor_valuation": 1,
+            "residual_valuation": 0,
+            "count": 0
+          }
+        ],
+        "decoded_supports": {
+          "32": [
+            5
+          ]
+        },
+        "scope": "Finite integer histogram only; exact readout; no known largest port index supplied."
+      }
+    }
+  ],
+  "gcd_examples": [
+    {
+      "model": {
+        "11": 2
+      },
+      "decoded": {
+        "11": 2
+      },
+      "input_numerator_bits": 44,
+      "input_denominator_bits": 45,
+      "readout_sha256": "225337cf42e9bdb558978d935686fa0ad8d98745ce8e27023d1a3e4672f5b64a",
+      "trace": {
+        "weight": 22,
+        "largest_generator": 11,
+        "selectors": [
+          {
+            "exponent": 1,
+            "generator": 3,
+            "component": 3,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1
+          },
+          {
+            "exponent": 2,
+            "generator": 15,
+            "component": 5,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2
+          },
+          {
+            "exponent": 3,
+            "generator": 63,
+            "component": 7,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6
+          },
+          {
+            "exponent": 4,
+            "generator": 255,
+            "component": 17,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 12
+          },
+          {
+            "exponent": 5,
+            "generator": 1023,
+            "component": 341,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 20
+          },
+          {
+            "exponent": 6,
+            "generator": 4095,
+            "component": 13,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 30
+          },
+          {
+            "exponent": 7,
+            "generator": 16383,
+            "component": 5461,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 42
+          },
+          {
+            "exponent": 8,
+            "generator": 65535,
+            "component": 257,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 56
+          },
+          {
+            "exponent": 9,
+            "generator": 262143,
+            "component": 1387,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 72
+          },
+          {
+            "exponent": 10,
+            "generator": 1048575,
+            "component": 41,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 90
+          },
+          {
+            "exponent": 11,
+            "generator": 4194303,
+            "component": 1398101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 110
+          }
+        ],
+        "counts": [
+          {
+            "exponent": 11,
+            "count": 2
+          },
+          {
+            "exponent": 10,
+            "count": 0
+          },
+          {
+            "exponent": 9,
+            "count": 0
+          },
+          {
+            "exponent": 8,
+            "count": 0
+          },
+          {
+            "exponent": 7,
+            "count": 0
+          },
+          {
+            "exponent": 6,
+            "count": 0
+          },
+          {
+            "exponent": 5,
+            "count": 0
+          },
+          {
+            "exponent": 4,
+            "count": 0
+          },
+          {
+            "exponent": 3,
+            "count": 0
+          },
+          {
+            "exponent": 2,
+            "count": 0
+          },
+          {
+            "exponent": 1,
+            "count": 0
+          }
+        ],
+        "strip_divisions": 14,
+        "maximum_history_bits": 132,
+        "decoded_supports": {
+          "11": [
+            0,
+            1,
+            3
+          ]
+        },
+        "algorithm": "gcd; no prime factorisation or multiplicative-order computation",
+        "complexity_scope": "Polynomial in expanded binary numerator/denominator length; no compact-expression or sampling-cost claim."
+      }
+    },
+    {
+      "model": {
+        "256": 1
+      },
+      "decoded": {
+        "256": 1
+      },
+      "input_numerator_bits": 512,
+      "input_denominator_bits": 513,
+      "readout_sha256": "ddba21ded19e175d85ecc56a422d34cad112ea45ecd808655c6049ec1facdd83",
+      "trace": {
+        "weight": 256,
+        "largest_generator": 256,
+        "selectors": [
+          {
+            "exponent": 1,
+            "generator": 3,
+            "component": 3,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1
+          },
+          {
+            "exponent": 2,
+            "generator": 15,
+            "component": 5,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2
+          },
+          {
+            "exponent": 3,
+            "generator": 63,
+            "component": 7,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6
+          },
+          {
+            "exponent": 4,
+            "generator": 255,
+            "component": 17,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 12
+          },
+          {
+            "exponent": 5,
+            "generator": 1023,
+            "component": 341,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 20
+          },
+          {
+            "exponent": 6,
+            "generator": 4095,
+            "component": 13,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 30
+          },
+          {
+            "exponent": 7,
+            "generator": 16383,
+            "component": 5461,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 42
+          },
+          {
+            "exponent": 8,
+            "generator": 65535,
+            "component": 257,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 56
+          },
+          {
+            "exponent": 9,
+            "generator": 262143,
+            "component": 1387,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 72
+          },
+          {
+            "exponent": 10,
+            "generator": 1048575,
+            "component": 41,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 90
+          },
+          {
+            "exponent": 11,
+            "generator": 4194303,
+            "component": 1398101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 110
+          },
+          {
+            "exponent": 12,
+            "generator": 16777215,
+            "component": 241,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 132
+          },
+          {
+            "exponent": 13,
+            "generator": 67108863,
+            "component": 22369621,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 156
+          },
+          {
+            "exponent": 14,
+            "generator": 268435455,
+            "component": 3277,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 182
+          },
+          {
+            "exponent": 15,
+            "generator": 1073741823,
+            "component": 49981,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 210
+          },
+          {
+            "exponent": 16,
+            "generator": 4294967295,
+            "component": 65537,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 240
+          },
+          {
+            "exponent": 17,
+            "generator": 17179869183,
+            "component": 5726623061,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 272
+          },
+          {
+            "exponent": 18,
+            "generator": 68719476735,
+            "component": 4033,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 306
+          },
+          {
+            "exponent": 19,
+            "generator": 274877906943,
+            "component": 91625968981,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 342
+          },
+          {
+            "exponent": 20,
+            "generator": 1099511627775,
+            "component": 61681,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 380
+          },
+          {
+            "exponent": 21,
+            "generator": 4398046511103,
+            "component": 1826203,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 420
+          },
+          {
+            "exponent": 22,
+            "generator": 17592186044415,
+            "component": 838861,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 462
+          },
+          {
+            "exponent": 23,
+            "generator": 70368744177663,
+            "component": 23456248059221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 506
+          },
+          {
+            "exponent": 24,
+            "generator": 281474976710655,
+            "component": 65281,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 552
+          },
+          {
+            "exponent": 25,
+            "generator": 1125899906842623,
+            "component": 1100586419201,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 600
+          },
+          {
+            "exponent": 26,
+            "generator": 4503599627370495,
+            "component": 13421773,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 650
+          },
+          {
+            "exponent": 27,
+            "generator": 18014398509481983,
+            "component": 22906579627,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 702
+          },
+          {
+            "exponent": 28,
+            "generator": 72057594037927935,
+            "component": 15790321,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 756
+          },
+          {
+            "exponent": 29,
+            "generator": 288230376151711743,
+            "component": 96076792050570581,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 812
+          },
+          {
+            "exponent": 30,
+            "generator": 1152921504606846975,
+            "component": 80581,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 870
+          },
+          {
+            "exponent": 31,
+            "generator": 4611686018427387903,
+            "component": 1537228672809129301,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 930
+          },
+          {
+            "exponent": 32,
+            "generator": 18446744073709551615,
+            "component": 4294967297,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 992
+          },
+          {
+            "exponent": 33,
+            "generator": 73786976294838206463,
+            "component": 837723344701,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1056
+          },
+          {
+            "exponent": 34,
+            "generator": 295147905179352825855,
+            "component": 3435973837,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1122
+          },
+          {
+            "exponent": 35,
+            "generator": 1180591620717411303423,
+            "component": 211325490770941,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1190
+          },
+          {
+            "exponent": 36,
+            "generator": 4722366482869645213695,
+            "component": 16773121,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1260
+          },
+          {
+            "exponent": 37,
+            "generator": 18889465931478580854783,
+            "component": 6296488643826193618261,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1332
+          },
+          {
+            "exponent": 38,
+            "generator": 75557863725914323419135,
+            "component": 54975581389,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1406
+          },
+          {
+            "exponent": 39,
+            "generator": 302231454903657293676543,
+            "component": 214457128308541,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1482
+          },
+          {
+            "exponent": 40,
+            "generator": 1208925819614629174706175,
+            "component": 4278255361,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1560
+          },
+          {
+            "exponent": 41,
+            "generator": 4835703278458516698824703,
+            "component": 1611901092819505566274901,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1640
+          },
+          {
+            "exponent": 42,
+            "generator": 19342813113834066795298815,
+            "component": 20647621,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1722
+          },
+          {
+            "exponent": 43,
+            "generator": 77371252455336267181195263,
+            "component": 25790417485112089060398421,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1806
+          },
+          {
+            "exponent": 44,
+            "generator": 309485009821345068724781055,
+            "component": 1034834473201,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1892
+          },
+          {
+            "exponent": 45,
+            "generator": 1237940039285380274899124223,
+            "component": 277077987426241,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1980
+          },
+          {
+            "exponent": 46,
+            "generator": 4951760157141521099596496895,
+            "component": 14073748835533,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2070
+          },
+          {
+            "exponent": 47,
+            "generator": 19807040628566084398385987583,
+            "component": 6602346876188694799461995861,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2162
+          },
+          {
+            "exponent": 48,
+            "generator": 79228162514264337593543950335,
+            "component": 4294901761,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2256
+          },
+          {
+            "exponent": 49,
+            "generator": 316912650057057350374175801343,
+            "component": 19343993777516776559493121,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2352
+          },
+          {
+            "exponent": 50,
+            "generator": 1267650600228229401496703205375,
+            "component": 219687786701,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2450
+          },
+          {
+            "exponent": 51,
+            "generator": 5070602400912917605986812821503,
+            "component": 14054662152215842621,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2550
+          },
+          {
+            "exponent": 52,
+            "generator": 20282409603651670423947251286015,
+            "component": 264917625139441,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2652
+          },
+          {
+            "exponent": 53,
+            "generator": 81129638414606681695789005144063,
+            "component": 27043212804868893898596335048021,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2756
+          },
+          {
+            "exponent": 54,
+            "generator": 324518553658426726783156020576255,
+            "component": 68719214593,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2862
+          },
+          {
+            "exponent": 55,
+            "generator": 1298074214633706907132624082305023,
+            "component": 82507353667912278259991,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 2970
+          },
+          {
+            "exponent": 56,
+            "generator": 5192296858534827628530496329220095,
+            "component": 280379743338241,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 3080
+          },
+          {
+            "exponent": 57,
+            "generator": 20769187434139310514121985316880383,
+            "component": 3597993510770914348861,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 3192
+          },
+          {
+            "exponent": 58,
+            "generator": 83076749736557242056487941267521535,
+            "component": 57646075230342349,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 3306
+          },
+          {
+            "exponent": 59,
+            "generator": 332306998946228968225951765070086143,
+            "component": 110768999648742989408650588356695381,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 3422
+          },
+          {
+            "exponent": 60,
+            "generator": 1329227995784915872903807060280344575,
+            "component": 4562284561,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 3540
+          },
+          {
+            "exponent": 61,
+            "generator": 5316911983139663491615228241121378303,
+            "component": 1772303994379887830538409413707126101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 3660
+          },
+          {
+            "exponent": 62,
+            "generator": 21267647932558653966460912964485513215,
+            "component": 922337203685477581,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 3782
+          },
+          {
+            "exponent": 63,
+            "generator": 85070591730234615865843651857942052863,
+            "component": 4648597239567042740161,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 3906
+          },
+          {
+            "exponent": 64,
+            "generator": 340282366920938463463374607431768211455,
+            "component": 18446744073709551617,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 4032
+          },
+          {
+            "exponent": 65,
+            "generator": 1361129467683753853853498429727072845823,
+            "component": 59479207935141143200012432381,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 4160
+          },
+          {
+            "exponent": 66,
+            "generator": 5444517870735015415413993718908291383295,
+            "component": 1353244757701,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 4290
+          },
+          {
+            "exponent": 67,
+            "generator": 21778071482940061661655974875633165533183,
+            "component": 7259357160980020553885324958544388511061,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 4422
+          },
+          {
+            "exponent": 68,
+            "generator": 87112285931760246646623899502532662132735,
+            "component": 1021273028302258913,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 4556
+          },
+          {
+            "exponent": 69,
+            "generator": 348449143727040986586495598010130648530943,
+            "component": 235798102721028165159079741,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 4692
+          },
+          {
+            "exponent": 70,
+            "generator": 1393796574908163946345982392040522594123775,
+            "component": 351479006145541,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 4830
+          },
+          {
+            "exponent": 71,
+            "generator": 5575186299632655785383929568162090376495103,
+            "component": 1858395433210885261794643189387363458831701,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 4970
+          },
+          {
+            "exponent": 72,
+            "generator": 22300745198530623141535718272648361505980415,
+            "component": 281474959933441,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 5112
+          },
+          {
+            "exponent": 73,
+            "generator": 89202980794122492566142873090593446023921663,
+            "component": 29734326931374164188714291030197815341307221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 5256
+          },
+          {
+            "exponent": 74,
+            "generator": 356811923176489970264571492362373784095686655,
+            "component": 3777893186295716170957,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 5402
+          },
+          {
+            "exponent": 75,
+            "generator": 1427247692705959881058285969449495136382746623,
+            "component": 1207745229118713232358401,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 5550
+          },
+          {
+            "exponent": 76,
+            "generator": 5708990770823839524233143877797980545530986495,
+            "component": 4444580219171430789361,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 5700
+          },
+          {
+            "exponent": 77,
+            "generator": 22835963083295358096932575511191922182123945983,
+            "component": 996982085480596874968780294907183101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 5852
+          },
+          {
+            "exponent": 78,
+            "generator": 91343852333181432387730302044767688728495783935,
+            "component": 26648518108057,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6006
+          },
+          {
+            "exponent": 79,
+            "generator": 365375409332725729550921208179070754913983135743,
+            "component": 121791803110908576516973736059690251637994378581,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6162
+          },
+          {
+            "exponent": 80,
+            "generator": 1461501637330902918203684832716283019655932542975,
+            "component": 18446462603027742721,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6320
+          },
+          {
+            "exponent": 81,
+            "generator": 5846006549323611672814739330865132078623730171903,
+            "component": 108172851219475581599184843352747,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6480
+          },
+          {
+            "exponent": 82,
+            "generator": 23384026197294446691258957323460528314494920687615,
+            "component": 967140655691703339764941,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6642
+          },
+          {
+            "exponent": 83,
+            "generator": 93536104789177786765035829293842113257979682750463,
+            "component": 31178701596392595588345276431280704419326560916821,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6806
+          },
+          {
+            "exponent": 84,
+            "generator": 374144419156711147060143317175368453031918731001855,
+            "component": 298994165018641,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 6972
+          },
+          {
+            "exponent": 85,
+            "generator": 1496577676626844588240573268701473812127674924007423,
+            "component": 255461249081615393102146524966909113341,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 7140
+          },
+          {
+            "exponent": 86,
+            "generator": 5986310706507378352962293074805895248510699696029695,
+            "component": 15474250491067253436239053,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 7310
+          },
+          {
+            "exponent": 87,
+            "generator": 23945242826029513411849172299223580994042798784118783,
+            "component": 3956035701740821064034205591392061,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 7482
+          },
+          {
+            "exponent": 88,
+            "generator": 95780971304118053647396689196894323976171195136475135,
+            "component": 1204221828098618944454401,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 7656
+          },
+          {
+            "exponent": 89,
+            "generator": 383123885216472214589586756787577295904684780545900543,
+            "component": 127707961738824071529862252262525765301561593515300181,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 7832
+          },
+          {
+            "exponent": 90,
+            "generator": 1532495540865888858358347027150309183618739122183602175,
+            "component": 285871932440641,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 8010
+          },
+          {
+            "exponent": 91,
+            "generator": 6129982163463555433433388108601236734474956488734408703,
+            "component": 16726580057555561317321747258999441431937021,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 8190
+          },
+          {
+            "exponent": 92,
+            "generator": 24519928653854221733733552434404946937899825954937634815,
+            "component": 291280009243618888211558641,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 8372
+          },
+          {
+            "exponent": 93,
+            "generator": 98079714615416886934934209737619787751599303819750539263,
+            "component": 1012745139645650189098695189662519101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 8556
+          },
+          {
+            "exponent": 94,
+            "generator": 392318858461667547739736838950479151006397215279002157055,
+            "component": 3961408125713216879677197517,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 8742
+          },
+          {
+            "exponent": 95,
+            "generator": 1569275433846670190958947355801916604025588861116008628223,
+            "component": 16741908418899145782015714798169585689293821,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 8930
+          },
+          {
+            "exponent": 96,
+            "generator": 6277101735386680763835789423207666416102355444464034512895,
+            "component": 18446744069414584321,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 9120
+          },
+          {
+            "exponent": 97,
+            "generator": 25108406941546723055343157692830665664409421777856138051583,
+            "component": 8369468980515574351781052564276888554803140592618712683861,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 9312
+          },
+          {
+            "exponent": 98,
+            "generator": 100433627766186892221372630771322662657637687111424552206335,
+            "component": 19341632594266545643831297,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 9506
+          },
+          {
+            "exponent": 99,
+            "generator": 401734511064747568885490523085290650630550748445698208825343,
+            "component": 1308463799744055615353948737131249601,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 9702
+          },
+          {
+            "exponent": 100,
+            "generator": 1606938044258990275541962092341162602522202993782792835301375,
+            "component": 1208924666694224078438401,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 9900
+          },
+          {
+            "exponent": 101,
+            "generator": 6427752177035961102167848369364650410088811975131171341205503,
+            "component": 2142584059011987034055949456454883470029603991710390447068501,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 10100
+          },
+          {
+            "exponent": 102,
+            "generator": 25711008708143844408671393477458601640355247900524685364822015,
+            "component": 22703685012474842821,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 10302
+          },
+          {
+            "exponent": 103,
+            "generator": 102844034832575377634685573909834406561420991602098741459288063,
+            "component": 34281344944191792544895191303278135520473663867366247153096021,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 10506
+          },
+          {
+            "exponent": 104,
+            "generator": 411376139330301510538742295639337626245683966408394965837152255,
+            "component": 78919881726271091143763623681,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 10712
+          },
+          {
+            "exponent": 105,
+            "generator": 1645504557321206042154969182557350504982735865633579863348609023,
+            "component": 103879072965445891253629250581,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 10920
+          },
+          {
+            "exponent": 106,
+            "generator": 6582018229284824168619876730229402019930943462534319453394436095,
+            "component": 16225927682921336339157801028813,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 11130
+          },
+          {
+            "exponent": 107,
+            "generator": 26328072917139296674479506920917608079723773850137277813577744383,
+            "component": 8776024305713098891493168973639202693241257950045759271192581461,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 11342
+          },
+          {
+            "exponent": 108,
+            "generator": 105312291668557186697918027683670432318895095400549111254310977535,
+            "component": 4722366482800925736961,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 11556
+          },
+          {
+            "exponent": 109,
+            "generator": 421249166674228746791672110734681729275580381602196445017243910143,
+            "component": 140416388891409582263890703578227243091860127200732148339081303381,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 11772
+          },
+          {
+            "exponent": 110,
+            "generator": 1684996666696914987166688442938726917102321526408785780068975640575,
+            "component": 1509682614801884712528901,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 11990
+          },
+          {
+            "exponent": 111,
+            "generator": 6739986666787659948666753771754907668409286105635143120275902562303,
+            "component": 16991043960785236679266208658490726794121021,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 12210
+          },
+          {
+            "exponent": 112,
+            "generator": 26959946667150639794667015087019630673637144422540572481103610249215,
+            "component": 79226953606891185567396986881,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 12432
+          },
+          {
+            "exponent": 113,
+            "generator": 107839786668602559178668060348078522694548577690162289924414440996863,
+            "component": 35946595556200853059556020116026174231516192563387429974804813665621,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 12656
+          },
+          {
+            "exponent": 114,
+            "generator": 431359146674410236714672241392314090778194310760649159697657763987455,
+            "component": 5812143363510726577861,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 12882
+          },
+          {
+            "exponent": 115,
+            "generator": 1725436586697640946858688965569256363112777243042596638790631055949823,
+            "component": 71905949131538328982044807860244262729147881389814781,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 13110
+          },
+          {
+            "exponent": 116,
+            "generator": 6901746346790563787434755862277025452451108972170386555162524223799295,
+            "component": 4886867631562190709205173015736561,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 13340
+          },
+          {
+            "exponent": 117,
+            "generator": 27606985387162255149739023449108101809804435888681546220650096895197183,
+            "component": 21952379796486765774508676826777840035037121,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 13572
+          },
+          {
+            "exponent": 118,
+            "generator": 110427941548649020598956093796432407239217743554726184882600387580788735,
+            "component": 66461399789245793645190353014017229,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 13806
+          },
+          {
+            "exponent": 119,
+            "generator": 441711766194596082395824375185729628956870974218904739530401550323154943,
+            "component": 4708113662267061359711655438863945386944617044069964529661,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 14042
+          },
+          {
+            "exponent": 120,
+            "generator": 1766847064778384329583297500742918515827483896875618958121606201292619775,
+            "component": 18518800563924107521,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 14280
+          },
+          {
+            "exponent": 121,
+            "generator": 7067388259113537318333190002971674063309935587502475832486424805170479103,
+            "component": 1684997068431521832908397415010711925988641160999211509632571801601,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 14520
+          },
+          {
+            "exponent": 122,
+            "generator": 28269553036454149273332760011886696253239742350009903329945699220681916415,
+            "component": 1063382396627932698323045648224275661,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 14762
+          },
+          {
+            "exponent": 123,
+            "generator": 113078212145816597093331040047546785012958969400039613319782796882727665663,
+            "component": 1113525057014021271012331531388752703476743786301,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 15006
+          },
+          {
+            "exponent": 124,
+            "generator": 452312848583266388373324160190187140051835877600158453279131187530910662655,
+            "component": 1251038113679920821556524292028559601,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 15252
+          },
+          {
+            "exponent": 125,
+            "generator": 1809251394333065553493296640760748560207343510400633813116524750123642650623,
+            "component": 1606938044258991702789654798302311311408400673805325828096001,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 15500
+          },
+          {
+            "exponent": 126,
+            "generator": 7237005577332262213973186563042994240829374041602535252466099000494570602495,
+            "component": 4796135163359699664961,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 15750
+          },
+          {
+            "exponent": 127,
+            "generator": 28948022309329048855892746252171976963317496166410141009864396001978282409983,
+            "component": 9649340769776349618630915417390658987772498722136713669954798667326094136661,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 16002
+          },
+          {
+            "exponent": 128,
+            "generator": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+            "component": 340282366920938463463374607431768211457,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 16256
+          },
+          {
+            "exponent": 129,
+            "generator": 463168356949264781694283940034751631413079938662562256157830336031652518559743,
+            "component": 285062414595589445379156816770340366849855565582141,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 16512
+          },
+          {
+            "exponent": 130,
+            "generator": 1852673427797059126777135760139006525652319754650249024631321344126610074238975,
+            "component": 98938581958147414750680574981,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 16770
+          },
+          {
+            "exponent": 131,
+            "generator": 7410693711188236507108543040556026102609279018600996098525285376506440296955903,
+            "component": 2470231237062745502369514346852008700869759672866998699508428458835480098985301,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 17030
+          },
+          {
+            "exponent": 132,
+            "generator": 29642774844752946028434172162224104410437116074403984394101141506025761187823615,
+            "component": 1284170165233723969040401,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 17292
+          },
+          {
+            "exponent": 133,
+            "generator": 118571099379011784113736688648896417641748464297615937576404566024103044751294463,
+            "component": 78989039860095131321832012557048870672533948859809727959621648381,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 17556
+          },
+          {
+            "exponent": 134,
+            "generator": 474284397516047136454946754595585670566993857190463750305618264096412179005177855,
+            "component": 4355614296588012332331194975126633106637,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 17822
+          },
+          {
+            "exponent": 135,
+            "generator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711423,
+            "component": 22300660127938894144855169365908307327057921,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 18090
+          },
+          {
+            "exponent": 136,
+            "generator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845695,
+            "component": 338958311018522360492699998064329424641,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 18360
+          },
+          {
+            "exponent": 137,
+            "generator": 30354201441027016733116592294117482916287606860189680019559568902170379456331382783,
+            "component": 10118067147009005577705530764705827638762535620063226673186522967390126485443794261,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 18632
+          },
+          {
+            "exponent": 138,
+            "generator": 121416805764108066932466369176469931665150427440758720078238275608681517825325531135,
+            "component": 380904627472419286988639941,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 18906
+          },
+          {
+            "exponent": 139,
+            "generator": 485667223056432267729865476705879726660601709763034880312953102434726071301302124543,
+            "component": 161889074352144089243288492235293242220200569921011626770984367478242023767100708181,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 19182
+          },
+          {
+            "exponent": 140,
+            "generator": 1942668892225729070919461906823518906642406839052139521251812409738904285205208498175,
+            "component": 84179842077657862011867889681,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 19460
+          },
+          {
+            "exponent": 141,
+            "generator": 7770675568902916283677847627294075626569627356208558085007249638955617140820833992703,
+            "component": 18681850402936549892368420903346961506426823794161340221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 19740
+          },
+          {
+            "exponent": 142,
+            "generator": 31082702275611665134711390509176302506278509424834232340028998555822468563283335970815,
+            "component": 1115037259926531157076785913632418075299021,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 20022
+          },
+          {
+            "exponent": 143,
+            "generator": 124330809102446660538845562036705210025114037699336929360115994223289874253133343883263,
+            "component": 1325135634266798268018931658128987334185330636413802475139743011469000701,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 20306
+          },
+          {
+            "exponent": 144,
+            "generator": 497323236409786642155382248146820840100456150797347717440463976893159497012533375533055,
+            "component": 79228162514264056118567239681,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 20592
+          },
+          {
+            "exponent": 145,
+            "generator": 1989292945639146568621528992587283360401824603189390869761855907572637988050133502132223,
+            "component": 20239725357157078625747796739901873745973697970531407313559062836221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 20880
+          },
+          {
+            "exponent": 146,
+            "generator": 7957171782556586274486115970349133441607298412757563479047423630290551952200534008528895,
+            "component": 17840596158824498513228574618118689204784333,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 21170
+          },
+          {
+            "exponent": 147,
+            "generator": 31828687130226345097944463881396533766429193651030253916189694521162207808802136034115583,
+            "component": 53445940456244702443068540003386931144567003393463,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 21462
+          },
+          {
+            "exponent": 148,
+            "generator": 127314748520905380391777855525586135065716774604121015664758778084648831235208544136462335,
+            "component": 20988936657440586486151264256610222593863921,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 21756
+          },
+          {
+            "exponent": 149,
+            "generator": 509258994083621521567111422102344540262867098416484062659035112338595324940834176545849343,
+            "component": 169752998027873840522370474034114846754289032805494687553011704112865108313611392181949781,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 22052
+          },
+          {
+            "exponent": 150,
+            "generator": 2037035976334486086268445688409378161051468393665936250636140449354381299763336706183397375,
+            "component": 1210106410108346093798401,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 22350
+          },
+          {
+            "exponent": 151,
+            "generator": 8148143905337944345073782753637512644205873574663745002544561797417525199053346824733589503,
+            "component": 2716047968445981448357927584545837548068624524887915000848187265805841733017782274911196501,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 22650
+          },
+          {
+            "exponent": 152,
+            "generator": 32592575621351777380295131014550050576823494298654980010178247189670100796213387298934358015,
+            "component": 22213971870909881417249587073143893173272321,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 22952
+          },
+          {
+            "exponent": 153,
+            "generator": 130370302485407109521180524058200202307293977194619920040712988758680403184853549195737432063,
+            "component": 6179045591959587697349529795112634521210324637858849357761,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 23256
+          },
+          {
+            "exponent": 154,
+            "generator": 521481209941628438084722096232800809229175908778479680162851955034721612739414196782949728255,
+            "component": 1661433192755907923906963983109636101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 23562
+          },
+          {
+            "exponent": 155,
+            "generator": 2085924839766513752338888384931203236916703635113918720651407820138886450957656787131798913023,
+            "component": 42788085193762783887182279330773250119008394217229864251423998707177571,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 23870
+          },
+          {
+            "exponent": 156,
+            "generator": 8343699359066055009355553539724812947666814540455674882605631280555545803830627148527195652095,
+            "component": 84159375948762099254554456081,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 24180
+          },
+          {
+            "exponent": 157,
+            "generator": 33374797436264220037422214158899251790667258161822699530422525122222183215322508594108782608383,
+            "component": 11124932478754740012474071386299750596889086053940899843474175040740727738440836198036260869461,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 24492
+          },
+          {
+            "exponent": 158,
+            "generator": 133499189745056880149688856635597007162669032647290798121690100488888732861290034376435130433535,
+            "component": 73075081866545145910184241635814150982796627149,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 24806
+          },
+          {
+            "exponent": 159,
+            "generator": 533996758980227520598755426542388028650676130589163192486760401955554931445160137505740521734143,
+            "component": 313429439489753531839041749058546816646159908057905487733313341,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 25122
+          },
+          {
+            "exponent": 160,
+            "generator": 2135987035920910082395021706169552114602704522356652769947041607822219725780640550022962086936575,
+            "component": 340282366841710300967557013907638845441,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 25440
+          },
+          {
+            "exponent": 161,
+            "generator": 8543948143683640329580086824678208458410818089426611079788166431288878903122562200091848347746303,
+            "component": 22233438154936786736687981476274806630282103438930436245344188206548202895130621,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 25760
+          },
+          {
+            "exponent": 162,
+            "generator": 34175792574734561318320347298712833833643272357706444319152665725155515612490248800367393390985215,
+            "component": 324518553658426708768757511094273,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 26082
+          },
+          {
+            "exponent": 163,
+            "generator": 136703170298938245273281389194851335334573089430825777276610662900622062449960995201469573563940863,
+            "component": 45567723432979415091093796398283778444857696476941925758870220966874020816653665067156524521313621,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 26406
+          },
+          {
+            "exponent": 164,
+            "generator": 546812681195752981093125556779405341338292357723303109106442651602488249799843980805878294255763455,
+            "component": 1375530952782026275956409254321207547911465922801,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 26732
+          },
+          {
+            "exponent": 165,
+            "generator": 2187250724783011924372502227117621365353169430893212436425770606409952999199375923223513177023053823,
+            "component": 1916347181291990363404827157709281199996255841301,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 27060
+          },
+          {
+            "exponent": 166,
+            "generator": 8749002899132047697490008908470485461412677723572849745703082425639811996797503692894052708092215295,
+            "component": 18707220957835557353007165858768422651595936550093,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 27390
+          },
+          {
+            "exponent": 167,
+            "generator": 34996011596528190789960035633881941845650710894291398982812329702559247987190014771576210832368861183,
+            "component": 11665337198842730263320011877960647281883570298097132994270776567519749329063338257192070277456287061,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 27722
+          },
+          {
+            "exponent": 168,
+            "generator": 139984046386112763159840142535527767382602843577165595931249318810236991948760059086304843329475444735,
+            "component": 79537642783272737189578932481,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 28056
+          },
+          {
+            "exponent": 169,
+            "generator": 559936185544451052639360570142111069530411374308662383724997275240947967795040236345219373317901778943,
+            "component": 8343699483396865964475669482615300299908394727365033493787508741445194322470345479481888604161,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 28392
+          },
+          {
+            "exponent": 170,
+            "generator": 2239744742177804210557442280568444278121645497234649534899989100963791871180160945380877493271607115775,
+            "component": 424937980130193386565883560008331815941,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 28730
+          },
+          {
+            "exponent": 171,
+            "generator": 8958978968711216842229769122273777112486581988938598139599956403855167484720643781523509973086428463103,
+            "component": 5456167503692308740493457309001051259785498740180873446661899099,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 29070
+          },
+          {
+            "exponent": 172,
+            "generator": 35835915874844867368919076489095108449946327955754392558399825615420669938882575126094039892345713852415,
+            "component": 352135923912198726644840769106229132265335276237041,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 29412
+          },
+          {
+            "exponent": 173,
+            "generator": 143343663499379469475676305956380433799785311823017570233599302461682679755530300504376159569382855409663,
+            "component": 47781221166459823158558768652126811266595103941005856744533100820560893251843433501458719856460951803221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 29756
+          },
+          {
+            "exponent": 174,
+            "generator": 573374653997517877902705223825521735199141247292070280934397209846730719022121202017504638277531421638655,
+            "component": 6390519210504403212942889624293061,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 30102
+          },
+          {
+            "exponent": 175,
+            "generator": 2293498615990071511610820895302086940796564989168281123737588839386922876088484808070018553110125686554623,
+            "component": 1765121628191688256380872233758033310512073933394906737721942795012275201,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 30450
+          },
+          {
+            "exponent": 176,
+            "generator": 9173994463960286046443283581208347763186259956673124494950355357547691504353939232280074212440502746218495,
+            "component": 1461479336925981562283850179240647633797262540801,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 30800
+          },
+          {
+            "exponent": 177,
+            "generator": 36695977855841144185773134324833391052745039826692497979801421430190766017415756929120296849762010984873983,
+            "component": 5258473407078524790426480656972971789120225833378816814692959650041661,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 31152
+          },
+          {
+            "exponent": 178,
+            "generator": 146783911423364576743092537299333564210980159306769991919205685720763064069663027716481187399048043939495935,
+            "component": 76624777043294442917917351357515459180936956109180109,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 31506
+          },
+          {
+            "exponent": 179,
+            "generator": 587135645693458306972370149197334256843920637227079967676822742883052256278652110865924749596192175757983743,
+            "component": 195711881897819435657456716399111418947973545742359989225607580961017418759550703621974916532064058585994581,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 31862
+          },
+          {
+            "exponent": 180,
+            "generator": 2348542582773833227889480596789337027375682548908319870707290971532209025114608443463698998384768703031934975,
+            "component": 79247505326224968612036218881,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 32220
+          },
+          {
+            "exponent": 181,
+            "generator": 9394170331095332911557922387157348109502730195633279482829163886128836100458433773854795993539074812127739903,
+            "component": 3131390110365110970519307462385782703167576731877759827609721295376278700152811257951598664513024937375913301,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 32580
+          },
+          {
+            "exponent": 182,
+            "generator": 37576681324381331646231689548629392438010920782533117931316655544515344401833735095419183974156299248510959615,
+            "component": 27874229774809882510340478978177992948105221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 32942
+          },
+          {
+            "exponent": 183,
+            "generator": 150306725297525326584926758194517569752043683130132471725266622178061377607334940381676735896625196994043838463,
+            "component": 1346169192212102346349179048185080774216983539673788896264806069609680701,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 33306
+          },
+          {
+            "exponent": 184,
+            "generator": 601226901190101306339707032778070279008174732520529886901066488712245510429339761526706943586500787976175353855,
+            "component": 95408282699821874450325106748657381081322279980302081,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 33672
+          },
+          {
+            "exponent": 185,
+            "generator": 2404907604760405225358828131112281116032698930082119547604265954848982041717359046106827774346003151904701415423,
+            "component": 373357033785646276808752479508073087172039418518195582841399289253210698553179128198141,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 34040
+          },
+          {
+            "exponent": 186,
+            "generator": 9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661695,
+            "component": 1635972917889127227834555918927548101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 34410
+          },
+          {
+            "exponent": 187,
+            "generator": 38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646783,
+            "component": 1601990658978267316202790742907932451324578950094863209182277988284723912595519386714179951919101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 34782
+          },
+          {
+            "exponent": 188,
+            "generator": 153914086704665934422965000391185991426092731525255651046673021110334850669910978950836977558144201721900890587135,
+            "component": 23077579909509855749396284644145832412141012663470715121,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 35156
+          },
+          {
+            "exponent": 189,
+            "generator": 615656346818663737691860001564743965704370926101022604186692084441339402679643915803347910232576806887603562348543,
+            "component": 105311889934046127796333390771560813738395913701038410503210926081,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 35532
+          },
+          {
+            "exponent": 190,
+            "generator": 2462625387274654950767440006258975862817483704404090416746768337765357610718575663213391640930307227550414249394175,
+            "component": 27848735467332050423410146951939435120290821,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 35910
+          },
+          {
+            "exponent": 191,
+            "generator": 9850501549098619803069760025035903451269934817616361666987073351061430442874302652853566563721228910201656997576703,
+            "component": 3283500516366206601023253341678634483756644939205453888995691117020476814291434217617855521240409636733885665858901,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 36290
+          },
+          {
+            "exponent": 192,
+            "generator": 39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306815,
+            "component": 340282366920938463444927863358058659841,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 36672
+          },
+          {
+            "exponent": 193,
+            "generator": 157608024785577916849116160400574455220318957081861786671793173616982887085988842445657065019539662563226511961227263,
+            "component": 52536008261859305616372053466858151740106319027287262223931057872327629028662947481885688339846554187742170653742421,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 37056
+          },
+          {
+            "exponent": 194,
+            "generator": 630432099142311667396464641602297820881275828327447146687172694467931548343955369782628260078158650252906047844909055,
+            "component": 5021681388309344611068631538566133132881884355571227610317,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 37442
+          },
+          {
+            "exponent": 195,
+            "generator": 2521728396569246669585858566409191283525103313309788586748690777871726193375821479130513040312634601011624191379636223,
+            "component": 8230650311124614294935840085940595806186344115090692746261,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 37830
+          },
+          {
+            "exponent": 196,
+            "generator": 10086913586276986678343434265636765134100413253239154346994763111486904773503285916522052161250538404046496765518544895,
+            "component": 374144417762914577344276210021400647745419440291841,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 38220
+          },
+          {
+            "exponent": 197,
+            "generator": 40347654345107946713373737062547060536401653012956617387979052445947619094013143666088208645002153616185987062074179583,
+            "component": 13449218115035982237791245687515686845467217670985539129326350815315873031337714555362736215000717872061995687358059861,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 38612
+          },
+          {
+            "exponent": 198,
+            "generator": 161390617380431786853494948250188242145606612051826469551916209783790476376052574664352834580008614464743948248296718335,
+            "component": 1349992033408136725846815458123841601,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 39006
+          },
+          {
+            "exponent": 199,
+            "generator": 645562469521727147413979793000752968582426448207305878207664839135161905504210298657411338320034457858975792993186873343,
+            "component": 215187489840575715804659931000250989527475482735768626069221613045053968501403432885803779440011485952991930997728957781,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 39402
+          },
+          {
+            "exponent": 200,
+            "generator": 2582249878086908589655919172003011874329705792829223512830659356540647622016841194629645353280137831435903171972747493375,
+            "component": 1461501637329573690207901125769198826125315276801,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 39800
+          },
+          {
+            "exponent": 201,
+            "generator": 10328999512347634358623676688012047497318823171316894051322637426162590488067364778518581413120551325743612687890989973503,
+            "component": 22584971310287958878806988314075508122238839774378413827013329527204181531938621,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 40200
+          },
+          {
+            "exponent": 202,
+            "generator": 41315998049390537434494706752048189989275292685267576205290549704650361952269459114074325652482205302974450751563959894015,
+            "component": 1285550435407192220433569673872930082017762395026234268241101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 40602
+          },
+          {
+            "exponent": 203,
+            "generator": 165263992197562149737978827008192759957101170741070304821162198818601447809077836456297302609928821211897803006255839576063,
+            "component": 104994443141827115893059543941525052320530413233824840270320545933466496275592037638042944561674665981,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 41006
+          },
+          {
+            "exponent": 204,
+            "generator": 661055968790248598951915308032771039828404682964281219284648795274405791236311345825189210439715284847591212025023358304255,
+            "component": 361461767351702268242028014926777217041,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 41412
+          },
+          {
+            "exponent": 205,
+            "generator": 2644223875160994395807661232131084159313618731857124877138595181097623164945245383300756841758861139390364848100093433217023,
+            "component": 1603556249840917833117670586092719903680027715701954664749046800610407357189491097933865655727101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 41820
+          },
+          {
+            "exponent": 206,
+            "generator": 10576895500643977583230644928524336637254474927428499508554380724390492659780981533203027367035444557561459392400373732868095,
+            "component": 20568806966515075526937114781966881312284198320419748291857613,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 42230
+          },
+          {
+            "exponent": 207,
+            "generator": 42307582002575910332922579714097346549017899709713998034217522897561970639123926132812109468141778230245837569601494931472383,
+            "component": 29179717799593383064760002205352062404506314801706908704452021654477175668342721,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 42642
+          },
+          {
+            "exponent": 208,
+            "generator": 169230328010303641331690318856389386196071598838855992136870091590247882556495704531248437872567112920983350278405979725889535,
+            "component": 6277005955876855982708123588802319701019026907066160578561,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 43056
+          },
+          {
+            "exponent": 209,
+            "generator": 676921312041214565326761275425557544784286395355423968547480366360991530225982818124993751490268451683933401113623918903558143,
+            "component": 1761407357039022166307143629592445111110168118105011590149032094565556053836560584180933584870201723195490301,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 43472
+          },
+          {
+            "exponent": 210,
+            "generator": 2707685248164858261307045101702230179137145581421695874189921465443966120903931272499975005961073806735733604454495675614232575,
+            "component": 64439678971267470274607674381,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 43890
+          },
+          {
+            "exponent": 211,
+            "generator": 10830740992659433045228180406808920716548582325686783496759685861775864483615725089999900023844295226942934417817982702456930303,
+            "component": 3610246997553144348409393468936306905516194108562261165586561953925288161205241696666633341281431742314311472605994234152310101,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 44310
+          },
+          {
+            "exponent": 212,
+            "generator": 43322963970637732180912721627235682866194329302747133987038743447103457934462900359999600095377180907771737671271930809827721215,
+            "component": 387177542899107304036463337072317765878290791913783497258496241,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 44732
+          },
+          {
+            "exponent": 213,
+            "generator": 173291855882550928723650886508942731464777317210988535948154973788413831737851601439998400381508723631086950685087723239310884863,
+            "component": 1480128679791031673081494786151252500298976904762882474889751616178668415493986307901,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 45156
+          },
+          {
+            "exponent": 214,
+            "generator": 693167423530203714894603546035770925859109268843954143792619895153655326951406405759993601526034894524347802740350892957243539455,
+            "component": 5265614583427859334895901384183521615944754770027455562715548877,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 45582
+          },
+          {
+            "exponent": 215,
+            "generator": 2772669694120814859578414184143083703436437075375816575170479580614621307805625623039974406104139578097391210961403571828974157823,
+            "component": 105090662389574391111199639156197845745487125073426212842997547026038010450844526278803752994032579581,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 46010
+          },
+          {
+            "exponent": 216,
+            "generator": 11090678776483259438313656736572334813745748301503266300681918322458485231222502492159897624416558312389564843845614287315896631295,
+            "component": 22300745198530623141530995906165491860766721,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 46440
+          },
+          {
+            "exponent": 217,
+            "generator": 44362715105933037753254626946289339254982993206013065202727673289833940924890009968639590497666233249558259375382457149263586525183,
+            "component": 1761514451390152152265379484383013773470426103981495663029696269788582844630815187664628171276958887581794301,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 46872
+          },
+          {
+            "exponent": 218,
+            "generator": 177450860423732151013018507785157357019931972824052260810910693159335763699560039874558361990664932998233037501529828597054346100735,
+            "component": 84249833334845749358334422146936345855116076320439289003448782029,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 47306
+          },
+          {
+            "exponent": 219,
+            "generator": 709803441694928604052074031140629428079727891296209043243642772637343054798240159498233447962659731992932150006119314388217384402943,
+            "component": 378912942026504108308862665254720640076538023902883060627138866496829763942570477735741,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 47742
+          },
+          {
+            "exponent": 220,
+            "generator": 2839213766779714416208296124562517712318911565184836172974571090549372219192960637992933791850638927971728600024477257552869537611775,
+            "component": 1552844008756547545103450892348760879424454262801,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 48180
+          },
+          {
+            "exponent": 221,
+            "generator": 11356855067118857664833184498250070849275646260739344691898284362197488876771842551971735167402555711886914400097909030211478150447103,
+            "component": 29551505089367724228779805271659294739023590017964753423139893751028710985381290569490015765772170994189474384052221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 48620
+          },
+          {
+            "exponent": 222,
+            "generator": 45427420268475430659332737993000283397102585042957378767593137448789955507087370207886940669610222847547657600391636120845912601788415,
+            "component": 27447071013576151558811738684341715808833221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 49062
+          },
+          {
+            "exponent": 223,
+            "generator": 181709681073901722637330951972001133588410340171829515070372549795159822028349480831547762678440891390190630401566544483383650407153663,
+            "component": 60569893691300574212443650657333711196136780057276505023457516598386607342783160277182587559480297130063543467188848161127883469051221,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 49506
+          },
+          {
+            "exponent": 224,
+            "generator": 726838724295606890549323807888004534353641360687318060281490199180639288113397923326191050713763565560762521606266177933534601628614655,
+            "component": 6277101733925179126845168871845691884353629438715740815361,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 49952
+          },
+          {
+            "exponent": 225,
+            "generator": 2907354897182427562197295231552018137414565442749272241125960796722557152453591693304764202855054262243050086425064711734138406514458623,
+            "component": 1766847063132879772262091460015197024646865278404193228319094687871795201,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 50400
+          },
+          {
+            "exponent": 226,
+            "generator": 11629419588729710248789180926208072549658261770997088964503843186890228609814366773219056811420217048972200345700258846936553626057834495,
+            "component": 21567957333720511835733612069615704538909715538032457984882888199373,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 50850
+          },
+          {
+            "exponent": 227,
+            "generator": 46517678354918840995156723704832290198633047083988355858015372747560914439257467092876227245680868195888801382801035387746214504231337983,
+            "component": 15505892784972946998385574568277430066211015694662785286005124249186971479752489030958742415226956065296267127600345129248738168077112661,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 51302
+          },
+          {
+            "exponent": 228,
+            "generator": 186070713419675363980626894819329160794532188335953423432061490990243657757029868371504908982723472783555205531204141550984858016925351935,
+            "component": 23688758385161159851589495103461637473890321,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 51756
+          },
+          {
+            "exponent": 229,
+            "generator": 744282853678701455922507579277316643178128753343813693728245963960974631028119473486019635930893891134220822124816566203939432067701407743,
+            "component": 248094284559567151974169193092438881059376251114604564576081987986991543676039824495339878643631297044740274041605522067979810689233802581,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 52212
+          },
+          {
+            "exponent": 230,
+            "generator": 2977131414714805823690030317109266572712515013375254774912983855843898524112477893944078543723575564536883288499266264815757728270805630975,
+            "component": 119609408067579869680925977553024978533869592951909381,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 52670
+          },
+          {
+            "exponent": 231,
+            "generator": 11908525658859223294760121268437066290850060053501019099651935423375594096449911575776314174894302258147533153997065059263030913083222523903,
+            "component": 2318844679946368574992452196037185797411814424169221451072605193181511701,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 53130
+          },
+          {
+            "exponent": 232,
+            "generator": 47634102635436893179040485073748265163400240214004076398607741693502376385799646303105256699577209032590132615988260237052123652332890095615,
+            "component": 26855044150936045865504886623646013433661902615448974922811378302721,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 53592
+          },
+          {
+            "exponent": 233,
+            "generator": 190536410541747572716161940294993060653600960856016305594430966774009505543198585212421026798308836130360530463953040948208494609331560382463,
+            "component": 63512136847249190905387313431664353551200320285338768531476988924669835181066195070807008932769612043453510154651013649402831536443853460821,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 54056
+          },
+          {
+            "exponent": 234,
+            "generator": 762145642166990290864647761179972242614403843424065222377723867096038022172794340849684107193235344521442121855812163792833978437326241529855,
+            "component": 22649107942767526007371683563925808348921921,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 54522
+          },
+          {
+            "exponent": 235,
+            "generator": 3048582568667961163458591044719888970457615373696260889510895468384152088691177363398736428772941378085768487423248655171335913749304966119423,
+            "component": 451360958078199221181715543691955035175940316155230201391083330191689576462930421920277165362858598716712940541,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 54990
+          },
+          {
+            "exponent": 236,
+            "generator": 12194330274671844653834364178879555881830461494785043558043581873536608354764709453594945715091765512343073949692994620685343654997219864477695,
+            "component": 6495761267567589446997417282143082778777514326748599110741199269458161,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 55460
+          },
+          {
+            "exponent": 237,
+            "generator": 48777321098687378615337456715518223527321845979140174232174327494146433419058837814379782860367062049372295798771978482741374619988879457910783,
+            "component": 6357104273574137149985183649314143198222334887983627311001086962782840669974719291969005408061,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 55932
+          },
+          {
+            "exponent": 238,
+            "generator": 195109284394749514461349826862072894109287383916560696928697309976585733676235351257519131441468248197489183195087913930965498479955517831643135,
+            "component": 7845898293148387773003253333886090331370088562160121593861,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 56406
+          },
+          {
+            "exponent": 239,
+            "generator": 780437137578998057845399307448291576437149535666242787714789239906342934704941405030076525765872992789956732780351655723861993919822071326572543,
+            "component": 260145712526332685948466435816097192145716511888747595904929746635447644901647135010025508588624330929985577593450551907953997973274023775524181,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 56882
+          },
+          {
+            "exponent": 240,
+            "generator": 3121748550315992231381597229793166305748598142664971150859156959625371738819765620120306103063491971159826931121406622895447975679288285306290175,
+            "component": 340287559217795789346736497750236528641,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 57360
+          },
+          {
+            "exponent": 241,
+            "generator": 12486994201263968925526388919172665222994392570659884603436627838501486955279062480481224412253967884639307724485626491581791902717153141225160703,
+            "component": 4162331400421322975175462973057555074331464190219961534478875946167162318426354160160408137417989294879769241495208830527263967572384380408386901,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 57840
+          },
+          {
+            "exponent": 242,
+            "generator": 49947976805055875702105555676690660891977570282639538413746511354005947821116249921924897649015871538557230897942505966327167610868612564900642815,
+            "component": 1684996264962499703367587717863072443065045481313942556034056847361,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 58322
+          },
+          {
+            "exponent": 243,
+            "generator": 199791907220223502808422222706762643567910281130558153654986045416023791284464999687699590596063486154228923591770023865308670443474450259602571263,
+            "component": 11391930858244853772773449099570944611214424119237430108567329778942776783940371310815339040385707,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 58806
+          },
+          {
+            "exponent": 244,
+            "generator": 799167628880894011233688890827050574271641124522232614619944181664095165137859998750798362384253944616915694367080095461234681773897801038410285055,
+            "component": 1662914884497302898431338824228629191367043667647641372349747012981289201,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 59292
+          },
+          {
+            "exponent": 245,
+            "generator": 3196670515523576044934755563308202297086564498088930458479776726656380660551439995003193449537015778467662777468320381844938727095591204153641140223,
+            "component": 139975502437969079519629126311518208432243984833792690548000934251674276186399711162759686201502842881,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 59780
+          },
+          {
+            "exponent": 246,
+            "generator": 12786682062094304179739022253232809188346257992355721833919106906625522642205759980012773798148063113870651109873281527379754908382364816614564560895,
+            "component": 1798771245945726668558380960596711527382940143301,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 60270
+          },
+          {
+            "exponent": 247,
+            "generator": 51146728248377216718956089012931236753385031969422887335676427626502090568823039920051095192592252455482604439493126109519019633529459266458258243583,
+            "component": 8318009206340701315085784064470435403616694358145512910322405694577803926950754277582590067097376906127948163731250322300850929661,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 60762
+          },
+          {
+            "exponent": 248,
+            "generator": 204586912993508866875824356051724947013540127877691549342705710506008362275292159680204380770369009821930417757972504438076078534117837065833032974335,
+            "component": 1759972173475744701841728249767265136388466449806064020541366488447123201,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 61256
+          },
+          {
+            "exponent": 249,
+            "generator": 818347651974035467503297424206899788054160511510766197370822842024033449101168638720817523081476039287721671031890017752304314136471348263332131897343,
+            "component": 416619185672954652261428995641451688638698939217759203895612933496503668220323692143205270846426941,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 61752
+          },
+          {
+            "exponent": 250,
+            "generator": 3273390607896141870013189696827599152216642046043064789483291368096133796404674554883270092325904157150886684127560071009217256545885393053328527589375,
+            "component": 321387608851797769658853877276509838967292354512650649783501,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 62250
+          },
+          {
+            "exponent": 251,
+            "generator": 13093562431584567480052758787310396608866568184172259157933165472384535185618698219533080369303616628603546736510240284036869026183541572213314110357503,
+            "component": 4364520810528189160017586262436798869622189394724086385977721824128178395206232739844360123101205542867848912170080094678956342061180524071104703452501,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 62750
+          },
+          {
+            "exponent": 252,
+            "generator": 52374249726338269920211035149241586435466272736689036631732661889538140742474792878132321477214466514414186946040961136147476104734166288853256441430015,
+            "component": 22306189716076760375134913641447846181867521,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 63252
+          },
+          {
+            "exponent": 253,
+            "generator": 209496998905353079680844140596966345741865090946756146526930647558152562969899171512529285908857866057656747784163844544589904418936665155413025765720063,
+            "component": 92583079685909615078565820278046914645133368047386963657272326649444401486246323016341461117336215403798549760149230638029974558987,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 63756
+          },
+          {
+            "exponent": 254,
+            "generator": 837987995621412318723376562387865382967460363787024586107722590232610251879596686050117143635431464230626991136655378178359617675746660621652103062880255,
+            "component": 5789604461865809771178549250434395392663499233282028201972879200395656481997,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 64262
+          },
+          {
+            "exponent": 255,
+            "generator": 3351951982485649274893506249551461531869841455148098344430890360930441007518386744200468574541725856922507964546621512713438470702986642486608412251521023,
+            "component": 151828702103100026351704687603990374973744259186348070552718898158148584975381,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 64770
+          },
+          {
+            "exponent": 256,
+            "generator": 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084095,
+            "component": 115792089237316195423570985008687907853269984665640564039457584007913129639937,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 65280
+          }
+        ],
+        "counts": [
+          {
+            "exponent": 256,
+            "count": 1
+          },
+          {
+            "exponent": 255,
+            "count": 0
+          },
+          {
+            "exponent": 254,
+            "count": 0
+          },
+          {
+            "exponent": 253,
+            "count": 0
+          },
+          {
+            "exponent": 252,
+            "count": 0
+          },
+          {
+            "exponent": 251,
+            "count": 0
+          },
+          {
+            "exponent": 250,
+            "count": 0
+          },
+          {
+            "exponent": 249,
+            "count": 0
+          },
+          {
+            "exponent": 248,
+            "count": 0
+          },
+          {
+            "exponent": 247,
+            "count": 0
+          },
+          {
+            "exponent": 246,
+            "count": 0
+          },
+          {
+            "exponent": 245,
+            "count": 0
+          },
+          {
+            "exponent": 244,
+            "count": 0
+          },
+          {
+            "exponent": 243,
+            "count": 0
+          },
+          {
+            "exponent": 242,
+            "count": 0
+          },
+          {
+            "exponent": 241,
+            "count": 0
+          },
+          {
+            "exponent": 240,
+            "count": 0
+          },
+          {
+            "exponent": 239,
+            "count": 0
+          },
+          {
+            "exponent": 238,
+            "count": 0
+          },
+          {
+            "exponent": 237,
+            "count": 0
+          },
+          {
+            "exponent": 236,
+            "count": 0
+          },
+          {
+            "exponent": 235,
+            "count": 0
+          },
+          {
+            "exponent": 234,
+            "count": 0
+          },
+          {
+            "exponent": 233,
+            "count": 0
+          },
+          {
+            "exponent": 232,
+            "count": 0
+          },
+          {
+            "exponent": 231,
+            "count": 0
+          },
+          {
+            "exponent": 230,
+            "count": 0
+          },
+          {
+            "exponent": 229,
+            "count": 0
+          },
+          {
+            "exponent": 228,
+            "count": 0
+          },
+          {
+            "exponent": 227,
+            "count": 0
+          },
+          {
+            "exponent": 226,
+            "count": 0
+          },
+          {
+            "exponent": 225,
+            "count": 0
+          },
+          {
+            "exponent": 224,
+            "count": 0
+          },
+          {
+            "exponent": 223,
+            "count": 0
+          },
+          {
+            "exponent": 222,
+            "count": 0
+          },
+          {
+            "exponent": 221,
+            "count": 0
+          },
+          {
+            "exponent": 220,
+            "count": 0
+          },
+          {
+            "exponent": 219,
+            "count": 0
+          },
+          {
+            "exponent": 218,
+            "count": 0
+          },
+          {
+            "exponent": 217,
+            "count": 0
+          },
+          {
+            "exponent": 216,
+            "count": 0
+          },
+          {
+            "exponent": 215,
+            "count": 0
+          },
+          {
+            "exponent": 214,
+            "count": 0
+          },
+          {
+            "exponent": 213,
+            "count": 0
+          },
+          {
+            "exponent": 212,
+            "count": 0
+          },
+          {
+            "exponent": 211,
+            "count": 0
+          },
+          {
+            "exponent": 210,
+            "count": 0
+          },
+          {
+            "exponent": 209,
+            "count": 0
+          },
+          {
+            "exponent": 208,
+            "count": 0
+          },
+          {
+            "exponent": 207,
+            "count": 0
+          },
+          {
+            "exponent": 206,
+            "count": 0
+          },
+          {
+            "exponent": 205,
+            "count": 0
+          },
+          {
+            "exponent": 204,
+            "count": 0
+          },
+          {
+            "exponent": 203,
+            "count": 0
+          },
+          {
+            "exponent": 202,
+            "count": 0
+          },
+          {
+            "exponent": 201,
+            "count": 0
+          },
+          {
+            "exponent": 200,
+            "count": 0
+          },
+          {
+            "exponent": 199,
+            "count": 0
+          },
+          {
+            "exponent": 198,
+            "count": 0
+          },
+          {
+            "exponent": 197,
+            "count": 0
+          },
+          {
+            "exponent": 196,
+            "count": 0
+          },
+          {
+            "exponent": 195,
+            "count": 0
+          },
+          {
+            "exponent": 194,
+            "count": 0
+          },
+          {
+            "exponent": 193,
+            "count": 0
+          },
+          {
+            "exponent": 192,
+            "count": 0
+          },
+          {
+            "exponent": 191,
+            "count": 0
+          },
+          {
+            "exponent": 190,
+            "count": 0
+          },
+          {
+            "exponent": 189,
+            "count": 0
+          },
+          {
+            "exponent": 188,
+            "count": 0
+          },
+          {
+            "exponent": 187,
+            "count": 0
+          },
+          {
+            "exponent": 186,
+            "count": 0
+          },
+          {
+            "exponent": 185,
+            "count": 0
+          },
+          {
+            "exponent": 184,
+            "count": 0
+          },
+          {
+            "exponent": 183,
+            "count": 0
+          },
+          {
+            "exponent": 182,
+            "count": 0
+          },
+          {
+            "exponent": 181,
+            "count": 0
+          },
+          {
+            "exponent": 180,
+            "count": 0
+          },
+          {
+            "exponent": 179,
+            "count": 0
+          },
+          {
+            "exponent": 178,
+            "count": 0
+          },
+          {
+            "exponent": 177,
+            "count": 0
+          },
+          {
+            "exponent": 176,
+            "count": 0
+          },
+          {
+            "exponent": 175,
+            "count": 0
+          },
+          {
+            "exponent": 174,
+            "count": 0
+          },
+          {
+            "exponent": 173,
+            "count": 0
+          },
+          {
+            "exponent": 172,
+            "count": 0
+          },
+          {
+            "exponent": 171,
+            "count": 0
+          },
+          {
+            "exponent": 170,
+            "count": 0
+          },
+          {
+            "exponent": 169,
+            "count": 0
+          },
+          {
+            "exponent": 168,
+            "count": 0
+          },
+          {
+            "exponent": 167,
+            "count": 0
+          },
+          {
+            "exponent": 166,
+            "count": 0
+          },
+          {
+            "exponent": 165,
+            "count": 0
+          },
+          {
+            "exponent": 164,
+            "count": 0
+          },
+          {
+            "exponent": 163,
+            "count": 0
+          },
+          {
+            "exponent": 162,
+            "count": 0
+          },
+          {
+            "exponent": 161,
+            "count": 0
+          },
+          {
+            "exponent": 160,
+            "count": 0
+          },
+          {
+            "exponent": 159,
+            "count": 0
+          },
+          {
+            "exponent": 158,
+            "count": 0
+          },
+          {
+            "exponent": 157,
+            "count": 0
+          },
+          {
+            "exponent": 156,
+            "count": 0
+          },
+          {
+            "exponent": 155,
+            "count": 0
+          },
+          {
+            "exponent": 154,
+            "count": 0
+          },
+          {
+            "exponent": 153,
+            "count": 0
+          },
+          {
+            "exponent": 152,
+            "count": 0
+          },
+          {
+            "exponent": 151,
+            "count": 0
+          },
+          {
+            "exponent": 150,
+            "count": 0
+          },
+          {
+            "exponent": 149,
+            "count": 0
+          },
+          {
+            "exponent": 148,
+            "count": 0
+          },
+          {
+            "exponent": 147,
+            "count": 0
+          },
+          {
+            "exponent": 146,
+            "count": 0
+          },
+          {
+            "exponent": 145,
+            "count": 0
+          },
+          {
+            "exponent": 144,
+            "count": 0
+          },
+          {
+            "exponent": 143,
+            "count": 0
+          },
+          {
+            "exponent": 142,
+            "count": 0
+          },
+          {
+            "exponent": 141,
+            "count": 0
+          },
+          {
+            "exponent": 140,
+            "count": 0
+          },
+          {
+            "exponent": 139,
+            "count": 0
+          },
+          {
+            "exponent": 138,
+            "count": 0
+          },
+          {
+            "exponent": 137,
+            "count": 0
+          },
+          {
+            "exponent": 136,
+            "count": 0
+          },
+          {
+            "exponent": 135,
+            "count": 0
+          },
+          {
+            "exponent": 134,
+            "count": 0
+          },
+          {
+            "exponent": 133,
+            "count": 0
+          },
+          {
+            "exponent": 132,
+            "count": 0
+          },
+          {
+            "exponent": 131,
+            "count": 0
+          },
+          {
+            "exponent": 130,
+            "count": 0
+          },
+          {
+            "exponent": 129,
+            "count": 0
+          },
+          {
+            "exponent": 128,
+            "count": 0
+          },
+          {
+            "exponent": 127,
+            "count": 0
+          },
+          {
+            "exponent": 126,
+            "count": 0
+          },
+          {
+            "exponent": 125,
+            "count": 0
+          },
+          {
+            "exponent": 124,
+            "count": 0
+          },
+          {
+            "exponent": 123,
+            "count": 0
+          },
+          {
+            "exponent": 122,
+            "count": 0
+          },
+          {
+            "exponent": 121,
+            "count": 0
+          },
+          {
+            "exponent": 120,
+            "count": 0
+          },
+          {
+            "exponent": 119,
+            "count": 0
+          },
+          {
+            "exponent": 118,
+            "count": 0
+          },
+          {
+            "exponent": 117,
+            "count": 0
+          },
+          {
+            "exponent": 116,
+            "count": 0
+          },
+          {
+            "exponent": 115,
+            "count": 0
+          },
+          {
+            "exponent": 114,
+            "count": 0
+          },
+          {
+            "exponent": 113,
+            "count": 0
+          },
+          {
+            "exponent": 112,
+            "count": 0
+          },
+          {
+            "exponent": 111,
+            "count": 0
+          },
+          {
+            "exponent": 110,
+            "count": 0
+          },
+          {
+            "exponent": 109,
+            "count": 0
+          },
+          {
+            "exponent": 108,
+            "count": 0
+          },
+          {
+            "exponent": 107,
+            "count": 0
+          },
+          {
+            "exponent": 106,
+            "count": 0
+          },
+          {
+            "exponent": 105,
+            "count": 0
+          },
+          {
+            "exponent": 104,
+            "count": 0
+          },
+          {
+            "exponent": 103,
+            "count": 0
+          },
+          {
+            "exponent": 102,
+            "count": 0
+          },
+          {
+            "exponent": 101,
+            "count": 0
+          },
+          {
+            "exponent": 100,
+            "count": 0
+          },
+          {
+            "exponent": 99,
+            "count": 0
+          },
+          {
+            "exponent": 98,
+            "count": 0
+          },
+          {
+            "exponent": 97,
+            "count": 0
+          },
+          {
+            "exponent": 96,
+            "count": 0
+          },
+          {
+            "exponent": 95,
+            "count": 0
+          },
+          {
+            "exponent": 94,
+            "count": 0
+          },
+          {
+            "exponent": 93,
+            "count": 0
+          },
+          {
+            "exponent": 92,
+            "count": 0
+          },
+          {
+            "exponent": 91,
+            "count": 0
+          },
+          {
+            "exponent": 90,
+            "count": 0
+          },
+          {
+            "exponent": 89,
+            "count": 0
+          },
+          {
+            "exponent": 88,
+            "count": 0
+          },
+          {
+            "exponent": 87,
+            "count": 0
+          },
+          {
+            "exponent": 86,
+            "count": 0
+          },
+          {
+            "exponent": 85,
+            "count": 0
+          },
+          {
+            "exponent": 84,
+            "count": 0
+          },
+          {
+            "exponent": 83,
+            "count": 0
+          },
+          {
+            "exponent": 82,
+            "count": 0
+          },
+          {
+            "exponent": 81,
+            "count": 0
+          },
+          {
+            "exponent": 80,
+            "count": 0
+          },
+          {
+            "exponent": 79,
+            "count": 0
+          },
+          {
+            "exponent": 78,
+            "count": 0
+          },
+          {
+            "exponent": 77,
+            "count": 0
+          },
+          {
+            "exponent": 76,
+            "count": 0
+          },
+          {
+            "exponent": 75,
+            "count": 0
+          },
+          {
+            "exponent": 74,
+            "count": 0
+          },
+          {
+            "exponent": 73,
+            "count": 0
+          },
+          {
+            "exponent": 72,
+            "count": 0
+          },
+          {
+            "exponent": 71,
+            "count": 0
+          },
+          {
+            "exponent": 70,
+            "count": 0
+          },
+          {
+            "exponent": 69,
+            "count": 0
+          },
+          {
+            "exponent": 68,
+            "count": 0
+          },
+          {
+            "exponent": 67,
+            "count": 0
+          },
+          {
+            "exponent": 66,
+            "count": 0
+          },
+          {
+            "exponent": 65,
+            "count": 0
+          },
+          {
+            "exponent": 64,
+            "count": 0
+          },
+          {
+            "exponent": 63,
+            "count": 0
+          },
+          {
+            "exponent": 62,
+            "count": 0
+          },
+          {
+            "exponent": 61,
+            "count": 0
+          },
+          {
+            "exponent": 60,
+            "count": 0
+          },
+          {
+            "exponent": 59,
+            "count": 0
+          },
+          {
+            "exponent": 58,
+            "count": 0
+          },
+          {
+            "exponent": 57,
+            "count": 0
+          },
+          {
+            "exponent": 56,
+            "count": 0
+          },
+          {
+            "exponent": 55,
+            "count": 0
+          },
+          {
+            "exponent": 54,
+            "count": 0
+          },
+          {
+            "exponent": 53,
+            "count": 0
+          },
+          {
+            "exponent": 52,
+            "count": 0
+          },
+          {
+            "exponent": 51,
+            "count": 0
+          },
+          {
+            "exponent": 50,
+            "count": 0
+          },
+          {
+            "exponent": 49,
+            "count": 0
+          },
+          {
+            "exponent": 48,
+            "count": 0
+          },
+          {
+            "exponent": 47,
+            "count": 0
+          },
+          {
+            "exponent": 46,
+            "count": 0
+          },
+          {
+            "exponent": 45,
+            "count": 0
+          },
+          {
+            "exponent": 44,
+            "count": 0
+          },
+          {
+            "exponent": 43,
+            "count": 0
+          },
+          {
+            "exponent": 42,
+            "count": 0
+          },
+          {
+            "exponent": 41,
+            "count": 0
+          },
+          {
+            "exponent": 40,
+            "count": 0
+          },
+          {
+            "exponent": 39,
+            "count": 0
+          },
+          {
+            "exponent": 38,
+            "count": 0
+          },
+          {
+            "exponent": 37,
+            "count": 0
+          },
+          {
+            "exponent": 36,
+            "count": 0
+          },
+          {
+            "exponent": 35,
+            "count": 0
+          },
+          {
+            "exponent": 34,
+            "count": 0
+          },
+          {
+            "exponent": 33,
+            "count": 0
+          },
+          {
+            "exponent": 32,
+            "count": 0
+          },
+          {
+            "exponent": 31,
+            "count": 0
+          },
+          {
+            "exponent": 30,
+            "count": 0
+          },
+          {
+            "exponent": 29,
+            "count": 0
+          },
+          {
+            "exponent": 28,
+            "count": 0
+          },
+          {
+            "exponent": 27,
+            "count": 0
+          },
+          {
+            "exponent": 26,
+            "count": 0
+          },
+          {
+            "exponent": 25,
+            "count": 0
+          },
+          {
+            "exponent": 24,
+            "count": 0
+          },
+          {
+            "exponent": 23,
+            "count": 0
+          },
+          {
+            "exponent": 22,
+            "count": 0
+          },
+          {
+            "exponent": 21,
+            "count": 0
+          },
+          {
+            "exponent": 20,
+            "count": 0
+          },
+          {
+            "exponent": 19,
+            "count": 0
+          },
+          {
+            "exponent": 18,
+            "count": 0
+          },
+          {
+            "exponent": 17,
+            "count": 0
+          },
+          {
+            "exponent": 16,
+            "count": 0
+          },
+          {
+            "exponent": 15,
+            "count": 0
+          },
+          {
+            "exponent": 14,
+            "count": 0
+          },
+          {
+            "exponent": 13,
+            "count": 0
+          },
+          {
+            "exponent": 12,
+            "count": 0
+          },
+          {
+            "exponent": 11,
+            "count": 0
+          },
+          {
+            "exponent": 10,
+            "count": 0
+          },
+          {
+            "exponent": 9,
+            "count": 0
+          },
+          {
+            "exponent": 8,
+            "count": 0
+          },
+          {
+            "exponent": 7,
+            "count": 0
+          },
+          {
+            "exponent": 6,
+            "count": 0
+          },
+          {
+            "exponent": 5,
+            "count": 0
+          },
+          {
+            "exponent": 4,
+            "count": 0
+          },
+          {
+            "exponent": 3,
+            "count": 0
+          },
+          {
+            "exponent": 2,
+            "count": 0
+          },
+          {
+            "exponent": 1,
+            "count": 0
+          }
+        ],
+        "strip_divisions": 264,
+        "maximum_history_bits": 65792,
+        "decoded_supports": {
+          "256": [
+            8
+          ]
+        },
+        "algorithm": "gcd; no prime factorisation or multiplicative-order computation",
+        "complexity_scope": "Polynomial in expanded binary numerator/denominator length; no compact-expression or sampling-cost claim."
+      }
+    },
+    {
+      "model": {
+        "1": 5000
+      },
+      "decoded": {
+        "1": 5000
+      },
+      "input_numerator_bits": 7925,
+      "input_denominator_bits": 10001,
+      "readout_sha256": "6b1afdd4bff352fb04672a773cb909c8e65f1f0eaa25544c7ac16535033e427a",
+      "trace": {
+        "weight": 5000,
+        "largest_generator": 1,
+        "selectors": [
+          {
+            "exponent": 1,
+            "generator": 3,
+            "component": 3,
+            "checks": {
+              "nontrivial": true,
+              "divides_generator": true,
+              "new_prime_support": true,
+              "full_prime_valuations": true
+            },
+            "previous_history_bits": 1
+          }
+        ],
+        "counts": [
+          {
+            "exponent": 1,
+            "count": 5000
+          }
+        ],
+        "strip_divisions": 5000,
+        "maximum_history_bits": 2,
+        "decoded_supports": {
+          "1": [
+            0
+          ]
+        },
+        "algorithm": "gcd; no prime factorisation or multiplicative-order computation",
+        "complexity_scope": "Polynomial in expanded binary numerator/denominator length; no compact-expression or sampling-cost claim."
+      }
+    }
+  ],
+  "greedy_tail": {
+    "target": {
+      "numerator": 3,
+      "denominator": 4
+    },
+    "prefix_counts": {
+      "2": 4,
+      "3": 1,
+      "4": 3,
+      "5": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 3,
+      "11": 3,
+      "12": 2,
+      "13": 3,
+      "15": 3
+    },
+    "prefix_probability": {
+      "numerator": 139553035072909564840255810379088871631513906953310627636967192428115107651955081291519044157167581188725295141673604042832079925537109375,
+      "denominator": 186070713419675363980626894819329160794532188335953423432061490990243657757029868371504908982723472783555205531204141550984858016925351936
+    },
+    "records": [
+      {
+        "exponent": 2,
+        "digit": 4,
+        "partial_product": {
+          "numerator": 50625,
+          "denominator": 65536
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 20
+        }
+      },
+      {
+        "exponent": 3,
+        "digit": 1,
+        "partial_product": {
+          "numerator": 3189375,
+          "denominator": 4194304
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 84
+        }
+      },
+      {
+        "exponent": 4,
+        "digit": 3,
+        "partial_product": {
+          "numerator": 52884222890625,
+          "denominator": 70368744177664
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 340
+        }
+      },
+      {
+        "exponent": 5,
+        "digit": 2,
+        "partial_product": {
+          "numerator": 55344872897502890625,
+          "denominator": 73786976294838206464
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 1364
+        }
+      },
+      {
+        "exponent": 6,
+        "digit": 0,
+        "partial_product": {
+          "numerator": 55344872897502890625,
+          "denominator": 73786976294838206464
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 5460
+        }
+      },
+      {
+        "exponent": 7,
+        "digit": 1,
+        "partial_product": {
+          "numerator": 906715052679789857109375,
+          "denominator": 1208925819614629174706176
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 21844
+        }
+      },
+      {
+        "exponent": 8,
+        "digit": 1,
+        "partial_product": {
+          "numerator": 59421570977370028285662890625,
+          "denominator": 79228162514264337593543950336
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 87380
+        }
+      },
+      {
+        "exponent": 9,
+        "digit": 1,
+        "partial_product": {
+          "numerator": 15576948880720711324888527137109375,
+          "denominator": 20769187434139310514121985316880384
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 349524
+        }
+      },
+      {
+        "exponent": 10,
+        "digit": 3,
+        "partial_product": {
+          "numerator": 17958947959684205382572246034066255868720074462890625,
+          "denominator": 23945242826029513411849172299223580994042798784118784
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 1398100
+        }
+      },
+      {
+        "exponent": 11,
+        "digit": 3,
+        "partial_product": {
+          "numerator": 1325135519570216406151337979915461791151887723448506113513679925537109375,
+          "denominator": 1766847064778384329583297500742918515827483896875618958121606201292619776
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 5592404
+        }
+      },
+      {
+        "exponent": 12,
+        "digit": 2,
+        "partial_product": {
+          "numerator": 372992445045321343963969765321432528395448519622771681332157454344476752079925537109375,
+          "denominator": 497323236409786642155382248146820840100456150797347717440463976893159497012533375533056
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 22369620
+        }
+      },
+      {
+        "exponent": 13,
+        "digit": 3,
+        "partial_product": {
+          "numerator": 112730044294694074673856049184513761636815290223552903845684079562566108996114346635542702993327920074462890625,
+          "denominator": 150306725297525326584926758194517569752043683130132471725266622178061377607334940381676735896625196994043838464
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 89478484
+        }
+      },
+      {
+        "exponent": 14,
+        "digit": 0,
+        "partial_product": {
+          "numerator": 112730044294694074673856049184513761636815290223552903845684079562566108996114346635542702993327920074462890625,
+          "denominator": 150306725297525326584926758194517569752043683130132471725266622178061377607334940381676735896625196994043838464
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 357913940
+        }
+      },
+      {
+        "exponent": 15,
+        "digit": 3,
+        "partial_product": {
+          "numerator": 139553035072909564840255810379088871631513906953310627636967192428115107651955081291519044157167581188725295141673604042832079925537109375,
+          "denominator": 186070713419675363980626894819329160794532188335953423432061490990243657757029868371504908982723472783555205531204141550984858016925351936
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 1431655764
+        }
+      },
+      {
+        "exponent": 16,
+        "digit": 0,
+        "partial_product": {
+          "numerator": 139553035072909564840255810379088871631513906953310627636967192428115107651955081291519044157167581188725295141673604042832079925537109375,
+          "denominator": 186070713419675363980626894819329160794532188335953423432061490990243657757029868371504908982723472783555205531204141550984858016925351936
+        },
+        "error_upper_bound": {
+          "numerator": 1,
+          "denominator": 5726623060
+        }
+      }
+    ],
+    "exact_infinite_limit_status": "The written convergence proof establishes 3/4; no finite prefix equals it.",
+    "conditional_second_query": {
+      "candidate_counts": {
+        "1": 1
+      },
+      "query_root_set": [
+        0
+      ],
+      "status": "finite_candidate_rejected_under_expanded_class",
+      "scope": "Exact supplied readouts and external response assumptions; not a finite-precision finiteness decision."
+    }
+  },
+  "candidate_specific_gap": {
+    "root_mask": 1,
+    "count_bound": 2,
+    "gap": {
+      "numerator": 3,
+      "denominator": 16
+    },
+    "values": [
+      {
+        "numerator": 9,
+        "denominator": 16
+      },
+      {
+        "numerator": 3,
+        "denominator": 4
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      }
+    ]
+  },
+  "mixture_grouping": {
+    "rates": [
+      {
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "numerator": 1,
+        "denominator": 2
+      }
+    ],
+    "left_first": {
+      "numerator": 1,
+      "denominator": 2
+    },
+    "right_first": {
+      "numerator": 1,
+      "denominator": 2
+    },
+    "left_grouped_second": {
+      "numerator": 1,
+      "denominator": 4
+    },
+    "right_grouped_second": {
+      "numerator": 5,
+      "denominator": 16
+    }
+  },
+  "test_groups": [
+    15,
+    6,
+    8
+  ],
+  "weighted_cross_decoder_cases": 272
+}

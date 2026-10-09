@@ -1,0 +1,46 @@
+{
+  "checkpoint": 21,
+  "relationship": "Unchanged predecessor identity only; no predecessor archive embedded",
+  "archive": {
+    "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.zip",
+    "bytes": 195723,
+    "sha256": "997962d2dbeb4a56068a4a757f6de09d32be28645aec71c29f558d0a4281784e"
+  },
+  "direct_sidecars": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.READ_FIRST.md",
+      "bytes": 10012,
+      "sha256": "6380226a5cba52e06425d358cc3f5f53c5b743531345db9cb343ba1ee6391f0a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.MANIFEST.json",
+      "bytes": 16286,
+      "sha256": "44c0f623e70d89da45dc820160cd6ef0067d2d188de4c6d3a8ea1feaf6b59db2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.VALIDATION_RECEIPT.json",
+      "bytes": 390773,
+      "sha256": "836f8553970b72ec60245bf2eaa9f8507888117ebbbf523e1ca50f8e5dd38742"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.SHA256SUMS",
+      "bytes": 544,
+      "sha256": "70980197359ad4dc1f27adf2243059ed2866ada2207ce42bd52ca6350f2d8ca3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.LIBRARY_DELIVERY.json",
+      "bytes": 1722,
+      "sha256": "f122ecfd5a48dd5d37e130caa76e71fe8f1128a9a9c6408057101e793dfa1be1"
+    }
+  ],
+  "exact_delivery_record_copy": "prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.LIBRARY_DELIVERY.json",
+  "delivery_record_sha256": "f122ecfd5a48dd5d37e130caa76e71fe8f1128a9a9c6408057101e793dfa1be1",
+  "library_file_ids": [
+    "libfile_5f55d9b3b62c819189242bba8cd731a6",
+    "libfile_8369119635a081918a10d8b5a1d938c2"
+  ],
+  "accepted_message_id": "Sentinel_94ca31520160819187de4713aa5b3470",
+  "accepted_at_utc": "2026-10-09T09:57:27.806896+00:00",
+  "receipt_limit": "Accepted send does not verify client opening or owner acceptance of research.",
+  "checkpoint22_delivery": "No upload or user message performed; any later delivery record belongs outside this sealed ZIP."
+}

@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-10-09T09:43:52.270952+00:00",
+  "inputs": [
+    {
+      "bytes": 24443,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Inherited source report",
+      "scope": "Read complete",
+      "sha256": "d4ee327370d09a8f994457a3adbc7e97449268d8706776aa8d86da8a6dbb4757"
+    },
+    {
+      "bytes": 20774,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Inherited source and anti-brute assessment",
+      "scope": "Read complete; no new primary Arabic reading",
+      "sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5"
+    },
+    {
+      "bytes": 16071,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Current inherited comparison; nonduplication baseline",
+      "scope": "Read complete final report",
+      "sha256": "aab7d5783771c15775e6de2fad644ea7867de9a2678eb48cc1ca9249fafddfe1"
+    },
+    {
+      "bytes": 6940,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Unchanged typed interface",
+      "scope": "Read complete 141-line file; no code change or replay",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    {
+      "bytes": 6469,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Retained primary OCR",
+      "scope": "Printed 34–35 and notes 13–15 read",
+      "sha256": "8fd31dd66da970dcfcff9ab7db9b77856e095d3734ea49192d1f711d32705660"
+    },
+    {
+      "bytes": 6025,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Retained primary OCR",
+      "scope": "Printed 36–37 and note 16 read",
+      "sha256": "5489053431615dffd50800c030b906fa3a8f8235cfb9f0cffec6663b416b96bd"
+    },
+    {
+      "bytes": 206267,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Retained primary scan",
+      "scope": "Printed 36–37 visually checked",
+      "sha256": "07efe5a90ba35e7fcffe491bb2cfdf35821515e0ff037bd79b9d741582fac14f"
+    },
+    {
+      "bytes": 181526,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Author authentication link",
+      "scope": "Public profile identifies author and directly links article 3607091",
+      "sha256": "449ca83dfc4bf64204d1c477546c7df7e67d1bcf7ef1d4265d8fefa2f459d39e"
+    },
+    {
+      "bytes": 241040,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Acquired complete public primary-text witness",
+      "scope": "Published article exposed in public author-upload viewer; not a downloaded PDF",
+      "sha256": "16958206197ff3c8a2003a1622d2985bc73070c0475c1ebf387c9b6beff8f934"
+    },
+    {
+      "bytes": 73665,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "role": "Extracted complete primary text",
+      "scope": "HTMLParser extracted exact div plain notranslate content; 13 nonempty form-feed pages",
+      "sha256": "7d6763ae3aa7f0c24fdf9574bc81d6b87b5bc6549504abe032e00031c17d19ef"
+    }
+  ],
+  "no_primary_redistribution": true,
+  "repository_or_integration_changes": false,
+  "work": "explicability parity focused research",
+  "write_scope": "This report directory and temporary research intermediates only"
+}

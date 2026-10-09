@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-09",
+  "files": [
+    {
+      "path": "CHECK_RESULTS.json",
+      "bytes": 693,
+      "sha256": "b61b2037c1c51e740d62bfff9f1fbf163beeaf8cedf4a2a50d273c108e632193"
+    },
+    {
+      "path": "INPUT_UNCHANGED.json",
+      "bytes": 2268,
+      "sha256": "5b41bc166e081686c359ce655a2fca570ae0711e8d4a653f54d93036c7efbb54"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 1843,
+      "sha256": "769e6052c53dadef27260445f546eb7a9a1be26677fb819302718ee55229e19d"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 22505,
+      "sha256": "3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 3181,
+      "sha256": "750a30b2cc811c5fd37f5532ba8902bc69712792a0c32501eef4818969c0ac50"
+    },
+    {
+      "path": "compiler.py",
+      "bytes": 6557,
+      "sha256": "5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714"
+    },
+    {
+      "path": "final-independent-replay.log",
+      "bytes": 2506,
+      "sha256": "513844ac0eacc0f0948673795ffbfd8b05708708b73643a46d05f180186d0251"
+    },
+    {
+      "path": "final-replay.log",
+      "bytes": 1645,
+      "sha256": "0dc8a5f329138711ea79430f0bd39df5c9c2524315dc44a9aa65f80334a9a2f2"
+    },
+    {
+      "path": "review/REPLAY_RESULTS.json",
+      "bytes": 789,
+      "sha256": "46806f7027a9ca18376b7b034d6f662a0871604c212fc3f00862fc68dc8795ae"
+    },
+    {
+      "path": "review/REVIEW.md",
+      "bytes": 6073,
+      "sha256": "8f349369091b60eabace15530fa9e6fd563942f608c2f4d9363b0a5d82570997"
+    },
+    {
+      "path": "review/SANITY_RESULTS.json",
+      "bytes": 419,
+      "sha256": "99c3b0d71e34d8e0c14293d82af499cdacd77fffd2089070603167079aa45c8d"
+    },
+    {
+      "path": "review/parent-sanity-replay.json",
+      "bytes": 419,
+      "sha256": "99c3b0d71e34d8e0c14293d82af499cdacd77fffd2089070603167079aa45c8d"
+    },
+    {
+      "path": "review/replay.log",
+      "bytes": 2506,
+      "sha256": "fcdc96e5c41cbb4d6bd4ca8879286efbba7b076dc5c7584b4d80ba6f5153b3bf"
+    },
+    {
+      "path": "review/replay.py",
+      "bytes": 1405,
+      "sha256": "46905cfd0041ebefd727104cf85709c04fb3103d648047566dcf41db85784285"
+    },
+    {
+      "path": "review/sanity.py",
+      "bytes": 3379,
+      "sha256": "e00e1b88499eb26b5baa4918b7eaaefd9a681801d57f2c9ba845cd4898afb125"
+    },
+    {
+      "path": "test-first-green.log",
+      "bytes": 1375,
+      "sha256": "3d56d7237b6cc29b6e518169834675ab94ffb32ec690878ea682da17f80114f2"
+    },
+    {
+      "path": "test-first-red.log",
+      "bytes": 889,
+      "sha256": "0263a1732df6537fac54c2c259354f62d6a0ae0a25b6c5ccd10048be9f511cea"
+    },
+    {
+      "path": "verification.log",
+      "bytes": 1645,
+      "sha256": "52d44d15dea300ac34e35ceb316ef0ed7992dd0c29fb1e530cb34830a53eea34"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 10995,
+      "sha256": "ba6b947c758b0541ce4dc489c116c87cc6000ebc221ff23f8b5f3efd5de94f70"
+    }
+  ],
+  "scope": "Bounded constructive supplement; no kernel proof of compilation, no integration or closure."
+}

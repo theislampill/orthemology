@@ -1,0 +1,75 @@
+{
+  "scope": "Read-only inherited bindings for this bounded audit",
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md",
+      "sha256": "21362330512dff0ef5ca9f48a3b8311ab8b0dd952e97d3ae338af0bc2e118b68",
+      "scope": "Read current source-bound report; its wider primary readings are inherited."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/INPUT_BINDINGS.json",
+      "sha256": "bc7daf060062907c514d36211847c397b12856a36535ca0794735d0c358b7698",
+      "scope": "Inherited primary identity and source bindings; no replay of wider acquisitions."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_exact_supplied.pdf",
+      "sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf",
+      "scope": "Retained exact supplied PDF; fresh text return to PDF30–32 / printed23–25 only."
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md",
+      "sha256": "46c6db37bf86fbe531f877520c0416afc8a5b709ce09d729482c3ff0cd038454",
+      "scope": "Read report; no fresh execution or direct reading of its code inputs."
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/RESULT.md",
+      "sha256": "080d4c2a1c46835d76fcf86345c6536b84eb7b8278855a0a7b4b99cd7b3258c9",
+      "scope": "Read report; Marmodoro reading inherited, not repeated."
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/INPUT_BINDINGS.json",
+      "sha256": "25342148209cc7ac3eef2cfd28a8376c8fc31e42463ea3d2fde4fbeb59f2feca",
+      "scope": "Read inherited binding list."
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "scope": "Read report; no diagnostic rerun."
+    },
+    {
+      "path": "t20-continuation-20261008/effect-production/RESULT.md",
+      "sha256": "ea50cdaff7420489df813e4d4148158ce3bed636817755bc509bb3a9effdb74a",
+      "scope": "Read report with focus on sections4–5; operative-route distinction receives no new credit."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "scope": "Read source-critical report; underlying Arabic and scans remain inherited."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/SOURCE_READS.json",
+      "sha256": "109e2f13bb11819bed9e94c54beaae674cbfb3cef84144b1f788b464cdf18d21",
+      "scope": "Read exact inherited source scopes and hashes; no new primary credit."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+      "sha256": "3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05",
+      "scope": "Targeted sections on B6, B5 and complete efficacy; no full historical rereading claim."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/MODEL_AUDIT.md",
+      "sha256": "aad1327aa577fa6edb2b90477481cd2849b6ffe1701c27a3ddfdec69d15b8e67",
+      "scope": "Targeted P2–P7 premise-status and overdetermination screening."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/independent-warrant-review/REVIEW.md",
+      "sha256": "f75458925a91eba498182217fe4b045349d23591c98433210783e54b136d99fe",
+      "scope": "Targeted section4, especially actual sufficient production versus exclusive provenance."
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/RULE_AND_TRANSPORT_AUDIT.md",
+      "sha256": "5e1371ebf6411da8b5bdc0dc052fe8b33379e5fc4c855616b0e4575a5f48deb5",
+      "scope": "Screened explanatory-overdetermination note12 control only; not a causal-production study."
+    }
+  ]
+}

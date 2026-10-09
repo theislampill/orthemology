@@ -1,0 +1,23 @@
+# Bounded primary-source summaries
+
+Each digest is below200words. No source PDF, OCR, or page image is included.
+
+## Dretske, Explaining Behavior, chapter4
+
+[University chapter scan](https://www.uh.edu/~garson/DretskeExplanCh.4.PDF), “The Explanatory Role of Belief,” pp.79–107. The work was published in1988; the scan omits frontmatter, so its precise printing is unverified. Dretske's informational function is not a disposition to produce the formerly reinforced movement. Other currently registered representations and motivations can change its effects while its indicator function persists. He explicitly points to chapter6 for complex representational interactions, including inference (105–107). Chapter4 received whole-chapter OCR coverage with gaps in annotated passages; decisive pages were visually checked. Chapter6 was not acquired. The [publisher](https://mitpress.mit.edu/9780262040945/explaining-behavior/) distinguishes the1988 hardcover and1991 paperback.
+
+## Buckner, Rational Inference: The Lowest Bounds
+
+[2017 online-first text](https://web.mit.edu/6.034/www/6.s077/Buckner-2017-Philosophy_and_Phenomenological_Research.pdf), later *Philosophy and Phenomenological Research*98(3),697–724(2019), DOI10.1111/phpr.12455. Buckner defends nonlinguistic practical inference using structured, context-sensitive associative categorization. Explanatory rationality depends on the agent's representational perspective; epistemic appraisal depends separately on ecological fit. He excludes mere recognition-based choice from his intensional criterion and considers executive control without requiring explicit metarepresentational reflection. The exact lower boundary remains qualified. His argument targets simple practical judgments, not a completed theory of theoretical inference or adult cognition. All28 online-first pages were inspected, including notes/references; cited animal studies were not independently replicated.
+
+## Siegel, Inference without reckoning
+
+[Harvard manuscript](https://dash.harvard.edu/server/api/core/bitstreams/7312037e-6d0f-6bd4-e053-0100007fdf3b/content), for the2019 *Reasoning* volume, manuscript pp.1–19. Siegel permits inference without awareness of precisely which grounds one responds to, and without a separate support-representing reckoning state. Her response approach distinguishes inferential uptake from sequences, concept association, narrative construction, and attention direction. In the attention case, the prior belief directs looking but does not influence interpretation; the resulting perception normally supports the same belief without that prior belief (14–15). She separately distinguishes poor inference from non-inference. This is explicitly illumination rather than a completed reductive analysis. The full manuscript, notes and bibliography were read. Its repository cover conflates publication metadata, so manuscript pagination is used; no2017 book-chapter reading credit is claimed.
+
+## Boghossian, What is inference?
+
+[Author-hosted article](https://paulboghossian.com/pb/files/WhatIsInference.pdf), *Philosophical Studies*169,1–18(2014), online2012. Boghossian targets person-level, conscious and voluntary theoretical reasoning while leaving practical reasoning aside. He requires uptake of premises as supporting a conclusion, and distinguishes actual grounds from mere causal succession or later reports. He examines doxastic, intuitional, counterfactual and rule-following proposals, including regress difficulties, and favors primitive rule-following. He explicitly grants that a subpersonal account may fit automatic reasoning outside his chosen target. His speculative naturalism challenge is not a demonstrated exclusion of all nonreflective cognition. The complete article and references were read.
+
+## Patronnikov, Associative Inferential Transitions
+
+[Publisher article](https://link.springer.com/article/10.1007/s12136-025-00632-8), *Acta Analytica*40,731–752(2025). Patronnikov argues that some associative transitions can exhibit epistemic dependence and recommends distinguishing psychological and epistemic classifications. He explicitly makes his main case conditional on contested views of justification and admits limitations of simplified dependence tests, including bad inferences. The article motivates questioning an automatic inference/association dichotomy; it does not settle the correct basing analysis. The complete publisher argument and all21notes were read. Its empirical examples were not independently verified here. Siegel's own manuscript was separately inspected rather than treating this critique as her definition.

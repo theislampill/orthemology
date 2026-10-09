@@ -1,0 +1,54 @@
+{
+  "date_utc": "2026-10-08",
+  "status": "Prospective scratch derivation; no protected integration or closure",
+  "sources": [
+    {
+      "path": "../full-face-threshold-information/RESULT.md",
+      "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+      "bytes": 12215,
+      "sections": [
+        "\u00a71: world pair and exact-readout contract",
+        "\u00a72: density formulas, full mass, mutual absolute continuity",
+        "\u00a75: finite forward KL"
+      ],
+      "use": "M laws and density hypotheses"
+    },
+    {
+      "path": "../retained-interior-certificate/RESULT.md",
+      "sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+      "bytes": 16475,
+      "sections": [
+        "\u00a71: fixed finite panel and certificate probability",
+        "\u00a73: positive Joe density and box formula",
+        "\u00a75: same-minima example and scope"
+      ],
+      "use": "Q laws and certificate hypotheses"
+    },
+    {
+      "path": "../qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "bytes": 93523,
+      "sections": [
+        "Theorem 4.2 (lines 269\u2013281)",
+        "Proposition 11.1 (lines 905\u2013909)",
+        "Theorem 11.2 (lines 913\u2013935): inspected only to exclude stochastic promotion"
+      ],
+      "use": "Inherited H lineage; deterministic claims only"
+    }
+  ],
+  "derivation_attribution": {
+    "parent_supplied": [
+      "common-kernel absolute-continuity obstruction",
+      "baseline-exact TV lower bound p",
+      "same-minima deterministic example",
+      "converse candidate: finite-alphabet reverse domination versus unbounded reverse minima likelihood"
+    ],
+    "local_work": [
+      "verified the two common-kernel lemmas",
+      "proved baseline-positive panel atoms remain alternative-positive by route duplication and open neighborhoods",
+      "proved uniform strip density bound and exact pair-specific converse",
+      "separated pathwise H fibre lineage from stochastic experiment comparison"
+    ]
+  },
+  "external_sources": "None needed for this self-contained elementary derivation; no external source or ancestor body copied."
+}

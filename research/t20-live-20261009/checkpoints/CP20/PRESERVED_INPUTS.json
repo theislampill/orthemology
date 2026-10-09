@@ -1,0 +1,236 @@
+{
+  "freeze_utc": "2026-10-09T09:18:21.817649+00:00",
+  "file_count": 46,
+  "files": [
+    {
+      "path": "ameri-causal-foundations-20261009/CONTEXT_RECONCILIATION.md",
+      "bytes": 6250,
+      "sha256": "0245cf055380da1009cb655e94a0b2bfebef68c3c8013eb86172d9b8650445d9"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/READING_LEDGER.json",
+      "bytes": 4834,
+      "sha256": "5a5a8db96bf8baaf0d4dd4c9aa37bdb5b75f799a5e017bda99365b24fd2b52bb"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/READ_FIRST.md",
+      "bytes": 3425,
+      "sha256": "24bc939c47ba35b84fb8d766ed4971b026de1c552c2ad235590f66cdc4926d83"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/REPORT.md",
+      "bytes": 22321,
+      "sha256": "e63116973f12d3ed2ee51a390c8f357658b98433e39071588adb24638412c436"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/SHA256SUMS",
+      "bytes": 1212,
+      "sha256": "d63570b9298a44616bd7022c15b1a67dfd0555a7ec588caed9ea05f5aa71f79b"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/SIMULTANEOUS_PRIORITY_CONTROL.md",
+      "bytes": 7316,
+      "sha256": "c8efbde7f1b94ee198201872ee6e0768bb8ec74748ababf987a689f96a258c27"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/SOURCE_BINDINGS.json",
+      "bytes": 3255,
+      "sha256": "b2470b99fdd80a552e3173f09124790bd06fff88fa0b63e61a7e60bc7d57dcd3"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/VALIDATION.json",
+      "bytes": 9841,
+      "sha256": "b16c3ab6217dce6ea7a58882d322ff1c70e977823a793a4edc932beb0e3f8fb4"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/cosmology-context/CONTEXT-NOTES.md",
+      "bytes": 17662,
+      "sha256": "57b15c06f9fa01300e7292dd7bc127d2b41dca6922daa1fa01bcd13c34602732"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/cosmology-context/READING-LEDGER.json",
+      "bytes": 21787,
+      "sha256": "ca3432ded460caab1353905dcd8f62313c7b8d3947ac03eda05a46755bb1ac91"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/review/INDEPENDENT_FOCUSED_REVIEW.md",
+      "bytes": 9144,
+      "sha256": "869423a84e8bad52290bbd5df18007870a3b04e2c92cdd6087d070137d85d53b"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/review/REVIEW_LEDGER.json",
+      "bytes": 6830,
+      "sha256": "d0a40da08551789d3257f95a6bd40ff68ab9e8ab24a01a92563a6954a1848e6b"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/scriptural-context/contextual-notes.md",
+      "bytes": 18179,
+      "sha256": "83250d4c99f5e5b5e86aa2bff1147733c9f60939ecde1f1409992807ce33092b"
+    },
+    {
+      "path": "ameri-causal-foundations-20261009/scriptural-context/reading-ledger.json",
+      "bytes": 40374,
+      "sha256": "c37f9473d6718f475b5994ea3a19a3fd44d988fb34e5b73e2464669e446df01f"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/CHECK_RESULTS.json",
+      "bytes": 5383,
+      "sha256": "f78dcc0dbe1e9b9e602257e61373b8fdfe7da939cf9255c20b44bd5349437043"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/REPORT.md",
+      "bytes": 15839,
+      "sha256": "52631c602c1c8fede28dbe6da34480094caf6f441c1aec0293229cdfdf28a0be"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/SOURCE_READS.json",
+      "bytes": 4248,
+      "sha256": "333935de6444edbf2b7b38c9bd5892b9aae68c963c1fafe301181c811989a343"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md",
+      "bytes": 1587,
+      "sha256": "9420d38627e0dea98af9e8838485fb68ab08feb184ae254953f08585cfe2e71d"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/check_compound_ground.py",
+      "bytes": 8540,
+      "sha256": "75f924c284fed3e497d9e79af8ee8af8cdf392c3668c32eb350de7084372e0eb"
+    },
+    {
+      "path": "compound-ground-review-20261009/INDEPENDENT_RESULTS.json",
+      "bytes": 12834,
+      "sha256": "0e0fdb9be21a6603da2d58d6cc0f1e79abdf13dd59fb010e4a1794d206ef945d"
+    },
+    {
+      "path": "compound-ground-review-20261009/INDEPENDENT_REVIEW.md",
+      "bytes": 12327,
+      "sha256": "680b35f20b5791b646aec3ae10da0e7972481c729506a97d9e06b22376f468c0"
+    },
+    {
+      "path": "compound-ground-review-20261009/INPUT_HASHES.sha256",
+      "bytes": 925,
+      "sha256": "2c892f793b411cadecdba7f064a6a9df772baf115ab21a3a528d2c780b2b753d"
+    },
+    {
+      "path": "compound-ground-review-20261009/INPUT_HASHES_INITIAL.sha256",
+      "bytes": 473,
+      "sha256": "10b644ac54582b0962167c185ab46f816e1650d8541dde5170fc38e4dbd075b4"
+    },
+    {
+      "path": "compound-ground-review-20261009/SHA256SUMS",
+      "bytes": 611,
+      "sha256": "a6a373cad6d8793dcc37c559a3bd390901df2d9393a03f6afdcb083c593dc38d"
+    },
+    {
+      "path": "compound-ground-review-20261009/SOURCE_READS.json",
+      "bytes": 2886,
+      "sha256": "35878624d581f3adb8b4a088804a2ffeb436cdc57f33a4205b19d6148c4f3536"
+    },
+    {
+      "path": "compound-ground-review-20261009/check-run.log",
+      "bytes": 1786,
+      "sha256": "aa69afa8f73b5f49da5ce57a5d5af6665fe52980e196b1f5c043c41844c48bf4"
+    },
+    {
+      "path": "compound-ground-review-20261009/independent_checks.py",
+      "bytes": 14316,
+      "sha256": "79572867a618226cb074178c0b6896da036a05309bd7ab509fc4d6929fb0551c"
+    },
+    {
+      "path": "fitrah-warrant-currentness-20261009/REPORT.md",
+      "bytes": 8255,
+      "sha256": "c79ecc3ca9eec5cd53beef458bdeb004dae012e896ebd94f66d5d58d09ab007c"
+    },
+    {
+      "path": "fitrah-warrant-currentness-20261009/SOURCE_READS.json",
+      "bytes": 2371,
+      "sha256": "3c5910e4f0bccfebfe937d7fe9a09f518b2799ee66b0df53f9a83a80c9fb6c2f"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "bytes": 1939,
+      "sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b"
+    },
+    {
+      "path": "particular-agency-rival-20261009/ROOT_ORIGINAL_SCOPE_READING.json",
+      "bytes": 1419,
+      "sha256": "f6cb22f648db7a265d0d2a13db75113967ec9998274225f5937144704ee0ebd3"
+    },
+    {
+      "path": "particular-agency-rival-20261009/ROOT_POWER_READING.json",
+      "bytes": 1123,
+      "sha256": "7180b740f0c5917e01de9c5a0f6369f113750f68fc9c2d92467a3345bdee8edb"
+    },
+    {
+      "path": "particular-agency-rival-20261009/ROOT_READING_RECORD.json",
+      "bytes": 867,
+      "sha256": "96b6a2110969021b92756071d696c1df43773724984431805380e27654dbf9db"
+    },
+    {
+      "path": "particular-agency-rival-20261009/ROOT_SOURCE_SELECTION.md",
+      "bytes": 2633,
+      "sha256": "7c0c411c751783975377eb068cc56f00af1298f166cd7e9447275d7d7081e1c0"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/READING_RECORD.json",
+      "bytes": 2635,
+      "sha256": "272f41c64c7854adf190e51469bcb7296f09dbe49fc948bc031760edb1c9493e"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/REPORT.md",
+      "bytes": 13443,
+      "sha256": "f7451e1e34e4f14c0baade2cd9e9fc5893295a5a4a3d5506253da1691bd3da87"
+    },
+    {
+      "path": "particular-agency-rival-20261009/scope-contingency/READING_RECORD.json",
+      "bytes": 4047,
+      "sha256": "ddd952b466f3bbf1464d54a5ab95fac2faffea9259807363fb9689ea3210da61"
+    },
+    {
+      "path": "particular-agency-rival-20261009/scope-contingency/REPORT.md",
+      "bytes": 21267,
+      "sha256": "737ef22bb6541906bb7321023d85311f0ad7c782f6eb17c7d58cbf57cdb4d51b"
+    },
+    {
+      "path": "particular-agency-rival-20261009/simplicity-comparison/READING_BINDINGS.json",
+      "bytes": 4377,
+      "sha256": "3dcb54bbdd6f91430c4ef355ea992de17dc4cbdc10913970c4534535bb451e7f"
+    },
+    {
+      "path": "particular-agency-rival-20261009/simplicity-comparison/REPORT.md",
+      "bytes": 17288,
+      "sha256": "0d76159b1672fbee34a0d89effc605a53e208e742c37ae3326731c255d8fad14"
+    },
+    {
+      "path": "particular-agency-rival-20261009/simplicity-comparison/VERIFICATION.json",
+      "bytes": 477,
+      "sha256": "e83d804eea429c2ac58cfd68358b1d5bf6c148d27f6a96ea2fa2bacecfd1a2f7"
+    },
+    {
+      "path": "root-resumed-research-20261009/COMPOUND_GROUND_REVIEW.json",
+      "bytes": 961,
+      "sha256": "de97de333e57e805f58e7f8e7617c1952456959ba6b032dfc8c246723cd64aef"
+    },
+    {
+      "path": "root-resumed-research-20261009/PARTICULAR_VOLITION_REREAD.json",
+      "bytes": 1773,
+      "sha256": "5b81f3732078f85a0924ba3c31252228756b96a220d149516d9260b095172e41"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/READING_RECORD.json",
+      "bytes": 3137,
+      "sha256": "476a4a94d7bb388d2405848051e0ee2cededb0002efc8bfd01ac2f44acc206ca"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/REPORT.md",
+      "bytes": 16964,
+      "sha256": "1e03346592bfefb32d6d8c3f51502b2d5b08f3f04e87448b617bf1ad7a4fb155"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/VERIFICATION.json",
+      "bytes": 966,
+      "sha256": "8103d0d523319a6a62ca2febecea8aed8d62bfb122710a4ae06683d4122383cd"
+    }
+  ]
+}

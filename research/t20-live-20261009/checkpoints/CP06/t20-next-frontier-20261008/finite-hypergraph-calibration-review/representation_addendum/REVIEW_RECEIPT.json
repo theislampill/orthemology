@@ -1,0 +1,77 @@
+{
+  "author_artifacts": [
+    {
+      "bytes": 3621,
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/LINEAR_RECORD_SCOPE.md",
+      "sha256": "ce6f0e1c26f780edc76ff66f7b1004670dd9300ad90198e46fadea5783afc835",
+      "snapshot": "author_snapshot/LINEAR_RECORD_SCOPE.md"
+    },
+    {
+      "bytes": 4098,
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/UNIFORM_CALIBRATION_REPRESENTATION.md",
+      "sha256": "03623fae668a5b89870ddadaccd6649b5e025d4d6b2df36f462fae4b10fc26a6",
+      "snapshot": "author_snapshot/UNIFORM_CALIBRATION_REPRESENTATION.md"
+    }
+  ],
+  "authority": "Mathematical review only; predecessor payloads preserved, no protected integration, owner acceptance or T20 closure.",
+  "blocking_findings": [],
+  "exclusions": [
+    "Fixed-finite-panel whole-function identification",
+    "Finite-sample recovery",
+    "An input or world-uniform modulus",
+    "Uniform query or runtime bounds",
+    "Physical calibration certification",
+    "Independent audit of additional author controls/source packaging not listed here"
+  ],
+  "independent_controls": {
+    "assertions": 251,
+    "discontinuity_no_stop_controls": 10,
+    "largest_mesh_exponent": 12,
+    "nonmonotone_lower_bound_panels": 8,
+    "oracle_calls": 25852,
+    "reconstructions": 24,
+    "scope": "Finite rational polygonal controls support the general proof; observed meshes and calls are not uniform bounds.",
+    "status": "PASS"
+  },
+  "prior_receipt_sha256": "b13d2a444054db8d8a05447a5ffe7c566e4af418b749064258c06bfd73c5300a",
+  "review_artifacts": [
+    {
+      "bytes": 7668,
+      "path": "REVIEW.md",
+      "sha256": "bc9ce3d2721435b82b82e933109cd2d539a3e9b900cfd00cf007f2baaad9a271"
+    },
+    {
+      "bytes": 4931,
+      "path": "independent_uniform_controls.py",
+      "sha256": "31155187489393cb826691d3c5f1ea95ab167f071e86942c7868b97585d55ee4"
+    },
+    {
+      "bytes": 7495,
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "0becaca4a2e79c57c9da1d98a34fc5bcf10e85d05b8f29d1166f80b4b4e041b9"
+    },
+    {
+      "bytes": 7495,
+      "path": "INDEPENDENT_REPLAY.log",
+      "sha256": "0becaca4a2e79c57c9da1d98a34fc5bcf10e85d05b8f29d1166f80b4b4e041b9"
+    },
+    {
+      "bytes": 3017,
+      "path": "verify_current_review.py",
+      "sha256": "149dbef946c800e846432e9497f113962abc0735a3eff78ea2e1229af05cc697"
+    }
+  ],
+  "review_date_utc": "2026-10-08",
+  "scope": [
+    "All-command rational point-evaluation oracle to a uniform Cauchy representation of participating calibration homeomorphisms",
+    "Correct linear-record transport on an open log-rate domain without probability normalization"
+  ],
+  "scope_sentence_correction": {
+    "accepted_sha256": "03623fae668a5b89870ddadaccd6649b5e025d4d6b2df36f462fae4b10fc26a6",
+    "substance": "No a priori/world-uniform modulus is assumed; the stopping mesh does certify a function-specific continuity scale relative to the oracle.",
+    "superseded_draft_sha256": "242862f8940e87cf98a4433ce7bcfadbd69ee820fd1c28259e271c754138b846",
+    "verification": "Exact sole sentence replacement verified by reconstruction of the supplied earlier digest."
+  },
+  "status": "PASS",
+  "superseding_unary_receipt_sha256": "a865338a2bf493349450d4b9670c6ff65c8f367ae5ca72bcdfa7fac9f2217335"
+}

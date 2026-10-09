@@ -1,0 +1,37 @@
+{
+  "status": "Author-stage bounded research; independent review pending",
+  "files": {
+    "INPUT_BINDINGS.json": {
+      "sha256": "31997d6bf0210090e0c340c9e151f3a47921921507b7653f6fc21c0e1bab4efe",
+      "bytes": 8163
+    },
+    "VERIFICATION.json": {
+      "sha256": "03edf2dfdaa94ffde9035fb2c5bd2b00236de680c3f88b647fb39dcbad77f948",
+      "bytes": 4451
+    },
+    "RESEARCH_ACCOUNTING.json": {
+      "sha256": "baf4efc014253d1eb1e913ecc13aef87133f9832852e8d234f82b8f4f3a7ebed",
+      "bytes": 511
+    },
+    "READING_LEDGER.json": {
+      "sha256": "9e547f0ad94eda92afd86a5f4c1c201bb3005dba80f0c05f9e3ec434898d454b",
+      "bytes": 1240
+    },
+    "RESULT.md": {
+      "sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91",
+      "bytes": 27739
+    },
+    "RESEARCH_EVENTS.jsonl": {
+      "sha256": "c154ca9483eed229ddca5fa7c495d1025f650ae292148f2d9b4641d05812faca",
+      "bytes": 2092
+    },
+    "inherited/T16_FULL_READER_TEXT_v5.md": {
+      "sha256": "10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "bytes": 241546
+    },
+    "inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md": {
+      "sha256": "b0447ae60a4a6e36660b727f40e33a3e22d274643d6e01406a38a18a29e943db",
+      "bytes": 13802
+    }
+  }
+}

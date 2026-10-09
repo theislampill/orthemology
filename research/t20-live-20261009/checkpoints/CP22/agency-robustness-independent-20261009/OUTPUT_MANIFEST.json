@@ -1,0 +1,52 @@
+{
+  "verified": "2026-10-09",
+  "checks": {
+    "source_summary_under_180_words": true,
+    "complete_2025_twenty_page_text_read": true,
+    "fresh_extraction_matches_source": true,
+    "input_hashes_unchanged": true,
+    "no_rival_claimed_without_controls": true
+  },
+  "files": [
+    {
+      "path": "agency-robustness-independent-20261009/ANALYSIS.md",
+      "bytes": 19181,
+      "sha256": "11c43396546b3327f24a36c446d2051003181f6029e41122ecb6d5061a16204c"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/INPUT_READ_RECEIPT.json",
+      "bytes": 3656,
+      "sha256": "9bb6bd2f4371b6bebf1d4a408a75b6f6121b1fc3952a0294b816ebcda57f8818"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/SOURCE_SUMMARY.md",
+      "bytes": 1239,
+      "sha256": "89a52377bbab13aca247b85dab4bb514e32231f44421e44877ea7b7526050749"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/smith-2025-fresh-extraction.txt",
+      "bytes": 80241,
+      "sha256": "da34695413b11e3f25de10e212f6a09ec233516d07da5ff8b2d54268d5f9f08e"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/smith-2025-pdf-metadata.txt",
+      "bytes": 574,
+      "sha256": "4bea05b936f2cb3fe383beb29cacd0cca1bc69d47ba4810a8247fad9a91a3446"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/verified-page-10.png",
+      "bytes": 459118,
+      "sha256": "7c194eefb895154401a049b5313c591a7208e69c67573536a31941898417df91"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/verified-page-11.png",
+      "bytes": 455973,
+      "sha256": "44990891d272d70f4c51ae7fb40825d60f0d50e3ff051cccf28326c062984767"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/verified-page-12.png",
+      "bytes": 459335,
+      "sha256": "bbd7a5908b6ff0d4540db9c83acb86a0eb821ccf1549ae5acf34e4b6a7b1082a"
+    }
+  ]
+}

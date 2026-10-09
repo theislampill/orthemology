@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "arithmetic": "exact fractions; exponential inequalities proved in the appendix",
+  "families": {
+    "active_command_barrier": 878,
+    "active_common_mean_sandwich": 878,
+    "active_rate_domain": 878,
+    "active_tv_envelope": 878,
+    "adaptive_normalization": 80,
+    "adaptive_rare_event_tv": 80,
+    "bernoulli_inequality": 315,
+    "clipped_endpoints": 384,
+    "clipped_error_band": 3432,
+    "clipped_rate_range": 3432,
+    "envelope_polynomial": 3432,
+    "full_catalogue_gap_control": 315,
+    "inactive_region_exact_equality": 2554,
+    "linear_envelope": 3432,
+    "max_map_identity": 3432,
+    "min_map_identity": 3432,
+    "rational_positive_gap": 315,
+    "rational_rare_event_envelope": 878,
+    "simplified_budget_command": 315,
+    "strict_clipped_monotonicity": 3240,
+    "upper_command_domain": 315,
+    "upper_gap_bracket": 315,
+    "upper_gap_lower_bound": 315,
+    "upper_no_clipping": 315
+  },
+  "total_assertions": 33840,
+  "appendix_sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4",
+  "script_sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f"
+}

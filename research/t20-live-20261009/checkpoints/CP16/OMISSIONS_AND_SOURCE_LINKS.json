@@ -1,0 +1,414 @@
+{
+  "recorded_utc": "2026-10-09T03:30:36.554892+00:00",
+  "omitted_source_files": [
+    {
+      "path": "essence-attribute-source-return/build_ledger.py",
+      "bytes": 9223,
+      "sha256": "bae17c1002c600575d1cd68cfcdbf2d45baf2fb54e7c0f182c77dd1ed30d5687",
+      "reason": "Source-ledger construction code omitted from this non-executable data increment."
+    },
+    {
+      "path": "essence-attribute-source-return/read-selections/eltobgui2013-printed228.txt",
+      "bytes": 2660,
+      "sha256": "4119b3a7c8afe33954c5f296bae7892f50afccf36763660f18d0ac23e03dfb1b",
+      "reason": "Modern copyrighted source text omitted, including substantial page excerpts; exact identity and reading boundary retained."
+    },
+    {
+      "path": "essence-attribute-source-return/read-selections/eltobgui2013-printed236-240.txt",
+      "bytes": 13325,
+      "sha256": "b05c20b604281c6ea12fc931aa1e5525c9475d4c2899cc8b36b445f181a4c4fb",
+      "reason": "Modern copyrighted source text omitted, including substantial page excerpts; exact identity and reading boundary retained."
+    },
+    {
+      "path": "essence-attribute-source-return/read-selections/eltobgui2013-printed266-270.txt",
+      "bytes": 13486,
+      "sha256": "b83b63107b9ad1a0d26d480392c8bda7e9991b88fe38fd32508e497d9919d835",
+      "reason": "Modern copyrighted source text omitted, including substantial page excerpts; exact identity and reading boundary retained."
+    },
+    {
+      "path": "essence-attribute-source-return/read-selections/eltobgui2013-printed299-302.txt",
+      "bytes": 10126,
+      "sha256": "cedc41a51850de8983615a9e24b9ba1054a74f1240e46e27a9a4c4c012798a3c",
+      "reason": "Modern copyrighted source text omitted, including substantial page excerpts; exact identity and reading boundary retained."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/dar1-item176.html",
+      "bytes": 591148,
+      "sha256": "d88ecff87e17ef96cdee517a2fe5a0ca9a94e535de201b5c7de1be1fa42f1352",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/dar1-item177.html",
+      "bytes": 588694,
+      "sha256": "e5ffb69e34c5d050f9202fb84c2d4f8636f62716e36f0122e4d9532c5eff37c1",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/dar1-item178.html",
+      "bytes": 599694,
+      "sha256": "9bd66b2b2c0201ee627f7e51bb4b25f103b34786c67b765f2fa6fe6a36637521",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/dar1-item179.html",
+      "bytes": 591516,
+      "sha256": "892ef868b680f5b4f68badc1aa2b66cc42f173f92c8a203c014d412fee4edfa7",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/dar1-item180.html",
+      "bytes": 590562,
+      "sha256": "bdd655a6ccf5141c5ec1246d668eb2a35942e1a273e61a684cf80ac0f91e5e34",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/dar1-item183.html",
+      "bytes": 586416,
+      "sha256": "4d8017dd1d8fd5351ffb311d7f6681faf43c6ea2d538cc700e8ae8b49d185d38",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/dar1-p280.html",
+      "bytes": 595697,
+      "sha256": "a0023a8e76444fafc002b135b2bd21dbea9258bd54743b597fccf72ab4a95b06",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/dar1-p281.html",
+      "bytes": 594219,
+      "sha256": "e78b68b57371db879bf2b5f6b47d19efb83a4c98609352eec2d8d5e7e049a3e4",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/eltobgui-p238.png",
+      "bytes": 272840,
+      "sha256": "903d6c5541729344288efea22912f315f3b898e03ec7a21fe26b9ced7809aa31",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/eltobgui-p267.png",
+      "bytes": 260817,
+      "sha256": "93e8893e18703fb79a3e3386d858c78cc4a30172aad9a1cfd9bb0ea97abf27cc",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/eltobgui-p300.png",
+      "bytes": 265933,
+      "sha256": "1bbaa711171a67cb0fa4427cef4a793b4340bc95a2d4854aa7b33e43ca05cd1f",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/eltobgui2013-layout.txt",
+      "bytes": 928637,
+      "sha256": "a6a2fb1537f6b6db450adcefe0040a68c5ccd6f0c4dede849797e43b7e8b7c7f",
+      "reason": "Modern copyrighted source text omitted, including substantial page excerpts; exact identity and reading boundary retained."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/eltobgui2013.pdf",
+      "bytes": 2231368,
+      "sha256": "d2c90eaa5f238145c5c8b71ff4f27b048ded1fd154242a300d08d212a737a963",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/majmu17-all-electronic-layers.txt",
+      "bytes": 1104326,
+      "sha256": "67609032ca89e4f2f6976a72589078ab825d1b0548d3797387d8a76d355162f8",
+      "reason": "Large repeated electronic source layers omitted; actually read bounded unvocalized selection retained."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/majmu17-item1727.html",
+      "bytes": 1851783,
+      "sha256": "d928958eeedd2e724ea918fa3b896272ec643c6b97ff166477d62fa370a985bf",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/majmu17-item1728.html",
+      "bytes": 1851643,
+      "sha256": "e88d27a45b50a990c07c357f587555f556dc73c051c0cfc8d4a46db41bf1888c",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "essence-attribute-source-return/sources/majmu17-p161.html",
+      "bytes": 1851688,
+      "sha256": "1f24f0dc776564c4acec1727c79a21229d799d527760808eba81aba529530850",
+      "reason": "Full scan, rendered image, or raw website capture omitted."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-1.png",
+      "bytes": 33027,
+      "sha256": "2fd0441cdbafce2ec6bb71220e0e15d3fbc07a8c4d21fe106a9b69ab75052e0c",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-17.png",
+      "bytes": 101508,
+      "sha256": "f9bda8d635b91d37fe65b004091b8e127fb586786529ef10b8a700f7549738b4",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-18.png",
+      "bytes": 108332,
+      "sha256": "dfbeef00f09e888de3661d44e8b87b127d4b690b1755b1f25d8800bcdd2b92be",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-19.png",
+      "bytes": 106964,
+      "sha256": "942389b4733c4a6455d21ba4d694491e94c08e0e6883899942657bb76cc59e6f",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-2.png",
+      "bytes": 24930,
+      "sha256": "328992ba894b73568de3d7b5987b0c601ee57c3724313c99ae546849905ee117",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-3.png",
+      "bytes": 86025,
+      "sha256": "6bd20d01942d49b0e1692ddf568fd1f8bad9fc252bea712ea94034f8c9f966e5",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-30.png",
+      "bytes": 33430,
+      "sha256": "721f23aa9c2b5f574627571782cfb31e13d249d66ff15a3a85ce62817fc03494",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-31.png",
+      "bytes": 90149,
+      "sha256": "773dd1c3ea9aa532a9a591bd2603117010a525417ef74166d1bbed50165aac15",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-32.png",
+      "bytes": 104705,
+      "sha256": "1a7b6c129373408937347f550dbaf3ac1e6548902f4d1df15b6ccfb326ddba52",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-33.png",
+      "bytes": 99746,
+      "sha256": "72a3c6bf63347778288352af9463ea7ecefdeb60a505eba5f598fc447900c7d5",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-34.png",
+      "bytes": 85275,
+      "sha256": "0ebf25ff387feb6d40b5ac914cd30eb67e2d2d4e8dbf21caba6a415fa0646588",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-35.png",
+      "bytes": 101077,
+      "sha256": "dec888b1a656c345fecec5c10d891af8ab1aed827d8b3f77425574c5f3d1507c",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-36.png",
+      "bytes": 69369,
+      "sha256": "caba02891f3b54d1f489fffafc73e571b1db41e9c127f522180e575af25d3659",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-37.png",
+      "bytes": 90610,
+      "sha256": "8875d955513eefffedd8ce546f71fa7950da1abc681905bdb48558c3ccf7c146",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-38.png",
+      "bytes": 83034,
+      "sha256": "83fd589cbd45dbc61267f8989822c047f740f76be85c4922cf0faedf82c37eed",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-39.png",
+      "bytes": 107889,
+      "sha256": "cce3e25210dd046f8d4a8f3215b07b9685cbc9428d7eafef27e55734e78524d2",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-4.png",
+      "bytes": 73149,
+      "sha256": "39c8171f8a35449a09dfdf6134b676641c001e0e0c7d398add03c3a069bc9567",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-40.png",
+      "bytes": 100790,
+      "sha256": "f2402382da75c49446d725f9e0bcfa03a5a5734eb6c77421077f736501c99733",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-41.png",
+      "bytes": 103480,
+      "sha256": "bf8a30b23305cbefc2d7775b2c7a5a0aa404201c6a56e7b7c01d25cca3b978a3",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-42.png",
+      "bytes": 104976,
+      "sha256": "796afe071e581ae417d25b313c59f387f554befea11a26f76c3d39960478b6eb",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-pdf-43.png",
+      "bytes": 74273,
+      "sha256": "9ffd18eb96e15782abffc99d31baee133f2e1e2bec03fe6831d85f3b057e8108",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-rushd1995.pdf",
+      "bytes": 3905728,
+      "sha256": "76467cd7ed09c989cca92697a24ab079864a90352f8cf1a35b96ce2a4389b925",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-rushd1995.txt",
+      "bytes": 216,
+      "sha256": "5c64836f638737b48dc21afe0dcc4607474c3cda1a98195989e23c667f206743",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-scan-acquisition.json",
+      "bytes": 224,
+      "sha256": "1bc341308439b5f96ac2bd04b8cf8114b92414d708e010cc8aba44e0a15ddc76",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-unity-web-return.txt",
+      "bytes": 43625,
+      "sha256": "9b5ab509fb6a7009c662f7d7d0c4d3462dec099b1a3a344215c455d916b56db4",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/isfahaniyya-web-return.txt",
+      "bytes": 44882,
+      "sha256": "e20ecab19f23f460f75bd539ea7acb4a2a701fee5e511a49d353084d3cbd496c",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/majmu5-primary.html",
+      "bytes": 754831,
+      "sha256": "70c9d9dac3a005600befd13676bb8856d28b78d94a35126a41ee422846309af5",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-137.png",
+      "bytes": 223318,
+      "sha256": "da59ae2e286efe85ba717141697447f6650f64f25063de343be8127b42c18f66",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-139.png",
+      "bytes": 241732,
+      "sha256": "dfbdbf8d712bea057ad0e0fc180952736b43fbda9209097dc48914e97f69de08",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-140.png",
+      "bytes": 234060,
+      "sha256": "50f6cb7d606d7f1f6637dd0afa15930e38191e49b3651b154470445c8bedf445",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-159.png",
+      "bytes": 239564,
+      "sha256": "73424f6f660dd32384216547d0644d7a9d9532e2067dc117b2a3604c791c4a76",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-165.png",
+      "bytes": 240645,
+      "sha256": "727b0318aa7aa725a0ef17bd373473dd9ae7320693e63525e1c80e1768f6777c",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-186.png",
+      "bytes": 246991,
+      "sha256": "b716667e1c1feaaeb77f51cdbed3f6a33c91738e1a0c04412273350b84321413",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-187.png",
+      "bytes": 207108,
+      "sha256": "1876a10693827f5e6c028bb825b1036a67891f2e9e29cc8ed8f1cd1702e4d326",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-6.png",
+      "bytes": 66406,
+      "sha256": "15abbbc9b9878fc015c3f644bf40b6fe504df1c70910c63f38e56019030433f9",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-85.png",
+      "bytes": 219296,
+      "sha256": "6317cf3757077d4be39350b3161ba55d2c00eb18718fd140efb7e64af36d0f25",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/page-86.png",
+      "bytes": 152563,
+      "sha256": "d7b4396d7f99c7f694df72bae16bd38e7778178e8c88e5a577d44f247e558bee",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/who-created-god.pdf",
+      "bytes": 2418081,
+      "sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    },
+    {
+      "path": "intrinsic-necessity-source-return/research-intermediates/who-created-god.txt",
+      "bytes": 988498,
+      "sha256": "73aa990afec39c35c2d4c511f8924e9dfacf1724ac1f937117c68be0c8176ae4",
+      "reason": "Private source/intermediate evidence excluded: no full scans, images, modern source bodies, or raw web captures. Reading boundaries and hashes survive in the exact ledgers and this registry."
+    }
+  ],
+  "source_links": [
+    "https://almobadarah.com/publications/book-34",
+    "https://almobadarah.com/uploads/books/93cf86d674df49e95cef37e3.pdf",
+    "https://ar.wikisource.org/wiki/شرح_العقيدة_الأصفهانية",
+    "https://archive.org/download/waq13116/13116.pdf",
+    "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+    "https://islamweb.net/ar/library/content/22/2031/",
+    "https://islamweb.net/ar/library/content/22/2032/",
+    "https://islamweb.net/ar/library/content/22/591/",
+    "https://mail.shamik.net/papers/dasgupta%20on%20the%20plurality%20of%20grounds.pdf",
+    "https://quranislam.github.io/fatwa/ibn-taymiyyah/fatwa74.html",
+    "https://usul.ai/ar/t/sharh-caqida-isfahaniyya/49",
+    "https://waqfeya.com/books/شرح-العقيدة-الأصفهانية-ط-الرشد-58556e2bc4a44c00b444317bcfca6cba",
+    "https://www.islamicbook.ws/amma/alsfdit-002.html",
+    "https://www.islamweb.net/ar/library/content/22/1726/",
+    "https://www.islamweb.net/ar/library/content/22/1726/%D8%A7%D9%84%D8%AA%D9%85%D8%A7%D8%AB%D9%84-%D8%A3%D9%88-%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B6%D9%84-%D9%84%D8%A7-%D9%8A%D8%B9%D9%82%D9%84-%D8%A5%D9%84%D8%A7-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D8%AF",
+    "https://www.islamweb.net/ar/library/content/22/1727/",
+    "https://www.islamweb.net/ar/library/content/22/1728/",
+    "https://www.islamweb.net/ar/library/content/22/595/",
+    "https://www.islamweb.net/ar/library/content/413/167/%D9%85%D8%B9%D9%86%D9%89-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%88%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%B9%D8%B1%D8%B4",
+    "https://www.islamweb.net/ar/library/content/413/169/",
+    "https://www.islamweb.net/ar/library/content/413/169/%D8%A7%D9%84%D9%88%D8%AC%D9%87-%D8%A7%D9%84%D8%AB%D8%A7%D9%85%D9%86-%D8%B9%D8%B4%D8%B1-%D9%85%D8%A7-%D9%8A%D8%B9%D8%A7%D8%B1%D8%B6%D9%88%D9%86-%D8%A8%D9%87-%D8%A7%D9%84%D8%A3%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A%D8%A9-%D9%85%D9%86-%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A7%D8%AA-%D9%81%D8%A7%D8%B3%D8%AF-%D9%85%D8%AA%D9%86%D8%A7%D9%82%D8%B6",
+    "https://www.islamweb.net/ar/library/content/413/176/",
+    "https://www.islamweb.net/ar/library/content/413/177/",
+    "https://www.islamweb.net/ar/library/content/413/178/",
+    "https://www.islamweb.net/ar/library/content/413/179/",
+    "https://www.islamweb.net/ar/library/content/413/180/",
+    "https://www.islamweb.net/ar/library/content/413/793/",
+    "https://www.islamweb.net/ar/library/pageno_redirect.php?part=1&bk_no=413&pageno=280",
+    "https://www.islamweb.net/ar/library/pageno_redirect.php?part=1&bk_no=413&pageno=281",
+    "https://www.islamweb.net/ar/library/pageno_redirect.php?part=17&bk_no=22&pageno=161",
+    "https://www.jonathanschaffer.org/overdetermination.pdf",
+    "https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf",
+    "https://www.philosophie.ch/billon-2023",
+    "https://www.routledge.com/Medieval-Islamic-Pragmatics-Sunni-Legal-Theorists-Models-of-Textual-Communication/Ali/p/book/9780415567770",
+    "https://www.shamik.net/papers/dasgupta%20individuals.pdf"
+  ],
+  "link_access": "Public source links and a previously supplied Drive provenance link are retained as recorded. Packaging did not recheck remote availability or Drive sharing. No source was reacquired here.",
+  "excluded_ongoing_work": {
+    "path": "qayyim-complete-causation-return/",
+    "status": "Ongoing; outside this checkpoint. Contents were not inspected, hashed, copied, or claimed complete."
+  },
+  "modern_source_policy": "No modern full source body, substantial modern source excerpt, full scan, image, or raw web capture is included. User-provided TXT and analytical reports are preserved; bounded classical Arabic extracts retain their electronic-witness caveats."
+}

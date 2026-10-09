@@ -1,0 +1,77 @@
+{
+  "captured_utc": "2026-10-08T21:59:20.695738+00:00",
+  "sources": [
+    {
+      "path": "../sharp-skyline-information/RESULT.md",
+      "sha256": "52a9c53ca5d1765de2956e685701532529efca9a0292165f8f9e738b43b7a870",
+      "bytes": 21706,
+      "role": "Immutable sharp theorem subject"
+    },
+    {
+      "path": "../sharp-skyline-information/MANIFEST.json",
+      "sha256": "2275f71c24bed4789a36dcb5c6e143fdc82d95554706c6c452fa39a09567c39f",
+      "bytes": 1569,
+      "role": "Complete frozen author payload binding"
+    },
+    {
+      "path": "../sharp-skyline-information/SHA256SUMS",
+      "sha256": "39a073eafcad4b2d0c5f3fd9487919b86f187773117b3ea7638181ba2dc0b16c",
+      "bytes": 743,
+      "role": "Author checksum listing"
+    },
+    {
+      "path": "../retained-skyline-likelihood/RESULT.md",
+      "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+      "bytes": 17673,
+      "role": "Consumed written mathematical predecessor"
+    },
+    {
+      "path": "../skyline-likelihood-score/RESULT.md",
+      "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f",
+      "bytes": 9091,
+      "role": "Consumed written mathematical predecessor"
+    },
+    {
+      "path": "../baseline-skyline-moments/RESULT.md",
+      "sha256": "b7bdcfa8b7288d69d569b6ed904c314fe58e4795c92549a6d525c433ad7c139f",
+      "bytes": 13251,
+      "role": "Consumed written mathematical predecessor"
+    },
+    {
+      "path": "../full-skyline-reverse-kl/RESULT.md",
+      "sha256": "4aa4bee754cf89284a327d4322f4d35a93314525da8aaa22e5d028754908e28a",
+      "bytes": 16686,
+      "role": "Consumed written mathematical predecessor"
+    },
+    {
+      "path": "../full-skyline-log-squared/RESULT.md",
+      "sha256": "7251887ac088bfc13a93b94e400879e851ebd1ceb1a6337449f9def20cb0c2f7",
+      "bytes": 21418,
+      "role": "Consumed written mathematical predecessor"
+    },
+    {
+      "path": "../full-skyline-log-squared-review/REVIEW.md",
+      "sha256": "550ef660e2071b6669d94ed43c3105069cf9d7db7ed0953c4cacb00fb6b7bbf6",
+      "bytes": 15867,
+      "role": "Separately completed predecessor review; not a substitute for sharp review"
+    },
+    {
+      "path": "../full-skyline-log-squared-review/REVIEW_RECEIPT.json",
+      "sha256": "ec9c5f9944d812386cc812b4a4095b88432dd4608d1e68dd9761b1e2e0be80e2",
+      "bytes": 1544,
+      "role": "Separately completed predecessor review; not a substitute for sharp review"
+    },
+    {
+      "path": "../full-skyline-log-squared-review/MANIFEST.json",
+      "sha256": "a06c29062818d873ad3250d616d42d0bbd748289c1c33b91b7abb90885407fdd",
+      "bytes": 1985,
+      "role": "Separately completed predecessor review; not a substitute for sharp review"
+    },
+    {
+      "path": "../full-skyline-log-squared-review/VERIFICATION.json",
+      "sha256": "87038c411699857318445aa8ca8aa3c87efe22508a28a4c4b79f6fecb84414f3",
+      "bytes": 544,
+      "role": "Separately completed predecessor review; not a substitute for sharp review"
+    }
+  ]
+}

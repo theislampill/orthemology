@@ -1,0 +1,134 @@
+{
+  "scope": "Independent review reading, not author reading-duration certification",
+  "manuscript_sha256": "1f377b6c671d35839278f8b08722b7b550998489c9bda2a5fc83020a936a0d36",
+  "extraction_sha256": "3e95ca109f83e7305a1ed5121edf079553760883cafa16bd1405b4ef5dea1547",
+  "continuous_displays": [
+    [
+      1,
+      7
+    ],
+    [
+      8,
+      14
+    ],
+    [
+      15,
+      21
+    ]
+  ],
+  "nonempty_pages_read": 21,
+  "visually_inspected_pages": [
+    3,
+    16
+  ],
+  "page_hash_rule": "SHA-256 of each form-feed-delimited page UTF-8 text, no trimming; final empty segment excluded",
+  "page_hashes": [
+    {
+      "page": 1,
+      "sha256": "7d703a80a5c9741038bd875170107166cad35a58f4c3e099d80fe9dae8905151",
+      "characters": 3464
+    },
+    {
+      "page": 2,
+      "sha256": "8f6158b1117e2d9d7bbc5a3cd05bd1b23336ba25f0aab2c53d122b178aba545a",
+      "characters": 3361
+    },
+    {
+      "page": 3,
+      "sha256": "8a7f75dc5f86ac11b720286f40b4c1e8e10b12e421c3e69b2b65882f4c31e37c",
+      "characters": 4075
+    },
+    {
+      "page": 4,
+      "sha256": "03a3443465bc7b01380254d974525ef80125304599b6b07f00249340f92599b9",
+      "characters": 3345
+    },
+    {
+      "page": 5,
+      "sha256": "b8d891cb14eceac75dd6559cca27a67c8a83b62dac41e0b0f48155c739f9f845",
+      "characters": 3459
+    },
+    {
+      "page": 6,
+      "sha256": "62813e65268f3898be65848d9950e476052d49b9ba164988f7942b8e24f84393",
+      "characters": 2963
+    },
+    {
+      "page": 7,
+      "sha256": "d7f6a0a6bfc10abdc23833c142a8c36631b77c61bb4b3aa64e5b104d2d90bdee",
+      "characters": 2911
+    },
+    {
+      "page": 8,
+      "sha256": "35634579e88a0e7a757bb437631f7468317c1065a963c257bf34c9e7aaa97026",
+      "characters": 3100
+    },
+    {
+      "page": 9,
+      "sha256": "c8d19d1f7f67ce069bade27e8a5e49974acc5912c2692d695d034da62a3c6fd8",
+      "characters": 3356
+    },
+    {
+      "page": 10,
+      "sha256": "cc83cd67c23e0c7914c0e85626fc4f5a28ea53f0b23ec6fe0bad431a1ad6843e",
+      "characters": 3170
+    },
+    {
+      "page": 11,
+      "sha256": "e8e3b2c1f5e1425035e1a61450373fb431c7b5519ea0d4d694c0be7436b0dc41",
+      "characters": 3274
+    },
+    {
+      "page": 12,
+      "sha256": "f7f5f5875710b177d02d41e7a20c32a4838ea406adf35048864517b013f35306",
+      "characters": 3492
+    },
+    {
+      "page": 13,
+      "sha256": "7524ccd79516ea0b5826f63f3b3150242e3688cd420afa7325d0ba17f254803c",
+      "characters": 3616
+    },
+    {
+      "page": 14,
+      "sha256": "6e619868639ba20791568d17be1f38faef1d35b4dc5ffd36736628b4223b8724",
+      "characters": 3160
+    },
+    {
+      "page": 15,
+      "sha256": "811f789e4a079cbd75e6b5543b5322ce0d1c72dac4faf9e50cc50974a541836e",
+      "characters": 3548
+    },
+    {
+      "page": 16,
+      "sha256": "8aefa01864f78dc18c86b9a8ffb4029634ca33106e0ad48ecef6b327d114f2cb",
+      "characters": 3105
+    },
+    {
+      "page": 17,
+      "sha256": "4816c6e3a71498e891a9cd79be6eb1953b54e3d58a49f733368ffd357549e386",
+      "characters": 3796
+    },
+    {
+      "page": 18,
+      "sha256": "4c72327e306b3c72a53f74c521a8770143d4562a423a8e3c999eda6c9416aad0",
+      "characters": 3989
+    },
+    {
+      "page": 19,
+      "sha256": "cdf2705c515be3e44bfd29744f742f90505a03ebabaf704497fbd09c8e072018",
+      "characters": 3094
+    },
+    {
+      "page": 20,
+      "sha256": "f22d847b925f8df34f951b69b2bc3ae554d09ca8764756eb4a8796b80b778618",
+      "characters": 878
+    },
+    {
+      "page": 21,
+      "sha256": "a76a706493b44f4531060eb6c1c2cd3b918d4edcaf3b492acc222e4298cb871e",
+      "characters": 1647
+    }
+  ],
+  "fresh_pdftotext_matches_retained_extraction": true,
+  "final_publication_read": false
+}

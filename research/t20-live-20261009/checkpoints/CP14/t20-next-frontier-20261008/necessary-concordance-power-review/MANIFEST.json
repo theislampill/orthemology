@@ -1,0 +1,30 @@
+{
+  "artifacts": [
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/INPUT_HASHES.json",
+      "sha256": "31cd3b12000c286e433246b783f9fba4d02fe6ea0ff02aae03f1a34394f07ec7",
+      "bytes": 7494
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/READING_RECEIPT.json",
+      "sha256": "fff594a451add1b0a09e7a8baf1be2f4ee257f25d5696b0377fd9d4b37b89d73",
+      "bytes": 5912
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/REVIEW.md",
+      "sha256": "a7b589769897f5b3d0d14c2675ee6bef3eb4b47e32562575d3c326df58e1c42c",
+      "bytes": 10615
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/VERIFICATION.json",
+      "sha256": "172eaa45c0f57a743db1a4b210054a902a8dab306ebc4cf33ea6987206305830",
+      "bytes": 7740
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/reviewed_RESULT.md",
+      "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+      "bytes": 22307
+    }
+  ],
+  "scope": "Bounded independent written and source review"
+}

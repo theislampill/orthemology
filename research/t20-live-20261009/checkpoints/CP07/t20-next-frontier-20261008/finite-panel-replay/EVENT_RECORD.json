@@ -1,0 +1,21 @@
+{
+  "scope": "Prospective supplementary-evidence pass after the proof and independent review had already been completed. Earlier activity is not reconstructed as a timed event log.",
+  "events": [
+    {
+      "observed_utc": "2026-10-08T16:11:02Z",
+      "source": "clock.curr_time",
+      "event": "Supplementary evidence pass active after parent request. Preserve all three reviewed artifact hashes; add supporting files only."
+    },
+    {
+      "observed_utc": "2026-10-08T16:12:56Z",
+      "source": "clock.curr_time",
+      "event": "The newly written exact_controls.py had run successfully. Retained output records 33 exact algebraic identities and matching hashes for the two reviewed author artifacts and the independent review."
+    }
+  ],
+  "boundaries": [
+    "These are observed UTC checkpoints, not a claim of continuous work or a fabricated elapsed research duration.",
+    "The theorem and countercontrol are written mathematical results; the script is a supplementary arithmetic check, not kernel or whole-proof verification.",
+    "The supporting files are added prospectively without changing either reviewed proof or the review.",
+    "No protected integration, T20 closure, empirical validation, or new theorem is claimed."
+  ]
+}

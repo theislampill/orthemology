@@ -1,0 +1,50 @@
+{
+  "scope": "Reference binding only; reading extents are recorded separately. Old files unchanged.",
+  "inputs": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/historical-reading-projections/documents/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.md",
+      "bytes": 53446,
+      "sha256": "eab4653f5e3a4f8fd87f1df17ff130dfe70b6442cfb33e83218f9848d722be82"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/historical-reading-projections/documents/Orthemology_Seventeenth_Research_Final_v1_20261005.md",
+      "bytes": 80153,
+      "sha256": "4336a5098e25dc97288284d941ac5eefe9a7c651406960e519e87c40658ef45e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/REPORT.md",
+      "bytes": 26915,
+      "sha256": "97f4cd1b948aa6396d29780e0ba9ea92f51d45c7ea91128d0671e1296d3c57db"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md",
+      "bytes": 12491,
+      "sha256": "c65d19e90e6571c5e363147d39e5d817e92d5b1499e5536961544d187a8ad7b7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/REPORT.md",
+      "bytes": 24176,
+      "sha256": "6b0cbc001634b3b3fccb183c759bf0d813a359c6ac2df5cd59b911ae661f47ce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "bytes": 20262,
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md",
+      "bytes": 33327,
+      "sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "bytes": 25536,
+      "sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    }
+  ]
+}

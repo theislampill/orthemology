@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "author_payloads_bound": 14,
+  "inherited_payloads_verified": 19,
+  "individual_inputs_verified": 3,
+  "author_replay_families": 13,
+  "synthetic_histogram_total": 198517961374844800000000000,
+  "histogram_derived_factorial_moments": [
+    "89/200",
+    "44807/200000",
+    "25364801/200000000",
+    "15697326743/200000000000"
+  ],
+  "synthetic_grid_witness": "PASS",
+  "empirical_samples_collected": false,
+  "full_candidate_grid_searched": false
+}

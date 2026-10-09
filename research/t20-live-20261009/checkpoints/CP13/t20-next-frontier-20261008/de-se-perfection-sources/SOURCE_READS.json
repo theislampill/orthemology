@@ -1,0 +1,116 @@
+{
+  "operation": "de-se-perfection-sources",
+  "date_utc": "2026-10-08",
+  "sources": [
+    {
+      "id": "Lewis1979",
+      "url": "https://andrewmbailey.com/dkl/Attitudes_De_Dicto_and_De_Se.pdf",
+      "file": "lewis1979.pdf",
+      "status": "Complete paper read in sequential overlapping extraction blocks; printed 520-521 visually inspected from retained PDF.",
+      "scope": "Printed 513-543, all sections I-XIV.",
+      "derivative": "lewis1979-decoded.txt",
+      "notes": "The PDF extracted in a character-shifted font. A disclosed +29 working decoding was applied to encoded body characters. Marginal footer text remains partly corrupted; some punctuation was lost. Original PDF is authoritative, not the decoded footer. The main two-gods and self-ascription paragraphs were visually checked.",
+      "binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979.pdf",
+        "sha256": "846039c2e2c9b3b1401a4cb9387279a3071c4e69d5dd85f28dc2878575c69b2b",
+        "bytes": 7291313
+      },
+      "derived_binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979-decoded.txt",
+        "sha256": "78da95d6ea9b4d10bff4811581ffa34e44e2a248409d53919b5518e8c6d30a5f",
+        "bytes": 85968
+      }
+    },
+    {
+      "id": "Perry1979",
+      "url": "https://www.uvm.edu/~lderosse/courses/lang/Perry%281979%29.pdf",
+      "file": "perry1979.pdf",
+      "status": "Complete printed paper and endnotes read in continuous extraction blocks.",
+      "scope": "Printed 3-21.",
+      "derivative": "perry1979.txt",
+      "notes": "University-hosted reproduction of published author paper. Cover metadata font is defective; main body readable. No independent visual collation of the complete article.",
+      "binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.pdf",
+        "sha256": "844910ec84480761100cb26c9d88036afb10df7d69f02f6c5d08c7b47885facb",
+        "bytes": 5007766
+      },
+      "derived_binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.txt",
+        "sha256": "4b378ab11f46d002f4ec2fd8d62cda5a3c4e8ba18b0277d99b84770a87d7562c",
+        "bytes": 49805
+      }
+    },
+    {
+      "id": "Grim2000",
+      "url": "https://pgrim.org/pgrim/Being.pdf",
+      "file": "grim2000.pdf",
+      "status": "Introduction and complete essential-indexical argument, including replies to Abbruzzese and Perry/Boer-Lycan, directly read.",
+      "scope": "Author PDF pages 1-6, sections 1-2. No complete-paper reading credit.",
+      "derivative": "grim2000.txt",
+      "notes": "Author-hosted version identifies International Journal for Philosophy of Religion 47 (2000), 141-154. Distinguish author-PDF page numbering from printed journal pagination. Later liar/knower/Cantorian sections intentionally not assessed.",
+      "binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.pdf",
+        "sha256": "7694b5b40ace67d0205906ffd5ddbe62944479062d82b70c335fe9ce5aacbb14",
+        "bytes": 59057
+      },
+      "derived_binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.txt",
+        "sha256": "36344bb01f670271ba6117be969767f3726235a86811108125e1fa837ef86469",
+        "bytes": 39051
+      }
+    },
+    {
+      "id": "Torre2006",
+      "url": "https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=2038&context=faithandphilosophy",
+      "record_url": "https://place.asburyseminary.edu/faithandphilosophy/vol23/iss2/5/",
+      "file": "torre2006-published.pdf",
+      "status": "Complete published paper and notes directly read; printed 197-198 visually checked.",
+      "scope": "Printed 191-200; PDF first page is repository cover.",
+      "derivative": "torre2006-published.txt",
+      "notes": "Journal PDF publicly offered as free/open access. Web fetch initially failed; direct same verified download URL subsequently returned 200 with PDF. Earlier archive draft fetches failed and carry no reading credit. The single-identity-ascription context of pp197-198 governs the report; no new general defect is claimed.",
+      "binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.pdf",
+        "sha256": "4c300df8b71353f2e0df0458156738cfbc0bdd7f889cbe80a912f585c4403134",
+        "bytes": 226118
+      },
+      "derived_binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.txt",
+        "sha256": "16a3cc88a440c523d2113ea869e87a6ba19f1de8aebf138628c7a54caa471967",
+        "bytes": 33492
+      }
+    },
+    {
+      "id": "Ganya2026",
+      "url": "https://link.springer.com/article/10.1007/s11841-026-01169-y",
+      "file": "ganya2026.html",
+      "status": "Complete article body, objections, notes and references read from verified publisher HTML.",
+      "scope": "Working extraction L053-L208; body through conclusion L166 and notes L168-172.",
+      "derivative": "ganya2026.txt",
+      "notes": "Publisher lists Sophia, 14 August 2026, DOI10.1007/s11841-026-01169-y. Article existence, metadata and primary content verified. This is not independent verification of every source cited by its author, endorsement of its full historical reconstruction, or independent corroboration of Lewis/Perry.",
+      "binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.html",
+        "sha256": "73dd973bbc09ffb649bb0e0e5564a10defc200be59231ffabf285c190f7b86da",
+        "bytes": 315907
+      },
+      "derived_binding": {
+        "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.txt",
+        "sha256": "efb71ed841b52de74c23efda598ddfaa75000e4e739f229ade7c8c73fcbbe615",
+        "bytes": 52409
+      }
+    }
+  ],
+  "unrecovered_candidates": [
+    {
+      "id": "Grim1985",
+      "url": "https://philpapers.org/archive/GRIAOT.pdf",
+      "status": "Search discovery and publication metadata only; download403. Do not count as full primary read. Relevant passage is quoted and assessed within Torre2006."
+    },
+    {
+      "id": "Nagasawa2003",
+      "url": "https://openresearch-repository.anu.edu.au/handle/1885/86558",
+      "status": "Repository abstract/metadata discovery only. No substantive article reading or inference credited."
+    }
+  ],
+  "intellectual_dependence": "Lewis and Perry are foundational de se interlocutors; Torre expressly uses Lewis; Ganya expressly uses the essential-indexical tradition. Do not sum these as independent confirmations.",
+  "credit": "No new first-reading credit for inherited Ibn Taymiyyah evidence; direct rereading only. No historical research-time recovery or duration certification."
+}

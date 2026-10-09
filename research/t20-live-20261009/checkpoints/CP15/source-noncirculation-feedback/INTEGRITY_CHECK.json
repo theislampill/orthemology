@@ -1,0 +1,212 @@
+{
+  "scope": "File identity and extraction-selection integrity only; no new proof or metaphysical-warrant verification.",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "record": "P1",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/P1-physical-1-9.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "P2",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/P2-physical-1-41.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "P3",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/P3-physical-305-359.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "P4",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/P4-physical-720-747.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "P5",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/P5-physical-209-241.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/P5-physical-590-613.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "P6",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/P6-physical-50-103.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/P6-physical-138-176.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "F1",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/F1-physical-1-125.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "F2",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/F2-physical-1-104.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "I1",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I1-physical-1-112.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I1-physical-140-189.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "I2",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I2-physical-1-146.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "I3",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I3-physical-1-62.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I3-physical-224-241.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "I4",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I4-physical-1-120.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "I5",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I5-physical-1-77.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "I6",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I6-physical-1-141.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "record": "I7",
+      "whole_input_hash_matches": true
+    },
+    {
+      "selection": "source-noncirculation-feedback/read-selections/I7-physical-1-5.txt",
+      "hash_matches": true,
+      "equals_bound_slice": true,
+      "within_file": true
+    },
+    {
+      "historical_record": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/DIRECT_READING_RECEIPT.json",
+      "hash_matches": true
+    },
+    {
+      "historical_record": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+      "hash_matches": true
+    },
+    {
+      "historical_record": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/SOURCE_READS.json",
+      "hash_matches": true
+    },
+    {
+      "historical_record": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/efficacy-warrant-appraisal/SOURCE_READS.json",
+      "hash_matches": true
+    },
+    {
+      "historical_record": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-warrant/SOURCE_BINDINGS.json",
+      "hash_matches": true
+    },
+    {
+      "historical_record": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/safadiyya/SOURCE_GUIDE_AND_LIMITS.md",
+      "hash_matches": true
+    },
+    {
+      "historical_record": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/dar-8-9/acquisition/source_manifest.json",
+      "hash_matches": true
+    },
+    {
+      "historical_record": "t20-next-frontier-20261008/wise-determination/SOURCE_READS.json",
+      "hash_matches": true
+    }
+  ]
+}

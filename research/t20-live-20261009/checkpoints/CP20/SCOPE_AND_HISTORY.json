@@ -1,0 +1,117 @@
+{
+  "status": "INTERMEDIATE_T20_ACTIVE",
+  "checkpoint": 20,
+  "freeze_utc": "2026-10-09T09:18:21.817649+00:00",
+  "groups": {
+    "ameri_causal_foundations": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "ameri-causal-foundations-20261009/CONTEXT_RECONCILIATION.md",
+        "ameri-causal-foundations-20261009/READING_LEDGER.json",
+        "ameri-causal-foundations-20261009/READ_FIRST.md",
+        "ameri-causal-foundations-20261009/REPORT.md",
+        "ameri-causal-foundations-20261009/SHA256SUMS",
+        "ameri-causal-foundations-20261009/SIMULTANEOUS_PRIORITY_CONTROL.md",
+        "ameri-causal-foundations-20261009/SOURCE_BINDINGS.json",
+        "ameri-causal-foundations-20261009/VALIDATION.json",
+        "ameri-causal-foundations-20261009/cosmology-context/CONTEXT-NOTES.md",
+        "ameri-causal-foundations-20261009/cosmology-context/READING-LEDGER.json",
+        "ameri-causal-foundations-20261009/review/INDEPENDENT_FOCUSED_REVIEW.md",
+        "ameri-causal-foundations-20261009/review/REVIEW_LEDGER.json",
+        "ameri-causal-foundations-20261009/scriptural-context/contextual-notes.md",
+        "ameri-causal-foundations-20261009/scriptural-context/reading-ledger.json"
+      ]
+    },
+    "compound_ground_author": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "compound-ground-necessity-20261009/REPORT.md",
+        "compound-ground-necessity-20261009/check_compound_ground.py",
+        "compound-ground-necessity-20261009/CHECK_RESULTS.json",
+        "compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md",
+        "compound-ground-necessity-20261009/SOURCE_READS.json"
+      ]
+    },
+    "compound_ground_independent_review": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "compound-ground-review-20261009/INDEPENDENT_RESULTS.json",
+        "compound-ground-review-20261009/INDEPENDENT_REVIEW.md",
+        "compound-ground-review-20261009/INPUT_HASHES.sha256",
+        "compound-ground-review-20261009/INPUT_HASHES_INITIAL.sha256",
+        "compound-ground-review-20261009/SHA256SUMS",
+        "compound-ground-review-20261009/SOURCE_READS.json",
+        "compound-ground-review-20261009/check-run.log",
+        "compound-ground-review-20261009/independent_checks.py"
+      ]
+    },
+    "wise_particular_determination": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "wise-particular-determination-return-20261009/REPORT.md",
+        "wise-particular-determination-return-20261009/READING_RECORD.json",
+        "wise-particular-determination-return-20261009/VERIFICATION.json"
+      ]
+    },
+    "fitrah_currentness": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "fitrah-warrant-currentness-20261009/REPORT.md",
+        "fitrah-warrant-currentness-20261009/SOURCE_READS.json"
+      ]
+    },
+    "modern_rival_root_records": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "particular-agency-rival-20261009/ROOT_SOURCE_SELECTION.md",
+        "particular-agency-rival-20261009/ROOT_READING_RECORD.json",
+        "particular-agency-rival-20261009/ROOT_POWER_READING.json",
+        "particular-agency-rival-20261009/ROOT_ORIGINAL_SCOPE_READING.json"
+      ]
+    },
+    "oconnor_agent_causal_power": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "particular-agency-rival-20261009/oconnor-power/REPORT.md",
+        "particular-agency-rival-20261009/oconnor-power/READING_RECORD.json"
+      ]
+    },
+    "simplicity_comparison": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "particular-agency-rival-20261009/simplicity-comparison/READING_BINDINGS.json",
+        "particular-agency-rival-20261009/simplicity-comparison/REPORT.md",
+        "particular-agency-rival-20261009/simplicity-comparison/VERIFICATION.json"
+      ]
+    },
+    "scope_contingency": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "particular-agency-rival-20261009/scope-contingency/REPORT.md",
+        "particular-agency-rival-20261009/scope-contingency/READING_RECORD.json"
+      ]
+    },
+    "post19_root_review_records": {
+      "classification": "completed_post19_analyst_output",
+      "files": [
+        "root-resumed-research-20261009/COMPOUND_GROUND_REVIEW.json",
+        "root-resumed-research-20261009/PARTICULAR_VOLITION_REREAD.json"
+      ]
+    },
+    "inherited_replay_dependency": {
+      "classification": "inherited_checkpoint19_positive_proof_dependency_not_new_research",
+      "files": [
+        "necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md"
+      ]
+    }
+  },
+  "scope_contingency": "Finalized before freeze; included with parent confirmation at 2026-10-09T09:13:41Z",
+  "successor_excluded": "complete-explanation-source-20261009",
+  "research_closed": false,
+  "integrated": false,
+  "accepted": false,
+  "packaging_credited_as_research": false,
+  "historical_duration_certified": false,
+  "new_lean_or_kernel_result": false,
+  "historical_records": "Original dates and pending statuses preserved unchanged; current completion is recorded only in this checkpoint control."
+}

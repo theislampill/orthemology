@@ -1,0 +1,34 @@
+{
+  "checkpoint_number": 18,
+  "status": "INTERMEDIATE_T20_ACTIVE",
+  "root_position": "Root provisionally favours one actual complete common original source; no change to the checkpoint16 ROOT_ADJUDICATION judgement referenced through checkpoint17.",
+  "preservation_only": true,
+  "integration": false,
+  "research_closure": false,
+  "new_philosophical_closure": false,
+  "history": {
+    "queue": "PRIORITIES.md is the pre-return comparison and priority record; its then-unchecked locator descriptions remain historical. The two completed REPORT.md files and their reading records give the later bounded outcomes. Do not silently rewrite the queue as a post-return report.",
+    "original_formal_report": "RESULT.md describes the original two-file result and equality-parthood control. BOOLEAN_SCOPE_ADDENDUM.md is the later strengthened mereological control. Neither supersedes the unbounded theorem or changes the original control into the Boolean control.",
+    "red_logs": "Statement-red logs are historical initial failure/draft records, not final failures or completed proofs. Final author logs and review logs are preserved separately.",
+    "prior_checkpoints": "Earlier drafts and adjudications remain in prior checkpoints unchanged; no old record is retrospectively corrected."
+  },
+  "source_boundaries": {
+    "brute_report_final_sha256": "46e532e16b8d3fa9fefd0614157b9324fcef44dbaf115d4778e3800e258e6d4c",
+    "brute": "Dar3 locators authenticate bounded arguments but supply no further independent defeat of brute contingent originality. Dar8:126–136 is consequential reinterpretation/targeted rereading and scan verification of an already traversed electronic corpus, not a new whole-volume reading. Its asymmetry correction refines rather than erases intrinsic-sufficiency warrant.",
+    "exact_reading_and_corrections": "brute-contingent-source-return/READING_LEDGER.json and REPORT.md preserve exact inspected pages, voice transitions, edition control and transcription defects; positive-agency-source-return/SOURCE_RECORD.json and REPORT.md preserve the exact electronic/scan/inherited distinctions and quarantines.",
+    "positive_agency": "Dar10:141–146 gives a conditional knowing/willing bridge presupposing self-knowledge. Its initial alternatives/selection argument quotes Ibn Rushd. Dar7:219 adds no positive cognitive ascent; Dar8:116 is locator recovery; Jami VI:197–199 rechecks an already represented argument. No new independent positive-agency closure.",
+    "packaging": "Reading credits are retained claims from the bounded source returns, not new reading, edition inspection or source authentication by the packaging operation."
+  },
+  "formal_boundaries": {
+    "positive": "Reciprocal candidate membership plus the displayed parthood/explanation/circle conditions yields identity of explanatory facts; all-actual-facts totality supplies membership, and nonempty unrestricted PSR supplies existence.",
+    "four_fact_control": "Four facts, equality parthood, all predicate pluralities, no fusions. The narrower target excludes a,b and has exactly q,a,b as full explainers.",
+    "boolean_control": "Nonempty subsets of four atoms, inclusion parthood, proper parts, strong supplementation and all nonempty fusions. This removes the first control's missing-fusion limitation while retaining local nonuniqueness.",
+    "limits": "Fact identity is not bearer identity. Mereological union is not logical conjunction; no truth-negation semantics, productive-creation interpretation, injective bearer bridge, modal or metaphysical realization is claimed. Candidate exclusion permits controls; it does not force nonuniqueness in every model."
+  },
+  "verification_layers": {
+    "historical_root": "ROOT_VERIFICATION.json: 2026-10-09T04:03:07.606711+00:00, only Uniqueness.lean and FiniteControl.lean. It never certifies BooleanControl.lean.",
+    "independent_review": "total-explainer-uniqueness-review/VERIFICATION.json: 2026-10-09T04:12:12.350968+00:00, all three new standalone files; earlier audits read, not replayed; author files unchanged.",
+    "archive_qualification": "Fresh replay, if passed, is transport/package qualification only; it adds no source or independent philosophical judgement. See the external validation receipt.",
+    "legacy_scripts": "Original verify.sh and verify-boolean.sh are preserved unchanged historical records with old workspace and prior-file dependencies. Use replay/verify_portable.py instead; it requires only this archive plus an explicitly selected Lean4.19.0 executable and Python3."
+  }
+}

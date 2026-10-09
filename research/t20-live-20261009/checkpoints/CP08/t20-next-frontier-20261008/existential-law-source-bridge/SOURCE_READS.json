@@ -1,0 +1,128 @@
+{
+  "status": "BOUNDED_SOURCE_RETURN_COMPLETE_UNRESOLVED_BRIDGE",
+  "created_utc": "2026-10-08T17:45:18.970708+00:00",
+  "records": [
+    {
+      "id": "SF001",
+      "url": "https://www.islamicbook.ws/amma/alsfdit-001.html",
+      "raw_html": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-001.html",
+      "raw_sha256": "8e78e6cc9565303b04eb1730f04232f6f2c154f6e69a43a3ea95ae5a47fa44a4",
+      "matches_inherited_raw_identity": true,
+      "local_text": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-001.txt",
+      "local_text_sha256": "327da51acaef60300a86208e805d98a756d437b3416c99e0668cad502c9273ac",
+      "direct_current_ranges": [
+        [
+          153,
+          191
+        ],
+        [
+          198,
+          215
+        ]
+      ],
+      "range_unit": "received electronic paragraph, inclusive",
+      "credit": "Targeted contextual rereading of previously read source; recovered identical bytes because raw corpus absent from local checkpoint. No new primary-discovery or whole-section credit.",
+      "first_pass_new_primary_coverage": 0,
+      "new_scan_pages": 0
+    },
+    {
+      "id": "SF003",
+      "url": "https://www.islamicbook.ws/amma/alsfdit-003.html",
+      "raw_html": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-003.html",
+      "raw_sha256": "f7843d4429233f11313d77d129cf8c3ee556546d98b0b9873cf5a9463e80ce97",
+      "matches_inherited_raw_identity": true,
+      "local_text": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-003.txt",
+      "local_text_sha256": "45e493f652a4a017a826016814bddc11b638e669ad7f25f713b25f178a579e40",
+      "direct_current_ranges": [
+        [
+          111,
+          149
+        ],
+        [
+          374,
+          390
+        ],
+        [
+          556,
+          590
+        ],
+        [
+          645,
+          658
+        ]
+      ],
+      "range_unit": "received electronic paragraph, inclusive",
+      "credit": "Targeted contextual rereading of previously read source; recovered identical bytes because raw corpus absent from local checkpoint. No new primary-discovery or whole-section credit.",
+      "first_pass_new_primary_coverage": 0,
+      "new_scan_pages": 0
+    },
+    {
+      "id": "Akmaliyya",
+      "url": "https://islamweb.net/ar/library/content/22/591/",
+      "local_text": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "local_text_sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "direct_current_ranges": [
+        [
+          35,
+          46
+        ],
+        [
+          120,
+          134
+        ]
+      ],
+      "range_unit": "canonical unvocalized working paragraph, inclusive",
+      "credit": "Targeted contextual rereading. Earlier bearer-eligibility report owns full unique-epistle credit. Raw majmu-item591.txt has duplicated answer layer; this record counts only canonical unique text.",
+      "new_scan_pages": 0
+    },
+    {
+      "id": "D",
+      "url": "https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf",
+      "local_text": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "local_text_sha256": "bd165592d56bfa08166861125343914e8dea5d10af82eb6aa5a0e82dbb69b3f7",
+      "direct_current_ranges": [
+        [
+          5,
+          11
+        ],
+        [
+          37,
+          37
+        ]
+      ],
+      "range_unit": "PDF page, journal383–389 and415",
+      "credit": "First direct bounded reading by this worker, overlapping coordinated main source-worker whole-paper reading. No independent whole-paper or discovery credit.",
+      "coordinated_not_direct": [
+        "Section9 complete context",
+        "Section5 rejection of nonterminating grounding chains",
+        "Footnote55 qualification"
+      ]
+    }
+  ],
+  "interpretation_changes": [
+    "Source argument sharpened from generic anti-universal assertion to particular-quality nonpriority and epistemic-middle/real-ground distinction.",
+    "Precise comparison with Dasgupta core essence as domain specification; no new premise proves all nonobjectual facts reduce to subject/property instances.",
+    "Root and main source-worker comparison: no new logical gap in retained T17/T18, but positive qualitative motivation reduces confidence in universal productive-bearer exhaustiveness and unconditional conclusions relying on it; conditional and eligible-agent results retained."
+  ],
+  "duplicates": [
+    "General universal/particular ontology",
+    "Ground-to-bearer realisation burden",
+    "Necessary existence versus nonreceipt",
+    "Constitutive concomitance versus efficient production",
+    "Anti-all-received completion principle"
+  ],
+  "limits": [
+    "No new formal model or theorem",
+    "No new scan or manuscript collation",
+    "No continuous full-Safadiyya rereading",
+    "No whole-Dasgupta rereading by this worker",
+    "No metaphysical possibility certificate or independent warrant verification"
+  ],
+  "failed_operations": [
+    {
+      "operation": "Python requests import for public-source acquisition",
+      "result": "ModuleNotFoundError; recovered with standard-library urllib, no permissions denial or bypass."
+    }
+  ],
+  "display_limits": "Some broad discovery outputs truncated. Only specifically redisplayed complete primary ranges above receive direct reading credit."
+}

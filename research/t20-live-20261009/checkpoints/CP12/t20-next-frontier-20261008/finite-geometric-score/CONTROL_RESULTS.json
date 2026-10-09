@@ -1,0 +1,306 @@
+{
+  "status": "PASS",
+  "kind": "exact deterministic mathematical controls; not a statistical simulation or a formal proof kernel",
+  "baseline_centering_cases": 32,
+  "centering_boundary_n1": {
+    "n": 1,
+    "b": "-5/9"
+  },
+  "extraction_and_cell_area_cases_by_L": {
+    "1": 70,
+    "2": 715,
+    "3": 4845,
+    "4": 23751
+  },
+  "max_actual_queries_by_L": {
+    "1": 5,
+    "2": 10,
+    "3": 16,
+    "4": 21
+  },
+  "quantization_cases": 23751,
+  "collision_free_cases": 250,
+  "count_loss_witness": {
+    "points_denominator": 4,
+    "points": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "L": 2,
+    "K": 2,
+    "K_L": 1
+  },
+  "exact_parameter_cases": 21,
+  "parameter_results": [
+    {
+      "n": 2,
+      "alpha": "1/10",
+      "eta": "1/10",
+      "R": 69120,
+      "L": 8445638140,
+      "L_bits": 33,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 2,
+      "alpha": "1/7",
+      "eta": "1/13",
+      "R": 48384,
+      "L": 7331529026,
+      "L_bits": 33,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 2,
+      "alpha": "1/3",
+      "eta": "1/4",
+      "R": 20736,
+      "L": 351078585,
+      "L_bits": 29,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 3,
+      "alpha": "1/10",
+      "eta": "1/10",
+      "R": 146238,
+      "L": 4560249943,
+      "L_bits": 33,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 3,
+      "alpha": "1/7",
+      "eta": "1/13",
+      "R": 102367,
+      "L": 4021419990,
+      "L_bits": 32,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 3,
+      "alpha": "1/3",
+      "eta": "1/4",
+      "R": 43872,
+      "L": 269921966,
+      "L_bits": 29,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 5,
+      "alpha": "1/10",
+      "eta": "1/10",
+      "R": 477274,
+      "L": 6124446389,
+      "L_bits": 33,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 5,
+      "alpha": "1/7",
+      "eta": "1/13",
+      "R": 334092,
+      "L": 5469112036,
+      "L_bits": 33,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 5,
+      "alpha": "1/3",
+      "eta": "1/4",
+      "R": 143183,
+      "L": 480935953,
+      "L_bits": 29,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 10,
+      "alpha": "1/10",
+      "eta": "1/10",
+      "R": 3276745,
+      "L": 32547592028,
+      "L_bits": 35,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 10,
+      "alpha": "1/7",
+      "eta": "1/13",
+      "R": 2293722,
+      "L": 29340296568,
+      "L_bits": 35,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 10,
+      "alpha": "1/3",
+      "eta": "1/4",
+      "R": 983024,
+      "L": 3159500856,
+      "L_bits": 32,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 20,
+      "alpha": "1/10",
+      "eta": "1/10",
+      "R": 28848215,
+      "L": 434046889530,
+      "L_bits": 39,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 20,
+      "alpha": "1/7",
+      "eta": "1/13",
+      "R": 20193751,
+      "L": 393124510070,
+      "L_bits": 39,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 20,
+      "alpha": "1/3",
+      "eta": "1/4",
+      "R": 8654465,
+      "L": 46846482055,
+      "L_bits": 36,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 50,
+      "alpha": "1/10",
+      "eta": "1/10",
+      "R": 641667887,
+      "L": 30069589217486,
+      "L_bits": 45,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 50,
+      "alpha": "1/7",
+      "eta": "1/13",
+      "R": 449167521,
+      "L": 27311761762461,
+      "L_bits": 45,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 50,
+      "alpha": "1/3",
+      "eta": "1/4",
+      "R": 192500366,
+      "L": 3458536520292,
+      "L_bits": 42,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 100,
+      "alpha": "1/10",
+      "eta": "1/10",
+      "R": 7424906909,
+      "L": 1056239757667709,
+      "L_bits": 50,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 100,
+      "alpha": "1/7",
+      "eta": "1/13",
+      "R": 5197434836,
+      "L": 960272113075461,
+      "L_bits": 50,
+      "guarantee": "eventual in n; no certified n0"
+    },
+    {
+      "n": 100,
+      "alpha": "1/3",
+      "eta": "1/4",
+      "R": 2227472073,
+      "L": 124089652738237,
+      "L_bits": 47,
+      "guarantee": "eventual in n; no certified n0"
+    }
+  ],
+  "full_loop_and_tie_controls": "PASS",
+  "negative_controls": {
+    "one_sided_score_bias": {
+      "rejected": true,
+      "witnesses": {
+        "negative": {
+          "D": 16,
+          "L": 8,
+          "points": [
+            [
+              1,
+              1
+            ]
+          ],
+          "score_difference": "-20793/65536"
+        },
+        "positive": {
+          "D": 4,
+          "L": 2,
+          "points": [
+            [
+              1,
+              1
+            ]
+          ],
+          "score_difference": "375/256"
+        }
+      }
+    },
+    "ignore_area_resolution": {
+      "rejected": true,
+      "n": 2,
+      "L": 2,
+      "score_error": "375/256",
+      "allowed": "1/32"
+    },
+    "delete_collision_qualification": {
+      "rejected": true,
+      "D": 4000,
+      "L": 1000,
+      "points": [
+        [
+          2,
+          1000
+        ],
+        [
+          3,
+          500
+        ]
+      ],
+      "K": 2,
+      "K_L": 1,
+      "score_error": "1278674969/1024000000",
+      "claimed_bound": "27/250"
+    },
+    "omit_baseline_centering": {
+      "rejected": true,
+      "n": 20,
+      "b": "-10099370556589/14196621479040",
+      "alternative_mean_lower_certificate": "-8140356439029220981/11683876263735836160",
+      "wrong_threshold": "3117562300468225/424868227772212224",
+      "scope": "Rejects the claimed moment-based guarantee; not a constructed skyline distribution."
+    },
+    "reuse_ideal_midpoint_constant_48": {
+      "rejected": true,
+      "chebyshev_bound_multiple_of_alpha": 4,
+      "scope": "Rejects this sufficient-bound calculation; does not claim 192 is optimal."
+    }
+  },
+  "direct_source_bindings_checked": 10,
+  "sharp_transitive_bound_files_checked": 39,
+  "sharp_review_status": "PASS for exactly bound predecessor; current packet unreviewed",
+  "sharp_result_sha256": "52a9c53ca5d1765de2956e685701532529efca9a0292165f8f9e738b43b7a870",
+  "explicit_cutoff_certified": false,
+  "historical_floor": "UNVERIFIED"
+}

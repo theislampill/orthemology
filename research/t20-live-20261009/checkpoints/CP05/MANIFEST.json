@@ -1,0 +1,1363 @@
+{
+  "schema": "t20-intermediate-checkpoint-manifest-v1",
+  "classification": "FIFTH_ADDITIVE_INTERMEDIATE_RESEARCH_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "sealed_utc": "2026-10-08T15:11:01.194587+00:00",
+  "research_cutoff_utc": "2026-10-08T14:49:16.553449+00:00",
+  "previous_research_cutoff_utc": "2026-10-08T13:15:48Z",
+  "fresh_definition": "Completed post-fourth-cutoff work copied unchanged; packaging itself is delivery assurance only.",
+  "fresh_kernel_replay_performed": false,
+  "fresh_scoped_python_replay_commands": 12,
+  "review_boundaries_file": "EVIDENCE_BOUNDARIES.json",
+  "exclusion_list_file": "OMISSIONS_AND_SOURCE_LINKS.json",
+  "active_not_included": [
+    "finite-hypergraph-calibration",
+    "bounded-interaction-detection",
+    "root-later-operations/BOUNDED_PRESENCE_CANDIDATE.md"
+  ],
+  "file_count": 217,
+  "files": [
+    {
+      "path": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 10210,
+      "sha256": "b4d648981b776838b8c80ceac371ccd27da22c712d801ff495c5c6e6b541dc92",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "EVIDENCE_BOUNDARIES.json",
+      "bytes": 4044,
+      "sha256": "d2f772e1ce0f47587bbb0dd30905ccfb3fed8e1a57eb8057e50a6afa26271df6",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "OMISSIONS_AND_SOURCE_LINKS.json",
+      "bytes": 62269,
+      "sha256": "60ac5d2c0018294b0c0224a884cc0a8169eb1d93642bc884cbd07c49d998dba5",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/EXCLUDED_LOCAL_ENTRIES.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/INTEGRITY_RECEIPT.json",
+      "bytes": 1961,
+      "sha256": "ca451c19ff4e4922d4f1ecf7fd08920489783cd91dbbbd60e4d8e0ddc0485925",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/MINIMAL_REPLAY_DEPENDENCIES.json",
+      "bytes": 4368,
+      "sha256": "c64f92b77c32f548d66218b4f5217906159ec57b54da8a30c67946d528c093bb",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/ORIGINAL_AND_REVIEW_BINDING_CHECKS.json",
+      "bytes": 271857,
+      "sha256": "ab9ea2c7bbdd1d907e2154b85035f5a99c6ad2b8a4df0e593e54317cce6ff05c",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/REPLAY_RECEIPT.json",
+      "bytes": 11336,
+      "sha256": "d4bf4ffe6db6933c7a092a7ac73c2f3b37a60102c0a855f00d7efa10315681ff",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/SOURCE_COPY_BINDINGS.json",
+      "bytes": 65013,
+      "sha256": "e81d58cb851b0e28ce36a47663fbfb0f721352832462ab2602dd4c77561c835d",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/check_manifest.py",
+      "bytes": 1084,
+      "sha256": "b952fbeacc124b25d10d1c71d25296d274de679e1746b050a261852aee92b43f",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/initial-delivery-replay/EXPLANATION.md",
+      "bytes": 611,
+      "sha256": "0a2095d78cd3bc4b2212278c2b6f4bdc967c006f1fe7addb8cb91d258617316b",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/initial-delivery-replay/REPLAY_RECEIPT.json",
+      "bytes": 11337,
+      "sha256": "6f9d45cab7d01676f1311dd64f8cfb4f4a9e34093d2ccdec51f788f9a5eb6b2e",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/initial-delivery-replay/grouped-review.stderr.log",
+      "bytes": 1139,
+      "sha256": "563f170f04b858d88f2a8ecb9a8e5cd3faba6eaf3e412e7c40b91b1521ce581a",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/prior-identities/FIRST_LIBRARY_DELIVERY.json",
+      "bytes": 723,
+      "sha256": "53c91396c1f31820123b50bc2c54438c5e78dcb7a738a8679104839e06cd1426",
+      "boundary": "inherited_identity_record_unchanged"
+    },
+    {
+      "path": "PACKING/prior-identities/FOURTH_COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 10229,
+      "sha256": "d5f9a543de06086a3fce1ef04945c6a51a0910167540b3266ecc86da554e2e6d",
+      "boundary": "inherited_identity_record_unchanged"
+    },
+    {
+      "path": "PACKING/prior-identities/FOURTH_DELIVERY_IDENTITIES.json",
+      "bytes": 811,
+      "sha256": "96f372e9f5dcd99fe751fc87da2cf29679e4f05b3793d66fe74e1ad35dc697a9",
+      "boundary": "inherited_identity_record_unchanged"
+    },
+    {
+      "path": "PACKING/prior-identities/SECOND_LIBRARY_DELIVERY.json",
+      "bytes": 874,
+      "sha256": "9e3e008497af9277e0b5405121a77f0f9ad6463264e4b184bc28ccaaac010b87",
+      "boundary": "inherited_identity_record_unchanged"
+    },
+    {
+      "path": "PACKING/prior-identities/THIRD_LIBRARY_DELIVERY.json",
+      "bytes": 933,
+      "sha256": "966d30d48f01864b243ce0537269a1b309c1012b029fa394871e42e87334019f",
+      "boundary": "inherited_identity_record_unchanged"
+    },
+    {
+      "path": "PACKING/replay-logs/REPLAY_RECEIPT.json",
+      "bytes": 11336,
+      "sha256": "d4bf4ffe6db6933c7a092a7ac73c2f3b37a60102c0a855f00d7efa10315681ff",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/absence-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/absence-author.stdout.log",
+      "bytes": 1156,
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/absence-review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/absence-review.stdout.log",
+      "bytes": 857,
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/grouped-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/grouped-author.stdout.log",
+      "bytes": 764,
+      "sha256": "e41c0fc78a94a7699c21a638a8a2a0f958a6ce09a522954004ebe4273a1724ac",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/grouped-review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/grouped-review.stdout.log",
+      "bytes": 2678,
+      "sha256": "849d6d93656c738627efc7e05061a97e8ca3b6a777b47bc0888c825fc346d9c4",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/interaction-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/interaction-author.stdout.log",
+      "bytes": 1076,
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/interaction-panel-review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/interaction-panel-review.stdout.log",
+      "bytes": 453,
+      "sha256": "d6e5e864eda7261803ae606c0685267669d72b2e9081a8b8c39f7c4b67c25cb0",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/interaction-panel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/interaction-panel.stdout.log",
+      "bytes": 535,
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/interaction-review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/interaction-review.stdout.log",
+      "bytes": 1029,
+      "sha256": "59c86afedadd911205bb5268d65103c372c6deee908df716ef9df8e4e9de0d3c",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/stable-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/stable-author.stdout.log",
+      "bytes": 632,
+      "sha256": "c23acc12409f450ef112caed077d79b63ee18a33e5d6e956e0d8fb6bc895496d",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/stable-review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/stable-review.stdout.log",
+      "bytes": 5487,
+      "sha256": "a7e52c6c7a495e194d3870e479942655cc54a9752ab86edf0b7ddce7757392dc",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/transport-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/transport-author.stdout.log",
+      "bytes": 532,
+      "sha256": "f2e25199b98a4b44bfbda6ef41a0d98886253578304c673beb067ae9737e5284",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/transport-review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay-logs/transport-review.stdout.log",
+      "bytes": 1047,
+      "sha256": "326db45ba67e11bb0b2a916eb3d73adc96d94615372d9be2d07df5b2c30c64c2",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "PACKING/replay_python.py",
+      "bytes": 5490,
+      "sha256": "2f2e569dfb826befcca9cadf98541a387a05049b4714ab459ba0c572c1fa349d",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 6870,
+      "sha256": "02ceb29912c80be45981481fb3a36ff3860e5c406b29f4264e653443ba58246f",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 2112,
+      "sha256": "d8381beea9514e05ec0c6fd736c90e2935ef2500cb7196cbd374a5e3ebf9e60b",
+      "boundary": "fresh_delivery_assurance_and_navigation"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dretske-continuation-access/ACCESS_PROVENANCE.json",
+      "bytes": 5880,
+      "sha256": "2914ccd9fd31815d52cc8b188bea645aac9481486d011b9fb2fcfdce3fdfb39d",
+      "boundary": "original_manifest_bound_payload_ACCESS_METADATA_ONLY"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dretske-continuation-access/ACCESS_RESULT.md",
+      "bytes": 3354,
+      "sha256": "f24569fad0b089d74f81fe9102c1414d089aff6f77f05a107b29b0b6769c872a",
+      "boundary": "original_manifest_bound_payload_ACCESS_METADATA_ONLY"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dretske-continuation-access/CROSSREF_BOOK_RESPONSE.json",
+      "bytes": 2099,
+      "sha256": "fc4c4da6e599ffb0c31c846a8bada06d8ea2c84f1a95bb36c6eb7953df625ed3",
+      "boundary": "original_manifest_bound_payload_ACCESS_METADATA_ONLY"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dretske-continuation-access/CROSSREF_CHAPTER_RESPONSE.json",
+      "bytes": 1513,
+      "sha256": "3c74afe9e039832992dc29fdf702032dc3d6531e89eac3cda909b3d8b0c3745c",
+      "boundary": "original_manifest_bound_payload_ACCESS_METADATA_ONLY"
+    },
+    {
+      "path": "t20-next-frontier-20261008/dretske-continuation-access/MANIFEST.json",
+      "bytes": 734,
+      "sha256": "559f73e7e169399bdad1801b3d151a4d957507ad377c17f30a97214b433cab22",
+      "boundary": "original_manifest_ACCESS_METADATA_ONLY"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/MANIFEST.json",
+      "bytes": 3611,
+      "sha256": "819b9c5eda8de1fd35b34714d24964ce02d4a41b5c6419413bcd8d82a6febe6c",
+      "boundary": "inherited_prior_checkpoint_hash_input_ONLY_NOT_NEW_RESEARCH"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/POLYNOMIAL_EFFICIENCY_APPENDIX.md",
+      "bytes": 7854,
+      "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4",
+      "boundary": "inherited_fourth_checkpoint_input_ONLY_NOT_NEW_RESEARCH"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/RESULT.md",
+      "bytes": 12746,
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+      "boundary": "inherited_fourth_checkpoint_input_ONLY_NOT_NEW_RESEARCH"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/EXACT_CONTROLS.md",
+      "bytes": 2079,
+      "sha256": "6987473e061e29b01aba27374addeae3da4d7a1456965bbdf510a3199f172af2",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/GLOBAL_SCALE_COROLLARY.md",
+      "bytes": 4949,
+      "sha256": "0cef524519a83260c1a13afa9af28d5fba517fcf04b21a7c2ae697bfbb4f8667",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/MANIFEST.json",
+      "bytes": 2615,
+      "sha256": "c53b0d1352f6b9890a0da2d7e46443654465447e3706c9cf2b87afc24bf93d3e",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/READ_FIRST.md",
+      "bytes": 1262,
+      "sha256": "7bb94b2f0750af3435fdf0779b59d30ea39274b93bf6996f8c1ac33f29b22602",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/RESEARCH_EVENTS.jsonl",
+      "bytes": 932,
+      "sha256": "1f8d12e41c1052e7b6eeb3840d995d51fdb8368c0b69e0d535d834f4b3bff581",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/RESULT.md",
+      "bytes": 17594,
+      "sha256": "c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/REVIEW_STATUS.md",
+      "bytes": 1937,
+      "sha256": "84c01dc889560c7196a68b8e68374b0df100985cc118ae7a05319981e5bcb33a",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/SOURCE_AUDIT.md",
+      "bytes": 5376,
+      "sha256": "c11364329a2d250ec65007c1d7bfb34815de30a8c8a6ad469c3cdcbdc1594182",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/SOURCE_BINDINGS.json",
+      "bytes": 4870,
+      "sha256": "274ad3616f31556c2f1a2e5799f03dcd838762003575db8671bd7443e9f0a960",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/exact_controls.py",
+      "bytes": 7255,
+      "sha256": "aa8c7c45fc8f2f803aaf4535a6eec6f49b67048e59d0ab8ca402b4fb77ca1af1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/results/exact_controls.json",
+      "bytes": 2809,
+      "sha256": "6d6a436a6f318ff39e9bc457a5bb7ebba384d559af68a855fe3a9d8b439d7c22",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants/results/exact_controls.log",
+      "bytes": 764,
+      "sha256": "e41c0fc78a94a7699c21a638a8a2a0f958a6ce09a522954004ebe4273a1724ac",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/INDEPENDENT_DERIVATIONS.md",
+      "bytes": 11932,
+      "sha256": "eeb1d3af5aadebb8232735ff9ec6f66f9b3cb47f54e273bbf6318ade0ef7c202",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/MANIFEST.json",
+      "bytes": 2219,
+      "sha256": "25751eddc5b1c20a8af165a8deec64049f4d0a5ca0433140c7347c6cce185dce",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/READ_FIRST.md",
+      "bytes": 930,
+      "sha256": "ba6ab7a221d8f8b489447cd8be2358d54c126a45ce6c8701648f32c48c1c5bf1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/REVIEW.md",
+      "bytes": 10089,
+      "sha256": "64025953510bb3cd7847389e980b209e580ce006394fc359cae9db92e93e917e",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/REVIEW_RECEIPT.json",
+      "bytes": 7116,
+      "sha256": "33ddb13d45e8ae057fbe688a4187df7933ec5c7c1ceff7b54db7442c013f8df3",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/independent_controls.py",
+      "bytes": 12428,
+      "sha256": "4d79776ca9b1ea780be4e34e28d5180626574b55c3ded1e21cbcd1e65d7353ba",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/replayed_author_controls/exact_controls.py",
+      "bytes": 7255,
+      "sha256": "aa8c7c45fc8f2f803aaf4535a6eec6f49b67048e59d0ab8ca402b4fb77ca1af1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/replayed_author_controls/results/exact_controls.json",
+      "bytes": 2809,
+      "sha256": "6d6a436a6f318ff39e9bc457a5bb7ebba384d559af68a855fe3a9d8b439d7c22",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/results/author_replay.log",
+      "bytes": 764,
+      "sha256": "e41c0fc78a94a7699c21a638a8a2a0f958a6ce09a522954004ebe4273a1724ac",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/results/independent_controls.json",
+      "bytes": 2678,
+      "sha256": "849d6d93656c738627efc7e05061a97e8ca3b6a777b47bc0888c825fc346d9c4",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/results/independent_controls.log",
+      "bytes": 2678,
+      "sha256": "849d6d93656c738627efc7e05061a97e8ca3b6a777b47bc0888c825fc346d9c4",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/results/verification.json",
+      "bytes": 318,
+      "sha256": "79a55cdfdf7b8edf0f485a6d9b87dadbc9bb0566e7c4e2bc97672be8e1946c5a",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-calibration-invariants-review/verify_receipt.py",
+      "bytes": 1590,
+      "sha256": "ebccf653f1a0eb372a84cd0ac2019bbe97132042d503fe58c8f22c56469f3286",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/PROCESS_AND_ORACLE_BOUNDARIES.md",
+      "bytes": 17002,
+      "sha256": "5e67e1c1db5d2a46dde90a84b93fdfab941fb096de1ae6683b6c5ade139dc793",
+      "boundary": "inherited_prior_checkpoint_hash_input_ONLY_NOT_NEW_RESEARCH"
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/RESULT.md",
+      "bytes": 15005,
+      "sha256": "c5f5a0aa82292fdea78e8939012abd5070ed3a855d270330db27d645e34c5239",
+      "boundary": "inherited_prior_checkpoint_hash_input_ONLY_NOT_NEW_RESEARCH"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/ANALYSIS.md",
+      "bytes": 18684,
+      "sha256": "c70ade3f34431728761e0f1e0c3493823b43703120a45c85c096fea1064f235c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/CONTROL_RESULTS.json",
+      "bytes": 532,
+      "sha256": "f2e25199b98a4b44bfbda6ef41a0d98886253578304c673beb067ae9737e5284",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/MANIFEST.json",
+      "bytes": 1054,
+      "sha256": "e1be24d3c56a21afda391af1e3ac3015faf36048b6926088832a935bbd6fca0d",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/READ_FIRST.md",
+      "bytes": 1750,
+      "sha256": "565550bbfdf55c7055a171123bc5e7ffddcb90c152959bfdfac9a05f96e50561",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/SOURCE_BINDINGS.json",
+      "bytes": 4548,
+      "sha256": "13835238258ecb6626a1688a9bf8f710dad2e04c4ac905c57a3f19ecc3f4477c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/exact_controls.py",
+      "bytes": 5255,
+      "sha256": "d6f4375e9a57a0a51e79b97c349d2e1aabe46c7e410dd4b48fe85e1d90db4de3",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/CONTROL_RESULTS.json",
+      "bytes": 1047,
+      "sha256": "326db45ba67e11bb0b2a916eb3d73adc96d94615372d9be2d07df5b2c30c64c2",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/MANIFEST.json",
+      "bytes": 1349,
+      "sha256": "29c0398e919c17b1ea72657732dee0a70137a7ef91c2496e4f2c0d4d84b803fe",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/READ_FIRST.md",
+      "bytes": 903,
+      "sha256": "67da1adbed1f7c3d4000b3950c75833c8d0a4b5d68cd0e8970d95fb4a4abaf6d",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/REVIEW.md",
+      "bytes": 16603,
+      "sha256": "505821674301ee1da70a5124e06d746df86f8bbdfcf8afe6eef603b1c546186a",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/REVIEW_BINDINGS.json",
+      "bytes": 5244,
+      "sha256": "886dc2643f00239cedb7d0b896545197d0f28796024dcd0536c2076aee074769",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/SCOPE_ADDENDUM.md",
+      "bytes": 2298,
+      "sha256": "7f9d219cb2e9eeba85a372fb81c1aa5e17a7cc20b3b0309859f371ccab86ad24",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/independent_controls.py",
+      "bytes": 9631,
+      "sha256": "e5cf7137078b43f1a25e8445c14c0dd14e2e19c27c039f8fe79a64c03f156592",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/EXACT_CONTROLS.md",
+      "bytes": 1614,
+      "sha256": "1d56ba9524576b64dc9cdcb56a611247cfa316db424fe3b750a3c44c239e5e4a",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/MANIFEST.json",
+      "bytes": 3462,
+      "sha256": "cc3e64188ba50ef51c1652d9989616d487ea4c7498673e13b3493a0cb06bd2df",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/READ_FIRST.md",
+      "bytes": 1229,
+      "sha256": "557dafd62477f2f4341cdf50122dc1cb6b2ac37ea86225e7362818691d9009ba",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/RESEARCH_EVENTS.jsonl",
+      "bytes": 915,
+      "sha256": "22629f28c164b62767040a11216be9b177a6969f721de33059e8dc566893051e",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/RESULT.md",
+      "bytes": 12481,
+      "sha256": "f8424612e92e5f4f3d45f89317070bf5ed4fd63b5cc53a43ee88b4713bc29f4b",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/REVIEW_STATUS.md",
+      "bytes": 2516,
+      "sha256": "872e2c09030b2170609d72fbbae093c1de834e98d36085cd1b44cae01d96982b",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/SOURCE_AUDIT.md",
+      "bytes": 6410,
+      "sha256": "7bf7d837c61ed3c6ef6ecb08270b3b0d345754fb54afcda091aefb96e0d7648a",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/SOURCE_BINDINGS.json",
+      "bytes": 20571,
+      "sha256": "ec2f86038126da0bf98ed994982341adc1cf58fa2807707979baf217c1612888",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/exact_controls.py",
+      "bytes": 5030,
+      "sha256": "92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/results/erratum_verification.json",
+      "bytes": 425,
+      "sha256": "b9cc706acd6b7b90e4dfbd759a26a1d7796e65672802cf2cf908eb42cf9451d6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/results/exact_controls.json",
+      "bytes": 1156,
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/results/exact_controls.log",
+      "bytes": 1156,
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/results/review_verification.json",
+      "bytes": 412,
+      "sha256": "9d7fff67839a3f665517cfb813359e64e4d91498d55df453e38f5bda315f254f",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/results/verification.json",
+      "bytes": 278,
+      "sha256": "ac760e3b59e2daed2221b1ca38f500181f96c8801f4ce1b3287a24dacc7bbbd6",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction/verify_evidence.py",
+      "bytes": 1959,
+      "sha256": "2f1771287858cca17a987faeacb917bc42eed68f98eb62147520b2aa46746d56",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/ERRATUM.md",
+      "bytes": 1492,
+      "sha256": "8ed2d479c07d30487072ba0b5dde52228259cb88589ec295de73453f5b3bc9f1",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/ERRATUM_RECEIPT.json",
+      "bytes": 2239,
+      "sha256": "34932c23d76203b90f6f569067d588bce66ad3e222018543a241eca4202a02ab",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/INDEPENDENT_CONTROLS.json",
+      "bytes": 857,
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/INDEPENDENT_REPLAY.log",
+      "bytes": 857,
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/REVIEW.md",
+      "bytes": 12195,
+      "sha256": "85284366281cc77a4957ddf8b291d5a91c641fa9e80ce0889eb94a2062460dbf",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/REVIEW_MANIFEST.json",
+      "bytes": 2831,
+      "sha256": "6bc8b43fbf0f91812c8344475857d0db7430fa553fb2d365cf4ee8af2d2889ec",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/REVIEW_RECEIPT.json",
+      "bytes": 27623,
+      "sha256": "7731d7ada9d6a4d1ceb456a6af3b90e934f47941ccfd532a73b879af9356a945",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/SOURCE_AUDIT.md",
+      "bytes": 5588,
+      "sha256": "53ecce4670674ef4a8368dc6fb444f737b3d874fb90d81f0fac1c71206cf80d0",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/SOURCE_BINDINGS.json",
+      "bytes": 1126,
+      "sha256": "50b9873dbcc23cb9c9049b69bae22d107bed6873a1a6af8fa33639fa00ad3661",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/VERIFICATION.json",
+      "bytes": 412,
+      "sha256": "9d7fff67839a3f665517cfb813359e64e4d91498d55df453e38f5bda315f254f",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/exact_controls.py",
+      "bytes": 5030,
+      "sha256": "92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/replay.log",
+      "bytes": 1156,
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/author_replay/results/exact_controls.json",
+      "bytes": 1156,
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/independent_controls.py",
+      "bytes": 6836,
+      "sha256": "ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/exact_controls.py",
+      "bytes": 5030,
+      "sha256": "92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/replay.log",
+      "bytes": 1156,
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/author/results/exact_controls.json",
+      "bytes": 1156,
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/INDEPENDENT_CONTROLS.json",
+      "bytes": 857,
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/independent_controls.py",
+      "bytes": 6836,
+      "sha256": "ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/verification_replay/independent/replay.log",
+      "bytes": 857,
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-absence-obstruction-review/verify_review.py",
+      "bytes": 2224,
+      "sha256": "3f60c392d2e416c7549e4c76befdc8f48fd137a74509857dcc6495c8c8396e1c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/EXACT_CONTROLS.md",
+      "bytes": 2210,
+      "sha256": "b30ea170c53b94cc6a8bf9f41cae0fd4840965d4519542c006c94506017b888c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/FINITE_PANEL_APPENDIX.md",
+      "bytes": 8194,
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/MANIFEST.json",
+      "bytes": 4029,
+      "sha256": "5cceea13e65e76604e1290ab420a34bb352c506c73d2f65937afdd10bdd6005b",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/READ_FIRST.md",
+      "bytes": 1553,
+      "sha256": "56468e1e3a00f85dbbf2f1e7dd0ca26940e5747603c431c18659f014c176f688",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/RESEARCH_EVENTS.jsonl",
+      "bytes": 1546,
+      "sha256": "da34f3004039219422e2c211ccf6bac01864a281cd09ece727c6dac399fafc39",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/RESULT.md",
+      "bytes": 15546,
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/REVIEW_STATUS.md",
+      "bytes": 2582,
+      "sha256": "37473e32858ec1b1fb69f7ac5e49afa5d898d0bd5da95750685acb220d9fec94",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/SOURCE_AUDIT.md",
+      "bytes": 6901,
+      "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/SOURCE_BINDINGS.json",
+      "bytes": 11953,
+      "sha256": "d295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/exact_controls.py",
+      "bytes": 4780,
+      "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/panel_controls.py",
+      "bytes": 2826,
+      "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/results/exact_controls.json",
+      "bytes": 1076,
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/results/exact_controls.log",
+      "bytes": 1076,
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/results/panel_controls.json",
+      "bytes": 535,
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/results/panel_controls.log",
+      "bytes": 535,
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/results/review_verification.json",
+      "bytes": 676,
+      "sha256": "b5e520b7b0edb4e8e68843e80c3d6d7760337e8283dd33753b557cf7772d6ad8",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/results/verification.json",
+      "bytes": 503,
+      "sha256": "750e23242eeb2db97affa8c4aaea5a9fdd5469f1f2e907fa8096407923a2fcdf",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/verify_evidence.py",
+      "bytes": 2252,
+      "sha256": "8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/APPENDIX_REVIEW_RECEIPT.json",
+      "bytes": 2960,
+      "sha256": "f8ee9578c1712159f9a380e003d69e83fe55185c462e8fbff44ba19ba1e9159e",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/AUTHOR_BINDING.json",
+      "bytes": 3004,
+      "sha256": "9a811327a71fac45577450534b1c89606ee6d355ba9e82fbf48ea51859e6a37b",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/FINAL_VERIFICATION.json",
+      "bytes": 676,
+      "sha256": "b5e520b7b0edb4e8e68843e80c3d6d7760337e8283dd33753b557cf7772d6ad8",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/FINITE_PANEL_REVIEW.md",
+      "bytes": 6415,
+      "sha256": "d16ed278ce739bf88fad955282d76596a636760f634e2d182c95ff28a173dc6f",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/INDEPENDENT_CONTROLS.json",
+      "bytes": 1029,
+      "sha256": "59c86afedadd911205bb5268d65103c372c6deee908df716ef9df8e4e9de0d3c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/INDEPENDENT_PANEL_CONTROLS.json",
+      "bytes": 453,
+      "sha256": "d6e5e864eda7261803ae606c0685267669d72b2e9081a8b8c39f7c4b67c25cb0",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/INDEPENDENT_PANEL_REPLAY.log",
+      "bytes": 453,
+      "sha256": "d6e5e864eda7261803ae606c0685267669d72b2e9081a8b8c39f7c4b67c25cb0",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/INDEPENDENT_REPLAY.log",
+      "bytes": 1029,
+      "sha256": "59c86afedadd911205bb5268d65103c372c6deee908df716ef9df8e4e9de0d3c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/MAIN_REVIEW_RECEIPT.json",
+      "bytes": 2588,
+      "sha256": "d85b5f1b18651d29c1db0f5f4ffeb18bf9f76e7c851f942d2ff13cef9700ce45",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/REVIEW.md",
+      "bytes": 12365,
+      "sha256": "f3e84991aaa17f1438df141f7227ab6a763d67d4a5c28fb1b67575da14dcaf71",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/REVIEW_MANIFEST.json",
+      "bytes": 5346,
+      "sha256": "5441a2231dfeee1a71e1aa9204c1bc75b8496c9c6cc4608b03a1065e3bdfe359",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/exact_controls.py",
+      "bytes": 4780,
+      "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/panel_controls.py",
+      "bytes": 2826,
+      "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/panel_replay.log",
+      "bytes": 535,
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/replay.log",
+      "bytes": 1076,
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/results/exact_controls.json",
+      "bytes": 1076,
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_replay/results/panel_controls.json",
+      "bytes": 535,
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/EXACT_CONTROLS.md",
+      "bytes": 2210,
+      "sha256": "b30ea170c53b94cc6a8bf9f41cae0fd4840965d4519542c006c94506017b888c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/FINITE_PANEL_APPENDIX.md",
+      "bytes": 8194,
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/READ_FIRST.md",
+      "bytes": 1553,
+      "sha256": "56468e1e3a00f85dbbf2f1e7dd0ca26940e5747603c431c18659f014c176f688",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/RESULT.md",
+      "bytes": 15546,
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/SOURCE_AUDIT.md",
+      "bytes": 6901,
+      "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/SOURCE_BINDINGS.json",
+      "bytes": 11953,
+      "sha256": "d295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/exact_controls.py",
+      "bytes": 4780,
+      "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/panel_controls.py",
+      "bytes": 2826,
+      "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/exact_controls.json",
+      "bytes": 1076,
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/exact_controls.log",
+      "bytes": 1076,
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/panel_controls.json",
+      "bytes": 535,
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/results/panel_controls.log",
+      "bytes": 535,
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/author_snapshot/verify_evidence.py",
+      "bytes": 2252,
+      "sha256": "8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/independent_controls.py",
+      "bytes": 8975,
+      "sha256": "cb032a4ca085796e45fc7517d08a02da476a3c78ff46fead87700f9b1c35ea8e",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/independent_panel_controls.py",
+      "bytes": 5498,
+      "sha256": "748bab6b1445f3740d80e630516a78caf9c4924424bd646a793e0918d31b6c5f",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/exact_controls.py",
+      "bytes": 4780,
+      "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/panel_controls.py",
+      "bytes": 2826,
+      "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/results/exact_controls.json",
+      "bytes": 1076,
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/verification_replay/results/panel_controls.json",
+      "bytes": 535,
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "boundary": "preserved_supplement_outside_original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor-review/verify_review.py",
+      "bytes": 3634,
+      "sha256": "2de38a98bb5ddd27073affa3e2341b9ab3cbb81634efb21f964a93619d454900",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/multi-root-adaptive-bound/RESULT.md",
+      "bytes": 12090,
+      "sha256": "60f7f240fc98d2105bddf0d4668f6e1a18e81df62421f333a4b92da3ff5f2a00",
+      "boundary": "inherited_fourth_checkpoint_input_ONLY_NOT_NEW_RESEARCH"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/FINITE_INTERACTION_PANEL_CANDIDATE.md",
+      "bytes": 1699,
+      "sha256": "69912e7dfdab6f53a15529cce0167f78f8bacdb0d97d446a13d89953313d6439",
+      "boundary": "completed_candidate_history_NO_INDEPENDENT_THEOREM_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/INTERACTION_ANCHOR_CANDIDATE.md",
+      "bytes": 1934,
+      "sha256": "baa465b421050ccc8585c2b533911cba5d848998de854a1d33bc160245a5d429",
+      "boundary": "completed_candidate_history_NO_INDEPENDENT_THEOREM_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/EXACT_CONTROLS.md",
+      "bytes": 3439,
+      "sha256": "33cda0de22fd41ef5c5a3594ee402663192bb17ebaa9344eae40ab4c194fc998",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/FINAL_CHECK.json",
+      "bytes": 1103,
+      "sha256": "bc3c36597637d7af2ded7cb55dd11650b0893629cae5ded662ce5e19f21b8afc",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/MANIFEST.json",
+      "bytes": 3571,
+      "sha256": "65e9a7b5752ca366bf2377ed27810a19c16c9a638b060abb37072d891085b4e3",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/NEGATIVE_CONTROLS.md",
+      "bytes": 5061,
+      "sha256": "5c91827dfe28897c73e2606397edc86886f034f832c2ece3493dd05cc9a0f639",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/READ_FIRST.md",
+      "bytes": 1226,
+      "sha256": "a592c701d7fea7b7343493a7b8beac0355db6e87f908e929e536c8c59677af6a",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/RESEARCH_EVENTS.jsonl",
+      "bytes": 924,
+      "sha256": "aa27d49c76d89e503c0c49ae19e09cccf7182af0af4834da4328da050fa5e94e",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/RESULT.md",
+      "bytes": 13566,
+      "sha256": "26d166457d00adf2bae099a0eed045b156a4efc3a645243eb988ead693cd973b",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/REVIEW_STATUS.md",
+      "bytes": 2159,
+      "sha256": "023037f4c1c3e779d00e3cdfef4c98bbb85582c8456054e6aae11009825cda55",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/SOURCE_AUDIT.md",
+      "bytes": 4991,
+      "sha256": "43cf55214128fc28224da9093fe185290360a5f3fb80fe6d727e5f30859e3326",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/SOURCE_BINDINGS.json",
+      "bytes": 4336,
+      "sha256": "5109c52acf13c4c2d563493bccb627c94be3bd9475cb8af1d80728209c30bd74",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/WEIGHT_ESTIMATION.md",
+      "bytes": 2795,
+      "sha256": "fe92baa99af6213fc6bab026d2d74d3dfb318cf63dc2d2ce3170d3c73a77f32f",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/exact_controls.py",
+      "bytes": 9541,
+      "sha256": "bb247d16c51a1427fa13226c396bedc3fbab02d1062e353382deabee587c57b9",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/results/GRID_WITNESS.json",
+      "bytes": 2447,
+      "sha256": "521dc54a035408817863d03ad46ce871e47a402b5d056d25dc9916384fe03677",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/results/INITIAL_CONTROL_ATTEMPT.md",
+      "bytes": 601,
+      "sha256": "a302d66f42214aefd5d73f4f9971e27b282b2efd2425ac922e86e6018381b06f",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/results/INITIAL_CONTROL_STDOUT.log",
+      "bytes": 427,
+      "sha256": "28f6e854c897bdd3e1d41e58302726922d97ceb3c840ff507ff715ffb9b975b7",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/results/exact_controls.json",
+      "bytes": 22831,
+      "sha256": "3a79888324acb7199f2ee2517e12a1732895da39d6d65b0fb4b143a52c04e000",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants/results/exact_controls.log",
+      "bytes": 632,
+      "sha256": "c23acc12409f450ef112caed077d79b63ee18a33e5d6e956e0d8fb6bc895496d",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/FINAL_BINDINGS.json",
+      "bytes": 6288,
+      "sha256": "e1f6ea87ac2c22b97927d9f40d812c692780d3a23d2ab1503f4af6a79300a1de",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/MANIFEST.json",
+      "bytes": 1964,
+      "sha256": "d688d3d1555d02f31e27f49cfdb8fbd807b480da6cc9fdd884fa78926ca8adc9",
+      "boundary": "original_manifest"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/REVIEW.md",
+      "bytes": 11288,
+      "sha256": "44c908b9bdf0fcaffa875ce435a30c0c74e6e506aa6f1c76e09328bf483cbd07",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/WITNESS_REPLAY.md",
+      "bytes": 3024,
+      "sha256": "dfc68794c2c52824922fa9e38add7b1d6076a40c36340d81a320120689c756a6",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/author_replay/exact_controls.py",
+      "bytes": 9541,
+      "sha256": "bb247d16c51a1427fa13226c396bedc3fbab02d1062e353382deabee587c57b9",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/author_replay/replay.log",
+      "bytes": 632,
+      "sha256": "c23acc12409f450ef112caed077d79b63ee18a33e5d6e956e0d8fb6bc895496d",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/author_replay/results/GRID_WITNESS.json",
+      "bytes": 2447,
+      "sha256": "521dc54a035408817863d03ad46ce871e47a402b5d056d25dc9916384fe03677",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/author_replay/results/exact_controls.json",
+      "bytes": 22831,
+      "sha256": "3a79888324acb7199f2ee2517e12a1732895da39d6d65b0fb4b143a52c04e000",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/exact_checks.json",
+      "bytes": 5487,
+      "sha256": "a7e52c6c7a495e194d3870e479942655cc54a9752ab86edf0b7ddce7757392dc",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/exact_checks.py",
+      "bytes": 6265,
+      "sha256": "df593793d3c847ef23bd4552e2aed4f5d6c583cf5cf63f4e1c225b1f2568ae64",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/verification.json",
+      "bytes": 474,
+      "sha256": "c117e957f131008b7bfb557609bb64be87b7b95c2d6c84ee3f84b3d600221e84",
+      "boundary": "original_manifest_bound_payload"
+    },
+    {
+      "path": "t20-next-frontier-20261008/stable-grouped-invariants-review/verify_review.py",
+      "bytes": 2642,
+      "sha256": "6ac00c11855808eb20e2cc04775acb4e4610b76403dc5b29033c617b591aa375",
+      "boundary": "original_manifest_bound_payload"
+    }
+  ],
+  "manifest_self_hash_exclusion": [
+    "MANIFEST.json",
+    "MANIFEST.sha256"
+  ],
+  "previous_checkpoints": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+      "bytes": 544325,
+      "sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+      "bytes": 389515,
+      "sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+      "bytes": 318928,
+      "sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 549190,
+      "sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    }
+  ],
+  "owner_repository_status_provenance": "OWNER_REPORTED at 2026-10-08T13:17:43Z; not freshly checked during packaging",
+  "owner_adopted_main": "3a0bdeaa1394c656245cae9599adcb143e885059",
+  "later_research": "Separately unintegrated",
+  "owner_acceptance": false,
+  "final_integration": false,
+  "closure": false
+}

@@ -1,0 +1,341 @@
+{
+  "status": "bounded source–formal feedback within active T20; no integration or closure authority",
+  "research_credit": "new interpretive use of inherited passages; zero new first-reading, independent-source, whole-volume or theorem claims",
+  "clock_or_duration_claim": null,
+  "reading_method": "Direct local text displays. Source bodies omitted from selected recovery were reacquired only at recorded known public locators. Acquisition and keyword navigation are not reading. Selected contiguous reread scopes are itemized.",
+  "access_log": "web.open returned tool Internal Error for Islamweb96 and156, not access denials. Ordinary HTTPS retrieval succeeded. No denied site retry, no login, no package installation. A first extraction attempt lacked optional bs4; standard-library HTMLParser was then used.",
+  "records": [
+    {
+      "id": "P1",
+      "path": "source-noncirculation-feedback/sources/minhaj1-item96.txt",
+      "sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d",
+      "bytes": 4822,
+      "kind": "primary Arabic electronic body",
+      "read_scope": "Complete item96, electronic1:438–441; L001–009 directly read continuously.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            9
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/P1-physical-1-9.txt",
+          "selection_sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d"
+        }
+      ],
+      "url": "https://www.islamweb.net/ar/library/content/108/96/",
+      "html_path": "source-noncirculation-feedback/sources/minhaj1-item96.html",
+      "html_sha256": "7305c57a1b94d1fe8e5f48c77065693fdfb91d82adb555e125653242df5b8086",
+      "historical_record": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/DIRECT_READING_RECEIPT.json",
+      "historical_html_sha256": "7305c57a1b94d1fe8e5f48c77065693fdfb91d82adb555e125653242df5b8086",
+      "relation_to_prior": "Byte-identical reacquisition of inherited HTML. New direct interpretive rereading, not new first reading or independent witness. Present extraction differs from historical extraction. No new apparatus/scan reading."
+    },
+    {
+      "id": "P2",
+      "path": "source-noncirculation-feedback/sources/minhaj2-item156.txt",
+      "sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f",
+      "bytes": 22494,
+      "kind": "primary Arabic electronic body",
+      "read_scope": "Complete item156, electronic2:167–180; L001–041 directly read continuously. Principal positive argument L021–024 and L030–034.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            41
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/P2-physical-1-41.txt",
+          "selection_sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f"
+        }
+      ],
+      "url": "https://www.islamweb.net/ar/library/content/108/156/",
+      "html_path": "source-noncirculation-feedback/sources/minhaj2-item156.html",
+      "html_sha256": "9f2307b09b175d1b18313ed82175a01e311f3bb52de9775812bd8e1ec96227c5",
+      "historical_record": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/SOURCE_READS.json",
+      "historical_body_sha256": "96434788b6020ef06bc705d3fbada829d4bc34446fef61c4fb516b361ee26435",
+      "relation_to_prior": "Reacquired same electronic witness/edition; whole HTML differs from historical capture. Historical source body omitted from supplied recovery; no byte-identity claim for that omitted body. Inherited reading newly used to test precise repair, not new witness."
+    },
+    {
+      "id": "P3",
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1",
+      "bytes": 450304,
+      "kind": "retained primary Arabic electronic body",
+      "read_scope": "Continuous unique unvocalized layer L305–359, electronic8:133–155, including requested133–150 and dialectical completion. Duplicate vocalized layer not counted.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            305,
+            359
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/P3-physical-305-359.txt",
+          "selection_sha256": "92c7e8a0cd109ad67428dc5ac27f0b6b2c6cde4414ad80bd1ac1ec629bafbb0d"
+        }
+      ],
+      "url": "https://www.islamweb.net/ar/library/content/22/805/",
+      "historical_record": "t20-next-frontier-20261008/wise-determination/SOURCE_READS.json",
+      "relation_to_prior": "Inherited retained text directly reread for new question. No first-reading, independent-source, apparatus, or scan credit."
+    },
+    {
+      "id": "P4",
+      "path": "source-noncirculation-feedback/sources/safadiyya002.txt",
+      "sha256": "e3d23531360bb87eddf8d5365a936f40202f62fab624128bd2c3d16962ba9783",
+      "bytes": 370578,
+      "kind": "reacquired primary Arabic electronic body",
+      "read_scope": "Current local L0720–0747 continuously read; principal distinction L0737–0747. No whole-subsection reading claim.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            720,
+            747
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/P4-physical-720-747.txt",
+          "selection_sha256": "6bfb0e2f208d4ed222f2cadca74ab1d9a1d35ea65d056599373c364fe0c419a0"
+        }
+      ],
+      "url": "https://www.islamicbook.ws/amma/alsfdit-002.html",
+      "html_path": "source-noncirculation-feedback/sources/safadiyya002.html",
+      "html_sha256": "713e0b8fadff520d96d3bee97339f40ffe82401293d8caeffc8fbd50a79edb12",
+      "historical_record": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-warrant/SOURCE_BINDINGS.json",
+      "historical_scope": "S002 L725–740; prior scan printed396–400 within PDF400–408. Historical extraction coordinates not equated to current coordinates; no present scan reread.",
+      "relation_to_prior": "HTML byte-identical to inherited SOURCE_GUIDE_AND_LIMITS record. Corroborative reread of inherited locus; no independent witness or first-reading credit.",
+      "text_limit": "Repeated clause visible at currentL0742 retained without emendation. Main distinction explicit againL0743–0746."
+    },
+    {
+      "id": "P5",
+      "path": "source-noncirculation-feedback/sources/dar013.txt",
+      "sha256": "6d2f2ac5763816ebe70e2cc83de807a31c9c0c54b5fa6bc3fcc4491e7f6c1b79",
+      "bytes": 381035,
+      "kind": "reacquired primary Arabic electronic body",
+      "read_scope": "Current local L0209–0241 maker–preserver exchange and L0590–0613 temporal/complete-efficacy context read continuously. No whole-subsection reading claim.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            209,
+            241
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/P5-physical-209-241.txt",
+          "selection_sha256": "18b3143f321962d489cb7172535f5434cad766ff1aa0575f6de6b1dc5e96a3d5"
+        },
+        {
+          "one_based_physical_lines": [
+            590,
+            613
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/P5-physical-590-613.txt",
+          "selection_sha256": "04a8d532bb5a867779eab8b5a1b1a95f89f497be385a3c060c2a4548bd04b639"
+        }
+      ],
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-013.html",
+      "html_path": "source-noncirculation-feedback/sources/dar013.html",
+      "html_sha256": "56b55f4c6ef0658cb0778cd76256609793476c54d64d98f4afac5eda29628b6e",
+      "historical_record": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/SOURCE_READS.json",
+      "historical_scope": "Prior physical221–267 and640–655. Current extraction has different line structure. No newly verified printed-page mapping.",
+      "relation_to_prior": "HTML byte-identical to inherited acquisition/source_manifest.json. Corroborative rereading and new application, not an independent witness or first reading."
+    },
+    {
+      "id": "P6",
+      "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+      "sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b",
+      "bytes": 72314,
+      "kind": "supplied modern source continuous text",
+      "read_scope": "Source labelsL49–102 andL137–175 directly read. General/self-explanation definitions, parthood-direction and finite/bounded BNF class checked.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            50,
+            103
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/P6-physical-50-103.txt",
+          "selection_sha256": "9e98181b0fe15a354af75438a069f5174212da350170ae2c8b19f3b7f4ec9ea2"
+        },
+        {
+          "one_based_physical_lines": [
+            138,
+            176
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/P6-physical-138-176.txt",
+          "selection_sha256": "584ad05ca54babc15553fe63f09a93dfef1056345a9196d50431595c83c42c17"
+        }
+      ],
+      "url": "https://doi.org/10.1007/s11098-020-01482-3",
+      "relation_to_prior": "Inherited retained source reread only. No source-ontology equivalence with Ibn Taymiyyah inferred."
+    },
+    {
+      "id": "F1",
+      "path": "particular-explanans-bridge-audit/RESULT.md",
+      "sha256": "7f347b80c097ecb4c71a361b0128ad39fa0fb41ceb6c84374c1e8924b100761c",
+      "bytes": 14810,
+      "kind": "current formal-audit report",
+      "read_scope": "Entire supplied report read. Control and both restricted repairs retained at explicit-axiom scope.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            125
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/F1-physical-1-125.txt",
+          "selection_sha256": "491868bbe980aeda7dae527c9b342c9258d9f7c6ef0bb7df0850deb6905bda35"
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "path": "particular-explanans-bridge-audit/BridgeRepairs.lean",
+      "sha256": "27f18369adcd7722ddcd3508f85343f09c4bb56ee3b0d4d1cd57374d5f669af0",
+      "bytes": 4515,
+      "kind": "current formal source",
+      "read_scope": "Entire source read, particularly bridge_with_no_basic_proper_partial_self; no kernel replay or new logical gap claimed.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            104
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/F2-physical-1-104.txt",
+          "selection_sha256": "27f18369adcd7722ddcd3508f85343f09c4bb56ee3b0d4d1cd57374d5f669af0"
+        }
+      ]
+    },
+    {
+      "id": "I1",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "bytes": 30941,
+      "kind": "inherited analysis",
+      "read_scope": "Result and sections1–3.3; later rival/premise appraisal and limitations. Initial larger combined display was truncated, so no full-report read claim.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            112
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I1-physical-1-112.txt",
+          "selection_sha256": "b6c3cc73d9607bd26acd1656773c91efe0aa19c9f22afe235d0add15be9b807d"
+        },
+        {
+          "one_based_physical_lines": [
+            140,
+            189
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I1-physical-140-189.txt",
+          "selection_sha256": "e1e6396f00c260f4eb28cddac9e4131cff72ec5aac67b9c502a2e140cb4a4ce4"
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-warrant/REPORT.md",
+      "sha256": "f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08",
+      "bytes": 26281,
+      "kind": "inherited analysis",
+      "read_scope": "Whole report directly read across continuous outputs, including final remaining-questions section. No historical source-read or proof replay credit inherited as new.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            146
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I2-physical-1-146.txt",
+          "selection_sha256": "f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08"
+        }
+      ]
+    },
+    {
+      "id": "I3",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/RESULT.md",
+      "sha256": "ca690248a37b789613f7627caae96709089523795732ee0cc22c944b92194885",
+      "bytes": 38962,
+      "kind": "inherited analysis",
+      "read_scope": "Selected source/productive-ground appraisal and preservation/beginningless controls; report navigation/search elsewhere not full reading.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            62
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I3-physical-1-62.txt",
+          "selection_sha256": "4889214d7b7bbbc777fa3091611d16555a38b6221714be520e4578e5adeb01d7"
+        },
+        {
+          "one_based_physical_lines": [
+            224,
+            241
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I3-physical-224-241.txt",
+          "selection_sha256": "d7d6a3e2f9972cf4b6b47eeecdea44bee6e7d4a989f027f0ec1fbb0a6fb6fbb9"
+        }
+      ]
+    },
+    {
+      "id": "I4",
+      "path": "t20-continuation-20261008/effect-production/RESULT.md",
+      "sha256": "ea50cdaff7420489df813e4d4148158ce3bed636817755bc509bb3a9effdb74a",
+      "bytes": 24841,
+      "kind": "inherited analysis",
+      "read_scope": "Result and sections1–5 plus opening tensor context; actual routes versus certificates and negative guards. No fresh model execution.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            120
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I4-physical-1-120.txt",
+          "selection_sha256": "0a13207c7f28cc22b2a2815380705e39a798981cd2f822999c65103c011a2d01"
+        }
+      ]
+    },
+    {
+      "id": "I5",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/README.md",
+      "sha256": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138",
+      "bytes": 8178,
+      "kind": "inherited analysis",
+      "read_scope": "Whole README directly read: premise truth and typed resource/bearer interface.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            77
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I5-physical-1-77.txt",
+          "selection_sha256": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138"
+        }
+      ]
+    },
+    {
+      "id": "I6",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940,
+      "kind": "inherited formal source",
+      "read_scope": "Entire formal source read; Completion/Realisation/SupportTransport and same-witness composition checked by inspection, no kernel replay.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            141
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I6-physical-1-141.txt",
+          "selection_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+        }
+      ]
+    },
+    {
+      "id": "I7",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-warrant/TYPE_OBSTRUCTION.md",
+      "sha256": "d5a8cca55a693f843544e8e52b9dc1e2b50b125eacbceb57568f552a9711710a",
+      "bytes": 1056,
+      "kind": "inherited analysis",
+      "read_scope": "Whole short type-obstruction note read; classification of co-presence versus generative dependence.",
+      "read_selections": [
+        {
+          "one_based_physical_lines": [
+            1,
+            5
+          ],
+          "selection_path": "source-noncirculation-feedback/read-selections/I7-physical-1-5.txt",
+          "selection_sha256": "d5a8cca55a693f843544e8e52b9dc1e2b50b125eacbceb57568f552a9711710a"
+        }
+      ]
+    }
+  ]
+}

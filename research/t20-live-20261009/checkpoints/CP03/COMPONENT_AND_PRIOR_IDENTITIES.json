@@ -1,0 +1,33 @@
+{
+  "classification": "THIRD_ADDITIVE_INTERMEDIATE_RESEARCH_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "frozen_components": {
+    "catalogue-mixture-sampling/MANIFEST.json": "4cc3ee6c2eef3ea291e020bd3a62638694c2ed3f492ad32519cb4fb3a3932ea1",
+    "catalogue-mixture-review/REVIEW_RECEIPT.json": "09feebff0f51339bdd9f09b755cd33d3c2b86eaa4ba03183645930f19cbbbd39",
+    "reference-acquisition-audit/MANIFEST.json": "9634f710b650a5f27493a2ee925e8595d175fc344c990a87234f489d48eec0c3",
+    "reason-causation-bridge/MANIFEST.json": "504ef228406a1e9d9e38979df9dfa58f0f3fab4a7551ed944177a2a3e5d29794",
+    "reason-causation-review/REVIEW_RECEIPT.json": "29301388634812303f8ab4885e7b4b27aa0de0b2caca437fd74ef88a2dbd4479",
+    "fitrah-warrant-bridge/MANIFEST.json": "8cf52ac73fc8e4c9ea6ca389461073b8cd19ee5546888f64acbc37bbcee958fc",
+    "fitrah-warrant-bridge/empirical-check/SHA256SUMS": "3f9961d8dafb69e42d4e3cd7d6c88f3d1b14ecbf597df85015458ebeeced8b70",
+    "fitrah-warrant-bridge/warranting-basis-addendum/MANIFEST.json": "c55b32f31cd20824a1ea23aafbab64caa3710714722476697765e2d84838256c",
+    "fitrah-warrant-bridge/public-study-reanalysis/SHA256SUMS": "285382edad72738ad4f27be16e66ef81db244ba55b33a058187f048165b0603e"
+  },
+  "prior_archives": [
+    {
+      "filename": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+      "sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+      "bytes": 544325,
+      "physically_included": false,
+      "status": "PRESERVED_UNCHANGED_NOT_DUPLICATED"
+    },
+    {
+      "filename": "T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+      "sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+      "bytes": 389515,
+      "physically_included": false,
+      "status": "PRESERVED_UNCHANGED_NOT_DUPLICATED"
+    }
+  ],
+  "active_lane_excluded": "structuring-cause-reply",
+  "inherited_hash_dependencies": "Only exact INPUT_BINDINGS files needed for portable reason review are copied. Their earlier scientific status is unchanged; this is not a new review or proof build."
+}

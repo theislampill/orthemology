@@ -1,0 +1,156 @@
+{
+  "schema": "productive-sufficiency-input-bindings-v1",
+  "recorded_at_utc": "2026-10-08T12:12:25.590253+00:00",
+  "inputs": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "inspected_scope": "whole file; exact interface and imported copy"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/SourceIdentityDerived.lean",
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "inspected_scope": "whole file; exact inherited interface and imported copy"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/BridgeControls.lean",
+      "sha256": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8",
+      "inspected_scope": "positive fixture and its proofs, lines 1\u201355; whole file byte-copied and compiled"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/README.md",
+      "sha256": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138",
+      "inspected_scope": "result, guardrails, verification scope"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/existential-ground/README_PUBLIC.md",
+      "sha256": "a07882c3a70e353e9c82613f057fd7821cf11fa2d830146a7679714952037bdf",
+      "inspected_scope": "whole report"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/existential-ground/PROOF_MAP_v1.md",
+      "sha256": "577bc52cad53b2b1b56ce75c2b47ae9fc16d463939d98851b922ffb3162e8625",
+      "inspected_scope": "whole report"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/PREMISE_REGISTRY.md",
+      "sha256": "6b4ba4e87e46b5a284311d69d82c40df7ab608a48651dabf22003a786510dcbd",
+      "inspected_scope": "D01\u2013D08, S01\u2013S08"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/intrinsic-willing/RESULT.md",
+      "sha256": "ca316b0f9eb7e8f13181f91cb7c64f7fa3239cd5f8580727102a11056f5b7bc3",
+      "inspected_scope": "findings; sections 1\u20135, 6 full-state entailment, 7\u201310; no full-source reading credit"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/intrinsic-willing/src/ReasonKnowledge.lean",
+      "sha256": "e73dac70997e78dd6c45f2564de5dace288661f382d35a410bdb6c744ee3c58c",
+      "inspected_scope": "definitions and theorem bodies, lines 1\u201388"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "inspected_scope": "sections 1\u20133.3, 4\u20137; inherited source findings distinguished from direct source reads"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c",
+      "inspected_scope": "whole report"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/src/determination_contract.py",
+      "sha256": "b5c0fcf4d77ed6b15c79c65f1d442ac96425ff52053c86a34a9bd87bf2a4a156",
+      "inspected_scope": "whole file"
+    },
+    {
+      "path": "t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "inspected_scope": "whole report"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/README.md",
+      "sha256": "04bc15352aca5cd9d480b2ac6254737cfd73b6d0102edb0873ca0ce9c080381f",
+      "inspected_scope": "whole report"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/Model.lean",
+      "sha256": "878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e",
+      "inspected_scope": "whole file"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/EndpointLaw.lean",
+      "sha256": "0a1e6aa470334ecb7766d53bbdd984b2cdeab0945ec3639984c66d4f3980f616",
+      "inspected_scope": "whole file"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/BernoulliAssignments.lean",
+      "sha256": "e6dd1e4814bb0bb6c977cd3b6e4ee600e8d4cdfeb5c4564148d3bb5a38eb8eba",
+      "inspected_scope": "whole file"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/Verification.lean",
+      "sha256": "c66cda0da6393d46178c07912016e02a73d23bdae123fb38a5513ae4fbf57e7d",
+      "inspected_scope": "signature, axiom audit and edge-case section"
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/compile.sh",
+      "sha256": "a770f521cd68d84b5deee1a1f117b6a11ea42568aa619151f97bbc0c5d4cb49f",
+      "inspected_scope": "whole file"
+    },
+    {
+      "path": "t20-next-frontier-20261008/structuring-cause-reply/READ_FIRST.md",
+      "sha256": "e504aee3428b7b519ebed3ca81d47d35030fdb6182bff82aa5952605da5e74ed",
+      "inspected_scope": "whole report"
+    },
+    {
+      "path": "t20-next-frontier-20261008/structuring-cause-reply/MODEL_AND_TRANSPORT.md",
+      "sha256": "62af913b9011cb1853e194fba429462923ffaf6fdc7b826a056584245f044deb",
+      "inspected_scope": "whole report"
+    },
+    {
+      "path": "t20-next-frontier-20261008/structuring-cause-reply/INDEPENDENT_ASSESSMENT.md",
+      "sha256": "2201df0503808fe14b01cf0068047f9f4b7822e912154427b40a16245ee096b9",
+      "inspected_scope": "sections on immediate physical sufficiency, acquisition, rational basing and limits"
+    },
+    {
+      "path": "t20-next-frontier-20261008/action-genus-scope-audit/RESULT.md",
+      "sha256": "06e3cf7c178f801033d678dac3b6eb84297d74504ffd0d9811644abb7b536705",
+      "inspected_scope": "whole report; duplicate campaign stopped"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3",
+      "inspected_scope": "sections 2\u20139 and current disposition"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "sha256": "e290e95b31c54b824ff452f627f7ede399ce39cf000fd2fada6bf8d89125ded0",
+      "inspected_scope": "whole report"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1",
+      "inspected_scope": "direct retained Arabic: L294\u2013298 and L303\u2013359; continuous deciding return L311\u2013359"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "sha256": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08",
+      "inspected_scope": "direct retained Arabic: L001\u2013004"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "sha256": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1",
+      "inspected_scope": "direct retained Arabic: L001, L003\u2013008, unquarantined concluding sentences L009, L010\u2013011; suspect L002 and opening L009 not used"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "inspected_scope": "direct retained Arabic: L035\u2013046, L081\u2013090, L103\u2013109, L232\u2013240"
+    }
+  ],
+  "limits": [
+    "Hashes establish retained identity, not full reading or premise truth.",
+    "No fresh source acquisition, scans or manuscript witnesses.",
+    "No duration certification."
+  ]
+}

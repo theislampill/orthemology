@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-09T02:26:41.265561+00:00",
+  "reader": "root",
+  "scope": "Fresh verification of four exact source files using retained Lean4.19 and Std; not a new discovery or premise-warrant verification. Regular-open realization remains written mathematics.",
+  "toolchain": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "checks": [
+    {
+      "file": "plural-explanation-theorem-audit/DependencyAudit.lean",
+      "sha256": "9ce772a752d068c374004901bef1d8ae23b145c9f85d6bd71aa266eeb6722392",
+      "exit_code": 0,
+      "stdout": "'PluralExplanationAudit.total_explainer_self' does not depend on any axioms\n'PluralExplanationAudit.unrestricted_has_self_explaining_total_explainer' does not depend on any axioms\n'PluralExplanationAudit.ChainControl.unrestricted_psr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PluralExplanationAudit.ChainControl.no_extended_circles' does not depend on any axioms\n'PluralExplanationAudit.ChainControl.no_self_explanation' depends on axioms: [propext, Quot.sound]\n'PluralExplanationAudit.ChainControl.complete_transitivity_fails' depends on axioms: [propext, Quot.sound]\n'PluralExplanationAudit.ChainControl.partial_transitivity_fails' depends on axioms: [propext, Quot.sound]\n'PluralExplanationAudit.ChainControl.member_projection_fails' depends on axioms: [propext, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "file": "plural-explanation-theorem-audit/SupplementedControl.lean",
+      "sha256": "9462f1f41c5d3162a27fe85438b905124602b005c58178a5f710cd4e1db335c9",
+      "exit_code": 0,
+      "stdout": "'SupplementedPluralControl.singleton_partial_iff' does not depend on any axioms\n'SupplementedPluralControl.unrestricted_psr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'SupplementedPluralControl.no_extended_circles' does not depend on any axioms\n'SupplementedPluralControl.no_self' does not depend on any axioms\n'SupplementedPluralControl.complete_transitivity_fails' does not depend on any axioms\n'SupplementedPluralControl.partial_transitivity_fails' does not depend on any axioms\n'SupplementedPluralControl.member_projection_fails' does not depend on any axioms\n",
+      "stderr": ""
+    },
+    {
+      "file": "particular-explanans-bridge-audit/RestrictedBridgeControl.lean",
+      "sha256": "56afa15a4bc3f3ec04db4a8c0f98a4acc43fa67128fe8497619e988b7382b61d",
+      "exit_code": 0,
+      "stdout": "'RestrictedBridgeControl.restricted_psr' depends on axioms: [propext]\n'RestrictedBridgeControl.explanatory_particularity' depends on axioms: [propext]\n'RestrictedBridgeControl.complete_transitivity' depends on axioms: [propext]\n'RestrictedBridgeControl.partial_transitivity' depends on axioms: [propext]\n'RestrictedBridgeControl.distributivity' depends on axioms: [propext]\n'RestrictedBridgeControl.no_extended_circles' depends on axioms: [propext]\n'RestrictedBridgeControl.strong_supplementation' depends on axioms: [propext]\n'RestrictedBridgeControl.nonempty_fusion' depends on axioms: [propext]\n'RestrictedBridgeControl.full_explainers_part_minimal' depends on axioms: [propext]\n'RestrictedBridgeControl.no_supernatural' depends on axioms: [propext]\n",
+      "stderr": ""
+    },
+    {
+      "file": "particular-explanans-bridge-audit/BridgeRepairs.lean",
+      "sha256": "27f18369adcd7722ddcd3508f85343f09c4bb56ee3b0d4d1cd57374d5f669af0",
+      "exit_code": 0,
+      "stdout": "'ParticularExplanansBridge.bridge_with_reverse_externality' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ParticularExplanansBridge.bridge_with_no_basic_proper_partial_self' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'ParticularExplanansBridge.part_of_total_explainer_is_itself' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ParticularExplanansBridge.unrestricted_total_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    }
+  ]
+}

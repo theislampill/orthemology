@@ -1,0 +1,70 @@
+{
+  "date_utc": "2026-10-09",
+  "sources": [
+    {
+      "file": "sources/schaffer-overdetermination-2003.pdf",
+      "url": "https://www.jonathanschaffer.org/overdetermination.pdf",
+      "sha256": "adeb063caae429849076f33cc2e35961f7134db3e39e180cec985a15a5651b0b",
+      "bytes": 128690,
+      "reading_scope": "Continuous full text, printed23–45, notes and references included; PDF24 blank. Sequential extraction displays lines1–210,211–430,431–660,661–875,876–991.",
+      "pdf_pages": 24,
+      "visual_inspection_printed_pages": [
+        38
+      ],
+      "selection_reason": "Actual symmetric overdeterminers plus complete-process argument directly test active productive-route warrant."
+    },
+    {
+      "file": "sources/hall-two-concepts-published.pdf",
+      "url": "https://maxkasy.github.io/home/files/other/ML_Econ_Oxford/Ned_Hall_2_concepts_of_causation.pdf",
+      "sha256": "32c1c6e2f4617577614aad6c066fb798a7ee60db482ffeb2a5ef21d8dbdc2f1e",
+      "bytes": 386663,
+      "reading_scope": "Targeted published extraction: lines1–160;350–746;1213–1870;1988–2264. This includes all sections6–7, section8.2 and all notes. No whole-chapter reading claim. Truncated combined displays repaired for the continuing intrinsicness discussion and notes.",
+      "pdf_pages": 52,
+      "printed_pages": [
+        225,
+        276
+      ],
+      "visual_inspection_printed_pages": [
+        265,
+        273
+      ],
+      "selection_reason": "Developed production/dependence distinction and blueprint account may ground actual productive structure beyond endpoint sufficiency."
+    },
+    {
+      "file": "sources/hall-two-concepts.pdf",
+      "url": "https://fitelson.org/269/Hall_TCOC.pdf",
+      "sha256": "cf4a407b2586e314f4e4c0e42111858a1e9a2825dcf1d267104cc480aa6eda6e",
+      "bytes": 192165,
+      "reading_scope": "Earlier draft downloaded and term-screened; not the final citation witness; no whole-draft reading claim.",
+      "pdf_pages": 36
+    },
+    {
+      "file": "sources/Oneness-return-printed23-25.txt",
+      "url": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view",
+      "sha256": "19285623d63091bec12a28ed71113593f4f331ecdd0a3e625556f7db18971672",
+      "bytes": 5433,
+      "reading_scope": "Complete printed23–25 extracted freshly from retained exact supplied PDF30–32 and read. Retained PDF is bound in INPUT_BINDINGS. No fresh acquisition or visual scan claim."
+    }
+  ],
+  "acquisition_limits": [
+    "Hall DOI resolver inaccessible through web tool.",
+    "Later DOI/Crossref metadata request cancelled before network approval; no retry or successful publisher verification claimed."
+  ],
+  "novelty_search": {
+    "directories": [
+      "t20-next-frontier-20261008",
+      "t20-continuation-20261008",
+      "recovery-t20"
+    ],
+    "scope": "Markdown bounded textual screen for overdetermination and exact Hall/Funkhouser/Bunzl/Schaffer article-title terms, excluding this newly written report.",
+    "finding": "Prior route and anti-overdetermination distinctions found; no earlier developed reading of the two selected papers located.",
+    "exhaustive_archive_claim": false
+  },
+  "no_new_claims": [
+    "No causal response table or code model",
+    "No Lean result",
+    "No protected change",
+    "No final integration or closure",
+    "No historical duration certification"
+  ]
+}

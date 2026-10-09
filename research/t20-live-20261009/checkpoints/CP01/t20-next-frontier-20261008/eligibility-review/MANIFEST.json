@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-08T07:22:19.418982+00:00",
+  "files": {
+    "INPUT_BINDINGS.json": "cb122cfacdcec51cf1e4926e388df1beb5c290851dd13f73d12191c3a836fa7e",
+    "REPORT.md": "f63cb6c0b19c88ab77c1cd9d62cd470ab5d6bc0c3cbfeb46ea2c0080b44471d6",
+    "RESEARCH_EVENTS.jsonl": "932cbeaa2b0d9e406fdd5091b7c2b58787864896cdbdc1f4a720d3769fff0be1",
+    "RESEARCH_TIME.json": "52dd9b19e1ee526936af4e008e20490086d5c770908c889f58cd6faaabe9f3e7",
+    "SOURCE_READS.json": "32de40e26c9478ef10757a6772bd8646d7d3705867ccb03a800252ca6effe73e",
+    "results/DEPENDENCY_AUDIT.json": "fbd98f87a771a5bb3693b24721d50fe5d87b8578e0d0d2ebde1848effe83a50a",
+    "results/INPUTS_UNCHANGED.json": "dfb4b5c737c22a13f8f7d47aa403ecc40351b074c597f8ee3a9271aaad5f3dba",
+    "src/dependency_audit.py": "bf5edf61c24df022f4a94a842b6a706c834593335a9e3b8059a40f4cbee60d6c"
+  }
+}

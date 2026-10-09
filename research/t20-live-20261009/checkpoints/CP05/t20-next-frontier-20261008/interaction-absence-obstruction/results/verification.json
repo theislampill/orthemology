@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "bound_artifacts_rechecked": 115,
+  "frozen_predecessor_payloads": 97,
+  "author_replay_byte_identical": true,
+  "before_after_identity": true,
+  "scope": "Byte identity and deterministic replay; no physical certification, integration or T20 closure."
+}

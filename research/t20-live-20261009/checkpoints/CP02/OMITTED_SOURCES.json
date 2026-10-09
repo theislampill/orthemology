@@ -1,0 +1,825 @@
+{
+  "policy": "No raw modern papers/books, Word/PDF binaries, source-body extractions or rendered pages are distributed. Classical source bodies are also omitted for compactness. Original author manifests remain unchanged.",
+  "omissions": [
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/gyory-smyth-2010.pdf",
+      "bytes": 530692,
+      "sha256": "ce2a7f3fb64f21d45781b864d8ba9e3b186012bca5afeed9c5e5966276414d1f",
+      "source_url": "https://math.colgate.edu/~integers/k27/k27.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/gyory-smyth-2010.txt",
+      "bytes": 41046,
+      "sha256": "ef0b7d11b71bdf51005f5af4214cb66dbd303ba1b822ba3328513e87c5cb8616",
+      "source_url": "https://math.colgate.edu/~integers/k27/k27.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/gyory-smyth-page7.png",
+      "bytes": 150500,
+      "sha256": "30eb8ee9ea00ef4fcfece9ff60ecaf4678556972b15bebdd2f2e2b07f92a681c",
+      "source_url": "https://math.colgate.edu/~integers/k27/k27.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/zsigmondy-1892.pdf",
+      "bytes": 966828,
+      "sha256": "45b2aea11e6e92711ab9b744b368dcb8ae0e84e69e5267c8515f61072faa9132",
+      "source_url": "https://zenodo.org/records/2131326/files/article.pdf?download=1",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/zsigmondy-1892.txt",
+      "bytes": 49953,
+      "sha256": "edcb9c78c1d271634a95dc94415379b76fe983c331f71d8f74e853794c82d8af",
+      "source_url": "https://zenodo.org/records/2131326/files/article.pdf?download=1",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/zsigmondy-page18.png",
+      "bytes": 87438,
+      "sha256": "27a3b860198b6524e6f84052e38936c0b67172317e6281443a550c235f85dc5a",
+      "source_url": "https://zenodo.org/records/2131326/files/article.pdf?download=1",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-identification/sources/zsigmondy-page19.png",
+      "bytes": 115624,
+      "sha256": "a701c2cbe9b4aed3bdc90bacff02879ae0815bfba743ec172ff42d8098c73849",
+      "source_url": "https://zenodo.org/records/2131326/files/article.pdf?download=1",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/sources/zsigmondy-1892.pdf",
+      "bytes": 966828,
+      "sha256": "45b2aea11e6e92711ab9b744b368dcb8ae0e84e69e5267c8515f61072faa9132",
+      "source_url": "https://zenodo.org/records/2131326/files/article.pdf?download=1",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/countable-signature-review/sources/zsigmondy-page19.png",
+      "bytes": 115624,
+      "sha256": "a701c2cbe9b4aed3bdc90bacff02879ae0815bfba743ec172ff42d8098c73849",
+      "source_url": "https://zenodo.org/records/2131326/files/article.pdf?download=1",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/ameri-waqfeya.pdf",
+      "bytes": 2764854,
+      "sha256": "76fa5d52620078dbe2641e4793325a9de38888b037f45f322d7756785d17d895",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/ameri-waqfeya.txt",
+      "bytes": 809839,
+      "sha256": "9481c153b8e06a9adbf4e5dc681f012716c9f2757bbfced83a646e17f03d58cc",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-01.png",
+      "bytes": 960316,
+      "sha256": "a43e27f21c926ea42f364b8df30a2f14f9c26b639a22eb1a62b4b2d535646283",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-02.png",
+      "bytes": 24923,
+      "sha256": "2a3dbe80d4c05cd8d781910ccd142e7ef1639f7a238919af6a4c462aa732b557",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-03.png",
+      "bytes": 40952,
+      "sha256": "b850709efef966c0feebf240181507d953fb7eb63ab0abfb9d5b9b215ff58db1",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-04.png",
+      "bytes": 84975,
+      "sha256": "8a836e6ba884626d216137f054ae490e7f430e4324e35dfd795ae9a71a1531b5",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-05.png",
+      "bytes": 19926,
+      "sha256": "82882a16f50e6bc18d9bcabd08cc4a1e0f183edf70fba58db418b44071a741c7",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-06.png",
+      "bytes": 5026,
+      "sha256": "62ccf34a2c57b4cbe0ec66aafa0f552da34e3ed929f977dcad8c81f82f15ab15",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-07.png",
+      "bytes": 28619,
+      "sha256": "c2b87dbcb87915fe350565bacfe5c90e799c883732c772cb72fcfca199763ac9",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-08.png",
+      "bytes": 5026,
+      "sha256": "62ccf34a2c57b4cbe0ec66aafa0f552da34e3ed929f977dcad8c81f82f15ab15",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-09.png",
+      "bytes": 87940,
+      "sha256": "f41e350964a00d573c3a7c756bd98aab3fc56951f90b5693562fdd1a8e6a8636",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-10.png",
+      "bytes": 77351,
+      "sha256": "037f4dfbadd74c7684691b9fbc1cc2fc831576bbf1991e9fb07a2797a024666b",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-11.png",
+      "bytes": 77466,
+      "sha256": "2a528c13f7be7224e9d132e7056f30404bde2e685494b6055eb90d224e738350",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-12.png",
+      "bytes": 93890,
+      "sha256": "417c013b2ae2a0425768118a339f2eda50bf7e45005ee0f83a5e102cc3b626bc",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-13.png",
+      "bytes": 83368,
+      "sha256": "1726bba515a30bc96881c5d85e043c846e75c2be6c20cb4155884362c9c2f567",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-14.png",
+      "bytes": 112740,
+      "sha256": "655a350ce3cc60aa5b1f84aaa0bfc5db14f9cb01420176fa73838a4528787ffa",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-15.png",
+      "bytes": 108612,
+      "sha256": "4038f98d07040ce36c09524474bc1478b0815ecb8bcd93b3cdd0cca5f0c30f59",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-16.png",
+      "bytes": 114793,
+      "sha256": "b2309ae01c74918a6b9d3d4e16f5963c028cf676bda958f602ad14b2d91a0e24",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-17.png",
+      "bytes": 122792,
+      "sha256": "14192640121f22ef4b936bfb78e7741beb6e26161e9cf837e34c072ca9fbe86c",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-18.png",
+      "bytes": 115812,
+      "sha256": "37cc57d6eccd2af306c9800a0066e6ea71fdedf7294abd38d61a3c1f66a81d19",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-19.png",
+      "bytes": 119507,
+      "sha256": "2972ce5872c34abfc746d95c2c1f2431f80e6d2a4a936b3c638b37700437a24e",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-20.png",
+      "bytes": 113750,
+      "sha256": "a8795d43e9b054c73904e6a7ea22abdf9270f895657865206fe4af78f93eaae4",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-21.png",
+      "bytes": 112763,
+      "sha256": "cd2dfc31eadf3e75ad596c4ebef687c5a271706a3f61640e1cafca8256480f87",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-22.png",
+      "bytes": 113556,
+      "sha256": "308985c436ec56d38a3a75f0cb609ca0319d88f94bb9347cabdc9954c6e9dc48",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-23.png",
+      "bytes": 101277,
+      "sha256": "c5faa85d4db9d26964ce940561df74e287ddef66cf15f67bfc10efe464435d3a",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-24.png",
+      "bytes": 5026,
+      "sha256": "62ccf34a2c57b4cbe0ec66aafa0f552da34e3ed929f977dcad8c81f82f15ab15",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-25.png",
+      "bytes": 82896,
+      "sha256": "a7f4de47811ba8ef3fb6fe69a3ffef8cb1c18597b14a4d39626413257ad24356",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-26.png",
+      "bytes": 135171,
+      "sha256": "dec639c8267ab88ecb6e3d2882d7fd9553e32f4b4a2ff21f7e4d587cec24eb1a",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-27.png",
+      "bytes": 126846,
+      "sha256": "f8856d1682dc6f1481d0f36e0da51803175bbe0cf298b9db21f3e4fdbae52afb",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-28.png",
+      "bytes": 119359,
+      "sha256": "d91bfb471a4c9e934a52f3a978fde76b177c2f17aab3adabd537c533093a5a0d",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-29.png",
+      "bytes": 145499,
+      "sha256": "063a3d230e34539a78e4828a4529b5d972750055ade323d0234f00e9433f7427",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-30.png",
+      "bytes": 111689,
+      "sha256": "6bf6db0b396453e8f75de7fbf3087bffbfb0338d18bfac354cd89ae771c9f029",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-31.png",
+      "bytes": 104946,
+      "sha256": "621877ff32a6f2e50beb9f5dbef67b42752e05c27ac2dc4e5d011e1ac8bef15f",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-32.png",
+      "bytes": 108481,
+      "sha256": "f73e299bf3cbf2b51de832ce15b1aeacd6ab6f01d564006c7620c0cf01306bb4",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-33.png",
+      "bytes": 108789,
+      "sha256": "1cac94ea2e1ef994963ec6187410e23ae4401ed9a3ffa474f28fa22009690bef",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-34.png",
+      "bytes": 120226,
+      "sha256": "90d31b964807fbdb59cc7657f7147b4a04dfd9a17dbde2f90b00a70b4323e8c4",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-35.png",
+      "bytes": 119117,
+      "sha256": "903a3cfc0069290b1ba8b0cecbea963ea12173febbef3820ea2243a832842076",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-36.png",
+      "bytes": 131406,
+      "sha256": "70c863fb38f509fec76bd6d88f46159919195c57d028cabd2408ff929bef759d",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-37.png",
+      "bytes": 101949,
+      "sha256": "4f8f080dbb92bda27d04d0019fc1874b4673815cd8e16180ca737490c5db3261",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-38.png",
+      "bytes": 120120,
+      "sha256": "3015a0388be63a44496b143a9755a037fe533564e28dd03507fde8adffdf42cc",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-39.png",
+      "bytes": 106499,
+      "sha256": "67959b7d38c32e13e3f70a1898c656909a31c591f6f76e19ce116e92ac340eb5",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-40.png",
+      "bytes": 114273,
+      "sha256": "02a1c35765a425f96778fbe101bc5acef4399877c03e598af47ed6b6d0d35170",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-41.png",
+      "bytes": 108686,
+      "sha256": "0ca42879697de87b42e239142a8fcb8a277292d49dd1a2735a4185a583a71497",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-42.png",
+      "bytes": 146317,
+      "sha256": "b5a45903a0f6d6a8edc5116af658f9edea7d2a766333be0941d6b834d31636cf",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-43.png",
+      "bytes": 126223,
+      "sha256": "96cccbba5f1b8e7d08581464708ce459d43491fec9e3e59524d3b80a727cf656",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-44.png",
+      "bytes": 122440,
+      "sha256": "de7880ba5e4e1ca298590025c1ea2a8d4ebb57d8b74e7d448d3ffd67587c0d10",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-45.png",
+      "bytes": 134534,
+      "sha256": "a3727e0be91ce345682900b52303b39980af7dbc8e95d0815d84e877b1e11112",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-46.png",
+      "bytes": 129513,
+      "sha256": "4edf7f08dbdb121ebf52abe6ce2266066fc09a41f20e41722b47412185ef3573",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-47.png",
+      "bytes": 110921,
+      "sha256": "ca4eaf84da97f6f91cfb0b2d8710cccd79aff18ad8d280fd38e2ac29f6e22cd8",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-48.png",
+      "bytes": 122519,
+      "sha256": "1b25470833509f8d0c90f8c1dcb6eaccb853c37a1503db0c5fa5b24678588a7b",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-49.png",
+      "bytes": 120475,
+      "sha256": "0ab7c8c666b79669270181b772279807875562f84613848b3c5b2f83040207fd",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-50.png",
+      "bytes": 102468,
+      "sha256": "fdf29fe463509abf5d6f034b6c85161e54e9f43ad5e6193dc9de8e6fd208239c",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-51.png",
+      "bytes": 112089,
+      "sha256": "6c95a6b2131889752543a39b985be269ade18c3df1b55fb10d7344e0028bc768",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-52.png",
+      "bytes": 118810,
+      "sha256": "2e66a483442438d9831c2b9b60edcdb3c85935832772c41e5360c443c3b1d2ac",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-53.png",
+      "bytes": 121442,
+      "sha256": "1ca584b48379b8cf5a263ef68b76799345e045ddd0b16bb3f80b6289d72051bc",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-54.png",
+      "bytes": 120215,
+      "sha256": "c075aa8595c54c0e0c2e9251971694ce3f6b91c21d9aa921df6c6746d45abf38",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-55.png",
+      "bytes": 115918,
+      "sha256": "6027cfbb663486007b1b7baadf562bc00a94f86fc7723d678bed20f8cc336357",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-56.png",
+      "bytes": 124494,
+      "sha256": "d77eb7d02691ba2db10edd02d1779bfbb05ff5e25b850b80002aa1180ddfceeb",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-57.png",
+      "bytes": 114124,
+      "sha256": "be09132edce1f81b1677fbd266ce16ec4f534c578c93d4814f73e1be16e65715",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-58.png",
+      "bytes": 148458,
+      "sha256": "26301efec15efef2c4e8585bb3309cd276fc096977ba22978c6e2b593bb1220f",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-59.png",
+      "bytes": 125048,
+      "sha256": "7527794ee8ff1ca4a35046c0dc90646b94e68bad87f3a166fddf67ef5744dbdd",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-60.png",
+      "bytes": 120474,
+      "sha256": "c2dd9022da5c3fde23eb5bf84bab49d32098e55ed902fbd073cb79975f3a1c66",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-61.png",
+      "bytes": 115293,
+      "sha256": "d9c33d41eacce4b9a98ccbd13500002f95a037a31709d10fea05621dfcecfde4",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-62.png",
+      "bytes": 145685,
+      "sha256": "8bb3bfcd0039700bd177a6ae824acc12ff87ecf57baab4ab1ba01431af05ce00",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-63.png",
+      "bytes": 50317,
+      "sha256": "bf5fb5b7ade79ee08435241b53d635da874b784fa317f49bfb4b86e12cd61847",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-64.png",
+      "bytes": 5026,
+      "sha256": "62ccf34a2c57b4cbe0ec66aafa0f552da34e3ed929f977dcad8c81f82f15ab15",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-65.png",
+      "bytes": 72982,
+      "sha256": "f89494add5ce2d47c5857d69c9dc45b9a94820ae78c574ff0a9b69027df06479",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-66.png",
+      "bytes": 116502,
+      "sha256": "7e4c5a5f8a1f8676c1db0d8775111bfea91b299320a381541b48aeb1cc47daf6",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-67.png",
+      "bytes": 115716,
+      "sha256": "d613abc433a4099d7940652adb0986d72bcc3f1323bff536faa28ed0d2d2fbc7",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-68.png",
+      "bytes": 124673,
+      "sha256": "8adfb072adddeaaa5b8f2416dbc13e6387575a042074587b30c1f2bbaa38eb8e",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-69.png",
+      "bytes": 115158,
+      "sha256": "2c62a5f87983ad23f39f9c1cafc455c01e5b6fd0ba02b0759da72da2f875817f",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-70.png",
+      "bytes": 118785,
+      "sha256": "a9f241783dbae11e55f4da3f68985e6efe708b2c96240239f42e86772c4932bc",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-71.png",
+      "bytes": 86891,
+      "sha256": "88fdd613252038ba80f92770fd7dd3de41ea9c069ca042a8ebe7ae86a5c38b80",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/page-images/page-72.png",
+      "bytes": 33102,
+      "sha256": "43ae8ca649665fe19011ab0c558c2979f301a7620d6e0f0b103491d046dfb7dc",
+      "source_url": "https://archive.org/download/2507191022FP/2507191022.pdf",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-doc-normalized-window.txt",
+      "bytes": 57519,
+      "sha256": "8bc189873a63134d8e5fbb41d490d41d3b01c1d88be53959a6ef6257d1fc577a",
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-normalized-target-1379741.txt",
+      "bytes": 50888,
+      "sha256": "11334f4cdff0ed57758c27a9fc737f0096f6f55492f70ef242ba501e97ba98e3",
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-normalized-target-1381350.txt",
+      "bytes": 50909,
+      "sha256": "bc34693addcf6629d551bdf9ad7c686516fba6b722a941dc78e254b077a11f78",
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-normalized-target-1381915.txt",
+      "bytes": 50969,
+      "sha256": "ae0c6a18f8ab0881332c97e73056d9c40297a8311374d6c2aac4417fee059d79",
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-official-target-normalized.txt",
+      "bytes": 23806,
+      "sha256": "8e31e7c59053ced396bd685ad9648da7856bc06f6c72bd4bb94315cec2db9660",
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-official.doc",
+      "bytes": 4836352,
+      "sha256": "a5d0c62a4021602bb009ce5dabf3cadad3ee702610b12def6ba94b55bbd105f5",
+      "source_url": "https://ibnelqayem.com/ar/media/download/86",
+      "url_status": "RECORDED_PRIMARY_OR_PARENT_SOURCE",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/saaid-download.bin",
+      "bytes": 2064644,
+      "sha256": "723c13bc8bb7c2efb7f65c591f52690e108147f87d1f32be739babc135ed25a1",
+      "source_url": null,
+      "url_status": "NOT_RECORDED_IN_INCLUDED_FROZEN_METADATA",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/sources/saaid-text.txt",
+      "bytes": 53462,
+      "sha256": "07c4004012b90e20ea15bd0c4a829d9a3781d965642263f3d399d77463b823de",
+      "source_url": null,
+      "url_status": "NOT_RECORDED_IN_INCLUDED_FROZEN_METADATA",
+      "reason": "INTENTIONAL_SOURCE_BODY_OR_RENDER_OMISSION",
+      "not_a_missing_payload_or_verified_embedded_source": true
+    }
+  ],
+  "scope": "Hashes were computed against local originals solely to bind omissions; their presence or future recovery in the distributed ZIP is not asserted."
+}

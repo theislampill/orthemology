@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-08T11:46:58.934877+00:00",
+  "source_line_checks": [
+    {
+      "source": "SF23",
+      "continuous_lines_verified": true,
+      "start": 1520,
+      "end": 1546,
+      "saved_bytes_match_binding": true
+    },
+    {
+      "source": "SF142",
+      "continuous_lines_verified": true,
+      "start": 2237,
+      "end": 2301,
+      "saved_bytes_match_binding": true
+    },
+    {
+      "source": "UShura",
+      "continuous_lines_verified": true,
+      "start": 228,
+      "end": 247,
+      "saved_bytes_match_binding": true
+    }
+  ],
+  "current_input_bindings_match": true,
+  "prior_audit_digest_matches": [
+    "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/LOCUS_AUDIT.md",
+    "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/PAGE_CORRESPONDENCE.json",
+    "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/TEXT_READ_RECEIPTS.json",
+    "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md"
+  ],
+  "formal_status": "General hand proofs by explicitly given all-integer construction and substitution; no finite testing or kernel certification claimed.",
+  "limits": "A binding checked now is not a historical-duration or full previous-reading certificate."
+}

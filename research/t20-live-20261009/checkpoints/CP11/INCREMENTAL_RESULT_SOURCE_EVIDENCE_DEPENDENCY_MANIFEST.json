@@ -1,0 +1,571 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v1",
+  "classification": "ELEVENTH_ADDITIVE_INTERMEDIATE_PRESERVATION_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "not_a_numbered_research_tranche": true,
+  "assembly_snapshot_utc": "2026-10-08T21:56:45.707040+00:00",
+  "previous_checkpoint": "Tenth skyline information and finite readout; authoritative ninth remains Scope_Clarified",
+  "timestamp_scope": "Packaging and recorded prospective author activity are not historical active-duration certificates.",
+  "results": [
+    {
+      "id": "skyline_likelihood_score",
+      "title": "Localized second-order common-stratum expansion",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score/OPERATION_LOG.md",
+          "bytes": 1151,
+          "sha256": "2a0c2871c0abd47951b632026362c08609fe9ccedd643c12df5410098eacf69a"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score/RESULT.md",
+          "bytes": 9091,
+          "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score-review/REVIEW.md",
+          "bytes": 10253,
+          "sha256": "77fa54173fa04c4d9b942cb668dbc080dd3b5062c563e29ed6850c5b1185d596"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score-review/SOURCE_BINDINGS.json",
+          "bytes": 1316,
+          "sha256": "4159c1bdaeac9797787fafdd6307ae295bd9ccce612b311e61c3c413d096611c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score-review/REVIEW_RECEIPT.json",
+          "bytes": 803,
+          "sha256": "effd28cce9cb9d3e892d3c1e19df59e66a06c16c7595e7b3d9fb3aa1ab1149c4"
+        }
+      ],
+      "claims": [
+        "For m=n+1, k/m<=1/2 and U<=1/2, log L=Q+R, Q=((k-mU)^2-k)/(2m^2)+2(sum_i x_i y_i/m-M1), |R|<=40(k/m+U)^3.",
+        "Both worlds share E U=H_m/m and E M1=(H_(m+1)-1)/(m(m+1)); Markov localizes K+mU, giving a probability-scale remainder only.",
+        "The independent review accepts constant 40 and supplies a supplementary safe constant 5 from stronger geometry; later stages use the author constant 40.",
+        "A k=1 boundary family with x=1-eta,y=1/2 has log L=(1/m)log eta+O_m(1) while Q stays bounded, ruling out the global cubic-remainder assertion."
+      ],
+      "limits": [
+        "Localized does not mean global; no KL, integrated-square, score variance or testing rate follows at this stage.",
+        "Common likelihood is unnormalized g1/g0 on K<=n; the alternative-only K=m stratum is not discarded or assigned a finite forward logarithm."
+      ],
+      "depends_on": [
+        "TENTH_EXACT_SKYLINE_LIKELIHOOD",
+        "TENTH_COUNT_INFORMATION"
+      ],
+      "control_ids": [
+        "score-author",
+        "score-review",
+        "score-binding-verifier"
+      ],
+      "source_ids": [
+        "SCORE_LOCAL"
+      ],
+      "fresh_local_contribution": [
+        "Explicit deterministic remainder, both-world first-moment localization and nonglobal boundary counterexample."
+      ],
+      "inherited_not_independent_discovery": [
+        "Parent supplied leading candidate, geometry and M1 formula; exact likelihood/count predecessors inherited; no duplicate discovery credit."
+      ],
+      "assurance": "Written proof and scoped separately authored internal review; deterministic controls where supplied; no fresh Lean theorem or replay"
+    },
+    {
+      "id": "baseline_skyline_moments",
+      "title": "Exact fixed-count baseline second and cross moments",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments/SOURCE_AUDIT.md",
+          "bytes": 1692,
+          "sha256": "0d9fff67c3d4f59f4f6b034269e11688ed952d6c68c8d4ef8468819d903962ed"
+        },
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments/OPERATION_LOG.md",
+          "bytes": 2201,
+          "sha256": "e99f59574baa8ee4aa9068d3bf6820244fb46e27571a2fef9f5c5364cf97a951"
+        },
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments/RESULT.md",
+          "bytes": 13251,
+          "sha256": "b7bdcfa8b7288d69d569b6ed904c314fe58e4795c92549a6d525c433ad7c139f"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments-review/REVIEW.md",
+          "bytes": 6694,
+          "sha256": "2a8827375f5cea2a34d532e8f2f0f95f5f0d49d9d19a0ed4c094d8a9c33e3bee"
+        },
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments-review/CHECK_RESULTS.json",
+          "bytes": 4184,
+          "sha256": "a60bcd5f24e19ee1ef4aa12856f2917fd9dabaa8ec4fc3a57eb289c85d22c94a"
+        }
+      ],
+      "claims": [
+        "Exact formulas for E U_n^2 and E[K_n U_n] follow from two-query geometry and comparable/incomparable orientation accounting.",
+        "For a_n=n or n+1, E(K_n-a_n U_n)^2=H_n+O(H_n^2/n); the compensated count is O_P(sqrt(log n)).",
+        "For m=n+1 the polynomial Q has E|Q|=O(log n/n^2) and E Q=O(log^2 n/n^3), with E Q_1=-7/72; it is not exactly centered.",
+        "Together with the localized expansion, baseline log L=O_P(log n/n^2)."
+      ],
+      "limits": [
+        "All new second/cross moments are under the product-uniform fixed-count baseline only.",
+        "These formulas alone give no E Q^2, likelihood-tail integrability, KL/Hellinger rate or CLT."
+      ],
+      "depends_on": [
+        "TENTH_EXACT_SKYLINE_LIKELIHOOD",
+        "TENTH_COUNT_INFORMATION",
+        "skyline_likelihood_score"
+      ],
+      "control_ids": [
+        "moments-author",
+        "moments-review"
+      ],
+      "source_ids": [
+        "BASELINE_LOCAL"
+      ],
+      "fresh_local_contribution": [
+        "Exact second/cross-moment geometry, cancellation and score L1/mean consequences."
+      ],
+      "inherited_not_independent_discovery": [
+        "Parent supplied candidates and proof outline; record facts/first moments are established antecedents."
+      ],
+      "assurance": "Written proof and scoped separately authored internal review; deterministic controls where supplied; no fresh Lean theorem or replay"
+    },
+    {
+      "id": "skyline_probability_prior_art",
+      "title": "Applicable Poisson-hull prior art and fixed-count concentration",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-probability-prior-art/SOURCE_AUDIT.md",
+          "bytes": 6496,
+          "sha256": "a297002371f620dcf0233f0e5d494b617b3b406ed4d7be4299630cd0aad69ba7"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-probability-prior-art/RESULT.md",
+          "bytes": 11572,
+          "sha256": "ff663eca1abe6b680ef9ed615eb8978484e78ff6a3c2debc13b9cc0e0ddaa945"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-probability-prior-art-review/REVIEW.md",
+          "bytes": 6112,
+          "sha256": "b505d15c693b8a4fbba103d7c4f1e4691598095f00726c360e84e13a4d53a234"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-probability-prior-art-review/VERIFICATION_MANIFEST.json",
+          "bytes": 8789,
+          "sha256": "46842e57d4e1b6ec0bc4fda180a5d8f813dd7cc16bc2ef9b4e0eb7a108c15cea"
+        }
+      ],
+      "claims": [
+        "Last–Molchanov explicitly covers Pareto minima. The finite stopping-set geometry is matched, including multiplicities and empty configuration.",
+        "For both fixed-count worlds, E_j exp(nU/4)<=sqrt((m+1)/p_m), p_m=P(Poi(m)=m)=P(Poi(m)=m-1). Hence P_j(nU>=2 log((m+1)/p_m)+4x)<=exp(-x).",
+        "Positive-integer raw moments satisfy E_j(nU)^r=O_r(log^r m); the local remainder-square integral is O(log^6 m/m^6), retaining its domain indicator.",
+        "Poisson equalities are not transferred unchanged: conditioning is explicitly charged, and fixed-count E(K-mU)=-1/m is a countercheck to zero centering."
+      ],
+      "limits": [
+        "The source theorems are established prior art; the fixed-count concentration is a local deduction with scoped review.",
+        "No fixed-count CLT, centered fourth-moment order or information rate follows solely from these raw-moment bounds.",
+        "Fill–Naiman frontier widths are not unweighted U; Baldin risk transfer is not arbitrary mixed-moment transfer."
+      ],
+      "depends_on": [
+        "TENTH_EXACT_SKYLINE_LIKELIHOOD",
+        "TENTH_COUNT_INFORMATION",
+        "skyline_likelihood_score"
+      ],
+      "control_ids": [],
+      "source_ids": [
+        "PROBABILITY_PRIMARY"
+      ],
+      "fresh_local_contribution": [
+        "Exact finite-Pareto hypothesis mapping and self-contained fixed-count concentration using source-guided identities."
+      ],
+      "inherited_not_independent_discovery": [
+        "General posterior/variance/exponential identities belong to Last–Molchanov and attributed antecedents. No exhaustive literature or novelty claim; proof specialization is independently checked."
+      ],
+      "assurance": "Written proof and scoped separately authored internal review; deterministic controls where supplied; no fresh Lean theorem or replay"
+    },
+    {
+      "id": "full_skyline_reverse_kl",
+      "title": "Unconditioned full-skyline reverse KL: log-four bound",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl/ACTIVITY_LOG.json",
+          "bytes": 590,
+          "sha256": "8b5a50fd96a0146a0f6e716630ab8f9c470707c65e715b5e3c327e885ecb4d2b"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl/SOURCE_AUDIT.md",
+          "bytes": 2107,
+          "sha256": "6bb333b117229c52521c8de0e950b0e78d58ad05151dc1ea6a65c2eb10f154a0"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl/SOURCE_BINDINGS.json",
+          "bytes": 1030,
+          "sha256": "af1a2792c31c811513e39654b36600bac648349b7aff0a176d9cfd88b5173a68"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl/RESULT.md",
+          "bytes": 16686,
+          "sha256": "4aa4bee754cf89284a327d4322f4d35a93314525da8aaa22e5d028754908e28a"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl-review/REVIEW.md",
+          "bytes": 13521,
+          "sha256": "bf100b4cb87154cc520f21dc6db3957357e8baa6f64c4f37d729d576d299c55f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl-review/SOURCE_BINDINGS.json",
+          "bytes": 2540,
+          "sha256": "17b065a091a327e211d004ba709a0ca844282bbb8490dc0388e234db5bd558bb"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl-review/REVIEW_RECEIPT.json",
+          "bytes": 1007,
+          "sha256": "7ebf6592f163671710a52e4368d4487e2a96d33ee8f8ccb0f8268a2df128aea2"
+        }
+      ],
+      "claims": [
+        "For the fixed hard pair, 0<KL(P0||P1)=O(log^4 n/n^4) and KL(P1||P0)=infinity.",
+        "Both-world dyadic tails, raw fourth moments, the localized score, a global reverse-log envelope and a good/bad-window split prove the bound.",
+        "For unnormalized common-stratum L, E0 L=1-p_n and KL(P0||P1)=E0[-log L+L-1]+p_n, preserving the positive singular-mass correction.",
+        "Actual-action information accounting yields E0 N=Omega_alpha(n^4/log^4 n) for all matching adaptive unchanged-retained-endpoint protocols; a uniform worst-case cap inherits this lower bound."
+      ],
+      "limits": [
+        "Log-four review does not certify the later log-squared sibling.",
+        "No sharp logarithmic order, finite forward KL, fitted-rate inference or finite physical probe claim."
+      ],
+      "depends_on": [
+        "TENTH_EXACT_SKYLINE_LIKELIHOOD",
+        "TENTH_COUNT_INFORMATION",
+        "NINTH_ACTUAL_ACTION_CONTRACT",
+        "skyline_likelihood_score"
+      ],
+      "control_ids": [
+        "log-four-author",
+        "log-four-review",
+        "log-four-binding-verifier"
+      ],
+      "source_ids": [
+        "REVERSE_KL_LOCAL"
+      ],
+      "fresh_local_contribution": [
+        "Both-world dyadic route, global log envelope, entropy integration and full-skyline adaptive lower bound."
+      ],
+      "inherited_not_independent_discovery": [
+        "Root supplied candidate/strategy; exact density, singular mass, coupling and local expansion inherited. No dependency on later Poisson-tail/log-squared work."
+      ],
+      "assurance": "Written proof and scoped separately authored internal review; deterministic controls where supplied; no fresh Lean theorem or replay"
+    },
+    {
+      "id": "full_skyline_log_squared",
+      "title": "Strengthened unconditioned reverse KL: log-squared bound",
+      "artifacts": [
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared/ACTIVITY_LOG.json",
+          "bytes": 895,
+          "sha256": "864d8e84ae9ed159c8bc09ff25a1405e0626323d0b2d4cc098f81a9f0e59fc6c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared/SOURCE_AUDIT.md",
+          "bytes": 7118,
+          "sha256": "60e33982b5775b38aa6a257654c7bb98d3cb26fe3e2c1d49fb8e918f88c735de"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared/SOURCE_BINDINGS.json",
+          "bytes": 2254,
+          "sha256": "5f78bbfdc8ad6a9fcb9415ec06efa3edd85e7acb50585a2fae71d06ba283fafb"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared/RESULT.md",
+          "bytes": 21418,
+          "sha256": "7251887ac088bfc13a93b94e400879e851ebd1ceb1a6337449f9def20cb0c2f7"
+        }
+      ],
+      "separate_internal_review": [
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared-review/REVIEW.md",
+          "bytes": 15867,
+          "sha256": "550ef660e2071b6669d94ed43c3105069cf9d7db7ed0953c4cacb00fb6b7bbf6"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared-review/SOURCE_BINDINGS.json",
+          "bytes": 5182,
+          "sha256": "8283588de12323fcd986a62b05201a51620f4c6a33eb26925363748a753fe21d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared-review/REVIEW_RECEIPT.json",
+          "bytes": 1544,
+          "sha256": "ec9c5f9944d812386cc812b4a4095b88432dd4608d1e68dd9761b1e2e0be80e2"
+        }
+      ],
+      "claims": [
+        "For the same fixed pair, 0<KL(P0||P1)=O(log^2 n/n^4), while KL(P1||P0)=infinity.",
+        "An exact Poisson skyline posterior gives N|S=K+Poi(mD). The fixed-count/Poisson skyline density ratio is <3 on U<=1/2; the complement is separately superpolynomially controlled.",
+        "Poisson compensation identities, justified differentiation and restricted density comparison give E0(K-mU)^4=O(log^2 m). A verified weighted-tilt/conditional-variance identity gives the needed weighted L2 bound and E0 Q^2=O(log^2 m/m^4).",
+        "The inherited entropy architecture, including plus p_n singular mass, gives the strengthened reverse KL and E0 N=Omega_alpha(n^4/log^2 n) for started vectors; any finite uniform worst-case cap obeys the same lower order.",
+        "The inherited count-test upper bound O_alpha(n^4/log n) leaves one logarithmic factor between bounds."
+      ],
+      "limits": [
+        "Only an upper bound on reverse information and lower bound on resource cost, not Theta, a matching logarithmic order, a lower information constant or an optimal test.",
+        "The fixed experiment never becomes Poisson; global constant-three density domination is false.",
+        "Source-guided specialized identities are proved from skyline densities. The prior-art sharper concentration is acknowledged but not needed in this proof."
+      ],
+      "depends_on": [
+        "TENTH_EXACT_SKYLINE_LIKELIHOOD",
+        "TENTH_COUNT_INFORMATION",
+        "skyline_likelihood_score",
+        "full_skyline_reverse_kl",
+        "skyline_probability_prior_art"
+      ],
+      "control_ids": [
+        "log-squared-author",
+        "log-squared-review",
+        "log-squared-binding-verifier"
+      ],
+      "source_ids": [
+        "LOG_SQUARED_MAPPED"
+      ],
+      "fresh_local_contribution": [
+        "Restricted posterior density transfer, explicit compensated/weighted moment inequalities, integrated score square and log-squared strengthening, with its own final-digest review."
+      ],
+      "inherited_not_independent_discovery": [
+        "Parent supplied candidate, derivative relation, transfer/weighted strategy and entropy reuse; Last–Molchanov general identities and local antecedents remain credited. Review is independent verification, not independent theorem discovery."
+      ],
+      "assurance": "Written proof and scoped separately authored internal review; deterministic controls where supplied; no fresh Lean theorem or replay"
+    }
+  ],
+  "common_assumptions": [
+    "The declared known hard pair: P0/Q0 has n iid product-uniform threshold pairs; P1/Q1 has m=n+1 iid Joe-law pairs, c=n/m, F_c(x,y)=1-(1-xy)^c.",
+    "The observable is the exact retained endpoint skyline; coordinate-separable threshold-AND routes combine by OR. Within-vector states are unchanged and nonlatched; noiseless endpoint answers are functions of that skyline.",
+    "Fresh vectors are independent of each other and common world-independent policy randomization. A vector is charged from its first observation, including incomplete, infinite or selectively retained query words.",
+    "A common measurable adaptive policy, fixed per-world error alpha in (0,1/2), and unconditional finite-stop-and-correct probability at least 1-alpha are required. Expected lower cost is under P0; a uniform worst-case cap is at least that expectation.",
+    "Poisson processes are proof auxiliaries only. The actual experiments stay fixed-count. Restricted density domination and a separately controlled bad-area event replace naive transfer of centered Poisson moment equalities.",
+    "No finite exact real-skyline reconstruction, noisy instrumentation, unknown calibration, physical architecture, ontology or empirical warrant is supplied."
+  ],
+  "source_registry": {
+    "SCORE_LOCAL": {
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score/RESULT.md",
+          "bytes": 9091,
+          "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score/OPERATION_LOG.md",
+          "bytes": 1151,
+          "sha256": "2a0c2871c0abd47951b632026362c08609fe9ccedd643c12df5410098eacf69a"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score-review/SOURCE_BINDINGS.json",
+          "bytes": 1316,
+          "sha256": "4159c1bdaeac9797787fafdd6307ae295bd9ccce612b311e61c3c413d096611c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-likelihood-score-review/REVIEW.md",
+          "bytes": 10253,
+          "sha256": "77fa54173fa04c4d9b942cb668dbc080dd3b5062c563e29ed6850c5b1185d596"
+        }
+      ],
+      "reading": "Author and reviewer exact local reads as recorded; parent supplied leading candidate/geometry. No new external literature search."
+    },
+    "BASELINE_LOCAL": {
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments/SOURCE_AUDIT.md",
+          "bytes": 1692,
+          "sha256": "0d9fff67c3d4f59f4f6b034269e11688ed952d6c68c8d4ef8468819d903962ed"
+        },
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments/OPERATION_LOG.md",
+          "bytes": 2201,
+          "sha256": "e99f59574baa8ee4aa9068d3bf6820244fb46e27571a2fef9f5c5364cf97a951"
+        },
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments-review/REVIEW.md",
+          "bytes": 6694,
+          "sha256": "2a8827375f5cea2a34d532e8f2f0f95f5f0d49d9d19a0ed4c094d8a9c33e3bee"
+        },
+        {
+          "path": "t20-next-frontier-20261008/baseline-skyline-moments-review/CHECK_RESULTS.json",
+          "bytes": 4184,
+          "sha256": "a60bcd5f24e19ee1ef4aa12856f2917fd9dabaa8ec4fc3a57eb289c85d22c94a"
+        }
+      ],
+      "reading": "Author full named local results; reviewer full target and three named predecessor results. Same iid model, not another world/source witness."
+    },
+    "PROBABILITY_PRIMARY": {
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-probability-prior-art/SOURCE_AUDIT.md",
+          "bytes": 6496,
+          "sha256": "a297002371f620dcf0233f0e5d494b617b3b406ed4d7be4299630cd0aad69ba7"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-probability-prior-art/MANIFEST.json",
+          "bytes": 788,
+          "sha256": "f959f10dcaef214f07d1580c5363e2dadf5053895f9cec579409ce17fdff876f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-probability-prior-art-review/REVIEW.md",
+          "bytes": 6112,
+          "sha256": "b505d15c693b8a4fbba103d7c4f1e4691598095f00726c360e84e13a4d53a234"
+        },
+        {
+          "path": "t20-next-frontier-20261008/skyline-probability-prior-art-review/VERIFICATION_MANIFEST.json",
+          "bytes": 8789,
+          "sha256": "46842e57d4e1b6ec0bc4fda180a5d8f813dd7cc16bc2ef9b4e0eb7a108c15cea"
+        }
+      ],
+      "reading": "Targeted continuous sections, complete named theorem proofs and examples as individually itemized; not all papers whole-read. Published identity and 2026 preprint distinction retained. Reviewer scopes differ and are recorded separately."
+    },
+    "REVERSE_KL_LOCAL": {
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl/SOURCE_AUDIT.md",
+          "bytes": 2107,
+          "sha256": "6bb333b117229c52521c8de0e950b0e78d58ad05151dc1ea6a65c2eb10f154a0"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl/SOURCE_BINDINGS.json",
+          "bytes": 1030,
+          "sha256": "af1a2792c31c811513e39654b36600bac648349b7aff0a176d9cfd88b5173a68"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl/ACTIVITY_LOG.json",
+          "bytes": 590,
+          "sha256": "8b5a50fd96a0146a0f6e716630ab8f9c470707c65e715b5e3c327e885ecb4d2b"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl-review/SOURCE_BINDINGS.json",
+          "bytes": 2540,
+          "sha256": "17b065a091a327e211d004ba709a0ca844282bbb8490dc0388e234db5bd558bb"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-reverse-kl-review/REVIEW.md",
+          "bytes": 13521,
+          "sha256": "bf100b4cb87154cc520f21dc6db3957357e8baa6f64c4f37d729d576d299c55f"
+        }
+      ],
+      "reading": "Complete named exact likelihood/count/score/review/actual-action local sources. No Poisson identity, pending prior-art tail or log-squared result was required for log-four."
+    },
+    "LOG_SQUARED_MAPPED": {
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared/SOURCE_AUDIT.md",
+          "bytes": 7118,
+          "sha256": "60e33982b5775b38aa6a257654c7bb98d3cb26fe3e2c1d49fb8e918f88c735de"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared/SOURCE_BINDINGS.json",
+          "bytes": 2254,
+          "sha256": "5f78bbfdc8ad6a9fcb9415ec06efa3edd85e7acb50585a2fae71d06ba283fafb"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared/ACTIVITY_LOG.json",
+          "bytes": 895,
+          "sha256": "864d8e84ae9ed159c8bc09ff25a1405e0626323d0b2d4cc098f81a9f0e59fc6c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared-review/SOURCE_BINDINGS.json",
+          "bytes": 5182,
+          "sha256": "8283588de12323fcd986a62b05201a51620f4c6a33eb26925363748a753fe21d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/full-skyline-log-squared-review/REVIEW.md",
+          "bytes": 15867,
+          "sha256": "550ef660e2071b6669d94ed43c3105069cf9d7db7ed0953c4cacb00fb6b7bbf6"
+        }
+      ],
+      "reading": "Author directly inspected named Last–Molchanov theorem proofs/examples and local packets. Reviewer read specified local files and inherited source review; no second fresh primary-source reread claimed. Numeric output rows were replay/structure checked, not all manually read."
+    }
+  },
+  "external_dependency_registry": {
+    "TENTH_EXACT_SKYLINE_LIKELIHOOD": {
+      "included": false,
+      "archive_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
+      "library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/retained-skyline-likelihood/RESULT.md",
+          "origin_relative_to_research_root": "retained-skyline-likelihood/RESULT.md",
+          "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+          "bytes": 17673,
+          "binding_records": [
+            "skyline-likelihood-score-review/SOURCE_BINDINGS.json",
+            "full-skyline-reverse-kl-review/SOURCE_BINDINGS.json",
+            "full-skyline-log-squared-review/SOURCE_BINDINGS.json",
+            "full-skyline-reverse-kl/SOURCE_BINDINGS.json",
+            "full-skyline-log-squared/SOURCE_BINDINGS.json",
+            "baseline-skyline-moments-review/CHECK_RESULTS.json",
+            "skyline-probability-prior-art-review/VERIFICATION_MANIFEST.json"
+          ],
+          "archive_member": "T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/retained-skyline-likelihood/RESULT.md",
+          "predecessor_archive_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
+          "archive_library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "included": false
+        }
+      ],
+      "role": "Exact fixed-count density, hard pair, support decomposition and factorial singular-mass bound consumed, not re-proved/replayed by this packer."
+    },
+    "TENTH_COUNT_INFORMATION": {
+      "included": false,
+      "archive_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
+      "library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/skyline-count-information/RESULT.md",
+          "origin_relative_to_research_root": "skyline-count-information/RESULT.md",
+          "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d",
+          "bytes": 10942,
+          "binding_records": [
+            "skyline-likelihood-score-review/SOURCE_BINDINGS.json",
+            "full-skyline-reverse-kl-review/SOURCE_BINDINGS.json",
+            "full-skyline-log-squared-review/SOURCE_BINDINGS.json",
+            "full-skyline-reverse-kl/SOURCE_BINDINGS.json",
+            "full-skyline-log-squared/SOURCE_BINDINGS.json",
+            "baseline-skyline-moments-review/CHECK_RESULTS.json",
+            "skyline-probability-prior-art-review/VERIFICATION_MANIFEST.json"
+          ],
+          "archive_member": "T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/skyline-count-information/RESULT.md",
+          "predecessor_archive_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
+          "archive_library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "included": false
+        }
+      ],
+      "role": "Uniform record law, actual Joe coupling and O_alpha(n^4/log n) count-test upper comparator consumed; no fresh predecessor replay."
+    },
+    "NINTH_ACTUAL_ACTION_CONTRACT": {
+      "included": false,
+      "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "records": [
+        {
+          "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
+          "origin_relative_to_research_root": "full-face-threshold-kl-rate/RESULT.md",
+          "sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+          "bytes": 14568,
+          "binding_records": [
+            "full-skyline-reverse-kl-review/SOURCE_BINDINGS.json",
+            "full-skyline-reverse-kl/SOURCE_BINDINGS.json"
+          ],
+          "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
+          "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "verified_against": "EXACT_ARCHIVE_MEMBER",
+          "included": false
+        }
+      ],
+      "role": "Actual-action chain rule and started-vector/unconditional-correctness comparator used with the full-skyline channel; authoritative ninth is Scope_Clarified."
+    }
+  },
+  "kernel_status": "NO_NEW_LEAN_THEOREMS_OR_REPLAYS",
+  "review_independence": "Five separate internal stage reviews. Parent-supplied candidates/shared derivations remain attributed; neither peer-review status nor independent rediscovery is inferred.",
+  "source_reading": "Exact author/reviewer scopes remain in their unchanged source-audit records; not all papers were wholly read. Source bodies are omitted and not freshly reread by packaging.",
+  "remaining_frontier": "No sharp full-skyline information order is accepted. Active sharp-skyline-information is entirely excluded; its work is neither a dependency nor a prerequisite for this seal."
+}

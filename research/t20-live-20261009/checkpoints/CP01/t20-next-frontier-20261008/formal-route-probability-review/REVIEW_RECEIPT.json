@@ -1,0 +1,60 @@
+{
+  "recorded_utc": "2026-10-08T08:04:34.699738+00:00",
+  "scope": "Independent semantic and kernel replay of the declared finite whole-route Bernoulli model only.",
+  "full_isolated_build_exit": 0,
+  "trust_zero_check_exit": 0,
+  "main_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "endpoint_gate_control": [
+    0,
+    1,
+    0
+  ],
+  "calibration_model_and_forward_control": {
+    "original_model": 0,
+    "original_panel": 0,
+    "mutated_model": 0,
+    "mutated_panel": 1,
+    "restored_model": 0,
+    "restored_panel": 0
+  },
+  "unresolved_mathematical_blockers": [],
+  "files": {
+    "REVIEW.md": "c3276ca4efee8d932f88e4dc2cf24564b340be1877081a15d7a806710ecb09ff",
+    "check_mutations.py": "da26547e954966f8779d379622baa3612bd3b54f54e7164774260e7f6c001a50",
+    "frozen/BernoulliAssignments.lean": "e6dd1e4814bb0bb6c977cd3b6e4ee600e8d4cdfeb5c4564148d3bb5a38eb8eba",
+    "frozen/EndpointLaw.lean": "0a1e6aa470334ecb7766d53bbdd984b2cdeab0945ec3639984c66d4f3980f616",
+    "frozen/GenerativePanels.lean": "086ec54ea878df015b5a533c77d8b93fc440cad9b68c68e349388bbd376581e9",
+    "frozen/HistogramGrouping.lean": "07de3ab146e22f88555edf16cafd96cb1fd7547935f640f64c790861ceed42dc",
+    "frozen/INVERSE_SOURCE_MANIFEST.sha256": "df46b57947983bd89dac42fc17c235f6696089e0319923162c309aff451eaa1d",
+    "frozen/Model.lean": "878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e",
+    "frozen/README.md": "04bc15352aca5cd9d480b2ac6254737cfd73b6d0102edb0873ca0ce9c080381f",
+    "frozen/SOURCE_MANIFEST.sha256": "23eeafa2ed7f10a03beece20edd570af66e01cc9dc932ac4a4a1255eebd5b38e",
+    "frozen/Verification.lean": "c66cda0da6393d46178c07912016e02a73d23bdae123fb38a5513ae4fbf57e7d",
+    "mutation-workspace/BernoulliAssignments.lean": "e6dd1e4814bb0bb6c977cd3b6e4ee600e8d4cdfeb5c4564148d3bb5a38eb8eba",
+    "mutation-workspace/EndpointLaw.lean": "0a1e6aa470334ecb7766d53bbdd984b2cdeab0945ec3639984c66d4f3980f616",
+    "mutation-workspace/GenerativePanels.lean": "086ec54ea878df015b5a533c77d8b93fc440cad9b68c68e349388bbd376581e9",
+    "mutation-workspace/HistogramGrouping.lean": "07de3ab146e22f88555edf16cafd96cb1fd7547935f640f64c790861ceed42dc",
+    "mutation-workspace/Model.lean": "878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e",
+    "mutation-workspace/Verification.lean": "c66cda0da6393d46178c07912016e02a73d23bdae123fb38a5513ae4fbf57e7d",
+    "replay_frozen.sh": "39e9d2e79268578a5ec0f2019f3128e3f1bb69ba3a7e49f4b056ea2a5628fe4b",
+    "results/AUTHOR_SOURCE_VERIFICATION_AFTER.log": "d8cd6fc2412e9a8479276e7fcd7d0fac809a0f3e705af58673904c2c3aee52ef",
+    "results/AUTHOR_SOURCE_VERIFICATION_BEFORE.log": "d8cd6fc2412e9a8479276e7fcd7d0fac809a0f3e705af58673904c2c3aee52ef",
+    "results/FROZEN_FULL_REPLAY.log": "07785a714d8c707aacf08cfd5d5bb3a67db1b1a1e1a5b944c0ad6c7d6ec73252",
+    "results/INDEPENDENT_MUTATION_RECEIPT.json": "498aea6350de5bc9151dc28d7190c3b7d2887a6ceb479212d707067d3365711a",
+    "results/INDEPENDENT_MUTATION_REPLAY.log": "498aea6350de5bc9151dc28d7190c3b7d2887a6ceb479212d707067d3365711a",
+    "results/altered-calibration-model.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/altered-calibration-panel.log": "13dfdaf893631b8f0524fc21a09893c5faf0c03e5485ae189c01dfd269599425",
+    "results/baseline-BernoulliAssignments.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/baseline-GenerativePanels.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/baseline-HistogramGrouping.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/baseline-Model.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/restored-calibration-model.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/restored-calibration-panel.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/restored-success-gate.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/reversed-success-gate.log": "217c55f4202d0c1d4a7d3ecafb2a149b6e5a5ff7892ff3b0b95ef6980d4095a2"
+  }
+}

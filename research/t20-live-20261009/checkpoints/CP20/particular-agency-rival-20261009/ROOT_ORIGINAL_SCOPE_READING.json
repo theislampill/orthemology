@@ -1,0 +1,24 @@
+{
+  "recorded_at_utc": "2026-10-09T09:09:19.030739+00:00",
+  "records": [
+    {
+      "id": "simplicity-creation",
+      "path": "research-intermediates/simplicity-creation.pdf",
+      "url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_SimplicityCreation99.pdf",
+      "sha256": "12c2edd534e186205de356f3ff9a21f2ec7f106e64ee1606311f5783d71453a0",
+      "root_read": "Complete8pp405–412 including notes, text extracted in three untruncated batches.",
+      "root_visual_read": "Printed409–410 localrender checked.",
+      "scope": "Author original-scope agency proposal; no adopted simplicity or verified metaphysical model."
+    },
+    {
+      "id": "scope-contingency",
+      "path": "scope-contingency/research-intermediates/scope-contingency.pdf",
+      "url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_TheismScopeCont08.pdf",
+      "sha256": "aad52f6e8e531f8434e2326ca2b10366bb8fb50bdf410077ad320928475796d4",
+      "root_read": "Complete16pp134–149 including footnotes and bibliography, three untruncated batches.",
+      "root_visual_read": "None in this root reading.",
+      "scope": "Conditional value argument; final constraints necessary, not certified sufficient; p146n15 explicitly leaves complete reasons unknown."
+    }
+  ],
+  "boundary": "Additive post-checkpoint19 research records. No actual-time certification, closure, integration or source-body redistribution."
+}

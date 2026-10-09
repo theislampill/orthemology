@@ -1,0 +1,143 @@
+{
+  "recorded_utc": "2026-10-08T15:24:20.396077+00:00",
+  "operation": "Targeted return to original computational objective; no fresh theorem or kernel replay",
+  "objective": {
+    "library_file_id": "libfile_f2f90fd66b388191af3ab8cb57da486f",
+    "filename": "Pasted text(20261007-075932).txt",
+    "read": "all 425 Library lines",
+    "sequencing": "Parent states owner later placed this objective after the substantive fronts."
+  },
+  "files": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/COUNTERMODEL_MATRIX.json",
+      "bytes": 6059,
+      "sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/review/IndependentScopeTests.lean",
+      "bytes": 6771,
+      "sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/AnchoredSourceBridge.lean",
+      "bytes": 10743,
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/Controls.lean",
+      "bytes": 22563,
+      "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/ModalAbilityControl.lean",
+      "bytes": 4387,
+      "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/CONTROL_MATRIX.md",
+      "bytes": 5852,
+      "sha256": "359c1f4901773262e328d5acb1e4a247ea9f8dc1fb7add195e3be7563026d186"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-final-synthesis/inherited-sources/CONNECTED_UNITY.lean",
+      "bytes": 10176,
+      "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-final-synthesis/inherited-sources/INFINITE_FORK.lean",
+      "bytes": 3364,
+      "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-final-synthesis/SYNTHESIS.md",
+      "bytes": 43331,
+      "sha256": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-final-synthesis/CONCLUSION_PREMISE_STATUS_MAP.json",
+      "bytes": 175834,
+      "sha256": "44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/DEPENDENCY_DAG.json",
+      "bytes": 448971,
+      "sha256": "35562fca2e81a165288f648f05b14d9a8cfd881b357fa0597c10bfd8ebb27098"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/joint-foundational-model/src/JointFiniteInterpretation.lean",
+      "bytes": 24102,
+      "sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/joint-foundational-model/verification-final-v2/VERIFICATION.json",
+      "bytes": 26637,
+      "sha256": "8f883c57cb6a04467a2388c51c0c639859a0a267bf6444ce41c7270166772df6"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/joint-foundational-model/review/CLAIM_REVIEW.json",
+      "bytes": 3697,
+      "sha256": "3ac78afa1fb2ef530398b1b0adfbfd9ac5fbaf30dc5b658f55f22d7120f8dfc8"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/joint-foundational-model/review/fresh-trust0-v1/REVIEW_VERIFICATION.json",
+      "bytes": 8748,
+      "sha256": "f416a193ac826ce67cd5512591b02a46050f386809fe0e3c11a0261074652ed5"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/closure-case-current/OBLIGATION_MATRIX.md",
+      "bytes": 17341,
+      "sha256": "b860c7989abdf22ea2b18792e025dce59e92585151196bf11def1ff0f6b64a72"
+    },
+    {
+      "path": "t20-next-frontier-20261008/warrant-standard-review/APPRAISAL_STATUS.json",
+      "bytes": 1136,
+      "sha256": "2efe8cb280cd7e6ec16d54a81c3a7f4e55db6e025e7c4f925a52c180a53dfb3d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "bytes": 19590,
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "bytes": 19070,
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927"
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+      "bytes": 17246,
+      "sha256": "d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-next-operations/ACTUAL_COMPLETION_REENTRY_AUDIT.md",
+      "bytes": 3782,
+      "sha256": "facf5820ebe50997522f7921231c5785c731cdf7a533642c4815e3beb21ba460"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-next-operations/ACTUAL_COMPLETION_INPUT_BINDINGS.json",
+      "bytes": 871,
+      "sha256": "3ffd981a3df9dad58459bffe3e90443474647b21f5f3d50572679b4bdc3a2027"
+    }
+  ],
+  "fresh_integrity_check": {
+    "joint_source_matches_recorded_verification": true,
+    "joint_acceptance_matches_recorded_verification": true,
+    "joint_rejections_match_recorded_verification": true,
+    "abc_core_matches_recorded_joint_input_hash": true,
+    "field_core_matches_recorded_joint_input_hash": true
+  },
+  "not_claimed": [
+    "new scientific result",
+    "fresh kernel verification",
+    "global exhaustion",
+    "full metaphysical profile consistency",
+    "owner acceptance",
+    "T20 closure",
+    "historical active-time certification"
+  ]
+}

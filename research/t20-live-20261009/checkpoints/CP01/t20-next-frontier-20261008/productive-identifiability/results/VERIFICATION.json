@@ -1,0 +1,51 @@
+{
+  "bound_inputs_unchanged": true,
+  "export": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "",
+    "stdout": "{\"result\": \"[OMITTED_PRIVATE_MACHINE_PATH]\", \"ranks\": {\"bad\": 5, \"repair_alone\": 6, \"stacked\": 7, \"good\": 7}, \"test_groups\": 28}\n"
+  },
+  "input_count": 8,
+  "isolated_export": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "",
+    "stdout": "{\"result\": \"[OMITTED_PRIVATE_MACHINE_PATH]\", \"ranks\": {\"bad\": 5, \"repair_alone\": 6, \"stacked\": 7, \"good\": 7}, \"test_groups\": 28}\n"
+  },
+  "isolated_tests": [
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_aliases_share_gates_but_distinct_actual_occurrences_do_not (__main__.IdentificationTests.test_aliases_share_gates_but_distinct_actual_occurrences_do_not) ... ok\ntest_all_1024_five_type_models_reconstruct (__main__.IdentificationTests.test_all_1024_five_type_models_reconstruct) ... ok\ntest_current_reactive_contexts_embed_without_new_gate_claim (__main__.IdentificationTests.test_current_reactive_contexts_embed_without_new_gate_claim) ... ok\ntest_distinct_stochastic_extensions_commute_with_unattenuated_slice (__main__.IdentificationTests.test_distinct_stochastic_extensions_commute_with_unattenuated_slice) ... ok\ntest_each_nonempty_issued_profile_is_required (__main__.IdentificationTests.test_each_nonempty_issued_profile_is_required) ... ok\ntest_endpoint_law_does_not_identify_physical_gate_architecture (__main__.IdentificationTests.test_endpoint_law_does_not_identify_physical_gate_architecture) ... ok\ntest_every_absence_coordinate_has_a_separating_omission_witness (__main__.IdentificationTests.test_every_absence_coordinate_has_a_separating_omission_witness) ... ok\ntest_exact_finite_sample_distance_respects_saturation_bound (__main__.IdentificationTests.test_exact_finite_sample_distance_respects_saturation_bound) ... ok\ntest_factor_product_matches_independent_gate_enumeration (__main__.IdentificationTests.test_factor_product_matches_independent_gate_enumeration) ... ok\ntest_finite_full_support_samples_cannot_certify_zero_error (__main__.IdentificationTests.test_finite_full_support_samples_cannot_certify_zero_error) ... ok\ntest_fixed_rate_sampling_separation_and_bounded_grid (__main__.IdentificationTests.test_fixed_rate_sampling_separation_and_bounded_grid) ... ok\ntest_general_multi_effect_reconstruction (__main__.IdentificationTests.test_general_multi_effect_reconstruction) ... ok\ntest_guarded_fixtures_match_actual_preserved_rules (__main__.IdentificationTests.test_guarded_fixtures_match_actual_preserved_rules) ... ok\ntest_invalid_exact_panels_rejected (__main__.IdentificationTests.test_invalid_exact_panels_rejected) ... ok\ntest_joint_effect_absence_recovers_bundling_lost_in_marginals (__main__.IdentificationTests.test_joint_effect_absence_recovers_bundling_lost_in_marginals) ... ok\ntest_shared_frozen_gates_hide_duplicates_and_absorbed_routes (__main__.IdentificationTests.test_shared_frozen_gates_hide_duplicates_and_absorbed_routes) ... ok\ntest_shared_gates_with_and_without_guard_reevaluation_are_distinct (__main__.IdentificationTests.test_shared_gates_with_and_without_guard_reevaluation_are_distinct) ... ok\ntest_uncalibrated_rates_can_mask_different_actual_multiplicities (__main__.IdentificationTests.test_uncalibrated_rates_can_mask_different_actual_multiplicities) ... ok\ntest_uniform_route_count_fibre_formula_is_complete (__main__.IdentificationTests.test_uniform_route_count_fibre_formula_is_complete) ... ok\ntest_uniform_route_thinning_does_not_identify_root_support (__main__.IdentificationTests.test_uniform_route_thinning_does_not_identify_root_support) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.213s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_all_profile_guarded_histograms_reconstruct_after_rank_repair (__main__.DesignRankTests.test_all_profile_guarded_histograms_reconstruct_after_rank_repair) ... ok\ntest_exact_rank_defect_and_hidden_ground_collision (__main__.DesignRankTests.test_exact_rank_defect_and_hidden_ground_collision) ... ok\ntest_integer_kernel_gives_equal_probability_nonnegative_pairs (__main__.DesignRankTests.test_integer_kernel_gives_equal_probability_nonnegative_pairs) ... ok\ntest_kernel_lift_preserves_every_proper_issued_profile (__main__.DesignRankTests.test_kernel_lift_preserves_every_proper_issued_profile) ... ok\ntest_second_probe_repairs_bad_design (__main__.DesignRankTests.test_second_probe_repairs_bad_design) ... ok\ntest_single_good_design_recovers_all_128_binary_support_models (__main__.DesignRankTests.test_single_good_design_recovers_all_128_binary_support_models) ... ok\ntest_small_bounded_class_can_be_injective_despite_rank_defect (__main__.DesignRankTests.test_small_bounded_class_can_be_injective_despite_rank_defect) ... ok\ntest_subset_probes_give_constructive_full_rank_and_inverse (__main__.DesignRankTests.test_subset_probes_give_constructive_full_rank_and_inverse) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.462s\n\nOK\n",
+      "stdout": ""
+    }
+  ],
+  "local_tests": [
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_aliases_share_gates_but_distinct_actual_occurrences_do_not (__main__.IdentificationTests.test_aliases_share_gates_but_distinct_actual_occurrences_do_not) ... ok\ntest_all_1024_five_type_models_reconstruct (__main__.IdentificationTests.test_all_1024_five_type_models_reconstruct) ... ok\ntest_current_reactive_contexts_embed_without_new_gate_claim (__main__.IdentificationTests.test_current_reactive_contexts_embed_without_new_gate_claim) ... ok\ntest_distinct_stochastic_extensions_commute_with_unattenuated_slice (__main__.IdentificationTests.test_distinct_stochastic_extensions_commute_with_unattenuated_slice) ... ok\ntest_each_nonempty_issued_profile_is_required (__main__.IdentificationTests.test_each_nonempty_issued_profile_is_required) ... ok\ntest_endpoint_law_does_not_identify_physical_gate_architecture (__main__.IdentificationTests.test_endpoint_law_does_not_identify_physical_gate_architecture) ... ok\ntest_every_absence_coordinate_has_a_separating_omission_witness (__main__.IdentificationTests.test_every_absence_coordinate_has_a_separating_omission_witness) ... ok\ntest_exact_finite_sample_distance_respects_saturation_bound (__main__.IdentificationTests.test_exact_finite_sample_distance_respects_saturation_bound) ... ok\ntest_factor_product_matches_independent_gate_enumeration (__main__.IdentificationTests.test_factor_product_matches_independent_gate_enumeration) ... ok\ntest_finite_full_support_samples_cannot_certify_zero_error (__main__.IdentificationTests.test_finite_full_support_samples_cannot_certify_zero_error) ... ok\ntest_fixed_rate_sampling_separation_and_bounded_grid (__main__.IdentificationTests.test_fixed_rate_sampling_separation_and_bounded_grid) ... ok\ntest_general_multi_effect_reconstruction (__main__.IdentificationTests.test_general_multi_effect_reconstruction) ... ok\ntest_guarded_fixtures_match_actual_preserved_rules (__main__.IdentificationTests.test_guarded_fixtures_match_actual_preserved_rules) ... ok\ntest_invalid_exact_panels_rejected (__main__.IdentificationTests.test_invalid_exact_panels_rejected) ... ok\ntest_joint_effect_absence_recovers_bundling_lost_in_marginals (__main__.IdentificationTests.test_joint_effect_absence_recovers_bundling_lost_in_marginals) ... ok\ntest_shared_frozen_gates_hide_duplicates_and_absorbed_routes (__main__.IdentificationTests.test_shared_frozen_gates_hide_duplicates_and_absorbed_routes) ... ok\ntest_shared_gates_with_and_without_guard_reevaluation_are_distinct (__main__.IdentificationTests.test_shared_gates_with_and_without_guard_reevaluation_are_distinct) ... ok\ntest_uncalibrated_rates_can_mask_different_actual_multiplicities (__main__.IdentificationTests.test_uncalibrated_rates_can_mask_different_actual_multiplicities) ... ok\ntest_uniform_route_count_fibre_formula_is_complete (__main__.IdentificationTests.test_uniform_route_count_fibre_formula_is_complete) ... ok\ntest_uniform_route_thinning_does_not_identify_root_support (__main__.IdentificationTests.test_uniform_route_thinning_does_not_identify_root_support) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.251s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_all_profile_guarded_histograms_reconstruct_after_rank_repair (__main__.DesignRankTests.test_all_profile_guarded_histograms_reconstruct_after_rank_repair) ... ok\ntest_exact_rank_defect_and_hidden_ground_collision (__main__.DesignRankTests.test_exact_rank_defect_and_hidden_ground_collision) ... ok\ntest_integer_kernel_gives_equal_probability_nonnegative_pairs (__main__.DesignRankTests.test_integer_kernel_gives_equal_probability_nonnegative_pairs) ... ok\ntest_kernel_lift_preserves_every_proper_issued_profile (__main__.DesignRankTests.test_kernel_lift_preserves_every_proper_issued_profile) ... ok\ntest_second_probe_repairs_bad_design (__main__.DesignRankTests.test_second_probe_repairs_bad_design) ... ok\ntest_single_good_design_recovers_all_128_binary_support_models (__main__.DesignRankTests.test_single_good_design_recovers_all_128_binary_support_models) ... ok\ntest_small_bounded_class_can_be_injective_despite_rank_defect (__main__.DesignRankTests.test_small_bounded_class_can_be_injective_despite_rank_defect) ... ok\ntest_subset_probes_give_constructive_full_rank_and_inverse (__main__.DesignRankTests.test_subset_probes_give_constructive_full_rank_and_inverse) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.515s\n\nOK\n",
+      "stdout": ""
+    }
+  ],
+  "results_byte_equal": true,
+  "scope": "Evidence replay only; no additional research credit or kernel certification.",
+  "test_counts": [
+    20,
+    8
+  ],
+  "timestamp_utc": "2026-10-08T07:26:55.682951+00:00"
+}

@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "semantics": "Exact rational controls, not empirical certification or closure.",
+  "high_command": {
+    "target_n": 1,
+    "alternative_m": 2,
+    "command": "3/4",
+    "calibrated_threshold": "1/2",
+    "C1": "1/2",
+    "C2": "1/8",
+    "Q": "7/16",
+    "J": "1/16",
+    "each_face_no_hit": "1/4",
+    "full_held_transcript_XYZ": {
+      "000": "1/16",
+      "010": "3/16",
+      "100": "3/16",
+      "111": "9/16"
+    }
+  },
+  "finite_grid_perturbation": {
+    "grid": [
+      "0",
+      "3/4",
+      "1"
+    ],
+    "epsilon": "1/128",
+    "f": "x(1-x)(x-3/4)",
+    "certified_density_lower_bound": "1207/2048",
+    "cell_probabilities": [
+      {
+        "a": [
+          "0",
+          "3/4"
+        ],
+        "b": [
+          "0",
+          "3/4"
+        ],
+        "probability": "9/16"
+      },
+      {
+        "a": [
+          "0",
+          "3/4"
+        ],
+        "b": [
+          "3/4",
+          "1"
+        ],
+        "probability": "3/16"
+      },
+      {
+        "a": [
+          "3/4",
+          "1"
+        ],
+        "b": [
+          "0",
+          "3/4"
+        ],
+        "probability": "3/16"
+      },
+      {
+        "a": [
+          "3/4",
+          "1"
+        ],
+        "b": [
+          "3/4",
+          "1"
+        ],
+        "probability": "1/16"
+      }
+    ],
+    "off_grid_point": [
+      "1/2",
+      "1/2"
+    ],
+    "off_grid_copula": "8193/32768",
+    "off_grid_difference_from_product": "1/32768"
+  },
+  "asymptotic_coefficient_checks": {
+    "m_range": "1..11",
+    "n_range": "1..11",
+    "cases": 121,
+    "purpose": "Arithmetic control only; the symbolic proof applies to every finite m and n."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "checkpoint": 19,
+  "relationship": "Predecessor unchanged; checkpoint20 is an additive, noncumulative continuation",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint19_20261009.zip",
+      "bytes": 252139,
+      "sha256": "d02ca0ce8fc0412385a3cfee7b922d29625218edf9d59f7b29ee51ff6f2daa82"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint19_20261009.READ_FIRST.md",
+      "bytes": 7404,
+      "sha256": "5b745fc795bf1bc6640e6d6de698b76117f175783ead7218f312a482e635fcb0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint19_20261009.MANIFEST.json",
+      "bytes": 20736,
+      "sha256": "74c92b2626e837d54872b2e930b6edcc4eb9c94d9f65dec3d411085c13de8270"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint19_20261009.VALIDATION_RECEIPT.json",
+      "bytes": 11504,
+      "sha256": "11cbdac3d4e6c396e9a62fcb6ced1cb152cdffb6c6c2a8f371c8790f50342066"
+    }
+  ],
+  "frozen_root_review": {
+    "path": "root-resumed-research-20261009/REVIEW_CHECKPOINT.json",
+    "bytes": 4872,
+    "sha256": "8fb305de81a7c7f583f72f6db62f2593bd5b469eddd5f2897a61b3191ce5a4c5"
+  },
+  "new_delivery": "No claim made; any checkpoint20 delivery receipt belongs outside the ZIP"
+}

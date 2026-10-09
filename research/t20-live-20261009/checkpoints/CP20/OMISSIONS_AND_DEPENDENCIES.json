@@ -1,0 +1,132 @@
+{
+  "raw_witnesses_under_selected_lanes": [
+    {
+      "path": "compound-ground-necessity-20261009/research-intermediates/primary-table-p271.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/research-intermediates/primary-table.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/research-intermediates/standefer-epistemic.pdf",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/research-intermediates/standefer-epistemic.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/research-intermediates/standefer2020.pdf",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/research-intermediates/standefer2020.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/read-selections/dar016-L0106-L0159.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/read-selections/shifa-e140-e144.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/read-selections/shifa-e173-e178.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/read-selections/shifa-e206-e216.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/research-intermediates/agent-causal-power.pdf",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/research-intermediates/agent-causal-power.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/research-intermediates/page-25.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/research-intermediates/page-26.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/research-intermediates/page197.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/research-intermediates/page201.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/research-intermediates/page208.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/research-intermediates/reasons-causes.pdf",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/research-intermediates/reasons-causes.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/research-intermediates/simplicity-creation.pdf",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/research-intermediates/simplicity-creation.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/scope-contingency/research-intermediates/p140.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/scope-contingency/research-intermediates/p143.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/scope-contingency/research-intermediates/p144.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/scope-contingency/research-intermediates/p146.png",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/scope-contingency/research-intermediates/scope-contingency.pdf",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/scope-contingency/research-intermediates/scope-contingency.txt",
+      "reason": "Raw source body or visual research witness; deliberately not distributed"
+    }
+  ],
+  "additional_omissions": [
+    {
+      "scope": "Ameri raw book, extraction, HTML and images in /tmp; Arabic and modern full source bodies elsewhere",
+      "reason": "Source-body redistribution excluded; identities and reading records retained"
+    },
+    {
+      "scope": "complete-explanation-source-20261009",
+      "reason": "Explicitly excluded successor research regardless of completion after scope decision"
+    },
+    {
+      "scope": "root-resumed-research-20261009/REVIEW_CHECKPOINT.json",
+      "reason": "Frozen checkpoint19 record; not edited or substituted"
+    },
+    {
+      "scope": "Other inherited reports, original Lean code, toolchains, caches, earlier archive bodies",
+      "reason": "Already historical or external interpretive context; not needed for bounded Python replay"
+    }
+  ],
+  "interpretive_limit": "The bundle is not a hermetic reproduction of primary-source scholarship; citations and exact witness hashes permit later authorized lookup.",
+  "produced_verification_coverage": "All produced selected analyst files are retained. Agent-Causal Power and Scope of Contingency had report plus reading record, with checks recorded there; no separate verification JSON was present."
+}

@@ -1,0 +1,907 @@
+{
+  "intentional_source_body_omissions": [
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.txt",
+      "bytes": 77908,
+      "sha256": "b80a3093de735c2166e6b274e1cccbcee252f4e96339ea58e9e6d4b7334b93a6",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.pdf",
+      "bytes": 371184,
+      "sha256": "b93d334542778d39a9843f222c64098a1d62860a4d70d114078ceb55702bb45b",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/bh-page-09.png",
+      "bytes": 449814,
+      "sha256": "00dc2ec16f82fb9f49dd1eddb2c1b01b3fa8f12f40738ce782cecadf0cd20d54",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/bh-page-08.png",
+      "bytes": 442035,
+      "sha256": "7c7a0bd16e72bc29bbc2fba4f84250837298760fa39ddb79307aa0efa6d1419b",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/bh-page-10.png",
+      "bytes": 374216,
+      "sha256": "15b747a6361beafa73f1d81d9f2de75d7522e2902971897b0cc8715ee94b7cf6",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.txt",
+      "bytes": 47512,
+      "sha256": "95c81afecf2ff69007f571bfda439601c6c1113f757380ec88ecf5b3f931ff61",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.pdf",
+      "bytes": 114041,
+      "sha256": "92a6b382c650a148a7a53bf1eeb9b69f4a3b9f5c090e5c1ce8d3ff64ef129768",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.txt",
+      "bytes": 31358,
+      "sha256": "8ab02b88645329d29a2f64a6e485b9710c17e33092f40b7e9a5bd842f3195577",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.pdf",
+      "bytes": 121020,
+      "sha256": "e292e970e5d59ae65da0278112bb87ed4c38e24efe863625ba92c061328a41cc",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/visual-38.png",
+      "bytes": 402615,
+      "sha256": "aa281f52e31c9ce57922cd1270b562e1addc5ac24a9ba8854d3c1526bb9a0e44",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_layout.txt",
+      "bytes": 104994,
+      "sha256": "3279d299696883c70a6aef423b2fd6c5aa5087976058a96afa08e83fc6163e1f",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/visual-30.png",
+      "bytes": 388473,
+      "sha256": "3901cc25ef4a7890d8b565f9adeca9e3a67c04ea9ff26f0241b725932186fb8c",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/visual-37.png",
+      "bytes": 422149,
+      "sha256": "4de1d616ab25fbdc87730b73ba9a951909810b689def77a3c198d36855b5263f",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_printed17-40.txt",
+      "bytes": 55136,
+      "sha256": "6b8f5927766a2fa79ed8c7f5c03f387dd77c2d793c2ada795bb8217aa55b62a6",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_page_labelled.txt",
+      "bytes": 106097,
+      "sha256": "0f43db63d567466d6e90332385d55b3067462fbeaf5c177d982f17643cb94dce",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_exact_supplied.pdf",
+      "bytes": 783093,
+      "sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/visual-31.png",
+      "bytes": 226787,
+      "sha256": "32197b4aa971ae4578d1e48ab0398c4527e7437718d743aa02c4c9f6bcd2b265",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/sources/page16.png",
+      "bytes": 199466,
+      "sha256": "8692975bc173e35156a0964baf3a525dde7f59e4b58cdfa677487f3d1a38137b",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/sources/page03.png",
+      "bytes": 209871,
+      "sha256": "7e8797f96a1b6bc949a79a9be586af82b5001658146fe06032bbd77b77329ae3",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/sources/marmodoro-2013-accepted.pdf",
+      "bytes": 616462,
+      "sha256": "1f377b6c671d35839278f8b08722b7b550998489c9bda2a5fc83020a936a0d36",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/sources/marmodoro-2013-accepted.txt",
+      "bytes": 67259,
+      "sha256": "3e95ca109f83e7305a1ed5121edf079553760883cafa16bd1405b4ef5dea1547",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt",
+      "bytes": 279352,
+      "sha256": "921665c78f77f579221962de74209af8d8873f1c480e16fdb0d75f64823e637b",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-author-home-http.html",
+      "bytes": 14180,
+      "sha256": "453761d5f3c42facee28255c0841602be1020a236e674f1b32f2cef3928b59e4",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-author-papers-index-http.html",
+      "bytes": 59353,
+      "sha256": "6fe8945d5a32b72e24bbefa379c312f467b63388f479fe3b6a7aff90715b4c0b",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.html",
+      "bytes": 486450,
+      "sha256": "39b925091ada11257ced21a7feee22d831a068e736a48ff8376e09949c033e91",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-researchgate-web-tail.txt",
+      "bytes": 32057,
+      "sha256": "d48be1699ebaba50d6aeb6dc42fd4b39d1108615777cd9d7e5701660bb6d933e",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-contrastive-continuous.txt",
+      "bytes": 7317,
+      "sha256": "ba2330bff89b5604b42d31151171a430257d893297e2168d68de70b83175d1d4",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-researchgate-web-extraction.txt",
+      "bytes": 28936,
+      "sha256": "533a39fc5fb31173effc971c80cfb974814a48983dbd9983ba2b90c6a26ba1c9",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-section-indexed.txt",
+      "bytes": 3709,
+      "sha256": "cc99537c7fad95c0fc07e2a43a62452e236c025427e3de77b50144c6dfe386d2",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss2002-cambridge-abstract.html",
+      "bytes": 732287,
+      "sha256": "3764516f50c0ee480460f6c1a545b83c43a68496ba8bbd2686858053529e74d2",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss1999.txt",
+      "bytes": 69371,
+      "sha256": "502ade5170fa33a07b8c7044b38ed1b7d9f41c6cab6ece0ab58a2e5f81ba46c2",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-continuous.txt",
+      "bytes": 2912,
+      "sha256": "28fbb71d0c2d8b4f32d16fe6d55b585610f174f8ea308f9d88a2f2f4602b38ba",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss1999.pdf",
+      "bytes": 798693,
+      "sha256": "2165f1e87b02598274ccd49848a6657e2735257e8d87de551b2bf635b50e398c",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-libertarian-continuous.txt",
+      "bytes": 9694,
+      "sha256": "2180c8f53ed4f25fbf3ba1350b53be1215a2503e70fc6f8cc45068fdd2fb5cae",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-indexed-bounded-passages.txt",
+      "bytes": 36557,
+      "sha256": "9ce399f086cd48a538f8b68c0e774ab6b83b4c6ab5f827ad42361a98c77ed1be",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-author-manuscript.txt",
+      "bytes": 26280,
+      "sha256": "1d6583eb418c75c86cb5dcd3f361ced372cc5174f17fb106c146dafeef2f8eb1",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/visual/gp1999-p466.png",
+      "bytes": 356034,
+      "sha256": "6da1682a0c803da5d8db5d2ceaf9e0d9ae3dcd75a7c151648a0d89a3b8ed603c",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/hall-two-concepts-published.pdf",
+      "bytes": 386663,
+      "sha256": "32c1c6e2f4617577614aad6c066fb798a7ee60db482ffeb2a5ef21d8dbdc2f1e",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/hall-p273.png",
+      "bytes": 178325,
+      "sha256": "10be879dba268341dcb4a8ea83ea88fe97086136159e030b0e1ea19eef8a0a30",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/hall-two-concepts.pdf",
+      "bytes": 192165,
+      "sha256": "cf4a407b2586e314f4e4c0e42111858a1e9a2825dcf1d267104cc480aa6eda6e",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/schaffer-p38.png",
+      "bytes": 276618,
+      "sha256": "a42e8f19b8760aad0230625f80a706baee0ce5ffdd9afbb683bf641cfdd65c6d",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/schaffer-overdetermination-2003.pdf",
+      "bytes": 128690,
+      "sha256": "adeb063caae429849076f33cc2e35961f7134db3e39e180cec985a15a5651b0b",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/schaffer-overdetermination-2003.txt",
+      "bytes": 58388,
+      "sha256": "f00745aa15b7909764279a837b21128519400f6944aecf0480e0c103d9bf0e03",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/hall-two-concepts-published.txt",
+      "bytes": 148044,
+      "sha256": "b3bb00a2dad35ea15d254071feb020e1acc195c6f6ddf50aab67f04e756d569f",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/hall-two-concepts.txt",
+      "bytes": 168521,
+      "sha256": "2f123626d90e97a4ab757667d572ef68e8c7267fd2c4791195ac920a342e28bd",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/hall-p265.png",
+      "bytes": 287983,
+      "sha256": "66ff3806f1567fbd16861c4a7905f1e12228322a33380d10a2df927bb9b4d82f",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/Oneness-return-printed23-25.txt",
+      "bytes": 5433,
+      "sha256": "19285623d63091bec12a28ed71113593f4f331ecdd0a3e625556f7db18971672",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    },
+    {
+      "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/sources/gellman2000-web-extraction.txt",
+      "bytes": 20757,
+      "sha256": "f73c3f1ee2294c778d42ae80999342b06702c11c65689cc3c0656c77e30e572b",
+      "classification": "INTENTIONAL_PROVENANCE_ONLY_SOURCE_BODY",
+      "included": false,
+      "verification_failure": false,
+      "reason": "No redistribution of modern PDFs, HTML, extracted full/bounded texts or rendered pages; original identity and reading scope retained."
+    }
+  ],
+  "source_urls_as_recorded": [
+    {
+      "url_as_recorded": "https://submissiontogod.wordpress.com/wp-content/uploads/2025/02/there-cannot-be-two-omnipotent-beings-james-baillie-and-jason-hagen-1.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/docannexe/file/5801/fp_autumn_2009_v_14_issue_2.amini_majid.4.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9AD4212CD64B76BDDCCCB5BE9C866D73/S003441252300063Xa.pdf/god_ubergod_and_untergod.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11153-007-9152-7",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md"
+    },
+    {
+      "url_as_recorded": "https://submissiontogod.wordpress.com/wp-content/uploads/2025/02/there-cannot-be-two-omnipotent-beings-james-baillie-and-jason-hagen-1.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/1246-omnipotence-and-the-vicious-circle-principle.html",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/docannexe/file/5801/fp_autumn_2009_v_14_issue_2.amini_majid.4.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/god-ubergod-and-untergod/9AD4212CD64B76BDDCCCB5BE9C866D73",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/9AD4212CD64B76BDDCCCB5BE9C866D73/S003441252300063Xa.pdf/god_ubergod_and_untergod.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11153-007-9152-7",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://submissiontogod.wordpress.com/wp-content/uploads/2025/02/there-cannot-be-two-omnipotent-beings-james-baillie-and-jason-hagen-1.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/god-ubergod-and-untergod/9AD4212CD64B76BDDCCCB5BE9C866D73",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/1246-omnipotence-and-the-vicious-circle-principle.html",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/docannexe/file/5801/fp_autumn_2009_v_14_issue_2.amini_majid.4.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11153-007-9152-7",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/reviewed_RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://submissiontogod.wordpress.com/wp-content/uploads/2025/02/there-cannot-be-two-omnipotent-beings-james-baillie-and-jason-hagen-1.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/reviewed_RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/god-ubergod-and-untergod/9AD4212CD64B76BDDCCCB5BE9C866D73",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/reviewed_RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/1246-omnipotence-and-the-vicious-circle-principle.html",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/reviewed_RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/docannexe/file/5801/fp_autumn_2009_v_14_issue_2.amini_majid.4.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/reviewed_RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11153-007-9152-7",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://submissiontogod.wordpress.com/wp-content/uploads/2025/02/there-cannot-be-two-omnipotent-beings-james-baillie-and-jason-hagen-1.pdf",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/1246-omnipotence-and-the-vicious-circle-principle.html",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/god-ubergod-and-untergod/9AD4212CD64B76BDDCCCB5BE9C866D73",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11153-007-9152-7",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/READING_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://forumphilosophicum.ignatianum.edu.pl/1246-omnipotence-and-the-vicious-circle-principle.html",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/READING_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/god-ubergod-and-untergod/9AD4212CD64B76BDDCCCB5BE9C866D73",
+      "record": "t20-next-frontier-20261008/necessary-concordance-power-review/READING_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+      "record": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+      "record": "t20-next-frontier-20261008/oneness-return-20261009/SOURCE_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/oneness-return-20261009/SOURCE_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/133/",
+      "record": "t20-next-frontier-20261008/oneness-return-20261009/SOURCE_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+      "record": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/108/156/",
+      "record": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/2032/",
+      "record": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/22/805/",
+      "record": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/962/",
+      "record": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md"
+    },
+    {
+      "url_as_recorded": "https://media.philosophy.ox.ac.uk/assets/pdf_file/0003/40188/Powers_at_work_18_09_13.pdf",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology/PROVENANCE.json"
+    },
+    {
+      "url_as_recorded": "https://ora.ox.ac.uk/objects/uuid%3A6b943a51-e410-4ed6-920d-713dd8b485f6",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology/PROVENANCE.json"
+    },
+    {
+      "url_as_recorded": "https://media.philosophy.ox.ac.uk/assets/pdf_file/0003/40188/Powers_at_work_18_09_13.pdf",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://ora.ox.ac.uk/objects/uuid%3A6b943a51-e410-4ed6-920d-713dd8b485f6",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://media.philosophy.ox.ac.uk/assets/pdf_file/0003/40188/Powers_at_work_18_09_13.pdf",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology/history/RESULT.before-review-corrections.md"
+    },
+    {
+      "url_as_recorded": "https://ora.ox.ac.uk/objects/uuid%3A6b943a51-e410-4ed6-920d-713dd8b485f6",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology/history/RESULT.before-review-corrections.md"
+    },
+    {
+      "url_as_recorded": "https://ora.ox.ac.uk/objects/uuid%3A6b943a51-e410-4ed6-920d-713dd8b485f6",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://media.philosophy.ox.ac.uk/assets/pdf_file/0003/40188/Powers_at_work_18_09_13.pdf",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://ora.ox.ac.uk/objects/uuid%3A6b943a51-e410-4ed6-920d-713dd8b485f6",
+      "record": "t20-next-frontier-20261008/joint-manifestation-ontology-review/METADATA_CHECK.json"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/papers/LCA.html",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/LCA_ORIGIN_ACQUISITION.json"
+    },
+    {
+      "url_as_recorded": "https://appearedtoblogly.wordpress.com/wp-content/uploads/2011/05/pruss-alexander-and-gale-richard-22a-new-cosmological-argument22.pdf",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://www.researchgate.net/publication/232025345_On_%27A_new_cosmological_argument%27",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/abs/response-to-oppy-and-to-davey-and-clifton/E338A35E8953099A168441781ACAA62A",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/abs/new-cosmological-argument/FC234A68C63ECB3D7CB78F88F9C4C572",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.researchgate.net/publication/232025345_On_%27A_new_cosmological_argument%27",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/abs/response-to-oppy-and-to-davey-and-clifton/E338A35E8953099A168441781ACAA62A",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/papers/LCA.html",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/abs/response-to-oppy-and-to-davey-and-clifton/E338A35E8953099A168441781ACAA62A",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/sources/retrieval-status-gale-pruss-reply-oppy-lca.txt"
+    },
+    {
+      "url_as_recorded": "https://www.researchgate.net/publication/232025345_On_%27A_new_cosmological_argument%27",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/sources/retrieval-status-gale-pruss-reply-oppy-lca.txt"
+    },
+    {
+      "url_as_recorded": "https://alexanderpruss.com/papers/LCA.html",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/sources/retrieval-status-gale-pruss-reply-oppy-lca.txt"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/sources/retrieval-status-gale-pruss-reply-oppy-lca.txt"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/papers/index.html",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/sources/retrieval-status-gale-pruss-reply-oppy-lca.txt"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/abs/new-cosmological-argument/FC234A68C63ECB3D7CB78F88F9C4C572",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/history/RESULT_before_note11_refinement.md"
+    },
+    {
+      "url_as_recorded": "https://www.researchgate.net/publication/232025345_On_%27A_new_cosmological_argument%27",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/history/RESULT_before_note11_refinement.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/abs/response-to-oppy-and-to-davey-and-clifton/E338A35E8953099A168441781ACAA62A",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/history/RESULT_before_note11_refinement.md"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/papers/LCA.html",
+      "record": "t20-next-frontier-20261008/modal-psr-bridge/history/RESULT_before_note11_refinement.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/22/805/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/960/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/961/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/962/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/963/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/papers/LCA.html",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/22/805/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/960/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/961/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/962/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/415/963/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/papers/LCA.html",
+      "record": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.jonathanschaffer.org/overdetermination.pdf",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://maxkasy.github.io/home/files/other/ML_Econ_Oxford/Ned_Hall_2_concepts_of_causation.pdf",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://fitelson.org/269/Hall_TCOC.pdf",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://www.jonathanschaffer.org/overdetermination.pdf",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://www.researchwithrutgers.org/en/publications/overdetermining-causes/",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://maxkasy.github.io/home/files/other/ML_Econ_Oxford/Ned_Hall_2_concepts_of_causation.pdf",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://www.jonathanschaffer.org/overdetermination.pdf",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/history/REPORT.before-explicit-effect-relative-precision.md"
+    },
+    {
+      "url_as_recorded": "https://www.researchwithrutgers.org/en/publications/overdetermining-causes/",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/history/REPORT.before-explicit-effect-relative-precision.md"
+    },
+    {
+      "url_as_recorded": "https://maxkasy.github.io/home/files/other/ML_Econ_Oxford/Ned_Hall_2_concepts_of_causation.pdf",
+      "record": "t20-next-frontier-20261008/complete-overdetermination-audit/history/REPORT.before-explicit-effect-relative-precision.md"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/papers/LCA.html",
+      "record": "t20-next-frontier-20261008/creator-uniqueness-bridge/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "https://www.cambridge.org/core/journals/religious-studies/article/abs/prospects-for-a-sound-stage-3-of-cosmological-arguments/3AF8EA18E2801880599C3FF5EDF826E3",
+      "record": "t20-next-frontier-20261008/creator-uniqueness-bridge/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "https://realseekerministries.wordpress.com/wp-content/uploads/2021/08/jerome2.pdf",
+      "record": "t20-next-frontier-20261008/creator-uniqueness-bridge/SOURCE_BINDINGS.md"
+    },
+    {
+      "url_as_recorded": "http://alexanderpruss.com/papers/LCA.html",
+      "record": "t20-next-frontier-20261008/creator-uniqueness-bridge/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://doi.org/10.1017/S0034412500005187",
+      "record": "t20-next-frontier-20261008/creator-uniqueness-bridge/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://realseekerministries.wordpress.com/wp-content/uploads/2021/08/jerome2.pdf",
+      "record": "t20-next-frontier-20261008/creator-uniqueness-bridge/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.jonathanschaffer.org/overdetermination.pdf",
+      "record": "entire-production-rival-review/REVIEW.md"
+    }
+  ],
+  "source_scope_records": [
+    {
+      "id": "power-papers",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json",
+        "bytes": 3404,
+        "sha256": "d2db5bce9158422dd8e59ff407a1869597cdca52a793765705c75d9c0f33897a"
+      },
+      "reading_classification": "Fresh selected Baillie–Hagen/Amini and bounded Gordon investigation in this increment; author and separate internal reviewer scopes remain distinct.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "supplied-oneness",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/oneness-return-20261009/SOURCE_RECEIPT.json",
+        "bytes": 4393,
+        "sha256": "1eceeb045675e4968919e2e22e45e7999e12feee2741ac66aa4f92100062c763"
+      },
+      "reading_classification": "Targeted rereading of exact supplied modern translation, not a new witness. PDF SHA 7e77171c…37aaf; printed17–40/PDF24–47 plus recorded visual pages.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "joint-powers",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/joint-manifestation-ontology/PROVENANCE.json",
+        "bytes": 2723,
+        "sha256": "74e234accafe8768a9a0ae2132ac7505d1593446284946841792f4daf5a480b3"
+      },
+      "reading_classification": "Fresh bounded Marmodoro accepted-manuscript reading; manuscript and final publication are not byte-authenticated as identical.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "psr-discussion",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+        "bytes": 4823,
+        "sha256": "94887ef5d27b5ca50115ccc9841e5f0f16833f0b80781b63ce553d3e75802f26"
+      },
+      "reading_classification": "Gale–Pruss1999 whole reported reading, Oppy2000 recovered manuscript, later Pruss selected sections. Not full LCA chapter. 2002 reply abstract/metadata ONLY.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "pruss-origin",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/modal-psr-bridge/LCA_ORIGIN_ACQUISITION.json",
+        "bytes": 1379,
+        "sha256": "87a4384d2638a57113cbc8627e3f756e9df1ecfd0c5f1f3c1d73727c9c503a76"
+      },
+      "reading_classification": "Successful HTTP origin acquisition supersedes earlier origin-access limitation, not 2002 reply limitation.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "particular-reasons",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md",
+        "bytes": 8553,
+        "sha256": "10f49803cd5cc3f5a9cbce542e75f2603cae9053d73a229438c8669be9b61c8e"
+      },
+      "reading_classification": "Further bounded Pruss and inherited classical Arabic contextual returns; suspect electronic text not used as premise.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "causal-overdetermination",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/complete-overdetermination-audit/SOURCE_READS.json",
+        "bytes": 3374,
+        "sha256": "902d2d86f16d5cf9a3e9a56e07d0a0011f50910474e1ea32fd5c43d0b8436ded"
+      },
+      "reading_classification": "Fresh Schaffer full text and Hall targeted published chapter; earlier Hall draft only screened.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "creator-uniqueness",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/SOURCE_BINDINGS.md",
+        "bytes": 4008,
+        "sha256": "d8344b771acb80d48a9a3689335e52e458049423ae4cb4bbcd4ce4d426574472"
+      },
+      "reading_classification": "Pruss §5.5 targeted return and Gellman2000 complete seven-page web extraction; no publisher PDF-byte identity or verified visual formula reading.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    }
+  ],
+  "omission_is_verification_failure": false,
+  "policy": "Contemporary source PDFs, HTML, extractions (including bounded modern excerpts) and page images omitted. Classical Arabic quotations within authored reports remain; no whole source campaign rebundled. No URLs fetched during preservation.",
+  "historical_revision_limits": "See historical_declarations_without_bytes in PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json. These two unavailable prior versions are distinct from intentional omissions."
+}

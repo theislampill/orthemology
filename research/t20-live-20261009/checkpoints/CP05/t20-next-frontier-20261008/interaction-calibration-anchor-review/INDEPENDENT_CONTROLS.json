@@ -1,0 +1,39 @@
+{
+  "arithmetic": "exact integer/Fraction only",
+  "checks": {
+    "anchored_unary_count_change_detected": {
+      "new": "3/16",
+      "old": "5/24"
+    },
+    "binary_nondecreasing_map_failure": 25,
+    "boundary_matched_interaction_rejections": 30,
+    "coordinate_crosstalk_count_failure": 81,
+    "exact_mask_isolation": {
+      "support_checks": 16865,
+      "worlds": 2281
+    },
+    "fresh_inventory_mixture_fake_interaction": "8/9",
+    "nondifferentiable_at_zero_limit_envelope": {
+      "last": {
+        "hi": "3/7",
+        "k": 20,
+        "lo": "3145725/7340032",
+        "p": "1/1048576",
+        "u": "1/1099511627776"
+      },
+      "steps": 20
+    },
+    "raw_zero_is_not_a_log_mask_input": {
+      "isolated_boundary": "9/25"
+    },
+    "shared_root_gate_failure": {
+      "independent": "261/875",
+      "shared": "3/5"
+    },
+    "support_specific_calibration_failure": 25,
+    "unary_equivalence": 180,
+    "unused_and_empty_inventory": true
+  },
+  "independent_of_author_code": true,
+  "status": "PASS"
+}

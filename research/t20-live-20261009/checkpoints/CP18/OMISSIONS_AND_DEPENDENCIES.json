@@ -1,0 +1,582 @@
+{
+  "omissions": [
+    {
+      "path": "brute-contingent-source-return/sources/archive-metadata.json",
+      "bytes": 45140,
+      "recorded_sha256": "50889c4deff0a8672646fdf07066b0510e08dc0f9929e0c23ccc513a37fcef3f",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-147-421-web-return.json",
+      "bytes": 26111,
+      "recorded_sha256": "092c15d59918e2426ebf8910d26850e21310ea7f939c3a4f77e5e01c9f2ae251",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-166-context-web-return.json",
+      "bytes": 25892,
+      "recorded_sha256": "ae436f394f4a7eb763fd270768bf6dc33c9807d618c9bd8a617910e8022d679a",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-amidi-body-web-return.json",
+      "bytes": 27707,
+      "recorded_sha256": "d26b03212b40961aabc393295e9c92ed4f582a8d01eb7b17063bb8c6e934ad3e",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-amidi-context-web-return.json",
+      "bytes": 32378,
+      "recorded_sha256": "9e8acf8e9984132b4cb0b61f6090942631d9c2cd6c88c8acda244119f044dd56",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-context-1-web-return.json",
+      "bytes": 28199,
+      "recorded_sha256": "4599260de9003a87fefeba5cf1b0e7f7daf4e2101bca9c7604f78ffcb0e72b9c",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item487.html",
+      "bytes": 591432,
+      "recorded_sha256": "6f3765a98f19e7da9fc9ff9a4f6fb11c0bc86dd279d3a41fdaa35c0bccb6a213",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item488.html",
+      "bytes": 586028,
+      "recorded_sha256": "f13d199a438520d2228c9257652769211fdc26f9a3f50027ec828a18077eb011",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item489.html",
+      "bytes": 587505,
+      "recorded_sha256": "d8e727c98468f6c961b7535fd5e5b495c033ee3f6322169c8591aaa56adb169d",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item510.html",
+      "bytes": 591199,
+      "recorded_sha256": "1071ebb44c6b9b497f478ba6580ee74e8711dad40e5b8c28112d2fb5f0f9c6a8",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item517.html",
+      "bytes": 603348,
+      "recorded_sha256": "2428439761218e2da36801c419f4bbda4b36d416c92cca22d3de04c09d9e49b9",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item519.html",
+      "bytes": 594603,
+      "recorded_sha256": "1043f04f31b333235eba88a2235aa4844549eae73a6d21263603c9dd61b383f6",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item520.html",
+      "bytes": 598070,
+      "recorded_sha256": "dacbb9151b6d8d838dd5d2e889c65ccac59486a3501c32ef0d1ddc61606f9d7b",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item679.html",
+      "bytes": 592147,
+      "recorded_sha256": "753170a3aa82b8580a3b18f38176dcc73137e05ab820fe895a14f308300aac37",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-item681.html",
+      "bytes": 596477,
+      "recorded_sha256": "496486a70140763666889ddb4d8f82fd4a428993d89a524a57208e6205e61e0c",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-p147.html",
+      "bytes": 596692,
+      "recorded_sha256": "b0ca79d0249b0556f31b22cc4cc1d75dd03c823c4e4ace180e0fca204f7e217d",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-p166.html",
+      "bytes": 603066,
+      "recorded_sha256": "df0d4f5bee2cc9a7488c08b2984197dde5fb5a7c1e88aacf31451fe694edf310",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-p421.html",
+      "bytes": 595223,
+      "recorded_sha256": "ae7e697d6a197689452315a0cfad6f1c646e4424a3b25e6b4539360bc20d7051",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-100.png",
+      "bytes": 70013,
+      "recorded_sha256": "d46214078972b91346dba28421ed446f9c0e63b2014a14a095cb75609b2cbb63",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-101.png",
+      "bytes": 66455,
+      "recorded_sha256": "0721bc19f5532be54342aa3abab359754abb03f313db7516b8e3168553037765",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-102.png",
+      "bytes": 67527,
+      "recorded_sha256": "d4e8383628538cd1f9e95de3a7900b32f60dd4627439e3b8ed39a1ffcb4c8832",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-145.png",
+      "bytes": 68263,
+      "recorded_sha256": "a834f1d2aa2dd28909076e2add3cd1b3437ee923e8885a6da5034ecba015aef5",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-146.png",
+      "bytes": 70450,
+      "recorded_sha256": "6318960b2328239b4c0d1290c84f00473bbb99f9479af9c78102e706bb00430e",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-147.png",
+      "bytes": 79655,
+      "recorded_sha256": "d44c2be1c940df7458cb5a8aa371d3c290426961ddd95c43926b7cb6f076af89",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-148.png",
+      "bytes": 68376,
+      "recorded_sha256": "7da98ef06a5f16d65ed94a11b179c073fd5361afcf06c1ff2179311ea437c62c",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-165.png",
+      "bytes": 67828,
+      "recorded_sha256": "c1a24b1010e0cf9cf69bab540ad62b1148c1f95af9511e158cd8c5705591b654",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-166.png",
+      "bytes": 74471,
+      "recorded_sha256": "e0faae5472a3da3e2fa8693e94f4a1dc6b1a7266f74da8580d990e06ae45b2c8",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-167.png",
+      "bytes": 65117,
+      "recorded_sha256": "6dd1c808cec180e8f8c54dc468e18bf2481a7c3f973179d1eb083e7da6f432d3",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-168.png",
+      "bytes": 72201,
+      "recorded_sha256": "7e20af3371241587b70946b1cb2e1760f48735716c3b32d75b789103ad85314a",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-420.png",
+      "bytes": 80923,
+      "recorded_sha256": "acb6dc1bad65cd2ffd8760cc9146ec1049ff2780be65870caf3c7925c44fca41",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-421.png",
+      "bytes": 71468,
+      "recorded_sha256": "d68812e1a18ccd3d9b5c52a5dfbb2f5b87642c2fd0bee72ce8add4c47010c26e",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-422.png",
+      "bytes": 68721,
+      "recorded_sha256": "0e218bf6e1bcb3d8738c417ca563671589ab2c302b119dd8b3f84071c97c92eb",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-423.png",
+      "bytes": 73695,
+      "recorded_sha256": "195e15cce4c7e87e71c54b3eed31225fb70955a90b2a440ba3a6e7fd28a40b91",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-pdf-99.png",
+      "bytes": 67748,
+      "recorded_sha256": "06594c368dd369b72078104fa4ce66477ef608914b11e93b6748652e55777045",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-preface-1.png",
+      "bytes": 45170,
+      "recorded_sha256": "5f70af6575855b71e54344fe5a18cb34fb691b8b1231eee16cccdfdae7694217",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-preface-2.png",
+      "bytes": 6525,
+      "recorded_sha256": "0771cc13684f5caa7a64be2af49ba02a24aaecded1a983634138301540b37760",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-title-001.png",
+      "bytes": 45217,
+      "recorded_sha256": "4815e495195dbd2963eee54bcd2dab65a8a498a7639c12d59b05ec5275a4c611",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-title-002.png",
+      "bytes": 6572,
+      "recorded_sha256": "8df10771a4b519bc41777a5eeb838cfe6cbaa70fbea2eb1d9010663071d4fe13",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar3-title-003.png",
+      "bytes": 67052,
+      "recorded_sha256": "e8c26b5f5fc0d47acf9b20028eb7f9c13700647f29f2aa189f56b079e820a9ff",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-item1412.html",
+      "bytes": 588798,
+      "recorded_sha256": "2e292bfd117c43d14ebbe27a179f2ebb975abd90f6b8990459dd81af47b67950",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-item1413.html",
+      "bytes": 586302,
+      "recorded_sha256": "ac403346f2bc74d2d8079edb1fadb9759afa3a7bcd82b6e1392cace0e07a74c0",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-item1414.html",
+      "bytes": 590246,
+      "recorded_sha256": "2e9f5a4ab18fab7074fafb8cf2e82df366619efd059c9b8312bbe80b8c97e955",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-item1415.html",
+      "bytes": 592566,
+      "recorded_sha256": "ff2e73d2ca2bad8d0b21685524d7cbcc7fb2f194867491c106d405608095804b",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-item1416.html",
+      "bytes": 612475,
+      "recorded_sha256": "db0053a09f0057d06b61412cdc5a97db75e1effb1ce1c8e134395304d3af908b",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-item1417.html",
+      "bytes": 588910,
+      "recorded_sha256": "41fb0b8282ce3e4e72e1c69afe030e4690aed4d3a628bb249d8a37f40c9c3fd7",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-1.png",
+      "bytes": 56668,
+      "recorded_sha256": "070623a4824b50e78cd7b91ed5ce8edbf88645084817fc1c3ee27c66ea2c3935",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-126.png",
+      "bytes": 82674,
+      "recorded_sha256": "fbb0e04b4a6f49220f2045c67fe3ce74cc4d49c078f14fdaf86365d42b6b4f48",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-127.png",
+      "bytes": 81737,
+      "recorded_sha256": "0b8e5d9c02cb8edb59a884ad96047d1b4aa670e7c842eff1e0caf02b21970067",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-128.png",
+      "bytes": 78329,
+      "recorded_sha256": "7bb086817f4ce741fe306a45f3d2aa85c860405f9d65a65de5968b91263b5d5a",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-129.png",
+      "bytes": 79326,
+      "recorded_sha256": "dba6951c07b26cd5bd12d8bbac8fac156db21cca2dfdd31c691b5d2dc78f491d",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-130.png",
+      "bytes": 70039,
+      "recorded_sha256": "de3e5d2ebf6a5432dcdcf6e426d65e82664d49245773bbb7c7e917f6fb5b69e8",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-131.png",
+      "bytes": 83951,
+      "recorded_sha256": "eb8975dd5b496df46198cacd81bd5abfd1166710a7369399fe70199abf36566f",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-132.png",
+      "bytes": 81146,
+      "recorded_sha256": "e1b0c614800e040ee2434d4a15cadfba2abe1a2c92bd139fffe057c364ad585e",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-133.png",
+      "bytes": 76825,
+      "recorded_sha256": "0c05d105ab2f431f64153770f894cd476da10c1f44d1d21edb66128ebadc7a00",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-134.png",
+      "bytes": 74371,
+      "recorded_sha256": "bda32bd9a417623447de8ad850032b7e696fddc338440630588e90d21d68c738",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-135.png",
+      "bytes": 77181,
+      "recorded_sha256": "819985222dcd1dde11874ed79df94f185aa393c4ce20cd48a7e6dc088aa69516",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dar8-pdf-136.png",
+      "bytes": 75587,
+      "recorded_sha256": "ebf8defccaaf468e3fe65c92ded330d4ed328f31060323f463c682962816569f",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dtan03.pdf",
+      "bytes": 6859029,
+      "recorded_sha256": "0557e7a2c84a3222a4b4664bdf645d126551e859ac7f4fd492ade9bc66d9a41e",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dtan03p.pdf",
+      "bytes": 101223,
+      "recorded_sha256": "63eee8454a97fff74a16faa0d4d91bfd63ab818486809389d9261ebfca8ba509",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dtan08.pdf",
+      "bytes": 8295845,
+      "recorded_sha256": "55c1976038610915e03a55c44962897ac8423536a58344523ea8c0426d0fdae0",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "positive-agency-source-return/images/jami6-197.png",
+      "bytes": 87936,
+      "recorded_sha256": "2da89cc1b9830ce5cb78f1a4b500dabdd0106ceca94a7ef067c9803447129950",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "positive-agency-source-return/images/jami6-198.png",
+      "bytes": 88289,
+      "recorded_sha256": "8d270a8c5e9469935e24e24c246a5ecdfe45f88f6d62158357d72e53cfa1692e",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "positive-agency-source-return/images/jami6-199.png",
+      "bytes": 27911,
+      "recorded_sha256": "2ef1f3457e06ee9faafbd4b1ce3f3754b893362761cded3568a6c2028e2971ae",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "positive-agency-source-return/images/jami6-200.png",
+      "bytes": 7642,
+      "recorded_sha256": "73bf89e676f5608357d0aaa2b4d709a2ae9538cbfead43a483972606543bdfb9",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Full scan or image omitted; recorded reading and edition controls retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/Arabic_Volume_Reading_Index_Final_v1_20261006.docx.txt",
+      "bytes": 64401,
+      "recorded_sha256": "731a1da870a97fd27e6d796b28ae15b57745ac0a085a9ba3e5013fd7ee063777",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Historical source-guide extraction omitted; original input identity and reading credit retained in SOURCE_RECORD.json."
+    },
+    {
+      "path": "positive-agency-source-return/sources/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx.txt",
+      "bytes": 50870,
+      "recorded_sha256": "04e3a89bd42e94d995fddbd68c82cb171299ba285bb15a7fc976cdc1c0db43af",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Historical source-guide extraction omitted; original input identity and reading credit retained in SOURCE_RECORD.json."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar017.html",
+      "bytes": 367423,
+      "recorded_sha256": "9d170d1f9a80464c52c8ddb257de1551fb9e48c00edc5a53e7bbe88d1ccdd9c5",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar017.txt",
+      "bytes": 360336,
+      "recorded_sha256": "eb400bda94ad55232bde502c6b0bdb13175f75b97b87cdb4ed0efb8bc13b9ab9",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Whole downloaded electronic section omitted; bounded read selections only. Acquisition is not reading credit."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar018.html",
+      "bytes": 160293,
+      "recorded_sha256": "87710db740d9d92016e7f0c15849affbd73cae91e6a3bb4a4cda51906c0012c1",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw HTML omitted."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar018.txt",
+      "bytes": 156296,
+      "recorded_sha256": "15846ac7c004c871881a0c07bdec0b720c45213f88cfcf5ce6248b8cb4608483",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Whole downloaded electronic section omitted; bounded read selections only. Acquisition is not reading credit."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar10-137-139-web.txt",
+      "bytes": 33824,
+      "recorded_sha256": "7695587ff531a5be2c2f14add046b68c771d35b40c2ee6c3bec970aca2b52196",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar10-139-145-bodies-web.txt",
+      "bytes": 32904,
+      "recorded_sha256": "4c097bf2223f57c2822fa879bf571b5962f73652692cdb99256fd5a41a270693",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar10-141-142-144-and-edition-web.txt",
+      "bytes": 33015,
+      "recorded_sha256": "a4b26260a0ed22e5c09228b45761275445ecaf87c8880e4075f392c1c212d16e",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar10-145-147-web.txt",
+      "bytes": 34724,
+      "recorded_sha256": "0d7d17b6005f34234cf4ab7b87d8aa23ce1edd9a0f209371a4c300e84487f3de",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar10-150-156-web.txt",
+      "bytes": 16436,
+      "recorded_sha256": "37d6df63badaa33676cac79ccc65f92731399c80693a597ea74a37e3c5217f2b",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar10-continuation-web.txt",
+      "bytes": 33800,
+      "recorded_sha256": "fee3335798ee2350b4ce20f0e37defe36ce034daf3ab3c753d530400dff9d7e6",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar7-218-221-web.txt",
+      "bytes": 18646,
+      "recorded_sha256": "3af8e81574d28285076ba02de5755cbdbd0e3a252448d403c1f264c76a89cfc0",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/dar8-115-118-web.txt",
+      "bytes": 17121,
+      "recorded_sha256": "732733dced8eb8a42269efd1c5b06595ef6e2d8d8497909f9cffd13e2fd0de40",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    },
+    {
+      "path": "positive-agency-source-return/sources/web-first-loci.txt",
+      "bytes": 33591,
+      "recorded_sha256": "7e6af1ffa17ca031a25ac8bfff134305f4a35dc383a1d4fe93489bd8dea30e33",
+      "hash_status": "Inherited component manifest value; omitted bytes not rehashed by checkpoint18.",
+      "reason": "Raw web/tool capture or catalogue payload omitted; report, exact reading record and source links retained."
+    }
+  ],
+  "additional_not_included": [
+    {
+      "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+      "recorded_sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b",
+      "reason": "Modern source body omitted; source links, precise retained line labels and review record retained."
+    },
+    {
+      "path": "plural-explanation-theorem-audit/DependencyAudit.lean",
+      "recorded_sha256": "9ce772a752d068c374004901bef1d8ae23b145c9f85d6bd71aa266eeb6722392",
+      "reason": "Earlier proof retained by historical reference; not needed or replayed by portable route."
+    },
+    {
+      "path": "particular-explanans-bridge-audit/BridgeRepairs.lean",
+      "recorded_sha256": "27f18369adcd7722ddcd3508f85343f09c4bb56ee3b0d4d1cd57374d5f669af0",
+      "reason": "Earlier proof retained by historical reference; not needed or replayed by portable route."
+    }
+  ],
+  "source_links": {
+    "Koons_Pruss_2020": "https://doi.org/10.1007/s11098-020-01482-3",
+    "Dar_edition": "https://shamela.ws/book/21506",
+    "Dar3_scan": "https://archive.org/download/WAQ44998/dtan03.pdf",
+    "Dar8_scan": "https://archive.org/download/WAQ44998/dtan08.pdf",
+    "Jami6_scan": "https://csiislam.org/img/library_dine/c1473365dbab.pdf"
+  },
+  "limits": "Only the top-level MANIFEST.json inventories distributed bytes. Component manifests retain their original wider input scopes and may reference omissions. No modern source body, full scan, image, raw HTML, toolchain or prior archive is included."
+}

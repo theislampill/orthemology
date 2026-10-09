@@ -1,0 +1,113 @@
+{
+  "recorded_at_utc": "2026-10-09T08:10:35.374448+00:00",
+  "inputs": [
+    {
+      "path": "reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+      "sha256": "b8f652952ff626479d8b4e8fd9928283a6ed5de3046a50105b6138cec2b7ba10",
+      "bytes": 4923,
+      "read_scope": "full report"
+    },
+    {
+      "path": "simultaneous-production-argument/REPORT.md",
+      "sha256": "0eea12c3e2e4c761f165406a3b17391917f8b49a9eae8ca521023f658ef2dc99",
+      "bytes": 23052,
+      "read_scope": "full report"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/RESULT.md",
+      "sha256": "cfd70cdca601878e4b62c91757f5622e094d4e060446e21ceea0e21a6d717634",
+      "bytes": 18141,
+      "read_scope": "full report"
+    },
+    {
+      "path": "entire-production-rival-review/REVIEW.md",
+      "sha256": "857c19cfca028bb633622af08045d428271f024d15d4174e6e0729b5514f896e",
+      "bytes": 14197,
+      "read_scope": "full report"
+    },
+    {
+      "path": "particular-agency-bridge-20261009/REPORT.md",
+      "sha256": "01cf59219b9d36ef5a734a934e07246d0d39dad4f8c78fc26a1f16168b03b924",
+      "bytes": 20021,
+      "read_scope": "full report"
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "bytes": 19070,
+      "read_scope": "full report"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+      "bytes": 22307,
+      "read_scope": "Result; source section in part; sections 2–8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md",
+      "sha256": "46c6db37bf86fbe531f877520c0416afc8a5b709ce09d729482c3ff0cd038454",
+      "bytes": 24972,
+      "read_scope": "sections 1–8 through initial display and subsequent tail return; own primary reading claims remain inherited"
+    },
+    {
+      "path": "productive-totality-source-return/REPORT.md",
+      "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+      "bytes": 35568,
+      "read_scope": "sections 1–5; later report portions not claimed fully read"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/RESULT.md",
+      "sha256": "080d4c2a1c46835d76fcf86345c6536b84eb7b8278855a0a7b4b99cd7b3258c9",
+      "bytes": 21513,
+      "read_scope": "selected opening and sections 1–6; source exposition inherited"
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+      "sha256": "d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+      "bytes": 17246,
+      "read_scope": "full report"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "bytes": 30941,
+      "read_scope": "sections 1–5 and opening 6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040",
+      "bytes": 17870,
+      "read_scope": "targeted keyword-return paragraphs on object conditioning and transport"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/review/RELATIONAL_PERFECTION_TRANSPORT.md",
+      "sha256": "316e7bd24f600c5f89e95cbf75b725284bb3d25ad3b52baa24d483b9babc7414",
+      "bytes": 11452,
+      "read_scope": "full review"
+    },
+    {
+      "path": "foundational-source-queue/PRIORITIES.md",
+      "sha256": "5f526a0efc51025a982d39e41bc8f668f6cb840cb3751d057e6f7c101923d940",
+      "bytes": 11443,
+      "read_scope": "full queue"
+    },
+    {
+      "path": "foundational-source-queue/user-input/Pasted text(20261009-035612).txt",
+      "sha256": "9edd6794e81d9b3d0aaf559e4e4901e80dea5156fe02e21f94a281ed06ce0b26",
+      "bytes": 17008,
+      "read_scope": "section II and preceding distinction list"
+    },
+    {
+      "path": "brute-contingent-source-return/READING_LEDGER.json",
+      "sha256": "0c265d39d49df45255dad54d88a76c3c1d47a87f9687ca39f2a10f13a9571973",
+      "bytes": 7267,
+      "read_scope": "edition/scan and initial reading entries"
+    },
+    {
+      "path": "brute-contingent-source-return/sources/dtan03.pdf",
+      "sha256": "0557e7a2c84a3222a4b4664bdf645d126551e859ac7f4fd492ade9bc66d9a41e",
+      "bytes": 6859029,
+      "read_scope": "direct visual printed 438–448; PDF one-based page matches print in this interval; no fresh title check"
+    }
+  ]
+}

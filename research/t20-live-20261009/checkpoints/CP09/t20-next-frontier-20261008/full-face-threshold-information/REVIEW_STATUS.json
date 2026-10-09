@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "reviewed_result_sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+  "review_directory": "../full-face-threshold-information-review",
+  "review_files": [
+    {
+      "path": "../full-face-threshold-information-review/REVIEW.md",
+      "sha256": "874ddffcf6533c8c3ee35c711fa0d8c5e5ce275efd5a0f0e6016fe8e7e857902"
+    },
+    {
+      "path": "../full-face-threshold-information-review/REVIEW_RECEIPT.json",
+      "sha256": "5afdc80205f28e9251d028314755e1b9bad53074b52ca7493493ac737bfeb5c2"
+    },
+    {
+      "path": "../full-face-threshold-information-review/VERIFICATION.json",
+      "sha256": "fb3f571eb0fb5a2d2d280bcb3b2490d7dcd1dc541842e51e122bff689b2f248d"
+    },
+    {
+      "path": "../full-face-threshold-information-review/CONTROL_RESULTS.json",
+      "sha256": "d0395de5b721cfbccf22927a6d911819d74d44576d30ae389f7a6e6cfa3d62da"
+    },
+    {
+      "path": "../full-face-threshold-information-review/independent_controls.py",
+      "sha256": "e8a8feb53f4abdce050043f1e2e12fc11da241e1835bd0053d0786f82c37bfd3"
+    }
+  ],
+  "scope": "Conditional two-minimum divergence theorem and finite-shell witness; no T20 closure or integration authority"
+}

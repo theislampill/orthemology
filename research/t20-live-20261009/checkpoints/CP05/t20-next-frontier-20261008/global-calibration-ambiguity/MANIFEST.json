@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-08T13:15:48.915045+00:00",
+  "status": "author checkpoint frozen with two separate scoped independent PASS reviews",
+  "scope": "Conditional pure-count calibration mathematics only; no empirical certification, integration, owner acceptance, or T20 closure.",
+  "main_author_assertions": 14125,
+  "appendix_author_assertions": 33840,
+  "independent_review_references": [
+    {
+      "path": "../global-calibration-ambiguity-review/REVIEW.md",
+      "sha256": "ab8acd5b0cc5c70fc43bcd1ca419d5faf8ec9bb59aa02804bbfb846a3f068ecc"
+    },
+    {
+      "path": "../global-calibration-ambiguity-review/REVIEW_RECEIPT.json",
+      "sha256": "405182b0516be264847c7fa8a25605e3db948c8823ec649d47f7c82eb6bc8cb7"
+    },
+    {
+      "path": "../global-calibration-ambiguity-review/APPENDIX_REVIEW.md",
+      "sha256": "cc32f7ea9594ba8252dc746d867b20ee9acf7240b6f6ed5ba584b6c5b984edfd"
+    },
+    {
+      "path": "../global-calibration-ambiguity-review/APPENDIX_REVIEW_RECEIPT.json",
+      "sha256": "830a91e43492efe7024695504cbac8cf8aece34a56a229c8b07068eb171a04c5"
+    },
+    {
+      "path": "../global-calibration-ambiguity-review/MANIFEST.json",
+      "sha256": "fa053545ba06d46656455e45824741915679e36b3afe16e8bb76aaf278911e05"
+    }
+  ],
+  "files": [
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "cdfcf7d8a6c7f9095b4bda706a41e925ca19a2e7479e6163c54f702b04fd042b",
+      "bytes": 2554
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "sha256": "5e7db3255707edae1796658569b4406fe7d197f4a03a4fac735dab2b72487a86",
+      "bytes": 862
+    },
+    {
+      "path": "POLYNOMIAL_EFFICIENCY_APPENDIX.md",
+      "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4",
+      "bytes": 7854
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "fd9307cf279310887a40281c759a11e99e4d567ff21d47eb53d6ca8e74ecac8b",
+      "bytes": 1960
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "b2a59d322936e5f4f95c01c34a8c7d364cc144b2bd7be6d2f9316817dba554b7",
+      "bytes": 1571
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+      "bytes": 12746
+    },
+    {
+      "path": "REVIEW_STATUS.md",
+      "sha256": "34aae3ede3958a9cce519e07c611128922ee9089647bbb9be9dbbbb5466d28a8",
+      "bytes": 3125
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "48057b6a9f7ed820703564f954aaeeb84ca0883a19b1a68c8658d7a42b487274",
+      "bytes": 4771
+    },
+    {
+      "path": "VERIFICATION.json",
+      "sha256": "7d45b6c19a52b0fec285802f758709e39891a2f3fa0af2e7b732cea2532efd1d",
+      "bytes": 884
+    },
+    {
+      "path": "efficiency_controls.py",
+      "sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f",
+      "bytes": 4643
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2",
+      "bytes": 4912
+    },
+    {
+      "path": "results/efficiency_controls.json",
+      "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2",
+      "bytes": 1152
+    },
+    {
+      "path": "results/efficiency_controls.log",
+      "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2",
+      "bytes": 1152
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596",
+      "bytes": 1173
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596",
+      "bytes": 1173
+    }
+  ]
+}

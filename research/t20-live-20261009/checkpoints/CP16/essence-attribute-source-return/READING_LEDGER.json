@@ -1,0 +1,246 @@
+{
+  "created_utc": "2026-10-09T03:07:18.677526+00:00",
+  "status": "bounded source-return complete; no integration or programme closure claim",
+  "research_credit": "Honest rereading and new interpretation. No elapsed-time substantive-reading budget claim. Search/acquisition/repeated text not counted as continuous reading.",
+  "records": [
+    {
+      "id": "M6",
+      "kind": "primary Arabic electronic witness, retained",
+      "source": {
+        "path": "t20-next-frontier-20261008/bearer-eligibility/sources/majmu-item595.txt",
+        "sha256": "c23ed3010627005cfed7e8e73a7be333bda368c7bd63b5fcd455ec657ef727c7",
+        "bytes": 322413
+      },
+      "url": "https://www.islamweb.net/ar/library/content/22/595/",
+      "read_scope": "Physical lines371–399 continuously, unvocalized layer; electronic6:95–103. Requested98–101 is complete.",
+      "selection": {
+        "path": "essence-attribute-source-return/read-selections/majmu6-95-103-L371-L399.txt",
+        "sha256": "cd938fd9e464ef048638eb287c46040fcd194e93c32c4e9f5ae7d06344c3184d",
+        "bytes": 12509
+      },
+      "prior_record": {
+        "path": "t20-next-frontier-20261008/bearer-eligibility/SOURCE_READS.json",
+        "sha256": "0f8869773415cbeab1c8d864d8b24e56ab25cfa052e3ab325309a10ee3b34ba2",
+        "bytes": 4357
+      },
+      "relation_to_prior": "Targeted rereading of formerly read complete Akmaliyya6:68–140; no new first-reading/independent-witness/scan credit.",
+      "voice": "L371/383 state objections; L381/382/384ff reply in authorial voice.",
+      "text_flags": [
+        "L373 repeated negative in comparison; no emendation.",
+        "L384 first clause lacks without-attributes negative present in supplied English; no emendation."
+      ]
+    },
+    {
+      "id": "D1-main",
+      "kind": "primary Arabic electronic witness, newly retained here",
+      "sources": [
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item176.txt",
+          "sha256": "2d4a4dc5c3879b2becd6f382b47e5e963cb1be40c1256c281f22e45e93a2ff4c",
+          "bytes": 1769
+        },
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item177.txt",
+          "sha256": "a5ca56cfb37f7e7b3ccc440e7f3ca57ce4f92e462320cac24e721b89ceeae264",
+          "bytes": 1549
+        },
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item178.txt",
+          "sha256": "00089e71801885dcb1894c5ff37ba9411720ab2f27e0a000add25b4d5fdeb72e",
+          "bytes": 5348
+        },
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item179.txt",
+          "sha256": "ff804e3f0a11c366e045aab1faece0a0288cc9be62af4a0285df1b91bc97f854",
+          "bytes": 2394
+        },
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item180.txt",
+          "sha256": "e3f174b67bea87f001cc5cdeef5ef1afad8e0117f01b357d203b89c8f199f0fe",
+          "bytes": 2270
+        }
+      ],
+      "html": [
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item176.html",
+          "sha256": "d88ecff87e17ef96cdee517a2fe5a0ca9a94e535de201b5c7de1be1fa42f1352",
+          "bytes": 591148
+        },
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item177.html",
+          "sha256": "e5ffb69e34c5d050f9202fb84c2d4f8636f62716e36f0122e4d9532c5eff37c1",
+          "bytes": 588694
+        },
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item178.html",
+          "sha256": "9bd66b2b2c0201ee627f7e51bb4b25f103b34786c67b765f2fa6fe6a36637521",
+          "bytes": 599694
+        },
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item179.html",
+          "sha256": "892ef868b680f5b4f68badc1aa2b66cc42f173f92c8a203c014d412fee4edfa7",
+          "bytes": 591516
+        },
+        {
+          "path": "essence-attribute-source-return/sources/dar1-item180.html",
+          "sha256": "bdd655a6ccf5141c5ec1246d668eb2a35942e1a273e61a684cf80ac0f91e5e34",
+          "bytes": 590562
+        }
+      ],
+      "urls": [
+        "https://www.islamweb.net/ar/library/content/413/176/",
+        "https://www.islamweb.net/ar/library/content/413/177/",
+        "https://www.islamweb.net/ar/library/content/413/178/",
+        "https://www.islamweb.net/ar/library/content/413/179/",
+        "https://www.islamweb.net/ar/library/content/413/180/"
+      ],
+      "read_scope": "All extracted paragraphs in each of items176–180 continuously. Requested1:292–295 plus immediate lead-in/continuation approximately291–297.",
+      "relation_to_prior": "New direct targeted reading/reacquisition in this worker. Historical summaries cite this source family; no claim of programme-first reading or independent historical authority.",
+      "voice": "Item177 reports opponent dilemmas. Item178 replies; L006 rejection of identifying distinct attributes/attribute and bearer, then one-substance/multiple-attributes rejoinder.",
+      "text_flags": [
+        "item178L003 حقيقية not silently amended to حقيقته; quote uses completeL004.",
+        "item180L001 likely missing negative; not relied on."
+      ]
+    },
+    {
+      "id": "D1-anchor",
+      "kind": "primary Arabic electronic witness cited by El-Tobgui",
+      "source": {
+        "path": "essence-attribute-source-return/sources/dar1-p281.txt",
+        "sha256": "9e852434445cd2b9c8249c2eafd8ea740f42a3f07510f05cf73ed7d910e3595b",
+        "bytes": 3455
+      },
+      "html": {
+        "path": "essence-attribute-source-return/sources/dar1-p281.html",
+        "sha256": "e78b68b57371db879bf2b5f6b47d19efb83a4c98609352eec2d8d5e7e049a3e4",
+        "bytes": 594219
+      },
+      "url": "https://www.islamweb.net/ar/library/content/413/169/",
+      "read_scope": "All7 paragraphs, electronic1:280–282; item167 all8paragraphs separately read as incoming context278–280, but item168 not acquired, so no claim to continuous278–282.",
+      "relation_to_prior": "Direct verification of a cited primary anchor, not credit for an independently sourced author.",
+      "voice": "Author disambiguates composition/otherness/dependence; reports alternative terminologies without endorsing all.",
+      "text_flags": [
+        "Dangling أو inL005 retained; does not affect stated knowability/separability and cause/condition distinctions."
+      ]
+    },
+    {
+      "id": "M17",
+      "kind": "primary Arabic electronic witness",
+      "source": {
+        "path": "essence-attribute-source-return/sources/majmu17-all-electronic-layers.txt",
+        "sha256": "67609032ca89e4f2f6976a72589078ab825d1b0548d3797387d8a76d355162f8",
+        "bytes": 1104326
+      },
+      "html": {
+        "path": "essence-attribute-source-return/sources/majmu17-p161.html",
+        "sha256": "1f24f0dc776564c4acec1727c79a21229d799d527760808eba81aba529530850",
+        "bytes": 1851688
+      },
+      "url": "https://www.islamweb.net/ar/library/content/22/1726/",
+      "read_scope": "PhysicalL488–493 continuously, electronic17:157–164; unvocalized layer selection. Requested161–162 contained inL490–491.",
+      "selection": {
+        "path": "essence-attribute-source-return/read-selections/majmu17-157-164-L488-L493.txt",
+        "sha256": "6d261d7237cd649d4e00afb191d6474c9aa243f65972c5ec6d168f1e5eb867a6",
+        "bytes": 14570
+      },
+      "relation_to_prior": "Direct bounded reading in current pass. No programme-first or whole-chapter claim.",
+      "extraction_note": "45pagebody occurrences include whole-chapter and repeated/vocalized layers. Initial extraction retained only opening question, corrected by concatenating bodies; only identified unvocalized selection counted. Items1727/1728 acquired redundantly but no additional source/read credit.",
+      "voice": "L489 all-other-is-created dilemma is opponent argument; author rejects equivocation. L490 reports competing formulations then disambiguates. L491 gives authorial attributed-self explanation."
+    },
+    {
+      "id": "ET2013",
+      "kind": "secondary scholarly source, exact previously supplied PDF",
+      "source": {
+        "path": "essence-attribute-source-return/sources/eltobgui2013.pdf",
+        "sha256": "d2c90eaa5f238145c5c8b71ff4f27b048ded1fd154242a300d08d212a737a963",
+        "bytes": 2231368
+      },
+      "text": {
+        "path": "essence-attribute-source-return/sources/eltobgui2013-layout.txt",
+        "sha256": "a6a2fb1537f6b6db450adcefe0040a68c5ccd6f0c4dede849797e43b7e8b7c7f",
+        "bytes": 928637
+      },
+      "drive_id": "12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU",
+      "url": "https://drive.google.com/file/d/12QgJ-irCA4vpeYe2yBN5CEKML4tcEvaU/view?usp=drivesdk",
+      "prior_record": {
+        "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/methodology/drive/DRIVE_CORPUS.json",
+        "sha256": "6d020b39ac31311ec388678c79dd342ea6b5ee6144e1565e37b16a8d66d11761",
+        "bytes": 99219
+      },
+      "expected_prior_sha256": "d2c90eaa5f238145c5c8b71ff4f27b048ded1fd154242a300d08d212a737a963",
+      "read_scope": "Continuous printed236–240/PDF260–264,266–270/PDF290–294,299–302/PDF323–326; contextual bounded paragraph printed228/PDF252.",
+      "page_images_inspected": [
+        {
+          "printed": 238,
+          "one_based_pdf": 262,
+          "binding": {
+            "path": "essence-attribute-source-return/sources/eltobgui-p238.png",
+            "sha256": "903d6c5541729344288efea22912f315f3b898e03ec7a21fe26b9ced7809aa31",
+            "bytes": 272840
+          }
+        },
+        {
+          "printed": 267,
+          "one_based_pdf": 291,
+          "binding": {
+            "path": "essence-attribute-source-return/sources/eltobgui-p267.png",
+            "sha256": "93e8893e18703fb79a3e3386d858c78cc4a30172aad9a1cfd9bb0ea97abf27cc",
+            "bytes": 260817
+          }
+        },
+        {
+          "printed": 300,
+          "one_based_pdf": 324,
+          "binding": {
+            "path": "essence-attribute-source-return/sources/eltobgui-p300.png",
+            "sha256": "1bbaa711171a67cb0fa4427cef4a793b4340bc95a2d4854aa7b33e43ca05cd1f",
+            "bytes": 265933
+          }
+        }
+      ],
+      "relation_to_prior": "Byte-identical reacquisition of the2013dissertation, inherited T17 complete353page reading. Present work is bounded rereading, not whole-work repeat or independent primary confirmation.2020book not acquired/read.",
+      "attachment_relationship": "Supplied paraphrases closely match these2013 passages; bracketed distinctness sentence is not present on238. Page300 itself treats divine knowledge as necessary/perfect/indestructible."
+    },
+    {
+      "id": "S2-control",
+      "kind": "retained primary Arabic electronic control",
+      "source": {
+        "path": "source-noncirculation-feedback/sources/safadiyya002.txt",
+        "sha256": "e3d23531360bb87eddf8d5365a936f40202f62fab624128bd2c3d16962ba9783",
+        "bytes": 370578
+      },
+      "url": "https://www.islamicbook.ws/amma/alsfdit-002.html",
+      "read_scope": "PhysicalL349–360 continuously, ending complete distinction paragraph before new opponent discussion.",
+      "selection": {
+        "path": "essence-attribute-source-return/read-selections/safadiyya002-L349-L360.txt",
+        "sha256": "9f9c141a5156b7f75ecb1b6d8878a763adcf4d89b27fe53c8b5c3532f5932189",
+        "bytes": 5655
+      },
+      "relation_to_prior": "Corroborative retained-source rereading, no new first-reading or new printed-page mapping asserted.",
+      "voice": "Authorial necessity/efficient-cause/bearer distinction; hypothetical whole need not have producer is a conditional rebuttal, not proof of plural originals."
+    },
+    {
+      "id": "D4-control",
+      "kind": "retained primary Arabic electronic control",
+      "source": {
+        "path": "t20-next-frontier-20261008/bearer-eligibility/sources/book413-item793.txt",
+        "sha256": "22febd9af8ec696cb6fd7d8b310002a64af80c32286b7565cbd9a027a9a10c4b",
+        "bytes": 1774
+      },
+      "url": "https://www.islamweb.net/ar/library/content/413/793/",
+      "read_scope": "All5paragraphs, electronic4:259–260.",
+      "relation_to_prior": "Targeted rereading; prior bearer-eligibility read remains credited."
+    }
+  ],
+  "acquisition_limits": [
+    "BrillPDF returned403. OAPEN local call initially cancelled by automatic approval review; one retry after parent transcript evidence was allowed and returnedHTTP403. Route stopped. Connected user-supplied Drive source subsequently accessed successfully, source bytes bound.",
+    "Web snippets are leads; primary conclusions rest on direct Arabic electronic bodies.",
+    "Arabic page markers are edition-linked electronic witnesses, no primary scan collation.",
+    "2020book not read; no publication-page equivalence inferred."
+  ],
+  "source_attachment": {
+    "path": "metaphysical-semantics-return/user-input/Pasted text(20261009-025305).txt",
+    "sha256": "451c35c1ec4e0f432d323550dc5fecb758737ed926908f73d7dcd92963a6b88e",
+    "bytes": 16674
+  }
+}

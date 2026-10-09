@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-09T01:19:21.262428+00:00",
+  "reader": "root",
+  "purpose": "Test stage and explanatory-relation preservation in the new Pruss/Ibn Taymiyyah comparison",
+  "readings": [
+    {
+      "file": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "lines": [
+        294,
+        313
+      ],
+      "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1"
+    },
+    {
+      "file": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item960.txt",
+      "lines": "whole item",
+      "sha256": "b7fe90dfbc6dec72f2c73b9b872925ed081eefa538c531616043cce494418336"
+    },
+    {
+      "file": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "lines": "whole item",
+      "sha256": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08"
+    },
+    {
+      "file": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "lines": [
+        4,
+        9
+      ],
+      "sha256": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1"
+    }
+  ],
+  "scope": "Continuous targeted contextual returns, inherited electronic witnesses. No new first-reading credit, edition scan collation or independent source witness. Suspect electronic strings in Bayan962 remain excluded as premises.",
+  "assessment": "Standing reasons/capacity, operative basing, particular willing and completed production must remain distinct targets. Own unreceived willing does not become external coercion through efficacy. General complete-determiner principle is directly asserted at Majmu805 L312; it is not merely an execution tautology."
+}

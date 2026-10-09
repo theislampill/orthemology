@@ -1,0 +1,62 @@
+{
+  "date_utc": "2026-10-09T03:50:13.536521+00:00",
+  "operation": "bounded primary-source rereading and locator/voice verification",
+  "credit": "No first-reading/unique-source/independent-witness increment for inherited Dar, Minhaj, Jami or Majmu passages.",
+  "readings": [
+    {
+      "work": "Dar9",
+      "scope": "Current item1767 contextual Ibn Rushd quotation; items1768–1775 entire body; item1776 entire body through367, core target338–365. Corresponding retained Dar016 L0622–0651 and L0690–0757 compared at decisive anchors.",
+      "witness": "Reacquired Islamweb edition-page-marked body plus retained Islamicbook electronic witness.",
+      "limit": "No fresh Dar scan, manuscript or apparatus collation. Item1766 acquired but not credited as read.",
+      "primary_voice": "Ibn Taymiyya Qult turns and quoted Ibn Rushd/raised objection boundaries distinguished.",
+      "edition_metadata": "https://shamela.ws/book/21506; Muhammad Rashad Salim, second1411/1991."
+    },
+    {
+      "work": "Minhaj1",
+      "scope": "Retained item96 L001–009,1:438–441, directly reread.",
+      "limit": "No new scan or complete apparatus read; opening page438 control inherited from exact source audit."
+    },
+    {
+      "work": "Minhaj2",
+      "scope": "Retained item156 L021–041, item157 L001–004; item158 L001 continuation consulted.",
+      "limit": "Not whole volume or new apparatus collation."
+    },
+    {
+      "work": "Minhaj3",
+      "scope": "Reacquired item364 L001–031, item365 L001–020, item366 L001–027 through330 opening; target304–329.",
+      "limit": "Remaining acquired item366 L028–043 not claimed as continuous read; no fresh scan or manuscript certification.",
+      "html_identity": "Item365 sha256081c5255fc92bf7b80b9ca8ae6f0c8a9dd2201f97e25797ec9f9027041f2cec1 equals inherited exact-audit capture.",
+      "edition_metadata": "https://shamela.ws/book/927; Muhammad Rashad Salim, first1406/1986."
+    },
+    {
+      "work": "Majmu20",
+      "scope": "Retained item2032 L001–020 through184, with item2031 L001–018 legal-cause context.",
+      "limit": "Inherited corpus and locator; no new edition-imprint certification."
+    },
+    {
+      "work": "JamiVI",
+      "scope": "Delegated visual reading of cover/front1–4, piece-context85–87 and printed93–99; parent read complete verified return.",
+      "report": "jami/JAMI_VI_94_98_VERIFIED_RETURN.md",
+      "limit": "Exact inherited scan reacquired; no new historical witness. IIFA indexed text only, screenshot attempts failed, direct download403 not bypassed."
+    },
+    {
+      "work": "Tadmuriyya commentary",
+      "scope": "Delegated bounded identification and selected tamanu sections; parent read complete commentary/RESULT.md.",
+      "limit": "Unspecified intended commentator remains unknown. Al-Barrak unreadable/oversized PDF is not negative evidence. No wide continuing search.",
+      "comparator": "Al-Sawi Q21:22 is separately identified later commentary, not a Tadmuriyya witness."
+    },
+    {
+      "work": "Inherited assessment controls",
+      "scope": "Oneness REPORT conclusion, main arguments and limits; SOURCE_ARGUMENT reconstruction, MODEL_AUDIT relevant conclusions, ROOT_REASSESSMENT; nonabsorption REPORT; source-noncirculation RESULT relevant productive bootstrap; existing direct-reading receipts.",
+      "limit": "Secondary local assessment returns do not substitute for claimed direct Arabic reads. No new complete Oneness PDF/Asbahani scan traversal."
+    }
+  ],
+  "outcome": "Simultaneous scope verified; exclusive-attribution step and independent nonabsorption/perfection rationale separated. No newly independent nonduplication proof found in inspected positive argument. Phrase absence does not by itself establish this outcome.",
+  "authority_limits": [
+    "no user outreach",
+    "no integration",
+    "no closure",
+    "no new tranche",
+    "no mathematical result or model certification"
+  ]
+}

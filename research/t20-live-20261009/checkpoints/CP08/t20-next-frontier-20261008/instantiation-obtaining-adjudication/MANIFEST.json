@@ -1,0 +1,63 @@
+{
+  "recorded_at_utc": "2026-10-08T19:21:26.921749+00:00",
+  "status": "BOUNDED_COMPARISON_COMPLETE; T20_ACTIVE",
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+      "bytes": 30791,
+      "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/SOURCE_AND_DELIVERABLE_MANIFEST.json",
+      "bytes": 1928,
+      "sha256": "e5c24c14a27a635770b82fe67eb7fa3b1ba2534ad8deead9db1b4186a452ebe3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/REPORT.md",
+      "bytes": 20834,
+      "sha256": "5ddee32d26314b34ec446e742359dc9571905e12f55c096c9a92b199596c7dfe"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/PASSAGE_NOTES.md",
+      "bytes": 115348,
+      "sha256": "3dcedc2b69bf58d0c3c867f3b58b60cc7d7bac3984606b7e67838d7cbcbaa26d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "bytes": 20262,
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/CONTINUATION_RECEIPT.json",
+      "bytes": 3045,
+      "sha256": "3c50d986290580d6b2e1a64baa2917f36449cd6abde63800a85937c58d4e1488"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+      "bytes": 18923,
+      "sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/READING_SCOPE.json",
+      "bytes": 1959,
+      "sha256": "9cc7db7a49704aec070a1199047d7de5ef2c3537863610e73c7f9d1232080057"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/RESEARCH_EVENTS.jsonl",
+      "bytes": 567,
+      "sha256": "d252411a3df094b3edfbbb762c3253cce084dc8d3dfa6d29b15574c33363262e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REVIEW.md",
+      "bytes": 1499,
+      "sha256": "44fb21edfaca0df3d3e565776dad5709e63e8254686671fdab4b4146c4b85040"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_files_current": 7,
+  "review_payload_files_current": 11,
+  "author_manifest_current": true,
+  "author_replay_byte_identical": true,
+  "independent_admissible_cases": 468,
+  "wrong_candidate_controls_rejected": 3,
+  "accepted_author_result_sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f",
+  "review_sha256": "77fa54173fa04c4d9b942cb668dbc080dd3b5062c563e29ed6850c5b1185d596",
+  "scope": "Localized written mathematical proof and deterministic controls only; no kernel assurance, statistical information rate, protected integration, floor certification, or closure."
+}

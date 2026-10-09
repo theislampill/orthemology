@@ -1,0 +1,597 @@
+{
+  "scope": "Included component bindings checked against selected exact bytes. Excluded witnesses are neither copied nor rerun; original component manifests remain unchanged.",
+  "entries": [
+    {
+      "component_manifest": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "archive_path": "agency-robustness-independent-20261009/ANALYSIS.md",
+      "expected_sha256": "11c43396546b3327f24a36c446d2051003181f6029e41122ecb6d5061a16204c",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "archive_path": "agency-robustness-independent-20261009/INPUT_READ_RECEIPT.json",
+      "expected_sha256": "9bb6bd2f4371b6bebf1d4a408a75b6f6121b1fc3952a0294b816ebcda57f8818",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "archive_path": "agency-robustness-independent-20261009/SOURCE_SUMMARY.md",
+      "expected_sha256": "89a52377bbab13aca247b85dab4bb514e32231f44421e44877ea7b7526050749",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "archive_path": "agency-robustness-independent-20261009/smith-2025-fresh-extraction.txt",
+      "expected_sha256": "da34695413b11e3f25de10e212f6a09ec233516d07da5ff8b2d54268d5f9f08e",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "archive_path": "agency-robustness-independent-20261009/smith-2025-pdf-metadata.txt",
+      "expected_sha256": "4bea05b936f2cb3fe383beb29cacd0cca1bc69d47ba4810a8247fad9a91a3446",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "archive_path": "agency-robustness-independent-20261009/verified-page-10.png",
+      "expected_sha256": "7c194eefb895154401a049b5313c591a7208e69c67573536a31941898417df91",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "archive_path": "agency-robustness-independent-20261009/verified-page-11.png",
+      "expected_sha256": "44990891d272d70f4c51ae7fb40825d60f0d50e3ff051cccf28326c062984767",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "agency-robustness-independent-20261009/OUTPUT_MANIFEST.json",
+      "archive_path": "agency-robustness-independent-20261009/verified-page-12.png",
+      "expected_sha256": "bbd7a5908b6ff0d4540db9c83acb86a0eb821ccf1549ae5acf34e4b6a7b1082a",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "categorical-reasons-bridge-20261009/MANIFEST.sha256",
+      "archive_path": "categorical-reasons-bridge-20261009/REPORT.md",
+      "expected_sha256": "7f2e3e5a85864fab035d1ec2d2fcf25d92ef3e63ea8e786fabbf1b052962c92b",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "categorical-reasons-bridge-20261009/MANIFEST.sha256",
+      "archive_path": "categorical-reasons-bridge-20261009/READING_LEDGER.json",
+      "expected_sha256": "0646751d2a2a213820efd9714f64fc945c1bf80d37370346f7197f68cb298ae1",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "categorical-reasons-bridge-20261009/MANIFEST.sha256",
+      "archive_path": "categorical-reasons-bridge-20261009/INPUT_BINDINGS.json",
+      "expected_sha256": "94c97721149941afc5bd089097baebab35ba199dce906a634d0ba74541c49d07",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "categorical-reasons-bridge-20261009/MANIFEST.sha256",
+      "archive_path": "categorical-reasons-bridge-20261009/ACCESS_LEDGER.json",
+      "expected_sha256": "d776da93b717e784d7aaca0a9aee0d76939df0f0bc5727812e9635b3b0f3627a",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "categorical-reasons-bridge-20261009/MANIFEST.sha256",
+      "archive_path": "categorical-reasons-bridge-20261009/PRIOR_RECORD_CHECK.json",
+      "expected_sha256": "34dc0c2ae3d1cc4cf8d24efbd7777ccfaa2f42cd6fd610a11e7aa3118f7cffd7",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "categorical-reasons-bridge-20261009/MANIFEST.sha256",
+      "archive_path": "categorical-reasons-bridge-20261009/CHECKS.json",
+      "expected_sha256": "e94f9b9cc7d9577ab7c6ae399aa54f055eaba887f4e7d9b323488e1f9bdd9190",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/ACQUISITION.json",
+      "expected_sha256": "49af43bcb3cb55f0044d648a45b9d8f613521530fa0fe11bde53c22e56e6b5a3",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/INPUT_BINDINGS.json",
+      "expected_sha256": "e3cb5885ac7fb8fea67e286c008948daac5c8403a8445eb8f4f974840c784d8b",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/PRINT_CONTROLS.md",
+      "expected_sha256": "4bf8c0cce65650ec07374fe310815d80303c98e6631de3b8c0ff7fc2250ed297",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/READING_RECORD.json",
+      "expected_sha256": "3bc3ff50fa64e3398b76a99be0d6018c4d1667a6d0f59451b52ba4340edad6ec",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/REPORT.md",
+      "expected_sha256": "bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/VERIFICATION.json",
+      "expected_sha256": "91e08a08c12bb721697ccf0253afc445bff2b1ee4c6934082b82ce85f090730a",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/akmaliyya-L035-L046.txt",
+      "expected_sha256": "fb7292aa426dbb9a7686e0d5167f8824786307deb2d37644c097cff57946bd18",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/akmaliyya-L081-L109.txt",
+      "expected_sha256": "7623b2aab6b7f810b7f85d9884635d345fe0d54e8b82577e1149dbf6213d9448",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/akmaliyya-L235-L240.txt",
+      "expected_sha256": "e6e1522410c6c84fe0547365b2573c2634f958044f4812183287d007718b0597",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/asbahani-503.png",
+      "expected_sha256": "4b4069b0ac408fa04ea28a17975bb338ac115a07633780d5f7475b2dceec9b83",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/asbahani-504.png",
+      "expected_sha256": "0587d0fa68db529fadba404991cef172c3d2bd4a01c12e2d75fcf6e47ac9a70a",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/asbahani-505.png",
+      "expected_sha256": "790a8444d3fe7ed12e45be2a99e82e46a344e90bfb1780817bac0b3f85716975",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/asbahani-508.png",
+      "expected_sha256": "b760111222ea0edc5920140d9b3472eb50f8a597d72031b747a22a7fbbd21f18",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/asbahani-820.png",
+      "expected_sha256": "8b1f60399142f62410a29d222647ba52f6157e71a65f5b4fa749bc4b6d02d461",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/asbahani-821.png",
+      "expected_sha256": "e92590ed9719430dcc9c8b2b842694d06beec7a8f9604ddc544e114d38795850",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/asbahani-822.png",
+      "expected_sha256": "858e3f5e5d236a075de180a586497d0fb6f3955dcb611ab88a8abf6419df9e26",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/asbahani-823.png",
+      "expected_sha256": "88e18ef912689bf95917823c14c567f60c00dda059a708b86e7c30c081dafefc",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/bayan002-L0071-L0080.txt",
+      "expected_sha256": "06ee950112d75900f366fd499ac67b04ca7021c8ed7d2c5f80a225b7baffe2a5",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/bayan002-L0088-L0103.txt",
+      "expected_sha256": "ba174ba34cb66a63fef677ecf92c870aee994f260fdc0082573088dc26a654fe",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar017-L0605-L0868.txt",
+      "expected_sha256": "3235a9b294c290d155bba65012aa284870c4e5cf3611b72c4392fb93436a8783",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar017-L0923-L0937.txt",
+      "expected_sha256": "bcc414991acf93fa591b1f1a5813e55eb5b7c4aa88c956f5140726306f418b40",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar017-L0957-L1053.txt",
+      "expected_sha256": "2d2d081547d12da03f8f39b20c961962498d2319afd214b917dbd59a0c40ff50",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-001.png",
+      "expected_sha256": "6ac8b8bc159e4b1daceeea5d3f189e8cd48448ab30ab1b3e3a82f2d8d1245981",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-112.png",
+      "expected_sha256": "ae25299ecb6754519f6c4f4c7229970208d7c1c195916451a36547e12e9324dd",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-113.png",
+      "expected_sha256": "f5ca3dcca423530a652bbf3214fd8b05bae5f563e5770a60492a97d5d48567eb",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-138.png",
+      "expected_sha256": "7a50d9be14f90dae822dc9c392edfd256a4359f63d373bda3e464781f2876c1e",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-139.png",
+      "expected_sha256": "bdba49dce3d2dbae624f8841ccbef6c13e14be9042e4049dce7f4bb90bce3665",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-142.png",
+      "expected_sha256": "c12638581fd41198f94270c9190da190cbbbc04cb9dc974d75f50261f95af31b",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-143.png",
+      "expected_sha256": "c7f6856c9a155c79ad3fc3fdf4f64fd504a86b2e33380865d6b5b1d8e5754eb4",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-144.png",
+      "expected_sha256": "fa385d66d5d85c83c6fbc1f31690305bedaeb5245d0b6fe0f4a457d3ac5d325d",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-145.png",
+      "expected_sha256": "a42887feec8e3f98bb3e3368325a4e032c0df263b48c9dc94396370481e91525",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-146.png",
+      "expected_sha256": "aa89face743f8de1bd8408c651cb4d1af4c17663dd9f5b622a87446d106ed542",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/reading/dar10-147.png",
+      "expected_sha256": "bda99618ef3efd26870f53b5b6ecfdc7deafd3489296db0d0163fb2a9312be4d",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/sources/asbahani-minhaj.pdf",
+      "expected_sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/sources/asbahani-web-retrieval-limit.txt",
+      "expected_sha256": "ccdfa5f38815bcf66fd2cee6886337116923c9f606b4d16b073645a128d7e68b",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/sources/dar10-reflow-pdf-not-used.txt",
+      "expected_sha256": "9a579e45a9f290ced28ff8e87c741d5b447e7266ebe74777bcd90266b0c7e60d",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/sources/dtan10.pdf",
+      "expected_sha256": "c8422b92a10de5298089a666f5951bc63fbf6202079a04b8706fc9bd16c0d538",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/sources/islamweb112-web.txt",
+      "expected_sha256": "795d91f241ebbd67680b5cc66ab1876d4415e004f187a06459e1e1ba3eeaf0c1",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/sources/shamela112-114-web.txt",
+      "expected_sha256": "9749bd66f0d1c7fb3faa83752b6b81036d73f455733683d1aa4c0feadc98c6b2",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "knowing-production-semantics-20261009/FILES.sha256",
+      "archive_path": "knowing-production-semantics-20261009/sources/shamela144-146-web.txt",
+      "expected_sha256": "1296ec6821cbfd47551f3040f85a9128d34340d9227fd069935c5e4b12dbf816",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/INPUT_BINDINGS.json",
+      "expected_sha256": "f3b70f9e621ace993549730f83e13f3812279feb6b3a6a645300c5f87d889edd",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/READING_LEDGER.json",
+      "expected_sha256": "cd0e218bf54fdd86b29e51a99702c48fdf2f180588669521caaece48a41fdcb3",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/READ_FIRST.md",
+      "expected_sha256": "82fc4954cab8e80fb44607766e27556ca2cc8ce61af31d0fb5564cddbdbdbed4",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/REPORT.md",
+      "expected_sha256": "d54dc0d3014e236cf20293e04e2fea3d8043bb41f94af54ab27dbeafe93caf8d",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/VERIFICATION.json",
+      "expected_sha256": "23cf56443e8196b03e4d4c247b3e7338544d87bdc9212972087a13e34e9da934",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/james-primary/MANIFEST.sha256",
+      "expected_sha256": "44f1c1e8269d0a2a62555804532067f853c0acd22edc20143695c8577780d07c",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/james-primary/READING_LEDGER.json",
+      "expected_sha256": "4726d5a2349ae4dba4f221d7347553ce3dd538506d985a1a30e62b553df80dd0",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/james-primary/REPORT.md",
+      "expected_sha256": "7a482d25e1158d224e6b847cecdb12f3455629ee0aef091b83ff5d8a7493628e",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/james-primary/SOURCE_BINDINGS.json",
+      "expected_sha256": "064c14c516a4ef49cd2c6c3f41cd66e71f814b9881ddd3d2ebbf9ab9569c1eb4",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/railton-independent-rival-analysis.md",
+      "expected_sha256": "e88dca291910f6755674dad8c4c6809f473fb48260d5c878b19cf10d12fb2ec0",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/railton-reading-provenance.json",
+      "expected_sha256": "0ff28537a05aec52e7ea9eb8a8e2badec7ec5dcb81fa4a0eb8356179882b1341",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/james-primary/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/james-primary/REPORT.md",
+      "expected_sha256": "7a482d25e1158d224e6b847cecdb12f3455629ee0aef091b83ff5d8a7493628e",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/james-primary/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/james-primary/SOURCE_BINDINGS.json",
+      "expected_sha256": "064c14c516a4ef49cd2c6c3f41cd66e71f814b9881ddd3d2ebbf9ab9569c1eb4",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "normative-wisdom-warrant-20261009/james-primary/MANIFEST.sha256",
+      "archive_path": "normative-wisdom-warrant-20261009/james-primary/READING_LEDGER.json",
+      "expected_sha256": "4726d5a2349ae4dba4f221d7347553ce3dd538506d985a1a30e62b553df80dd0",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "principled-explanation-boundary-20261009/MANIFEST.sha256",
+      "archive_path": "principled-explanation-boundary-20261009/INPUT_BINDINGS.json",
+      "expected_sha256": "503a48ba4342f29f6bacb5c1db8d50dee65412f1981075dd793a3bb4e64293b8",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "principled-explanation-boundary-20261009/MANIFEST.sha256",
+      "archive_path": "principled-explanation-boundary-20261009/READING_RECORD.json",
+      "expected_sha256": "61ff7733261d9861ec2946f2925694b6be2012297f66447441439a4514802025",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "principled-explanation-boundary-20261009/MANIFEST.sha256",
+      "archive_path": "principled-explanation-boundary-20261009/REPORT.md",
+      "expected_sha256": "9f4e94215b7154a32e391104421d79dd4187d187660475e962354c1fcc04e875",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "principled-explanation-boundary-20261009/MANIFEST.sha256",
+      "archive_path": "principled-explanation-boundary-20261009/VERIFICATION.json",
+      "expected_sha256": "9a78dfe8ada2c46103a77db527613c9bc91c73a5c7e09cfbc9c098e8cba30696",
+      "distributed": true,
+      "check": "included_original_hash_matches",
+      "omission_reason": null
+    },
+    {
+      "component_manifest": "principled-explanation-boundary-20261009/MANIFEST.sha256",
+      "archive_path": "principled-explanation-boundary-20261009/dasgupta-printed387.png",
+      "expected_sha256": "02c716fffe9fe80ba7f6616e28590ca4dd0849f8068f5e09329e5334b31bccd6",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    },
+    {
+      "component_manifest": "principled-explanation-boundary-20261009/MANIFEST.sha256",
+      "archive_path": "principled-explanation-boundary-20261009/dasgupta-printed393.png",
+      "expected_sha256": "001f9975f93cbd8b1902b9a4da21d188aee8cd5a595a558ab0333bd65b20dbef",
+      "distributed": false,
+      "check": "historical_omitted_binding_preserved_not_rechecked",
+      "omission_reason": "Excluded raw witness, source body, image, research intermediate or other nonselected dependency; not a portable runtime requirement."
+    }
+  ]
+}

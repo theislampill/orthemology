@@ -1,0 +1,193 @@
+{
+  "review_type": "bounded independent source and logic review",
+  "created_utc": "2026-10-08T23:37:25.862489+00:00",
+  "primary_source": {
+    "citation": "Shamik Dasgupta, On the Plurality of Grounds, Philosophers’ Imprint 14(20), June 2014, 1–28",
+    "local_pdf": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/dasgupta2014.pdf",
+    "sha256": "e680c92240e6dcd321854725be3b5f084d5d8f0c46bbff7e8934e95892afe508",
+    "page_count": 28,
+    "bytes": 610106,
+    "source_url": "https://mail.shamik.net/papers/dasgupta%20on%20the%20plurality%20of%20grounds.pdf"
+  },
+  "whole_paper_read": false,
+  "whole_paper_read_boundary": "Selected complete primary-source pages only. Original worker whole-read event is reported in its ledger, not independently reattested. No review credit for unread pages or merely cited works.",
+  "primary_complete_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28
+  ],
+  "primary_pages_not_read": [
+    12,
+    16,
+    27
+  ],
+  "primary_sections_fully_read": [
+    9,
+    10
+  ],
+  "read_events": [
+    {
+      "chunk_id": "eba233",
+      "pages": [
+        18,
+        19,
+        20
+      ],
+      "mode": "Complete cached column-order page extracts",
+      "purpose": "Opening adequacy problem, positive Dravid inference, note 37, note 38, express abductive qualification."
+    },
+    {
+      "chunk_id": "428410",
+      "pages": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "mode": "Complete cached column-order page extracts",
+      "purpose": "Our-discourse IPK argument, individual analogy, counterpart response, note 45, explicit conditional conclusion."
+    },
+    {
+      "chunk_id": "89d993",
+      "pages": [
+        1,
+        2,
+        4,
+        5,
+        11
+      ],
+      "mode": "Complete cached column-order page extracts",
+      "purpose": "Metadata, conditional scope, necessitation, relevance, both closure rules, accounting, conjunction objection."
+    },
+    {
+      "chunk_id": "a96147",
+      "pages": [
+        3,
+        8,
+        9,
+        10
+      ],
+      "mode": "Complete cached column-order page extracts",
+      "purpose": "Note 4, notes 22–23, local and whole-world necessitation, directly grounded proper subset and higher-level singular grounds."
+    },
+    {
+      "chunk_id": "cd46c3",
+      "pages": [
+        6,
+        7,
+        13
+      ],
+      "mode": "Complete cached column-order page extracts",
+      "purpose": "Ontology alternatives, Max Black scope, revisability of relevance, support for source-assessment boundaries."
+    },
+    {
+      "chunk_id": "bd156f",
+      "pages": [
+        14,
+        15,
+        17,
+        26,
+        28
+      ],
+      "mode": "Complete cached column-order page extracts",
+      "purpose": "Compositional semantics, conditional comparativism, note 34, symmetry scope, final reference page and extent."
+    },
+    {
+      "chunk_id": "7cd37b",
+      "pages": [
+        25
+      ],
+      "mode": "Complete cached column-order page extract",
+      "purpose": "Note 47 and distinction between existentially general bases and author’s own proposal."
+    }
+  ],
+  "visual_inspections": [
+    {
+      "pages": [
+        1,
+        5,
+        24
+      ],
+      "mode": "Existing cached full-page PNGs shown through view_image",
+      "purpose": "Typeset volume/issue/date, exact rule wording and remainder, note 12, entire note 45 across columns and reduced-modality concession."
+    },
+    {
+      "pages": [
+        11,
+        20,
+        22
+      ],
+      "mode": "Existing cached full-page PNGs shown through view_image",
+      "purpose": "Accounting, conjunction objection, full-system positive inference, explicit no-logical-implication qualification, compositional semantics and individual analogy."
+    }
+  ],
+  "target_reads": [
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/REPORT.md",
+      "scope": "entire file",
+      "receipt_chunk": "f07811",
+      "earlier_partial_outputs": "Supplemented by complete untruncated display."
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/RULE_AND_TRANSPORT_AUDIT.md",
+      "scope": "entire file",
+      "receipt_chunk": "a96147"
+    }
+  ],
+  "supporting_reads": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "scope": "entire file, read only",
+      "receipt_chunk": "cd46c3",
+      "credit": "Declaration and conditional-interface inspection only; no compile, proof replay, or new premise warrant."
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/READING_LEDGER.json",
+      "scope": "entire ledger text, first display contained unrelated truncation; original events not independently retrievable here",
+      "receipt_chunk": "1acecf",
+      "credit": "Original worker provenance claim only; not new whole-read credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/INPUT_BINDINGS.json",
+      "scope": "entire binding list",
+      "receipt_chunk": "1acecf"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "scope": "lines 1907–1920 only, including line 1915 citation",
+      "receipt_chunk": "7cd37b",
+      "credit": "Inherited bibliographic attribution check only; no 2016 whole-read claim."
+    }
+  ],
+  "limitations": [
+    "No independent whole-paper reading; pages 12, 16 and 27 not read.",
+    "Only title, rules, accounting, adequacy and modal key pages were visually inspected.",
+    "No fresh retrieval of author PDF, legacy journal redirect, or failed DOI.",
+    "No proof execution or arbitrary grounding model.",
+    "Hashes bind file contents, not truth or adequacy of metaphysical premises.",
+    "Snapshot was first recorded after initial reads and rechecked before completion, not before the first read."
+  ],
+  "outcome": "Pass for bounded source and logic assessment; no blocking issue. Two nonblocking precision guards: actual-language IPK support and fundamental-versus-reduced modal concession."
+}

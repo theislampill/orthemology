@@ -1,0 +1,52 @@
+{
+  "recorded_at_utc": "2026-10-08T23:17:47.025303+00:00",
+  "records": [
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-extracted.txt",
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "scope": "Current extraction L1012–1054 continuous; L0465–0545 continuous; L0705–0758 continuous. Supporting truncated broad web/local displays confer no whole-file credit.",
+      "status": "Fresh electronic reacquisition and targeted source return; inherited whole-volume ledger already covers the arguments. No first-reading or new witness claim.",
+      "voice": "L1013–1017 quoted Abu al-Barakat; L1018 author reply; L1038/L1040 reported alternative answers; L1049–1053 author explanation with L1052 an explicit hypothetical; L1055 quotation resumes.",
+      "sha256": "48b6ae76609b692d391a32be5a9aea30df22484e86c028ccdcaff4790137a352"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "scope": "Consequential current local return L294–312, L332–359; other intervening/truncated displays are not full-reading claims.",
+      "status": "Corroboration of inherited direct reading; no new witness.",
+      "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "scope": "L001–004 continuous.",
+      "status": "Corroborative return; equal-choice reply reported and criticized.",
+      "sha256": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "scope": "L001–011 continuous; inherited suspect L002 and opening L009 remain quarantined.",
+      "status": "Corroborative return; no emendation.",
+      "sha256": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/majmu-item591.txt",
+      "scope": "L475–503 continuous displayed.",
+      "status": "Corroborative return; focus L476–500, no whole-epistle claim.",
+      "sha256": "b1473cbaa302259cc9a20c999f4d1880a5029b00a2cdc9c6ad498d82563fa988"
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+      "scope": "L003–009 untruncated; L001–002 and L010–020 in surrounding output.",
+      "status": "Corroborative return to already read argument.",
+      "sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b"
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+      "scope": "L030–041 continuous.",
+      "status": "Corroborative return; actual efficacy claim L040–041.",
+      "sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f"
+    }
+  ],
+  "dar_html_sha256": "dc6660430584470b6eadfd37771a3f2910de7dd469e77043a855d355f68dd155",
+  "acquisition": "Direct HTTPS urllib succeeded using Python standard-library HTMLParser. An initial local extraction attempt stopped before HTTP because bs4 was unavailable. No access-denial bypass.",
+  "edition_limits": "Electronic transcription only. Current labels are local extraction coordinates, not original historical-file line numbers or certified print pages. No scan inspection or manuscript apparatus."
+}

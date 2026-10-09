@@ -1,0 +1,21 @@
+# Root independent derivation: crossed-code support certificate
+
+8 October 2026. Written mathematical check, pending worker reconciliation and independent review. No physical model validation or kernel proof claimed.
+
+Four declared route inventories are A, B, OR={A,B}, AND={AB}. Their success responses at root success rates (a,b) are a, b, a+b-ab, and ab. These equations assume the inherited route law and do not identify actual original agents.
+
+Use two profiles (1,0), (0,1), keeping the same latent inventory within the two-trial group. Their ideal codes are respectively 10,01,11,00. All four are distinct. At either perturbed corner with each rate within eta of its intended endpoint, the conditional probability of a wrong endpoint bit is at most eta for each of these four inventories. For example OR at (a,b) near (1,0) fails with (1-a)(1-b)<=eta; AND succeeds with ab<=eta. Analogous bounds hold at the opposite corner.
+
+No independence between the two trial outcomes is needed for the bound P(wrong code | latent label)<=beta=2eta, by the union bound. The latent label must persist, and the conditional marginal bounds must actually hold. Across-group independence is separate.
+
+Let all present label weights be >=w, w>0, and beta<=w/8. For an absent label i, its observed code probability p_i<=beta<=w/8. For a present label, p_i>=(1-beta)w_i>=(1-beta)w>=7w/8. Classify i as present when its empirical code frequency is >=w/2.
+
+For present i, multiplicative Chernoff gives lower-tail error <=exp(-n (p_i-w/2)^2/(2p_i)). The exponent increases with p_i above w/2, so at p_i=7w/8 it is 9nw/112, which exceeds nw/16. For absent i, exponential Markov with lambda=log 2 gives upper-tail error <=exp(n[p_i-(w/2)log2])<=exp(-nw/8), using log2>=1/2. Hence the probability of any of four support errors is <=4 exp(-nw/16). Sufficient n=ceil((16/w) log(4/delta)) independent groups. This is conservative, not an optimal constant.
+
+For w=1/3 and delta=.05 this is 211 groups (422 endpoints), subject to beta<=1/24, i.e. eta<=1/48. This is a bound for this four-inventory catalogue only, not a performance claim for an actual apparatus. The earlier 40,000-group numerical certificate concerned a different catalogue (including route multiplicities), so 211 must not be presented as a drop-in reduction of that same problem. For the same four-label class, at one fixed calibration profile two conditionally independent Bernoulli repeats yield only three exchangeable count cells and cannot identify arbitrary four-label mixture weights; crossed profiles can create four distinct ordered code cells. This rank obstruction does not cover collecting several distinct calibration panels, each with same-profile repeats; retaining and combining those panel identities can provide further information.
+
+For 0<w<=1/2, even an oracle revealing each true latent label cannot distinguish delta_A from (1-w)delta_A+w delta_B with both error probabilities <=delta unless (1-w)^n<=2delta. Thus n>=log(1/(2delta))/[-log(1-w)]. Both alternatives respect the present-weight floor. Any observation generated from labels without extra parameter information cannot improve this oracle bound.
+
+Boundary: deterministic corner codes generally identify Boolean response classes, not arbitrary route histograms. A, AA and A+AB agree at every corner but differ at interior a=b=1/2 (1/2,3/4,5/8). Positive interior information remains essential for multiplicity and absorbed-route distinctions.
+
+One-trial mixture obstruction uses two fixed laws: half A plus half B versus half OR plus half AND. Their response means agree at every (a,b), because a+b=(a+b-ab)+ab. With a fresh independently drawn latent label per group and the stated Bernoulli response kernel conditional on that label and chosen profile (no additional history-dependent channel or cross-group emission coupling), one-trial adaptive profiles retain identical transcript laws by conditional induction. Equal unconditional one-trial marginals alone would not prove that statement for arbitrary joint processes. The crossed two-trial design escapes by preserving the same label across both trials. Replacing it with independently resampled labels would erase that advantage.

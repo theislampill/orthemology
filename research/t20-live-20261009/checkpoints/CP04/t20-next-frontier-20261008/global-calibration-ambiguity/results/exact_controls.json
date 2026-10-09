@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "arithmetic": "exact fractions; no simulated observations",
+  "scope": "finite diagnostics, not substitutes for the proofs in RESULT.md",
+  "families": {
+    "adaptive_transcript_equality": 16,
+    "adaptive_tv_bound": 48,
+    "all_command_identity": 572,
+    "binary_strict_separation": 192,
+    "critical_domain": 32,
+    "critical_mean_identity": 32,
+    "critical_value_identity": 32,
+    "decoder_threshold_order": 192,
+    "endpoint_preservation": 64,
+    "full_catalogue_separation": 192,
+    "gap_recurrence": 3168,
+    "interpolated_map_error": 3432,
+    "last_gap_is_minimum": 192,
+    "near_threshold_channel_bound": 3432,
+    "no_clipping_below_threshold": 192,
+    "rate_domain": 572,
+    "strict_monotonicity": 540,
+    "supremum_attained": 32,
+    "symmetric_error_identity": 572,
+    "touching_at_threshold": 32,
+    "transcript_normalization": 16,
+    "uniform_error_on_grid": 572,
+    "zero_count_endpoint_exception": 1
+  },
+  "total_assertions": 14125,
+  "result_sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+  "script_sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2"
+}

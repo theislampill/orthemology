@@ -1,0 +1,114 @@
+{
+  "appendix_confidence_domain_clarification_resolved": true,
+  "author_or_predecessor_files_modified_by_reviewer": false,
+  "bound_author_sources": [
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596"
+    }
+  ],
+  "control_counts": {
+    "appendix_author_replay": 33840,
+    "appendix_independent": 22073,
+    "main_author_replay": 14125,
+    "main_independent": 17480
+  },
+  "created_at_utc": "2026-10-08T13:14:31.855586+00:00",
+  "manifest_excludes_itself": true,
+  "receipt_references_verified": true,
+  "review_artifacts_and_controls": [
+    {
+      "bytes": 8048,
+      "path": "APPENDIX_REVIEW.md",
+      "sha256": "cc32f7ea9594ba8252dc746d867b20ee9acf7240b6f6ed5ba584b6c5b984edfd"
+    },
+    {
+      "bytes": 5471,
+      "path": "APPENDIX_REVIEW_RECEIPT.json",
+      "sha256": "830a91e43492efe7024695504cbac8cf8aece34a56a229c8b07068eb171a04c5"
+    },
+    {
+      "bytes": 7320,
+      "path": "REVIEW.md",
+      "sha256": "ab8acd5b0cc5c70fc43bcd1ca419d5faf8ec9bb59aa02804bbfb846a3f068ecc"
+    },
+    {
+      "bytes": 4803,
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "405182b0516be264847c7fa8a25605e3db948c8823ec649d47f7c82eb6bc8cb7"
+    },
+    {
+      "bytes": 1581,
+      "path": "appendix_independent_controls.json",
+      "sha256": "b1cba00ac8bc9afc0708de3a43c1977f7bae5b097bcd1d5481adb53175c6a88b"
+    },
+    {
+      "bytes": 5415,
+      "path": "appendix_independent_controls.py",
+      "sha256": "efa792bf29547d5c470fa99992eed4a31c91bd18a48287f89d546fb39e6b4cb6"
+    },
+    {
+      "bytes": 1717,
+      "path": "independent_controls.json",
+      "sha256": "44eb87b15f0777e986e47bbe2f6bf1fe7a0da8b73af3154ce9a426c164453e88"
+    },
+    {
+      "bytes": 6840,
+      "path": "independent_controls.py",
+      "sha256": "497cd4e05634c3849aadc2113a07c2e5ce7e3c8b940a5cb8b9731f87a665faf4"
+    },
+    {
+      "bytes": 7854,
+      "path": "replayed_appendix_controls/POLYNOMIAL_EFFICIENCY_APPENDIX.md",
+      "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4"
+    },
+    {
+      "bytes": 4643,
+      "path": "replayed_appendix_controls/efficiency_controls.py",
+      "sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f"
+    },
+    {
+      "bytes": 1152,
+      "path": "replayed_appendix_controls/results/efficiency_controls.json",
+      "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2"
+    },
+    {
+      "bytes": 12746,
+      "path": "replayed_author_controls/RESULT.md",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827"
+    },
+    {
+      "bytes": 4912,
+      "path": "replayed_author_controls/exact_controls.py",
+      "sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2"
+    },
+    {
+      "bytes": 1173,
+      "path": "replayed_author_controls/results/exact_controls.json",
+      "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Digest-bound independent mathematical reviews of the main calibration theorem and separate efficiency appendix; not release, integration, or T20 closure.",
+  "verdict": "PASS"
+}

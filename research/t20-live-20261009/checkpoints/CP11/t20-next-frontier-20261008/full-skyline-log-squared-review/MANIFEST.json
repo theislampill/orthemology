@@ -1,0 +1,65 @@
+{
+  "scope": "Frozen independent log-squared proof review; no integration/closure authority",
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "550ef660e2071b6669d94ed43c3105069cf9d7db7ed0953c4cacb00fb6b7bbf6",
+      "bytes": 15867
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "8283588de12323fcd986a62b05201a51620f4c6a33eb26925363748a753fe21d",
+      "bytes": 5182
+    },
+    {
+      "path": "OPERATION_LOG.md",
+      "sha256": "eddee5afa84d5d0f1c3e546fdaaffc4676c756a7b2d6ef23fabf0fdb71d0ac5d",
+      "bytes": 1675
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "ec9c5f9944d812386cc812b4a4095b88432dd4608d1e68dd9761b1e2e0be80e2",
+      "bytes": 1544
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "53f66838e8d189fcbf115ede813f13a654bb7ed7351248bcb0d39e2069cee779",
+      "bytes": 9142
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "741bf16fcfe2b04cae658476287ce12978dde95a6545577cfae7217f233499ba",
+      "bytes": 12921
+    },
+    {
+      "path": "CONTROL_RUN.log",
+      "sha256": "74a24b7dfc116f14742c38154d8eecb8a8cf1f95813a505beb46a86783d6b61b",
+      "bytes": 200
+    },
+    {
+      "path": "CONTROL_INITIAL_FAILURE.log",
+      "sha256": "817d67fcdb7bc6464ff2db11f756c4b7c8047aa81a639d20bf2277adf6ab24a2",
+      "bytes": 470
+    },
+    {
+      "path": "verify_review.py",
+      "sha256": "7342a0c9a8293856c18750104c43875c872ee699601f52662a78a57eb0595f5c",
+      "bytes": 2654
+    },
+    {
+      "path": "author_replay/controls.py",
+      "sha256": "43b2eb32343777d5094c2564f4641d99fcd6354bfab3a130b9dd8d92e3c6ca8c",
+      "bytes": 8352
+    },
+    {
+      "path": "author_replay/CONTROL_RESULTS.json",
+      "sha256": "6de20900a23a8578bfe57dfab63f2147c517c5a8cd606a74ff02b4646c3a5211",
+      "bytes": 52456
+    },
+    {
+      "path": "author_replay/CONTROL_RUN.log",
+      "sha256": "a2b159568211b665dc8e829f3babfc7bd0415cd47eb897961b0f9b9392c31fb4",
+      "bytes": 220
+    }
+  ]
+}

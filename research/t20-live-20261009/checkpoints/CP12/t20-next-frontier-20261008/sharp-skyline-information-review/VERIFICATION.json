@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Artifact currentness and deterministic replay; not a formal mathematical kernel, physical certification, protected integration, or closure.",
+  "source_files_checked": 12,
+  "author_manifest_files_checked": 8,
+  "author_source_files_checked": 5,
+  "review_payload_files_checked": 14,
+  "accepted_author_result_sha256": "52a9c53ca5d1765de2956e685701532529efca9a0292165f8f9e738b43b7a870",
+  "author_manifest_sha256": "2275f71c24bed4789a36dcb5c6e143fdc82d95554706c6c452fa39a09567c39f",
+  "review_sha256": "3527ce6bd1c625dfb10c9b425997a015549c911cd24d9afe62fffb6b0ba5db90",
+  "author_replay_byte_identical": true,
+  "independent_controls_status": "PASS",
+  "historical_floor": "UNVERIFIED"
+}

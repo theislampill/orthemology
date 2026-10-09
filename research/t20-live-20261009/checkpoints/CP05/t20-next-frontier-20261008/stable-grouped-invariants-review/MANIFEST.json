@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-10-08T14:18:35.237812+00:00",
+  "scope": "Final independent mathematical review, finite exact controls, synthetic observation replay and digest bindings. No integration or task closure.",
+  "payloads": [
+    {
+      "path": "FINAL_BINDINGS.json",
+      "sha256": "e1f6ea87ac2c22b97927d9f40d812c692780d3a23d2ab1503f4af6a79300a1de",
+      "bytes": 6288
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "44c908b9bdf0fcaffa875ce435a30c0c74e6e506aa6f1c76e09328bf483cbd07",
+      "bytes": 11288
+    },
+    {
+      "path": "WITNESS_REPLAY.md",
+      "sha256": "dfc68794c2c52824922fa9e38add7b1d6076a40c36340d81a320120689c756a6",
+      "bytes": 3024
+    },
+    {
+      "path": "author_replay/exact_controls.py",
+      "sha256": "bb247d16c51a1427fa13226c396bedc3fbab02d1062e353382deabee587c57b9",
+      "bytes": 9541
+    },
+    {
+      "path": "author_replay/replay.log",
+      "sha256": "c23acc12409f450ef112caed077d79b63ee18a33e5d6e956e0d8fb6bc895496d",
+      "bytes": 632
+    },
+    {
+      "path": "author_replay/results/GRID_WITNESS.json",
+      "sha256": "521dc54a035408817863d03ad46ce871e47a402b5d056d25dc9916384fe03677",
+      "bytes": 2447
+    },
+    {
+      "path": "author_replay/results/exact_controls.json",
+      "sha256": "3a79888324acb7199f2ee2517e12a1732895da39d6d65b0fb4b143a52c04e000",
+      "bytes": 22831
+    },
+    {
+      "path": "exact_checks.json",
+      "sha256": "a7e52c6c7a495e194d3870e479942655cc54a9752ab86edf0b7ddce7757392dc",
+      "bytes": 5487
+    },
+    {
+      "path": "exact_checks.py",
+      "sha256": "df593793d3c847ef23bd4552e2aed4f5d6c583cf5cf63f4e1c225b1f2568ae64",
+      "bytes": 6265
+    },
+    {
+      "path": "verification.json",
+      "sha256": "c117e957f131008b7bfb557609bb64be87b7b95c2d6c84ee3f84b3d600221e84",
+      "bytes": 474
+    },
+    {
+      "path": "verify_review.py",
+      "sha256": "6ac00c11855808eb20e2cc04775acb4e4610b76403dc5b29033c617b591aa375",
+      "bytes": 2642
+    }
+  ]
+}

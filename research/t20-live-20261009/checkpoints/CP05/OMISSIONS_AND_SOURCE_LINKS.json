@@ -1,0 +1,1050 @@
+{
+  "policy": "No complete modern source PDFs/TeX, OCR, renders, private email bodies, credentials or internal memory. Copied original source receipts retain their exact locators and evidence limits.",
+  "source_body_identity_records": [
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport/SOURCE_BINDINGS.json",
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf",
+      "git_blob_sha1": "9bebbfb6c0a01737a5bf8a85f4f7e929d38cfb53",
+      "sha256": "75527bc45892a3447b8d9f554f8e55ea464790f43a172b784c6761367089cf70",
+      "bytes": 341285,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport/SOURCE_BINDINGS.json",
+      "path": "theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+      "git_blob_sha1": "b2a4c6f3c1f6f923eddca1e5225b92c8b41cc388",
+      "sha256": "4e5eb8e7559c4daaf1757386a5a101bfc399bf0ba77c769e025512bd2f6ac5c3",
+      "bytes": 221506,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport/SOURCE_BINDINGS.json",
+      "path": "theory/lineages/h-ics-v5/README.md",
+      "git_blob_sha1": "79c26dea604541fad96e36588ae7c63259e7f8ea",
+      "sha256": "d316044509290188c81866904e159f49b20248f00c71ebdd7dfbd7c3537f3255",
+      "bytes": 2331,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/README.md",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport/SOURCE_BINDINGS.json",
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "git_blob_sha1": "7672f79a105b8b2d051eea1cd29ef4e0ffd6a595",
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "bytes": 47537,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport/SOURCE_BINDINGS.json",
+      "path": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "git_blob_sha1": "54a3218b55a09da4f1bf8b0b5fa931d63ccf166a",
+      "sha256": "bf8490a82b45fbf8a5be11ecd7a7ee90a0e49cbb383b86f60a5993a54782d1af",
+      "bytes": 15086,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport-review/REVIEW_BINDINGS.json",
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf",
+      "git_blob_sha1": "9bebbfb6c0a01737a5bf8a85f4f7e929d38cfb53",
+      "sha256": "75527bc45892a3447b8d9f554f8e55ea464790f43a172b784c6761367089cf70",
+      "bytes": 341285,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport-review/REVIEW_BINDINGS.json",
+      "path": "theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+      "git_blob_sha1": "b2a4c6f3c1f6f923eddca1e5225b92c8b41cc388",
+      "sha256": "4e5eb8e7559c4daaf1757386a5a101bfc399bf0ba77c769e025512bd2f6ac5c3",
+      "bytes": 221506,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport-review/REVIEW_BINDINGS.json",
+      "path": "theory/lineages/h-ics-v5/README.md",
+      "git_blob_sha1": "79c26dea604541fad96e36588ae7c63259e7f8ea",
+      "sha256": "d316044509290188c81866904e159f49b20248f00c71ebdd7dfbd7c3537f3255",
+      "bytes": 2331,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/README.md",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport-review/REVIEW_BINDINGS.json",
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "git_blob_sha1": "7672f79a105b8b2d051eea1cd29ef4e0ffd6a595",
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "bytes": 47537,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    },
+    {
+      "binding": "t20-next-frontier-20261008/historical-mathematical-transport-review/REVIEW_BINDINGS.json",
+      "path": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "git_blob_sha1": "54a3218b55a09da4f1bf8b0b5fa931d63ccf166a",
+      "sha256": "bf8490a82b45fbf8a5be11ecd7a7ee90a0e49cbb383b86f60a5993a54782d1af",
+      "bytes": 15086,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "source_bytes_included": false,
+      "hash_scope": "Preserved author/reviewer source identity; this packaging operation did not reacquire or reread the source body."
+    }
+  ],
+  "dretske_access_only": {
+    "binding": "t20-next-frontier-20261008/dretske-continuation-access/ACCESS_PROVENANCE.json",
+    "new_evidence": {
+      "chapter_metadata": {
+        "source": "MIT Press deposit at Crossref",
+        "url": "https://api.crossref.org/works/10.7551/mitpress/2927.003.0007",
+        "title": "Chapter 6: The Interactive Nature of Reasons",
+        "doi": "10.7551/mitpress/2927.003.0007",
+        "publisher": "The MIT Press",
+        "isbn": [
+          "9780262271967"
+        ],
+        "published_print": {
+          "date-parts": [
+            [
+              1988,
+              4,
+              28
+            ]
+          ]
+        },
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              28
+            ]
+          ],
+          "date-time": "2024-06-28T18:56:54Z",
+          "timestamp": 1719601014000
+        },
+        "reported_pages": "135-153",
+        "landing_url": "https://direct.mit.edu/books/book/4688/chapter/214930/Chapter-6-The-Interactive-Nature-of-Reasons",
+        "publisher_pdf_link": {
+          "URL": "https://direct.mit.edu/books/monograph/chapter-pdf/2443600/9780262271967_caf.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        },
+        "reading_credit": "Metadata only; not primary chapter reading"
+      },
+      "book_metadata": {
+        "source": "MIT Press deposit at Crossref",
+        "url": "https://api.crossref.org/works/10.7551/mitpress/2927.001.0001",
+        "doi": "10.7551/mitpress/2927.001.0001",
+        "publisher": "The MIT Press",
+        "isbn": [
+          "9780262271967"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1988,
+              4,
+              28
+            ]
+          ]
+        },
+        "landing_url": "https://direct.mit.edu/books/book/4688/Explaining-BehaviorReasons-in-a-World-of-Causes"
+      },
+      "pagination_caution": "Crossref chapter record says 135-153; inherited Google Books contents says chapter starts137 and bibliography157. No page-image boundary, edition explanation, or reconciliation established. Do not silently replace inherited pagination lead.",
+      "publisher_access": {
+        "landing_status": 403,
+        "landing_response_type": "text/html; charset=UTF-8",
+        "landing_cf_mitigated": "challenge",
+        "pdf_status": 403,
+        "pdf_response_type": "text/html; charset=UTF-8",
+        "pdf_cf_mitigated": "challenge",
+        "pdf_is_pdf": false,
+        "captcha_solved": false,
+        "access_control_bypass_attempted": false
+      },
+      "library_route": {
+        "url": "https://lib.unb.ca/eresources/collection/mitpress.d2obackcomplete?page=14",
+        "finding": "Lists title, author, ISBN9780262040945,1988 under MIT Press Direct to Open Backfile Complete Monographs; actual link uses an institutional proxy login and the book DOI. Label Open Access (subscription based) is not proof of unrestricted public chapter availability.",
+        "collection_record": "https://lib.unb.ca/eresources?id=499",
+        "collection_restriction": "Remote access restricted to members of University of New Brunswick/St. Thomas University community. No login attempted."
+      },
+      "syllabus_route": {
+        "home": "https://www.uh.edu/~garson/",
+        "linked_syllabus": "https://www.uh.edu/~garson/SyllabusMeaning2011.htm",
+        "retrieval_status": 200,
+        "finding": "All syllabus hrefs inspected. Dretske links identify chapter4, From Experience to Belief, selections, and Reply to Baker; no chapter6 link. Other linked philosophy-of-mind/consciousness syllabi supplied no continuation link."
+      },
+      "open_library_route": {
+        "url": "https://openlibrary.org/works/OL17832612W/Explaining_behavior",
+        "finding": "Visible editions offer Locate rather than a public read/download control. No body acquired."
+      }
+    },
+    "primary_body_acquired": false,
+    "source_hash_available": false,
+    "source_hash_limitation": "No chapter body was acquired; do not invent a body hash from metadata or a challenge response."
+  },
+  "inherited_bound_but_omitted_files": [
+    {
+      "path": "t20-next-frontier-20261008/ROOT_RESEARCH_CONTROL.md",
+      "bytes": 2117,
+      "sha256": "4ee2604b09aceb6f9d9de4b6b595255d95f542fb671b93a7ff016c1c6cce2a28",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/calibration-design-frontier/RESULT.md",
+      "bytes": 16304,
+      "sha256": "89b17388c4f243f555dbcb2232a3f106683cc3cc23edf0e3f7371bec3e018db7",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/calibration-design-frontier/RESULT.md",
+          "sha256": "89b17388c4f243f555dbcb2232a3f106683cc3cc23edf0e3f7371bec3e018db7"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/ACTIVE_RESEARCH.jsonl",
+      "bytes": 1310,
+      "sha256": "0392c482dea7cf10ff24fc4b1d29dd57269ba91d8720cbd1c1b057e1af8a376a",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/ACTIVE_RESEARCH.jsonl",
+          "sha256": "0392c482dea7cf10ff24fc4b1d29dd57269ba91d8720cbd1c1b057e1af8a376a"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/MANIFEST.json",
+      "bytes": 1943,
+      "sha256": "4cc3ee6c2eef3ea291e020bd3a62638694c2ed3f492ad32519cb4fb3a3932ea1",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/MANIFEST.json",
+          "sha256": "4cc3ee6c2eef3ea291e020bd3a62638694c2ed3f492ad32519cb4fb3a3932ea1"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/PROCESS_AND_LABEL_BOUNDARIES.md",
+      "bytes": 10212,
+      "sha256": "4c9f0159f73faf76f0cc3998dacc9ec83dd3bfa112b45a793b0a14db80945c2e",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/PROCESS_AND_LABEL_BOUNDARIES.md",
+          "sha256": "4c9f0159f73faf76f0cc3998dacc9ec83dd3bfa112b45a793b0a14db80945c2e"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/READ_FIRST.md",
+      "bytes": 1619,
+      "sha256": "880749d32f299be7e83db5054eb9768fbaf8a79b02d9b8eed5267c02dd6f8bcd",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/READ_FIRST.md",
+          "sha256": "880749d32f299be7e83db5054eb9768fbaf8a79b02d9b8eed5267c02dd6f8bcd"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/RESULT.md",
+      "bytes": 13547,
+      "sha256": "add5ac0c7b5db4ff229607e294c5d238bc59dc24826705c3469205633b807d46",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/RESULT.md",
+          "sha256": "add5ac0c7b5db4ff229607e294c5d238bc59dc24826705c3469205633b807d46"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/SOURCE_AUDIT.md",
+      "bytes": 6314,
+      "sha256": "5d21cf088fa9abbdf16f1830b716be35d809bdd2732cf492e1f378fb1f6a8c11",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/SOURCE_AUDIT.md",
+          "sha256": "5d21cf088fa9abbdf16f1830b716be35d809bdd2732cf492e1f378fb1f6a8c11"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/exact_controls.py",
+      "bytes": 8504,
+      "sha256": "9e92b5affb6ce926bca92e39a9e222b051cdc47bd8f1efd6d78a98d2c0752d77",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/exact_controls.py",
+          "sha256": "9e92b5affb6ce926bca92e39a9e222b051cdc47bd8f1efd6d78a98d2c0752d77"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/results/exact_controls.json",
+      "bytes": 11956,
+      "sha256": "54cd8bd22eb688c1c05b84cdf2b3819166a029bcf0f291eb7078db3d595c33ed",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/results/exact_controls.json",
+          "sha256": "54cd8bd22eb688c1c05b84cdf2b3819166a029bcf0f291eb7078db3d595c33ed"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/catalogue-mixture-sampling/results/exact_controls.log",
+      "bytes": 550,
+      "sha256": "11f00021b69e0b0f384ca8fd25d0c7be9c31f8537a198a6dda45810c7d7616eb",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+          "archive_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+          "member": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/catalogue-mixture-sampling/results/exact_controls.log",
+          "sha256": "11f00021b69e0b0f384ca8fd25d0c7be9c31f8537a198a6dda45810c7d7616eb"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity-review/REVIEW_RECEIPT.json",
+      "bytes": 4803,
+      "sha256": "405182b0516be264847c7fa8a25605e3db948c8823ec649d47f7c82eb6bc8cb7",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity-review/REVIEW_RECEIPT.json",
+          "sha256": "405182b0516be264847c7fa8a25605e3db948c8823ec649d47f7c82eb6bc8cb7"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/EXACT_CONTROLS.md",
+      "bytes": 2554,
+      "sha256": "cdfcf7d8a6c7f9095b4bda706a41e925ca19a2e7479e6163c54f702b04fd042b",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/EXACT_CONTROLS.md",
+          "sha256": "cdfcf7d8a6c7f9095b4bda706a41e925ca19a2e7479e6163c54f702b04fd042b"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/INPUT_BINDINGS.json",
+      "bytes": 862,
+      "sha256": "5e7db3255707edae1796658569b4406fe7d197f4a03a4fac735dab2b72487a86",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/INPUT_BINDINGS.json",
+          "sha256": "5e7db3255707edae1796658569b4406fe7d197f4a03a4fac735dab2b72487a86"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/READ_FIRST.md",
+      "bytes": 1960,
+      "sha256": "fd9307cf279310887a40281c759a11e99e4d567ff21d47eb53d6ca8e74ecac8b",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/READ_FIRST.md",
+          "sha256": "fd9307cf279310887a40281c759a11e99e4d567ff21d47eb53d6ca8e74ecac8b"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/RESEARCH_EVENTS.jsonl",
+      "bytes": 1571,
+      "sha256": "b2a59d322936e5f4f95c01c34a8c7d364cc144b2bd7be6d2f9316817dba554b7",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/RESEARCH_EVENTS.jsonl",
+          "sha256": "b2a59d322936e5f4f95c01c34a8c7d364cc144b2bd7be6d2f9316817dba554b7"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/REVIEW_STATUS.md",
+      "bytes": 3125,
+      "sha256": "34aae3ede3958a9cce519e07c611128922ee9089647bbb9be9dbbbb5466d28a8",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/REVIEW_STATUS.md",
+          "sha256": "34aae3ede3958a9cce519e07c611128922ee9089647bbb9be9dbbbb5466d28a8"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/SOURCE_AUDIT.md",
+      "bytes": 4771,
+      "sha256": "48057b6a9f7ed820703564f954aaeeb84ca0883a19b1a68c8658d7a42b487274",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/SOURCE_AUDIT.md",
+          "sha256": "48057b6a9f7ed820703564f954aaeeb84ca0883a19b1a68c8658d7a42b487274"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/VERIFICATION.json",
+      "bytes": 884,
+      "sha256": "7d45b6c19a52b0fec285802f758709e39891a2f3fa0af2e7b732cea2532efd1d",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/VERIFICATION.json",
+          "sha256": "7d45b6c19a52b0fec285802f758709e39891a2f3fa0af2e7b732cea2532efd1d"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/efficiency_controls.py",
+      "bytes": 4643,
+      "sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/efficiency_controls.py",
+          "sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/exact_controls.py",
+      "bytes": 4912,
+      "sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/exact_controls.py",
+          "sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/results/efficiency_controls.json",
+      "bytes": 1152,
+      "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/results/efficiency_controls.json",
+          "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/results/efficiency_controls.log",
+      "bytes": 1152,
+      "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/results/efficiency_controls.log",
+          "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/results/exact_controls.json",
+      "bytes": 1173,
+      "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/results/exact_controls.json",
+          "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-calibration-ambiguity/results/exact_controls.log",
+      "bytes": 1173,
+      "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+          "archive_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+          "member": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/global-calibration-ambiguity/results/exact_controls.log",
+          "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/MANIFEST.json",
+      "bytes": 1575,
+      "sha256": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+          "archive_sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+          "member": "T20_Additional_Mathematics_and_Source_Checkpoint_20261008/t20-next-frontier-20261008/grouped-mixture-identification/MANIFEST.json",
+          "sha256": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/READ_FIRST.md",
+      "bytes": 2317,
+      "sha256": "26fc9e137798cbc537a9f9b7e8df66b4c4953d7058eefec0af3bf2d5f814fb00",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+          "archive_sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+          "member": "T20_Additional_Mathematics_and_Source_Checkpoint_20261008/t20-next-frontier-20261008/grouped-mixture-identification/READ_FIRST.md",
+          "sha256": "26fc9e137798cbc537a9f9b7e8df66b4c4953d7058eefec0af3bf2d5f814fb00"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/SOURCE_AUDIT.md",
+      "bytes": 7498,
+      "sha256": "a4f731ceaafc720e3abc878bb4222172a92ebf7a9f925160b90d23c8919ad934",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+          "archive_sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+          "member": "T20_Additional_Mathematics_and_Source_Checkpoint_20261008/t20-next-frontier-20261008/grouped-mixture-identification/SOURCE_AUDIT.md",
+          "sha256": "a4f731ceaafc720e3abc878bb4222172a92ebf7a9f925160b90d23c8919ad934"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/exact_controls.py",
+      "bytes": 9072,
+      "sha256": "7b9dbb1f7fa25a7165c421f61b3b2fd257a8c4f2a9d4446efde822900107cf82",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+          "archive_sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+          "member": "T20_Additional_Mathematics_and_Source_Checkpoint_20261008/t20-next-frontier-20261008/grouped-mixture-identification/exact_controls.py",
+          "sha256": "7b9dbb1f7fa25a7165c421f61b3b2fd257a8c4f2a9d4446efde822900107cf82"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/grouped-mixture-identification/results/exact_controls.log",
+      "bytes": 1090,
+      "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+          "archive_sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+          "member": "T20_Additional_Mathematics_and_Source_Checkpoint_20261008/t20-next-frontier-20261008/grouped-mixture-identification/results/exact_controls.log",
+          "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/identification-review/results/H_THEOREM_4_2_SOURCE.json",
+      "bytes": 3343,
+      "sha256": "8f41f4e8e1d9c7469adda2e952b57477f3818a3dddb1d33380d87b6869178dfd",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/identification-review/results/H_THEOREM_4_2_SOURCE.json",
+          "sha256": "8f41f4e8e1d9c7469adda2e952b57477f3818a3dddb1d33380d87b6869178dfd"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/DELIVERY_DEPENDENCIES.json",
+      "bytes": 1249,
+      "sha256": "06716714b4088a9a5f4674e673a7e4135226293ac5b0bf31840a008262d6f09b",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/DELIVERY_DEPENDENCIES.json",
+          "sha256": "06716714b4088a9a5f4674e673a7e4135226293ac5b0bf31840a008262d6f09b"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/KERNEL_TARGET.md",
+      "bytes": 6301,
+      "sha256": "2b3fe6f61db05a19cce751934c962f1e72cd42d4ba4bfe64f719c5fafebf6cba",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/KERNEL_TARGET.md",
+          "sha256": "2b3fe6f61db05a19cce751934c962f1e72cd42d4ba4bfe64f719c5fafebf6cba"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/MANIFEST.json",
+      "bytes": 4086,
+      "sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/MANIFEST.json",
+          "sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/READ_FIRST.md",
+      "bytes": 2332,
+      "sha256": "ddd1fc0e2aed6f6a85da17e718160df12051558a253afb53ef1f1b35040dfc6e",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/READ_FIRST.md",
+          "sha256": "ddd1fc0e2aed6f6a85da17e718160df12051558a253afb53ef1f1b35040dfc6e"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/RESEARCH_ACCOUNTING.json",
+      "bytes": 2292,
+      "sha256": "89569643ed0a92aee5b90ac2b1ca9a91074962feb105360c9bf07c3bcae2ce1b",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/RESEARCH_ACCOUNTING.json",
+          "sha256": "89569643ed0a92aee5b90ac2b1ca9a91074962feb105360c9bf07c3bcae2ce1b"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/RESEARCH_EVENTS.jsonl",
+      "bytes": 1126,
+      "sha256": "b05d23400616e8296c4c46ceea85686334ca89df5b0f5b772fbb061cbdac7681",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/RESEARCH_EVENTS.jsonl",
+          "sha256": "b05d23400616e8296c4c46ceea85686334ca89df5b0f5b772fbb061cbdac7681"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/RESULT.md",
+      "bytes": 12476,
+      "sha256": "fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/RESULT.md",
+          "sha256": "fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/REVIEW_RESPONSE.md",
+      "bytes": 2083,
+      "sha256": "9672d8f34e89edd9fd8052a65b0af4812fc554c1fee9b506b246f9805018851b",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/REVIEW_RESPONSE.md",
+          "sha256": "9672d8f34e89edd9fd8052a65b0af4812fc554c1fee9b506b246f9805018851b"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/SOURCE_BINDINGS.json",
+      "bytes": 3784,
+      "sha256": "b305de306984cb494bb408b809d386a1fcd7b4e4faf21d339395a38215fd5190",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/SOURCE_BINDINGS.json",
+          "sha256": "b305de306984cb494bb408b809d386a1fcd7b4e4faf21d339395a38215fd5190"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/THEOREMS.md",
+      "bytes": 12573,
+      "sha256": "aec96500f0b273b5f4d1cf40c075e2d1bc906062e2c314ad420c7d36652a35dc",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/THEOREMS.md",
+          "sha256": "aec96500f0b273b5f4d1cf40c075e2d1bc906062e2c314ad420c7d36652a35dc"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/general-roots/RESULT.md",
+      "bytes": 7741,
+      "sha256": "2916675e350ada87fa6c9ee99d737e1b198fcc49d9fbaef6e25fdc9ffffbdd26",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/general-roots/RESULT.md",
+          "sha256": "2916675e350ada87fa6c9ee99d737e1b198fcc49d9fbaef6e25fdc9ffffbdd26"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/general-roots/results/DEVELOPMENT_RUN.log",
+      "bytes": 1280,
+      "sha256": "32e3579cb5831f7c411ddb8952e08e3b7c93e9439382d7749f7e05bf72586d8e",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/general-roots/results/DEVELOPMENT_RUN.log",
+          "sha256": "32e3579cb5831f7c411ddb8952e08e3b7c93e9439382d7749f7e05bf72586d8e"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/general-roots/results/FIRST_RUN.log",
+      "bytes": 970,
+      "sha256": "4f047a18352d5926254581c47af4570373c2b7fd4b94bb31a6f6b1a1ad7c8b32",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/general-roots/results/FIRST_RUN.log",
+          "sha256": "4f047a18352d5926254581c47af4570373c2b7fd4b94bb31a6f6b1a1ad7c8b32"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/general-roots/src/design_rank.py",
+      "bytes": 5995,
+      "sha256": "37cf8f723bf3813ea2fecbe04185297eae30b4d2de8618f83715329bc8c9284a",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/general-roots/src/design_rank.py",
+          "sha256": "37cf8f723bf3813ea2fecbe04185297eae30b4d2de8618f83715329bc8c9284a"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/general-roots/src/test_design_rank.py",
+      "bytes": 3761,
+      "sha256": "5ec96690318ecbbe3f56a7bf1f0bda07468113d7c50329f6c2ef7b9c66929df2",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/general-roots/src/test_design_rank.py",
+          "sha256": "5ec96690318ecbbe3f56a7bf1f0bda07468113d7c50329f6c2ef7b9c66929df2"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/results/DEVELOPMENT_RUN.log",
+      "bytes": 3117,
+      "sha256": "986346aacfe702eb0c467ab6fee2ae1f268946bbc013901fbde737f139be5ed6",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/results/DEVELOPMENT_RUN.log",
+          "sha256": "986346aacfe702eb0c467ab6fee2ae1f268946bbc013901fbde737f139be5ed6"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/results/FINAL_TESTS_1.log",
+      "bytes": 3117,
+      "sha256": "aaec2d44b0c81a5ecd97d4aa17b2eef57c4d62aeb0a9e7c125f84cd7dd6033d1",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/results/FINAL_TESTS_1.log",
+          "sha256": "aaec2d44b0c81a5ecd97d4aa17b2eef57c4d62aeb0a9e7c125f84cd7dd6033d1"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/results/FINAL_TESTS_2.log",
+      "bytes": 1280,
+      "sha256": "ec37093955b94cd20fb2e1eb89cff8b9311ebf265ca923b231fa8a2175380ee4",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/results/FINAL_TESTS_2.log",
+          "sha256": "ec37093955b94cd20fb2e1eb89cff8b9311ebf265ca923b231fa8a2175380ee4"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/results/FIRST_RUN.log",
+      "bytes": 2157,
+      "sha256": "1d0ca0a3f58605bbc5372024479acc4cab9dd81251bf60e6803fd3d2a5835782",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/results/FIRST_RUN.log",
+          "sha256": "1d0ca0a3f58605bbc5372024479acc4cab9dd81251bf60e6803fd3d2a5835782"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/results/RESULTS.json",
+      "bytes": 34376,
+      "sha256": "2da14a62087f4f2f4592abce17d1ea764a007e432791dbd6af625c338092c0ab",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/results/RESULTS.json",
+          "sha256": "2da14a62087f4f2f4592abce17d1ea764a007e432791dbd6af625c338092c0ab"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/results/VERIFICATION.json",
+      "bytes": 10881,
+      "sha256": "7415c04ff7057a0121f3ab91a54d677b926958dc3953e89cb545f5f600fd2e65",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/results/VERIFICATION.json",
+          "sha256": "7415c04ff7057a0121f3ab91a54d677b926958dc3953e89cb545f5f600fd2e65"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/src/export_results.py",
+      "bytes": 3346,
+      "sha256": "dae44e7082da6e826ade4ecf47ab65d8c86922efca0016ab1964bb8dc25b9430",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/src/export_results.py",
+          "sha256": "dae44e7082da6e826ade4ecf47ab65d8c86922efca0016ab1964bb8dc25b9430"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/src/identifiability.py",
+      "bytes": 7578,
+      "sha256": "c35e212dbc24066ec3f1baf6e4fe753d5eb16e71b1318f5d307de6c805d33c3d",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/src/identifiability.py",
+          "sha256": "c35e212dbc24066ec3f1baf6e4fe753d5eb16e71b1318f5d307de6c805d33c3d"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/src/test_identifiability.py",
+      "bytes": 11889,
+      "sha256": "d55a1d852bda9a90e0980329b60f60206447c132bbb94b4f5a1891b71ed744ff",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/src/test_identifiability.py",
+          "sha256": "d55a1d852bda9a90e0980329b60f60206447c132bbb94b4f5a1891b71ed744ff"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/src/verify_evidence.py",
+      "bytes": 2854,
+      "sha256": "98f30e8598edd60a40669f36b414c30993791d4575830f4a9dbc2dce6c333c75",
+      "reason": "INHERITED_BOUND_INPUT_NOT_REBUNDLED",
+      "matching_prior_members": [
+        {
+          "archive": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+          "archive_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+          "member": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/productive-identifiability/src/verify_evidence.py",
+          "sha256": "98f30e8598edd60a40669f36b414c30993791d4575830f4a9dbc2dce6c333c75"
+        }
+      ],
+      "scope": "Current local hash matched the preserved binding; no new research/source-reading credit."
+    }
+  ],
+  "excluded_component_entries": [],
+  "active_not_included": [
+    "finite-hypergraph-calibration",
+    "finite-hypergraph-calibration-review",
+    "bounded-interaction-detection",
+    "bounded-interaction-detection-review",
+    "root-later-operations/BOUNDED_PRESENCE_CANDIDATE.md"
+  ],
+  "other_exclusions": [
+    "Four prior checkpoint ZIPs (exact identities preserved, no nested rebuild)",
+    "Unrelated historical T16-T20 packages and repository working trees",
+    "All Lean toolchains/mathlib, compiled objects, caches and dependency environments",
+    "All research completed or changed after the explicit cutoff",
+    "Fresh primary-source retrieval, empirical observations, Lean verification and GitHub maintenance"
+  ],
+  "scope": "A hash/locator is not delivered source text. Original nested manifests can refer to intentionally omitted predecessor files. Only the top-level manifest determines ZIP membership."
+}

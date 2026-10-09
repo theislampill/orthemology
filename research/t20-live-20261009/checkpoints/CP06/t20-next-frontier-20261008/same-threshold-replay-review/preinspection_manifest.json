@@ -1,0 +1,22 @@
+{
+  "status": "PRE_AUTHOR_INSPECTION_INDEPENDENT_DERIVATION",
+  "created_utc": "2026-10-08T16:05:19.532809+00:00",
+  "author_payload_read": false,
+  "files": [
+    {
+      "path": "independent_derivation.md",
+      "sha256": "509e3cf6a45f05c80f3393e1145339ceb5dd61d3a079869c656670dba6b5f3f3",
+      "bytes": 9048
+    },
+    {
+      "path": "verify_controls.py",
+      "sha256": "747f64b59faeadc33ce8212a36fe10ceafe1e250bea751cce9682ea276d9cd05",
+      "bytes": 3334
+    },
+    {
+      "path": "exact_controls.json",
+      "sha256": "986aa71514822f3333dc207449ab9679102ef1414b2a289347282756094a3039",
+      "bytes": 1668
+    }
+  ]
+}

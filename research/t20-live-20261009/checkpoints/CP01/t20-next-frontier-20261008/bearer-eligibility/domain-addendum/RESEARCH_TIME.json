@@ -1,0 +1,12 @@
+{
+  "start_clock_utc": "2026-10-08T07:17:52Z",
+  "status": "substantive_addendum_complete",
+  "scope": "Universal dependence domain and implication audit",
+  "prior_wait_excluded": true,
+  "end_clock_utc": "2026-10-08T07:19:51Z",
+  "wall_seconds": 119,
+  "excluded_initial_bookkeeping_seconds": 12,
+  "excluded_tool_execution_seconds": 1,
+  "conservative_active_seconds": 106,
+  "qualification": "Prospective start recorded before substantive drafting. Coordination and waiting before/after excluded. No historical six-hour credit."
+}

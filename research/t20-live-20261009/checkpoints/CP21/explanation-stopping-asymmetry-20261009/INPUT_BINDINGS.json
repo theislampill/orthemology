@@ -1,0 +1,135 @@
+{
+  "completed_at_utc": "2026-10-09T09:33:08.890923+00:00",
+  "inputs": [
+    {
+      "bytes": 24443,
+      "path": "complete-explanation-source-20261009/REPORT.md",
+      "sha256_after": "d4ee327370d09a8f994457a3adbc7e97449268d8706776aa8d86da8a6dbb4757",
+      "sha256_before": "d4ee327370d09a8f994457a3adbc7e97449268d8706776aa8d86da8a6dbb4757",
+      "unchanged": true
+    },
+    {
+      "bytes": 9443,
+      "path": "complete-explanation-source-20261009/SOURCE_LEDGER.json",
+      "sha256_after": "25fea7e3b8ca5840ceae7565192e1eb90466ac641becdb917db47e6d4a63a335",
+      "sha256_before": "25fea7e3b8ca5840ceae7565192e1eb90466ac641becdb917db47e6d4a63a335",
+      "unchanged": true
+    },
+    {
+      "bytes": 68963,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256_after": "f64612366ed6caff940378ce507265c1f9cd8e1d6a08460522864f41a52c3d68",
+      "sha256_before": "f64612366ed6caff940378ce507265c1f9cd8e1d6a08460522864f41a52c3d68",
+      "unchanged": true
+    },
+    {
+      "bytes": 1727272,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256_after": "399b466cfa834b9f3741c388e7f6d852c0ded402774c92297937a10a063dd6c6",
+      "sha256_before": "399b466cfa834b9f3741c388e7f6d852c0ded402774c92297937a10a063dd6c6",
+      "unchanged": true
+    },
+    {
+      "bytes": 211993,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256_after": "5a8400f673efece46db07d82e09fa58b4bfefeb8e82482d57c8305cda586d7cb",
+      "sha256_before": "5a8400f673efece46db07d82e09fa58b4bfefeb8e82482d57c8305cda586d7cb",
+      "unchanged": true
+    },
+    {
+      "bytes": 206267,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256_after": "07efe5a90ba35e7fcffe491bb2cfdf35821515e0ff037bd79b9d741582fac14f",
+      "sha256_before": "07efe5a90ba35e7fcffe491bb2cfdf35821515e0ff037bd79b9d741582fac14f",
+      "unchanged": true
+    },
+    {
+      "bytes": 223509,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256_after": "504f12bb101f3f30063b4bb327c731e2def81a99ea108bac4d2d2133107b1716",
+      "sha256_before": "504f12bb101f3f30063b4bb327c731e2def81a99ea108bac4d2d2133107b1716",
+      "unchanged": true
+    },
+    {
+      "bytes": 25536,
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "sha256_after": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+      "sha256_before": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+      "unchanged": true
+    },
+    {
+      "bytes": 20774,
+      "path": "direct-anti-brute-return/REPORT.md",
+      "sha256_after": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5",
+      "sha256_before": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5",
+      "unchanged": true
+    },
+    {
+      "bytes": 13443,
+      "path": "particular-agency-rival-20261009/oconnor-power/REPORT.md",
+      "sha256_after": "f7451e1e34e4f14c0baade2cd9e9fc5893295a5a4a3d5506253da1691bd3da87",
+      "sha256_before": "f7451e1e34e4f14c0baade2cd9e9fc5893295a5a4a3d5506253da1691bd3da87",
+      "unchanged": true
+    },
+    {
+      "bytes": 3869,
+      "path": "direct-anti-brute-return/sources/dar3-item593-body.txt",
+      "sha256_after": "080c2527327729bd5f6dd97e626d0f5a8d03ff8486b00157afa43f3429ac9dea",
+      "sha256_before": "080c2527327729bd5f6dd97e626d0f5a8d03ff8486b00157afa43f3429ac9dea",
+      "unchanged": true
+    },
+    {
+      "bytes": 8471,
+      "path": "brute-contingent-source-return/read-selections/isfahaniyya-L181-L187.txt",
+      "sha256_after": "8f4b28befccc4235f8f61961cc12c6a0bc23ebf47d09583c2bee2f0bd565d897",
+      "sha256_before": "8f4b28befccc4235f8f61961cc12c6a0bc23ebf47d09583c2bee2f0bd565d897",
+      "unchanged": true
+    },
+    {
+      "bytes": 450304,
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "sha256_after": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1",
+      "sha256_before": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1",
+      "unchanged": true
+    },
+    {
+      "bytes": 3706,
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "sha256_after": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08",
+      "sha256_before": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08",
+      "unchanged": true
+    },
+    {
+      "bytes": 13450,
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "sha256_after": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1",
+      "sha256_before": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1",
+      "unchanged": true
+    },
+    {
+      "bytes": 6940,
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean",
+      "sha256_after": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "sha256_before": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "unchanged": true
+    },
+    {
+      "binding_note": "Added after read-only consultation; no write to this input was made.",
+      "bytes": 20262,
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "sha256_after": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f",
+      "sha256_before": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f",
+      "unchanged": true
+    },
+    {
+      "binding_note": "Added after read-only consultation; no write to this input was made.",
+      "bytes": 15569,
+      "path": "actual-original-production-residual-20261009/REPORT.md",
+      "sha256_after": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e",
+      "sha256_before": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e",
+      "unchanged": true
+    }
+  ],
+  "recorded_at_utc": "2026-10-09T09:29:26.868580+00:00",
+  "verification_limit": "Hashes establish retained input identity and unchanged status during this authoring interval, not source truth, reading depth, or metaphysical possibility."
+}
